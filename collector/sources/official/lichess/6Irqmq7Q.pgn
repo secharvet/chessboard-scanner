@@ -1,0 +1,54 @@
+[Event "Strategy: Principal of least active piece"]
+[Date "2022.03.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Strategy"]
+[ChapterName "Principal of least active piece"]
+[ChapterURL "https://lichess.org/study/6Irqmq7Q/dnlufrI4"]
+[Annotator "https://lichess.org/@/midodiez"]
+[FEN "r1bq1rk1/pp1n1ppp/2pbpn2/3p4/2PP4/2NBPN2/PP3PPP/R1BQ1RK1 w Qq - 0 1"]
+[SetUp "1"]
+[UTCDate "2022.03.12"]
+[UTCTime "11:36:11"]
+
+1. e4 dxe4 2. Nxe4 Nxe4 3. Bxe4 e5 4. dxe5 Bxe5 5. Bxh7+ Kxh7 6. Nxe5 Nxe5 7. Qh5+ Kg8 8. Qxe5 *
+
+
+[Event "Strategy: Principal of least active piece 2"]
+[Date "2022.03.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Strategy"]
+[ChapterName "Principal of least active piece 2"]
+[ChapterURL "https://lichess.org/study/6Irqmq7Q/tZs9IzN7"]
+[Annotator "https://lichess.org/@/midodiez"]
+[FEN "r1b2rk1/pp3ppp/8/2nPq3/5N2/3B1R2/PP1Q2PP/R5K1 b Qq - 0 1"]
+[SetUp "1"]
+[UTCDate "2022.03.12"]
+[UTCTime "11:44:30"]
+
+1... f5 2. Bc4 Ne4 3. d6+ Kh8 4. Ng6+ hxg6 5. Rh3# *
+
+
+[Event "Strategy: Principal of least active piece 3"]
+[Date "2022.03.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Strategy"]
+[ChapterName "Principal of least active piece 3"]
+[ChapterURL "https://lichess.org/study/6Irqmq7Q/l92h006E"]
+[Annotator "https://lichess.org/@/midodiez"]
+[FEN "4k3/4bp2/p1r3p1/Pr1pP2p/RppP1P2/7P/1P1B1K1P/2R5 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2022.03.12"]
+[UTCTime "11:52:20"]
+
+1... Kd7 2. Ke3 Ke6 3. Raa1 Kf5 4. Ra4 g5 5. fxg5 Bxg5+ 6. Ke2 Bxd2 7. Kxd2 Ke4 *
+
+

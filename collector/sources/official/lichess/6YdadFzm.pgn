@@ -1,0 +1,54 @@
+[Event "tactics for beginners: Chapter 1"]
+[Date "2020.08.19"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "tactics for beginners"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/6YdadFzm/LYqMppb3"]
+[Annotator "https://lichess.org/@/CUTEY"]
+[FEN "6k1/5p1p/6p1/8/8/Q7/3q1PPP/4R1K1 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.08.19"]
+[UTCTime "16:55:48"]
+
+1... Qxe1# *
+
+
+[Event "tactics for beginners: Chapter 2"]
+[Date "2020.08.19"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "tactics for beginners"]
+[ChapterName "Chapter 2"]
+[ChapterURL "https://lichess.org/study/6YdadFzm/uORmjt2m"]
+[Annotator "https://lichess.org/@/CUTEY"]
+[FEN "3q2k1/r4p2/4n2p/6p1/8/6N1/2Q1KPPP/6R1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.08.19"]
+[UTCTime "16:57:44"]
+
+ *
+
+
+[Event "tactics for beginners: Chapter 3"]
+[Date "2020.08.19"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "tactics for beginners"]
+[ChapterName "Chapter 3"]
+[ChapterURL "https://lichess.org/study/6YdadFzm/RnbpMaue"]
+[Annotator "https://lichess.org/@/CUTEY"]
+[FEN "r2k4/1n2q3/8/8/5Q2/6BP/5PPP/2R3K1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.08.19"]
+[UTCTime "16:59:36"]
+
+ *
+
+

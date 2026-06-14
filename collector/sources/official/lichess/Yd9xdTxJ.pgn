@@ -1,0 +1,37 @@
+[Event "DrHack Live Stream - Feb 25: Chapter 1"]
+[Date "2018.02.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Trompowsky Attack: Classical Defense, Big Center Variation"]
+[StudyName "DrHack Live Stream - Feb 25"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/Yd9xdTxJ/4OmE1Joo"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2018.02.26"]
+[UTCTime "02:23:33"]
+
+1. d4 Nf6 2. Bg5 e6 3. e4 { [%cal Gd4d5] } 3... h6 (3... c5 4. d5 d6 5. Nc3 Be7 6. Bb5+ Bd7 7. Bxd7+ Qxd7) (3... b6 4. e5 h6 5. Bd2 Nd5 6. c4 { [%cal Gd5b6] } 6... Ne7) 4. Bxf6 Qxf6 5. c3 d6 6. Bd3 e5 { [%csl Gd4][%cal Ge5d4] } 7. Ne2 { [%cal Gg7d4] } 7... g6 (7... Nc6 8. O-O Bd7) 8. O-O Bg7 9. f4 exd4 10. cxd4 Bg4 11. Qa4+ Nd7 12. Nbc3 O-O 13. Qb3 c5 14. e5 dxe5 15. dxe5 Qb6 16. Be4 Rfd8 17. Bxb7 Rab8 18. Bf3 Bxf3 19. Rxf3 c4+ 20. Qxb6 Rxb6 *
+
+
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2021.05.16"]
+[White "divadJL"]
+[Black "Vukan12345"]
+[Result "1/2-1/2"]
+[WhiteElo "1877"]
+[BlackElo "1868"]
+[TimeControl "600"]
+[Termination "Game drawn by repetition"]
+[Variant "Standard"]
+[ECO "C02"]
+[Opening "French Defense: Advance Variation"]
+[StudyName "DrHack Live Stream - Feb 25"]
+[ChapterName "divadJL - Vukan12345"]
+[ChapterURL "https://lichess.org/study/Yd9xdTxJ/nVoaNLFz"]
+[Annotator "https://lichess.org/@/DrHack"]
+
+1. e4 c5 2. c3 e6 3. d4 d5 4. e5 f5 5. Nf3 Be7 6. Be3 c4 7. b3 cxb3 8. axb3 Nc6 9. c4 g5 10. h3 h5 11. Bd3 Nh6 12. Nxg5 Bxg5 13. Qxh5+ Nf7 14. Qf3 Bxe3 15. Qxe3 Qg5 16. Qxg5 Nxg5 17. cxd5 exd5 18. f4 Ne4 19. Nd2 Nxd4 20. Ra4 Nxd2 21. Rxd4 Nxb3 22. Rxd5 Be6 23. Rd6 Kf7 24. O-O Rad8 25. g4 fxg4 26. f5 Rxd6 27. fxe6+ Kxe6 28. exd6 gxh3 29. Bc4+ Kxd6 30. Bxb3 b5 31. Rc1 a5 32. Bd1 a4 33. Bf3 a3 34. Kf2 b4 35. Ke3 a2 36. Rd1+ Kc5 37. Rc1+ Kd6 38. Rd1+ Ke5 39. Rd5+ Ke6 40. Ra5 h2 41. Rxa2 h1=Q 42. Bxh1 Rxh1 43. Rb2 Rh4 44. Kd3 Kd6 45. Re2 Kc5 46. Kc2 Kc4 47. Kb2 b3 48. Rg2 Kb4 49. Rf2 Rc4 50. Rg2 Rh4 51. Rf2 Rh3 52. Rf4+ Kc5 53. Rf5+ Kd4 54. Rf4+ Ke5 55. Rb4 Kd5 56. Rxb3 Rh2+ 57. Kc1 Kc4 58. Rb8 Rh1+ 59. Kc2 Rh2+ 60. Kc1 Rh1+ 61. Kc2 Rh2+ 62. Kc1 { 1/2-1/2 The game is a draw. } 1/2-1/2
+
+

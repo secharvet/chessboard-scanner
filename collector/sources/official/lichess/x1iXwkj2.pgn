@@ -1,0 +1,84 @@
+[Event "dec19 subnday questions: stafford quesitons"]
+[Date "2021.12.19"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C42"]
+[Opening "Petrov's Defense: Stafford Gambit"]
+[StudyName "dec19 subnday questions"]
+[ChapterName "stafford quesitons"]
+[ChapterURL "https://lichess.org/study/x1iXwkj2/xTJQRYIH"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.12.19"]
+[UTCTime "23:12:10"]
+
+1. e4 e5 2. Nf3 Nf6 3. Nxe5 Nc6 4. Nxc6 dxc6 5. Nc3 Bc5 6. Qe2 { [%csl Ge2] } 6... Ng4 7. Nd1 O-O 8. d3 (8. h3 Ne5 9. c3 Bb6 10. d4 Ng6 11. Qc2 f5 { [%csl Ge4,Gh4,Ga4][%cal Ga2a4,Gh3h4,Gf5e4] } 12. e5 Be6 { [%csl Gf3,Gc5][%cal Gf2f4,Gd8h4,Gc6c5] } 13. Bd3 c5 14. O-O cxd4 15. cxd4 Bxd4 16. Nc3 { [%csl Ge5] } 16... Bxe5 17. Re1 Qf6 18. Bd2 Rad8 19. Re3 Bd4 20. Re2 Bc8 21. Rae1 Kh8 22. Nd1 c5 23. Bc4 Nh4 24. Be6 Qg6 25. g3 Nf3+ 26. Kh1 Nxe1 27. Bxf5 Bxf5 28. Qc4 Qc6+ 29. Kh2 Qg2# { litfamily - IM EricRosen, 0-1, -, https://lichess.org/8tYGwplI }) 8... f5 9. Be3 (9. h3 Nf6 { [%csl Ge4,Ge1,Ge2][%cal Gf5e4,Gd3e4,Gf6e4,Ge2e4,Gf8e8,Ge8e1] } 10. e5 Nd5 11. c3 f4 12. d4 Bb6 { [%csl Gc5,Gd4,Ge5,Rf1,Re1,Rd1,Rc1][%cal Gc6c5,Gf4e3,Gd1e3,Gc1e3] }) 9... Nxe3 (9... Bxe3 10. Nxe3 fxe4 11. Nxg4 exd3 12. Qxd3 Qxd3 13. Bxd3 Bxg4 14. O-O Rae8 15. Rfe1 g6 16. f3 Bf5 17. Bxf5 gxf5 18. Kf2 Kf7 19. Rxe8 Rxe8 20. Re1 Rd8 21. Re2 Rd1 22. a4 c5 23. b3 b6 24. g3 c4 25. Re1 Rd2+ 26. Re2 Rd4 27. Ke3 c5 28. Rd2 cxb3 29. cxb3 Rb4 30. Rd7+ Kg6 31. Rxa7 Rxb3+ 32. Kf4 Rb4+ 33. Ke5 h6 34. h4 c4 35. Ra6 h5 36. a5 c3 37. axb6 c2 38. b7+ Kg7 39. Rc6 Rxb7 40. Rxc2 Rb5+ 41. Kf4 Kf6 42. Rc6+ Ke7 43. Kg5 Rb4 44. Rf6 f4 45. Rf5 Rb6 46. Rxf4 Rb8 { BeamerTheGreat - IM EricRosen, 0-1, -, https://lichess.org/I541weh2 }) 10. Nxe3 fxe4 11. dxe4 { [%csl Gd4,Gc4][%cal Gd8d4,Ge2c4] } 11... Be6 { [%csl Ge1] } 12. Rd1 Qf6 13. c3 Rae8 14. f3 Bxa2 15. Nc4 Bb3 16. Rd2 b5 17. Ne3 a5 18. g3 Qxf3 19. Qxf3 Rxf3 20. Nd1 Rxe4+ 21. Re2 Ra4 22. Bg2 Rf8 23. Rf1 Rxf1+ 24. Kxf1 Bc4 25. Ke1 Bxe2 26. Kxe2 Ra1 27. c4 bxc4 28. Nc3 Rg1 29. Bxc6 Bd4 30. Bd5+ Kf8 31. Ne4 Bxb2 32. Bxc4 Rg2+ 33. Kf3 Rxh2 34. Ng5 a4 35. Ne6+ Ke7 36. Nxc7 a3 37. Nd5+ Kd6 38. Nb4 Be5 39. Nd3 a2 40. Bxa2 Rxa2 41. Nb4 Ra3+ 42. Ke4 Rb3 43. Nd3 Rxd3 44. Kxd3 Bxg3 45. Ke4 Be5 46. Kf5 Bf6 47. Kg4 Ke7 48. Kh5 Kf7 49. Kg4 g6 50. Kh3 h6 51. Kg4 Kg7 52. Kh3 h5 53. Kg2 Kh6 { Celt1c - IM EricRosen, 0-1, -, https://lichess.org/vhzRAPsw } *
+
+
+[Event "dec19 subnday questions: sharp line in italian/catalan for white"]
+[Date "2021.12.19"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C54"]
+[Opening "Italian Game: Classical Variation, Greco Gambit, Traditional Line"]
+[StudyName "dec19 subnday questions"]
+[ChapterName "sharp line in italian/catalan for white"]
+[ChapterURL "https://lichess.org/study/x1iXwkj2/ykbExrFy"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.12.19"]
+[UTCTime "23:12:22"]
+
+1. e4 (1. d4 Nf6 2. c4 e6 3. g3 { [%csl Gg2,Gd4,Gc4][%cal Gg1f3,Gf1g2] } 3... d5 4. Nf3 Be7 5. Bg2 O-O 6. O-O dxc4 7. Qc2 b5 8. Ne5 (8. a4 c6 9. axb5 cxb5 10. Ng5 h6 11. Bxa8 hxg5)) 1... e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d4 exd4 6. cxd4 Bb4+ 7. Nbd2 *
+
+
+[Event "dec19 subnday questions: ideas in ponziani"]
+[Date "2021.12.19"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "dec19 subnday questions"]
+[ChapterName "ideas in ponziani"]
+[ChapterURL "https://lichess.org/study/x1iXwkj2/0bFXe49b"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.12.19"]
+[UTCTime "23:12:37"]
+
+ *
+
+
+[Event "Vugar Gashimov Memorial"]
+[Site "https://lichess.org/study/2wTScHkc/L0MGKC5x"]
+[Date "2021.12.19"]
+[Round "8.3"]
+[White "Mamedyarov, Shakhriyar"]
+[Black "Karjakin, Sergey"]
+[Result "0-1"]
+[WhiteElo "2767"]
+[BlackElo "2743"]
+[Annotator "https://lichess.org/@/Konstantinos07"]
+[Variant "Standard"]
+[ECO "C54"]
+[Opening "Italian Game: Classical Variation, Greco Gambit, Traditional Line"]
+[StudyName "dec19 subnday questions"]
+[ChapterName "Chapter 4"]
+[ChapterURL "https://lichess.org/study/x1iXwkj2/hPZivkdy"]
+
+1. e4 { [%eval 0.2] [%clk 0:15:19] } 1... e5 { [%eval 0.12] [%clk 0:15:18] } 2. Nf3 { [%eval 0.27] [%clk 0:15:27] } 2... Nc6 { [%eval 0.12] [%clk 0:15:26] } 3. Bc4 { [%eval 0.23] [%clk 0:15:36] } 3... Bc5 { [%eval 0.2] [%clk 0:15:34] } 4. c3 { [%eval 0.03] [%clk 0:15:45] } 4... Nf6 { [%eval 0.23] [%clk 0:15:43] } 5. d4 { [%eval 0.0] [%clk 0:15:54] } 5... exd4 { [%eval 0.17] [%clk 0:15:52] } 6. cxd4 { [%eval 0.0] [%clk 0:16:02] } 6... Bb4+ { [%eval 0.0] [%clk 0:16:00] } 7. Nbd2?! { Inaccuracy. Bd2 was best. } { [%eval -0.56] [%clk 0:16:10] } (7. Bd2 { [%csl Gd2] } 7... Nxe4 (7... Bxd2+ 8. Nbxd2 d5 9. exd5 Nxd5 10. Qb3 Na5 11. Qa4+ Nc6 12. Qb3 { [%cal Gb3a4,Ga4b3] }) 8. Bxb4 Nxb4 9. Bxf7+ Kxf7 10. Qb3+ Kf8 11. Qxb4+ Qe7) (7. Nc3 Nxe4 8. O-O Nxc3 9. bxc3 Bxc3 10. Qb3 Bxa1 11. Bxf7+ Kf8 12. Bg5 { [%csl Gd8][%cal Gg5d8] } 12... Ne7 13. Ne5 Bxd4 14. Bg6 { [%csl Gf7][%cal Gb3f7] } 14... d5 15. Qf3+ { [%csl Gf8][%cal Gf3f8] } 15... Nf5 16. Bxf5) 7... Nxe4 { [%eval -0.2] [%clk 0:16:07] } 8. d5 { [%eval -0.06] [%clk 0:16:18] } 8... Nxd2 { [%eval -0.1] [%clk 0:16:11] } 9. Bxd2 { [%eval 0.0] [%clk 0:16:24] } 9... Bxd2+ { [%eval -0.05] [%clk 0:16:20] } 10. Qxd2 { [%eval -0.07] [%clk 0:16:31] } 10... Ne7 { [%eval 0.0] [%clk 0:16:29] } 11. O-O-O { [%eval -0.1] [%clk 0:16:23] } 11... d6 { [%eval 0.11] [%clk 0:15:59] } 12. h4 { [%eval 0.08] [%clk 0:16:31] } 12... Bg4 { [%eval 0.44] [%clk 0:12:03] } 13. Qd4 { [%eval 0.37] [%clk 0:16:10] } 13... Qd7 { [%eval 0.56] [%clk 0:11:11] } 14. h5 { [%eval 0.51] [%clk 0:15:16] } 14... h6 { [%eval 0.62] [%clk 0:10:42] } 15. Rde1?! { Inaccuracy. Qxg7 was best. } { [%eval 0.0] [%clk 0:15:05] } (15. Qxg7 O-O-O) 15... Kf8 { [%eval 0.38] [%clk 0:09:44] } 16. Nh4?! { Inaccuracy. Re3 was best. } { [%eval -0.41] [%clk 0:10:22] } (16. Re3 c6) 16... Bxh5 { [%eval -0.34] [%clk 0:07:35] } 17. g4? { Mistake. Kb1 was best. } { [%eval -1.84] [%clk 0:10:31] } (17. Kb1) 17... Qxg4 { [%eval -1.3] [%clk 0:07:21] } 18. f4?? { Blunder. Re4 was best. } { [%eval -3.82] [%clk 0:10:40] } (18. Re4 Qd7 19. Rg1 Rg8 20. Rge1 Re8 21. Bd3 f6 22. Qxa7 g5 23. Qd4 Bf7 24. Qxf6 gxh4) 18... Qd7?? { Blunder. Ng6 was best. } { [%eval -1.25] [%clk 0:05:15] } (18... Ng6) 19. Kb1?! { Inaccuracy. Rhg1 was best. } { [%eval -2.34] [%clk 0:07:37] } (19. Rhg1 Rg8) 19... Bg4 { [%eval -2.5] [%clk 0:03:18] } 20. f5 { [%eval -3.09] [%clk 0:07:24] } 20... Bxf5+ { [%eval -3.25] [%clk 0:03:25] } 21. Ka1 { [%eval -3.29] [%clk 0:07:33] } 21... Ng6 { [%eval -2.93] [%clk 0:02:29] } 22. Bb5?! { Inaccuracy. Nxf5 was best. } { [%eval -4.0] [%clk 0:06:52] } (22. Nxf5 Qxf5) 22... Qxb5 { [%eval -4.39] [%clk 0:02:17] } 23. Nxf5 { [%eval -4.34] [%clk 0:07:01] } 23... Rh7 { [%eval -3.87] [%clk 0:01:43] } 24. Rhg1 { [%eval -4.22] [%clk 0:05:31] } 24... Ne5 { [%eval -3.68] [%clk 0:01:24] } 25. Qh4 { [%eval -3.64] [%clk 0:05:03] } 25... Qd7 { [%eval -4.14] [%clk 0:00:34] } 26. Ref1?! { Inaccuracy. Rxe5 was best. } { [%eval -5.32] [%clk 0:05:10] } (26. Rxe5 dxe5 27. Nxg7 Qe7 28. Qg4 Qg5 29. Qb4+ Kxg7 30. Rxg5+ hxg5 31. a3 Re8 32. Qxb7 e4) 26... h5 { [%eval -5.57] [%clk 0:00:26] } 27. Qf4 { [%eval -6.29] [%clk 0:03:54] } 27... Ng4 { [%eval -6.55] [%clk 0:00:24] } 28. Ng3 { [%eval -6.93] [%clk 0:02:03] } 28... Re8 { [%eval -7.0] [%clk 0:00:18] } 29. Rh1 { [%eval -7.91] [%clk 0:02:10] } 29... Re5 { [%eval -7.38] [%clk 0:00:19] } 30. a3 { [%eval -8.12] [%clk 0:02:19] } 30... Ne3 { [%eval -8.15] [%clk 0:00:17] } 31. Rf3 { [%eval -8.66] [%clk 0:02:09] } 31... Nxd5 { [%eval -8.35] [%clk 0:00:17] } 32. Qd4 { [%eval -8.69] [%clk 0:02:17] } 32... b6 { [%eval -7.73] [%clk 0:00:15] } 33. Rhf1 { [%eval -9.13] [%clk 0:02:20] } 33... g6 { [%eval -8.62] [%clk 0:00:16] } 34. Qd3 { [%eval -9.15] [%clk 0:02:17] } 34... Qe6 { [%eval -9.23] [%clk 0:00:21] } 0-1
+
+
+[Event "dec19 subnday questions: Chapter 5 - STAFFORD"]
+[Date "2021.12.19"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C42"]
+[Opening "Petrov's Defense: Stafford Gambit"]
+[StudyName "dec19 subnday questions"]
+[ChapterName "Chapter 5 - STAFFORD"]
+[ChapterURL "https://lichess.org/study/x1iXwkj2/k6dwOJrx"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.12.19"]
+[UTCTime "23:33:44"]
+
+1. e4 e5 2. Nf3 Nf6 3. Nxe5 Nc6 { [%csl Gf3][%cal Ge5f3] } 4. Nf3 Nxe4 5. Nc3 (5. d4 d5 6. Bd3 Bg4 7. c3 Bd6) 5... d5 6. Bb5 Bc5 7. O-O O-O 8. d4 Nxc3 9. bxc3 Bd6 { [%csl Gg4,Gf6,Gd5,Gc7,Gb7,Rc6][%cal Gc8g4,Gg4d1,Gd8f6,Rb8c6,Gc6e7,Ge7g6,Gc7c6] } *
+
+

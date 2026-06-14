@@ -1,0 +1,456 @@
+[Event "Talk to your pieces! Developing plans I: Introduction"]
+[Date "2024.03.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Talk to your pieces! Developing plans I"]
+[ChapterName "Introduction"]
+[ChapterURL "https://lichess.org/study/kjBSgqoA/AZvolLfH"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "3r4/1kr1bp1p/3p1p2/p1qPpP2/1p6/1P3QP1/P1PRN2P/1K2R3 b - - 0 29"]
+[SetUp "1"]
+[UTCDate "2024.03.28"]
+[UTCTime "17:29:37"]
+[ChapterMode "gamebook"]
+
+{ Welcome to another instructive study by NoseKnowsAll. This interactive study is for players 1500-2000 lichess, taking you through an important strategical concept: talking to your pieces. We'll explore how you can use this idea to form middlegame plans and activate your army. Importantly, we'll also see how you can put yourself in your opponent's shoes and talk to their pieces in order to find prophylactic moves.
+
+This study is part one of a two-part series on developing plans on the chessboard. If you're more advanced and have mastered this study, please check out part two:
+
+* Pawns aren't people! | Developing plans II https://lichess.org/study/dYFcDtRq
+
+Throughout this study, I will also provide general tips that these positions showcase. Whenever this general advice occurs, I'll write it just like this:
+
+PRO TIP: One bad piece can make the entire position bad.
+
+If you find this study useful, please heart it and share it with any friends! }
+ *
+
+
+[Event "Talk to your pieces! Developing plans I: What is a piece?"]
+[Date "2024.03.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C40"]
+[Opening "King's Pawn Game: Damiano Defense, Damiano Gambit"]
+[StudyName "Talk to your pieces! Developing plans I"]
+[ChapterName "What is a piece?"]
+[ChapterURL "https://lichess.org/study/kjBSgqoA/sZ2fOX1H"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[UTCDate "2024.03.28"]
+[UTCTime "17:29:37"]
+
+{ Before introducing what it means to talk to your pieces, let's first make sure we're all on the same page when we talk about what a "piece" is.
+
+It sounds silly, but please bare with me. }
+1. e4 { PRO TIP: A pawn is not a piece.
+It is technically a chessman, or chess piece, that you can move around the board. But when I and many other commentators discuss "pieces," we are specifically talking about the non-pawn chess pieces on the board. } 1... e5 2. Nf3 { For instance, white is playing well in this example, developing a piece and controlling the center.
+When beginners are taught the opening principles, they're told to control the center, develop their pieces, and get the king to safety ASAP. Moving a pawn off the 2nd rank is not the same thing as developing a piece! } 2... f6?? { A typical beginner mistake. Instead of developing a piece, black decides to defend the e pawn with the f pawn.
+I've heard beginners justify this move with: "But I was developing my f pawn!" INCORRECT. Pawns cannot be developed, only pieces. } (2... Nc6! $10 { The correct move - developing a piece and dealing with white's threat to the e pawn. }) 3. Nxe5! { White immediately takes advantage of the weakened light squares around black's king. } 3... fxe5 4. Qh5+ g6 5. Qxe5+ Qe7 6. Qxh8 $18 { White is already up a pawn and the exchange. The white queen cannot be trapped on h8, so white already has a decisive advantage. } *
+
+
+[Event "Talk to your pieces! Developing plans I: Talk to your pieces"]
+[Date "2024.03.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Talk to your pieces! Developing plans I"]
+[ChapterName "Talk to your pieces"]
+[ChapterURL "https://lichess.org/study/kjBSgqoA/I9sRLv38"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "rn1q1rk1/pp3ppp/2p2nb1/3p4/3P4/2PB1NB1/PPQ2PPP/R4RK1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.03.28"]
+[UTCTime "17:29:37"]
+
+{ In many positions, there are no tactical fireworks going off. Instead of looking at forcing moves, you have to play positionally sound, improving moves. In such positions, talk to your pieces! That is, put yourself in the shoes of each of your pieces (remember: not pawns!), and ask them:
+
+"What are you goals in life?"
+"What's your optimal square?"
+"Is there something about this position making you sad?"
+
+Once you talk to each of your pieces, you are sure to find a reasonable move that addresses their concerns or bring one of their dreams closer to reality. }
+1. Rfe1!? { A reasonable move. After talking to your rook, you agreed that he'd rather be open on the e file than blocked behind the f2 pawn.
+Now click through the alternative moves to see how talking to your pieces can lead you to consider good positional moves and reject bad ones! } (1. Ne5!? { A reasonable move. After talking to your knight, you agreed that she'd rather be on the strong e5 outpost, supported by the d4 pawn. Perhaps this knight will be interested in capturing that defensive bishop on g6, thus making your d3 bishop an unopposed LSB. }) (1. a4!? { A reasonable move. After talking to your rook, you agreed that he'd rather have more scope on the a file than be sad because he's stuck behind the a pawn on a2. }) (1. h3!? { A reasonable move. Your king is happier knowing that there is no chance he'll ever get back-rank checkmated in the future. }) (1. Rae1?! { This move means you didn't talk to all of your pieces! Look at the f1 rook now and ask him: "are you happy with your situation?" Of course not! The f1 rook would rather be able to move freely, but now it seems unlikely he'll ever see the light of day. }) (1. b4?! { A space gaining move that doesn't help improve any piece. Which piece is happier with his or her situation now that you've moved the b pawn? }) (1. Be5?! { The bishop is not seeing any more squares from e5 than on g3 (he'd yell at you if you're even thinking about giving him up for that chump knight on f6). After black next plays Nbd7, is his goal in life really to be captured by the knight currently on b8? }) *
+
+
+[Event "Talk to your pieces! Developing plans I: Beginners talking to pawns"]
+[Date "2024.03.28"]
+[White "Beginner's beginner friend"]
+[Black "Beginner"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Talk to your pieces! Developing plans I"]
+[ChapterName "Beginners talking to pawns"]
+[ChapterURL "https://lichess.org/study/kjBSgqoA/yZXZWtvd"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "r1bqk2r/pp1nbppp/2pp1n2/4p3/P1BPP3/2N2N2/1PP2PPP/R1BQ1RK1 b kq - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.03.28"]
+[UTCTime "17:29:37"]
+
+{ This position is typical of the Black Lion opening, and has been featured in hundreds of master games. Let's see what happens when two beginners take the reins. }
+1... c5? { A horrible move that comes from this beginner wrongly believing that pawns are people. Black thought that it was better to challenge the center with the c pawn ("What central control does a pawn on c6 give us?") than leave it on c6.
+But black should have been talking to their pieces instead. The e7 DSB is saddened to see more pawns stuck on dark squares, and the d7 knight is revolted that she can no longer hop to the c5 square herself. } (1... O-O! $14 { Of course, black should have just gotten on with development. The c6 pawn does a good job of containing the ambitions of white's c3 knight and c4 bishop for the time being. }) 2. d5? { Now it's white's turn to make an awful move. White thought that it was better to gain space ("Now my d pawn is cramping black's position!") than to trade the d4 pawn for d6 ("My d pawn is stronger than black's d pawn.").
+But white should have been talking to their pieces instead. The c4 bishop is disgusted that he no longer can see black's side of the board, and the c3 knight is depressed that her only job is defending the e4 pawn instead of jumping into the d5 outpost that black so carelessly gifted her.
+We'll explore this "pawns aren't people" idea in much more detail in part two of this series: https://lichess.org/study/dYFcDtRq For now, it's worth reiterating that talking to your pieces refers to all the pieces - not the pawns. } (2. dxe5! { White should have played this capture instead. } 2... dxe5 $16 { Now we can clearly see that white's knight on c3 and bishop on c4 are loving their stations - both actively controlling the d5 hole that black so freely gifted away. At the perfect moment, Nd5 will land and wreck black's position. } { [%csl Gd5] }) *
+
+
+[Event "Talk to your pieces! Developing plans I: Talk to your knight"]
+[Date "2024.03.28"]
+[White "NoseKnowsAll"]
+[Black "OTB opponent"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Talk to your pieces! Developing plans I"]
+[ChapterName "Talk to your knight"]
+[ChapterURL "https://lichess.org/study/kjBSgqoA/3ZC285IT"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "r4nk1/p1q1b2p/1pb1p1p1/3pP3/NP1B1Q2/P1PB4/6PP/5RK1 w - - 3 22"]
+[SetUp "1"]
+[UTCDate "2024.03.28"]
+[UTCTime "17:29:37"]
+
+{ If you talk to your pieces here, you'll find that most of them are happy with their station. The queen and rook form a battery on the only open file, the LSB aims towards black's king and controls the queenside, and the DSB supports the strong e5 pawn while defending c3: the only weakness in white's position.
+
+However, the knight is on the side of the board, attacked, and dominated by black's a and b pawns. Ask this knight: "Where would you much rather be?" and she'll answer! }
+22. Nb2! { The start of a long maneuver of this knight to her optimal square. b2 is certainly not the dream square. } 22... Be8 23. Nd1! { d1 is certainly not the dream square either. But do you see what square she would much rather jump to? } 23... Qd8 24. Ne3! { e3 is certainly not the dream square either. } (24. Nf2?! { While this is probably just as good as Ne3, there's no reason to block your rook on your way to the dream square.
+Pro tip: Talk to ALL of your pieces, not just the ones you are moving! }) 24... Bc6 25. Ng4! $18 { That's right! g4 is the optimal square for this knight. From here, she can jump to f6 (unleashing the pawn and therefore DSB) or h6 (possibly creating mating nets around black's king) when it's most inconvenient to defend. Now all of white's pieces are happy.
+In the game, white launched a deadly attack from this already borderline winning position, and went on to win the game.
+PRO TIP: You can form a short middlegame plan simply by talking to your pieces. Once you decide what your worst piece is, your plan is simply: listen to their wants and desires to find a way to improve them! } { [%cal Gg4f6,Gg4h6] } *
+
+
+[Event "Talk to your pieces! Developing plans I: The bad bishop bounce"]
+[Date "1974.03.22"]
+[Round "5"]
+[White "Eddie Scholl"]
+[Black "Jan Timman"]
+[Result "*"]
+[BlackTitle "GM"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Talk to your pieces! Developing plans I"]
+[ChapterName "The bad bishop bounce"]
+[ChapterURL "https://lichess.org/study/kjBSgqoA/jp8cU1IX"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "3r4/1kr1bp1p/3p1p2/p1qPpP2/1p6/1P3QP1/P1PRN2P/1K2R3 b - - 0 29"]
+[SetUp "1"]
+
+{ Jan Timman has a Richter-Rauzer position that's turned sour for white. His king is perfectly safe on b7, while his opponent's king is hoping that c2 doesn't fall. Timman's rook and queen on the c file are optimally placed, but the remaining two pieces are begging for more responsibility in this position. }
+29... Bf8! { Of course the bishop on e7 had dreams of doing more than stare at the back of his own pawns. The previously dormant bishop on e7 first bounces against the back rank before rejoining the action along a much more important diagonal.
+GM Daniel King has dubbed this maneuver "the bad bishop bounce." } 30. Nc1 { White follows suit. His knight first retreats before hopping to a better square. } 30... Bh6! { What a difference two moves make! Now the bishop breathes fire along the h6-c1 diagonal towards white's king. No "bad" bishop could ask for more! } { [%cal Bh6c1] } 31. Nd3?? { White tries to gain a tempo on Timman's queen before reacting to the threat to his rook, but miscalculates under time pressure. } (31. Rde2!? { Moving the rook immediately would have been better. By continuing to talk to his pieces, Timman would have surely found the following sequence: } 31... Bxc1! { If the knight can reroute to d3, then this bishop would be out of a job, merely staring into space. He certainly doesn't want that! } 32. Rxc1 Rdc8 $17 { The final rook's wishes come true. All of black's pieces are optimized on the half-open file towards white's king. Meanwhile, white's pieces are in disarray, passively defending weak pawns. Black stands better. }) 31... Qc3 32. Rde2 Bd2! $19 { A nice interference shot decides the game. White cannot save both the c2 pawn and the e1 rook. Rather than prolong the game down at least an exchange, white resigned instead. } *
+
+
+[Event "Stockholm Interzonal"]
+[Date "1962.03.03"]
+[Round "21"]
+[White "Robert James Fischer"]
+[Black "Julio Bolbochan"]
+[Result "*"]
+[WhiteTitle "GM"]
+[BlackTitle "IM"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Talk to your pieces! Developing plans I"]
+[ChapterName "Exercise 1: The better minor piece"]
+[ChapterURL "https://lichess.org/study/kjBSgqoA/VMxeO1nG"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "2rq1rk1/4bppp/pn1p4/1p2p1P1/4P2P/2N1BP1R/PPPQ4/1K1R4 w - - 1 19"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+{ Now it's your turn to talk to your pieces! Which piece is pleading for you to improve their prospects? }
+19. Bxb6! (19. Nd5? { Too early! If black can simply exchange off this monstrous knight on d5 with Nxd5, this knight jump doesn't pack a punch. Can you improve on this idea? }) 19... Qxb6 { Nicely done so far. But what was the point of trading off your bishop for black's defensive knight on b6? } 20. Nd5! $16 { Excellent job! By removing black's only minor piece controlling d5, your knight's dream of domination from d5 are a reality.
+This is a textbook good knight against bad bishop position, taken from a game played by Bobby Fischer. To see how Fischer put away his opponent from this "strategically winning position," check out my annotations here: https://lichess.org/study/miI3fn8S/cQi4MwjG#39 } *
+
+
+[Event "Talk to your pieces! Developing plans I: Exercise 2: A good trade"]
+[Date "2024.03.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Talk to your pieces! Developing plans I"]
+[ChapterName "Exercise 2: A good trade"]
+[ChapterURL "https://lichess.org/study/kjBSgqoA/bt9jN1WO"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "1rq2rk1/pb1p2pp/2p1p3/2P1Pp2/3P1P2/3B3P/P2Q2P1/R4RK1 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.03.28"]
+[UTCTime "17:29:37"]
+[ChapterMode "gamebook"]
+
+{ There are several rules of thumb you can use to find the solution to this problem. In this case, let's use it as another exercise in talking to your pieces! }
+1... Ba6! $10 { Obvious and good. Our bad bishop was stuck behind our pawn chain and yearned for so much more in life. After this simple move, we're giving him the opportunity to see white's side of the board. Trading bishops also gives our rook and queen many opportunities to infiltrate white's position on the queenside.
+PRO TIP: One bad piece can make the entire position bad. By fixing your worst piece and helping them fulfill their potential, you're ensuring your position doesn't deteriorate. Sometimes, chess actually is that easy. } *
+
+
+[Event "Talk to your pieces! Developing plans I: Exercise 3: Sullen steed"]
+[Date "2024.03.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Talk to your pieces! Developing plans I"]
+[ChapterName "Exercise 3: Sullen steed"]
+[ChapterURL "https://lichess.org/study/kjBSgqoA/xwGEKc63"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "r4rk1/7p/2nq2p1/1pp1p1Q1/4P3/pPPP2P1/P4P2/R3RBK1 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.03.28"]
+[UTCTime "17:29:37"]
+[ChapterMode "gamebook"]
+
+{ Talk to your pieces! What is your worst piece and how can you ensure they achieve their full potential? }
+1... b4! (1... Nd4?? { Oh no, your knight! } 2. cxd4 cxd4 $18) 2. c4 { Excellent job! Your knight was desperate to jump to the d4 square, from where she rules the board, but that pesky c3 pawn was dominating her on c6. Well, not any longer! Now place that knight on her dream outpost! } 2... Nd4 $17 { Success. We reach another good knight vs bad bishop position, where black is absolutely crushing in this position.
+Now put yourself in white's shoes and imagine listening to the f1 bishop complain that there's not a single useful diagonal open to him no matter where he goes. Oh, the horror!
+If you're looking for an alternative explanation behind the dynamics of this position, check out Dr. Can's explanation on this position too: https://www.youtube.com/watch?v=7ujY-60Tfxw } *
+
+
+[Event "13th Interpolis"]
+[Date "1989.09.24"]
+[Round "8"]
+[White "Jeroen Piket"]
+[Black "Garry Kasparov"]
+[Result "*"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Talk to your pieces! Developing plans I"]
+[ChapterName "Exercise 4: Killing with the King's Indian"]
+[ChapterURL "https://lichess.org/study/kjBSgqoA/yod1R9Lq"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "q4bk1/pp1b1r1p/3p2n1/P2Pp3/1PB1Pp2/5Pn1/5RPP/2RQN1K1 b - - 1 25"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+{ It's your turn to take control of Kasparov's pieces in this chaotic King's Indian Defense position. You have a kingside attack raging, and the g3 knight cannot be captured without allowing the more terrifying g3 pawn into the attack. But how to make progress? }
+25... a6!! (25... Qd8? $15 { Optically, this move looks like you're bringing your queen into the attack. But what does she truly accomplish on h4? }) 26. Qd3 { Nicely done! This subtle move to activate the queen was probably overlooked by Piket during the game. } 26... Qa7! { Fantastic job. Your once-dormant queen springs to life on the a7-g1 diagonal towards white's king. Kasparov soon won the exchange and the game after playing the aesthetic Nh1! } *
+
+
+[Event "Talk to your pieces! Developing plans I: Exercise 5: Identifying weaknesses"]
+[Date "1997"]
+[White "A. Raetsky"]
+[Black "M. Gurevich"]
+[Result "*"]
+[WhiteTitle "IM"]
+[BlackTitle "GM"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Talk to your pieces! Developing plans I"]
+[ChapterName "Exercise 5: Identifying weaknesses"]
+[ChapterURL "https://lichess.org/study/kjBSgqoA/Uz4xcWiq"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "2rr2k1/pp1nbppp/4p2q/8/2PP2P1/7P/PB1NQPK1/2RR4 b - - 0 1"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+{ White just played g4 to take some space on the kingside and prevent f5.
+
+Now it's your time to talk to your pieces! Which of your pieces is most upset with their station and can you give them a new lease on life? } { [%cal Gg3g4] }
+1... Nf8! (1... Bf6? { This is a suboptimal square for this bishop because Ne4 now hits with tempo. } 2. Ne4 $14) (1... Bg5?! { A reasonable idea - the bishop is certainly better on g5 than on e7. However, once the rook on c1 moves, Ne4 will now hit with tempo. } 2. Rc3! Nf8 3. Ne4! $15) (1... b6?! { This move stops c5, but doesn't in any way improve any of your pieces! }) (1... Nf6?! { The knight is slightly better on f6, but it's certainly not winning any awards from this square. However, your bishop remains upset with this situation and black's position can be punished tactically after d5! } 2. d5 $14) (1... Qg6?! { A reasonable move in isolation that improves the placement of the queen. Perhaps h5 is a plan to weaken white's king. Unfortunately, white hits first with d5! because your bishop is undefended on e7. } 2. d5! $10) (1... Nb8? $14 { A step in the wrong direction. White has weakened squares on the kingside, not queenside. }) (1... Nb6?! { A step in the wrong direction. White has weakened squares on the kingside, not queenside. }) 2. Qf3 { What's the key idea behind your mysterious knight move? } (2. d5?! { This was an important move to calculate, but black comes out on top after: } 2... Ng6! { Threatening Nf4+ and defending the bishop. } 3. Be5 exd5 $17 { And black wins a pawn. }) 2... Ng6! (2... Rb8?! $10 { Such a passive move is not called for. White is not threatening to take on b7 anyway. }) (2... Rc7?! $15 { Such a passive move is not called for. White is not threatening to take on b7 anyway. }) (2... b6?! $15 { Such a passive move is not called for. White is not threatening to take on b7 anyway. }) (2... Bg5!? $17 { Perhaps this move now is well-timed since white doesn't have an active way to get out of the pin. Still, there is a stronger move available if you talk to the rest of your pieces. }) 3. Kf1 { That's right! White was not threatening to take the b7 pawn, so we should continue our knight maneuver. Now you can finally finish the maneuver and place the knight on the optimal square! } (3. Qxb7?? Rb8! $18 { and the bishop falls on b2 } { [%cal Gb8b2] }) 3... Nf4! $17 { Fantastic job! Your knight rerouted from the sad d7 square to the optimal f4 square, where she now rules over white's kingside. The b7 pawn is irrelevant when we are breaking through on the kingside.
+Both f5 and Nxh3 are serious threats, and black went on to win the game on the kingside: https://lichess.org/POvLahGb/black#45 } (3... Nh4!? $17 { Also strong. Play Nf4 instead for the solution. }) (3... f5!? $17 { This move was actually played in the game. While it's smart to open up the f file for the rook, it's not as direct as simply improving the knight further. }) (3... Rf8!? $17 { This move, with the idea of f5, was effectively played in the game. It's not quite as direct as simply improving the knight further. }) *
+
+
+[Event "Talk to your pieces! Developing plans I: Group discussion"]
+[Date "2024.03.28"]
+[White "NoseKnowsAll"]
+[Black "OTB opponent"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Talk to your pieces! Developing plans I"]
+[ChapterName "Group discussion"]
+[ChapterURL "https://lichess.org/study/kjBSgqoA/gvA4aBgH"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "r4rk1/1pqbb1pp/p2ppn2/4n3/2PNP3/1PN5/P2BQ1PP/1B2RR1K w - - 3 18"]
+[SetUp "1"]
+[UTCDate "2024.03.28"]
+[UTCTime "17:29:37"]
+
+{ Now let's crank up this study's difficulty a notch. Once you master talking to your pieces individually, you'll stop seeing your army as a bunch of disjointed wooden pieces, and start seeing them as living, breathing soldiers with wants, desires, feelings, and emotions.
+
+In this position, white's major pieces are reasonably content where they are, and the DSB has many squares available to it. Meanwhile, both of white's knights are dominated by black's pawns (both knights are saddened by that e6 pawn - controlling both d5 and f5), and white's LSB on b1 is completely stuck behind his own pawn chain. In fact, multiple pieces would prefer that the e4 pawn weren't on the board at all! Too bad black's knight on e5 isn't going anywhere.
+
+So what plan addresses all of these concerns white's pieces are grumbling about in their group discussion? }
+18. Nd1! { The worst placed knight reroutes to d3, where she will challenge black's blockader of the e4 pawn. The exchange of white's horrible c3 knight for black's strong e5 knight at least addresses the concerns of that knight. } (18. Nf3?! { Uses the wrong knight and also doesn't gain control over e5 after all: } 18... Nfg4! $15) 18... Rae8 19. Nf2 { Moreover, if white can trade this knight off for black's e5 knight in a way that frees up the e5 square, white may be able to offload this silly e4 pawn too. Such a transformation would make the LSB, queen, and e1 rook happier too! } (19. Nb2?! { The same maneuver, but it's probably better to stay closer to the king who is feeling a bit lonely over there all by himself. } 19... Nfg4!? $10 { This move, for instance, shouldn't be allowed, where now threats against h2 may materialize if white doesn't play precisely. }) 19... Kh8 20. Nd3 $10 { Touchdown. White's knight reaches her destination, and the whole white army rejoices. While white was certainly in a tough spot at the beginning of this example, now at least they're striking back. } *
+
+
+[Event "1990 World Chess Championship"]
+[Site "Lyon, France"]
+[Date "1990.12.15"]
+[Round "20"]
+[White "Garry Kasparov"]
+[Black "Anatoly Karpov"]
+[Result "*"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Talk to your pieces! Developing plans I"]
+[ChapterName "Kasparov's coordination"]
+[ChapterURL "https://lichess.org/study/kjBSgqoA/WOJiXkSD"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "r2qrbk1/1b1n1pp1/p2p3p/1ppP4/Pn2P3/5N1P/1P1N1PP1/RBBQR1K1 w - - 1 17"]
+[SetUp "1"]
+
+{ Time to sit back and enjoy Kasparov's play as he beautifully coordinates his whole army in this famous game against Karpov from their 1990 WCC match.
+
+We have arrived at a Benoni structure, although the opening was originally from the Zaitsev variation of the Ruy Lopez. }
+17. Ra3! { There was no way the bishops and queen were ever going to clear the back rank so that white could "finish development." So Garry finds an inventive way to double rooks without having to develop the queenside pieces - the clear 3rd rank! } 17... f5!? { A contentious move - striking at the center is logical, but this weakens the kingside a bit and white's pieces are well-placed for a kingside attack as we shall see. } 18. Rae3 { The rook up and over maneuver is complete. Now, the rooks are beautifully coordinated. All it took to come up with this plan was a discussion with his pieces. } 18... Nf6 19. Nh2! { The whole point of this mysterious move is to give white's rook access to the g3 square just in case it gets attacked by black's knight. A true example of talking to your pieces to find a nice prophylactic idea. } 19... Kh8 (19... fxe4? { The most obvious capture shows why Garry placed his knight on h2. } 20. Nxe4 Nfxd5 21. Rg3! $16 { Now the knight on h2 can rejoin the fun on the kingside. This is similar to the game, but a much worse version for black. }) 20. b3! { Once the black king has chosen the h8 square as his residence, our DSB's eyes light up at the prospect of stationing himself along the a1-h8 diagonal. This DSB was the one key piece not doing anything, so finally he gets his day in the sun. } 20... bxa4 21. bxa4 c4?! { Played just to give black's b4 knight the d3 square to shut out our LSB. But this is just too slow and will at least cost black a pawn. } (21... Rb8! 22. Bb2 Ba8! $14 { This is perhaps the best way to coordinate black's pieces. Still, white retains excellent attacking potential on the kingside. }) 22. Bb2 { White's army is glaring menacingly at black's king. Karpov cracks and decides that if he's going to suffer, it's best to suffer while up a pawn. } 22... fxe4 23. Nxe4 Nfxd5 24. Rg3 $16 { At least black is up a pawn. But in exchange for that pawn, every single white piece has built up potential for a kingside attack. Note how powerful the two bishops are, raking across the board, how the queen is ready to jump in to h5 at a moment's notice, and how both knights are ready to sacrifice themselves (either on g5 or h6).
+We'll see this idea that pawns are overrated pop up again in part II: "Pawns aren't people!": https://lichess.org/study/dYFcDtRq
+From this position, Kasparov went on to win a crushing game: https://lichess.org/5WymoNVe#47 } *
+
+
+[Event "Wijk aan Zee"]
+[Date "1980.01.26"]
+[Round "9"]
+[White "Vladimir Kovacevic"]
+[Black "Yasser Seirawan"]
+[Result "*"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Talk to your pieces! Developing plans I"]
+[ChapterName "Exercise 6: Piece consensus"]
+[ChapterURL "https://lichess.org/study/kjBSgqoA/7J5nVrjN"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "rnbqk1r1/4ppb1/1n1p2p1/p1pP2P1/PpP1P3/5N2/1P2BP2/RNBQK2R b KQq c3 0 14"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+{ Now it's time to take control of Yasser Seirawan's pieces. Your position as black is quite odd. You've ceded the h file to white's rook, your king is in the center, and none of your queenside pieces seem to be getting out any time soon.
+
+Talk to your pieces - can you find the move that Yasser played here? Fair warning: this position is difficult to assess! }
+14... Kd7!! (14... bxc3? $14 { Yes, en passant is legal because the last move was c2-c4. No it is not forced. }) (14... Bg4?! $10 { This somewhat logical move does in fact develop a piece. But beyond making the bishop slightly happier, does this move actually accomplish anything? }) (14... N8d7?! $10 { Developing normally makes this knight happier but just further creates a logjam in your position. Your bishop, queen, and king (!) are all sad to see this move played. }) (14... Rh8?! $15 { The most normal move in the position. Yet after the trade of rooks, your bishop is misplaced on h8 and you're still no closer to activating the remainder of your queenside pieces. }) (14... e6?! $15 { You're opening up the position before you have finished development! After Qc2, your advantage is minimal. }) (14... e5? $14 { Oh no, you just locked in your DSB on g7 for the rest of the game. That's the opposite of talking to your pieces! }) 15. Nbd2 { An absolutely brilliant find! Kd7 is both completely insane and totally logical once you've talked to your pieces. Now that your queen and rook form a battery, Rh8 to challenge the file should come as naturally to you as a baby's smile. } (15. Rh7?! Rh8! 16. Rxg7 Qf8! $17 { Traps the rook and wins the exchange. }) 15... Rh8! (15... Kc7!? $17 { Also totally playable. First talk to your g8 rook before playing this move. }) 16. Rg1?! { To prevent your queen from infiltrating on the h file, white has ceded the h file completely to you. What a turn of events in only two moves! Now it's time to finish the maneuver setup from your last move in order to reach a harmonious position for all of your pieces. } 16... Kc7! { The pieces have reached a consensus - you're a master on the chessboard! Your king is quite snug on the locked queenside. Your rook and queen have worked together to wrest control of the h file from white. And your remaining queenside pieces can now develop naturally. With one maneuver, you've succeeded in turning an odd position into one where every piece is coordinating beautifully with each other.
+Yasser went on to win this masterpiece in style: https://lichess.org/m5hBi86n#32
+PRO TIP: How odd a move looks should have little effect on whether or not you should consider it. Rather, its merit should be decided on how well it addresses the wants and desires of your pieces (bonus points if it helps out multiple pieces). } *
+
+
+[Event "2023 Women's World Chess Championship"]
+[Site "Shanghai"]
+[Date "2023.07.11"]
+[Round "5"]
+[White "Lei Tingjie"]
+[Black "Ju Wenjun"]
+[Result "*"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Talk to your pieces! Developing plans I"]
+[ChapterName "Exercise 7: Light square domination"]
+[ChapterURL "https://lichess.org/study/kjBSgqoA/S5b1QaZW"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "r2r2k1/3bqpp1/1p1b1n1p/1Pp1p3/P1Q1P3/4B2P/2BN1PP1/R2R2K1 w - - 1 24"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+{ We join a game played in the 2023 WCC where Lei Tingjie won brilliantly. Talk to your pieces - what are they telling you? }
+24. Qc3! (24. Bb3?! $14 { Reasonable try, but not the correct orientation of the pieces. We don't want the queen in the way! }) (24. Nb3? $10 { This would be the wrong square for the knight, where it's dominated by black's b and c pawns. }) (24. Nf3?! $14 { The move improves the knight but has little to do with the key attribute of the position: the weakened queenside outposts for our pieces. Since we're not afraid of an attack from black here, and we're not launching an attack on the kingside ourselves, the knight on f3 is ultimately misplaced. }) (24. Qe2?! $14 { The right idea, but the wrong execution. Is there a more useful square we can put the queen on instead? }) (24. Qf1?! $14 { The right idea, but the wrong execution. Is there a more useful square we can put the queen on instead? }) (24. Qa2? { Oh no, your b pawn! } 24... Bxb5 $15) 24... Be6 { Excellent move. The queen is not the best piece on c4. From c3, she keeps an eye on e5 and a potential a5 breakthrough. Let's keep improving the pieces! } 25. Nc4! (25. Bb3!? { This is a reasonable way to play as well, but not as accurate as the game. By trading off the LSBs, we're trying to get better control over c4 and d5 in particular. Unfortunately, black is just in time to maneuver her knight to d6, preventing this idea just in time. Click the analysis board once you're done with this exercise to see why! } 25... Bc7! 26. Qc2 (26. Bxe6?! Qxe6 27. Nc4? Rxd1+ 28. Rxd1 Rxa4 $17) 26... Ne8! 27. Bxe6 Qxe6 28. Nc4 Nd6! $14) 25... Bxc4 { The strong knight landing on c4 hit all of black's weaknesses and could not be allowed to live. But now we own the bishop pair! } 26. Qxc4 Ne8 { Keep talking to your pieces. Which other piece is disappointed they haven't been able to participate in the battle for the queenside light squares? } 27. Bb3! $16 { Nicely done. When the dust settles, we have the bishop pair, a massive hole on d5 to work with, and perfect coordination on the light squares. All the pieces are working harmoniously!
+To see how Lei Tingjie finished off her world champion opponent, click here: https://lichess.org/WF6awwl7#53 } (27. Rd5?! { Not a bad move in general, but this rook will have to evacuate the powerful d5 square after Nc7. } 27... Nc7 28. Rd3 $14) *
+
+
+[Event "Talk to your pieces! Developing plans I: Don't talk to your pieces!"]
+[Date "2024.03.28"]
+[White "OTB opponent"]
+[Black "NoseKnowsAll"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Talk to your pieces! Developing plans I"]
+[ChapterName "Don't talk to your pieces!"]
+[ChapterURL "https://lichess.org/study/kjBSgqoA/BC2MepNr"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "r1b2rk1/pp1pq2p/2n1pnp1/6N1/4B2Q/2P5/PP1N1PPP/R3R1K1 b - - 4 16"]
+[SetUp "1"]
+[UTCDate "2024.03.28"]
+[UTCTime "17:29:37"]
+
+{ I want to leave you with one cautionary note. Talking to your pieces is a great idea when you're looking for a plan or a way to improve your position. But there's one big caveat: you still have to calculate forcing moves to make sure your ideas work. }
+16... Kg7? { In a tough position, I played this nonchalant king move with the idea of repairing some kingside dark squares with h6 next. My king is happier to be on g7, sure. But the true problem is that I didn't bother to calculate any concrete lines after my move. } (16... d5!? 17. Bf3 Bd7 $14 { Perhaps this is a more sensible way to improve. Rae8 and Qg7 are coming to finish development and cover all the weak squares around my king. } { [%cal Ga8e8,Ge7g7] }) 17. Bxc6! { My opponent shocked me with this move during the game. It's not about talking to his pieces, it's about concrete calculation! First he removes the defender of my queen. } 17... bxc6 18. Nxh7! { Then he takes advantage of my overworked knight. My knight on f6 cannot both defend h7 and prevent Qxe7. I'm at least losing a pawn here. } 18... Rh8 (18... Nxh7?? 19. Qxe7+ $18 { White's point. }) 19. Qxf6+ Qxf6 20. Nxf6 Kxf6 $16 { White is up a pawn and has a good knight against my bad bishop. Amazingly, I swindled a draw from this horrible position: https://lichess.org/study/RuNuTcnV/axn7cNIx#40
+PRO TIP: Always consider forcing moves! Coming up with a positionally desirable move or idea by talking to your pieces is not enough. You still need to validate that your idea stands up to reality. } *
+
+
+[Event "Nice Olympiad"]
+[Site "Nice, FRANCE"]
+[Date "1974.06.18"]
+[Round "4"]
+[White "Anatoly Karpov"]
+[Black "Wolfgang Unzicker"]
+[Result "1-0"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[FEN "r1rq1bk1/1n1b1p1p/3p1np1/1p1Pp3/1Pp1P3/2P1BNNP/R2Q1PP1/1B2R1K1 w - - 0 1"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Talk to your pieces! Developing plans I"]
+[ChapterName "Karpov talks to his pieces"]
+[ChapterURL "https://lichess.org/study/kjBSgqoA/bhmK0YOu"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "r1rq1bk1/1n1b1p1p/3p1np1/1p1Pp3/1Pp1P3/2P1BNNP/R2Q1PP1/1B2R1K1 w - - 0 1"]
+[SetUp "1"]
+
+{ Now let's enjoy a masterclass by Karpov on how to talk to your pieces.
+
+We start this masterclass at a critical position. White has a space advantage in the center, typical for the Ruy Lopez. However, black is preparing to capture on a2 and then challenge the a file with the second rook, thus easing the claustrophobia his pieces are feeling. }
+1. Ba7!! { Amazing prophylaxis! The rooks are temporarily disconnected on the a file, meaning that black has no way to trade pieces and ease the congestion on the back rank. Note in particular how sad the major pieces and knight on b7 are now that black didn't achieve his desired piece trades.
+PRO TIP: Prophylactic moves can be found by putting yourself in your opponent's shoes and trying to talk to their pieces. Here, Karpov had his ear out for what Unzicker's pieces were saying, and went out of his way to snuff out their hopes and dreams. } (1. Kh2?! { A nonchalant move would allow black to play his idea. } 1... Rxa2 2. Qxa2 Ra8 3. Qd2 $10 { Notice how much happier the minor pieces are now that a pair of rooks have been traded. Moreover, the a file is owned by black, and any attempt to trade rooks would only further ease the congestion on black's side of the board. }) 1... Ne8 2. Bc2 { The rook on e1 isn't happy with his life staring at the e pawn. He'd much rather be on the open a file instead. Karpov takes steps to improve the rook now that black is helplessly shuffling. } 2... Nc7 3. Rea1 { The rooks are much happier now. } 3... Qe7 4. Bb1 { The queen on d2 has a little more scope now too. Perhaps she will shift to a2, helping Karpov seize the a file completely. } (4. Bd1!? $16 { Based on the fact that Karpov eventually reroutes the bishop back to d1, perhaps this move immediately is a more accurate regrouping than the game. }) 4... Be8 { Next, Karpov's g3 knight shares her plight: she's dominated by a single pawn on g6! } 5. Ne2 { Karpov takes steps to fix this knight by planning a timely f4 pawn break. } 5... Nd8 6. Nh2 { Karpov moves the knight away from its f3 post in order to get in f4. In some lines, this knight is happier on g4. In others, she's best placed back on f3, behind the f pawn. } 6... Bg7 7. f4! { Karpov achieves his next goal. Taking more space on the kingside potentially gives these knights a new lease on life. } 7... f6? { Unzicker doesn't listen to his DSB's plea for an open diagonal and instead makes a horrible positional mistake. Now Karpov can continue his squeeze game on the kingside, and none of black's pieces will ever see the light of day. } (7... exf4! { The only move - at least now the DSB can see into Karpov's position. } 8. Nxf4 Be5 { We have weakened the e5 square irreparably, but thankfully black's knights are not in a good position to reach the e5 hole, so white can still fight for a big advantage: } 9. Ne2! { No trades! Nf3 is coming next in order to kick this bishop back. The game could continue: } 9... Bg7 10. Nf3 f6 11. Ned4 $16 { Each of white's knights has been fixed, and none of black's pieces are doing much of anything. Next, Karpov would surely bring his bishops to bear. Still, the game goes on. }) 8. f5! { More space, more! Karpov doesn't give Unzicker another chance. Black's DSB is now buried, and white's knights can reroute into the newly weakened kingside squares. } 8... g5? { Unzicker further buries his own bishop and weakens more light squares on the kingside. Perhaps he was hoping the position would get so locked up that Karpov couldn't make any progress and the game would end in a draw? If so, he completely misevaluated the position. } (8... gxf5!? 9. exf5 $16 { This probably had to be tried. White's knight or bishop can now use the newly vacant e4 square. The squeeze continues. }) 9. Bc2! { A new square on h5 has opened up for the previously buried LSB. Karpov hears his cry for an open diagonal and reroutes him to h5. } 9... Bf7 10. Ng3 { The dominated knight on e2 and LSB will combine to control h5. } 10... Nb7 11. Bd1! { Continuing the maneuver. Karpov's bishop finally will see the light of day. } 11... h6 12. Bh5! { Activity at last! Notice how white's LSB is happy to trade itself off for black's LSB because white's LSB is a bad bishop that has been stuck behind the pawn chain forever, and black's LSB is a key defender of the light squares weakened by black's pawn structure.
+For more information on good and bad bishops, please see: https://lichess.org/study/kNn68T8l } 12... Qe8 (12... Bxh5 13. Nxh5 $16 { This only brings white's previously dominated knight to a monster hole in black's position. }) 13. Qd1 { Karpov keeps the tension because he wants his knight to land on h5 with devastating effect. } (13. Bxf7+ Qxf7 14. Qd1! $16 { Also playable. }) 13... Nd8 14. Ra3! { White's queen is purely on defensive duty right now, and not loving it. Karpov hints at transferring her over to a1 from where she threatens a rook infiltration on the queenside.
+Note how Karpov is perfectly happy to ping pong between moves on the kingside and moves on the queenside. He simply talks to his pieces, determines who is the worst piece, and decides how best to improve them. } 14... Kf8 { Unzicker has been squeezed into a small box, and proceeds to now shuffle his king, hoping there is no breakthrough. } 15. R1a2 Kg8 16. Ng4! { Now the h2 knight improves from her slumber. Note that tactics ensure the bishop is not hanging. } 16... Kf8 (16... Bxh5 17. Nxh5 Qxh5?? 18. Nxf6+! Bxf6 19. Qxh5 $18 { The tactical justification of Karpov's Ng4. }) 17. Ne3 { The knight is a bit happier on e3 than on h2, but this is not the dream square for her. If only f5 were available for a knight... } 17... Kg8 18. Bxf7+ { Finally, Karpov initiates the bishop trade because he sees the winning follow-up. } 18... Nxf7!? { Unzicker recaptures with the knight to keep the major pieces better able to challenge the a file if necessary. But there's a problem. } (18... Qxf7!? { The better recapture, because at least Karpov's queen cannot infiltrate yet. Karpov had probably planned: } 19. Bb6! { The bishop unleashes the tension on the a file at the perfect moment! } 19... Rxa3 20. Rxa3 Ra8? { Black is no longer able to challenge the a file. } (20... Nb7!? 21. Ra7 $18 { With decisive penetration. }) 21. Rxa8 Nxa8 22. Bxd8 $18 { Karpov is already up one piece, and black's knight on a8 is so poorly placed that he's essentially up two pieces. }) 19. Qh5! { Karpov now has a chance to enter with the queen! } 19... Nd8 20. Qg6! { A beautiful collinear move! The queen cannot be captured without allowing both of white's knights to pounce on f5 and h5. Meanwhile, she's a dominant force hitting everything in black's position if she is allowed to remain on g6. } 20... Kf8 (20... Qxg6?! 21. fxg6 Ne8 22. Nef5! Bf8 23. Nh5! $18 { Black literally cannot move a single piece, and white's knights are absolute monsters from their light square outposts. The last straw will be unleashing the rooks on the a file and the game is over. }) 21. Nh5! $18 { Karpov follows through with his earlier threat to enter with the knight on h5. The threat is Qxg7#. Since any queen trade allows the dormant knight on e3 to spring to life, black has to sit passively and pray there's no breakthrough. Unfortunately, there is one.
+Unzicker resigned rather than play it out. The game could have continued: } 21... Qf7 22. Bb6! { Finally, the rooks are unleashed on the a file. There's no way to prevent white from entering on the a file or winning either of black's two clumsy knights. } 22... Rab8 23. Bxc7 Rxc7 24. Ra8! { 8th rank infiltration. } 24... Rcc8 25. R2a7! { 7th rank infiltration. } 25... Nb7 26. Rxb8 Rxb8 27. Ng4 $18 { A picturesque finish. White has improved every piece to their maximum, and the position is actually zuzgwang. Just try moving a single piece for black without losing material! } 1-0
+
+
+[Event "Talk to your pieces! Developing plans I: Thanks for enjoying this study!"]
+[Date "2024.03.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Talk to your pieces! Developing plans I"]
+[ChapterName "Thanks for enjoying this study!"]
+[ChapterURL "https://lichess.org/study/kjBSgqoA/r6LjxZ1L"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "3r4/1kr1bp1p/3p1p2/p1qPpP2/1p6/1P3QP1/P1PRN2P/1K2R3 b - - 0 29"]
+[SetUp "1"]
+[UTCDate "2024.03.28"]
+[UTCTime "17:29:37"]
+[ChapterMode "gamebook"]
+
+{ Be sure to like this study and share with your friends if you enjoyed it!
+
+Once you've mastered this study, you're ready for part two:
+* Pawns aren't people! Developing plans II https://lichess.org/study/dYFcDtRq
+
+Feel free to ask/answer any questions in the chat room if you're stuck on a key idea. You can check out some of my other instructive studies too if you're working on improving your game.
+-NoseKnowsAll
+
+* Intermediate endgames you must know! https://lichess.org/study/UsqmCsgC
+* More endgames you must know! https://lichess.org/study/xtDSXkyi
+* Knights | How to dominate your opponents! https://lichess.org/study/kI8ikTU4
+* Bishops | Slice through the opposition! https://lichess.org/study/kNn68T8l
+* Rooks | Infiltrate for activity! https://lichess.org/study/U7tTRtdj
+* Light and Dark Squares | Master color complex strategy! https://lichess.org/study/T3ixjwmg
+* Always sacrifice the exchange! https://lichess.org/study/h3ccaYFE
+* Beautiful checkmates https://lichess.org/study/YtBYXc3m }
+ *
+
+

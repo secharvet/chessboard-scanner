@@ -1,0 +1,1280 @@
+[Event "Tactics in Pawn Endgames: Exercise #1"]
+[Date "2023.02.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #1"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/X8us7TPU"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/ppp5/8/PPP5/8/7k/8/7K w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.12"]
+[UTCTime "17:12:46"]
+[ChapterMode "gamebook"]
+
+{ This is a very important pattern to know. White to move and win. }
+1. b6 cxb6 2. a6 { And white promotes no matter which pawn is captured. } *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #2"]
+[Date "2023.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #2"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/MBfBTk0y"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/6Pk/5K2/8/6P1/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.11"]
+[UTCTime "15:12:33"]
+[ChapterMode "gamebook"]
+
+{ White to play and mate in 4. }
+1. Kf7 Kh6 2. g8=R { Excellent! Promoting to a queen would end the game in stalemate. } (2. g8=Q { Stalemate! }) 2... Kh7 3. Rg6 (3. Rg5 { This also works but play Rg6 for the more forcing continuation. }) 3... Kh8 4. Rh6# *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #3"]
+[Date "2023.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #3"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/nDDXxAxm"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/8/8/8/8/4Kp1p/7k/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.11"]
+[UTCTime "15:19:04"]
+[ChapterMode "gamebook"]
+
+{ White to play and draw. }
+1. Kf2 (1. Kxf3 { Wrong! Black wins after Kg1. }) 1... Kh1 2. Kf1 Kh2 3. Kf2 *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #4"]
+[Date "2023.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #4"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/W4hD4WXR"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/8/8/2p5/p7/8/P1Pk4/1K6 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.11"]
+[UTCTime "15:20:49"]
+[ChapterMode "gamebook"]
+
+{ White to play and draw. }
+1. c4 a3 2. Ka1 Kd3 3. Kb1 Kxc4 4. Kc2 *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #5"]
+[Date "2023.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #5"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/Z4R7uL50"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/8/8/2p5/8/8/1kP5/3K4 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.11"]
+[UTCTime "15:23:58"]
+[ChapterMode "gamebook"]
+
+{ White to play and draw. }
+1. c4 Kc3 2. Kc1 Kxc4 3. Kc2 *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #6"]
+[Date "2023.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #6"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/BQJ5LbE6"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/8/8/p6p/P4K1P/8/4k3/8 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.11"]
+[UTCTime "15:26:23"]
+[ChapterMode "gamebook"]
+
+{ Black to play and draw. }
+1... Kd3 2. Kg5 Ke4 3. Kxh5 Kf5 4. Kh6 Kf6 5. h5 Kf7 6. Kg5 Kg7 7. Kf4 Kh6 8. Ke4 Kxh5 9. Kd5 Kg5 (9... Kg4 { This also works but play Kg5 for the continuation. }) (9... Kg6 { This also works but play Kg5 for the continuation. }) 10. Kc5 Kf5 (10... Kf6 { This also works but play Kf5 for the continuation. }) 11. Kb5 Ke6 12. Kxa5 Kd7 13. Kb6 Kc8 14. Ka7 Kc7 15. a5 Kc6 (15... Kc8 { This also works but play Kc6 for the continuation. }) 16. Ka6 (16. a6 Kc7) 16... Kc7 *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #7"]
+[Date "2023.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #7"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/oGJVqUJe"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/6p1/5p2/3k3P/8/8/K5P1/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.11"]
+[UTCTime "15:32:53"]
+[ChapterMode "gamebook"]
+
+{ White to play and draw. }
+1. Kb3 (1. Ka3 { This also works but Kb3 brings the king toward the action immediately. }) 1... Kd4 2. Kb4 Ke3 3. Kc4 (3. Kc5 { This also works but play the less committal Kc4 for the continuation. }) 3... Kf2 { White has two drawing plans here but play Kd3 for the continuation. } 4. Kd3 Kxg2 5. Ke4 Kg3 6. Kf5 Kh4 7. Kg6 f5 8. h6 { Excellent! Pushing the h pawn prevents the f pawn from advancing and ensures that black has an h pawn rather than a g pawn. } 8... gxh6 9. Kxf5 { Excellent! White can't allow the f pawn to advance. } (9. Kxh6 { Wrong! Now white can't catch the f pawn. }) 9... Kh5 10. Kf4 { Excellent! Now white draws the game. } *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #8"]
+[Date "2023.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #8"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/C1nc4eiV"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/6K1/8/ppp2k2/8/1P6/1P5P/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.11"]
+[UTCTime "15:42:52"]
+[ChapterMode "gamebook"]
+
+{ White to play and draw. }
+1. h4 Kg4 2. Kg6 Kxh4 3. Kf5 Kg3 4. Ke4 (4. Ke5 { This also works but Ke4 limits the mobility of black's king. }) (4. Ke6 { This also works but Ke4 limits the mobility of black's king. }) 4... Kf2 5. Kd5 { If black pushes any of its pawns then white wins the game, so you can just collect them and draw the game. } (5. Ke5 { This also works but Kd5 makes more sense. }) *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #9"]
+[Date "2023.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #9"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/ZeKW1YNy"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/1pp5/1p1p4/3P1K2/2P5/PPk5/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.11"]
+[UTCTime "15:47:31"]
+[ChapterMode "gamebook"]
+
+{ White to play and draw. }
+1. Ke6 Kxb3 2. Kd7 Kxc4 3. Kxc7 Kxd5 4. Kxb6 { Excellent! Neither of black's pawns can move and white can draw by winning the b pawn and pushing its a pawn. } *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #10"]
+[Date "2023.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #10"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/EGY4cxsx"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/8/4pk2/7P/7p/4K3/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.11"]
+[UTCTime "15:51:01"]
+[ChapterMode "gamebook"]
+
+{ White to play and draw. }
+1. Kf4 e5+ 2. Kg4 e4 3. Kxh4 e3 4. Kg3 { Excellent! White remains in the square of the black pawn and draws the game. } *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #11"]
+[Date "2023.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #11"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/th6cFBQG"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/8/8/3k4/PK2p1P1/8/8/8 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.11"]
+[UTCTime "15:55:56"]
+[ChapterMode "gamebook"]
+
+{ Black to play and win. }
+1... e3 2. Kc3 Ke4 3. g5 Kf3 4. g6 e2 { And black promotes first. } *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #12"]
+[Date "2023.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #12"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/90CMys7l"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "4k3/5p2/8/5K1p/8/6P1/7P/8 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.11"]
+[UTCTime "15:57:41"]
+[ChapterMode "gamebook"]
+
+{ Black to play and draw. }
+1... h4 { Excellent! White can't win with doubled h pawns and now the white king will be forced backward one way or another. } 2. g4 Kf8 (2... h3 { This also works but play Kf8 for the continuation. }) (2... Ke7 { This also works but play Kf8 for the continuation. }) 3. Kf6 h3 { Excellent! White's g pawn poses no threat. } (3... Kg8 { This also works but play h3 for the continuation. }) *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #13"]
+[Date "2023.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #13"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/qF4pRjAH"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/8/8/7p/5k2/5p2/5K1P/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.11"]
+[UTCTime "16:48:22"]
+[ChapterMode "gamebook"]
+
+{ White to play and draw. }
+1. Kf1 Ke3 2. Ke1 f2+ 3. Kf1 Kf3 4. h3 { Excellent! If black plays h4 now the game ends in stalemate, and if black moves the king, then white plays h4 itself. } *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #14"]
+[Date "2023.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #14"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/TnemEKWs"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/8/p7/P3kpp1/2p5/2P1PPK1/5P2/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.11"]
+[UTCTime "16:51:57"]
+[ChapterMode "gamebook"]
+
+{ White can play waiting moves with the king, but how does white play for a win? }
+1. f4+ gxf4+ 2. Kf3 { Excellent! After exf4 black wins with Ke4! } (2. exf4+ { This loses to Ke4! }) 2... fxe3 3. fxe3 *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #15"]
+[Date "2023.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #15"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/TLeVk0kc"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/k6p/2p3p1/5pP1/2pP1P2/2P1KP2/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.11"]
+[UTCTime "17:02:24"]
+[ChapterMode "gamebook"]
+
+{ White to play and win. }
+1. d5 c5 2. Kd2 Kb6 3. Kc2 (3. Kc1 { This also works but play Kc2 for the continuation. }) 3... Kc7 4. Kb2 Kd6 5. Ka3 Kxd5 6. Ka4 Kc6 7. Ka5 Kd5 8. Kb5 (8. Ka6 { This also works but Kb5 takes the side opposition. }) (8. Ka4 { This also works but Kb5 takes the side opposition. }) (8. Kb6 { This also works but Kb5 takes the side opposition. }) 8... Kd6 9. Kb6 Kd5 10. Kc7 *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #16"]
+[Date "2023.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #16"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/kGLMLYUv"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "6k1/8/6p1/8/5PPK/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.11"]
+[UTCTime "19:44:33"]
+[ChapterMode "gamebook"]
+
+{ White to play and win. }
+1. Kg3 (1. Kg5 { White can still win but only by starting over again. }) (1. Kh3 { This works but play Kg3 for the continuation. }) 1... Kf7 2. Kf3 (2. Kg2 { This works but play Kf3 for the continuation. }) (2. Kf2 { This works but play Kf3 for the continuation. }) 2... Kf6 3. Ke4 (3. Ke3 { This works but play Ke4 for the continuation. }) (3. Kf2 { This works but play Ke4 for the continuation. }) 3... Ke6 4. g5 Kd6 5. f5 Ke7 6. f6+ { Excellent! The only move. The f pawn controls the e7 square and prevents black from maintaining an important opposition. } 6... Kf7 7. Ke5 { Excellent! The f6 pawn prevents black from taking the opposition on e7. } (7. Kd5 { This also works but play Ke5 for the continuation. }) 7... Kf8 { White has many ways to win, but which is the fastest? } 8. f7 { Excellent! } 8... Kxf7 9. Kd6 Kf8 10. Ke6 Kg7 11. Ke7 Kg8 12. Kf6 Kh7 13. Kf7 Kh8 14. Kxg6 Kg8 15. Kh6 *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #17"]
+[Date "2023.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #17"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/OHYlmgIE"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/2k5/Kp4p1/5p1p/P6P/6P1/5P2/8 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.11"]
+[UTCTime "19:54:43"]
+[ChapterMode "gamebook"]
+
+{ Black to play and draw. }
+1... f4 2. gxf4 Kc6 3. f3 Kc5 4. Kb7 b5 5. a5 b4 6. a6 b3 7. a7 b2 8. a8=Q b1=Q+ 9. Kc7 Qb6+ (9... Kd4 { This also works but play Qb6+ for the continuation. }) 10. Kd7 Qd6+ 11. Ke8 Qxf4 (11... Qe6+ { This also works but black can take the f4 pawn immediately. }) 12. Qe4 Qxe4+ (12... Qf5 { This also works but exchange queens for the continuation. }) 13. fxe4 Kd4 (13... Kd6 { This also works but play the more direct Kd4 for the continuation. }) (13... Kc4 { This also works but play the more direct Kd4 for the continuation. }) 14. Kf7 Kxe4 15. Kxg6 Kf4 (15... Ke5 { This also works but play Kf4 for the continuation. }) 16. Kxh5 Kf5 { And black draws the game easily. } *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #18"]
+[Date "2023.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #18"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/jcTdxS8v"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/5p2/6p1/4k1Kp/8/5P1P/6P1/8 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.11"]
+[UTCTime "20:00:49"]
+[ChapterMode "gamebook"]
+
+{ Black to play and draw. }
+1... h4 { Excellent! If white takes on h4 it loses to Kf4! } 2. f4+ Ke4 3. f5 gxf5 4. Kxh4 Kf4 5. g3+ Kf3 { Excellent! White must give up the pawns because g4?? actually loses to f4! } (5... Ke3 { This also works but play Kf3 for the continuation. }) (5... Ke4 { This also works but play Kf3 for the continuation. }) 6. Kg5 *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #19"]
+[Date "2023.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #19"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/Hw6PnuqI"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/7p/6p1/3k4/5P2/8/7P/7K w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.11"]
+[UTCTime "20:05:22"]
+[ChapterMode "gamebook"]
+
+{ White to play and draw. }
+1. Kg2 Ke4 2. Kg3 h5 3. h3 (3. f5 { This still draws but makes it easier for black. }) (3. Kf2 { This still draws but makes it easier for black. }) (3. Kg2 { This still draws but makes it easier for black. }) (3. h4 { Wrong! This actually loses to Ke3! and white is in zugzwang. }) 3... Ke3 4. Kh4 { Excellent! The only move. If black takes the f pawn the game ends in stalemate. } *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #20"]
+[Date "2023.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #20"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/4XH7yTNh"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/8/3K1k2/5p1p/4p1p1/4P1P1/5PP1/8 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.11"]
+[UTCTime "20:10:04"]
+[ChapterMode "gamebook"]
+
+{ Black to play and win. }
+1... f4 { The only move! Kd5 is actually white's best response, but let's see what happens after a pawn capture. } 2. exf4 { Black can play Kf5 here, but what is the only other move to win for black? } 2... h4 3. gxh4 g3 4. fxg3 e3 { And black promotes first after sacrificing three pawns. } *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #21"]
+[Date "2023.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #21"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/GqgKbZSv"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/8/1p1k4/5ppp/PPK1p3/6P1/5PP1/8 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.11"]
+[UTCTime "20:17:44"]
+[ChapterMode "gamebook"]
+
+{ Black to play and win. }
+1... f4 2. gxf4 gxf4 3. Kd4 e3 4. fxe3 f3 5. gxf3 h4 *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #22"]
+[Date "2023.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #22"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/6HPbU2Aw"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/6p1/8/p1p1p1kP/1p1pP1P1/1P1P3K/1PP5/8 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.11"]
+[UTCTime "20:19:28"]
+[ChapterMode "gamebook"]
+
+{ Black to play and win. }
+1... c4 2. dxc4 a4 3. bxa4 b3 4. cxb3 d3 *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #23"]
+[Date "2023.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #23"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/E61YDh2L"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/4k3/5p2/p1p2P2/1p1p2PK/1P1P4/1PP5/8 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.11"]
+[UTCTime "20:39:01"]
+[ChapterMode "gamebook"]
+
+{ Black to play and win. }
+1... c4 2. Kg3 { Perhaps you calculated both captures, but what now? Black has two winning moves. } 2... c3 (2... a4 { This is the other move but play c3 for the continuation. }) 3. bxc3 a4 (3... dxc3 { This also works but play a4 for the continuation. }) 4. bxa4 b3 { Excellent! Now one of black's pawns will promote. } *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #24"]
+[Date "2023.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #24"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/nsZ3poit"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/5pp1/7p/5P1P/2k3P1/2p5/5P2/2K5 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.11"]
+[UTCTime "20:46:46"]
+[ChapterMode "gamebook"]
+
+{ White to play and win. }
+1. f6 gxf6 2. f4 Kd4 3. g5 (3. Kd1 { This also works but g5 is stronger. }) (3. Kc2 { This also works but g5 is stronger. }) 3... fxg5 4. fxg5 hxg5 5. h6 *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #25"]
+[Date "2023.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #25"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/1CitYDeS"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/3k1p2/5p1p/p1p2P2/P1PpKPPP/1P6/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.11"]
+[UTCTime "20:48:46"]
+[ChapterMode "gamebook"]
+
+{ White has more than one idea here. What did Capablanca play against Conde in Hastings 1919? }
+1. b4 axb4 2. a5 Kc7 3. g5 fxg5 4. fxg5 hxg5 5. hxg5 (5. h5 { Wrong! Black wins after b3! or g4! }) 5... b3 6. Kd3 { The only move! Black can't promote and can't defend both sides of the board. } *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #26"]
+[Date "2023.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #26"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/IFJZy6Ub"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "1k6/8/p1p1p3/5pp1/8/P1P3P1/1P3P2/6K1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.11"]
+[UTCTime "20:54:05"]
+[ChapterMode "gamebook"]
+
+{ White to play and win. }
+1. g4 Kc7 2. f4 gxf4 3. g5 { Excellent! If the black king tries to catch the g pawn, then white breaks through with the queenside pawns. } *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #27"]
+[Date "2023.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #27"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/YOurNZjE"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/6k1/6p1/2p1pp1p/1pK1P2P/pP3PP1/P7/8 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.11"]
+[UTCTime "20:58:55"]
+[ChapterMode "gamebook"]
+
+{ White's king is more active but black has two winning moves here. }
+1... g5 (1... f4 { This also works but play g5 for the continuation. }) 2. exf5 g4 3. fxg4 e4 4. gxh5 { What is black's best plan here? } 4... e3 { Excellent! Black can still win with a king move, but this is the only way forward. } 5. Kd3 c4+ (5... e2 { This also wins but play c4+ for the continuation. }) 6. bxc4 b3 (6... e2 { This still wins but play b3 for the continuation. }) 7. axb3 a2 { The most direct. Black can still win after e2 but the pawn falls anyway. } *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #28"]
+[Date "2023.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #28"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/J0My3eXo"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/6k1/6P1/1ppp1P2/p2P4/P1K3P1/8/8 b - - 0 3"]
+[SetUp "1"]
+[UTCDate "2023.02.11"]
+[UTCTime "21:09:08"]
+[ChapterMode "gamebook"]
+
+{ Black to play and win. }
+3... b4+ 4. axb4 cxd4+ 5. Kxd4 a3 6. Kc3 d4+ 7. Kb3 d3 { The white king can't defend against both pawns. } *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #29"]
+[Date "2023.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #29"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/jLsDWmwJ"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/p5k1/6P1/1p6/2ppK3/1P6/P1P5/8 b - - 1 1"]
+[SetUp "1"]
+[UTCDate "2023.02.11"]
+[UTCTime "21:13:20"]
+[ChapterMode "gamebook"]
+
+{ Black to play and win. }
+1... d3 2. cxd3 c3 3. Ke3 b4 { White's king can't leave the defense of the c pawn so black's king has all the time in the world to come into the game. } (3... a5 { This also works but b4 immediately freezes the a pawn. }) *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #30"]
+[Date "2023.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #30"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/vkHtk3Km"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/2p5/1pPp2k1/pP1P4/P3Pp1p/7p/8/6K1 w - - 0 3"]
+[SetUp "1"]
+[UTCDate "2023.02.11"]
+[UTCTime "21:16:30"]
+[ChapterMode "gamebook"]
+
+{ White to play and win. }
+3. e5 { Excellent! You already see how the c pawn promotes if black captures on e5. If black tries to play Kf5 instead, then white plays exd6 with the same plan. } *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #31"]
+[Date "2023.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #31"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/j70iA8rV"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/8/8/pPk3pp/2P1p3/1pK3P1/5PP1/8 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.11"]
+[UTCTime "21:19:39"]
+[ChapterMode "gamebook"]
+
+{ Black to play and win. }
+1... g4 (1... b2 { This also works but play g4 for the continuation. }) 2. Kxb3 h4 (2... a4+ { This also works but what's the other winning move? }) 3. gxh4 g3 { Excellent! After fxg3 white is unable to stop both the a and e pawns. } (3... a4+ { This also works but what's the other winning move? }) *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #32"]
+[Date "2023.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #32"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/TTvLkgGw"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/6pp/1p3p2/p1p2PP1/P1Pk1K2/1P5P/8/8 b - - 0 3"]
+[SetUp "1"]
+[UTCDate "2023.02.11"]
+[UTCTime "21:54:15"]
+[ChapterMode "gamebook"]
+
+{ Black to play and win. }
+3... Kd3 { Black passes the move! } 4. h4 Kd4 { And again! } 5. h5 fxg5+ 6. Kxg5 Ke5 7. f6 gxf6+ 8. Kh6 f5 9. Kxh7 Kf6 { The only move! After the immediate f4 white has Kg6 and the h pawn queens with an important check. } 10. h6 Kf7 { Another only move! Black first prevents white from queening and leaves it helpless. If black had played f4 instead, then white actually wins after Kg8. } *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #33"]
+[Date "2023.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #33"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/o6fwsT8z"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/8/1p3p2/4k1pp/p3P2P/P3K1P1/1P6/8 w - - 0 3"]
+[SetUp "1"]
+[UTCDate "2023.02.11"]
+[UTCTime "22:02:09"]
+[ChapterMode "gamebook"]
+
+{ White to play and win. }
+3. g4 hxg4 4. h5 Ke6 { Black's king remains inside the square of the h pawn. What does white do here? } 5. Kf2 (5. Ke2 { This also works but play Kf2 for the continuation. }) 5... Kf7 6. Kg3 (6. Kg2 { This also works but play Kg3 for the continuation. }) 6... Kg7 7. Kxg4 Kh6 8. Kf5 Kg7 9. e5 (9. Kg4 { White is still winning but this makes no progress. What's the only other winning move? }) 9... fxe5 10. Kxg5 { Excellent! And now white marches to the queenside while the black king is distracted by the h pawn. } *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #34"]
+[Date "2023.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #34"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/wajQcgiO"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "6k1/8/p6p/1p1pP2P/8/1P5K/P7/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.11"]
+[UTCTime "22:12:04"]
+[ChapterMode "gamebook"]
+
+{ White to play and win. }
+1. Kg4 Kf7 2. Kf5 b4 3. e6+ Ke7 4. Ke5 d4 5. Kxd4 Kxe6 6. Kc5 (6. Kc4 { This also works but Kc5 is more direct because it threatens the b pawn, has access to the b6 square, and shoulders the king from d6. }) 6... Kf5 7. Kxb4 { The only move! If white tries to take the a pawn first, then black promotes first and wins. } 7... Kg5 8. a4 (8. Ka5 { This natural move throws away the win and allows black to enter a drawn queen ending. }) (8. Kc5 { This also works but play a4 for the continuation. }) (8. Kc3 { This also works but play a4 for the continuation. }) (8. Kc4 { Amazingly this throws away the win because black will enter a drawn queen endgame. }) 8... Kxh5 9. Kc3 (9. Ka3 { This also works but play Kc3 for the continuation. }) (9. Kc5 { This also works but play Kc3 for the continuation. }) 9... Kg4 10. b4 h5 11. b5 axb5 12. a5 { The only move! White must queen on a8 to cover black's promotion square on h1. } *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #35"]
+[Date "2023.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #35"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/yuPm8jfI"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/8/7p/6PP/p4K2/k7/P7/8 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.11"]
+[UTCTime "22:22:51"]
+[ChapterMode "gamebook"]
+
+{ Black is lost here with best play, but which move gives black some hope with a tempting trap? }
+1... hxg5+ { Excellent! Black is still lost but white is in check and if the king captures on g5 then the game is drawn. } 2. Kxg5 Kxa2 3. h6 Kb1 (3... a3 { This also works but play Kb1 for the continuation. }) 4. h7 a3 5. h8=Q a2 { And black will either promote and exchange or threaten a stalemate on a1 which wouldn't be possible if the g pawn were still on the board. } *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #36"]
+[Date "2023.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #36"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/21ZG866w"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/1k5p/4p2p/Pp1pPp2/1P3P2/4K3/6P1/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.11"]
+[UTCTime "22:33:41"]
+[ChapterMode "gamebook"]
+
+{ White to play and win. }
+1. g4 { Excellent! White creates a second passed pawn on the e file and black's king can't defend against both threats. } *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #37"]
+[Date "2023.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #37"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/403VIKP4"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/8/8/1P2kp2/P2p2p1/6P1/3K4/8 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.11"]
+[UTCTime "22:37:20"]
+[ChapterMode "gamebook"]
+
+{ Black to play and win. }
+1... f4 2. gxf4+ Kd6 { The only move! Black heads for the queenside passers and white can't handle black's two advanced passed pawns. } (2... Kxf4 { Understandable but wrong! Now white wins with b6. }) 3. a5 g3 { The only move! } 4. a6 Kc7 { Another only move! Now black contains white's pawns and there is nothing the white king can do. } *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #38"]
+[Date "2023.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #38"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/lqQ3BqQ4"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/5k2/p4p2/5K2/7P/8/6P1/8 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.11"]
+[UTCTime "22:46:20"]
+[ChapterMode "gamebook"]
+
+{ Black to play and win. }
+1... a5 2. Ke4 { White remains inside the square of the a pawn. What is black's only winning move here? } 2... f5+ 3. Kd3 f4 { Excellent! This move paralyzes the pawn on g2 and allows black to capture the h pawn and win the game. } *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #39"]
+[Date "2023.02.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #39"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/gm8bIsQq"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/3k2p1/p7/P2p3p/1P1P4/4PK2/8/8 w - - 0 3"]
+[SetUp "1"]
+[UTCDate "2023.02.12"]
+[UTCTime "14:29:32"]
+[ChapterMode "gamebook"]
+
+{ White to play and win. }
+3. e4 dxe4+ 4. Kxe4 h4 5. b5 h3 6. Kf3 axb5 7. a6 Kc7 8. d5 { The black king can't handle both threats and white promotes first. } *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #40"]
+[Date "2023.02.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #40"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/AK6wyzTG"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/4kp2/8/4pp1p/3P3P/5PP1/5K2/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.12"]
+[UTCTime "14:33:10"]
+[ChapterMode "gamebook"]
+
+{ White to play and win. }
+1. d5 Kd6 2. g4 fxg4 3. fxg4 hxg4 4. h5 *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #41"]
+[Date "2023.02.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #41"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/oP3TpQKb"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/4k2p/p1P5/1p2P3/2pK4/P7/7P/8 b - - 1 1"]
+[SetUp "1"]
+[UTCDate "2023.02.12"]
+[UTCTime "14:40:25"]
+[ChapterMode "gamebook"]
+
+{ Black to play and draw. }
+1... a5 2. Kc3 Ke6 3. a4 b4+ 4. Kxc4 { Now white's passed pawns can't make any progress with its king tied to the defense of the b pawn. Black can push the h pawn or play what king move? } 4... Ke7 { Excellent! Black's king can just move back and forth and the game is drawn. } *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #42"]
+[Date "2023.02.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #42"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/KLod4zX4"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/8/8/3k1p1p/P3p3/4K2P/6P1/8 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.12"]
+[UTCTime "14:51:21"]
+[ChapterMode "gamebook"]
+
+{ Black to play and win. }
+1... f4+ { Excellent! This move freezes the g pawn and if white captures it then black promotes first after Kd4. } 2. Ke2 h4 { Excellent! Now white is frozen and black has time to collect the a pawn and return to the kingside. } *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #43"]
+[Date "2023.02.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #43"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/nOCrdWUr"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/7p/2pk4/p3p1p1/PP2P2P/2PK4/8/8 b - - 0 2"]
+[SetUp "1"]
+[UTCDate "2023.02.12"]
+[UTCTime "15:00:37"]
+[ChapterMode "gamebook"]
+
+{ Black to play and win. }
+2... gxh4 (2... g4 { This loses to h5!! In that case white has time to capture the g pawn and return to the queenside. }) 3. Ke3 axb4 4. cxb4 c5 5. bxc5+ Kxc5 { And now the black king can collect white's pawns and win the game. } *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #44"]
+[Date "2023.02.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #44"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/ExwpeV8l"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/6p1/p7/5P1p/1Pk5/8/5KPP/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.12"]
+[UTCTime "15:05:50"]
+[ChapterMode "gamebook"]
+
+{ White to play and win. }
+1. h4 Kxb4 2. g4 { Excellent! Whether black captures or pushes the a pawn, white will promote first. } *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #45"]
+[Date "2023.02.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #45"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/ocfUAdIr"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/8/7p/pK6/p3k1p1/8/1P3P1P/8 b - - 1 1"]
+[SetUp "1"]
+[UTCDate "2023.02.12"]
+[UTCTime "15:09:56"]
+[ChapterMode "gamebook"]
+
+{ Black to play and win. }
+1... a3 2. bxa3 { And now black can easily collect the kingside pawns and promote first. Play Kf3 for the continuation. } 2... Kf3 3. Kxa5 Kxf2 (3... h5 { This also works but play Kxf2 for the continuation. }) 4. Kb5 { It's easy to rush here, but it's important to calculate all the different promotions, because only one way works. } 4... h5 { The only move! } (4... Kg2 { Now white can draw with a4! Black needs to promote on the h1 square to guard a8, but if the king captures the h pawn then it loses a crucial tempo leaving the h file again. }) 5. a4 h4 { Only move! } 6. a5 g3 { Only move! } 7. hxg3 h3 { Excellent! Black needs to promote on h1 to guard the a8 square. } *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #46"]
+[Date "2023.02.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #46"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/3nQbNp3f"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/1p6/2p5/p1p1Kpkp/P7/1P1P2PP/2P5/8 w - - 2 2"]
+[SetUp "1"]
+[UTCDate "2023.02.12"]
+[UTCTime "15:18:25"]
+[ChapterMode "gamebook"]
+
+{ White to play and win only by keeping an important tempo. }
+2. c3 { Excellent! White keeps a tempo in reserve to create zugzwang. } (2. c4 { This is only good enough for a draw after b6! }) 2... b5 3. c4 b4 4. d4 cxd4 5. Kxd4 h4 6. gxh4+ Kxh4 7. Ke5 Kxh3 8. Kxf5 { And white's king easily invades and captures the pawns. } *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #47"]
+[Date "2023.02.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #47"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/5G841EQK"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/1p1kp3/7p/2P1K2p/1P6/6P1/8/8 b - - 0 6"]
+[SetUp "1"]
+[UTCDate "2023.02.12"]
+[UTCTime "15:32:08"]
+[ChapterMode "gamebook"]
+
+{ Black to play and win. }
+6... Kc6 { Excellent! Even the unassuming e pawn, in its starting position, is enough of a threat to allow the black king to go on the attack. } 7. Ke6 Kb5 8. Kxe7 Kxb4 9. Kd6 Kc4 { Excellent! White is in zugzwang. } (9... Kc3 { This also works but Kc4 is more direct. }) *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #48"]
+[Date "2023.02.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #48"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/LP5flTKp"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/kp6/p1p5/K1P1p3/PP2P1p1/6P1/8/8 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.12"]
+[UTCTime "15:51:51"]
+[ChapterMode "gamebook"]
+
+{ Black to play and win. }
+1... b6+ 2. cxb6+ Kb7 3. b5 axb5 4. axb5 c5 { Excellent! White is suddenly in zugzwang. } 5. Ka4 Kxb6 6. Ka3 Kxb5 7. Kb3 { What is the quickest move to mate? } 7... c4+ 8. Kc3 Kc5 { And now white can't stop black from invading and creating a second threat. } *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #49"]
+[Date "2023.02.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #49"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/ZG4RhXn2"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/8/8/6pp/2PKpk2/7P/6P1/8 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.12"]
+[UTCTime "15:55:13"]
+[ChapterMode "gamebook"]
+
+{ Black to play and draw. }
+1... g4 2. hxg4 h4 3. g5 e3 (3... h3 { This also works but play e3 for the continuation. }) 4. Kd3 h3 { Excellent! Black clears the way for its king to support the e pawn. } 5. gxh3 Kf3 6. g6 e2 7. g7 e1=Q { And black still has some work to do to draw the queen ending. } *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #50"]
+[Date "2023.02.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #50"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/7rPLTw5l"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/1pp5/1p4p1/3Pp1k1/P3P2p/5K2/1P3P1P/8 b - - 0 2"]
+[SetUp "1"]
+[UTCDate "2023.02.12"]
+[UTCTime "16:01:52"]
+[ChapterMode "gamebook"]
+
+{ White has just thrown away the win after a4?? Black to play and draw. }
+2... Kh5 { Excellent! Black creates a path for the g pawn in order to set up a fortress. } 3. b4 b5 { Excellent! This prevents any breakthroughs on the queenside. } 4. axb5 b6 { Excellent! Now white's queenside is frozen. } 5. h3 g5 6. Kg2 g4 7. f4 gxf3+ 8. Kxf3 Kg5 { And there is no way for white to make progress. } *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #51"]
+[Date "2023.02.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #51"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/6Svlti8q"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/1k6/1p6/1K6/P1P5/8/8/8 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.12"]
+[UTCTime "16:14:04"]
+[ChapterMode "gamebook"]
+
+{ Black to play and draw. }
+1... Kc7 (1... Ka7 { This loses to a5! or even Kc6. }) 2. Ka6 Kc6 3. Ka7 Kc7 { And white can't make any progress. } *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #52"]
+[Date "2023.02.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #52"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/faVL4UEa"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/8/8/4p1p1/8/5P2/6K1/3k4 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.12"]
+[UTCTime "16:17:10"]
+[ChapterMode "gamebook"]
+
+{ White to play and draw. }
+1. Kh1 { The only move! White takes the distant opposition. } (1. Kg3 { This loses to Ke1! }) (1. Kf2 { This loses to Kd2! }) (1. Kf1 { This loses to Kd2! }) 1... Ke2 2. Kg2 Ke3 3. Kg3 *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #53"]
+[Date "2023.02.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #53"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/jaxORypT"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/5p2/8/6Pk/5P2/8/8/7K w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.12"]
+[UTCTime "16:20:11"]
+[ChapterMode "gamebook"]
+
+{ It looks like black's king can capture the pawns and take the opposition, but white has one move to draw. What is it? }
+1. g6 { The only move! By luring the black pawn forward white creates a new set of key squares which it will be able to defend. } 1... fxg6 2. f5 { The only move! } 2... gxf5 3. Kg1 { Again the only move! This allows white to control the opposition. } *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #54"]
+[Date "2023.02.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #54"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/UW9K7vQU"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/4k3/3p4/3P4/2P5/8/8/5K2 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.12"]
+[UTCTime "16:23:48"]
+[ChapterMode "gamebook"]
+
+{ White must be extremely careful here. White to play and win. }
+1. Kg2 (1. Kg1 { This also works but play Kg2 for the continuation. }) 1... Kf6 2. Kf2 { Excellent! The important opposition is that on the f file. } 2... Ke5 3. Ke3 *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #55"]
+[Date "2023.02.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #55"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/W49QnImu"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/5p2/4p3/8/3P4/5k2/P7/5K2 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.12"]
+[UTCTime "16:29:32"]
+[ChapterMode "gamebook"]
+
+{ White to play and win. }
+1. d5 { Excellent! The only move. The pawn sacrifices itself to block the black king's path. } (1. a4 { This is too hasty. Now black can draw with Ke4! }) 1... exd5 2. a4 { Playing a4 didn't work, but now with the extra tempo the black king can't stop it. } 2... Ke4 3. a5 Kd4 4. a6 *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #56"]
+[Date "2023.02.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #56"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/CHRImwwm"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/2p5/P1k5/P5p1/6Kp/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.12"]
+[UTCTime "16:32:20"]
+[ChapterMode "gamebook"]
+
+{ White's king is tied to the connected passed pawns on the kingside, but black is also immobile. White to play and win. }
+1. Kh3 { Excellent! Black is now in zugzwang. } (1. Kf3 { This also works but makes less sense than Kh3. }) 1... g4+ 2. Kxg4 h3 3. Kxh3 { And black's king must leave the square of the a pawn. } *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #57"]
+[Date "2023.02.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #57"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/8lnKyBsq"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/2pp2pp/8/2PP1P2/1p5k/8/PP4p1/6K1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.12"]
+[UTCTime "16:35:20"]
+[ChapterMode "gamebook"]
+
+{ White to play and win. }
+1. f6 { An incredible sacrifice! It's difficult to see but this creates a barrier that prevents the black king from catching white's a pawn. } 1... gxf6 2. Kxg2 Kg5 3. a4 (3. a3 { This also works but play a4 for the continuation. }) 3... bxa3 4. bxa3 Kf5 5. a4 { And now the a pawn races to promotion. } *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #58"]
+[Date "2023.02.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #58"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/v6djOdRT"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/2p4K/8/7k/8/8/6PP/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.12"]
+[UTCTime "16:40:19"]
+[ChapterMode "gamebook"]
+
+{ White to play and draw. }
+1. g4+ { Excellent! White sacrifices a pawn in order to clear the way for its king to reach the c pawn. } 1... Kxg4 2. Kg6 c5 3. h4 { Now if black captures the a pawn then white can reach the c pawn and if black pushes the c pawn then white also promotes the h pawn. } (3. h3+ { This also works but play h4 for the continuation. }) *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #59"]
+[Date "2023.02.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #59"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/7jjhAn5S"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/2p5/8/8/5P1k/p7/7P/2K5 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.12"]
+[UTCTime "16:42:42"]
+[ChapterMode "gamebook"]
+
+{ White to play and win. }
+1. h3 { Excellent! Of course black can't take the pawn and this prevents Kg4. } 1... c5 2. Kb1 c4 3. Ka2 Kh5 4. Kxa3 Kg6 5. h4 Kf5 6. h5 c3 7. Kb3 *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #60"]
+[Date "2023.02.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #60"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/LaELMuTC"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "1k6/2p5/3p4/PPPP4/6p1/5pP1/5K2/8 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.12"]
+[UTCTime "16:50:16"]
+[ChapterMode "gamebook"]
+
+{ Black to play and draw. }
+1... Kb7 2. a6+ Ka7 3. b6+ Kxa6 4. bxc7 Kb7 5. cxd6 Kc8 { White's king is tied to the f pawn and the queenside pawns can make no progress. } *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #61"]
+[Date "2023.02.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #61"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/0xQ6SfyR"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "6k1/8/5P1P/8/ppp5/8/2K5/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.12"]
+[UTCTime "16:54:28"]
+[ChapterMode "gamebook"]
+
+{ White to move and win. }
+1. Kb1 { The only move! White passes the move to black. From the b1 square white's king can block any pawn that advances on the queenside. } 1... a3 2. Ka2 { It's hopeless to push the pawns, so what if black tries to capture white's pawns and come into the fight? } 2... Kf7 3. h7 { Black has no way to defend the h pawn and the same would be true of the f pawn if black had tried to capture the h pawn first. The separated pawns defend each other in this way. } *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #62"]
+[Date "2023.02.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #62"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/ouO0fV9O"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/p7/5p2/2k2P2/8/2K5/P7/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.12"]
+[UTCTime "16:58:34"]
+[ChapterMode "gamebook"]
+
+{ White to play and draw. }
+1. a4 { The only move! White moves it's pawn forward and takes away a square from the black king. } 1... a5 2. Kd3 Kb4 3. Kd4 Kxa4 4. Kc4 { The only move! White forces black's king farther away from the f pawn. The draw is only possible by preventing Kb5 amazingly. } 4... Ka3 5. Kd5 a4 6. Ke6 Kb4 7. Kxf6 a3 8. Ke7 { Excellent! If white goes to g7 then the f pawn will be pinned after black promotes. } 8... a2 9. f6 a1=Q 10. f7 { And white has a drawn queen endgame. } *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #63"]
+[Date "2023.02.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #63"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/SztDPnfq"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "6k1/6pp/5p2/4p3/p1p1P2P/2P2PP1/1K6/8 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.12"]
+[UTCTime "17:14:55"]
+[ChapterMode "gamebook"]
+
+{ Black to play and win. }
+1... h5 { Black's queenside is lost so it creates a breakthrough on the kingside. } 2. Ka3 g5 3. Kxa4 f5 4. hxg5 f4 { And black creates a passed h pawn. } *
+
+
+[Event "Tactics in Pawn Endgames: Exercise #64"]
+[Date "2023.02.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics in Pawn Endgames"]
+[ChapterName "Exercise #64"]
+[ChapterURL "https://lichess.org/study/kSK7Uq54/pKSvOlZR"]
+[Annotator "https://lichess.org/@/njswift"]
+[FEN "8/8/p1k5/1pPp1pp1/1P6/3K4/P5P1/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.02.12"]
+[UTCTime "17:20:49"]
+[ChapterMode "gamebook"]
+
+{ Black is up a pawn but white can win this. How? }
+1. Kd4 f4 2. Ke5 a5 3. a3 a4 4. Kf5 d4 5. Ke4 d3 6. Kxd3 Kd5 7. g3 { The only move! This guarantees that white can win the kingside pawns and the black king is tied to the defense of the c pawn. } 7... f3 8. g4 *
+
+

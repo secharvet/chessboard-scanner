@@ -1,0 +1,22 @@
+[Event "Rated Classical game"]
+[Site "https://lichess.org/PJ3JrplI"]
+[Date "2018.05.23"]
+[Round "-"]
+[White "SAEID10251025"]
+[Black "SQLJazz"]
+[Result "1-0"]
+[WhiteElo "1322"]
+[BlackElo "1012"]
+[TimeControl "1800+7"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+[Variant "Standard"]
+[ECO "B02"]
+[Opening "Alekhine Defense: Maróczy Variation"]
+[StudyName "Forum Analysis"]
+[ChapterName "SAEID10251025 - SQLJazz"]
+[ChapterURL "https://lichess.org/study/M3dt0eIg/46hksU1t"]
+
+1. e4 Nf6 2. d3 { B02 Alekhine Defense: Maróczy Variation } 2... e5 3. Bg5 Bb4+ { I liked your first two moves. I think you can do better on this one (though it is not a bad move!). White would prefer to play c3 because it helps him play d4 later. } 4. c3 Ba5 5. Nf3 Nc6 6. Na3 b6 { The first real mistake. Notice how many squares your bishop at a5 has to move onto? 0 = trapped. Some tactics revolve around trapped pieces. } 7. Nc4! { [%cal Gb2b4] } (7. b4?? { Tempting, but loses material. Black to move and win stuff! }) 7... h6 { White can win the a5 bishop with a forced set of moves here. Can you find it? } 8. Bh4 g5 (8... b5 9. Nxa5 Nxa5 { Black might still save the piece, though he is in trouble in the center of the board also - e5 is hanging. }) 9. Bg3 Bb7 10. Nfxe5 Qe7 { white is coming through the center. This game is going downhill pretty fast :( } 11. Nxc6 Bxc6 { White refuses to win the trapped bishop on a5. } 12. Be5 O-O 13. Bxc7 { Tactical chance for black. GL. } 13... Rfe8 (13... Ba4 14. Qxa4) (13... Bxe4 14. dxe4 Qxe4+ 15. Kd2 Qxc4 16. Bxc4) (13... d5 14. Nxa5 bxa5 (14... Qxc7 15. exd5 Qe5+ 16. Qe2 Qxd5) 15. Bg3 { not h5 here, you can win material, and his king is still in the center. } { [%csl Ge4] } 15... h5) 14. Be2 { Same tactical chance. Black to win a piece. } 14... Rac8 (14... Bxc3+ 15. bxc3 d5) (14... Ng4 15. Bxg4 Qxe4+ 16. dxe4 Rxe4+ 17. Qe2 Rxc4) (14... d5 15. Nxa5 Qxc7 (15... bxa5 { The central attack dictates the tactic. } { [%cal Ge8e2] } 16. exd5 (16. Bxa5 dxe4 17. d4 e3 { [%csl Gg2,Gf2] } 18. fxe3 Qxe3) 16... Nxd5 17. Bg3 Nxc3 18. bxc3 Bxg2 19. Rg1 Bf3 { [%cal Gf3e2,Ge8e2] })) 15. Be5 b5 16. Bxf6 Qxf6 17. Nxa5 { Down a piece. The game is white's to lose, and he played pretty well to the end. Bad luck. } 17... g4 18. Bxg4 Qe7 19. Qb3 Bxe4 20. O-O Bxd3 21. Rfd1 Be2 22. Rd2 Bxg4 23. h3 Bf5 24. Qxb5 Qg5 25. Rd5 a6 26. Qxa6 Qf4 27. Qb5 Rb8 28. Qc5 d6 29. Qxd6 Qe4 30. Qg3+ Kh7 31. Rd4 Qc2 32. Nc4 Be6 33. Nd6 Qxb2 34. Rad1 Qxa2 35. Nxe8 Bb3 36. Qg7# { White wins by checkmate. } 1-0
+
+

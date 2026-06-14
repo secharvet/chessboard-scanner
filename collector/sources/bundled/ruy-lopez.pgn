@@ -1,0 +1,30 @@
+[Event "Partie Espagnole (Ruy Lopez)"]
+[Site "Bundled"]
+[White "Blancs"]
+[Black "Noirs"]
+[Result "*"]
+
+1. e4 {Contrôle du centre. [%cal Ge2e4]}
+e5 {Symétrie. [%csl Ge5]}
+2. Nf3 {Menace e5. [%cal Gg1f3]}
+Nc6 {Défense. [%csl Gc6,Ge5]}
+3. Bb5 {Partie espagnole : presse sur c6. [%cal Gf1b5] [%csl Gc6]}
+a6 {Morphy : chasse le fou. [%cal Ga7a6]}
+4. Ba4 {Recul diagonal. [%cal Gb5a4]}
+Nf6 {Contre-attaque sur e4. [%cal Gg8f6] [%csl Ge4]}
+5. O-O {Sécurise le roi. [%cal Ge1g1]}
+Be7 {Développement harmonieux. [%cal Gf8e7]}
+6. Re1 {Renforce e4. [%cal Gf1e1] [%csl Ge4]}
+b5 {Gain d'espace à l'aile. [%cal Gb7b5]}
+7. Bb3 {Maintien diagonal. [%cal Ga4b3]}
+O-O {Roque noir. [%cal Ge8g8]}
+8. c3 {Prépare d4. [%cal Gc2c3,Gd2d4] [%csl Gd4]}
+d6 {Centre flexible. [%csl Gd6]}
+9. h3 {Empêche Fg4. [%cal Gh2h3]}
+Na5 {Cavalier actif. [%cal Gc6a5]}
+10. Bc2 {Fou protégé. [%cal Gb3c2]}
+c5 {Contre au centre. [%cal Gc7c5] [%csl Gc5,d4]}
+11. d4 {Ouverture du centre. [%cal Gd2d4]}
+Qc7 { [%csl Gc7] }
+12. Nbd2 {Développement. [%cal Gb1d2]}
+*

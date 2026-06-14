@@ -1,0 +1,117 @@
+[Event "London against KID: Barry Attack w/3...d5"]
+[Date "2018.06.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D01"]
+[Opening "Rapport-Jobava System"]
+[StudyName "London against KID"]
+[ChapterName "Barry Attack w/3...d5"]
+[ChapterURL "https://lichess.org/study/lJZlLoxv/KFUKMs8f"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2018.06.14"]
+[UTCTime "03:33:33"]
+
+1. d4 Nf6 2. Bf4 g6 3. Nc3 d5 4. e3 Bg7 5. h4 O-O (5... h6) (5... h5 6. Nf3 { [%csl Gd3][%cal Gf3e5,Gf1d3,Gd1f3,Gc3e2,Gc2c3] }) (5... c5) 6. h5 Nxh5 7. Rxh5 gxh5 8. Qxh5 *
+
+
+[Event "London against KID: Pirc setup w/ 5...c6"]
+[Date "2018.06.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "London against KID"]
+[ChapterName "Pirc setup w/ 5...c6"]
+[ChapterURL "https://lichess.org/study/lJZlLoxv/zzSKEnfN"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2018.06.14"]
+[UTCTime "03:26:23"]
+
+1. d4 Nf6 2. Bf4 { [%cal Gd7d6,Gg7g6] } 2... g6 3. Nc3 d6 4. e4 { [%cal Gd1d2,Gf4h6,Gf2f3,Gh2h4,Gh4h5,Gg2g4] } 4... Bg7 5. Qd2 c6 6. h3!? { creating a safe place for the bishop so an eventual e5 Nh5 can be met with Bh2 } 6... b5 7. a3 { preventing b4 } 7... Nbd7 (7... O-O 8. Nf3 Nbd7 9. e5 { transposes }) 8. Nf3 { preventing e5 } 8... O-O (8... Qc7 9. e5 dxe5 10. dxe5 (10. Nxe5 Nxe5 11. Bxe5 Qb6 $14) 10... Nh5 11. Bh2) (8... Bb7? 9. e5 dxe5 10. dxe5 Nd5 11. Nxd5 cxd5 12. Bxb5) 9. e5! Ne8 { Bauer, Ch - Gazik, Viktor, 1-0, 8th Vaujany Open 2017, https://lichess.org/kGR5DKPw } (9... Nh5 10. Bh2 $16 { double threat of g4 (trapping the knight) and simply winning a pawn with exd6 } { [%cal Gg2g4] } 10... Bh8) 10. h4!? $146 c5 11. dxc5 Nxc5 (11... dxe5 12. Nxe5) 12. h5 Bf5 13. hxg6 Bxg6 (13... hxg6 14. Bh6 $18) 14. O-O-O (14. Rd1 { [%cal Gf1e2,Gf3h4,Gc3d5] }) *
+
+
+[Event "London against KID: Pirc setup w/ 5...Nbd7"]
+[Date "2018.06.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "London against KID"]
+[ChapterName "Pirc setup w/ 5...Nbd7"]
+[ChapterURL "https://lichess.org/study/lJZlLoxv/bR5sDaNO"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2018.06.14"]
+[UTCTime "04:14:14"]
+
+1. d4 Nf6 2. Bf4 g6 3. Nc3 d6 4. e4 Bg7 5. Qd2 Nbd7 6. Bh6!? O-O (6... Bxh6) 7. Bxg7 Kxg7 8. Nf3 e5 (8... c5? 9. e5 Ne8 10. exd6 Nxd6? 11. dxc5 Nxc5 12. Qd4+ { Stockfish-Rosen 2018 }) 9. O-O-O Qe7 10. Be2 Re8 11. a4 (11. h4) *
+
+
+[Event "London against KID: London vs KID w/ 3...c5"]
+[Date "2018.06.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "London against KID"]
+[ChapterName "London vs KID w/ 3...c5"]
+[ChapterURL "https://lichess.org/study/lJZlLoxv/wlrAqPps"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2018.06.14"]
+[UTCTime "03:34:35"]
+
+1. d4 Nf6 2. Bf4 g6 3. Nc3 c5 *
+
+
+[Event "World Blitz Championship"]
+[Site "Doha QAT"]
+[Date "2016.12.29"]
+[Round "2.7"]
+[White "Alexander Grischuk"]
+[Black "Rustam Khusnutdinov"]
+[Result "1-0"]
+[WhiteElo "2737"]
+[BlackElo "2458"]
+[Variant "Standard"]
+[ECO "D01"]
+[Opening "Rapport-Jobava System"]
+[StudyName "London against KID"]
+[ChapterName "Alexander Grischuk - Rustam Khusnutdinov"]
+[ChapterURL "https://lichess.org/study/lJZlLoxv/ulEvnoYU"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 Nf6 2. Bf4 g6 3. Nc3 d5 4. e3 Bg7 5. h4 h6 6. Nf3 Bg4 7. Be2 { [%csl Gg4,Ge2,Ge5][%cal Gf3e5] } 7... c6 8. Ne5 Bxe2 9. Qxe2 Nbd7 10. O-O-O Qa5 11. Kb1 Nxe5 12. Bxe5 h5 13. e4 O-O-O 14. exd5 cxd5 { [%csl Gb5][%cal Gc3b5] } 15. Rh3 (15. Nb5 a6) 15... Rd7 16. Nb5 a6 17. Rc3+ Kd8 18. Na7 e6 19. Qf3 Ke7 20. Nc8+ Rxc8 21. Rxc8 Rd8 22. Bc7 { 1-0 Black resigns. } 1-0
+
+
+[Event "2018 USAT North"]
+[Site "https://lichess.org/study/daq"]
+[Date "2018.06.19"]
+[White "Rosen, Eric"]
+[Black "Do, Vincent"]
+[Result "*"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[Variant "Standard"]
+[ECO "D01"]
+[Opening "Rapport-Jobava System"]
+[StudyName "London against KID"]
+[ChapterName "Rosen, Eric - Do, Vincent"]
+[ChapterURL "https://lichess.org/study/lJZlLoxv/8uOBVZgN"]
+
+1. d4 Nf6 2. Bf4 g6 3. Nc3 d5 4. e3 Bg7 5. h4 h5 6. Nf3 O-O 7. Ne5 c6 8. Bd3 Be6 9. Qf3 Nbd7 10. Qg3 Rc8 11. Ne2 c5 12. c3 { [%csl Gc3,Gd4,Gd3,Ge3,Gg3,Gh2][%cal Gg3h2,Gf2f3,Gg2g5] } 12... c4 13. Bc2 Ne4 14. Qh2 Qb6 15. Rb1 Qa5 16. f3 Nef6 17. a3 Nxe5 18. Bxe5 Ne8 19. g4 hxg4 20. h5 g5 21. Bxg7 Kxg7 22. Qe5+ Kh6 23. f4 gxf4 24. Qxf4+ Kg7 25. Qg5+ Kh8 26. Qh6+ Kg8 27. Qh7# { 1-0 White wins by checkmate. } *
+
+
+[Event "London against KID: Chapter 7"]
+[Date "2019.05.07"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "London against KID"]
+[ChapterName "Chapter 7"]
+[ChapterURL "https://lichess.org/study/lJZlLoxv/HElcJjt8"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.05.07"]
+[UTCTime "17:14:14"]
+
+1. d4 Nf6 2. Bf4 g6 3. Nc3 Bg7 4. e4 d6 5. Qe2 O-O 6. O-O-O c6 7. Kb1 (7. e5) 7... Qc7 *
+
+

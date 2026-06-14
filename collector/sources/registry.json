@@ -1,0 +1,27 @@
+{
+  "comment": "IDs Lichess fetchés en ligne si absents de official/lichess/. Télécharger en masse : ./scripts/fetch-lichess-catalog.sh puis ./scripts/collect-pgn.sh",
+  "urls": [
+    {
+      "url": "https://theweekinchess.com/zips/twic1647g.zip",
+      "filename": "twic1647",
+      "title": "TWIC 1647 — Norway Chess 2026 et tournois internationaux",
+      "split": false,
+      "note": "Zip contenant twic1647.pgn — parties GM officielles"
+    }
+  ],
+  "lichess_studies": [
+    "iDSPaPWA",
+    "ByFy31hm",
+    "RdtICntn",
+    "miI3fn8S",
+    "ZWHbJIPd",
+    "xx2nOKJv",
+    "ZRY61QJ6",
+    "mr9g4cVe",
+    "GmddprG6",
+    "1MfUDGWI",
+    "mENTYbNo",
+    "kSK7Uq54",
+    "2EoS8scc"
+  ]
+}

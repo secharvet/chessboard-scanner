@@ -1,0 +1,15 @@
+[Event "Défense Caro-Kann — Classique"]
+[Site "Bundled"]
+[Result "*"]
+
+1. e4 c6 {Prépare d5 sans libérer la diagonale a5-h2.}
+2. d4 d5 {Centre.}
+3. Nc3 dxe4 {Échange.}
+4. Nxe4 Bf5 {Fou sort avant e6.}
+5. Ng3 Bg6 {Maintien du fou.}
+6. h4 h6 {Empêche Fg4.}
+7. Nf3 Nd7 {Développement.}
+8. h5 Bh7 {Fou en repli.}
+9. Bd3 Bxd3 {Échange.}
+10. Qxd3 Ngf6 {Développement.}
+*

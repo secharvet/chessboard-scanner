@@ -1,0 +1,22 @@
+[Event "Rated Blitz tournament https://lichess.org/tournament/qeGVRFCU"]
+[Site "https://lichess.org/YkBY8pf8"]
+[Date "2022.03.21"]
+[White "EricRosen"]
+[Black "vasvi"]
+[Result "1-0"]
+[WhiteElo "2556"]
+[WhiteTitle "IM"]
+[BlackElo "2027"]
+[TimeControl "300+0"]
+[Termination "Time forfeit"]
+[Variant "Standard"]
+[ECO "B00"]
+[Opening "Pirc Defense"]
+[StudyName "test"]
+[ChapterName "IM EricRosen (2556) - vasvi (2027)"]
+[ChapterURL "https://lichess.org/study/Acb9CSsn/FDY1Bxw9"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 { [%clk 0:05:00] } 1... d6 { [%clk 0:05:00] } 2. d4 { [%clk 0:04:46] } 2... c6 { [%clk 0:04:59] } 3. Nc3 { [%clk 0:04:43] } 3... Qc7 { [%clk 0:04:57] } 4. Nf3 { [%clk 0:04:39] } 4... Bg4 { [%clk 0:04:54] } 5. Bc4 { [%clk 0:04:37] } 5... h6 { [%clk 0:04:52] } 6. Ng5 { [%clk 0:04:25] } 6... Bxd1 { [%clk 0:04:47] } 7. Bxf7+ { [%clk 0:04:24] } 7... Kd7 { [%clk 0:04:42] } 8. Ne6 { [%clk 0:04:24] } 8... Qc8 { [%clk 0:04:37] } 9. Kxd1 { [%clk 0:04:09] } 9... Nf6 { [%clk 0:04:34] } 10. e5 { [%clk 0:03:54] } 10... dxe5 { [%clk 0:04:27] } 11. dxe5 { [%clk 0:03:53] } 11... Nd5 { [%clk 0:04:26] } 12. Ne4 { [%clk 0:03:53] } 12... Na6 { [%clk 0:04:21] } 13. b4 { [%clk 0:03:49] } 13... Ndxb4 { [%clk 0:04:00] } 14. Ke2 { [%clk 0:03:37] } 14... Nd5 { [%clk 0:03:58] } 15. c4 { [%clk 0:03:33] } 15... g5 { [%clk 0:03:27] } 16. Rd1 { [%clk 0:03:10] } 16... Qb8 { [%clk 0:02:46] } 17. cxd5 { [%clk 0:03:09] } 17... cxd5 { [%clk 0:02:45] } 18. Rxd5+!! { [%clk 0:03:06] } 18... Kc6 { [%clk 0:02:42] } 19. Nd4+ { [%csl Rc6,Gd5,Ge5,Ge4,Gd4][%cal Gd4c6] [%clk 0:02:57] } 19... Kc7 { [%clk 0:02:36] } 20. Ne6+ { [%clk 0:02:43] } 20... Kc6 { [%clk 0:02:34] } 21. Bb2 { [%clk 0:02:28] } 21... Kxd5 { [%clk 0:02:30] } 22. Nd8+ { [%clk 0:02:27] } 22... Kxe4 { [%clk 0:02:26] } 23. Bg6+ { [%clk 0:02:11] } 23... Kd5 { [%clk 0:02:09] } 24. Rd1+ { [%clk 0:02:10] } 24... Kc4 { [%clk 0:02:03] } 25. Rc1+ { [%clk 0:01:52] } 25... Kb5 { [%clk 0:01:56] } 26. Bd3+ { [%clk 0:01:49] } 26... Kb6 { [%clk 0:01:49] } 27. Bd4+ { [%clk 0:01:48] } 27... Ka5 { [%clk 0:01:44] } 28. Bc3+ { [%clk 0:01:42] } 28... Nb4 { [%clk 0:01:41] } 29. Ne6 { [%clk 0:01:26] } 29... Rg8 { [%clk 0:00:59] } 30. a3 { [%clk 0:01:22] } 30... b5 { [%clk 0:00:55] } 31. axb4+ { [%clk 0:01:16] } 31... Kb6 { [%clk 0:00:30] } 32. Bd4+ { [%clk 0:01:15] } 32... Ka6 { [%clk 0:00:07] } 33. Nc5+ { [%clk 0:01:11] } 33... Kb6 { [%clk 0:00:05] } 34. Nd7+ { [%clk 0:01:11] } 34... Ka6 { [%clk 0:00:03] } 35. Ra1+ { [%clk 0:01:09] } 35... Kb7 { [%clk 0:00:01] } 36. Be4+ { 1-0 White wins on time. } { [%clk 0:01:09] } 1-0
+
+

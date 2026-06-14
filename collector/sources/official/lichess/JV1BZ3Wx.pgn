@@ -1,0 +1,39 @@
+[Event "Najdorf Game: Chapter 1"]
+[Date "2017.12.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Najdorf Game"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/JV1BZ3Wx/rs17ONHT"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2017.12.28"]
+[UTCTime "18:36:23"]
+
+ *
+
+
+[Event "IM Sparklehorse Arena"]
+[Site "https://lichess.org/bMajFElC"]
+[Date "2017.12.26"]
+[Round "-"]
+[White "Sparklehorse"]
+[Black "Najdorf14"]
+[Result "0-1"]
+[WhiteElo "2409"]
+[WhiteTitle "IM"]
+[BlackElo "1911"]
+[TimeControl "300+2"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+[Variant "Standard"]
+[ECO "B08"]
+[Opening "Pirc Defense: Classical Variation, Quiet System, Czech Defense"]
+[StudyName "Najdorf Game"]
+[ChapterName "Sparklehorse - Najdorf14"]
+[ChapterURL "https://lichess.org/study/JV1BZ3Wx/3w2vmqxv"]
+
+1. Nf3 g6 2. e4 d6 3. d4 Bg7 4. Nc3 Nf6 5. Be2 O-O 6. O-O c6 { B08 Pirc Defense: Classical Variation, Quiet System, Czech Defense } 7. a4 Nbd7 8. Bf4 Qc7 9. e5 Nh5 10. exd6 exd6 11. Bg5 Ndf6?! { (0.03 → 0.55) Inaccuracy. Best move was Re8. } (11... Re8 12. a5 d5 13. Re1 Nf4 14. Qd2 Nxe2+ 15. Rxe2 Rxe2 16. Nxe2 Nf6 17. Bh6 Bxh6 18. Qxh6) 12. Qd2 Re8 13. Rfe1 Be6 14. h3 Nd5 15. Bc4 Ndf4 16. Bxe6 Nxe6 17. Bh6 Bxh6 18. Qxh6 d5 19. Re3 Qb6 20. b3? { (-0.07 → -1.50) Mistake. Best move was a5. } (20. a5 Qb4) 20... Nxd4 21. Ng5? { (-1.32 → -3.47) Mistake. Best move was a5. } (21. a5 Qb4 22. Nxd4 Qxd4 23. Qg5 Qf4 24. Qxf4 Nxf4 25. Rd1 Kg7 26. b4 Rac8 27. Kf1 Rcd8) 21... Nf6 { White resigns. } 0-1
+
+

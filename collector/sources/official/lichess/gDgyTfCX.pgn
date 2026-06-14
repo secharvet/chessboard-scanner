@@ -1,0 +1,166 @@
+[Event "https://lichess.org/L3r1qQE1"]
+[Site "https://lichess.org/L3r1qQE1"]
+[Date "2016.04.25"]
+[White "Petruchio"]
+[Black "thetasquared"]
+[Result "0-1"]
+[WhiteElo "1527"]
+[BlackElo "1544"]
+[TimeControl "2700+45"]
+[Annotator "lichess.org"]
+[Variant "Standard"]
+[ECO "D37"]
+[Opening "Queen's Gambit Declined: Three Knights Variation"]
+[StudyName "Lichess 45+45 Review"]
+[ChapterName "Petruchio vs thetasquared"]
+[ChapterURL "https://lichess.org/study/gDgyTfCX/Hm43CV5w"]
+
+1. d4 d5 2. c4 e6 3. Nf3 (3. Nc3 Nf6 4. cxd5! exd5 5. Bg5 c6 (5... Bf5? 6. Bxf6 gxf6 7. Qb3 $16 { [%csl Rf6,Rf7][%cal Gb3d5,Gb3b7] }) 6. e3 Be7 (6... Bf5!? 7. Qf3 Bg6 8. Bxf6 Qxf6 9. Qxf6 gxf6 10. Nf3 Nd7 11. Nh4 Be7 12. Ne2! { M.Carlsen-V.Kramnik, Norway Chess 2016 } { [%csl Gf5,Rf6,Rf7][%cal Ge2g3,Gg3f5] }) 7. Bd3 Nbd7 8. Qc2 O-O 9. Nge2! { G.Kasparov-U.
+Andersson, Belfort 1988 } { [%cal Ge1g1,Gf2f3,Ge3e4] }) 3... Nf6 4. Nc3 Be7 5. cxd5 (5. Bg5 O-O 6. e3 h6 7. Bh4 b6! (7... Ne4!)) (5. Bf4!? O-O 6. e3 Nbd7 7. c5 c6 8. Bd3 b6! 9. b4 a5! $13 { V.Anand-M.Carlsen, World Championship 2014 }) 5... exd5 6. e3? { [%csl Rc1,Gc8][%cal Gc8f5,Rc1e3] } (6. Bg5 c6 7. Qc2 (7. e3 Bf5! 8. Bd3 Bxd3 9. Qxd3 Nbd7 10. O-O O-O 11. Rab1 { G.Kamsky-S.Shankland, US
+Championships 2015 } { [%cal Gb2b4,Gb4b5] }) 7... g6! 8. e3 Bf5 9. Bd3 Bxd3 10. Qxd3 Nbd7 { B.
+Spassky-T.Petrosian, Soviet Championships 1959 }) 6... Bf5 7. Be2 (7. Bd3 Bxd3 8. Qxd3 c6 9. O-O O-O 10. Rb1 { [%cal Gb2b4,Gb4b5] }) 7... O-O 8. O-O c6 9. Re1?! (9. Ne5! Nbd7 10. g4!? (10. f4?! Ne4! { [%csl Re4][%cal Gf7f6] }) 10... Be6 (10... Bg6 11. f4!) 11. f4 { [%cal Rf4f5] } 11... Nb6 12. Bd3 $13 { [%csl Ge5][%cal Gd1f3] }) 9... Nbd7 10. Nd2 Re8 11. Bf3 Bd6 12. e4? dxe4 13. Ndxe4 Nxe4 14. Bxe4 Bxe4 15. Nxe4 Bxh2+! 16. Kxh2 Qh4+ 17. Kg1 Rxe4 18. Be3 (18. Rxe4 Qxe4 19. Be3 $17) 18... Rd8 (18... Rae8 $17) 19. Qd2 { [%cal Re3g5] } 19... Qh5! 20. g3?? Ne5! { [%cal Rd8d2] } 21. Kg2 Qf3+ (21... Rh4!! 22. gxh4 Qg4+ 23. Kf1 Nf3) 22. Kf1 Nc4 23. Qc2 Rdxd4 24. Bxd4?? Qh1# 0-1
+
+
+[Event "Rated game"]
+[Event "https://lichess.org/U92H1DHd"]
+[Site "https://lichess.org/U92H1DHd"]
+[Date "2016.05.01"]
+[White "jshholland"]
+[Black "Lukhas"]
+[Result "0-1"]
+[WhiteElo "1540"]
+[BlackElo "1621"]
+[Annotator "Rotella,Tony"]
+[Variant "Standard"]
+[ECO "D85"]
+[Opening "Grünfeld Defense: Exchange Variation, Modern Exchange Variation"]
+[StudyName "Lichess 45+45 Review"]
+[ChapterName "jshholland vs Lukhas"]
+[ChapterURL "https://lichess.org/study/gDgyTfCX/7cRFbNoj"]
+
+1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. cxd5 Nxd5 5. e4 Nxc3 6. bxc3 Bg7 7. Nf3 c5 8. Be2?! (8. Rb1 { [%cal Yb1b7,Yc8g4,Rg7a1,Gd4d5] } 8... O-O 9. Be2 cxd4 10. cxd4 Qa5+ 11. Bd2 Qxa2 $13) (8. Be3!? Qa5 9. Qd2 Nc6 10. Rc1 cxd4 11. cxd4 Qxd2+ 12. Kxd2 O-O $13 { [%csl Gd4,Ge4][%cal Gf8d8,Gd8d2,Yc1c7] }) 8... Nc6! (8... O-O? 9. O-O (9. Rb1 { This would transpose back to 8.Rb1. }) 9... Nc6 10. Be3 Bg4 11. d5! Bxf3 12. Bxf3 Ne5 13. Be2 $16 { M.
+Carlsen-J.Hammer, Oslo (blitz) 2009 } { [%cal Gf2f4,Ya1b1,Yc3c4,Re3c5] }) 9. Be3 Bg4! 10. O-O (10. e5 cxd4 11. cxd4 Qa5+ 12. Qd2 Qxd2+ 13. Nxd2 Be6! $132 { A.
+Glukhov-M.Horvat, Correspondence 2014 } { [%csl Gd5][%cal Ge6a2,Ga8d8] }) 10... Bxf3 11. Bxf3 cxd4 12. cxd4 Bxd4! (12... Nxd4 13. Rb1 b6 14. Qa4+ $132) 13. Bh6? (13. Bxd4 Qxd4 14. Qxd4 Nxd4 $17 { [%csl Gd4,Rf3] }) 13... Bxa1! 14. Qxa1 e5 (14... Qd4! 15. Qb1 O-O-O $19) 15. Bg7 Rg8 16. Bxe5 Nxe5 17. Qxe5+ Qe7 18. Qb2 O-O-O! 19. e5 { [%cal Gf1b1,Gd8d7,Rf3g4] } 19... Kb8! { [%csl Gb8][%cal Rf3g4,Rg4c8] } 20. Rb1 Rd7 21. g3 Rgd8 (21... Re8? 22. Bc6!) (21... Rc7! { [%cal Rf3c6,Gg8e8,Ge7e5] } 22. Bg2 Re8 23. f4 Qc5+ 24. Kh1 Ree7 $19 { [%cal Gc5c2] }) 22. h4 h5 (22... Rc7!) 23. Kg2 Rc8 24. g4? (24. e6! fxe6 (24... Qxe6?? 25. Qxb7+ Rxb7 26. Rxb7+ Ka8 27. Rb6+ $18) 25. Qe5+ Ka8 26. Be4) 24... Rc5 0-1
+
+
+[Event "https://lichess.org/uHuDwKpB"]
+[Site "https://lichess.org/uHuDwKpB"]
+[Date "2016.04.04"]
+[White "Atrophied"]
+[Black "supervj"]
+[Result "1-0"]
+[WhiteElo "2288"]
+[BlackElo "2131"]
+[Annotator "Rotella,Tony"]
+[Variant "Standard"]
+[ECO "B23"]
+[Opening "Sicilian Defense: Grand Prix Attack"]
+[StudyName "Lichess 45+45 Review"]
+[ChapterName "Atrophied vs supervj"]
+[ChapterURL "https://lichess.org/study/gDgyTfCX/2kwAJZFO"]
+
+1. e4 c5 2. Nc3 Nc6 3. f4 g6 4. Nf3 Bg7 5. Bb5 (5. Bc4 e6!) 5... Nd4! (5... e6 6. Bxc6! bxc6 7. e5! { [%cal Rc3e4,Re4d6,Re4c5] } 7... d5 8. d3! (8. exd6 Qxd6 9. d3 $14) 8... Ne7 9. O-O O-O 10. b3! $16 { [%csl Gc5][%cal Gc1a3,Gc3a4] }) (5... d6 6. Bxc6+ bxc6 7. d3 Nf6 8. O-O O-O 9. Qe1! $40 { [%cal Ge1h4,Gf4f5,Yc1h6] }) 6. O-O Nxb5 (6... e6!? 7. e5 a6! { [%cal Rb5e8,Rd7d6] } 8. Bd3 { [%cal Yc3e4,Ye4d6] } 8... f5! { [%cal Rc3e4] } 9. Nxd4 cxd4 10. Ne2 d6! 11. exd6 Qxd6 { J.Schilperoort-V.Ikonnikov, Vlissingen 2008 }) 7. Nxb5 d5! 8. exd5 a6 9. Nc3 Nf6 10. d4! c4 (10... Nxd5 11. dxc5 Nxc3 12. Qxd8+ Kxd8 13. bxc3 Bxc3 14. Rb1 Kc7 15. Rb3 Bf6 16. Bd2 $13 { J.Benjamin-B.Smith, World Open
+2006 }) 11. Qe2 b5 12. Re1 Bb7 (12... O-O! 13. Qxe7 Qxe7 14. Rxe7 b4! 15. Nd1 (15. Ne2? Nxd5 $17 { [%csl Re7] }) 15... Nxd5 16. Re1 Bf5 $44 { J.Houben-A.
+Greenfeld, Dieren 2012 }) 13. f5! { [%csl Gc1,Gf5][%cal Gc1g5,Rb7c8,Rc8f5] } 13... Nxd5 (13... gxf5? 14. Nh4 Bc8 15. Qf3 $36) 14. Bg5 { A.Fritz-E.Blomqvist,
+Swedish Championships 2008 } 14... O-O $146 15. Nxd5 Qxd5 16. Bxe7 Rfe8 17. fxg6 Bf6? (17... Bxd4+! 18. Nxd4 Qxd4+ 19. Kh1 hxg6) 18. gxh7+ Kxh7 19. Bxf6 Rxe2 20. Rxe2 { [%cal Ge2e5,Ge5h5] } 20... Qf5? { [%cal Rb7f3,Rf5f6] } 21. Ng5+ Kg6 22. Rf1 $18 Qd7 (22... Qd5 { [%cal Rd5g2,Re2e3] } 23. Rff2! { [%cal Ge2e3] } (23. Nh3!? $18 { [%cal Gh3f4] }) 23... Qc6 24. Re3 Qxf6 25. Rxf6+ Kxf6 26. h4 $18) 23. Re3! { [%cal Ge3g3] } 23... Re8 24. Rg3 Re2? 25. Ne6+ Kh6 26. Rh3+ { [%cal Gh6g6,Ge6f8] } 1-0
+
+
+[Event "World Cup"]
+[Site "Belfort"]
+[Date "1988.06.??"]
+[Round "10"]
+[White "Kasparov, Garry"]
+[Black "Andersson, Ulf"]
+[Result "1-0"]
+[WhiteElo "2750"]
+[BlackElo "2605"]
+[Variant "Standard"]
+[ECO "D36"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Reshevsky Variation"]
+[StudyName "Lichess 45+45 Review"]
+[ChapterName "EXTRA Kasparov-Andersson"]
+[ChapterURL "https://lichess.org/study/gDgyTfCX/YWo6xPti"]
+[Annotator "https://lichess.org/@/TonyRo"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 d5 4. cxd5 exd5 5. Bg5 c6 6. Qc2 Be7 7. e3 Nbd7 8. Bd3 O-O 9. Nge2 Re8 10. O-O Nf8 11. f3 Be6 12. Rae1 Rc8 13. Kh1 N6d7 14. Bxe7 Rxe7 15. Nf4 Rc7 16. Qf2 Nf6 17. e4 dxe4 18. fxe4 Rcd7 19. d5 cxd5 20. Bb5 Rc7 21. exd5 Bd7 22. Be2 Rc8 23. Qxa7 b6 24. Qa6 Ne4 25. d6 Nxd6 26. Nfd5 Re5 27. Qxb6 Nf5 28. Qxd8 Rxd8 29. Bd3 Rxe1 30. Rxe1 Ng6 31. a4 Nd4 32. a5 Kf8 33. Bxg6 hxg6 34. Rd1 Ne6 35. Nb6 Bc6 36. Rxd8+ Nxd8 37. b4 Ne6 38. b5 1-0
+
+
+[Event "4th Norway Chess 2016"]
+[Site "Stavanger NOR"]
+[Date "2016.04.27"]
+[Round "7.3"]
+[White "Carlsen, M."]
+[Black "Kramnik, V."]
+[Result "1-0"]
+[WhiteElo "2851"]
+[BlackElo "2801"]
+[Variant "Standard"]
+[ECO "D35"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Positional Variation"]
+[StudyName "Lichess 45+45 Review"]
+[ChapterName "EXTRA Carlsen-Kramnik"]
+[ChapterURL "https://lichess.org/study/gDgyTfCX/RVqaVyyf"]
+[Annotator "https://lichess.org/@/TonyRo"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. cxd5 exd5 5. Bg5 c6 6. e3 Bf5 7. Qf3 Bg6 8. Bxf6 Qxf6 9. Qxf6 gxf6 10. Nf3 Nd7 11. Nh4 Be7 12. Ne2 Nb6 13. Ng3 Bb4+ 14. Kd1 Na4 15. Ngf5 Kd7 16. Rb1 Ke6 17. Bd3 Rhc8 18. Ke2 Bf8 19. g4 c5 20. Ng2 cxd4 21. exd4 Bd6 22. h4 h5 23. Ng7+ Ke7 24. gxh5 Bxd3+ 25. Kxd3 Kd7 26. Ne3 Nb6 27. Ng4 Rh8 28. Rhe1 Be7 29. Nf5 Bd8 30. h6 Rc8 31. b3 Rc6 32. Nge3 Bc7 33. Rbc1 Rxc1 34. Rxc1 Bf4 35. Rc5 Ke6 36. Ng7+ Kd6 37. Ng4 Nd7 38. Rc2 f5 39. Nxf5+ Ke6 40. Ng7+ Kd6 41. Re2 Kc6 42. Re8 Rxe8 43. Nxe8 Nf8 44. Ne5+ Bxe5 45. dxe5 Kd7 46. Nf6+ Ke6 47. h5 Kxe5 48. Nd7+ Nxd7 49. h7 Nc5+ 50. Ke2 1-0
+
+
+[Event "World op 34th"]
+[Site "Philadelphia"]
+[Date "2006.07.02"]
+[Round "5"]
+[White "Benjamin, Joel"]
+[Black "Smith, Bryan G"]
+[Result "1-0"]
+[WhiteElo "2565"]
+[BlackElo "2384"]
+[Variant "Standard"]
+[ECO "B23"]
+[Opening "Sicilian Defense: Closed"]
+[StudyName "Lichess 45+45 Review"]
+[ChapterName "EXTRA Benjamin-Smith"]
+[ChapterURL "https://lichess.org/study/gDgyTfCX/Gn1pNrCD"]
+[Annotator "https://lichess.org/@/TonyRo"]
+
+1. e4 c5 2. Nc3 g6 3. f4 Bg7 4. Nf3 Nc6 5. Bb5 Nd4 6. O-O Nxb5 7. Nxb5 d5 8. exd5 a6 9. Nc3 Nf6 10. d4 Nxd5 11. dxc5 Nxc3 12. Qxd8+ Kxd8 13. bxc3 Bxc3 14. Rb1 Kc7 15. Rb3 Bf6 16. Bd2 Be6 17. Ba5+ Kc6 18. Rb6+ Kxc5 19. Nd2 Bd5 20. c4 Bc6 21. Rd1 Kd6 22. Ne4+ Ke6 23. g4 Bh4 24. Nc5+ Kf6 25. Bc3+ e5 26. Rxc6+ bxc6 27. Bxe5+ Ke7 28. Rd7+ Ke8 29. g5 Be1 30. Rb7 Bd2 31. Ne4 1-0
+
+
+[Event "Dieren op"]
+[Site "Dieren"]
+[Date "2012.07.25"]
+[Round "2"]
+[White "Houben, Jaap"]
+[Black "Greenfeld, Alon"]
+[Result "0-1"]
+[WhiteElo "2269"]
+[BlackElo "2556"]
+[Variant "Standard"]
+[ECO "B23"]
+[Opening "Sicilian Defense: Grand Prix Attack"]
+[StudyName "Lichess 45+45 Review"]
+[ChapterName "EXTRA Houben-Greenfeld"]
+[ChapterURL "https://lichess.org/study/gDgyTfCX/j7ISgRet"]
+[Annotator "https://lichess.org/@/TonyRo"]
+
+1. e4 c5 2. Nc3 Nc6 3. f4 g6 4. Nf3 Bg7 5. Bb5 Nd4 6. O-O Nxb5 7. Nxb5 d5 8. exd5 a6 9. Nc3 Nf6 10. d4 c4 11. Qe2 b5 12. Re1 O-O 13. Qxe7 Qxe7 14. Rxe7 b4 15. Nd1 Nxd5 16. Re1 Bf5 17. c3 bxc3 18. bxc3 Rfe8 19. Rxe8+ Rxe8 20. Kf2 Bc2 21. Bd2 Nf6 22. Nb2 Ne4+ 23. Kg1 Nxd2 24. Nxd2 Re3 25. Nbxc4 Rxc3 26. Ne5 Bf5 27. Nb3 Bh6 28. g4 Be6 29. g5 Bf8 30. Rc1 Bb4 31. Nc6 Rxc1+ 32. Nxc1 Bd2 33. Nd3 Be3+ 34. Kf1 Bc4 35. Ne5 Bxa2 36. Ke2 Bxd4 37. Nb4 Bxe5 38. fxe5 Bc4+ 39. Ke3 a5 40. Nc2 a4 41. Kd2 Bb3 42. Nd4 Bd5 43. Nb5 Kf8 44. Kc3 Ke7 45. Nc7 Bc6 46. Kb4 Kd7 47. Na6 Ke6 48. Kc5 Bb7 0-1
+
+
+[Event "Rated game"]
+[Site "https://lichess.org/ahGwAUIc"]
+[Date "2016.04.30"]
+[White "egocrusher"]
+[Black "DaveyJones01"]
+[Result "1-0"]
+[WhiteElo "1855"]
+[BlackElo "1759"]
+[Annotator "TonyRo"]
+[Variant "Standard"]
+[ECO "B04"]
+[Opening "Alekhine Defense: Modern Variation, Larsen Variation"]
+[StudyName "Lichess 45+45 Review"]
+[ChapterName "egocrusher vs DaveyJones01"]
+[ChapterURL "https://lichess.org/study/gDgyTfCX/TV01D97s"]
+
+1. e4 Nf6 2. e5 Nd5 3. d4 d6 4. Nf3 dxe5 5. Nxe5 Nd7? 6. Nxf7! (6. Bc4 e6 7. Qg4 h5 8. Qe2 Nxe5 9. dxe5 Bd7 { M.Tal-B.Larsen, Bled 1965 }) 6... Kxf7 7. Qh5+ Ke6 8. c4 (8. g3!? { [%cal Gf1h3] }) (8. Qg4+ Kf7 9. Qh5+ Ke6 10. Qg4+ Kd6 11. c4 N7f6 12. Qg3+ Ke6 13. cxd5+ Qxd5 14. Nc3 Qxd4 15. Be3 Qb4 16. a3 Qxb2 17. Bc4+ Kd7 18. Rd1+ Ke8 19. Nb5 { 1-0 R.Fischer-B.Larsen, Santa Monica 1966 }) 8... N5f6 (8... Nb4 9. a3! Nc2+ 10. Kd1 Nxa1? 11. Qd5+ Kf6 12. Bg5+ Kg6 13. Bd3+ Kh5 14. g4+ Kxg4 15. Rg1+ Kh5 16. Qf3#) 9. d5+ Kd6 10. Qf7 Ne5 (10... Nc5 11. b4 $40) 11. Bf4 { [%cal Gc4c5,Yb1c3,Yc3b5] } 11... c5 12. Nc3 a6 { [%csl Rb5] } 13. Bd3!? { [%cal Gh1e1,Ge1e5] } (13. b4! $18 $40) 13... g5!? 14. Bg3 Bh6 { [%csl Rf7][%cal Rh8f8] } 15. Ne4+ Nxe4 16. Bxe4 Qf8 17. Qh5 Bg7 18. O-O Kd7 19. b4!? (19. Rad1! { [%cal Gd5d6,Gb2b4,Gf2f4] } 19... Nf7 20. d6 exd6 21. f4! $18) 19... cxb4 20. c5! { [%cal Gc5c6] } 20... Kd8 21. c6 h6 22. Rac1 { [%cal Gc6c7,Yf2f4] } 22... bxc6 23. Qd1! c5 24. d6! exd6 25. Bxa8 Bd7 26. Qd5 Ke7 27. Bb7 Be6 28. Qd2 Qb8 29. Rfd1 Bxa2!? 30. Bxa6 Be6 31. f4 gxf4 32. Qxf4? (32. Bh4+!) 32... Rf8 33. Bh4+ Bf6 34. Rf1 Bxh4 35. Qxh4+ Kd7 36. Bb5+! Qxb5 37. Rxf8 c4 38. Qd8+ Kc6 39. Rf6 Qc5+ 40. Kh1 Bd5 41. h3 Nd3 42. Ra1? Bxg2+! 43. Kxg2 Qd5+ 44. Rf3 (44. Kf1 Qh1+) (44. Kg1 Qd4+) (44. Kh2 Qe5+) 44... Nf4+ 45. Kg3 (45. Kh2 Qd2+ 46. Kg3 Ne2+ 47. Kg4 Qd4+ 48. Kh5 Qxa1 49. Qe8+ Kb6 50. Qxe2?? (50. Qb8+! Kc6 51. Qc8+ Kb6 52. Qxc4 $16) 50... Qe5+ 51. Qxe5 dxe5 $19 { , e.g. }) 45... Nh5+ 46. Kg2 Nf4+ 47. Kh2 Qd2+ 48. Kg3 Ne2+ 49. Kg4 (49. Kh4 { will transpose }) 49... Qd4+ 50. Kh5 Qxa1 51. Qe8+ Kb6 52. Qb8+ Kc6 53. Qc8+ Kb6 54. Qxc4 Qe5+ 55. Kxh6 Ka5 (55... Qb5!? 56. Qxb5+ Kxb5 57. Rf2! (57. h4 Kc4 58. Kg6? (58. Rf2!) 58... b3 59. Rf8! (59. h5? b2 60. Rf1 Nc1! $19) 59... b2 60. Rb8 Kc3 61. h5 Nf4+ 62. Kg5 Nxh5) 57... Nd4 58. h4 b3 59. h5 Nc2 60. Kg6 b2 61. Rf1 $16) 56. Rf1 Qh8+ 57. Kg6 $18 { [%cal Gc4d5,Gf1f5,Gf1a1] } 57... Qe8+ 58. Qf7 Qxf7+ 59. Rxf7 b3 60. h4 Kb6 61. Rf1 Kb5 62. h5 b2 63. Rb1 Nf4+ 64. Kg5 Nxh5 65. Kxh5 Kc5 66. Rxb2 Kd5 67. Rd2+ Ke5 68. Kg4 d5 69. Kf3 d4 70. Rd3 Kd5 71. Kf4 1-0
+
+

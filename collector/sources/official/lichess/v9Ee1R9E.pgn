@@ -1,0 +1,205 @@
+[Event "Live Chess - chess"]
+[Site "Chess.com"]
+[Date "2022.05.10"]
+[White "Oleksandr_Bortnyk"]
+[Black "IMRosen"]
+[Result "1-0"]
+[WhiteElo "2973"]
+[BlackElo "2738"]
+[TimeControl "180+1"]
+[Termination "Oleksandr_Bortnyk won on time"]
+[Variant "Standard"]
+[ECO "D01"]
+[Opening "Rapport-Jobava System"]
+[StudyName "May 10 Titled Tuesday"]
+[ChapterName "Oleksandr_Bortnyk - IMRosen"]
+[ChapterURL "https://lichess.org/study/v9Ee1R9E/qBhvhFNF"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 d5 2. Nc3 Nf6 3. Bf4 c5 4. e4 (4. e3 cxd4 5. exd4 a6 6. Nf3 Nc6 7. Ne5 h6 8. Bd3) 4... Nxe4 { f } 5. Nxe4 dxe4 6. dxc5 Qa5+ 7. Qd2 (7. c3 Qxc5 8. Qa4+ Nc6 9. Qxe4) 7... Qxd2+ 8. Kxd2 Nc6 9. Re1 Bf5 (9... e5 10. Rxe4 (10. Be3 f5 11. g3 g5 12. Bxg5 Bxc5) 10... Bf5 { [%csl Gf5,Ge4,Gc8][%cal Gf5e4,Ge8c8] } 11. Re1 O-O-O+) 10. f3 O-O-O+ 11. Kc1 e5 12. Bg5 f6 (12... exf3 13. Nxf3 f6 14. Be3 Nb4 15. Re2 Nxa2+ 16. Kb1 Nb4 { [%csl Gd1] } 17. Kc1) 13. fxe4 Bxe4 14. Rxe4 fxg5 15. b4 a5 16. c3 axb4 17. cxb4 Rd4 18. Rxd4 exd4 19. a3 b6 20. cxb6 Kb7 21. Nf3 g4 22. Nd2 Kxb6 23. Nc4+ Kc7 24. Be2 h5 25. Rf1 Be7 26. Rf7 Rf8 27. Rxg7 Rf2 28. Bd3 Kd8 29. b5 Nb8 30. b6 Bf8 31. Ra7 Nc6 32. Ra8+ Kd7 33. b7 Bd6 34. Nxd6 Kxd6 35. Rc8 Nb8 36. Rxb8 Kc7 37. Rh8 Kxb7 38. Rxh5 Kb6 39. Rb5+ Kc6 40. Rb2 Rf1+ 41. Bxf1 { 1-0 White wins on time. } 1-0
+
+
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2022.05.10"]
+[White "IMRosen"]
+[Black "Duhless"]
+[Result "1-0"]
+[WhiteElo "2755"]
+[BlackElo "2962"]
+[TimeControl "180+1"]
+[Termination "IMRosen won by checkmate"]
+[Variant "Standard"]
+[ECO "D00"]
+[Opening "Queen's Pawn Game: Accelerated London System"]
+[StudyName "May 10 Titled Tuesday"]
+[ChapterName "IMRosen - Duhless"]
+[ChapterURL "https://lichess.org/study/v9Ee1R9E/lOySuyxO"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 d5 (1... Nf6 2. Bf4 g6 3. Nc3 { [%csl Gc3] } 3... d5 4. e3) 2. Bf4 Nf6 3. e3 g6 { [%csl Gg6][%cal Gg7g6] } 4. Nc3 { [%csl Gc3] } 4... Bg7 5. h4 h5 6. Nf3 O-O 7. Ne5 (7. Qd2 c5 8. Ne5 Nc6 9. dxc5 Qa5 10. Nxc6 bxc6 11. a3 Qxc5 (11... Bf5 12. b4 Qd8)) 7... c5 8. dxc5 { [%csl Gc6] } 8... Nc6 (8... Qa5 9. Qd2 { [%csl Ge6][%cal Gc8e6] } 9... Qxc5 10. Na4) 9. Bb5 (9. Nxc6 bxc6 10. Be5 { [%csl Ge5,Gh6][%cal Gg7h6] } 10... Bh6) 9... Bg4 { [%csl Gg4] } 10. f3 Bd7 { [%csl Gg4,Gf6][%cal Gf3e4,Gf3g4] } 11. Nxd7 Nxd7 12. Qxd5 Qa5 { [%csl Rd7,Rc3,Rb5,Rb2,Ra1,Re1][%cal Gd5d7,Gg7c3,Ga5c3] } 13. Bxc6 Bxc3+ 14. bxc3 Qxc3+ 15. Kf2 Qxc2+ 16. Kg3 Nf6 17. Qe5 (17. Ba4 Qxa4 18. Qxb7 Rac8 19. Rhc1) 17... bxc6 18. Qxe7 Nd5 19. Qg5 f6 20. Qh6 { [%csl Gh6] } 20... Rf7 21. Rac1 (21. e4 Rh7 22. Qxg6+ (22. Qxh7+ Kxh7 23. exd5) 22... Rg7) 21... Qxa2 22. Kh2 Ne7 (22... Rh7 23. Qxg6+ Rg7 24. Qc2 { [%csl Gg2] }) 23. Bd6 Nf5 24. Qf4 Re8 25. e4 Nd4 26. Qg3 Kh7 27. Ra1 Qe6 28. Rhe1 Nb5 29. Ra6 Rc8 30. Rea1 Rd7 31. Qf4 Rb7 32. Rd1 Rd7 33. Raa1 Ra8 34. Ra6 Rc8 35. Qe3 Qc4 36. Raa1 Qf7 37. Qf4 Rcd8 38. Ra6 Rc8 39. e5 f5 40. Re1 Qe6 41. Qg5 Rf7 42. Qf4 Nc3 43. Rea1 Nd5 44. Qd4 { [%csl Ra7][%cal Gc8a8,Ga6c6] } 44... f4 45. Rxa7 Rxa7 46. Rxa7+ Kh6 47. Qe4 Rg8 48. Qb1 Rg7 49. Qb8 Rxa7 50. Qxa7 Ne3 (50... Qf5) 51. Bf8# { 1-0 White wins. } 1-0
+
+
+[Event "Live Chess - chess"]
+[Site "Chess.com"]
+[Date "2022.05.10"]
+[White "IMRosen"]
+[Black "Karttunen"]
+[Result "1-0"]
+[WhiteElo "2742"]
+[BlackElo "2550"]
+[TimeControl "180+1"]
+[Termination "IMRosen won by resignation"]
+[Variant "Standard"]
+[ECO "A80"]
+[Opening "Dutch Defense"]
+[StudyName "May 10 Titled Tuesday"]
+[ChapterName "IMRosen - Karttunen"]
+[ChapterURL "https://lichess.org/study/v9Ee1R9E/x6CzEVmm"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 f5 2. Bf4 Nf6 3. e3 e6 4. Nf3 d5 5. Nbd2 Bd6 6. Bd3 O-O 7. Qe2 Qe7 8. h3 Ne4 9. Ne5 Nd7 10. Ndf3 Bb4+ 11. Kf1 (11. c3 Nxc3 12. bxc3 Bxc3+ 13. Kf1 Bxa1 { [%csl Gc2,Ge2][%cal Ge2c2,Gf1e2] } 14. Qc2 { [%csl Gb4][%cal Ge7b4] } 14... Qb4) 11... Ndf6 12. c3 Bd6 13. Rd1 c5 14. Bb1 Bd7 15. Nxd7 Nxd7 16. h4 Ndf6 17. Ne5 Bxe5 18. dxe5 Ng4 19. f3 Ngf2 (19... Nef2 20. Rh2 (20. fxg4) 20... Nxh2+ 21. Kxf2 Qxh4+) 20. Rh2 Nxd1 21. fxe4 (21. Qxd1) 21... Nxe3+ 22. Qxe3 fxe4 23. g3 b5 24. Rf2 b4 25. cxb4 cxb4 26. Bc2 Rac8 27. Bb3 a5 28. Kg2 Qd7 29. h5 a4 30. Bd1 h6 31. Bg4 Qc6 32. Rd2 Rfd8 { [%csl Gh6][%cal Gf4h6] } 33. Rd1 (33. Bxh6 gxh6 34. Qxh6) 33... Qc2+ 34. Rd2 Qc1 35. Bxe6+ Kh8 36. Bxc8 Rxc8 37. e6 Qc6 38. Qd4 Qxe6 39. Qxd5 Qe7 40. Be3 a3 41. bxa3 bxa3 42. Qd4 Re8 43. Rf2 Kg8 44. Qc4+ Kh7 45. Qd4 Kg8 46. Rd2 Qe6 47. Qd5 Kf7 48. Qxe6+ Kxe6 49. Rd4 Ke5 50. Ra4 Rd8 51. Rxa3 Rc8 52. Kh3 Rc2 53. Ra5+ Ke6 54. a4 Re2 55. Bf4 Ra2 56. Re5+ Kf6 57. Rxe4 Kf5 58. Rb4 Kf6 59. Rb6+ Kf5 60. Rb5+ Ke4 61. Rb4+ Kf3 62. Be5 Rd2 63. Rf4+ Ke3 64. Bd4+ Ke2 65. Bxg7 Kd3 66. Kg4 Ra2 67. Bxh6 Re2 68. Bg5 Re6 69. h6 Ra6 70. h7 Rxa4 71. Rxa4 { 1-0 White wins. } 1-0
+
+
+[Event "Live Chess - chess"]
+[Site "Chess.com"]
+[Date "2022.05.10"]
+[White "BilodeauA"]
+[Black "IMRosen"]
+[Result "1-0"]
+[WhiteElo "2879"]
+[BlackElo "2750"]
+[TimeControl "180+1"]
+[Termination "BilodeauA won by resignation"]
+[Variant "Standard"]
+[ECO "B38"]
+[Opening "Sicilian Defense: Accelerated Dragon, Maróczy Bind"]
+[StudyName "May 10 Titled Tuesday"]
+[ChapterName "BilodeauA - IMRosen"]
+[ChapterURL "https://lichess.org/study/v9Ee1R9E/R0H06S4r"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 g6 5. c4 Bg7 6. Be3 Nf6 7. Nc3 O-O 8. Be2 d6 9. O-O Bd7 10. Rc1 Nxd4 11. Bxd4 Bh6 12. f4 (12. Rc2 e5 13. Be3 Bxe3 14. fxe3 Ne8 { [%csl Gg5] } 15. Rd2 { [%csl Gg5][%cal Gd8g5] } 15... Qg5) 12... e5 (12... Bc6 13. Bf3 (13. Bxf6 exf6 { [%csl Gf6] } 14. Nd5 { [%cal Gc6d5,Gd8b6] })) 13. fxe5 Bxc1 14. Qxc1 dxe5 15. Bxe5 Ng4 16. Bxg4 Bxg4 17. Bf6 Qb6+ 18. Kh1 Bf5 19. Nd5 Qxf6 20. Nxf6+ Kg7 21. Rxf5 Rfd8 22. Rf1 { 1-0 White wins. } 1-0
+
+
+[Event "Live Chess - chess"]
+[Site "Chess.com"]
+[Date "2022.05.10"]
+[White "IMRosen"]
+[Black "Airquake"]
+[Result "0-1"]
+[WhiteElo "2738"]
+[BlackElo "2575"]
+[TimeControl "180+1"]
+[Termination "Airquake won by checkmate"]
+[Variant "Standard"]
+[ECO "A40"]
+[Opening "Queen's Pawn Game"]
+[StudyName "May 10 Titled Tuesday"]
+[ChapterName "IMRosen - Airquake"]
+[ChapterURL "https://lichess.org/study/v9Ee1R9E/RcxcX7oP"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 a6 2. Bf4 b5 3. Nf3 Nf6 4. e3 Bb7 5. c4 bxc4 6. Bxc4 e6 7. Nc3 Be7 (7... d5 8. Qb3 Ra7 9. Bb5+) 8. Qb3 Qc8 9. Rc1 Nc6 10. Qa4 O-O 11. h3 Nb4 12. a3 Bc6 13. Qd1 Nbd5 14. Bg3 (14. Nxd5 Nxd5 15. Bg3) 14... Nxc3 15. bxc3 Bxa3 16. Rb1 Ne4 17. Rb3 Nxg3 18. fxg3 Ba4 19. Qd3 Bxb3 20. Bxb3 Rb8 21. Bc2 g6 22. O-O c5 23. c4 Bb2 24. Ne5 cxd4 25. exd4 d6 26. Ng4 e5 27. Kh2 f5 28. Nh6+ Kg7 29. Qd2 Qxc4 30. Rxf5 gxf5 31. Nxf5+ Rxf5 32. Bxf5 Qf7 33. Qg5+ Kh8 34. d5 e4 35. Bxe4 Be5 36. h4 Rg8 37. Qf5 Qxf5 38. Bxf5 Rxg3 39. Kh1 a5 40. Bd7 Ra3 41. g4 a4 42. g5 Ra1+ 43. Kg2 a3 44. Bb5 a2 45. Bc4 Rg1+ 46. Kxg1 a1=Q+ 47. Bf1 Qc3 48. g6 Qg3+ 49. Bg2 Bd4+ 50. Kh1 Qe1+ 51. Kh2 Be5+ 52. Kh3 Qg3# { 0-1 Black wins. } 0-1
+
+
+[Event "Live Chess - chess"]
+[Site "Chess.com"]
+[Date "2022.05.10"]
+[White "Bugcrusher"]
+[Black "IMRosen"]
+[Result "0-1"]
+[WhiteElo "2532"]
+[BlackElo "2742"]
+[TimeControl "180+1"]
+[Termination "IMRosen won by checkmate"]
+[Variant "Standard"]
+[ECO "A06"]
+[Opening "Zukertort Opening"]
+[StudyName "May 10 Titled Tuesday"]
+[ChapterName "Bugcrusher - IMRosen"]
+[ChapterURL "https://lichess.org/study/v9Ee1R9E/4MiRtIV9"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. Nf3 d5 2. e3 Nf6 3. c4 e6 4. Nc3 Bd6 5. d4 { [%csl Gc6][%cal Gc7c6] } 5... O-O (5... b6 6. Qc2 O-O 7. Nb5 Be7 8. cxd5 a6 9. Nxc7 Ra7) 6. Qc2 a6 7. c5 Be7 8. Rb1 a5 9. Ne5 Nfd7 10. Bd3 Nxe5 11. Bxh7+ Kh8 12. dxe5 Nd7 13. Bd3 Nxc5 14. O-O Nxd3 15. Qxd3 b6 16. Rd1 f6 (16... Ba6 17. Qd4 c5 18. Qg4 Qc7 19. f4 { [%csl Rd1,Rc1,Rc3,Rb1] } 19... Kg8) 17. e4 d4 18. exf6 Bxf6 19. e5 dxc3 20. Qh3+ Kg8 21. Rxd8 Rxd8 22. Bf4 c2 23. Rf1 Be7 (23... Bxe5 24. Bxe5 Rd1 25. Bf4) (23... Rd1 24. exf6 Ba6 25. Qxe6+ Kh7 26. Qe4+) 24. Qb3 Ba6 25. Qxc2 Bxf1 26. Kxf1 Bc5 27. g4 Rf8 28. Bg3 Rad8 29. Kg2 Rd5 30. Qg6 Rd2 31. Qxe6+ Kh8 32. Qg6 Bxf2 33. Qh5+ Kg8 34. Bxf2 Rdxf2+ 35. Kg1 Rf1+ 36. Kg2 R1f2+ 37. Kg1 Rxb2 38. e6 Rb1+ 39. Kg2 Rb2+ 40. Kg3 Re2 41. Qd5 c6 42. Qxc6 Re3+ 43. Kg2 Re2+ 44. Kg3 Re3+ 45. Kh4 Rf6 46. Qc8+ Kh7 47. Kg5 Rfxe6 48. Kf5 R3e5+ 49. Kf4 Re4+ 50. Kf5 R6e5# { 0-1 Black wins. } 0-1
+
+
+[Event "Live Chess - chess"]
+[Site "Chess.com"]
+[Date "2022.05.10"]
+[White "IMRosen"]
+[Black "Harry_Rakkel"]
+[Result "1-0"]
+[WhiteElo "2747"]
+[BlackElo "2610"]
+[TimeControl "180+1"]
+[Termination "IMRosen won by resignation"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "May 10 Titled Tuesday"]
+[ChapterName "IMRosen - Harry_Rakkel"]
+[ChapterURL "https://lichess.org/study/v9Ee1R9E/VOiFGKmA"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 Nf6 2. Bf4 b6 3. Nf3 Bb7 4. c4 e6 5. e3 Bb4+ 6. Nfd2 O-O 7. a3 Be7 8. Nc3 d5 (8... c5 9. d5 exd5 10. cxd5 Bxd5 11. Nxd5 Nxd5 12. Qf3 Nc7 13. Qb7) 9. cxd5 Nxd5 10. Nxd5 exd5 11. Bd3 c5 12. O-O Nd7 13. Qf3 Nf6 14. Rac1 Qd7 15. Be5 Rfd8 16. Bf5 Qb5 17. Rfd1 (17. b4 cxb4 18. Rc7) 17... Bc8 18. Bb1 Bg4 19. Qg3 Bxd1 20. Rxd1 Qxb2 21. dxc5 bxc5 22. Bxb2 { 1-0 White wins. } 1-0
+
+
+[Event "Live Chess - chess"]
+[Site "Chess.com"]
+[Date "2022.05.10"]
+[White "IMRosen"]
+[Black "Msb2"]
+[Result "0-1"]
+[WhiteElo "2743"]
+[BlackElo "2940"]
+[TimeControl "180+1"]
+[Termination "Msb2 won on time"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "May 10 Titled Tuesday"]
+[ChapterName "IMRosen - Msb2"]
+[ChapterURL "https://lichess.org/study/v9Ee1R9E/rPHCwTjH"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 { [%eval 0.21] } 1... Nf6 { [%eval 0.23] } 2. Bf4 { [%eval 0.0] } 2... c5 { [%eval 0.09] } 3. e3 { [%eval 0.0] } 3... d5 { [%eval 0.0] } 4. Nf3 { [%eval 0.0] } 4... Nc6 { [%eval 0.0] } 5. Nbd2 { [%eval 0.0] } 5... cxd4 { [%eval 0.0] } 6. exd4 { [%eval 0.14] } 6... Qb6 { [%eval 0.27] } 7. Nb3 { [%eval 0.19] } 7... Bf5 { [%eval 0.51] } 8. c3 { [%eval 0.44] } 8... e6 { [%eval 0.26] } 9. Be2 { [%eval 0.12] } 9... h6 { [%eval 0.0] } 10. O-O { [%eval 0.0] } 10... Be7 { [%eval -0.13] } 11. h3 { [%eval -0.1] } 11... O-O { [%eval -0.11] } 12. Re1 { [%eval -0.23] } 12... Rfc8 { [%eval -0.16] } 13. a4 { [%eval -0.08] } 13... a6 { [%eval 0.0] } 14. a5 { [%eval 0.08] } 14... Qd8 { [%eval 0.08] } 15. Bd3 { [%eval 0.0] } 15... Bxd3 { [%eval 0.0] } 16. Qxd3 { [%eval 0.0] } 16... b6 { [%eval 0.0] } 17. axb6 { [%eval 0.0] } 17... Qxb6 { [%eval 0.0] } 18. Nfd2 { [%eval -0.22] } 18... Qb5 { [%eval 0.07] } 19. Qxb5 { [%eval -0.25] } 19... axb5 { [%eval -0.12] } 20. Rxa8 { [%eval -0.17] } 20... Rxa8 { [%eval -0.22] } 21. Ra1 { [%eval -0.15] } 21... Rxa1+ { [%eval -0.25] } 22. Nxa1 { [%eval -0.2] } 22... b4 { [%eval -0.19] } 23. Nc2 { [%eval -0.13] } 23... bxc3 { [%eval -0.11] } 24. bxc3 { [%eval -0.12] } 24... Nd7 { [%eval -0.13] } 25. Kf1 { [%eval -0.15] } 25... Kf8 { [%eval -0.2] } 26. Ke2 { [%eval -0.18] } 26... f6 { [%eval -0.01] } 27. Ne3 { [%eval -0.06] } 27... Kf7 { [%eval -0.08] } 28. Bg3 { [%eval -0.12] } 28... h5 { [%eval -0.08] } 29. f3 { [%eval -0.07] } 29... g5 { [%eval -0.23] } 30. Kd3 { [%eval -0.22] } 30... Nf8 { [%eval -0.15] } 31. c4 { [%eval -0.28] } 31... Nb4+ { [%eval -0.35] } 32. Kc3 { [%eval -0.2] } 32... dxc4 { [%eval -0.06] } 33. Ndxc4 { [%eval -0.14] } 33... Nd7 { [%eval 0.0] } 34. Bd6 { [%eval 0.0] } 34... Nd5+ { [%eval 0.0] } 35. Nxd5 { [%eval 0.05] } 35... exd5 { [%eval 0.12] } 36. Bxe7 { [%eval 0.01] } 36... Kxe7 { [%eval 0.0] } 37. Ne3 { [%eval 0.11] } 37... Ke6 { [%eval 0.0] } 38. Kd3 { [%eval 0.0] } 38... Nf8 { [%eval 0.0] } 39. g3 { [%eval 0.0] } 39... Ng6 { [%eval 0.0] } 40. Ng2 { [%eval 0.0] } 40... Ne7 { [%eval 0.0] } 41. g4 { [%eval 0.0] } 41... h4 { [%eval 0.0] } 42. f4 { [%eval 0.0] } 42... Nc8 { [%eval 0.0] } 43. Ke3 { [%eval 0.0] } 43... Nd6 { [%eval 0.0] } 44. Ne1 { [%eval 0.0] } 44... Ne4 { [%eval 0.0] } 45. Nd3 { [%eval 0.0] } (45. f5+ Kd6) 45... Kd6 { [%eval 0.0] } 46. fxg5 { [%eval 0.0] } 46... fxg5 { [%eval 0.0] } 47. Ne5 { [%eval 0.0] } 47... Kc7 { [%eval 0.0] } 48. Kd3 { [%eval -0.49] } 48... Nf2+ { [%eval -0.49] } 49. Ke3 { [%eval -0.49] } 49... Nxh3 { [%eval -0.48] } 50. Kf3?? { [%eval -5.72] } { Blunder. Ng6 was best. } (50. Ng6 Kd6 51. Ne5 Ke7 52. Nd3 Kd7 53. Ne5+ Kc8 54. Ng6 Kc7 55. Kf3 Kc6 56. Ke3 Kb5) 50... Kd6?? { [%eval -0.46] } { Blunder. Nf4 was best. } (50... Nf4 51. Ke3 Ne6 52. Ng6 Nxd4 53. Kxd4 h3 54. Kxd5 h2 55. Ke5 h1=Q 56. Kf6 Qh6 57. Kf5) 51. Nf7+?? { [%eval -5.37] } { Blunder. Ke3 was best. } (51. Ke3 Ke6 52. Nd3 Ke7 53. Kf3 Kd8 54. Ne5 Kc7 55. Ng6 Kc6 56. Ne5+ Kb5 57. Ng6 Ng1+) 51... Ke6?! { [%eval -4.15] } { Inaccuracy. Kc7 was best. } (51... Kc7) 52. Nd8+ { [%eval -4.77] } 52... Ke7 { [%eval -4.61] } 53. Nc6+ { [%eval -4.51] } 53... Kf6?! { [%eval -3.55] } { Inaccuracy. Ke8 was best. } (53... Ke8 54. Ke3) 54. Nb4 { [%eval -4.35] } 54... Nf4 { [%eval -3.92] } 55. Nc6?! { [%eval -5.59] } { Inaccuracy. Nc2 was best. } (55. Nc2 Ke6) 55... Ne6?! { [%eval -4.37] } { Inaccuracy. Nd3 was best. } (55... Nd3) 56. Ke3 { [%eval -4.95] } 56... Nf4 { [%eval -4.62] } 57. Kf3 { [%eval -5.4] } 57... Ke6 { [%eval -4.81] } 58. Ne5 { [%eval -4.91] } 58... Ke7 { [%eval -4.8] } 59. Nc6+ { [%eval -5.8] } 59... Kf6 { [%eval -4.55] } 60. Nb4 { [%eval -4.99] } 60... h3? { [%eval -3.08] } { Mistake. Ke6 was best. } (60... Ke6 61. Nc6 Kd6 62. Ne5 Kc7 63. Ke3 Ne6 64. Nf3 Kb6 65. Kd2 Kb5 66. Kd3 Kb4 67. Ne5) 61. Kg3 { [%eval -2.93] } 61... Ke6 { [%eval -2.73] } 62. Nc6 { [%eval -2.69] } 62... Kd6?? { [%eval -0.13] } { Blunder. Nd3 was best. } (62... Nd3) 63. Ne5 { [%eval -0.09] } 63... Ke7 { [%eval 0.0] } 64. Nf3 { [%eval 0.0] } 64... Kf6 { [%eval 0.0] } 65. Ne5?? { [%eval -3.11] } { Blunder. Kh2 was best. } (65. Kh2 Kg6 66. Ne5+ Kg7 67. Nf3) 65... Ne2+ { [%eval -3.66] } 66. Kxh3 { [%eval -3.3] } 66... Nxd4 { [%eval -3.47] } 67. Nd7+ { [%eval -3.8] } 67... Ke6 { [%eval -3.87] } 68. Nc5+ { [%eval -3.52] } 68... Ke5 { [%eval -3.89] } 69. Nd7+ { [%eval -4.0] } 69... Kd6 { [%eval -4.11] } 70. Nf6 { [%eval -3.87] } 70... Ne6 { [%eval -3.92] } 71. Kg3 { [%eval -4.25] } 71... Ke5 { [%eval -3.33] } 72. Nd7+ { [%eval -3.65] } 72... Kd4 { [%eval -4.23] } 73. Nf6 { [%eval -4.32] } 73... Nc7 { [%eval -4.04] } 74. Kf3 { [%eval -4.03] } 74... Kd3 { [%eval -4.21] } 75. Nh7?! { [%eval -5.45] } { Inaccuracy. Nd7 was best. } (75. Nd7 Ne6) 75... Ne6 { [%eval -4.69] } 76. Nf6 { [%eval -5.41] } 76... d4 { [%eval -5.33] } 77. Nd5 { [%eval -5.46] } 77... Kc4 { [%eval -4.61] } 78. Ke4?! { [%eval -7.38] } { Inaccuracy. Nb6+ was best. } (78. Nb6+ Kd3) 78... Nc5+ { [%eval -7.75] } 79. Ke5 { [%eval -7.64] } 79... Nd3+ { [%eval -7.38] } 80. Ke4 { [%eval -9.66] } 80... Nf2+ { [%eval -10.65] } 81. Ke5 { [%eval -9.64] } 81... Nxg4+ { [%eval -9.03] } 82. Ke4 { [%eval -10.88] } 82... Nf2+ { [%eval -8.26] } 83. Ke5 { [%eval -7.98] } 83... g4 { [%eval -10.68] } 84. Nb6+ { [%eval -7.73] } 84... Kc5 { [%eval -9.08] } 85. Nd7+ { [%eval -10.87] } 85... Kc6 { [%eval -12.29] } 86. Nf8 { [%eval -59.43] } 86... d3 { [%eval -64.0] } (86... g3 87. Ne6 g2 88. Nxd4+) 87. Ne6 { [%eval -67.92] } 87... d2 { [%eval -70.8] } 88. Nd4+ { [%eval -67.75] } 88... Kb6 { [%eval -69.51] } 89. Ne6 { [%eval -76.1] } 89... d1=Q { [%eval #-12] } 90. Kf6 { [%eval #-14] } 90... Qd6 { [%eval #-12] } (90... Qe2 91. Ke7 Qxe6+ 92. Kd8) 91. Kf7 { [%eval #-7] } 91... Qxe6+ { [%eval #-12] } { 0-1 Black wins on time. } 0-1
+
+
+[Event "Live Chess - chess"]
+[Site "Chess.com"]
+[Date "2022.05.10"]
+[White "harlem4brew"]
+[Black "IMRosen"]
+[Result "0-1"]
+[WhiteElo "2564"]
+[BlackElo "2747"]
+[TimeControl "180+1"]
+[Termination "IMRosen won on time"]
+[Variant "Standard"]
+[ECO "B32"]
+[Opening "Sicilian Defense: Accelerated Dragon"]
+[StudyName "May 10 Titled Tuesday"]
+[ChapterName "harlem4brew - IMRosen"]
+[ChapterURL "https://lichess.org/study/v9Ee1R9E/nOSeSC34"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 g6 5. Be3 Bg7 6. Nc3 Nf6 7. Be2 O-O 8. O-O d5 9. Nxc6 (9. exd5 Nb4) 9... bxc6 10. e5 { [%cal Gf6e4,Gf6e8] } 10... Nd7 (10... Ne8 11. f4 { [%csl Gf6][%cal Gf7f6] }) 11. f4 e6 12. Bg4 { [%csl Gg4][%cal Ge2g4] } 12... c5 (12... g5 13. g3) 13. Nb5 Ba6 14. Be2 { [%csl Gd6][%cal Gb5d6] } 14... Qb6 15. a4 Rab8 16. b3 Rfd8 17. h4 Bb7 18. h5 (18. a5 Qc6 19. Nxa7 { [%cal Ga7b5] }) 18... d4 19. Bd2 c4 { [%csl Gc4] } 20. Kh2 d3 21. cxd3 cxd3 22. Bf3 a6 23. Nd6 Nxe5 24. Nxb7 Nxf3+ 25. Qxf3 Rxb7 26. hxg6 hxg6 27. Rab1 Rd5 28. g4 Rc7 29. Rf2 Qd6 30. b4 Bd4 31. Rg2 Kg7 32. b5 axb5 33. axb5 Rc8 34. Kg3 Rh8 35. Qe4 Bf6 36. b6 Rd4 37. Qe3 { [%csl Ge5][%cal Ge6e5] } 37... Qd5 38. g5 Be7 { [%cal Gd2c3] } 39. b7 Bd6 { [%cal Gd2c3,Ge6e5] } 40. Qf3 Qxg5+ 41. Kf2 Qc5 { 0-1 Black wins on time. } 0-1
+
+
+[Event "May 10 Titled Tuesday: Chapter 10"]
+[Date "2022.05.10"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C12"]
+[Opening "French Defense: McCutcheon Variation, Advance Variation"]
+[StudyName "May 10 Titled Tuesday"]
+[ChapterName "Chapter 10"]
+[ChapterURL "https://lichess.org/study/v9Ee1R9E/htRGl4kg"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2022.05.10"]
+[UTCTime "23:41:03"]
+
+1. e4 e6 2. d4 d5 3. Nc3 Nf6 4. Bg5 Bb4 5. e5 h6 *
+
+

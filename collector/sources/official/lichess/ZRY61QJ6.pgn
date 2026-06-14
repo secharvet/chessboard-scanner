@@ -1,0 +1,552 @@
+[Event "Best Sacrifices to aid Attack: Welcome and Introduction"]
+[Site "https://lichess.org/study/gG3MmNTi/QCJ64Vw1"]
+[Date "2020.08.03"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Top Sacrifices in the Attack"]
+[ChapterName "Welcome and Introduction"]
+[ChapterURL "https://lichess.org/study/ZRY61QJ6/iA7wUkTD"]
+[UTCDate "2020.08.03"]
+[UTCTime "02:16:38"]
+
+{ Hello, this is Mr_Penings bringing you a guide to some of the most effective attacking ideas using pawn or piece sacrifices.
+
+❤️Please give this study a like (Heart) and share with others! }
+ *
+
+
+[Event "Best Sacrifices to aid Attack: Overarching Concept - The Bluff!"]
+[Site "https://lichess.org/study/gG3MmNTi/m5Dh3tlz"]
+[Date "2020.08.03"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Top Sacrifices in the Attack"]
+[ChapterName "Overarching Concept - The Bluff!"]
+[ChapterURL "https://lichess.org/study/ZRY61QJ6/89IpKSiD"]
+[FEN "r1bq1rk1/1pp3bp/p2p2p1/2nPpp1n/2P1P3/2N1BP2/PPBQ2PP/1K1R2NR b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.08.03"]
+[UTCTime "02:16:38"]
+
+{ This is a concept that applies to multiple of the sacrifices listed in the chapter, and a general psychological trick as well, which I've utilized successfully in my attacks. If you've played poker, it's just like a bluff there. The bluff concept in chess is often portrayed as a mix of overconfidence and deceit. }
+1... b5 { The general idea is "I will throw at you this crazy move. You can punish me and accept the consequences or back off and I get the benefits". In this position, Black would love to play b5 without hanging the pawn. So instead of playing slow with Rb8, Black bluffs with b5 immediately. See the first sacrifice below for details } *
+
+
+[Event "Best Sacrifices to aid Attack: ** Sacrifices **"]
+[Site "https://lichess.org/study/gG3MmNTi/dVT0P6li"]
+[Date "2020.08.03"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Top Sacrifices in the Attack"]
+[ChapterName "** Sacrifices **"]
+[ChapterURL "https://lichess.org/study/ZRY61QJ6/gESwSsC2"]
+[UTCDate "2020.08.03"]
+[UTCTime "02:16:38"]
+
+ *
+
+
+[Event "Best Sacrifices to aid Attack: 1) Benko Gambit style"]
+[Site "https://lichess.org/study/gG3MmNTi/w2OZCtFC"]
+[Date "2020.08.03"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Top Sacrifices in the Attack"]
+[ChapterName "1) Benko Gambit style"]
+[ChapterURL "https://lichess.org/study/ZRY61QJ6/kzRryo14"]
+[FEN "r1bq1rk1/1pp3bp/p2p2p1/2nPpp1n/2P1P3/2N1BP2/PPBQ2PP/1K1R2NR b - - 5 12"]
+[SetUp "1"]
+[UTCDate "2020.08.03"]
+[UTCTime "02:16:38"]
+
+{ As soon as you see the kings castled opposite sides, two important concepts should come to mind:
+1) Pawn Breaks
+2) Time
+Black ideally should try to play for b5 safely, but a preparation move like Rb8 fails to b4, when the knight sadly has to retreat, nearly ending all of Black's queenside chances. }
+12... b5! { Black wastes no time and goes for the immediate b5. This move acts as a bluff. If White is bold and accepts the gambit, Black will have tons of play on the now open a and b files. If White cowards out and declines, Black has no gotten b5 in for free. So, win win. } (12... Rb8? { Too slow! } 13. b4) 13. cxb5 axb5 14. Nxb5 Ba6 { With loads of compensation and a great attack. See https://www.chessgames.com/perl/chessgame?gid=1480587 for a top Grandmaster game from this position. } *
+
+
+[Event "Best Sacrifices to aid Attack: 2) Greek Gift"]
+[Site "https://lichess.org/study/gG3MmNTi/D6s4j08x"]
+[Date "2020.08.03"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Top Sacrifices in the Attack"]
+[ChapterName "2) Greek Gift"]
+[ChapterURL "https://lichess.org/study/ZRY61QJ6/gP7axRtS"]
+[FEN "rnbq1rk1/pppn1ppp/4p3/3pP3/1b1P4/2NB1N2/PPP2PPP/R1BQK2R w KQ - 5 7"]
+[SetUp "1"]
+[UTCDate "2020.08.03"]
+[UTCTime "02:16:38"]
+
+{ Probably the most common sacrifice at the amateur rank. This bishop sacrifice against the castled king destroys the enemy king safety and allows quick invasion of your knight and queen. The majority of the successful Greek Gifts requires your pawn on e5 to prevent your opponent from playing Nf6 }
+7. Bxh7+ Kxh7 8. Ng5+ Kg8 (8... Kg6 9. h4 { Threatening h5+, and the black king has nowhere to go. } 9... f5 10. h5+ Kh6 11. Nxe6+) 9. Qh5 Re8 { Attempting to flee with the king } 10. Qxf7+ Kh8 11. Qh5+ Kg8 12. Qh7+ Kf8 13. Qh8+ Ke7 14. Qxg7# { 1-0 White wins by checkmate. } *
+
+
+[Event "Best Sacrifices to aid Attack: 3) Greek Gift using h-file"]
+[Site "https://lichess.org/study/gG3MmNTi/mKdUosUu"]
+[Date "2020.08.03"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Top Sacrifices in the Attack"]
+[ChapterName "3) Greek Gift using h-file"]
+[ChapterURL "https://lichess.org/study/ZRY61QJ6/3vlcrZd3"]
+[FEN "rn1q1rk1/pb2bppp/4p3/3pB3/7P/3B1N2/PPP2PP1/R2QK2R w KQ - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.08.03"]
+[UTCTime "02:16:38"]
+
+{ The Greek Gift using the h-file is another common version. This potentially uses the Rook on h1 to contribute to the attack }
+1. Bxh7+ Kxh7 2. Ng5+ { Black could capture the knight, but it would allow the rook on h1 to enter the attack, so Black is left with no good choice } 2... Bxg5 3. hxg5+ Kg8 4. Qh5 f6 5. g6! { A must-know pattern. g6 is not a check, but is deadly. It is essential to cut off the Black king's flight square f7 first before Qh8#. Checkmate is unstoppable. } *
+
+
+[Event "Best Sacrifices to aid Attack: 4) Sac the h-pawn to open file"]
+[Site "https://lichess.org/study/gG3MmNTi/XnoSBnGS"]
+[Date "2020.08.03"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B78"]
+[Opening "Sicilian Defense: Dragon Variation, Yugoslav Attack, Old Line"]
+[StudyName "Top Sacrifices in the Attack"]
+[ChapterName "4) Sac the h-pawn to open file"]
+[ChapterURL "https://lichess.org/study/ZRY61QJ6/kSD9XrmV"]
+[UTCDate "2020.08.03"]
+[UTCTime "02:16:38"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. f3 O-O 8. Qd2 Nc6 9. Bc4 Bd7 10. O-O-O Rc8 11. Bb3 Ne5 12. h4 Nc4 (12... h5 { h5 is the main line in the sharp Sicilian Dragon for logical reason: Allowing White to play h5 is simply too dangerous. }) 13. Bxc4 Rxc4 14. h5! { Sacrificing the h-pawn to open up the h-file with 2 tempi. Again, using the bluff concept. Black accepts the gambit and also the consequences of White's now open h-file. Or else White will play hxg6 anyways } 14... Nxh5 15. g4 Nf6 (15... Ng3? 16. Rhg1 { Knight is trapped here }) 16. Nde2 { Solidifying the center before pursuing the Bh6 kingside attack. } (16. Bh6? { Bh6 right away runs into some problems with the loose Nd4. } 16... Nxe4) *
+
+
+[Event "Best Sacrifices to aid Attack: 5) Rxh5 exchange sac"]
+[Site "https://lichess.org/study/gG3MmNTi/HonvkGxx"]
+[Date "2020.08.03"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "D01"]
+[Opening "Rapport-Jobava System"]
+[StudyName "Top Sacrifices in the Attack"]
+[ChapterName "5) Rxh5 exchange sac"]
+[ChapterURL "https://lichess.org/study/ZRY61QJ6/VawrVJnf"]
+[UTCDate "2020.08.03"]
+[UTCTime "02:16:38"]
+
+1. d4 Nf6 2. Bf4 g6 3. Nc3 d5 4. e3 Bg7 5. h4 O-O (5... h5 { Black is advised to play h5 to avoid the onslaught altogether. }) 6. h5 Nxh5 7. Rxh5! gxh5 8. Qxh5 { Although White is down an exchange, this position is arguably already winning for White, with a huge score in practice. All of White's pieces will jump in the attack, while Black's are all in hiding on the back rank. } 8... c6 9. Bd3 f5 10. Nf3 Qe8 11. Qh2 { White will castle long and play Rh1 with a decisive attack. } { [%cal Ge1c1] } *
+
+
+[Event "Best Sacrifices to aid Attack: 6) Sac the g-pawn to open g-file"]
+[Site "https://lichess.org/study/gG3MmNTi/sEz7F5Ck"]
+[Date "2020.08.03"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "D38"]
+[Opening "Queen's Gambit Declined: Ragozin Defense"]
+[StudyName "Top Sacrifices in the Attack"]
+[ChapterName "6) Sac the g-pawn to open g-file"]
+[ChapterURL "https://lichess.org/study/ZRY61QJ6/s8pIlytx"]
+[UTCDate "2020.08.03"]
+[UTCTime "02:16:38"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Nf3 d5 5. Bg5 h6 6. Bd2 O-O 7. g4 { If this move seems strangely familiar to you, then you must have watched Carlsen - Giri in the Magnus Carlsen invitational. g4 is a bold move that makes complete sense. White offers the g-pawn in order to gain full control on the g-file for the rook. If Black declines, then g5 to take advatnage of the h6 hook is quite strong. } 7... Nxg4 (7... Nbd7 { If Black declines the gambit, White will get g5 safely and also an open g-file. Lots of fun for White } 8. g5 hxg5 9. Bxg5 { [%cal Gh1g1,Gd1c2] }) 8. Rg1 *
+
+
+[Event "Best Sacrifices to aid Attack: 7) Sac to open up square"]
+[Site "https://lichess.org/study/gG3MmNTi/Jm5HFCTY"]
+[Date "2020.08.03"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Top Sacrifices in the Attack"]
+[ChapterName "7) Sac to open up square"]
+[ChapterURL "https://lichess.org/study/ZRY61QJ6/PVP1z86f"]
+[FEN "2rq1rk1/1b1nbppp/pn1pp3/1p4P1/3NPP1P/1P1B3R/P1P1NQ2/1KBR4 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.08.03"]
+[UTCTime "02:16:38"]
+
+1. f5 e5 2. f6! { A great in between move! Your knight is not forced to move just because it's attacked. If that was the case, the knight has nothing better than to just retreat to f3, and Black will continue with his initiative with d5. This in-between move frees up the key square f5 for the knight. A truly smart pawn sacrifice. } 2... gxf6 3. Nf5 { Not only does White achieve the beautiful knight outpost on f5, an attack is quickly forming on the now open g-file. } *
+
+
+[Event "Best Sacrifices to aid Attack: 8) Nd5 sac in Sicilian"]
+[Site "https://lichess.org/study/gG3MmNTi/B1vdFYXw"]
+[Date "2020.08.03"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Top Sacrifices in the Attack"]
+[ChapterName "8) Nd5 sac in Sicilian"]
+[ChapterURL "https://lichess.org/study/ZRY61QJ6/tzwz2GmT"]
+[FEN "rn2kb1r/1bq2ppp/p2ppn2/1p6/3NP3/2N3P1/PPP2PBP/R1BQR1K1 w kq - 0 10"]
+[SetUp "1"]
+[UTCDate "2020.08.03"]
+[UTCTime "02:16:38"]
+
+{ This theme is very common in any Open Sicilians. In the majority of these cases, the knight sacrifice is not completely sound. But there is so much compensation that White often scores very well. A computer may defend as Black easily, but for any human player (including GMs), it is quite tough. }
+10. a4 { Often common to play Nd5 after black plays b4 for the knight to hit another target. } 10... b4 11. Nd5! { If you haven't seen this sac before, this will look very dubious. It is indeed a long term advantage that White gains. Black more or less has to accept the sacrifice or else the knight will just sit there controlling all sides of the board. } 11... exd5 12. exd5+ Kd8 (12... Be7? 13. Nf5) 13. c3 { Now it is clear why the moves a4 b4 are inserted at the start! White can now create a pawn break on the queenside to open yet another file for a rook, the c-file! Bg5 and Rc1 will complete development while Black is completely tangled up. See https://www.chessgames.com/perl/chessgame?gid=1513377 for a sample game with the Nd5 sacrifice } *
+
+
+[Event "Best Sacrifices to aid Attack: 9) Sac piece to open adjacent file"]
+[Site "https://lichess.org/study/gG3MmNTi/Ba2LVlAh"]
+[Date "2020.08.03"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Top Sacrifices in the Attack"]
+[ChapterName "9) Sac piece to open adjacent file"]
+[ChapterURL "https://lichess.org/study/ZRY61QJ6/RW3ed2IL"]
+[FEN "r4rk1/pp2bppp/2bppn2/q5B1/3NPP2/2NQ4/PPP3PP/2KR3R b - - 0 12"]
+[SetUp "1"]
+[UTCDate "2020.08.03"]
+[UTCTime "02:16:38"]
+
+12... h6 13. h4! { Again, we see the bluff concept at play. Black would love to push back the pesky Bg5, and White wants to keep it there. Therefore, h4 is a great move to keep the bishop on g5 and throw out a bluff. If Black dares to capture, the open h-file is quite deadly. Otherwise, White reaps all the benefits.. and more! g4 comes next and a pawn storm is on its way! } 13... Rfc8 { Smart to not accept the sacrifice } (13... hxg5?! 14. hxg5 Ng4 15. e5 g6 16. Qh3) 14. g4! { The threat is now Bxf6 followed by g5 to crack open the kingside. } *
+
+
+[Event "Best Sacrifices to aid Attack: 10) Rook Exchange Sac"]
+[Site "https://lichess.org/study/gG3MmNTi/EHjL1QFQ"]
+[Date "2020.08.03"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Top Sacrifices in the Attack"]
+[ChapterName "10) Rook Exchange Sac"]
+[ChapterURL "https://lichess.org/study/ZRY61QJ6/diCARcEl"]
+[FEN "2rqkb1r/1b1n1ppp/pn1pp3/1p6/3NP1P1/2NBBP2/PPP2Q1P/1K1R3R b k - 6 13"]
+[SetUp "1"]
+[UTCDate "2020.08.03"]
+[UTCTime "02:16:38"]
+
+13... Rxc3!? { An exchange sacrifice in the Sicilian Najdorf to permanently destroy White's pawn structure. Black gets a lot of compensation for the exchange as a result. } 14. bxc3 Na4 { The c3 pawn is a goner, and Black can finish development pretty quickly thereafter } *
+
+
+[Event "Best Sacrifices to aid Attack: 11) Sacrifice to expose king"]
+[Site "https://lichess.org/study/gG3MmNTi/ywzQMHD8"]
+[Date "2020.08.03"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Top Sacrifices in the Attack"]
+[ChapterName "11) Sacrifice to expose king"]
+[ChapterURL "https://lichess.org/study/ZRY61QJ6/FGRWhoZM"]
+[FEN "1k4rr/1pp2p2/1p1pqn1p/4p3/QPP1P1p1/3PB2P/P4PPK/R4R2 b - - 1 19"]
+[SetUp "1"]
+[UTCDate "2020.08.03"]
+[UTCTime "02:16:38"]
+
+19... gxh3 20. gxh3 Ng4+ { Sacrificing the knight to get rid of the key h3 pawn which acts as cover for White's king. } 21. hxg4 Qxg4 { Mating net } *
+
+
+[Event "Best Sacrifices to aid Attack: 12) Sacrifice to destroy pawn shield"]
+[Site "https://lichess.org/study/gG3MmNTi/V6EAEeFJ"]
+[Date "2020.08.03"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Top Sacrifices in the Attack"]
+[ChapterName "12) Sacrifice to destroy pawn shield"]
+[ChapterURL "https://lichess.org/study/ZRY61QJ6/aQb0zUR7"]
+[FEN "2r3k1/1b2qp2/Bp2pbpp/2rp4/8/P1P1P1NP/1P2QPP1/2KR3R b - - 0 20"]
+[SetUp "1"]
+[UTCDate "2020.08.03"]
+[UTCTime "02:16:38"]
+
+{ Sacrificing on c3 is so tempting, but it is important to calculate which piece to sacrifice. Turns out it is essential to bring the queen into the attack as soon as possible, so Rxc3+ is the far stronger one. }
+20... Rxc3+! 21. bxc3 Qxa3+ { The queen entering the game is the key move. } 22. Kb1 (22. Kd2?? Qxc3#) 22... Rxc3 { Rb3+ is coming up next and there are countless wins from here. } *
+
+
+[Event "Best Sacrifices to aid Attack: 13) Sacrifice pawn to ensure an open file"]
+[Site "https://lichess.org/study/gG3MmNTi/mzoHC7Xr"]
+[Date "2020.08.03"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Top Sacrifices in the Attack"]
+[ChapterName "13) Sacrifice pawn to ensure an open file"]
+[ChapterURL "https://lichess.org/study/ZRY61QJ6/W48ffh33"]
+[FEN "r2qr1k1/1b2nppp/1pppp3/6PP/1b1PP3/pPN1QP2/P1P5/BK1B2RR w Kq - 10 6"]
+[SetUp "1"]
+[UTCDate "2020.08.03"]
+[UTCTime "02:16:38"]
+
+{ A very common dilemma when you're in the process of pawn storming: If you play h6, Black locks up the position with g6, and if you play g6, black will play fxg6 hxg6 h6 to close the position. In either situation, White doesn't get a full open file. However, with this sacrificial technique, you can ensure an open file! }
+6. g6 fxg6 (6... hxg6 7. hxg6 { If Black plays hxg6, you can just play hxg6 and welcome the open h-file. }) 7. h6! { Now Black cannot play g6 since there is now already a pawn on g6. This technique figuratively takes your g-pawn off the board, which is the purpose of pawn breaks in the first place. } *
+
+
+[Event "Best Sacrifices to aid Attack: 14) Sacrifice to maintain initiative"]
+[Site "https://lichess.org/study/gG3MmNTi/yti9T7GR"]
+[Date "2020.08.03"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Top Sacrifices in the Attack"]
+[ChapterName "14) Sacrifice to maintain initiative"]
+[ChapterURL "https://lichess.org/study/ZRY61QJ6/VLEkrvgJ"]
+[FEN "1rbq1k1r/2p2p2/3p2nb/p1pPp2p/Q1P1P1p1/2NB2B1/PP3PP1/1R1R2K1 b - - 3 25"]
+[SetUp "1"]
+[UTCDate "2020.08.03"]
+[UTCTime "02:16:38"]
+
+25... h4 26. Bh2 g3! { With the initiative, White has to play fxg3 to save the bishop... } 27. fxg3 Be3+ { However, this leads to a forced checkmating pattern. } 28. Kf1 (28. Kh1 hxg3) 28... Qf6+ 29. Ke2 Qf2# { 0-1 Black wins by checkmate. } *
+
+
+[Event "Best Sacrifices to aid Attack: 15) Sacrifice irrelevant piece"]
+[Site "https://lichess.org/study/gG3MmNTi/pukx62Id"]
+[Date "2020.08.03"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Top Sacrifices in the Attack"]
+[ChapterName "15) Sacrifice irrelevant piece"]
+[ChapterURL "https://lichess.org/study/ZRY61QJ6/wua2So4N"]
+[FEN "1r1qrb1k/5p2/4pP2/2ppPpQ1/np1p4/p2P4/R5B1/2B1R1K1 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.08.03"]
+[UTCTime "02:16:38"]
+
+1... b3 { Black attempts to ignore all the dangers on the kingside and push through on the queenside with those two advanced passed pawns. How should White respond to this threat? Hmmm.... The answer is to ignore it! So what if Black promotes to a queen or even 2 queens? White has checkmate, game over! } 2. Kf2! { Sacrificing the rook on a2. It doesn't matter. The Rook on e1 is the key one to deliver checkmate } 2... bxa2 3. Rh1+ { Checkmate next move. } *
+
+
+[Event "Best Sacrifices to aid Attack: ** Puzzles **"]
+[Site "https://lichess.org/study/gG3MmNTi/8oR5IV05"]
+[Date "2020.08.03"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Top Sacrifices in the Attack"]
+[ChapterName "** Puzzles **"]
+[ChapterURL "https://lichess.org/study/ZRY61QJ6/mVbDyfxx"]
+[UTCDate "2020.08.03"]
+[UTCTime "02:16:38"]
+
+ *
+
+
+[Event "Top Sacrifices in the Attack: Puzzle 1"]
+[Date "2020.08.03"]
+[Result "*"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Top Sacrifices in the Attack"]
+[ChapterName "Puzzle 1"]
+[ChapterURL "https://lichess.org/study/ZRY61QJ6/sCtiTEOr"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[FEN "2kr3r/2p2pp1/p4np1/1pp5/4PqP1/1PPP3P/1P1N1PK1/R2Q1R2 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.08.03"]
+[UTCTime "02:19:37"]
+[ChapterMode "gamebook"]
+
+1. Qe2 Rxh3 2. Kxh3 Rh8+ 3. Kg2 Qh2+ 4. Kf3 Rh3# *
+
+
+[Event "Top Sacrifices in the Attack: Puzzle 2"]
+[Date "2020.08.03"]
+[Result "*"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Top Sacrifices in the Attack"]
+[ChapterName "Puzzle 2"]
+[ChapterURL "https://lichess.org/study/ZRY61QJ6/cc1u5Xmx"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[FEN "r1bq1rk1/pp4pp/2n5/2bp4/8/2PB1Np1/PP1Q1PPP/RN3RK1 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.08.03"]
+[UTCTime "02:21:34"]
+[ChapterMode "gamebook"]
+
+1... Rxf3 2. gxf3 Qh4 3. hxg3 Qxg3+ { The key move. Black must see this move before playing Rxf3. White cannot capture due to the pin along the g1-a7 diagonal. } *
+
+
+[Event "Top Sacrifices in the Attack: Puzzle 3"]
+[Date "2020.08.03"]
+[Result "*"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Top Sacrifices in the Attack"]
+[ChapterName "Puzzle 3"]
+[ChapterURL "https://lichess.org/study/ZRY61QJ6/RKi7eGJ3"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[FEN "rn1qr1k1/pp2bp1p/2p3p1/6N1/3P3P/3QBP2/PP3P2/2KR3R w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.08.03"]
+[UTCTime "02:22:49"]
+[ChapterMode "gamebook"]
+
+1. Nxh7 Kxh7 2. h5 { Now, hxg6+ is quite a deadly threat and the other rook can join in with Rdg1. Good job. If you played Nxf7 on move 1, you also get credit. It is just as strong with a similar idea. } *
+
+
+[Event "Top Sacrifices in the Attack: Puzzle 4"]
+[Date "2020.08.03"]
+[Result "*"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Top Sacrifices in the Attack"]
+[ChapterName "Puzzle 4"]
+[ChapterURL "https://lichess.org/study/ZRY61QJ6/EPnFZPJv"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[FEN "r1bq1r1k/5p1p/p1pp1npQ/1p2n3/2PNP1P1/2N2P2/PP2B3/R3K2R w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.08.03"]
+[UTCTime "02:27:04"]
+[ChapterMode "gamebook"]
+
+1. Nxc6 Nxc6 2. Nd5 { White is able to successfully distract the Nf6 for one move, just in time to deliver checkmate on h7. } *
+
+
+[Event "Top Sacrifices in the Attack: Puzzle 5"]
+[Date "2020.08.03"]
+[Result "*"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Top Sacrifices in the Attack"]
+[ChapterName "Puzzle 5"]
+[ChapterURL "https://lichess.org/study/ZRY61QJ6/pFEwSz8e"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[FEN "r1rbb3/1R3pkp/3Bp1p1/p1p1P3/q6P/6P1/P2Q1P2/1R3BK1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.08.03"]
+[UTCTime "02:28:00"]
+[ChapterMode "gamebook"]
+
+1. R1b4 cxb4 2. Qh6+ Kxh6 3. Bf8+ Kh5 4. Be2# *
+
+
+[Event "Top Sacrifices in the Attack: Puzzle 6"]
+[Date "2020.08.03"]
+[Result "*"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Top Sacrifices in the Attack"]
+[ChapterName "Puzzle 6"]
+[ChapterURL "https://lichess.org/study/ZRY61QJ6/gQU4Nm52"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[FEN "3qr1rk/pp3p2/5p2/4p3/2B4p/3P1b2/PPPQ1P1P/RN2RK2 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.08.03"]
+[UTCTime "02:28:36"]
+[ChapterMode "gamebook"]
+
+1... Rg1+ 2. Kxg1 Rg8+ 3. Kf1 Rg1+ 4. Kxg1 Qg8+ 5. Kf1 Qg2# *
+
+
+[Event "Top Sacrifices in the Attack: Puzzle 7"]
+[Date "2020.08.03"]
+[Result "*"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Top Sacrifices in the Attack"]
+[ChapterName "Puzzle 7"]
+[ChapterURL "https://lichess.org/study/ZRY61QJ6/x1COGAsn"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[FEN "2r1nk2/4qpbQ/4b3/1p2RpP1/4P3/p7/PBP5/1K5R w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.08.03"]
+[UTCTime "02:28:58"]
+[ChapterMode "gamebook"]
+
+1. Qxg7+ Kxg7 2. Rxe6+ axb2 3. Rxe7 *
+
+
+[Event "Top Sacrifices in the Attack: Puzzle 8"]
+[Date "2020.08.03"]
+[Result "*"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Top Sacrifices in the Attack"]
+[ChapterName "Puzzle 8"]
+[ChapterURL "https://lichess.org/study/ZRY61QJ6/Fx2IEATa"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[FEN "r2q1rk1/pp3p2/2p3p1/3p1n1p/1P3Nn1/2N1P3/PQPP4/2K3RR w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.08.03"]
+[UTCTime "02:29:32"]
+[ChapterMode "gamebook"]
+
+1. Nxh5 (1. Rxg4 hxg4 2. Ncxd5) 1... Nf6 2. Nxd5 Nxh5 3. Rxh5 { Master level puzzle. Quite a difficult one, so great job if you got this. } *
+
+
+[Event "Top Sacrifices in the Attack: Puzzle 9"]
+[Date "2020.08.03"]
+[Result "*"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Top Sacrifices in the Attack"]
+[ChapterName "Puzzle 9"]
+[ChapterURL "https://lichess.org/study/ZRY61QJ6/FMNMKMhL"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[FEN "r2q1rk1/1b2bppp/p1n1p3/1p1pP3/2pP3P/2P2N2/PPB2PP1/R1BQ1RK1 w Q - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.08.03"]
+[UTCTime "02:30:33"]
+[ChapterMode "gamebook"]
+
+1. Ng5 (1. Bxh7+ { Ha! You got fooled. The Greek gift does not work here since there is no rook on h1. Ha! }) 1... g6 2. Nxh7 Kxh7 3. Qh5+ Kg8 4. Bxg6 fxg6 5. Qxg6+ Kh8 6. Qh5+ Kg8 7. Bh6 *
+
+
+[Event "Top Sacrifices in the Attack: Puzzle 10"]
+[Date "2020.08.03"]
+[Result "*"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Top Sacrifices in the Attack"]
+[ChapterName "Puzzle 10"]
+[ChapterURL "https://lichess.org/study/ZRY61QJ6/7NXOFrtX"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[FEN "r1b2rk1/pp1n2pp/2p1p3/3p1p1q/2PP1Pn1/3BP1P1/PP2N1Kb/RNBQ1R2 w q - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.08.03"]
+[UTCTime "02:32:05"]
+[ChapterMode "gamebook"]
+
+1. Nbc3 { How should Black further continue the already strong attack? } 1... Bg1 2. Nxg1 Qh2+ 3. Kf3 e5 4. fxe5 Ndxe5+ 5. dxe5 g5 { Nxe5# is unavoidable for White! Good job } *
+
+

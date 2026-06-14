@@ -1,0 +1,16 @@
+[Event "EricRosen's Study: Chapter 1"]
+[Date "2019.07.09"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A02"]
+[Opening "Bird Opening"]
+[StudyName "EricRosen's Study"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/2cX8O9wt/rLqjwnMK"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.07.09"]
+[UTCTime "18:03:57"]
+
+1. f4 (1. d4 f5 2. Bg5 h6 { [%csl Gg5] } 3. Bh4 g5 { [%cal Gg5h4] } 4. Bg3 f4 { [%csl Re8][%cal Rh5e8] } 5. Bxf4 (5. e4) (5. e3 fxg3 (5... h5 6. Qxh5+ (6. Bd3 fxg3 (6... Rh6 { [%csl Gh5][%cal Gd1h5] } 7. Qxh5+ { [%cal Gh5e8] } 7... Rxh5 8. Bg6#) 7. Bg6#) 6... Rxh5) 6. Qh5#) 5... gxf4) (1. e4 e5 2. Nf3 Qh4 (2... f6 3. Nxe5 fxe5 { [%csl Gd1] } 4. Qh5+ { [%csl Re7,Rg6][%cal Re8e7,Rg7g6] } 4... g6 (4... Ke7 5. Qxe5+ Kf7 6. Bc4+ { [%csl Gc4,Re8,Re7,Re6,Rf6,Rf5,Rg5,Rh5][%cal Gc4f7,Ge5e8,Ge5f6,Ge5h5] } 6... Kg6 { [%csl Rg6,Gg3][%cal Re5e6,Re5g3,Gd7e6] } 7. Qf5+ Kh6 { [%csl Rf5,Rc4] } 8. d4+ Qg5 (8... g5 { [%csl Gf5,Gc1][%cal Gc4g8,Gf5f7,Gf5h7,Gf5g5,Gc1g5] } 9. Qxg5+ (9. Bxg5+ Qxg5) (9. h4 d6 { [%csl Gh6,Gh4][%cal Gh1h6,Gc8f5] } 10. hxg5+ Kg7 11. Qf7#) 9... Qxg5 10. Bxg5+ Kxg5) 9. Qxg5# { [%csl Gh6,Gg6,Gh5][%cal Gg5h6,Gg5g6,Gg5h5,Gc1g5] } (9. Bxg5+ Kh5 10. Be2# (10. g4# { [%csl Gh4,Rh5][%cal Gh5h4,Gg5h4,Gg5h6,Gf5g4,Gf5g5,Gf5g6] }))) 5. Qxe5+ Be7 6. Qxh8) (2... Nc6 3. Nc3 Nf6 4. Bc4 Nxe4 5. Nxe4 { [%csl Re4,Rc4] } 5... d5 6. Bb5 dxe4 7. Nxe5 { [%csl Re5,Rb5,Bc6] } 7... Qd5 8. Bxc6+ bxc6) 3. Nxh4) 1... e6 (1... e5 { [%csl Ge5] } 2. fxe5 d6 3. exd6 Bxd6 { [%cal Gd6g3,Gd6a3,Gc8h3,Gd8h4,Rh1a1] } 4. Nc3 Qh4+ 5. g3 { [%csl Gg3][%cal Gd6g3] } 5... Qxg3+ 6. hxg3 Bxg3# { [%cal Gg3e1] }) 2. g4 Qh4# { [%csl Re1,Rf2][%cal Rh4e1] } *
+
+

@@ -1,0 +1,146 @@
+[Event "Puzzles from a Shoebox: White to play and win"]
+[Date "2018.09.22"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Puzzles from a Shoebox"]
+[ChapterName "White to play and win"]
+[ChapterURL "https://lichess.org/study/IsAbWu8a/651u2uyw"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[FEN "8/8/1KP5/3r4/8/8/8/k7 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2018.09.22"]
+[UTCTime "03:25:26"]
+
+ *
+
+
+[Event "Puzzles from a Shoebox: Black to play: Positional idea"]
+[Date "2018.09.22"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Puzzles from a Shoebox"]
+[ChapterName "Black to play: Positional idea"]
+[ChapterURL "https://lichess.org/study/IsAbWu8a/ZcN7yQ2G"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[FEN "r4rk1/pp2ppbp/2np2p1/q7/2P1PP2/1P2BQ2/P5PP/1BRR2K1 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2018.09.22"]
+[UTCTime "03:26:31"]
+
+ *
+
+
+[Event "Puzzles from a Shoebox: White to play: Positional idea"]
+[Date "2018.09.22"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Puzzles from a Shoebox"]
+[ChapterName "White to play: Positional idea"]
+[ChapterURL "https://lichess.org/study/IsAbWu8a/FHCwuXvz"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[FEN "r2q1rk1/2p3p1/p3pnn1/P1p1p3/1p2P2p/3P4/1PPNNPPP/R3QRK1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2018.09.22"]
+[UTCTime "03:30:51"]
+
+ *
+
+
+[Event "Puzzles from a Shoebox: White to play"]
+[Date "2018.09.22"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Puzzles from a Shoebox"]
+[ChapterName "White to play"]
+[ChapterURL "https://lichess.org/study/IsAbWu8a/TToenhOp"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[FEN "2r2k2/5p2/2p2p2/BpPb2p1/3R3p/1P1K1P1P/2P3P1/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2018.09.22"]
+[UTCTime "03:32:23"]
+
+{ Evaluate the position and support it with analysis }
+ *
+
+
+[Event "Puzzles from a Shoebox: White to play and win"]
+[Date "2018.09.22"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Puzzles from a Shoebox"]
+[ChapterName "White to play and win"]
+[ChapterURL "https://lichess.org/study/IsAbWu8a/yIQRB9e6"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[FEN "8/2K5/8/2kp4/3R4/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2018.09.22"]
+[UTCTime "03:33:22"]
+
+ *
+
+
+[Event "Puzzles from a Shoebox: White to play and win"]
+[Date "2018.09.22"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Puzzles from a Shoebox"]
+[ChapterName "White to play and win"]
+[ChapterURL "https://lichess.org/study/IsAbWu8a/D31B2tf8"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[FEN "3B4/pP5p/k6P/8/8/8/5K2/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2018.09.22"]
+[UTCTime "03:34:23"]
+
+ *
+
+
+[Event "Puzzles from a Shoebox: White to play"]
+[Date "2018.09.22"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Puzzles from a Shoebox"]
+[ChapterName "White to play"]
+[ChapterURL "https://lichess.org/study/IsAbWu8a/lWbBwfU3"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[FEN "2rrn1k1/1bq2ppp/p3pb2/1p1p4/3NP1PP/3BBP2/PPPQ4/1K1R3R w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2018.09.22"]
+[UTCTime "03:36:13"]
+
+{ Find a creative and intuitive sacrifice }
+ *
+
+
+[Event "Puzzles from a Shoebox: White to play"]
+[Date "2018.09.22"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Puzzles from a Shoebox"]
+[ChapterName "White to play"]
+[ChapterURL "https://lichess.org/study/IsAbWu8a/zCj85guS"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[FEN "1k4b1/5p2/5P2/4N3/8/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2018.09.22"]
+[UTCTime "03:37:01"]
+
+ *
+
+

@@ -1,0 +1,49 @@
+[Event "Bobby Fischer vs Jovan Sofrevski: Pop Quiz Question 1 of 3"]
+[Date "2021.10.06"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B88"]
+[Opening "Sicilian Defense: Sozin Attack, Leonhardt Variation"]
+[StudyName "Bobby Fischer vs Jovan Sofrevski"]
+[ChapterName "Pop Quiz Question 1 of 3"]
+[ChapterURL "https://lichess.org/study/5yLs404h/5zIUMnht"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2021.10.06"]
+[UTCTime "03:33:29"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 Nc6 6. Bc4 e6 7. Bb3 Be7 8. Be3 O-O 9. Qe2 Qa5 10. O-O-O Nxd4 11. Bxd4 Bd7 12. Kb1 Rad8 13. Qe3 { [%cal Be2e3] } *
+
+
+[Event "Bobby Fischer vs Jovan Sofrevski: Pop Quiz Question 2 of 3"]
+[Date "2021.10.06"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B88"]
+[Opening "Sicilian Defense: Sozin Attack, Leonhardt Variation"]
+[StudyName "Bobby Fischer vs Jovan Sofrevski"]
+[ChapterName "Pop Quiz Question 2 of 3"]
+[ChapterURL "https://lichess.org/study/5yLs404h/LWKtrZtO"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2021.10.06"]
+[UTCTime "03:38:54"]
+[ChapterMode "gamebook"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 Nc6 6. Bc4 e6 7. Bb3 Be7 8. Be3 O-O 9. Qe2 Qa5 10. O-O-O Nxd4 11. Bxd4 Bd7 12. Kb1 Rad8 13. Qe3 b6 14. Bxf6 gxf6 { With 14...gxf6, black has compromised his kingside structure in order to maintain defense of the d6-pawn. Can you spot the move Fischer plays next? } { [%cal Bg7f6] } 15. Nd5 { You're a beast!! You have found the best move. :) That knight is also such an absolute beast that Sofrevski deemed it poisonous. } (15. f4 { That's an excellent move, but there is better. With f4, I think you may be looking to influence black's e6-pawn. If that's the case, you're definitely on the right track! }) (15. Qxb6 { I think someone's just being silly now. :) }) (15. Qc5 { I think someone's just being silly now. :) }) (15. Qg5+ { I think someone's just being silly now. :) }) (15. Rd3 { This is certainly a reasonable move to prepare to double rooks on the d-file while also giving the d3 rook lateral options towards the kingside. However, there is a better move. }) (15. Qh6 { This move is very close to a best move, if not for black's only saving reply 15...Qg5, which would immediately neutralize the white queen's aggressive looking post deep in black's kingside. }) (15. Qg3+ { Might we be helping black by giving check in this case? The black king would prefer to be on h8 in this position so that the black rook can find a productive role on g8. There is a better move. }) *
+
+
+[Event "Bobby Fischer vs Jovan Sofrevski: Pop Quiz Question 3 of 3"]
+[Date "2021.10.06"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B88"]
+[Opening "Sicilian Defense: Sozin Attack, Leonhardt Variation"]
+[StudyName "Bobby Fischer vs Jovan Sofrevski"]
+[ChapterName "Pop Quiz Question 3 of 3"]
+[ChapterURL "https://lichess.org/study/5yLs404h/0lvg7tiS"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2021.10.06"]
+[UTCTime "04:10:09"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 Nc6 6. Bc4 e6 7. Bb3 Be7 8. Be3 O-O 9. Qe2 Qa5 10. O-O-O Nxd4 11. Bxd4 Bd7 12. Kb1 Rad8 13. Qe3 b6 14. Bxf6 gxf6 15. Nd5 exd5 16. Rxd5 Qa6 { [%cal Ba5a6] } *
+
+

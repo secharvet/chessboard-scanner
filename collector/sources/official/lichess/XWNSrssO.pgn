@@ -1,0 +1,22 @@
+[Event "Rated Blitz game"]
+[Site "https://lichess.org/4suoZi37"]
+[Date "2023.02.10"]
+[White "zolpi"]
+[Black "EricRosen"]
+[Result "1-0"]
+[WhiteElo "2349"]
+[BlackElo "2552"]
+[BlackTitle "IM"]
+[TimeControl "300+0"]
+[Termination "Time forfeit"]
+[Variant "Standard"]
+[ECO "C56"]
+[Opening "Italian Game: Scotch Gambit, Nakhmanson Gambit"]
+[StudyName "EricRosen's Study"]
+[ChapterName "zolpi (2349) - IM EricRosen (2552)"]
+[ChapterURL "https://lichess.org/study/XWNSrssO/lBwdU3C0"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 { [%clk 0:05:00] } 1... e5 { [%clk 0:05:00] } 2. Bc4 { [%clk 0:04:59] } 2... Nf6 { [%clk 0:04:58] } 3. d4 { [%clk 0:04:55] } 3... exd4 { [%clk 0:04:57] } 4. Nf3 { [%clk 0:04:54] } 4... Nc6 { [%clk 0:04:57] } 5. O-O { [%clk 0:04:51] } 5... Nxe4 { [%clk 0:04:56] } 6. Nc3 { [%clk 0:04:50] } 6... dxc3 { [%clk 0:04:54] } 7. Bxf7+ { [%clk 0:04:48] } 7... Kxf7 { [%clk 0:04:54] } 8. Qd5+ { [%clk 0:04:45] } 8... Kf6 { [%clk 0:04:47] } 9. Re1 { [%clk 0:04:37] } 9... Ne7 { [%clk 0:04:10] } 10. Qxe4 { [%clk 0:04:29] } 10... d5 { [%clk 0:01:07] } 11. Qf4+ { [%clk 0:04:26] } 11... Bf5 { [%clk 0:01:01] } 12. Ne5 { [%clk 0:04:17] } 12... g6 { [%clk 0:00:35] } 13. Qh4+ { [%clk 0:03:55] } 13... Kg7 { [%clk 0:00:27] } 14. Bh6+ { [%clk 0:03:33] } 14... Kg8 { [%clk 0:00:26] } 15. Qf6 { [%clk 0:03:32] } 15... Qe8 { [%clk 0:00:26] } 16. g4 { [%clk 0:02:53] } 16... Bxh6 { [%clk 0:00:24] } 17. gxf5 { [%clk 0:02:50] } 17... Bg7 { [%clk 0:00:24] } 18. Qe6+ { [%clk 0:02:46] } 18... Kf8 { [%clk 0:00:23] } 19. Nd7+ { [%clk 0:02:43] } 19... Qxd7 { [%clk 0:00:22] } 20. Qxd7 { [%clk 0:02:42] } 20... Re8 { [%clk 0:00:18] } 21. Re6 { [%clk 0:02:34] } 21... gxf5 { [%clk 0:00:13] } 22. Rae1 { [%clk 0:02:32] } 22... Rg8 { [%clk 0:00:13] } 23. Rxe7 { [%clk 0:02:31] } 23... Be5+ { [%clk 0:00:07] } 24. Kf1 { [%clk 0:02:26] } 24... Rxe7 { [%clk 0:00:07] } 25. Qxf5+ { [%clk 0:02:23] } 25... Ke8 { [%clk 0:00:02] } 26. Rxe5 { [%clk 0:02:21] } 26... cxb2 { [%clk 0:00:01] } 27. Rxe7+ { [%clk 0:02:15] } 27... Kxe7 { [%clk 0:00:01] } 28. Qe5+ { [%clk 0:02:14] } 28... Kf7 { [%clk 0:00:01] } 29. Qxb2 { [%clk 0:02:14] } 29... c6 { [%clk 0:00:01] } 30. Qxb7+ { [%clk 0:02:13] } 30... Kg6 { [%clk 0:00:01] } 31. Qxc6+ { [%clk 0:02:12] } 31... Kg7 { [%clk 0:00:00] } 32. Qxd5 { [%clk 0:02:11] } 32... Rf8 { [%clk 0:00:00] } 33. Qe5+ { 1-0 White wins on time. } { [%clk 0:02:08] } 1-0
+
+

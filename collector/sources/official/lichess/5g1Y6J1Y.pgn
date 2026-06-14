@@ -1,0 +1,18 @@
+[Event "Position: Chapter 1"]
+[Date "2024.01.27"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Position"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/5g1Y6J1Y/FaUcxIpc"]
+[Annotator "https://lichess.org/@/balakaavi"]
+[FEN "rb1qr1k1/1p1b1pp1/2p2nnp/p2p1N2/5P2/PP2P1N1/1BP1B1PP/R2QR2K w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.01.27"]
+[UTCTime "05:03:29"]
+
+1. Nxg7 Kxg7 (1... Rxe3 2. N7h5 Nxh5 3. Nxh5 Ba7 4. Bd3 Rxe1+ 5. Qxe1 Qe7) 2. Nh5+ *
+
+

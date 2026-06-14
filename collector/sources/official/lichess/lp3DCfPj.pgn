@@ -1,0 +1,417 @@
+[Event "DrHack Explains Rating Differences/Coaching Master Class - live stream: Discussion of Ratings and % chances to win vs??"]
+[Date "2018.03.04"]
+[White "NNNN"]
+[Black "NNNN"]
+[Result "*"]
+[WhiteElo "1"]
+[BlackElo "2"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "DrHack Explains Rating Differences/Coaching Master Class - live stream"]
+[ChapterName "Discussion of Ratings and % chances to win vs??"]
+[ChapterURL "https://lichess.org/study/lp3DCfPj/pVUaq6Mv"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2018.03.04"]
+[UTCTime "15:58:33"]
+
+{ 100 pt difference - expected to win 64% of the time.
+200 pt difference - expected to win 76% of the time.
+300 pt difference - expected to win 85% of the time.
+400 pt difference - expected to win 91% of the time.
+
+See Graph: https://en.chessbase.com/post/the-elo-rating-system-correcting-the-expectancy-tables }
+ *
+
+
+[Event "Casual Correspondence game"]
+[Date "2018.02.23"]
+[Round "900"]
+[White "NNNN"]
+[Black "NNNN"]
+[Result "1-0"]
+[WhiteElo "915"]
+[BlackElo "541"]
+[TimeControl "-"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "DrHack Explains Rating Differences/Coaching Master Class - live stream"]
+[ChapterName "900 Vs 500"]
+[ChapterURL "https://lichess.org/study/lp3DCfPj/Pbeito1U"]
+
+{ Discussion points: Opening Knowledge }
+1. d4 Nf6 { A45 Indian Game } 2. Bf4 d6 3. c3 Bf5 { No opening knowledge - 500. 900 - Systematic Opening Knowledge. } 4. e3 c6 5. Nf3 Qb6 6. Qc1 Nbd7 7. Nbd2 c5 8. Bg5 g6 9. e4 { 900 is able to form one move threats - and does so recklessly. } 9... Nxe4 10. Bd3 cxd4 { 500 - Neither recognizes threats against their own material with any consistency. When presented with several captures in a complex position, the 500 can not easily distinguish which is better. } 11. Bxe4 dxc3 { [%cal Ge4f5] } 12. bxc3 { Basic positional consideration like pawn structure doesn't exist yet in a 900. } 12... h6 13. Be3 { Creating a threat. } 13... Nc5 14. O-O Nxe4 { Any available capture is usually played. The idea of pins has not yet been assimilated. } 15. Bxb6 { [%csl Gb6,Ge4] } 15... axb6 16. Qc2 { Notice the basic tactics - like double attack or discovery is not yet part of the game except by accident. } 16... Ra3 17. Qb2 Rxc3 { Also removal of defender does not exist. } 18. Qb5+ Kd8 19. Qxb6+ Kc8 20. Rab1 { However the creation of a threat carries white through, since black the 500 has not yet developed this skill. This one skill + amount of game experience separates a 900 player from a 500 player on lichess. } 20... Nc5 21. Rb2 h5 22. Nb3 Bg7 23. Nxc5 Rxc5 24. Rb4 Rc7 25. a4 Bd3 26. Rd1 Be4 27. Qa7 f5 28. Ng5 Bh6 29. Ne6 Kd7 30. Nc5+ { You may think this move was played because white noticed the pin. He has no such idea in mind. The deepest a 900 player thinks is about 1/2 of a move. No opponent replies are generally considered except in extreme circumstances - like searching for checkmate. } 30... Rxc5 31. Qxb7+ { This is played because it was check. } { [%cal Ge4b7] } 31... Ke6 { 500 players do not notice misakes like hanging queens. } 32. Qb6 Rhc8 33. a5 Rc1 34. f3 Rxd1+ 35. Kf2 Rc2+ 36. Kg3 h4+ 37. Kxh4 Rh1 38. Kh3 Rg1 { A 900 player is more likely to notice hanging pieces because they are constantly searching for something to capture. } { [%cal Ge4b7] } 39. Qxg1 g5 40. fxe4 Rc3+ 41. g3 f4 42. a6 Rxg3+ 43. hxg3 g4+ 44. Kxg4 Bg7 45. a7 Bf6 46. a8=Q Ke5 47. Qaa1+ { Checkmating for a 900 is a chore. There is not yet a concept of a mating net - and only a few of the basic patterns of mate have been explored. } 47... Ke6 48. Qa2+ Ke5 49. Qd5# { White wins by checkmate. } { White stumbled onto this mate - sometimes 900 rated players don't notice it is checkmate until after it is played. There is no way to know for sure here. } 1-0
+
+
+[Event "Rated Correspondence game"]
+[Date "2018.01.30"]
+[Round "-"]
+[White "NNNN"]
+[Black "NNNN"]
+[Result "0-1"]
+[WhiteElo "601"]
+[BlackElo "1025"]
+[TimeControl "-"]
+[Termination "Time forfeit"]
+[Annotator "lichess.org"]
+[Variant "Standard"]
+[ECO "A00"]
+[Opening "Van't Kruijs Opening"]
+[StudyName "DrHack Explains Rating Differences/Coaching Master Class - live stream"]
+[ChapterName "600 Vs 1000"]
+[ChapterURL "https://lichess.org/study/lp3DCfPj/BoXOC0mX"]
+
+1. e3 { A00 Van't Kruijs Opening } 1... d5 2. c4 Nf6 3. Nf3 c5 4. Qa4+ { No opening theory yet for 600 players. at 1000, black has basic theoretical knowledge, but mostly plays the opening systematically. Note that lasker only used 4 opening rules originally, but coaches have expanded them any number of ways. Apply Occam's razor to your opening rule set!! The creativity of your students is higher with less rules to follow - plus there are less "rules" to give exceptions to later. } 4... Bd7 5. Qc2 Nc6 { We notice black following the systematic rules of a coach or book. Knights before bishops, develop the center, etc. } 6. cxd5 Nxd5 7. Qxc5 e6 { [%cal Gf8c5] } 8. Qb5 { The 600 player has now developed a basic method of making threats. Aim your piece at something it can capture safely. It just so happens that when he runs his fledgling playbook against a player following a systematic opening, the chances to win material are smaller. } 8... Ncb4 { The 1000 player has developed some basic tactics! The double attack is part of his repertoire - discovery has entered his world. Plus - A combination of these ideas has been played. } { [%csl Gb5][%cal Gd7b5] } 9. Qc4 Rc8 { [%csl Gc1] } 10. Qh4 Be7 { [%cal Ge7h4] } 11. Qg3 { [%csl Gc1] } 11... Rxc1+ { Black wins on time. } 0-1
+
+
+[Event "Casual Rapid game"]
+[Date "2017.12.21"]
+[Round "-"]
+[White "NNNN"]
+[Black "NNNN"]
+[Result "1-0"]
+[WhiteElo "1326"]
+[BlackElo "642"]
+[TimeControl "900+1"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+[Variant "Standard"]
+[ECO "B29"]
+[Opening "Sicilian Defense: Nimzowitsch Variation, Advance Variation"]
+[StudyName "DrHack Explains Rating Differences/Coaching Master Class - live stream"]
+[ChapterName "1300 Vs 600"]
+[ChapterURL "https://lichess.org/study/lp3DCfPj/9Cf7wUd7"]
+
+1. e4 c5 2. Nf3 Nf6 3. e5 { B29 Sicilian Defense: Nimzowitsch Variation, Advance Variation } 3... Nh5 { 600 - no opening book. No systematic approach to the opening. } 4. Nc3 { 1300 player developed the systematic method around 900 - 1000 and now knows some theory, which we will see in the next example. } 4... d6 5. exd6 exd6 { [%csl Gd5] } 6. Nd5 { 1300's have a sense of position. White notices the hole at d5 and plants a piece on it. } 6... Be7 7. Bb5+ Kf8 8. O-O Kg8 9. Qe2 { [%csl Ge7] } 9... h6 10. Nxe7+ { Notice again the inability to notice threats by a 600. } 10... Qxe7 11. Qxe7 Kh7 12. Bd3+ g6 13. Qxf7+ Ng7 14. Bxg6# { White wins by checkmate. } { Notice the 1300 has a strong sense of mating patterns. By this stage most 1300s have been exposed to most of the basic mates, and understand the idea of a mating net. } 1-0
+
+
+[Event "DrHack Explains Rating Differences/Coaching Master Class - live stream: What to teach the 500-800 rated player"]
+[Date "2018.03.04"]
+[White "NNNN"]
+[Black "NNNN"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "DrHack Explains Rating Differences/Coaching Master Class - live stream"]
+[ChapterName "What to teach the 500-800 rated player"]
+[ChapterURL "https://lichess.org/study/lp3DCfPj/o8g7alYG"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2018.03.04"]
+[UTCTime "19:19:29"]
+
+{ Openings: Systematic Approach. Dr Emanuel Lasker - opening principles or equivalent.
+Middle Game - Value of pieces - looking for hanging pieces - defending own pieces - Basically we teach them materialism and how to attack things: 4 move checkmate etc.
+End Game - Basic Checkmating with several pieces on the board. Q+R+R, K + Q, or R + R usually is sufficient.
+
+Player advances to the 900 lvl after some experience is gained in threat creation. The timeline ranges from a month to six months for the knowledge to integrate. Rating follows as quickly as rated games can be played. }
+ *
+
+
+[Event "Casual Correspondence game"]
+[Date "2018.02.06"]
+[Round "-"]
+[White "NNNN"]
+[Black "NNNN"]
+[Result "1-0"]
+[WhiteElo "~900"]
+[BlackElo "~600"]
+[TimeControl "-"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+[Variant "Standard"]
+[ECO "D00"]
+[Opening "Queen's Pawn Game: Accelerated London System"]
+[StudyName "DrHack Explains Rating Differences/Coaching Master Class - live stream"]
+[ChapterName "900 vs 600"]
+[ChapterURL "https://lichess.org/study/lp3DCfPj/F0QONpeY"]
+
+1. d4 d5 2. Bf4 { D00 Queen's Pawn Game: Mason Attack } 2... e6 3. e3 e5 { 900 player notices one move threats. } 4. Bxe5 Bb4+ 5. c3 Be7 6. Nf3 { 900 player systematically develops pieces. } 6... f6 7. Bf4 Bg4 8. Bb5+ Kf8 9. Nbd2 c6 10. Bd3 b6 11. O-O f5 12. c4 g5 13. Be5 Nd7 14. Bxh8 c5 15. cxd5 f4 16. Qc1 fxe3 17. fxe3 { Notice that the 900's playbook is working beautifully. He makes a threat, and then captures a piece. } 17... cxd4 18. Bxd4 Bb4 19. a3 Rc8 20. Nc4 Nc5 21. Nfe5+ Nf6 22. Bg6 Qxd5 23. Rxf6+ Ke7 24. Qf1 Rg8 25. Bxh7 Ne4 26. Rf7+ Ke8 27. Nxg4 Qd8 28. Bxg8 Bd2 29. Nxd2 Nxd2 30. Qb5+ { Black resigns. } 1-0
+
+
+[Event "Casual Correspondence game"]
+[Site "https://lichess.org/vZdwl8nj"]
+[Date "2018.02.18"]
+[Round "-"]
+[White "NNNN"]
+[Black "NNNN"]
+[Result "1-0"]
+[WhiteElo "921"]
+[BlackElo "915"]
+[TimeControl "-"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+[Variant "Standard"]
+[ECO "C20"]
+[Opening "King's Pawn Game"]
+[StudyName "DrHack Explains Rating Differences/Coaching Master Class - live stream"]
+[ChapterName "900 Vs 900"]
+[ChapterURL "https://lichess.org/study/lp3DCfPj/hPCZoJdF"]
+
+1. e4 e5 { C20 King's Pawn Game } 2. Nh3 d6 3. g3 Nf6 4. f4 Nxe4 5. Ng5 { His old tricks - making threats - is still } 5... c6 { [%cal Gg5e4] } 6. Nxe4 { His playbook is still working - therefore there is no need to grow yet. } 6... Bf5 7. Ng5 Nd7 8. c3 { [%csl Gb3][%cal Gb3f7] } 8... Nc5 9. d4 Ne4 10. Qb3 d5 11. dxe5 h6 12. Nxe4 Bxe4 13. c4 Bxh1 14. cxd5 cxd5 15. Qa4+ Ke7 16. Qa3+ Ke8 17. Bb5+ Qd7 18. Bxd7+ { [%csl Ga3][%cal Gf8a3] } 18... Kxd7 19. Qa4+ Kc7 20. Qa5+ b6 21. Qa6 Bb4+ 22. Nc3 d4 23. Bd2 dxc3 24. Bxc3 Bc5 25. b4 Be7 26. Qc4+ Kd8 27. Qxf7 Rh7 28. Qg8+ Kd7 29. Qxh7 Rc8 30. Qd3+ Ke8 31. Kd2 { Black resigns. } 1-0
+
+
+[Event "Rated Classical game"]
+[Date "2018.02.28"]
+[Round "-"]
+[White "NNNN"]
+[Black "NNNN"]
+[Result "0-1"]
+[WhiteElo "950"]
+[BlackElo "1299"]
+[TimeControl "900+15"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+[Variant "Standard"]
+[ECO "B08"]
+[Opening "Pirc Defense: Classical Variation, Quiet System"]
+[StudyName "DrHack Explains Rating Differences/Coaching Master Class - live stream"]
+[ChapterName "900 Vs 1300"]
+[ChapterURL "https://lichess.org/study/lp3DCfPj/rXqzoJZt"]
+
+{ The 900 player runs his playbook, but it fails for the first time. }
+1. d4 g6 2. e4 Bg7 3. Nf3 d6 4. Be2 Nf6 5. Nc3 { B08 Pirc Defense: Classical Variation, Quiet System } { The 900 player is being exposed to opening theory from his opponent. } 5... O-O 6. O-O Nbd7 7. e5 { The 950 player has no idea that he is following Rozentalis - Svidler 1995. He has managed some opening theory by following his play book. Develop - Make threat - Take pieces - Win. } { [%cal Ge5f6] } 7... dxe5 8. dxe5 Ng4 9. Nd4? { (0.79 → -0.51) Mistake. Best move was e6. } (9. e6 Nde5 10. exf7+ Nxf7 11. Qxd8 Rxd8 12. Bc4 Kf8 13. Re1 Nge5 14. Nxe5 Nxe5 15. Bb3 Bf5) 9... Ndxe5 10. Bxg4? { (-0.65 → -2.00) Mistake. Best move was Bf4. } (10. Bf4 Nh6) 10... Nxg4? { (-2.00 → -0.97) Mistake. Best move was Bxg4. } (10... Bxg4) 11. f3?? { (-0.97 → -6.65) Blunder. Best move was Nf3. } { Note the tactical win for black on the board. Remember for 1300 stuff. } (11. Nf3) 11... Nh6?? { (-6.65 → -1.65) Blunder. Best move was Qxd4+. } (11... Qxd4+ 12. Qxd4) 12. Ncb5?? { (-1.65 → -5.18) Blunder. Best move was Nb3. } { [%csl Gc7] } (12. Nb3 b6) 12... c6 13. Bxh6?! { (-4.98 → -5.48) Inaccuracy. Best move was c3. } (13. c3 cxb5) 13... Bxh6 14. Na3?! { (-5.44 → -6.15) Inaccuracy. Best move was Qe2. } (14. Qe2 cxb5) 14... Be3+ 15. Kh1 Bxd4 16. c3 Bg7 17. Qxd8 Rxd8 18. g4 Be6 19. Rae1? { (-6.72 → -7.72) Mistake. Best move was Rf2. } (19. Rf2 Rd3 20. Nc2 Rad8 21. Kg2 Bf6 22. Nd4 Bxd4 23. cxd4 R8xd4 24. Re1 Kg7 25. b3 h5) 19... Rd6?! { (-7.72 → -6.73) Inaccuracy. Best move was Rd2. } (19... Rd2) 20. c4? { (-6.73 → -7.83) Mistake. Best move was Re2. } (20. Re2 Bf6 21. b3 Bxc3 22. Kg2 Rad8 23. h3 Bb4 24. Nc4 Bxc4 25. bxc4 a5 26. Rb2 Rd2+) 20... Bxb2 21. Rb1? { (-7.91 → -11.89) Mistake. Best move was Nc2. } (21. Nc2 Bxc4 22. Rf2 Bf6 23. Ne3 Be6 24. Rc2 Rd3 25. Kg2 Bg5 26. Nc4 Bd5 27. Ne5 Ra3) 21... Bxa3 22. Rxb7 Rd7 23. Rb3 Bxc4 24. Rfb1 Bxb3 25. Rxb3 Rd1+ 26. Kg2 Rd2+ 27. Kg3 Rxa2 28. Kh4 Rxh2+ 29. Kg3 Bd6+ 30. f4 Rh1 31. Rc3 c5 32. g5 Rg1+ 33. Kf3 a5 34. Kf2?! { (-23.77 → Mate in 16) Checkmate is now unavoidable. Best move was Ke2. } (34. Ke2 Rg4 35. Kf1 Rxf4+ 36. Ke2 a4 37. Ra3 Rb4 38. Kd1 Rb2 39. Rd3 Rg2 40. Rf3 Rxg5) 34... Rb1 35. Ke3?! { (-54.90 → Mate in 11) Checkmate is now unavoidable. Best move was f5. } (35. f5 gxf5) 35... a4 36. Ke4 a3 37. f5 a2 38. f6 exf6 39. gxf6 a1=Q 40. Rd3 Ra4+?! { (Mate in 4 → Mate in 4) Not the best checkmate sequence. Best move was Qe5+. } (40... Qe5+ 41. Kf3 Qf4+ 42. Ke2 Ra2+ 43. Rd2 Rxd2#) 41. Kd5 Rd4+?! { (Mate in 2 → Mate in 4) Not the best checkmate sequence. Best move was Rb6. } (41... Rb6 42. Rd2 Qe5#) 42. Rxd4 Qxd4+ { White resigns. } 0-1
+
+
+[Event "DrHack Explains Rating Differences/Coaching Master Class - live stream: What to teach the 900-1200 rated player"]
+[Date "2018.03.04"]
+[White "NNNN"]
+[Black "NNNN"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C55"]
+[Opening "Italian Game: Two Knights Defense, Modern Bishop's Opening"]
+[StudyName "DrHack Explains Rating Differences/Coaching Master Class - live stream"]
+[ChapterName "What to teach the 900-1200 rated player"]
+[ChapterURL "https://lichess.org/study/lp3DCfPj/SSJYf3GR"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2018.03.04"]
+[UTCTime "20:48:31"]
+
+{ Opening - Expose to minor amounts of theory. Give them just enough to get their pieces developed - no tactical memorization - only opening traps from a defensive point of view!!
+
+Middle Game - Expose to basic tactics, pin fork skewer, double attack, etc. This can be done through programs like CT-ART and ChessBase. Push them to better visual memory - Make them calculate several moves ahead in forced lines. Teach materialism in regard to trading pieces or not trading pieces.
+
+End Game - Basic Mates - K+R, K+Q, Begin teaching pawn endings at a very basic level. Concepts like opposition and the square of the pawn are fundamentals that should be absorbed here. }
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. d3 (4. Ng5) *
+
+
+[Event "Rated Classical game"]
+[Date "2017.11.08"]
+[Round "-"]
+[White "NNNN"]
+[Black "NNNN"]
+[Result "1-0"]
+[WhiteElo "1299"]
+[BlackElo "1115"]
+[TimeControl "1800+30"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+[Variant "Standard"]
+[ECO "B00"]
+[Opening "Pirc Defense"]
+[StudyName "DrHack Explains Rating Differences/Coaching Master Class - live stream"]
+[ChapterName "1300 - 1100"]
+[ChapterURL "https://lichess.org/study/lp3DCfPj/bt7YSqfd"]
+
+1. e4 { Still plays for threats. Opening has tightened considerably. Look for tactical opportunities. } 1... d6 { B07 Pirc Defense #4 } 2. Nf3 Nf6 3. Bd3 Bg4 4. O-O Nc6 5. Nc3 { [%csl Gf3] } 5... Nd4 6. Be2 c5 { Notice the tactical win here for white. } 7. d3 h5 8. Bg5 b5 9. Be3 h4 { The belief that the only way to win is to attack the king will set in at this stage of development. } 10. Nxh4 Rxh4 11. Bxd4 cxd4 12. Nxb5 Qb6 13. c4 Qc5 14. g3 Rh3 15. Bxg4 Nxg4 16. Qxg4 Qh5 17. Qxh5 Rxh5 18. Nc7+ Kd7 19. Nxa8 e5 20. a4 Be7 21. b4 Rh8 22. Nb6+ Ke6 1-0
+
+
+[Event "Rated Classical game"]
+[Site "https://lichess.org/YbYG6o3P"]
+[Date "2018.01.11"]
+[Round "-"]
+[White "NNNN"]
+[Black "NNNN"]
+[Result "0-1"]
+[WhiteElo "1309"]
+[BlackElo "1548"]
+[TimeControl "2700+45"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+[Variant "Standard"]
+[ECO "A40"]
+[Opening "Queen's Pawn Game"]
+[StudyName "DrHack Explains Rating Differences/Coaching Master Class - live stream"]
+[ChapterName "1300 Vs 1550"]
+[ChapterURL "https://lichess.org/study/lp3DCfPj/TcoT6itD"]
+
+1. d4 { A40 Queen's Pawn } 1... c6 2. Bf4 d5 3. e3 Bf5 4. Bd3 Bxd3 5. Qxd3 f6?! { (0.21 → 0.88) Inaccuracy. Best move was e6. } (5... e6 6. Nd2 Nf6 7. Ngf3 Bd6 8. Be5 Bxe5 9. dxe5 Nfd7 10. c4) 6. Bxb8?! { (0.88 → 0.35) Inaccuracy. Best move was Nd2. } (6. Nd2 e6 7. Ne2 Ne7 8. O-O Na6 9. c4 Ng6 10. Bg3 Bb4 11. Nf3 O-O 12. h4 Ne7) 6... Qxb8 7. Nf3 e5?! { (0.46 → 1.12) Inaccuracy. Best move was e6. } (7... e6 8. O-O Bd6 9. e4 Ne7 10. Nbd2 O-O 11. Rfe1 Qc8 12. c4 Qd7 13. Rad1 Rae8 14. g3) 8. dxe5 fxe5 9. e4?! { (0.73 → 0.10) Inaccuracy. Best move was Qf5. } (9. Qf5 Qd6 10. Qxe5+ Qxe5 11. Nxe5 Bd6 12. Nf3 Nf6 13. Nbd2 Kf7 14. Ke2 Rhe8 15. c4 Rad8) 9... Nf6 10. Nbd2 Bc5? { (-0.04 → 1.07) Mistake. Best move was Bb4. } { [%csl Gf4,Gb8] } (10... Bb4) 11. O-O? { (1.07 → 0.00) Mistake. Best move was exd5. } (11. exd5 cxd5 12. Qb5+ Nd7 13. O-O-O Qc7 14. Nxe5 a6 15. Qxd7+ Qxd7 16. Nxd7 Kxd7 17. Ne4 Kc6) 11... O-O 12. c4 { [%cal Gd5d4] } 12... Rd8?! { (-0.34 → 0.49) Inaccuracy. Best move was d4. } (12... d4) 13. cxd5 cxd5 14. exd5 Rxd5 15. Qc3? { (0.57 → -2.06) Mistake. Best move was Qb3. } (15. Qb3 Qd8) 15... Bd4? { (-2.06 → 0.37) Mistake. Best move was e4. } (15... e4 16. Qb3 exf3 17. Ne4 Kh8 18. Nxf6 Rg5 19. Qxf3 gxf6 20. Qxf6+ Rg7 21. g3 Qf8 22. Qxf8+) 16. Nxd4 exd4 17. Qc4 b5 18. Qc6 Rd6 19. Qf3 Qf8 20. Ne4?! { (0.30 → -0.62) Inaccuracy. Best move was a4. } (20. a4 Rd5 21. axb5 Rxb5 22. Qd3 Rxb2 23. Rfc1 a5 24. Rc4 Re8 25. Rxd4 Qc5 26. Rd8 Rc2) 20... Nxe4 21. Qxe4 Re8?! { (-0.53 → 0.00) Inaccuracy. Best move was d3. } (21... d3) 22. Qf3? { (0.00 → -1.97) Mistake. Best move was Qd3. } (22. Qd3 Qe7 23. a4 bxa4 24. Rxa4 Qe2 25. Qb3+ Qe6 26. Qd3 Qe2) 22... Qxf3 23. gxf3 Rg6+ 24. Kh1 d3 25. Rad1?! { (-1.21 → -1.97) Inaccuracy. Best move was Rfe1. } (25. Rfe1 Rc8) 25... Rd8? { (-1.97 → -0.65) Mistake. Best move was Rd6. } (25... Rd6 26. Rd2 Re2 27. Rfd1 Rxd2 28. Rxd2 g5 29. Kg2 Kf7 30. f4 gxf4 31. Kf3 Rd4 32. Rd1) 26. Rfe1?! { (-0.65 → -1.19) Inaccuracy. Best move was Rd2. } (26. Rd2 Kf7 27. Re1 Ra6 28. a3 Re6 29. Red1 Red6 30. Kg2 Rd4 31. f4 Kg6 32. Kg3 a5) 26... Kf7 27. Re3 Rgd6 28. Kg1 Kf6 29. Kf1 d2 30. Ke2 Kf5 31. Re7 Re6+?! { (-0.82 → 0.16) Inaccuracy. Best move was R8d7. } (31... R8d7 32. Rxd7 Rxd7 33. Ke3 Re7+ 34. Kxd2 Rd7+ 35. Ke2 Rxd1 36. Kxd1 Kf4 37. Ke2 h5 38. b4) 32. Rxe6 Kxe6 33. Rxd2 Rxd2+ 34. Kxd2 Kf5?! { (0.62 → 1.20) Inaccuracy. Best move was Kd5. } (34... Kd5 35. Ke3 Ke5 36. f4+ Kd5 37. Kd3 b4 38. b3 h6 39. Ke3 h5 40. Kd3 g6 41. Ke3) 35. Ke3? { (1.20 → -0.23) Mistake. Best move was Kc3. } (35. Kc3 h5 36. Kb4 Kg5 37. Kxb5 Kh4 38. Ka6 Kh3 39. b4 Kxh2 40. b5 h4 41. Kxa7 h3) 35... g5 36. b3? { (0.00 → -2.12) Mistake. Best move was a3. } (36. a3 h5 37. b3 Ke5 38. a4 bxa4 39. bxa4 a5 40. h3 Kf5 41. f4 gxf4+ 42. Kd3 Kg5) 36... a6? { (-2.12 → 0.00) Mistake. Best move was b4. } (36... b4) 37. a4 b4? { (0.00 → 1.82) Mistake. Best move was bxa4. } (37... bxa4 38. bxa4 a5 39. f4 gxf4+ 40. Kd4 Kg4 41. Ke4 h5 42. f3+ Kh3 43. Kxf4 Kxh2 44. Kg5) 38. a5?! { (1.82 → 1.14) Inaccuracy. Best move was Kd4. } (38. Kd4 Kf4 39. Kc5 Kxf3 40. Kxb4 h5 41. Ka5 h4 42. Kxa6 Kxf2 43. b4 g4 44. b5 g3) 38... h6?? { (1.14 → 5.51) Blunder. Best move was Ke5. } (38... Ke5 39. Kd3 Kd5 40. f4 gxf4 41. f3 h5 42. h4 Kc5 43. Ke4 Kb5 44. Kxf4 Kxa5 45. Kg5) 39. h3?? { (5.51 → 0.00) Blunder. Best move was Kd4. } (39. Kd4) 39... h5 40. Ke2?? { (0.00 → -14.85) Blunder. Best move was f4. } (40. f4 gxf4+ 41. Kd4 f3 42. Ke3 Ke5 43. h4 Kd5 44. Kxf3 Kd4 45. Ke2 Kc3 46. f4 Kxb3) 40... Kf4 41. Kf1 Kxf3 42. Kg1 g4 43. hxg4 hxg4?? { (-54.02 → 0.00) Blunder. Best move was Kxg4. } (43... Kxg4) 44. Kf1 Ke4 45. Ke2 Kd4 46. Kd2 Ke4 47. Ke2 Kf4 48. Kf1 Kf3 49. Kg1?? { (0.00 → -63.34) Blunder. Best move was Ke1. } (49. Ke1 Kf4 50. Kd2 Kf3 51. Ke1) 49... Ke2 50. Kg2 Kd3 51. Kf1 Kc3 52. Ke2 Kxb3 53. Kd2 Ka2 54. Kc2?! { (-52.73 → Mate in 17) Checkmate is now unavoidable. Best move was Ke3. } (54. Ke3 b3 55. Kf4 b2 56. Kxg4 b1=Q 57. f3 Qb4+ 58. Kg3 Qxa5 59. Kg4 Qb4+ 60. Kf5 Qd4) 54... b3+ 55. Kc3 b2 56. Kb4 b1=Q+ 57. Kc5 Qc2+ 58. Kb6 Qc4 59. Ka7 Kb2 60. Kb6 Kc2 { White resigns. } 0-1
+
+
+[Event "Hourly Classical Arena"]
+[Site "https://lichess.org/z4Y46jvr"]
+[Date "2017.08.17"]
+[Round "-"]
+[White "NNNN"]
+[Black "NNNN"]
+[Result "0-1"]
+[WhiteElo "1329"]
+[BlackElo "1824"]
+[TimeControl "600+0"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+[Variant "Standard"]
+[ECO "C44"]
+[Opening "King's Knight Opening: Normal Variation"]
+[StudyName "DrHack Explains Rating Differences/Coaching Master Class - live stream"]
+[ChapterName "1300 Vs 1800"]
+[ChapterURL "https://lichess.org/study/lp3DCfPj/Qt2p5hcA"]
+
+1. e4 e5 2. Nf3 Nc6 { C44 King's Knight Opening: Normal Variation } 3. d3 { A danger sign. This may be an isolated event, or this 1300 has not yet started to develop an opening book. This neither fits a systematic approach, nor a theoretical book approach. It may also be a deliberate choice to leave book - in which case the warning bells can be turned off. } 3... Nf6 4. Nc3 d5 { 1800 has developed a large pool of opening knowledge. They are able to discern when moves are "strange" meaning not in this pool of knowledge. } 5. Qe2 d4 6. Nb5 Bg4 7. h3 { 1300 players are uncomfortable with pins. The reaction to a pin is often to break it at any cost. } 7... Bh5 8. Bg5 Be7 9. Bxf6 { [%cal Ge6e5,Gd5d4] } 9... Bxf6 10. g4 Bg6 11. Bg2 a6 12. g5 Be7 13. Na3 Bb4+ { 1800s have developed a basic iterative process for choosing moves. They often calculate 2-3 moves into a forced sequence, but generally do not calculate non-forced sequences. } 14. c3 dxc3 15. Nc2 cxb2+ 16. Nxb4 bxa1=Q+ 17. Qd1 Qc3+ 18. Qd2 Qxb4 19. O-O Qxd2 20. Nxd2 Qxd3 21. Rd1 O-O-O 22. Bf1 Qxd2 23. Rxd2 Rxd2 24. a4 Bxe4 25. g6 hxg6 { White resigns. } 0-1
+
+
+[Event "DrHack Explains Rating Differences/Coaching Master Class - live stream: What to teach the 1300"]
+[Date "2018.03.04"]
+[White "What do I teach this 1300?"]
+[Black "Narf"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "DrHack Explains Rating Differences/Coaching Master Class - live stream"]
+[ChapterName "What to teach the 1300"]
+[ChapterURL "https://lichess.org/study/lp3DCfPj/ZF163rBt"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2018.03.04"]
+[UTCTime "23:29:09"]
+
+{ This level can be reached without any further opening knowledge. 4-5 moves will suffice - usually gained through experience.
+
+Middle Game - Tactics - as explored deliberately and not haphazardly. It is not good enough to solve automatically generated tactical problems - though these problems are great fun! In order to progress, the player needs a combination of tactics integrated into their play. It is not good enough to know pins/forks/skewers, they must be used in tandem.
+
+This is the moment where position starts to come alive to the player: Basic positional ideas go here: weak pawns, files, squares, minor piece battles, space, time, and initiative.
+
+End Game - The study here is preparatory for the next rating push. However,
+pawn endings, Rook endings and R+Minor piece endings are the most helpful to learn here. }
+ *
+
+
+[Event "Rated Rapid game"]
+[Date "2018.01.24"]
+[Round "-"]
+[White "NNNN"]
+[Black "NNNN"]
+[Result "1-0"]
+[WhiteElo "1420"]
+[BlackElo "1307"]
+[TimeControl "900+5"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+[Variant "Standard"]
+[ECO "C68"]
+[Opening "Ruy Lopez: Exchange Variation, Lutikov Variation"]
+[StudyName "DrHack Explains Rating Differences/Coaching Master Class - live stream"]
+[ChapterName "1400 Vs 1300<--"]
+[ChapterURL "https://lichess.org/study/lp3DCfPj/4oXgt73u"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Bxc6 bxc6 { C68 Ruy Lopez: Exchange Variation, Lutikov Variation } { At 1400 we start to see 4-5 moves of opening knowledge. } 5. d3 d6 6. Bg5 Nf6 7. h3 Be7 8. Nbd2 O-O 9. Qe2 d5 10. Nxe5 Bb7 11. O-O Qd6 12. Ng4 Nxg4 13. Qxg4 Bc8 14. Qf4 Bxg5 15. Qxg5 f6 16. Qe3 Re8 17. b3 a5 18. a4 Ba6 19. Qf3 Re7 20. Qg4 Bc8 21. Qf3 Bd7 22. c4 d4 23. Rfc1 Qb4 24. Rc2 Qxb3 25. Nxb3 { Black resigns. } 1-0
+
+
+[Event "Rated Rapid game"]
+[Date "2018.03.02"]
+[Round "-"]
+[White "NNNN"]
+[Black "NNNN"]
+[Result "1-0"]
+[WhiteElo "1473"]
+[BlackElo "1471"]
+[TimeControl "1200+0"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+[Variant "Standard"]
+[ECO "B30"]
+[Opening "Sicilian Defense: Old Sicilian"]
+[StudyName "DrHack Explains Rating Differences/Coaching Master Class - live stream"]
+[ChapterName "-->1500 Vs 1500"]
+[ChapterURL "https://lichess.org/study/lp3DCfPj/o8J04sfa"]
+
+1. e4 c5 2. Nf3 Nc6 { B30 Sicilian Defense: Old Sicilian } 3. Bc4 h6 4. d4 cxd4 5. Nxd4 e5 6. Nxc6 bxc6 7. O-O Nf6 8. Re1 Be7 9. Nd2?! { (0.26 → -0.27) Inaccuracy. Best move was Qd3. } (9. Qd3 O-O 10. Nc3 d6 11. h3 Rb8 12. b3 Nh5 13. Be3 Nf4 14. Qd2 Qc7 15. Red1 Ne6) 9... O-O 10. Nf1 Bc5 11. Be3 Qb6?! { (-0.45 → 0.18) Inaccuracy. Best move was Bxe3. } { [%csl Gd6] } (11... Bxe3) 12. Rb1 Bxe3 13. Nxe3 Nxe4 14. Qd3? { (-0.13 → -2.29) Mistake. Best move was Bd3. } (14. Bd3 d5 15. Bxe4 dxe4 16. Qd6 Be6 17. Qxe5 Rae8 18. Nf5 Bxf5 19. Qxf5 Re6 20. b4 Rd8) 14... Nc5? { (-2.29 → 0.24) Mistake. Best move was d5. } (14... d5 15. Bb3 Be6 16. Qe2 Nc5 17. c3 Nxb3 18. axb3 Qxb3 19. Qd3 e4 20. Qd1 Qxd1 21. Rexd1) 15. Qd6 { [%csl Gd6] } 15... Re8? { (0.00 → 1.92) Mistake. Best move was Ne4. } (15... Ne4 16. Qxe5 d5 17. Bd3 Nf6 18. Qg3 Re8 19. c4 Be6 20. cxd5 cxd5 21. a3 Nh5 22. Qe5) 16. Nf5 Nb7?? { (1.82 → Mate in 3) Checkmate is now unavoidable. Best move was Ne6. } (16... Ne6 17. Qxe5 d5 18. Qg3 g6 19. Nxh6+ Kg7 20. Nf5+ Kf8 21. Nd6 Rd8 22. Nxf7 Kxf7 23. Bd3) 17. Qg6 { Black resigns. } { [%cal Gg6g7,Gb6f2] } 1-0
+
+
+[Event "DrHack Explains Rating Differences/Coaching Master Class - live stream: Bonus - See a player before and after."]
+[Date "2018.03.05"]
+[White "N"]
+[Black "N"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "DrHack Explains Rating Differences/Coaching Master Class - live stream"]
+[ChapterName "Bonus - See a player before and after."]
+[ChapterURL "https://lichess.org/study/lp3DCfPj/NL7P3QzH"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2018.03.05"]
+[UTCTime "16:40:04"]
+
+ *
+
+
+[Event "Casual Rapid game"]
+[Site "https://lichess.org/O30KanEC"]
+[Date "2018.02.25"]
+[Round "-"]
+[White "NNNN"]
+[Black "NNNN"]
+[Result "1-0"]
+[WhiteElo "1465"]
+[BlackElo "1506"]
+[TimeControl "900+5"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+[Variant "Standard"]
+[ECO "C89"]
+[Opening "Ruy Lopez: Marshall Attack"]
+[StudyName "DrHack Explains Rating Differences/Coaching Master Class - live stream"]
+[ChapterName "1500 Vs 1500 <--- when in main line!"]
+[ChapterURL "https://lichess.org/study/lp3DCfPj/Tc7iYvTP"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 Nf6 4. O-O a6 5. Ba4 Be7 6. Re1 b5 7. Bb3 O-O 8. c3 d5 { C89 Ruy Lopez: Marshall Attack } 9. a4 Bb7 10. axb5 axb5 11. Rxa8 Bxa8 12. exd5 Nxd5 { [%csl Ge5] } 13. d4 exd4 14. Nxd4 Bf6 15. Nxb5 Ne5 16. Bxd5 Bxd5 17. Nxc7 Qxc7 (17... Bxg2 18. Qxd8 Nf3+ 19. Kxg2 Nxe1+ 20. Kf1 Rxd8) 18. Qxd5 Rd8 19. Qb5 h6 20. Be3 Ng4 21. g3 Qc8 22. Na3 Nxe3 23. fxe3 Qg4 24. Qe2 Qxe2 25. Rxe2 Rd1+ { Black resigns. } 1-0
+
+
+[Event "Hourly Rapid Arena"]
+[Date "2018.02.26"]
+[Round "-"]
+[White "NNNN"]
+[Black "NNNN"]
+[Result "1-0"]
+[WhiteElo "1802"]
+[BlackElo "1499"]
+[TimeControl "600+0"]
+[Termination "Time forfeit"]
+[Annotator "lichess.org"]
+[Variant "Standard"]
+[ECO "A00"]
+[Opening "Van Geet Opening: Napoleon Attack"]
+[StudyName "DrHack Explains Rating Differences/Coaching Master Class - live stream"]
+[ChapterName "1800 Vs 1500"]
+[ChapterURL "https://lichess.org/study/lp3DCfPj/XOHu9zR5"]
+
+1. d4 (1. e4 e5 (1... c6 2. d4 d5 3. e5 (3. exd5 cxd5 4. c3 (4. c4 Nf6 5. Nc3 Nc6 6. Nf3 Bg4 7. Qc2 (7. cxd5 Nxd5 8. Qb3 Bxf3 9. gxf3 { [%csl Gd5,Gb7] } 9... e6 10. Qxb7 Nxd4))) 3... Bf5) 2. Nf3 f6 3. Nxe5) 1... e5?! { (0.08 → 0.93) Inaccuracy. Best move was d5. } (1... d5 2. Nf3 Nf6 3. c4 e6 4. g3 Bb4+ 5. Nbd2 O-O 6. Bg2) 2. Nc3?! { (0.93 → 0.06) Inaccuracy. Best move was dxe5. } (2. dxe5 Nc6 3. Nf3 d5 4. Bf4 f6 5. Nc3 Bb4 6. e3 fxe5) 2... Nc6 3. Nf3 { A00 Van Geet Opening: Napoleon Attack } 3... d6 4. Bg5 f6 5. Bh4 g5 6. Bg3 h5?! { (-0.19 → 0.36) Inaccuracy. Best move was g4. } (6... g4 7. d5 gxf3 8. dxc6 bxc6 9. exf3 h5 10. h3 h4 11. Bh2 Qe7 12. Qd3 d5 13. f4) 7. h4?! { (0.36 → -0.44) Inaccuracy. Best move was h3. } (7. h3 exd4) 7... g4 8. d5 Nb4 9. Nh2?! { (0.13 → -0.57) Inaccuracy. Best move was a3. } (9. a3) 9... c5? { (-0.57 → 0.80) Mistake. Best move was f5. } (9... f5 10. e3 Ne7 11. a3 Na6 12. f4 Bg7 13. fxe5 dxe5 14. Qd2 O-O 15. Bc4 Qd6 16. O-O) 10. e3? { (0.80 → -0.27) Mistake. Best move was e4. } (10. e4 f5 11. a3 f4 12. Bxf4 exf4 13. axb4 cxb4 14. Qd4 Nf6 15. Bb5+ Kf7 16. Qxb4 a5) 10... Nh6 11. a3 Na6 12. Bb5+ { [%csl Gb5,Gb8][%cal Gb5d5] } 12... Bd7 13. Qd3 Qc7? { (-0.08 → 1.44) Mistake. Best move was f5. } (13... f5) (13... Kf7 14. Bxd7 Qxd7 15. e4) 14. Qg6+ Ke7 15. Bxd7?! { (1.64 → 0.85) Inaccuracy. Best move was Ne4. } (15. Ne4 Ng8) 15... Qxd7 16. Qxh5 Bg7 17. Qg6 Nf5?? { (1.29 → 5.37) Blunder. Best move was Rag8. } (17... Rag8 18. h5 Bf8 19. Qd3 Nf5 20. Nf1 Rg5 21. Qe2 Nc7 22. Ne4 Rhxh5 23. Rxh5 Rxh5 24. O-O-O) 18. Qxg4?? { (5.37 → 1.72) Blunder. Best move was e4. } (18. e4 Rag8 19. Qxf5 Qxf5 20. exf5 Bh6 21. Nb5 Bf4 22. Nf1 Kd7 23. Ke2 Nc7 24. Nxc7 Kxc7) 18... Rag8 19. e4?! { (2.00 → 1.30) Inaccuracy. Best move was Nf1. } (19. Nf1 Bh6 20. Qh3 Nc7 21. h5 b5 22. Ne4 Nxd5 23. Rd1 Nxg3 24. Qxd7+ Kxd7 25. Nfxg3 Ke6) 19... Nxg3? { (1.30 → 2.68) Mistake. Best move was Nd4. } (19... Nd4 20. Qxd7+ Kxd7 21. O-O-O b5 22. Ng4 Bh6+ 23. Nxh6 Rxh6 24. Rd2 Nc7 25. Rh3 f5 26. f4) 20. Qxg3?! { (2.68 → 1.97) Inaccuracy. Best move was fxg3. } (20. fxg3 Bh6 21. Qxd7+ Kxd7 22. Kf2 c4 23. Kf3 Bd2 24. Ng4 Ke7 25. Nd1 f5 26. exf5 e4+) 20... Bh6?! { (1.97 → 2.78) Inaccuracy. Best move was Bf8. } (20... Bf8 21. Qf3 Rxh4 22. g3 Rhh8 23. O-O-O Bh6+ 24. Kb1 Nc7 25. Qd3 Bg5 26. Nf3 Kd8 27. b3) 21. Qf3 c4?! { (2.58 → 3.25) Inaccuracy. Best move was Nc7. } (21... Nc7 22. Nf1 Ne8 23. h5 a6 24. a4 Kd8 25. Nd2 Kc7 26. a5 Bxd2+ 27. Kxd2 Qg7 28. Rag1) 22. Nf1 Rg7?! { (3.25 → 4.00) Inaccuracy. Best move was Nc5. } (22... Nc5 23. Ng3 Qg4 24. Nf5+ Kd7 25. Ke2 a6 26. Qxg4 Rxg4 27. g3 b5 28. f3 Rgg8 29. h5) 23. g3? { (4.00 → 2.73) Mistake. Best move was Ng3. } (23. Ng3 Rgg8 24. Nf5+ Kd8 25. g3 Kc8 26. Qe2 Kb8 27. Qxc4 Rc8 28. Qe2 Nc7 29. a4 Ne8) 23... Rhg8?! { (2.73 → 3.44) Inaccuracy. Best move was Nc5. } (23... Nc5 24. Nd1 Rg4 25. Nfe3 Rxe4 26. Nc3 Rxe3+ 27. fxe3 f5 28. O-O-O b5 29. Rhf1 a5 30. g4) 24. Ne3?! { (3.44 → 2.58) Inaccuracy. Best move was Nd1. } { [%cal Gh6e3] } (24. Nd1 Rf7 25. Nde3 Bxe3 26. Nxe3 Kd8 27. Nf5 Rh7 28. Qc3 Qc7 29. a4 Qc5 30. Ke2 Nb4) 24... Bxe3 25. Qxe3 Nc5 26. O-O-O?! { (2.63 → 2.10) Inaccuracy. Best move was h5. } (26. h5 Rf7 27. Qf3 a5 28. h6 b5 29. Rh4 Rh8 30. Nd1 f5 31. exf5 Rxf5 32. Qg4 Rf7) 26... b5 27. Na2?! { (2.17 → 1.45) Inaccuracy. Best move was Ne2. } (27. Ne2 a5 28. f3 b4 29. g4 Rh7 30. Ng3 Qb7 31. Nf5+ Kd7 32. axb4 axb4 33. Kd2 b3) 27... a5 28. Kb1? { (2.00 → 0.56) Mistake. Best move was Rde1. } (28. Rde1) 28... b4 29. axb4 axb4 30. Nxb4 Qb5? { (0.72 → 1.89) Mistake. Best move was Qa4. } (30... Qa4) 31. Nc6+ Kd7?! { (1.96 → 2.54) Inaccuracy. Best move was Ke8. } (31... Ke8 32. Rde1 Rb7 33. Qa3 Rb6 34. Na7 Qa4 35. Re3 Rb7 36. Nc6 Qxa3 37. Rxa3 Nxe4 38. h5) 32. Qa3 Nb7? { (2.75 → 4.03) Mistake. Best move was Nxe4. } (32... Nxe4 33. Rhe1 Nc5 34. Re3 Qa4 35. Qxa4 Nxa4 36. Ra3 Ra8 37. h5 Nb6 38. Rxa8 Nxa8 39. Rh1) 33. Rhg1 Nd8? { (3.64 → 5.75) Mistake. Best move was Nc5. } (33... Nc5 34. f3 Qb7 35. g4 Ra8 36. Qb4 Qxb4 37. Nxb4 Rh7 38. h5 Ke8 39. c3 Kf8 40. Kc2) 34. Qa7+? { (5.75 → 3.20) Mistake. Best move was Nxd8. } (34. Nxd8 Kxd8 35. Qxd6+ Kc8 36. Kc1 Re8 37. Kd2 Rb7 38. Ra1 Rb6 39. Qa3 Kd7 40. g4 Qxb2) 34... Qb7?! { (3.20 → 3.75) Inaccuracy. Best move was Ke8. } (34... Ke8 35. Qa5 Rb7 36. Qxb5 Rxb5 37. h5 Kd7 38. Nxd8 Rxd8 39. h6 Ke7 40. Rh1 Kf7 41. h7) 35. Qxb7+ { White wins on time. } 1-0
+
+
+[Event "Casual Rapid game"]
+[Site "https://lichess.org/CnWGOHaq"]
+[Date "2017.11.06"]
+[Round "-"]
+[White "NNNN"]
+[Black "NNNN"]
+[Result "1/2-1/2"]
+[WhiteElo "2000"]
+[BlackElo "2212"]
+[TimeControl "300+5"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+[Variant "Standard"]
+[ECO "D10"]
+[Opening "Slav Defense: Exchange Variation"]
+[StudyName "DrHack Explains Rating Differences/Coaching Master Class - live stream"]
+[ChapterName "2000 Vs 2200"]
+[ChapterURL "https://lichess.org/study/lp3DCfPj/XzQ3HyPJ"]
+
+1. d4 d5 2. c4 c6 3. cxd5 { D10 Slav Defense: Exchange Variation } 3... cxd5 4. Nc3 Nf6 5. Bf4 a6 6. e3 Nbd7 7. Nf3 e6 8. Bd3 Be7 9. Qa4 O-O 10. O-O Nh5 11. Bg3 Nxg3 12. hxg3 Rb8 13. Qc2 h6 14. Rac1 b5 15. Qe2 Nb6 16. b3 b4 17. Nb1 a5 18. Ne5 Bb7 19. Nd2 Bf6 20. Ndf3 Nd7 21. Nc6 Bxc6 22. Rxc6 e5?! { (0.33 → 1.21) Inaccuracy. Best move was Rc8. } (22... Rc8 23. Qc2 Be7 24. Rc1 Rxc6 25. Qxc6 Nf6 26. Qa6 Bd6 27. Rc6 Bb8 28. Kf1 g6 29. Qb5) 23. dxe5 Nxe5 24. Nxe5 Bxe5 25. Rfc1 Bc3 26. Qf3 Qd7 27. Rc5 Rfd8 28. Rd1 d4 29. Bc4 Qe7 30. Rf5 Rf8 31. exd4 Qa7?! { (0.80 → 1.77) Inaccuracy. Best move was Rbd8. } (31... Rbd8 32. Rxa5 Rxd4 33. Rxd4 Bxd4 34. Kh2 Rb8 35. Qf5 Rd8 36. Rb5 Bc3 37. Qf3 Bf6 38. Rb7) 32. d5 Rbd8? { (1.16 → 2.66) Mistake. Best move was g6. } (32... g6 33. Rf4 Be5 34. d6 Bxf4 35. Qxf4 Kg7 36. d7 Qb6 37. Rd6 Qd8 38. Qd4+ Kh7 39. g4) 33. d6 Bd4? { (2.40 → 4.23) Mistake. Best move was g6. } { [%cal Gd5d4] } (33... g6 34. Rfd5) 34. Rd5? { (4.23 → 2.92) Mistake. Best move was Qd5. } (34. Qd5 g6 35. Rf3 Bg7 36. d7 Qa8 37. Qxa8 Rxa8 38. Bxf7+ Kh8 39. Re3 Kh7 40. Re8 Bf6) 34... Bf6?! { (2.92 → 3.58) Inaccuracy. Best move was Bc3. } (34... Bc3 35. d7) 35. Rf5? { (3.58 → 2.34) Mistake. Best move was d7. } (35. d7 Bc3 36. Qf5 Kh8 37. Rd6 g6 38. Qe4 a4 39. bxa4 Qxa4 40. Qe7 Qa5 41. Bxf7 Qe5) 35... Bd4?! { (2.34 → 3.31) Inaccuracy. Best move was Bc3. } (35... Bc3) 36. Rd5?! { (3.31 → 2.72) Inaccuracy. Best move was Qd5. } (36. Qd5 Bb6 37. d7 Kh8 38. Rd2 f6 39. Rh5 Bxf2+ 40. Rxf2 Rxd7 41. Qc5 Ra8 42. Qxa7 Raxa7) 36... Bf6 37. Rf5?? { (3.15 → 0.00) Blunder. Best move was d7. } (37. d7) 37... Bd4 { The game is a draw. } 1/2-1/2
+
+

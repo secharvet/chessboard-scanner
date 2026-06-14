@@ -1,0 +1,33 @@
+[Event "NEW OPENING TRAP: The Dirty Trap"]
+[Date "2020.11.18"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A40"]
+[Opening "Englund Gambit"]
+[StudyName "NEW OPENING TRAP"]
+[ChapterName "The Dirty Trap"]
+[ChapterURL "https://lichess.org/study/0ZLkbiI0/vutzrYb2"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2020.11.18"]
+[UTCTime "04:20:19"]
+
+{ EXPLANATION VIDEO https://youtu.be/oksV18QmCwo }
+1. d4 e5 2. dxe5 Bc5 3. Nf3 d6 4. exd6 (4. Bf4 Ne7 5. exd6 Nbc6 { oh no my knight! } 6. dxe7? Bxf2+ 7. Kxf2 Qxd1 { There goes white's queen }) 4... Ne7 { oh no my knight! } { [%csl Re7][%cal Gd6e7,Gg8e7] } 5. dxe7? { As of November 18th 2020, 531 players have fallen into this on lichess } 5... Bxf2+ { There goes white's queen } 6. Kxf2 Qxd1 *
+
+
+[Event "NEW OPENING TRAP: The Dirty Refutation"]
+[Date "2020.11.24"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A40"]
+[Opening "Englund Gambit"]
+[StudyName "NEW OPENING TRAP"]
+[ChapterName "The Dirty Refutation"]
+[ChapterURL "https://lichess.org/study/0ZLkbiI0/R8ithdAN"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2020.11.24"]
+[UTCTime "00:42:15"]
+
+1. d4 e5 2. dxe5 Bc5 3. Nf3 d6 4. Qxd6!! { This move is absolutely brilliant since black will undoubtedly premove Ne7. } 4... Ne7 (4... cxd6 { If black happens to play this don't blame me for your problems }) 5. Qxc5 $18 { Free bishop :) } *
+
+

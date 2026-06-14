@@ -1,0 +1,714 @@
+[Event "Dragon Quest 5: Fighting an Army of Slimes: Prologue"]
+[Date "2026.06.03"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Dragon Quest 5: Fighting an Army of Slimes"]
+[ChapterName "Prologue"]
+[ChapterURL "https://lichess.org/study/AZt3FCDJ/7zNH13od"]
+[Annotator "https://lichess.org/@/NinjaCharizard"]
+[UTCDate "2026.06.03"]
+[UTCTime "15:30:54"]
+[ChapterMode "gamebook"]
+
+{ You have 3 lives. Get a move wrong, lose 1 life. When you defeat an enemy, you get Gold Pieces which can be used to buy more lives at the Item Shop.
+This time, the study is based on the actual Dragon Quest games (specifically Dragon Quest IV/Dragon Warrior IV.)
+
+The king has given you a quest to defeat the Metal King Slime. You will be bringing Charizard along. You will be in Pokémon battles, except you are battling Slimes instead of Pokémon. Charizard can also give you hints. }
+ *
+
+
+[Event "Dragon Quest 5: Fighting an Army of Slimes: The Town of Lakanaba"]
+[Date "2026.06.03"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Dragon Quest 5: Fighting an Army of Slimes"]
+[ChapterName "The Town of Lakanaba"]
+[ChapterURL "https://lichess.org/study/AZt3FCDJ/JANF82mS"]
+[Annotator "https://lichess.org/@/NinjaCharizard"]
+[FEN "rrrPPrrr/rNrPPrrr/rRrPPrpr/PPPPPPPP/PPPPPPPP/rprPPrpr/rrrPPrrr/rrrPPrrr w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.06.03"]
+[UTCTime "15:30:54"]
+[ChapterMode "gamebook"]
+
+{ You arrive at the town of Lakanaba, the first stop of your journey. You must search for information about the Metal King Slime, so ask around and check every house!
+
+Upper left: item shop
+Upper right: house 1
+Lower left: house 2
+Lower right: house 3 }
+ *
+
+
+[Event "Dragon Quest 5: Fighting an Army of Slimes: Item Shop"]
+[Date "2026.06.03"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Dragon Quest 5: Fighting an Army of Slimes"]
+[ChapterName "Item Shop"]
+[ChapterURL "https://lichess.org/study/AZt3FCDJ/0HmKnjNt"]
+[Annotator "https://lichess.org/@/NinjaCharizard"]
+[UTCDate "2026.06.03"]
+[UTCTime "15:30:54"]
+[ChapterMode "gamebook"]
+
+{ Merchant: “This is an item shop.”
+Items for sale:
+1 life = 25G
+1 Bomb = 50G
+(Blows up the enemy, immediately finishing the battle.) }
+ *
+
+
+[Event "Dragon Quest 5: Fighting an Army of Slimes: House 1"]
+[Date "2026.06.03"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Dragon Quest 5: Fighting an Army of Slimes"]
+[ChapterName "House 1"]
+[ChapterURL "https://lichess.org/study/AZt3FCDJ/RrS0s6ht"]
+[Annotator "https://lichess.org/@/NinjaCharizard"]
+[UTCDate "2026.06.03"]
+[UTCTime "15:30:54"]
+[ChapterMode "gamebook"]
+
+{ You enter House 1.
+Young Man: “Metal King Slime is rumored to live in a castle called the Zenithian Castle. But nobody knows its location...” }
+ *
+
+
+[Event "Dragon Quest 5: Fighting an Army of Slimes: House 2"]
+[Date "2026.06.03"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Dragon Quest 5: Fighting an Army of Slimes"]
+[ChapterName "House 2"]
+[ChapterURL "https://lichess.org/study/AZt3FCDJ/XgejDC6v"]
+[Annotator "https://lichess.org/@/NinjaCharizard"]
+[UTCDate "2026.06.03"]
+[UTCTime "15:30:54"]
+[ChapterMode "gamebook"]
+
+{ Woman: “I heard that Metal King Slime's castle was originally inhabited by Elves." }
+ *
+
+
+[Event "Dragon Quest 5: Fighting an Army of Slimes: House 3"]
+[Date "2026.06.03"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Dragon Quest 5: Fighting an Army of Slimes"]
+[ChapterName "House 3"]
+[ChapterURL "https://lichess.org/study/AZt3FCDJ/ypR7FN0b"]
+[Annotator "https://lichess.org/@/NinjaCharizard"]
+[UTCDate "2026.06.03"]
+[UTCTime "15:30:54"]
+[ChapterMode "gamebook"]
+
+{ Man: “The road is blocked by a landslide. But maybe gunpowder could destroy the rocks! The only problem is...gunpowder manufacturing has been prohibited, and the gunpowder itself can only be found in Aktemto Mine, and the mine is dangerous because poisonous gases have been coming out of it. If you really want to go, I'll give you this Gas Mask.” }
+ *
+
+
+[Event "Dragon Quest 5: Fighting an Army of Slimes: Aktemto Mine"]
+[Date "2026.06.03"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Dragon Quest 5: Fighting an Army of Slimes"]
+[ChapterName "Aktemto Mine"]
+[ChapterURL "https://lichess.org/study/AZt3FCDJ/PEH0rduB"]
+[Annotator "https://lichess.org/@/NinjaCharizard"]
+[UTCDate "2026.06.03"]
+[UTCTime "15:30:54"]
+[ChapterMode "gamebook"]
+
+{ You enter the mine and put on the Gas Mask. You search around for the gunpowder that the man earlier spoke of. Then an enemy attacks you! }
+ *
+
+
+[Event "Dragon Quest 5: Fighting an Army of Slimes: Vs. Slime"]
+[Date "2026.06.03"]
+[White "Slime"]
+[Black "Charizard"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Dragon Quest 5: Fighting an Army of Slimes"]
+[ChapterName "Vs. Slime"]
+[ChapterURL "https://lichess.org/study/AZt3FCDJ/wX4A18uy"]
+[Annotator "https://lichess.org/@/NinjaCharizard"]
+[FEN "r1b1k1nr/ppp1qppp/8/3Nn3/8/2P2PP1/P1PB3P/R2QKB1R b KQkq - 0 12"]
+[SetUp "1"]
+[UTCDate "2026.06.03"]
+[UTCTime "15:30:54"]
+[ChapterMode "gamebook"]
+
+{ Slime appears. }
+12... Nd3# { Charizard uses Slash!
+Slime was defeated.
+Gained 25 Gold Pieces!
+You continue searching around the mine, and you find the Gunpowder Jar! } *
+
+
+[Event "Dragon Quest 5: Fighting an Army of Slimes: Lakanaba Revisited"]
+[Date "2026.06.03"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Dragon Quest 5: Fighting an Army of Slimes"]
+[ChapterName "Lakanaba Revisited"]
+[ChapterURL "https://lichess.org/study/AZt3FCDJ/18kOunEn"]
+[Annotator "https://lichess.org/@/NinjaCharizard"]
+[FEN "rrrPPrrr/rNrPPrrr/rRrPPrpr/PPPPPPPP/PPPPPPPP/rprPPrpr/rrrPPrrr/rrrPPrrr w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.06.03"]
+[UTCTime "15:30:54"]
+[ChapterMode "gamebook"]
+
+{ You return to Lakanaba and go to the path blocked off by the boulders. You ignite the Gunpowder Jar.
+BOOM!!!
+The rocks explode, clearing the path! You continue on your journey. }
+ *
+
+
+[Event "Dragon Quest 5: Fighting an Army of Slimes: Cave to Endor"]
+[Date "2026.06.03"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Dragon Quest 5: Fighting an Army of Slimes"]
+[ChapterName "Cave to Endor"]
+[ChapterURL "https://lichess.org/study/AZt3FCDJ/RhiLJtYy"]
+[Annotator "https://lichess.org/@/NinjaCharizard"]
+[UTCDate "2026.06.03"]
+[UTCTime "15:30:54"]
+[ChapterMode "gamebook"]
+
+{ You enter a cave going to the next town, Endor. The cave is not that big, but it’s full of monsters. And as expected, an enemy attacks you! }
+ *
+
+
+[Event "Dragon Quest 5: Fighting an Army of Slimes: Vs. Red Slime"]
+[Date "2026.06.03"]
+[White "Charizard"]
+[Black "Red Slime"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Dragon Quest 5: Fighting an Army of Slimes"]
+[ChapterName "Vs. Red Slime"]
+[ChapterURL "https://lichess.org/study/AZt3FCDJ/pjKXtSl1"]
+[Annotator "https://lichess.org/@/NinjaCharizard"]
+[FEN "rn1qkb1r/pp2pppp/2p5/3bN3/P1B5/B4Q2/2PP1PPP/R3K2R w KQkq - 0 12"]
+[SetUp "1"]
+[UTCDate "2026.06.03"]
+[UTCTime "15:30:54"]
+[ChapterMode "gamebook"]
+
+{ Red Slime appears. }
+12. Qxf7+ { Charizard uses Dragon Claw! } 12... Bxf7 { Red Slime attacks!
+Charizard eludes nimbly! } 13. Bxf7# { Charizard uses Slash!
+Red Slime was defeated.
+Gained 25 Gold Pieces!
+You exit the cave and end up in the town of Endor. } *
+
+
+[Event "Dragon Quest 5: Fighting an Army of Slimes: Town of Endor"]
+[Date "2026.06.03"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Dragon Quest 5: Fighting an Army of Slimes"]
+[ChapterName "Town of Endor"]
+[ChapterURL "https://lichess.org/study/AZt3FCDJ/oQI90oG4"]
+[Annotator "https://lichess.org/@/NinjaCharizard"]
+[FEN "qqqrrqqq/qqqrrqqq/qqqppqqq/PPPPPPPP/PPPPPPPP/rPrPPrpr/rNrPPrrr/rrrPPrrr w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.06.03"]
+[UTCTime "15:30:54"]
+[ChapterMode "gamebook"]
+
+{ You enter the town of Endor. As usual, ask around for information. Maybe the King of Endor can tell you something important.
+
+Top: castle
+Lower left: item shop
+Lower right: house 1 }
+ *
+
+
+[Event "Dragon Quest 5: Fighting an Army of Slimes: Castle"]
+[Date "2026.06.03"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Dragon Quest 5: Fighting an Army of Slimes"]
+[ChapterName "Castle"]
+[ChapterURL "https://lichess.org/study/AZt3FCDJ/BB1Ou4V9"]
+[Annotator "https://lichess.org/@/NinjaCharizard"]
+[UTCDate "2026.06.03"]
+[UTCTime "15:30:54"]
+[ChapterMode "gamebook"]
+
+{ King of Endor: “The way forward is dangerous, so I would like you to prove your strength before I can let you pass. Go to Loch Tower and get me the Golden Bracelet. }
+ *
+
+
+[Event "Dragon Quest 5: Fighting an Army of Slimes: Item Shop"]
+[Date "2026.06.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Dragon Quest 5: Fighting an Army of Slimes"]
+[ChapterName "Item Shop"]
+[ChapterURL "https://lichess.org/study/AZt3FCDJ/KWnVpbYu"]
+[Annotator "https://lichess.org/@/NinjaCharizard"]
+[UTCDate "2026.06.04"]
+[UTCTime "15:18:46"]
+[ChapterMode "gamebook"]
+
+{ Merchant: “This is an item shop.”
+Items for sale:
+1 life = 25G
+1 Bomb = 50G }
+ *
+
+
+[Event "Dragon Quest 5: Fighting an Army of Slimes: House 1"]
+[Date "2026.06.03"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Dragon Quest 5: Fighting an Army of Slimes"]
+[ChapterName "House 1"]
+[ChapterURL "https://lichess.org/study/AZt3FCDJ/as0hWwRe"]
+[Annotator "https://lichess.org/@/NinjaCharizard"]
+[UTCDate "2026.06.03"]
+[UTCTime "15:30:54"]
+[ChapterMode "gamebook"]
+
+{ Young Woman: “Loch Tower is in the middle of a lake. The bridge over the lake has been broken, so nobody can enter the tower, unless you fly on a bird or something.” }
+ *
+
+
+[Event "Dragon Quest 5: Fighting an Army of Slimes: Loch Tower"]
+[Date "2026.06.03"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Dragon Quest 5: Fighting an Army of Slimes"]
+[ChapterName "Loch Tower"]
+[ChapterURL "https://lichess.org/study/AZt3FCDJ/mIsPjMmQ"]
+[Annotator "https://lichess.org/@/NinjaCharizard"]
+[UTCDate "2026.06.03"]
+[UTCTime "15:30:54"]
+[ChapterMode "gamebook"]
+
+{ You reach Loch Tower. Just as the girl said, it’s surrounded by a lake. Fortunately, you have Charizard, so you ride on him and he flies you to the tower entrance!
+
+You enter the tower. You climb stairs, stairs, and even more stairs. Finally, you reach the top. The Golden Bracelet is there, sitting on a pedestal. But there’s a monster guarding it! }
+ *
+
+
+[Event "Dragon Quest 5: Fighting an Army of Slimes: Vs. King Slime"]
+[Date "2026.06.03"]
+[White "Charizard"]
+[Black "King Slime"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Dragon Quest 5: Fighting an Army of Slimes"]
+[ChapterName "Vs. King Slime"]
+[ChapterURL "https://lichess.org/study/AZt3FCDJ/TeawzHAv"]
+[Annotator "https://lichess.org/@/NinjaCharizard"]
+[FEN "rn1qkb1r/pp2pppp/2p5/3bN3/P1B5/B4Q2/2PP1PPP/R3K2R w KQkq - 0 12"]
+[SetUp "1"]
+[UTCDate "2026.06.03"]
+[UTCTime "15:30:54"]
+[ChapterMode "gamebook"]
+
+{ King Slime appears.
+
+(If you have a Bomb, play Ke2 to use it.) }
+12. Qxf7+ { Charizard uses Flamethrower! } (12. Ke2 { You use the Bomb!
+BOOM!!!
+King Slime was defeated.
+Gained 25 Gold Pieces!
+You go to the pedestal and take the Bracelet. Return to the King of Endor to report of your success! }) 12... Bxf7 { King Slime is on guard. } 13. Bxf7# { Charizard uses Dragon Claw!
+King Slime was defeated.
+Gained 25 Gold Pieces!
+You go to the pedestal and take the Bracelet. Return to the King of Endor to report of your success! } *
+
+
+[Event "Dragon Quest 5: Fighting an Army of Slimes: Endor Revisited"]
+[Date "2026.06.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Dragon Quest 5: Fighting an Army of Slimes"]
+[ChapterName "Endor Revisited"]
+[ChapterURL "https://lichess.org/study/AZt3FCDJ/OpNlBN3O"]
+[Annotator "https://lichess.org/@/NinjaCharizard"]
+[FEN "qqqrrqqq/qqqrrqqq/qqqppqqq/PPPPPPPP/PPPPPPPP/rPrPPrpr/rNrPPrrr/rrrPPrrr w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.06.04"]
+[UTCTime "14:54:01"]
+[ChapterMode "gamebook"]
+
+{ You return to the castle in Endor and show the king the Golden Bracelet you obtained.
+King of Endor: “Great job! You have proven your strength, so you may continue your journey. Good luck!”
+You leave Endor and set off once more on your quest. }
+ *
+
+
+[Event "Dragon Quest 5: Fighting an Army of Slimes: Tunnel Between Endor and Haville"]
+[Date "2026.06.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Dragon Quest 5: Fighting an Army of Slimes"]
+[ChapterName "Tunnel Between Endor and Haville"]
+[ChapterURL "https://lichess.org/study/AZt3FCDJ/DQqqyrtQ"]
+[Annotator "https://lichess.org/@/NinjaCharizard"]
+[UTCDate "2026.06.04"]
+[UTCTime "14:57:33"]
+[ChapterMode "gamebook"]
+
+{ You enter yet another monster-infested tunnel going to the next town on your journey. And...of course, you are attacked by a monster! }
+ *
+
+
+[Event "Dragon Quest 5: Fighting an Army of Slimes: Vs. Metal Slime"]
+[Date "2026.06.04"]
+[White "Charizard"]
+[Black "Metal Slime"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Dragon Quest 5: Fighting an Army of Slimes"]
+[ChapterName "Vs. Metal Slime"]
+[ChapterURL "https://lichess.org/study/AZt3FCDJ/RR8ErWwd"]
+[Annotator "https://lichess.org/@/NinjaCharizard"]
+[FEN "2r2r1k/pp4pp/4Qb2/3pN3/2p5/PP1P3P/4B1PK/q7 w - - 1 26"]
+[SetUp "1"]
+[UTCDate "2026.06.04"]
+[UTCTime "15:01:25"]
+[ChapterMode "gamebook"]
+
+{ Metal Slime appears.
+
+(If you have a Bomb, play Kg3 to use it.) }
+26. Nf7+ { Charizard uses Dragon Claw! } (26. Kg3 { You used the Bomb!
+BOOM!!!
+Metal Slime was defeated.
+Gained 25 Gold Pieces!
+You come out of the cave and enter the town of Haville. }) 26... Rxf7 { Metal Slime attacks!
+Charizard eludes nimbly! } 27. Qxc8+ { Charizard uses Flamethrower! } 27... Bd8 { Metal Slime is on guard. } 28. Qxd8+ { Charizard uses Dragon Claw! } 28... Rf8 { Metal Slime is on guard. } 29. Qxf8# { Charizard uses Slash!
+Metal Slime was defeated.
+Gained 25 Gold Pieces!
+You come out of the cave and enter the town of Haville. } *
+
+
+[Event "Dragon Quest 5: Fighting an Army of Slimes: Town of Haville"]
+[Date "2026.06.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Dragon Quest 5: Fighting an Army of Slimes"]
+[ChapterName "Town of Haville"]
+[ChapterURL "https://lichess.org/study/AZt3FCDJ/zNH2RiVP"]
+[Annotator "https://lichess.org/@/NinjaCharizard"]
+[FEN "rrrPPrrr/rrrPPprr/rNPPPrrr/rNPPPrrr/rrrPPprr/rrrPPrrr/PPPPPPPP/PPPPPPPP w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.06.04"]
+[UTCTime "15:14:53"]
+[ChapterMode "gamebook"]
+
+{ You enter the town of Haville. (This town’s item shop is much bigger; think of it as a department store.)
+
+Left: item shop
+Upper right: house 1
+Lower right: house 2 }
+ *
+
+
+[Event "Dragon Quest 5: Fighting an Army of Slimes: Item Shop"]
+[Date "2026.06.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Dragon Quest 5: Fighting an Army of Slimes"]
+[ChapterName "Item Shop"]
+[ChapterURL "https://lichess.org/study/AZt3FCDJ/cBXeNC4Y"]
+[Annotator "https://lichess.org/@/NinjaCharizard"]
+[UTCDate "2026.06.04"]
+[UTCTime "15:16:55"]
+[ChapterMode "gamebook"]
+
+{ Merchants: “This is an item shop.”
+Items for sale:
+1 life = 25G
+1 Shield = 50G
+(This item will protect you from losing a life for the first 3 turns in the next battle you fight.)
+1 Bomb = 50G
+1 Super Bomb = 100G
+(A Bomb that packs an even bigger punch than a regular Bomb. It can destroy monsters that would not be defeated by a regular Bomb. But there’s a catch: when you use the Super Bomb, you lose 1 life, since this Bomb is so powerful.) }
+ *
+
+
+[Event "Dragon Quest 5: Fighting an Army of Slimes: House 1"]
+[Date "2026.06.05"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Dragon Quest 5: Fighting an Army of Slimes"]
+[ChapterName "House 1"]
+[ChapterURL "https://lichess.org/study/AZt3FCDJ/2ddnUkrg"]
+[Annotator "https://lichess.org/@/NinjaCharizard"]
+[UTCDate "2026.06.05"]
+[UTCTime "11:09:36"]
+[ChapterMode "gamebook"]
+
+{ Man: "Don't expect a regular Bomb to work on extremely strong monsters. Use a Super Bomb instead; it costs you 1 life, but it's worth it." }
+ *
+
+
+[Event "Dragon Quest 5: Fighting an Army of Slimes: House 2"]
+[Date "2026.06.05"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Dragon Quest 5: Fighting an Army of Slimes"]
+[ChapterName "House 2"]
+[ChapterURL "https://lichess.org/study/AZt3FCDJ/p1w3ytE1"]
+[Annotator "https://lichess.org/@/NinjaCharizard"]
+[UTCDate "2026.06.05"]
+[UTCTime "11:10:43"]
+[ChapterMode "gamebook"]
+
+{ Woman: "So, you're on a quest to defeat the Metal King Slime? Nobody knows where it lives, but I can help you. Nearby, there is a cave containing a treasure called the Wyvern Wing. It can take you anywhere you wish, but you can only use it twice; the first use for arriving at your destination, and the second use for the return trip. The cave has some strong monsters, so be careful." }
+ *
+
+
+[Event "Dragon Quest 5: Fighting an Army of Slimes: Cave of the Wyvern Wing"]
+[Date "2026.06.05"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Dragon Quest 5: Fighting an Army of Slimes"]
+[ChapterName "Cave of the Wyvern Wing"]
+[ChapterURL "https://lichess.org/study/AZt3FCDJ/dAwXIwg2"]
+[Annotator "https://lichess.org/@/NinjaCharizard"]
+[UTCDate "2026.06.05"]
+[UTCTime "11:15:49"]
+[ChapterMode "gamebook"]
+
+{ You leave Haville and enter the Cave of the Wyvern Wing. For many minutes, you search the cave's many twists and turns for the Wing. Until, finally, you spot a treasure chest! However, it's guarded by another monster! }
+ *
+
+
+[Event "Dragon Quest 5: Fighting an Army of Slimes: Vs. Liquid Metal Slime"]
+[Date "2026.06.05"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Dragon Quest 5: Fighting an Army of Slimes"]
+[ChapterName "Vs. Liquid Metal Slime"]
+[ChapterURL "https://lichess.org/study/AZt3FCDJ/DBnqIJ8e"]
+[Annotator "https://lichess.org/@/NinjaCharizard"]
+[FEN "r1r3k1/pp2bpp1/3pq1P1/2pQ4/4PPP1/8/PPP5/1K1N3R w - - 1 21"]
+[SetUp "1"]
+[UTCDate "2026.06.05"]
+[UTCTime "11:24:47"]
+[ChapterMode "gamebook"]
+
+{ Liquid Metal Slime appears.
+
+(If you have a Bomb, play Kc1 to use it.) }
+21. Rh8+ { Charizard uses Dragon Claw! } (21. Kc1 { You used the Bomb!
+BOOM!!!
+Liquid Metal Slime was defeated.
+Gained 25 Gold Pieces!
+You open the treasure chest, and you find the Wing of Wyvern! Return to Haville to get more information from the woman. }) 21... Kxh8 { Liquid Metal Slime casts Firebal!
+Charizard eludes nimbly! } 22. Qh5+ { Charizard uses Slash! } 22... Kg8 { Liquid Metal Slime casts Firebal!
+Charizard eludes nimbly! } 23. Qh7+ { Charizard uses Dragon Claw! } 23... Kf8 { Liquid Metal Slime is on guard. } 24. Qh8# { Charizard uses Flamethrower!
+Liquid Metal Slime was defeated.
+Gained 25 Gold Pieces!
+You open the treasure chest, and you find the Wyvern Wing! Return to Haville to get more information from the woman. } *
+
+
+[Event "Dragon Quest 5: Fighting an Army of Slimes: Haville Revisited"]
+[Date "2026.06.05"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Dragon Quest 5: Fighting an Army of Slimes"]
+[ChapterName "Haville Revisited"]
+[ChapterURL "https://lichess.org/study/AZt3FCDJ/iLdc6RIG"]
+[Annotator "https://lichess.org/@/NinjaCharizard"]
+[FEN "rrrPPrrr/rrrPPprr/rNPPPrrr/rNPPPrrr/rrrPPprr/rrrPPrrr/PPPPPPPP/PPPPPPPP w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.06.05"]
+[UTCTime "13:17:24"]
+[ChapterMode "gamebook"]
+
+{ You return to Haville and go to House 2. You show the woman the Wyvern Wing.
+Woman: "To use the Wyvern Wing, stand outside and throw it into the sky. You will fly along with it, and it will take you to any location of your choice."
+You leave the house and throw the Wyvern Wing into the sky. It creates a tornado that brings you up into the air.
+You: "Take me to the Zenithian Castle!"
+Everything goes black. When you wake up, you find yourself in front of a castle in the clouds. }
+ *
+
+
+[Event "Dragon Quest 5: Fighting an Army of Slimes: Zenithian Castle"]
+[Date "2026.06.05"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Dragon Quest 5: Fighting an Army of Slimes"]
+[ChapterName "Zenithian Castle"]
+[ChapterURL "https://lichess.org/study/AZt3FCDJ/ayPZn7Yy"]
+[Annotator "https://lichess.org/@/NinjaCharizard"]
+[FEN "BBBBBBBB/BqqrrqqB/BqqrrqqB/BrrrrrrB/BrrrrrrB/BqqrrqqB/BqqppqqB/BBBBBBBB w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.06.05"]
+[UTCTime "13:23:51"]
+[ChapterMode "gamebook"]
+
+{ You enter the Zenithian Castle. You see some Elves inside!
+King of Zenithian Castle: "The Metal King Slime invaded our castle! We were just living peacefully until it attacked. It now sits in my throne room, and we cannot go near it or it will attack us. We are peaceful people; therefore we cannot fight the monster."
+You: "I'm here to defeat the Metal King Slime and restore peace to your country. Do not worry; I will take care of it."
+King: "Thank you! As I said earlier, the Slime is in the throne room. Please be careful!"
+You set off towards the throne room for the decisive final battle of your quest. }
+ *
+
+
+[Event "Dragon Quest 5: Fighting an Army of Slimes: Throne Room"]
+[Date "2026.06.05"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Dragon Quest 5: Fighting an Army of Slimes"]
+[ChapterName "Throne Room"]
+[ChapterURL "https://lichess.org/study/AZt3FCDJ/lAXjWwNR"]
+[Annotator "https://lichess.org/@/NinjaCharizard"]
+[UTCDate "2026.06.05"]
+[UTCTime "13:38:58"]
+[ChapterMode "gamebook"]
+
+ *
+
+
+[Event "Dragon Quest 5: Fighting an Army of Slimes: Vs. Metal King Slime"]
+[Date "2026.06.05"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Dragon Quest 5: Fighting an Army of Slimes"]
+[ChapterName "Vs. Metal King Slime"]
+[ChapterURL "https://lichess.org/study/AZt3FCDJ/kxZa6hes"]
+[Annotator "https://lichess.org/@/NinjaCharizard"]
+[FEN "4r1k1/Q1R3p1/5pq1/8/1PR4p/P3P2b/1B3PP1/3rNK2 b - - 3 33"]
+[SetUp "1"]
+[UTCDate "2026.06.05"]
+[UTCTime "13:43:50"]
+[ChapterMode "gamebook"]
+
+{ Metal King Slime appears.
+
+(If you have a Super Bomb, play Kf1 to use it.) }
+33... Qd3+ { Charizard uses Flamethrower! } (33... Kf8 { You used the Super Bomb!
+BOOOOOMMMM!!!
+Metal King Slime was defeated.
+Gained 100 Gold Pieces!
+You defeated the Metal King Slime! Return to the King of Zenithian Castle to report the good news! }) 34. Kg1 { Metal King Slime casts Firebane!
+Charizard eludes nimbly! } 34... Rxe1+ { Charizard uses Dragon Claw! } 35. Kh2 { Metal King Slime attacks!
+Charizard eludes nimbly! } 35... Rh1+ { Charizard uses Flamethrower! } 36. Kxh1 { Metal King Slime casts Firebane!
+Charizard eludes nimbly! } 36... Qf1+ { Charizard uses Blast Burn! } 37. Kh2 { Metal King Slime is on guard. } 37... Qxg2# { Charizard uses Blast Burn!
+Metal King Slime was defeated.
+Gained 100 Gold Pieces!
+You defeated the Metal King Slime! Return to the King of Zenithian Castle to report the good news! } *
+
+
+[Event "Dragon Quest 5: Fighting an Army of Slimes: Zenithian Castle Revisited"]
+[Date "2026.06.05"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Dragon Quest 5: Fighting an Army of Slimes"]
+[ChapterName "Zenithian Castle Revisited"]
+[ChapterURL "https://lichess.org/study/AZt3FCDJ/EUw3BihU"]
+[Annotator "https://lichess.org/@/NinjaCharizard"]
+[FEN "BBBBBBBB/BqqrrqqB/BqqrrqqB/BrrrrrrB/BrrrrrrB/BqqrrqqB/BqqppqqB/BBBBBBBB w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.06.05"]
+[UTCTime "15:18:34"]
+[ChapterMode "gamebook"]
+
+{ You leave the throne room and return to the King of Zenithian Castle.
+King of Zenithian Castle: “Thank you very much for saving us! We are sending you a gift; the king you serve will give it to you when you return to your home. Goodbye!” }
+ *
+
+
+[Event "Dragon Quest 5: Fighting an Army of Slimes: Epilogue"]
+[Date "2026.06.05"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Dragon Quest 5: Fighting an Army of Slimes"]
+[ChapterName "Epilogue"]
+[ChapterURL "https://lichess.org/study/AZt3FCDJ/ItpgL5dB"]
+[Annotator "https://lichess.org/@/NinjaCharizard"]
+[UTCDate "2026.06.05"]
+[UTCTime "15:21:14"]
+[ChapterMode "gamebook"]
+
+{ You use the Wyvern Wing one last time to return to your homeland. Upon your arrival, you go straight to King Ghetsis’ castle.
+King Ghetsis: “Well done! I knew I could trust you with this quest. By the way, the Elves sent me a gift to give to you. Here is the Zenithian Sword and Zenithian Shield. The Elves forged these with magic, so they are the strongest sword and shield in the world. And here is my gift to you, a Slime-shaped medal to commemorate your success on this quest!”
+
+THE END
+
+I will be busy so I may not be making any new studies for a while, but please stay tuned for Dragon Quest 6.
+Thank you for taking the time to read this study! Please click the like button if you enjoyed it. I’ll see you in my next one.
+
+Here is one of my existing studies that I really recommend. It's called "Skyrocket Your Accuracy With These Techniques!" and it talks about my 5 step method to get more accurate moves and avoid blunders. You can access it via the pinned study comment or through this link: https://lichess.org/study/3QBhrLR1 }
+ *
+
+

@@ -1,0 +1,55 @@
+[Event "Endgames: Chapter 1"]
+[Date "2018.02.24"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Endgames"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/meKuHy1Y/CarawO98"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[FEN "5k2/6p1/5p1p/4r3/6P1/1Q5P/6K1/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2018.02.24"]
+[UTCTime "02:17:20"]
+
+ *
+
+
+[Event "Endgames: Chapter 2"]
+[Date "2018.02.24"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Endgames"]
+[ChapterName "Chapter 2"]
+[ChapterURL "https://lichess.org/study/meKuHy1Y/x3BZudVy"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[FEN "1Q6/4rkp1/5p1p/8/8/7P/6PK/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2018.02.24"]
+[UTCTime "02:19:15"]
+
+1. Kg3 (1. g4 Re2+ 2. Kg3 Re3+ 3. Kh4 (3. Kf4 Re5 4. Qb3+ Kg6 5. Kg3 h5 6. Kh4 hxg4 7. hxg4 Re4 8. Qg8 f5) 3... g5+) (1. Qb5) 1... Re5 2. Qb3+ Kf8 3. h4 h5 4. Kf4 { [%cal Ge5f5] } 4... g6 5. Qd3 Kf7 6. Qb3+ Kg7 7. Qb7+ Kg8 8. Qc6 Kg7 9. Qb7+ Kg8 { [%cal Gg8g7] } 10. Qc6 Kg7 11. Qd7+ Kg8 12. Qd8+ Kg7 13. Qd7+ Kg8 14. Kf3 { [%cal Gg8h8,Gd7f7,Gg8f8] } 14... Rf5+ 15. Ke3 Re5+ 16. Kf3 Rf5+ 17. Ke3 Re5+ 18. Kf2 Rf5+ 19. Ke1 Re5+ 20. Kf2 Rf5+ 21. Kg3 Re5 22. Qd8+ Kg7 23. Qc7+ Kg8 24. Qc8+ Kf7 (24... Kg7 25. Qc7+ Kg8 26. Qd8+ Kg7 27. Qd7+ Kg8 28. Kf4 Rf5+ 29. Ke4 Re5+ 30. Kd3 Rf5 31. g3 Re5 32. Kd2 Rf5 33. Kc2 Re5 34. Qc8+ Kg7 35. Qb7+ Kg8 36. Qb8+ { [%cal Gg8g7] } 36... Kg7 37. Qb7+ Kg8 38. Qb8+ Kg7 39. Qb7+ Kg8) 25. Qh8 { [%csl Gg6][%cal Gh8h7] } *
+
+
+[Event "Endgames: Chapter 3"]
+[Date "2018.02.24"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Endgames"]
+[ChapterName "Chapter 3"]
+[ChapterURL "https://lichess.org/study/meKuHy1Y/8kYWxS5X"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[FEN "1Q6/4rkp1/5p1p/8/8/7P/6PK/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2018.02.24"]
+[UTCTime "02:26:39"]
+
+{ [%cal Gb3h8] }
+1. g4 Re5 2. Qb3+ Kg6 3. Kg3 h5 4. Qg8 Re3+ 5. Kf4 (5. Kh4 hxg4 6. hxg4 Re5) *
+
+

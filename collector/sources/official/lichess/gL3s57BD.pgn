@@ -1,0 +1,189 @@
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2025.10.12"]
+[White "germancitomartinez"]
+[Black "drilias"]
+[Result "1/2-1/2"]
+[WhiteElo "1526"]
+[BlackElo "1540"]
+[TimeControl "600"]
+[Termination "Game drawn by repetition"]
+[Variant "Standard"]
+[ECO "C45"]
+[Opening "Scotch Game"]
+[StudyName "Zwischenzug | Game of the Week"]
+[ChapterName "germancitomartinez - drilias"]
+[ChapterURL "https://lichess.org/study/gL3s57BD/vlztdP8A"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+
+1. e4 { [%clk 0:09:59] } 1... e5 { [%clk 0:09:58] } 2. Nf3 { [%clk 0:09:58] } 2... Nc6 { [%clk 0:09:55] } 3. d4 { [%clk 0:09:57] } 3... exd4 { [%clk 0:09:54] } 4. Nxd4 { [%clk 0:09:56] } 4... Qf6 { [%clk 0:09:53] } (4... Bc5 5. Nxc6 Qf6 { [%cal Gd1d2,Gd1f3] }) 5. Nxc6 { [%clk 0:09:52] } 5... Qxc6 { [%cal Gd8f6,Gf6c6] [%clk 0:09:51] } (5... Bc5 { The "book" move, with a tricky mate zwischenzug (!) mat threat. } 6. Qd2 { [%cal Gd2f2] }) 6. Nc3 { [%clk 0:09:50] } 6... Bb4 { [%clk 0:09:50] } 7. Bd2 { [%clk 0:09:38] } 7... Bxc3 { [%clk 0:09:45] } 8. Bxc3 { [%clk 0:09:37] } 8... Qxe4+ { [%clk 0:09:44] } 9. Qe2 { [%clk 0:09:29] } (9. Be2 { If you sacrifice a pawn, usually you want to keep the queens on the board so you can attack your opponent. } 9... Qxg2 10. Bf3 { The second pawn shouldn't concern White, as Black is wasting more and more time with the queen. In for a penny, in for a pound! } { [%cal Gf3h1] }) 9... Qxe2+ { [%clk 0:09:42] } 10. Bxe2 { Even in the endgame White has good compensation though. } { [%cal Gc3g7] [%clk 0:09:29] } 10... f6 { [%clk 0:09:41] } 11. O-O-O { [%clk 0:09:27] } 11... Ne7 { [%clk 0:09:40] } 12. Bc4 { [%clk 0:09:23] } 12... d6 { [%clk 0:09:32] } 13. Rhe1 { All pieces mobilized. Nice! Meanwhile Black's king is stuck. } { [%csl Re8,Gc8,Ga8,Gh8][%cal Ge1e8] [%clk 0:09:18] } 13... Bf5 { [%cal Gg2g4] [%clk 0:09:13] } 14. f3 { [%cal Gg2g5] [%clk 0:09:02] } 14... Kd7 { [%clk 0:09:10] } 15. g4 { [%clk 0:08:55] } 15... Bg6 { [%clk 0:09:05] } 16. h4 { [%clk 0:08:51] } 16... h6 { [%clk 0:08:56] } 17. Be6+ { [%clk 0:08:35] } 17... Kd8 { [%clk 0:08:45] } 18. f4 { [%cal Gg4g5] [%clk 0:08:14] } 18... Rf8 { [%clk 0:08:30] } 19. g5 { [%clk 0:07:45] } 19... hxg5 { [%cal Gf4g5,Gh4g5] [%clk 0:08:24] } 20. fxg5 { [%cal Gh4h8] [%clk 0:07:37] } 20... Bf7 { [%clk 0:08:23] } 21. gxf6 { [%clk 0:07:13] } 21... gxf6 { [%clk 0:08:12] } (21... Bxe6 22. Rxe6 (22. fxg7 { [%cal Gg7f8] } 22... Rg8 23. Rxe6 { [%cal Gh4h7] })) 22. Bxf6 { [%clk 0:07:01] } 22... Bxe6 { [%clk 0:08:11] } 23. Rxe6 { [%clk 0:07:00] } 23... Rf7 { [%cal Gd1e1,Ge1e7] [%clk 0:07:49] } 24. Rg1 { [%clk 0:06:36] } (24. Rde1 { So far White has played extremely well and could have won the game with this simple move. The knight on e7 is lost. }) 24... Kd7 { [%clk 0:07:46] } 25. Rxe7+ { [%clk 0:06:26] } 25... Rxe7 { [%clk 0:07:43] } 26. Bxe7 { [%clk 0:06:25] } 26... Kxe7 { [%clk 0:07:42] } 27. Rg7+ { [%clk 0:06:24] } 27... Ke6 { [%clk 0:07:29] } 28. Rxc7 { Still winning, but much more complicated. } { [%cal Gh4h8,Ga8g8] [%clk 0:06:22] } 28... Rb8 { [%clk 0:07:29] } (28... Rh8 29. Rxb7 Rxh4 30. Rxa7 { [%csl Gd6][%cal Ga2c2,Ga2a5,Gb2b5] }) 29. h5 { [%clk 0:06:19] } 29... Kf6 { [%clk 0:07:27] } 30. Rd7 { [%clk 0:06:12] } 30... Ke6 { [%clk 0:07:26] } 31. Rg7 { [%clk 0:06:10] } 31... a6 { [%clk 0:07:16] } 32. Kd2 { [%clk 0:06:05] } 32... b5 { [%clk 0:07:13] } 33. Kd3 { [%clk 0:06:02] } (33. h6 Rh8 34. h7 Kf6 35. Ra7 Kg6 36. Kc3) 33... Rh8 { [%clk 0:07:12] } 34. Rg6+ { [%clk 0:05:56] } 34... Kd5 { [%clk 0:07:02] } 35. h6 { [%clk 0:05:53] } 35... a5 { [%clk 0:06:58] } 36. b3 { [%clk 0:05:52] } 36... Ke5 { [%clk 0:06:52] } 37. c4 { [%clk 0:05:49] } 37... bxc4+ { [%clk 0:06:42] } 38. Kxc4 { [%clk 0:05:44] } 38... d5+ { [%clk 0:06:33] } 39. Kb5 { [%clk 0:05:41] } 39... Kf5 { [%clk 0:06:29] } 40. Ra6 { [%clk 0:05:33] } 40... d4 { [%clk 0:06:26] } 41. Kxa5 { [%clk 0:05:31] } (41. Kc4 { [%cal Gc4d3,Gc4d4] } 41... Ke4 42. Re6+ { [%cal Gc4d3,Gc4d5,Ge6e4,Ge4f4] } 42... Kf5 43. Rd6 { [%csl Gh8,Gf5,Ga5][%cal Gd6d4,Ga2a8,Gb3b8] }) 41... d3 { [%clk 0:06:21] } 42. Rd6 { [%clk 0:05:30] } 42... Ke4 { [%clk 0:06:11] } 43. Kb4 { [%clk 0:05:29] } 43... Ke3 { [%clk 0:06:08] } 44. Kc3 { [%clk 0:05:28] } 44... Rc8+ { [%clk 0:06:06] } 45. Kb2 { [%clk 0:05:25] } 45... d2 { [%clk 0:06:04] } 46. Re6+ { [%clk 0:05:21] } 46... Kd3 { [%clk 0:05:53] } 47. Rd6+ { [%clk 0:05:14] } 47... Ke3 { [%clk 0:05:51] } 48. h7 { [%clk 0:05:06] } 48... Ke2 { [%clk 0:05:48] } 49. Re6+ { [%clk 0:04:47] } 49... Kd3 { [%clk 0:05:42] } 50. Rd6+ { [%clk 0:04:46] } 50... Ke2 { [%clk 0:05:40] } 51. Re6+ { [%clk 0:04:45] } 51... Kd3 { [%clk 0:05:39] } 52. Rd6+ { [%clk 0:04:44] } 52... Ke2 { 1/2-1/2  wins. } { [%clk 0:05:37] } 1/2-1/2
+
+
+[Event "GoTW Candidates 10/29/25: Chapter 3"]
+[Date "2025.10.29"]
+[White "Ramaraju"]
+[Black "Nigel"]
+[Result "1/2-1/2"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[Variant "Standard"]
+[ECO "B00"]
+[Opening "Pirc Defense"]
+[StudyName "Zwischenzug | Game of the Week"]
+[ChapterName "GoTW Candidates 10/29/25: Chapter 3"]
+[ChapterURL "https://lichess.org/study/gL3s57BD/RUUcxXtx"]
+
+1. e4 d6 2. d4 Nf6 3. Nc3 e5 4. dxe5 dxe5 5. Qxd8+ Kxd8 { [%cal Gc7c6,Gd8c7] } 6. Bg5 Be6 7. Bxf6+ gxf6 8. Nf3 c6 9. h3 Nd7 10. a3 Kc7 11. Bd3 a5 12. O-O Bc5 (12... Nc5 { [%cal Gb7b4] }) 13. Ne2 Rhg8 14. Kh2 Nf8 (14... Bf8) 15. c3 a4 { [%csl Gb3,Ra3,Rb2][%cal Ga4b3] } 16. Bc2 Bc4 17. Rae1 Ne6 { [%cal Gc5f2,Gc4f1] } 18. g3 b5 { [%cal Gc6a4] } (18... Rgd8 { [%csl Rb2,Ga8][%cal Ga8a6,Ga6b6,Gb6b2,Rf3d2] }) 19. Nfg1 Rad8 20. Rd1 Rxd1 21. Rxd1 (21. Bxd1 Rd8 { [%cal Gd8d2,Gd2b2,Gd2e2] }) 21... Bxf2 22. Kg2 Bc5 (22... Be3) (22... Bb6) 23. Kf3 Rd8 (23... Ng5+ { [%cal Gg5f3,Gg5e4] } 24. Kg2 Bb3 { [%cal Gb3d1] } 25. Bxb3 axb3 { [%cal Gg5e4,Gg5f3,Rg2f3] }) (23... f5 { [%csl Rf3] } 24. exf5 Bd5+ { [%cal Gd5h1,Gc5g1] } 25. Rxd5 (25. Be4 Ng5+ { [%cal Gg5f3,Gg5e4] }) 25... Ng5+ 26. Kg2 cxd5) (23... Bb6) (23... Kc8) 24. Rxd8 Kxd8 25. Kg4 Ng7 { [%cal Gg7h5,Gg7f5] } 26. h4 h5+ 27. Kf3 Be6 28. Kg2 Bg4 29. Bd1 Be3 30. Nf3 Ke7 31. b3 axb3 32. Bxb3 Ne6 33. Bc2 Kd6 (33... Nc5 { [%cal Gg4e6] }) 34. a4 Bb6 35. axb5 cxb5 36. Bd3 Kc6 37. Nh2 Be3 38. Nxg4 hxg4 { [%cal Gh4h8,Ge3h6] } 39. Kf1 Nc5 40. Bb1 { 1/2-1/2  wins. } 40... Na4 { [%cal Gc6c4] } (40... Ne6) (40... Nd7 { [%cal Gd7b6,Gb6c4] }) (40... Kd6 41. Ba2 Ke7 (41... Nxe4)) 41. Bd3 (41. Ba2) 41... Kc5 42. Kg2 Nb2 43. Bc2 Kc4 1/2-1/2
+
+
+[Event "Eric's Classical Tournament Games: Eric (953) vs Bruce Draney (1835) Nebraska HOF 2025 Round 1 0-1"]
+[Date "2025.05.31"]
+[Result "*"]
+[Annotator "https://lichess.org/@/ticklefist84"]
+[Variant "Standard"]
+[ECO "A34"]
+[Opening "English Opening: Symmetrical Variation, Three Knights Variation"]
+[StudyName "Zwischenzug | Game of the Week"]
+[ChapterName "Eric's Classical Tournament Games: Eric (953) vs Bruce Draney (1835) Nebraska HO"]
+[ChapterURL "https://lichess.org/study/gL3s57BD/o2SR7Yo3"]
+
+{ So going into this tournament I have been doing quite a bit of Sports Psychology training. Working on my mindset going into this pressure filled tournament. The main thing I kept telling myself is to look at it like I went to a casino, and as I walked in they gave me $2000 to gamble with. It's house money, no pressure if you lose it all, but you have the potential to win some back.
+I have also been working on breathing exercises, anxiety is the killer of logical thinking so by slowing my heart rate and increasing oxygen to my blood stream, it helps me think more clearly.
+
+Process goals for this tournament were:
+In rounds 1 and 2 the time control is G75/+15, My goal was to be at 65:00 by move 10
+20- 45:00
+30-25:00
+40- 10:0-15:00 minutes.
+
+This gives me enough time to work in the endgame and not be in a time scramble. I need to do better at time management.
+
+Achieving these process goals will help activate dopamine in my mind and help with mind clarity as well.
+
+On to the game:
+In this first game I played against Bruce Draney rated 1835 and a member of the Nebraska Hall of Fame Class. I went into this game trusting in my preperation and under the mentality that Bruce is going to have to prove that he can beat me. I am going to play calmly, under control, solid, and simple. Keep it simple.
+Opening:
+We played a Reversed Sicilian variation of the English Opening. One that I see often enough online and I feel like I know the plans well enough to strike when the iron is hot and when my opponent gives me an opportunity.
+-Middlegame
+The middlegame was intense, although I gave Bruce plenty of chances to hang himself, he just didn't pick up the rope and was able to defend nicely.
+-Endgame:
+Bruce had two passed pawns on the c and a files. I had to create counterplay and got into time trouble in the end and traded off the knights which allowed him to promote his pawn to a queen.
+
+Honesty Check:
+I trusted my preparation, I made Bruce prove that he could beat me, that mentality carried me through the game and I feel like I played just as well as he did, but the time scramble messed me up. I feel like my tactics and calculation were superb and that I gave everything that I had in this game. No complaints at all. My first round games are getting closer to becoming wins for me. I just need to tighten up the area of my game that is holding me back and then I will be converting some of these games. }
+1. c4 Nf6 2. Nc3 c5 3. Nf3 g6 4. d4 (4. e4 { [%cal Gd2d4] }) 4... cxd4 5. Nxd4 Nc6 6. e3 (6. e4) 6... Bg7 7. Be2 O-O 8. O-O d5 9. b3 e5 10. Nxc6 bxc6 11. Bb2 Be6 12. Qc2 Bf5 13. Qd2 dxc4 (13... d4 14. exd4 exd4 { [%cal Gd4d3] }) 14. Qxd8 Raxd8 15. Bxc4 Be6 16. Rfd1 (16. Bxe6 fxe6 { [%csl Ge5,Ge6][%cal Gf1d1] }) 16... Bxc4 17. bxc4 Ng4 18. h3 Nh6 { [%cal Gf6g4,Gg4h6] } 19. Ne4 f5 20. Nc5 Rfe8 21. Rxd8 (21. Nb7 Rxd1+ (21... Rb8 { [%cal Gb8b2] } 22. Rd7 { [%cal Gd7b7,Gd7g7] }) 22. Rxd1 { [%cal Gd1d7] }) 21... Rxd8 { [%cal Gd8d2] } 22. Ne6 Rd2 23. Bc3 (23. Rb1 { [%cal Gb1b2,Ge6g7] } 23... Bf6 24. f4 Nf7 25. Bc3 { [%cal Gb1b8] }) 23... Rc2 24. Nxg7 Rxc3 25. Ne6 Rxc4 26. Rb1 Ra4 27. Rb8+ Kf7 28. Ng5+ Ke7 29. Rb7+ Kd6 30. Rxh7 Ng8 31. Nf7+ (31. Rg7) 31... Kd5 32. Nd8 (32. Rg7 { [%cal Gg7g8,Gg7g6] } 32... Ne7 33. Nd8 { [%cal Gg7e7] } 33... Nc8 34. Rxg6 { [%cal Gh3h8] }) 32... Rxa2 33. Rd7+ Kc5 34. Nb7+ Kb6 35. Nd6 a5 { [%cal Gd7g7,Gg7g6,Gh3h8] } 36. Nc4+ Kc5 37. Nxe5 a4 38. Nd3+ Kb6 39. Rd6 Ra1+ 40. Kh2 Rb1 41. Rxg6 Ne7 42. Rf6 a3 43. Rf8 a2 44. Ra8 a1=Q 45. Rxa1 Rxa1 *
+
+
+[Event "Norcal open: Chapter 3"]
+[Date "2025.08.31"]
+[Result "*"]
+[WhiteElo "1854"]
+[BlackElo "1684"]
+[Annotator "https://lichess.org/@/saiya211"]
+[Variant "Standard"]
+[ECO "D11"]
+[Opening "Slav Defense: Modern Line"]
+[StudyName "Zwischenzug | Game of the Week"]
+[ChapterName "Norcal open: Chapter 3"]
+[ChapterURL "https://lichess.org/study/gL3s57BD/XnLijnaj"]
+
+1. d4 d5 2. c4 c6 3. Nf3 Nf6 4. g3 Bf5 5. Bg2 h6 6. O-O e6 7. Nbd2 Be7 8. b3 O-O 9. Bb2 Nbd7 10. Ne5 Qc7 11. cxd5 exd5 12. Rc1 Bd6 13. Nxd7 Qxd7 14. f3 Rfe8 15. Re1 Bb4 { [%cal Gb4e1] } (15... Re3 16. Nf1 Re6 17. Nd2 Rae8 { [%cal Gh6h4,Gd6h2] }) 16. a3 Ba5 17. b4 Bb6 18. Nb3 { [%cal Gb3c5] } 18... Re3 19. Nc5 Qe7 20. Qd2 Re8 21. Kf2 { [%cal Gh6h5,Gh5h4] } 21... Bd8 22. Rc3 Rxc3 23. Bxc3 Qc7 24. e4 dxe4 25. fxe4 Ng4+ (25... Bg6) 26. Kg1 Bg5 27. exf5 Bxd2 (27... Rxe1+ 28. Qxe1 { [%cal Gg5d2] }) 28. Rxe8+ Kh7 29. Bxd2 { [%csl Gg1] } 29... b6 30. Nb3 (30. Bf4 { [%csl Rc7] }) 30... Qd7 31. Re2 c5 32. dxc5 (32. h3) 32... Qd3 33. h3 Qxe2 34. hxg4 Qd1+ 35. Kh2 Qxb3 36. c6 Qxa3 37. Bf4 Qa6 38. Bb8 Kg8 39. b5 Qc8 40. Bd6 a6 41. bxa6 Qxa6 42. c7 Qc8 43. Bh3 b5 44. f6 g5 45. Kg2 b4 46. Kf3 { [%csl Gb4] } 46... Qa6 (46... b3 { [%cal Gb3b1] } 47. Bf1 { [%cal Gf1d3,Gd3b1] } 47... Qb7+ 48. Kf2 Qb6+ 49. Kf3 Qc6+ 50. Ke3 b2 51. Bd3 Qc3 { [%cal Gc3d3,Gb2b1,Gb1b7] }) 47. Ke4 b3 48. Bf1 Qb7+ 49. Kd4 b2 50. Bd3 Kh8 (50... Qc6) 51. Kc3 b1=Q 52. Bxb1 Qc6+ 53. Kb2 Qb6+ 54. Ka1 Qd4+ 55. Ka2 Qc4+ 56. Ka3 Qa6+ 57. Kb3 Qb6+ 58. Kc3 Qc6+ 59. Kb3 Qb6+ 60. Ka2 Qa5+ 61. Kb2 Qb6+ 62. Kc1 Qc6+ 63. Bc2 Qh1+ 64. Kd2 Qd5+ 65. Bd3 Qg2+ 66. Ke3 Qg1+ 67. Ke4 Qh1+ 68. Kd4 Qa1+ 69. Kc5 Qa5+ 70. Bb5 Qc3+ 71. Kb6 Qe3+ 72. Kb7 Qe4+ 73. Kb8 Kh7 74. c8=Q Qd4 75. Qc5 Qd2 76. Bc7 Qd1 77. Qf8 *
+
+
+[Event "Lag DM"]
+[Date "2025.11.01"]
+[Round "2"]
+[White "Nahuel Marisi"]
+[Black "Patrik Wiss"]
+[Result "0-1"]
+[WhiteElo "1644"]
+[BlackElo "1676"]
+[Board "4"]
+[Annotator "https://lichess.org/@/theprole"]
+[Variant "Standard"]
+[ECO "A80"]
+[Opening "Dutch Defense"]
+[StudyName "Zwischenzug | Game of the Week"]
+[ChapterName "Nahuel Marisi - Patrik Wiss"]
+[ChapterURL "https://lichess.org/study/gL3s57BD/xW2Xh5fP"]
+
+1. d4 f5 2. Nf3 e6 3. e3 Nf6 4. Be2 { [%cal Gd7d5,Gc7c6] } 4... Nc6 5. O-O g6 6. c4 d5 7. b3 Bg7 8. Ba3 { [%cal Ga3f8] } 8... Ne7 9. Ne5 (9. Nc3) 9... Nd7 10. Nf3 O-O 11. Nc3 c6 12. Bd3 Re8 13. cxd5 (13. Rc1 { [%cal Gc3e2,Ge2f4] } 13... b6 14. cxd5 exd5 15. Rc2 Bb7 16. Ne2 Nf6 17. Nf4 Nc8 (17... Qd7 18. Ne5) 18. Ne5) 13... Nxd5 14. Nxd5 (14. Rc1 { [%csl Gd5] }) 14... exd5 15. Qe2 f4 16. Rfe1 fxe3 17. fxe3 Nf6 18. Nd2 (18. Ne5) 18... Ng4 19. Nf1 Bxd4 { [%csl Ga1][%cal Ge8e2,Gd4a1] } 20. Bb2 Bxb2 21. Qxb2 Ne5 22. Bc2 Qg5 23. Ng3 Ng4 24. e4 Qh4 25. Nf1 Qf2+ 26. Kh1 dxe4 27. h3 Nf6 28. Ne3 Nd5 29. Nxd5 cxd5 30. Rf1 Qc5 31. Qf6 Qe7 32. Qd4 Be6 33. a3 Rf8 34. b4 b6 35. Bb3 Rad8 36. Rac1 Rxf1+ 37. Rxf1 Qg7 38. Qe3 Qe5 39. Rf2 d4 40. Bxe6+ Qxe6 41. Qf4 Qe7 42. Rd2 d3 43. Qe3 Qe5 44. Kg1 Qd4 45. Qxd4 Rxd4 46. Kf2 Rc4 47. Ke3 Kf7 48. Rf2+ Ke7 49. g4 a5 50. bxa5 bxa5 51. h4 Ke6 52. Rf8 h5 53. gxh5 gxh5 54. Rh8 Ra4 55. Rxh5 Rxa3 56. Rh6+ Kf5 57. h5 Ra2 58. Rd6 Re2+ 59. Kd4 e3 60. Rd5+ Kf4 61. Kxd3 Rd2+ 62. Kc4 Rxd5 63. Kxd5 e2 64. h6 { 0-1 Black wins. } 0-1
+
+
+[Event "Columbia SC Senior Open, Nov 2025 Roger"]
+[Date "2025.11.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D00"]
+[Opening "Queen's Pawn Game: Accelerated London System"]
+[StudyName "Zwischenzug | Game of the Week"]
+[ChapterName "Columbia SC Senior Open, Nov 2025"]
+[ChapterURL "https://lichess.org/study/gL3s57BD/IO9i130J"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+
+1. d4 { [%eval 0.17] } 1... d5 { [%eval 0.18] } 2. Bf4 { [%eval 0.0] } 2... e6 { [%eval 0.1] } 3. e3 { [%eval 0.1] } 3... Nf6 { [%eval 0.1] } 4. Bd3 { [%eval 0.0] } 4... Bd6 { [%eval 0.07] } 5. Bg3 { [%eval 0.03] } 5... O-O { [%eval 0.0] } 6. Nd2 { [%eval 0.0] } 6... c5 { [%eval 0.0] } 7. c3 { [%eval 0.0] [%cal Gd8c7,Gb8d7,Ge6e5] } 7... Nc6 { [%eval 0.14] } (7... Qc7 8. Ngf3 Nbd7 9. O-O Bxg3 10. hxg3 e5) (7... Nbd7 8. Bxd6) 8. f4 { [%eval -0.34] } (8. Ngf3 Qc7 9. dxc5 { [%cal Gg3c7] } 9... Bxg3 10. hxg3 { [%csl Gc5] }) 8... cxd4 { [%eval -0.29] } 9. exd4 { [%eval -0.42] } 9... Ne8 { [%eval -0.15] } (9... Ne7 { [%cal Ge7f5,Gd8b6] }) 10. Qc2 { [%eval -0.41] } 10... f5 { [%eval -0.34] } 11. Ngf3 { [%eval -0.35] } 11... Qc7 { [%eval -0.2] } 12. Ne5 { [%eval -0.21] } 12... Nxe5? { [%eval 1.37] } { Mistake. Nf6 was best. } (12... Nf6 { [%csl Ge5,Ge4][%cal Gf6e4] }) 13. fxe5 { [%eval 1.27] } 13... Be7 { [%eval 1.24] } 14. h4? { [%eval -0.07] } { Mistake. Bf4 was best. } (14. Bf4) 14... Nf6! { [%eval -0.13] [%csl Rg3][%cal Gc7g3] } 15. Bf4 { [%eval -0.15] } (15. exf6 Qxg3+) 15... Ng4 { [%eval 0.26] } 16. Nf3 { [%eval 0.35] } 16... Bd7 { [%eval 0.31] } 17. h5 { [%eval 0.16] } 17... Rf7 { [%eval 0.65] } (17... h6) 18. O-O-O?! { [%eval -0.31] } { Inaccuracy. h6 was best. } { [%cal Gb7b4] } (18. h6 gxh6) 18... Kf8? { [%eval 1.1] } { Mistake. Qa5 was best. } { [%cal Gf8e8] } (18... b5 { [%cal Gb5b4,Ga8c8,Gc8c3] }) (18... Qa5 19. Kb1 Ba4 20. b3 Bb5 21. c4 Rc8 22. h6 g6 23. a4 Bxa4 24. bxa4) 19. Rdf1 { [%eval 0.63] } 19... Ke8?! { [%eval 1.4] } { Inaccuracy. Qa5 was best. } (19... Qa5) 20. Qd2 { [%eval 0.86] } 20... a5?! { [%eval 1.48] } { Inaccuracy. Qa5 was best. } (20... Qa5 21. Kb1 Bb5 22. Bg5 Bf8 23. Bh4 h6 24. Nh2 Nxh2 25. Rxh2 Qa6 26. Bxb5+) 21. Nh2 { [%eval 1.54] } 21... Nxh2 { [%eval 1.43] } 22. Rxh2 { [%eval 1.46] } 22... h6?! { [%eval 2.59] } { Inaccuracy. Qb6 was best. } (22... Qb6 23. Bc2) 23. g4 { [%eval 2.2] } 23... Kd8?! { [%eval 3.48] } { Inaccuracy. a4 was best. } (23... a4 24. a3 fxg4 25. Bg6 Bb5 26. Rg1 Kd7 27. Bxf7 Rf8 28. Bxe6+ Kxe6 29. Rf2) 24. g5?? { [%eval 0.97] } { Blunder. gxf5 was best. } (24. gxf5 Qb6 25. f6 gxf6 26. Bxh6 f5 27. Rg1 Kc7 28. Rg7 Rxg7 29. Bxg7 a4) 24... Bf8?? { [%eval 3.67] } { Blunder. hxg5 was best. } (24... hxg5 25. Bxg5) 25. gxh6 { [%eval 3.57] } 25... gxh6 { [%eval 3.69] } 26. Bxh6 { [%eval 3.43] [%cal Gh5h8] } 26... Bc6 { [%eval 3.75] } 27. Rg1 { [%eval 4.1] [%cal Gh5h8] } 27... Qe7?! { [%eval 6.23] } { Inaccuracy. Kd7 was best. } (27... Kd7 28. Rhg2 Re8 29. Bxf8 Rexf8 30. h6 Qd8 31. Qf4 Kc7 32. Rg7 Qe8 33. h7) 28. Bg5 { [%eval 5.92] } *
+
+
+[Event "Cincinnati Tornado Nov 29 2025"]
+[Date "2025.11.29"]
+[Round "2"]
+[White "Alex Cretsos"]
+[Black "Carl Labanz"]
+[Result "1-0"]
+[WhiteElo "2085"]
+[BlackElo "1701"]
+[TimeControl "G45 d5"]
+[Board "3"]
+[Annotator "https://lichess.org/@/PathToMaster"]
+[Variant "Standard"]
+[ECO "B29"]
+[Opening "Sicilian Defense: Nimzowitsch Variation, Closed Variation"]
+[StudyName "Zwischenzug | Game of the Week"]
+[ChapterName "Alex Cretsos - Carl Labanz"]
+[ChapterURL "https://lichess.org/study/gL3s57BD/JE4AAX2f"]
+
+1. e4 c5 2. Nf3 Nf6 3. Nc3 d5 (3... Nc6 4. d4 cxd4 5. Nxd4) 4. exd5 Nxd5 5. d4 Nxc3 6. bxc3 g6 { [%csl Gd4,Gc3][%cal Gf8g7,Gg7c3] } 7. Bc4 Bg7 8. O-O O-O 9. h3 Nc6 10. Be3 Qc7 11. Qd2 cxd4 12. cxd4 Nxd4 (12... Na5 13. Bb3 Bf5 { [%cal Ga8c8] }) 13. Bxf7+ (13. Nxd4 Qxc4) 13... Rxf7 14. Nxd4 { [%csl Gf7,Rg8][%cal Gf7g8] } 14... b6 15. Rad1 Bb7 16. f3 Qc4 17. Nb3 Rc8 18. Rc1 Bb2 (18... Be5) 19. Rb1 Ba6 (19... Qxc2 20. Rxb2) 20. Rf2 Bc3 21. Qd7 e6 22. Qd6 Bf6 23. Rd1 Rd8 24. Qxd8+ Bxd8 25. Rxd8+ Kg7 (25... Rf8 26. Rd7 Rf7 27. Rd8+ Rf8 28. Rd7 { And I didn't have a plan here, so that's why I went Kg7. }) 26. Bd4+ Kh6 27. Rg8 Qd5 28. Be3+ Kh5 (28... g5 29. Rxg5 Qxg5 30. Bxg5+ Kxg5) 29. Rd2 Qc4 30. Kh2 Bb7 (30... Qc7+ { Another move missed. } 31. f4?? (31. Kg1 Rxf3 32. gxf3 Qg3+ 33. Rg2 Qe1+ 34. Kh2 Qxe3 { Getting rid of the bishop will let me start picking off pawns and pieces. }) (31. Kh1 Qg3 32. Bf2 { Not sure what the plan is from here though. }) 31... Rxf4 32. Bxf4 Qxf4+) 31. g4+ Kh4 32. Bf2+ Kg5 33. h4+ Kf6 34. Bd4+ e5 35. Be3 Ke6 36. Bg5 { And here I had 20 seconds on the clock and blundered. I knew I needed to protect against Re8 and so protected the e7 square instead of the e8 square. } 36... Qc7?? { 1-0 White wins. } (36... Bd5 { Good option to block the file and let my king escape to the queenside. }) (36... Bc6 { Protects the e8 square. }) 37. Re8+ Re7 38. Rxe7+ 1-0
+
+
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2025.12.05"]
+[White "bluewavesun"]
+[Black "brujomafufo"]
+[Result "1-0"]
+[WhiteElo "2284"]
+[BlackElo "2194"]
+[TimeControl "600"]
+[Termination "bluewavesun won by resignation"]
+[Variant "Standard"]
+[ECO "D30"]
+[Opening "Queen's Gambit Declined: Tarrasch Defense, Pseudo-Tarrasch"]
+[StudyName "Zwischenzug | Game of the Week"]
+[ChapterName "bluewavesun - brujomafufo"]
+[ChapterURL "https://lichess.org/study/gL3s57BD/zVcAEe1l"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+
+1. Nf3 { [%clk 0:09:54] } 1... d5 { [%clk 0:09:58] } 2. d4 { [%clk 0:09:41] } 2... e6 { [%clk 0:09:51] } 3. c4 { [%clk 0:09:36] } 3... c5 { [%clk 0:09:48] } 4. Nc3 { [%clk 0:09:34] } (4. cxd5 exd5 { [%csl Rd5][%cal Gb1c3,Gg2g3,Gd4c5] }) 4... cxd4 { [%clk 0:09:45] } 5. Nxd4 { [%clk 0:09:22] } 5... e5 { [%clk 0:09:41] } 6. Nf3 { [%clk 0:09:18] } 6... d4 { [%clk 0:09:36] } 7. Ne4 { [%clk 0:09:14] } 7... f5 { [%clk 0:08:45] } 8. Ng3 { [%clk 0:09:12] } 8... Nc6 { [%clk 0:08:40] } (8... f4 9. Ne4 Nf6) 9. e3 { [%clk 0:08:54] } 9... Bb4+ { [%clk 0:08:24] } 10. Bd2 { [%clk 0:08:52] } 10... dxe3 { [%clk 0:07:09] } 11. fxe3 { [%clk 0:08:46] } (11. Bxb4 exf2+ 12. Kxf2 Qb6+ 13. Ke2 Qxb4) 11... Qb6 { [%clk 0:06:39] } 12. Qe2 { [%clk 0:08:20] } 12... e4 { [%clk 0:06:05] } (12... Nf6) 13. Nd4 { [%clk 0:07:45] } 13... Ne5 { [%clk 0:04:49] } (13... Nf6 14. Ndxf5 Bxf5 15. Nxf5 O-O-O { [%cal Gd8d2] }) (13... Nxd4 14. exd4 Qxd4 15. Bxb4) (13... Bxd2+ 14. Qxd2 { [%cal Gd2d4] }) 14. Qf2 { [%clk 0:07:07] } (14. c5) 14... g6 { [%clk 0:04:05] } 15. Bxb4 { [%csl Ge1,Ge3] [%clk 0:06:29] } 15... Qxb4+ { [%clk 0:03:58] } 16. Qd2 { [%clk 0:06:27] } 16... Qxd2+ { [%clk 0:03:47] } 17. Kxd2 { [%clk 0:06:25] } 17... Nf6 { [%clk 0:03:38] } 18. Be2 { [%clk 0:05:49] } 18... Bd7 { [%clk 0:03:24] } 19. Rac1 { [%clk 0:05:43] } 19... Rc8 { [%clk 0:03:20] } 20. b3 { [%clk 0:05:41] } 20... Ke7 { [%clk 0:03:09] } 21. Rhd1 { [%clk 0:05:19] } 21... h5 { [%clk 0:03:06] } 22. h3 { [%clk 0:05:11] } 22... h4 { [%clk 0:03:02] } 23. Nh1 { [%clk 0:05:09] } 23... Rhd8 { [%clk 0:02:17] } 24. Nf2 { [%clk 0:05:07] } 24... Be8 { [%clk 0:02:10] } (24... g5) 25. Ke1 { [%clk 0:05:05] } 25... Bf7 { [%clk 0:02:08] } 26. Rd2 { [%clk 0:04:58] } 26... g5 { [%clk 0:01:59] } 27. Nxf5+ { [%clk 0:04:49] } 27... Ke8 { [%clk 0:01:55] } 28. Nd6+ { 1-0 White wins. } { [%clk 0:04:29] } 1-0
+
+
+[Event "rated classical game"]
+[Site "https://lichess.org/pzpX6lvJ"]
+[Date "2025.12.11"]
+[White "PeterDuck"]
+[Black "nateglissmeyer"]
+[Result "1-0"]
+[WhiteElo "1386"]
+[BlackElo "1027"]
+[TimeControl "2400+10"]
+[Termination "Normal"]
+[GameId "pzpX6lvJ"]
+[Variant "Standard"]
+[ECO "A10"]
+[Opening "English Opening: Anglo-Scandinavian Defense"]
+[StudyName "Zwischenzug | Game of the Week"]
+[ChapterName "PeterDuck - nateglissmeyer"]
+[ChapterURL "https://lichess.org/study/gL3s57BD/7iTvtCQu"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+
+1. c4 { [%cal Ge7e6,Gc7c6,Gd7d5] } 1... d5 (1... e5) 2. e3 (2. cxd5 Qxd5 3. Nc3) 2... e5 3. Nc3 Nf6 4. Nf3 Bg4 (4... Nc6) (4... e4) 5. Be2 (5. h3 Bxf3 6. Qxf3) 5... Be7 (5... e4) 6. Nxe5 Bxe2 7. Qxe2 Nbd7 8. d4 c5 9. O-O cxd4 10. exd4 O-O 11. c5 b5 { [%csl Gc5][%cal Gd4c5] } (11... Nxe5) (11... Re8) 12. Nxb5 Re8 13. Nc6 Qc8 (13... Bf8 14. Nxd8 (14. Qxe8 Qxe8) (14. Qd3 Qc8) 14... Rxe2) (13... Bxc5) 14. Nxe7+ Rxe7 15. Qxe7 Qc6 16. a4 Re8 17. Qd6 Nb8 18. Qxc6 Nxc6 19. Nd6 Re6 20. Bf4 Nxd4 21. Nb5 Re4 (21... Ne2+ 22. Kh1 Nxf4) 22. g3 Nh5 23. f3 Nxf4 (23... Re2 24. Nxd4) (23... Ne2+ 24. Kh1 Rb4) 24. fxe4 Nh3+ 25. Kg2 Nc2 26. Rac1 Ne3+ 27. Kxh3 Nxf1 28. Rxf1 dxe4 29. Rd1 f5 30. Nd4 g6 31. Ne6 Kf7 32. Rd6 e3 33. Nf4 g5 34. Rd7+ Kf6 35. Nd5+ Ke6 36. Rd8 e2 37. Nc3 e1=Q 38. Re8+ Kd7 39. Rxe1 g4+ 40. Kh4 Kc6 41. Kg5 Kxc5 42. Kxf5 Kb4 43. Kxg4 Kb3 44. h4 Kxb2 45. Nb5 Kb3 46. a5 Kb4 47. Nxa7 Kxa5 48. Nc6+ Kb6 49. Ne5 Kc5 50. Kf3 Kd6 51. Nc4+ Kd5 52. Na5 { 1-0 Black resigns. } { [%cal Ge1e8,Gg3g8] } 1-0
+
+

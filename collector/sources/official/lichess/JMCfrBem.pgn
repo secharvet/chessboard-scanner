@@ -1,0 +1,16 @@
+[Event "Questions about London Opening: How should white respond to cxd4 Nh5 line?"]
+[Date "2018.08.07"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D00"]
+[Opening "Queen's Pawn Game: Accelerated London System"]
+[StudyName "Questions about London Opening"]
+[ChapterName "How should white respond to cxd4 Nh5 line?"]
+[ChapterURL "https://lichess.org/study/JMCfrBem/topRzdIB"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2018.08.07"]
+[UTCTime "03:18:52"]
+
+1. d4 d5 2. Bf4 Nf6 3. e3 c5 4. c3 Nc6 5. Nd2 e6 6. Ngf3 cxd4 7. cxd4 Qb6 (7... Nh5 8. Bg5) *
+
+

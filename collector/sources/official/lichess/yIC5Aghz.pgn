@@ -1,0 +1,214 @@
+[Event "Alekhine's Defense Overview: Introduction"]
+[Date "2021.12.23"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B04"]
+[Opening "Alekhine Defense: Modern Variation"]
+[StudyName "Alekhine's Defense Overview"]
+[ChapterName "Introduction"]
+[ChapterURL "https://lichess.org/study/yIC5Aghz/TmYhFsoA"]
+[Annotator "https://lichess.org/@/TonyRo"]
+[UTCDate "2021.12.23"]
+[UTCTime "02:52:47"]
+
+{ https://www.youtube.com/watch?v=ImC6zs9I2dE }
+1. e4 Nf6 { The characteristic move of Alekhine's Defense - Black attacks the e4-pawn immediately, tempting White to push it further forward. Black hopes that White will overextend, allow a weakness on c5, or (after ...d6), exchange off his e-pawn for Black's c-pawn. } 2. e5 Nd5 { Perhaps first played in a correspondence game in 1890 (there is a game feature Napoleon Bonaparte that's earlier but generally considered fake), the Alekhine didn't become popular until it's namesake played it in the early 1920's. See the next chapter. After that, the most notable outing was games 13 and 19 in the 1972 Fischer-Spassky match, including a win for Fischer. Nowadays many GMs including Nakamura, Kamsky, Ivanchuk, and Carlsen play the Alekhine on occasion. } 3. d4 d6 { Black starts to chip away. } 4. Nf3 { This is the Classical variation - White is content with a small, nagging edge, and will usually follow up with straightforward development, for instance Be2, O-O, c4 then Nc3, etc. } (4. c4 Nb6 5. f4 { The Four Pawns Attack - White spends the maximum amount of time grabbing the maximum amount of space. This is the most critical variation and White's main attempt at all-out refutation. }) (4. exd6 cxd6 5. c4 Nb6 { is the Exchange Variation. White is content with the d4/c4 group of pawns in the center and hopes to restrict Black's pieces development on the queenside by bolstering the long diagonal and the c4-square. Black, on the other hand, will try to equalize the space in the center with ...d5 or ...e5, putting his extra e-pawn to good work. Again, see the chapters on the "Power of the e-pawn" for more on this structure. }) *
+
+
+[Event "Budapest"]
+[Site "Budapest HUN"]
+[Date "1921.09.10"]
+[Round "5"]
+[White "Friedrich Saemisch"]
+[Black "Alexander Alekhine"]
+[Result "1/2-1/2"]
+[Variant "Standard"]
+[ECO "B02"]
+[Opening "Alekhine Defense: Sämisch Attack"]
+[StudyName "Alekhine's Defense Overview"]
+[ChapterName "F.Samisch - A.Alekhine, Bucharest 1921"]
+[ChapterURL "https://lichess.org/study/yIC5Aghz/NbOtirNc"]
+[Annotator "https://lichess.org/@/TonyRo"]
+
+1. e4 Nf6 2. e5 Nd5 3. Nc3 e6 4. Nxd5 exd5 5. d4 d6 6. Nf3 Nc6 7. Be2 Be7 8. Bf4 O-O 9. O-O f6 10. exd6 Bxd6 11. Qd2 Bg4 12. Rfe1 Re8 13. c3 Ne7 14. Bxd6 Qxd6 15. Nh4 Bd7 16. g3 Nf5 17. Nxf5 Bxf5 18. f3 Re6 19. Bf1 Rae8 20. Kf2 Kf7 21. Rxe6 Qxe6 22. Re1 Qxe1+ 23. Qxe1 Rxe1 24. Kxe1 { 1/2-1/2 The game is a draw. } 1/2-1/2
+
+
+[Event "Spassky - Fischer World Championship Match"]
+[Site "Reykjavik ISL"]
+[Date "1972.08.10"]
+[Round "13"]
+[White "Boris Spassky"]
+[Black "Robert James Fischer"]
+[Result "0-1"]
+[Variant "Standard"]
+[ECO "B04"]
+[Opening "Alekhine Defense: Modern Variation, Alburt Variation"]
+[StudyName "Alekhine's Defense Overview"]
+[ChapterName "B.Spassky - B.Fischer, Reykjavik 1972 (13)"]
+[ChapterURL "https://lichess.org/study/yIC5Aghz/XujEx6dI"]
+[Annotator "https://lichess.org/@/TonyRo"]
+
+1. e4 Nf6 2. e5 Nd5 3. d4 d6 4. Nf3 g6 5. Bc4 Nb6 6. Bb3 Bg7 7. Nbd2 O-O 8. h3 a5 9. a4 dxe5 10. dxe5 Na6 11. O-O Nc5 12. Qe2 Qe8 13. Ne4 Nbxa4 14. Bxa4 Nxa4 15. Re1 Nb6 16. Bd2 a4 17. Bg5 h6 18. Bh4 Bf5 19. g4 Be6 20. Nd4 Bc4 21. Qd2 Qd7 22. Rad1 Rfe8 23. f4 Bd5 24. Nc5 Qc8 25. Qc3 e6 26. Kh2 Nd7 27. Nd3 c5 28. Nb5 Qc6 29. Nd6 Qxd6 30. exd6 Bxc3 31. bxc3 f6 32. g5 hxg5 33. fxg5 f5 34. Bg3 Kf7 35. Ne5+ Nxe5 36. Bxe5 b5 37. Rf1 Rh8 38. Bf6 a3 39. Rf4 a2 40. c4 Bxc4 41. d7 Bd5 42. Kg3 Ra3+ 43. c3 Rha8 44. Rh4 e5 45. Rh7+ Ke6 46. Re7+ Kd6 47. Rxe5 Rxc3+ 48. Kf2 Rc2+ 49. Ke1 Kxd7 50. Rexd5+ Kc6 51. Rd6+ Kb7 52. Rd7+ Ka6 53. R7d2 Rxd2 54. Kxd2 b4 55. h4 Kb5 56. h5 c4 57. Ra1 gxh5 58. g6 h4 59. g7 h3 60. Be7 Rg8 61. Bf8 h2 62. Kc2 Kc6 63. Rd1 b3+ 64. Kc3 h1=Q 65. Rxh1 Kd5 66. Kb2 f4 67. Rd1+ Ke4 68. Rc1 Kd3 69. Rd1+ Ke2 70. Rc1 f3 71. Bc5 Rxg7 72. Rxc4 Rd7 73. Re4+ Kf1 74. Bd4 f2 { 0-1 White resigns. } 0-1
+
+
+[Event "Spassky - Fischer World Championship Match"]
+[Site "Reykjavik ISL"]
+[Date "1972.08.27"]
+[Round "19"]
+[White "Boris Spassky"]
+[Black "Robert James Fischer"]
+[Result "1/2-1/2"]
+[Variant "Standard"]
+[ECO "B05"]
+[Opening "Alekhine Defense: Modern Variation, Main Line"]
+[StudyName "Alekhine's Defense Overview"]
+[ChapterName "B.Spassky - B.Fischer Reykjavik 1972 (19)"]
+[ChapterURL "https://lichess.org/study/yIC5Aghz/jgRRAty9"]
+[Annotator "https://lichess.org/@/TonyRo"]
+
+1. e4 Nf6 2. e5 Nd5 3. d4 d6 4. Nf3 Bg4 5. Be2 e6 6. O-O Be7 7. h3 Bh5 8. c4 Nb6 9. Nc3 O-O 10. Be3 d5 11. c5 Bxf3 12. Bxf3 Nc4 13. b3 Nxe3 14. fxe3 b6 15. e4 c6 16. b4 bxc5 17. bxc5 Qa5 18. Nxd5 Bg5 19. Bh5 cxd5 20. Bxf7+ Rxf7 21. Rxf7 Qd2 22. Qxd2 Bxd2 23. Raf1 Nc6 24. exd5 exd5 25. Rd7 Be3+ 26. Kh1 Bxd4 27. e6 Be5 28. Rxd5 Re8 29. Re1 Rxe6 30. Rd6 Kf7 31. Rxc6 Rxc6 32. Rxe5 Kf6 33. Rd5 Ke6 34. Rh5 h6 35. Kh2 Ra6 36. c6 Rxc6 37. Ra5 a6 38. Kg3 Kf6 39. Kf3 Rc3+ 40. Kf2 Rc2+ { 1/2-1/2 The game is a draw. } 1/2-1/2
+
+
+[Event "Alekhine's Defense Overview: Black's Motivation"]
+[Date "2021.12.21"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B03"]
+[Opening "Alekhine Defense"]
+[StudyName "Alekhine's Defense Overview"]
+[ChapterName "Black's Motivation"]
+[ChapterURL "https://lichess.org/study/yIC5Aghz/6STmPLQy"]
+[Annotator "https://lichess.org/@/TonyRo"]
+[UTCDate "2021.12.21"]
+[UTCTime "23:55:25"]
+
+1. e4 Nf6 2. e5 Nd5 3. d4 d6 4. exd6 (4. Nf3 Bg4 { [%cal Ge5d6,Gc7d6] } 5. Be2 c6!? { The so-called Flohr variation } 6. O-O Bxf3 7. Bxf3 dxe5 8. dxe5 e6 9. c4?! (9. Qe2 { and }) (9. Nd2 { are considered improvements and are probably slightly more comfortable for White. }) 9... Ne7! { [%csl Ge5][%cal Ge7g6,Gg6e5] } 10. Qxd8+? (10. Qe2! { is no doubt stronger. }) 10... Kxd8 { and it's actually quite difficult to defend the e-pawn. } { Kaidanov, Gregory S - Ivanchuk, Vassily, 0-1, URS-ch FL55, 1987, https://lichess.org/6bOksFXe } { [%csl Ge5][%cal Ge7g6,Gg6e5,Gb8d7,Yf8b4,Yb4a5,Ya5c7] }) (4. c4 Nb6 5. f4 (5. exd6 cxd6) 5... g6 6. Nc3 dxe5 7. fxe5 c5 8. d5 { [%csl Ge5] } 8... Bg7 9. Bf4 O-O 10. Nf3?! (10. Qd2! { is much stronger }) 10... Bg4! 11. h3 Bxf3 12. Qxf3 N8d7 { [%csl Ge5] } 13. Qe3 Qb8! 14. e6 Ne5 15. exf7+? Rxf7 { [%cal Gf7f4] } 16. Bh2 Nexc4! 17. Bxc4 Nxc4 18. Qxc5 Qc8 (18... Nxb2! 19. Bxb8 Nd3+ $19) 19. Qxc8+ Rxc8 { Panarin, Michail - Polaczek, Richard, 1/2-1/2, Champions Challenge 106th, 2005, https://lichess.org/RrKWUCcO }) 4... cxd6 5. c4 Nb6 { Black has secured an extra central pawn, which can result in a structure later where only Black has an e-pawn. This can result in structures later where Black builds up a large center with f5+e5 and dominates in the center. This can have long-reaching consequences, even into the ending. See the following chapters on the power of an e-pawn. } { [%cal Ge7e5,Bd6d5] } 6. Nc3 g6 7. Be3 Bg7 8. Nf3?! { [%csl Gf3] } (8. Rc1! { is the "dreaded" Voronezh variation } 8... O-O 9. b3 e5 10. dxe5 dxe5 11. Qxd8 Rxd8 12. c5 N6d7 13. Bc4 Nc6 14. Nf3 h6 15. Ne4 Na5 16. Be2 f5 $10 { Seelig, Jürgen - Schmidt, Loren R., 1/2-1/2, VWC11/SF  9, 2020, https://lichess.org/sZezhnLH } { [%csl Gf5,Ge5] }) 8... O-O 9. Be2 Nc6 10. O-O Bg4 11. b3 d5! 12. c5 Nc8 13. h3?! Bxf3 14. Bxf3 e6 $15 { and it's very hard to defend the d4-pawn. } { Aigner, Michael - Nakamura, Hikaru, 0-1, North American op 17th, 2007, https://lichess.org/QIVtm7RS } { [%csl Gd4][%cal Gc8e7,Ge7f5,Yd8f6] } *
+
+
+[Event "The Hague"]
+[Site "The Hague"]
+[Date "1921.??.??"]
+[Round "8"]
+[White "Yates, Frederick"]
+[Black "Alekhine, Alexander"]
+[Result "0-1"]
+[Annotator "Meier,Georg"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Alekhine's Defense Overview"]
+[ChapterName "Power of the e-pawn I"]
+[ChapterURL "https://lichess.org/study/yIC5Aghz/6ZRIbLKh"]
+[FEN "5rk1/pp4pp/4b3/4qp2/1PP1p3/P7/5PPP/3QRBK1 b - - 0 23"]
+[SetUp "1"]
+
+{ Behind the e-pawn black centralized his pieces.Once the e- and f-pawns move
+forward whites king will be in danger of suffocation.The white queenside
+majority doesnt represent any danger as whites pieces are too passive to turn
+it into an asset. }
+23... Qc3! { The penetration of the queen forces a
+concession. } 24. Qc1 (24. Re3 Qf6 25. c5 Rd8 $15 { and black takes over the
+d-file }) 24... Qxc1 25. Rxc1 Rd8 $15 { [%cal Gg8e5] } 26. g3 (26. f3!) 26... Kf7 27. c5 Kf6 { Behind his advanced
+pawns blacks king immediately took up an influential position.Hes ready to
+support the advance of the kingside pawns and can keep an eye on the white
+c-pawn at the same time. Meanwhile whites king is far from the center of
+attention,as he lacks space to creep out of his box. } 28. Bc4 { Understandably,
+suffering from lack of space white wants to ease his task by exchanges. } (28. c6) 28... Bc8! { Keeping
+bishops on the board will allow black to develop an attack on whites king
+after g5,f4 and the opening of the kingside.And the white Bishop actually
+obstructs the support of whites c-pawn. } (28... Bxc4 29. Rxc4 Ke5 30. c6) 29. a4 g5 30. b5 f4 31. Kf1 Rd2 32. Ke1 Rb2 33. gxf4 gxf4 34. Be2 (34. c6 f3 35. Bd5 b6) 34... Ke5 { Thanks to the central majority we see a huge difference
+between the 2 kings.While black has one more piece in play,whites king is
+mainly a source of concern,being restricted to the first rank and facing a
+slow but dangerous attack. } 35. c6 bxc6 36. Rxc6? (36. bxc6 { Had to be tried.
+It leaves the c-pawn very vulnerable but glues the black Bishop to c8. }) 36... Be6 $19 { The black bishop comes back into play and blacks positional
+domination already leaves white defenceless against a coming breakthrough with
+f3 and e3. } 37. Bd1 (37. Rc1 f3 38. Bd1 e3 39. Bxf3 Rxf2) 37... Rb1 38. Rc5+ Kd4 39. Rc2 e3 40. fxe3+ fxe3 41. Rc6 Bg4 42. Rd6+ Ke5 43. h3 Bh5 { 0-1 White resigns. } 0-1
+
+
+[Event "Moscow Aeroflot op-A"]
+[Site "https://lichess.org/vJ7gaLAD"]
+[Date "2005.02.19"]
+[Round "5"]
+[White "Malakhov, Vladimir"]
+[Black "Sargissian, Gabriel"]
+[Result "1-0"]
+[WhiteElo "2664"]
+[BlackElo "2602"]
+[TimeControl "-"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "A11"]
+[Opening "Réti Opening: Anglo-Slav Variation, with g3"]
+[StudyName "Alekhine's Defense Overview"]
+[ChapterName "Power of the e-pawn II"]
+[ChapterURL "https://lichess.org/study/yIC5Aghz/rUarDOBa"]
+[Annotator "https://lichess.org/@/TonyRo"]
+
+1. Nf3 Nf6 2. g3 d5 3. Bg2 c6 4. c4 Bg4 5. O-O e6 6. h3 Bxf3 7. Bxf3 Nbd7 8. cxd5 exd5 9. d3 Nc5 10. Nc3 Be7 11. e4 dxe4 12. dxe4 O-O 13. Be3 Ne6 14. Qxd8 Rfxd8 15. Rad1 Nd7 16. Bg4 Ne5 17. Be2 Bc5 18. Bxc5 Nxc5 19. f4 Ned3 20. Bxd3 Nxd3 21. Rd2 Rd7 22. Rfd1 Rad8 23. Kf1 Nc5 24. Rxd7 Rxd7 25. Rxd7 Nxd7 26. Ke2 h5 27. Ke3 Kf8 28. Kd4 Ke7 29. b4 g6 30. Nd1 f5 31. e5 Nf8 32. h4 Ne6+ 33. Kd3 c5 34. b5 Nd4 35. a4 b6 36. Ne3 Ne6 37. Nc4 Nc7 38. Ne3 Kd7 39. Kc4 Ke6 40. a5 Kd7 41. Nd1 Ke6 42. Nc3 Kd7 43. Na4 Na8 44. Nxc5+ bxc5 45. Kxc5 Nc7 46. b6 Ne6+ 47. Kb5 axb6 48. Kxb6 g5 49. a6 gxh4 50. a7 hxg3 51. a8=Q h4 52. Qd5+ { 1-0 Black resigns. } 1-0
+
+
+[Event "Alekhine's Defense Overview: Exchange Variation"]
+[Date "2021.12.22"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B03"]
+[Opening "Alekhine Defense: Exchange Variation, Voronezh Variation"]
+[StudyName "Alekhine's Defense Overview"]
+[ChapterName "Exchange Variation"]
+[ChapterURL "https://lichess.org/study/yIC5Aghz/MtxSORfs"]
+[Annotator "https://lichess.org/@/TonyRo"]
+[UTCDate "2021.12.22"]
+[UTCTime "01:31:17"]
+
+1. e4 Nf6 2. e5 Nd5 3. d4 d6 { [%cal Ge5d6] } 4. c4 Nb6 5. exd6 cxd6 (5... exd6 6. Nc3 Be7 7. Bd3 Nc6 8. Nge2 $14 Bg4 9. f3 Bh5 10. O-O Bg6 11. Bxg6 hxg6 12. d5 Ne5 13. b3 O-O 14. Be3 Re8 15. Bd4 Bf8 16. Qd2 Nbd7 { Ni, Shiqun - Zhao Xue, 1-0, TCh-CHN 2015, https://lichess.org/vCnTrsov }) 6. Nc3 (6. d5!? g6 7. Qd4 e5 8. dxe6 f6! { [%cal Gb8c6,Gc8e6] } 9. Nc3 Nc6 10. Qh4 Bxe6 $132 { LeBled, Pierre - Polsterer, Heinz, 1/2-1/2, CL/2019/B3, https://lichess.org/T4rgKve8 }) 6... g6 7. Be3! Bg7 8. Rc1! O-O 9. b3! Bf5!? (9... e5 10. dxe5 dxe5 11. Qxd8 (11. c5) 11... Rxd8 12. c5 N6d7 { [%cal Gg1f3,Gf1c4] } 13. Bc4 Nc6 14. Nf3 { [%cal Gh7h6,Gc6a5] } 14... h6 (14... Na5!?) 15. Ne4 { [%csl Gd6][%cal Ge4d6] } 15... Na5 { [%cal Gf7f5] } 16. Be2 (16. Bd5 Nf6 17. Nxf6+ Bxf6 18. Rd1 { [%cal Re3h6] } 18... Kg7 19. O-O Bd7 { Kosintseva, Tatiana - Anatsko, Evgeniy, 0-1, EU-ch U18, 2001, https://lichess.org/b7CDzz2w } { [%cal Gd7c6] }) 16... f5 17. Nd6 Nc6 $10 { Seelig, Jürgen - Schmidt, Loren R., 1/2-1/2, VWC11/SF  9, 2020, https://lichess.org/sZezhnLH }) (9... Nc6? 10. d5! Ne5 11. Be2! { [%cal Rf2f4] } 11... f5 { [%cal Ge5f7] } 12. f4 Ng4 13. Bxg4 fxg4 14. Nge2 $16 { Duda, Jan Krzysztof - Varga, Zoltan, 1-0, Budapest FS03 GM, 2013, https://lichess.org/SxLx8xba } { [%csl Rg4][%cal Ge1g1,Ye3d4,Ye2d4] }) 10. Nf3 (10. Be2 d5 11. c5 Nc8 12. Bf3 e5! $132) (10. g4!? Bd7 11. Bg2 Nc6 12. d5 Ne5 { [%cal Gd7g4] } 13. h3 f5 14. f4 Nexc4!) 10... d5 11. c5 Nc8 12. Be2 Nc6 13. O-O Bg4! 14. b4! (14. h3 Bxf3 15. Bxf3 e6 16. b4 a6 17. Ne2 N8e7 $132 { Borkowski, Franciszek - Suba, Mihai, 1/2-1/2, Vitrobud op, 1976, https://lichess.org/o3e5fVR2 }) 14... a6 15. Rb1 e6 16. a4 Bxf3 17. Bxf3 N8e7 18. b5 Na5 $132 { Narayanan, Srinath - Nakamura, Hikaru, 0-1, Gibraltar Masters, 2007, https://lichess.org/tBLMDFaR } { [%cal Ge7f5] } *
+
+
+[Event "Alekhine's Defense Overview: Classical Variation"]
+[Date "2021.12.22"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B04"]
+[Opening "Alekhine Defense: Modern Variation, Larsen Variation"]
+[StudyName "Alekhine's Defense Overview"]
+[ChapterName "Classical Variation"]
+[ChapterURL "https://lichess.org/study/yIC5Aghz/2pd3iqAc"]
+[Annotator "https://lichess.org/@/TonyRo"]
+[UTCDate "2021.12.22"]
+[UTCTime "01:48:37"]
+
+1. e4 Nf6 2. e5 Nd5 3. d4 d6 4. Nf3 dxe5 (4... g6 5. Bc4 (5. c4 Nb6 6. exd6 cxd6 7. Nc3 Bg7 $10) 5... Nb6 (5... c6!? 6. O-O Bg7 7. exd6) 6. Bb3 Bg7 7. Ng5! (7. a4!? dxe5 8. a5 N6d7 9. Bxf7+ Kxf7 10. Ng5+ Kg8 (10... Ke8 11. Ne6) 11. Ne6 Qe8 12. Nxc7 Qd8 13. Nxa8 exd4 $13) 7... e6 8. Qf3 Qe7 9. Ne4 { [%cal Gc1g5] } 9... dxe5 { [%cal Gc1g5] } 10. Bg5 (10. dxe5!? { [%cal Gh7h6] } 10... h6 11. Nf6+ Kf8 12. Qc3! $36) 10... Qb4+ 11. c3 Qa5 12. Bf6 (12. Nf6+ Kf8 { [%cal Ge5d4,Ga5g5] } 13. d5 e4! 14. Nxe4 (14. Qxe4 h6) 14... exd5) 12... Bxf6 13. Qxf6 O-O 14. Qxe5 Qxe5 15. dxe5 $10) (4... Bg4 5. Be2 e6 (5... c6!?) 6. O-O Be7 7. c4 Nb6 8. Nc3 O-O 9. Be3 Nc6 (9... d5?! 10. c5 Bxf3 11. gxf3! Nc8 12. f4 { (Black generally suffers here) } 12... Nc6 13. b4 a6 14. Rb1 Bh4 15. Bd3 f5 16. Qh5) 10. exd6 cxd6 11. d5 exd5 12. Nxd5 Nxd5 13. Qxd5 $14 { Sutovsky, Emil - Berkes, Ferenc, 1/2-1/2, George Marx Memorial 3rd, 2005, https://lichess.org/oSk2WxDG } { [%csl Yd6] }) 5. Nxe5 { [%cal Gb8d7] } 5... c6 (5... g6 6. Bc4 (6. c4!? { Gallagher, Joseph G - Kengis, Edvins, 0-1, Bern op, 1992, https://lichess.org/6Uohk0Lz }) 6... c6 7. O-O Bg7 8. Re1 O-O 9. Bb3 Be6 (9... Nd7 10. Nf3 b5!? 11. Bxd5 cxd5 12. Nc3 Nf6 13. Nxb5 Ne4 { Tomizawa, Takanori - Schmidt, Loren R., 1/2-1/2, JPN/Hayakawa-10 (JPN), 2018, https://lichess.org/YehwCDQD }) 10. Nd2 (10. h3 a5 11. c3 Nd7 12. Nf3 b5 { Lunek, Ferry A. - Shuler, James, 1/2-1/2, GER/CM06/C (GER), 2019, https://lichess.org/bJ5dTm61 }) 10... Nd7 11. Ndf3 (11. Nef3!? Nc7 12. Ne4 Bxb3 13. axb3 Re8 { Fischer, Wolfgang - Polsterer, Heinz, 1/2-1/2, EU/C2019/ct  3, https://lichess.org/u9fkrldq } { [%cal Gf7f5,Ge7e5] }) 11... Nxe5 12. Nxe5 a5 13. c3 Qd6!?) (5... Nd7? 6. Nxf7! Kxf7 7. Qh5+ { [%cal Gh5f7,Gh5d5] } 7... Ke6 8. c4! N5f6 9. d5+ Kd6 10. Qf7 { [%cal Gf7e6] } 10... Ne5 11. Bf4 c5 12. Nc3 { [%cal Gc3b5] } 12... a6 13. b4! $18 { Manca, Federico - Sulskis, Sarunas, 1-0, Ortisei Server24 op, 2012, https://lichess.org/LZ2VAEJq }) 6. Be2 Bf5 7. O-O Nd7 8. Nf3! e6 9. c4 N5f6 10. Nc3 (10. Nh4!? Bxb1 11. Rxb1 Bd6 12. g3 O-O 13. Qc2 $14 { Benko, Bostjan - Brotherton, Trevor S., 1-0, WS/CCM/B/1, 2019, https://lichess.org/kWh2lsSv }) (10. Bf4!? Be7 11. Nc3 O-O 12. h3 $14 { Gunina, V. - Yuffa, D., 1-0, Kurnosov Mem Rapid 2017, https://lichess.org/s0iKPU5p }) 10... Ne4!? (10... Bd6 11. Nh4 Bg6 12. g3 O-O 13. Nxg6 hxg6 $14 { Karjakin, Sergey - Kamsky, Gata, 1-0, Beijing Sportaccord blitz, 2012, https://lichess.org/0dhNJLWm }) 11. Qb3 Nxc3 12. bxc3 Qc7 13. Nh4 Be4 14. Re1 Be7 15. Bf1 Nf6 16. f3 Bg6 17. Nxg6 hxg6 18. g3 Bd6 $10 { Popov, Evgeny Nikolaevich - Hablizel, Frank, 1/2-1/2, WSTT/4/15/S2, 2016, https://lichess.org/0xTgaxlb } *
+
+
+[Event "Alekhine's Defense Overview: Four Pawns Attack"]
+[Date "2021.12.22"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B03"]
+[Opening "Alekhine Defense: Four Pawns Attack, Main Line"]
+[StudyName "Alekhine's Defense Overview"]
+[ChapterName "Four Pawns Attack"]
+[ChapterURL "https://lichess.org/study/yIC5Aghz/WPv4paBn"]
+[Annotator "https://lichess.org/@/TonyRo"]
+[UTCDate "2021.12.22"]
+[UTCTime "00:39:30"]
+
+{ [%csl Gf4] }
+1. e4 Nf6 2. e5 Nd5 3. d4 d6 4. c4 Nb6 5. f4 dxe5 (5... g6 6. Nc3 Bg7 7. Be3 Be6! (7... O-O? 8. c5! N6d7 9. h4! { Bauer, Christian - Hug, Werner, 1-0, SUI-chT, 2001, https://lichess.org/G1dXGWKq }) 8. Rc1! (8. b3 O-O 9. Nf3 c5 10. dxc5 N6d7 11. cxd6 exd6 { [%cal Ge5d6,Gg7c3] } 12. Qxd6 Nxe5!) (8. d5 Bc8 $132) 8... O-O 9. b3 $16 { Fedorov, Alexei - Nevednichy, Vladislav, 1-0, Chebanenko Memorial Net, 2020, https://lichess.org/DgEkxmIP }) (5... g5 { !?? } { Zvara, Petr - Chetverik, Maxim, 1-0, Olomouc Agentura 64 Cup IM-B, 2007, https://lichess.org/007KemkT }) 6. fxe5 Nc6 (6... c5 7. d5 g6 (7... e6 8. Nc3 exd5 9. cxd5 c4 10. d6! Nc6 11. Nb5!? (11. Bf4 $18 { Kislinsky, Alexey - Shpagin, Vlas, 1-0, Kharkov Matskevich Memorial, 2009, https://lichess.org/3wzsCap4 }) 11... Qh4+ 12. g3 Qe4+ 13. Qe2 Qxh1 14. Bg5! $18 { Fontaine, Robert - Rogulj, Branko, 1-0, Kastav Hotel Opatija-A 04, 2002, https://lichess.org/saswS6HO }) 8. Nc3 Bg7 9. Bf4 O-O 10. Qd2! e6 11. O-O-O exd5 12. cxd5 $16 { Lubas, Józef - Reichert, Thomas, 1-0, WLS/SRCCC/21/D2 (WLS), 2021, https://lichess.org/DjhgVlzC } { [%cal Gc8g4,Gf8e8,Gb8a6] }) 7. Be3! (7. Nf3 Bg4 8. Be3 e6 9. Nc3 Be7 10. Be2 Bxf3 11. gxf3 Bh4+ 12. Kf1 $15) 7... Bf5 8. Nc3 e6 9. Nf3 { [%cal Gf8b4,Gd8d7,Gf5g4] } 9... Be7 (9... Bg4) (9... Qd7) (9... Bb4) 10. Be2! (10. d5!? exd5 11. cxd5 Nb4 { [%cal Gb4c2] } 12. Nd4 Bd7 (12... Bg6? 13. Bb5+ $18 { [%csl Ge8] }) 13. e6 fxe6 14. dxe6 Bc6 15. Qg4 { [%cal Gg4g7] } 15... Bh4+ 16. g3 Bxh1 { [%cal Gg3h4,Ge1c1] } 17. O-O-O $13) 10... O-O 11. O-O f6 12. exf6 Bxf6 13. Qd2 Qe7 14. Rad1 Rad8 { I think White is somewhere between += and +/- here. } { Robson, R. - Naroditsky, D., 1-0, ch-USA 2021, https://lichess.org/m7ZSii7N } 15. Qc1 (15. Kh1!? $14 { Robson, R. - Naroditsky, D., 1-0, ch-USA 2021, https://lichess.org/m7ZSii7N } { [%csl Re6,Yd4,Yc4] }) 15... e5! 16. d5 Nd4 17. Bxd4 exd4 18. Nxd4 Bg5 19. Qa1 (19. Nxf5?? Qc5+ $19) 19... Be3+ 20. Kh1 Bxd4 21. Rxd4 Na4 $132 { Sevian, Samuel - Boros, De, 1/2-1/2, Bay Area Int Open 2019, https://lichess.org/A8IgErpd } { [%cal Gc3a4,Ge7e2] } *
+
+
+[Event "Alekhine's Defense Overview: Other Tries for White"]
+[Date "2021.12.22"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B02"]
+[Opening "Alekhine Defense: Two Pawns Attack, Lasker Variation"]
+[StudyName "Alekhine's Defense Overview"]
+[ChapterName "Other Tries for White"]
+[ChapterURL "https://lichess.org/study/yIC5Aghz/074Mo0Va"]
+[Annotator "https://lichess.org/@/TonyRo"]
+[UTCDate "2021.12.22"]
+[UTCTime "13:58:21"]
+
+1. e4 Nf6 2. e5 (2. Nc3 d5 (2... e5! { transposes directly to a Vienna. }) 3. e5 { [%cal Gf6e4] } (3. exd5 Nxd5 4. Bc4 Nb6 5. Bb3 Nc6 (5... c5!? { is more enterprising }) 6. Nf3 Bf5 (6... g6 7. O-O Bg7 { seems solid enough for Black as well. })) 3... Nfd7 { [%cal Gc3d5,Gd7e5] } (3... Ne4 4. Nce2!) 4. f4 { [%cal Gc3d5] } 4... e6 5. d4 c5 6. Nf3 { transposes to a Classical French. }) (2. d3 d5 3. Nd2 { [%csl Gf6] } 3... c5 (3... e5!?) 4. Ngf3 Nc6 5. g3 e5! 6. Bg2 Be7 7. O-O O-O 8. c3 (8. exd5 Nxd5 9. Re1 f6 10. c3 Kh8!) 8... d4! $15) (2. Bc4? Nxe4 3. Bxf7+ Kxf7 4. Qh5+ Kg8 5. Qd5+ e6 6. Qxe4 d5 7. Qe2 Nc6 $17 { Hering, Hartmut - Bonfissuto, Giulio, 0-1, DJ-CT18/sf02, 2013, https://lichess.org/Vyi0TkoJ } { [%csl Gd4][%cal Ge6e5] }) 2... Nd5 (2... Ng8 { is kind of a silly move that has been tried a bit in quick time controls here and there. As far as I can tell the main idea is to try and procure a French Advance where the light-squared bishop is not trapped behind the pawn chain (even at the expense of a few moves) e.g. } 3. d4 d5 4. Bd3!? { White makes every effort to freeze out the light-squared bishop that Black is trying so hard to activate. } (4. c4! { also seems quite strong - it seems logical to open up the game as much as possible to exploit Black's loss of time. }) 4... c5 5. c3 Nc6 6. Ne2 Bg4 7. f3 Bh5 8. Nf4 Bg6 { O'Donnell, Tom - Fuster, Geza, 1-0, Oakham House, 1988, https://lichess.org/D0wt8Zar } 9. e6! $16 $146) 3. c4 (3. Nc3 Nxc3 { [%cal Gd2c3] } 4. dxc3 (4. bxc3 { allows Black to consider entering a position that looks like the French Winawer. Black has lost some time but has not been forced to block his light-squared bishop in or trade off his dark-squared bishop, e.g. } 4... d5 5. d4 c5 6. Nf3 Nc6 7. Be2 Bg4 $13 { Heidenfeld, Mark - Baburin, Alexander, 1/2-1/2, BCF-ch 86th, 1999, https://lichess.org/td2FA8ME }) 4... d6 5. Nf3 Nc6 (5... dxe5!? { has been played by some strong players and actually seems logical in a way. For the price of their castling rights, Black heads to an ending where he has an active majority on the kingside, while the same cannot be said about White on the other flank. } 6. Qxd8+ Kxd8 7. Nxe5 Ke8 { Sedlak, Nikola - Spraggett, Kevin, 1/2-1/2, Kostic Memorial 15th, 2008, https://lichess.org/jjqYhAfs }) 6. Bb5 Bd7 (6... g6!? { also seems good }) 7. Qe2 e6 8. Bf4 a6 9. Bd3 dxe5 10. Nxe5 Bd6 11. Bg3 Nxe5 12. Bxe5 Bc6 13. O-O-O Qe7 $10 { Mrdja, Milan - Laketic, Gojko, 1/2-1/2, Codogno op 3rd, 2011, https://lichess.org/ONOJ9b1r }) (3. d4 d6 4. Bc4 { uses a cute Qh5 double-attack idea to keep the balance, though I don't think Black should be at all worried however. They can use White's bishop as a target on the queenside, for instance } 4... Nb6 5. Bb3 dxe5 6. Qh5 { [%cal Gh5f7,Gh5e5] } 6... e6 7. dxe5 a5 8. a4 Na6 9. Nf3 Nc5 $10 { Milosevic, Goran - Baburin, Alexander, 0-1, SUI-chI op, 1992, https://lichess.org/lwRYLkQE }) 3... Nb6 4. c5 Nd5 { is the Chase variation, named so for obvious reasons. } { [%cal Gb1c3,Gd2d4,Gf1c4] } 5. Nc3 e6 *
+
+

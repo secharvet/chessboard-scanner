@@ -1,0 +1,22 @@
+[Event "Casual Blitz game"]
+[Site "https://lichess.org/uK0TyNsx"]
+[Date "2020.12.24"]
+[White "phildamasta"]
+[Black "lefonghua"]
+[Result "0-1"]
+[WhiteElo "1968"]
+[BlackElo "2606"]
+[BlackTitle "FM"]
+[TimeControl "300+3"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "B15"]
+[Opening "Caro-Kann Defense: Forgacs Variation"]
+[StudyName "EricRosen's Study"]
+[ChapterName "phildamasta - FM lefonghua"]
+[ChapterURL "https://lichess.org/study/uq6TT1T7/UzumjDbR"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 { [%clk 0:05:00] } 1... c6 { [%clk 0:05:00] } 2. d4 { [%clk 0:05:01] } 2... d5 { [%clk 0:04:45] } 3. Nc3 { [%clk 0:05:02] } 3... dxe4 { [%clk 0:04:44] } 4. Nxe4 { [%clk 0:05:04] } 4... Nf6 { [%clk 0:04:45] } 5. Nxf6+ { [%clk 0:05:06] } 5... exf6 { [%clk 0:04:46] } 6. Bc4 { [%clk 0:05:08] } 6... Bd6 { [%clk 0:04:47] } 7. g3 { [%clk 0:05:10] } 7... O-O { [%clk 0:04:40] } 8. Be3 { [%clk 0:05:10] } 8... Re8 { [%clk 0:04:34] } 9. Ne2 { [%clk 0:05:10] } 9... Bg4 { [%clk 0:04:21] } 10. Qd2 { [%clk 0:05:03] } 10... f5 { [%clk 0:04:14] } 11. O-O-O { [%clk 0:04:33] } 11... b5 { [%clk 0:04:09] } 12. Bg5 { [%clk 0:04:27] } 12... Qc7 { [%clk 0:03:45] } 13. Bd3 { [%clk 0:04:23] } 13... f6 { [%clk 0:03:22] } 14. Be3 { [%clk 0:04:17] } 14... Nd7 { [%clk 0:03:11] } 15. Rde1 { [%clk 0:03:59] } 15... Nb6 { [%clk 0:03:07] } 16. Nf4 { [%clk 0:03:46] } 16... Qf7 { [%clk 0:02:46] } 17. Kb1 { [%clk 0:03:44] } 17... g5 { [%clk 0:02:35] } 18. Ng2 { [%clk 0:03:00] } 18... Bf3 { [%clk 0:02:30] } 19. Rhg1 { [%clk 0:03:01] } 19... Nc4 { [%clk 0:02:20] } 20. Qc3 { [%clk 0:02:45] } 20... a5 { [%clk 0:01:42] } 21. Bxf5 { [%clk 0:02:40] } 21... Bb4 { [%clk 0:01:37] } 22. Qd3 { [%clk 0:02:30] } 22... Bxg2 { [%clk 0:01:32] } 23. c3 { [%clk 0:02:17] } 23... Nxe3 { [%clk 0:01:29] } 24. fxe3 { [%clk 0:02:03] } 24... Bd5 { [%clk 0:01:23] } 25. cxb4 { [%clk 0:01:34] } 25... Bxa2+ { [%clk 0:01:18] } 26. Kc1 { [%clk 0:01:33] } 26... axb4 { [%clk 0:01:17] } 27. h4 { [%clk 0:01:22] } 27... Bc4 { [%clk 0:01:17] } 28. Qc2 { [%clk 0:01:15] } 28... b3 { [%clk 0:01:11] } 29. Qf2 { [%cal Gf7e7] [%clk 0:00:51] } 29... Ra1+ { [%clk 0:00:39] } (29... Qe7 { [%csl Gb4,Ga1][%cal Ge7b4,Ga8a1] }) 30. Kd2 { [%clk 0:00:53] } 30... Ra2 { [%clk 0:00:39] } 31. Kc1 { [%clk 0:00:53] } 31... Rea8 { [%clk 0:00:32] } 32. hxg5 { [%clk 0:00:51] } 32... fxg5 { [%clk 0:00:30] } 33. Rh1 { [%clk 0:00:50] } 33... Be6 { [%clk 0:00:16] } 34. Bxh7+ { [%clk 0:00:49] } 34... Kg7 { [%clk 0:00:15] } 35. Qf1 { [%clk 0:00:45] } 35... Ra1+ { [%clk 0:00:13] } (35... Qe7 { [%csl Gb4][%cal Ge7b4] }) 36. Kd2 { [%clk 0:00:47] } 36... Qe7 { [%csl Gb4][%cal Ge7b4] [%clk 0:00:13] } (36... Qxf1 37. Rhxf1 (37. Rexf1) 37... Rxe1) 37. Rxa1 { [%clk 0:00:34] } 37... Qb4+ { [%clk 0:00:12] } 38. Ke2 { [%clk 0:00:35] } 38... Bg4+ { [%clk 0:00:14] } 39. Kf2 { [%clk 0:00:35] } (39. Kd3 { [%csl Gc4,Gf8,Ga7,Gg7][%cal Gb4c4,Ga8f8] } 39... Qc4+ 40. Ke4 (40. Kd2 Qb4+ { [%csl Gc1,Gb1][%cal Gd2c1,Gh7b1] } 41. Kc1 Rxa1+ 42. Bb1 Qc4+ (42... Rxb1+ 43. Kxb1 { [%cal Gb4d2] } 43... Qa5 (43... Qd2 44. Qe1 Bf5+ (44... Qc2+ 45. Ka1 Bf3 { [%cal Gf3h1] } 46. Rf1 { [%cal Gc2c4,Gc4a4,Ga4a2] } (46. Rg1 { [%csl Gg1] } 46... Qc4 47. Qa5) 46... Qc4) 45. Ka1 Qg2 46. Rf1 (46. Rg1 Qe4 { [%csl Ga5,Gb4,Gb3][%cal Ge1a5] }) 46... c5 47. Rxf5 Qa8+ 48. Kb1 Qa2+ 49. Kc1 Qa1+ 50. Kd2 Qxb2+ { [%csl Gc2][%cal Gb2c2] }) 44. Qd3 { [%csl Gh5,Gg6][%cal Gg4h5,Gh5g6] } 44... Bh5 { [%csl Rh7,Gg6,Rh5,Ge1][%cal Rh1h7,Gh5g6,Ga5e1,Ge1b1,Ge3e4] } 45. e4 Bg6 46. Rd1 Qa2+ 47. Kc1 Qa1+ 48. Qb1 { [%cal Ga1b1] } 48... Qxb1+ (48... Qa5 { [%csl Gb1,Gd1,Gc1,Gb3][%cal Gb3c2,Gg6b1] })) 43. Qxc4 bxc4 44. Kd2) 40... Re8#) 39... Rf8+ { [%clk 0:00:16] } 40. Kg2 { [%clk 0:00:36] } 40... Qd2+ { [%clk 0:00:16] } 41. Kg1 { [%clk 0:00:36] } 41... Qxe3+ { [%clk 0:00:17] } 42. Kh2 { [%clk 0:00:36] } 42... Rf2+ { [%clk 0:00:17] } 43. Kg1 { [%clk 0:00:37] } 43... Qxg3+ { 0-1 White resigns. } { [%clk 0:00:16] } 0-1
+
+

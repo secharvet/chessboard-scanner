@@ -1,0 +1,152 @@
+[Event "U.S. Chess League"]
+[Date "2009.11.11"]
+[White "Julio Becerra Rivero"]
+[Black "Hikaru Nakamura"]
+[Result "1-0"]
+[WhiteElo "2615"]
+[BlackElo "2759"]
+[Annotator "Club,Chess"]
+[Variant "Standard"]
+[ECO "B29"]
+[Opening "Sicilian Defense: Nimzowitsch Variation, Main Line"]
+[StudyName "Pros Losing Quickly"]
+[ChapterName "Julio Becerra Rivero - Hikaru Nakamura"]
+[ChapterURL "https://lichess.org/study/8Quz711p/lBtPQAUe"]
+
+1. e4 c5 2. Nf3 Nf6? { Simply a bad opening } 3. e5 Nd5 4. Nc3 e6 5. Nxd5 exd5 6. d4! { accelerating development } 6... Nc6 7. dxc5 Bxc5 8. Qxd5 d6 9. Bc4 (9. exd6) 9... Qe7 (9... Be6 10. Qd3 { should be about equal }) 10. Bg5 f6 { white to move } 11. O-O-O dxe5 (11... fxg5 12. exd6) 12. Rhe1 { 1-0 Black resigns. } (12. Bb6 Nxe5 13. Nxe5 Rxe5 14. Qxe5 Qf7#) (12. fxg5 Nxe5) 1-0
+
+
+[Event "Benasque Open"]
+[Site "Benasque, Spain"]
+[Date "2018.08.02"]
+[Round "3"]
+[White "Rosen, Eric"]
+[Black "Bellin, Jana"]
+[Result "1-0"]
+[WhiteElo "2369"]
+[BlackElo "2040"]
+[Variant "Standard"]
+[ECO "A16"]
+[Opening "English Opening: Anglo-Indian Defense, Queen's Knight Variation"]
+[StudyName "Pros Losing Quickly"]
+[ChapterName "Rosen, Eric - Bellin, Jana"]
+[ChapterURL "https://lichess.org/study/8Quz711p/FGLsBAAy"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. c4 Nf6 2. Nc3 b6 3. e4 d6 4. d4 c5 5. e5 cxd4 6. exf6 dxc3 7. Qd5 Qc7 8. Qxa8 Nc6 9. c5 { 1-0 Black resigns. } 1-0
+
+
+[Event "Leon 17th"]
+[Site "Leon"]
+[Date "2004.06.06"]
+[Round "2.1"]
+[White "Svidler, Peter"]
+[Black "Shirov, Alexei"]
+[Result "0-1"]
+[WhiteElo "2733"]
+[BlackElo "2713"]
+[Annotator "Psakhis,L"]
+[Variant "Standard"]
+[ECO "C02"]
+[Opening "French Defense: Advance Variation, Wade Variation"]
+[StudyName "Pros Losing Quickly"]
+[ChapterName "Svidler, Peter - Shirov, Alexei"]
+[ChapterURL "https://lichess.org/study/8Quz711p/qqJw9ge7"]
+
+1. e4 e6 2. d4 d5 3. e5 c5 4. c3 Qb6 5. Nf3 Bd7 6. Be2 Bb5 7. dxc5 Bxc5 8. b4!? (8. O-O { better }) 8... Bxf2+ 9. Kf1 Bd7 $146 (9... Bxe2+? 10. Qxe2 $18 { [%csl Rf2] }) 10. Qd2?! { [%cal Ge2d3] } 10... Nh6 11. Bd3?? Ng4 $17 12. Qg5?? Bb5! $19 (12... Bg3) 13. c4 (13. Qd2) 13... Bg3! 0-1
+
+
+[Event "Munich op 9293"]
+[Site "Munich"]
+[Date "1993.??.??"]
+[Round "9"]
+[White "Reich, Thomas"]
+[Black "Pavlovic, Milos"]
+[Result "1-0"]
+[WhiteElo "2340"]
+[BlackElo "2450"]
+[Variant "Standard"]
+[ECO "B22"]
+[Opening "Sicilian Defense: Alapin Variation, Barmen Defense"]
+[StudyName "Pros Losing Quickly"]
+[ChapterName "Reich, Thomas - Pavlovic, Milos"]
+[ChapterURL "https://lichess.org/study/8Quz711p/NFUEEwLv"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 c5 2. c3 d5 3. exd5 Qxd5 4. d4 g6 5. Nf3 Bg7 6. Be3 cxd4 7. cxd4 Nh6 8. Qc1 Bg4 9. Bxh6 Bxh6 10. Qxh6 Bxf3 11. gxf3 Nc6 12. Bg2 Qxd4 13. Nc3 Qc4 14. O-O-O { 1-0 Black resigns. } 1-0
+
+
+[Event "Hoogovens Knockout"]
+[Site "Wijk aan Zee NED"]
+[Date "1993.01.18"]
+[Round "2.1"]
+[White "Larry Mark Christiansen"]
+[Black "Anatoly Karpov"]
+[Result "1-0"]
+[Variant "Standard"]
+[ECO "E12"]
+[Opening "Queen's Indian Defense: Petrosian Variation, Farago Defense"]
+[StudyName "Pros Losing Quickly"]
+[ChapterName "Larry Mark Christiansen - Anatoly Karpov"]
+[ChapterURL "https://lichess.org/study/8Quz711p/GBQOV3Lx"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 Nf6 2. c4 e6 3. Nf3 b6 4. a3 Ba6 5. Qc2 Bb7 6. Nc3 c5 7. e4 cxd4 8. Nxd4 Nc6 9. Nxc6 Bxc6 10. Bf4 Nh5 11. Be3 Bd6 12. Qd1 { 1-0 Black resigns. } 1-0
+
+
+[Event "Tradewise Gibraltar"]
+[Site "Catalan Bay GIB"]
+[Date "2017.01.28"]
+[Round "10.17"]
+[White "Yifan Hou"]
+[Black "Babu M R Lalith"]
+[Result "0-1"]
+[Variant "Standard"]
+[ECO "A00"]
+[Opening "Grob Opening"]
+[StudyName "Pros Losing Quickly"]
+[ChapterName "Yifan Hou - Babu M R Lalith"]
+[ChapterURL "https://lichess.org/study/8Quz711p/2XUFcURO"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. g4 d5 2. f3 e5 3. d3 Qh4+ 4. Kd2 h5 5. h3 hxg4 { 0-1 White resigns. } 0-1
+
+
+[Event "Norway Chess blitz 2nd"]
+[Site "Flor & Fjaere"]
+[Date "2014.06.02"]
+[Round "6"]
+[White "Carlsen, Magnus"]
+[Black "Caruana, Fabiano"]
+[Result "1-0"]
+[WhiteElo "2881"]
+[BlackElo "2791"]
+[Variant "Standard"]
+[ECO "C07"]
+[Opening "French Defense: Tarrasch Variation, Open System, Euwe-Keres Line"]
+[StudyName "Pros Losing Quickly"]
+[ChapterName "Carlsen, Magnus - Caruana, Fabiano"]
+[ChapterURL "https://lichess.org/study/8Quz711p/8N9PkfWH"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 e6 2. e4 d5 3. Nd2 c5 4. Ngf3 cxd4 5. Nxd4 Nf6 6. exd5 Qxd5 7. Nb5 Na6 8. Nc3 Qd8 9. a3 Be7 10. Qf3 O-O 11. Bxa6 { 1-0 Black resigns. } 1-0
+
+
+[Event "IBM Man-Machine"]
+[Site "New York, NY USA"]
+[Date "1997.05.??"]
+[Round "6"]
+[White "Deep Blue (Computer)"]
+[Black "Garry Kasparov"]
+[Result "1-0"]
+[Variant "Standard"]
+[ECO "B17"]
+[Opening "Caro-Kann Defense: Karpov Variation, Modern Variation"]
+[StudyName "Pros Losing Quickly"]
+[ChapterName "Deep Blue (Computer) - Garry Kasparov"]
+[ChapterURL "https://lichess.org/study/8Quz711p/rWhaVyUL"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Nd7 5. Ng5 Ngf6 6. Bd3 e6 7. N1f3 h6 8. Nxe6 Qe7 9. O-O fxe6 10. Bg6+ Kd8 11. Bf4 b5 12. a4 Bb7 13. Re1 Nd5 14. Bg3 Kc8 15. axb5 cxb5 16. Qd3 Bc6 17. Bf5 exf5 18. Rxe7 Bxe7 19. c4 { 1-0 Black resigns. } 1-0
+
+

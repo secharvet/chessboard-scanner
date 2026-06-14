@@ -1,0 +1,52 @@
+[Event "Pawn Structures: Capítulo 1"]
+[Date "2025.08.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Pawn Structures"]
+[ChapterName "Capítulo 1"]
+[ChapterURL "https://lichess.org/study/VGicALac/MbnjIQxC"]
+[Annotator "https://lichess.org/@/EdgMex"]
+[UTCDate "2025.08.08"]
+[UTCTime "14:22:50"]
+
+ *
+
+
+[Event "Pawn Structures: Chapter 3"]
+[Date "2025.08.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Pawn Structures"]
+[ChapterName "Chapter 3"]
+[ChapterURL "https://lichess.org/study/VGicALac/AtHKd3l7"]
+[Annotator "https://lichess.org/@/EdgMex"]
+[FEN "r2r2k1/pp3ppp/5n2/3p4/5N2/P2RP2P/1P3PP1/2R3K1 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.08.08"]
+[UTCTime "14:31:42"]
+
+1... Rd7 { [%csl Gd5] } 2. Rcd1 Rad8 3. Rd4 g5 4. Ne2 { [%csl Gg5] } 4... h6 5. Nc3 { [%csl Ge3,Ge4][%cal Ge3e4] } 5... Kf8 { [%cal Gf8e7,Ge7e6] } 6. f3 { [%csl Gf6] } 6... Ke7 7. h4 (7. e4 dxe4 8. Rxd7+ Rxd7 9. Rxd7+ Kxd7 { [%cal Gf3e4] } 10. fxe4) 7... Ke6 8. Kf2 gxh4 9. Rxh4 { [%csl Gh6,Gd5,Gf7][%cal Gc3e2,Ge2d4] } 9... h5 10. Ne2 Rc8 11. Nd4+ Ke5 12. Rf4 Ne8 { [%csl Gf4,Gh5][%cal Gf4f5] } (12... Rc4 13. Rf5+ { [%cal Ge5d6] } 13... Kd6 14. Rxf6+) 13. Rf5+ Kd6 { [%cal Gf5h5] } 14. Rxh5 { [%csl Gd5,Gf7,Gh5][%cal Gd4f5] } 14... Nf6 { [%csl Gh5] } 15. Rh6 Ke7 16. Nf5+ Ke6 17. Ng7+ Ke7 { [%csl Gg2][%cal Gd1d2] } 18. g4 Rc2+ 19. Kg3 Rxb2 20. g5 Ne8 21. Nf5+ Kd8 { [%csl Ge8,Gh6] } 22. Rh8 Rb5 23. Rdh1 { [%cal Gh8e8,Gd8e8,Gh1h8] } 23... Rc7 24. Nd6 { [%csl Gb5] } (24. Rxe8+ Kxe8 { [%cal Gf5d6] } 25. Nd6+ Kd7 26. Nxb5 Rc5 { [%csl Gb5] } 27. Nxa7 { [%cal Gc5a5] } (27. Nd4 Rc3 28. Nb5 (28. Rh7) (28. Kf4 Rxa3 { [%csl Gf7] } 29. Rh7 Ke7 { [%csl Gg5][%cal Gg5g6] } (29... Ke8 { [%cal Gh7h8,Gh8h7] } 30. Rh8+ { [%cal Ge8e7] } 30... Ke7 31. Rb8 b6 { [%csl Gf7][%cal Gb8b7] } 32. Rb7+ Ke8 { [%cal Gd4f5,Gd4b5] } 33. Nf5 { [%csl Gf7,Ge8][%cal Gf5d6] } 33... a5 (33... Rc3 { [%cal Gf5d6] } 34. Nd6+ Kd8 35. Rxf7 a5 36. g6 { [%csl Gc3][%cal Gc3c1,Gc1g1,Gg6g7,Gg7g8] } 36... Rc1 37. Rf8+ Kd7 38. g7 Rg1 { [%csl Gg7][%cal Gd6f5] } 39. Nf5 a4 40. g8=Q (40. g8=R Rxg8 41. Rxg8 b5 42. Rb8 a3 43. Rxb5 a2 { [%cal Gb5d5,Gb5a5] } 44. Rxd5+ Kc6 45. Ra5) 40... Rxg8)) 30. g6) 28... Rxe3)) *
+
+
+[Event "Pawn Structures: Chapter 4"]
+[Date "2025.08.13"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Pawn Structures"]
+[ChapterName "Chapter 4"]
+[ChapterURL "https://lichess.org/study/VGicALac/mytultAG"]
+[Annotator "https://lichess.org/@/EdgMex"]
+[FEN "6k1/pp3ppp/8/3p4/8/P3P2P/1P3PP1/6K1 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.08.13"]
+[UTCTime "01:03:26"]
+
+1... f6 (1... b6 { [%csl Ga7] } 2. b4 { [%csl Ga3,Gb4,Gb6,Ga7] }) 2. Kf1 Kf7 3. Ke2 Ke6 4. Kd3 Ke5 5. f4+ Ke6 6. Kd4 Kd6 7. b4 Ke6 (7... Kc6 8. g4 Kb5 { [%cal Gb5a4,Ga3b4,Ga7a5,Ga5a4,Ga3a2,Ga2a1,Ga4a3] } (8... b5 9. f5 Kd6 { [%cal Gd6c6,Gc6d6] } 10. e4 dxe4 11. Kxe4 Kc6 12. Kd4 Kd6 13. Ke4 Kc6 14. Kd4 { [%csl Gd6,Gc6][%cal Ge4d5,Gd5e6] }) 9. Kxd5 { [%csl Gb5] } 9... Ka4 10. e4 Kxa3 11. e5 Kxb4 12. e6 a5 13. e7 a4 14. e8=Q Kb3 15. Qb5+) *
+
+

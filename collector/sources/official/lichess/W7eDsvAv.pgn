@@ -1,0 +1,187 @@
+[Event "Endgames: Two Rooks Ladder"]
+[Date "2025.10.07"]
+[Result "*"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Endgames"]
+[ChapterName "Two Rooks Ladder"]
+[ChapterURL "https://lichess.org/study/W7eDsvAv/ewP2XZfh"]
+[Annotator "https://lichess.org/@/Mason_Kaufman"]
+[FEN "3K3R/8/8/8/8/R7/4k3/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.07"]
+[UTCTime "14:47:56"]
+
+1. Rh2+ Kd1 2. Ra1# *
+
+
+[Event "Endgames: Two Rooks Ladder 2"]
+[Date "2025.10.07"]
+[Result "*"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Endgames"]
+[ChapterName "Two Rooks Ladder 2"]
+[ChapterURL "https://lichess.org/study/W7eDsvAv/aCW0mDRp"]
+[Annotator "https://lichess.org/@/Mason_Kaufman"]
+[FEN "8/R7/8/3k4/8/7R/8/4K3 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.07"]
+[UTCTime "14:49:18"]
+
+1. Rh5+ Kc6 2. Ra6+ Kb7 3. Rf6 Kc8 4. Rh7 Kd8 5. Rf8# *
+
+
+[Event "Endgames: King Assisted"]
+[Date "2025.10.07"]
+[Result "*"]
+[Variant "From Position"]
+[FEN "8/R7/8/3k3K/8/8/6R1/8 w - - 0 1"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Endgames"]
+[ChapterName "King Assisted"]
+[ChapterURL "https://lichess.org/study/W7eDsvAv/16TjWf4Q"]
+[Annotator "https://lichess.org/@/Mason_Kaufman"]
+[FEN "8/R7/8/3k3K/8/8/6R1/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.07"]
+[UTCTime "06:35:49"]
+
+{ [%csl Gd6,Ge6,Ge5,Ge4,Gd4,Gc4,Gc5,Gc6] }
+1. Rc2 { [%csl Gd6,Ge6,Ge5,Ge4,Gd4,Rc6,Rc5,Rc4][%cal Gd5d6] } 1... Ke6 { [%csl Gd5,Gd6,Ge5,Gf5,Gf6,Rd7,Re7,Rf7] } (1... Kd6 2. Kg5 Kd5 (2... Ke5 3. Rd2 Ke4 4. Ra3) 3. Kf5 Kd6 4. Ke4) (1... Kd4 2. Rd7+ Ke5 3. Re2+ Kf6 { [%csl Gg6,Gh6] } 4. Kg4 Kg6 5. Re6#) 2. Rd2 { [%csl Gf6,Gf5,Ge5,Rd5,Rd6,Rd7,Re7,Rf7] } 2... Ke5 { [%csl Rd5,Rd4,Rd6,Ge6,Gf6,Gf5,Gf4,Ge4] } 3. Re7+ { [%csl Rd6,Rd5,Rd4,Re4,Re6,Re5,Gf6,Gf5,Gf4] } 3... Kf6 { [%csl Re6,Re5,Rf7,Rg7,Bg6,Bg5,Gf5,Ge7] } 4. Rde2 { [%csl Re5,Re6,Re7,Rf7,Rg7,Gf5,Bg6,Bg5] } 4... Kf5 { [%csl Re5,Re4,Re6,Bg6,Bg5,Bg4,Gf6,Gf4] } 5. Rf7# { 1-0 White wins by checkmate. } { [%csl Re6,Rf6,Rg6,Rg5,Re5,Re4,Rf4,Rg4,Rf5][%cal Re4g6,Re6g4,Rg4e6,Rf5e4] } *
+
+
+[Event "Endgames: Queen and Rook 1"]
+[Date "2025.10.07"]
+[Result "*"]
+[Variant "From Position"]
+[FEN "8/8/2k5/8/8/4Q3/1R6/4K3 w - - 0 1"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Endgames"]
+[ChapterName "Queen and Rook 1"]
+[ChapterURL "https://lichess.org/study/W7eDsvAv/MVYdieVi"]
+[Annotator "https://lichess.org/@/Mason_Kaufman"]
+[FEN "8/8/2k5/8/8/4Q3/1R6/4K3 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.07"]
+[UTCTime "06:41:09"]
+
+{ [%csl Rb5,Rb6,Rb7,Rc5,Gc7,Gd7,Gd6,Gd5] }
+1. Qd4 { [%csl Rb5,Rb6,Rb7,Rc5,Rd5,Rd6,Rd7,Gc7] } 1... Kc7 { [%csl Rb6,Rb7,Rb8,Rc6,Rd6,Rd7,Rd8,Gc8] } 2. Rc2+ { [%csl Rd6,Rd7,Rd8,Rc6,Rc8,Rc7,Rb6,Gb7,Gb8] } 2... Kb8 { [%csl Rc8,Rc7,Ra7,Ga8,Gb7] } 3. Qb6+ { [%csl Rb7,Rc8,Rc7,Rb8,Ra7,Ga8] } (3. Qb4+ { [%csl Rc8,Rc7,Rb7,Ga8,Ga7] } 3... Ka7 { [%csl Rb7,Rb6,Rb8,Ga8,Ga6] } 4. Ra2# { [%csl Ra6,Rb6,Rb7,Ra8,Rb8,Ra7][%cal Ra8b6,Rb8a6,Ra6b8,Rb6a8] }) 3... Ka8 { [%csl Rb7,Rb8,Ra7,Ga8] } 4. Ra2# { 1-0 White wins by checkmate. } { [%csl Ra7,Rb7,Rb8,Ra8][%cal Ra8b7,Rb7a8,Ra7b8,Rb8a7] } *
+
+
+[Event "Endgames: Queen and Rook 2"]
+[Date "2025.10.07"]
+[Result "*"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Endgames"]
+[ChapterName "Queen and Rook 2"]
+[ChapterURL "https://lichess.org/study/W7eDsvAv/HZmF6lNC"]
+[Annotator "https://lichess.org/@/Mason_Kaufman"]
+[FEN "8/5K2/1Q6/6R1/8/5k2/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.07"]
+[UTCTime "14:51:28"]
+
+{ [%csl Rg4,Rg3,Rg2,Gf2,Gf4,Ge4,Ge3,Ge2] }
+1. Qe6 { [%csl Re4,Re3,Re2,Rg2,Rg3,Rg4,Gf2,Gf4] } 1... Kf4 { [%csl Gg5,Rg4,Rg3,Re3,Re4,Re5,Gf3,Rf5] } 2. Rf5+ { [%csl Rf5,Rf4,Rf3,Rg5,Gg4,Gg3,Re3,Re4,Re5] } 2... Kg4 { [%csl Rf4,Rf3,Rf5,Rg5,Rh5,Gh4,Gh3,Gg3] } 3. Qg6+ { [%csl Rf5,Rg5,Rf4,Rf3,Rg3,Rg4,Rh5] } 3... Kh4 { [%csl Rg5,Rg4,Rg3,Rh5,Gh3] } 4. Rh5# { [%csl Rg5,Rg4,Rg3,Rh3,Rh4,Rh5][%cal Rh5g3,Rg5h3,Rh3g5,Rg3h5] } *
+
+
+[Event "Endgames: Two Rooks Close 1"]
+[Date "2025.10.07"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Endgames"]
+[ChapterName "Two Rooks Close 1"]
+[ChapterURL "https://lichess.org/study/W7eDsvAv/5NguIsIA"]
+[Annotator "https://lichess.org/@/Mason_Kaufman"]
+[FEN "8/8/8/3k4/8/8/8/R3K2R w KQ - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.07"]
+[UTCTime "06:41:54"]
+
+{ [%csl Gc5,Gc6,Ge6,Gd6,Ge5,Ge4,Gc4,Gd4] }
+1. Rd1+ (1. Ra5+ { [%csl Gc4,Gd4,Ge4,Re5,Rc5,Gc6,Gd6,Ge6] } 1... Kc6 (1... Kc4 2. Rh4+ Kc3 3. Rb5 Kc2 4. Rh3 Kc1) (1... Kd6 { [%csl Rc5,Rd5,Re5,Gc6,Ge6,Ge7,Gd7,Gc7] } 2. Rh6+ { [%csl Rc5,Rd5,Re5,Re6,Rc6,Rd6,Gc7,Gd7,Ge7] } 2... Kc7 3. Ra7+ Kb8 { [%csl Ra8,Ga7,Rb7,Rc7,Gc8] } 4. Rhh7 { [%csl Rb7,Ra7,Rc7,Ra8,Gc8] } 4... Kc8 5. Ra8#) 2. Rh6+ Kb7 3. Rg5) *
+
+
+[Event "Endgames: Two Rooks Close 2"]
+[Date "2025.10.07"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Endgames"]
+[ChapterName "Two Rooks Close 2"]
+[ChapterURL "https://lichess.org/study/W7eDsvAv/laPWIwBX"]
+[Annotator "https://lichess.org/@/Mason_Kaufman"]
+[FEN "R7/8/8/4k3/1K6/8/R7/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.07"]
+[UTCTime "14:53:19"]
+
+{ [%csl Ge6,Gf6,Gf5,Gf4,Ge4,Gd4,Gd5,Gd6] }
+1. Re8+ { [%csl Re6,Re4,Gd4,Gd5,Gd6,Gf6,Gf5,Gf4][%cal Ge5f6,Ge5d6] } 1... Kf4 { [%csl Re5,Re3,Re4,Gf3,Gg3,Gg4,Gf5,Gg5] } (1... Kf6 2. Rf2+ Kg7 3. Re1 Kh8 4. Rg2 Kh7 5. Rh1#) (1... Kd6 { [%csl Bc5,Re7,Re6,Re5,Gd7,Gc7,Gc6,Gd5] } 2. Rd2+ { [%csl Bc5,Rd5,Re5,Re6,Re7,Rd7,Rd6,Gc6,Gc7] } 2... Kc7 { [%csl Gc6,Rd7,Rd6,Rd8,Rc8,Rb8,Gb7,Gb6] } 3. Kb5 { [%csl Rd6,Rd7,Rd8,Bc6,Bb6,Rc8,Rb8,Gb7] } 3... Kb7 { [%csl Ba6,Bb6,Bc6,Rc8,Rb8,Ra8,Ga7,Gc7] } 4. Rd7# { [%csl Rc6,Rb6,Ra6,Ra8,Rb8,Rc8,Rc7,Rb7,Ra7][%cal Ra8c6,Rc8a6,Rc6a8,Ra6c8] }) 2. Rf2+ (2. Rf8+ Ke5 3. Kc5 { [%cal Ge4e3] } 3... Ke4 4. Ra3 Ke5 5. Re3#) 2... Kg3 { [%csl Rf3,Rf4,Gf2,Gh4,Gh3,Gh2,Gg2,Gg3,Gg4] } 3. Rf7 { [%csl Rf4,Rf3,Rf2,Gg2,Gg4,Gh4,Gh3,Gh2] } 3... Kh4 { [%csl Gg4,Gg3,Gh3,Gh5,Gg5] } 4. Rg7 { [%csl Rg3,Rg4,Rg5,Gh5,Gh3] } 4... Kh5 { [%csl Rg5,Rg4,Rg6,Gh4,Gh6] } 5. Rh8# { [%csl Rg6,Rg5,Rg4,Rh4,Rh6,Rh5] } *
+
+
+[Event "Endgames: Two Rooks Close 3"]
+[Date "2025.10.07"]
+[Result "*"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Endgames"]
+[ChapterName "Two Rooks Close 3"]
+[ChapterURL "https://lichess.org/study/W7eDsvAv/EgbkeZdm"]
+[Annotator "https://lichess.org/@/Mason_Kaufman"]
+[FEN "8/8/8/8/4k3/8/3K4/R6R w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.07"]
+[UTCTime "15:01:41"]
+
+1. Ra5 { [%cal Ge4f4,Ge4d4,Ge4f3] } 1... Kd4 (1... Kf4 2. Rg1 { [%cal Gf4f2,Gf4f3,Ga5a4] } 2... Kf3 3. Rgg5 Kf4 4. Kd3 Kf3 5. Raf5#) (1... Kf3) *
+
+
+[Event "Endgames: Two Rooks Very Close"]
+[Date "2025.10.07"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Endgames"]
+[ChapterName "Two Rooks Very Close"]
+[ChapterURL "https://lichess.org/study/W7eDsvAv/1CLV9GUX"]
+[Annotator "https://lichess.org/@/Mason_Kaufman"]
+[FEN "8/8/8/4R3/2k5/5R2/8/4K3 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.07"]
+[UTCTime "14:39:45"]
+
+1. Kd2 Kd4 2. Rff5 Kc4 3. Rb5 Kd4 4. Rb4# *
+
+
+[Event "Endgames: Two Rooks Very Close 2"]
+[Date "2025.10.07"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Endgames"]
+[ChapterName "Two Rooks Very Close 2"]
+[ChapterURL "https://lichess.org/study/W7eDsvAv/gZkj541u"]
+[Annotator "https://lichess.org/@/Mason_Kaufman"]
+[FEN "8/8/4k3/5R2/2R5/4K3/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.07"]
+[UTCTime "14:56:02"]
+
+1. Ke4 Kd6 (1... Ke7) 2. Ra4 (2. Re5 Kd7 3. Kd5 Kd8 4. Ke6 Ke8 5. Rc8#) 2... Kc6 3. Ra6+ Kb7 4. Rg6 Kc7 5. Rf7+ Kd8 6. Rg8# *
+
+

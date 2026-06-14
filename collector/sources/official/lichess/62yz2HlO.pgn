@@ -1,0 +1,48 @@
+[Event "Jobava: Intro"]
+[Date "2024.08.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D01"]
+[Opening "Rapport-Jobava System"]
+[StudyName "Jobava"]
+[ChapterName "Intro"]
+[ChapterURL "https://lichess.org/study/62yz2HlO/TP4DkGfc"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[UTCDate "2024.08.04"]
+[UTCTime "14:57:24"]
+
+1. d4 d5 2. Nc3 Nf6 3. Bf4 { The Jobava has become quite popular and can be tricky to deal with. But it's actually pretty easy to neutralize if you know what you're doing. } 3... e6 { I think this is the easiest response to learn. Getting ready to bring out the bishop, pinning the knight on c3 if possible, and castle kingside quickly. White has two main responses... } { [%cal Gf8b4,Ge8g8,Gc7c5] } *
+
+
+[Event "Jobava: 4. e3"]
+[Date "2024.08.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D01"]
+[Opening "Rapport-Jobava System"]
+[StudyName "Jobava"]
+[ChapterName "4. e3"]
+[ChapterURL "https://lichess.org/study/62yz2HlO/CmzCEM4y"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[UTCDate "2024.08.04"]
+[UTCTime "14:58:08"]
+
+1. d4 d5 2. Nc3 Nf6 3. Bf4 e6 4. e3 { White continues with normal development, but this allows the pin. } 4... Bb4 { [%cal Gb4e1] } 5. Bd3 { The most common move. White develops while fighting against Ne4. } (5. Ne2 { Defends c3, but also blocks in the bishop. } 5... O-O 6. a3 Be7! { Since capturing on c3 would not create doubled pawns, we simply retreat and leave the knights to contemplate their life decisions. Next up is c5. } { [%cal Gc7c5] }) (5. a3 { Not very logical, as we wanted to take on c3 anyway. } 5... Bxc3+ 6. bxc3 c5 { Followed by more pressure on c3. } { [%csl Rc3][%cal Gd8a5,Ga5c3] }) (5. Nf3 Ne4 { It's already difficult for White to defend c3. } { [%csl Rc3][%cal Ge4c3,Gb4e1] }) 5... c5 { Striking in the center immediately. } 6. dxc5 Nbd7! { [%cal Gd7c5] } 7. Ne2 (7. Nf3 Nxc5 { Since White didn't defend c3, we keep the bishop on b4. } 8. O-O Bxc3 { Creating doubled isolated pawns. } 9. bxc3 O-O { We can look forward to playing against the weak pawns. } { [%csl Rc3,Rc2] } 10. Bg5 Nce4 11. Bxe4 dxe4) 7... Bxc5 { Now that White defended c3, we no longer want to take, so we retreat the bishop. } 8. O-O O-O { Black stands slightly better thanks to better control of the center. We can look to increase the central control with e5 at the right moment. } { [%cal Ge6e5] } *
+
+
+[Event "Jobava: 4. Nb5"]
+[Date "2024.08.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D01"]
+[Opening "Rapport-Jobava System"]
+[StudyName "Jobava"]
+[ChapterName "4. Nb5"]
+[ChapterURL "https://lichess.org/study/62yz2HlO/7MuBma6D"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[UTCDate "2024.08.04"]
+[UTCTime "14:58:25"]
+
+1. d4 d5 2. Nc3 Nf6 3. Bf4 e6 4. Nb5 { Avoiding the pin and threatening c7. } { [%csl Rc7][%cal Gb5c7,Gf4c7] } 4... Na6 { Simply developing and defending c7. } { [%cal Ga6c7] } 5. e3 Be7 { There is no rush to kick the knight out. We just develop and castle. } 6. Nf3 O-O 7. Bd3 (7. Be2 c6 8. Nc3 c5 9. O-O Bd7 10. Ne5 Be8 { [%cal Ga6b4,Gb4c6] }) (7. h4 c6 8. Nc3 c5 9. Ne5 Nb4 10. h5 h6 11. g4 Nd7 { [%cal Gb4c6,Ge7g5] }) (7. Ne5 c5 { Here it's a little more precise to play c5 in one move. } (7... c6?! 8. Nc3 c5 9. Bxa6 bxa6 10. Nc6 { is slightly annoying. }) 8. c3 Nb8 { [%cal Gb8c6] }) 7... c6 8. Nc3 c5 9. Bxa6 { Don't be scared of the doubled pawns. } (9. dxc5 Nxc5 { [%cal Gc5d3] }) (9. O-O c4 10. Be2 Bd7 { [%cal Gb7b4] }) 9... bxa6 { In exchange for doubled pawns, Black has the bishop pair and the open b-file to work with. } 10. O-O Nh5! { Going after the other bishop. } { [%csl Rf4][%cal Gh5f4] } 11. Be5 f6 12. Bg3 Nxg3 13. hxg3 Rb8 { Black stands slightly better thanks to the bishop pair and a flexible pawn structure. } { [%csl Rb2][%cal Gb8b2,Gc8d7] } *
+
+

@@ -1,0 +1,64 @@
+[Event "Boden - Kieseritzky Gambit: Introduction to the Boden-Kieseritzky Gambit"]
+[Date "2020.08.18"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C27"]
+[Opening "Bishop's Opening: Boden-Kieseritzky Gambit"]
+[StudyName "Boden - Kieseritzky Gambit"]
+[ChapterName "Introduction to the Boden-Kieseritzky Gambit"]
+[ChapterURL "https://lichess.org/study/XaGhm8Vt/nlsTTj6a"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2020.08.18"]
+[UTCTime "03:22:54"]
+
+1. e4 e5 2. Nf3 Nf6 3. Bc4 { The beginning of the Boden-Kieseritzky Gambit. White invites black to capture on e4 which could easily lead to a reverse Stafford Gambit } 3... Nxe4 (3... Nc6 { Transposes into a Two Knights Defense }) 4. Nc3 Nxc3 5. dxc3 { The main position of the Boden-Kieseritzky Gambit Accepted. White is down a pawn, but has better development and lots of tactical potential especially if black isn't careful. See the next chapters for further analysis } *
+
+
+[Event "Boden - Kieseritzky Gambit: How to get a crushing position in less than 10 moves"]
+[Date "2020.08.18"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C27"]
+[Opening "Bishop's Opening: Boden-Kieseritzky Gambit"]
+[StudyName "Boden - Kieseritzky Gambit"]
+[ChapterName "How to get a crushing position in less than 10 moves"]
+[ChapterURL "https://lichess.org/study/XaGhm8Vt/TkHKaegG"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2020.08.18"]
+[UTCTime "10:40:35"]
+
+1. e4 e5 2. Nf3 Nf6 3. Bc4 Nxe4 4. Nc3 Nxc3 5. dxc3 { Here we will see that there are many ways black can go terribly wrong by simply playing natural moves... } 5... Nc6? (5... e4? 6. Ng5 Qe7 7. Bxf7+ Kd8 8. Ne6+! $18 { ohhhh yeahhh 💪 }) (5... d6? 6. Ng5 Be6 7. Bxe6 fxe6 8. Qf3! $18 { A crushing blow } { [%csl Gb7,Gf7][%cal Gf3b7,Gf3f7] }) (5... Bc5 6. Ng5 O-O 7. Qh5 $18 { 😋 } { [%csl Gf7,Gh7][%cal Gh5f7,Gg5h7,Gh5h7,Gc4f7] }) 6. Ng5 $18 { 700+ players on lichess have fallen victim to Ng5. White is now crushing! } 6... d5 { the best try, but incredibly sad for black } 7. Bxd5 Be6 8. Nxe6 fxe6 9. Qh5+ g6 10. Bxc6+ bxc6 11. Qxe5 $18 { yum } *
+
+
+[Event "Boden - Kieseritzky Gambit: The best try for black: 5...f6!?"]
+[Date "2020.08.18"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C27"]
+[Opening "Bishop's Opening: Boden-Kieseritzky Gambit"]
+[StudyName "Boden - Kieseritzky Gambit"]
+[ChapterName "The best try for black: 5...f6!?"]
+[ChapterURL "https://lichess.org/study/XaGhm8Vt/13sXrtF2"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2020.08.18"]
+[UTCTime "10:47:18"]
+
+1. e4 e5 2. Nf3 Nf6 3. Bc4 Nxe4 4. Nc3 Nxc3 5. dxc3 f6! { Believe it or not, this is the best move for black. In fact, black is objectively better here (according to engines) and this is why the Boden-Kieseritzky gambit is seldom seen in high level play. However, at amateur level especially, white can still have some fun... } 6. Nh4 { Unleashing the queen } { [%cal Gd1h5] } (6. Nxe5? { Almost works, but doesn't work } 6... fxe5 7. Qh5+ g6 8. Qxe5+ Qe7 $19 { pinned! } { [%cal Ge7e1] }) 6... g6 (6... c6? 7. Qh5+ g6 8. Nxg6 $18) 7. f4 Qe7 (7... c6 { One of the most critical (and craziest lines) -- The following computer line seems to give some edge to black, but it still looks really fun! } 8. f5 d5 9. fxg6 dxc4 10. Qh5 Kd7 11. g7 Bxg7 12. Qg4+ Kd6 13. Qxg7 Qf8 $15) 8. f5 Qg7 (8... g5? 9. Qh5+ Kd8 10. Ng6 Qe8 11. Be2 $18 { Defending the queen and threatening Nxh8. White is crushing! } { [%csl Gh5,Gh8][%cal Ge2h5,Gh5h8,Gg6h8] }) 9. fxg6 hxg6 10. Qg4 Kd8 { The only move to keep some advantage for black! This defends the c8 bishop and threatens d5 } 11. Qg3 { preventing d5 and threatening Nxg6 } 11... g5 12. Nf5 Qh7 13. Rf1 { Further analysis required! } *
+
+
+[Event "Boden - Kieseritzky Gambit: Other move 4 responses for black"]
+[Date "2020.08.18"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C27"]
+[Opening "Bishop's Opening: Boden-Kieseritzky Gambit"]
+[StudyName "Boden - Kieseritzky Gambit"]
+[ChapterName "Other move 4 responses for black"]
+[ChapterURL "https://lichess.org/study/XaGhm8Vt/WRgf3vdB"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2020.08.18"]
+[UTCTime "11:07:21"]
+
+1. e4 e5 2. Nf3 Nf6 3. Bc4 Nxe4 4. Nc3 Nf6!? { Is perhaps the safest move that should lead to equality } (4... Nc6!? { Transposing into a center fork trick! }) 5. Nxe5 { [%csl Gf7] } 5... d5 6. Bb3 Bd6 7. d4 c6 8. Bg5 $10 { Chances for both sides! } *
+
+

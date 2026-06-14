@@ -1,0 +1,33 @@
+[Event "Local Chess Tournament"]
+[Site "Chess Club"]
+[Date "2023.12.19"]
+[White "Player1"]
+[Black "Player2"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A13"]
+[Opening "English Opening: Agincourt Defense, Catalan Defense Accepted"]
+[StudyName "EricRosen's Study"]
+[ChapterName "Player1 - Player2"]
+[ChapterURL "https://lichess.org/study/Vq9Z0MrY/wy1QENfb"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. c4 e6 2. g3 d5 3. Bg2 Nf6 4. Nf3 dxc4 5. Qa4+ Nc6 6. Qxc4 Bd6 7. O-O O-O 8. d4 b6 9. Nc3 Bb7 10. Rd1 Qe7 11. e4 e5 12. dxe5 Nxe5 13. Nxe5 Bxe5 14. Be3 Rad8 15. h3 Rfe8 16. f4 Bxc3 17. bxc3 Bxe4 18. Bxe4 Rxd1+ 19. Rxd1 Nxe4 20. Bd4 Nxg3 21. Qc6 Ne2+ 22. Kf2 Nxf4 23. Be3 Nd3+ 24. Rxd3 *
+
+
+[Event "EricRosen's Study: Chapter 2"]
+[Date "2023.12.19"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A13"]
+[Opening "English Opening: Agincourt Defense, Catalan Defense Accepted"]
+[StudyName "EricRosen's Study"]
+[ChapterName "Chapter 2"]
+[ChapterURL "https://lichess.org/study/Vq9Z0MrY/Mr6n1DoR"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2023.12.19"]
+[UTCTime "11:06:32"]
+
+1. c4 e6 2. g3 d5 3. Bg2 Nf6 4. Nf3 dxc4 5. O-O c6 6. Qc2 b5 7. a4 Bb7 8. Ne5 Qc8 9. b3 cxb3 10. Qxb3 a6 11. Nc3 Nbd7 12. Nxd7 Qxd7 13. Ba3 c5 *
+
+

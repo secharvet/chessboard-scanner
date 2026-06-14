@@ -1,0 +1,65 @@
+[Event "Lucchini gambit: Lucchini Gambit - 5.Ng5 Trap"]
+[Date "2020.08.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C50"]
+[Opening "Italian Game: Giuoco Pianissimo, Dubois Variation"]
+[StudyName "Lucchini gambit"]
+[ChapterName "Lucchini Gambit - 5.Ng5 Trap"]
+[ChapterURL "https://lichess.org/study/WsJcW3Z5/s2qyghSZ"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2020.08.26"]
+[UTCTime "05:31:26"]
+
+{ Video analysis: https://youtu.be/STwcmr-nIBo }
+1. e4 (1. h3) 1... e5 2. Nf3 Nc6 3. Bc4 Bc5 4. d3 f5 { The start of the Lucchini Gambit. While this is objectively dubious, there is certainly some hidden beauty in this variation... } { [%csl Gf5][%cal Gf7f5] } 5. Ng5 { A natural looking move (and also one of Stockfish's top suggestions) which aims to refute this opening right away. This has occurred in over 200 games on lichess. On the surface, it looks like black is in trouble. However, it is white who is about to fall into immense danger! } 5... f4! { Cutting off the dark-squared bishop's eye on the knight and threatening Qxg5. While is allows Nf7 or Bf7+, black has some deep ideas in mind... } { [%csl Gf4][%cal Gf5f4] } 6. Nf7 Qh4 7. g3 { [%csl Gf2] } (7. O-O? Nf6 { [%csl Gg4][%cal Gf6g4] } 8. Nxh8 (8. Nd2 b5! { Crazy move! Stockfish gives black a small edge, but this requires further analysis! }) 8... Ng4) 7... Qh3 8. Nxh8 (8. c3 d5 9. exd5 b5!! { Another highly chaotic variation! } 10. Bb3 (10. Bxb5 Kxf7 11. Bxc6 Bg4 12. Qb3 Nf6 13. d6+ Be6 14. Qb5 Bxd6 $17) 10... Kxf7 11. dxc6+ Kf8 $17 { [%cal Gc8g4] }) (8. Kd2 { engine move -- deserves maybe some more analysis } 8... Qg2) 8... d5!! { After extensive analysis, it appears black is winning after this earth-shattering move } { [%csl Gd5][%cal Ge4d5] } 9. Bxd5 (9. exd5 Nd4 10. c3 Bg4 11. Qa4+ Kf8 (11... Bd7 12. Qd1 Bg4) 12. cxd4 { [%csl Rc5,Rg3][%cal Gd4c5,Gf4g3] } 12... fxg3 13. dxc5 gxf2+ 14. Kd2 Qg2 15. Kc3 Qxh1 16. Nd2 Qe1 17. d4 Qe3+ 18. Bd3 (18. Kb4 a5+ 19. Kb5 Qxd4 { [%csl Gd7,Gb6][%cal Gg4d7,Gc5c6,Gd4b6,Gb6b5] }) 18... e4 { [%cal Gd2f1] } 19. Nxe4 Qxd3+ (19... f1=Q) 20. Kxd3 f1=Q+ 21. Kc3 Qf3+ { [%cal Gc3d2] } 22. Kc4 (22. Kd2 Re8 { [%cal Ge8e2] }) 22... Qxe4) 9... Bg4 10. f3 (10. Qd2 Nd4 $19 { [%csl Gg2,Gg4,Gd4,Gc5,Gh3,Rc1,Rb1,Ra1,Rh1,Rd5,Rh8][%cal Gh3g2,Gg4d1,Gd4c2,Gd4f3] }) 10... fxg3 11. fxg4 g2 { [%csl Gg2,Gg1][%cal Gg2h1,Gc5g1] } 12. Bxc6+ bxc6 13. Ke2 g1=N+ { [%cal Gg1e2] } 14. Rxg1 (14. Qxg1 Bxg1 15. Rxg1 Qxh2+ 16. Kf1 O-O-O) 14... Qxh2+ { [%csl Gf2][%cal Gh2f2] } *
+
+
+[Event "Lucchini gambit: Lucchini Gambit - 5.exf5?!"]
+[Date "2020.08.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C50"]
+[Opening "Italian Game: Giuoco Pianissimo, Lucchini Gambit"]
+[StudyName "Lucchini gambit"]
+[ChapterName "Lucchini Gambit - 5.exf5?!"]
+[ChapterURL "https://lichess.org/study/WsJcW3Z5/jwv7m6jq"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2020.08.30"]
+[UTCTime "18:53:18"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. d3 f5 5. exf5?! { 2nd most common move on lichess (played 269 times) } 5... d5 { The most natural move-- gaining and a tempo on the bishop and threatening to recapture on f5. This is much like a reverse King's Gambit Accepted. } 6. Bb5 { critical line - white pins the knight and threatens to capture on e5. Amazingly, black can gambit another pawn... } 6... Ne7 7. Nxe5 O-O { despite being down 2 pawns (temporarily) black is doing quite well! With better development and the guarantee to win the f5 pawn, there is great compensation for the slight material deficit } 8. Nxc6 bxc6 9. Ba4 Nxf5 $17 *
+
+
+[Event "Lucchini gambit: Lucchini Gambit - 5.0-0"]
+[Date "2020.08.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C50"]
+[Opening "Italian Game: Giuoco Pianissimo, Lucchini Gambit"]
+[StudyName "Lucchini gambit"]
+[ChapterName "Lucchini Gambit - 5.0-0"]
+[ChapterURL "https://lichess.org/study/WsJcW3Z5/mCTjDY1p"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2020.08.30"]
+[UTCTime "19:04:04"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. d3 f5 5. O-O { The most simple and likely the best approach for white } 5... Nf6 6. Nc3 (6. Ng5 { Is interesting, but nothing special for white } 6... Qe7! { Neither Nf7 nor Bf7 will do much harm. Engine gives close to equality but perhaps more analysis can be done }) 6... d6 7. Bg5 Na5!? { Attempting to remove the white's pesky light-squared bishop so black can castle and live happily ever after } { [%csl Rg8,Rc4][%cal Ga5c4,Rc4g8,Ge8g8] } 8. Bxf6! { slightly unnatural (3rd most common move on lichess), but Stockfish's top choice for concrete reasons. The following variation is a complicated engine line where it looks like white maintains a clear edge. } (8. Nd5 { Most played move on lichess (71 games) } 8... Nxc4 9. dxc4 c6 10. Nxf6+ gxf6 11. Bh6 { Out of 8 games on lichess this has been played in all 8. However, Bh6 is a clear mistake.. } 11... f4! $17 { [%csl Rh6][%cal Gd8e7,Gh8g8,Gc8g4] }) 8... Qxf6 9. Nd5! { A multipurpose move generating multiple threats! } { [%csl Rf6,Rc5,Ra5,Rc7][%cal Gd5f6,Gb2b4,Gb4c5,Gb4a5,Gd5b4,Gd5c7] } 9... Qd8 10. b4 Nxc4 11. bxc5 fxe4 12. dxc4 exf3 13. Qxf3 Be6 14. Rad1 $16 *
+
+
+[Event "Lucchini gambit: 5.Bxg8"]
+[Date "2020.09.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C50"]
+[Opening "Italian Game: Giuoco Pianissimo, Lucchini Gambit"]
+[StudyName "Lucchini gambit"]
+[ChapterName "5.Bxg8"]
+[ChapterURL "https://lichess.org/study/WsJcW3Z5/BXa0CkAm"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2020.09.04"]
+[UTCTime "06:06:05"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. d3 f5 5. Bxg8 Rxg8 6. Ng5 (6. Bg5 Be7 7. Bxe7 Qxe7) 6... Qf6 7. Qh5+? g6 8. Qxh7? Rh8 $19 *
+
+

@@ -1,0 +1,460 @@
+[Event "The Best 1.e4 Openings For White Below 1600: Introduction - The Best 1.e4 Openings Under 1600"]
+[Date "2025.12.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B00"]
+[Opening "King's Pawn Game"]
+[StudyName "The Best 1.e4 Openings For White Below 1600"]
+[ChapterName "Introduction - The Best 1.e4 Openings Under 1600"]
+[ChapterURL "https://lichess.org/study/w8FPB8TI/v1F3rIME"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2025.12.26"]
+[UTCTime "15:52:01"]
+
+{ Hello chess friends! I am GM Max Illingworth, and in this Study, I will show you the best scoring lines for White after 1.e4 below the 1600 level on Lichess.
+
+By discovering these lines, seeing why they work and playing them in your games, you will improve your results with the White pieces, through learning how to punish the most common mistakes your opponents are making in the opening. }
+1. e4 { As for how this Study is structured: I have begun with the analysis chapters (Chapter 2-8) so that you can see:
+- what the best openings below 1600 are;
+- why they work;
+- how to punish the most common mistakes your opponents are making!
+After that, I've included 14 Exercises (Chapters 10-23) in the 'Test Yourself' to help you remember the key ideas and also adapt to unexpected moves by the opponent.
+Enjoy the Study and please click the heart symbol just below the bottom right of the board if you found this Study helpful! } *
+
+
+[Event "The Best 1.e4 Openings For White Below 1600: Vs. 1...e5"]
+[Date "2025.12.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C34"]
+[Opening "King's Gambit Accepted: MacLeod Defense"]
+[StudyName "The Best 1.e4 Openings For White Below 1600"]
+[ChapterName "Vs. 1...e5"]
+[ChapterURL "https://lichess.org/study/w8FPB8TI/7PCME9HQ"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2025.12.26"]
+[UTCTime "15:52:07"]
+
+1. e4 e5 { You will face this, the Open Games, in about half your games. } 2. f4 { The King's Gambit scores 55.5% (factoring in the draws) in practice, and it's extremely effective at lower levels, because less advanced players particularly struggle when dealing with early aggression and initiative. } (2. Nf3 { is the most common move by far. }) 2... exf4 { A plurality of players take the pawn, but tend to follow up the pawn grab poorly. } { [%cal Gd8h4] } (2... Nc6 { is the 2nd most common below 1400, but after } 3. Nf3 { Black most often plays } 3... exf4 { anyway, transposing to a worse version of 2...exf4 (as we'll see via. the 2...exf4 3.Nf3 Nc6 move order). }) (2... d6 3. Nf3 Nc6 { is another passive but common sequence, which can be met in several ways. I'll suggest } 4. Bc4 { as a relatively straightforward attacking system, in the style of the Vienna Game (2.Nc3). If } { [%cal Ge1g1,Gd2d3,Gb1c3] } 4... Bg4 { a good reply is } 5. h3 Bxf3 6. Qxf3 { , breaking the pin with the bishop pair and space advantages in tow. } 6... Nd4 7. Qd3 { covers the Nxc2 threat. We will kick out their knight with c3, and we can still meet Qh4 with g3 to protect our kingside. } { [%csl Gh4,Gg3][%cal Gd3c2,Gc2c3] }) 3. Nf3 { The best move, developing the knight but also stopping ...Qh4. Now Black has a wide choice - they actually will play a decent move a lot of the time from here (there are a lot of them, after all), but usually misplay the follow-up, giving us an advantage. } 3... Nc6 { This is a strategic error, as it doesn't interfere with our general plan of d4 and Bxf4, regaining the pawn with a strong centre. } (3... Nf6 { might actually be Black's best move, but below 1600 they follow it up incorrectly. } 4. e5 { Kicking the knight with tempo. } 4... Nd5 { The most common below 1600, playing in Alekhine style. But we obtain a strong initiative with our next, rather creative, continuation. } (4... Nh5 { is the correct move, but only played in 6% of games below 1600, so you don't have to worry about it. }) 5. Nc3! { We accept doubled pawns to accelerate our development. } 5... Nxc3 6. dxc3 { Most of the time it's better to recapture toward the centre, but here the priority is regaining our pawn with Bxf4. } { [%cal Gc1f4] } 6... Nc6 7. Bxf4 { We are two moves away from castling long, with a big lead in development and space advantage that gives us a promising initiative. } { [%cal Gd1d2,Ge1c1] }) (3... d6 { is another good move for Black that's handled poorly below 1600. } 4. d4 { Now Black should hang on to the extra pawn at all costs with 4...g5, but most of the time they let us regain the pawn with Bxf4 for a pleasant advantage. } 4... Bg4 { This pin is quite ineffective. } 5. Bxf4 { We are clearly better, with a dominant centre and better development to boot. Such positions are the dream of any King's Gambit player. } { [%csl Ge4,Gd4][%cal Gb1c3] }) (3... g5 { The old main line, to hang on to the f4-pawn at all costs. It would be more effective if we weren't able to undermine their kingside structure right away. } 4. h4 { Queen's Gambit players may know a similar idea on the other side of the board, where the attempt to hang on to the extra pawn with ...dxc4 and ...b5 is undermined by a2-a4! } 4... g4 5. Ne5 { Now the f4 and g4-pawns are weak, although White is also not without weaknesses (like the h4-pawn), making for a very interesting fight. } 5... d6 { One of Black's best moves, but they don't play it well on the next move. } (5... h5 { is the second most common move, trying to defend g4. But it leaves f4 wanting: } 6. Bc4 Nh6 7. d4 d6 { Our knight is not trapped! } 8. Nd3 { We will regain the pawn on f4 next turn, with a pleasant advantage. } { [%csl Gf4] }) 6. Nxg4 { Now Black should play ...Nf6 or ...Be7, but these moves are rarely seen below 1600. } 6... Bxg4? { Seen in a whopping 50% of games below 1600, this exchange is hugely favourable for White. } 7. Qxg4 { We are ready to capture the f4-pawn, with an extra pawn for nothing. } 7... Nf6 8. Qxf4) 4. d4 { Not just threatening to regain the pawn with Bxf4, but also setting up d5 to kick their knight around like a football. } 4... d5 { You have to give the sub-1600 players some credit for collectively finding a counterattacking move, but it doesn't quite work for Black here. The best move is 4...g5, but it's rarely played, probably because 5.d5 and Qd4 looks so strong. } (4... d6 { is, as usual, too passive after } 5. Bxf4 { , when the massive centre gives White a clear advantage. } { [%cal Gb1c3] }) (4... Nf6 { is a little tricky, but } 5. Qe2 { is a creative reply, neutralizing ...d5 because of the discovered check down the e-file. After } 5... Bb4+ 6. c3 Ba5 7. Bxf4 O-O 8. Nbd2 { , White has the dream centre of pawns on e4/d4 and the development to back it up. It's not such an issue that our f1-bishop is blocked in, because we're castling long next move in any case. } { [%cal Ge1c1] }) 5. exd5 { When they play ...d5, we should generally take it. } 5... Qxd5 6. Nc3 { Much like in the Scandinavian (see Chapter 6), we punish them for developing the queen too early by attacking it with our knight. } 6... Qe6+ { Black really should pin the knight with ...Bb4, but White's doing well even after that. } 7. Be2 { We aren't just blocking the check, but have a threat of our own, that's almost always missed in practice. } 7... Bb4 { Falling into it. } 8. d5 { We fork the queen and knight to win a piece, with a decisive advantage.
+Note that there are a few other moves for Black that I didn't cover here, but which will be covered in Exercises 1-6 later. } { [%cal Gd5c6,Gd5e6] } *
+
+
+[Event "The Best 1.e4 Openings For White Below 1600: Vs. 1...c5"]
+[Date "2025.12.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B22"]
+[Opening "Sicilian Defense: Alapin Variation"]
+[StudyName "The Best 1.e4 Openings For White Below 1600"]
+[ChapterName "Vs. 1...c5"]
+[ChapterURL "https://lichess.org/study/w8FPB8TI/RUcNiXZk"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2025.12.26"]
+[UTCTime "15:54:33"]
+
+1. e4 c5 { The Sicilian Defence is historically the most popular defence to 1.e4 at master level, but you'll only see it about 12% of the time below 1600. Still, the players who do play it below 1600 tend to be a little more experienced, so it's good to have something against it. } { [%cal Gc5d4] } 2. c3 { The Alapin Sicilian, which scores 51.5% for White - which may not seem like much, but when Black already had a tiny plus score in the sub-1600 database after 1...c5, it's a small achievement to tip the odds even slightly back in our favour.
+Anyhow, the idea of 2.c3 is to renew the threat of d4, taking over the centre with pawns to establish the 'dream centre' of d4/e4. It's easy to understand, yet Black almost always responds poorly to it below 1600. } (2. Nf3 { followed by the Open Sicilian with d4 is the predominant choice. But Black has a lot of playable defences, so it takes more work to play this way as White. } { [%csl Gc6,Ge6,Gd6][%cal Gd2d4] }) 2... Nc6 { The most common below 1600 (played about 40% of the time), but it plays into our hands. } (2... d6 { , the most common move after 2.Nf3, now looks rather passive after } 3. d4 cxd4 4. cxd4 Nf6 5. Nc3 { , with a very strong centre for free for White, who is already clearly better. A schematic development from here would be Nf3, Bd3 and 0-0, possibly with h3 at some point to avoid a ...Bg4 pin - it may not be absolutely the most critical, but it will make it hard for your opponents to create counterplay. } { [%cal Gg1f3] }) (2... e6 { is a better move than 2...d6, but faces similar issues: } 3. d4 cxd4 4. cxd4 d5 { Black strikes back in the centre in French style. } (4... Nc6 { is actually more common below 1600, but we'll see it via. the 2...Nc6 3.d4 cxd4 4.cxd4 e6 move order. }) 5. e5 { We have an improved Advance French for White, because Black exchanged on d4 too soon, giving us the active c3-square for our knight. We can even use it immediately: } { [%csl Gc3] } 5... Nc6 6. Nc3 { and the usual ...Qb6 pressure on d4 is less effective when we can eventually kick it away after first Nf3, a3 and then Na4. }) (2... d5 { is one of the main lines for Black at master level, but only seen in 7% of the games. But this chapter was a bit short, so I added the main lines so that you're ready even as you start to face more advanced players (sub-2000). } 3. exd5 Qxd5 4. d4 { Now Black is still playing } 4... cxd4 { in half the games below 1600, and after } 5. cxd4 Nc6 { we transpose to the 2...Nc6 3.d4 cxd4 4.cxd4 d5 5.exd5 Qxd5 line below. }) (2... Nf6 { is perhaps the most reliable move for Black, but only seen in 5% of games. Still, I've added a few basic ideas for when you start facing players in the 1600-1999 range. } 3. e5 Nd5 4. d4 cxd4 5. Nf3 { We can delay the recapture on d4 to set the opponent more problems. } 5... Nc6 (5... e6 { If they defend the knight, just take back the pawn with } 6. cxd4 { and prepare short castling. } { [%cal Gf1c4,Ge1g1] }) (5... dxc3 { is a blunder after } 6. Qxd5 { , but still seen about 20% of the time at the sub-1600 level. }) 6. Bc4 Nb6 7. Bb3 { This is a promising gambit (in the style of the Smith-Morra Gambit) that gave me a lot of headaches as Black when I was a junior (even up to around 2200 FIDE). }) 3. d4 { As expected, we occupy the centre with both pawns, negating 1...c5's attempt to stop d4. } 3... cxd4 4. cxd4 { Still keeping the dream centre. } 4... e6 { Seen in about a third of all the games below 1600, but it can also arise via. the 2...e6 move order as noted before. } (4... d5 { This spirited counterattack in the centre also fails to solve Black's problems. } 5. exd5 Qxd5 { Our d4-pawn is under attack, so we defend it. } 6. Nf3 Bg4 { This pin on the knight seems annoying, but we can break the pin. } 7. Be2 { Now we will play for Nc3, d5 and 0-0, with a nice initiative. Note that Black cannot win the d4-pawn: } (7. Nc3 { is also possible, but gets complicated very quickly, whereas Be2 is a lot simpler. }) 7... Bxf3 8. Bxf3 Qxd4 { loses the queen after first removing the defender: } 9. Bxc6+ bxc6 10. Qxd4 { . A lot of players have fallen into this trap below 1600 on Lichess, so it's a good one to know! }) 5. d5 { The most critical, hitting the knight and increasing our space advantage. We also set a couple of nasty traps along the way. } (5. Nc3 d5 6. e5 { is also a decent choice for those who liked the improved Advance French from before. }) 5... exd5 6. exd5 Ne5 { The best move, keeping the knight in the centre. } (6... Nce7 { was actually the most common move in the very early days of the Lichess database (late 2017), but is still seen in nearly a quarter of the game. It loses to } 7. d6 Nc6 8. Qe2+ { , winning a piece as they are forced to block the check with a piece on e7. }) 7. Qe2 { Objectively not the best move, but Black handles it very badly at the sub-1600 level. } (7. Nc3 { gives a small edge for White, as does }) (7. Nf3 { - as you might expect, these moves can be interchanged. }) 7... d6 { A blunder, but seen in half of the games. Black loses a piece after } (7... Qe7 { is a better defence, but the best move is } 8. Be3) (7... Bb4+ { then ...Qe7, after which our queen feels a bit odd on e2. But almost no one finds this in sub-1600 practice. }) 8. f4 { due to the e-file pin. } *
+
+
+[Event "The Best 1.e4 Openings For White Below 1600: Vs. 1...e6"]
+[Date "2025.12.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C09"]
+[Opening "French Defense: Tarrasch Variation, Open System, Main Line"]
+[StudyName "The Best 1.e4 Openings For White Below 1600"]
+[ChapterName "Vs. 1...e6"]
+[ChapterURL "https://lichess.org/study/w8FPB8TI/ZV7wP2ex"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2025.12.26"]
+[UTCTime "15:56:59"]
+
+1. e4 e6 { The French Defence is only seen in 8% of games below 1600. So we don't need to memorize too much against it, having a natural, practical system will do the trick. } 2. d4 d5 3. Nd2 { The Tarrasch Variation, which is only seen 2% of the time below 1600, but scores a neat 53.5% for White. The main idea of this move is that we avoid the pin on the knight with 3.Nc3 Bb4, and can also support our centre with c3 in some lines. } (3. Nc3 Bb4 (3... dxe4 4. Nxe4)) 3... c5 { An unusual case for us where the most common move by the opponent is the best one, exploiting that our d4-pawn is left undefended. But they usually misplay it over the next several moves. } (3... dxe4 4. Nxe4 { is the Rubinstein Variation, which can also occur via. 3.Nc3 dxe4 4.Nxe4. I've faced this in a ton of games online and my experience matches pretty well with the Lichess database - that Black almost always misplays it from here. } 4... Nf6 { The most common move by far, but the knight exchange leads to concessions for Black. } 5. Nxf6+ Qxf6 { The queen is vulnerable to attack here, but the pawn recapture would have permanently damaged Black's structure. } 6. Nf3 { We develop and overprotect our d4-pawn. } 6... Nc6 { The most common move, but the same ideas for White will work against other replies. } 7. Bd3 { We set up two clever traps with this. } 7... Bd6 { After this or most 'normal' moves, we can trap their queen with } (7... Nxd4 { does not win a pawn for Black - } 8. Nxd4 Qxd4 9. Bb5+ { discovers the attack on the queen to win it. }) 8. Bg5 { , with an easy win. I've lost count of how many times I've got this queen trap on the board in my online games. }) (3... Nf6 { is seen in about 20% of the games, inviting a closed structure with } 4. e5 Nfd7 { . But this is the best version of the closed structure for White, as the knight is misplaced on d7 and we can overprotect our centre with } { [%csl Gd7][%cal Gc2c3] } 5. c3 c5 6. Bd3 Nc6 7. Ne2 { . The reason our knight develops to e2, rather than the more natural f3 square, is so that after } { [%csl Ge2,Gd4] } 7... Qb6 { , threatening d4, we have } 8. Nf3 { to guard our pawn with both knights and completely neutralize the pressure on d4. Note that forcing play doesn't really help Black here; after the most common } { [%cal Ge2d4,Gf3d4] } 8... cxd4 9. cxd4 Bb4+ 10. Bd2 Bxd2+ 11. Qxd2 O-O 12. O-O { , White is clearly better as they have better development, the superior bishop by far, and Black is still without real counterplay against our centre. } { [%csl Gd3,Gc8] }) 4. exd5 { Releasing the tension early makes our next several moves easy to play. } 4... exd5 5. Ngf3 { We defend our d4-pawn and prepare to castle short ASAP. } { [%cal Gf1b5,Ge1g1] } 5... Nc6 (5... Nf6 { is just as common, and I have to give some credit to the sub-1600s - they mostly play it well from here as Black. Still, after } 6. Bb5+ Bd7 (6... Nc6 { will be seen via. the 5...Nc6 6.Bb5 Nf6 move order. }) 7. Bxd7+ Nbxd7 8. O-O Be7 { So that Re1 doesn't come with check. } 9. dxc5 Nxc5 10. Re1 O-O { Black hasn't made any mistakes to this point, but we still have a pleasant position against their IQP with } 11. Nd4 { , blockading the d5-pawn and potentially setting up attacking ideas with a later Nf5. The engine thinks it's fine for Black, but any human would rather play White. }) 6. Bb5 { Pinning their knight. } 6... Bd7 { I'm not entirely sure why over a third of all sub-1600 players want to break the pin like this, but it works well for us. } (6... Nf6 { This is a bit inaccurate, as Black will run into some problems completing their kingside development. } 7. O-O { We can castle as Black isn't threatening to take our d4-pawn anyway. } 7... Be7 8. dxc5 { As usual, we want to exchange on c5 once they move their king's bishop. Either they let us hang on to the extra pawn with Nb3, or they lose time taking it back, as we'll see. } 8... Bxc5 9. Re1+ Be6 { Now White should be slightly precise to prove their advantage: } (9... Be7 10. Qe2 { is very unpleasant for Black as they can't castle: } { [%cal Ge2e8,Gb5c6] } 10... O-O 11. Bxc6 bxc6 12. Qxe7 { wins a piece. }) 10. Nb3 Bb6 11. Nbd4 { and the pins against c6 and e6 give us a strong initiative. } { [%cal Gb5c6,Gb5e8] }) (6... Bd6 { is the main line in master play, but only seen 2% of the time at the sub-1600 level. }) 7. O-O { Now Black is not in time to deal with the Re1 check effectively. } 7... Nf6 8. Re1+ Be7 9. dxc5 { Black is unable to recapture the c5-pawn, due to the pin. } { [%cal Ge1e8] } 9... O-O 10. Nb3 { White is up a pawn, and Black is without compensation for it. } { [%csl Gc5] } *
+
+
+[Event "The Best 1.e4 Openings For White Below 1600: Vs. 1...c6"]
+[Date "2025.12.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B12"]
+[Opening "Caro-Kann Defense: Mar贸czy Variation, Mar贸czy Gambit"]
+[StudyName "The Best 1.e4 Openings For White Below 1600"]
+[ChapterName "Vs. 1...c6"]
+[ChapterURL "https://lichess.org/study/w8FPB8TI/ym8UT0oc"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2025.12.26"]
+[UTCTime "15:59:20"]
+
+1. e4 c6 { The Caro-Kann is only seen in 5% of all games at the sub-1600 level, compared to 8% in the master database. But it's a very serious system and it also scores the best for Black in the Lichess sub-1600 database. So it's a good idea to have something against it that shifts the practical advantage back to us. } 2. d4 d5 3. f3 { The Fantasy Variation, which scores 52.5% for White - a big improvement from 48.5% after 1...c6! I believe part of the reason it's so effective is because the main idea of the Caro-Kann is to actively develop the c8-bishop, and our last move stops that plan. } (3. Nc3 dxe4 4. Nxe4 { is the old main line. }) (3. Nd2 { is shown as scoring the best, but after } 3... dxe4 4. Nxe4 { it just transposes to 3.Nc3 anyway, so that's why I recommended 3.f3. }) 3... dxe4 { Seen in nearly half the games, but now White obtains the 'dream centre'. } (3... e6 { is a solid move for Black, seen about 16% of the time. I suggest } 4. Nc3 { when we get a French-style position where I feel f3 is slightly more useful than c6, as it means that our centre is shored up against the standard tries of ...Bb4 or ...Nf6. } { [%cal Gf3e4] }) (3... Nf6 { leads to an improved French structure for White after } 4. e5 Nfd7 5. c3 { . Our f3-pawn may look a bit out of place for now, but we can remedy that easily with f4 and Nf3. And compared to the Tarrasch French with 3...Nf6 that we saw last chapter, Black is much slower to attack our centre. } { [%csl Gc3,Gd4,Ge5][%cal Gf3f4,Gg1f3] }) 4. fxe4 { The one thing we need to be careful about here is the open e1-h4 diagonal, but once that's taken care of, Black will be the one under attack. } { [%cal Gh4e1] } 4... e5 { This is the only good reply for Black. It's seen about 1/5th of the time below 1600 but is the main line at master level, so I've shared a few ideas to help you play White's attack. } { [%cal Gd8h4] } (4... Nf6 { is seen in nearly half the games, but White is much better after the next move, taking the initiative. I've made it a sideline despite being more common as there's a lot less for White to know here in comparison. } 5. e5! { The key move, taking the centre with tempo like in the Alekhine. } 5... Nd5 6. c4 Nb6 7. Nc3 { White is much better with the strong centre an can develop normally to consolidate that advantage. } { [%cal Gg1f3,Gc1e3,Gf1e2,Ge1g1] }) 5. Nf3! { A good move to remember - we stop the true threat of ...Qh4 and intend to play it as a promising gambit with our lead in development. } 5... exd4 (5... Bg4 { is also popular, but } 6. c3 { is a good reply, shoring up our centre so that we keep the 'dream centre' after exd4 cxd4. } { [%cal Gc3d4] }) 6. Bc4 { Our subsequent 'focus fire' on f7 is quite similar in spirit to the King's Gambit, and it helps that we keep an advantage even if Black defends correctly (spoiler alert: they usually don't). } 6... Bg4 { The most common move by a small margin, but unlike after the previous move, here it's just a blunder. } (6... Nf6 { A better defence (seen 21% of the time), but even this won't solve Black's problems. } 7. O-O { We castle, as it would be suicidal to take on e4 and open the floodgates to f7. } 7... Bc5 { The most common (seen in 33% of the games) but a bit of a tactical error, as the next sequence shows. This is already a bit more advanced as even a lot of players in the 1600-1999 range fall for this trap as Black, but I'll show it anyway. } 8. Ng5 { The key move, setting up the attack on f7. } 8... O-O { Now we win material with a tactic: } 9. Bxf7+ Rxf7 10. Nxf7 Kxf7 11. Qh5+ { They can't take our queen because of the pin on the knight! } { [%cal Gf1f7] } 11... Kg8 12. Qxc5 { White is up the exchange, with a winning position. }) 7. Bxf7+ { A typical trick in these open positions. } 7... Kxf7 8. Ne5+ { We regain the piece with a decisive attack on Black's uncastled king. } { [%cal Gd1g4] } *
+
+
+[Event "The Best 1.e4 Openings For White Below 1600: Vs. 1...d5"]
+[Date "2025.12.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B01"]
+[Opening "Scandinavian Defense: Valencian Variation"]
+[StudyName "The Best 1.e4 Openings For White Below 1600"]
+[ChapterName "Vs. 1...d5"]
+[ChapterURL "https://lichess.org/study/w8FPB8TI/ZlqqyEdo"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2025.12.26"]
+[UTCTime "16:01:32"]
+
+1. e4 d5 { The Scandinavian is a more popular opening at lower levels, seen in 11% of the games at the sub-1600 level (versus just 2% of the time at master level). Which means we should spend some time on it and make sure we're ready for the arising positions, which see a somewhat earlier confrontation than the other lines Black can play. } 2. exd5 { We should take the pawn to lure Black's queen into the open where we can attack it. } 2... Qxd5 { The predominant move. } (2... Nf6 { is seen occasionally (13% of sub-1600 games). We can gain a pleasant advantage by rather simple means: } 3. d4 Nxd5 4. Nf3 { and even knowing a simple setup like Be2/0-0/c4/Nc3 will suffice for an edge. But in certain cases we can also be more ambitious: } { [%cal Gf1e2,Ge1g1,Gc2c4,Gb1c3] } 4... Nc6 { The most common below 1600, with } (4... Bg4 { in a close 2nd place. }) 5. c4 Nf6 6. Nc3 { As tempting as it is to kick the knight immediately, I realized that it pays to be patient here: } 6... Bg4 { Black puts a lot of pressure on our d4 pawn, but we have an effective counter: } { [%csl Gd4] } 7. d5 Ne5 8. Be2 { This breaking of the pin also sets a neat tactical trick. } 8... Bxf3 9. Bxf3 { In most games below 1600, Black falls for it: } 9... Nxc4 { Even without this blunder, White was already much better with the space, better development and bishop pair. } 10. Qa4+ { Loose Pieces Drop Off! We win the undefended knight with this fork. } { [%csl Gc4][%cal Ga4c4,Ga4e8] }) 3. Nc3 { It pays to kick their queen, developing with tempo to seize an early initiative. } 3... Qd8 { Seen in 35% of the games below 1600, although I faced it proportionally even more often in my own games. This retreat keeps the queen safe, but does give up the initiative to White. } (3... Qa5 { This is the main line at master level. Now the Leonhardt Gambit with } 4. b4 { scores extremely well for White (57% win rate!) and I'm happy to recommend it, as Black usually meets it quite badly. } 4... Qxb4 5. Rb1 Qd6 6. Nf3 { We have a nice lead in development with our rook on the half-open b-file, and Black usually misplays it over the next few moves. } 6... Nf6 (6... Bg4 { is nearly as common as 6...Nf6, but of course } 7. Rxb7 { regains the pawn with a huge initiative. } { [%csl Gc7][%cal Gc3b5] }) 7. d4 { Even if Black plays a correct defence like 7...e6 or 7...g6, White still has full compensation for the pawn. But usually in sub-1600 games Black played } 7... Bg4 { (38% of games!), allowing } 8. Rxb7 { with a clear advantage now that the pawn is regained. }) (3... Qe6+ { is a check that's not very good, but can be a little tricky if you haven't seen it before. } 4. Be2 Qg6 { Threatening the g2-pawn. Black gets a reasonable game if we defend it, but we can sacrifice it instead for a massive initiative. } { [%csl Gg2] } 5. Nf3 { A great move, not fearing what will be the 4th move of Black's queen. } 5... Qxg2 6. Rg1 Qh3 7. d4 { While Black has only moved their queen around the whole game, White has swiftly developed their forces. The lead in development is amplified by the open position, and White is actually winning with best play from here. } { [%cal Gc1f4,Ge1c1,Gd1d2] }) (3... Qe5+ { This queen check looks ridiculous, but it's a favourite of GM Shimanov online. } 4. Be2 Bg4 { Black wants to recycle their bishop as trading minor pieces usually helps the side with less space relieve their cramp. } 5. d4 Bxe2 6. Ngxe2 Qa5 { If Black gets time to consolidate with moves like ...Nf6, ...e6, ...Nc6 and ...0-0-0, they will have a solid foundation with some counterattacking potential to boot. So I suggest disrupting Black's setup as soon as possible: } 7. b4 { You might notice the similarity here to our Leonhardt Gambit vs. 3...Qa5, but here it works a lot better again. } 7... Qxb4 { Taking the pawn is not a good idea, but it demonstrates our idea clearly. } 8. Qd3 { This is even better than immediately regaining the pawn with Rb1, as it avoids the ...Qc4 defence. } 8... Nc6 9. Rb1 Qd6 { White is winning in more than one way here. } 10. d5 { The engine's favourite, playing for the initiative, but the simple } (10. Rxb7 { is also decisive - Black's king is simply too weak here. } { [%csl Ge8][%cal Gc3b5] })) 4. d4 { White occupies the centre with their remaining pawn. } 4... Nf6 (4... e6 5. Nf3 Nf6 { just transposes to our main line. }) 5. Nf3 e6 { The most common move, seen in 1/3rd of the games (and it would be even more if you included the 4...e6 5.Nf3 Nf6 move order). It's not as bad a system as it looks, though it is rather passive, and my suggested setup exploits this. } (5... Nc6 { is the 2nd most common move, but } 6. Bb5 { is a rather annoying pin that gives us control of the game, as Black has no good pawn break to challenge our d4-pawn. } { [%cal Ge1g1,Gb5e8] }) (5... Bg4 { is the usual move at master level, and recommended in an old Scandinavian course by IM Bartholomew. A good reply is } 6. h3 Bxf3 (6... Bh5 7. g4 Bg6 8. Ne5 { gives White too much initiative against the vulnerable g6-bishop. } { [%cal Gf1g2,Gh3h5] }) 7. Qxf3 { We can play this because of the attack on b7. } { [%cal Gf3b7] } 7... c6 8. Be3 { We defend our pawn and develop. } (8. g4 { scores the best of all, but it's a bit computerish and impractical for a beginners repertoire. }) 8... e6 { With our centre secured, I suggest switching to castling short: } 9. Bd3 Bb4 10. O-O { It transpires that the doubled pawns are no problem for us: } 10... Bxc3 11. bxc3 { We can use the doubled pawns dynamically with c4, and we have nice half-open files for our rooks after Rab1 and Rfe1 to go with our bishop pair, space and development. } { [%cal Gc3c4,Gf1e1,Ga1b1] }) 6. Bd3 { I've recently switched to this move in my online games and have been pretty happy with the resulting positions. } (6. Bg5 Be7 7. Bd3 { is an equally valid move order that transposes to our main line (6.Bd3 Be7 7.Bg5), and can be recommended if you want to discourage ...Bb4 (personally, I want to encourage it). }) 6... Be7 { This is seen in 30% of the games, preparing castling. } (6... Bb4 { is just as common and can be met in various ways. But it's good to know that we don't need to fear ...Bxc3: } 7. O-O Bxc3 8. bxc3 O-O { It's hard for Black to really get at our doubled pawns (...Nd5 is well met by c4), whereas our attack on their king comes naturally: } 9. Ne5 Nbd7 10. Re1 { and a subsequent rook lift along the third rank, backed up by our bishops, will exert inexorable pressure on Black's king. } { [%cal Ge1e3,Ge3h3,Ge3g3,Gc1a3,Gc1g5] }) 7. Bg5 { A small twist - while there's nothing wrong with castling short, I like castling long for a more dynamic middlegame where the price of a mistake is much higher for Black. } 7... O-O { Black castles short, but not necessarily to safety in the long-term :) } 8. Qd2 { I love this queen move, preparing long castling and also giving us some fun ideas of sacking on h6 if they play ...h6 later. } 8... Nbd7 { The most common, but a little passive. } (8... h6 9. Bxh6 gxh6 10. Qxh6 { is already a crushing attack for White. Black is unable to bring pieces to the defence properly. } { [%csl Gg8][%cal Ge1c1,Gg2g5,Gf3g5] }) 9. O-O-O b6 10. h4 { It's natural to charge the h-pawn when we want to attack Black's king from a less open position. } 10... Bb7 { White has a lot of moves here that give a big advantage, but I'll go with a tricky one that anticipates their most natural move. } 11. Qe2 (11. h5 { is the most common and also not bad. If } 11... Bxf3 12. gxf3 { we get the half-open g-file for our attack on their king. } { [%cal Gh1g1,Gg1g8] }) 11... c5 { When facing ...c5 in the middlegame in bullet, I often wasn't quite sure of the best way to deal with it. But with our rook opposite their queen, the answer becomes easy. } { [%cal Gd1d8] } 12. dxc5 { We remove the obstacles to the d8-queen! } 12... Bxc5 (12... Nxc5 { loses the queen to } 13. Bxh7+ Kxh7 14. Rxd8) 13. Ne5 { Black has a tough time dealing with all our piece pressure. We don't really care if they later grab the g2-pawn as it just opens the g-file for the attack to their king. } { [%csl Gg1,Gg2][%cal Gd3h7,Gd1d8] } *
+
+
+[Event "The Best 1.e4 Openings For White Below 1600: Vs. 1...d6/g6"]
+[Date "2025.12.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B07"]
+[Opening "Pirc Defense"]
+[StudyName "The Best 1.e4 Openings For White Below 1600"]
+[ChapterName "Vs. 1...d6/g6"]
+[ChapterURL "https://lichess.org/study/w8FPB8TI/yFK8yMYw"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2025.12.26"]
+[UTCTime "16:07:52"]
+
+1. e4 { I have grouped the 1...d6 and 1...g6 systems together because they are often similar in spirit with the overall dark-squared strategy, and also neither move is popular enough on its own to deserve a full separate game. } 1... d6 { This, the Pirc Defence, is seen in just 3% of games, but this move can trip some inexperienced players up as Black doesn't give White a clear target to attack early. } (1... g6 { The Modern Defense, also seen in 3% of games below 1600. It's quite flexible (and I played it a lot over the years) but can be exploited by a savvy White player. } 2. d4 Bg7 3. Nc3 { First we take over the centre and ensure our e4-pawn is protected, neutralizing early counterattacks like ...c5 or ...d5. } 3... d6 { The most common, seen in 35% of sub-1600 games but it's a lot more popular at master level. } (3... e6 { tries to play either a Hippo setup with Bb7/Nd7/Ne7/Bg7 or a more aggressive ...d5 counterattack later. Against such passive setups, I suggest charging the h-pawn forward: } { [%cal Gg8e7,Gd7d5,Gd7d6] } 4. h4 Ne7 5. h5 { and we can either open up the h-file for a kingside attack with hxg6, or mess up their setup with h6, depending on how they play it. It may surprise you to learn that White is already close to winning once the pawn gets to h5. }) 4. Be3 { I really like this setup of Be3/Qd2/0-0-0, as it's easy to remember (develop all the queenside pieces first) and also punishes Black for their most natural reply, which is castling short ASAP to 'complete' their king's fianchetto setup. } 4... Nd7 { If Black delays ...Ngf6, we can still play our usual setup of developing the queenside first. } (4... Nf6 { is seen most of the time, but it transposes directly to our Pirc coverage (via. 1...d6 2.d4 Nf6 3.Nc3 g6 4.Be3 Bg7). }) (4... Nc6 { If they play a funny move like this, just continue normally: } 5. Qd2 Nf6 6. f3 { This is the one adjustment - if ...Ng4 is a threat, stop it with f3. This also supports a later g4 to build up our kingside pawn storm against their king. }) 5. Qd2 { We set up the queen and bishop battery so that Ngf6 is well met by Bh6. } { [%cal Gg8f6,Ge3h6] } 5... e5 6. O-O-O { We can even ignore the central tension for now and play our usual setup. } 6... exd4 7. Bxd4 Ngf6 8. f3 { Even though we don't have an easy Bh6, we can charge our kingside pawns toward their king once they castle short for a very strong attack. } { [%cal Gg2g4,Gh2h5] }) 2. d4 { When Black plays the opening passively, we should occupy the centre immediately. } 2... Nf6 3. Nc3 { Now Black has a choice, although most of the time (61% at sub-1600 level) they go for the kingside fianchetto. } 3... g6 { This is the position most people think of when you say 'Pirc Defence'. But if you looked at our answer to 1...g6 already, you'll know what's coming. } (3... c6 { is the Pribyl or Czech Defence, seen in 14% of games. But it's not very good - after an ambitious setup like } 4. f4 Qa5 { Threatening to win our e4-pawn with the pin, which explains our next move. } { [%cal Gf6e4,Ga5e1] } 5. Bd3 e5 6. Nf3 { , we have a strong grip over the centre and the queen is a bit strangely placed on a5. } { [%cal Gc1e3,Ge1g1] }) 4. Be3 { White's best scoring move with 54.5% at the sub-1600 level. It's only seen 5% of the time there but is virtually the main line at the master level, because our plan of Qd2/0-0-0/Bh6/h4-h5 (often with f3 thrown in at some point) is so easy to understand and execute. } 4... Bg7 { Developing the bishop naturally. } (4... c6 { is the main line at the master level, to avoid the plan I'm about to show, but almost no one plays like this below 2000. }) 5. Qd2 { We prepare long castling then Bh6 to trade their strong bishop and start a kingside attack. } 5... O-O { The predominant move (60% of games below 1600), but already a bit of a mistake, as it castles into White's coming attack. } (5... Ng4 { is an empty shot after } 6. Bg5 { - it's important to keep our dark-squared bishop alive for the attack on Black's king. }) 6. O-O-O { We may not necessarily play Bh6 on the very next move, but after f3 it very much comes on the agenda. } 6... Nc6 { The most common move (17% of games below 1600), but we can meet it quite comfottably. } (6... Nbd7 { is nearly as common, but can be met in the standard way with } 7. f3 { followed by Bh6 and h4-h5 with an easy h-file attack on Black's king, while Black has not even begun their counterplay. } { [%cal Ge3h6,Gh2h5] }) (6... c6 { is only seen 8% of the time below 1600, but is the most common at master play. A good reply is } 7. f3 b5 8. Bh6 { , when our e4-pawn is guarded against ...b4/...Nxe4 and we are ready to attack their king with h4-h5, forcing open the h-file one way or another. }) 7. f3 { We play this to avoid ...Ng4 and also because } (7. d5 Ne5 { gives Black counterplay with the active knight in the centre. } { [%cal Gc7c5] }) 7... e5 { The usual move, but now d5 gains in strength. } 8. d5 (8. Nge2 { is also good if you want a more open position with } 8... exd4 9. Nxd4 { [%cal Gg2g5,Gh2h5] }) 8... Ne7 9. g4 { White's attack plays itself from here. Note that the attempt to counterattack with } { [%cal Gh2h5,Gc1b1] } 9... c6 { fails tactically to } 10. dxc6 Nxc6 11. Qxd6 { , winning a pawn. } (11. h4 { is even stronger to the engine, but it's hard to argue against taking a free pawn. } { [%cal Gh4h5,Gh5h6] }) *
+
+
+[Event "The Best 1.e4 Openings For White Below 1600: Vs. Sidelines"]
+[Date "2025.12.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B04"]
+[Opening "Alekhine Defense: Modern Variation, Larsen Variation"]
+[StudyName "The Best 1.e4 Openings For White Below 1600"]
+[ChapterName "Vs. Sidelines"]
+[ChapterURL "https://lichess.org/study/w8FPB8TI/Ye1ulFi6"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2025.12.26"]
+[UTCTime "16:12:11"]
+
+1. e4 { This final chapter may seem longer than usual, but that's because I bunched five sidelines together rather than separating them into individual chapters. None of these moves are seen in more than 2% of games total so I wouldn't worry too much about remembering every little detail. } 1... Nf6 { The Alekhine Defence, which is one of the trickier sidelines due to the early attack on our centre, but objectively not that great. } (1... b6 { The Owen's Defence has a rather passive reputation and you'll notice that a lot of these sidelines can be met in a rather systematic way. } 2. d4 Bb7 3. Bd3 { I like to defend the pawn with the bishop, to avoid potential pins after Nc3 e6 and ...Bb4. It also scores a nice 54% for White below 1600. } 3... e6 { The most common move, continuing with the light-squared strategy. } (3... g6 4. Nf3 Bg7 { tries to play in a Hippo style with the Double Fianchetto. But you may already recall how to deal with the Hippo: } 5. h4 { forces some early weaknesses in Black's setup, before they can complete it. } { [%cal Gh4h5,Gh5h6] }) (3... Nf6 4. Qe2 { transposes to 3...e6 after } 4... e6 5. Nf3 { . }) 4. Nf3 { We prepare to castle short. This setup with e4/d4/Bd3/Nf3/0-0/c3 is known as the "Geller Setup' and it's an easy way to meet most of Black's sidelines. } 4... Nf6 { Attacking our centre. } 5. Qe2 { The practical move, continuing the Geller Setup with 0-0, c3 and Nbd2 in some order. White is clearly better due to the space advantage. } (5. e5 { is even more annoying for Black, although they can avoid it with the 3...Nf6 move order. } 5... Nd5 6. c4 Nb4 7. Be2 { Black's knight is very out of play and will soon be driven back with a3. } { [%cal Ga2a3] })) (1... Nc6 { The Nimzowitsch Defence, which is a better system than its unpopularity would suggest. But we can still get an advantage with logical moves. } 2. d4 { We should take the centre, as } (2. Nf3 e5 { move orders us out of the King's Gambit. } { [%cal Gf2f4] }) 2... e5 { Played in 28% of games, but we can thwart Black's attempts to transpose to 1.e4 e5 by taking more central space. } (2... d5 { This is the best move for Black (and seen in 27% of games), trying to get a good version of a Scandinavian after the exchange of the e4- and d5-pawns. So we should avoid that: } 3. e5 { I haven't recommended closed structures a lot in this repertoire, but here it makes perfect sense because the usual counterplay against our centre with ...c5 is blocked by their knight on c6. } { [%csl Gc6][%cal Gc7c5] } 3... Bf5 { Unlike in the French, Black develops their bishop more actively, but it's not enough to solve their problems. } { [%csl Gc8,Ge6][%cal Gc6b4,Gb4c2] } 4. c3 { A practical move to prevent annoying ...Nb4 attacks. } 4... e6 (4... f6 { If they attack our centre, we can shore it up with } 5. f4 { for a solid pawn chain. }) 5. f4 { Objectively speaking, this is not the best move for White, but it scores the best for White, and has the advantage that our next several moves become very easy to play and understand when we already have the strong pawn chain b2-c3-d4-e5-f4 to guard us against any dangers. } 5... Be7 { Black continues developing their kingside. } 6. Nf3 Nh6 7. Bd3 { We are ready to castle, with a tiny advantage due to our space advantage and the fact ...f6 is neutralized by our f4-pawn. } (7. Be2 { is objectively a little bit better, pointing out that the f5-bishop can potentially become a target later. } { [%csl Gf5][%cal Ge1g1] })) 3. d5 { Kicking their knight with tempo. } 3... Nce7 { The best square for the knight, preparing to go to g6. } { [%cal Ge7g6] } (3... Nd4 4. c3 { traps their knight and is a common blunder below 1600. }) 4. Nf3 { We attack their e5-pawn immediately to reduce their options. } 4... d6 { The most common in practice, but the easier move to handle in my view. } (4... Ng6 { When their knight goes to g6, it's natural to try and kick it away: } 5. h4 h5 6. Bg5 { and Black must make some sort of concession. } 6... f6 7. Be3 { Black is no longer able to play ...Nh6 or develop their f8-bishop actively (as ...Bb4 is met by c3) and greatly suffers as a result. }) 5. c4 { Now we can play an improved King's Indian where the knight is a bit misplaced on e7 and we can hold back their ...f5 counterplay with h3 and a well-timed g4. I realize it may not be the most natural habitat for a 1.e4 player to play a 1.d4 structure, but it's a massively improved version for us. } { [%cal Gb1c3,Gh2h3,Gf1d3] }) (1... a6 { The St. George Defense, which engines say is not that terrible, but only if Black transposes to a weaker version of another opening right after. } 2. d4 { We take the centre, as usual. } 2... b5 { Preparing ...Bb7 to attack our centre, but you'll notice it takes a move longer for Black compared to the Owen's Defence (1...b6/2...Bb7). } 3. Bd3 { We defend our pawn in anticipation of ...Bb7. } 3... Bb7 4. Nf3 { While it's not the top engine line, sticking with the Geller Setup is practical, easy for us for remember, and still keeps a very nice advantage. } 4... e6 5. c3 c5 6. O-O { Our subsequent moves from here can be Re1 and Nbd2 to overprotect the e4-pawn. } 6... c4 { A little bit of a strategic error, releasing the tension against our centre. But it's the most common by far below 1600. } 7. Bc2 Nf6 8. Re1 { We can continue with our normal setup for a big advantage, playing e5 at the right time to increase our space advantage. } (8. e5 Nd5 9. Ng5 { immediately is also tempting, going for the kill with Qh5, Qf3 or f4-f5 depending on how they play it. } { [%csl Gf7][%cal Gf2f5] })) (1... f5 { is the Duras Gambit and the worst move on the board for Black. It's very easy to deal with: just take the pawn and hang on to it. } 2. exf5 { We already threaten Qh5 to win more material. } { [%cal Gd1h5] } 2... Nf6 3. d4 d5 4. Bd3 { White is up a pawn with the much better position to boot. } { [%cal Gd3f5] }) 2. e5 { We attack their knight for an early initiative. } 2... Nd5 3. d4 { Establishing the dream centre, only a bit further advanced this time. } { [%csl Gd4,Ge5] } 3... d6 { Black wants to attack our centre with pawns and pieces, but we can support it with our own pieces. } { [%csl Ge5][%cal Gd6e5] } (3... e6 { is seen in nearly a quarter of games (23%) below 1600. But it's very passive and after } 4. c4 { we have total central domination basically for free. } { [%cal Gb1c3,Gg1f3] }) 4. Nf3 { I like this move, overprotecting e5 and allowing us to activate our knight if they exchange. } 4... dxe5 { Seen in 35% of games below 1600, this is also popular at master level, to reduce White's space advantage. } (4... Bg4 { is historically the most common move at master level, but has a poor reputation nowadays. It's still seen 27% of the time below 1600 though as the pin on the knight is rather natural. } 5. Be2 { We break the pin and prepare short castling. } 5... Nc6 6. O-O { We complete kingside development, as Black is still not threatening to win our e5-pawn. } (6. c4 Nb6 7. e6 fxe6 8. O-O { is a really fun gambit I discovered while preparing this Study, but it's not an appropriate suggestion for less advanced players. }) 6... dxe5 { Trying to leave White with an e5-pawn to target. } (6... Bxf3 7. Bxf3 dxe5 8. dxe5 Nxe5 9. Bxd5 { demonstrates the previous point. }) 7. Nxe5 { This recapture with the knight thwarts Black's plans. } 7... Bxe2 8. Qxe2 Nxd4 { Black grabs the pawn as otherwise their position is pretty depressing without any space. } 9. Qc4 { The key move, hitting their knight and preparing Rd1. } 9... Ne6 10. Rd1 c6 11. Nc3 { White already has a decisive attack for the pawn due to Black's lack of development. } { [%cal Gc4f7,Gd1d8] }) (4... Nc6 { can be a bit tricky the first time one sees it. But a good reply is } 5. c4 (5. Bb5 { is a practical alternative if you don't want to sack a pawn out of the opening. }) 5... Nb6 6. e6 { and Black has a hard time getting their pieces out after this pawn sacrifice. } 6... Bxe6 { Surprisingly this is the most common move below 1600, even though it just loses a piece after } (6... fxe6 { is correct, when after } 7. Nc3 { White is significantly better, based on meeting ...g6 with h4-h5 and ...e5 with d5. In either case, Black struggles to develop their kingside properly. } { [%csl Ge7,Ge6] }) 7. d5 { . }) 5. Nxe5 { We recapture with the knight, both to avoid giving Black a target in the e5-pawn, and to set up some interesting tactical ideas against f7. It's good news for us that Black's most common moves below 1600 all have some problems. } 5... f6 { I was stunned to see this was the most common below 1600 (19% of games) as it's a clear blunder. } (5... e6 { doesn't look entirely stupid despite blocking in the c8-bishop, but } 6. Qf3 { forces some concession from Black to defend the f7-pawn, and we have a strong initiative in the arising position. } { [%cal Gf3f7,Gb1c3,Gc1e3,Ge1c1] }) (5... Nc6 { is a bit of a strategic mistake, but the greatest punishment comes from } 6. Bb5 { , pinning the knight. }) (5... Bf5 { also runs into problems on f7 after } 6. Qf3 e6 7. Bd3 { , when Black must contort to avoid a Qxf7 mate. }) (5... Nd7 { is only played in 10% of the games, but I included it because the refutation is a bit complicated: } 6. Nxf7 Kxf7 7. Qh5+ { In most games Black doesn't even try to save the knight with ...Ke6, making our life very easy. } 7... g6 (7... Ke6 8. c4 { These lines are admittedly way too complicated to cover in a Study for sub-1600 players, but you can trust me that White is much better with Black's king stuck in the centre. It's like a Fried Liver Attack for White, only better. } { [%cal Gd4d5] }) 8. Qxd5+ { White is up a pawn with a big attack on Black's uncastled king. }) 6. Qh5+ { This just wins material by force. } 6... g6 7. Nxg6 hxg6 8. Qxh8 { White is up an exchange and a pawn, easily enough to win. } *
+
+
+[Event "The Best 1.e4 Openings For White Below 1600: Test Yourself"]
+[Date "2025.12.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "The Best 1.e4 Openings For White Below 1600"]
+[ChapterName "Test Yourself"]
+[ChapterURL "https://lichess.org/study/w8FPB8TI/ldYu4s1R"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2025.12.26"]
+[UTCTime "18:42:28"]
+
+{ Over the next 14 chapters (Chapters 10-23), you will test yourself with some interactive lessons on how well you can apply the ideas in the analysis!
+
+In many cases I will try to trip you up with a different move to what I covered for Black in the analysis. This will help you to be ready for unexpected moves in your own games, so that you can adapt the ideas effectively and make them work in a different situation.
+
+Good luck! If you need help, try using the 'hint' button or read the explanations I wrote for various alternatives that don't work quite as well as my recommendation. }
+ *
+
+
+[Event "The Best 1.e4 Openings For White Below 1600: Exercise 1"]
+[Date "2025.12.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C34"]
+[Opening "King's Gambit Accepted: MacLeod Defense"]
+[StudyName "The Best 1.e4 Openings For White Below 1600"]
+[ChapterName "Exercise 1"]
+[ChapterURL "https://lichess.org/study/w8FPB8TI/wbLL9CAN"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2025.12.26"]
+[UTCTime "18:42:44"]
+[ChapterMode "gamebook"]
+
+1. e4 e5 { The Open Games - you'll face it in half your games, which is why there are 6 Exercises for it! } 2. f4 (2. Nf3 { This is the main line at master level, but in this repertoire I am recommending the King's Gambit with 2.f4. }) 2... exf4 { Black accepts our gambit. } 3. Nf3 { We prevent ...Qh4 and prepare to regain our sacrificed pawn with d4/Bxf4. If we achieve this, we will dominate the centre. } 3... Nc6 { The knight is misplaced here, as you may recall from the analysis before. } 4. d4 { We establish the 'dream centre' with pawns on d4 and e4 and threaten to regain the pawn with Bxf4 next move. } 4... d5 { Black counterattacks in the centre! } 5. exd5 { Luring their queen into the open. } 5... Qxd5 6. Nc3 { A great move, attacking the queen with tempo. } (6. Bxf4 { Regaining the pawn is not bad, since 6...Qe4 7.Qe2! saves our bishop with the pin to the king - well done if you spotted that. But my recommended move gives us more of an initiative by attacking their queen with tempo. }) 6... Qe6+ 7. Be2 { We block the check and develop. } 7... Nf6 { A new move for us, but the ideas are the same as usual for White. } 8. d5 { Winning a piece! } 8... Qe7 9. dxc6 *
+
+
+[Event "The Best 1.e4 Openings For White Below 1600: Exercise 2"]
+[Date "2025.12.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C34"]
+[Opening "King's Gambit Accepted: Schallopp Defense"]
+[StudyName "The Best 1.e4 Openings For White Below 1600"]
+[ChapterName "Exercise 2"]
+[ChapterURL "https://lichess.org/study/w8FPB8TI/HtIqGt9m"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2025.12.26"]
+[UTCTime "18:43:23"]
+[ChapterMode "gamebook"]
+
+1. e4 e5 2. f4 exf4 3. Nf3 Nf6 4. e5 { We attack their knight with tempo. } (4. Nc3 { This move is honestly not bad, but I've recommended a more aggressive reply as } 4... d5! { gives Black an improved version of the ...d5 lines. Still, this was only played in 11% of games below 1600 so your move (followed by d4 and Bxf4) would probably still work in practice. }) (4. d3 { This is a bit passive - we'd rather play d4 if we can help it. }) 4... Nd5 5. Nc3 (5. d4 { This is natural but runs into 5...d6 when the weakness of e3 will lead to some problems for White down the stretch. My suggested variation avoids that issue. } 5... d6 { [%cal Gd5e3] }) (5. Bc4 { Not the worst idea in the world, but we lose the initiative after 5...Nb6 (hitting our bishop) and ...d6. } 5... Nb6 6. Bb3 d6) 5... Nxc3 6. dxc3 (6. bxc3 { In most positions we should recapture toward the centre, but here it's more important to get in Bxf4 ASAP }) 6... Nc6 7. Bxf4 { We have a strong initiative after Qd2/0-0-0 with our lead in development and central space advantage. } { [%csl Ge5][%cal Gd1d2,Ge1c1] } *
+
+
+[Event "The Best 1.e4 Openings For White Below 1600: Exercise 3"]
+[Date "2025.12.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C34"]
+[Opening "King's Gambit Accepted: Schallopp Defense"]
+[StudyName "The Best 1.e4 Openings For White Below 1600"]
+[ChapterName "Exercise 3"]
+[ChapterURL "https://lichess.org/study/w8FPB8TI/nQ68yxeJ"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2025.12.26"]
+[UTCTime "19:08:06"]
+[ChapterMode "gamebook"]
+
+1. e4 e5 2. f4 exf4 3. Nf3 Nf6 4. e5 Ng4 { This semi-common move is far trickier than I initially realized, so I included it as an Exercise. } 5. h3 { It's important to kick away the knight immediately, to avoid d4 Ne3 ideas. But this only works because of 5...Nxe5 6.Qe2! and then d4 to win the knight - so bonus points if you saw that when playing 5.h3! } (5. d4 { This move doesn't work as well because Black can play ...d6 or ...Ne3 to mess up our plans a bit. }) 5... Nh6 { A sad retreat, but there's nothing better. } (5... Nxe5 6. Qe2! { is a key to making 5.h3 work - well done if you saw this intermezzo to win a piece! } { [%cal Gd2d4,Ge2e8] }) 6. d4 { We occupy the centre and threaten Bxf4 to regain our pawn. } 6... d6 7. Bxf4 { White is somewhat better with their central space. While the variations can get somewhat interesting after 7...dxe5, there are too many good options for White from there to keep an edge, so it doesn't really fit as an exercise. } *
+
+
+[Event "The Best 1.e4 Openings For White Below 1600: Exercise 4"]
+[Date "2025.12.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C30"]
+[Opening "King's Gambit"]
+[StudyName "The Best 1.e4 Openings For White Below 1600"]
+[ChapterName "Exercise 4"]
+[ChapterURL "https://lichess.org/study/w8FPB8TI/Iug5aAyl"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2025.12.26"]
+[UTCTime "18:43:40"]
+[ChapterMode "gamebook"]
+
+1. e4 e5 2. f4 d6 { This move is a bit passive, but not entirely ridiculous. } 3. Nf3 (3. fxe5 { This is a blunder because of the ...Qh4 fork - please don't fall for this! We can avoid it easily enough by starting with 3.Nf3 }) (3. d3!? { This is a pretty good move in fact, not letting Black play a later ...exf4 to transpose back into the King's Gambit Accepted. Now play 3.Nf3 to continue with the exercise } { [%cal Gg1f3,Gf1e2,Ge1g1] }) 3... Nc6 { White has many good options here, but try going for the most schematic one. } 4. Bc4 (4. Bb5 { This move scores well in practice, but I find 4...exf4! a bit annoying - here our bishop would rather be on c4 to target f7 } 4... exf4) (4. fxe5 { This is not such a bad alternative - now play 4.Bc4 }) (4. Nc3 { This move order is equally valid - now play 4.Bc4 }) (4. d3 { This is quite a safe alternative, now play 4.Bc4 }) 4... Nf6 { Attacking our e4-pawn! This is a new move that I've included in this Exercise to help you remember the Vienna setup for when Black plays more passively. } 5. d3 { We defend our pawn with the secure c2-d3-e4 pawn chain. } (5. Nc3 { This is almost as good as my suggestion, but I find the 'Fork Trick' with 5...Nxe4 6.Nxe4 d5 to be an annoying extra option that I'd rather avoid } 5... Nxe4 6. Nxe4 d5) (5. O-O { Defend your c3-pawn first } { [%cal Gf6e4] }) 5... Be7 6. O-O (6. fxe5 { This is a good alternative, now try 6.0-0 }) (6. Nc3 { This is a good alternative, now try 6.0-0 }) 6... O-O 7. Nc3 { We have stabilized the centre and are ready to play moves like f5 to start a kingside attack. We can also play a3/a4 at some stage so that ...Na5 doesn't trade off our strong Italian bishop after Ba2. } { [%cal Gf4f5,Ga2a4] } (7. fxe5 { This is a good alternative, now try 6.0-0 }) 7... Bg4 { A final bonus exercise - how to deal with the pin? } 8. h3 Bxf3 9. Qxf3 { We have the bishop pair advantage and the makings of a strong long-term attack against Black's king, thanks to our central space and unopposed light-squared bishop. } { [%csl Gc4,Ge4,Gf4][%cal Gc4g8] } *
+
+
+[Event "The Best 1.e4 Openings For White Below 1600: Exercise 5"]
+[Date "2025.12.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C39"]
+[Opening "King's Gambit Accepted: Kieseritzky Gambit, Kolisch Defense"]
+[StudyName "The Best 1.e4 Openings For White Below 1600"]
+[ChapterName "Exercise 5"]
+[ChapterURL "https://lichess.org/study/w8FPB8TI/x9lLtDoH"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2025.12.26"]
+[UTCTime "18:50:51"]
+[ChapterMode "gamebook"]
+
+1. e4 e5 2. f4 exf4 3. Nf3 g5 { The main line at the master level, so it makes sense to cover it in an exercise. } 4. h4 { We should undermine their kingside pawn structure as soon as possible. } (4. d4 { This move gives Black time to consolidate their structure with ...d6/...Bg7/...h6 or even go on the offensive with ...g4/...Qh4. Look for a more aggressive move on the kingside }) (4. Bc4 { This move gives Black time to consolidate their structure with ...Nc6/...d6/...Bg7/...h6 or even go on the offensive with ...g4/...Qh4. Look for a more aggressive move on the kingside }) (4. Nc3 { This move gives Black time to consolidate their structure with ...d6/...Bg7/...h6 or even go on the offensive with ...g4/...Qh4. Look for a more aggressive move on the kingside }) 4... g4 5. Ne5 (5. Ng5 { This Allgaier Gambit is unfortunately not sound as 5...h6 traps our knight and we don't get enough of an attack in return }) 5... d6 6. Nxg4 Nf6 { This is a new move for us but it's very popular at the master level, so I included it as an Exercise. } 7. Nxf6+ { We are best off exchanging to buy time to develop our other pieces. } (7. Nf2 { This is too passive, Black gets a strong kingside initiative with ...Rg8 and ...Bh6 after which our kingside is just a bit too weak. }) 7... Qxf6 8. Nc3 { The position offers chances for both sides, we can play moves like d4, Qf3 or Nd5 next depending on what they go for. Both sides have weaknesses but it's an interesting game where the better player will win. } (8. d4 { This is also fine, now play 8.Nc3. }) *
+
+
+[Event "The Best 1.e4 Openings For White Below 1600: Exercise 6 - King's Gambit with 2...d5"]
+[Date "2025.12.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C36"]
+[Opening "King's Gambit Accepted: Modern Defense"]
+[StudyName "The Best 1.e4 Openings For White Below 1600"]
+[ChapterName "Exercise 6 - King's Gambit with 2...d5"]
+[ChapterURL "https://lichess.org/study/w8FPB8TI/0hkX84Xg"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2025.12.26"]
+[UTCTime "18:51:26"]
+[ChapterMode "gamebook"]
+
+1. e4 e5 2. f4 d5 { This is a bit of a tricky move, so even though it's only seen 5% of the time below 1600, I've made sure to cover it briefly in this exercise! } 3. exd5 (3. fxe5 { Please don't fall for this! 3...Qh4 is totally winning for Black. }) (3. Nf3 { This isn't as good here due to 3...dxe4, deal with that threat first. }) 3... exf4 { The best move, although advanced players will likely want to check 3...Qxd5, 3...e4 and the very tricky 3...c6!? in their own time later. } (3... Qxd5 4. Nc3) (3... e4 4. d3 Nf6 5. dxe4 Nxe4 6. Nf3 Bc5 7. Qe2 { [%cal Ge2e8] }) (3... c6 4. Qe2 cxd5 5. fxe5 Nc6 6. Nf3) 4. Nf3 { It's important to prevent ...Qh4. We'll gain a lot of time on their queen if they take on d5 } 4... Qxd5 (4... Nf6 { is the move played at master level, but rarely seen below 1600. } 5. c4 { is one decent reply, not so much to hang on to d5 but rather to buy time to develop and use our central space in the middlegame. } { [%cal Gd2d4,Gb1c3,Gf1d3,Ge1g1] }) 5. Nc3 { We attack their queen with tempo. } (5. d4 { This is playable but 5...Bd6 is a good defence to hang on to f4. Try attacking their queen first }) 5... Qe6+ 6. Be2 Nf6 { This is not the best move by Black, but it is the most common below 1600. } 7. O-O Bc5+ { This is not a good move at all (depsite being played 46% of the time below 1600), but why? } 8. d4 { We attack the bishop with tempo! } 8... Bb6 9. Bb5+ { A great move to prepare Re1 winning the queen. } (9. Bxf4 { This is good too, but look for a way to open up the e-file for our rook }) (9. Re1 { This gives Black time to castle, so throw in a check first }) 9... c6 10. Re1 { Black loses the queen for not enough material compensation. } *
+
+
+[Event "The Best 1.e4 Openings For White Below 1600: Exercise 7"]
+[Date "2025.12.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B22"]
+[Opening "Sicilian Defense: Alapin Variation"]
+[StudyName "The Best 1.e4 Openings For White Below 1600"]
+[ChapterName "Exercise 7"]
+[ChapterURL "https://lichess.org/study/w8FPB8TI/PaBAIlpR"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2025.12.26"]
+[UTCTime "18:44:40"]
+[ChapterMode "gamebook"]
+
+1. e4 c5 { Now we move on to the Sicilian! I've only included 1 exercise for each of the remaining chapters because you won't face any of these moves individually more than 12% of the time below 1600 on Lichess } 2. c3 { We prepare d4 to take over the centre and set up the 'dream centre' of pawns on d4 and e4! } (2. Nf3 { This is the main line, but I'm recommending the Alapin Variation with 2.c3 here }) 2... Nc6 { Now it's time to take the centre with our pawns! } 3. d4 cxd4 4. cxd4 e6 5. d5 (5. Nc3 { This is a reasonable choice, but I'm giving the more ambitious 5.d5 for this Exercise }) (5. Nf3 { This is a reasonable choice, but I'm giving the more ambitious 5.d5 for this Exercise }) 5... exd5 6. exd5 { Now all of Black's knight moves have problems. In this Exercise we'll see the worst of them } 6... Nce7 { Black shuts in his own kingside pieces, which we can immediately punish! } 7. d6 Nf5 { I didn't cover this move in the analysis, but we meet it the same way as usual. } 8. Qe2+ Nge7 9. dxe7 *
+
+
+[Event "The Best 1.e4 Openings For White Below 1600: Exercise 8"]
+[Date "2025.12.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B22"]
+[Opening "Sicilian Defense: Alapin Variation, Barmen Defense, Central Exchange"]
+[StudyName "The Best 1.e4 Openings For White Below 1600"]
+[ChapterName "Exercise 8"]
+[ChapterURL "https://lichess.org/study/w8FPB8TI/eAWZiXom"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2025.12.26"]
+[UTCTime "20:38:57"]
+[ChapterMode "gamebook"]
+
+1. e4 c5 2. c3 d5 { This is not a common move below 1600, but it's popular at higher levels, so I've included it as an Exercise. } 3. exd5 { We should take their pawn so that they don't have two pawns side by side in the centre. } 3... Qxd5 4. d4 (4. Nf3 { This is also decent, intending d4 next move. Now play 4.d4. }) 4... cxd4 { This capture is dubious, as after the recapture we can kick away their queen with tempo via. Nc3. Advanced players will play 4...Nf6 or 4...Nc6 instead, but we can still get into the game with a decent position with a simple Nf3/Be2/0-0 setup in the worst case. } 5. cxd4 Nc6 { Attacking our d4-pawn! } 6. Nf3 { We defend our pawn and prepare to kick their queen away with Nc3, which is a good reply to moves like 6...e5, 6...e6 or 6...Nf6. } (6. Be3 { This runs into some small problems after 6...e5, defend the pawn with your knight instead }) (6. Ne2 { This is too passive, blocking in our f1-bishop. Play 6.Nf3 instead as the Exercise will show why we don't have to fear the ...Bg4 pin. }) (6. Nc3 { A bit too early because we lose a pawn after 6...Qxd4. Defend the d4-pawn first }) 6... Bg4 7. Be2 { We break the pin, as it turns out Black can't just win a pawn with ...Bxf3 and ...Qxd4. } (7. Nc3 { This is a good alternative but it gets very messy after 7...Bxf3. Play 7.Be2 instead to keep things simpler, it turns out you aren't losing a pawn there }) (7. Be3 { This is too passive as we're letting them double our pawns with ...Bxf3. Play 7.Be2 instead } { [%cal Gg4f3] }) 7... Bxf3 (7... e6 { is better but we can still play Nc3/0-0/h3 for a good game in this IQP position where they developed their queen a little bit early } { [%cal Gb1c3,Ge1g1,Gh2h3] }) 8. Bxf3 Qxd4 { A blunder, but Black was already in bad shape. } { [%csl Gd4][%cal Gd4d5] } 9. Bxc6+ { Removing the defender with an intermezzo! } { [%csl Gd4][%cal Gc6e8] } 9... bxc6 10. Qxd4 { We won their queen and have a trivial win. } *
+
+
+[Event "The Best 1.e4 Openings For White Below 1600: Exercise 9"]
+[Date "2025.12.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C03"]
+[Opening "French Defense: Tarrasch Variation"]
+[StudyName "The Best 1.e4 Openings For White Below 1600"]
+[ChapterName "Exercise 9"]
+[ChapterURL "https://lichess.org/study/w8FPB8TI/4kzOmFAa"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2025.12.26"]
+[UTCTime "18:45:12"]
+[ChapterMode "gamebook"]
+
+1. e4 e6 { The French, which can be a bit tricky for players who aren't comfortable in closed positions. Fortunately for us, my recommendation leads to mostly open positions } 2. d4 d5 3. Nd2 (3. Nc3 { This is the main line in master play, but I'm recommending the Tarrasch with 3.Nd2 in this repertoire, to avoid a 3.Nc3 Bb4 pin }) (3. e5 { This is a reasonable alternative, but I'm recommending the Tarrasch with 3.Nd2 in this repertoire, to avoid a 3.Nc3 Bb4 pin }) (3. exd5 { This is a safe alternative, but I'm recommending the Tarrasch with 3.Nd2 in this repertoire, to avoid a 3.Nc3 Bb4 pin }) 3... dxe4 { The Rubinstein Variation, which is a bit passive but not entirely bad } 4. Nxe4 { We regain the pawn and have a central space advantage. } 4... Nf6 { How should we deal with the offer to trade knights? } 5. Nxf6+ Qxf6 { The queen looks a bit exposed on f6, but let's develop naturally and take it from there. } 6. Nf3 (6. Bd3 { This is a good alternative, now start with 6.Nf3 }) 6... Bd6 { This is a new move for us, but we can meet it in the same way as usual. } 7. Bd3 { A seemingly innocent bishop development... } (7. Bg5 { This is a good alternative and even marginally more precise to the engine. But I've recommended 7.Bd3 because Black handles it worse in practice }) 7... O-O { A big mistake, but Black's position was already difficult. } 8. Bg5 *
+
+
+[Event "The Best 1.e4 Openings For White Below 1600: Exercise 10"]
+[Date "2025.12.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B12"]
+[Opening "Caro-Kann Defense: Mar贸czy Variation, Mar贸czy Gambit"]
+[StudyName "The Best 1.e4 Openings For White Below 1600"]
+[ChapterName "Exercise 10"]
+[ChapterURL "https://lichess.org/study/w8FPB8TI/kzPo9iil"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2025.12.26"]
+[UTCTime "18:45:46"]
+[ChapterMode "gamebook"]
+
+1. e4 c6 { The Caro-Kann! Do you remember what to do when they don't put a pawn in the centre or attack our e4-pawn? } 2. d4 { Yessir, we occupy the centre with both pawns. } 2... d5 3. f3 (3. e5 { The Advance Variation, which is the main line at master play. But I recommend the Fantasy Variation with 3.f3 for this repertoire }) (3. exd5 { This is a safe option, but I recommend the Fantasy Variation with 3.f3 for this repertoire }) (3. Nc3 { The old main line and not a bad choice at all. But I recommend the Fantasy Variation with 3.f3 for this repertoire }) (3. Nd2 { This is similar to 3.Nc3, now play the Fantasy with 3.f3 }) 3... dxe4 4. fxe4 { We're ready to meet ...Nf6 with e5 to take even more central space. } 4... e5 5. Nf3 (5. dxe5 { This is a mistake because of 5...Qh4, and our king is too weak in the centre }) 5... exd4 { Black took our pawn, now how do we develop? } 6. Bc4 (6. Qxd4 { This leads to a slightly worse endgame after 6...Qxd4 due to our isolated e4-pawn. Look for a more dynamic approach where we complete our kingside development fast }) (6. Nxd4 { We have to watch out for ...Qh4 forks when we moved our f-pawn! Just like in the King's Gambit }) 6... Bg4 { This pin is common, but not a good idea - can you show why? } 7. Bxf7+ Kxf7 8. Ne5+ (8. Ng5+ { This is not the same as 8.Ne5 because after 8...Qxg5! Black will be up a piece when the exchanges conclude. } 8... Qxg5 9. Bxg5 Bxd1 10. Kxd1 Nd7) 8... Ke8 { I stopped earlier in the analysis, but i've gone a bit further in this Exercise so you know how to finish off the game. } 9. Qxg4 (9. Nxg4 { This is safe, but taking with the queen gives us a greater attack. }) 9... Nf6 { How to continue the attack on Black's king? } 10. Qe6+ { A great move - 10...Be7 11.Qf7 would be an immediate checkmate. } 10... Qe7 11. Qc8+ { This wins material by force. } 11... Qd8 12. Qxd8+ (12. Qxb7 { Also good, now play 12.Qxd8 and the knight fork }) (12. Qe6+ { Also good, now play 12.Qxd8 and the knight fork }) 12... Kxd8 { It's important to find the next move here as White! } 13. Nf7+ { The rook in the corner's a goner! } 13... Ke8 14. Nxh8 { White is up a rook and easily winning. } *
+
+
+[Event "The Best 1.e4 Openings For White Below 1600: Exercise 11"]
+[Date "2025.12.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B01"]
+[Opening "Scandinavian Defense: Valencian Variation"]
+[StudyName "The Best 1.e4 Openings For White Below 1600"]
+[ChapterName "Exercise 11"]
+[ChapterURL "https://lichess.org/study/w8FPB8TI/0UUMJu11"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2025.12.26"]
+[UTCTime "18:46:24"]
+[ChapterMode "gamebook"]
+
+1. e4 d5 { The Scandinavian! What do we do when our e4-pawn is under attack right away? } 2. exd5 { We take the pawn, naturally. } (2. e5 { isn't a great idea because after } 2... c5 { our e5-pawn comes under attack quickly and Black gets a super-charged Caro-Kann/French type position. } { [%csl Ge5][%cal Gb8c6,Gc8g4] }) 2... Qxd5 3. Nc3 Qd8 { A bit passive, but also the most common move online by a fair margin. } 4. d4 Nf6 5. Nf3 e6 { Black is trying to play solidly - how might we place our bishops from here? } 6. Bd3 (6. Bg5 { This move order works just as well - now play 6.Bd3 }) 6... Be7 { Breaking the pin - now what? } 7. Bg5 (7. O-O { This is definitely possible too, but I'd rather castle long and attack their king in the middlegame, so play 7.Bg5 }) 7... O-O { Their king seems safe - for now. How should we develop from here? } 8. Qd2 (8. Qe2 { The queen is also reasonably placed here, but I prefer the queen on d2 to take the sting out of ...h6 }) (8. O-O { Safe, but not so consistent with 7.Bg5 - play 8.Qd2 instead }) 8... h6 { Not a good move - but do you remember why? } 9. Bxh6 { I love this bishop sacrifice, ripping open Black's king! Black really shouldn't take our bishop, but if they don't, they are a pawn down with a bad position. } (9. h4 { This is a creative 'Fishing Pole' attacking idea to open the h-file, but did you consider that Black is not forced to take on g5? Points for creativity, but 9.Bxh6 is already a winning attack for White, so play it } { [%cal Gh4g5,Gh6g5] }) 9... gxh6 10. Qxh6 { I covered the position to this point in the Analysis, but there's a tricky defence for Black that I want to test you on. It will help you not just with the repertoire but with your attacking skills in general! } 10... Re8 { White to play! This one requires some precision so take your time on it! } 11. Ng5 { A great move, preparing Bh7. In fact, it's already a forced mate. } (11. O-O-O { You're missing a forced mate, besides ...Bf8-g7 now keeps the king somewhat safe for Black and we are a piece down after all! }) 11... Bf8 { How to deal with the attack on our queen? } 12. Bh7+ { Great move! } { [%cal Gf6h7,Gh6h7] } 12... Kh8 13. Nxf7# { Checkmate! It's obviously not a guarantee by any means that we will checkmate them in 13 moves or less with our repertoire, but it's certainly a nice demonstration of what we're aiming for with our opening! } *
+
+
+[Event "The Best 1.e4 Openings For White Below 1600: Exercise 12"]
+[Date "2025.12.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B07"]
+[Opening "Pirc Defense"]
+[StudyName "The Best 1.e4 Openings For White Below 1600"]
+[ChapterName "Exercise 12"]
+[ChapterURL "https://lichess.org/study/w8FPB8TI/kiqDIpu8"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2025.12.26"]
+[UTCTime "18:47:16"]
+[ChapterMode "gamebook"]
+
+1. e4 d6 { You won't face the Pirc a ton, but I still included an exercise with it, as people often feel a bit lost when facing it at first. } 2. d4 Nf6 3. Nc3 (3. Bd3 { This is playable, going for a Geller Setup with Nf3, 0-0, c3 and Re1. But I recommend the more critical 3.Nc3 } { [%cal Gg1f3,Ge1g1,Gc2c3,Gf1e1] }) 3... g6 { The main line Pirc. } 4. Be3 (4. Nf3 { This is playable too, but I recommend 4.Be3 }) (4. f4 { Also an ambitious approach, but I recommend 4.Be3 }) (4. Bg5 { Playable but I recommend 4.Be3 as being a bit more flexible }) (4. Bf4 { Playable but I recommend 4.Be3 as being a bit more flexible }) 4... Bg7 5. Qd2 (5. Nf3 { A reasonable alternative, but I recommend 5.Qd2 as the most flexible move }) (5. f3 { A reasonable alternative, but I recommend 5.Qd2 as the most flexible move. Since 5...Ng4 6.Bg5 doesn't lead anywhere for Black }) 5... O-O 6. O-O-O (6. f3 { This avoids ...Ng4 but this exercise will show you why you don't need to fear it. Play 6.0-0-0 }) 6... Ng4 { A new move for us - it's relatively rare for your opponents to play ...Ng4 but it's a question you're likely to ask at some point, so let's see how to deal with it and why this really isn't scary for us at all. } { [%cal Gh4h5] } 7. Bg5 { A nice move to leave their g4-knight a bit stranded. If 7...h6 8.Bh4 or 8.Bf4 and they don't really have a good follow-up. } { [%csl Gg4] } (7. Bf4 { Also playable but I like 7.Bg5 slightly more }) (7. h4 { A creative engine alternative, but 98% of the time you don't want to trade your DSB for their knight in the king's fianchetto systems, so play 7.Bg5 } { [%cal Gh5g6,Gh4h5] }) 7... f6 { Attacking our bishop - what now? } 8. Bh4 (8. Bf4 { This is also playable but we can play 8.Bh4 safely as 8...Bh6 doesn't win our queen }) 8... Bh6 9. f4 { We have blocked the check and threaten h3 to win their estranged g4-knight. } (9. Bc4+ { We can't get away with this intermezzo as 9...d5! 10.Bxd5 e6 crashes the party }) 9... e5 { A final attempt to stir things up with the attack on f4. } 10. Nge2 { We have covered the attack on f4 and enjoy a huge advantage. } { [%csl Gg4][%cal Gh4f2,Gh2h3] } (10. dxe5 { This is also good, now play 10.Nge2 }) (10. Bc4+ { Not the best but not bad either, White is still much better. Now play 10.Nge2 }) (10. Bg3 { Not the best but not bad either, White is still much better. Now play 10.Nge2 }) *
+
+
+[Event "The Best 1.e4 Openings For White Below 1600: Exercise 13"]
+[Date "2025.12.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B06"]
+[Opening "Modern Defense: Mongredien Defense, with Nc3"]
+[StudyName "The Best 1.e4 Openings For White Below 1600"]
+[ChapterName "Exercise 13"]
+[ChapterURL "https://lichess.org/study/w8FPB8TI/FcZW6YyU"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2025.12.26"]
+[UTCTime "18:48:56"]
+[ChapterMode "gamebook"]
+
+1. e4 g6 { The Modern Defense! You know what to do by now against these hypermodern systems... } 2. d4 Bg7 3. Nc3 (3. Nf3 { This is a good alternative, now play 3.Nc3 }) 3... b6 { A new move for us, but we know the idea already - Black wants to play a Hippo setup with ...Bb7 and later ...e6/...Ne7/...d6/...Nd7 in some order. What might we do about that? } 4. h4 (4. Nf3 { This is good too, but my suggestion of 4.h4 gives us a clearer attacking plan }) (4. Be3 { This is good too, but my suggestion of 4.h4 gives us a clearer attacking plan }) (4. f4 { Also playable but I've recommended 4.h4 as a more direct attacking approach }) 4... Bb7 { Black should probably have played 4...h5 instead - can you show why? } 5. h5 { We have a great attack on the kingside already and Black can't just castle short as ...Nf6 runs into h6 and ...e6/...Ne7 also will run into h6 - the thorn pawn showing its claws! } { [%csl Gh6][%cal Gh5h6,Gh5g6] } *
+
+
+[Event "The Best 1.e4 Openings For White Below 1600: Exercise 14"]
+[Date "2025.12.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B00"]
+[Opening "Owen Defense"]
+[StudyName "The Best 1.e4 Openings For White Below 1600"]
+[ChapterName "Exercise 14"]
+[ChapterURL "https://lichess.org/study/w8FPB8TI/yXjiUZGU"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2025.12.26"]
+[UTCTime "18:49:31"]
+[ChapterMode "gamebook"]
+
+{ Let's see if you remember the Geller Setup! }
+1. e4 b6 2. d4 Bb7 3. Bd3 { We defend our bishop with the bishop. } (3. Nc3 { This is also fine, but it allows Black to somewhat justify their setup with ...e6 and the ...Bb4 pin, which is easier to just avoid }) 3... Nf6 4. Qe2 { I recommend this queen move because it allows us to still play the Geller Setup which is easy to play and remember. } (4. e5 { We have to be careful and make sure we played Nf3 before e5 because now ...Bxg2 wins our rook on h1! }) (4. Nf3 { I tricked you with the move order - Black wins a pawn now with 4...Nxe4. So defend your pawn first }) (4. Nc3 { Also a decent defence of the e4-pawn, now play 4.Qe2 }) (4. Nd2 { Also a decent defence of the e4-pawn, now play 4.Qe2 }) (4. f3 { Technically playable, but I'd rather develop a piece while defending e4 }) 4... e6 5. Nf3 (5. c3 { Also part of the Geller Setup, but 5.Nf3 is more flexible so start with that }) (5. Nh3 { The knight is on the edge here, it's not that bad but 5.Nf3 fits better with our setup }) 5... Be7 { A new move for us - how would you deal with it? } 6. O-O (6. e5 { This is actually the best move, well done! But the purpose of this exercise is to help you remember the Geller Setup which works against almost anything they do, so play 6.0-0 }) (6. c4 { Also not bad, now play 6.0-0 to continue the Geller Setup }) 6... O-O 7. c3 (7. c4 { An interesting alternative to grab more space in the style of the Queen's Gambit. Now play 7.c3 }) (7. Re1 { Also fits with the Geller Setup, now play 7.c3 }) (7. Nbd2 { Also fits with the Geller Setup, now play 7.c3 }) (7. e5 { Also works here, now play 7.c3 }) 7... d6 8. Nbd2 { We have completed the Geller Setup and enjoy a clear advantage with our extra space and no bad pieces. Our attacking plan will start with e5 and bringing our pieces over steadily toward their king. } (8. e5 { A really promising alternative to start an attack against their king. Now play 8.Nbd2 }) (8. Re1 { Also fits with the Geller Setup, but I slightly prefer 8.Nbd2 first as being more flexible }) (8. h3 { Sometimes you see this move in the Geller Setup, but play 8.Nbd2 first as it's a bit more useful }) *
+
+
+[Event "The Best 1.e4 Openings For White Below 1600: Summary/Conclusion"]
+[Date "2025.12.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B00"]
+[Opening "King's Pawn Game"]
+[StudyName "The Best 1.e4 Openings For White Below 1600"]
+[ChapterName "Summary/Conclusion"]
+[ChapterURL "https://lichess.org/study/w8FPB8TI/bCJjYzIL"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2025.12.26"]
+[UTCTime "18:52:58"]
+
+{ With the Analysis and Exercises, you are now ready to play 1.e4 with confidence in your games!
+
+You now know:
+
+- What the best-scoring moves are for White within 1.e4 below the 1600 level;
+- The key ideas that make these moves work;
+- and how to punish the common mistakes your opponents make in these lines!
+
+Good luck with 1.e4, and use the chat room to the left to ask any questions you have about the moves! }
+1. e4 { Remember to heart the Study if you haven't already! } *
+
+
+[Event "The Best 1.e4 Openings For White Below 1600: Next Steps - FREE Gift"]
+[Date "2025.12.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "The Best 1.e4 Openings For White Below 1600"]
+[ChapterName "Next Steps - FREE Gift"]
+[ChapterURL "https://lichess.org/study/w8FPB8TI/d1HyjDnG"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2025.12.26"]
+[UTCTime "20:16:22"]
+
+{ If you liked this Study, then you will LOVE the free sample chapter of my course 'Crush Sub-1800s With 1.e4', which goes deeper into the different ideas and moves, with videos from me (GM Max Illingworth). It also shows you a more advanced way to meet 1.e4 e5 that works even against more advanced players :)
+
+You can get the free sample chapter here: https://www.simplechessimprovement.com/offers/Lq6gDT2Y }
+ *
+
+
+[Event "The Best 1.e4 Openings For White Below 1600: 2026 Update - Questions & Answers"]
+[Date "2026.01.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C30"]
+[Opening "King's Gambit Declined: Petrov's Defense"]
+[StudyName "The Best 1.e4 Openings For White Below 1600"]
+[ChapterName "2026 Update - Questions & Answers"]
+[ChapterURL "https://lichess.org/study/w8FPB8TI/mEARNE5Y"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2026.01.11"]
+[UTCTime "09:27:21"]
+
+{ I'll use this game to answer questions on the lines in the Study }
+1. e4 e5 (1... Nf6 { Not so much a question but someone suggested the Exchange Variation as a possible alternative against the Alekhine. It's also fine, I've recommended it in the past. } 2. e5 Nd5 3. d4 d6 4. c4 Nb6 5. exd6 cxd6 6. Nc3 g6 { Black does have a small plus score in Lichess, probably because Black's plans are quite clear (pressure d4). } { [%cal Gf8g7,Ge8g8] } 7. h3 Bg7 8. Nf3 O-O 9. Be2 Nc6 10. O-O { This approach works quite well for White though, as we've stopped ...Bg4 to increase the pressure on d4. ...e5 is well met by the unpleasant intermediate move Bg5! and ...d5 is well met by c5, so Black struggles a little bit to get a central pawn break and thus direct counterplay. } { [%csl Gd5,Gc5][%cal Ge7e5,Gc1g5] }) 2. f4 Nf6 { Alixxy's question: Should we meet 2...Nf6 with 3.d3 or 3.Nc3?
+MI: Both moves to defend e4 are playable but I'd recommend } { [%cal Gb1c3,Gd2d3] } 3. fxe5 { (we can play this now that ...Qh4 is impossible) } 3... Nxe4 4. Nf3 { as Black has to find a quite difficult move not to end up in a bad position } 4... Ng5! { Only this move (preparing ...Nxf3 and ...Qh4+) gives Black a reasonable game. Against more common moves on Lichess like } (4... d5 5. d3 Nc5 6. d4 Ne4 7. Bd3 { we get a much better game with our strong centre and fast development. }) *
+
+

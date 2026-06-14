@@ -1,0 +1,64 @@
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2025.05.22"]
+[White "NateSolon"]
+[Black "LacdLuke"]
+[Result "1/2-1/2"]
+[WhiteElo "2582"]
+[BlackElo "2187"]
+[TimeControl "300+5"]
+[Termination "Game drawn by agreement"]
+[Variant "Standard"]
+[ECO "B53"]
+[Opening "Sicilian Defense: Chekhover Variation"]
+[StudyName "CheckRaiseMate's Study"]
+[ChapterName "NateSolon - LacdLuke"]
+[ChapterURL "https://lichess.org/study/6Epd5uYe/R1bsTLYn"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+
+1. e4 { [%timestamp 1] [%clk 0:05:05] } 1... c5 { [%timestamp 1] [%clk 0:05:05] } 2. Nf3 { [%timestamp 78] [%clk 0:05:02] } 2... d6 { [%timestamp 10] [%clk 0:05:09] } 3. d4 { [%timestamp 130] [%clk 0:04:54] } 3... cxd4 { [%timestamp 5] [%clk 0:05:14] } 4. Qxd4 { [%timestamp 11] [%clk 0:04:58] } 4... Nf6 { [%timestamp
+16] [%clk 0:05:17] } 5. Bb5+ { [%timestamp 92] [%clk 0:04:54] } (5. Nc3 Nc6 6. Bb5 { [%cal Gc2c4] }) 5... Nc6 { [%timestamp 46] [%clk 0:05:17] } (5... Bd7 6. Bxd7+ Qxd7 { [%cal Gb8c6] } (6... Nbxd7)) 6. c4 { [%timestamp 97] [%clk 0:04:49] } 6... Bd7 { [%timestamp 114] [%cal Gd4d3] [%clk 0:05:11] } 7. Qe3 { [%timestamp 43] [%clk 0:04:50] } 7... a6 { [%timestamp 78] [%clk 0:05:08] } 8. Ba4 { [%timestamp 65] [%clk 0:04:48] } 8... e6 { [%timestamp 33] [%clk 0:05:10] } 9. Nc3 { [%timestamp
+17] [%clk 0:04:52] } 9... Be7 { [%timestamp 37] [%clk 0:05:11] } 10. O-O { [%timestamp 10] [%clk 0:04:56] } 10... O-O { [%timestamp 13] [%clk 0:05:15] } 11. Rd1 { [%timestamp 14] [%clk 0:04:59] } 11... Qc7 { [%timestamp 53] [%clk 0:05:15] } 12. h3 { [%timestamp 34] [%clk 0:05:01] } 12... Rac8 { [%timestamp
+46] [%clk 0:05:15] } 13. Qe2 { [%timestamp 42] [%clk 0:05:02] } 13... Na5 { [%timestamp 256] [%clk 0:04:54] } (13... Ne5 14. Nxe5 dxe5 15. Bxd7 Nxd7) 14. Bxd7 { [%timestamp 171] [%clk 0:04:50] } 14... Nxd7 { [%timestamp 1] [%clk 0:04:59] } 15. b3 { [%timestamp 237] [%clk 0:04:31] } 15... Bf6 { [%timestamp 157] [%clk 0:04:49] } (15... b5 16. Be3 (16. cxb5 Qxc3 17. Bd2 Qc7 18. bxa6) 16... bxc4 17. b4) 16. Bb2 { [%timestamp 133] [%clk 0:04:23] } 16... b5 { [%timestamp 52] [%clk 0:04:48] } 17. cxb5 { [%timestamp 170] [%clk 0:04:11] } 17... Bxc3 { [%timestamp 999] [%clk 0:03:13] } 18. Rac1 { [%timestamp 33] [%clk 0:04:12] } 18... Qb6 { [%timestamp 150] [%clk 0:03:03] } 19. Bxc3 { [%timestamp 118] [%clk 0:04:06] } 19... axb5 { [%timestamp 26] [%clk 0:03:06] } 20. Bxa5 { [%timestamp
+268] [%clk 0:03:44] } (20. Qb2 { [%cal Gb2g7] } 20... e5 21. Bxa5 Qxa5 22. Rxd6) 20... Qxa5 { [%timestamp 34] [%clk 0:03:07] } 21. Rxc8 { [%timestamp 11] [%clk 0:03:48] } 21... Rxc8 { [%timestamp 16] [%clk 0:03:11] } 22. Rxd6 { [%timestamp 12] [%clk 0:03:51] } 22... Rc1+ { [%timestamp 195] [%clk 0:02:56] } 23. Rd1 { [%timestamp 242] [%clk 0:03:32] } 23... Qc3 { [%timestamp 167] [%clk 0:02:45] } 24. Rxc1 { [%timestamp 211] [%clk 0:03:16] } 24... Qxc1+ { [%timestamp 1] [%clk 0:02:50] } 25. Kh2 { [%timestamp 7] [%clk 0:03:20] } 25... Qc5 { [%timestamp 153] [%clk 0:02:39] } 26. g3 { [%timestamp
+217] [%clk 0:03:04] } 26... h6 { [%timestamp 51] [%clk 0:02:39] } 27. Kg2 { [%timestamp 37] [%clk 0:03:05] } 27... Ne5 { [%timestamp 201] [%clk 0:02:24] } 28. Nxe5 { [%timestamp 60] [%clk 0:03:04] } 28... Qxe5 { [%timestamp 1] [%clk 0:02:29] } 29. a4 { [%timestamp 42] [%clk 0:03:05] } 29... bxa4 { [%timestamp
+105] [%clk 0:02:23] } 30. bxa4 { [%timestamp 1] [%cal Ga4a8] [%clk 0:03:10] } 30... Qa5 { [%timestamp 137] [%clk 0:02:15] } 31. Qb5 { [%timestamp 61] [%clk 0:03:09] } 31... Qa8 { [%timestamp 56] [%clk 0:02:14] } 32. Qc4 { [%timestamp 252] [%clk 0:02:48] } (32. a5 Qxe4+ 33. Kh2 Qe1 34. Qb6 { [%cal Ga5a7] }) 32... Kf8 { [%timestamp 101] [%clk 0:02:09] } 33. Qb4+ { [%timestamp
+142] [%clk 0:02:39] } 33... Ke8 { [%timestamp 103] [%clk 0:02:04] } 34. a5 { [%timestamp 48] [%clk 0:02:39] } 34... f5 { [%timestamp 59] [%clk 0:02:03] } 35. f3 { [%timestamp 151] [%clk 0:02:29] } (35. Kh2 fxe4 (35... Qxe4 36. Qxe4 fxe4 37. a6)) (35. Qb6) 35... Qc6 { [%timestamp 194] [%clk 0:01:48] } (35... fxe4 36. Qxe4) 36. Qb1 { [%timestamp 503] [%clk 0:01:44] } 36... Qa6 { [%timestamp
+398] [%clk 0:01:14] } 37. Qe1 { [%timestamp 48] [%clk 0:01:44] } 37... fxe4 { [%timestamp 311] [%clk 0:00:48] } 38. Qxe4 { [%timestamp 29] [%clk 0:01:46] } 38... Qxa5 { [%timestamp 30] [%clk 0:00:50] } 39. Qxe6+ { [%timestamp 13] [%clk 0:01:50] } 39... Kf8 { [%timestamp 14] [%clk 0:00:53] } 40. h4 { [%timestamp
+54] [%clk 0:01:50] } 40... Qd2+ { [%timestamp 56] [%clk 0:00:53] } 41. Kh3 { [%timestamp 66] [%clk 0:01:48] } 41... Qd1 { [%timestamp 80] [%clk 0:00:50] } 42. h5 { [%timestamp 82] [%clk 0:01:45] } 42... Qxf3 { [%timestamp 121] [%clk 0:00:42] } 43. Qc8+ { [%timestamp 66] [%clk 0:01:43] } 1/2-1/2
+
+
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2025.05.22"]
+[White "LacdLuke"]
+[Black "NateSolon"]
+[Result "0-1"]
+[WhiteElo "2187"]
+[BlackElo "2582"]
+[TimeControl "300+5"]
+[Termination "NateSolon won by resignation"]
+[Variant "Standard"]
+[ECO "A11"]
+[Opening "English Opening: Caro-Kann Defensive System"]
+[StudyName "CheckRaiseMate's Study"]
+[ChapterName "LacdLuke - NateSolon"]
+[ChapterURL "https://lichess.org/study/6Epd5uYe/h0Gin7UQ"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+
+1. c4 { [%timestamp 1] [%clk 0:05:05] } 1... c6 { [%timestamp 1] [%clk 0:05:05] } 2. Nc3 { [%timestamp 34] [%clk 0:05:07] } 2... d5 { [%timestamp 1] [%clk 0:05:10] } 3. e3 { [%timestamp 20] [%clk 0:05:10] } 3... Nf6 { [%timestamp
+13] [%clk 0:05:14] } 4. Nf3 { [%timestamp 23] [%clk 0:05:12] } 4... a6 { [%timestamp 10] [%clk 0:05:18] } (4... Bf5 { [%cal Gd1b3,Gb3b7,Gb3d5] }) 5. b3 { [%timestamp 42] [%clk 0:05:13] } 5... Bf5 { [%timestamp 19] [%clk 0:05:21] } 6. Bb2 { [%timestamp 22] [%clk 0:05:16] } 6... e6 { [%timestamp 9] [%clk 0:05:25] } 7. Be2 { [%timestamp 23] [%clk 0:05:19] } 7... h6 { [%timestamp 11] [%clk 0:05:29] } 8. O-O { [%timestamp
+19] [%clk 0:05:22] } 8... Nbd7 { [%timestamp 13] [%clk 0:05:32] } 9. d4 { [%timestamp 63] [%clk 0:05:20] } 9... Bd6 { [%timestamp 28] [%clk 0:05:35] } 10. Rc1 { [%timestamp 23] [%clk 0:05:23] } 10... O-O { [%timestamp 14] [%clk 0:05:38] } 11. Bd3 { [%timestamp 108] [%clk 0:05:17] } 11... Qe7 { [%timestamp 174] [%clk 0:05:26] } 12. Qc2 { [%timestamp 85] [%clk 0:05:14] } (12. Bxf5 exf5) (12. Re1 Ne4) 12... Bxd3 { [%timestamp 109] [%clk 0:05:20] } 13. Qxd3 { [%timestamp 1] [%clk 0:05:19] } 13... e5 { [%timestamp 63] [%clk 0:05:19] } 14. dxe5 { [%timestamp
+347] [%clk 0:04:49] } 14... Nxe5 { [%timestamp 1] [%clk 0:05:24] } 15. Nxe5 { [%timestamp 235] [%clk 0:04:31] } 15... Qxe5 { [%timestamp 1] [%clk 0:05:28] } 16. f4 { [%timestamp 800] [%clk 0:03:16] } (16. g3 dxc4 17. Qxc4) 16... Qe6 { [%timestamp 103] [%clk 0:05:23] } 17. cxd5 { [%timestamp 23] [%clk 0:03:18] } 17... cxd5 { [%timestamp 64] [%clk 0:05:22] } 18. Rcd1 { [%timestamp 435] [%clk 0:02:40] } (18. Ne2 { [%csl Gd4][%cal Ge2d4] } 18... Rfe8 19. Nd4 (19. Bxf6 Qxf6 20. Nc3 { [%cal Gc3d5] }) 19... Qxe3+ 20. Qxe3 Rxe3 21. Nf5 Re6 22. Nxd6 Rxd6 23. Rc7) 18... Rfe8 { [%timestamp 99] [%clk 0:05:17] } 19. Rfe1 { [%timestamp
+103] [%clk 0:02:34] } 19... Bc5 { [%timestamp 201] [%clk 0:05:02] } 20. Nxd5 { [%timestamp 663] [%clk 0:01:33] } (20. Kh1 Ng4 { [%cal Gg4e3,Gg4f2] }) 20... Nxd5 { [%timestamp 13] [%clk 0:05:05] } 21. Qxd5 { [%timestamp 21] [%clk 0:01:36] } 21... Bxe3+ { [%timestamp
+9] [%clk 0:05:10] } 22. Kf1 { [%timestamp 147] [%cal Ge6b6,Ge6g4] [%clk 0:01:26] } 22... Qxd5 { [%timestamp 975] [%clk 0:03:37] } (22... Qb6 23. Bd4 Bxd4 24. Qxd4 Rxe1+ 25. Kxe1) (22... Qg4 23. Qxb7 Qxf4+ 24. Qf3 Qxh2 25. Rxe3) 23. Rxd5 { [%timestamp 28] [%clk 0:01:29] } 23... Bxf4 { [%timestamp 8] [%clk 0:03:41] } 24. Rxe8+ { [%timestamp 188] [%clk 0:01:15] } 24... Rxe8 { [%timestamp 1] [%clk 0:03:46] } 25. g3 { [%timestamp
+15] [%clk 0:01:18] } 25... Bg5 { [%timestamp 18] [%clk 0:03:49] } 26. Rd7 { [%timestamp 29] [%clk 0:01:20] } 26... Re7 { [%timestamp 44] [%clk 0:03:50] } (26... Rd8 27. Rxb7 Rd1+ 28. Ke2 Rd2+ { [%cal Gg5d2,Gd2e2,Gd2b2] }) 27. Rxe7 { [%timestamp 621] [%clk 0:00:23] } 27... Bxe7 { [%timestamp 1] [%clk 0:03:55] } 28. Ke2 { [%timestamp 33] [%clk 0:00:25] } 28... f5 { [%timestamp
+10] [%clk 0:03:59] } 29. Kf3 { [%timestamp 72] [%clk 0:00:23] } 29... Kf7 { [%timestamp 49] [%clk 0:03:59] } 30. Kf4 { [%timestamp 68] [%clk 0:00:21] } 30... g6 { [%timestamp 40] [%clk 0:04:00] } 31. h4 { [%timestamp 60] [%clk 0:00:20] } 31... Bd6+ { [%timestamp 94] [%clk 0:03:56] } 32. Kf3 { [%timestamp 18] [%clk 0:00:23] } 32... h5 { [%timestamp 570] [%clk 0:03:04] } (32... g5 33. hxg5 hxg5 34. g4 f4 (34... Ke6)) 33. Bd4 { [%timestamp
+46] [%clk 0:00:24] } 33... Ke6 { [%timestamp 16] [%clk 0:03:07] } 34. Bb6 { [%timestamp 26] [%clk 0:00:26] } 34... Kd5 { [%timestamp 54] [%clk 0:03:07] } 35. Be3 { [%timestamp 141] [%clk 0:00:17] } 35... b5 { [%timestamp 116] [%clk 0:03:00] } 36. Bb6 { [%timestamp 45] [%clk 0:00:17] } 36... Be5 { [%timestamp
+175] [%clk 0:02:47] } 37. Be3 { [%timestamp 46] [%clk 0:00:18] } 37... a5 { [%timestamp 161] [%clk 0:02:36] } 38. Bb6 { [%timestamp 17] [%clk 0:00:21] } 38... a4 { [%timestamp 9] [%clk 0:02:40] } 39. bxa4 { [%timestamp 36] [%clk 0:00:22] } (39. Be3 axb3 40. axb3 Bd4 { [%cal Gd5c5,Gc5b4] } 41. Bxd4 Kxd4 42. Kf4) 39... bxa4 { [%timestamp 1] [%clk 0:02:45] } 40. Bd8 { [%timestamp
+27] [%clk 0:00:25] } 40... Kc4 { [%timestamp 30] [%clk 0:02:47] } 41. Be7 { [%timestamp 30] [%clk 0:00:27] } 41... Kc3 { [%timestamp 51] [%clk 0:02:47] } 42. Bf8 { [%timestamp 64] [%clk 0:00:25] } 42... Kb2 { [%timestamp 17] [%clk 0:02:51] } 43. a3 { [%timestamp 33] [%clk 0:00:27] } 43... Kb3 { [%timestamp
+9] [%clk 0:02:55] } 44. Be7 { [%timestamp 96] [%clk 0:00:22] } 44... Bb2 { [%timestamp 102] [%clk 0:02:49] } 45. Kf4 { [%timestamp 71] [%clk 0:00:20] } 45... Bxa3 { [%timestamp 31] [%clk 0:02:51] } 46. Bxa3 { [%timestamp 12] [%clk 0:00:24] } 46... Kxa3 { [%timestamp 12] [%clk 0:02:55] } 47. Kg5 { [%timestamp 4] [%clk 0:00:29] } 47... Kb4 { [%timestamp 49] [%clk 0:02:55] } 48. Kxg6 { [%timestamp 22] [%clk 0:00:32] } 48... a3 { [%timestamp 5] [%clk 0:03:00] } 49. Kxf5 { [%timestamp 10] [%clk 0:00:36] } 49... a2 { [%timestamp 7] [%clk 0:03:04] } 50. Kg5 { [%timestamp 5] [%clk 0:00:40] } 50... a1=Q { [%timestamp
+12] [%clk 0:03:08] } 51. Kxh5 { [%timestamp 4] [%clk 0:00:45] } 51... Qg7 { [%timestamp 39] [%clk 0:03:09] } 52. g4 { [%timestamp 14] [%clk 0:00:48] } 52... Kc5 { [%timestamp 15] [%clk 0:03:12] } 53. g5 { [%timestamp 84] [%clk 0:00:45] } 53... Kd5 { [%timestamp 24] [%clk 0:03:15] } 54. g6 { [%timestamp 10] [%clk 0:00:49] } 54... Ke5 { [%timestamp 30] [%clk 0:03:17] } 55. Kg5 { [%timestamp
+11] [%clk 0:00:53] } 55... Qf6+ { [%timestamp 33] [%clk 0:03:19] } 56. Kh6 { [%timestamp 13] [%clk 0:00:56] } 56... Qxh4+ { [%timestamp 20] [%clk 0:03:22] } 57. Kg7 { [%timestamp 15] [%clk 0:01:00] } 57... Kf5 { [%timestamp 16] [%clk 0:03:25] } 0-1
+
+

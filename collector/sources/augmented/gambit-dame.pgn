@@ -1,0 +1,27 @@
+[Event "Gambit Dame refusé — version commentée"]
+[Site "Augmented"]
+[Source "gambit-dame.pgn"]
+[Annotator "Enrichissement pédagogique"]
+[Result "*"]
+
+1. d4 {Les Blancs revendiquent le centre avec le pion dame — point de départ du Gambit dame et de nombreuses ouvertures fermées.}
+d5 {Réponse classique : les Noirs occupent le centre et empêchent un pion blanc en e4 sans combat.}
+2. c4 {Le Gambit dame : pression sur d5 et ouverture des lignes pour le développement. [%cal Gc2c4,Gd4d5]}
+e6 {Le Gambit est refusé : pas de ...dxc4, le centre reste fermé (structure typique du QGD). [%csl Gd5,Ge6]}
+3. Nc3 {Développement naturel ; le cavalier soutient e4 et met la pression sur d5. [%cal Gb1c3]}
+Nf6 {Développement harmonieux ; le cavalier contrôle e4 et prépare ...Be7 / ...Nbd7.}
+4. Bg5 {Système Lasker / variante orthodoxe : le fou pique le cavalier f6 et ralentit le ...e5 des Noirs.}
+Be7 {Défense solide : le fou se développe en protégeant Nf6 avant le roque.}
+5. e3 {Structure « triangle » : stabilise d4 et prépare Bd3, Nge2 et le roque sans affaiblir les cases blanches.}
+O-O {Les Noirs mettent le roi à l'abri — indispensable avant l'ouverture du centre.}
+6. Nf3 {Le deuxième cavalier rejoint la lutte pour e4 ; les Blancs sont prêts à roquer.}
+Nbd7 {Développement en soutien de c6 et de e5 ; le cavalier ne bloque pas le fou c8.}
+7. Rc1 {Tour utile sur la colonne c : pression latérale sur c6 et préparation de cxd5 / e4 selon la suite.}
+c6 {Structure Carlsbad : solidifie d5 et prépare ...dxc4 ou ...b5 dans certaines variantes.}
+8. Bd3 {Le fou vise le pion c4 capturé et participe à la pression sur le roque noir.}
+dxc4 {Les Noirs reprennent en c4 : le centre s'ouvre partiellement, le pion blanc doit être récupéré.}
+9. Bxc4 {Reprise avec développement : le fou reste actif sur la grande diagonale.}
+Nd5 {Le cavalier centralise en d5, attaque le fou c4 et bloque la poussée e4.}
+10. O-O {Les Blancs roquent : le roi est en sécurité, les tours peuvent entrer en jeu.}
+Ndb6 {Le cavalier de d7 repousse le fou de c4 (deux cavaliers pouvaient aller en b6 : notation Ndb6). [%cal Gd7b6,Gc4]}
+*

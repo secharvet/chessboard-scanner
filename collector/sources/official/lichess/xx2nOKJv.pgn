@@ -1,0 +1,671 @@
+[Event "🔥🔥: Welcome and Introduction"]
+[Site "https://lichess.org/study/fNOVLINj/zqsYG6Iy"]
+[Date "2020.07.21"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Most Common Mistakes in Chess"]
+[ChapterName "Welcome and Introduction"]
+[ChapterURL "https://lichess.org/study/xx2nOKJv/tVETqVvG"]
+[UTCDate "2020.07.21"]
+[UTCTime "03:10:33"]
+
+{ Hello all, this is Mr_Penings! This is an all-around chess improvement guide. These are the most common mistakes I have seen in players of intermediate level or above.
+❤️Please give this study a like and share with others! }
+ *
+
+
+[Event "🔥🔥: Mistake 1: Castling automatically"]
+[Site "https://lichess.org/study/fNOVLINj/G0fXHTXJ"]
+[Date "2020.07.21"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Most Common Mistakes in Chess"]
+[ChapterName "Mistake 1: Castling automatically"]
+[ChapterURL "https://lichess.org/study/xx2nOKJv/gsWIqC0R"]
+[FEN "r1bqk2r/pppp1pp1/2n2n1p/2b1p3/2B1P3/2NP1N1P/PPP2PP1/R1BQK2R b KQkq - 0 6"]
+[SetUp "1"]
+[UTCDate "2020.07.21"]
+[UTCTime "03:10:33"]
+
+6... O-O 7. O-O?! (7. g4! { White should not blindly castle kingside, or else a huge attacking opportunity will be missed. Here, g4 is an excellent move which takes advantage of Black's early h6, which acts as a hook for White to break open the g-file. White now has Rg1 at his disposal since castle was delayed } { [%cal Gh1g1] } 7... d6 { A likely response. I'll give some sample variations below of how the game may continue } (7... Nd4 8. g5 hxg5 9. Bxg5 c6 10. Rg1) 8. g5 hxg5 9. Bxg5 Bb4 { More or less forced to stop the deadly Nd5 } 10. Nh4 { The Bg5 is unstoppable. Black can do little to kick back White's pieces }) *
+
+
+[Event "🔥🔥: Mistake 2: Automatic Moves like a Robot"]
+[Site "https://lichess.org/study/fNOVLINj/9DUabiW1"]
+[Date "2020.07.21"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "D00"]
+[Opening "Queen's Pawn Game: Accelerated London System"]
+[StudyName "Most Common Mistakes in Chess"]
+[ChapterName "Mistake 2: Automatic Moves like a Robot"]
+[ChapterURL "https://lichess.org/study/xx2nOKJv/QbHneATR"]
+[UTCDate "2020.07.21"]
+[UTCTime "03:10:33"]
+
+{ This mistake is one I've seen over and over in openings like the infamous London System. Players will play opening moves automatically regardless of the opponent's moves. This can lead to danger, in forms of getting an inferior position or just missing opportunities. }
+1. d4 d5 2. Bf4 Nc6 3. e3 Bf5 4. Nf3 (4. c4! { In my opinion, this is the best way to deal with an early Nc6. The knight does not help stabilize the d5 pawn, so White logically switches gears and plays Queen's Gambit style. } 4... Nf6 5. Nc3 e6 { An improved version of the Queen's Gambit Declined with a passive knight on c6 for Black. }) 4... Nf6 5. c3? e6 { White has played like a robot for the first 5 moves. And now the next robot move, Bd3, seems wrong since Black will just play Bxd3.. Hmm... } *
+
+
+[Event "🔥🔥: Mistake 3: Pushing pawns unnecessary"]
+[Site "https://lichess.org/study/fNOVLINj/VsC7EA3B"]
+[Date "2020.07.21"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Most Common Mistakes in Chess"]
+[ChapterName "Mistake 3: Pushing pawns unnecessarily"]
+[ChapterURL "https://lichess.org/study/xx2nOKJv/cloWyIqI"]
+[FEN "r1b2rk1/pp1nq2p/2pb1n2/3p1p2/3P2p1/2NNP1P1/PP3PBP/R1BQR1K1 w - - 0 13"]
+[SetUp "1"]
+[UTCDate "2020.07.21"]
+[UTCTime "03:10:33"]
+
+13. f4? (13. Ne2 { The e4 square is inevitable black's territory, so don't bother preventing Ne4 by black. Instead, focus on your own advantages: the f4 square as an outpost for your knight! } 13... Ne4 14. Nef4 { White isn't better but at least it is a competitive middlegame }) 13... h5 (13... gxf3! { The correct way to punish White's f4 } 14. Qxf3 Ne4! { Now the monster knight on e4 is on a well-supported outpost }) 14. h4? { Now White is just pushing pawns carelessly } 14... gxh3 15. Bxh3 Ne4 { The position that arises is much better for Black, who now has an semi-open g-file to attack the weak g3 pawn in addition to the strong knight on e4. While White does get the e5 outpost, the knight is less active than Black's counterpart. } *
+
+
+[Event "🔥🔥: Mistake 4: Exchanging pawns blindly"]
+[Site "https://lichess.org/study/fNOVLINj/8nWB8lor"]
+[Date "2020.07.21"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Most Common Mistakes in Chess"]
+[ChapterName "Mistake 4: Exchanging pawns blindly"]
+[ChapterURL "https://lichess.org/study/xx2nOKJv/Fe0wkJfY"]
+[FEN "r4rk1/4qpp1/p1n3bp/1p1pp3/2pP4/P1P1PN1P/BP3PP1/R2Q1RK1 b - - 1 18"]
+[SetUp "1"]
+[UTCDate "2020.07.21"]
+[UTCTime "03:10:33"]
+
+18... exd4? { Incorrectly exchanging pawns. This only helps White's piece breathe more easily and allow more exchanges. } (18... e4! 19. Nd2 f5 { White's pieces are now even more trapped, while Black aims to breka open the f-file to double the rooks. }) 19. Nxd4 { White now has the semi-open d-file and a free bishop next after Bb1. } *
+
+
+[Event "🔥🔥: Mistake 5: Playing too reactively"]
+[Site "https://lichess.org/study/fNOVLINj/CSJUqYMq"]
+[Date "2020.07.21"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Most Common Mistakes in Chess"]
+[ChapterName "Mistake 5: Playing too reactively"]
+[ChapterURL "https://lichess.org/study/xx2nOKJv/T6PWwO3h"]
+[FEN "5rk1/5pp1/p1pp1n1p/b3p3/4P3/Pr1BBN2/1PR2PPP/3R2K1 b - - 3 21"]
+[SetUp "1"]
+[UTCDate "2020.07.21"]
+[UTCTime "03:10:33"]
+
+21... Rfb8 22. Bc1?! { Not necessarily game-changing, but it is still a bit passive, giving the initiative to Black. } (22. Rxc6! { Allowing Black to take on b2, but White gets two pawns in the process and active pieces! } 22... Rxb2 23. Rxd6) *
+
+
+[Event "🔥🔥: Mistake 6: Not punishing your opponent"]
+[Site "https://lichess.org/study/fNOVLINj/6X7sclt8"]
+[Date "2020.07.21"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Most Common Mistakes in Chess"]
+[ChapterName "Mistake 6: Not punishing your opponent"]
+[ChapterURL "https://lichess.org/study/xx2nOKJv/oOpJ3VCu"]
+[FEN "r1bqk1nr/pppp1ppp/2n5/2b1p3/2B1P3/5N2/PPPP1PPP/RNBQ1RK1 b kq - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.07.21"]
+[UTCTime "03:10:33"]
+
+1... f6 { A common beginner's opening mistake. This cannot go unpunished. } 2. d3?! (2. c3! Nge7 3. d4 { Rule of thumb: If black ever plays f6 in the e4 e5 lines, must play d4 ASAP to open up the center, thus exposing Black's weak f6 move in daylight. }) 2... Nge7 { Hard to punish Black's horrible f6 at this moment. } *
+
+
+[Event "🔥🔥: Mistake 7: Grabbing too much material at a risk"]
+[Site "https://lichess.org/study/fNOVLINj/lQa9QM41"]
+[Date "2020.07.21"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Most Common Mistakes in Chess"]
+[ChapterName "Mistake 7: Grabbing too much material at a risk"]
+[ChapterURL "https://lichess.org/study/xx2nOKJv/V54wei5w"]
+[FEN "8/4r1bk/p2Q2bp/1p2p1q1/5p2/2P5/PP2BPPP/R4RK1 w - - 2 24"]
+[SetUp "1"]
+[UTCDate "2020.07.21"]
+[UTCTime "03:10:33"]
+
+{ White is already up an exchange (rook for bishop) and a pawn. Extra material gain is less important from here. }
+24. Qxa6? { Too greedy to gain more material. } (24. f3! { Stopping any of Black's kingside attacks first! } 24... e4 25. fxe4 Bxe4 26. Bf3 { White will now easily convert the win with the existing material advantage. }) 24... e4 25. Qxb5? { Greed will be punished } 25... Re5! { Black now seizes the initiative, and f3 is coming up next. } 26. Qc6 f3 { White is now forced the give up the bishop to stop mate. } *
+
+
+[Event "🔥🔥: Mistake 8: Not having a long term plan"]
+[Site "https://lichess.org/study/fNOVLINj/5hkMCEoi"]
+[Date "2020.07.21"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Most Common Mistakes in Chess"]
+[ChapterName "Mistake 8: Not having a long term plan"]
+[ChapterURL "https://lichess.org/study/xx2nOKJv/H3gZAuDE"]
+[FEN "r1bq1rk1/pp1n1pbp/3p1np1/3Pp3/1P2P3/2N2N2/P3BPPP/R1BQ1RK1 b - - 0 10"]
+[SetUp "1"]
+[UTCDate "2020.07.21"]
+[UTCTime "03:10:33"]
+
+10... Qc7 { The game started out as a standard King's Indian Defense. Normally, white should aim to expand on the queenside and black on the kingside. Now is the perfect time to think of what the long term plan is. Black has a backwards d6 pawn, so trying to pile up on that would be nice. } 11. Bb2? { Such a normal developing move to defend the knight, but this is inconsistent with any long term plan, most definitely not contributing to the attack on d6. The bishop should be placed on a3 at some point, not on b2. } (11. Nb5! { With the d6 pawn in mind as a target! } 11... Qb8 (11... Qb6? 12. Be3) 12. Nd2 a6 13. Nc3 Kh8 14. a4 Kg8 15. Nc4 { White will eventually continue piling up forces on the queenside with Ba3 + Qb3. Notice how all of the pieces are working together towards the common goal of the d6 pawn weakness. The benefits of long term planning }) 11... Nh5 12. Rc1 Nf4 13. Nb5 { Hitting the queen, but the knight is not on an outpost, so the strong square is only temporary. Once black successfully kicks the knight back with a6, White will be forced to retreat } 13... Qb6 14. Bc4? { Unaware of what's coming up next.. } 14... a6 { Now after knight retreats, the b4 pawn falls and White has little to no play on the queenside. Black, meanwhile, has a nice knight on f4 and is up a clean pawn } *
+
+
+[Event "🔥🔥: Mistake 9: Trading bishop for knight incorrectly"]
+[Site "https://lichess.org/study/fNOVLINj/TWNOW4ge"]
+[Date "2020.07.21"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Most Common Mistakes in Chess"]
+[ChapterName "Mistake 9: Trading bishop for knight incorrectly"]
+[ChapterURL "https://lichess.org/study/xx2nOKJv/JoC0TTnJ"]
+[FEN "1r3rk1/p1bb1ppp/2np4/2p1p3/2P4q/P2QPBN1/1P1P1PPP/R1B1K2R w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.07.21"]
+[UTCTime "03:10:33"]
+
+1. Bxc6? { White has seemingly logical intentions of trading bishop for knight and then closing up the center with e4, with plans of rerouting the knight to d5 way way down the road. However, it comes with severe consequences, the lack of control over the light squares... } 1... Bxc6 2. e4 f5! { Suddenly, the center explodes, and the light squares are extremely vulnerable for White. The plan of maneuvering the knight to d5 is out the door. } *
+
+
+[Event "🔥🔥: Mistake 10: Not fully utilizing initiative"]
+[Site "https://lichess.org/study/fNOVLINj/GohKgZwH"]
+[Date "2020.07.21"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Most Common Mistakes in Chess"]
+[ChapterName "Mistake 10: Not fully utilizing initiative"]
+[ChapterURL "https://lichess.org/study/xx2nOKJv/9uGKz9Mx"]
+[FEN "rn1k3r/1pq5/p1p1PR1p/3p3Q/3P4/2NB4/PPP5/2K1b3 w - - 0 21"]
+[SetUp "1"]
+[UTCDate "2020.07.21"]
+[UTCTime "03:10:33"]
+
+21. Rf7 Qd6 22. Qf5?? { Understandably threatening e7+ next move, but Black can prevent it easily with Re8. As a result, Black is up a rook and will win the game. } (22. e7+!! { The most forcing continuation! } 22... Kd7 (22... Ke8 23. Rh7+) 23. Qf5+ Kc7 24. e8=N+ Kb6 25. Nxd6 { White wins in all continuations }) 22... Re8 *
+
+
+[Event "🔥🔥: Mistake 11: Being too materialistic"]
+[Site "https://lichess.org/study/fNOVLINj/nwx4fbHS"]
+[Date "2020.07.21"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Most Common Mistakes in Chess"]
+[ChapterName "Mistake 11: Being too materialistic"]
+[ChapterURL "https://lichess.org/study/xx2nOKJv/aeELYde8"]
+[FEN "1k1r3r/ppp2p2/3p3q/3Pp2p/2N1P1pP/2P5/PP3QKP/5R2 b - - 2 24"]
+[SetUp "1"]
+[UTCDate "2020.07.21"]
+[UTCTime "03:10:33"]
+
+{ Black is up an exchange (rook for knight) and an extra pawn. It is important to be willing to give some material back if necessary to achieve a decisive advantage. }
+24... Rhf8 (24... f5! { Giving back a pawn to free up the position and shut down the f5 outpost from White's knight. } 25. exf5 (25. Qxf5 Rdf8) 25... Rhf8 26. Ne3 e4 { And Black is still up a healthy exchange and a more active position. }) 25. Ne3 Qh7 26. Nf5 { It is unclear how Black can make progress with this annoying knight on f5, which arguably is stronger than a rook at the moment. } *
+
+
+[Event "🔥🔥: Mistake 12: Not thinking ahead"]
+[Site "https://lichess.org/study/fNOVLINj/rjPbFftz"]
+[Date "2020.07.21"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Most Common Mistakes in Chess"]
+[ChapterName "Mistake 12: Not thinking ahead"]
+[ChapterURL "https://lichess.org/study/xx2nOKJv/dO8oCWI7"]
+[FEN "r5k1/1pqbbpp1/2p1pn1p/2Pn4/1P1PN3/5N1P/2QBBPP1/1R4K1 w - - 0 19"]
+[SetUp "1"]
+[UTCDate "2020.07.21"]
+[UTCTime "03:10:33"]
+
+19. b5? { Not a bad idea to expand on the queenside, but clearly White did not think ahead. After the series of exchanges, Black trades off the horrendous light squared bishop and has more breathing room. } (19. Ne5! { Instead, focus on improving your own pieces. Advance the knight to the powerful centralized square e5. Black has to find a way to untangle in their limited space. }) 19... cxb5 20. Bxb5 Bxb5 21. Rxb5 { Black is fine now (if not better!) } *
+
+
+[Event "🔥🔥: Mistake 13: Not considering all variations of a tactic"]
+[Site "https://lichess.org/study/fNOVLINj/odjfalWF"]
+[Date "2020.07.21"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Most Common Mistakes in Chess"]
+[ChapterName "Mistake 13: Not considering all variations of a tactic"]
+[ChapterURL "https://lichess.org/study/xx2nOKJv/zIZhJGWr"]
+[FEN "r1b2rk1/p1pnqppp/1pn1p3/4P3/8/P1PB2N1/2P1QPPP/R1B1K2R w KQ - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.07.21"]
+[UTCTime "03:10:33"]
+
+1. Bxh7+? { White sees a tactic to win a pawn... Slow down! Most tactics have another variation with a move order difference } (1. Qe4! { This move order simply wins the knight on c6. Black cannot protect the knight and stop checkmate on h7 }) 1... Kxh7 2. Qe4+ Kg8 3. Qxc6 { White has just won a pawn, and it's debatable if it has helped White or not. The loss of the bishop leads to severe damage to the light squares } 3... Ba6! *
+
+
+[Event "🔥🔥: Mistake 14: Unnecessary pawn moves near king"]
+[Site "https://lichess.org/study/fNOVLINj/IGhkSBL1"]
+[Date "2020.07.21"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Most Common Mistakes in Chess"]
+[ChapterName "Mistake 14: Unnecessary pawn moves near king"]
+[ChapterURL "https://lichess.org/study/xx2nOKJv/KzxyjeoV"]
+[FEN "r1b1k2r/ppp1qppp/2p2n2/2b1p3/4P3/3P1N2/PPP2PPP/RNBQ1RK1 w kq - 2 7"]
+[SetUp "1"]
+[UTCDate "2020.07.21"]
+[UTCTime "03:10:33"]
+
+{ From the famous game Aronian - Kramnik in 2018 Candidates }
+7. h3?! Rg8! { Kramnik uses the h3 pawn as a hook to smash open the g-file. You should definitely check out this game if you haven't already. It will make all the history books! } 8. Kh1 Nh5 9. c3 g5 10. Nxe5 g4 { And Black is just crushing } *
+
+
+[Event "🔥🔥: Mistake 15: Blindly following general chess principles"]
+[Site "https://lichess.org/study/fNOVLINj/ZJ2OcNxQ"]
+[Date "2020.07.21"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Most Common Mistakes in Chess"]
+[ChapterName "Mistake 15: Blindly following general chess principles"]
+[ChapterURL "https://lichess.org/study/xx2nOKJv/MMAzQvYL"]
+[FEN "r4k2/pp2q2p/2npb1p1/2p5/2P1P3/2NP2P1/P5BP/1R1Q2K1 w - - 0 16"]
+[SetUp "1"]
+[UTCDate "2020.07.21"]
+[UTCTime "03:10:33"]
+
+{ The general rule is knights belong on outposts. d5 is an outpost by definition, and a common mistake is to blindly follow these principles. }
+16. Nd5? (16. e5! { A better continuation to achieve the superior minor piece } 16... dxe5 (16... Nxe5?! 17. Rxb7) 17. Bxc6 bxc6 18. Qf3+) 16... Bxd5 17. exd5 Nd4 { Wait a second... now black has the knight on an outpost and White has a terrible bishop. White gets punished for blindly following the rules without second thought. } *
+
+
+[Event "🔥🔥: Mistake 16: Giving up too early"]
+[Site "https://lichess.org/study/fNOVLINj/mHc3MYKL"]
+[Date "2020.07.21"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Most Common Mistakes in Chess"]
+[ChapterName "Mistake 16: Giving up too early"]
+[ChapterURL "https://lichess.org/study/xx2nOKJv/kU6AdU7v"]
+[FEN "4b3/5pk1/p3p1p1/Np1pP1Kp/nP1B1P2/P2P3P/6P1/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.07.21"]
+[UTCTime "03:10:33"]
+
+{ Although the material is even, Black is seemingly down a full knight since the Na4 is completely restricted by the Bd4 and the bishop on c8 is locked up. While White should be winning this eventually, Black should still watch for tricks. }
+1. Nb3 Bc6 2. Nd2 Be8 3. Nf1 Bc6 4. Ne3 Be8 5. g3 Bc6 6. Ng2? Be8 (6... Nc3!! 7. Bxc3 d4 { Leads to an opposite colored bishop endgame. Even though Black is down a pawn, White cannot win this. }) 7. f5 { And White eventually broke through on the kingside } *
+
+
+[Event "🔥🔥: Mistake 17: Unaware of the dynamics of the position"]
+[Site "https://lichess.org/study/fNOVLINj/mN9CZmJb"]
+[Date "2020.07.21"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Most Common Mistakes in Chess"]
+[ChapterName "Mistake 17: Unaware of the dynamics of the position"]
+[ChapterURL "https://lichess.org/study/xx2nOKJv/cG9qalqd"]
+[FEN "r1bqk2r/p3bppp/1pn5/2ppPp2/5P2/2NP1NP1/PPP4P/R1BQ1RK1 b kq - 3 10"]
+[SetUp "1"]
+[UTCDate "2020.07.21"]
+[UTCTime "03:10:33"]
+
+{ Black has the bishop pair, and wisely should control the h1-a8 diagonal. }
+10... Bb7? { The right idea, but it fails because White closes the diagonal first with d4 } (10... d4! { Playing d4 first is a must here if Black wants to control the long diagonal. Knight is forced to move, and only then is Bb7 accurate } 11. Ne2 Bb7) 11. d4 cxd4 12. Nb5 { And the diagonal is now shut down for as long as White desires. } *
+
+
+[Event "🔥🔥: Mistake 18: Unequal trades against higher rated players"]
+[Site "https://lichess.org/study/fNOVLINj/LZiuG5LY"]
+[Date "2020.07.21"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Most Common Mistakes in Chess"]
+[ChapterName "Mistake 18: Unequal trades against higher rated players"]
+[ChapterURL "https://lichess.org/study/xx2nOKJv/4HR51Ma4"]
+[FEN "4rrk1/pp3p1p/2p3p1/3p4/P7/1P1P4/2P2PPP/4RRK1 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.07.21"]
+[UTCTime "03:10:33"]
+
+{ It is very common for lower rated players to aim to swap off all the pieces as fast as possible. But beware, not all trades are equal. }
+1... Rxe1? { Trading first allows White to control the file, a critical factor in an otherwise dead drawn endgame } (1... a5 2. f3 f6 { Dead draw after Kf7 and then swapping off all the rooks. }) 2. Rxe1 f6 3. Re7 Rf7 4. Re6 Kf8 5. g4 { This endgame is far from easy to hold. Black cannot easily play Re7 nor move the king upwards. Only White has the winning chances here. } *
+
+
+[Event "🔥🔥: Mistake 19: Rushing the attack"]
+[Site "https://lichess.org/study/fNOVLINj/jGZRo0JK"]
+[Date "2020.07.21"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Most Common Mistakes in Chess"]
+[ChapterName "Mistake 19: Rushing the attack"]
+[ChapterURL "https://lichess.org/study/xx2nOKJv/T8kDWLOD"]
+[FEN "5bk1/pppb2rp/3p1n2/3Pp1qn/2P2p2/5Q1P/PPBB1PP1/R5RK b - - 11 24"]
+[SetUp "1"]
+[UTCDate "2020.07.21"]
+[UTCTime "03:10:33"]
+
+24... Bg4? { Unnecessarily complication the position. This moves looks pretty, but it can easily backfire. } (24... Qh4! { Slow and simple. Sometimes, the patient move is the strongest. Black prepares Bg4 next, and there will be no complications. Meanwhile, White cannot find any useful move to stop Black's attack. } { [%cal Gd7g4] }) 25. hxg4 Ng3+ { Black attempts at fireworks, but unfortunately, this move fails due to a shocking move. } 26. Qxg3! { If Black takes the queen, his own queen will be lost too. } *
+
+
+[Event "🔥🔥: Mistake 20: Too scared to sacrifice material"]
+[Site "https://lichess.org/study/fNOVLINj/NNR9bsyo"]
+[Date "2020.07.21"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Most Common Mistakes in Chess"]
+[ChapterName "Mistake 20: Too scared to sacrifice material"]
+[ChapterURL "https://lichess.org/study/xx2nOKJv/c4kFVjPh"]
+[FEN "r1b1kb1r/2qn1p1p/p2ppp2/1p6/3NPPP1/2N5/PPP1Q2P/2KR1B1R b kq - 1 11"]
+[SetUp "1"]
+[UTCDate "2020.07.21"]
+[UTCTime "03:11:31"]
+
+11... b4 12. Na4? (12. Nd5! { The thematic Nd5 sacrifice in the Sicilian. White will not have any clear cut win, but there is more than enough compensation for the lost knight. } 12... exd5 13. exd5+ Be7 14. Re1 Nb8 15. h4 { Black's king is stuck in the center and pieces are completely tangled up. (Baadur Jobava - Holden Hernandez 2008) }) 12... Nc5 { Black is now totally fine. } *
+
+
+[Event "🔥🔥: ** Puzzles **"]
+[Site "https://lichess.org/study/fNOVLINj/8S6bYL6W"]
+[Date "2020.07.21"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Most Common Mistakes in Chess"]
+[ChapterName "** Puzzles **"]
+[ChapterURL "https://lichess.org/study/xx2nOKJv/Xx45dvLr"]
+[UTCDate "2020.07.21"]
+[UTCTime "03:11:31"]
+
+{ These puzzles test your understanding of the mistakes because the solution is to correctly punish your opponent for their mistakes. }
+ *
+
+
+[Event "Most Common Mistakes in Chess: Puzzle 1"]
+[Date "2020.07.21"]
+[Result "*"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Most Common Mistakes in Chess"]
+[ChapterName "Puzzle 1"]
+[ChapterURL "https://lichess.org/study/xx2nOKJv/uGHjTaPK"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[FEN "1k4rr/1pp2p2/1p1pqn1p/4p3/QPP1P3/3PB2P/P4P1K/1R3R2 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.07.21"]
+[UTCTime "03:15:00"]
+[ChapterMode "gamebook"]
+
+1. Rb3 { White plans on the rook lift to a3. How should Black respond? } 1... Ng4+ (1... Kc8? { Too passive. The best defense should be a strong offense! }) 2. hxg4 Qxg4 { Correct! Checkmate is unstoppable } *
+
+
+[Event "Most Common Mistakes in Chess: Puzzle 2"]
+[Date "2020.07.21"]
+[Result "*"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Most Common Mistakes in Chess"]
+[ChapterName "Puzzle 2"]
+[ChapterURL "https://lichess.org/study/xx2nOKJv/J00D3sxd"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[FEN "2r2rk1/p2bbppp/1p1qp3/1P1p4/P2N4/2PQ2P1/5PBP/R3R1K1 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.07.21"]
+[UTCTime "03:19:44"]
+[ChapterMode "gamebook"]
+
+1... f5 2. Nxe6 Bxe6 3. Rxe6 { Great job! Black cannot take the rook due to Bxd5, leading to a pin } *
+
+
+[Event "Most Common Mistakes in Chess: Puzzle 3"]
+[Date "2020.07.21"]
+[Result "*"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Most Common Mistakes in Chess"]
+[ChapterName "Puzzle 3"]
+[ChapterURL "https://lichess.org/study/xx2nOKJv/qK6Fn2gR"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[FEN "1r1qr1k1/5pp1/2p2nb1/p5N1/B2pP3/3P3P/1PPQ1P2/2KR3R w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.07.21"]
+[UTCTime "03:20:55"]
+[ChapterMode "gamebook"]
+
+1. Bxc6 { White gets greedy and takes a pawn } 1... Qb6 { Correct! Black has a nice counterattack, and since Qxb2 is checkmate, White loses a bishop. } (1... Re7 { Too reactive. Look for stronger options to steal the initiative from White }) *
+
+
+[Event "Most Common Mistakes in Chess: Puzzle 4"]
+[Date "2020.07.21"]
+[Result "*"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Most Common Mistakes in Chess"]
+[ChapterName "Puzzle 4"]
+[ChapterURL "https://lichess.org/study/xx2nOKJv/mmLxcTe2"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[FEN "6rr/2q2kb1/1p3p1p/pQpPpPp1/P3P1PP/1P2BK2/7R/2R5 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.07.21"]
+[UTCTime "03:22:20"]
+[ChapterMode "gamebook"]
+
+1. d6 (1. Rd2 { Too slow! Black can blockade the d-pawn with Qd6 }) 1... Qxd6 2. Rd2 { Correct! White sacrifices a pawn for a nice initiative, and both of White's rooks will invade the d-file. } *
+
+
+[Event "Most Common Mistakes in Chess: Puzzle 5"]
+[Date "2020.07.21"]
+[Result "*"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Most Common Mistakes in Chess"]
+[ChapterName "Puzzle 5"]
+[ChapterURL "https://lichess.org/study/xx2nOKJv/Si3KDYIO"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[FEN "r1b2rk1/q2nppbp/p1p3p1/3p4/N2P1P1P/5N2/PP1Q1PP1/2R1KB1R w Kq - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.07.21"]
+[UTCTime "03:23:15"]
+[ChapterMode "gamebook"]
+
+1. h5 { Correct! Ignore the poison pawn on c6 and just continue attacking Black's king. } (1. Rxc6 { Although it is a free pawn, Black gets tons of piece activity to follow. Having the king in the center is not going to help White. } 1... Nf6) *
+
+
+[Event "Most Common Mistakes in Chess: Puzzle 6"]
+[Date "2020.07.21"]
+[Result "*"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Most Common Mistakes in Chess"]
+[ChapterName "Puzzle 6"]
+[ChapterURL "https://lichess.org/study/xx2nOKJv/7FmblqLz"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[FEN "1r4k1/5ppp/prpbqn2/8/1NpPp3/P1P1P2P/1P2QPP1/R1B1K2R b KQ - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.07.21"]
+[UTCTime "03:24:45"]
+[ChapterMode "gamebook"]
+
+1... a5 { Great move! White's knight is not on an outpost, so freely kick it backwards to a future of inactivity } (1... Bxb4? { You've just traded your strong bishop for White's knight, which is not even on an outpost. White will recapture with the a-pawn and free up the Ra1 as well. No good! } 2. axb4) *
+
+
+[Event "Most Common Mistakes in Chess: Puzzle 7"]
+[Date "2020.07.21"]
+[Result "*"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Most Common Mistakes in Chess"]
+[ChapterName "Puzzle 7"]
+[ChapterURL "https://lichess.org/study/xx2nOKJv/sgzMXNun"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[FEN "4r3/4Q3/p1q2pp1/1pp3k1/2P2R2/3P2P1/PP5P/6K1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.07.21"]
+[UTCTime "03:25:55"]
+[ChapterMode "gamebook"]
+
+1. Qh7 (1. h4+ { It is tempting to continue checks, but Black can just retreat to h6 and the checks run out. } 1... Kh6) 1... Re1+ 2. Kf2 { Black runs out of checks and thus it is White who takes the initiative with the unstoppable mating threats of h4# and Qh4# } *
+
+
+[Event "Most Common Mistakes in Chess: Puzzle 8"]
+[Date "2020.07.21"]
+[Result "*"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Most Common Mistakes in Chess"]
+[ChapterName "Puzzle 8"]
+[ChapterURL "https://lichess.org/study/xx2nOKJv/kWXWTFkS"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[FEN "4rrk1/1bpR1p2/1pq1pQp1/p3P2p/P1PR3P/5N2/2P2PP1/6K1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.07.21"]
+[UTCTime "03:27:06"]
+[ChapterMode "gamebook"]
+
+1. Kh2 { Famous king walk from Nigel Short - Jan Timman 1991. The king cannot be stopped from reaching g5 or h6. Do not rush the attack! Bring all pieces (including possibly the king!) and then attack especially if Black is helpless anyways. } *
+
+
+[Event "Most Common Mistakes in Chess: Puzzle 9"]
+[Date "2020.07.21"]
+[Result "*"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Most Common Mistakes in Chess"]
+[ChapterName "Puzzle 9"]
+[ChapterURL "https://lichess.org/study/xx2nOKJv/r6pNVf8R"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[FEN "rnb1r1k1/3pnpbp/2pBp1p1/ppP1P3/3PN1P1/5N2/PP1K1P1P/R4B1R w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.07.21"]
+[UTCTime "03:28:02"]
+[ChapterMode "gamebook"]
+
+1. h4 (1. Bxe7 { It might seem like White's bishop is inferior to Black's knight in this closed position, but the bishop does a great job of restricting Black's entire queenside army. } 1... Rxe7) 1... Nd5 2. h5 { The Nd5 is on an outpost and White's Bd6 is seemingly shut off by its own pawns. But if you look deeper into the position, the Bd6 actually restricts Black's entire army on the queenside! A rapid attack on the h-file is deadly, while the black knight on d5, though on an outpost, is fairly harmless. } *
+
+
+[Event "Most Common Mistakes in Chess: Puzzle 10"]
+[Date "2020.07.21"]
+[Result "*"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Most Common Mistakes in Chess"]
+[ChapterName "Puzzle 10"]
+[ChapterURL "https://lichess.org/study/xx2nOKJv/yehIN1Qs"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[FEN "r3k2r/4qpp1/p1n1p2p/1p1p4/2pPb3/P3PN1P/BPP2PP1/R2QK2R w KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.07.21"]
+[UTCTime "03:29:51"]
+[ChapterMode "gamebook"]
+
+1. O-O { White castles in order to bring the king to safety. How should black proceed? } 1... g5 { Correct! Black utilizes the h3 pawn as a hook to open up the g-file for attack. Black definitely does not need to castle since the king is already quite safe where it is now in the center. Instead, placing a rook on the g-file is far more powerful once the file opens up. } (1... O-O { Hard to criticize castling, but it does give up another stronger opportunity... }) *
+
+
+[Event "Most Common Mistakes in Chess: Puzzle 11"]
+[Date "2020.07.21"]
+[Result "*"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Most Common Mistakes in Chess"]
+[ChapterName "Puzzle 11"]
+[ChapterURL "https://lichess.org/study/xx2nOKJv/FBzqgble"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[FEN "2k3rr/1ppq4/1pnppn2/4p1pp/P1N1P3/3P2BP/1PP2PP1/R2Q1RK1 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.07.21"]
+[UTCTime "03:31:43"]
+[ChapterMode "gamebook"]
+
+1... h4 (1... g4 { This is the right idea to pawn break on the kingside, but inaccurate here because White can easily close the kingside with h4, and suddenly it is White who gets the pawn break successfully with a5 next }) 2. Bh2 g4 { Here black wins the race! } *
+
+
+[Event "Most Common Mistakes in Chess: Puzzle 12"]
+[Date "2020.07.21"]
+[Result "*"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Most Common Mistakes in Chess"]
+[ChapterName "Puzzle 12"]
+[ChapterURL "https://lichess.org/study/xx2nOKJv/oGqdCwYq"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[FEN "5krr/1Q3p2/2p1p3/3pPn2/3P3p/P1N1q2P/5RP1/R5K1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.07.21"]
+[UTCTime "03:32:37"]
+[ChapterMode "gamebook"]
+
+1. Nd1 Rxg2+ (1... Qxh3 { Greedy but it loses the initiative } 2. Qc8+ Ke7 (2... Kg7 3. Qxg8+) 3. Qc7+ Ke8 4. Rb1) 2. Kxg2 Rg8+ 3. Kf1 Ng3+ 4. Kg2 Ne2+ 5. Kh2 Qg3+ 6. Kh1 Qg1# *
+
+
+[Event "Most Common Mistakes in Chess: Conclusion"]
+[Date "2020.07.23"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Most Common Mistakes in Chess"]
+[ChapterName "Conclusion"]
+[ChapterURL "https://lichess.org/study/xx2nOKJv/4X20HDcK"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[UTCDate "2020.07.23"]
+[UTCTime "05:53:45"]
+
+{ Thanks for viewing! If you have any other suggestions for studies, feel free to send me a message.
+
+If you want to get live updates on when a new study comes out, join my team: https://lichess.org/team/chess-openings-mastery-with-mr_penings
+-Mr_Penings }
+ *
+
+

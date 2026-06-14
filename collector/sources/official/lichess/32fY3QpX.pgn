@@ -1,0 +1,23 @@
+[Event "Rated Bullet game"]
+[Site "https://lichess.org/NSImdaxd"]
+[Date "2021.12.22"]
+[White "DrNykterstein"]
+[Black "RebeccaHarris"]
+[Result "1/2-1/2"]
+[WhiteElo "3303"]
+[WhiteTitle "GM"]
+[BlackElo "3136"]
+[BlackTitle "GM"]
+[TimeControl "60+0"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "C11"]
+[Opening "French Defense: Classical Variation, Shirov-Anand Variation"]
+[StudyName "Game study"]
+[ChapterName "GM DrNykterstein (3303) - GM RebeccaHarris (3136)"]
+[ChapterURL "https://lichess.org/study/32fY3QpX/8RK4lkU8"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 { [%clk 0:01:00] } 1... Nf6 { [%clk 0:01:00] } 2. Nc3 { [%clk 0:00:59] } 2... e6 { [%clk 0:01:00] } 3. e4 { [%clk 0:00:58] } 3... d5 { [%clk 0:00:59] } 4. e5 { [%clk 0:00:58] } 4... Nfd7 { [%clk 0:00:58] } 5. Nce2 { [%clk 0:00:58] } 5... c5 { [%clk 0:00:58] } 6. c3 { [%clk 0:00:58] } 6... Nc6 { [%clk 0:00:57] } 7. Nf3 { [%clk 0:00:57] } 7... Be7 { [%clk 0:00:56] } 8. h4 { [%clk 0:00:55] } 8... Qb6 { [%clk 0:00:54] } 9. a3 { [%clk 0:00:54] } 9... f6 { [%clk 0:00:53] } 10. exf6 { [%clk 0:00:53] } 10... Nxf6 { [%clk 0:00:52] } 11. Nf4 { [%clk 0:00:52] } 11... O-O { [%clk 0:00:51] } 12. Bd3 { [%clk 0:00:51] } 12... Ne4 { [%clk 0:00:48] } 13. O-O { [%clk 0:00:51] } 13... Bd6 { [%clk 0:00:47] } 14. g3 { [%clk 0:00:49] } 14... Qd8 { [%clk 0:00:43] } 15. Be3 { [%clk 0:00:47] } 15... Qf6 { [%clk 0:00:39] } 16. dxc5 { [%clk 0:00:43] } 16... Bc7 { [%clk 0:00:37] } 17. Bxe4 { [%clk 0:00:42] } 17... dxe4 { [%clk 0:00:37] } 18. Ng5 { [%clk 0:00:41] } 18... Qf5 { [%clk 0:00:35] } 19. Qb1 { [%clk 0:00:38] } 19... Ne5 { [%clk 0:00:31] } 20. Qxe4 { [%clk 0:00:37] } 20... h6 { [%clk 0:00:29] } 21. Qxf5 { [%clk 0:00:35] } 21... exf5 { [%clk 0:00:28] } 22. Ngh3 { [%clk 0:00:35] } 22... b6 { [%clk 0:00:26] } 23. h5 { [%clk 0:00:34] } 23... Bb7 { [%clk 0:00:25] } 24. Rfd1 { [%clk 0:00:33] } 24... Rfe8 { [%clk 0:00:25] } 25. cxb6 { [%clk 0:00:32] } 25... Bxb6 { [%clk 0:00:24] } 26. Bxb6 { [%clk 0:00:30] } 26... axb6 { [%clk 0:00:24] } 27. Ng6 { [%clk 0:00:27] } 27... Nf3+ { [%clk 0:00:23] } 28. Kf1 { [%clk 0:00:27] } 28... Re6 { [%clk 0:00:21] } 29. Nhf4 { [%clk 0:00:25] } 29... Ree8 { [%clk 0:00:19] } 30. Rd7 { [%clk 0:00:24] } 30... Ba6+ { [%clk 0:00:18] } 31. Kg2 { [%clk 0:00:23] } 31... Ng5 { [%clk 0:00:18] } 32. Rad1 { [%clk 0:00:22] } 32... Bb5 { [%clk 0:00:17] } 33. Ne7+ { [%clk 0:00:20] } 33... Kf7 { [%clk 0:00:16] } 34. Nxf5+ { [%clk 0:00:19] } 34... Bxd7 { [%clk 0:00:15] } 35. Rxd7+ { [%clk 0:00:19] } 35... Kf6 { [%clk 0:00:14] } 36. Nxg7 { [%clk 0:00:17] } 36... Rad8 { [%clk 0:00:14] } 37. Nxe8+ { [%clk 0:00:15] } 37... Rxe8 { [%clk 0:00:14] } 38. Rd6+ { [%clk 0:00:15] } 38... Kf5 { [%clk 0:00:13] } 39. Rxb6 { [%clk 0:00:14] } 39... Kg4 { [%clk 0:00:13] } 40. Rxh6 { [%clk 0:00:14] } 40... Re1 { [%clk 0:00:13] } 41. Rg6 { [%clk 0:00:13] } 41... Kf5 { [%clk 0:00:11] } 42. h6 { [%clk 0:00:12] } 42... Re8 { [%clk 0:00:10] } 43. Rg7 { [%clk 0:00:11] } 43... Rh8 { [%clk 0:00:10] } 44. h7 { [%clk 0:00:11] } 44... Nxh7 { [%clk 0:00:09] } 45. Ng6 { [%clk 0:00:11] } 45... Kf6 { [%clk 0:00:08] } 46. Nxh8 { [%clk 0:00:10] } 46... Kxg7 { [%clk 0:00:08] } 47. a4 { [%clk 0:00:10] } 47... Kxh8 { [%clk 0:00:07] } 48. a5 { [%clk 0:00:10] } 48... Nf6 { [%clk 0:00:07] } 49. a6 { [%clk 0:00:10] } 49... Nd7 { [%clk 0:00:07] } 50. a7 { [%clk 0:00:10] } 50... Nb6 { [%clk 0:00:07] } 51. f4 { [%clk 0:00:09] } 51... Na8 { [%clk 0:00:07] } 52. Kf3 { [%clk 0:00:08] } 52... Kg7 { [%clk 0:00:07] } 53. c4 { [%clk 0:00:08] } 53... Kf6 { [%clk 0:00:07] } 54. b4 { [%clk 0:00:08] } 54... Nb6 { [%clk 0:00:07] } 55. b5 { [%clk 0:00:08] } 55... Nxc4 { [%clk 0:00:06] } 56. a8=Q { [%clk 0:00:08] } 56... Nd6 { [%clk 0:00:06] } 57. Qb7 { [%clk 0:00:08] } 57... Nf7 { [%clk 0:00:06] } 58. Qc6+ { [%clk 0:00:07] } 58... Kg7 { [%clk 0:00:06] } 59. Qc7 { [%clk 0:00:06] } 59... Kg8 { [%clk 0:00:05] } 60. Qxf7+?? { [%clk 0:00:06] } 60... Kh8 { [%clk 0:00:05] } 61. b6 { 1/2-1/2 Draw by stalemate. } { [%clk 0:00:06] } 1/2-1/2
+
+

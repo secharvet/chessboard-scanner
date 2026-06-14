@@ -1,0 +1,88 @@
+[Event "vs Computer"]
+[Site "Chess.com"]
+[Date "2023.01.04"]
+[Round "-"]
+[White "IMRosen"]
+[Black "MittensBot"]
+[Result "0-1"]
+[WhiteElo "2389"]
+[BlackElo "1"]
+[TimeControl "1/0"]
+[Termination "MittensBot won by checkmate"]
+[Variant "Standard"]
+[ECO "C44"]
+[Opening "Ponziani Opening: Steinitz Variation"]
+[StudyName "MITTENS"]
+[ChapterName "IMRosen - MittensBot"]
+[ChapterURL "https://lichess.org/study/M5JHAacL/PF5vpfjf"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 { [%eval 0.36] } 1... e5 { [%eval 0.32] } 2. Nf3 { [%eval 0.29] } 2... Nc6 { [%eval 0.33] } 3. c3 { [%eval -0.13] } 3... d5 { [%eval -0.01] } 4. Qa4 { [%eval -0.11] } 4... f6 { [%eval 0.0] } 5. Bb5 { [%eval -0.5] } 5... Ne7 { [%eval -0.33] } 6. exd5 { [%eval -0.5] } 6... Qxd5 { [%eval -0.45] } 7. O-O { [%eval -0.77] } 7... e4 { [%eval -0.66] } 8. c4 { [%eval -0.64] } 8... Qd6?! { [%eval 0.34] } { Inaccuracy. Qd7 was best. } (8... Qd7 9. Ne1 b6 10. Nc3 a6 11. Bxc6 Qxc6 12. Qxc6+ Nxc6 13. Nxe4 Bf5 14. Ng3 Bg6 15. b3) 9. c5 { [%eval 0.24] } 9... Qxc5 { [%eval 0.37] } 10. d4 { [%eval 0.41] } 10... Qd6 { [%eval 0.19] } 11. Nfd2 { [%eval -0.27] } 11... Bf5? { [%eval 1.0] } { Mistake. Bd7 was best. } (11... Bd7 12. Nc3 O-O-O 13. Nc4 Qb4 14. Qd1 Nf5 15. a3 Qe7 16. d5 Ne5 17. Bxd7+ Rxd7 18. Nxe5) 12. Nc4 { [%eval 0.86] } 12... Qd7 { [%eval 0.85] } 13. Nc3?! { [%eval 0.0] } { Inaccuracy. Ne3 was best. } (13. Ne3) 13... a6 { [%eval -0.01] } 14. d5 { [%eval 0.01] } 14... Nxd5 { [%eval 0.16] } 15. Rd1 { [%eval 0.03] } 15... Nxc3 { [%eval -0.01] } 16. bxc3 { [%eval 0.06] } 16... axb5 { [%eval 0.0] } 17. Qxa8+ { [%eval 0.0] } 17... Qc8 { [%eval 0.0] } 18. Qxc8+ { [%eval 0.06] } 18... Bxc8 { [%eval 0.02] } 19. Na3 { [%eval -0.11] } 19... Bxa3 { [%eval -0.01] } 20. Bxa3 { [%eval -0.09] } 20... Kf7 { [%eval 0.09] } 21. Rab1 { [%eval 0.06] } 21... Bg4 { [%eval -0.01] } 22. f3 { [%eval -0.44] } 22... exf3 { [%eval -0.53] } 23. gxf3 { [%eval -0.44] } 23... Bxf3 { [%eval -0.43] } 24. Rd7+ { [%eval -0.4] } 24... Kg6 { [%eval -0.52] } 25. Kf2 { [%eval -0.43] } 25... Ra8 { [%eval -0.51] } 26. Rxc7 { [%eval -0.42] } 26... Bd5 { [%eval -0.37] } 27. Rxb5 { [%eval -0.39] } 27... Bc4 { [%eval -0.26] } 28. Rbxb7?? { [%eval -2.03] } { Blunder. Rc5 was best. } (28. Rc5 Be6 29. Bb4 Rxa2+ 30. Kg3 h5 31. Rxb7 Ne5 32. Re7 Kf5 33. Rxg7 h4+ 34. Kxh4 Kf4) 28... Rxa3 { [%eval -2.06] } 29. Rxg7+ { [%eval -2.07] } (29. Rxc6 Bd5) 29... Kf5 { [%eval -1.87] } 30. Rxh7 { [%eval -2.17] } 30... Ne5 { [%eval -1.92] } 31. Rh5+ { [%eval -2.06] } 31... Kg4 { [%eval -1.88] } 32. Rh6 { [%eval -1.71] } 32... Bd5 { [%eval -1.76] } 33. Rg7+ { [%eval -1.78] } 33... Kf5 { [%eval -1.75] } 34. Rh5+ { [%eval -1.8] } 34... Ke6 { [%eval -1.86] } 35. Rg3 { [%eval -2.16] } 35... Rxa2+ { [%eval -2.04] } 36. Ke3 { [%eval -2.02] } 36... Nc4+ { [%eval -1.98] } 37. Kd4 { [%eval -2.08] } 37... Ne5 { [%eval -2.02] } 38. Ke3 { [%eval -1.97] } 38... Nc4+ { [%eval -1.85] } 39. Kd4 { [%eval -1.99] } 39... Ra4 { [%eval -2.07] } 40. Kc5 { [%eval -2.13] } 40... Be4 { [%eval -2.09] } 41. Rh8?! { [%eval -2.83] } { Inaccuracy. Rh6 was best. } (41. Rh6 Ne5 42. Kb5 Ra8 43. Kb4 Nd3+ 44. Kb5 Rb8+ 45. Ka5 Ne5 46. Rg1 Nc4+ 47. Ka6 Nd6) 41... Nd6 { [%eval -2.74] } 42. h4 { [%eval -3.26] } 42... Ra5+ { [%eval -3.69] } 43. Kb4 { [%eval -4.49] } 43... Rb5+ { [%eval -4.94] } 44. Ka3 { [%eval -4.88] } 44... Nc4+ { [%eval -4.82] } 45. Ka2 { [%eval -4.53] } 45... Rb2+ { [%eval -4.13] } 46. Ka1 { [%eval -4.63] } 46... Rb3 { [%eval -4.93] } 47. Re8+ { [%eval -4.75] } 47... Kf5 { [%eval -4.76] } 48. Rxe4 { [%eval -4.53] } 48... Kxe4 { [%eval -4.75] } 49. h5 { [%eval -4.95] } 49... Rb7 { [%eval -4.86] } 50. h6 { [%eval -5.01] } 50... Rh7 { [%eval -4.98] } 51. Rg4+ { [%eval -5.15] } 51... Kd3 { [%eval -5.05] } 52. Rh4?? { [%eval #-13] } { Checkmate is now unavoidable. Kb1 was best. } (52. Kb1 Rxh6 53. Rf4 Kxc3 54. Rf3+ Kd4 55. Rf4+ Kd5 56. Kc2 Nd6 57. Ra4 Ke5 58. Kd3 Rh3+) 52... Kc2 { [%eval #-15] } 53. Rh2+ { [%eval #-14] } 53... Nd2 { [%eval #-13] } 54. Rxd2+ { [%eval #-14] } 54... Kxd2 { [%eval #-12] } 55. c4 { [%eval #-2] } 55... Kc2 { [%eval #-1] } 56. c5 { [%eval #-1] } 56... Ra7# { 0-1 Black wins. } 0-1
+
+
+[Event "MITTENS: Chapter 2"]
+[Date "????.??.??"]
+[Result "0-1"]
+[Variant "Standard"]
+[ECO "C44"]
+[Opening "Ponziani Opening: Steinitz Variation"]
+[StudyName "MITTENS"]
+[ChapterName "Chapter 2"]
+[ChapterURL "https://lichess.org/study/M5JHAacL/tHrhDNJA"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 { Meow. I am become Mittens, the destroyer of kings. Hehehe. } 1... e5 { Meow. Fate has brought you here, but I live here through all time and space
+forever. Hehehe. } 2. Nf3 Nc6 3. c3 d5 4. Qa4 f6 5. Bb5 Ne7 6. exd5 { *ominously*
+All chess players eventually crumble under my mighty paws…I mean, meow $1 Hehehe. } 6... Qxd5 7. O-O e4 8. c4 Qd6 9. c5 Qxc5 10. d4 Qd6 11. Nfd2 Bf5 12. Nc4 Qd7 13. Nc3 a6 14. d5 Nxd5 15. Rd1 Nxc3 16. bxc3 axb5 17. Qxa8+ { I am a tiger and you
+are in the jungle I call eternity. Hehehe. } 17... Qc8 18. Qxc8+ { The light that
+burns twice as bright burns half as long, hehehe. You are not long for this
+game. } 18... Bxc8 { *Knocks queen onto the floor* Your queen is gone. Hehehehe. } 19. Na3 Bxa3 20. Bxa3 Kf7 21. Rab1 Bg4 22. f3 exf3 23. gxf3 Bxf3 24. Rd7+ { I am
+a tiger and you are in the jungle I call eternity. Hehehe. } 24... Kg6 25. Kf2 Ra8 26. Rxc7 Bd5 27. Rxb5 Bc4 28. Rbxb7 Rxa3 29. Rxg7+ { I am a tiger and you are
+in the jungle I call eternity. Hehehe. } 29... Kf5 30. Rxh7 Ne5 31. Rh5+ Kg4 32. Rh6 Bd5 33. Rg7+ Kf5 34. Rh5+ { I am a tiger and you are in the jungle I call
+eternity. Hehehe. } 34... Ke6 35. Rg3 Rxa2+ { Meow. That looks like a check.
+Hehehehe. } 36. Ke3 Nc4+ 37. Kd4 Ne5 { Meow. That looks like a check. Hehehehe. } 38. Ke3 Nc4+ 39. Kd4 Ra4 40. Kc5 Be4 41. Rh8 { You have triumphed in existing for
+longer than many before you. Hehehe. Meow. } 41... Nd6 42. h4 Ra5+ { Meow. That
+looks like a check. Hehehehe. } 43. Kb4 Rb5+ 44. Ka3 Nc4+ 45. Ka2 Rb2+ 46. Ka1 Rb3 47. Re8+ { I am a tiger and you are in the jungle I call eternity. Hehehe. } 47... Kf5 48. Rxe4 Kxe4 49. h5 Rb7 50. h6 Rh7 51. Rg4+ Kd3 52. Rh4 Kc2 53. Rh2+ { I am a tiger and you are in the jungle I call eternity. Hehehe. } 53... Nd2 54. Rxd2+ Kxd2 55. c4 Kc2 56. c5 Ra7# { 0-1 Black wins. } 0-1
+
+
+[Event "MITTENS: Chapter 3"]
+[Date "????.??.??"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C42"]
+[Opening "Petrov's Defense"]
+[StudyName "MITTENS"]
+[ChapterName "Chapter 3"]
+[ChapterURL "https://lichess.org/study/M5JHAacL/V7ncUYHd"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 { Meow. I am become Mittens, the destroyer of kings. Hehehe. } 1... e5 { Meow. Fate has brought you here, but I live here through all time and space
+forever. Hehehe. } 2. Nf3 Nf6 3. d3 Bc5 4. Nxe5 { *ominously* All chess players
+eventually crumble under my mighty paws…I mean, meow $1 Hehehe. } 4... Nc6 5. Nxc6 dxc6 6. Be2 h5 7. c3 Ng4 8. d4 Qh4 9. g3 Qf6 10. f3 h4 11. Rg1 hxg3 12. hxg3 Rh2 13. dxc5 Be6 14. Qd4 Bc4 15. Bxc4 Ne5 16. Nd2 Rxd2 17. Qxe5+ { Meow. That looks
+like a check. Hehehehe. } 17... Qxe5 { The light that burns twice as bright burns
+half as long, hehehe. You are not long for this game. } 18. Bxd2 Qxc5 19. Rh1 O-O-O 20. Bf1 a5 21. Rh7 b5 22. Rxg7 a4 23. Rxf7 a3 24. b3 Qh5 25. Rf6 Qh2 26. O-O-O Rxd2 27. Rxd2 Qg1 28. Rd1 Qh2 29. Rd2 Qh1 30. Kc2 Qxf1 31. g4 b4 32. Rf5 { We will exist playing this game against each other forever. Through all
+eternities and realities. Hehehehe. Meow. } 32... Qa1 33. Kd3 Qf1+ { I am a tiger
+and you are in the jungle I call eternity. Hehehe. } 34. Kd4 Qe1 35. Kd3 Qf1+ 36. Ke3 bxc3 37. Rc2 Qd1 38. Rxc3 Qe1+ { I am a tiger and you are in the jungle I
+call eternity. Hehehe. } 39. Kd3 Qd1+ 40. Kc4 Qe2+ 41. Kb4 { You have triumphed in
+existing for longer than many before you. Hehehe. Meow. } 41... Qxa2 42. Rfc5 Qb2 43. Rc2 Kd7 44. Rxc6 Qd4+ { I am a tiger and you are in the jungle I call
+eternity. Hehehe. } 45. Kxa3 *
+
+
+[Event "MITTENS: IMRosen - Mittens"]
+[Date "????.??.??"]
+[White "IMRosen"]
+[Black "Mittens"]
+[Result "1-0"]
+[WhiteElo "2695"]
+[BlackElo "1"]
+[Variant "Standard"]
+[ECO "C56"]
+[Opening "Italian Game: Scotch Gambit, Nakhmanson Gambit"]
+[StudyName "MITTENS"]
+[ChapterName "IMRosen - Mittens"]
+[ChapterURL "https://lichess.org/study/M5JHAacL/fyskXuyj"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Bc4 Nf6 3. d4 exd4 4. Nf3 Nc6 5. O-O Nxe4 6. Nc3 dxc3 7. Bxf7+ Kxf7 8. Qd5+ Ke8 9. Re1 Qf6 10. Bg5 Qf7 11. Qxe4+ Be7 12. b4 d5 13. Qh4 h6 14. Re3 hxg5 15. Qxh8+ Qf8 16. Qh5+ Kd8 17. Rae1 g6 18. Qh7 a6 19. Nd4 Bd6 20. Qxg6 Bd7 21. Ne6+ Bxe6 22. Rxe6 Be7 23. a4 Kc8 24. h4 Bd8 25. Re8 Qxb4 26. h5 Qd6 27. R1e6 Qd7 28. h6 Nd4 29. R6e7 Qc6 30. Rxd8+ Kxd8 31. Qf7 Ne6 32. h7 Kc8 33. h8=Q+ Nd8 34. Qxd8+ Kxd8 35. Qf8+ Qe8 36. Qxe8# { 1-0 White wins. } 1-0
+
+

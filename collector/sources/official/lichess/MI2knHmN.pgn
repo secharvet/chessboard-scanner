@@ -1,0 +1,21 @@
+[Event "Rated Classical game"]
+[Site "https://lichess.org/MdUaXUmT"]
+[Date "2022.11.16"]
+[White "Ar_12"]
+[Black "boellmann"]
+[Result "0-1"]
+[WhiteElo "1610"]
+[BlackElo "1610"]
+[TimeControl "1800+0"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "D10"]
+[Opening "Slav Defense"]
+[StudyName "Strategy"]
+[ChapterName "Ar_12 (1610) - boellmann (1610)"]
+[ChapterURL "https://lichess.org/study/MI2knHmN/FDzDJMmj"]
+[Annotator "https://lichess.org/@/boellmann"]
+
+1. d4 { [%clk 0:30:00] } 1... d5 { [%clk 0:30:00] } 2. c4 { [%clk 0:29:58] } 2... c6 { IL FAUT RESTER PRÉSENT AU CENTRE } { [%clk 0:28:10] } (2... dxc4 3. e4 { blancs ont un centre écrasant }) 3. Nc3 { [%clk 0:29:19] } 3... Nf6 { [%clk 0:27:41] } 4. Bg5 { [%clk 0:29:15] } 4... e6 { [%clk 0:25:37] } 5. e3 { [%clk 0:29:06] } 5... Be7 { [%clk 0:25:29] } 6. Bxf6 { [%clk 0:28:55] } 6... Bxf6 { [%clk 0:25:16] } 7. cxd5 { [%clk 0:28:52] } 7... exd5 { [%clk 0:24:51] } 8. Bd3 { [%clk 0:28:49] } 8... O-O { [%clk 0:24:28] } 9. Qc2 { [%clk 0:28:34] } 9... g6 { [%clk 0:23:43] } 10. Nf3 { [%clk 0:28:30] } 10... Be6 { [%clk 0:22:53] } 11. O-O { [%clk 0:28:24] } 11... Nd7 { [%clk 0:21:47] } 12. Ne2 { [%clk 0:28:13] } 12... Bg4 { [%clk 0:20:11] } 13. Nd2 { [%clk 0:26:55] } 13... Bxe2 { [%clk 0:20:03] } 14. Bxe2 { [%clk 0:26:53] } 14... Bg7 { [%clk 0:19:33] } 15. Bd3 { [%clk 0:26:46] } 15... f5 { [%clk 0:19:02] } 16. Nf3 { [%clk 0:26:34] } 16... Re8 { [%clk 0:18:34] } 17. Rfe1 { [%clk 0:26:19] } 17... Nf6 { [%clk 0:17:05] } 18. Bxf5 { [%clk 0:25:56] } 18... gxf5 { [%clk 0:16:54] } 19. Qxf5 { [%clk 0:25:54] } 19... Qe7 { [%clk 0:15:11] } 20. Ng5 { [%clk 0:25:22] } 20... h6 { [%clk 0:13:57] } 21. Nf3 { [%clk 0:24:34] } 21... Qe4 { [%clk 0:13:06] } 22. Qh3 { [%clk 0:23:59] } 22... Qg4 { [%clk 0:12:40] } 23. Qxg4 { [%clk 0:23:31] } 23... Nxg4 { [%clk 0:12:35] } 24. Nh4 { [%clk 0:23:28] } 24... Rf8 { [%clk 0:10:43] } 25. Ng6 { [%clk 0:23:21] } 25... Rf7 { [%clk 0:09:59] } 26. h3 { [%clk 0:23:14] } 26... Nxf2 { [%clk 0:09:37] } 27. Rf1 { [%clk 0:23:00] } 27... Ne4 { [%clk 0:09:12] } 28. Rxf7 { [%clk 0:22:50] } 28... Kxf7 { [%clk 0:08:47] } 29. Nf4 { [%clk 0:22:43] } 29... Re8 { [%clk 0:07:27] } 30. Rf1 { [%clk 0:22:36] } 30... Kg8 { [%clk 0:06:07] } 31. Ng6 { [%clk 0:22:12] } 31... Ng5 { [%clk 0:04:09] } 32. Nh4 { [%clk 0:21:41] } 32... Rxe3 { [%clk 0:03:41] } 33. Nf5 { [%clk 0:21:24] } 33... Re2 { [%clk 0:03:14] } 34. h4 { [%clk 0:20:19] } 34... Ne6 { [%clk 0:02:31] } 35. Ne7+ { [%clk 0:20:04] } 35... Kh7 { [%clk 0:02:27] } 36. Rb1 { [%clk 0:19:28] } 36... Bxd4+ { [%clk 0:02:22] } 37. Kh2 { [%clk 0:19:24] } 37... Nf4 { [%clk 0:02:20] } 38. Nf5 { [%clk 0:19:08] } 38... Rxg2+ { [%clk 0:02:17] } 39. Kh1 { [%clk 0:18:57] } 39... Rd2 { [%clk 0:02:17] } 40. Re1 { [%clk 0:18:42] } 40... Ne2 { [%clk 0:02:04] } 41. Nxd4 { [%clk 0:18:24] } 41... Nxd4 { [%clk 0:02:01] } 42. Re7+ { [%clk 0:18:21] } 42... Kg6 { [%clk 0:02:00] } 43. Rxb7 { [%clk 0:18:16] } 43... Nf3 { [%clk 0:01:58] } 44. Rxa7 { [%clk 0:18:07] } 44... Rh2# { 0-1 Black wins by checkmate. } { [%clk 0:01:45] } 0-1
+
+

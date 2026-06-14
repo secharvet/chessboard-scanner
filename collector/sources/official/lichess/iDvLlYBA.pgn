@@ -1,0 +1,88 @@
+[Event "Casual blitz game"]
+[Site "https://lichess.org/5NOspjMt"]
+[Date "2024.11.10"]
+[White "Craze"]
+[Black "LoneCypress"]
+[Result "1-0"]
+[WhiteElo "2835"]
+[WhiteTitle "GM"]
+[BlackElo "2604"]
+[BlackTitle "NM"]
+[TimeControl "180+0"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "A57"]
+[Opening "Benko Gambit"]
+[StudyName "Game study"]
+[ChapterName "GM Craze (2835?) - NM LoneCypress (2604?)"]
+[ChapterURL "https://lichess.org/study/iDvLlYBA/0qTGpiTS"]
+[Annotator "https://lichess.org/@/Craze"]
+
+1. d4 { [%clk 0:03:00] } 1... Nf6 { [%clk 0:03:00] } 2. c4 { [%clk 0:02:59] } 2... c5 { [%clk 0:02:59] } 3. d5 { [%clk 0:02:58] } 3... b5 { [%clk 0:02:59] } 4. Qc2 { [%clk 0:02:57] } 4... b4 { [%clk 0:02:58] } 5. e4 { [%clk 0:02:56] } 5... d6 { [%clk 0:02:57] } 6. Bd3 { [%clk 0:02:54] } 6... g6 { [%clk 0:02:56] } 7. f4 { [%clk 0:02:53] } 7... Bg7 { [%clk 0:02:54] } 8. Nf3 { [%clk 0:02:52] } 8... O-O { [%clk 0:02:53] } 9. O-O { [%clk 0:02:52] } 9... a5 { [%clk 0:02:52] } 10. h3 { [%clk 0:02:49] } 10... a4 { [%clk 0:02:50] } 11. e5 { [%clk 0:02:41] } 11... Nfd7 { [%clk 0:02:49] } 12. Qe2 { [%clk 0:02:39] } 12... a3 { [%clk 0:02:43] } 13. bxa3 { [%clk 0:02:36] } 13... Qc7 { [%clk 0:02:31] } 14. Re1 { [%clk 0:02:28] } 14... e6 { [%clk 0:01:39] } 15. axb4 { [%clk 0:02:19] } 15... cxb4 { [%clk 0:01:38] } 16. Bb2 { [%clk 0:01:59] } 16... exd5 { [%clk 0:01:30] } 17. cxd5 { [%clk 0:01:54] } 17... Ba6 { [%clk 0:01:14] } 18. Bxa6 { [%clk 0:01:27] } 18... Nxa6 { [%clk 0:01:11] } 19. e6 { [%clk 0:01:26] } 19... Qc5+ { [%clk 0:01:03] } 20. Kh2 { [%clk 0:01:21] } 20... Nf6 { [%clk 0:00:57] } 21. exf7+ { [%clk 0:01:14] } 21... Rxf7 { [%clk 0:00:56] } 22. Ng5 { [%clk 0:01:13] } 22... Qxd5 { [%clk 0:00:45] } 23. Nxf7 { [%clk 0:01:10] } 23... Qxf7 { [%clk 0:00:43] } 24. Nd2 { [%clk 0:01:06] } 24... Ng4+ { [%clk 0:00:41] } 25. Qxg4 { [%clk 0:01:05] } 25... Bxb2 { [%clk 0:00:41] } 26. Rad1 { [%clk 0:01:02] } 26... Rf8 { [%clk 0:00:39] } 27. Ne4 { [%clk 0:00:59] } 27... Qxf4+ { [%clk 0:00:35] } 28. Qxf4 { [%clk 0:00:59] } 28... Rxf4 { [%clk 0:00:35] } 29. Nxd6 { [%clk 0:00:56] } 29... Nc5 { [%clk 0:00:33] } 30. Re7 { [%clk 0:00:53] } 30... Bf6 { [%clk 0:00:31] } 31. Rc7 { [%clk 0:00:48] } 31... Be5 { [%clk 0:00:29] } 32. Rxc5 { [%clk 0:00:45] } 32... Rd4+ { [%clk 0:00:25] } 33. Rxe5 { [%clk 0:00:44] } 33... Rxd1 { [%clk 0:00:25] } 34. Ne4 { [%clk 0:00:41] } 34... Ra1 { [%clk 0:00:23] } 35. Rb5 { [%clk 0:00:40] } 35... Rxa2 { [%clk 0:00:21] } 36. Rxb4 { [%clk 0:00:39] } 36... Kg7 { [%clk 0:00:21] } 37. Rb7+ { [%clk 0:00:38] } 37... Kh6 { [%clk 0:00:20] } 38. Nf6 { [%clk 0:00:38] } 38... Kg5 { [%clk 0:00:18] } 39. Nxh7+ { [%clk 0:00:37] } 39... Kf5 { [%clk 0:00:18] } 40. Rf7+ { [%clk 0:00:35] } 40... Ke6 { [%clk 0:00:17] } 41. Rf6+ { [%clk 0:00:35] } 41... Ke7 { [%clk 0:00:16] } 42. Rxg6 { 1-0 Black resigns. } { [%clk 0:00:35] } 1-0
+
+
+[Event "Casual blitz game"]
+[Site "https://lichess.org/kmmj8rSB"]
+[Date "2024.11.10"]
+[White "LoneCypress"]
+[Black "Craze"]
+[Result "0-1"]
+[WhiteElo "2604"]
+[WhiteTitle "NM"]
+[BlackElo "2835"]
+[BlackTitle "GM"]
+[TimeControl "180+0"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "E60"]
+[Opening "King's Indian Defense: Normal Variation, King's Knight Variation"]
+[StudyName "Game study"]
+[ChapterName "NM LoneCypress (2604?) - GM Craze (2835?)"]
+[ChapterURL "https://lichess.org/study/iDvLlYBA/3y2yJa4i"]
+[Annotator "https://lichess.org/@/Craze"]
+
+1. d4 { [%clk 0:03:00] } 1... Nf6 { [%clk 0:03:00] } 2. Nf3 { [%clk 0:02:59] } 2... g6 { [%clk 0:02:58] } 3. c4 { [%clk 0:02:59] } 3... Bg7 { [%clk 0:02:57] } 4. Nc3 { [%clk 0:02:58] } 4... O-O { [%clk 0:02:56] } 5. e4 { [%clk 0:02:58] } 5... d6 { [%clk 0:02:55] } 6. h3 { [%clk 0:02:58] } 6... a6 { [%clk 0:02:52] } 7. Bg5 { [%clk 0:02:56] } 7... c6 { [%clk 0:02:50] } 8. a3 { [%clk 0:02:54] } 8... b5 { [%clk 0:02:48] } 9. cxb5 { [%clk 0:02:53] } 9... axb5 { [%clk 0:02:48] } 10. Bd3 { [%clk 0:02:49] } 10... Nbd7 { [%clk 0:02:47] } 11. e5 { [%clk 0:02:44] } 11... dxe5 { [%clk 0:02:46] } 12. dxe5 { [%clk 0:02:43] } 12... Nd5 { [%clk 0:02:40] } 13. Nxd5 { [%clk 0:02:42] } 13... cxd5 { [%clk 0:02:40] } 14. Qe2 { [%clk 0:02:39] } 14... b4 { [%clk 0:02:34] } 15. O-O { [%clk 0:02:37] } 15... bxa3 { [%clk 0:02:26] } 16. Rxa3 { [%clk 0:02:37] } 16... Rxa3 { [%clk 0:02:24] } 17. bxa3 { [%clk 0:02:37] } 17... h6 { [%clk 0:02:21] } 18. Bh4 { [%clk 0:02:34] } 18... Nc5 { [%clk 0:02:16] } 19. Rd1 { [%clk 0:02:27] } 19... Be6 { [%clk 0:01:37] } 20. Bb5 { [%clk 0:02:15] } 20... Ne4 { [%clk 0:01:33] } 21. Qb2 { [%clk 0:02:09] } 21... g5 { [%clk 0:01:18] } 22. Bd3 { [%clk 0:01:50] } 22... Qb8 { [%clk 0:01:11] } 23. Qxb8 { [%clk 0:01:47] } 23... Rxb8 { [%clk 0:01:11] } 24. Bg3 { [%clk 0:01:44] } 24... Rb3 { [%clk 0:01:04] } 25. Bxe4 { [%clk 0:01:34] } 25... dxe4 { [%clk 0:01:03] } 26. Nd4 { [%clk 0:01:34] } 26... Rxa3 { [%clk 0:00:49] } 27. Nc6 { [%clk 0:01:15] } 27... Kh7 { [%clk 0:00:44] } 28. Nxe7 { [%clk 0:01:13] } 28... e3 { [%clk 0:00:38] } 29. fxe3 { [%clk 0:01:08] } 29... Rxe3 { [%clk 0:00:38] } 30. Kf2 { [%clk 0:01:08] } 30... Ra3 { [%clk 0:00:33] } 31. Rd2 { [%clk 0:01:03] } 31... Bf8 { [%clk 0:00:32] } 32. Nd5 { [%clk 0:00:57] } 32... Bc5+ { [%clk 0:00:32] } 33. Kf1 { [%clk 0:00:52] } 33... Rxg3 { [%clk 0:00:31] } 34. Nf6+ { [%clk 0:00:50] } 34... Kg6 { [%clk 0:00:31] } 35. Ne4 { [%clk 0:00:50] } 35... Bc4+ { [%clk 0:00:26] } 36. Ke1 { [%clk 0:00:49] } 36... Re3+ { [%clk 0:00:25] } 37. Kd1 { [%clk 0:00:47] } 37... Rxe4 { [%clk 0:00:25] } 38. Kc2 { [%clk 0:00:47] } 38... Rxe5 { 0-1 White resigns. } { [%clk 0:00:24] } 0-1
+
+
+[Event "Casual blitz game"]
+[Site "https://lichess.org/4B8g87Yx"]
+[Date "2024.11.10"]
+[White "Craze"]
+[Black "Anonymous"]
+[Result "1-0"]
+[WhiteElo "2835"]
+[WhiteTitle "GM"]
+[TimeControl "180+0"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "E91"]
+[Opening "King's Indian Defense: Kazakh Variation"]
+[StudyName "Game study"]
+[ChapterName "GM Craze (2835?) - Anon."]
+[ChapterURL "https://lichess.org/study/iDvLlYBA/BzrK7r24"]
+[Annotator "https://lichess.org/@/Craze"]
+
+1. d4 { [%clk 0:03:00] } 1... d6 { [%clk 0:03:00] } 2. c4 { [%clk 0:03:00] } 2... Nf6 { [%clk 0:02:58] } 3. Nc3 { [%clk 0:02:59] } 3... g6 { [%clk 0:02:57] } 4. e4 { [%clk 0:02:58] } 4... Bg7 { [%clk 0:02:57] } 5. Nf3 { [%clk 0:02:57] } 5... O-O { [%clk 0:02:56] } 6. Be2 { [%clk 0:02:57] } 6... Na6 { [%clk 0:02:54] } 7. Qc2 { [%clk 0:02:53] } (7. O-O e5) (7. Bg5 h6 8. Be3) (7. Be3 e5 8. d5) 7... e5 { [%clk 0:02:52] } 8. d5 { [%clk 0:02:51] } 8... h6 { [%clk 0:02:47] } (8... Nh5 9. g3 f5) 9. h3 { [%clk 0:02:47] } 9... c5 { [%clk 0:02:46] } (9... Nh5 10. g3) 10. g4 { [%clk 0:02:40] } 10... Nc7 { [%clk 0:02:43] } 11. Be3 { [%clk 0:02:38] } (11. g5 hxg5 12. Bxg5 (12. Nxg5)) 11... a6 { [%clk 0:02:41] } 12. a4 { [%clk 0:02:29] } 12... Bd7 { [%clk 0:02:39] } 13. a5 { [%clk 0:02:25] } 13... Rb8 { [%clk 0:02:36] } 14. Nd2 { [%clk 0:02:23] } (14. Qd2 Kh7 15. Bd1 b6 16. axb6 Rxb6 17. b3) 14... b5 { [%clk 0:02:34] } 15. axb6 { [%clk 0:02:22] } 15... Rxb6 { [%clk 0:02:33] } 16. b3 { [%clk 0:02:17] } 16... h5 { [%clk 0:02:23] } 17. gxh5 { [%clk 0:02:11] } 17... Nxh5 { [%clk 0:02:20] } 18. Bxh5 { [%clk 0:02:09] } 18... gxh5 { [%clk 0:02:18] } 19. Ke2 { [%clk 0:01:49] } (19. Rg1 Bxh3 20. O-O-O { [%cal Gg1h1,Gf2f3,Gd1g1] }) 19... f5 { [%clk 0:02:15] } 20. f3 { [%clk 0:01:45] } (20. exf5 Bxf5 21. Nce4) 20... Qh4 { [%clk 0:02:11] } (20... f4) 21. Rag1 { [%clk 0:01:41] } (21. exf5 Bxf5 22. Nce4) 21... f4 { [%clk 0:02:09] } 22. Bf2 { [%clk 0:01:40] } 22... Qf6 { [%clk 0:02:07] } 23. Qd1 { [%clk 0:01:29] } (23. Rg2) 23... Kf7 { [%clk 0:02:05] } 24. Qe1 { [%clk 0:01:28] } 24... Ne8 { [%clk 0:02:04] } (24... Rg8) 25. Bh4 { [%clk 0:01:27] } 25... Qh6 { [%clk 0:02:02] } 26. Bg5 { [%clk 0:01:22] } 26... Qh8 { [%clk 0:02:00] } 27. Qh4 { [%clk 0:01:17] } (27. Qa1) (27. Rg2) 27... Nf6 { [%clk 0:01:57] } (27... Bf6) 28. Rg2 { [%clk 0:01:14] } 28... Ke7 { [%clk 0:01:46] } 29. Rhg1 { [%clk 0:01:13] } 29... Kd8 { [%clk 0:01:44] } 30. Bxf4 { [%clk 0:01:08] } 30... Rf7 { [%clk 0:01:41] } 31. Rxg7 { 1-0 Black resigns. } { [%clk 0:01:05] } 1-0
+
+
+[Event "Casual blitz game"]
+[Site "https://lichess.org/iWOliHqm"]
+[Date "2024.11.10"]
+[White "Anonymous"]
+[Black "Craze"]
+[Result "0-1"]
+[BlackElo "2835"]
+[BlackTitle "GM"]
+[TimeControl "180+0"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "B45"]
+[Opening "Sicilian Defense: Four Knights Variation"]
+[StudyName "Game study"]
+[ChapterName "Anon. - GM Craze (2835?)"]
+[ChapterURL "https://lichess.org/study/iDvLlYBA/0JcDJvCL"]
+[Annotator "https://lichess.org/@/Craze"]
+
+1. e4 { [%clk 0:03:00] } 1... c5 { [%clk 0:03:00] } 2. Nf3 { [%clk 0:02:58] } 2... e6 { [%clk 0:02:59] } 3. d4 { [%clk 0:02:57] } 3... cxd4 { [%clk 0:02:59] } 4. Nxd4 { [%clk 0:02:57] } 4... Nf6 { [%clk 0:02:58] } 5. Nc3 { [%clk 0:02:56] } 5... Nc6 { [%clk 0:02:58] } 6. Be2 { [%clk 0:02:55] } 6... Qc7 { [%clk 0:02:54] } (6... d5 7. exd5 exd5 8. O-O Bc5 9. Be3 Bb6 10. h3 O-O 11. Qd2 Re8 12. Rad1 h6 (12... Bd7)) 7. O-O { [%clk 0:02:54] } 7... Be7 { [%clk 0:02:51] } 8. Kh1 { [%clk 0:02:48] } 8... O-O { [%clk 0:02:46] } 9. f4 { [%clk 0:02:44] } 9... d6 { [%clk 0:02:45] } (9... Nxd4 10. Qxd4 d5 11. e5 Nd7) 10. Be3 { [%clk 0:02:29] } 10... Nxd4 { [%clk 0:02:44] } 11. Qxd4 { [%clk 0:02:26] } 11... b6 { [%clk 0:02:43] } 12. Bf3 { [%clk 0:02:22] } 12... Bb7 { [%clk 0:02:35] } (12... Ba6) 13. Rad1 { [%clk 0:02:20] } 13... Rfd8 { [%clk 0:02:32] } (13... Rac8) (13... d5 14. e5 Ne4) 14. a4 { [%clk 0:02:16] } 14... Rac8 { [%clk 0:02:31] } (14... d5 15. e5 Ne4) 15. a5 { [%clk 0:02:10] } 15... bxa5 { [%clk 0:01:57] } 16. Qxa7 { [%clk 0:02:08] } 16... Ra8 { [%clk 0:01:47] } 17. Qb6 { [%clk 0:02:06] } 17... Rdc8 { [%clk 0:01:32] } (17... Qxb6 18. Bxb6 Rdc8) 18. Ra1 { [%clk 0:01:57] } 18... Nd7 { [%clk 0:01:22] } (18... Qd7) 19. Qd4 { [%clk 0:01:54] } (19. Qxc7 Rxc7 20. Ra2 Bf6 21. Nb5 Rxc2 22. Nxd6 Bc6 23. Rb1 (23. e5 Bxf3 24. gxf3 Bd8) 23... Rb8 24. Rxa5 Rcxb2 25. Rxb2 Rxb2) 19... Bf6 { [%clk 0:01:20] } 20. Qd2 { [%clk 0:01:52] } 20... Bxc3 { [%clk 0:01:13] } 21. Qxc3 { [%clk 0:01:49] } (21. bxc3 Nf6 (21... Qxc3 22. Qxd6 Qxe3 23. Qxd7 Bc6)) 21... Qxc3 { [%clk 0:01:11] } 22. bxc3 { [%clk 0:01:47] } 22... Rxc3 { [%clk 0:01:08] } 23. Bd2 { [%clk 0:01:47] } 23... Rxc2 { [%clk 0:01:06] } 24. Bxa5 { [%clk 0:01:40] } 24... Rc4 { [%clk 0:00:44] } (24... Nc5) 25. Rfd1 { [%clk 0:01:26] } 25... Bxe4 { [%clk 0:00:40] } 26. Bxe4 { [%clk 0:01:23] } 26... Rxe4 { [%clk 0:00:40] } 27. Rxd6 { [%clk 0:01:23] } (27. Bc7 Rxa1 28. Rxa1 h5 29. Bxd6 Nf6) 27... Rxa5 { 0-1 White resigns. } { [%clk 0:00:35] } 0-1
+
+

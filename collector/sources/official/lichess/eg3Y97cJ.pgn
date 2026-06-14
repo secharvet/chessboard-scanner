@@ -1,0 +1,16 @@
+[Event "Four Knights Sicilian: Chapter 1"]
+[Date "2024.06.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B45"]
+[Opening "Sicilian Defense: Four Knights Variation"]
+[StudyName "Four Knights Sicilian"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/eg3Y97cJ/nGsg4dK1"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[UTCDate "2024.06.28"]
+[UTCTime "21:27:51"]
+
+1. e4 c5 { The Four Knights is one of the best Sicilians for new players: 1) Principled, intuitive play for Black (knights get developed to their natural squares). 2) The most obvious, commonly played moves for White do not cause any problems. } 2. Nf3 e6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 (5. e5? Qa5+ { is an easy way to win a pawn. } { [%cal Ga5e5,Ga5e1] }) 5... Nc6 { The starting point of the Four Knights. Against most moves, we are looking to play Bb4 and d5. } { [%cal Gf8b4,Gd7d5] } 6. Be3 { A standard move against many Sicilians, but doesn't work that well here. } (6. Bg5 Bb4 7. Nxc6 bxc6 8. e5 Qa5! { Stepping out of the pin and counterattacking. } { [%cal Ga5e1,Ga5g5] } 9. exf6 Qxg5 10. fxg7 Qxg7 $17 { Black is much better thanks to the bishop pair and strong pawn center. d5 is coming next. } { [%cal Gd7d5,Rb4e1] }) (6. Nxc6 bxc6 7. Bd3 (7. e5 Nd5 8. Nxd5 cxd5 { Black once again has a very solid pawn center. The e5 pawn will be a target. } { [%csl Gd7,Ge6,Gd5,Re5] }) (7. Bg5 Bb4 { transposes to 6. Bg5. }) 7... d5 { With a solid pawn center, Black is absolutely fine. } { [%cal Gf8e7,Ge8g8] }) 6... Bb4 { Threatening Nxe4. } { [%cal Gb4e1,Rf6e4] } 7. f3 d5! { This is extra strong when White has loosened their king position with f3. } 8. Nxc6 bxc6 9. e5 Nd7 10. f4 O-O $17 { Black stands better thanks to a strong pawn center, which can start rumbling with c5. } { [%cal Gc6c5] } *
+
+

@@ -1,0 +1,32 @@
+[Event "Scandi: For black"]
+[Date "2023.01.21"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B01"]
+[Opening "Scandinavian Defense: Portuguese Gambit, Correspondence Refutation"]
+[StudyName "Scandi"]
+[ChapterName "For black"]
+[ChapterURL "https://lichess.org/study/woybtHSh/4kAoVsEc"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2023.01.21"]
+[UTCTime "02:48:39"]
+
+1. e4 d5 2. exd5 Nf6 3. d4 { [%csl Rg4,Rd5][%cal Gf6d5,Gd8d5,Gc8g4] } 3... Bg4 4. f3 (4. Be2 Bxe2 5. Nxe2 Qxd5 6. O-O Nc6 7. Nbc3 { [%csl Gd5] } 7... Qh5 { [%csl Ge2] } 8. Ng3 (8. Bf4 O-O-O) 8... Qxd1 9. Rxd1 O-O-O { [%csl Gd4,Ge6][%cal Gd8d4,Ge7e6] }) 4... Bf5 5. g4 Bg6 6. c4 e6 7. Nc3 (7. dxe6 fxe6 { [%csl Gd4,Gg4,Gf3,Gc4] }) 7... exd5 8. g5 Nfd7 9. Nxd5 Nc6 10. h4 Nb6 11. Qe2+ Be7 12. Nxe7 Nxd4 13. Nc6+ Nxe2 14. Nxd8 Nxg1 15. Rxg1 Rxd8 16. b3 O-O { [%csl Rf1] } *
+
+
+[Event "Scandi: For white"]
+[Date "2023.01.21"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B01"]
+[Opening "Scandinavian Defense: Modern Variation"]
+[StudyName "Scandi"]
+[ChapterName "For white"]
+[ChapterURL "https://lichess.org/study/woybtHSh/JlPhvbxK"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2023.01.21"]
+[UTCTime "02:48:42"]
+
+1. e4 d5 2. exd5 Nf6 3. d4 Qxd5 (3... Bg4 4. Bb5+ (4. f3) 4... Nbd7 5. f3 Bf5 6. g4 (6. Nc3 a6 7. Ba4 b5 8. Bb3 Nb6 9. Nge2 Nbxd5) 6... Bg6 7. f4 Be4 8. Nf3 Nxg4 9. Nc3) 4. Nf3 (4. Nc3 Qd6 5. Be3 Nc6 (5... Bg4 6. f3 Bf5 7. g4 Bg6 8. h4 h5 9. g5) 6. Nb5 Qd8 7. d5 Nb4 8. c4) 4... Bg4 5. Be2 Nc6 6. h3 Bxf3 (6... Qh5 7. O-O) 7. Bxf3 Qd7 (7... Qxd4 8. Bxc6+) 8. O-O O-O-O (8... Nxd4 9. Bxb7 Rb8 10. Ba6) 9. c3 e5 10. Bg5 *
+
+

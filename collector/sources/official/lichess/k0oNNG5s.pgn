@@ -1,0 +1,38 @@
+[Event "US Championship"]
+[Site "St Louis, MO USA"]
+[Date "2012.05.19"]
+[Round "11"]
+[White "Hikaru Nakamura"]
+[Black "Yasser Seirawan"]
+[Result "1-0"]
+[Variant "Standard"]
+[ECO "C00"]
+[Opening "French Defense: La Bourdonnais Variation"]
+[StudyName "Nakamura is a boss"]
+[ChapterName "Hikaru Nakamura - Yasser Seirawan"]
+[ChapterURL "https://lichess.org/study/k0oNNG5s/wIFl3AGo"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e6 2. f4 d5 3. e5 c5 4. Nf3 Nc6 5. c3 Nge7 6. Na3 Nf5 7. Nc2 h5 8. Bd3 g6 9. O-O Be7 10. Bxf5 gxf5 11. d4 h4 12. dxc5 Bxc5+ 13. Be3 Be7 14. h3 b6 15. Qe2 Nb8 16. Rfd1 Ba6 17. Qe1 Nd7 18. b4 Nf8 19. a4 Bc4 20. Ncd4 Qd7 { [%cal Gb4b5] } 21. b5 Ng6 22. Nc6 Kf8 23. Nd2 Bd3 24. c4 Kg7 25. cxd5 exd5 26. Nb1 Bc4 27. Qc3 { [%cal Ge5e6] } 27... Qe6 28. Nd2 Rhc8 29. Nd4 Qd7 30. e6 { 1-0 Black resigns. } 1-0
+
+
+[Event "Sinquefield Cup"]
+[Site "St Louis, MO USA"]
+[Date "2015.08.29"]
+[Round "6.4"]
+[White "Wesley So"]
+[Black "Hikaru Nakamura"]
+[Result "0-1"]
+[WhiteElo "2779"]
+[BlackElo "2814"]
+[Variant "Standard"]
+[ECO "E99"]
+[Opening "King's Indian Defense: Orthodox Variation, Classical System, Traditional Line"]
+[StudyName "Nakamura is a boss"]
+[ChapterName "Wesley So - Hikaru Nakamura"]
+[ChapterURL "https://lichess.org/study/k0oNNG5s/KB3LG2LN"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. Nf3 O-O 6. Be2 e5 7. O-O Nc6 8. d5 Ne7 9. Ne1 Nd7 10. f3 f5 11. Be3 f4 12. Bf2 g5 { [%csl Rg1][%cal Gh7h5,Gg5g4,Gd7f6,Ge7g6] } 13. Nd3 Ng6 14. c5 Nf6 15. Rc1 Rf7 16. Kh1 h5 17. cxd6 cxd6 18. Nb5 a6 19. Na3 b5 20. Rc6 g4 21. Qc2 Qf8 22. Rc1 Bd7 23. Rc7 Bh6 24. Be1 h4 25. fxg4 f3 26. gxf3 Nxe4 27. Rd1 Rxf3 28. Rxd7 Rf1+ 29. Kg2 Be3 30. Bg3 hxg3 31. Rxf1 Nh4+ 32. Kh3 Qh6 33. g5 Nxg5+ 34. Kg4 Nhf3 35. Nf2 Qh4+ 36. Kf5 Rf8+ 37. Kg6 { [%csl Gg6,Gg8] } 37... Rf6+ 38. Kxf6 Ne4+ 39. Kg6 Qg5# { 0-1 Black wins by checkmate. } 0-1
+
+

@@ -1,0 +1,938 @@
+[Event "Master the London System!: Section 1: Introduction"]
+[Date "2026.05.07"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Master the London System!"]
+[ChapterName "Section 1: Introduction"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/NiwF86fh"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[FEN "8/8/8/8/3P1B2/2PBPN2/PP1N1PPP/R2QK3 w Q - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.07"]
+[UTCTime "13:46:08"]
+[ChapterMode "gamebook"]
+
+{ Hi guys!🎉 Welcome to another study about the London System. I will show you everything about it and once you finish this study, make sure to use this opening in your own games!👍
+--------------------------------------------------------------------------
+Before you read all of this, please check this study all about the Reti Opening: https://lichess.org/study/iN61Eams
+In there, I put the all the options that black can play against it and it is a good opening to pair with the London System.
+--------------------------------------------------------------------------
+This is the London System. These are where the pieces usually go (there are exceptions). The pawns go on c3, d4 and e3, the knights are on d2 and f3, and the bishops are on d3 and f4.
+
+This system is good ✔ for beginner to advanced level as it doesn't have lots of theory to memorize and it is a system.🤔 The pieces are placed on these specific squares to have a simple idea: You want to attack on the kingside, if not, get a super solid structure that cannot be broken down easily.😃
+
+One of the best tries for black is to play a Benoni, but you are prepared against that. You can either draw or win.
+
+In section 1, I covered the main lines in the London that you can play. Those lines are what your opponent might play against you.
+
+In section 2, I covered the patterns in the London System. Those patterns are useful to master the London System.
+
+In section 3, I covered traps that your opponent might fall for. Those traps have happened in master games.
+
+In section 4, I put games played by the best GMs in the world. I put those games to illustrate how masters play the London.
+
+In section 5, I covered alternatives that are either as good or better than the main lines. You will have lots of fun in those positions and you will have very instructive games in that position.🤑
+
+If you want, I will do a section 6 to show you how to counter the London System. Those are simple and easy to learn and don't require a lot of theory.
+
+If you want, I will publish a section 7 where I will show you my games in the London System for both white and black to illustrate ideas for both sides. You will surely master the London System after this study and have lots of great games with it.
+
+Don't forget to leave a like👍 on this study! Once this study reaches 3000 likes, please tell me your usernames and I will do a spin the wheel for 5 contributors that will contribute to this study.
+
+I hope you will have fun while going into the adventure of a London System player!🎉🎉🎉🎉
+
+Without further ado, let's get straight into action!👌 } { [%csl Bc3,Bd4,Be3,Bf2,Bf4,Bf3,Bd3,Bd2,Bb2] }
+ *
+
+
+[Event "Master the London System!: Section 1: London System against d5 setups"]
+[Date "2026.05.07"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D02"]
+[Opening "Queen's Pawn Game: London System"]
+[StudyName "Master the London System!"]
+[ChapterName "Section 1: London System against d5 setups"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/m1WHTV3g"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.05.07"]
+[UTCTime "13:49:07"]
+[ChapterMode "gamebook"]
+
+{ First, we start with d4. } { [%csl Bd4][%cal Bd2d4] }
+1. d4 d5 { Now, we play Nf3 } { [%csl Bf3][%cal Bg1f3] } 2. Nf3 (2. Bf4 { This is covered in section 5. }) 2... Nf6 { We'll now play Bf4 } { [%csl Bf4][%cal Bc1f4] } 3. Bf4 { This piece placement let's black recognize that we are playing the London System. } { [%csl Bf3,Bf4,Bd4] } 3... c5 { Support the pawn with e3 } { [%csl Be3][%cal Be2e3] } 4. e3 Nc6 { Support that pawn even further with c3 } { [%csl Bc3][%cal Bc2c3] } 5. c3 { This is what we call the Pawn Pyramid. The pawn pyramid is like this pawn structure. We usually do this only if they play c5. } { [%csl Bc3,Bd4,Be3,Bb2,Bf2][%cal Bf2e3,Be3d4,Bb2c3,Bc3d4] } 5... e6 { We now place the knight on d2 } { [%csl Bd2][%cal Bb1d2] } 6. Nbd2 Bd6 { Always meet Bd6 with Bg3 } { [%csl Bg3][%cal Bf4g3] } 7. Bg3 O-O { Finally, we complete the system with Bd3 } { [%csl Bd3][%cal Bf1d3] } 8. Bd3 Re8 { Now, this is our middlegame plan: Play Ne5 followed by f4 and reroute the bishop to h4 to give space for our pieces to attack. We need to keep our light-squared bishop because it is very important in the attack. } 9. Ne5! { We'll just play f4, castle the king, and play Bh4 to give room for the rook to swing over the f3 followed by going to g3 or f3. We also give space for the queen to join the party.
+--Point--
+You want to create a kingside attack and just destroy them on that side of the board. } { [%csl Gg1,Be5][%cal Ge1g1,Rf4e5,Rd4e5,Yf2f4] } *
+
+
+[Event "Master the London System!: Section 1: London System against the King's Indian Setups (KID Setups)"]
+[Date "2026.05.07"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D01"]
+[Opening "Rapport-Jobava System"]
+[StudyName "Master the London System!"]
+[ChapterName "Section 1: London System against the King's Indian Setups (KID Setups)"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/XMBkfHVN"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.05.07"]
+[UTCTime "13:58:01"]
+[ChapterMode "gamebook"]
+
+{ We start with d4. } { [%csl Bd4][%cal Bd2d4] }
+1. d4 Nf6 { This is their most flexible option. We just play Bf4. } { [%csl Bf4][%cal Bc1f4] } 2. Bf4 g6 { The reason why we didn't play Nf3 is because we want to play Nc3 first which provokes them to play d5 then we will play Nf3. If they played Bg7 instead, we just play e4 and Qd2 and attack them on the kingside. } { [%csl Bc3][%cal Bb1c3] } 3. Nc3!? { This is a small deviation from our system. We usually put the knight on d2 but we can place it on c3. e3 is also possible on the third move.
+They have two moves. They can play d5 or Bg7. d5 is the main line because it controls e4, and if they play Bg7, we play e4, Qd2, 0-0-0, f3 and smash them on the kingside with h4 h5 g4 g5. } (3. e3 { This is a more positional approach so this will be covered in section 5. }) (3. Nf3 { This transposes into the 3. e3 lines so this will be covered in section 5. }) (3. Nd2 { This idea of 3. Nd2 will be covered in section 5 (trust me there is going to be fire here🔥). }) 3... d5 { We just play e3. } { [%csl Be3][%cal Be2e3] } (3... Bg7 4. e4 c5 5. Qd2 cxd4 6. Qxd4 Nh5 7. Qd2 Nxf4 8. Qxf4 Qa5 9. O-O-O) 4. e3 Bg7 { Now we play Nf3. } { [%csl Bf3][%cal Bg1f3] } 5. Nf3 { This piece placement is known as the Barry Attack. } { [%csl Bc3,Bd4,Be3,Bf3,Bf4] } 5... c5 { We now play Be2. } { [%csl Be2][%cal Bf1e2] } 6. Be2 { Notice that we don't put the bishop on d3 because it is just biting at stone because of the g6 pawn. } 6... Nc6 { Now we play Ne5. } { [%csl Be5][%cal Bf3e5] } 7. Ne5 O-O { Castle the king! } { [%csl Gg1][%cal Ge1g1] } 8. O-O cxd4 9. exd4 Qb6 { [%csl Bc6][%cal Be5c6] } 10. Nxc6 Qxc6 { [%csl Ba4][%cal Ba2a4] } 11. a4 { You want to play Bb5 and a5 to harass the queen. } 11... a6 { [%csl Ba5][%cal Ba4a5] } 12. a5 Bf5 { Attack, attack, attack!!!!!!!!!!!!! } { [%csl Rg4][%cal Rg2g4] } 13. g4 { WE ARE NOW ATTACKING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! } 13... Be6 { [%csl Ba4][%cal Bc3a4] } 14. Na4 { We want to place the knight on c5. } { [%csl Rc5][%cal Ra4c5] } 14... Nd7 { Develop the rook to the semi-open file. } { [%csl Ye1][%cal Yf1e1] } 15. Re1 f5 { [%csl Rg5][%cal Rg4g5] } 16. g5 { You are now in the driver's seat.
+--Point--
+You want to castle the king, gain space on both sides of the board, and just keep attacking. } *
+
+
+[Event "Master the London System!: Section 1: London System against Queen's Indian Setups (QID Setups)"]
+[Date "2026.05.07"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A46"]
+[Opening "Indian Defense: London System"]
+[StudyName "Master the London System!"]
+[ChapterName "Section 1: London System against Queen's Indian Setups (QID Setups)"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/yPaA3PEu"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.05.07"]
+[UTCTime "14:04:54"]
+[ChapterMode "gamebook"]
+
+{ We play d4. } { [%csl Bd4][%cal Bd2d4] }
+1. d4 Nf6 { Now we play Bf4. } { [%csl Bf4][%cal Bc1f4] } 2. Bf4 e6 { Now we develop the knight to f3. } { [%csl Bf3][%cal Bg1f3] } (2... d5 3. e3) 3. Nf3 (3. e3 { This transposes. Play Nf3 instead to continue. }) 3... b6 { This is the QID Setup. We respond with e3. } { [%csl Be3][%cal Be2e3] } 4. e3 Bb7 { We now play Nbd2. } { [%csl Bd2][%cal Bb1d2] } 5. Nbd2 (5. Bd3 { This transposes. Play Nbd2 instead to continue. }) (5. Be2 { Playable, but not recommended because you want the bishop on d3. If there is a pawn on g6, place the bishop here, but if there is no pawn there, then why not play Bd3 instead? }) (5. h3 { This transposes. Play Nbd2 instead to continue. }) (5. c3 { This transposes. Play Nbd2 instead to continue. }) (5. Nc3 { You block the c-pawn! } { [%csl Rc3][%cal Rc2c3] }) (5. a4 { Playable, but I recommend that you complete the system first then play this move of a4. }) (5. c4 { This isn't the London System anymore. }) 5... c5 { We respond with c3. } { [%csl Bc3][%cal Bc2c3] } 6. c3 { We have now created the pawn pyramid. } (6. Bd3 { This is playable, but supporting the center is better (this transposes though). }) (6. h3 { This is playable, but supporting the center is better (it is preferable to play h3 only if the g5 square is covered by their pieces). }) 6... Be7 { Since they are indirectly covering the g5 square adequately, we now play h3 to give our bishop some room to move away if ever Nh5 would be played. } { [%csl Bh3][%cal Bh2h3] } 7. h3 (7. Bd3?! { They play Nh5 and win the bishop pair. } { [%csl Bh5][%cal Bf6h5] }) (7. Be2?! { They play Nh5 and win the bishop pair. } { [%csl Bh5][%cal Bf6h5] }) 7... O-O { Now we can safely develop the bishop to d3. } { [%csl Bd3][%cal Bf1d3] } 8. Bd3 d6 { We now castle. } { [%csl Bg1][%cal Be1g1] } 9. O-O Nbd7 { We place the rook on e1. } { [%csl Be1][%cal Bf1e1] } 10. Re1 Re8 { We now play e4! } { [%csl Be4][%cal Be3e4] } 11. e4! { We strike in the center immediately! } 11... Bf8 { [%csl Be5][%cal Be4e5] } 12. e5! { We are now better here! Almost +2.0! You have a strong kingside attack going on and you will surely win this game.
+--Point--
+You want to create a kingside attack with means of e4 followed by e5. Greek Gift Sacrifices are best once the knight moves. } *
+
+
+[Event "Master the London System!: Section 1: London System against Benoni Setups"]
+[Date "2026.05.07"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "Master the London System!"]
+[ChapterName "Section 1: London System against Benoni Setups"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/Dgb2Inil"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.05.07"]
+[UTCTime "23:59:41"]
+[ChapterMode "gamebook"]
+
+{ We play d4. } { [%csl Bd4][%cal Bd2d4] }
+1. d4 Nf6 { We place the bishop on f4. } { [%csl Bf4][%cal Bc1f4] } 2. Bf4 c5 { Now, we push the pawn to e3. } { [%csl Ge3][%cal Ge2e3] } 3. e3 (3. d5 { I will talk about this move in a separate chapter. } 3... Qb6 4. Na3 Qxb2) (3. dxc5 { I will talk about this move in a separate chapter. }) (3. c3? { They can play Qb6 and we are worse. } { [%csl Rb2][%cal Rd8b6,Rb6b2] }) 3... Qb6 { This is an important move to remember: Na3! } { [%csl Ba3][%cal Bb1a3] } 4. Na3! { This is what I recommend as it limits black's options! This is a small deviation but we need to do what needs to be done. } (4. Nc3 { Black has lots of options but I will cover this in a separate chapter. }) (4. b3 { You create too many dark-squared weaknesses on the queenside. Not good at all. } { [%csl Ra3,Rb2,Rc3] }) 4... Qxb2 { We now play Nb5! } { [%csl Bb5][%cal Ba3b5] } 5. Nb5! { We are threatening to fork on c7!
+If Na6 is played, then you play a3 followed by Rb1 and Rb3 which just traps the queen after Ne2 and Nc1 or you could play Bc4 Rb4 and win the queen that way. } 5... Nd5 { Can you find a forced repetition? } 6. Rb1 { Yes, that is the move! } (6. a3 { This is a decent line.
+Play Rb1 to continue. } 6... a5 (6... a6 7. Rb1 Qa2 8. Qc1 axb5 9. Ra1 Qxa1 10. Qxa1) 7. Rb1 Qa2 8. Qc1) 6... Qxa2 { I hope you know what to play now to force a draw. } { [%csl Ba1][%cal Bb1a1] } 7. Ra1 Qb2 { [%csl Bb1][%cal Ba1b1] } 8. Rb1 Qa2 { [%csl Ba1][%cal Bb1a1] } 9. Ra1 Qb2 { [%csl Bb1][%cal Ba1b1] } 10. Rb1 Qa2 $10 { the game has officially been drawn =.
+--Point--
+You can either opt for a draw with 6. Rb1, or you could play 6. a3, and that leads into a forced line (6. a3 a6 7. Rb1 Qa2 8. Qc1 axb5 9. Ra1 Qxa1 10. Rxa1) where you win the queen but in exchange for a couple of pieces (rook & knight). } *
+
+
+[Event "Master the London System!: Section 1: London System against Dutch Defense"]
+[Date "2026.05.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A80"]
+[Opening "Dutch Defense"]
+[StudyName "Master the London System!"]
+[ChapterName "Section 1: London System against Dutch Defense"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/qxKWD4G3"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.05.08"]
+[UTCTime "02:16:59"]
+[ChapterMode "gamebook"]
+
+{ We play d4 on the first move. } { [%csl Bd4][%cal Bd2d4] }
+1. d4 { [%eval 0.15] } 1... f5 { [%eval 0.47] [%csl Bf4][%cal Bc1f4] } (1... Nf6) 2. Bf4 { [%eval 0.37] } 2... Nf6 { [%eval 0.52] [%csl Be3][%cal Be2e3] } 3. e3 { [%eval 0.64] } 3... e6 { [%eval 0.67] [%csl Bf3][%cal Bg1f3] } 4. Nf3 { [%eval 0.58] } 4... Be7 { [%eval 0.55] [%csl Bh3][%cal Bh2h3] } 5. h3 { [%eval 0.61] } { We don't play this to save the bishop. We play this for a secret plan you'll see later. } 5... O-O { [%eval 1.13] [%csl Bd2][%cal Bb1d2] } 6. Nbd2 { [%eval 0.85] } 6... b6 { [%eval 1.39] [%csl Bd3][%cal Bf1d3] } 7. Bd3 { [%eval 0.98] } 7... Bb7 { [%eval 1.17] [%csl Bc3][%cal Bc2c3] } 8. c3 { [%eval 1.37] } { We have now completed the system. It is now time to attack! } { [%csl Bc3,Bd4,Bd3,Bd2,Be3,Bf3,Bf4,Bb2,Bf2] } 8... c5 { [%eval 1.36] } { No castling! Remember the secret idea I said earlier? Here it comes! } 9. Rg1 { [%eval 1.4] } { We now are about to play g4! You will have some fun in these positions. } 9... Ne4 { [%eval 1.67] [%csl Bg4][%cal Bg2g4] } 10. g4 { [%eval 1.69] } { We are considered to be better here in this position due to the attack.
+--Point--
+You want to complete the system and play h3, play Rg1, and finally, play g4 to blast open lines on the kingside. } *
+
+
+[Event "Master the London System!: Section 1: London System against Chigorin Setups"]
+[Date "2026.05.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D02"]
+[Opening "Queen's Pawn Game: Chigorin Variation"]
+[StudyName "Master the London System!"]
+[ChapterName "Section 1: London System against Chigorin Setups"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/lKaULmgC"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.05.08"]
+[UTCTime "00:16:23"]
+[ChapterMode "gamebook"]
+
+{ Let's play d4! } { [%csl Bd4][%cal Bd2d4] }
+1. d4 d5 { Develop the knight to f3 } { [%csl Bf3][%cal Bg1f3] } 2. Nf3 (2. Bf4) 2... Nc6 { Place the bishop on f4 } { [%csl Bf4][%cal Bc1f4] } (2... Nf6) 3. Bf4 Bg4 { We now play e3 } { [%csl Be3][%cal Be2e3] } 4. e3 e6 { We now need to play c4! } { [%csl Bc4][%cal Bc2c4] } 5. c4! { We don't want to play passively with c3. We want to strike in the center with c4! } 5... Nf6 { Develop the knight to c3 } { [%csl Bc3][%cal Bb1c3] } 6. Nc3 Bb4 { Place the rook on c1 } { [%csl Bc1][%cal Ba1c1] } 7. Rc1 O-O { Kick their bishop away with h3 } { [%csl Bh3][%cal Bh2h3] } 8. h3 Bxf3 { Recapture by queen } { [%csl Bf3][%cal Bd1f3] } 9. Qxf3 Ne4 { Develop the bishop to d3 } { [%csl Bd3][%cal Bf1d3] } 10. Bd3 Nxc3 { [%csl Bc3][%cal Bb2c3] } 11. bxc3 Ba3 { Now we just play Rb1 and play chess } { [%csl Bb1][%cal Bc1b1] } 12. Rb1 { Play to win and have fun!
+--Point--
+You want to punish their knight being on c6 so you play c4 to strike in the center instead of play passively with c3. } *
+
+
+[Event "Master the London System!: Section 1: Outroduction"]
+[Date "2026.05.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Master the London System!"]
+[ChapterName "Section 1: Outroduction"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/9BKT5jDI"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[FEN "8/8/8/8/3P1B2/2PBPN2/PP1N1PPP/R2QK2R w Q - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.08"]
+[UTCTime "02:34:46"]
+[ChapterMode "gamebook"]
+
+{ Good job! You made it! Let us look at section two, where we will cover the ideas and patterns. }
+ *
+
+
+[Event "Master the London System!: Section 2: Introduction"]
+[Date "2026.05.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Master the London System!"]
+[ChapterName "Section 2: Introduction"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/JTZMhgSe"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[FEN "rnbqkbnr/pppppppp/8/8/3P1B2/4PN2/PPP2PPP/RN1QKB1R w KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.08"]
+[UTCTime "02:43:11"]
+[ChapterMode "gamebook"]
+
+{ In this section, we will now learn about the key patterns and ideas in the London System. This will really help you to master the London System. Let's get straight in and not waste time. }
+ *
+
+
+[Event "Master the London System!: Section 2: Pattern #1"]
+[Date "2026.05.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Master the London System!"]
+[ChapterName "Section 2: Pattern #1"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/9K9zb0hS"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[FEN "rnbqkb1r/ppp2ppp/4pn2/3p4/3P1B2/4PN2/PPP2PPP/RN1QKB1R b KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.08"]
+[UTCTime "02:49:18"]
+[ChapterMode "gamebook"]
+
+1... c5 { Pattern #1: Meet c5 with c3 } 2. c3! { The reason why we played c3, is that we support the center, and we are ready to face Qb6 with Qb3. } 2... Qb6 { We are always prepared to meet this with Qb3 } 3. Qb3 { The best move is c4, but let's say that they take our queen } 3... Qxb3 4. axb3 { They just help us because we have control over the semi-open a-file, which we didn't have earlier because our rook was still blocked by our pawn.
+--Point--
+You want to support the d4 pawn and prepare to meet Qb6 with Qb3. } { [%csl Ga7,Bd2,Yd3][%cal Ga1a7,Bb1d2,Yf1d3] } *
+
+
+[Event "Master the London System!: Section 2: Pattern #2"]
+[Date "2026.05.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Master the London System!"]
+[ChapterName "Section 2: Pattern #2"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/41CU0tdv"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[FEN "r1bqkb1r/pp3ppp/2n1pn2/2pp4/3P1B2/2P1PN2/PP1N1PPP/R2QKB1R b KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.08"]
+[UTCTime "02:54:31"]
+[ChapterMode "gamebook"]
+
+1... Bd6 { Pattern #2: Meet Bd6 with Bg3 } 2. Bg3! { If they ever take our bishop, we take with the h-pawn and open up the h-file and also maybe no one might tell you this, but if they exchanged on g3, we are strategically and positionally winning. You may ask "Why is it strategically and positionally winning?" It is because that they exchanged their good bishop for our bad bishop, and that means they have the bad light-squared bishop while our light-squared bishop is a good bishop. It is strategically winning because they just helped us open up the h-file for no reason. That is why they shouldn't take on g3. } 2... O-O { We play Bd3 and just continue the system. } 3. Bd3 { We have pressure on the long diagonal and now we play chess. Let's move on to the next pattern.
+--Point--
+You want to provoke them to take and if so, you recapture with the h-pawn and open up your rook on h1. } *
+
+
+[Event "Master the London System!: Section 2: Pattern #3"]
+[Date "2026.05.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Master the London System!"]
+[ChapterName "Section 2: Pattern #3"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/Z3MTjevy"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[FEN "rn1qkb1r/pbpp1ppp/1p2pn2/8/3P1B2/4PN2/PPPN1PPP/R2QKB1R b KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.08"]
+[UTCTime "03:04:51"]
+[ChapterMode "gamebook"]
+
+1... Be7 { Pattern #3: If they are ready to play Nh5 without us having the g5 for the bishop, play h3 (this is an exception to the d5 setups.) } 2. h3! { Now that you played h3, Nh5 is a useless move because we just play Bh2 and keep the bishop. } { [%csl Rf4,Gh2][%cal Rf6h5,Rh5f4,Gf4h2] } 2... O-O { Now we just play Bd3 and play chess } 3. Bd3 { This is normal London System stuff.
+--Point--
+You want to save your f4 bishop and tuck it in on h2 if it gets attacked. } *
+
+
+[Event "Master the London System!: Section 2: Pattern #4"]
+[Date "2026.05.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Master the London System!"]
+[ChapterName "Section 2: Pattern #4"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/I17Z1K03"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[FEN "r2qkbnr/ppp1pppp/2n5/3p1b2/3P1B2/4P3/PPP2PPP/RN1QKBNR w KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.08"]
+[UTCTime "03:10:45"]
+[ChapterMode "gamebook"]
+
+{ Pattern #4 If their c-pawn is blocked by the knight, strike with c4. }
+1. c4! { We don't want to play passively with c3 because they don't have the pawn on c5. } 1... e6 { Our plan is to play Nc3 and Rc1, followed by taking on d5 at the right moment and then playing Nb5. } 2. Nc3 { --Point--
+You want to punish them for their knight being on c6 so you play the active c4 instead of c3 which is passive. } { [%csl Bc1,Yd5,Rc7][%cal Ba1c1,Yc4d5,Rc3b5,Rb5c7,Rf4c7,Rc1c7] } *
+
+
+[Event "Master the London System!: Section 2: Pattern #5"]
+[Date "2026.05.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Master the London System!"]
+[ChapterName "Section 2: Pattern #5"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/zwEkBxOL"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[FEN "rnbqkb1r/ppp1pppp/5n2/3p4/3P1B2/4P3/PPP2PPP/RN1QKBNR b KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.08"]
+[UTCTime "03:15:11"]
+[ChapterMode "gamebook"]
+
+1... Bf5 { Pattern #5: Meet Bf5 with c4! } 2. c4! e6 { Now we put pressure on the pawn with Nc3 } 3. Nc3 c6 { They try to solidify the pawn with c6, but now we play Qb3 } 4. Qb3 Qb6 { This is their most common move, but we just play c5 and force them to take. } 5. c5 Qxb3 6. axb3 $16 { Again, we have the open a-file for our rook and we are better in this position.
+--Point--
+You want to punish them for placing their bishop out into the woods by playing c4 and Qb3 to target the weakness on b7. } *
+
+
+[Event "Master the London System!: Section 2: Pattern #6"]
+[Date "2026.05.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Master the London System!"]
+[ChapterName "Section 2: Pattern #6"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/YsyR35MR"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[FEN "r1bq1rk1/pp3ppp/2nbpn2/2pp4/3P4/2PBPNB1/PP1N1PPP/R2QK2R b KQ - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.08"]
+[UTCTime "03:22:29"]
+[ChapterMode "gamebook"]
+
+1... b6 { Pattern #6: Plant your knight on the e5 square } 2. Ne5! { If they ever take the knight, you take by pawn and gain space on the kingside. For that reason, they will most commonly play Bb7 } 2... Bb7 { Just castle and play f4 on the next move } 3. O-O Qc7 { [%csl Bf4][%cal Bf2f4] } 4. f4 { --Point--
+You want to place your knight on the strong e5 square followed by attacking on the kingside. } *
+
+
+[Event "Master the London System!: Section 2: Pattern #7"]
+[Date "2026.05.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Master the London System!"]
+[ChapterName "Section 2: Pattern #7"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/8gVfJAhE"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[FEN "2r1qrk1/pb3ppp/1pn1p3/2b5/Q3B3/2P2NB1/PP3PPP/3RK2R w K - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.08"]
+[UTCTime "03:32:02"]
+[ChapterMode "gamebook"]
+
+{ Pattern #8: Greek Gift Sacrifices (Bxh7+ sacrifice!!) }
+1. Bxh7+!! Kxh7 { We now swing over the queen to h4 } 2. Qh4+ Kg6 { We now play Qg5+ } 3. Qg5+ Kh7 { Play Qh5+ } 4. Qh5+ Kg8 { We now play Ng5 } 5. Ng5 Bxf2+ { Take the bishop with the king or bishop (doesn't matter) } 6. Kxf2 f6 { It is now mate on h7! GG! } { [%csl Bh7][%cal Bh5h7] } 7. Qh7# { GG! That all she wrote.
+--Point--
+You want to sacrifice to expose their king and then you just mate them or win a lot of material. } *
+
+
+[Event "Master the London System!: Section 2: Pattern #8"]
+[Date "2026.05.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Master the London System!"]
+[ChapterName "Section 2: Pattern #8"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/ukU14nGY"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[FEN "r3k2r/pp1b1ppp/2nqpn2/2pp4/3P4/2PBPNP1/PP1NQPP1/R3K2R b KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.08"]
+[UTCTime "06:05:34"]
+[ChapterMode "gamebook"]
+
+1... e5 { Pattern #8: Meet e5 pawn break with dxc5 (if it has tempo) followed by e4. } 2. dxc5! { We take this pawn so we can play e4 next move! } (2. dxe5 { Do not take this pawn. Take the other one. }) 2... Qxc5 { The reason why we played this is that we wanna play e4! } 3. e4! { This is why we are still slightly better in this position. We are able to break in the center and we have a good position.
+--Point--
+You want to take on c5 to weaken the pawns a bit, and then you want to play e4 to further weaken their pawns in the center. } *
+
+
+[Event "Master the London System!: Section 2: Outroduction"]
+[Date "2026.05.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Master the London System!"]
+[ChapterName "Section 2: Outroduction"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/oJzzAsvH"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[FEN "4k3/8/8/8/3P1B2/2PBPN2/PP1N1PPP/R2QK2R w KQ - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.08"]
+[UTCTime "06:22:37"]
+[ChapterMode "gamebook"]
+
+{ Good job! You passed the 2nd section. Take a break, absorb everything that you learned, and move on to the next section which will be about the TRAPS that your opponent might fall for.😉 }
+ *
+
+
+[Event "Master the London System!: Section 3: Introduction"]
+[Date "2026.05.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Master the London System!"]
+[ChapterName "Section 3: Introduction"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/rojuCHhq"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[FEN "4k3/8/8/8/3P1B2/2PBPN2/PP1N1PPP/R2QK2R w KQ - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.08"]
+[UTCTime "06:24:58"]
+[ChapterMode "gamebook"]
+
+{ In this section, we will learn all about the traps that your opponent can fall into. Try to remember ALL these traps as you might trap your opponents easily.
+
+Let's get straight into action! }
+ *
+
+
+[Event "Master the London System!: Section 3: Trap #1"]
+[Date "2026.05.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D02"]
+[Opening "Queen's Pawn Game: London System"]
+[StudyName "Master the London System!"]
+[ChapterName "Section 3: Trap #1"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/qfuRcP5f"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.05.08"]
+[UTCTime "06:30:03"]
+[ChapterMode "gamebook"]
+
+{ We start with d4 } { [%csl Gd4][%cal Gd2d4] }
+1. d4 d5 { Develop the knight to f3 } { [%csl Bf3][%cal Bg1f3] } 2. Nf3 Nf6 { Place the bishop on f4 } { [%csl Yf4][%cal Yc1f4] } 3. Bf4 e6 { Play e3 } { [%csl Re3][%cal Re2e3] } 4. e3 c5 { Support the pawn with c3 } { [%csl Bc3][%cal Bc2c3] } 5. c3 Nc6 { Develop the knight to d2 } { [%csl Bd2][%cal Bb1d2] } 6. Nbd2 Bd6 { Retreat the bishop to g3 } { [%csl Bg3][%cal Bf4g3] } 7. Bg3 O-O { Develop the bishop to d3 } { [%csl Bd3][%cal Bf1d3] } 8. Bd3 b6 { This is where the trap starts. We play e4 } { [%csl Be4][%cal Be3e4] } 9. e4 { Their most common move is dxe4 } 9... dxe4 { Recapture by knight } { [%csl Ge4][%cal Gd2e4] } 10. Nxe4 Nxe4 11. Bxe4 Bb7 { Take the pawn on c5 } { [%csl Bc5][%cal Bd4c5] } 12. dxc5 Bxc5 { Attack the knight on c6 with Qa4 } { [%csl Ba4][%cal Bd1a4] } 13. Qa4 Rc8 { Attack the queen with Rd1 } { [%csl Rd1][%cal Ra1d1] } 14. Rd1 Qe8 { This is where the fun starts. We do the greek gift sacrifice with Bxh7+!! } { [%csl Bh7][%cal Be4h7] } 15. Bxh7+!! { Greek Gift Sacrifice!! } 15... Kxh7 { Swing the queen over to Qh4 } { [%csl Bh4][%cal Ba4h4] } 16. Qh4+! { This is the only move! Other moves lose for white. } 16... Kg6 { Now we play Qg5+ } { [%csl Rg5][%cal Rh4g5] } 17. Qg5+! Kh7 { Play Qh5+ } { [%csl Rh5][%cal Rg5h5] } 18. Qh5+ Kg8 { Play Ng5 } { [%csl Rg5][%cal Rf3g5] } 19. Ng5 Bxf2+ { You can take with either piece and premove Qh7# } { [%csl Rf2][%cal Re1f2] } 20. Kxf2 f6 { Finally, we just mate them on h7. } { [%csl Bh7][%cal Bh5h7] } 21. Qh7# { GG! } *
+
+
+[Event "Master the London System!: Section 3: Trap #2"]
+[Date "2026.05.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D02"]
+[Opening "Queen's Pawn Game: London System"]
+[StudyName "Master the London System!"]
+[ChapterName "Section 3: Trap #2"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/voQPd1qt"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.05.08"]
+[UTCTime "06:52:19"]
+[ChapterMode "gamebook"]
+
+{ We play d4 } { [%csl Bd4][%cal Bd2d4] }
+1. d4 d5 { Play Nf3 } { [%csl Gf3][%cal Gg1f3] } 2. Nf3 Nf6 { Play Bf4 } { [%csl Rf4][%cal Rc1f4] } 3. Bf4 e6 { Play e3 } { [%csl Ye3][%cal Ye2e3] } 4. e3 c5 { Support the pawn further with c3 } { [%csl Rc3][%cal Rc2c3] } 5. c3 Nc6 { Develop the knight to d2 } { [%csl Bd2][%cal Bb1d2] } 6. Nbd2 Bd6 { Retreat the bishop to g3 } { [%csl Rg3][%cal Rf4g3] } 7. Bg3 O-O { Develop the bishop to d3 } { [%csl Bd3][%cal Bf1d3] } 8. Bd3 Qe7 { We play Ne5 } { [%csl Re5][%cal Rf3e5] } 9. Ne5 Nd7 { Take the knight on d7. } { [%csl Rd7][%cal Re5d7] } 10. Nxd7 Bxd7 { This is where the trap starts. Take on d6 } { [%csl Bd6][%cal Bg3d6] } 11. Bxd6 Qxd6 { Now we take the pawn on c5 } { [%csl Bc5][%cal Bd4c5] } 12. dxc5 Qxc5 { Can you find the tactic here in this position? } 13. Bxh7+!! { They need to take } 13... Kxh7 { Check them on h5 } { [%csl Bh5][%cal Bd1h5] } 14. Qh5+ Kg8 { Play Ne4. } { [%csl Re4][%cal Rd2e4] } 15. Ne4 { If they move the queen away, we play Ng5 and it is game over. } 15... g6 { Take the queen } { [%csl Yc5][%cal Ye4c5] } 16. Nxc5 gxh5 { Take the bishop } { [%csl Bd7][%cal Bc5d7] } 17. Nxd7 Rfd8 { Play Nf6+ } { [%csl Rh5][%cal Rd7f6,Rf6h5] } 18. Nf6+ { [%csl Rh5][%cal Rf6h5] } 18... Kf8 { Take the pawn on h5 } { [%csl Rh5][%cal Rf6h5] } 19. Nxh5 $18 { And now it is game over because we have a two pawn advantage. } { [%csl Bg2,Bh2] } *
+
+
+[Event "Master the London System!: Section 3: Trap #3"]
+[Date "2026.05.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D02"]
+[Opening "Queen's Pawn Game: London System"]
+[StudyName "Master the London System!"]
+[ChapterName "Section 3: Trap #3"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/ZS2vJQxA"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.05.08"]
+[UTCTime "07:04:28"]
+[ChapterMode "gamebook"]
+
+{ Start with d4 } { [%csl Bd4][%cal Bd2d4] }
+1. d4 d5 { Play Nf3 } { [%csl Bf3][%cal Bg1f3] } 2. Nf3 Nf6 { Play Bf4 } { [%csl Rf4][%cal Rc1f4] } 3. Bf4 c5 { Play e3 } { [%csl Ye3][%cal Ye2e3] } 4. e3 Nc6 { Support the pawn with c3 } { [%csl Yc3][%cal Yc2c3] } 5. c3 Bg4 { Play Nbd2 } { [%csl Rd2][%cal Rb1d2] } 6. Nbd2 e6 { This is where the trap starts. We play Bb5 } { [%csl Bb5][%cal Bf1b5] } 7. Bb5 Bd6 { Now, we play Qa4 } { [%csl Ba4][%cal Bd1a4] } 8. Qa4 O-O { Take the knight on c6 } { [%csl Bc6][%cal Bb5c6] } 9. Bxc6 bxc6 { Take the bishop on d6 } { [%csl Rd6][%cal Rf4d6] } 10. Bxd6 Qxd6 { And now you set up the trap. Play Ne5 } { [%csl Ye5][%cal Yf3e5] } 11. Ne5 { Their most natural move is actually a blunder. } 11... Rfc8?? { This is now a big blunder because we can take the bishop on g4 followed by play dxc5! } { [%csl Bg4,Yc5][%cal Be5g4,Yd4c5,Ra4g4] } 12. Nxg4! Nxg4 { We now play dxc5 } { [%csl Bc5,Rg4][%cal Bd4c5,Ra4g4] } 13. dxc5 Qxc5 { And now we take the knight with our queen } { [%csl Gg4][%cal Ga4g4] } 14. Qxg4 { GG! } { [%csl Bd2] } *
+
+
+[Event "Master the London System!: Section 3: Trap #4"]
+[Date "2026.05.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A46"]
+[Opening "Indian Defense: London System"]
+[StudyName "Master the London System!"]
+[ChapterName "Section 3: Trap #4"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/gAnPjtlY"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.05.08"]
+[UTCTime "07:12:45"]
+[ChapterMode "gamebook"]
+
+{ [%csl Bd4][%cal Bd2d4] }
+1. d4 Nf6 { Develop the bishop to f4 } { [%csl Bf4][%cal Bc1f4] } 2. Bf4 e6 { Play Nf3 } { [%csl Bf3][%cal Bg1f3] } 3. Nf3 c5 { We now play e3 } { [%csl Be3][%cal Be2e3] } 4. e3 Nc6 { And now, the normal move is c3, but we will setup a trap with Nc3 } { [%csl Rc3][%cal Rb1c3] } 5. Nc3!? { The most common move is d5, but it is a blunder because of Nb5! } 5... d5?? { We now play Nb5! } { [%csl Rc7][%cal Bc3b5,Rb5c7,Gf4c7] } 6. Nb5 { [%csl Gc7][%cal Gb5c7,Gf4c7] } 6... Qa5+ { Just play c3 } { [%csl Bc3][%cal Bc2c3] } 7. c3 e5 { Just take by knight } { [%csl Ye5][%cal Yf3e5] } 8. Nxe5 { GG! } *
+
+
+[Event "Master the London System!: Section 3: Trap #5"]
+[Date "2026.05.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A46"]
+[Opening "Indian Defense: London System"]
+[StudyName "Master the London System!"]
+[ChapterName "Section 3: Trap #5"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/khSURkRV"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.05.08"]
+[UTCTime "07:28:22"]
+[ChapterMode "gamebook"]
+
+{ [%csl Gd4][%cal Gd2d4] }
+1. d4 Nf6 { Develop the bishop to f4 } { [%csl Bf4][%cal Bc1f4] } 2. Bf4 e6 { Play Nf3 } { [%csl Bf3][%cal Bg1f3] } 3. Nf3 c5 { Play e3 } { [%csl Re3][%cal Re2e3] } 4. e3 b6 { Place the knight on d2 } { [%csl Yd2][%cal Yb1d2] } 5. Nbd2 Bb7 { We now set up a trap. We play Nc4 } { [%csl Rc4][%cal Rd2c4] } 6. Nc4!? { This is a very provoking move because it just provokes black to play d5 or d6 THINKING that our threat is Nd6+. But that is not our threat. If they play d6, we take on c5. Once we take on c5, they could take by b-pawn or d-pawn. If they take by d-pawn, we exchange the queens and play Ng5 and once they defend with Ke8, we just play Ne5. If they take by b-pawn, we just take the pawn on d6 and we are winning. } 6... d5 { We now play Nce5 } { [%csl Be5][%cal Bc4e5] } 7. Nce5! { We target f7! } { [%csl Rf7][%cal Re5f7] } 7... Nbd7 { We now play Bb5! } { [%csl Bb5][%cal Bf1b5] } 8. Bb5 a6 { Just play Ng5 } { [%csl Rf7][%cal Rf3g5,Rg5f7,Re5f7] } 9. Ng5 { [%csl Rf7][%cal Re5f7,Rg5f7] } 9... axb5 { Play Nexf7 } { [%csl Rf7][%cal Re5f7] } 10. Nexf7 Qe7 { Take the rook on h8 } { [%csl Yh8][%cal Yf7h8] } 11. Nxh8 h6 { You just play Ng6 } { [%csl Rg6][%cal Rh8g6] } 12. Ng6 { GG! } *
+
+
+[Event "Master the London System!: Section 3: Outroduction"]
+[Date "2026.05.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Master the London System!"]
+[ChapterName "Section 3: Outroduction"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/4aEVQZYW"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.05.08"]
+[UTCTime "07:35:13"]
+[ChapterMode "gamebook"]
+
+{ Well done! You have made it this far. Take a break, and now let's move on to the next section where we will analyze games by the top GMs. Come on! You can do it! }
+ *
+
+
+[Event "Master the London System!: Section 4: Introduction"]
+[Date "2026.05.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Master the London System!"]
+[ChapterName "Section 4: Introduction"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/mCQsTuda"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[FEN "4k3/8/8/8/3P1B2/2PBPN2/PP1N1PPP/R2QK2R w KQ - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.08"]
+[UTCTime "07:37:44"]
+[ChapterMode "gamebook"]
+
+{ Let us now review games in this system so we can grasp ALL these ideas, traps, patterns and the theory. }
+ *
+
+
+[Event "Master the London System!: Section 4: Game #1"]
+[Date "2026.05.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D02"]
+[Opening "Queen's Pawn Game: London System"]
+[StudyName "Master the London System!"]
+[ChapterName "Section 4: Game #1"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/14ZnP6Zb"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.05.08"]
+[UTCTime "07:39:34"]
+
+1. d4 { [%eval 0.15] } 1... d5 { [%eval 0.27] } 2. Nf3 { [%eval 0.08] } 2... Nf6 { [%eval 0.11] } 3. Bf4 { [%eval 0.04] } 3... e6 { [%eval 0.1] } 4. e3 { [%eval 0.0] } 4... c5 { [%eval 0.14] } 5. c3 { [%eval 0.0] } { Normal London System moves have been played. } 5... Nc6 { [%eval 0.13] } 6. Nbd2 { [%eval 0.14] } 6... Be7 { [%eval 0.15] } 7. Bd3 { [%eval 0.0] } 7... Nh5 { [%eval 0.08] } 8. Bg3 { [%eval -0.07] } 8... Nxg3 { [%eval -0.05] } 9. hxg3 { [%eval -0.07] } 9... h6 { [%eval 0.19] } 10. Qe2 { [%eval 0.14] } 10... Bd7 { [%eval 0.15] } 11. dxc5 { [%eval 0.16] } { This is also an idea to get the queenside majority } 11... Bxc5 { [%eval 0.15] } 12. e4 { [%eval 0.24] } 12... dxe4 { [%eval 0.23] } 13. Nxe4 { [%eval -0.06] } { We have the 3 on 2 on the queenside, they have the 4 on 3 on the kingside. } { [%csl Ra7,Rb7,Ga2,Gb2,Gc3,Ye6,Yf7,Yg7,Yh6,Bf2,Bg2,Bg3] } 13... Be7 { [%eval -0.03] } 14. g4 { [%eval -0.26] } 14... Qc7 { [%eval -0.33] } 15. g5 { [%eval -0.35] } 15... O-O-O { [%eval -0.43] } 16. gxh6 { [%eval -0.53] } 16... gxh6 { [%eval -0.24] } 17. O-O-O { [%eval -0.3] } 17... f5 { [%eval -0.24] } 18. Ng3 { [%eval -0.24] } 18... a6 { [%eval -0.21] } 19. Kb1 { [%eval -0.23] } 19... Bd6 { [%eval -0.15] } 20. Nh5 { [%eval -0.31] } { That is a good knight on the kingside } 20... Kb8 { [%eval -0.15] } { This is a common idea when you castle queenside to make your king safer. } 21. g3?! { [%eval -0.9] } { Inaccuracy. Ng7 was best. } (21. Ng7 Be5 22. Nh5 Rhf8 23. Bc2 Bd6 24. Ng7 Rf6 25. Nh5 Rf7 26. Bb3 Bc8) 21... e5 { [%eval -0.93] } 22. Nh4 { [%eval -0.74] } 22... e4 { [%eval -0.69] } 23. Bc2 { [%eval -0.69] } 23... Ne5 { [%eval -0.69] } 24. Nf4 { [%eval -0.77] } { That is a weak square } 24... Bb5?! { [%eval -0.03] } { Inaccuracy. Ng4 was best. } (24... Ng4 25. Nd5 Qc5 26. Rd2 Rhf8 27. c4 Ne5 28. Bb3 a5 29. Nf4 Nd3 30. Nxd3) 25. Qh5 { [%eval -0.14] } 25... Nd3?! { [%eval 0.73] } { Inaccuracy. Ba3 was best. } (25... Ba3 26. Nxf5 Bxb2 27. Kxb2 Nc4+ 28. Kb1 Na3+ 29. Kb2 Nxc2 30. Kxc2 Ba4+ 31. Kb2) 26. Nxd3?! { [%eval -0.01] } { Inaccuracy. Bxd3 was best. } (26. Bxd3 Bxd3+ 27. Nxd3 exd3 28. Nxf5 Bc5 29. Qf3 d2 30. Rxh6 Rhe8 31. Kc2 Qa5) 26... exd3 { [%eval 0.0] } 27. Bxd3 { [%eval -0.05] } 27... Bc6 { [%eval 0.03] } 28. Rhe1 { [%eval 0.0] } 28... Qb6 { [%eval 0.07] } 29. Bc2 { [%eval -0.11] } 29... Qxf2 { [%eval -0.15] } 30. Rf1 { [%eval -0.11] } 30... Qxg3 { [%eval 0.14] } 31. Nxf5 { [%eval 0.17] } 31... Qe5 { [%eval 0.13] } 32. Rfe1 { [%eval 0.03] } 32... Qf6?! { [%eval 0.85] } { Inaccuracy. Qh2 was best. } (32... Qh2 33. Qxh2 Bxh2 34. Rxd8+ Rxd8 35. Nxh6 Rh8 36. Nf5 Bf4 37. Nd4 Bd5 38. b3) 33. Rxd6 { [%eval 0.8] } 33... Rxd6 { [%eval 0.75] } 34. Qh2 { [%eval 0.81] } 34... Rd8 { [%eval 0.9] } 35. Rd1 { [%eval 0.8] } 35... Kc7 { [%eval 1.0] } 36. c4 { [%eval 0.45] } 36... b6 { [%eval 0.51] } 37. a3 { [%eval 0.19] } 37... Be8?! { [%eval 1.07] } { Inaccuracy. Ba4 was best. } (37... Ba4 38. Nxd6 Bxc2+ 39. Kxc2 Rxd6 40. Kb1 Qe6 41. Ka1 a5 42. Rd4 Qg6 43. Ka2) 38. b4?! { [%eval 0.0] } { Inaccuracy. Ka2 was best. } (38. Ka2 Bf7 39. Rd4 h5 40. Be4 a5 41. b3 h4 42. a4 Be8 43. c5 bxc5) 38... Bg6?? { [%eval 4.5] } { Blunder. Ba4 was best. } { This is a HUGE blunder because of Rxd6 } (38... Ba4 39. Nxd6 Bxc2+ 40. Kxc2 Rxd6 41. c5 Qf5+ 42. Kc1 Qg5+ 43. Kb2 Qf6+ 44. Kb1) 39. Rxd6! { [%eval 4.24] } 39... Rxd6 { [%eval 4.39] } 40. c5! { [%eval 4.44] } { It's just game over } 40... bxc5 { [%eval 4.7] } 41. bxc5 { [%eval 4.47] } 41... Bxf5?! { [%eval 6.82] } { Inaccuracy. Kc6 was best. } (41... Kc6 42. Qxd6+ Qxd6 43. cxd6 Kb6 44. Ng7 Bf7 45. Kb2 h5 46. Kc3 Kc6 47. Nf5) 42. Qxd6+ { [%eval 5.8] } 42... Qxd6 { [%eval 7.23] } 43. cxd6+ { [%eval 6.16] } 43... Kxd6 { [%eval 7.03] } 44. Bxf5 { [%eval 7.25] } 44... h5 { [%eval 6.54] } 45. Kb2 { [%eval 6.25] } 45... h4 { [%eval 5.85] } 46. Kb3 { [%eval 6.89] } 46... Kc5 { [%eval 7.59] } 47. Bh3 { [%eval 7.51] } { Ajay, Karthikeyan - Brkljaca, A.., 1-0, Rujna Zora-2 ASK IM 2021, https://lichess.org/VYaHqb6G } { White is up a piece and they are just winning. } *
+
+
+[Event "Master the London System!: Section 4: Game #2"]
+[Date "2026.05.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "Master the London System!"]
+[ChapterName "Section 4: Game #2"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/NTW3Nkgp"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.05.08"]
+[UTCTime "08:09:32"]
+
+1. d4 { [%eval 0.15] } 1... Nf6 { [%eval 0.15] } 2. Bf4 { [%eval 0.0] } 2... g6 { [%eval 0.06] } 3. Nc3 { [%eval 0.0] } 3... Bg7 { [%eval 0.48] } 4. e4 { [%eval 0.41] } 4... d6 { [%eval 0.47] } 5. Qd2 { [%eval 0.36] } 5... Nc6 { [%eval 0.75] } 6. d5?! { [%eval 0.15] } { Inaccuracy. O-O-O was best. } { I don't really like the move d5 because it weakens the e5 square and what I like to do is just to castle queenside and play chess. } (6. O-O-O h6 7. h3 a6 8. Nf3 b5 9. d5 Ne5 10. Nxe5 dxe5) 6... Ne5 { [%eval 0.21] } 7. Bh6 { [%eval -0.04] } { I don't think that this is a good move because the king hasn't castled yet. } 7... Bxh6 { [%eval 0.0] } 8. Qxh6 { [%eval -0.05] } 8... c6 { [%eval -0.1] } 9. dxc6 { [%eval -0.61] } 9... bxc6 { [%eval -0.52] } 10. h3 { [%eval -0.52] } 10... Qb6 { [%eval -0.55] } 11. Rb1 { [%eval -1.04] } 11... Rb8 { [%eval -1.07] } 12. Qd2 { [%eval -1.2] } 12... Ba6? { [%eval 0.24] } { Mistake. O-O was best. } (12... O-O 13. f4 Nh5 14. Nge2 Nc4 15. Qd4 Nxb2 16. Qxb6 Rxb6 17. g4 Nf6 18. Nc1) 13. Bxa6 { [%eval 0.25] } 13... Qxa6 { [%eval 0.13] } 14. b3 { [%eval 0.18] } 14... Rb4 { [%eval 0.34] } 15. f3 { [%eval 0.37] } 15... Qb6? { [%eval 1.89] } { Mistake. Rb8 was best. } (15... Rb8 16. Nge2 Qb6 17. Rd1 O-O 18. Na4 Qc7 19. c4 Rfd8 20. Rc1 Ned7 21. O-O) 16. a3 { [%eval 1.76] } 16... Rd4 { [%eval 2.05] } (16... Rb5 17. Qe3) 17. Qe3?? { [%eval -5.05] } { Blunder. Qf2 was best. } { This is actually a blunder because of Rxe4 and the queen is lost. } (17. Qf2 c5 18. Nge2 O-O 19. Nxd4 cxd4 20. Ne2 Qa5+ 21. b4 Qxa3 22. O-O Rc8) 17... Rxe4 { [%eval -5.04] } 18. Qxe4 { [%eval -4.81] } 18... Nxe4 { [%eval -5.01] } 19. fxe4 { [%eval -5.12] } 19... O-O { [%eval -4.81] } 20. Nge2 { [%eval -4.76] } 20... f5 { [%eval -4.78] } 21. Rf1 { [%eval -5.04] } 21... fxe4 { [%eval -5.17] } 22. Rxf8+ { [%eval -5.0] } 22... Kxf8 { [%eval -5.11] } 23. Nxe4 { [%eval -5.18] } 23... d5 { [%eval -5.13] } 24. N4c3 { [%eval -5.37] } 24... d4 { [%eval -4.72] } 25. Na4 { [%eval -5.41] } 25... Qa5+ { [%eval -5.18] } 26. Kf1 { [%eval -6.36] } 26... Qd2 { [%eval -5.94] } 27. Nc5 { [%eval -6.41] } 27... Qxc2 { [%eval -6.32] } 28. Rc1 { [%eval -6.44] } 28... Qb2 { [%eval -5.61] } 29. Ne6+ { [%eval -6.26] } 29... Kg8 { [%eval -6.13] } 30. N6xd4 { [%eval -6.0] } 30... Qxa3?! { [%eval -4.59] } { Inaccuracy. Nd3 was best. } (30... Nd3 31. Rd1 c5 32. Rxd3 Qb1+ 33. Kf2 Qxd3 34. Nf3 Qxb3 35. Ng5 c4 36. h4) 31. Rc3 { [%eval -4.71] } 31... a5 { [%eval -4.51] } 32. Kf2 { [%eval -4.76] } 32... Qd6 { [%eval -4.7] } 33. Re3 { [%eval -4.87] } 33... c5 { [%eval -4.85] } 34. Nb5 { [%eval -5.1] } 34... Qf6+ { [%eval -4.97] } 35. Ke1 { [%eval -5.23] } 35... Nc6 { [%eval -4.87] } 36. Nbc3 { [%eval -4.96] } 36... Nd4 { [%eval -4.9] } 37. Nd5 { [%eval -5.9] } 37... Qh4+ { [%eval -5.07] } 38. g3 { [%eval -4.95] } 38... Qxh3 { [%eval -5.14] } 39. Nxe7+ { [%eval -5.7] } 39... Kf7 { [%eval -5.56] } 40. Nf4 { [%eval -5.64] } 40... Qh2 { [%eval -5.56] } 41. Kf1 { [%eval -5.74] } 41... g5 { [%eval -5.7] } 42. Nfd5 { [%eval -6.79] } 42... g4 { [%eval -6.64] } 43. Nf4 { [%eval -6.92] } 43... Qh1+ { [%eval -6.91] } 44. Kf2 { [%eval -6.82] } 44... Qh2+ { [%eval -6.62] } 45. Ng2 { [%eval -7.56] } 45... Qh6?! { [%eval -4.86] } { Inaccuracy. Nf3 was best. } (45... Nf3 46. Nf5 Qg1+ 47. Ke2 Qxg2+ 48. Kd3 Qd2+ 49. Kc4 Qc2+ 50. Rc3 Qxf5 51. Rc1) 46. Nd5 { [%eval -4.62] } 46... Qc6 { [%eval -4.5] } 47. Re7+ { [%eval -4.65] } 47... Kf8 { [%eval -4.58] } 48. Ngf4 { [%eval -4.41] } 48... c4 { [%eval -4.28] } 49. Rc7?! { [%eval -5.56] } { Inaccuracy. bxc4 was best. } (49. bxc4 Qa4 50. Rb7 Qc2+ 51. Kf1 Qxc4+ 52. Kf2 Qc2+ 53. Kf1 a4 54. Rb8+ Kg7) 49... Qb5?? { [%eval -0.82] } { Blunder. Qxc7 was best. } (49... Qxc7 50. Nxc7 cxb3 51. Ke3 b2 52. Kxd4 b1=Q 53. Kc5 a4 54. Kc6 a3 55. Kd7) 50. Rxc4 { [%eval -0.8] } 50... Nxb3?! { [%eval -0.05] } { Inaccuracy. Qxb3 was best. } (50... Qxb3 51. Rxd4 Qf3+ 52. Ke1 Qxg3+ 53. Kd2 Qa3 54. Nc3 Qb2+ 55. Kd3 Qb7 56. Ne6+) 51. Rc8+?? { [%eval -2.57] } { Blunder. Ne6+ was best. } (51. Ne6+ Kg8 52. Rxg4+ Kh8 53. Rf4 Qe8 54. Rf8+ Qxf8+ 55. Nxf8 Nc5 56. Nc3 Kg8) 51... Kf7?? { [%eval #5] } { Checkmate is now unavoidable. Kg7 was best. } (51... Kg7 52. Ne6+ Kf7 53. Rf8+ Kxe6 54. Nc7+ Ke7 55. Nxb5 Kxf8 56. Ke3 Kf7 57. Kf4) 52. Rc7+ { [%eval #4] } 52... Ke8 { [%eval #2] } 53. Nf6+ { [%eval #1] } { Nakamura, Hi - Aronian, L., 1-0, Nakamura vs Aronian Blitz, 2014, https://lichess.org/KRlHdrjq } *
+
+
+[Event "Master the London System!: Section 4: Game #3"]
+[Date "2026.05.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A46"]
+[Opening "Indian Defense: London System"]
+[StudyName "Master the London System!"]
+[ChapterName "Section 4: Game #3"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/DddoxQAG"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.05.08"]
+[UTCTime "08:15:46"]
+
+1. d4 { [%eval 0.15] } (1. e4 e5 2. Nf3 Nc6 3. Bb5 Nf6 4. O-O Nxe4 5. Re1 Nd6 6. Nxe5 Be7 7. Bf1) 1... Nf6 { [%eval 0.15] } 2. Bf4 { [%eval 0.0] } 2... e6 { [%eval 0.1] } 3. Nf3 { [%eval 0.1] } 3... b6 { [%eval 0.11] } 4. e3 { [%eval 0.25] } 4... Bb7 { [%eval 0.12] } 5. Nbd2 { [%eval 0.13] } 5... Be7 { [%eval 0.19] } 6. h3 { [%eval 0.18] } { Very important move. We want to give our bishop an escape square on h2. } 6... O-O { [%eval 0.15] } 7. Bd3 { [%eval 0.18] } 7... c5 { [%eval 0.14] } { This is the right time to play c3. You only play c3 if they play c5. } 8. O-O { [%eval 0.26] } { This is a fine move, but I recommend c3. } 8... cxd4 { [%eval 0.18] } 9. exd4 { [%eval 0.2] } 9... d6 { [%eval 0.4] } 10. c3 { [%eval 0.38] } { White has the queenside majority and black has the kingside majority. } { [%csl Ba2,Bb2,Bc3,Bd4,Rb6,Ra7,Ge6,Gf7,Gg7,Gh7,Yf2,Yg2,Yh3,Rd6] } 10... Nbd7 { [%eval 0.4] } 11. Re1 { [%eval 0.31] } 11... a6 { [%eval 0.35] } 12. a4 { [%eval 0.37] } { This is a common idea where you play a4 to stop any further expansions from black with b5. } 12... Re8 { [%eval 0.43] } 13. Bh2 { [%eval 0.37] } { This is a prophylactic move which anticipates the move of e5. } 13... Nf8 { [%eval 0.5] } 14. Nc4 { [%eval 0.38] } { This is where the knight usually goes in this setup for black (QID setup). } 14... Ng6 { [%eval 0.49] } 15. a5 { [%eval 0.28] } 15... b5 { [%eval 0.32] } 16. Nb6 { [%eval 0.39] } 16... Ra7 { [%eval 0.43] } 17. b3 { [%eval 0.49] } 17... Nd5 { [%eval 0.68] } 18. Nxd5 { [%eval 0.62] } 18... Bxd5 { [%eval 0.64] } 19. c4 { [%eval 0.63] } { White has the queenside majority, so he wants to expand and try to create a passed pawn on the queenside while on the other hand, black is trying to expand on the kingside because the have a pawn majority there. } 19... bxc4 { [%eval 0.71] } 20. bxc4 { [%eval 0.66] } 20... Ba8 { [%eval 0.73] } 21. d5 { [%eval 0.56] } 21... Bf6 { [%eval 1.1] } 22. Ra3?! { [%eval 0.16] } { Inaccuracy. Rb1 was best. } (22. Rb1 Bc3 23. Re3 Bxa5 24. Qa4 e5 25. c5 Bxd5 26. cxd6 Bxf3 27. Bxg6 hxg6) 22... exd5 { [%eval 0.19] } 23. Rxe8+ { [%eval 0.24] } 23... Qxe8 { [%eval 0.1] } 24. cxd5 { [%eval 0.1] } 24... Bxd5 { [%eval 0.16] } 25. Bxg6 { [%eval 0.14] } 25... Bxf3 { [%eval 0.33] } 26. Bxh7+ { [%eval 0.04] } 26... Kxh7 { [%eval 0.07] } 27. Rxf3 { [%eval 0.04] } 27... Re7 { [%eval 0.02] } 28. Qd3+ { [%eval 0.11] } 28... Kg8 { [%eval 0.21] } 29. Bf4 { [%eval 0.22] } 29... Qb5 { [%eval 0.5] } 30. Qxb5 { [%eval 0.54] } 30... axb5 { [%eval 0.61] } 31. Rb3 { [%eval 0.24] } 31... Ra7? { [%eval 1.9] } { Mistake. Re1+ was best. } (31... Re1+ 32. Kh2 Ra1 33. Rxb5 Bc3 34. Rb8+ Kh7 35. Ra8 Bxa5 36. g3 f6 37. Kg2) 32. Bd2 { [%eval 1.76] } 32... Bd4?! { [%eval 2.58] } { Inaccuracy. Bd8 was best. } (32... Bd8 33. Rxb5 Kf8 34. Kf1 Ke7 35. Bc3 g6 36. Ke2 Kd7 37. Kd3 Kc6 38. Kc4) 33. Rxb5 { [%eval 2.37] } 33... Bc5 { [%eval 2.43] } 34. g4 { [%eval 2.5] } 34... f6 { [%eval 2.21] } 35. Kg2 { [%eval 2.3] } 35... Kf7 { [%eval 2.07] } 36. f4 { [%eval 2.0] } 36... Ke6 { [%eval 1.77] } 37. Kf3 { [%eval 1.9] } 37... Kd5 { [%eval 1.77] } 38. h4 { [%eval 1.8] } 38... Kc4 { [%eval 2.02] } 39. Rb1 { [%eval 2.0] } 39... Kd3 { [%eval 2.3] } 40. Be1 { [%eval 2.25] } 40... Re7 { [%eval 2.29] } 41. Rd1+ { [%eval 2.23] } 41... Kc4 { [%eval 2.12] } 42. Bd2 { [%eval 1.99] } 42... Rb7 { [%eval 2.23] } 43. g5 { [%eval 1.74] } 43... f5 { [%eval 2.27] } 44. h5 { [%eval 2.37] } 44... Rb3+ { [%eval 2.26] } 45. Kg2 { [%eval 2.13] } 45... Rb2 { [%eval 1.56] } 46. h6? { [%eval 0.41] } { Mistake. Kf1 was best. } (46. Kf1 Rb3 47. a6 Rh3 48. h6 gxh6 49. g6 Kb5 50. g7 Rg3 51. Bc3 Kxa6) 46... gxh6 { [%eval 0.72] } 47. gxh6 { [%eval 0.25] } 47... Kd3?? { [%eval 5.47] } { Blunder. Be3 was best. } (47... Be3 48. h7 Bxd2 49. Kf3 Rb3+ 50. Ke2 Rh3 51. Rxd2 Kc5 52. Rc2+ Kb5 53. Ra2) 48. h7 { [%eval 5.28] } 48... Bd4 { [%eval 5.9] } 49. a6?! { [%eval 4.03] } { Inaccuracy. Kf3 was best. } (49. Kf3 Kc4 50. Be3 Rh2 51. Bxd4 Rxh7 52. a6 Rh2 53. Bf2 Rh3+ 54. Kg2 Rh8) 49... Ra2? { [%eval 6.62] } { Mistake. Kc4 was best. } (49... Kc4 50. Kg3 Rb3+ 51. Kh4 Rb8 52. Kg5 Rh8 53. Kg6 d5 54. Bb4 Ra8 55. Bd6) 50. Kf3 { [%eval 5.98] } 50... Kc4 { [%eval 6.67] } 51. Be3 { [%eval 7.33] } 51... Bh8 { [%eval 8.31] } 52. Rxd6 { [%eval 7.69] } 52... Kb5 { [%eval 8.37] } 53. Rd8 { [%eval 7.74] } { Kramnik, V. - Duda, J., 1-0, World Blitz 2015, https://lichess.org/ilCYZv3k } { White is just winning in this position. } *
+
+
+[Event "Master the London System!: Section 4: Game #4"]
+[Date "2026.05.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D02"]
+[Opening "Queen's Pawn Game: Chigorin Variation"]
+[StudyName "Master the London System!"]
+[ChapterName "Section 4: Game #4"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/0vPB3c6a"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.05.08"]
+[UTCTime "08:27:03"]
+
+1. d4 { [%eval 0.15] } (1. e3) 1... d5 { [%eval 0.27] } 2. Nf3 { [%eval 0.08] } 2... Nc6 { [%eval 0.5] } { Black is playing for a Chigorin Setup. } 3. Bf4 { [%eval 0.23] } 3... Bg4 { [%eval 0.37] } 4. e3 { [%eval 0.29] } 4... e6 { [%eval 0.34] } 5. c4 { [%eval 0.44] } 5... Nf6 { [%eval 0.34] } 6. Nc3 { [%eval 0.29] } 6... Bb4 { [%eval 0.22] } 7. Rc1 { [%eval 0.18] } 7... O-O { [%eval 0.21] } 8. Be2 { [%eval 0.28] } 8... dxc4 { [%eval 0.31] } 9. Bxc4 { [%eval 0.41] } 9... Bd6 { [%eval 0.71] } 10. Bg3 { [%eval 0.46] } 10... Qe7 { [%eval 1.0] } 11. Be2 { [%eval 0.45] } 11... Rfd8 { [%eval 0.85] } 12. Bh4 { [%eval 0.87] } 12... h6 { [%eval 0.86] } 13. O-O { [%eval 0.82] } 13... g5?! { [%eval 1.53] } { Inaccuracy. Bxf3 was best. } { Black overextended a bit on the kingside } (13... Bxf3 14. Bxf6 Qxf6 15. Bxf3 e5 16. Ne4 Qe7 17. d5 Nb8 18. Qb3 b6 19. Nxd6) 14. Bg3?! { [%eval 0.57] } { Inaccuracy. Nxg5 was best. } (14. Nxg5 hxg5 15. Bxg5 Bf5 16. f4 Kg7 17. Qe1 Bb4 18. Bf3 Rh8 19. Qg3 Rag8) 14... Bxg3 { [%eval 0.8] } 15. fxg3 { [%eval 0.78] } 15... e5 { [%eval 0.8] } 16. d5 { [%eval 0.75] } 16... e4 { [%eval 0.72] } 17. Nd4 { [%eval 0.56] } 17... Bxe2 { [%eval 0.55] } 18. Ncxe2 { [%eval 0.58] } 18... Nxd4 { [%eval 0.6] } 19. Nxd4 { [%eval 0.56] } 19... Nxd5?? { [%eval 2.64] } { Blunder. Rxd5 was best. } (19... Rxd5 20. Qb3 c5 21. Nf5 Qe6 22. Qxb7 Re8 23. Nxh6+ Kg7 24. g4 Rd7 25. Qb5) 20. Nf5 { [%eval 2.67] } 20... Qe6 { [%eval 2.58] } 21. Qh5 { [%eval 2.71] } 21... Rd6 { [%eval 2.68] } 22. Nxd6 { [%eval 2.7] } 22... cxd6 { [%eval 2.66] } { White is now up the exchange. } 23. Qe2 { [%eval 2.63] } 23... Rc8?! { [%eval 3.7] } { Inaccuracy. b6 was best. } (23... b6 24. Rf2 Rf8 25. Rcf1 f5 26. Qc4 Rf6 27. Qd4 Kf7 28. Rd1 Ne7 29. Rc2) 24. h3?! { [%eval 2.57] } { Inaccuracy. Rxc8+ was best. } (24. Rxc8+ Qxc8 25. Qd2 Qc5 26. Rc1 Qb5 27. h3 Nf6 28. Qc3 Kg7 29. Rf1 Qe5) 24... Kg7 { [%eval 3.17] } 25. Kh2?! { [%eval 2.09] } { Inaccuracy. Rxc8 was best. } (25. Rxc8 Qxc8 26. Qd2 Qc5 27. Rd1 Nxe3 28. Qd4+ Qxd4 29. Rxd4 d5 30. Kf2 Nc4) 25... Rxc1 { [%eval 2.17] } 26. Rxc1 { [%eval 2.16] } 26... Qe5 { [%eval 2.45] } 27. Qd2 { [%eval 2.36] } 27... Ne7 { [%eval 2.56] } 28. Qc3 { [%eval 2.05] } 28... Qxc3 { [%eval 2.54] } 29. Rxc3 { [%eval 2.37] } 29... Nd5 { [%eval 3.0] } 30. Rc4 { [%eval 2.88] } 30... f5 { [%eval 2.64] } 31. Rd4 { [%eval 3.12] } 31... Nxe3 { [%eval 3.16] } 32. Rxd6 { [%eval 3.11] } 32... Nf1+ { [%eval 2.93] } 33. Kg1 { [%eval 2.75] } 33... Nxg3 { [%eval 3.24] } 34. Rd7+ { [%eval 3.32] } 34... Kf6 { [%eval 3.17] } 35. Rxb7 { [%eval 3.26] } 35... e3 { [%eval 2.71] } 36. Rxa7 { [%eval 2.93] } 36... Ne2+?! { [%eval 4.49] } { Inaccuracy. f4 was best. } (36... f4 37. b4 h5 38. b5 g4 39. hxg4 hxg4 40. Ra3 Ke6 41. Rd3 Kf5 42. Rd8) 37. Kf1 { [%eval 4.49] } 37... Ng3+ { [%eval 4.54] } 38. Ke1 { [%eval 4.4] } 38... h5 { [%eval 5.14] } 39. b4 { [%eval 5.06] } 39... f4 { [%eval 4.76] } 40. Ra8 { [%eval 4.35] } 40... Kf7 { [%eval 5.45] } 41. b5 { [%eval 5.89] } 41... g4 { [%eval 6.4] } 42. hxg4 { [%eval 6.21] } 42... hxg4 { [%eval 6.24] } 43. Ra4 { [%eval 5.84] } 43... Nh5 { [%eval 6.5] } 44. Re4 { [%eval 6.28] } 44... Kf6 { [%eval 7.14] } 45. b6 { [%eval 7.29] } 45... Kf5 { [%eval 6.48] } 46. Re8 { [%eval 7.59] } 46... Nf6 { [%eval 7.99] } 47. Rf8 { [%eval 7.6] } 47... g3 { [%eval 12.36] } 48. Ke2 { [%eval #21] } { Jakovenko, Dmitrij - Rakhmanov, Alexander, 1-0, FIDE World Blitz 2013, https://lichess.org/1mrT7IQp } *
+
+
+[Event "Master the London System!: Section 4: Outroduction"]
+[Date "2026.05.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Master the London System!"]
+[ChapterName "Section 4: Outroduction"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/dWXxVr2q"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[FEN "4k3/8/8/8/3P1B2/2PBPN2/PP1N1PPP/R2QK2R w KQ - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.08"]
+[UTCTime "08:57:49"]
+[ChapterMode "gamebook"]
+
+{ Review these ideas and review this whole thing before we will now go to your favorite section: SECTION 5!!!! }
+ *
+
+
+[Event "Master the London System!: Section 5: Introduction"]
+[Date "2026.05.21"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Master the London System!"]
+[ChapterName "Section 5: Introduction"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/91CjLFqq"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[FEN "4k3/8/8/8/3P1B2/2PBPN2/PP1N1PPP/R2QK2R w KQ - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.21"]
+[UTCTime "00:25:54"]
+[ChapterMode "gamebook"]
+
+{ I KNEW YOU HAVE BEEN WAITING FOR THIS!!
+
+We are now in section 5. You will learn about the alternatives from the main lines. I will show you a surprise at the 2nd to the last chapter.
+
+Let's get straight into action! }
+ *
+
+
+[Event "Master the London System!: Section 5: London vs King's Indian (1st alternative)"]
+[Date "2026.05.21"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A48"]
+[Opening "London System"]
+[StudyName "Master the London System!"]
+[ChapterName "Section 5: London vs King's Indian (1st alternative)"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/SGDPtaiv"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.05.21"]
+[UTCTime "00:30:08"]
+[ChapterMode "gamebook"]
+
+{ [%csl Bd4][%cal Bd2d4] }
+1. d4 Nf6 { [%csl Bf4][%cal Bc1f4] } 2. Bf4 g6 { Now, let us tackle the alternatives. Let us play e3. } 3. e3 (3. c4 Bg7 4. Nc3 O-O 5. e4) 3... Bg7 { [%csl Bf3][%cal Bg1f3] } 4. Nf3 d6 { Against d6, you need to play h3. } { [%csl Bh3][%cal Bh2h3] } 5. h3 O-O { Where does the bishop go? } { [%csl Gd3,Ge2][%cal Gf1e2,Gf1d3] } 6. Be2! { Just like I told you in section 1, place the bishop on e2 against the kingside fianchetto structures.
+The bishop is more active on this square and unlike it being on d3, it isn't biting on stone because it is on e2. } (6. Bd3 { The bishop is just staring at stone and it shouldn't be here. } { [%csl Rh7,Rg6][%cal Rd3h7] }) (6. Bc4 { This is not a London System. }) (6. c3 { Engine recommends this, but it is too early! }) (6. Nbd2 { You are developing this knight too soon. }) (6. Bh2 { There is no need to retreat the bishop. There is no sign that they will play e5 and attack our bishop. }) (6. Bg3 { There is no need to retreat the bishop. There is no sign that they will play e5 and attack our bishop. }) (6. Nc3 { Playable, but not the best move. }) 6... Nbd7 { [%csl Bh1][%cal Be1h1] } 7. O-O b6 { [%csl Ba4][%cal Ba2a4] } 8. a4 { This is a common pattern when they play b6 and we want to play a5 and place that pawn on a6. } 8... a6 { [%csl Bc3][%cal Bc2c3] } 9. c3 { We have now built the triangle (pyramid).
+We do not need to play c4 and weaken the b4 square. } { [%csl Gc3,Gd4,Ge3] } 9... Bb7 { [%csl Bd2][%cal Bb1d2] } 10. Nbd2 c5 { [%csl Bh2][%cal Bf4h2] } 11. Bh2 { This is a move in anticipation on e5. } 11... Qc7 { [%csl Bb3][%cal Bd1b3] } 12. Qb3 { White has a good position here. Your main plan is to play Re1, Bd3 or Bf1, and you want to play e4 at some point and if you are able to do that, you will be better.
+--Point--
+You want to get a solid structure before striking in the center on e4. You want to play a more positional approach to this and slowly but surely get a better position and convert it into a win. } { [%csl Re4,Yd3][%cal Ye2f1,Bf1e1,Re3e4,Ye2d3] } *
+
+
+[Event "Master the London System!: Section 5: London vs King's Indian (2nd alternative)"]
+[Date "2026.05.21"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "Master the London System!"]
+[ChapterName "Section 5: London vs King's Indian (2nd alternative)"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/oMz4iy50"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.05.21"]
+[UTCTime "00:53:30"]
+[ChapterMode "gamebook"]
+
+{ [%csl Bd4][%cal Bd2d4] }
+1. d4 Nf6 { [%csl Bf4][%cal Bc1f4] } 2. Bf4 g6 { There is another alternative to e3 and Nc3. We can also play Nd2 } { [%csl Bd2][%cal Bb1d2] } 3. Nd2 { The idea is to play e4! } 3... Bg7 { [%csl Be4][%cal Be2e4] } 4. e4 d6 { [%csl Bf3][%cal Bg1f3] } 5. Ngf3 O-O { [%csl Bc3][%cal Bc2c3] } 6. c3 { We have a normal London System but the pawn is on e4 which is more aggressive and more advantageous. } 6... Nbd7 { [%csl Ge2][%cal Gf1e2] } 7. Be2 Re8 { [%csl Bh3][%cal Bh2h3] } 8. h3 { We now have a square for the bishop. } 8... e5 { [%csl Be5][%cal Bd4e5] } 9. dxe5 dxe5 { [%csl Be3][%cal Bf4e3] } 10. Be3 { We move the bishop here as it is more active. } 10... b6 { [%csl Bc2][%cal Bd1c2] } 11. Qc2 Bb7 { [%csl Bg1][%cal Be1g1] } 12. O-O Qe7 { [%csl Ba4][%cal Ba2a4] } 13. a4 a5 { If they ever played a6, we play a5 and once they play b5, we just play c4 and we are better. } { [%csl Bb4][%cal Bb2b4] } 14. b4 axb4 { [%csl Bb4][%cal Bc3b4] } 15. cxb4 Qxb4 16. Ng5 { We have a threat of Bc4, and we are soon going to use the open files on the queenside to gain an advantage. I recommend you analyze this with the engine but only do that once you have thought of your own ideas.
+--Point--
+You want to control the center, keep your king cozy on g1, do some stuff on the queenside and just pressure them. } 16... h6 17. Qxc7 Rab8 18. Nxf7 Kxf7 19. Nc4 Bf8 20. Rfd1 Bxe4 21. Rxd7+ Nxd7 22. Qxd7+ Re7 23. Qd6 Reb7 24. Qxe5 Re8 25. Qb5 Re6 26. Bg4 Qxb5 27. Bxe6+ Kxe6 28. axb5 Bd3 *
+
+
+[Event "Master the London System!: Section 5: London vs Benoni (2nd alternative) 3... d6"]
+[Date "2026.05.21"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "Master the London System!"]
+[ChapterName "Section 5: London vs Benoni (2nd alternative) 3... d6"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/PDw0pTVP"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.05.21"]
+[UTCTime "01:05:54"]
+[ChapterMode "gamebook"]
+
+{ [%csl Bd4][%cal Bd2d4] }
+1. d4 Nf6 { [%csl Bf4][%cal Bc1f4] } 2. Bf4 c5 { Another alternative is to play d5 and gain space in the center. } { [%csl Gd5][%cal Gd4d5] } 3. d5 { If they play b5, I recommend that you play f3 and e4. If they play Qb6, play Nc3 and we will tackle that on the following chapters. In this chapter, we will learn about what if they play d6. } 3... d6 { [%csl Bc3][%cal Bb1c3] } 4. Nc3 { We want our knight to be here. } 4... e5 { [%csl Bg5][%cal Bf4g5] } 5. Bg5 Be7 { [%csl Bf6][%cal Bg5f6] } 6. Bxf6 Bxf6 { [%csl Be4][%cal Be2e4] } 7. e4 { We now have our center. } 7... O-O { [%csl Bf3][%cal Bg1f3] } 8. Nf3 a6 { [%csl Ba4][%cal Ba2a4] } 9. a4 { We need to prevent them from playing b5 so we play a4. } 9... g6 { [%csl Bd2][%cal Bf3d2] } 10. Nd2 { You have two ideas in mind: Qf3 and Nc4. } 10... Bg7 { [%csl Bc4][%cal Bd2c4] } 11. Nc4 f5 { [%csl Rh4][%cal Rh2h4] } 12. h4 { We do not care about what they are doing over here. Just play h4 and attack. } 12... f4 { Just play h5! } { [%csl Bh5][%cal Bh4h5] } 13. h5 g5 { They try to close it down, but we just play a5! } { [%csl Ba5][%cal Ba4a5] } 14. a5 h6 { [%csl Be2][%cal Bf1e2] } 15. Be2 Qc7 { [%csl Bb6][%cal Bc4b6] } 16. Nb6 Ra7 { [%csl Ba4][%cal Bc3a4] } 17. Nca4 Bd7 { [%csl Bg4][%cal Be2g4] } 18. Bg4 Be8 { [%csl Be6][%cal Bg4e6] } 19. Be6+ Kh8 { [%csl Bg4][%cal Bd1g4] } 20. Qg4 $18 { We are dominating the board and we are now winning.
+--Point--
+You gain space in the center and you slowly melt them down. } *
+
+
+[Event "Master the London System!: Section 5: London vs Benoni (2nd alternative) 3... Qb6"]
+[Date "2026.05.21"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "Master the London System!"]
+[ChapterName "Section 5: London vs Benoni (2nd alternative) 3... Qb6"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/MQtKhmNq"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.05.21"]
+[UTCTime "01:16:11"]
+[ChapterMode "gamebook"]
+
+{ [%csl Bd4][%cal Bd2d4] }
+1. d4 Nf6 { [%csl Bf4][%cal Bc1f4] } 2. Bf4 c5 { [%csl Bd5][%cal Bd4d5] } 3. d5 Qb6 { [%csl Bc3][%cal Bb1c3] } 4. Nc3 { We are gambiting a pawn for the initiative. } 4... Qxb2 { [%csl Bd2][%cal Bf4d2] } 5. Bd2 Qb6 { [%csl Be4][%cal Be2e4] } 6. e4 d6 { [%csl Bf4][%cal Bf2f4] } 7. f4 { We need to play aggressively. } 7... e6 { [%csl Bb1][%cal Ba1b1] } 8. Rb1 Qd8 { [%csl Bb5][%cal Bf1b5] } 9. Bb5+ { We are still maintaining the initiative. } 9... Bd7 { [%csl Be6][%cal Bd5e6] } 10. dxe6 fxe6 { [%csl Be5][%cal Be4e5] } 11. e5 dxe5 { [%csl Be5][%cal Bf4e5] } 12. fxe5 Nd5 { [%csl Bg4][%cal Bd1g4] } 13. Qg4 $16 { Any normal move by them will be losing because of how active our pieces are. White is better here.
+--Point--
+You want to get more active pieces in exchange for a pawn and just start an attack! } *
+
+
+[Event "Master the London System!: Section 5: London vs Benoni (2nd alternative) 3... e6"]
+[Date "2026.05.21"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "Master the London System!"]
+[ChapterName "Section 5: London vs Benoni (2nd alternative) 3... e6"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/UtZpixl4"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.05.21"]
+[UTCTime "01:21:20"]
+[ChapterMode "gamebook"]
+
+{ [%csl Bd4][%cal Bd2d4] }
+1. d4 Nf6 { [%csl Bf4][%cal Bc1f4] } 2. Bf4 c5 { [%csl Bd5][%cal Bd4d5] } 3. d5 e6 { [%csl Bc4][%cal Bc2c4] } 4. c4 { We need to support our center. } 4... exd5 5. cxd5 d6 { [%csl Bc3][%cal Bb1c3] } 6. Nc3 g6 { [%csl Be4][%cal Be2e4] } 7. e4 Bg7 { [%csl Bf3][%cal Bg1f3] } 8. Nf3 O-O { [%csl Bd2][%cal Bf3d2] } 9. Nd2 Re8 { [%csl Be2][%cal Bf1e2] } 10. Be2 a6 { [%csl Ba4][%cal Ba2a4] } 11. a4 $16 { The pawn on d6 is weak and we are better after moves such as f3 followed by Nc4 and we will win the d6 pawn.
+--Point--
+You enter a Modern Benoni where your bishop is on f4. } *
+
+
+[Event "Master the London System!: Section 5: London vs Benoni (2nd alternative) 3... b5"]
+[Date "2026.05.21"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "Master the London System!"]
+[ChapterName "Section 5: London vs Benoni (2nd alternative) 3... b5"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/GEAR2cnz"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.05.21"]
+[UTCTime "01:24:28"]
+[ChapterMode "gamebook"]
+
+{ [%csl Bd4][%cal Bd2d4] }
+1. d4 Nf6 { [%csl Gf4][%cal Gc1f4] } 2. Bf4 c5 { [%csl Bd5][%cal Bd4d5] } 3. d5 b5 { [%csl Bf3][%cal Bf2f3] } 4. f3 { We want to play e4 on the next move. } 4... d6 { [%csl Be4][%cal Be2e4] } 5. e4 a6 { [%csl Bc4][%cal Bc2c4] } 6. c4 b4 { [%csl Ba3][%cal Ba2a3] } 7. a3 g6 { [%csl Bb4][%cal Ba3b4] } 8. axb4 cxb4 { [%csl Bd2][%cal Bf4d2] } 9. Bd2 { Their pawn will be lost even if they play Qb6 as we can just play Qa4+ and win it.
+--Point-- You just want to play f3 and e4 and enjoy the space advantage. } *
+
+
+[Event "Master the London System!: Section 5: London vs Queen's Indian Defense (Alternative)"]
+[Date "2026.05.21"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "Master the London System!"]
+[ChapterName "Section 5: London vs Queen's Indian Defense (Alternative)"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/pMcR5RwW"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.05.21"]
+[UTCTime "01:38:14"]
+[ChapterMode "gamebook"]
+
+{ [%csl Bd4][%cal Bd2d4] }
+1. d4 Nf6 { [%csl Bf4][%cal Bc1f4] } 2. Bf4 e6 { [%csl Be3][%cal Be2e3] } 3. e3 b6 { We play an interesting move!? Qf3!? } { [%csl Rd1][%cal Bd1f3] } 4. Qf3!? { This is weird because it avoids the normal London System, but this is a very aggressive line to confuse your opponents! You may even catch premovers playing Bb7 once you play this move and you just take the bishop and win! } { [%csl Rf3] } 4... Nc6 { [%csl Bc3][%cal Bb1c3] } 5. Nc3! { This is the point of our setup! We want to castle queenside. } { [%csl Ra1][%cal Re1a1] } 5... Bb7 { [%csl Bc1][%cal Be1c1] } 6. O-O-O Be7 { [%csl Be4][%cal Be3e4] } 7. e4 O-O { [%csl Bd5][%cal Bd4d5] } 8. d5! { We break through the center and we are already better in this position.
+--Point--
+You want to castle queenside and attack! } *
+
+
+[Event "Master the London System!: Section 5: London vs d5 setups (Jobava London)"]
+[Date "2026.05.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D01"]
+[Opening "Rapport-Jobava System"]
+[StudyName "Master the London System!"]
+[ChapterName "Section 5: London vs d5 setups (Jobava London)"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/v2h3AI8V"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.05.26"]
+[UTCTime "07:56:23"]
+[ChapterMode "gamebook"]
+
+{ [%csl Bd4][%cal Bd2d4] }
+1. d4 d5 { Which knight do you think? } { [%csl Rf3,Gc3][%cal Rg1f3,Gb1c3] } (1... Nf6) 2. Nc3!? { Known as Jobava London. } (2. Nf3 { You surely are right if you are playing the normal London, but you should check the title of this chapter carefully. You saw Jobava London so that means that the knight is on c3 and this knight gets developed later. }) 2... Nf6 { [%csl Bf4][%cal Bc1f4] } 3. Bf4 { You now need to learn this on your own. The reason why you put your pieces on these squares is to put pressure on c7. I will create a study all about this next time and if you are viewing this in the future, just check my studies and you will find it there.
+--Point-- You want to put pressure on c7 with a move like Nb5. } *
+
+
+[Event "Master the London System!: Section 5: London vs d5 setups (2. Bf4 instead of 2. Nf3) 2... Nf6"]
+[Date "2026.05.27"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D00"]
+[Opening "Queen's Pawn Game: Accelerated London System"]
+[StudyName "Master the London System!"]
+[ChapterName "Section 5: London vs d5 setups (2. Bf4 instead of 2. Nf3) 2... Nf6"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/kcKSFU8G"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.05.27"]
+[UTCTime "00:17:36"]
+[ChapterMode "gamebook"]
+
+{ [%csl Bd4][%cal Bd2d4] }
+1. d4 d5 { [%csl Bf4][%cal Bc1f4] } 2. Bf4 { This is another common move order. White plays this to develop the knight later and develops it after Nd2 and playing the pyramid. } (2. Nf3 { We are studying the 2. Bf4 move order. } { [%csl Gf4,Rf3][%cal Gc1f4,Rg1f3] }) 2... Nf6 { [%csl Be3][%cal Be2e3] } 3. e3 c5 { [%csl Bc3][%cal Bc2c3] } 4. c3 Nc6 { [%csl Bd2][%cal Bb1d2] } 5. Nd2 e6 { [%csl Bf3][%cal Bg1f3] } 6. Ngf3 { This is the time where we develop the knight. We develop this before the rest. } { [%csl Bf3] } 6... Be7 { [%csl Bd3][%cal Bf1d3] } 7. Bd3 { [%csl Rb1,Rg1,Bd4,Be3,Bf2,Bc3,Bb2,Yf1,Yc1,Yf4,Yd3,Rf3,Rd2][%cal Rb1d2,Rg1f3,Bb2d4,Bf2d4,Yf1d3,Yc1f4] } 7... O-O { [%csl Be5][%cal Bf3e5] } 8. Ne5 { We have now completed the London System. We now play chess and just attack!
+--Point--
+You delay the development of your g1 knight and you develop it after you have completed the pyramid and you have developed the other knight to d2. } { [%csl Bh3,Rh7,Ye5][%cal Bd1f3,Bf3h3,Rh3h7,Rd3h7,Yd4e5] } *
+
+
+[Event "Master the London System!: Section 5: London vs d5 setups (2. Bf4 instead of 2. Nf3) 2... c5"]
+[Date "2026.05.27"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D00"]
+[Opening "Queen's Pawn Game: Accelerated London System, Steinitz Countergambit Accepted"]
+[StudyName "Master the London System!"]
+[ChapterName "Section 5: London vs d5 setups (2. Bf4 instead of 2. Nf3) 2... c5"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/jH2CTPGo"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.05.27"]
+[UTCTime "12:28:23"]
+[ChapterMode "gamebook"]
+
+{ [%csl Bd4][%cal Bd2d4] }
+1. d4 d5 { [%csl Bf4][%cal Bc1f4] } 2. Bf4 { By the way, this is known as the Accelerated London System. The normal London System usually starts with playing Nf3 first instead of Bf4 on move 2. This is what most London System players play (2. Bf4). } (2. Nf3 { We are studying the 2. Bf4 move order. } { [%csl Rf3,Gf4][%cal Rg1f3,Gc1f4] }) 2... c5 { I actually recommend playing something you wouldn't expect. Most players would play e3, but you might transpose into another different opening which usually occurs when you play e4 on the first move. } 3. dxc5!? { It seems like we are just giving up our center, but this has some venom lurking inside its body! } { [%csl Rc5][%cal Rd4c5] } (3. e3 { Playable, but transposes into the Exchange Caro-Kann after cxd4 exd4. }) 3... Nc6 { How can you strike in the center? } 4. e4! { You need to strike in the center! If d4 is ever played, just play c3 and you are better. If e6 is played, just take on d5 and play Nc3 } { [%csl Rd5,Re4][%cal Rd5e4,Re4d5] } (4. c4? { Extremely bad move. Black can play e5 and control the whole center. } { [%csl Ge5,Rd4,Rc4,Rf4,Re4][%cal Ge7e5,Re5d4,Re5f4,Rd5c4,Rd5e4] }) 4... dxe4 { I mean, why not take on d8? } 5. Qxd8+ Nxd8 { Ch... ch... check 'em king!! } 6. Bb5+ Nc6 { A... a... attack 'em pawns!! } { [%csl Bc3][%cal Bb1c3] } 7. Nc3 Nf6 { Why not c... castle? } { [%csl Bc1][%cal Be1c1] } 8. O-O-O { White has t... th.. the initiative and you are j.. just better here!
+--Point--
+You want to achieve an active position! } *
+
+
+[Event "Master the London System!: Section 5: London vs Benoni (most aggressive alternative)"]
+[Date "2026.05.21"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "Master the London System!"]
+[ChapterName "Section 5: London vs Benoni (most aggressive alternative)"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/vfiO1MNB"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.05.21"]
+[UTCTime "00:39:10"]
+[ChapterMode "gamebook"]
+
+{ [%csl Bd4][%cal Bd2d4] }
+1. d4 Nf6 { [%csl Bf4][%cal Bc1f4] } 2. Bf4 c5 { And here is what I really recommend for those ambitious players. Why not take the pawn? It is just a move that we think it cannot be played but it actually can be played. } 3. dxc5!? { It looks like we are giving up central space, but we are actually preparing to be aggressive. } (3. e3 { Let us tackle the move dxc5 instead since we already tackled this one. }) (3. d5 { This will be tackled later in the study so stay tuned. } 3... b5) 3... Na6 { We now play the sneaky f3!? } 4. f3 { If they take the pawn on c5 right away, we just play e4, Nc3, Qd2 and 0-0-0. Some people will play e6. } 4... e6 { [%csl Be4][%cal Be2e4] } 5. e4 { We now have central space. } 5... Bxc5 { [%csl Bc3][%cal Bb1c3] } 6. Nc3 Qb6 { Black thinks we are dumb and plays Qb6 attacking the knight and attacking the pawn on b2. Just play Qd2 and ask what they do. } { [%csl Rb2,Rg1][%cal Rb6b2,Bb6g1,Rc5g1] } 7. Qd2!! { We are sacrificing the knight on g1, and I will give you a surprise. } 7... Bxg1?! { Wh' what?? That was just a free knight! What do we do???? The answer is.................... } 8. Rxg1!! { And he sacrificed, THE ROOOOOOOOOOOOOOOOOOOOK!!!!!! } 8... Qxg1 { [%csl Bd6][%cal Bf4d6] } 9. Bd6 $18 { Guys, what does black play here? If they play Qb6 we play Nb5 and dominate. If they play b6 we play 0-0-0 and their queen will be trapped. If they do some random move that does nothing we just castle and dominate the whole board.
+Guess what, White has a winning advantage!!!!!!!
+--Point--
+You want to either create a strong attack and castle queenside, or just get into this position where you are down a full rook but their pieces are paralyzed. } (9. O-O-O { This is also a good move. You can see some main lines in the analysis board. } 9... Qb6 10. Bd6! { Preventing the castle... } { [%cal Gf4d6,Rd6f8,Rd6b8] } 10... h6 { I guess a good way to do here is to control the c7-square! Therefore, Nb5 can be good! } { [%csl Gc7] } 11. Nb5 { [%csl Rc7][%cal Rb5c7] } 11... Kd8 { Defensive, huh? } { [%cal Rd8c7] } 12. Na3! { This helps prepare for a great plan, Nc4 and attack the Queen! 👑
+Trust, every move leads to Nc4! } { [%csl Rc4,Rb6][%cal Gb5a3,Ra3c4,Rc4b6] }) *
+
+
+[Event "Master the London System!: Section 5: Black London System"]
+[Date "2026.05.27"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A05"]
+[Opening "King's Indian Attack"]
+[StudyName "Master the London System!"]
+[ChapterName "Section 5: Black London System"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/tEseEqr7"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.05.27"]
+[UTCTime "12:48:49"]
+[ChapterMode "gamebook"]
+
+{ This is the surprise that you were waiting for. If you can play the London System with white, that means I should tell you that you can play it with black. Black London is just the same as White London just with a tempo down and colours reversed. Easy right? }
+1. Nf3 { [%csl Bf6][%cal Bg8f6] } 1... Nf6 2. g3 { [%csl Bd5][%cal Bd7d5] } 2... d5 { Easy isn't it? } 3. Bg2 { [%csl Bf5][%cal Bc8f5] } 3... Bf5 { This now resembles the London System but with the black pieces. } { [%csl Gf5,Gf6,Gd5] } 4. O-O { [%csl Be6][%cal Be7e6] } 4... e6 { Isn't this a London System? } 5. d3 { It surely is! } { [%csl Bh6][%cal Bh7h6] } 5... h6 6. Nbd2 { [%csl Be7][%cal Bf8e7] } 6... Be7 7. Qe1 { [%csl Bh7][%cal Bf5h7] } 7... Bh7 { We play this in anticipation of e4. } 8. e4 { [%csl Bg8][%cal Be8g8] } 8... O-O 9. Qe2 { [%csl Bc6][%cal Bc7c6] } 9... c6 { Pyramid has been created! } { [%csl Rf7,Re6,Rd5,Rc6,Rb7][%cal Gb7c6,Gc6d5,Gf7e6,Ge6d5] } 10. Re1 { [%csl Ba5][%cal Ba7a5] } 10... a5 { We want to expand on the queenside and create weaknesses.
+--Point--
+We play the London System with the black pieces (can only be played against the Reti Opening, Nimzo-Larsen Attack and Reversed Queen's Indian Defense). We usually put the dark-squared bishop on e7 and continue with our system. We want to weaken their dark-squares and win the game!
+Hope you enjoyed this study but... not yet! There is still one more chapter and that is the end of the study! } *
+
+
+[Event "Master the London System!: End of study"]
+[Date "2026.05.27"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Master the London System!"]
+[ChapterName "End of study"]
+[ChapterURL "https://lichess.org/study/K4oR74Te/1TEvVUr3"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[FEN "4k3/8/8/8/3P1B2/2PBPN2/PP1N1PPP/R2QK2R w KQ - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.27"]
+[UTCTime "12:52:55"]
+[ChapterMode "gamebook"]
+
+{ 🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑
+
+Hope you enjoyed this study! Please tell me if you want more sections as if you want me to, I can!
+
+💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎
+
+If you have any questions on this study, just type it in chat and I will answer you.
+
+🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑
+
+join my team: https://lichess.org/team/yellow-gems
+I will post other studies of mine in there from opening to endgame!
+
+💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎
+
+Bye!
+
+🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑 }
+ *
+
+

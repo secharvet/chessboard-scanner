@@ -1,0 +1,27 @@
+[Event "Défense Caro-Kann — version commentée"]
+[Site "Augmented"]
+[Source "carre.pgn"]
+[Annotator "Enrichissement pédagogique"]
+[Result "*"]
+
+1. e4 {Les Blancs occupent le centre.}
+c6 {Caro-Kann : prépare ...d5 sans exposer la diagonale b1-h7 (contrairement à ...e6 immédiat).}
+2. d4 {Deux pions au centre ; les Blancs visent un avantage d'espace.}
+d5 {Contestation classique du centre.}
+3. Nc3 {Développement ; menace indirecte sur e4 et soutien de d4.}
+dxe4 {Échange : les Noirs évitent une structure trop passive.}
+4. Nxe4 {Reprise avec le cavalier au centre — pièce très active.}
+Bf5 {Plan principal : le fou sort avant ...e6 pour ne pas être enfermé.}
+5. Ng3 {Chasse le fou ; les Blancs cherchent une paire de fous avantageuse.}
+Bg6 {Maintien du fou en grande diagonale ; solidité avant tout.}
+6. h4 {Plan anti-Caro classique : empêcher ...Bg4 et gagner de l'espace à l'aile.}
+h6 {Empêche Fg4 et prépare un développement roi sans encombre.}
+7. Nf3 {Les deux cavaliers sont sortis ; les Blancs peuvent roquer bientôt.}
+Nd7 {Développement flexible ; le cavalier rejoint e5 ou f6 selon la suite.}
+8. h5 {Pousse l'initiative à l'aile : le fou noir doit se replier.}
+Bh7 {Repli du fou : toujours sur la diagonale, mais moins actif qu'en g6.}
+9. Bd3 {Les Blancs visent l'échange de fous : structure de pions souvent favorable.}
+Bxd3 {Échange accepté : simplification vers une finale de milieu de partie typique.}
+10. Qxd3 {La dame reprend en développant ; les Blancs ont la paire de dames et un roi à roquer.}
+Ngf6 {Développement naturel ; pression sur e4 et préparation du roque.}
+*

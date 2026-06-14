@@ -1,0 +1,16 @@
+[Event "EricRosen's Study: Chapter 1"]
+[Date "2019.07.10"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A50"]
+[Opening "Indian Defense: Normal Variation"]
+[StudyName "EricRosen's Study"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/5XscRZtk/G4ceDlPJ"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.07.10"]
+[UTCTime "17:48:24"]
+
+1. d4 Nf6 2. c4 e6 (2... d5) (2... e5 3. dxe5 { [%csl Ge5] } 3... Ng4 { [%csl Ge5][%cal Gg4e5] } 4. Bf4 Nc6 { [%csl Ge5,Gg4,Gc6][%cal Gc6e5,Gg4e5] } 5. Nf3 { [%csl Re5][%cal Gd8e7] } 5... Bb4+ { [%csl Ge1][%cal Gb4e1] } 6. Nbd2 Qe7 { [%csl Re1] } 7. a3 Ngxe5 { [%csl Ge5,Gd3][%cal Ge5d3] } 8. axb4 Nd3#) *
+
+

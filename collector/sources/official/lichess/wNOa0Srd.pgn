@@ -1,0 +1,276 @@
+[Event "Staunton sim"]
+[Site "London"]
+[Date "1857.??.??"]
+[White "NN"]
+[Black "Staunton, Howard"]
+[Result "1-0"]
+[Variant "Standard"]
+[ECO "C42"]
+[Opening "Petrov's Defense: Stafford Gambit"]
+[StudyName "STAFFORD GAMBIT TIME"]
+[ChapterName "First ever Stafford 1857"]
+[ChapterURL "https://lichess.org/study/wNOa0Srd/hyQ1VmUO"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nf6 3. Nxe5 Nc6 4. Nxc6 dxc6 5. d3 Bc5 6. Be2 h5 { [%csl Gg4][%cal Gf6g4] } 7. h3 (7. O-O Qd6 { [%csl Gd6][%cal Gd6h2] } 8. h3) 7... Qd4 (7... Qd6 8. O-O (8. c3) 8... Ng4 { [%cal Ge4e5] } 9. g3 (9. hxg4 hxg4 { [%csl Gh2][%cal Gd6h2] }) (9. e5 Qd5 (9... Qxe5 10. Bxg4 { [%csl Gd1][%cal Gf1e1,Ge1e8,Gc8g4] } 10... Bxg4 11. hxg4) (9... Nxe5 { [%csl Gc3][%cal Gc2c3] })) 9... Qxg3+ { [%cal Gg3g1,Gc5g1] }) 8. Rf1 { [%csl Gh2,Rg2,Gg4,Rf1][%cal Gd4d6,Gd6h2,Ge2f3,Gf6h7,Gg7g5,Gg5g4,Gh1f1] } (8. Be3 { [%csl Gb2][%cal Gd4b2] }) (8. O-O Qd6 9. Nd2 (9. c3 Ng4 10. e5 { [%csl Gc3,Ge5][%cal Gg4e5] } 10... Qxe5 { [%csl Ge5,Ge8] } 11. Bxg4) 9... Bxh3 10. gxh3 Qg3+ { [%csl Gg4][%cal Gg3h3,Gf6g4] }) 8... Be6 9. c3 Qd7 10. e5 Nd5 11. d4 Bb6 12. Bxh5 O-O-O 13. Bg4 c5 14. Bxe6 Qxe6 15. Be3 f5 16. Bg5 Rd7 17. Qb3 { [%csl Gd4,Ge5] } 17... cxd4 18. cxd4 Bxd4 19. f4 Qc6 (19... Bxe5 20. fxe5 Qxe5+ 21. Kf2 Qd4+ (21... f4 22. Kg1) 22. Kg3) 20. Na3 Nc3 { [%csl Gg2,Gc3][%cal Gc6g2,Gd4c3] } 21. Qc2 Be3 22. bxc3 Bd2+ 23. Kf2 Qc5+ 24. Kg3 Qxa3 25. Rf3 { 1-0 Black resigns. } 1-0
+
+
+[Event "USA corr"]
+[Site "USA"]
+[Date "1950.??.??"]
+[White "Lowens"]
+[Black "Stafford, Joseph C"]
+[Result "0-1"]
+[Variant "Standard"]
+[ECO "C42"]
+[Opening "Petrov's Defense: Stafford Gambit"]
+[StudyName "STAFFORD GAMBIT TIME"]
+[ChapterName "Lowens - Stafford, Joseph C"]
+[ChapterURL "https://lichess.org/study/wNOa0Srd/mCi8yP1V"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nf6 3. Nxe5 Nc6 4. Nxc6 dxc6 5. e5 Ne4 6. d3 Bc5 { 0-1 White resigns. } 7. dxe4 (7. Be3 Bxe3 8. fxe3 Qh4+ 9. g3 (9. Ke2 Qf2#) 9... Nxg3 10. hxg3 Qxh1) 7... Bxf2+ 8. Kxf2 (8. Ke2 Bg4+) 8... Qxd1 0-1
+
+
+[Event "STAFFORD GAMBIT TIME: 5.f3"]
+[Date "2021.11.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C42"]
+[Opening "Petrov's Defense: Stafford Gambit"]
+[StudyName "STAFFORD GAMBIT TIME"]
+[ChapterName "5.f3"]
+[ChapterURL "https://lichess.org/study/wNOa0Srd/4OGofAXW"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.11.14"]
+[UTCTime "03:33:33"]
+
+1. e4 e5 2. Nf3 Nf6 3. Nxe5 Nc6 4. Nxc6 dxc6 5. f3 { [%csl Gc5][%cal Gf6h5,Gf8c5] } 5... Be6 6. d4 Nxe4 *
+
+
+[Event "STAFFORD GAMBIT TIME: magical line"]
+[Date "2021.11.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C42"]
+[Opening "Petrov's Defense: Stafford Gambit"]
+[StudyName "STAFFORD GAMBIT TIME"]
+[ChapterName "magical line"]
+[ChapterURL "https://lichess.org/study/wNOa0Srd/nn7BAFKB"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.11.14"]
+[UTCTime "03:34:03"]
+
+1. e4 e5 2. Nf3 Nf6 3. Nxe5 Nc6 4. Nxc6 dxc6 5. d3 Bc5 6. Be2 h5 7. c3 { [%csl Gc3][%cal Gc2c3] } 7... Ng4 8. d4 Qh4 9. g3 Qf6 10. f3 (10. f4) (10. Bf3) 10... h4 11. Rg1 hxg3 12. hxg3 Rh2 13. d5 (13. dxc5 Be6 14. Qd3) *
+
+
+[Event "STAFFORD GAMBIT TIME: Stafford Declined"]
+[Date "2021.11.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C42"]
+[Opening "Petrov's Defense: Stafford Gambit"]
+[StudyName "STAFFORD GAMBIT TIME"]
+[ChapterName "Stafford Declined"]
+[ChapterURL "https://lichess.org/study/wNOa0Srd/UtraiO7r"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.11.14"]
+[UTCTime "03:35:26"]
+
+1. e4 e5 2. Nf3 Nf6 3. Nxe5 (3. d4) 3... Nc6 (3... Nxe4 4. Qe2 Qe7 5. Qxe4 d6 6. d4 dxe5 7. dxe5 Nc6 8. Bf4 g5 { [%csl Gg5] } 9. Bg3 f5 { [%csl Gf5] }) 4. d4 Nxe5 (4... Nxe4 5. Qe2 Qe7 6. Qxe4 d6 7. Bf4 dxe5 8. dxe5 g5 { [%cal Gg7g4] } 9. Bg3 f5 10. exf6 (10. Qe2 f4) 10... Qxe4+) 5. dxe5 Nxe4 { [%csl Ge4] } 6. Bc4 (6. Bd3 Nc5 7. O-O) 6... Qh4 7. Qf3 { [%csl Gf7,Gf2][%cal Gf3f7,Gf3f2] } 7... Ng5 8. Bxg5 Qxc4 *
+
+
+[Event "STAFFORD GAMBIT TIME: Qe2"]
+[Date "2021.11.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C42"]
+[Opening "Petrov's Defense: Stafford Gambit"]
+[StudyName "STAFFORD GAMBIT TIME"]
+[ChapterName "Qe2"]
+[ChapterURL "https://lichess.org/study/wNOa0Srd/lunUTkH7"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.11.14"]
+[UTCTime "03:40:52"]
+
+1. e4 e5 2. Nf3 Nf6 3. Nxe5 Nc6 4. Nxc6 dxc6 5. Qe2 *
+
+
+[Event "STAFFORD GAMBIT TIME: Epic Frozen: 6.Be3"]
+[Date "2021.11.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C42"]
+[Opening "Petrov's Defense: Stafford Gambit"]
+[StudyName "STAFFORD GAMBIT TIME"]
+[ChapterName "Epic Frozen: 6.Be3"]
+[ChapterURL "https://lichess.org/study/wNOa0Srd/Z24HZW2q"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.11.14"]
+[UTCTime "03:42:49"]
+
+1. e4 (1. f3) (1. f4 e6 2. b3 Qh4+ 3. g3 Be7 4. Bb2 Qxf4 5. Bxg7 Bh4) (1. d4 e5 2. dxe5 Bc5 3. Nf3 d6 4. exd6 (4. Qxd6) 4... Ne7) (1. e3) (1. Nc3 d5 (1... e5 2. e3 Nc6 (2... Nf6 3. g4)) 2. e3 e5 3. Qh5) (1. Nf3 e6 2. g3 g5) 1... e5 (1... Nf6 2. e5 Nd5 3. d4 b5 4. Bxb5 c5 5. c4 cxd4 6. Qxd4 Nb4 7. Na3 Qa5 8. Bd2 Qxa3 9. Qe4 Qxb2 10. Rb1 Qxe5) (1... Nc6 2. d4 (2. Nf3 f5) 2... f5) 2. Nf3 Nf6 3. Nxe5 Nc6 4. Nxc6 dxc6 5. d3 Bc5 { [%csl Gc3,Gh3][%cal Gc2c3,Gh2h3] } 6. Be3 (6. h3 Bxf2+ 7. Kxf2 Nxe4+ 8. Kg1 { [%cal Gd8d4,Gd4e5,Ge5d4] } (8. Kf3 { [%cal Gf2e3] } 8... O-O 9. Kxe4 Qh4+ 10. Kf3 Qh5+ 11. g4 Bxg4+ 12. hxg4 Qxh1+ 13. Kf2 f5 14. g5 Rae8)) (6. c3 { [%cal Gc2c3] } 6... Nxe4 7. dxe4 (7. Qe2 Bxf2+ 8. Kd1 f5 { [%cal Ge2e7] } 9. Kc2 O-O 10. dxe4 fxe4) 7... Bxf2+ { [%cal Gf2e1,Gd8d1] }) (6. Be2) 6... Bxe3 7. fxe3 { [%csl Ge3,Ge4,Gd3] } 7... Ng4 { [%csl Ge3] } 8. Qf3 Qg5 9. Kd2 Nxh2 { [%cal Gg4h2] } 10. Rxh2 (10. Qf4) 10... Qe5 { [%csl Rh2,Ra1] } *
+
+
+[Event "STAFFORD GAMBIT TIME: Facing the \"safe variation\""]
+[Date "2020.11.02"]
+[White "5.d3 w/ Early Be2 & h3"]
+[Black "The \"Safe Variation\""]
+[Result "*"]
+[Annotator "Eric"]
+[Variant "Standard"]
+[ECO "C42"]
+[Opening "Petrov's Defense: Stafford Gambit"]
+[StudyName "STAFFORD GAMBIT TIME"]
+[ChapterName "Facing the \"safe variation\""]
+[ChapterURL "https://lichess.org/study/wNOa0Srd/3Lh34PGV"]
+
+1. e4 e5 2. Nf3 Nf6 3. Nxe5 Nc6 4. Nxc6 dxc6 5. d3 Bc5 6. Be2 h5 { [%csl Gd3,Ge2,Gh2] } 7. h3 (7. Be3 Bxe3 8. fxe3 Ng4 9. Bxg4 hxg4) (7. Rf1) 7... Qd4!? 8. O-O (8. Be3?! { Played
+by Carlsen (DrNykterstein on lichess.org) } 8... Qxb2 9. Nd2 Bxe3 10. fxe3 Qe5 11. Nf3 (11. O-O Bxh3) 11... Qg3+ 12. Kf1 h4! $146 { A nice positional idea --
+Black clamps down on the g3 square and prepares the eventual maneuver of Nh5-g3 } (12... Bg4 { This tricky move was played against Carlsen, however, it allowed
+white to neutrallize and achieve a comfortable position without much problem } 13. Qe1! (13. hxg4?? Nxg4) 13... Qxe1+ 14. Kxe1 Bxf3 15. gxf3 $16 { Carlsen
+went on to grind down his opponent })) (8. Rf1 { Not too many humans will play
+this. However, Anish Giri played it on lichess. If you encounter this, just
+offer a draw and he will likely accept. } 8... Qd6 9. f4 (9. c3 Qh2 10. Bf3 Nh7 11. d4 Be7 12. Be3 Ng5 13. Bxg5 Bxg5 14. Nd2 h4 15. Qe2 Be6 16. O-O-O) 9... Qe7 10. e5 (10. Nc3 a5 11. Bf3 Ng4 12. hxg4 hxg4 13. Be2 Qh4+ 14. Kd2 Qg3) 10... Nd5 11. d4 Bb6 12. c4 Nb4 13. a3 (13. c5 Ba5 14. Kf2 Bf5) 13... Qh4+ 14. Rf2 Bxd4 $19) 8... Qd6! { My recommendation. I discovered this move only when
+beginning to work on this course. There are so many landmines in this
+variation and white has to basically walk a thin tightrope secure a clear
+advantage. } (8... Ng4 { A risky altenative -- While this move is refuted by the
+engine, it could still be worth trying in blitz/ bullet } 9. hxg4 hxg4 10. g3 { Unfortunately black's attack runs out of steam and white will have a decisive
+advantage } (10. Bxg4?) 10... Qe5 11. Kg2 Bxf2 12. Kxf2 Rh2+ 13. Ke1 Qxg3+ 14. Kd2) 9. c3 (9. Nd2? { Looks like a safe attempt for white to prepare Nf3 and
+defend the kingside. However, black has a sweet continuation... } 9... Qg3 { Surprise! Black takes full advantage of the pinned f2 pawn and has the simple
+threat of Bxh3 } 10. Kh1 { Best move, but a sad move } 10... Bxf2 { Yoink! Black regains
+the pawn and threatens the deadly and thematic Ng4 } 11. Nf3 Bxh3! { Credit to
+Stockfish for finding this sequence... } 12. Rxf2 Ng4! 13. Qf1 Nxf2+ 14. Kg1 Ng4 15. Kh1 Rh6!! $19 16. Bxh6 gxh6 { There is now no good way to stop Ne3. }) (9. Be3? { One of the most popular moves on lichess. Black now has a nice
+sequence... } 9... Bxe3 10. fxe3 Bxh3! 11. Qe1 (11. gxh3? { Walks into forced
+mate... } 11... Qg3+ 12. Kh1 Qxh3+ 13. Kg1 Qg3+ 14. Kh1 Ng4 15. Bxg4 hxg4#) 11... Be6 $17) (9. Nc3? Bxh3! 10. gxh3 { Black now mates by force! } (10. Bf3 Be6 $17 { Black is better with still greating attacking prospects on the kingside. }) (10. d4 Bxd4 11. Nd5 Ng4 12. Bxg4 Bxf2+ 13. Rxf2 Bxg4 14. Bf4 Bxd1 15. Bxd6 cxd5 16. Bxc7 Bg4 17. exd5 f6) 10... Qg3+ 11. Kh1 Qxh3+ 12. Kg1 Bd6 $19 13. f4 Qg3+ 14. Kh1 Ng4 15. Bxg4 hxg4#) (9. Bf3 { The second best move for white according to the
+engine. While the engine gives around +1 for white, there are still chances
+for black to stir up counterplay } 9... Ng4!? 10. e5 { Similar to the mainline,
+this is the only move that doesn't lose for white } 10... Nxe5 11. Re1 Be6 12. Bxh5 O-O-O $44 { While black is still down a pawn, there a lots of fighting chances
+with the half-open h-file, better development and opposite side castling. }) 9... Ng4 { White now only has one move that secures a clear advantage. Out of
+the 28 games in which this position has occurred on lichess (as of November
+2020) the best move has only been played 3 times. } 10. e5! { A nice tactical
+resource that saves white's kingside from complete destruction. } (10. hxg4?? hxg4 { Black is now mating by force! }) (10. Bxg4? hxg4 11. d4 Bb6 $44 12. Be3 gxh3 13. g3 h2+ 14. Kh1 Bh3 15. Re1 O-O-O) (10. g3?? Qxg3+ 11. Kh1 Qh2#) 10... Bxf2+ (10... Qxe5 { but this fails tactically to } 11. Bxg4 hxg4 12. Re1 $18) 11. Rxf2 Nxf2 12. exd6 Nxd1 13. dxc7 Nxb2 14. Bxb2 Kd7 { From 7...Qd4, this appears to be the worst-case scenario for black. White has
+2 minor pieces for a rook in the endgame and an unquestionable advantage
+(Engine says this is decisive for white, but I would argue there are practical
+chances for black to survive in a speed game). If you encounter someone who
+enters this line it is likely they are a grandmaster or extensively well
+prepared with the engine. } 15. c4 f6 16. Bc1 g5 (16... Kxc7 17. Bf4+ { [%csl Gf4] }) 17. Bb2 { [%csl Gf6][%cal Gb2f6,Gh8h5,Gh8f8] } 17... Rh6 { [%csl Gf6,Gg5,Gh5,Ge4][%cal Gb1d2,Gd2e4] } *
+
+
+[Event "STAFFORD GAMBIT TIME: OH NO MY QUEEN"]
+[Date "2021.11.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C42"]
+[Opening "Petrov's Defense: Stafford Gambit"]
+[StudyName "STAFFORD GAMBIT TIME"]
+[ChapterName "OH NO MY QUEEN"]
+[ChapterURL "https://lichess.org/study/wNOa0Srd/UnKqufyD"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.11.14"]
+[UTCTime "04:05:27"]
+
+1. e4 e5 2. Nf3 Nf6 3. Nxe5 Nc6 4. Nxc6 dxc6 5. d3 Bc5 { [%csl Gc5] } 6. e5 (6. Bg5 Nxe4 7. Bxd8 Bxf2+ 8. Ke2 Bg4#) 6... Ne4 { [%csl Gg4,Ge4][%cal Gf6g4,Gf6e4] } *
+
+
+[Event "STAFFORD GAMBIT TIME: MISCELANAROUS TRAPS"]
+[Date "2021.11.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C42"]
+[Opening "Petrov's Defense: Stafford Gambit"]
+[StudyName "STAFFORD GAMBIT TIME"]
+[ChapterName "MISCELANAROUS TRAPS"]
+[ChapterURL "https://lichess.org/study/wNOa0Srd/JsyPTXLY"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.11.14"]
+[UTCTime "04:07:52"]
+
+1. e4 e5 2. Nf3 Nf6 3. Nxe5 Nc6 4. Nxc6 dxc6 5. Nc3 (5. d3 Bc5) 5... Bc5 { [%csl Gc3] } 6. Bc4 { [%csl Gc4] } (6. d3 Ng4 7. Qf3 (7. Be3 Nxe3 8. fxe3 Bxe3 { [%csl Gc1,Gg1,Re1][%cal Ge3g1,Ge3c1] }) 7... Nxf2 8. Na4 Nxh1 9. Nxc5 Qh4+ { [%csl Gh2][%cal Gh4h2] }) (6. e5 Ng4 7. Ne4 { [%cal Gg4f2,Gc5f2] } 7... Nxf2 8. Nxf2 Bxf2+ 9. Kxf2 Qd4+ 10. Ke1 (10. Kg3 g5) 10... Qh4+ { [%cal Gd8d4,Gd4h4] }) (6. Be2 h5 7. h3 Qd4 { [%cal Gd4f2] } 8. O-O Ng4 9. hxg4 hxg4 10. g3 Qe5 11. Kg2 Bxf2 (11... Rh2+ 12. Kxh2 Qh5+ 13. Kg2 (13. Kg1 Qh3 14. d4) 13... Qh3+ 14. Kg1 Qxg3+) 12. Rxf2 (12. Kxf2 Rh2+ 13. Ke3 Qxg3+ 14. Kd4 Be6) 12... Qh5 13. Rf4 (13. Qg1 Qh3#) 13... Qh2+ 14. Kf1 Qxg3) 6... Ng4 7. O-O (7. Qf3 Ne5 { [%cal Ge5f3,Ge5c4,Ge5f7] } 8. Qe2 Qh4 9. g3 (9. O-O Bg4 10. Qe1 Nf3+) 9... Qh3) 7... Qh4 8. h3 Nxf2 9. Qf3 Nxh3+ 10. Kh2 Nf2+ { [%cal Gh4h2] } 11. Kg1 Qh1# *
+
+
+[Event "STAFFORD GAMBIT TIME: Be2"]
+[Date "2021.11.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C42"]
+[Opening "Petrov's Defense: Stafford Gambit"]
+[StudyName "STAFFORD GAMBIT TIME"]
+[ChapterName "Be2"]
+[ChapterURL "https://lichess.org/study/wNOa0Srd/wdFH6WxN"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.11.14"]
+[UTCTime "04:28:56"]
+
+1. e4 e5 2. Nf3 Nf6 3. Nxe5 Nc6 4. Nxc6 dxc6 5. d3 Bc5 6. Be2 h5 7. c3 Ng4 8. d4 Qh4 9. g3 (9. Bxg4 Bxg4 10. Qc2 O-O-O 11. Be3 Bb6 12. Nd2) 9... Qf6 10. f3 (10. Bf3 h4 (10... Bb6) (10... Be6 11. dxc5 Rd8 12. Qe2 { [%cal Gf3g4] } 12... Ne5 (12... Bc4 13. Bxg4 Bxe2 14. Bxe2 { [%csl Ge2] })) 11. Bxg4) 10... h4 11. Rg1 hxg3 12. hxg3 Rh2 13. dxc5 { [%csl Gc5] } 13... Be6 14. Qd4 { [%csl Gc4][%cal Ge6c4] } 14... Bc4 15. Qxc4 (15. Qxf6 Rxe2+ 16. Kf1 Nh2#) (15. Bxc4 Ne5 16. Nd2 Rxd2) 15... Ne5 16. Qd4 Rxe2+ 17. Kxe2 Qxf3+ 18. Ke1 Nd3+ 19. Kd2 Rd8 { [%cal Gd4d8] } *
+
+
+[Event "STAFFORD GAMBIT TIME: just play chess line"]
+[Date "2021.11.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C42"]
+[Opening "Petrov's Defense: Stafford Gambit"]
+[StudyName "STAFFORD GAMBIT TIME"]
+[ChapterName "just play chess line"]
+[ChapterURL "https://lichess.org/study/wNOa0Srd/UwB1lQfz"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.11.14"]
+[UTCTime "04:38:00"]
+
+1. e4 e5 2. Nf3 Nf6 3. Nxe5 Nc6 4. Nxc6 dxc6 5. d3 Bc5 6. Be2 { [%cal Gh7h5] } 6... Qe7 *
+
+
+[Event "Rated Rapid game"]
+[Site "https://lichess.org/rsyw5DoF"]
+[Date "2021.11.14"]
+[White "Aneesh2289"]
+[Black "grandmastergauri"]
+[Result "0-1"]
+[WhiteElo "2216"]
+[BlackElo "2638"]
+[BlackTitle "FM"]
+[TimeControl "600+0"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "C42"]
+[Opening "Petrov's Defense: Stafford Gambit"]
+[StudyName "STAFFORD GAMBIT TIME"]
+[ChapterName "Aneesh2289 - FM grandmastergauri"]
+[ChapterURL "https://lichess.org/study/wNOa0Srd/TOgqYZrn"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 { [%clk 0:10:00] } 1... e5 { [%clk 0:10:00] } 2. Nf3 { [%clk 0:09:59] } 2... Nf6 { [%clk 0:09:57] } 3. Nxe5 { [%clk 0:09:57] } 3... Nc6 { [%clk 0:09:56] } 4. Nxc6 { [%clk 0:09:57] } 4... dxc6 { [%clk 0:09:56] } 5. d3 { [%clk 0:09:56] } (5. Nc3 Bc5 6. h3 g5 { [%csl Gg4][%cal Gg5g4] } (6... h5 7. Be2 { [%csl Gd4][%cal Gd8d4] }) 7. Be2 Qd4 8. O-O g4) (5. e5 Ne4 (5... Nd5 6. d4 c5 7. c4 Nb4 8. a3 (8. d5 Bf5 9. Na3 Qe7 10. f4 O-O-O 11. Be2 { [%csl Gf4,Ge5,Gd5,Gc4] } 11... Qh4+ 12. g3 Qh3 13. b3) 8... Nc6 9. d5 Nxe5) (5... Bg4 6. f3 Ne4)) 5... Bc5 { [%clk 0:09:54] } 6. Be2 { [%clk 0:09:44] } 6... Qe7 { [%clk 0:09:46] } (6... Ng4 7. Bxg4 Qh4 8. Qf3 Bxg4 9. Qg3 Qh5 10. h3 Bd1 11. Nc3 Bb4) 7. Bg5 { [%clk 0:09:14] } (7. c3 Be6 { [%csl Gd4][%cal Gd3d4] } 8. d4 O-O-O 9. Bg5 h6 10. Bxf6 Qxf6 11. Nd2 Bb6 12. O-O Qf4 13. g3 Qf6 14. b4 h5 15. a4 { [%cal Ga4a5,Ga5b6] } 15... h4 16. a5 hxg3 17. fxg3 (17. axb6 Rxh2 18. bxa7 (18. fxg3 { [%csl Gf3][%cal Ge2f3] } 18... Qh6) 18... Rh1+ 19. Kg2 Rh2+ 20. Kxg3) 17... Bxd4+ 18. Kg2 Rxh2+ 19. Kxh2 Qh6+ 20. Bh5 (20. Kg2 { [%csl Gh3] } 20... Qh3+ 21. Kf3 { [%cal Gg2f3] } 21... Bg4+ 22. Kf4 g5+ 23. Kxg5 { [%cal Gd4e3] })) 7... h6 { [%clk 0:09:08] } 8. Bh4 { [%clk 0:09:09] } 8... g5 { [%clk 0:07:21] } 9. Bg3 { [%clk 0:09:06] } 9... Be6 { [%clk 0:07:08] } 10. c3 { [%clk 0:08:30] } 10... O-O-O { [%clk 0:07:05] } 11. Nd2 { [%clk 0:08:25] } 11... Bb6 { [%clk 0:06:53] } 12. Qc2 { [%clk 0:07:55] } 12... h5 { [%clk 0:06:17] } 13. h4 { [%clk 0:07:35] } 13... Ng4 { [%clk 0:06:01] } 14. Bxg4 { [%clk 0:07:26] } 14... hxg4 { [%clk 0:05:53] } 15. h5 { [%clk 0:07:17] } 15... f5 { [%csl Gf4][%cal Gf5f4] [%clk 0:05:46] } 16. f3 { [%clk 0:06:25] } 16... f4 { [%clk 0:05:25] } 17. Bf2 { [%clk 0:06:22] } 17... Bxf2+ { [%clk 0:05:22] } 18. Kxf2 { [%clk 0:06:22] } 18... Qc5+ { [%clk 0:05:19] } 19. d4 { [%clk 0:06:09] } 19... Rxd4 { [%clk 0:05:17] } 20. Ke2 { [%cal Gd4c2] [%clk 0:05:47] } (20. Nb3 Rd2+ 21. Ke1 Qf2#) 20... Rxd2+ { [%clk 0:05:06] } 21. Qxd2 { [%clk 0:05:45] } 21... Rd8 { [%clk 0:04:50] } (21... Bc4+ 22. Ke1 Rd8 23. Qf2) 22. Qc1 { [%clk 0:05:41] } 22... Bc4+ { [%clk 0:04:43] } 23. Ke1 { [%csl Gf2][%cal Gg4g3] [%clk 0:05:38] } 23... g3 { [%csl Gf2,Re3][%cal Gc5f2,Gc4f1,Gd8d1] [%clk 0:04:41] } 24. Rf1 { [%csl Rd2] [%clk 0:05:25] } (24. Qc2 { [%csl Rd3] } 24... Qe3+) 24... Bxf1 { 0-1 White resigns. } { [%csl Re2,Rf2,Re3,Rd3,Rd2,Rd1] [%clk 0:04:36] } 0-1
+
+
+[Event "STAFFORD GAMBIT TIME: The Naroditsky Variation"]
+[Date "2020.11.03"]
+[White "5.d3 Naroditsky Variation"]
+[Result "*"]
+[Annotator "Eric"]
+[Variant "Standard"]
+[ECO "C42"]
+[Opening "Petrov's Defense: Stafford Gambit"]
+[StudyName "STAFFORD GAMBIT TIME"]
+[ChapterName "The Naroditsky Variation"]
+[ChapterURL "https://lichess.org/study/wNOa0Srd/nuU0tGGP"]
+
+1. e4 e5 2. Nf3 Nf6 3. Nxe5 Nc6 4. Nxc6 dxc6 5. d3 Bc5 6. Be2 Ng4 7. Bxg4 Qh4 8. Qf3 Bxg4 9. Qg3 Qh5 10. h3 Bd1 11. Nc3 Bb4 12. O-O (12. Bd2 Bxc3 13. Bxc3 Qe2#) 12... Bxc2 (12... Bxc3 13. bxc3) 13. Qxc7 O-O 14. Qxb7 Bxc3 (14... Qa5 15. Qxc6 Rac8 16. Qb7 Bxc3 17. bxc3 Bxd3 18. Rd1 Qxc3 19. Be3 Bc2 20. Rac1 (20. Rdc1 a5) 20... Qa3) 15. bxc3 Bxd3 16. Re1 Qe5 17. Qxc6 Rac8 18. Qb7 a6 *
+
+
+[Event "Stafford Gambit Traps: Introduction"]
+[Site "lichess.org"]
+[Date "2020.08.04"]
+[White "novelty"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C42"]
+[Opening "Petrov's Defense: Stafford Gambit"]
+[StudyName "STAFFORD GAMBIT TIME"]
+[ChapterName "Chapter 15"]
+[ChapterURL "https://lichess.org/study/wNOa0Srd/KCKwbGCz"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nf6 3. Nxe5 Nc6 4. Nxc6 dxc6 5. d3 Bc5 6. Be2 h5 7. c3 Ng4 8. d4 Qh4 9. g3 Qf6 10. f3 h4 { [%cal Gh1g1] } 11. fxg4 hxg3 12. Be3 (12. Rf1 gxh2 13. Bf3 (13. Rh1 { [%csl Gh1] } 13... Qh4+ (13... Be7) (13... Rh3 14. dxc5 { [%cal Ga8d8] } 14... Qh4+ 15. Kd2 Bf5 16. exf5 O-O-O+ 17. Kc2 { [%cal Gd8d1] })) 13... Bxg4 14. Bxg4 h1=Q) 12... Rxh2 13. Rg1 Qh4 14. dxc5 (14. Nd2 g2+ (14... Bd6 15. Nf3 Qh3 (15... g2+) 16. Nxh2 (16. e5) 16... gxh2 { [%csl Gg1][%cal Gh3e3,Gh2g1] }) (14... Be6 15. Nf3 Qh3 16. dxc5) 15. Bf2 Qh3 16. dxc5 Be6 17. Qc2 O-O-O 18. O-O-O { [%csl Gd1] }) 14... Be6 15. Nd2 O-O-O 16. Qa4 Rxe2+ 17. Kxe2 { [%csl Gh2][%cal Ge6g4,Gh4h2] } 17... Bxg4+ 18. Ke1 Qh2 19. Qc4 { [%csl Gd2][%cal Gd8d2,Ge3d2] } 19... Rxd2 20. Bxd2 Qf2# { 0-1 Black wins by checkmate. } *
+
+

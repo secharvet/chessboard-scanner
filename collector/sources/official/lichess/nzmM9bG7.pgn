@@ -1,0 +1,48 @@
+[Event "Traps with 1.e4: French"]
+[Date "2020.12.19"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C10"]
+[Opening "French Defense: Rubinstein Variation, Blackburne Defense"]
+[StudyName "Traps with 1.e4"]
+[ChapterName "French"]
+[ChapterURL "https://lichess.org/study/nzmM9bG7/4ah1Evrm"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2020.12.19"]
+[UTCTime "00:44:57"]
+
+1. e4 e6 2. d4 d5 3. Nd2 (3. exd5 exd5 4. Nf3 Bd6 5. c4 Ne7 (5... dxc4 6. Bxc4 Ne7 7. Ng5 O-O 8. Qh5) 6. c5) 3... dxe4 4. Nxe4 Nd7 5. Bd3 Ngf6 6. Qe2 Nxe4 7. Bxe4 Nf6 8. Bxb7 *
+
+
+[Event "Traps with 1.e4: Caro Kann"]
+[Date "2020.12.19"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B17"]
+[Opening "Caro-Kann Defense: Karpov Variation"]
+[StudyName "Traps with 1.e4"]
+[ChapterName "Caro Kann"]
+[ChapterURL "https://lichess.org/study/nzmM9bG7/ONyml1iV"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2020.12.19"]
+[UTCTime "00:47:36"]
+
+1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Nd7 5. Qe2 (5. Bc4 Ngf6 6. Ng5 e6 7. Qe2 Nb6 8. Bb3 Qxd4 9. N1f3) 5... Ngf6 6. Nd6# *
+
+
+[Event "Traps with 1.e4: e4 e5"]
+[Date "2020.12.19"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B50"]
+[Opening "Sicilian Defense: Delayed Alapin Variation, with d6"]
+[StudyName "Traps with 1.e4"]
+[ChapterName "e4 e5"]
+[ChapterURL "https://lichess.org/study/nzmM9bG7/KkavCzzk"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2020.12.19"]
+[UTCTime "00:48:57"]
+
+1. e4 c5 2. Nf3 d6 3. c3 (3. d4 cxd4 4. Nxd4 Nf6) 3... Nf6 4. Be2 Nc6 5. d4 cxd4 *
+
+

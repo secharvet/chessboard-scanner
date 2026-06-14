@@ -1,0 +1,143 @@
+[Event "Countering the QGD Exchange: QGD Exchange 6...h6!?"]
+[Date "2021.12.05"]
+[White "QGD - Exchange"]
+[Black "6...h6!?"]
+[Result "*"]
+[Annotator "TonyRo"]
+[Variant "Standard"]
+[ECO "D35"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Positional Variation"]
+[StudyName "Countering the QGD Exchange"]
+[ChapterName "QGD Exchange 6...h6!?"]
+[ChapterURL "https://lichess.org/study/fD6Y1FsN/HdKGgiqf"]
+
+1. d4 d5 2. c4 e6 3. Nc3 (3. cxd5 { Starting with this move is inaccurate
+because } 3... exd5 4. Nc3 c6! { is possible - delaying ...Nf6 (which makes the Bg5
+impossible) and protecting the d-pawn. In this case, Black will easily be able
+to solve the problems with his light-squared bishop, e.g. } { [%cal Gc8f5] } 5. Qc2 (5. Bf4 Nf6 6. e3 Bf5) (5. Nf3 Bf5!) 5... g6!? 6. Bf4 Bf5 7. Qd2 Nf6 { E.
+Inarkiev - P.Tregubov, Aeroflot Open Moscow 2002 }) 3... Nf6 4. cxd5 exd5 5. Bg5 { And thusly we reach the main tabiya of the QGD Exchange Variation. White
+immediately fixes the central pawn structure, creating the famous Carlsbad
+structure. White has an extra center pawn, and will usually play in one of the
+following two ways: a minority attack with b4-b5, intending to saddle Black
+with a weak c6-pawn, or a central pawn roller strategy involving f3 and e4. } 5... c6 (5... Be7 { and }) (5... Nbd7 { are both also possible - the former being
+consistent with our repertoire but the latter not as much, as in some lines we
+prefer ...Na6. This one relies on the following tricky trap that's worth
+mentioning however: } 6. Nxd5?? Nxd5 7. Bxd8 Bb4+ $19 { [%cal Gd1d2] }) 6. e3 (6. Qc2 { is rare
+but possible, and will mostly transpose to the main line, for instance: } 6... h6 7. Bh4 (7. Bf4 { has some independent significance here as Black can't go ...Bf5
+right away, but we can dig in and be stubborn with } 7... g6! { when } 8. e3 Bf5 9. Bd3 Bxd3 10. Qxd3 Nbd7 11. Nf3 Bg7 12. O-O O-O (12... Qe7!? { , stopping 13.b4,
+is also worth considering in the rare event you reach this position. }) 13. b4 Re8 { was totally comfortable for Black in H.Packroff - H.Neese, German Senior
+Team Championships 2003. Note that in this position, the typical minority push
+with } 14. b5 { is met by } 14... c5! $132 { when Black's unusually placed bishop on
+the long diagonal will be excellently placed for a game where the center is
+opening up. }) 7... Be7 8. e3 O-O 9. Bd3 { transposes to our main line. }) 6... h6!? { This is flicked in quite a bit in the QGD, but playing it at this exact
+moment is rare but gaining in popularity fast. One big benefit of playing it
+right now is that 7.Bf4 is not at all dangerous, but can be if we wait down
+the road. } (6... Bf5 { I believe this is called the "Short" variation. Within
+the past few years this line has jumped from playable to refuted and perhaps
+back, but in my opinion it's not easy to handle and not worth the effort for
+Black when easier options are available. } 7. Qf3 Bg6 8. Bxf6 Qxf6 9. Qxf6 gxf6 $14) (6... Be7 { (just to illustrate how the same line we shoot for doesn't
+work without ...h6 and Bh4 inserted) } 7. Bd3 O-O 8. Qc2 Re8 (8... h6 9. Bf4 Nbd7 (9... Nh5 10. Be5 Nd7 11. h3 Nxe5 12. dxe5 { [%cal Rg2g4] } 12... g6 13. Nf3 Ng7 14. O-O Bf5 15. Bxf5 Nxf5 16. Rad1 $16) 10. h3! { [%csl Yc8,Ya8] }) (8... Nbd7 9. Nge2 Re8 10. O-O Nf8 11. f3 g6 12. Rad1 Ne6 13. Bh4 b5 { [%cal Gc8b7,Gb5b4,Gc6c5] }) 9. Nf3 (9. Bxf6? Bxf6 10. Bxh7+ Kh8 11. Bd3 Bxd4) 9... Ne4 10. Bf4! $16) 7. Bh4 (7. Bf4 Bf5!) (7. Bxf6 Qxf6 8. Bd3 Bd6 9. Nf3 O-O 10. O-O { and now } 10... Bg4 { has scored miserably for White,
+thought it seems about equal. I might recommend 10...Be6 or 10...Nd7 for
+instance, keeping the bishop pair for now. }) 7... Be7 8. Bd3 { One idea in the
+Exchange Variation is despite forcing ...exd5, freeing Black's dark-squared
+bishop, White typically tries to freeze it out of play, taking away f5 and
+making g4 unpalatable. Not only is d7 bad, but black also needs that square in
+most cases for the b8-knight, which means Black's light-squared bishop
+typically sits around quite a bit. This is one reason why ...b5 can be
+appealing - the b7-square looks weird at first, but after a later ...b4/...c5,
+Black's bishop may come to life. } { [%cal Rc8f5] } (8. Qc2 O-O 9. Nf3 { is a slightly indepedent
+option, but just as in the main line } (9. Bd3 { is a direct transpo to the main
+line after } 9... Re8) 9... Ne4! { is a very clean equalizing idea, for instance } 10. Bxe7 Qxe7 11. Nxe4 (11. Bd3 Re8 { also tranposes to 10.Nf3 }) 11... dxe4 12. Nd2 Bf5) 8... O-O 9. Qc2 (9. Nge2 { Delaying Qc2 is interesting - you could argue that with Black having played ...h6 already that White no longer necessarily needs to rush with this move. I'd continue with the same plan generally, but would probably skip ...Na6 since it no longer gains a tempo on the Qc2/Bd3 pair. } 9... Re8 10. O-O a5 11. f3 b5 12. Bf2 { Again White starts the process of hiding this bishop from possible discoveries and harassment so the e4-break can grow into something real. } 12... Nbd7 13. Rc1 (13. Kh1 $146 { This hasn't been played yet, but it's important to understand what happens if White just goes for it. } 13... Ba6 (13... Bf8!? { also looks reasonable. }) 14. e4 b4 15. Na4 dxe4 16. fxe4 c5! $132) 13... Nb6 14. Ng3 h5!? { Typical in other openings like the Breyer or Samisch KID, Black harasses the knight on g3 with the possibility of ...h5-h4. } (14... Bf8 15. h3 (15. b3!?) 15... Nc4 16. Bxc4 dxc4 17. e4 b4 18. Na4 Ba6 $13 { Ding Liren - Bluebaum, M.., 1/2-1/2, Opera Euro Rapid Prelim, 2021, https://lichess.org/BcOWOgkP }) 15. Re1 a4!? 16. Qc2 Bd7 17. Nf5 Bb4 18. Bh4 { [%cal Yf5g3,Yg3h5] } 18... Bxf5 19. Bxf5 Nc4 { [%csl Gc4,Re3] } 20. Bg5 c5! $132 { Steedman, James - Lea, Per, 1/2-1/2, NOR/SC/2021 (NOR), https://lichess.org/eifc6s6b }) 9... Re8 10. Nge2 (10. Nf3 Ne4! 11. Bxe7 (11. Bg3 Nxg3 $10) 11... Qxe7 { [%csl Ge4] } 12. O-O (12. Bxe4 dxe4 13. Nd2 Bf5 14. O-O Nd7) 12... Bf5 { [%cal Ga1b1] } 13. Rab1 (13. Ne5 Nd7 14. Nxd7 (14. f3 Nxc3 15. Bxf5 Nxe5 16. dxe5 Nb5 17. f4 f6 18. Bh7+ Kh8 19. Bg6 Rf8 20. a4 Nc7 21. Qc3 fxe5 22. Qxe5 Qf6 { and after a long sequence of forcing
+moves Black was not worse in L.Ellis - D.José Queraltó, Correspondence 2021 }) (14. Bxe4 Bxe4 15. Nxe4 Nxe5 16. dxe5 dxe4 17. Qxe4 Qxe5 18. Qxe5 Rxe5 { was dead equal in J.Horváth - J.Coles, Correspondence 2019 }) 14... Qxd7 15. f3 Nd6 16. e4 dxe4 17. fxe4 Bg6 (17... Nxe4?? 18. Kh1 $18 { S.Smith - B.Hammond,
+4NCL 2021 }) 18. Rad1 Nb5!? $132) 13... Nd7 14. b4 { [%csl Gb1] } 14... Nxc3 (14... Nb6!? { also
+looks very playable, e.g. } 15. Bxe4 dxe4 16. Nd2 { of A.Soloviov-E.Kolesov,
+Ukrainian Championships 2005 and now both 16...Nd5 and 16...Qg5 look good for
+Black. }) 15. Qxc3 Bxd3 16. Qxd3 a6 17. Rfc1 (17. a4? Nb6! 18. Qb3 Nc4 19. b5? cxb5 20. axb5 a5 $17) 17... Nb6 18. Nd2 Nc8! 19. a4 Nd6 20. Nb3 Qg5 { And Black had a great position in L.Van Wely - R.Buhmann, European Online
+rapid 2021 }) (10. h3!? Ne4 11. Bxe7 Qxe7 12. Bxe4 dxe4 13. Nge2 f5! (13... Bf5 14. O-O Nd7 15. Rad1 Rac8 16. Ng3 Bg6 17. Qb3 Nb6 18. a4! $36) 14. O-O Be6 15. f3 exf3 16. Rxf3 Nd7) (10. f3? { immediately has been played in
+quite a few games, but is likely playing with fire after } 10... c5! { immediately,
+for instance } 11. Nge2 c4! 12. Bf5 Nc6 13. a3 (13. Bxc8 { allows } 13... Nb4! 14. Qd2 Nd3+ $19 { and only THEN taking back on c8. }) 13... b5! 14. O-O (14. Nxb5 Bxf5 15. Qxf5 Rb8 16. Nbc3 Rxb2 { is the point - Black is super active here and
+the weakness on e3 will no doubt be felt. }) 14... b4 15. Bxc8 Rxc8 16. axb4 Nxb4 17. Qa4 Rb8! { and Black is at least a little better on account of the
+idea of ...Nd3. The knight will be a monster and e3/b2 are very weak long term. }) 10... a5!? { Black grabs a hold of some space on the queenside and prepares
+to play ...Na6 without allowing a ton of structural damage after Bxa6. This
+pawn may also support a future ...b5-b4. } { [%cal Gb8a6,Ga6b4] } 11. O-O (11. f3 { is very likely to
+tranpose after } 11... Na6 12. a3 Nc7 13. O-O { etc. }) 11... Na6 12. a3 Nc7 13. f3 (13. Rae1!? Ne6 14. f3 b5 15. Bf2 { A.Sarana-A.Dreev, Tal Memorial blitz 2021 } 15... Ba6! $146 16. Kh1 b4 17. Bxa6 Rxa6 18. Na4 Qb8!? $132) (13. Na4 Ne6 14. f3 b5 15. Nac3 { K.Alekseenko - A.Goryachkina, Russian Championships 2021 } 15... Ba6 $146) 13... b5!? { [%cal Ga5a4] } (13... c5!? { is also possible and perhaps even better, but
+stylistically I hate that isolani. } 14. dxc5 Bxc5 15. Nd1 Bb6 (15... Bxe3+? 16. Nxe3 Rxe3 17. Rac1 Ne6 18. Bf2 Re5 19. f4 { is a sad sample line if you
+need to be convinced not to grab on e3. }) 16. Qb3 Na6! 17. Bxa6 Rxa6 18. Qd3 Qd6 { R.Sherwood - P.Wölfelschneider, Correspondence 2020 }) 14. Bf2 { D.Alho-M.Rocha, Lisbon 2006. You can see from the notes to the immediate e4
+that White has pretty serious issues on the dark-squares after an exchange on
+e7 (after ...dxe4 and ...Ng4 for instance), and so White typically retreats
+the prelate to f2 to protect the weak d4-pawn and to keep the dark-squared
+bishop. Note that because ...Ng4 is still annoying (the bishop has no squares),
+White will typically take an extra move to play Kh1, giving the bishop "luft"
+on g1. } (14. e4 dxe4 15. fxe4?! (15. Nxe4 Nxe4 16. Bxe7 Qxe7 17. fxe4 Bg4! 18. Qxc6 Ne6 19. Bxb5 (19. d5 Nc5 20. Bxb5 Bd7 21. Qb6 (21. Qc7) 21... Reb8 22. Qc7 Rxb5) 19... Bxe2 20. Bxe2 Nxd4 21. Qc4 Nxe2+ 22. Qxe2 Qxe4 23. Qxe4 Rxe4 $10) 15... Ng4! 16. Bxe7 Rxe7 17. Qd2 Ne6 { [%csl Gd4] } 18. Bc2 Rd7 19. Rad1 b4 $132 { [%cal Gc8a6] }) 14... Ne6 $146 15. Kh1 { [%cal Yf6g4,Yf2g1] } (15. e4? dxe4 16. fxe4? Ng4 $19) 15... Ba6 16. e4 (16. Rad1 Qb8!? { and now on } 17. e4?! b4 { Black has tactics based on ...b3 and also the active b5-square for
+their queen, e.g. } 18. axb4 axb4 19. Bxa6 (19. Na4?? b3! 20. Qc3 Bxd3 21. Qxd3 Rxa4 $19) 19... bxc3 20. Bd3 Qxb2 $15) 16... b4 17. Bxa6 bxc3 18. Bd3 cxb2 19. Qxb2 dxe4 20. fxe4 Nc5! 21. Qc2 Nxd3 22. Qxd3 Bf8 { [%csl Ge4] } 23. Nc3 c5 24. d5 Bd6 { Black looks very comfortable, and has the idea of future liquidation with
+...Be5xc3 followed by taking on e4. } *
+
+
+[Event "Countering the QGD Exchange: *Fates to Avoid - See Below *"]
+[Date "2021.12.07"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Countering the QGD Exchange"]
+[ChapterName "*Fates to Avoid - See Below *"]
+[ChapterURL "https://lichess.org/study/fD6Y1FsN/cn0h8Qk8"]
+[Annotator "https://lichess.org/@/TonyRo"]
+[UTCDate "2021.12.07"]
+[UTCTime "02:52:27"]
+
+ *
+
+
+[Event "Belfort World Cup"]
+[Site "Belfort FRA"]
+[Date "1988.06.26"]
+[Round "10"]
+[White "Garry Kasparov"]
+[Black "Ulf Andersson"]
+[Result "1-0"]
+[Variant "Standard"]
+[ECO "D36"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Reshevsky Variation"]
+[StudyName "Countering the QGD Exchange"]
+[ChapterName "G.Kasparov - U.Andersson, Belfort 1988"]
+[ChapterURL "https://lichess.org/study/fD6Y1FsN/4HFjjKAD"]
+[Annotator "https://lichess.org/@/TonyRo"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 d5 4. cxd5 exd5 5. Bg5 c6 6. Qc2 Be7 7. e3 Nbd7 8. Bd3 O-O 9. Nge2 Re8 10. O-O Nf8 11. f3 Be6 12. Rae1 Rc8 13. Kh1 N6d7 14. Bxe7 Rxe7 15. Nf4 Rc7 16. Qf2 Nf6 17. e4 dxe4 18. fxe4 Rcd7 19. d5 cxd5 20. Bb5 Rc7 21. exd5 Bd7 22. Be2 Rc8 23. Qxa7 b6 24. Qa6 Ne4 25. d6 Nxd6 26. Nfd5 Re5 27. Qxb6 Nf5 28. Qxd8 Rxd8 29. Bd3 Rxe1 30. Rxe1 Ng6 31. a4 Kf8 32. a5 Nd4 33. Bxg6 hxg6 34. Rd1 Ne6 35. Nb6 Bc6 36. Rxd8+ Nxd8 37. b4 Ne6 38. b5 { 1-0 Black resigns. } 1-0
+
+
+[Event "Noteboom Memorial"]
+[Site "Noordwijk NED"]
+[Date "1965.02.21"]
+[Round "1"]
+[White "Mikhail Botvinnik"]
+[Black "Bent Larsen"]
+[Result "1-0"]
+[Variant "Standard"]
+[ECO "D35"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Positional Variation"]
+[StudyName "Countering the QGD Exchange"]
+[ChapterName "M.Botvinnik - B.Larsen, Netherlands 1965"]
+[ChapterURL "https://lichess.org/study/fD6Y1FsN/XJP9xM68"]
+[Annotator "https://lichess.org/@/TonyRo"]
+
+1. c4 e6 2. Nc3 d5 3. d4 Nf6 4. cxd5 exd5 5. Bg5 c6 6. e3 Be7 7. Qc2 O-O 8. Bd3 Nbd7 9. Nge2 h6 10. Bh4 Re8 11. f3 c5 12. O-O a6 13. Rad1 b5 14. Bf2 c4 15. Bf5 Nb6 16. Ng3 Bf8 17. a3 Bb7 18. e4 g6 19. Bh3 a5 20. e5 b4 21. Nce2 Nh7 22. f4 Bc6 23. Ra1 Ba4 24. Qb1 f5 25. axb4 axb4 26. Nxf5 gxf5 27. Bxf5 Qe7 28. Ng3 Bd7 29. Bxd7 Nxd7 30. Qg6+ Qg7 31. Qc6 Rxa1 32. Rxa1 Qf7 33. Ra7 Nxe5 34. dxe5 Qe6 35. Qxe6+ Rxe6 36. Nf5 Rc6 37. Kf1 c3 38. bxc3 bxc3 39. Be3 Bc5 40. Bxc5 Rxc5 41. Ra1 Nf8 42. Ke2 Ne6 43. g3 h5 44. Kd3 d4 45. Nd6 Rc7 46. Ne4 Kh7 47. f5 Nd8 48. Nf6+ Kh6 49. Nd5 Rb7 50. e6 Nc6 51. Ra6 Ne5+ 52. Kxd4 { 1-0 Black resigns. } 1-0
+
+
+[Event "Countering the QGD Exchange: *Another Interesting Line for Black - See Below *"]
+[Date "2021.12.07"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Countering the QGD Exchange"]
+[ChapterName "*Another Interesting Line for Black - See Below *"]
+[ChapterURL "https://lichess.org/study/fD6Y1FsN/C8C6xAD6"]
+[Annotator "https://lichess.org/@/TonyRo"]
+[UTCDate "2021.12.07"]
+[UTCTime "02:54:39"]
+
+ *
+
+

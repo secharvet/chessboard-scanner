@@ -1,0 +1,21 @@
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2018.06.25"]
+[White "NoseKnowsAll"]
+[Black "janitto2000"]
+[Result "1-0"]
+[WhiteElo "1826"]
+[BlackElo "1649"]
+[TimeControl "900+10"]
+[Termination "game_result.won_by_checkmate"]
+[Variant "Standard"]
+[ECO "B06"]
+[Opening "Modern Defense"]
+[StudyName "Beautiful Samisch"]
+[ChapterName "NoseKnowsAll - janitto2000"]
+[ChapterURL "https://lichess.org/study/g2aFcJdS/Zqi6wfW3"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+
+1. e4 { A recent Samisch I played on chess.com with a time control of 15+10. A strong middlegame attack led to a quick checkmate. But if the queen sacrifice was accepted, converting the "winning" position is trickier than it seems! Check out the endgame analysis for two study-like positions. See if you can see how to win as white! The engine does not find many of the winning ideas. } 1... g6 2. d4 { [%cal Gg7g6] } 2... Bg7 3. c4 c6 { [%cal Gd7d5] } 4. Nc3 d6 5. Be3 (5. Nf3 Bg4) 5... Nf6 6. f3 { [%cal Gg2g4,Gh2h4,Gh4h5] } 6... Nbd7 7. Bd3 O-O 8. Nge2 { [%cal Ge7e5] } 8... e5 9. d5 (9. O-O exd4 10. Nxd4 Ne5 { [%cal Gd3e2] }) 9... a6?! { [%cal Gg2g4,Gh2h4,Gh4h5,Gh1h8] } (9... cxd5 10. cxd5) 10. Qd2 { [%cal Ge3h6] } 10... c5?? { [%cal Gf7f5] } 11. h4 (11. g4 h5 12. h3 { I wanted to lead with g4, but was afraid of opening up the diagonal towards my king before I have castled. }) 11... h5 12. Bg5 { [%cal Gg2g4] } 12... Qe8 (12... Rb8 13. g4 hxg4 14. fxg4 { [%cal Gh4h5] }) 13. O-O-O { The game of waiting moves has ended. The d rook is needed to get in g4. } { [%cal Gg2g4,Gd1g1] } 13... Rb8 { [%cal Gb7b5] } 14. Rdg1 { [%cal Gg2g4] } 14... Nh7!? { [%cal Gg2g4,Gh7g5,Gh4g5] } 15. Bh6 (15. g4 Nxg5 16. hxg5 hxg4 17. fxg4 { While this too looks fine for white, I wanted more lines open towards the king besides the h file. }) 15... Ndf6 { [%cal Ge2g3,Gg3f1,Gf1e3,Gg2g4] } 16. Ng3!! { Getting the last piece in play, Ne2-g3-f1-e3 allows for the g4 break and the hammer to fall. } 16... Bd7 { [%csl Gb5] } 17. Nf1 b5 18. Bxg7 Kxg7 19. Ne3 b4 20. Ncd1 Rh8?! 21. g4 hxg4 22. fxg4 Qc8 23. Nf2 { [%cal Gf2g4] } 23... a5 24. h5 (24. Nf5+ gxf5 25. gxf5+ Kf8 26. Qh6+ Ke7 { I really wanted this variation to work, but I saw that the king runs away. }) 24... g5 25. Nf5+ Bxf5 26. gxf5 Ng8?? { A well-intentioned move (getting in f6 to help close down the kingside), but ultimately too slow. } { [%cal Gf7f6] } 27. Rxg5+ { [%cal Gg1g5] } 27... Nxg5 28. Qxg5+ Kf8 { [%cal Gf5f6] } 29. Rg1! Ke8 (29... a4 30. Qg7+ Ke7 31. Qxh8 { The other threat. }) 30. Qxg8+! Ke7?? (30... Rxg8 31. Rxg8+ Ke7 32. Rxc8 Rxc8 33. Ng4 f6 34. Kd2 { [%csl Gg8,Gh8] } 34... Rh8 35. h6 Kf7 { [%cal Ga5a4] } 36. Bc2 Rg8 37. Bd1 a4 38. Ke3 Ra8 39. Kf3 (39. a3 b3 { A second interesting study position. How does white break through and win? } 40. Kf3 Rf8 41. Kg3 Kg8 42. Kh4 Kh7 43. Kh5 Rf7 44. Be2 Rf8 45. Bd1 Rf7 46. Bxb3!! axb3 47. a4 Rf8 48. a5 Rf7 49. a6 Rf8 50. a7 Ra8 51. Nxf6+ Kh8 52. Ng4 Rxa7 53. Kg6 Ra1 54. f6 Rg1 55. f7! Rxg4+ 56. Kf6 Rf4+ 57. Ke7 Kh7 58. f8=Q Rxf8 59. Kxf8 Kxh6 60. Ke7 Kg5 61. Kxd6 Kf4 62. Kxc5 Kxe4 63. d6 Kf4 64. d7 e4 65. d8=Q e3) 39... a3 40. b3 Rh8 { An interesting study position. How does white break through and win? } 41. Kg3 Rh7 42. Kh4 Rh8 43. Kh5 Rh7 44. Nh2 Rh8 45. Bg4 Rh7 46. Nf3 Rh8 47. Nh4 Rh7 48. Ng6 Kg8 49. Bf3 Kf7 (49... Rf7 50. Nxe5 dxe5 51. Kg6 Rh7 52. Bg4 Rf7 53. h7+ Rxh7 54. Kxf6) 50. Ne7 { [%cal Gh5g6] } 50... Rh8 51. Nc6 Ra8 52. Be2 (52. Kh4?? Kg8 { [%cal Gf3h5,Ga2a3] } 53. Bh5 Kh7) 52... Rc8 53. Na7 { [%csl Gd6][%cal Ga7b5] } 53... Ra8 54. Nb5 Ra6 { [%cal Gb5c7,Gc7e6,Ga6a8] } (54... Rb8 55. Nxd6+) 55. Nc7 { [%csl Ga8] } 55... Ra7 56. Ne6 Kg8 (56... Ra8 57. h7 Rh8 58. Kh6) 57. Kg6 Rh7 58. Bf3 { [%cal Gg6f6] } 58... Rf7 59. Bg4 Rh7 { [%cal Gg6f6] } 60. Kxf6 Rxh6+ 61. Ke7 Rh2 62. f6 Rxa2 63. f7+ Kh8 64. f8=Q+ Kh7 65. Qg7#) 31. f6+ Kd7 (31... Kxf6 32. Qg5# { How the game could have ended if the pawn was captured. }) 32. Qxf7+ Kd8 33. Qe7# 1-0
+
+

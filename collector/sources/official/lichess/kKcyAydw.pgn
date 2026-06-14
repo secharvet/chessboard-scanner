@@ -1,0 +1,220 @@
+[Event "An Attacking Repertoire AGAINST the London: Intro and Move Orders"]
+[Date "2022.01.10"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D02"]
+[Opening "Queen's Pawn Game: London System"]
+[StudyName "An Attacking Repertoire AGAINST the London"]
+[ChapterName "Intro and Move Orders"]
+[ChapterURL "https://lichess.org/study/kKcyAydw/uKQjvWzH"]
+[Annotator "https://lichess.org/@/TonyRo"]
+[UTCDate "2022.01.10"]
+[UTCTime "21:13:29"]
+
+1. d4 d5 2. Nf3 { The move order with 2.Nf3 has fallen somewhat out of favor in lieu of 2.Bf4, but both have their merits. } (2. Bf4 c5 3. e3 { [%cal Gg8f6] } 3... Nc6 4. c3 Qb6! { In accordance with White delaying Nf3, we delay ...Nf6 to make sure White has less time to prepare for ...Qb6. } (4... Nf6 5. Nd2! { shows one main point of this move order relative to the others, as now } 5... Qb6 6. Qb3 c4 7. Qc2 Bf5? { just hangs a piece. }) 5. Qb3 c4 6. Qc2 e5! { is an exciting line and my main recommendation here - see Chapter 5 for all of the details. } (6... Bf5 7. Qxf5 Qxb2 8. Qxd5 { [%cal Gg8f6,Gg1f3] } 8... Qxa1 9. Qb5! { [%cal Gb5b2,Ga1b1,Gb2b1] }) 7. dxe5 Bf5 8. Qc1) 2... Nf6 { For most double-queen pawn players, this move will be the easiest, since White still has the option of going 3.c4, transposing back to the Queen's Gambit. This preserves most of the important options in that case. Moves like 2...e6 or 2...c6 are possible but will exclude certain players from being able to use this repertoire. } 3. Bf4 { This is the move that defines the London System. White develops the bishop to f4, outside of the pawn chain, with the intent to bolster the central dark squares via e3 and c3 instead of building the tension in the center with c4 a la the Queen's Gambit. White is essentially inviting a Slav Reversed should black play most principally with ...c5. } { [%csl Gf4][%cal Ge2e3,Gc2c3,Gb1d2] } (3. c3!? { was the choice of Le Quang Liem in his Chessable Lifetime Repertoire on the London System. White literally plays a reversed Slav Defense, trying to discourage ...c5 by making a more that is more useful should he try to capture and hold the c5-pawn. We play it anyway, and see Chapter 4 for a detailed breakdown of the position resulting after } 3... c5 4. dxc5 e6 5. b4 a5 6. e3 axb4 7. cxb4 b6 8. Bb5+ Bd7 9. Bxd7+ Nbxd7 10. a4 bxc5 11. b5 $13) 3... c5 { Black takes the opportunity to introduce tension in the center, initiating a reversed Queen's Gambit Declined or Slav. } 4. e3 Nc6 5. c3 { This has historically been the main move and one that is most consistent with White's overall strategy, but has fallen on hard times because of the continuation below. Because of that, White has moved towards 5.Nbd2! first, ensuring that the threat to the b2-pawn is less severe should black venture ...Qb6. } (5. Nbd2! { was developed as a response to 5.c3 Qb6! - White develops the queenside a bit first, making sure that the threat to the b2-pawn is less severe. } 5... Nh5!? { is a nice, combative option and my recommendation - see Chapter 3 for the analysis of this line. } (5... Qb6 6. dxc5! { As a consequence of White's move order choice, this is now an option since the threat to b2 is less severe. } 6... Qxb2 7. Rb1 Qc3 8. Bb5 $36)) 5... Qb6! { This is a key move, exploiting one of the main downsides to Bf4 - the weak b2-pawn (White does similar with Qb3 in the normal Slav). } 6. Qb3 c4! 7. Qc2 (7. Qxb6?! axb6 { is positionally generous for Black - White can't stop ...b5-b4 and Black is more than happy to open the a-file and convert the a-pawn to a more central b-pawn. } { [%cal Ga8a2,Bb6b5,Bb5b4] }) 7... Bf5! { A key position that's discussed in Chapter 2. } 8. Qc1 *
+
+
+[Event "An Attacking Repertoire AGAINST the London: 2.Nf3 and the Old Move - 5.c3"]
+[Date "2022.01.07"]
+[White "London"]
+[Result "*"]
+[Annotator "TonyRo"]
+[Variant "Standard"]
+[ECO "D02"]
+[Opening "Queen's Pawn Game: London System"]
+[StudyName "An Attacking Repertoire AGAINST the London"]
+[ChapterName "2.Nf3 and the Old Move - 5.c3"]
+[ChapterURL "https://lichess.org/study/kKcyAydw/c200XRSt"]
+
+1. d4 d5 2. Nf3 { This is perhaps the "classic" or slightly less modern version
+of the London, as people have since discovered that there are at least some
+nuances and small benefits to delaying Nf3 if you're strictly set on the
+London. But really it comes down to taste and which main positions you're
+interested in reaching. Le Quang Liem prefers this move, and other authors
+like Sedlak and Romero Holmes prefer 2.Bf4 instead. } 2... Nf6 3. Bf4 c5 4. e3 Nc6 5. c3 Qb6! { and now White has two ways to protect the b-pawn, with b3 being the main
+choice for her majesty: } { [%cal Gb6b2] } 6. Qb3 (6. Qc2 g6! (6... Nh5!? { is playable as
+well, but if White plays principally and enters the complications after } 7. Be5 { then Black has little opportunity to really play for a win, e.g. } 7... f6 8. dxc5 Qxc5 9. Bd4 Qa5 10. b4 Qc7 11. c4 e5 12. cxd5 exd4 13. dxc6 Bxb4+ 14. Nbd2 dxe3 15. fxe3 Qxc6 16. Qb3 Qc3 17. Qxc3 Bxc3 18. Rc1 Bxd2+ 19. Kxd2 O-O { A.Nickel - M.Semrl, Correspondence 2017 }) 7. Nbd2 Bg7 8. h3 O-O 9. Be2 Nd7 10. O-O e5 { V.Laznicka - D.Nisipeanu, Bundesliga 2018 }) 6... c4! { A
+strategically risky move in a way - Black removes the central tension, and if
+White is allowed b3 and we have to exchange, we'd be very unhappy to trade
+c-pawn for a-pawn. Here we're happy to do it, as White has to lose further
+time after Qc2 and generally won't find time for the b3-break until it's not
+much of a worry anymore. } { [%cal Gb3b6,Ga7b6] } 7. Qc2 { [%cal Gb2b3] } 7... Bf5! 8. Qc1 Nh5!? (8... e6 9. Nbd2 { and now 9...Be7 or 9...h6 has been played the most - also good and worth
+looking into if 8...Nh5 isn't your thing or runs into problems. }) 9. Bg3 (9. Bg5 f6! 10. Bh4 g5 11. Bg3 e5 12. dxe5 (12. Be2 O-O-O 13. b3 cxb3 14. axb3 Nxg3 { of F.Hellers - J.Pechac, correspondence 2021 is also quite bad for White.
+Black can go ...Kb8 and look to play on either the e-file or the c-file after
+a quick ...exd4. }) 12... Nxg3 13. hxg3 Nxe5 (13... fxe5!? { is also possible
+since } 14. Nxg5 Rg8 15. Nf3 O-O-O 16. Nbd2 { allows the smashing blow } 16... Rxg3!! 17. fxg3 Qxe3+ 18. Be2 Bd3 19. Qd1 Bc5 20. Rf1 e4 $19 { with a completely
+winning attack }) 14. Nxe5 fxe5 15. Nd2 O-O-O $19 { D.Paravyan - A.Kukhmazov,
+internet blitz 2020. Black has played this variation a few times in the last
+two years and has scored well. }) (9. Be5 f6! 10. Bg3 e5 11. Be2 Nxg3 12. hxg3 O-O-O $17 { The two bishops and stronger central presence make it clear that
+Black is better. } { [%csl Gf5,Gf8,Ye5,Yd5,Yc4] }) 9... Nxg3 10. hxg3 g6 11. Nbd2 Bg7 $15 { E.Ermakov - A.
+Kosteniuk, internet blitz 2020. This position has been reached in 14 games in
+my database - Black has scored +5 -2 =7, and Stockfish prefers the second
+player as well by a smidge. The two bishops, more active development, and
+extra central space must count for something. } *
+
+
+[Event "An Attacking Repertoire AGAINST the London: 2.Nf3 and the New Move - 5.Nbd2!"]
+[Date "2022.01.07"]
+[White "London"]
+[Result "*"]
+[Annotator "TonyRo"]
+[Variant "Standard"]
+[ECO "D02"]
+[Opening "Queen's Pawn Game: London System"]
+[StudyName "An Attacking Repertoire AGAINST the London"]
+[ChapterName "2.Nf3 and the New Move - 5.Nbd2!"]
+[ChapterURL "https://lichess.org/study/kKcyAydw/ylW0na91"]
+
+1. d4 d5 2. Nf3 { This is perhaps the "classic" or slightly less modern version
+of the London, as people have since discovered that there are at least some
+nuances and small benefits to delaying Nf3 if you're strictly set on the
+London. But really it comes down to taste and which main positions you're
+interested in reaching. Le Quang Liem prefers this move, and other authors
+like Sedlak and Romero Holmes prefer 2.Bf4 instead. } 2... Nf6 3. Bf4 c5 4. e3 Nc6 5. Nbd2! Nh5!? { A very combative
+move that gambits the c-pawn. Black will grab the two bishops and wreck
+White's pawn structure a bit in return, and will seek to open up lines down
+the road with either ...d4 or ...b6 to whip up play in the center or queenside.
+This move has been played recently by theoretical pioneers like Alexander
+Grischuk, Fabiano Caruana, and Ivan Cheparinov, as well as our 2021 World
+Rapid Champ Nodirbek Abdusattorov, who's scored 4/5 from here in 2021 alone. } { [%cal Gf4g5,Gf4e5,Gf4g3] } (5... Qb6 { is still possible here, but allows White to demonstrate the point of
+his move order by taking on c5. } 6. dxc5 Qxb2 7. Rb1 Qc3 8. Bb5 { [%csl Rc3][%cal Rf3e5,Yb5e8,Bc2c4] } (8. Bd3 g6 9. O-O Bg7 { is generally fine for Black - White even needs to be careful to not
+lose the c5-pawn for nothing. }) 8... g6 9. e4!? (9. O-O { generally allows
+Black to finish their development and be fine, e.g. } 9... Bg7 10. Nb3 (10. Ne5 Qxc5 11. c4 O-O 12. Nb3 Qa3 13. Nxc6 bxc6 14. Bxc6 Bf5 15. Bxa8 Bxb1 16. Qxb1 Rxa8 17. Rc1 { G.Kamsky - B.Bok, internet blitz 2021 and now perhaps the active } 17... Ne4! { is the strongest. }) 10... O-O 11. Bxc6 bxc6 12. Be5 Qc4 (12... Bd7 { was Ding's choice against Carlsen and is also fine }) 13. Nfd4 Qa4! { and Black was fine in A.Kaliksteyn - T.Ringoir, Charlotte 2021 }) 9... dxe4 { I'm honestly still not certain what's happening after the mind-bending
+complications starting with the piece sac } (9... a6! { is safer and
+ultimately probably better, but even here it's hard for me to really
+understand and break down what's happening - play is very move-by-move,
+hand-to-hand combat style. }) 10. Be5 Qa5 11. O-O! { for instance } 11... exf3 12. Bxc6+ bxc6 13. Qxf3 { [%cal Gf3c6,Ge5f6,Gf1e1] } 13... Nd5! (13... Bd7? 14. Bxf6 exf6 15. Nc4 $18 { and Black
+is never making it out of this alive. }) 14. Bxh8 Qxd2 15. c4 (15. Ba1?? Qxc2 { and Black's two pieces and a pawn for the rook plus that ultra stable rock on
+d5 would leave them winning. }) 15... f6! { Ensuring the bishop doesn't come
+out for a long time. } 16. Rfd1 Qf4 17. cxd5 Qxf3 18. gxf3 Bf5 19. Rb7 O-O-O 20. Rxa7 Kb8 21. Ra6 cxd5 22. Rd4 $13 { and the game is still a total mess. }) 6. dxc5 (6. Bg5 h6! { As usual after ...Nh5, we continue the harassment of this
+bishop } 7. Bh4 g5 8. Ne5! (8. Bg3? Nxg3 9. hxg3 g4! 10. Ne5 Nxe5 11. dxe5 Bg7 $17 { G.Kamsky - P.Shuvalova, Internet rapid 2022 }) 8... Nxe5 9. dxe5 (9. Qxh5 Nc6 { wins the d4-pawn, and if White gets
+greedy with } 10. Bxg5 { then } 10... Rg8! 11. Bf4 e5! 12. Bg3 Bg4 13. Qh4 Qb6 $40 { gives Black a crushing initiative. }) 9... Ng7 10. Bg3 Nf5 11. Qf3!? Bg7 12. Bb5+ Bd7 13. Qxf5 Bxb5 14. e6 fxe6 15. Qg6+ Kf8 16. Qxe6 Qd7 17. Qxd7 Bxd7 $15 { B.Korpa - J.Pechac Czech Republic 2021 }) (6. Be5 e6 (6... f6 { right away is
+less precise because of } 7. c4! fxe5? 8. cxd5 Qxd5 9. Bc4 Qd6 10. Ng5! $40) 7. c3 f6 8. Bg3 cxd4 9. exd4 g6! (9... Nxg3 { opens the h-file too soon
+and causes Black some problem, e.g. } 10. hxg3 g6 11. Bd3 { and Black must play
+the ugly ...Kf7, since } 11... Bg7? { loses to } 12. Rxh7!) 10. Bd3 Bg7 11. O-O O-O { and Black had a good position in A.Korobov - B.Gelfand, Spanish Team
+Championships 2021 }) (6. Bg3 cxd4 7. exd4 g6 8. Be2 Bg7 9. c3 Nxg3 10. hxg3 O-O 11. O-O Qc7 $10 { T.Franzen - J.Mulder, Correspondence 2019 }) 6... Nxf4 7. exf4 { [%csl Yc5,Yc2,Yf2,Yf4,Gf8,Gc8] } 7... g6! { The Black bishop heads to g7 (perhaps with an h6
+pitstop on the way), hoping for eventual long diagonal domination after Black
+gets ...d4 in. } 8. c3 { White has generally played this move first to preserve
+maximum minor piece flexibility, reasoning that it's going to be necessary
+regardless. } (8. Bb5 Qc7! { [%csl Gf4] } (8... Qa5 9. Nd4 { is sort of annoying in this case,
+displaying one difference between 8.Bd3 and the text }) 9. g3 Bg7 { [%cal Gg7b2] } 10. c3 O-O 11. O-O (11. Nb3 { first allows an interesting idea in } 11... Na5!? { and if White hops
+in with } 12. Qxd5 { then } 12... Be6 13. Qd1 Nxb3 14. axb3 Rfd8 15. Qe2 Qxc5 $132 { sees Black regain the pawn soon with a fantastic position. }) 11... d4! 12. Bxc6 (12. cxd4 Nxd4 13. Nxd4 Bxd4 $15 { [%csl Gb2,Gc5] }) 12... dxc3 13. Be4 (13. bxc3? Qxc6 $19 { and White is probably close to positionally lost already - huge structural
+problems and Black's raking bishop pair will give White terrible problems. }) 13... cxd2 14. Qxd2 Qxc5 $15 { [%csl Gc8,Gg7] }) (8. Bd3?! { is a little too mundane and doesn't
+really meet the demands of the position, e.g. } 8... Qa5! { White can't stop ...
+Qxc5, and so I doubt Black has any problems here. You could make a decent case
+that Black is probably already better on account of their structure and two
+bishops. } { [%cal Gd2b3] } (8... Bg7 $146 9. c3 d4! 10. cxd4 Nxd4 $132 { also gives Black
+great compensation. }) 9. O-O Qxc5 { [%csl Gf8,Gc8,Yf2,Yf4] } 10. Nb3 Qd6 11. Qd2 Bg7 12. c3 O-O 13. Rfe1 Bg4 (13... Bh6!? 14. g3 e5! $36) 14. Qe3 Bxf3 15. Qxf3 e6 16. h4 h5 $15 { M.Carlsen - F.Caruana, online rapid 2020 }) 8... Bh6! { Black first induces
+weaknesses in the kingside light squares before returning the bishop to g7
+where it ultimately belongs. } 9. g3 { [%csl Rh3,Rg2,Rg4,Rf3] } 9... O-O 10. Nb3 (10. Bg2 b6 11. cxb6 Qxb6 12. Nb3 (12. O-O Rd8) 12... Ba6! 13. Qxd5 e5! $36) 10... Bg7 { With it's job done on h6,
+Black's bishop heads to greener pastures. } (10... a5 { was tried by Grischuk
+against Sarin here, but I tend to think it's less accurate here because of } 11. a4! { because the followup } 11... b6 { can be met by the very annoying } 12. Bb5! $16) 11. Bg2 (11. h4 { L.Aronian-N.Abdusattorov, FIDE Grand Swiss 2021 } 11... a5!? $146 12. h5 (12. Be2 b6 13. cxb6 Qxb6 $132) 12... a4 13. Nbd4 Bg4 14. hxg6 Nxd4! 15. gxh7+ Kh8 16. cxd4 Qa5+ 17. Ke2 { [%csl Re2] } 17... Ra6 $40 { [%cal Ga6e6] }) (11. Bb5 Bh3 12. Bf1 Bg4 (12... Bc8) 13. h3 Bxf3 14. Qxf3 e6 15. Bb5 a5! 16. a4 Na7 17. O-O b6! $132) 11... a5! { with the White bishop no longer able to slide over b5, this is
+well time now. Black weakens the White queenside, especially the b3-square,
+before breaking with ...b6. An important theme to understand. } 12. a4 (12. Nbd4 Bg4 13. O-O Nxd4 14. cxd4 b6 $132) 12... b6! 13. cxb6 Rb8! { Black finds a
+way to double on b-file without immediately allowing White to smack on d5. } (13... Qxb6? 14. Qxd5! Be6 15. Qb5 $16 { defends to White's advantage. }) 14. O-O Qxb6 15. Nfd4 Nxd4 16. Nxd4 e6 17. Nb5 Ba6 $15 { Black regains the pawn and
+will still have pressure. } *
+
+
+[Event "An Attacking Repertoire AGAINST the London: 2.Nf3 Nf6 3.c3!? - Le Quang Liem's Choice"]
+[Date "2022.01.07"]
+[White "London"]
+[Result "*"]
+[Annotator "TonyRo"]
+[Variant "Standard"]
+[ECO "D02"]
+[Opening "Queen's Pawn Game: Symmetrical Variation"]
+[StudyName "An Attacking Repertoire AGAINST the London"]
+[ChapterName "2.Nf3 Nf6 3.c3!? - Le Quang Liem's Choice"]
+[ChapterURL "https://lichess.org/study/kKcyAydw/g3w1sArq"]
+
+1. d4 d5 2. Nf3 { This is perhaps the "classic" or slightly less modern version
+of the London, as people have since discovered that there are at least some
+nuances and small benefits to delaying Nf3 if you're strictly set on the
+London. But really it comes down to taste and which main positions you're
+interested in reaching. Le Quang Liem prefers this move, and other authors
+like Sedlak and Romero Holmes prefer 2.Bf4 instead. } 2... Nf6 3. c3!? { is a VERY new and "meta" move order
+that seeks to discourage the ...c5-break, which has obviously proven to
+historically be a principled and sound answer to the London. We're going to
+play it anyway! } 3... c5! 4. dxc5 { This is the idea, basically reaching a Reversed
+Slav. } { [%csl Gc3] } (4. Bf4 Nc6 5. e3 Qb6 6. Qb3 { transposes to the old main line }) 4... e6 5. b4 (5. Be3!? { is a computer recommendation and was played by Rapport
+against Shankland recently, so it deserves to be checked as well. } 5... Be7 6. g3 O-O 7. Bg2 a5 8. O-O { was the logical course of R.Rapport - S.Shankland, St.
+Louis rapid 2019. Perhaps better than Shanklands ...Na6 was } 8... Nc6! $146 { , the point being that now the critical idea } 9. c4 { can be met by } 9... Ng4 10. Bf4 d4! { with a solid position for Black after ...Bxc5. }) 5... a5 6. e3 (6. Qb3 b6! { [%cal Gc5b6] } 7. cxb6 Qxb6 (7... axb4 8. cxb4 Qxb6 9. b5) 8. Be3 Qb7 9. bxa5 Rxa5 10. Qxb7 Bxb7 11. Nbd2 Nbd7 12. Nb3 Ra4 13. g3 Be7 (13... Bd6 $146) 14. Bg2 (14. Bd4!?) 14... O-O 15. O-O Rfa8 16. Nc1 Ne4 17. Rb1 Ba6 18. Rb3 Bf6) 6... axb4 7. cxb4 b6 8. Bb5+ { Lopping the LSBs off seems to be the main choice here. } (8. a4 { White can also leave the light-squared bishops on the board, e.g. } 8... bxc5 9. b5 (9. Bb5+ { transposes to 8.Bb5+ }) 9... Bd6 10. Bb2 Nbd7 11. Nbd2 O-O 12. Be2 (12. Bd3? e5!) 12... Bb7 13. O-O Bc7 14. Qc2 c4!? { , with a
+typical Noteboom-esque mess. I am guessing that White typically exchanges them
+based upon the rational that the White light-squared bishop is worse on e2 (it
+wishes it was on d3) than Black's on b7, but also that the thematic e4-break
+is tougher to acheive with Be2 and ...Bb7 inserted too. }) 8... Bd7 9. Bxd7+ Nbxd7 10. a4 bxc5 11. b5 { We've transposed to some sort of bizarre reversed
+pseudo-Noteboom. In a true Noteboom reversed White would have exchanged bishop
+for knight, but instead we traded light-squared bishops. I am not sure if this
+really favors one side or the other, but it does change the flavor of the
+position a bit - Black does not have the two bishops advantage, but } { [%csl Bb5,Ba4,Gd5,Gc5] } 11... Bd6 { I think this is the easiest and safest idea -
+Black will just follow up with ...Bc7, ...O-O, and go from there. } (11... g5!? 12. Bb2 Bd6 13. Qe2 g4 14. Nfd2 { [%cal Gd8c7,Gd8b8] } 14... Qb8 { Relative to ..
+.Qc7, this has the advantage of allowing ...Bc7-a5, but does stand in the way
+of Black connecting rooks. } (14... Qc7 15. e4 Be5 (15... O-O 16. a5! { works tactically, and seems risky for Black to allow }) 16. Bxe5 Qxe5 17. Ra3 O-O 18. Nc3 c4 $13 { was a total mess in M.Zarnescu - T.Pekin, Correspondence
+2020 }) 15. f4 { The easiest way for White to castle. } 15... gxf3 16. Nxf3 Rg8 17. O-O Bc7 $13 { (line by Le Quang Liem) }) (11... Ra7!? 12. O-O Qa8 13. Bd2 Bd6 14. a5! $146 (14. Nc3 Bc7! { was
+probably more comfortable for Black in M.Bluebaum-W.So, internet rapid 2021
+given his dark-squared blockade on the queenside. } { [%cal Gd6c7,Gc7b6,Gb6a5] }) 14... O-O 15. Na3 Ne4 (15... Rb8?! 16. b6! Nxb6 17. Nb5! Nc4 18. Nxa7 Qxa7 19. Bc3 $14 { is the
+Lifetime Repertoire author's devious idea! }) 16. a6 $13 { is Le Quang Liem's
+improvement over the So game. I am not a huge fan of allowing this pawn to a6
+(why go ...Ra7 and ...Qa7 if this is still possible for White?), but I'll let
+the reader decide. }) 12. Bb2 O-O 13. O-O Bc7 { [%csl Rb5,Ra4][%cal Gc7a5] } 14. Nbd2 Qe7 15. Qc2! { White keeps an eye on a4 and loads up the
+e4-break as well. } (15. Bc3? e5! { [%cal Ge3e4,Gd5d4] } 16. a5 (16. e4 d4 17. Bb2 Ne8! $17) 16... e4 17. Ne1 d4 18. exd4 cxd4 19. Bb2 (19. Bxd4 Qd6 $19) 19... Qe5) 15... Ra7 16. h3 Rfa8 17. e4 $13 *
+
+
+[Event "An Attacking Repertoire AGAINST the London: 2.Bf4 c5!"]
+[Date "2022.01.07"]
+[White "London"]
+[Result "*"]
+[Annotator "TonyRo"]
+[Variant "Standard"]
+[ECO "D00"]
+[Opening "Queen's Pawn Game: Accelerated London System, Steinitz Countergambit"]
+[StudyName "An Attacking Repertoire AGAINST the London"]
+[ChapterName "2.Bf4 c5!"]
+[ChapterURL "https://lichess.org/study/kKcyAydw/8AxFAr4d"]
+
+1. d4 d5 2. Bf4 { Chucking the
+bishop out there on move 2 is a slightly more modern move order it seems. Not
+only does White retain more options in 1.d4 Nf6 2.Bf4, e.g. the Jobava lines,
+Pircs, etc, there are also nuances to 1...d5 2.Bf4 as well. Delaying Nf3 in
+favor of e3/c3 allows Qb3 one move earlier, and not inserting Nf3/...Nf6 also
+leaves the d-pawn undefended in some important lines, e.g. the note to 6...Bf5
+in our main line below. } 2... c5 3. e3 (3. e4!? { Entering an Albin Countergambit
+Reversed where White has the free move Bf4. Weird! } { [%csl Gf4] } 3... Nc6!? { This is the most
+pragmatic choice, which is a good way to go when facing a strange gambit line
+you're likely to see in 1/1000 games or more! } (3... dxe4 4. d5 Nf6 5. Nc3 g6 { also seems totally playable, but is messier and requires Black find some
+tricky moves. Not ideal for such a rare line. }) 4. exd5 (4. Nc3 cxd4 5. exd5 dxc3 6. dxc6 Qxd1+ 7. Rxd1 bxc6 8. Bc7 Bg4 9. f3 Bd7 $10 { F.Hoffmeyer - S.
+Eichner, Bundesliga 2013 }) 4... Qxd5 5. Nc3 (5. dxc5 Qxd1+ 6. Kxd1 e5 7. Be3 Nf6 $10 { [%cal Gf6d5,Gf6g4] }) 5... Qxd4 6. Nd5 e5 7. Nc7+ Kd8 8. Nxa8 exf4 9. Nf3 Qxd1+ 10. Rxd1+ Bd7 11. Bb5 Kc8 12. O-O { A.Ostrovskiy - C.Holt,
+internet blitz 2020 } 12... Nh6!? $146 13. Rfe1 f6 $10) (3. Bxb8? Rxb8 4. dxc5 { is a Baltic-like option that tries to greedily snatch the c5-pawn, but it strikes me as very risky. Many moves are good, but perhaps the restained } 4... e6 { is best, e.g. } 5. b4 (5. Qd4 { has been tried in the majority of master level games, but Black is doing well here, e.g. } 5... Ne7! { [%cal Ge7f5,Ge7c6] } 6. e3 Bd7!? { is probably the easiest, making it very hard to keep the pawn, for instance } (6... Nc6 7. Bb5 Bd7 8. Bxc6 bxc6 { [%cal Gd8a5] } 9. b4 Qg5! $36) 7. Nf3 Nc6 8. Qd2 (8. Qc3 b6! 9. cxb6 Bb4 $19) 8... Bxc5 $15 { and Black must be slightly better with the two bishops and central majority. }) 5... a5 6. c3 axb4 7. cxb4 b6! { [%cal Gf8b4,Yc5b6] } 8. Qa4+!? { is very tricky, because it requires Black to find } (8. a4 { This Noteboom-like strategy of pushing past with the b-pawn does not work here, as White is way too weak on the dark-squares. } 8... bxc5 9. b5? c4! { [%cal Gf8b4,Gd8a5,Bg8f6,Bf6e4] } 10. Nd2 Bb4 11. Qc2 Qa5 12. Nf3 Nf6 13. e3 { and at the very least Black gets to pick up the b5-pawn with } 13... Rxb5 $19 { here. }) 8... Bd7 9. c6 Qf6!! { (a distinct benefit of ...e6 over ...e5 is that this hits the rook on a1 now) } 10. cxd7+ Kd8 $19 { and White can't save the rook on a1 from it's demise. }) 3... Nc6 4. c3 (4. Nf3 Nf6 { tranposes to 2.Nf3 after either 5.c3 or 5.Nbd2! }) 4... Qb6 { We need to modify
+our move order as well, skipping ...Nf6 to keep up with White's pace of
+development on the queenside. } (4... Nf6 { illustrates one point of White's 2.
+Bf4 move order. White can play } 5. Nd2! { instead of Nf3, which dissuades
+Black from the standard and annoying } 5... Qb6 { since } 6. Qb3! c4 7. Qc2 Bf5? { no longer does anything, since ...Qxb2 doesn't trap a rook. }) 5. Qb3 c4! 6. Qc2 (6. Qxb6?! axb6 $15 { V.Vitek - E.Sveshnikov, World Seniors Championship
+2016 }) 6... e5! { A very exciting (and totally sound) gambit idea against the
+modern London. Black tosses the e-pawn out there both to accelerate their
+development, but also for a trickier reason: when White recaptures, Qxf5xd5 is
+no longer possible because there's an obstacle in the way! } (6... Bf5? { illustrates on final finesse of 2.Bf4 - without Nf3 and Nf6 inserted, the
+d-pawn is hanging, which leads to a beautiful idea after } 7. Qxf5! Qxb2 8. Qxd5! Qxa1 9. Qb5! $18 { and Black simply can't deal with the threat of the
+queen being trapped and Qxb7, for example } 9... O-O-O 10. Bxc4 { [%csl Ra1] } 10... e5 11. Ne2! exf4 12. O-O fxe3 13. fxe3 Nf6 { [%cal Gb1d2] } 14. Nd2 Qxf1+ 15. Kxf1 $18 { B.Grachev - B.Gelfand,
+Tal Memorial blitz 2008 }) 7. dxe5 { White's main choice, though it's not clear
+to me that one move is better than the other. } (7. Bxe5 Bf5! { As discussed
+in the note to 6...e5 - with a piece on e5 White can longer take on f5 and
+then take on d5 and swing over to b5 as in the note to 6...Bf5. A key point of
+6...e5! overall. } 8. Qc1 Nxe5 9. dxe5 f6! { Again, maximum energy, looking to
+make the gambit permanent to develop the Ng8 with a gain of time. } 10. exf6 { doesn't lose, but definitely seems risky, e.g. } (10. Nf3 fxe5 11. Nxe5 Nf6 12. Be2 Bc5 13. O-O h5!? { A cute fishing pole idea - Black wants to hop in with ..
+.Ng4 and open the h-file. } (13... O-O { is also possible, when } 14. Nd2 Qd6 15. Nef3 Ng4 { transposes to 10.exf6 }) 14. Nf3 (14. Na3 Ng4 15. Nxg4 hxg4) 14... Ng4 15. Nd4 Qd6 16. f4 Bd7 $13) (10. e6 { Out of the 5 games to reach this position,
+declining with this push has been essayed in 3. } 10... Bc5 11. Nf3 { L.Kolev - K.
+Rusev, Bulgarian Team Championships 2020 } 11... Bxe6! $146 12. Be2 f5! { This is
+a more active setup than simply developing the knight to e7 or h6 on the
+previous move. } 13. O-O Nf6 14. Nbd2 O-O 15. Nd4 f4!? (15... Rae8 { is also
+good. }) 16. exf4 (16. Nxe6? Qxe6 $19) 16... Bxd4 17. cxd4 Qxd4 $15) 10... Nxf6 11. Nf3 Bc5 12. Be2 (12. Nd4? Bxd4 13. cxd4 Bxb1 14. Qxb1 Qa5+ $19) 12... O-O 13. O-O Qd6! { A key move - her majesty starts the journey over to
+the kingside, eyeing h2, but also allows Black to bolster the c-pawn with ...
+b5 if required. } { [%cal Gd6h2,Rb2b3,Rb7b5] } (13... Ne4!? { is also possible, when Black can look for ...
+Qg6 instead of ...Qd6. }) 14. Nbd2? (14. Nd4 Bxd4 15. cxd4 b5) 14... Ng4! { [%csl Gf2,Ge3] } 15. h3 (15. b3 Rae8! 16. bxc4 Nxe3! 17. fxe3 Rxe3 $19) 15... Nxf2! { not a winning tactic, but Black is probably for choice now and White has to
+be exceedingly careful. } 16. Rxf2 Bxe3 17. Qe1 { [%cal Gd2f1] } (17. Kf1 Qg3 18. Qe1 Bxh3! 19. gxh3 Qxh3+ 20. Kg1 Rf6 $19) (17. Qf1 Rae8 18. Re1 Qb6 19. b3 Bd3 20. Bxd3 Bxf2+ 21. Qxf2 Rxe1+ $19) 17... Qb6 18. Nf1 Bxf2+ 19. Qxf2 Qxb2 $36) 7... Bf5! { Again, now this is possible because after taking on f5, White can no
+longer take on d5 as well and swing over to b5. } 8. Qc1 (8. Qd2? f6! { attempts to exploit the Qd2 by rushing a knight to the e4-square. } 9. Nf3 (9. exf6 Nxf6 10. Nf3 Ne4 11. Qc1 Nc5! $36) 9... g5! 10. Bg3 h5! 11. exf6 Nxf6 12. Nxg5 h4 13. Bf4 Bh6 $40) 8... g5! { Black continues to play with
+maximum energy, exploiting the lack of squares for White's dark-squared bishop. } 9. Bg3 (9. Bxg5 Nxe5 10. Nd2 f6 11. Bf4 Ne7 $44) 9... h5! 10. h3 (10. h4? g4! { makes it difficult for White to develop, as both of his remaining
+kingside minors need the e2-square. } { [%csl Rg1,Rf1][%cal Rg1e2,Rf1e2] } 11. Ne2 Bg7 12. Nd4 Nge7 $17) 10... Bg7 11. Nf3 Nh6!? 12. Nbd2 h4 13. Bh2 g4 14. hxg4 (14. Nxh4! { is better, e.g. } 14... Be6 15. Qc2 Bxe5 16. Bxe5 Nxe5 17. Qa4+ Bd7 { R.Bradney - A.Gardner,
+Correspondence 2020 } 18. Qb4 Qc7 19. O-O-O O-O-O $36) 14... Nxg4 15. Nd4 { G.Kamsky - S.Vega Gutierrez, online blitz 2019 } 15... Nxd4! 16. cxd4 (16. exd4? f6! $19 { and White just won't be able to hold his position together in the
+long run. Black's lead in development is already decisive. }) 16... Nxh2 17. Rxh2 f6! $17 *
+
+

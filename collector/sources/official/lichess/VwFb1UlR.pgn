@@ -1,0 +1,490 @@
+[Event "STUN BLACK with the Scotch Gambit: 💰 The Scotch Gambit 💰"]
+[Date "2026.05.25"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C44"]
+[Opening "Scotch Game: Scotch Gambit"]
+[StudyName "STUN BLACK with the Scotch Gambit"]
+[ChapterName "💰 The Scotch Gambit 💰"]
+[ChapterURL "https://lichess.org/study/VwFb1UlR/RUHJO140"]
+[Annotator "https://lichess.org/@/FlamingHawk3000"]
+[UTCDate "2026.05.25"]
+[UTCTime "16:42:24"]
+[ChapterMode "gamebook"]
+
+{ Hello and welcome to my study! 👋
+
+This is an interactive study on how to play the Scotch Gambit! 🥳
+
+You will learn the basics of how to play it, a ton a variations, and tools to combat all the tricks black will throw at us! 🤾
+
+History Lesson! 🗺️:
+
+"The Scotch Gambit was popularized by Paul Morphy and--"
+
+This is a chess lesson, not a history lesson!
+
+Do you want to win in less than ten move? 😃
+
+Do you want to play a fun gambit that has been around for HUNDREDS OF YEARS! 🥳
+
+Do you want to topple of and die if black knows what to do? 🤔 NO! 😡
+
+Then let's get started! 🏁
+
+Psst, this entire repertoire is available in Noctie and ready for you to practice! https://go.noctie.ai/scotch-gambit
+
+Start with 1.e4! }
+1. e4 { This is the starting move for most gambits. 🎲 } 1... e5 { Attack! } { [%csl Gf3][%cal Gg1f3] } 2. Nf3 { [%csl Re5][%cal Rf3e5] } 2... Nc6 { Transpose to ➡️ the Scotch Game! } { [%csl Gd4][%cal Gd2d4] } 3. d4 { The Scotch Game! } 3... exd4 { Instead of taking the pawn, can you develop a piece instead? } 4. Bc4 { This is the Scotch Gambit! Learn the next chapters and you will be able to CRUSH you opponents with this nasty repetoire! 😄 } *
+
+
+[Event "STUN BLACK with the Scotch Gambit: Part 1: Black's Knightmare 🐴 |"]
+[Date "2026.05.25"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C44"]
+[Opening "Scotch Game: Scotch Gambit, Dubois Réti Defense"]
+[StudyName "STUN BLACK with the Scotch Gambit"]
+[ChapterName "Part 1: Black's Knightmare 🐴 |"]
+[ChapterURL "https://lichess.org/study/VwFb1UlR/P1zf5Rog"]
+[Annotator "https://lichess.org/@/FlamingHawk3000"]
+[FEN "r1bqkbnr/pppp1ppp/2n5/8/2BpP3/5N2/PPP2PPP/RNBQK2R b KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.25"]
+[UTCTime "16:42:24"]
+[ChapterMode "gamebook"]
+
+{ If you appreciate this study, make sure to press the heart button under the board! ♥️ }
+1... Nf6 { This is the most played move by 3%, and is relatively straight forward. Continue to chapter 1!
+👇👇👇 } *
+
+
+[Event "STUN BLACK with the Scotch Gambit: Black's Knightmare | 5. ...d5"]
+[Date "2026.05.25"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C56"]
+[Opening "Italian Game: Scotch Gambit, Max Lange Attack"]
+[StudyName "STUN BLACK with the Scotch Gambit"]
+[ChapterName "Black's Knightmare | 5. ...d5"]
+[ChapterURL "https://lichess.org/study/VwFb1UlR/eIP9QrE5"]
+[Annotator "https://lichess.org/@/FlamingHawk3000"]
+[FEN "r1bqkb1r/pppp1ppp/2n2n2/8/2BpP3/5N2/PPP2PPP/RNBQK2R w KQkq - 1 2"]
+[SetUp "1"]
+[UTCDate "2026.05.25"]
+[UTCTime "16:42:24"]
+[ChapterMode "gamebook"]
+
+{ Charge the Knight!!! 🫵 } { [%csl Re5][%cal Re4e5] }
+2. e5 d5 { Our bishop is under threat! 😱 We may be tempted to play En Passent 🥖, but how can we pin the knight instead? } { [%csl Rc4,Re8][%cal Rd5c4,Rb5e8] } 3. Bb5 { Yup. } { [%csl Re8][%cal Rb5e8] } 3... Ne4 { Gets their knight out of trouble. How can we make use of the pinned knight? } { [%csl Re8][%cal Rb5e8] } 4. Nxd4 { Yes! Material is now even! } 4... Bd7 { We have to take the knight, but with what... } { [%csl Bd4][%cal Bc6d4] } 5. Bxc6 { Yes! 🤯 This lets our awesome knight still be awesome! } 5... bxc6 { Castle. 🏰 } { [%csl Gg1][%cal Ge1g1] } 6. O-O Bc5 { How can we get this pesky knight away? 🪰👊 } { [%csl Re4] } 7. f3 { Not a lotta options. } { [%csl Rd6,Rf6,Rc3,Rc5,Rg3,Rf2,Rd2,Gg5] } 7... Ng5 { How should we re-enforce our knight? } { [%csl Rd4] } 8. Be3 { Yep! This position is equal, but then again, black basically played all stockfish moves. Not gonna happen in a game! (well...) 🤪 } *
+
+
+[Event "STUN BLACK with the Scotch Gambit: Black's Knightmare | 5. ...Ng4"]
+[Date "2026.05.25"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C44"]
+[Opening "Scotch Game: Scotch Gambit, Kingside Variation"]
+[StudyName "STUN BLACK with the Scotch Gambit"]
+[ChapterName "Black's Knightmare | 5. ...Ng4"]
+[ChapterURL "https://lichess.org/study/VwFb1UlR/qXzF4sGm"]
+[Annotator "https://lichess.org/@/FlamingHawk3000"]
+[FEN "r1bqkb1r/pppp1ppp/2n2n2/4P3/2Bp4/5N2/PPP2PPP/RNBQK2R b KQkq - 0 2"]
+[SetUp "1"]
+[UTCDate "2026.05.25"]
+[UTCTime "16:42:24"]
+[ChapterMode "gamebook"]
+
+2... Ng4 { Black thinks that we don't see his simple threat? 🧐 He thought wrong! 😃
+Protect your king! } 3. O-O Ngxe5 { ??? The most common move is a blunder! Capture the knight! } { [%csl Ge5][%cal Gf3e5] } 4. Nxe5 Nxe5 { How can we take advantage of black's uncastled king? } { [%csl Re8][%cal Re1e8] } 5. Re1 { With f4 coming, there's no good way to save the knight. +1.9, Great job! 😃 } { [%csl Rf4][%cal Rf2f4] } *
+
+
+[Event "STUN BLACK with the Scotch Gambit: Black's Knightmare | 5. ...Ne4"]
+[Date "2026.05.25"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "STUN BLACK with the Scotch Gambit"]
+[ChapterName "Black's Knightmare | 5. ...Ne4"]
+[ChapterURL "https://lichess.org/study/VwFb1UlR/dj5tLIZs"]
+[Annotator "https://lichess.org/@/FlamingHawk3000"]
+[FEN "r1bqkb1r/pppp1ppp/2n2n2/4P3/2Bp4/5N2/PPP2PPP/RNBQK2R b KQkq - 0 2"]
+[SetUp "1"]
+[UTCDate "2026.05.25"]
+[UTCTime "16:42:24"]
+[ChapterMode "gamebook"]
+
+2... Ne4 { Black hops into the center. Here we could play c3, which is a trappy line, (a move that black plays 37% of the time is a huge blunder) but instead, how can we attack the knight? } { [%csl Rc3][%cal Rc2c3] } 3. Qe2 { [%csl Re4][%cal Re2e4] } 3... Nc5 { NOW we can play c3! 🤩 } 4. c3 dxc3 { Recapture! } { [%csl Gc3][%cal Gb1c3] } 5. Nxc3 Be7 { Attack this sitting...horse! 🦆😵‍💫 } { [%csl Rc5] } 6. Be3 { This is where we'll stop our analysis. We have +1.0, and a 62% win rate. Great job! 😁 } { [%csl Rc5][%cal Re3c5] } *
+
+
+[Event "STUN BLACK with the Scotch Gambit: Black's Knightmare | 5. ...Qe7"]
+[Date "2026.05.25"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "STUN BLACK with the Scotch Gambit"]
+[ChapterName "Black's Knightmare | 5. ...Qe7"]
+[ChapterURL "https://lichess.org/study/VwFb1UlR/f4csXkmO"]
+[Annotator "https://lichess.org/@/FlamingHawk3000"]
+[FEN "r1bqkb1r/pppp1ppp/2n2n2/4P3/2Bp4/5N2/PPP2PPP/RNBQK2R b KQkq - 0 2"]
+[SetUp "1"]
+[UTCDate "2026.05.25"]
+[UTCTime "16:42:24"]
+[ChapterMode "gamebook"]
+
+2... Qe7 { So... the eval just jumped to +2.0. What happened?
+A BLUNDER happened! 🥳
+...just castle! } { [%csl Gg1][%cal Ge1g1] } 3. O-O Ng4 { Still being greedy? Defend! } 4. Re1 Qc5 { Defend our bishop! 🛡️ } { [%csl Rc4] } 5. Qe2 Be7 { Where to develop our lonely horse? } { [%csl Rb1] } 6. Nbd2 { Bingo! ✅ } { [%csl Rc4,Re4][%cal Rd2c4,Rd2e4] } 6... O-O { Kick Mr. Knight! 🥾 } { [%csl Rg4] } 7. h3 Nh6 { Now kick the queen! } { [%csl Rc5] } 8. Ne4 { Discovery! We don't need to continue. White is +6.2. Awesome Job! 🤯 } { [%csl Rh6][%cal Rc1h6] } *
+
+
+[Event "STUN BLACK with the Scotch Gambit: Part 2: The Greedy Line 🚫💰"]
+[Date "2026.05.25"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C44"]
+[Opening "Scotch Game: Haxo Gambit"]
+[StudyName "STUN BLACK with the Scotch Gambit"]
+[ChapterName "Part 2: The Greedy Line 🚫💰"]
+[ChapterURL "https://lichess.org/study/VwFb1UlR/1TI0Hpu1"]
+[Annotator "https://lichess.org/@/FlamingHawk3000"]
+[FEN "r1bqkbnr/pppp1ppp/2n5/8/2BpP3/5N2/PPP2PPP/RNBQK2R b KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.25"]
+[UTCTime "16:42:24"]
+[ChapterMode "gamebook"]
+
+{ Let's see what this next section is about! }
+1... Bc5 { This is... The Greedy Line! This is the line where black tries to hang on to their pawn for dear life, and we'll give them the pawn!
+And take their king!!! 🧛 } *
+
+
+[Event "STUN BLACK with the Scotch Gambit: The Greedy Line | 5. ...dxc3"]
+[Date "2026.05.25"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "STUN BLACK with the Scotch Gambit"]
+[ChapterName "The Greedy Line | 5. ...dxc3"]
+[ChapterURL "https://lichess.org/study/VwFb1UlR/YpmulCiV"]
+[Annotator "https://lichess.org/@/FlamingHawk3000"]
+[FEN "r1bqk1nr/pppp1ppp/2n5/2b5/2BpP3/5N2/PPP2PPP/RNBQK2R w KQkq - 1 2"]
+[SetUp "1"]
+[UTCDate "2026.05.25"]
+[UTCTime "16:42:24"]
+[ChapterMode "gamebook"]
+
+{ Tempt black to give in to their greed! 💰 } { [%csl Gc3][%cal Gc2c3] }
+2. c3 dxc3 { Played by 52%! SACRIFICE!!! } { [%csl Gf7][%cal Gc4f7] } 3. Bxf7+ Kxf7 { You thinkin' what I'm thinkin'? } { [%csl Rf7,Rc5][%cal Rd5f7,Rd5c5] } 4. Qd5+ { Fork! 🍴 } { [%csl Gf7,Gc5][%cal Gd5f7,Gd5c5] } 4... Ke8 { Let's add in a check to weaken black. } { [%csl Gh5][%cal Gd5h5] } 5. Qh5+ { Still forking. } { [%csl Re8,Rc5][%cal Rh5e8,Rh5c5] } 5... g6 6. Qxc5 { Black can no longer castle and has various weakness.
+Moral: don't be greedy! +2.4, Great job! 😄 } { [%csl Bg7,Bh8,Be8][%cal Bc3h8] } *
+
+
+[Event "STUN BLACK with the Scotch Gambit: The Greedy Line | 5. ...Nf6"]
+[Date "2026.05.25"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C54"]
+[Opening "Italian Game: Classical Variation, Greco Gambit, Moeller-Therkatz Attack"]
+[StudyName "STUN BLACK with the Scotch Gambit"]
+[ChapterName "The Greedy Line | 5. ...Nf6"]
+[ChapterURL "https://lichess.org/study/VwFb1UlR/ZnipoXhI"]
+[Annotator "https://lichess.org/@/FlamingHawk3000"]
+[FEN "r1bqk1nr/pppp1ppp/2n5/2b5/2BpP3/2P2N2/PP3PPP/RNBQK2R b KQkq - 0 2"]
+[SetUp "1"]
+[UTCDate "2026.05.25"]
+[UTCTime "16:42:24"]
+[ChapterMode "gamebook"]
+
+2... Nf6 { Recapture our pawn! } { [%csl Gd4][%cal Gc3d4] } 3. cxd4 Bb4+ { Block. } { [%csl Gc3][%cal Gb1c3] } 4. Nc3 Nxe4 { Black is trying to be sneaky. 😒 } { [%csl Re1,Gg1][%cal Rb4e1,Ge1g1] } 5. O-O Bxc3 { Advance our pawn! } { [%csl Gd5][%cal Gd4d5] } 6. d5 Bf6 { Pin the knight! } { [%csl Re8][%cal Re1e8] } 7. Re1 { The knight is trapped, and cannot be defended. 🤣 The position is equal, with black playing REALLY well. Great job! 😁 } { [%csl Ge8][%cal Ge1e8] } *
+
+
+[Event "STUN BLACK with the Scotch Gambit: The Greedy Line | 4. ...d6"]
+[Date "2026.05.25"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "STUN BLACK with the Scotch Gambit"]
+[ChapterName "The Greedy Line | 4. ...d6"]
+[ChapterURL "https://lichess.org/study/VwFb1UlR/TOvLAmZw"]
+[Annotator "https://lichess.org/@/FlamingHawk3000"]
+[FEN "r1bqk1nr/pppp1ppp/2n5/2b5/2BpP3/2P2N2/PP3PPP/RNBQK2R b KQkq - 0 2"]
+[SetUp "1"]
+[UTCDate "2026.05.25"]
+[UTCTime "16:42:24"]
+[ChapterMode "gamebook"]
+
+2... d6 { Free food! } { [%csl Gd4][%cal Gc3d4] } 3. cxd4 Bb4+ { We must defend our Monarch! 🛡️ } 4. Nc3 Bg4 { Build a castle! 🏰 } { [%csl Gg1][%cal Ge1g1] } 5. O-O Nf6 { CHARGEEEEEEEEEEEEEE!!! 🫵🫵🫵🫵🫵 } { [%csl Gd5][%cal Gc3d5] } 6. Nd5 { Plenty of ideas here, and an overall superior position. +2.2. Great work! 🫵👍 } { [%csl Bf6,Bb4,Be8,Bb3][%cal Bd5f6,Bd5b4,Be1e8,Bd1b3] } *
+
+
+[Event "STUN BLACK with the Scotch Gambit: Part 3: The Scaredy-Cat Line 😲🐈"]
+[Date "2026.05.25"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "STUN BLACK with the Scotch Gambit"]
+[ChapterName "Part 3: The Scaredy-Cat Line 😲🐈"]
+[ChapterURL "https://lichess.org/study/VwFb1UlR/ArNzz06L"]
+[Annotator "https://lichess.org/@/FlamingHawk3000"]
+[FEN "r1bqkbnr/pppp1ppp/2n5/8/2BpP3/5N2/PPP2PPP/RNBQK2R b KQkq - 0 2"]
+[SetUp "1"]
+[UTCDate "2026.05.25"]
+[UTCTime "16:42:24"]
+[ChapterMode "gamebook"]
+
+{ Before taking the Scotch Gambit into real games, make sure to practice it first. Luckily, Noctie doesn't just play engine moves, it plays like a real human! 🧠 Give it a go: https://go.noctie.ai/scotch-gambit
+
+Let's see what we will learn next. }
+2... h6 { This is just silly. 😒 Black is just wasting a tempo to do...nothing.
+*sigh*
+Let's see how to defeat this Scaredy-Cat move! } *
+
+
+[Event "STUN BLACK with the Scotch Gambit: The Scaredy-Cat Line | 5. ...Bc5"]
+[Date "2026.05.25"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "STUN BLACK with the Scotch Gambit"]
+[ChapterName "The Scaredy-Cat Line | 5. ...Bc5"]
+[ChapterURL "https://lichess.org/study/VwFb1UlR/XD1T8EhK"]
+[Annotator "https://lichess.org/@/FlamingHawk3000"]
+[FEN "r1bqkbnr/pppp1ppp/2n5/8/2BpP3/5N2/PPP2PPP/RNBQK2R b KQkq - 0 2"]
+[SetUp "1"]
+[UTCDate "2026.05.25"]
+[UTCTime "16:42:24"]
+[ChapterMode "gamebook"]
+
+2... h6 { 😒 Black is just wasting a tempo to do...nothing.
+*sigh*
+Castle! 🏰 } 3. O-O Bc5 { Go to the Greedy Line! } { [%csl Gc3][%cal Gc2c3] } 4. c3 dxc3 { You know what to do... 😎 } 5. Bxf7+ Kxf7 { Wait, I've seen this before... 🤓 } { [%csl Rc5,Rf7][%cal Rd5c5,Rd5f7] } 6. Qd5+ { [%csl Gf7,Gc5][%cal Gd5f7,Gd5c5] } 6... Ke8 { (silence) } 7. Qh5+ Kf8 8. Qxc5+ { Fork! 🍴 } { [%csl Rf8,Rc3][%cal Rc5f8,Rc5c3] } 8... d6 9. Qxc3 { The material is even, but the position is not equal. 😏
++0.9, Awesome Job! 😄 } { [%csl Yf8] } *
+
+
+[Event "STUN BLACK with the Scotch Gambit: The Scaredy-Cat Line | 5. ...Nf6"]
+[Date "2026.05.25"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "STUN BLACK with the Scotch Gambit"]
+[ChapterName "The Scaredy-Cat Line | 5. ...Nf6"]
+[ChapterURL "https://lichess.org/study/VwFb1UlR/71RPJm67"]
+[Annotator "https://lichess.org/@/FlamingHawk3000"]
+[FEN "r1bqkbnr/pppp1pp1/2n4p/8/2BpP3/5N2/PPP2PPP/RNBQ1RK1 b kq - 1 3"]
+[SetUp "1"]
+[UTCDate "2026.05.25"]
+[UTCTime "16:42:24"]
+[ChapterMode "gamebook"]
+
+3... Nf6 { Notice these lines are the same, except we castled and they played h6.
+Which is better? I think you know. 😃
+Do the same thing! } 4. e5 Nh7 { Most players play this...
+Trust me, I'm just as confused as you are. 😵‍💫
+Take the pawn! } { [%csl Gd4][%cal Gf3d4] } 5. Nxd4 Nxd4 { Eat the Horsey! } { [%csl Rd4][%cal Rd1d4] } 6. Qxd4 Be7 { Develop! } { [%csl Gc3][%cal Gb1c3] } 7. Nc3 { We are just crushing black. 🔨
++1.6! Great work! 👊 } *
+
+
+[Event "STUN BLACK with the Scotch Gambit: The Scaredy-Cat Line | 5. ...d6"]
+[Date "2026.05.25"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "STUN BLACK with the Scotch Gambit"]
+[ChapterName "The Scaredy-Cat Line | 5. ...d6"]
+[ChapterURL "https://lichess.org/study/VwFb1UlR/Z7NVbCv7"]
+[Annotator "https://lichess.org/@/FlamingHawk3000"]
+[FEN "r1bqkbnr/pppp1pp1/2n4p/8/2BpP3/5N2/PPP2PPP/RNBQ1RK1 b kq - 1 3"]
+[SetUp "1"]
+[UTCDate "2026.05.25"]
+[UTCTime "16:42:24"]
+[ChapterMode "gamebook"]
+
+3... d6 { Free food! } { [%csl Gd4][%cal Gf3d4] } 4. Nxd4 Nxd4 5. Qxd4 { h6 was really helpful, huh? } { [%csl Rh6] } 5... Nf6 { CHARGEEEEEEEEEEEEE!!!!! 🫵 } { [%csl Re5][%cal Re4e5] } 6. e5 dxe5 { Time to be tricky! Sac the Bishop! 🥸 } { [%csl Gf7][%cal Gc4f7] } 7. Bxf7+ { [%csl Rd8,Rf7,Ge7][%cal Rd4d8,Re8f7,Ge8e7] } 7... Ke7 { Defend our bishop! } { [%csl Rf7] } 8. Qc4 { Yes! Equal material but... +1.7, Great job! 🥳 } { [%csl Rf7,Ye7][%cal Rc4f7] } *
+
+
+[Event "STUN BLACK with the Scotch Gambit: Part 4: Massively Passive 😴💤"]
+[Date "2026.05.25"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "STUN BLACK with the Scotch Gambit"]
+[ChapterName "Part 4: Massively Passive 😴💤"]
+[ChapterURL "https://lichess.org/study/VwFb1UlR/ifJFUsIG"]
+[Annotator "https://lichess.org/@/FlamingHawk3000"]
+[FEN "r1bqkbnr/pppp1ppp/2n5/8/2BpP3/5N2/PPP2PPP/RNBQK2R b KQkq - 0 2"]
+[SetUp "1"]
+[UTCDate "2026.05.25"]
+[UTCTime "16:42:24"]
+[ChapterMode "gamebook"]
+
+{ Let's dive in! 🤿 }
+2... d6 { This is VERY passive. It blocks in the bishop, and doesn't event develop a piece. Let's see how to defeat this dubiously defensive try. } { [%csl Rd6][%cal Rf8d6] } *
+
+
+[Event "STUN BLACK with the Scotch Gambit: Massively Passive | 5. ...Nxd4"]
+[Date "2026.05.25"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "STUN BLACK with the Scotch Gambit"]
+[ChapterName "Massively Passive | 5. ...Nxd4"]
+[ChapterURL "https://lichess.org/study/VwFb1UlR/9SWKByAx"]
+[Annotator "https://lichess.org/@/FlamingHawk3000"]
+[FEN "r1bqkbnr/ppp2ppp/2np4/8/2BpP3/5N2/PPP2PPP/RNBQK2R w KQkq - 0 3"]
+[SetUp "1"]
+[UTCDate "2026.05.25"]
+[UTCTime "16:42:24"]
+[ChapterMode "gamebook"]
+
+{ Take our pawn back! }
+3. Nxd4 Nxd4 { Doth Avenge our Knight! ⚜️ } 4. Qxd4 Nf6 { Develop! } { [%csl Gf4][%cal Gc1f4] } 5. Bf4 Be7 { Develop! } 6. Nc3 a6 { Which way to castle? 🏰 or 🏰? } { [%csl Gg1,Gc1][%cal Ge1g1,Ge1c1] } 7. O-O-O { 🏰! } 7... b5 { Counter attack! } { [%csl Ra8] } 8. Bd5 { [%csl Ra8][%cal Rd5a8] } 8... Nxd5 { Yum! 😋 } { [%csl Rd5][%cal Rc3d5] } 9. Nxd5 { We have an awesome position and a +1.4 advantage. Awesome Work! ☺️ } *
+
+
+[Event "STUN BLACK with the Scotch Gambit: Massively Passive | 5. ...Nf6"]
+[Date "2026.05.25"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "STUN BLACK with the Scotch Gambit"]
+[ChapterName "Massively Passive | 5. ...Nf6"]
+[ChapterURL "https://lichess.org/study/VwFb1UlR/u09ZyNwB"]
+[Annotator "https://lichess.org/@/FlamingHawk3000"]
+[FEN "r1bqkbnr/ppp2ppp/2np4/8/2BNP3/8/PPP2PPP/RNBQK2R b KQkq - 0 3"]
+[SetUp "1"]
+[UTCDate "2026.05.25"]
+[UTCTime "16:42:24"]
+[ChapterMode "gamebook"]
+
+3... Nf6 { Attacking! Play sneak O-O! 🥸 } { [%csl Re4,Gg1][%cal Rf6e4,Ge1g1] } 4. O-O Be7 { Development! } { [%csl Gc3][%cal Gb1c3] } 5. Nc3 O-O { Do the bishop. } { [%csl Gf4][%cal Gc1f4] } 6. Bf4 Ne5 { Retreat your bishop! } { [%csl Rc4,Gb3][%cal Re5c4,Gc4b3] } 7. Bb3 { We are riding nice and easy with a +0.3 advantage. Great job! 😎 } *
+
+
+[Event "STUN BLACK with the Scotch Gambit: Part 5: Bonus Chapters 💰"]
+[Date "2026.05.25"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "STUN BLACK with the Scotch Gambit"]
+[ChapterName "Part 5: Bonus Chapters 💰"]
+[ChapterURL "https://lichess.org/study/VwFb1UlR/vIBlmQda"]
+[Annotator "https://lichess.org/@/FlamingHawk3000"]
+[FEN "r1bqkbnr/pppp1ppp/2n5/8/2BpP3/5N2/PPP2PPP/RNBQK2R b KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.25"]
+[UTCTime "16:42:24"]
+[ChapterMode "gamebook"]
+
+{ We will now go over the bonus chapters. 🤩 }
+ *
+
+
+[Event "STUN BLACK with the Scotch Gambit: Bonus Chapter | 4. ...Bb4+"]
+[Date "2026.05.25"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C44"]
+[Opening "Scotch Game: Scotch Gambit, London Defense"]
+[StudyName "STUN BLACK with the Scotch Gambit"]
+[ChapterName "Bonus Chapter | 4. ...Bb4+"]
+[ChapterURL "https://lichess.org/study/VwFb1UlR/SS2uN8VL"]
+[Annotator "https://lichess.org/@/FlamingHawk3000"]
+[FEN "r1bqkbnr/pppp1ppp/2n5/8/2BpP3/5N2/PPP2PPP/RNBQK2R b KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.25"]
+[UTCTime "16:42:24"]
+[ChapterMode "gamebook"]
+
+1... Bb4+ { Stockfish's fave. 🤓🐠 } { [%csl Gc3][%cal Gc2c3] } 2. c3 dxc3 { Ignore this and castle! } { [%csl Gg1][%cal Ge1g1] } 3. O-O cxb2 { PLEASE play the correct move here. No hints. 🤫 } 4. Bxb2 { [%csl Rg7][%cal Rb2g7] } 4... Nf6 { Kick that Horsey! 🥾 } { [%csl Ge5][%cal Ge4e5] } 5. e5 Ng4 { Do it again! 🥾 } 6. h3 Nh6 { In this position, black's pieces are disoriented and not working together. Are pieces and position are superior. +1.0. Great work! 😄 } { [%csl Rg7,Rf7,Rg5,Re5][%cal Rb2g7,Rc4f7,Rf3g5,Rf3e5] } *
+
+
+[Event "STUN BLACK with the Scotch Gambit: Bonus Chapter | 4. ...Be7"]
+[Date "2026.05.25"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C44"]
+[Opening "Scotch Game: Benima Defense"]
+[StudyName "STUN BLACK with the Scotch Gambit"]
+[ChapterName "Bonus Chapter | 4. ...Be7"]
+[ChapterURL "https://lichess.org/study/VwFb1UlR/Vl1vlg7y"]
+[Annotator "https://lichess.org/@/FlamingHawk3000"]
+[FEN "r1bqkbnr/pppp1ppp/2n5/8/2BpP3/5N2/PPP2PPP/RNBQK2R b KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.25"]
+[UTCTime "16:42:24"]
+[ChapterMode "gamebook"]
+
+1... Be7 { Again passive. Storm the center! 🌪️ } { [%csl Gc3][%cal Gc2c3] } 2. c3 dxc3 { FORWARD!!! 🫵🫵🫵 } { [%csl Gd5,Rf7][%cal Gd1d5,Rc4f7] } 3. Qd5 { [%csl Rf7][%cal Rc4f7] } 3... Nh6 { Remove the defender. 😬 } { [%csl Gh6][%cal Gc1h6] } 4. Bxh6 O-O { Stop black from getting two queens! 😲 } { [%csl Gg7,Rb2][%cal Gh6g7,Rc3b2] } 5. Bxg7 Kxg7 { Free food! 🌯 } { [%csl Gc3][%cal Gb1c3] } 6. Nxc3 { Material is even, but...
++0.5, Awesome job! 😉 } { [%csl Yg7][%cal Yf6g7,Yg6g7,Yh6g7] } *
+
+
+[Event "STUN BLACK with the Scotch Gambit: Tool to Improve 🔧"]
+[Date "2026.05.25"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "STUN BLACK with the Scotch Gambit"]
+[ChapterName "Tool to Improve 🔧"]
+[ChapterURL "https://lichess.org/study/VwFb1UlR/Ufulplv2"]
+[Annotator "https://lichess.org/@/FlamingHawk3000"]
+[FEN "r1bqkbnr/pppp1ppp/2n5/8/2BpP3/5N2/PPP2PPP/RNBQK2R b KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.25"]
+[UTCTime "16:42:24"]
+[ChapterMode "gamebook"]
+
+{ This may be the end of the study, but not the end of your opening preparation, or your journey to becoming a stronger player. ♟️
+
+I personally really like the opening, and researching new crazy lines to throw at opponents. The problem is, I know what to do if my opponent plays the EXPECTED moves, but I am thrown back when they go out of book! 😲
+
+That's where Noctie comes in. 🦉
+
+Noctie is a chess bot that plays like a real human and adapts to your level. Play through your repertoire and Noctie takes the opponent's side, then keeps going naturally into the middlegame, so you're practicing more than just memorization. 🧠
+
+If you really want to cement this opening, you NEED to practice it. 🫵
+
+This entire repertoire is already available in Noctie. Give it a try! 🚀
+
+📖 https://go.noctie.ai/scotch-gambit
+
+Big thanks to Noctie for sponsoring this study! 🙌 }
+ *
+
+
+[Event "STUN BLACK with the Scotch Gambit: Outro 👋"]
+[Date "2026.05.25"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "STUN BLACK with the Scotch Gambit"]
+[ChapterName "Outro 👋"]
+[ChapterURL "https://lichess.org/study/VwFb1UlR/C0Bfcq6x"]
+[Annotator "https://lichess.org/@/FlamingHawk3000"]
+[FEN "r1bqkbnr/pppp1ppp/2n5/8/2BpP3/5N2/PPP2PPP/RNBQK2R b KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.25"]
+[UTCTime "16:42:24"]
+[ChapterMode "gamebook"]
+
+{ Thanks for staying until the end! Remember to send it a like ♥️ (below the board) if you did enjoy!
+
+Join these teams:
+
+Study Resource Team 🎓: https://lichess.org/team/study-resource-team
+
+Study Creators and Friends 🗺️: https://lichess.org/team/study-creators--friends
+
+Study Creators Hangout 📚: https://lichess.org/team/study-creators-hangout }
+ *
+
+

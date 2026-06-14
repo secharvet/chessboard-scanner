@@ -1,0 +1,61 @@
+[Event "Casual Rapid game"]
+[Site "https://lichess.org/hY7IKw1w"]
+[Date "2019.07.03"]
+[Round "-"]
+[White "EricRosen"]
+[Black "tipsytun"]
+[Result "1-0"]
+[WhiteElo "2515"]
+[WhiteTitle "IM"]
+[BlackElo "1955"]
+[TimeControl "600+2"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "C78"]
+[Opening "Ruy Lopez: Morphy Defense"]
+[StudyName "SPANISH"]
+[ChapterName "IM EricRosen - tipsytun"]
+[ChapterURL "https://lichess.org/study/iLtQmk5V/5yGKwZwQ"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 { [%clk 0:10:00] } 1... e5 { [%clk 0:10:00] } 2. Nf3 { [%clk 0:09:55] } 2... Nc6 { [%clk 0:10:01] } 3. Bb5 { [%clk 0:09:50] } 3... a6 { [%clk 0:09:49] } 4. Ba4 { [%clk 0:09:51] } 4... Nf6 { [%clk 0:09:45] } 5. O-O { [%clk 0:09:39] } 5... b5 { [%clk 0:09:29] } 6. Bb3 { [%clk 0:09:38] } 6... Bc5 { [%clk 0:09:23] } 7. Nxe5 { [%clk 0:09:05] } (7. c3 d6 (7... Nxe4 8. d4) 8. d4 Bb6 9. a4 Rb8 10. axb5 axb5 11. Qd3) 7... Nxe5 { [%clk 0:09:20] } 8. d4 { [%clk 0:09:05] } 8... Bxd4 { [%clk 0:09:21] } 9. Qxd4 { [%clk 0:09:05] } 9... d6 { [%clk 0:09:22] } 10. c3 { [%clk 0:07:02] } 10... Bb7 { [%clk 0:08:26] } 11. Bc2 { [%clk 0:06:34] } 11... O-O { [%clk 0:08:14] } 12. Bg5 { [%clk 0:06:15] } 12... c5 { [%clk 0:07:33] } 13. Qe3 { [%clk 0:06:05] } 13... Re8 { [%clk 0:07:23] } 14. Nd2 { [%clk 0:05:56] } 14... h6 { [%clk 0:06:36] } 15. Bxf6 { [%clk 0:05:32] } 15... Qxf6 { [%clk 0:06:38] } 16. Qg3 { [%clk 0:05:28] } 16... Qg6 { [%clk 0:05:19] } 17. Rad1 { [%clk 0:04:58] } 17... Re6 { [%clk 0:04:46] } 18. Qxg6 { [%clk 0:04:04] } 18... Nxg6 { [%clk 0:04:48] } 19. f4 { [%clk 0:04:03] } 19... Re7 { [%clk 0:03:44] } 20. g3 { [%clk 0:03:36] } 20... Nf8 { [%clk 0:03:20] } 21. Rfe1 { [%clk 0:03:25] } 21... f6 { [%clk 0:03:20] } 22. Kf2 { [%clk 0:03:13] } 22... Rd8 { [%clk 0:02:43] } 23. Nb3 { [%clk 0:03:10] } 23... Red7 { [%clk 0:02:17] } 24. a4 { [%clk 0:02:21] } 24... Ne6 { [%clk 0:01:49] } 25. Rd2 { [%clk 0:01:40] } 25... c4 { [%clk 0:01:40] } 26. Nd4 { [%clk 0:01:33] } 26... Nxd4 { [%clk 0:01:41] } 27. Rxd4 { [%clk 0:01:33] } 27... d5 { [%clk 0:01:28] } 28. e5 { [%clk 0:01:14] } 28... fxe5 { [%clk 0:01:27] } 29. Rxe5 { [%clk 0:01:14] } 29... Kf7 { [%clk 0:01:24] } 30. Rd2 { [%clk 0:00:19] } 30... d4 { [%clk 0:01:14] } 31. cxd4 { [%clk 0:00:14] } 31... Rxd4 { [%clk 0:01:16] } 32. Rxd4 { [%clk 0:00:16] } 32... Rxd4 { [%clk 0:01:17] } 33. Ke3 { [%clk 0:00:17] } 33... Rd5 { [%clk 0:01:06] } 34. Rxd5 { [%clk 0:00:15] } 34... Bxd5 { [%clk 0:01:07] } 35. Kd4 { [%clk 0:00:17] } 35... Bc6 { [%clk 0:00:35] } 36. Kc5 { [%clk 0:00:15] } 36... Bd7 { [%clk 0:00:30] } 37. axb5 { [%clk 0:00:12] } 37... axb5 { [%clk 0:00:31] } 38. Be4 { [%clk 0:00:12] } 38... Kf6 { [%clk 0:00:06] } 39. Bb7 { [%clk 0:00:04] } 39... g5 { [%clk 0:00:06] } 40. fxg5+ { [%clk 0:00:05] } 40... hxg5 { [%clk 0:00:07] } 41. Ba6 { [%clk 0:00:06] } 41... Kf5 { [%clk 0:00:08] } 42. Bxb5 { [%clk 0:00:06] } 42... Be6 { [%clk 0:00:08] } 43. Bxc4 { 1-0 Black resigns. } { [%clk 0:00:07] } 1-0
+
+
+[Event "US Championship"]
+[Site "St Louis, MO USA"]
+[Date "2018.04.29"]
+[Round "1"]
+[White "Fabiano Caruana"]
+[Black "Alexander Onischuk"]
+[Result "1-0"]
+[Variant "Standard"]
+[ECO "C78"]
+[Opening "Ruy Lopez: Morphy Defense, Arkhangelsk Variation"]
+[StudyName "SPANISH"]
+[ChapterName "Fabiano Caruana - Alexander Onischuk"]
+[ChapterURL "https://lichess.org/study/iLtQmk5V/7g18KQj5"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O b5 6. Bb3 Bb7 7. d3 Be7 8. Re1 O-O 9. a4 Re8 10. Nbd2 Bf8 11. Nf1 Na5 12. Ba2 d5 13. axb5 axb5 14. exd5 Bxd5 15. Bg5 Bxa2 16. Rxa2 e4 17. Bxf6 Qxf6 18. Rxe4 Rxe4 19. dxe4 Rd8 20. Qe2 Nc4 21. c3 Bc5 22. Ra1 g6 23. e5 Qc6 24. Ng3 Re8 25. b3 Nb6 26. Ra5 Bf8 27. Qxb5 Qxb5 28. Rxb5 Ra8 29. h4 { 1-0 Black resigns. } 1-0
+
+
+[Event "US Chess Championship"]
+[Site "St Louis, MO USA"]
+[Date "2016.04.20"]
+[Round "6"]
+[White "Fabiano Caruana"]
+[Black "Alexander Onischuk"]
+[Result "1-0"]
+[WhiteElo "2795"]
+[BlackElo "2664"]
+[Variant "Standard"]
+[ECO "C78"]
+[Opening "Ruy Lopez: Morphy Defense, Neo-Arkhangelsk Variation"]
+[StudyName "SPANISH"]
+[ChapterName "Fabiano Caruana - Alexander Onischuk"]
+[ChapterURL "https://lichess.org/study/iLtQmk5V/YEx68LMb"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Bc5 6. c3 b5 7. Bc2 d5 8. a4 dxe4 9. axb5 Bg4 10. bxc6 exf3 11. gxf3 Be6 12. Ra5 Qd6 13. f4 e4 14. d4 exd3 15. Qxd3 O-O 16. Qxd6 Bxd6 17. Rd1 Bg4 18. Rd4 Bf3 19. Ba4 Rfe8 20. Be3 Ne4 21. Bd1 Bxd1 22. Rxd1 Rab8 23. Nd2 Rxb2 24. Nxe4 Rxe4 25. Re5 Rxe3 26. fxe3 Rb8 27. Ra5 Kf8 28. c4 { 1-0 Black resigns. } 1-0
+
+

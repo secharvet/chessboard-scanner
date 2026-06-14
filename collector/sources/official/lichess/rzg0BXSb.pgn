@@ -1,0 +1,207 @@
+[Event "Round 1: Marsel Efroimski - Eric Rosen"]
+[Site "lichess.org"]
+[Date "2022.01.24"]
+[White "Marsel Efroimski"]
+[Black "Eric Rosen"]
+[Result "*"]
+[WhiteElo "2437"]
+[WhiteTitle "IM"]
+[BlackElo "2356"]
+[BlackTitle "IM"]
+[Variant "Standard"]
+[ECO "B52"]
+[Opening "Sicilian Defense: Moscow Variation, Sokolsky Variation"]
+[StudyName "Battle of the Sexes"]
+[ChapterName "Marsel Efroimski - Eric Rosen"]
+[ChapterURL "https://lichess.org/study/rzg0BXSb/AfsIcUWF"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 c5 2. Nf3 d6 3. Bb5+ Bd7 4. Bxd7+ Qxd7 5. c4 Nf6 6. Nc3 g6 7. d4 cxd4 8. Nxd4 Bg7 9. O-O (9. f3 O-O 10. Be3 Rc8 11. b3) 9... O-O 10. h3 (10. f3 Rc8 11. b3 d5 12. exd5 Nxd5 13. cxd5 (13. Nxd5 e6 14. Bh6) 13... Rxc3) 10... Rc8 11. b3 b5 12. e5 (12. cxb5 Rxc3) (12. Ncxb5 Nxe4 13. Qf3 d5) (12. Ndxb5 Nxe4) 12... dxe5 13. Ndxb5 a6 14. Na3 Nc6 15. Be3 (15. Qxd7 Nxd7 { [%csl Ge4,Gf5,Gc5][%cal Ge5e4,Gf7f5,Gd7c5] }) 15... Qf5 16. Qc2 Nb4 { [%csl Gc2][%cal Gb4c2] } 17. Qxf5 gxf5 18. Na4 Rc7 19. Bb6 (19. Bc5 Nd3) 19... Rb7 20. Ba5 { [%csl Gb4,Rc2][%cal Ga5b4,Gb7b4,Ga3c2] } 20... Nc6 21. Bc3 Ne4 22. Bb2 (22. Nc2 Nxc3 23. Nxc3 e4) 22... Rd8 23. f3 Ng3 24. Nc5 (24. Rfd1 Rbd7 25. Rxd7 Rxd7 26. Kh2 f4 27. Nc5 Rd2 28. Bc3 Re2 29. Nxa6 e4 30. Bxg7 Kxg7 31. fxe4 Ne5 32. h4 Ng4+ 33. Kh3 { [%csl Gh3] } 33... h5 { [%csl Gf2,Rh3][%cal Gg3e4,Ge4f2] }) 24... Rc7 (24... Ne2+ 25. Kf2 Rd2 26. Nxb7 Nf4+ 27. Kg1 Rxg2+ 28. Kh1 Rxb2) 25. Rfd1 Nd4 26. Nxa6 Ra7 (26... Rc6 27. Nb4 Rg6 28. Nd5) 27. Nb4 (27. Nc5 Rda8) 27... Rad7 28. Kf2 { [%csl Gg3] } 28... f4 29. Bxd4 Rxd4 30. Rxd4 Rxd4 31. Ke1 e4 32. Rd1 (32. fxe4 Rxe4+) 32... Rxd1+ (32... exf3 33. Rxd4 (33. gxf3) 33... Bxd4) 33. Kxd1 f5 (33... e3 34. h4 (34. Nb5 { [%csl Ge2][%cal Ge3e2] } 34... e2+ 35. Ke1) 34... e2+ 35. Kd2 Bc3+) 34. Nd5 Be5 (34... e5 { [%cal Gc4c8] } 35. c5 Kf7 36. c6 Ke8 37. c7 Kd7 38. Nc4) 35. Nxe7+ Kf7 36. Nd5 Ke6 37. Nb5 Kd7 38. Nbc3 e3 39. Ne2 Nh5 *
+
+
+[Event "Gibraltar: Battle of the Sexes 2022"]
+[Site "Garrison Library, Gibraltar,"]
+[Date "2022.01.25"]
+[Round "2.4"]
+[White "Rosen, Eric"]
+[Black "Houska, Jovanka"]
+[Result "*"]
+[WhiteElo "2356"]
+[BlackElo "2365"]
+[Variant "Standard"]
+[ECO "B10"]
+[Opening "Caro-Kann Defense: Two Knights Attack"]
+[StudyName "Battle of the Sexes"]
+[ChapterName "Rosen, Eric - Houska, Jovanka"]
+[ChapterURL "https://lichess.org/study/rzg0BXSb/uM0RE21m"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 c6 2. Nf3 d5 3. Nc3 { [%csl Gg4][%cal Gc8g4] } 3... dxe4 4. Nxe4 Nf6 5. Qe2 Nxe4 (5... Nbd7 6. Nd6#) 6. Qxe4 Qa5 (6... Qd5) 7. b4 { [%csl Ra5][%cal Gb2b4,Gb4a5] } 7... Qf5 8. Qe3 Qe6 (8... Qxc2 9. Bd3 Qa4 10. Bb2 Qxb4 { [%csl Gd3,Gb2,Ge3,Gf3] } 11. Rb1) 9. Bb2 Qxe3+ 10. fxe3 f6 11. Bc4 e5 { [%csl Gb4] } 12. a3 a5 { [%csl Gb5][%cal Gb4b5] } 13. bxa5 (13. b5 cxb5 14. Bxb5+ Bd7) 13... Rxa5 14. d4 e4 (14... exd4 15. exd4) 15. Nd2 { [%csl Re4] } 15... Bf5 (15... f5) 16. O-O Bg6 17. a4 Bb4 18. c3 Be7 (18... Bd6 19. Bb3) 19. Be6 { [%csl Ge6] } 19... Nd7 (19... f5 20. Nc4) (19... Bf7 20. Bf5) 20. Nb3 Ra7 21. c4 Rf8 (21... Nf8 22. Bf5 Bxf5 23. Rxf5 g6 24. Ra5 Rxa5 (24... Ra6 25. Rxa6 bxa6 26. Nd2 f5 27. d5) 25. Nxa5) 22. a5 Bf7 23. Bxf7+ Rxf7 24. g4 (24. Rf4 f5 25. g4 Bg5) 24... h5 25. h3 (25. gxh5 f5) 25... hxg4 26. hxg4 g6 27. Rf2 (27. Rf4 f5 28. gxf5 gxf5 29. Raf1 { [%csl Gf5][%cal Gf4f5] } 29... Bg5 30. Rxf5 Bxe3+ 31. Kg2 Rxf5 32. Rxf5 b6) 27... b6 28. Bc3 Bd8 29. Nd2 { [%csl Re4] } 29... f5 30. Raf1 { [%csl Ga5,Rf5] } (30. gxf5 gxf5 31. Raf1 Bg5 32. Rxf5 Bxe3+ 33. Kg2 Rxf5 34. Rxf5 Bxd2 35. Bxd2 bxa5 36. Rxa5) 30... Bh4 (30... bxa5 31. gxf5 gxf5 32. Rxf5 { [%csl Re4] }) 31. Rh2 (31. Rf4 Bg3) 31... Bg5 32. Rh8+ { [%csl Gf8][%cal Gf7f8,Gd7f8,Ge8e7] } 32... Ke7 (32... Nf8 { [%csl Gb6,Ge3][%cal Ga5b6,Gg5e3] }) (32... Rf8 33. Rxf8+ Kxf8 34. gxf5 { [%csl Gf5] }) 33. axb6 (33. Bb4+ Ke6 (33... c5 34. axb6 { [%csl Ga7][%cal Gb6a7] } 34... Bxe3+ 35. Kh1 Rb7 36. dxc5 Bxc5) 34. Re8+ { [%csl Ge6] } 34... Kf6 (34... Be7 35. d5+ cxd5 36. cxd5+ Kxd5 (36... Kf6 37. g5+) 37. Rxe7) 35. Nxe4+ Kg7 36. Nxg5) 33... Bxe3+ 34. Kh1 Nxb6 35. Nxe4 Ra4 (35... fxe4 36. Rxf7+ Kxf7 37. Rh7+) (35... Nxc4) 36. gxf5 gxf5 37. Re1 Nxc4 38. Nc5 Ra2 39. Rb1 { [%csl Gb7,Ge7][%cal Gb1b7] } (39. Rh6) 39... Rc2 40. Ba1 Nd6 41. Rh2 (41. d5 Bxc5 (41... cxd5 42. Re8+ Kxe8 43. Bf6 (43. Bg7 Rxg7 44. Rb8+) (43. Nd7 Rxd7 44. Bg7 Rxg7 45. Rb8+ Ke7 46. Re8+ Kxe8) 43... Rxf6)) (41. Nd3) 41... Rxh2+ 42. Kxh2 f4 43. Nd3 Ke6 44. Kg2 Kf5 45. Kf3 Rg7 46. Rb8 (46. Rb6 Rg3+ 47. Ke2 Rg2+ 48. Kf3 Rd2 49. Ne5 (49. Rxc6 Rxd3 50. Rxd6 Bxd4+ { [%cal Gf3e2,Gf3g2] } 51. Ke2 (51. Kg2 Rg3+) 51... Re3+ { [%csl Ga1][%cal Gd4a1] }) (49. Nxf4 Bxf4 50. Rxc6 Ne4) 49... Rf2#) 46... Rg3+ 47. Ke2 Nc4 (47... Ke4) (47... Rg2+ 48. Kf3 Rg1) 48. Rf8+ Kg5 49. Rg8+ Kh4 50. Rh8+ Kg4 51. Rg8+ Kh3 52. Rh8+ { [%cal Gh3g2] } 52... Kg4 (52... Kg2 53. Ne1+ Kg1 54. Nf3+ Kg2 (54... Rxf3 55. Kxf3) 55. Rh2#) 53. Rg8+ Kh5 54. Rh8+ Kg5 55. Rg8+ Kh5 56. Rh8+ Kg4 57. Rg8+ *
+
+
+[Event "Gibraltar: Battle of the Sexes 2022"]
+[Site "Garrison Library, Gibraltar,"]
+[Date "2022.01.26"]
+[Round "3.7"]
+[White "GM Batsiashvili, Nino"]
+[Black "IM Rosen, Eric"]
+[Result "*"]
+[WhiteElo "2491"]
+[BlackElo "2356"]
+[Variant "Standard"]
+[ECO "E52"]
+[Opening "Nimzo-Indian Defense: Normal Variation, Schlechter Defense"]
+[StudyName "Battle of the Sexes"]
+[ChapterName "Batsiashvili, Nino - Rosen, Eric"]
+[ChapterURL "https://lichess.org/study/rzg0BXSb/qBRRkPfD"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Nf3 b6 5. e3 Bb7 6. Bd3 O-O 7. O-O d5 8. cxd5 exd5 9. Ne5 (9. Bd2 Nbd7 { [%csl Gd6,Ge4][%cal Gb4d6,Ga7a6,Gf8e8,Gd8e7,Gf6e4] }) 9... Nbd7 10. f4 c5 11. Qf3 Re8 (11... c4 12. Bxc4) 12. Qh3 Nf8 (12... Rc8 13. Nxd7 Qxd7 14. Bxh7+) 13. Bb5 Re7 14. Bd2 (14. Bc6 Qc8 15. Qxc8 Rxc8 { [%cal Ge7b7] } 16. Bxb7 Rxb7) (14. Nc6 { [%cal Gc6e7,Gc6d8] } 14... Bxc6 15. Bxc6 Rc8 (15... Rb8) 16. Bxd5 Nxd5 17. Nxd5) 14... a6 { [%csl Gb5] } 15. Ba4 b5 16. Bc2 { [%csl Gd4,Gb6,Ge6,Gc3][%cal Gc5d4,Gd8b6,Gf8e6,Gb4c3,Gb5b4] } 16... Rc8 17. Be1 Bxc3 18. bxc3 (18. Bxc3 cxd4 19. exd4 b4 { [%csl Gc2][%cal Gc8c2] }) 18... cxd4 19. exd4 { [%csl Rc3][%cal Gc8c3] } 19... Ne4 { [%csl Rc3,Rf6,Re5,Re1][%cal Ge4c3,Gf7f6] } 20. Rd1 (20. Bh4 f6 { [%csl Re5,Rc3] }) 20... f6 { [%csl Gd3,Gf3,Rc3][%cal Ge5d3,Ge5f3,Rh3c3] } 21. Ng4 (21. Nf3 Nxc3 { [%csl Gc3] }) 21... Qc7 { [%csl Rc3][%cal Gc7c3] } 22. Rc1 { [%csl Rc3] } 22... Kh8 { [%csl Gc3,Re2,Gc7][%cal Ge4c3,Gc3e2,Gc1c7] } (22... Nxc3 23. Bxc3 Qxc3 24. Bxh7+) 23. Bb3 a5 24. Ne3 { [%csl Gd5][%cal Ge3d5] } 24... Rd8 25. Qf3 b4 26. Nf5 Ree8 27. Rc2 Qd7 { [%csl Rf5,Ra4][%cal Gd7f5,Ga5a4,Gd7a4] } 28. Qg4 { [%cal Ge4d6] } 28... Nd6 (28... a4 29. Bxa4 { [%csl Rg7][%cal Gd7g7] } 29... Qxa4 30. Qxg7#) (28... g6 { [%cal Gd7g4] } 29. Nh6 f5 { [%csl Gg4,Ga4][%cal Gf5g4,Ga5a4] } 30. Qh4 a4 31. Bxa4 Qxa4 32. Nf7+ Kg7 33. Nxd8 Qxc2 34. Nxb7 bxc3) 29. Nxd6 (29. Ne3 { [%cal Ge3g4] } 29... Rxe3) (29. Ba4 { [%csl Rg7][%cal Gd7g7] } 29... Qxf5 30. Qxf5 Nxf5 31. Bxe8 Rxe8 { [%csl Ga6,Rf1][%cal Gb7a6,Ge8e1] }) 29... Qxg4 30. Nxb7 (30. Nf7+ Kg8 31. Nxd8 Rxd8) 30... Rb8 31. Nxa5 bxc3 32. Rxc3 Ne6 33. Rg3 Qf5 34. Nc6 Rbc8 35. Ba4 Qe4 36. Bf2 Nxf4 { [%cal Gg3e3] } 37. Rf3 (37. Re3 Qxg2#) 37... g5 38. h3 Ra8 39. Bb5 Rxa2 40. Nb4 { [%csl Ge8,Ga2,Rb4,Rb5] } 40... Rxf2 41. R3xf2 Rb8 { 0-1 White resigns. } { [%csl Rb5,Rb4][%cal Gb8b5] } *
+
+
+[Event "Gibraltar: Battle of the Sexes 2022"]
+[Site "Garrison Library, Gibraltar,"]
+[Date "2022.01.28"]
+[Round "5.8"]
+[White "Muzychuk, Mariya"]
+[Black "Rosen, Eric"]
+[Result "*"]
+[WhiteElo "2539"]
+[WhiteTitle "GM"]
+[BlackElo "2356"]
+[BlackTitle "IM"]
+[Variant "Standard"]
+[ECO "B50"]
+[Opening "Sicilian Defense: Modern Variations, Anti-Qxd4 Move Order"]
+[StudyName "Battle of the Sexes"]
+[ChapterName "Muzychuk, Mariya - Rosen, Eric"]
+[ChapterURL "https://lichess.org/study/rzg0BXSb/CR8mJ6gI"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 { [%eval 0.28] } 1... c5 { [%eval 0.32] } 2. Nf3 { [%eval 0.0] } 2... d6 { [%eval 0.0] } 3. d4 { [%eval 0.15] } 3... Nf6 { [%eval 0.47] } (3... cxd4 4. Nxd4 Nf6 { [%csl Gf3][%cal Gf2f3] }) 4. Bb5+ { [%eval 0.15] } (4. Nc3 cxd4 5. Nxd4) 4... Bd7 { [%eval 0.29] } 5. Bxd7+ { [%eval 0.0] } 5... Qxd7 { [%eval 0.17] } 6. dxc5 { [%eval 0.25] } 6... Nxe4 { [%eval 0.38] } 7. cxd6 { [%eval 0.23] } 7... Nxd6 { [%eval 0.25] } 8. O-O { [%eval 0.18] [%csl Gg6][%cal Gg7g6] } 8... Nc6 { [%eval 0.19] [%csl Gd4] } (8... g6 9. Qd4) 9. Nc3 { [%eval 0.0] } 9... g6 { [%eval 0.0] [%cal Gg7a1] } 10. Bf4 { [%eval -0.03] } 10... Bg7 { [%eval 0.06] } 11. Qe2 { [%eval -0.15] [%csl Gd1,Rd6][%cal Ga1d1] } 11... O-O { [%eval -0.03] } 12. Rad1 { [%eval -0.19] [%csl Rd6,Gd7][%cal Gf4d6,Gd1d6] } 12... Qf5 { [%eval 0.1] } 13. Nd5 { [%eval 0.23] } (13. Bxd6 exd6 14. Rxd6 Bxc3 15. bxc3 { [%cal Gf5a5] } 15... Qa5 16. Qc4 Rac8 { [%csl Rc3,Rc2,Ra2] }) 13... e5 { [%eval 0.02] } 14. Nxe5 { [%eval 0.0] } 14... Bxe5 { [%eval 0.01] } (14... Nxe5 15. Ne7+ { [%cal Ge7f5,Ge7g8] }) 15. Qxe5 { [%eval 0.0] } (15. Bxe5 Rfe8 16. Nf6+ Qxf6 { [%cal Ge8e2] } 17. Bxf6 Rxe2 18. Rxd6 Rxc2) 15... Qxe5 { [%eval 0.12] } (15... Nxe5 16. Ne7+ Kg7 17. Nxf5+ Nxf5 18. Bxe5+) 16. Bxe5 { [%eval 0.02] } 16... Nxe5 { [%eval 0.0] } 17. Ne7+ { [%eval 0.0] } 17... Kg7 { [%eval 0.01] } 18. Rxd6 { [%eval 0.11] } 18... Rfd8 { [%eval 0.43] } 19. Rdd1 { [%eval 0.44] } (19. Rxd8 Rxd8 { [%csl Re7,Gf6][%cal Gg7f6] }) (19. Rfd1 Rxd6 20. Rxd6 Re8 21. Nd5 (21. f4) 21... Nc4 { [%csl Gd6,Ge1][%cal Gc4d6,Ge8e1] }) 19... Nc4 { [%eval 0.52] [%csl Gb2] } 20. b3 { [%eval 0.46] } 20... Nb6 { [%eval 0.37] [%csl Gc4,Gd5][%cal Gc2c4,Ge7d5] } 21. c4 { [%eval 0.84] } 21... Kf6 { [%eval 0.85] } 22. Nd5+ { [%eval 0.79] } 22... Nxd5 { [%eval 0.75] } 23. cxd5 { [%eval 0.71] } 23... Rd7 { [%eval 0.8] } 24. Rd4?! { [%eval 0.25] } { Inaccuracy. Rd3 was best. } (24. Rd3 a5) 24... Rc8 { [%eval 0.28] [%csl Rc2][%cal Gc8c2] } (24... Rad8 25. Rfd1 Ke5 26. f4+ Kd6 { [%cal Gd8d5] }) 25. Rfd1 { [%eval 0.13] } 25... Rc2 { [%eval 0.22] } 26. a4 { [%eval 0.44] } 26... Ke5 { [%eval 0.34] } (26... Rb2 27. b4 Ra2 28. a5) 27. g3 { [%eval 0.0] } 27... Kd6 { [%eval 0.23] } 28. R1d3 { [%eval 0.31] } 28... Re7 { [%eval 0.48] } 29. g4 { [%eval 0.33] [%csl Rg5,Gg6,Gh7,Gf7][%cal Gg4g5] } 29... Re5?! { [%eval 0.86] } { Inaccuracy. Rce2 was best. } { [%csl Rd5,Gf5,Gh5,Rh3,Rf3][%cal Ge5d5,Gf7f5,Gh7h5,Gd3f3,Gf3h3] } (29... Rce2 30. Rf3 R7e4 31. Rxe4 Rxe4 32. Rxf7 Rxg4+ 33. Kf1 Rb4 34. Rxh7 Rxb3 35. Rg7 Kxd5 36. Rxg6) 30. Rf4 { [%eval 0.68] } 30... f5 { [%eval 0.74] } 31. gxf5 { [%eval 0.57] } 31... Rxf5 { [%eval 0.73] } 32. Rxf5 { [%eval 0.61] } 32... gxf5 { [%eval 0.64] } 33. Kg2 { [%eval 0.64] } 33... Re2 { [%eval 0.69] } (33... Rc5 34. Kg3 Rxd5 35. Rxd5+ Kxd5 36. Kf4 Ke6 37. Kg5 { [%csl Rh7][%cal Gg5h6,Gh6h7] }) 34. Rh3 { [%eval 0.62] } (34. Kf3 Re4 { [%csl Rf3,Rd3,Gd5][%cal Ge1e4,Ge4h4,Gd3d5] }) 34... Rb2?! { [%eval 1.18] } { Inaccuracy. Re7 was best. } (34... Re7) 35. Rxh7 { [%eval 0.68] } 35... Rxb3 { [%eval 1.13] [%csl Rb7][%cal Gb3b7] } 36. Rf7?! { [%eval 0.21] } { Inaccuracy. h4 was best. } (36. h4 Kxd5 37. h5 Rb4 38. Kh3 Rb1 39. h6 Rh1+ 40. Kg3 Ke5 41. a5 Rg1+ 42. Kf3 Rh1) 36... Rb4 { [%eval 0.33] } 37. a5 { [%eval 0.17] } 37... Rb5 { [%eval 0.25] } 38. h4 { [%eval 0.21] } 38... Rxd5 { [%eval 0.12] } (38... Kxd5 39. Rxf5+ Kc4 40. Rxb5 Kxb5) 39. h5 { [%eval 0.23] [%cal Gh5h6,Gh6h7,Gh7h8] } (39. Rxb7 Rxa5) 39... f4 { [%eval 0.05] } (39... Rxa5 40. h6) 40. h6 { [%eval 0.06] } 40... Rxa5 { [%eval 0.09] } 41. Rxb7 { [%eval 0.0] [%cal Ga5h5] } 41... Rh5?! { [%eval 0.65] } { Inaccuracy. Ke6 was best. } { [%csl Gh4,Ga7,Gh6,Rg2,Rf4,Gg6][%cal Gh5h4,Gb7a7,Gh4h6,Gh4f4,Gd6g6] } (41... Ke6 42. Kf3 Rh5 43. Rxa7 Rh2 44. Kxf4 Rxf2+ 45. Kg3 Rf1 46. Ra8 Rh1 47. Ra4 Kf6 48. Rh4) 42. Rxa7 { [%eval 0.97] } 42... Rh4?? { [%eval 7.59] } { Blunder. Ke6 was best. } (42... Ke6 43. Kf3 (43. Ra3) 43... Rh4 { [%csl Ge4][%cal Gf3e4] } (43... Rh2)) 43. Ra3 { [%eval 7.38] } 43... f3+ { [%eval 7.65] } (43... Rxh6) (43... Ke6 44. Rh3 Rxh3 45. Kxh3 Kf6 { [%csl Gh6] } 46. Kg4 Kg6 47. Kxf4 Kxh6 { [%csl Gf4] }) (43... Rg4+ 44. Kf3 (44. Kh2 Rh4+ (44... Rg8 45. h7 Rh8 46. Rh3 { [%csl Gf4,Rh8][%cal Gh2g2,Gg2f3,Gf3f4] }) 45. Rh3) 44... Rh4 { [%csl Gh4] }) 44. Kg3 { [%eval 7.91] } (44. Rxf3 Rxh6) (44. Kxf3 Rh3+) 44... Rh1 { [%eval 8.24] } 45. Ra4 { [%eval 8.3] } 45... Rg1+ { [%eval 8.02] } 46. Kxf3 { [%eval 8.56] } 46... Rh1 { [%eval 8.36] } 47. Kg3 { [%eval 7.97] } 47... Rg1+ { [%eval 7.81] } 48. Kh2 { [%eval 8.23] } 48... Rg8 { [%eval 8.39] } 49. h7 { [%eval 8.46] } 49... Rh8 { [%eval 8.29] } 50. Rh4 { [%eval 8.72] } 50... Ke6 { [%eval 8.52] } 51. Kg3 { [%eval 8.95] } 51... Kf5 { [%eval 9.0] } 52. Rh5+ { [%eval 8.78] } 52... Kg6 { [%eval 9.51] } 53. Kg4 { [%eval 9.14] } 53... Kf6 { [%eval 9.72] } 54. Rh6+ { [%eval 9.23] } (54. f4 Kg6 55. f5+ Kf6 56. Kf4 Rxh7 57. Rxh7) 54... Kg7 { [%eval 13.34] } 55. Kg5 { [%eval 15.3] } 55... Kf7 { [%eval 12.64] } 56. Rh4 { [%eval 8.66] } 56... Kg7 { [%eval 10.72] } 57. Rh3 { [%eval 10.28] } 57... Kf7 { [%eval 9.51] } 58. Kh6 { [%eval 8.9] [%csl Gh6,Gh3][%cal Gh6h7] } 58... Ra8 { [%eval 9.44] } 59. Rf3+ { [%eval 9.45] } 59... Ke6 { [%eval 8.9] } 60. Kg7 { [%eval 9.14] } 60... Ra7+ { [%eval 9.14] } 61. Kg8 { [%eval 66.28] } 61... Kd5 { [%eval 66.96] } { 1-0 Black resigns. } *
+
+
+[Event "Gibraltar: Battle of the Sexes 2022"]
+[Site "Garrison Library, Gibralt1/2-1/2ar, G"]
+[Date "2022.01.27"]
+[Round "4.6"]
+[White "Rosen, Eric"]
+[Black "Girya, Olga"]
+[Result "*"]
+[WhiteElo "2356"]
+[BlackElo "2405"]
+[Annotator "https://lichess.org/@/mattcarr2600"]
+[Variant "Standard"]
+[ECO "C54"]
+[Opening "Italian Game: Classical Variation, Greco Gambit, Modern Line"]
+[StudyName "Battle of the Sexes"]
+[ChapterName "Rosen, Eric - Girya, Olga"]
+[ChapterURL "https://lichess.org/study/rzg0BXSb/PPcF0J7N"]
+
+1. e4 { [%eval 0.28] } 1... e5 { [%eval 0.12] } 2. Nf3 { [%eval 0.19] } 2... Nc6 { [%eval 0.32] } 3. Bc4 { [%eval 0.19] } 3... Bc5 { [%eval 0.2] } 4. c3 { [%eval 0.2] } 4... Nf6 { [%eval 0.29] } 5. d4 { [%eval 0.0] } 5... exd4 { [%eval 0.17] } 6. e5 { [%eval 0.01] } 6... d5 { [%eval 0.14] } 7. Bb5 { [%eval 0.0] } 7... Ne4 { [%eval 0.15] } 8. cxd4 { [%eval -0.07] } 8... Bb6 { [%eval -0.14] } 9. Nc3 { [%eval 0.0] } 9... O-O { [%eval 0.18] } 10. Be3 { [%eval 0.17] } 10... Bg4 { [%eval -0.06] } 11. h3 { [%eval 0.05] } 11... Bh5 { [%eval 0.02] } 12. Qc2 { [%eval 0.08] } 12... Nxc3 { [%eval 0.04] } 13. bxc3 { [%eval 0.29] } 13... f6 { [%eval 0.08] } 14. exf6 { [%eval 0.16] } 14... Qxf6 { [%eval 0.2] } 15. Be2 { [%eval 0.14] } 15... Na5 { [%eval 0.33] } 16. Ne5 { [%eval 0.37] } 16... Bxe2 { [%eval 0.23] } 17. Qxe2 { [%eval 0.53] } 17... c5 { [%eval 0.18] } 18. O-O { [%eval 0.13] } 18... cxd4 { [%eval 0.35] } 19. cxd4 { [%eval 0.09] } 19... Qe6 { [%eval 0.09] } 20. f4 { [%eval -0.03] } 20... Nc4 { [%eval 0.2] } 21. Rad1 { [%eval 0.0] } 21... Rac8 { [%eval 0.04] } 22. g4 { [%eval 0.29] } 22... Nxe5 { [%eval 0.08] } 23. dxe5 { [%eval 0.0] } 23... Rc4 { [%eval 0.0] } 24. Bxb6 { [%eval 0.0] } 24... Qxb6+ { [%eval 0.0] } 25. Kg2 { [%eval 0.0] } 25... Rcxf4 { [%eval 0.0] } 26. Rxf4 { [%eval 0.0] } 26... Rxf4 { [%eval 0.0] } 27. Rxd5 { [%eval 0.0] } 27... Qc6 { [%eval 0.0] } 28. Qd3 { [%eval 0.0] } 28... Rf8 { [%eval 0.0] } 29. Kg3 { [%eval 0.0] } 29... Qc1 { [%eval 0.0] } 30. Qd2 { [%eval 0.0] } 30... Qa3+ { [%eval 0.32] } 31. Rd3 { [%eval 0.12] } 31... Qc5 { [%eval 0.28] } 32. Rd5 { [%eval 0.0] } 32... Qa3+ { [%eval 0.31] } 33. Rd3 { [%eval 0.06] } 33... Qc5 { [%eval 0.37] } 34. Rd5 { [%eval 0.0] } 34... Qa3+ { [%eval 0.0] } { 1/2-1/2 The game is a draw. } *
+
+
+[Event "Gibraltar: Battle of the Sexes 2022"]
+[Site "Garrison Library, Gibraltar, G"]
+[Date "2022.02.09"]
+[Round "6.1"]
+[White "Rosen, Eric"]
+[Black "Sebag, Marie"]
+[Result "*"]
+[WhiteElo "2356"]
+[BlackElo "2460"]
+[Variant "Standard"]
+[ECO "D00"]
+[Opening "Queen's Pawn Game: Accelerated London System, Steinitz Countergambit"]
+[StudyName "Battle of the Sexes"]
+[ChapterName "Rosen, Eric - Sebag, Marie"]
+[ChapterURL "https://lichess.org/study/rzg0BXSb/zW6MRekF"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 d5 2. Bf4 c5 3. e3 Nc6 4. Nf3 Nf6 5. Nbd2 Nh5 { [%csl Gc5][%cal Gd4c5] } 6. dxc5 Nxf4 7. exf4 { [%csl Gf8,Gc8,Rf4,Rf2,Gc5] } 7... Qa5 8. c4 { [%csl Gc8,Gf8][%cal Ga5c5] } 8... Qxc5 9. b4 Nxb4 { [%cal Gb4a6] } (9... Qxb4 10. cxd5 { [%csl Rc6][%cal Gc6a5,Gc6b8,Gc6d8] } 10... Nd4 11. Rb1 Qc5 12. Qa4+ { [%cal Ga4d4] }) 10. a3 Na6 { [%cal Gc4d5] } (10... Nc6 11. Nb3 { [%csl Gc5,Rd5][%cal Gb3c5,Gd1d5] } 11... Qd6 12. cxd5) 11. Ne5 (11. cxd5 Qxd5 12. Bc4 { [%cal Gc4f7,Ge1g1] }) 11... Qa5 { [%csl Ra4,Rd2] } 12. cxd5 g6 13. Qb3 { [%csl Rb5,Rf7,Re8][%cal Gf1b5,Gb3f7,Gd5d6] } 13... Bg7 14. d6 { [%csl Re5][%cal Ga5e5] } (14. Bb5+ Kf8 { [%csl Gf8,Ge1,Gd2][%cal Ge1d2] }) 14... Bxe5 15. Bb5+ (15. fxe5 Qxe5+ { [%cal Ge5a1] }) 15... Kf8 (15... Bd7 16. Bxd7+ Kxd7 17. Qxb7+ Kxd6 (17... Nc7 18. dxc7 Bxc7 19. O-O { [%csl Rd7,Gd2,Gd1][%cal Gb7d7,Gf1d1,Gd2c4] }) 18. O-O) 16. fxe5 Bd7 { overlooked this move } { [%csl Rb5][%cal Ga5e5,Ga5e1] } 17. dxe7+ Kxe7 { [%csl Ge7] } 18. Be2 { [%csl Ge5][%cal Ga5e5] } 18... Bc6 { [%csl Gb7,Gg2,Gd2][%cal Gc6g2,Ge1d2] } (18... Qxe5 19. O-O { [%csl Ge1,Rb7][%cal Gf1e1] }) 19. Qe3 Rhd8 { [%csl Rd2][%cal Gd8d2,Ge3d2,Ge1d2] } (19... Bxg2 { [%csl Gg2] } 20. Qg5+ { [%csl Gg2][%cal Gg5g2] }) 20. Rd1 Ba4 21. Rb1 { [%csl Rb7] } 21... Bc6 22. Rb2 (22. Rd1 { [%csl Gd1] } 22... Ba4 23. Rb1 Bc6 { [%cal Gb1d1] } 24. Rb2 Bxg2 { [%csl Gg2,Gg5][%cal Ge3g5] }) 22... Bxg2 23. Qg5+ Kf8 24. Qxg2 Qxe5 { [%csl Ge2,Re1,Gb2][%cal Ge5e1,Ge5b2] } 25. Rb5 (25. Rxb7 Rxd2 (25... Nc5 { [%csl Gb7,Gd3][%cal Gc5b7,Gc5d3] }) 26. Kxd2 Rd8+ 27. Bd3 Nc5 { [%csl Gc5][%cal Gc5d3,Gc5b7,Gd8d3] }) 25... Qc3 { [%cal Gc3e1,Gd8d2] } 26. Rd5 Nc7 27. Rxd8+ Rxd8 { [%csl Gg2,Ge2,Gd2] } 28. O-O (28. Qg5 Qc1+ 29. Bd1 Re8+ { [%csl Gf1][%cal Ge1f1] } 30. Kf1 Qxd1+) 28... Qxd2 29. Qxb7 { [%csl Ge2][%cal Gd2e2,Gb7c7] } 29... Qxe2 30. Qxc7 Qg4+ 31. Qg3 (31. Kh1 Qf3+ 32. Kg1 Rd5 { [%csl Gg5][%cal Gd5g5] }) 31... Qxg3+ 32. hxg3 Rd3 { [%csl Gd3] } 33. Ra1 (33. a4 Ra3 { [%csl Ga4][%cal Ga3a4] }) 33... a5 34. a4 Rd4 35. Kg2 h5 36. Kf3 Kg7 37. Ra3 g5 38. Ke3 Rb4 { [%csl Gb4] } 39. Kf3 Kg6 40. Kg2 f6 41. Ra1 Kf5 42. Rh1 Kg6 43. Ra1 h4 44. Ra3 hxg3 45. Kxg3 Kf7 { [%csl Gc4,Rg3][%cal Gf7c4,Gb4h4,Gg3g4,Gg4f5] } 46. Kf3 Ke6 47. Ke2 { [%csl Ge2,Re6][%cal Gf3e2] } 47... Rf4 48. f3 Kd5 49. Rb3 { [%csl Ra4,Gb3] } (49. Kd2 Kc4 50. Kc2 Kb4 51. Kb2 g4 { [%csl Rf2][%cal Gf4f2] }) 49... Rxa4 50. Rb6 Ke5 (50... Rf4 { [%csl Gb5,Ra5][%cal Gb6b5,Gb5a5] }) 51. Kf2 Rb4 52. Ra6 a4 53. Ra5+ Kf4 54. Kg2 Rd4 55. Ra6 f5 56. Ra5 Rd2+ 57. Kf1 { [%csl Rf3,Gf5][%cal Gf4f3,Ga5f5] } 57... Ra2 58. Kg1 Kg3 { [%csl Ga1][%cal Ga2a1] } 59. Kf1 Rf2+ 60. Kg1 Rxf3 61. Rxa4 Rb3 62. Ra1 f4 63. Kh1 f3 64. Rg1+ Kf4 65. Kh2 g4 66. Rb1 { [%csl Gb1] } 66... g3+ (66... Rxb1) 67. Kh3 Rxb1 68. Kh4 Rh1# *
+
+
+[Event "Battle of the Sexes 2022"]
+[Site "Gibraltar ENG"]
+[Date "2022.01.31"]
+[Round "7.3"]
+[White "Pia Cramling"]
+[Black "Eric Rosen"]
+[Result "*"]
+[WhiteElo "2452"]
+[WhiteTitle "GM"]
+[BlackElo "2356"]
+[BlackTitle "IM"]
+[Variant "Standard"]
+[ECO "D30"]
+[Opening "Queen's Gambit Declined: Traditional Variation"]
+[StudyName "Battle of the Sexes"]
+[ChapterName "Pia Cramling - Eric Rosen"]
+[ChapterURL "https://lichess.org/study/rzg0BXSb/dMeFii2h"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. Nf3 d5 2. d4 Nf6 3. c4 e6 { [%csl Gc3,Gg3][%cal Gb1c3,Gg2g3] } 4. Bg5 dxc4 5. Qa4+ { [%csl Gc4][%cal Ga4c4] } (5. e4 c5 6. e5 h6) 5... Nbd7 { [%cal Ga4c4] } 6. e3 Be7 7. Bxc4 O-O { [%csl Rd7,Ra4,Rc4][%cal Gd7b6,Gb6a4,Gb6c4,Gc4e2] } 8. Qc2 c5 9. dxc5 Qa5+ { [%cal Ga5e1] } 10. Nc3 Qxc5 { [%csl Rc4,Rg5][%cal Rc5c4,Gc5g5] } 11. Bd3 b6 { [%csl Gb7,Rc8,Rf3,Rg5][%cal Gc8b7,Ga8c8,Gf8d8,Gb7f3,Rf3g5,Gc5g5] } 12. a3 { [%csl Gb4][%cal Gb2b4] } 12... Bb7 13. b4 Qc7 { allowing two tactical ideas, neither of which work for white } { [%csl Gd5,Gh7][%cal Gc3d5,Gd3h7] } 14. Rc1 (14. Nd5 Nxd5 15. Qxc7 Nxc7 (15... Bxb4+ 16. axb4 Nxc7) 16. Bxe7) (14. Bxh7+ { [%csl Re7,Rf6][%cal Gg5e7] } 14... Nxh7 15. Bxe7 Rfc8 { [%csl Rc3][%cal Gc7c2] } 16. Rc1 Bxf3 17. gxf3 Ne5 { [%csl Ge7][%cal Gc7e7,Ge5f3] }) 14... Bxf3 15. gxf3 Ne5 { [%csl Rf3,Gd3][%cal Ge5d3,Ge5f3] } 16. Bxf6 { [%csl Gf6,Gh7][%cal Ge7f6,Gd3h7] } 16... Nxd3+ 17. Qxd3 Bxf6 18. Ke2 { [%csl Gd1,Gh1][%cal Gh1d1] } (18. O-O Rfd8 (18... Rad8! 19. Nd5 Rxd5 20. Qxd5 Qxc1 21. Rxc1 exd5) 19. Nd5 Rxd5 20. Qxd5) 18... Rac8 19. Na2 { [%csl Ra2] } (19. Ne4 Qxc1 20. Rxc1 Rxc1 21. Nxf6+ gxf6 { [%csl Gf8,Gc1] } 22. Qd4) 19... Qe5 20. a4 { [%csl Ga4] } 20... Qb2+ 21. Qd2 Qb3 { [%cal Gb3a2,Gb3a4,Gb3b4] } 22. Rxc8 Rxc8 23. Rc1 Rxc1 24. Nxc1 Qxa4 25. Nd3 Qc6 26. Qa2 g6 { [%csl Gg6,Ga7,Gc2][%cal Gg7g6,Ga2a7,Ga2c2] } 27. f4 (27. Qxa7 Qc2+ { [%csl Gd3][%cal Gc2d3,Gc2e2] }) 27... h5 28. h3 Kg7 29. Kd2 { [%csl Gd2] } 29... a5 { [%csl Gb6,Ga5,Rb4] } 30. bxa5 Qc3+ { [%csl Ga5] } 31. Ke2 bxa5 32. Qa4 { next several moves are dancing around } 32... Qc7 33. e4 Qc3 { [%csl Gd4][%cal Gf6d4,Gc3d4] } 34. Ke3 { [%csl Gc1,Ge1,Gc5][%cal Gd3e1,Gd3c1,Gc3c5,Gd3c5] } 34... Be7 { [%csl Gc5,Gb4][%cal Ge7c5,Gc5b4] } 35. Ke2 Bb4 36. Qb5 Qd4 37. Kf3 Bc3 38. Nc5 Be1 39. Nd3 { [%csl Ge1] } 39... Bc3 40. Nc5 Bb4 41. Nd3 Bd6 { white is practically in zugzwang! } { [%csl Gf3,Re4,Rd3][%cal Rf3e4,Gb5d3,Rb5a5,Ga5a4] } 42. Qb2 (42. e5 Be7) 42... Qxb2 43. Nxb2 { [%csl Rb2][%cal Gb2a4,Ga5a1] } 43... Bc5 { [%csl Gd4][%cal Gc5d4] } 44. Ke2 Bd4 { [%csl Gb2,Ra5] } 45. Na4 { [%cal Gd4b2,Gd4b6] } 45... Kf6 46. f3 g5 { [%csl Gh3][%cal Gf6h4,Gh4h3,Gh5h1] } 47. Kd3 Bg1 48. e5+ Kf5 49. fxg5 Kxg5 50. Nc3 { [%csl Gf4,Ge2][%cal Gg5f4,Gc3e2,Ge2g1,Ge2f4] } 50... Kh4 { 0-1 White resigns. } { [%csl Gh3,Ra5][%cal Gh4h3] } *
+
+
+[Event "Battle of the Sexes 2022"]
+[Site "Gibraltar ENG"]
+[Date "2022.02.01"]
+[Round "8.3"]
+[White "Eric Rosen"]
+[Black "Gunay Mammadzada"]
+[Result "*"]
+[WhiteElo "2356"]
+[WhiteTitle "IM"]
+[BlackElo "2470"]
+[BlackTitle "IM"]
+[Variant "Standard"]
+[ECO "D00"]
+[Opening "Queen's Pawn Game: Accelerated London System"]
+[StudyName "Battle of the Sexes"]
+[ChapterName "Eric Rosen - Gunay Mammadzada"]
+[ChapterURL "https://lichess.org/study/rzg0BXSb/yEoRzK8e"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 d5 2. Bf4 Nf6 3. e3 e6 4. Nf3 Bd6 5. Ne5 O-O 6. Nd2 b6 (6... c5 7. c3 Nc6 8. Bd3 Qc7 9. O-O (9. Ndf3 Nd7 { [%csl Re5][%cal Gd7e5,Gc6e5,Gc7e5] } 10. Ng5 { [%cal Gg5h7,Gd3h7] } 10... Nf6 { [%csl Gh7] } 11. Ng4)) 7. h4 { [%csl Gh5,Gf1,Ga6][%cal Gh4h5,Gc8a6,Gf1a6] } (7. Bd3 Ba6 { [%csl Ga6][%cal Gd3a6] }) 7... Bb7 8. Qf3 { [%csl Gf3,Ge5][%cal Gd1f3,Gf3g3,Gg3e5,Gg3g8] } 8... Nc6 { [%csl Ge7,Gc5][%cal Gc6e7,Gc7c5] } 9. h5 { [%csl Gh6][%cal Gh5h6] } 9... h6 10. c3 { [%csl Gb4,Gc6][%cal Gc3b4] } 10... Kh8 { [%csl Ge5][%cal Gg8h8] } 11. Bd3 Bxe5 12. dxe5 Nd7 { [%csl Ge5] } 13. Qg3 Nc5 { [%csl Rd3][%cal Gc5d3] } 14. Bc2 Ba6 15. O-O-O { [%csl Gd1] } 15... Bd3 16. Qh2 (16. Bxd3 Nxd3+ 17. Kb1 Nxf4) 16... f6 17. Nf3 { [%csl Ge5,Gd3][%cal Gd1d3] } (17. exf6 Qxf6 18. Bxc7) 17... Bxc2 18. Kxc2 fxe5 19. Bxe5 (19. Nxe5 Nxe5 20. Bxe5 Rxf2+) 19... Nxe5 20. Qxe5 Rf5 21. Qh2 Ne4 22. Rhf1 c5 23. Ne5 { [%csl Re5,Gg6][%cal Ge5g6] } 23... Qe8 { [%csl Rh5] } 24. g4 { [%csl Gf5,Gh5][%cal Gg4f5,Gg4h5] } 24... Qa4+ { [%csl Ga4] } 25. Kc1 (25. Kb1 { [%csl Rd1,Rf1,Gf2][%cal Gf1d1,Gf1f2] } 25... Rxf2 26. Rxf2 Qxd1#) 25... Rf6 26. f3 Ng5 27. f4 { [%csl Gg5] } 27... Qxa2 28. Kc2 { [%csl Gf4,Gg4,Gh5] } (28. fxg5 Rxf1 29. Rxf1 Qa1+ { [%cal Ga1f1] }) 28... Qa4+ 29. Kb1 Ne4 30. Rg1 Qb3 31. Qc2 (31. Rc1) 31... Qxc2+ 32. Kxc2 c4 33. Ra1 { [%csl Ga6,Ra7,Rb6][%cal Ga1a6,Gg1a1] } 33... Nc5 { [%csl Gb3,Gd3] } 34. g5 hxg5 35. Rxg5 { [%csl Ge4,Gg5][%cal Gc5e4,Ge4g5] } 35... Rf5 36. Rxf5 exf5 37. Rd1 { [%csl Rd5] } 37... Nd3 (37... Rd8 38. Nf7+) 38. Nxd3 cxd3+ 39. Rxd3 { [%csl Gd5][%cal Gd3d5] } 39... Rd8 40. c4 Rc8 { [%csl Rc4][%cal Gc8c2] } 41. Rxd5 Rxc4+ 42. Kd3 Rb4 43. Rxf5 { [%csl Gb2][%cal Gb4b2] } (43. Kc3 { [%csl Gb2,Gb4][%cal Gc3b2,Gc3b4] } 43... Re4 { [%csl Ge4,Ge3][%cal Ge4e3] } 44. Kd3 Rb4) 43... Rb3+ { [%csl Gd3] } (43... Rxb2 44. Rf8+ Kh7 45. e4 { [%csl Re8,Gh7][%cal Ge4e8] } 45... Kh6 (45... g6 46. Rf7+ Kh6 47. hxg6 Kxg6 48. Rxa7) 46. Rh8#) 44. Kd4 Kg8 45. Rg5 { [%csl Gh6][%cal Gh5h6] } 45... Kf7 46. Rg2 { [%csl Ge8][%cal Ge3e8] } 46... Rb5 47. Rh2 Ke7 48. h6 gxh6 49. Rxh6 Rxb2 50. Rh7+ Kd6 51. Rxa7 { [%csl Gf4,Ge3,Gb6,Gd4] } 51... Rf2 52. Rh7 { [%csl Gh6,Gd6][%cal Gh7h6,Gh6d6,Gd6d7] } 52... Rd2+ 53. Ke4 b5 54. Rb7 Rb2 55. f5 (55. Kf5 Kc6 56. Rb8 Kc7 { [%cal Gb8h8] } 57. Rh8 b4 58. e4 { [%csl Gf5,Gf4,Ge4,Gh1,Rb4][%cal Ge4e7,Gf4f8,Gh8h1] }) 55... Rb4+ 56. Kf3 { [%csl Ge5][%cal Gd6e5] } 56... Ke5 57. e4 Rb3+ (57... Rxe4 58. Rxb5+ { [%csl Gb5] }) 58. Kg4 Kxe4 59. f6 Rb1 60. Kg5 (60. f7 Rf1 { [%csl Gf7][%cal Gf1f7] }) 60... Kd4 61. Rh7 (61. f7 Rf1 62. Kg6 Kc4 63. Kg7 b4 64. f8=Q Rxf8 65. Kxf8 b3 { [%csl Rf8] } 66. Ke7 Kc3 67. Kd6 Kc2 68. Kc5 b2 { [%csl Gb1,Gb2][%cal Gb2b1,Gb7b2] }) 61... Rg1+ 62. Kf5 Rf1+ 63. Ke6 b4 64. Rh4+ Kc3 65. Rh3+ Kc2 66. Rh2+ Kc3 67. Rh3+ Kc2 68. f7 b3 69. Rh2+ Kc3 70. Rh3+ Kc2 71. Rh2+ Kc3 72. Rh3+ Kc2 73. Rh2+ { 1/2-1/2 The game is a draw. } *
+
+
+[Event "Battle of the Sexes 2022"]
+[Site "Gibraltar ENG"]
+[Date "2022.02.01"]
+[Round "8.3"]
+[White "Eric Rosen"]
+[Black "Gunay Mammadzada"]
+[Result "1/2-1/2"]
+[WhiteElo "2356"]
+[BlackElo "2470"]
+[Variant "Standard"]
+[ECO "D00"]
+[Opening "Queen's Pawn Game: Accelerated London System"]
+[StudyName "Battle of the Sexes"]
+[ChapterName "Eric Rosen - Gunay Mammadzada"]
+[ChapterURL "https://lichess.org/study/rzg0BXSb/Qx4kfqWc"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 { [%eval 0.3] } 1... d5 { [%eval 0.28] } 2. Bf4 { [%eval 0.0] } 2... Nf6 { [%eval 0.0] } 3. e3 { [%eval 0.09] } 3... e6 { [%eval 0.19] } 4. Nf3 { [%eval 0.09] } 4... Bd6 { [%eval 0.13] } 5. Ne5 { [%eval 0.0] } 5... O-O { [%eval 0.0] } 6. Nd2 { [%eval 0.01] } 6... b6 { [%eval 0.13] } 7. h4 { [%eval 0.09] } 7... Bb7 { [%eval 0.56] } 8. Qf3 { [%eval 0.48] } 8... Nc6?! { [%eval 1.11] } { Inaccuracy. Ne4 was best. } (8... Ne4) 9. h5 { [%eval 0.94] } 9... h6 { [%eval 1.11] } 10. c3?! { [%eval 0.49] } { Inaccuracy. O-O-O was best. } (10. O-O-O Bxe5 11. dxe5 Nd7 12. Qg3 Kh8 13. Nf3 Nc5 14. Qh2 Ne4 15. g4 Nb4 16. Kb1 d4) 10... Kh8 { [%eval 0.63] } 11. Bd3?! { [%eval -0.17] } { Inaccuracy. Qh3 was best. } (11. Qh3 Ne4 12. Rd1 Qe8 13. Bb5 a6 14. Ba4 b5 15. Bc2 Nxe5 16. dxe5 Be7 17. Nb3 b4) 11... Bxe5 { [%eval 0.0] } 12. dxe5 { [%eval -0.08] } 12... Nd7 { [%eval -0.17] } 13. Qg3 { [%eval -0.02] } 13... Nc5 { [%eval -0.18] } 14. Bc2 { [%eval -0.29] } 14... Ba6 { [%eval -0.13] } 15. O-O-O { [%eval -0.29] } 15... Bd3?! { [%eval 0.24] } { Inaccuracy. Be2 was best. } (15... Be2 16. Nf3 Bxd1 17. Rxd1 Qe7 18. Qh2 b5 19. Nd4 Nxd4 20. exd4 Ne4 21. f3 Ng5 22. Qh4) 16. Qh2? { [%eval -0.98] } { Mistake. Bxd3 was best. } (16. Bxd3) 16... f6 { [%eval -0.8] } 17. Nf3? { [%eval -2.06] } { Mistake. f3 was best. } (17. f3 fxe5 18. Bxe5 Nxe5 19. Qxe5 Bxc2 20. Kxc2 Qd7 21. Rhg1 a5 22. g4 Qb5 23. g5 Rf5) 17... Bxc2 { [%eval -1.66] } 18. Kxc2 { [%eval -1.85] } 18... fxe5 { [%eval -1.89] } 19. Bxe5 { [%eval -2.23] } 19... Nxe5 { [%eval -1.91] } 20. Qxe5 { [%eval -1.9] } 20... Rf5 { [%eval -1.86] } 21. Qh2 { [%eval -1.84] } 21... Ne4 { [%eval -1.99] } 22. Rhf1 { [%eval -2.07] } 22... c5? { [%eval -0.48] } { Mistake. Qd7 was best. } (22... Qd7 23. Kc1 Qf7 24. Ne5 Qxh5 25. Qxh5 Rxh5 26. f4 Kg8 27. Rg1 b5 28. Nc6 Kf7 29. g4) 23. Ne5?? { [%eval -2.69] } { Blunder. Nh4 was best. } (23. Nh4 Nxf2) 23... Qe8?? { [%eval 0.0] } { Blunder. Nxf2 was best. } (23... Nxf2 24. g4 (24. Rd2 Qf6 25. g4)) 24. g4 { [%eval 0.0] } 24... Qa4+ { [%eval 0.0] } 25. Kc1 { [%eval 0.0] } 25... Rf6 { [%eval 0.0] } 26. f3 { [%eval -0.19] } 26... Ng5? { [%eval 1.27] } { Mistake. Qxa2 was best. } (26... Qxa2 27. Kc2 Qa4+ 28. Kb1 Ng5 29. Qc2 Qxc2+ 30. Kxc2 Rd8 31. Ra1 a5 32. b4 cxb4 33. cxb4) 27. f4?? { [%eval -0.28] } { Blunder. a3 was best. } (27. a3 Nf7) (27. b3) 27... Qxa2 { [%eval -0.17] } 28. Kc2 { [%eval 0.0] } 28... Qa4+ { [%eval -0.04] } 29. Kb1 { [%eval -0.29] } 29... Ne4?! { [%eval 0.63] } { Inaccuracy. Nf7 was best. } (29... Nf7) 30. Rg1?! { [%eval -0.33] } { Inaccuracy. g5 was best. } (30. g5 hxg5) 30... Qb3 { [%eval 0.1] } 31. Qc2?! { [%eval -0.42] } { Inaccuracy. Rc1 was best. } (31. Rc1 Kh7) 31... Qxc2+ { [%eval -0.39] } 32. Kxc2 { [%eval 0.0] } 32... c4 { [%eval -0.26] } 33. Ra1?! { [%eval -1.28] } { Inaccuracy. Nd7 was best. } (33. Nd7 Rf7 34. Ne5 Rc7 35. g5 hxg5 36. fxg5 Kg8 37. Rdf1 Rf8 38. Rf4 a5 39. g6 Rf6) 33... Nc5?! { [%eval -0.5] } { Inaccuracy. Kh7 was best. } (33... Kh7) 34. g5 { [%eval -0.36] } 34... hxg5 { [%eval -0.56] } 35. Rxg5 { [%eval -0.39] } 35... Rf5?? { [%eval 1.26] } { Blunder. Ne4 was best. } (35... Ne4) 36. Rxf5 { [%eval 1.47] } 36... exf5 { [%eval 1.46] } 37. Rd1 { [%eval 1.32] } 37... Nd3? { [%eval 3.05] } { Mistake. Ne4 was best. } (37... Ne4 38. Rxd5 Nf6 39. Ng6+ Kh7 40. Rxf5 Rd8 41. Ne5 Rd5 42. Rg5 Ne4 43. Rg6 b5 44. Re6) 38. Nxd3 { [%eval 3.3] } 38... cxd3+ { [%eval 3.13] } 39. Rxd3 { [%eval 3.09] } 39... Rd8 { [%eval 2.26] } 40. c4 { [%eval 2.36] } 40... Rc8 { [%eval 2.23] } 41. Rxd5 { [%eval 2.29] } 41... Rxc4+ { [%eval 2.23] } 42. Kd3 { [%eval 2.24] } 42... Rb4 { [%eval 2.28] } 43. Rxf5 { [%eval 2.47] } 43... Rb3+ { [%eval 2.4] } 44. Kd4 { [%eval 2.41] } 44... Kg8 { [%eval 2.32] } (44... Rxb2 45. Rf8+ Kh7 46. e4) 45. Rg5 { [%eval 2.12] } 45... Kf7 { [%eval 2.05] } 46. Rg2 { [%eval 2.08] } 46... Rb5?! { [%eval 3.3] } { Inaccuracy. Rb4+ was best. } (46... Rb4+) 47. Rh2 { [%eval 3.32] } 47... Ke7?! { [%eval 4.93] } { Inaccuracy. Ke6 was best. } (47... Ke6 48. h6) 48. h6? { [%eval 2.81] } { Mistake. e4 was best. } (48. e4) 48... gxh6 { [%eval 2.73] } 49. Rxh6 { [%eval 2.23] } 49... Rxb2?! { [%eval 3.04] } { Inaccuracy. a5 was best. } (49... a5 50. Rh2) 50. Rh7+ { [%eval 3.08] } 50... Kd6 { [%eval 3.36] } 51. Rxa7 { [%eval 3.47] } 51... Rf2?! { [%eval 4.47] } { Inaccuracy. Rb4+ was best. } (51... Rb4+ 52. Kc3) 52. Rh7 { [%eval 3.93] } 52... Rd2+ { [%eval 4.23] } 53. Ke4 { [%eval 3.82] } 53... b5 { [%eval 4.09] } 54. Rb7 { [%eval 4.32] } 54... Rb2 { [%eval 3.99] } 55. f5?? { [%eval 0.0] } { Blunder. Kf5 was best. } (55. Kf5) 55... Rb4+ { [%eval 0.0] } 56. Kf3 { [%eval 0.0] } 56... Ke5 { [%eval 0.0] } 57. e4 { [%eval 0.05] } 57... Rb3+ { [%eval 0.0] } 58. Kg4 { [%eval 0.03] } 58... Kxe4 { [%eval 0.0] } 59. f6 { [%eval 0.0] } 59... Rb1 { [%eval 0.0] } 60. Kg5 { [%eval 0.0] } 60... Kd4 { [%eval 0.0] } 61. Rh7 { [%eval 0.0] } 61... Rg1+ { [%eval 0.0] } 62. Kf5 { [%eval 0.0] } 62... Rf1+ { [%eval 0.0] } 63. Ke6 { [%eval 0.0] } 63... b4 { [%eval 0.0] } 64. Rh4+ { [%eval 0.0] } 64... Kc3 { [%eval 0.0] } 65. Rh3+ { [%eval 0.0] } 65... Kc2 { [%eval 0.0] } 66. Rh2+ { [%eval 0.0] } 66... Kc3 { [%eval 0.0] } 67. Rh3+ { [%eval 0.0] } 67... Kc2 { [%eval 0.0] } 68. f7 { [%eval 0.0] } 68... b3 { [%eval 0.0] } 69. Rh2+ { [%eval 0.0] } 69... Kc3 { [%eval 0.0] } 70. Rh3+ { [%eval 0.0] } 70... Kc2 { [%eval 0.0] } 71. Rh2+ { [%eval 0.0] } 71... Kc3 { [%eval 0.0] } 72. Rh3+ { [%eval 0.0] } 72... Kc2 { [%eval 0.0] } 73. Rh2+ { [%eval 0.0] } { 1/2-1/2 The game is a draw. } 1/2-1/2
+
+
+[Event "Battle of the Sexes 2022"]
+[Site "Gibraltar ENG"]
+[Date "2022.02.02"]
+[Round "9.8"]
+[White "Zhansaya Abdumalik"]
+[Black "Eric Rosen"]
+[Result "*"]
+[WhiteElo "2491"]
+[BlackElo "2356"]
+[Variant "Standard"]
+[ECO "B75"]
+[Opening "Sicilian Defense: Dragon Variation, Yugoslav Attack, Early Deviations"]
+[StudyName "Battle of the Sexes"]
+[ChapterName "Zhansaya Abdumalik - Eric Rosen"]
+[ChapterURL "https://lichess.org/study/rzg0BXSb/Ffktvib8"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 { [%eval 0.28] } 1... c5 { [%eval 0.32] } 2. Nf3 { [%eval 0.0] } 2... d6 { [%eval 0.0] } 3. d4 { [%eval 0.15] } 3... Nf6 { [%eval 0.47] } (3... cxd4 4. Nxd4 Nf6 5. f3) 4. Nc3 { [%eval 0.35] } (4. Bb5+) 4... cxd4 { [%eval 0.26] } 5. Nxd4 { [%eval 0.18] } 5... g6?! { [%eval 0.79] } { Inaccuracy. a6 was best. } (5... a6 6. Bd3 e5 7. Nde2 Nc6 8. O-O Be6 9. h3 d5 10. exd5) 6. Be3 { [%eval 0.46] } 6... Bg7 { [%eval 0.55] } 7. f3 { [%eval 0.5] } 7... a6 { [%eval 0.77] } 8. Qd2 { [%eval 1.1] } 8... h5 { [%eval 1.02] [%csl Rh5][%cal Ga7a6,Gh7h5] } 9. O-O-O { [%eval 0.58] } (9. Bc4 Nbd7 10. Bb3 Nc5 11. O-O-O b5 12. Kb1 Bb7 13. a3 Nxb3 14. cxb3 Rc8 15. Nc2 Qc7 16. Bd4 O-O 17. Qf2 e5 18. Bb6 Qd7 19. Nb4 Rxc3 20. bxc3 Qe6 21. Kb2 Rc8 22. Ba5 d5 23. Qa7 Ba8 24. Nxa6 Bf8 25. Nc7 Qe7 26. Nxb5 Qe8 27. Nc7 Qe7 28. Bb6 dxe4 29. Nxa8 Qxa7 30. Bxa7 Rxa8 31. Bf2 Bxa3+ 32. Kc2 Be7 33. Ra1 Rc8 34. Rhd1 exf3 35. gxf3 e4 36. fxe4 Nxe4 37. Bd4 f5 38. Kb2 Kf7 39. b4 g5 40. Kb3 g4 41. Ra7 Ke6 42. Ra6+ Kf7 43. c4 Bd6 44. Bg1 Ke7 45. c5 Be5 46. Rd5 { Grischuk, Alexander - Carlsen, Magnus, 1-0, Saint Louis Rapid, 2020, https://lichess.org/RjbXhrby }) 9... b5 { [%eval 0.42] } 10. Kb1 { [%eval 0.56] } 10... Bb7 { [%eval 0.28] [%csl Gb7][%cal Gc8b7] } 11. h4 { [%eval 0.0] } (11. e5 dxe5 12. Ne6 { [%csl Ge6][%cal Gf7e6] } 12... fxe6 (12... Qxd2 13. Nxg7+ Kf8 { [%csl Gd2] } 14. Ne6+ fxe6 15. Rxd2 Nd5 { [%csl Re5,Re6,Re7][%cal Gd5e3,Gd5c3] }) 13. Qxd8+) 11... Nbd7 { [%eval -0.34] } 12. a3 { [%eval -0.01] } 12... Qc7 { [%eval 0.0] } 13. Be2 { [%eval 0.0] } 13... Rb8 { [%eval -0.15] } 14. Rc1?! { [%eval -0.74] } { Inaccuracy. Rhe1 was best. } { [%csl Gb8,Gb1][%cal Gb8b1] } (14. Rhe1 Ba8) 14... Ba8 { [%eval -0.64] } 15. Na2 { [%eval -0.36] } 15... d5? { [%eval 1.07] } { Mistake. Ne5 was best. } (15... Ne5 16. Nb4) 16. Nb4 { [%eval 0.87] [%csl Ga6][%cal Gb4a6,Ga6c7,Ga6b8] } (16. exd5 Nxd5 { [%csl Ge3,Rg7][%cal Gd5e3,Gg7b2,Ga8g2] }) 16... Qd6 { [%eval 0.98] } 17. Nb3?! { [%eval 0.08] } { Inaccuracy. Rhd1 was best. } { [%csl Gd6,Ga5,Gc5][%cal Gd2d6,Gb3c5,Gb3a5] } (17. e5) (17. Rhd1 O-O 18. exd5 Nxd5 19. Nxb5 Qe6 20. Nxd5 Bxd5 21. Nd4 Qb6 22. c4 Ba8 23. b4 a5) 17... O-O { [%eval 0.38] } 18. Rhd1 { [%eval 0.33] } 18... Nb6? { [%eval 1.63] } { Mistake. Rbc8 was best. } (18... Rbc8 19. exd5 Nb6 20. Bf4 Qd7 21. d6 Nc4 22. Bxc4 bxc4 23. dxe7 Qxe7 24. Bd6 Qd8 25. Bxf8) 19. Bc5 { [%eval 1.8] [%csl Rf8,Re7,Rd6,Gc5][%cal Gc5f8] } (19. e5 { [%cal Ge5f6,Ge5d6] } 19... Qxe5 20. Bf4 { [%csl Ge5] } 20... Ne4 { [%csl Rd2,Rb2][%cal Ge4d2,Ge5b2] } 21. Bxe5 Nxd2+ 22. Rxd2 Bxe5) 19... Qh2 { [%eval 1.83] } (19... Qe5 { [%csl Ge5] } 20. Qg5 { [%cal Gg5e5] } 20... Qxb2+ 21. Kxb2 Nxe4+ 22. Ka2 (22. Bd4 Nxg5 23. hxg5)) 20. Nxa6 { [%eval 1.4] } (20. Rh1 Qg3 (20... Qxg2 21. Rcg1) 21. Nxa6 { [%csl Ga6][%cal Gb4a6] } 21... Nc4) 20... Nc4 { [%eval 1.31] } 21. Qe1?? { [%eval -1.23] } { Blunder. Bxc4 was best. } (21. Bxc4 bxc4 22. Nxb8 (22. Rh1 Qg3 23. Rh3 Qe5 24. Bd4 Qd6 25. Nxb8 e5 26. Bc5 Qxb8 27. Qb4 cxb3) 22... Rxb8 23. Nd4 Qc7 { [%cal Gc7c5,Gb8b4] }) 21... Rbc8 { [%eval -1.34] } 22. Qg1?! { [%eval -2.38] } { Inaccuracy. e5 was best. } (22. e5 Qxe5) 22... Qe5?? { [%eval -0.28] } { Blunder. Qxg1 was best. } { [%csl Gb2][%cal Ge5b2] } (22... Qxg1) 23. Bd4 { [%eval -0.25] } 23... Qd6 { [%eval -0.28] [%cal Gd6a6] } 24. Nb4? { [%eval -1.48] } { Mistake. e5 was best. } (24. e5 Qxa6) 24... dxe4 { [%eval -1.4] } 25. fxe4 { [%eval -1.16] } 25... Bxe4 { [%eval -1.25] [%csl Ge4,Rg1,Re2,Rc1,Rb3][%cal Gb5c4,Gc8c4,Ge4b1] } 26. g4?? { [%eval -3.12] } { Blunder. Nd2 was best. } (26. Nd2 Qe6) 26... Qe6 { [%eval -2.93] } 27. Bxc4 { [%eval -3.21] } (27. g5 Nxa3+ 28. bxa3 Qxb3+ 29. Bb2 Nd5 { [%csl Gc3,Gb3,Ge4,Rb1][%cal Gd5c3,Gg7b2,Gc8c1] }) 27... bxc4 { [%eval -2.65] [%csl Ge4][%cal Ge4b1] } 28. Nc5 { [%eval -2.89] } 28... Rxc5 { [%eval -2.74] } 29. Bxc5 { [%eval -3.25] } 29... Nxg4?! { [%eval -2.0] } { Inaccuracy. hxg4 was best. } { [%csl Gg8,Ge7,Gf7,Gg6,Gh5][%cal Ge4b1,Gg7b2] } (29... hxg4) 30. Ka2? { [%eval -3.76] } { Mistake. Bd4 was best. } (30. Bd4 Bh6) 30... Ra8?! { [%eval -2.74] } { Inaccuracy. f5 was best. } { [%csl Ga8,Ga2][%cal Gf8a8,Ga8a2] } (30... f5 31. Rd4 Bf6 32. Re1 Rc8 33. Red1 Bxh4 34. Rd8+ Rxd8 35. Rxd8+ Kf7 36. Qd1 Bf6 37. Nd5) 31. Bb6?! { [%eval -3.51] } { Inaccuracy. Re1 was best. } (31. Re1 Bf6) 31... Bh6?! { [%eval -2.74] } { Inaccuracy. Bf6 was best. } { [%csl Rc1][%cal Gh6c1] } (31... Bf6 32. Re1 Bxh4 33. Re2 Kh7 34. Rd1 f5 35. Nd5 Qc6 36. Rxe4 fxe4 37. Qg2 Rb8 38. Bc7) 32. Rb1?! { [%eval -3.62] } { Inaccuracy. Bd4 was best. } { [%csl Rc2][%cal Ge4c2,Gb4c2] } (32. Bd4 Rc8 33. Ka1 Bxc1 34. Rxc1 Qd6 35. Bc3 e5 36. Rd1 Qf6 37. Qe1 Bf3 38. Rd2 Rd8) 32... c3+?! { [%eval -2.67] } { Inaccuracy. f5 was best. } { [%cal Ge6a2] } (32... f5 33. Bd4) 33. b3 { [%eval -2.54] } 33... Bd2 { [%eval -2.44] [%csl Rc2][%cal Ge4c2,Ge6f5] } 34. Bc5?! { [%eval -3.67] } { Inaccuracy. Re1 was best. } (34. Re1 Qf5) 34... Qf6?! { [%eval -2.3] } { Inaccuracy. Rc8 was best. } { [%csl Rh4][%cal Gf6h4] } (34... Qf5 35. Rf1 { [%csl Rf5] }) (34... Rc8 35. Re1 Qf5 36. Rxe4 Qxe4 37. Qd4 Qxd4 38. Bxd4 e5 39. Bb6 f5 40. a4 f4 41. a5) 35. Rf1 { [%eval -3.82] } 35... Qxh4? { [%eval -2.06] } { Mistake. Qe5 was best. } (35... Qe5 36. Qd4 Qxd4 37. Bxd4 e5 38. Bb6 f5 39. a4 Kf7 40. Ka3 g5 41. hxg5 h4 42. Nd3) 36. Qd4 { [%eval -2.54] } 36... f5?? { [%eval -0.53] } { Blunder. Ne3 was best. } (36... Ne3 37. Rh1 (37. Rf3) 37... Qf4 38. Rxh5 gxh5 39. Rg1+ Ng4 40. Nd5 { [%csl Rf4,Ge4,Ge7][%cal Gd5f4,Rd4f4,Gd5e7] } 40... Bxd5 41. Qxd5 Ra6 42. Qxh5 { [%csl Rg4][%cal Gh5g4,Rg1g4] } 42... Rg6) 37. Qc4+? { [%eval -2.01] } { Mistake. Nd5 was best. } { [%csl Gf8][%cal Gg8f8] } (37. Nd5 Kh7) 37... Kf8?? { [%eval 7.91] } { Blunder. Kg7 was best. } { [%csl Rf5,Re4] } (37... Kg7 38. Bd4+ Kh6 { [%csl Gh6] }) 38. Qxe4 { [%eval 7.62] } 38... Ra5 { [%eval 7.86] } 39. Qd4 { [%eval 7.8] } 39... Qf6 { [%eval 10.66] } 40. Qd8+ { [%eval 10.62] [%csl Ga5][%cal Gd8f8,Gd8a5] } 40... Kf7 { [%eval 10.58] } 41. Qxa5 { [%eval 10.73] } 41... Qe5 { [%eval 11.0] } 42. Qa7 { [%eval 10.85] } 42... Qe4 { [%eval 10.93] [%csl Rc2] } 43. Qd7 { [%eval 10.2] } 43... h4 { [%eval 10.53] } 44. Rbd1 { [%eval 10.84] } 44... h3 { [%eval 10.97] } 45. Rxd2 { [%eval 9.85] } 45... cxd2 { [%eval 9.85] } 46. Qxd2 { [%eval 9.81] } 46... h2 { [%eval 9.87] } 47. Qd5+ { [%eval 9.67] } 47... Qxd5 { [%eval 9.92] } 48. Nxd5 { [%eval 9.86] } 48... e5 { [%eval 11.02] } 49. a4 { [%eval 10.92] } 49... Ke6 { [%eval 11.32] } 50. c4 { [%eval 11.81] } { 1-0 White wins. } { [%csl Ga8,Ra4,Ge5,Gf5,Gg6,Gh2][%cal Ga4a8] } *
+
+

@@ -1,0 +1,248 @@
+[Event "The Caro-Kann: Introduction to the Caro-Kann"]
+[Date "2026.05.24"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B12"]
+[Opening "Caro-Kann Defense"]
+[StudyName "The Caro-Kann"]
+[ChapterName "Introduction to the Caro-Kann"]
+[ChapterURL "https://lichess.org/study/5b33uOBV/bqNxMkdh"]
+[Annotator "https://lichess.org/@/Booros"]
+[UTCDate "2026.05.24"]
+[UTCTime "21:37:59"]
+[ChapterMode "gamebook"]
+
+{ The Caro-Kann Defense begins after white plays 1.e4. We are going to play c6. }
+1. e4 c6 { Here, white can still play a number of moves, but the most common is taking the full center. After this, we are going to play d5. } 2. d4 d5 { From here, white has four typical moves: The Exchange Variation (Blue), The Advance Variation (Yellow), or defending the pawn with either the knight (Green) or a pawn (Red). } { [%csl Gc3,Bd5,Rf3,Ye5][%cal Gb1c3,Be4d5,Rf2f3,Ye4e5] } *
+
+
+[Event "The Caro-Kann: The Advance Variation - White Captures"]
+[Date "2026.05.24"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B12"]
+[Opening "Caro-Kann Defense: Advance Variation, Botvinnik-Carls Defense"]
+[StudyName "The Caro-Kann"]
+[ChapterName "The Advance Variation - White Captures"]
+[ChapterURL "https://lichess.org/study/5b33uOBV/QbQdXQXq"]
+[Annotator "https://lichess.org/@/Booros"]
+[FEN "rnbqkbnr/pp2pppp/2p5/3p4/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 0 3"]
+[SetUp "1"]
+[UTCDate "2026.05.24"]
+[UTCTime "21:44:12"]
+[ChapterMode "gamebook"]
+
+3. e5 { First we are going to look at the advance variation. Here we are going to push our c pawn. } 3... c5 4. dxc5 { If white captures here, we are going to move our knight out to c3. } 4... Nc6 5. Nf3 { Once we see the knight come out, we are going to pin it. } 5... Bg4 6. Be2 { Wait! Don't go for the knight and pawn yet! We aren't going to take that pawn until we are pressured to do so. It isn't going anywhere, and we don't want to weaken our queenside without reason. Instead, close the center up and defend your d pawn with a pawn. } 6... e6 7. Be3 { We are looking to take back the c pawn, but if it gets defended, we are going to look to get our other knight out. Do you see how? } 7... Nge7 8. O-O { Finish getting the knight out. } 8... Nf5 { Our knight likes to live on this square if we can get the bishop out to g4. Whenever our bishop gets attacked, we are going to take and then take the pawn on e5. } *
+
+
+[Event "The Caro-Kann: The Advance Variation - White Captures, Bishop Out"]
+[Date "2026.05.24"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "The Caro-Kann"]
+[ChapterName "The Advance Variation - White Captures, Bishop Out"]
+[ChapterURL "https://lichess.org/study/5b33uOBV/BG3qPUDY"]
+[Annotator "https://lichess.org/@/Booros"]
+[FEN "r1bqkbnr/pp2pppp/2n5/2PpP3/8/8/PPP2PPP/RNBQKBNR w KQkq - 1 5"]
+[SetUp "1"]
+[UTCDate "2026.05.24"]
+[UTCTime "21:51:41"]
+[ChapterMode "gamebook"]
+
+5. Bf4 { If white brings the bishop out instead, we are going to get our bishop to the more classical f5 square, and then continue from there. } 5... Bf5 *
+
+
+[Event "The Caro-Kann: The Advance Variation - White Defends"]
+[Date "2026.05.24"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "The Caro-Kann"]
+[ChapterName "The Advance Variation - White Defends"]
+[ChapterURL "https://lichess.org/study/5b33uOBV/H31qQBpe"]
+[Annotator "https://lichess.org/@/Booros"]
+[FEN "rnbqkbnr/pp2pppp/8/2ppP3/3P4/8/PPP2PPP/RNBQKBNR w KQkq - 0 4"]
+[SetUp "1"]
+[UTCDate "2026.05.24"]
+[UTCTime "21:53:08"]
+[ChapterMode "gamebook"]
+
+4. c3 { If white instead defends their d pawn, we have the same gameplan. Get the knight out, then the bishop, and then slide the pawn up. } 4... Nc6 5. Nf3 { What do we do once the knight comes out? } 5... Bg4 6. Be2 { What's the next move in the setup? } 6... e6 7. O-O { Continue how you've been taught. } 7... Nge7 8. h3 { What do we do when the bishop gets attacked? } 8... Bxf3 9. Bxf3 { Take in the center. } 9... cxd4 10. cxd4 { Now our plan is going to involve targeting the weak d4 pawn. This can be with either the queen or the knight, as our knight on c6 already exerts a lot of pressure on the center of the board. The queen is typically better here, because we can also target the b2 pawn, overextending white's dark-squared bishop. } { [%csl Gd4,Gb6,Gf5][%cal Gc6d4,Gd8b6,Ge7f5] } *
+
+
+[Event "The Caro-Kann: The Exchange Variation"]
+[Date "2026.05.24"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B13"]
+[Opening "Caro-Kann Defense: Exchange Variation"]
+[StudyName "The Caro-Kann"]
+[ChapterName "The Exchange Variation"]
+[ChapterURL "https://lichess.org/study/5b33uOBV/j6DvpxAr"]
+[Annotator "https://lichess.org/@/Booros"]
+[FEN "rnbqkbnr/pp2pppp/2p5/3p4/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 0 3"]
+[SetUp "1"]
+[UTCDate "2026.05.24"]
+[UTCTime "22:25:04"]
+[ChapterMode "gamebook"]
+
+3. exd5 { Take back the pawn! } 3... cxd5 4. Nf3 { Get your knight out to attack the pawn! } 4... Nc6 5. Be2 { Get the other knight out! } 5... Nf6 6. O-O { Get the bishop out! } 6... Bg4 7. Nc3 { Close the center up with your pawn } 7... e6 { [%csl Gd6][%cal Gf8d6] } *
+
+
+[Event "The Caro-Kann: The Exchange Variation - The Panov"]
+[Date "2026.05.24"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B13"]
+[Opening "Caro-Kann Defense: Panov Attack"]
+[StudyName "The Caro-Kann"]
+[ChapterName "The Exchange Variation - The Panov"]
+[ChapterURL "https://lichess.org/study/5b33uOBV/CrGIK8jD"]
+[Annotator "https://lichess.org/@/Booros"]
+[FEN "rnbqkbnr/pp2pppp/8/3p4/3P4/8/PPP2PPP/RNBQKBNR w KQkq - 0 4"]
+[SetUp "1"]
+[UTCDate "2026.05.24"]
+[UTCTime "23:19:48"]
+[ChapterMode "gamebook"]
+
+4. c4 { Here, white challenges our setup immediately with c4, known as the Panov, which resembles the Queen's Gambit. Here we are going to bring our knight out, and our light-squared bishop is going to stay at home for a bit. } 4... Nf6 5. Nf3 { Solidify the center with a pawn. } 5... e6 6. Nc3 { Get your bishop out to castle. } 6... Be7 7. Be2 { Since the bishop moved, we can now take the pawn, as white doesn't gain any development from capturing anymore. } 7... dxc4 8. Bxc4 { Now castle! } 8... O-O 9. O-O { Next, we are going to push our b-pawn, to make a luft for our bishop. } 9... b6 { [%csl Gb7,Gc6][%cal Gc8b7,Gb8c6] } *
+
+
+[Event "The Caro-Kann: The Classical Variation"]
+[Date "2026.05.24"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B15"]
+[Opening "Caro-Kann Defense: Tartakower Variation"]
+[StudyName "The Caro-Kann"]
+[ChapterName "The Classical Variation"]
+[ChapterURL "https://lichess.org/study/5b33uOBV/U5ulwaOa"]
+[Annotator "https://lichess.org/@/Booros"]
+[FEN "rnbqkbnr/pp2pppp/2p5/3p4/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 0 3"]
+[SetUp "1"]
+[UTCDate "2026.05.24"]
+[UTCTime "22:38:27"]
+[ChapterMode "gamebook"]
+
+3. Nc3 { If White plays their queenside knight out to either square defending their pawn, we are going to take the pawn. This is known as the Tarktakower. } 3... dxe4 4. Nxe4 { After they recapture, we are going to attack the knight with our knight. } 4... Nf6 { If our opponent doesn't take here, we are going to just develop normally, bringing out our bishop and knight (Green), before using an e- or c-pawn break to open the position (Blue), maybe playing e6 to get our bishop out and castle kingside (Yellow). } { [%csl Bc5,Be5,Gf5,Gd7,Ye6,Ye7,Yg8,Yf8][%cal Be7e5,Bc6c5,Gb8d7,Gc8f5,Ye7e6,Yf8e7,Ye8g8,Yh8f8] } (4... Nd7 { This is known as the Karpov variation, and the goal is to bring the knight out with a delay, so we don't double our pawns and still get a knight on f6. } 5. c3 Ngf6 6. Nxf6+ Nxf6) (4... Bf5 { This is also a proper move, attacking the knight immediately. This move order is just more highly theoretical, and so we avoid it in this study. } 5. Ng3 Bg6) 5. Nxf6+ { If white takes, however, we are going to take with the e-pawn. } 5... exf6 6. Bd3 { Get the bishop out next. } 6... Bd6 7. Nf3 { Now castle. } 7... O-O 8. O-O { Slide the rook to the open file. } 8... Re8 { The gameplan here is to move your knight out, then your bishop up, and then the queen, connecting your rooks. Here is one continuation that you might get in your games, leading to a quick win. } { [%csl Rd7,Be6,Gg6][%cal Gb8d7,Rd8d7,Bc8e6,Gd7f8,Gf8g6] } 9. Be3 { Follow the gameplan. } 9... Nd7 10. Qd2 { Follow the gameplan. } 10... Nf8 11. c3 { Follow the gameplan. } 11... Be6 12. Rfe1 { Follow the gameplan. } 12... Qd7 13. h3 { Here white plays a very lazy move, h3. Now we get a very nice trick in these positions. We can actually sacrifice our bishop on h3! } 13... Bxh3 14. gxh3 { Bring in the queen! } 14... Qxh3 { [%csl Gh2,Rf3][%cal Gh3h2,Gd6h2,Rh3f3] } 15. Be2 { White backs the bishop up to defend the knight. Here we bring our rook up and over. } 15... Re4 { Here we have a large threat on the king. White has no escape squares, and rook to g4 is mate. The position from here is a win with proper play. } { [%csl Rh1,Rh2,Rg2,Rf1,Bg4,Bg1][%cal Be4g4,Bg4g1,Rh3f1,Rh3h1] } *
+
+
+[Event "The Caro-Kann: The Classical Variation - Blackmar Diemer Gambit"]
+[Date "2026.05.24"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B15"]
+[Opening "Caro-Kann Defense: Rasa-Studier Gambit"]
+[StudyName "The Caro-Kann"]
+[ChapterName "The Classical Variation - Blackmar Diemer Gambit"]
+[ChapterURL "https://lichess.org/study/5b33uOBV/MgOq5FT7"]
+[Annotator "https://lichess.org/@/Booros"]
+[FEN "rnbqkbnr/pp2pppp/2p5/3p4/3PP3/2N5/PPP2PPP/R1BQKBNR b KQkq - 1 3"]
+[SetUp "1"]
+[UTCDate "2026.05.24"]
+[UTCTime "23:24:49"]
+[ChapterMode "gamebook"]
+
+{ Do what you know. }
+3... dxe4 4. f3 { This pawn push is known as the Blackmar-Diemer Gambit. Here, we recommend not playing into it, instead pushing the pawn, leaving the f pawn in an awkward position that blocks the knight. } 4... e3 5. Bxe3 *
+
+
+[Event "The Caro-Kann: The Classical Variation - Plans"]
+[Date "2026.05.24"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "The Caro-Kann"]
+[ChapterName "The Classical Variation - Plans"]
+[ChapterURL "https://lichess.org/study/5b33uOBV/uvrc4UUu"]
+[Annotator "https://lichess.org/@/Booros"]
+[FEN "r3rnk1/pp1q1ppp/2pbbp2/8/3P4/2PBBN2/PP1Q1PPP/R3R1K1 w - - 3 13"]
+[SetUp "1"]
+[UTCDate "2026.05.24"]
+[UTCTime "22:58:37"]
+[ChapterMode "gamebook"]
+
+{ The plans if our opponent doesn't immediately crumble and give us the game are to create a pawn storm on the queenside to take space, } { [%csl Ga4,Gb5,Gd8,Gg4,Gg6][%cal Gb7b5,Ga7a5,Ga5a4,Ga8d8,Ge6g4,Gf8g6] }
+ *
+
+
+[Event "The Caro-Kann: The Fantasy Variation"]
+[Date "2026.05.24"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B12"]
+[Opening "Caro-Kann Defense: Maróczy Variation"]
+[StudyName "The Caro-Kann"]
+[ChapterName "The Fantasy Variation"]
+[ChapterURL "https://lichess.org/study/5b33uOBV/9NqNDHKM"]
+[Annotator "https://lichess.org/@/Booros"]
+[FEN "rnbqkbnr/pp2pppp/2p5/3p4/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 0 3"]
+[SetUp "1"]
+[UTCDate "2026.05.24"]
+[UTCTime "22:37:47"]
+[ChapterMode "gamebook"]
+
+3. f3 { If we see f3, this is the start of the Fantasy variation. Here, we are not going to take, as that is exactly what white wants us to do. Instead, we are going to go for a fianchetto setup, almost like a Dragon Sicilian, Kings Indian, or Grünfeld, but with slightly different pawn structure on the queenside. } 3... g6 4. Nc3 { Here we fianchetto the bishop. } 4... Bg7 5. Be3 { If we see the bishop come out early, we are going to slide our queen to b6, targeting the pawn the bishop left undefended. } 5... Qb6 6. Qd2 { This is a tricky line, where white wants to target our queen with their rook after we take, but we actually have an escape square still, and so we are fine. } 6... Qxb2 7. Rb1 { Go to the escape square. } 7... Qa3 8. exd5 { If white takes the pawn here, we are going to develop our knight out. } 8... Nf6 *
+
+
+[Event "The Caro-Kann: The Fantasy Variation - Advance"]
+[Date "2026.05.24"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "The Caro-Kann"]
+[ChapterName "The Fantasy Variation - Advance"]
+[ChapterURL "https://lichess.org/study/5b33uOBV/nl2cvLPm"]
+[Annotator "https://lichess.org/@/Booros"]
+[FEN "rnb1k1nr/pp2ppbp/2p3p1/3p4/3PP3/q1N1BP2/P1PQ2PP/1R2KBNR w Kkq - 2 8"]
+[SetUp "1"]
+[UTCDate "2026.05.24"]
+[UTCTime "23:06:36"]
+[ChapterMode "gamebook"]
+
+8. e5 { If white pushes the pawn, we are going to attack it with f6. } 8... f6 { If they take here, we get our knight out for free. If they push again, we just take the pawn. And if they defend the pawn... } 9. f4 { We are going to get our knight to f5, like we already know it likes from the other variations. } 9... Nh6 { [%csl Gf5][%cal Gh6f5] } *
+
+
+[Event "The Caro-Kann: The Fantasy Variation - An Aggressive Counter"]
+[Date "2026.05.24"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B12"]
+[Opening "Caro-Kann Defense: Maróczy Variation"]
+[StudyName "The Caro-Kann"]
+[ChapterName "The Fantasy Variation - An Aggressive Counter"]
+[ChapterURL "https://lichess.org/study/5b33uOBV/knleOY07"]
+[Annotator "https://lichess.org/@/Booros"]
+[FEN "rnbqkbnr/pp2pppp/2p5/3p4/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 0 3"]
+[SetUp "1"]
+[UTCDate "2026.05.24"]
+[UTCTime "23:08:53"]
+[ChapterMode "gamebook"]
+
+3. f3 { A tricky line to play against the Fantasy could be e5, the idea being to get your queen and dark squared bishop out quickly to target down the a7-g1 diagonal } { [%csl Ge5,Gc5,Gb6][%cal Ge7e5,Gd8b6,Gf8c5] } 3... e5 4. dxe5 { Get the bishop out. } 4... Bc5 5. exd5 { Get the queen out. } 5... Qb6 6. Ne2 { This is a horrible move for white. We are only looking at it to show the potency of this variation. Find mate in 2. } 6... Bf2+ 7. Kd2 { Nice catch! Finish the job! } 7... Qe3# *
+
+
+[Event "The Caro-Kann: The Two Knights"]
+[Date "2026.05.24"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B11"]
+[Opening "Caro-Kann Defense: Two Knights Attack, Mindeno Variation, Exchange Line"]
+[StudyName "The Caro-Kann"]
+[ChapterName "The Two Knights"]
+[ChapterURL "https://lichess.org/study/5b33uOBV/tP4JIrze"]
+[Annotator "https://lichess.org/@/Booros"]
+[FEN "rnbqkbnr/pp1ppppp/2p5/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2"]
+[SetUp "1"]
+[UTCDate "2026.05.24"]
+[UTCTime "23:11:43"]
+[ChapterMode "gamebook"]
+
+2. Nf3 { If we see the knight come out, we can still play our pawn up in the same fashion. This will either be something along the lines of the Dinic gambit, or the Two Knights. } 2... d5 3. Nc3 { If we see the Two Knights, we have two options. The first is to take the pawn, and bring our knight out, playing it like the Classical Variation. The second, and what we do in this study, is to pin the knight to the queen, and then bring our pawn up to support our d-pawn. } 3... Bg4 4. h3 { If they attack our bishop, we are going to take the knight. } 4... Bxf3 5. Qxf3 { Support your pawn. } 5... e6 6. Be2 { We can play this like the Fantasy here, with a kingside fianchetto, if we wish. } 6... g6 7. d3 { Finish the fianchetto. } 7... Bg7 *
+
+

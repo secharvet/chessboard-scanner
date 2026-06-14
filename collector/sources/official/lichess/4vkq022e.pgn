@@ -1,0 +1,431 @@
+[Event "Chess Olympiad Budapest 2024 | Open V"]
+[Site "Kingston"]
+[Date "2024.09.20"]
+[White "BAKKER ELLIOTT"]
+[Black "Ellison, Jeremy"]
+[Result "1/2-1/2"]
+[Annotator "ericr"]
+[Variant "Standard"]
+[ECO "B22"]
+[Opening "Sicilian Defense: Alapin Variation, Barmen Defense"]
+[StudyName "Lesson with Supraja & Elliott"]
+[ChapterName "BAKKER ELLIOTT - Ellison, Jeremy"]
+[ChapterURL "https://lichess.org/study/4vkq022e/0hois2cJ"]
+
+1. e4 c5 2. c3 d5 3. exd5 Qxd5 4. Nf3 a6 5. Na3 Nf6 6. Bc4 Qe4+ 7. Qe2 Qxe2+ 8. Bxe2 Nc6 9. O-O Bg4 10. Re1 e6 11. Nc4 Be7 12. Nfe5 Nxe5 13. Nxe5 Bxe2 14. Rxe2 O-O 15. c4 Rad8 16. b3 Nd7 17. Nf3 Bf6 18. Rb1 Nb8 19. Bb2 Bxb2 20. Rxb2 Nc6 21. Ne5 Nxe5 22. Rxe5 b6 23. Re1 Rd3 24. Rd1 Rfd8 25. Kf1 e5 26. Ke2 f5 27. b4 R3d4 28. bxc5 bxc5 29. Rc1 R8d6 30. Rcc2 Kf7 31. Rb3 Kf6 32. Rb7 e4 33. Rc7 f4 34. Rxc5 g5 35. h3 h5 36. Rc8 g4 37. Rf8+ Kg5 38. hxg4 hxg4 39. Rc8 Rd8 40. Rxd8 Rxd8 41. c5 Kf5 42. c6 f3+ 43. gxf3 gxf3+ 44. Ke1 Rh8 45. d4 exd3 46. Rc5+ Ke6 47. c7 Rc8 48. Kd2 Kd6 49. Rc3 Rxc7 50. Rxc7 Kxc7 51. Kxd3 Kd6 52. Ke3 Ke5 53. Kxf3 Kf5 54. Ke3 Ke5 55. f4+ Kf5 56. Kf3 (56. a4 a5 57. Kf3 Ke6 58. Ke4 Kf6 59. Kd5) 56... Kf6 (56... a5 57. a4 Ke6 58. Ke4 Kf6 59. f5 (59. Kd5 Kf5 60. Kc5 Kxf4 61. Kb5 Ke5 62. Kxa5 Kd6 63. Kb6 Kd7 64. Kb7 { [%csl Gb7] } (64. a5 Kc8)) 59... Kf7 60. Kd5 Kf6 61. Kc5 Kxf5 { [%csl Gf5] } 62. Kb5 Ke6 63. Kxa5 Kd7 { [%csl Gc8][%cal Gd7c8] } 64. Kb6 { [%csl Gb6] } 64... Kc8 65. a5 Kb8 { [%csl Ga8][%cal Gb8a8] } 66. a6 Ka8) 57. Ke4 (57. a4 Kf5 58. a5 { [%csl Ga6,Ga5][%cal Gf3a6,Ga5a8] }) 57... Ke6 58. f5+ Kf6 59. Kf4 Kf7 60. Ke5 Ke7 61. f6+ Kf7 62. Kf5 Kf8 (62... a5) 63. Ke6 Ke8 64. f7+ Kf8 65. Kd6 (65. Kf6 a5 66. Ke6 a4 67. Kf6 a3 68. Ke6) 65... Kxf7 66. Kc6 Ke6 67. Kb6 a5 68. Kxa5 Kd7 69. Kb6 Kc8 70. Ka7 Kc7 71. a4 Kc8 72. a5 Kc7 73. a6 Kc8 74. Ka8 Kc7 75. a7 Kc8 { 1/2-1/2  wins. } 1/2-1/2
+
+
+[Event "Rated rapid game"]
+[Site "https://lichess.org/B0awtWsl"]
+[Date "2022.01.09"]
+[White "Elliott"]
+[Black "MDM18"]
+[Result "1/2-1/2"]
+[WhiteElo "1726"]
+[BlackElo "1746"]
+[TimeControl "600+0"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "C40"]
+[Opening "Elephant Gambit"]
+[StudyName "Lesson with Supraja & Elliott"]
+[ChapterName "Elliott - MDM18 Find the only move!"]
+[ChapterURL "https://lichess.org/study/4vkq022e/gzhoKHki"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 d5 3. Nc3 Bg4 4. Be2 d4 5. Nd5 c6 6. Nxe5 Bxe2 7. Qxe2 cxd5 8. exd5 Qxd5 9. Ng6+ Qe6 10. Qxe6+ fxe6 11. Nxh8 Nf6 12. O-O Bd6 13. Re1 Ke7 14. d3 Nbd7 15. Ng6+ hxg6 16. Bg5 Rh8 17. g3 Kf7 18. h4 Ne5 19. Kg2 Nh7 20. Bd2 Kf6 21. Re2 g5 22. Rh1 gxh4 23. Rxh4 Ng6 24. Rxd4 Be5 25. Rde4 Nhf8 26. d4 Bd6 27. Bc3 Kf7 28. R2e3 Nd7 29. Rf3+ Nf6 30. d5 e5 31. g4 Nf4+ 32. Rexf4 exf4 33. Bxf6 Kxf6 34. a4 Kg5 35. Rb3 b6 36. f3 Re8 37. Rc3 Re2+ 38. Kf1 Rd2 39. Rd3 Rxc2 40. b3 Rc1+ 41. Ke2 Rc2+ 42. Kd1 Rb2 43. Kc1 Rh2 44. Rd2 Rxd2 45. Kxd2 Kf6 46. Kd3 Ke5 47. Kc4 g5 48. b4 a6 49. b5 axb5+ 50. Kxb5 Bc5 51. Kc6 Kd4 52. d6 Bxd6 53. Kxd6 Kc4 54. Kc6 Kb4 55. Kxb6 Kxa4 56. Kc6 Kb4 57. Kd5 Kc3 58. Ke4 Kd2 59. Kf5 Ke2 60. Kxg5 Kxf3 { only one move to survive! } 61. Kf5?? (61. Kh5 Ke3 62. g5 f3 63. g6 f2 64. g7 f1=Q 65. g8=Q) (61. Kh4) 61... Kg3 62. g5 f3 63. g6 f2 64. g7 f1=Q+ 65. Kg6 Qa6+ 66. Kh7 Qa7 (66... Qb7 67. Kh8 { [%csl Gh8] } 67... Qh1+ 68. Kg8 { [%csl Gg8] } 68... Kg4 69. Kf7 Qb7+ 70. Kf8 Qf3+ 71. Ke7 Qe4+ 72. Kf8 Qf5+ 73. Ke7 Qe5+ 74. Kf7 Qc7+ 75. Kf8 Qd8+ 76. Kf7 Qd7+ 77. Kf8 Qd6+ 78. Kf7 Qd7+ 79. Kf8 Qf5+ 80. Ke7 Qg6 81. Kf8 Qh6 (81... Qd6+ 82. Kf7) (81... Qf6+ { [%csl Gf6][%cal Gf5g6,Gg6f6] } 82. Kg8 Kg5 { [%cal Gg8h8,Gg8h7] } 83. Kh8 (83. Kh7 Qh6+ 84. Kg8 Kf6 85. Kf8 Qxg7+ 86. Ke8 Qe7#)) 82. Kf7) 67. Kh8 { How to win as black? } 67... Qa8+?? 68. g8=Q+ Qxg8+ 69. Kxg8 { 1/2-1/2 The game is a draw. } 1/2-1/2
+
+
+[Event "FENIJEC Arena"]
+[Site "https://lichess.org/SOYkJn4V"]
+[Date "2022.11.13"]
+[White "Iamalfason"]
+[Black "Elliott"]
+[Result "1/2-1/2"]
+[WhiteElo "1582"]
+[BlackElo "1647"]
+[TimeControl "600+0"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "C65"]
+[Opening "Ruy Lopez: Berlin Defense"]
+[StudyName "Lesson with Supraja & Elliott"]
+[ChapterName "Iamalfason - Elliott Slipping at the finish line"]
+[ChapterURL "https://lichess.org/study/4vkq022e/0k1HVxd9"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 Nf6 4. Bxc6 dxc6 5. O-O Bg4 6. Nc3 h5 7. d3 Bc5 8. Bg5 Qd6 9. h3 O-O-O 10. Na4 Qf8 11. Nxc5 Qxc5 12. Bxf6 gxf6 13. hxg4 hxg4 14. Nd2 Qf8 15. Qxg4+ Kb8 16. f3 Qh6 17. Kf2 Qxd2+ 18. Kg1 Rdg8 19. Rf2 Qxf2+ 20. Kxf2 Rxg4 21. fxg4 Rg8 22. Kf3 b5 23. Rh1 c5 24. Rh7 Rf8 25. c3 Kb7 26. Kg3 a5 27. Kh4 c6 28. Kh5 Kb6 29. Kh6 a4 30. Kg7 Rd8 31. Rh3 c4 32. dxc4 bxc4 33. Kxf7 Rd2 34. Kxf6 Rxb2 35. Rg3 Rxa2 36. g5 Rf2+ 37. Kxe5 a3 38. Rh3 a2 39. Rh1 Rxg2 40. Kf5 Rg3 41. Ra1 Rxc3 42. Rxa2 Kc5 43. g6 Kd4 44. Rd2+ Kc5 45. g7 Rg3 46. Kf6 c3 47. Re2 Kd4 48. Kf7 Kd3 49. Rh2 c2 50. Rxc2 Kxc2 51. g8=Q Rxg8 52. Kxg8 c5 53. e5 c4 54. e6 { black to move: what should the result be? } 54... Kd3 (54... Kb2 55. e7 c3 56. e8=Q c2 57. Qb5+ Ka2 58. Qa4+ Kb2 59. Qb4+ Ka2 { [%cal Gb4c3,Gc3c2] } 60. Qc3 Kb1 61. Qb3+ { [%csl Gd2,Ge2] } 61... Ka1) 55. e7 c3 56. e8=Q c2 57. Qd7+ (57. Qe1 Kc4 58. Qc1 Kc3 59. Kg7 Kd3 60. Kg6 Kc3 61. Kf5 Kd3 62. Kf4 Kc3 63. Ke3 Kb3 64. Kd3) 57... Kc3 58. Qc6+ Kb2 59. Qb5+ Kc1 60. Kf7 Kd1 61. Qd3+ Kc1 62. Kf6 Kb1 63. Qb3+ Kc1 64. Kf5 Kd2 65. Qc4 c1=Q 66. Qxc1+ Kxc1 { 1/2-1/2 The game is a draw. } 1/2-1/2
+
+
+[Event "Rated rapid game"]
+[Site "https://lichess.org/sEQWgUpt"]
+[Date "2022.02.25"]
+[White "Elliott"]
+[Black "Hornet4"]
+[Result "1/2-1/2"]
+[WhiteElo "1681"]
+[BlackElo "1696"]
+[TimeControl "600+0"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "C48"]
+[Opening "Four Knights Game: Spanish Variation"]
+[StudyName "Lesson with Supraja & Elliott"]
+[ChapterName "Elliott - Hornet4 oh no my tempo!"]
+[ChapterURL "https://lichess.org/study/4vkq022e/tZond9XS"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nc6 3. Nc3 Nf6 4. Bb5 d6 5. d3 a6 6. Ba4 Be7 7. Be3 O-O 8. Qd2 h6 9. Bxh6 gxh6 10. Qxh6 Nh7 11. g4 Kh8 12. O-O-O Rg8 13. Rdg1 Bg5+ 14. Nxg5 Qxg5+ 15. Qxg5 Rxg5 16. h4 Rxg4 17. Rxg4 Bxg4 18. Bb3 f6 19. Nd5 Rc8 20. Rg1 b5 21. a3 Bh5 22. Ne3 Nd4 23. Kd2 Nxb3+ 24. cxb3 c6 25. Nf5 Rd8 26. Rg7 d5 27. exd5 cxd5 28. Ra7 e4 29. d4 Nf8 30. Rxa6 Nh7 31. Rb6 Rd7 32. Rxb5 Kg8 33. a4 Kf7 34. a5 Kg6 35. Ng3 Nf8 36. a6 Rd6 37. a7 Ra6 38. Rb8 Rxa7 39. Rxf8 Rb7 40. Nxh5 Kxh5 41. Rxf6 Rxb3 42. Kc2 Rf3 43. Rxf3 exf3 44. b4 Kxh4 { Starting Point of things going wrong... } 45. Kd2 Kg4 46. Ke3 Kf5 47. b5 Ke6 48. b6 Kd6 49. b7 Kc7 50. b8=Q+ Kxb8 51. Kxf3 Kc7 52. Kf4 Kd6 53. Ke3 Ke6 54. f3 Kf5 55. Kf2 Kf4 56. Kg2 Ke3 57. Kg3 Kxd4 58. Kg4 Ke5 59. f4+ Kf6 60. Kf3 Kf5 61. Ke3 Ke6 62. Kd4 Kf5 63. Kxd5 Kxf4 { 1/2-1/2 The game is a draw. } 1/2-1/2
+
+
+[Event "Rated rapid game"]
+[Site "lichess.org"]
+[Date "2022.02.18"]
+[White "Elliott"]
+[Black "MrHarro"]
+[Result "1/2-1/2"]
+[WhiteElo "1700"]
+[BlackElo "1702"]
+[TimeControl "600"]
+[Variant "Standard"]
+[ECO "B20"]
+[Opening "Sicilian Defense: Bowdler Attack"]
+[StudyName "Lesson with Supraja & Elliott"]
+[ChapterName "Elliott - MrHarro oh no my tempo!"]
+[ChapterURL "https://lichess.org/study/4vkq022e/E07MB8A0"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 c5 2. Bc4 e6 3. Nc3 Ne7 4. d3 d5 5. Bg5 f6 6. Bb5+ Bd7 7. Bxd7+ Qxd7 8. Bd2 d4 9. Nce2 e5 10. Nf3 Nec6 11. a3 Qg4 12. Ng3 Bd6 13. c3 O-O 14. cxd4 exd4 15. Rg1 Bxg3 16. hxg3 Re8 17. Qb3+ Qe6 18. Qxb7 Nd7 19. Qa6 Nce5 20. Qxe6+ Rxe6 21. Nxe5 Nxe5 22. Ke2 Rb8 23. b4 c4 24. dxc4 Nxc4 25. Kd3 Nxd2 26. Kxd2 Rxe4 27. Rge1 Rbe8 28. f3 Re3 29. Rxe3 dxe3+ 30. Ke2 Kf7 31. Rd1 Re7 32. Rd3 Ke8 33. Rxe3 Rxe3+ 34. Kxe3 Ke7 { Classic position! This should be a straight forward win for white... right? } 35. Kd4 Kd6 36. a4 g6 37. g4 Kc6 38. g3 a6 39. f4 h6 40. Kc4 Kd6 41. b5 a5 42. Kd4 f5 43. gxf5 gxf5 44. Kc4 h5 45. Kd4 Kc7 46. Kc5 Kd7 47. Kb6 Ke6 48. Kc7 Kd5 49. b6 Ke4 50. b7 Kf3 51. b8=Q Kxg3 52. Kc6 h4 53. Qh8 h3 54. Qxh3+ Kxh3 55. Kb5 Kg4 56. Kxa5 Kxf4 57. Kb5 Kg4 58. a5 f4 59. a6 f3 60. a7 f2 61. a8=Q f1=Q+ 62. Kb6 Qf2+ 63. Ka6 Qa2+ 64. Kb7 Qxa8+ 65. Kxa8 { Normal } 1/2-1/2
+
+
+[Event "Rated rapid game"]
+[Site "https://lichess.org/dMMigXxk"]
+[Date "2022.01.25"]
+[White "Elliott"]
+[Black "uniquer"]
+[Result "1/2-1/2"]
+[WhiteElo "1757"]
+[BlackElo "1736"]
+[TimeControl "600+0"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "C40"]
+[Opening "King's Pawn Game: Damiano Defense"]
+[StudyName "Lesson with Supraja & Elliott"]
+[ChapterName "Elliott - uniquer stalemate trickery!"]
+[ChapterURL "https://lichess.org/study/4vkq022e/uEhhdG0h"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 f6 3. Bc4 (3. Nxe5 fxe5 4. Qh5+ Ke7 (4... g6 5. Qxe5+) 5. d4 g6 6. Bg5+) 3... Ne7 4. d3 d6 5. Be3 c6 6. Nc3 Nd7 7. O-O a5 8. Be6 g5 9. Nd2 h5 10. Nc4 Ng6 11. Qf3 g4 12. Qg3 Nc5 13. Bxc8 Nxe4 14. Nxe4 d5 15. Nxf6+ Qxf6 16. Bxb7 Rb8 17. Ba6 dxc4 18. Bxc4 Rxb2 19. Bb3 e4 20. Qb8+ Ke7 21. Bc5+ Kd7 22. Qa7+ Ke8 23. Rfe1 Bxc5 24. Qxc5 Ne7 25. Rxe4 Rxb3 26. Rae1 Rb7 27. Qxa5 Kf7 28. Qc5 Re8 29. Qxh5+ Qg6 30. Qc5 Kg7 31. Qc4 Reb8 32. Rxg4 Rb1 33. Rxg6+ Nxg6 34. Qe4 Nf4 35. g3 Nh3+ 36. Kg2 Ng5 37. Qe5+ Kh6 38. Rxb1 Rxb1 39. Qf6+ Kh5 40. h4 Nh7 41. Qxc6 Nf8 42. Qe8+ Kg4 43. Qxf8 Kh5 44. Qg8 Kh6 45. g4 Rg1+ 46. Kf3 Rg3+ 47. Kf4 Rf3+ 48. Ke5 Re3+ 49. fxe3 { 1/2-1/2 Draw by stalemate. } 1/2-1/2
+
+
+[Event "Rated rapid game"]
+[Site "lichess.org"]
+[Date "2021.11.30"]
+[White "Elliott"]
+[Black "Emilio3"]
+[Result "0-1"]
+[WhiteElo "1755"]
+[BlackElo "1816"]
+[TimeControl "600"]
+[Variant "Standard"]
+[ECO "A15"]
+[Opening "English Opening: Anglo-Indian Defense, Anti-Anti-Grünfeld"]
+[StudyName "Lesson with Supraja & Elliott"]
+[ChapterName "Elliott - Emilio3 Sometimes the best thing to do is NOTHING"]
+[ChapterURL "https://lichess.org/study/4vkq022e/3nyV8Axk"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. c4 Nf6 2. Nc3 g6 3. Nf3 Bg7 4. e4 e5 5. Nxe5 Qe7 6. d4 d6 7. Nd3 Nxe4 8. Nxe4 Qxe4+ 9. Qe2 Qxe2+ 10. Bxe2 Bxd4 11. O-O O-O 12. Nf4 Bg7 13. Rb1 Nc6 14. Nd5 Be6 15. Nxc7 Rac8 16. Nb5 Rfd8 17. Bg5 f6 18. Be3 a6 19. Nd4 Nxd4 20. Bxd4 Bxc4 21. Bxc4+ Rxc4 22. Be3 Rdc8 23. b3 Rc2 24. Rfc1 Rxc1+ 25. Rxc1 Rxc1+ 26. Bxc1 Kf7 27. Ba3 Ke6 28. f3 d5 29. h3 f5 30. g3 Kd7 31. Kf2 Kc6 32. Ke3 Be5 33. f4 Bd6 34. Bxd6 Kxd6 35. Kd4 b5 36. a3 a5 37. b4 a4 { What should white do? } 38. g4 fxg4 39. hxg4 h6 40. Kd3 h5 41. gxh5 gxh5 42. Ke3 h4 43. Kf3 d4 44. f5 h3 45. Kg3 d3 46. Kxh3 d2 47. f6 d1=Q 48. f7 Qf3+ { Normal } 0-1
+
+
+[Event "Rated rapid game"]
+[Site "lichess.org"]
+[Date "2021.11.16"]
+[White "MURUGANTHUNAI"]
+[Black "Elliott"]
+[Result "1-0"]
+[WhiteElo "1758"]
+[BlackElo "1804"]
+[TimeControl "600"]
+[Variant "Standard"]
+[ECO "D06"]
+[Opening "Queen's Gambit Declined: Marshall Defense"]
+[StudyName "Lesson with Supraja & Elliott"]
+[ChapterName "MURUGANTHUNAI - Elliott When not to liquidate!"]
+[ChapterURL "https://lichess.org/study/4vkq022e/hbXqtsNa"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 d5 2. c4 Nf6 3. Nf3 Bf5 4. cxd5 Nxd5 5. Nc3 Nxc3 6. bxc3 e6 7. e3 Bg4 8. Be2 Bd6 9. O-O Nd7 10. Nd2 Bxe2 11. Qxe2 c6 12. e4 e5 13. dxe5 Bxe5 14. Bb2 Qc7 15. g3 O-O 16. Nf3 Bf6 17. Rfd1 Ne5 18. Nxe5 Bxe5 19. Rab1 b6 20. c4 Bxb2 21. Qxb2 c5 22. Qe2 Rfe8 23. Rd2 Qe7 24. Rbd1 g6 25. f3 Rad8 26. Rxd8 Rxd8 27. Rxd8+ Qxd8 28. Qb2 { black to move } 28... Qd4+ 29. Qxd4 cxd4 30. Kf2 f6 31. Ke2 Kf7 32. Kd3 Ke6 33. Kxd4 Kd6 34. f4 h6 35. a4 a6 36. e5+ fxe5+ 37. fxe5+ Ke6 38. Ke4 h5 39. h4 Ke7 40. Kd5 Kd7 41. e6+ Ke7 42. Ke5 b5 43. cxb5 axb5 44. axb5 { Normal } 1-0
+
+
+[Event "Rated rapid game"]
+[Site "https://lichess.org/nzp9Vjtz"]
+[Date "2021.10.31"]
+[White "lg92"]
+[Black "Elliott"]
+[Result "1-0"]
+[WhiteElo "1753"]
+[BlackElo "1769"]
+[TimeControl "600+0"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "D06"]
+[Opening "Queen's Gambit Declined: Marshall Defense"]
+[StudyName "Lesson with Supraja & Elliott"]
+[ChapterName "lg92 - Elliott Critical moment and identifying opponent's threat"]
+[ChapterURL "https://lichess.org/study/4vkq022e/exrLcxOA"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 d5 2. c4 Nf6 3. cxd5 Qxd5 4. Nc3 Qd8 5. Bg5 Bf5 6. Bxf6 exf6 7. Nf3 Bb4 8. e3 O-O 9. Bd3 Bg4 10. h3 Bh5 11. O-O Nc6 12. Be2 Bg6 13. d5 Ne5 14. a3 Bd6 15. Nxe5 fxe5 16. Bd3 Qg5 17. Bxg6 Qxg6 18. f3 Qg3 19. Ne4 Qh4 20. Nxd6 cxd6 21. e4 Rac8 22. Rc1 Qg5 23. Rxc8 Rxc8 24. Qb3 Rc1 25. Rxc1 Qxc1+ 26. Kh2 Qc7 27. a4 b6 28. Qb5 Kf8 29. b3 Qc5 30. Qxc5 bxc5 31. Kg3 Ke7 32. Kf2 Kd7 33. Ke3 Kc7 34. Kd3 Kb6 35. Kc4 a6 36. b4 { black to move: how to survive? } 36... f6 37. a5+ Kc7 38. b5 axb5+ 39. Kxb5 Kb7 40. g4 h6 41. h4 g6 42. h5 g5 43. a6+ Ka7 44. Kc6 c4 45. Kxd6 c3 46. Ke6 c2 47. d6 c1=Q 48. d7 Qc6+ 49. Ke7 Qc7 50. Ke8 Qc6 51. Ke7 Qc5+ 52. Ke8 Qc6 53. Ke7 Qc7 54. Ke8 Kxa6 55. d8=Q Qxd8+ 56. Kxd8 Kb5 57. Ke7 Kc4 58. Kxf6 Kd3 59. Kxe5 Ke3 60. Kf5 Kxf3 61. e5 Ke3 62. e6 Kd4 63. e7 Kd5 { 1-0 Black resigns. } 1-0
+
+
+[Event "Rated rapid game"]
+[Site "https://lichess.org/H5FjyISS"]
+[Date "2021.10.31"]
+[White "Elliott"]
+[Black "CosmicPegasus2006"]
+[Result "0-1"]
+[WhiteElo "1776"]
+[BlackElo "1767"]
+[TimeControl "600+0"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "B13"]
+[Opening "Caro-Kann Defense: Panov Attack, Modern Defense, Mieses Line"]
+[StudyName "Lesson with Supraja & Elliott"]
+[ChapterName "Elliott - CosmicPegasus2006 lots of mistakes!"]
+[ChapterURL "https://lichess.org/study/4vkq022e/RYUTYPOt"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. c4 c5 2. Nc3 Nf6 3. Nf3 d5 4. e3 Nc6 5. d4 cxd4 6. exd4 Bg4 7. Be2 dxc4 8. Qa4 Bxf3 9. Bxf3 Qxd4 10. Bxc6+ Nd7 11. Bxd7+ Qxd7 12. Qxd7+ Kxd7 13. O-O Rd8 14. Bf4 f6 15. Rad1+ Ke8 16. Nb5 e5 17. Be3 Rxd1 18. Rxd1 a6 19. Nc7+ Kf7 20. Rc1 Bd6 21. Nd5 b5 22. f4 exf4 23. Bxf4 Bxf4 24. Nxf4 Rd8 25. Re1 Rd2 26. Rb1 b4 27. Kf1 a5 28. Ke1 Rc2 29. a3 bxa3 30. bxa3 Ra2 31. Rc1 Rxa3 32. Rxc4 Ra2 33. Rc7+ Kg8 34. h3 a4 35. Ra7 a3 36. Nd3 Ra1+ 37. Ke2 a2 38. Nb4 Rg1 39. Rxa2 Rxg2+ 40. Kf3 Rxa2 41. Nxa2 Kf7 42. Nc3 Kg6 43. Ne4 h6 44. Kg4 f5+ 45. Kf4 fxe4 46. Kxe4 Kg5 47. Kf3 h5 48. Kg3 g6 49. h4+ Kf5 50. Kh3 Kf4 51. Kh2 Kg4 52. Kg2 Kxh4 53. Kh2 g5 54. Kg2 Kg4 55. Kh2 h4 56. Kg2 Kf4 57. Kh3 Kf3 58. Kh2 g4 59. Kg1 h3 60. Kh2 Kf2 61. Kh1 Kg3 62. Kg1 Kh4 63. Kh2 g3+ 64. Kg1 Kg4 65. Kh1 Kf3 66. Kg1 Ke2 67. Kh1 h2 68. Kg2 Ke1 69. Kh1 Ke2 70. Kg2 Ke3 71. Kh1 Kf4 72. Kg2 Kg4 73. Kh1 Kh4 74. Kg2 h1=Q+ 75. Kxh1 Kh3 76. Kg1 g2 77. Kf2 Kh2 { 0-1 White resigns. } 0-1
+
+
+[Event "Rated rapid game"]
+[Site "https://lichess.org/8LbgXa60"]
+[Date "2021.10.24"]
+[White "Elliott"]
+[Black "Horus137"]
+[Result "1/2-1/2"]
+[WhiteElo "1747"]
+[BlackElo "1748"]
+[TimeControl "600+0"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "A22"]
+[Opening "English Opening: King's English Variation, Two Knights Variation"]
+[StudyName "Lesson with Supraja & Elliott"]
+[ChapterName "Elliott - Horus137"]
+[ChapterURL "https://lichess.org/study/4vkq022e/5IZSr7YA"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. c4 e5 2. Nc3 Nf6 3. e3 Nc6 4. Nge2 Bb4 5. a3 Bxc3 6. Nxc3 d6 7. b4 b6 8. g3 Bb7 9. Bg2 Rb8 10. b5 Na5 11. Bxb7 Rxb7 12. d3 Qa8 13. Qf3 a6 14. a4 Nb3 15. Rb1 Nxc1 16. Rxc1 axb5 17. axb5 Ra7 18. Qxa8+ Rxa8 19. O-O O-O 20. Nd5 Nxd5 21. cxd5 Rfc8 22. Rc6 Ra5 23. Rfc1 Rxb5 24. e4 h6 25. Rxd6 cxd6 26. Rxc8+ Kh7 27. Rd8 Rb3 28. Rxd6 Rxd3 29. Rxb6 g5 30. d6 Kg8 31. f3 f6 32. Kf2 Kf7 33. Rb7+ Ke8 34. d7+ Rxd7 35. Rxd7 Kxd7 36. Ke3 Ke6 37. h3 f5 38. g4 f4+ 39. Kf2 { Starting point: Where should black put the king? } 39... Kf6 40. Ke2 Kg6 41. Kd3 Kf6 42. Kc4 Ke6 43. Kc5 Ke7 44. Kd5 Kf6 45. Kd6 h5 46. gxh5 Kg7 47. Kxe5 Kh6 48. Kf6 Kxh5 49. e5 Kh4 50. e6 Kxh3 51. e7 g4 52. fxg4 f3 53. e8=Q Kxg4 54. Qe4+ Kg3 55. Qe3 Kg2 56. Kf5 f2 57. Kf4 f1=Q+ 58. Ke4 Qc4+ 59. Qd4 Qe6+ 60. Qe5 Qg4+ 61. Qf4 Qg6+ 62. Qf5 Qe8+ 63. Qe5 Qa4+ 64. Qd4 Qc2+ 65. Qd3 Qc6+ 66. Qd5 Qg6+ 67. Kd4+ Kg3 68. Qe5+ Kg4 69. Qe2+ Kg5 70. Qg2+ Kf6 71. Qc6+ Kf5 72. Qxg6+ Kxg6 { 1/2-1/2 The game is a draw. } 1/2-1/2
+
+
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2024.11.25"]
+[White "Superplay1"]
+[Black "Supraja"]
+[Result "1/2-1/2"]
+[WhiteElo "1719"]
+[BlackElo "1679"]
+[TimeControl "60"]
+[Variant "Standard"]
+[ECO "C45"]
+[Opening "Scotch Game: Classical Variation"]
+[StudyName "Lesson with Supraja & Elliott"]
+[ChapterName "Superplay1 - Supraja Find the breakthrough to survive!"]
+[ChapterURL "https://lichess.org/study/4vkq022e/ZXQhQS31"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+{ [%evp 0,106,25,18,8,18,20,15,22,28,38,35,35,22,22,28,27,14,17,10,38,33,35,-232,-11,-200,113,-127,12,12,288,119,697,290,281,138,169,117,140,126,106,102,83,79,77,68,85,57,47,49,55,44,53,46,60,44,59,49,66,79,95,82,91,93,100,91,106,96,104,89,107,101,113,90,120,69,82,95,76,63,69,91,112,120,108,111,106,112,121,52,120,1,7,0,0,0,0,0,77,0,0,0,1016,11,10,0,0,0,0] }
+1. e4 { [%clk 1:00:00] } 1... e5 { [%clk 1:00:00] } 2. Nf3 { [%clk 0:59:59] } 2... Nc6 { [%clk 1:00:00] } 3. d4 { [%clk 0:59:58] } 3... exd4 { [%clk 0:59:59] } 4. Nxd4 { [%clk 0:59:58] } 4... Bc5 { [%clk 0:59:59] } 5. Be3 { [%clk 0:59:57] } 5... Qf6 { [%clk 0:59:58] } 6. c3 { [%clk 0:59:57] } 6... Nge7 { [%clk 0:59:57] } 7. Bc4 { [%clk 0:59:56] } 7... d6 { [%clk 0:59:56] } 8. O-O { [%clk 0:59:56] } 8... Bd7 { [%clk 0:59:55] } 9. Nxc6 { [%clk 0:59:55] } 9... Nxc6 { [%clk 0:59:54] } 10. Bxc5 { [%clk 0:59:54] } 10... dxc5 { [%clk 0:59:53] } 11. Qb3 { [%clk 0:59:52] } 11... O-O-O { [%clk 0:59:52] } 12. Qa3 { [%clk 0:59:50] } 12... Ne5 { [%clk 0:59:50] } 13. Nd2 { [%clk 0:59:46] } 13... Nxc4 { [%clk 0:59:48] } 14. Nxc4 { [%clk 0:59:45] } 14... Qg6 { [%clk 0:59:44] } 15. Qxa7 { [%clk 0:59:43] } 15... c6 { [%clk 0:59:41] } 16. Nb6+ { [%clk 0:59:40] } 16... Kc7 { [%clk 0:59:40] } 17. Nxd7 { [%clk 0:59:37] } 17... Rxd7 { [%clk 0:59:39] } 18. Qxc5 { [%clk 0:59:36] } 18... Rhd8 { [%clk 0:59:38] } 19. e5 { [%clk 0:59:35] } 19... Rd5 { [%clk 0:59:37] } 20. Qe7+ { [%clk 0:59:33] } 20... R8d7 { [%clk 0:59:36] } 21. Qh4 { [%clk 0:59:31] } 21... Rxe5 { [%clk 0:59:34] } 22. Rfe1 { [%clk 0:59:31] } 22... Rh5 { [%clk 0:59:33] } 23. Qg3+ { [%clk 0:59:29] } 23... Qxg3 { [%clk 0:59:31] } 24. hxg3 { [%clk 0:59:29] } 24... Rhd5 { [%clk 0:59:29] } 25. Re2 { [%clk 0:59:26] } 25... g6 { [%clk 0:59:28] } 26. Rae1 { [%clk 0:59:25] } 26... Rd2 { [%clk 0:59:27] } 27. Kh2 { [%clk 0:59:22] } 27... f5 { [%clk 0:59:25] } 28. f3 { [%clk 0:59:20] } 28... h5 { [%clk 0:59:24] } 29. Kh3 { [%clk 0:59:18] } 29... b5 { [%clk 0:59:22] } 30. Kh4 { [%clk 0:59:17] } 30... c5 { [%clk 0:59:21] } 31. Kg5 { [%clk 0:59:16] } 31... R7d6 { [%clk 0:59:20] } 32. Re7+ { [%clk 0:59:14] } 32... Kc6 { [%clk 0:59:19] } 33. R1e2 { [%clk 0:59:14] } 33... c4 { [%clk 0:59:17] } 34. R7e6 { [%clk 0:59:13] } 34... Rxe2 { [%clk 0:59:15] } 35. Rxe2 { [%clk 0:59:12] } 35... Kc5 { [%clk 0:59:14] } 36. Kf4 { [%clk 0:59:11] } 36... b4 { [%clk 0:59:13] } 37. cxb4+ { [%clk 0:59:10] } 37... Kxb4 { [%clk 0:59:12] } 38. Rc2 { [%clk 0:59:10] } 38... Rd4+ { [%clk 0:59:11] } 39. Ke3 { [%clk 0:59:09] } 39... Rd6 { [%clk 0:59:10] } 40. a3+ { [%clk 0:59:08] } 40... Kb3 { [%clk 0:59:09] } 41. Rc3+ { [%clk 0:59:07] } 41... Kxb2 { [%clk 0:59:08] } 42. Rxc4 { [%clk 0:59:07] } 42... Kxa3 { [%clk 0:59:07] } 43. Kf4 { [%clk 0:59:07] } 43... Kb3 { [%clk 0:59:05] } 44. Rc5 { [%clk 0:59:07] } 44... Rd2 { [%clk 0:59:04] } 45. Rc8 { [%clk 0:59:07] } 45... Rxg2 { [%clk 0:59:03] } 46. Rf8 { [%clk 0:59:06] } 46... Rc2 { [%clk 0:59:02] } 47. Rg8 { [%clk 0:59:06] } 47... Rc6 { [%clk 0:59:01] } 48. Kg5 { [%clk 0:59:06] } 48... Kc4 { [%clk 0:59:00] } 49. Rxg6 { [%clk 0:59:05] } 49... Rxg6+ { [%clk 0:58:59] } 50. Kxg6 { [%clk 0:59:05] } 50... Kd4 { [%clk 0:58:59] } 51. Kxf5 { [%clk 0:59:04] } 51... Ke3 { [%clk 0:58:59] } 52. Kg5 { [%clk 0:59:03] } 52... Kxf3 { [%clk 0:58:59] } 53. Kxh5 { [%clk 0:59:03] } 53... Kxg3 { Game drawn by insufficient material } { [%clk 0:58:59] } 1/2-1/2
+
+
+[Event "Rated blitz game"]
+[Site "lichess.org"]
+[Date "2024.09.02"]
+[White "Nikita1504"]
+[Black "Supraja"]
+[Result "1-0"]
+[WhiteElo "1999"]
+[BlackElo "2006"]
+[TimeControl "180"]
+[Annotator "ericr"]
+[Variant "Standard"]
+[ECO "C24"]
+[Opening "Bishop's Opening: Vienna Hybrid"]
+[StudyName "Lesson with Supraja & Elliott"]
+[ChapterName "Nikita1504 - Supraja crippled majority"]
+[ChapterURL "https://lichess.org/study/4vkq022e/YFrTNB8o"]
+
+1. e4 e5 2. Nc3 Nc6 3. Bc4 Nf6 4. d3 Na5 5. Bg5 Nxc4 6. dxc4 Be7 7. Bxf6 Bxf6 8. Nge2 d6 9. Nd5 O-O 10. O-O Be6 11. f4 c6 12. Nxf6+ Qxf6 13. fxe5 Qxe5 14. Qd3 Rad8 15. c3 f5 16. exf5 Bxf5 17. Qf3 Bg6 18. Nf4 Rf5 19. b4 Rdf8 20. Nxg6 Rxf3 21. Nxe5 Rxf1+ 22. Rxf1 Rxf1+ 23. Kxf1 dxe5 24. Ke2 Kf7 25. Ke3 Ke6 26. Ke4 g6 27. c5 a6 28. a4 h5 29. h4 Kf6 30. c4 Ke6 31. b5 (31. a5 Kf6 32. b5 Ke6 33. b6 Kf6 34. g3 Ke6 35. Kf3 Kf5 36. Ke3 g5 37. hxg5 Kxg5 38. Kf3 Kf5 39. Ke3 e4 40. Kd4 (40. Kf2 Kg4 41. Ke3 Kxg3 42. Kxe4 h4 43. Ke5 h3 44. Kd6 h2 45. Kc7 h1=Q 46. Kxb7 Kf3 47. Ka7 Qa1 48. b7 Qxa5 49. b8=Q Qxc5+ 50. Qb6 Qxc4) 40... h4 (40... Kg4?? { looks winning, but isn't! } 41. Kxe4 Kxg3 42. Ke5 h4 43. Kd6 h3 44. Kc7 h2 45. Kxb7 h1=Q 46. Ka7) 41. gxh4 Kf4 42. h5 e3 43. h6 e2 44. h7 e1=Q 45. h8=Q Qd2#) 31... axb5 32. cxb5 cxb5 33. axb5 Kd7 34. Kxe5 Kc7 35. Kf6 Kd7 36. Kxg6 Ke6 37. c6 bxc6 38. bxc6 Kd6 39. Kxh5 Kxc6 40. Kg6 { Normal } 1-0
+
+
+[Event "Rated blitz game"]
+[Site "lichess.org"]
+[Date "2024.08.14"]
+[White "ashishrbl2015"]
+[Black "Supraja"]
+[Result "1-0"]
+[WhiteElo "1913"]
+[BlackElo "1916"]
+[TimeControl "180"]
+[Variant "Standard"]
+[ECO "C65"]
+[Opening "Ruy Lopez: Berlin Defense"]
+[StudyName "Lesson with Supraja & Elliott"]
+[ChapterName "ashishrbl2015 - Supraja"]
+[ChapterURL "https://lichess.org/study/4vkq022e/t9qfb0pD"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 Nf6 4. Bxc6 dxc6 5. d3 Bc5 6. Nxe5 Qd4 7. Be3 Qxe5 8. d4 Qxe4 9. dxc5 Qxg2 10. Rf1 Bh3 11. Nd2 O-O-O 12. Qf3 Rxd2 13. Qxg2 Rd1+ 14. Rxd1 Bxg2 15. Rg1 Bf3 16. Rxg7 Bxd1 17. Kxd1 Rd8+ 18. Ke2 Ne4 19. Rxf7 Re8 20. Rxh7 Nxc5 21. h4 b6 22. h5 Ne6 23. h6 Ng5 24. Rg7 Ne6 25. Rg6 Nf4+ 26. Kf3 Nxg6 27. Kg4 Re6 28. Kf5 Rd6 29. c3 Kd7 30. h7 Ke7 31. Bf4 Rf6+ 32. Kg5 Rxf4 33. Kxg6 Rh4 34. Kg7 Ke6 35. h8=Q Rxh8 36. Kxh8 { black to move: There is only one way to survive! } 36... a5 (36... Kf7) 37. Kg7 b5 38. Kg6 c5 39. f4 c6 40. f5+ Ke7 41. Kg7 b4 42. f6+ Ke8 43. f7+ Ke7 44. f8=Q+ Ke6 45. Qxc5 { Normal } 1-0
+
+
+[Event "Rice Memorial"]
+[Site "New York, NY USA"]
+[Date "1916.02.08"]
+[Round "3"]
+[White "David Janowski"]
+[Black "Jose Raul Capablanca"]
+[Result "0-1"]
+[Annotator "ericr"]
+[Variant "Standard"]
+[ECO "D15"]
+[Opening "Slav Defense: Three Knights Variation"]
+[StudyName "Lesson with Supraja & Elliott"]
+[ChapterName "David Janowski - Jose Raul Capablanca"]
+[ChapterURL "https://lichess.org/study/4vkq022e/E5JP7QW6"]
+
+1. d4 Nf6 2. Nf3 d5 3. c4 c6 4. Nc3 Bf5 5. Qb3 Qb6 6. Qxb6 axb6 7. cxd5 Nxd5 8. Nxd5 cxd5 9. e3 Nc6 10. Bd2 Bd7! { A deep and beautiful move. Black intends to exploit his command of the a-file, and he conceives a deep strategic plan on the queenside involving the advance of his doubled pawn. In order to carry this out, he needs his bishop on d7. -- Marovic } 11. Be2 e6 12. O-O Bd6 13. Rfc1 Ke7 { [%csl Ge7] } 14. Bc3 Rhc8 { [%csl Gc8,Ga8] } 15. a3 Na5 16. Nd2 f5 17. g3 b5 18. f3 Nc4 19. Bxc4 bxc4 20. e4 Kf7 21. e5? { [%csl Ge5][%cal Ge4e5] } (21. exd5 exd5 22. f4 { [%csl Ge5][%cal Gd2f3,Gf3e5] }) 21... Be7 22. f4 { Question: What are black's potential pawn breaks? } { [%csl Gb4][%cal Gg7g5,Gh7h4,Gb7b4] } 22... b5 (22... g5 23. fxg5 Bxg5) 23. Kf2 Ra4 { [%csl Ga4] } 24. Ke3 Rca8 25. Rab1 h6 (25... h5 { [%cal Gh2h4] } 26. h4) 26. Nf3 g5 27. Ne1 Rg8 { [%csl Gg1][%cal Gg8g1,Gg5f4,Gf4g5] } 28. Kf3 gxf4 29. gxf4 Raa8 30. Ng2 Rg4 31. Rg1 Rag8 { [%csl Gg2][%cal Gg8g1] } 32. Be1 { Black to move; how to make progress? } { [%csl Ge4] } 32... b4!! { What's the point? } (32... h5 33. h3) 33. axb4 Ba4 34. Ra1 Bc2 35. Bg3 Be4+ 36. Kf2 h5 37. Ra7 Bxg2 38. Rxg2 h4 39. Bxh4 Rxg2+ 40. Kf3 Rxh2 41. Bxe7 { [%csl Ge7] } 41... Rh3+ 42. Kf2 Rb3 43. Bg5+ Kg6 44. Re7 Rxb2+ 45. Kf3 Ra8 { [%csl Gf3][%cal Ga8a3,Ga3f3] } 46. Rxe6+ Kh7 { 0-1 Black wins. } 0-1
+
+
+[Event "Karlsbad"]
+[Site "Karlsbad CSR"]
+[Date "1929.08.11"]
+[Round "10"]
+[White "Jose Raul Capablanca"]
+[Black "Karel Treybal"]
+[Result "1-0"]
+[Variant "Standard"]
+[ECO "D11"]
+[Opening "Slav Defense: Modern Line"]
+[StudyName "Lesson with Supraja & Elliott"]
+[ChapterName "Jose Raul Capablanca - Karel Treybal"]
+[ChapterURL "https://lichess.org/study/4vkq022e/N68CNTVC"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 d5 2. c4 c6 3. Nf3 e6 4. Bg5 Be7 5. Bxe7 Qxe7 6. Nbd2 f5 7. e3 Nd7 8. Bd3 Nh6 9. O-O O-O 10. Qc2 g6 11. Rab1 Nf6 12. Ne5 Nf7 13. f4 Bd7 14. Ndf3 Rfd8 15. b4 Be8 16. Rfc1 a6 17. Qf2 Nxe5 18. Nxe5 Nd7 19. Nf3 Rdc8 20. c5 Nf6 21. a4 Ng4 22. Qe1 Nh6 23. h3 Nf7 24. g4 Bd7 25. Rc2 Kh8 26. Rg2 Rg8 27. g5 Qd8 28. h4 Kg7 29. h5 Rh8 30. Rh2 Qc7 31. Qc3 Qd8 32. Kf2 Qc7 33. Rbh1 Rag8 34. Qa1 Rb8 35. Qa3 Rbg8 36. b5 axb5 37. h6+ Kf8 38. axb5 Ke7 39. b6 Qb8 { How should white go about winning such a position? } 40. Ra1 Rc8 41. Qb4 Rhd8 42. Ra7 Kf8 43. Rh1 Be8 44. Rha1 Kg8 45. R1a4 Kf8 46. Qa3 Kg8 47. Kg3 Bd7 48. Kh4 Kh8 49. Qa1 Kg8 50. Kg3 Kf8 51. Kg2 Be8 52. Nd2 Bd7 53. Nb3 Re8 54. Na5 Nd8 55. Ba6 bxa6 56. Rxd7 Re7 57. Rxd8+ Rxd8 58. Nxc6 { 1-0 White wins. } 1-0
+
+
+[Event "FRA-Tch"]
+[Site "FRA"]
+[Date "2001.04.01"]
+[Round "7.1"]
+[White "Kevin Spraggett"]
+[Black "Michael Adams"]
+[Result "0-1"]
+[WhiteElo "2526"]
+[BlackElo "2746"]
+[Variant "Standard"]
+[ECO "C54"]
+[Opening "Italian Game: Classical Variation, Giuoco Pianissimo, with a6"]
+[StudyName "Lesson with Supraja & Elliott"]
+[ChapterName "Kevin Spraggett - Michael Adams"]
+[ChapterURL "https://lichess.org/study/4vkq022e/ZoRJu6Hk"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Bc4 Nf6 3. d3 Nc6 4. Nf3 Bc5 5. c3 a6 6. Bb3 Ba7 7. O-O d6 8. Nbd2 O-O 9. Re1 Ng4!? { What is black trying to do with this move? (obvious threat, and less obvious idea) } 10. Re2 Kh8 11. h3 Nh6 12. Nf1 f5! 13. Bxh6 gxh6 14. exf5 Bxf5 15. N1h2 Qf6 16. Qd2 Rae8 17. Kh1 Re7 18. a3 Rg7 19. Rg1 h5 20. Ba2 Bd7 21. b4 Ne7 22. d4 exd4 23. cxd4 Ng6 24. Re4 Nf4 25. h4 Bc6 26. d5 Bb5 27. g3 Nh3 28. Rg2 Bf1 { 0-1 Black wins. } 0-1
+
+
+[Event "FRA-Tch"]
+[Site "FRA"]
+[Date "2001.04.01"]
+[Round "7"]
+[White "Grand Prix Famous Break"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B23"]
+[Opening "Sicilian Defense: Grand Prix Attack"]
+[StudyName "Lesson with Supraja & Elliott"]
+[ChapterName "Famous Grand Prix Pawn Break"]
+[ChapterURL "https://lichess.org/study/4vkq022e/iN4Usrub"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 c5 2. Nc3 Nc6 3. f4 g6 4. Nf3 Bg7 5. Bc4 d6 6. O-O e6 7. Qe1 Nge7 8. d3 O-O 9. f5 *
+
+
+[Event "Mar del Plata"]
+[Site "Mar del Plata ARG"]
+[Date "1960.03.31"]
+[Round "3"]
+[White "Robert James Fischer"]
+[Black "Olicio Gadia"]
+[Result "1-0"]
+[Variant "Standard"]
+[ECO "B87"]
+[Opening "Sicilian Defense: Sozin Attack, Flank Variation"]
+[StudyName "Lesson with Supraja & Elliott"]
+[ChapterName "Robert James Fischer - Olicio Gadia"]
+[ChapterURL "https://lichess.org/study/4vkq022e/F0OBHJbd"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bc4 e6 7. Bb3 b5 8. O-O Bb7 9. f4 Nc6 10. Nxc6 Bxc6 11. f5 e5 12. Qd3 Be7 13. Bg5 Qb6+ 14. Kh1 O-O 15. Bxf6 Bxf6 16. Bd5 Rac8 17. Bxc6 Rxc6 18. Rad1 Rfc8 19. Nd5 Qd8 20. c3 Be7 { White to play: What would Bobby Fischer do? } 21. Ra1 (21. f6 Bxf6 { [%cal Gd5f6] } 22. Nxf6+ gxf6) (21. g4) 21... f6 22. a4 Rb8 (22... Rc4 23. axb5 axb5 24. Ra7) (22... bxa4 23. Rxa4) 23. Nxe7+ { 1-0 White wins. } 23... Qxe7 24. Qd5+ 1-0
+
+
+[Event "Lesson with Supraja & Elliott: Chapter 20"]
+[Date "2025.01.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Lesson with Supraja & Elliott"]
+[ChapterName "Chapter 20"]
+[ChapterURL "https://lichess.org/study/4vkq022e/V0qVQyhd"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[FEN "6K1/8/8/8/8/1Q6/3p4/2k5 w - - 9 61"]
+[SetUp "1"]
+[UTCDate "2025.01.11"]
+[UTCTime "19:58:32"]
+
+61. Qc3+ Kd1 62. Kf7 Ke2 63. Qe5+ Kf2 64. Qf4+ Ke2 65. Qe4+ Kf2 66. Qd3 { [%csl Gd3] } 66... Ke1 67. Qe3+ Kd1 68. Ke6 { [%csl Gf2,Gc2] } *
+
+
+[Event "Lesson with Supraja & Elliott: Chapter 21"]
+[Date "2025.01.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Lesson with Supraja & Elliott"]
+[ChapterName "Chapter 21"]
+[ChapterURL "https://lichess.org/study/4vkq022e/KwfSlPoY"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[FEN "8/8/4K3/8/8/4Q3/p7/k7 b - - 24 68"]
+[SetUp "1"]
+[UTCDate "2025.01.11"]
+[UTCTime "19:59:34"]
+
+68... Kb1 { [%csl Ga2] } 69. Qb3+ Ka1 *
+
+
+[Event "Lesson with Supraja & Elliott: Chapter 22"]
+[Date "2025.01.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Lesson with Supraja & Elliott"]
+[ChapterName "Chapter 22"]
+[ChapterURL "https://lichess.org/study/4vkq022e/fKtlKevD"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[FEN "8/8/8/3K4/Q7/8/pk6/8 w - - 27 70"]
+[SetUp "1"]
+[UTCDate "2025.01.11"]
+[UTCTime "20:00:39"]
+
+{ [%csl Gd2] }
+70. Qd4+ Kc2 { [%csl Ga1][%cal Gd4a1] } (70... Kb1 71. Qd1+ Kb2 72. Qd2+ { [%cal Gd2a2] } 72... Kb1 73. Kc4 a1=Q 74. Kb3 Qc3+ 75. Kxc3) *
+
+

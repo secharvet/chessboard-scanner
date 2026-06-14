@@ -1,0 +1,57 @@
+[Event "Flashcards: Chapter 1"]
+[Date "2024.09.13"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Flashcards"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/kIbTJiXu/FBNRDRza"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[FEN "r2q1rk1/ppp2ppp/2np1n2/2b1p3/P1B1P1b1/2PP1N2/1P3PPP/RNBQ1RK1 w - - 1 8"]
+[SetUp "1"]
+[UTCDate "2024.09.13"]
+[UTCTime "02:15:27"]
+[ChapterMode "gamebook"]
+
+8. b4 Bb6 9. a5 *
+
+
+[Event "Flashcards: Chapter 2"]
+[Date "2024.09.13"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Flashcards"]
+[ChapterName "Chapter 2"]
+[ChapterURL "https://lichess.org/study/kIbTJiXu/1m2qw27w"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[FEN "r2qr1k1/ppp1b1p1/2n5/3nppN1/P1BPN1b1/2P5/1PQB1PpP/R3R1K1 w - - 0 19"]
+[SetUp "1"]
+[UTCDate "2024.09.13"]
+[UTCTime "02:16:02"]
+[ChapterMode "gamebook"]
+
+19. Qb3 fxe4 20. Bxd5+ Kf8 21. Nh7# *
+
+
+[Event "Flashcards: Chapter 3"]
+[Date "2024.09.13"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Flashcards"]
+[ChapterName "Chapter 3"]
+[ChapterURL "https://lichess.org/study/kIbTJiXu/sPR4Li51"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[FEN "r2qr1k1/ppp2pp1/2n2n2/2b1p2p/P1B3b1/2PP1NN1/1P3PPP/R1BQR1K1 w - - 0 13"]
+[SetUp "1"]
+[UTCDate "2024.09.13"]
+[UTCTime "02:19:04"]
+[ChapterMode "gamebook"]
+
+13. h3 *
+
+

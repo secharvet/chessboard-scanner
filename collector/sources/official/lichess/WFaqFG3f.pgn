@@ -1,0 +1,181 @@
+[Event "Charlotte Game Review: Chapter 1"]
+[Date "2023.01.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C45"]
+[Opening "Scotch Game"]
+[StudyName "Charlotte Game Review"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/WFaqFG3f/gQGPvMtF"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2023.01.14"]
+[UTCTime "18:23:58"]
+
+1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 (4. c3 dxc3 (4... d5) 5. Nxc3 Bb4 6. Bc4 Qf6 7. Bd2 (7. Qb3) (7. O-O Bxc3 8. bxc3 Qxc3 9. Qd5 { [%csl Gf7] }) 7... Nge7 8. O-O O-O 9. Re1 d6 10. Nd5 (10. a3 Bxc3 11. Bxc3 { [%csl Gf7,Gg7][%cal Gc3g7,Gc4f7] }) (10. Bg5) 10... Nxd5 11. exd5 Bxd2 12. Qxd2 Ne7 13. Ng5 (13. Rac1 { [%csl Gc3,Rc7][%cal Gc1c3,Gc3h3,Ge1c1] } 13... Bg4 14. Nd4 { [%csl Rg4][%cal Gh2h3,Gc1c3,Ge1c1] }) 13... Ng6 14. Re3 Qxg5) *
+
+
+[Event "Charlotte Game Review: Lu-Remhoff"]
+[Date "2023.01.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D50"]
+[Opening "Queen's Gambit Declined: Modern Variation"]
+[StudyName "Charlotte Game Review"]
+[ChapterName "Lu-Remhoff"]
+[ChapterURL "https://lichess.org/study/WFaqFG3f/4GpT7IQ8"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2023.01.14"]
+[UTCTime "18:43:04"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Bg5 Bb4 { [%csl Gb4] } (4... Nbd7 5. cxd5 exd5 { [%csl Gd5][%cal Gc3d5] } 6. Nxd5 Nxd5 7. Bxd8 Bb4+ 8. Qd2 Bxd2+ 9. Kxd2 Kxd8) 5. e3 h6 6. Bh4 g5 { [%csl Ge4,Gc3,Gg3][%cal Gf6e4] } 7. Bg3 Ne4 8. Qc2 h5 9. h3 (9. f3 Nxg3 10. hxg3) 9... Nxg3 10. fxg3 c5 (10... Bd6) (10... Qd6 11. Ne2) 11. a3 Bxc3+ { [%cal Gb4c3] } 12. Qxc3 Nc6 { [%csl Gh8][%cal Gc3h8] } 13. dxc5 d4 14. exd4 Qxd4 (14... Nxd4 15. O-O-O) 15. Qxd4 Nxd4 { [%csl Gc2,Gb3][%cal Gd4c2,Gd4b3] } 16. Rd1 Nb3 { [%csl Gc5][%cal Gb3c5] } 17. Nf3 f6 18. Nd2 Nxc5 19. b4 Nd7 20. c5 Ne5 { [%csl Ge5,Gc8] } 21. Nf3 Nxf3+ 22. gxf3 Bd7 23. Bg2 Bc6 24. O-O (24. Kf2 { [%csl Ge7][%cal Ge8e7] }) 24... Ke7 25. f4 Bxg2 26. Kxg2 Rad8 { [%cal Gd8d1] } 27. fxg5 fxg5 28. b5 Rc8 (28... Rxd1 29. Rxd1 Rc8 30. Rc1 Kf6 31. Kf3 Ke5 { [%csl Gd5,Gc5][%cal Ge5d5] }) 29. Rc1 Rhd8 30. c6 bxc6 31. bxc6 Rd6 32. c7 Rd7 33. h4 gxh4 34. gxh4 Rdxc7 35. Rxc7+ Rxc7 36. Rf3 Rc4 37. Kg3 Kd6 38. Kh3 Kd5 39. Kg3 Rg4+ 40. Kh3 Ke4 (40... e5 41. Rf5 Ra4 { [%csl Gh5,Ga3][%cal Gf5h5,Ga4a3] }) (40... Rg7 { [%csl Ge4,Ge5][%cal Gd5e4,Ge6e5] }) 41. Rf7 a5 42. Ra7 *
+
+
+[Event "Charlotte Game Review: Arjun-Kyle"]
+[Date "2023.01.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D02"]
+[Opening "Queen's Pawn Game: London System"]
+[StudyName "Charlotte Game Review"]
+[ChapterName "Arjun-Kyle"]
+[ChapterURL "https://lichess.org/study/WFaqFG3f/irKRbZV3"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2023.01.14"]
+[UTCTime "18:59:53"]
+
+1. d4 d5 2. Nf3 Nf6 3. Bf4 c5 4. e3 Nc6 5. Nbd2 Bf5 (5... cxd4 6. exd4 Bf5 7. c3 (7. Bb5 e6 8. Ne5 Rc8 9. Nxc6 bxc6 10. Ba6)) 6. dxc5 e6 7. Nd4 Nxd4 (7... Bg6 8. Bb5 Rc8 9. Nxc6 bxc6 10. Ba6 Ra8 11. Bb7 { [%csl Gb8,Ga8,Gc8][%cal Gb7a8,Gb7c8,Gf4b8] }) (7... Bxc5 8. Nxf5 exf5 { [%csl Gf4,Gf1] }) (7... Bg4 8. f3 Bh5 9. Bb5 Rc8 10. b4 Qe7 11. Bd6 (11. Nxc6 bxc6 12. Ba6) 11... Qd7 12. Bxf8 Rxf8 13. O-O e5 14. Ne2 g5 15. Ng3 Bg6 16. f4 Ng4 17. Qe2 { [%csl Gf5][%cal Gf4f5] } 17... gxf4 18. exf4 Bxc2 19. Nf3 e4 20. Qxc2 exf3 21. Rxf3 Qe6 22. Qd2 { [%csl Ge1][%cal Ga1e1] } (22. Nf5) 22... Kd8 23. Re1 Qd7 24. Rd3 Nf6 25. Nh5) 8. exd4 { [%csl Gc5][%cal Gd4c5] } *
+
+
+[Event "Charlotte Game Review: Austin - Caleb"]
+[Date "2023.01.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B12"]
+[Opening "Caro-Kann Defense: Advance Variation, Tal Variation"]
+[StudyName "Charlotte Game Review"]
+[ChapterName "Austin - Caleb"]
+[ChapterURL "https://lichess.org/study/WFaqFG3f/dDdhxzdv"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2023.01.14"]
+[UTCTime "19:12:33"]
+
+1. e4 c6 2. d4 d5 3. e5 Bf5 4. h4 h5 5. f3 (5. Bd3 { [%csl Rf5] } 5... Bxd3 6. Qxd3 { [%csl Ge2,Gc4,Gc3][%cal Gg1e2,Gc2c4,Gb1c3] }) 5... e6 { [%csl Gf3,Gg2] } 6. g4 Bg6 (6... hxg4 7. fxg4 Rxh4 8. Rxh4 Qxh4+) 7. g5 (7. f4 c5 { [%cal Gh5g4,Gg4h5] } 8. c3 Nc6 9. Bb5 cxd4 10. cxd4 Bxb1 11. Rxb1 (11. Qa4 { [%csl Gc6] } 11... Qc8 (11... Qb6) (11... Be4 12. Bxc6+ bxc6 13. Qxc6+ Ke7 { [%csl Gf5,Gh1][%cal Gf4f5,Gc1g5] }) 12. Rxb1 hxg4 13. Bd2 Be7 { [%csl Gh4] } (13... Ne7 { [%csl Gf5,Rh4,Rd4,Ge7][%cal Ge7f5,Gf5d4,Gf5h4,Gf8e7] }) 14. Rc1 { [%csl Rc6] } 14... Kd7 15. f5 Nh6 16. Bg5 (16. f6 gxf6 17. exf6 { [%csl Gf4][%cal Gf4b8,Gd2f4] }) 16... Nxf5 17. Ne2 (17. Bxe7 Nxe7 18. Qa3 (18. Rh2 { [%cal Gh2c2,Gc2c6] }) (18. Ne2 { [%csl Gf4,Gd3,Gc5][%cal Ge2f4,Gf4d3,Gd3c5] }) 18... Qc7) 17... Bxg5 18. hxg5 Rxh1+ { [%cal Gh1c1] }) 11... Qa5+ { [%csl Gb5] }) *
+
+
+[Event "Charlotte Game Review: Alex - David"]
+[Date "2023.01.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C29"]
+[Opening "Vienna Game: Vienna Gambit"]
+[StudyName "Charlotte Game Review"]
+[ChapterName "Alex - David"]
+[ChapterURL "https://lichess.org/study/WFaqFG3f/7ziGbcTM"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2023.01.14"]
+[UTCTime "19:26:46"]
+
+1. e4 e5 2. Nc3 Nf6 3. f4 Nc6 (3... d5 4. fxe5 Nxe4 { [%csl Gf3,Re4][%cal Gd1f3,Rf3e4] }) 4. fxe5 Nxe5 5. d4 Neg4 (5... Ng6 6. e5 { [%csl Gf6,Rd5,Rg4,Rh5,Ge4][%cal Rf6d5,Gc3d5,Gc3e4,Gd1h5] } 6... Ng8 7. Nf3 { [%csl Gc4,Gg1][%cal Gf1c4,Ge1g1,Gf1f7] }) 6. e5 Nh6 7. Bxh6 gxh6 8. exf6 Qxf6 9. Qe2+ { [%csl Ge8,Re2,Rf1,Gc1][%cal Ge2e8,Ge1c1] } 9... Qe6 10. Qxe6+ fxe6 11. Nf3 c5 12. Ne4 (12. d5 exd5 13. Nxd5 { [%csl Gd5,Gc7][%cal Gd5c7] }) 12... cxd4 { [%csl Gd4] } 13. Nxd4 { [%csl Ge4,Gd4] } 13... b6 14. Nb5 { [%csl Gc7][%cal Gb5c7] } 14... Kd8 15. Nbd6 { [%csl Gd6] } (15. Ned6 { [%csl Gf7][%cal Gd6f7] } 15... Rg8 16. Nf7+ (16. O-O-O { [%cal Gf1c4,Gh1f1] }) 16... Ke8 17. Nc7+ Kxf7 18. Nxa8 { [%csl Ga8] } 18... Bd6 19. Rd1 { [%csl Gd6][%cal Gd1d6] } (19. O-O-O) 19... Ke7 { [%csl Gb7][%cal Gc8b7] } 20. Be2 Bb7 21. Bf3 Bxf3 22. gxf3 Rxa8 23. Rd3 Rc8 24. Rc3 { [%csl Gb4][%cal Gd6b4] } (24. c3) 24... Bb4 25. Kd2 { [%csl Gc3] } 25... d5 26. a3 Bxc3+ 27. bxc3 Rf8 28. Ke2 b5 { [%csl Gh1,Gg7][%cal Gg1g7] } 29. Rg1 (29. Rb1 a6 30. a4)) *
+
+
+[Event "Charlotte Game Review: Gordon - Dylan"]
+[Date "2023.01.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B10"]
+[Opening "Caro-Kann Defense: Accelerated Panov Attack"]
+[StudyName "Charlotte Game Review"]
+[ChapterName "Gordon - Dylan"]
+[ChapterURL "https://lichess.org/study/WFaqFG3f/MkBXQyDi"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2023.01.14"]
+[UTCTime "19:41:16"]
+
+1. e4 c6 2. c4 d5 3. b3 (3. exd5 cxd5 4. cxd5 Qxd5 (4... Nf6 { [%csl Rd2][%cal Gf6d5,Gb8c6,Gg7g6,Gf8g7,Ge7e6,Gf8d6] }) 5. Nc3 { [%csl Gf3][%cal Gg1f3,Gd2d4,Gc1f4,Gf1c4] }) 3... dxe4 4. Nc3 Nf6 5. Bb2 Bf5 6. Nge2 Nbd7 7. Ng3 Bg6 { [%csl Ge4] } (7... e6 8. Nxf5 exf5) 8. Nce2 Nc5 { [%csl Ge2][%cal Gc3e2] } 9. Nf4 e6 10. b4 { [%csl Gd3][%cal Gc5d3] } 10... Nd3+ 11. Nxd3 (11. Bxd3 exd3 { [%csl Gd3][%cal Ge1h1] }) 11... exd3 { [%csl Gf1,Gb2] } 12. Qb3 { [%csl Gd3] } 12... h5 { [%csl Gh4][%cal Gh5h4] } 13. h4 Ng4 14. a3 (14. c5) 14... Qb6 15. c5 Bxc5 16. Bxd3 Bxf2+ 17. Ke2 { [%csl Gg3][%cal Gf2g3] } 17... Bxg3 18. Raf1 Bxd3+ 19. Qxd3 Qb5 20. Rf3 Qxd3+ 21. Rxd3 Be5 22. Bxe5 Nxe5 23. Rd4 Ke7 24. Rf4 Rad8 25. Rh3 Rd5 26. Re3 Ng4 27. Rg3 Rhd8 *
+
+
+[Event "Charlotte Game Review: Terrence - Eric"]
+[Date "2023.01.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D00"]
+[Opening "Queen's Pawn Game: Accelerated London System"]
+[StudyName "Charlotte Game Review"]
+[ChapterName "Terrence - Eric"]
+[ChapterURL "https://lichess.org/study/WFaqFG3f/K85ibru4"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2023.01.14"]
+[UTCTime "19:50:26"]
+
+1. d4 d5 2. Bf4 Nf6 3. e3 e6 4. Nd2 (4. Nf3 Bd6 5. Ne5 { [%csl Ge5,Rf4,Gg3][%cal Gf3e5,Gd1f3,Gf3g3] }) 4... Bd6 5. Bg3 c5 6. c3 O-O 7. Ngf3 Nc6 8. Bd3 cxd4 (8... Qc7 9. dxc5 { [%csl Rd6] }) (8... Qe7 9. Ne5 Nd7 10. Nxd7 Bxd7 11. Bxd6 Qxd6 12. dxc5 Qxc5 13. Bxh7+ Kxh7 14. Qh5+ Kg8 15. Ne4 Qc4 16. Ng5 Qd3 17. e4 { [%csl Gh7][%cal Gd3h7] }) 9. exd4 { [%csl Ge2,Ge5][%cal Gd1e2,Gf3e5] } 9... Qc7 10. Qe2 { [%csl Ge5][%cal Gf3e5] } 10... Re8 11. Ne5 { [%csl Gh4,Gf4,Gd4,Ge5,Rc8][%cal Ge1g1,Gf2f4,Ga1e1,Gg3h4,Gh4f6,Gf4e5,Gd4e5] } 11... Re7 12. Bh4 { [%csl Ge7][%cal Gh4e7] } (12. h4 Nd7 13. Ndf3 f6 14. Bxh7+ (14. Nxc6 bxc6 15. Bxd6 Qxd6 { [%csl Gh7][%cal Gd7f8] } 16. h5 e5 { [%csl Ge5][%cal Ge6e5] } 17. dxe5 Nxe5 18. O-O-O Bg4 19. Rde1 Rae8 20. Qc2 Nxd3+ 21. Qxd3 Rxe1+ 22. Nxe1 Qf4+ 23. Qd2 Qxd2+ 24. Kxd2 Re2+ { [%csl Gf2][%cal Ge2f2] } 25. Kc1 Rxf2 26. Rh4 f5) 14... Kxh7 15. Ng5+ fxg5 (15... Kg8 16. Qh5 Nf8) 16. hxg5+ Kg8 17. Qh5 Ndxe5 18. dxe5 Nxe5 19. Bxe5 Bxe5 { [%csl Gg6][%cal Gg5g6] } 20. g6 (20. Qh8+ Kf7 21. g6+ Kxg6 22. Qh5+ Kf6) 20... Bh2 { [%csl Gh8][%cal Gh5h8] } 21. Rxh2 (21. Qh7+) 21... Qxh2) (12. f4) *
+
+
+[Event "Charlotte Game Review: Charlie - Sahana"]
+[Date "2023.01.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A46"]
+[Opening "Indian Defense: London System"]
+[StudyName "Charlotte Game Review"]
+[ChapterName "Charlie - Sahana"]
+[ChapterURL "https://lichess.org/study/WFaqFG3f/1V9AJBlL"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2023.01.14"]
+[UTCTime "20:18:47"]
+
+1. d4 Nf6 2. Nf3 e6 3. Bf4 d5 4. e3 c5 5. c4 Nc6 6. Nc3 Be7 { [%csl Gb8,Rc8][%cal Gf4b8] } 7. Bd3 O-O 8. O-O Nh5 9. Bg3 Nxg3 10. hxg3 Bf6 11. dxc5 Bxc3 12. bxc3 Re8 13. cxd5 (13. Qc2 { [%csl Gc2,Gh7,Gd1,Gd8][%cal Gc2h7,Gf1d1,Gd1d8] }) 13... Qxd5 14. Qc2 Qh5 { [%csl Gh7][%cal Gh5h7] } 15. Rab1 { [%cal Gb7b6,Gc5b6] } 15... Ne7 16. Rb4 { [%csl Gh4,Rh5,Rh7][%cal Gb4h4,Gh4h7] } 16... Ng6 { [%csl Gh4][%cal Gg6h4] } 17. Bxg6 hxg6 18. Rh4 Qxc5 19. Qa4 Qxc3 (19... b5 { [%csl Ga8][%cal Ga4e4,Ge4a8] } 20. Qg4 (20. Qe4 Rb8 21. Rh1 Bb7 22. Qh4) 20... e5 { [%csl Gg4,Gh3][%cal Gc8g4,Gg4h3] }) 20. Qxe8# *
+
+
+[Event "Charlotte Game Review: Cory  - Arsh"]
+[Date "2023.01.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B10"]
+[Opening "Caro-Kann Defense"]
+[StudyName "Charlotte Game Review"]
+[ChapterName "Cory  - Arsh"]
+[ChapterURL "https://lichess.org/study/WFaqFG3f/l82l3sU4"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2023.01.14"]
+[UTCTime "20:27:25"]
+
+1. e4 c6 2. Nc3 d5 3. exd5 cxd5 4. d4 { [%csl Gc2,Gc4][%cal Gc2c3,Gc3c4] } 4... Nf6 5. Nf3 Bg4 6. Be2 e6 7. h3 Bh5 8. g4 Bg6 9. Ne5 Nbd7 10. Nxg6 hxg6 11. Bf4 a6 { [%csl Gb5][%cal Gb7b5] } 12. Qd3 Qb6 13. O-O-O Rc8 14. f3 Qa5 { [%csl Gc4,Gd7,Rc3,Gb4][%cal Gd7b6,Gb6c4,Gf6d7,Gb7b5,Rc3a2,Ga5a2,Gf8b4] } 15. Bd2 Qc7 (15... Be7 16. Ne4 Qxa2) (15... Bb4 16. a3 Bxa3 17. bxa3 Qxa3+ 18. Kb1 Rc6 19. Nb5) 16. Bg5 Bb4 17. Kd2 Nb6 { [%csl Ga4][%cal Gb6a4] } 18. Qe3 (18. Kc1) 18... Na4 19. Kc1 Nxc3 20. bxc3 Bxc3 { [%cal Ge8e7] } 21. Rd3 Qa5 22. Qe5 { [%csl Rh1] } 22... Qa3+ (22... Qxa2 23. Rxc3 Qa1+ 24. Kd2 Qxc3+ 25. Kd1 Qxc2+ 26. Ke1 { [%cal Gc2b1] } 26... Qb1+ 27. Bd1 Ke7) 23. Kd1 Qxa2 24. Rxc3 Qa1+ (24... Rxc3 25. Qb8+ { [%csl Ge7][%cal Ge8e7] } 25... Ke7 26. Qxh8 Qb1+ { [%cal Gd1d2,Gg5c1] } 27. Bc1 Qxc2+ 28. Ke1 Qxc1+ { [%csl Gh1][%cal Ge1f2] } 29. Bd1 Re3+) 25. Bc1 Qxc3 26. Bd3 Qc7 27. Qe2 Nd7 28. Bxg6 { [%cal Gf7g6] } 28... fxg6 (28... O-O 29. Bd3 Nb6 30. h4 Na4 { [%csl Gc3][%cal Ga4c3] } 31. Qg2 Nc3+ 32. Ke1 { [%csl Ge5,Re1][%cal Ge6e5] } 32... f6 (32... e5) 33. Bg6 Rfd8 { [%csl Gf8][%cal Gg8f8] } 34. h5 Kf8 35. h6 gxh6 36. Rxh6 Qa5 37. Bd2 Qa1+ 38. Kf2 Nd1+ 39. Kg3 Ke7 40. Bb4+ Kd7 41. Rh7+ Kc6 42. Qd2 { [%csl Gd1,Gh1][%cal Gh7h1] } 42... Rd7 (42... Nb2 { [%csl Gc3][%cal Gd2c3] } 43. Qc3+ Kb6 44. Bc5+) (42... Rh8 43. Rf7 { [%csl Gh1,Gg1,Gd1][%cal Gh8h1,Gh1g1,Gh1d1] }) 43. Rh1 Qa4 44. Rxd1 Rg8 45. Qc3+ Kb6 46. Qc5#) 29. Qxe6+ { [%csl Ga3,Gd8][%cal Ge8d8] } 29... Kd8 *
+
+
+[Event "Charlotte Game Review: Joshua - Aiden"]
+[Date "2023.01.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B23"]
+[Opening "Sicilian Defense: Closed"]
+[StudyName "Charlotte Game Review"]
+[ChapterName "Joshua - Aiden"]
+[ChapterURL "https://lichess.org/study/WFaqFG3f/e7DLeNWd"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2023.01.14"]
+[UTCTime "20:05:16"]
+
+1. e4 c5 { [%csl Gf3][%cal Gg1f3] } 2. Nc3 { [%csl Gc3] } (2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 Nc6 6. Bg5 g6 { [%csl Gg6][%cal Gg7g6] } 7. Bxf6 exf6 { [%csl Gf5,Gd6][%cal Gf8g7,Gf6f5] }) 2... d6 3. d4 cxd4 4. Qxd4 Nc6 5. Qd2 g6 6. b3 Bh6 { [%csl Gh6] } 7. f4 { [%csl Ge5][%cal Ge7e5] } 7... Nf6 (7... e5 { [%csl Ge5][%cal Ge7e5] } 8. Nb5) 8. Bb2 e5 { [%csl Ge5] } 9. g3 (9. Nb5) 9... O-O 10. O-O-O Nd4 { [%csl Ge2] } 11. Bd3 (11. Kb1 b5) (11. Nge2 { [%cal Ge2d4] } 11... Bg4 12. Nxd4 Bxd1 13. Qxd1 exd4 14. Qxd4 Bg7 { [%csl Gg7] } 15. Nd5 Ne8 16. Qb4 Bxb2+ 17. Kxb2 { [%csl Gf1,Ga8,Gf8] }) 11... d5 12. exd5 Nxd5 13. Re1 Nxf4 14. gxf4 Bxf4 15. Re3 Nf5 16. Bxf5 Bxf5 17. Qf2 Qd4 18. Nd1 Qe4 { [%csl Ge4] } 19. Nf3 Rac8 { [%csl Ge3,Gc2][%cal Gf4e3,Ge4c2] } 20. Kb1 Qxc2+ 21. Qxc2 Bxc2+ *
+
+
+[Event "Live Chess - chess"]
+[Site "Chess.com"]
+[Date "2023.02.07"]
+[White "IMRosen"]
+[Black "Roedor"]
+[Result "1-0"]
+[WhiteElo "2649"]
+[BlackElo "2385"]
+[TimeControl "180+1"]
+[Termination "IMRosen won by resignation"]
+[Variant "Standard"]
+[ECO "B23"]
+[Opening "Sicilian Defense: Closed"]
+[StudyName "Charlotte Game Review"]
+[ChapterName "IMRosen - Roedor"]
+[ChapterURL "https://lichess.org/study/WFaqFG3f/xozc9nPr"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 c5 2. Nc3 d6 3. d4 cxd4 4. Qxd4 Nc6 5. Qd2 g6 6. b3 Bh6 7. f4 Nf6 8. Bb2 e5 9. g3 O-O 10. O-O-O { [%cal Gc6d4] } 10... Bg4 (10... Nd4 11. Nge2 Bg4 12. Nxd4 Bxd1 13. Qxd1 exd4 14. Qxd4 { [%csl Gd4] } 14... Bg7 15. Nd5) 11. Be2 Rc8 12. h3 Bxe2 13. Ngxe2 Qa5 14. Kb1 Rfd8 15. Rhf1 Nh5 16. Qd3 Nb4 17. Qf3 exf4 18. a3 Nxc2 19. Kxc2 Nxg3 20. Nxg3 { 1-0 White wins. } 1-0
+
+

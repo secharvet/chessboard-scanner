@@ -1,0 +1,16 @@
+[Event "French Defense: How to crush the Wing Gambit: How to play against Wing Gambit as black"]
+[Date "2017.12.09"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C00"]
+[Opening "French Defense: Wing Gambit"]
+[StudyName "French Defense: How to crush the Wing Gambit"]
+[ChapterName "How to play against Wing Gambit as black"]
+[ChapterURL "https://lichess.org/study/4hPtCSzz/0eoZd01Q"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2017.12.09"]
+[UTCTime "00:02:26"]
+
+1. e4 e6 2. Nf3 d5 3. e5 c5 4. b4 d4! { A strong prophylactic move which prevents white from playing d4 and slows down white's development. This move also attempts to artificially isolate the pawn on e5 and create some long-term weakness. } 5. bxc5 { The mainline } 5... Bxc5 6. Ba3 (6. c3 Ne7 7. cxd4 Bxd4 8. Qa4+ Nbc6 9. Nxd4 Qxd4 10. Qxd4 Nxd4 $15) (6. Bb2 Nc6 7. Bb5 Ne7 $15) (6. Bd3 Nc6) 6... Qa5! { Essentially forcing white to exchange on c5, leading to great placement of the black queen } 7. Bxc5 Qxc5 { Black is now ready to exert pressure in the center with simple developing moves } { [%csl Re5][%cal Gb8d7,Gg8e7,Ge7g6,Gb7b6,Gc8b7] } 8. c3 { The most forcing continuation } 8... Nc6 9. cxd4 Nxd4 10. Qa4+ Bd7! { sacrificing the knight for massive compensation } 11. Qxd4 Qc1+ 12. Ke2 Bb5+ 13. Ke3 (13. d3 Rd8 { [%csl Rd3][%cal Gd8d3,Gb5d3] } 14. Nbd2 { only move } 14... Qa3 15. Qf4 Ne7 $44 { In this "computer line", Black has great practical chances and white's position looks very ugly }) 13... Bxf1 14. Qa4+ Kf8 15. Qb5 $146 Qxd2+ 16. Nbxd2 Bxb5 17. Nd4 Bd7 18. Ne4 Ne7 19. Nd6 Nd5+ 20. Ke4 g5 21. Nxb7 Rb8 22. Nc5 Ke7 *
+
+

@@ -1,0 +1,106 @@
+[Event "Positions: Black to move"]
+[Date "2025.10.23"]
+[Result "*"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Positions"]
+[ChapterName "Black to move"]
+[ChapterURL "https://lichess.org/study/n5hToUAr/LNsWaj2K"]
+[Annotator "https://lichess.org/@/hua000sean"]
+[FEN "8/N7/4R3/1P4pk/P4p2/3b1P2/r3RKP1/7r b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.23"]
+[UTCTime "00:48:43"]
+
+1... g4 2. fxg4+ Kxg4 3. Nc6 *
+
+
+[Event "Positions: Chapter 2"]
+[Date "2025.10.23"]
+[Result "*"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Positions"]
+[ChapterName "Chapter 2"]
+[ChapterURL "https://lichess.org/study/n5hToUAr/1kpmdGTn"]
+[Annotator "https://lichess.org/@/hua000sean"]
+[UTCDate "2025.10.23"]
+[UTCTime "00:55:20"]
+
+ *
+
+
+[Event "Positions: Chapter 4"]
+[Date "2025.10.23"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Positions"]
+[ChapterName "Chapter 4"]
+[ChapterURL "https://lichess.org/study/n5hToUAr/e3UsHrU1"]
+[Annotator "https://lichess.org/@/hua000sean"]
+[FEN "7r/1K5P/P7/4k3/8/8/2B5/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.23"]
+[UTCTime "00:56:12"]
+
+ *
+
+
+[Event "Positions: Chapter 6"]
+[Date "2025.10.23"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Positions"]
+[ChapterName "Chapter 6"]
+[ChapterURL "https://lichess.org/study/n5hToUAr/E61JiCpf"]
+[Annotator "https://lichess.org/@/hua000sean"]
+[FEN "3k4/8/3P2p1/1p4K1/3rNP2/4R3/1n6/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.23"]
+[UTCTime "00:59:32"]
+
+1. Nf6 (1. Nc5 Nc4 2. Ne6+ Kd7) 1... Rxd6 2. Re8+ Kc7 3. Re2 b4 (3... Nc4) *
+
+
+[Event "Positions: Chapter 8"]
+[Date "2025.10.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Positions"]
+[ChapterName "Chapter 8"]
+[ChapterURL "https://lichess.org/study/n5hToUAr/LpBLgicW"]
+[Annotator "https://lichess.org/@/hua000sean"]
+[FEN "1kr1b3/1p6/3R4/pPP2p1p/P1K1p1p1/6P1/5PBP/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.30"]
+[UTCTime "01:02:41"]
+
+ *
+
+
+[Event "Positions: Chapter 9"]
+[Date "2025.10.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Positions"]
+[ChapterName "Chapter 9"]
+[ChapterURL "https://lichess.org/study/n5hToUAr/PgzX9LVt"]
+[Annotator "https://lichess.org/@/hua000sean"]
+[FEN "1kr1b3/1p6/3R4/pPP2p1p/P1K1p1p1/6P1/5PBP/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.30"]
+[UTCTime "01:02:41"]
+
+ *
+
+

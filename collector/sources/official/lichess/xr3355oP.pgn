@@ -1,0 +1,48 @@
+[Event "Openings named for AMERICA: American Attack (vs Dutch Defense)"]
+[Date "2023.07.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A82"]
+[Opening "Dutch Defense: Staunton Gambit, American Attack"]
+[StudyName "Openings named for AMERICA"]
+[ChapterName "American Attack (vs Dutch Defense)"]
+[ChapterURL "https://lichess.org/study/xr3355oP/Lo7cI9d6"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2023.07.04"]
+[UTCTime "18:48:56"]
+
+1. d4 f5 2. e4 fxe4 { [%csl Gc3][%cal Gb1c3] } 3. Nd2 d5 (3... Nf6 4. f3 exf3 (4... d5 5. c3 Bf5 (5... exf3 6. Ngxf3)) (4... e3 5. Nc4) 5. Ngxf3 e6 6. Bd3) 4. f3 Nf6 5. c3 exf3 6. Ngxf3 e6 7. Bd3 Bd6 8. O-O O-O 9. Ne5 Bxe5 (9... Nbd7 10. Ndf3 c6) *
+
+
+[Event "Openings named for AMERICA: American Attack vs Sicilian"]
+[Date "2023.07.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B45"]
+[Opening "Sicilian Defense: Four Knights Variation, American Attack"]
+[StudyName "Openings named for AMERICA"]
+[ChapterName "American Attack vs Sicilian"]
+[ChapterURL "https://lichess.org/study/xr3355oP/aWc82KEy"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2023.07.04"]
+[UTCTime "18:49:34"]
+
+1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 e6 6. Ndb5 (6. Bf4) 6... Bb4 7. Nd6+ { [%csl Gd6][%cal Gb5d6] } (7. Bf4 d5 (7... Nxe4 8. Qf3 d5 9. Nc7+ Kf8 (9... Ke7 10. O-O-O Bxc3 (10... g5 11. N3xd5+) 11. bxc3 g5 12. Bg3 f5 13. Bc4)) 8. Nc7+ Kf8 9. Nxa8 Nxe4 10. Qf3) 7... Ke7 (7... Bxd6 8. Qxd6) 8. Bf4 (8. Nxc8+ Rxc8) 8... e5 { [%csl Gf4] } 9. Nf5+ Kf8 10. Bd2 { [%csl Gc3][%cal Gb4c3] } 10... d5 (10... Bxc3 11. Bxc3 Nxe4 12. Qg4 { [%csl Gg7,Ge4][%cal Gg4e4,Gg4g7] }) 11. exd5 Bxf5 (11... Nxd5 12. Nxd5 Qxd5 13. Bxb4+ Nxb4 14. Qxd5 Nxd5 15. O-O-O) 12. dxc6 bxc6 13. Bc4 *
+
+
+[Event "Openings named for AMERICA: Nimzo American Variation"]
+[Date "2023.07.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B32"]
+[Opening "Sicilian Defense: Nimzo-American Variation"]
+[StudyName "Openings named for AMERICA"]
+[ChapterName "Nimzo American Variation"]
+[ChapterURL "https://lichess.org/study/xr3355oP/h1W25Ngs"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2023.07.04"]
+[UTCTime "18:45:58"]
+
+1. e4 c5 2. Nf3 Nc6 { [%csl Gc6] } 3. d4 cxd4 4. Nxd4 d5 5. Bb5 (5. exd5 Qxd5 6. Be3 { [%csl Gd4] } 6... e6 7. Nc3 { [%csl Gd5] } 7... Bb4 { [%csl Ge1][%cal Gb4e1] } 8. Nb5 { [%csl Gc7][%cal Gb5c7] } 8... Qe5 { [%csl Ge1,Gc3,Ga6][%cal Ge5c7,Ge5e1,Gb4c3,Ge5c3,Ga7a6] } 9. a3 Be7 10. Qd2 a6 11. f4 Qb8 12. Nd4 Nf6 13. O-O-O Nxd4 14. Bxd4 O-O { [%csl Gb5,Gb4][%cal Gb7b5,Gb5b4] }) (5. Nxc6 bxc6 6. exd5 cxd5 (6... Qxd5 7. Qxd5 cxd5)) 5... dxe4 6. Nxc6 Qxd1+ 7. Kxd1 a6 8. Ba4 Bd7 9. Nc3 Bxc6 10. Bxc6+ bxc6 11. Nxe4 f5 12. Nd2 e5 13. Nc4 O-O-O+ 14. Ke2 Nf6 15. Nxe5 Re8 16. f4 Bd6 *
+
+

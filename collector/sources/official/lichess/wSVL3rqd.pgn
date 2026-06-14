@@ -1,0 +1,20 @@
+[Event "American Cup Blitz: Round 1: Rosen vs Aronian | American Cup Blitz"]
+[Date "2025.04.02"]
+[White "Rosen, Eric"]
+[Black "Aronian, Levon"]
+[Result "*"]
+[WhiteTitle "IM"]
+[BlackTitle "GM"]
+[Variant "Standard"]
+[ECO "D01"]
+[Opening "Rapport-Jobava System"]
+[StudyName "American Cup Blitz"]
+[ChapterName "Round 1: Rosen vs Aronian | American Cup Blitz"]
+[ChapterURL "https://lichess.org/study/wSVL3rqd/A6EoBBnd"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2025.04.02"]
+[UTCTime "02:41:38"]
+
+1. d4 Nf6 2. Bf4 g6 3. Nc3 d5 4. e3 c6 5. h4 h5 6. Nf3 Bg4 7. Qd2 Bxf3 8. gxf3 e6 9. O-O-O Nbd7 10. e4 Bb4 11. Bd3 (11. a3 Bxc3 12. Qxc3 dxe4 13. fxe4 Nxe4 14. Qf3 Nef6 15. Bd3) 11... Qa5 12. Kb1 Nb6 13. a3 Bxc3 14. Qxc3 Qxc3 15. bxc3 Na4 16. Bd2 b5 17. Ka2 Kd7 18. Kb3 Nb6 19. Bg5 Ne8 20. e5 Nc7 21. Rhg1 Na4 22. Bd2 Rab8 23. Ra1 Rb6 24. Ka2 c5 25. dxc5 Rc6 26. Be3 Nxc3+ 27. Kb3 Na4 28. Kb4 Ra8 29. Ka5 Nxc5 30. Bxc5 Rxc5 31. Kb4 Kc6 32. Kb3 a5 33. a4 b4 34. Kb2 Rc3 35. f4 Kc5 36. Rg3 d4 37. Be4 Rd8 38. Rd1 Nd5 39. Bxd5 Rxd5 40. Rgd3 Kc4 41. R1d2 Rxd3 (41... Rd8 42. Rd1) 42. Rxd3 (42. cxd3+ Kc5 43. Rc2+ Kb6 44. Rc8 Rc5 45. Rxc5 (45. Rb8+ Kc7 (45... Ka7 46. Rf8 Rc7) 46. Rf8) 45... Kxc5) 42... Rd8 43. Ka2 Rf8 44. Rg3 Rd8 45. Rd3 f6 46. Rg3 fxe5 47. fxe5 Rf8 48. Rxg6 Rxf2 49. Kb2 d3 50. Rxe6 Rxc2+ 51. Kb1 Re2 *
+
+

@@ -1,0 +1,43 @@
+[Event "Casual Rapid game"]
+[Site "https://lichess.org/v2bb59sx"]
+[Date "2019.07.01"]
+[Round "-"]
+[White "EricRosen"]
+[Black "m3ssym4rv1n"]
+[Result "1-0"]
+[WhiteElo "2511"]
+[WhiteTitle "IM"]
+[BlackElo "1829"]
+[TimeControl "600+0"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "D00"]
+[Opening "Queen's Pawn Game: Accelerated London System"]
+[StudyName "e4!"]
+[ChapterName "IM EricRosen - m3ssym4rv1n"]
+[ChapterURL "https://lichess.org/study/Y4KmeM6B/RE09dFXH"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 { [%clk 0:10:00] } 1... d5 { [%clk 0:10:00] } 2. Bf4 { [%clk 0:09:55] } 2... Nf6 { [%clk 0:09:56] } 3. e3 { [%clk 0:09:51] } 3... g6 { [%clk 0:09:55] } 4. Nc3 { [%clk 0:09:48] } 4... a6 { [%clk 0:09:50] } 5. h4 { [%clk 0:09:45] } 5... h5 { [%clk 0:09:39] } 6. Nf3 { [%clk 0:09:41] } 6... Bg4 { [%clk 0:09:34] } 7. Be2 { [%clk 0:09:39] } 7... c5 { [%clk 0:09:19] } 8. Ne5 { [%clk 0:09:14] } 8... Bxe2 { [%clk 0:09:13] } 9. Qxe2 { [%clk 0:09:05] } 9... Bg7 { [%clk 0:09:00] } 10. O-O-O { [%clk 0:08:25] } 10... c4 { [%clk 0:08:48] } 11. e4 { [%clk 0:08:02] } 11... b5 { [%clk 0:07:56] } 12. Rhe1 { [%clk 0:07:14] } 12... O-O { [%clk 0:06:58] } 13. g4 { [%clk 0:06:07] } 13... hxg4 { [%clk 0:06:01] } 14. Nxg4 { [%clk 0:05:46] } 14... dxe4 { [%clk 0:05:17] } 15. Nxf6+ { [%clk 0:05:25] } 15... exf6 { [%clk 0:05:12] } 16. Qxe4 { [%clk 0:05:17] } 16... Nd7 { [%clk 0:04:51] } 17. Nd5 { [%clk 0:04:56] } 17... Re8 { [%clk 0:04:29] } 18. Ne7+ { [%clk 0:04:52] } 18... Kf8 { [%clk 0:03:41] } 19. Bd6 { [%clk 0:04:27] } 19... Qb6 { [%clk 0:03:04] } 20. Nc8+ { [%clk 0:03:52] } 20... Qxd6 { [%clk 0:02:59] } 21. Qxe8# { 1-0 White wins by checkmate. } { [%clk 0:03:50] } 1-0
+
+
+[Event "World Blitz Championship"]
+[Site "Doha QAT"]
+[Date "2016.12.29"]
+[Round "2.7"]
+[White "Alexander Grischuk"]
+[Black "Rustam Khusnutdinov"]
+[Result "1-0"]
+[WhiteElo "2737"]
+[BlackElo "2458"]
+[Variant "Standard"]
+[ECO "D01"]
+[Opening "Rapport-Jobava System"]
+[StudyName "e4!"]
+[ChapterName "Alexander Grischuk - Rustam Khusnutdinov"]
+[ChapterURL "https://lichess.org/study/Y4KmeM6B/tZ2qGZOH"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 Nf6 2. Bf4 g6 3. Nc3 d5 4. e3 Bg7 5. h4 h6 6. Nf3 Bg4 7. Be2 c6 8. Ne5 Bxe2 9. Qxe2 Nbd7 10. O-O-O Qa5 11. Kb1 Nxe5 12. Bxe5 h5 13. e4 O-O-O 14. exd5 cxd5 15. Rh3 Rd7 16. Nb5 a6 17. Rc3+ Kd8 18. Na7 { [%csl Gc8][%cal Gc3c8] } 18... e6 19. Qf3 { [%csl Gf6] } 19... Ke7 20. Nc8+ Rxc8 21. Rxc8 Rd8 22. Bc7 { 1-0 Black resigns. } 1-0
+
+

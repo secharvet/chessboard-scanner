@@ -1,0 +1,456 @@
+[Event "Blundering Lecture: 900 point upset!"]
+[Date "2019.06.25"]
+[White "NN"]
+[Black "NN"]
+[Result "*"]
+[WhiteElo "2134"]
+[BlackElo "1227"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[Variant "Standard"]
+[ECO "A11"]
+[Opening "Réti Opening: Anglo-Slav Variation, Gurevich System"]
+[StudyName "Blundering Lecture"]
+[ChapterName "900 point upset!"]
+[ChapterURL "https://lichess.org/study/XwaWeTce/KpB31cvz"]
+
+1. Nf3 d5 2. c4 c6 3. e3 Nf6 4. Nc3 Bg4 5. Qb3 b6 6. Ne5 d4 7. Ne2 dxe3 8. dxe3 e6 *
+
+
+[Event "Hoogovens Knockout"]
+[Site "Wijk aan Zee NED"]
+[Date "1993.01.18"]
+[Round "2.1"]
+[White "Larry Mark Christiansen"]
+[Black "Anatoly Karpov"]
+[Result "1-0"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[Variant "Standard"]
+[ECO "E12"]
+[Opening "Queen's Indian Defense: Petrosian Variation, Farago Defense"]
+[StudyName "Blundering Lecture"]
+[ChapterName "Karpov Loses in 12 moves"]
+[ChapterURL "https://lichess.org/study/XwaWeTce/0k1aXT6d"]
+
+1. d4 Nf6 2. c4 e6 3. Nf3 b6 4. a3 Ba6 5. Qc2 Bb7 6. Nc3 c5 7. e4 cxd4 8. Nxd4 Nc6 9. Nxc6 Bxc6 10. Bf4 Nh5 11. Be3 Bd6 1-0
+
+
+[Event "Munich op 9293"]
+[Site "Munich"]
+[Date "1993.??.??"]
+[Round "9"]
+[White "Reich, Thomas"]
+[Black "Pavlovic, Milos"]
+[Result "1-0"]
+[WhiteElo "2340"]
+[BlackElo "2450"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[Variant "Standard"]
+[ECO "B22"]
+[Opening "Sicilian Defense: Alapin Variation, Barmen Defense"]
+[StudyName "Blundering Lecture"]
+[ChapterName "Grandmaster gets losing position after 8 moves"]
+[ChapterURL "https://lichess.org/study/XwaWeTce/uYp4rzru"]
+
+1. e4 c5 2. c3 d5 3. exd5 Qxd5 4. d4 g6 5. Nf3 Bg7 6. Be3 cxd4 7. cxd4 { [%csl Gc8] } 7... Nh6?? { White to move and win material } { [%csl Gh6] } 1-0
+
+
+[Event "Norway Chess blitz 2nd"]
+[Site "Flor/Fjaere"]
+[Date "2014.06.02"]
+[Round "6"]
+[White "Carlsen, Magnus"]
+[Black "Caruana, Fabiano"]
+[Result "1-0"]
+[WhiteElo "2881"]
+[BlackElo "2791"]
+[Variant "Standard"]
+[ECO "C07"]
+[Opening "French Defense: Tarrasch Variation, Open System, Euwe-Keres Line"]
+[StudyName "Blundering Lecture"]
+[ChapterName "How to Beat Fabiano in 11 Moves: Carlsen, Magnus - Caruana, Fabiano"]
+[ChapterURL "https://lichess.org/study/XwaWeTce/e8C6solo"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 e6 2. e4 d5 3. Nd2 c5 4. Ngf3 cxd4 5. Nxd4 Nf6 6. exd5 Qxd5 7. Nb5 Na6 { [%csl Gc7][%cal Ga6c7] } 8. Nc3 Qd8 9. a3 Be7 10. Qf3 O-O?? { White to move and win material! } 11. Bxa6 1-0
+
+
+[Event "2018 Australasian Masters IM Norm Tourna"]
+[Site "Melbourne"]
+[Date "2018.12.20"]
+[Round "6.5"]
+[White "Rosen, Eric"]
+[Black "Levi, Eddy L"]
+[Result "0-1"]
+[WhiteElo "2342"]
+[BlackElo "2049"]
+[Variant "Standard"]
+[ECO "A04"]
+[Opening "Zukertort Opening: Dutch Variation"]
+[StudyName "Blundering Lecture"]
+[ChapterName "The Worst Move I've Ever Played | Rosen, Eric - Levi, Eddy L"]
+[ChapterURL "https://lichess.org/study/XwaWeTce/5qwOs361"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. Nf3 f5 2. d4 Nf6 3. Bf4 e6 4. e3 b6 5. Bd3 Bb7 6. O-O Be7 7. h3 O-O 8. c4 d6 9. Nc3 h6 10. Bh2 Ne4 11. Bxe4 fxe4 12. Nd2 d5 13. Qg4 Bc8 14. Be5 Bf6 15. f4 c5 16. Qh5 Bb7 17. Nb5 cxd4 18. Nxd4 Qe7 19. Qg4 Bc8 20. Rac1 Bd7 21. Qg3 Bxe5 22. fxe5 Rxf1+ 23. Rxf1 Nc6 24. cxd5 Nxd4 25. exd4 exd5 26. Rc1 Rc8 27. Rxc8+ Bxc8 28. Qc3 Ba6 29. Qc6 Bb7 30. Qb5 Kh7 31. Nf1 Qg5 32. b4 Qc1 33. Qd7 e3 34. Qf5+ Kg8 35. Qd3 Qa1 36. Kh2 e2 37. Qxe2 Qxd4 38. a3 Qe4 39. Ng3 Qf4 40. Qh5 d4 41. Qe8+ Kh7 42. Qd7 Ba8 43. Qxa7 Bd5 { 0-1 Black wins. } 44. Qd7 { [%csl Gf5][%cal Gd7f5] } (44. Qa6 Qf2 45. Qe2) (44. Qxg7+ Kxg7 { [%csl Gh2,Gg3][%cal Gf4h2,Gg3h5] }) 0-1
+
+
+[Event "Blundering Lecture: Brain Freeze: Grischuk - Caruana"]
+[Date "2019.06.25"]
+[White "Grischuk"]
+[Black "Caruana"]
+[Result "0-1"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[Variant "Standard"]
+[ECO "C77"]
+[Opening "Ruy Lopez: Morphy Defense, Anderssen Variation"]
+[StudyName "Blundering Lecture"]
+[ChapterName "Brain Freeze: Grischuk - Caruana"]
+[ChapterURL "https://lichess.org/study/XwaWeTce/fAYyQmjU"]
+
+{ https://youtu.be/pZCth2ty5NI?t=215 }
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. d3 d6 6. c3 g6 7. h3 Bg7 8. Be3 O-O 9. Nbd2 b5 10. Bc2 Bb7 11. O-O Nd7 12. a3 Ne7 13. d4 c5 14. Re1 Qc7 15. b4 c4 16. Qc1 d5 17. Bh6?? { [%csl Gh6] } 17... Bxh6 { 0-1 White resigns. } 0-1
+
+
+[Event "Blundering Lecture: Tragic Comedy - Can white win?"]
+[Site "Helsingor DEN"]
+[Date "2015.07.28"]
+[Round "5"]
+[White "Tragic Comedy"]
+[Black "Can white win?"]
+[Result "*"]
+[Annotator "ericr"]
+[FEN "8/7p/4k2P/8/4K3/4B3/8/8 w - - 0 1"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Blundering Lecture"]
+[ChapterName "Tragic Comedy - Can white win?"]
+[ChapterURL "https://lichess.org/study/XwaWeTce/xdIcmrXf"]
+[FEN "8/7p/4k2P/8/4K3/4B3/8/8 w - - 0 1"]
+[SetUp "1"]
+
+{ [#] }
+1. Bg5 Kf7 2. Kf5 Kg8 3. Kf6 Kh8 4. Kf7 (4. Bf4 Kg8 5. Bd6 Kh8 6. Be7 Kg8 7. Bd6 Kh8 8. Bc5 Kg8 9. Bb4 Kh8 10. Ba3 Kg8 11. Bb2 Kh8 (11... Kf8 12. Ba3+ Kg8 13. Bb4 { [%csl Gb4] } 13... Kh8 14. Bc5 Kg8 15. Bd4 { [%csl Gf8][%cal Gg8f8] } 15... Kf8) 12. Kf7#) *
+
+
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2025.03.31"]
+[White "GMBoorchess"]
+[Black "IMRosen"]
+[Result "1/2-1/2"]
+[WhiteElo "2733"]
+[WhiteTeam "2"]
+[BlackElo "2774"]
+[BlackTeam "2"]
+[TimeControl "180"]
+[Annotator "ericr"]
+[Variant "Standard"]
+[ECO "D51"]
+[Opening "Queen's Gambit Declined: Modern Variation, Knight Defense"]
+[StudyName "Blundering Lecture"]
+[ChapterName "Never give up! GMBoorchess - IMRosen"]
+[ChapterURL "https://lichess.org/study/XwaWeTce/y7hU3pE6"]
+
+1. d4 { [%clk 2:59:57] } 1... d5 { [%clk 2:59:54] } 2. c4 { [%clk 2:59:56] } 2... e6 { [%clk 2:59:53] } 3. Nc3 { [%clk 2:59:54] } 3... Nf6 { [%clk 2:59:52] } 4. Bg5 { [%clk 2:59:52] } 4... c6 { [%clk 2:59:48] } 5. e3 { [%clk 2:59:50] } 5... Nbd7 { [%clk 2:59:48] } 6. cxd5 { [%clk 2:59:48] } 6... exd5 { [%clk 2:59:47] } 7. Nf3 { [%clk 2:59:47] } 7... Be7 { [%clk 2:59:46] } 8. Bd3 { [%clk 2:59:46] } 8... Nf8 { [%clk 2:59:45] } 9. O-O { [%clk 2:59:40] } 9... Ng6 { [%clk 2:59:44] } 10. Rb1 { [%clk 2:59:37] } 10... O-O { [%clk 2:59:43] } 11. b4 { [%clk 2:59:34] } 11... a6 { [%clk 2:59:43] } 12. a4 { [%clk 2:59:33] } 12... Bd6 { [%clk 2:59:42] } 13. Qc2 { [%clk 2:59:29] } 13... h6 { [%clk 2:59:40] } 14. Bxf6 { [%clk 2:59:19] } 14... Qxf6 { [%clk 2:59:40] } 15. b5 { [%clk 2:59:14] } 15... axb5 { [%clk 2:59:39] } 16. axb5 { [%clk 2:59:13] } 16... Re8 { [%clk 2:59:39] } 17. bxc6 { [%clk 2:59:11] } 17... bxc6 { [%clk 2:59:39] } 18. Bxg6 { [%clk 2:59:04] } 18... fxg6 { [%clk 2:59:38] } 19. Rb6 { [%clk 2:59:02] } 19... Bf5 { [%clk 2:59:32] } 20. Qb3 { [%clk 2:58:59] } 20... Bc7?? { [%clk 2:59:04] } 21. Nxd5!! { [%clk 2:58:50] } 21... Qf7 { [%clk 2:58:15] } 22. Nxc7 { [%clk 2:58:45] } 22... Be6 { [%clk 2:58:08] } 23. Nxe6 { [%clk 2:58:40] } 23... Rxe6 { [%clk 2:58:08] } 24. Ne5 { [%clk 2:58:36] } 24... Qf6 { [%clk 2:57:58] } 25. Rxc6 { [%clk 2:58:33] } 25... Re8 { [%clk 2:57:58] } 26. Rxe6 { [%clk 2:58:30] } 26... Rxe6 { [%clk 2:57:58] } 27. Nd3 { [%clk 2:58:26] } 27... Kh7 { [%clk 2:57:56] } 28. Nc5 { [%clk 2:58:24] } 28... Rb6 { [%clk 2:57:53] } 29. Qd5 { [%clk 2:58:23] } 29... Rb2 { [%clk 2:57:50] } 30. Qf3 { [%clk 2:58:21] } 30... Qe7 { [%clk 2:57:43] } 31. Nd3 { [%clk 2:58:19] } 31... Ra2 { [%clk 2:57:42] } 32. Ne5 { [%clk 2:58:18] } 32... Ra6 { [%clk 2:57:41] } 33. Qe4 { [%clk 2:58:16] } 33... Qa3 { [%clk 2:57:39] } 34. g3 { [%clk 2:58:15] } 34... Qa4 { [%clk 2:57:38] } 35. Kg2 { [%clk 2:58:14] } 35... Rf6 { [%clk 2:57:37] } 36. h4 { Key position: Everything looks hopeless - How can black possibly survive against a strong player? } { [%clk 2:58:09] } 36... h5 { [%clk 2:57:29] } 37. Nf3 { [%clk 2:58:05] } 37... Qa2 { [%clk 2:57:28] } 38. Ng5+ { [%clk 2:58:04] } 38... Kh6 { [%clk 2:57:28] } 39. d5?? { [%csl Gh6,Gh5,Gg6,Gg7,Gf6,Ga2] [%clk 2:57:54] } 39... Rxf2+!! { [%clk 2:57:19] } 40. Kg1 { [%clk 2:57:40] } (40. Rxf2 Qxf2+ 41. Kxf2) 40... Rxf1+ { [%clk 2:57:13] } 41. Kxf1 { [%clk 2:57:40] } 41... Qf2+ { [%clk 2:57:09] } 42. Kxf2 { Game drawn by stalemate } { [%clk 2:57:38] } 1/2-1/2
+
+
+[Event "Politiken Cup 2015"]
+[Site "Helsingor DEN"]
+[Date "2015.07.28"]
+[Round "5.1"]
+[White "Hillarp Persson, Tiger"]
+[Black "Ragger, Markus"]
+[Result "0-1"]
+[WhiteElo "2563"]
+[BlackElo "2688"]
+[Variant "Standard"]
+[ECO "D70"]
+[Opening "Neo-Grünfeld Defense: Goglidze Attack"]
+[StudyName "Blundering Lecture"]
+[ChapterName "Resigning in a drawn position | Hillarp Persson, Tiger - Ragger, Markus"]
+[ChapterURL "https://lichess.org/study/XwaWeTce/60KS5qB9"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 Nf6 2. c4 g6 3. f3 d5 4. cxd5 Nxd5 5. e4 Nb6 6. Nc3 Bg7 7. Be3 O-O 8. Qd2 Nc6 9. O-O-O Qd6 10. Nb5 Qd7 11. Kb1 Rd8 12. d5 a6 13. Nc3 Qe8 14. Qc1 Na5 15. h4 e6 16. Bf4 Qe7 17. h5 exd5 18. hxg6 hxg6 19. Bg5 f6 20. Bh6 Be6 21. Nge2 dxe4 22. Rxd8+ Rxd8 23. Bxg7 Qxg7 24. Nf4 Bf7 25. Nxe4 Nac4 26. Bxc4 Nxc4 27. Rd1 Rxd1 28. Qxd1 Nd6 29. Nxd6 cxd6 30. Qxd6 g5 31. Qd8+ Qf8 32. Qxf8+ Kxf8 33. Ne2 Ke7 34. Kc2 Kd6 35. a3 Bc4 36. Nc3 Ke5 37. Kd2 Kf4 38. Ne2+ Bxe2 39. Kxe2 Kg3 40. Kf1 b5 41. b4 f5 42. Kg1 g4 43. fxg4 Kxg4 44. Kf2 f4 { White resigned here. How can white hold on for a draw? } 0-1
+
+
+[Event "Saint Louis Invitational IM"]
+[Site "Saint Louis, MO USA"]
+[Date "2017.11.20"]
+[Round "7.5"]
+[White "Carissa Yip"]
+[Black "Sabina Francesca Foisor"]
+[Result "0-1"]
+[WhiteElo "2311"]
+[BlackElo "2369"]
+[Annotator "ericr"]
+[Variant "Standard"]
+[ECO "C77"]
+[Opening "Ruy Lopez: Morphy Defense, Anderssen Variation"]
+[StudyName "Blundering Lecture"]
+[ChapterName "Slipping at the finish line: Carissa Yip - Sabina Francesca Foisor"]
+[ChapterURL "https://lichess.org/study/XwaWeTce/D7ONDzSG"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. d3 d6 6. a3 Be7 7. O-O b5 8. Bb3 Na5 9. Ba2 c5 10. Nc3 O-O 11. Nd5 Ne8 12. Nxe7+ Qxe7 13. Bg5 Qc7 14. Nh4 Be6 15. Nf5 Nc6 16. c3 Bxa2 17. Rxa2 f6 18. Be3 Ne7 19. Ng3 d5 20. f4 d4 21. Bd2 Rd8 22. cxd4 exd4 23. f5 Nc6 24. Nh5 Ne5 25. Nf4 Qf7 26. Ra1 Rc8 27. Rc1 Nd6 28. Be1 Rfe8 29. Bf2 a5 30. b4 axb4 31. axb4 c4 32. Bxd4 cxd3 33. Rxc8 Rxc8 34. Bxe5 fxe5 35. Qxd3 Nxe4 36. Qxe4 exf4 37. Qxf4 Rc4 38. Qd6 Qf6 39. Qd5+ Kf8 40. Rd1 Qb6+ 41. Kh1 Rc6 42. h3 h6 43. Re1 Rd6 44. Qe5 Kg8 45. Rc1 Kh7 46. Qc5 Qd8 47. Qxb5 Rd1+ 48. Rxd1 Qxd1+ 49. Kh2 Qd6+ 50. g3 Qd2+ 51. Kg1 Qe3+ 52. Kg2 Qd2+ 53. Kf3 Qc3+ 54. Kg4 Qd4+ 55. Kh5 Qd1+ 56. g4 Qd2 57. h4 Qd6 58. Qe8 Qxb4 { How should white proceed? } 59. f6 { [%csl Gh5] } (59. g5 g6+ (59... hxg5 60. hxg5) 60. fxg6+ Kg7 61. Qf7+ Kh8 62. Qg7+ (62. Qh7#)) 59... Qb5+ 60. Qxb5 g6# { [%csl Gg6,Gh6] } 0-1
+
+
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2018.07.26"]
+[White "yifan0227"]
+[Black "Hikaru"]
+[Result "0-1"]
+[WhiteElo "2431"]
+[BlackElo "2996"]
+[TimeControl "300+1"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[Variant "Standard"]
+[ECO "B08"]
+[Opening "Pirc Defense: Classical Variation, Quiet System, Chigorin Line"]
+[StudyName "Blundering Lecture"]
+[ChapterName "Resigning in a winning position: yifan0227 - Hikaru"]
+[ChapterURL "https://lichess.org/study/XwaWeTce/SLh6JEXZ"]
+
+{ https://www.youtube.com/watch?v=EavP918OS_g }
+1. e4 g6 2. d4 Bg7 3. Nf3 d6 4. Be2 Nf6 5. Nc3 O-O 6. O-O Nc6 7. d5 Nb8 8. h3 c6 9. Be3 b6 10. Qd2 Bb7 11. a4 a6 12. Rfd1 cxd5 13. exd5 Nbd7 14. Bh6 Qc7 15. Bxg7 Kxg7 16. Nd4 Rac8 17. Rac1 Ne5 18. Qe3 Rfe8 19. Nf3 Qc5 20. Nxe5 Qxe3 21. fxe3 dxe5 22. d6 Rc5 23. dxe7 Rxe7 24. Rd6 b5 25. axb5 axb5 26. Nxb5 Ne4 27. Rb6 Ng3 28. Bd3 Be4 29. Nc3 Rxc3 30. Bxe4 Rxe3 31. Kf2 Rxe4 32. Kxg3 Rd7 33. c4 Rd2 34. c5 Ree2 35. c6 Rxg2+ 36. Kf3 Rgf2+ 37. Ke3 Rfe2+ 38. Kf3 f5 39. c7 Rf2+ 40. Ke3 f4+ 41. Ke4 Rfe2+ { [%csl Ge2,Gd2][%cal Gc7c8] } 42. Kf3 Re3+ 43. Kg4 { [%csl Gg4] } 43... Rg3+ 44. Kh4 Rh2 { Hikaru won by resignation Black to move: How to proceed? } 45. c8=Q 0-1
+
+
+[Event "Leon Masters"]
+[Site "Leon ESP"]
+[Date "2018.07.07"]
+[Round "1.4"]
+[White "Francisco Vallejo Pons"]
+[Black "Jaime Santos Latasa"]
+[Result "1-0"]
+[WhiteElo "2707"]
+[BlackElo "2576"]
+[Variant "Standard"]
+[ECO "E34"]
+[Opening "Nimzo-Indian Defense: Classical Variation, Noa Variation"]
+[StudyName "Blundering Lecture"]
+[ChapterName "Francisco Vallejo Pons - Jaime Santos Latasa"]
+[ChapterURL "https://lichess.org/study/XwaWeTce/57t4CtLG"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Qc2 d5 5. cxd5 Qxd5 6. e3 c5 7. Bd2 Bxc3 8. bxc3 O-O 9. f3 Qd6 10. Ne2 Nc6 11. Nf4 b6 12. Be2 Rd8 13. Rd1 Bb7 14. O-O Rac8 15. Qb2 Na5 16. Be1 Nd5 17. Nxd5 Bxd5 18. Bh4 Rf8 19. Bg3 Qe7 20. Rfe1 cxd4 21. cxd4 Nc4 22. Bxc4 Bxc4 23. e4 Qb7 24. h4 b5 25. a3 a5 26. Qd2 Qb6 27. Bf2 b4 28. d5 Qd6 29. axb4 axb4 30. dxe6 Qxe6 31. Qxb4 Rfd8 32. Kh2 h6 33. Bg3 Bd3 34. Rd2 Ba6 35. Red1 Rxd2 36. Rxd2 Bc4 37. Qb2 Qe7 38. Qd4 Be6 39. Rb2 Qc5 40. Be5 Qxd4 41. Bxd4 Rd8 42. Rb4 Rd7 43. h5 f5 44. e5 Bf7 45. Rb8+ Kh7 46. Bc5 Bxh5 47. e6 Rd2 48. e7 Re2 49. Kg1 Re5 50. Bb4 f4 51. Rf8 g5 52. Kh2 Re6 53. g4 fxg3+ 54. Kxg3 Re3 55. Bc5 Re5 56. Bd6 Re6 57. Bb4 Re2 58. Bd6 Re6 59. Bc5 Re5 60. Rc8 Re6 61. f4 gxf4+ 62. Kxf4 Kg7 63. Rf8 Kh7 64. Kf5 Re1 65. Bd4 Bg6+ 66. Kf6 Re4 67. Be5 Re2 68. Rh8+ { 1-0 White wins. } 1-0
+
+
+[Event "110th U.S. Open"]
+[Site "Indianapolis, IN USA"]
+[Date "2009.08.09"]
+[White "John Fedorowicz"]
+[Black "Eric S Rosen"]
+[Result "0-1"]
+[WhiteElo "2469"]
+[BlackElo "2141"]
+[Variant "Standard"]
+[ECO "D35"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Positional Variation"]
+[StudyName "Blundering Lecture"]
+[ChapterName "John Fedorowicz - Eric S Rosen"]
+[ChapterURL "https://lichess.org/study/XwaWeTce/I6Kuow5Z"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. cxd5 exd5 5. Bg5 c6 6. e3 Bf5 7. g4 { [%csl Ge6][%cal Gf5g6,Gf5e6] } (7. Qf3 Bg6 8. Bxf6 Qxf6 9. Qxf6 gxf6) 7... Be6 { [%csl Gg4] } (7... Bxg4 8. Bxf6 Bxd1 9. Bxd8 Kxd8 10. Kxd1 { [%cal Gg5f6] }) 8. h3 Nbd7 9. f4 { [%csl Gf4,Gf5][%cal Gf4f5] } 9... Nb6 10. Bd3 Be7 11. Nf3 Qd6 12. f5 { [%csl Gg3][%cal Gd6g3] } 12... Qg3+ 13. Kd2 Ne4+ { [%csl Ge6,Ge7,Gg5,Ge4,Gd5,Gd2,Gg2,Gf2,Gc4][%cal Gf5e6,Ge7g5,Gg5e7,Gc3e4,Gd3e4,Gd5e4,Gg3f2,Gg3g2,Gb6c4] } 14. Nxe4 dxe4 15. Bxe4 Qf2+ 16. Kc3 { Black to move and win! } { [%csl Gc3] } (16. Kc1) (16. Qe2 Nc4+ { [%cal Gd2e2] } 17. Kd1 Nxb2+ 18. Kd2 Bb4+ { [%csl Gd1,Gd2,Gd3][%cal Gd2c2,Gf2e2] } 19. Kc2 Qxe2+) 16... Bb4+ 17. Kd3 (17. Kxb4 Qxb2+ { [%csl Ga3][%cal Gb2a3] } 18. Kc5 Qb5+ 19. Kd6 Nc4+ 20. Kc7) 17... Bc4# 0-1
+
+
+[Event "Blundering Lecture: Can white win?"]
+[Site "Indianapolis, IN USA"]
+[Date "2009.08.09"]
+[White "White to move: Can White win?"]
+[Result "*"]
+[Annotator "ericr"]
+[FEN "8/8/8/8/1K6/8/p6R/1k6 w - - 0 0"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Blundering Lecture"]
+[ChapterName "Can white win?"]
+[ChapterURL "https://lichess.org/study/XwaWeTce/csY6IFLR"]
+[FEN "8/8/8/8/1K6/8/p6R/1k6 w - - 0 1"]
+[SetUp "1"]
+
+{ [#] [%cal Gb4b3] }
+1. Kb3 a1=N+ 2. Kc3 Kc1 3. Rh1# *
+
+
+[Event "Blundering Lecture: Can white win? (be careful!)"]
+[Site "Indianapolis, IN USA"]
+[Date "2009.08.09"]
+[White "White to move: Can White win?"]
+[Result "*"]
+[Annotator "ericr"]
+[FEN "8/8/8/1K6/8/8/p6R/1k6 w - - 0 1"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Blundering Lecture"]
+[ChapterName "Can white win? (be careful!)"]
+[ChapterURL "https://lichess.org/study/XwaWeTce/aLwHhTSl"]
+[FEN "8/8/8/1K6/8/8/p6R/1k6 w - - 0 1"]
+[SetUp "1"]
+
+{ [#] }
+1. Kb4 a1=Q 2. Kb3 { [%csl Ga1] } 2... Qa8 *
+
+
+[Event "Wch-blitz"]
+[Site "Saint John CAN"]
+[Date "1988.02.20"]
+[Round "3"]
+[White "Garry Kasparov"]
+[Black "Kiril Dimitrov Georgiev"]
+[Result "1/2-1/2"]
+[WhiteElo "2750"]
+[BlackElo "2595"]
+[Variant "Standard"]
+[ECO "A29"]
+[Opening "English Opening: King's English Variation, Four Knights Variation, Fianchetto Line, with Nb6"]
+[StudyName "Blundering Lecture"]
+[ChapterName "Garry Kasparov - Kiril Dimitrov Georgiev"]
+[ChapterURL "https://lichess.org/study/XwaWeTce/xSCpOYhn"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+{ https://www.youtube.com/watch?v=vtTkfmaiI4I }
+1. c4 e5 2. Nc3 Nf6 3. Nf3 Nc6 4. g3 d5 5. cxd5 Nxd5 6. Bg2 Nb6 7. O-O Be7 8. a3 a5 9. d3 O-O 10. Be3 Be6 11. Na4 Nd5 12. Bc5 Bd6 13. Rc1 h6 14. Nd2 Rc8 15. Ne4 b6 16. Nxd6 cxd6 17. Bxb6 Nxb6 18. Rxc6 Rb8 19. Nxb6 Rxb6 20. Qc2 Qb8 21. Rxb6 Qxb6 22. Rb1 Bb3 23. Qd2 Rb8 24. Rc1 Be6 25. Rc2 d5 26. h4 a4 27. Bf3 Qd4 28. e3 Qb6 29. d4 e4 30. Be2 Qb3 31. Kg2 g6 32. Bd1 Kg7 33. Qc1 Qb6 34. Rd2 Bd7 35. Qc5 Qxc5 36. dxc5 Bc6 37. Kf1 Kf6 38. Ke1 Ke5 39. Rc2 Rb5 40. Kd2 d4 41. exd4+ Kxd4 42. Be2 Rxc5 43. Rxc5 Kxc5 44. Ke3 f5 45. g4 Kd5 46. gxf5 gxf5 47. Kf4 Ke6 48. Bc4+ Kf6 49. b4 axb3 50. Bxb3 Bb5 51. a4 Ba6 52. Bd5 Bc8 53. Bc6 Ke6 54. Bb5 Kd6 55. Bf1 Kc5 56. Bh3 Kb4 57. Bxf5 Ba6 58. Bxe4 Kxa4 59. Ke5 Kb4 60. f4 Kc5 61. f5 Bc4 62. f6 Bf7 63. Bf5 Kc6 64. Be6 Bg6 65. f7 Bxf7 66. Bxf7 Kd7 67. Kf6 Kd6 68. h5 Kd7 69. Kg6 Ke7 70. Ba2 Ke8 71. Kxh6 Kf8 { White to move: } 72. Kg6 (72. Kg5 Kg7 73. h6+ Kh8 74. Kg6) 72... Ke7 73. h6 Kd6 74. h7 Kc5 75. h8=Q Kb4 76. Qd4+ Kb5 77. Bd5 Ka6 78. Qc5 { 1/2-1/2  wins. } (78. Qb2 { [%csl Ga7,Ga5] } 78... Ka5 79. Bc6 Ka6 80. Qb5+ Ka7 81. Qb7# { [%csl Ga7][%cal Gb7a7] }) 1/2-1/2
+
+
+[Event "Rapid Match"]
+[Site "Budapest HUN"]
+[Date "1998.06.11"]
+[Round "5"]
+[White "Anatoly Karpov"]
+[Black "Judit Polgar"]
+[Result "1/2-1/2"]
+[Variant "Standard"]
+[ECO "E60"]
+[Opening "King's Indian Defense: Fianchetto Variation"]
+[StudyName "Blundering Lecture"]
+[ChapterName "Never Resign-- even against Karpov: Anatoly Karpov - Judit Polgar"]
+[ChapterURL "https://lichess.org/study/XwaWeTce/ZQF6yBgb"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 Nf6 2. c4 g6 3. Nf3 Bg7 4. g3 O-O 5. Bg2 d6 6. O-O Nc6 7. d5 Na5 8. Nfd2 c5 9. a3 Nd7 10. Ra2 Ne5 11. Qc2 Bf5 12. e4 Bd7 13. b3 b5 14. Bb2 bxc4 15. bxc4 Rb8 16. Bc3 Qb6 17. a4 e6 18. h3 exd5 19. cxd5 Rfc8 20. Kh2 Nb3 21. a5 Qb7 22. f4 Nd4 23. Qd1 Bb5 24. fxe5 Bxf1 25. Qxf1 Bxe5 26. Na3 Qe7 27. Nac4 Bg7 28. a6 h5 29. h4 Rf8 30. Qd3 f5 31. Bxd4 Bxd4 32. exf5 gxf5 33. Nf3 Qf6 34. Nxd4 cxd4 35. Rf2 Rbe8 36. Bh3 Qg7 37. Bxf5 Kh8 38. Rf4 Rf6 39. Qxd4 Re2+ 40. Kh3 Re1 41. Kg2 Re2+ 42. Kf3 Re1 43. Ne3 Rg1 44. g4 hxg4+ 45. Bxg4 Rxf4+ 46. Qxf4 Re1 47. h5 Rh1 48. Qf5 Rc1 49. Qe6 Qf8+ 50. Bf5 Rc7 51. h6 Re7 52. Qg6 Rf7 53. Kf4 Re7 54. Ng4 Rf7 55. Nf6 Rc7 56. Be6 Rc4+ 57. Kg5 Rc7 58. Kh5 Re7 59. Qg8+ Qxg8 60. Nxg8 Rc7 61. Nf6 Rc1 62. Ne8 Rh1+ 63. Kg6 Rg1+ 64. Kf7 Rf1+ 65. Ke7 Kh7 66. Nxd6 Kxh6 67. Nf7+ Kg6 68. d6 Rd1 69. d7 Kh5 70. Nd6 Rxd6 71. Kxd6 Kg5 72. d8=Q+ Kf4 73. Qh4+ Ke3 74. Qg3+ Kd4 75. Qf3 { 1/2-1/2  wins. } 1/2-1/2
+
+
+[Event "Blundering Lecture: Ahues - Muller"]
+[Date "1920.??.??"]
+[White "Ahues"]
+[Black "Muller"]
+[Result "1-0"]
+[FEN "r4rk1/pbp2ppp/1p3n2/8/2PQ4/2BR3P/PP2qPP1/6K1 w - - 0 1"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Blundering Lecture"]
+[ChapterName "Ahues - Muller"]
+[ChapterURL "https://lichess.org/study/XwaWeTce/LNMLhdTt"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[FEN "r4rk1/pbp2ppp/1p3n2/8/2PQ4/2BR3P/PP2qPP1/6K1 w - - 0 1"]
+[SetUp "1"]
+
+{ [#] }
+1. Qxf6 { Black resigned here. Was there any hope? } { [%csl Gg4] } 1... gxf6 (1... Qe1+ 2. Bxe1 (2. Kh2 { [%csl Ge1] } 2... Qxc3 3. Qxc3) 2... gxf6) (1... Qg4 2. hxg4 (2. Rg3 Qxg3) 2... gxf6 { [%cal Gd3g3,Gg3g8] }) 2. Rg3+ Kh8 3. Bxf6# 1-0
+
+
+[Event "Bethune Open"]
+[Date "2005.??.??"]
+[White "Schut, Donna"]
+[Black "Jongsma, Wietze"]
+[Result "*"]
+[FEN "4q1k1/5p2/p6Q/1p6/5p1P/4b3/P6P/4R2K w - - 0 1"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Blundering Lecture"]
+[ChapterName "Schut, Donna - Jongsma, Wietze"]
+[ChapterURL "https://lichess.org/study/XwaWeTce/XaZGocvG"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[FEN "4q1k1/5p2/p6Q/1p6/5p1P/4b3/P6P/4R2K w - - 0 1"]
+[SetUp "1"]
+
+{ [#] [%cal Ge3h6] }
+1. Re2 { Black resigned here. Was there any hope? } { [%csl Gh6,Ge3][%cal Ge3h6] } 1... f3 (1... Qe4+ 2. Rg2+ Qxg2+ 3. Kxg2 f3+ 4. Kxf3 Bxh6) 2. Rxe3 { [%csl Gf2,Ge8][%cal Gf3f2,Ge3e8] } *
+
+
+[Event "Moscow-ch"]
+[Site "Moscow"]
+[Date "1994.??.??"]
+[White "Notkin, Maksim"]
+[Black "Ulko, Jaroslav"]
+[Result "0-1"]
+[WhiteElo "2465"]
+[BlackElo "2295"]
+[FEN "1kr5/1p4R1/2r5/p7/4p3/2P1P3/P1K1R1P1/8 b - - 0 39"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Blundering Lecture"]
+[ChapterName "Notkin, Maksim - Ulko, Jaroslav"]
+[ChapterURL "https://lichess.org/study/XwaWeTce/qGASDGQC"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[FEN "1kr5/1p4R1/2r5/p7/4p3/2P1P3/P1K1R1P1/8 b - - 0 39"]
+[SetUp "1"]
+
+{ [#] }
+39... Rxc3+ 40. Kd2 Rc1 { White resigned here. Was there any hope? } 41. Rg8 Rxg8 (41... Rc2+ 42. Ke1 (42. Kd1 { [%csl Gd1,Ge2][%cal Gc2e2] } 42... Rxe2 43. Rxc8+ Kxc8 44. Kxe2) 42... Rc1+ (42... Rxe2+ 43. Kxe2 Rxg8) 43. Kf2 (43. Kd2 { [%csl Gd2] })) 42. Kxc1 0-1
+
+
+[Event "110th U.S. Open"]
+[Site "Indianapolis, IN USA"]
+[Date "2009.08.09"]
+[White "John Fedorowicz"]
+[Black "Eric S Rosen"]
+[Result "0-1"]
+[WhiteElo "2469"]
+[BlackElo "2141"]
+[Variant "Standard"]
+[ECO "D35"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Positional Variation"]
+[StudyName "Blundering Lecture"]
+[ChapterName "John Fedorowicz - Eric S Rosen"]
+[ChapterURL "https://lichess.org/study/XwaWeTce/UVWplfuU"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. cxd5 exd5 5. Bg5 c6 6. e3 Bf5 7. g4 Be6 8. h3 Nbd7 9. f4 Nb6 10. Bd3 Be7 11. Nf3 Qd6 12. f5 Qg3+ 13. Kd2 Ne4+ 14. Nxe4 dxe4 15. Bxe4 Qf2+ 16. Kc3 Bb4+ { 0-1 Black wins. } 0-1
+
+
+[Event "Blundering Lecture: Touch move Tragedy"]
+[Date "2025.05.09"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Blundering Lecture"]
+[ChapterName "Touch move Tragedy"]
+[ChapterURL "https://lichess.org/study/XwaWeTce/suYMkn9g"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[FEN "8/4kp1p/6p1/1q6/8/7P/5PK1/R7 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.05.09"]
+[UTCTime "12:11:28"]
+
+1. Re1+ Qe5 2. Rxe5+ *
+
+
+[Event "Grand Chess Tour Paris (Blitz)"]
+[Site "Paris FRA"]
+[Date "2017.06.25"]
+[Round "16"]
+[White "Shakhriyar Mamedyarov"]
+[Black "Hikaru Nakamura"]
+[Result "1-0"]
+[WhiteElo "2800"]
+[BlackElo "2785"]
+[Variant "Standard"]
+[ECO "E21"]
+[Opening "Nimzo-Indian Defense: Three Knights Variation"]
+[StudyName "Blundering Lecture"]
+[ChapterName "Hikaru Gets Cocky: Shakhriyar Mamedyarov - Hikaru Nakamura"]
+[ChapterURL "https://lichess.org/study/XwaWeTce/AHZaEkjf"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Nf3 O-O 5. Bg5 c5 6. e3 cxd4 7. exd4 d5 8. cxd5 exd5 9. Be2 h6 10. Bxf6 Qxf6 11. O-O Bxc3 12. bxc3 Nc6 13. Re1 b6 14. Nd2 Be6 15. Nf1 Rac8 16. Ne3 Ne7 17. Rc1 Ng6 18. g3 Rc7 19. f4 Ne7 20. Bd3 Rfc8 21. Qd2 Bd7 22. Ba6 Rd8 23. Bd3 Qd6 24. f5 Kh8 25. Rf1 Ng8 26. Ng4 b5 27. Ne5 Be8 28. Rce1 Rdc8 29. Qf4 Rd8 30. Re3 f6 31. Ng6+ Bxg6 32. Qxd6 Rxd6 33. fxg6 Rd8 34. Bxb5 Ne7 35. Bd3 Rxc3 36. Rxe7 Rxd3 37. Rfe1 Rf8 38. Rf7 Rg8 39. Rxa7 Rxd4 40. a4 Rg4 41. Rd1 Rxg6 42. Rxd5 Rg4 43. Rdd7 Rb8 44. Kg2 Rb2+ 45. Kf3 h5 46. Rd5 Rb3+ 47. Kg2 Rb2+ 48. Kh3 Rg5 49. Raa5 Rxd5 50. Rxd5 g5 51. g4 Rb3+ 52. Kg2 hxg4 53. Rd4 Kg7 54. Rxg4 Kg6 55. Rc4 Kh5 56. h3 f5 57. Rc8 Rb2+ 58. Kf3 Rb3+ 59. Kg2 Ra3 60. Rh8+ Kg6 61. Ra8 Kf6 62. a5 Ke5 63. a6 Kf4 64. a7 Ra2+ 65. Kf1 Kf3 66. Ke1 f4 67. Rg8 Rxa7 68. Rxg5 Ra1+ 69. Kd2 Kf2 70. h4 Ra3 71. h5 Rh3 72. Rf5 f3 73. Kd3 Ke1 74. Re5+ Kf1 75. Rf5 Kg2 76. Ke3 f2+ 77. Ke2 f1=N (77... f1=Q+ 78. Rxf1 Rxh5) 78. Rf2+ Kg1 (78... Kg3 79. Rf3+ Kg4 80. Rxh3 Kxh3 { [%csl Gf1] } 81. h6 { [%csl Gh8][%cal Gh6h7,Gh7h8] } (81. Kxf1)) 79. Rxf1+ Kg2 80. Rf2+ { [%csl Gg3][%cal Gg2g3] } 80... Kg1 81. Rf5 Ra3 82. h6 Rh3 83. Rf6 { [%csl Gh6,Gf6] } 83... Kh2 84. Kf2 Rh4 { [%csl Gf3][%cal Gf2f3] } (84... Kh1 85. Rg6 Kh2 86. Rg2+ Kh1 { [%csl Gh6][%cal Gh1h2,Gh2h1,Gh3h6] }) 85. Kf3 Kh3 86. Rg6 Ra4 87. h7 Rh4 88. Rg7 Rh6 89. Kf4 Kh4 90. Kf5 Rh5+ 91. Kg6 Kg4 92. Kf7+ { 1-0 White wins. } 1-0
+
+

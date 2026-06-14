@@ -1,0 +1,418 @@
+[Event "Knights | How to dominate your opponents!: Introduction"]
+[Date "2021.08.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Knights | How to dominate your opponents!"]
+[ChapterName "Introduction"]
+[ChapterURL "https://lichess.org/study/kI8ikTU4/fmDWRvl8"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "3n4/8/8/3B4/8/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2021.08.30"]
+[UTCTime "16:50:19"]
+[ChapterMode "gamebook"]
+
+{ Welcome to another instructive study by NoseKnowsAll. This interactive study is for players <2000 lichess, taking you through an important middle- and endgame strategical concept: knight domination. Let's see how we can dominate our opponents' knights, and keep squeezing until they can't breathe! Importantly, we'll also learn how best to avoid getting our knight dominated too.
+
+Please check out my other middlegame strategy studies as well:
+* Bishops | Slice through the opposition! https://lichess.org/study/kNn68T8l
+* Rooks | Infiltrate for activity! https://lichess.org/study/U7tTRtdj
+* Always sacrifice the exchange! https://lichess.org/study/h3ccaYFE
+
+Throughout this study, I will also provide general middlegame tips that these positions showcase. Whenever this general advice occurs, I'll write it just like this:
+
+PRO TIP: Knights on the rim are dim!
+
+If you find this study useful, please heart it and share it with any friends! } { [%csl Gb7,Gc6,Ge6,Gf7][%cal Bd5a8,Bd5g8,Gd8f7,Gd8e6,Gd8c6,Gd8b7] }
+ *
+
+
+[Event "Knights | How to dominate your opponents!: Bishop dominating a knight"]
+[Date "2021.08.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Knights | How to dominate your opponents!"]
+[ChapterName "Bishop dominating a knight"]
+[ChapterURL "https://lichess.org/study/kI8ikTU4/TtNSA6U1"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "2n4k/5ppp/8/K7/8/4B3/5PPP/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2021.08.30"]
+[UTCTime "16:50:19"]
+
+{ We first introduce the concept of dominating a knight by showing off the capabilities of its mortal enemy: the all-powerful bishop!
+
+Material is perfectly equal, so it might at first seem surprising that white is completely winning in this position. However, noticing the sad state of the knight currently on the edge of the board should be a big clue that we can effectively dominate it. }
+1. Bc5! { With this simple move, the knight is completely paralyzed! Black has no way to stop the plan of Ka6, Kb7, Kxc8.
+PRO TIP: Placing a bishop exactly three squares away from a knight dominates the knight. Every forward knight move is covered by the bishop. This is sometimes also called "offsetting a knight." } { [%csl Ga7,Gb6,Gd6,Ge7][%cal Bc5a7,Gc8e7,Gc8d6,Gc8b6,Gc8a7,Bc5e7] } 1... g5 2. Ka6 Kg7 3. Kb7 Kf6 4. Kxc8 $18 { Now up a piece in an otherwise equal endgame, white is sure to win. } *
+
+
+[Event "Knights | How to dominate your opponents!: Pawns dominating a knight"]
+[Date "2021.08.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Knights | How to dominate your opponents!"]
+[ChapterName "Pawns dominating a knight"]
+[ChapterURL "https://lichess.org/study/kI8ikTU4/I19RlRDd"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "r1r3k1/pp3pp1/4pn1p/3p1b2/P2P4/4P3/1PPKBPPP/R1R1N3 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2021.08.30"]
+[UTCTime "16:50:19"]
+
+{ White is up a pawn, but the road to victory will be long and arduous. However, with an acute awareness of dominating pieces, white can surely find the next move: }
+1. f3! { One careful pawn move shows that white is much better. Now that the knight no longer has access to the g4 or e4 squares, it has no future on f6 and must reroute backwards in order to move forwards somewhere else. However, this slow maneuvering with the knight will give white time to activate their queenside pawn majority and start making progress towards a win. } { [%csl Ge4,Gg4,Gh5,Gd5][%cal Bf3e4,Bf3g4] } 1... Ne8 { Notice also how the bishop on f5 is also dominated by this g2-f3 pawn chain too! } (1... Nh5?? 2. g4 $18) 2. b3 Nd6 3. c4 dxc4 4. bxc4 $16 { The knight still has no forward squares, and white is close to achieving a passed c pawn, winning the game. } *
+
+
+[Event "Knights | How to dominate your opponents!: An uneasy knight post"]
+[Date "1941"]
+[White "Mikhail Botvinnik"]
+[Black "Isaac Boleslavsky"]
+[Result "*"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Knights | How to dominate your opponents!"]
+[ChapterName "An uneasy knight post"]
+[ChapterURL "https://lichess.org/study/kI8ikTU4/zvJnOTBD"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "5rk1/3r1ppp/1pq3n1/p2p4/P2P4/2PNRQ2/1P4PP/4R1K1 w - - 0 1"]
+[SetUp "1"]
+
+{ Black has just played Qc6, attacking the a4 pawn, but Botvinnik notices the knight on g6 is unstable. }
+1. g3! { [%csl Ge5,Gf4,Gh4][%cal Bg3f4,Bg3h4,Bd4e5] } 1... Rd6 (1... Qxa4!? 2. h4! { Knight domination! } 2... Rfd8? 3. h5 Nf8 4. h6 $18 { "and the attack plays itself" -Botvinnik. }) 2. h4! { Two wing pawns (pawns near the edge of the board) can both dominate a knight on g6/g3 (or b6/b3) as well as potentially keep pushing forward to kick the knight further back. } 2... f6? { The pawn push h5 cannot be stopped, so Boleslavsky felt he had to control the e5 square with a pawn instead so that his knight could safely reposition elsewhere. However, this weakening move gives up all the light squares near his king (in particular e6). Moreover, this means every endgame will be good for white as well. } (2... Rfd8 3. h5 Rf6! 4. Qe2 Nf8 5. Re8 Re6! $14 { The best defensive sequence is difficult to find while placed under pressure. }) (2... h5?? 3. Qxh5 $18) 3. Qf5 { Immediately keying in on the weakened light squares. } (3. h5!? Nh8 4. Qf5 Nf7 5. Nf4 $16 { This is also strong, but Botvinnik's direct play allows no counterplay. }) 3... Qc8 { Boleslavsky is basically forced to trade queens so as to avoid the incoming attack, but the endgame does not provide any reprieve. } (3... Qxa4? 4. h5 Nh8 5. Nf4 $16 { [%cal Gf4e6] }) 4. Qxc8 Rxc8 5. h5! { The dominated knight is kicked back further. } 5... Nf8 6. Re7 Rcd8 7. Nf4 $18 { Each one of Botvinnik's pieces is better than its black counterpart. He went on to win the endgame in 49 moves: https://lichess.org/ftNPjqmy } *
+
+
+[Event "Knights | How to dominate your opponents!: Preventing knight domination"]
+[Date "2021.08.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Knights | How to dominate your opponents!"]
+[ChapterName "Preventing knight domination"]
+[ChapterURL "https://lichess.org/study/kI8ikTU4/esM5CHox"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "r1bq1rk1/ppp2pbp/n2p1np1/3Pp3/2P1P3/2N2N2/PP2BPPP/R1BQ1RK1 b - - 0 8"]
+[SetUp "1"]
+[UTCDate "2021.08.30"]
+[UTCTime "16:50:19"]
+
+{ This position is a main line of the King's Indian Defense. }
+8... Nc5 { Black's knight finds c5 a great outpost. By attacking the e4 pawn, white is first forced to react. } { [%cal Rc5e4,Rf6e4,Bc3e4] } 9. Qc2 a5! { An important move! b4 is prevented temporarily, and black can rely upon the c5 square for some time. } { [%cal Ba5b4] } (9... Nh5? { If black goes about their normal plans here (Nf4 and the pawn break f5) without considering the poor knight on c5, black can get overrun. } 10. b4! Na6 (10... Nd7 11. Be3 Nf4 12. c5 $16) 11. a3! $16 { The knight on a6 has been sidelined again, and is completely dominated. The only available square (b8) is tragic. } { [%csl Gb8,Gc7,Gc5,Gb4][%cal Ba3b4,Bb4c5] }) 10. a3?! { This poor move doesn't actually prepare b4 yet because the a1 rook is undefended, but regardless black can now snuff out white's plan of b4 and lay claim to the c5 outpost square forever. } 10... a4! $10 { b4 is now impossible due to axb3 en passant. The knight on c5 has found a beautiful hole to rest on and will never be dominated!
+PRO TIP: Knights need advanced support points to reach their full potential. Sometimes a key pawn move ensures such an important square will remain under our control for the rest of the game. } *
+
+
+[Event "Knights | How to dominate your opponents!: Rook dominating a knight"]
+[Date "2021.08.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Knights | How to dominate your opponents!"]
+[ChapterName "Rook dominating a knight"]
+[ChapterURL "https://lichess.org/study/kI8ikTU4/vUm660nX"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "8/1p1kpppp/3n4/8/2R5/3K4/1P2PPPP/8 w - - 1 1"]
+[SetUp "1"]
+[UTCDate "2021.08.30"]
+[UTCTime "16:50:19"]
+
+{ White is up an exchange in this otherwise symmetric endgame. The path to victory will start by saving our rook, but here we have a nice move that quasi-dominates the d6 knight. }
+1. Rb4! $18 { Just like that, three of the four forward knight moves have been covered. Moreover, the b4 rook is exactly two squares diagonally away from the knight, a square that cannot be harassed by the knight for some time.
+PRO TIP: Placing a piece exactly two squares diagonally from a knight ensures it cannot be attacked by that knight for at least 3 moves. } { [%csl Gb5,Gc4,Ge4][%cal Gd6b5,Gd6c4,Gd6e4,Bb4e4,Bb4b7] } *
+
+
+[Event "Knights | How to dominate your opponents!: Knight moves I"]
+[Date "2021.08.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Knights | How to dominate your opponents!"]
+[ChapterName "Knight moves I"]
+[ChapterURL "https://lichess.org/study/kI8ikTU4/sja1UHNf"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "8/8/8/3n4/8/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2021.08.30"]
+[UTCTime "16:50:19"]
+[ChapterMode "gamebook"]
+
+{ Let's briefly take a timeout from knight domination in order to explore how knights move in general.
+
+A centralized knight is a powerful piece. It can jump to eight different squares (highlighted in green), all of which are themselves potentially good squares too. } { [%csl Ge7,Gf6,Gf4,Ge3,Gc3,Gb4,Gb6,Gc7] }
+ *
+
+
+[Event "Knights | How to dominate your opponents!: Knight moves II"]
+[Date "2021.08.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Knights | How to dominate your opponents!"]
+[ChapterName "Knight moves II"]
+[ChapterURL "https://lichess.org/study/kI8ikTU4/JWWgTh1V"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "8/8/8/3n4/8/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2021.08.30"]
+[UTCTime "16:50:19"]
+[ChapterMode "gamebook"]
+
+{ If we now consider all the squares the centralized knight can jump to in exactly two moves (highlighted in blue), we can appreciate just how strong the knight is. In just two moves, a centralized knight can reach more than half of all the squares on the chessboard!
+
+It's also useful to notice that all of these squares are the same color as the original square the knight sits on. Since a knight only moves to squares the opposite color of its current square, it takes an even number of moves to attack squares of the same color. } { [%csl Bd3,Bf5,Bd7,Bb5,Bc4,Bc6,Be6,Be4,Be2,Bg2,Bg4,Bg6,Bg8,Be8,Bc8,Ba8,Ba6,Ba4,Ba2,Bc2,Bd5,Bh7,Bh3,Bh5,Bf1,Bb1,Bd1] }
+ *
+
+
+[Event "Knights | How to dominate your opponents!: Knight moves III"]
+[Date "2021.08.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Knights | How to dominate your opponents!"]
+[ChapterName "Knight moves III"]
+[ChapterURL "https://lichess.org/study/kI8ikTU4/sWLkP5ds"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "8/8/8/3n4/8/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2021.08.30"]
+[UTCTime "16:50:19"]
+[ChapterMode "gamebook"]
+
+{ Allowing for three knight moves, a centralized knight can reach basically every square on the board... } { [%csl Rd8,Rf8,Rg7,Rg5,Rb8,Ra7,Ra5,Ra3,Rb2,Rc1,Ra1,Re1,Rg1,Rh2,Rf2,Rd2,Rg3,Rh8,Rh6,Rh4,Rd6,Rc5,Rd4,Re5] }
+ *
+
+
+[Event "Knights | How to dominate your opponents!: Knight moves IV"]
+[Date "2021.08.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Knights | How to dominate your opponents!"]
+[ChapterName "Knight moves IV"]
+[ChapterURL "https://lichess.org/study/kI8ikTU4/JDN4Yc2m"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "8/8/8/3n4/8/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2021.08.30"]
+[UTCTime "16:50:19"]
+[ChapterMode "gamebook"]
+
+{ Except these! Armed with the knowledge that it takes so long for a knight to move two squares diagonally, it's worth repeating the previous tip.
+
+PRO TIP: Placing a piece exactly two squares diagonally from a knight ensures it cannot be attacked by that knight for at least 3 moves. } { [%csl Yf7,Yf3,Yb3,Yb7,Yh1] }
+ *
+
+
+[Event "Knights | How to dominate your opponents!: King dominating a knight"]
+[Date "2021.08.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Knights | How to dominate your opponents!"]
+[ChapterName "King dominating a knight"]
+[ChapterURL "https://lichess.org/study/kI8ikTU4/OzIZc2yU"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "8/8/8/2n1k3/8/3K1Q2/8/8 w - - 4 3"]
+[SetUp "1"]
+[UTCDate "2021.08.30"]
+[UTCTime "16:50:19"]
+
+{ This queen vs knight endgame is well-known to be a win for white. For a full walkthrough on how to perform this checkmate, see: https://lichess.org/study/UsqmCsgC/AGJrweqW
+
+Here, white is in check and must make further progress somehow. By placing the king exactly two squares diagonally from the black knight, the knight is effectively dominated! }
+3. Ke3! { [%cal Gc5d3,Gc5e4,Be3e4,Be3d3] } 3... Ne6 4. Qg4! { Just as the king first dominated the knight, so too does the queen. White is safe from all forks. } { [%cal Bg4g5,Ge6g5,Ge6f4,Ge6d4,Ge6c5,Bg4d4] } 4... Kd5 5. Qe4+ Kd6 6. Qf5 { This move simply prevents the black king from moving up the board. } 6... Nc5 7. Kd4 Ne6+ 8. Kc4! $18 { The king once again dominates the knight and now has made further progress pushing the black duo up the board to their doom. White repeats this pattern of dominating the knight with the king and queen in order to eventually checkmate, as in https://lichess.org/study/UsqmCsgC/AGJrweqW. } { [%cal Ge6d4,Ge6c5,Bc4c5,Bc4d4] } *
+
+
+[Event "Knights | How to dominate your opponents!: Exercise 1: On the attack"]
+[Date "2021.08.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Knights | How to dominate your opponents!"]
+[ChapterName "Exercise 1: On the attack"]
+[ChapterURL "https://lichess.org/study/kI8ikTU4/05Cxjorh"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "3rr1kn/ppnqb1pp/2p1p3/6PP/1PBPP1Q1/P3B3/2N5/2R2R1K w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2021.08.30"]
+[UTCTime "16:50:19"]
+[ChapterMode "gamebook"]
+
+{ We have more space in the center and on the kingside, the bishop pair, and the open c and f files, so white is clearly better with an ensuing attack. Moreover, black's knight on h8 looks to be in a sorry state. What's the best way to further our attack? }
+1. g6! h6 $18 { Yes exactly! After h6, it's clear that this knight on h8 is doomed to passivity - trapped in the corner forever.
+Sadly, black could not have played hxg6 because after hxg6, our mate threat of Qh5->h7 will require them to sacrifice their poor knight just to stop the mate! } (1... hxg6? 2. hxg6 Rf8 3. Qh5 $18 { [%cal Gh5h7] }) *
+
+
+[Event "Knights | How to dominate your opponents!: Exercise 2: Attack and defense"]
+[Date "2021.08.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Knights | How to dominate your opponents!"]
+[ChapterName "Exercise 2: Attack and defense"]
+[ChapterURL "https://lichess.org/study/kI8ikTU4/0m3Rdf01"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "3r2r1/p1p2n1k/1p4p1/4p2p/PP2PP1P/4BP2/2K3R1/6R1 w - - 0 2"]
+[SetUp "1"]
+[UTCDate "2021.08.30"]
+[UTCTime "16:50:19"]
+[ChapterMode "gamebook"]
+
+{ Black has just played e5, attacking our f4 pawn. How should we respond? }
+2. Rd2! (2. Kc3! { Equally good. Play Rd2 instead for the solution. }) (2. Rd1!? { Reasonably good as well. Play Rd2 instead for the solution. }) (2. fxe5? { Oh no you panicked! After Nxe5, we have to play defensively with Rg3 just to save our f3 pawn. Now the knight is out of control! } 2... Nxe5 3. Rg3 Rgf8 4. f4 Ng4 $10) (2. b5!? { Another interesting try. Play Rd2 instead for the solution. }) 2... exf4?! 3. Bxf4 { Exactly! We were never afraid of black taking on f4, simply improving our bishop, which now dominates the f7 knight! Furthermore, by trading a pair of rooks, we are preparing for an endgame where black has less counterplay than if both rooks remained on the board.
+This position was adapted from Petrosian - Botvinnik, 1963. The full game can be found here: https://lichess.org/pWQiqGGi } *
+
+
+[Event "Knights | How to dominate your opponents!: Exercise 3: Controlling the outpost"]
+[Date "2021.08.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Knights | How to dominate your opponents!"]
+[ChapterName "Exercise 3: Controlling the outpost"]
+[ChapterURL "https://lichess.org/study/kI8ikTU4/0l2t7rbn"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "r2q1rk1/2pb1pbp/1p1p1np1/p1nPp3/2P1P3/2N1B2P/PPQNBPP1/R4RK1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2021.08.30"]
+[UTCTime "16:50:19"]
+[ChapterMode "gamebook"]
+
+{ Black's knight is firmly established on the c5 outpost. How can we kick that knight out, with the goal of dominating it on either a6 or b7? }
+1. b3!! (1. a3?? { Don't be too hasty! After a4!, white will never be able to get in the b4 pawn break. How can we better prepare b4? } 1... a4 $10) (1. b4?? { Don't be hasty. This loses a pawn after axb4. } 1... axb4 $17) 1... Ne8 { The first time you learn this amazing idea is delightful. In order to play b4, we have to play the counter-intuitive b3! Meanwhile, black is preparing the classic f5 pawn break... } 2. a3 f5 3. f3 (3. b4?! { The right idea, but a little too quick! After Na6, both the b4 pawn is hanging and your e3 bishop is about to be trapped with f4! } 3... Na6 4. Qb3?? f4 $19 { [%csl Ge3] }) 3... Nf6 4. b4! Na6 { Finally, we have succeeded in executing our plan to control the c5 outpost! } (4... Nb7!? $14 { The knight's going nowhere here either... }) 5. Qb3 $16 { The knight on a6 is completely dominated, and white has the queenside completely under control. White will prepare the c5 pawn break next, with possible threats towards the king on g8. } (5. b5?? { Oh no! You just gave black the c5 outpost again! } 5... Nc5 $17) (5. Qb2!? $16 { Just as good. Play Qb3 instead for the solution. }) (5. Rfb1? { Loses a pawn after axb4 axb4 Nxb4! } 5... axb4 6. axb4 Nxb4 $17) (5. Rab1?! $14 { Not terrible, but there's no need to give up the a file. }) *
+
+
+[Event "Knights | How to dominate your opponents!: Exercise 4: Offsetting the knight"]
+[Date "2021.08.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Knights | How to dominate your opponents!"]
+[ChapterName "Exercise 4: Offsetting the knight"]
+[ChapterURL "https://lichess.org/study/kI8ikTU4/EO2SFQt4"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "1r6/5kpp/p1n1pp2/2p4P/n1P3P1/P1B1P3/3NKP2/3R4 w - - 3 7"]
+[SetUp "1"]
+[UTCDate "2021.08.30"]
+[UTCTime "16:50:19"]
+[ChapterMode "gamebook"]
+
+{ Black has just played Na4, attacking our bishop. Do we have a convenient response planned? }
+7. Ba1! { Nice retreat! This move highlights the power of the bishop over the knight. Black's knight on a4 is completely dominated and can only retreat if it wants to make further progress. Meanwhile, our bishop is still influencing the entire board, attacking the f6 and g7 pawns from its safe corner. } 7... Na5? { Black's knights are trying their best to hop into our position. What's the best way to generate an initiative now that both knights are sidelined on the side of the board? Take your time - this problem is about to get challenging! } 8. Ne4!! (8. g5! { An interesting move as well! Taking this pawn would allow Ne4 to hit with devastating effect! Play Ne4 instead for the solution. } 8... fxg5) 8... Nxc4?! { You've just sacrificed the c pawn. Is this genius or madness? } 9. Rd7+ Kg8 { Black needed to defend the g pawn. Kf8 was equivalent.
+Regardless, black's position seems solid enough. How do we finally break through? } 10. h6! (10. Bxf6!! { Also completely winning! Play h6 instead for the solution. } 10... gxf6 11. Nxf6+ Kh8 12. Rxh7#) (10. g5?! { Not the best way to break through. After Nab6, our rook is hit and we still have not broken through. White remains better here though too. }) 10... gxh6 11. Bxf6 $18 { Excellent job! The strong bishop on the long diagonal has been unleashed. Meanwhile, black's knights are still accomplishing nothing on the queenside (and in fact are still mostly dominated). The threat of Rg7+ is decisive, winning at least the two h pawns and giving white a passed g pawn.
+This was taken from the positional masterpiece, Yusupov - Lautier 1994: https://lichess.org/I77L5Gug } (11. Nxf6+!? { Also winning. Play Bxf6 instead for the solution. }) *
+
+
+[Event "Knights | How to dominate your opponents!: Exercise 5: Resisting domination"]
+[Date "2021.08.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Knights | How to dominate your opponents!"]
+[ChapterName "Exercise 5: Resisting domination"]
+[ChapterURL "https://lichess.org/study/kI8ikTU4/647LaRLD"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "r1bq1rk1/1p1pnpb1/p1n1p1pp/8/2P1P2B/1NNB4/PP3PPP/R2Q1RK1 b - - 1 11"]
+[SetUp "1"]
+[UTCDate "2021.08.30"]
+[UTCTime "16:50:19"]
+[ChapterMode "gamebook"]
+
+{ Our knight on e7 is currently pinned by the bishop on h4 and dominated by the e4 pawn. How can we best resolve this pressure? } { [%cal Be4f5,Be4d5,Rh4d8] }
+11... g5 12. Bg3 { Without an immediate justification of this last move, g5 can only be described as a hook that white will quickly attack with h4 or f4. Can you justify this last move by utilizing the squares temporarily under our control? } 12... Ne5 (12... Ng6? { The right idea, but unfortunately you just allowed Bd6 followed by c5! with complete dark squared control. Stop Bd6 first! } 13. Bd6 Re8 14. c5 $16) (12... d6?! { This move is a little slow. After f4!?, white is opening our king and has a lead in development! } 13. f4 gxf4 14. Bxf4 Ng6 15. Be3 Nce5 16. Be2 $14) 13. Be2 { Nice job finding an active knight move, attacking and defending! After having played g5, the e5 square is a temporary outpost for our knight. } (13. h4!? N7g6! 14. h5?! Nf4 $17) (13. f4!? gxf4 14. Bxf4 N7g6 $10) 13... N7g6! $10 { Exactly! Now h4 and f4 are ruled out permanently, our knights have found stable dark squares on e5 and possibly f4, and we'll be able to complete development after b6+Bb7. Black has fully equalized.
+If you want to see how securing these squares can lead to a win, please see Artemiev playing a model game from this position in 2015: https://lichess.org/0kFiKbNy/black. } *
+
+
+[Event "Knights | How to dominate your opponents!: Exercise 6: Central domination"]
+[Date "2021.08.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Knights | How to dominate your opponents!"]
+[ChapterName "Exercise 6: Central domination"]
+[ChapterURL "https://lichess.org/study/kI8ikTU4/CgDZBxRS"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "r1bq1rk1/ppppbppp/2n2n2/1B6/3PP3/5N2/PP3PPP/RNBQ1RK1 w - - 1 8"]
+[SetUp "1"]
+[UTCDate "2021.08.30"]
+[UTCTime "21:29:04"]
+[ChapterMode "gamebook"]
+
+{ Black has played poorly in this Ruy Lopez and temporarily given up the center for fast development. Can you properly punish their poor play? }
+8. d5! (8. e5!? { Also an interesting try, but only if you had planned to play Qb3! after Nd5. There's a more direct way forward. } 8... Nd5 9. Qb3 $16) 8... Nb8 { Black was forced to retreat because the knight on a5 is offsides and almost trapped, and the knight on b4 just gets kicked immediately after a3.
+White is now solidly better, but can you find the most crushing move in the position? } 9. e5! (9. Nc3!? { A solid move, but one that doesn't quite fit the theme of this study. }) (9. Re1!? { A solid move, but one that doesn't quite fit the theme of the study. }) (9. Bd3!? { A solid move, but one that doesn't quite fit the theme of the study. }) 9... Ne8 $16 { First one knight and then the other! Black has been fully kicked back to the 8th rank and needs to play precisely to avoid collapse in the near future.
+Note that Ne4?? would have lost beautifully to d6 cxd6, Qd5! Ng5, Bxg5 Bxg5, e6! hitting the g5 undefended piece and crashing through. } (9... Ne4?? { [%cal Gd1d5,Gd5e4,Gd5g5] } 10. d6! cxd6 11. Qd5 { [%cal Gd5g8] } 11... Ng5 12. Bxg5 Bxg5 13. e6 { [%cal Gd5g5] } 13... dxe6 (13... Be7 14. exf7+ Kh8 (14... Rxf7 15. Bc4 $18 { [%csl Gc8] }) 15. Bd3 $18) 14. Qxg5 $18) *
+
+
+[Event "Knights | How to dominate your opponents!: NoseKnowsAll dominating the competition"]
+[Date "2021.01.04"]
+[White "NoseKnowsAll"]
+[Black "NN"]
+[Result "1-0"]
+[TimeControl "1500+5"]
+[Termination "NoseKnowsAll won by checkmate"]
+[Variant "Standard"]
+[ECO "B43"]
+[Opening "Sicilian Defense: Kan Variation, Knight Variation"]
+[StudyName "Knights | How to dominate your opponents!"]
+[ChapterName "NoseKnowsAll dominating the competition"]
+[ChapterURL "https://lichess.org/study/kI8ikTU4/UEpmFHB3"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+
+{ I don't usually do this, but I'm including annotations of one of my own games since it fits this study's theme so well. This game was an OTB rapid game against someone approximately 2000 USCF rated. The most relevant portion of the game will arise from moves 14-24. }
+1. e4 { [%clk 0:25:04] } 1... c5 { [%clk 0:24:57] } 2. Nf3 { [%clk 0:25:04] } 2... e6 { [%clk 0:24:53] } 3. d4 { [%clk 0:25:05] } 3... cxd4 { [%clk 0:24:48] } 4. Nxd4 { [%clk 0:25:10] } 4... a6 { We enter the Sicilian Kan, a variation I myself also play as black. I proceed to play a setup that often leads to kingside pressure. } { [%clk 0:24:50] } 5. Nc3 { [%clk 0:25:01] } 5... Qc7 { [%clk 0:24:51] } 6. Bd3 { [%clk 0:24:58] } 6... Nf6 { [%clk 0:24:44] } 7. Qe2 { [%clk 0:24:49] } 7... d6 { [%clk 0:24:37] } 8. O-O { [%clk 0:24:35] } 8... Be7 { [%clk 0:24:38] } 9. f4 { [%clk 0:24:29] } 9... Nbd7 { Because my opponent is controlling e5 enough, he now has time to gain space on the queenside and develop his last remaining piece actively on the long diagonal. } { [%clk 0:24:39] } 10. a4 { At least I can prevent him from playing b5. } { [%clk 0:24:10] } 10... O-O { [%clk 0:24:38] } 11. Kh1 { [%clk 0:23:42] } 11... b6 { [%clk 0:24:33] } 12. Bd2 { [%clk 0:23:16] } 12... Bb7 { This was the end of my opening knowledge. While I know the engine finds this to be approximately equal, it feels much easier to play white here. } { [%clk 0:24:34] } 13. Rae1 { [%clk 0:23:00] } 13... Nc5 { [%clk 0:24:34] } 14. Qe3 { [%clk 0:17:17] } 14... Nxd3?! { An instructive mistake that my opponent surely regretted later. While it removes the strong d3 bishop from the attack, it clarifies the center into a structure that favors white's long term attacking prospects. } { [%clk 0:23:43] } (14... d5! 15. e5 Nfe4 16. Nxe4 dxe4! 17. Be2 Nxa4 18. b3 Nc5 $10 { I haven't burnt any bridges myself going for an all-out kingside attack, so this seems to have transitioned into a reasonable French. In fact, even though black up the a pawn, the engine says 0.0... }) 15. cxd3 { The knight on f6 and bishop on b7 are now dominated by this central pawn mass! } { [%clk 0:17:10] } 15... Rfd8 { [%clk 0:23:31] } 16. Qh3 { [%clk 0:15:59] } 16... Bf8 { [%clk 0:23:07] } 17. Nf3 { [%clk 0:13:22] } (17. f5?! e5 18. Nf3 { The direct way to play, but black gets in d5 too quickly. } 18... d5! $10) 17... Rac8 { [%clk 0:21:18] } 18. f5! { [%clk 0:11:15] } 18... exf5? { I honestly didn't even consider black would take this pawn. In fact it was an unwise move to make. } { [%clk 0:20:54] } (18... e5!? 19. Bg5 $14 { This was the only line I was calculating. My center is stable and therefore I can continue building up a kingside attack. }) 19. Qxf5? { After 5 minutes, I gave up looking for a knockout blow and decided to accept a slightly better position. } { [%clk 0:08:33] } (19. Nd4! g6 (19... fxe4? 20. Rxf6! gxf6 21. Nf5 $18) 20. Bg5 Bg7 21. exf5 Re8 22. Ne6!! fxe6 23. fxg6 hxg6 24. Bxf6 $18 { The knockout blow that I missed. }) 19... Re8 { [%clk 0:12:42] } (19... Qd7 20. Qg5 Qg4 21. h3 Qxg5 22. Bxg5 { [%cal Gf3d4,Gd4f5] } 22... Be7 23. Nd4 $14 { White has a slight pull in this endgame because the knight and b7 bishop are still dominated by my center. }) 20. Bg5 { [%clk 0:06:54] } 20... Nd7?! { My opponent tries to reroute the knight to a better square (c5 or e5), but is immediately dominated again. } { [%clk 0:12:16] } 21. d4! { Taking the entire center! I've now stopped Ne5 and prevented d5 (which would be met with e5). Real threats start to materialize on the f file. } { [%cal Bd4c5,Bd4e5] [%clk 0:05:24] } 21... g6?! { [%clk 0:10:44] } (21... d5?! 22. e5 $16) 22. Qf4 { [%cal Gg5h6] [%clk 0:04:46] } 22... Bg7 { [%clk 0:09:14] } 23. Bh6 { Having weakened the dark squares, I was quick to trade off bishops in order to continue the attack on these weaknesses. } { [%clk 0:03:42] } 23... Nf8? { [%clk 0:08:30] } (23... Nf6 { The natural move gets refuted nicely: } 24. Bxg7 Kxg7 25. Ng5 Qe7 26. e5! dxe5 27. dxe5 { [%cal Gf4f7] } 27... Nh5 28. Qxf7+ Kh8 (28... Qxf7?? 29. Rxf7+ $18 { [%cal Gf7b7,Gf7g7] }) 29. Qxe7 Rxe7 30. Nf7+ Kg8 31. Nd6 { [%cal Gd6c8,Gd6b7] } 31... Rd8 32. Nxb7 Rxb7 33. g4! $18 { The engine continuation highlights yet another knight domination. The knight on the rim is forced to go back to g7, from which it has no future. } { [%csl Gh5] }) 24. Bxg7 { [%clk 0:03:28] } 24... Ne6?? { [%clk 0:08:26] } (24... Kxg7 25. Ng5 { My opponent was clearly scared of this attack, but his cure was worse than the disease... } 25... Re7 { [%cal Gd4d5] } 26. d5! $18 { Once again the center pushes on and restricts the b7 bishop and sad knight. }) 25. Qh6! { Protecting the bishop with the queen forces black to fianchetto his knight, immediately losing the game. } { [%clk 0:03:08] } 25... Nxg7 { [%clk 0:07:53] } 26. Ng5 { [%cal Rg5h7,Rh6h7,Rg5f7,Rf1f7] [%clk 0:03:09] } 26... Kf8 { [%clk 0:02:28] } 27. Rxf7+ { [%clk 0:02:29] } 27... Qxf7 { [%clk 0:02:29] } 28. Nxf7 { [%clk 0:02:32] } 28... Kxf7 { The game is completely over, but my opponent decided to play on until checkmate since I was low on time and there are potential back-rank checkmate ideas. The rest of the game is presented without comment. } { [%clk 0:02:33] } 29. Qxh7 { [%clk 0:01:55] } 29... Bxe4 { [%clk 0:02:25] } 30. Nxe4 { [%clk 0:01:26] } 30... Rxe4 { [%clk 0:02:16] } 31. Rf1+ { [%clk 0:01:27] } 31... Rf4 { [%clk 0:02:14] } 32. Rxf4+ { [%clk 0:01:29] } 32... Ke6 { [%clk 0:02:13] } 33. Qxg6+ { [%clk 0:01:29] } 33... Kd5 { [%clk 0:02:13] } 34. Qe4+ { [%clk 0:01:20] } 34... Kc4 { [%clk 0:02:10] } 35. Qc2+ { [%clk 0:01:14] } 35... Kb4 { [%clk 0:02:11] } (35... Kd5 36. Qxc8 $18) 36. d5+ { [%clk 0:01:04] } 36... Ka5 { [%clk 0:02:13] } 37. Qd2+ { [%clk 0:00:55] } (37. b4#! { I should have mated with the pawn! }) 37... Rc3 { [%clk 0:02:13] } 38. Qxc3# { 1-0 White wins by checkmate. } { [%clk 0:00:59] } 1-0
+
+
+[Event "Knights | How to dominate your opponents!: Thanks for enjoying this study!"]
+[Date "2021.08.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Knights | How to dominate your opponents!"]
+[ChapterName "Thanks for enjoying this study!"]
+[ChapterURL "https://lichess.org/study/kI8ikTU4/adf18Wg0"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "3n4/8/8/3B4/8/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2021.08.30"]
+[UTCTime "16:50:19"]
+[ChapterMode "gamebook"]
+
+{ Be sure to like this study and share with your friends if you enjoyed it! Feel free to ask/answer any questions in the chat room if you're stuck on a key idea. You can check out my other instructive studies too if you're working on improving your game.
+-NoseKnowsAll
+
+* Beginner endgames you must know! https://lichess.org/study/wukLYIXj
+* Intermediate endgames you must know! https://lichess.org/study/UsqmCsgC
+* More endgames you must know! https://lichess.org/study/xtDSXkyi
+* Advanced endgames you must know! https://lichess.org/study/UO2zqigQ
+* Rook endgames you must know! https://lichess.org/study/bnboDhFM
+* Knights | How to dominate your opponents! https://lichess.org/study/kI8ikTU4
+* Bishops | Slice through the opposition! https://lichess.org/study/kNn68T8l
+* Rooks | Infiltrate for activity! https://lichess.org/study/U7tTRtdj
+* Always sacrifice the exchange! https://lichess.org/study/h3ccaYFE
+* Beautiful checkmates https://lichess.org/study/YtBYXc3m } { [%cal Bd5a8,Bd5g8] }
+ *
+
+

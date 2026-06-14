@@ -1,0 +1,16 @@
+[Event "EricRosen's Study: Chapter 1"]
+[Date "2019.10.13"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A43"]
+[Opening "Benoni Defense: Benoni Gambit Accepted"]
+[StudyName "EricRosen's Study"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/zNTDhvrC/oqXNGIg7"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.10.13"]
+[UTCTime "14:58:22"]
+
+1. d4 c5 2. dxc5 { [%csl Gc5] } 2... e6 (2... Na6 3. e4 Nxc5 4. Nc3 d6 5. Nf3 Nf6 6. e5 dxe5 7. Qxd8+ Kxd8 8. Nxe5) 3. Nc3 Bxc5 4. Ne4 Be7 (4... d5 5. Nxc5 Qa5+ 6. c3 Qxc5 7. e4 dxe4 8. Qg4) (4... Qc7 5. Nxc5 Qxc5 6. e4 { [%csl Gd6,Gc1] }) 5. Nd6+ *
+
+

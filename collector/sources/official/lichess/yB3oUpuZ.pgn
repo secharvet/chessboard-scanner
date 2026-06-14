@@ -1,0 +1,142 @@
+[Event "february 7 2023 - titled tuesday: Chapter 1"]
+[Date "2023.02.07"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "february 7 2023 - titled tuesday"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/yB3oUpuZ/38E4Pqf6"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2023.02.07"]
+[UTCTime "21:47:54"]
+
+ *
+
+
+[Event "Live Chess - chess"]
+[Site "Chess.com"]
+[Date "2023.02.07"]
+[White "IMRosen"]
+[Black "Salem-AR"]
+[Result "0-1"]
+[WhiteElo "2640"]
+[BlackElo "3032"]
+[TimeControl "180+1"]
+[Termination "Salem-AR won by checkmate"]
+[Variant "Standard"]
+[ECO "B23"]
+[Opening "Sicilian Defense: Closed, Traditional"]
+[StudyName "february 7 2023 - titled tuesday"]
+[ChapterName "IMRosen - Salem-AR"]
+[ChapterURL "https://lichess.org/study/yB3oUpuZ/OqPdj6Rb"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 c5 2. Nc3 Nc6 3. Bb5 Nd4 4. Nf3 a6 5. Bd3 g6 6. b4 d6 (6... cxb4 7. Nd5 Nc6 (7... Nxf3+ 8. Qxf3 Bg7 9. Rb1)) 7. bxc5 dxc5 8. Rb1 Bg7 9. O-O (9. Na4 b6) 9... b5 10. a4 b4 11. Nd5 e6 12. Ne3 Ne7 13. Bc4 O-O 14. d3 Nec6 15. h3 h6 16. Bb2 Kh7 17. Nh2 Ra7 18. f4 f5 19. e5 g5 20. Qh5 gxf4 21. Rxf4 Qg5 22. Rh4 Qxe3+ 23. Kh1 Ne2 24. Nf1 Qg1# { 0-1 Black wins. } 0-1
+
+
+[Event "Live Chess - chess"]
+[Site "Chess.com"]
+[Date "2023.02.07"]
+[White "IMRosen"]
+[Black "Eloist"]
+[Result "0-1"]
+[WhiteElo "2632"]
+[BlackElo "2456"]
+[TimeControl "180+1"]
+[Termination "Eloist won on time"]
+[Variant "Standard"]
+[ECO "C02"]
+[Opening "French Defense: Advance Variation, Milner-Barry Gambit, Hector Variation"]
+[StudyName "february 7 2023 - titled tuesday"]
+[ChapterName "IMRosen - Eloist"]
+[ChapterURL "https://lichess.org/study/yB3oUpuZ/ynLT3Pxi"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e6 2. d4 d5 3. e5 c5 4. c3 Qb6 5. Nf3 Bd7 6. Bd3 cxd4 (6... Bb5 7. dxc5 Bxc5 8. b4 Bxf2+ 9. Kf1) 7. O-O Nc6 8. Re1 Nge7 9. h4 Nf5 10. Bxf5 exf5 11. cxd4 h6 12. Nc3 Be6 { [%csl Gb3,Gc3][%cal Ge1e3,Gc3a4,Ge3b3,Ge3c3] } 13. a3 Rc8 14. Qd3 Be7 15. h5 O-O 16. Ne2 Na5 17. b4 Nc4 18. Nf4 a5 19. bxa5 Qxa5 20. Bd2 Nxd2 21. Qxd2 Qxd2 22. Nxd2 Rc2 23. Nf1 Ra8 24. Ne3 Rd2 25. Nfxd5 Bd8 26. Red1 Rxd1+ 27. Rxd1 Rxa3 28. Nf4 Bb6 29. d5 Bd7 30. Nc4 Rb3 31. Nxb6 Rxb6 32. Rc1 Kf8 33. Rc7 Ke8 34. g3 Kd8 35. d6 Rb5 36. Nd3 Rd5 37. Nc5 Bc6 38. Nxb7+ (38. f4 Rxc5 39. Rxf7) 38... Bxb7 39. Rxb7 Rxe5 40. Rxf7 f4 { [%csl Gg4][%cal Gg3g4] } 41. Rxf4 (41. g4) 41... Rxh5 42. Rg4 Rd5 43. Rg6 Ke8 44. Rxg7 Rxd6 45. Kg2 Kf8 46. Rh7 Kg8 47. Rb7 Rf6 48. f4 Kh8 49. Kf3 Kg8 50. Kg4 Rg6+ 51. Kh4 Kh8 52. f5 Rg5 53. g4 Kg8 54. Rc7 Kh8 55. Rd7 Kg8 56. Rd6 Kh7 57. Re6 Rg7 { 0-1 Black wins on time. } 0-1
+
+
+[Event "Live Chess - chess"]
+[Site "Chess.com"]
+[Date "2023.02.07"]
+[White "IMRosen"]
+[Black "Truequitos"]
+[Result "1-0"]
+[WhiteElo "2636"]
+[BlackElo "2450"]
+[TimeControl "180+1"]
+[Termination "IMRosen won on time"]
+[Variant "Standard"]
+[ECO "C02"]
+[Opening "French Defense: Advance Variation, Milner-Barry Gambit, Hector Variation"]
+[StudyName "february 7 2023 - titled tuesday"]
+[ChapterName "IMRosen - Truequitos"]
+[ChapterURL "https://lichess.org/study/yB3oUpuZ/al3R0qI0"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e6 2. d4 d5 3. e5 c5 4. c3 Nc6 5. Nf3 Qb6 6. Bd3 cxd4 7. O-O Bd7 8. Re1 Nge7 9. h4 Nf5 10. Bxf5 exf5 11. cxd4 Be7 12. Nc3 Be6 13. Ne2 (13. Re3 O-O 14. Ne2 h6) 13... O-O-O 14. Nf4 h6 15. h5 Kb8 16. Re3 Rc8 17. Rb3 Qa6 18. Bd2 Na5 19. Rc3 Nc4 20. b3 Na3 21. Rac1 Nb5 22. Rxc8+ Rxc8 23. a4 Rxc1 24. Qxc1 Nc7 25. Qc2 Qc6 26. Qxc6 bxc6 27. Nd3 Bc8 28. Kh2 Ba6 29. Nb4 Bb7 30. Nc2 c5 31. dxc5 Bxc5 32. Kg3 Ne6 33. b4 Be7 34. Nfd4 f4+ 35. Bxf4 Bh4+ 36. Kf3 Nxf4 37. Kxf4 Bxf2 38. Nf5 g5+ 39. hxg6 fxg6 40. Nxh6 d4 41. Ng4 d3 42. Nce3 Bg1 43. e6 Kc7 44. Ne5 d2 45. Nd1 Kd6 46. e7 Kxe7 47. Nxg6+ Kd6 48. g3 Kd5 49. Ne5 Kd4 50. Nf3+ Bxf3 51. Kxf3 Kd3 52. g4 Bd4 53. g5 Be5 54. b5 Bd4 55. g6 Bg7 56. a5 Kc4 57. b6 axb6 58. axb6 { 1-0 White wins on time. } 1-0
+
+
+[Event "Live Chess - chess"]
+[Site "Chess.com"]
+[Date "2023.02.07"]
+[White "IMRosen"]
+[Black "farzadbfd"]
+[Result "0-1"]
+[WhiteElo "2646"]
+[BlackElo "2767"]
+[TimeControl "180+1"]
+[Termination "farzadbfd won by checkmate"]
+[Variant "Standard"]
+[ECO "C44"]
+[Opening "Ponziani Opening: Leonhardt Variation"]
+[StudyName "february 7 2023 - titled tuesday"]
+[ChapterName "IMRosen - farzadbfd"]
+[ChapterURL "https://lichess.org/study/yB3oUpuZ/XlYZez0x"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nc6 3. c3 d5 4. Qa4 Nf6 (4... f6) 5. Nxe5 Bd6 6. Nxc6 bxc6 7. d3 O-O 8. Be2 Re8 9. Nd2 dxe4 (9... Bg4) 10. Nxe4 Nxe4 11. dxe4 Qh4 12. Qxc6 Be6 { [%csl Ge6] } 13. Be3 Rad8 14. h3 Bd7 15. Qd5 Rxe4 16. O-O-O Be6 17. Qa5 Ra4 18. Bg5 Rxa5 (18... Bf4+ 19. Kb1 (19. Bxf4 Qxf4+ 20. Kb1 { [%csl Ga5,Ga2] }) 19... Bxg5) 19. Bxh4 Rb8 20. a3 Bf4+ 21. Kb1 Rxa3 22. Rd8+ Rxd8 23. Bxd8 Bf5+ 24. Bd3 Bxd3# { 0-1 Black wins. } 0-1
+
+
+[Event "Live Chess - chess"]
+[Site "Chess.com"]
+[Date "2023.02.07"]
+[White "GadimbayliA"]
+[Black "IMRosen"]
+[Result "1-0"]
+[WhiteElo "2794"]
+[BlackElo "2644"]
+[TimeControl "180+1"]
+[Termination "GadimbayliA won on time"]
+[Variant "Standard"]
+[ECO "B31"]
+[Opening "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack, Fianchetto Variation"]
+[StudyName "february 7 2023 - titled tuesday"]
+[ChapterName "GadimbayliA - IMRosen"]
+[ChapterURL "https://lichess.org/study/yB3oUpuZ/JY6W8ClH"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 c5 2. Nf3 Nc6 3. Bb5 g6 4. Bxc6 dxc6 5. d3 Bg7 6. h3 Nf6 7. Nc3 Nd7 8. Be3 e5 9. Qd2 h6 10. O-O b6 11. Nh2 Nf8 12. f4 exf4 13. Bxf4 Ne6 14. Be3 Nd4 15. Rae1 Be6 16. e5 Qc7 (16... Nf5 17. Bf2 Qc7 18. Nf3 O-O-O 19. Ne4 Bd5 20. Qf4 h5) (16... Bxe5 17. Ng4) 17. Bf4 g5 18. Bg3 O-O-O 19. Nf3 c4 20. Nxd4 Rxd4 21. Ne4 cxd3 22. cxd3 Rd5 23. Nd6+ Kb8 24. Nxf7 Rf8 25. Nd6 Rxf1+ 26. Kxf1 a5 27. Kg1 Bf8 28. Qf2 Be7 29. d4 b5 30. Kh2 a4 31. a3 h5 32. Kg1 h4 33. Bh2 Qb6 34. Re4 c5 35. Nf5 Bf8 36. Ne3 Be7 37. Nxd5 Bxd5 38. e6+ Ka7 39. Re5 Qc6 40. Qf7 Qd6 41. Rxd5 { 1-0 White wins on time. } 1-0
+
+
+[Event "Live Chess - chess"]
+[Site "Chess.com"]
+[Date "2023.02.07"]
+[White "ilushka"]
+[Black "IMRosen"]
+[Result "0-1"]
+[WhiteElo "2471"]
+[BlackElo "2648"]
+[TimeControl "180+1"]
+[Termination "IMRosen won on time"]
+[Variant "Standard"]
+[ECO "A04"]
+[Opening "Zukertort Opening: Sicilian Invitation"]
+[StudyName "february 7 2023 - titled tuesday"]
+[ChapterName "ilushka - IMRosen"]
+[ChapterURL "https://lichess.org/study/yB3oUpuZ/U8KhZFtY"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. Nf3 { [%eval 0.36] } 1... c5 { [%eval 0.13] } 2. b3 { [%eval 0.05] } 2... Nc6 { [%eval 0.0] } 3. Bb2 { [%eval 0.0] } 3... d5 { [%eval 0.24] } 4. e3 { [%eval 0.13] } 4... a6 { [%eval 0.12] } 5. d4 { [%eval 0.19] } 5... cxd4 { [%eval 0.25] } 6. exd4?! { [%eval -0.31] } { Inaccuracy. Nxd4 was best. } (6. Nxd4 Nf6 7. Nxc6 bxc6 8. c4 e6 9. Qc2 Bd6 10. cxd5 Bb4+) 6... Nf6 { [%eval -0.11] } 7. a3 { [%eval -0.21] } 7... Bg4 { [%eval -0.14] } 8. Bd3 { [%eval -0.46] } 8... e6 { [%eval -0.35] } 9. Nbd2 { [%eval -0.45] } 9... Bd6 { [%eval -0.43] } 10. h3 { [%eval -0.49] } 10... Bh5 { [%eval -0.47] } 11. O-O { [%eval -0.48] } 11... Qc7 { [%eval -0.23] } 12. c4 { [%eval -0.33] } 12... O-O { [%eval -0.03] } 13. Qc2 { [%eval -0.17] } 13... Rac8?! { [%eval 0.53] } { Inaccuracy. Bf4 was best. } (13... Bf4) 14. c5 { [%eval 0.47] } 14... Bf4 { [%eval 0.47] } 15. Rfe1?! { [%eval -0.42] } { Inaccuracy. b4 was best. } (15. b4 g5) 15... Bg6?! { [%eval 0.61] } { Inaccuracy. g5 was best. } (15... g5 16. g4) 16. b4 { [%eval 0.57] } 16... Rfd8 { [%eval 0.5] } 17. Ne5?! { [%eval -0.27] } { Inaccuracy. Bxg6 was best. } (17. Bxg6) 17... Nxe5 { [%eval -0.11] } 18. dxe5 { [%eval -0.11] } 18... Nd7 { [%eval -0.16] } 19. Nf3 { [%eval -0.08] } 19... b6 { [%eval -0.05] } 20. g3 { [%eval -0.46] } 20... Bh6 { [%eval -0.56] } 21. Qe2 { [%eval -0.95] } 21... Bxd3 { [%eval -1.07] } 22. Qxd3 { [%eval -1.13] } 22... bxc5 { [%eval -1.03] } 23. Qxa6 { [%eval -1.11] } 23... Nb6?! { [%eval -0.5] } { Inaccuracy. c4 was best. } (23... c4 24. Bc3 Ra8 25. Qd6 Qxd6 26. exd6 Ra4 27. Nd4 g6 28. Nc6 Rda8 29. f4 Rxa3 30. Bb2) 24. bxc5? { [%eval -2.01] } { Mistake. Qe2 was best. } (24. Qe2) 24... Nc4 { [%eval -2.3] } 25. Bd4 { [%eval -2.21] } 25... Ra8 { [%eval -2.11] } 26. Qb5 { [%eval -2.26] } 26... Rdb8 { [%eval -2.13] } 27. Reb1? { [%eval -4.07] } { Mistake. a4 was best. } (27. a4 g6 28. Reb1 Bf8 29. Qxb8 Rxb8 30. Rxb8 Qxb8 31. a5 Qc7 32. a6 Na5 33. c6 Nxc6) 27... Rxb5 { [%eval -4.05] } 28. Rxb5 { [%eval -4.11] } 28... g6 { [%eval -3.77] } 29. a4 { [%eval -3.85] } 29... Bg7 { [%eval -3.95] } { 0-1 Black wins on time. } 0-1
+
+

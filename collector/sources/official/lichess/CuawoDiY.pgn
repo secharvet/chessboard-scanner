@@ -1,0 +1,976 @@
+[Event "Blog games 1: Letelier vs Fischer - Question 1 of 2"]
+[Date "2022.04.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "E70"]
+[Opening "King's Indian Defense: Normal Variation"]
+[StudyName "Blog games 1"]
+[ChapterName "Letelier vs Fischer - Question 1 of 2"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/SnnHocHj"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2022.04.11"]
+[UTCTime "01:42:30"]
+
+1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 O-O 5. e5 Ne8 6. f4 d6 7. Be3 c5 8. dxc5 Nc6 9. cxd6 exd6 10. Ne4 Bf5 11. Ng3 Be6 12. Nf3 Qc7 13. Qb1 dxe5 14. f5 e4 15. fxe6 exf3 16. gxf3 f5 { [%cal Bf7f5] } *
+
+
+[Event "Blog games 1: Letelier vs Fischer - Question 2 of 2"]
+[Date "2022.04.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "E70"]
+[Opening "King's Indian Defense: Normal Variation"]
+[StudyName "Blog games 1"]
+[ChapterName "Letelier vs Fischer - Question 2 of 2"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/XpgWfPjg"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2022.04.11"]
+[UTCTime "01:42:57"]
+
+1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 O-O 5. e5 Ne8 6. f4 d6 7. Be3 c5 8. dxc5 Nc6 9. cxd6 exd6 10. Ne4 Bf5 11. Ng3 Be6 12. Nf3 Qc7 13. Qb1 dxe5 14. f5 e4 15. fxe6 exf3 16. gxf3 f5 17. f4 Nf6 18. Be2 Rfe8 19. Kf2 Rxe6 20. Re1 Rae8 21. Bf3 Rxe3 22. Rxe3 Rxe3 23. Kxe3 { [%cal Bf2e3] } *
+
+
+[Event "Blog games 1: Judit Polgár vs Magnus Carlsen - Question 1 of 2"]
+[Date "2022.07.03"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B46"]
+[Opening "Sicilian Defense: Taimanov Variation"]
+[StudyName "Blog games 1"]
+[ChapterName "Judit Polgár vs Magnus Carlsen - Question 1 of 2"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/gYr7wvTd"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2022.07.03"]
+[UTCTime "05:48:34"]
+
+1. e4 c5 2. Nf3 e6 3. d4 cxd4 4. Nxd4 Nc6 5. Nc3 a6 6. Be3 Qc7 7. Qd2 Nf6 8. f3 Be7 9. O-O-O b5 10. g4 Nxd4 11. Bxd4 Bb7 12. e5 Nxg4 13. Rg1 Nh6 14. Bd3 Bf8 15. Be4 Bxe4 { [%cal Bb7e4] } *
+
+
+[Event "Blog games 1: Judit Polgár vs Magnus Carlsen - Question 2 of 2"]
+[Date "2022.07.03"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B46"]
+[Opening "Sicilian Defense: Taimanov Variation"]
+[StudyName "Blog games 1"]
+[ChapterName "Judit Polgár vs Magnus Carlsen - Question 2 of 2"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/q3GjmFxo"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2022.07.03"]
+[UTCTime "05:50:20"]
+
+1. e4 c5 2. Nf3 e6 3. d4 cxd4 4. Nxd4 Nc6 5. Nc3 a6 6. Be3 Qc7 7. Qd2 Nf6 8. f3 Be7 9. O-O-O b5 10. g4 Nxd4 11. Bxd4 Bb7 12. e5 Nxg4 13. Rg1 Nh6 14. Bd3 Bf8 15. Be4 Rc8 { [%cal Ba8c8] } *
+
+
+[Event "Blog games 1: Magnus Carlsen vs Judit Polgár - Question 1 of 5"]
+[Date "2022.07.20"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "E81"]
+[Opening "King's Indian Defense: Sämisch Variation, Normal Defense"]
+[StudyName "Blog games 1"]
+[ChapterName "Magnus Carlsen vs Judit Polgár - Question 1 of 5"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/rU6ZOZHJ"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2022.07.20"]
+[UTCTime "18:23:06"]
+
+1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. f3 O-O 6. Be3 a6 7. Nge2 c6 8. a4 a5 9. Ng3 Na6 10. Be2 e5 { [%cal Be7e5] } *
+
+
+[Event "Blog games 1: Magnus Carlsen vs Judit Polgár - Question 2 of 5"]
+[Date "2022.07.20"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "E81"]
+[Opening "King's Indian Defense: Sämisch Variation, Normal Defense"]
+[StudyName "Blog games 1"]
+[ChapterName "Magnus Carlsen vs Judit Polgár - Question 2 of 5"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/NJDCsFgr"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2022.07.20"]
+[UTCTime "18:38:13"]
+
+1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. f3 O-O 6. Be3 a6 7. Nge2 c6 8. a4 a5 9. Ng3 Na6 10. Be2 e5 11. d5 Nd7 { [%cal Bf6d7] } *
+
+
+[Event "Blog games 1: Magnus Carlsen vs Judit Polgár - Question 3 of 5"]
+[Date "2022.07.20"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "E81"]
+[Opening "King's Indian Defense: Sämisch Variation, Normal Defense"]
+[StudyName "Blog games 1"]
+[ChapterName "Magnus Carlsen vs Judit Polgár - Question 3 of 5"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/m63muVyS"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2022.07.20"]
+[UTCTime "18:25:23"]
+
+1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. f3 O-O 6. Be3 a6 7. Nge2 c6 8. a4 a5 9. Ng3 Na6 10. Be2 Qc7 11. O-O e5 12. d5 h5 { [%cal Bh7h5] } *
+
+
+[Event "Blog games 1: Magnus Carlsen vs Judit Polgár - Question 3 of 4"]
+[Date "2022.07.20"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "E81"]
+[Opening "King's Indian Defense: Sämisch Variation, Normal Defense"]
+[StudyName "Blog games 1"]
+[ChapterName "Magnus Carlsen vs Judit Polgár - Question 3 of 4"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/zRGyXnrs"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2022.07.20"]
+[UTCTime "18:27:35"]
+
+1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. f3 O-O 6. Be3 a6 7. Nge2 c6 8. a4 a5 9. Ng3 Na6 10. Be2 Qc7 11. O-O e5 12. d5 h5 13. Qd2 h4 14. Nh1 Nh5 15. Nf2 f5 16. Nd3 f4 17. Bf2 Ng3 { [%cal Bh2g3] } *
+
+
+[Event "Blog games 1: Magnus Carlsen vs Judit Polgár - Question 4 of 4"]
+[Date "2022.07.20"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "E81"]
+[Opening "King's Indian Defense: Sämisch Variation, Normal Defense"]
+[StudyName "Blog games 1"]
+[ChapterName "Magnus Carlsen vs Judit Polgár - Question 4 of 4"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/Ll5cJmVL"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2022.07.20"]
+[UTCTime "18:30:24"]
+
+1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. f3 O-O 6. Be3 a6 7. Nge2 c6 8. a4 a5 9. Ng3 Na6 10. Be2 Qc7 11. O-O e5 12. d5 h5 13. Qd2 h4 14. Nh1 Nh5 15. Nf2 f5 16. Nd3 f4 17. Bf2 Ng3 18. Rfd1 c5 { [%cal Bh2g3] } *
+
+
+[Event "Blog games 1: Vidit Gujrathi vs Rodwell Makoto - Question 1 of 4"]
+[Date "2022.07.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "E97"]
+[Opening "King's Indian Defense: Orthodox Variation, Bayonet Attack"]
+[StudyName "Blog games 1"]
+[ChapterName "Vidit Gujrathi vs Rodwell Makoto - Question 1 of 4"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/pZfUww7m"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2022.07.30"]
+[UTCTime "09:44:02"]
+
+1. Nf3 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. d4 O-O 6. Be2 e5 7. O-O Nc6 8. d5 Ne7 9. b4 a5 10. bxa5 Rxa5 11. a4 Nd7 12. Nd2 Nc5 13. Nb3 Nxb3 14. Qxb3 f5 { [%cal Bf7f5] } *
+
+
+[Event "Blog games 1: Vidit Gujrathi vs Rodwell Makoto - Question 2 of 4"]
+[Date "2022.07.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "E97"]
+[Opening "King's Indian Defense: Orthodox Variation, Bayonet Attack"]
+[StudyName "Blog games 1"]
+[ChapterName "Vidit Gujrathi vs Rodwell Makoto - Question 2 of 4"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/GRtYc1KK"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2022.07.30"]
+[UTCTime "09:44:33"]
+
+1. Nf3 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. d4 O-O 6. Be2 e5 7. O-O Nc6 8. d5 Ne7 9. b4 a5 10. bxa5 Rxa5 11. a4 Nd7 12. Nd2 Nc5 13. Nb3 Nxb3 14. Qxb3 f5 15. f3 Kh8 16. Ba3 b6 17. Bb4 Ra8 18. a5 { [%cal Ba4a5] } *
+
+
+[Event "Blog games 1: Vidit Gujrathi vs Rodwell Makoto - Question 3 of 4"]
+[Date "2022.07.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "E97"]
+[Opening "King's Indian Defense: Orthodox Variation, Bayonet Attack"]
+[StudyName "Blog games 1"]
+[ChapterName "Vidit Gujrathi vs Rodwell Makoto - Question 3 of 4"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/rNHXx4Mz"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2022.07.30"]
+[UTCTime "09:44:46"]
+
+1. Nf3 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. d4 O-O 6. Be2 e5 7. O-O Nc6 8. d5 Ne7 9. b4 a5 10. bxa5 Rxa5 11. a4 Nd7 12. Nd2 Nc5 13. Nb3 Nxb3 14. Qxb3 f5 15. f3 Kh8 16. Ba3 c5 17. dxc6 Nxc6 18. Bd3 Bh6 19. Kh1 Be3 20. Nb5 Bc5 21. exf5 gxf5 22. f4 e4 23. Bb2+ Kg8 { [%cal Bh8g8] } *
+
+
+[Event "Blog games 1: Vidit Gujrathi vs Rodwell Makoto - Question 4 of 4"]
+[Date "2022.07.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "E97"]
+[Opening "King's Indian Defense: Orthodox Variation, Bayonet Attack"]
+[StudyName "Blog games 1"]
+[ChapterName "Vidit Gujrathi vs Rodwell Makoto - Question 4 of 4"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/6ZdXxIxF"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2022.07.30"]
+[UTCTime "09:44:54"]
+
+1. Nf3 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. d4 O-O 6. Be2 e5 7. O-O Nc6 8. d5 Ne7 9. b4 a5 10. bxa5 Rxa5 11. a4 Nd7 12. Nd2 Nc5 13. Nb3 Nxb3 14. Qxb3 f5 15. f3 Kh8 16. Ba3 c5 17. dxc6 Nxc6 18. Bd3 Bh6 19. Kh1 Be3 20. Nb5 Bc5 21. Rad1 Nd4 22. Nxd4 exd4 23. Bc2 fxe4 24. Bxe4 Qe8 25. Bb2 Qxa4 26. Qd3 Qe8 27. Rfe1 Qf7 28. Bxd4+ Bxd4 29. Qxd4+ Qf6 30. Qxd6 Qxd6 31. Rxd6 Rc5 32. Bd3 { [%csl Bc4][%cal Be4d3] } *
+
+
+[Event "Blog games 1: Wesley So vs Hrant Melkumyan - Question 1 of 3"]
+[Date "2022.08.07"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B11"]
+[Opening "Caro-Kann Defense: Two Knights Attack, Mindeno Variation, Exchange Line"]
+[StudyName "Blog games 1"]
+[ChapterName "Wesley So vs Hrant Melkumyan - Question 1 of 3"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/GnNXyS9E"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2022.08.07"]
+[UTCTime "06:56:50"]
+
+1. e4 c6 2. Nc3 d5 3. Nf3 Bg4 4. h3 Bxf3 5. Qxf3 e6 6. Be2 Bc5 { [%csl Bd5][%cal Be4d5] } *
+
+
+[Event "Blog games 1: Wesley So vs Hrant Melkumyan - Question 2 of 3"]
+[Date "2022.08.07"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B11"]
+[Opening "Caro-Kann Defense: Two Knights Attack, Mindeno Variation, Exchange Line"]
+[StudyName "Blog games 1"]
+[ChapterName "Wesley So vs Hrant Melkumyan - Question 2 of 3"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/jJCKV2zd"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2022.08.07"]
+[UTCTime "06:59:13"]
+
+1. e4 c6 2. Nc3 d5 3. Nf3 Bg4 4. h3 Bxf3 5. Qxf3 e6 6. Be2 Bc5 7. O-O Nd7 8. exd5 cxd5 9. Rd1 Ngf6 10. d4 Be7 11. Bd3 O-O 12. Bf4 Nb8 13. Ne2 Nc6 14. c3 Re8 15. Re1 g6 16. Ng3 Nd7 17. Re3 e5 18. Bh6 { [%cal Bf4h6] } *
+
+
+[Event "Blog games 1: Wesley So vs Hrant Melkumyan - Question 3 of 3"]
+[Date "2022.08.07"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B11"]
+[Opening "Caro-Kann Defense: Two Knights Attack, Mindeno Variation, Exchange Line"]
+[StudyName "Blog games 1"]
+[ChapterName "Wesley So vs Hrant Melkumyan - Question 3 of 3"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/MSjlPOfA"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2022.08.07"]
+[UTCTime "06:59:20"]
+
+1. e4 c6 2. Nc3 d5 3. Nf3 Bg4 4. h3 Bxf3 5. Qxf3 e6 6. Be2 Bc5 7. O-O Nd7 8. exd5 cxd5 9. Rd1 Ngf6 10. d4 Be7 11. Bd3 O-O 12. Bf4 Nb8 13. Ne2 Nc6 14. c3 Re8 15. Re1 g6 16. Ng3 Nd7 17. Re3 e5 18. Bh6 e4 19. Rxe4 { [%cal Bd5e4] } *
+
+
+[Event "Blog games 1: Gillan Bwalya vs Magnus Carlsen - Question 1 of 3"]
+[Date "2022.08.17"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "E51"]
+[Opening "Nimzo-Indian Defense: Normal Variation, Sämisch Deferred"]
+[StudyName "Blog games 1"]
+[ChapterName "Gillan Bwalya vs Magnus Carlsen - Question 1 of 3"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/4LjYg6KT"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2022.08.17"]
+[UTCTime "18:18:12"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 d5 4. Nf3 Bb4 5. e3 O-O 6. a3 Bxc3+ 7. bxc3 c5 8. Bd3 dxc4 9. Bxc4 Qc7 { [%cal Bd8c7] } *
+
+
+[Event "Blog games 1: Gillan Bwalya vs Magnus Carlsen - Question 2 of 3"]
+[Date "2022.08.17"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "E51"]
+[Opening "Nimzo-Indian Defense: Normal Variation, Sämisch Deferred"]
+[StudyName "Blog games 1"]
+[ChapterName "Gillan Bwalya vs Magnus Carlsen - Question 2 of 3"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/7W7874qk"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2022.08.17"]
+[UTCTime "18:22:26"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 d5 4. Nf3 Bb4 5. e3 O-O 6. a3 Bxc3+ 7. bxc3 c5 8. Bd3 dxc4 9. Bxc4 Qc7 10. Nd2 Nc6 11. O-O Rd8 12. f4 Nd5 13. Bxd5 { [%cal Bc4d5] } *
+
+
+[Event "Blog games 1: Gillan Bwalya vs Magnus Carlsen - Question 3 of 3"]
+[Date "2022.08.17"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "E51"]
+[Opening "Nimzo-Indian Defense: Normal Variation, Sämisch Deferred"]
+[StudyName "Blog games 1"]
+[ChapterName "Gillan Bwalya vs Magnus Carlsen - Question 3 of 3"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/WZ8hmcqt"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2022.08.17"]
+[UTCTime "18:22:36"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 d5 4. Nf3 Bb4 5. e3 O-O 6. a3 Bxc3+ 7. bxc3 c5 8. Bd3 dxc4 9. Bxc4 Qc7 10. Nd2 Nc6 11. O-O Rd8 12. f4 Nd5 13. Bxd5 exd5 14. Qh5 cxd4 15. cxd4 Ne7 16. f5 { [%cal Bf4f5] } *
+
+
+[Event "Blog games 1: Hans Niemann vs Levon Aronian - Question 1 of 3"]
+[Date "2022.09.23"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B90"]
+[Opening "Sicilian Defense: Najdorf Variation"]
+[StudyName "Blog games 1"]
+[ChapterName "Hans Niemann vs Levon Aronian - Question 1 of 3"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/bOHw6pkB"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2022.09.23"]
+[UTCTime "05:10:49"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bd3 g6 7. f3 Bg7 8. Be2 { [%cal Bd3e2] } *
+
+
+[Event "Blog games 1: Hans Niemann vs Levon Aronian - Question 2 of 3"]
+[Date "2022.09.23"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B90"]
+[Opening "Sicilian Defense: Najdorf Variation"]
+[StudyName "Blog games 1"]
+[ChapterName "Hans Niemann vs Levon Aronian - Question 2 of 3"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/uXhvU1jf"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2022.09.23"]
+[UTCTime "05:11:09"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bd3 g6 7. f3 Bg7 8. Be2 Nbd7 9. O-O b6 10. Be3 Bb7 11. Qd2 Qc7 12. g4 Ne5 13. g5 Nfd7 14. b3 { [%cal Bb2b3] } *
+
+
+[Event "Blog games 1: Hans Niemann vs Levon Aronian - Question 3 of 3"]
+[Date "2022.09.23"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B90"]
+[Opening "Sicilian Defense: Najdorf Variation"]
+[StudyName "Blog games 1"]
+[ChapterName "Hans Niemann vs Levon Aronian - Question 3 of 3"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/Kj7tGKdU"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2022.09.23"]
+[UTCTime "05:11:26"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bd3 g6 7. f3 Bg7 8. Be2 Nbd7 9. O-O b6 10. Be3 Bb7 11. Qd2 Qc7 12. g4 Ne5 13. g5 Nfd7 14. b3 Rc8 15. Nd5 Qd8 16. c4 e6 17. Nc3 { [%cal Bd5c3] } *
+
+
+[Event "Blog games 1: Bobby Fischer vs Bent Larsen - Question 1 of 3"]
+[Date "2022.12.25"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B77"]
+[Opening "Sicilian Defense: Dragon Variation, Yugoslav Attack, Czerniak Variation"]
+[StudyName "Blog games 1"]
+[ChapterName "Bobby Fischer vs Bent Larsen - Question 1 of 3"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/NnPjHfLi"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2022.12.25"]
+[UTCTime "13:54:34"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. f3 O-O 8. Qd2 Nc6 9. Bc4 Nxd4 10. Bxd4 Be6 11. Bb3 Qa5 12. O-O-O b5 13. Kb1 b4 14. Nd5 Bxd5 15. Bxd5 { [%cal Bd5a8] } *
+
+
+[Event "Blog games 1: Bobby Fischer vs Bent Larsen - Question 2 of 3"]
+[Date "2022.12.25"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B77"]
+[Opening "Sicilian Defense: Dragon Variation, Yugoslav Attack, Czerniak Variation"]
+[StudyName "Blog games 1"]
+[ChapterName "Bobby Fischer vs Bent Larsen - Question 2 of 3"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/FnXwHbnm"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2022.12.25"]
+[UTCTime "14:04:10"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. f3 O-O 8. Qd2 Nc6 9. Bc4 Nxd4 10. Bxd4 Be6 11. Bb3 Qa5 12. O-O-O b5 13. Kb1 b4 14. Nd5 Bxd5 15. Bxd5 Rac8 16. Bb3 Rc7 17. h4 Qb5 18. h5 Nxh5 19. Bxg7 Kxg7 *
+
+
+[Event "Blog games 1: Bobby Fischer vs Bent Larsen - Question 3 of 3"]
+[Date "2022.12.25"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B77"]
+[Opening "Sicilian Defense: Dragon Variation, Yugoslav Attack, Czerniak Variation"]
+[StudyName "Blog games 1"]
+[ChapterName "Bobby Fischer vs Bent Larsen - Question 3 of 3"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/6oa9s1B0"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2022.12.25"]
+[UTCTime "14:07:51"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. f3 O-O 8. Qd2 Nc6 9. Bc4 Nxd4 10. Bxd4 Be6 11. Bb3 Qa5 12. O-O-O b5 13. Kb1 b4 14. Nd5 Bxd5 15. Bxd5 Rac8 16. Bb3 Rc7 17. h4 Qb5 18. h5 Rfc8 19. hxg6 hxg6 20. g4 a5 21. g5 Nh5 22. Rxh5 a4 23. Rh7 Kxh7 24. Qh2+ Kg8 25. Bxg7 Kxg7 26. Qh6+ Kg8 27. Qxg6+ Kh8 28. Rh1# *
+
+
+[Event "Blog games 1: Ding Liren vs Lu Shanglei - Question 1 of 2"]
+[Date "2023.01.10"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D24"]
+[Opening "Queen's Gambit Accepted"]
+[StudyName "Blog games 1"]
+[ChapterName "Ding Liren vs Lu Shanglei - Question 1 of 2"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/yjNNnR4x"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2023.01.10"]
+[UTCTime "17:19:09"]
+
+1. Nf3 Nf6 2. c4 e6 3. d4 d5 4. Nc3 dxc4 5. e4 Bb4 6. Bxc4 Nxe4 7. O-O Nxc3 8. bxc3 Bxc3 9. Rb1 O-O 10. Qd3 { [%csl Bc3,Bh7][%cal Bd1d3,Bf3g5,Bd3h3] } *
+
+
+[Event "Blog games 1: Ding Liren vs Lu Shanglei - Question 2 of 2"]
+[Date "2023.01.10"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D24"]
+[Opening "Queen's Gambit Accepted"]
+[StudyName "Blog games 1"]
+[ChapterName "Ding Liren vs Lu Shanglei - Question 2 of 2"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/UNv53lBT"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2023.01.10"]
+[UTCTime "17:20:24"]
+
+1. Nf3 Nf6 2. c4 e6 3. d4 d5 4. Nc3 dxc4 5. e4 Bb4 6. Bxc4 Nxe4 7. O-O Nxc3 8. bxc3 Be7 9. Ne5 O-O 10. Qg4 Nc6 { [%cal Bb8c6] } *
+
+
+[Event "Blog games 1: Anish Giri vs D. Gukesh - Question 1 of 3"]
+[Date "2023.01.19"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D38"]
+[Opening "Queen's Gambit Declined: Ragozin Defense"]
+[StudyName "Blog games 1"]
+[ChapterName "Anish Giri vs D. Gukesh - Question 1 of 3"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/EBryA3fu"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2023.01.19"]
+[UTCTime "16:27:22"]
+
+1. d4 Nf6 2. c4 e6 3. Nf3 d5 4. Nc3 Bb4 5. Bg5 h6 6. Bxf6 Qxf6 7. e3 O-O 8. Rc1 dxc4 9. Bxc4 c5 10. O-O cxd4 11. Ne4 { [%cal Bc3e4] } *
+
+
+[Event "Blog games 1: Anish Giri vs D. Gukesh - Question 2 of 3"]
+[Date "2023.01.19"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D38"]
+[Opening "Queen's Gambit Declined: Ragozin Defense"]
+[StudyName "Blog games 1"]
+[ChapterName "Anish Giri vs D. Gukesh - Question 2 of 3"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/5rwfXUM3"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2023.01.19"]
+[UTCTime "16:28:29"]
+
+1. d4 Nf6 2. c4 e6 3. Nf3 d5 4. Nc3 Bb4 5. Bg5 h6 6. Bxf6 Qxf6 7. e3 O-O 8. Rc1 dxc4 9. Bxc4 c5 10. O-O cxd4 11. Ne4 Qg6 12. Bd3 f5 13. Ng3 dxe3 { [%cal Bd4e3] } *
+
+
+[Event "Blog games 1: Anish Giri vs D. Gukesh - Question 3 of 3"]
+[Date "2023.01.19"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D38"]
+[Opening "Queen's Gambit Declined: Ragozin Defense"]
+[StudyName "Blog games 1"]
+[ChapterName "Anish Giri vs D. Gukesh - Question 3 of 3"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/UOcaxMVA"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2023.01.19"]
+[UTCTime "16:29:38"]
+
+1. d4 Nf6 2. c4 e6 3. Nf3 d5 4. Nc3 Bb4 5. Bg5 h6 6. Bxf6 Qxf6 7. e3 O-O 8. Rc1 dxc4 9. Bxc4 c5 10. O-O cxd4 11. Ne4 Qe7 12. a3 Ba5 13. exd4 Rd8 14. Rc2 Bd7 15. Re2 Bc6 16. Qc2 Bxe4 17. Rxe4 Nd7 18. d5 { [%cal Bd4d5] } *
+
+
+[Event "Blog games 1: Harry Nelson Pillsbury vs Georg Marco - Question 1 of 2"]
+[Date "2023.02.01"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D55"]
+[Opening "Queen's Gambit Declined: Pillsbury Attack"]
+[StudyName "Blog games 1"]
+[ChapterName "Harry Nelson Pillsbury vs Georg Marco - Question 1 of 2"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/b7ACFArZ"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2023.02.01"]
+[UTCTime "16:29:37"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Bg5 Be7 5. e3 O-O 6. Nf3 b6 7. Bd3 Bb7 8. cxd5 exd5 9. Ne5 Nbd7 10. f4 c5 11. Qf3 cxd4 12. exd4 { [%cal Be3d4] } *
+
+
+[Event "Blog games 1: Harry Nelson Pillsbury vs Georg Marco - Question 2 of 2"]
+[Date "2023.02.01"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D55"]
+[Opening "Queen's Gambit Declined: Pillsbury Attack"]
+[StudyName "Blog games 1"]
+[ChapterName "Harry Nelson Pillsbury vs Georg Marco - Question 2 of 2"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/tA52FTdN"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2023.02.01"]
+[UTCTime "16:32:04"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Bg5 Be7 5. e3 O-O 6. Nf3 b6 7. Bd3 Bb7 8. cxd5 exd5 9. Ne5 Nbd7 10. f4 c5 11. O-O c4 12. Bc2 a6 13. Qf3 b5 14. Qh3 b4 { [%cal Bb5b4] } *
+
+
+[Event "Blog games 1: Ding Liren vs Ian Nepomniachtchi - Question 1 of 3"]
+[Date "2023.04.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A28"]
+[Opening "English Opening: King's English Variation, Four Knights Variation, Quiet Line"]
+[StudyName "Blog games 1"]
+[ChapterName "Ding Liren vs Ian Nepomniachtchi - Question 1 of 3"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/7N2JLTGj"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2023.04.14"]
+[UTCTime "18:47:07"]
+
+1. c4 Nf6 2. Nc3 e5 3. Nf3 Nc6 4. e3 Bb4 5. Qc2 Bxc3 6. bxc3 d6 7. e4 { [%cal Re3e4] } *
+
+
+[Event "Blog games 1: Ding Liren vs Ian Nepomniachtchi - Question 2 of 3"]
+[Date "2023.04.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A28"]
+[Opening "English Opening: King's English Variation, Four Knights Variation, Quiet Line"]
+[StudyName "Blog games 1"]
+[ChapterName "Ding Liren vs Ian Nepomniachtchi - Question 2 of 3"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/ktDmzFGJ"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2023.04.14"]
+[UTCTime "18:47:34"]
+
+1. c4 Nf6 2. Nc3 e5 3. Nf3 Nc6 4. e3 Bb4 5. Qc2 Bxc3 6. bxc3 d6 7. e4 O-O 8. Be2 Nh5 { [%cal Rf3e5] } 9. Nxe5 { [%cal Rf3e5] } *
+
+
+[Event "Blog games 1: Ding Liren vs Ian Nepomniachtchi - Question 3 of 3"]
+[Date "2023.04.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A28"]
+[Opening "English Opening: King's English Variation, Four Knights Variation, Quiet Line"]
+[StudyName "Blog games 1"]
+[ChapterName "Ding Liren vs Ian Nepomniachtchi - Question 3 of 3"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/XGDVIMY0"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2023.04.14"]
+[UTCTime "18:56:42"]
+
+1. c4 Nf6 2. Nc3 e5 3. Nf3 Nc6 4. e3 Bb4 5. Qc2 Bxc3 6. bxc3 d6 7. e4 O-O 8. Be2 Nh5 9. d4 Nf4 10. Bxf4 exf4 11. O-O Qf6 12. Rfe1 Re8 13. Bd3 Bg4 14. Nd2 Na5 15. c5 dxc5 16. e5 Qh6 17. d5 Rad8 18. c4 b6 19. h3 Bh5 20. Be4 Re7 21. Qc3 Rde8 22. Bf3 Nb7 23. Re2 f6 24. e6 Nd6 25. Rae1 Nf5 26. Bxh5 Qxh5 27. Re4 Qh6 28. Qf3 Nd4 29. Rxd4 cxd4 30. Nb3 c5 { [%cal Rc7c5] } *
+
+
+[Event "Blog games 1: Magnus Carlsen vs Ding Liren - Question 1 of 2"]
+[Date "2023.05.05"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C85"]
+[Opening "Ruy Lopez: Closed, Delayed Exchange"]
+[StudyName "Blog games 1"]
+[ChapterName "Magnus Carlsen vs Ding Liren - Question 1 of 2"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/3HAoRCuZ"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2023.05.05"]
+[UTCTime "02:17:43"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Be7 6. Bxc6 dxc6 7. d3 Nd7 8. Nbd2 O-O 9. a4 a5 10. b3 f6 11. Nh4 Nc5 12. Nf5 Ne6 13. Nc4 b6 14. Nxe7+ { [%cal Bf5e7] } *
+
+
+[Event "Blog games 1: Magnus Carlsen vs Ding Liren - Question 2 of 2"]
+[Date "2023.05.05"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C85"]
+[Opening "Ruy Lopez: Closed, Delayed Exchange"]
+[StudyName "Blog games 1"]
+[ChapterName "Magnus Carlsen vs Ding Liren - Question 2 of 2"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/eLhST2Ka"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2023.05.05"]
+[UTCTime "02:18:03"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Be7 6. Bxc6 dxc6 7. d3 Nd7 8. Nbd2 O-O 9. a4 a5 10. b3 f6 11. Nh4 Nc5 12. Nf5 Ne6 13. Nc4 b6 14. Nxe7+ Qxe7 15. Ne3 g6 16. Bb2 c5 17. Qd2 Bb7 18. Rae1 Rad8 19. f3 Kf7 { [%cal Bg8f7,Bf7e8,Be8d7,Bd7c8] } *
+
+
+[Event "Blog games 1: Magnus Carlsen vs Tor Gulbrandsen - Question 1 of 2"]
+[Date "2023.05.15"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C05"]
+[Opening "French Defense: Tarrasch Variation, Closed Variation"]
+[StudyName "Blog games 1"]
+[ChapterName "Magnus Carlsen vs Tor Gulbrandsen - Question 1 of 2"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/FLZpIpsV"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2023.05.15"]
+[UTCTime "18:51:25"]
+
+1. e4 e6 2. d4 d5 3. Nd2 Nf6 4. e5 Nfd7 5. Ngf3 c5 6. c3 { [%csl Bc5,Bd4] } *
+
+
+[Event "Blog games 1: Magnus Carlsen vs Tor Gulbrandsen - Question 2 of 2"]
+[Date "2023.05.15"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C05"]
+[Opening "French Defense: Tarrasch Variation, Closed Variation"]
+[StudyName "Blog games 1"]
+[ChapterName "Magnus Carlsen vs Tor Gulbrandsen - Question 2 of 2"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/Pv8W45z7"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2023.05.15"]
+[UTCTime "18:54:32"]
+
+1. e4 e6 2. d4 d5 3. Nd2 Nf6 4. e5 Nfd7 5. Ngf3 c5 6. c3 Nc6 7. Bd3 Qb6 8. O-O cxd4 9. cxd4 Nxd4 10. Nxd4 Qxd4 11. Nf3 Qb6 12. Qa4 Qb4 13. Qc2 Qc5 14. Qe2 Be7 15. Be3 Qa5 16. Bg5 { [%cal Be3g5] } *
+
+
+[Event "Blog games 1: Bobby Fischer vs Julio Bolbochán - Question 1 of 3"]
+[Date "2023.05.23"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B90"]
+[Opening "Sicilian Defense: Najdorf Variation, Adams Attack"]
+[StudyName "Blog games 1"]
+[ChapterName "Bobby Fischer vs Julio Bolbochán - Question 1 of 3"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/HJTQf2df"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2023.05.23"]
+[UTCTime "19:50:07"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. h3 Nc6 7. g4 Nxd4 8. Qxd4 e5 9. Qd3 Be7 { [%cal Bf8e7] } *
+
+
+[Event "Blog games 1: Bobby Fischer vs Julio Bolbochán - Question 2 of 3"]
+[Date "2023.05.23"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B90"]
+[Opening "Sicilian Defense: Najdorf Variation, Adams Attack"]
+[StudyName "Blog games 1"]
+[ChapterName "Bobby Fischer vs Julio Bolbochán - Question 2 of 3"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/GvjLBXG7"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2023.05.23"]
+[UTCTime "19:52:03"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. h3 Nc6 7. g4 Nxd4 8. Qxd4 e5 9. Qd3 Be7 10. g5 Nd7 11. Be3 Nc5 12. Qd2 Be6 13. O-O-O Qa5 { [%csl Ra2][%cal Bd8a5] } *
+
+
+[Event "Blog games 1: Bobby Fischer vs Julio Bolbochán - Question 3 of 3"]
+[Date "2023.05.23"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B90"]
+[Opening "Sicilian Defense: Najdorf Variation, Adams Attack"]
+[StudyName "Blog games 1"]
+[ChapterName "Bobby Fischer vs Julio Bolbochán - Question 3 of 3"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/v1OW5T4R"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2023.05.23"]
+[UTCTime "19:54:06"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. h3 Nc6 7. g4 Nxd4 8. Qxd4 e5 9. Qd3 Be7 10. g5 Nd7 11. Be3 Nc5 12. Qd2 Be6 13. O-O-O O-O 14. f3 Rc8 15. Kb1 Nd7 16. h4 b5 17. Bh3 Qc7 18. h5 b4 19. Nd5 Bxd5 { [%csl Bd5] } *
+
+
+[Event "Blog games 1: Magnus Carlsen vs Kirill Shevchenko - Question 1 of 2"]
+[Date "2023.06.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B34"]
+[Opening "Sicilian Defense: Accelerated Dragon, Modern Variation"]
+[StudyName "Blog games 1"]
+[ChapterName "Magnus Carlsen vs Kirill Shevchenko - Question 1 of 2"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/MThcjApP"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2023.06.04"]
+[UTCTime "07:05:56"]
+
+1. e4 c5 2. Nf3 Nc6 3. Nc3 g6 4. d4 cxd4 5. Nxd4 Bg7 6. Be3 Nf6 7. Nb3 d6 8. f3 O-O 9. Qd2 Be6 10. O-O-O Ne5 11. Kb1 Rc8 12. h4 h5 13. Be2 a6 14. Bd4 Qc7 15. g4 hxg4 16. fxg4 Nfxg4 17. h5 { [%cal Bh4h5] } *
+
+
+[Event "Blog games 1: Magnus Carlsen vs Kirill Shevchenko - Question 2 of 2"]
+[Date "2023.06.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B34"]
+[Opening "Sicilian Defense: Accelerated Dragon, Modern Variation"]
+[StudyName "Blog games 1"]
+[ChapterName "Magnus Carlsen vs Kirill Shevchenko - Question 2 of 2"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/VHsWhTuT"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2023.06.04"]
+[UTCTime "07:08:58"]
+
+1. e4 c5 2. Nf3 Nc6 3. Nc3 g6 4. d4 cxd4 5. Nxd4 Bg7 6. Be3 Nf6 7. Nb3 d6 8. f3 O-O 9. Qd2 Be6 10. O-O-O Ne5 11. Kb1 Rc8 12. h4 h5 13. Be2 a6 14. Bd4 Qc7 15. g4 hxg4 16. f4 { [%cal Bf3f4] } *
+
+
+[Event "Blog games 1: Bobby Fischer vs Mikhail Tal - Question 1 of 2"]
+[Date "2023.06.17"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B90"]
+[Opening "Sicilian Defense: Najdorf Variation, Lipnitsky Attack"]
+[StudyName "Blog games 1"]
+[ChapterName "Bobby Fischer vs Mikhail Tal - Question 1 of 2"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/ys3V2PVh"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2023.06.17"]
+[UTCTime "05:39:51"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bc4 e6 7. Bb3 Be7 8. f4 O-O 9. Qf3 Qc7 10. f5 { [%cal Bf4f5] } *
+
+
+[Event "Blog games 1: Bobby Fischer vs Mikhail Tal - Question 2 of 2"]
+[Date "2023.06.17"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B90"]
+[Opening "Sicilian Defense: Najdorf Variation, Lipnitsky Attack"]
+[StudyName "Blog games 1"]
+[ChapterName "Bobby Fischer vs Mikhail Tal - Question 2 of 2"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/xrQYmkpx"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2023.06.17"]
+[UTCTime "05:40:53"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bc4 e6 7. Bb3 Be7 8. f4 O-O 9. Qf3 Qc7 10. O-O b5 11. f5 b4 12. Na4 e5 13. Ne2 Bb7 14. Ng3 Nbd7 15. Be3 Bc6 16. Bf2 Qa5 { [%cal Bc7a5] } *
+
+
+[Event "Blog games 1: Garry Kasparov vs Vladimir Kramnik - Question 1 of 4"]
+[Date "2023.06.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B33"]
+[Opening "Sicilian Defense: Lasker-Pelikan Variation"]
+[StudyName "Blog games 1"]
+[ChapterName "Garry Kasparov vs Vladimir Kramnik - Question 1 of 4"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/khzif5dD"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2023.06.30"]
+[UTCTime "07:58:56"]
+
+1. e4 c5 2. Nc3 Nc6 3. Nge2 Nf6 4. d4 cxd4 5. Nxd4 e5 6. Ndb5 d6 7. Bg5 Be7 { [%cal Bf8e7] } *
+
+
+[Event "Blog games 1: Garry Kasparov vs Vladimir Kramnik - Question 2 of 4"]
+[Date "2023.06.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B33"]
+[Opening "Sicilian Defense: Lasker-Pelikan Variation, Sveshnikov Variation, Chelyabinsk Variation"]
+[StudyName "Blog games 1"]
+[ChapterName "Garry Kasparov vs Vladimir Kramnik - Question 2 of 4"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/uWJHjBxC"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2023.06.30"]
+[UTCTime "07:59:21"]
+
+1. e4 c5 2. Nc3 Nc6 3. Nge2 Nf6 4. d4 cxd4 5. Nxd4 e5 6. Ndb5 d6 7. Bg5 a6 8. Na3 b5 9. Nd5 Be7 10. Bxf6 Bxf6 11. c3 O-O 12. Nc2 Rb8 13. h4 Ne7 14. Nxf6+ gxf6 15. Qd2 Bb7 16. Bd3 d5 17. exd5 Qxd5 18. O-O-O e4 19. Be2 Qxa2 20. Qh6 Qe6 21. Nd4 Qb6 22. Rh3 Kh8 23. Bg4 Rg8 24. Ne6 fxe6 25. Qxf6+ Rg7 { [%cal Bg8g7] } *
+
+
+[Event "Blog games 1: Garry Kasparov vs Vladimir Kramnik - Question 3 of 4"]
+[Date "2023.06.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B33"]
+[Opening "Sicilian Defense: Lasker-Pelikan Variation, Sveshnikov Variation, Chelyabinsk Variation"]
+[StudyName "Blog games 1"]
+[ChapterName "Garry Kasparov vs Vladimir Kramnik - Question 3 of 4"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/MHeLWEs8"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2023.06.30"]
+[UTCTime "07:59:41"]
+
+1. e4 c5 2. Nc3 Nc6 3. Nge2 Nf6 4. d4 cxd4 5. Nxd4 e5 6. Ndb5 d6 7. Bg5 a6 8. Na3 b5 9. Nd5 Be7 10. Bxf6 Bxf6 11. c3 O-O 12. Nc2 Rb8 13. h4 Ne7 14. Nxf6+ gxf6 15. Qd2 Bb7 16. Bd3 d5 17. exd5 Qxd5 18. O-O-O e4 19. Be2 Qxa2 20. Qh6 Qe6 21. Nd4 Qb6 22. Rh3 Kh8 23. Bg4 Rg8 24. Ne6 Rxg4 { [%cal Bg8g4] } *
+
+
+[Event "Blog games 1: Garry Kasparov vs Vladimir Kramnik - Question 4 of 4"]
+[Date "2023.06.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B33"]
+[Opening "Sicilian Defense: Lasker-Pelikan Variation, Sveshnikov Variation, Chelyabinsk Variation"]
+[StudyName "Blog games 1"]
+[ChapterName "Garry Kasparov vs Vladimir Kramnik - Question 4 of 4"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/afuTwTtb"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2023.06.30"]
+[UTCTime "08:02:45"]
+
+1. e4 c5 2. Nc3 Nc6 3. Nge2 Nf6 4. d4 cxd4 5. Nxd4 e5 6. Ndb5 d6 7. Bg5 a6 8. Na3 b5 9. Nd5 Be7 10. Bxf6 Bxf6 11. c3 O-O 12. Nc2 Rb8 13. h4 Ne7 14. Nxf6+ gxf6 15. Qd2 Bb7 16. Bd3 d5 17. exd5 Qxd5 18. O-O-O e4 19. Be2 Qxa2 20. Qh6 Qe6 21. Nd4 Qb6 22. Rh3 Kh8 23. Bg4 Rg8 24. Ne6 Rg6 25. Qf4 { [%cal Bh6f4] } *
+
+
+[Event "Blog games 1: Dr. Anthony Saidy vs Bobby Fischer - Question 1 of 2"]
+[Date "2023.07.13"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A33"]
+[Opening "English Opening: Symmetrical Variation, Anti-Benoni Variation, Spielmann Defense"]
+[StudyName "Blog games 1"]
+[ChapterName "Dr. Anthony Saidy vs Bobby Fischer - Question 1 of 2"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/ONftJ5qD"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2023.07.13"]
+[UTCTime "07:18:08"]
+
+1. c4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 e6 6. Ndb5 Bb4 7. Nd6+ { [%cal Bb5d6] } *
+
+
+[Event "Blog games 1: Dr. Anthony Saidy vs Bobby Fischer - Question 2 of 2"]
+[Date "2023.07.13"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A33"]
+[Opening "English Opening: Symmetrical Variation, Anti-Benoni Variation, Spielmann Defense"]
+[StudyName "Blog games 1"]
+[ChapterName "Dr. Anthony Saidy vs Bobby Fischer - Question 2 of 2"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/h4CXzS9n"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2023.07.13"]
+[UTCTime "07:18:55"]
+
+1. c4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 e6 6. Ndb5 Bb4 7. a3 Bxc3+ 8. Nxc3 d5 9. e3 O-O 10. cxd5 exd5 11. Be2 Bf5 12. Nb5 Qb6 13. O-O a6 14. Nd4 Nxd4 15. Qxd4 Qxd4 16. exd4 Rac8 17. Bd1 Bc2 18. Be3 Bxd1 19. Rfxd1 Rc2 20. Rd2 Rfc8 21. Rxc2 Rxc2 22. Rc1 Rxc1+ 23. Bxc1 Nd7 24. Kf1 Nf8 25. Ke2 Ne6 26. Kd3 h5 27. Be3 Kh7 28. f3 Kg6 29. a4 Kf5 30. Ke2 g5 31. Kf2 Nd8 32. Bd2 Kg6 33. Ke3 Ne6 34. Kd3 Kf5 35. Be3 f6 36. Ke2 Kg6 37. Kd3 f5 38. Ke2 f4 39. Bf2 Ng7 40. h3 Nf5 41. Kd3 g4 42. hxg4 hxg4 43. fxg4 Nh6 { [%cal Bf5h6] } *
+
+
+[Event "Blog games 1: Magnus Carlsen vs Nijat Abasov - Question 1 of 3"]
+[Date "2023.08.23"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B30"]
+[Opening "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack"]
+[StudyName "Blog games 1"]
+[ChapterName "Magnus Carlsen vs Nijat Abasov - Question 1 of 3"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/0o06kId9"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2023.08.23"]
+[UTCTime "09:56:27"]
+
+1. e4 c5 2. Nf3 Nc6 3. Bb5 e6 4. Bxc6 bxc6 5. b3 d6 6. e5 dxe5 7. Nxe5 Qd4 { [%cal Bd8d4] } *
+
+
+[Event "Blog games 1: Magnus Carlsen vs Nijat Abasov - Question 2 of 3"]
+[Date "2023.08.23"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B30"]
+[Opening "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack"]
+[StudyName "Blog games 1"]
+[ChapterName "Magnus Carlsen vs Nijat Abasov - Question 2 of 3"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/1vnPiMb4"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2023.08.23"]
+[UTCTime "09:55:44"]
+
+1. e4 c5 2. Nf3 Nc6 3. Bb5 e6 4. Bxc6 bxc6 5. b3 d6 6. e5 dxe5 7. d3 f6 8. Nbd2 Nh6 9. Rg1 Qa5 10. Bb2 { [%cal Bc1b2] } *
+
+
+[Event "Blog games 1: Magnus Carlsen vs Nijat Abasov - Question 3 of 3"]
+[Date "2023.08.23"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B30"]
+[Opening "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack"]
+[StudyName "Blog games 1"]
+[ChapterName "Magnus Carlsen vs Nijat Abasov - Question 3 of 3"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/HI9kSv36"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2023.08.23"]
+[UTCTime "10:19:16"]
+
+1. e4 c5 2. Nf3 Nc6 3. Bb5 e6 4. Bxc6 bxc6 5. b3 d6 6. e5 dxe5 7. d3 f6 8. Nbd2 Nh6 9. Rg1 Ba6 10. g4 Nf7 11. Qe2 Be7 12. Bb2 Qa5 13. c4 g5 14. h4 h6 15. Rh1 O-O-O 16. O-O-O Qc7 17. Ne4 gxh4 18. Nxh4 Rhg8 19. f4 exf4 20. Nxf6 Bxf6 21. Qxe6+ Kb8 22. Qxf6 Bc8 23. Rde1 Rd6 24. Qxf4 Rxg4 25. Qe3 Re6 26. Qd2 Ne5 27. Kc2 Kb7 28. Re3 Qe7 29. Nf5 Qg5 30. Bxe5 Rg2 31. Re2 Rxe2 32. Qxe2 Qxf5 33. Rh5 Qf7 34. Qh2 { [%cal Be2h2] } *
+
+
+[Event "Blog games 1: Donato Rivera vs Bobby Fischer - Question 1 of 2"]
+[Date "2023.09.17"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "E40"]
+[Opening "Nimzo-Indian Defense: Rubinstein System"]
+[StudyName "Blog games 1"]
+[ChapterName "Donato Rivera vs Bobby Fischer - Question 1 of 2"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/INjy3iHG"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2023.09.17"]
+[UTCTime "00:48:13"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. e3 d5 5. a3 Bxc3+ 6. bxc3 c5 7. Bd3 dxc4 8. Bxc4 Qc7 9. Bb3 b6 10. Ne2 { [%cal Bg1e2] } *
+
+
+[Event "Blog games 1: Donato Rivera vs Bobby Fischer - Question 2 of 2"]
+[Date "2023.09.17"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "E40"]
+[Opening "Nimzo-Indian Defense: Rubinstein System"]
+[StudyName "Blog games 1"]
+[ChapterName "Donato Rivera vs Bobby Fischer - Question 2 of 2"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/b713fQej"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2023.09.17"]
+[UTCTime "00:48:37"]
+
+1. d4 { [%eval 0.0] } 1... Nf6 { [%eval 0.28] } 2. c4 { [%eval 0.16] } 2... e6 { [%eval 0.23] } 3. Nc3 { [%eval 0.05] } 3... Bb4 { [%eval 0.25] } 4. e3 { [%eval 0.0] } 4... d5 { [%eval 0.41] } 5. a3 { [%eval 0.13] } 5... Bxc3+ { [%eval 0.38] } 6. bxc3 { [%eval 0.32] } 6... c5 { [%eval 0.42] } 7. Bd3 { [%eval 0.0] } 7... dxc4 { [%eval 0.0] } 8. Bxc4 { [%eval 0.07] } 8... Qc7 { [%eval 0.1] } 9. Bb3 { [%eval -0.27] } 9... b6 { [%eval -0.29] } 10. Ne2 { [%eval -0.24] } 10... O-O { [%eval -0.22] } 11. Bb2 { [%eval -0.25] } 11... Nc6 { [%eval -0.29] } 12. O-O { [%eval -0.3] } 12... Na5 { [%eval -0.23] } 13. Ng3 { [%eval -0.22] } 13... Bb7 { [%eval -0.21] [%cal Bc8b7] } *
+
+
+[Event "Blog games 1: Stockfish vs Leela Chess Zero - Question 1 of 4"]
+[Date "2023.09.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B30"]
+[Opening "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack"]
+[StudyName "Blog games 1"]
+[ChapterName "Stockfish vs Leela Chess Zero - Question 1 of 4"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/o8ebUSrI"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2023.09.30"]
+[UTCTime "01:27:19"]
+
+1. e4 c5 2. Nf3 Nc6 3. Bb5 Nf6 4. Bxc6 dxc6 5. d3 Bg4 6. h3 Bxf3 7. Qxf3 e5 8. Nd2 Nd7 9. a4 Bd6 10. Qg3 Qf6 11. Nc4 Bc7 12. h4 Qg6 13. Qh3 Nf8 14. h5 Qf6 15. Qf5 Qe7 16. Be3 f6 17. a5 Ne6 18. g3 O-O 19. Ke2 Nd4+ 20. Bxd4 cxd4 21. Ra4 Rf7 22. Nd2 Qc5 23. Rha1 Re8 24. R4a3 Qe7 25. Rb3 Bd6 26. Nf3 Bc5 27. Qg4 b6 28. axb6 axb6 29. Nh4 Qf8 30. Nf5 Kh8 31. Qh3 Rb8 32. Nh4 Qe8 33. Qf5 Kg8 34. c3 Re7 35. cxd4 { [%cal Bc3d4] } *
+
+
+[Event "Blog games 1: Stockfish vs Leela Chess Zero - Question 2 of 4"]
+[Date "2023.09.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B30"]
+[Opening "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack"]
+[StudyName "Blog games 1"]
+[ChapterName "Stockfish vs Leela Chess Zero - Question 2 of 4"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/iveaAoQl"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2023.09.30"]
+[UTCTime "01:27:47"]
+
+1. e4 c5 2. Nf3 Nc6 3. Bb5 Nf6 4. Bxc6 dxc6 5. d3 Bg4 6. h3 Bxf3 7. Qxf3 e5 8. Nd2 Nd7 9. a4 Bd6 10. Qg3 Qf6 11. Nc4 Bc7 12. h4 Qg6 13. Qh3 Nf8 14. h5 Qf6 15. Qf5 Qe7 16. Be3 f6 17. a5 Ne6 18. g3 O-O 19. Ke2 Nd4+ 20. Bxd4 cxd4 21. Ra4 Rf7 22. Nd2 Qc5 23. Rha1 Re8 24. R4a3 Qe7 25. Rb3 Bd6 26. Nf3 Bc5 27. Qg4 b6 28. axb6 axb6 29. Nh4 Qf8 30. Nf5 Kh8 31. Qh3 Rb8 32. Nh4 Qe8 33. Qf5 Kg8 34. c3 Re7 35. Nf3 Qf7 36. Nd2 Rd8 37. Qg4 b5 38. c4 Rb8 39. cxb5 cxb5 40. Ra6 b4 { [%csl Bc4][%cal Bb5b4] } *
+
+
+[Event "Blog games 1: Stockfish vs Leela Chess Zero - Question 3 of 4"]
+[Date "2023.09.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B30"]
+[Opening "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack"]
+[StudyName "Blog games 1"]
+[ChapterName "Stockfish vs Leela Chess Zero - Question 3 of 4"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/NSFcWvU5"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2023.09.30"]
+[UTCTime "01:28:07"]
+
+1. e4 c5 2. Nf3 Nc6 3. Bb5 Nf6 4. Bxc6 dxc6 5. d3 Bg4 6. h3 Bxf3 7. Qxf3 e5 8. Nd2 Nd7 9. a4 Bd6 10. Qg3 Qf6 11. Nc4 Bc7 12. h4 Qg6 13. Qh3 Nf8 14. h5 Qf6 15. Qf5 Qe7 16. Be3 f6 17. a5 Ne6 18. g3 O-O 19. Ke2 Nd4+ 20. Bxd4 cxd4 21. Ra4 Rf7 22. Nd2 Qc5 23. Rha1 Re8 24. R4a3 Qe7 25. Rb3 Bd6 26. Nf3 Bc5 27. Qg4 b6 28. axb6 axb6 29. Nh4 Qf8 30. Nf5 Kh8 31. Qh3 Rb8 32. Nh4 Qe8 33. Qf5 Kg8 34. c3 Re7 35. Nf3 Qf7 36. Nd2 Rd8 37. Qg4 b5 38. c4 Rb8 39. cxb5 cxb5 40. Ra6 b4 41. Nc4 Ra7 42. Rc6 Rc7 43. Ra6 Kh8 44. Kf1 h6 45. Kg2 Qe8 46. Qg6 Qb5 47. Ra1 Bf8 48. Qg4 Qc6 49. Qd1 Ra8 50. Rb1 Re8 51. Qf3 f5 52. Qxf5 { [%cal Bf3f5] } *
+
+
+[Event "Blog games 1: Stockfish vs Leela Chess Zero - Question 4 of 4"]
+[Date "2023.09.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B30"]
+[Opening "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack"]
+[StudyName "Blog games 1"]
+[ChapterName "Stockfish vs Leela Chess Zero - Question 4 of 4"]
+[ChapterURL "https://lichess.org/study/CuawoDiY/pAcHe54B"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2023.09.30"]
+[UTCTime "01:41:48"]
+
+1. e4 c5 2. Nf3 Nc6 3. Bb5 Nf6 4. Bxc6 dxc6 5. d3 Bg4 6. h3 Bxf3 7. Qxf3 e5 8. Nd2 Nd7 9. a4 Bd6 10. Qg3 Qf6 11. Nc4 Bc7 12. h4 Qg6 13. Qh3 Nf8 14. h5 Qf6 15. Qf5 Qe7 16. Be3 f6 17. a5 Ne6 18. g3 O-O 19. Ke2 Nd4+ 20. Bxd4 cxd4 21. Ra4 Rf7 22. Nd2 Qc5 23. Rha1 Re8 24. R4a3 Qe7 25. Rb3 Bd6 26. Nf3 Bc5 27. Qg4 b6 28. axb6 axb6 29. Nh4 Qf8 30. Nf5 Kh8 31. Qh3 Rb8 32. Nh4 Qe8 33. Qf5 Kg8 34. c3 Re7 35. Nf3 Qf7 36. Nd2 Rd8 37. Qg4 b5 38. c4 Rb8 39. cxb5 cxb5 40. Ra6 b4 41. Nc4 Ra7 42. Rc6 Rc7 43. Ra6 Kh8 44. Kf1 h6 45. Kg2 Qe8 46. Qg6 Qb5 47. Ra1 Bf8 48. Qg4 Qc6 49. Qd1 Ra8 50. Rb1 Re8 51. Qf3 f5 52. Re1 Qa4 53. Qd1 f4 54. g4 f3+ { [%cal Bf4f3] } *
+
+

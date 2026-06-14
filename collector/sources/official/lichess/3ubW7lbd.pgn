@@ -1,0 +1,32 @@
+[Event "middlegame: Chapter 1"]
+[Date "2024.05.23"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D02"]
+[Opening "Queen's Pawn Game: Symmetrical Variation, Pseudo-Catalan"]
+[StudyName "middlegame"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/3ubW7lbd/6KHORjEX"]
+[Annotator "https://lichess.org/@/YCAW"]
+[UTCDate "2024.05.23"]
+[UTCTime "12:31:13"]
+
+1. d4 d5 2. Nf3 Nf6 3. g3 b5 4. Bg2 e6 5. O-O Nbd7 { [%csl Gc7,Gc6] } 6. Bf4 { [%cal Gf4c7] } 6... Bb7 7. a4 b4 { [%csl Gd7][%cal Gd7b6,Gb6c4,Ga7a5] } (7... bxa4 8. Rxa4 { [%csl Ga7] }) 8. a5 Ba6 { [%cal Ga5a6,Ga6e2] } 9. c3 { [%csl Gc7][%cal Gb1d2,Ga1c1,Gc1c7] } 9... Rb8 10. Nbd2 { [%cal Gd2f1,Gf1a1] } 10... Nh5 { [%cal Gh5f4,Gg3f4] } 11. Bg5 f6 12. Be3 Bd6 13. c4 c6 { [%cal Gc7c6] } (13... dxc4 14. Qc1 { [%cal Gd2c4] }) 14. Qa4 Qc7 15. Rfc1 { [%csl Ga1][%cal Ga1a5] } 15... Qb7 { [%csl Ge6] } 16. Bh3 { [%cal Gh3e6] } 16... Ke7 17. Qc2 { [%cal Gc2h7,Gh8f8,Gc2c8] } 17... g6 18. b3 f5 (18... dxc4 19. bxc4) 19. g4 (19. Bg5+ Nhf6 20. e4 dxe4 21. Nxe4 fxe4 22. Qxe4 Kd8 23. Qxe6 Be7 { [%cal Ge7f6] } 24. Ne5 { [%cal Ge5f7] } 24... Nxe5 25. dxe5 Ng8 26. Rd1+ Ke8 27. Rd7 Rd8 28. Rad1 Rxd7 29. Rxd7 Qc8 30. Rxe7+ Nxe7 31. Qxe7#) 19... Nf4 { [%cal Gf4h3,Gg8g1] } *
+
+
+[Event "middlegame: Chapter 2"]
+[Date "2024.05.23"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "E06"]
+[Opening "Catalan Opening: Closed"]
+[StudyName "middlegame"]
+[ChapterName "Chapter 2"]
+[ChapterURL "https://lichess.org/study/3ubW7lbd/qlj5iCm1"]
+[Annotator "https://lichess.org/@/YCAW"]
+[UTCDate "2024.05.23"]
+[UTCTime "13:09:15"]
+
+1. d4 Nf6 2. Nf3 e6 3. g3 d5 4. Bg2 Be7 5. c4 O-O 6. Qc2 dxc4 7. Qxc4 a6 { [%cal Gb7b5,Gc8b7] } 8. Qc2 b5 (8... c5 9. dxc5 Qa5+ 10. Nc3 { [%cal Ga5c5,Gc1e3] } 10... Nc6 11. O-O Bd7 12. Rd1 { [%csl Gd7][%cal Gb2c3] } 12... Rfd8 (12... Rac8 { [%cal Gg5f6] } 13. Bg5 { [%cal Gd1d7] }) 13. a3 { [%cal Ga5d5,Gb2b4] } 13... Qxc5 14. Be3 Qh5 { [%cal Gf6g4] } 15. Qb3 Na5 16. Qa2 Nc6 { [%csl Gh5,Ga5,Gb5,Gc5,Gd5,Ge5,Gf5,Gg5] } 17. h3 Qg6 18. g4 { [%cal Gf3h4,Ga1c1,Ge3b6,Gd8c8,Gg4g5] } (18. Nh4 Qh5 19. Bb6 Rdc8 20. Bf3 Qh6 21. Be3 g5 22. Bg2 Qg7 23. Nf3 h6) (18. Rd3 Be8 19. Nh4 Qh5 20. Bf3) 18... b5 (18... h6 19. Bb6 (19. Nh4 Qh7 20. g5 (20. Na4) (20. Bb6 Rdc8 21. e4 (21. Rxd7 Nxd7 { [%csl Gb6] } 22. Be4 { [%cal Gd7b6] } 22... g6 { [%csl Gg4,Gh4][%cal Ge7h4,Gh5g6] } (22... Qh8 23. Ng6 fxg6 24. Qxe6+ Kf8 25. Bxg6 (25. Qxd7 Qg8 26. Bd5 Qh7 27. Qe6) 25... Nde5 26. Qf5+ Kg8 27. Qe6+ Kf8 28. Bf5 Re8) (22... f5 23. Qxe6+) 23. Nxg6 { [%cal Gg6e7] } (23. Bxg6 fxg6 { [%cal Ge7h4,Gd7b6] }) 23... fxg6 { [%cal Gd7b6] } (23... Qg7 24. Be3 (24. Nf4 Nxb6) (24. Nxe7+ Nxe7 25. Bxb7 Nxb6 { [%cal Gb6c8] }) (24. Bxc6 Nxb6 25. Nxe7+ { [%cal Gg2e4] } 25... Kf8 26. Nxc8 { [%cal Gh4g6] } 26... Rxc8 27. Bxb7 Rc4 (27... Rc7 28. Bxa6 h5 29. Qb3 hxg4 30. Qb4+ Kg8 31. Qxg4 Qxg4+ 32. hxg4) 28. Qb3 { [%csl Gg4][%cal Gf4g4,Gb7g2] }) 24... Nf8 (24... Bf6 25. Rd1 Nf8 26. Nf4 Bxc3 27. Nh5 Qe5 28. Bxc6 Rxc6 29. bxc3 Nh7 30. Bd4 Qd5 31. Qd2 e5 32. Be3) (24... Bg5 25. f4 Bf6 26. Rd1 Nf8) 25. Nxe7+ Nxe7 26. Bxb7) 24. Qxe6+ Qf7 25. Qxd7 Kg7 26. Bxc6 (26. Bd5 Qe8 27. Qxb7 Rab8 28. Qxa6 Bf6 29. Ne4 Be5 30. Rc1 Ne7 31. Rxc8 Rxc8 32. Qa7 Kh8 33. Bb7 Rc1+ 34. Kg2 g5 35. Bd4 Ng6 36. e3 Nh4#) (26. Qxb7 Rab8 27. Qxa6) 26... Rxc6 27. Nd5 Re8 28. Bd4+ Kf8) 21... e5 22. Nf5 Bf8 23. Nd6 Be6 24. Nd5 Nd7 (24... Bxd6 { [%cal Ge6a2] }) 25. Nxc8) 20... hxg5 21. Bxg5 Be8) 19... Rdc8 20. Ne5 Nxe5) 19. Nh4) 9. Ne5 Ra7 10. O-O (10. Be3 { [%cal Gd4d5] } 10... Nd5 11. Bd2) *
+
+

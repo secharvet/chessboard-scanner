@@ -1,0 +1,22 @@
+[Event "Rated Bullet tournament https://lichess.org/tournament/feb22wua"]
+[Site "https://lichess.org/hp5Qi3ix"]
+[Date "2022.02.19"]
+[White "anongamer"]
+[Black "EricRosen"]
+[Result "0-1"]
+[WhiteElo "2535"]
+[BlackElo "2608"]
+[BlackTitle "IM"]
+[TimeControl "60+0"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "C42"]
+[Opening "Petrov's Defense: Stafford Gambit"]
+[StudyName "Game study"]
+[ChapterName "anongamer (2535) - IM EricRosen (2608)"]
+[ChapterURL "https://lichess.org/study/khNa8G63/gPvNfPyb"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 { [%clk 0:01:00] } 1... e5 { [%clk 0:01:00] } 2. Nf3 { [%clk 0:01:00] } 2... Nf6 { [%clk 0:01:00] } 3. Nxe5 { [%clk 0:00:59] } 3... Nc6 { [%clk 0:00:59] } 4. Nxc6 { [%clk 0:00:59] } 4... dxc6 { [%clk 0:00:59] } 5. Nc3 { [%clk 0:00:58] } 5... Bc5 { [%clk 0:00:59] } 6. b3 { [%clk 0:00:57] } 6... Ng4 { [%clk 0:00:56] } 7. Bc4 { [%clk 0:00:50] } 7... Qh4 { [%clk 0:00:41] } 8. Qf3 { [%clk 0:00:45] } 8... Bxf2+ { [%clk 0:00:40] } 9. Ke2 { [%clk 0:00:44] } 9... O-O { [%clk 0:00:24] } 10. h3 { [%clk 0:00:41] } 10... Be6 { [%clk 0:00:15] } 11. Ba3 { [%clk 0:00:40] } 11... Bxc4+ { [%clk 0:00:11] } 12. bxc4 { [%clk 0:00:40] } 12... Rfe8 { [%clk 0:00:10] } 13. Qxg4 { [%clk 0:00:39] } 13... Qxg4+ { [%clk 0:00:08] } 14. hxg4 { [%clk 0:00:39] } 14... Bd4 { [%clk 0:00:08] } 15. Rab1 { [%clk 0:00:36] } 15... Bxc3 { [%clk 0:00:07] } 16. dxc3 { [%clk 0:00:36] } 16... Rxe4+ { [%clk 0:00:07] } 17. Kd3?? { [%csl Gd3] [%clk 0:00:36] } 17... Re6 { [%clk 0:00:06] } 18. Rxb7 { [%clk 0:00:35] } 18... Rd8+ { [%csl Gd3] [%clk 0:00:05] } 19. Bd6 { [%csl Gd3] [%clk 0:00:34] } 19... Rdxd6# { 0-1 Black wins by checkmate. } { [%csl Gd3] [%clk 0:00:05] } 0-1
+
+

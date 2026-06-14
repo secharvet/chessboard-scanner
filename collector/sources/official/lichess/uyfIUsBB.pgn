@@ -1,0 +1,106 @@
+[Event "Introducing Study: Chapter 1"]
+[Date "2016.05.24"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B32"]
+[Opening "Sicilian Defense: Löwenthal Variation"]
+[StudyName "Introducing Study"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/uyfIUsBB/8kjcvxmU"]
+[Annotator "https://lichess.org/@/TonyRo"]
+[UTCDate "2016.05.24"]
+[UTCTime "22:02:30"]
+
+1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 e5!! $132 { I love the Kalashnikov! } { No way! The Sveshnikov is way better! } { [%csl Gd5,Gf5][%cal Re5d4,Bd4f3,Yd4b3] } (4... Nf6 5. Nc3 e5) 5. Nb5 { [%cal Gb5d6] } *
+
+
+[Event "Match (active), Enkoping (Sweden)"]
+[Site "Match (active), Enkoping (Swe"]
+[Date "1995.??.??"]
+[Round "2"]
+[White "Ulf Andersson"]
+[Black "Anatoly Karpov"]
+[Result "1-0"]
+[Annotator "Rotella,Tony"]
+[Variant "Standard"]
+[ECO "D28"]
+[Opening "Queen's Gambit Accepted: Classical Defense, Alekhine System"]
+[StudyName "Introducing Study"]
+[ChapterName "Ulf Andersson vs Anatoly Karpov"]
+[ChapterURL "https://lichess.org/study/uyfIUsBB/rHrqH71L"]
+
+1. Nf3 d5 2. d4 Nf6 3. c4 dxc4 4. e3 { [%cal Gf1c4] } 4... e6 5. Bxc4 c5 6. O-O a6 7. Qe2 cxd4 8. exd4 { [%csl Yd4] } 8... Be7 9. Nc3 b5 10. Bb3 O-O 11. Bg5 Bb7 12. Rad1 { [%cal Gd4d5] } 12... Nc6 13. Rfe1 Nb4?? 14. d5! $18 Nfxd5 15. Nxd5 Bxg5 16. Nxb4 Qe7 17. Nd5 Bxd5 18. Bxd5 { [%cal Ge2e7] } 1-0
+
+
+[Event "Introducing Study: Chapter 3"]
+[Date "2016.05.24"]
+[Result "*"]
+[Variant "Horde"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Introducing Study"]
+[ChapterName "Chapter 3"]
+[ChapterURL "https://lichess.org/study/uyfIUsBB/hVZLlpd6"]
+[Annotator "https://lichess.org/@/TonyRo"]
+[FEN "rnbqkbnr/pppppppp/8/1PP2PP1/PPPPPPPP/PPPPPPPP/PPPPPPPP/PPPPPPPP w kq - 0 1"]
+[SetUp "1"]
+[UTCDate "2016.05.24"]
+[UTCTime "22:10:17"]
+
+1. e5 d6 2. e6 *
+
+
+[Event "Introducing Study: LM TonyRo vs thibault"]
+[Date "2016.05.24"]
+[Result "*"]
+[Variant "Crazyhouse"]
+[ECO "A00"]
+[Opening "Van't Kruijs Opening"]
+[StudyName "Introducing Study"]
+[ChapterName "LM TonyRo vs thibault"]
+[ChapterURL "https://lichess.org/study/uyfIUsBB/GI6Q9CJ2"]
+[Annotator "https://lichess.org/@/TonyRo"]
+[FEN "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR/ w KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2016.05.24"]
+[UTCTime "22:10:44"]
+
+1. e3 g6 2. Bc4 Bg7 3. Nf3 Nf6 4. Bxf7+ Kxf7 5. Ng5+ Kg8 6. c3 d5 7. P@e6 B@d3 8. h4 Bxe6 9. Nxe6 Qd7 10. Ng5 P@e2 11. Qb3 Qg4 12. B@e6+ Kf8 13. Bxg4 Nxg4 14. Q@f7# *
+
+
+[Event "Introducing Study: Chapter 5"]
+[Date "2016.05.24"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Introducing Study"]
+[ChapterName "Chapter 5"]
+[ChapterURL "https://lichess.org/study/uyfIUsBB/d2CJKoA1"]
+[Annotator "https://lichess.org/@/TonyRo"]
+[FEN "1rbq1rk1/5ppp/2np4/p2Np1b1/R1B1P3/1PP5/2N2PPP/3QK2R b K - 0 16"]
+[SetUp "1"]
+[UTCDate "2016.05.24"]
+[UTCTime "22:11:12"]
+
+ *
+
+
+[Event "Match (active), Enkoping (Sweden)"]
+[Site "Match (active), Enkoping (Swe"]
+[Date "1995.??.??"]
+[Round "2"]
+[White "Ulf Andersson"]
+[Black "Anatoly Karpov"]
+[Result "1-0"]
+[Annotator "Rotella,Tony"]
+[Variant "Standard"]
+[ECO "D28"]
+[Opening "Queen's Gambit Accepted: Classical Defense, Alekhine System"]
+[StudyName "Introducing Study"]
+[ChapterName "Ulf Andersson vs Anatoly Karpov"]
+[ChapterURL "https://lichess.org/study/uyfIUsBB/NWPKejMu"]
+
+1. Nf3 d5 2. d4 Nf6 3. c4 dxc4 4. e3 { [%cal Gf1c4] } 4... e6 5. Bxc4 c5 6. O-O a6 7. Qe2 cxd4 8. exd4 { [%csl Yd4] } 8... Be7 9. Nc3 b5 10. Bb3 O-O 11. Bg5 Bb7 12. Rad1 { [%cal Gd4d5] } 12... Nc6 13. Rfe1 Nb4?? 14. d5! $18 Nfxd5 (14... exd5) 15. Nxd5 Bxg5 16. Nxb4 Qe7 17. Nd5 Bxd5 18. Bxd5 { [%cal Ge2e7] } 1-0
+
+

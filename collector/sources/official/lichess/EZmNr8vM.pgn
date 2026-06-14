@@ -1,0 +1,22 @@
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2023.01.03"]
+[Round "-"]
+[White "IMRosen"]
+[Black "TigrVShlyape"]
+[Result "1/2-1/2"]
+[WhiteElo "2607"]
+[BlackElo "2899"]
+[TimeControl "180+1"]
+[Termination "Game drawn by repetition"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "January TT"]
+[ChapterName "IMRosen - TigrVShlyape"]
+[ChapterURL "https://lichess.org/study/EZmNr8vM/4Nag6GH0"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 { [%eval 0.0] } 1... Nf6 { [%eval 0.23] } 2. Bf4 { [%eval 0.0] } 2... d5 { [%eval 0.06] } 3. e3 { [%eval 0.09] } 3... e6 { [%eval 0.15] } 4. Nf3 { [%eval 0.09] } 4... Bd6 { [%eval 0.13] } 5. Ne5 { [%eval 0.0] } 5... O-O { [%eval 0.0] } 6. Nd2 { [%eval 0.0] } 6... c5 { [%eval 0.0] } 7. c3 { [%eval 0.0] } 7... Qc7 { [%eval 0.0] } 8. Bd3 { [%eval 0.02] } 8... Nbd7 { [%eval 0.08] } 9. Ndf3 { [%eval 0.11] } 9... cxd4 { [%eval 0.36] } 10. cxd4 { [%eval 0.38] } 10... Nxe5 { [%eval 0.71] } 11. Bxe5?! { [%eval 0.02] } { Inaccuracy. dxe5 was best. } (11. dxe5 Bb4+ 12. Kf1 (12. Ke2 Nd7 13. Bxh7+) 12... Ne4 (12... Nd7 13. Bxh7+ Kxh7 14. Ng5+ Kg8 15. Qh5 Qc2 { [%csl Gh7][%cal Gc2h7] } 16. e4) 13. h4 Bd7 14. Kg1 Rfc8 15. Rh3 h6 16. Nd4 Bf8 17. Qg4 Kh8) 11... Qa5+ { [%eval 0.08] } 12. Ke2 { [%eval 0.0] } 12... Bxe5 { [%eval 0.04] } 13. Nxe5 { [%eval 0.0] } 13... Nd7 { [%eval 0.48] } 14. Nxd7 { [%eval 0.18] } 14... Bxd7 { [%eval 0.18] } 15. Qd2 { [%eval 0.0] } 15... Qb6 { [%eval 0.01] } 16. Rac1 { [%eval 0.07] } 16... Rfc8 { [%eval 0.0] } 17. Rxc8+ { [%eval 0.0] } 17... Rxc8 { [%eval 0.0] } 18. Rc1 { [%eval 0.0] } 18... Rc7 { [%eval 0.2] } 19. Rc3 { [%eval 0.0] } 19... h6 { [%eval 0.16] } 20. Qc2 { [%eval 0.18] } 20... Rxc3 { [%eval 0.17] } 21. Qxc3 { [%eval 0.19] } 21... a5 { [%eval 0.18] } 22. b3 { [%eval 0.11] } 22... Kf8 { [%eval 0.15] } 23. f4 { [%eval 0.04] } 23... Ke7 { [%eval 0.18] } 24. Kd2 { [%eval 0.06] } 24... Kd8 { [%eval 0.04] } 25. Qc5 { [%eval 0.1] } 25... Qb4+ { [%eval 0.03] } 26. Qxb4 { [%eval 0.08] } 26... axb4 { [%eval 0.06] } 27. Kc2 { [%eval 0.03] } 27... f6 { [%eval 0.0] } 28. Kb2 { [%eval 0.01] } 28... Ke7 { [%eval 0.0] } 29. a3 { [%eval 0.0] } 29... bxa3+ { [%eval 0.0] } 30. Kxa3 { [%eval 0.0] } 30... Kd6 { [%eval 0.0] } 31. Kb4 { [%eval 0.0] } 31... b6 { [%eval 0.0] } 32. Bb5 { [%eval 0.0] } 32... Bc8 { [%eval 0.0] } 33. Be8 { [%eval 0.0] } 33... Ba6 { [%eval 0.0] } 34. Bb5 { [%eval 0.0] } 34... Bc8 { [%eval 0.01] } 35. Be8 { [%eval 0.04] } 35... Ba6 { [%eval 0.06] } 36. Bb5 { [%eval 0.0] } 36... Bc8 { [%eval 0.0] } { 1/2-1/2 The game is a draw. } 1/2-1/2
+
+

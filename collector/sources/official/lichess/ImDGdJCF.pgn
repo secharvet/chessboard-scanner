@@ -1,0 +1,36 @@
+[Event "CheckRaiseMate's Study: Chapter 1"]
+[Date "2025.11.20"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "CheckRaiseMate's Study"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/ImDGdJCF/LWQrQXiS"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[FEN "r1b1kr2/pp3pQ1/2n1p2p/3pP2P/3q4/3B4/PP1B2P1/R3RK2 w q - 0 18"]
+[SetUp "1"]
+[UTCDate "2025.11.20"]
+[UTCTime "22:33:19"]
+
+ *
+
+
+[Event "CheckRaiseMate's Study: Chapter 2"]
+[Date "2025.11.20"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "CheckRaiseMate's Study"]
+[ChapterName "Chapter 2"]
+[ChapterURL "https://lichess.org/study/ImDGdJCF/ONW1KWh9"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[FEN "5r2/R7/PP4p1/Bk2b2p/3p4/8/4K1PP/8 w - - 0 43"]
+[SetUp "1"]
+[UTCDate "2025.11.20"]
+[UTCTime "22:35:32"]
+
+43. Rf7 Re8 (43... Ra8 44. b7 Rxa6 45. Bc7 Bxc7 46. Rxc7 Rb6 47. Kd3 { [%cal Gd3d4] } 47... Ka6 (47... Kb4 48. Kxd4 Rb5 49. h4 Kb3 50. g3 Kb4 51. Rg7 { [%csl Gb4][%cal Gb7b8,Gg7g6,Gd4f4,Gf4g5] }) 48. Kxd4 Rxb7 49. Rxb7 Kxb7 50. Ke5 { [%cal Ge5f6] }) 44. a7 Kxa5 45. Re7 (45. a8=Q+ Rxa8 46. Ra7+ Kxb6 47. Rxa8 Bxh2 48. Rg8 { [%cal Gg8g6] }) 45... Rxe7 46. a8=Q+ Kxb6 47. Qd8+ Rc7 48. Qg5 Bxh2 49. Qxg6+ Rc6 50. Qxh5 Bg1 { [%cal Gg1e3] } *
+
+

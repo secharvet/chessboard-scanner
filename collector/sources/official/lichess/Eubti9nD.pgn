@@ -1,0 +1,16 @@
+[Event "White Repertoire: Caro Kann"]
+[Date "2024.09.13"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B10"]
+[Opening "Caro-Kann Defense: Two Knights Attack"]
+[StudyName "White Repertoire"]
+[ChapterName "Caro Kann"]
+[ChapterURL "https://lichess.org/study/Eubti9nD/4bi76xLM"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[UTCDate "2024.09.13"]
+[UTCTime "02:36:36"]
+
+1. e4 c6 2. Nf3 d5 3. Nc3 dxe4 4. Nxe4 Bf5 5. Ng3 Bg6 6. h4 h6 7. Ne5 Bh7 8. Qh5 { Black is forced to play g6. } { [%csl Rf7][%cal Gh5f7,Ge5f7] } 8... g6 { This traps the bishop. } { [%csl Rh7] } 9. Qf3 { White is much better because the bishop is trapped on h7. } { [%csl Rh7] } *
+
+

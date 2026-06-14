@@ -1,0 +1,544 @@
+[Event "Training Move Selection (Interactive): Introduction"]
+[Date "2019.04.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Training Move Selection (Interactive)"]
+[ChapterName "Introduction"]
+[ChapterURL "https://lichess.org/study/jutEaR9r/39abOivx"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2019.04.16"]
+[UTCTime "22:24:10"]
+[ChapterMode "gamebook"]
+
+{ The question of how a chess player comes to a certain move has been studied before. You can find a nice book by Jeremy Silman called, "The Amateur's Mind" where he observes players of various skill solving the same chess positions. There are also a wide range of studies done regarding the selection process.
+
+This study was created so you don't have to sift through the mass of studies - some still locked behind paywalls or only barely accessible. Each chapter of this study has a position to solve from Akiba Rubinstein's historic games. The full games are located at the end of the study if you wish to further study them. Some chapters are oriented to free study, while others are meant to walk you through a process. Enjoy! }
+ *
+
+
+[Event "Training Move Selection (Interactive): Acknowledgements"]
+[Date "2019.04.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Training Move Selection (Interactive)"]
+[ChapterName "Acknowledgements"]
+[ChapterURL "https://lichess.org/study/jutEaR9r/XhwjbegB"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2019.04.16"]
+[UTCTime "23:16:35"]
+[ChapterMode "gamebook"]
+
+{ The first thing to do here is to acknowledge that we are standing on the shoulders of greater people. In recent history, Alexander Kotov's book "Think Like a Grandmaster" boosted the chess population's general understanding of the selection process by providing a framework on which to build. Now 15 years later, the idea of candidate moves has been assimilated into the general ability of club players. The same can be said of A.J. Roycroft in his work on the iterative method of chess puzzle creation and solving in his 1972 publication, "Test Tube Chess" which is no longer in print. I am sure there are others that have fathered new concepts in move selection that I have either forgotten, or never known - so I give a nod to any old or new authors that I have omitted here.
+
+I also have to acknowledge in this idiot's guide, that there are other idiots out there -just like me- who may have created a different method of move selection - especially when it comes to shorter time controls. I don't know what I don't know in regard to this. Sorry for my ignorance. }
+ *
+
+
+[Event "Training Move Selection (Interactive): Self Exploration"]
+[Site "Warsaw"]
+[Date "2019.04.16"]
+[White "Zdzislaw Belsitzmann"]
+[Black "Akiba Rubinstein"]
+[Result "0-1"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Training Move Selection (Interactive)"]
+[ChapterName "Self Exploration"]
+[ChapterURL "https://lichess.org/study/jutEaR9r/WRM2xWlb"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "r3k2r/pbp2pp1/3b1n2/1p6/3P3p/1B2N1Pq/PP1PQP1P/R1B1NRK1 b kq - 1 16"]
+[SetUp "1"]
+[UTCDate "2019.04.16"]
+[UTCTime "23:45:20"]
+[ChapterMode "gamebook"]
+
+{ Use this position as a self exploration exercise. Black to move. Don't just play a move. Be conscious about the moves that you consider, whether you ultimately select the move or discard it. On which part of the board are your eyes focused? Why?
+
+Feel free to play moves to explore.. but be prepared to be insulted by my rhetoric. }
+16... Qxh2+ { Nailed it. } (16... Bxg3 { Holy crap.. are you even trying? }) (16... O-O-O { Well.. your king is safe-ish I guess. You may have missed an opportunity to checkmate white. }) (16... Bf3 { Do you even chess bro? }) (16... Qg2+ { Do you even chess bro? Lookie at the Knighties. Ouchie. }) (16... hxg3 { And now white defends his king across the 2nd rank after fxg2. Black is down a piece. }) (16... Ng4 { Hanging a knight probably won't help you win. }) 17. Kxh2 hxg3+ { Bam! That's kicking it up a notch! } (17... Ng4+ { You should take a mulligan. Your knight died a horrible and purposeless death... alone in the desert of g4... nobody heard his screams... ok.. thats enough. Try again. }) (17... Bxg3+ { No.. This unfortunate move leads to a safe white king (after Kg1), and a missing black queen. Tip your king over and thank him for the game. At least you tried. }) (17... Bf3 { What in the SAM HILL? }) 18. Kg1 { Mate in 1. } 18... Rh1# { Take a few seconds to consider how you solved this. Was it by trial and error or something more systematic? Did you think through all 3 moves (Qxh2, hxg3, and Rh1#) before starting to make moves or did you work out one move at a time? Did you consider other moves than Qxh2 first? What were they? Why do you think you left Qxh2 until later? } 0-1
+
+
+[Event "Training Move Selection (Interactive): Iterative Solve Method"]
+[Site "Budapest"]
+[Date "1926"]
+[White "Akiba Rubinstein"]
+[Black "Sandor Takacs"]
+[Result "1-0"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Training Move Selection (Interactive)"]
+[ChapterName "Iterative Solve Method"]
+[ChapterURL "https://lichess.org/study/jutEaR9r/L7Lh819T"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "2kn2R1/rp6/p1p5/N1Pp4/3Prp1p/4PK2/PR3P2/8 w - - 0 41"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+{ This chapter is optional. Use the hints to navigate through it to skip.
+
+When solving a position where one side is clearly superior to the other, the iterative solve method is useful. The below method may seem like a lot to take in, but each of the steps can be done very rapidly - sometimes in fractions of a second. We will break it down further in chapters 5-8.
+
+Iterative Solve Method
+1. Examine the material first without pawns, and then with pawns.
+2. Examine the positional features.
+3. Look for threats from your opponent.
+4. Is the position clear enough to list defenses to the threats?
+5. Look for your own threat(s).
+6. Choose your opponent's responses to your threat(s).
+7. Repeat Steps 3-7 as necessary.
+
+This position is just for fun. I recommend trying some of these steps out to see if you can do it without further guidance. }
+41. Rh8 { Rubinstein's First Choice. } (41. Nc4 { Pretty strong move there Hercules. Nc4 is the computer's number 1 choice. Well done! Check the hint to move on. }) (41. Rxd8+ { NOOPE!! Chuck Testa. ***Warning*** If you watch this video - you can't unsee it.. https://www.youtube.com/watch?v=LJP1DphOWPs }) (41. exf4 { This is a pretty good move. If black captures d4, the open e file will give him trouble. Check the hint to move on. }) (41. a4 { I'm not sure how to respond to this one. Try something more... well.. just more. }) (41. Rb1 { Repurposing the rook is a reasonable idea, but not very strong. }) (41. Rb6 { I see what you did there. No.. try something else. }) 41... fxe3 42. fxe3 { Rubinstein's first choice. With black unable to leave the defense of his b pawn, the game went downhill rapidly and ended on move 51. The full game is presented at the end of the study. Try a few more moves and then we will move on to break down the individual steps. } (42. Nc4 { Yes.. this is still strongest + you are amazing. Check the hint to see Akiba's choice. }) (42. Rxh4 { No... just no. }) (42. Nxc6 { I can see why you are here. You need help.. Try again. }) (42. Nb3 { Yes.. let's bring the knight back to block our rook. BRRRNF! }) 42... Kd7 43. Rg2 { With both white rooks attacking the king and knight, the game went downhill quickly. See Rubinstein vs Takacs at the end of the study. } (43. Rh2 { This move allows black to unwind his position after Nf7. Sure you get a pawn, but it would be nice to keep black's pieces out of the game. }) (43. Nb3 { Leaving pressure on b7 allows black's rook to re-enter the game. Try something else. }) 1-0
+
+
+[Event "Training Move Selection (Interactive): Iterative Solve Step 1"]
+[Site "Lodz"]
+[Date "1907"]
+[White "Georg Rotlewi"]
+[Black "Akiba Rubinstein"]
+[Result "0-1"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Training Move Selection (Interactive)"]
+[ChapterName "Iterative Solve Step 1"]
+[ChapterURL "https://lichess.org/study/jutEaR9r/OkOKT85C"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "2rr2k1/1b2qppp/pb2p3/1p2P3/1P2BPn1/P1N5/1B2Q1PP/R4R1K b - - 4 21"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+{ Step 1: Examine the Material - first without pawns, then with pawns.
+
+This step could be more difficult for a beginner if the material is more diverse. I assume the reader can do the basic addition using pawn = 1, Bishop =3, Knight = 3, Rook = 5, Queen = 9.
+
+If you are a more advanced player, value your pieces based on utility and position. <-- If you have no idea what I just said.. don't do this.
+
+Finding a material imbalance between the sides cues the solver to use different resources in solving the position. For example: If black is ahead +5, he is able to look over a move set that gives back some material and therefore has a wider range of options. Unfortunately, this goes a little beyond the scope of this study.
+
+When I examine the material in this position, I find that the position is equal in terms of raw piece count, but black's pieces have more value than the usual count because of their utility and position. }
+ 0-1
+
+
+[Event "Training Move Selection (Interactive): Iterative Solve Step 2"]
+[Date "2019.04.17"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Training Move Selection (Interactive)"]
+[ChapterName "Iterative Solve Step 2"]
+[ChapterURL "https://lichess.org/study/jutEaR9r/ykFYvEAb"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "2rr2k1/1b2qppp/pb2p3/1p2P3/1P2BPn1/P1N5/1B2Q1PP/R4R1K b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2019.04.17"]
+[UTCTime "17:46:22"]
+[ChapterMode "gamebook"]
+
+{ Step 2: Examine the positional features ->
+
+Positional features were introduced to the world in Aron Nimzowitsch's work that was published in several pieces between 1925-1927 (thanks wiki) . They were eventually compiled into one manual that we know today as, "My System." After the 1930's, countless authors have revised and appended his list of what might be important in any given position. Other noteable authors to write on the subject include Sam Reshevsky, Boris Gelfand, and Jacob Aagard - to name just a few of the many!
+
+Features of the above position:
+
+1. Hanging knight on g4.
+
+2. The black bishops are aimed at the white king's position.
+
+3. The black rooks are covering the open files, c and d.
+
+4. Black has tension on the white bishop at e4 and the white knight at c3 -> Meaning he could capture them if he chooses to do so.
+
+5. The white king is in a mating net (has 0 useful squares).
+
+The positional features seem to be hinting at some kind of king's side action - or perhaps something through the c and d files - or a combination of both. }
+ *
+
+
+[Event "Training Move Selection (Interactive): Iterative Solve Step 3"]
+[Date "2019.04.17"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Training Move Selection (Interactive)"]
+[ChapterName "Iterative Solve Step 3"]
+[ChapterURL "https://lichess.org/study/jutEaR9r/DluUoWbI"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "2rr2k1/1b2qppp/pb2p3/1p2P3/1P2BPn1/P1N5/1B2Q1PP/R4R1K b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2019.04.17"]
+[UTCTime "17:46:33"]
+[ChapterMode "gamebook"]
+
+{ Step 3: List White's threats ->
+
+One technique to help with this is to assume that it is white's turn again. Will he capture or threaten anything? Checks? Checkmates?
+
+Threat 1. The knight on g4 is hanging and could be captured.
+
+Threat 2. The bishop at b7 might be captured as well.
+
+There are no other credible threats. We could list Nd5 (since it attacks the black queen), but it is such a futile attempt that we can discount it immediately. }
+ *
+
+
+[Event "Training Move Selection (Interactive): Iterative Solve Steps 4 - 6"]
+[Site "Lodz"]
+[Date "1907"]
+[White "Goerg Rotlewi"]
+[Black "Akiba Rubinstein"]
+[Result "0-1"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Training Move Selection (Interactive)"]
+[ChapterName "Iterative Solve Steps 4 - 6"]
+[ChapterURL "https://lichess.org/study/jutEaR9r/Oe26ygI5"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "2rr2k1/1b2qppp/pb2p3/1p2P3/1P2BPn1/P1N5/1B2Q1PP/R4R1K b - - 4 21"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+{ Step 4: Is the position clear enough to list defenses to the threats? Yes.
+
+***There are three ways to save a hanging piece. 1. Move it. 2. Defend it. 3. Trade it. 4. Make a counter-threat or capture an equal or greater value piece. (I can't count.. don't worry about it)***
+
+The moves that appear in our defensive move set are: 21. ...Nh6 (move it), 21. ...Ne3 (move it), 21. ...h5(defend it) 21. ...Nf2+ (trade it), 21. ...Bxe4 (make an equal or greater counter-threat) 21. ...Qh4 (defend it)
+
+***Explore each of the defensive moves to reveal steps 5 and 6. Try Qh4 last as this will advance the study.
+
+Defensive Moves:
+21. ...Nh6
+21. ...Ne3
+21. ...h5
+21. ...Nf2+
+21. ...Bxe4
+21. ...Qh4 <--- exploring this move advances the study. }
+21... Qh4 { Rubinstein's first choice. Note that there was a stronger move not listed in the previous comments - 21. ...Nxh2. I'll leave that one to the reader to figure out. } (21... Nxh2! { No, stop being difficult... Explore the moves in the text to the left there. Good move, by the way! White can certainly not recapture the knight or he will be mated on the next move. This is the computer's favorite move. What is the follow up after 22. Qh5! }) (21... Nh6?! { Step 5: Look for black's threats after playing this move. There are none... Step 6: Play the response to black's threat: White can play whatever it wants, there is no threat. }) (21... Ne3 $19 { Step 5: Your threats? Black now threatens Nxf1, and also Bxe4 followed by Rc2! Step 6: The dual threat has only one sufficient answer. 22. Bxb7 followed by moving the rook away from f1. }) (21... h5 { Step 5: Black's threats did not change on this move. Everything that was threatened is still threatened, and white gets another turn to try to solve the position. This is a good move since black's threats are unavoidable, but does not advance the position. Let's give it a B+ and move on. }) (21... Nf2+?! { Step 5: Black threatens to play Nxe4. Step 6: White will trade his rook for two minor pieces after Rxf2 to avoid this threat. }) (21... Bxe4 { Step 5: Black has created a counter-threat or capture. White will have to regain his material or play behind. Step 6: List white's responses. 22. Qxe4, 22. Qxg4, 22. Nxe4.
+***Rinse and repeat Step 3-6. Eventually we will come to a moment in each line where the material is no longer equal and we can evaluate the position as better or worse.***
+22. Qxg4 Bf5 - The white queen is in zug. All her moves are bad for one reason or another. Explore the position more in the game file at the end of the study.
+22. Qxe4 - Find mate in 4.
+22. Nxe4 - Black's best here is probably just to take the h2 pawn. White can not recapture the knight due to checkmate. Black is +1. } 22. Qxg4 (22. Nxe4 { White's best attempt. The white knight defends some of the attacking possibilities for black. Black's best is now to just win the pawn with Nxh2. }) (22. Qxe4 { Find Mate in 4. } 22... Qh4 23. h3 Qg3 24. hxg4 Qh4#) 22... Bf5 { The white queen is in zugzwang. It can move, but all the moves are bad. Feel free to explore further on your own. }) 22. g3 { Use the iterative process to solve this position from step 3:
+3. Look for threats from your opponent.
+4. Is the position clear enough to list defenses to those threats?
+5. Look for your own threat(s).
+6. Choose white's responses to your threat(s).
+7. Repeat Step 3-6 as necessary. } 22... Rxc3 { That's it! Removing one of the defenders of e4. Note that the white queen is overworked defending both e4 and h2. } (22... Qh3 { Your bishop sir! }) (22... Qh5 { Your bishop sir! }) (22... Qxh2+ { Well, at least you held the status quo. Unfortunately, this doesn't really win the game. BUT it also doesn't lose the game after 23. Qxh2 Bxe4+ 24. Nxe4 Nxh2 25. Kxh2 Rc2+ forking the king and bishop at b2. }) (22... Rd2 { Yaargh!! Well.. many pirate charges ended the same way - a brilliant flurry and then a horrid death. You've lost a rook. Try again. }) (22... Bxe4+ { Hey! Not bad. You saved the bishop from certain doom and now you have time to save the queen. There's a better move though.. so crap. }) (22... Rc7 { Your queen sir! }) (22... Rd7 { Your queen sir! }) 23. gxh4 Rd2 { It is forced mate from here. The queen may not move away or Rxh2#. Qxd2 is forced. If white tries the computer defense Rf2, black can capture the bishop at e4 for a nice knight forking combination - Bxe4 Qxe4 Nxf2+!! } (23... Rc2 { uh.. no. If you are trying to remove the defender of e4, you'll have to try harder. }) (23... Bxe4+ { After Qxe4 you are probably losing. How will you give the final check? }) (23... Rh3 { Your bishop sir! }) (23... Re3 { Ya.. sort of like that. But not. QxR and you are not quite getting check mate. }) 24. Qxd2 Bxe4+ { Naturally. } (24... Rb3 { What is this even?! Call an ambulance for your bishop, it just got clobbered. }) (24... Rh3 { Your bishop sir! }) (24... Re3 { Your bishop is going to need an ambulance, after he clobbers it. }) 25. Qg2 Rh3 { Tada! White resigns. } (25... Rc2 { Yes. This wins. Rubinstein played a different rook move. }) (25... Bxg2+ { NOOOOO. His king will get away! All things considered, you might still be ahead, but an early checkmate would make things easier on yourself. }) 0-1
+
+
+[Event "Vienna"]
+[Date "1908"]
+[White "Akiba Rubinstein"]
+[Black "Oldrich Duras"]
+[Result "1-0"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Training Move Selection (Interactive)"]
+[ChapterName "Candidate Moves Intro"]
+[ChapterURL "https://lichess.org/study/jutEaR9r/i36XJyl8"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "r3kb1r/p1q1pppp/2n2n2/1p6/1PN3b1/P3PN2/1B3PPP/R2QKB1R w KQkq - 0 11"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+{ **Solve this position for fun**
+
+Many bloggers and chess enthusiasts have written on the subject of candidate moves in the last 15 years after GM Kotov made it popular. I have to give the nod and wink to those experts and enthusiasts. The reader will easily be able to follow up with a google search or two to find more information (or complete crap, depending on which link you click first). The candidate move selection process has two main components:
+
+1. Fill out a list of candidate moves.
+2. Evaluate each candidate move until it reaches a position that is clearly favoring one side, or can be judged equal.
+
+Give the position a try **JUST FOR FUNSIES**, and then we will break the process down in the next few chapters. }
+11. Nce5 { Your orthogonal hopper has played with impudence. Congratulations, this is Rubinstein's first choice. } (11. Be5 { Heh. Heh. I'm not laughing at you per se.. I'm laughing at your hanging stuff after 11. ...Nxe5 12. Nxe5 Qc3+! Which wins the white rook or knight. DOH! }) (11. Na5 { Not terrible. You didn't let him capture your knight, that was smart. Try for a smarter move. }) (11. Ncd2 { Not terrible! You didn't let him capture your knight, that was smart. Try for a smarter move. }) (11. Be2 { Your knight sir! }) (11. Nb6 { Do you even chess? }) (11. Nd6+ { Do you even chess? }) (11. h3 { Well.. thats a counter threat, sort of. What if he takes your knight at f3, and then captures your other knight at c4 next? You lose a piece. Try again. }) 11... Nxe5 12. Nxe5 { Holy Carpe Move - ium!! You got it. } (12. Bxe5 { Not bad. Makes for a symmetrical game after Qd7. How are you planning to get ahead? }) (12. Rc1 { Hmm.. after Nc4 black is going to be all over your position like fire ants on a roast ham. That's delicious. Plus.. you are down a piece. Let's try again. }) 12... Bxd1 13. Bxb5+ { YAHTZEE! } (13. Rxd1 { You failed to recover a queen's worth of material. Try again. }) (13. Kxd1 { Oh.. Black is up a queen. Here is a short video to help you see the humor in the situation as your king is stuffed and mounted.
+https://www.youtube.com/watch?v=LJP1DphOWPs }) 13... Nd7 14. Bxd7+ (14. Nxd7 { There is a tactic here for black. I don't blame you for not spotting it! Black can try 14. ...Be2 which attacks the b5 bishop and makes the discovery fruitless. On 15. Kxe2 Qc2+ 16. Ke1 a6!! The white bishop will be under attack and the discovery will be meaningless. Nice try. }) (14. Rxd1 { YES. Nailed it. Rubinstein found a different and equally good move. So if you want to be like him, you'll have to try again. }) 14... Qxd7 { After 14. ...Kd8, white would win easily after Rxd1, threatening to checkmate on the next move with Nf7. } 15. Nxd7 { Very nice!! White is up a pawn and cruising to a better middle game. Well done! } 1-0
+
+
+[Event "Training Move Selection (Interactive): Candidate Move Listing"]
+[Site "Karlsbad"]
+[Date "1911"]
+[White "Akiba Rubinstein"]
+[Black "Alexander Alekhine"]
+[Result "1-0"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Training Move Selection (Interactive)"]
+[ChapterName "Candidate Move Listing"]
+[ChapterURL "https://lichess.org/study/jutEaR9r/kqzivXxx"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "3r1rk1/pp3ppp/1np1p3/q7/3P4/1QP1PPP1/P3BP2/R4RK1 w - - 1 18"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+{ Listing candidate moves is a process that can be done differently based on the players taste. I'm not necessarily talking about the tendency of newer players to make incomplete lists, nor the tendency to create lists that are too big to fully explore before the clock expires. Those two common mistakes are important, but not to the point of how this process is done.
+
+-->One chess master might make a thorough list of candidate moves and then explore that list, while another might make a partial list, and then add moves to the list where other creative ideas present themselves during analysis. The method of building the list is somewhat unique to play style. }
+ 1-0
+
+
+[Event "Training Move Selection (Interactive): Thorough List vs Creative List"]
+[Date "2019.04.18"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Training Move Selection (Interactive)"]
+[ChapterName "Thorough List vs Creative List"]
+[ChapterURL "https://lichess.org/study/jutEaR9r/SxGWCYtF"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "3r1rk1/pp3ppp/1np1p3/q7/3P4/1QP1PPP1/P3BP2/R4RK1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2019.04.18"]
+[UTCTime "00:50:22"]
+[ChapterMode "gamebook"]
+
+{ The thorough mind may tackle the problem of making a list of candidate moves by adding all relevant moves and then systematically ticking them off until a sufficient idea is found. In the position - an inclusive list may look like this:
+
+18. Rab1
+18. Kg2
+18. c4
+18. Rfc1
+18. Qb4
+18. Qc2
+18. Rfd1
+18. a4
+18. Bd3
+18. f4
+
+If the above list is a complete list of the useful moves in the position - then the creative method will only pull a sub-set of the complete list. See below:
+
+A more creative undertaking of the candidate move list can start with a question - "How do I aim more stuff at the king" or "How do I attack this pawn, piece or square." or simply, "How do I improve this piece."
+
+For example: If white asks himself, "How do I attack and pressure b7." His candidate move list will be much shorter than the complete list:
+
+18. Rab1
+18. Rfb1
+18. f4 - preparing Bf3
+
+As these three moves are explored, white may find that he would like to make the knight move from b6 and so he might expand his list to add 18. c4 - planning to push to c5.
+
+When a player deems none of these moves in his candidate list help his position, he may discard the whole set and ask a new question. For example: How can I attack the king's side? The move set for this question may look more like this:
+
+18. Kg2 - preparing Rh1
+18. Bd3
+18. Qc2
+
+You can have prophylactic questions like: How do I stop my opponent from playing e5?
+
+18. f4 - the only move that accomplishes this.
+
+As you can see, the question asked when using a selective (or creative) method of candidates drives the moves explored, which changes the path of the game. Stronger players ask better questions of the position.
+
+Move on to the next Chapter. }
+ *
+
+
+[Event "Training Move Selection (Interactive): Candidate Evaluation"]
+[Date "2019.04.18"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Training Move Selection (Interactive)"]
+[ChapterName "Candidate Evaluation"]
+[ChapterURL "https://lichess.org/study/jutEaR9r/qpnMBg74"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "3r1rk1/pp3ppp/1np1p3/q7/3P4/1QP1PPP1/P3BP2/R4RK1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2019.04.18"]
+[UTCTime "02:28:43"]
+[ChapterMode "gamebook"]
+
+{ In the evaluation phase - the general idea is to look forward in each position until the player is sure that he is either ahead, behind, or equal to his opponent in the coming positions. This requires a method of evaluating a position!
+
+Ok let's get into evaluating each candidate move on this list:
+
+1. Rab1
+2. Rfc1
+3. Kg2
+4. Qb4
+5. Qc2
+6. a4
+7. c4
+8. f4
+
+Evaluate on your own and then play each move to see my evaluation (backed up by computer analysis). Play f4 last, as this move will advance the study. }
+1. f4 { Part of the plan to pressure b7. This is white's strongest plan, and f4 is a critical part of that plan - to stop e5 and also prepare Bf3. This may be the strongest move in the position - and Akiba's first choice! } (1. Rab1 { This move is a part of the strongest plan, which is an attack on b7. Black must play e5 or c5 if he wishes to play actively. The pressure to b7 creates an immobile knight on b6. It is hard to quantify this position, but if black does not have tactical counter-play we can probably guess that white is equal or better. }) (1. Rfc1 { Banking on black's attempt to play actively. Black needs to play e5 or c5 to break white's space and punch a hole for the rooks to invade. This move is worth slightly less than Rab1 - but does not diminish white's position in any way. }) (1. Kg2 { Starting an attacking idea at h7. This attempt is likely futile, however this move does not change white's positional edge which is the space that his center provides. This is worth slightly more than Rfc1 probably because of the increased rook activity on the h file. }) (1. Qb4 { Trading queens and blocking the b file with a pawn - removing all pressure to black's position. This is not a good idea positionally. White may be ahead a small amount or equal. Black's plan to attack the center is still clear, while white has a less clear path than he did last move. }) (1. Qc2 { Removing the pressure to black's position at b7. The knight is free to move. Pawn moves to c5 or e5 are still possible to poke at white's center. Qc2 does not improve the position, and the game is probably equal now, or slightly in black's favor because black's plan is less complicated to play than it was last turn. }) (1. a4 { Discouraging black from playing c5, due to Qb5 (Removing the queen's gives white pressure to a7 and likely wins a pawn. On Qxc3 white will play dxc5 and capture the b7 pawn). Black might still try to poke the center with e5, so this move doesn't really slow down black's plan. It keeps the status quo, white is probably ahead still. }) (1. c4 { Not good. This move gives black an easier road to the central breaks - and white has less defense of d4. }) 1... c5 { Come up with your own list of candidates, and then play the strongest. Good luck! } 2. Bf3 { Rubinstein's first choice. } (2. dxc5 { What an unfortunate move. Black has counter-play against the isolated c pawn. Try again. }) (2. a4 { Great move! Not Akiba's favorite though. Use the hint feature to move on since you've nailed it! }) (2. Kg2 { Changing plans? Let's stick with the queen's side pressure for now. }) 2... Rd7 3. a4 { YES! The pressure on the queen's side continues to build, now white controls b5 and is able to place a queen there. } (3. Rfc1 { I'm not sure if the c file will ever open. That's a big maybe. Try again. }) (3. Rab1 { Hopeful that you can make his knight move? There are better ideas. }) (3. Kg2 { Pretty good idea. Let's stick to the plan on the queen's side though. Try again. }) 3... Nd5 4. Rfc1 { Needed some defense, didn't it? NICE MOVE! } (4. c4 { Very good move. Not Akiba's favorite though because it leaves a hole at b4 for black's knight. Try defending c3 instead. }) (4. Bxd5 { Meh. Your bishop was the better piece. The game will probably enter a pure rook ending from here. }) 4... g6 5. Qb5 { Forcing the queens off the board. Now the pressure to a2 will be meaningful. } 5... Qxb5 6. axb5 { Noice. } 6... cxd4 7. cxd4 { Yes! Opening the c file for the rook to play. } (7. exd4 { Also good, but leaves a backwards pawn at c3. This may be less favorable than having everything well defended. }) 7... b6 $16 { White is slightly better. He has a permanent target on a7 and holds the tension on black's knight. } *
+
+
+[Event "Training Move Selection (Interactive): End Study - Thanks!"]
+[Date "2019.04.18"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Training Move Selection (Interactive)"]
+[ChapterName "End Study - Thanks!"]
+[ChapterURL "https://lichess.org/study/jutEaR9r/WR3dTSif"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2019.04.18"]
+[UTCTime "03:47:59"]
+[ChapterMode "gamebook"]
+
+{ Thanks for taking a look and working through some Rubinstein games with me! I appreciate any feedback, positive or negative. Send a note in a bottle if you have to. Take care! }
+ *
+
+
+[Event "Budapest"]
+[Site "Budapest HUN"]
+[Date "1926.07.13"]
+[Round "14"]
+[White "Akiba Rubinstein"]
+[Black "Sandor Takacs"]
+[Result "1-0"]
+[Variant "Standard"]
+[ECO "D65"]
+[Opening "Queen's Gambit Declined: Orthodox Defense, Rubinstein Attack"]
+[StudyName "Training Move Selection (Interactive)"]
+[ChapterName "Akiba Rubinstein - Sandor Takacs"]
+[ChapterURL "https://lichess.org/study/jutEaR9r/rNSYmEXn"]
+[Annotator "https://lichess.org/@/DrHack"]
+
+1. c4 { [%eval 0.1] } 1... Nf6 { [%eval 0.31] } 2. d4 { [%eval 0.18] } 2... e6 { [%eval 0.12] } 3. Nc3 { [%eval 0.15] } 3... d5 { [%eval 0.15] } 4. Bg5 { [%eval -0.06] } 4... Nbd7 { [%eval 0.36] } 5. e3 { [%eval 0.17] } 5... Be7 { [%eval 0.28] } 6. Nf3 { [%eval 0.06] } 6... O-O { [%eval 0.22] } 7. Rc1 { [%eval 0.37] } 7... c6 { [%eval 0.4] } 8. Qc2 { [%eval 0.21] } 8... a6 { [%eval 0.25] } 9. cxd5 { [%eval 0.33] } 9... exd5 { [%eval 0.35] } 10. Bd3 { [%eval 0.32] } 10... Re8 { [%eval 0.46] } 11. O-O { [%eval 0.55] } 11... Nf8 { [%eval 0.85] } 12. Rfe1 { [%eval 0.63] } 12... Bg4 { [%eval 0.61] } 13. Nd2 { [%eval 0.03] } 13... N6d7?! { [%eval 0.74] } 14. Bf4?! { [%eval 0.19] } 14... Bg5 { [%eval 0.63] } 15. h3 { [%eval 0.72] } 15... Bh5 { [%eval 0.37] } 16. Bh2 { [%eval 0.46] } 16... Bg6 { [%eval 0.37] } 17. Bxg6 { [%eval 0.39] } 17... hxg6 { [%eval 0.5] } 18. Qb3 { [%eval 0.3] } 18... Qb6 { [%eval 0.36] } 19. Na4?! { [%eval -0.31] } 19... Qxb3 { [%eval -0.19] } 20. Nxb3 { [%eval -0.19] } 20... Ne6 { [%eval 0.0] } 21. Na5 { [%eval 0.0] } 21... Ra7?! { [%eval 0.75] } 22. Kf1 { [%eval 0.5] } 22... Bd8 { [%eval 0.64] } 23. b4 { [%eval 0.58] } 23... f5 { [%eval 0.53] } 24. Nb2 { [%eval 0.65] } 24... g5 { [%eval 0.6] } 25. Nd3 { [%eval 0.66] } 25... Kf7 { [%eval 0.56] } 26. Rc2 { [%eval 0.56] } 26... Bb6 { [%eval 0.69] } 27. Bd6 { [%eval 0.83] } 27... Nd8?! { [%eval 1.44] } 28. Nc5 { [%eval 1.27] } 28... Nxc5 { [%eval 1.65] } 29. Bxc5 { [%eval 1.56] } 29... Bxc5 { [%eval 1.46] } 30. bxc5 { [%eval 1.42] } 30... Ke7 { [%eval 1.5] } 31. Rb2 { [%eval 1.5] } 31... Kd7 { [%eval 1.5] } 32. Reb1 { [%eval 1.58] } 32... Kc8 { [%eval 1.6] } 33. Ke2 { [%eval 1.7] } 33... Re7 { [%eval 1.62] } 34. Kf3 { [%eval 1.6] } 34... Re4 { [%eval 1.57] } 35. g4 { [%eval 1.62] } 35... g6 { [%eval 1.58] } 36. Rg1 { [%eval 1.38] } 36... Nf7 { [%eval 1.75] } 37. h4 { [%eval 1.78] } 37... gxh4 { [%eval 2.24] } 38. gxf5 { [%eval 2.09] } 38... gxf5 { [%eval 2.06] } 39. Rg7 { [%eval 2.19] } 39... Nd8 { [%eval 1.85] } 40. Rg8 { [%eval 1.85] } 40... f4? { [%eval 4.42] } 41. Rh8? { [%eval 2.32] } 41... fxe3 { [%eval 2.44] } 42. fxe3? { [%eval 1.34] } 42... Kd7? { [%eval 3.14] } 43. Rg2? { [%eval 1.24] } 43... Re8?! { [%eval 1.81] } 44. Rxh4 { [%eval 1.61] } 44... Re7 { [%eval 2.13] } 45. Rh8 { [%eval 1.87] } 45... Kc7 { [%eval 2.28] } 46. Rgg8 { [%eval 1.73] } 46... Rd7? { [%eval 3.3] } 47. Nb3 { [%eval 3.34] } 47... a5 { [%eval 3.34] } 48. Nc1 { [%eval 3.17] } 48... Ra8 { [%eval 3.09] } 49. Nd3 { [%eval 3.04] } 49... b5? { [%eval 5.69] } 50. cxb6+ { [%eval 5.58] } 50... Kxb6 { [%eval 5.41] } 51. Nc5 { [%eval 5.17] } 51... Rd6? { [%eval 7.57] } 52. a4 { [%eval 7.57] } 52... Rc8 { [%eval 7.48] } 53. Kg4 { [%eval 7.24] } { 1-0 Black resigns. } 1-0
+
+
+[Event "Lodz"]
+[Site "Lodz RUE"]
+[Date "1907.12.26"]
+[Round "6"]
+[White "Georg Rotlewi"]
+[Black "Akiba Rubinstein"]
+[Result "0-1"]
+[Variant "Standard"]
+[ECO "D32"]
+[Opening "Tarrasch Defense: Symmetrical Variation"]
+[StudyName "Training Move Selection (Interactive)"]
+[ChapterName "Georg Rotlewi - Akiba Rubinstein"]
+[ChapterURL "https://lichess.org/study/jutEaR9r/kojdj3qE"]
+[Annotator "https://lichess.org/@/DrHack"]
+
+1. d4 { Notes by Carl Schlechter and Dr. Savielly Tartakower. } 1... d5 2. Nf3 e6 3. e3 c5 4. c4 Nc6 5. Nc3 Nf6 6. dxc5 { Tartakower:
+Less consistent than 6.a3 or 6.Bd3, maintaining as long as
+possible the tension in the center. } 6... Bxc5 7. a3 a6 8. b4 Bd6 9. Bb2 O-O 10. Qd2 { ? Schlechter: A very bad place for the
+queen. The best continuation is 10.cxd5 exd5 11.Be2, followed
+by O-O. *** Tartakower: Loss of time. The queen will soon have
+to seek a better square (14.Qe2). The most useful move is
+10.Qc2. } 10... Qe7 { ! Schlechter: A fine sacrifice of a pawn. If
+11.cxd5 exd5 12.Nxd5? Nxd5 13.Qxd5 Rd8! and Black has a strong
+attack. } 11. Bd3 { Schlechter: Better was 11.cxd5 exd5 12.Be2. } 11... dxc4 12. Bxc4 b5 13. Bd3 Rd8 14. Qe2 Bb7 15. O-O Ne5 { !
+Schlechter: Introduced by Marshall and Schlechter in a similar
+position with opposite colors, but here with the extra move
+Rd8. } 16. Nxe5 Bxe5 { Tartakower: Threatening to win a pawn by
+17...Bxh2+ 18.Kxh2 Qd6+. White's next move provides against
+this, but loosens the kingside defenses. } 17. f4 Bc7 18. e4 Rac8 19. e5 Bb6+ 20. Kh1 Ng4 { ! } 21. Be4 { Schlechter: There is no
+defense; e.g., 21.Bxh7+ Kxh7 22.Qxg4 Rd2 etc.; or 21.h3 Qh4
+22.Qxg4 Qxg4 23.hxg4 Rxd3, threatening ...Rh3 mate and
+...Rxc3; or 21.Qxg4 Rxd3 22.Ne2 Rc2 23.Bc1 g6! threatening
+...h5; or 21.Ne4 Qh4 22.h3 (if 22.g3 Qxh2+ 23.Qxh2 Nxh2 and
+wins.) 22....Rxd3 23.Qxd3 Bxe4 24.Qxe4 Qg3 25.hxg4 Qh4+ mate. } 21... Qh4 22. g3 { Schlechter: Or 22.h3 Rxc3! 23.Bxc3 Bxe4 24.Qxg4
+Qxg4 25.hxg4 Rd3 wins. *** Tartakower: The alternative 22.h3,
+parrying the mate, would lead to the following brilliant lines
+of play: 22...Rxc3! (an eliminating sacrifice, getting rid of
+the knight, which overprotects the bishop on e4) 23.Bxc3 (or
+23.Qxg4 Rxh3+ 24.Qxh3 Qxh3+ 25.gxh3 Bxe4+ 26.Kh2 Rd2+ 27.Kg3
+Rg2+ 28.Kh4 Bd8+ 29.Kh5 Bg6+ mate) 23...Bxe4+ 24.Qxg4 (if
+24.Qxe4 Qg3 25.hxg4 Qh4+ mate) 24...Qxg4 25.hxg4 Rd3 with the
+double threat of 26...Rh3+ mate and 26....Rxc3, and Black
+wins. Beautiful as are these variations, the continuation in
+the text is still more splendid. } 22... Rxc3 { !! } 23. gxh4 Rd2 { !! } 24. Qxd2 Bxe4+ 25. Qg2 Rh3 { ! } 0-1
+
+
+[Event "San Sebastian"]
+[Site "San Sebastian ESP"]
+[Date "1912.03.11"]
+[Round "16"]
+[White "Siegbert Tarrasch"]
+[Black "Akiba Rubinstein"]
+[Result "0-1"]
+[Variant "Standard"]
+[ECO "C48"]
+[Opening "Four Knights Game: Spanish Variation, Rubinstein Variation, Marshall Gambit"]
+[StudyName "Training Move Selection (Interactive)"]
+[ChapterName "Siegbert Tarrasch - Akiba Rubinstein"]
+[ChapterURL "https://lichess.org/study/jutEaR9r/EYtnywnW"]
+[Annotator "https://lichess.org/@/DrHack"]
+
+1. e4 { [%eval 0.12] } 1... e5 { [%eval 0.37] } 2. Nf3 { [%eval 0.23] } 2... Nc6 { [%eval 0.15] } 3. Nc3 { [%eval 0.16] } 3... Nf6 { [%eval 0.19] } 4. Bb5 { [%eval 0.0] } 4... Bc5 { [%eval 0.24] } 5. Nxe5 { [%eval -0.02] } 5... Nd4?! { [%eval 0.83] } 6. Ba4?! { [%eval 0.1] } 6... O-O { [%eval 0.07] } 7. d3 { [%eval -0.35] } 7... d5 { [%eval -0.06] } 8. Bg5? { [%eval -1.49] } 8... c6 { [%eval -1.52] } 9. Qd2 { [%eval -1.52] } 9... Re8 { [%eval -1.6] } 10. f4 { [%eval -2.09] } 10... b5 { [%eval -2.12] } 11. Bb3 { [%eval -1.91] } 11... h6 { [%eval -0.47] } 12. Bh4?! { [%eval -1.41] } 12... Nxe4?! { [%eval -0.5] } 13. Bxd8 { [%eval -0.64] } 13... Nxd2 { [%eval -0.62] } 14. Kxd2 { [%eval -0.54] } 14... Rxd8 { [%eval -0.67] } 15. Ne2 { [%eval -0.66] } 15... Nxe2 { [%eval -0.37] } 16. Kxe2 { [%eval -0.39] } 16... Re8 { [%eval -0.45] } 17. Kf1?! { [%eval -1.44] } 17... Bb7?! { [%eval -0.88] } 18. c3 { [%eval -0.95] } 18... f6 { [%eval -1.09] } 19. Ng4 { [%eval -1.54] } 19... h5 { [%eval -1.07] } 20. Nf2 { [%eval -1.07] } 20... Be3 { [%eval -0.66] } 21. Bd1 { [%eval -0.69] } 21... h4 { [%eval -0.72] } 22. g3 { [%eval -0.72] } 22... a5 { [%eval -0.6] } 23. Bf3 { [%eval -0.69] } 23... b4 { [%eval -0.76] } 24. Kg2 { [%eval -0.66] } 24... bxc3 { [%eval -0.62] } 25. bxc3 { [%eval -0.63] } 25... Ba6 { [%eval -0.53] } 26. c4 { [%eval -0.84] } 26... Rad8 { [%eval -0.74] } 27. cxd5 { [%eval -0.56] } 27... cxd5 { [%eval -0.52] } 28. Rhd1 { [%eval -0.77] } 28... Re7 { [%eval -0.8] } 29. Ng4 { [%eval -1.0] } 29... hxg3 { [%eval -0.7] } 30. hxg3 { [%eval -0.95] } 30... Bd4 { [%eval -0.92] } 31. Rac1 { [%eval -0.71] } 31... Rb7 { [%eval -0.8] } 32. Rc2 { [%eval -1.25] } 32... Kf7?! { [%eval -0.72] } 33. Nf2 { [%eval -0.68] } 33... Rb2?! { [%eval -0.18] } 34. Rxb2 { [%eval -0.17] } 34... Bxb2 { [%eval -0.24] } 35. Rd2 { [%eval -0.43] } 35... Bd4 { [%eval -0.38] } 36. Nh3 { [%eval -0.79] } 36... Ke6 { [%eval -0.4] } 37. Rc2? { [%eval -2.02] } 37... Kd6 { [%eval -1.95] } 38. f5 { [%eval -2.21] } 38... Rc8 { [%eval -2.03] } 39. Bd1 { [%eval -2.72] } 39... Rxc2+ { [%eval -2.61] } 40. Bxc2 { [%eval -2.63] } 40... Ke5 { [%eval -2.5] } 41. g4? { [%eval -4.17] } 41... Be3 { [%eval -4.27] } 42. Kf3 { [%eval -4.04] } 42... Kd4 { [%eval -4.18] } 43. Bb3 { [%eval -4.13] } 43... Bb7 { [%eval -3.94] } 44. Ke2 { [%eval -3.84] } 44... Ba6? { [%eval -1.83] } 45. Bc2? { [%eval -4.08] } 45... Bb5 { [%eval -3.52] } 46. a4?! { [%eval -4.42] } 46... Bd7 { [%eval -4.33] } 47. Kf3? { [%eval -5.94] } 47... Kc3 { [%eval -5.62] } 48. Kxe3? { [%eval -7.26] } 48... d4+ { [%eval -5.81] } 49. Ke2 { [%eval -9.79] } 49... Kxc2 { [%eval -5.72] } 50. Nf4?? { [%eval -9.59] } 50... Bxa4 { [%eval -8.47] } 51. Ne6? { [%eval -10.6] } 51... Bb3 { [%eval -5.76] } 52. Nxd4+ { [%eval -10.36] } 52... Kb2 { [%eval -9.97] } 53. Nb5 { [%eval -9.54] } 53... a4 { [%eval -8.61] } 54. Ke3? { [%eval -17.0] } 54... a3 { [%eval -16.75] } 55. Nxa3 { [%eval -16.69] } 55... Kxa3 { [%eval -12.66] } 56. Kd4 { [%eval -12.34] } 56... Kb4 { [%eval -8.97] } { 0-1 White resigns. } 0-1
+
+
+[Event "Vienna"]
+[Site "Vienna AUH"]
+[Date "1908.04.04"]
+[Round "10"]
+[White "Akiba Rubinstein"]
+[Black "Oldrich Duras"]
+[Result "1-0"]
+[Variant "Standard"]
+[ECO "D02"]
+[Opening "Queen's Pawn Game: Krause Variation"]
+[StudyName "Training Move Selection (Interactive)"]
+[ChapterName "Akiba Rubinstein - Oldrich Duras"]
+[ChapterURL "https://lichess.org/study/jutEaR9r/Z1H6A6Vb"]
+[Annotator "https://lichess.org/@/DrHack"]
+
+1. d4 { Notes by Carl Schlechter from "Deutsche Schachzeitung"
+1908. } 1... d5 2. Nf3 c5 3. e3 Nf6 4. dxc5 Qa5+ { ? Bad, because this
+helps the opponent to develop. The right move is 4...e6, and
+if 5.b4? then 5...a5 6.c3 axb4 7.cxb4 b6 regaining the pawn. } 5. Nbd2 Qxc5 6. a3 Qc7 7. c4 dxc4 { This also helps White's
+development. Better was 7...e6. } 8. Nxc4 Nc6 9. b4 Bg4 10. Bb2 b5 { ? This will be refuted by a nice combination by White, but
+Black already stands worse. If, for example, 10...e6, then
+11.Rc1!, threatening b5. } 11. Nce5 { ! } 11... Nxe5 12. Nxe5 { !! } 12... Bxd1 13. Bxb5+ Nd7 { Best. If 13...Kd8 14.Rxd1+ Kc8 15.Ba6+ Kb8
+16.Nc6+ Qxc6 17.Be5+ Qd6 (17...Qc7 18.Rd8+ mate) 18.Rc1!! and
+mate next move. } 14. Bxd7+ { The simplest. White forces an
+endgame with a pawn plus. Stronger was 14.Rxd1 Rd8 15.Nxd7
+Rxd7 (or 15...e6 16.Ne5+ Ke7 17.Nc6+, etc.) 16.Bxd7+ Kd8
+17.Bb5+ Kc8 18.Ba6+ Kb8 19.Rc1!, followed by Be5, and wins. } 14... Qxd7 15. Nxd7 Bh5 16. Ne5 Rc8 17. g4 Bg6 18. Nxg6 hxg6 19. Bd4 a6 20. Kd2 f6 21. Rac1 Rxc1 22. Rxc1 e5 { Or 22...Rxh2 23.Rc8+ Kf7
+24.Ke2! e5 25.Bc5 Bxc5 26.Rxc5 followed by Ra5 winning the
+a-pawn. } 23. Bc5 Rxh2 24. Bxf8 Kxf8 25. Ke2 { ! } 25... e4 26. Rc6 Rg2 { If
+26...a5 27.b5 followed by Ra6. } 27. Rxa6 Rxg4 28. Ra7 Rg1 29. b5 Rb1 30. a4 g5 31. Rb7 Ra1 32. b6 Rxa4 33. Ra7 Rb4 34. b7 g4 35. Ra8+ Kf7 36. b8=Q Rxb8 37. Rxb8 Ke6 38. Re8+ Kf5 39. Kf1 { 1-0 Black resigns. } 1-0
+
+
+[Event "Vilnius"]
+[Site "Vilna (Vilnius) RUE"]
+[Date "1909.??.??"]
+[White "Akiba Rubinstein"]
+[Black "Fyodor Ivanovich Dus Chotimirsky"]
+[Result "1-0"]
+[Variant "Standard"]
+[ECO "D02"]
+[Opening "Queen's Pawn Game: Zukertort Variation"]
+[StudyName "Training Move Selection (Interactive)"]
+[ChapterName "Akiba Rubinstein - Fyodor Ivanovich Dus Chotimirsky"]
+[ChapterURL "https://lichess.org/study/jutEaR9r/y8YKAhOa"]
+[Annotator "https://lichess.org/@/DrHack"]
+
+1. d4 { [%eval 0.25] } 1... d5 { [%eval 0.15] } 2. Nf3 { [%eval 0.22] } 2... e6 { [%eval 0.2] } 3. c4 { [%eval 0.05] } 3... c6 { [%eval 0.3] } 4. e3 { [%eval 0.18] } 4... Nd7 { [%eval 0.14] } 5. Nc3 { [%eval 0.23] } 5... Bd6 { [%eval 0.61] } 6. e4 { [%eval 0.73] } 6... dxe4 { [%eval 0.88] } 7. Nxe4 { [%eval 0.86] } 7... Bc7 { [%eval 0.97] } 8. Bd3 { [%eval 1.04] } 8... h6 { [%eval 1.0] } 9. O-O { [%eval 1.13] } 9... Ngf6 { [%eval 1.06] } 10. Qe2 { [%eval 1.08] } 10... Nxe4 { [%eval 1.27] } 11. Qxe4 { [%eval 0.93] } 11... c5 { [%eval 1.22] } 12. Be3 { [%eval 0.0] } 12... Nf6 { [%eval 0.06] } 13. Qh4 { [%eval -0.01] } 13... cxd4? { [%eval 1.19] } 14. Bxd4 { [%eval 1.24] } 14... Bd7 { [%eval 1.39] } 15. Rad1 { [%eval 1.37] } 15... Qe7 { [%eval 1.61] } 16. Be5? { [%eval 0.25] } 16... Bc6 { [%eval 0.25] } 17. Be4 { [%eval 0.21] } 17... Nxe4 { [%eval 0.11] } 18. Qxe7+ { [%eval 0.16] } 18... Kxe7 { [%eval 0.11] } 19. Bxc7 { [%eval 0.2] } 19... Rac8 { [%eval 0.28] } 20. Ba5 { [%eval 0.35] } 20... f6 { [%eval 0.68] } 21. Nd4 { [%eval 0.68] } 21... Bd7 { [%eval 2.57] } 22. f3? { [%eval 0.14] } 22... Ng5? { [%eval 1.18] } 23. h4 { [%eval 1.13] } 23... Nf7 { [%eval 1.23] } 24. b3 { [%eval 0.97] } 24... e5 { [%eval 1.03] } 25. Bb4+ { [%eval 1.04] } 25... Ke8 { [%eval 1.12] } 26. Ne2 { [%eval 0.78] } 26... Nd8 { [%eval 1.16] } 27. Rd6?! { [%eval 0.58] } 27... Nf7 { [%eval 0.73] } 28. Rd2 { [%eval 0.68] } 28... Bc6 { [%eval 1.17] } 29. Rfd1 { [%eval 0.98] } 29... Rd8 { [%eval 0.88] } 30. Ng3 { [%eval 0.93] } 30... Rxd2 { [%eval 1.07] } 31. Rxd2 { [%eval 1.15] } 31... Nd8 { [%eval 1.63] } 32. Nf5 { [%eval 1.56] } 32... Kf7 { [%eval 1.5] } 33. Ne7?! { [%eval 1.0] } 33... Ke8? { [%eval 2.44] } 34. Nc8 { [%eval 2.47] } 34... Kf7 { [%eval 2.43] } 35. Nxa7 { [%eval 2.25] } 35... Kg6 { [%eval 2.58] } 36. Kf2 { [%eval 2.15] } 36... Re8 { [%eval 3.18] } 37. Bc5 { [%eval 3.1] } 37... e4? { [%eval 4.11] } 38. Bb6 { [%eval 4.25] } 38... Nf7 { [%eval 4.17] } 39. Nxc6 { [%eval 3.98] } 39... bxc6 { [%eval 3.86] } 40. a4 { [%eval 3.49] } 40... Ne5 { [%eval 5.16] } 41. fxe4 { [%eval 4.74] } 41... Kh5? { [%eval 6.6] } 42. a5 { [%eval 5.92] } 42... Ng4+? { [%eval 7.62] } 43. Kg3 { [%eval 6.98] } 43... f5? { [%eval 8.77] } 44. exf5 { [%eval 8.57] } { 1-0 Black resigns. } 1-0
+
+
+[Event "Karlsbad"]
+[Site "Karlsbad (Karlovy Vary) AUH"]
+[Date "1911.09.21"]
+[Round "23"]
+[White "Akiba Rubinstein"]
+[Black "Alexander Alekhine"]
+[Result "1-0"]
+[Variant "Standard"]
+[ECO "D15"]
+[Opening "Slav Defense: Süchting Variation"]
+[StudyName "Training Move Selection (Interactive)"]
+[ChapterName "Akiba Rubinstein - Alexander Alekhine"]
+[ChapterURL "https://lichess.org/study/jutEaR9r/cjQYTrIt"]
+[Annotator "https://lichess.org/@/DrHack"]
+
+1. d4 d5 2. Nf3 Nf6 3. c4 c6 4. Nc3 Qb6 5. Qc2 Bg4 6. Bg5 Nbd7 7. e3 Ne4 8. Bf4 e6 9. Bd3 Qa5 10. O-O Nxc3 11. bxc3 Bxf3 12. gxf3 dxc4 13. Bxc4 Nb6 14. Qb3 Rd8 15. Be2 Bd6 16. Bg3 Bxg3 17. hxg3 O-O 18. f4 c5 19. Bf3 Rd7 20. a4 Nd5 21. Rfc1 g6 22. Qb5 Qxb5 23. axb5 cxd4 24. cxd4 b6 25. Rc4 f5 26. Rc6 Kf7 27. Bxd5 exd5 28. Rac1 Rfd8 29. Kf1 Ke7 30. Ke2 Rd6 31. R6c3 R6d7 32. Kd3 Ra8 33. Rc6 Rd6 34. Ke2 Rxc6 35. Rxc6 Kd7 36. f3 Re8 37. Kd3 Re7 38. g4 Re6 39. Rc1 Re7 40. Rh1 Ke6 41. Rc1 Kd7 42. Re1 Rf7 43. Ra1 Kd6 44. Rc1 Kd7 45. Rc6 Rf8 46. Ke2 Rf7 47. Kf2 Rf8 48. Kg3 Re8 49. Rc3 Re7 50. Kh4 h6 51. Kg3 h5 52. Kh4 Rh7 53. Kg5 fxg4 54. fxg4 hxg4 55. Kxg4 Rh1 56. Kg5 Rb1 57. Ra3 Rxb5 58. Rxa7+ Kd6 59. Kxg6 Rb3 60. f5 Rxe3 61. f6 Rg3+ 62. Kh7 Rf3 63. f7 Rf4 64. Kg7 Rg4+ 65. Kf6 Rf4+ 66. Kg5 Rf1 67. Kg6 Rg1+ 68. Kf6 Rf1+ 69. Kg7 Rg1+ 70. Kf8 Rd1 71. Ke8 Re1+ 72. Kd8 Rf1 73. Rd7+ Kc6 74. Ke8 Rf4 75. Re7 Kb5 76. Rc7 { 1-0 Black resigns. } 1-0
+
+

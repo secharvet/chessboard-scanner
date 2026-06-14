@@ -1,0 +1,164 @@
+[Event "Squelch the Smith-Morra Gambit: Intro & Early Deviations"]
+[Date "2020.03.30"]
+[White "Smith Morra Gambit - 6...a6!?"]
+[Black "Early Deviations"]
+[Result "*"]
+[Annotator "TonyRo"]
+[Variant "Standard"]
+[ECO "B21"]
+[Opening "Sicilian Defense: Smith-Morra Gambit Accepted, Classical Formation"]
+[StudyName "Squelch the Smith-Morra Gambit"]
+[ChapterName "Intro & Early Deviations"]
+[ChapterURL "https://lichess.org/study/FJYg9OJ1/u1EM2FT0"]
+
+1. e4 c5 2. d4 cxd4 3. c3 { The Smith-Morra - a gambit that has been popular
+with club players for ages as a way to sidestep mainline Open Sicilian theory
+while still getting reasonable attacking positions. } { [%cal Gd4c3] } 3... dxc3 (3... Nf6 4. e5 Nd5 { is a transposition I recommended in my 2014 book "The Killer Sicilian". If you
+already play 2...Nf6 against the Alapin, this is a very simple and minimalist
+way to meet the Smith-Morra. }) 4. Nxc3 Nc6 5. Nf3 d6 6. Bc4 a6!? { The
+so-called Taylor Defense - named after Tim Taylor, who recommended this system
+in a book he wrote in the 90's. Since then, it has also been recommended by
+Gallagher and Palliser in their respective works as well. This system could
+still use some updating in my opinion, and so here we are. Black's main idea
+with ...a6 is to prepare ...Nf6 safely. Furthermore, contrary to a lot of
+systems against the Morra, Black is very deliberately delaying the move ...e6
+(it is very useful indeed - shutting out the Bc4, preparing kingside
+development) for a move to ensure that ...Bg4 is still possible. This
+development of the light-square bishop outside of the chain is one of the key
+features of this system, and one of the main reasons it's so strong against
+those players that want to use the Morra as a "system". If White intends to
+simply play Bc4, Qe2, Rfd1, etc, against everything, then ...Bg4 can many
+times completely shut down the e5-break and also cost White a tempo, as Qe2xf3
+is inefficient compared to simply taking on f3 in one move. } (6... Nf6?! { right away is probably not great on account of } 7. e5! dxe5 (7... Ng4 8. exd6 exd6 9. O-O $44 { is probably better but still risky for Black. }) 8. Qxd8+ Nxd8 9. Nb5 $40 { when, we can certainly see the benefit of flicking in ...a6 first! }) 7. O-O (7. Bg5!? { was recommended by Langrock in the first edition of his
+Morra book, but not in the second! After } 7... Nf6! (7... Bg4? 8. Qb3! { is probably already stone cold lost for Black - one thing to keep in mind is
+that when White doesn't rush to play Qe2, they can always play Qb3 instead! }) 8. Bxf6 gxf6 { we get something like a Classical Rauzer. It's interesting:
+White would generally like to work up pressure with Qh5, as with the g-pawn
+missing that makes it very hard for Black to castle to either side (the
+pressure on f7 or h7, etc). But in the Morra version, White has to find a home
+for the knight, which costs time. Additionally without the knight on d4, Black
+can always meet Qh5 with ...Qa5!, threatening the trade via a very cute
+horizontal geometry. In the similar Classical Sicilian positions, White
+generally play Qh5 quicker, and also stop ...Qa5 resources by taking on c6
+first. In the Morra positions, this is not possible. } 9. O-O (9. Nh4 { is most
+the most popular, but if Qh5 is not possible after this move, then this is
+probably not the best square for the knight at all. } 9... e6 10. O-O (10. Qh5 Qa5! { is a very annoying resource for Black. }) 10... Be7! (10... h5!? $146 { is similar to the main line, but you have to feel like h4 is a worse square
+for the steed than d4. }) 11. Qh5 Qa5! 12. Nf5!? { of S.Christiani - U.
+Kersten, Dresden 2003 is cute and looks dangerous, but after the precise } 12... Rf8! $146 13. Ng7+ Kd8 14. Qxh7 Bd7 { White is in big trouble here - Black will
+generally go ...Kc7 and then bring the rooks to the open files on the kingside.
+White's pieces are totally uncoordinated and Black is happy to give the pawn
+back for the active play on the kingside. }) 9... e6 10. Nd4 { Here, White is
+ready to go Nxc6 and Qh5, which would be annoying as ...Qa5 would not be
+possible. As such, we can stop White's plans with } 10... h5! { Black is ready to
+finish development now with ...Be7, ...Bd7, ...Qb6, etc. } 11. Kh1 Qb6 12. Nb3 Bd7 13. f4 O-O-O $17 { F.Haas - H.Schwing, German Leagues 1998. This looks like
+a Rauzer but Black still has an extra pawn. }) (7. e5?! { I first came across
+this move when ICC was still the hot place to play on the internet. Alex
+Lenderman, a master of the Morra in his own right, absolutely rocked me with
+it during a simultaneous exhibition. I accepted the offer on e5, which is
+definitely not to be recommended! } { [%cal Ge7e6,Gc6e5] } 7... e6! { is much better, when I think it's
+possible that White has chosen to break too early, e.g. } (7... dxe5? 8. Qxd8+ Nxd8 (8... Kxd8 9. Ng5 Nh6 10. Bxf7 $14) 9. Nd5 { [%cal Gd5c7] } 9... Ne6 10. Nb6 { [%cal Gb6c8,Gb6a8] } 10... Rb8 11. Nxe5 Nf6 12. Nxf7! Kxf7 13. Bf4 $18 { is the main trick here! } { [%csl Rb8][%cal Rf4b8] }) (7... Nxe5 8. Nxe5 dxe5 9. Bxf7+) 8. exd6 (8. Bg5 Qc7 9. exd6 Bxd6 10. O-O h6 11. Bh4 Nge7 12. Ne4 Nf5 $17) (8. Bf4 dxe5 9. Qxd8+ Nxd8 10. Nxe5 f6 11. Nf3 Bd7! 12. O-O e5 $17) (8. O-O dxe5 9. Qxd8+ Kxd8 $17) 8... Bxd6 9. O-O Nf6 10. Qe2 O-O 11. Rd1 Qc7 $15) 7... Nf6 { and now we reach the main tabiya, after which
+White has many tries. See the next two chapters. } *
+
+
+[Event "Squelch the Smith-Morra Gambit: 8.Qe2 and Others"]
+[Date "2020.03.30"]
+[White "Smith Morra Gambit - 6...a6!?"]
+[Black "8.Qe2 & Others"]
+[Result "*"]
+[Annotator "TonyRo"]
+[Variant "Standard"]
+[ECO "B21"]
+[Opening "Sicilian Defense: Smith-Morra Gambit Accepted, Classical Formation"]
+[StudyName "Squelch the Smith-Morra Gambit"]
+[ChapterName "8.Qe2 and Others"]
+[ChapterURL "https://lichess.org/study/FJYg9OJ1/cHy9vO8o"]
+
+1. e4 c5 2. d4 cxd4 3. c3 dxc3 4. Nxc3 Nc6 5. Nf3 d6 6. Bc4 a6!? 7. O-O Nf6 8. Qe2? (8. h3 { White spends a move to stop ...Bg4. Black's best here is to
+just head to Scheveningen like positions up a pawn where, arguing that h3 is
+basically a waste of a move. } 8... e6 9. Qe2 Be7 10. Rd1 { [%cal Gb7b5] } 10... Qc7 (10... Bd7 { has
+typically been my choice here, but I am not so sure anymore, since } 11. Bf4 b5 12. Bb3 Qb8 13. e5 Nxe5 14. Nxe5 dxe5 15. Bxe5 Qb7 16. Bxf6 Bxf6 { is mostly
+forced, and now } { [%cal Gc3d5,Gf6d8] } 17. Ne4 Be7 18. Qd2! { gives White reasonable compensation
+here, since Black cannot castle yet. Even worse, } 18... Bc6 { is natural but probably
+lost after } 19. Nd6+ Bxd6 20. Qxd6 { , when Rac1-c7 is a big problem. }) (10... b5!? 11. Bb3 Qb6!? { is also interesting, hoping to provoke the suboptimal } 12. Be3 { before going } 12... Qb8 { The Be3 actually mostly just gets in the way. }) 11. Bf4 Ne5 { Black has to plug up the e5-square to avoid the e5-break while very
+much behind in development. } { [%csl Gc4][%cal Gc7c4] } 12. Bb3 O-O (12... b5 13. Rac1 Qb8 14. Nd4 O-O { is also a fine way to reach the main tabiya }) 13. Rac1 { [%cal Rc1c7] } 13... Qb8! { Again b8 is the
+best square for the queen in this variation. } { [%cal Gf3d4,Gf4g3,Gf2f4] } 14. Nd4 { White centralizes the
+knight and starts the somewhat slow process of removing all of the pieces from
+the f-file in order to push f4. } (14. g4!? { was tried by Jobava instead in B.
+Jobava - F.Rakotomaharo, internet blitz 2021, but after the natural } 14... b5 15. g5 Nfd7 16. Nd4 Bb7 17. Bg3 Nc5 18. Bc2 { the famous Georgian attacking wizard
+would have been worse after either } 18... Bxg5 19. f4 Bh6 20. fxe5 dxe5 21. Nf3 Bxc1 22. Rxc1 f6 { or the more simple 18...b4. }) 14... Bd7 (14... b5 { is also
+reasonable, e.g. } 15. Bg3 Bb7 16. f4 Nc6 { and now in T.Horvath - V.Sramek,
+Czech Republic 2021 White tried to mix things up with } 17. Nd5!? { but should
+still be worse after } 17... exd5 18. Nxc6 Bxc6 19. Rxc6 dxe4 20. Bh4 { after the very
+accurate } 20... Qe8! 21. Bxf6 Bxf6 22. Rcxd6 Rd8 23. Rxd8 Bxd8 $15) 15. Bg3 Nc6 16. Nxc6 (16. Nf3 b5 17. e5 dxe5 18. Nxe5 Nxe5 19. Bxe5 Qb7 $17 { reaches a
+position similar to that demonstrated after 10...Bd7, except that ...O-O and
+Rac1 are inserted, which must favor Black, who desperately needs a safer king. }) 16... Bxc6 17. e5 dxe5 18. Bxe5 Qe8 { [%cal Ga8d8] } 19. Rd3 Rd8 20. Rg3 g6 21. Qe3 Nd7 22. Bd4 e5! 23. Bxe5 Nxe5 24. Qxe5 Bd6 25. Qxe8 Rfxe8 26. Rg4 Be5 $17 { Black was
+much better in T.Lochte - S.Mooser, German Leagues 2003 } { [%csl Ge5,Gc6][%cal Bd8d2] }) (8. e5? { now just
+does not work at all now that b5 and d5 are both covered from knight hops. You
+just need to remember to not take on e5 with the knight and you're set. } 8... dxe5 9. Qxd8+ Nxd8 10. Nxe5 Be6 11. Be2 (11. Rd1) 11... g6 $15 { M.Clancy - R.Haria, British
+Championships 2014. I don't think that White has enough compensation for the
+pawn here. It's hard to prevent Black from playing ...Bg7 and castling, after
+which the second player can usually find ways to trade off some pieces. }) (8. Bf4! { is probably the best move, and is covered in the next file. }) (8. b4!? e6 9. b5 axb5 10. Nxb5 Be7 11. Bf4 Nxe4 12. Re1 O-O! 13. Rxe4 d5 $15) 8... Bg4! 9. Rd1 { [%cal Re4e5] } 9... e6 10. Bf4? { This move, preparing e5 and increasing the pressure
+on d6, is the most popular here by far but probably also just straight up
+losing. It's not easy to prove however, and the complications and attacking
+ideas are actually pretty amazing. } { [%cal Gf6h5,Gd8b8] } (10. h3 { is possibly a better option, but
+Black is still better after } 10... Bxf3 11. Qxf3 (11. gxf3) 11... Be7 12. Bf4 { and now the key move } 12... Qb8! { Boom! All at once, Black removes the queen from the d-file
+(eliminating the Rd1 pin) and adds another attacker to the e5-square. Now ...
+Ne5 is possible to counteract the pressure on d6, and Black is free to finish
+development. A few examples from practice to round out the coverage: } 13. g4 (13. Rd2 { is perhaps the most straightforward, but not impressive, e.g. } 13... O-O 14. Rad1 Ne5 15. Qe2 (15. Bxe5? dxe5 16. g4 Qc7 17. Bb3 Rad8 $19 { J.Mantau - M.
+Haag, German Leagues 2010 }) 15... b5 16. Bb3 { [%cal Gb8b7] } 16... Rc8 17. Bh2 { V.Mikhailovsky - R.
+Schrik, internet blitz 2020 and now many moves are good, for instance } 17... Qb7 (17... Qb6 $146 18. Kh1 g5!? $17 { is more wild but shows what's possible -
+Black stops f4 for good, and because of the Nf6/Ne5 constellation, it's
+actually remarkably difficult for White to assault the g-pawn. }) 18. a3 Rc7 $17 { [%cal Ga8c8] }) (13. Qd3 { [%csl Rd6] } 13... Ne5 14. Qe2 O-O 15. Bb3 b5 16. Rac1 Qb7 $17 { V.Kameswara Rao - M.
+Erdogdu, Al Ain 2013 }) 13... O-O 14. g5 Nd7 15. Qg3 Nde5 16. Bb3 b5 17. h4 { L.Langner - M.Erdogdu, internet blitz 2020 } 17... Qb7! $17 { [%cal Gc6a5,Ba5c4,Ba5b3,Ga8c8] }) 10... Nh5! { White
+can no longer stop ...Ne5, which is a real problem. } { [%csl Gf3] } (10... Qb8!? { is very
+much thematic and also strong here for those that want to avoid the
+complications after 10...Nh5. } 11. h3 Bxf3 12. Qxf3 Be7 $17 { [%csl Ge5][%cal Ge8g8,Gc6e5,Gb7b5] }) 11. Be3 (11. Bg3 Nxg3 12. hxg3 h5! $40) 11... Ne5 { White can't stop the fracturing of his kingside pawn structure. } { [%csl Gf3][%cal Gg2f3,Gc4b3] } 12. Bb3 (12. Qf1 { is the first choice of engines, but it's not a very human choice, as } 12... Nxf3+ 13. gxf3 Bxf3 { is easy to find and terrible for White. Black is up two
+pawns AND has the compensation! }) 12... Bxf3 (12... Be7!? { is a little more
+simple in a way - Black just plans to dominate on the dark squares, for
+instance after ...Bxf3 and ...Bg5. Black can settle either piece into f4 and
+the queen somewhere on the kingside with complete domination. } 13. Ba4+ Kf8 (13... b5? 14. Nxb5 axb5 15. Qxb5+ Nd7 16. Bb6 $18) 14. Kh1 Bxf3 15. gxf3 g5 $19 { [%csl Gf4][%cal Ge5g6,Ye7f6,Gh5f4,Gg6f4,Yf6e5,Rh7h6,Rh6h5,Rh5h4] }) 13. gxf3 Qh4 { The threat of ...Qh3 is grave. } { [%cal Gh4h3,Ge5f3] } 14. Kh1 { This is perhaps
+the most sensible human defense, planning to defend h2 via Rg1-g2. } (14. Ba4+ { looks enticing, because Black's king is not safe either, but if Black decides
+to dive in deep and grab the a8-rook, his own king perishes, for instance } 14... b5 15. Nxb5 axb5 16. Qxb5+ (16. Bxb5+ Ke7 17. Kh1) 16... Ke7 17. Qb7+ Kf6 18. Qxa8 Qh3 19. Kh1 Nxf3 20. Bd4+ e5 21. Bxe5+ dxe5 22. Qd8+ Be7 23. Rd6+ Kg5 24. Qxe7+ f6 25. Rg1+ Kh6 26. Rg2 Nh4! $19 27. Rg4 Qf1+ 28. Rg1 Ng3+ 29. fxg3 (29. hxg3 Qh3#) 29... Qf3+ 30. Rg2 Qxg2#) (14. Nb5 axb5 (14... Rd8 15. Nd4 Be7 $19) 15. Qxb5+ Ke7 16. Qxb7+ Kf6 17. Qxa8 Qh3 18. Kh1 Qxf3+ 19. Kg1 Qh3 20. Kh1 Be7!! 21. Qxh8 Ng4 22. Kg1 Nxe3 23. fxe3 Qxe3+ 24. Kf1 Nf4 25. Bc4 Nh3 26. Kg2 Qf2+ 27. Kxh3 Qf3+ 28. Kh4 Kg6#) 14... Qh3 15. Rg1 g5!! { Brilliant - Black ensures that the g-file opens,
+which makes White's planned defense of h2 impossible, as an eventual ...Rg8
+breaks everything open. } (15... Nxf3? 16. Rg2 $13) 16. Rxg5 (16. Bxg5 h6 17. Be3 Nxf3 18. Rg2 Rg8 19. Qf1 Rg4! $19) 16... Nxf3 { [%csl Gg5,Gh2] } 17. Rg2 (17. Rxh5 Qxh5 18. Bf4 $19) 17... Rg8 18. Qf1 Rg4! $19 { Beautiful! White is completely tied down, and has no way to stop ...Rh4 and ..
+.Qxh2, with mate to follow. } { [%cal Gg4h4,Gh3h2] } *
+
+
+[Event "Squelch the Smith-Morra Gambit: The Critical 8.Bf4!"]
+[Date "2020.03.30"]
+[White "Smith Morra Gambit - 6...a6!?"]
+[Black "8.Bf4!"]
+[Result "*"]
+[Annotator "TonyRo"]
+[Variant "Standard"]
+[ECO "B21"]
+[Opening "Sicilian Defense: Smith-Morra Gambit Accepted, Classical Formation"]
+[StudyName "Squelch the Smith-Morra Gambit"]
+[ChapterName "The Critical 8.Bf4!"]
+[ChapterURL "https://lichess.org/study/FJYg9OJ1/GxeLbZCa"]
+
+1. e4 c5 2. d4 cxd4 3. c3 dxc3 4. Nxc3 Nc6 5. Nf3 d6 6. Bc4 a6!? 7. O-O Nf6 8. Bf4! { This move, recommended by both Esserman and Langrock in their
+respective books, is likely best. White hopes to reach a tempo up version of
+the 8.Qe2 lines by allowing ...Bg4 and recapturing on f3 without having spent
+a move on the e2 pitstop. } 8... e6!? { This move, forgoing ...Bg4 entirely, seems
+prudent now. It's relatively easy to play and understand, and is less risky
+than 8...Bg4, though admittedly both are of equivalent value. } (8... Bg4 { is also possible, but I have found out first hand that these positions can be
+a bit trickier, e.g. } 9. h3 Bxf3 10. Qxf3 e6 11. Rfd1 Qb8 (11... Qa5!? { is the way if you must play 8...Bg4, as } 12. Be2 (12. Bxd6?? Bxd6 13. Rxd6 Ne5 14. Qe2 Qc5 $19) 12... Be7 13. Bxd6 (13. Qg3 { this is Langrock's suggestion,
+but I am not sure it's all that great for White after } 13... O-O 14. a3 (14. Rxd6 e5 (14... Bxd6 15. Bxd6 Rfc8 16. e5 Ne8)) 14... Ne5! 15. b4 Qc7 16. Rac1 Qb8 { when Black has avoiding major problems with their kingside
+and can continue with ...Rc8 next. }) (13. Rxd6 e5 14. Rxf6 Nd4 15. Qd3 Bxf6 { [%csl Gd4] }) 13... Bxd6 14. Rxd6 O-O 15. Rad1 Rfd8) 12. Be2! { This is a key detail here - White removes the bishop from the
+vulnerable c4-square and plays Qg3 without allowing ...Nh5. This is
+practically very annoying, and it gets even trickier after } 12... Be7 13. Qg3 O-O 14. Rxd6!? { , since } 14... Bxd6 15. Bxd6 Qa7 16. e5 Nd7 17. Rd1 $40 { of P.Scott - A.
+Waller, Correspondence 2018, gives White tremendous play for the exchange. }) 9. Qe2 Nh5! { Unmentioned by Langrock (and also Esserman, but frankly his book
+is tough to navigate on my phone and so perhaps I missed his coverage!), Black
+tickles the bishop off of the critical h2-b8 diagonal. } (9... Be7 10. Rfd1 Qc7 11. Rac1 O-O 12. Bb3 Qb8 { and now both 13.Na4 or 13.e5 are moderately annoying
+though not necessarily bad for Black. }) 10. Be3 Be7 11. Rfd1 Bd7 { and now
+White has a wide variety of options: } 12. Nd4 { [%csl Gh5,Gd4] } (12. Rac1 { White has scored 0/5
+from this position in my database. That is probably extreme, but Black should
+generally be a little better here, e.g. } 12... O-O 13. Bb3 Nf6 14. Bf4 e5 15. Bg5 { [%csl Gd5] } 15... Be6 (15... Bg4! { is also natural and very good. Perhaps White even has to pop
+back with 16.Be3 here, and for that reason I might prefer that to Mirzoev's
+move. } { [%cal Gc6d4,Gg5e3] }) 16. h3 Rc8 17. Rc2 h6 18. Bxf6 Bxf6 19. Nd5 Bg5 { was R.Dongre - A.
+Mirzoev, Kolkata 2000. This position very much looks like a Kalashnikov
+Sicilian, but White is down a pawn for a small amount of positional control. I
+tend to think that maybe Black is a tiny bit better here, but it's not much. } { [%cal Gc6a5] }) (12. e5? dxe5 13. Na4 { looks dangerous, but doesn't quite work after } 13... Nf4! 14. Qd2 Nd5! { when Black chucks one of his two pawns back in order to grab a
+bishop and quench White's initiative somewhat, for example } { [%cal Ra4b6,Gd5b6,Gd5e3] } 15. Bxd5 exd5 16. Qxd5 (16. Nb6? d4 { is also better for Black }) 16... Be6 17. Qe4 Qa5! { getting ready to castle and planning to meet Bb6 with either ...Qb5 or ...Qb4. } { [%cal Ga5b5,Ga5b4,Re3b6] }) 12... g6! (12... Nf6 13. Nxc6 bxc6 (13... Bxc6? 14. e5 $18) 14. Bxa6 { is not really what Black wants. }) 13. Nxc6 Bxc6 14. Bh6 (14. e5 Qc7 15. exd6 Bxd6) 14... Bg5 15. Bxg5 Qxg5 16. Rxd6 Ke7 17. Rad1 Rhd8 18. Rxd8 (18. Qd2 Qxd2 19. R6xd2 Rxd2 20. Rxd2 Rc8) 18... Rxd8 19. Rxd8 Kxd8 { S.Ottesen - J.Hansen, Correspondence 2021 } *
+
+

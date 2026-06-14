@@ -1,0 +1,32 @@
+[Event "Q&A: Alehine"]
+[Date "2018.08.07"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B05"]
+[Opening "Alekhine Defense: Modern Variation, Main Line"]
+[StudyName "Q&A"]
+[ChapterName "Alehine"]
+[ChapterURL "https://lichess.org/study/SvLhS4Rf/2ec5bzyp"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2018.08.07"]
+[UTCTime "05:08:31"]
+
+1. e4 Nf6 2. e5 (2. Nc3 d5 3. e5 (3. exd5 Nxd5 4. Bc4 c6 5. Qf3) 3... d4 4. exf6 dxc3 5. d4 cxb2 6. fxg7 bxa1=Q 7. gxh8=Q Qxa2 (7... Qc3+ 8. Qd2 Qc6 9. Qh6 Qe4+ 10. Be3 Kd7 11. Q8xf8 Qxf8 12. Qxf8) 8. Qxh7 { [%csl Gh8,Ga1][%cal Gh2h8,Ga7a1] }) 2... Nd5 3. d4 d6 4. Nf3 Bg4 5. Be2 Nc6 6. exd6 exd6 7. c4 Nb6 8. b3 Be7 9. O-O O-O 10. Bb2 Bf6 11. Nbd2 Re8 12. h3 Bh5 13. Re1 *
+
+
+[Event "10th Leiden Chess Tournament - Group A"]
+[Date "2016.07.22"]
+[White "Van Wely, Loek"]
+[Black "Rosen, Eric S"]
+[Result "1-0"]
+[Variant "Standard"]
+[ECO "E15"]
+[Opening "Queen's Indian Defense: Fianchetto Variation"]
+[StudyName "Q&A"]
+[ChapterName "Van Wely, Loek - Rosen, Eric S"]
+[ChapterURL "https://lichess.org/study/SvLhS4Rf/6bNJkgFx"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 Nf6 2. c4 e6 3. Nf3 b6 4. g3 Bb4+ 5. Bd2 c5 6. Bxb4 cxb4 7. Bg2 Bb7 8. O-O O-O 9. Qd3 d6 10. Nbd2 Re8 11. Rfd1 Qc7 12. Rac1 a5 13. Nh4 Bxg2 14. Nxg2 Nbd7 15. e4 e5 { [%csl Gc5] } 16. Ne3 exd4 17. Qxd4 Nc5 18. f3 Ne6 19. Qd3 Nc5 20. Qd4 Ne6 21. Qd3 Nc5 22. Qe2 Re5 23. Nf5 Rae8 { [%csl Gf5] } 24. Nd4 Nfd7 25. Nf1 Nb7 26. Ne3 g6 27. Nd5 Qc5 { [%csl Gd5] } 28. Qf2 Kg7 29. b3 Nd8 30. Rc2 h5 31. h4 f6 32. Rcd2 Nf7 33. Kg2 Rd8 34. Nf4 { [%cal Gf4e6,Gf4d3] } 34... Nf8 35. Nd3 Qc8 36. Nxe5 dxe5 37. Nb5 Rxd2 38. Qxd2 g5 39. Qd5 Qe8 40. hxg5 { 1-0 Black resigns. } 1-0
+
+

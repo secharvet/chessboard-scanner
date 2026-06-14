@@ -1,0 +1,16 @@
+[Event "EricRosen's Study: Chapter 1"]
+[Date "2022.01.18"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C42"]
+[Opening "Petrov's Defense: Stafford Gambit"]
+[StudyName "EricRosen's Study"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/dfxBVKkL/pZoTnsXK"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2022.01.18"]
+[UTCTime "19:33:39"]
+
+1. e4 e5 2. Nf3 Nf6 3. Nxe5 Nc6 4. Nf3? { [%csl Rf3][%cal Ge5f3] } *
+
+

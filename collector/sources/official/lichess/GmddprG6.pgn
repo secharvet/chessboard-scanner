@@ -1,0 +1,216 @@
+[Event "Singapore Openings MasterClass: Rare and Beautiful Caro Kann Trap - Black to move after 8.Be5"]
+[Date "2024.12.03"]
+[White "Trap 3: Caro Kann CRUSH"]
+[Black "Beautiful Combination"]
+[Result "*"]
+[Annotator "ericr"]
+[Variant "Standard"]
+[ECO "B15"]
+[Opening "Caro-Kann Defense: Main Line"]
+[StudyName "Singapore Openings MasterClass"]
+[ChapterName "Rare and Beautiful Caro Kann Trap - Black to move after 8.Be5"]
+[ChapterURL "https://lichess.org/study/GmddprG6/0Zh3Z88s"]
+
+{ [%evp 0,15,31,40,73,69,61,49,36,46,41,-5,25,-11,-29,-52,-29,-29] }
+1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Nf6 { [%csl Gf6][%cal Ge4f6] } 5. Ng3?! { [%csl Gg3] } 5... h5! { [%csl Gg3,Gh4][%cal Gh5h4] } 6. Bg5 h4 { [%csl Gg3] } 7. Bxf6 hxg3 8. Be5 { Black to move and find the winning tactical sequence! } 8... Rxh2 9. Rxh2 { [%csl Ge5] } 9... Qa5+ (9... gxh2 10. Bxh2) 10. c3 Qxe5+!! 11. dxe5 gxh2 { The pawn is now guaranteed to promote and black will be up material. } { [%csl Gg1,Gh1][%cal Gh2g1,Gh2h1] } 12. Nf3 h1=Q *
+
+
+[Event "50 London Tactics: London Tactic 1 - Whi"]
+[Site "lichess.org"]
+[Date "2018.06.09"]
+[White "Trap 1: Sweet London Tactic"]
+[Black "White to move after 7...Bxc5"]
+[Result "*"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[Variant "Standard"]
+[ECO "D00"]
+[Opening "Queen's Pawn Game: Accelerated London System"]
+[StudyName "Singapore Openings MasterClass"]
+[ChapterName "Unexpected London Trap - White to move after 7...Bxc5"]
+[ChapterURL "https://lichess.org/study/GmddprG6/eZ9372uX"]
+
+{ [%evp 0,14,27,26,26,13,24,31,44,25,25,23,32,-2,-2,3,53] }
+1. d4 d5 2. Bf4 Nf6 3. e3 c5 4. c3 Nc6 5. Nd2 { [%csl Gf3,Gd3,Gg1][%cal Gg1f3,Gf1d3,Ge1g1] } 5... g6 6. dxc5 e5 7. Bg5 Bxc5? { White to move and find the stunning tactical shot! } 8. Ne4!! { beautifully exploiting the weak points and black's position and winning material by force } 8... dxe4 (8... Be7 9. Bxf6 Bxf6 10. Qxd5! $16 { The most precise and elegant way to win the pawn }) 9. Qxd8+ Nxd8 10. Bxf6 O-O 11. Bxe5 *
+
+
+[Event "Singapore Openings MasterClass: Brooklyn Variation - Incredible Idea"]
+[Date "2024.12.03"]
+[White "Trap 2: Brooklyn Variation"]
+[Black "Incredible Idea"]
+[Result "*"]
+[Annotator "ericr"]
+[Variant "Standard"]
+[ECO "B02"]
+[Opening "Alekhine Defense: Brooklyn Variation"]
+[StudyName "Singapore Openings MasterClass"]
+[ChapterName "Brooklyn Variation - Incredible Idea"]
+[ChapterURL "https://lichess.org/study/GmddprG6/RwSrLY6W"]
+
+{ [%evp 0,18,24,48,61,67,107,85,84,88,144,49,61,71,82,65,83,-13,-11,0,-5] }
+1. e4 Nf6 2. e5 Ng8 { The Brooklyn Variation } (2... Nd5 { Mainline Alekhine }) 3. d4 d6 { [%csl Gd1][%cal Gd6e5,Gd8d1] } 4. Nf3 Bg4 5. Be2 (5. h3 { the best move for white }) 5... dxe5 6. Nxe5 Bxe2 7. Qxe2 Qxd4 8. Qb5+? { This looks very natural, but white is about to walk into black's trap... } 8... Nd7 9. Nxd7 { black to move } 9... O-O-O!! { Surprise! Black defends b7 and will capture the knight next move } 10. O-O (10. Nxf8 Qd1#) 10... Rxd7 $17 *
+
+
+[Event "Singapore Openings MasterClass: CRUSHING the English Opening - oh oh oh!"]
+[Date "2023.04.28"]
+[White "Trap 5: English"]
+[Black "oh oh oh!"]
+[Result "*"]
+[Annotator "ericr"]
+[Variant "Standard"]
+[ECO "A21"]
+[Opening "English Opening: King's English Variation, Reversed Sicilian"]
+[StudyName "Singapore Openings MasterClass"]
+[ChapterName "CRUSHING the English Opening - oh oh oh!"]
+[ChapterURL "https://lichess.org/study/GmddprG6/p0bD7s4Q"]
+
+{ [%evp 0,17,25,-25,-33,-11,6,-3,-12,-12,-17,-5,-13,-8,4,-56,-44,-111,-111,-174] }
+1. c4 e5 2. Nc3 d6 3. d4 exd4 4. Qxd4 Nc6 5. Qd2 { [%csl Gb2][%cal Gb2b3,Gc1b2] } 5... Be6 { [%csl Gc4] } 6. b3 Nge7 7. g3?! (7. e4 { A better choice to clamp down in the center and prevent black from breaking with d5 } { [%cal Gg7g6,Gf8g7] }) 7... d5! { A timely central strike -- white is underdeveloped and is about to suffer the consequences... } 8. cxd5 Nxd5 9. a3 { Black to move: Can you calculate how the game can potentially end? } { [%csl Gb8] } 9... Nxc3 10. Qxc3 Qd5 11. Nf3 Qxb3 12. Qxb3 Bxb3 13. Rb1 Ba4 (13... Na5? 14. Bd2 $18) 14. Rxb7 O-O-O!! { Winning on the spot as black is threatening Kxb7 as well as Rd1# } *
+
+
+[Event "Singapore Openings MasterClass: King's Gambit: Bongcloud Tactic!"]
+[Date "2023.04.28"]
+[White "Trap 4: King's Gambit"]
+[Black "Bongcloud for the win!!"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C31"]
+[Opening "King's Gambit Declined: Falkbeer Countergambit, Charousek Gambit, Morphy Defense"]
+[StudyName "Singapore Openings MasterClass"]
+[ChapterName "King's Gambit: Bongcloud Tactic!"]
+[ChapterURL "https://lichess.org/study/GmddprG6/RzeqzJjz"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+{ [%evp 0,17,40,45,14,-25,17,-16,24,-3,49,40,50,-4,-4,-27,-8,-17,-3,-168] }
+1. e4 e5 2. f4 d5 3. exd5 e4 4. d3 Nf6 5. Nc3 Bb4 6. Bd2 e3 7. Bxe3 Nxd5 8. Bd2 Bxc3 9. Qe2+? { black to move and find the best way to get out of check } 9... Kd7!! { threatening Re8 - white has no effective way to win back material } 10. Qg4+ (10. Bxc3 Nxc3 $19) 10... Kc6 { [%csl Gg4][%cal Gc8g4] } 11. Qf3 Bxd2+ 12. Kxd2 Qf6 $19 { [%csl Gf4][%cal Gf6b2,Gf6f4] } *
+
+
+[Event "Singapore Openings MasterClass: Facing d4: QGD Exchange - Kassa Korley Variation"]
+[Date "2020.04.25"]
+[White "Facing d4: QGD Exchange"]
+[Black "Kassa Korley Variation"]
+[Result "*"]
+[Annotator "Eric"]
+[Variant "Standard"]
+[ECO "D35"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Positional Variation"]
+[StudyName "Singapore Openings MasterClass"]
+[ChapterName "Facing d4: QGD Exchange - Kassa Korley Variation"]
+[ChapterURL "https://lichess.org/study/GmddprG6/Ex5h4QWW"]
+
+{ [%evp 0,50,19,31,19,0,4,6,12,-11,-12,2,6,0,10,20,16,17,17,-5,-20,-1,19,11,10,15,11,23,11,9,39,13,17,11,-87,-84,-74,-7,-86,-50,-38,-231,-258,-417,-579,-1143,-1150,-1157,-1378,-29995,-29996,-29997,-29998] }
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. cxd5 exd5 5. Bg5 c6 (5... Be7 6. e3 h6 7. Bh4 Bg4 { [%csl Gd1][%cal Gg4d1] }) 6. e3 { [%csl Ge7][%cal Gc8f5,Gf8e7] } (6. Qc2 { Is very likely to transpose to the mainline } 6... Bd6 7. e3 (7. Bxf6 Qxf6 { This line is nothing to worry about } 8. Nxd5 Qxd4 9. Rd1 Qh4 { Preventing Nf6+ and maintaining the bishop pair } 10. Nf3 Qh6 11. Nc3 O-O { [%cal Gb8d7,Gd7f6,Gd6c7] }) 7... O-O 8. Bd3 h6 9. Bh4 Re8 { transposes to mainline }) 6... Bd6!? { A lesser common, but recently trendy line which offers black active play against the Queen's Gambit Exchange Variation. IM Kassa Korley popularized this line with a stunning miniature over a strong GM } { [%csl Ge4,Ge5,Gd8][%cal Ge3e4,Ge4e5,Gg5d8] } 7. Bd3 (7. Qc2 { What is white threatening? Be careful to play the right move here! } 7... O-O (7... h6? 8. Bxf6 Qxf6 9. Nxd5) 8. Bd3 h6 9. Bh4 { transposes }) 7... h6 8. Bh4 (8. Bxf6?! { is completely harmless. Black is happy to get the bishop pair and have very solid development } 8... Qxf6 9. Nf3 O-O 10. O-O Bg4) 8... O-O 9. Qc2 (9. Nge2 { Is likely to transpose to mainline. Also keep in mind that the Bxh2 trap still exists! } 9... Re8 10. O-O? Bxh2+ 11. Kxh2 Ng4+ 12. Kg3 g5 $19) 9... Re8 { The most flexible move. Black delays queenside development and will decide how to proceed based on whitte's next move. } 10. Nge2 (10. Nf3 Be6 { A different approach than usual-- Black simply aims to complete development with Nbd7 and prevent white from playing an early Ne5 } 11. O-O (11. Ne5?! { is premature for white. How can black accurately punish this? } 11... c5! { preparing Nc6 and black will have a comfortable setup } { [%cal Gb8c6] } 12. O-O Nc6 13. Nxc6 bxc6 14. Bxf6 (14. dxc5? Bxh2+ 15. Kh1 (15. Kxh2 Ng4+ 16. Kg3 g5 $19) 15... Bc7 $15) 14... Qxf6 15. dxc5 Bxc5 16. Ne2 Bb6 17. Qxc6 Qxb2) (11. Qb3!? { a rare move played by Grischuk with good success against Xiong } 11... b6 12. O-O Nbd7 13. Rac1 a6 14. Qc2 Qc7 15. Rfe1 c5 16. dxc5 bxc5) 11... Nbd7 { There are many ways the game can branch from here and more analysis is required. Here is one example line: } 12. Rab1 (12. a3 a5 13. Rab1 Rc8!? { prophylaxis against b4 } (13... Qb8 14. Rfc1 { See Aronian-Ding } (14. Bg3 b5 15. Ne2 Bxg3 16. hxg3 Qd6 17. Rfc1 Rec8 18. Nf4 Bg4 19. Nh2)) 14. b4?! (14. Bg3 Bxg3 15. hxg3 b5 16. b4 a4 17. Rfe1 Nb6 18. Ne5 Nc4 19. Bxc4 dxc4 { [%cal Gf6d5] }) 14... b5! 15. Ne2 { Now we see the purpose of the rook on c8 defending the backward c6-pawn. Black can now very quickly maneuver the knight to c4 with a great grip on the queenside } 15... Nb6 $15 { [%csl Gc4][%cal Gb6c4] }) 12... a5 (12... Qc7) 13. a3 Qb8 14. b4 b5!?) (10. O-O-O? { Is played far less often and not a move to be so worried about. Here, black's attack will be quite fast on the queenside. } 10... b5 $40 11. Kb1 Na6! { black is now guaranteed to achieve Nb4 or meet a3 with b4. In both scenarios, black will have a decisive advantage }) 10... a5 { Preparing Na6, and slowing down a potential minority attack which could happen later in the middlegame } 11. h3 (11. O-O? { [%csl Gd6,Ge7] } 11... Bxh2+ 12. Kxh2 Ng4+ 13. Kg3 g5 { [%csl Gg3] } 14. Bf5 gxh4+ 15. Kh3 h5 16. g3 Re4! 17. Bxc8 Qxc8 18. Kg2 Qf5 19. Nxe4 h3+ 20. Kg1 Qf3 $19) (11. Bg3 Bxg3 12. Nxg3 (12. hxg3 Ng4) 12... Na6 13. a3 h5!? 14. h3 (14. O-O h4 15. Nge2 h3 16. g3 Nc7 17. Bf5 Ne4 18. Bxc8 Qxc8 19. Nf4 Qd7) 14... h4 15. Nge2 Nc7 16. O-O g6 17. b4 Nh5 18. b5 cxb5 19. Nxb5 Nxb5 20. Bxb5 Bf5 21. Bd3 Rc8 22. Qd2 Bxd3 23. Qxd3 Qd7 24. Rab1 Rc4 25. Rb6 Re6 26. Rfb1 Rxb6 27. Rxb6 a4 28. Qb1 Rc7 29. Qb4 Kg7) 11... Na6 { [%csl Gb4,Gc2,Gd3][%cal Ga6b4] } 12. a3 { [%csl Ga6] } 12... Nc7 13. O-O Ne6 14. f3 (14. f4 Be7 15. f5 (15. Rae1 b6 { [%cal Gc6c5] }) 15... Ng5) (14. Rad1 Bd7 15. f3 Ng5 16. e4 Nfxe4 17. fxe4 Nxh3+ 18. gxh3 Qxh4 19. Rf2 Bxh3 20. e5 Rxe5 21. dxe5 Bc5 22. Nd4 Bxd4 23. Bh7+ Kh8 24. Rxd4 Qxd4 25. Qd3 Qg4+? { allowed white to equalize ½-½ (48) Ringoir,T (2510)-Korley, K (2437) Charlotte 2019 } (25... Qxe5! 26. Qxh3 Kxh7 27. Rxf7 Re8 $17)) (14. Bg3 Bxg3 15. Nxg3 Bd7 (15... h5!? $146 { There are many ways for the current position to branch out, but here's one example of how white can go very wrong by playing natural moves } 16. b4 (16. f4 c5) 16... h4 17. Nf5? { This natural and energetic move is actually a big mistake! Somehow white's knight will end up stranded on the kingside } (17. Nge2 Nh5 18. b5 Ng5 19. bxc6 bxc6 20. Na4 Qf6 $40) 17... Ng5 18. Nxh4 Nfe4 $19)) 14... Ng5 15. e4? { While this move is quite thematic, it walks straight into a brilliant attacking sequence } (15. f4! { The best move } 15... Ne6 { White is slightly better, but this is still playable } { [%cal Gd6e7,Gb7b6,Gc6c5,Gc8b7,Ge6f8] } 16. Kh1 Be7 17. Ng1 c5!) (15. Bxg5?! hxg5 16. e4 dxe4 17. fxe4 c5! { A strong central counterpunch! White's pawn center will not last } 18. e5 cxd4 19. exd6 dxc3 20. Nxc3 Qxd6 $15 { Black is up a clean pawn abnd white has minimal compensation }) 15... Nfxe4 (15... Ngxe4 16. fxe4) 16. fxe4 Nxh3+ 17. gxh3 Qxh4 { [%csl Gg1] } 18. Rf2 (18. e5 Rxe5! 19. dxe5 { [%csl Gg1][%cal Gc5g1,Gd6c5] } (19. Bf5 Qg5+ 20. Kh1 Bxf5 21. Qc1 Re3 { 0-1 (26) Kashlinskaya,A (2494) -Rosen,E (2353) Chess.com INT 2020 }) 19... Bc5+ 20. Nd4 (20. Kg2 Qxh3#) 20... Bxd4+ 21. Kh1 Qxh3+ 22. Qh2 Qxd3 23. Rad1 Qh3 $19) 18... Bxh3 19. Rd1 Re5!! 20. dxe5 Bc5 21. Nd4 Bxd4 22. Rd2 Qg3+ 23. Kh1 Bg4 { [%csl Gf3][%cal Gg4f3] } 24. Bf1 Bf3+ 25. Bg2 Qh3+ { 0-1 (25) Moiseenko,A (2628) -Korley, K (2437) Helsingor 2019 } 26. Kg1 Qxg2# { [%csl Gg1][%cal Gd4g1] } *
+
+
+[Event "Singapore Openings MasterClass: Barmen Variation - 5.Bf4 without cxd5"]
+[Date "2023.04.26"]
+[White "Barmen Variation"]
+[Black "5.Bf4 without cxd5"]
+[Result "*"]
+[Annotator "ericr"]
+[Variant "Standard"]
+[ECO "D37"]
+[Opening "Queen's Gambit Declined: Barmen Variation"]
+[StudyName "Singapore Openings MasterClass"]
+[ChapterName "Barmen Variation - 5.Bf4 without cxd5"]
+[ChapterURL "https://lichess.org/study/GmddprG6/zPonTJrV"]
+
+1. d4 d5 2. c4 e6 3. Nf3 Nf6 4. Nc3 Nbd7 5. Bf4 Bb4!? { Although black has many choices on move 5 (c6, dxc4, Be7) this option seems to lead to the most interesting and dynamic positions while giving many opportunities for an unprepared opponent to face early problems } 6. e3 { The most natural and popular move } (6. a3 Bxc3+ 7. bxc3 dxc4 8. Qa4 (8. e3?! b5 $15 { White is not winning back the pawn }) 8... O-O { unpinning the d7-knight and threatening Nb6 } 9. Qxc4 c5 { leading to a fascinating line where black sacrifices a pawn and potentially the exchange } 10. dxc5 b6 11. Bd6 (11. c6 Nc5 12. Rd1 Nd5) (11. cxb6 Nxb6 12. Qd4 Bb7 $44) 11... Nxc5 12. Bxf8 Qxf8 $44) 6... c5 7. a3 (7. cxd5?! { Is only asking for troubule } 7... Nxd5 $40) (7. Bd3 cxd4 { Black is happy to liquidate the center and leave white with an isolated pawn } 8. exd4 (8. Nxd4?? e5) 8... dxc4 9. Bxc4 Nb6 10. Bd3 Nbd5 11. Bd2 O-O 12. O-O b6 { 0-1 (46) Santos,J (2361)-Warmerdam,M (2610) Chennai 2022 }) (7. Be2 { This line is slightly different from 7.Bd3 as black can't forcibly give white an isolated pawn since white's queen is not blocked by the bishop. However black can still attain a solid and pleasant position } 7... dxc4 8. Bxc4 O-O 9. O-O (9. a3 { This is basically a loss of time. Black will now seize the initiative } 9... Bxc3+ 10. bxc3 Nb6 $15 11. Bd3 c4 12. Bc2 Nfd5 $15) 9... Nb6 10. Bd3 cxd4 11. exd4 Nbd5) 7... Bxc3+ 8. bxc3 Qa5 9. Qb3 (9. Qc2) 9... O-O 10. Bd3 (10. Be2 b6 11. O-O Ba6 $15) 10... b5!! $40 11. Qxb5 Qxc3+ 12. Ke2 a6 13. Qa4 (13. Qb1 dxc4) 13... cxd4 14. Nxd4 Qxd3+ *
+
+
+[Event "Singapore Openings MasterClass: Facing 1.d4 - Robson Variation vs Catalan"]
+[Date "2023.04.28"]
+[White "Facing 1.d4"]
+[Black "Robson Variation vs Catalan"]
+[Result "*"]
+[Annotator "ericr"]
+[Variant "Standard"]
+[ECO "E04"]
+[Opening "Catalan Opening: Open Defense"]
+[StudyName "Singapore Openings MasterClass"]
+[ChapterName "Facing 1.d4 - Robson Variation vs Catalan"]
+[ChapterURL "https://lichess.org/study/GmddprG6/J4MVDw8S"]
+
+{ [%evp 0,38,25,26,13,-23,2,4,6,-25,-26,-13,2,22,3,15,25,36,30,29,34,34,0,33,-1,17,17,30,30,30,32,33,27,17,17,26,20,0,0,7,32] }
+1. d4 d5 2. c4 e6 3. Nf3 Nf6 4. g3 { [%csl Gg1,Gc8][%cal Gf1g2,Ge1g1] } 4... dxc4 5. Bg2 Bb4+ 6. Bd2 c5 7. Bxb4 (7. dxc5 Bxc5 8. O-O O-O 9. Qc2 Nbd7 10. Qxc4 b6 (10... b5 11. Qxb5 Rb8 12. Qc4 Rxb2 { [%csl Gb6,Gf2,Ge2,Gf1,Gg1][%cal Gd8b6,Gc8a6,Ga6e2,Gb6f2] })) 7... cxb4 8. Ne5 (8. Qa4+ { A lot of unprepared players will play this move as it is a thematic Catalan idea. However, black is happy to enter the following line with a potential landmine for white to fall into... } 8... Nc6 9. Ne5 Bd7 (9... O-O 10. Nxc6 bxc6 11. Qxb4 Ba6) 10. Nxc6 Bxc6 11. Bxc6+ bxc6 12. Qxc6+ (12. Qxb4 Qxd4) 12... Nd7 13. O-O (13. Qxc4? Rc8! $19 { [%csl Gc4,Gc1,Ge1,Gh1][%cal Gc8c1,Gc1h1] }) 13... Rc8 14. Qa4 a5 15. a3 O-O 16. axb4 Nb6 17. Qb5 axb4 18. Qxb4 Qxd4) (8. a3 { While a3 can be a thematic and challenging idea in this opening, it not the most testing at this specific moment } 8... b5 9. axb4 (9. Ne5 Nd5) 9... Bb7) 8... O-O 9. Nxc4 (9. a3!? { The engine's top choice and a trendy line among many GMs } 9... Nd5 10. Nxc4 Nc6 11. O-O a5 { A useful move to create an eventual outpost on b4 } 12. axb4 (12. Qd2 b5 13. Ne5 Nxe5 14. dxe5 bxa3 15. Nxa3 Qb6) 12... Ndxb4 13. e3 b6 14. Nbd2 Ba6 { Once black finds life for the light-squared bishop, there are no more serious issues. From here, the position is roughly equal. The following game between Erigaisi and Praggnanandhaa shows how white can get outplayed... } 15. Qh5 Rc8 16. b3 b5 17. Ne5 Nxe5 18. Qxe5 h6 19. Ne4 Bb7 20. Rfd1 Bd5 21. Nc5 Bxg2 22. Kxg2 Qb6 23. Qe4 Rc7 24. Rdc1 Rd8 25. h4 Nd5 26. Qf3 e5 27. Rd1 exd4 28. exd4 Re7 29. Re1 Rxe1 30. Rxe1 Nf6 31. Rd1 Nd5 32. h5 Qa7 33. Ne4 a4 34. bxa4 bxa4 35. Nc5 Nb6 36. Qd3 a3 37. Ra1 Ra8 38. Qb3 a2 39. Ne4 Qb7 40. f3 Qa6 41. Kh3 Qc8+ 42. g4 Qa6 (42... Qe6! $19) 43. d5 Nc4 44. Nc3 Nd2 45. Qxa2 Qxa2 46. Rxa2 Rxa2 47. Nxa2 Nxf3 48. Kg3 Ng5 49. Nc3 Kf8 50. Kf4 Ke7 51. Nb5 g6 52. Ke5 Nf3+ 53. Kf4 Ng5 54. Ke5 Nf3+ 55. Kf4 Ng5 { 1/2-1/2 (55) Erigaisi,A (2725) -Praggnanandhaa,R (2676) chess24.com INT 2022 }) 9... Nc6 10. e3 e5! { A strong temporary pawn sacrifice. If not for this move, black would have a difficult time finding activity } 11. d5 (11. Nxe5?! Nxe5 12. dxe5 Qxd1+ 13. Kxd1 Ng4 14. Ke2 Nxe5 15. Rc1 Bg4+! { It is useful for black to provoke f3 which blunts the power of the g2-bishop } 16. f3 Bd7 $17 { [%cal Gd7b5] }) (11. Bxc6?! { Giving away the light-squared bishop is a huge concession. With black keeping the light-squared bishop and many light-squared wholes in white's kingside pawn structure, black is guaranteed sufficient compensation for the pawn. } 11... bxc6 12. Nxe5 c5 $44) (11. dxe5 Qxd1+ 12. Kxd1 Ng4 { [%csl Gf2,Ge5,Ge6,Gd8][%cal Gc8e6,Gf8d8,Gd8d1] } 13. Ke2 Ngxe5 14. Nbd2 Bg4+ 15. f3 Bf5 16. e4 Bd7 { See Mikhalevski-Robson for an absolute brilliancy! }) 11... b5 (11... Ne7) (11... Bg4 12. f3 { [%csl Gg4,Gc6] }) 12. dxc6 Qxd1+ 13. Kxd1 bxc4 14. a3 (14. c7 Bg4+ 15. Kc1 (15. f3 Be6) 15... Rac8) 14... Bg4+ (14... b3 15. Nc3) 15. Kc1 (15. f3 Be6 16. axb4 Nd5 { [%cal Gd5e3,Gd5b4] } 17. b5 Rab8 (17... Nxe3+?! 18. Ke2 Nxg2 19. Nc3! $16 { somehow the engine gives white a clear edge here. For this reason, I suggest avoiding 17...Nxe3 }) 18. Nc3 Nxc3+ 19. bxc3 Rxb5) 15... b3 { See Rasmussen-Robson 2009 for a mindblowing finish } (15... a5 16. Nd2 (16. h3 Be2! { a nice way to defend the c4 pawn (in case white attacks it with knight d2. Black now has the idea of combining e4 and Bd3 to dominate the position } { [%csl Gc4,Gd3,Ge4][%cal Ge5e4,Ge2d3] }) 16... Be6 17. Rd1 b3 18. Nb1 Ng4 19. Rd2 f5 $15 { [%csl Rc6][%cal Ge5e4] }) 16. Nc3 Rac8 17. h3 Be6 18. Rd1 Rfd8 19. f4 e4 20. g4 Nd5 21. Bxe4 Nxe3 22. Rxd8+ Rxd8 23. c7 Rd4 24. Bb7 h6 25. f5 Bd7 26. c8=Q+ Bxc8 27. Bxc8 Kf8 28. Ba6 Rd6 29. Bb7 a5 30. Bf3 Ke7 31. a4 Rd4 32. Be2 Kf6 33. h4 Ke5 34. Rb1 Kf4 35. Nb5 Rd7 36. Nc3 Kg3 37. g5 hxg5 38. hxg5 Kf2 39. Bh5 Ke1 40. f6 gxf6 41. gxf6 Rd2 42. Ra1 Rc2+ 43. Kb1 Nf1 { 0-1 (43) Rasmussen,A (2536)-Robson,R (2491) Tromsoe 2009 } *
+
+
+[Event "Singapore Openings MasterClass: Facing 1.d4: Fighting the Torre"]
+[Date "2020.04.25"]
+[White "Facing d4: Cool idea vs Torre"]
+[Result "*"]
+[Annotator "ericr"]
+[Variant "Standard"]
+[ECO "D03"]
+[Opening "Queen's Pawn Game: Torre Attack, Gossip Variation"]
+[StudyName "Singapore Openings MasterClass"]
+[ChapterName "Facing 1.d4: Fighting the Torre"]
+[ChapterURL "https://lichess.org/study/GmddprG6/9aO8pSz2"]
+
+{ [%evp 0,8,15,36,19,12,19,-14,1,5,-2] }
+1. d4 d5 2. Nf3 Nf6 3. Bg5 Ne4 4. Bh4 h5! *
+
+
+[Event "Singapore Openings MasterClass: Facing d4: Cambridge Springs - CRUSH THESE DUBIOUS MOVES"]
+[Date "????.??.??"]
+[White "Facing d4: Cambridge Springs"]
+[Black "CRUSH THESE DUBIOUS MOVES"]
+[Result "*"]
+[Annotator "Eric Rosen"]
+[Variant "Standard"]
+[ECO "D52"]
+[Opening "Queen's Gambit Declined: Cambridge Springs Defense"]
+[StudyName "Singapore Openings MasterClass"]
+[ChapterName "Facing d4: Cambridge Springs - CRUSH THESE DUBIOUS MOVES"]
+[ChapterURL "https://lichess.org/study/GmddprG6/DygjMnUC"]
+
+{ [%evp 0,28,25,26,13,-23,2,-29,-6,6,41,3,0,20,9,-25,-38,-51,-63,-80,-80,-71,-79,-75,-75,-77,-91,-86,-100,-103,-94] Here, we will see how to punish players who try to react "naturally" to the Cambridge Springs, but walk into immediate trouble. Combined, the dubious moves shown in this file have been played hundreds of thousands of times online. So if you play the Cambridge Springs consistently enough, you're likely to encounter them once in a while! Hopefully this will act as a useful guide for how to punish many of white's potential mistakes! Note: it's more important to absorb the tactical themes in this file rather than purely memorize the specific variations. }
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 { [%csl Gf6,Ge6] } 4. Nf3 (4. Bg5 Nbd7 5. e3 c6 6. Bd3 { This is a less common move order for white since the white knight is not yet developed to f3. It is worth noting this move order since a nice trap exists... } 6... Qa5 { A Cambridge Springs setup still makes the most since despite the slight difference in white's development. All the typical Cambridge Springs plans of exploiting the g5-bishop and c3-knight still exist. Here, white is likely to transpose into one of the dubious lines with Nf3, or blunder material with Ne2? } 7. Ne2? { As of May 2023, over 3, 000 games have reached this position on lichess. Black to move and win material! } (7. Nf3 { transposes to the mainline with 7.Bd3?! }) (7. Bxf6 Nxf6 { Black is happy to snag the bishop pair. Ideas of Bb4 and c5 will likely follow. }) 7... dxc4! { [%cal Ga5g5,Gc4d3] } 8. Bxf6 cxd3 { Since the e2-knight is attacked, there is no way for white to save material. Black has a decisive advantage. } 9. Qxd3 Nxf6 $19) 4... Nbd7 5. Bg5 c6 6. e3 Qa5 { The beginning of the Cambridge Springs } { [%csl Ra5][%cal Gd8a5] } 7. Bd3?! { This natural developing move in one of the most common mistakes a lot of inexperienced players will make. } (7. c5?! { While this move may look irritating at first as it grabs space and blocks black's dark squared bishop, it is a classic mistake. Black can still grab initiative with an immediate Ne4 and is also very quick to play b6, which will remove white's c-pawn and allow the dark-squared bishop to activate. } 7... Ne4 8. Qc2 b6 9. cxb6 Bb4 10. Rc1 (10. b7 { doesn't help white much } 10... Bxb7 11. Rc1 c5) 10... axb6 { There is now no way for white to defend the a-pawn } 11. Bd3 { It's time to simplify... } 11... Bxc3+ 12. bxc3 Nxg5 13. Nxg5 h6 14. Nf3 Qxa2 $17 { With an extra pawn and control of the open a-file black has a very healthy advantage }) (7. Qc2?! Ne4 { Nearly 60% of lichess games will feature white responding with Bf4 or Bh4 which allows black to pile on the pressure... } 8. Bf4 { The most played move on lichess } (8. Bd3?? { Nearly 9,000 games on lichess have reached this position } 8... Nxg5 9. Nxg5 dxc4 $19 { Wins a piece } { [%csl Rd3,Rg5][%cal Gc4d3,Ga5g5] }) (8. cxd5 { Objectively the best move according to the engine, but this is only played 8.5% of the time on lichess } 8... exd5 9. Bd3 Nxg5 10. Nxg5 g6 { Diffusing the power of white's queen/ bishop battery and no longer has to worry about the h7 falling. Black plans to complete development with Bg7, Nf6, and 0-0 } { [%cal Gf8g7,Gd7f6] }) (8. Bh4 Bb4 $40 { is very similar to 8.Bf4 }) 8... Bb4 9. Rc1 { Defending c3, but leaving a2 undefended! } (9. a3!? { objectively the best move, but very rarely played. } 9... Nxc3 10. Qb3! { Somehow white manages to be okay here. Realistically, you don't have to worry about this variation happening, but here's a simle line if it somehow does... } 10... Ne2+ 11. Qxb4 (11. Kxe2 Be7 { [%csl Re2] }) 11... Qxb4+ 12. axb4 Nxf4 13. exf4 dxc4 14. Bxc4 Nf6 { Despite having a still passive light-squared bishop, black is for choice with much better pawn structure. } { [%csl Rb4,Rd4][%cal Ge8e7,Gh8d8] }) 9... Qxa2 10. Bd3 Nxc3 11. bxc3 Qxc2 12. Rxc2 Be7 $17 { black is up a clean pawn }) (7. a3?! { While this move prevents bishop Bb4, is loses time and still allows black to seize intiative } 7... Ne4 8. Rc1 (8. Qc2? { The most played move on lichess (played in 13,000+ games). This loses a pawn. } 8... Nxg5 9. Nxg5 dxc4 { White has no time to recapture on c4 since the g5-knight is hanging } { [%cal Ga5g5] } 10. Nf3 b5 $17 { Black is up a clean pawn and white has no compensation } { [%cal Gf8e7,Gc8b7,Ge8g8,Gc6c5] }) (8. b4? { An interesting try and the second most played move on lichess (~5000 games), but this fails tactically. } 8... Bxb4! 9. axb4 Qxb4 10. Rc1 Nxc3 11. Qd2 Na2! { Solving all of black's problems! This forces the queen, and the knight will survive to tell its grandchildren all about it's heroic opening feats. } 12. Ra1 Qxd2+ 13. Kxd2 Nb4 $17 { Black is up two extra pawns and white has minimal compensation }) 8... dxc4 9. Bf4 Nxc3 10. Rxc3 Bxa3! $19) (7. Rc1?! Ne4 8. Bf4 { most commonly played } { [%csl Gf4] } (8. cxd5 Nxg5 { Black is happy to snag the bishop pair and displace white's kingside knight } 9. Nxg5 exd5 { recapturing with the e-pawn is the most logical to make way for the eventual development of the light-squared bishop } 10. Bd3 Nf6 11. O-O Bd6 12. e4 { This is the most-played move in the lichess database and looks quite logical as white aims to open the center before black can castle. However, this is a serious blunder. Black to move and win material! } (12. f4 { A better approach than blundering } 12... h6 13. Nf3 Bg4 { With this move, black pins the knight and prevent Ne5. In any case where white breaks the pin with Qe1 or Qc2, black is happy to capture on f3. The position is now very stable for black and probably slightly preferable. In many cases the plan is to castle queenside and begin pressuring the backward e3-pawn with Re8 } { [%csl Re3][%cal Ge8c8,Gh8e8,Ge8e3] } 14. Qe1) 12... Bf4! { [%csl Rc1,Rg5][%cal Gf4g5,Gf4c1] } 13. e5 Bxg5 14. exf6 Bxf6 $17 { In this case it's much better to take the pawn and avoid greediness with Bxc1. Black now much better with the extra pawn and bishop pair. }) 8... Nxc3 9. bxc3 (9. Rxc3? Bb4 $19) 9... Ba3! { A lessy greedy approach. Instead of grabbing the a2-pawn, black seizes initiative and aims to rapidly complete development while maintaining control on the queenside. } 10. Rc2 b6 { A typical move, preparing Ba6 and giving life to the "depressed" light-squared bishop } { [%csl Ga6][%cal Gc8a6] } 11. cxd5?! { This is the most played move on lichess, but a clear inaccuracy. Black is happy to open the c-file and soon target the backwards c-pawn } (11. Bd3 { A better approach than 11.cxd5 } 11... Ba6 12. Nd2 O-O { Roughly equal, but more pleasant for black. Plans include c5 and Rc8 targeting white's vulnerable queenside pawn }) 11... cxd5 12. Bd3 Ba6 13. O-O Rc8 $15 { Black is ready to castle next and later build up even more pressure against the c3-pawn by doubling rooks on the c-file. } { [%csl Rc3][%cal Gc8c6,Gh8c8,Gc8c3] }) (7. Qb3?! { Originally, I wasn't going to include this move in the file since it's played so infrequently, but I encountered it online the same day I was annotating this PGN! Here's a fun approach for black... } 7... Ne4 8. Bf4 g5! { This energetic pawn thrust becomes possible when the queen is on b3, since there are line where dxc4 will attack the queen on b3 and a minor piece on g5. } { [%csl Gg5] } 9. Bg3 (9. Nxg5? Nxg5 10. Bxg5 dxc4 $19 { [%csl Gg5,Gb3][%cal Ga5g5,Gc4b3] }) 9... h5 $40 10. h4 Nxg3 11. fxg3 gxh4 12. gxh4 Nf6 $15 { The knight will find a great post on g4 and combine nicely with Bh6 to pressure the weak e3 pawn. } { [%csl Re3,Gg4][%cal Gf6g4,Gf8h6] }) (7. Be2?! Ne4 8. O-O { The best move } (8. Qc2?! { The most played move, but this loses material to a simple sequence } 8... Nxg5 9. Nxg5 dxc4 $15 { Black wins a clean pawn as white has no time to recapture on c4. Black is likely to follow up with b5 reinforcing c4. } { [%cal Ga5g5] }) 8... Nxg5 9. Nxg5 dxc4 10. Nge4 Nb6 11. Nd2 g6 12. Nxc4 Nxc4 13. Bxc4 Bg7 { The dust has settled! Now there are clear plans for completing development and eventually opening the center with a c5 or e5 break so the bishops can flourish. } { [%cal Ge8g8,Gb7b6,Gc6c5,Gc8b7,Ge6e5] }) (7. Qa4? { This silly attempt to trade queens is simply bad } 7... Qxa4 8. Nxa4 dxc4 $19 { Black wins a clean pawn and white can't easily recapture with Bxc4 due to b5! } { [%cal Gb7b5] }) 7... dxc4 8. Bxc4 Ne4 { A strong fork! Black now attacks both the g5-bishop and the c3-knight. Both pieces have two attackers and only one defender. } 9. Bf4 { This is the most common move among players rated 1600+ in the lichess database. White saves the bishop and accepts the fact that the queenside is about to crumble. } (9. Qc2?? { hilariously, this is the most commonly played move overall on lichess with nearly 8000 games as of May 2023. This simply loses the bishop for nothing. } 9... Nxg5 10. Nxg5 Qxg5 $19) (9. Bh4 { This is less commonly played the bishop has less purpose on h4. In this case, black can take the more direct approach } 9... Nxc3 10. bxc3 Qxc3+ { [%csl Gc4] } 11. Nd2 Bb4 { Black is now threatening Qxc4 as the d2-knight will be pinned by the bishop } 12. Rc1 (12. O-O? { simply loses the knight } 12... Qxd2) 12... Qxd2+ 13. Qxd2 Bxd2+ 14. Kxd2 e5! { this move would not be possible in this variation if the bishop had gone to f4. } 15. d5 f6 16. dxc6 bxc6 17. Bd3 c5 $15 { While white does have some compensation for the pawn, it is only black who can be better here. c5 combines nicely with the light-squared bishop and black has easy play with ideas of Bb7, Ke7, and eventually bringing the rooks into the game. }) (9. Qa4? { An interesting attempt, but this fails to a simple tactic } 9... Qxa4 10. Nxa4 b5 $19) 9... e5!! { An engine-inspired move which is extremely rare in human play. This approach causes some big issues for white and creates many opportunities for white to further go wrong. This is a temporary pawn sacrifice, but the general idea is to open the center so black's light-squared bishop can later get involved. In many cases, black will continually make threats until winning back material. } (9... Nxc3 { It's totally possible to go for this more straight forward approach, but white does end up getting a bit of compensation for the lost pawn } 10. bxc3 Qxc3+ 11. Nd2 Bb4 12. Rc1 Qxd2+ 13. Qxd2 Bxd2+ 14. Kxd2 O-O { While black should still be for choice, the position is very close to equal. White has good compensation for the pawn with the bishop pair and more activity. For this reason, I recommend going for 9. e5!! }) 10. dxe5 (10. Nxe5? { This immediately loses material since white will not have Nd2 and the end of the variation } 10... Nxe5 11. Bxe5 Nxc3 12. bxc3 Qxc3+ $19 { White does not have Nd2 to defend everything. Black is now winning. } { [%cal Gc3e1,Gc3c4] }) (10. Bg3 { The top engine move, but very difficult for a human to play (only played in 5 out of 44 games in the lichess database). Black will still retain a pleasant edge. } 10... Nxc3 11. bxc3 Qxc3+ 12. Nd2 Be7 { The simplest approach! Black just wants to complete development, castle, and maintain the extra pawn } 13. Rc1 Qa5 $15 { From a5, the queen keeps the e5-pawn defended. With 0-0 coming next, black has a solid position and white doesn't have much compensation for the pawn. }) 10... Nxc3 11. bxc3 Qxc3+ 12. Nd2 Nxe5 13. Rc1 Nd3+ 14. Bxd3 Qxd3 $19 *
+
+
+[Event "Singapore Openings MasterClass: Sicilian: 2...Nc6 3.Bc4!? - Prep: Pepe/David"]
+[Date "2019.02.20"]
+[White "Sicilian: 2...Nc6 3.Bc4!?"]
+[Black "Prep: Pepe/David"]
+[Result "*"]
+[Annotator "ericr"]
+[Variant "Standard"]
+[ECO "B30"]
+[Opening "Sicilian Defense: Old Sicilian"]
+[StudyName "Singapore Openings MasterClass"]
+[ChapterName "Sicilian: 2...Nc6 3.Bc4!? - Prep: Pepe/David"]
+[ChapterURL "https://lichess.org/study/GmddprG6/T8phns56"]
+
+{ [%evp 0,111,34,14,46,46,41,21,35,43,51,-47,-24,-31,-31,-52,-42,-44,-44,-65,-71,-55,-24,-19,-7,12,9,12,1,22,21,17,16,4,1,-1,-10,-2,8,0,1,8,27,11,0,0,0,0,0,10,10,20,73,95,100,89,100,100,106,136,132,72,87,101,99,104,105,120,114,107,108,133,137,104,118,127,127,93,98,102,97,103,103,105,108,115,131,132,146,142,158,127,147,123,127,174,191,197,201,223,234,306,412,527,537,539,571,580,895,955,1006,558,1089,1567] }
+1. e4 c5 2. Nf3 Nc6 3. Bc4 e6 { Played by Pepe in an online blitz game in August 2024 } { [%csl Gd5][%cal Ga7a6,Gb7b5,Gd7d5] } (3... g6?! { Played by Pepe in an online blitz game in May 2024 } 4. c3 Bg7 5. d4 cxd4 6. cxd4 $14) (3... d6 4. O-O Nf6 5. Re1 e6 { threatening Nxe4 } 6. Bb3! { avoiding the center fork trick } (6. c3) 6... Be7 7. c3) (3... Nf6 { Played by Pepe in a tournament in September 2024 } 4. e5 Ng4 (4... d5 5. Bb5 Nd7 6. Bxc6 bxc6 7. d3 $14) 5. Qe2 f6 (5... d6 6. exd6 e6) (5... Qc7 6. Bxf7+ Kxf7 7. Qc4+ Ke8 8. Qxg4 Nxe5 (8... g6 9. d4 Nxd4 10. Nxd4 cxd4 11. Qxd4 Bg7 12. Bf4 Qxc2 13. O-O $18 { Remember: black can't castle!!! }) 9. Qh5+ Nf7 10. Nc3 $14 { [%cal Gh5h4,Ge1g1] }) 6. exf6 Nxf6 7. O-O e6 8. c3 (8. Bb3 d5) 8... d5 9. Bb3 Bd6 10. d4 O-O 11. dxc5 Bxc5 12. Be3 Bd6 13. Nbd2 e5 (13... Kh8 14. c4) 14. Ne4) 4. O-O d5 (4... a6 5. d4 { [%csl Gd4][%cal Gc5d4,Gf3d4] } 5... cxd4 (5... d5 6. exd5 exd5 7. Nc3!? { wtf maybe this is playable } 7... dxc4 (7... Nf6 8. Bb3 c4 { best move according to engine, but this leads to lots of fun for white } 9. Bxc4 dxc4 10. d5 Ne7 11. Re1 Qd6 12. Qd4 $18 { [%csl Re7][%cal Gc1f4,Gd5d6,Ge1e8] }) 8. d5 Nd4 9. Nxd4 cxd4 10. Re1+ Be7 11. Qxd4 Nf6 (11... Kf8 12. Bf4 $44 Bd6 13. Bxd6+ Qxd6 14. Ne4 Qc7 15. Qe3 { [%cal Ge3a3] } 15... c3 { only move } (15... Nh6 16. Nf6! $18) 16. Qd4 Nh6 17. h3 cxb2 18. Qxb2) 12. d6 Be6 13. Rd1 Bf8 { most critical, but not easy to play } (13... Bxd6 14. Qxd6 Qxd6 15. Rxd6 Rd8 16. Rxd8+ Kxd8 17. Bg5 Ke7 18. Ne4 Rd8 19. f4 h6 20. Bxf6+ gxf6 21. Re1 f5 22. Nc3 Rd2 23. Re2) 14. Bg5 { threatening Ne4 } 14... h6? (14... Qd7 15. Bxf6 gxf6 16. Ne4 Bg7 17. Nxf6+ Bxf6 18. Qxf6 Rg8 19. Rd2 Kf8 20. Re1 Re8 21. h4 b5 22. Qh6+ Rg7 23. Re5 Kg8) 15. Bxf6 gxf6 16. Ne4 Bg7 17. d7+ Kf8 18. Nc5 $18) (5... b5?! { unlikely to happen, but this leads to some absolutely insane variations... } 6. d5! bxc4 7. dxc6 d6 (7... dxc6 8. Qxd8+ Kxd8 9. Ne5 { [%csl Rc4,Rc6,Rf7] }) 8. Nfd2 { [%csl Gc4] } 8... d5 9. Nc3 Nf6 10. Qf3 (10. e5 Ng8) 10... Be7 11. e5 Ng8 { [%csl Ga8][%cal Gf3a8] } 12. Nxc4 Qc7 (12... dxc4 13. c7 { [%cal Gf3a8] }) 13. Rd1 dxc4 14. Rd7 Qb8 (14... Bxd7 15. cxd7+ { [%csl Ga8][%cal Gf3a8] }) 15. Rb7 { [%csl Gb8] } (15. c7 Qa7 (15... Qb7)) 15... Bxb7 (15... Qxe5 16. Bf4 $18) 16. cxb7 Ra7 17. Qc6+ $18 Kf8 (17... Kd8 18. Bf4) 18. Qc8+) 6. Nxd4 Qc7 (6... Nge7 7. a4 $14 Nxd4 8. Qxd4 Nc6 9. Qc3 Qc7 10. Rd1 Qe5 11. Qxe5 Nxe5 12. Be2 $14) 7. Nxc6 bxc6 (7... Qxc6 8. Nd2 $146 b5 9. Bd3 Bb7 10. Qe2 Nf6 11. Nb3 Qc7 12. Bd2 { [%csl Rb7][%cal Gb3a5] } 12... Bd6 13. Kh1 O-O 14. Na5) 8. Qe2 Ne7 9. Nc3 d5 (9... Ng6 10. f4) 10. Bb3 (10. exd5 cxd5 11. Nxd5 exd5 12. Bxd5 Rb8 13. g3 $16 { [%cal Gc1f4] }) 10... d4 11. Nb1 c5 12. Nd2 Nc6 13. Nc4 Be7 14. Qg4 O-O 15. Bh6 Bf6 16. f4 Kh8 17. e5 gxh6 18. exf6 Rg8 19. Qh5 Bb7 20. Rf2 Nb4 21. Ne5 Raf8 22. Qxh6 Nc6 23. Nf3 Nd8 24. c3 Bxf3 25. Bc2 Rg6 26. Qxf8+ { 1-0 (26) Nakamura,H (2780)-Carlsen,M (2839) Chess.com INT 2023 }) (4... Nf6 5. Re1 Nxe4 6. Rxe4 d5 7. Bxd5 Qxd5 8. Nc3 Qf5 9. d4 cxd4 10. Nxd4 Nxd4 11. Rxd4 Be7 12. Be3 O-O 13. Rf4 Qa5 14. Qf3 Qc7 15. Rd4 Bf6 16. Rd3 Bd7 17. Bf4 Qc8 18. Qh5 g6 19. Be5!) 5. Bb5 dxe4 6. Ne5 Qc7 (6... Bd7?! 7. Bxc6 Bxc6 8. Nxc6 bxc6 9. Nc3 f5 10. Qe2! $14 { [%csl Re6][%cal Gf1d1,Gd2d3] }) 7. Nxc6 bxc6 8. Bc4 Bd6 9. Kh1 Nf6 10. Nc3 e5 11. f3 exf3 12. Qxf3 O-O 13. d3 Be6 14. Bxe6 fxe6 15. Bg5 Qd7 16. Bxf6 gxf6 17. Ne4 f5 18. Nxd6 Qxd6 19. Rae1 f4 20. Re4 Rab8 21. b3 Rb4 22. Rfe1 Rf5 23. Qe2 Rxe4 24. Qg4+ Kh8 25. Rxe4 f3 26. gxf3 Qf8 27. Qg3 h6 28. Kg2 Qf6 29. Rg4 Kh7 30. Qh4 Qxh4 31. Rxh4 Rf4 32. Rg4 h5 33. Rg5 Rf5 34. Rg3 Rf4 35. Kf2 Rf7 36. Rg5 Rf5 37. Rg1 c4 38. dxc4 e4 39. Rg3 h4 40. Rh3 Kg6 41. Ke3 exf3 42. Rxf3 Ra5 43. a4 Re5+ 44. Kd3 Rg5 45. b4 Rg1 46. b5 c5 47. a5 Rd1+ 48. Ke4 Rd4+ 49. Ke5 Rxc4 50. b6 axb6 51. axb6 Rxc2 52. Rb3 c4 53. Rb1 c3 54. b7 Re2+ 55. Kd4 c2 56. Rg1+ { 1-0 (56) Van Foreest,J (2702)-Praggnanandhaa,R (2612) Wijk aan Zee 2022 } *
+
+
+[Event "Singapore Openings MasterClass: Cambridge Springs - Popular 7.Nd2"]
+[Date "2023.04.26"]
+[White "Cambridge Springs"]
+[Black "Popular 7.Nd2"]
+[Result "*"]
+[Annotator "Eric"]
+[Variant "Standard"]
+[ECO "D52"]
+[Opening "Queen's Gambit Declined: Cambridge Springs Defense, Bogoljubow Variation"]
+[StudyName "Singapore Openings MasterClass"]
+[ChapterName "Cambridge Springs - Popular 7.Nd2"]
+[ChapterURL "https://lichess.org/study/GmddprG6/C6eZrL1x"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Nf3 Nbd7 5. Bg5 c6 6. e3 Qa5 7. Nd2 { This multi-purpose move is the most popular choice in the Masters Database. White attempts to diffuse the pressure along the a5-e1 diagonal while enabling future ideas of Nb3 or Nc4. The downside to this move is that is leave the bishop on g5 undefended (which can often be a tactical target) and slows down white's development. Black is still able to apply central future in an energetic fashion... } 7... Bb4 (7... dxc4 8. Bxf6 Nxf6 9. Nxc4 { [%csl Ga5] }) 8. Qc2 { By far the most popular move. White defends the c3-knight } (8. Qb3? { Falling into a common Cambridge Springs tactical motif. Black to move and win material! } 8... dxc4 9. Nxc4 Bxc3+ 10. Qxc3 Qxg5 $19) (8. Bxf6 Nxf6 { This line is nothing to worry about. Black will soon castle and aim for the c5-break. }) (8. Rc1 Ne4 { Based on some deep analysis, Ne4 appears to be objectively the best approach for black. The following is an immensely sharp and fascinating line with lots of engine influence. } 9. Ndxe4 dxe4 10. Bh4 Qxa2 11. Qc2 Nb6 12. Be2 Na4 13. O-O Bxc3 14. bxc3 Nxc3 15. Qxc3 Qxe2 16. Qa3 f6 17. f3 c5! 18. Rfe1 Qd3 19. Qxc5 exf3 20. e4 h5 21. d5 Qd2 22. gxf3 Rh6 23. Qf2 Rg6+ { Deviating from Qxf2?! (which was featured in Cheparinov-Sidhant 2021) } 24. Bg3 Qb4 { Engine gives equality, but still lots of fight in a very imbalanced position! }) 8... e5!? { not the most common approach, but this is a fascinating temporary pawn sacrifice that leads a dynamic position } 9. Bxf6 (9. Nb3 Qc7 10. a3 (10. Be2 { Played by Kramnik to defeat Kamsky in 1993 } 10... Ne4! { Deviating from Kramnik-Kamsky, this is a strong central jab that commences black's initiative } 11. Bh4 g5! 12. Bg3 h5! { This position has never been reached before and can branch out in many directions. Here's one example line of central liquidation } 13. O-O Bxc3 14. bxc3 h4 15. Bxe5 Nxe5 16. dxe5 Qxe5 17. cxd5 cxd5 18. Bb5+ Kf8 $13 { Engines give 0.00. There is plenty of room for further analysis, but it is beyond the scope of this course. Refer to arrows for some of black's major ideas. }) 10... Bxc3+ 11. bxc3 O-O { Objectively, white is slightly for choice with the bishop pair, but black's position is now quite stable as the center is well reinforced. } 12. Bd3 h6 13. Bh4 c5!? { a fascinating engine-inspired idea. Black applies maximum pressure to the center before white can castle }) (9. Be2?! exd4 { Black is happy to open the position and leave white with an isolated queen's pawn } 10. exd4 (10. Nb3? dxc3! { oh no my queen! } 11. Nxa5 cxb2+ $19) 10... dxc4 11. Bh4 b5 12. O-O O-O 13. Bf3 Bb7 14. a4 Qb6) (9. dxe5?! { This is the most played move, but not the most testing. } { [%csl Ge5] } 9... Ne4 10. Ndxe4 dxe4 { [%csl Ge5][%cal Ga5e5,Gd7e5] } 11. O-O-O O-O! { A simple and patient move. Now that the d7 knight is no longer pinned to d8, black is threatening to capture on e5 } (11... Nxe5?? 12. Rd8+ $18) 12. Nxe4 { The most critical line } (12. a3 { A safe alternative that leads to equality } 12... Bxc3 13. Qxc3 Qxc3+ 14. bxc3 Re8! { Another patient move. If black takes on e5 instead, Bf4 is a bit annoying. Now, if white plays Bf4 to defend the pawn, black can switch up plans... } 15. Bf4 Nb6 16. Rd4 c5! 17. Rd6 (17. Rxe4? f5 $19) 17... Be6 { black is ready to play Bxc4, winning back the pawn with a comfortable position }) 12... Qxa2 13. f4? (13. Bf4 Qa1+ 14. Qb1 Qa5) 13... h6 14. Bh4 Nc5 15. Nxc5 Bxc5 16. Bf2 Bg4 17. Rd2 Rad8 18. Rxd8 Qa1+! { An important in-between move } 19. Qb1 Qxb1+ 20. Kxb1 Rxd8 $19) 9... Nxf6 { [%csl Ge5][%cal Gd4e5] } 10. dxe5 Ne4 11. cxd5 { This is the most played move among masters and the engine's top choice. This line is perhaps an attempt to refute the Cambridge Springs, but we're going to see that black has some crazy ideas and mindblowing novelties to generate a huge headache for white } (11. Ndxe4 { This is the most played move online, but not the most critical. Black will equalize easily. } 11... dxe4 12. Be2 (12. a3 Bf5 { The most flexible move, simply defending the e4-pawn. Black doesn't have to move the dark-squared bishop since the a3-pawn is pinned. Black now keeps the option open of whether to casle kingside or queenside }) 12... Qxe5 $15 13. O-O Bf5 14. Rfd1 Bd6 15. g3 h5 $40) (11. Nb3 { This is the top engine move, but you're very unlikely to encounter this as it's not so natural for white to allow Bxc3 giving back the pawn. This move has been played only 3 times out of 300+ games in the lichess database as of May 2023. } 11... Bxc3+ 12. bxc3 Qxc3+ 13. Qxc3 Nxc3 { It is not easy for white to maintain an edge in this position without very precise engine play. Here's an example of a natural line that leads to a very playable position for black and rough equality... } 14. cxd5 Nxd5 15. Bc4 Be6 16. Nc5 b5 17. Bb3 O-O-O) (11. Ncxe4 dxe4 12. a3 Bxd2+ 13. Qxd2 Qxe5) 11... Nxc3 12. bxc3 Bxc3 13. Rc1 Bb4 (13... Bxe5 14. dxc6 O-O 15. Bd3 g6 16. O-O bxc6 17. Nc4 $14 { This line is not as enjoyable for black }) 14. dxc6 bxc6!! $146 { This move looks like a terrible blunder at first, but has a nasty trap in store... } 15. Qxc6+?? { Astonishingly, this move instantly loses for white. Black is more than happy to sacrifice BOTH ROOKS!!! } (15. a3 Qxa3! { White can still not capture on c6! } 16. Bd3 (16. Qxc6+?? { still loses for white } 16... Bd7 17. Qxa8+ Ke7 18. Qxh8 { It is now forced checkmate... } 18... Qxc1+ 19. Ke2 Bg4+ 20. Kd3 Bf5+ 21. Ke2 Qxd2+ 22. Kf3 Qd5+ 23. Kg3 Qxe5+ 24. f4 Qxe3+ 25. Kh4 Qxf4+ 26. g4 Qxg4#) 16... O-O 17. O-O (17. Bxh7+? Kh8 { Amazingly, black now has a decisive advantage as every white move will be punished } 18. Bd3 (18. O-O Bxd2 { Simply wins a piece due to white's queen being overworked }) 18... Rd8 $19 { The pressure against white is simply overwhelming. Brace yourself for a tactical rampage } 19. Ke2 Bxd2 20. Qxd2 Rxd3! 21. Qxd3 Ba6 $19) 17... Bxd2 18. Qxd2 a5 19. Rxc6 Be6 { Objectively, white should be a bit better with the extra pawn, but black has interesting counter chances with the outside passed a-pawn }) (15. Bd3 { One of the best options for white } 15... O-O 16. Bxh7+ { only leads to issues for white } 16... Kh8 17. Bd3 Rd8 $40) 15... Bd7 16. Qxa8+ Ke7 17. Qxh8 Bxd2+ 18. Ke2 (18. Kd1 Bxc1 19. Kxc1 Qc3+ 20. Kd1 Ba4+ 21. Ke2 Qc4+ 22. Kf3 Bd1+ 23. Kg3 Qg4#) 18... Bg4+ 19. f3 Bxc1 20. Kf2 (20. fxg4 Qd2+ 21. Kf3 Qxe3#) 20... Qxe5 21. e4 Bf4! $19 { White is getting mated by force! The dark-squared bishop prevents the king's g3 getaway and now Qd4 is unstoppable. Checkmate is imminent. } 22. fxg4 Qd4+ 23. Ke2 Qd2+ 24. Kf3 Qe3# { 0-1 Black wins by checkmate. } *
+
+
+[Event "Singapore Openings MasterClass: Ponizani Traps"]
+[Date "????.??.??"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C44"]
+[Opening "Ponziani Opening: Jaenisch Counterattack"]
+[StudyName "Singapore Openings MasterClass"]
+[ChapterName "Ponizani Traps"]
+[ChapterURL "https://lichess.org/study/GmddprG6/2kt9rD1R"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nc6 3. c3 Nf6 (3... d5 4. Qa4 dxe4 5. Nxe5 Qd5 6. Nxc6 Qxc6 (6... bxc6 7. Bc4) 7. Bb5) 4. d4 Nxe4 5. d5 Ne7 6. Nxe5 Ng6 (6... d6 7. Bb5+ c6 8. dxc6 dxe5 (8... Qb6 9. cxb7+ Qxb5 (9... Kd8 10. bxa8=Q (10. Nxf7+ Kc7 11. bxa8=Q (11. bxa8=N+)) 10... Qxf2#) 10. bxa8=Q) 9. cxb7+) 7. Bd3 Nxf2 8. Kxf2 (8. Bxg6 Nxd1 9. Bxf7+ Ke7 10. Bg5+ Kd6 11. Nc4+ Kc5 12. Nba3 Qxg5 13. b4#) 8... Nxe5 { [%csl Gf2] } *
+
+

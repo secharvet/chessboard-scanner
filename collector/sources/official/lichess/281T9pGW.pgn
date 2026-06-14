@@ -1,0 +1,108 @@
+[Event "DrHack's Study: Time/Material/Quality"]
+[Date "2021.12.18"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C62"]
+[Opening "Ruy Lopez: Steinitz Defense"]
+[StudyName "DrHack's Study"]
+[ChapterName "Time/Material/Quality"]
+[ChapterURL "https://lichess.org/study/281T9pGW/xTWebjzr"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2021.12.18"]
+[UTCTime "20:02:48"]
+
+1. e4 e5 (1... c5 2. d4 cxd4 { [%cal Gc5d4] } 3. c3 dxc3 4. Nxc3) 2. Bb5 (2. Nf3 d6 3. Nc3 a6 4. Bc4 h6 5. O-O b6) 2... Nc6 3. Nf3 d6 4. Bxc6+ Bd7 5. Bxd7+ Qxd7 6. d3 Be7 7. Bg5 *
+
+
+[Event "DrHack's Study: Chapter 2"]
+[Date "2021.12.18"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "DrHack's Study"]
+[ChapterName "Chapter 2"]
+[ChapterURL "https://lichess.org/study/281T9pGW/5LFvHSmj"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "1bb2nn1/8/8/8/8/8/8/1BB2NN1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2021.12.18"]
+[UTCTime "20:05:00"]
+
+{ [%cal Gh5a5] }
+ *
+
+
+[Event "DrHack's Study: Chapter 3"]
+[Date "2021.12.18"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "DrHack's Study"]
+[ChapterName "Chapter 3"]
+[ChapterURL "https://lichess.org/study/281T9pGW/bBlMX5TB"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "1bb2nn1/8/8/8/8/8/8/1BB2N2 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2021.12.18"]
+[UTCTime "20:05:24"]
+
+{ [%cal Gh5a5] }
+ *
+
+
+[Event "DrHack's Study: Chapter 4"]
+[Date "2021.12.18"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "DrHack's Study"]
+[ChapterName "Chapter 4"]
+[ChapterURL "https://lichess.org/study/281T9pGW/H91BzctW"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "1bb2n2/8/8/8/8/8/8/1BB5 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2021.12.18"]
+[UTCTime "20:06:14"]
+
+{ [%cal Gh5a5] }
+ *
+
+
+[Event "DrHack's Study: Chapter 5"]
+[Date "2021.12.18"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "DrHack's Study"]
+[ChapterName "Chapter 5"]
+[ChapterURL "https://lichess.org/study/281T9pGW/lSCrnzCK"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "1b3n2/8/8/8/8/8/8/1B6 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2021.12.18"]
+[UTCTime "20:06:35"]
+
+{ [%cal Gh5a5] }
+ *
+
+
+[Event "DrHack's Study: Bobby Fischer - Mikhail Tal 1961"]
+[Date "2021.12.18"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B47"]
+[Opening "Sicilian Defense: Taimanov Variation, Bastrikov Variation"]
+[StudyName "DrHack's Study"]
+[ChapterName "Bobby Fischer - Mikhail Tal 1961"]
+[ChapterURL "https://lichess.org/study/281T9pGW/LAUI3jKZ"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2021.12.18"]
+[UTCTime "20:14:47"]
+
+1. e4 c5 2. Nf3 e6 3. d4 cxd4 4. Nxd4 Nc6 5. Nc3 Qc7 6. g3 Nf6 7. Ndb5 { When a smaller value piece attacks a larger value piece, it generates time. } 7... Qb8 8. Bf4 Ne5 9. Bxe5 { Captures gain time. } 9... Qxe5 10. f4 Qb8 11. Be2 { [%csl Ge2] } 11... Bc5 12. e5 a6 13. exf6 axb5 { [%csl Gb5][%cal Gf6g7] } 14. fxg7 Rg8 15. Ne4 { The 3rd way to gain time or manipulate time at all in chess is to make a threat. } 15... Be7 16. Qd4 Ra4 17. Nf6+ Kd8 (17... Bxf6 18. Qxf6 Qd6) 18. Qxa4 (18. Qb6+ Qc7 19. Qxc7+ Kxc7 20. Nxg8 Bc5 21. Nh6 f5 22. g8=Q Rd4 23. Nf7 Kb8 24. Qd8 b4 25. Bb5 Rd5 26. Ne5 Be7 27. Qxe7 Rxb5 28. Qd6+ Ka7 29. Qc7 d6 30. Nc6+ Ka6 31. Qxc8 Rc5 32. Nxb4+ Kb6 33. Qd8+ Rc7 34. Qxd6+ Rc6 35. Nxc6 e5 36. Nd8+ Ka5 37. Nxb7+ Ka4 38. Qc6+ Kb4 39. a3#) 18... bxa4 19. Nxg8 { [%cal Gg8e7,Gg7g8] } *
+
+

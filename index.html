@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lecteur d'Ouvertures d'Échecs — MVP</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <div id="bootError" class="boot-error" hidden></div>
+
+    <div class="app">
+      <header class="topbar">
+        <div class="topbar__pickers">
+          <select id="catalogTypeSelect" class="opening-select opening-select--catalog" aria-label="Catalogue">
+            <option value="openings">Ouvertures</option>
+            <option value="studies" selected>Études</option>
+          </select>
+          <select id="openingSelect" class="opening-select opening-select--opening" aria-label="Ouverture" hidden></select>
+          <select id="studySelect" class="opening-select opening-select--study" aria-label="Étude"></select>
+          <select id="chapterSelect" class="opening-select opening-select--chapter" aria-label="Chapitre"></select>
+          <select id="versionSelect" class="opening-select opening-select--version" aria-label="Version" disabled hidden>
+            <option value="original">Originale</option>
+            <option value="augmented">Commentée</option>
+          </select>
+        </div>
+        <a class="btn btn--play" href="./play.html">Jouer vs Stockfish</a>
+      </header>
+
+      <div class="layout-row">
+        <section class="board-col">
+          <div class="board-panel">
+            <div class="board-panel__top">
+              <div class="board-wrap">
+                <div class="board-remote" id="boardRemote">
+                  <button class="remote-btn" id="btnStart" type="button" title="Début" aria-label="Début">⏮</button>
+                  <button class="remote-btn" id="btnPrev" type="button" title="Précédent" aria-label="Précédent">⏪</button>
+                  <button class="remote-btn remote-btn--play" id="btnNext" type="button" title="Suivant" aria-label="Suivant">▶</button>
+                  <button class="remote-btn" id="btnEnd" type="button" title="Fin" aria-label="Fin">⏭</button>
+                  <div class="branch-menu" id="branchMenu" hidden></div>
+                </div>
+                <div id="board" aria-label="Échiquier"></div>
+              </div>
+              <div id="boardLegend" class="board-legend" aria-label="Légende des surbrillances"></div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="aside-col">
+          <div class="card card--aside card--commentary">
+            <div class="card__header">
+              <div class="card__title">Explications pédagogiques</div>
+            </div>
+            <div class="commentary" id="commentary">
+              <div class="commentary__empty">
+                Charge le PGN et navigue : les commentaires apparaîtront ici.
+              </div>
+            </div>
+          </div>
+
+          <div class="card card--mentor">
+            <div class="card__header">
+              <div class="card__title">Coach</div>
+              <div class="card__hint" id="mentorStatus">Groq · GPT-OSS 120B</div>
+            </div>
+            <label class="mentor-form__label" for="mentorQuestion">Question (optionnelle)</label>
+            <textarea
+              id="mentorQuestion"
+              class="mentor-form__question"
+              rows="2"
+              placeholder="Quel plan pour les blancs ?"
+            ></textarea>
+            <div class="mentor-form__actions">
+              <button type="button" id="btnAskMentor" class="btn btn--primary btn--coach">
+                Demander au coach
+              </button>
+            </div>
+            <div
+              id="mentorPanel-groq"
+              class="mentor-panel mentor-advice"
+              aria-live="polite"
+              tabindex="0"
+            >
+              Navigue dans la variante puis demande un plan pour la position affichée.
+            </div>
+          </div>
+
+          <div class="status status--aside">
+            <div class="status__row">
+              <span class="status__label">Position</span>
+              <span class="status__value" id="statusFen"></span>
+            </div>
+            <div class="status__row status__row--wrap">
+              <span class="status__label">Coups</span>
+              <span class="status__value" id="statusPath"></span>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="graph-strip">
+        <div class="graph-strip__header">
+          <span class="graph-strip__title">Graphe des variantes</span>
+          <span class="graph-strip__zoom" id="pgnGraphZoom" data-pgn-zoom aria-live="polite">—</span>
+        </div>
+        <div id="pgnGraph" class="graph-strip__body" role="img" aria-label="Graphe git-like des variantes PGN"></div>
+      </div>
+
+    </div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

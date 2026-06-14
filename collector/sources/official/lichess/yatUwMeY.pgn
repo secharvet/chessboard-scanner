@@ -1,0 +1,48 @@
+[Event "Leela Chess Zero vs Stockfish | TCEC Superfinal, Season 21 - Game 71: Position 1 of 3"]
+[Date "2021.12.29"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "E62"]
+[Opening "King's Indian Defense: Fianchetto Variation, Simagin Variation"]
+[StudyName "Leela Chess Zero vs Stockfish | TCEC Superfinal, Season 21 - Game 71"]
+[ChapterName "Position 1 of 3"]
+[ChapterURL "https://lichess.org/study/yatUwMeY/e38bHGh7"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2021.12.29"]
+[UTCTime "03:05:37"]
+
+1. d4 Nf6 2. c4 g6 3. Nf3 Bg7 4. g3 O-O 5. Bg2 d6 6. Nc3 Nc6 7. O-O Bg4 8. d5 Bxf3 { [%cal Bg4f3] } *
+
+
+[Event "Leela Chess Zero vs Stockfish | TCEC Superfinal, Season 21 - Game 71: Position 2 of 3"]
+[Date "2021.12.29"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "E62"]
+[Opening "King's Indian Defense: Fianchetto Variation, Simagin Variation"]
+[StudyName "Leela Chess Zero vs Stockfish | TCEC Superfinal, Season 21 - Game 71"]
+[ChapterName "Position 2 of 3"]
+[ChapterURL "https://lichess.org/study/yatUwMeY/sFv3Pwge"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2021.12.29"]
+[UTCTime "03:15:26"]
+
+1. d4 Nf6 2. c4 g6 3. Nf3 Bg7 4. g3 O-O 5. Bg2 d6 6. Nc3 Nc6 7. O-O Bg4 8. d5 Na5 9. b3 c5 10. Bg5 a6 11. h3 Bc8 12. e4 Nd7 13. Rc1 b5 14. Qd3 Rb8 15. Bd2 bxc4 16. bxc4 Rb4 17. Nd1 Ra4 18. Rc2 Ne5 19. Nxe5 Bxe5 20. Kh2 Bd7 21. Ne3 Bd4 22. h4 Qe8 23. Rb1 Bxe3 { [%cal Bd4e3] } *
+
+
+[Event "Leela Chess Zero vs Stockfish | TCEC Superfinal, Season 21 - Game 71: Position 3 of 3"]
+[Date "2021.12.29"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "E62"]
+[Opening "King's Indian Defense: Fianchetto Variation, Simagin Variation"]
+[StudyName "Leela Chess Zero vs Stockfish | TCEC Superfinal, Season 21 - Game 71"]
+[ChapterName "Position 3 of 3"]
+[ChapterURL "https://lichess.org/study/yatUwMeY/dkwoYw1k"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2021.12.29"]
+[UTCTime "03:15:56"]
+
+1. d4 Nf6 2. c4 g6 3. Nf3 Bg7 4. g3 O-O 5. Bg2 d6 6. Nc3 Nc6 7. O-O Bg4 8. d5 Na5 9. b3 c5 10. Bg5 a6 11. h3 Bc8 12. e4 Nd7 13. Rc1 b5 14. Qd3 Rb8 15. Bd2 bxc4 16. bxc4 Rb4 17. Nd1 Ra4 18. Rc2 Ne5 19. Nxe5 Bxe5 20. Kh2 Bd7 21. Ne3 Bd4 22. h4 Qe8 23. Rb1 Bxe3 24. Bxa5 Bxf2 { [%cal Be3f2] } 25. Bc3 Bd4 26. Bxd4 cxd4 27. Qxd4 *
+
+

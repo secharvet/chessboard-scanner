@@ -1,0 +1,40 @@
+[Event "Rated Blitz game"]
+[Site "https://lichess.org/hbL2Hm4y"]
+[Date "2019.02.20"]
+[Round "-"]
+[White "Santy_Chess"]
+[Black "stam_mathematician"]
+[Result "1-0"]
+[WhiteElo "1250"]
+[BlackElo "1170"]
+[TimeControl "300+3"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+[Variant "Standard"]
+[ECO "B32"]
+[Opening "Sicilian Defense: Franco-Sicilian Variation"]
+[StudyName "Santy-Stam"]
+[ChapterName "Santy_Chess - stam_mathematician"]
+[ChapterURL "https://lichess.org/study/YgKq3STw/tGGr7O9k"]
+
+1. e4 { To analyze this, start in the database (book shaped button below this move list). } 1... e6 { A french defense. } 2. d4 { Overwhelmingly, black plays 2. d5. 109k games by the chessmasters in the DB vs 900ish with your c5 idea. } 2... c5 { If you had started the game 1. e4 c5. You would have a played an opening called the Sicilian. You've just tranposed your french defense into the Sicilian opening, while giving white an extra option that he would not normally have! 3. d5! } 3. Nf3 { Notice the database shows 66,111 games with cxd4. You've made it into a popular line of the Sicilian defense. } (3. d5 { So, as you improve your opening play - you may want to avoid moves that give your opponents more options this early - as it makes the learning tree much bigger. }) 3... Nc6 { Allowing 4. d5, but this time your knight will be attacked. White should accept this invitation. } 4. Bb5 Nge7 5. O-O (5. d5 Nb4 6. a3 { A few simple moves and black has a really tough choice to make. Na6 - retreating to the rim, or Nxd5 - giving up a knight for two pawns. } 6... Na6 7. d6 Ng6 8. Nc3 { White is ahead as black is having a hard time placing his pieces anywhere meaningful. }) 5... d5 { Another missed opportunity for white. The black king is centered and the pawns may trade to open the game. } 6. e5 { Black should be happy here. The center has closed giving him time to organize his stuff. } (6. dxc5 dxe4 { maybe we'd prefer to avoid the queen trade, but I don't see anything better. } (6... Ng6 7. exd5 { And now the center opens. }) 7. Qxd8+ Kxd8 8. Ng5 { White will recover his pawn with interest. } 8... Ke8 9. Nxe4 { [%csl Gd6] }) 6... a6 7. Bxc6+ Nxc6 { This is now a nice position for black - just like that. His pieces have free movement and he can take his time to aim things at the center pawns. } 8. c3 Be7 9. Bf4 c4 { ugh. I can't really complain because you still have plans with the a and b pawns, but I'd much rather see the c file open as the pawns trade off so your rooks can find some life on the c file. } 10. Nbd2 O-O 11. Qc2 h6 12. g3 a5 13. h4 { If you want a home for your rooks, make an open file somewhere. b5-b4 seems to do this. } 13... a4 { Now after a3, play might be harder to achieve on the queen's side of the board. } 14. Nh2 (14. a3 { Black did not achieve what he set out to do. }) 14... b5 15. Ndf3 b4 { This is so fantastic. } 16. Rfe1 bxc3 (16... a3 { Creating open files <-- plural. } 17. bxa3 (17. cxb4 Nxb4 { winning material. } 18. Qe2 axb2 { The b pawn can not be recaptured. } { [%csl Gd3][%cal Gd3b2,Gd3e1] } 19. Rab1 c3 { easily winning material now. }) 17... Rxa3 { The a2 pawn is a target that you can overwhelm. } { [%csl Ga2] }) 17. bxc3 g5 { You prob don't need anyone to tell you that this g5 move might be risky. gg. } 1-0
+
+
+[Event "Santy-Stam: Ignore this.. I was doodling."]
+[Date "2019.02.20"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Santy-Stam"]
+[ChapterName "Ignore this.. I was doodling."]
+[ChapterURL "https://lichess.org/study/YgKq3STw/FotdHnW7"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "8/2k2ppp/4p3/4b3/PR6/K6P/1P4r1/8 w - - 0 36"]
+[SetUp "1"]
+[UTCDate "2019.02.20"]
+[UTCTime "00:12:56"]
+
+ *
+
+

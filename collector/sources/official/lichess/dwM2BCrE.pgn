@@ -1,0 +1,41 @@
+[Event "EricRosen's Study: Chapter 1"]
+[Date "2025.04.07"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "EricRosen's Study"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/dwM2BCrE/sII232zh"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2025.04.07"]
+[UTCTime "02:15:10"]
+
+ *
+
+
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2025.04.06"]
+[White "SheaPlaysChess"]
+[Black "IMRosen"]
+[Result "0-1"]
+[WhiteElo "2337"]
+[BlackElo "2480"]
+[TimeControl "600"]
+[Termination "IMRosen won by resignation"]
+[Variant "Standard"]
+[ECO "D52"]
+[Opening "Queen's Gambit Declined: Cambridge Springs Defense, Bogoljubow Variation"]
+[StudyName "EricRosen's Study"]
+[ChapterName "SheaPlaysChess - IMRosen"]
+[ChapterURL "https://lichess.org/study/dwM2BCrE/3GrWyp96"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 { [%timestamp 35] [%clk 0:09:57] } 1... d5 { [%timestamp
+23] [%clk 0:09:58] } 2. c4 { [%timestamp 44] [%clk 0:09:52] } 2... e6 { [%timestamp 18] [%clk 0:09:56] } 3. Nc3 { [%timestamp 296] [%clk 0:09:23] } 3... Nf6 { [%timestamp 18] [%clk 0:09:54] } 4. Bg5 { [%timestamp 85] [%clk 0:09:14] } 4... c6 { [%timestamp 24] [%clk 0:09:52] } 5. e3 { [%timestamp 68] [%clk 0:09:07] } 5... Nbd7 { [%timestamp 14] [%clk 0:09:50] } 6. Nf3 { [%timestamp 67] [%clk 0:09:01] } 6... Qa5 { [%timestamp 16] [%clk 0:09:49] } 7. Nd2 { [%timestamp
+10] [%clk 0:09:00] } 7... Bb4 { [%timestamp 20] [%clk 0:09:47] } 8. Qc2 { [%timestamp 14] [%clk 0:08:58] } 8... e5 { [%timestamp 14] [%clk 0:09:45] } 9. Nb3 { [%timestamp 519] [%clk 0:08:06] } 9... Qc7 { [%timestamp 127] [%clk 0:09:33] } 10. cxd5 { [%timestamp 341] [%clk 0:07:32] } 10... Nxd5 { [%timestamp 275] [%clk 0:09:05] } 11. a3 { [%timestamp 284] [%clk 0:07:04] } 11... exd4 { [%timestamp 852] [%clk 0:07:40] } 12. Nxd4 { [%timestamp 288] [%clk 0:06:35] } 12... Bxc3+ { [%timestamp 64] [%clk 0:07:34] } 13. bxc3 { [%timestamp 22] [%clk 0:06:33] } 13... Qa5 { [%timestamp 1036] [%clk 0:05:50] } 14. Qe4+ { [%timestamp 860] [%clk 0:05:07] } 14... Kf8 { [%timestamp
+35] [%clk 0:05:46] } 15. Bd3 { [%timestamp 10] [%clk 0:05:06] } 15... Qxc3+ { [%timestamp 268] [%clk 0:05:20] } 16. Ke2 { [%timestamp 15] [%clk 0:05:04] } 16... Qxa1 { [%timestamp 566] [%clk 0:04:23] } (16... Nc5) 17. Be7+ { [%timestamp 1721] [%clk 0:02:12] } 17... Kg8 { [%timestamp 215] [%clk 0:04:02] } 18. Bb4 { [%timestamp 11] [%clk 0:02:11] } 18... Qa2+ { [%timestamp
+519] [%clk 0:03:10] } 19. Kf3 { [%timestamp 85] [%clk 0:02:03] } 19... N7f6 { [%timestamp 34] [%clk 0:03:06] } 20. Qe5 { [%timestamp 196] [%clk 0:01:43] } 20... Qxf2+ { [%timestamp 219] [%clk 0:02:44] } 0-1
+
+

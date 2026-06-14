@@ -1,0 +1,97 @@
+[Event "Blank Slate: Chapter 1"]
+[Date "2025.02.06"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D44"]
+[Opening "Semi-Slav Defense: Botvinnik Variation"]
+[StudyName "Blank Slate"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/UdIsZRro/wXFFvRwZ"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[UTCDate "2025.02.06"]
+[UTCTime "03:48:41"]
+
+1. d4 (1. c4 c6 2. Nf3 (2. e4) 2... d5 3. e3 Nf6 4. Nc3 a6 5. b3 Bf5 6. Bb2 e6) (1. Nf3 d5 2. g3 c6 3. Bg2 Bg4 4. O-O Nd7 5. d3 e6 6. e4 Bd6) 1... d5 2. c4 (2. Bf4 Nf6 3. e3 e6 4. Nf3 c5 5. c3 Nc6 6. Nbd2 (6. Bd3 Nh5 7. Bg5 Qb6 8. b3 h6 9. Bh4 g5 10. Bg3 Nxg3 11. hxg3 Bg7 { [%csl Rc3][%cal Gg7a1] }) 6... cxd4 7. exd4 Nh5 8. Bg5 f6 9. Bh4 Bd6 10. Bd3 Nf4) 2... c6 3. Nc3 (3. Nf3 Nf6 4. Nc3 (4. e3 Bf5 5. Nc3 e6 6. Bd3 Bxd3 7. Qxd3 Nbd7 8. O-O Bb4 9. Bd2 a5 10. a3 Bxc3 11. Bxc3 O-O { [%cal Gf6e4,Ga5a4] }) (4. g3 Bf5 5. Bg2 e6 6. O-O Be7 7. Nc3 h6)) (3. cxd5 cxd5 4. Nc3 Nf6 5. Bf4 Nc6 6. e3 e6 7. Nf3 Be7 8. Bd3 O-O 9. O-O Nh5 10. Be5 f6 11. Bg3 Nxg3 12. hxg3 f5) 3... Nf6 4. Nf3 e6 5. Bg5 (5. e3 a6 6. Bd3 dxc4 7. Bxc4 b5 8. Bd3 c5 9. O-O Bb7) 5... dxc4 6. e4 b5 7. e5 h6 8. Bh4 g5 9. Nxg5 hxg5 10. Bxg5 Be7 11. exf6 Bxf6 12. Bxf6 Qxf6 13. g3 Bb7 14. Bg2 Na6 15. Nxb5 O-O-O 16. Nxa7+ Kb8 17. Nxc6+ Bxc6 18. Bxc6 Nb4 *
+
+
+[Event "Blank Slate: Chapter 2"]
+[Date "2025.02.07"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D44"]
+[Opening "Semi-Slav Defense: Botvinnik Variation"]
+[StudyName "Blank Slate"]
+[ChapterName "Chapter 2"]
+[ChapterURL "https://lichess.org/study/UdIsZRro/3Y1Mru9R"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[UTCDate "2025.02.07"]
+[UTCTime "00:45:45"]
+
+{ [%cal Gd2d4,Gc2c4,Gg1f3] }
+1. d4 (1. c4 c6 2. Nf3 d5 3. e3 Nf6 4. Nc3 a6 5. b3 Bf5) (1. Nf3 d5 2. g3 c6 3. Bg2 Bg4 4. O-O Nd7 5. d3 e6 6. Nbd2 Bd6 7. e4 Ne7 { [%cal Ge8g8] }) 1... d5 { [%cal Gc2c4,Gc1f4,Gg1f3] } 2. c4 (2. Bf4 Nf6 3. e3 e6 4. Nf3 c5 5. c3 Nc6 6. Nbd2 cxd4 7. exd4 Nh5 8. Bg5 f6 9. Bh4 Bd6) (2. Nf3 Nf6 3. c4 (3. Bf4 e6) 3... c6) 2... c6 3. Nc3 (3. Nf3 Nf6 4. e3 Bf5 5. Nc3 e6 6. Bd3 Bxd3 7. Qxd3 Nbd7 8. O-O Bb4 9. Bd2 a5 10. a3 Bxc3 11. Bxc3 O-O { [%cal Gf6e4,Ga5a4] }) 3... Nf6 4. Nf3 e6 5. Bg5 (5. e3 a6 6. Bd3 dxc4 7. Bxc4 b5 8. Bd3 c5 9. O-O Bb7 { [%csl Rc1][%cal Gb8d7,Gf8d6,Ge8g8] }) 5... dxc4 6. e4 (6. a4) (6. e3) 6... b5 7. e5 h6 8. Bh4 g5 9. Nxg5 hxg5 10. Bxg5 Be7 11. exf6 Bxf6 12. Bxf6 Qxf6 13. g3 Bb7 14. Bg2 Na6 *
+
+
+[Event "Blank Slate: Botvinnik 2/13/25"]
+[Date "2025.02.13"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D44"]
+[Opening "Semi-Slav Defense: Botvinnik Variation"]
+[StudyName "Blank Slate"]
+[ChapterName "Botvinnik 2/13/25"]
+[ChapterURL "https://lichess.org/study/UdIsZRro/Yo9SD52K"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[UTCDate "2025.02.13"]
+[UTCTime "21:08:44"]
+
+1. d4 d5 2. c4 c6 3. Nc3 Nf6 4. Nf3 e6 5. Bg5 dxc4 { [%cal Ge2e4,Ge2e3,Ga2a4] } 6. e4 (6. a4 Bb4 7. e4 Bxc3+ (7... Qa5 8. Bd2) 8. bxc3 Qa5 { [%cal Gd1c2,Gg5f6,Ge4e5] } 9. e5 (9. Qc2? Nxe4 10. Qxe4 Qxc3+ { [%cal Gc3e1,Gc3a1] }) (9. Bxf6 Qxc3+ 10. Nd2 gxf6 11. Bxc4 Qxd4 { [%cal Ge8g8,Gb8d7,Gd7e5,Ge5g6] }) 9... Qxc3+? { [%csl Gd2] } (9... Ne4 10. Bd2 c5 11. Bxc4 Nxd2 12. Qxd2 cxd4 13. cxd4 Nc6 { [%csl Rd4][%cal Gb7b5,Ga7a5,Yc8d7] }) 10. Bd2 { [%cal Gd2c3,Ge5f6] }) (6. e3 b5 7. a4 Bb4 8. Be2 (8. axb5 cxb5 { [%cal Gc8b7,Gb7f3] }) 8... Nbd7 9. O-O Qb6 { [%cal Ge8g8,Ga7a6,Gc8b7,Gc6c5] } 10. Qc2 O-O 11. b3 cxb3 12. Qxb3 Bxc3 13. Qxc3 a5 { [%cal Gb5b4] }) 6... b5 7. e5 h6 8. Bh4 (8. exf6 hxg5 9. fxg7 Bxg7 { [%cal Gg7d4,Gd8d4,Gg5g4] }) 8... g5 9. Nxg5 (9. exf6 gxh4 10. Ne5 Qxf6 11. Be2 Nd7 12. Nxc6 Bb7 13. Bf3 a6 { [%cal Ga8c8] } 14. O-O Rc8 15. Ne5 Bxf3 16. Nxf3 Bg7 { [%cal Ge8g8] }) 9... hxg5 10. Bxg5 Be7 11. exf6 Bxf6 { [%cal Gg5f6,Gg5e3] } 12. Bxf6 (12. Be3 Bb7 13. Ne4 c5 14. Nxc5 Bd5 { [%cal Gb8c6,Gc6d4] }) 12... Qxf6 { [%cal Gg2g3] } 13. g3 (13. Be2 { Make this a trainable. }) (13. Ne4 Qe7 14. Qf3 Na6 15. Nf6+ Kd8 16. Qxc6 (16. O-O-O Nb4 { [%cal Gb4a2,Gb4d5] }) 16... Qb4+ 17. Kd1 Ke7 (17... Qxb2 { Does this move order work? }) 18. Qxa8 Qxb2 19. Rc1 Rd8 { [%csl Rd1][%cal Gd8d4] }) 13... Bb7 14. Bg2 Na6 { [%cal Gc3b5,Ge1g1,Ga2a4,Gc3e4] } 15. Nxb5 (15. a4 O-O-O 16. axb5 cxb5 17. Bxb7+ Kxb7 18. Nxb5 Nb4 { [%cal Ga1a7,Gd1a4] } 19. Rxa7+ (19. O-O Nc6! 20. Qa4 Qh6 21. h4 Qxh4 22. Nd6+ Kc7 23. Nb5+ Kb8 24. gxh4 Rdg8+ 25. Kh2 Rxh4#) 19... Kb6 20. Qa4 (20. O-O Qh6 21. h4 Qxh4 22. gxh4 Rdg8+ 23. Kh2 Rxh4# { Does this work?? }) (20. Kf1 Qf5 21. Qa4 Qd3+ 22. Kg1 Qb1+ 23. Kg2 Qe4+) 20... Nd3+ 21. Kd2 Qxf2+ 22. Kc3 Qxb2+ 23. Kxc4 Rxd4+ 24. Nxd4 Ne5#) (15. O-O O-O-O { Would like more detail here. Extend this trainable. }) (15. Ne4 Qe7 16. O-O O-O-O 17. a4 f5 18. axb5 cxb5 19. Rxa6 Bxa6 20. Nc5 Qxc5 21. dxc5 Rxd1 22. Rxd1 b4 23. Ra1 Bb5 24. Rxa7 c3 25. bxc3 bxc3 26. Ra8+ Kc7 27. Ra7+ Kc8) 15... O-O-O { [%cal Gb5a7,Gd1a4] } 16. Nxa7+ (16. Qa4 cxb5 17. Bxb7+ Kxb7 18. Qxb5+ Ka8 19. Qc6+ Kb8 20. Qb5+ Ka8 21. Qxa6 Qf3 { [%cal Gf3h1,Gf3d1,Gf3b7] }) 16... Kb8 17. Nxc6+ Bxc6 18. Bxc6 Nb4 19. Be4 (19. Qa4 Nd3+ 20. Kd2 Qxf2+ 21. Kc3 Qxb2+ 22. Kxc4 Rxd4#) (19. Qf3 Nc2+ 20. Kd2 Qxf3 21. Bxf3 Nxd4 22. Be2 c3+ 23. bxc3 Nb3+ 24. Ke3 Nxa1 25. Rxa1 Rxh2 { [%cal Gd8d5,Gd5e5,Ge5f5,Gb8a7,Gb8c7,Rh2f2] }) 19... Rxd4 20. Qe2 Rxe4 21. Qxe4 Nd3+ *
+
+
+[Event "Blank Slate: Semi-Slav 2/20/25"]
+[Date "2025.02.20"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D45"]
+[Opening "Semi-Slav Defense: Accelerated Meran Variation"]
+[StudyName "Blank Slate"]
+[ChapterName "Semi-Slav 2/20/25"]
+[ChapterURL "https://lichess.org/study/UdIsZRro/kOkeLnYn"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[UTCDate "2025.02.20"]
+[UTCTime "22:59:26"]
+
+1. d4 d5 2. c4 c6 3. Nc3 Nf6 4. Nf3 e6 { [%cal Rc1g5,Ge2e3,Gg2g3,Gc4d5,Gd1c2] } 5. e3 (5. g3 dxc4 6. Bg2 (6. Ne5 { What if they do this first? }) 6... Nbd7 7. O-O b5 { [%cal Gc8b7,Gf8e7,Ge8g8,Ga7a6,Gc6c5] } 8. e4 Bb7 9. e5 Nd5 10. Ng5 h6 11. Nxe6 fxe6 12. Qh5+ Ke7 13. Ne4 Qe8 14. Bg5+ hxg5 15. Qxh8 Kd8 16. Nxg5 Kc8 { [%cal Gd5c7,Gc6c5] }) (5. Qc2 dxc4 6. e4 b5 { What happens here? }) 5... a6 { [%cal Gb2b3,Gc4c5,Gd1c2,Ga2a4] } 6. Bd3 (6. Qc2 c5 { [%csl Rc2] } 7. cxd5 exd5 8. Be2 Nc6 9. O-O Be6 10. Rd1 Nb4 11. Qd2 (11. Qb1 Qc8 { What happens now? } { [%csl Rb1][%cal Gc8f5,Gf5b1] }) 11... Ne4 12. Nxe4 dxe4 13. Ne5 cxd4 14. exd4 f6 15. Nc4 Rc8 16. b3 Nd5) (6. a4 c5 7. cxd5 exd5 8. Be2 Nc6 9. O-O Bd6 10. b3 cxd4 11. exd4 h6) (6. c5 b6 7. cxb6 Qxb6 { [%cal Ga6a5,Gc8a6,Gb8d7,Gf8e7,Ge8g8,Gc6c5] }) (6. b3 Bb4! 7. Bd2 (7. Bb2 Qa5 8. Rc1 Ne4 9. Qc2 Qxa2 10. Bd3 Bxc3+ 11. Bxc3 Qxc2 12. Rxc2 Nxc3 13. Rxc3 Nd7 { [%cal Ge8g8,Ge6e5] }) 7... Nbd7 8. Bd3 O-O 9. O-O Bd6 { [%cal Ge6e5] } 10. e4 (10. Qc2 e5 11. cxd5 cxd5 12. e4 dxe4 13. Nxe4 Nxe4 14. Bxe4 h6) 10... dxc4 11. bxc4 e5 12. c5 Bc7 13. Na4 exd4 { [%cal Gf8e8,Gd7f8,Gf8g6] }) 6... dxc4 7. Bxc4 b5 8. Bd3 (8. Bb3) 8... c5 9. O-O Bb7 { Did I give a longer line here? } { [%cal Gb8d7,Gf8d6] } *
+
+
+[Event "Blank Slate: English 3/13/25"]
+[Date "2025.03.13"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D10"]
+[Opening "Slav Defense"]
+[StudyName "Blank Slate"]
+[ChapterName "English 3/13/25"]
+[ChapterURL "https://lichess.org/study/UdIsZRro/A3SrcPmm"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[UTCDate "2025.03.13"]
+[UTCTime "17:38:24"]
+
+1. c4 c6 2. d4 (2. e4 d5 3. exd5 cxd5 4. d4 (4. cxd5 Nf6 5. Nc3 (5. Bb5+ Nbd7 6. Nc3 a6 7. Bxd7+ (7. Qa4 Rb8 8. Bxd7+ Bxd7 9. Qb3 e6) 7... Qxd7) (5. Qa4+ Nbd7 6. Nc3 g6 7. Nf3 Bg7 8. Bc4 O-O 9. d3 a6 10. Qa3 b6 11. O-O Bb7) 5... Nxd5 6. Nf3 Nc6 7. Bb5 g6 8. Qa4 Nb6 9. Bxc6+ bxc6 10. Qxc6+ Bd7 11. Qe4 Bg7) 4... Nf6 5. Nc3 Nc6 6. Nf3 a6 7. cxd5 (7. Bg5 Be6 8. c5 g6 9. Bxf6 exf6 10. Bd3 Bg7 11. O-O O-O 12. a3 g5 { [%cal Gg5g4,Gf6f5] }) 7... Nxd5 8. Bc4 Be6 9. O-O (9. Qb3 Na5 { [%cal Ga5b3,Ga5c4] } 10. Qa4+ b5 11. Nxb5 axb5 12. Bxb5+ Bd7 13. Ne5 Nc6) (9. Bb3 Na5 10. Bc2 g6 { [%cal Gf8g7] } 11. O-O Bg7 12. Ng5 Nxc3 13. bxc3 Bd5 { [%cal Ge8g8,Ga8c8,Gc8c3] }) 9... Nxc3) (2. Nf3 d5 3. e3 (3. g3 Bg4 4. Ne5 (4. Bg2 e6 5. O-O Nf6 6. cxd5 Bxf3 7. Bxf3 cxd5 { [%cal Gb8c6] }) 4... Bf5 5. Qb3 Qb6 6. cxd5 (6. Qxb6 axb6 7. cxd5 Be4 { [%cal Ge4h1,Ge4d5] } 8. f3 Bxd5 9. Nc3 f6 10. Nxd5 cxd5 11. Nd3 e6 { [%cal Gb8c6,Ge8f7] }) 6... Qxb3 7. axb3 Bxb1 (7... Be4 8. dxc6 Bxh1 9. Rxa7 Rxa7 10. c7) 8. Rxb1 (8. dxc6 Nxc6 9. Nxc6 Be4) 8... cxd5 { [%cal Ge7e6] }) 3... Nf6 4. Nc3 a6 5. d4 (5. b3 Bf5 6. Be2 (6. Bb2 e6 7. Be2 h6 8. O-O Nbd7)) 5... e6) (2. Nc3 d5 3. d4) (2. g3) 2... d5 *
+
+
+[Event "Blank Slate: 1. Nf3 3/20/25"]
+[Date "2025.03.20"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A07"]
+[Opening "King's Indian Attack: Keres Variation"]
+[StudyName "Blank Slate"]
+[ChapterName "1. Nf3 3/20/25"]
+[ChapterURL "https://lichess.org/study/UdIsZRro/k9n4n6aA"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[UTCDate "2025.03.20"]
+[UTCTime "23:46:11"]
+
+1. Nf3 (1. b3 d5 2. Bb2 Bg4 3. h3 (3. f3 Bf5 4. e4 dxe4 5. Qe2 exf3 6. Qb5+ Bd7 7. Qxb7 f2+ 8. Kxf2 Nc6) (3. Nf3 Nd7 4. e3 Ngf6 5. Be2 e6 { [%cal Gf8d6,Ge8g8] }) 3... Bh5 4. g4 Bg6 5. Bg2 h5 6. g5 e5 7. Bxe5 Nc6 8. Bb2 Qxg5 9. Nf3 Qe7 { [%cal Ge8c8] }) (1. f4 d5 2. Nf3 Bg4 3. e3 Nd7 4. Be2 Ngf6) 1... d5 2. g3 (2. e3) 2... c6 3. Bg2 Bg4 4. O-O Nd7 5. c4 (5. d4 e6 6. c4 Ngf6 7. Nc3 Be7 8. Qb3 Qb6) (5. d3 e6 6. Nbd2 Bd6 7. e4 Ne7 8. Qe1 O-O 9. e5 Bc7 { [%cal Gc6c5,Ge7c6] }) 5... Bxf3 6. Bxf3 Ne5 { [%cal Ge5f3,Ge5c4] } 7. Bg2 (7. cxd5 Nxf3+ 8. exf3 Qxd5 9. Nc3 Qd7) (7. Qb3 Qb6) 7... Nxc4 8. d3 Nb6 *
+
+

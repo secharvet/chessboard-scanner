@@ -1,0 +1,546 @@
+[Event "QGD: Theory"]
+[Date "2025.06.19"]
+[Result "*"]
+[Variant "Standard"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[ECO "D35"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Positional Variation"]
+[StudyName "QGD Exchange"]
+[ChapterName "QGD: Theory"]
+[ChapterURL "https://lichess.org/study/agvtJPGT/UY9B9ejC"]
+[UTCDate "2025.06.19"]
+[UTCTime "14:13:01"]
+
+1. d4 d5 (1... Nf6 2. c4 e6 3. Nc3 { If you want to use the Exchange as your primary weapon vs. the QGD, it's best to play Nc3 here, so if Black plays d5 you can transpose to your repertoire. } (3. Nf3 d5 { This is the problem with starting with Nf3. This is a different variation of the QGD where you've already committed your knight to f3. }) 3... Bb4) 2. c4 e6 3. Nc3 Nf6 4. cxd5 exd5 5. Bg5 (5. e3?! { It's better to get the bishop outside the pawn chain first. } { [%cal Rc1e3] }) 5... Be7 6. e3 O-O 7. Bd3 c6 8. Qc2 { [%cal Gg5f6,Rc2h7] } 8... Nbd7 9. Nge2 { The idea of this setup is to play f3 and e4. } { [%cal Gf2f3,Ge3e4] } 9... Re8 10. O-O Nf8 11. f3 { [%cal Ge3e4] } *
+
+
+[Event "Candidates qf Kasparov-Beliavsky+4-1=4"]
+[Site "Moscow"]
+[Date "1983.03.09"]
+[Round "5"]
+[White "Kasparov, Garry"]
+[Black "Beliavsky, Alexander G"]
+[Result "1-0"]
+[WhiteElo "2690"]
+[BlackElo "2570"]
+[Annotator "Kasparov,G"]
+[Variant "Standard"]
+[ECO "D35"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Positional Variation"]
+[StudyName "QGD Exchange"]
+[ChapterName "Kasparov, Garry - Beliavsky, Alexander G"]
+[ChapterURL "https://lichess.org/study/agvtJPGT/gtVQleMA"]
+[ChapterMode "gamebook"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. cxd5 exd5 5. Bg5 Be7 6. e3 h6 7. Bh4 O-O 8. Bd3 b6 9. Nf3 Bb7 10. O-O c5 11. Ne5 Nbd7 12. Bf5! Nxe5 (12... cxd4 13. Nxd7! Nxd7 14. Bxe7 Qxe7 15. Qxd4 $36) 13. dxe5 Ne8?! (13... Ne4? 14. Nxd5!) (13... Nh7) 14. Bg3 Nc7?! (14... g6 15. Bc2 $16) 15. Qg4 Qe8?! (15... Bc8 16. Rad1 Bxf5 (16... Be6? 17. Nxd5! Bxd5 18. e4) 17. Qxf5 d4 { mit der Hoffnung, sich in einem Endspiel mit einem Minusbauern retten zu
+können. }) 16. Bd7! Qd8 (16... Bc8 17. e6! $18) 17. Rad1 h5 18. Qh3 h4 19. Bf4 Bg5 20. Bf5 g6 (20... Bxf4 21. exf4 d4 22. Ne4 Bxe4 23. Bxe4 Rb8 24. f5 Re8 25. f4 f6 26. Qxh4 fxe5 27. f6!) 21. Ne4! Bxf4 22. exf4 gxf5 23. Qxf5! dxe4 24. Qg4+! Kh7 25. Rxd8 Rfxd8 26. Qxh4+ Kg8 27. Qe7! (27. f5? Rd7! $13) 27... e3! 28. Re1! exf2+?! (28... Rd2 29. f3!) (28... e2 29. f3 Rd1 30. Kf2 Ba6 31. Qxc7 Rad8 32. Qxa7! (32. Rxe2?! Bxe2 33. Kxe2 R1d2+ 34. Ke3 R8d3+ 35. Ke4 Rd4+ 36. Kf5 Rxg2 { mit realen Remischancen }) 32... Rxe1 33. Qxa6 Rdd1 34. Qxb6 $18) 29. Kxf2 Rd2+ 30. Re2 Rxe2+ 31. Kxe2 Ba6+ 32. Kf2 Ne6 33. f5 Nd4 34. e6 Rf8 35. Qg5+ Kh7 36. e7 Re8 37. f6 Ne6 38. Qh5+ Kg8 { 1-0 White wins. } (38... Qg4+ 39. Kh7 Qxe6 (39... Qa4 40. Nc7 Qd7) 40. fxe6 f7) 1-0
+
+
+[Event "Moscow TV"]
+[Site "Moscow"]
+[Date "1987.??.??"]
+[White "Kasparov, Garry"]
+[Black "Beliavsky, Alexander G"]
+[Result "1-0"]
+[WhiteElo "2735"]
+[BlackElo "2585"]
+[Variant "Standard"]
+[ECO "D35"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Positional Variation"]
+[StudyName "QGD Exchange"]
+[ChapterName "Kasparov, Garry - Beliavsky, Alexander G"]
+[ChapterURL "https://lichess.org/study/agvtJPGT/eg9TOFqq"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[ChapterMode "gamebook"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. cxd5 exd5 5. Bg5 Be7 6. e3 c6 7. Qc2 O-O 8. Bd3 Nbd7 9. Nge2 Re8 10. O-O Nf8 11. a3 g6 12. b4 Ne6 13. Bh4 a6 14. f3 Ng7 15. Bf2 h5 16. h3 Nh7 17. e4 Bh4 18. Qd2 Bxf2+ 19. Rxf2 h4 20. Bc2 Nh5 21. Nf4 Nxf4 22. Qxf4 Qf6 23. Qd2 Be6 24. e5 Qg7 25. Na4 Nf8 26. Qg5 Qh8 27. f4 f6 28. exf6 Bf7 29. Bxg6 Bxg6 30. f5 Kf7 31. Nc5 Bh5 32. Nxb7 Nd7 33. Nd6+ Kf8 34. Qxh4 Nxf6 35. g4 Re7 36. g5 Rd7 37. gxf6 Rxd6 38. Re1 Re8 39. Rxe8+ Kxe8 40. Re2+ Kf8 41. Re6 Qh6 42. Rxd6 Qe3+ 43. Qf2 Qxh3 44. Qf4 { 1-0 White wins. } 1-0
+
+
+[Event "Zuerich sim"]
+[Site "Zuerich"]
+[Date "1988.??.??"]
+[White "Kasparov, Garry"]
+[Black "Joris, Pierre"]
+[Result "1-0"]
+[WhiteElo "2750"]
+[Variant "Standard"]
+[ECO "D35"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Positional Variation"]
+[StudyName "QGD Exchange"]
+[ChapterName "Kasparov, Garry - Joris, Pierre"]
+[ChapterURL "https://lichess.org/study/agvtJPGT/KhTPnvNX"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[ChapterMode "gamebook"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. cxd5 exd5 5. Bg5 Be7 6. e3 c6 7. Qc2 O-O 8. Bd3 Nbd7 9. Nge2 h6 10. Bh4 Re8 11. O-O Qc7 12. Bg3 Bd6 13. Nb5 Qd8 14. Nxd6 Re7 15. Nf5 Re8 16. Bh4 Nf8 17. Neg3 Bxf5 18. Nxf5 Ne6 19. f4 Rc8 20. Rf3 Kh8 21. Rh3 Rg8 22. Rf1 Qf8 23. Bxf6 { 1-0 White wins. } 1-0
+
+
+[Event "World Cup"]
+[Site "Belfort"]
+[Date "1988.06.??"]
+[Round "10"]
+[White "Kasparov, Garry"]
+[Black "Andersson, Ulf"]
+[Result "1-0"]
+[WhiteElo "2750"]
+[BlackElo "2605"]
+[Variant "Standard"]
+[ECO "D36"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Reshevsky Variation"]
+[StudyName "QGD Exchange"]
+[ChapterName "Kasparov, Garry - Andersson, Ulf"]
+[ChapterURL "https://lichess.org/study/agvtJPGT/Zcsoebaj"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[ChapterMode "gamebook"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 d5 4. cxd5 exd5 5. Bg5 c6 6. Qc2 Be7 7. e3 Nbd7 8. Bd3 O-O 9. Nge2 Re8 10. O-O Nf8 11. f3 Be6 12. Rae1 Rc8 13. Kh1 N6d7 14. Bxe7 Rxe7 15. Nf4 Rc7 16. Qf2 Nf6 17. e4 dxe4 18. fxe4 Rcd7 19. d5 cxd5 20. Bb5 Rc7 21. exd5 Bd7 22. Be2 Rc8 23. Qxa7 b6 24. Qa6 Ne4 25. d6 Nxd6 26. Nfd5 Re5 27. Qxb6 Nf5 28. Qxd8 Rxd8 29. Bd3 Rxe1 30. Rxe1 Ng6 31. a4 Nd4 32. a5 Kf8 33. Bxg6 hxg6 34. Rd1 Ne6 35. Nb6 Bc6 36. Rxd8+ Nxd8 37. b4 Ne6 38. b5 { 1-0 White wins. } 1-0
+
+
+[Event "World Cup"]
+[Site "Reykjavik"]
+[Date "1988.10.??"]
+[Round "2"]
+[White "Kasparov, Garry"]
+[Black "Andersson, Ulf"]
+[Result "1-0"]
+[WhiteElo "2760"]
+[BlackElo "2625"]
+[Variant "Standard"]
+[ECO "D36"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Reshevsky Variation"]
+[StudyName "QGD Exchange"]
+[ChapterName "Kasparov, Garry - Andersson, Ulf"]
+[ChapterURL "https://lichess.org/study/agvtJPGT/3zLtf3KM"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[ChapterMode "gamebook"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 d5 4. cxd5 exd5 5. Bg5 c6 6. Qc2 Be7 7. e3 Nbd7 8. Bd3 Nh5 9. Bxe7 Qxe7 10. Nge2 g6 11. O-O-O Nb6 12. Ng3 Ng7 13. Kb1 Bd7 14. Rc1 O-O-O 15. Na4 Nxa4 16. Qxa4 Kb8 17. Rc3 b6 18. Ba6 Ne6 19. Rhc1 Rhe8 20. Qb3 Qd6 21. Nf1 Ka8 22. Nd2 Nc7 23. Bf1 Ne6 24. g3 Rc8 25. Bg2 Rc7 26. h4 Rd8 27. Nf3 Bc8 28. Qa4 c5 29. Ng5 Nxg5 30. hxg5 Bb7 31. dxc5 bxc5 32. Qf4 Qxf4 33. gxf4 d4 34. Rxc5 Rxc5 35. Bxb7+ Kxb7 36. Rxc5 dxe3 37. fxe3 Re8 38. Re5 Rxe5 39. fxe5 Kc6 40. Kc2 Kd5 41. b4 Kxe5 42. a4 f6 43. gxf6 Kxf6 44. b5 { 1-0 White wins. } 1-0
+
+
+[Event "Olympiad-28"]
+[Site "Thessaloniki"]
+[Date "1988.11.15"]
+[Round "3"]
+[White "Kasparov, Garry"]
+[Black "Campora, Daniel Hugo"]
+[Result "1-0"]
+[WhiteElo "2595"]
+[WhiteTeam "Soviet Union"]
+[BlackElo "2370"]
+[BlackTeam "Argentina"]
+[Variant "Standard"]
+[ECO "D35"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Chameleon Variation"]
+[StudyName "QGD Exchange"]
+[ChapterName "Kasparov, Garry - Campora, Daniel Hugo"]
+[ChapterURL "https://lichess.org/study/agvtJPGT/5wIzb9lB"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[ChapterMode "gamebook"]
+
+1. c4 Nf6 2. d4 e6 3. Nc3 d5 4. cxd5 exd5 5. Bg5 Be7 6. e3 O-O 7. Bd3 Nbd7 8. Nge2 Re8 9. Qc2 Nf8 10. O-O-O Be6 11. Kb1 Ng4 12. Bxe7 Qxe7 13. Nf4 Nf6 14. f3 c5 15. g4 cxd4 16. exd4 Qd6 17. Qd2 a6 18. Nce2 Re7 19. Ng3 Ng6 20. Ng2 Nd7 21. Rhg1 Ree8 22. Rdf1 Ngf8 23. Ne3 Kh8 24. Nh5 g6 25. f4 gxh5 26. f5 h4 27. fxe6 fxe6 28. g5 Re7 29. Ng4 Rg7 30. Nh6 Qb6 31. g6 hxg6 32. Nf7+ Kg8 33. Qh6 Rh7 34. Rxg6+ Nxg6 35. Qxg6+ Rg7 36. Qh6 { 1-0 White wins. } 1-0
+
+
+[Event "World Cup"]
+[Site "Barcelona"]
+[Date "1989.03.??"]
+[Round "16"]
+[White "Kasparov, Garry"]
+[Black "Spassky, Boris Vasilievich"]
+[Result "1-0"]
+[WhiteElo "2775"]
+[BlackElo "2580"]
+[Variant "Standard"]
+[ECO "D35"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Positional Variation"]
+[StudyName "QGD Exchange"]
+[ChapterName "Kasparov, Garry - Spassky, Boris Vasilievich"]
+[ChapterURL "https://lichess.org/study/agvtJPGT/iRZBcLw8"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[ChapterMode "gamebook"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 d5 4. cxd5 exd5 5. Bg5 c6 6. e3 Be7 7. Bd3 Nbd7 8. Nge2 Nh5 9. Bxe7 Qxe7 10. g4 Nhf6 11. Ng3 h6 12. h3 Nb6 13. Qd2 Bd7 14. b3 g6 15. a4 a5 16. f3 h5 17. g5 Qd6 18. Nge2 Ng8 19. e4 Ne7 20. Qf4 Qxf4 21. Nxf4 O-O 22. Nce2 h4 23. Ng2 Kg7 24. Kd2 dxe4 25. fxe4 Rad8 26. Raf1 Rh8 27. Ne3 Rh5 28. Rfg1 Bc8 29. Kc3 Rhh8 30. Nf4 Rd6 31. Bc2 Na8 32. Nc4 Rdd8 33. Nxa5 Nc7 34. Rf1 b5 35. Rf3 Rhf8 36. Rhf1 bxa4 37. bxa4 f6 38. Nxg6 Nxg6 39. gxf6+ Kh6 40. Nxc6 Rd6 41. d5 Rxc6+ 42. dxc6 Ne6 43. e5 Nxe5 44. Re3 Ng6 45. f7 Ngf4 46. Bb3 Kg7 47. Re4 Rxf7 48. Bxe6 Nxe6 49. Rxf7+ Kxf7 50. Rxh4 Ke7 51. Rh8 Ba6 52. h4 { 1-0 White wins. } 1-0
+
+
+[Event "Asiag Ludi Univ sim"]
+[Site "Asiag"]
+[Date "1991.09.10"]
+[Round "1"]
+[White "Kasparov, Garry"]
+[Black "Viaggi, Giovanni"]
+[Result "1-0"]
+[WhiteElo "2800"]
+[Variant "Standard"]
+[ECO "D35"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Positional Variation"]
+[StudyName "QGD Exchange"]
+[ChapterName "Kasparov, Garry - Viaggi, Giovanni"]
+[ChapterURL "https://lichess.org/study/agvtJPGT/iT3AVmc2"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[ChapterMode "gamebook"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. cxd5 exd5 5. Bg5 Be7 6. e3 O-O 7. Bd3 h6 8. Bh4 Nbd7 9. Nge2 Re8 10. Qc2 c5 11. dxc5 Nxc5 12. O-O Nxd3 13. Qxd3 Be6 14. Nf4 Qa5 15. Rfd1 Rad8 16. h3 Rd7 17. a3 Red8 18. b4 Qc7 19. Rac1 Qe5 20. Nfe2 Qh5 21. Bg3 Ne4 22. Nf4 Qf5 23. Nxe6 Qxe6 24. Ne2 Nxg3 25. Nxg3 Bf6 26. Ne2 Qe4 27. Kf1 Qe5 28. Kg1 Qe4 29. Rc2 Qxd3 30. Rxd3 Kf8 31. f4 Ke7 32. Kf2 g6 33. g4 Bg7 34. Kf3 f5 35. gxf5 gxf5 36. Ng3 Ke6 37. b5 a6 38. bxa6 bxa6 39. Rb3 Bf8 40. a4 a5 41. Rb5 Bb4 42. Ne2 Kf6 43. Nd4 Rg8 44. Rc6+ Rd6 45. Rxd6+ { 1-0 White wins. } 1-0
+
+
+[Event "Cordoba sim"]
+[Site "Cordoba"]
+[Date "1992.??.??"]
+[White "Kasparov, Garry"]
+[Black "Sanchez Lopez, Jose Luis"]
+[Result "1-0"]
+[WhiteElo "2790"]
+[BlackElo "2050"]
+[Variant "Standard"]
+[ECO "D35"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Positional Variation"]
+[StudyName "QGD Exchange"]
+[ChapterName "Kasparov, Garry - Sanchez Lopez, Jose Luis"]
+[ChapterURL "https://lichess.org/study/agvtJPGT/SGR5jMuA"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[ChapterMode "gamebook"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 d5 4. cxd5 exd5 5. Bg5 Nbd7 6. e3 Be7 7. Bd3 O-O 8. Nge2 Re8 9. Qc2 Nf8 10. O-O c6 11. f3 Be6 12. Rae1 Rc8 13. Kh1 g6 14. Nf4 a6 15. Bh6 c5 16. Qf2 cxd4 17. exd4 Qd7 18. Re5 Bd6 19. Qh4 Qd8 20. Bg5 Be7 21. Rfe1 Rc6 22. R5e2 h6 23. Qxh6 Ng4 24. Bxe7 Nxh6 25. Bxd8 Rxd8 26. g4 Kg7 27. Kg2 b5 28. h4 Ng8 29. Nb1 Nf6 30. Nd2 N6d7 31. Nb3 Rdc8 32. g5 Rd6 33. Kg3 Rcc6 34. h5 gxh5 35. Nxh5+ Kg8 36. f4 Nb6 37. Nf6+ Kg7 38. Ne8+ Kg8 { 1-0 White wins. } 1-0
+
+
+[Event "London sim"]
+[Site "London"]
+[Date "1993.??.??"]
+[White "Kasparov, Garry"]
+[Black "NN"]
+[Result "1-0"]
+[WhiteElo "2805"]
+[Variant "Standard"]
+[ECO "D35"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Positional Variation"]
+[StudyName "QGD Exchange"]
+[ChapterName "Kasparov, Garry - NN"]
+[ChapterURL "https://lichess.org/study/agvtJPGT/sRNt2YW9"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[ChapterMode "gamebook"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. cxd5 exd5 5. Bg5 Be7 6. e3 O-O 7. Bd3 Nbd7 8. Nge2 c6 9. Qc2 Re8 10. O-O Nf8 11. f3 a5 12. Kh1 b5 13. e4 dxe4 14. fxe4 Ng4 15. Bd2 Qc7 16. e5 Nxe5 17. dxe5 Qxe5 18. Ng3 Bg5 19. Rae1 Qc7 20. Rxe8 Be7 21. Bxh7+ Kh8 22. Rxf7 Bb7 23. Rxa8 Bxa8 24. Nf5 Nxh7 25. Nxe7 Qd8 26. Qg6 Qd4 27. Rf4 Qd8 28. Qxh7+ Kxh7 29. Rh4# { 1-0 White wins. } 1-0
+
+
+[Event "London Simpson's sim"]
+[Site "London"]
+[Date "1993.02.??"]
+[White "Kasparov, Garry"]
+[Black "Colet Court"]
+[Result "1-0"]
+[WhiteElo "2805"]
+[Variant "Standard"]
+[ECO "D35"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Positional Variation"]
+[StudyName "QGD Exchange"]
+[ChapterName "Kasparov, Garry - Colet Court"]
+[ChapterURL "https://lichess.org/study/agvtJPGT/VhvnodY4"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[ChapterMode "gamebook"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. cxd5 exd5 5. Bg5 Be7 6. e3 O-O 7. Bd3 Be6 8. Nge2 Nbd7 9. O-O b6 10. Qc2 c5 11. Rad1 c4 12. Bf5 Bxf5 13. Qxf5 h6 14. Bf4 Nb8 15. Be5 Qd7 16. Qf3 Re8 17. Bxf6 Bxf6 18. Nxd5 Nc6 19. Nxf6+ gxf6 20. Ng3 Qe6 21. d5 Ne5 22. dxe6 Nxf3+ 23. gxf3 Rxe6 24. Nf5 Kh7 25. Rfe1 Rg8+ 26. Kf1 Ra8 27. Rd7 Kg6 28. e4 Ree8 29. Ke2 Rf8 30. Rg1+ Kh7 31. Rg7+ Kh8 32. Rdxf7 Rxf7 33. Rxf7 Rc8 34. Rxf6 Rc7 35. Rxh6+ Kg8 36. e5 Rf7 37. Rg6+ Kh7 38. Rg5 Rf8 39. f4 a5 40. Ke3 b5 41. Ke4 b4 42. Rg7+ Kh8 43. Rc7 c3 44. bxc3 bxc3 45. Rxc3 Re8 46. Nd6 Re7 47. f5 Kg8 48. f6 Rd7 49. Kd5 Kh7 50. e6 Rd8 51. e7 Rb8 52. f7 Kg7 53. e8=Q Rxe8 54. fxe8=Q Kf6 55. Rg3 a4 56. Qf7# { 1-0 White wins. } 1-0
+
+
+[Event "PCA-World-ch Kasparov-Short +6-1=13"]
+[Site "London"]
+[Date "1993.10.09"]
+[Round "15"]
+[White "Kasparov, Garry"]
+[Black "Short, Nigel D"]
+[Result "1-0"]
+[WhiteElo "2805"]
+[BlackElo "2655"]
+[Annotator "Ftacnik,L"]
+[Variant "Standard"]
+[ECO "D35"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Positional Variation"]
+[StudyName "QGD Exchange"]
+[ChapterName "Kasparov, Garry - Short, Nigel D"]
+[ChapterURL "https://lichess.org/study/agvtJPGT/j9U7KCtE"]
+[ChapterMode "gamebook"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. cxd5 exd5 5. Bg5 Be7 6. e3 O-O 7. Bd3 Nbd7 8. Nge2 Re8 9. O-O Nf8 10. b4! a6 (10... Bxb4? 11. Bxf6 gxf6 12. Nxd5! (12. Qb3 Bxc3 13. Nxc3 c6 14. Qd1 f5 15. Qh5 Qf6 { Gutman,L-Razuvajev,Y/URS/1976/ }) 12... Qxd5 13. Qa4 Bh3 14. Nf4 Qa5 15. Qxa5 Bxa5 16. Nxh3 Ne6 17. Rfd1 $16) 11. a3 c6 12. Qc2 g6 13. f3 Ne6 14. Bh4 Nh5 15. Bxe7 Rxe7 (15... Qxe7!?) 16. Qd2 b6? 17. Rad1 Bb7 18. Bb1 Nhg7 19. e4 Rc8 20. Ba2 Rd7 21. Nf4 Nxf4 (21... dxe4 22. Nxe6 Nxe6 23. fxe4 Nxd4 24. Qf2 c5 (24... Ne6 25. Rxd7 Qxd7 26. Na4 $16) 25. Bxf7+ Kg7 26. Be6 Nxe6 27. Qf6+ Kh6 (27... Qxf6 28. Rxd7+ $18) 28. Qxe6 $16) 22. Qxf4 Ne6 23. Qe5 Re7 24. Qg3 Qc7 25. Qh4 Ng7 26. Rc1 Qd8 27. Rfd1 Rcc7 28. Na4 dxe4? (28... Rcd7 29. e5 f5 30. exf6 Rf7 31. Bb1 Ne8 32. Re1 $16) 29. fxe4 Qe8? (29... Rcd7 30. Kh1! (30. Nc3 Rxd4 31. Bxf7+ Kxf7 32. Qf2+ Nf5 33. exf5 c5 $132) 30... Ne6 (30... c5!? $16) 31. Bxe6 Rxe6 32. Qxd8+ Rxd8 33. e5 $16) 30. Nc3 Rcd7 31. Qf2 Ne6 32. e5 c5 33. bxc5 bxc5 34. d5 Nd4 35. Ne4 Qd8 36. Nf6+ Kg7 37. Nxd7 Rxd7 38. Rxc5 Ne6 39. Rcc1 { 1-0 White wins. } 1-0
+
+
+[Event "Corfu sim"]
+[Site "Corfu"]
+[Date "1996.10.04"]
+[White "Kasparov, Garry"]
+[Black "Agistriotis, Mihail"]
+[Result "1-0"]
+[WhiteElo "2785"]
+[BlackElo "2090"]
+[Variant "Standard"]
+[ECO "D35"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Positional Variation"]
+[StudyName "QGD Exchange"]
+[ChapterName "Kasparov, Garry - Agistriotis, Mihail"]
+[ChapterURL "https://lichess.org/study/agvtJPGT/O5APgbKj"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[ChapterMode "gamebook"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. cxd5 exd5 5. Bg5 Be7 6. e3 O-O 7. Bd3 b6 8. Nf3 Be6 9. O-O c5 10. Ne5 Nfd7 11. Bxe7 Qxe7 12. f4 Nf6 13. Qf3 Rd8 14. f5 Bc8 15. g4 Ne8 16. Nxd5 Rxd5 17. Qxd5 Bb7 18. Qb3 Nc6 19. Nxf7 Qxe3+ 20. Rf2 Kf8 21. Qe6 Qxe6 22. fxe6 Ke7 23. dxc5 bxc5 24. Bxh7 Kxe6 25. Re1+ Kd5 26. Be4+ Kc4 27. Bxc6 Bxc6 28. Ne5+ Kb5 29. Nxc6 Kxc6 30. Rf8 { 1-0 White wins. } 1-0
+
+
+[Event "Corfu sim"]
+[Site "Corfu"]
+[Date "1996.10.04"]
+[White "Kasparov, Garry"]
+[Black "Nathanail, Emanouel"]
+[Result "1-0"]
+[WhiteElo "2785"]
+[BlackElo "2245"]
+[Variant "Standard"]
+[ECO "D35"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Positional Variation"]
+[StudyName "QGD Exchange"]
+[ChapterName "Kasparov, Garry - Nathanail, Emanouel"]
+[ChapterURL "https://lichess.org/study/agvtJPGT/2AcDETOK"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[ChapterMode "gamebook"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 d5 4. cxd5 exd5 5. Bg5 Be7 6. e3 c6 7. Bd3 Nbd7 8. Nge2 Nf8 9. f3 Ne6 10. Bh4 Ne4 11. Bxe7 Nxc3 12. bxc3 Qxe7 13. O-O O-O 14. e4 g6 15. Qd2 Ng7 16. Rae1 Bd7 17. Ng3 Qd6 18. f4 f5 19. exf5 Bxf5 20. Nxf5 Nxf5 21. Re5 Qd7 22. Rfe1 Rae8 23. Bxf5 gxf5 24. Qd3 Rxe5 25. Rxe5 Rf6 26. h3 b5 27. Qe2 Kf8 28. Qh5 Qf7 29. Qh4 Qg6 30. Kh2 a6 31. Qe1 Qf7 32. Qc1 Qd7 33. Qe1 Qf7 34. a4 bxa4 35. Qd1 Re6 36. Qxa4 Rxe5 37. fxe5 Qc7 38. Qc2 Qd7 39. Qe2 Qe6 40. Qxa6 Kg7 41. Kg3 Kf7 42. Kf4 { 1-0 White wins. } 1-0
+
+
+[Event "Internet blitz 5'"]
+[Site "ICC INT"]
+[Date "1998.05.31"]
+[White "Kasparov, Garry"]
+[Black "Serper, Grigory"]
+[Result "1-0"]
+[WhiteElo "2825"]
+[BlackElo "2540"]
+[Variant "Standard"]
+[ECO "D35"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Positional Variation"]
+[StudyName "QGD Exchange"]
+[ChapterName "Kasparov, Garry - Serper, Grigory"]
+[ChapterURL "https://lichess.org/study/agvtJPGT/zFuU6d8a"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[ChapterMode "gamebook"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. cxd5 exd5 5. Bg5 Be7 6. e3 O-O 7. Bd3 Nbd7 8. Nge2 Re8 9. O-O Nf8 10. b4 a6 11. a3 c6 12. f3 Nh5 13. Bxe7 Rxe7 14. Qd2 f5 15. Rae1 Nf6 16. Nc1 Bd7 17. Bb1 Qc7 18. Nd3 Ng6 19. f4 Ne4 20. Qc1 Rf8 21. Nxd5 { 1-0 White wins. } 1-0
+
+
+[Event "Colmar sim"]
+[Site "Colmar"]
+[Date "1998.07.09"]
+[White "Kasparov, Garry"]
+[Black "Brellmann, L."]
+[Result "1-0"]
+[WhiteElo "2825"]
+[Variant "Standard"]
+[ECO "D35"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Positional Variation"]
+[StudyName "QGD Exchange"]
+[ChapterName "Kasparov, Garry - Brellmann, L."]
+[ChapterURL "https://lichess.org/study/agvtJPGT/u7jZd9Pa"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[ChapterMode "gamebook"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. cxd5 exd5 5. Bg5 Nbd7 6. e3 Be7 7. Bd3 O-O 8. Nge2 c6 9. O-O Re8 10. f3 h6 11. Bh4 b6 12. Qc2 a5 13. e4 Ba6 14. Bxa6 Rxa6 15. e5 Nh7 16. Bf2 Ra8 17. f4 Rc8 18. Ng3 Ndf8 19. Rad1 Ne6 20. f5 Nc7 21. f6 Bf8 22. fxg7 Bxg7 23. Nf5 Rf8 24. Bh4 Ng5 25. Ne2 f6 26. Qxc6 Nce6 27. Qd6 Re8 28. Qxd8 Rcxd8 29. Nxg7 Nxg7 30. Rxf6 Re6 31. Rff1 Rc6 32. Bxg5 hxg5 33. Nc3 Rg6 34. Nb5 { 1-0 White wins. } 1-0
+
+
+[Event "Colmar sim"]
+[Site "Colmar"]
+[Date "1998.07.09"]
+[White "Kasparov, Garry"]
+[Black "Martin, L."]
+[Result "1-0"]
+[WhiteElo "2825"]
+[BlackElo "1690"]
+[Variant "Standard"]
+[ECO "D35"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Positional Variation"]
+[StudyName "QGD Exchange"]
+[ChapterName "Kasparov, Garry - Martin, L."]
+[ChapterURL "https://lichess.org/study/agvtJPGT/ydXa9hIN"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[ChapterMode "gamebook"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. cxd5 exd5 5. Bg5 Be7 6. e3 O-O 7. Bd3 Nc6 8. Nge2 Be6 9. O-O h6 10. Bh4 Qd7 11. a3 Bf5 12. Bxf6 Bxf6 13. Bxf5 Qxf5 14. Qb3 Rab8 15. Nxd5 Qe6 16. Nef4 Qd6 17. Nxf6+ Qxf6 18. Nd3 b6 19. Rac1 Rbc8 20. Qa4 Ne7 21. Qxa7 Nd5 22. Qa6 Rfe8 23. Qc4 Ne7 24. Rc2 Ng6 25. Qc6 Qf5 26. Rd1 Re7 27. Qf3 Qxf3 28. gxf3 Rd8 29. Rc6 Nh4 30. f4 Nf5 31. Rdc1 Rdd7 32. Ne5 Rd6 33. Rxc7 Rxc7 34. Rxc7 f6 35. Nd3 Kf8 36. b4 Ne7 37. b5 Nd5 38. Rc8+ Kf7 39. f5 Ne7 40. Rc7 Rd5 41. Nb4 Rd8 42. Nc6 Re8 43. d5 Kf8 44. Nxe7 Rxe7 45. d6 { 1-0 White wins. } 1-0
+
+
+[Event "BT Wireplay sim"]
+[Site "London"]
+[Date "1998.12.17"]
+[White "Kasparov, Garry"]
+[Black "Thiruchelvam, Murugan"]
+[Result "1-0"]
+[WhiteElo "2815"]
+[BlackElo "2020"]
+[Variant "Standard"]
+[ECO "D35"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Positional Variation"]
+[StudyName "QGD Exchange"]
+[ChapterName "Kasparov, Garry - Thiruchelvam, Murugan"]
+[ChapterURL "https://lichess.org/study/agvtJPGT/WwZWUnpX"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[ChapterMode "gamebook"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. cxd5 exd5 5. Bg5 Be7 6. e3 O-O 7. Bd3 h6 8. Bh4 b6 9. Nf3 Bb7 10. O-O Nbd7 11. Qc2 c5 12. Rad1 c4 13. Bf5 a6 14. Ne5 b5 15. a3 Nb6 16. f4 Qd6 17. Qf2 Bc8 18. Bb1 Na4 19. Bxf6 Bxf6 20. Qc2 Rd8 21. Qh7+ Kf8 22. Nxd5 Qxd5 23. Be4 Qe6 24. Bxa8 Bd7 25. Bf3 Nxb2 26. Bg4 Qd6 27. Bxd7 Nxd1 28. Nc6 g6 29. Nxd8 Qxd7 30. f5 Nxe3 31. Qxh6+ Bg7 32. Qxe3 Bxd4 33. Ne6+ fxe6 34. fxe6+ Kg8 35. exd7 Bxe3+ 36. Kh1 Bg5 37. Rd1 Bd8 38. Re1 { 1-0 White wins. } 1-0
+
+
+[Event "Besancon sim2"]
+[Site "Besancon"]
+[Date "1999.08.23"]
+[White "Kasparov, Garry"]
+[Black "Kharmadi, Ismael"]
+[Result "1-0"]
+[WhiteElo "2812"]
+[Variant "Standard"]
+[ECO "D35"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Positional Variation"]
+[StudyName "QGD Exchange"]
+[ChapterName "Kasparov, Garry - Kharmadi, Ismael"]
+[ChapterURL "https://lichess.org/study/agvtJPGT/w4z6sWph"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[ChapterMode "gamebook"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. cxd5 exd5 5. Bg5 Bb4 6. e3 Nc6 7. Bd3 Qe7 8. Ne2 Bd7 9. a3 Bd6 10. Nxd5 Qd8 11. Bxf6 gxf6 12. Nec3 Be6 13. Qf3 Be7 14. Nf4 Qd7 15. Nxe6 fxe6 16. Qh5+ Kd8 17. O-O-O Qd6 18. Bc4 Kc8 19. d5 Qc5 20. Qg4 Ne5 21. Qxe6+ Kd8 22. Ba2 Ke8 23. f4 Qxe3+ 24. Kb1 Qxf4 25. d6 cxd6 26. Nd5 { 1-0 White wins. } 1-0
+
+
+[Event "KasparovChess GP g/60"]
+[Site "Internet"]
+[Date "2000.02.12"]
+[Round "1.1"]
+[White "Kasparov, Garry"]
+[Black "Barua, Dibyendu"]
+[Result "1-0"]
+[WhiteElo "2851"]
+[BlackElo "2555"]
+[Annotator "Baburin,A"]
+[Variant "Standard"]
+[ECO "D36"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Reshevsky Variation"]
+[StudyName "QGD Exchange"]
+[ChapterName "Kasparov, Garry - Barua, Dibyendu"]
+[ChapterURL "https://lichess.org/study/agvtJPGT/kcVlcLIr"]
+[ChapterMode "gamebook"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. cxd5 exd5 5. Bg5 c6 6. Qc2 Be7 7. e3 Nbd7 8. Bd3 O-O 9. Nge2 Re8 10. O-O Nf8 11. f3 Ng6 12. Rad1 h6 { This is a relatively
+new try. } (12... Be6 { where the following game is
+important for the theory: } 13. Kh1 Rc8 14. e4 dxe4 15. fxe4 Ng4 16. Bc1 c5 17. Bb5 Qc7 18. Nf4 cxd4 19. Bxe8 dxc3 20. Bb5 cxb2 21. Qxb2 Nxf4 22. Bxf4 Qc2 23. Qxc2 Rxc2 24. Rd2 Rxd2 25. Bxd2 Bc5 $17 { Gulko-Sturua, Elista 1998. }) (12... Nh5 { but here Black has more problems, for example: } 13. Bxe7 Qxe7 14. e4 dxe4 15. fxe4 Be6 16. e5 c5 17. d5 Bg4 18. e6 $40 { Yakovich-Ahlander, Stockholm 1999. }) 13. Bxf6 (13. Bxh6 gxh6 14. Bxg6 fxg6 15. Qxg6+ Kh8 16. Nf4 Bf8 17. e4 $13) 13... Bxf6 14. Bxg6 fxg6 15. e4 g5 16. e5 $146 (16. a4 Be6 17. a5 Be7 18. f4 gxf4 19. Nxf4 Bg5 20. Nxe6) 16... Be7 17. f4 gxf4 18. Nxf4 Rf8 19. Ng6 Rxf1+ 20. Rxf1 Be6 21. Ne2 { Here knights are superior to
+bishops. Besides, White can choose which bishop to exchange and which to leave
+to Black. } 21... Qd7 22. h4 Re8 23. Ng3 Bf7?! (23... Bd8!? { - this bishop might be
+needed to protect the d6-square and to attack the d4-pawn. }) 24. Nxe7+ Rxe7 25. Nf5 $16 { [%csl Rd6] } 25... Re6 26. Nd6 Bg6 27. Qc3 Rxd6 { It is unlikely that Black
+could put up with such a knight for too long! } 28. exd6 Qxd6 29. Qa3 Qb8 30. Qe7 Qg3 31. Rf3? { Here White missed a clear win. The rest of the game is
+less interesting for this pawn formation. } (31. Rf8+ Kh7 32. Qd8! $18 Be4 33. Rh8+ Kg6 34. Qe8+ Kf5 35. Qf7+ Kg4 36. Qxg7+) 31... Qg4 32. Qf8+ Kh7 33. Qf4 Qd7 34. Rg3 Be4 35. Qe5 Qf7 36. h5 Qd7 37. b4 a6 38. a4 Kg8 39. a5 Kh7 40. Kf2 Kg8 41. Qb8+ Kh7 42. Qf8 Bc2 43. Qf4 Be4 44. Qe5 Kg8 45. Ke3 Kh7 46. Ke2 Kg8 47. Qb8+ Kh7 48. Qf8 Bc2 49. Kd2 Be4 50. Kc1 Qc7 51. Rg4 Qd7 52. Rf4 Bxg2 53. Qf5+ Qxf5 54. Rxf5 Kg8 55. Kd2 Bh3 56. Rf4 Be6 57. Ke3 Bf7 58. Rf5 Kf8 59. Re5 Be8 60. Kf4 Bf7 61. Kg4 Be8 62. Kg3 Bf7 63. Kf4 Be8 64. Kf5 Bxh5 65. Ke6 Bg6 66. Re3 Bc2 67. Rf3+ Kg8 68. b5 cxb5 69. Kxd5 b4 70. Kc4 b3 71. Kc3 g5 72. d5 g4 73. Rf4 h5 74. d6 { 1-0 White wins. } 1-0
+
+
+[Event "Kasparov Chess sim"]
+[Site "New York"]
+[Date "2000.03.14"]
+[Round "6"]
+[White "Kasparov, Garry"]
+[Black "Stoffers, Jeffrey"]
+[Result "1-0"]
+[WhiteElo "2851"]
+[Variant "Standard"]
+[ECO "D35"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Positional Variation"]
+[StudyName "QGD Exchange"]
+[ChapterName "Kasparov, Garry - Stoffers, Jeffrey"]
+[ChapterURL "https://lichess.org/study/agvtJPGT/sBseSAPx"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[ChapterMode "gamebook"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. cxd5 exd5 5. Bg5 Be7 6. e3 Ne4 7. Bxe7 Nxc3 8. Bxd8 Nxd1 9. Bxc7 Nxb2 10. Rb1 Nc4 11. Bxc4 dxc4 12. Ne2 O-O 13. Nc3 b6 14. d5 Na6 15. Bd6 Rd8 16. Ba3 Bb7 17. e4 f6 18. Ke2 Nc7 19. Rhd1 Ba6 20. Ke3 Kf7 21. g4 g5 22. h4 h6 23. Rh1 Re8 24. f3 Bb7 25. hxg5 fxg5 26. d6 Nd5+ 27. Nxd5 Bxd5 28. Rxh6 c3 29. d7 Re6 30. Rh7+ Kg8 31. Rbh1 Bc6 32. Rh8+ Kf7 33. Rxa8 Bxd7 34. Rh7+ { 1-0 White wins. } 1-0
+
+
+[Event "Patras sim"]
+[Site "Patras"]
+[Date "2001.07.22"]
+[White "Kasparov, Garry"]
+[Black "Athanasiou, Georgios"]
+[Result "1-0"]
+[WhiteElo "2838"]
+[Variant "Standard"]
+[ECO "D35"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Positional Variation"]
+[StudyName "QGD Exchange"]
+[ChapterName "Kasparov, Garry - Athanasiou, Georgios"]
+[ChapterURL "https://lichess.org/study/agvtJPGT/O2WNGOjI"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[ChapterMode "gamebook"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. cxd5 exd5 5. Bg5 Be7 6. e3 Nc6 7. Bd3 Be6 8. Nge2 Qd7 9. O-O O-O-O 10. Rc1 h6 11. Bf4 Bd6 12. Na4 Bg4 13. f3 Bh5 14. Bb5 Bxf4 15. exf4 Qd6 16. Bxc6 bxc6 17. Qd3 Kd7 18. f5 Ke8 19. g4 Bxg4 20. fxg4 Nxg4 21. Ng3 a5 22. Rfe1+ Kf8 23. Nc5 Rb8 24. Rc2 Rb5 25. Rce2 Kg8 26. Qf3 { 1-0 White wins. } 1-0
+
+
+[Event "Patras sim"]
+[Site "Patras"]
+[Date "2001.07.22"]
+[White "Kasparov, Garry"]
+[Black "Boudalakis, Filippos"]
+[Result "1-0"]
+[WhiteElo "2838"]
+[Variant "Standard"]
+[ECO "D35"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Positional Variation"]
+[StudyName "QGD Exchange"]
+[ChapterName "Kasparov, Garry - Boudalakis, Filippos"]
+[ChapterURL "https://lichess.org/study/agvtJPGT/RcRnEe4m"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[ChapterMode "gamebook"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. cxd5 exd5 5. Bg5 Be7 6. e3 c6 7. Bd3 O-O 8. Nge2 Nbd7 9. O-O Re8 10. f3 Nf8 11. Bh4 c5 12. Kh1 Ne6 13. dxc5 Bxc5 14. Bxf6 Qxf6 15. Nxd5 Qxb2 16. Nec3 Qa3 17. f4 Bd7 18. Rf3 Nf8 19. Rg3 Kh8 20. Ne4 Rac8 21. Ng5 Be6 22. Bxh7 g6 23. Nxe6 Rxe6 24. f5 Re5 25. fxg6 fxg6 26. Bxg6 Bd6 27. Bc2 Rxc2 28. Nf6 { 1-0 White wins. } 1-0
+
+
+[Event "Patras sim"]
+[Site "Patras"]
+[Date "2001.07.22"]
+[White "Kasparov, Garry"]
+[Black "Diamantopoulos, Nikolaos"]
+[Result "1-0"]
+[WhiteElo "2838"]
+[Variant "Standard"]
+[ECO "D35"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Positional Variation"]
+[StudyName "QGD Exchange"]
+[ChapterName "Kasparov, Garry - Diamantopoulos, Nikolaos"]
+[ChapterURL "https://lichess.org/study/agvtJPGT/MUeNTmH2"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[ChapterMode "gamebook"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. cxd5 exd5 5. Bg5 Be7 6. e3 h6 7. Bh4 Bf5 8. Qb3 b6 9. Bxf6 Bxf6 10. Nxd5 O-O 11. Nf3 c6 12. Nxf6+ Qxf6 13. Be2 Nd7 14. O-O Be4 15. Nd2 Bd5 16. Bc4 Qg5 17. Bxd5 cxd5 18. Nf3 Qf5 19. Rac1 Rfc8 20. h3 Nf6 21. Ne5 Ne4 22. Qxd5 Rxc1 23. Qxa8+ Kh7 24. Rxc1 Qxf2+ 25. Kh1 Qxe3 26. Ra1 Nf2+ 27. Kh2 Qf4+ 28. Kg1 Qxd4 29. Nf3 Qxb2 30. Rf1 { 1-0 White wins. } 1-0
+
+
+[Event "Eurotel Trophy"]
+[Site "Prague"]
+[Date "2002.04.28"]
+[Round "1.1"]
+[White "Kasparov, Garry"]
+[Black "Milos, Gilberto"]
+[Result "1-0"]
+[WhiteElo "2838"]
+[BlackElo "2574"]
+[Variant "Standard"]
+[ECO "D35"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Positional Variation"]
+[StudyName "QGD Exchange"]
+[ChapterName "Kasparov, Garry - Milos, Gilberto"]
+[ChapterURL "https://lichess.org/study/agvtJPGT/jkxlWDjJ"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[ChapterMode "gamebook"]
+
+1. c4 e6 2. Nc3 d5 3. d4 Nf6 4. cxd5 exd5 5. Bg5 Be7 6. e3 O-O 7. Bd3 Nbd7 8. Nge2 Re8 9. O-O c6 10. f3 Nb6 11. b3 a6 12. Kh1 Nfd7 13. Bf4 Bg5 14. Qd2 Nf8 15. Rae1 Bxf4 16. Nxf4 Ne6 17. Nh5 g6 18. Ng3 c5 19. dxc5 Nxc5 20. Bb1 Bd7 21. Rd1 Bc6 22. Rfe1 Qf6 23. Nge2 Re7 24. Nd4 Rae8 25. e4 dxe4 26. Nxc6 bxc6 27. Bxe4 Re6 28. Rf1 Qe5 29. Bb1 Nc8 30. b4 Rd6 31. Qc1 Rxd1 32. Rxd1 Ne6 33. Ne4 Rd8 34. Rxd8+ Nxd8 35. Bd3 Nd6 36. Nc5 Qd4 37. a3 Ne6 38. Bxa6 Nxc5 39. bxc5 Nf5 40. Bb7 Qa4 41. Bc8 Nd4 42. h3 h5 43. Qd2 Qc4 44. Qe3 Qxc5 45. Ba6 Qd5 46. Bd3 c5 47. Qe4 Qg5 48. f4 Qg3 49. Bc4 Nf5 50. Qe8+ Kg7 51. Qxf7+ Kh6 52. Qf8+ Ng7 53. Qh8# { 1-0 White wins. } 1-0
+
+
+[Event "Sao Paulo 450 anniv sim"]
+[Site "Sao Paulo"]
+[Date "2004.08.21"]
+[White "Kasparov, Garry"]
+[Black "Terao, Juliana Sayumi"]
+[Result "1-0"]
+[WhiteElo "2817"]
+[BlackElo "1992"]
+[Variant "Standard"]
+[ECO "D35"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Positional Variation"]
+[StudyName "QGD Exchange"]
+[ChapterName "Kasparov, Garry - Terao, Juliana Sayumi"]
+[ChapterURL "https://lichess.org/study/agvtJPGT/k3Pc6nc7"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[ChapterMode "gamebook"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. cxd5 exd5 5. Bg5 Be7 6. e3 O-O 7. Bd3 h6 8. Bh4 Be6 9. Nge2 Nbd7 10. O-O c5 11. Rc1 Rc8 12. Bb1 a6 13. Nf4 cxd4 14. exd4 Nb6 15. Qd3 Ne4 16. Nxe6 fxe6 17. Bxe7 Qxe7 18. Nxe4 dxe4 19. Qxe4 Qf6 20. Rxc8 Rxc8 { 1-0 White wins. } 1-0
+
+

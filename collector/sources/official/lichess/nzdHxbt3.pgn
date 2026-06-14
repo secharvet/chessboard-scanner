@@ -1,0 +1,16 @@
+[Event "Us open blitz: Rosen-Corrales"]
+[Date "2019.08.10"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "Us open blitz"]
+[ChapterName "Rosen-Corrales"]
+[ChapterURL "https://lichess.org/study/nzdHxbt3/DC1e04YY"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.08.10"]
+[UTCTime "18:00:58"]
+
+1. d4 Nf6 2. Bf4 d6 (2... g6 3. Nc3) 3. Nc3 g6 4. e4 Bg7 5. Qd2 O-O 6. O-O-O c6 7. Kb1 (7. f3 b5) 7... b5 8. f3 a5 9. Bh6 b4 10. Nce2 a4 11. h4 b3 12. cxb3 axb3 13. a3 { [%csl Gc6,Gd4][%cal Gh3h5,Gh5f7,Gf8f7,Gf7h7,Gb6b3,Gg2g4,Gh7h5] } 13... Qa5 14. Nc3 Nh5 15. Nge2 Bxh6 16. Qxh6 Ba6 (16... Nd7 17. g4 Ng7 18. h5 g5 19. e5 f6) 17. g4 Bxe2 18. Nxe2 Ng7 19. h5 g5 20. Nc3 Nd7 21. e5 f6 22. Bd3 f5 23. Qxg5 Kh8 24. h6 Ne6 { [%cal Gg5e7] } 25. Qxe7 *
+
+

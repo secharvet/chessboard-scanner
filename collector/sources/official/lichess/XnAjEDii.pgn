@@ -1,0 +1,32 @@
+[Event "2 Knights Attack Against the French Defense: Two Knights Attack Overview"]
+[Date "2019.01.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C00"]
+[Opening "French Defense: Two Knights Variation"]
+[StudyName "2 Knights Attack Against the French Defense"]
+[ChapterName "Two Knights Attack Overview"]
+[ChapterURL "https://lichess.org/study/XnAjEDii/XI2CYZcS"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.01.12"]
+[UTCTime "15:02:46"]
+
+1. e4 e6 2. Nf3 d5 3. Nc3 d4 (3... dxe4) (3... Nf6) (3... Bb4) (3... Nc6) *
+
+
+[Event "2 Knights Attack Against the French Defense: 2 Knights Attack: 3...Nf6 Mainline"]
+[Date "2019.01.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C00"]
+[Opening "French Defense: Two Knights Variation"]
+[StudyName "2 Knights Attack Against the French Defense"]
+[ChapterName "2 Knights Attack: 3...Nf6 Mainline"]
+[ChapterURL "https://lichess.org/study/XnAjEDii/LzekVdvV"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.01.12"]
+[UTCTime "15:04:07"]
+
+1. e4 e6 2. Nf3 d5 3. Nc3 Nf6 4. e5 Nfd7 5. d4 { [%csl Ge5,Gd4] } 5... c5 6. dxc5 Nc6 { [%csl Ge5][%cal Gc6e5] } 7. Bf4 Bxc5 8. Bd3 f6 (8... O-O? 9. Bxh7+ Kxh7 10. Ng5+ Kg8 11. Qh5 Re8 12. Qxf7+ Kh8 13. Qh5+ Kg8 14. Qh7+ Kf8 15. Qh8+ Ke7 16. Qxg7#) (8... Qb6 { [%csl Gb6] } 9. O-O Qxb2 10. Nb5 O-O 11. Bxh7+! Kxh7 12. Ng5+ Kg8 13. Qh5 (13. Qd3!! { Provoking black to play g6 and obstructing the b1-h7 diagonal (so black's queen can't defend) } { [%csl Gh7][%cal Gd3h7] } 13... g6 (13... f5 14. Qh3 Rf7 15. Qh7+ Kf8 { [%csl Ge6] } 16. Nxe6+ $18) 14. Qh3 { [%csl Gh7][%cal Gh3h7,Rg7g6,Rc2h7] } 14... Bxf2+ 15. Kh1) 13... Qxc2 { [%csl Gh7][%cal Gc2h7] }) 9. exf6 Nxf6 10. Qe2 { [%csl Gc1,Ge5][%cal Ge1c1,Gf3e5,Gg2g4,Gg4g5] } *
+
+

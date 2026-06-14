@@ -1,0 +1,54 @@
+[Event "EricRosen's Study: how to beat london"]
+[Date "2021.10.09"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "EricRosen's Study"]
+[ChapterName "how to beat london"]
+[ChapterURL "https://lichess.org/study/Kn4TuPFI/wRcxamd3"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.10.09"]
+[UTCTime "17:13:39"]
+
+1. d4 Nf6 2. Bf4 c5 (2... e6 3. e3 d5 4. Nf3 Bd6 { [%csl Gd6] } 5. Bg3 c5 6. c3 Nc6 7. Nbd2 O-O (7... b6 { [%csl Gb5] } 8. Bb5 Bb7 9. Qa4) 8. Bd3 b6 { [%csl Ge4,Ge2,Ge5,Gf4][%cal Ge3e4,Gd1e2,Ga1d1,Gf3e5,Gf2f4] } 9. O-O Bb7 10. Qe2) 3. e3 (3. c3 Qb6 4. Qc2 (4. Qb3)) 3... d5 (3... Qb6 4. Na3 Qxb2 5. Nb5) 4. Nf3 Nc6 5. c3 (5. Nbd2 Qb6 (5... cxd4 6. exd4 Bf5) 6. dxc5 Qxb2 7. Rb1) 5... Qb6 { See model games } { [%csl Gb6,Gc5,Gc6,Gd5,Gf6] } 6. Qb3 c4 7. Qc2 (7. Qxb6 axb6 8. Nbd2 Bf5) 7... Bf5 8. Qc1 (8. Qxf5 Qxb2) 8... e6 $15 { positional option } { [%csl Ge6,Gd8,Gb5,Rf4,Gg6,Gh6,Rh7][%cal Ge7e6,Gb6d8,Gb7b5,Ga7a5,Gf8d6,Gg6b1,Gh7h6,Rf5h7] } (8... Nh5 9. Nh4 (9. Bg3)) *
+
+
+[Event "Import"]
+[Site "https://lichess.org/P6yHO3gm"]
+[Date "2017.02.13"]
+[White "Gonzalez Zamora, Juan Carlos (2564)"]
+[Black "Laznicka, Viktor (2690)"]
+[Result "0-1"]
+[TimeControl "-"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "D00"]
+[Opening "Queen's Pawn Game: Accelerated London System"]
+[StudyName "EricRosen's Study"]
+[ChapterName "Gonzalez Zamora, Juan Carlos (2564) - Laznicka, Viktor (2690)"]
+[ChapterURL "https://lichess.org/study/Kn4TuPFI/EFTjStzO"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 d5 2. Bf4 Nf6 3. e3 c5 4. c3 Nc6 5. Nf3 Qb6 6. Qb3 c4 7. Qc2 (7. Qxb6 axb6) 7... Bf5 8. Qc1 Nh5 9. Bg3 f6 10. Nbd2 e5 { [%cal Gd4e5,Gf3e5,Gg3e5] } 11. dxe5 Nxg3 12. hxg3 Nxe5 13. Nxe5 (13. Nd4 Bd3 14. Bxd3 Nxd3+ { [%cal Gd3e1,Gd3c1] }) 13... fxe5 { [%csl Gf2,Ge3] } 14. e4 Bg6 15. exd5 Bc5 { [%csl Gf2][%cal Gb6f2] } 16. Nxc4 Bxf2+ 17. Ke2 { [%csl Ge2] } 17... Qf6 18. Nxe5 O-O 19. Nxg6 Rae8+ 20. Kd3 Qxg6+ 21. Kc4 Re4+ 22. Kb3 Qb6+ 23. Kc2 Be3 24. Qe1 Rf2+ 25. Qxf2 Bxf2 26. Rd1 Bxg3 27. Bd3 Rh4 28. Rxh4 Bxh4 29. d6 Qc6 30. Kb3 Qd7 31. a4 a6 32. c4 Bf2 33. Be4 Bc5 34. Rd5 Bxd6 35. a5 Qe7 36. Rd4 g6 37. Bd5+ Kg7 38. Re4 Qc7 39. Re6 Qc5 40. Kc2 Qb4 41. Kb1 Bc5 { 0-1 White resigns. } 0-1
+
+
+[Event "Import"]
+[Site "https://lichess.org/z5CEmgRx"]
+[Date "2017.09.28"]
+[White "Petkov, V. (2474)"]
+[Black "Nikolov, Mo (2559)"]
+[Result "0-1"]
+[TimeControl "-"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "EricRosen's Study"]
+[ChapterName "Petkov, V. (2474) - Nikolov, Mo (2559)"]
+[ChapterURL "https://lichess.org/study/Kn4TuPFI/VJ0GeWyv"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 Nf6 2. Bf4 d5 3. e3 c5 4. c3 Nc6 5. Nd2 Bf5 6. Ngf3 Qb6 7. Qb3 c4 8. Qxb6 axb6 9. a3 b5 10. Rc1 h6 { [%csl Gb5,Gh6][%cal Gb6b5,Gh7h6] } 11. h3 e6 12. Be2 { [%csl Ga4,Rb2][%cal Gf6d7,Gd7b6,Gb6a4] } 12... Nd7 13. g4 Bh7 14. Bd1 Nb6 { [%csl Gd1] } 15. Bc2 (15. O-O Na4 { [%csl Ga4] } 16. Bxa4 bxa4 { [%csl Gb5,Rb2,Rh8,Yb6][%cal Ga8a5,Ga5b5,Gf1e1,Ge1e2,Yh8a8,Ya8a6,Ya6b6,Gb6b2] }) 15... Bxc2 16. Rxc2 { [%csl Ra3,Ra1][%cal Ga8a1] } 16... b4 17. O-O (17. cxb4 Nxb4 { [%csl Rd3][%cal Gb4d3] } 18. axb4 Ra1+ { [%cal Ga1h1] }) 17... b3 (17... bxa3 18. bxa3 { [%csl Rb6,Rb7][%cal Gf8a3,Ga8a3,Gf1b1,Gc2b2,Gb1b7,Rb7b6] }) 18. Rcc1 Na4 19. Rb1 Bxa3 20. bxa3 Nxc3 { [%csl Gb3,Gc4,Ra3,Gb5,Ge2,Gb1][%cal Gb7b5,Gc3e2,Gc3b1] } 21. Rb2 Ne2+ 22. Kg2 Nxf4+ 23. exf4 Rxa3 { [%csl Gc4,Gb3,Gd2] } 24. Rc1 Ra2 25. Rbb1 Na5 26. Nf1 b5 27. f5 O-O 28. Ne5 b4 29. Ne3 b2 30. Re1 c3 31. Nd7 Rc8 32. Nb6 Rc6 33. Nexd5 Rxb6 34. Nxb6 c2 35. Kf3 Nb3 { 0-1 White resigns. } 0-1
+
+

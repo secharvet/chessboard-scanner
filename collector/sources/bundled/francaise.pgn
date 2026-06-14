@@ -1,0 +1,15 @@
+[Event "Défense Française — Classique"]
+[Site "Bundled"]
+[Result "*"]
+
+1. e4 e6 {Contrôle de d5.}
+2. d4 d5 {Centre fermé.}
+3. Nc3 Nf6 {Développement classique.}
+4. e5 Nfd7 {Pion avancé, cavalier recule.}
+5. f4 c5 {Contre au centre.}
+6. Nf3 Nc6 {Développement.}
+7. Be3 cxd4 {Ouverture partielle.}
+8. Nxd4 Bc5 {Fou actif.}
+9. Qd2 O-O {Roque.}
+10. O-O-O a6 {Prépare ...b5.}
+*

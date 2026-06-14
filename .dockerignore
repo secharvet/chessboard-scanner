@@ -1,0 +1,31 @@
+# Build context — ce qui n'a pas besoin d'être envoyé au daemon Docker
+node_modules
+.git
+.cursor
+agent-transcripts
+screenshots
+data/pgn/*.pgn
+!data/pgn/.gitkeep
+*.md
+.env
+
+# Outils de dev
+tests
+scripts
+Makefile
+package.json
+package-lock.json
+
+# Infra
+compose.yaml
+compose.dev.yaml
+docker-compose.yml
+docker
+!docker/web/package.json
+!docker/web/nginx.conf
+
+# Évite toute collision : vendor/ est construit par l'étape npm
+vendor
+
+# Contenu non-servi
+collector

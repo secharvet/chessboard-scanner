@@ -1,0 +1,45 @@
+[Event "Live Chess - chess"]
+[Site "Chess.com"]
+[Date "2023.12.12"]
+[White "Magnus Carlsen"]
+[Black "Eric Rosen"]
+[Result "1-0"]
+[WhiteElo "3317"]
+[WhiteTitle "GM"]
+[BlackElo "2694"]
+[BlackTitle "IM"]
+[TimeControl "180+1"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+[Variant "Standard"]
+[ECO "B20"]
+[Opening "Sicilian Defense: Wing Gambit, Marshall Variation"]
+[StudyName "Eric Rosen vs Magnus Carlsen (12/12 Titled Tuesday)"]
+[ChapterName "Magnus Carlsen vs Eric Rosen"]
+[ChapterURL "https://lichess.org/study/5LFUFDZ6/BJSsfrc4"]
+
+1. e4 c5 2. b4 cxb4 3. a3 d5 4. exd5 Qxd5 5. Nf3 e5 6. c4 Qe6 7. d4 exd4+ 8. Be2 Nc6 9. O-O Nf6 10. Re1 Be7 11. Bd3 Qd7 12. axb4 O-O 13. b5 Nb4 14. Ba3 Bc5 15. Bf1 a5 16. Nbd2 Rd8 17. Nb3 b6 18. Nfxd4 Bb7 19. Nxc5 bxc5 20. Nb3 Qc7 21. Qc1 Ng4 22. f4 a4 23. Nd2 Qxf4 24. Nf3 Qxc1 25. Raxc1 Bxf3 26. gxf3 Nf6 27. Red1 Kf8 28. f4 Rxd1 29. Rxd1 Ke7 30. Bg2 Rd8 31. Re1+ Kd6 32. Bb2 Nd3 33. Rd1 Kc7 34. Bc3 Ng4 35. Ba5+ Kc8 36. Bxd8 Nb2 37. b6 Nxd1 38. b7+ Kxd8 39. b8=Q+ Ke7 40. Qc7+ Kf6 41. Qd6+ Kf5 42. Qxd1 Kxf4 43. Qxa4 f5 44. Qb5 Kg5 45. Qxc5 h5 46. Qe7+ Kg6 47. h4 f4 48. Qg5+ Kf7 49. Qxh5+ g6 50. Qxg4 Kg7 51. Qxf4 Kh7 52. Qf6 Kh6 53. Qh8# 1-0
+
+
+[Event "Late-Titled-Tuesday-Blitz-December-12-2023"]
+[Site "Chess.com"]
+[Date "2023.12.12"]
+[Round "5"]
+[White "MagnusCarlsen"]
+[Black "IMRosen"]
+[Result "1-0"]
+[WhiteElo "3317"]
+[BlackElo "2694"]
+[TimeControl "180+1"]
+[Termination "MagnusCarlsen won by checkmate"]
+[Variant "Standard"]
+[ECO "B20"]
+[Opening "Sicilian Defense: Wing Gambit, Marshall Variation"]
+[StudyName "Eric Rosen vs Magnus Carlsen (12/12 Titled Tuesday)"]
+[ChapterName "MagnusCarlsen - IMRosen"]
+[ChapterURL "https://lichess.org/study/5LFUFDZ6/vpKafXbz"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 { [%clk 0:03:01] } 1... c5 { [%clk 0:02:59] } 2. b4 { [%clk 0:02:57] } 2... cxb4 { [%clk 0:02:58] } 3. a3 { [%clk 0:02:58] } 3... d5 { [%csl Gd5] [%clk 0:02:58] } 4. exd5 { [%clk 0:02:55] } 4... Qxd5 { [%clk 0:02:58] } 5. Nf3 { [%clk 0:02:54] } (5. axb4 Qe5+ { [%csl Ga1][%cal Ge5e1,Ge5a1] }) 5... e5 { [%clk 0:02:45] } 6. c4 { took time here trying to find the least worst square for the uqeen } { [%csl Gd5,Ga5][%cal Gd5a5] [%clk 0:02:54] } 6... Qe6 { [%csl Gb4][%cal Gf8b4] [%clk 0:02:17] } (6... Qe4+ 7. Be2 { doesn't help black } { [%cal Gd2d3] }) (6... Qa5 7. Bb2 { [%csl Gb4,Ge5][%cal Ga3b4,Gf3e5] }) 7. d4!? { sacking another pawn! } { [%clk 0:02:49] } 7... exd4+ { [%clk 0:02:05] } 8. Be2 { [%clk 0:02:48] } 8... Nc6 { [%clk 0:02:05] } 9. O-O { [%clk 0:02:47] } 9... Nf6 { took wayyyyyy to much time to play this move } { [%csl Ge6,Ge8] [%clk 0:01:20] } 10. Re1 { [%clk 0:02:45] } 10... Be7 { [%clk 0:01:19] } 11. Bd3 { [%clk 0:02:44] } 11... Qd7 { [%clk 0:01:15] } 12. axb4 { [%clk 0:02:42] } 12... O-O { [%clk 0:01:11] } 13. b5 { [%clk 0:02:40] } 13... Nb4 { [%csl Gb4,Gd3] [%clk 0:01:05] } 14. Ba3 { [%csl Ge7][%cal Ga3e7] [%clk 0:02:40] } 14... Bc5 { [%clk 0:00:57] } 15. Bf1 { [%clk 0:02:37] } 15... a5 { [%clk 0:00:44] } 16. Nbd2 { [%clk 0:02:33] } 16... Rd8 { [%clk 0:00:44] } 17. Nb3 { [%clk 0:02:33] } 17... b6 { [%clk 0:00:39] } 18. Nfxd4? { played this move in 4 seconds, missing a very strong sequence of initiative } { [%clk 0:02:29] } (18. Nxc5 bxc5 19. Bxb4 { [%csl Ga8][%cal Ga1a8] } 19... cxb4 20. Ne5 { [%csl Gd7,Rd8,Rd4,Ra5][%cal Ge5d7,Ge5c6,Gc6d8] }) 18... Bb7 { [%csl Gb7] [%clk 0:00:37] } 19. Nxc5 { [%clk 0:02:24] } 19... bxc5 { [%clk 0:00:38] } 20. Nb3 { [%clk 0:02:19] } 20... Qc7 { [%csl Gc5,Gd1][%cal Gd8d1] [%clk 0:00:33] } 21. Qc1 { [%clk 0:02:15] } 21... Ng4 { [%csl Gh2][%cal Gc7h2] [%clk 0:00:31] } 22. f4 { [%clk 0:02:14] } 22... a4 { [%csl Rb3,Gd2,Rf4][%cal Gb3d2,Gc7f4] [%clk 0:00:31] } 23. Nd2 { [%clk 0:01:56] } 23... Qxf4 { [%clk 0:00:31] } (23... Qd6! 24. Bb2 a3 25. Bc3 Qxf4 26. Nf3 Qxc1 27. Raxc1 Nf6 $17) (23... Nxh2!! $19 24. Kxh2 Qxf4+ { [%csl Gh2,Rd2][%cal Gf4h2,Gd8d2,Gb7g2] }) 24. Nf3 { [%csl Rg1] [%clk 0:01:56] } 24... Qxc1 { [%clk 0:00:21] } (24... Qc7! { keep queens on the board favors black! I thought trading queens when being up a pawn was a more practical decision given the time situation }) 25. Raxc1 { [%clk 0:01:55] } 25... Bxf3 { [%clk 0:00:15] } 26. gxf3 { [%csl Ga3,Gf1] [%clk 0:01:55] } 26... Nf6 { [%clk 0:00:16] } 27. Red1 { [%clk 0:01:37] } 27... Kf8 { [%clk 0:00:10] } 28. f4 { [%clk 0:01:34] } 28... Rxd1 { [%clk 0:00:07] } 29. Rxd1 { [%clk 0:01:34] } 29... Ke7 { [%clk 0:00:07] } 30. Bg2 { [%clk 0:01:33] } 30... Rd8 { [%clk 0:00:07] } 31. Re1+ { [%clk 0:01:33] } 31... Kd6 { [%clk 0:00:07] } 32. Bb2 { [%clk 0:01:29] } 32... Nd3 { [%clk 0:00:03] } 33. Rd1 { [%cal Gd1d8] [%clk 0:01:29] } 33... Kc7 { [%csl Gd3][%cal Gd8d3] [%clk 0:00:04] } 34. Bc3 { black to move and find the only move to survive } { [%clk 0:01:29] } 34... Ng4 { [%clk 0:00:03] } (34... Kb6 35. Bf1 Ne4 36. Bxg7 Nef2 { [%csl Gd1,Gg8][%cal Gf2d1,Gd8g8] }) 35. Ba5+ { [%clk 0:01:29] } 35... Kc8 { [%clk 0:00:02] } 36. Bxd8 { [%clk 0:01:28] } 36... Nb2 { [%clk 0:00:03] } 37. b6 { [%clk 0:01:22] } 37... Nxd1 { [%clk 0:00:02] } 38. b7+ { [%clk 0:01:22] } 38... Kxd8 { [%clk 0:00:03] } (38... Kb8 39. Be7) 39. b8=Q+ { [%clk 0:01:22] } 39... Ke7 { [%clk 0:00:04] } 40. Qc7+ { [%clk 0:01:22] } 40... Kf6 { [%clk 0:00:04] } 41. Qd6+ { [%clk 0:01:22] } 41... Kf5 { [%clk 0:00:03] } 42. Qxd1 { [%clk 0:01:21] } 42... Kxf4 { [%clk 0:00:04] } 43. Qxa4 { [%clk 0:01:21] } 43... f5 { [%clk 0:00:04] } 44. Qb5 { [%clk 0:01:20] } 44... Kg5 { [%clk 0:00:03] } 45. Qxc5 { [%clk 0:01:21] } 45... h5 { [%clk 0:00:03] } 46. Qe7+ { [%clk 0:01:21] } 46... Kg6 { [%clk 0:00:02] } 47. h4 { [%clk 0:01:20] } 47... f4 { [%clk 0:00:02] } 48. Qg5+ { [%clk 0:01:20] } 48... Kf7 { [%clk 0:00:02] } 49. Qxh5+ { [%clk 0:01:20] } 49... g6 { [%clk 0:00:01] } 50. Qxg4 { [%clk 0:01:21] } 50... Kg7 { [%clk 0:00:02] } 51. Qxf4 { [%clk 0:01:21] } 51... Kh7 { [%clk 0:00:03] } 52. Qf6 { [%clk 0:01:20] } (52. Qg5 Kg7 53. Qxg6+ Kh8 54. c5) 52... Kh6 { [%clk 0:00:02] } 53. Qh8# { 1-0 White wins. } { [%clk 0:01:20] } 1-0
+
+

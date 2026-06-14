@@ -1,0 +1,114 @@
+[Event "Endgames: Intro: Hi"]
+[Date "2025.10.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Endgames"]
+[ChapterName "Intro: Hi"]
+[ChapterURL "https://lichess.org/study/8Agxd8aL/E5T38quv"]
+[Annotator "https://lichess.org/@/SABHNathanL"]
+[FEN "8/8/8/8/8/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.04"]
+[UTCTime "19:21:20"]
+[ChapterMode "gamebook"]
+
+ *
+
+
+[Event "Endgames: Pawn and bishop + knight endgame"]
+[Date "2025.10.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Endgames"]
+[ChapterName "Pawn and bishop + knight endgame"]
+[ChapterURL "https://lichess.org/study/8Agxd8aL/3MNgiDPg"]
+[Annotator "https://lichess.org/@/SABHNathanL"]
+[FEN "3kn3/8/4PP2/8/5B2/8/8/1K6 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.04"]
+[UTCTime "19:23:23"]
+[ChapterMode "gamebook"]
+
+1. Bc7+ Kxc7 2. f7 *
+
+
+[Event "Endgames: Pawns endgame [I played this]"]
+[Date "2025.10.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Endgames"]
+[ChapterName "Pawns endgame [I played this]"]
+[ChapterURL "https://lichess.org/study/8Agxd8aL/Z0A6gKWy"]
+[Annotator "https://lichess.org/@/SABHNathanL"]
+[FEN "8/2k3p1/5p2/P2P4/1P3P2/2K5/1P6/8 w - - 0 2"]
+[SetUp "1"]
+[UTCDate "2025.10.04"]
+[UTCTime "19:25:06"]
+[ChapterMode "gamebook"]
+
+2. Kc4 g5 3. b5 gxf4 4. b6+ Kc8 5. a6 Kb8 6. a7+ Kc8 7. a8=Q+ *
+
+
+[Event "Endgames: Rook endgame"]
+[Date "2025.10.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Endgames"]
+[ChapterName "Rook endgame"]
+[ChapterURL "https://lichess.org/study/8Agxd8aL/q3ZKIheI"]
+[Annotator "https://lichess.org/@/SABHNathanL"]
+[FEN "1k6/3r3r/4pp2/8/8/4P3/1PP1KP2/R7 b - - 0 7"]
+[SetUp "1"]
+[UTCDate "2025.10.04"]
+[UTCTime "19:27:06"]
+[ChapterMode "gamebook"]
+
+7... Rh2 8. e4 f5 9. exf5 exf5 10. b3 Re7+ 11. Kd1 Rh1+ 12. Kd2 Rxa1 *
+
+
+[Event "Endgames: Queen endgame don't save the queen"]
+[Date "2025.10.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Endgames"]
+[ChapterName "Queen endgame don't save the queen"]
+[ChapterURL "https://lichess.org/study/8Agxd8aL/n19Ai7Cd"]
+[Annotator "https://lichess.org/@/SABHNathanL"]
+[FEN "5k2/3q4/8/8/pP1r4/1pP5/4R1K1/8 b - - 0 13"]
+[SetUp "1"]
+[UTCDate "2025.10.04"]
+[UTCTime "19:30:38"]
+[ChapterMode "gamebook"]
+
+13... Qh3+ 14. Kxh3 a3 15. cxd4 a2 16. d5 b2 17. d6 a1=Q 18. d7 Qd1 19. d8=Q+ Qxd8 20. Rxb2 *
+
+
+[Event "Endgames: Outro bye"]
+[Date "2025.10.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Endgames"]
+[ChapterName "Outro bye"]
+[ChapterURL "https://lichess.org/study/8Agxd8aL/CHPCcZ4H"]
+[Annotator "https://lichess.org/@/SABHNathanL"]
+[FEN "ppPpPPpp/pPppPpPp/ppPPpppP/ppppppPP/PPPpPpPP/PpPpppPP/PPpppPPp/PPPPPPPP b - - 0 20"]
+[SetUp "1"]
+[UTCDate "2025.10.04"]
+[UTCTime "19:32:31"]
+[ChapterMode "gamebook"]
+
+ *
+
+

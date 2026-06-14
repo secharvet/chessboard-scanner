@@ -1,0 +1,847 @@
+[Event "🏆 Hyper-Accelerated Dragon Repertoire 🏆: Introduction"]
+[Site "https://lichess.org/study/CfSVAROH/Bh3yRd9A"]
+[Date "2020.06.30"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B27"]
+[Opening "Sicilian Defense: Hyperaccelerated Dragon"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "Introduction"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/bJoobgTj"]
+[UTCDate "2020.06.30"]
+[UTCTime "11:24:56"]
+
+{ Hello chess fans! This is my 5th opening repertoire on one of my early childhood favorites: The Hyper-Accelerated Dragon. ❤️Please give this study a like and share with others! }
+1. e4 c5 2. Nf3 g6 { The move order for the "Hyper-Accelerated Dragon". Although Black will often tranpose back to the more common Accelerated Dragon, this specific move order avoids the theoretical Rossolimo, which in my opinion scores well for the White side. } *
+
+
+[Event "🏆 Hyper-Accelerated Dragon Repertoire 🏆: ** Sample Game **"]
+[Site "https://lichess.org/study/CfSVAROH/kRsZb9Ub"]
+[Date "2020.06.30"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "** Sample Game **"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/yc4a3ubE"]
+[UTCDate "2020.06.30"]
+[UTCTime "11:24:56"]
+
+ *
+
+
+[Event "IMSA World Masters Rapid"]
+[Site "Hengshui CHN"]
+[Date "2019.5.15"]
+[Round "7.7"]
+[White "Bu, Xiangzhi"]
+[Black "Jones, Gawain C B"]
+[Result "0-1"]
+[WhiteElo "2729"]
+[BlackElo "2702"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B36"]
+[Opening "Sicilian Defense: Accelerated Dragon, Maróczy Bind"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "Bu, Xiangzhi - Jones, Gawain C B"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/abK0Mk00"]
+
+1. Nf3 c5 2. c4 g6 3. e4 Nc6 4. d4 cxd4 5. Nxd4 Nf6 6. Nc3 d6 7. Be2 Nxd4 8. Qxd4 Bg7 9. Be3 O-O 10. Qd2 Bd7 11. f3 Bc6 12. O-O a5 13. b3 Nd7 14. Rab1 Nc5 15. Rfd1 Qc7 16. Bf1 (16. Nd5 { Black is fine allowing Nd5 from White since he can just play Bxd5. In the Accelerated Dragon, it is the fianchetto bishop and Nc5 that are the strongest pieces in the endgames as you'll see below often. } 16... Bxd5 17. cxd5 Rfc8) 16... Rfc8 17. Kh1 Qb6 18. a3 Qc7 19. Nd5 Qd8 20. Bg5 Bxd5 21. exd5 a4 { Either White gets his pawn structure destroyed or allow Black's knight into b3, a relatively strong outpost. } 22. b4 Nb3 23. Qe3 Bf6 24. Re1 Bxg5 25. Qxg5 e5 26. Qe3 (26. Qxd8+ Rxd8 { This would lead to a favorable knight vs bishop endgame due to the permanent outpost on d4. }) 26... Qh4 27. Rbd1 Nd4 28. Bd3 b6 29. Kg1 Ra7 30. f4 Re7 31. fxe5 Rxe5 32. Qf2 Nf3+!! { Leads to series of forcing moves. } 33. gxf3 (33. Qxf3 Rxe1+) 33... Rg5+ 34. Kf1 Qh3+ 35. Ke2 Rg2 36. Rf1 Re8+ 37. Kd2 Qxf3! { No rush in taking the queen yet. It can't go anywhere, so calmly take more pawns. } 38. Qxg2 Qxg2+ 39. Kc3 Qa2 { And the next pawn (a3) falls too } 40. Rb1 (40. Ra1 Qb3+ 41. Kd2 Qb2+ 42. Bc2 Qd4+ 43. Bd3 Re3) 40... Re3 41. Rfd1 Qxh2 42. c5 dxc5 43. bxc5 bxc5 44. Kc4 Qd6 45. Rb5 Qf4+ 46. Kxc5 Qf3 47. Kd4 Re8 48. Rbb1 Qf6+ 49. Kc4 Rc8+ 50. Kb5 Qc3 51. Rb4 Qxa3 { 0-1 White resigns. } 0-1
+
+
+[Event "🏆 Hyper-Accelerated Dragon Repertoire 🏆: ** Sidelines **"]
+[Site "https://lichess.org/study/CfSVAROH/V5nKj23C"]
+[Date "2020.06.30"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "** Sidelines **"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/VwZUEsZn"]
+[UTCDate "2020.06.30"]
+[UTCTime "11:24:56"]
+
+ *
+
+
+[Event "🏆 Hyper-Accelerated Dragon Repertoire 🏆: Important Theme #1"]
+[Site "https://lichess.org/study/CfSVAROH/WRAn2xlG"]
+[Date "2020.06.30"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "Important Theme #1"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/BUWz7ns8"]
+[FEN "6k1/4pp2/3p1bp1/r1qP3p/2P5/5PP1/2R1Q1KP/5B2 b - - 5 41"]
+[SetUp "1"]
+[UTCDate "2020.06.30"]
+[UTCTime "11:24:56"]
+
+{ This position is from the game below: Yiping Lou vs Jun Xu. I mark this as an important theme in the Accelerated Dragon because of the essential pawn structure. Black's king is very safe and almost impossible to attack. So Black can play more actively with the queen and rook }
+41... Ra3 42. Ra2 Rb3 43. Ra8+ Kg7 { Black could then rush the h-pawn up the board to create some weaknesses and pressure the dark squares, at no risk of weakening his own kingside. } *
+
+
+[Event "🏆 Hyper-Accelerated Dragon Repertoire 🏆: Important Theme #2"]
+[Site "https://lichess.org/study/CfSVAROH/bXSua1Lu"]
+[Date "2020.06.30"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "Important Theme #2"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/neNTLokK"]
+[FEN "r4rk1/1p2ppbp/3pbnp1/q7/p1P1P3/2N1BP2/PP1QB1PP/2RR2K1 b - - 4 14"]
+[SetUp "1"]
+[UTCDate "2020.06.30"]
+[UTCTime "11:24:56"]
+
+{ This is a very common setup against the Maroczy Bind. Black wants to play a rook to c8 to add pressure to the c4 pawn. However, there is a correct rook to play to c8. }
+14... Rfc8! (14... Rac8? { Rac8, the more "normal" looking move, is a big inaccuracy here. } 15. Nd5! Qxd2 16. Nxe7+! { And White wins a pawn with this sneaky intermezzo. Notice if BLack had played Rfc8 instead, the same line would not have worked due to Kf8 in response to the check, when the knight is being attacked. }) 15. Nd5?! Qxd2 16. Nxe7+ Kf8 { And Black wins the knight next move. } 17. Rxd2 (17. Nxg6+ hxg6 18. Rxd2 { A knight for two pawns }) 17... Kxe7 *
+
+
+[Event "🏆 Hyper-Accelerated Dragon Repertoire 🏆: Closed Sicilian"]
+[Site "https://lichess.org/study/CfSVAROH/0YiElsqV"]
+[Date "2020.06.30"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B26"]
+[Opening "Sicilian Defense: Closed"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "Closed Sicilian"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/pxL93IPU"]
+[UTCDate "2020.06.30"]
+[UTCTime "11:24:56"]
+
+1. e4 c5 2. Nc3 g6 3. g3 { Declaration of a Closed Sicilian. Other options are 3. f4, which will be covered in the next chapter, and 3. Nf3, which tranposes back to the main lines below. } 3... Bg7 4. Bg2 Nc6 5. d3 d6 6. Be3 (6. f4) 6... e5 { I recommend e5, setting up a Reversed Botvinnik setup. For a detailed analysis of this structure, see my English Opening guide! For a quick overview, the goal is to claim the center and the d4 square for the knight at the cost of allowing White to get the d5 outpost. } 7. Qd2 Be6 { I recommend the waiting move Be6 instead of the normal developing move Nge7 because White wants to play Bh6. Playing a waiting move forces White to reveal their next plan. } 8. Nge2 (8. h3 Nge7 9. Bh6 Bxh6 10. Qxh6 Nd4 11. Qd2 Qb6 12. Rb1 O-O { f5 is coming up next with good pressure on all sides of the board } { [%cal Gf7f5] }) 8... Qd7 9. O-O h5 10. h4 (10. f4 h4 { Forcing open the h-file with a straightforward attack upcoming. }) 10... Nh6 11. f3 Nd4 { Black has a solid bind in the center, with a balanced position out of the opening. Plans include a pawn storm (either f5 or b5-b4 depending on how the game continues. White will try to kick back the Nd4 with c3, and try to get in a center break with d4. } *
+
+
+[Event "🏆 Hyper-Accelerated Dragon Repertoire 🏆: Closed Sicilian part 2"]
+[Site "https://lichess.org/study/CfSVAROH/TM6Lcb1y"]
+[Date "2020.06.30"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B25"]
+[Opening "Sicilian Defense: Closed, Botvinnik Defense, with Nge2"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "Closed Sicilian part 2"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/A3HHytAH"]
+[UTCDate "2020.06.30"]
+[UTCTime "11:24:56"]
+
+1. e4 c5 2. Nc3 g6 3. g3 Bg7 4. Bg2 Nc6 5. d3 d6 6. Nge2 (6. Nh3 { Also a playable move to prepare 0-0 and not blocking the f-pawn to keep f4 pushes open. } 6... h5!? { The drawback of Nh3 is White cannot play h4 to prevent the h-file from opening up. Black should take advantage of it. } 7. O-O h4 8. g4 Nf6 9. f3 d5 { White's light squared bishop is blocked from the action }) 6... e5 7. O-O Nge7 8. f4 O-O 9. h3 Nd4 10. g4 (10. Be3 Be6 11. g4 f5) (10. Nd5 Nxd5 11. exd5 Nxe2+ 12. Qxe2 exf4) 10... f5!? { Contesting the kingside with another pawn. Similar pawn structure, but the knight on d4 allows Black to play a bit more dynamically. } 11. exf5 gxf5 12. fxe5 dxe5 13. gxf5 Nexf5 14. Ne4 Kh8 { Preparing Rg8 next } *
+
+
+[Event "🏆 Hyper-Accelerated Dragon Repertoire 🏆: Grand Prix Attack"]
+[Site "https://lichess.org/study/CfSVAROH/LTrIPF7U"]
+[Date "2020.06.30"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B23"]
+[Opening "Sicilian Defense: Closed"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "Grand Prix Attack"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/FI6fW8E1"]
+[UTCDate "2020.06.30"]
+[UTCTime "11:24:56"]
+
+{ One of the openings I always had trouble against growing up. Higher rated players would play this aggressive opening against my Sicilian and I'd be lost by move 20. So I will teach you how to combat it and not repeat my mistakes. }
+1. e4 c5 2. Nc3 g6 3. f4 Bg7 4. Nf3 Nc6 5. Bc4 e6 6. O-O Nge7 { There are several ways for White to play aggressively. } 7. d3 (7. f5 d5 { An early f5 should be met with an immediate strike back in the center. } 8. fxe6 (8. exd5 exd5 9. Bb5 Bxf5) 8... dxc4 9. exf7+ Kf8) (7. Qe1 O-O 8. d3 d5 9. Bb3) (7. e5!? { Seems extremely challenging at first because the dark squares for Black are weak. Ne4 or Nb5 are coming up next with pressure on the f6 and d6 holes. However, Black has nothing to fear! } 7... d5 8. Be2 (8. exd6 Qxd6 9. Ne4 Qc7 10. Nxc5 Nd4! { And Black wins a minor piece }) 8... O-O 9. Nb5 f6) 7... O-O (7... d6?! { This is the move I'd always play when I was younger, and I'd get in trouble early on the kingside. Not a blunder in any way, but practically worse. } 8. Qe1 O-O 9. Qh4 a6 10. f5 exf5 11. Bg5 { And Black is tied down. Do not fall for this trap! Get an early d5 in! }) 8. Qe1 d5! { Shutting off the Bc4's diagonal once and for all. } 9. Bb3 Nd4 (9... Na5 { Another totally logical and playable move. } 10. Qh4 Nxb3 11. axb3 Nc6 12. Qg3 (12. Ng5 h6) 12... Nd4 { Also playable. White's attack is diminished without the light squared bishop. }) 10. Nxd4 cxd4 11. Ne2 a5 12. a4 dxe4 13. dxe4 b6 14. Ng3 Ba6 15. Rf2 Qd7 { With a pretty active position. Black should welcome any f5 pawn breaks by White. } 16. f5!? exf5 17. exf5 Nxf5 18. Nxf5 gxf5 { Although the pawn structure is a bit weakened, Black does have the open e-file now! Dynamic play coming ahead } *
+
+
+[Event "🏆 Hyper-Accelerated Dragon Repertoire 🏆: Grand Prix Attack part 2"]
+[Site "https://lichess.org/study/CfSVAROH/oEwtIlOD"]
+[Date "2020.06.30"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B23"]
+[Opening "Sicilian Defense: Closed"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "Grand Prix Attack part 2"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/fLWhHqMy"]
+[UTCDate "2020.06.30"]
+[UTCTime "11:24:56"]
+
+1. e4 c5 2. Nc3 g6 3. f4 Bg7 4. Nf3 Nc6 5. Bb5 { The other popular move. I recommend Nd4 right away, which often transposes to the same setups and ideas as the Bc4 lines in the earlier chapter. } 5... Nd4 6. O-O (6. Bc4 e6 7. O-O Ne7 8. d3 O-O { [%cal Gd7d5] }) (6. Nxd4 cxd4 7. Ne2 Nh6 8. O-O O-O 9. d3 d5) 6... Nxb5 { If White doesn't move the bishop, just take it! } 7. Nxb5 d5 8. exd5 a6 9. Nc3 Nf6 10. d4 { Otherwise you just recapture on d5 with a pleasant endgame using the bishop pair. } 10... Nxd5 11. dxc5 Nxc3 12. Qxd8+ Kxd8 13. bxc3 Bxc3 14. Rb1 Kc7 { The bishop pair is dominating for now. White could force an exchange with Bb2, but the superior pawn structure is still an advantage you can press in the endgame } 15. Bb2 Bxb2 16. Rxb2 Be6 *
+
+
+[Event "🏆 Hyper-Accelerated Dragon Repertoire 🏆: Alapin - Dull? No thank you"]
+[Site "https://lichess.org/study/CfSVAROH/l8ZIdqOW"]
+[Date "2020.06.30"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B27"]
+[Opening "Sicilian Defense: Hyperaccelerated Dragon"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "Alapin - Dull? No thank you"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/2hG8WlzU"]
+[UTCDate "2020.06.30"]
+[UTCTime "11:24:56"]
+
+1. e4 c5 2. Nf3 g6 3. c3 Bg7 4. d4 cxd4 5. cxd4 d5 6. e5 Bg4 { Pinning the knight and looking to apply pressure on the d4 pawn with Nc6, Qb6, and Nh6-d5 potentially. } 7. Be2 (7. Bb5+ { The move that scores the best in practice. The idea is to immediately exchange on c6, leaving Black with a backwards pawn on an open file. } 7... Nc6 8. Bxc6+ bxc6 9. Nbd2 f6 10. h3 (10. exf6 exf6 11. O-O Ne7 { 0-0 next and Black should be okay. }) 10... Bxf3 11. Nxf3 Nh6 12. O-O O-O 13. Re1 Nf7 { Black should aim to play Qb6 soon and pressure White's weaker pawns d4 and b2 }) 7... Nc6 8. O-O Nh6 9. Nc3 (9. h3 Bxf3 10. Bxf3 Nf5 11. Be3 e6 12. g4 Nxe3 13. fxe3 Qg5!? { An ambitious move to go straight for the king. f5 or h5 are threats in the near future } 14. Qe2 h5) 9... Nf5 { Threatening Bxf3 and Nfxd4 } 10. Be3 O-O 11. h3 Bxf3 12. Bxf3 e6 { After getting rid of the light squared bishop, it is fine to place pawns on light squares. f6 next } 13. Qd2 (13. g4 Nxe3 14. fxe3 f6) 13... f6 { Basically forcing white to capture and leaving the d4 pawn exposed to attack from all sides of the board } 14. exf6 (14. g4 Nxe3 15. fxe3 fxe5) 14... Qxf6 15. Rad1 Ncxd4 *
+
+
+[Event "🏆 Hyper-Accelerated Dragon Repertoire 🏆: Alapin - Part 2"]
+[Site "https://lichess.org/study/CfSVAROH/lFPtNOGA"]
+[Date "2020.06.30"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B27"]
+[Opening "Sicilian Defense: Hyperaccelerated Dragon"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "Alapin - Part 2"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/v396SOC2"]
+[UTCDate "2020.06.30"]
+[UTCTime "11:24:56"]
+
+1. e4 c5 2. Nf3 g6 3. c3 Bg7 4. d4 cxd4 5. cxd4 d5 6. exd5 Nf6 { The main idea is to recapture the pawn on d5 with a knight and play against the isolated pawn. } 7. Nc3 (7. Bb5+ Nbd7 8. Nc3 (8. d6 O-O 9. dxe7 Qxe7+ 10. Qe2 Re8) 8... O-O 9. O-O Nb6 10. Re1 Nbxd5 { Eventually Black regains the d5 pawn and it is a balanced isolated queen pawn position. }) 7... O-O 8. Bc4 Nbd7 9. Bb3 Nb6 10. O-O Nbxd5 11. Re1 b6 12. Bg5 Bb7 13. Ne5 Rc8 14. Rc1 { Balanced position. Minor piece trades are favorable for Black due to the isolated d-pawn } *
+
+
+[Event "🏆 Hyper-Accelerated Dragon Repertoire 🏆: 3. Bc4"]
+[Site "https://lichess.org/study/CfSVAROH/vLN6Pr1z"]
+[Date "2020.06.30"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B27"]
+[Opening "Sicilian Defense: Hyperaccelerated Dragon"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "3. Bc4"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/axP7aHXU"]
+[UTCDate "2020.06.30"]
+[UTCTime "11:24:56"]
+
+1. e4 c5 2. Nf3 g6 3. Bc4 Bg7 4. O-O (4. c3 e6 5. d4 cxd4 6. cxd4 d5 7. exd5 exd5 8. Bb5+ Nc6 9. O-O Ne7 10. Nc3 O-O { Black has the better position because the d4 pawn is more vulnerable for White than d5 for Black because of the fianchetto. }) 4... Nc6 5. c3 e6 6. d4 cxd4 7. cxd4 d5 8. exd5 exd5 9. Re1+ Nge7 10. Bb5 O-O { Like the sub variation above, Black has the better position because the d4 pawn is more vulnerable for White than d5 for Black because of the fianchetto. } *
+
+
+[Event "🏆 Hyper-Accelerated Dragon Repertoire 🏆: 4. Qxd4 - Relieve the Headaches"]
+[Site "https://lichess.org/study/CfSVAROH/tJjEA9j3"]
+[Date "2020.06.30"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B27"]
+[Opening "Sicilian Defense: Hyperaccelerated Fianchetto"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "4. Qxd4 - Relieve the Headaches"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/Q7Q2Wb7i"]
+[UTCDate "2020.06.30"]
+[UTCTime "11:24:56"]
+
+1. e4 c5 2. Nf3 g6 3. d4 cxd4 4. Qxd4 { I know how tough this Qxd4 line is because I played it myself regularly on the White side! } 4... Nf6 5. e5 { The most demanding line, but Nc6 and Bb5 are also playable moves which we will analyze in this chapter. } (5. Nc3 { In my opinion, this is the best line since it pretty much forces Black to give up the bishop pair early on. } 5... Nc6 6. Qa4 d6 7. e5 dxe5 8. Nxe5 Bd7 { Practically forced or else the a4-e8 diagonal pin is too much pressure. } 9. Nxd7 Qxd7 10. Be3 Bg7 11. Rd1 Qc7 12. Nb5!? (12. g3 O-O 13. Bg2 a6 14. O-O Rad8 { White is still better in this line, but Black shouldn't have anything severe to worry about. }) 12... Qe5 { Black's queen is surprisingly safe in the center }) (5. Bb5 { Threatening to take the knight when it lands on c6 to keep a powerful queen on d4 } 5... a6 6. e5 (6. Ba4 b5 7. Bb3 Nc6) 6... axb5 7. exf6 Nc6!? 8. fxe7 (8. Qh4 exf6 9. O-O d5 10. Re1+ Be6) 8... Qxe7+ 9. Qe3 Qxe3+ 10. Bxe3 b4 { Preventing Nc3 first! } 11. O-O Bg7 12. Re1 O-O { Long diagonal for the fianchetto bishop, and a nice bishop pair advantage in return for doubled pawns. Pretty nice! }) 5... Nc6 6. Qa4 (6. Qc3 Nd5 7. Qd2 Nc7) (6. Qf4 Nd5) (6. Qd1? Nxe5 7. Nxe5 Qa5+ { Black wins a pawn }) 6... Nd5 7. Qe4 (7. c4 Nb6 8. Qc2 Bg7 { With a fine position. White seems to have overextended a bit here. }) 7... Ndb4 8. Bb5 (8. a3 d5 9. exd6 Bf5 { See next chapter for the Trap! }) 8... Bg7 9. a3 Na6 { Trying to reroute the knight back to c7. } 10. O-O (10. Bxa6 bxa6 { Playable to destroy Black's pawn structure, but Black definitely has compensation with the light squares. } 11. O-O Bb7 { The h1-a8 diagonal is a nice source of attack in the near future, which should be an exciting game from here. }) 10... O-O 11. Re1 Nc7 { Balanced position } *
+
+
+[Event "🏆 Hyper-Accelerated Dragon Repertoire 🏆: Common Trap in 4. Qxd4 line"]
+[Site "https://lichess.org/study/CfSVAROH/n3jO9Uha"]
+[Date "2020.06.30"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B27"]
+[Opening "Sicilian Defense: Hyperaccelerated Fianchetto"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "Common Trap in 4. Qxd4 line"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/mdXwQBfe"]
+[UTCDate "2020.06.30"]
+[UTCTime "11:24:56"]
+
+1. e4 c5 2. Nf3 g6 3. d4 cxd4 4. Qxd4 Nf6 5. e5 Nc6 6. Qa4 Nd5 7. Qe4 Ndb4 8. a3 d5 9. exd6?? (9. Qe2 Na6) 9... Bf5 { And Black successfully creates a strong counterthreat and wins the game with Nxc2+ next or White has to give up the queen } *
+
+
+[Event "🏆 Hyper-Accelerated Dragon Repertoire 🏆: Smith-Morra Gambit"]
+[Site "https://lichess.org/study/CfSVAROH/W9rncIzy"]
+[Date "2020.06.30"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B21"]
+[Opening "Sicilian Defense: Smith-Morra Gambit Declined, Push Variation"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "Smith-Morra Gambit"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/hHlaLgVe"]
+[UTCDate "2020.06.30"]
+[UTCTime "11:24:56"]
+
+1. e4 c5 2. d4 cxd4 3. c3 d3 { Accepting the gambit with dxc3 is fine for black, but requires a lot of theory and still Black has to be cautious. d3 forces White into a Maroczy Bind, which could be a psychological plus because smith Morra Gambit players are usually attacking players. Maroczy Bind is more positinoal in nature } 4. Bxd3 Nc6 5. c4 g6 6. Nc3 Bg7 7. Nf3 d6 8. h3 Nf6 9. O-O Nd7 { Sneaky threat of Bxc3, creating double isolated c-pawns for White. } 10. Be3 Bxc3!? 11. bxc3 Nc5 12. Bc2 Be6 { Black has to prove that the doubled c-pawns are a greater weakness for White than Black's weak dark squares on the kingside. } *
+
+
+[Event "🏆 Hyper-Accelerated Dragon Repertoire 🏆: Rare (Bad) Moves"]
+[Site "https://lichess.org/study/CfSVAROH/EWjs7WDp"]
+[Date "2020.06.30"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B20"]
+[Opening "Sicilian Defense: Snyder Variation"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "Rare (Bad) Moves"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/lja5gpeK"]
+[UTCDate "2020.06.30"]
+[UTCTime "11:24:56"]
+
+1. e4 c5 2. b3 (2. b4 cxb4 3. a3 d5 4. exd5 Qxd5 { Active position, and Black is still up a pawn } 5. axb4?? Qe5+) (2. a3 g6 3. b4 Bg7 { Bogus. Black is doing well, end of discussion }) 2... g6 3. Bb2 Nf6 4. e5 Nd5 5. e6 (5. c4 Nc7 6. e6 f6 7. exd7+ Bxd7) 5... f6 { Black will get quick development and a space advantage in the center. No troubles } 6. exd7+ Bxd7 7. Nf3 e5 8. Bc4 Nb6 9. Be2 Bg7 { Nice center there for Black! } *
+
+
+[Event "🏆 Hyper-Accelerated Dragon Repertoire 🏆: ** Main Lines **"]
+[Site "https://lichess.org/study/CfSVAROH/7ezH0nw0"]
+[Date "2020.06.30"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "** Main Lines **"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/gb2NzUF4"]
+[UTCDate "2020.06.30"]
+[UTCTime "11:24:56"]
+
+ *
+
+
+[Event "🏆 Hyper-Accelerated Dragon Repertoire 🏆: 5. Nc3 Sidelines"]
+[Site "https://lichess.org/study/CfSVAROH/Aelcf026"]
+[Date "2020.06.30"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B34"]
+[Opening "Sicilian Defense: Accelerated Dragon, Modern Variation"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "5. Nc3 Sidelines"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/oRLxmUSM"]
+[UTCDate "2020.06.30"]
+[UTCTime "11:24:56"]
+
+1. e4 c5 2. Nf3 g6 3. d4 cxd4 4. Nxd4 Nc6 5. Nc3 Bg7 6. Nde2 { A sideline to set up the kingside fianchetto and play more solid in the center with the connected knights } (6. Nb3 d6 7. Be2 Bxc3+!? { Again we see the thematic Bxc3+ to play against the double isolated c-pawns. White's position is fairly awkward here, which justifies giving up the fianchetto bishop a bit more. } 8. bxc3 Nf6 9. f3 O-O 10. O-O d5 { Black should have good play all around as long White doesn't get enough play against the dark squares on the kingside. }) 6... Nf6 7. g3 b5! { Overworking the Nc3. b4 is a real threat, gaining space on the queenside as well as attempt to win the important e4 pawn for White } 8. Bg2 (8. Nxb5 Nxe4 { At the cost of both center pawns, White has zero compensation }) 8... b4 9. Nd5 O-O 10. O-O a5 11. h3 Ba6 12. Be3 { Pretty active position for Black with both bishops on long diagonals. Black has no real weaknesses for White to exploit } *
+
+
+[Event "🏆 Hyper-Accelerated Dragon Repertoire 🏆: Must-Know Mini-Trap!!"]
+[Site "https://lichess.org/study/CfSVAROH/2eSQy072"]
+[Date "2020.06.30"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B35"]
+[Opening "Sicilian Defense: Accelerated Dragon, Modern Bc4 Variation"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "Must-Know Mini-Trap!!"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/hI4mVaCk"]
+[UTCDate "2020.06.30"]
+[UTCTime "11:24:56"]
+
+1. e4 c5 2. Nf3 g6 3. d4 cxd4 4. Nxd4 Nc6 5. Nc3 Bg7 6. Be3 Nf6 7. Bc4 O-O 8. f3? Qb6! { White has asked for too much, and now the dark squares in his territory is loose. b2 is being attacked, and Black is eyeing the d4 knight with tactics. } 9. Bb3 (9. Qd2? Nxe4 10. Nxc6 Nxd2 11. Nxe7+ Kh8 12. Bxb6 Nxc4 13. Bf2 Nxb2) 9... Nxe4 { This is a forcing sequence for White to not lose a pawn. Worth memorizing! } 10. Nd5 Qa5+ 11. c3 Nc5 12. Nxc6 dxc6 13. Nxe7+ Kh8 14. Nxc8 Raxc8 15. O-O Rcd8 { About equal here, but Black has a pleasant position. } *
+
+
+[Event "🏆 Hyper-Accelerated Dragon Repertoire 🏆: f3 should be punished!"]
+[Site "https://lichess.org/study/CfSVAROH/CUw39dZZ"]
+[Date "2020.06.30"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B34"]
+[Opening "Sicilian Defense: Accelerated Dragon, Modern Variation"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "f3 should be punished!"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/tejncihI"]
+[UTCDate "2020.06.30"]
+[UTCTime "11:26:31"]
+
+1. e4 c5 2. Nf3 g6 3. d4 cxd4 4. Nxd4 Nc6 5. Nc3 Bg7 6. Be3 Nf6 7. f3?! { This is a weak move. I'm surprised it is still so commonly played. Well, that could be good news. I will teach you how to destroy anyone who plays f3. } 7... O-O 8. Qd2 { White's calmly entering the Yugoslav Attack of the Sicilian Dragon right? Wrong! The difference is you haven't pushed your d-pawn yet. } 8... d5! { The key part of the refutation. If you play 8. d6, White will play Bc4 next and the game will indeed transpose back to the Yugoslav Attack, which White probably is booked up on 15 moves in. } 9. exd5 (9. O-O-O dxe4 10. Nxc6 Qxd2+ 11. Rxd2 bxc6 12. Nxe4 (12. fxe4 Ng4 13. Bc5 Bh6) 12... Nd5 13. Bc5 Bh6) (9. Nxc6 bxc6 10. exd5 Nxd5 11. Nxd5 cxd5 12. c3 a5 (12... Rb8 13. Bxa7 Rxb2 14. Qxb2 Qa5 15. Rc1 Qxa7)) 9... Nxd5 10. Nxd5 Qxd5 11. Nxc6 Qxc6 12. c3 Bf5 *
+
+
+[Event "🏆 Hyper-Accelerated Dragon Repertoire 🏆: 5. Nc3, 7. Bc4"]
+[Site "https://lichess.org/study/CfSVAROH/gbM3wRbM"]
+[Date "2020.06.30"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B35"]
+[Opening "Sicilian Defense: Accelerated Dragon, Modern Bc4 Variation"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "5. Nc3, 7. Bc4"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/lDHlxhMG"]
+[UTCDate "2020.06.30"]
+[UTCTime "11:26:31"]
+
+1. e4 c5 2. Nf3 g6 3. d4 cxd4 4. Nxd4 Nc6 5. Nc3 Bg7 6. Be3 Nf6 { Here both sides enter the main line of the 5. Nc3 variation of the Accelerated Dragon. Common moves are Bc4, f3 (basically refuted, see next chapter), Be2, and Nxc6. There will be three chapters for Bc4 and one chapter each for the other two lines . This study we will start with Bc4, the most challenging one (arguably the only challenging one) } 7. Bc4 O-O 8. Bb3 (8. f3? { Mistake! Refer to the chapter "Must-Know Mini-Trap!!" }) 8... d6 9. f3 Na5 10. h4 h5 11. Qd2 Bd7 12. O-O-O Rb8 { Rc8 is far more common to aim for Nc4 next. Rb8 is a sideline which leads to dynamic play down the b-file. The main idea is to play b5 and only then Nc4. Once White is provoked into playing Bxc4, you get pressure on the vulnerable b2 pawn. } 13. Bh6 Nxb3+ 14. Nxb3 (14. cxb3 { If cxb3, you can take a step back with the attack and just focus on playing solid. White has already damaged their own pawn structure. }) (14. axb3 b5 15. Bxg7 Kxg7 16. Nd5 b4 { If Black can double up on the a-file, White's king will be in grave danger }) 14... a5 { Launching a pawn storm in order to break open White's queenside defense } 15. Bxg7 Kxg7 16. Nd4 b5 17. g4 e6 { Stopping Nd5 and then continuing the rush of the queenside pawns. } *
+
+
+[Event "🏆 Hyper-Accelerated Dragon Repertoire 🏆: 5. Nc3, 7. Bc4 part 2"]
+[Site "https://lichess.org/study/CfSVAROH/OmIRmeKR"]
+[Date "2020.06.30"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B35"]
+[Opening "Sicilian Defense: Accelerated Dragon, Modern Bc4 Variation"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "5. Nc3, 7. Bc4 part 2"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/r6LNC4hH"]
+[UTCDate "2020.06.30"]
+[UTCTime "11:26:31"]
+
+1. e4 c5 2. Nf3 g6 3. d4 cxd4 4. Nxd4 Nc6 5. Nc3 Bg7 6. Be3 Nf6 7. Bc4 O-O 8. Bb3 d6 9. f3 Na5 10. Qd2 Bd7 11. O-O-O Rb8 12. h4 b5 13. h5 Nc4 14. Bxc4 bxc4 15. hxg6 fxg6 16. Bh6 Qb6 17. b3 Bxh6 18. Qxh6 Rf7 { See game Batuhan Dastan - Nico Georgiadis below for a sample game in these kind of positions. Black's king usually is hard to crack. } *
+
+
+[Event "🏆 Hyper-Accelerated Dragon Repertoire 🏆: 5. Nc3, 7. Bc4 part 3"]
+[Site "https://lichess.org/study/CfSVAROH/BC1ap7KE"]
+[Date "2020.06.30"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B35"]
+[Opening "Sicilian Defense: Accelerated Dragon, Modern Bc4 Variation"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "5. Nc3, 7. Bc4 part 3"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/uUIFyFU3"]
+[UTCDate "2020.06.30"]
+[UTCTime "11:26:31"]
+
+1. e4 c5 2. Nf3 g6 3. d4 cxd4 4. Nxd4 Nc6 5. Nc3 Bg7 6. Be3 Nf6 7. Bc4 O-O 8. Bb3 d6 9. h3 { The h3 lines are harmless } 9... Na5 10. O-O b6 { Because White has committed h3 early on, it is important to add as much pressure to the e4 pawn as possible to provoke f3 from White. Then the dark squares around their king is weakened. } 11. f4 (11. Re1 Bb7 12. Bg5 Nxb3 13. axb3 h6 14. Bh4 Qd7) 11... Nxb3 12. axb3 Bb7 13. Qd3 { The bishop exert a lot of pressure down the long diagonals } *
+
+
+[Event "🏆 Hyper-Accelerated Dragon Repertoire 🏆: 5. Nc3 Main Lines part 3"]
+[Site "https://lichess.org/study/CfSVAROH/x66vW5KR"]
+[Date "2020.06.30"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B34"]
+[Opening "Sicilian Defense: Accelerated Dragon, Modern Variation"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "5. Nc3 Main Lines part 3"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/g9itvbeO"]
+[UTCDate "2020.06.30"]
+[UTCTime "11:26:31"]
+
+1. e4 c5 2. Nf3 g6 3. d4 cxd4 4. Nxd4 Nc6 5. Nc3 Bg7 6. Be3 Nf6 7. Be2?! { Fairly passive move. The drawback is the important d5 square is not defended enough. } 7... O-O 8. O-O d5! { Striking in the center. } 9. exd5 Nb4 (9... Nxd5 { Also playable. } 10. Nxd5 Qxd5 11. Bf3 Qc4 { There will be a series of trades which lead to a drawn endgame. 9. Nb4 avoids dull trades. }) 10. Bf3 (10. d6 Qxd6) 10... Nbxd5 11. Nxd5 Nxd5 { Good position for Black } *
+
+
+[Event "🏆 Hyper-Accelerated Dragon Repertoire 🏆: 5. Nc3 Main Lines part 4"]
+[Site "https://lichess.org/study/CfSVAROH/IhjO8tNO"]
+[Date "2020.06.30"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B34"]
+[Opening "Sicilian Defense: Accelerated Dragon, Modern Variation"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "5. Nc3 Main Lines part 4"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/Xt3PVsI9"]
+[UTCDate "2020.06.30"]
+[UTCTime "11:26:31"]
+
+1. e4 c5 2. Nf3 g6 3. d4 cxd4 4. Nxd4 Nc6 5. Nc3 Bg7 6. Be3 Nf6 7. Nxc6 bxc6 8. e5 Ng8!? { Yes, you saw that right. Knight retreats back to its original square 2 moves later. How can this be good, you may ask? Black's statement is that the e5 pawn is more of a liability for White than a strength. } 9. f4 (9. Bd4 Qa5) 9... Nh6 { The knight reroutes to f5. Black should utilize the open b-file to target the b2 pawn and then take advantage of White's overextension. } 10. Bd3 (10. Qd2 O-O 11. O-O-O d6!? { Sacrificing a pawn to open up the long diagonal } 12. exd6 exd6 13. Bd4?! (13. Qxd6 Qxd6 14. Rxd6 Nf5 15. Rd3 Ba6) 13... Bxd4 14. Qxd4 Nf5 15. Qd2 h5 { Creating an outpost on f5. } 16. Bd3 d5 { The next plan would be to play Rb8, Qa5, and rush an attack against the king. }) 10... d6 { Forcing open the long diagonal. } 11. exd6 (11. O-O O-O 12. exd6 exd6) 11... exd6 12. O-O Ng4 { The dark squares will be very vulnerable for White, especially on the g1-a7 diagonal. } 13. Bd2 O-O 14. h3? Qb6+ *
+
+
+[Event "🏆 Hyper-Accelerated Dragon Repertoire 🏆: 5. c4"]
+[Site "https://lichess.org/study/CfSVAROH/fQpTXrr7"]
+[Date "2020.06.30"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B36"]
+[Opening "Sicilian Defense: Accelerated Dragon, Maróczy Bind"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "Maroczy Bind 5. c4"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/d5Z0ptiB"]
+[UTCDate "2020.06.30"]
+[UTCTime "11:26:31"]
+
+1. e4 c5 2. Nf3 g6 3. d4 cxd4 4. Nxd4 Nc6 5. c4 { The other main popular 5th move, second to Nc3. } 5... Nf6 (5... Bg7 { A lot of theory has been developed for 5. Bg7 and it is still much more popular. }) 6. Nc3 d6 7. Be2 (7. Be3 Ng4) 7... Nxd4 8. Qxd4 Bg7 9. Be3 O-O 10. Qd2 a5 { a5 is a multipurpose move:
+1) To secure c5 as an outpost for the knight
+2) To push the pawn up to a3 and open up the long diagonal
+3) To play a4 + Qa5 and secure a square for the Queen. } 11. O-O a4 12. f3 Qa5 13. Rfd1 Be6 14. Rac1 Rfc8 (14... Rac8 15. Nd5! { See Important Theme #2 for details }) 15. Nd5 (15. b3 axb3 16. axb3 Qb4) 15... Qxd2 16. Bxd2 Nxd5 17. cxd5 Bd7 { Often times the position will simplify into an endgame. Black can try to play for an f5 break and has a comfortable endgame due to White's somewhat overextended pawns. } *
+
+
+[Event "🏆 Hyper-Accelerated Dragon Repertoire 🏆: 5. c4 part 2"]
+[Site "https://lichess.org/study/CfSVAROH/Xrr6E6U2"]
+[Date "2020.06.30"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B36"]
+[Opening "Sicilian Defense: Accelerated Dragon, Maróczy Bind"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "Maroczy Bind  part 2"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/DCd9veLz"]
+[UTCDate "2020.06.30"]
+[UTCTime "11:26:31"]
+
+1. e4 c5 2. Nf3 g6 3. d4 cxd4 4. Nxd4 Nc6 5. c4 Nf6 6. Nc3 d6 7. Nc2 { Nc2 is a sideline in the Maroczy, with the overarching idea to keep more pieces on the board to full utilize White's space advantage. } 7... Bg7 8. Be2 Nd7 { Innocent looking move, but the threat is to play Bxc3, which creates double isolated pawns for White. } 9. O-O (9. Bd2 { Preventing the doubling of c-pawns } 9... O-O 10. O-O Nc5 11. b4 (11. f3 f5 12. b4 Ne6) 11... Bxc3 12. Bxc3 Nxe4 13. Bb2 e5) 9... Bxc3!? 10. bxc3 Nc5 11. Bh6 f6 *
+
+
+[Event "🏆 Hyper-Accelerated Dragon Repertoire 🏆: 5. c4 part 3"]
+[Site "https://lichess.org/study/CfSVAROH/UMDx7iq1"]
+[Date "2020.06.30"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B36"]
+[Opening "Sicilian Defense: Accelerated Dragon, Maróczy Bind"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "Maroczy Bind part 3"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/5lnvLBGh"]
+[UTCDate "2020.06.30"]
+[UTCTime "11:26:31"]
+
+1. e4 c5 2. Nf3 g6 3. d4 cxd4 4. Nxd4 Nc6 5. c4 Nf6 6. Nc3 d6 7. Be2 Nxd4 8. Qxd4 Bg7 9. Bg5 { 9. Bg5 is very similar to the 9. Be3 variation. } 9... O-O 10. Qd2 a5 { Same multipurpose plan } 11. O-O a4 12. Rac1 Qa5 13. Rfd1 Be6 14. f3 (14. Nd5 Bxd5 15. exd5 Ne4 { Illustrating the difference with the Bg5. Now there is a triple attack and White is under pressure from the long diagonal. } 16. Qxa5 Rxa5 17. Bxe7 Re8 18. Bh4 Bxb2 19. Rb1 a3!) 14... Rfc8 15. Nb5 Qxd2 { As usual, Black should be happy to trade queens because of the space deficit. } 16. Rxd2 Kf8 { Black has no real weaknesses for White to exploit. Future plans could involve Nd7-c5 or double up rooks on the c-file. } *
+
+
+[Event "🏆 Hyper-Accelerated Dragon Repertoire 🏆: ** Mr_Penings Sample Games **"]
+[Site "https://lichess.org/study/CfSVAROH/H3f4LtRM"]
+[Date "2020.06.30"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "** Mr_Penings Sample Games **"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/OusohMYT"]
+[UTCDate "2020.06.30"]
+[UTCTime "11:26:31"]
+
+ *
+
+
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2020.06.14"]
+[White "Chesster_30"]
+[Black "Mr_Penings"]
+[Result "0-1"]
+[WhiteElo "2495"]
+[BlackElo "2700"]
+[TimeControl "180+2"]
+[Termination "Mr_Penings won by resignation"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B35"]
+[Opening "Sicilian Defense: Accelerated Dragon, Modern Bc4 Variation"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "Chesster_30 - Mr_Penings"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/AQeRy3Xg"]
+
+1. Nf3 { [%clk 0:03:02] } 1... g6 { [%clk 0:03:01] } 2. e4 { [%clk 0:03:02] } 2... c5 { [%clk 0:03:01] } 3. d4 { [%clk 0:03:03] } 3... cxd4 { [%clk 0:03:03] } 4. Nxd4 { [%clk 0:03:05] } 4... Nc6 { [%clk 0:03:03] } 5. Nc3 { [%clk 0:03:05] } 5... Bg7 { [%clk 0:03:05] } 6. Be3 { [%clk 0:03:06] } 6... Nf6 { [%clk 0:03:06] } 7. Bc4 { [%clk 0:03:06] } 7... O-O { [%clk 0:03:07] } 8. Bb3 { [%clk 0:03:07] } 8... d6 { [%clk 0:03:08] } 9. f3 { [%clk 0:03:04] } 9... Bd7 { [%clk 0:03:06] } 10. h4 { [%clk 0:03:04] } 10... h5 { [%clk 0:02:56] } 11. Qd2 { [%clk 0:03:05] } 11... Na5 { [%clk 0:02:54] } 12. O-O-O { [%clk 0:03:06] } 12... Rb8 { [%clk 0:02:39] } 13. Kb1 { [%clk 0:03:02] } 13... b5 { [%clk 0:02:39] } 14. Bh6 { [%clk 0:02:57] } 14... Nc4 { [%clk 0:02:35] } 15. Bxc4 { [%clk 0:02:33] } 15... bxc4 { [%clk 0:02:35] } 16. Bxg7 { [%clk 0:02:34] } 16... Qb6 { Intermezzo, checkmate on b2 must be stopped } { [%clk 0:02:25] } 17. Qc1 { [%clk 0:02:25] } 17... Kxg7 { [%clk 0:02:26] } 18. g4 { [%clk 0:02:26] } 18... hxg4 { [%clk 0:02:11] } 19. h5 { A typical try for White to sacrifice a pawn for the initiative. Black cannot take on h5 either way. } { [%clk 0:02:25] } 19... Rh8 { [%clk 0:02:12] } (19... Nxh5?? 20. Rxh5 gxh5 21. Qg5+ Kh7 22. Qxh5+ Kg7 23. Qg5+ Kh7 24. Rh1#) (19... gxh5?? 20. Qg5+ Kh8 21. Rxh5+ Nh7 22. Rxh7+ Kxh7 23. Rh1#) 20. h6+ { [%clk 0:02:09] } 20... Kh7 { The h6 pawn acts as a shield... for Black's king! } { [%clk 0:02:08] } 21. f4 { [%clk 0:01:51] } 21... Qa5 { Taking back the initiative } { [%clk 0:02:04] } 22. Ka1 { [%clk 0:01:52] } 22... Rb6 { Preparing to double up rooks and sacrifice on b2 } { [%clk 0:01:45] } 23. e5 { You can see it is very common in the Sicilian Dragon for both sides to attempt to seize the initiative. e5 is a pawn sacrifice, but it stops Black's attack temporarily and opens up files. } { [%clk 0:01:35] } 23... dxe5 { [%clk 0:01:47] } 24. fxe5 { [%clk 0:01:36] } 24... Qxe5 { [%clk 0:01:47] } 25. Rhe1 { [%clk 0:01:37] } 25... Qc5 { [%clk 0:01:40] } 26. Qf4 { [%clk 0:01:10] } 26... Rhb8 { [%clk 0:01:35] } 27. Ne4 { [%clk 0:01:10] } 27... Qa5 { [%clk 0:01:19] } 28. Nxf6+ { [%clk 0:00:56] } (28. Ng5+! Kg8 29. h7+ Kg7 30. Rxe7 Qb4 31. Rxf7+ Kh8 { This position is far from clear. Both sides have extremely dangerous attacks. It is up to who can maintain an offense/defense balance. }) 28... exf6 { [%clk 0:01:05] } 29. Re7 { [%clk 0:00:57] } 29... Be8 { [%clk 0:00:39] } 30. Ne6 { [%clk 0:00:34] } 30... Qf5 { [%clk 0:00:09] } 31. Qc7 { [%clk 0:00:10] } 31... R6b7 { [%clk 0:00:05] } 32. Nf8+ { [%clk 0:00:09] } 32... Kh8 { White's threats are put on hold. Next up for Black: Rxb2 and the game } { [%clk 0:00:05] } 33. Qxb7 { [%clk 0:00:07] } 33... Rxb7 { [%clk 0:00:05] } 34. Rxe8 { [%clk 0:00:06] } 34... Qxc2 { Fortunately, White doesn't have a mating net. The pawn on h6 is undefended } { [%clk 0:00:06] } 35. Rb1 { [%clk 0:00:06] } 35... c3 { [%clk 0:00:07] } 36. Nxg6+ { [%clk 0:00:06] } 36... Kh7 { [%clk 0:00:07] } 37. Nf8+ { [%clk 0:00:06] } 37... Kxh6 { 0-1 Black wins. } { [%clk 0:00:08] } 0-1
+
+
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2018.11.23"]
+[White "nOcHeaTiNgKiD"]
+[Black "Mr_Penings"]
+[Result "0-1"]
+[WhiteElo "2432"]
+[BlackElo "2531"]
+[TimeControl "180+2"]
+[Termination "Mr_Penings won by resignation"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B27"]
+[Opening "Sicilian Defense: Hyperaccelerated Dragon"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "nOcHeaTiNgKiD - Mr_Penings"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/qjZRMSdY"]
+
+1. Nf3 { [%clk 0:03:02] } 1... g6 { [%clk 0:02:59] } 2. e4 { [%clk 0:03:02] } 2... c5 { [%clk 0:02:57] } 3. Nc3 { [%clk 0:03:00] } 3... Bg7 { [%clk 0:02:58] } 4. Bc4 { [%clk 0:03:02] } 4... Nc6 { [%clk 0:02:59] } 5. d3 { [%clk 0:03:02] } 5... e6 { [%clk 0:03:00] } 6. a3 { [%clk 0:03:03] } 6... Nge7 { [%clk 0:03:00] } 7. Ba2 { [%clk 0:03:03] } 7... d5 { [%clk 0:03:01] } 8. Bd2 { [%clk 0:03:04] } 8... Rb8 { [%clk 0:03:00] } 9. Qc1 { [%clk 0:03:03] } 9... h6 { [%clk 0:03:00] } 10. O-O { [%clk 0:03:00] } 10... d4 { [%clk 0:02:52] } 11. Ne2 { [%clk 0:03:00] } 11... g5 { The benefit of delaying castling is a kingside pawn storm. The Black king is fairly safe in the center. } { [%clk 0:02:24] } 12. Ng3 { [%clk 0:02:55] } 12... g4 { [%clk 0:02:20] } 13. Ne1 { [%clk 0:02:45] } (13. Nh5 { Nh5, a strong intermezzo, was a better move. It blocks h5. }) 13... h5 { [%clk 0:02:19] } 14. Bg5 { [%clk 0:02:45] } 14... h4 { [%clk 0:02:15] } 15. Ne2 { [%clk 0:02:45] } 15... Qd6 { [%clk 0:01:38] } 16. Bf4 { [%clk 0:02:44] } 16... Ne5 { [%clk 0:01:29] } 17. b4 { [%clk 0:02:37] } 17... b6 { [%clk 0:01:17] } 18. bxc5 { [%clk 0:02:33] } 18... bxc5 { [%clk 0:01:19] } 19. Rb1 { [%clk 0:02:32] } 19... N7g6 { [%clk 0:01:16] } 20. Rxb8 { [%clk 0:02:30] } 20... Qxb8 { [%clk 0:01:16] } 21. f3 { [%clk 0:02:27] } 21... Nxf4 { [%clk 0:01:06] } 22. Nxf4 { [%clk 0:02:23] } 22... Bh6 { The dark squares are very weak, and Black does not hesitate to control them. } { [%clk 0:00:48] } 23. g3 { [%clk 0:02:17] } 23... hxg3 { [%clk 0:00:48] } 24. hxg3 { [%clk 0:02:18] } 24... Rg8 { [%clk 0:00:30] } 25. fxg4 { [%clk 0:02:15] } 25... Nxg4 { [%clk 0:00:27] } 26. Qb1 { [%clk 0:02:14] } 26... Qxb1 { [%clk 0:00:24] } 27. Bxb1 { [%clk 0:02:15] } 27... Ne3 { [%clk 0:00:26] } 28. Rf2 { [%clk 0:02:15] } 28... Rxg3+ { [%clk 0:00:26] } 29. Kh2 { 0-1 Black wins. } { [%clk 0:02:16] } 0-1
+
+
+[Event "Rated Blitz game"]
+[Site "https://lichess.org/2qCJ2SAs"]
+[Date "2019.07.13"]
+[Round "-"]
+[White "Stasan121"]
+[Black "Mr_Penings"]
+[Result "0-1"]
+[WhiteElo "2452"]
+[BlackElo "2553"]
+[BlackTitle "NM"]
+[TimeControl "180+0"]
+[Termination "Normal"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B21"]
+[Opening "Sicilian Defense: Smith-Morra Gambit Declined, Push Variation"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "Stasan121 - Mr_Penings"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/pFMdHowf"]
+
+1. e4 { [%clk 0:03:00] } 1... c5 { [%clk 0:03:00] } 2. d4 { [%clk 0:02:59] } 2... cxd4 { [%clk 0:02:59] } 3. c3 { [%clk 0:02:59] } 3... d3 { Declining the Smith-Morra gambit and switching to a Maroczy Bind pawn structure, a wise choice for the typically aggressive Smith-Morra player. } { [%clk 0:02:59] } 4. Bxd3 { [%clk 0:02:58] } 4... Nc6 { [%clk 0:02:58] } 5. Nf3 { [%clk 0:02:58] } 5... g6 { [%clk 0:02:57] } 6. O-O { [%clk 0:02:57] } 6... Bg7 { [%clk 0:02:57] } 7. Qe2 { [%clk 0:02:57] } 7... d6 { [%clk 0:02:56] } 8. Rd1 { [%clk 0:02:56] } 8... Nf6 { [%clk 0:02:56] } 9. h3 { [%clk 0:02:55] } 9... Nd7 { [%clk 0:02:53] } 10. Na3 { [%clk 0:02:46] } 10... O-O { [%clk 0:02:49] } 11. Nc4 { [%clk 0:02:44] } 11... b5 { [%clk 0:02:48] } 12. Ne3 { [%clk 0:02:43] } 12... b4 { [%clk 0:02:46] } 13. Bb5 { [%clk 0:02:30] } 13... Bb7 { [%clk 0:02:26] } 14. cxb4 { [%clk 0:02:14] } 14... Nxb4 { [%clk 0:02:24] } 15. Nd5 { [%clk 0:02:12] } 15... Nxd5 { [%clk 0:02:15] } 16. exd5 { The big middlegame question is: is the d5 pawn a strength or a weakness for White? Black's plan is to prove the latter. } { [%clk 0:02:12] } 16... Nf6 { [%clk 0:02:11] } 17. Bc4 { [%clk 0:01:37] } 17... Rc8 { [%clk 0:02:09] } 18. Bb3 { [%clk 0:01:35] } 18... Nd7 { [%clk 0:02:00] } 19. Be3 { [%clk 0:01:33] } 19... Qa5 { [%clk 0:01:56] } 20. Rac1 { [%clk 0:01:30] } 20... Ba6 { [%clk 0:01:48] } 21. Qd2 { [%clk 0:01:25] } 21... Qxd2 { [%clk 0:01:44] } 22. Nxd2 { [%clk 0:01:16] } 22... Bxb2 { [%clk 0:01:40] } 23. Rxc8 { [%clk 0:01:15] } 23... Rxc8 { [%clk 0:01:40] } 24. Bxa7 { [%clk 0:01:14] } 24... Ne5 { [%clk 0:01:36] } 25. Ne4 { [%clk 0:01:07] } 25... h6 { Planning f5 to prevent Ng5. Black cannot allow the knight to hop in and sit on the outpost e6. } { [%clk 0:01:29] } 26. Bd4 { [%clk 0:01:05] } 26... Bxd4 { [%clk 0:01:25] } 27. Rxd4 { [%clk 0:01:05] } 27... f5 { [%clk 0:01:23] } 28. Nd2 { [%clk 0:00:59] } 28... Rc1+ { [%clk 0:01:21] } 29. Kh2 { [%clk 0:00:58] } 29... Kg7 { [%clk 0:01:16] } 30. Ra4 { [%clk 0:00:57] } 30... Bd3 { [%clk 0:01:11] } 31. f4 { [%clk 0:00:56] } 31... Nf7 { [%clk 0:01:04] } 32. Ra7 { [%clk 0:00:55] } 32... Kf6 { [%clk 0:01:03] } 33. Nf3 { [%clk 0:00:53] } 33... g5 { [%clk 0:01:01] } 34. fxg5+ { [%clk 0:00:49] } 34... hxg5 { [%clk 0:01:01] } 35. Nd4 { [%clk 0:00:48] } 35... Be4 { [%clk 0:00:57] } 36. a4 { [%clk 0:00:45] } 36... Ne5 { [%clk 0:00:49] } 37. a5 { [%clk 0:00:43] } 37... f4 { [%clk 0:00:43] } 38. a6 { [%clk 0:00:42] } 38... g4 { Setting up a mating net. g3 threatens checkmate in 1 } { [%clk 0:00:41] } 39. hxg4 { [%clk 0:00:30] } 39... Nxg4+ { [%clk 0:00:41] } 40. Kh3 { [%clk 0:00:30] } 40... Kg5 { [%clk 0:00:41] } 41. Nf3+ { [%clk 0:00:25] } 41... Kh5 { [%clk 0:00:37] } 42. g3 { [%clk 0:00:11] } 42... Rh1+ { [%clk 0:00:36] } 43. Kg2 { [%clk 0:00:11] } 43... Rh2+ { [%clk 0:00:35] } 44. Kg1 { [%clk 0:00:09] } 44... Bxf3 { [%clk 0:00:32] } 45. Ra8 { [%clk 0:00:09] } 45... Rh1# { 0-1 Black wins by checkmate. } { [%clk 0:00:30] } 0-1
+
+
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2017.02.09"]
+[White "lolcatzz"]
+[Black "Mr_Penings"]
+[Result "0-1"]
+[WhiteElo "2413"]
+[BlackElo "2437"]
+[TimeControl "180"]
+[Termination "Mr_Penings won on time"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B36"]
+[Opening "Sicilian Defense: Accelerated Dragon, Maróczy Bind"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "lolcatzz - Mr_Penings"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/fbw58Vci"]
+
+1. e4 { [%clk 0:02:58] } 1... c5 { [%clk 0:02:58] } 2. Ne2 { [%clk 0:02:54] } 2... Nc6 { [%clk 0:02:56] } 3. d4 { [%clk 0:02:51] } 3... cxd4 { [%clk 0:02:55] } 4. Nxd4 { [%clk 0:02:49] } 4... g6 { [%clk 0:02:52] } 5. c4 { [%clk 0:02:47] } 5... Nf6 { [%clk 0:02:49] } 6. Nc3 { [%clk 0:02:45] } 6... d6 { [%clk 0:02:47] } 7. Be2 { [%clk 0:02:43] } 7... Nxd4 { [%clk 0:02:46] } 8. Qxd4 { [%clk 0:02:42] } 8... Bg7 { [%clk 0:02:45] } 9. Be3 { [%clk 0:02:41] } 9... O-O { [%clk 0:02:43] } 10. Qd2 { [%clk 0:02:40] } 10... a5 { [%clk 0:02:43] } 11. Rd1 { [%clk 0:02:34] } 11... a4 { [%clk 0:02:41] } 12. c5 { [%clk 0:02:33] } 12... a3 { [%clk 0:02:18] } 13. cxd6 { [%clk 0:02:14] } 13... axb2 { [%clk 0:02:03] } 14. dxe7 { Black should be happy to blast open the position due to the king safety and fianchetto bishop aiming down the board. } { [%clk 0:02:11] } 14... Qxe7 { [%clk 0:02:02] } 15. Bd4 { [%clk 0:01:47] } 15... Qb4 { The b2 pawn can be defended! And it would act as a future queen if White is not careful. } { [%clk 0:01:45] } 16. O-O { [%clk 0:01:40] } 16... Rd8 { [%clk 0:01:33] } 17. e5 { [%clk 0:00:55] } 17... Ng4 { [%clk 0:01:18] } 18. f4 { [%clk 0:00:34] } 18... Bf8 { [%clk 0:01:16] } 19. Ne4 { [%clk 0:00:29] } 19... Bf5 { [%clk 0:01:07] } 20. Bxg4 { [%clk 0:00:26] } 20... Bxe4 { Way too much pressure for White. And at this point, the b2 pawn acts as a future queen. } { 0-1 Black wins. } { [%clk 0:01:06] } 0-1
+
+
+[Event "🏆 Hyper-Accelerated Dragon Repertoire 🏆: ** Grandmaster Games in the Accelerated Dragon **"]
+[Site "https://lichess.org/study/CfSVAROH/sSy6HfEt"]
+[Date "2020.06.30"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "** Grandmaster Games in the Accelerated Dragon **"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/VcEqlA1d"]
+[UTCDate "2020.06.30"]
+[UTCTime "11:26:31"]
+
+ *
+
+
+[Event "World Blitz 2018"]
+[Site "St Petersburg RUS"]
+[Date "2018.12.29"]
+[Round "10.22"]
+[White "Tari, Aryan"]
+[Black "Guseinov, Gadir"]
+[Result "0-1"]
+[WhiteElo "2620"]
+[BlackElo "2664"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B36"]
+[Opening "Sicilian Defense: Accelerated Dragon, Maróczy Bind"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "Tari, Aryan - Guseinov, Gadir"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/C56IncEf"]
+
+1. e4 c5 2. Nf3 g6 3. c4 Nc6 4. d4 cxd4 5. Nxd4 Nf6 6. Nc3 d6 7. Be2 Nxd4 8. Qxd4 Bg7 9. Be3 O-O 10. Qd2 a5 11. f3 a4 12. Rc1 Be6 13. Rc2 Nd7 14. O-O Qa5 15. Nd5 Rfe8 16. Rfc1 Kf8 17. Qxa5 Rxa5 { Black should be happy to go into a queenless endgame. He has a nice outpost for the knight on c5 and the long a1-h8 diagonal. } 18. Nc7 Rc8 19. Nxe6+ fxe6 20. Kf2 Nc5 21. h4 Ra6 22. Ke1 Kf7 23. Kd2 a3 24. bxa3 (24. b4 Nb3+! 25. axb3 a2 { Amazing illustration of the power of the long diagonal. White cannot prevent a1 Q, and has to give up a rook. }) 24... Rxa3 { Now there are two clear pawn weaknesses on a2 and c4 } 25. Rb1 Rc7 26. Rb5 Be5 27. g4 Bg3 28. h5 gxh5 29. gxh5 Be1+ 30. Kxe1 Rxe3 31. Kf2 Ra3 32. Rb1 e5 33. Bf1 Rc8 34. Be2 Rca8 35. Rbb2 h6 36. Bf1 Kf6 37. Rd2 Rc3 38. Rdc2 Rca3 39. Rd2 Kg5 40. Kg2 Kxh5 41. Be2 Kg5 42. Bd1 Kf4 43. Kf1 { Strong knight vs bad bishop endgame. And the black king has all these dark square holes to invade in } 43... Rd3 44. Rxd3 Nxd3 45. Rh2 Ke3 46. Rg2 Ra3 47. Bb3 Nc1 48. Rb2 Nxb3 49. axb3 Kxf3 { 0-1 White resigns. } 0-1
+
+
+[Event "FIDE Chess.com Grand Swiss"]
+[Site "Douglas ENG"]
+[Date "2019.10.17"]
+[Round "7.56"]
+[White "Bachmann, Axel"]
+[Black "Gukesh D,"]
+[Result "0-1"]
+[WhiteElo "2629"]
+[BlackElo "2520"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B26"]
+[Opening "Sicilian Defense: Closed"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "Bachmann, Axel - Gukesh D,"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/EtMfEQ5Z"]
+
+1. e4 c5 2. Nc3 Nc6 3. g3 g6 4. Bg2 Bg7 5. d3 d6 6. Be3 e5 7. Nh3 { Setting up the Reversed Botvinnik structure bind } 7... Nge7 8. f4 Nd4 9. O-O O-O 10. Qd2 Bg4 11. Ng5 f6 12. Nf3 Qd7 13. Rf2 b5 14. Raf1 Rac8 15. Nd1 exf4 16. Bxf4 d5 { Striking back in the center, ultimately gaining space on all sides of the board. } 17. Nxd4 cxd4 18. Bh6 dxe4 19. dxe4 Nc6 20. Bxg7 Kxg7 21. c3 Rcd8 22. cxd4 Bxd1 23. e5 fxe5 24. d5 Bg4 25. Rxf8 Rxf8 26. Rxf8 Kxf8 27. Qf2+ Ke7 28. Qc5+ Qd6 29. Qc1 Nb4 30. Qg5+ Kf7 31. Qxg4 { White should have taken the knight and trade off into an equal bishop endgame. However, in this variation, the knight and queen dominates with the initiative. } 31... Qc5+ 32. Kf1 Qc1+ 33. Ke2 Qxb2+ 34. Ke3 Qc3+ 35. Ke2 Qb2+ 36. Ke3 Nc2+ 37. Kd2 Nd4+ 38. Ke3 Nf5+ 39. Kf3 { A nice queen sacrifice leads to a winning king and pawn endgame } 39... Qxg2+ { 0-1 White resigns. } 0-1
+
+
+[Event "PRO League All Stars St1"]
+[Site "chess.com INT"]
+[Date "2018.9.8"]
+[Round "1"]
+[White "Andriasian, Zaven"]
+[Black "Vachier-Lagrave, Maxime"]
+[Result "0-1"]
+[WhiteElo "2603"]
+[BlackElo "2780"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B26"]
+[Opening "Sicilian Defense: Closed"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "Andriasian, Zaven - Vachier-Lagrave, Maxime"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/33WXrrnk"]
+
+1. e4 c5 2. Nc3 d6 3. g3 g6 4. Bg2 Bg7 5. d3 Nc6 6. Be3 e5 7. Qd2 Be6 8. Nge2 Nd4 9. O-O Ne7 10. Nd5 Nxd5 11. exd5 Bg4 12. Nxd4 cxd4 13. Bh6 O-O 14. Bxg7 Kxg7 15. c3 Qb6 16. Rae1 Qc5 17. cxd4 exd4 18. Re7 Rae8 19. Rfe1 Rxe7 20. Rxe7 Rc8 21. h3 { Turns out the c-file is the more important file to dominate } 21... Qc1+ 22. Qxc1 Rxc1+ 23. Kh2 Bf5 24. Rxb7 Bxd3 25. Rb4 Rc4 26. Rxc4 Bxc4 27. Kg1 { The passed d-pawn turns out to be a huge strength which contributes to Black's win } 27... d3 28. b3 (28. Kf1?? d2+) 28... d2 29. Bf3 Bxd5! 30. Bd1 Kf6 31. f4 Be6 32. h4 h5 33. Kf2 Bg4 { Basically forces the exxchange of bishops and into a winning king and pawn endgame. } 34. Bxg4 hxg4 35. Ke2 Kf5 36. Kxd2 Ke4 37. Ke2 d5 38. b4 Kd4 39. a4 Kc4 40. b5 Kb4 41. f5 Kxa4 (41... gxf5?? { Black cannot capture or else White gets a passed h-pawn } 42. h5) 42. Ke3 Kxb5 43. Kf4 a5 44. Kg5 a4 45. fxg6 fxg6 46. Kxg6 a3 47. h5 a2 48. h6 a1=Q 49. h7 Qh8 { 0-1 White resigns. } 0-1
+
+
+[Event "FIDE World Blitz 2014"]
+[Site "Dubai UAE"]
+[Date "2014.6.20"]
+[Round "15.16"]
+[White "Fressinet, Laurent"]
+[Black "Guseinov, Gadir"]
+[Result "0-1"]
+[WhiteElo "2717"]
+[BlackElo "2613"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B27"]
+[Opening "Sicilian Defense: Hyperaccelerated Dragon"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "Fressinet, Laurent - Guseinov, Gadir"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/xZJJrxS1"]
+
+1. e4 c5 2. Nf3 g6 3. c3 Bg7 4. d4 cxd4 5. cxd4 d5 6. e5 Nh6 7. h3 O-O 8. Nc3 Bf5 9. Be2 Nc6 10. O-O Be4!? { Harassing the knight on f3. Black tempts White to play Nxe4, which leads to dxe4, and Black will win the d4 pawn. The d4 pawn will be vulnerable in all lines } 11. Ng5 Qb6 12. Ngxe4 dxe4 13. Nxe4 Nxd4 14. Bc4 Rad8 15. Nc3 Nhf5 16. Bf4 Ne6 { Already very difficult for White to defend all of the weak pawns (e5 and b2) } 17. Qc1 Nxf4 18. Qxf4 Rd4 { 0-1 White resigns. } 0-1
+
+
+[Event "Kings Tournament Blitz"]
+[Site "Bazna ROU"]
+[Date "2014.11.22"]
+[Round "3.1"]
+[White "Wang, Yue"]
+[Black "Lu, Shanglei"]
+[Result "0-1"]
+[WhiteElo "2711"]
+[BlackElo "2566"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B27"]
+[Opening "Sicilian Defense: Hyperaccelerated Dragon"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "Wang, Yue - Lu, Shanglei"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/eJQyb4qa"]
+
+1. Nf3 g6 2. e4 c5 3. c3 Bg7 4. d4 cxd4 5. cxd4 d5 6. exd5 Nf6 7. Bb5+ Nbd7 8. d6 exd6 9. Qe2+ Qe7 10. Qxe7+ Kxe7 11. O-O Rd8 12. Re1+ Kf8 13. Nc3 a6 14. Bf1 b5 { It is extremely important to control the d5 square. If Black can fully blockade the white d4 pawn with his knight, the pawn will become a huge target } 15. a4 b4 16. Nb1 a5 17. Nbd2 Nb6 18. Nc4 Nxc4 19. Bxc4 Ba6 20. Nd2 Rdc8 21. b3 Bb7 22. Bb2 Bh6 23. Rad1 Bxd2 24. Rxd2 Bd5 25. Rc2 Ra7 26. f3 Rac7 27. Rec1 { This endgame will be a strong knight vs bad bishop ending. } 27... Bxc4 28. bxc4 (28. Rxc4 Rxc4 29. Rxc4 Rxc4 30. bxc4 Nd7 { Trading off all of the rooks will not make much difference. Black's knight will still end up on b6, winning at least one of White's pawns }) 28... Nd7 29. Ba1 Nb6 30. c5 dxc5 31. dxc5 Nxa4 32. Be5 Rc6 33. h4 b3 34. Rc4 Nxc5 35. Bd4 Ne6 36. Rxc6 Rxc6 37. Rxc6 Nxd4 38. Ra6 Ne2+ 39. Kf2 Nc3 40. Rb6 b2 { 0-1 White resigns. } 0-1
+
+
+[Event "St Louis Spring B"]
+[Site "Saint Louis USA"]
+[Date "2019.3.5"]
+[Round "4.1"]
+[White "Steingrimsson, Hedinn"]
+[Black "Mista, Aleksander"]
+[Result "0-1"]
+[WhiteElo "2558"]
+[BlackElo "2592"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B36"]
+[Opening "Sicilian Defense: Accelerated Dragon, Maróczy Bind"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "Steingrimsson, Hedinn - Mista, Aleksander"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/XCOXN2BE"]
+
+1. Nf3 g6 2. e4 c5 3. c4 Nc6 4. d4 cxd4 5. Nxd4 Nf6 6. Nc3 d6 7. Nc2 Bg7 8. Be2 Nd7 9. Bd2 O-O 10. O-O Nc5 11. f3 Nd4 12. Nxd4 Bxd4+ 13. Kh1 Bg7 14. Rc1 a5 15. b3 Be6 16. Re1 Qb6 17. Bf1 Rfc8 18. Rc2 Qd8 19. Bg5 h6 20. Bh4 g5 21. Bf2 Qf8 22. Qd2 Bf6 { An interesting way to set up a bishop + queen battery on the long diagonal. } 23. g3 Qg7 24. Bg2 a4 { Thematic pawn break on the queenside. Either the a-file or c-file opens, and lots of pressure on the pawn chain } 25. b4 Nb3!? 26. axb3 axb3 27. Rcc1 Rxc4 { Trading a knight for 2 pawns. Definitely should be taken seriously because of the highly advanced passed b-pawn and Black's bishops and rooks aimed directly at the queenside. } 28. Ne2 Rxc1 29. Qxc1 b2 30. Qc2 Ra1 31. f4 Ba2 32. e5 Rxe1+ { 0-1 White resigns. } 0-1
+
+
+[Event "US Championship"]
+[Site "St Louis, MO USA"]
+[Date "2019.03.29"]
+[Round "9.1"]
+[White "Ray Robson"]
+[Black "Hikaru Nakamura"]
+[Result "0-1"]
+[WhiteElo "2667"]
+[BlackElo "2746"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B78"]
+[Opening "Sicilian Defense: Dragon Variation, Yugoslav Attack"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "Ray Robson - Hikaru Nakamura"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/gbdUmY7x"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. f3 O-O 8. Qd2 Nc6 9. Bc4 Bd7 10. O-O-O Rb8 11. Bb3 Na5 12. Bh6 Bxh6 13. Qxh6 b5 14. Nd5 Nxb3+ 15. Nxb3 e5 16. Nxf6+ Qxf6 17. h4 Rb6 18. h5 Qe7 19. hxg6 fxg6 { White's attack has slowed down, as long as the h7 pawn is defended. Black has the next move with pressure along the c-file. } 20. Qe3 Be6 21. Rhf1 Rc6 22. f4 Qc7 23. Rd2 a5 24. Kb1 a4 25. Nc1 b4 26. Rdf2 exf4 27. Rxf4 Rc8 { Interesting position due to seemingly separate battles of the major pieces being played: One along the f-file and one along the c-file. } 28. Rf6 Rxc2 29. Rxe6 Qc4 30. Ref6 a3 { The current threat is Rxb2+ Ka1 Rb1+! Kxb1 Qc2+ Ka1 Qc2# } 31. bxa3 bxa3 32. Qxa3 Rxc1+ 33. Rxc1 Qxe4+ 34. Kb2 Qe5+ 35. Rc3 Rb8+ 36. Kc2 Qxf6 { Simplifying into a queen and rook endgame up a pawn. The far safer king makes the win very straightforward. } 37. Rf3 Qd4 38. Rb3 Qe4+ 39. Kc1 Qe1+ 40. Kc2 Qe2+ 41. Kb1 Qd1+ 42. Qc1 Rxb3+ 43. axb3 Qxb3+ 44. Ka1 Qa4+ 45. Kb2 Qb5+ 46. Ka1 Qc5 47. Qd2 h5 { Black just has to slowly advance the kingside pawns and look for a queen trade, while avoiding any perpetual checks. } 48. Kb1 Kg7 49. Qb2+ Qe5 50. Qb7+ Kh6 51. Kc1 d5 52. Kd1 Qe4 53. Qb2 Kg5 54. Qd2+ Kg4 55. Qh6 g5 { 0-1 White resigns. } 0-1
+
+
+[Event "Aeroflot Open B"]
+[Site "Moscow RUS"]
+[Date "2011.2.14"]
+[Round "7"]
+[White "Lou, Yiping"]
+[Black "Xu, Jun"]
+[Result "0-1"]
+[WhiteElo "2427"]
+[BlackElo "2490"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B36"]
+[Opening "Sicilian Defense: Accelerated Dragon, Maróczy Bind"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "Lou, Yiping - Xu, Jun"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/ZPemKUDR"]
+
+1. Nf3 c5 2. c4 Nc6 3. d4 cxd4 4. Nxd4 g6 5. e4 Nf6 6. Nc3 d6 7. Be2 Nxd4 8. Qxd4 Bg7 9. Bg5 O-O 10. Qd2 a5 11. Rc1 a4 12. f3 Be6 13. Nb5 Bd7 14. Nd4 Be8 { An awkward looking move, but reasonable to allow the standard Nd7 retreat. } 15. O-O Nd7 16. Rfd1 Nc5 17. Be3 Qa5 18. Qc2 Bd7 19. Bf1 Rfc8 20. Qb1 Ne6 21. Ne2 Nc5 22. Nd4 Bf6 23. Kh1 h5 24. Rc2 Na6 25. a3 { Innocent looking pawn move to prevent Nb4, but now there's an outpost on b3! } 25... Nc5 { Knight comes right back! } 26. Ne2 { Knight comes right back! } 26... Nb3 27. Nf4 Bc6 28. Nd5 Bxd5 29. Rxd5 Qc7 30. Qd1 Ra5 31. g3 Rxd5 32. exd5 Qd7 33. Qd3 Nc5 34. Bxc5 Rxc5 35. b4 axb3 36. Qxb3 { We reach a typical Accelerated Dragon endgame pawn structure. Black has a completely safe king while White's pawns are overextended. Now Black has to pile up against the weak pawns } 36... Qc7 37. Kg2 Qa5 38. Qxb7 Qxa3 39. Qb1 Ra5 40. Qd1 Qc5 41. Qe2 Qa7 42. f4 Ra3 43. f5 { An interesting attempt to break Black's solid kingside, but it also opens up White's kingside as well, which evidently backfires } 43... Re3 44. Qf2 Qd4 45. fxg6 Qe4+ 46. Kh3 Rf3 47. gxf7+ Kxf7 48. Qe2 Qf5+ 49. Kg2 Rxf1 { 0-1 White resigns. } 0-1
+
+
+[Event "20th World Seniors"]
+[Site "Arco ITA"]
+[Date "2010.10.30"]
+[Round "5"]
+[White "Tseshkovsky, Vitaly"]
+[Black "Rajkovic, Dusan"]
+[Result "0-1"]
+[WhiteElo "2564"]
+[BlackElo "2443"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B36"]
+[Opening "Sicilian Defense: Accelerated Dragon, Maróczy Bind, Gurgenidze Variation"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "Tseshkovsky, Vitaly - Rajkovic, Dusan"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/UwYg7O5n"]
+
+1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 g6 5. c4 Nf6 6. Nc3 Nxd4 7. Qxd4 d6 8. Be3 Bg7 9. Be2 O-O 10. Qd2 a5 11. O-O a4 12. f3 Qa5 13. Rac1 Be6 14. Rc2 Rfc8 15. b4 axb3 (15... Qxb4? { Black cannot capture because the queen will get chased around and make unnecessary committal moves to avoid getting trapped } 16. Rb1 Qa5 (16... Qa3 17. Nb5) 17. Bb6 Qe5 18. Rb5) 16. axb3 Qb4 17. Na4 Qxb3 18. Nb6 Bh6 { Great intermezzo. } 19. f4 (19. Bxh6 Qxb6+) 19... Nxe4 20. Qd3 Qxd3 21. Bxd3 Ra3 22. Bxe4 Rxe3 23. Nxc8 Rxe4 24. Nxe7+ Kf8 25. Nd5 { White is up a rook for minor piece and pawn. However, because Black's minor pieces make up the bishop pair, the evaluation is still far from clear. } 25... b5 { Undermining the d5 outpost, so to restrict the knight some more. } 26. Rd1 bxc4 27. Nc3 Rxf4 28. Rxd6 Rf5 29. Nd1 Ra5 30. Kf2 Rf5+ 31. Ke1 Rc5 32. g3 Bg5 33. Nc3 Bf5 34. Ra2 Re5+ 35. Re2 Ra5 36. Ra2 Rc5 37. h4 Be7 38. Rda6 Re5+ 39. Re2 Bb4! { 0-1 White resigns. } 0-1
+
+
+[Event "Gibraltar Masters"]
+[Site "Caleta ENG"]
+[Date "2011.1.29"]
+[Round "5.2"]
+[White "Kotronias, Vasilios"]
+[Black "Ivanchuk, Vassily"]
+[Result "0-1"]
+[WhiteElo "2599"]
+[BlackElo "2764"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B78"]
+[Opening "Sicilian Defense: Dragon Variation, Yugoslav Attack"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "Kotronias, Vasilios - Ivanchuk, Vassily"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/bHCbSy3s"]
+
+1. e4 c5 2. Nf3 g6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 d6 6. Be3 Bg7 7. f3 Nc6 8. Qd2 O-O 9. Bc4 Bd7 10. O-O-O Rb8 11. Bb3 Na5 12. Bh6 Bxh6 13. Qxh6 b5 14. g4 b4 15. Nd5 Nxb3+ 16. Nxb3 e5 17. Ne3 Be6 18. h4 Kh8 19. Qg5 (19. h5?? { White should not blindly further his attack. h5 leads to his Queen getting trapped } 19... Ng8) 19... Rb6 20. Na5 Kg7 21. Nf5+ Bxf5 22. gxf5 Qc7 23. fxg6 fxg6 24. h5 Rc8 { Best defense is a strong offense! } 25. Rd2 Ra6 26. hxg6 h5 { Acts as a distraction to take the initiative } (26... hxg6?? { Recapturing is just too dangerous because White seizes the important initiative with Rg2. Black cannot proceed on the queenside since checkmate looms on the kingside. Black is one move short. } 27. Rg2) 27. Nb3 (27. Rxh5 Nxh5 28. Qxh5 Rh8) 27... Rxa2 28. Kb1 Ra6 29. Qf5 Qc4 30. Re1 Rc5 31. Rf2 Rca5 32. Re3 (32. Nxa5 Rxa5 { Black enters on the a-file and things get messy. Notice how safe Black's king is thanks to the Nf6. } 33. b3 Qc3) 32... Qd4 33. Nxa5 Qd1+ 34. Ka2 Rxa5+ 35. Kb3 Qa1 36. c3 Qa4+ 37. Kc4 bxc3+ { 0-1 White resigns. } 0-1
+
+
+[Event "43rd Olympiad 2018"]
+[Site "Batumi GEO"]
+[Date "2018.10.4"]
+[Round "10.19"]
+[White "Dastan, Batuhan"]
+[Black "Georgiadis, Nico"]
+[Result "0-1"]
+[WhiteElo "2569"]
+[BlackElo "2526"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B78"]
+[Opening "Sicilian Defense: Dragon Variation, Yugoslav Attack"]
+[StudyName "Hyper-Accelerated Dragon Repertoire"]
+[ChapterName "Dastan, Batuhan - Georgiadis, Nico"]
+[ChapterURL "https://lichess.org/study/VV8eF6Ge/uHvL9k5R"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. f3 Nc6 8. Qd2 O-O 9. Bc4 Bd7 10. O-O-O Rb8 11. h4 b5!? { An ambitious gambit. Surprisingly, White has 3 options to capture the b5 pawn with, but they all lead to trouble. } 12. Bb3 (12. Bxb5 Nxd4) (12. Ndxb5 Ne5 13. Be2 Qa5 { This doesn't lose a piece, but Black gets a quick attack with the now semi-open b- and a- files. }) (12. Ncxb5 Na5 13. Na3 (13. Be2 e5) 13... Nxc4 14. Nxc4 Qc8 { Also leading to great pressure on the queenside files. }) 12... Na5 13. h5 Nc4 14. Bxc4 bxc4 15. hxg6 fxg6 16. Bh6 Qb6 17. b3 { These innocent pawn moves by white on the queenside are opportunities for Black to invade in the future. } 17... cxb3 18. axb3 Bxh6 19. Qxh6 Rf7 { Kingside is pretty safe, so onwards to the queenside! } 20. Qg5 Rc8 21. Kb2 a5 22. Rd3 a4 { Classic pawn break to open up a file } 23. Nf5 Bxf5 24. exf5 axb3 25. fxg6 bxc2+ 26. Kxc2 hxg6 27. Rh6 (27. Qxg6+ Rg7 { Counterthreat! And now it is Black with the initiative. }) 27... Qf2+ 28. Rd2 Qa7 29. Rxg6+ Kf8 30. Qb5 Rh7 31. Kd3 Rc5 32. Qb3 Qa6+ 33. Ke3 Rh1 34. Ne4 Re5 { Black has to be cautious that White doesn't have any points of entry with the major pieces. } 35. Kf4 (35. Qb8+ Kf7) 35... Rxe4+ 36. fxe4 Qf1+ 37. Qf3 Qc1 38. Qd3 Qa1 39. Rg3 Nh5+ { 0-1 White resigns. } 0-1
+
+

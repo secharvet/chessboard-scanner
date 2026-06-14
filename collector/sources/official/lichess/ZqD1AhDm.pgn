@@ -1,0 +1,144 @@
+[Event "Wobbly Chess vs Andrea Botez: game 1: Crushing the Jobava London"]
+[Date "2023.11.24"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D01"]
+[Opening "Rapport-Jobava System"]
+[StudyName "Wobbly Chess vs Andrea Botez"]
+[ChapterName "game 1: Crushing the Jobava London"]
+[ChapterURL "https://lichess.org/study/ZqD1AhDm/QWlsOW2t"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2023.11.24"]
+[UTCTime "23:35:03"]
+
+1. d4 d5 2. Nc3 Nf6 3. Bf4 c5 4. dxc5 d4 5. Nb1 Nc6 6. Nf3 Bg4 7. c3 Bxf3 8. exf3 e5 9. Bg5 Bxc5 10. Bc4 Qb6 11. Qe2 O-O-O 12. Bxf7 d3 13. Qd2 e4 14. Be6+ Kb8 15. Bf4+ Ka8 16. Na3 Rhe8 17. Nc4 Rxe6 18. Nxb6+ Bxb6 19. O-O exf3 20. g3 Re2 21. Qd1 Ne4 22. a4 Nxf2 23. Rxf2 Rxf2 24. Kh1 d2 25. b4 Re2 26. b5 Na5 27. Rb1 Nc4 28. h4 Rd3 29. Qxe2 fxe2 *
+
+
+[Event "Wobbly Chess vs Andrea Botez: game 2: Time odds Jobava London (Anish comes by)"]
+[Date "2023.11.29"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D01"]
+[Opening "Rapport-Jobava System"]
+[StudyName "Wobbly Chess vs Andrea Botez"]
+[ChapterName "game 2: Time odds Jobava London (Anish comes by)"]
+[ChapterURL "https://lichess.org/study/ZqD1AhDm/z8b8hjyS"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2023.11.29"]
+[UTCTime "03:46:11"]
+
+1. d4 d5 2. Nc3 Nf6 3. Bf4 c5 4. e3 cxd4 5. exd4 Bg4 6. f3 Bd7 7. Bd3 Nc6 8. Nge2 Qb6 9. Na4 Qa5+ 10. c3 e5 11. dxe5 Nh5 12. O-O Nxf4 13. Nxf4 Nxe5 14. Re1 Bd6 15. b4 Qxa4 16. Qxa4 Bxa4 17. Nxd5 O-O-O 18. Be4 Rhe8 19. Rac1 Nc4 20. Kf2 g6 21. g3 f5 22. Bd3 Ne5 23. Bb1 h5 24. c4 Bc6 25. Ne3 Nxf3 26. c5 Bc7 27. Re2 Rd4 28. a3 f4 29. Nc2 Rde4 30. Rxe4 Bxe4 31. Re1 fxg3+ *
+
+
+[Event "Wobbly Chess vs Andrea Botez: game 3: Grand Prix ATTACK"]
+[Date "2023.11.29"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B23"]
+[Opening "Sicilian Defense: Closed"]
+[StudyName "Wobbly Chess vs Andrea Botez"]
+[ChapterName "game 3: Grand Prix ATTACK"]
+[ChapterURL "https://lichess.org/study/ZqD1AhDm/mKFCOAF2"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2023.11.29"]
+[UTCTime "04:09:56"]
+
+1. e4 c5 2. Nc3 e6 3. f4 Nc6 4. Nf3 d5 5. Bb5 Ne7 6. exd5 exd5 7. Qe2 Be6 8. Bxc6+ bxc6 9. O-O g6 10. Qe5 Rg8 11. Na4 Bg7 12. Qe2 Qd6 13. Rb1 Rb8 14. b3 Kf8 15. Ba3 Qxf4 16. Bxc5 Qe4 17. Qa6 Bg4 18. Ng5 Qf5 19. Nxh7+ Ke8 20. Rxf5 Bxf5 21. Re1 Be6 22. Qxa7 *
+
+
+[Event "Wobbly Chess vs Andrea Botez: game 4: 30 seconds to 3 minutes odds (Jobava London)"]
+[Date "2023.11.29"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D00"]
+[Opening "Queen's Pawn Game: Chigorin Variation, Irish Gambit"]
+[StudyName "Wobbly Chess vs Andrea Botez"]
+[ChapterName "game 4: 30 seconds to 3 minutes odds (Jobava London)"]
+[ChapterURL "https://lichess.org/study/ZqD1AhDm/jzfIkaP1"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2023.11.29"]
+[UTCTime "04:17:50"]
+
+1. d4 d5 2. Nc3 c5 3. Bf4 Nc6 4. e3 cxd4 5. exd4 a6 6. Nf3 Nf6 7. Be2 Bg4 8. O-O e6 9. h3 Bh5 10. Re1 Bd6 11. Ne5 Bg6 12. Nxg6 hxg6 13. Bxd6 Qxd6 14. Bf3 g5 15. g3 Rxh3 16. Bg2 Rh6 17. Qd2 O-O-O 18. Qxg5 Nxd4 19. Rac1 Qb6 20. Qxg7 Rdh8 21. Qxf7 Kb8 22. Ne2 Nf5 23. Nf4 Ng4 24. Re2 Nd4 25. Rd2 Rh2 26. c3 Rxg2+ 27. Nxg2 Rh7 28. Qf8+ Ka7 29. cxd4 Qxd4 30. Rxd4 Rh6 31. Qc5+ Kb8 32. Rf4 Rh8 33. Rf8+ *
+
+
+[Event "Wobbly Chess vs Andrea Botez: game 5: Wobbly Botez Gambit (Nepo enters after this game)"]
+[Date "2023.11.29"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B21"]
+[Opening "Sicilian Defense: Smith-Morra Gambit Accepted"]
+[StudyName "Wobbly Chess vs Andrea Botez"]
+[ChapterName "game 5: Wobbly Botez Gambit (Nepo enters after this game)"]
+[ChapterURL "https://lichess.org/study/ZqD1AhDm/wJBoDX5C"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2023.11.29"]
+[UTCTime "07:03:56"]
+
+1. e4 c5 2. d4 cxd4 3. c3 dxc3 4. Nxc3 d6 5. Bc4 Nf6 6. Nf3 g6 7. e5 dxe5 8. Bxf7+ Kxf7 9. Qxd8 Nc6 10. Ng5+ Kg7 11. Ne6+ Kf7 12. Ng5+ Kg7 13. Qd1 h6 14. Nge4 Bf5 15. f3 Rd8 16. Qb3 b6 17. Be3 e6 18. g4 Bxe4 19. Nxe4 Bb4+ 20. Kf2 Rhf8 21. Bxh6+ Kxh6 22. g5+ Kg7 23. gxf6+ Kf7 24. h4 a5 25. h5 Nd4 26. Qc4 Rc8 27. hxg6+ Kxg6 28. Rag1+ Kf7 29. Rg7+ Ke8 30. Qxe6+ Nxe6 31. Re7+ Kd8 32. Rd1+ Nd4 *
+
+
+[Event "Wobbly Chess vs Andrea Botez: game 6: London vs KID Nepo helps"]
+[Date "2023.11.29"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "Wobbly Chess vs Andrea Botez"]
+[ChapterName "game 6: London vs KID Nepo helps"]
+[ChapterURL "https://lichess.org/study/ZqD1AhDm/wJN2UtOJ"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2023.11.29"]
+[UTCTime "07:11:16"]
+
+1. d4 Nf6 2. Bf4 g6 3. Nc3 d6 4. e4 Bg7 5. Qd2 O-O 6. O-O-O c6 7. Bh6 b5 8. f3 b4 9. Nce2 Qa5 10. Kb1 Be6 11. Nc1 c5 12. h4 c4 13. d5 c3 14. Nb3 cxd2 15. Nxa5 Bxh6 16. dxe6 fxe6 17. g4 Be3 18. Bc4 d5 19. Bb3 Nbd7 20. g5 Nh5 21. exd5 Nc5 22. Ne2 Nxb3 23. axb3 exd5 24. Nc6 Rf7 25. Nxb4 d4 26. Nd5 e6 27. Nxe3 dxe3 28. c3 Rxf3 29. Kc2 Rf2 30. Kd3 Rf3 31. Rhf1 Raf8 32. Rxf3 Rxf3 33. Ke4 Rh3 34. Kd3 Kg7 35. b4 e5 36. c4 Ng3 37. b5 e4+ 38. Kxe3 Nf5+ 39. Kxe4 Re3+ 40. Kd5 Rxe2 41. c5 Ne3+ 42. Kc6 *
+
+
+[Event "Wobbly Chess vs Andrea Botez: game 7: Andrea plays Jobava London. Nepo helps"]
+[Date "2023.11.24"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D01"]
+[Opening "Rapport-Jobava System"]
+[StudyName "Wobbly Chess vs Andrea Botez"]
+[ChapterName "game 7: Andrea plays Jobava London. Nepo helps"]
+[ChapterURL "https://lichess.org/study/ZqD1AhDm/YzOOQe2X"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2023.11.24"]
+[UTCTime "05:59:45"]
+
+1. d4 Nf6 2. Nc3 d5 3. Bf4 c5 4. e3 cxd4 5. exd4 Bg4 6. Be2 Bxe2 7. Qxe2 a6 (7... e6 8. Nf3) 8. Nf3 e6 9. O-O-O Bd6 10. Ne5 Nc6 11. g4 Rc8 12. g5 Ne4 13. Nxe4 dxe4 14. Qxe4 Nb4 15. c3 Nxa2+ 16. Kb1 Qa5 17. Bd2 O-O 18. h4 b5 19. Nc6 Qb6 20. d5 exd5 21. Ne7+ Bxe7 22. Qxe7 b4 23. Kxa2 b3+ 24. Kb1 Rc5 25. c4 Rfc8 26. Be3 Qa5 27. Bxc5 Qa2+ 28. Kc1 Qa1+ 29. Kd2 Qxb2+ 30. Ke3 d4+ 31. Bxd4 Rf8 32. Qxf8+ Kxf8 33. Bc5+ Kg8 34. Rd8# *
+
+
+[Event "Wobbly Chess vs Andrea Botez: game 8: Playing my new dubious idea vs London (Eric wins)"]
+[Date "2023.11.24"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D00"]
+[Opening "Queen's Pawn Game: Accelerated London System, Steinitz Countergambit"]
+[StudyName "Wobbly Chess vs Andrea Botez"]
+[ChapterName "game 8: Playing my new dubious idea vs London (Eric wins)"]
+[ChapterURL "https://lichess.org/study/ZqD1AhDm/rKP9REAs"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2023.11.24"]
+[UTCTime "06:15:11"]
+
+1. d4 d5 2. Bf4 c5 3. e3 cxd4 4. exd4 Nc6 5. Nf3 f6 6. c4 g5 7. Be3 e6 8. Nc3 Bb4 9. Qc2 Nge7 10. Bd3 g4 11. Nd2 dxc4 12. Nxc4 Nxd4 13. Bxd4 Qxd4 14. O-O-O Bxc3 15. Bg6+ hxg6 16. Rxd4 Bxd4 17. Rd1 Bc5 18. Qa4+ Kf7 19. b4 Bxf2 20. Nd6+ Kg7 21. Ne8+ Kf7 22. Nd6+ Kg7 23. Ne8+ Kh6 24. Nxf6 Be3+ 25. Kb1 e5 26. b5 Bf5+ 27. Ne4 Rhd8 28. Rf1 Rd4 29. Qxd4 Bxd4 30. Re1 Rc8 31. g3 Nd5 32. h4 (32. a4) *
+
+
+[Event "Wobbly Chess vs Andrea Botez: game 9: insane final game"]
+[Date "2023.11.24"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A00"]
+[Opening "Van't Kruijs Opening"]
+[StudyName "Wobbly Chess vs Andrea Botez"]
+[ChapterName "game 9: insane final game"]
+[ChapterURL "https://lichess.org/study/ZqD1AhDm/xwbJkl2c"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2023.11.24"]
+[UTCTime "06:23:07"]
+
+1. e3 c5 2. d4 cxd4 3. exd4 e6 4. Bf4 d5 5. Nd2 Nc6 6. c3 Bd6 7. Bg3 Nf6 8. Ngf3 O-O 9. Bd3 h6 10. Qe2 Ne7 11. Ne5 Nf5 12. f4 a6 13. Bf2 b5 14. g4 Ne7 15. g5 hxg5 16. fxg5 Nd7 17. Qh5 Nf5 18. Bg3 Nxe5 19. dxe5 g6 20. Qg4 Nxg3 21. Qxg3 Bc5 22. h4 Kg7 23. h5 Rh8 24. h6+ Kh7 25. O-O-O Bb7 26. Rdf1 Rf8 27. Rf6 Be7 28. Nf3 d4 29. Rd1 Bxf6 30. gxf6 Bxf3 31. Qxf3 Qb6 32. cxd4 Rac8+ 33. Kb1 Rc7 34. Be4 Rfc8 35. Qd3 Rd8 36. a3 Rcd7 37. d5 exd5 38. Bf5 Rc7 39. e6 Rg8 40. Qxd5 gxf5 41. Qxf5+ Kh8 42. e7 Rcc8 43. Rf1 Qc6 44. Ka1 Qc5 45. Qd3 Qc4 46. Qd1 Qe6 47. Qf3 b4 48. axb4 a5 49. b5 Rb8 50. Qc3 Rbc8 51. Qd4 Rc4 52. Qd3 Ra4+ 53. Kb1 Qa2+ 54. Kc2 Rc4+ 55. Kd1 Qa1+ 56. Ke2 Qxb2+ 57. Ke3 Qe5+ 58. Kd2 Rd4 59. Rf3 Rxd3+ 60. Rxd3 Qxf6 61. h7 Qg5+ 62. Kc3 Kxh7 63. Rh3+ Kg6 64. b6 Rc8+ 65. Kb2 Qxe7 66. b7 Qb4+ 67. Rb3 Qd2+ 68. Ka3 Qc1+ 69. Ka4 Rc4+ 70. Kxa5 Qa1+ 71. Kb6 Qf6+ 72. Ka7 Ra4+ 73. Kb8 Qd8# *
+
+

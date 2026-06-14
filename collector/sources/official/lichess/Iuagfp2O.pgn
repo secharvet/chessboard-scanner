@@ -1,0 +1,35 @@
+[Event "DrHack's Study: Chapter 1"]
+[Date "2020.12.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "DrHack's Study"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/Iuagfp2O/PXhe27dv"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2020.12.12"]
+[UTCTime "19:03:01"]
+
+ *
+
+
+[Event "DrHack's Study: Chapter 2"]
+[Date "2020.12.13"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "DrHack's Study"]
+[ChapterName "Chapter 2"]
+[ChapterURL "https://lichess.org/study/Iuagfp2O/2kNrB1gf"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "2kr3r/1ppq2pp/p1npbp2/8/8/2P1B3/PPPQBPPP/1K1R3R b - - 3 14"]
+[SetUp "1"]
+[UTCDate "2020.12.13"]
+[UTCTime "14:16:17"]
+
+{ With the symmetry on the king's side, I believe black's best attempt at a better game is to gain space on the king's side and then place his knight in a position where it can out-value the white bishops. This provides two ideas to the position: 14. ...g5 which secures a square on e5 for the knight and 14. ...h5 which secures f5 for the knight's eventual need for value. }
+ *
+
+

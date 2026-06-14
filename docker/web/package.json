@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "description": "Dépendances installées uniquement dans l'image web (Podman build).",
+  "dependencies": {
+    "chess.js": "1.4.0",
+    "stockfish": "16.0.0"
+  }
+}

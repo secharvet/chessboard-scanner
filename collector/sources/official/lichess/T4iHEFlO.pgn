@@ -1,0 +1,266 @@
+[Event "College Final Four 2013"]
+[Site "Kingston"]
+[Date "2013.4.7"]
+[White "Auger, Michael"]
+[Black "Huschenbeth, Niclas"]
+[Result "0-1"]
+[WhiteElo "2089"]
+[BlackElo "2533"]
+[Variant "Standard"]
+[ECO "B22"]
+[Opening "Sicilian Defense: Alapin Variation, Smith-Morra Declined"]
+[StudyName "Final Four of College Chess - University of Illinois Games"]
+[ChapterName "Auger, Michael - Huschenbeth, Niclas"]
+[ChapterURL "https://lichess.org/study/T4iHEFlO/v622OhjR"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 c5 2. c3 Nf6 3. e5 Nd5 4. d4 cxd4 5. Nf3 Nc6 6. Bc4 Nb6 7. Bb3 d5 8. exd6 Qxd6 9. Na3 dxc3 10. Qxd6 exd6 11. Nb5 Rb8 12. bxc3 a6 13. Be3 axb5 14. Bxb6 Be6 15. Rd1 Kd7 16. Ng5 Ne5 17. O-O Nc4 18. Bd4 h6 19. Ne4 Rg8 20. Rfe1 Kc6 21. f3 Na5 22. Rb1 Nxb3 23. axb3 Be7 24. Rb2 g5 25. Nf2 Ra8 26. Nd3 Ra3 27. b4 Rga8 28. Kf2 Bd8 29. Ke3 Bb6 30. Rc1 Re8 31. Bxb6 Kxb6 32. Nf2 Bc4+ 33. Kd4 Re5 34. Rbc2 f5 35. Nd1 Bb3 36. Rd2 Rd5+ 37. Ke3 f4+ 38. Ke2 Rxd2+ 39. Kxd2 Ra2+ 40. Ke1 Bc4 { 0-1 Black wins. } 0-1
+
+
+[Event "College Final Four 2013"]
+[Site "Kingston"]
+[Date "2013.4.6"]
+[White "Holt, Conrad"]
+[Black "Auger, Michael"]
+[Result "1-0"]
+[WhiteElo "2509"]
+[BlackElo "2089"]
+[Variant "Standard"]
+[ECO "D80"]
+[Opening "Grünfeld Defense"]
+[StudyName "Final Four of College Chess - University of Illinois Games"]
+[ChapterName "Holt, Conrad - Auger, Michael"]
+[ChapterURL "https://lichess.org/study/T4iHEFlO/6tARPRoq"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. e3 Bg7 5. Qb3 dxc4 6. Bxc4 O-O 7. Nf3 Nc6 8. Be2 Na5 9. Qa3 Nc6 10. O-O Qd6 11. Qb3 Qb4 12. Nb5 Qxb3 13. axb3 a6 14. Nxc7 Ra7 15. Ne5 Nd7 16. Nxd7 Bxd7 17. d5 Nb4 18. Bd2 Bxb2 19. Bxb4 Bxa1 20. Rxa1 Rc8 21. d6 exd6 22. Nd5 Rd8 23. Ba5 { 1-0 White wins. } 1-0
+
+
+[Event "College Final Four 2013"]
+[Site "Kingston"]
+[Date "2013.4.6"]
+[White "Auger, Michael"]
+[Black "So, Wesley"]
+[Result "0-1"]
+[WhiteElo "2089"]
+[BlackElo "2673"]
+[Variant "Standard"]
+[ECO "C11"]
+[Opening "French Defense: Classical Variation, Shirov-Anand Variation"]
+[StudyName "Final Four of College Chess - University of Illinois Games"]
+[ChapterName "Auger, Michael - So, Wesley"]
+[ChapterURL "https://lichess.org/study/T4iHEFlO/8iHNOU51"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e6 2. d4 d5 3. Nc3 Nf6 4. e5 Nfd7 5. Nce2 c5 6. f4 Nc6 7. Nf3 Be7 8. c3 O-O 9. Be3 f6 10. a3 fxe5 11. fxe5 Qb6 12. Qd2 Na5 13. Nc1 Qc7 14. h4 Nc4 15. Bxc4 dxc4 16. Rh3 cxd4 17. cxd4 Nb6 18. Ne2 Nd5 19. Rg3 Bd7 20. Rc1 b5 21. Nf4 Nxf4 22. Bxf4 Bc6 23. Ke2 Be4 24. Ng5 Bxg5 25. Bxg5 Bd3+ 26. Ke3 Qb7 27. Bf6 Rf7 28. h5 Kh8 29. Qf2 gxf6 30. exf6 Qe4+ 31. Kd2 Qf5 32. Rf3 Qg5+ 33. Kc3 { 0-1 Black wins. } 0-1
+
+
+[Event "College Final Four 2014"]
+[Site "Kingston"]
+[Date "2014.4.6"]
+[White "Paikidze, Nazi"]
+[Black "Indusekar, Akshay"]
+[Result "1-0"]
+[WhiteElo "2340"]
+[BlackElo "2028"]
+[Variant "Standard"]
+[ECO "D45"]
+[Opening "Semi-Slav Defense: Accelerated Meran Variation"]
+[StudyName "Final Four of College Chess - University of Illinois Games"]
+[ChapterName "Paikidze, Nazi - Indusekar, Akshay"]
+[ChapterURL "https://lichess.org/study/T4iHEFlO/PCdppA7q"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 d5 2. Nf3 Nf6 3. c4 c6 4. e3 e6 5. Nc3 a6 6. Bd3 dxc4 7. Bxc4 b5 8. Bd3 c5 9. dxc5 Bxc5 10. O-O Bb7 11. a3 Nbd7 12. Qe2 O-O 13. e4 Qc7 14. g3 Ne5 15. Bf4 Nfd7 16. Rac1 Nxf3+ 17. Qxf3 Ne5 18. Qe2 f6 19. b4 Bb6 20. Na4 Qd8 21. Bxe5 bxa4 22. Bf4 Kh8 23. Be3 e5 24. Rfd1 Bd4 25. Rc4 Rc8 26. Bc2 Rxc4 27. Qxc4 Qc8 28. Qxc8 Rxc8 29. Bxa4 Bxe3 30. fxe3 Bxe4 31. Bd7 Rd8 32. Rc1 Kg8 33. Rc7 f5 34. Kf2 g5 35. Ra7 Kf8 36. a4 Rb8 37. Rxa6 Rxb4 38. Bxf5 Bxf5 39. Rf6+ Kg7 40. Rxf5 Rxa4 41. Rxg5+ Kf6 42. Rh5 Ra7 43. Kf3 Rb7 44. h4 Ra7 45. Rh6+ Kg7 46. Re6 Ra5 47. Ke4 Ra4+ 48. Kf5 h5 49. Rg6+ Kh7 50. Rg5 Kh6 51. Kxe5 Ra5+ 52. Kf4 Ra2 53. Rd5 Ra3 54. Rd6+ Kg7 { 1-0 White wins. } 1-0
+
+
+[Event "College Final Four 2014"]
+[Site "Kingston"]
+[Date "2014.4.5"]
+[White "Indusekar, Akshay"]
+[Black "Bykhovsky, Anatoly"]
+[Result "0-1"]
+[WhiteElo "2028"]
+[BlackElo "2498"]
+[Variant "Standard"]
+[ECO "A15"]
+[Opening "English Opening: Anglo-Indian Defense, Anti-Anti-Grünfeld"]
+[StudyName "Final Four of College Chess - University of Illinois Games"]
+[ChapterName "Indusekar, Akshay - Bykhovsky, Anatoly"]
+[ChapterURL "https://lichess.org/study/T4iHEFlO/BxJsIG4h"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. Nf3 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 O-O 5. d4 d6 6. h3 Na6 7. Bg5 Qe8 8. Bd3 e5 9. d5 Nh5 10. g4 Nf4 11. Bc2 h6 12. Bh4 f5 13. gxf5 gxf5 14. Bg3 Nc5 15. Nh4 fxe4 16. Nxe4 b6 17. Qd2 Qh5 18. Nxc5 bxc5 19. Bd1 Qg5 20. Bc2 Rb8 21. Be4 Nh5 22. Qxg5 hxg5 23. Ng6 Re8 24. O-O-O Kf7 25. Rd3 Nf4 26. Rf3 Bf6 27. Nxf4 exf4 28. Re1 Bf5 29. Bxf5 Rxe1+ 30. Kd2 Rh1 { 0-1 Black wins. } 0-1
+
+
+[Event "College Final Four 2014"]
+[Site "Kingston"]
+[Date "2014.4.6"]
+[White "Rosen, Eric"]
+[Black "Huschenbeth, Niclas"]
+[Result "0-1"]
+[WhiteElo "2304"]
+[BlackElo "2537"]
+[Variant "Standard"]
+[ECO "A28"]
+[Opening "English Opening: King's English Variation, Four Knights Variation, Korchnoi Line"]
+[StudyName "Final Four of College Chess - University of Illinois Games"]
+[ChapterName "Rosen, Eric - Huschenbeth, Niclas"]
+[ChapterURL "https://lichess.org/study/T4iHEFlO/JiBTMUnL"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. c4 e5 2. Nc3 Nf6 3. Nf3 Nc6 4. a3 d5 5. cxd5 Nxd5 6. Qc2 Be7 7. e3 O-O 8. Nxd5 Qxd5 9. Bd3 Kh8 10. b4 f5 11. Bc4 Qd6 12. h4 Be6 13. Bb2 Bxc4 14. Qxc4 e4 15. Ng5 Bf6 16. Bxf6 Qxf6 17. Rd1 Rae8 18. g3 Ne5 19. Qb3 c5 20. bxc5 Qa6 21. d4 exd3 22. f4 Ng4 23. Rxd3 h6 24. Nf7+ Rxf7 25. Qxf7 Qxd3 26. Qxe8+ Kh7 27. h5 Qb1+ 28. Kd2 Qb2+ 29. Kd3 Nf2+ 30. Kc4 Qc2+ 31. Kb5 Qb3+ 32. Ka5 Qxa3+ 33. Kb5 Qa6+ 34. Kb4 Nxh1 35. g4 Qc6 36. Qf7 Qe4+ 37. Ka5 fxg4 38. f5 Qc6 39. e4 Qxc5+ 40. Ka4 b5+ 41. Ka5 Qb6+ 42. Kb4 a5+ 43. Ka3 Qc5+ 44. Kb2 Qd4+ { 0-1 Black wins. } 0-1
+
+
+[Event "College Final Four 2014"]
+[Site "Kingston"]
+[Date "2014.4.5"]
+[White "Rosen, Eric"]
+[Black "Zherebukh, Yaroslav"]
+[Result "1/2-1/2"]
+[WhiteElo "2304"]
+[BlackElo "2616"]
+[Variant "Standard"]
+[ECO "A16"]
+[Opening "English Opening: Anglo-Indian Defense, Anglo-Grünfeld Variation"]
+[StudyName "Final Four of College Chess - University of Illinois Games"]
+[ChapterName "Rosen, Eric - Zherebukh, Yaroslav"]
+[ChapterURL "https://lichess.org/study/T4iHEFlO/CXCeNBGy"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. c4 Nf6 2. Nc3 d5 3. cxd5 Nxd5 4. Nf3 g6 5. Qa4+ Nc6 6. Ne5 Qd6 7. Nxc6 Qxc6 8. Qxc6+ bxc6 9. g3 Bg7 10. Bg2 Be6 11. b3 O-O-O 12. Bb2 Nxc3 13. Bxc3 Bxc3 14. dxc3 Rd6 15. Rd1 Rhd8 16. Rxd6 Rxd6 17. Be4 c5 18. Bc2 Bf5 19. e4 Bg4 20. f4 Bf3 21. O-O Be2 22. Rf2 Rd2 23. Bb1 c4 24. Kg2 Rb2 25. bxc4 Rxb1 26. Rxe2 Rc1 27. e5 Rxc3 28. Kh3 Rxc4 29. Kg4 h6 30. h4 Rc3 31. Rg2 Kd7 32. h5 Ra3 33. Rh2 gxh5+ 34. Rxh5 Rxa2 35. Rxh6 c5 36. Kf5 Ra4 37. e6+ fxe6+ 38. Rxe6 c4 39. Re3 Rb4 40. Ra3 Rb7 41. Rc3 Rc7 42. Ke5 a5 43. Kd4 a4 44. Ra3 Ke6 45. g4 c3 46. Rxc3 Ra7 47. Ra3 Ra8 48. Kc5 Kf6 49. Kb5 e5 50. fxe5+ Kxe5 51. Rxa4 Rxa4 52. Kxa4 Kf6 53. g5+ Kxg5 { 1/2-1/2  wins. } 1/2-1/2
+
+
+[Event "College Final Four 2014"]
+[Site "Kingston"]
+[Date "2014.4.5"]
+[White "Le, Quang Liem"]
+[Black "Rosen, Eric"]
+[Result "1-0"]
+[WhiteElo "2710"]
+[BlackElo "2304"]
+[Variant "Standard"]
+[ECO "E12"]
+[Opening "Queen's Indian Defense: Kasparov Variation"]
+[StudyName "Final Four of College Chess - University of Illinois Games"]
+[ChapterName "Le, Quang Liem - Rosen, Eric"]
+[ChapterURL "https://lichess.org/study/T4iHEFlO/obxZL0Kd"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 Nf6 2. Nf3 e6 3. c4 b6 4. Nc3 Bb4 5. Qc2 Bb7 6. a3 Bxc3+ 7. Qxc3 d6 8. Bg5 h6 9. Bh4 g5 10. Bg3 Ne4 11. Qc2 h5 12. d5 exd5 13. cxd5 Bxd5 14. O-O-O Bb7 15. e3 Qe7 16. Bb5+ Nd7 17. Ne5 Nxg3 18. Bxd7+ Kf8 19. Bc6 Qxe5 20. Bxb7 Rb8 21. Qxc7 Rxb7 22. Qxb7 Nxh1 23. Rxh1 Qf5 24. Qf3 Qxf3 25. gxf3 Ke7 26. Kd2 Rc8 27. h4 Kf6 28. hxg5+ Kxg5 29. f4+ Kg4 30. f3+ Kxf3 31. Rxh5 Ke4 32. Rh7 Rc7 33. Rh8 Re7 34. Ke2 Kd5 35. Kd3 Kc6 36. e4 f5 37. exf5 Kd5 38. f6 Rf7 39. Rh6 a6 40. a4 b5 41. a5 b4 42. Ke3 Rc7 43. Kf3 Ke6 44. f7+ Kxf7 45. Rh7+ { 1-0 White wins. } 1-0
+
+
+[Event "College Final Four 2013"]
+[Site "Kingston"]
+[Date "2013.4.6"]
+[White "Rosen, Eric"]
+[Black "Sadorra, Julio Catalino"]
+[Result "1/2-1/2"]
+[WhiteElo "2280"]
+[BlackElo "2483"]
+[Variant "Standard"]
+[ECO "D31"]
+[Opening "Semi-Slav Defense: Accelerated Move Order"]
+[StudyName "Final Four of College Chess - University of Illinois Games"]
+[ChapterName "Rosen, Eric - Sadorra, Julio Catalino"]
+[ChapterURL "https://lichess.org/study/T4iHEFlO/V7Ie8dmp"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. c4 e6 2. Nc3 d5 3. d4 c6 4. e3 Bd6 5. Nf3 f5 6. b3 Nd7 7. Bb2 Nh6 8. Bd3 O-O 9. Qc2 Qe7 10. h3 Kh8 11. O-O-O dxc4 12. Bxc4 b5 13. Bd3 Bb7 14. Kb1 Rac8 15. Qe2 a6 16. Bc2 c5 17. Rhe1 Nb6 18. dxc5 Bxc5 19. Bd3 Bb4 20. Rc1 Rc7 21. Rc2 Nd7 22. Rec1 Nc5 23. Ne5 Nf7 24. Nxf7+ Qxf7 25. f3 Rd8 26. Bxb5 axb5 27. Qxb5 Ba6 28. Qxb4 Bd3 29. Nb5 Rb8 30. a4 Na6 31. Qd6 Bxc2+ 32. Rxc2 Rxc2 33. Kxc2 Rc8+ 34. Kb1 Nc5 35. Qe5 Nd7 36. Qd6 h6 37. Qb4 e5 38. Nd6 Qe7 39. Qb7 Rb8 40. Qd5 Rf8 41. Nc4 Re8 42. Ka2 Kh7 43. f4 Nf6 44. Qxe5 Qd7 45. Qd4 Qc6 46. g4 Re4 47. Qc3 Qc7 48. Qd3 Qc5 49. Bxf6 gxf6 50. Qd7+ Kh8 51. Qxf5 Qc6 52. Qb5 Qc7 53. Qh5 Kg7 54. Qd5 Re8 55. Qd6 Qb7 56. Qd3 Qg2+ 57. Ka3 Qh1 58. Qd7+ Kf8 59. Qd6+ Kf7 60. g5 hxg5 61. fxg5 Qa1+ 62. Kb4 fxg5 63. Qd7+ Re7 64. Qf5+ Qf6 65. Qxf6+ Kxf6 66. a5 Rh7 67. a6 Rxh3 68. a7 Rh8 69. Ka5 g4 70. Nd2 Ke5 71. Nf1 Kd5 72. Kb6 Rh6+ 73. Kb5 Rh8 74. b4 Ra8 75. Kb6 Kc4 76. b5 Rxa7 77. Kxa7 Kxb5 78. Ng3 Kc4 79. Kb6 Kd3 80. e4 Kd4 81. Kc6 Ke5 82. Kd7 Kf4 83. Kd6 Kxg3 84. e5 Kf2 85. e6 { 1/2-1/2  wins. } 1/2-1/2
+
+
+[Event "College Final Four 2014"]
+[Site "Kingston"]
+[Date "2014.4.6"]
+[White "Akshayraj, Kore"]
+[Black "Luo, Xin"]
+[Result "1-0"]
+[WhiteElo "2486"]
+[BlackElo "2070"]
+[Variant "Standard"]
+[ECO "B30"]
+[Opening "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack"]
+[StudyName "Final Four of College Chess - University of Illinois Games"]
+[ChapterName "Akshayraj, Kore - Luo, Xin"]
+[ChapterURL "https://lichess.org/study/T4iHEFlO/Yb8h1vWt"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 c5 2. Nf3 Nc6 3. Bb5 e6 4. Bxc6 bxc6 5. O-O Ne7 6. d3 Ng6 7. Ng5 e5 8. Qh5 Be7 9. Nc3 d6 10. Ne2 Bxg5 11. Bxg5 f6 12. Be3 O-O 13. f4 exf4 14. Nxf4 Ne5 15. Qe2 g5 16. Nh3 Bg4 17. Qd2 Rb8 18. b3 Bxh3 19. gxh3 Qe8 20. Qg2 Rb7 21. Rf5 Rg7 22. Qg3 h5 23. Kf1 Qe7 24. Ke2 d5 25. Raf1 dxe4 26. dxe4 c4 27. Bd4 Nd7 28. Qe3 cxb3 29. axb3 Rg6 30. Ra1 c5 31. Bc3 Qd6 32. Qg3 Qc6 33. Qd3 Re8 34. Rxa7 Rxe4+ 35. Kd2 Rg7 36. Ra6 Qb7 37. Kc1 c4 38. bxc4 Rf4 39. Re6 Nf8 40. Rexf6 Qh1+ 41. Kb2 Rb7+ 42. Rb5 Rxf6 43. Bxf6 Nh7 44. Qg6+ Kf8 45. Be7+ { 1-0 White wins. } 1-0
+
+
+[Event "College Final Four 2014"]
+[Site "Kingston"]
+[Date "2014.4.5"]
+[White "Moradiabadi, Elshan"]
+[Black "Luo, Xin"]
+[Result "1-0"]
+[WhiteElo "2585"]
+[BlackElo "2070"]
+[Variant "Standard"]
+[ECO "D32"]
+[Opening "Tarrasch Defense: Symmetrical Variation"]
+[StudyName "Final Four of College Chess - University of Illinois Games"]
+[ChapterName "Moradiabadi, Elshan - Luo, Xin"]
+[ChapterURL "https://lichess.org/study/T4iHEFlO/TOF4qYj5"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. Nf3 c5 2. c4 Nf6 3. Nc3 Nc6 4. e3 e6 5. d4 d5 6. cxd5 exd5 7. Bb5 cxd4 8. exd4 a6 9. Bxc6+ bxc6 10. Ne5 Qc7 11. O-O Bd6 12. Bf4 O-O 13. Rc1 Qb7 14. Na4 Qb5 15. Bg3 Bb7 16. Nd3 Be7 17. Bc7 Rac8 18. Nc3 Qc4 19. Bb6 a5 20. b3 Qa6 21. Bc5 Rce8 22. Re1 Bxc5 23. Nxc5 Qa7 24. Qd2 Bc8 25. f3 h6 26. Rxe8 Rxe8 27. Re1 Re7 28. Re3 Kf8 29. Kf2 Rxe3 30. Qxe3 Nd7 31. N3a4 Qc7 32. Nxd7+ Bxd7 33. Nc5 Bf5 34. g3 Bc8 35. Ke1 Qe7 36. Qxe7+ Kxe7 37. Kd2 h5 38. a3 g5 39. a4 Kd6 40. Kc3 Kc7 41. b4 axb4+ 42. Kxb4 Bf5 43. a5 Bc2 44. f4 gxf4 45. gxf4 h4 46. Na4 Kb7 47. Nb6 Kc7 48. Kc5 Bd3 49. Na4 Be2 50. Nc3 Bd3 51. Na2 Bb5 52. Nb4 Kb7 53. Nxd5 Ka6 54. Nc7+ Kxa5 55. Nxb5 { 1-0 White wins. } 1-0
+
+
+[Event "College Final Four 2014"]
+[Site "Kingston"]
+[Date "2014.4.5"]
+[White "Corrales Jimenez, Fidel"]
+[Black "Luo, Xin"]
+[Result "1-0"]
+[WhiteElo "2571"]
+[BlackElo "2070"]
+[Variant "Standard"]
+[ECO "B20"]
+[Opening "Sicilian Defense: Snyder Variation"]
+[StudyName "Final Four of College Chess - University of Illinois Games"]
+[ChapterName "Corrales Jimenez, Fidel - Luo, Xin"]
+[ChapterURL "https://lichess.org/study/T4iHEFlO/8gVOnBnR"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 c5 2. b3 e6 3. Bb2 d5 4. Nc3 Nc6 5. Bb5 Rb8 6. Nf3 a6 7. exd5 axb5 8. dxc6 bxc6 9. Ne5 Bb7 10. Ne4 Nh6 11. O-O Be7 12. Nd3 c4 13. bxc4 bxc4 14. Bxg7 Rg8 15. Bxh6 cxd3 16. Bf4 Ra8 17. Rb1 Ba6 18. c3 Qd5 19. Re1 Rg6 20. Rb6 Bc5 21. Rb1 Kf8 22. Qf3 Bb5 23. h4 f5 24. Ng5 Qxf3 25. Nxf3 Ra4 26. h5 Rg8 27. Bh6+ Ke7 28. Bg5+ Kd6 29. Ne5 Kc7 30. Be3 Bd6 31. Bd4 Bxe5 32. Bxe5+ Kd7 33. Rb4 Rg4 34. Rxg4 fxg4 35. Kh2 Bc4 36. Re4 Bb5 37. Re1 Bc4 38. Re4 Bb5 39. Rxa4 Bxa4 40. Kg3 Bd1 41. Kf4 Ke7 42. Ke4 Be2 43. Kd4 Kd7 44. Kc5 g3 45. Bxg3 Bxh5 46. a4 Kc8 47. Kd6 Be2 48. Be5 Bf1 49. g3 Bh3 50. Kxc6 Bg4 51. a5 Bf3+ 52. Kd6 Bd5 53. a6 Bc4 54. f4 Bxa6 55. Kxe6 h5 56. Ke7 { 1-0 White wins. } 1-0
+
+
+[Event "College Final Four 2013"]
+[Site "Kingston"]
+[Date "2013.4.6"]
+[White "Bercys, Salvijus"]
+[Black "Meduri, Aakaash"]
+[Result "1-0"]
+[WhiteElo "2445"]
+[BlackElo "2024"]
+[Variant "Standard"]
+[ECO "A15"]
+[Opening "English Opening: Anglo-Indian Defense, King's Knight Variation"]
+[StudyName "Final Four of College Chess - University of Illinois Games"]
+[ChapterName "Bercys, Salvijus - Meduri, Aakaash"]
+[ChapterURL "https://lichess.org/study/T4iHEFlO/ki8GQvff"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. Nf3 Nf6 2. c4 e6 3. Nc3 d5 4. e3 Nbd7 5. Qc2 c5 6. b3 b6 7. cxd5 exd5 8. Nxd5 Nxd5 9. Qe4+ Be7 10. Qxd5 Rb8 11. Bb2 O-O 12. Bb5 Qc7 13. O-O Nf6 14. Qe5 Bd6 15. Qg5 h6 16. Qh4 Nh7 17. e4 Bf4 18. e5 Bg5 19. Nxg5 hxg5 20. Qg3 Qe7 21. f4 Rd8 22. Bc3 Bf5 23. fxg5 Bg6 24. h4 c4 25. bxc4 Bd3 26. Rf3 Bxc4 27. Bxc4 Qc5+ 28. Kh2 Qxc4 29. Raf1 Rb7 30. h5 Nf8 31. a3 Rbd7 32. Rf4 Qe6 33. g6 fxg6 34. Bb4 Re7 35. Bxe7 Qxe7 36. hxg6 Nd7 37. Qb3+ { 1-0 White wins. } 1-0
+
+
+[Event "College Final Four 2013"]
+[Site "Kingston"]
+[Date "2013.4.6"]
+[White "Meduri, Aakaash"]
+[Black "Corrales Jimenez, Zenia"]
+[Result "0-1"]
+[WhiteElo "2024"]
+[BlackElo "2168"]
+[Variant "Standard"]
+[ECO "B50"]
+[Opening "Sicilian Defense: Modern Variations"]
+[StudyName "Final Four of College Chess - University of Illinois Games"]
+[ChapterName "Meduri, Aakaash - Corrales Jimenez, Zenia"]
+[ChapterURL "https://lichess.org/study/T4iHEFlO/oASgWHA7"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 c5 2. Nf3 d6 3. g3 Nf6 4. d3 g6 5. Bg2 Bg7 6. O-O O-O 7. c3 Nc6 8. Re1 e5 9. a3 d5 10. Nbd2 h6 11. Qe2 Re8 12. Nf1 a5 13. h3 Be6 14. Nh4 Qd7 15. Kh2 Rad8 16. f4 c4 17. Qf2 d4 18. f5 gxf5 19. exf5 Bd5 20. dxc4 Bxc4 21. cxd4 exd4 22. Bd2 Ne5 23. Bxa5 Neg4+ 24. hxg4 Nxg4+ 25. Kg1 Nxf2 26. Bxd8 Rxe1 27. Rxe1 Nd3 28. Ba5 Nxe1 29. Bxe1 Bxf1 30. Kxf1 Qb5+ 31. Kg1 Qxb2 { 0-1 Black wins. } 0-1
+
+

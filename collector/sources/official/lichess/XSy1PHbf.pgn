@@ -1,0 +1,33 @@
+[Event "The curse of the f-pawn: Shortest game ever"]
+[Date "2019.04.07"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A04"]
+[Opening "Zukertort Opening"]
+[StudyName "The curse of the f-pawn"]
+[ChapterName "Shortest game ever"]
+[ChapterURL "https://lichess.org/study/XSy1PHbf/lYCYQrnE"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.04.07"]
+[UTCTime "17:51:23"]
+
+{ [%csl Rf2] }
+1. Nf3 (1. a4 { [%cal Gh2h4] }) (1. f3 { [%csl Ge1][%cal Gh4e1] } 1... e5 2. g4 { [%csl Ge1][%cal Gh4e1] } 2... Qh4# { [%csl Rf2,Rg3] }) (1. f4 { [%csl Gf4,Ge1][%cal Gh4e1] } 1... e5 2. fxe5 { [%csl Gh4][%cal Gd8h4] } 2... Qh4+ { [%csl Gh4] } (2... d6 3. exd6 Bxd6 { [%csl Gd6] } 4. Nc3 { [%csl Gc3] } 4... Qh4+ 5. g3 Qxg3+ 6. hxg3 Bxg3# { [%csl Ge1][%cal Gg3e1] }) 3. g3 { [%csl Gg3,Re1,Gh4][%cal Gg3h4] } 3... Qe4 { [%csl Ge5,Gh1][%cal Ge4e5,Ge4h1] } 4. Nf3 { [%csl Gh1,Ge5,Rf3][%cal Gg1f3,Re4h1,Gf3e5,Ge2f3] } 4... Qxe5 (4... Qxf3 5. exf3) 5. Nxe5) *
+
+
+[Event "The curse of the f-pawn: Never play f6"]
+[Date "2019.04.07"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C44"]
+[Opening "King's Knight Opening: Normal Variation"]
+[StudyName "The curse of the f-pawn"]
+[ChapterName "Never play f6"]
+[ChapterURL "https://lichess.org/study/XSy1PHbf/IheXUYB0"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.04.07"]
+[UTCTime "18:16:50"]
+
+1. e4 e5 2. Nf3 Nc6 (2... Nf6) (2... d6 { [%csl Rf8,Rc5,Gd6][%cal Rf8c5] }) (2... Bd6 { [%csl Rd7,Rc8] }) (2... f6 { [%csl Ge8,Gf3][%cal Gh5e8] } 3. Nxe5 { [%csl Ge5][%cal Gf6e5] } 3... fxe5 4. Qh5+ g6 (4... Ke7 { [%csl Ge7] } 5. Qxe5+ Kf7 { [%csl Gf7] } 6. Bc4+ { [%csl Re6,Re7,Re8,Rf6,Gg6][%cal Gf7g6,Gd7d5] } 6... d5 (6... Kg6 7. Qf5+ { [%csl Gf5][%cal Ge4f5] } 7... Kh6 { [%csl Rf5,Rc4][%cal Gd2d3] } 8. d4+ { [%cal Gc1h6] } 8... Qg5 (8... g5 { [%csl Rf5,Rc4,Rc1,Gh4][%cal Gh2h4] } 9. Qxg5+ (9. h4 { [%csl Gh6,Gg5][%cal Gc1h6,Gh4g5] } 9... Qf6 { [%csl Gh6] } (9... Kg7 10. Qf7+ Kh6 11. hxg5#) 10. hxg5+ { [%csl Gh6,Gf6][%cal Gh1h6,Gg5h6,Gg5f6] } 10... Kg7 11. gxf6+ Nxf6 12. Qg5# { [%csl Gg7,Rf7,Rg8,Rg6,Rh6,Rg5][%cal Gg5g7,Gc4g8] } (12. Bh6# { [%csl Gh6,Gg8,Gf7,Gg6][%cal Gh1h6,Gc4g8,Gf5g6] })) 9... Qxg5 10. Bxg5+ Kxg5 { [%csl Gg5] }) 9. Qxg5#) 7. Bxd5+ { [%csl Gf7] }) 5. Qxe5+ { [%csl Gh8][%cal Ge5e8,Ge5h8] }) *
+
+

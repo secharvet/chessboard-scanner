@@ -1,0 +1,342 @@
+[Event "Endgames: Chapter 2"]
+[Date "2025.10.10"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Endgames"]
+[ChapterName "Chapter 2"]
+[ChapterURL "https://lichess.org/study/Ft77p2Al/T7TeKBTB"]
+[Annotator "https://lichess.org/@/odiaza"]
+[FEN "4K3/4P1k1/8/8/8/8/3r4/5R2 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.10"]
+[UTCTime "06:23:06"]
+
+1. Rf4 (1. Rg1+ Kh7 2. Rg4) 1... Rd1 2. Rg4+ Kh7 3. Rc4 Kg7 4. Rg4+ Kh7 5. Kf7 Rf1+ 6. Ke6 Re1+ 7. Kf6 Rf1+ 8. Ke5 Re1+ 9. Re4 *
+
+
+[Event "Endgames: Chapter 3"]
+[Date "2025.10.10"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Endgames"]
+[ChapterName "Chapter 3"]
+[ChapterURL "https://lichess.org/study/Ft77p2Al/dYp0HM3K"]
+[Annotator "https://lichess.org/@/odiaza"]
+[FEN "4K3/4P1k1/8/8/8/8/3r4/5R2 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.10"]
+[UTCTime "06:25:43"]
+
+ *
+
+
+[Event "Endgames: Chapter 4"]
+[Date "2025.10.10"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Endgames"]
+[ChapterName "Chapter 4"]
+[ChapterURL "https://lichess.org/study/Ft77p2Al/KCFN0te9"]
+[Annotator "https://lichess.org/@/odiaza"]
+[FEN "4K3/4P1k1/8/8/8/8/r7/5R2 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.10"]
+[UTCTime "06:26:22"]
+
+1... Ra8+ 2. Kd7 Ra7+ 3. Kd8 Ra8+ 4. Kc7 Ra7+ 5. Kb8 Rxe7 *
+
+
+[Event "Endgames: Chapter 5"]
+[Date "2025.10.10"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Endgames"]
+[ChapterName "Chapter 5"]
+[ChapterURL "https://lichess.org/study/Ft77p2Al/ub1wEdSg"]
+[Annotator "https://lichess.org/@/odiaza"]
+[FEN "7r/8/4k3/8/2P5/2K5/8/3R4 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.10"]
+[UTCTime "06:29:04"]
+
+1... Rc8 2. Kb4 Rb8+ 3. Ka5 Ra8+ 4. Kb5 Rb8+ 5. Ka6 Rc8 6. Kb5 (6. Rc1 Kd6) 6... Rb8+ 7. Kc6 Rc8+ *
+
+
+[Event "Endgames: Chapter 6"]
+[Date "2025.10.10"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Endgames"]
+[ChapterName "Chapter 6"]
+[ChapterURL "https://lichess.org/study/Ft77p2Al/06LhfkDn"]
+[Annotator "https://lichess.org/@/odiaza"]
+[FEN "7r/8/5k2/8/2P5/2K5/8/4R3 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.10"]
+[UTCTime "06:32:08"]
+
+1... Rc8 2. Kb4 (2. Kd3) (2. Kd4 Rd8+ 3. Kc5 Rc8+ 4. Kd5 Rd8+ 5. Kc5 Rc8+ 6. Kb4 Rb8+ 7. Kc3 Rc8 8. Rf1+ Ke6 9. Rf3 Kd6) 2... Rb8+ 3. Ka5 Rc8 4. Kb4 Rb8+ 5. Kc5 Rc8+ 6. Kd5 Rd8+ 7. Kc5 Rc8+ 8. Kd4 Rd8+ 9. Kc3 Rc8 10. Kb4 Rb8+ 11. Ka5 Rc8 12. Kb5 Rb8+ 13. Ka6 Rc8 14. Rc1 Ke6 15. Kb7 Rc5 16. Kb6 Rc8 17. c5 *
+
+
+[Event "Endgames: Chapter 7"]
+[Date "2025.10.10"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Endgames"]
+[ChapterName "Chapter 7"]
+[ChapterURL "https://lichess.org/study/Ft77p2Al/nNcrUkHF"]
+[Annotator "https://lichess.org/@/odiaza"]
+[FEN "3r4/8/k7/8/3P4/3K4/8/1R6 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.10"]
+[UTCTime "06:45:46"]
+
+1. Ke4 Re8+ 2. Kd5 Rd8+ 3. Kc6 (3. Ke5 Re8+ 4. Kf6 Rd8 5. Rd1 Kb6 (5... Kb7 6. Ke7 Rd5 7. Ke6 Rh5 8. d5 Rh6+)) *
+
+
+[Event "Endgames: Chapter 8"]
+[Date "2025.10.10"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Endgames"]
+[ChapterName "Chapter 8"]
+[ChapterURL "https://lichess.org/study/Ft77p2Al/tJrRels2"]
+[Annotator "https://lichess.org/@/odiaza"]
+[FEN "1r6/8/8/2R5/1P1k4/1K6/8/8 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.10"]
+[UTCTime "06:51:24"]
+
+1... Ra8 2. Rh5 Ra7 (2... Ra1 3. b5) 3. b5 *
+
+
+[Event "Endgames: Chapter 8"]
+[Date "2025.10.10"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Endgames"]
+[ChapterName "Chapter 8"]
+[ChapterURL "https://lichess.org/study/Ft77p2Al/gL6R9guW"]
+[Annotator "https://lichess.org/@/odiaza"]
+[FEN "3r4/8/8/8/7R/3P1k2/3K4/8 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.10"]
+[UTCTime "06:58:18"]
+
+1... Ra8 2. Kc3 (2. d4 Kg3 3. Re4 Kf3 4. Re3+ Kf4 5. Rd3 Kf5) 2... Ra3+ 3. Kc2 (3. Kb4 Rxd3) (3. Kc4 Ra4+) 3... Ra8 (3... Ra2+ 4. Kb3) (3... Ke3 4. d4 Ra4 5. Kc3 Ra3+ 6. Kb4 Ra7 7. d5 Rd7 8. Kc5) (3... Kf2 4. d4 Ra4 5. Kd3 Ra3+ 6. Ke4 Ra4 7. Ke5) 4. d4 Kg3 5. Re4 (5. Rh5 Ra3 (5... Kg4 6. Re5 Ra3 7. d5 Kf4 8. Re8 Ra5)) 5... Kf3 6. Rh4 Kg3 *
+
+
+[Event "Endgames: Chapter 9"]
+[Date "2025.10.10"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Endgames"]
+[ChapterName "Chapter 9"]
+[ChapterURL "https://lichess.org/study/Ft77p2Al/IrDiG8eA"]
+[Annotator "https://lichess.org/@/odiaza"]
+[FEN "4r3/8/8/5R2/4P1k1/4K3/8/8 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.10"]
+[UTCTime "07:13:36"]
+
+1... Ra8 (1... Rc8 2. Kd4 Rd8+ 3. Rd5) 2. Rc5 Rd8 3. Rd5 Ra8 4. Rf5 Ra7 5. Kd4 Ra4+ *
+
+
+[Event "Endgames: Chapter 10"]
+[Date "2025.10.21"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Endgames"]
+[ChapterName "Chapter 10"]
+[ChapterURL "https://lichess.org/study/Ft77p2Al/oQtBnNJe"]
+[Annotator "https://lichess.org/@/odiaza"]
+[FEN "r7/4bkp1/p3p2p/1p1nPp2/2p2P2/5NPP/PPPNK3/R7 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.21"]
+[UTCTime "10:49:39"]
+
+ *
+
+
+[Event "Endgames: Chapter 11"]
+[Date "2025.10.21"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Endgames"]
+[ChapterName "Chapter 11"]
+[ChapterURL "https://lichess.org/study/Ft77p2Al/NnmAtT3i"]
+[Annotator "https://lichess.org/@/odiaza"]
+[FEN "3rr3/pp3pk1/1bp3pp/4p3/P7/2PP2P1/1P3PBP/R2R1K2 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.21"]
+[UTCTime "10:50:17"]
+
+ *
+
+
+[Event "Endgames: Chapter 12"]
+[Date "2025.10.21"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Endgames"]
+[ChapterName "Chapter 12"]
+[ChapterURL "https://lichess.org/study/Ft77p2Al/f9qmhOn8"]
+[Annotator "https://lichess.org/@/odiaza"]
+[FEN "8/6k1/pp1n2p1/8/1p4KP/P1P5/3N4/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.21"]
+[UTCTime "10:50:43"]
+
+ *
+
+
+[Event "Endgames: Chapter 13"]
+[Date "2025.10.21"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Endgames"]
+[ChapterName "Chapter 13"]
+[ChapterURL "https://lichess.org/study/Ft77p2Al/Nw1wgQRr"]
+[Annotator "https://lichess.org/@/odiaza"]
+[FEN "8/kp3r2/pb4p1/8/2r3pR/2P3P1/1PN2P2/2K2R2 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.21"]
+[UTCTime "10:51:20"]
+
+ *
+
+
+[Event "Endgames: Chapter 14"]
+[Date "2025.10.21"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Endgames"]
+[ChapterName "Chapter 14"]
+[ChapterURL "https://lichess.org/study/Ft77p2Al/PiVuWirF"]
+[Annotator "https://lichess.org/@/odiaza"]
+[FEN "3rr1k1/pp2qppp/1bp2n2/4p3/P3N3/1P1P3P/2PBQPP1/R4RK1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.21"]
+[UTCTime "10:52:06"]
+
+ *
+
+
+[Event "Endgames: Chapter 15"]
+[Date "2025.10.21"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Endgames"]
+[ChapterName "Chapter 15"]
+[ChapterURL "https://lichess.org/study/Ft77p2Al/CEhM2XQa"]
+[Annotator "https://lichess.org/@/odiaza"]
+[FEN "8/2pn1b2/2pk2pp/3p4/3P4/4PN2/1P1K2PP/3B4 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.21"]
+[UTCTime "10:52:37"]
+
+ *
+
+
+[Event "Endgames: Chapter 16"]
+[Date "2025.10.21"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Endgames"]
+[ChapterName "Chapter 16"]
+[ChapterURL "https://lichess.org/study/Ft77p2Al/XnTDylKq"]
+[Annotator "https://lichess.org/@/odiaza"]
+[FEN "r1b1k2r/pp1p1ppp/2n5/2q1n3/5B2/2P1PN2/P2Q1PPP/R3KB1R w KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.21"]
+[UTCTime "10:53:23"]
+
+ *
+
+
+[Event "Endgames: Chapter 17"]
+[Date "2025.10.21"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Endgames"]
+[ChapterName "Chapter 17"]
+[ChapterURL "https://lichess.org/study/Ft77p2Al/bX7bDp6G"]
+[Annotator "https://lichess.org/@/odiaza"]
+[FEN "8/2q3pk/p1p2n1p/1p3p2/1P2p3/P1N1P3/1P3PPP/4Q1K1 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.21"]
+[UTCTime "10:54:27"]
+
+ *
+
+
+[Event "Endgames: Chapter 18"]
+[Date "2025.10.21"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Endgames"]
+[ChapterName "Chapter 18"]
+[ChapterURL "https://lichess.org/study/Ft77p2Al/Y8rqhp37"]
+[Annotator "https://lichess.org/@/odiaza"]
+[FEN "8/4kp2/6n1/1p6/3Bp3/2P5/2PK1PP1/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.21"]
+[UTCTime "10:55:06"]
+
+ *
+
+
+[Event "Endgames: Chapter 19"]
+[Date "2025.10.21"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Endgames"]
+[ChapterName "Chapter 19"]
+[ChapterURL "https://lichess.org/study/Ft77p2Al/1it2FuOw"]
+[Annotator "https://lichess.org/@/odiaza"]
+[FEN "r3r1k1/b2q1p1p/p1n2Bp1/1pPp2Q1/7P/1N6/PP3PP1/1K2R2R w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.21"]
+[UTCTime "12:24:31"]
+
+1. Qh6 (1. g4 Ne7 2. Rxe7 (2. Qh6 Nf5 3. gxf5 Qxf5+) 2... Rxe7 3. Qh6) 1... Qf5+ *
+
+

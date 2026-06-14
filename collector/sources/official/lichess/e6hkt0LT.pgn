@@ -1,0 +1,206 @@
+[Event "Eric and Jonathan's secret openings: Wagon Gambit"]
+[Date "2023.02.10"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A50"]
+[Opening "Indian Defense: Normal Variation"]
+[StudyName "Eric and Jonathan's secret openings"]
+[ChapterName "Wagon Gambit"]
+[ChapterURL "https://lichess.org/study/e6hkt0LT/bdRATb92"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2023.02.10"]
+[UTCTime "23:01:12"]
+
+1. d4 Nf6 2. c4 a6 3. Nc3 b5 4. cxb5 axb5 5. Nxb5 e5 6. dxe5 Ne4 *
+
+
+[Event "Rated Blitz game"]
+[Site "https://lichess.org/xjiXgFGH"]
+[Date "2023.02.10"]
+[White "EricRosen"]
+[Black "zolpi"]
+[Result "1-0"]
+[WhiteElo "2547"]
+[WhiteTitle "IM"]
+[BlackElo "2355"]
+[TimeControl "300+0"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "A50"]
+[Opening "Indian Defense: Normal Variation"]
+[StudyName "Eric and Jonathan's secret openings"]
+[ChapterName "IM EricRosen (2547) - zolpi (2355)"]
+[ChapterURL "https://lichess.org/study/e6hkt0LT/N1V6QkX6"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 { [%clk 0:05:00] } (1. e4) 1... Nf6 { [%clk 0:05:00] } 2. c4 { [%clk 0:04:58] } 2... a6 { [%clk 0:04:59] } (2... e5 3. dxe5 Ne4 4. Nf3 b6 5. Qd5 Bb7 6. Qxb7 Nc6 7. Nd4 (7. Qa6 Bb4+)) 3. Nc3 { [%clk 0:04:48] } 3... b5 { [%clk 0:04:57] } 4. cxb5 { [%clk 0:04:44] } 4... axb5 { [%clk 0:04:55] } 5. Nxb5 { [%clk 0:04:44] } 5... e5 { [%clk 0:04:52] } 6. dxe5 { [%clk 0:04:43] } 6... Ne4 { [%clk 0:04:51] } 7. Qd4 { [%clk 0:04:03] } (7. Nc3 Bb4 8. Bd2 Bxc3 (8... Nxd2 9. Qxd2 { [%csl Ge5] } 9... Nc6 10. Nf3 Qe7 11. e3 Nxe5 { [%cal Gf3e5] } 12. Nxe5 Qxe5 13. Be2 Ra3 14. O-O (14. Rc1 { [%csl Ga2][%cal Ga3a2] }) 14... Rxc3 15. bxc3 Bxc3 16. Qc1 Bxa1 17. Qxa1 Qxa1 18. Rxa1 { [%csl Ga2] } 18... d5) 9. Bxc3 Nxc3 10. bxc3 { [%csl Ge5,Gc3,Ga2] }) (7. Qd5 { [%csl Ge4][%cal Gd5a8,Gd5e4] } 7... Bb4+) 7... Bb7 { [%clk 0:04:47] } 8. e3 { [%clk 0:03:08] } 8... Bc5 { [%clk 0:04:44] } 9. Qc4 { [%clk 0:02:40] } 9... d5 { [%clk 0:04:39] } 10. exd6 { [%clk 0:02:20] } 10... Nd7 { [%clk 0:04:32] } 11. Nf3 { [%clk 0:01:33] } (11. Nxc7+ Kf8 12. Nxa8 Qa5+ { [%csl Gh1,Gg1,Gf1] }) 11... Qf6 { [%clk 0:03:03] } (11... cxd6 { [%csl Ga5][%cal Gd8a5] } 12. Bd3 Qa5+ 13. Nc3 Nxc3 14. bxc3 { [%csl Gf3,Rc3,Ra2,Re1][%cal Gb7f3] }) 12. Bd3 { [%clk 0:01:10] } 12... Ne5 { [%clk 0:02:48] } 13. Nxe5 { [%clk 0:00:51] } 13... Qxf2+ { [%clk 0:02:16] } 14. Kd1 { [%clk 0:00:50] } 14... Qxg2 { [%clk 0:01:57] } 15. Qxf7+ { [%clk 0:00:47] } 15... Kd8 { [%clk 0:01:51] } 16. Qd7# { 1-0 White wins by checkmate. } { [%clk 0:00:43] } 1-0
+
+
+[Event "Eric and Jonathan's secret openings: weasel"]
+[Date "2023.02.10"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C51"]
+[Opening "Italian Game: Evans Gambit Accepted"]
+[StudyName "Eric and Jonathan's secret openings"]
+[ChapterName "weasel"]
+[ChapterURL "https://lichess.org/study/e6hkt0LT/3w9xHPUN"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2023.02.10"]
+[UTCTime "23:22:54"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. b4 Bxb4 5. c3 f5 6. cxb4 fxe4 *
+
+
+[Event "Rated Blitz game"]
+[Site "https://lichess.org/cfl5ovSF"]
+[Date "2023.02.10"]
+[White "EricRosen"]
+[Black "zolpi"]
+[Result "1-0"]
+[WhiteElo "2550"]
+[WhiteTitle "IM"]
+[BlackElo "2352"]
+[TimeControl "300+0"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "C51"]
+[Opening "Italian Game: Evans Gambit Accepted"]
+[StudyName "Eric and Jonathan's secret openings"]
+[ChapterName "IM EricRosen (2550) - zolpi (2352)"]
+[ChapterURL "https://lichess.org/study/e6hkt0LT/rHqNeI73"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 { [%clk 0:05:00] } 1... e5 { [%clk 0:05:00] } 2. Nf3 { [%clk 0:04:59] } 2... Nc6 { [%clk 0:04:59] } 3. Bc4 { [%clk 0:04:58] } 3... Bc5 { [%clk 0:04:58] } 4. b4 { [%clk 0:04:57] } (4. d3 f5) (4. c3 f5) 4... Bxb4 { [%clk 0:04:57] } 5. c3 { [%clk 0:04:52] } 5... f5 { [%clk 0:04:56] } 6. cxb4 { [%clk 0:04:50] } 6... fxe4 { [%clk 0:04:54] } 7. b5 { [%clk 0:04:45] } (7. Ng1 d5) 7... Qf6 { [%clk 0:04:49] } 8. bxc6 { [%clk 0:04:21] } 8... bxc6 { [%clk 0:04:46] } 9. Qb3 { [%clk 0:03:32] } 9... d5 { [%clk 0:04:25] } (9... Nh6 10. Nxe5 Qxe5 11. Bb2) 10. Bxd5 { [%clk 0:03:09] } 10... cxd5 { [%clk 0:04:02] } (10... exf3 11. Bxf3 { [%csl Gf3] }) 11. Qxd5 { [%clk 0:03:01] } 11... Ne7 { [%clk 0:04:00] } 12. Qxa8 { [%clk 0:02:56] } 12... exf3 { [%clk 0:03:41] } 13. Qxf3 { [%clk 0:02:52] } 13... Bf5 { [%clk 0:03:23] } 14. Qa8+ { [%clk 0:02:33] } 14... Kf7 { [%clk 0:03:06] } 15. Qxh8 { [%clk 0:02:29] } 15... Bd3 { [%clk 0:03:03] } 16. Nc3 { [%clk 0:02:06] } 16... Qg6 { [%clk 0:02:55] } 17. Ba3 { [%clk 0:01:35] } 17... Ng8 { [%clk 0:02:27] } 18. O-O-O { [%clk 0:01:13] } 18... Qa6 { [%clk 0:02:01] } 19. Kb2 { [%clk 0:01:06] } 19... Qb6+ { [%clk 0:01:55] } 20. Ka1 { [%clk 0:01:03] } 20... Qa5 { [%clk 0:01:51] } 21. Bb2 { [%clk 0:01:00] } 21... c5 { [%clk 0:01:34] } 22. f4 { [%clk 0:00:56] } 22... e4 { [%clk 0:01:21] } 23. Nxe4 { [%clk 0:00:51] } 23... Ne7 { [%clk 0:01:07] } 24. Qxg7+ { [%clk 0:00:49] } 24... Ke8 { [%clk 0:01:05] } 25. Nf6+ { [%clk 0:00:46] } 25... Kd8 { [%clk 0:01:03] } 26. Qf8+ { [%clk 0:00:46] } 26... Kc7 { [%clk 0:01:00] } 27. Qxe7+ { [%clk 0:00:46] } 27... Kb6 { [%clk 0:00:57] } 28. Qd8+ { [%clk 0:00:43] } 28... Ka6 { [%clk 0:00:56] } 29. Qc8+ { [%clk 0:00:43] } 29... Kb5 { [%clk 0:00:54] } 30. Qb7+ { [%clk 0:00:41] } 30... Ka4 { [%clk 0:00:52] } 31. Qb3# { 1-0 White wins by checkmate. } { [%clk 0:00:41] } 1-0
+
+
+[Event "Eric and Jonathan's secret openings: caro kann"]
+[Date "2023.02.10"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B10"]
+[Opening "Caro-Kann Defense: Two Knights Attack"]
+[StudyName "Eric and Jonathan's secret openings"]
+[ChapterName "caro kann"]
+[ChapterURL "https://lichess.org/study/e6hkt0LT/ttPomD6y"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2023.02.10"]
+[UTCTime "23:37:27"]
+
+1. e4 c6 2. Nf3 d5 3. Nc3 dxe4 4. Nxe4 Nf6 5. Nxf6+ (5. Qe2 Nbd7 (5... Nxe4 6. Qxe4 { [%csl Gd5][%cal Gd8d5] } 6... Qd5 7. Qf4 Qf5 8. Qe3 Qe6) 6. Nd6#) 5... exf6 6. d4 Bd6 7. Bd3 O-O 8. h4 Re8+ (8... Bg4) 9. Kf1 Bg4 (9... h5 10. Ng5 g6 (10... fxg5 { [%csl Gh5] } 11. Qxh5 g6 12. Bxg6 { [%cal Gf7g6] } 12... Re1+ 13. Kxe1 { [%csl Ge8,Gg6][%cal Gd8e8,Gf7g6] })) 10. Bxh7+ Kxh7 11. Ng5+ fxg5 12. hxg5+ Kg8 13. Qxg4 Qe7 (13... Qa5 { [%csl Gh5][%cal Gg4h5] } 14. Bd2 Qxd2 { [%csl Gh5,Ge1][%cal Gg4h5,Ga1e1] } 15. Qh5) 14. Bd2 { [%csl Ge1] } *
+
+
+[Event "Eric and Jonathan's secret openings: caro kann 2"]
+[Date "2023.02.10"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B11"]
+[Opening "Caro-Kann Defense: Two Knights Attack, Mindeno Variation"]
+[StudyName "Eric and Jonathan's secret openings"]
+[ChapterName "caro kann 2"]
+[ChapterURL "https://lichess.org/study/e6hkt0LT/bV9K21bn"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2023.02.10"]
+[UTCTime "23:45:18"]
+
+1. e4 c6 2. Nf3 d5 3. Nc3 Bg4 4. Be2 (4. exd5 cxd5 5. Ne5 Bxd1 6. Bb5+ Nc6 7. Nxc6 { [%csl Gc7][%cal Gd8c7] } 7... Qc7 (7... Qd6 8. Ne5+ { [%csl Gf7][%cal Ge8d8,Ge5f7] }) (7... Qb6 8. Ne5+ Kd8 9. Nxf7+ Kc8 10. Kxd1 { [%csl Rc8,Rh8] }) 8. Nxd5 Qxc6 9. Kxd1 { [%cal Gd5c7] } 9... Qxb5 10. Nc7+) *
+
+
+[Event "Eric and Jonathan's secret openings: Nakhmanson Refutation"]
+[Date "2023.02.10"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C56"]
+[Opening "Italian Game: Scotch Gambit, Nakhmanson Gambit"]
+[StudyName "Eric and Jonathan's secret openings"]
+[ChapterName "Nakhmanson Refutation"]
+[ChapterURL "https://lichess.org/study/e6hkt0LT/qalDxkWv"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2023.02.10"]
+[UTCTime "23:51:15"]
+
+1. e4 e5 2. Bc4 Nf6 3. d4 exd4 4. Nf3 Nc6 5. O-O (5. Nc3) 5... Nxe4 6. Nc3 dxc3 7. Bxf7+ Kxf7 8. Qd5+ Kf6 *
+
+
+[Event "Rated Blitz game"]
+[Site "https://lichess.org/xjiXgFGH"]
+[Date "2023.02.10"]
+[White "EricRosen"]
+[Black "zolpi"]
+[Result "1-0"]
+[WhiteElo "2547"]
+[WhiteTitle "IM"]
+[BlackElo "2355"]
+[TimeControl "300+0"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "A50"]
+[Opening "Indian Defense: Normal Variation"]
+[StudyName "Eric and Jonathan's secret openings"]
+[ChapterName "IM EricRosen (2547) - zolpi (2355)"]
+[ChapterURL "https://lichess.org/study/e6hkt0LT/O8aKc78o"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 { [%clk 0:05:00] } 1... Nf6 { [%clk 0:05:00] } 2. c4 { [%clk 0:04:58] } 2... a6 { [%clk 0:04:59] } 3. Nc3 { [%clk 0:04:48] } 3... b5 { [%clk 0:04:57] } 4. cxb5 { [%clk 0:04:44] } 4... axb5 { [%clk 0:04:55] } 5. Nxb5 { [%clk 0:04:44] } 5... e5 { [%clk 0:04:52] } 6. dxe5 { [%clk 0:04:43] } 6... Ne4 { [%clk 0:04:51] } 7. Qd4 { [%clk 0:04:03] } 7... Bb7 { [%clk 0:04:47] } 8. e3 { [%clk 0:03:08] } 8... Bc5 { [%clk 0:04:44] } 9. Qc4 { [%clk 0:02:40] } 9... d5 { [%clk 0:04:39] } 10. exd6 { [%clk 0:02:20] } 10... Nd7 { [%clk 0:04:32] } 11. Nf3 { [%clk 0:01:33] } 11... Qf6 { [%clk 0:03:03] } 12. Bd3 { [%clk 0:01:10] } 12... Ne5 { [%clk 0:02:48] } 13. Nxe5 { [%clk 0:00:51] } 13... Qxf2+ { [%clk 0:02:16] } 14. Kd1 { [%clk 0:00:50] } 14... Qxg2 { [%clk 0:01:57] } 15. Qxf7+ { [%clk 0:00:47] } 15... Kd8 { [%clk 0:01:51] } 16. Qd7# { 1-0 White wins by checkmate. } { [%clk 0:00:43] } 1-0
+
+
+[Event "Rated Blitz game"]
+[Site "https://lichess.org/4suoZi37"]
+[Date "2023.02.10"]
+[White "zolpi"]
+[Black "EricRosen"]
+[Result "1-0"]
+[WhiteElo "2349"]
+[BlackElo "2552"]
+[BlackTitle "IM"]
+[TimeControl "300+0"]
+[Termination "Time forfeit"]
+[Variant "Standard"]
+[ECO "C56"]
+[Opening "Italian Game: Scotch Gambit, Nakhmanson Gambit"]
+[StudyName "Eric and Jonathan's secret openings"]
+[ChapterName "zolpi (2349) - IM EricRosen (2552)"]
+[ChapterURL "https://lichess.org/study/e6hkt0LT/xQOc4Aq5"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 { [%clk 0:05:00] } 1... e5 { [%clk 0:05:00] } 2. Bc4 { [%clk 0:04:59] } 2... Nf6 { [%clk 0:04:58] } 3. d4 { [%clk 0:04:55] } 3... exd4 { [%clk 0:04:57] } 4. Nf3 { [%clk 0:04:54] } 4... Nc6 { [%clk 0:04:57] } 5. O-O { [%clk 0:04:51] } 5... Nxe4 { [%clk 0:04:56] } 6. Nc3 { [%clk 0:04:50] } 6... dxc3 { [%clk 0:04:54] } 7. Bxf7+ { [%clk 0:04:48] } 7... Kxf7 { [%clk 0:04:54] } 8. Qd5+ { [%clk 0:04:45] } 8... Kf6 { [%clk 0:04:47] } 9. Re1 { [%clk 0:04:37] } 9... Ne7 { [%clk 0:04:10] } 10. Qxe4 { [%clk 0:04:29] } 10... d5 { [%clk 0:01:07] } (10... Kf7 11. Bg5 { [%csl Gd5] } 11... d5 12. Qf4+ { [%csl Ge7] } 12... Kg8 { [%cal Gf4h4,Gf3e5] } 13. Qe5 cxb2 14. Rab1 h6 15. Bxe7 Bxe7 16. Qxe7 Qxe7 (16... Kh7) 17. Rxe7) 11. Qf4+ { [%clk 0:04:26] } 11... Bf5 { [%clk 0:01:01] } 12. Ne5 { [%clk 0:04:17] } 12... g6 { [%clk 0:00:35] } 13. Qh4+ { [%clk 0:03:55] } 13... Kg7 { [%clk 0:00:27] } 14. Bh6+ { [%clk 0:03:33] } 14... Kg8 { [%clk 0:00:26] } 15. Qf6 { [%clk 0:03:32] } 15... Qe8 { [%clk 0:00:26] } 16. g4 { [%clk 0:02:53] } 16... Bxh6 { [%clk 0:00:24] } 17. gxf5 { [%clk 0:02:50] } 17... Bg7 { [%clk 0:00:24] } 18. Qe6+ { [%clk 0:02:46] } 18... Kf8 { [%clk 0:00:23] } 19. Nd7+ { [%clk 0:02:43] } 19... Qxd7 { [%clk 0:00:22] } 20. Qxd7 { [%clk 0:02:42] } 20... Re8 { [%clk 0:00:18] } 21. Re6 { [%clk 0:02:34] } 21... gxf5 { [%clk 0:00:13] } 22. Rae1 { [%clk 0:02:32] } 22... Rg8 { [%clk 0:00:13] } 23. Rxe7 { [%clk 0:02:31] } 23... Be5+ { [%clk 0:00:07] } 24. Kf1 { [%clk 0:02:26] } 24... Rxe7 { [%clk 0:00:07] } 25. Qxf5+ { [%clk 0:02:23] } 25... Ke8 { [%clk 0:00:02] } 26. Rxe5 { [%clk 0:02:21] } 26... cxb2 { [%clk 0:00:01] } 27. Rxe7+ { [%clk 0:02:15] } 27... Kxe7 { [%clk 0:00:01] } 28. Qe5+ { [%clk 0:02:14] } 28... Kf7 { [%clk 0:00:01] } 29. Qxb2 { [%clk 0:02:14] } 29... c6 { [%clk 0:00:01] } 30. Qxb7+ { [%clk 0:02:13] } 30... Kg6 { [%clk 0:00:01] } 31. Qxc6+ { [%clk 0:02:12] } 31... Kg7 { [%clk 0:00:00] } 32. Qxd5 { [%clk 0:02:11] } 32... Rf8 { [%clk 0:00:00] } 33. Qe5+ { 1-0 White wins on time. } { [%clk 0:02:08] } 1-0
+
+
+[Event "Rated Blitz game"]
+[Site "https://lichess.org/htmQKiKO"]
+[Date "2023.02.11"]
+[White "zolpi"]
+[Black "EricRosen"]
+[Result "1-0"]
+[WhiteElo "2358"]
+[BlackElo "2544"]
+[BlackTitle "IM"]
+[TimeControl "300+0"]
+[Termination "Time forfeit"]
+[Variant "Standard"]
+[ECO "C56"]
+[Opening "Italian Game: Scotch Gambit, Nakhmanson Gambit"]
+[StudyName "Eric and Jonathan's secret openings"]
+[ChapterName "zolpi (2358) - IM EricRosen (2544)"]
+[ChapterURL "https://lichess.org/study/e6hkt0LT/L7VBxRLG"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 { [%clk 0:05:00] } 1... e5 { [%clk 0:05:00] } 2. Nf3 { [%clk 0:04:58] } 2... Nc6 { [%clk 0:04:57] } 3. Bc4 { [%clk 0:04:57] } 3... Nf6 { [%clk 0:04:56] } 4. d4 { [%clk 0:04:57] } 4... exd4 { [%clk 0:04:56] } 5. O-O { [%clk 0:04:56] } 5... Nxe4 { [%clk 0:04:55] } 6. Nc3 { [%clk 0:04:54] } 6... dxc3 { [%clk 0:04:55] } 7. Bxf7+ { [%clk 0:04:53] } 7... Kxf7 { [%clk 0:04:55] } 8. Qd5+ { [%clk 0:04:51] } 8... Kf6 { [%clk 0:04:54] } 9. h4 { [%clk 0:04:42] } 9... h6 { [%clk 0:03:56] } 10. Ng5 { [%clk 0:04:40] } 10... hxg5 { [%clk 0:02:14] } (10... Nd6 11. Bf4 g6 12. Bxd6) 11. hxg5+ { [%clk 0:04:09] } 11... Nxg5 { [%clk 0:01:38] } 12. Bxg5+ { [%clk 0:03:36] } 12... Kg6 { [%clk 0:01:38] } 13. Bxd8 { [%clk 0:03:16] } 13... Nxd8 { [%clk 0:01:38] } 14. Qd3+ { [%clk 0:03:08] } (14. f4) 14... Kf7 { [%clk 0:01:36] } 15. Qxc3 { [%clk 0:02:58] } 15... Ne6 { [%clk 0:01:27] } 16. Rfe1 { [%clk 0:02:47] } 16... Rh6 { [%clk 0:01:19] } 17. Re3 { [%clk 0:02:33] } 17... Rf6 { [%clk 0:01:15] } 18. Rae1 { [%clk 0:02:26] } 18... Bd6 { [%clk 0:01:08] } 19. Rh3 { [%clk 0:02:14] } 19... b6 { [%clk 0:01:05] } 20. Rh8 { [%clk 0:01:52] } 20... Bb7 { [%clk 0:01:02] } 21. Rxa8 { [%clk 0:01:51] } 21... Bxa8 { [%clk 0:01:02] } 22. Re3 { [%clk 0:01:35] } 22... Rg6 { [%clk 0:00:58] } 23. f3 { [%clk 0:01:22] } 23... Bc5 { [%clk 0:00:56] } 24. Kf1 { [%clk 0:01:19] } 24... Rh6 { [%clk 0:00:46] } 25. Re5 { [%clk 0:01:13] } 25... Bd4 { [%clk 0:00:39] } 26. Rf5+ { [%clk 0:01:07] } 26... Ke7 { [%clk 0:00:37] } 27. Qd3 { [%clk 0:01:01] } 27... c5 { [%clk 0:00:28] } 28. c3 { [%clk 0:00:57] } 28... Rh1+ { [%clk 0:00:27] } 29. Ke2 { [%clk 0:00:55] } 29... Bf6 { [%clk 0:00:26] } 30. Qe3 { [%clk 0:00:48] } 30... Bc6 { [%clk 0:00:22] } 31. b4 { [%clk 0:00:45] } 31... cxb4 { [%clk 0:00:21] } 32. cxb4 { [%clk 0:00:45] } 32... Bb5+ { [%clk 0:00:20] } 33. Kd2 { [%clk 0:00:40] } 33... a6 { [%clk 0:00:18] } 34. a4 { [%clk 0:00:36] } 34... Bxa4 { [%clk 0:00:16] } 35. Qxb6 { [%clk 0:00:34] } 35... Bb5 { [%clk 0:00:15] } 36. Qe3 { [%clk 0:00:32] } 36... Ra1 { [%clk 0:00:14] } 37. Rc5 { [%clk 0:00:29] } 37... Ra2+ { [%clk 0:00:13] } 38. Rc2 { [%clk 0:00:28] } 38... Rxc2+ { [%clk 0:00:11] } 39. Kxc2 { [%clk 0:00:28] } 39... Kf7 { [%clk 0:00:10] } 40. g3 { [%clk 0:00:27] } 40... Nd4+ { [%clk 0:00:10] } 41. Kb2 { [%clk 0:00:26] } 41... Nc6+ { [%clk 0:00:10] } 42. Kb3 { [%clk 0:00:25] } 42... Ne7 { [%clk 0:00:10] } 43. Qc5 { [%clk 0:00:24] } 43... Bc6 { [%clk 0:00:09] } 44. g4 { [%clk 0:00:23] } 44... Bd5+ { [%clk 0:00:09] } 45. Ka3 { [%clk 0:00:22] } 45... Be6 { [%clk 0:00:09] } 46. g5 { [%clk 0:00:22] } 46... Ba1 { [%clk 0:00:07] } 47. Qe3 { [%clk 0:00:21] } 47... Nd5 { [%clk 0:00:06] } 48. Qe1 { [%clk 0:00:19] } 48... Bc3 { [%clk 0:00:06] } 49. Qd1 { [%clk 0:00:18] } 49... Bxb4+ { [%clk 0:00:06] } 50. Ka4 { [%clk 0:00:17] } 50... Bd6 { [%clk 0:00:06] } 51. Ka5 { [%clk 0:00:17] } 51... Bc7+ { [%clk 0:00:05] } 52. Kxa6 { [%clk 0:00:16] } 52... Bd8 { [%clk 0:00:05] } 53. Kb7 { [%clk 0:00:15] } 53... Nc7 { [%clk 0:00:05] } 54. Kc8 { [%clk 0:00:15] } 54... Nd5 { [%clk 0:00:03] } 55. Qd2 { [%clk 0:00:14] } 55... Ne7+ { [%clk 0:00:03] } 56. Kb7 { [%clk 0:00:12] } 56... Nc6 { [%clk 0:00:03] } 57. f4 { [%clk 0:00:12] } 57... Be7 { [%clk 0:00:03] } 58. Kc8 { [%clk 0:00:11] } 58... Bf5 { [%clk 0:00:03] } 59. Qe2 { [%clk 0:00:10] } 59... g6 { [%clk 0:00:03] } 60. Qf3 { [%clk 0:00:09] } 60... Nd4 { [%clk 0:00:03] } 61. Qd5+ { [%clk 0:00:08] } 61... Ne6 { [%clk 0:00:03] } 62. Qd4 { [%clk 0:00:08] } 62... d6 { [%clk 0:00:03] } 63. Qd5 { [%clk 0:00:08] } 63... Kf8 { [%clk 0:00:02] } 64. Kb7 { [%clk 0:00:08] } 64... Nc7 { [%clk 0:00:01] } 65. Kc6 { [%clk 0:00:08] } 65... Nxd5 { [%clk 0:00:01] } 66. Kxd5 { [%clk 0:00:07] } 66... Bg4 { [%clk 0:00:01] } 67. Ke4 { [%clk 0:00:06] } 67... Bxg5 { [%clk 0:00:01] } 68. fxg5 { [%clk 0:00:05] } 68... Ke8 { [%clk 0:00:01] } 69. Kd5 { [%clk 0:00:05] } 69... Kd8 { [%clk 0:00:01] } 70. Kxd6 { [%clk 0:00:05] } 70... Kc8 { [%clk 0:00:01] } 71. Ke5 { [%clk 0:00:04] } 71... Bh5 { [%clk 0:00:01] } 72. Kf6 { 1-0 White wins on time. } { [%clk 0:00:04] } 1-0
+
+
+[Event "Eric and Jonathan's secret openings: Ruy Lopez Counter Gambit"]
+[Date "2023.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C60"]
+[Opening "Ruy Lopez: Spanish Countergambit, Harding Gambit"]
+[StudyName "Eric and Jonathan's secret openings"]
+[ChapterName "Ruy Lopez Counter Gambit"]
+[ChapterURL "https://lichess.org/study/e6hkt0LT/9esAexms"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2023.02.11"]
+[UTCTime "00:20:05"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 d5 4. Nxe5 Qg5 5. Nxc6 (5. Nf3 { [%cal Gh1g1] }) 5... Qxg2 6. Qf3 (6. Rf1 Qxe4+ 7. Qe2 Qxe2+ 8. Kxe2 a6 9. Ba4 Bd7 10. d4 Bxc6) *
+
+

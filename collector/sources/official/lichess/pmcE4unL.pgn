@@ -1,0 +1,93 @@
+[Event "endgame: Розділ 1"]
+[Date "2025.11.02"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "endgame"]
+[ChapterName "Розділ 1"]
+[ChapterURL "https://lichess.org/study/pmcE4unL/RPIfqEkU"]
+[Annotator "https://lichess.org/@/Aleksey_win"]
+[FEN "4k3/8/8/8/8/8/3P4/4K3 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.11.02"]
+[UTCTime "06:56:19"]
+
+{ [%csl Ge2][%cal Ge1e2] }
+1. Ke2 { [%csl Ge7][%cal Ge8e7] } 1... Ke7 { [%csl Ge3,Gd3][%cal Ge2e3,Ge2d3] } 2. Ke3 { [%csl Gd6][%cal Ge7d6] } 2... Kd6 { [%csl Rd4,Ge3,Rd2][%cal Rd2d4,Ge3d4] } 3. Kd4 { [%csl Re5,Rd5,Rc5][%cal Rd4e5,Rd4d5,Rd4c5] } 3... Kc6 { [%csl Rd3,Ge5][%cal Rd2d3,Gd4e5] } 4. Ke5 { [%csl Gc5][%cal Gc6c5] } 4... Kc5 { [%csl Gd4][%cal Gd2d4] } 5. d4+ { [%csl Rc5][%cal Rd4c5] } 5... Kc6 { [%csl Rd5,Ge6][%cal Rd4d5,Ge5e6] } 6. Ke6 { [%csl Rd7,Rd6,Rd5][%cal Re6d7,Re6d6,Re6d5] } 6... Kc7 { [%csl Re7,Gd5][%cal Re6e7,Gd4d5] } 7. d5 { [%csl Rb6,Gd8][%cal Rc7b6,Gc7d8] } 7... Kd8 { [%csl Rd6][%cal Rd5d6,Ge6d6] } 8. Kd6 { [%csl Gc8,Ge8][%cal Gd8c8,Gd8e8] } 8... Ke8 { [%csl Gd6,Gc7][%cal Gd6c7,Gc7d8,Gc7d7,Gc7d6] } 9. Kc7 { [%cal Rc7d8,Rc7d7,Rc7d6] } 9... Ke7 { [%csl Gd6][%cal Gd5d6] } 10. d6+ { [%csl Re7][%cal Rd6e7] } 10... Ke8 11. d7+ { [%csl Re8][%cal Rd7e8] } 11... Ke7 12. d8=Q+ $18 *
+
+
+[Event "endgame: endgame of rook"]
+[Date "2025.11.02"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "endgame"]
+[ChapterName "endgame of rook"]
+[ChapterURL "https://lichess.org/study/pmcE4unL/yniIed26"]
+[Annotator "https://lichess.org/@/Aleksey_win"]
+[FEN "2k5/8/8/8/8/8/2K5/2R5 w - - 0 12"]
+[SetUp "1"]
+[UTCDate "2025.11.02"]
+[UTCTime "07:06:23"]
+
+{ [%csl Gb1,Yd1][%cal Gc1b1,Yc1d1] }
+12. Rd1 { [%csl Rd8,Rd7,Rd6,Rd5,Rd4,Rd3,Rd2,Gc7][%cal Rd1d8,Gc8c7] } 12... Kc7 { [%csl Gc3][%cal Gc2c3] } 13. Kc3 { [%csl Gc6][%cal Gc7c6] } 13... Kc6 { [%csl Gc4][%cal Gc3c4] } 14. Kc4 { [%csl Rb5,Rc5,Rd5,Rd8,Rd7,Rd6,Gb6][%cal Rc4d5,Rc4c5,Rc4b5,Rd1d8,Gc6b6] } 14... Kb6 { [%csl Gd5][%cal Gd1d5] } 15. Rd5 { [%csl Rd5,Rd8,Rd7,Rd6,Ra5,Rb5,Rc5,Gc6][%cal Rd5d8,Rd5a5,Gb6c6] } 15... Kc6 { [%csl Gd4][%cal Gc4d4] } 16. Kd4 { [%csl Gb6][%cal Gc6b6] } 16... Kb6 { [%csl Ge5][%cal Gd4e5] } 17. Ke5 { [%csl Gc6][%cal Gb6c6] } 17... Kc6 { [%csl Ge6][%cal Ge5e6] } 18. Ke6 Kb6 { [%csl Gd6][%cal Ge6d6] } 19. Kd6 { [%csl Rc5,Rc6,Rc7,Ra5,Rb5,Gb7][%cal Rd6c7,Rd6c6,Rd6c5,Rd5a5,Gb6b7] } 19... Kb7 { [%csl Gc5][%cal Gd5c5] } 20. Rc5 { [%csl Rc8,Rc7,Rc6,Rb5,Ra5,Gb6][%cal Rc5c8,Rc5a5,Gb7b6] } 20... Kb6 { [%csl Gd5][%cal Gd6d5] } 21. Kd5 { [%csl Gb7][%cal Gb6b7] } 21... Kb7 { [%csl Gc6][%cal Gc5c6] } 22. Rc6 { [%csl Rc8,Rc7,Ra6,Rb6,Ga7][%cal Rc6c8,Rc6a6,Gb7a7] } 22... Ka7 { [%csl Gc5][%cal Gd5c5] } 23. Kc5 { [%csl Rc8,Rc7,Rb6,Ra6,Gb7][%cal Rc6c8,Rc6a6,Ga7b7] } 23... Kb7 { [%csl Gb5][%cal Gc5b5] } 24. Kb5 { [%csl Ga7][%cal Gb7a7] } 24... Ka7 { [%csl Gb6][%cal Gc6b6] } 25. Rb6 { [%csl Ra6,Rb8,Rb7,Ga8][%cal Rb6a6,Rb6b8,Ga7a8] } 25... Ka8 $7 { [%csl Ra6,Gc6][%cal Rb5a6,Gb5c6] } 26. Kc6 Ka7 $7 { [%csl Gc7][%cal Gc6c7] } 27. Kc7 Ka8 $7 28. Ra6#! $40 *
+
+
+[Event "endgame: endgame of queen"]
+[Date "2025.11.02"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "endgame"]
+[ChapterName "endgame of queen"]
+[ChapterURL "https://lichess.org/study/pmcE4unL/9uEO7xfJ"]
+[Annotator "https://lichess.org/@/Aleksey_win"]
+[FEN "8/8/3k4/8/8/8/2K5/4Q3 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.11.02"]
+[UTCTime "07:18:11"]
+
+1. Qa5 { [%csl Ga5,Rh5,Rg5,Rf5,Re5,Rd5,Rc5,Rb5][%cal Ge1a5,Ra5h5] } 1... Ke6 { [%csl Ge6][%cal Gd6e6] } 2. Qc5 { [%csl Ga5,Rd6,Re7,Rf8,Rc8,Rc7,Rc6,Rh5,Rg5,Rf5,Re5,Rd5][%cal Ga5c5,Rc5f8,Rc5c8,Rc5h5] } 2... Kf6 { [%csl Gf6][%cal Ge6f6] } 3. Kd3 { [%csl Gc2][%cal Gc2d3] } 3... Ke6 { [%csl Gf6][%cal Gf6e6] } 4. Ke4! { [%csl Gd3,Rd5,Re5,Rf5,Rh5,Rg5,Rf8,Re7,Rd6,Rc8,Rc7,Rc6][%cal Gd3e4,Re4d5,Re4e5,Re4f5,Rc5h5,Rc5f8,Rc5c8] } 4... Kf6 { [%csl Gf6][%cal Ge6f6] } 5. Qe5+ { [%csl Ge5,Gc5,Rf6][%cal Gc5e5,Re5f6] } 5... Kg6 { [%csl Gg6][%cal Gf6g6] } 6. Qf5+! { [%csl Ge5,Rf8,Rf7,Rf6,Rh5,Rg5,Rf5][%cal Ge5f5,Rf5f8,Rf5h5,Re4f5] } 6... Kh6 { [%csl Gg6,Ge4][%cal Gg6h6] } 7. Ke5! { [%csl Ge5][%cal Ge4e5] } 7... Kg7 $7 { [%csl Gh6][%cal Gh6g7] } 8. Ke6! { [%csl Ge6][%cal Ge5e6] } 8... Kg8! 9. Ke7 { [%csl Ge6][%cal Ge6e7] } 9... Kg7 { [%csl Gg8][%cal Gg8g7] } 10. Qg5+! { [%csl Gf5,Rf6,Rg6,Rh6,Rg8,Rg7,Rf8,Rf7][%cal Gf5g5,Rg5f6,Rg5g6,Rg5h6,Rg5g8,Re7f8,Re7f7] } 10... Kh7 { [%csl Gg7,Gh7][%cal Gg7h7] } 11. Kf7 { [%csl Ge7,Gf7][%cal Ge7f7] } 11... Kh8 $7 { [%csl Gh7][%cal Gh7h8] } 12. Qg8# { [%csl Gg5,Gg8,Bg7][%cal Gg5g8,Bg5g7] } *
+
+
+[Event "endgame: endgame of  2rook"]
+[Date "2025.11.02"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "endgame"]
+[ChapterName "endgame of  2rook"]
+[ChapterURL "https://lichess.org/study/pmcE4unL/kMYx5Toy"]
+[Annotator "https://lichess.org/@/Aleksey_win"]
+[FEN "8/8/4k3/8/8/8/8/R3K2R w - - 23 12"]
+[SetUp "1"]
+[UTCDate "2025.11.02"]
+[UTCTime "07:26:10"]
+
+12. Rh5 { [%csl Gh1,Ra5,Rb5,Rc5,Rd5,Re5,Rf5,Rg5][%cal Gh1h5,Rh5a5] } 12... Kf6 { [%csl Ge6][%cal Ge6f6] } 13. Ra6+ { [%csl Ga1,Rh6,Rg6,Rf6,Re6,Rd6,Rc6,Rb6,Ra5,Rb5,Rc5,Rd5,Re5,Rf5,Rg5][%cal Ga1a6,Ra6h6,Rh5a5] } 13... Kg7 { [%csl Gf6][%cal Gf6g7] } 14. Rb5 { [%csl Gh5][%cal Gh5b5] } 14... Kf7 { [%csl Gg7][%cal Gg7f7] } 15. Rb7+ { [%csl Gb5][%cal Gb5b7] } 15... Ke8 $7 16. Ra8# *
+
+
+[Event "endgame: +-"]
+[Date "2025.11.02"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "endgame"]
+[ChapterName "+-"]
+[ChapterURL "https://lichess.org/study/pmcE4unL/PQPLBiPX"]
+[Annotator "https://lichess.org/@/Aleksey_win"]
+[FEN "8/8/8/8/3Q4/2K5/6pk/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.11.02"]
+[UTCTime "10:35:33"]
+
+{ [%csl Gh4][%cal Gd4h4] }
+1. Qh4+ $18 { [%csl Gd4][%cal Gd4h4] } 1... Kg1 $7 { [%csl Gh2,Gg1,Gc3][%cal Gh2g1,Gc3d2] } 2. Kd2 { [%csl Gc3,Gg1][%cal Gc3d2,Gg1f1] } 2... Kf1 $7 { [%csl Gg1,Ge1][%cal Gg1f1,Gh4e1] } 3. Qe1#! { [%csl Gh4][%cal Gh4e1] } *
+
+

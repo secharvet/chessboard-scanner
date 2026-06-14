@@ -1,0 +1,193 @@
+[Event "Gambits: Colorado Gambit"]
+[Date "2019.09.18"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B00"]
+[Opening "Nimzowitsch Defense: Colorado Countergambit"]
+[StudyName "Gambits"]
+[ChapterName "Colorado Gambit"]
+[ChapterURL "https://lichess.org/study/zDE7NL0Z/3inQgvwL"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.09.18"]
+[UTCTime "04:17:48"]
+
+1. e4 Nc6 2. Nf3 f5 { [%csl Gf5][%cal Rf5e4,Gf7f5] } *
+
+
+[Event "Gambits: Traxler"]
+[Date "2019.09.23"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C57"]
+[Opening "Italian Game: Two Knights Defense, Traxler Counterattack"]
+[StudyName "Gambits"]
+[ChapterName "Traxler"]
+[ChapterURL "https://lichess.org/study/zDE7NL0Z/GiSaEn97"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.09.23"]
+[UTCTime "05:17:41"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. Ng5 Bc5 { [%cal Gf8c5] } *
+
+
+[Event "Gambits: Marshall Gambit"]
+[Date "2019.09.23"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D31"]
+[Opening "Semi-Slav Defense: Marshall Gambit, Main Line"]
+[StudyName "Gambits"]
+[ChapterName "Marshall Gambit"]
+[ChapterURL "https://lichess.org/study/zDE7NL0Z/0zg7FF2h"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.09.23"]
+[UTCTime "05:18:24"]
+
+1. d4 d5 2. c4 e6 3. Nc3 c6 4. e4 { [%cal Ge2e4] } 4... dxe4 5. Nxe4 Bb4+ 6. Bd2 Qxd4 *
+
+
+[Event "Gambits: Bronstein Gambit (Bull frog Gambit)"]
+[Date "2019.09.23"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Gibbins-Weidenhagen Gambit Accepted"]
+[StudyName "Gambits"]
+[ChapterName "Bronstein Gambit (Bull frog Gambit)"]
+[ChapterURL "https://lichess.org/study/zDE7NL0Z/FNjak0nI"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.09.23"]
+[UTCTime "05:18:57"]
+
+1. d4 Nf6 2. g4 { The Bronstein Gambit
+Dubious if black plays accurately, but an interesting surprise weapon for blitz } { [%csl Gg4,Ge4][%cal Gf6g4,Ge2e4] } 2... Nxg4 (2... h6 3. h3 (3. Nf3) 3... d5) 3. e4 d5 4. Be2 Nf6 (4... h5 5. h3 (5. f3) 5... Nf6 6. exd5 (6. e5 Ne4) 6... Qxd5) 5. e5 Nfd7 6. e6!? (6. Nf3 { [%cal Gh1g1] }) 6... fxe6 7. Nf3 Nc6 8. Nc3 g6 9. h4 *
+
+
+[Event "Gambits: Hillbilly Attack"]
+[Date "2019.09.23"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B10"]
+[Opening "Caro-Kann Defense: Hillbilly Attack, Schaeffer Gambit"]
+[StudyName "Gambits"]
+[ChapterName "Hillbilly Attack"]
+[ChapterURL "https://lichess.org/study/zDE7NL0Z/Kny9Wvnb"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.09.23"]
+[UTCTime "05:19:28"]
+
+1. e4 c6 2. Bc4 d5 3. Bb3 dxe4 4. Qh5 Nf6 5. Qh4 { [%cal Gf2f3,Gb1c3,Gg1f3] } *
+
+
+[Event "Gambits: Smith Morra"]
+[Date "2019.09.23"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B21"]
+[Opening "Sicilian Defense: Smith-Morra Gambit"]
+[StudyName "Gambits"]
+[ChapterName "Smith Morra"]
+[ChapterURL "https://lichess.org/study/zDE7NL0Z/BJPJS3fa"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.09.23"]
+[UTCTime "05:25:52"]
+
+1. e4 c5 2. d4 { [%cal Gd2d4] } 2... cxd4 *
+
+
+[Event "Gambits: Benko Gambit"]
+[Date "2019.09.23"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A57"]
+[Opening "Benko Gambit"]
+[StudyName "Gambits"]
+[ChapterName "Benko Gambit"]
+[ChapterURL "https://lichess.org/study/zDE7NL0Z/0RRhnNGX"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.09.23"]
+[UTCTime "05:29:52"]
+
+1. d4 Nf6 2. c4 c5 { [%cal Gc7c5] } 3. d5 b5 *
+
+
+[Event "Gambits: Halloween Gambit"]
+[Date "2019.09.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C47"]
+[Opening "Four Knights Game: Halloween Gambit"]
+[StudyName "Gambits"]
+[ChapterName "Halloween Gambit"]
+[ChapterURL "https://lichess.org/study/zDE7NL0Z/1bKbmOzJ"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.09.30"]
+[UTCTime "23:21:06"]
+
+1. e4 e5 2. Nf3 Nc6 3. Nc3 Nf6 4. Nxe5 Nxe5 5. d4 Ng6 (5... Nc6 6. d5 Ne5 7. f4 Ng6 8. e5 Ng8 9. d6 cxd6 10. exd6 Qb6 (10... Qa5 11. Qd3 { [%cal Gc1d2,Ge1c1] }) 11. Nb5 Kd8 12. f5 { [%cal Gc1f4] }) 6. e5 Ng8 7. Bc4 d5 8. Bxd5 N8e7 9. Bg5 h6 10. Qf3 Bf5 11. Bxe7 Nxe7 12. Bxb7 Rb8 13. Be4 *
+
+
+[Event "Gambits: Four Pawns Gambit"]
+[Date "2020.06.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C23"]
+[Opening "Bishop's Opening: Four Pawns Gambit"]
+[StudyName "Gambits"]
+[ChapterName "Four Pawns Gambit"]
+[ChapterURL "https://lichess.org/study/zDE7NL0Z/5RBbjbZI"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2020.06.11"]
+[UTCTime "12:17:04"]
+
+1. e4 e5 2. Bc4 Bc5 3. b4 Bxb4 4. f4 exf4 5. Nf3 Be7 6. d4 Bh4+ 7. g3 fxg3 8. O-O gxh2+ 9. Kh1 *
+
+
+[Event "Gambits: Khan Gambit"]
+[Date "2020.06.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C23"]
+[Opening "Bishop's Opening: Khan Gambit"]
+[StudyName "Gambits"]
+[ChapterName "Khan Gambit"]
+[ChapterURL "https://lichess.org/study/zDE7NL0Z/8GFZWyYo"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2020.06.11"]
+[UTCTime "12:18:14"]
+
+1. e4 e5 2. Bc4 d5 3. exd5 (3. Bxd5 Nf6) 3... c6 4. dxc6 Nxc6 5. d3 Bc5 *
+
+
+[Event "Gambits: Alapin Gambit"]
+[Date "2020.06.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C00"]
+[Opening "French Defense: Alapin Gambit"]
+[StudyName "Gambits"]
+[ChapterName "Alapin Gambit"]
+[ChapterURL "https://lichess.org/study/zDE7NL0Z/RvhG4FEs"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2020.06.11"]
+[UTCTime "12:25:10"]
+
+1. e4 e6 2. d4 d5 3. Be3 dxe4 4. Nd2 Nf6 5. f3 Nd5 (5... exf3 6. Ngxf3) 6. Qe2 *
+
+
+[Event "Gambits: Nakhmanson"]
+[Date "2020.07.07"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C56"]
+[Opening "Italian Game: Scotch Gambit, Nakhmanson Gambit"]
+[StudyName "Gambits"]
+[ChapterName "Nakhmanson"]
+[ChapterURL "https://lichess.org/study/zDE7NL0Z/MtvNysY2"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2020.07.07"]
+[UTCTime "22:13:17"]
+
+1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Bc4 Nf6 5. O-O Nxe4 6. Nc3 Nd6 (6... dxc3) (6... d5 7. Bxd5 Nxc3 8. Bxc6+ bxc6 9. bxc3 $14) 7. Re1+ (7. Nxd4 Nxc4 8. Qe2+ N6e5 9. f4) (7. Qe2+ Be7 8. Nd5 Nxc4 9. Qxc4 O-O 10. Nxd4 Nxd4 11. Qxd4 d6) 7... Be7 8. Nd5 Nxc4 9. Nxe7 Nxe7 10. Qxd4 O-O 11. Qxc4 *
+
+

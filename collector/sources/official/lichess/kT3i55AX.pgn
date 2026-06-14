@@ -1,0 +1,108 @@
+[Event "(Strategy): Game 1 (Larsen) Topic -Imbalences"]
+[Date "2025.09.17"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B70"]
+[Opening "Sicilian Defense: Dragon Variation, Classical Variation"]
+[StudyName "(Strategy)"]
+[ChapterName "Game 1 (Larsen) Topic -Imbalences"]
+[ChapterURL "https://lichess.org/study/kT3i55AX/rkoEF08p"]
+[Annotator "https://lichess.org/@/KushagraT"]
+[UTCDate "2025.09.17"]
+[UTCTime "16:54:49"]
+
+{ and the queen is also only great when it has coordinating pieces }
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be2 { [%csl Gg7] } 6... Bg7 7. O-O O-O 8. Nb3 Nc6 9. Kh1 a5 10. a4 Be6 11. f4 { [%csl Gb6] } 11... Qb6 { [%csl Gb3] } 12. f5 { [%csl Ge6,Gd7,Gb2][%cal Ge6d7,Ge6b3] } 12... Bxb3 $140 13. cxb3 { He has gained space but we have our pawn structure very solid than him } { [%csl Gb4,Gb6] } 13... Qb4 { pressure e4 and an improving move } { [%csl Ge4] } 14. Be3 Nd7 { [%csl Gc4] } 15. Bc4 { [%csl Gg7,Gh6][%cal Gg7c3,Gb2c3,Gb4c3] } 15... Nb6!! { [%csl Ga2] } 16. Na2 { How to evaluvate A Queen for Rook and a bishop } 16... Nxc4!! 17. Nxb4 Nxe3 18. Qe2 Nxf1 { [%csl Gc6] } 19. Nxc6 Ng3+ 20. hxg3 { [%csl Gc6] } 20... bxc6 $17 { Queen is valuable when it has coordinating pieces or targets to attack
+here we can evaluvate the position -
+1)pawn structure is worse for white
+2) it has no targets } 21. b4 axb4 22. a5 c5 23. Ra2 Be5 24. Qc4 Bxg3 25. b3 Rfb8 26. Kg1 Kg7 27. Kf1 Ra7 28. Ke2 Be5 { We should never have unprotected pieces while playing against the queen } 29. Kf3 Bd4 30. g4 g5 31. a6 Be5 32. Ra4 Kf6 33. Kg2 Rh8 34. Qb5 h5 35. gxh5 g4 36. h6 Rxh6 37. Qb8 g3 38. Ra2 Rh2+ 39. Kf3 *
+
+
+[Event "(Strategy): Game -2 Larsen Topic -Imbalences"]
+[Date "2025.09.19"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A42"]
+[Opening "Modern Defense: Averbakh System"]
+[StudyName "(Strategy)"]
+[ChapterName "Game -2 Larsen Topic -Imbalences"]
+[ChapterURL "https://lichess.org/study/kT3i55AX/2OhLPbbx"]
+[Annotator "https://lichess.org/@/KushagraT"]
+[UTCDate "2025.09.19"]
+[UTCTime "09:46:02"]
+
+1. c4 g6 2. Nc3 Bg7 3. d4 d6 4. e4 Nd7 5. Be3 Ngf6 6. f3 O-O 7. Qd2 c5 8. Nge2 Qa5 9. Nd5 Nxd5!! 10. Qxa5 Nxe3 { The compensation we have here is 1)dark- squared bishop control
+2)Coordination of pieces
+3)Queen has not targets } 11. Qd2 cxd4 12. Nf4 Nb6 $140 { of to prevent exchange of the knight on e3 from d5 knight } 13. Nd5 Nbxd5 14. cxd5 f5 15. Bd3 fxe4 16. Bxe4 e6 17. Rc1 exd5 18. Rc7 Bh6 (18... dxe4?? 19. Rxg7+ Kxg7 20. Qxd4+ Rf6 21. Qxe3) 19. g4 (19. Bd3 Be6 20. Re7 Rae8 21. Rxe8 Rxe8 22. Bb5 Rc8 23. Bd3) 19... dxe4 20. Qxd4 Rxf3 21. g5 Bf8 22. Ke2 Bg4 23. Kd2 *
+
+
+[Event "(Strategy): Outpost"]
+[Date "2025.10.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "(Strategy)"]
+[ChapterName "Outpost"]
+[ChapterURL "https://lichess.org/study/kT3i55AX/6Wetq25I"]
+[Annotator "https://lichess.org/@/KushagraT"]
+[UTCDate "2025.10.14"]
+[UTCTime "11:15:14"]
+
+ *
+
+
+[Event "(Strategy): Chapter 4"]
+[Date "2025.10.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "(Strategy)"]
+[ChapterName "Chapter 4"]
+[ChapterURL "https://lichess.org/study/kT3i55AX/TTueQ5RM"]
+[Annotator "https://lichess.org/@/KushagraT"]
+[FEN "r6r/pp1bkppp/n3p3/1Nb1P2n/P1B2B2/2N5/1P3PPP/R4RK1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.14"]
+[UTCTime "11:19:52"]
+
+{ Doubled pawns are not always weak they are only weak in the endgame }
+1. Be3 { (Rook) } 1... Rhc8 { 1)
+To do passive defense
+To do active defense } 2. Be2 g6 { To decide
+which square is 100 percent good for the piece } 3. Ne4 Bxe3 (3... Bb4 4. Bxh5 gxh5 5. Bg5+ Ke8 6. Nf6+) 4. fxe3 { [%csl Ge3] } 4... Rc2 { Always look for moves that counterattack } *
+
+
+[Event "(Strategy): Queenside majority"]
+[Date "2025.12.05"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B15"]
+[Opening "Caro-Kann Defense: Tartakower Variation"]
+[StudyName "(Strategy)"]
+[ChapterName "Queenside majority"]
+[ChapterURL "https://lichess.org/study/kT3i55AX/EZJ2chfK"]
+[Annotator "https://lichess.org/@/KushagraT"]
+[UTCDate "2025.12.05"]
+[UTCTime "13:41:40"]
+
+1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Nf6 5. Nxf6+ exf6 *
+
+
+[Event "(Strategy): Example 1"]
+[Date "2025.12.05"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "(Strategy)"]
+[ChapterName "Example 1"]
+[ChapterURL "https://lichess.org/study/kT3i55AX/k88NKW1J"]
+[Annotator "https://lichess.org/@/KushagraT"]
+[UTCDate "2025.12.05"]
+[UTCTime "13:45:21"]
+
+ *
+
+

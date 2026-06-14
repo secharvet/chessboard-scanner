@@ -1,0 +1,546 @@
+[Event "Learn the Caro-Kann like a BOSS: Learning from this study"]
+[Date "2023.12.06"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Learn the Caro-Kann like a BOSS"]
+[ChapterName "Learning from this study"]
+[ChapterURL "https://lichess.org/study/8isfzJc8/uqmA6oIn"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "rnbqkbnr/pp1ppppp/2p5/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.12.06"]
+[UTCTime "15:03:53"]
+[ChapterMode "gamebook"]
+
+{ Welcome to another instructive study by NoseKnowsAll. This study is a first look at the Caro-Kann variation for black, compiled by members of the ChessDojo Training Program. To join the program itself (and join a community of chess players of all levels looking to improve their classical chess), check out: https://www.chessdojo.club. Trying the program is absolutely free, and there are thousands of members looking to spar these positions with you!
+
+This study is designed for lichess players rated below 2000. It is organized into 6 sections, each representing a key variation of the Caro-Kann.
+
+Each section consists of the following:
+- Key variations to know as well as basic middle game plans for each side
+- Sparring position(s) -- Spar a friend from this position to better understand the middlegame strategy
+- Common traps -- Treat these as puzzles and try to solve them for yourself before reading the text
+- Model games -- These demonstrate the plans discussed in the key variations file
+
+The emphasis is on understanding, not memorizing!
+
+Feel free to watch the companion video as well: https://www.youtube.com/watch?v=Z7C-zJwNG54 }
+ *
+
+
+[Event "Learn the Caro-Kann like a BOSS: The Dojo Sparring Philosophy"]
+[Date "2023.12.06"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Learn the Caro-Kann like a BOSS"]
+[ChapterName "The Dojo Sparring Philosophy"]
+[ChapterURL "https://lichess.org/study/8isfzJc8/x3OjRRTM"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "rnbqkbnr/pp1ppppp/2p5/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.12.06"]
+[UTCTime "15:03:53"]
+[ChapterMode "gamebook"]
+
+{ Rather than learn a bunch of moves that you aren't likely to face in your own games, the opening philosophy at the Dojo is: KEEP IT SIMPLE.
+
+You should only memorize the basic moves of each key variation presented in this study. The core of your understanding of the positions should come from playing sparring matches against similarly rated players from the provided sparring positions. Analyze those games, discuss with your opponents, and you are sure to learn relevant middlegame strategy better than any long sequence of engine-generated moves could provide you. }
+ *
+
+
+[Event "Learn the Caro-Kann like a BOSS: Introduction to the Caro-Kann"]
+[Date "2023.12.06"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Learn the Caro-Kann like a BOSS"]
+[ChapterName "Introduction to the Caro-Kann"]
+[ChapterURL "https://lichess.org/study/8isfzJc8/gRKJ9I5D"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "rnbqkbnr/pp1ppppp/2p5/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.12.06"]
+[UTCTime "15:03:53"]
+[ChapterMode "gamebook"]
+
+{ Alright, enough talk! It's time to learn the Caro-Kann.
+
+The fundamental idea of the Caro-Kann is to fight for the light squares in the center. Specifically, we want to challenge the e4 pawn with d5 without:
+1. Closing the c8 bishop in as with the French defense.
+2. Moving our queen out early with Qxd5 as in the Scandinavian defense.
+
+In return, Black is down an extra tempo when the center closes compared to the French variations, and the b8 knight is (temporarily!?) blocked from its favorite square: c6. We'll see how this plays out in the relevant sections.
+
+So let's learn the basics here like a BOSS. Then you can find a buddy, and start sparring! }
+ *
+
+
+[Event "Learn the Caro-Kann like a BOSS: Section 1: Main line (3. Nc3 dxe4)"]
+[Date "2023.06.07"]
+[White "Caro"]
+[Result "*"]
+[Annotator "Jesse"]
+[Variant "Standard"]
+[ECO "B15"]
+[Opening "Caro-Kann Defense: Tartakower Variation"]
+[StudyName "Learn the Caro-Kann like a BOSS"]
+[ChapterName "Section 1: Main line (3. Nc3 dxe4)"]
+[ChapterURL "https://lichess.org/study/8isfzJc8/1KZ4hbum"]
+
+1. e4 c6 2. d4 (2. Nc3 { The Two Knights Caro. This variation is technically distinct from the main line, but our play is much the same as the main line. } 2... d5 3. Nf3 dxe4 4. Nxe4 Nf6 { Nxf6 gives a similar position to the mainline and you can follow the middlegame plans suggested at the end of this section. } 5. Qe2!? (5. Nxf6+ exf6 $10 { With the Tartakower pawn structure. See Sparring position 1. }) 5... Nxe4 6. Qxe4 Qa5! $10 { with the intention of Bf5 next move, developing our LSB outside the pawn chain with tempo. } { [%cal Gc8f5] }) 2... d5 { Black plays the main point behind the Caro-Kann by challenging the e4 pawn. } 3. Nc3 { This is usually considered the starting point of the (classical) main line. White develops a knight to defend the e4 pawn instead of releasing the tension. } (3. Nd2 { Another good move that directly transposes to the main line. } 3... dxe4! 4. Nxe4 { Transposing to the main line. }) 3... dxe4 { We take the chance to break White's center control since we have no other good developing move with our knights or bishops.
+Nf6 would get popped with e5, gaining space. Nd7 doesn't adequately fight for the center and blocks in our LSB. e6 blocks in our LSB. } 4. Nxe4 { There are three acceptable moves from this position (Nf6, Bf5, Nd7) and you can choose another if you like, but the Dojo recommends Nf6.
+The idea is to challenge the knight on e4, after which White can respond with Nxf6 (the focus of this chapter), Qd3 (suboptimal), or f3 (yuck). } 4... Nf6!? { The Tartakower variation } 5. Nxf6+ (5. Qd3 { Not a bad move, but it's not great to move the queen too often in the opening. } 5... Nxe4 6. Qxe4 Nd7 $10 { After Nf6 next, gaining a tempo on the queen, black can complete development. } { [%cal Gd7f6] }) (5. f3?! { Blocks in the g1 knight forever. As long as we do not capture on e4, this move only weakens white's kingside for no benefit. } 5... Nbd7 $15) 5... exf6 { Sparring Pos 1. Allowing easy development for our pieces and the f6 pawn will be useful in defending our kingside. } 6. c3!? (6. Bc4!? Bd6 { White can play Ne2, planning to castle, or Qe2, forcing a Queen trade.
+Ne2 leads to a relatively passive position and your plans are similar to the mainline. } 7. Qe2+ Qe7 8. Qxe7+ Kxe7! { This is a key move! The queens have been traded and there's no immediate danger, so we can keep our king in the center for the endgame. } 9. Ne2 Re8 $10) 6... Bd6 { Beyond this point, we should NOT focus on memorizing specific moves. The key ideas are to finish development and utilize our kingside pawn majority.
+This is the most active square available for our bishop. } 7. Bd3 { Other squares are acceptable for our opponent's bishop, but this active square prevents us from playing Bf5 ourselves. } 7... O-O { Our opponent can play Qc2 or Ne2 first. Our response will be the same: Re8, taking control of the file before White can stop us. } 8. Qc2 Re8+ 9. Ne2 h5! { A key idea in this system! We claim that the kingside is our side of the board and make white fret over h4-h3. } 10. O-O!? { Placing the king on the kingside is a tame way for white to play. However, now we see another idea behind our earlier h5. } (10. Be3!? { White signals they are castling queenside. Therefore, pushing the h pawn further too soon would only help white open up our king. } 10... Nd7 { Note that the fundamental problem of the French is the bad LSB and for the Caro, the key challenge is finding employment for this knight. } 11. O-O-O { Our kingside pawn majority makes it harder for white to break through on the kingside. h5 effectively stops lines from opening up against our king. } 11... Nf8 { This knight move is key in this system and you'll do well to remember it. Depending on how White plays, both Ng6 and Ne6 could be good moves. } 12. Kb1 Be6 $132 { Even though our play so far has focused on developing quickly, we next will quickly mobilize our forces toward the queenside to launch an attack against White. The name of the game is opposite sides castling, so the race to see who will open up the other's king first begins. }) 10... h4! { Cramping white's e2 knight further, and threatening to offload the h pawn with h3, creating light squared weaknesses now that white has committed the king to the kingside. } 11. h3 Nd7 $132 { Black will have all the fun on the kingside while white must dream of creating something with their majority on the queenside. } *
+
+
+[Event "Learn the Caro-Kann like a BOSS: Sparring Position 1"]
+[Date "2023.12.06"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Learn the Caro-Kann like a BOSS"]
+[ChapterName "Sparring Position 1"]
+[ChapterURL "https://lichess.org/study/8isfzJc8/1AoNcIt9"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "rnbqkb1r/pp3ppp/2p2p2/8/3P4/8/PPP2PPP/R1BQKBNR w KQkq - 0 6"]
+[SetUp "1"]
+[UTCDate "2023.12.06"]
+[UTCTime "15:03:53"]
+[ChapterMode "gamebook"]
+
+{ Spar a friend from this position to better understand the middlegame strategy!
+
+FEN: rnbqkb1r/pp3ppp/2p2p2/8/3P4/8/PPP2PPP/R1BQKBNR w KQkq - 0 6 }
+ *
+
+
+[Event "Learn the Caro-Kann like a BOSS: Two Knights Trap"]
+[Date "2023.12.06"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Learn the Caro-Kann like a BOSS"]
+[ChapterName "Two Knights Trap"]
+[ChapterURL "https://lichess.org/study/8isfzJc8/tepaSz5B"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "rnbqkb1r/pp2pppp/2p2n2/8/4N3/5N2/PPPPQPPP/R1B1KB1R b KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.12.06"]
+[UTCTime "15:03:53"]
+
+{ Remember that in this position, we were capturing on e4, and then developing our pieces further, with an eventual attack on the centralized e4 queen. }
+1... Nbd7?? { This "obvious" developing move is a terrible blunder, since it walks directly into the trap that white players are hoping for: } (1... Nxe4! 2. Qxe4 Qa5 $10 { with the intention of Bf5 next move, developing our LSB outside the pawn chain with tempo. Play continues. } { [%cal Gc8f5] }) 2. Nd6#! { Don't let this happen to you!
+Before playing Nbd7, we need to see that the queen on e2 was both supporting the e4 knight and creating a pin on the e7 pawn. } *
+
+
+[Event "Import"]
+[Site "https://lichess.org/qhYbakma"]
+[Date "2022.10.28"]
+[White "Md., Shar"]
+[Black "Gukesh, D."]
+[Result "0-1"]
+[WhiteElo "2205"]
+[BlackElo "2614"]
+[TimeControl "-"]
+[Termination "Unknown"]
+[Variant "Standard"]
+[ECO "B15"]
+[Opening "Caro-Kann Defense: Tartakower Variation"]
+[StudyName "Learn the Caro-Kann like a BOSS"]
+[ChapterName "Black's queenside attack breaks through first"]
+[ChapterURL "https://lichess.org/study/8isfzJc8/gwNnEAfY"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+
+1. e4 { Gukesh on the black side here launches a fearsome queenside attack in this opposite-sides castling game to break through to white's king first. } 1... c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Nf6 5. Nxf6+ exf6 6. c3 Bd6 7. Bd3 O-O 8. Qc2 Re8+ 9. Ne2 h5! 10. Be3 Nd7 11. O-O-O Nf8 12. Kb1 Be6 13. Nf4?! { As it turns out, our attack is mostly on the light squares. So while the next move might at first surprise you, it keeps our most important attacker alive, and doesn't lose tempo. } 13... Bxf4! 14. Bxf4 b5 { Black now launches the thematic queenside attack. } 15. b3 a5 16. Bc1 a4 17. b4 { Trying to keep the queenside closed just gives up the c4 square forever. Gukesh next seeks to occupy it. } 17... Nd7 18. Rde1 Nb6 19. Re2 Ra7 (19... Bc4!? { Also a good move, but there's no need to rush things. }) 20. Rhe1 Rae7 21. Ka1 Bc4! { Winning c4 for the knight. } 22. Bxc4 Nxc4 { Now we're in a good knight vs bad bishop position. Gukesh wins with style. } 23. Qd3 Qd6 24. h3 h4 25. Qf3 g6 26. Kb1 Kg7 27. Kc2 Re6 28. Rxe6 Rxe6 29. Rxe6 Qxe6 30. Kd1 a3 31. Qe2 Nb2+ 32. Kd2 (32. Bxb2?! Qxe2+ 33. Kxe2 axb2 $19) 32... Qxa2 33. Qe4 Nd3+ $19 { 0-1 Black wins. } 0-1
+
+
+[Event "Learn the Caro-Kann like a BOSS: Section 2: Advance (3. e5)"]
+[Date "2023.06.07"]
+[White "Caro"]
+[Result "*"]
+[Annotator "Jesse"]
+[Variant "Standard"]
+[ECO "B12"]
+[Opening "Caro-Kann Defense: Advance Variation, Short Variation"]
+[StudyName "Learn the Caro-Kann like a BOSS"]
+[ChapterName "Section 2: Advance (3. e5)"]
+[ChapterURL "https://lichess.org/study/8isfzJc8/1evJWF1f"]
+
+1. e4 c6 (1... e6 2. d4 d5 3. e5 { Compare and contrast the actual advanced French with the main line given in this chapter. }) 2. d4 d5 3. e5 { The Advanced variation of the Caro-Kann.
+We have a French structure, where our bad bishop can get outside the pawn chain, but where we owe white a tempo (compared to the French defense) to play the all-important c5 pawn break and strike at their imposing center. } 3... Bf5 { Getting the bishop outside the pawn chain right away is a thematic idea in the Caro. } 4. Nf3!? { Sparring Pos 2. White can play a variety of developing moves, but the dynamic will be the same: we need to be careful about when we open the position with c5. } (4. h4!? { The beginning of the Tal variation is Sparring Pos 3. } 4... h5 { A necessary evil. We don't want to weaken our kingside further, but we need to stop white from expanding on the kingside before finishing development. } 5. Bg5!? (5. Bd3!? { It may seem weird for white to trade LSBs given the fixed pawns in the center. But the main point behind this move is to quickly develop and destroy us before we can untangle. } 5... Bxd3 6. Qxd3 Qa5+ 7. Nc3 (7. Nd2 Qa6) 7... Qa6! $10 { With the same idea as against 5.Bg5. }) 5... Qb6 6. Bd3 Bxd3 7. Qxd3 Qa6! $10 { Don't even be tempted to take on b2! White will move their Queen somewhere, and we will achieve stability with e6. }) (4. Bd3?! { A common move at the lower levels, but poor. This simply trades our bad bishop for white's most important attacker. } 4... Bxd3 5. Qxd3 e6 $10 { See Nimzowitsch - Capablanca for a model game from this position. }) 4... e6 5. Be2 { This is a sample variation: the Short variation of the Advanced Caro-Kann.
+It must be stressed: white can play any number of developing moves here. We need to know that c5 will always cost us a tempo AND will increase the value of time because we are opening the position. } 5... Nd7 6. O-O Ne7 { White can play many moves here. It's best to calmly build our position. } 7. Nbd2 h6 8. c3 Bh7 9. Nb3 Nf5 $10 { With a solid position. The dream is to achieve a good French with c5 when we are ready. } *
+
+
+[Event "Learn the Caro-Kann like a BOSS: Sparring Position 2"]
+[Date "2023.12.06"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Learn the Caro-Kann like a BOSS"]
+[ChapterName "Sparring Position 2"]
+[ChapterURL "https://lichess.org/study/8isfzJc8/lZgb7yMW"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "rn1qkbnr/pp3ppp/2p1p3/3pPb2/3P4/5N2/PPP2PPP/RNBQKB1R w KQkq - 0 5"]
+[SetUp "1"]
+[UTCDate "2023.12.06"]
+[UTCTime "15:03:53"]
+[ChapterMode "gamebook"]
+
+{ Spar a friend from this position to better understand the middlegame strategy!
+
+FEN: rn1qkbnr/pp3ppp/2p1p3/3pPb2/3P4/5N2/PPP2PPP/RNBQKB1R w KQkq - 0 5 }
+ *
+
+
+[Event "Learn the Caro-Kann like a BOSS: Sparring Position 3"]
+[Date "2023.12.06"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Learn the Caro-Kann like a BOSS"]
+[ChapterName "Sparring Position 3"]
+[ChapterURL "https://lichess.org/study/8isfzJc8/tLptTxky"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "rn1qkbnr/pp2ppp1/2p5/3pPb1p/3P3P/8/PPP2PP1/RNBQKBNR w KQkq - 0 5"]
+[SetUp "1"]
+[UTCDate "2023.12.06"]
+[UTCTime "15:03:53"]
+[ChapterMode "gamebook"]
+
+{ Spar a friend from this position to better understand the middlegame strategy!
+
+FEN: rn1qkbnr/pp2ppp1/2p5/3pPb1p/3P3P/8/PPP2PP1/RNBQKBNR w KQkq - 0 5 }
+ *
+
+
+[Event "Learn the Caro-Kann like a BOSS: The quintessential Tal trap"]
+[Date "2023.12.06"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Learn the Caro-Kann like a BOSS"]
+[ChapterName "The quintessential Tal trap"]
+[ChapterURL "https://lichess.org/study/8isfzJc8/eVs1lWOE"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "rn1qkbnr/pp2pppp/2p5/3pPb2/3P3P/8/PPP2PP1/RNBQKBNR b KQkq - 0 4"]
+[SetUp "1"]
+[UTCDate "2023.12.06"]
+[UTCTime "15:03:53"]
+
+{ Remember that in this position, we have to play h5 in order to cut out white's kingside nonsense and ensure our bishop isn't trapped. }
+4... e6?? { This thematic move in the Advanced variation doesn't pay attention to white's threat from last move. } (4... h5! { Recall how we have to stop white from further expanding on the kingside before completing development with e6. }) 5. g4! Be4 6. f3 Bg6 7. h5 $18 { The bishop is trapped. Don't let this happen to you! } *
+
+
+[Event "Learn the Caro-Kann like a BOSS: Don't get greedy trap"]
+[Date "2023.12.06"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Learn the Caro-Kann like a BOSS"]
+[ChapterName "Don't get greedy trap"]
+[ChapterURL "https://lichess.org/study/8isfzJc8/KUz9e09o"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "rn2kbnr/pp2ppp1/1qp5/3pP1Bp/3P3P/3Q4/PPP2PP1/RN2K1NR b KQkq - 0 7"]
+[SetUp "1"]
+[UTCDate "2023.12.06"]
+[UTCTime "15:03:53"]
+
+{ Don't even be tempted to take on b2! White will move their Queen somewhere, and we will achieve stability with e6. }
+7... Qxb2? (7... Qa6! $10 { The suggested move tries to trade queens and enter a good endgame for black, as in the Nimzowitsch - Capablanca model game. }) 8. e6! Qxa1 9. Qb3! { It's already over for black, but here's one beautiful way to go down without a fight: } 9... Qxd4!? 10. Qxb7 fxe6 11. Be3! Qa4 12. Qxa8 $18 { Perunovic, Milos - Lalith, Babu MR, 1-0, Dubai op 11th, 2009, https://lichess.org/fBFbHQps } { No development. No way to develop. Everything is undefended. This is exactly how you lose horribly. } *
+
+
+[Event "New York"]
+[Site "New York, NY USA"]
+[Date "1927.03.13"]
+[Round "15"]
+[White "Aron Nimzowitsch"]
+[Black "Jose Raul Capablanca"]
+[Result "0-1"]
+[Variant "Standard"]
+[ECO "B12"]
+[Opening "Caro-Kann Defense: Advance Variation"]
+[StudyName "Learn the Caro-Kann like a BOSS"]
+[ChapterName "Capablanca's endgame infiltration"]
+[ChapterURL "https://lichess.org/study/8isfzJc8/wn39rrTK"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+
+1. e4 c6 2. d4 d5 3. e5 Bf5 4. Bd3?! { As opposed to in the Tal variation, this trade here is simply a trade of white's good bishop for our bad bishop. } (4. h4 h5 5. Bd3 Bxd3 6. Qxd3 { Importantly, black has had to weaken kingside squares first here. White uses g5 to try and hurt us on the kingside while we hurry to finish development. }) 4... Bxd3 5. Qxd3 e6 6. Nc3 Qb6 7. Nge2 c5 { Breaking down white's center now that it cannot be supported further with c3 gives black a good game. } 8. dxc5 Bxc5 9. O-O Ne7 10. Na4 Qc6 11. Nxc5 Qxc5 12. Be3 Qc7 13. f4 Nf5 14. c3 Nc6 { [%csl Gf5,Gc6] } 15. Rad1 g6 16. g4?! { The right idea for this structure. But without the LSBs on the board, white cannot really dream of attacking on the kingside. } 16... Nxe3 17. Qxe3 h5! 18. g5? { Capitulation. Now Capablanca has a dream position where the kingside is closed forever, the f5 square is a hole for black's knight, and the queenside is the sole battlefield. } (18. f5! gxf5 19. gxf5 O-O-O $15 { Black is obviously fine here too, with a relatively safe king. But at least white's last moves make sense. }) 18... O-O 19. Nd4 Qb6 20. Rf2 Rfc8 21. a3 Rc7 22. Rd3 Na5 23. Re2 Re8 24. Kg2 Nc6 25. Red2 Rec8 26. Re2 Ne7 27. Red2 Rc4 28. Qh3 Kg7 29. Rf2 a5 30. Re2 Nf5 31. Nxf5+ gxf5! { We often capture towards the center. Now white still has no breaks on the kingside. } { [%cal Gg6f5] } (31... exf5?! $10 { The e6 break gives white some activity to play for. } { [%cal Ge5e6] }) 32. Qf3 (32. Qxh5?? Rh8 33. Qf3 Rh4 $19 { Black regains the pawn and the open h file actually turns out to benefit black. } { [%cal Gh4f4,Gc4f4] }) 32... Kg6 33. Red2 Re4! { The rook cements itself on the e4 square where it can never be captured without giving black a connected passed pawn. } 34. Rd4 Rc4 35. Qf2 Qb5 36. Kg3 Rcxd4 37. cxd4 (37. Rxd4?? { The move Nimzowitsch would want to play immediately loses. } 37... Re2! { The first major piece infiltrates on the 7th rank. This move would be impossible if the king was on f3 instead of g3. } 38. Qf3 h4+! 39. Kxh4 Rxh2+ 40. Kg3 Qxb2! $19 { And the second major piece infiltrates on the 7th rank with decisive effect. Rh8 and Qh2# are impossible threats to parry. } { [%cal Gh2h1,Gh2h8,Gb2h2] }) 37... Qc4 { Capablanca takes over the c file, the e file, and looming infiltration on the 7th or 8th rank means that this game is now over. } 38. Kg2 b5 39. Kg1 b4 40. axb4 axb4 41. Kg2 Qc1 42. Kg3 Qh1 43. Rd3 Re1 { Rather than continue to target white's weak pawns, Capablanca has converted his activity on the queenside into a full-out kingside attack. An exposed king + decisive penetration = possible checkmate threats. } 44. Rf3 Rd1 45. b3 Rc1 { Zugzwang! Try and find a move for white that doesn't weaken your position or lose a pawn. } 46. Re3 Rf1 $19 { Nimzowitsch resigned rather than play on with Qe2 Qg1+, mating.
+This game is a great lesson in showcasing how the major pieces require infiltration squares in order to prove their dominance against an opponent's forces. This is exactly why an open file for your rooks in the middlegame is not so important unless there is a way to actually infiltrate into your opponent's camp. } 0-1
+
+
+[Event "Caro Kann Dojo: Exchange (3. exd5 cxd5)"]
+[Site "https://lichess.org/study/V1GtHCMb/HTulwvbn"]
+[Date "2023.06.07"]
+[White "Caro"]
+[Result "*"]
+[Annotator "Jesse"]
+[Variant "Standard"]
+[ECO "B14"]
+[Opening "Caro-Kann Defense: Panov Attack, Main Line"]
+[StudyName "Learn the Caro-Kann like a BOSS"]
+[ChapterName "Section 3: Panov (3. exd5 cxd5 4. c4)"]
+[ChapterURL "https://lichess.org/study/8isfzJc8/DPaoDDLo"]
+
+1. e4 c6 2. d4 d5 3. exd5 { White gives up their strong e4 pawn for our flank c6 pawn in exchange for time and a queenside pawn majority. } 3... cxd5 4. c4 { The Panov (or Panov-Botvinnik) attack. This is an aggressive way for white to challenge our center. Rather than play structurally "sound" chess, white is hoping that their lead in development will give them middlegame attacks. } 4... Nf6 5. Nc3 { We should already imagine the c4 pawn trading for the d5 pawn, leading to an IQP structure. In that case, control over the d5 square is the most important consideration for both sides. } (5. cxd5?! Nxd5 $10 { If White releases the tension too early, then they are simply developing our pieces for us in this IQP structure. Rather than having an active attack here, white is the worse structurally and now also behind in development. }) 5... e6 { Finishing kingside development and further strengthening our control over d5. Control over d5 and quick development is more important than the typical Caro idea of getting the c8 bishop outside the pawn chain. } 6. Nf3 Bb4 $10 { Sparring Pos 4. We will play against white's IQP. d5 remains the most important square on the board by far. While will weaken our control with Bg5, Bc4, etc. We will further strengthen it with Bb4, Bb7, Nbd7, etc. } *
+
+
+[Event "Learn the Caro-Kann like a BOSS: Sparring Position 4"]
+[Date "2023.12.06"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Learn the Caro-Kann like a BOSS"]
+[ChapterName "Sparring Position 4"]
+[ChapterURL "https://lichess.org/study/8isfzJc8/uaFi2ryo"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "rnbqk2r/pp3ppp/4pn2/3p4/1bPP4/2N2N2/PP3PPP/R1BQKB1R w KQkq - 2 7"]
+[SetUp "1"]
+[UTCDate "2023.12.06"]
+[UTCTime "15:03:53"]
+[ChapterMode "gamebook"]
+
+{ Spar a friend from this position to better understand the middlegame strategy!
+
+FEN: rnbqk2r/pp3ppp/4pn2/3p4/1bPP4/2N2N2/PP3PPP/R1BQKB1R w KQkq - 2 7 }
+ *
+
+
+[Event "Import"]
+[Site "https://lichess.org/1jreNFe7"]
+[Date "2016.03.21"]
+[White "Kamsky, Gata"]
+[Black "Karpov, Anatoly"]
+[Result "0-1"]
+[WhiteElo "2735"]
+[BlackElo "2770"]
+[TimeControl "-"]
+[Termination "Unknown"]
+[Variant "Standard"]
+[ECO "B14"]
+[Opening "Caro-Kann Defense: Panov Attack, Main Line"]
+[StudyName "Learn the Caro-Kann like a BOSS"]
+[ChapterName "Karpov squeezing against the IQP"]
+[ChapterURL "https://lichess.org/study/8isfzJc8/spXSKgpd"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+
+1. e4 c6 2. d4 d5 3. exd5 cxd5 4. c4 Nf6 5. Nc3 e6 6. Nf3 Bb4 7. cxd5 Nxd5 { Recapturing with the piece ensures we maintain pressure against white's "weak" d4 pawn. } 8. Bd2 Nc6 9. Bd3 Be7 10. O-O O-O 11. Qe2 Nf6 12. Ne4 Qb6 13. a3 Bd7 { Finishing development, although this is an awkward move that temporarily halts our pressure against the d4 pawn. } (13... Nxe4!? { This move is always playable for black since piece trades are beneficial. But we shouldn't be so quick to bring white's queen into an attacking position for no reason. } 14. Qxe4 g6 15. Be3 $14 { Note the difference compared to the game. Black is not able to swing the knight to f5 or d5 in time. }) 14. Rfd1 Rad8 15. Nxf6+?! { Trading minor pieces is great if you are playing against the IQP since there is less chance of a kingside attack. } 15... Bxf6 16. Qe4 g6 17. Be3 Ne7! { Rerouting to get out of the way of white's d5 break and further pressure the pawn. } 18. Ne5 (18. d5?! Qxb2! 19. Rab1 Qxa3 20. Rxb7 Nxd5 $17 { All things being equal, being up a pawn means black is better. }) 18... Nf5 19. Nc4 Qa6 20. a4 (20. Ne5?! { White can no longer even force a repetition. } 20... Bb5! $15 { Black's idea is to trade more minor pieces, particular light square bishops, so that d5 is a stronghold for black's pieces and d4 is more of a weakness. }) 20... Bc6 21. Qf4 Bd5 { Black has a dream setup against the IQP, with pressure on d4 and d5 firmly blockaded. Moreover, keeping heavy pieces on the board ensures that the IQP is more easily targeted. } 22. Ne5 Qb6 23. Bxf5 exf5 24. Rd2 Bg7 25. h4 Rfe8 26. Qg3 Rc8 27. Nd7 Qc6 28. Nc5 b6 29. Nd3 Qd7 30. a5 Re4 31. Nf4 b5 32. Rdd1 Bc4 33. Rac1 h6 34. Rc3 b4 35. Rc2 Rc6 36. Rdc1 Bb5 37. Kh2 Kh7 38. Rxc6 Bxc6 39. Rc4 Bf8 40. Nd3 Qe6 { The d pawn is now critically weak. Moreover, it staying on d4 kills white's bishop and c4 rook. None of black's pieces are limited by the pawn staying on d4. } 41. d5?! (41. Rc1 Bd6 42. Ne5 (42. Bf4 Rxf4! 43. Nxf4 Qe4! $19 { [%csl Gf4] }) 42... Bxe5! 43. dxe5 Rg4! $19 { The d4 pawn (now on e5) finally falls. } { [%cal Ge6e5] }) 41... Bxd5 42. Rxe4 Bxe4 43. Bxa7?! { White regains material, but now black has a huge kingside attack with his bishop pair. } 43... Bd6 44. Nf4 Qe5 45. Nh3 Qe7! $19 { 0-1 Black wins. } 46. Nf4 Qxa7 $19 0-1
+
+
+[Event "Learn the Caro-Kann like a BOSS: Section 4: Exchange (3. exd5 cxd5 without 4. c4)"]
+[Date "2023.06.07"]
+[White "Caro"]
+[Result "*"]
+[Annotator "Jesse"]
+[Variant "Standard"]
+[ECO "B13"]
+[Opening "Caro-Kann Defense: Exchange Variation, Rubinstein Variation"]
+[StudyName "Learn the Caro-Kann like a BOSS"]
+[ChapterName "Section 4: Exchange (3. exd5 cxd5 without 4. c4)"]
+[ChapterURL "https://lichess.org/study/8isfzJc8/b4EzCC5K"]
+
+1. e4 (1. d4!? { Consider the positions arising from d4 d5, and compare them to the exchange Caro-Kann main line. } 1... d5 2. c4 (2. Bf4 { The London can also get you to the same Carlsbad pawn structure. } 2... Nf6 3. e3 c5 4. c3 Nc6 5. Nd2 cxd4 6. exd4) 2... e6 3. Nc3 Nf6 4. cxd5 exd5 { If we compare the QGD exchange variation to the main line in this variation, we see that essentially white is playing black in the exchange Caro-Kann and vice versa. }) 1... c6 2. d4 d5 3. exd5 { White gives up their strong e4 pawn for our flank c6 pawn in exchange for time and a queenside pawn majority. } 3... cxd5 4. Bd3 { The exchange variation. White will play within the structure with c3 (and not c4). This is known as the Carlsbad structure. This pawn structure can also be reached from the London and Queen's Gambit Declined move orders. } 4... Nc6 5. c3 { Sparring Pos 5. The true Carlsbad pawn structure is set up. } (5. Nf3?! Bg4 $10 { This gives our LSB a dream square from which we can next finish development. }) 5... Nf6 6. Bf4!? { This is a fancy move that Fischer used. White is hoping we block our bishop in with e6. } (6. h3!? { An alternative approach for white that stops Bg4 and next will play Nf3. } 6... g6 $10 { If we can't get our bishop to g4, at least we can get to f5! The next move is Bf5, challenging white's good bishop with our bad bishop. } { [%cal Gc8f5] }) (6. Nf3?! { This gives our LSB a dream square from which we can next finish development. } 6... Bg4 $10 { e6, Bd6, and O-O are coming next. }) 6... Bg4! 7. Qb3 { If white wants any advantage, they need to try and play against our newly undefended b7 pawn with tempo. } (7. Nf3?! $10 { Transposing to the other line gives black a good game. }) 7... Qd7 $10 { With e6, Bd6, and O-O next. All of our pieces have good squares. Black will often play for the minority attack with b5-b4. White will try and attack us using the e5 outpost. A LSB trade and/or queen trade favor us tremendously.
+You don't need to memorize the following moves, but an instructive variation would be: } 8. Nd2 e6 9. Ngf3 Bd6! { We should not be afraid of losing the b7 pawn if it helps our development. } 10. Bxd6 Qxd6 11. Qxb7!? Rb8! 12. Qa6 O-O! $10 { White cannot conveniently hold onto the b2 pawn, and all of black's pieces are active. } (12... Rxb2?? { Too greedy! } 13. Bb5! $18 { If only we had finished development sooner... }) *
+
+
+[Event "Learn the Caro-Kann like a BOSS: Sparring Position 5"]
+[Date "2023.12.06"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Learn the Caro-Kann like a BOSS"]
+[ChapterName "Sparring Position 5"]
+[ChapterURL "https://lichess.org/study/8isfzJc8/PP9M9fLy"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "r1bqkbnr/pp2pppp/2n5/3p4/3P4/2PB4/PP3PPP/RNBQK1NR b KQkq - 0 5"]
+[SetUp "1"]
+[UTCDate "2023.12.06"]
+[UTCTime "15:03:53"]
+[ChapterMode "gamebook"]
+
+{ Spar a friend from this position to better understand the middlegame strategy!
+
+FEN: r1bqkbnr/pp2pppp/2n5/3p4/3P4/2PB4/PP3PPP/RNBQK1NR b KQkq - 0 5 }
+ *
+
+
+[Event "Import"]
+[Site "https://lichess.org/H7fY4DrI"]
+[Date "2021.11.21"]
+[White "Aronian, L."]
+[Black "Artemiev, V."]
+[Result "0-1"]
+[WhiteElo "2782"]
+[BlackElo "2704"]
+[TimeControl "-"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "B13"]
+[Opening "Caro-Kann Defense: Exchange Variation, Rubinstein Variation"]
+[StudyName "Learn the Caro-Kann like a BOSS"]
+[ChapterName "Artemiev's minority attack"]
+[ChapterURL "https://lichess.org/study/8isfzJc8/QBBrpWGn"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+
+1. e4 c6 2. d4 d5 3. exd5 cxd5 4. Bd3 Nc6 5. c3 Nf6 6. Bf4 Bg4 7. Qb3 Qd7 8. Nd2 e6 9. Ngf3 Bd6 10. Bxd6 (10. Ne5!? Qc7! $10 { Keeping the tension and further challenging white's e5 knight. }) 10... Qxd6 11. O-O (11. Qxb7!? Rb8 12. Qa6 O-O! $10 { Black has a lot of play on the b file in exchange for the pawn. }) 11... O-O 12. Rfe1 Qc7 13. Ne5 Nxe5 14. Rxe5 Bh5 15. a4 Bg6 16. Bxg6 hxg6 { Trading LSBs lessens white's attacking potential and increases the likelihood that black's queenside play making progress. That being said, black's doubled pawns slightly compensate for the bishop trade. } 17. g3 Rab8! { The threat is a6-b5, going for the minority attack. } 18. h4 Qa5 (18... a6!? { Also good. } 19. Re2 b5 20. axb5 axb5 21. Qd1 b4 $15 { The classic minority attack in action. No matter what happens next, white will be left with an accessible queenside weakness on b2, c3, or d4. }) 19. Ree1 Rfc8 20. Kg2 Qa6 21. Nf3 b5 { While this isn't the usual minority attack, it accomplishes the same goal: open lines towards a backwards pawn on the queenside. } 22. axb5 Qxb5 23. Qxb5 Rxb5 24. Re2 (24. Rxa7!? Rxb2 $10 { [%cal Gc8c3] }) 24... a5 { This is an opening success for black since the kingside is mostly irrelevant and black's play on the queenside is the focus of the game.
+Now Artemiev tortures his opponent on the queenside while slowly improving his position. } 25. Ne5 Kf8 26. Kf1 Rc7 27. Ke1 Ke7 28. Kd1 Ne4 29. Nd3 g5 30. hxg5 Nxg5 31. Nc5 Ne4 32. Nxe4 dxe4 33. Kc2 (33. Rxe4!? Rxb2 $10 { [%cal Gc7c3] }) 33... f5 34. b3 Kf6 35. c4 e5 36. Rd2 exd4 37. Rxd4 Kg5 38. Kb2 Re5 39. Kc3 Kg4 40. Re1 g5 41. Re3 Rce7 42. Rd8 f4 43. gxf4 gxf4 44. Rg8+ Rg5 45. Rxg5+ Kxg5 46. Re2?? (46. Re1! Kg4 47. c5 Kf3 48. Kd4! e3 49. fxe3 fxe3 50. Kd3! e2 51. c6! Kf2 52. Kd2! $10 { After a sequence of only-moves, it's amazingly true that white's king cannot be deflected from the defense of e1. White holds a draw. }) 46... Kg4 47. c5 Kf3 48. Ra2 e3 49. fxe3 fxe3 50. Rxa5 e2 51. Ra1 e1=Q+ 52. Rxe1 Rxe1 { White's pawns aren't far enough up the board for them to stand a chance against black's active king and rook. } 53. Kd4 Kf4 54. Kd5 Kf5 55. Kd6 Rd1+ 56. Ke7 Rc1 57. Kd6 Kf6 58. b4 Rd1+ 59. Kc7 Ke7 60. b5 Rd5 61. Kc6 Rh5 $19 { 0-1 White resigns. } { Zugzwang. Kd8->c8 cannot be prevented without dropping a pawn. } 62. b6!? { The only try: } 62... Kd8! 63. b7 Rh6+! 64. Kb5 Kc7! 65. c6 Rg6! { Zugzwang again! } (65... Rxc6?? 66. b8=Q+! Kxb8 67. Kxc6 $10) 66. Kc5 Rxc6+ $19 0-1
+
+
+[Event "Caro Kann Dojo: Section 2: Advance (3. e5)"]
+[Site "https://lichess.org/study/V1GtHCMb/UXlDJSEG"]
+[Date "2023.06.07"]
+[White "Caro"]
+[Result "*"]
+[Annotator "Jesse"]
+[Variant "Standard"]
+[ECO "B12"]
+[Opening "Caro-Kann Defense: Maróczy Variation"]
+[StudyName "Learn the Caro-Kann like a BOSS"]
+[ChapterName "Section 5: Fantasy (3. f3)"]
+[ChapterURL "https://lichess.org/study/8isfzJc8/w5p78mFZ"]
+
+1. e4 c6 2. d4 d5 3. f3 { The Fantasy variation. White further supports the center, but at the cost of weakening their king long-term and preventing the g1 knight from developing to the natural f3 square. } 3... Qb6!? { Sparring Pos 6.
+It's atypical to develop the queen so early, but since white has no easy way to finish kingside development, we can take a time-out to make a normal French move in expectation of white closing the center and transitioning into a French. } (3... e6!? $10 { A logical alternative. White has blocked their knight, and we have blocked our bishop. Now we get an interesting maneuvering game. }) 4. Nc3 e6 5. a3 Nd7 $10 { Black is always ready to meet e5?! with c5. In the meantime, we will develop our kingside pieces as if it's a French position. } *
+
+
+[Event "Learn the Caro-Kann like a BOSS: Sparring Position 6"]
+[Date "2023.12.06"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Learn the Caro-Kann like a BOSS"]
+[ChapterName "Sparring Position 6"]
+[ChapterURL "https://lichess.org/study/8isfzJc8/hWhp9p5K"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "rnb1kbnr/pp2pppp/1qp5/3p4/3PP3/5P2/PPP3PP/RNBQKBNR w KQkq - 1 4"]
+[SetUp "1"]
+[UTCDate "2023.12.06"]
+[UTCTime "15:03:53"]
+[ChapterMode "gamebook"]
+
+{ Spar a friend from this position to better understand the middlegame strategy!
+
+FEN: rnb1kbnr/pp2pppp/1qp5/3p4/3PP3/5P2/PPP3PP/RNBQKBNR w KQkq - 1 4 }
+ *
+
+
+[Event "Learn the Caro-Kann like a BOSS: Issues in the Fantasy"]
+[Date "2023.12.06"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Learn the Caro-Kann like a BOSS"]
+[ChapterName "Issues in the Fantasy"]
+[ChapterURL "https://lichess.org/study/8isfzJc8/zcDR5vrG"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "rnb1kbnr/pp2pppp/1qp5/3p4/3PP3/5P2/PPP3PP/RNBQKBNR w KQkq - 1 4"]
+[SetUp "1"]
+[UTCDate "2023.12.06"]
+[UTCTime "15:03:53"]
+
+4. c3?! { If white makes any other non-critical move, we have the same thematic reaction. } (4. a3?! { Another example of a dubious move for white. } 4... e5! 5. dxe5? Bc5! $17 { Again, with winning threats on g1 and f2. }) (4. Nc3! $10 { The best move. White must develop and threaten black's center to deal with black's "threat." }) (4. Bd3? Qxd4! { Yes this is a free pawn. } 5. exd5 Qxd5! $17 (5... cxd5?? 6. Bb5+! Nc6 7. Qxd4 $18 { Don't let this happen to you! })) (4. e5?! e6 $15 { With c5 next, black is in an improved French. } { [%cal Gc6c5] }) (4. Be3? Qxb2 $15 { Yes this is a free pawn. }) 4... e5! { Ripping open the a7-g1 diagonal makes sense, especially now that black has a lead in development. } 5. dxe5?! Bc5! $17 { Either Bxg1 or Bf2+ is unstoppable, displacing white's king. Black's lead in development is already noticeable. } *
+
+
+[Event "Learn the Caro-Kann like a BOSS: Section 6: The \"Hillbilly\" Attack (2. Bc4)"]
+[Date "2023.06.07"]
+[White "Caro"]
+[Result "*"]
+[Annotator "Jesse"]
+[Variant "Standard"]
+[ECO "B10"]
+[Opening "Caro-Kann Defense: Hillbilly Attack, Schaeffer Gambit"]
+[StudyName "Learn the Caro-Kann like a BOSS"]
+[ChapterName "Section 6: The \"Hillbilly\" Attack (2. Bc4)"]
+[ChapterURL "https://lichess.org/study/8isfzJc8/QAwVVX1S"]
+
+1. e4 c6 2. Bc4? { This sad move is common enough that we have to mention it. } 2... d5 { The normal Caro Kann strike in the center now comes with tempo. } 3. Bb3 { White is trying to sacrifice a pawn in order to gain some initiative. But our position is so solid that this doesn't work out for white at all. } (3. exd5?! cxd5 4. Bb5+ Nc6 $15 { A worse version of the exchange Caro Kann. White is wasting time moving the LSB. }) 3... dxe4 4. Qh5 g6 5. Qh4 Nf6 { Simple development is best. } 6. Nc3 Bg7 { Simple development is best. } 7. f3!? (7. Nxe4?! Nxe4 8. Qxe4 Bf5 $15 { Why has white moved their queen so many times in the opening just to help us gain time while developing? }) 7... e3! $15 { No nonsense. Now white will not get a lead in development, and all of black's pieces are coming out to normal squares next. } *
+
+
+[Event "Learn the Caro-Kann like a BOSS: The Scholar Trap"]
+[Date "2023.12.06"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Learn the Caro-Kann like a BOSS"]
+[ChapterName "The Scholar Trap"]
+[ChapterURL "https://lichess.org/study/8isfzJc8/0dKnc31a"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "rnbqkbnr/pp2pppp/2p5/7Q/4p3/1B6/PPPP1PPP/RNB1K1NR b KQkq - 1 4"]
+[SetUp "1"]
+[UTCDate "2023.12.06"]
+[UTCTime "15:03:53"]
+
+{ White is playing for one idea and one idea only. Regardless, you have to still stay alert as black. }
+4... Nf6?? (4... g6! $17 { It is necessary to defend f7 before resuming simple development. }) 5. Qxf7+! $18 { Don't let this happen to you! } *
+
+
+[Event "Import"]
+[Site "https://lichess.org/4MohREPm"]
+[Date "2016.04.14"]
+[White "Williams, Simon Kim"]
+[Black "Jones, Gawain C"]
+[Result "0-1"]
+[WhiteElo "2504"]
+[BlackElo "2635"]
+[TimeControl "-"]
+[Termination "Unknown"]
+[Variant "Standard"]
+[ECO "B10"]
+[Opening "Caro-Kann Defense: Hillbilly Attack, Schaeffer Gambit"]
+[StudyName "Learn the Caro-Kann like a BOSS"]
+[ChapterName "GingerGM gets the smackdown"]
+[ChapterURL "https://lichess.org/study/8isfzJc8/GafmpV09"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+
+1. e4 c6 2. Bc4? d5 3. Bb3 { It is my understanding that Simon Williams was drunk in the pub the day before and challenged someone to come up with a cheeky opening he should play against Gawain Jones in the next round. He went with the Hillbilly attack, and Gawain Jones prefectly refuted it: } 3... dxe4 4. Qh5 g6 5. Qh4 Bg7 6. Nc3 a5!? (6... Nf6!? $15 { Would transpose directly into our main line. Note how unconcerned Gawain is with holding onto the extra pawn in the game. }) 7. Nxe4 a4 8. Bc4 b5 9. Be2 { While black's moves look a bit odd, they've successfully pushed the LSB to the silly e2 square without losing a single tempo. Black now has a lead in development. } 9... Nh6 10. g4?! a3! 11. Rb1 Qd5! 12. Nc3 Qxh1 { By this point, it should be clear that white is busted. } 13. Kf1 Be5 14. Bf3 Qxh2 15. Nh3 Nxg4 16. Bxg4 Bf6 $19 { 0-1 Black wins. } 0-1
+
+
+[Event "Learn the Caro-Kann like a BOSS: Thanks for enjoying this study!"]
+[Date "2023.12.06"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Learn the Caro-Kann like a BOSS"]
+[ChapterName "Thanks for enjoying this study!"]
+[ChapterURL "https://lichess.org/study/8isfzJc8/vUl4gieB"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "rnbqkbnr/pp1ppppp/2p5/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.12.06"]
+[UTCTime "15:03:53"]
+[ChapterMode "gamebook"]
+
+{ Be sure to like this study and share with your friends if you enjoyed it! Feel free to ask/answer any questions in the chat room if you're stuck on a key idea or looking for sparring partners.
+
+To join the ChessDojo training program itself (and join a community of chess players of all levels looking to improve their classical chess), check out: https://www.chessdojo.club. Trying the program is absolutely free, and there are thousands of members looking to spar these positions with you!
+
+You can check out my other instructive studies too if you're working on improving your game.
+-NoseKnowsAll
+
+* Beginner endgames you must know! https://lichess.org/study/wukLYIXj
+* Knights | How to dominate your opponents! https://lichess.org/study/kI8ikTU4
+* Bishops | Slice through the opposition! https://lichess.org/study/kNn68T8l
+* Rooks | Infiltrate for activity! https://lichess.org/study/U7tTRtdj
+* Light and Dark Squares | Master color complex strategy! https://lichess.org/study/T3ixjwmg
+* Always sacrifice the exchange! https://lichess.org/study/h3ccaYFE
+* Beautiful checkmates https://lichess.org/study/YtBYXc3m }
+ *
+
+

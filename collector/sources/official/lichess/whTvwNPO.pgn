@@ -1,0 +1,165 @@
+[Event "Steal the House Items: ✨Introduction✨"]
+[Date "2026.05.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Steal the House Items"]
+[ChapterName "✨Introduction✨"]
+[ChapterURL "https://lichess.org/study/whTvwNPO/7KHBcbna"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[FEN "4k3/PPPNNNPP/PPPPPPPP/PPPPPPPP/PPPPPPPP/PPPPPPPP/PPPPPPPP/4K3 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.28"]
+[UTCTime "06:45:33"]
+[ChapterMode "gamebook"]
+
+{ Hi guys!! Welcome back! Today, your goal is to steal EVERYTHING in the house. Once you do that, you need to escape the house and not get caught. All before that, you need to steal the key to enter the house, and make sure not to get caught!
+
+Please leave a like! Have fun and steal everything.
+
+You have a total of 3 lives. 1 hint means that you lose 1. A mistake means that you lose 1 too. You use puzzles to finish your goal of stealing all the items in the house.
+
+Credit to @DrCookieZ for making two of these kinds of studies and inspiring me to do this! }
+ *
+
+
+[Event "Steal the House Items: 🔑Finding the Key🔑"]
+[Date "2026.05.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Steal the House Items"]
+[ChapterName "🔑Finding the Key🔑"]
+[ChapterURL "https://lichess.org/study/whTvwNPO/EMWzwO6q"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[FEN "5rk1/pp4pp/4p3/2R3Q1/3n4/2q4r/P1P2PPP/5RK1 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.28"]
+[UTCTime "06:48:43"]
+[ChapterMode "gamebook"]
+
+{ To get the key, you need to solve this puzzle! }
+1... Qg3!! { 1,000,000 GOLDEN COINS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! } 2. Qxg3 Ne2+ 3. Kh1 Nxg3+ 4. fxg3 Rxf1# { You have now gotten the key! Now it is time to enter the house. } *
+
+
+[Event "Steal the House Items: 🏡Entering the house🏡"]
+[Date "2026.05.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Steal the House Items"]
+[ChapterName "🏡Entering the house🏡"]
+[ChapterURL "https://lichess.org/study/whTvwNPO/hykSHrJP"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[FEN "8/3P3k/n2K3p/2p3n1/1b4N1/2p1p1P1/8/3B4 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.28"]
+[UTCTime "06:59:18"]
+[ChapterMode "gamebook"]
+
+{ Solve this puzzle to enter the house! }
+1. Nf6+ Kg7 2. Nh5+ Kg6 3. Bc2+ Kxh5 4. d8=Q Nf7+ 5. Ke6 Nxd8+ 6. Kf5 e2 7. Be4 e1=N 8. Bd5 c2 9. Bc4 c1=N 10. Bb5 Nc6 11. Bxc6 Nc7 12. Ba4 Ne2 13. Bd1 Nf3 14. Bxe2 Be1 15. Bxf3# { You have finished the puzzle! Now it is time to steal the items in the first floor. } *
+
+
+[Event "Steal the House Items: 💰Stealing the items in the first floor💰"]
+[Date "2026.05.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Steal the House Items"]
+[ChapterName "💰Stealing the items in the first floor💰"]
+[ChapterURL "https://lichess.org/study/whTvwNPO/K8Y2B8qv"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[FEN "2r1qrk1/pb3ppp/1pn1p3/2b5/Q3B3/2P2NB1/PP3PPP/3RK2R w K - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.28"]
+[UTCTime "07:08:42"]
+[ChapterMode "gamebook"]
+
+{ Solve the puzzle to steal the items in the first floor! }
+1. Bxh7+ Kxh7 2. Qh4+ Kg6 3. Qg5+ Kh7 4. Qh5+ Kg8 5. Ng5 Bxf2+ 6. Kxf2 (6. Bxf2 { Don't count yourself wrong! Play Kxf2 instead to continue. }) 6... f6 7. Qh7# { You have stolen everything now in the first floor! It is now time to steal all the stuff from the second floor! } *
+
+
+[Event "Steal the House Items: 💸Stealing the items in the second floor💸"]
+[Date "2026.05.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Steal the House Items"]
+[ChapterName "💸Stealing the items in the second floor💸"]
+[ChapterURL "https://lichess.org/study/whTvwNPO/t6trIUnU"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[FEN "r4rk1/pp1b1ppp/2n1p3/2qp4/8/2PBP3/PP1N1PPP/R2QK2R w KQ - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.28"]
+[UTCTime "07:13:57"]
+[ChapterMode "gamebook"]
+
+{ Solve this puzzle to steal everything in the second floor! }
+1. Bxh7+!! { WOW!!!!!!!! } 1... Kxh7 2. Qh5+ Kg8 3. Ne4 g6 4. Nxc5 gxh5 5. Nxd7 Rfd8 6. Nf6+ Kf8 7. Nxh5 { You have stolen everything on this floor now! It is now time beat the protector (no weapons) up. } *
+
+
+[Event "Steal the House Items: ⚔️The Battle with the Protector⚔️"]
+[Date "2026.05.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Steal the House Items"]
+[ChapterName "⚔️The Battle with the Protector⚔️"]
+[ChapterURL "https://lichess.org/study/whTvwNPO/ZRDjTGAv"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[FEN "3qk3/8/8/8/PPPPPPPP/PPPPPPPP/NNBNNBNN/R3K2R w KQ - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.28"]
+[UTCTime "07:24:03"]
+
+{ It is now time for you to beat the protector! You need to win the game or you lose a live. }
+ *
+
+
+[Event "Steal the House Items: 🏃‍♂️Escaping the House🏃‍♂️"]
+[Date "2026.05.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Steal the House Items"]
+[ChapterName "🏃‍♂️Escaping the House🏃‍♂️"]
+[ChapterURL "https://lichess.org/study/whTvwNPO/2f8H2zuP"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[FEN "rnbq1rk1/ppppb1pp/4p1p1/8/3P4/3BP3/PPP2PP1/RN1QK1NR w KQ - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.28"]
+[UTCTime "07:26:17"]
+[ChapterMode "gamebook"]
+
+{ Solve this puzzle to escape the house! }
+1. Rxh7!! { THE ROOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOK!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! } 1... Kxh7 2. Qh5+ Kg8 3. Bxg6 Bb4+ 4. c3 Rf6 5. Qh7+ Kf8 6. Qh8+ Ke7 7. Qxg7+ Kd6 8. Nd2 Rxg6 9. Qxg6 { You have solved the puzzle! You have done your goal and you are good. } (9. Ne4+ Kc6) *
+
+
+[Event "Steal the House Items: 🤑Outroduction🤑"]
+[Date "2026.05.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Steal the House Items"]
+[ChapterName "🤑Outroduction🤑"]
+[ChapterURL "https://lichess.org/study/whTvwNPO/yF0nYkpF"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[FEN "RRRRkRRR/PPNBRBNP/PPPNRNPP/PPPPPPPP/PPPPPPPP/PPPPPPPP/PPPPPPPP/NNNBKBNN b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.28"]
+[UTCTime "07:35:25"]
+[ChapterMode "gamebook"]
+
+{ Did you enjoy this study? I bet you did! Please tell me if you want a part 2 of this in the chat because I can make it. Stay tuned for more! Byeeeeeee! } { [%csl Re8,Bc7,Bd7,Bd6,Be6,Be7,Bf7,Bg7,Bf6,Ba8,Bb8,Bc8,Bd8,Bf8,Bg8,Bh8][%cal Rh8e8,Ra8e8,Re6e8,Rf7e8,Rf6e8,Rg7e8,Rd6e8,Rd7e8,Rc7e8,Bb8e8,Yc8e8,Gd8e8,Gg8e8,Bf8e8,Be7e8] }
+ *
+
+

@@ -1,0 +1,54 @@
+[Event "Strategy: Глава 1"]
+[Date "2025.03.06"]
+[Result "*"]
+[Variant "Racing Kings"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Strategy"]
+[ChapterName "Глава 1"]
+[ChapterURL "https://lichess.org/study/Nfo88RBU/Y9dS8o6x"]
+[Annotator "https://lichess.org/@/Mete0ra_finishit"]
+[FEN "8/8/8/8/8/8/krbnNBRK/qrbnNBRQ w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.03.06"]
+[UTCTime "18:11:35"]
+
+1. Nxc2 Nxf2 2. Rxf2 Rxc2 3. Kg3 Kb3 4. Rf4 (4. Kf4) (4. Qh7 $140 Kc4 $10 (4... Rc5 5. Rf5 Kc4 6. Kf4 Rb6 7. Rg6 Qa7 8. Qxa7 Rxg6 (8... Kb5 9. Kg5) 9. Rf6? (9. Qh7 Rb6 10. Qd7 Bb2 11. Bg2 Nb3 12. Kg5 Rcc6 13. Bxc6 Rxc6 14. Rf6 (14. Nf4 Bh8 15. Rd5 (15. Ne6!! Rxe6 16. Qf7 Nc5 17. Rf6 Kb5 18. Qxe6 Nd7 19. Kg6 Nxf6 20. Kf7 Bg7 21. Qxf6 Bxf6 22. Kf8#) (15. Ng6!)) 14... Rxf6) 9... Rcg5 10. Rxg6 Rxg6 11. Kf5) 5. Kh4) *
+
+
+[Event "Strategy: Глава 2"]
+[Date "2025.03.06"]
+[Result "*"]
+[Variant "Racing Kings"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Strategy"]
+[ChapterName "Глава 2"]
+[ChapterURL "https://lichess.org/study/Nfo88RBU/G3rTJMQj"]
+[Annotator "https://lichess.org/@/Mete0ra_finishit"]
+[FEN "8/8/8/8/8/8/krbnNBRK/qrbnNBRQ w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.03.06"]
+[UTCTime "18:19:05"]
+
+1. Nxc2 (1. Kg3 Kb3 2. Kf4 Kc4 3. Ke5 Qa6 4. Rg6 (4. Rg5) (4. Nxc2 $7 Nxf2?? (4... Rxc2?? 5. Ba7) (4... Kb5 5. Rg6 Nxf2 6. Rd6 (6. Rxa6?? Nxh1?? (6... Kxa6 7. Kd6 Rb7 8. Rg8 Ka7 9. Nc3 Rg7 10. Rd8 Rb8 11. Bg2 Nxh1 12. Na4 Rxg2 13. Nb6 Kxb6 14. Ke7 Rg8 15. Rd7 Rb7 16. Kf7 Rgb8 17. Na1 Ka7 18. Nc2 Ka8#)) 6... Nfe4 7. Ke6 Qb7 8. Rd7 Kc6 9. Ke7 Qc8 10. Rd8 Kb7 11. Ke8 Kb8) 5. Rg7) 4... Bxg6) 1... Kb3 *
+
+
+[Event "Strategy: Глава 3"]
+[Date "2025.03.06"]
+[Result "*"]
+[Variant "Racing Kings"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Strategy"]
+[ChapterName "Глава 3"]
+[ChapterURL "https://lichess.org/study/Nfo88RBU/fDWXy2pk"]
+[Annotator "https://lichess.org/@/Mete0ra_finishit"]
+[FEN "8/8/8/8/8/8/krbnNBRK/qrbnNBRQ w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.03.06"]
+[UTCTime "18:22:59"]
+
+1. Bd4 Be4 2. Kg3 Kb3 3. Kf4 Kc4 4. Qh6 Qa6 5. Rg5 (5. Rg6 Bxg6 6. Rxg6 Qxg6 7. Qxg6 Kd5 8. Kg5 Rb7 9. Kh6 Bb2 10. Bxb2 R1xb2 11. Nd4 R2b6 12. Nf5 Kc5 13. Ng7 Nxf1 14. Kh7 Rb8 15. Qf7 R6b7 16. Qxb7 Rxb7 17. Kg8#) 5... Rb5 (5... Qxh6) 6. Kg4 Kb4 7. Kh5 Ka5 *
+
+

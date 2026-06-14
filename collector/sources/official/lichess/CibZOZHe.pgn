@@ -1,0 +1,52 @@
+[Event "DrHack's Study: Chapter 1"]
+[Date "2025.02.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "DrHack's Study"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/CibZOZHe/1xk8tQFd"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2025.02.12"]
+[UTCTime "02:17:29"]
+
+ *
+
+
+[Event "DrHack's Study: Chapter 2"]
+[Date "2025.03.09"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "DrHack's Study"]
+[ChapterName "Chapter 2"]
+[ChapterURL "https://lichess.org/study/CibZOZHe/nmG59SlH"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "8/6p1/8/3kpp1p/1p5P/1P1KPPP1/8/8 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.03.09"]
+[UTCTime "10:49:36"]
+
+1... e4+ 2. Ke2 exf3+ 3. Kxf3 Ke5 4. Ke2 (4. Kf2 Ke4 5. Ke2 g6 6. Kf2 Kd3 7. Kf3 Kc3 8. Kf4 Kxb3 9. Kg5 Ka3 10. Kxg6 b3 11. Kxf5 b2 12. g4 b1=Q+ 13. Kg5 hxg4 14. Kxg4) 4... Ke4 5. Kf2 Kd3 *
+
+
+[Event "DrHack's Study: Chapter 3"]
+[Date "2025.03.31"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "DrHack's Study"]
+[ChapterName "Chapter 3"]
+[ChapterURL "https://lichess.org/study/CibZOZHe/oESMjdJ4"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "r6r/Q1pkb2p/p1ppp3/3n1q2/N5p1/4B3/PPP2PPP/3RR1K1 w - - 4 21"]
+[SetUp "1"]
+[UTCDate "2025.03.31"]
+[UTCTime "01:50:18"]
+
+21. Rxd5 Rxa7 22. Rxf5 exf5 23. Bxa7 c5 24. Re3 Ra8 25. Bb6 *
+
+

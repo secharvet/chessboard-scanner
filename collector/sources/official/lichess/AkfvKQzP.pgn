@@ -1,0 +1,34 @@
+[Event "DrHack's Study: Chapter 1"]
+[Date "2020.08.27"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "DrHack's Study"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/AkfvKQzP/nab0YeaL"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2020.08.27"]
+[UTCTime "00:01:58"]
+
+ *
+
+
+[Event "DrHack's Study: Chapter 2"]
+[Date "2020.11.19"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "DrHack's Study"]
+[ChapterName "Chapter 2"]
+[ChapterURL "https://lichess.org/study/AkfvKQzP/mslhHXBe"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "4k2r/1p3ppp/p1n5/2r1p3/4P3/2N5/PP2KPPP/2RR4 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.11.19"]
+[UTCTime "19:03:29"]
+
+1. b4 (1. Ke3 Nd4 2. f4 f6 3. fxe5 fxe5 4. Nd5) (1. Rd5 Rxd5 2. Nxd5 (2. exd5)) (1. Nd5 Rxc1 2. Rxc1 Kd7 3. Ke3 Ke6) 1... Nxb4 2. Nb5 Rxc1 3. Rxc1 Nc6 4. Nd6+ Kd7 5. Nxb7 Rb8 6. Nc5+ *
+
+

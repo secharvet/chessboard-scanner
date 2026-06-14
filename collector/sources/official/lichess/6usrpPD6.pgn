@@ -1,0 +1,56 @@
+[Event "Wednesday Workout: 10/8/25"]
+[Date "2025.10.07"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Wednesday Workout"]
+[ChapterName "10/8/25"]
+[ChapterURL "https://lichess.org/study/6usrpPD6/VrRHdld3"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[FEN "5rk1/5ppp/p7/3p3r/8/2Q2P2/PP2KP2/R3R2q b - - 0 25"]
+[SetUp "1"]
+[UTCDate "2025.10.07"]
+[UTCTime "17:51:29"]
+[ChapterMode "gamebook"]
+
+25... Qg2 $19 { [%csl Re2] } (25... Re8+?? { Anything but this!!! } 26. Kd2 { There's no good way out of the double attack. } { [%cal Re1h1,Re1e8] } 26... Qxe1+ (26... Rxe1 27. Qc8+ Re8 28. Qxe8#) 27. Rxe1 Rxe1 28. Kxe1 $18) (25... Qh2 $19 { Any safe queen move works. }) (25... Qh3 $19 { This is also good. }) (25... Qh4 $19 { This is good too. }) 26. Rg1 Re8+ { Now it works. } 27. Kd2 Qxf2+ $19 *
+
+
+[Event "Wednesday Workout: 10/15/25"]
+[Date "2025.09.05"]
+[Result "*"]
+[Annotator "nate"]
+[FEN "r1b1kr2/pp3pQ1/2n1p2p/3pP2P/3q4/3B4/PP1B2P1/R3RK2 w q - 0 18"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Wednesday Workout"]
+[ChapterName "10/15/25"]
+[ChapterURL "https://lichess.org/study/6usrpPD6/JFW8PdYQ"]
+[FEN "r1b1kr2/pp3pQ1/2n1p2p/3pP2P/3q4/3B4/PP1B2P1/R3RK2 w q - 0 18"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+{ [#] }
+18. Bxh6! { [%cal Gh6f8] } 18... Qxd3+ { [%cal Gf1f2,Gf1g1,Ge1e2] } 19. Re2! { White is getting a whole rook with check
+and winning. } { [%csl Gf8][%cal Gh6f8] } (19. Kg1? { allows Black to get back with check. } 19... Qd4+ { [%cal Gg1f1,Gg1h1] } 20. Kh1 Qh4+ (20... Qb4 { [%cal Gb4f8] } 21. Qxf8+ Qxf8 22. Bxf8 Kxf8)) (19. Kf2) 19... Qf5+ (19... Nxe5 20. Qxf8+ (20. Qxe5 { [%cal Gh6f8] }) 20... Kd7) (19... Nd8 20. Qxf8+ Kd7 { [%cal Gf8d6] }) 20. Kg1 { [%cal Gg7f8] } *
+
+
+[Event "Flashcards: Chapter 5"]
+[Date "2025.09.28"]
+[Result "*"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Wednesday Workout"]
+[ChapterName "10/22/25"]
+[ChapterURL "https://lichess.org/study/6usrpPD6/BalvV0Ba"]
+[FEN "2br4/p4kpp/2p2p2/1PNnp3/8/4N3/P4PPP/3R2K1 b - - 0 25"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+25... Ke7 26. bxc6 (26. Nxd5+ cxd5 { [%cal Gd8d5] } (26... Rxd5 27. Rxd5 cxd5 { [%cal Gd5d4] })) 26... Nxe3 { [%cal Gf2e3,Gd8d1] } 27. Rxd8 Kxd8 28. fxe3 Kc7 { [%cal Gc7c6] } 29. Kf2 Kxc6 *
+
+

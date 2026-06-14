@@ -1,0 +1,37 @@
+[Event "Pro Chess League"]
+[Site "chess.com INT"]
+[Date "2018.01.31"]
+[Round "3"]
+[White "German Della Morte"]
+[Black "Eric S Rosen"]
+[Result "1/2-1/2"]
+[WhiteElo "2353"]
+[BlackElo "2364"]
+[Variant "Standard"]
+[ECO "B35"]
+[Opening "Sicilian Defense: Accelerated Dragon, Modern Bc4 Variation"]
+[StudyName "Greatest Swindle I've ever pulled"]
+[ChapterName "German Della Morte - Eric S Rosen"]
+[ChapterURL "https://lichess.org/study/sojUw4Jg/c1McM709"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 g6 5. Nc3 Bg7 6. Be3 Nf6 7. Bc4 O-O 8. Bb3 Re8 9. O-O d6 10. h3 Na5 11. Re1 b6 12. Bg5 Nxb3 13. axb3 Bb7 14. Qd3 Nd7 15. Nd5 Nc5 16. Qe3 Ne6 17. Nxe6 fxe6 18. Nc3 Qd7 19. Bh6 Bf6 20. Qd3 Qc6 21. Nd1 Qc5 22. c3 Qh5 23. Be3 Rec8 24. Bd4 e5 25. Be3 Qh4 26. Bd2 Rf8 27. f3 Kh8 28. Ne3 Bc8 29. Qd5 Bd7 30. Qb7 Be6 31. Rxa7 Rab8 32. Qa6 Bg5 33. Qe2 Bf4 34. b4 Ra8 35. Rb7 Qg5 36. Kh1 Ra2 37. Bc1 Ra1 38. Bd2 Ra2 39. Rb1 Rfa8 40. Nf1 Ra1 41. Bxf4 Qxf4 42. Rxa1 Rxa1 43. Rxe7 Bg8 44. Re8 Qf7 45. Rc8 Kg7 46. Kg1 Qb3 47. Rc7+ Bf7 48. Qd2 Qe6 49. Kf2 b5 50. Ne3 Qf6 51. g3 h5 52. h4 Kg8 53. Nd5 Qe6 { [%csl Gd5,Gh6][%cal Gc7f7,Gd2h6] } 54. Qh6 Ra8 55. Ne7+ Qxe7 56. Rxe7 Rf8 57. Rd7 d5 58. exd5 e4 59. Rd6 Be8 60. Rxg6+ Bxg6 61. Qxg6+ { [%csl Gf8] } 61... Kh8 62. Qxe4 Rf7 63. Qe8+ Kg7 64. d6 Kh6 { [%csl Gh6,Gf7][%cal Ge8f7] } 65. Qh8+ Kg6 66. Qe5 Kh6 67. Qg5+ Kh7 68. Qxh5+ Kg8 69. Qxf7+ Kh8 70. h5 { 1/2-1/2 Draw by stalemate. } 1/2-1/2
+
+
+[Event "Offhand blitz game"]
+[Site "USA"]
+[Date "2013.??.??"]
+[White "Akshay Indusekar"]
+[Black "Eric S Rosen"]
+[Result "0-1"]
+[Variant "Standard"]
+[ECO "A21"]
+[Opening "English Opening: King's English Variation, Reversed Sicilian"]
+[StudyName "Greatest Swindle I've ever pulled"]
+[ChapterName "Akshay Indusekar - Eric S Rosen"]
+[ChapterURL "https://lichess.org/study/sojUw4Jg/f83FZhwB"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. c4 (1. e4 c5 (1... e5 2. d4 exd4 3. c3 d5 { [%csl Gd5] } 4. exd5 Qxd5 5. cxd4 Nc6 6. Nf3 Bg4 7. Be2 Bxf3 (7... Bb4+ { [%csl Gb4] } 8. Nc3 Bxf3 9. Bxf3 Qc4 { [%cal Gc4f1,Gc4c3,Gc4d4] }) 8. Bxf3 Qxd4 9. Bxc6+ { [%csl Gd4][%cal Gc6e8,Gd1d4] }) 2. d4 cxd4 3. c3 { [%csl Gd5,Gf6,Gc3][%cal Gd7d5,Gg8f6,Gd4c3,Gd4d3] }) 1... e5 2. Nc3 d6 3. d4 exd4 4. Qxd4 Nc6 5. Qd2 { [%cal Gb2b3,Gc1b2] } 5... Be6 6. b3 Nge7 7. g3 d5 8. cxd5 Nxd5 { [%csl Gd5,Ge6,Gc6,Gb4][%cal Gf8b4] } 9. a3 { [%csl Gc8,Gd1][%cal Gd5c3,Gd2c3,Gd8d5,Gg1f3,Gd5b3,Gc3b3,Ge6b3,Ga1b1,Ge8c8] } 9... Nxc3 10. Qxc3 Qd5 11. Nf3 Qxb3 12. Qxb3 Bxb3 13. Rb1 Ba4 (13... Na5 14. Bd2) 14. Rxb7 O-O-O { 0-1 White resigns. } 0-1
+
+

@@ -1,0 +1,43 @@
+[Event "Politiken Cup"]
+[Site "Helsingor DEN"]
+[Date "2015.07.28"]
+[Round "5.9"]
+[White "Jon Ludvig Hammer"]
+[Black "Erik Zude"]
+[Result "1-0"]
+[WhiteElo "2677"]
+[BlackElo "2398"]
+[Variant "Standard"]
+[ECO "C41"]
+[Opening "Philidor Defense: Exchange Variation"]
+[StudyName "Playing against Philidor type stuff"]
+[ChapterName "Jon Ludvig Hammer - Erik Zude"]
+[ChapterURL "https://lichess.org/study/aS6Oeqry/u6hJJQKY"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 d6 3. d4 exd4 4. Nxd4 Nf6 5. Nc3 Be7 6. Be2 O-O 7. Bf4 Nc6 8. O-O Ne5 9. Nf5 Bxf5 10. exf5 c6 { [%csl Gf5] } 11. g4 Qc7 12. Bg3 { [%csl Gg3,Gf4][%cal Gf4g3,Gf2f4] } 12... b5 13. g5 Nfd7 { [%csl Gc4][%cal Gf2f4,Ge5c4] } 14. b3 { [%cal Gf2f4] } 14... Nc5 15. f4 Ned7 16. b4 Nb7 17. f6 gxf6 18. Bd3 { [%csl Gh5][%cal Gd3h7,Gd1h5] } 18... Rfe8 19. Qh5 Nf8 20. Ne4 f5 21. Nf6+ Bxf6 22. gxf6 { 1-0 Black resigns. } { [%csl Gg7] } 22... Ne6 23. Bxf5 1-0
+
+
+[Event "Rated Rapid game"]
+[Site "https://lichess.org/7GKFQfYD"]
+[Date "2018.10.26"]
+[Round "-"]
+[White "EricRosen"]
+[Black "Korons20"]
+[Result "1-0"]
+[WhiteElo "2297"]
+[WhiteTitle "IM"]
+[BlackElo "1992"]
+[TimeControl "600+5"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "C66"]
+[Opening "Ruy Lopez: Berlin Defense, Improved Steinitz Defense"]
+[StudyName "Playing against Philidor type stuff"]
+[ChapterName "IM EricRosen - Korons20"]
+[ChapterURL "https://lichess.org/study/aS6Oeqry/jBUOdBXG"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 { [%clk 0:10:00] } 1... e5 { [%clk 0:10:00] } 2. Nf3 { [%clk 0:10:00] } 2... Nc6 { [%clk 0:10:02] } 3. Bb5 { [%clk 0:10:03] } 3... d6 { [%clk 0:10:03] } 4. O-O { [%clk 0:09:46] } 4... Nf6 { [%clk 0:10:05] } 5. d4 { [%clk 0:09:37] } 5... exd4 { [%clk 0:10:03] } 6. Nxd4 { [%clk 0:09:25] } 6... Bd7 { [%clk 0:10:04] } 7. Nc3 { [%clk 0:08:11] } 7... Be7 { [%clk 0:10:04] } 8. Nf5 { [%clk 0:08:06] } 8... O-O { [%clk 0:09:28] } 9. Re1 { [%clk 0:07:37] } 9... Bxf5 { [%clk 0:06:30] } 10. exf5 { [%clk 0:07:39] } 10... Nd7 { [%clk 0:06:32] } 11. Nd5 { [%clk 0:06:32] } 11... Bf6 { [%clk 0:06:23] } 12. Qh5 { [%clk 0:05:44] } 12... Be5 { [%clk 0:03:13] } 13. Bg5 { [%clk 0:04:43] } 13... f6 { [%clk 0:03:11] } 14. Bd2 { [%clk 0:04:27] } 14... a6 { [%clk 0:01:58] } 15. Bc4 { [%clk 0:04:09] } 15... Kh8 { [%clk 0:01:48] } 16. Re3 { [%clk 0:03:58] } 16... Nd4 { [%clk 0:01:19] } (16... h6 17. Rh3 { [%csl Gh6][%cal Gd2h6] }) 17. Qxh7+ { [%clk 0:03:56] } 17... Kxh7 { [%clk 0:01:18] } 18. Rh3+ { [%clk 0:04:01] } 18... Kg8 { [%clk 0:01:21] } 19. Nxf6# { 1-0 White wins by checkmate. } { [%clk 0:03:57] } 1-0
+
+

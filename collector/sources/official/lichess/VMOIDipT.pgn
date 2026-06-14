@@ -1,0 +1,157 @@
+[Event "M1M1 study: King's gambit"]
+[Date "2020.06.15"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C34"]
+[Opening "King's Gambit Accepted: Fischer Defense"]
+[StudyName "M1M1 study"]
+[ChapterName "King's gambit"]
+[ChapterURL "https://lichess.org/study/VMOIDipT/phlpbjBz"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[UTCDate "2020.06.15"]
+[UTCTime "20:24:09"]
+
+1. e4 e5 2. f4 exf4 3. Nf3 d6 4. d4 g5 (4... Nc6 5. Bxf4 Nf6 6. Nc3 Be7 7. Bc4 O-O 8. O-O { [%cal Gf3d4,Gf3e5,Gc3e4,Gc3d5] }) 5. Nc3 Bg7 6. Bc4 Nc6 (6... Ne7 7. Nxg5) (6... Nh6 7. h4 g4 8. Ng5 { [%csl Gf4,Gb7] }) 7. O-O g4 8. Bxf4 gxf3 9. Qxf3 Bxd4+ (9... a6 10. Rad1 (10. Bxf7+ Kxf7 11. Qh5+ Ke7 (11... Ke6 { [%cal Gh5f5] } 12. Qf5+ Ke7 13. Nd5+ Ke8 14. Qh5+ Kd7 15. Qg4+ Ke8 16. Qxg7) 12. Nd5+)) 10. Kh1 *
+
+
+[Event "M1M1 study: Italian"]
+[Date "2020.06.15"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C45"]
+[Opening "Scotch Game: Schmidt Variation"]
+[StudyName "M1M1 study"]
+[ChapterName "Italian"]
+[ChapterURL "https://lichess.org/study/VMOIDipT/sAWVm7wE"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[UTCDate "2020.06.15"]
+[UTCTime "20:50:22"]
+
+1. e4 e5 2. Nf3 (2. Nc3 { [%cal Gg8f6,Gb8c6,Gf8c5] }) 2... Nc6 3. d4 (3. Bc4 Bc5 (3... d5 4. Bxd5 Nge7 5. Bb3 { [%csl Gc8] }) (3... Bb4 4. c3 Ba5 5. d4) 4. a3 (4. Nc3 Nf6 5. Ng5 O-O 6. O-O h6 7. Nf3 d6) 4... Nf6 5. Ng5 O-O (5... Qe7 6. Bxf7+) 6. Bxf7+ (6. d3 h6 7. Nf3 d6 8. Nc3 Bg4 9. h3 Bxf3 10. Qxf3 Nd4 11. Qd1) 6... Rxf7 7. Nxf7 Kxf7 8. d3 d5 9. exd5 Nxd5 10. Qf3+ Kg8) (3. Bb5 Nf6 4. Bxc6 { [%csl Gc6] } 4... dxc6 { [%csl Gc8] } 5. Nxe5 Qd4 6. Nf3 Qxe4+ 7. Qe2 Qxe2+ 8. Kxe2 Bd6 9. Re1 O-O 10. Kf1 Bg4 11. Nc3 Rfe8 12. d3 Rad8) (3. Nc3 Nf6) 3... exd4 4. Nxd4 Nf6 5. Nc3 Nxd4 (5... Bc5 { [%csl Gd4] } 6. Be3 Bb4 { [%csl Ge4] } (6... O-O 7. Nxc6 dxc6 8. Bxc5) (6... Bb6 7. Qd2 O-O 8. O-O-O Re8)) 6. Qxd4 { [%cal Gf8c5] } *
+
+
+[Event "M1M1 study: Endgames"]
+[Date "2020.06.15"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "M1M1 study"]
+[ChapterName "Endgames"]
+[ChapterURL "https://lichess.org/study/VMOIDipT/vJ8aQoUQ"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "8/8/4k3/8/3R4/4K3/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.06.15"]
+[UTCTime "21:13:35"]
+
+1. Re4+ Kd5 2. Kd3 Kc5 3. Re8 Kd5 4. Rd8+ Ke5 5. Ke3 Kf5 6. Rf8+ Ke5 7. Re8+ Kd5 8. Kd3 Kc5 9. Rd8 Kc6 10. Kc4 Kc7 11. Rd1 Kc6 12. Kb4 Kc7 13. Kb5 Kb7 14. Rc1 Ka7 15. Ka5 Kb7 16. Kb5 Ka7 17. Kc6 Kb8 18. Kb6 Ka8 19. Rc8# *
+
+
+[Event "M1M1 study: Ladder mate"]
+[Date "2020.06.15"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "M1M1 study"]
+[ChapterName "Ladder mate"]
+[ChapterURL "https://lichess.org/study/VMOIDipT/SVoCEdt8"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "8/8/4k3/8/3R1Q2/4K3/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.06.15"]
+[UTCTime "21:15:59"]
+
+1. Rd6+ (1. Re4+ Kd5 2. Kf2 Kc6 3. Kg1 Kd5 4. Kh1 Kc6 5. Re3 Kd5 6. Rf3 Ke6 7. Qg3 Kd5 8. Rf2 Ke4 9. Qf4+ (9. Rf4+ Ke5 (9... Kd5 10. Qg5+ Kc6 11. Rf6+ Kb7 12. Qg7+ Ka8 13. Rf8#) 10. Qg5+ Ke6 11. Rf6+ Kd7 12. Qg7+ Kc8 13. Rf8#) 9... Kd3 10. Rd2+ Kc3 11. Qd4+ Kb3 12. Rb2+ Ka3 13. Qb4#) 1... Ke7 2. Qf6+ Ke8 3. Rd8# *
+
+
+[Event "M1M1 study: Rook and pawn endgame"]
+[Date "2020.06.15"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "M1M1 study"]
+[ChapterName "Rook and pawn endgame"]
+[ChapterURL "https://lichess.org/study/VMOIDipT/HOwzvylq"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "2r5/pp4pp/1k6/8/3PK1P1/7P/PP1R4/8 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.06.15"]
+[UTCTime "21:27:47"]
+
+1... Rc7 { [%csl Gf4,Gd5,Bd7] } (1... Kc6 2. d5+ (2. Rc2+ Kd7 3. Rxc8 Kxc8 4. Ke5 Kd7 5. Kd5 { [%csl Ge7,Gd7] } 5... Ke7 { [%csl Gb7][%cal Gd5c6,Gd5d6,Gd5e6] } 6. b4 Kd7 7. a4 Ke7 8. b5 Kd7 9. a5 Ke7 10. a6 bxa6 11. bxa6 Kd7 { [%cal Gd5e6,Gd5c6] } 12. h4 { [%csl Gd3] } 12... h6 13. h5 Ke7 14. Kc6 { [%csl Gc7] } 14... Kd8 15. Kd6 Kc8 (15... Ke8 16. Kc7 Kf7 17. d5 Ke7 18. d6+ Kf6 19. d7 Kg5 20. d8=Q+ Kxg4) 16. Ke7) (2. Ke5 Re8+ { [%csl Gd6,Ge6,Gf6] } (2... Rf8 3. Rc2+ (3. Ke6 Re8+ 4. Kf7 Re3 5. Kxg7 Rxh3) 3... Kd7 4. Kd5)) 2... Kd6) 2. d5 Re7+ 3. Kf5 Rd7 4. Ke6 Rd8 5. Ke7 Kc7 (5... Rh8 6. d6 Kc6 7. d7 Kc7 8. Rc2+ Kb8 9. d8=Q+ Rxd8 10. Kxd8) 6. d6+ Kc8 7. Rc2+ (7. d7+ Kc7 8. Rc2+) *
+
+
+[Event "M1M1 study: King and Pawn endgame"]
+[Date "2020.06.15"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "M1M1 study"]
+[ChapterName "King and Pawn endgame"]
+[ChapterURL "https://lichess.org/study/VMOIDipT/mIA22rD5"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "3k4/8/8/8/8/4K3/3P4/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.06.15"]
+[UTCTime "21:46:57"]
+
+1. Kd3 (1. d4 Kd7 2. Ke4 Kd6 3. d5 Kd7 4. Ke5 Ke7 5. d6+ Kd7 6. Kd5 Kd8 7. Ke6 Ke8 8. d7+ (8. Kd5 Kd7 9. Kc5 Kd8 10. Kc6 Kc8) 8... Kd8 9. Kd6) 1... Kd7 2. Kd4 Kd6 3. d3 Ke6 4. Kc5 Ke5 (4... Kd7 5. Kd5 Ke7 6. Kc6 Kd8 7. d4 Ke7 8. Kc7 Ke6 9. Kc6 Ke7 10. d5 Kd8 11. Kd6 Ke8 12. Kc7 Ke7 13. d6+ Ke6 14. d7 Ke5 15. d8=Q) 5. d4+ Ke6 6. Kc6 (6. d5+ Kd7) *
+
+
+[Event "Casual Rapid game"]
+[Site "https://lichess.org/G55DHEAJ"]
+[Date "2020.06.28"]
+[Round "-"]
+[White "Anonymous"]
+[Black "M1M1"]
+[Result "1-0"]
+[BlackElo "1235"]
+[TimeControl "600+0"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "C49"]
+[Opening "Four Knights Game: Spanish Variation, Double Spanish"]
+[StudyName "M1M1 study"]
+[ChapterName "Crazy game"]
+[ChapterURL "https://lichess.org/study/VMOIDipT/bPTgYOqD"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+
+1. e4 { [%clk 0:10:00] } 1... e5 { [%clk 0:10:00] } 2. Nf3 { [%clk 0:09:56] } 2... Nc6 { [%clk 0:09:54] } 3. Nc3 { [%clk 0:09:48] } 3... Bb4 { [%clk 0:09:51] } 4. Bb5 { [%clk 0:09:32] } 4... Nf6 { [%clk 0:09:40] } 5. O-O { [%clk 0:09:21] } 5... a6 { [%clk 0:09:33] } (5... O-O { [%cal Gd7d6,Gc8e6] } 6. d3 { [%csl Gc1][%cal Gd3e4] } 6... d6 7. Bg5 Be6 (7... Bg4) 8. Nd5) 6. a3 { [%clk 0:09:08] } 6... axb5 { [%clk 0:09:23] } 7. axb4 { [%clk 0:09:06] } 7... Rxa1 { [%clk 0:09:22] } 8. Nxb5 { [%cal Ge8g8,Gd7d6,Gc8g4] [%clk 0:08:59] } 8... Nxe4 { [%clk 0:09:03] } (8... O-O 9. d3 d6 10. Qe2 Bg4 11. Nc3 Nd4 { [%csl Gd2,Ge3,Gd1,Ge1] } 12. Qd2 (12. Qe1 Bxf3 13. gxf3 Nxf3+ { [%cal Gf3e1,Gf3g1] }) (12. Qe3 Nxc2 { [%csl Gg5] } 13. Qe2 (13. Qa7 Rxa7) (13. Qg5 h6 { [%csl Bc2][%cal Gc2b4] }) 13... Nd4 14. Qe3) (12. Qd1 Bxf3 { [%cal Gd1f3] } (12... Nh5 13. Kh1 f5 14. Kg1 fxe4 { [%cal Gf8f3] } 15. dxe4 Rxf3 16. gxf3 Bxf3 { [%cal Gd8h4,Gh5f4] } 17. Qd3 Qh4 18. h3 Qxh3 { [%cal Gh3g2] }) 13. gxf3 { [%csl Gg1] } 13... Nh5 { [%cal Gd8h4,Gh5f4] } 14. Re1 Nf4 15. Rf1 { [%csl Gf4,Gd4][%cal Gf4h3,Gf4e2,Gd4f3,Gd4e2,Bc1f4] } 15... Qg5+ 16. Kh1 Qg2#) 12... Bxf3 13. gxf3 Nxf3+ { [%cal Gf3g1,Gf3d2] }) 9. Na3 { [%clk 0:08:47] } 9... d5 { [%clk 0:08:45] } 10. d3 { [%cal Ge4f6] [%clk 0:08:14] } 10... Nxb4 { [%clk 0:08:40] } (10... Bg4 11. dxe4 Nd4) (10... Nf6 11. b5 Nd4 12. Nxe5 { [%cal Ga1c1,Gd1c1,Gd4e2] } (12. Nxd4 exd4 { [%cal Gf1e1,Gd1e2] } 13. Re1+ Be6) 12... Rxc1 13. Qxc1 Ne2+) 11. Nxe5 { [%clk 0:08:08] } 11... O-O { [%clk 0:08:06] } 12. f3 { [%clk 0:07:50] } 12... Re8 { [%clk 0:07:57] } 13. d4 { [%clk 0:07:42] } 13... f6 { [%clk 0:07:21] } 14. Nd3 { [%clk 0:07:22] } 14... Na2 { [%clk 0:07:05] } 15. Re1 { [%clk 0:06:58] } 15... Nxc1 { [%clk 0:07:01] } 16. Nxc1 { [%clk 0:06:56] } 16... Bf5 { [%clk 0:06:51] } 17. Qd3 { [%clk 0:06:48] } 17... Rxc1 { [%clk 0:06:25] } 18. Rxc1 { [%clk 0:06:45] } 18... g5 { [%clk 0:06:12] } 19. g4 { [%clk 0:06:37] } 19... Be6 { [%clk 0:05:52] } 20. fxe4 { [%clk 0:06:32] } 20... dxe4 { [%clk 0:05:46] } 21. Qxe4 { [%clk 0:06:28] } 21... Bd5 { [%clk 0:05:42] } 22. Qf5 { [%clk 0:06:09] } 22... Be4 { [%clk 0:05:26] } 23. Qb5 { [%clk 0:05:58] } 23... Re7 { [%clk 0:05:14] } 24. d5 { [%clk 0:05:52] } 24... Qxd5 { [%clk 0:05:09] } 25. Qxd5+ { [%clk 0:05:50] } 25... Bxd5 { [%clk 0:05:08] } 26. Nb5 { [%clk 0:05:46] } 26... c6 { [%clk 0:04:57] } 27. Nd4 { [%clk 0:05:34] } 27... Re4 { [%clk 0:04:54] } 28. c3 { [%clk 0:05:11] } 28... Rxg4+ { [%clk 0:04:52] } 29. Kf2 { [%clk 0:05:10] } 29... Rg2+ { [%clk 0:04:46] } 30. Ke3 { [%clk 0:04:58] } 30... Rxh2 { [%clk 0:04:35] } 31. Rc2 { [%clk 0:04:57] } 31... Rh3+ { [%clk 0:04:15] } 32. Kd2 { [%clk 0:04:51] } 32... Be4 { [%clk 0:04:10] } 33. Rc1 { [%clk 0:04:42] } 33... Rd3+ { [%clk 0:04:07] } 34. Ke2 { [%clk 0:04:37] } 34... Rh3 { [%clk 0:03:51] } 35. Re1 { [%clk 0:04:25] } 35... Bf3+ { [%clk 0:03:48] } 36. Nxf3 { [%clk 0:04:21] } 36... Rg3 { [%clk 0:03:39] } 37. Nd4 { [%clk 0:04:05] } 37... Rg2+ { [%clk 0:03:33] } 38. Kd1 { [%clk 0:03:55] } 38... Rxb2 { [%clk 0:03:31] } 39. Re7 { [%clk 0:03:53] } 39... Rb1+ { [%clk 0:03:25] } 40. Kc2 { [%clk 0:03:51] } 40... Rf1 { [%clk 0:03:16] } 41. Rxb7 { [%clk 0:03:47] } 41... Rf2+ { [%clk 0:03:10] } 42. Kd3 { [%clk 0:03:45] } 42... f5 { [%clk 0:03:07] } 43. Nxc6 { [%clk 0:03:41] } 43... g4 { [%clk 0:03:05] } 44. Ke3 { [%clk 0:03:19] } 44... g3 { [%clk 0:03:03] } 45. Rb1 { [%clk 0:03:12] } 45... f4+ { [%clk 0:03:02] } 46. Ke4 { [%clk 0:03:08] } 46... g2 { [%clk 0:02:59] } 47. Rg1 { [%clk 0:03:04] } 47... Rf1 { [%clk 0:02:53] } 48. Rxg2+ { [%clk 0:03:02] } 48... Kf7 { [%clk 0:02:50] } 49. Rg4 { [%clk 0:02:59] } 49... f3 { [%clk 0:02:47] } 50. Rf4+ { [%clk 0:02:50] } 50... Kg6 { [%clk 0:02:45] } 51. Rxf3 { [%clk 0:02:49] } 51... Rxf3 { [%clk 0:02:37] } 52. Kxf3 { [%clk 0:02:48] } 52... Kg5 { [%clk 0:02:36] } 53. Ne5 { [%clk 0:02:45] } 53... Kh4 { [%clk 0:02:33] } 54. c4 { [%clk 0:02:44] } 54... h6 { [%clk 0:02:32] } 55. c5 { [%clk 0:02:43] } 55... h5 { [%clk 0:02:31] } 56. c6 { [%clk 0:02:43] } 56... Kh3 { [%clk 0:02:30] } 57. c7 { [%clk 0:02:43] } 57... Kh2 { [%clk 0:02:27] } 58. c8=Q { [%clk 0:02:43] } 58... h4 { [%clk 0:02:26] } 59. Qh8 { [%clk 0:02:42] } 59... h3 { [%clk 0:02:25] } 60. Ng4+ { [%clk 0:02:39] } 60... Kh1 { [%clk 0:02:23] } 61. Qxh3+ { [%clk 0:02:36] } 61... Kg1 { [%clk 0:02:21] } 62. Qg2# { 1-0 White wins by checkmate. } { [%clk 0:02:35] } 1-0
+
+
+[Event "M1M1 study: Opera Game"]
+[Date "2020.06.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C41"]
+[Opening "Philidor Defense"]
+[StudyName "M1M1 study"]
+[ChapterName "Opera Game"]
+[ChapterURL "https://lichess.org/study/VMOIDipT/l1A4MCqo"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[UTCDate "2020.06.28"]
+[UTCTime "02:16:41"]
+
+1. e4 e5 2. Nf3 d6 { [%cal Gb8c6] } 3. Bc4 (3. d4 { [%cal Gd4e5,Gd6e5,Gf3e5] } 3... Bg4 (3... exd4 4. Nxd4) 4. dxe5 { [%csl Ge5][%cal Gg4f3] } 4... Bxf3 (4... dxe5 5. Qxd8+ Kxd8 6. Nxe5 { [%cal Ge5g4,Ge5f7] } 6... Be6) 5. Qxf3 dxe5 6. Bc4 { [%csl Gf3,Gc4] } 6... Nf6 (6... f6 7. Qb3) 7. Qb3 Qe7 { [%cal Gb3b7,Gd8d7] } 8. Nc3 { [%csl Gb7] } 8... c6 { [%cal Ge7b7,Ge7f7] } 9. Bg5 { [%cal Yb8d7] } 9... b5 { [%cal Ge1g1,Ge1c1] } (9... Nbd7 10. Qxb7 { [%cal Gb7c6,Gb7a7] }) 10. Nxb5 cxb5 11. Bxb5+ { [%cal Ge8d8,Ge1c1] } 11... Nbd7 12. O-O-O Rd8 { [%csl Gb5,Gd1][%cal Gb5e8] } (12... a6 13. Bxd7+ Nxd7 (13... Qxd7 14. Rxd7) (13... Kd8 14. Bc6+ { [%cal Gc6a8] }) 14. Bxe7) 13. Rxd7 Rxd7 { [%cal Gb5d7] } 14. Rd1 Qe6 { [%cal Ge7e6] } 15. Bxd7+ Nxd7 16. Qb8+ Nxb8 17. Rd8#) *
+
+
+[Event "M1M1 study: Calculation"]
+[Date "2020.07.09"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C41"]
+[Opening "Philidor Defense"]
+[StudyName "M1M1 study"]
+[ChapterName "Calculation"]
+[ChapterURL "https://lichess.org/study/VMOIDipT/Orrx09VS"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[UTCDate "2020.07.09"]
+[UTCTime "01:24:26"]
+
+1. e4 e5 2. d4 (2. Nf3 { [%cal Gf3e5] } 2... Nf6 { [%cal Gf3e5] } (2... f6 3. Nxe5 Qe7 (3... fxe5 4. Qh5+ { [%csl Gh8][%cal Gg7g6] } 4... g6 (4... Ke7 { [%cal Gh5e5,Ge7f7,Gf1c4,Gf7g6,Ge5f5,Gg6h6,Gd2d4,Gg7g5] } 5. Qxe5+ Kf7 6. Bc4+ Kg6 7. Qf5+ Kh6 8. d4+ g5 9. h4 d6 10. Bxg5+ Kg7 (10... Qxg5 11. Qxg5#) (10... Kh5 11. g4#) 11. Qf7#) 5. Qxe5+ Qe7 6. Qxh8 Qxe4+ { [%cal Gf1e2] } 7. Kd1 { [%cal Gb1c3] }) 4. Nf3 (4. Qh5+ g6 5. Nxg6 Qf7 (5... Qxe4+ { [%cal Ge4g6] } 6. Qe2 Qxe2+ 7. Bxe2 hxg6)) 4... Qxe4+ 5. Be2) 3. Nxe5 d6 4. Nf3 Nxe4) 2... d6 { [%cal Gd4e5,Gd6e5] } 3. Nf3 Be6 (3... Nc6) (3... Bg4 { [%cal Gg4d1] }) 4. d5 { [%csl Ge1] } (4. Nxe5 dxe5 { [%cal Gf1b5,Gc7c6] } 5. dxe5) (4. dxe5 { [%cal Gd6e5] } 4... dxe5 { [%cal Gd1d8] }) 4... Bxd5 5. Qxd5 c6 6. Qd1 *
+
+

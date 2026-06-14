@@ -1,0 +1,106 @@
+[Event "DrHack's Study: Ruy Lopez"]
+[Date "2023.09.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C70"]
+[Opening "Ruy Lopez: Morphy Defense, Classical Defense Deferred"]
+[StudyName "DrHack's Study"]
+[ChapterName "Ruy Lopez"]
+[ChapterURL "https://lichess.org/study/7JKSOgGD/LZUraUHA"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2023.09.14"]
+[UTCTime "14:23:54"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Bc5 5. O-O d6 6. Nc3 (6. c3 Bg4) 6... b5 7. Bb3 Na5 *
+
+
+[Event "DrHack's Study: Chapter 6"]
+[Date "2023.09.25"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "DrHack's Study"]
+[ChapterName "Chapter 6"]
+[ChapterURL "https://lichess.org/study/7JKSOgGD/Amv4xqHF"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "4k3/1pp2ppp/p1p5/8/4P3/8/PPP2PPP/6K1 b - - 0 7"]
+[SetUp "1"]
+[UTCDate "2023.09.25"]
+[UTCTime "15:22:33"]
+
+ *
+
+
+[Event "DrHack's Study: doubled white advantage"]
+[Date "2023.09.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "DrHack's Study"]
+[ChapterName "doubled white advantage"]
+[ChapterURL "https://lichess.org/study/7JKSOgGD/OyixY72T"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "4k3/1pp2ppp/p1p5/8/4P3/8/PPP2PPP/4K3 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.09.14"]
+[UTCTime "15:09:56"]
+
+ *
+
+
+[Event "DrHack's Study: demo how to block the black majority"]
+[Date "2023.09.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "DrHack's Study"]
+[ChapterName "demo how to block the black majority"]
+[ChapterURL "https://lichess.org/study/7JKSOgGD/9BVC8Z6U"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "4k3/5ppp/1pp5/p1p5/P1P1P3/1P6/5PPP/4K3 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.09.14"]
+[UTCTime "15:10:38"]
+
+1... b5 (1... Kf8 2. f4 Ke8 3. e5 Kf8 4. f5 Ke8 5. e6 f6 (5... fxe6 6. fxe6)) 2. Kf1 (2. axb5 cxb5 3. cxb5 c4 4. bxc4) 2... bxc4 (2... bxa4 3. bxa4) 3. bxc4 *
+
+
+[Event "DrHack's Study: king's side 3v3"]
+[Date "2023.09.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "DrHack's Study"]
+[ChapterName "king's side 3v3"]
+[ChapterURL "https://lichess.org/study/7JKSOgGD/Sbh7asKF"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "4k3/ppp2ppp/2p5/8/8/8/PPPP1PPP/4K3 w - - 0 6"]
+[SetUp "1"]
+[UTCDate "2023.09.14"]
+[UTCTime "15:11:48"]
+
+6. d4 *
+
+
+[Event "DrHack's Study: knight's jump"]
+[Date "2023.09.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "DrHack's Study"]
+[ChapterName "knight's jump"]
+[ChapterURL "https://lichess.org/study/7JKSOgGD/sX16bD9o"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "4k3/ppp2ppp/3p4/8/4P3/8/PPP2PPP/4K3 b - - 0 5"]
+[SetUp "1"]
+[UTCDate "2023.09.14"]
+[UTCTime "15:13:45"]
+
+ *
+
+

@@ -1,0 +1,19 @@
+[Event "Flashcards - Michael: Chapter 1"]
+[Date "2024.09.19"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Flashcards - Michael"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/GUJAXtmh/pVGYfU3b"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[FEN "r2r2k1/1Qp1q1pp/5p2/pB6/P2p4/N4N2/1P4PP/R4K1n w - - 0 20"]
+[SetUp "1"]
+[UTCDate "2024.09.19"]
+[UTCTime "15:00:33"]
+[ChapterMode "gamebook"]
+
+20. Kg1 (20. Re1 { This is also very logical. }) (20. Nxd4? Qe3 { Black wins at least a piece. } { [%cal Ge3f2] }) 20... Qe3+ 21. Kxh1 $18 *
+
+

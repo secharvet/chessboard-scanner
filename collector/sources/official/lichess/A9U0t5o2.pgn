@@ -1,0 +1,111 @@
+[Event "U Chicago Session: Chapter 1"]
+[Date "2022.05.15"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "U Chicago Session"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/A9U0t5o2/rpR8pcWU"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[FEN "7k/6r1/p7/P7/1P4P1/2PQ1PKP/8/8 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2022.05.15"]
+[UTCTime "18:00:07"]
+
+1... Rg6 2. Qxg6 (2. Qf5 Kg7 3. Qxg6+ Kh8 { [%cal Gf3f4] } 4. f4) *
+
+
+[Event "Rated Blitz tournament https://lichess.org/tournament/xUKNRz2i"]
+[Site "https://lichess.org/IzKE4X3I"]
+[Date "2022.05.15"]
+[White "ChessWizard521"]
+[Black "EricRosen"]
+[Result "0-1"]
+[WhiteElo "2646"]
+[WhiteTitle "GM"]
+[BlackElo "2637"]
+[BlackTitle "IM"]
+[TimeControl "300+3"]
+[Termination "Time forfeit"]
+[Variant "Standard"]
+[ECO "B30"]
+[Opening "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack"]
+[StudyName "U Chicago Session"]
+[ChapterName "GM ChessWizard521 (2646) - IM EricRosen (2637)"]
+[ChapterURL "https://lichess.org/study/A9U0t5o2/zyqV5aMC"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 { [%clk 0:02:30] } 1... c5 { [%clk 0:02:30] } 2. Nf3 { [%clk 0:02:29] } 2... Nc6 { [%clk 0:02:30] } 3. Bb5 { [%clk 0:02:28] } 3... e6 { [%clk 0:02:29] } 4. O-O { [%clk 0:02:27] } 4... Nge7 { [%clk 0:02:28] } 5. d4 { [%clk 0:02:26] } 5... cxd4 { [%clk 0:02:27] } 6. Nxd4 { [%clk 0:02:25] } 6... a6 { [%clk 0:02:25] } 7. Be2 { [%clk 0:02:23] } 7... Qc7 { [%clk 0:02:20] } 8. Nc3 { [%clk 0:02:21] } 8... Nxd4 { [%clk 0:02:12] } 9. Qxd4 { [%clk 0:02:19] } 9... Nc6 { [%clk 0:02:12] } 10. Qd1 { [%clk 0:02:17] } 10... Be7 { [%clk 0:02:07] } 11. Be3 { [%clk 0:02:15] } 11... O-O { [%clk 0:02:05] } 12. Qd2 { [%clk 0:02:14] } 12... Ne5 { [%clk 0:01:58] } 13. Bf4 { [%clk 0:01:52] } 13... d6 { [%clk 0:01:57] } 14. Rad1 { [%clk 0:01:47] } 14... b5 { [%clk 0:01:56] } 15. a3 { [%clk 0:01:45] } 15... Bb7 { [%clk 0:01:55] } 16. Bg3 { [%clk 0:01:42] } 16... Rfd8 { [%clk 0:01:54] } 17. Qc1 { [%clk 0:01:30] } 17... Rac8 { [%clk 0:01:53] } 18. f4 { [%clk 0:01:25] } 18... Nc4 { [%clk 0:01:52] } 19. Bxc4 { [%clk 0:01:24] } 19... Qxc4 { [%clk 0:01:51] } 20. Rfe1 { [%clk 0:01:22] } 20... a5 { [%clk 0:01:34] } 21. Bf2 { [%clk 0:01:12] } 21... b4 { [%clk 0:01:30] } 22. axb4 { [%clk 0:01:12] } 22... axb4 { [%clk 0:01:30] } 23. Rd4 { [%clk 0:01:11] } 23... Qc5 { [%clk 0:01:22] } 24. Na4 { [%clk 0:01:09] } 24... Qxc2 { [%clk 0:01:04] } 25. Qxc2 { [%clk 0:01:09] } 25... Rxc2 { [%clk 0:01:04] } 26. Rxb4 { [%clk 0:01:08] } 26... Bc6 { [%clk 0:01:02] } 27. Nc3 { [%clk 0:01:05] } 27... d5 { [%cal Gb4b6] [%clk 0:00:57] } 28. Rb6 { [%clk 0:01:02] } 28... Rxf2 { [%clk 0:00:41] } (28... Ba8) 29. Rxc6 { [%clk 0:01:00] } 29... Rxb2 { [%clk 0:00:41] } 30. exd5 { [%clk 0:00:59] } 30... Bf6 { [%clk 0:00:33] } 31. dxe6 { [%clk 0:00:55] } 31... fxe6 { [%clk 0:00:32] } 32. Ne4 { [%clk 0:00:51] } 32... Kf7 { [%clk 0:00:28] } 33. Nd6+ { [%clk 0:00:43] } 33... Ke7 { [%clk 0:00:27] } 34. Nf5+ { [%clk 0:00:39] } 34... Kf7 { [%clk 0:00:26] } 35. Nd6+ { [%clk 0:00:32] } 35... Kg6 { [%clk 0:00:24] } 36. Rxe6 { [%clk 0:00:30] } 36... Ra8 { [%csl Gg1] [%clk 0:00:19] } 37. f5+ { [%clk 0:00:29] } 37... Kh5 { [%clk 0:00:16] } 38. Re1 { [%clk 0:00:25] } 38... Raa2 { [%clk 0:00:15] } 39. Rc4 { [%clk 0:00:13] } 39... Rxg2+ { [%clk 0:00:13] } 40. Kh1 { [%clk 0:00:12] } 40... Rxh2+ { [%clk 0:00:13] } 41. Kg1 { [%clk 0:00:12] } 41... Rag2+ { [%clk 0:00:12] } 42. Kf1 { [%clk 0:00:11] } 42... Rf2+ { [%clk 0:00:12] } 43. Kg1 { [%clk 0:00:11] } 43... Rhg2+ { [%clk 0:00:11] } 44. Kh1 { [%clk 0:00:10] } 44... Bg5 { [%clk 0:00:09] } 45. Ne4 { [%clk 0:00:09] } 45... Rh2+ { [%clk 0:00:08] } 46. Kg1 { [%clk 0:00:08] } 46... Rfg2+ { [%clk 0:00:08] } 47. Kf1 { [%clk 0:00:08] } 47... Bh4 { [%clk 0:00:07] } 48. Re3 { [%clk 0:00:05] } 48... Ra2 { [%clk 0:00:06] } 49. Kg1 { [%clk 0:00:03] } 49... Rhg2+ { [%clk 0:00:05] } 50. Kh1 { [%clk 0:00:03] } 50... Rh2+ { [%clk 0:00:05] } 51. Kg1 { [%clk 0:00:03] } 51... Rag2+ { [%clk 0:00:04] } 52. Kf1 { [%clk 0:00:02] } 52... Rb2 { [%clk 0:00:04] } 53. Kg1 { [%clk 0:00:02] } 53... Rhg2+ { [%clk 0:00:04] } 54. Kh1 { [%clk 0:00:02] } 54... g5 { [%clk 0:00:02] } 55. Ng3+ { [%clk 0:00:01] } 55... Bxg3 { [%clk 0:00:01] } 56. Rxg3 { [%clk 0:00:01] } 56... Rxg3 { [%clk 0:00:01] } 57. f6 { [%clk 0:00:01] } 57... Rh3+ { [%clk 0:00:01] } 58. Kg1 { [%clk 0:00:00] } 58... Rg3+ { [%clk 0:00:01] } 59. Kh1 { [%clk 0:00:00] } 59... Rf3 { [%clk 0:00:00] } 60. Kg1 { [%clk 0:00:00] } 60... Rf4 { 0-1 Black wins on time. } { [%clk 0:00:00] } 0-1
+
+
+[Event "Rated Blitz tournament https://lichess.org/tournament/xUKNRz2i"]
+[Site "https://lichess.org/1xfvcmtY"]
+[Date "2022.05.15"]
+[White "EricRosen"]
+[Black "wgraif"]
+[Result "1-0"]
+[WhiteElo "2632"]
+[WhiteTitle "IM"]
+[BlackElo "2613"]
+[BlackTitle "NM"]
+[TimeControl "300+3"]
+[Termination "Time forfeit"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "U Chicago Session"]
+[ChapterName "IM EricRosen (2632) - NM wgraif (2613)"]
+[ChapterURL "https://lichess.org/study/A9U0t5o2/DpJVrGDi"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 { [%clk 0:05:00] } 1... Nf6 { [%clk 0:05:00] } 2. Bf4 { [%csl Gf4,Gd4] [%clk 0:05:01] } (2. Nf3 d5 3. Bf4) 2... c5 { [%clk 0:05:00] } 3. e3 { [%clk 0:05:01] } (3. d5 b5 (3... d6 { [%csl Gd6] } 4. Nc3 e5) 4. f3 (4. a4 b4 5. f3 g6 { [%csl Rf4,Rb2,Gh5][%cal Gf8g7,Gg7b2,Gf6h5] })) 3... Qb6 { [%clk 0:04:59] } 4. Na3 { [%clk 0:05:02] } (4. Nc3 { [%cal Gb1c3] } 4... a6) 4... Qxb2 { [%clk 0:04:39] } 5. Nb5 { [%clk 0:05:03] } 5... Nd5 { [%clk 0:04:41] } 6. a3 { [%clk 0:04:51] } 6... a6 { [%clk 0:04:16] } 7. Rb1 { [%clk 0:04:53] } 7... Qa2 { [%clk 0:04:14] } 8. Qc1 { [%clk 0:04:34] } 8... axb5 { [%clk 0:04:10] } 9. Ra1 { [%clk 0:04:36] } 9... Qxa1 { [%clk 0:04:07] } 10. Qxa1 { [%clk 0:04:38] } 10... e5 { [%clk 0:03:07] } 11. Bxe5 { [%clk 0:04:14] } 11... c4 { [%clk 0:02:54] } 12. Bxb8 { [%clk 0:03:57] } 12... Rxa3 { [%clk 0:01:40] } 13. Qb2 { [%clk 0:03:40] } 13... Bb4+ { [%clk 0:01:34] } 14. Ke2 { [%cal Ga3a2] [%clk 0:03:35] } 14... O-O { [%clk 0:00:55] } 15. g3 { [%csl Gh1,Gf3][%cal Gb7h1,Ge2f3] [%clk 0:03:24] } 15... d6 { [%clk 0:00:36] } (15... Ra2 16. Qc1 Nc3+ 17. Kf3 { [%csl Gb6][%cal Gb7b6] } 17... b6) 16. Bh3 { [%clk 0:02:17] } 16... Ra2 { [%clk 0:00:22] } 17. Qc1 { [%clk 0:01:45] } 17... Ba3 { [%clk 0:00:21] } 18. Qf1 { [%clk 0:01:39] } 18... Rxc2+ { [%clk 0:00:21] } (18... f5) 19. Kf3 { [%clk 0:01:42] } 19... Bxh3 { [%clk 0:00:22] } 20. Qxh3 { [%clk 0:01:37] } 20... Rxb8 { [%clk 0:00:22] } 21. Qf5 { [%clk 0:01:39] } 21... Nb4 { [%clk 0:00:19] } 22. Qxb5 { [%clk 0:01:38] } 22... Nd3 { [%clk 0:00:07] } 23. Nh3 { [%clk 0:01:41] } 23... Bb4 { [%clk 0:00:06] } 24. Ra1 { [%clk 0:01:28] } 24... Ne1+ { [%clk 0:00:07] } 25. Kg4 { [%clk 0:01:20] } 25... h5+ { [%clk 0:00:08] } 26. Kxh5 { [%clk 0:01:19] } 26... Bc3 { [%clk 0:00:08] } 27. Ra7 { [%clk 0:01:08] } 27... Bd2 { [%clk 0:00:07] } 28. Qxb7 { [%clk 0:00:42] } 28... Rf8 { [%clk 0:00:05] } 29. Qe4 { 1-0 White wins on time. } { [%clk 0:00:38] } 1-0
+
+
+[Event "U Chicago Session: Chapter 4"]
+[Date "2019.11.14"]
+[White "Anti Anti London"]
+[Result "*"]
+[Annotator "Eric"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "U Chicago Session"]
+[ChapterName "Chapter 4"]
+[ChapterURL "https://lichess.org/study/A9U0t5o2/Iu1hEgGL"]
+
+1. d4 Nf6 2. Bf4 c5 3. e3 Qb6 4. Na3 { [%cal Gb1a2] } (4. Nc3 a6) (4. Nf3 Qxb2 5. Nbd2) 4... Qxb2 (4... a6 5. Nc4 Qa7 6. dxc5 Qxc5 7. e4!! Nxe4? (7... d6? 8. Be3) (7... b5 8. Be3 Qc7 9. Nb6) (7... Qc6 8. Be3) 8. Be3 Qc6 9. Nb6) (4... cxd4 5. exd4 Nd5 6. Bc1 (6. Nc4 Qe6+ 7. Be3 b5 8. Ne5 Nc6) 6... e6 7. Nc4 Qc7 8. Ne3 (8. Nf3 b6 9. c3 Ba6 10. Ncd2 Bxf1 11. Nxf1 Nc6 12. Ng3 Be7 13. O-O O-O 14. Re1 Nf6 15. Bg5 d5 16. Qd2 h6 17. Bf4 Bd6 18. Bxh6 gxh6 19. Qxh6 Bxg3 20. fxg3 Nh7 21. Ng5 Nxg5 22. Qxg5+ Kh8 23. Qh6+ Kg8 24. Qg5+ Kh8 25. Rf1 Ne7 26. Rf6 Ng8 27. Rf4 { 1-0 (27) Rosen,E (2342) -Chan,L (2261) Melbourne 2018 }) 8... Nxe3 (8... Nf6 9. Bd3) 9. Bxe3 b6 10. Nf3 Bb7 11. Bd3 d6 (11... Nc6 12. a3 Be7 13. c4 d5) 12. c4 g6 13. h4 h5 14. d5 e5 15. Ng5 Bg7 16. Bxg6 fxg6 17. Qd3) 5. Nb5 Nd5 6. a3 (6. Rb1 Qxa2 7. Ra1 Qb2 8. Rb1 Qa2 9. Ra1) 6... a6 7. Rb1 Qa2 8. Qc1 axb5 9. Ra1 Qxa1 10. Qxa1 e5 (10... Nc6 11. Bxb5 cxd4 12. Bxc6 bxc6 13. Qxd4 Rxa3 14. Nf3) 11. dxe5 { [%csl Rd4,Ra3][%cal Gc5c4] } (11. Bxe5 c4 { [%csl Ra3] } 12. Bxb8 Rxa3 13. Qb2 Bb4+ 14. Ke2 Ra2 15. Qc1 $17 Bc3 { [%cal Ge3e4] } (15... Ba3 16. Qe1 Bb4 17. Qc1 O-O 18. Kf3)) 11... c4 12. Qd4 { [%csl Gd4] } 12... Nxf4 13. Qxf4 Bxa3 14. g3 Bb4+ 15. Ke2 Ra2 16. Bh3 Rxc2+ 17. Kf3 { [%csl Gf3][%cal Gd1f3] } 17... O-O 18. Bf5 Rc1 19. Kg2 b6 20. Nf3 Rxh1 21. Kxh1 Nc6 22. h4 Be7 23. Bb1 *
+
+
+[Event "U Chicago Session: knights tango"]
+[Date "2022.05.15"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A50"]
+[Opening "Mexican Defense"]
+[StudyName "U Chicago Session"]
+[ChapterName "knights tango"]
+[ChapterURL "https://lichess.org/study/A9U0t5o2/vWmJ32nq"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2022.05.15"]
+[UTCTime "18:28:46"]
+
+1. d4 Nf6 2. c4 Nc6 *
+
+
+[Event "U Chicago Session: spanish"]
+[Date "2022.05.15"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C89"]
+[Opening "Ruy Lopez: Marshall Attack"]
+[StudyName "U Chicago Session"]
+[ChapterName "spanish"]
+[ChapterURL "https://lichess.org/study/A9U0t5o2/KPc5bPoB"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2022.05.15"]
+[UTCTime "18:34:21"]
+
+1. e4 e5 2. Nf3 Nc6 (2... Bc5 3. Nxe5 (3. Bc4 Nf6 4. Nxe5 Nc6 5. Nxf7 (5. Nxc6 dxc6 6. d3 Ng4) 5... Bxf2+) 3... Nc6 { [%csl Gc6] } 4. Nxc6 dxc6 5. c3 (5. Be2 Nf6) 5... Qh4 { [%cal Gh4f2,Gh4e4] } 6. Qf3 Qh6 7. Bc4 Nf6 8. O-O Bd6 9. h3 Bf4 { [%csl Gh6,Gf4,Gf6,Ge8] }) 3. Bb5 a6 4. Ba4 Nf6 5. O-O Be7 6. Re1 b5 7. Bb3 O-O 8. c3 (8. d4 Nxd4 (8... d6 9. c3 { [%csl Gg4][%cal Gc8g4] } 9... Bg4 10. Be3 { [%csl Ge4][%cal Gf6e4] } 10... Nxe4 (10... exd4 11. cxd4 d5 12. e5 Ne4 13. h3 Bh5 14. Nbd2 Nxd2 15. Qxd2 Bb4 (15... Bxf3 { [%cal Gg2f3] } 16. Qc3) 16. Qc2 Bxe1 17. Qxc6 { [%csl Ge1,Rd5,Gd4,Ge5][%cal Gb3d5] }) 11. Bd5 { [%cal Gd5c6,Gd5e4] }) 9. Nxd4 (9. Bxf7+ Rxf7 10. Nxe5 Ne6 11. Nxf7 Kxf7 12. e5 { [%csl Gf6][%cal Ge5f6] }) 9... exd4 10. Qd2 (10. Qxd4 c5 { [%csl Gc4][%cal Gc5c4] })) 8... d5 *
+
+

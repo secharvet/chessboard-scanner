@@ -1,0 +1,20 @@
+[Event "Reversed Grünfeld: Vallejo Pons Variation"]
+[Date "2017.01.16"]
+[White "Reversed Grünfeld"]
+[Black "Vallejo Pons Variation"]
+[Result "*"]
+[Annotator "TonyRo"]
+[Variant "Standard"]
+[ECO "A08"]
+[Opening "Zukertort Opening: Reversed Grünfeld"]
+[StudyName "Reversed Grünfeld"]
+[ChapterName "Vallejo Pons Variation"]
+[ChapterURL "https://lichess.org/study/lta7bEDd/anp9cql1"]
+
+1. Nf3 d5 2. g3 c5 3. Bg2 Nc6 4. d4 cxd4 5. Nxd4 e5 6. Nxc6 bxc6 7. c4 Nf6 8. O-O Be6 9. Nc3 Qd7 10. Qa4 Rc8 11. cxd5 cxd5 12. Qxd7+ Kxd7 13. Rd1 Bc5!? { Apparently a Vallejo Pons patent. } { [%cal Rc1g5,Rf6g4] } 14. Na4! { This idea seems far and away the strongest - 14.Bg5 right away allows the very annoying 14...Ng4, so White kicks the bishop away immediately. It also becomes relevant down the line that Black can't deal with pressure on his a-pawn with ...a6 on account of the fork with Nb6. } (14. Nxd5 Nxd5 15. Bxd5 Bxd5 16. Rxd5+ Ke6 17. Rd2 Rhd8 $44 { is Black's main idea - Black is fully mobilized,
+well centralized, and White's coordination and development is pretty awkward. } 18. Kf1 Bb6 19. Rxd8 Rxd8 20. Be3 Bxe3 21. fxe3 Rd2 { P.Svidler-F.Vallejo Pons,
+European Team Championships 2015 }) 14... h6!? { Black decides to stop Bg5, but keeping the two bishops and allowing it is also possible, for example: } (14... Be7 15. Bg5 Ng8!? (15... Rhd8 16. Bxf6 Bxf6 17. Bxd5 Ke7 18. Bxe6 Kxe6 19. Nc3 $14) 16. Be3 (16. Bxe7 Nxe7 17. b4 Rhd8 18. Nc5+ Ke8 19. e3 a5) 16... d4 17. Bd2 Nh6 { A.Ananikian-E.Tsygankov, Correspondence 2013 } 18. e3 $146 Nf5 19. exd4 Nxd4 20. Bc3 $14 { Surely White must be somewhat better here, with Black's misplaced
+king on d7 and the irritating central pressure. }) (14... Bd6 15. Bg5 d4 16. e3 dxe3 17. Bxe3 Ke7 (17... Rc7? 18. Nc5+ Ke7 19. Nb7! $18) 18. Bxa7 Rc2 19. b3 h6 20. h3 { K.Wettstein-F.Sueess, Correspondence 2009. White is obviously much better. } { [%csl Gb3,Ga2] }) 15. Nxc5+ Rxc5 16. f4! e4 17. h3 { [%csl Gd4,Gc1,Gg2,Ya7,Yd7][%cal Bc1e3,Be3d4,Bg3g4] } 17... Rhc8 18. Be3 Rc2 19. Bxa7 Rxe2 (19... Rxb2 20. g4 Ke8 21. a4 Rxe2 22. a5 $16) 20. g4 g6 21. a4 $16 { F.Kahl-J.Lubas, Correspondence
+2015 } { [%csl Ga4,Gb2,Gd4,Yd7,Ye6][%cal Ga7d4,Bg2f1] } *
+
+

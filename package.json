@@ -1,0 +1,24 @@
+{
+  "name": "chess",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "postinstall": "mkdir -p vendor && cp node_modules/chess.js/dist/esm/chess.js vendor/chess.js",
+    "test": "node --test tests/**/*.test.js",
+    "test:pawn": "node --test tests/pawn-structure.test.js",
+    "dev": "bash scripts/dev.sh",
+    "check": "node scripts/browser-console.mjs",
+    "check:headed": "HEADED=1 node scripts/browser-console.mjs",
+    "screenshot": "SCREENSHOT=1 node scripts/screenshot-all.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chess.js": "^1.4.0",
+    "playwright": "^1.49.0",
+    "stockfish": "^18.0.7"
+  }
+}

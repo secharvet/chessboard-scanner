@@ -1,0 +1,84 @@
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2022.12.06"]
+[White "IMRosen"]
+[Black "Perecke"]
+[Result "0-1"]
+[WhiteElo "2671"]
+[BlackElo "2391"]
+[TimeControl "180+1"]
+[Termination "Perecke won by checkmate"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "TT Dec 6"]
+[ChapterName "IMRosen - Perecke"]
+[ChapterURL "https://lichess.org/study/pbhusKuX/4mu73qaW"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 Nf6 2. Bf4 d5 3. e3 c5 4. Nf3 Nc6 5. Nbd2 Qb6 6. dxc5 Qxb2 7. Rb1 Qc3 8. Bb5 e6 9. O-O Be7 10. e4 O-O 11. e5 Ne4 12. Nxe4 (12. Rb3) 12... dxe4 13. Ng5 Bxg5 14. Bxg5 Qxe5 15. Be3 Rd8 16. Bxc6 Rxd1 17. Rfxd1 h6 18. Rd8+ Kh7 19. Be8 Bd7 20. Rxa8 Bxe8 21. Rxe8 f5 22. g3 Qc3 23. Rxb7 Qe1+ 24. Kg2 Qd1 25. h4 f4 26. Bxf4 Qf3+ 27. Kg1 e3 28. Rxg7+ Kxg7 29. Bxe3 Qd1+ 30. Kh2 Qxc2 31. Rxe6 Qxa2 32. Rxh6 a5 33. Ra6 a4 34. c6 Qc2 35. Ra7+ Kf6 36. c7 Ke6 37. Bf4 Qxf2+ 38. Kh3 Qf1+ 39. Kg4 Qe2+ 40. Kg5 Qb5+ 41. Kh6 Kd7 42. Ra8 Qc6+ 43. Kg7 Qxa8 44. h5 a3 45. h6 a2 46. Be5 a1=Q 47. Bxa1 Qxa1+ 48. Kg8 Kxc7 49. h7 Qa2+ 50. Kg7 Qb2+ 51. Kf7 Qh8 52. Kg6 Kd7 53. g4 Ke7 54. g5 Kf8 55. Kh6 Qg7+ 56. Kh5 Qxh7+ 57. Kg4 Kg7 58. Kf4 Kg6 59. Ke5 Qh5 60. Kf4 Qxg5+ 61. Kf3 Qf5+ 62. Kg3 Kg5 63. Kg2 Qf4 64. Kh3 Qg4+ 65. Kh2 Kf4 66. Kh1 Kf3 67. Kh2 Qg2# { 0-1 Black wins. } 0-1
+
+
+[Event "Live Chess - chess"]
+[Site "Chess.com"]
+[Date "2022.12.06"]
+[White "esrosenberg"]
+[Black "IMRosen"]
+[Result "0-1"]
+[WhiteElo "2406"]
+[BlackElo "2674"]
+[TimeControl "180+1"]
+[Termination "IMRosen won by resignation"]
+[Variant "Standard"]
+[ECO "D02"]
+[Opening "Queen's Pawn Game: Symmetrical Variation"]
+[StudyName "TT Dec 6"]
+[ChapterName "esrosenberg - IMRosen"]
+[ChapterURL "https://lichess.org/study/pbhusKuX/kephBuVW"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 d5 2. Nf3 Nf6 3. c3 c5 4. dxc5 e6 5. Be3 a5 6. c4 a4 7. Na3 Bxc5 8. Bxc5 Qa5+ 9. Qd2 Qxc5 10. cxd5 Ne4 11. Qd4 Qa5+ 12. Nd2 exd5 13. Nc4 dxc4 14. Qxe4+ Be6 15. Rc1 O-O 16. Rc3 Rd8 17. e3 a3 18. Bxc4 axb2 19. Bxe6 Qxc3 20. Bxf7+ Kxf7 21. O-O Rxd2 22. Qxb7+ Nd7 23. Qxa8 Qd3 24. Qf3+ Ke7 25. Qb7 Qxf1+ 26. Kxf1 Rd1+ 27. Ke2 b1=Q { 0-1 Black wins. } 0-1
+
+
+[Event "Live Chess - chess"]
+[Site "Chess.com"]
+[Date "2022.12.06"]
+[White "muchojogo"]
+[Black "IMRosen"]
+[Result "0-1"]
+[WhiteElo "2479"]
+[BlackElo "2678"]
+[TimeControl "180+1"]
+[Termination "IMRosen won by resignation"]
+[Variant "Standard"]
+[ECO "B75"]
+[Opening "Sicilian Defense: Dragon Variation, Yugoslav Attack, Early Deviations"]
+[StudyName "TT Dec 6"]
+[ChapterName "muchojogo - IMRosen"]
+[ChapterURL "https://lichess.org/study/pbhusKuX/lc1AMHuO"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 c5 2. Nf3 d6 3. d4 Nf6 4. Nc3 cxd4 5. Nxd4 g6 6. Be3 Bg7 7. f3 a6 8. Qd2 h5 9. Bc4 b5 10. Bb3 Bb7 11. O-O Nbd7 12. Rae1 Rc8 13. Nd5 Nc5 14. Nxf6+ Bxf6 15. Bg5 Bxg5 16. Qxg5 Nxb3 17. Nxb3 Rxc2 18. e5 dxe5 19. Qxe5 O-O 20. Qxe7 Qxe7 21. Rxe7 Bd5 22. Rf2 Rfc8 23. Ree2 Bxb3 24. axb3 Rc1+ 25. Rf1 Rxf1+ 26. Kxf1 Rc1+ 27. Kf2 Rb1 28. Ke3 Kf8 29. Kd3 Rc1 30. Kd2 Rc6 31. g4 h4 32. f4 Kg7 33. Re3 Kf6 34. Rh3 g5 35. f5 Ke5 36. Rf3 Ke4 37. Rf1 Rd6+ 38. Ke2 Rc6 39. Kd2 Rd6+ 40. Ke2 f6 41. h3 Rd4 42. Ra1 Rd6 43. Rc1 Kf4 44. Rc3 b4 45. Rf3+ Ke4 46. Re3+ Kf4 47. Rf3+ Ke5 48. Re3+ Kf4 49. Re6 Rd7 50. Rxf6 Kg3 51. Rxa6 Kxh3 52. f6 Kxg4 53. Re6 Rf7 54. Re4+ Kg3 55. Rxb4 Rxf6 56. Rc4 h3 57. Rc3+ Kg2 58. Rc4 Rf4 { 0-1 Black wins. } 0-1
+
+
+[Event "Live Chess - chess"]
+[Site "Chess.com"]
+[Date "2022.12.06"]
+[White "IMRosen"]
+[Black "vidavi"]
+[Result "0-1"]
+[WhiteElo "2666"]
+[BlackElo "2509"]
+[TimeControl "180+1"]
+[Termination "vidavi won on time"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "TT Dec 6"]
+[ChapterName "IMRosen - vidavi"]
+[ChapterURL "https://lichess.org/study/pbhusKuX/lnL9biR2"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 Nf6 2. Bf4 e6 3. e3 Bd6 4. Bg3 b6 5. Qf3 Nc6 6. Bxd6 cxd6 7. Qg3 O-O 8. Qxd6 Bb7 9. Nd2 Rc8 10. c3 e5 11. dxe5 Ng4 12. Ngf3 Re8 13. Bc4 (13. Nc4 b5 14. h3) 13... Ncxe5 14. Bb3 Rc6 15. Qd4 Rf6 16. Bd5 Ba6 17. h3 Nd3+ 18. Qxd3 Bxd3 19. hxg4 Rd6 20. Bb3 b5 21. g5 a5 22. a4 Qb6 23. Rh4 Rxe3+ 24. fxe3 Qxe3+ 25. Kd1 Be2+ 26. Kc1 Bxf3 27. gxf3 Qxd2+ 28. Kb1 Qe1+ 29. Ka2 Qxh4 30. axb5 a4 31. Bc2 Qc4+ 32. Ka3 Qxb5 33. Bxa4 Qc5+ 34. Kb3 Rb6+ 35. Ka2 Ra6 36. b3 g6 37. c4 Qd4 38. Rb1 Re6 39. Rb2 Re1 40. Bxd7 Qa7+ 41. Ba4 Qc5 { 0-1 Black wins on time. } 0-1
+
+

@@ -1,0 +1,47 @@
+[Event "Système de Londres — carnet (variantes commentées)"]
+[Site "Augmented"]
+[Source "londres.pgn"]
+[Annotator "Enrichissement pédagogique — arbre de répertoire"]
+[Result "*"]
+
+1. d4 {Le Londres : d4 + Nf3 + Bf4 — un plan stable que tu peux répéter contre presque tout.}
+d5 {Les Noirs occupent le centre ; la partie reste équilibrée et classique.}
+2. Nf3 {On développe avant le fou dame : ordre typique du système de Londres.}
+Nf6 {La réponse la plus naturelle ; le cavalier contrôle e4 et prépare ...e6 ou ...Bf5.}
+3. Bf4 {Le fou en f4, pas en g5 : c'est la signature du Londres. [%cal Gc1f4]}
+3... c5 {Contre immédiat au centre — la ligne la plus dynamique pour les Noirs. [%cal Gc7c5,Gd4d5]}
+(3... e6 {Structure semi-fermée, souvent transposée depuis la Française. [%csl Ge6,d5]}
+4. e3 {Le triangle e3-d4-c3 verrouille le centre blanc ; le roi pourra roquer tranquillement.}
+Bd6 {Les Noirs attaquent le fou f4 : il faudra le replier ou l'échanger.}
+5. c3 {Consolidation : d4 est défendu, on prépare Nbd2 sans bloquer la dame.}
+c5 {Contre au centre, comme dans la variante principale — les Noirs cherchent de l'activité.}
+6. Nbd2 {Développement flexible ; le cavalier ne bloque pas le fou dame.}
+Nc6 {Développement harmonieux ; pression sur d4 et case e5 en vue.}
+7. Bg3 {Le fou se met en sécurité tout en gardant la diagonale vers b8. [%cal Gf4g3]}
+O-O {Les Noirs roquent : priorité à la sécurité du roi avant l'ouverture du centre.}
+8. Bd3 {Le fou vise le pion c5 et participe au contrôle du centre ; roque blanc en vue.})
+(3... Bf5 {Le fou sort avant ...e6 : développement actif, ligne très jouée. [%cal Gc8f5]}
+4. e3 {Solidité d'abord : le centre ne doit pas s'effondrer.}
+e6 {Structure solide ; le fou f8 pourra se développer en e7 ou rester en retrait.}
+5. c3 {Soutien de d4 ; attention : le pion c3 empêche plus tard Qb2.}
+Bd6 {Encore cette idée : chasser ou échanger le fou f4.}
+6. Nbd2 {Jeu positionnel ; les Blancs n'ont pas besoin de tactique ici.}
+Nc6 {Développement classique ; les Noirs préparent ...O-O et ...c5.}
+7. Bg3 {Retrait du fou : on évite les échanges forcés tout en restant actif. [%cal Gf4g3]}
+O-O {Roque noir : la position est équilibrée, la partie se joue sur le milieu de partie.}
+8. Bd3 {Le fou blanc prend la grande diagonale ; plan typique e4 ou Ne5 selon la suite.})
+4. e3 {Soutien de d4 ; on prépare c3 et un roque court harmonieux.}
+Nc6 {Développement le plus fréquent après ...c5.}
+5. c3 {Le centre blanc devient difficile à casser ; base du plan Londres.}
+Qb6 {Pression sur b2 : les Noirs cherchent la tactique avant que les Blancs aient fini. [%cal Gd8b6,Rb2]}
+6. Qb3 {La seule bonne défense : protège b2 et menace b7/d5. [%cal Gd1b3]}
+Qxb3 {Échange presque forcé : après quoi la partie devient stratégique et calme.}
+7. axb3 {La colonne a s'ouvre ; le pion b3 contrôle c4 et peut avancer plus tard.}
+cxd4 {Les Noirs libèrent leur jeu central.}
+8. exd4 {Pion d4 isolé mais bien soutenu ; les pièces blanches restent actives.}
+Bf5 {Le fou en f5 est une case clé : il vise c2 et participe à la pression.}
+9. Bd3 {On vise l'échange de fous ou g4 pour chasser le fou noir.}
+Be6 {Retrait solide : le fou reste en diagonale sans être chassé tout de suite.}
+10. Nbd2 {Développement terminé ; les Blancs peuvent roquer et jouer pour l'aile dame.}
+h6 {Petit coup utile : prépare ...O-O et empêche Fg5×f6 dans certaines positions.}
+*

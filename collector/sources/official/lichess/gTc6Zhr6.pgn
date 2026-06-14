@@ -1,0 +1,103 @@
+[Event "Pawn structures: Introduzione per capire le strutture pedonali"]
+[Date "2025.10.23"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Pawn structures"]
+[ChapterName "Introduzione per capire le strutture pedonali"]
+[ChapterURL "https://lichess.org/study/gTc6Zhr6/YEz7SDR6"]
+[Annotator "https://lichess.org/@/AleTara"]
+[FEN "1n3rk1/3rbppp/p2p4/4pP2/Ppq1P3/1N2B3/1PP3PP/R2Q1R1K w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.23"]
+[UTCTime "19:49:04"]
+
+{ Come diceva Phillidor "I pedoni sono il cuore degli scacchi", e quest'affermazione è assolutamente vera. Osserviamo questa posizione: notiamo subito che la donna nera in c4 attacca il pedone e, che è difficile da difendere. La mossa corretta in questa posizione è... }
+1. f6! { f6! Una grandissima mossa di sacrificio } { [%csl Gf6][%cal Ge7f6,Gg7f6] } 1... Bxf6 (1... gxf6 2. Bh6 Qxe4 3. Rf3 Rc8 4. Rg3+ Kh8 5. Bg7+ Kg8 6. Bh6+ Kh8 7. Bg7+ Kg8 8. Qh5 Qg6 9. Bh6 { Dopo molte mosse il bianco guadagna la donna nera }) 2. Rxf6 gxf6 3. Qg4+ Kh8 4. Qh4 Qe6 5. Nd4 exd4 6. Bxd4 Nc6 7. Bxf6+ Qxf6 8. Qxf6+ { Posizione completamente vinta per il bianco } *
+
+
+[Event "Pawn structures: Kasparov-Karpov"]
+[Date "2025.10.24"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C92"]
+[Opening "Ruy Lopez: Closed, Flohr System"]
+[StudyName "Pawn structures"]
+[ChapterName "Kasparov-Karpov"]
+[ChapterURL "https://lichess.org/study/gTc6Zhr6/Nb4ghrsn"]
+[Annotator "https://lichess.org/@/AleTara"]
+[UTCDate "2025.10.24"]
+[UTCTime "18:21:26"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Be7 6. Re1 b5 7. Bb3 d6 8. c3 O-O 9. h3 Bb7 10. d4 Re8 11. Nbd2 Bf8 12. a4 h6 13. Bc2 exd4 14. cxd4 Nb4 15. Bb1 bxa4 16. Rxa4 a5 17. Ra3 Ra6 18. Nh2 g6 { La partita si apre con un'apertura spagnola, ma Karpov, che gioca con il nero e che per molto tempo ha giocato questa posizione, sa contrattaccare facendo pressione sul pedone e del bianco } { [%csl Ge4] } 19. f3 { La mossa di Kasparov è molto semplice, ma allo stesso tempo efficace. Gli basta una spinta in f3 per consolidare il centro e assicurarsi una vittoria } 19... Qd7 20. Nc4 Qb5 21. Rc3 Bc8 22. Be3 c6 23. Qc1 Kh7 24. Ng4 Ng8 25. Bxh6 Bxh6 26. Nxh6 Nxh6 27. Nxd6 Qb6 28. Nxe8 Qxd4+ 29. Kh1 Qd8 30. Rd1 Qxe8 31. Qg5 Ra7 32. Rd8 { In questa posizione Karpov abbandona, ma tutto nasce dalla spinta f3 che consolida il centro del bianco. Ciò ci fa capire quanto siano importanti i pedoni e le strutture che si creano con essi. } *
+
+
+[Event "Pawn structures: Romanishin-Mueller"]
+[Date "2025.10.24"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C02"]
+[Opening "French Defense: Advance Variation, Main Line"]
+[StudyName "Pawn structures"]
+[ChapterName "Romanishin-Mueller"]
+[ChapterURL "https://lichess.org/study/gTc6Zhr6/foygpthg"]
+[Annotator "https://lichess.org/@/AleTara"]
+[UTCDate "2025.10.24"]
+[UTCTime "19:46:18"]
+
+1. e4 e6 2. d4 d5 3. e5 c5 4. c3 Nc6 5. Nf3 Qb6 6. a3 c4 7. Be2 Na5 8. Nbd2 Bd7 9. O-O h6 10. a4 O-O-O 11. Ne1 { La partita inizia con una difesa francese, dove il nero si dimostra ambizioso arroccando lungo. Ora il bianco avrebbe due piani: attaccare sul lato di donna o potrebbe lavorare sul lato di re, preparando magari una f4-f5. } 11... f5?! { Il nero gioca f5, una mossa che strutturalmente potrebbe sembrare sensata, perchè il nero non deve più temere una spinta in f5, ma dinamicamente è brutta perchè lo lascia senza gioco sul lato di re. } 12. b4 cxb3 13. Nd3 Kb8 14. Ba3 Bxa3 15. Rxa3 Rc8 16. Qa1 Ne7 17. Rb1 { Dopo Tb1 è chiaro che ora il bianco avrebbe dominato l'unica zona della scacchiera che stava per aprirsi e poteva iniziare un attacco. Il nero non poteva avere tempo per contrattaccare il pedone in c3 e finisce per soccombere. } { [%csl Gc3] } 17... Qc7 18. Nc5 Ka8 19. Ndxb3 Nec6 20. Bb5 Nxb3 21. Raxb3 Rb8 22. Bxc6 Bxc6 23. Nxe6 Qe7 24. Nc5 f4 25. f3 g5 26. a5 Rh7 27. Rb6!! Rc8 28. a6! bxa6 29. Qxa6 Qe8 30. Rb7 Bxb7 31. Rxb7 { Il nero ha abbandonato dopo aver realizzato che c'è matto forzato in 3 mosse. } *
+
+
+[Event "Pawn structures: Spraggett-Dominguez"]
+[Date "2025.10.24"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "E98"]
+[Opening "King's Indian Defense: Orthodox Variation, Classical System"]
+[StudyName "Pawn structures"]
+[ChapterName "Spraggett-Dominguez"]
+[ChapterURL "https://lichess.org/study/gTc6Zhr6/a0r6X8Zu"]
+[Annotator "https://lichess.org/@/AleTara"]
+[UTCDate "2025.10.24"]
+[UTCTime "20:12:58"]
+
+1. c4 g6 2. Nc3 Bg7 3. d4 Nf6 4. e4 d6 5. Nf3 O-O 6. Be2 e5 7. O-O Nc6 8. d5 Ne7 9. Ne1 Nd7 10. Nd3 f5 11. Bd2 Nf6 12. f3 f4 13. g4 h5 14. g5 Nh7 15. h4 { Il nero ha commesso l'errore di chiudere il lato di re in modo precoce e di auto intrappolarsi il cavallo in h7, che addirittura dovrebbe sacrificarsi in g5 per permettere al nero di avere più spazio. } 15... Kh8 16. Rf2 Ng8 17. Rg2 Rf7 18. c5 { Il nero non può letteralmente fare niente, mentre il bianco ha la possibilità di agire sul lato di donna e aprire le linee. } 18... Bf8 19. cxd6 cxd6 20. Be1 Be7 21. Rc1 Rg7 22. Kh1 a6 23. Bf2 Bd7 24. Na4 b5 25. Nb6 Ra7 26. Nxd7 Qxd7 27. Nb4 Qb7 28. Bf1 Nf8 29. Bg1 Nd7 30. Rgc2 Nc5 31. Nc6 Ra8 32. Bh3 Bf8 33. Bxc5 dxc5 34. Nxe5 Bd6 35. Nc6 Ne7 36. e5 { Il nero abbandona perchè la posizione del bianco è dominante e presenta un vantaggio di ben 5.5 punti } *
+
+
+[Event "Pawn structures: La formazione caro-kann"]
+[Date "2025.10.25"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Pawn structures"]
+[ChapterName "La formazione caro-kann"]
+[ChapterURL "https://lichess.org/study/gTc6Zhr6/lfsUzX5o"]
+[Annotator "https://lichess.org/@/AleTara"]
+[FEN "8/pp3ppp/2p1p3/8/3P4/8/PPP2PPP/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.25"]
+[UTCTime "21:22:13"]
+
+{ La formazione Caro-kann non è assolutamente soltanto legata all'omonima apertura, ma si evolve anche partendo dalla difesa francese quando il nero dà il centro, dal counter della partita del centro, dall'apertura catalana e dal gambetto di donna rifiutato. Possiamo notare come il bianco ha degli avamposti in c5 e e5, in particolare l'ultimo è molto importante per il bianco perchè il nero dovrebbe giocare f6 per togliere l'avamposto al bianco, indebolendosi la struttura. Il nero ha anche gli avamposti d5 e f5 ma sono distanti e poco realistici per la posizione del nero } { [%csl Ge5,Gc5,Gd5,Gf5][%cal Gf7f6] }
+ *
+
+
+[Event "Pawn structures: Passività"]
+[Date "2025.10.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C15"]
+[Opening "French Defense: Winawer Variation, Alekhine-Maróczy Gambit"]
+[StudyName "Pawn structures"]
+[ChapterName "Passività"]
+[ChapterURL "https://lichess.org/study/gTc6Zhr6/4fwq1rDT"]
+[Annotator "https://lichess.org/@/AleTara"]
+[UTCDate "2025.10.30"]
+[UTCTime "15:22:32"]
+
+{ In questa partita invece, giocata tra Lasker e Capablanca, notiamo come la passività del nero e l'assenza di controllo del centro può creare problemi al nero }
+1. e4 e6 2. d4 d5 3. Nc3 Bb4 4. Ne2 dxe4 5. a3 Be7 6. Nxe4 Nf6 { [%csl Gc3][%cal Ge4c3] } 7. N2c3 Nbd7? { Già dopo poche mosse risulta evidente che il bianco ha molto più spazio del nero, che invece si sta passivizzando } 8. Bf4! Nxe4 9. Nxe4 Nf6 10. Bd3 O-O 11. Nxf6+ Bxf6 12. c3 Qd5? { Il nero dovrebbe pensare tra un po' di mosse alla spinta c5 o e5 per avere più controllo del centro } { [%csl Gc5,Ge5][%cal Gc7c5,Ge6e5] } 13. Qe2! { Questa mossa invece mostra come la posizione del bianco sia spettacolare: si sacrifica un pedone e si evita di arroccare per ottenere iniziativa } 13... c6 { Con c6 si rientra in modo quasi perfetto nella formazione caro-kann, che in questo caso nasce da una francese. } (13... Qxg2 14. Be4 { [%cal Ge4a8,Ge4h1] } (14. O-O-O Qh3) 14... Qh3) 14. O-O Re8 15. Rad1 Bd7 16. Rfe1 { Con la prevenzione di c5 e e5 il bianco sta nettamente meglio, e si potrebbe iniziare con un attacco nell'ala di re } 16... Qa5 17. Qc2 g6 18. Be5 Bg7 19. h4 Qd8 20. h5 Qg5 21. Bxg7 Kxg7 22. Re5 Qe7 23. Rde1 Rg8 24. Qc1 Rad8 25. R1e3 Bc8 26. Rh3 *
+
+

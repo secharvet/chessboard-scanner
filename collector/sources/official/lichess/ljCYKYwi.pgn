@@ -1,0 +1,100 @@
+[Event "Openings: Hammerschlag - Gedault - King's Head Opening"]
+[Date "2022.03.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C20"]
+[Opening "King's Pawn Game: King's Head Opening"]
+[StudyName "Openings"]
+[ChapterName "Hammerschlag - Gedault - King's Head Opening"]
+[ChapterURL "https://lichess.org/study/ljCYKYwi/vuJq0lKJ"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2022.03.14"]
+[UTCTime "02:32:40"]
+
+1. f3 e5 2. e4 *
+
+
+[Event "Openings: pterodactyl"]
+[Date "2022.03.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B06"]
+[Opening "Modern Defense: Modern Pterodactyl"]
+[StudyName "Openings"]
+[ChapterName "pterodactyl"]
+[ChapterURL "https://lichess.org/study/ljCYKYwi/n6E9ZshH"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2022.03.14"]
+[UTCTime "02:34:24"]
+
+1. e4 g6 2. d4 Bg7 3. Nc3 c5 *
+
+
+[Event "Openings: ICelandic variation"]
+[Date "2022.03.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B01"]
+[Opening "Scandinavian Defense: Icelandic-Palme Gambit"]
+[StudyName "Openings"]
+[ChapterName "ICelandic variation"]
+[ChapterURL "https://lichess.org/study/ljCYKYwi/pbiEtHZE"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2022.03.14"]
+[UTCTime "02:35:08"]
+
+1. e4 d5 2. exd5 Nf6 3. c4 e6 4. dxe6 Bxe6 *
+
+
+[Event "Openings: Baeuerle Gambit"]
+[Date "2022.03.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C00"]
+[Opening "French Defense: Baeuerle Gambit"]
+[StudyName "Openings"]
+[ChapterName "Baeuerle Gambit"]
+[ChapterURL "https://lichess.org/study/ljCYKYwi/lSvHPM0g"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2022.03.14"]
+[UTCTime "02:36:59"]
+
+1. e4 e6 2. d4 b5 { [%csl Gb5] } 3. Bxb5 Bb7 4. Bd3 { [%csl Gf5] } 4... f5 5. exf5 Bxg2 6. Qh5+ g6 7. fxg6 Bg7 8. gxh7+ Kf8 9. hxg8=Q+ Kxg8 *
+
+
+[Event "ch-USA Junior GpB"]
+[Site "St Louis, MO USA"]
+[Date "2012.07.12"]
+[Round "3"]
+[White "Eric S Rosen"]
+[Black "Daniel Naroditsky"]
+[Result "1-0"]
+[WhiteElo "2328"]
+[BlackElo "2486"]
+[Variant "Standard"]
+[ECO "E73"]
+[Opening "King's Indian Defense: Averbakh Variation, Modern Defense"]
+[StudyName "Openings"]
+[ChapterName "Eric S Rosen - Daniel Naroditsky"]
+[ChapterURL "https://lichess.org/study/ljCYKYwi/IsW9xNFH"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. c4 Nf6 2. Nc3 g6 3. e4 d6 4. d4 Bg7 5. Be2 O-O 6. Bg5 Na6 7. f4 c6 8. Qd2 b5 { [%csl Gb5] } 9. cxb5 cxb5 10. Bxb5 Qb6 11. a4 Nc7 12. a5 Qb7 13. Bd3 Rb8 14. b4 Ne6 15. Nge2 Nh5 16. Bc2 Nxg5 17. fxg5 e5 18. d5 Nf4 19. Nxf4 exf4 20. Rb1 Qe7 21. O-O Qxg5 22. Ne2 Bd7 23. Bd3 Be5 24. Kh1 Qh6 25. Ng1 g5 26. Nf3 Bg7 27. Qf2 g4 { [%csl Gg4,Gf4] } 28. Qxa7 Rfd8 29. b5 gxf3 30. Rxf3 Bg4 31. Rff1 Ra8 32. Qb6 Be5 { [%csl Gb5,Ga5] } 33. a6 f3 { [%cal Ge5h2,Gh6h2] } 34. Qg1 f2 35. Rxf2 Bd4 36. Qf1 Bxf2 37. Qxf2 Bc8 38. h3 Bxh3 39. Qg3+ Bg4+ 40. Kg1 Qg7 41. b6 Qd4+ 42. Kh2 h5 43. a7 Kg7 44. Rb3 Rxa7 45. bxa7 Qxa7 46. Be2 { [%csl Gg4][%cal Ge2g4] } 46... Qd7 47. Bxg4 Qxg4 48. Qxg4+ hxg4 49. Kg3 Kg6 50. Kxg4 f6 51. Kf4 Rh8 52. Rb6 Rd8 53. Rb7 Ra8 54. Re7 Ra2 55. g3 Rf2+ 56. Ke3 Rg2 57. Kf3 Ra2 58. Re6 Kg5 59. Rxd6 Ra3+ 60. Kf2 Rb3 61. Rc6 Rd3 62. Ke2 Rxg3 63. d6 Rg2+ 64. Ke3 Rg3+ 65. Kd4 Rg1 66. Kd5 Kf4 67. Ke6 Kxe4 { 1-0 White wins. } 1-0
+
+
+[Event "Openings: goblin"]
+[Date "2022.03.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C44"]
+[Opening "Dresden Opening: The Goblin"]
+[StudyName "Openings"]
+[ChapterName "goblin"]
+[ChapterURL "https://lichess.org/study/ljCYKYwi/YoYVOO6H"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2022.03.14"]
+[UTCTime "03:12:25"]
+
+1. e4 e5 2. Nf3 Nc6 3. c4 Nf6 4. Nxe5 *
+
+

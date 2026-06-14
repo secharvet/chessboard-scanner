@@ -1,0 +1,176 @@
+[Event "Pawn Structure: Chapter 1"]
+[Date "2025.08.06"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Pawn Structure"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/jKk92xjH/Ph2u5PNS"]
+[Annotator "https://lichess.org/@/RajeshwariP"]
+[FEN "8/ppp1p1pp/3p1p2/8/8/2P1P2P/PP1P1PP1/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.08.06"]
+[UTCTime "11:10:28"]
+
+{ What Are Pawn Structures?
+
+Pawn structure literally refers to the pawn placement or pawn configuration in a position, disregarding all other pieces. Many different types of pawn structures can result from different openings. Some pawn structures can be identical or strikingly similar even though they come from completely different openings. }
+ *
+
+
+[Event "Pawn Structure: Chapter 2"]
+[Date "2025.08.06"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B01"]
+[Opening "Scandinavian Defense: Main Line"]
+[StudyName "Pawn Structure"]
+[ChapterName "Chapter 2"]
+[ChapterURL "https://lichess.org/study/jKk92xjH/8ZpCRNPt"]
+[Annotator "https://lichess.org/@/RajeshwariP"]
+[UTCDate "2025.08.06"]
+[UTCTime "11:12:46"]
+
+1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5 4. d4 c6 { [%csl Gd4] } 5. Nf3 Nf6 6. Bc4 Bf5 7. O-O e6 { a position that occurs in the mainline Scandinavian Defense. } { [%cal Ga7b7,Gb7c6,Ge6f7,Gf7h7] } *
+
+
+[Event "Pawn Structure: Chapter 3"]
+[Date "2025.08.06"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B18"]
+[Opening "Caro-Kann Defense: Classical Variation"]
+[StudyName "Pawn Structure"]
+[ChapterName "Chapter 3"]
+[ChapterURL "https://lichess.org/study/jKk92xjH/pieBOdbi"]
+[Annotator "https://lichess.org/@/RajeshwariP"]
+[UTCDate "2025.08.06"]
+[UTCTime "11:13:54"]
+
+1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5 5. Ng3 Bg6 6. Nf3 Nd7 7. Bc4 e6 { same pawn structure can be created from the Caro-Kann Defense } { [%cal Ga7b7,Gb7c6,Ge6f7,Gf7h7] } *
+
+
+[Event "Pawn Structure: Chapter 4"]
+[Date "2025.08.06"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C10"]
+[Opening "French Defense: Rubinstein Variation, Fort Knox Variation"]
+[StudyName "Pawn Structure"]
+[ChapterName "Chapter 4"]
+[ChapterURL "https://lichess.org/study/jKk92xjH/IZWFuyxz"]
+[Annotator "https://lichess.org/@/RajeshwariP"]
+[UTCDate "2025.08.06"]
+[UTCTime "11:14:46"]
+
+1. e4 e6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bd7 5. Nf3 Bc6 6. Ng3 Nd7 7. Bd3 Ngf6 8. O-O Bxf3 9. Qxf3 c6 { this same structure can also be found in the French Defense } *
+
+
+[Event "Pawn Structure: Why Are Pawn Structures Important?"]
+[Date "2025.08.06"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Pawn Structure"]
+[ChapterName "Why Are Pawn Structures Important?"]
+[ChapterURL "https://lichess.org/study/jKk92xjH/1Ea89c8h"]
+[Annotator "https://lichess.org/@/RajeshwariP"]
+[FEN "rnbqk2r/ppp1bppp/3p1n2/2pPp3/2P1P3/2N5/PP3PPP/R1BQKBNR w KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.08.06"]
+[UTCTime "11:17:54"]
+
+{ Pawn structures are important because they tell us a lot of information about the position. They tell us if a position is open or closed, and can tell us about the nature of the position and sometimes even the strategic goals. For example, the following pawn structure tells us that the position is closed.
+
+This position is considered closed because all of the central pawns are blocked and none of them have been exchanged. Advanced players know that knights are generally more powerful than bishops in closed positions (because bishops have fewer squares to attack if the center is occupied by pawns). } { [%csl Gf1,Gc5,Gc4][%cal Gc7e5,Gg7h7,Gf7h7,Gf1b5] }
+ *
+
+
+[Event "Pawn Structure: Open Position"]
+[Date "2025.08.06"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Pawn Structure"]
+[ChapterName "Open Position"]
+[ChapterURL "https://lichess.org/study/jKk92xjH/N4m8d3QW"]
+[Annotator "https://lichess.org/@/RajeshwariP"]
+[FEN "rn1q1rk1/1p3ppp/2pb1n2/p5B1/P7/2NB1N2/1PP2PPP/R2Q1RK1 w Qq - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.08.06"]
+[UTCTime "11:20:17"]
+
+{ This position is considered open because the center pawns have been exchanged and the center squares can be used by pieces. It should be noted that bishops are generally more powerful in open positions, as they are not obstructed by central pawns. } { [%csl Gd5,Ge5,Ge4,Gd4] }
+ *
+
+
+[Event "Pawn Structure: Chapter 7"]
+[Date "2025.08.06"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Pawn Structure"]
+[ChapterName "Chapter 7"]
+[ChapterURL "https://lichess.org/study/jKk92xjH/K2EtsBwj"]
+[Annotator "https://lichess.org/@/RajeshwariP"]
+[FEN "rn3rk1/1p3p1p/2pb1p2/p7/P7/2NB1N2/1qP2PPP/R2Q1RK1 w Qq - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.08.06"]
+[UTCTime "11:21:12"]
+
+{ Pawn structures can also help us determine concrete plans or strategic goals. In the following position, Black has castled Kingside, but the pawn structure in front of the black king has been weakened.
+
+Since the pawns in front of the black king are weak, this suggests that White should attack the black king! A concrete plan in the above position is Qh5 with the strategic goal of delivering checkmate! }
+ *
+
+
+[Event "Pawn Structure: What Are Pawn Structure Weaknesses?"]
+[Date "2025.08.06"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Pawn Structure"]
+[ChapterName "What Are Pawn Structure Weaknesses?"]
+[ChapterURL "https://lichess.org/study/jKk92xjH/TI3BiCeA"]
+[Annotator "https://lichess.org/@/RajeshwariP"]
+[FEN "rnbq1rk1/pp1p1ppp/4pn2/8/2PP4/P1P2N2/5PPP/R2QKB1R w KQq - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.08.06"]
+[UTCTime "11:23:10"]
+
+{ Pawn structure weaknesses (also known as structural weaknesses) can occur in many ways.
+Doubled pawns,
+backward pawns,
+isolated pawns,
+and holes
+are the most notable deficiencies in pawn structures.
+If your opponent has one of these structural weaknesses, you should try to use it against them. If you have a structural weakness, you should be mindful of it.
+
+The c4-pawn is weak, as it cannot be protected by another pawn. A strategic goal for Black would be to attack and win this c4-pawn (maybe by playing moves like b6/Ba6/Nc6/Na5/Qc7). If we take a closer look at this same pawn structure, we can see that White has three pawn islands, while Black has two pawn islands. } { [%csl Gc3] }
+1. d5 e5 2. c5 Ng4 3. d6 *
+
+
+[Event "Pawn Structure: Backward pawn"]
+[Date "2025.08.06"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Pawn Structure"]
+[ChapterName "Backward pawn"]
+[ChapterURL "https://lichess.org/study/jKk92xjH/mQwE99E9"]
+[Annotator "https://lichess.org/@/RajeshwariP"]
+[UTCDate "2025.08.06"]
+[UTCTime "11:26:37"]
+
+{ A backward pawn is a pawn that is behind all pawns of the same color on adjacent files and cannot be safely advanced, making it a strategic weakness.
+
+A backward pawn is defined as a pawn that has fallen behind its neighboring pawns and lacks support from other pawns. This situation typically arises when a pawn cannot advance without being captured, and it often becomes a target for the opponent. For example, if a black pawn is on c6 and there are no pawns on b6 or d6, it is considered backward. }
+ *
+
+

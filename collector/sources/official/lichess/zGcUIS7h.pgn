@@ -1,0 +1,483 @@
+[Event "Minecraft=Chess?: Why was chess invented?"]
+[Date "2026.05.31"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Minecraft=Chess?"]
+[ChapterName "Why was chess invented?"]
+[ChapterURL "https://lichess.org/study/zGcUIS7h/RQhtpvMH"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "RRRRRRRR/RrrRRrrR/RrrRRrrR/RRRrrRRR/RRrrrrRR/RRrrrrRR/RRrRRrRR/RRRRRRRR w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.31"]
+[UTCTime "14:34:34"]
+
+{ Hi! Today I will tell you about why was chess invented. I believe that chess was invented by the creator of Minecraft so that he could play Minecraft without having to ask his parents for permission first. In chess, you can perfectly represent any mob on the board. Let's start playing Minecraft! }
+ *
+
+
+[Event "Minecraft=Chess?: The start"]
+[Date "2026.05.31"]
+[Result "*"]
+[Variant "Atomic"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Minecraft=Chess?"]
+[ChapterName "The start"]
+[ChapterURL "https://lichess.org/study/zGcUIS7h/0y06ax2W"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "1k6/3ppp2/3ppp2/3prp2/4r3/Q4P2/8/7K w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.31"]
+[UTCTime "14:51:13"]
+[ChapterMode "gamebook"]
+
+{ Steve saw a small tree. He wants to cut it down. Help him! }
+1. fxe4! *
+
+
+[Event "Minecraft=Chess?: Wooden sword"]
+[Date "2026.05.31"]
+[Result "*"]
+[Variant "Atomic"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Minecraft=Chess?"]
+[ChapterName "Wooden sword"]
+[ChapterURL "https://lichess.org/study/zGcUIS7h/EsaErbK2"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "rr6/rrr5/1rrr3r/2rrr1rr/3rrrr1/4rrr1/3rrrrr/2rr2rr b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.31"]
+[UTCTime "15:04:31"]
+
+{ Steve crafts a wooden sword. }
+ *
+
+
+[Event "Minecraft=Chess?: Wooden pickaxe"]
+[Date "2026.05.31"]
+[Result "*"]
+[Variant "Atomic"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Minecraft=Chess?"]
+[ChapterName "Wooden pickaxe"]
+[ChapterURL "https://lichess.org/study/zGcUIS7h/14Eg1nF1"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "3nnnn1/1nnnnn2/1nnn4/nnnnn3/nn1nnn2/n3nnn1/n4nnn/6nn b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.31"]
+[UTCTime "15:07:35"]
+
+{ Steve also crafts a wooden pickaxe. }
+ *
+
+
+[Event "Minecraft=Chess?: Mining"]
+[Date "2026.05.31"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Minecraft=Chess?"]
+[ChapterName "Mining"]
+[ChapterURL "https://lichess.org/study/zGcUIS7h/2oWdyPv4"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "rrrrbrrk/rb1b1b1r/r1b1b1br/rb1b1b1r/r3b1br/r4b1r/RR2b1Pr/KRrrrrrr w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.31"]
+[UTCTime "16:38:39"]
+[ChapterMode "gamebook"]
+
+{ Steve (pawn) wants to farm iron (bishops). Can you farm them in 14 moves? }
+1. gxf3 Rc2 2. fxe4 Rcc1 3. exd5 Rc2 4. dxe6 Rcc1 5. exd7 Rc2 6. dxe8=Q Rcc1 7. Qxe2 Rc2 8. Qxb5 Rcc1 9. Qxc6 Rcc2 10. Qxb7 Rcc1 11. Qxf7 R1c2 12. Qxg6 Rcc1 13. Qxf5 R1c2 14. Qxg4 { Very good! } *
+
+
+[Event "Minecraft=Chess?: sword"]
+[Date "2026.05.31"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Minecraft=Chess?"]
+[ChapterName "sword"]
+[ChapterURL "https://lichess.org/study/zGcUIS7h/xPlE1Omr"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "RR6/RRR5/1RRR3R/2RRR1RR/3RRRR1/4RRR1/3RRRRR/2RR2RR w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.31"]
+[UTCTime "18:41:09"]
+
+{ Now Steve can craft an iron sword and some other items. }
+ *
+
+
+[Event "Minecraft=Chess?: pickaxe"]
+[Date "2026.05.31"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Minecraft=Chess?"]
+[ChapterName "pickaxe"]
+[ChapterURL "https://lichess.org/study/zGcUIS7h/7Ow6xtG3"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "3RRRR1/1RRRR3/1RRR4/RRRRR3/RR1RRR2/R3RRR1/R4RRR/6RR w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.31"]
+[UTCTime "18:43:39"]
+
+{ Steve has an iron pickaxe so he can mine very fast. }
+ *
+
+
+[Event "Minecraft=Chess?: farming diamonds"]
+[Date "2026.05.31"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Minecraft=Chess?"]
+[ChapterName "farming diamonds"]
+[ChapterURL "https://lichess.org/study/zGcUIS7h/5xR14yKC"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "krrrrrrr/r1n1n2r/r3nn1r/rn1n3r/r4nnr/r1nn3r/rn2n1RR/rrrrrrRK w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.31"]
+[UTCTime "18:49:51"]
+[ChapterMode "gamebook"]
+
+{ Steve is mining again. Now, he wants to farm Diamonds }
+1. Rxg4 Rf2 2. Rxf4 Rff1 3. Rxf6 Rf2 4. Rxe6 Rff1 5. Rxe2 (5. Rxe7 R1f2 6. Rxc7 Rff1 7. Rxc3 R1f2 8. Rxd3 Rff1 9. Rxd5 R1f2 10. Rxb5 Rff1 11. Rxb2 Rbb7 12. Rxe2) 5... R1f2 6. Rxb2 Rff1 7. Rxb5 R1f2 8. Rxd5 Rff1 9. Rxd3 R1f2 10. Rxc3 Rff1 11. Rxc7 R1f2 12. Rxe7 *
+
+
+[Event "Minecraft=Chess?: Diamond pickaxe"]
+[Date "2026.06.01"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Minecraft=Chess?"]
+[ChapterName "Diamond pickaxe"]
+[ChapterURL "https://lichess.org/study/zGcUIS7h/m3tWkkPo"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "2rrrr2/1rrr4/rrRR4/rrRRR3/r2RRR2/r3RRR1/5RRR/6RR b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.06.01"]
+[UTCTime "20:05:05"]
+
+{ Steve has a diamond pickaxe so he can farm obsidian. Soon he can enter the Nether. }
+ *
+
+
+[Event "Minecraft=Chess?: Looking for lava"]
+[Date "2026.06.02"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Minecraft=Chess?"]
+[ChapterName "Looking for lava"]
+[ChapterURL "https://lichess.org/study/zGcUIS7h/by68uPJI"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "6k1/5pp1/K2R4/2RnRRRR/1RnnnnnR/NRnnnRR1/1RnnnnR1/2RRRR2 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.06.02"]
+[UTCTime "09:11:59"]
+[ChapterMode "gamebook"]
+
+{ Steve found a lava lake. He poured water onto it and obsidian formed. Can you farm all the obsidian with your knight? }
+1. Nxc4 Kf8 2. Nxd2 Kg8 3. Nxe4 Kf8 4. Nxf2 Kg8 5. Nxg4 Kf8 6. Nxe3 Kg8 7. Nxc2 Kf8 8. Nxd4 Kg8 9. Nxe2 Kf8 10. Nxc3 Kg8 11. Nxd5 Kf8 12. Nxf4 Kg8 13. Nxd3 *
+
+
+[Event "Minecraft=Chess?: Nether portal"]
+[Date "2026.06.02"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Minecraft=Chess?"]
+[ChapterName "Nether portal"]
+[ChapterURL "https://lichess.org/study/zGcUIS7h/cZXtaKqt"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "8/8/8/2nnnb2/2n2n2/2n2n2/2n2n2/2nnnn2 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.06.02"]
+[UTCTime "10:03:31"]
+
+{ Steve biult a Nether Portal. He can enter the Nether if he lights it. He has to use a fire starter. }
+ *
+
+
+[Event "Minecraft=Chess?: Lit Portal"]
+[Date "2026.06.02"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Minecraft=Chess?"]
+[ChapterName "Lit Portal"]
+[ChapterURL "https://lichess.org/study/zGcUIS7h/Js4RfKfp"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "8/8/8/2nnnb2/2nQQn2/2nQQn2/2nQQn2/2nnnn2 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.06.02"]
+[UTCTime "10:08:19"]
+
+{ This is a lit portal. }
+ *
+
+
+[Event "Minecraft=Chess?: In the Nether"]
+[Date "2026.06.02"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Minecraft=Chess?"]
+[ChapterName "In the Nether"]
+[ChapterURL "https://lichess.org/study/zGcUIS7h/9M2SqDGZ"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "rrrrrrrr/r1r2r1r/2r4r/2r5/8/1P2b3/rrrrrbb1/rrrrrrrr b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.06.02"]
+[UTCTime "10:12:01"]
+
+{ Steve entered the Nether. There are three piglins in front of him. They want to attack Steve. He entered the overworld again to craft some golden armor so that the piglins don't attack him again. Because piglins only think about gold. }
+ *
+
+
+[Event "Minecraft=Chess?: Crafting golden armor"]
+[Date "2026.06.02"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Minecraft=Chess?"]
+[ChapterName "Crafting golden armor"]
+[ChapterURL "https://lichess.org/study/zGcUIS7h/oWKGaeWg"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "8/RRR1R1R1/R1R1R1R1/8/R1R1RRR1/RRR1R1R1/RRR1R1R1/8 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.06.02"]
+[UTCTime "10:23:06"]
+
+{ This is Steves golden armor. He used 24 gold bars to craft it. }
+ *
+
+
+[Event "Minecraft=Chess?: Enter the Nether again"]
+[Date "2026.06.02"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Minecraft=Chess?"]
+[ChapterName "Enter the Nether again"]
+[ChapterURL "https://lichess.org/study/zGcUIS7h/IcNyWpdc"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "rrrrrrrr/r1r2r1r/2r4r/2r5/8/1R6/rrrrr3/rrrrrrrr b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.06.02"]
+[UTCTime "10:51:08"]
+
+{ Steve has golden armor now. Now, there are no piglins. }
+ *
+
+
+[Event "Minecraft=Chess?: Endermans"]
+[Date "2026.06.02"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Minecraft=Chess?"]
+[ChapterName "Endermans"]
+[ChapterURL "https://lichess.org/study/zGcUIS7h/bsMPzD6r"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "rrrrrrrr/1r3r1r/1r3r2/5r2/8/b2b2b1/bR1b2b1/rrrrrrrr b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.06.02"]
+[UTCTime "10:54:56"]
+
+{ In the Nether there are sometimes Endermans like here. Never look at there faces, if you don't want that they kill you... }
+ *
+
+
+[Event "Minecraft=Chess?: Killing Endermans"]
+[Date "2026.06.02"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Minecraft=Chess?"]
+[ChapterName "Killing Endermans"]
+[ChapterURL "https://lichess.org/study/zGcUIS7h/cfkp5bl9"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "rrrrrrrr/1r3r1r/1r3r2/5r2/8/8/3R4/rrrrrrrr b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.06.02"]
+[UTCTime "10:59:39"]
+
+{ Steve looked at there purple eyes and the Endermans attacked Steve. But Steve is too strong to die because of Endermans. He got the Enderpearls. But why does he need them, you get to know later. }
+ *
+
+
+[Event "Minecraft=Chess?: Killing Blazes"]
+[Date "2026.06.02"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Minecraft=Chess?"]
+[ChapterName "Killing Blazes"]
+[ChapterURL "https://lichess.org/study/zGcUIS7h/Oy7zgerc"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "8/6pq/5prr/R1ppprrr/brrrrrrr/1r1r1r1r/1b1r1r1r/1K1b1k1r b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.06.02"]
+[UTCTime "14:55:31"]
+[ChapterMode "gamebook"]
+
+{ Steve found a Blaze spawner (queen). Help him to kill the Blazes (pawns) and to destoy the spawner! }
+1... Rgg3 2. Rxc5 R3g4 3. Rxd5 Rgg3 4. Rxe5 R3g4 5. Re6 Rgg3 6. Rxf6 R3g4 7. Rf7 Rgg3 8. Rxg7 R3g4 9. Rxh7 { Very good! } *
+
+
+[Event "Minecraft=Chess?: Blaze Powder"]
+[Date "2026.06.02"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Minecraft=Chess?"]
+[ChapterName "Blaze Powder"]
+[ChapterURL "https://lichess.org/study/zGcUIS7h/96XAtzHt"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "3QQ3/QQ1QQ1QQ/QQ4QQ/2QQQQ2/QQQQQQQ1/QQQQQQQQ/1Q1QQQQQ/3QQQQ1 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.06.02"]
+[UTCTime "15:11:07"]
+
+{ Steve gots Blaze Powder from the Blazes. He used it to craft Ender eyes (Ender Pearl + Blaze Powder = Endereye) . You need Ender eyes for the Ender Portal. The Ender Portal needs 12 Ender eyes, but sometimes there are already some Ender eyes in the Portal. In the real game, There's a 0,0000000001% chance to get a portal with already 12 eyes }
+ *
+
+
+[Event "Minecraft=Chess?: Surching for the ender portal"]
+[Date "2026.06.02"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Minecraft=Chess?"]
+[ChapterName "Surching for the ender portal"]
+[ChapterURL "https://lichess.org/study/zGcUIS7h/nKQkGHLe"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "r3n2K/2rrr1nn/1r6/2rrr1r1/5r2/1rrr3r/3Rrrrr/rrr2r1k b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.06.02"]
+[UTCTime "14:49:58"]
+[ChapterMode "gamebook"]
+
+{ The next portal is the Ender Portal (=end), but you must find it first. }
+1... Kg1 2. Ra2 Kh1 3. Ra4 Kg1 4. Re4 Kh1 5. Re3 Kg1 6. Rg3 Kh1 7. Rg4 Kg1 8. Rh4 Kh1 9. Rh6 Kg1 10. Rf6 Kh1 11. Rf8 Kg1 12. Rg8 { Steve can enter the End. He wants to kill the Ender Dragon (hard). } *
+
+
+[Event "Minecraft=Chess?: Kill the Dragon!"]
+[Date "2026.06.02"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Minecraft=Chess?"]
+[ChapterName "Kill the Dragon!"]
+[ChapterURL "https://lichess.org/study/zGcUIS7h/vZmffBib"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "1nn5/2nn1nk1/nnnnnnn1/2nnnn2/1nn5/PPPPPPPP/PPPPPPPP/QQQQKQQQ w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.06.02"]
+[UTCTime "16:34:05"]
+
+1. cxb4 (1. e4) (1. a4) 1... Nef8 *
+
+
+[Event "Minecraft=Chess?: Kill the Dragon! (pawns)"]
+[Date "2026.06.02"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Minecraft=Chess?"]
+[ChapterName "Kill the Dragon! (pawns)"]
+[ChapterURL "https://lichess.org/study/zGcUIS7h/h4qEZM92"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "1pp5/2pp1pk1/ppppppp1/2pp4/1pp5/PPPPPPPP/PPPPPPPP/QQQQKQQQ w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.06.02"]
+[UTCTime "16:25:16"]
+
+ *
+
+
+[Event "Minecraft=Chess?: Kill the Dragon! (bishop)"]
+[Date "2026.06.02"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Minecraft=Chess?"]
+[ChapterName "Kill the Dragon! (bishop)"]
+[ChapterURL "https://lichess.org/study/zGcUIS7h/cOeUuEjG"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "1bb5/2bb1bk1/bbbbbbb1/2bb4/1bb5/PPPPPPPP/PPPPPPPP/QQQQKQQQ w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.06.02"]
+[UTCTime "16:26:16"]
+
+1. a4 (1. h4 Kg8 2. e4 Bxh4 3. gxh4) *
+
+
+[Event "Minecraft=Chess?: Kill the Dragon! (mixed)"]
+[Date "2026.06.02"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Minecraft=Chess?"]
+[ChapterName "Kill the Dragon! (mixed)"]
+[ChapterURL "https://lichess.org/study/zGcUIS7h/A1bI9WS5"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "1bn5/2bn1bk1/bnpbnpb1/2np4/1pb5/PPPPPPPP/PPPPPPPP/QQQQKQQQ w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.06.02"]
+[UTCTime "16:28:55"]
+
+1. dxc4 (1. axb4) (1. e4) (1. d4) *
+
+
+[Event "Minecraft=Chess?: Bye!"]
+[Date "2026.06.02"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Minecraft=Chess?"]
+[ChapterName "Bye!"]
+[ChapterURL "https://lichess.org/study/zGcUIS7h/1eEI47jy"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "rrrrrrrr/rRRRRRRr/RRRRRRRR/RrrRRrrR/RRRrrRRR/RRrRRrRR/RRrrrrRR/RRRRRRRR w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.06.02"]
+[UTCTime "16:35:32"]
+
+{ Please klick the heart button if you want more studies. Thank you for the likes, share this study and follow my profile if you want to see my other studies
+
+Look at my other study: https://lichess.org/study/RtfP52O2 or if you want to play against the computer https://lichess.org/study/oMcSYqSW/aYZEX8uk
+
+I know this study has so many views, but 99% look at this study but don't leave a like. Just one click for you, but a huge help for me.
+
+Bye! }
+ *
+
+

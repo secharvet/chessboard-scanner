@@ -1,0 +1,125 @@
+[Event "Ruy Lopez Lesson with Anna Cramling: Noah's Arc Trap"]
+[Date "2021.06.06"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C71"]
+[Opening "Ruy Lopez: Morphy Defense, Modern Steinitz Defense"]
+[StudyName "Ruy Lopez Lesson with Anna Cramling"]
+[ChapterName "Noah's Arc Trap"]
+[ChapterURL "https://lichess.org/study/78kfwlbg/ufXDQMsx"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.06.06"]
+[UTCTime "02:23:47"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 d6 5. d4 b5 6. Bb3 Nxd4 7. Nxd4 exd4 8. Qxd4 (8. c3 dxc3 9. Qd5 Be6 10. Qc6+) *
+
+
+[Event "Ruy Lopez Lesson with Anna Cramling: Overview of Lines"]
+[Date "2021.06.06"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C91"]
+[Opening "Ruy Lopez: Closed, Yates Variation"]
+[StudyName "Ruy Lopez Lesson with Anna Cramling"]
+[ChapterName "Overview of Lines"]
+[ChapterURL "https://lichess.org/study/78kfwlbg/04fBDEZg"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.06.06"]
+[UTCTime "02:25:10"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 (3... f5 { Schliemann }) (3... Nf6 { Berlin }) (3... Nd4 { Bird Variation }) (3... Nge7 { Cozio Defense }) (3... g6 { Fianchetto Defense }) 4. Ba4 Nf6 (4... d6 { Steinitz Variation }) 5. O-O Be7 { Closed Variatiion } (5... Nxe4 { Open Variation } 6. d4 b5 7. Bb3 d5 8. dxe5) 6. Re1 b5 7. Bb3 O-O 8. d4 d6 (8... exd4 9. e5 Ne8 10. c3 dxc3 11. Nxc3 $44) (8... Nxd4 9. Bxf7+ Rxf7 10. Nxe5 Ne6 11. Nxf7 Kxf7 12. e5) 9. c3 *
+
+
+[Event "Rated Blitz tournament https://lichess.org/tournament/QKkhwyGJ"]
+[Site "https://lichess.org/GhZNbP7F"]
+[Date "2021.02.20"]
+[White "EricRosen"]
+[Black "Aisen_Mestnikov"]
+[Result "1-0"]
+[WhiteElo "2458"]
+[WhiteTitle "IM"]
+[BlackElo "2389"]
+[BlackTitle "FM"]
+[TimeControl "180+0"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "C70"]
+[Opening "Ruy Lopez: Morphy Defense, Cozio Defense"]
+[StudyName "Ruy Lopez Lesson with Anna Cramling"]
+[ChapterName "EPIC QUEEN SAC TRAP"]
+[ChapterURL "https://lichess.org/study/78kfwlbg/YK8Oarh1"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 { [%clk 0:03:00] } 1... e5 { [%clk 0:03:00] } 2. Nf3 { [%clk 0:02:56] } 2... Nc6 { [%clk 0:02:59] } 3. Bb5 { [%clk 0:02:52] } 3... a6 { [%clk 0:02:58] } 4. Ba4 { [%clk 0:02:51] } 4... Nge7 { [%clk 0:02:56] } 5. Nc3 { [%clk 0:02:41] } 5... g6 { [%clk 0:02:54] } 6. d4 { [%clk 0:02:40] } 6... exd4 { [%clk 0:02:53] } 7. Nd5 { [%clk 0:02:39] } 7... Bg7 { [%clk 0:02:51] } 8. Bg5 { [%clk 0:02:37] } 8... b5 { [%clk 0:02:48] } 9. Nxd4 { [%clk 0:02:27] } 9... Bxd4 { [%clk 0:01:48] } 10. Qxd4 { [%clk 0:02:25] } 10... O-O { [%clk 0:01:27] } 11. Nf6+ { [%clk 0:02:23] } 11... Kh8 { [%clk 0:01:26] } 12. Ng4+ { [%clk 0:02:18] } 12... Nxd4 { [%clk 0:01:08] } 13. Bf6+ { [%clk 0:02:16] } 13... Kg8 { [%clk 0:01:07] } 14. Nh6# { 1-0 White wins by checkmate. } { [%clk 0:02:16] } 1-0
+
+
+[Event "DSB-07.Kongress"]
+[Site "Dresden GER"]
+[Date "1892.07.22"]
+[Round "7"]
+[White "Siegbert Tarrasch"]
+[Black "Georg Marco"]
+[Result "1-0"]
+[Variant "Standard"]
+[ECO "C66"]
+[Opening "Ruy Lopez: Berlin Defense, Tarrasch Trap"]
+[StudyName "Ruy Lopez Lesson with Anna Cramling"]
+[ChapterName "Siegbert Tarrasch - Georg Marco - DEEP CALCULATION"]
+[ChapterURL "https://lichess.org/study/78kfwlbg/iiXkeo8Z"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 d6 4. d4 Bd7 5. Nc3 Nf6 6. O-O Be7 7. Re1 O-O 8. Bxc6 Bxc6 9. dxe5 dxe5 10. Qxd8 Raxd8 11. Nxe5 Bxe4 12. Nxe4 Nxe4 13. Nd3 f5 14. f3 Bc5+ 15. Nxc5 Nxc5 16. Bg5 Rd5 17. Be7 Re8 18. c4 { 1-0 Black resigns. } 1-0
+
+
+[Event "Biel (Open)"]
+[Site "Biel SUI"]
+[Date "2016.07.25"]
+[Round "1.4"]
+[White "Samuel Shankland"]
+[Black "Jakob Pfreundt"]
+[Result "1-0"]
+[WhiteElo "2661"]
+[BlackElo "2292"]
+[Variant "Standard"]
+[ECO "C65"]
+[Opening "Ruy Lopez: Berlin Defense, Anti-Berlin Variation"]
+[StudyName "Ruy Lopez Lesson with Anna Cramling"]
+[ChapterName "Samuel Shankland - Jakob Pfreundt"]
+[ChapterURL "https://lichess.org/study/78kfwlbg/FI3Lh3Ag"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 Nf6 4. d3 d6 5. O-O Bd7 6. Re1 a6 7. Bxc6 Bxc6 8. Nc3 Be7 9. d4 O-O 10. dxe5 dxe5 11. Qxd8 Raxd8 12. Nxe5 Bxe4 13. Nxe4 Nxe4 14. Nd3 f5 15. f3 Bc5+ 16. Nxc5 Nxc5 17. Bg5 Rd5 18. Be7 Re8 19. c4 Kf7 20. cxd5 Rxe7 21. Rac1 Rxe1+ 22. Rxe1 a5 23. Kf1 f4 24. h4 g6 25. Rc1 { 1-0 Black resigns. } 1-0
+
+
+[Event "Ruy Lopez Lesson with Anna Cramling: Exchange Variation Simple Traps"]
+[Date "2021.06.06"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C68"]
+[Opening "Ruy Lopez: Exchange Variation"]
+[StudyName "Ruy Lopez Lesson with Anna Cramling"]
+[ChapterName "Exchange Variation Simple Traps"]
+[ChapterURL "https://lichess.org/study/78kfwlbg/Ec0bNzUm"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.06.06"]
+[UTCTime "14:17:10"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Bxc6 dxc6 5. Nxe5? (5. O-O Bg4 6. h3 h5 7. hxg4? hxg4 8. Nxe5 Qh4 { 800+ games ended like this } 9. f3 g3) *
+
+
+[Event "Ruy Lopez Lesson with Anna Cramling: My Favorite Line -- Yates Variation"]
+[Date "2021.06.06"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C91"]
+[Opening "Ruy Lopez: Closed, Bogoljubow Variation"]
+[StudyName "Ruy Lopez Lesson with Anna Cramling"]
+[ChapterName "My Favorite Line -- Yates Variation"]
+[ChapterURL "https://lichess.org/study/78kfwlbg/tiDc6NHU"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.06.06"]
+[UTCTime "14:18:32"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Be7 6. Re1 b5 7. Bb3 d6 8. c3 O-O 9. d4 { Yates Variation } 9... Bg4 10. Be3 exd4 11. cxd4 d5 (11... Na5 12. Nbd2 Nxb3 13. axb3 c5 14. h3 Bh5 15. g4 Bg6 16. Nh4 Re8 (16... Nxe4?) (16... Bxe4?) 17. Nf5) 12. e5 Ne4 13. h3 Bh5 14. Nbd2 Nxd2 15. Qxd2 Bxf3 (15... Bb4 16. Qc2 Bxe1 17. Qxc6 Bxf3 18. gxf3 Ba5 19. Kh2 $16) 16. Qc3 Bxg2 17. Kxg2 Nb8 18. Rac1 c6 19. Kh2 f5 20. Rg1 Ra7 21. Rg2 Qd7 22. Rcg1 Rf7 23. Bd1 g6 24. Bh5 Bf8 25. Bf4 Qe8 26. Rxg6+ hxg6 27. Rxg6+ Bg7 28. e6 Rf8 29. Qc5 Qe7 30. Bd6 Qh4 31. Qxa7 { Ponomariov, Ruslan - Eljanov, Pavel, 1-0, UKR-ch 82nd, 2013, https://lichess.org/V6pa5SsH } *
+
+

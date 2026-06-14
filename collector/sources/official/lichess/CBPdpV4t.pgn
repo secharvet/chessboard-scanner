@@ -1,0 +1,16 @@
+[Event "Semi-Slav: Botvinnik"]
+[Date "2022.12.01"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D44"]
+[Opening "Semi-Slav Defense: Botvinnik Variation"]
+[StudyName "Semi-Slav"]
+[ChapterName "Botvinnik"]
+[ChapterURL "https://lichess.org/study/CBPdpV4t/XuDRO5AS"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[UTCDate "2022.12.01"]
+[UTCTime "17:05:34"]
+
+1. d4 d5 2. c4 c6 3. Nc3 Nf6 4. Nf3 { [%cal Ge7e6] } 4... e6 5. Bg5 { [%cal Gd5c4] } (5. e3 { This is the other main branch and the one that top players seem to increasingly prefer. But at the club level Bg5 is much more common. } 5... a6 6. Bd3 dxc4 7. Bxc4 b5 8. Bd3 c5 9. O-O Bb7 10. dxc5 Bxc5) 5... dxc4 6. e4 (6. a4 Bb4 7. e3 b5 8. Be2 Nbd7 9. O-O Qb6) 6... b5 7. e5 h6 8. Bh4 (8. exf6? { This is a huge mistake, but it's played almost as often as Bh4 at the 1600 level! } 8... hxg5 9. fxg7 Bxg7 $17 { Black is up a pawn with the bishop pair. The d4 pawn is also under a ton of pressure. } { [%csl Rd4][%cal Gg5g4,Gg7d4,Gd8d4] }) 8... g5 { [%cal Gf3g5] } 9. Nxg5 hxg5 10. Bxg5 { [%cal Gf8e7] } 10... Be7 (10... Nbd7 { The old mainline. There are lots of great games starting this way, but Be7 is a much easier solution. }) 11. exf6 Bxf6 12. Bxf6 (12. Be3 Bb7 13. Ne4 c5! { Important theme to remember: active pieces are more important than number of pawns. } { [%cal Gb7e4] } 14. Nxc5 Bd5 { [%cal Gb8c6] }) 12... Qxf6 { We want to develop the queenside pieces, castle queenside, and pressure the d-pawn. } { [%csl Rd4][%cal Gc8b7,Gb8a6,Ge8c8] } 13. g3 (13. Ne4 Qf4 14. Nc5 e5! $36 15. dxe5 O-O! { [%csl Re1][%cal Gf8e8,Ge8e1] }) 13... Bb7 14. Bg2 { [%cal Gb8a6] } 14... Na6! { [%cal Gc3b5] } 15. Nxb5 { [%cal Gg2b7] } (15. Ne4) (15. a4) 15... O-O-O! 16. Nxa7+ Kb8! 17. Nxc6+ Bxc6 18. Bxc6 Nb4! { [%cal Gb4c6,Gb4d3] } 19. Be4 (19. Qf3 { Only move that might survive, but even here we can keep pressing. }) (19. Qa4 Nd3+) 19... Rxd4 20. Qe2 Rxe4! 21. Qxe4 Nd3+ 22. Kd2 Qxb2+ 23. Ke3 (23. Kd1 Nxf2+ { [%cal Gf2d1,Gf2e4] }) 23... Qxf2# *
+
+

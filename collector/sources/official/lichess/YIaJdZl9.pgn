@@ -1,0 +1,17 @@
+[Event "2 Knights Attack: French"]
+[Date "2018.10.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C00"]
+[Opening "French Defense: Two Knights Variation"]
+[StudyName "2 Knights Attack"]
+[ChapterName "French"]
+[ChapterURL "https://lichess.org/study/YIaJdZl9/A0MNddoc"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2018.10.14"]
+[UTCTime "18:29:25"]
+
+{ [%cal Ge2e4,Gg1f3,Gb1c3] }
+1. e4 e6 2. Nf3 d5 3. Nc3 { [%csl Gc3,Gf3] } 3... Nf6 4. e5 Nfd7 5. d4 c5 6. dxc5 Bxc5 { [%csl Gc1,Gf1] } 7. Bd3 Nc6 { [%csl Re5][%cal Gd7e5,Gc6e5] } 8. Bf4 Qb6? { [%csl Rb2] } (8... O-O? { [%csl Gd3,Gf3,Gd1,Rg8,Rf8,Rf7,Rg7,Rh7] } 9. Bxh7+ Kxh7 { [%csl Gf3,Gd1] } 10. Ng5+ { [%cal Gd1h5] } 10... Kg8 11. Qh5 { [%csl Gh7][%cal Gh5h7,Gf8e8] } 11... f6 (11... Qxg5 12. Bxg5) (11... Nf6 12. exf6 { [%csl Gh7][%cal Gh5h7] }) (11... Re8 12. Qxf7+ Kh8 13. Qh5+ Kg8 14. Qh7+ Kf8 15. Qh8+ Ke7 16. Qxg7# { [%csl Rd7,Rd8,Re8,Ge5,Rd6][%cal Gg7e7,Ge5d6,Ge7d6] }) 12. Qh7#) 9. O-O (9. b3 Bxf2+) (9. Na4 { [%cal Ga4b6,Ga4c5] } 9... Bxf2+ 10. Kf1 Qa5 { [%cal Ga5a4] }) 9... Qxb2 10. Nb5 (10. Na4 { [%cal Ga4b2,Ga4c5] } 10... Qa3) 10... Bb6 (10... O-O { [%csl Gd3,Gf3,Gd1,Rh7] } 11. Bxh7+ Kxh7 12. Ng5+ Kg8 13. Qh5? (13. Qd3 { [%csl Gh7][%cal Gd3h7] } 13... g6 14. Qh3 Qxc2 (14... Re8 15. Qh7+ Kf8 16. Qxf7#) (14... Bxf2+ 15. Kh1 Bh4 16. Qxh4 Nf6 17. exf6 Rd8 18. Qh7+ Kf8 { [%cal Gh7g7] } 19. Qh8#) 15. Qh7#) 13... Qxc2 { [%csl Gg6][%cal Gc2g6] }) 11. Nd6+ *
+
+

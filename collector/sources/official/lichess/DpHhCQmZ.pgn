@@ -1,0 +1,119 @@
+[Event "Casual game"]
+[Site "New Orleans, LA USA"]
+[Date "1848.??.??"]
+[White "Paul Morphy"]
+[Black "Alonzo Morphy"]
+[Result "1-0"]
+[Variant "Standard"]
+[ECO "C33"]
+[Opening "King's Gambit Accepted: Bishop's Gambit, Greco Variation"]
+[StudyName "Morphy's Best Games"]
+[ChapterName "Paul Morphy - Alonzo Morphy"]
+[ChapterURL "https://lichess.org/study/DpHhCQmZ/9LNy23Or"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[ChapterMode "gamebook"]
+
+{ This study is designed to let you play "solitaire chess" with the best games of Paul Morphy. You'll play alongside Morphy, trying to guess his moves.
+
+The opening moves are indicated by arrows. Just play those out. After the first few moves, the exercise starts. } { [%cal Ge2e4] }
+1. e4 e5 { [%cal Gf2f4] } 2. f4 { The King's Gambit. Modern engines don't love it, but it's an opening with a rich tradition that can still be effective in games between humans. } 2... exf4 { [%cal Gf1c4] } 3. Bc4 Qh4+ { [%cal Ge1f1] } 4. Kf1 { The king is forced to move, but it's (reasonably) safe on f1, and Black will have to lose time retreating the queen at some point. } 4... Bc5 { Start here! You're playing as White alongside Morphy. } 5. d4! { Preventing Black's threat of Qf2# while grabbing space in the center and hitting the bishop. } 5... Bb6 6. Nf3 { Developing while also creating a threat is almost always a good idea. } 6... Qe7 7. Nc3 { The other knight enters the game, while defending e4 and perhaps threatening to jump into d5. } 7... Nf6 8. Qd3 { Defending the pawn on e4. The advance e5, driving away Black's knight, would have been even stronger. } (8. e5 { Also a good move, in fact stronger than what Morphy played. Give him a break, he was only 11. }) 8... c6 9. Bxf4 { Taking a pawn and bringing out the last minor piece. } 9... d5 10. exd5 { No reason not to take. } 10... O-O 11. d6 { An advanced passed pawn can be very dangerous. This move also opens the diagonal for the bishop on c4 and gains a tempo on Black's queen. } (11. Re1 { is also a very good choice. }) 11... Qd8 12. Re1 { Bringing another piece into the game. } 12... Re8 13. Ng5 { Taking advantage of the downside of Black's last move: it weakened the defense of f7. } 13... Rxe1+ 14. Kxe1 Qe8+ 15. Kd2 { Surrounded by White's pieces, the king is safe here. } (15. Kf1 { is not as good because it locks the rook in on h1. }) 15... Be6 16. Re1 { What really set Morphy apart was that he used EVERY piece. The rook joins the party, increasing the pressure on the bishop on e6 and pinning it to the queen. } 16... Nbd7 17. Nxe6 fxe6 18. Rxe6 { Here Black resigned because there is no good defense to the threat of taking the queen, or other discovered checks by moving the rook. } (18. Bxe6+ Kh8 { is not quite as crushing, although of course White is still doing very well. } 19. Bb3 { [%cal Ge1e8] } (19. Bxd7 Qxd7 20. Re7) 19... Qf8) 18... Qf7 (18... Qd8 19. Re8# { [%cal Gc4g8,Ge8g8] } (19. Rxf6+)) 19. Re7 { [%cal Gc4g8] } 1-0
+
+
+[Event "Paris"]
+[Site "Paris FRA"]
+[Date "1858.??.??"]
+[White "Paul Morphy"]
+[Black "Duke Karl / Count Isouard"]
+[Result "1-0"]
+[Variant "Standard"]
+[ECO "C41"]
+[Opening "Philidor Defense"]
+[StudyName "Morphy's Best Games"]
+[ChapterName "Paul Morphy - Duke Karl / Count Isouard"]
+[ChapterURL "https://lichess.org/study/DpHhCQmZ/jxrs6bln"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[ChapterMode "gamebook"]
+
+{ This is Morphy's most famous game, so if you've already seen it before, you can skip it. But if not, you're in for a treat.
+
+The game was played in an opera house in Paris. Morphy took on a team of two opponents in consultation. } { [%cal Ge2e4] }
+1. e4 e5 { [%cal Gg1f3] } 2. Nf3 d6 { [%cal Gd2d4] } 3. d4 Bg4 { Start here! } 4. dxe5 Bxf3 { How could you have a won a pawn if Black played dxe5? } 5. Qxf3 dxe5 6. Bc4 { Developing a piece and threatening mate. } 6... Nf6 7. Qb3 { "Never move a piece twice in the opening, unless there's a tactic." Here the tactic is a double attack on f7 and b7. The absence of Black's light-squared bishop makes this hard to deal with. } 7... Qe7 8. Nc3 { Morphy prioritizes development over grabbing a pawn. } (8. Qxb7 { Grabbing the pawn would allow Black to force a queen trade with Qb4+. Being up a pawn in the endgame is also a good outcome, so this move is not bad at all, but apparently Morphy wanted to finish things in the middlegame. } 8... Qb4+ 9. Qxb4 Bxb4+ 10. c3) (8. Bxf7+ { Another good option. If Black takes, they will no longer have the resource of Qb4+. } 8... Qxf7 9. Qxb7 { [%csl Ra8][%cal Gb7a8] }) 8... c6 9. Bg5 { Pinning the knight. } 9... b5 10. Nxb5! { Very important move! If you wanted to retreat the bishop, pay special attention to this one. You have a huge lead in development! Why should your opponent get to push you around? } 10... cxb5 11. Bxb5+ Nbd7 12. O-O-O! { The most efficient way to get the rooks into the game. } (12. Rd1 { Not as good as 0-0-0 because the h1 rook cannot now go to the d-file. }) 12... Rd8 13. Rxd7! { Keeping the momentum going. } (13. Rd3 { Not as stylish as Morphy's move, but equally effective. }) 13... Rxd7 14. Rd1 { All pieces in the game! } 14... Qe6 15. Bxd7+ { Normally you would not want to let your opponent out of a pin like this, but Morphy has already seen a game-ending combination. } 15... Nxd7 16. Qb8+! { Bam! } 16... Nxb8 17. Rd8# { And it's mate on the board. One of the great chess games of all time. } 1-0
+
+
+[Event "Paul Morphy's best games (annotated): Napoleon Marache vs Paul Morphy"]
+[Site "https://lichess.org/study/VQEFoO70/lRsW6c8F"]
+[Date "1857"]
+[White "Napoleon Marache"]
+[Black "Paul Morphy"]
+[Result "0-1"]
+[Annotator "https://lichess.org/@/WannabeRomantic"]
+[Variant "Standard"]
+[ECO "C52"]
+[Opening "Italian Game: Evans Gambit, Pierce Defense"]
+[StudyName "Morphy's Best Games"]
+[ChapterName "Napoleon Marache - Paul Morphy"]
+[ChapterURL "https://lichess.org/study/DpHhCQmZ/4veAZavA"]
+[ChapterMode "gamebook"]
+
+1. e4 { In this game Morphy had Black. Play out the opening moves. } { [%cal Ge7e5] } 1... e5 2. Nf3 { [%cal Gb8c6] } 2... Nc6 3. Bc4 { [%cal Gf8c5] } 3... Bc5 4. b4 { The Evans Gambit. In exchange for the pawn, White gains time to expand in the center. Not a bad opening at all, even today! } { [%cal Gc5b4] } 4... Bxb4 5. c3 { [%cal Gb4a5] } 5... Ba5 6. d4 { [%cal Ge5d4] } 6... exd4 7. e5 { Start here! } 7... d5! { Fighting back in the center and preparing to develop the bishop. } 8. exd6 Qxd6 9. O-O Nge7 { Developing a knight and preparing to castle, while blocking a potential check on the e-file. } 10. Ng5 O-O { Castling and defending f7 at the same time. } 11. Bd3 Bf5 { Once again answering White's threat with a developing move. } 12. Bxf5 Nxf5 13. Ba3 Qg6 { White wins an exchange, but in the meantime Morphy has developed all his pieces and grabbed some pawns. } 14. Bxf8 Qxg5 { The right piece to take. The knight was one of the White king's only defenders, whereas the bishop doesn't have much to do. } 15. Ba3 dxc3 { Development is great, but there's also nothing wrong with grabbing a free pawn. } 16. Bc1 Qg6 17. Bf4 Rd8 { Last piece in the game! Have you noticed how Morphy manages to involve EVERY piece in EVERY game? } 18. Qc2 Ncd4 { The knight jumps into the center of the board while attacking the queen. } 19. Qe4 Ng3!! { A sudden end to the game! Morphy threatens both checkmate and capturing the queen. White can't stop both. } 20. Qxg6 Nde2# 0-1
+
+
+[Event "1st American chess congress"]
+[Site "https://lichess.org/study/VQEFoO70/AMo5AmYg"]
+[Date "03 November 1857"]
+[Round "4"]
+[White "Louis Paulsen"]
+[Black "Paul Morphy"]
+[Result "0-1"]
+[Annotator "https://lichess.org/@/WannabeRomantic"]
+[Variant "Standard"]
+[ECO "C48"]
+[Opening "Four Knights Game: Spanish Variation, Classical Variation"]
+[StudyName "Morphy's Best Games"]
+[ChapterName "Louis Paulsen - Paul Morphy"]
+[ChapterURL "https://lichess.org/study/DpHhCQmZ/LbTkEWzk"]
+[ChapterMode "gamebook"]
+
+{ You're playing as Black alongside Morphy. Play out the opening moves. }
+1. e4 { [%cal Ge7e5] } 1... e5 2. Nf3 { [%cal Gb8c6] } 2... Nc6 3. Nc3 { [%cal Gg8f6] } 3... Nf6 4. Bb5 { [%cal Gf8c5] } 4... Bc5 5. O-O { [%cal Ge8g8] } 5... O-O 6. Nxe5 { [%cal Gf8e8] } 6... Re8 { Morphy sacrifices a pawn for quick development. } 7. Nxc6 { [%cal Gd7c6] } 7... dxc6 8. Bc4 { Start here! } 8... b5 { Making the bishop choose a diagonal. } (8... Ng4 { with the idea of Qh4 would in fact have been stronger than Morphy's move. }) (8... Nxe4 { fails to a tactic. } 9. Bxf7+ Kxf7 10. Nxe4 Rxe4 11. Qf3+ { [%cal Gf3f7,Gf3e4] }) 9. Be2 Nxe4 { Now it is safe to take the pawn. } 10. Nxe4 Rxe4 11. Bf3 Re6 { Keeping c6 defended. } 12. c3 Qd3! { A very important move: White can't be allowed to play d4 and take command of the center. } 13. b4 Bb6 (13... Bd6 { also a good option. }) 14. a4 bxa4 { Accepting doubled isolated pawns, but White was threatening to trap the bishop with a5. And if you checkmate your opponent nobody will care about the isolated pawns! } 15. Qxa4 Bd7 (15... Bb7 { would have been stronger, preventing the defensive idea Qa6. }) 16. Ra2 Rae8 { Last piece in the game! } 17. Qa6 Qxf3!! { This queen sacrifice blows White's king position wide open. } 18. gxf3 Rg6+ 19. Kh1 Bh3 { Threatening to set up a checkmate starting with Bg2. } 20. Rd1 Bg2+ 21. Kg1 Bxf3+ 22. Kf1 Bg2+ { Morphy decides to repeat moves. } (22... Rg2 { was the fastest win, planning Rxh2 and Rh1#. }) 23. Kg1 Bh3+ 24. Kh1 Bxf2 { Threatening Bg2#. } 25. Qf1 Bxf1 26. Rxf1 { White has made it into the endgame without getting checkmated, but he's down 2 pawns, and the king isn't out of the woods yet. } 26... Re2 { Rooks on the seventh are usually powerful, and this is no exception. } 27. Ra1 Rh6 { Preparing to break through on h2. } 28. d4 Be3! { Blocking the threat to the rook on h6 while adding another attacker to h2. White resigned in view of the line Bxe3 Rhxh2+ Kg1 Reg2#. } 0-1
+
+
+[Event "Casual game"]
+[Site "New Orleans, LA USA"]
+[Date "1856.11.??"]
+[White "Paul Morphy"]
+[Black "Ernest Morphy"]
+[Result "1-0"]
+[Variant "Standard"]
+[ECO "C52"]
+[Opening "Italian Game: Evans Gambit, Pierce Defense"]
+[StudyName "Morphy's Best Games"]
+[ChapterName "Paul Morphy - Ernest Morphy"]
+[ChapterURL "https://lichess.org/study/DpHhCQmZ/vMetVqAv"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[ChapterMode "gamebook"]
+
+{ This game was played against Ernest Morphy, Paul's Uncle.
+
+Start by playing out the opening moves. } { [%cal Ge2e4] }
+1. e4 e5 { [%cal Gg1f3] } 2. Nf3 Nc6 { [%cal Gf1c4] } 3. Bc4 Bc5 { The Evans Gambit. We've already seen this with Morphy playing Black in a previous game. } { [%cal Gb2b4] } 4. b4 Bxb4 { [%cal Gc2c3] } 5. c3 Ba5 { [%cal Gd2d4] } 6. d4 exd4 { [%cal Ge1g1] } 7. O-O Bxc3 { Start here! } 8. Nxc3 { Eliminating the bishop, one of Black's only developed pieces. } 8... dxc3 9. Ba3 { White had many good choices here. Morphy develops a bishop and makes it harder for Black to castle. } (9. Qb3 { Good move, pressuring f7. }) (9. Qd5 { Not bad, but Black can defend f7 with the queen, and then White will likely have to move the queen again when it gets attacked on d5. }) 9... d6 10. Qb3 { Attacking f7 and getting ready to regain the pawn on c3. } 10... Nh6 11. Qxc3 { This is a good time to pocket the pawn, also threatening g7. } 11... Qf6 12. e5! { Key move! Still down a pawn, and with Black's king in the center, White doesn't want a queen trade. } (12. Qxf6? { This doubles Black's pawns, but Black will still be up a pawn in the endgame, and with queens off the board it will be much harder to create an attack. }) 12... dxe5 13. Rfe1 { Bringing another piece into the game and eyeing Black's king. } (13. Bd5 { Also good, pressuring the knight. }) (13. Bb5 { Also good, pressuring the knight. }) 13... Bd7 14. Rab1 { The last piece enters the game while creating another threat, this time the pawn on b7. } 14... O-O-O 15. Ba6! { Wasting no time ripping Black's king position open, even at the cost of a piece. } (15. Qb3 { allows b6 and it's hard to make further progress on the queenside. }) 15... Na5 { If bxa6 Morphy would have played Qb3, and Black's king will be flushed out. } 16. Rec1! { threatening checkmate on c7. } (16. Qxa5? { would be met by Qxa6 and White has no good way to continue the attack. }) 16... Bc6 17. Qxa5 { Now that the bishop has been forced to c6 this is much stronger. } 17... bxa6 18. Qxa6+ (18. Nxe5 { is also winning. }) 18... Kd7 19. Rxc6! { Setting up a little combination. } 19... Qf5 { Qxc6 would have allowed Nxe5+. The rest of the game is a mop-up operation. } 20. Rxc7+ { White had many good moves, but this leads to a quick checkmate. } 20... Ke8 { If Kxc7 then Qb7#. } 21. Qc6+ Qd7 22. Rb8 { Morphy decides to finish the game with a flashy mate. } (22. Rxd7 { also wins of course. }) 22... Qxc6 23. Re7+ Kf8 24. Rxd8+ Qe8 25. Rdxe8# { 1-0 White wins. } 1-0
+
+
+[Event "New York"]
+[Site "New York, NY USA"]
+[Date "1857.??.??"]
+[White "John William Schulten"]
+[Black "Paul Morphy"]
+[Result "0-1"]
+[Variant "Standard"]
+[ECO "C31"]
+[Opening "King's Gambit Declined: Falkbeer Countergambit, Charousek Gambit, Morphy Defense"]
+[StudyName "Morphy's Best Games"]
+[ChapterName "John William Schulten - Paul Morphy"]
+[ChapterURL "https://lichess.org/study/DpHhCQmZ/AEF6NQ6l"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[ChapterMode "gamebook"]
+
+1. e4 { [%cal Ge7e5] } 1... e5 2. f4 { [%cal Gd7d5] } 2... d5 { This countergambit makes a lot of sense to me. If White is going to weaken their king with f4, why not blow the center wide open? } 3. exd5 { [%cal Ge5e4] } 3... e4 4. Nc3 { [%cal Gg8f6] } 4... Nf6 5. d3 { Start here! } 5... Bb4 { Bringing out a piece and defending e4 indirectly with a pin. } 6. Bd2 e3!? { Sacrificing a second pawn to force White back into the pin and open the e-file. Not the only good move, but certainly an interesting approach. } (6... exd3 { is simple and good. }) 7. Bxe3 O-O { Getting the king to safety and preparing to bring the rook to the open e-file. } 8. Bd2 Re8+ 9. Be2 Bxc3 { Removing one of White's developed pieces. Objectively, it was a little early to go for this trade. } (9... c6! { Good move! }) 10. bxc3 Bg4 { Putting pressure on the bishop on e2. } (10... Nxd5 { was also good. }) 11. c4 c6! { Chipping away at White's center. } 12. dxc6 Nxc6 { The last minor piece enters the game. } 13. Kf1 Rxe2! { Forcing White into a deadly diagonal pin. } (13... Bxe2+? { lets White off the hook. After this there is no pin. }) 14. Nxe2 Nd4 { Taking advantage of the pin created by the rook sacrifice. } 15. Qb1 Bxe2+ { Now it's a king hunt. } 16. Kf2 Ng4+ { Continuing to chase the king around. } 17. Kg1 Nf3+ { The fastest way to checkmate. } 18. gxf3 Qd4+ { The point of the previous move was to open the path for the queen. } 19. Kg2 Qf2+ { The queen moves in for the kill. } 20. Kh3 Qxf3+ { From here it's easy... } 21. Kh4 Ne3 { Other knight moves would have been equally good. } 22. Rg1 Nf5+ { Forcing the king even farther up the board. } 23. Kg5 Qh5# { 0-1 Black wins. } 0-1
+
+

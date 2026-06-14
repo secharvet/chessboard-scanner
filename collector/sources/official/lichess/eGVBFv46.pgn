@@ -1,0 +1,59 @@
+[Event "Import"]
+[Site "https://lichess.org/Qv6m54hx"]
+[Date "2019.02.04"]
+[Round "-"]
+[White "Le Quang Liem (2710)"]
+[Black "Rosen, E. (2304)"]
+[Result "1-0"]
+[TimeControl "-"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "E12"]
+[Opening "Queen's Indian Defense: Kasparov Variation"]
+[StudyName "Playing Nimzo versus a Super GM"]
+[ChapterName "Le Quang Liem (2710) - Rosen, E. (2304)"]
+[ChapterURL "https://lichess.org/study/eGVBFv46/iN7Rujqf"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 Nf6 2. Nf3 e6 3. c4 b6 4. Nc3 Bb4 5. Qc2 Bb7 6. a3 Bxc3+ 7. Qxc3 d6 8. Bg5 h6 9. Bh4 g5 10. Bg3 Ne4 11. Qc2 h5 12. d5 exd5 13. cxd5 Bxd5 14. O-O-O { [%csl Gd5] } 14... Bb7 15. e3 Qe7 16. Bb5+ Nd7 17. Ne5 { [%csl Rd7,Rd6][%cal Gb5e8,Gd1d7] } 17... Nxg3 18. Bxd7+ Kf8 19. Bc6 Qxe5 20. Bxb7 Rb8 21. Qxc7 Rxb7 22. Qxb7 Nxh1 23. Rxh1 Qf5 (23... Kg7 { [%csl Rc1][%cal Ge5f5,Gh8c8,Gf5b1,Gf5c8] }) 24. Qf3 Qxf3 25. gxf3 Ke7 26. Kd2 Rc8 27. h4 Kf6 28. hxg5+ Kxg5 29. f4+ Kg4 30. f3+ Kxf3 31. Rxh5 Ke4 32. Rh7 Rc7 33. Rh8 Re7 34. Ke2 Kd5 35. Kd3 Kc6 36. e4 f5 37. exf5 Kd5 38. f6 Rf7 39. Rh6 a6 40. a4 b5 41. a5 b4 42. Ke3 Rc7 43. Kf3 Ke6 44. f7+ Kxf7 45. Rh7+ { 1-0 Black resigns. } 1-0
+
+
+[Event "Rated Rapid tournament https://lichess.org/tournament/SLAnXg6R"]
+[Site "https://lichess.org/NiYw5LMk"]
+[Date "2019.02.04"]
+[Round "-"]
+[White "derFonsHilneier"]
+[Black "EricRosen"]
+[Result "0-1"]
+[WhiteElo "1853"]
+[BlackElo "2386"]
+[BlackTitle "IM"]
+[TimeControl "600+0"]
+[Termination "Time forfeit"]
+[Variant "Standard"]
+[ECO "E21"]
+[Opening "Nimzo-Indian Defense: Three Knights Variation"]
+[StudyName "Playing Nimzo versus a Super GM"]
+[ChapterName "derFonsHilneier - IM EricRosen"]
+[ChapterURL "https://lichess.org/study/eGVBFv46/7eQuZjOi"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 { [%clk 0:05:00] } 1... Nf6 { [%clk 0:10:00] } 2. c4 { [%clk 0:04:59] } 2... e6 { [%clk 0:09:58] } 3. Nc3 { [%clk 0:04:59] } 3... Bb4 { [%clk 0:09:56] } 4. Nf3 { [%clk 0:04:58] } 4... b6 { [%clk 0:09:36] } 5. a3 { [%clk 0:04:56] } 5... Bxc3+ { [%clk 0:09:32] } 6. bxc3 { [%clk 0:04:56] } 6... Bb7 { [%clk 0:09:29] } 7. Bg5 { [%clk 0:04:41] } 7... h6 { [%clk 0:09:09] } 8. Bh4 { [%clk 0:04:29] } 8... g5 { [%clk 0:09:04] } 9. Bg3 { [%clk 0:04:28] } 9... Ne4 { [%clk 0:08:44] } 10. Qc2 { [%clk 0:04:22] } 10... h5 { [%clk 0:07:00] } 11. d5 { [%clk 0:03:56] } 11... exd5 { [%clk 0:06:55] } 12. Be5 { [%clk 0:03:51] } 12... f6 { [%clk 0:06:42] } 13. Bd4 { [%clk 0:03:40] } 13... c5 { [%clk 0:06:26] } 14. cxd5 { [%clk 0:03:32] } 14... Bxd5 { [%clk 0:06:20] } 15. c4 { [%clk 0:03:01] } 15... Bb7 { [%clk 0:04:45] } 16. Bb2 { [%clk 0:02:37] } 16... Qe7 { [%clk 0:04:27] } 17. e3 { [%clk 0:02:19] } 17... Na6 { [%clk 0:03:45] } 18. Bd3 { [%clk 0:02:05] } 18... O-O-O { [%clk 0:03:23] } 19. O-O-O { [%clk 0:01:51] } 19... Rhe8 { [%clk 0:03:10] } 20. Bxe4 { [%clk 0:01:44] } 20... Bxe4 { [%clk 0:03:07] } 21. Qd2 { [%clk 0:01:35] } 21... Nc7 { [%clk 0:02:56] } 22. Qd6 { [%clk 0:01:18] } 22... Qf7 { [%clk 0:02:21] } 23. Nd2 { [%clk 0:00:57] } 23... Bxg2 { [%clk 0:02:00] } 24. Rhg1 { [%clk 0:00:51] } 24... Re6 { [%clk 0:01:58] } 25. Qg3 { [%clk 0:00:47] } 25... Bc6 { [%clk 0:01:53] } 26. h4 { [%clk 0:00:25] } 26... g4 { [%clk 0:01:52] } 27. Qf4 { [%clk 0:00:24] } 27... d5 { [%clk 0:01:46] } 28. cxd5 { [%clk 0:00:18] } 28... Nxd5 { [%clk 0:01:43] } 29. Qg3 { [%clk 0:00:10] } 29... Ba4 { [%clk 0:01:29] } 30. Rde1 { [%clk 0:00:06] } 30... Qd7 { [%clk 0:01:25] } 31. Nc4 { [%clk 0:00:05] } 31... Qb5 { 0-1 Black wins on time. } { [%clk 0:01:15] } 0-1
+
+
+[Event "Playing Nimzo versus a Super GM: Stuff about nimzo"]
+[Date "2019.02.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "E52"]
+[Opening "Nimzo-Indian Defense: Normal Variation, Schlechter Defense"]
+[StudyName "Playing Nimzo versus a Super GM"]
+[ChapterName "Stuff about nimzo"]
+[ChapterURL "https://lichess.org/study/eGVBFv46/dJtdoF6W"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.02.04"]
+[UTCTime "21:57:38"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 { [%cal Ge2e3,Gd1c2,Gf2f3,Ga2a3,Gc1g5,Gg1f3,Gg2g3,Gd1b3,Gc1d2] } 4. e3 d5 5. Nf3 O-O 6. Bd3 b6 7. O-O Bb7 8. cxd5 exd5 *
+
+

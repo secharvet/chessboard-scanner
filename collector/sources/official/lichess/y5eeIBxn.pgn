@@ -1,0 +1,288 @@
+[Event "Opening Study Template: Index - White"]
+[Date "2018.08.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B20"]
+[Opening "Sicilian Defense"]
+[StudyName "Opening Study Template"]
+[ChapterName "Index - White"]
+[ChapterURL "https://lichess.org/study/y5eeIBxn/p8yc1Esu"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2018.08.16"]
+[UTCTime "18:16:03"]
+
+1. e4 c5 { Sicilian Openings } (1... e6 { French Defense }) (1... c6 { Caro-Kahn }) (1... d5 { Scandinavian }) (1... d6 { Pirc }) (1... Nf6 { Alekhine's Defense }) (1... g6 { Modern }) (1... e5 { King's Pawn Openings }) (1... Nc6 { Nimzowitsch Defense }) *
+
+
+[Event "Opening Study Template: King's Pawn - White"]
+[Date "2018.08.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C20"]
+[Opening "King's Pawn Game"]
+[StudyName "Opening Study Template"]
+[ChapterName "King's Pawn - White"]
+[ChapterURL "https://lichess.org/study/y5eeIBxn/LIEa8gLa"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2018.08.16"]
+[UTCTime "18:19:16"]
+
+1. e4 e5 { Insert Moves } *
+
+
+[Event "Opening Study Template: Sicillian Openings - White"]
+[Date "2018.08.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B20"]
+[Opening "Sicilian Defense"]
+[StudyName "Opening Study Template"]
+[ChapterName "Sicillian Openings - White"]
+[ChapterURL "https://lichess.org/study/y5eeIBxn/uKE5y4Xc"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2018.08.16"]
+[UTCTime "18:20:22"]
+
+1. e4 c5 { Insert Moves } *
+
+
+[Event "Opening Study Template: French Defense - White"]
+[Date "2018.08.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C00"]
+[Opening "French Defense"]
+[StudyName "Opening Study Template"]
+[ChapterName "French Defense - White"]
+[ChapterURL "https://lichess.org/study/y5eeIBxn/wQ45iMol"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2018.08.16"]
+[UTCTime "18:20:41"]
+
+1. e4 e6 { Insert Moves } *
+
+
+[Event "Opening Study Template: Caro-Kahn White"]
+[Date "2018.08.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B10"]
+[Opening "Caro-Kann Defense"]
+[StudyName "Opening Study Template"]
+[ChapterName "Caro-Kahn White"]
+[ChapterURL "https://lichess.org/study/y5eeIBxn/KeUw7eNj"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2018.08.16"]
+[UTCTime "18:21:10"]
+
+1. e4 c6 { Insert Moves } *
+
+
+[Event "Opening Study Template: Scandinavian - White"]
+[Date "2018.08.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B01"]
+[Opening "Scandinavian Defense"]
+[StudyName "Opening Study Template"]
+[ChapterName "Scandinavian - White"]
+[ChapterURL "https://lichess.org/study/y5eeIBxn/vAd6PV6Y"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2018.08.16"]
+[UTCTime "18:21:40"]
+
+1. e4 d5 { Insert Moves } *
+
+
+[Event "Opening Study Template: Pirc - White"]
+[Date "2018.08.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B00"]
+[Opening "Pirc Defense"]
+[StudyName "Opening Study Template"]
+[ChapterName "Pirc - White"]
+[ChapterURL "https://lichess.org/study/y5eeIBxn/K7JuArKg"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2018.08.16"]
+[UTCTime "18:22:04"]
+
+1. e4 d6 *
+
+
+[Event "Opening Study Template: Alekhine's Defense - White"]
+[Date "2018.08.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B02"]
+[Opening "Alekhine Defense"]
+[StudyName "Opening Study Template"]
+[ChapterName "Alekhine's Defense - White"]
+[ChapterURL "https://lichess.org/study/y5eeIBxn/73bYAItX"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2018.08.16"]
+[UTCTime "18:22:46"]
+
+1. e4 Nf6 *
+
+
+[Event "Opening Study Template: Modern - White"]
+[Date "2018.08.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B06"]
+[Opening "Modern Defense"]
+[StudyName "Opening Study Template"]
+[ChapterName "Modern - White"]
+[ChapterURL "https://lichess.org/study/y5eeIBxn/17LFiNNA"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2018.08.16"]
+[UTCTime "18:22:48"]
+
+1. e4 g6 *
+
+
+[Event "Opening Study Template: Nimzowitsch Defense - White"]
+[Date "2018.08.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B00"]
+[Opening "Nimzowitsch Defense"]
+[StudyName "Opening Study Template"]
+[ChapterName "Nimzowitsch Defense - White"]
+[ChapterURL "https://lichess.org/study/y5eeIBxn/g3X09BtM"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2018.08.16"]
+[UTCTime "18:24:02"]
+
+1. e4 Nc6 *
+
+
+[Event "Opening Study Template: Index - Black"]
+[Date "2018.08.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B00"]
+[Opening "King's Pawn Game"]
+[StudyName "Opening Study Template"]
+[ChapterName "Index - Black"]
+[ChapterURL "https://lichess.org/study/y5eeIBxn/qmgaZRR1"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2018.08.16"]
+[UTCTime "18:17:50"]
+
+1. e4 { Insert Opening Move and Name } (1. d4) (1. c4) (1. Nf3 { Reti's Opening }) (1. f4 { Bird's Opening }) (1. b4 { Polish Opening }) (1. g4 { Grob's Opening }) *
+
+
+[Event "Opening Study Template: 1. e4 Opening - Black"]
+[Date "2018.08.18"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B00"]
+[Opening "King's Pawn Game"]
+[StudyName "Opening Study Template"]
+[ChapterName "1. e4 Opening - Black"]
+[ChapterURL "https://lichess.org/study/y5eeIBxn/aHf4eMZ3"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2018.08.18"]
+[UTCTime "17:53:55"]
+
+1. e4 *
+
+
+[Event "Opening Study Template: 1. d4 Opening - Black"]
+[Date "2018.08.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A40"]
+[Opening "Queen's Pawn Game"]
+[StudyName "Opening Study Template"]
+[ChapterName "1. d4 Opening - Black"]
+[ChapterURL "https://lichess.org/study/y5eeIBxn/aLcravev"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2018.08.16"]
+[UTCTime "18:24:24"]
+
+1. d4 *
+
+
+[Event "Opening Study Template: Reti's Opening - Black"]
+[Date "2018.08.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A04"]
+[Opening "Zukertort Opening"]
+[StudyName "Opening Study Template"]
+[ChapterName "Reti's Opening - Black"]
+[ChapterURL "https://lichess.org/study/y5eeIBxn/714boaYe"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2018.08.16"]
+[UTCTime "18:24:52"]
+
+1. Nf3 *
+
+
+[Event "Opening Study Template: 1. c4 Opening - Black"]
+[Date "2018.08.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A10"]
+[Opening "English Opening"]
+[StudyName "Opening Study Template"]
+[ChapterName "1. c4 Opening - Black"]
+[ChapterURL "https://lichess.org/study/y5eeIBxn/sT8WGF1u"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2018.08.16"]
+[UTCTime "18:24:41"]
+
+1. c4 *
+
+
+[Event "Opening Study Template: Polish Opening - Black"]
+[Date "2018.08.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A00"]
+[Opening "Polish Opening"]
+[StudyName "Opening Study Template"]
+[ChapterName "Polish Opening - Black"]
+[ChapterURL "https://lichess.org/study/y5eeIBxn/gwjo46Lk"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2018.08.16"]
+[UTCTime "18:25:20"]
+
+1. b4 *
+
+
+[Event "Opening Study Template: Bird's Opening - Black"]
+[Date "2018.08.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A02"]
+[Opening "Bird Opening"]
+[StudyName "Opening Study Template"]
+[ChapterName "Bird's Opening - Black"]
+[ChapterURL "https://lichess.org/study/y5eeIBxn/vIx95F3O"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2018.08.16"]
+[UTCTime "18:25:01"]
+
+1. f4 *
+
+
+[Event "Opening Study Template: Grob's Opening - Black"]
+[Date "2018.08.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A00"]
+[Opening "Grob Opening"]
+[StudyName "Opening Study Template"]
+[ChapterName "Grob's Opening - Black"]
+[ChapterURL "https://lichess.org/study/y5eeIBxn/fuPKqRzj"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2018.08.16"]
+[UTCTime "18:25:27"]
+
+1. g4 *
+
+

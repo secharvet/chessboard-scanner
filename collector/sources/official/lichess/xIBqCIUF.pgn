@@ -1,0 +1,225 @@
+[Event "Puzzle Paradise | October 7, 2018: Black to move"]
+[Date "2015.11.01"]
+[White "Black to play & finish it off"]
+[Result "*"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Puzzle Paradise | October 7, 2018"]
+[ChapterName "Black to move"]
+[ChapterURL "https://lichess.org/study/xIBqCIUF/RJyneaPH"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[FEN "6k1/5pp1/8/B2n4/5P2/P4KPp/8/8 b - - 0 1"]
+[SetUp "1"]
+
+1... Ne3 2. Kxe3 (2. Kf2 h2 { [%csl Gg2,Gg1] }) 2... h2 *
+
+
+[Event "Puzzle Paradise | October 7, 2018: White to move"]
+[Date "2015.12.02"]
+[White "White to move"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A27"]
+[Opening "English Opening: King's English Variation, Three Knights System"]
+[StudyName "Puzzle Paradise | October 7, 2018"]
+[ChapterName "White to move"]
+[ChapterURL "https://lichess.org/study/xIBqCIUF/gMOZMY85"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. c4 e5 2. Nc3 Nc6 3. Nf3 f5 4. d4 e4 5. Ng5 Nf6 6. Nh3 Bb4 7. e3 Ne7 8. Bd2 c6 { White to move } 9. Nxe4 { [%csl Rb4][%cal Gf5e4,Gf6e4] } 9... Nxe4 (9... Bxd2+ 10. Nxd2) 10. Bxb4 *
+
+
+[Event "Puzzle Paradise | October 7, 2018: Black to move"]
+[Date "2015.11.26"]
+[White "Opening Trap 1"]
+[Black "Black to move and win material"]
+[Result "*"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Puzzle Paradise | October 7, 2018"]
+[ChapterName "Black to move"]
+[ChapterURL "https://lichess.org/study/xIBqCIUF/8jaiPjTC"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[FEN "rnbqkb1r/pp1ppppp/5n2/8/3N1B2/8/PPP1PPPP/RN1QKB1R b KQkq - 0 4"]
+[SetUp "1"]
+
+ *
+
+
+[Event "Puzzle Paradise | October 7, 2018: White to move"]
+[Date "2015.11.23"]
+[White "Endgame3"]
+[Black "White to move and win"]
+[Result "*"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Puzzle Paradise | October 7, 2018"]
+[ChapterName "White to move"]
+[ChapterURL "https://lichess.org/study/xIBqCIUF/SV2MN8h4"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[FEN "8/6n1/7p/k5bP/8/8/2R5/K7 w - - 0 1"]
+[SetUp "1"]
+
+1. Rc5+ Kb6 2. Rxg5 hxg5 { [%csl Rg7] } 3. h6 { [%csl Gf5,Gh5,Ge6,Ge8] } 3... Nf5 4. h7 { [%csl Gh8][%cal Gh7h8] } *
+
+
+[Event "Puzzle Paradise | October 7, 2018: White to move"]
+[Date "2015.10.15"]
+[White "White to move"]
+[Result "*"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Puzzle Paradise | October 7, 2018"]
+[ChapterName "White to move"]
+[ChapterURL "https://lichess.org/study/xIBqCIUF/yUa1jHPm"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[FEN "8/8/3p4/p2P4/kp4B1/8/1KP5/5q2 w - - 0 1"]
+[SetUp "1"]
+
+1. Bd7+ Qb5 2. Bxb5+ (2. Bc6 Qxc6 (2... b3 3. c3 Qxc6 4. dxc6 { [%cal Gc6c8] }) 3. dxc6 { [%cal Gc6c8] }) 2... Kxb5 { [%cal Gb5d5] } *
+
+
+[Event "Puzzle Paradise | October 7, 2018: White to move"]
+[Date "2018.10.07"]
+[White "White to move"]
+[Result "*"]
+[Annotator "Rosen,Eric"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Puzzle Paradise | October 7, 2018"]
+[ChapterName "White to move"]
+[ChapterURL "https://lichess.org/study/xIBqCIUF/VEK8zFFW"]
+[FEN "6q1/6p1/2k4p/R6B/p7/8/2P3P1/2K5 w - - 0 1"]
+[SetUp "1"]
+
+{ [#] }
+1. Ra8 { [%csl Ge6,Gd5,Gc4,Gc8,Gb3,Gf7,Ra2,Rh7][%cal Gg8e6,Ga8a6,Gg8d5,Gh5f3,Gg8c4,Ga8c8,Gg8b3,Gc2b3,Gg8f7] } 1... Qh7 (1... Qa2 2. Rxa4 { [%csl Ge8,Gb3,Gc4,Gd5,Ge6,Gf7][%cal Ga2a4,Gh5e8,Ga2b3] } 2... Qg8 3. Ra8) 2. Bg6 Qxg6 3. Ra6+ *
+
+
+[Event "10"]
+[Date "2015.09.25"]
+[White "Black to move"]
+[Result "*"]
+[Annotator "Rosen,Eric"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Puzzle Paradise | October 7, 2018"]
+[ChapterName "Black to move"]
+[ChapterURL "https://lichess.org/study/xIBqCIUF/tehSneFB"]
+[FEN "1br1r1k1/p2q1ppp/1p2p1n1/1N1p4/3Pn3/BP2P3/P1RNQPPP/2R3K1 b - - 0 1"]
+[SetUp "1"]
+
+1... Rxc2 2. Rxc2 Nxd2 { [%cal Re2b5] } 3. Rxd2 a6 { [%csl Rb5][%cal Gb5c3] } 4. Nc3 Qc7 5. Qd3 Qxh2+ 6. Kf1 Qh1+ 7. Ke2 b5 8. g3 Qg2 *
+
+
+[Event "Puzzle Paradise | October 7, 2018: White to move"]
+[Date "2015.10.07"]
+[White "White to move"]
+[Result "*"]
+[Annotator "Rosen,Eric"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Puzzle Paradise | October 7, 2018"]
+[ChapterName "White to move"]
+[ChapterURL "https://lichess.org/study/xIBqCIUF/RVyqWSOZ"]
+[FEN "1k5r/1P3K2/8/2p2p2/7p/4P3/8/3R4 w - - 0 1"]
+[SetUp "1"]
+
+1. e4!! fxe4 (1... Kxb7 2. exf5 { [%cal Gf7g7,Gf5f6] }) 2. Kg7 { [%csl Ge8,Gh5][%cal Gh8e8,Gh8h5] } 2... Rh5 3. Kg6 { [%csl Ge5,Gh8][%cal Gh5e5,Gh5h8] } 3... Re5 4. Kf6 Re8 5. Kf7 { [%csl Re4,Rh4,Gd8,Gc8][%cal Gf7g7,Gg7g6,Gg6f6,Gf6f7,Re8h8,Rh8h5,Rh5e5,Re5e8,Gd1d8,Gb7c8] } *
+
+
+[Event "Puzzle Paradise | October 7, 2018: White to move mate in 16"]
+[Date "2015.11.23"]
+[White "CHALLENGE"]
+[Black "White to move mate in 16"]
+[Result "*"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Puzzle Paradise | October 7, 2018"]
+[ChapterName "White to move mate in 16"]
+[ChapterURL "https://lichess.org/study/xIBqCIUF/KgoyRHmx"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[FEN "8/8/8/2p5/1pp5/brpp4/qpprpK1P/1nkbn3 w - - 0 1"]
+[SetUp "1"]
+
+1. Kxe1 Qa1 2. h3 Qa2 3. h4 Qa1 4. h5 Qa2 5. h6 Qa1 6. h7 Qa2 7. h8=N Qa1 8. Nf7 Qa2 9. Ne5 Qa1 10. Nd7 (10. Nxc4 Qa2 11. Na5 Qa1 (11... c4 12. Nxc4 Qa1 13. Na5) 12. Nxb3#) 10... Qa2 11. Nxc5 Qa1 12. Nd7 Qa2 13. Ne5 Qa1 14. Nxc4 Qa2 15. Na5 Qa1 16. Nxb3# *
+
+
+[Event "Puzzle Paradise | October 7, 2018: CHALLENGE - White to move mate in 2"]
+[Date "2015.11.23"]
+[White "CHALLENGE"]
+[Black "White to move mate in 2"]
+[Result "*"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Puzzle Paradise | October 7, 2018"]
+[ChapterName "CHALLENGE - White to move mate in 2"]
+[ChapterURL "https://lichess.org/study/xIBqCIUF/gR2DcoT9"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[FEN "2k5/8/8/B2Q1K2/8/8/8/8 w - - 0 1"]
+[SetUp "1"]
+
+ *
+
+
+[Event "Puzzle Paradise | October 7, 2018: White to move"]
+[Date "2018.10.07"]
+[White "White to move"]
+[Result "*"]
+[Annotator "Rosen,Eric"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Puzzle Paradise | October 7, 2018"]
+[ChapterName "White to move"]
+[ChapterURL "https://lichess.org/study/xIBqCIUF/qYfbMRqm"]
+[FEN "8/2K5/8/2kp4/3R4/8/8/8 w - - 0 1"]
+[SetUp "1"]
+
+{ [#] }
+ *
+
+
+[Event "Puzzle Paradise | October 7, 2018: Warmup 4 - Black to move"]
+[Date "2015.11.04"]
+[White "Warmup 4"]
+[Black "Black to move"]
+[Result "*"]
+[Annotator "Rosen,Eric"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Puzzle Paradise | October 7, 2018"]
+[ChapterName "Warmup 4 - Black to move"]
+[ChapterURL "https://lichess.org/study/xIBqCIUF/GpmqybkM"]
+[FEN "2k5/q1p5/3p4/pPpPp1pp/N1P1Pp2/P4PbP/KQ4P1/8 b - - 0 1"]
+[SetUp "1"]
+
+1... Qb6!! { [%csl Ga4,Ra5] } (1... Kd7? 2. b6 cxb6 3. Qb5+) 2. Nxb6+ cxb6 3. h4 gxh4 (3... g4 4. Qe2 Kd7 (4... gxf3 5. Qxf3 Bxh4 6. Qxh5 Be7 { [%cal Ga2e2,Gg4e6,Gh5e8,Ge8d7] }) 5. fxg4) (3... Bxh4 4. Qc1 { [%csl Gd6,Gg5,Gh5][%cal Gc1h1,Gh1h3,Gh3f5,Gf5e6,Ge6d6] }) 4. Qc1 { [%cal Gc1h1,Gh1h3,Gh3f5] } 4... h3 5. gxh3 (5. Qh1 h2) 5... h4 (5... Kc7 6. h4 { [%cal Gc1h1,Gh1h3] }) *
+
+
+[Event "Puzzle Paradise | October 7, 2018: Chapter 13"]
+[Date "2018.10.07"]
+[Result "*"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Puzzle Paradise | October 7, 2018"]
+[ChapterName "Chapter 13"]
+[ChapterURL "https://lichess.org/study/xIBqCIUF/E7a1vPND"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2018.10.07"]
+[UTCTime "22:45:23"]
+
+1. d4 Nf6 2. Bf4 c5 3. Nf3 cxd4 4. Nxd4 e5 { [%cal Ge5f4,Ge5d4] } 5. Bxe5 Qa5+ { [%cal Ga5e5,Ga5e1] } *
+
+

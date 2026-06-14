@@ -1,0 +1,21 @@
+[Event "Rated Rapid game"]
+[Site "https://lichess.org/VylqY64s"]
+[Date "2023.04.09"]
+[White "Springer115"]
+[Black "LarryH33"]
+[Result "1-0"]
+[WhiteElo "1705"]
+[BlackElo "1652"]
+[TimeControl "600+5"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "C42"]
+[Opening "Petrov's Defense: Stafford Gambit"]
+[StudyName "Analyzing viewer games"]
+[ChapterName "Springer115 (1705) - LarryH33 (1652)"]
+[ChapterURL "https://lichess.org/study/O74pAu34/cdM1PAL5"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 { [%clk 0:10:00] } 1... e5 { [%clk 0:10:00] } 2. Nf3 { [%clk 0:10:03] } 2... Nf6 { [%clk 0:10:01] } 3. Nxe5 { [%clk 0:10:07] } 3... Nc6 { [%clk 0:10:02] } 4. Nxc6 { [%clk 0:10:11] } 4... dxc6 { [%clk 0:10:05] } 5. d3 { [%clk 0:10:14] } 5... Bc5 { [%clk 0:09:49] } 6. Be3 { [%clk 0:10:19] } 6... Bxe3 { [%clk 0:09:49] } 7. fxe3 { [%clk 0:10:23] } 7... h5 { [%clk 0:09:40] } (7... Ng4! { My move of choice. Black immediately attacks the e3 pawn gets some nice initiative. The following sequence is a sweet trap... } 8. Qf3 Qg5 { [%cal Gg5e3,Gg4e3] } 9. Kd2 { The most played move and one of the only ways to defend e3 } 9... Nxh2! 10. Rxh2? Qe5 $19 { Black is now guaranteed to be winning material as white can save both rooks. } { [%csl Gb2][%cal Ge5h2,Ge5b2] }) 8. Be2 { [%clk 0:10:24] } 8... Ng4 { [%clk 0:09:39] } 9. Bxg4 { [%clk 0:10:17] } 9... Bxg4 { [%clk 0:08:58] } (9... hxg4 { often, it's preferable to take with the h-pawn to open the h-file for the rook and discourage white from castling kingside. From this position, generally the bishop develops to e6, queen to d6, and later ideas of 0-0-0 and Rh5-Ra5 if white castles queenside } { [%cal Gc8e6,Gd8d6,Ge8c8,Gh8h2,Gh8h5,Gh5a5] }) 10. Qd2 { [%clk 0:10:18] } 10... Qh4+ { [%clk 0:07:37] } 11. Qf2 { [%clk 0:10:20] } 11... Qg5 { [%clk 0:07:19] } 12. Nd2 { [%clk 0:10:17] } 12... h4 { [%clk 0:07:09] } 13. h3 { [%clk 0:10:14] } 13... Bh5 { [%clk 0:07:00] } 14. O-O { [%clk 0:10:11] } 14... O-O-O { [%clk 0:06:24] } 15. Qf5+ { Once queen's are traded, white is happy to be in a simplified position up a pawn. Something has already gone wrong for black. } { [%clk 0:10:11] } 15... Qxf5 { [%clk 0:05:14] } 16. exf5 { [%clk 0:10:16] } 16... Rd6 { [%clk 0:04:42] } 17. e4 { [%clk 0:10:19] } 17... f6 { [%clk 0:03:21] } 18. Nf3 { [%clk 0:10:15] } 18... g5 { [%clk 0:02:49] } 19. fxg6 { [%clk 0:10:16] } 19... Bxg6 { [%clk 0:02:39] } 20. Nd2 { [%clk 0:10:10] } 20... b5 { [%clk 0:02:07] } 21. Rf2 { [%clk 0:10:11] } 21... Re6 { [%clk 0:01:33] } 22. Raf1 { [%clk 0:10:09] } 22... Rf8 { [%clk 0:01:21] } 23. Rf4 { [%clk 0:10:05] } 23... f5 { [%clk 0:00:59] } 24. Rxh4 { [%clk 0:10:05] } 24... Rf7 { [%clk 0:00:50] } 25. Rhf4 { [%clk 0:09:56] } 25... fxe4 { [%clk 0:00:50] } 26. Rxf7 { [%clk 0:09:56] } 26... Bxf7 { [%clk 0:00:54] } 27. Rxf7 { [%clk 0:09:56] } 27... e3 { [%clk 0:00:54] } 28. Nf3 { [%clk 0:09:57] } 28... e2 { [%clk 0:00:53] } 29. Kf2 { [%clk 0:10:00] } 29... Kb7 { [%clk 0:00:38] } 30. Rf5 { [%clk 0:10:03] } 30... Kb6 { [%clk 0:01:05] } 31. Re5 { [%clk 0:10:06] } 31... Rxe5 { [%clk 0:00:57] } 32. Nxe5 { [%clk 0:10:10] } 32... Kc5 { [%clk 0:00:45] } 33. Kxe2 { [%clk 0:10:13] } 33... Kd6 { [%clk 0:00:49] } 34. Nf3 { [%clk 0:10:15] } 34... Ke6 { [%clk 0:00:48] } 35. g4 { [%clk 0:10:18] } 35... Kf6 { [%clk 0:00:49] } 36. h4 { [%clk 0:10:22] } 36... Kg6 { [%clk 0:00:49] } 37. h5+ { [%clk 0:10:24] } 37... Kh6 { [%clk 0:00:51] } 38. Ke3 { [%clk 0:10:19] } 38... a5 { [%clk 0:00:53] } 39. Kf4 { [%clk 0:10:22] } 39... c5 { [%clk 0:00:51] } 40. Ne5 { [%clk 0:10:25] } 40... a4 { [%clk 0:00:45] } 41. Nd7 { [%clk 0:10:23] } 41... c4 { [%clk 0:00:45] } 42. dxc4 { [%clk 0:10:26] } 42... bxc4 { [%clk 0:00:49] } 43. c3 { [%clk 0:10:30] } 43... c6 { [%clk 0:00:35] } 44. a3 { [%clk 0:10:32] } 44... Kg7 { [%clk 0:00:34] } 45. Ne5 { [%clk 0:10:35] } 45... c5 { [%clk 0:00:34] } 46. Nxc4 { [%clk 0:10:39] } 46... Kf6 { [%clk 0:00:35] } 47. g5+ { [%clk 0:10:42] } 47... Kg7 { [%clk 0:00:29] } 48. Nb6 { [%clk 0:10:42] } 48... Kh7 { [%clk 0:01:18] } 49. Nxa4 { [%clk 0:10:46] } 49... c4 { [%clk 0:01:21] } 50. Nb6 { 1-0 Black resigns. } { [%clk 0:10:49] } 1-0
+
+

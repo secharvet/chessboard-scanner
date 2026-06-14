@@ -1,0 +1,377 @@
+[Event "The IMPENETRABLE Reti Opening: Introduction"]
+[Date "2026.05.31"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "The IMPENETRABLE Reti Opening"]
+[ChapterName "Introduction"]
+[ChapterURL "https://lichess.org/study/iN61Eams/0s86G2Mb"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[FEN "rnbqkbnr/pppppppp/8/8/8/5N2/PPPPPPPP/RNBQKB1R w KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.31"]
+[UTCTime "01:47:20"]
+[ChapterMode "gamebook"]
+
+{ Hi guys! Welcome to another opening study! Today, we will tackle the Reti Opening.
+
+What is the Reti Opening? It starts with white playing Nf3 on the first move. I will tackle everything that black can do against it.
+
+The main idea of this opening is to transpose into a completely different opening or play an independent line.
+
+I will show you some transpositions into some other lines and the King's Indian Attack!
+
+Let's get straight into action! }
+ *
+
+
+[Event "The IMPENETRABLE Reti Opening: Chapter 1: Reti Opening vs King's Indian Defense"]
+[Date "2026.05.31"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A48"]
+[Opening "London System, with Be2"]
+[StudyName "The IMPENETRABLE Reti Opening"]
+[ChapterName "Chapter 1: Reti Opening vs King's Indian Defense"]
+[ChapterURL "https://lichess.org/study/iN61Eams/8HrTh1uU"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.05.31"]
+[UTCTime "01:54:43"]
+[ChapterMode "gamebook"]
+
+{ Play the Reti Opening. } { [%csl Gf3][%cal Gg1f3] }
+1. Nf3 Nf6 { There are a million different moves you can play, but I recommend playing d4. } 2. d4 g6 { Play Bf4. } 3. Bf4 { We have now transposed into a London System. } 3... Bg7 { Push the pawn up to e3. } 4. e3 O-O { Develop the bishop to e2. } 5. Be2 d6 { Push the pawn up to h3. } 6. h3 { This simple pawn move is actually a very useful move. First, you want to give an escape square for your bishop to go to h2. Second, you want to prevent anything from going to g4. } 6... Nbd7 { Castle the king. } 7. O-O Qe8 { Instead of playing c3, c4 is more ambitious and sounder. } 8. c4 e5 { Retreat the bishop to h2. } 9. Bh2 Ne4 { Develop the knight to d2. } 10. Nbd2 Nxd2 { Recapture while developing. } 11. Qxd2 { You now have a decent position with queenside space. } *
+
+
+[Event "The IMPENETRABLE Reti Opening: Chapter 2: Reti Opening vs Caro-Kann Defense"]
+[Date "2026.05.31"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A04"]
+[Opening "Zukertort Opening: Slav Invitation"]
+[StudyName "The IMPENETRABLE Reti Opening"]
+[ChapterName "Chapter 2: Reti Opening vs Caro-Kann Defense"]
+[ChapterURL "https://lichess.org/study/iN61Eams/G88eAr7B"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.05.31"]
+[UTCTime "02:02:51"]
+[ChapterMode "gamebook"]
+
+{ Play the Reti. } { [%csl Yf3][%cal Yg1f3] }
+1. Nf3 c6 { Again, here's my recommendation. Play d4. } 2. d4 d5 { Develop the bishop to f4. } 3. Bf4 Nf6 { Push pawn up to e3. } 4. e3 { If Bf5 is ever played, you play c4 followed by Qb3. } 4... e6 { Develop the knight to d2. } 5. Nbd2 Nbd7 { Develop the bishop to d3. } 6. Bd3 Be7 { Castle the king. } 7. O-O O-O { Now, you can push the pawn to e4. } 8. e4 $16 { White is now better. } *
+
+
+[Event "The IMPENETRABLE Reti Opening: Chapter 3: Reti Opening vs Sicilian Defense"]
+[Date "2026.05.31"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A04"]
+[Opening "Zukertort Opening: Sicilian Invitation"]
+[StudyName "The IMPENETRABLE Reti Opening"]
+[ChapterName "Chapter 3: Reti Opening vs Sicilian Defense"]
+[ChapterURL "https://lichess.org/study/iN61Eams/Zah3AncK"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.05.31"]
+[UTCTime "02:08:07"]
+[ChapterMode "gamebook"]
+
+{ [%csl Rf3][%cal Rg1f3] }
+1. Nf3 c5 { Not everytime we will play d4! We will play the sneaky move a3. } { [%csl Ba3][%cal Ba2a3] } 2. a3!? $140 { This looks like a very weird move at first glance, but we have an idea to play b4! } { [%csl Rb4][%cal Rb2b4] } 2... Nc6 { We do it anyways! } { [%csl Yb4][%cal Yb2b4] } 3. b4! { We will gambit a pawn for activity. Declining the gambit with e6 doesn't work because we just take and play d4. e5 also doesn't work due to b5. } 3... cxb4 { Recapture. } { [%csl Gb4][%cal Ga3b4] } 4. axb4 Nxb4 { Develop the bishop to a3. } { [%csl Ya3][%cal Yc1a3] } 5. Ba3 Nc6 { Push the pawn up to e4! } { [%csl Be4][%cal Be2e4] } 6. e4! { We gain central space! } { [%csl Rf5,Rd5][%cal Re4d5,Re4f5] } 6... e6 { Take the bishop on f8. } { [%csl Yf8][%cal Ya3f8] } 7. Bxf8 Kxf8 { Control the center with d4. } { [%csl Bd4][%cal Bd2d4] } 8. d4 { Engine says this is equal, but white has high chances of winning! } { [%csl Rd5][%cal Rd4d5] } *
+
+
+[Event "The IMPENETRABLE Reti Opening: Chapter 4: Reti Opening vs Dutch Defense"]
+[Date "2026.05.31"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A04"]
+[Opening "Zukertort Opening: Lisitsyn Gambit Deferred"]
+[StudyName "The IMPENETRABLE Reti Opening"]
+[ChapterName "Chapter 4: Reti Opening vs Dutch Defense"]
+[ChapterURL "https://lichess.org/study/iN61Eams/iL8womhV"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.05.31"]
+[UTCTime "02:14:30"]
+[ChapterMode "gamebook"]
+
+{ [%csl Bf3][%cal Bg1f3] }
+1. Nf3 f5 { Instead of playing d4, I recommend playing d3. } { [%csl Rd3][%cal Rd2d3] } 2. d3 Nf6 { We gambit the pawn again with e4! } { [%csl Ye4][%cal Ye2e4] } 3. e4! { Gambiting the pawn for initiative! } 3... fxe4 { [%csl Be4][%cal Bd3e4] } 4. dxe4 Nxe4 { Develop with tempo... } { [%csl Gd3][%cal Gf1d3] } 5. Bd3 Nf6 { Go Ng5! Setup a trap! } { [%csl Rg5][%cal Rf3g5] } 6. Ng5 $16 { It is +1.0! White is much better! Threatens Nxh7 to weaken the diagonal. } { [%csl Rh7][%cal Rg5h7] } *
+
+
+[Event "The IMPENETRABLE Reti Opening: Chapter 5: Reti Opening vs Pirc Defense"]
+[Date "2026.05.31"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A04"]
+[Opening "Zukertort Opening: Pirc Invitation"]
+[StudyName "The IMPENETRABLE Reti Opening"]
+[ChapterName "Chapter 5: Reti Opening vs Pirc Defense"]
+[ChapterURL "https://lichess.org/study/iN61Eams/X0kH1xup"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.05.31"]
+[UTCTime "02:18:25"]
+[ChapterMode "gamebook"]
+
+{ [%csl Bf3][%cal Bg1f3] }
+1. Nf3 d6 { This time, we go for a kingside fianchetto. } { [%csl Bg3][%cal Bg2g3] } 2. g3 Nf6 { Develop the bishop. } { [%csl Bg2][%cal Bf1g2] } 3. Bg2 g6 { Push pawn up to c4. } { [%csl Bc4][%cal Bc2c4] } 4. c4 Bg7 { Castle the king. } { [%csl Rg1][%cal Re1g1] } 5. O-O O-O { Develop the knight. } { [%csl Yc3][%cal Yb1c3] } 6. Nc3 e5 { Crash in the center with d4! } { [%csl Gd4][%cal Gd2d4] } 7. d4 $16 { White is better in this position. } *
+
+
+[Event "The IMPENETRABLE Reti Opening: Chapter 6: Reti Opening vs Reversed London System"]
+[Date "2026.05.31"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A05"]
+[Opening "King's Indian Attack"]
+[StudyName "The IMPENETRABLE Reti Opening"]
+[ChapterName "Chapter 6: Reti Opening vs Reversed London System"]
+[ChapterURL "https://lichess.org/study/iN61Eams/i17Y7hFw"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.05.31"]
+[UTCTime "02:26:24"]
+[ChapterMode "gamebook"]
+
+{ [%csl Bf3][%cal Bg1f3] }
+1. Nf3 d5 { Go for the kingside fianchetto. } { [%cal Bg2g3] } 2. g3 Nf6 { Develop the bishop. } { [%csl Bg2][%cal Bf1g2] } 3. Bg2 Bf5 { Push pawn up to c4. } { [%csl Bc4][%cal Bc2c4] } 4. c4 e6 { Develop the queen to b3. } { [%csl Rb7][%cal Rb3b7,Bd1b3] } 5. Qb3 Nc6 { Castle the king. } 6. O-O (6. Qxb7 { This is a bit risky as they can play Nb4 and threaten a fork on c2. } { [%csl Rc2][%cal Rb4c2,Rc2a1,Rc2e1,Bc6b4] }) 6... a6 { Develop the knight. } { [%csl Bc3][%cal Bb1c3] } 7. Nc3 Be7 { Push pawn to d3. } { [%csl Bd3][%cal Bd2d3] } 8. d3 h6 { Play Nh4. } { [%csl Rf5][%cal Gf3h4,Rh4f5] } 9. Nh4 Bh7 { Take the pawn. } { [%csl Bd5][%cal Bc4d5] } 10. cxd5 exd5 { Take it with the knight. } { [%csl Rd5][%cal Rc3d5] } 11. Nxd5 Nxd5 { Take with the bishop. } { [%csl Yd5][%cal Yg2d5] } 12. Bxd5 Bxh4 { Take the pawn on f7. } { [%csl Rf7][%cal Rd5f7] } 13. Bxf7+ Kf8 { Take the bishop. } { [%csl Bh4][%cal Bg3h4] } 14. gxh4 Qxh4 { Very natural move, but you play Be3 and you win. } { [%csl Be3][%cal Bc1e3] } 15. Be3 $18 { [%csl Rf8][%cal Re3c5,Rc5f8] } *
+
+
+[Event "The IMPENETRABLE Reti Opening: King's Indian Attack"]
+[Date "2026.06.01"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "The IMPENETRABLE Reti Opening"]
+[ChapterName "King's Indian Attack"]
+[ChapterURL "https://lichess.org/study/iN61Eams/7TC8Iezl"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[FEN "rnbqkbnr/pppppppp/8/8/8/3P1NP1/PPPNPPBP/R1BQ1RK1 w kq - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.06.01"]
+[UTCTime "03:41:12"]
+[ChapterMode "gamebook"]
+
+{ This is the section where we will learn the KIA. This is the King's Indian Attack. More information next chapter... }
+ *
+
+
+[Event "The IMPENETRABLE Reti Opening: Chapter 7: King's Indian Attack vs French Defense"]
+[Date "2026.05.31"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A08"]
+[Opening "King's Indian Attack: Sicilian Variation"]
+[StudyName "The IMPENETRABLE Reti Opening"]
+[ChapterName "Chapter 7: King's Indian Attack vs French Defense"]
+[ChapterURL "https://lichess.org/study/iN61Eams/YINe2k5E"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.05.31"]
+[UTCTime "13:10:17"]
+[ChapterMode "gamebook"]
+
+{ [%csl Bf3][%cal Bg1f3] }
+1. Nf3 d5 { [%cal Bg2g3] } 2. g3 Nf6 { [%csl Bg2][%cal Bf1g2] } 3. Bg2 e6 { [%csl Bg1][%cal Be1g1] } 4. O-O c5 { [%cal Bd2d3] } 5. d3 Nc6 { [%csl Bd2][%cal Bb1d2] } 6. Nbd2 { This is our main setup. We castle the king, place the knights on f3 and d2, the pawns will be on d3 and g3 while your sniper is standing right there on g2. Our main pawn break is e4, but c4 can also be played. } { [%csl Rf2,Rg2,Rh2,Rg3,Rd2,Rd3,Rf3,Rf1,Rg1] } 6... Be7 { [%csl Be4][%cal Be2e4] } 7. e4! { Our main pawn break in the position! e4 has been played to gain central space. There is now central tension with the d5 and e4 pawns staring at each other! Black really shouldn't take on e4 because they lose central space and we just play dxe4, but as white, taking on d5 also looks like a bad move because we give up central space, but we have compensation for that because we have our rook on e1 that we be perfectly placed on the future open e-file. Everytime we take on d5, we follow that up with d4 only if they take with the pawn. If they take with the knight, they lose central space and we can even play Ne4 next move or even c4 followed by Nxc4 (their pawn will be on b5 sooner or later). Gaining central space with e5 is also good to kick away the f6 knight from the defense of the king and we will generate a kingside attack after that. } { [%csl Rf5,Rd5][%cal Re4d5,Re4f5] } 7... O-O { [%csl Be1][%cal Bf1e1] } 8. Re1 { d4 is a useless move because it weakens the c4 square and we can play a4! e5 is also possible to use the e4 square as a good outpost for the knight.
+dxe4 is no problem because we just play dxe4 and they lost their powerful central pawn on d5. } 8... b5 { Push or take? } { [%csl Ge5,Rd5][%cal Ge4e5,Re4d5] } 9. e5 { Gaining space in the center and kicking the f6 knight away from the defense of their king. } { [%csl Rf6,Rd6][%cal Re5f6,Re5d6] } (9. exd5 { One of the best moves to follow it up with d4, this is an alternative we will cover. }) 9... Nd7 { [%csl Bf1][%cal Bd2f1] } 10. Nf1 b4 { [%csl Bh4][%cal Bh2h4] } 11. h4 a5 { [%csl Bf4][%cal Bc1f4] } 12. Bf4 { You want a kingside attack. } { [%csl Bh6,Rg4,Ge6][%cal Rf1h2,Rh2g4,Bh4h5,Bh5h6,Yf1e3,Ye3g4,Gg2h3,Gh3e6] } *
+
+
+[Event "The IMPENETRABLE Reti Opening: Chapter 8: King's Indian Attack vs Grunfeld Defense"]
+[Date "2026.05.31"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A05"]
+[Opening "King's Indian Attack: Wahls Defense"]
+[StudyName "The IMPENETRABLE Reti Opening"]
+[ChapterName "Chapter 8: King's Indian Attack vs Grunfeld Defense"]
+[ChapterURL "https://lichess.org/study/iN61Eams/DFpg4X0X"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.05.31"]
+[UTCTime "13:13:26"]
+[ChapterMode "gamebook"]
+
+{ [%csl Bf3][%cal Bg1f3] }
+1. Nf3 Nf6 { [%csl Bg3][%cal Bg2g3] } 2. g3 g6 { [%csl Bg2][%cal Bf1g2] } 3. Bg2 Bg7 { [%csl Bg1][%cal Be1g1] } 4. O-O d5 { [%csl Bd3][%cal Bd2d3] } 5. d3 O-O { [%csl Bd2][%cal Bb1d2] } 6. Nbd2 { Our main setup has been created. } { [%csl Bd3,Bd2,Bf3,Bg2,Bf2,Bg3,Bh2,Bf1,Bg1] } 6... c5 { [%csl Be4][%cal Be2e4] } 7. e4 { Our main pawn break has been achieved. } 7... Nc6 { [%csl Be1][%cal Bf1e1] } 8. Re1 e5 { [%csl Bd5][%cal Be4d5] } 9. exd5 Nxd5 { [%csl Bc4][%cal Bd2c4] } 10. Nc4 f6 { [%csl Bc3][%cal Bc2c3] } 11. c3 { Your main break is d4. } { [%csl Rd4][%cal Rd3d4] } *
+
+
+[Event "The IMPENETRABLE Reti Opening: Chapter 9: King's Indian Attack vs Dutch Defense"]
+[Date "2026.05.31"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A04"]
+[Opening "Zukertort Opening: Dutch Variation"]
+[StudyName "The IMPENETRABLE Reti Opening"]
+[ChapterName "Chapter 9: King's Indian Attack vs Dutch Defense"]
+[ChapterURL "https://lichess.org/study/iN61Eams/ihdrLhkh"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.05.31"]
+[UTCTime "13:26:48"]
+[ChapterMode "gamebook"]
+
+{ [%csl Yf3][%cal Yg1f3] }
+1. Nf3 f5 { [%csl Rg3][%cal Rg2g3] } 2. g3 Nf6 { [%csl Bg2][%cal Bf1g2] } 3. Bg2 e6 { [%csl Bg1][%cal Be1g1] } 4. O-O Be7 { [%csl Rd3][%cal Rd2d3] } 5. d3 O-O { [%csl Yd2][%cal Yb1d2] } 6. Nbd2 { Our main setup has been achieved. } { [%csl Bd3,Bd2,Bf3,Bg3,Bg2,Bf2,Bh2,Bg1,Bf1] } 6... d6 { [%csl Be4][%cal Be2e4] } 7. e4 { Our main pawn break has been achieved. } 7... fxe4 { [%csl Be4][%cal Bd3e4] } 8. dxe4 Nc6 { [%csl Be5][%cal Be4e5] } 9. e5 { Provoking weaknesses... } 9... dxe5 { [%csl Be1][%cal Bf1e1] } 10. Re1 $16 { White targets the weakness and is better. } { [%csl Re5][%cal Rf3e5,Re1e5] } *
+
+
+[Event "The IMPENETRABLE Reti Opening: Chapter 10: King's Indian Attack vs King's Indian Defense"]
+[Date "2026.05.31"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A05"]
+[Opening "King's Indian Attack: Symmetrical Defense"]
+[StudyName "The IMPENETRABLE Reti Opening"]
+[ChapterName "Chapter 10: King's Indian Attack vs King's Indian Defense"]
+[ChapterURL "https://lichess.org/study/iN61Eams/74iGNA8G"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.05.31"]
+[UTCTime "13:31:06"]
+[ChapterMode "gamebook"]
+
+{ [%csl Bf3][%cal Bg1f3] }
+1. Nf3 Nf6 { [%csl Bg3][%cal Bg2g3] } 2. g3 g6 { [%csl Rg2][%cal Rf1g2] } 3. Bg2 Bg7 { [%csl Gg1][%cal Ge1g1] } 4. O-O O-O { [%csl Yd3][%cal Yd2d3] } 5. d3 d6 { [%csl Rc4][%cal Rc2c4] } 6. c4 { You can also play c4 in the King's Indian Attack. } 6... e5 { [%csl Bc3][%cal Bb1c3] } 7. Nc3 Nc6 { [%csl Rb1][%cal Ra1b1] } 8. Rb1 { You want to play the move b4 and gain queenside space. } { [%csl Rb4][%cal Rb2b4] } 8... a5 { Prepare to fianchetto the second bishop. } { [%csl Bb3][%cal Bb2b3] } 9. b3 h6 { [%csl Bb2][%cal Bc1b2] } 10. Bb2 Be6 { [%csl Be4][%cal Be2e4] } 11. e4 { Clamp on d5 has been created... } { [%csl Rd5][%cal Rc4d5,Re4d5] } 11... Qd7 { [%csl Bd2][%cal Bd1d2] } 12. Qd2 { We have finished development. } { [%csl Rg2,Rf3,Rd2,Rc3,Rb2] } 12... Bh3 { [%csl Be1][%cal Bb1e1] } 13. Rbe1 Bxg2 14. Kxg2 Nh5 { [%csl Bd5][%cal Bc3d5] } 15. Nd5 $16 { We now play chess. Your main pawn break is d4 and once you achieve that, black will have issues in their position due to lack of space. } { [%csl Rd4][%cal Rd3d4] } *
+
+
+[Event "The IMPENETRABLE Reti Opening: Chapter 11: King's Indian Attack vs Reversed London System"]
+[Date "2026.06.01"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A07"]
+[Opening "King's Indian Attack, with Bf5"]
+[StudyName "The IMPENETRABLE Reti Opening"]
+[ChapterName "Chapter 11: King's Indian Attack vs Reversed London System"]
+[ChapterURL "https://lichess.org/study/iN61Eams/6k4BPEbs"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.06.01"]
+[UTCTime "03:12:48"]
+[ChapterMode "gamebook"]
+
+{ [%csl Bf3][%cal Bg1f3] }
+1. Nf3 Nf6 { [%csl Bg3][%cal Bg2g3] } 2. g3 d5 { [%csl Rg2][%cal Rf1g2] } 3. Bg2 c6 { [%csl Yg1][%cal Ye1g1] } 4. O-O Bf5 { [%csl Bd3][%cal Bd2d3] } 5. d3 e6 { Nfd2... a pretty interesting move with the plan to play e4. } { [%csl Bd2][%cal Bf3d2] } 6. Nfd2!? { Prepares e4. } { [%csl Be4][%cal Gd3e4,Gd2e4,Gg2e4,Be2e4] } (6. Nbd2 { Other knight... }) 6... h6 { [%csl Be4][%cal Be2e4] } 7. e4 Bh7 { [%csl Bc3][%cal Bb1c3] } 8. Nc3 { We will have a strong kingside attack later on. } 8... Be7 { Push f4! Attack on the kingside! } 9. f4 O-O { [%csl Bh1][%cal Bg1h1] } 10. Kh1 { Prophylactic move to get out of the weakened diagonal... } { [%csl Rg1][%cal Ra7g1] } 10... a5 { [%csl Bg4][%cal Bg3g4] } 11. g4 a4 { [%csl Bh4][%cal Bh2h4] } 12. h4 { Full attack mode... } { [%csl Be4,Bf4,Bg4,Bh4] } 12... a3 { [%csl Bg5][%cal Bg4g5] } 13. g5 { We don't care about their attack on the queenside. Their kingside is currently on fire! } 13... Nfd7 { [%csl Bb1][%cal Ba1b1] } 14. Rb1 { Defending a bit... } 14... hxg5 { [%csl Bg5][%cal Bh4g5] } 15. hxg5 $16 { Pressure along the h-file is going to be dangerous for black... } { [%csl Bh3,Rh8,Rh7][%cal Bf1f3,Bf3h3,Rd1h5,Rh5h8,Bh3h5] } *
+
+
+[Event "The IMPENETRABLE Reti Opening: Alternatives"]
+[Date "2026.06.01"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "The IMPENETRABLE Reti Opening"]
+[ChapterName "Alternatives"]
+[ChapterURL "https://lichess.org/study/iN61Eams/xnVqPlXd"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.06.01"]
+[UTCTime "03:43:56"]
+[ChapterMode "gamebook"]
+
+{ We will now learn the alternatives. Press the space button to go to next chapter... }
+ *
+
+
+[Event "The IMPENETRABLE Reti Opening: Chapter 12: King's Indian Attack vs French Defense (Alternative)"]
+[Date "2026.06.01"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A08"]
+[Opening "King's Indian Attack: Sicilian Variation"]
+[StudyName "The IMPENETRABLE Reti Opening"]
+[ChapterName "Chapter 12: King's Indian Attack vs French Defense (Alternative)"]
+[ChapterURL "https://lichess.org/study/iN61Eams/e9dlb11S"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.06.01"]
+[UTCTime "02:42:48"]
+[ChapterMode "gamebook"]
+
+{ [%csl Bf3][%cal Bg1f3] }
+1. Nf3 e6 { [%csl Bg3][%cal Bg2g3] } 2. g3 d5 { [%csl Rg2][%cal Rf1g2] } 3. Bg2 Nf6 { [%csl Rd3][%cal Rd2d3] } 4. d3 c5 { [%csl Bg1][%cal Be1g1] } 5. O-O Nc6 { [%csl Bd2][%cal Bb1d2] } 6. Nbd2 Be7 { [%csl Ye4][%cal Ye2e4] } 7. e4 O-O { [%csl Re1][%cal Rf1e1] } 8. Re1 b5 { Push or take? } { [%csl Re5,Gd5][%cal Re4e5,Ge4d5] } 9. exd5 $140 { The idea of this is to play d4 next move! } { [%csl Rd4][%cal Rd3d4] } (9. e5 { We have covered this already in the previous chapter... }) 9... exd5 { [%csl Bd4][%cal Bd3d4] } 10. d4 c4 { [%csl Be5][%cal Bf3e5] } 11. Ne5! { Outpost knight on e5... } 11... Bb7 { [%csl Bc6][%cal Be5c6] } 12. Nxc6 Bxc6 { [%csl Ra4][%cal Ra2a4] } 13. a4 a6 { [%csl Yb5][%cal Ya4b5] } 14. axb5 axb5 { [%csl Ba8][%cal Ba1a8] } 15. Rxa8 Bxa8 { ...Maybe you thought they could take with the queen?? The bishop on e7 hangs because of our perfectly placed rook on e1! } { [%csl Bf1][%cal Bd2f1] } 16. Nf1 { [%csl Be5,Rf5,Ge2,Yh4][%cal Bc1f4,Bf4e5,Re3f5,Gd1e2,Rf1e3,Yh2h4] } *
+
+
+[Event "The IMPENETRABLE Reti Opening: Chapter 13: King's Indian Attack vs Dutch Defense (Alternative)"]
+[Date "2026.06.01"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A04"]
+[Opening "Zukertort Opening: Dutch Variation"]
+[StudyName "The IMPENETRABLE Reti Opening"]
+[ChapterName "Chapter 13: King's Indian Attack vs Dutch Defense (Alternative)"]
+[ChapterURL "https://lichess.org/study/iN61Eams/moYsXb9m"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.06.01"]
+[UTCTime "03:45:40"]
+[ChapterMode "gamebook"]
+
+{ [%csl Bf3][%cal Bg1f3] }
+1. Nf3 f5 { [%csl Bg3][%cal Bg2g3] } 2. g3 Nf6 { [%csl Rg2][%cal Rf1g2] } 3. Bg2 e6 { [%csl Yg1][%cal Ye1g1] } 4. O-O Be7 { [%csl Rd3][%cal Rd2d3] } 5. d3 O-O { You can also go for c4! } { [%csl Yc4][%cal Yc2c4] } 6. c4 { Your idea is to just kill 'em on the queenside! Survive their attack on the kingside! The bishop on g2 is a monster and it also defends the king a bit... now you play chess... } { [%csl Bc3,Rb4,Ga8][%cal Bb1c3,Rb2b4,Ya1b1,Gg2a8] } *
+
+
+[Event "The IMPENETRABLE Reti Opening: Chapter 14: Reti Opening vs Sicilian Defense (Alternative)"]
+[Date "2026.06.01"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A30"]
+[Opening "English Opening: Symmetrical Variation"]
+[StudyName "The IMPENETRABLE Reti Opening"]
+[ChapterName "Chapter 14: Reti Opening vs Sicilian Defense (Alternative)"]
+[ChapterURL "https://lichess.org/study/iN61Eams/pwRHEM8u"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.06.01"]
+[UTCTime "03:53:26"]
+[ChapterMode "gamebook"]
+
+{ [%csl Bf3][%cal Bg1f3] }
+1. Nf3 c5 { [%csl Bc4][%cal Bc2c4] } 2. c4 { Transposition into English Opening... } 2... Nf6 { [%csl Bg3][%cal Bg2g3] } 3. g3 Nc6 { [%csl Bg2][%cal Bf1g2] } 4. Bg2 g6 { [%csl Bg1][%cal Be1g1] } 5. O-O Bg7 { [%csl Bd4][%cal Bd2d4] } 6. d4 cxd4 { [%csl Gd4][%cal Gf3d4] } 7. Nxd4 O-O { [%csl Yc3][%cal Yb1c3] } 8. Nc3 Qa5 { This is their best move... } { [%csl Be3][%cal Be2e3] } 9. e3 d6 { Don't grab the free candy! It isn't a trap, but you fall behind in development. Just develop the bishop to d2. } { [%csl Bd2][%cal Bc1d2] } 10. Bd2 { X-ray on the queen... hmm... } { [%csl Ra5,Rc3][%cal Rd2a5] } 10... Bd7 { They ignore it, push pawn to b3... } 11. b3 { [%csl Rb3,Rc4][%cal Rb3c4,Ra2b3] } 11... Rfc8 { [%csl Bh3][%cal Bh2h3] } 12. h3 { Just waiting to strike at the right moment. } 12... Qd8 { [%csl Bc1][%cal Ba1c1] } 13. Rc1 a6 { [%csl Be2][%cal Bd1e2] } 14. Qe2 Rab8 { [%csl Gd1][%cal Gf1d1] } 15. Rfd1 Nxd4 { Most popular but dubious because we get our center. } { [%csl Bd4][%cal Be3d4] } 16. exd4 b5 { [%csl Bc5][%cal Bc4c5] } 17. c5 { Sac a pawn? Hmm... } 17... dxc5 { [%csl Rf4][%cal Rd2f4] } 18. Bf4 cxd4 { [%csl Bb8][%cal Bf4b8] } 19. Bxb8 $18 { We win the exchange and we are winning! } *
+
+
+[Event "The IMPENETRABLE Reti Opening: Chapter 15: Reti Opening vs King's Indian Defense (Alternative)"]
+[Date "2026.06.01"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A48"]
+[Opening "East Indian Defense"]
+[StudyName "The IMPENETRABLE Reti Opening"]
+[ChapterName "Chapter 15: Reti Opening vs King's Indian Defense (Alternative)"]
+[ChapterURL "https://lichess.org/study/iN61Eams/D117gMLh"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.06.01"]
+[UTCTime "08:45:33"]
+[ChapterMode "gamebook"]
+
+{ You know what to play!!! }
+1. Nf3 Nf6 { [%csl Bd4][%cal Bd2d4] } 2. d4 g6 { Instead of playing Bf4, you could also play Nbd2. } { [%csl Yd2][%cal Yb1d2] } 3. Nbd2 { While you are learning the Reti Opening, you are also learning a bunch of different openings because they usually transpose into each other. } 3... Bg7 { [%csl Ye4][%cal Ye2e4] } 4. e4 { Central space has been generated... } { [%csl Rc5,Re5,Rf5,Rd5][%cal Rd4e5,Rd4c5,Re4d5,Re4f5] } 4... d6 { [%csl Bd3][%cal Bf1d3] } 5. Bd3 O-O { [%csl Bg1][%cal Be1g1] } 6. O-O Nc6 { [%csl Bc3][%cal Bc2c3] } 7. c3 e5 8. Re1 Qe7 { [%csl Bf1][%cal Bd2f1] } 9. Nf1 { A pretty solid position for white with a comfortable game ahead... } { [%csl Rg3,Re3,Yh5,Ge2,Bb4][%cal Rf1g3,Rf1e3,Yh2h4,Yh4h5,Gd1e2,Ba2a3,Ba3b4] } *
+
+
+[Event "The IMPENETRABLE Reti Opening: Chapter 16: KIA vs French Defense (Alternative)"]
+[Date "2026.06.01"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A08"]
+[Opening "King's Indian Attack: Sicilian Variation"]
+[StudyName "The IMPENETRABLE Reti Opening"]
+[ChapterName "Chapter 16: KIA vs French Defense (Alternative)"]
+[ChapterURL "https://lichess.org/study/iN61Eams/NNYRpuDE"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.06.01"]
+[UTCTime "09:43:38"]
+[ChapterMode "gamebook"]
+
+1. Nf3 e6 { [%csl Yg3][%cal Yg2g3] } 2. g3 d5 { [%csl Bg2][%cal Bf1g2] } 3. Bg2 Nf6 { [%csl Bg1][%cal Be1g1] } 4. O-O c5 { [%csl Rd3][%cal Rd2d3] } 5. d3 Nc6 { Remember I said you can do two pawn breaks? You don't need to play Nbd2 and e4! You can just play c4! } { [%csl Gc4][%cal Gc2c4] } 6. c4! { It is even considered the engine's best choice! } (6. Nbd2 { Good move, but you are studying the move c4 for a moment and you already studied this move. }) 6... d4 { This is the point. We provoke them to push so we can undermine their structure with e3. } { [%csl Ye3][%cal Ye2e3] } 7. e3 Be7 { [%csl Yd4][%cal Ye3d4] } 8. exd4 cxd4 { Develop the knight to a3 and place it on c2. } { [%csl Bc2][%cal Bb1a3,Ba3c2] } 9. Na3 { You are not worried of doubling your a-pawns because it is actually good for you because you get the bishop pair and the open b-file. } { [%csl Bc2][%cal Ba3c2] } (9. Nbd2?! { No, no, no, not to this square. }) (9. Nc3?? { Hangs the knight!!! }) (9. Re1 { Uhh... this is good but play Na3 to continue. }) (9. Ne5?? { No, no... not this one }) (9. Bh6?? { No, no... not this one }) (9. Nxd4??) (9. a3 { Ok, decent, but not the best. } { [%csl Rb4][%cal Rb2b4] }) 9... O-O { [%csl Bc2][%cal Ba3c2] } 10. Nc2 { Do you know what your knight is doing here? First of all, it controls the important d4 square which makes e5 followed by e4 harder to do because d4 gets weak. Second, you prepare you expansion with b4 which is your main plan in the position. Pretty creative idea isn't it? } 10... e5 { [%csl Ye1][%cal Yf1e1] } 11. Re1 { Double pressure on the pawn. Hmm... } { [%csl Re5][%cal Re1e5,Rf3e5] } 11... Bd6 { Well... guess what? We can now play b4.... wait what? Isn't that pawn hanging? Wait a minute... their e5 pawn hangs! We can safely play b4 without any problems! } { [%csl Bb4][%cal Bb2b4] } 12. b4! Nxb4 { [%csl Yb4][%cal Yc2b4] } 13. Nxb4 Bxb4 { [%csl Be5][%cal Be1e5] } 14. Rxe5 { Ya' can't take with the knight sadly because your rook hangs, but this is fine. } (14. Nxe5?? { Oh no... } { [%csl Re1][%cal Rb4e1] }) 14... Bc3 { [%csl Bb1][%cal Ba1b1] } 15. Rb1 $18 { White is literally +1.0 in this position but I think it's even more due to the weak d4 pawn and the queenside pressure. Your bishop on g2 is a sniper! It snipes the whole diagonal that black can't even move!
+Just get rid of the c3 bishop and target the d4 pawn to convert it into a win! Look at your pieces, they are extremely active that black can easily fall apart. They can't even develop their bishop because b7 hangs and if they try to fianchetto it, they will have problems on the long diagonal due to our monster bishop on g2!
+Next chapter... } *
+
+
+[Event "The IMPENETRABLE Reti Opening: Chapter 17: Reti Opening vs Caro-Kann Defense (Alternative)"]
+[Date "2026.06.01"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A11"]
+[Opening "Réti Opening: Anglo-Slav Variation, with g3"]
+[StudyName "The IMPENETRABLE Reti Opening"]
+[ChapterName "Chapter 17: Reti Opening vs Caro-Kann Defense (Alternative)"]
+[ChapterURL "https://lichess.org/study/iN61Eams/KFb5SEFv"]
+[Annotator "https://lichess.org/@/mAtteoYOsef07"]
+[UTCDate "2026.06.01"]
+[UTCTime "08:51:29"]
+[ChapterMode "gamebook"]
+
+{ It is the same thing, don't you dare get wrong on this one. }
+1. Nf3 c6 { This time, we can also play c4 and transpose into the English Opening! } { [%csl Bc4][%cal Bc2c4] } 2. c4 d5 { Fianchetto the bishop and prepare to move it to g2. } { [%csl Bg3][%cal Bg2g3] } 3. g3 Nf6 { [%csl Yg2][%cal Yf1g2] } 4. Bg2 { You now need to learn theory from this position. Good luck!
+Hope you enjoyed this study all about the Reti Opening. Add this opening to your opening repertoire and play chess!
+join my team: https://lichess.org/team/yellow-gems I will host rapid, blitz and bullet tournaments there and check the yellow gems forum to check out more studies of mine.
+Bye! } *
+
+

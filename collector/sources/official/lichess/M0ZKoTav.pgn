@@ -1,0 +1,95 @@
+[Event "Beginner Tactics: The Pin - đòn ghim"]
+[Date "2023.09.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Beginner Tactics"]
+[ChapterName "The Pin - đòn ghim"]
+[ChapterURL "https://lichess.org/study/M0ZKoTav/8luCMnGG"]
+[Annotator "https://lichess.org/@/TuanAnhIQEQ"]
+[FEN "rnbk3r/ppp2p1p/5np1/4p3/4P3/2N5/PPP1BPPP/R1B1K2R w KQ - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.09.16"]
+[UTCTime "09:46:56"]
+[ChapterMode "gamebook"]
+
+1. Bg5 Nd7 2. Nd5 Ke8 3. Nxf6+ Nxf6 4. Bxf6 *
+
+
+[Event "Beginner Tactics: Double attack"]
+[Date "2023.09.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Beginner Tactics"]
+[ChapterName "Double attack"]
+[ChapterURL "https://lichess.org/study/M0ZKoTav/VRXDooVm"]
+[Annotator "https://lichess.org/@/TuanAnhIQEQ"]
+[FEN "r1bqk2r/ppp2ppp/5n2/3p4/1b1P1B2/2N5/PP2PPPP/R2QKB1R w KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.09.16"]
+[UTCTime "09:52:33"]
+[ChapterMode "gamebook"]
+
+{ [%csl Gb4,Ge8] }
+1. Qa4+ Bd7 { [%csl Gb4] } (1... Kf8) 2. Qxb4 { [%csl Gb4] } *
+
+
+[Event "Beginner Tactics: Discovered Attack"]
+[Date "2023.09.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Beginner Tactics"]
+[ChapterName "Discovered Attack"]
+[ChapterURL "https://lichess.org/study/M0ZKoTav/gEfGfCUZ"]
+[Annotator "https://lichess.org/@/TuanAnhIQEQ"]
+[FEN "r1b1kbnr/pp3ppp/4p3/3pP3/3q4/3B4/PP3PPP/RNBQK2R w KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.09.16"]
+[UTCTime "09:51:05"]
+[ChapterMode "gamebook"]
+
+1. Bb5+ Bd7 2. Qxd4 Bxb5 *
+
+
+[Event "Beginner Tactics: Deflection"]
+[Date "2023.09.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Beginner Tactics"]
+[ChapterName "Deflection"]
+[ChapterURL "https://lichess.org/study/M0ZKoTav/1bspry77"]
+[Annotator "https://lichess.org/@/TuanAnhIQEQ"]
+[FEN "8/5pq1/2b2k2/8/2p5/B1P3Q1/8/3K4 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.09.16"]
+[UTCTime "09:54:04"]
+[ChapterMode "gamebook"]
+
+1. Be7+ Kxe7 2. Qxg7 *
+
+
+[Event "Beginner Tactics: Defend"]
+[Date "2023.09.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Beginner Tactics"]
+[ChapterName "Defend"]
+[ChapterURL "https://lichess.org/study/M0ZKoTav/n16IKkYv"]
+[Annotator "https://lichess.org/@/TuanAnhIQEQ"]
+[FEN "r1b1k1nr/ppp1bppp/2n5/3p4/3P4/5N2/PPP1BPPP/RNB1K2R b KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.09.16"]
+[UTCTime "09:49:07"]
+
+1... Nb4 2. c3 (2. Na3) 2... Nc2+ *
+
+

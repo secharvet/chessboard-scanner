@@ -1,0 +1,95 @@
+[Event "USSR Championship"]
+[Site "Yerevan URS"]
+[Date "1962.12.11"]
+[Round "14"]
+[White "Viktor Korchnoi"]
+[Black "Mikhail Tal"]
+[Result "1-0"]
+[Variant "Standard"]
+[ECO "A62"]
+[Opening "Benoni Defense: Fianchetto Variation"]
+[StudyName "Masterpieces with Nose: Viktor Korchnoi"]
+[ChapterName "Viktor Korchnoi - Mikhail Tal"]
+[ChapterURL "https://lichess.org/study/jBccRRUi/I49jMYj8"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+
+1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. Nf3 g6 7. g3 Bg7 8. Bg2 O-O 9. O-O Na6 10. h3 { [%csl Gc8] } 10... Nc7 11. e4 { [%cal Gb7b5] } 11... Nd7 { [%cal Gb7b5] } (11... b5? 12. e5 { [%cal Gc1g5] } 12... dxe5 (12... b4 13. exf6) 13. d6 Ne6 14. Nxe5 Rb8 15. Nc6 { [%cal Gc6b8,Gc6d8] }) 12. Re1 { [%cal Ga8b8,Gb7b5] } 12... Ne8 (12... b5 13. e5 Nxe5 14. Nxe5 Bxe5 15. Rxe5 dxe5 16. d6 { [%cal Gg2a8,Gd6c7] }) 13. Bg5 Bf6 14. Be3 Rb8 15. a4 a6 16. Bf1 (16. a5 b5 17. axb6 Rxb6 { [%cal Gb6b2] }) 16... Qe7 17. Nd2 { [%cal Gd2c4,Gc4d6,Gc4b6,Gc4e5] } 17... Nc7 18. f4 { [%cal Ge4e5] } 18... b5 19. e5 dxe5 (19... b4 20. exf6 Qxf6 21. Nce4) (19... Nxe5 20. fxe5 Bxe5 21. Bf4 { [%cal Ge1e7,Gf4e5] } (21. Nf3 Bxg3 22. Bg5 Qd7 23. Re7 Qf5 24. Rxc7)) 20. Nde4 Qd8 { [%cal Gd5d6] } (20... exf4?? 21. d6 Qe6 22. dxc7 fxe3 23. cxb8=Q) 21. Nxf6+ Nxf6 22. d6 Ne6 23. fxe5 b4 24. Nd5 Nxd5 25. Qxd5 Bb7 26. Qd2 Qd7 { [%cal Gd7h3] } 27. Kh2 b3 28. Rac1 Qxa4 29. Bc4 { [%cal Gd6d7,Gd7d8] } 29... Bc8 30. Rf1 Rb4 { [%csl Ge6][%cal Ge6g7] } 31. Bxe6 Bxe6 32. Bh6 Re8 33. Qg5 { [%cal Gg5f6,Gf6g7] } 33... Re4 { [%cal Ge4e2] } 34. Rf2 { [%cal Gg5f6,Gf6g7] } (34. Qf6 Re2+ 35. Kg1 Qd4+ 36. Kh1 Qe4+ (36... Bd5+) 37. Rf3 Re1+) 34... f5 35. Qf6 Qd7 36. Rxc5 { [%cal Gc5c7] } 36... Rc4 37. Rxc4 Bxc4 { [%csl Ge5,Gd6] } 38. Rd2 Be6 39. Rd1 { [%csl Gc7][%cal Gd1c1,Gc1c7] } 39... Qa7 40. Rd2 { [%cal Gd2f2] } 40... Qd7 41. Rd1 Qa7 42. Rd4 { [%cal Ga7d7,Gd7a7] } 42... Qd7 43. g4 a5 44. Kg3 Rb8 45. Kh4 { [%cal Gg3h4,Gh4g5] } (45. gxf5 Bxf5 46. Rc4 { [%cal Gc4c7] } 46... Qa7 47. Rc7 (47. Kg2 Qb7+ 48. Kh2 Qa7)) 45... Qf7 46. Kg5 fxg4 47. hxg4 Bd7 48. Rc4 a4 49. Rc7 a3 50. Rxd7 Qxd7 51. e6 { [%csl Gb5][%cal Gg5h4] } 51... Qa7 52. Qe5 axb2 (52... Rb5 53. Qxb5 Qe3+ 54. Kf6 Qxh6 (54... Qf3+ 55. Ke7 { [%cal Gb5e8] } 55... Qa8 56. d7) 55. Qe8+ Qf8+ 56. Qxf8+ Kxf8 57. d7 { [%cal Gd7d8] }) 53. e7 Kf7 54. d7 { 1-0 Black resigns. } 1-0
+
+
+[Event "Be'er Sheva"]
+[Site "Be'er Sheva ISR"]
+[Date "1978.02.??"]
+[Round "6"]
+[White "Stefano Tatai"]
+[Black "Viktor Korchnoi"]
+[Result "0-1"]
+[WhiteElo "2455"]
+[BlackElo "2665"]
+[Variant "Standard"]
+[ECO "C01"]
+[Opening "French Defense: Exchange Variation"]
+[StudyName "Masterpieces with Nose: Viktor Korchnoi"]
+[ChapterName "Stefano Tatai - Viktor Korchnoi"]
+[ChapterURL "https://lichess.org/study/jBccRRUi/qPbYJhe0"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+
+1. e4 e6 2. d4 d5 3. exd5 exd5 4. Bd3 c5 5. Nf3 Nc6 6. Qe2+ Be7 7. dxc5 Nf6 8. h3 O-O { [%cal Gf8e8] } 9. O-O Bxc5 10. c3 (10. Bg5 h6 11. Bh4 Re8 12. Qd1 (12. Qd2)) (10. Re1 Re8 11. Qf1 Rxe1 12. Qxe1 Bb4 13. c3) 10... Re8 11. Qc2 Qd6 { [%cal Gb1d2] } 12. Nbd2 Qg3 13. Bf5 { [%cal Gc8h3] } (13. Kh1 Bxf2) 13... Re2 14. Nd4 Nxd4 { 0-1 White resigns. } 15. cxd4 (15. fxg3 Nxc2+ { [%cal Gc2a1] }) 15... Bxd4 { [%cal Gd2e4] } 16. Ne4 { [%cal Gf6e4,Gc2e2] } (16. Bxc8 Rxf2) 16... Nxe4 (16... dxe4 17. Qxe2) (16... Bxf2+ 17. Rxf2 Re1+ 18. Rf1 Rxf1+ 19. Kxf1 Nxe4 20. Bxc8) (16... Rxe4 17. Bxe4 { [%cal Ge4g2] } 17... Nxe4 { [%cal Gc8h3] }) 17. Qxe2 Bxf5 18. Qf3 Qxf3 19. gxf3 Nc5 0-1
+
+
+[Event "Dortmund Sparkassen"]
+[Site "Dortmund GER"]
+[Date "1994.07.22"]
+[Round "7"]
+[White "Anatoly Karpov"]
+[Black "Viktor Korchnoi"]
+[Result "0-1"]
+[WhiteElo "2780"]
+[BlackElo "2615"]
+[Variant "Standard"]
+[ECO "E12"]
+[Opening "Queen's Indian Defense: Kasparov-Petrosian Variation, Main Line"]
+[StudyName "Masterpieces with Nose: Viktor Korchnoi"]
+[ChapterName "Anatoly Karpov - Viktor Korchnoi"]
+[ChapterURL "https://lichess.org/study/jBccRRUi/ECzTF9Mm"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+
+1. d4 Nf6 2. c4 e6 3. Nf3 b6 4. a3 (4. Nc3 Bb7 5. g3 Bb4 { [%csl Ge4,Gd5][%cal Gb7e4,Gf6e4,Gf6d5,Gb4e1,Rc3d5,Rc3e4] }) 4... Bb7 5. Nc3 d5 6. Bg5 Be7 7. Qa4+ c6 { [%cal Gc7c6] } 8. Bxf6 Bxf6 9. cxd5 exd5 10. g3 O-O 11. Bg2 Nd7 12. O-O { [%cal Gf6e7,Ge7d6,Gd7f6] } 12... Be7 { [%cal Gf7f5] } 13. Rfd1 f5 { [%cal Gf5e4,Gd5e4] } 14. e3 Bd6 15. Ne2 Qe7 { [%cal Gb7c6] } 16. Nf4 a5 { [%csl Gc6,Gb6][%cal Gb7c6,Gd7b6] } 17. Nd3 b5 18. Qc2 a4 { [%csl Gc6] } 19. Re1 Kh8 { [%cal Gg7g5] } 20. Rac1 Nb6 { [%cal Gb6c4] } 21. Nfe5 { [%cal Gf3e5] } 21... Nc4 22. f4 { [%cal Gg7g5] } (22. Nxc4 bxc4 23. Nf4) 22... g5 23. Qe2 Rg8 24. Kf2 Raf8 { [%cal Gg8g2,Gf8f2] } 25. Nf3 h6 26. Nfe5 { [%cal Ge5f3,Gf3e5] } 26... Kh7 27. Kg1 (27. Qh5 Bxe5 (27... g4) 28. dxe5 (28. Nxe5) (28. fxe5 f4) 28... Bc8 { [%csl Gh5][%cal Gc8d7,Gd7e8] }) 27... Qe8 { [%cal Ge8h5,Ge8c6] } 28. Qc2 { [%cal Gc2h7] } 28... Kh8 29. Nf2 Rg7 { [%cal Gf8g8] } 30. Re2 Bc8 31. Rce1 Rfg8 { [%cal Gg8g1] } 32. Nxc4 bxc4 33. Qxa4 Rb7 34. Nd1 { [%cal Gd1b2] } (34. e4 fxe4 { [%csl Gf2,Gg2,Ge2,Ge1] } 35. Nxe4 dxe4 36. Bxe4 Re7 { [%cal Ge8e1] }) 34... h5 { [%cal Gh5h4,Gg5g4] } 35. Kf2 Bd7 { [%cal Gd7a4] } 36. Qc2 Qg6 { [%cal Gg6g2] } 37. Kf1 h4 38. Rf2 g4 39. Kg1 Rgb8 40. Qe2 h3 { [%csl Gf5,Gg4,Gh3,Gh2,Gg3,Gf4] } 41. Bf1 { [%csl Ge2][%cal Gf1h3,Gf1c4] } 41... Bc7 { [%cal Gc7a5,Ga5e1] } 42. b4 (42. Qc2 Ba5 43. Ree2) (42. Nc3 Rxb2) 42... cxb3 { [%csl Gb7,Gb8] } 43. Nb2 { [%csl Gb8,Gb7][%cal Gb7b3] } 43... Bd6 { [%csl Ga3,Gb2][%cal Gb3b1] } 44. a4 (44. Qa6 Rb6 45. Qa5 { [%cal Gd3f5] }) 44... Qe6 (44... Ba3) 45. Rd1 Ra7 { [%csl Ga4] } 46. Rd3 Kh7 { [%cal Gh7g6] } 47. Qd1 c5 { [%cal Gc5c4,Gc4c3] } 48. Rxb3 (48. dxc5 Bxc5 49. Rxd5 Bxe3 50. Re5 Bxf2+ 51. Kxf2) 48... Rxb3 49. Qxb3 c4 50. Qb6 (50. Bxc4 dxc4 51. Qxc4 Qxc4 52. Nxc4 Bc7 53. Ne5 Be6) 50... Ra8 51. e4 { [%cal Ge3e4] } 51... fxe4 (51... dxe4 52. Bxc4) 52. f5 { [%cal Ge4e1,Gc4c1] } 52... Qe7 53. Nd1 { [%cal Gd1e3,Gd1c3] } 53... Rb8 54. Qa5 Bc6 55. f6 Qe6 56. Ne3 Rb3 57. Qa7+ Bb7 (57... Kg6 58. Qg7+) 58. a5 (58. f7 Rxe3 (58... Bf8 59. Qb8 Qd6 60. Qxd6 Bxd6 61. f8=Q Bxf8 62. Rxf8 Rxe3 63. Rf7+ Kg6 64. Rxb7) 59. f8=Q Bxf8 60. Rxf8 Qe7 { [%cal Ga7b8] }) 58... Bf8 { [%cal Gf8h6,Gh6e3] } 59. Rf4 Bh6 { [%cal Gf6f7,Gf7f8] } 60. f7 Bxf4 61. f8=Q (61. f8=N+ Kh6 62. Nxe6 Bxe3+ 63. Kh1 Rb1) 61... Bxe3+ 62. Kh1 { [%cal Ge3h6] } 62... Bh6 { [%csl Gh3,Gg4,Ge4,Gc4][%cal Gc4c1,Ge4e1] } 63. Qf2 (63. Qfb8 Rb1 64. Kg1 Be3+ 65. Kh1 Rxf1#) 63... Bg7 64. a6 Rf3 65. Qe1 (65. axb7 Rxf2 66. b8=Q Rxf1# { [%cal Gh3g2,Gf1h1] }) (65. Qxf3 exf3 66. axb7 { [%cal Gb7b8] } 66... f2 { [%cal Ge6e4,Ge4h1] } 67. b8=Q Qe4+ 68. Bg2 Qxg2# { [%csl Ga7,Gb8] }) 65... Bxa6 66. Be2 Rf7 67. Qc5 c3 { [%cal Gc4c3] } 68. Qcxc3 (68. Qexc3 Bxe2) (68. Bxa6 Qxa6 { [%csl Gf1][%cal Gf7f1,Ga6f1] } 69. Kg1 Bh6 { [%cal Gh6e3] } (69... Qd3)) 68... Bxe2 69. Qxe2 Qf6 { [%cal Gf6f1] } 70. Qc1 { [%cal Gc1f1,Ge2f1,Gf6f1,Gf7f1] } 70... Bh6 71. Qb1 { [%csl Gh3,Gf7] } 71... Qf5 { [%cal Gh1g1] } 72. Kg1 Rc7 { 0-1 White resigns. } { [%cal Gc7c1] } 73. Qee1 (73. Qbf1 Rc1) (73. Qa1 Rc1+ 74. Qxc1 Bxc1 75. Qf2 Qf3 76. Qxf3 gxf3) 73... Qf3 { [%cal Gc7c1,Gf3g2,Gh6e3] } (73... Rc1) 74. Qf1 Be3+ { [%cal Gf3h1,Ge3g1] } 75. Qf2 Qg2# 0-1
+
+
+[Event "Leningrad"]
+[Site "Leningrad"]
+[Date "1967.??.??"]
+[White "Viktor Korchnoi"]
+[Black "Mijo Udovcic"]
+[Result "1-0"]
+[Variant "Standard"]
+[ECO "C05"]
+[Opening "French Defense: Tarrasch Variation, Closed Variation"]
+[StudyName "Masterpieces with Nose: Viktor Korchnoi"]
+[ChapterName "Viktor Korchnoi - Mijo Udovcic"]
+[ChapterURL "https://lichess.org/study/jBccRRUi/9KTfCqx7"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+
+1. d4 e6 2. e4 d5 3. Nd2 (3. e5 c5 4. c3 Nc6 5. Nf3 Qb6 6. Bd3 cxd4 7. cxd4 Bd7 8. O-O Nxd4) 3... Nf6 4. e5 Nfd7 5. c3 c5 { [%cal Gf1d3] } 6. Ngf3 { [%cal Gg1f3] } (6. Bd3 Nc6 (6... b6 7. Ne2 Ba6) 7. Ne2 cxd4 8. cxd4 f6 9. exf6 Nxf6 10. O-O Bd6 11. Nf3 { [%cal Gc1f4] } 11... Qc7) 6... Nc6 7. Bd3 Qb6 8. O-O cxd4 9. cxd4 Nxd4 10. Nxd4 Qxd4 { [%cal Gb6d4] } 11. Nf3 { [%cal Gf3d4,Gf3e5] } 11... Qb6 12. Qa4 Qb4 (12... a6 { [%cal Gd3b5] }) 13. Qc2 h6 14. Bd2 Qb6 15. Rac1 Be7 16. Qa4 Qd8 17. Rc2 Kf8 (17... O-O 18. Qg4 { [%cal Gd2h6] } 18... f5 19. Qg3 { [%cal Gd2h6] } 19... Kh7 20. Rfc1) 18. Rfc1 Nb6 19. Qg4 Bd7 20. Ba5 Rc8 (20... Ba4 21. Bxb6) 21. Rxc8 Bxc8 22. Bb4 g6 { [%cal Ge7b4] } (22... Bxb4 23. Qxb4+ Qe7 24. Qxb6 axb6 25. Rxc8+ Qe8 26. Rxe8+ Kxe8) 23. Qh4 { [%cal Gf8g7] } 23... g5 24. Nxg5 { [%csl Gd8][%cal Ge7b4,Gg5e6] } 24... Ke8 (24... Bxb4 25. Nxe6+ fxe6 26. Qxd8+) 25. Bb5+ Bd7 26. Nxe6 fxe6 (26... Bxh4 27. Ng7# { [%csl Ge7,Gf8][%cal Gb4f8,Gg7e8] }) (26... Bxb5 27. Ng7+ Kf8 { [%cal Gg7f5] } 28. Nf5 { [%cal Ge7b4,Gh4d8,Gb4f8] }) 27. Qh5+ Kf8 { [%cal Gc1c3,Gd7b5,Gc3f3] } 28. Rc3 { [%csl Gb5,Gb4][%cal Gc3f3] } 28... Rh7 29. Qg6 { [%cal Gc3f3] } 29... Rg7 30. Qxh6 { [%cal Gc3f3] } 30... Bxb5 31. Rg3 { 1-0 Black resigns. } { [%cal Gh6g7] } 1-0
+
+
+[Event "Korchnoi - Spassky Candidates Final 1977/78"]
+[Site "Belgrade YUG"]
+[Date "1977.12.09"]
+[Round "7"]
+[White "Viktor Korchnoi"]
+[Black "Boris Spassky"]
+[Result "1-0"]
+[WhiteElo "2645"]
+[BlackElo "2610"]
+[Variant "Standard"]
+[ECO "D58"]
+[Opening "Queen's Gambit Declined: Tartakower Defense"]
+[StudyName "Masterpieces with Nose: Viktor Korchnoi"]
+[ChapterName "Viktor Korchnoi - Boris Spassky"]
+[ChapterURL "https://lichess.org/study/jBccRRUi/EhDrYWla"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+
+1. c4 e6 2. Nc3 d5 3. d4 Be7 { [%cal Gg1f3] } 4. Nf3 Nf6 5. Bg5 O-O 6. e3 h6 7. Bh4 b6 8. Rc1 (8. cxd5 Nxd5 { Fischer, Robert James - Spassky, Boris V, 1-0, World Championship 28th, 1972, https://lichess.org/rWrwdkZw }) 8... Bb7 9. Bxf6 Bxf6 10. cxd5 exd5 11. b4 c6 12. Be2 Nd7 13. O-O a5 { [%csl Ga5,Gb6,Gc6,Gd5] } 14. b5 c5 (14... cxb5 15. Nxb5 Rc8 { [%cal Gd1b3] }) 15. dxc5 Nxc5 (15... bxc5) 16. Nd4 Qd6 17. Bg4 (17. Bf3 { [%csl Gf5][%cal Gd4f5] }) (17. Nf5) 17... Rfd8 18. Re1 Ne6 { [%csl Gf7,Gg7,Gh6] } 19. Bxe6 fxe6 20. Nc6 Bxc6 21. bxc6 Bxc3 (21... Qxc6 22. Ne4 Qb7 23. Nxf6+ gxf6 24. Qg4+ Kf7 25. Qh5+ Kg7) 22. Rxc3 Rac8 23. Qc2 e5 24. c7 Rd7 25. Rc1 d4 26. Rc6 Qd5 27. Qb1 { [%csl Gb6] } (27. Rxb6 Rdxc7 28. Qxc7 Rxc7 29. Rxc7) 27... d3 28. Qxb6 d2 29. Rd1 Qxa2 30. h3 (30. Qb7 Qa4 31. Qxc8+ Kh7 { [%cal Gh2h3] }) 30... Qa4 31. Rxd2 (31. Qb7) 31... Rxd2 32. Qb7 Rdd8 33. cxd8=Q+ Rxd8 34. Rc7 Qa1+ (34... Rd1+ 35. Kh2 Qe8 36. Rxg7+ Kf8 37. Rh7 { [%cal Gh7h8,Gb7g7] }) 35. Kh2 e4 { [%cal Ga1g7] } 36. Qxe4 Qf6 37. f4 { [%cal Gc7h2] } 37... Qf8 38. Ra7 { [%csl Ga5] } 38... Qc5 39. Qb7 { [%cal Gb7g7] } 39... Qc3 { [%cal Gc3g7,Gc3a5,Gc3e3] } 40. Qe7 { [%cal Ge7e3,Ge7g7,Ge7d8] } 40... Rf8 41. e4 Qd4 { [%cal Ge4e5,Gd4f4] } (41... Rxf4 42. e5 { [%cal Ge7g7,Gc3e5] }) 42. f5 h5 43. Rxa5 Qd2 44. Qe5 { [%cal Ge5h2] } 44... Qg5 { [%cal Ga5a7] } 45. Ra6 { [%cal Ga6g6] } 45... Rf7 46. Rg6 Qd8 47. f6 h4 (47... Rxf6 48. Rxf6 (48. Qxf6 Qxf6 49. Rxf6 gxf6 { [%cal Gh2g3,Gg3h4,Gh4h5] } 50. Kg3 Kh7 51. Kf3 Kh6 52. g4 hxg4+ { [%cal Gf3g4] } (52... Kg5 53. gxh5 Kxh5 54. Kf4 { [%cal Gf4f5,Gf5f6] }) 53. hxg4 (53. Kxg4)) 48... Qxf6 49. Qe8+ Kh7 (49... Qf8 50. Qxh5 Qf4+) 50. Qxh5+) 48. fxg7 { 1-0 Black resigns. } 1-0
+
+

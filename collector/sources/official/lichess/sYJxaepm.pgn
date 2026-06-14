@@ -1,0 +1,568 @@
+[Event "ChessDojo Squire Training - Vol. 2: Chapter 1"]
+[Date "2020.03.31"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "ChessDojo Squire Training - Vol. 2"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/sYJxaepm/lsWVDXvG"]
+[Annotator "https://lichess.org/@/ChessDojo"]
+[FEN "r1b3k1/5pbp/pp1p2p1/2pPr2n/P1P3Pq/2NBB2P/1P1Q1PK1/R6R b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.03.31"]
+[UTCTime "19:39:41"]
+
+{ BLACK TO PLAY. Calculate 1...Bxg4 2.hxg4 Qxg4+ Kf1 and now find the best continuation } { [%csl Gg4,Gf3][%cal Gc8g4,Gh3g4,Gh4g4,Gg2f1,Gh5g3,Gf2g3,Gg4f3,Gf1g1,Gf3g3] }
+1... Bxg4 2. hxg4 Qxg4+ 3. Kf1 Ng3+ (3... Qf3 4. Rg1 Rae8 5. Re1 Bh6 6. Nd1) 4. fxg3 Qf3+ 5. Kg1 Qxg3+ 6. Kf1 Qf3+ (6... Rxe3 { [%cal Ge3f3,Ga8e8,Gg7d4] } 7. Be2 (7. Bc2 Bxc3 8. bxc3)) 7. Kg1 Rxe3 { [%csl Gd3][%cal Gg7d4] } 8. Bc2 (8. Be2 { [%csl Gc3][%cal Gg7c3] } 8... Qg3+ 9. Kf1 Bd4) 8... Bxc3 9. bxc3 Re2 *
+
+
+[Event "ChessDojo Squire Training - Vol. 2: Chapter 2"]
+[Date "2020.03.31"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "ChessDojo Squire Training - Vol. 2"]
+[ChapterName "Chapter 2"]
+[ChapterURL "https://lichess.org/study/sYJxaepm/gN8UH6ef"]
+[Annotator "https://lichess.org/@/ChessDojo"]
+[FEN "r1bq1rk1/pp1n1p2/4pRpp/8/2BpP2Q/3P4/PPP1N1PP/5RK1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.03.31"]
+[UTCTime "19:40:52"]
+
+{ WHITE TO PLAY - Find the win after 1.Rxg6 } { [%cal Gf6g6,Gf7g6,Gc4e6,Gg8g7] }
+1. Rxg6+ fxg6 2. Bxe6+ { [%cal Gg8g7,Gg8h7] } 2... Kg7 { [%cal Gh4d8,Gf8d8,Gf1f7] } (2... Kh7 3. Rf7+ Rxf7 4. Qxd8 { [%cal Ge2d4,Ge2f4] }) 3. Rf7+ { [%csl Gh6][%cal Gg7h8,Gg7g8] } 3... Kg8 4. Rxd7+ *
+
+
+[Event "ChessDojo Squire Training - Vol. 2: Chapter 3"]
+[Date "2020.03.31"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "ChessDojo Squire Training - Vol. 2"]
+[ChapterName "Chapter 3"]
+[ChapterURL "https://lichess.org/study/sYJxaepm/qCzrtPjS"]
+[Annotator "https://lichess.org/@/ChessDojo"]
+[FEN "2r1k1r1/1p3p1p/2bQp3/p1B2pq1/1P6/8/1PP2RPP/4R2K w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.03.31"]
+[UTCTime "19:51:55"]
+
+{ WHITE TO PLAY - Find the win after 1.Rxe6+ fxe6 2.Qxe6+ Kd8 } { [%cal Ge1e6,Gf7e6,Gd6e6,Ge8d8] }
+1. Rxe6+ fxe6 2. Qxe6+ Kd8 { [%cal Gf2d2] } 3. Bb6+ (3. Qd6+ Ke8 4. Re2+ { [%cal Gd6e6] } 4... Kf7 5. Qe6+ Kg7 6. Bd4+ Kf8 7. Qxc8+) (3. Rd2+ { [%cal Gf2d2,Ge6e7] }) 3... Rc7 { [%cal Gf2d2] } 4. Qd6+ Ke8 5. Re2+ Kf7 (5... Be4) 6. Qe6+ (6. Qxc7+) 6... Kg7 *
+
+
+[Event "ChessDojo Squire Training - Vol. 2: Chapter 4"]
+[Date "2020.03.31"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "ChessDojo Squire Training - Vol. 2"]
+[ChapterName "Chapter 4"]
+[ChapterURL "https://lichess.org/study/sYJxaepm/dx8HfhWs"]
+[Annotator "https://lichess.org/@/ChessDojo"]
+[FEN "b2r2k1/1q2npbp/1rp1n1p1/3pN3/1P2P3/1B3NBP/4QPP1/2R1R1K1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.03.31"]
+[UTCTime "19:55:03"]
+
+{ WHITE TO PLAY - Find the win after 1.Nxf7 Kxf7 2.exd5 cxd5 } { [%cal Ge5f7,Gg8f7,Ge4d5,Gc6d5] }
+1. Nxf7 Kxf7 2. exd5 cxd5 3. Rc7 Nxc7 (3... Qa6 4. Ng5+ { [%cal Ge6g5,Ge2e7,Gc7e7] } 4... Kf6 { [%cal Ge2e5] } 5. Nxh7+ Kf7 6. Ng5+ Kf6 { [%cal Gg3e5,Ge2e5] }) 4. Qxe7+ Kg8 5. Qxd8+ { [%cal Ge1e7] } *
+
+
+[Event "ChessDojo Squire Training - Vol. 2: Chapter 5"]
+[Date "2020.03.31"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "ChessDojo Squire Training - Vol. 2"]
+[ChapterName "Chapter 5"]
+[ChapterURL "https://lichess.org/study/sYJxaepm/BVa3sN7N"]
+[Annotator "https://lichess.org/@/ChessDojo"]
+[FEN "1qb5/6k1/2p1n1p1/2Pp1pP1/pN1PpP1p/2Q1P2P/r3BK2/6R1 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.03.31"]
+[UTCTime "19:58:46"]
+
+{ BLACK TO PLAY - Find the win after 1...Nxf4 2.exf4 Qxf4+ 3.Ke1 } { [%cal Ge6f4,Ge3f4,Gb8f4,Gf2e1] }
+1... Nxf4 2. exf4 Qxf4+ 3. Ke1 Qh2 (3... Rxe2+ 4. Kxe2 Qh2+ 5. Kf1 f4 { [%cal Gc8h3] } 6. Rg4 Bxg4 7. hxg4 f3) 4. Nxa2 (4. Qe3 Rxe2+) 4... Qxg1+ 5. Kd2 Qxg5+ 6. Kc2 { [%csl Gg6,Ga4][%cal Gf5f4] } *
+
+
+[Event "ChessDojo Squire Training - Vol. 2: Chapter 6"]
+[Date "2020.03.31"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "ChessDojo Squire Training - Vol. 2"]
+[ChapterName "Chapter 6"]
+[ChapterURL "https://lichess.org/study/sYJxaepm/AKFvcsQq"]
+[Annotator "https://lichess.org/@/ChessDojo"]
+[FEN "r1q1k2r/pp2ppb1/2p2np1/3nN2p/2BP2bP/3Q2N1/PPP2PP1/R1B1R1K1 w kq - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.03.31"]
+[UTCTime "20:02:05"]
+
+{ WHITE TO PLAY - Find the win after 1.Nxg6 fxg6 2.Qxg6 Kf8 }
+1. Nxg6 fxg6 2. Qxg6+ Kf8 3. Rxe7 Kxe7 4. Qxg7+ Ke6 { [%cal Gc1g5] } (4... Kd6 5. Bf4+ Nxf4 6. Qxf6+ { [%cal Gf6f4] } 6... Kd7 (6... Ne6 { [%csl Ga8][%cal Ga1e1,Gc8f4] } 7. Qe5+ Ke7 8. Re1 { [%cal Gf2f3,Gh8h6,Ge5g5] }) 7. Qxf4) 5. Bf4 { [%cal Ga1e1] } *
+
+
+[Event "ChessDojo Squire Training - Vol. 2: Chapter 7"]
+[Date "2020.04.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "ChessDojo Squire Training - Vol. 2"]
+[ChapterName "Chapter 7"]
+[ChapterURL "https://lichess.org/study/sYJxaepm/acL3wbxx"]
+[Annotator "https://lichess.org/@/ChessDojo"]
+[FEN "r4rk1/1bqn1pp1/p3p2p/1pP5/P1nP4/5NP1/3BRPBP/R1Q3K1 w - - 0 26"]
+[SetUp "1"]
+[UTCDate "2020.04.04"]
+[UTCTime "22:08:10"]
+
+26. Bf4 { [%cal Gc7c8,Gf4h6] } (26. Bxh6 gxh6 27. Qxh6 Rfe8 { [%cal Gf3g5] } 28. Ng5 (28. Nh4 Bxg2 29. Nxg2 { [%cal Gg2f4,Gf4h5] }) 28... Nf8 29. Re4 (29. c6 Bxc6 30. Bxc6 Qxc6 31. Re4 { [%cal Ge4g4] } 31... Qb7 { [%csl Gb7][%cal Gf7f5] } 32. Rh4 Ng6 33. Ne4)) 26... Qd8 { [%csl Gh6][%cal Gf4h6,Gg7h6,Gd8f6] } 27. Bxh6 gxh6 28. Qxh6 Qf6 { [%cal Gf6g7] } *
+
+
+[Event "ChessDojo Squire Training - Vol. 2: Chapter 8"]
+[Date "2020.04.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B30"]
+[Opening "Sicilian Defense: Old Sicilian"]
+[StudyName "ChessDojo Squire Training - Vol. 2"]
+[ChapterName "Chapter 8"]
+[ChapterURL "https://lichess.org/study/sYJxaepm/tl9rAyCg"]
+[Annotator "https://lichess.org/@/ChessDojo"]
+[UTCDate "2020.04.04"]
+[UTCTime "22:24:07"]
+
+1. e4 c5 2. Nf3 Nc6 (2... e6 3. Nc3 a6) 3. Nc3 { [%cal Gg7g6,Ge7e5] } (3. d4 cxd4 4. Nxd4) 3... Nf6 (3... e5 { [%cal Ge7e5,Gf1c4,Gg7g6,Gf8g7,Gg8e7,Ge8g8,Gd7d6] }) 4. Be2 (4. e5 { [%cal Gf6g8] } 4... Ng4 (4... Ng8 { [%cal Gd7d5,Ge7e6,Gg8e7,Ge7f5] } 5. Ne4) 5. Qe2 Qc7 6. Nd5 Qb8 7. d4) (4. Bb5 Nd4 { [%cal Gc6d4] } 5. e5) 4... d6 5. O-O e5 (5... g6 6. d3 (6. d4 cxd4 7. Nxd4 Bg7 8. Be3 O-O { [%cal Gc8d7,Ga8c8] }) 6... Bg7 7. Be3 O-O { [%cal Gg7a1,Ga8b8,Gb7b5,Gb5b4] }) 6. d3 Be7 7. h3 O-O 8. Be3?! { Inaccuracy. Nd5 was best. } (8. Nd5 Nxd5 9. exd5 Nb8 10. a3 a5 11. c4 f5 12. Nd2 Bg5) 8... d5 9. exd5 Nxd5 10. Nxd5 Qxd5 { [%csl Gd4][%cal Gc6d4] } 11. c3 Bf5 (11... f5 12. d4 (12. c4 Qd6 { [%cal Gc8e6,Ga8d8,Gc6d4] }) 12... e4 { [%cal Ge5e4,Gf5f4,Gf3d2] } (12... f4 13. Nd2 Kh8)) (11... Rd8 { [%cal Gc8e6,Gf7f6,Gf6e5,Gd5d7,Ga8c8,Gb7b6,Ge6f5] }) 12. d4?! { Inaccuracy.
+Qb3 was best. } (12. Qb3 Qd6 13. Ng5 Rab8 14. Rfd1 Bxg5 15. Bxg5 Bxh3 16. gxh3 Qg6 17. h4 h6 18. Qd5 hxg5) 12... cxd4 13. cxd4 e4 14. Ne1 Bf6 15. Nc2 Rfd8 16. b3 Nxd4 (16... Rac8 17. Bc4 Qd7 18. d5 Ne5 { [%cal Ge5d3,Gb7b5] }) 17. Bc4 Qd7?! { Inaccuracy. Nf3+ was best. } (17... Nf3+ 18. gxf3 Qc6 { [%cal Gd5c6,Gf6a1,Gc6g6,Ge4f3] } (18... Qa5) 19. Nb4 Rxd1 20. Nxc6 Rxa1 21. Ne7+ Bxe7 22. Rxa1 b6 23. fxe4 Bf6 24. Rc1) 18. Nxd4 Bxd4 19. Bxd4?! { Inaccuracy. Rc1 was best. } (19. Rc1) 19... Qxd4 20. Qxd4 Rxd4 21. f3 e3?! { Inaccuracy. exf3 was best. } (21... exf3 22. Rxf3 Bg6 { [%cal Gd4d2] } 23. Raf1 { [%cal Gd4d2,Gf1a1] } 23... Rd7 { [%cal Gg8f8,Gf7f6,Ga8d8,Gd7d2] }) 22. Rfe1 Re8 23. Rac1?! { Inaccuracy. Rad1 was best. } (23. Rad1 Rxd1 24. Rxd1 Kf8 (24... a6 25. a4 { [%cal Gg1f1,Gf1e2] }) 25. Kf1 Re5 { [%cal Gf8e7] } 26. Ke2 Ke7 27. Rd5 Rxd5 28. Bxd5) 23... Rd2 24. g4 Bd7 (24... Bc2 { [%csl Gc1] } 25. Re2 { [%csl Gc2] } 25... Bd1 { [%cal Ge2d2,Ge3d2] } (25... Bd3 26. Bxd3 Rxd3)) 25. b4 Bc6 (25... Kf8 26. Rc3 Rd4 27. a3 Rc8) (25... Rc8 { [%cal Ge1e3,Gb7b5] } 26. Bb3 Rxc1 27. Rxc1 { [%cal Gg1f1] } 27... Bc6 (27... Kf8 { [%cal Gd7c6,Gf8e7] } 28. Re1 (28. Kf1 { [%cal Gd2f2,Gf2h2] } 28... Bc6 29. Ke1 Rh2 30. Rc3 Rxh3) 28... Rd3) 28. b5) 26. Rc3 Bxf3? { Mistake.
+Rd4 was best. } (26... e2 27. b5 Bd7 28. Kf2) (26... Rd4 { [%cal Gd4b4] } 27. b5 (27. a3 { [%csl Ge3][%cal Gc6f3] } 27... Kf8 (27... Bxf3 28. Rcxe3 Rxe3 29. Rxe3 Kf8 30. Rxf3 Rxc4 { [%cal Gf7f6,Gf8d5] })) 27... Bxf3 28. Rcxe3 Rxe3 29. Rxe3 Kf8) (26... Kf8 27. Rcxe3 Rxe3 28. Rxe3 Rd4 { [%cal Gd4b4] } 29. Rc3 Bxf3) 27. Rcxe3 Rxe3 28. Rxe3 Bc6 29. b5 Bd7 30. Re7 h6 31. Rxf7 Kh7 32. Rf3 a6?! { Inaccuracy. Rd4 was best. } { [%cal Gf3d3,Gd2c2] } (32... Rd4 33. Bd3+ Kg8 34. a3 g5 35. Be2 Rd2 36. Rd3 Rxe2 37. Rxd7 Ra2 38. Rxb7 Rxa3 39. Rc7) (32... Kg6) 33. bxa6 bxa6 34. Ra3?! { Inaccuracy. Bd3+ was best. } (34. Bd3+ { [%cal Gh7g8] } 34... Kg8 35. Bxa6 { [%cal Gd2h2,Gd2a2,Gd7c6] } 35... Be6 36. a4 Ra2 37. Bb5 Bd5 38. Rd3 Be6 39. Rd8+ Kf7 40. Ra8 Ra1+) 34... Bb5 35. Bxb5 axb5 36. Rb3 *
+
+
+[Event "ChessDojo Squire Training - Vol. 2: Chapter 9"]
+[Date "2020.04.07"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "ChessDojo Squire Training - Vol. 2"]
+[ChapterName "Chapter 9"]
+[ChapterURL "https://lichess.org/study/sYJxaepm/1FK9P00J"]
+[Annotator "https://lichess.org/@/ChessDojo"]
+[FEN "r4r1k/2q2ppp/1np1b3/p1b1pNB1/2B1P3/8/PPP1Q1PP/3R1R1K w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.04.07"]
+[UTCTime "23:09:32"]
+
+ *
+
+
+[Event "ChessDojo Squire Training - Vol. 2: Chapter 10"]
+[Date "2020.04.07"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "ChessDojo Squire Training - Vol. 2"]
+[ChapterName "Chapter 10"]
+[ChapterURL "https://lichess.org/study/sYJxaepm/QxPad4ZP"]
+[Annotator "https://lichess.org/@/ChessDojo"]
+[FEN "4rbk1/1q3ppp/2Rr4/1p1P1B2/2b1PR2/p5P1/5P1P/B1Q3K1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.04.07"]
+[UTCTime "23:10:28"]
+
+ *
+
+
+[Event "ChessDojo Squire Training - Vol. 2: Chapter 11"]
+[Date "2020.04.07"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "ChessDojo Squire Training - Vol. 2"]
+[ChapterName "Chapter 11"]
+[ChapterURL "https://lichess.org/study/sYJxaepm/o47jYdZ0"]
+[Annotator "https://lichess.org/@/ChessDojo"]
+[FEN "r1bqr1k1/1pn1bpp1/p1p2n1p/2PpN3/1P1P4/3B1N1P/P2B1PP1/2QRR1K1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.04.07"]
+[UTCTime "23:10:47"]
+
+{ Calculate 1.Bxh6 gxh6 and then find the strongest continuation for White. }
+ *
+
+
+[Event "ChessDojo Squire Training - Vol. 2: Chapter 12"]
+[Date "2020.04.07"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "ChessDojo Squire Training - Vol. 2"]
+[ChapterName "Chapter 12"]
+[ChapterURL "https://lichess.org/study/sYJxaepm/7vzyacSX"]
+[Annotator "https://lichess.org/@/ChessDojo"]
+[FEN "r1b2r1k/pp4pp/3b3q/2pB4/3p2P1/1P1P1N1P/P1P2PK1/R2Q1R2 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.04.07"]
+[UTCTime "23:13:14"]
+
+{ Black to play make 1...Bxg4 work }
+ *
+
+
+[Event "ChessDojo Squire Training - Vol. 2: Chapter 13"]
+[Date "2020.04.07"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "ChessDojo Squire Training - Vol. 2"]
+[ChapterName "Chapter 13"]
+[ChapterURL "https://lichess.org/study/sYJxaepm/5Xxs3I37"]
+[Annotator "https://lichess.org/@/ChessDojo"]
+[FEN "r1b2rk1/1p2qppp/p3p3/2n5/3N4/3B1R2/PPP1Q1PP/R5K1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.04.07"]
+[UTCTime "23:15:45"]
+
+{ White to play calculate the win after 1.Bxh7 Kxh7 2.Rh3+ Kg8 3.Nf5 Qg5 }
+ *
+
+
+[Event "ChessDojo Squire Training - Vol. 2: Chapter 14"]
+[Date "2020.04.15"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "ChessDojo Squire Training - Vol. 2"]
+[ChapterName "Chapter 14"]
+[ChapterURL "https://lichess.org/study/sYJxaepm/ySzxANwA"]
+[Annotator "https://lichess.org/@/ChessDojo"]
+[FEN "r2r4/1b3pk1/5qp1/pP1p3p/2pN3P/3nP1P1/PQR2PB1/3R2K1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.04.15"]
+[UTCTime "16:09:57"]
+
+ *
+
+
+[Event "ChessDojo Squire Training - Vol. 2: Chapter 15 - BLACK TO PLAY"]
+[Date "2020.04.15"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "ChessDojo Squire Training - Vol. 2"]
+[ChapterName "Chapter 15 - BLACK TO PLAY"]
+[ChapterURL "https://lichess.org/study/sYJxaepm/AFLvQXdA"]
+[Annotator "https://lichess.org/@/ChessDojo"]
+[FEN "r3k2r/1b1p1pp1/p2qp3/2bP4/Pp3B2/6P1/1PP1QPB1/R4RK1 b kq - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.04.15"]
+[UTCTime "16:10:15"]
+
+ *
+
+
+[Event "ChessDojo Squire Training - Vol. 2: Chapter 16"]
+[Date "2020.04.15"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "ChessDojo Squire Training - Vol. 2"]
+[ChapterName "Chapter 16"]
+[ChapterURL "https://lichess.org/study/sYJxaepm/vEf6YOcd"]
+[Annotator "https://lichess.org/@/ChessDojo"]
+[FEN "r3r1k1/bpp1q1pp/p3bp2/2p4Q/4N3/1P2PP2/PB3P1P/R2R3K w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.04.15"]
+[UTCTime "16:10:25"]
+
+ *
+
+
+[Event "ChessDojo Squire Training - Vol. 2: Chapter 17 - BLACK TO PLAY"]
+[Date "2020.04.15"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "ChessDojo Squire Training - Vol. 2"]
+[ChapterName "Chapter 17 - BLACK TO PLAY"]
+[ChapterURL "https://lichess.org/study/sYJxaepm/1b41yL5H"]
+[Annotator "https://lichess.org/@/ChessDojo"]
+[FEN "2b3k1/4b3/p5p1/1p1Pp1N1/6pK/P1PB2P1/1PR2r2/7R b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.04.15"]
+[UTCTime "16:10:38"]
+
+ *
+
+
+[Event "ChessDojo Squire Training - Vol. 2: Chapter 18"]
+[Date "2020.04.15"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "ChessDojo Squire Training - Vol. 2"]
+[ChapterName "Chapter 18"]
+[ChapterURL "https://lichess.org/study/sYJxaepm/vnXF408k"]
+[Annotator "https://lichess.org/@/ChessDojo"]
+[FEN "6k1/p4p2/5npQ/4p1N1/5n2/2r3R1/P2q2PP/5R1K w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.04.15"]
+[UTCTime "16:13:58"]
+
+ *
+
+
+[Event "ChessDojo Squire Training - Vol. 2: Chapter 19"]
+[Date "2020.04.22"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "ChessDojo Squire Training - Vol. 2"]
+[ChapterName "Chapter 19"]
+[ChapterURL "https://lichess.org/study/sYJxaepm/MMY0pt7v"]
+[Annotator "https://lichess.org/@/ChessDojo"]
+[FEN "2r1k2r/1b3ppp/p3pn2/qp2R3/1b1N4/1BN5/PPPQ1PPP/2KR4 w k - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.04.22"]
+[UTCTime "08:51:17"]
+
+ *
+
+
+[Event "ChessDojo Squire Training - Vol. 2: Chapter 20"]
+[Date "2020.04.22"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "ChessDojo Squire Training - Vol. 2"]
+[ChapterName "Chapter 20"]
+[ChapterURL "https://lichess.org/study/sYJxaepm/bX8T3Igt"]
+[Annotator "https://lichess.org/@/ChessDojo"]
+[FEN "r2qk2r/5p2/2p1p3/1p1pPp2/pbnP1P1p/5N1P/PPP1QBP1/1K1R3R b kq - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.04.22"]
+[UTCTime "08:51:28"]
+
+ *
+
+
+[Event "ChessDojo Squire Training - Vol. 2: Chapter 21"]
+[Date "2020.04.22"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "ChessDojo Squire Training - Vol. 2"]
+[ChapterName "Chapter 21"]
+[ChapterURL "https://lichess.org/study/sYJxaepm/1pLn4Kon"]
+[Annotator "https://lichess.org/@/ChessDojo"]
+[FEN "2r2rk1/p1N2p1p/2P1p1p1/1Pp3q1/3b4/5Q2/P1P3PP/4RR1K w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.04.22"]
+[UTCTime "08:51:46"]
+
+ *
+
+
+[Event "ChessDojo Squire Training - Vol. 2: Chapter 22"]
+[Date "2020.04.22"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "ChessDojo Squire Training - Vol. 2"]
+[ChapterName "Chapter 22"]
+[ChapterURL "https://lichess.org/study/sYJxaepm/DqrrP0gN"]
+[Annotator "https://lichess.org/@/ChessDojo"]
+[FEN "r3k2r/p1qb1p2/1p2p2p/3pPpN1/P1nP3Q/8/2P2PPP/R1B1R1K1 w kq - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.04.22"]
+[UTCTime "08:51:58"]
+
+ *
+
+
+[Event "ChessDojo Squire Training - Vol. 2: Chapter 23"]
+[Date "2020.04.29"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "ChessDojo Squire Training - Vol. 2"]
+[ChapterName "Chapter 23"]
+[ChapterURL "https://lichess.org/study/sYJxaepm/THF0axFh"]
+[Annotator "https://lichess.org/@/ChessDojo"]
+[FEN "5rk1/1pR1Rp1p/pPb2p2/8/P7/1B5P/2P2rPK/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.04.29"]
+[UTCTime "08:35:32"]
+
+ *
+
+
+[Event "ChessDojo Squire Training - Vol. 2: Chapter 24"]
+[Date "2020.04.29"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "ChessDojo Squire Training - Vol. 2"]
+[ChapterName "Chapter 24"]
+[ChapterURL "https://lichess.org/study/sYJxaepm/951xu85i"]
+[Annotator "https://lichess.org/@/ChessDojo"]
+[FEN "4r2k/p2qr1pp/1pp2p2/2p1nP1N/4R3/1P1P2RP/1PP2QP1/7K w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.04.29"]
+[UTCTime "08:35:51"]
+
+ *
+
+
+[Event "ChessDojo Squire Training - Vol. 2: Chapter 25"]
+[Date "2020.04.29"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "ChessDojo Squire Training - Vol. 2"]
+[ChapterName "Chapter 25"]
+[ChapterURL "https://lichess.org/study/sYJxaepm/xY7U7e4H"]
+[Annotator "https://lichess.org/@/ChessDojo"]
+[FEN "4q3/p2r1ppk/R6p/3n4/3B1Q2/4P2P/5PP1/6K1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.04.29"]
+[UTCTime "08:36:01"]
+
+ *
+
+
+[Event "ChessDojo Squire Training - Vol. 2: Chapter 26"]
+[Date "2020.04.29"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "ChessDojo Squire Training - Vol. 2"]
+[ChapterName "Chapter 26"]
+[ChapterURL "https://lichess.org/study/sYJxaepm/QZppfeIr"]
+[Annotator "https://lichess.org/@/ChessDojo"]
+[FEN "r1bqr1k1/5p2/p2p1npb/1p1Pp2p/4P1P1/1PP1NPP1/2BBQ1K1/5R1R w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.04.29"]
+[UTCTime "08:36:12"]
+
+ *
+
+
+[Event "ChessDojo Squire Training - Vol. 2: Chapter 27"]
+[Date "2020.04.29"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "ChessDojo Squire Training - Vol. 2"]
+[ChapterName "Chapter 27"]
+[ChapterURL "https://lichess.org/study/sYJxaepm/BJIfotRL"]
+[Annotator "https://lichess.org/@/ChessDojo"]
+[FEN "2rr4/p2b2pk/1pn4p/2q2p2/5B2/PQP2N2/4RPPP/4R1K1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.04.29"]
+[UTCTime "08:36:22"]
+
+ *
+
+
+[Event "ChessDojo Squire Training - Vol. 2: Chapter 28"]
+[Date "2020.05.06"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "ChessDojo Squire Training - Vol. 2"]
+[ChapterName "Chapter 28"]
+[ChapterURL "https://lichess.org/study/sYJxaepm/hDDBGQmt"]
+[Annotator "https://lichess.org/@/ChessDojo"]
+[FEN "2r2r2/p4p1k/1pn1pP1p/n2pP3/q2p2PN/2P5/2PQ3P/4RRK1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.05.06"]
+[UTCTime "04:49:07"]
+
+ *
+
+
+[Event "ChessDojo Squire Training - Vol. 2: Chapter 29"]
+[Date "2020.05.06"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "ChessDojo Squire Training - Vol. 2"]
+[ChapterName "Chapter 29"]
+[ChapterURL "https://lichess.org/study/sYJxaepm/LKuOC2cQ"]
+[Annotator "https://lichess.org/@/ChessDojo"]
+[FEN "r4r2/2q2p1k/3ppbpP/p7/1p1NP3/3Q1P2/PPP5/1K4RR w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.05.06"]
+[UTCTime "04:49:32"]
+
+ *
+
+
+[Event "ChessDojo Squire Training - Vol. 2: Chapter 30"]
+[Date "2020.05.06"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "ChessDojo Squire Training - Vol. 2"]
+[ChapterName "Chapter 30"]
+[ChapterURL "https://lichess.org/study/sYJxaepm/HgbpTwoa"]
+[Annotator "https://lichess.org/@/ChessDojo"]
+[FEN "r1b2rk1/1p2q3/p3pbn1/2p2R2/8/1B1P2Q1/PPP3PP/4R2K w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.05.06"]
+[UTCTime "04:49:43"]
+
+ *
+
+
+[Event "ChessDojo Squire Training - Vol. 2: Chapter 31"]
+[Date "2020.05.06"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "ChessDojo Squire Training - Vol. 2"]
+[ChapterName "Chapter 31"]
+[ChapterURL "https://lichess.org/study/sYJxaepm/Rz5fFuJ3"]
+[Annotator "https://lichess.org/@/ChessDojo"]
+[FEN "3qrbk1/r7/1nRpp3/1p2p1p1/1P2P3/P4NQ1/5PP1/B1R3K1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.05.06"]
+[UTCTime "04:49:58"]
+
+{ White to play, calculate and find the win after 1.Nd4 exd4 2.Bxd4 Rb7 }
+ *
+
+

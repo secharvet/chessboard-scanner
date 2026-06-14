@@ -1,0 +1,175 @@
+[Event "...: ---Instruction - Read it first---"]
+[Date "2025.10.05"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Pawel_Chess_Coach"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Opening Principles"]
+[ChapterName "Opening Principles"]
+[ChapterURL "https://lichess.org/study/AvRyLaXt/BJUMhOvi"]
+
+{ The games are analyzed from one side only.
+In some games, I removed continuations; they’re not the objective of this lesson.
+The analyzed side is noted at the top of the chapter.
+
+important note!
+- some examples include moves that an engine would mark as inaccuracies, or even as losing material, this is intentional.
+- goal of these examples is to build a repeatable process and pattern memory, not engine-perfect play. }
+ *
+
+
+[Event "...: ---Opening Principles---"]
+[Date "2025.10.05"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Pawel_Chess_Coach"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Opening Principles"]
+[ChapterName "---Opening Principles---"]
+[ChapterURL "https://lichess.org/study/AvRyLaXt/AjKeO0Fx"]
+
+ *
+
+
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2025.10.05"]
+[White "nedo999"]
+[Black "GAND39"]
+[Result "1/2-1/2"]
+[WhiteElo "1017"]
+[BlackElo "1013"]
+[TimeControl "600"]
+[Termination "Game drawn by repetition"]
+[Annotator "https://lichess.org/@/Pawel_Chess_Coach"]
+[Variant "Standard"]
+[ECO "C01"]
+[Opening "French Defense: Exchange Variation"]
+[StudyName "Opening Principles"]
+[ChapterName "1000 game - opening part"]
+[ChapterURL "https://lichess.org/study/AvRyLaXt/Z2rMvcON"]
+
+{ Opening analysis for White. }
+1. e4! { Improving move — fight for the center. } { [%clk 0:09:58] } 1... e6 { [%clk 0:09:58] } 2. Nf3! { Improving move — development.
+Opening rules — early castle priority. } { [%clk 0:09:57] } 2... d5 { [%clk 0:09:57] } 3. exd5 { Neutral move — White captured on d5 without improving; Black must recapture the pawn. } { [%clk 0:09:56] } 3... exd5 { [%clk 0:09:57] } 4. d4! { Improving move — fight for the center. } { [%clk 0:09:55] } 4... h6 { [%clk 0:09:51] } 5. Nc3? { Improving move — development.
+Opening rules — our strategy prioritizes castling. } { [%clk 0:09:53] } (5. Bd3!) 5... Nf6 { [%clk 0:09:49] } 6. Bb5+! { Improving move — development.
+Opening rules — early castle priority. } { [%clk 0:09:50] } 6... c6 { [%clk 0:09:48] } 7. Ba4 { Neutral move — Black attacks the bishop without improving; White must retreat, also without improvement. } { [%clk 0:09:48] } 7... Bg4 { [%clk 0:09:46] } 8. Bf4? { Improving move — development.
+Opening rules — our strategy prioritizes castling. } { [%clk 0:09:45] } (8. O-O!) 8... Ne4 { [%clk 0:09:34] } 9. O-O! { Improving move — development.
+Opening rules — early castle priority. } { [%clk 0:09:34] } 9... Bd6 { [%clk 0:08:47] } 10. Bxd6 { Neutral move — after Black plays 9...Bd6, we have to move the bishop again, which doesn’t improve our position. Some players think 10.Bxd6 helps Black develop (the queen comes out), but even if we retreat, Black can develop the queen anyway. } { [%clk 0:09:25] } 10... Qxd6 { [%clk 0:08:46] } 11. Qd3! { Improving move — development. } { [%clk 0:09:24] } 11... Nd7 { [%clk 0:08:17] } 12. Rfe1?? { 12.Rfe1 is a good developing move, but it’s a missed opportunity. When a clear chance appears, take it. } { [%clk 0:09:22] } (12. Nxe4! dxe4 13. Qxe4+) 12... Nf6 { [%clk 0:08:07] } 13. Nh4? { Opening rules — don't move the same piece twice in the opening. } { [%clk 0:09:11] } (13. Re3! { [%cal Ga1e1] }) 13... O-O { [%clk 0:07:24] } 14. f3! { Pawn fork. } { [%clk 0:09:01] } 14... Bxf3 { [%clk 0:07:05] } 15. Qxf3! { White wins the bishop and now has a material advantage. This changes the game’s dynamics and priorities, so we’ll stop here. The game continued. } { [%clk 0:08:47] } 1/2-1/2
+
+
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2025.10.05"]
+[White "dinieto"]
+[Black "fbribeiro"]
+[Result "0-1"]
+[WhiteElo "1262"]
+[BlackElo "1299"]
+[TimeControl "600"]
+[Termination "fbribeiro won by resignation"]
+[Annotator "https://lichess.org/@/Pawel_Chess_Coach"]
+[Variant "Standard"]
+[ECO "B20"]
+[Opening "Sicilian Defense: Bowdler Attack"]
+[StudyName "Opening Principles"]
+[ChapterName "1200 game - opening part"]
+[ChapterURL "https://lichess.org/study/AvRyLaXt/yQWvAyry"]
+
+{ Opening analysis for Black. }
+1. e4 { [%clk 0:10:00] } 1... c5! { Improving move — fight for the center. } { [%clk 0:09:59] } 2. Bc4 { [%clk 0:09:57] } 2... d6! { Improving move — enables the development of light-squared bishop.
+Black doesn’t prioritise early castling here; it’s an opening-theory exception. } { [%clk 0:09:58] } 3. Qh5 { [%clk 0:09:53] } 3... e6! { Improving move — enables the development of dark-squared bishop.
+Opening rules — early castle priority. } { [%clk 0:09:55] } 4. Nf3 { [%clk 0:09:42] } 4... Nf6! { Improving move — development.
+Opening rules — early castle priority. } { [%clk 0:09:54] } 5. Qh4 { [%clk 0:09:32] } 5... Be7! { Improving move — development.
+Opening rules — early castle priority. } { [%clk 0:09:50] } 6. d3 { [%clk 0:09:17] } 6... Nbd7? { Improving move — development.
+Opening rules — our strategy prioritizes castling. } { [%clk 0:09:44] } 7. Ng5 { [%clk 0:08:31] } 7... a6? { Mistake — a6 doesn’t fight for the center, doesn’t develop, and doesn’t enable development. } { [%clk 0:09:32] } 8. a3 { [%clk 0:08:23] } 8... b5 { Neutral move — Black attacks the bishop without improving; White must retreat, also without improvement. } { [%clk 0:09:31] } 9. Ba2 { [%clk 0:08:21] } 9... Ne5? { Opening rules — don't move the same piece twice in the opening. } { [%clk 0:09:18] } 10. Bd2 { [%clk 0:08:06] } 10... h6 { Neutral move — Black attacks the bishop without improving; White must retreat, also without improvement. } { [%clk 0:09:04] } 11. Nf3 { [%clk 0:08:00] } 11... Nxf3+ { Neutral move — Black captured on f3; White must recapture the knight. } { [%clk 0:09:01] } 12. gxf3 { [%clk 0:07:57] } 12... e5! { Improving move — development.
+Opening rules — although we prioritise castling and central control, here I’d avoid castling: the g-file is semi-open. } { [%clk 0:08:42] } 13. Nc3 { [%clk 0:07:45] } 13... Nd5 { Neutral move — Black attacks the queen without improving; White must retreat, also without improvement. } { [%clk 0:08:39] } 14. Nxd5 { [%clk 0:07:43] } 14... Bxh4! { Black wins the queen and now has a material advantage. This changes the game’s dynamics and priorities, so we’ll stop here. The game continued. } { [%clk 0:08:38] } 0-1
+
+
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2025.10.03"]
+[White "McHeartsbane"]
+[Black "eltigreetor216"]
+[Result "0-1"]
+[WhiteElo "1411"]
+[BlackElo "1407"]
+[TimeControl "600"]
+[Termination "eltigreetor216 won - game abandoned"]
+[Annotator "https://lichess.org/@/Pawel_Chess_Coach"]
+[Variant "Standard"]
+[ECO "D03"]
+[Opening "Queen's Pawn Game: Torre Attack"]
+[StudyName "Opening Principles"]
+[ChapterName "1400 game - opening part"]
+[ChapterURL "https://lichess.org/study/AvRyLaXt/kcizZvv5"]
+
+{ Opening analysis for White. }
+1. d4! { Improving move — fight for the center. } { [%clk 0:09:59] } 1... d5 { [%clk 0:09:57] } 2. Nf3! { Improving move — development.
+Opening rules — early castle priority. } { [%clk 0:09:47] } 2... Nf6 { [%clk 0:09:55] } 3. Bg5? { Improving move — development.
+Opening rules — our strategy prioritizes castling. } { [%clk 0:09:44] } (3. g3!) 3... e6 { [%clk 0:09:51] } 4. h3? { Mistake — h3 doesn’t fight for the center, doesn’t develop, and doesn’t enable development. } { [%clk 0:09:44] } (4. e3!) 4... Be7 { [%clk 0:09:49] } 5. e3! { Improving move — enables the development of light-squared bishop.
+Opening rules — early castle priority. } { [%clk 0:09:43] } 5... Nc6 { [%clk 0:09:47] } 6. Nbd2? { Improving move — development.
+Opening rules — our strategy prioritizes castling. } { [%clk 0:09:43] } (6. Be2!) 6... a6 { [%clk 0:09:43] } 7. a3? { Mistake — a3 doesn’t fight for the center, doesn’t develop, and doesn’t enable development. } { [%clk 0:09:42] } (7. Be2!) 7... h6 { [%clk 0:09:41] } 8. Bh4 { Neutral move — Black attacks the bishop without improving; White must retreat, also without improvement. } { [%clk 0:09:38] } 8... Nh7 { [%clk 0:09:13] } 9. Bxe7 { Neutral move — after Black plays 8...Nh7, we have to move the bishop again, which doesn’t improve our position. Some players think 9.Bxf3 helps Black develop (the queen comes out), but even if we retreat, Black can develop the queen anyway. } { [%clk 0:09:36] } 9... Nxe7 { [%clk 0:09:09] } 10. Bd3! { Improving move — development.
+Opening rules — early castle priority. } { [%clk 0:09:36] } 10... O-O { [%clk 0:08:44] } 11. c4 { Improving move — development.
+Opening rules — even though we prioritise castling and central control, in this position I prefer to castle. } { [%clk 0:09:35] } 11... c6 { [%clk 0:08:35] } 12. cxd5 { Neutral move — White captured on d5 without improving; Black must recapture the pawn. } { [%clk 0:09:32] } 12... exd5 { [%clk 0:08:31] } 13. Rc1? { Improving move — development.
+Opening rules — our strategy prioritizes castling. } { [%clk 0:09:32] } (13. O-O!) 13... Nf5 { [%clk 0:08:14] } 14. O-O! { Improving move — development.
+Opening rules — early castle priority. } { [%clk 0:09:18] } 14... Nh4 { [%clk 0:08:05] } 15. Nxh4? { Mistake — it’s White’s turn to improve. 15.Nxh4 helps Black develop the queen. } { [%clk 0:09:16] } (15. Qc2!) 15... Qxh4 { [%clk 0:08:02] } 16. Nf3 { Neutral move — we don’t improve, but Black,s queen is under threat, so they have no time to improve. } { [%clk 0:09:14] } 16... Qe7 { [%clk 0:07:47] } 17. b4? { Mistake — b4 doesn’t fight for the center, doesn’t develop, and doesn’t enable development. } { [%clk 0:09:01] } (17. Qc2!) 17... f5 { [%clk 0:07:43] } 18. Ne5? { Opening rules — don't move the same piece twice in the opening. } { [%clk 0:08:59] } (18. Qc2!) 18... Rf6 { [%clk 0:07:28] } 19. Qh5! { Improving move — development. } { [%clk 0:08:57] } 19... Nf8 { [%clk 0:06:56] } 20. f4! { Improving move — development.
+White has reached the middlegame. The game continued. } { [%clk 0:08:16] } 0-1
+
+
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2025.10.04"]
+[White "Mezziah3"]
+[Black "chessykiki3"]
+[Result "0-1"]
+[WhiteElo "1726"]
+[BlackElo "1725"]
+[TimeControl "600"]
+[Termination "chessykiki3 won by resignation"]
+[Annotator "https://lichess.org/@/Pawel_Chess_Coach"]
+[Variant "Standard"]
+[ECO "B10"]
+[Opening "Caro-Kann Defense: Hillbilly Attack"]
+[StudyName "Opening Principles"]
+[ChapterName "1700 game - opening part"]
+[ChapterURL "https://lichess.org/study/AvRyLaXt/OeFPyIvl"]
+
+{ Opening analysis for Black. }
+1. e4 { [%clk 0:10:00] } 1... c6! { Improving move — enables the development of the queen. } { [%clk 0:09:58] } 2. Bc4 { [%clk 0:09:59] } 2... d5! { Improving move — fight for the center. } { [%clk 0:09:57] } 3. exd5 { [%clk 0:09:59] } 3... cxd5 { Neutral move — White captured on d5 without improving; Black must recapture the pawn. } { [%clk 0:09:56] } 4. Bb5+ { [%clk 0:09:59] } 4... Bd7! { Improving move — development. } { [%clk 0:09:42] } 5. Bxd7+ { [%clk 0:09:57] } 5... Qxd7! { Improving move — development. } { [%clk 0:09:39] } 6. d4 { [%clk 0:09:57] } 6... Nf6! { Improving move — development.
+Opening rules — early castle priority. } { [%clk 0:09:37] } 7. Nf3 { [%clk 0:09:55] } 7... e6! { Improving move — enables the development of dark-squared bishop. } { [%clk 0:09:36] } 8. Nc3 { [%clk 0:09:47] } 8... Bb4! { Improving move — development.
+Opening rules — early castle priority. } { [%clk 0:09:31] } 9. a3 { [%clk 0:09:46] } 9... Bxc3+ { This is an exceptional case where trading the bishop for the knight is good. } { [%clk 0:09:28] } 10. bxc3 { [%clk 0:09:46] } 10... Ne4? { Opening rules — don't move the same piece twice in the opening. } { [%clk 0:09:27] } 11. Qd3 { [%clk 0:09:31] } 11... O-O! { Improving move — development.
+Opening rules — early castle priority. } { [%clk 0:09:03] } 12. O-O { [%clk 0:09:26] } 12... Nc6! { Improving move — development. } { [%clk 0:08:55] } 13. Bf4 { [%clk 0:08:42] } 13... Rac8! { Improving move — development. } { [%clk 0:08:42] } 14. Ng5 { [%clk 0:08:28] } 14... Nxg5 { Neutral move — Black captured on g5 without improving; White must recapture the piece. } { [%clk 0:07:49] } 15. Bxg5 { We stop here. Rf8 is very hard to develop, so this is a “one piece left” exception — Black can transition to the middlegame earlier. The game continued. } { [%clk 0:08:28] } 0-1
+
+
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2025.10.03"]
+[White "PRETTYBOYHUSTLER3"]
+[Black "bruce761"]
+[Result "0-1"]
+[WhiteElo "1926"]
+[BlackElo "1951"]
+[TimeControl "600"]
+[Termination "bruce761 won by checkmate"]
+[Annotator "https://lichess.org/@/Pawel_Chess_Coach"]
+[Variant "Standard"]
+[ECO "D00"]
+[Opening "Queen's Pawn Game: Chigorin Variation"]
+[StudyName "Opening Principles"]
+[ChapterName "1900 game - opening part"]
+[ChapterURL "https://lichess.org/study/AvRyLaXt/8w9fJw6H"]
+
+{ Opening analysis for Black. }
+1. d4 { [%clk 0:10:00] } 1... d5! { Improving move — fight for the center. } { [%clk 0:09:59] } 2. Nc3 { [%clk 0:09:59] } 2... g6! { Improving move — enables the development of dark-squared bishop.
+Opening rules — early castle priority. } { [%clk 0:09:58] } 3. Bf4 { [%clk 0:09:51] } 3... Bg7! { Improving move — development.
+Opening rules — early castle priority. } { [%clk 0:09:56] } 4. e3 { [%clk 0:09:12] } 4... c6? { Mistake — c6 doesn’t fight for the center, doesn’t develop, and doesn’t enable development. } { [%clk 0:09:53] } (4... Nf6!) 5. Bd3 { [%clk 0:09:07] } 5... Nf6! { Improving move — development.
+Opening rules — early castle priority. } { [%clk 0:09:51] } 6. Nf3 { [%clk 0:08:59] } 6... Bg4? { Improving move — development.
+Opening rules — our strategy prioritizes castling. } { [%clk 0:09:48] } (6... O-O!) 7. O-O { [%clk 0:08:22] } 7... Nbd7? { Improving move — development.
+Opening rules — our strategy prioritizes castling. } { [%clk 0:09:45] } (7... O-O!) 8. h3 { [%clk 0:08:20] } 8... Bxf3 { Black has no better alternatives. } { [%clk 0:09:44] } 9. Qxf3 { [%clk 0:08:20] } 9... O-O! { Improving move — development.
+Opening rules — early castle priority. } { [%clk 0:09:44] } 10. Rfe1 { [%clk 0:08:06] } 10... Nb6? { Opening rules — don't move the same piece twice in the opening. } { [%clk 0:09:10] } (10... a5!) 11. Rad1 { [%clk 0:07:38] } 11... Nc4? { Opening rules — don't move the same piece twice in the opening. } { [%clk 0:08:31] } (11... Qd7!) 12. Bxc4 { [%clk 0:07:21] } 12... dxc4 { Neutral move — White captured on c4 without improving; Black must recapture the piece. } { [%clk 0:08:29] } 13. e4 { [%clk 0:07:18] } 13... e6? { Mistake — e6 doesn’t fight for the center, doesn’t develop, and doesn’t enable development.
+We stop here. White reached middlegame much quicker than Black and gained big advantage. The game continued. } { [%csl Rf8,Rd8,Ra8] [%clk 0:08:26] } (13... Qb6!) 0-1
+
+

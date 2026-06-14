@@ -1,0 +1,135 @@
+[Event "World Blitz Championship"]
+[Site "Berlin GER"]
+[Date "2015.10.13"]
+[Round "1"]
+[White "Predrag Nikolic"]
+[Black "Magnus Carlsen"]
+[Result "0-1"]
+[Variant "Standard"]
+[ECO "D30"]
+[Opening "Queen's Gambit Declined"]
+[StudyName "Answering Questions"]
+[ChapterName "Carlsen's Unusual 3...a6!?"]
+[ChapterURL "https://lichess.org/study/GDUwm3BB/F3VH1wH5"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 d5 2. c4 e6 3. Nf3 (3. Nc3 a6!? { also playable for black }) 3... a6 { Sigmav asks: Why did black play a6 ? What is the idea behind a6 ? } 4. e3 (4. Nc3 dxc4 { A nice version of the QGA where a6 is quite useful } 5. e4 b5 6. a4 b4 7. Ne2 c5) (4. cxd5 { The most principled move, but helps black unleash the light-squared bishop } { [%csl Ra6] } 4... exd5 5. Nc3 c6 { Aronian, L. - Carlsen, M., 0-1, 4th Norway Blitz 2016, https://lichess.org/RgIL2Hr2 } { [%csl Gd5,Gd6,Gc8][%cal Gf8d6,Gg8e7,Ge8g8,Gc8e6,Gd8c7,Gb8d7,Gd7f6,Gc8f5] } 6. Bf4 Bd6 7. Bxd6 Qxd6 8. e3 Ne7 9. Bd3 Bf5 { With a balanced position }) (4. c5?! b6 5. b4 a5 { [%csl Gc5,Gb6,Ga5] }) 4... Nf6 5. Nc3 dxc4 6. Bxc4 b5 7. Be2 Bb7 8. O-O Nbd7 9. Bd2 Bd6 { [%csl Gd6][%cal Gc7c5,Ge6e5] } 10. Rc1 O-O 11. Qe1 { [%csl Ga5][%cal Gd2a5] } 11... Qe7 12. Nb1 e5 13. Ba5 exd4 14. Nxd4 Qe5 { [%csl Rh2,Rb2] } 15. g3 c5 16. Bf3 Bxf3 17. Nxf3 Qxb2 18. e4 Rfe8 19. Bc3 Qxa2 20. e5 Qd5 { [%csl Re5,Rf3][%cal Ge8e1] } 21. Qd1 Qxd1 22. Rfxd1 Bxe5 { 0-1 White resigns. } { https://www.youtube.com/watch?v=rXqXGlWjslI } 0-1
+
+
+[Event "Answering Questions: Meeting the \"Anti-London\""]
+[Date "2018.09.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A43"]
+[Opening "Benoni Defense: Benoni Gambit Accepted"]
+[StudyName "Answering Questions"]
+[ChapterName "Meeting the \"Anti-London\""]
+[ChapterURL "https://lichess.org/study/GDUwm3BB/3XzvXNV8"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2018.09.26"]
+[UTCTime "17:44:09"]
+
+{ From Chet Heflin: "Eric Rosen has a dvd series on the London. I watched his advertisement, watched him play the London on numerous occasions. Very excited to purchase his London DVD at the first of the month. Anyway, it’s killing me to find out how Eric meets 1...c5. At my chess club, after 1.d4, a NM played 1...c5, The Old Benoni. I played 2.c3 and lost the b2 pawn after 1.d4 c5 2.c3 d6 3.Bf4 cxd4 4.cxd4 Qb6 - and now Qb6 attacks both d4 and b2. I played 5.e3, then he played 5...Qxb2. I learned afterwards that I could have played 5.Qc2, and if Black plays 5...Qxd4?? , White has Qxc8+. GM Simon Williams teaches 1.d4 c5 2.d5, and 1.d4 Nf6 2.Bf4 c5 3.d5. What concerns me is what to do if Black plays a move in the Czech Benoni, 1d4 c5 2.d5 e5. Now Bf4 may not be a good move, 1.d4 c5 2.d5 e5 3.dxe5ep fxe6 4.Bf4 (?). So Eric, do you play 1.d4 c5 2.d5, or 1.d4 c5 2.c3? And if you play 2.d5, what do you play after 2...e5? Thanks! Looking forward to your DVD on the London next month.﻿" }
+1. d4 c5 2. dxc5!? { A tricky variation, and my recommendation for many players } (2. d5 { The most principled and objectively the best move. The game will now enter some kind of Benoni Structure (denoted by black's pawn on c5, and white's pawn on d5) } 2... e5 3. e4 { [%csl Gb5,Gd5,Ge4,Rf1][%cal Gf1b5,Gb1c3,Gg1f3,Gf3d2,Gd2c4,Ga2a4,Rb7b5] } 3... d6 4. Nc3 Be7 5. Bb5+ Nd7 { Akobian, Varuzhan - Tate, Emory, 1-0, Western States op, 2004, https://lichess.org/R21WgQuo }) (2. c3 cxd4 3. cxd4) 2... e6 { [%cal Gb1c3,Gc3e4] } 3. Nc3 Bxc5 4. Ne4 { [%csl Rc5,Rd6] } 4... Be7?! { The most common move (according to the lichess database), but not the best } (4... d5 5. Nxc5 Qa5+ 6. c3 Qxc5 7. e4! $14 Nf6 (7... dxe4 8. Qg4! { Danielian, Elina - Arakhamia Grant, Ketevan, 1-0, ROM-chT (Women), 2009, https://lichess.org/D5jtHVc8 } { [%csl Ge4,Gg7] }) 8. e5 Nfd7 9. Nf3 Nc6 10. Bf4 O-O 11. Bd3 { [%cal Gd3h7,Gf3g5] }) (4... Nf6! 5. Nxc5 Qa5+ 6. c3 Qxc5 7. g3 d5 8. Bg2 O-O 9. Nf3 Nc6 10. O-O e5 11. Bg5 { [%cal Gg5f6] } 11... Ne4 12. Be3) 5. Nd6+ Bxd6 6. Qxd6 $14 { Very pleasant position for white! } { [%csl Gd6][%cal Gc1f4,Ge1c1] } *
+
+
+[Event "Answering Questions: Chapter 3"]
+[Date "2018.09.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A00"]
+[Opening "Van Geet Opening: Reversed Nimzowitsch"]
+[StudyName "Answering Questions"]
+[ChapterName "Chapter 3"]
+[ChapterURL "https://lichess.org/study/GDUwm3BB/SxBb9MmG"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2018.09.28"]
+[UTCTime "18:39:15"]
+
+1. Nc3 e5 2. e3 d5 3. Qh5 Nc6 4. Bb5 Qd6 5. Nf3 e4 6. Qe5+ *
+
+
+[Event "Import"]
+[Site "https://lichess.org/Dj08ehkI"]
+[Date "2017.01.21"]
+[Round "-"]
+[White "John Fedorowicz (2469)"]
+[Black "Eric S Rosen (2141)"]
+[Result "0-1"]
+[TimeControl "-"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "D35"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Positional Variation"]
+[StudyName "Answering Questions"]
+[ChapterName "John Fedorowicz (2469) - Eric S Rosen (2141)"]
+[ChapterURL "https://lichess.org/study/GDUwm3BB/DVa1MTEJ"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. cxd5 exd5 5. Bg5 c6 6. e3 Bf5 { [%cal Gd1f3,Gf5g6,Gg5f6] } 7. g4 { [%csl Gg4][%cal Gf5g4] } (7. Qf3 Bg6 8. Bxf6 Qxf6 9. Qxf6 gxf6) 7... Be6 (7... Bxg4 8. Bxf6) 8. h3 Nbd7 9. f4 { [%cal Gf4f5] } 9... Nb6 10. Bd3 Be7 11. Nf3 Qd6 { [%csl Gd6][%cal Gf4f5] } 12. f5 { [%csl Gg3] } 12... Qg3+ 13. Kd2 Ne4+ { [%cal Gg5e7,Ge7g5,Gf5e6,Gc3e4,Gd3e4,Gd5e4,Gg3f2,Gg3g2,Gb6c4,Ge7b4] } 14. Nxe4 dxe4 15. Bxe4 Qf2+ 16. Qe2 (16. Kc3 Bb4+ { 0-1 White resigns. } 17. Kxb4 Qxb2+ { [%csl Gb5][%cal Gb4a5] } 18. Kc5 Qb5+ 19. Kd6 Nc8+ 20. Kc7 Qb6#) 16... Nc4+ 17. Kd1 Nxb2+ { [%csl Gb2][%cal Gf2b2] } 18. Kd2 Bb4+ { [%cal Gf2e2] } 0-1
+
+
+[Event "Answering Questions: Budapest"]
+[Date "2018.10.02"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A52"]
+[Opening "Indian Defense: Budapest Defense, Adler Variation"]
+[StudyName "Answering Questions"]
+[ChapterName "Budapest"]
+[ChapterURL "https://lichess.org/study/GDUwm3BB/ZTGvFJ6V"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2018.10.02"]
+[UTCTime "19:04:04"]
+
+1. d4 Nf6 2. c4 e5 3. dxe5 Ng4 4. Nf3 Nc6 5. Bf4 Bb4+ 6. Nbd2 Qe7 7. a3 Ngxe5 8. axb4 *
+
+
+[Event "Answering Questions: Levitsky Attack"]
+[Date "2018.10.23"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D00"]
+[Opening "Queen's Pawn Game: Levitsky Attack"]
+[StudyName "Answering Questions"]
+[ChapterName "Levitsky Attack"]
+[ChapterURL "https://lichess.org/study/GDUwm3BB/f4w9qyW4"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2018.10.23"]
+[UTCTime "07:15:04"]
+
+1. d4 d5 2. Bg5 f6 3. Bh4 (3. Bf4 Nc6 4. Nf3 g5 5. Bg3 h5 6. h3 Bf5 7. e3 e6 8. Bd3 Nh6) 3... Nh6 4. e3 (4. f3 c5 5. dxc5 e5 6. e4 Bxc5 7. Qxd5 Qb6) 4... Nf5 5. Bg3 h5 6. Be2 (6. Bd3 h4 7. Qg4 Nd6 8. Qg6+ Nf7 9. Bf4 e5) 6... h4 7. Bh5+ (7. Bf4 g5 8. Bh5+ Kd7 9. Bg4) 7... Kd7 8. Qg4 (8. Bg4 Kc6) (8. e4 dxe4 9. Bf4 g5) 8... Kc6 *
+
+
+[Event "Answering Questions: 4...h5!!?!?"]
+[Date "2018.10.23"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D03"]
+[Opening "Queen's Pawn Game: Torre Attack, Gossip Variation"]
+[StudyName "Answering Questions"]
+[ChapterName "4...h5!!?!?"]
+[ChapterURL "https://lichess.org/study/GDUwm3BB/a7wYg4qb"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2018.10.23"]
+[UTCTime "07:24:42"]
+
+1. d4 d5 2. Nf3 Nf6 3. Bg5 Ne4 4. Bh4 h5 5. h3 f6 6. Nfd2 g5 7. Nxe4 dxe4 8. Bg3 *
+
+
+[Event "Answering Questions: Legal Trap"]
+[Date "2018.10.31"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C50"]
+[Opening "Italian Game: Paris Defense"]
+[StudyName "Answering Questions"]
+[ChapterName "Legal Trap"]
+[ChapterURL "https://lichess.org/study/GDUwm3BB/5u66UzBL"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2018.10.31"]
+[UTCTime "01:16:58"]
+
+1. e4 e5 2. Nf3 d6 3. Bc4 Nc6 4. Nc3 Bg4 5. Nxe5 (5. h3 Bh5 (5... Bxf3 6. Qxf3 Nd4 7. Qxf7#) 6. Nxe5 Bxd1 (6... Nxe5 7. Qxh5 Nxc4 8. Qb5+ c6 9. Qxc4) 7. Bxf7+ Ke7 8. Nd5# { [%csl Gd5,Ge5,Gf7] }) 5... Bxd1 (5... Nxe5) 6. Bxf7+ Ke7 7. Nd5# *
+
+

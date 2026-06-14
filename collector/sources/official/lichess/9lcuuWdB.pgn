@@ -1,0 +1,88 @@
+[Event "Late-Titled-Tuesday-Blitz-April-18-2023"]
+[Site "Chess.com"]
+[Date "2023.04.18"]
+[Round "1"]
+[White "pokochajszachy"]
+[Black "IMRosen"]
+[Result "0-1"]
+[WhiteElo "2193"]
+[BlackElo "2573"]
+[TimeControl "180+1"]
+[Termination "IMRosen won on time"]
+[Variant "Standard"]
+[ECO "D35"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Sämisch Variation"]
+[StudyName "tilted tuesday  4/18"]
+[ChapterName "pokochajszachy - IMRosen"]
+[ChapterURL "https://lichess.org/study/9lcuuWdB/8xmXlyJF"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Nf3 Nbd7 5. cxd5 exd5 6. Bf4 Bb4 7. Qb3 c5 8. dxc5 Qa5 9. Bd2 Nxc5 10. Qc2 Nfe4 11. e3 Bf5 12. Nh4 Nxc3 13. Nxf5 N3e4 14. Bxb4 Qxb4+ 15. Ke2 O-O 16. f3 Nf6 17. Kf2 Rfe8 18. a3 Qb6 19. b4 Ne6 20. Bd3 g6 21. Qb2 Nf4 22. Nh6+ Kg7 23. Rhd1 Qxe3+ 24. Kf1 Nxd3 { 0-1 Black wins on time. } 0-1
+
+
+[Event "Late-Titled-Tuesday-Blitz-April-18-2023"]
+[Site "Chess.com"]
+[Date "2023.04.18"]
+[Round "2"]
+[White "IMRosen"]
+[Black "alexrustemov"]
+[Result "1-0"]
+[WhiteElo "2587"]
+[BlackElo "2855"]
+[TimeControl "180+1"]
+[Termination "IMRosen won by checkmate"]
+[Variant "Standard"]
+[ECO "C02"]
+[Opening "French Defense: Advance Variation, Milner-Barry Gambit, Hector Variation"]
+[StudyName "tilted tuesday  4/18"]
+[ChapterName "IMRosen - alexrustemov"]
+[ChapterURL "https://lichess.org/study/9lcuuWdB/68auNPoH"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 { [%eval 0.36] } 1... e6 { [%eval 0.0] } 2. d4 { [%eval 0.3] } 2... d5 { [%eval 0.25] } 3. e5 { [%eval 0.0] } 3... c5 { [%eval 0.32] } 4. c3 { [%eval 0.3] } 4... Qb6 { [%eval 0.0] } 5. Nf3 { [%eval 0.0] } 5... Bd7 { [%eval 0.45] } 6. Bd3 { [%eval 0.36] } 6... cxd4 { [%eval 0.25] } 7. O-O { [%eval 0.06] } 7... Nc6 { [%eval 0.0] } 8. Re1 { [%eval 0.46] } 8... Nge7 { [%eval 0.25] } 9. a3 { [%eval 0.02] } 9... Rc8 { [%eval 0.0] } 10. b4 { [%eval 0.12] [%csl Gb4,Ga3][%cal Gc1b2] } 10... a6 { [%eval 0.12] } 11. Bb2 { [%eval 0.29] } 11... dxc3 { [%eval 0.3] } 12. Nxc3 { [%eval 0.43] } 12... Ng6 { [%eval 0.8] } 13. h4 { [%eval 0.61] } 13... Be7?! { [%eval 1.18] } { Inaccuracy. Nd4 was best. } (13... Nd4 14. Ng5 Nf4 15. Bb1 Rc4 16. g3 h6 17. Nxf7 Kxf7 18. gxf4 Qd8 19. Bd3 Qxh4 20. Nxd5) 14. h5?! { [%eval 0.23] } { Inaccuracy. g3 was best. } (14. g3) 14... Nf4 { [%eval 0.2] } 15. Bf1?! { [%eval -0.54] } { Inaccuracy. h6 was best. } (15. h6 Nd4 16. hxg7 Rg8 17. Bf1 Nxf3+ 18. Qxf3 Ng6 19. g3 Bc6 20. Ne2 Rxg7 21. Nd4 Ba4) 15... Nxh5 { [%eval -0.27] } 16. Qd2 { [%eval -0.5] } 16... O-O { [%eval -0.55] } 17. Na4 { [%eval -0.78] } 17... Qa7 { [%eval -0.25] } 18. Nc5 { [%eval -0.71] } 18... Bxc5 { [%eval -0.7] } 19. bxc5 { [%eval -0.69] } 19... Qxc5 { [%eval -0.76] } 20. Qg5?! { [%eval -1.81] } { Inaccuracy. Rac1 was best. } (20. Rac1 Qb6) 20... g6?? { [%eval 0.02] } { Blunder. Qc2 was best. } (20... Qc2) 21. g4 { [%eval -0.41] } 21... Ng3?? { [%eval 3.16] } { Blunder. f6 was best. } (21... f6 22. Qh4 fxe5 23. Nxe5 Nxe5 24. Bxe5 Ng7 25. Rac1 Qa5 26. Rxc8 Bxc8 27. Re3 d4 28. Qh6) 22. Rac1 { [%eval 3.23] } 22... Qb6 { [%eval 3.95] } 23. Qh6 { [%eval 3.97] } 23... f6 { [%eval 3.55] } 24. exf6 { [%eval 3.71] } 24... Rf7 { [%eval 3.25] } 25. Rb1 { [%eval 3.38] } 25... Ne4?! { [%eval 4.26] } { Inaccuracy. Rcf8 was best. } (25... Rcf8 26. Ng5 Nxf1 27. Nxh7 Rxh7 28. Qxg6+ Kh8 29. f7+ Qxb2 30. Rxb2 Rhxf7 31. Kxf1 Rh7 32. Kg2) 26. Rxe4 { [%eval 4.24] } 26... dxe4 { [%eval 4.3] } 27. Ng5 { [%eval 4.22] } 27... Rcf8 { [%eval 4.25] } 28. Nxh7 { [%eval 4.27] } 28... Rxh7 { [%eval 4.25] } 29. Qxg6+ { [%eval 4.19] } 29... Kh8 { [%eval 4.44] } 30. f7+ { [%eval 4.31] } 30... e5?? { [%eval #3] } { Checkmate is now unavoidable. Qxb2 was best. } (30... Qxb2 31. Rxb2 Rhxf7 32. f3 Rg7 33. Qxe4 Nd8 34. Rh2+ Kg8 35. Bc4 Rf6 36. Qd3 Nc6 37. Qe3) 31. Qf6+ { [%eval #2] } 31... Rg7 { [%eval #2] } 32. Qh6+ { [%eval #1] } 32... Rh7 { [%eval #1] } 33. Qxf8# { 1-0 White wins. } 1-0
+
+
+[Event "Late-Titled-Tuesday-Blitz-April-18-2023"]
+[Site "Chess.com"]
+[Date "2023.04.18"]
+[Round "3"]
+[White "IMRosen"]
+[Black "Beca95"]
+[Result "0-1"]
+[WhiteElo "2584"]
+[BlackElo "2845"]
+[TimeControl "180+1"]
+[Termination "Beca95 won on time"]
+[Variant "Standard"]
+[ECO "A40"]
+[Opening "Queen's Pawn Game"]
+[StudyName "tilted tuesday  4/18"]
+[ChapterName "IMRosen - Beca95"]
+[ChapterURL "https://lichess.org/study/9lcuuWdB/2Eb6i6nh"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 a6 2. Bf4 d6 3. Nc3 Nd7 4. Nf3 c5 5. dxc5 Nxc5 6. e4 e5 7. Be3 Ne6 8. Bc4 Nf6 9. a4 Be7 10. h3 O-O 11. O-O Qc7 12. Bb3 Nc5 13. Nd5 Nxd5 14. Bxd5 Be6 15. c3 Rab8 16. b4 Bxd5 17. Qxd5 Nd7 18. Rfc1 h6 19. Qd3 Rbc8 20. Nd2 Nf6 21. c4 Qc6 22. b5 Qc7 23. Nf1 Nd7 24. Rab1 Nc5 25. Bxc5 Qxc5 26. Ne3 Bg5 27. Rb3 Rfd8 28. Rc2 Bxe3 29. Qxe3 Qxe3 30. Rxe3 Rc5 31. Rec3 Kf8 32. Kf1 Ke7 33. Ke2 Rdc8 34. Kd3 Ke6 35. Rb2 a5 36. g3 g6 37. f4 exf4 38. gxf4 Rh5 39. Kd4 f5 40. Re2 Kf7 41. Rce3 Rh4 42. Kd5 Rxf4 43. Kxd6 Rxc4 44. b6 Rfxe4 45. Rxe4 Rxe4 46. Rc2 Rxa4 47. Kc7 Kf6 48. Kxb7 Rb4 49. Kc7 Kg5 50. b7 f4 51. Kc6 Rxb7 52. Kxb7 Kh4 53. Kc6 Kg3 54. Kd5 f3 55. Rc6 g5 56. Ke4 f2 57. Rxh6 f1=Q 58. Rg6 Qb1+ 59. Ke5 Qxg6 { 0-1 Black wins on time. } 0-1
+
+
+[Event "Late-Titled-Tuesday-Blitz-April-18-2023"]
+[Site "Chess.com"]
+[Date "2023.04.18"]
+[Round "4"]
+[White "LastGladiator1"]
+[Black "IMRosen"]
+[Result "1-0"]
+[WhiteElo "2872"]
+[BlackElo "2581"]
+[TimeControl "180+1"]
+[Termination "LastGladiator1 won on time"]
+[Variant "Standard"]
+[ECO "D35"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Positional Variation"]
+[StudyName "tilted tuesday  4/18"]
+[ChapterName "LastGladiator1 - IMRosen"]
+[ChapterURL "https://lichess.org/study/9lcuuWdB/AaeFuLAn"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. cxd5 exd5 5. Bg5 c6 6. e3 Bd6 7. Bd3 h6 8. Bh4 O-O 9. Nge2 Re8 10. h3 a5 11. O-O { [%csl Ga6,Gc2,Ga3][%cal Gb8a6,Gd1c2,Ga2a3] } 11... Na6 12. a3 Nc7 13. Bg3 Bxg3 14. Nxg3 Be6 15. b4 b5 16. Qd2 axb4 17. axb4 Qd6 18. Nce2 Rxa1 19. Rxa1 Ra8 20. Rxa8+ Nxa8 21. Nc1 Nb6 22. Nb3 Qf8 23. Nc5 Qa8 24. Ne2 Ne8 25. Nc1 Nd6 26. N1b3 Qa3 27. Na5 Nbc4 28. Qe1 Nxa5 29. bxa5 b4 30. a6 { [%csl Gd6,Ge6,Gd3,Gc5][%cal Gb4b2,Ga6a8] } 30... Bc8 31. Kh2 g6 32. f3 b3 33. Qg3 b2 34. Qxd6 Bf5 35. Bxf5 gxf5 36. Qb8+ Kg7 37. a7 f4 38. a8=Q Qxa8 39. Qxa8 b1=Q 40. Qe8 Qc1 41. Qe5+ Kg8 42. Qxf4 h5 43. Nd7 f5 44. Nf6+ Kf7 45. Nxh5 c5 46. Ng3 cxd4 47. Qxf5+ Ke7 48. Qe5+ Kd7 49. Qxd5+ Kc8 50. Qxd4 Qc7 51. f4 Kb7 52. f5 Qb6 53. Qxb6+ Ka8 54. Qd8+ { 1-0 White wins on time. } 1-0
+
+

@@ -1,0 +1,48 @@
+[Event "Magnus Carlsen vs Shakhriyar Mamedyarov: Question 1 of 3"]
+[Date "2022.01.29"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "E04"]
+[Opening "Catalan Opening: Open Defense"]
+[StudyName "Magnus Carlsen vs Shakhriyar Mamedyarov"]
+[ChapterName "Question 1 of 3"]
+[ChapterURL "https://lichess.org/study/3ObrWJv5/xGjr7j4S"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2022.01.29"]
+[UTCTime "14:27:13"]
+
+1. d4 Nf6 2. Nf3 d5 3. c4 e6 4. g3 dxc4 5. Bg2 Bb4+ 6. Bd2 a5 7. O-O O-O 8. e3 Bxd2 { [%cal Bb4d2] } *
+
+
+[Event "Magnus Carlsen vs Shakhriyar Mamedyarov: Question 2 of 3"]
+[Date "2022.01.29"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "E04"]
+[Opening "Catalan Opening: Open Defense"]
+[StudyName "Magnus Carlsen vs Shakhriyar Mamedyarov"]
+[ChapterName "Question 2 of 3"]
+[ChapterURL "https://lichess.org/study/3ObrWJv5/9WRY0rm7"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2022.01.29"]
+[UTCTime "14:28:16"]
+
+1. d4 Nf6 2. Nf3 d5 3. c4 e6 4. g3 dxc4 5. Bg2 Bb4+ 6. Bd2 a5 7. O-O O-O 8. e3 Ra6 9. Qc2 b5 10. a4 c6 11. Nc3 Rb6 12. e4 Be7 13. e5 Nd5 14. axb5 cxb5 15. Nxd5 Qxd5 { [%cal Bd8d5] } *
+
+
+[Event "Magnus Carlsen vs Shakhriyar Mamedyarov: Question 3 of 3"]
+[Date "2022.01.29"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "E04"]
+[Opening "Catalan Opening: Open Defense"]
+[StudyName "Magnus Carlsen vs Shakhriyar Mamedyarov"]
+[ChapterName "Question 3 of 3"]
+[ChapterURL "https://lichess.org/study/3ObrWJv5/k2kCS9ow"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2022.01.29"]
+[UTCTime "14:28:23"]
+
+1. d4 Nf6 2. Nf3 d5 3. c4 e6 4. g3 dxc4 5. Bg2 Bb4+ 6. Bd2 a5 7. O-O O-O 8. e3 Ra6 9. Qc2 b5 10. a4 c6 11. Nc3 Rb6 12. e4 Be7 13. e5 Nd5 14. axb5 cxb5 15. Nxd5 exd5 16. Bxa5 Nc6 17. Bxb6 Qxb6 18. Ra8 h6 19. Rfa1 Be6 20. Qd1 b4 21. b3 { [%cal Bb2b3] } *
+
+

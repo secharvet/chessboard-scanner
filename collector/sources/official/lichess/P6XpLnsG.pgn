@@ -1,0 +1,20 @@
+[Event "US Championship (Women)"]
+[Site "St Louis, MO USA"]
+[Date "2015.04.07"]
+[Round "6"]
+[White "Alisa Melekhina"]
+[Black "Viktorija Ni"]
+[Result "0-1"]
+[WhiteElo "2235"]
+[BlackElo "2188"]
+[Variant "Standard"]
+[ECO "B01"]
+[Opening "Scandinavian Defense: Modern Variation"]
+[StudyName "EricRosen's Study"]
+[ChapterName "Alisa Melekhina - Viktorija Ni"]
+[ChapterURL "https://lichess.org/study/P6XpLnsG/80mqjxf6"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 d5 2. exd5 Nf6 3. Nc3 Nxd5 4. Bc4 c6 5. Qf3 Nd7 6. Bxd5 cxd5 7. Qxd5 e6 8. Qe4 Rb8 9. Nf3 b5 10. Qe2 b4 11. Ne4 Be7 12. O-O O-O { [%csl Gd6][%cal Gb7g1] } 13. d3 Bb7 14. Bf4 Rc8 15. Nd6 { [%csl Gf3,Rc2][%cal Gb7f3,Re2f3,Re2c2] } 15... Bxf3 16. gxf3 Rc6 17. Nc4 e5 18. Bg3 h5 19. Rae1 Re6 20. Qe4 Bf6 21. h3 Nc5 22. Qe3 Qd5 23. h4 Rd8 24. b3 Ra6 25. Ra1 Ne6 26. Bxe5 Bxe5 27. Nxe5 Nd4 { [%csl Gd4,Gc2][%cal Gd4c2] } 28. Qe4 Qxe5 { [%cal Ge4e5] } 29. Rfe1 (29. Qxe5 Nxf3+) 29... Rg6+ 30. Kh1 Qxe4 31. Rxe4 f5 32. Re7 Nxf3 33. Rxa7 Rd4 { 0-1 White resigns. } 0-1
+
+

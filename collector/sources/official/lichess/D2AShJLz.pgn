@@ -1,0 +1,39 @@
+[Event "Casual Blitz game"]
+[Site "https://lichess.org/WnvdoaOR"]
+[Date "2018.12.19"]
+[Round "-"]
+[White "EricRosen"]
+[Black "JoannaTries"]
+[Result "1-0"]
+[WhiteElo "2333"]
+[WhiteTitle "IM"]
+[BlackElo "1162"]
+[TimeControl "180+0"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "C69"]
+[Opening "Ruy Lopez: Exchange Variation, King's Bishop Variation"]
+[StudyName "Game study"]
+[ChapterName "IM EricRosen - JoannaTries"]
+[ChapterURL "https://lichess.org/study/D2AShJLz/wfPpAlz1"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 { [%clk 0:03:00] } 1... e5 { [%clk 0:03:00] } 2. Nf3 { [%clk 0:02:54] } 2... Nc6 { [%clk 0:02:52] } 3. Bb5 { [%clk 0:02:49] } 3... a6 { [%clk 0:02:45] } 4. Bxc6 { [%clk 0:02:46] } 4... dxc6 { [%clk 0:02:43] } 5. O-O { [%clk 0:02:39] } 5... Bd6 { [%clk 0:02:41] } 6. d4 { [%clk 0:02:35] } 6... exd4 { [%clk 0:02:26] } 7. Qxd4 { [%clk 0:02:17] } 7... Nf6 { [%clk 0:02:23] } 8. e5 { [%clk 0:02:13] } 8... Be7 { [%clk 0:01:48] } 9. Qxd8+ { [%clk 0:01:58] } 9... Bxd8 { [%clk 0:01:44] } 10. exf6 { [%clk 0:01:57] } 10... Bxf6 { [%clk 0:01:42] } 11. Re1+ { [%clk 0:01:57] } 11... Be6 { [%clk 0:01:39] } 12. Nc3 { [%clk 0:01:54] } 12... O-O { [%clk 0:01:38] } 13. Bf4 { [%clk 0:01:49] } 13... Rac8 { [%clk 0:01:33] } 14. Ne4 { [%clk 0:01:45] } 14... Bxb2 { [%clk 0:01:30] } 15. Rab1 { [%clk 0:01:44] } 15... Bc3 { [%clk 0:01:27] } 16. Nxc3 { [%clk 0:01:39] } 16... Rcd8 { [%clk 0:01:17] } 17. Rxb7 { [%clk 0:01:29] } 17... Rd7 { [%clk 0:01:09] } 18. Rxc7 { [%clk 0:01:28] } 18... Rfd8 { [%clk 0:01:07] } 19. Rxd7 { [%clk 0:01:24] } 19... Rxd7 { [%clk 0:01:06] } 20. Ng5 { [%clk 0:01:19] } 20... h6 { [%clk 0:01:02] } 21. Nxe6 { [%clk 0:01:17] } 21... fxe6 { [%clk 0:01:00] } 22. Rxe6 { [%clk 0:01:17] } 22... Kh7 { [%clk 0:00:55] } 23. h4 { [%clk 0:01:15] } 23... Rd4 { [%clk 0:00:48] } 24. g3 { [%clk 0:01:08] } 24... c5 { [%clk 0:00:46] } 25. Be5 { [%clk 0:01:03] } 25... Rc4 { [%clk 0:00:40] } 26. Ne2 { [%clk 0:01:00] } 26... Rxc2 { [%clk 0:00:38] } 27. Nf4 { [%clk 0:00:58] } 27... Rc1+ { [%clk 0:00:34] } 28. Kg2 { [%clk 0:00:56] } 28... Re1 { [%clk 0:00:31] } 29. h5 { [%clk 0:00:52] } 29... Re2 { [%clk 0:00:29] } 30. Ng6 { [%clk 0:00:51] } 30... c4 { [%clk 0:00:29] } 31. Re8 { [%clk 0:00:50] } 31... c3 { [%clk 0:00:28] } 32. Rh8# { 1-0 White wins by checkmate. } { [%clk 0:00:49] } 1-0
+
+
+[Event "Game study: Chapter 2"]
+[Date "2018.12.19"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "Game study"]
+[ChapterName "Chapter 2"]
+[ChapterURL "https://lichess.org/study/D2AShJLz/ar5m2Eor"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2018.12.19"]
+[UTCTime "12:18:50"]
+
+1. d4 Nf6 2. Bf4 c5 3. e3 Qb6 4. Na3 Qxb2 (4... cxd4 5. exd4 Nd5 6. Bc1 e6 7. Nc4 Qc7 8. Nf3 b6 9. c3 Ba6 10. Ncd2 Bxf1 11. Nxf1 Nc6 12. Ng3) 5. Nb5 *
+
+

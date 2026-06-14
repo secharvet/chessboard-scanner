@@ -1,0 +1,61 @@
+[Event "Rated Rapid tournament https://lichess.org/tournament/SLAnXg6R"]
+[Site "https://lichess.org/EN5PNbVH"]
+[Date "2019.02.04"]
+[Round "-"]
+[White "EricRosen"]
+[Black "bauernopfer1"]
+[Result "1-0"]
+[WhiteElo "2383"]
+[WhiteTitle "IM"]
+[BlackElo "1871"]
+[TimeControl "600+0"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "B40"]
+[Opening "Sicilian Defense: Kramnik Variation"]
+[StudyName "Weird Gambit in English"]
+[ChapterName "IM EricRosen - bauernopfer1"]
+[ChapterURL "https://lichess.org/study/JZ0nskKA/ZJsWTSIU"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 { [%clk 0:10:00] } 1... c5 { [%clk 0:10:00] } 2. Nf3 { [%clk 0:09:58] } 2... e6 { [%clk 0:09:58] } 3. c4 { [%clk 0:09:55] } 3... Nf6 { [%clk 0:09:47] } 4. e5 { [%clk 0:09:44] } 4... Ng8 { [%clk 0:09:45] } 5. Nc3 { [%clk 0:08:58] } 5... Nc6 { [%clk 0:09:17] } 6. d4 { [%clk 0:08:40] } 6... cxd4 { [%clk 0:09:08] } 7. Nxd4 { [%clk 0:08:39] } 7... Nxe5 { [%clk 0:08:55] } 8. Bf4 { [%clk 0:08:36] } 8... Ng6 { [%clk 0:08:44] } (8... f6) 9. Bg3 { [%clk 0:08:31] } 9... Be7 { [%clk 0:08:30] } 10. Ndb5 { [%clk 0:08:03] } 10... e5 { [%clk 0:07:19] } 11. Nd6+ { [%clk 0:06:20] } 11... Bxd6 { [%clk 0:07:13] } 12. Qxd6 { [%clk 0:06:20] } 12... Qe7 { [%clk 0:05:37] } 13. O-O-O { [%clk 0:05:18] } 13... Qxd6 { [%clk 0:05:23] } 14. Rxd6 { [%clk 0:05:18] } 14... a6 { [%clk 0:04:59] } 15. Nd5 { [%clk 0:05:00] } 15... Kd8 { [%clk 0:03:04] } 16. Nb6 { [%clk 0:04:10] } 16... Ra7 { [%clk 0:02:36] } 17. h4 { [%clk 0:03:32] } 17... Nf6 { [%clk 0:02:15] } 18. h5 { [%clk 0:02:34] } 18... Nf4 { [%clk 0:01:58] } 19. h6 { [%clk 0:02:21] } 19... Ne4 { [%clk 0:01:35] } 20. hxg7 { [%clk 0:01:52] } 20... Rg8 { [%clk 0:01:29] } 21. Rxh7 { [%clk 0:01:25] } 21... Kc7 { [%clk 0:00:59] } 22. Rdh6 { [%clk 0:01:06] } 22... Ng6 { [%clk 0:00:50] } 23. Nd5+ { [%clk 0:00:58] } 23... Kc6 { 1-0 Black resigns. } { [%clk 0:00:23] } 1-0
+
+
+[Event "Foxwoods Open"]
+[Site "Ledyard, CT"]
+[Date "2009.04.10"]
+[Round "5"]
+[White "Hikaru Nakamura"]
+[Black "Robert Lee Hess"]
+[Result "0-1"]
+[WhiteElo "2757"]
+[BlackElo "2545"]
+[Variant "Standard"]
+[ECO "A19"]
+[Opening "English Opening: Anglo-Indian Defense, Flohr-Mikenas-Carls Variation, Nei Gambit"]
+[StudyName "Weird Gambit in English"]
+[ChapterName "Hikaru Nakamura - Robert Lee Hess"]
+[ChapterURL "https://lichess.org/study/JZ0nskKA/rCXDK2ry"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. c4 Nf6 2. Nc3 e6 3. e4 c5 4. e5 Ng8 5. Nf3 Nc6 6. d4 cxd4 7. Nxd4 Nxe5 8. Ndb5 f6 9. Bf4 a6 10. Nd6+ Bxd6 11. Qxd6 Nf7 12. Qa3 Ne7 13. Nb5 e5 14. Bd2 d6 15. Bb4 Nf5 16. O-O-O Be6 17. Nxd6+ N7xd6 18. Bxd6 Nxd6 19. Rxd6 Qe7 20. Be2 Rc8 21. b3 Kf7 22. Kb2 Rhd8 23. Rhd1 Rxd6 24. Rxd6 Rd8 25. c5 a5 26. Bh5+ g6 27. Bf3 Qc7 28. Rxd8 Qxd8 29. Kc1 Bf5 30. b4 { [%csl Gc1] } 30... Qd4 31. bxa5 Qxf2 32. Qb3+ Kg7 33. Qxb7+ Kh6 34. Qb2 Qxc5+ 35. Kd1 e4 36. Be2 e3 37. Ke1 Qxa5+ 38. Kf1 Qc7 39. Qd4 Qc1+ 40. Qd1 Qb2 41. a4 Qb4 42. Kg1 Bd7 43. Qa1 Qf4 44. Qf1 Qxf1+ 45. Kxf1 Bxa4 46. Bd3 Bd1 47. Be2 Bc2 48. Bb5 f5 49. g3 g5 { 0-1 White resigns. } 0-1
+
+
+[Event "Weird Gambit in English: Chapter 3"]
+[Date "2019.02.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Weird Gambit in English"]
+[ChapterName "Chapter 3"]
+[ChapterURL "https://lichess.org/study/JZ0nskKA/V6WXlQhS"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.02.04"]
+[UTCTime "21:05:32"]
+
+{ Schon - Rosen 2017
+https://new.uschess.org/news/8-takeaways-living-chess-vagabond/ }
+ *
+
+

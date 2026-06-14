@@ -1,0 +1,22 @@
+[Event "Rated Blitz game"]
+[Site "https://lichess.org/B0In4pam"]
+[Date "2022.03.24"]
+[White "king04"]
+[Black "EricRosen"]
+[Result "1/2-1/2"]
+[WhiteElo "2300"]
+[BlackElo "2524"]
+[BlackTitle "IM"]
+[TimeControl "180+2"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "E05"]
+[Opening "Catalan Opening: Open Defense, Classical Line"]
+[StudyName "HAnd and brain with Josh"]
+[ChapterName "king04 (2300) - IM EricRosen (2524)"]
+[ChapterURL "https://lichess.org/study/MRdAEG5s/0yC6NdIw"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. c4 { [%clk 0:03:00] } 1... e6 { [%clk 0:03:00] } 2. g3 { [%clk 0:02:35] } 2... Nf6 { [%clk 0:02:53] } 3. Bg2 { [%clk 0:02:36] } 3... d5 { [%clk 0:02:49] } 4. d4 { [%clk 0:02:33] } 4... Be7 { [%clk 0:02:35] } 5. Nf3 { [%clk 0:02:34] } 5... O-O { [%clk 0:02:21] } 6. O-O { [%clk 0:02:26] } 6... dxc4 { [%clk 0:02:14] } 7. Ne5 { [%clk 0:02:26] } 7... Nc6 { [%clk 0:02:09] } 8. Bxc6 { [%clk 0:02:25] } 8... bxc6 { [%clk 0:02:08] } 9. Nxc6 { [%clk 0:02:27] } 9... Qe8 { [%clk 0:02:00] } 10. Nxe7+ { [%clk 0:02:28] } 10... Qxe7 { [%clk 0:01:59] } 11. Na3 { [%clk 0:02:30] } 11... Bb7 { [%clk 0:01:50] } 12. Nxc4 { [%clk 0:02:22] } 12... Nd7 { [%clk 0:01:32] } 13. b3 { [%clk 0:02:14] } 13... Rfd8 { [%clk 0:01:17] } 14. Qc2 { [%clk 0:01:57] } 14... c5 { [%clk 0:00:51] } 15. Ba3 { [%clk 0:01:51] } 15... Rac8 { [%clk 0:00:47] } 16. Rfd1 { [%clk 0:01:19] } 16... h5 { [%clk 0:00:36] } 17. e4 { [%clk 0:01:04] } 17... Ba6 { [%clk 0:00:09] } 18. Rac1 { [%clk 0:00:48] } 18... Qg5 { [%clk 0:00:09] } 19. dxc5 { [%clk 0:00:37] } 19... Nxc5 { [%clk 0:00:08] } 20. Nd6 { [%clk 0:00:38] } 20... Rxd6 { [%clk 0:00:04] } 21. Rxd6 { [%clk 0:00:40] } 21... Nxe4 { [%clk 0:00:04] } 22. Qxe4 { [%clk 0:00:27] } (22. Rd8+ Qxd8 { [%cal Gc2e4] } 23. Qxe4 Rxc1+ 24. Bxc1 Qd1+ 25. Kg2 Qxc1) 22... Rxc1+ { [%clk 0:00:05] } 23. Bxc1 { [%clk 0:00:29] } 23... Qxc1+ { [%clk 0:00:06] } 24. Kg2 { [%clk 0:00:30] } 24... Qf1+ { [%clk 0:00:05] } 25. Kf3 { [%clk 0:00:29] } 25... Qh1+ { [%clk 0:00:07] } (25... Bb7 26. Rd8# { [%csl Gh7][%cal Ge4h7] }) 26. Ke3 { [%clk 0:00:29] } 26... Qe1+ { [%clk 0:00:07] } 27. Kf3 { [%clk 0:00:26] } 27... Qh1+ { [%clk 0:00:08] } 28. Ke3 { [%clk 0:00:26] } 28... Qc1+ { [%clk 0:00:07] } 29. Kf3 { [%clk 0:00:20] } 29... Qh1+ { 1/2-1/2 The game is a draw. } { [%clk 0:00:05] } 1/2-1/2
+
+

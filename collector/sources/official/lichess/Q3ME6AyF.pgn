@@ -1,0 +1,104 @@
+[Event "Miscellaneous Lecture: Saving a Hopeless Position"]
+[Date "2025.05.13"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Miscellaneous Lecture"]
+[ChapterName "Saving a Hopeless Position"]
+[ChapterURL "https://lichess.org/study/Q3ME6AyF/oFGREKE3"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[FEN "8/p7/P1p5/2p4p/8/1K6/P1P5/5k2 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.05.13"]
+[UTCTime "11:05:32"]
+
+1. c4 h4 2. Ka4 h3 3. Ka5 h2 *
+
+
+[Event "Miscellaneous Lecture: Looks similar... Can white survive?"]
+[Date "2025.05.13"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Miscellaneous Lecture"]
+[ChapterName "Looks similar... Can white survive?"]
+[ChapterURL "https://lichess.org/study/Q3ME6AyF/R7TmYo0g"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[FEN "8/p7/P1p5/2p5/7p/1K6/P1P5/5k2 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.05.13"]
+[UTCTime "11:06:01"]
+
+ *
+
+
+[Event "Miscellaneous Lecture: White to move and draw"]
+[Date "2025.05.13"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Miscellaneous Lecture"]
+[ChapterName "White to move and draw"]
+[ChapterURL "https://lichess.org/study/Q3ME6AyF/nJ1tmStq"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[FEN "8/8/8/8/kp6/rp6/8/R3K3 w Q - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.05.13"]
+[UTCTime "11:06:38"]
+
+1. O-O-O Ra1+ 2. Kb2 Rxd1 (2... Ra3 3. Rd8 Ra2+ 4. Kb1 Rh2 { [%cal Ga8b8] } 5. Ra8+ Kb5 6. Rb8+) *
+
+
+[Event "Miscellaneous Lecture: Brooklyn Trap"]
+[Date "2025.05.13"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B02"]
+[Opening "Alekhine Defense: Brooklyn Variation"]
+[StudyName "Miscellaneous Lecture"]
+[ChapterName "Brooklyn Trap"]
+[ChapterURL "https://lichess.org/study/Q3ME6AyF/HDgII86v"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2025.05.13"]
+[UTCTime "11:04:40"]
+
+1. e4 Nf6 2. e5 Ng8 3. d4 *
+
+
+[Event "Miscellaneous Lecture: White to move"]
+[Date "2025.05.13"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Miscellaneous Lecture"]
+[ChapterName "White to move"]
+[ChapterURL "https://lichess.org/study/Q3ME6AyF/2gZT3Xp8"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[FEN "6R1/P2k4/r7/5N1P/r7/p7/7K/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.05.13"]
+[UTCTime "11:08:02"]
+
+ *
+
+
+[Event "Miscellaneous Lecture: Bonus Openings"]
+[Date "2025.05.13"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A00"]
+[Opening "Grob Opening"]
+[StudyName "Miscellaneous Lecture"]
+[ChapterName "Bonus Openings"]
+[ChapterURL "https://lichess.org/study/Q3ME6AyF/5u5jHTtG"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2025.05.13"]
+[UTCTime "12:38:23"]
+
+1. g4 (1. b3) (1. b4) (1. f4) *
+
+

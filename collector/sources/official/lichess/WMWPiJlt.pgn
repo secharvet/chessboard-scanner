@@ -1,0 +1,120 @@
+[Event "Tactics for Beginners: Position 1"]
+[Date "2020.06.29"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics for Beginners"]
+[ChapterName "Position 1"]
+[ChapterURL "https://lichess.org/study/WMWPiJlt/UzbAdgZW"]
+[Annotator "https://lichess.org/@/DevDarshanTK"]
+[FEN "8/3k4/8/5q2/8/6K1/8/5B2 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.06.29"]
+[UTCTime "14:18:43"]
+[ChapterMode "gamebook"]
+
+{ Black seems winning in this position, but unfortunately, it is White's turn to play. Find the best move for White. }
+1. Bh3 { Good job! In the next move, we can take the opponent's Queen and the game will end in a draw. } *
+
+
+[Event "Tactics for Beginners: Position 2"]
+[Date "2020.06.29"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics for Beginners"]
+[ChapterName "Position 2"]
+[ChapterURL "https://lichess.org/study/WMWPiJlt/Q2i4RIie"]
+[Annotator "https://lichess.org/@/DevDarshanTK"]
+[FEN "8/3k4/8/8/3nb3/8/3K4/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.06.29"]
+[UTCTime "15:24:05"]
+[ChapterMode "gamebook"]
+
+{ Black has a Bishop and a Knight which is sufficient to win the game, but is there a way for White to prevent Black from winning? }
+1. Ke3 { Good job! Black will lose a piece and the game will end in a draw. } *
+
+
+[Event "Tactics for Beginners: Position 3"]
+[Date "2020.06.29"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics for Beginners"]
+[ChapterName "Position 3"]
+[ChapterURL "https://lichess.org/study/WMWPiJlt/AwwY0uxY"]
+[Annotator "https://lichess.org/@/DevDarshanTK"]
+[FEN "8/3n4/2r2k2/8/3K4/8/1B6/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.06.29"]
+[UTCTime "15:33:32"]
+[ChapterMode "gamebook"]
+
+{ Black is up a Rook, yet this game can be drawn if White plays the best move. Help White draw the game. }
+1. Kd5+ { Good! The game will end in a draw. } *
+
+
+[Event "Tactics for Beginners: Position 4"]
+[Date "2020.06.29"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics for Beginners"]
+[ChapterName "Position 4"]
+[ChapterURL "https://lichess.org/study/WMWPiJlt/qqHPqCs9"]
+[Annotator "https://lichess.org/@/DevDarshanTK"]
+[FEN "8/3q4/8/8/3k4/8/8/1K2R3 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.06.29"]
+[UTCTime "15:38:06"]
+[ChapterMode "gamebook"]
+
+{ White to play and win, could you find the key tactic here? }
+1. Rd1+ { Good! Black will move, we will take his Queen, and it is an elementary mate. White will win soon. } *
+
+
+[Event "Tactics for Beginners: Position 5"]
+[Date "2020.06.29"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics for Beginners"]
+[ChapterName "Position 5"]
+[ChapterURL "https://lichess.org/study/WMWPiJlt/a8n6i982"]
+[Annotator "https://lichess.org/@/DevDarshanTK"]
+[FEN "2Q2qk1/5ppp/5r2/8/8/2R5/2B4n/1K6 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.06.29"]
+[UTCTime "16:06:38"]
+[ChapterMode "gamebook"]
+
+{ Black is 3 pawns up, but find the move which will give White a big advantage. }
+1. Bxh7+ { Bravo! We'll win the Queen of Black the next move. } *
+
+
+[Event "Tactics for Beginners: Congrats!"]
+[Date "2020.08.06"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics for Beginners"]
+[ChapterName "Congrats!"]
+[ChapterURL "https://lichess.org/study/WMWPiJlt/Oin59jQE"]
+[Annotator "https://lichess.org/@/DevDarshanTK"]
+[FEN "8/8/8/8/8/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.08.06"]
+[UTCTime "13:15:52"]
+[ChapterMode "gamebook"]
+
+{ Congratulations, you completed this lesson! }
+ *
+
+

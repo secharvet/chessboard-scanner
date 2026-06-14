@@ -1,0 +1,228 @@
+[Event "A Lazy Counter To The Grunfeld: 7.Qa4 Exchange Grunfeld Overview"]
+[Date "2022.11.09"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D85"]
+[Opening "Grünfeld Defense: Exchange Variation"]
+[StudyName "A Lazy Counter To The Grunfeld"]
+[ChapterName "7.Qa4 Exchange Grunfeld Overview"]
+[ChapterURL "https://lichess.org/study/Y9kCbSps/FHcz6o8N"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2022.11.09"]
+[UTCTime "12:37:03"]
+
+1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. cxd5 Nxd5 5. e4 Nxc3 6. bxc3 Bg7 7. Qa4+ Nd7 (7... Bd7 8. Qa3 O-O 9. Nf3 b6 (9... Bg4 10. Bg5) 10. Be2 c5 11. O-O cxd4 12. cxd4 Nc6 13. Be3) (7... c6 8. Nf3 O-O 9. Be2 c5 10. Be3 Nc6 11. O-O Bg4 12. Rad1 (12. d5)) (7... Qd7 8. Qb3 O-O 9. Nf3 c5 10. Be3 (10. d5) 10... Nc6 11. Rd1 cxd4 12. cxd4 Qd6 13. h3 (13. Be2)) (7... Nc6 8. h4 h5 9. Nf3 O-O 10. Rb1) 8. Nf3 O-O 9. Qa3 c5 (9... b6 10. h4 Bb7 11. e5 c5 12. h5) 10. h4 cxd4 11. cxd4 Nf6 (11... Nb6 12. Bg5 Re8 13. Rb1 Bg4 14. Bb5 Bd7 15. O-O) (11... h5 12. Bg5) 12. e5 Nd5 13. h5 *
+
+
+[Event "Import"]
+[Site "https://lichess.org/jGvAjItG"]
+[Date "2019.01.12"]
+[White "Shtembuliak, E."]
+[Black "Mikhalevski, V."]
+[Result "1-0"]
+[WhiteElo "2507"]
+[BlackElo "2557"]
+[TimeControl "-"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "D85"]
+[Opening "Grünfeld Defense: Exchange Variation"]
+[StudyName "A Lazy Counter To The Grunfeld"]
+[ChapterName "Shtembuliak, E. (2507) - Mikhalevski, V. (2557)"]
+[ChapterURL "https://lichess.org/study/Y9kCbSps/MNbgzIPj"]
+[Annotator "https://lichess.org/@/Craze"]
+
+1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. cxd5 Nxd5 5. e4 Nxc3 6. bxc3 Bg7 7. Qa4+ Nc6 8. Nf3 O-O 9. Ba3 Bg4 10. Be2 Qd7 11. Qc2 Na5 12. Rd1 Bxf3 13. gxf3 Qh3 14. Bxe7 Rfe8 15. Ba3 Qg2 16. Rf1 Qxh2 17. Bd3 b6 18. Ke2 c5 19. Bb5 Rec8 20. dxc5 Bf8 21. Bd7 Rc7 22. Rh1 Qe5 23. Rd5 Qf6 24. c4 Rxc5 25. Bb2 Rxc4 26. Qb1 Qe7 27. Rdh5 Qxd7 28. Rxh7 Rd4 29. Qd3 Nc6 30. Rh8+ Kg7 31. e5 Nxe5 32. Qxd4 Qb5+ 33. Kd1 Re8 34. f4 Bd6 35. Rxe8 Qxe8 36. fxe5 Bc5 37. Qh4 Qd7+ 38. Kc1 { 1-0 Black resigns. } 1-0
+
+
+[Event "Import"]
+[Site "https://lichess.org/Uu5zdPjO"]
+[Date "2021.08.08"]
+[White "Nepomniachtchi, Ian"]
+[Black "Kurnosov, Igor"]
+[Result "1-0"]
+[WhiteElo "2716"]
+[BlackElo "2663"]
+[TimeControl "-"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "D85"]
+[Opening "Grünfeld Defense: Exchange Variation"]
+[StudyName "A Lazy Counter To The Grunfeld"]
+[ChapterName "Nepomniachtchi, Ian - Kurnosov, Igor"]
+[ChapterURL "https://lichess.org/study/Y9kCbSps/EKVQvdOn"]
+[Annotator "https://lichess.org/@/Craze"]
+
+1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. cxd5 Nxd5 5. e4 Nxc3 6. bxc3 Bg7 7. Qa4+ Qd7 8. Qb3 O-O 9. Nf3 c5 10. Be3 cxd4 11. cxd4 Nc6 12. Rd1 Qd6 13. h3 Bd7 14. Bd3 Qb4+ 15. Qxb4 Nxb4 16. Bb1 Rac8 17. Kd2 f5 18. a3 Nc6 19. Ba2+ Kh8 20. d5 Ne5 21. Nxe5 Bxe5 22. f4 Bc3+ 23. Ke2 fxe4 24. Bxa7 Bb2 25. Rd2 Bg7 26. Rb1 b5 27. Be3 Rc3 28. Rb3 Ra8 29. d6 exd6 30. Rxc3 Bxc3 31. Rxd6 Be8 32. Bd5 Rb8 33. Rb6 Rxb6 34. Bxb6 Kg7 35. Ke3 Kf6 36. Bd4+ Bxd4+ 37. Kxd4 Ke7 38. Bxe4 Kd6 39. g4 Bd7 40. Bd3 h5 41. gxh5 gxh5 42. h4 Bc6 43. Bg6 Bf3 44. Be8 { 1-0 Black resigns. } 1-0
+
+
+[Event "Import"]
+[Site "https://lichess.org/Hhnt6baO"]
+[Date "2022.11.09"]
+[White "Meshkovs, Nikita"]
+[Black "Stankovic, Milo"]
+[Result "1-0"]
+[WhiteElo "2561"]
+[BlackElo "2435"]
+[TimeControl "-"]
+[Termination "Unknown"]
+[Variant "Standard"]
+[ECO "D85"]
+[Opening "Grünfeld Defense: Exchange Variation"]
+[StudyName "A Lazy Counter To The Grunfeld"]
+[ChapterName "Meshkovs, Nikita - Stankovic, Milo"]
+[ChapterURL "https://lichess.org/study/Y9kCbSps/O0CEaiCP"]
+[Annotator "https://lichess.org/@/Craze"]
+
+1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. cxd5 Nxd5 5. e4 Nxc3 6. bxc3 Bg7 7. Qa4+ c6 8. Nf3 O-O 9. Be2 c5 10. O-O Bg4 11. Be3 Nc6 12. Rfd1 Qc7 13. Rac1 Rfd8 14. h3 Bd7 15. Qa3 Na5 16. Qxc5 Qxc5 17. dxc5 Be6 18. Rxd8+ Rxd8 19. Nd2 Bxa2 20. Ra1 Be6 21. Rxa5 Bxc3 22. Nb3 Bxa5 23. Nxa5 Rd7 24. c6 bxc6 25. Nxc6 Rb7 26. Nxa7 Bd7 27. e5 Rb4 28. Bf3 Ra4 29. Nc6 Bxc6 30. Bxc6 Ra6 31. Bd7 e6 32. Bh6 Ra7 33. Bc6 Ra6 34. Be4 Ra1+ 35. Kh2 Ra5 36. f4 Ra3 37. Bf3 Ra4 38. Kg3 Ra7 39. Kg4 Rc7 40. Kg5 Ra7 41. Kf6 Rc7 42. h4 Kh8 43. f5 gxf5 44. Bf8 Kg8 45. Be7 Rc2 46. Bh5 Rxg2 47. Bxf7+ Kh8 48. Bxe6 f4 49. Kf7 h5 50. Bf6+ Kh7 51. Bg5 { 1-0 White wins. } 1-0
+
+
+[Event "Import"]
+[Site "https://lichess.org/mzQ9TSL8"]
+[Date "2020.02.09"]
+[White "Dambacher, M."]
+[Black "Van Wely, L."]
+[Result "1-0"]
+[WhiteElo "2497"]
+[BlackElo "2642"]
+[TimeControl "-"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "D85"]
+[Opening "Grünfeld Defense: Exchange Variation"]
+[StudyName "A Lazy Counter To The Grunfeld"]
+[ChapterName "Dambacher, M. (2497) - Van Wely, L. (2642)"]
+[ChapterURL "https://lichess.org/study/Y9kCbSps/UMNP0eqZ"]
+[Annotator "https://lichess.org/@/Craze"]
+
+1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. cxd5 Nxd5 5. e4 Nxc3 6. bxc3 Bg7 7. Qa4+ Bd7 8. Qa3 O-O 9. Nf3 Bg4 10. Bg5 Nc6 11. Rb1 Qd6 12. Qxd6 cxd6 13. Rxb7 Rab8 14. Rb3 h6 15. Bc1 a5 16. Kd2 a4 17. Rxb8 Rxb8 18. Bd3 Na7 19. Ba3 Rc8 20. Rb1 Rc7 21. Rb8+ Kh7 22. Rb4 Bd7 23. Ba6 f5 24. Rb7 Rxb7 25. Bxb7 Bb5 26. exf5 gxf5 27. Bd5 Bd7 28. c4 Nc6 29. Bxc6 Bxc6 30. d5 Bd7 31. Bb4 h5 32. Bc3 Bh6+ 33. Kd3 Kg6 34. Nd4 Bc1 35. Ne2 Bg5 36. Bd2 Bf6 37. Nf4+ Kg5 38. Ne6+ Kh4 39. Nf8 Be8 40. f3 Be5 41. f4 Bb2 42. Ne6 Kg4 43. Be1 h4 44. h3+ Kh5 45. Bc3 Bxc3 46. Kxc3 Kg6 47. Kb4 Kf6 48. Nd4 Bd7 49. a3 Kg6 50. c5 dxc5+ 51. Kxc5 Bc8 52. Nf3 Kh5 53. Ne5 Ba6 54. Nc6 Kg6 55. Nxe7+ Kf6 56. d6 Bf1 57. Nxf5 { 1-0 Black resigns. } 1-0
+
+
+[Event "Import"]
+[Site "https://lichess.org/i5k48LK4"]
+[Date "2018.06.26"]
+[White "Arizmendi Martinez, Julen Luis"]
+[Black "Massoni, Michael"]
+[Result "1-0"]
+[WhiteElo "2559"]
+[BlackElo "2365"]
+[TimeControl "-"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "D85"]
+[Opening "Grünfeld Defense: Exchange Variation"]
+[StudyName "A Lazy Counter To The Grunfeld"]
+[ChapterName "Arizmendi Martinez, Julen Luis (2559) - Massoni, Michael (2365)"]
+[ChapterURL "https://lichess.org/study/Y9kCbSps/j5BVtroB"]
+[Annotator "https://lichess.org/@/Craze"]
+
+1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. cxd5 Nxd5 5. e4 Nxc3 6. bxc3 Bg7 7. Qa4+ Bd7 8. Qa3 b6 9. Nf3 O-O 10. Bg5 c5 11. Rd1 Qc7 12. Be2 e6 13. O-O Re8 14. Rfe1 Qc6 15. Ne5 Qc7 16. Ng4 e5 17. Nf6+ Bxf6 18. Bxf6 exd4 19. Qc1 Qd6 20. e5 Qf8 21. cxd4 Ba4 22. Bc4 h6 23. Rd3 Nd7 24. Rg3 Kh7 25. Bxf7 Nxf6 26. Bxg6+ Kh8 27. exf6 Rxe1+ 28. Qxe1 Qxf6 29. Qd2 { 1-0 Black resigns. } 1-0
+
+
+[Event "Women's Candidates"]
+[Site "Lichess"]
+[Date "2022.11.05"]
+[Round "12"]
+[White "Lei, Tingjie"]
+[Black "Muzychuk, Anna"]
+[Result "1-0"]
+[WhiteElo "2535"]
+[WhiteTitle "GM"]
+[BlackElo "2534"]
+[BlackTitle "GM"]
+[Board "1"]
+[Variant "Standard"]
+[ECO "D85"]
+[Opening "Grünfeld Defense: Exchange Variation"]
+[StudyName "A Lazy Counter To The Grunfeld"]
+[ChapterName "Lei, Tingjie - Muzychuk, Anna"]
+[ChapterURL "https://lichess.org/study/Y9kCbSps/T7An3ZiK"]
+[Annotator "https://lichess.org/@/Craze"]
+
+1. d4 { [%clk 1:30:58] } 1... Nf6 { [%clk 1:30:54] } 2. c4 { [%clk 1:31:17] } 2... g6 { [%clk 1:31:17] } 3. Nc3 { [%clk 1:31:32] } 3... d5 { [%clk 1:31:38] } 4. cxd5 { [%clk 1:31:56] } 4... Nxd5 { [%clk 1:32:02] } 5. e4 { [%clk 1:32:15] } 5... Nxc3 { [%clk 1:32:24] } 6. bxc3 { [%clk 1:32:43] } 6... Bg7 { [%clk 1:32:46] } 7. Qa4+ { [%clk 1:33:08] } 7... Nd7 { [%clk 1:31:46] } 8. Nf3 { [%clk 1:33:33] } 8... O-O { [%clk 1:31:31] } 9. Be2 { [%clk 1:33:43] } 9... Nb6 { [%clk 1:29:41] } 10. Qb4 { [%clk 1:34:01] } 10... Qd6 { [%clk 1:25:45] } 11. O-O { [%clk 1:34:23] } 11... Bg4 { [%clk 1:13:49] } 12. Qb3 { [%clk 1:34:22] } 12... Be6 { [%clk 1:01:48] } 13. d5 { [%clk 1:23:12] } 13... Bg4 { [%clk 1:02:02] } 14. h3 { [%clk 1:13:38] } 14... Bxf3 { [%clk 1:02:15] } 15. Bxf3 { [%clk 1:14:04] } 15... c6 { [%clk 0:46:07] } 16. Ba3 { [%clk 1:07:08] } 16... Qc7 { [%clk 0:38:05] } 17. Rae1 { [%clk 0:56:41] } 17... cxd5 { [%clk 0:28:25] } 18. exd5 { [%clk 0:57:06] } 18... Bf6 { [%clk 0:28:17] } 19. Re4 { [%clk 0:54:32] } 19... Rfc8 { [%clk 0:18:08] } 20. Bg4 { [%clk 0:46:06] } 20... Rd8 { [%clk 0:18:00] } 21. c4 { [%clk 0:45:12] } 21... h5 { [%clk 0:17:28] } 22. Be2 { [%clk 0:33:49] } 22... Rac8 { [%clk 0:09:11] } 23. Re1 { [%clk 0:26:10] } 23... Rd7 { [%clk 0:08:46] } 24. g4 { [%clk 0:24:27] } 24... h4 { [%clk 0:08:50] } 25. Qe3 { [%clk 0:20:20] } 25... g5 { [%clk 0:07:42] } 26. Bd3 { [%clk 0:17:45] } 26... Na4 { [%clk 0:04:51] } 27. Bxe7 { [%clk 0:15:07] } 27... Rxe7 { [%clk 0:05:06] } 28. Rxe7 { [%clk 0:15:32] } 28... Qxe7 { [%clk 0:04:58] } 29. Qxe7 { [%clk 0:15:58] } 29... Bxe7 { [%clk 0:05:26] } 30. Rxe7 { [%clk 0:16:22] } 30... Nc5 { [%clk 0:04:19] } 31. Bf5 { [%clk 0:16:47] } 31... Kf8 { [%clk 0:02:40] } 32. Rxf7+ { [%clk 0:06:38] } 32... Kxf7 { [%clk 0:03:03] } 33. Bxc8 { [%clk 0:07:06] } 33... b6 { [%clk 0:02:17] } 34. Bf5 { [%clk 0:06:28] } 34... Kf6 { [%clk 0:01:09] } 35. d6 { [%clk 0:05:46] } 35... Nb7 { [%clk 0:01:02] } 36. d7 { [%clk 0:06:12] } 36... Ke7 { [%clk 0:01:28] } 37. f4 { [%clk 0:05:10] } 37... gxf4 { [%clk 0:01:50] } 38. Kf2 { [%clk 0:05:37] } 38... Nd6 { [%clk 0:01:56] } 39. Kf3 { [%clk 0:05:39] } 39... Nxc4 { [%clk 0:02:02] } 40. Kxf4 { [%clk 0:36:03] } 40... Nd6 { [%clk 0:31:18] } 41. g5 { [%clk 0:35:50] } 41... Nb7 { [%clk 0:25:33] } 42. Ke5 { 1-0 White wins. } { [%clk 0:34:43] } 1-0
+
+
+[Event "Import"]
+[Site "https://lichess.org/jwrO4GAd"]
+[Date "2022.11.09"]
+[White "Borges, João Luiz Montezuma"]
+[Black "Greig, Steve"]
+[Result "1-0"]
+[WhiteElo "2224"]
+[BlackElo "2210"]
+[TimeControl "-"]
+[Termination "Unknown"]
+[Variant "Standard"]
+[ECO "D85"]
+[Opening "Grünfeld Defense: Exchange Variation"]
+[StudyName "A Lazy Counter To The Grunfeld"]
+[ChapterName "Borges, João Luiz Montezuma - Greig, Steve"]
+[ChapterURL "https://lichess.org/study/Y9kCbSps/3Eka2aQf"]
+[Annotator "https://lichess.org/@/Craze"]
+
+1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. cxd5 Nxd5 5. e4 Nxc3 6. bxc3 Bg7 7. Qa4+ Nd7 8. Nf3 O-O 9. Qa3 b6 10. e5 Bb7 11. h4 h6 12. Be3 c5 13. Rd1 Qc7 14. Bd3 Rac8 15. O-O a6 16. h5 g5 17. Nh2 b5 18. Ng4 c4 19. Bb1 f5 20. exf6 Nxf6 21. Nxf6+ Rxf6 22. d5 Qd6 23. Qc1 Rd8 24. Qc2 Bxd5 25. Rd2 Kf8 26. Rfd1 e6 27. Qh7 Rf7 28. Bg6 Rfd7 29. Rf1 Bxc3 30. Qxh6+ Kg8 31. Bd4 Bxd4 32. Rxd4 Qe7 33. Rg4 Rf8 34. Rxg5 Qf6 35. Rg4 Rg7 36. Re1 c3 37. Kh2 c2 38. Re2 Bxa2 39. Rxc2 Bc4 40. Qe3 a5 41. Rc3 Be2 42. Rg3 Bc4 43. Qh6 Bd5 44. Rcd3 Qe5 45. Re3 Qd4 46. Be4 Bxe4 47. Rxg7+ Qxg7 48. Rg3 Qxg3+ 49. fxg3 { 1-0 White wins. } 1-0
+
+
+[Event "Import"]
+[Site "https://lichess.org/4KxC0gPt"]
+[Date "2022.11.09"]
+[White "Pultinevicius, Paulius"]
+[Black "Kantans, T."]
+[Result "1-0"]
+[WhiteElo "2585"]
+[BlackElo "2526"]
+[TimeControl "-"]
+[Termination "Unknown"]
+[Variant "Standard"]
+[ECO "D85"]
+[Opening "Grünfeld Defense: Exchange Variation"]
+[StudyName "A Lazy Counter To The Grunfeld"]
+[ChapterName "Pultinevicius, Paulius - Kantans, T."]
+[ChapterURL "https://lichess.org/study/Y9kCbSps/v3ER0nzR"]
+[Annotator "https://lichess.org/@/Craze"]
+
+1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. cxd5 Nxd5 5. e4 Nxc3 6. bxc3 Bg7 7. Qa4+ Nd7 8. Nf3 O-O 9. Qa3 c5 10. h4 Qc7 11. h5 Nf6 12. hxg6 hxg6 13. Rh4 Ng4 14. e5 Qc6 15. Be2 Be6 16. Kf1 f6 17. c4 g5 18. d5 Qe8 19. Rh1 Bf5 20. e6 b6 21. Bb2 Qg6 22. Kg1 Nh6 23. Nd2 g4 24. Re1 Rfd8 25. Nf1 b5 26. Ng3 bxc4 27. Bxc4 Rab8 28. Bc1 Rb4 29. Bxh6 Rxc4 30. Bxg7 Kxg7 31. Qxa7 Re8 32. d6 Qg5 33. d7 Rd8 34. Qc7 { 1-0 White wins. } 1-0
+
+
+[Event "Import"]
+[Site "https://lichess.org/aa1f6UxV"]
+[Date "2022.11.03"]
+[White "Shevchenko, Kirill"]
+[Black "Jones, G."]
+[Result "1-0"]
+[WhiteElo "2652"]
+[BlackElo "2672"]
+[TimeControl "-"]
+[Termination "Unknown"]
+[Variant "Standard"]
+[ECO "D85"]
+[Opening "Grünfeld Defense: Exchange Variation"]
+[StudyName "A Lazy Counter To The Grunfeld"]
+[ChapterName "Shevchenko, Kirill - Jones, G."]
+[ChapterURL "https://lichess.org/study/Y9kCbSps/fd76NUyZ"]
+[Annotator "https://lichess.org/@/Craze"]
+
+1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. cxd5 Nxd5 5. e4 Nxc3 6. bxc3 Bg7 7. Qa4+ Nd7 8. Nf3 O-O 9. Qa3 c5 10. h4 b5 11. Bxb5 cxd4 12. cxd4 Bb7 13. Bd3 Nf6 14. e5 Bxf3 15. exf6 Bxf6 16. gxf3 Qxd4 17. Rb1 Bxh4 18. O-O Rad8 19. Rb4 Bxf2+ 20. Rxf2 Qxd3 21. Re4 Qb5 22. Qxe7 Rfe8 23. Qg5 Qc6 24. Rxe8+ Qxe8 25. Kg2 Rd6 26. Bb2 Re6 27. Rd2 Re2+ 28. Kf1 Rxd2 29. Qxd2 h5 30. Qd4 Kf8 31. Qh8+ Ke7 32. Qe5+ Kd7 33. Qb5+ Ke7 34. Ba3+ Kd8 35. Qb8+ Kd7 36. Qxa7+ Ke6 37. Qe3+ Kd7 38. Qxe8+ Kxe8 39. Bb2 Ke7 40. Kf2 g5 41. a4 Kd6 42. Bf6 g4 43. f4 Kc5 44. Kg3 Kb4 45. Kh4 Kxa4 46. Kxh5 { 1-0 White wins. } 1-0
+
+
+[Event "Import"]
+[Site "https://lichess.org/abYcWoN4"]
+[Date "2022.11.09"]
+[White "Narayanan, SL."]
+[Black "Navara, D."]
+[Result "1-0"]
+[WhiteElo "2662"]
+[BlackElo "2682"]
+[TimeControl "-"]
+[Termination "Unknown"]
+[Variant "Standard"]
+[ECO "D85"]
+[Opening "Grünfeld Defense: Exchange Variation"]
+[StudyName "A Lazy Counter To The Grunfeld"]
+[ChapterName "Narayanan, SL. - Navara, D."]
+[ChapterURL "https://lichess.org/study/Y9kCbSps/YsaEh2GC"]
+[Annotator "https://lichess.org/@/Craze"]
+
+1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. cxd5 Nxd5 5. e4 Nxc3 6. bxc3 Bg7 7. Qa4+ Nd7 8. Nf3 c5 9. Qa3 O-O 10. h4 e5 11. Bg5 Qc7 12. d5 Nf6 13. Nd2 b6 14. Bb5 Bd7 15. Bxf6 Bxf6 16. Qa4 Bg4 17. Bc6 Rab8 18. Nc4 Be7 19. f3 Bc8 20. Rd1 Qd8 21. Qxa7 Bxh4+ 22. Kf1 Qg5 23. Kg1 b5 24. Qxb8 Bh3 25. Qxf8+ Kxf8 26. Rxh3 bxc4 27. Rxh4 Qxh4 28. d6 h5 29. d7 Qd8 30. a4 h4 31. a5 Kg7 32. a6 h3 33. g3 Qg5 34. Kh2 Qe3 35. d8=Q { 1-0 White wins. } 1-0
+
+

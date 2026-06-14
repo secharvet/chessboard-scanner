@@ -1,0 +1,16 @@
+[Event "Stafford Refutation: Chapter 1"]
+[Date "2022.03.10"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C42"]
+[Opening "Petrov's Defense: Stafford Gambit"]
+[StudyName "Stafford Refutation"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/nMyUBwM1/kDfGviuk"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[UTCDate "2022.03.10"]
+[UTCTime "11:39:42"]
+
+1. e4 e5 2. Nf3 Nf6 3. Nxe5 Nc6 4. Nxc6 dxc6 { White has 2 center pawns vs. 0. This is a big advantage. } { [%csl Gd2,Ge4,Rd7,Re7][%cal Gd2d4] } 5. d3 { Defending e4 and creating a solid pawn chain. } { [%cal Gc2e4] } 5... Bc5 6. Be2 { Defending g4 and preparing to castle. } { [%csl Rg4][%cal Ge2g4,Gf6g4] } 6... h5 { This is what they usually do. } (6... Qd4 { Threatens mate, but not a good move. We defend it by castling, which is what we wanted to do anyway, and next we'll gain a tempo chasing the queen. } 7. O-O { [%cal Gc2c3,Gd3d4] }) (6... Ng4 { Objectively probably the best move, but it leads to a depressing endgame for Black. } 7. Bxg4 Qh4 8. Qf3 { We had to defend mate of course. } { [%cal Gf3f2] } 8... Bxg4 9. Qg3 { Forcing a queen trade. } 9... Qxg3 10. hxg3 { White is up a clean pawn with an ultra-solid position in the endgame. }) 7. c3 { Our goal is to take over the center with d4. If we manage this the game will be a rout because our center pawns will drive back Black's pieces. } { [%cal Gd3d4] } 7... Ng4 { They kind of have to try this aggressive move, even though it doesn't work. Switching to normal play now would just be admitting they're down a pawn with a terrible position. } 8. d4 Bb6 { The most common move, but a very sad one. The bishop is locked out by White's central pawn chain. } (8... Qh4 9. g3 Qf6 (9... Qh3 10. Bf1 { Oh no my queen! But for real this time. } { [%csl Rh3] }) 10. Bf3 { Every move wins (check the computer lines) but I think this is the simplest. Black is setting up a kingside attack, so we don't castle on that side. } 10... Bb6 11. h3 Nh6 12. Be3 { White is up a pawn, has total control of the center, and all of Black's pieces are terrible. } { [%cal Gb1d2] }) 9. h3 { And there is nothing better than to retreat the knight. White is a pawn up with a crushing position. } *
+
+

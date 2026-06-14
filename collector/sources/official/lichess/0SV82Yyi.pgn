@@ -1,0 +1,1212 @@
+[Event "Strategy: 7th rank"]
+[Date "2024.03.19"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Strategy"]
+[ChapterName "7th rank"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/WKhdxPJY"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.03.19"]
+[UTCTime "15:36:53"]
+
+{ 黑的车b8 兵b7,白的兵b6 车c7
+1. Improved white's king
+2. fixed weakness
+3. White's pawn pushes forwards
+4. Idea, not specific moves }
+ *
+
+
+[Event "Strategy: Chapter 2"]
+[Date "2024.03.19"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 2"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/2CG3Ezew"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[FEN "4k3/p1p2r1p/1p4p1/n2p4/P2P1P1P/2PB2P1/6K1/R7 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.03.19"]
+[UTCTime "15:38:41"]
+
+{ 弃兵打开车的线路进去。
+车的位置优势允许王的位置变好。 } { [%csl Gg7][%cal Gh4h5] }
+1. h5! { [%csl Gg6] } 1... Rf6 (1... gxh5 2. Rh1 { [%csl Gh5,Gh7] }) 2. hxg6 hxg6 3. Rh1 { [%csl Gg6,Gh1] } 3... Kf8 { [%csl Gf8] } 4. Rh7 { [%cal Gh1h7] } 4... Rc6 { [%csl Ga7,Gf8,Gf5][%cal Gh7a7] } 5. g4 { [%cal Gf4f5] } 5... Nc4 6. g5! { 重要的固定弱点的模式 } { [%csl Gg6] } (6. f5 gxf5 7. gxf5 { [%csl Gf7][%cal Gf5f7] } 7... Nd6 8. f6 Nf7 { [%csl Gf6] }) 6... Ne3+ 7. Kf3 Nf5 8. Bxf5 { [%csl Gh5] } 8... gxf5 { [%cal Gf3g3,Gg3h4,Gh4h5] } 9. Kg3 (9. g6 Rxg6 10. Rxc7 Rg7) 9... Rxc3+ 10. Kh4 Rf3 11. g6 Rxf4+ 12. Kg5 { [%csl Gf6][%cal Gg5f6] } 12... Re4 13. Kf6 Kg8 14. Rg7+ Kh8 15. Rxc7 Re8 16. Kxf5 { [%csl Ga7,Gf5][%cal Gg7a7] } 16... Re4 { [%csl Ge5] } 17. Kf6! { 重要的过渡招。 } { [%csl Gd4,Gg7][%cal Ge4d4,Gg6g7] } 17... Rf4+ 18. Ke5 Rg4 19. g7+ { [%csl Gg7,Gb7][%cal Ge5d5,Gd5c6,Gc6b7] } 19... Kg8 20. Rxa7 Rg1 21. Kxd5 Rd1 { and white is much better. } *
+
+
+[Event "Strategy: Chapter 3"]
+[Date "2024.03.19"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 3"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/WpEMWIgY"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[FEN "3r2k1/p4pp1/1p2nq1p/3p4/3P3P/1P1Q1NP1/P4PK1/2R5 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.03.19"]
+[UTCTime "15:45:42"]
+
+{ 1、弃兵活跃子力的意义。
+2、不要着急,耐心地束缚对手子力
+3、通过制造王入侵的威胁搅浑对手制造弱点。
+4、我想干嘛?怎么实现?(保护什么兵,什么子在什么格子可以实现?怎么做到?(过度着等)) }
+1... Qf4 { [%csl Gf4,Gd3][%cal Ge6f4,Gf4d3] } 2. gxf4! { 弃兵但是让我们的子力明显活跃。局面型弃兵。 } 2... Nxf4+ 3. Kg3 Nxd3 4. Rc3! { 不着急。和b站那个卡尔森教练的联系起来:束缚限制对方子力。
+Golden rule is no hurry } (4. Rc7 Rd6 5. Rxa7 Rg6+ { [%csl Gg3,Gf2][%cal Gd3f2] }) 4... Nb4 5. a3 Na6 6. b4 { this is how you restrict your opponent's pieces } { [%csl Gb8,Ga6,Gf3,Gc8][%cal Ga6b8,Ga6c7,Gc1c8] } 6... Nb8 (6... Kh7 7. b5 Nb8 8. Rc7 Rd7 9. Rc8 Rb7 10. Ne5 { [%csl Gd5,Gb8,Gb7][%cal Gc8d8] }) 7. Rc7 { [%csl Gc6][%cal Gb8a6,Gb8c6] } 7... a5 { IN THIS CASE EVERY PAWN TRADE BENEFITS THE DEFENDER } 8. b5! { Very Logical DECESION } { [%csl Gc6,Ga6][%cal Gb8a6] } 8... Nd7 9. Kf4! { 就和前面说的,残局这种时候车明显好了的时候,出王。 } { [%csl Gd7,Ge5][%cal Gf3e5,Gf4d6] } 9... h5 (9... f6 10. h5 { 白格全是洞,白王e6去了,马h4-g6-e7 } { [%cal Gf3h4,Gh4g6,Gg6e7,Gf4f5,Gf5e6] }) 10. Ne5! { 为自己的王占领e5格子。 } { [%csl Gb6,Gd7,Gf7,Gd8][%cal Gd7b6,Gc7f7,Gd8d2,Gc2c7,Ga7g7] } 10... Nf8 { [%csl Ge6][%cal Gf8e6] } (10... Nxe5 11. Kxe5 { [%csl Gd6][%cal Ge5d5,Gc7c6,Gc6d6] }) 11. Rb7 { [%csl Gb6][%cal Gb7b6] } 11... f6 12. Nc6 { [%csl Gb6] } 12... Ng6+ 13. Kg3 { 虽然王撤回了,但是王入侵的威胁逼迫黑方有非常不舒服的子力配置。 } { [%csl Gd7,Gg6,Gf6,Gh5][%cal Gd7f8,Gf8g6] } 13... Rd6 14. Rxb6 Re6 15. Rb8+ Nf8 16. Ra8 Re1 17. Nd8 Kh7 18. b6 Rb1 19. b7 Nd7 20. Rxa5 *
+
+
+[Event "Strategy: Chapter 4"]
+[Date "2024.03.19"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 4"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/k7emLwJo"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[FEN "r5k1/1p3pp1/5b1p/1p1R4/4B3/4PP2/PP3P1P/6K1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.03.19"]
+[UTCTime "17:25:51"]
+
+{ It would be so good to have my xxxxxx piece on xxxxx square }
+1. Rc5! { Not allowing our opponents rook to go to a2 by protecting that. Sparing d5 sqaure for our bishop } (1. Rd7 Rxa2 2. Bd5 Rxb2 3. Rxf7) (1. a3 { [%csl Gb2][%cal Gf6b2] } 1... b4 2. axb4 Ra2 { [%csl Ga2] }) 1... Kf8 (1... Bxb2 2. Rxb5 Bf6 3. Rxb7 { a8 rook still cannot go to a2 }) 2. Bd5! { A combination of plan. } 2... b4 (2... Bxb2 { [%csl Gc7][%cal Gc5c7] } 3. Rc7 { [%cal Ga8a2,Gd5a2] }) 3. Rc7 Bxb2 4. Rxf7+ Ke8 5. Rxb7 Bc3 6. Rxg7 Bxg7 7. Bxa8 { 7th rank is worth for material investment. Also patient is important. } *
+
+
+[Event "Strategy: Chapter 5"]
+[Date "2024.03.19"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 5"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/Pbd5ynAa"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[FEN "r6k/2R3pp/8/p1pR4/2r5/P5P1/5P1P/6K1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.03.19"]
+[UTCTime "17:28:50"]
+
+{ PATIENT!!! NO NEED TO CAPTURE THE PAWN EVERY TIME.
+
+See the position deeper and properly evaluate if the position is good for you. }
+1. Rg5! { Patient costing weaknesses so that the invade along the 7th rank can be stronger. No need to take the pawn on c5 } (1. Rdxc5 { [%csl Gf2,Gg3,Gh2] } 1... Rxc5 2. Rxc5 { [%cal Gh8g8] }) 1... g6 { [%csl Gh7][%cal Gg7g6] } (1... Rg8 2. Rcxc5 Rxc5 3. Rxc5 Ra8 4. a4 { [%csl Gc7,Ga4,Ga5][%cal Gc5c7] }) 2. Re5! Rc3 3. Ree7 { [%csl Gc5] } 3... Rxa3 4. Rxh7+ Kg8 5. Rcg7+ Kf8 6. Rxg6 Re8 7. Rc6 Kg8 8. Rhc7 { [%cal Gc7c4,Gc7a7,Gc6a6] } *
+
+
+[Event "Strategy: Chapter 6"]
+[Date "2024.03.19"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 6"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/oU64xQgx"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[FEN "2r3k1/1q3p1p/pp2p1p1/8/P2P4/Q3P2P/2r2PP1/RR4K1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.03.19"]
+[UTCTime "17:35:35"]
+
+{ Capa's best piece of advice: Every move should be checked, no mater how obvious. The point is you check EVERY MOVE deep enough to make assessment on the position. }
+1. Qd6 Rxf2 2. Kxf2 Rc2+ 3. Ke1 (3. Kg3 Rxg2+ 4. Kf4 Rf2+ 5. Kg5 Qg2+ 6. Kh4 g5+ 7. Kh5 Qxh3+ 8. Kxg5 f6#) 3... Qxg2 { [%csl Gg2,Gc2,Gd6] } 4. Qd8+ (4. Qb8+ Kg7 5. Qe5+ Kf8 6. Qb8+ Ke7 { [%csl Gc7,Gb7,Gf6][%cal Gc2c7,Gg2b7,Gb8a7,Ge7f6] } 7. Qa7+ Kf6) 4... Kg7 { [%csl Gg7] } *
+
+
+[Event "Strategy: Chapter 7"]
+[Date "2024.03.19"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 7"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/uADWCjv9"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[FEN "6rr/1pqb1nkp/p1p1p1p1/2Pp1pPP/PP1P1P2/2QBPN2/5K1R/7R w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.03.19"]
+[UTCTime "17:38:32"]
+
+{ Control the seventh rank as part of a complex strategy.
+When black has no counter-play, try to play slowly. } { [%csl Gb4][%cal Gb4b5,Gh5g6] }
+1. Qa1! { [%cal Gg8f8,Ga1a3] } 1... Rb8 2. Qa3 { Important to identify that the breakthrough on Kingside does not work because there is Be8 stuff. And if the breakthrough is on kingside, white's d3 bishop cannot join the attack.
+d3 bishop is strong on a-file. } { [%csl Gg8] } 2... Rbg8? (2... Ra8 3. Kg3!? { just wait and play useful oves } 3... Rab8 4. b5 axb5 5. h6+ Kf8 6. axb5 Qd8 7. Ra1 Ke7 8. b6 Ra8 9. Qb2 Rxa1 10. Qxa1 { a-file still belongs to white. }) 3. b5 axb5 4. h6+ { [%csl Gg8] } 4... Kf8 5. axb5 { [%csl Gc6][%cal Gc6b5,Gc5c6,Ga3f8] } 5... Ke7 6. b6! { Just as the model. } { [%csl Gb7] } 6... Qb8 { [%csl Gb6,Gb7] } 7. Ra1 { [%csl Ga8][%cal Gb8a8,Ga3a7] } 7... Rc8 8. Qb4 { [%csl Gb8] } 8... Rhd8 9. Ra7 Kf8 10. Rh1 Be8 11. Rha1 Kg8 12. R1a4 Kf8 13. Qa3 { [%csl Ga8][%cal Ga3a8] } 13... Kg8 14. Kg3 Bd7 15. Kh4 Kh8 16. Qa1 Kg8 17. Kg3 Kf8 18. Kg2 Be8 { [%csl Gf3] } 19. Nd2 Bd7 20. Nb3 { [%csl Gb7] } 20... Re8 21. Na5 Nd8 22. Ba6 { [%csl Gd7] } 22... bxa6 23. Rxd7 Re7 24. Rxd8+ Rxd8 25. Nxc6 { Decide which file you are about to open by analyzing after opening the file, if our piece will be strong enough.
+Also play slow enough when your opponent does not have counter-play. } *
+
+
+[Event "Strategy: Chapter 8"]
+[Date "2024.03.19"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C09"]
+[Opening "French Defense: Tarrasch Variation, Open System, Main Line"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 8"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/Bi68BoxM"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.03.19"]
+[UTCTime "18:16:45"]
+
+{ Deep positional manoeuvres to get a rook to the seventh rank. }
+1. e4 e6 2. d4 d5 3. Nd2 c5 4. exd5 exd5 5. Ngf3 Nc6 6. Bb5 Bd6 7. dxc5 Bxc5 8. O-O Ne7 9. Nb3 Bd6 10. Bg5 O-O 11. Bh4 Bg4 12. Be2 Bh5 13. Re1 Qb6 14. Nfd4 Bg6 15. c3 Rfe8 16. Bf1 Be4 17. Bg3 Bxg3 18. hxg3 a5 19. a4 Nxd4 20. Nxd4 Nc6 21. Bb5 Red8 { Black allows an IQP for rapid development. But Anatoly Karpov manages to restrict black's piece activity. } 22. g4!! { This idea is deep:
+White is about to play Re2-Rae1 and f3 to fight along the e-file. However, black may has the idea of Bf5-e6 to block the e-file. This move stops all the chances } 22... Nxd4 (22... Rac8 23. Nf5 Bxf5 24. gxf5 { White has strong attack on the kingside based on f6 } { [%csl Gf6,Gg4][%cal Gf5f6,Gd1g4] }) 23. Qxd4 Qxd4 (23... Qd6 24. Re2 { This is how a plan is based. Try to control the e-file and play f3 only after Re2. } { [%csl Ge1,Gf3][%cal Ga1e1,Gf2f3] }) 24. cxd4 { now Bf5-e6 does not make sense } { [%csl Gf5][%cal Ge4f5,Gf5e6,Gg4f5] } 24... Rac8 { both sides seizes the open file, why is white better?
+white's attack is supported by his pawns
+b5 outpost bishop is important because black cannot play Re8 to fight against white for the opened e-file } 25. f3 Bg6 26. Re7 b6 (26... Rc2 27. Rae1 { [%csl Ge8,Gb5,Gg6][%cal Ge1e8] }) 27. Rae1! { stops Rc2 by threatening Re8 mate } 27... h6 28. Rb7 { [%csl Ge7][%cal Ge1e7] } 28... Rd6 29. Ree7 { [%csl Gg6,Gf7] } 29... h5 30. gxh5 Bxh5 31. g4! Bg6 32. f4! { The only defender of the f7 pawn is g6 bishop, which will be soon be chased away. } 32... Rc1+ 33. Kf2 Rc2+ 34. Ke3 Be4 35. Rxf7 Rg6 36. g5 Kh7 37. Rfe7 Rxb2 38. Be8 Rb3+ 39. Ke2 Rb2+ 40. Ke1 { [%csl Gd2][%cal Gb2b1,Ge1d2] } 40... Rd6 41. Rxg7+ Kh8 42. Rge7 *
+
+
+[Event "Strategy: Chapter 9"]
+[Date "2024.03.19"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "E18"]
+[Opening "Queen's Indian Defense: Classical Variation, Traditional Variation, Nimzowitsch Line"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 9"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/dgkQl5t3"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.03.19"]
+[UTCTime "20:31:57"]
+
+{ 封锁的思想。思考每一种可能性。为了目的,思考可以牺牲的,可以投资的。 }
+1. d4 Nf6 2. c4 e6 3. Nf3 b6 4. g3 Bb7 5. Bg2 Be7 6. Nc3 O-O 7. O-O d5 8. Ne5 c6 9. cxd5 cxd5 10. Bf4 a6 11. Rc1 b5 12. Qb3 (12. Nb1! Qb6) 12... Nc6 13. Nxc6 Bxc6 14. h3?? { A pawn move without clear purpose should always be criticized. } (14. a4 b4 15. Na2) 14... Qd7 15. Kh2 Nh5 16. Bd2 f5! 17. Qd1 b4 18. Nb1 Bb5 19. Rg1 Bd6 { 一步一步改善住自己的子力。 } 20. e4?? { Don't open up lines when opponent's pieces are more ready for the fight. } (20. e3) 20... fxe4! 21. Qxh5 Rxf2 22. Qg5 Raf8 { 黑的投资弃子,获得了什么?
+1、两个重要的兵(e4通路,f2白方王重要保护)
+2、攻王机会。
+3、dominance of f-file,白车不能进攻f1
+4、白方的烂子力,一个个都很消极。 } { [%cal Gf8f3] } 23. Kh1 (23. Be3 R8f5 24. Qh4 Be7 25. Qg4 Be2) 23... R8f5 24. Qe3 Bd3! { Re2的威胁来了,持续的加强。白的一个子也动不了 } 25. Rce1 h6!! { 0-1
+简单等他一步,顺便把白后的g5格子拿走了,完全动不了了
+e1车动,就有Re2抓死后
+g1车动不了
+后动不了
+马动不了
+d2象动,b1马G
+王动,R5f3抓死后
+白的没有任何一个子可以等走的。 } *
+
+
+[Event "Strategy: Summery for chapter 1"]
+[Date "2024.03.20"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Strategy"]
+[ChapterName "Summery for chapter 1"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/ZspINVGK"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.03.20"]
+[UTCTime "02:30:03"]
+
+{ 控制第七横排的意义:
+活跃自己的王;可以突进兵;固定对面第七横排的兵
+考虑对面每一种可能性。
+一定要耐心的下,不要着急。钳制对方子力。
+不贪图兵,可以引弱点,慢慢搓,稳着下。
+想想自己要干什么,目的(不让对面车进入第七横排 etc)考虑计划,考虑投资子力的可能性。 }
+ *
+
+
+[Event "Strategy: Outpost and the open file"]
+[Date "2024.03.20"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Strategy"]
+[ChapterName "Outpost and the open file"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/Ak1VJmay"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[FEN "3k2rr/ppp5/3b1p1p/4pP1P/3pP2N/3P3P/PPP5/2KR2R1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.03.20"]
+[UTCTime "17:30:38"]
+
+{ An outpost is a square of strategic importance, usually located on an open or semi-open file. This square hosts a piece which is supported by a pawn and connot be dislodged by an enemy pawn. } { [%csl Gg6][%cal Gh4g6] }
+1. Rg6! { Convert the outpost advantage to the active rook advantage. } (1. Ng6? Rh7 { [%csl Gg7][%cal Gh7g7] }) 1... Rxg6 (1... a5 2. Rdg1 Rf8) (1... Be7 2. Rdg1 { [%csl Gg6] } 2... Rf8 { [%csl Gg7][%cal Gg6g7] } 3. Rg7 { [%csl Gh7,Gg6][%cal Gg7b7,Gh4g6] }) 2. fxg6! { Convert to an pass pawn advantage. } 2... Rg8 3. Nf5 { [%csl Gf5] } 3... Bf8 4. Rf1 *
+
+
+[Event "Strategy: Chapter 12"]
+[Date "2024.03.20"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 12"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/ngiPi4EC"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[FEN "r2rq1k1/pp3ppp/1np1n3/4P3/5P2/1N4P1/PP4BP/2QRR1K1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.03.20"]
+[UTCTime "17:35:27"]
+
+1. Rd6! Nc8 (1... Rxd6 2. exd6 { Passed pawn and pen file for another rook } { [%csl Gd6,Gd7][%cal Ge8d7,Gd6d7] } 2... Qd7 3. f5 Nf8 4. Qc5 Rd8 5. Re7 { [%csl Gf7,Gf6][%cal Gd6d7,Gf5f6] }) 2. Rxc6 *
+
+
+[Event "Strategy: Chapter 13"]
+[Date "2024.03.20"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D85"]
+[Opening "Grünfeld Defense: Exchange Variation"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 13"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/WaD1BvrM"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.03.20"]
+[UTCTime "17:37:04"]
+
+{ Central advantage: pawn on d5 and e4, training everything except the dark square bishop. Step-by-step achieving the position that we like. Consolidating move is important but play it only when our opponent has no counterplay.
+
+This is how you force our opponent to play in a bad position. }
+1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. cxd5 Nxd5 5. e4 Nxc3 6. bxc3 Bg7 7. Be3 c5 8. Qd2 O-O 9. Nf3 Bg4 10. Ng5 cxd4 11. cxd4 Nc6 12. h3 Bd7 13. Rb1 Rc8 14. Nf3 Na5 15. Bd3 Be6 16. O-O Bc4 17. Rfd1 b5 18. Bg5 a6 19. Rbc1 Bxd3 20. Rxc8 Qxc8 21. Qxd3 Re8 { Exploit the advantage of the c-file with 13 steps. Karpov shows his technique
+step 1: put the rook on the opened c-file } { [%csl Gc6][%cal Gc1c6] } 22. Rc1 Qb7 { Step 2: Create and outpost square on c6 by advancing the d-pawn } 23. d5 Nc4 { Step 3: Remove the obstruction on the c-file } (23... Rc8 24. Rxc8+ Qxc8 25. Bxe7) 24. Nd2 { [%cal Ge8c8,Gb5c4] } 24... Nxd2 { Step 4: Prevent black from creating his out post on the c-file } 25. Bxd2! (25. Qxd2?! b4! { Black blocks the c-file by creating an outpost } { [%csl Gc3][%cal Gg7c3] }) 25... Rc8 { Step 5: Seize control of the outpost square } 26. Rc6 Be5 { Now Rxc6 is a threat and white's rook can no longer invade through the 7th rank.
+Step 6: Force the bishop to leave the perfect e5 square } { [%csl Gd2] } 27. Bc3! Bb8 { Step 7: Better the queen and put it on d4 in order to force black weakens its kingside and get closer to the battel field on queenside. } { [%csl Gc8][%cal Gd8d5,Gd5c5,Gc5c8] } (27... Bxc3 28. Qxc3 { [%csl Gc7][%cal Gc3c7] } 28... Re8 29. Qc5) 28. Qd4! { mult-purpose move. Stops b5-b4, ready to go to c5, force to weaken black's kingside. } 28... f6 { Step 8 : Continually fight for c7 using the bishop. } { [%csl Gf6][%cal Gf7f6] } 29. Ba5 Bd6 { Step 9: Support the rook and strengthen the control along the c-file } 30. Qc3 Re8 { Step 10: Be patient. Black has no counter-play so just play some consolidating moves. This step is really important. } 31. a3! { Can't allow b5-b4 } 31... Kg7 32. g3 Be5 33. Qc5 h5 { Step 11: Trying to invade on c7 by trading the dark-square bishop. } 34. Bc7! { Play this move only when all our pieces are at best condition. } 34... Ba1 { Step 12: Spare the c7 square four the rook. } 35. Bf4! Qd7 { Step 13: Seize the 7th rank (And win the game) } 36. Rc7 Qd8 37. d6 g5 38. d7 Rf8 39. Bd2! { Heading for a5 } { [%csl Ga5][%cal Gd2a5] } 39... Be5 40. Rb7 { White can win easily with Qa7, Qxa6 and Ba5. } { [%csl Ga5,Gd8,Ge7,Ga6][%cal Gc5a7,Ga7a6,Gd2a5] } *
+
+
+[Event "Strategy: Chapter 14"]
+[Date "2024.03.20"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A15"]
+[Opening "English Opening: Anglo-Indian Defense, Queen's Indian Formation"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 14"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/4J69IwrQ"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.03.20"]
+[UTCTime "17:53:21"]
+
+{ Pawn on d5 and rook on c6 theme. Force opponent's pieces to go to inactive squares. Transfer out attention. }
+1. Nf3 Nf6 2. c4 b6 3. g3 c5 4. Bg2 Bb7 5. O-O g6 6. d4 cxd4 7. Qxd4 Bg7 8. Nc3 d6 9. Rd1 Nbd7 10. Be3 Rc8 11. Rac1 a6 12. b3 O-O 13. Qh4 Rc7 14. Bh3 Qb8 15. Bg5 Bxf3?! (15... Re8) 16. exf3 b5 { It seems good for black but Kramnik is able to establish the similar theme we have seen with a pawn on d5 and rook on c6 } 17. Bxd7! Rxd7 18. Nd5 Nxd5 19. cxd5 { Similar position with rook on c6 and pawn on d5/ } 19... Rc7!? { Aronian offers a pawn sacrifice, which should not be taken because black just gains too much from it. } 20. Rc6! { 1 } 20... Rxc6 { Almost forced. Black cannot leave the e7 pawn hanging forever and f7-f6 is impossible at least now. a6 pawn is also hanging. } 21. dxc6 { [%csl Ga5][%cal Gg5d2,Gd2a5] } 21... Rc8 22. Rc1! { Keeping the c6 passed pawn is important. } 22... e6 23. Bd2!! { Both Ba5 and Qe7 is ready so that the pawn reaches c7. } { [%csl Ga5,Gc7][%cal Gd2a5,Gc6c7,Gh4e7] } 23... Qc7 { [%csl Ga5,Ge7] } 24. a4! { Every plan require some point or other. } { [%csl Ga4][%cal Ga2a4] } 24... d5 (24... bxa4 25. Qxa4 { [%csl Ga5][%cal Gd2a5] }) 25. axb5 { [%csl Gc7] } 25... axb5 26. Qb4 { [%csl Gb5] } 26... Rb8 { [%csl Ga6,Gb4][%cal Gb4a3,Ga3a6,Gd2a5] } 27. Qa3 Bd4 28. Qa6 Be5 (28... h5 { [%cal Gd2a5,Gd4b6] } 29. Ba5 Bb6 30. Bxb6 Rxb6 31. Qxb6 Qxb6 32. c7) 29. f4! { Black's bishop is forced to retreat to d6 } { [%csl Gd4][%cal Ge5d4] } 29... Bd6 30. Ba5 Qc8 31. Qa7! Ra8 32. Qb6 Rb8 33. Qd4! { Switches the attention from one point to another. Now from pushing our c-pawn to gaining the b5 pawn. } 33... b4 34. c7 Ra8 35. Qb6! Bf8 36. Bxb4 Bxb4 37. Qxb4 Qe8 { 1-0 } *
+
+
+[Event "Strategy: Chapter 15"]
+[Date "2024.03.20"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B22"]
+[Opening "Sicilian Defense: Alapin Variation, Barmen Defense"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 15"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/CPKLPZDi"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.03.20"]
+[UTCTime "18:22:09"]
+
+{ Brief discussion of Over-protection.
+centralization. }
+1. e4 { Over-protection should only be part of the logical plan, not for the sake of it. } 1... c5 2. c3 d5 3. exd5 Qxd5 4. d4 Nf6 5. Nf3 Nc6 6. Be2 cxd4 7. cxd4 e6 8. O-O Be7 9. Nc3 Qd6 10. Be3 { Over-protecting the pawn on d4. However, over-protection can never be used a s a substitute for a well thought out plan. For example, if white wants to over-protect here, he can play Qd2 and Rd1, but the rook is better on c1.
+Also, instead of Be3, a better choice is to activate our bishop with } (10. Nb5! { The pieces are more logically developed in this way. } 10... Qd8 11. Bf4 Nd5 12. Bg3 a6 13. Nc3 O-O 14. Rc1 Nf6 15. h3 b6 16. a3 Bb7 17. Bd3 Rc8 18. Bb1 b5 19. Qd3 { Rook on c1, queen on d3, bishop on g3 is much better than d1, d2 and e3 repectively. }) *
+
+
+[Event "Strategy: Chapter 16"]
+[Date "2024.03.20"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C15"]
+[Opening "French Defense: Winawer Variation, Delayed Exchange Variation"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 16"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/KKUxfRRb"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.03.20"]
+[UTCTime "18:31:25"]
+
+1. e4 e6 2. d4 d5 3. Nc3 Bb4 4. exd5 exd5 5. Bd3 Ne7 6. Ne2 O-O 7. O-O Bg4 8. f3 Bh5 9. Nf4 Bg6 10. Nce2 Bd6 11. Qe1 c5! 12. dxc5 Bxc5+ 13. Kh1 Nbc6 14. Bd2 Re8 15. Nxg6 hxg6 16. f4 Nf5 17. c3 d4! { [%csl Ge3][%cal Gf5e3] } 18. c4 { Obviusly black cannot take on d4, but this means for black a pass on on d3 and an outpost on e3. } 18... Qb6 { A mighty over-protection, but the queen on b6 is not only defending the pawn on 4, but having a clear strategic idea in mind. } 19. Rf3 Bb4! { By getting rid of the dark-square bishop, black's f5 knight can land on the e3 outpost } 20. a3 Bxd2 21. Qxd2 a5! { Restraint: everything after b2-b4 and c5 is prevented after this move. } (21... Ne3 { [%csl Gc5][%cal Gb2b4,Gc4c5,Gd4c5] }) 22. Ng1 Re3! { As we discussed at the beginning of the chapter.
+Now black tries to over-protect e3 } 23. Qf2 Rae8 { [%csl Ge3] } 24. Rd1 { [%csl Gb3,Gb4][%cal Gb6b3,Gb2b4,Gb3f3,Gb3c2,Gb3a2] } 24... Qb3! 25. Rd2 Nd6 26. c5 Nc4 { Try to force the trade of white's active light-square bishop. The other knight on c6 can go to f5 anyway. } 27. Bxc4 Qxc4 { [%csl Gc6,Gg1] } 28. Rc2 Qd5 29. Rc1 Qe4 { The pressure on the e-file even increases more. The d-pawn can be pushed forward. } { [%csl Ge1][%cal Ge8e1] } 30. f5 Rxf3 31. Nxf3 Qxf5 { [%csl Gd3][%cal Gd4d3] } 32. b4 axb4 33. axb4 Nxb4 34. Qxd4 { [%csl Gd3] } 34... Nd3 35. Rc2 Rc8 36. Rc3 Nxc5 37. h4 b6 38. Ng5 Rf8 39. Rf3 Qd7 40. Qc4 Ne6 41. Rd3 Qc8 42. Qb5 Qc1+ 43. Kh2 Qf4+ 44. g3 Qf2+ 45. Kh1 Qf1+ 46. Kh2 Nc5 { 0-1 } *
+
+
+[Event "Strategy: Chapter 17"]
+[Date "2024.03.21"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "E12"]
+[Opening "Queen's Indian Defense: Kasparov-Petrosian Variation, Main Line"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 17"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/fm8DwCS3"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.03.21"]
+[UTCTime "01:10:27"]
+
+1. d4 Nf6 2. c4 e6 3. Nf3 b6 4. a3 { [%csl Ga3] } 4... Bb7 5. Nc3 d5 6. e3 (6. cxd5) 6... Nbd7 7. cxd5 exd5 8. Be2 Bd6 9. b4 O-O 10. O-O a6 { 为了Qe7 } 11. Qb3 Qe7 12. Rb1 Ne4 13. a4 Ndf6 14. b5 Nxc3 15. Qxc3 Ne4 { e4马能干什么? } 16. Qc2 Rfc8 17. Bb2 c6 18. bxc6 Bxc6 19. Qb3 Qd7 20. Ra1 b5 21. a5?! { 我感觉这个是问题所在,这样b5兵没有压力了。全部封闭住黑的略好 } 21... Bb7 22. Ne5 Qd8 23. Rfd1 Qh4 24. g3 Qe7 25. f3 Ng5 26. h4 Ne6 27. f4 { outpost square of c4 and e4 } 27... f6! 28. Nf3 Nd8 { [%csl Gd5,Ge4,Gc4][%cal Gd8f7,Gf7d6,Gd6e4] } 29. Kf2 Nf7 30. Nd2 Rc4! { Seizes both c4 and e4 } 31. Qd3 (31. Nxc4 dxc4! { [%cal Gb7g2] } 32. Qc2 Re8 { Two plans for black:
+Building up by Re8, Bb4, Nd6 and e4
+Rc8 and support the queenside poawns } { [%csl Ge4,Gf7][%cal Gd6b4,Gf7d6,Gd6e4] }) 31... Re8 32. Bf3 Bb4 { 马去e4 } 33. Ba3 Bxa3 34. Rxa3 Nd6 { 黑的孤兵给予黑的e-和c-两条半开放线,而且因为c4车白的无法直接进攻d5. 所以白的f3象不是好象。白兵在a5,所以b5也不是弱点。 } 35. Re1 f5 { [%csl Ge4,Gd2] } 36. Raa1 Ne4+?! { 我不是很喜欢这步棋,太急了 } (36... Rec8 { 正常下,不改变局面性质。正常等住控制住 }) 37. Bxe4 fxe4 38. Qb1 Qd7 39. Ra2 Rec8 40. Nxc4 (40. Nb3 Qh3 41. Rh1 Rc2+! 42. Rxc2 Rxc2+ 43. Qxc2 Qxh1 44. Qc7 Qf3+ 45. Kg1 Qxg3+ 46. Kh1 Qh3+ 47. Kg1 Qxe3+ 48. Kf1 Qf3+ 49. Ke1 Qe3+ 50. Kf1 Qh3+ 51. Kg1 Qc8) 40... dxc4 { [%csl Gf3][%cal Gd7g4,Gg4f3] } 41. d5 Bxd5 42. Rd1 c3 43. Rc2 Qh3 44. Rg1 Qg4 45. Kg2 Qf3+ 46. Kh2 Qxe3 47. f5 Qc5 48. Rf1 b4 49. f6 b3 50. Rcf2 c2 51. Qc1 e3 52. f7+ Kf8 53. Rf5 b2 54. Qxb2 c1=Q 55. Qxg7+ Kxg7 56. Rg5+ { 0-1
+不停的制造计划创造入侵格子。 } 56... Kf8 57. Rg8+ Ke7 58. f8=Q+ Rxf8 59. Rfxf8 { [%csl Gc5,Gf8,Gg8] } 59... Bxg8 60. Rxg8 e2 *
+
+
+[Event "Strategy: Summery for chapter 2"]
+[Date "2024.03.21"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Strategy"]
+[ChapterName "Summery for chapter 2"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/fC0YXmBL"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[FEN "1br3k1/1q2p2p/p1R2pp1/Bp1P4/3QP3/7P/P4PP1/6K1 b - - 1 29"]
+[SetUp "1"]
+[UTCDate "2024.03.21"]
+[UTCTime "01:24:42"]
+
+{ 1. 好格子车占据可能更合理。有时候可以转换回到chapter 1.
+2. d5 Rc6 theme
+3. 不断piece manuover 为了中心格子的占据。
+4. 兑换可以控制outpost的象
+5. 兵的处理制造outpost }
+ *
+
+
+[Event "Strategy: Plannning on Grand Scale"]
+[Date "2024.03.21"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Strategy"]
+[ChapterName "Plannning on Grand Scale"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/y25QG8ki"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.03.21"]
+[UTCTime "14:51:45"]
+
+{ Combine more positional feature and deliver a plan. }
+ *
+
+
+[Event "Strategy: Chapter 20"]
+[Date "2024.03.21"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A34"]
+[Opening "English Opening: Symmetrical Variation, Three Knights Variation"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 20"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/2zb1CYg6"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.03.21"]
+[UTCTime "14:52:20"]
+
+{ 通过来回拉扯、进攻对面弱点、在对面数个弱点上反复揉捏,达到让对方子力处于消极未知的作用。
+分析局面的时候,明确自己的优势有哪些。并且试着(通过改善子力位置)把他们合并起来。
+分析:如果我要实行计划,我的每个子的best position在哪里? }
+1. c4 c5 2. Nf3 Nf6 3. Nc3 d5 4. cxd5 Nxd5 5. e4 (5. e3) 5... Nb4 6. Bc4 e6 7. O-O N8c6 8. d3 Nd4 (8... Be7 9. a3) 9. Nxd4 cxd4 10. Ne2 a6 11. Ng3 Bd6 12. f4 O-O 13. Qf3 Kh8 14. Bd2 f5 15. Rae1 Nc6 16. Re2 Qc7 17. exf5 exf5 { 1. strong c4 bishop, whit can thus try to form a kingside attack.
+2. black's bad d4 pawn
+3. e2 rook contras the open file.
+Yet how can white combine those advantage all? Bd7 and Rae8 for black is coming. } { [%csl Gg8,Gh8,Gd4][%cal Gc4g8,Ge2e8] } 18. Nh1!! { knight goes to g5, suddenly white's kingside is in trouble when the knight comes to g5 } { [%cal Gf3h5] } (18. Qd5 { [%csl Gg8] } 18... Ne7 19. Qf3 Bd7 { [%csl Gc6][%cal Gd7c6] }) 18... Bd7 (18... Na5 { [%csl Gd5][%cal Gc4d5] } 19. Bd5 (19. Bxa5 Qxa5 20. Nf2 { [%csl Gd2,Gf4] }) 19... Rb8 (19... Qc5 20. b4) 20. b4 Nc6 21. a3) 19. Nf2 Rae8 20. Rfe1 Rxe2 21. Rxe2 { [%csl Gc6,Gd4,Ge7][%cal Gc6d4] } 21... Nd8 (21... Re8 22. Rxe8+ Bxe8 23. Qd5! Ne7 24. Qxd4 { This shows how Nimzowitch is combining all those factors together. }) (21... Bb4! { [%csl Gd4] }) (21... Na5 { [%csl Gb7] }) 22. Nh3 { [%csl Gh5][%cal Gh3g5,Gf3h5] } 22... Bc6 23. Qh5 { Combing kingside attack and controlling the e-file } { [%csl Ge6,Ge4,Ge3] } (23. Qf2 { [%csl Gd4] }) 23... g6 24. Qh4 Kg7 { [%csl Ge7][%cal Ge2e7] } 25. Qf2! { How the queen manueovers to a square that attacks the d4 pawn by attacking kingside. } { [%csl Gg6,Ge8,Ge7,Gd3,Gd4][%cal Gg7g6,Ge1e8,Ge2e7] } 25... Bc5 { [%csl Ge7,Gc5][%cal Ge2e7] } 26. b4! { [%csl Gd4,Gc5,Ge7][%cal Gc5d6] } 26... Bb6 { Restrict black's pieces. The bishop is forced to a bad diagonal. } { [%csl Gc5,Gd6,Ge7] } 27. Qh4! { 反复横跳把黑象引走之后,再用住黑方局面的问题。 } { [%csl Ge7][%cal Ge2e7] } 27... Re8 28. Re5! { 上一个张洁的outpost就这么体现出来了。黑的黑格象不再a3-f8斜线了。 } { [%cal Gh4h6] } 28... Nf7 (28... Rxe5 29. fxe5 { [%csl Gh6][%cal Gh4h6] }) 29. Bxf7 Qxf7 30. Ng5 Qg8 31. Rxe8 Bxe8 { 虽然车1欢乐,但四黑方的子力都非常烂,这些洞随时用上。
+One advantage flows into another } 32. Qe1! { [%csl Ge7,Ge5][%cal Gh4e1,Ge1e7] } 32... Bc6 33. Qe7+ Kh8 34. b5 (34. Nf7+ Kg7 35. Ne5+ Kh8 36. Nxc6 bxc6 37. Qe5+ Qg7 38. Qb8+ Qg8 39. Qxb6) 34... Qg7 35. Qxg7+ Kxg7 36. bxc6 { And finally 1-0 on move 46 } *
+
+
+[Event "Strategy: Chapter 21"]
+[Date "2024.03.22"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D30"]
+[Opening "Queen's Gambit Declined: Traditional Variation"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 21"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/WGzmlOYK"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.03.22"]
+[UTCTime "16:41:01"]
+
+{ Playing "Cat and Mouse" When our opponent do not have any chances, play slowly to push forward and give our opponent chances to make mistakes.
+Convertation of advantage. The domination of open-file on the queenside can lead to the kingside attack because of our opponent's restricted pieces is just hard to defend the king. }
+1. d4 Nf6 2. Nf3 e6 3. Bg5 d5 4. c4 c6 5. Qc2 Be7 6. e3 O-O 7. Nc3 h6 8. Bf4 Nbd7 9. cxd5 cxd5?! 10. Bd3 a6 11. O-O b5?! 12. a4 b4 13. Na2 { [%cal Ga2c1,Gc1b3,Gb3c5] } 13... Ne8 14. Nc1 { [%csl Ga5][%cal Ga4a5] } 14... a5 15. Nb3 Ba6 16. Bxa6 Rxa6 17. Qd3 { clear approach to put the rook on the file instead of the queen } 17... Ra7 18. Rfc1 Nd6 { [%csl Gd6,Gf4] } 19. Bxd6!! Bxd6 20. Rc6 (20. Rc2) 20... Nb8 21. Rc2 Nd7 22. Rac1 Nb6 { [%csl Ga5,Gb3] } 23. Qb5 { [%csl Ga7] } 23... Nc4 24. Nfd2 Nxd2 25. Rxd2 Qa8 26. Rdc2 Rd8 27. Rc6 g6 { Now we have maximized our control along the c-file. Thus we switch our attention to the kingside. Since black has no counter-play, it is okay to play slowly } 28. g3 Kg7 29. Kf1 Kg8 30. h4 h5 31. R1c2! { [%csl Gc1] } 31... Kh7 (31... f5 { [%csl Ge6,Gg6] } 32. Nc5 { [%csl Ge5][%cal Gc5d3,Gd3e5] } (32. Qb6)) 32. Ke1 Kg8 33. Kd1 Kh7 { [%csl Gb8,Gc6] } 34. Kc1 Kg8 35. Kb1 Kh7 36. Qe2 { play slowly without any risk, wait till my opponent make mistake like playing f7-f5, so that it makes our lives easier } 36... Qb7 { [%csl Gg4][%cal Gg3g4] } 37. Rc1! { 之前一直忽略的棋!预防白的后到g4之后黑的强行Ra6换车 } { [%csl Ga6,Gc2,Gg4,Gc6][%cal Ga7a6,Gc6c2,Ge2g4,Gc1h1] } (37. g4 hxg4 38. Qxg4 Ra6 { [%csl Gc6] } 39. Rxa6 Qxa6 { [%csl Gf1,Gd3][%cal Ga6f1] }) 37... Kg7 38. Qb5! { Give chances for black to make mistakes. } 38... Qa8 (38... Qxb5 39. axb5 { white can win seasier } { [%cal Gb5b7] }) 39. f4! { Finally slowly start our attack } 39... Kh7 (39... f5 40. Nc5) 40. Qe2 Qb7 41. g4! hxg4 42. Qxg4 Qe7 (42... Ra6 43. R6c2) 43. h5 Qf6 44. Ka2 { [%csl Ga2,Gb3] } (44. Rh1 Qf5+) 44... Kg7 45. hxg6 Qxg6 46. Qh4 Be7 47. Qf2! Kf8 48. Nd2 Rb7 49. Nb3 { Cat and mouse. If Nf3 then b4-b3 } (49. Nf3 b3+) 49... Ra7 50. Qh2 Bf6 51. Rc8 Rd7 52. Nc5! b3+ 53. Kxb3 Rd6 54. f5 Rb6+ 55. Ka2 { 1-0 } { [%csl Gd7][%cal Gg6f5,Gc5d7] } *
+
+
+[Event "李铨昊乙个: 潘涛-李铨昊"]
+[Site "https://lichess.org/study/2gTlyhZK/tSzXwFoF"]
+[Date "2024.03.22"]
+[Result "*"]
+[Annotator "https://lichess.org/@/AlexLQH"]
+[Variant "Standard"]
+[ECO "A46"]
+[Opening "Torre Attack: Classical Defense, Nimzowitsch Variation"]
+[StudyName "Strategy"]
+[ChapterName "李铨昊乙个: 潘涛-李铨昊"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/l8ZEqNzy"]
+[UTCDate "2024.03.22"]
+[UTCTime "17:18:49"]
+
+{ The previous chapter reminds me of one of my games last year and I want to study if that position I can survive. }
+1. d4 { [%eval 0.0] } 1... Nf6 { [%eval 0.28] } 2. Nf3 { [%eval 0.12] } 2... e6 { [%eval 0.38] } 3. Bg5 { [%eval 0.0] } 3... h6 { [%eval -0.01] } 4. Bf4 { [%eval -0.08] } 4... Nh5 { [%eval 0.16] } 5. e3 { [%eval -0.19] } 5... Nxf4 { [%eval -0.24] } 6. exf4 { [%eval -0.25] } 6... c5?! { Inaccuracy. d5 was best. } { [%eval 0.41] } { I did not see d5 } (6... d5 7. c4 Bb4+ 8. Nc3 O-O 9. Rc1 c5 10. dxc5 Nc6 11. a3) 7. d5 { [%eval 0.49] } 7... exd5 { [%eval 0.54] } 8. Qxd5 { [%eval 0.54] } 8... Nc6 { [%eval 0.83] } 9. Nc3 { [%eval 0.88] } 9... Qe7+ { [%eval 0.85] } 10. Kd2 { [%eval 0.59] } 10... Qd6 { [%eval 0.63] } 11. Re1+ { [%eval 0.53] } 11... Kd8 { [%eval 0.63] } 12. Ne5 { [%eval 0.22] } 12... Qxd5+ { [%eval 0.34] } 13. Nxd5 { [%eval 0.36] } 13... Nxe5 { [%eval 0.46] } 14. fxe5 { [%eval 0.23] } 14... b6?! { Inaccuracy. d6 was best. } { [%eval 0.96] } (14... d6 15. Bc4) 15. Bd3?! { Inaccuracy. Kc1 was best. } { [%eval 0.38] } (15. Kc1) 15... Bb7 { [%eval 0.73] } 16. c4?! { Inaccuracy. Be4 was best. } { [%eval 0.0] } (16. Be4 Rb8) 16... d6? { Mistake. Bxd5 was best. } { [%eval 1.28] } (16... Bxd5 17. cxd5 c4 18. Bxc4 Bb4+ 19. Kd3 Bxe1 20. Rxe1 f6 21. f4 Rc8 22. b4 fxe5 23. fxe5) 17. e6 { [%eval 1.13] } 17... Bxd5 { [%eval 1.19] } 18. cxd5 { [%eval 1.12] } 18... f6?! { Inaccuracy. fxe6 was best. } { [%eval 1.89] } (18... fxe6 19. Rxe6) 19. e7+?! { Inaccuracy. Re3 was best. } { [%eval 0.78] } (19. Re3 Be7 20. Rg3 g5 21. Rf3 Kc7 22. b3 a6 23. a4 b5 24. axb5 axb5 25. Bxb5 Rhf8) 19... Bxe7 { [%eval 0.68] } 20. Bg6?! { Inaccuracy. Re6 was best. } { [%eval -0.19] } (20. Re6 f5 21. Kc2 Bf6 22. Rxd6+ Kc7 23. Rc6+ Kb7 24. Bxf5 Rhe8 25. Be6 Re7 26. Re1 Rd8) 20... f5 { [%eval 0.0] } 21. Re6 { [%eval -0.08] } 21... Bg5+ { [%eval -0.16] } 22. Kc2 { [%eval -0.24] } 22... Kc7 { [%eval -0.25] } 23. Rhe1 { [%eval -0.41] } 23... Rhf8 { [%eval 0.09] } 24. f4 { [%eval 0.08] } 24... Bf6 { [%eval 0.26] } { Is this position winning for white? } 25. R1e2?! { Inaccuracy. a4 was best. } { [%eval -0.52] } (25. a4) 25... Rad8 { [%eval -0.18] } 26. b3 { [%eval -0.2] } 26... Bd4 { [%eval 0.23] } 27. Be8 { [%eval 0.15] } 27... Bf6 { [%eval 0.23] } 28. g3 { [%eval 0.2] } (28. Bc6 Kc8 { [%cal Gc7c8] } 29. Kd3 Kc7 30. Kc4 a6 31. b4 b5+ { [%csl Gc4][%cal Gc5c4] } 32. Kb3 c4+ 33. Ka3 Kc8 { [%csl Gb3,Gb2][%cal Ga3b3,Ga3b4,Ga3a4,Ga3b2] }) 28... a6? { [%eval 0.14] } 29. a4 { [%eval 0.01] } 29... Kc8 { [%eval 0.43] } 30. Bg6 { [%eval 0.43] } 30... Bd4 { [%eval 0.39] } 31. h4 { [%eval 0.5] } 31... Kc7 { [%eval 0.46] } 32. Be8 { [%eval 0.54] } 32... Bf6 { [%eval 0.47] } 33. h5 { [%eval 0.39] } 33... Kc8 { [%eval 0.48] } 34. Kd3 { [%eval 0.32] } 34... Kc7 { [%eval 0.34] } 35. Bg6 { [%eval 0.56] } 35... Bd4 { [%eval 0.34] } 36. Be8 { [%eval 0.32] } 36... Bf6 { [%eval 0.41] } 37. R2e3 { [%eval 0.46] } 37... Kc8 { [%eval 0.4] } 38. Kd2 { [%eval 0.0] } 38... Bd4 { [%eval 0.0] } 39. Re2 { [%eval 0.0] } 39... Bf6 { [%eval 0.45] } 40. Ke1 { [%eval 0.53] } 40... Bc3+ { [%eval 0.33] } 41. Kf2 { [%eval 0.48] } 41... Bd4+ { [%eval 0.46] } 42. Kf3 { [%eval 0.24] } 42... Bf6 { [%eval 0.36] } 43. Bg6 { [%eval 0.4] } 43... Bd4?? { [%eval 0.34] } (43... Kc7) 44. Re7 { [%eval 0.27] } 44... Rd7?? { [%eval 0.36] } 45. Re8+ { [%eval 0.35] } 45... Rd8 { [%eval 0.37] } 46. R8e7 { [%eval 0.31] } 46... Rd7 { [%eval 0.31] } 47. R2e6 { [%eval 0.11] } 47... Kc7 { [%eval 0.55] } 48. Re8 { [%eval 0.65] } 48... Rf6 { [%eval 0.99] } 49. Rxf6?! { Inaccuracy. Ra8 was best. } { [%eval 0.4] } 49... Bxf6 { [%eval 0.37] } 50. Bxf5 { [%eval 0.44] } 50... Re7?! { Inaccuracy. Rd8 was best. } { [%eval 1.46] } { at that time lqh nao zi you mao bing } (50... Rd8 51. Re3) 51. Rc8+ { [%eval 1.3] } 51... Kb7 { [%eval 1.41] } 52. Rc6 { [%eval 1.35] } 52... Bd4? { Mistake. Rc7 was best. } { [%eval 3.15] } 53. Bc8+ { [%eval 3.33] } 53... Ka7 { [%eval 3.34] } 54. Be6?? { Blunder. Rxd6 was best. } { [%eval 0.99] } (54. Rxd6 Rc7 55. Bf5 b5 56. Re6 Rb7 57. d6 c4 58. Be4 Rb8 59. a5 Bf6 60. bxc4 bxc4) 54... c4?? { Blunder. b5 was best. } { [%eval 3.13] } (54... b5) 55. bxc4 { [%eval 3.15] } 55... Bc5 { [%eval 3.73] } 56. Rc8?! { Inaccuracy. Kg4 was best. } { [%eval 2.32] } (56. Kg4 Rb7 57. Kf5 Bb4 58. g4 b5 59. axb5 axb5 60. cxb5 Bd2 61. Ra6+ Kb8 62. Rxd6 Rxb5) 56... Kb7 { [%eval 2.19] } 57. Rf8 { [%eval 2.08] } 57... a5 { [%eval 2.14] } 58. Ke4?? { Blunder. g4 was best. } { [%eval 0.0] } (58. g4 Bd4) 58... Rxe6+ { [%eval -0.34] } 59. dxe6 { [%eval -0.31] } 59... d5+ { [%eval -0.66] } 60. cxd5 { [%eval -0.11] } 60... Bxf8 { [%eval 0.04] } 61. Ke5? { Mistake. g4 was best. } { [%eval -1.63] } (61. g4 b5 (61... Kc7 62. g5 b5 63. axb5 a4 64. Kd3 Be7 65. gxh6 gxh6 66. f5 a3 67. Kc2 Kb6 68. d6 Bxd6 69. f6 a2 70. Kb2 Be5+ 71. Kxa2 Bxf6 72. Kb3 Kxb5 73. e7 Bxe7 74. Kc3 Kc5 { [%csl Gh1] }) 62. axb5 a4 63. Kd3 Be7 64. g5 Kb6 65. gxh6 gxh6 66. Kc4 a3 67. Kb3 Kxb5) 61... Kc7 { [%eval -2.44] } 62. f5?? { Blunder. Kd4 was best. } { [%eval -5.22] } (62. Kd4 Kd6) 62... Bd6+ { [%eval -4.93] } 63. Kd4 { [%eval -6.05] } 63... b5?? { Blunder. Bxg3 was best. } { [%eval 0.0] } (63... Bxg3 64. Kc4 (64. e7 Kd7 65. Kc4 Kxe7 66. Kb5 Bf2) 64... Bh4 65. Kb5 Bd8 66. Ka6 Kd6 67. Kb7 Kxd5 68. Kc8 Bf6 69. Kd7 Ke5 70. e7) 64. axb5 { [%eval 0.0] } 64... a4 { [%eval 0.0] } 65. g4 { [%eval 0.0] } 65... a3 { [%eval 0.0] } 66. Kc3 { [%eval 0.0] } 66... Kb6?? { Blunder. Be7 was best. } { [%eval 4.92] } (66... Be7 67. Kb3 Bd8 68. Ka2 Kd6 69. Kxa3 Kxd5 70. Kb4 Kd6 71. Kc4 Bf6 72. Kb4) 67. g5 { [%eval 5.14] } 67... a2 { [%eval 5.45] } 68. Kb2 { [%eval 5.55] } 68... hxg5 { 1-0 } { [%eval 5.99] } 69. f6 gxf6 70. h6 Bf8 { [%cal Gd5d7,Ge6e7] } *
+
+
+[Event "Strategy: Chapter 22"]
+[Date "2024.03.22"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B19"]
+[Opening "Caro-Kann Defense: Classical Variation, Spassky Variation"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 22"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/bR2YmOne"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.03.22"]
+[UTCTime "16:56:33"]
+
+{ The main theme is c4-c5 and gain full control of d-file. By gaining full control of d-file, and lots of ideas like Rh3-f3, white limits black's piece activity. }
+1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5 5. Ng3 Bg6 6. h4 h6 7. Nf3 Nd7 8. h5 Bh7 9. Bd3 Bxd3 10. Qxd3 Ngf6 11. Bf4 e6 12. O-O-O Be7 13. Ne4 Nxe4 14. Qxe4 Nf6 { [%csl Gh5,Gg5] } 15. Qd3! (15. Qe1 Qd5 16. Kb1 Nxh5 17. Bc1 Nf6 18. Ne5 Qxg2 19. Rg1 Qe4) (15. Qe2 Qd5 16. Kb1 Nxh5 17. Bc1 Nf6 18. Ne5 Qxg2 19. Rhg1 Qe4) 15... Qd5 16. c4 Qe4 17. Qxe4 Nxe4 18. Be3 Nd6 (18... b5) 19. b3 Bf6 20. g4 b5 21. Nd2 Kd7 (21... O-O-O { [%cal Gd8d7,Gh8d8] }) 22. Kc2 Bd8 23. Nf3 Bf6 (23... bxc4 24. Ne5+) 24. Ne5+ Kc7 25. c5! Bxe5 26. dxe5 Nc8 27. Rh3! { The idea is to tie down opponent's rook by attacking the problem on f7 } 27... Ne7 28. Rf3 { Use your rooks to harass the opponent to harass the opponent and make him defend his pawns with big pieces } 28... Rhf8 29. Rd6 a5 (29... Nd5 30. Bd2 { Gaining a tempo by attacking opponent's pieces and force opponent to react } { [%cal Gd2a5] } 30... a5 31. g5! hxg5 32. Bxg5 a4 33. h6 { The rook finds alternative ways to break black's camp } { [%csl Gh6,Gh7] }) 30. g5! hxg5 31. Bxg5 Nf5 { The g5 bishop is controlling the d8-square } 32. Rd1 Kc8 (32... f6 33. Bf4) (32... a4 33. b4 { No counter-play for the opponent }) (32... Rh8 33. Rfd3 Ra7 34. Bd8+) 33. Rfd3 Ra7 34. Rd8+ Rxd8 35. Rxd8+ Kb7 36. Kc3 Ka6 37. Kd3 Rc7 38. Ke4 Kb7 39. Rd1 { Black's position seems solid. So it allows white to indulge himself with one or two superfluous moves before plunging in dagger } 39... Kc8 40. Rd8+ Kb7 41. Kf4 Rc8 42. Rd7+ Rc7 43. Rd3 Kb8 44. Rd8+ Kb7 45. Bf6!! g6 (45... gxf6 46. exf6 { no way to stop Kg5 and h5-h6 }) (45... Rc8 46. Rxc8 Kxc8 47. Bxg7! Nxg7 48. h6) 46. hxg6 fxg6 47. Kg5 { 1-0 } *
+
+
+[Event "Strategy: Chapter 24"]
+[Date "2024.03.22"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C54"]
+[Opening "Italian Game: Classical Variation, Giuoco Pianissimo, with a6"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 24"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/FEAo8bEs"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.03.22"]
+[UTCTime "17:35:31"]
+
+{ Some convert of advantages. }
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d3 a6 6. Bb3 O-O 7. O-O d5 8. exd5 Nxd5 9. h3 Nb6 10. Re1 h6 11. Nbd2 (11. Nxe5 Bxf2+ 12. Kxf2 Nxe5 13. d4) 11... Qxd3 12. Nxe5 Qg3 13. Qf3 Qxf3 14. Ndxf3 Ne7 15. Nd3 Bd6 16. Bf4 { [%csl Gf4][%cal Gd6f4,Gd3f4] } 16... Ng6 (16... Bxf4 17. Nxf4 Nc6 18. Ne5! { And black cannot stop white's rook to invade on e7 }) 17. Bxd6 cxd6 { This is how an advantage on the e-file is transformed to a structural advantage. } 18. Re4! { Attack d6 without moving the strong d3 knight. } 18... a5 19. Rd4 Rd8 (19... a4 20. Bc2 Bf5 21. Rxd6 Nc4 22. Rd5 Be4 23. Rd4 { [%cal Ge4f3] } 23... Bxd3 24. Rxd3) 20. Rd1 d5 { [%csl Gd3,Gd4,Gb5] } (20... Be6 21. Nc5) 21. Nc5 Ne7 22. a4! { stopping a5-a4 before retreating the bishop. } 22... Re8 23. R4d2! { Nf3-d4-b5 is coming. } 23... Nd7 24. Nxd7 Bxd7 25. c4! dxc4 26. Rxd7 cxb3 27. Rxb7 { Now the structural advantage has been converted to the piece activity advantage.
+Any judgement on structure should be combined with the piece activity or passivity. Those are not exclusive. } 27... Rab8 28. Rdd7 { Rxe7 tactical threat. Black prefers to give up the pawn on f7 instead of the pawn on b3 } { [%csl Gf8][%cal Gg8f8] } 28... Nc6 29. Rxf7 Rxb7 30. Rxb7 Re4 31. Rxb3 Rxa4 { piece activity has been converted into material advantage. } 32. Rb6 Rc4 33. g3! { White needs to keep the knights on the board to continue his attacking theme } 33... a4 34. h4 Nd4 35. Ne5! Rc5 36. Rb8+ Kh7 37. Nd7 Rb5 38. Ra8! { Keeping up pressure to black's king } 38... Ne2+ 39. Kg2 Rxb2 40. h5! { Now the material advantage is converted back to piece activity, that is the pressure against black's king. } 40... Nc3 41. Ne5 Rb5 42. f4 Ne4 { [%csl Gf6][%cal Ge4f6] } 43. g4 Nf6 44. Ng6 Ng8 { Now black's knight is restricted } 45. Nf8+ Kh8 46. Ng6+ Kh7 47. Kf3 Rb3+ 48. Ke4 a3 49. Nf8+ Kh8 50. Ng6+ Kh7 51. g5 hxg5 52. fxg5 Rb4+ 53. Kf5 Rb5+ 54. Kg4 Rb4+ 55. Kf5 Rb5+ 56. Kg4 Rb4+ 57. Nf4 a2 (57... Rb3 58. g6+ Kh8 59. Ne6 { [%cal Ge6g5,Gg5f7] } 59... a2 60. Ng5 { [%csl Gb7] } 60... Rb7 61. Nf7+ Rxf7 62. gxf7) 58. Rxa2 Ne7 59. Ra8 Ng8 60. Ra7 (60. g6+ Kh8 61. Kg3 Rxf4!) 60... Kh8 61. Ra8 Kh7 62. Rf8 Kh8 63. Kf3 { White's plan is now putting the king on e4 and shelter it with Nd5 } 63... Rb3+ 64. Ke4 Rb4+ 65. Ke5 Rb5+ 66. Nd5 Ra5 67. Rd8 Kh7 68. g6+ Kh8 69. h6! { The decisive move } 69... Ra7 (69... gxh6 70. Rd7! { [%csl Gh7][%cal Gd7h7] }) 70. Ne3! (70. h7? Re7+ 71. Kd6 Re6+ $10 { etc }) 70... gxh6 71. Nf5! { Nf5, Kh5, Rf8, Black's rook is tied to defend on 7th rank and then Rf7 is the target winning theme for white. } { [%csl Gh5] } 71... Ra5+ (71... Rb7 72. Kf4! (72. Nxh6? Kg7 73. Nxg8 Kxg6 $10)) (71... Ra1) 72. Kf4 Ra4+ 73. Kf3 Ra3+ 74. Kg4 Ra4+ 75. Kh5 Ra7 (75... Ra5 76. g7+ (76. Rf8 Rb5 77. Rf7 { [%cal Gf7h7] } 77... Rb6 (77... Ne7 78. Rxe7 Rxf5+ 79. Kxh6 { [%cal Gf5f8] } 79... Rf6) 78. Rh7#)) 76. Rf8 Rb7 77. Kh4 { Playing it safe } (77. Rf7 { Already wins }) 77... Rb4+ 78. Kh5 Rb6 79. Ne7 Kg7 80. Rf7+ Kh8 *
+
+
+[Event "Strategy: Chapter 25"]
+[Date "2024.03.22"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B83"]
+[Opening "Sicilian Defense: Scheveningen Variation, Modern Variation"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 25"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/Rqsj0wRq"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.03.22"]
+[UTCTime "18:02:29"]
+
+{ ALL those prophylactic moves are just so deep and strong, }
+1. e4 c5 2. Nf3 e6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 d6 6. Be2 Be7 7. O-O O-O 8. f4 Nc6 9. Be3 Bd7 (9... Nxd4 10. Qxd4 Bd7 { [%cal Gd7c6] } 11. e5) 10. Nb3! { Stops Nxd4 Bxd4 Bc6 to force the d7 bishop to remain passive on d7 } 10... a5?! (10... a6) (10... Qc7) 11. a4 { Another important restraining move. Holds the b5 square without occupying it. Also stops a5-a4-a3 } 11... Nb4 12. Bf3 { Prophylaxis against Bc6 } 12... Bc6 { It seems that black is planning d5 e5 Ne4 } 13. Nd4! g6 { Now black decided to prepare e6-e5 } (13... e5 14. Nf5) 14. Rf2 { Saw e6-e5 is about to be played and the f-file is about to be opened } 14... e5 15. Nxc6 bxc6 16. fxe5 dxe5 17. Qf1! Qc8 18. h3! { Ng4 is not yet a threat, but Karpov prevents it from the long term. Also wait and gives black chances to make mistakes } 18... Nd7 { White does not want to allow Bc5 } { [%csl Gc5][%cal Ge7c5] } 19. Bg4! h5 20. Bxd7 Qxd7 21. Qc4! { Preserving the dark-square bishop deprive all black's counter-play } 21... Bh4 22. Rd2 Qe7 23. Rf1! { Simple moves are enough for a win } (23. Bc5 Qg5 24. Rd7 Nxc2 25. Bxf8 Rxf8) 23... Rfd8 (23... Rad8! { [%csl Gc5,Gb7] }) 24. Nb1! { Clears place for c2-c3, and improving the unprotential knight with Nd2-f3 } 24... Qb7 25. Kh2! { White's king secures himself from kinds of checks and ready for g2-g3 } 25... Kg7 26. c3 Na6 27. Re2! { Keep b defended and ready for Nd2-f3 } 27... Rf8 28. Nd2 Bd8 29. Nf3 f6 30. Rd2! { Perfect piece coordination! Now all pieces are in perfect spots! Bad bishop is traded, all pieces are active. } 30... Be7 31. Qe6! { Now it is time for making use of holes in black's position } 31... Rad8 32. Rxd8 Bxd8 33. Rd1 Nb8 34. Bc5 Rh8 35. Rxd8! { 1-0 } *
+
+
+[Event "Strategy: Chapter 26"]
+[Date "2024.03.24"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 26"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/7QXB5xUr"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[FEN "6rr/1bqnkpp1/p2b4/2pPpPP1/1pP1P1B1/4B3/P1QN1K2/2R4R w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.03.24"]
+[UTCTime "19:01:59"]
+
+{ some ideas: Attack c5, open up by a3. How to combine those together? }
+1. Qd1!! { Ready to take whole control of h-file } 1... Kd8 2. Qg1 { [%csl Gc5][%cal Gg1c5,Gh1h2,Gg1h1] } 2... Nb6 3. Rh2 Qe7 { by acting on the kingside and force black's queen to go to the queenside, then we start to attack on the queenside. } { [%csl Gf8][%cal Ge7f8] } 4. Nb3 { [%csl Gc5][%cal Gb3c5] } 4... Kc7 5. Kf3 { [%csl Gc5] } 5... Nd7 { Through the previous moves, black's king and queen changes places. Thus a2-a3 makes more sense here. Also, a6-a5 is impossible here } 6. a3! bxa3 7. Ra2! { Our main goal is literally a-file. h-file does not matter a lot } 7... Rh4 8. Rxa3 Rgh8 9. Rb1 Rb8 10. Qe1! { Another switch position of the queen } 10... Rxg4 11. Kxg4 Bc8 12. Qa5+ { 1-0
+The point is changing direction of attack to force opponent's piece in a rather uncomfortable way. } *
+
+
+[Event "Strategy: Chapter 27"]
+[Date "2024.03.24"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D15"]
+[Opening "Slav Defense: Three Knights Variation"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 27"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/cqnvk6wI"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.03.24"]
+[UTCTime "19:08:51"]
+
+1. d4 Nf6 2. Nf3 d5 3. c4 c6 4. Nc3 Bf5 5. Qb3 Qb6 6. Qxb6 axb6 7. cxd5 Nxd5! 8. Nxd5 cxd5 9. e3 Nc6 10. Bd2 Bd7! { [%csl Ge7][%cal Gc6a5,Gb6b5,Ga5c4] } 11. Be2 e6 12. O-O Bd6 13. Rfc1 Ke7 14. Bc3 Rhc8 15. a3 Na5 16. Nd2 f5 17. g3 b5 18. f3 Nc4 { [%csl Ge4][%cal Gd2c4,Gb5c4,Ge3e4] } 19. Bxc4 bxc4 20. e4 Kf7 21. e5?? (21. exd5 exd5 22. f4) 21... Be7 22. f4 b5 { [%csl Gb4][%cal Gg7g5,Gb5b4] } 23. Kf2 Ra4 24. Ke3 Rca8 25. Rab1 h6 26. Nf3 g5 27. Ne1 { The threat is stronger than the execution.
+Just as the previous example, like the principle of two weaknesses, act on one side but seriously targeting another.
+Now b5-b4 is unpreferrable for activating the bad bishop on c3
+The change of direction } 27... Rg8! 28. Kf3 gxf4 29. gxf4 Raa8! 30. Ng2 Rg4 31. Rg1 Rag8 32. Be1 b4!! { Only now we are planning to put the d7 bishop in the way in.
+Because this is stronger NOW } 33. axb4 Ba4 34. Ra1? Bc2 35. Bg3 Be4+ 36. Kf2 h5! 37. Ra7 Bxg2 38. Rxg2 h4 39. Bxh4 Rxg2+ 40. Kf3 Rxh2 41. Bxe7 Rh3+ 42. Kf2 Rb3 43. Bg5+ Kg6 44. Re7 Rxb2+ 45. Ke3 Ra8 46. Rxe6+ Kh7 { 1-0
+How you change direction (PREPARE AT ONE SIDE THAT YOU ARE POSSIBLE TO OPEN UP AND OPEN UP ANOTHER SIDE) and fight on the two front. Suddenly switch direction and suddenly switch again. Open up the position only when you are ready to or only when you are sure it is the strongest moment. } *
+
+
+[Event "Strategy: Chapter 28"]
+[Date "2024.03.24"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A46"]
+[Opening "Torre Attack: Classical Defense"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 28"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/14ehuIyp"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.03.24"]
+[UTCTime "19:20:41"]
+
+1. d4 Nf6 2. Nf3 e6 3. Bg5 c5 4. e3 Nc6 5. c3 Qb6 6. Qb3 d5 7. Nbd2 Bd7 8. Be2 cxd4 9. exd4 Bd6 10. O-O h6 11. Bh4 Nh5 12. Qxb6 axb6 13. Rfe1 g5 14. Bg3 Nxg3 15. hxg3 f6 16. g4 Kf7 17. Nh2 { Carry out a fimilar knight manoeuvre to strengthen his pawns and fix a space advantage on the queenside. } 17... Na5! 18. Nhf1 b5 19. a3 Nc4 20. Nxc4 bxc4 21. Ne3 { tie white pieces down to defend the queenside and then open up the fresh line of attack on the kingside. White pieces won't be able to adjust needs
+Try to analyze weaknesses } 21... Ra6 22. g3 Rb6 23. Ra2 Ra8 24. Bf3 Ra5 25. Kg2 Rab5 26. Re2 { [%csl Ge2,Ga2] } 26... Be8 27. Rd2 Kg7 28. Bd1 Bg6 { Now while all the white's pieces cannot take any actions, black better his other pieces step-by-step } 29. Ba4 Ra5 30. Bc2 Bxc2 31. Rxc2 Kg6 32. Re2 Rab5 33. Nd1 Bf8! { Bishop retreats in order to allow rook swings to the kingside } 34. Ra1 h5! { Now since all white' pieces are tied up defending, kingside can be opened up } 35. f3 hxg4 36. fxg4 f5! { Now we can understand how Bf8 is allowing the rooks to the kingside } 37. gxf5+ exf5 38. Rc1 Rf6 39. Rcc2 Bd6 40. Re8 Kf7 41. Re1 f4 42. g4 f3+! 43. Kf2 Rh6! { Now white will be forced into an unpleasant pin } 44. Kxf3 Rh3+ 45. Ke2 Rh2+ 46. Nf2 Bg3 47. Rf1? (47. Kf1 Rxf2+ 48. Rxf2+ Bxf2 49. Kxf2 Rxb2+ 50. Re2) 47... Rb6! { The entrance of the other black's rook is decisive } { [%csl Gf6][%cal Gb6f6] } 48. Kf3 Bh4 49. Re2 Rf6+ 50. Ke3 b5 51. Rd2 Ke7 { [%csl Gf2][%cal Ge7d7,Gd7c7,Gc7b6,Gb6a5,Ga5a4,Ga4b3,Gb3b2,Gb2c3,Gb2a3] } 52. b4 cxb3 53. Nd3 Rxd2 54. Kxd2 { 0-1
+Analyze weaknesses or lines that can be opened up. Then,
+By attacking one side (weaknesses) or threating to open up one line, tie up opponent's pieces or disorder opponent's pieces and open up another line on the other side. } *
+
+
+[Event "Strategy: summary for chapter 3"]
+[Date "2024.03.24"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Strategy"]
+[ChapterName "summary for chapter 3"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/YrXaAPI8"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.03.24"]
+[UTCTime "19:31:14"]
+
+{ Analyze weaknesses or lines that can be opened up. Then,
+
+By attacking one side (weaknesses) or threating to open up one line, tie up opponent's pieces or disorder opponent's pieces and open up another line on the other side.
+
+Combine more factors together by improving the pieces
+
+Play patiently when opponent has no counter-play }
+ *
+
+
+[Event "Strategy: Understand pawn majorities"]
+[Date "2024.03.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Strategy"]
+[ChapterName "Understand pawn majorities"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/h9dA4g5s"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[FEN "8/1p2k2N/6n1/p6p/4P3/P3K3/1P6/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.03.26"]
+[UTCTime "17:35:48"]
+
+{ [%csl Ge4] }
+1. Ng5 { The endgame with a pawn on h5 is winning for black.
+Work on all the threats: queenside pawns, white's e pawn and trying to push the h-pawn } (1. Kd4? Nf8! { find every chance to get into the king's pawn endgame and determine if it is good } { [%csl Gh7][%cal Gf8e6] } 2. Ng5 Ne6+ 3. Nxe6 Kxe6 4. Ke3 (4. b3 { [%cal Gh5h2,Gd4g1,Ge6e4] }) 4... a4 5. Kf4 h4 6. Kg4 Ke5 7. Kxh4 Kxe4) 1... Ne5! (1... a4 2. Nf3 { [%csl Ge6,Ge5] }) 2. Kd4 (2. b3) 2... Kd6 3. Nh3 (3. b3 Nc6+ 4. Ke3 { [%cal Gg4f3] } 4... b5 5. Nf3 Ne5 (5... a4 6. bxa4 bxa4 7. Kd3 (7. Kf4 { [%csl Ge5][%cal Gc6e5] } 7... Na5 8. Nd2 Kc5 9. e5)) 6. Nh4 { [%csl Gb3,Ga3] } 6... a4) 3... a4! { Fix b2 and stop b2-b4 so black's king can try to fight against the weakness. If white place the king on c2 then h pawn will be pushed forward } 4. Nf4 { [%csl Gh5][%cal Gh7h2] } 4... h4 5. Nh3 { [%csl Gc5] } 5... b6! { He wish that when Nc6 is played, the knight is on h3 instead of f4 } { [%csl Gc6,Gh3,Gf4][%cal Ge5c6] } (5... b5 6. Nf4 Nc6+ 7. Kc3! Ke5 8. Ng6+!) 6. Nf4 b5 7. Nh3 Nc6+ { [%csl Gh3] } 8. Ke3 (8. Kc3 Ke5 9. Kd3) 8... Kc5 { [%csl Gc5,Ge6][%cal Gd6c5,Gh3f4,Ge4d3,Gf4e6] } 9. Kd3 b4 { The point is the perfect square for the c6 knight, stopping e5 and supporting the queenside pawns. } 10. axb4+ Kxb4 { [%csl Gb2][%cal Gb4b2] } 11. Kc2 Nd4+ 12. Kb1 Ne6! { restrain, blockade, destroy the passed pawn } { [%cal Gd4e6,Ga4f4] } 13. Ka2 Kc4 14. Ka3 Kd4! 15. Kxa4 Kxe4 16. b4 { [%csl Gf3][%cal Ge6f4] } 16... Kf3 17. b5 Kg2 { 0-1 } { [%csl Gb6,Gh3] } 18. Nf4+ (18. Ng5 Nxg5 19. b6 Ne4) 18... Nxf4 19. b6 Nd5 20. b7 Nb6+ { [%csl Gd7][%cal Gb6d7] } *
+
+
+[Event "Strategy: Chapter 31"]
+[Date "2024.03.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 31"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/BmseydqQ"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[FEN "8/8/4k3/7p/p1N2p1P/2P3P1/4K1n1/8 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.03.26"]
+[UTCTime "20:18:37"]
+
+1... fxg3 2. Kf3 Nxh4+ 3. Kxg3 Nf5+ 4. Kh3 { [%csl Ga3][%cal Ga4a3] } 4... Kd5 (4... Nd6) *
+
+
+[Event "Strategy: Chapter 32"]
+[Date "2024.03.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 32"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/0rw7mMt6"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[FEN "8/8/4k3/7p/p1N2p1P/2P3P1/4K1n1/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.03.26"]
+[UTCTime "20:19:16"]
+
+{ The use of sideline pawn majority: drag opponent's pieces away. Then weaknesses will form }
+1. gxf4 Nxh4! 2. Kf2 Nf5 3. Kf3 Nd6 { Force white's knight on a bad spot } { [%csl Ge6] } 4. Na3 Kd5 5. Kg3 Nf5+ 6. Kf3 Kc5 7. Kg2 Kc6 8. Kf2 Kd5 9. Kf3 Nd6 10. Kg3 Nf5+ 11. Kf3 Kc6 12. Kg2 h4! 13. Kh3 Kd5 { All black's pieces are stuck defending black's pawns } 14. Kg4 Ke4 15. c4 Kd4! { 0-1 } { [%cal Gd4c5,Gc5b4] } *
+
+
+[Event "Strategy: Chapter 33"]
+[Date "2024.03.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 33"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/BKJqrWgc"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[FEN "8/n3kp1p/6p1/p4p2/8/1P2N1P1/P4PKP/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.03.26"]
+[UTCTime "20:24:07"]
+
+1. Nc4 { ties down opponent's pieces by attacking weaknesses } 1... Nc6 { [%csl Ga3][%cal Ga2a3] } 2. Kf3 Ke6 3. Ke3 Kd5 4. a3! { The secondary value of a side pawn:
+1. ensures the d3 square for white's king
+2. tactically prevent Kc5 by Nxa5
+3. prevents a5-a4 } 4... Ke6 5. Kd3 Kd5 { Ne3 and Kc4 wants to be played, but now Nc4 will lead to Kc5. So black is trying to use zugzwang to force black's king to retreat to e6 } 6. f3 { Use zugzwang to force black to weaken its kingside pawns } 6... h6 7. Kc3 h5 8. Kd3 f6 9. f4! g5 { [%csl Gf5] } 10. Ne3+ Ke6 { [%csl Gf5][%cal Ge6f5] } 11. h4 { Stop black from using the 4-3 majority. } { [%csl Gg5,Gf5,Gf6] } (11. Kc4 { [%csl Gh4] }) 11... gxh4 12. gxh4 Ne7 13. Kc4 Ng6 14. Ng2! { The knight holds the position } { [%csl Gg2] } 14... Kd6 15. Kb5! Kd5 16. Kxa5 Ke4 17. b4 Kf3 18. b5! { black's knight cannot deal with the passed b-pawn so well } 18... Kxg2 19. b6 Nf8 20. Kb5 Nd7 21. a4 Nxb6 22. Kxb6 Kf3 23. a5 Kxf4 24. a6 Ke3 25. a7 f4 26. a8=Q f3 27. Qe8+ { 1-0 } *
+
+
+[Event "Strategy: Chapter 34"]
+[Date "2024.03.27"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 34"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/XOogUElv"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[FEN "4k3/5pb1/pp1p2p1/2pB1n2/2P5/1P4P1/P2B1PKP/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.03.27"]
+[UTCTime "14:53:03"]
+
+1. g4 Nd4 2. h4 { [%csl Gh5][%cal Gh4h5] } 2... Ke7 3. Bb7 { stops b6-b5 } { [%csl Gd6] } 3... a5 { [%csl Ga6,Gb5,Gc6,Gd5] } 4. Bd5 Be5 5. Be4 { Before launching the plan, play semi-waiting move to see how opponent respond } 5... Ne6 6. Kf3 Bf6 7. g5! { Keep black's pieces unfree } 7... Be5 8. Kg4 Bd4 9. f4 { [%cal Gf4f5] } 9... f5+ 10. gxf6+ Kxf6 11. f5! { sideline pass ed pawn is always strong } 11... gxf5+ 12. Bxf5 Ng7 13. Bg5+ Kf7 14. Bd7! Ne6 15. Bxe6+! Kxe6 16. Bd8 a4 17. Bxb6 d5 18. cxd5+ Kxd5 19. Kf5 axb3 20. axb3 *
+
+
+[Event "Strategy: Chapter 35"]
+[Date "2024.03.27"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 35"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/cg13qxiZ"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[FEN "1r4k1/p3bppp/1pn1p3/1N2P3/8/P3B1P1/1P3PKP/R7 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.03.27"]
+[UTCTime "14:58:45"]
+
+{ Trade the central pawn with the side pawn to form paw majority } { [%csl Ga5,Gb6][%cal Ge3a7,Ga3a5] }
+1. Rc1 { [%csl Ge5,Ga7] } 1... Nxe5 2. Nxa7 Bf6 3. b3! g5 4. Rc8+! { Queenside pawn majority is more useful in slight pieces endgames } 4... Rxc8 5. Nxc8 b5 { [%cal Ga3a6] } 6. Nd6 b4 7. a4! { 1. knight is bed at defending side pawn
+2. stop bishop from getting to e7-b4
+3. White wants the pawn to be as far away from black's king } (7. axb4 Be7 8. Bc5 Nd3 9. Kf3) 7... Nc6 { [%cal Gd6b7] } 8. Nb7 g4 9. a5 Nb8 10. Kf1 Kf8 11. Nc5 Nc6 12. a6 { 1-0
+Rook's line pass pawn. Supporting it with a knight and a bishop. } *
+
+
+[Event "Strategy: Chapter 36"]
+[Date "2024.03.27"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D33"]
+[Opening "Tarrasch Defense: Rubinstein System"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 36"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/Pyp7MdRh"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.03.27"]
+[UTCTime "15:03:02"]
+
+1. d4 d5 2. c4 e6 3. Nc3 c5 4. cxd5 exd5 5. Nf3 Nc6 6. g3 Be6 7. Bg2 Be7 8. O-O Nf6 9. Bg5 Ne4 (9... h6 10. Bxf6 Bxf6 11. dxc5) 10. Bxe7 Qxe7 11. Ne5 (11. dxc5 Nxc3 12. bxc3 O-O (12... Qxc5 13. Ng5 O-O-O 14. Nxe6 fxe6 15. e4 { [%csl Ge4] } 15... d4 16. cxd4 Rxd4 17. Qg4 { [%csl Gg4] }) 13. Qb1) 11... Nxd4 12. Nxe4 dxe4 13. e3 Nf3+ 14. Nxf3 exf3 15. Qxf3 O-O 16. Rfc1? (16. e4 { 用上pawn majority } { [%cal Gf3e3,Gf2f4] }) 16... Rab8 17. Qe4? { [%csl Gh3][%cal Gg2h3] } (17. a4 { [%cal Gb7b6] } 17... b6 18. h4 Rfd8 19. Rd1 g6 20. Rxd8+ Rxd8 21. Rd1 Kg7 22. Rxd8 Qxd8 23. Qe4 Qd1+ 24. Kh2 h5 25. Qe5+ Kh7 26. Bc6) 17... Qc7 { [%csl Gb7,Ga7,Gc5,Gb2,Ga2,Ge3,Gg3,Gf2,Gh2] } 18. Rc3 (18. Rd1 b5 19. Rd2 Rfd8 20. Rad1 Rxd2 21. Rxd2 Bxa2) 18... b5! { 推进兵。计划就是准备c4-c3推进 } 19. a3 c4 20. Bf3 Rfd8! { 当黑的做出正确计划时,迫使白的子力防守,然后顺势控制住d线 } 21. Rd1 Rxd1+ 22. Bxd1 Rd8 { 优势的转化 } 23. Bf3 g6! { Threatens Bd5 Qg4 h5 } { [%csl Gd5,Gh5][%cal Ge6d5,Ge4g4] } 24. Qc6 Qe5! { 想要在e4换后。因为威胁Rd2所以白的为了R吃只可以走Qe4 } { [%cal Gd8d2] } 25. Qe4 Qxe4 26. Bxe4 Rd1+ 27. Kg2 a5 28. Rc2 b4 29. axb4 axb4 30. Bf3 Rb1 31. Be2 { [%cal Gc4c3] } 31... b3 32. Rd2 Rc1 33. Bd1 c3! 34. bxc3 b2 35. Rxb2 Rxd1 36. Rc2 Bf5 37. Rb2 Rc1 38. Rb3 Be4+ 39. Kh3 Rc2 40. f4 h5 41. g4 hxg4+ 42. Kxg4 Rxh2 43. Rb4 f5+ 44. Kg3 Re2 45. Rc4 Rxe3+ 46. Kh4 Kg7 47. Rc7+ Kf6 48. Rd7 Bg2 49. Rd6+ Kg7 { 0-1
+推兵,利用局面pawn majority推进的优势 } *
+
+
+[Event "Strategy: Chapter 37"]
+[Date "2024.03.27"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A37"]
+[Opening "English Opening: Symmetrical Variation, Botvinnik System Reversed, with Nf3"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 37"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/VFlMqMii"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.03.27"]
+[UTCTime "15:16:25"]
+
+1. Nf3 c5 2. c4 g6 3. g3 Bg7 4. Bg2 Nc6 5. Nc3 e5 6. d3 Nge7 7. O-O O-O 8. Ne1 Rb8 9. Nc2 a6 10. Rb1 d6 11. b4 Be6 12. bxc5 dxc5 13. Ne3 b6 14. Ned5 Bd7! { 黑的发现在d5的斗争占不到便宜,那就不干了。他显然想要用马吃 } 15. Bd2?! Nxd5 16. Nxd5 (16. cxd5 Nd4 17. e3 Nf5 { knight heading for d6 blocking } { [%csl Gd6][%cal Gf5d6,Gf7f5] } 18. Ne4 Qe7 19. h4 Nd6 20. Nxd6 Qxd6 { 依然是queenside majority }) 16... Ne7 17. Qc1?! Nxd5 { [%csl Gb6,Ga6,Gb5,Gc5] } 18. Bxd5 { [%csl Gb5] } 18... Bh3! { 控住d5象,不让白的cb } { [%cal Gd8d5,Gb6b4] } 19. Re1?! b5! 20. a3 Qd6 21. Bf3 Be6! { force white to take } 22. cxb5 axb5 23. Be3 Rfc8 { idea set up } 24. Qd2 b4 { [%csl Gc4][%cal Ge6c4] } 25. axb4 cxb4 26. Ba7 Rb5 27. Rec1 Rxc1+ 28. Qxc1 b3 29. Qc6 Qxc6 30. Bxc6 Ra5 31. Be3 Ra2 32. Bb5 b2 33. Kg2 e4 34. d4 Bb3 *
+
+
+[Event "Strategy: Chapter 38"]
+[Date "2024.03.27"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D13"]
+[Opening "Slav Defense: Exchange Variation"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 38"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/PLHwDfom"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.03.27"]
+[UTCTime "15:25:27"]
+
+1. d4 d5 2. c4 c6 3. cxd5 cxd5 4. Nf3 Nf6 5. Nc3 Nc6 6. Bf4 Ne4 7. e3 Nxc3 8. bxc3 g6 9. Be2 Bg7 10. O-O O-O 11. c4 dxc4 12. Bxc4 Bf5 13. Rc1 Rc8 { [%cal Gb7b3,Ga7a3] } 14. Qe2 a6 15. h3?! { If white fails to use his 5-4 majority on centre and kingside and black use his 2-1 majority in queenside, then black is in effect a pawn up } (15. d5! Na5 16. e4!) 15... Na5! 16. Bd3 Bxd3 17. Qxd3 { Force the trade of good bishops to seize control of the c4 square } 17... Qd7! { 在发动机话以前不要着急,先把子处理好 } (17... b5? 18. Rxc8 Qxc8 19. Qa3!) 18. Rc3 b5 { [%csl Gd4,Gc4][%cal Ga5c4] } 19. Rfc1 Nc4 20. Qe2 Nb6 21. Rc7 Qe6 22. Bg5 Nd5 23. R7c5 h6 24. Bh4 { [%csl Gc3] } 24... b4 25. Qb2 Nc3 26. Rxc8 Rxc8 27. Kh1 Kh7!! { If two rooks are contesting an open file, the player with superior minor piece will win control of it.
+The point is to escape the check on c8, so that Na4 can be threatened } { [%csl Gc1,Gc8,Gc3,Gg7,Ga4][%cal Gc8c1,Gc3a4] } 28. Ra1 a5 29. Qb3 Qxb3 30. axb3 g5 31. Bg3 a4! 32. Nd2 a3 33. Rc1 { [%csl Gg7,Gd4,Ge3][%cal Gg7d4] } 33... e5! { What is the worst placed piece? g7 bishop } 34. d5 a2 35. Ra1 e4 36. d6 Ra8 37. Nc4 Nb5 38. Be5 Nxd6! 39. Rxa2 Rxa2 40. Bxd6 Rxf2 41. Bxb4 Rf1+ 42. Kh2 Rb1 { 0-1
+如果不积极利用majority,对面就会赢
+一定要耐心、淡定。实行计划以前和petrosian一样走半等招,同时子出完,确保这个计划在现在是最强的然后再走。 } *
+
+
+[Event "Strategy: Pawn Breaks"]
+[Date "2024.04.03"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B12"]
+[Opening "Caro-Kann Defense: Advance Variation"]
+[StudyName "Strategy"]
+[ChapterName "Pawn Breaks"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/qCzzH2jI"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.04.03"]
+[UTCTime "14:20:35"]
+
+1. e4 c6 2. d4 d5 3. e5 Bf5 4. Bd3 Bxd3 5. Qxd3 e6 6. Ne2 Qb6 7. O-O c5 8. c3 Nc6 9. f4 cxd4 10. cxd4 { [%csl Gf5][%cal Gf4f5] } 10... Nh6 { [%csl Gf5][%cal Gf4f5] } 11. Nd2 Nf5 { [%csl Gf5][%cal Gg2g4,Gf4f5,Gf5d4,Gc6d4] } 12. Nf3 h5 { [%csl Gf5][%cal Gg2g4,Gf4f5,Gc8c2,Gh8c8] } 13. Bd2 a5 14. a3 Qa6 15. Qxa6 Rxa6 { [%csl Gf8,Gh4][%cal Gh5h4] } 16. Rac1 (16. h3 h4 { [%csl Gg4][%cal Gg2g4] }) (16. g3 Be7 17. Kf2 Kd7 18. h3 { [%csl Gg4][%cal Gg3g4] } 18... h4 (18... Rc8 19. g4 hxg4 (19... Nh4 20. Nxh4 Bxh4+ 21. Ke3 { [%csl Gf5][%cal Gf4f5] } 21... Rb6 22. Bc3 Be7 23. f5 Rb3) 20. hxg4) 19. g4 Nh6 { [%csl Gf5,Gc6,Gc8][%cal Gf4f5,Ga6c6,Gh8c8] }) 16... Kd7 17. Rc2 Be7 18. Rfc1 Bd8 19. Kf2 Bb6 20. Be3 a4 21. Rd1 Rc8 22. Nc3 Na5 23. Ke2 Nc4 24. Bc1 Bd8 25. Kd3 Rb8 26. Rg1 b5 27. g4 hxg4 28. Rxg4 b4 29. axb4 Rxb4 30. Nd1 Rc6 31. h4 g6 32. Bd2 Nxd2 33. Nxd2 Rb3+ 34. Ke2 Ba5 *
+
+
+[Event "Strategy: Chapter 40"]
+[Date "2024.04.03"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D52"]
+[Opening "Queen's Gambit Declined: Cambridge Springs Defense, Capablanca Variation"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 40"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/eBivyvNy"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.04.03"]
+[UTCTime "14:20:38"]
+
+{ Threatening and preparing pawn breaks to distract opponent's pieces attention and try to attack on the other wing. }
+1. d4 d5 2. Nf3 Nf6 3. c4 e6 4. Nc3 Nbd7 5. Bg5 c6 6. e3 Qa5 7. Bxf6 Nxf6 8. a3 Ne4 9. Qb3 Be7 10. Bd3 Nxc3 11. bxc3 dxc4 12. Bxc4 Bf6 13. O-O O-O 14. e4 e5 15. d5 Qc7 16. Bd3 b6 17. c4 Bb7 18. Rfc1 Be7 19. Rc2 Bc5 20. Qb2 { black should play Rae8, ready for f5. Once white managed to stop this plan, then after some pieces are fixed on kingside, black can open up lines for his rooks and quickly shift his attention to queen side. } { [%csl Gf6,Gg2,Gg1,Gb5][%cal Gf8f6,Gb2g2,Ga1g1,Gb6b5] } 20... f6 { [%csl Ga4,Ga5] } (20... Rae8) 21. Rb1 Rad8 { [%cal Ga3a4] } 22. a4 Ba6 { [%csl Gd3,Gc2,Gb2,Gb4,Gc4,Ga4] } 23. Rd1 Rfe8 24. Qb3 Rd6 25. Nh4 g6 26. Be2 cxd5 27. exd5 e4 28. g3 e3 29. f4 { [%csl Gb3,Gf3] } 29... Bc8 30. Nf3 Bf5 31. Rb2 Re4 32. Kg2 Qc8 33. Ng1 g5 34. fxg5 fxg5 35. Rf1 g4 36. Bd3 Rf6 37. Ne2 Qf8 38. Rbb1 (38. Nf4 Qh6 39. Qc2 e2 40. Nxe2 Qh3+ 41. Kh1 Qxf1+) 38... Qh6 39. Qc2 Qh3+ 40. Kh1 Rxc4 41. Qxc4 Bxd3 42. Rxf6 Bxc4 43. Nf4 e2 44. Rg1 Qf1 *
+
+
+[Event "Strategy: Chapter 47"]
+[Date "2024.04.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B12"]
+[Opening "Caro-Kann Defense: Advance Variation"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 47"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/eCMftmBz"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.04.16"]
+[UTCTime "16:04:15"]
+
+1. e4 c6 2. d4 d5 3. e5 Bf5 4. Bd3 Bxd3 5. Qxd3 e6 6. Ne2 Qb6 7. O-O c5 8. c3 Nc6 9. f4 cxd4 10. cxd4 Nh6 11. Nd2 Nf5 { [%csl Gd4] } 12. Nf3 h5! { [%csl Ge5,Gg2,Gg4,Gf4,Gf5,Gh2,Gh3,Gh5,Gh4] } 13. Bd2 a5! 14. a3 Qa6! 15. Qxa6 Rxa6 { [%csl Gf5,Gg4] } 16. Rac1 { [%csl Gg3][%cal Gg2g3] } (16. g3! Be7 17. h3 Kd7 (17... h4 18. g4) 18. Kf2 Bd8 19. g4) 16... Kd7 17. Rc2 Be7 18. Rfc1 Bd8 { [%csl Gg3,Gh3,Gg4] } 19. Kf2 Bb6 { [%csl Gd4] } 20. Be3 a4 21. Rd1 Rc8 22. Nc3 Na5 { [%csl Gc4] } 23. Ke2 { [%csl Gc8,Gc7,Gc6] } (23. Nxa4 Rxc2+) 23... Nc4 24. Bc1 { [%csl Gb5,Gb4][%cal Gb7b5,Gb5b4] } 24... Bd8 25. Kd3 Rb8 26. Rg1 b5 27. g4 hxg4 28. Rxg4 b4 29. axb4 Rxb4 30. Nd1 Rc6 31. h4 g6 32. Bd2 Nxd2 33. Rxd2 Rb3+ 34. Ke2 Ba5 *
+
+
+[Event "Strategy: Chapter 41"]
+[Date "2024.04.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D37"]
+[Opening "Queen's Gambit Declined: Three Knights Variation"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 41"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/ELNcTphv"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.04.12"]
+[UTCTime "19:12:25"]
+
+{ The idea of putting the pawn alongside the apex of pawn chain }
+1. Nf3 Nf6 2. d4 d5 3. c4 e6 4. Nc3 Be7 5. e3 O-O 6. a3 a6 { [%cal Ga7a6] } 7. c5 { In nimzo's word, not giving up the center, but to change the focus of the attack from d5 to c6 } { [%csl Gb5,Gc5] } 7... c6 8. b4 Nbd7 { [%csl Gb4,Gb5,Ga4] } 9. Bb2 Qc7 10. Qc2 e5 { [%csl Gc5,Gb5] } 11. O-O-O (11. dxe5! { Stick on Nimzo's theory is logical here }) 11... e4 { How to deal with this knight? } { [%csl Gf7,Ge4,Gf4][%cal Gf3h4,Gh4g2,Gf3d2,Gd2b3] } 12. Nh4 { [%csl Gf5][%cal Gh4f5] } (12. Nd2 Ng4 13. Nb3) 12... Nb8! 13. g3 { [%csl Gf4,Gf7,Gf5] } 13... Ne8?! (13... a5!) 14. Ng2 f5 15. h4 { Put the pawn alongside the most advantaged pawn. For black, he wants to put the pawn on f4. For white it is b5 } { [%csl Gf4][%cal Gh4g5,Gg2f4] } 15... Bd8 16. a4 b6 17. b5 Nf6 18. Nf4 axb5 19. axb5 Qf7 20. Be2 Bc7 21. cxb6 Bxf4 22. gxf4 Bd7 23. Kd2 cxb5 24. Ra1 { [%csl Gb6,Ga7] } *
+
+
+[Event "Strategy: Chapter 42"]
+[Date "2024.04.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C61"]
+[Opening "Ruy Lopez: Bird Variation"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 42"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/pAmmCYFG"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.04.12"]
+[UTCTime "19:21:31"]
+
+{ Launching the strategic plan. }
+1. e4 e5 2. Nf3 Nc6 3. Bb5 Nd4 4. Nxd4 exd4 5. O-O g6 6. d3 Bg7 7. Nd2 Ne7 8. f4 c6 9. Bc4 d5 10. Bb3 O-O 11. Nf3 c5 12. e5 b5 13. c3 c4 14. Bc2 dxc3 15. bxc3 Qa5 16. Bd2 Bg4 { [%csl Ge5,Gf4,Gf5] } 17. d4! { Now after solidify the pawn on e5, white is trying to put the other pawn on f5, right besides the e5 pawn. However, like all great strategists, Capa is trying to prevents opponent's pawn before launching the own idea. } 17... Qb6 { [%csl Gc3,Gb4,Gg4,Gf3] } 18. Rb1! { b4 cb and Bxf3 is prevented } 18... a6 { playing passively on the queenside means his queenside majority has no value. } (18... a5 19. h3 Bxf3 20. Rxf3 b4 21. Kh1 Rab8 22. cxb4 Qxd4 23. b5 { [%cal Gb5b6] }) 19. h3 Bf5 { 2 } 20. g4 { Carrying out a strategic plan that suits the requirement of the position } 20... Bxc2 21. Qxc2 f5 { Now white haas a clear idea: Kh2, doubling up rooks along the g-file, play Nh4 or Bc1-a1-e7 to force the open of g-file, where white rooks have crushing power. Also if black plays fxg4, then the idea of f4-f5 will reborn. } { [%csl Gf5,Gh3,Gg4,Gf4] } 22. Kh2 Nc6 23. Rg1 Nd8 24. gxf5 Rxf5 25. Nh4 Rh5 26. Nxg6 hxg6 27. Rxg6 Qb8 28. Rxg7+ Kxg7 29. Rg1+ Kf8 30. Qg6 Rxh3+ 31. Kxh3 *
+
+
+[Event "Strategy: Chapter 43"]
+[Date "2024.04.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C88"]
+[Opening "Ruy Lopez: Closed"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 43"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/2fUafx7u"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.04.12"]
+[UTCTime "20:15:36"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Be7 6. Re1 b5 7. Bb3 d6 8. c3 Na5 9. Bc2 c5 10. d4 Qc7 11. Nbd2 Nc6 12. Nf1 cxd4 13. cxd4 Bg4 14. d5 Nd4 15. Bd3 O-O 16. Be3 Rac8 17. Bxd4 exd4 18. a4 Qb6 19. axb5 axb5 20. h3 Bxf3 21. Qxf3 Nd7 22. Rec1 Nc5 23. b4! Na4 (23... Nxd3 24. Qxd3 { [%csl Gc3][%cal Gf1d2,Gd2b3,Gb3a5,Ga5c6,Ga1a5,Gc8c3] }) 24. Rxc8 Rxc8 25. e5!! { Changes the focus of the game from queenside to kingside. Previously you may think that knight is strong on a4 and the rook is strong on c4, however now when the focus of position is shifted to kingside, white's rook seems can be good on e1 and knight and queen will cooperate well on the kingside. } 25... g6 (25... dxe5 26. Qf5) 26. e6 Rf8 27. Ng3! Qb7? { [%csl Gf5][%cal Gf7f5] } (27... fxe6 28. Qg4 Kg7 (28... e5 29. Bxg6 hxg6 30. Qxg6+ Kh8 31. Nh5 Rg8 32. Qh6#) 29. dxe6) (27... Qc7! 28. Bxb5) 28. Nf5! { [%cal Gf7e6] } 28... fxe6 29. dxe6 Qc7 { [%csl Ge7,Gf3,Ge4,Gd5,Gc6,Gb7,Ga8] } (29... Qxf3 30. Nxe7+) 30. Qc6! Qd8 31. Nxe7+ Qxe7 32. Bxb5 Nc3 33. Qd7 Qxd7 34. Bxd7 Rb8 35. e7 Kf7 36. Re1 Re8 37. Bxe8+ Kxe8 38. Re6 d5 39. Kf1 Nb5 40. Ke2 Nc7 41. Re5 Na6 42. b5 Nb4 43. b6 d3+ 44. Kd2 Kd7 45. e8=Q+ Kd6 46. Qe7+ Kc6 47. Qxb4 *
+
+
+[Event "Strategy: Chapter 45"]
+[Date "2024.04.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "E85"]
+[Opening "King's Indian Defense: Sämisch Variation, Orthodox Variation"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 45"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/zdLwCkVD"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.04.16"]
+[UTCTime "15:21:11"]
+
+{ Preperations before pawn breaks
+Pawn push to block the other side before attacking kingside. }
+1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. f3 O-O 6. Be3 e5 7. Nge2 a6 8. Qd2 Bd7 9. d5 Ne8 10. g4 h6 11. h4 Kh7 12. Ng3 c5 { [%csl Gg5,Gh7][%cal Gh4h5] } 13. Bd3 Qa5 { [%csl Ga5] } 14. Qe2 Rh8 15. a3 Qd8 { [%csl Gb7,Gb5,Ge1] } 16. b4 b6 17. Qb2 Bc8 18. Ke2 Nd7 { 3 points why playing pawn breaks on queenside when ur intention is on kingside:
+1. Attract black’s pieces to the queenside.
+2. Gain more space.
+3. Block the queenside so that black does not have counter-attack on queenside. } { [%csl Gb3][%cal Ge2d2,Gd2c2,Gc2b3] } 19. Rag1 Rb8 20. b5 { block queenside } 20... a5 (20... axb5 21. cxb5 (21. Nxb5 Ba6) 21... c4 22. Bxc4 Nc5) 21. Kd1 Kg8 22. Qd2 Nf8 23. Kc2 f6 24. g5 fxg5 25. hxg5 h5 { [%csl Gg6][%cal Gf8g6] } 26. Nf5!! { Other ways to put the pawns on the same line. Also the idea is he wants to play f3-f4 without allowing black to play Nf8-d7-e5 } (26. f4 exf4 { [%csl Gd6] } 27. Bxf4 { [%csl Ge5] } 27... Nd7 { [%csl Gd7,Ge5][%cal Gd7e5] }) 26... Kf7 (26... gxf5 27. exf5 Rh7 28. f6 Bh8) 27. Nh4 Qe7 28. Qh2 Nc7 29. Rf1 Ke8 30. f4! { [%csl Gf5,Gf8,Gd7,Ge5,Gg6][%cal Gf4f5] } 30... exf4 31. Bxf4 { Black cannot play Nf8-d7-e5 } { [%csl Gg6][%cal Gh4g6,Gf8d7] } 31... Kd7 32. Bxd6! *
+
+
+[Event "Strategy: Chapter 46"]
+[Date "2024.04.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D37"]
+[Opening "Queen's Gambit Declined: Barmen Variation"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 46"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/NKTyloZD"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.04.16"]
+[UTCTime "15:50:25"]
+
+{ When one pawn break is stopped, find the chances around. }
+1. d4 d5 2. Nf3 e6 3. c4 Nd7 4. Nc3 Ngf6 5. Bg5 Bb4 6. cxd5 exd5 7. Qa4 Bxc3+ (7... c5) 8. bxc3 O-O 9. e3 c5 10. Bd3 c4 11. Bc2 Qe7 12. O-O a6 { e2-e4 is the idea } { [%csl Ge4][%cal Ge3e4] } 13. Rfe1 Qe6 14. Nd2 { black's counter-idea: protect c4 and play Ne4 stop e3-e4 at all cost } 14... b5 15. Qa5 Ne4 { [%csl Gb5,Ga6] } 16. Nxe4 dxe4 17. a4! { by playing b5, black's queenside pawn chain is weakened } 17... Qd5 (17... bxa4 { [%csl Gc4,Ga4] } 18. Reb1 { [%csl Gc4,Ga4] }) 18. axb5 Qxg5 19. Bxe4 Rb8 20. bxa6 Rb5 21. Qc7 Nb6 22. a7 Bh3 23. Reb1! { Be patient, no need to queen immediately to get more than a knight. } 23... Rxb1+ 24. Rxb1 f5 25. Bf3 f4 26. exf4 { 1-0 } *
+
+
+[Event "Strategy: Chapter 48"]
+[Date "2024.04.17"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B12"]
+[Opening "Caro-Kann Defense: Advance Variation"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 48"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/7kQq6aiw"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.04.17"]
+[UTCTime "13:35:35"]
+
+{ Strategic plan, breakthrough passive defense
+trade queens
+important f5 breakthrough
+open of files (b2 pawn victim)
+trade pieces }
+1. e4 c6 2. d4 d5 3. e5 Bf5 4. Bd3 Bxd3 5. Qxd3 e6 6. Ne2 Qb6 { [%csl Ge5,Gc5,Gf4][%cal Gc6c5,Gf2f4] } 7. O-O Qa6! 8. Qd1 c5 9. c3 (9. Nd2) 9... Nc6 10. Nd2 cxd4 (10... Nxd4) 11. cxd4 Qd3 12. Nb3 Qxd1 13. Rxd1 { white rook is on the wrong square for supporting the plan of f4-f5 } 13... Nge7 14. Bd2 a5 15. Rac1 b6! { block white's d2 bishop and b3 knight } { [%csl Gd2,Gc6,Gc5,Gf5][%cal Gf2f5] } 16. a4 Kd7 17. Nc3 Na7 18. Kf1 Nec6 19. Ke2 Rc8 20. Be1 Be7 21. Nb1 { [%csl Gd4] } 21... f5! { if white ignores, g5 and h5 will be pushed. if ef, d4 is in trouble and white has to admit that he will be forced to defend for the rest of the game } 22. exf6 Bxf6 { [%csl Gd4] } 23. Bc3 Nb4 24. Bd2 Nac6 25. Be3 Na2! 26. Rc2 Rc7 27. Na3 Rhc8 { how to exploit active pieces } { [%csl Gc8,Gc7,Gh4,Gg4] } 28. Rcd2 Na7 29. Rd3 Nb4 30. R3d2 { [%cal Gc8c2] } 30... Rc6 31. Rb1 Be7 32. Ra1 Bd6 33. h3 R8c7 34. Rad1 Na2 35. Ra1 Bxa3 36. Rxa2 Bb4 37. Rd1 Rc4 38. Rc1 Nc6 39. Rxc4? dxc4 40. Nd2 Bxd2! { Eliminate the only piece that can fight against his plan to put the king on d5 } 41. Kxd2 Kd6 42. Kc3 Kd5 43. Ra1 g6! { no hurry. Place the pawns on light suqare } 44. f3 Rb7 45. Ra3 b5! { break through the b-file and the victim of b2 pawn } 46. axb5 Rxb5 47. Bf2 Nb4 48. b3 (48. Bg1 Nd3 49. b3 cxb3 50. Rxb3 Rxb3+ 51. Kxb3 Ne1) 48... cxb3 49. Kxb3 Nc6+ 50. Kc3 Rb1 { 1. Invasion of rook
+2. weakened d4 pawn
+3. strong a4 passed pawn
+4. Advantage in knight-bishop endgame } 51. Ra4 Rc1+ 52. Kd2 Rc4! 53. Ra1 a4 54. Ra3 Na7! 55. Ra1 Nb5 56. Rb1 Kc6 { Nxd4 liberates white's pieces } 57. Kd3 Rc3+ 58. Kd2 Rb3! 59. Rc1+ Kb7 60. Rc2 a3 61. Bg3 Nxd4 62. Rc7+ Kb6 63. Rc4 Kb5 64. Rc8 Nc6 65. Ra8 Rb2+ 66. Ke3 Rxg2 67. Bf2 Nb4! { 1-0 } *
+
+
+[Event "Strategy: Chapter 49"]
+[Date "2024.04.17"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B12"]
+[Opening "Caro-Kann Defense: Advance Variation"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 49"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/r5EFTVRd"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.04.17"]
+[UTCTime "14:16:02"]
+
+{ strategic ideas
+against the idea
+pawn structure
+rook invasion along the 4th rank }
+1. e4 c6 2. d4 d5 3. e5 Bf5 4. Bd3 Bxd3 5. Qxd3 e6 6. Nc3 Qb6 { [%csl Gf5][%cal Gf2f5] } 7. Nge2 c5 8. dxc5 Bxc5 9. O-O Ne7 10. Na4 Qc6 11. Nxc5 Qxc5 12. Be3 Qc7 13. f4 Nf5 14. c3 Nc6 15. Rad1 (15. Rae1 g6 16. g4 { black exploits the fact that white's position is full of holes } (16. Bf2 h5 17. g3 { and h3, g4 } { [%csl Gh3,Gg4] }) 16... Nxe3 17. Qxe3 h5! { Tactical refutation to stop white's plan } 18. g5 (18. h3 hxg4 19. hxg4 g5 (19... O-O-O)) 18... O-O! { Now white's kingside pawns have lost the mobilbility } 19. Nd4 Qb6 20. Rf2 Rfc8 21. a3 Rc7) 15... g6 16. g4 Nxe3 17. Qxe3 h5! 18. g5 { [%cal Gh8c8,Gc8c3,Ga8c8] } 18... O-O 19. Nd4 Qb6 { [%csl Gf6,Ge5,Gf4,Gg5] } 20. Rf2 { This should be Rac8 } 20... Rfc8 21. Rd3 Na5?! { Capablanca sensed this plan was not always good } { [%csl Ge5,Gf4,Gg5] } 22. Re2 Re8! { Strong prevention! Black sensed that white's kingside attack has not yet exhausted by Qh3 Ne6 etc } { [%csl Ge6][%cal Ge3h3,Gd4e6] } 23. Kg2 Nc6 { Admit the mistake } 24. Red2 (24. Nxc6 Qxc6 25. Rd4) 24... Rec8 { because white's rook has left the e-file } 25. Re2 Ne7! { prevents the f5 idea and Nxc6 } 26. Red2 Rc4 27. Qh3 { Dubious idea to stop Nf5 } 27... Kg7! { Continue the plan of Nf5 } { [%csl Gf5][%cal Ge7f5] } 28. Rf2 a5 29. Re2 Nf5 30. Nxf5+ gxf5 31. Qf3 Kg6 { Now e4 square is available for the rook } 32. Red2 Re4 33. Rd4 Rc8 34. a3 Rc4 35. Qf2 Qb5 36. Kg3 Rcxd4 37. cxd4 Qc4 38. Kg2 b5 39. Kg1 b4 40. axb4 axb4 41. Kg2 Qc1 42. Kg3 Qh1 43. Rd3 Re1 44. Rf3 Rd1 45. b3 Rc1 46. Re3 Rf1 { 0-1 } *
+
+
+[Event "Strategy: Chapter 49"]
+[Date "2024.04.17"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B12"]
+[Opening "Caro-Kann Defense: Advance Variation, Tal Variation"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 49"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/eZAG8xKv"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.04.17"]
+[UTCTime "14:16:09"]
+
+{ good bishop against bad bishop
+spacial advantage in endgame
+Active knight and rook position allows king to march forward
+f4-f5 breakthrough }
+1. e4 c6 2. d4 d5 3. e5 Bf5 4. h4 h6 5. g4 { [%csl Gf5][%cal Gf2f4,Gf4f5] } 5... Bd7 (5... Bh7 6. e6 fxe6 7. Bd3) 6. Nd2 c5 7. dxc5 e6 (7... Nc6 8. f4 e6 9. Nb3 Bxc5 10. Nxc5 Qa5+ 11. c3 Qxc5 { [%csl Gd4,Ge3] } 12. Rh3 { [%cal Gc1e3] } 12... h5 { [%csl Ge3][%cal Gd5d4] } 13. Be3 (13. gxh5 Nh6 14. Be3 Qa5 15. Nf3 Nf5 16. Bf2 f6) 13... d4 14. cxd4 Qa5+ 15. Bd2 Qd5) 8. Nb3 Bxc5 9. Nxc5 Qa5+ 10. c3 Qxc5 11. Nf3 Ne7 { [%csl Ge3] } 12. Bd3 Nbc6 13. Be3 Qa5 14. Qd2 Ng6 (14... d4 15. cxd4 Nb4 { [%csl Gc6][%cal Gb4d5,Gd6c6] }) 15. Bd4 Nxd4 16. cxd4 Qxd2+? 17. Kxd2 { 1) White retains the light square bishop
+2) White controls the c-file first
+3) White's kingside pawns has mobilbility } 17... Nf4 18. Rac1 h5 (18... Nxd3 19. Kxd3 { Good knight against bad bishop }) 19. Rhg1! { No need to play g4-g5 in this case } 19... Bc6 20. gxh5 Nxh5 21. b4! { Both rooks are active on both sides of the board } 21... a6 22. a4 Kd8 { [%csl Gc7] } (22... Bxa4 23. Rc7 Bc6 24. Ng5! Rf8 25. Nxf7 Rxf7 26. Bg6) 23. Ng5 Be8 24. b5 Nf4 25. b6 { Like the very first chapter } 25... Nxd3 26. Kxd3 Rc8 27. Rxc8+ Kxc8 28. Rc1+ Bc6 { [%csl Gh4] } 29. Nxf7 Rxh4 30. Nd6+ Kd8 31. Rg1 Rh3+ 32. Ke2 Ra3 33. Rxg7 Rxa4 34. f4 { Ready for f5 } { [%csl Gf5][%cal Gf4f5] } 34... Ra2+ 35. Kf3 { The king supports the future advance of f4-f5 } { [%cal Gf3g4,Gf4f5] } 35... Ra3+ 36. Kg4 Rd3 37. f5 Rxd4+ 38. Kg5 exf5 39. Kf6 Rg4 40. Rc7 Rh4 41. Nf7+ *
+
+
+[Event "Strategy: Summary for pawn breaks"]
+[Date "2024.04.18"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Strategy"]
+[ChapterName "Summary for pawn breaks"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/tByNUlBj"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.04.18"]
+[UTCTime "15:57:23"]
+
+{ Preparations: after pawn break, not allowing opponent's pieces to be active
+threatens pawn break on one side, once opponent's pieces are attracted to defend against, open up the other side.
+put the pawnn beside the most advanced pawn
+e5-d4 structure. Nimzo's idea etc
+war of two sides, readying for g4-f5 quickly
+black is quicker to play c5 so quicker dominate c-file. then b5-b4 break. f5 idea to pressure f6.
+Evaluate the weakness between e6 and d4. When black's bishop can go on f6 on endgame to attack d4 and tie white's rook down, e6 weakness is not that weak in contrastion. }
+ *
+
+
+[Event "Strategy: How to use the Pawn Ram"]
+[Date "2024.04.18"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Strategy"]
+[ChapterName "How to use the Pawn Ram"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/ydBTOrHx"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.04.18"]
+[UTCTime "16:03:04"]
+
+ *
+
+
+[Event "Strategy: Chapter 52"]
+[Date "2024.04.18"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A25"]
+[Opening "English Opening: King's English Variation, Reversed Closed Sicilian"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 52"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/Cir9wDI2"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.04.18"]
+[UTCTime "16:03:06"]
+
+1. c4 e5 2. Nc3 Nc6 3. g3 f5 4. Bg2 Nf6 5. d3 g6 6. Rb1 Bg7 7. b4 d6 8. b5 Nd4 9. Nh3 O-O 10. O-O h6 11. f4 Kh7 12. a4 Rb8 13. Nf2 Bd7 14. Qd2 Nh5 15. e3 Ne6 16. Bb2 g5 17. fxe5 dxe5 18. g4!! fxg4 19. Nxg4 { Black's attack was positionally busted } 19... Nef4 20. Be4+ Kh8 21. exf4 Bxg4 22. fxg5 Nf4 23. gxh6 Bxh6 24. Kh1 Qh4 25. Qe1 Qh5 26. Qg3 *
+
+
+[Event "Strategy: Chapter 53"]
+[Date "2024.04.19"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 53"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/HCqv6cOm"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[FEN "2r3k1/5p1p/4b1p1/2q5/4PP2/p5PP/P2RQ1BK/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.04.19"]
+[UTCTime "18:28:24"]
+
+1. g4? g5! { controlling dark squares } 2. Qf2 (2. f5 Qe5+ 3. Kh1 Qa1+) 2... Qxf2 3. Rxf2 gxf4 4. Rf3 Ra8 5. Rf2 { [%csl Gb8,Gf3][%cal Ga8b8] } 5... f3! 6. Bf1 (6. Bxf3 { White can no longer play Rf3 to pressure a3 pawn } { [%csl Gb2][%cal Ga8b8,Gb8b2] } 6... Rb8 { [%csl Gb2][%cal Gb8b2] }) 6... Rb8 7. Rxf3 Rb2+ 8. Kg3 Rxa2 9. Rc3 Ra1 { 0-1 } *
+
+
+[Event "Strategy: Chapter 54"]
+[Date "2024.04.19"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D37"]
+[Opening "Queen's Gambit Declined: Three Knights Variation"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 54"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/S1UcNIrp"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.04.19"]
+[UTCTime "18:31:24"]
+
+1. d4 Nf6 2. Nf3 d5 3. c4 e6 4. Nc3 Be7 5. cxd5 exd5 6. Bf4 c6 7. Qc2 Na6 8. a3 O-O 9. e3 Nc7 10. Bd3 Ne6 11. Be5 g6 12. O-O Ng7 13. b4! a6 { Try not to left with a weak a-pawn } 14. Bxf6! { Speeds up the queenside speed. So black can no longer play Bxb4 } 14... Bxf6 15. a4 Bf5 16. Bxf5 Nxf5 17. b5 axb5 (17... cxb5 18. axb5 a5 19. Qb3 { [%csl Gd5] }) 18. axb5 Qd6 { [%csl Gd6] } 19. bxc6 bxc6 20. Na4! { Stop c5 and thus preventing the activication on f6 bishop } 20... Rfb8 21. Nc5 Qe7 22. Nd3 { [%csl Gd3] } 22... Qb7 23. Nfe5 Bxe5 24. Nxe5 Rxa1 25. Rxa1 Ne7 { One weakness is not enough to win the game. So white tries to exploit another } 26. g3! Qb2 27. Qd1 { Fore sure, because white wants to attack the kingside } 27... h5 28. Rc1 Rb6 29. h3! { g3-g4 in mind } { [%csl Gg4][%cal Gg3g4] } 29... Kg7 30. Kg2 Qa3 31. Ra1 Qb2 32. g4 hxg4 33. hxg4 Rb7? 34. Rc1 Qb5 35. Qf3! { Skillfully switch the play between two weaknesses on c6 and kingside f7 } 35... f6 36. g5 Nf5 (36... fxe5 37. Qf6+ Kg8 38. Rh1) 37. gxf6+ Kxf6 38. Rxc6+ Ke7 39. Qf4 { 1-0 } *
+
+
+[Event "Strategy: Chapter 55"]
+[Date "2024.04.23"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D35"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Positional Variation"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 55"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/RGm9wQoD"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.04.23"]
+[UTCTime "00:09:50"]
+
+1. c4 e6 2. Nc3 d5 3. d4 Nf6 4. cxd5 exd5 5. Bg5 Be7 6. e3 Nbd7 7. Nf3 c6 8. Bd3 O-O 9. Qc2 Re8 10. O-O Nf8 11. h3 Be6 12. Rfc1 N6d7 13. Bf4 Nb6 14. Rab1 Bd6 15. Ne2 Ng6 16. Bxd6 Qxd6 17. a4! { Prevents Nc4. Also being ready for Qc5-a3 } { [%csl Ga3,Gc5][%cal Gc2c5,Gc5a3] } 17... Rac8 (17... a5 18. b3 { Induce a problem on a5 } { [%csl Ga5,Gc4,Gc2,Gd2][%cal Gc2d2,Gc1c5,Gc5a5,Gb6c4,Gb7b6] }) 18. Qc5! { [%csl Gc5,Gb5][%cal Gd6c5,Gc1c5,Gb2b4,Gb4b5] } 18... Qb8 (18... Qxc5 19. dxc5 Nd7 20. b4 { Changes white's pawn structure. Keeps white's chances on queenside like b4-b5 etc. In exchange of c1 rook cannot target on c6, d4 is available for the knight }) 19. Qa3 { No need to be rush to play a5-a6 etc. White can try to double the rooks first to pressure the b7-c6 structure } { [%csl Gb4,Gc5][%cal Gb2b4,Gc1c5] } 19... a6 20. Rc3 Qc7 21. Rbc1 Ra8 22. Nd2 { Control the c4 point first. Now white can play b2-b4 and followed by b5 without the refusal of Nc4 } { [%csl Gb4,Gb3,Gc4,Gb6][%cal Gb2b4,Gd2b3,Gd2c4] } 22... a5 { [%csl Gb7,Ga4,Gb6][%cal Gb2b4,Gc3b3,Ga5b4,Gb1b6] } 23. Rb1 { b2-b4, Nb3-c5, a5-a6 breaking up the queenside } { [%cal Gb2b4] } 23... Nc8 24. b4 axb4 25. Qxb4 { [%csl Gc5,Gb3,Gb7,Ga4][%cal Gd2b3,Gb3c5] } 25... Nd6 26. Nb3! Bc8 27. a5 Ne7 28. Ng3! { Before taking actions, prevent black's all kinds of freeing ideas such as Bf5 } { [%csl Gf5][%cal Gc8f5] } 28... g6 { [%csl Gc5,Ga5] } 29. Rcc1 { [%csl Gf5][%cal Ge6f5] } (29. Ra1!) 29... h5 { This is bad because of creating another weakness. If there is only one weakness on the queenside, it might be hard to exploit that. } { [%csl Gh5,Gg3,Gg4,Gb7,Gc6,Gd5][%cal Gc8b7] } (29... Nef5 30. Nxf5 Bxf5 31. Bxf5 { Be2 cannot be played here because of the b1 rook } 31... Nxf5 32. Nc5 Reb8 $14 { White only has a slight advantage because it might be hard to win with only one weakness on queenside. } { [%csl Gb8,Gh6] }) 30. Ra1! { [%csl Gb1,Gd3,Gc5][%cal Gc8f5,Gf5b1,Gb3c5] } 30... h4 (30... Nef5 31. Nxf5 Bxf5 32. Be2) 31. Nf1 Bf5 32. Be2! { Black wastes a move rather than immediate Nef5 so that white's rook has time to escape the pin . } { [%csl Gh4] } 32... Ne4 33. Nc5 Nxc5 34. Qxc5 Be6 35. Nd2 Nf5 36. Nf3 { Still not rushing to play a5-a6 until all the pieces are ready } { [%csl Gc6][%cal Gf3e5,Ge5c6,Ga5a6] } 36... Qd8 37. a6! { Eventually! } { [%csl Gc6] } 37... bxa6 38. Rxa6 Rxa6 39. Bxa6 Qa8 (39... Bd7 40. Bd3 Ng7 { [%csl Gh4] } 41. Ne5 Re6 42. Qa7 Be8 43. Rb1 { And white is dominating } { [%csl Gb8][%cal Gb1b8] }) 40. Qxc6 Qxc6 41. Rxc6 Ra8 42. Bd3 { 1-0 h4 pawn also loses } { [%csl Gh4][%cal Gd3f5,Gf3h4] } *
+
+
+[Event "Strategy: Chapter 56"]
+[Date "2024.04.23"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A56"]
+[Opening "Benoni Defense: King's Indian System"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 56"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/BG5inMcI"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.04.23"]
+[UTCTime "00:26:36"]
+
+{ Wait. The idea of g3 etc. }
+1. d4 Nf6 (1... c5 2. d5 e6 3. e4 (3. c4 exd5 4. cxd5 d6 5. e4 Be7 6. Nc3 Bg5) 3... Be7 4. Nc3 d6 { [%csl Gg5][%cal Ge7g5] } 5. Nf3 h6) 2. c4 c5 3. d5 e5 4. Nc3 d6 5. e4 g6 6. Nf3 Bg7 7. Bg5 { [%cal Gb8a6] } 7... Na6 { [%cal Ga6c7] } (7... h6 8. Bh4 g5 9. Bg3 Nh5 { [%csl Gf4][%cal Gh5f4] }) 8. Be2 Nc7 9. Nd2 Bd7 (9... a6 10. a4 b6 11. a5 { [%cal Gb6b5] } 11... bxa5 12. Nb3!? { [%csl Gc6][%cal Gb3a5,Ga5c6] }) 10. a4 b6 { [%csl Gb5,Gc3,Gc7][%cal Ga7a6,Gb6b5] } 11. Nb5! { [%csl Ga5][%cal Ga4a5] } 11... Bxb5 (11... Bc8 { [%csl Ga5] } 12. a5) 12. cxb5! { [%csl Gc4][%cal Gd2c4] } 12... O-O 13. b4 { [%csl Gb4,Gc6][%cal Gc5b4,Ga1c1,Gc1c6] } 13... h6 14. Bxf6! Qxf6 15. O-O Rfd8 16. Nc4 Bf8 17. g3! { Answer bxc5, dxc5 with f2-f4 } 17... cxb4 18. Qb3 { Now no need to play f2-f4. He can win with limited risk by plying on the c-file } 18... Kg7 19. Rfc1 h5 20. Ne3 Ne8 21. Qxb4 Rdc8 22. Rc6 Qd8 23. Rac1 Nf6 24. Bf1! { [%cal Gf1h3] } 24... Rcb8 25. Bh3 a6 { [%csl Gb4] } 26. Re1! (26. Kh1 axb5) 26... axb5 27. axb5 Nh7 28. Nc4 Ra2 { [%csl Ge3][%cal Gb4c3,Gc3e3] } 29. Bg2 (29. Qb3 { [%csl Ge3][%cal Gb3e3] }) 29... Qf6 30. Rf1 Ng5 { [%csl Gf3][%cal Gg5f3] } 31. Qb3! { [%csl Gf3,Gb6][%cal Gg5f3,Gb3e3,Ge3b6] } 31... Rba8 32. h4 Nh7 33. Rxb6 Ra1 34. Rc6 { [%csl Gf1][%cal Gb5b8] } 34... R8a2 35. Qe3 Qd8 36. Rxa1 Rxa1+ 37. Kh2 Nf6 38. f3 Qb8 39. Qb3 Nd7 40. b6 Nc5 41. Qb2 Ra4 42. Qb5 Ra2 43. Rc7 g5 44. Ne3 gxh4 45. Nf5+ Kg8 46. gxh4 Ra6 47. b7 Ra7 48. Rc8 Qxb7 49. Qe8 Nd7 50. Nxd6 *
+
+
+[Event "Strategy: Chapter 57"]
+[Date "2024.05.01"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "E32"]
+[Opening "Nimzo-Indian Defense: Classical Variation, Keres Defense"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 57"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/eFT29jPQ"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.05.01"]
+[UTCTime "22:42:59"]
+
+{ Art of trades. pawn ram with positional shifts. }
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Qc2 O-O 5. a3 Bxc3+ 6. Qxc3 b6 7. Bg5 Bb7 8. f3 h6 9. Bh4 d5 10. e3 Nbd7 11. cxd5 Nxd5 12. Bxd8 Nxc3 13. Bh4 Nd5 { [%csl Ge4,Gf4] } 14. Bf2 { [%csl Ga7][%cal Gf2b6] } 14... c5 { [%csl Gd4] } 15. e4 Ne7 16. Ne2 Rac8 17. Nc3 cxd4 18. Bxd4 Nc5 19. Rd1 Rfd8 20. Be3 Rxd1+ 21. Kxd1 e5 22. b4 Ne6 23. Kc2 Nc6 24. Kb2 { [%csl Gb6,Ga7][%cal Ge3a7] } 24... Kf8 25. Bc4 { [%csl Gc6] } 25... Ncd4 26. Bxe6 Nxe6 { [%csl Gb6,Ga7,Ge4,Gf3,Gg2,Ge3,Gb7] } 27. Nb5 Ra8 28. a4! Ba6 29. Na3 { [%csl Gc4][%cal Ga6c4] } 29... Rc8 30. b5! Bb7 31. Rc1! Rxc1 32. Kxc1 Ke7 33. a5! bxa5 34. Bxa7 f5 35. exf5 Nf4 36. g3 Nh3 37. Nc4 Ng5 38. Nxa5 Bd5 39. b6 Nxf3 40. h3 Ng5 41. b7 Bxb7 42. Nxb7 Nxh3 43. Bb6! { The idea is to stop Kf6. Ng5 is also indirectly stopped } { [%csl Gf6,Gd8][%cal Gh3g5,Ge7f6,Gb6d8] } 43... Kd7 44. Be3! { Now the king does not go to f6 } 44... Ke7 45. Nc5 { [%csl Gf6,Gf4,Gg4,Gh5,Ge4] } 45... g6 46. fxg6 Kf6 47. Bxh6 Kxg6 48. Be3 { 1--0 } { [%csl Gd3][%cal Gg6f5] } 48... Kf5 { [%csl Gd3,Gg4,Ge5] } 49. Kd2 Kg4 50. Ne4 { [%csl Gh3][%cal Ge4f6,Gg3g4,Gg4g5,Gh3g5,Gh3f4,Gh3f2,Gh3g1] } *
+
+
+[Event "Strategy: Chapter 58"]
+[Date "2024.05.02"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "E32"]
+[Opening "Nimzo-Indian Defense: Classical Variation, Keres Defense"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 58"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/lc2lFkmI"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.05.02"]
+[UTCTime "02:27:58"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Qc2 O-O 5. a3 Bxc3+ 6. Qxc3 b6 7. Bg5 Bb7 8. f3 h6 9. Bh4 d5 10. e3 Nbd7 11. cxd5 Nxd5 12. Bxd8 Nxc3 13. Bh4 Nd5 14. Bf2 c5 15. Bb5 N5f6 16. Ne2 a6 17. Ba4 cxd4 18. Nxd4 { [%csl Ge4][%cal Ge6e4] } 18... Nc5 19. Bc2 { 1. continuous pressure on b6
+2. b7 bad bishop
+3. better knights position (b2-b4)
+4. better king's position } { [%csl Ge1,Gd1,Gb6,Ge4,Gf3][%cal Ge1c1,Gh1e1,Gf2b6,Ge3e4,Gb7f3] } 19... e5 { 2 } 20. Nf5 Rfd8 21. Bh4! { Bi fear of d3 check } { [%csl Gh6][%cal Gf5h6] } 21... Nd3+ 22. Ke2 Nxb2 23. Rhb1 Nc4 24. Bd3! Nd6 25. Nxh6+ Kf8 26. Bxf6 gxf6 27. Rxb6 Bc8 28. Rc1 Be6 29. Rcc6 Ke7 30. e4 Nb5 31. Ke3 Nxa3 32. Nf5+ Kf8 33. Bxa6 Rd1 34. Be2 Ra1 35. Rb2 Rd8 36. h4 Nb1 37. Kf2 Nd2 38. Rd6! { 1-0 } { [%csl Gb2,Gb8,Ge7,Gf7,Gg7][%cal Gd8d6,Gb1b8] } *
+
+
+[Event "Strategy: Chapter 59"]
+[Date "2024.05.10"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C98"]
+[Opening "Ruy Lopez: Closed, Chigorin Defense"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 59"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/bUAaDjUM"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.05.10"]
+[UTCTime "00:27:15"]
+
+{ A complete plan against high weak pawns }
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Be7 6. Re1 b5 7. Bb3 d6 8. c3 Na5 9. Bc2 c5 10. d4 Qc7 11. Nbd2 O-O 12. h3 Nc6 13. d5 Nd8 14. a4 b4 15. Nc4 a5 { [%csl Ge5,Gd6] } 16. Nfxe5 Ba6 17. Bb3 dxe5 18. d6 Bxd6 19. Qxd6 (19. Nxd6 c4) 19... Qxd6 20. Nxd6 Nb7 21. Nxb7 Bxb7 22. cxb4 cxb4 23. f3 { [%csl Gf3,Ge4,Gh2][%cal Gc8b7,Gb7h1] } 23... Rfd8 24. Be3 { [%csl Gd3,Gc4] } 24... h6 25. Red1 Bc6 26. Rac1 Be8 27. Kf2 Rxd1 28. Rxd1 Rc8 { Important position } { [%csl Gg4] } 29. g4 { If Bb6, then Nd7 - c5 idea is strong. The idea of g4 is to play h4-g5 and play Bb6 without Nd7. If Nd7, then Rd5 } (29. Bb6? Nd7 30. Bxa5 Nc5) 29... Bd7 { [%csl Ga5,Gb4] } (29... Rb8 30. Rc1 Nd7 31. Rc7 Nf8 32. Rc5 Ra8 33. Bd5 { [%csl Ga5] }) (29... Kf8 30. h4 Nd7 31. Rd5! { [%csl Ga5,Gf5,Ge5][%cal Gd5a5] }) 30. Bb6 { [%csl Gd7][%cal Gf6d7] } 30... Be6 31. Bxe6 fxe6 { [%csl Ga5][%cal Gb6a5] } 32. Rd8+! Rxd8 33. Bxd8 Nd7 34. Bxa5 Nc5 35. b3! Nxb3 36. Bxb4 Nd4 37. a5 { 1-0 } *
+
+
+[Event "Strategy: Chapter 60"]
+[Date "2024.05.10"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A42"]
+[Opening "Modern Defense: Kotov Variation"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 60"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/I00MMApP"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.05.10"]
+[UTCTime "00:32:46"]
+
+{ Play against weaknesses with active pieces. Cat and mouse game, inducing weaknesses and make use of it. }
+1. c4 g6 2. e4 Bg7 3. d4 d6 4. Nc3 Nc6 5. Be3 e5 6. d5 Nce7 7. c5 f5 8. cxd6 cxd6 9. Bb5+! { [%csl Ge4,Gd5,Gb5] } 9... Bd7? (9... Kf8) 10. Bxd7+ Qxd7 11. f3 Nf6 12. Nh3! h6 13. Nf2 O-O 14. Qa4! Qxa4 15. Nxa4 Rac8 16. Nc3 a6 17. Ke2! Kh7 18. Rac1 Nd7 { 马在打b7-a6结构时候去c4比较多 } { [%csl Gg7,Gd6,Ge4,Ge3,Gc3,Ge7,Gb1][%cal Gc3b1] } 19. Nb1! Rxc1 20. Rxc1 Rc8 21. Na3 Rxc1 22. Bxc1 h5 23. Nc4 Nc8 24. Bd2 { With Bb4, eliminating black's g7 bishop } { [%csl Gb4][%cal Gd2b4] } 24... Bf6 25. Na5! b6 26. Nc6 Kg7 27. Be3 Kf7 { [%csl Gc6] } 28. Nd3 Ke8 29. a4! { Inducing black to play a7-a5 and weakening the position. } 29... Bd8 { [%csl Ga5] } 30. Ndb4! { [%csl Ga5][%cal Ga6a5] } 30... a5 31. Na2!! { Now after inducing a6-a5, the knight goes to b5 } { [%csl Gb5][%cal Ga2c3,Gc3b5] } 31... f4 32. Bf2 g5 33. Kd3! { King going to a6 before Na2-c3-b5 } 33... Nf8 34. h3 Ng6 { [%csl Ga6,Gb5][%cal Ga2c3,Gc3b5] } 35. Nc3 Bf6 36. Kc4 Kd7 37. Kb5 Kc7 38. Ka6 g4 39. hxg4 hxg4 40. fxg4 Bh4 { [%csl Gb5][%cal Gc3b5] } 41. Nd1! { Preventing all kinds of threat against g2 } 41... Bxf2 42. Nxf2 Nce7 (42... Nh4 43. g5 Ng6 44. Nd3 { [%csl Gf3][%cal Gd3e1,Ge1f3] }) 43. Nxe7 Nxe7 44. g5 Ng6 45. Ng4 Nh4 46. Ka7 Ng6 47. Nh2! { Now black is forced to Zugzwang } { [%csl Gh4][%cal Gh2f3,Gf3h4] } 47... Nh4 48. Nf3! Ng6 49. b3! { 1-0 Beautiful ending. } { [%csl Gg6][%cal Gg6e7,Gf3h4] } *
+
+
+[Event "Strategy: Chapter 61"]
+[Date "2024.05.10"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C71"]
+[Opening "Ruy Lopez: Morphy Defense, Modern Steinitz Defense"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 61"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/GtTbjrSc"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.05.10"]
+[UTCTime "19:43:48"]
+
+{ Excellent defend by Capablanca to neutralize white’s space advantage. Trade pieces and use small combinations. Also note the importance of f7-f5 } { [%csl Gb5] }
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 d6 5. c4 Bd7 6. Nc3 g6 7. d4 exd4 8. Nxd4 Bg7 9. Be3 Nge7 10. O-O O-O 11. h3 Nxd4! { Trade pieces in cramped position } 12. Bxd7 Ne2+! { Logical in-between move. White will either play Qxe2, forgetting about the plan of Bd4, or place the knight on a bad square. } 13. Nxe2 Qxd7 14. Bd4 Bxd4 15. Qxd4 (15. Nxd4 Nc6) 15... Qc6 (15... Nc6 16. Qd5 Rae8 17. Nc3 Qe6! { Clear the way for f7-f5, but also trade queens. } 18. Rad1 f5! 19. exf5 Rxf5 20. Rde1 Rxd5 21. Rxe6 Re5! 22. Rxe8+ Rxe8 23. Rd1 Kf7 { King is going to defend d6 after c7-c6 is playedd } 24. Kf1 Ne5! 25. b3 Nd7 { Excellent maneuvering. The knight is about to go to f6 is guard f6. } 26. Nd5 c6! { Though weakening, black’s pieces are not tied down Black’s rook will not be stuck on c7 allowing Re1-e7 } (26... Rc8?! 27. Re1! { And the check on e7 is unavoidable unless Ne5-c6 get the knight back to the bad square. }) 27. Nf4 Re4! { Another little combination. Indirectly protect d6 pawn and put the king behind the rook. } 28. g3 Ke7 29. Ne2 Nc5 30. f3 Re3 31. Kf2 Rd3 32. Rxd3 Nxd3+ 33. Ke3 Nb4 { 1/2-1/2 }) *
+
+
+[Event "Strategy: Restraint"]
+[Date "2024.05.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B00"]
+[Opening "Pirc Defense"]
+[StudyName "Strategy"]
+[ChapterName "Restraint"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/4q6PMeqZ"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.05.11"]
+[UTCTime "16:35:32"]
+
+1. e4 d6 2. Nc3 Nf6 3. f4 e5 4. Nf3 Nbd7 5. d4 exd4 6. Nxd4 Be7 7. Bc4 O-O 8. O-O a6 9. Nf5 Nc5 10. Ng3 b5 11. Bd3 (11. Bb3 Bb7) 11... b4 12. Nd5 Nxd5 13. exd5 f5! 14. a3 bxa3 15. Rxa3 Rb8 16. c3 Bh4 17. Qf3 Bxg3! 18. Qxg3 Re8 19. Bc2 Qf6 20. b4 Ne4 21. Qd3 { How to stop white’s plan of Be3 and d4? Pressuring d5 } 21... Qf7! 22. Be3 Nf6 23. Bb3 Bb7 24. Rd1 (24. c4 Bc8! 25. Bd2 Ne4 26. Be1 Qf6 { Back and force. Now with the disappearance of c3 pawn by advancing to c4, the bishop is no longer going to d4 }) 24... Bxd5 25. Bxd5 (25. Qxd5) 25... Nxd5 (25... Qxd5 26. Qxd5+ Nxd5 27. Ba7 Ne3 28. Rd3 Ng4 29. Rd1 Ra8 30. Bd4 Re4) 26. Qxd5 (26. Ba7) 26... Qxd5 *
+
+
+[Event "Strategy: Chapter 64"]
+[Date "2024.05.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B01"]
+[Opening "Scandinavian Defense: Modern Variation, Gipslis Variation"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 64"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/89vnhjJT"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.05.11"]
+[UTCTime "16:37:01"]
+
+1. e4 d5 2. exd5 Nf6 3. d4 Nxd5 4. Nf3 (4. c4 Nf6 5. Nc3 e5) 4... Bg4 5. Be2 c6 6. O-O e6 7. c4 Nf6 8. Nc3 Nbd7 9. h3 Bh5 10. Bf4 (10. d5! exd5 11. cxd5 Bc5 12. dxc6 bxc6 13. Nh4 Bg6 14. Bf3 O-O $14) 10... Nb6 { Eliminate d5 } 11. Qd3 (11. d5 exd5 12. cxd5 Nbxd5) 11... Be7 12. Rad1 O-O 13. Ne5 (13. Rfe1 Bg6 14. Qe3 Nbd7 15. Nh4 { I prefer this plan. keep the light-square bishop and trade opponent’s with the knight. }) 13... Bxe2 14. Qxe2 Nc8! { Trying to get the queen to a5 } 15. Rd3! { Still trying d4-d5 } 15... Qa5 16. a3 Nd6 17. Bg5 Rad8 18. Rfd1 Qa6?! { Idea is to eliminate by attacking on c4 } (18... Rfe8) 19. c5 (19. d5 cxd5 20. cxd5 Nxd5 21. Rxd5 Qxe2 22. Nxe2 f6 23. R5d3 fxg5) (19. Ng4! Kh8 20. Bxf6 Bxf6 (20... gxf6) 21. Nxf6 gxf6 22. Qf3 f5 23. Qe3 Rg8 $14 (23... Qxc4 24. Qe5+ (24. b3 Qa6 25. d5 cxd5 26. Qd4+ (26. Qe5+ f6 27. Qxe6) 26... f6))) 19... Nf5 20. Qf3 Nd5 21. Nxd5 (21. Bxe7 Ndxe7 22. g4 Nh6 23. Ne4 (23. Qe3) 23... f6) 21... Rxd5 22. Bxe7 Nxe7 23. Qe4 Ng6 24. f4 Rfd8 (24... f5 { This is my idea } 25. Qe2 (25. Qf3 Nxe5 26. dxe5 Qa4)) 25. Kh2 Nxe5 26. fxe5 b6! 27. cxb6 axb6 28. Rg3 c5 29. Qh4 g6 30. Rf1 Qxf1 *
+
+
+[Event "Strategy: Chapter 62"]
+[Date "2024.05.10"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A46"]
+[Opening "Torre Attack: Classical Defense"]
+[StudyName "Strategy"]
+[ChapterName "Chapter 62"]
+[ChapterURL "https://lichess.org/study/0SV82Yyi/a2CDOqe7"]
+[Annotator "https://lichess.org/@/SteinitzChessSMCA"]
+[UTCDate "2024.05.10"]
+[UTCTime "19:52:15"]
+
+1. d4 Nf6 2. Nf3 e6 3. Bg5 d5 4. Nbd2 Be7 5. e3 Nbd7 6. Bd3 c5 7. c3 b6 8. O-O Bb7 9. Ne5 Nxe5 10. dxe5 Nd7 11. Bf4 (11. Bxe7 Qxe7 12. f4) 11... Qc7 12. Nf3 h6! { Try to make use of the awkward bishop on f4 } 13. b4! g5 (13... cxb4 14. cxb4 Bxb4 15. Nd4) 14. Bg3 h5 15. h4 { Inducing g5-g4. Using pawn ram to stop black’s pawn from rolling forward. } 15... gxh4 16. Bf4 O-O-O 17. a4? { Now the queenside pawn ram will be neutralized. } (17. bxc5! bxc5 (17... Nxc5 18. Nd4 { With no Nxe5 anymore, the knight goes to d4 }) 18. Rb1) 17... c4 18. Be2 a6!! { A good evaluation is made by Petrosian:
+The e5 pawn tied down white’s knight so it is hard to get to d4
+Black can focus on the kingside attack because now all white’s attack on the queenside is blocked/ } 19. Kh1 Rdg8 20. Rg1 Rg4 21. Qd2 Rhg8 22. a5 b5 23. Rad1 Bf8 24. Nh2 Nxe5 { Now exchange sacrifice is made. } 25. Nxg4 hxg4 26. e4 Bd6 27. Qe3 Nd7 28. Bxd6 Qxd6 29. Rd4 e5 30. Rd2 f5! 31. exd5 (31. exf5 Nf6! { H3 gxh3 and d4 is happening }) 31... f4! 32. Qe4 Nf6 33. Qf5+ Kb8 34. f3 Bc8 35. Qb1 g3 36. Re1 h3 37. Bf1 Rh8 38. gxh3 Bxh3 39. Kg1 Bxf1 40. Kxf1 e4! 41. Qd1 (41. fxe4 f3) 41... Ng4! 42. fxg4 f3 43. Rg2 fxg2+ { 0-1 } *
+
+

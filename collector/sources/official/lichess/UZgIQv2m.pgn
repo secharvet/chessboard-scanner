@@ -1,0 +1,18 @@
+[Event "Mar del Plata"]
+[Site "Mar del Plata ARG"]
+[Date "1960.03.31"]
+[Round "3"]
+[White "Robert James Fischer"]
+[Black "Olicio Gadia"]
+[Result "1-0"]
+[Variant "Standard"]
+[ECO "B87"]
+[Opening "Sicilian Defense: Sozin Attack, Flank Variation"]
+[StudyName "EricRosen's Study"]
+[ChapterName "Robert James Fischer - Olicio Gadia"]
+[ChapterURL "https://lichess.org/study/UZgIQv2m/zaphxGTQ"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bc4 e6 7. Bb3 b5 8. O-O Bb7 9. f4 Nc6 10. Nxc6 Bxc6 11. f5 e5 12. Qd3 Be7 13. Bg5 Qb6+ 14. Kh1 O-O 15. Bxf6 (15. Nd5 Nxd5 16. Bxe7 Nxe7) 15... Bxf6 16. Bd5 (16. Qxd6 Rad8 17. Qa3 b4) (16. Nd5 Bxd5 17. Bxd5) 16... Rac8 17. Bxc6 Rxc6 18. Rad1 Rfc8 19. Nd5 Qd8 20. c3 Be7 21. Nxe7+ (21. Ra1 f6 (21... Rc4 22. b3 R4c6 23. a4) (21... Bf6 22. a4 bxa4 23. Rxa4) 22. a4 Rb8 (22... bxa4 23. Rxa4) 23. Nxe7+ Qxe7 24. Qd5+) 21... Qxe7 22. f6 gxf6 1-0
+
+

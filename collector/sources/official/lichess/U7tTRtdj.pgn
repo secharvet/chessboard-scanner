@@ -1,0 +1,446 @@
+[Event "Rooks | Infiltrate for activity!: Introduction"]
+[Date "2022.04.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Rooks | Infiltrate for activity!"]
+[ChapterName "Introduction"]
+[ChapterURL "https://lichess.org/study/U7tTRtdj/ab7FrG09"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "7r/ppp1ppkp/6p1/8/8/6P1/PPP1PPKP/3R4 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2022.04.11"]
+[UTCTime "22:49:14"]
+[ChapterMode "gamebook"]
+
+{ Welcome to another instructive study by NoseKnowsAll. This interactive study is for players 1500-2200 lichess, taking you through an important middlegame strategical concept: rook infiltration. Let's see how we can improve our rooks to their utmost on open files and penetrate to the 7th rank! Importantly, we'll also learn how best to stop our opponent's rooks from infiltrating against us as well.
+
+Please check out my other middlegame strategy studies as well:
+* Knights | How to dominate your opponents! https://lichess.org/study/kI8ikTU4
+* Bishops | Slice through the opposition! https://lichess.org/study/kNn68T8l
+* Always sacrifice the exchange! https://lichess.org/study/h3ccaYFE
+
+Throughout this study, I will also provide general middlegame tips that these positions showcase. Whenever this general advice occurs, I'll write it just like this:
+
+PRO TIP: Pigs on the 7th are often worth more than a pawn!
+
+If you find this study useful, please heart it and share it with any friends! }
+ *
+
+
+[Event "Rooks | Infiltrate for activity!: Heaven: the 7th rank"]
+[Date "2022.04.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Rooks | Infiltrate for activity!"]
+[ChapterName "Heaven: the 7th rank"]
+[ChapterURL "https://lichess.org/study/U7tTRtdj/W058WaWy"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "7r/ppp1ppkp/6p1/8/8/6P1/PPP1PPKP/3R4 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2022.04.11"]
+[UTCTime "22:49:14"]
+
+{ The dream for every rook is to be able to land on the 7th rank (2nd if you're black) and gobble up all of your opponent's undefended pawns. Here we have a simple example where white can do just that. }
+1. Rd7! { The rook lands with a thud on the 7th rank and all black's pawns are targeted. } { [%cal Rd7c7,Rd7e7] } (1. Kf3? { We cannot delay our 7th rank infiltration: } 1... Kf6 2. Rd7 Rc8 $10 { With Ke6 coming next, our rook will be thrown out of heaven, and the position remains equal. } { [%cal Gf6e6] }) 1... Kf6 (1... Rc8!? { Another try by black } 2. Rxe7 Kf6 3. Re3 { Yes our rook is evicted off the 7th rank, but the extra pawn will win the game. } 3... Rd8 4. Rd3! $16 { No open file for you! }) 2. Rxc7 Rd8 { Black can try to get to our 7th rank too, but the damage has already been done. } 3. Rxb7 Rd2 4. Rc7 { [%cal Bc7c2] } 4... Rxe2 5. Kf3 Rd2 6. Ke3 $18 { Black's rook gets kicked off the 2nd rank, white will remain up at least 2 pawns, and the extra queenside pawns will win the game. } *
+
+
+[Event "Rooks | Infiltrate for activity!: The real infiltration rank"]
+[Date "2022.04.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Rooks | Infiltrate for activity!"]
+[ChapterName "The real infiltration rank"]
+[ChapterURL "https://lichess.org/study/U7tTRtdj/xqKNe3Yf"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "7r/8/ppp1ppkp/6p1/8/6P1/PPP1PPKP/3R4 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2022.04.11"]
+[UTCTime "22:49:14"]
+
+{ There's nothing inherently special about the 7th rank. What the rook really wants to do is attack all of the opponent's weaknesses. }
+1. Rd6! { In this case, it should be clear that the rook actually wants to infiltrate to the 6th rank, where all of black's pawns are waiting to be picked off. } { [%cal Rd6e6,Rd6c6] } (1. Rd7?! { The rook does nothing on the 7th rank since there are no targets there. } 1... Rh7 2. Rd6 $16 { Thankfully, white can recover from this inaccuracy and transpose to the main line. }) 1... Rc8 2. Rxe6 Kf7 3. Re3 Rd8 4. Rd3 $16 { No infiltration for you! } *
+
+
+[Event "Rooks | Infiltrate for activity!: Capablanca gets \"pigs on the 7th\""]
+[Date "1927.02.20"]
+[Round "2"]
+[White "Aron Nimzowitsch"]
+[Black "Jose Raul Capablanca"]
+[Result "0-1"]
+[Termination "Resignation"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Rooks | Infiltrate for activity!"]
+[ChapterName "Capablanca gets \"pigs on the 7th\""]
+[ChapterURL "https://lichess.org/study/U7tTRtdj/actAi6nW"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "2rr1bk1/p4ppp/1p2p3/8/1P1B4/Pq2P1P1/4QP1P/R3R1K1 b - - 6 25"]
+[SetUp "1"]
+
+{ We join a Capablanca game where his rooks are both on open files, while Nimzowitsch's rooks are doing nothing. Feel free to check out the opening here: https://lichess.org/MaXvWKZo
+
+The first step is infiltration. }
+25... Rc2 26. Qa6? (26. Qd1! { A saving move. It's very dangerous to walk into pins, but in this case the tactics barely work out for white: } 26... e5? 27. Re2! $16 { Who's pinning whom? }) 26... e5! { A brilliant pawn sacrifice! Capablanca's sole wish is to get two rooks on the 7th rank, and this bishop is the only thing in his way. } 27. Bxe5 Rdd2 { Two rooks on the 7th rank form one of the strongest attacking duos in the game. Some fans affectionately call them "pigs on the 7th" because they just munch up everything in their path.
+PRO TIP: Pigs on the 7th are often worth more than a pawn! } 28. Qb7? (28. Rf1?? { The move you want to make fails spectacularly: } 28... Qxe3!! 29. fxe3 Rg2+ 30. Kh1 Rxh2+ 31. Kg1 Rcg2# { The power of the pigs revealed! }) (28. Qf1! Qe6 29. Bf4 Rxf2 30. Qxf2 Rxf2 31. Kxf2 h6 $17 { Much better than the game, but Capablanca is clearly in control here as well. }) 28... Rxf2 { First the pigs snack on the f pawn. } 29. g4 { (Meanwhile Nimzowitsch desperately defends his h pawn...) } { [%cal Be5h2] } 29... Qe6 { [%cal Re6e5,Re6g4] } 30. Bg3 Rxh2! { Then the pigs snack on the h pawn. } 31. Qf3 (31. Bxh2?? Qxg4+ 32. Kh1 Qh3 $19 { And mate on h2 or g2 is unavoidable. } { [%cal Gh3g2,Gh3h2] }) 31... Rhg2+ { Finally the pigs win the queen. } 32. Qxg2 Rxg2+ 33. Kxg2 Qxg4 $19 { After winning the queen for two rooks, Capablanca shows how dominant the queen can be against the rooks when king safety is a major issue. I'll leave the rest of the game for you to enjoy below even though it no longer has to do with rook infiltration. } 34. Rad1 h5 35. Rd4 Qg5 36. Kh2 a5 37. Re2 axb4 38. axb4 Be7 39. Re4 Bf6 40. Rf2 Qd5 41. Re8+ Kh7 $19 { White resigned since the threat of h4 is unstoppable, white's king remains in serious danger, and the rooks have no obvious targets to attack. } 0-1
+
+
+[Event "Rooks | Infiltrate for activity!: Exercise 1: Release the pigs!"]
+[Date "2022.04.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Rooks | Infiltrate for activity!"]
+[ChapterName "Exercise 1: Release the pigs!"]
+[ChapterURL "https://lichess.org/study/U7tTRtdj/7rSlf2w8"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "8/Q4pkp/6p1/8/5qP1/7P/P1r1rP2/R4RK1 b - - 0 2"]
+[SetUp "1"]
+[UTCDate "2022.04.11"]
+[UTCTime "22:49:14"]
+[ChapterMode "gamebook"]
+
+{ Black's queen is more active than her counterpart, and black's rooks are already doubled on the 7th. But where's the win? }
+2... Qg3+! 3. fxg3 { Excellent find! Now finish white off in style. } (3. Kh1 Qxh3+ 4. Kg1 Qxg4+ 5. Kh1 Re5 $19 { [%cal Ge5h5] }) 3... Rg2+ 4. Kh1 Rh2+ 5. Kg1 Rcg2# { A beautiful queen sacrifice to release the power of the pigs on the 7th! } *
+
+
+[Event "Elista Grand Prix"]
+[Date "2008.12.22"]
+[Round "8"]
+[White "Ivan Cheparinov"]
+[Black "Evegeny Alekseev"]
+[Result "*"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Rooks | Infiltrate for activity!"]
+[ChapterName "Exercise 2: Finishing touch"]
+[ChapterURL "https://lichess.org/study/U7tTRtdj/1eiOCudl"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "bq2rb2/3Rrpk1/6pp/2p1p3/1PB1P3/5QPP/1B3P2/3R2K1 w - - 0 33"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+{ GM Cheparinov has built up a fantastic attack on black's king and already infiltrated to the 7th rank. White is clearly winning, but can you finish black off? }
+33. Qxf7+!! (33. b5 $18 { A winning move, but it has nothing to do with black's king. Get violent! }) (33. Rxe7? { Don't trade your active rook on d7 for black's passive rook on d8! } 33... Rxe7 $16) (33. Bxf7! $18 { Nice. After Rxd7 Rxd7 Re7, white is still winning. But Cheparinov had something much more violent in mind. }) (33. R1d6 { A winning move, but black can sacrifice their queen for this rook to bail out a little. Get violent! } 33... Qxd6 34. Rxd6 Kh8 35. Bxf7 Bxe4 36. Qxe4 Rxf7 37. Bxe5+ $18) 33... Rxf7 { Have you gone mad? That's your queen you just sacrificed! } 34. Rxf7+ Kh8 35. Rdd7 $18 { Exactly! White gets pigs on the 7th and the only way for black to stop the mate threats is to bleed material. Black resigned. } *
+
+
+[Event "Rooks | Infiltrate for activity!: Exercise 3: Active defense"]
+[Date "2022.04.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Rooks | Infiltrate for activity!"]
+[ChapterName "Exercise 3: Active defense"]
+[ChapterURL "https://lichess.org/study/U7tTRtdj/uBw0clT4"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "5rk1/R4pp1/p3p2p/1p6/8/P3P2P/1P3PP1/6K1 b - - 1 2"]
+[SetUp "1"]
+[UTCDate "2022.04.11"]
+[UTCTime "22:49:14"]
+[ChapterMode "gamebook"]
+
+{ The position is desperate as our a pawn is destined to fall. Can you keep the position level? }
+2... Rc8! (2... Rd8! { Just as good. Play Rc8 instead for the solution. }) 3. Rxa6 Rc1+ (3... Rc2? $16 { Too early. After b4, all of white's pawns are defended. Can you improve on this idea? }) 4. Kh2 Rc2 $10 { Fantastic! One of white's pawns on the 7th rank will fall and the game remains equal. } *
+
+
+[Event "Rooks | Infiltrate for activity!: Exercise 4: Creating pigs"]
+[Date "1979"]
+[White "Konstantin Lerner"]
+[Black "Adrian Mikhalchishin"]
+[Result "*"]
+[WhiteElo "2475"]
+[WhiteTitle "GM"]
+[BlackElo "2480"]
+[BlackTitle "GM"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Rooks | Infiltrate for activity!"]
+[ChapterName "Exercise 4: Creating pigs"]
+[ChapterURL "https://lichess.org/study/U7tTRtdj/PTOUuoVo"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "3r3k/2Rb4/2p5/P1R4P/4P1p1/8/rP3PK1/8 w - - 0 1"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+{ A more difficult puzzle. We have three pawns for the piece, but our true advantage lies in the activity of our rooks. Can you create something tangible from this? }
+1. Re5! Be8 { I hope you noticed that black's Re8?? failed to Rxe8+ Bxe8, Rc8 with a decisive pin and win of the bishop. } (1... Re8? 2. Rxe8+ Bxe8 3. Rc8 $18) 2. Ree7! Rxa5?? { Black tries to eliminate the pawns, but allows a devastating finish. What threat did he overlook? } 3. Rh7+! Kg8 4. Rcg7+ (4. Rhg7+? $18 { Repeating moves does not get you anywhere. }) 4... Kf8 5. h6! $18 { Beautifully done! With Rh8# essentially unstoppable, black resigned.
+PRO TIP: Pigs on the 7th often need a helping hand in order to create a mating net. Once we play h6, there's no escaping our net! } { [%cal Gh7h8] } (5. Rh8+?? { Oh no your rook! } 5... Kxg7 $19) *
+
+
+[Event "Rooks | Infiltrate for activity!: Connecting your rooks"]
+[Date "2022.04.11"]
+[White "NoseKnowsAll"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Rooks | Infiltrate for activity!"]
+[ChapterName "Connecting your rooks"]
+[ChapterURL "https://lichess.org/study/U7tTRtdj/s9xBXP9n"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "1nrq1rk1/4bppp/p2p4/1p1Pp3/1N2P3/1P2BP2/P2Q2PP/2R2RK1 w - - 4 20"]
+[SetUp "1"]
+[UTCDate "2022.04.11"]
+[UTCTime "22:49:14"]
+
+{ In this position, both sides are doing well to stop their opponent's rook from infiltrating on the c file, but there's a crucial problem in black's position: black's rooks are not connected. } { [%cal Bc1c8,Bc8c1] }
+20. Rxc8! (20. Kh1? { Don't give black time to keep challenging the open c file! } 20... Qd7 $14 { Now that black can recapture on c8 with a rook, black's position has improved somewhat. Sure, it remains ugly, but white will need to do a lot more work to make any tangible progress. }) 20... Qxc8 { The queen is the worst piece to control an open file because she is so easy to kick around. } 21. Rc1 { White regains control of the open file. } 21... Qb7 22. Qc2 $16 { White cements their control of the c file forever. Qc7 is coming next, with decisive penetration on the 7th rank.
+PRO TIP: Once you have control of an open file, double on it in order to infiltrate to the 7th rank! } { [%cal Gc2c7] } (22. Kh1? { Don't give black time to challenge the open c file! } 22... Rc8 $14) *
+
+
+[Event "Rooks | Infiltrate for activity!: Controlling the open file"]
+[Date "2022.04.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Rooks | Infiltrate for activity!"]
+[ChapterName "Controlling the open file"]
+[ChapterURL "https://lichess.org/study/U7tTRtdj/V9yuittx"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "r1r2qk1/1p2bppp/p3pn2/3p4/3P1B2/1P1QPN1P/P4PP1/R1R3K1 b - - 0 2"]
+[SetUp "1"]
+[UTCDate "2022.04.11"]
+[UTCTime "22:49:14"]
+
+{ As we've seen before, any rook trade will leave the other player with control of the only open file. But black has a way to force the issue... } { [%cal Bc8c1,Bc1c8] }
+2... Ba3! { An important move! Once we control the c1 intersection square, there's no way for white to keep control of the c file. } (2... Rxc1+? 3. Rxc1 $10 { Giving up control of the only open file gives us nothing. }) 3. Rxc8 (3. Rc2!? { Black's queen and rooks are connected, so there's no way for white to keep a rook on the c file. } 3... Rxc2 4. Qxc2 Rc8 5. Qe2 $17 { Transposes to the main line. }) (3. Rd1!? Qb4 $17 { Black will double with Rc3 and Rac8 next. The c file is firmly in black's control. } { [%cal Gc8c3,Ga8c8] }) 3... Rxc8 { Black has firm control of the c file. The next step is infiltration on the 7th rank. } 4. Qe2 { White has one active try to keep a rook off of c2 } 4... Rc6 5. Rd1 Qc8 { Black is doubled and ready to infiltrate. } 6. Rd2? { White desperately tries to stop Rc2. } (6. Ne1 $17 { This passive move just to stop Rc2 is possibly best. White's pieces have all been moving backwards. }) 6... Ne4! { But black will not be denied! White now loses control of c2 by force. } 7. Rd1 Rc2 8. Qf1 Rxf2 $19 { Black's active pieces begin munching on every pawn on the 2nd rank.
+Control of an open file can often start you on a road to victory! } *
+
+
+[Event "Rooks | Infiltrate for activity!: Exercise 5: Squeak out an advantage"]
+[Date "2022.04.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Rooks | Infiltrate for activity!"]
+[ChapterName "Exercise 5: Squeak out an advantage"]
+[ChapterURL "https://lichess.org/study/U7tTRtdj/1tl44a1N"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "r1br2k1/1p3p1p/n1p3p1/p3q3/P1Q1P3/2N3P1/1P3PBP/3R1RK1 b - - 1 2"]
+[SetUp "1"]
+[UTCDate "2022.04.11"]
+[UTCTime "22:49:14"]
+[ChapterMode "gamebook"]
+
+{ At first glance, this might appear to be an even middlegame. but if you focus on controlling the d file, I'm sure you can figure out the correct sequence. }
+2... Be6! (2... Bg4 { Also good, but only if you respond to f3 by transposing to the main line. } 3. f3 $17) (2... Rxd1? { You just gave up the d file! } 3. Rxd1 $10) 3. Qe2 { Developing with tempo is a good start, but what's the point of this move? } 3... Bb3! $17 { Exactly! Now white is forced to give up control over the only open file. You can next plan to infiltrate on the d file. } (3... Qc5!? { A reasonable move that threatens Bc4, but after Rxd1+ Rxd1, Rd1 both sides equally control the d file. } 4. Rxd8+ Rxd8 5. Rd1 $15) *
+
+
+[Event "Rooks | Infiltrate for activity!: Exercise 6: Remove the defenders"]
+[Date "2022.04.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Rooks | Infiltrate for activity!"]
+[ChapterName "Exercise 6: Remove the defenders"]
+[ChapterURL "https://lichess.org/study/U7tTRtdj/8BGWy9Pu"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "r5k1/pp4pp/2bppr2/2n2p1q/2P5/P2P1NP1/4PPBP/1R1Q1RK1 w Qq - 0 1"]
+[SetUp "1"]
+[UTCDate "2022.04.11"]
+[UTCTime "22:49:14"]
+[ChapterMode "gamebook"]
+
+{ A tricky position. Black is building up for a kingside attack, but white is already poised for queenside play. How can you ensure your play hits first? }
+1. d4! Ne4 { In general, allowing this knight to sit on e4 is a dangerous idea, but there is a concrete follow-up that you had to see before playing your last move. } 2. d5 exd5 (2... Nc3? 3. Qd3 Nxb1 4. dxc6 $18 { [%csl Gb1] }) 3. cxd5 Bd7 (3... Nc3? 4. Qb3 $18) 4. Rxb7 $16 { Nice job! While it's clear that there is still work to do in order to defend against black's kingside assault, taking the b pawn and activating the rook was an important step to retain the advantage. } *
+
+
+[Event "FIDE Grand Prix"]
+[Site "Dubai UAE"]
+[Date "2002.04.07"]
+[Round "4.4"]
+[White "Teimour Radjabov"]
+[Black "Viswanathan Anand"]
+[Result "*"]
+[WhiteElo "2599"]
+[WhiteTitle "GM"]
+[BlackElo "2757"]
+[BlackTitle "GM"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Rooks | Infiltrate for activity!"]
+[ChapterName "Infiltration on the 8th"]
+[ChapterURL "https://lichess.org/study/U7tTRtdj/EPdzq6we"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "1q1r2k1/2r1bpp1/p3pn1p/8/p1PP4/3B1Q1R/5PPP/BR4K1 b - - 1 26"]
+[SetUp "1"]
+
+{ Rooks also love to infiltrate on the 8th rank, although there are no pawns there. Doubling on the 8th rank instead leads to kingside attacks and checkmate threats.
+
+Here's a spectacular example from previous World Champion, Viswanathan Anand. }
+26... Rxc4!! { This tactical blow must have come as quite a shock to Radjabov. } 27. Rxb8 (27. Bxc4?? Qxb1+ $19) 27... Rc1+ 28. Bf1 Rxb8 { Anand has seen that Rbb1 is an unstoppable follow-up, hitting both bishops and threatening back-rank mate. } { [%cal Gb8b1] } 29. Bc3 Rbb1 { Anand's pigs arrive on the 8th! } 30. Qd3 { Radjabov has successfully defended the f1 bishop, but there's one more trick to the position. } { [%cal Bd3f1] } 30... a3! { The passed a pawn decides the game. } { [%cal Ga3a1] } 31. Qxa6 a2 32. g4 (32. Qxa2?? Rxf1#) 32... Rxf1+ 33. Qxf1 Ne4 34. Ba1 (34. Ba5 a1=Q $19) 34... Nd2 $19 { White resigned rather than allow Anand a new queen.
+PRO TIP: If you're able to get pigs on the 8th, you should be aiming for an all-out attack on the king. } *
+
+
+[Event "Rooks | Infiltrate for activity!: Preventing infiltration"]
+[Date "2022.04.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Rooks | Infiltrate for activity!"]
+[ChapterName "Preventing infiltration"]
+[ChapterURL "https://lichess.org/study/U7tTRtdj/p0g49H7G"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "r2r4/1pq1bp1k/2p1bnpp/4p3/4P3/4BNNP/1PPRQPP1/3R2K1 b - - 0 4"]
+[SetUp "1"]
+[UTCDate "2022.04.11"]
+[UTCTime "22:49:14"]
+
+{ We know how important controlling an open file is: with control of an open file, you can infiltrate with your rook. Here, however black should play an unintuitive move to keep the advantage. }
+4... Rdb8! { Brilliant! Since every infiltration square on the d file is already under black's control, black can cede the d file to white and keep more pieces on the board for eventual queenside operations. } { [%csl Bd8,Bd7,Bd6,Bd5,Bd4][%cal Be6d5,Be6d7,Be7d6,Be7d8,Be5d4] } (4... Rxd2?! 5. Qxd2 Rd8 6. Qe2 Rxd1+ 7. Qxd1 Qd6 8. Qxd6 Bxd6 $10 { Black would have nothing more than equality after trading all the major pieces. }) 5. Nh2 b5 $15 { Black has a slight pull and can look to infiltrate themselves on a2. White's d file is irrelevant.
+PRO TIP: Controlling an open file is only important if there's an infiltration square! } { [%cal Ga8a2] } *
+
+
+[Event "Rooks | Infiltrate for activity!: Exercise 7: A swift regrouping"]
+[Date "2022.04.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Rooks | Infiltrate for activity!"]
+[ChapterName "Exercise 7: A swift regrouping"]
+[ChapterURL "https://lichess.org/study/U7tTRtdj/xu3AxPTN"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "r4rk1/p1q2bpp/4pp2/3p4/2pPn3/2P1PN1P/PRQ1BPP1/1R4K1 b - - 1 5"]
+[SetUp "1"]
+[UTCDate "2022.04.11"]
+[UTCTime "22:49:14"]
+[ChapterMode "gamebook"]
+
+{ White has control of the only open file, but black's remaining pieces have a lot more potential than white's. }
+5... Nd6! (5... Bg6?! { A good idea, but sadly this runs into Nh4 with tempo. } 6. Nh4 Bf7 $15) (5... Rab8? { After the mass exchange of rooks, the position is only equal because of a Bxc4 trick! } 6. Rxb8 Rxb8 7. Rxb8+ Qxb8 8. Bxc4 $10) (5... Rfb8? { After the mass exchange of rooks, the position is only equal because of a Bxc4 trick! } 6. Rxb8+ Rxb8 7. Rxb8+ Qxb8 8. Bxc4 $10) (5... Qa5? { A good try but there's a Bxc4 trick that keeps white in the game } 6. Bxc4 $10) 6. Re1 { Not only did this impressive retreating move cover all the entrance squares on the b file, but it came with the threat of Bg6 winning an exchange. } { [%cal Ba7b6,Bd6b5,Bd6b7] } 6... Bg6 (6... Rfb8!? $17 { Interesting try. Let's first control the b file forever by covering the b1 square. }) (6... Rab8!? $17 { Interesting try. Let's first control the b file forever by covering the b1 square. }) 7. Qc1 { White's pieces have all retreated to passivity. Can you now secure a stable advantage? } 7... Rfb8! $17 { Exactly! Once you control the b1 square, you are now able to steal the b file from white AND keep all of the advantages of the original position. } (7... Rab8! $17 { Just as good. Play Rfb8 instead for the solution. }) *
+
+
+[Event "2022 National High School Championship"]
+[Site "Memphis, TN"]
+[Date "2022.04.10"]
+[Round "7"]
+[White "Andrew Guo"]
+[Black "Bijan Tahmassebi"]
+[Result "*"]
+[WhiteElo "1961"]
+[BlackElo "2234"]
+[Board "8"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Rooks | Infiltrate for activity!"]
+[ChapterName "Exercise 8: Mad rook I"]
+[ChapterURL "https://lichess.org/study/U7tTRtdj/R9aOsn5q"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "q3k1r1/1p2bp1p/4p3/8/1P1B4/1Q1P1bP1/5P1P/4KBR1 b - - 0 1"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+{ From the final round of the 2022 High School Championships, we join a spicy position where black has sacrificed a pawn for active pieces, open files, and an unsafe king.
+
+Can you continue the attack? }
+1... Rg4! (1... Rg5? { Where exactly is this rook going next? } 2. Be2 $10) 2. Bc3 { Exactly! First the rook activates on the 4th rank with tempo. We'll analyze Qb2 defending the bishop in the next chapter. } (2. Qb2 Rxd4 3. Qxd4 Qa1+ 4. Qxa1 Bxb4+ 5. Qc3 Bxc3#) 2... Rxb4!! 3. Qc2 { Brilliant! The queen couldn't capture the rook without losing the queen, and the bishop couldn't capture the rook because of Qa1+, mating.
+So now you've gained another tempo. How can you finally decisively infiltrate white's position? } (3. Bxb4 Qa1+ 4. Kd2 Bg5+ 5. Kc2 Bd1#) (3. Qxb4 Bxb4 $19) 3... Ra4! $19 { Great! Doubling on the a file means that decisive penetration to a1 or a2 is unstoppable.
+Now let's revisit this position and see the fireworks that could have happened after 2. Qb2. } { [%cal Ga4a2,Ga4a1] } (3... Qa3!? { A smart try, but you have to see that after Be2 Rb3, Bd2 Qa1+, Qd1 Rb1 will win the queen and the game. There's a simpler way to infiltrate. } 4. Be2 Rb3 5. Bd2 Qa1+ 6. Qd1 Rb1 $19) *
+
+
+[Event "2022 National High School Championship"]
+[Site "Memphis, TN"]
+[Date "2022.04.10"]
+[Round "7"]
+[White "Andrew Guo"]
+[Black "Bijan Tahmassebi"]
+[Result "*"]
+[WhiteElo "1961"]
+[BlackElo "2234"]
+[Board "8"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Rooks | Infiltrate for activity!"]
+[ChapterName "Exercise 9: Mad rook II"]
+[ChapterURL "https://lichess.org/study/U7tTRtdj/KSAQyQzC"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "q3k1r1/1p2bp1p/4p3/8/1P1B4/1Q1P1bP1/5P1P/4KBR1 b - - 0 1"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+{ Now let's revisit the position and see the fireworks that could have happened after 2. Qb2.
+
+How did you start the combination again? }
+1... Rg4! 2. Qb2 { Now how do you finish white off in style if Qb2 was played instead? } 2... Rxd4! 3. Qxd4 { That's a clean exchange you just sacrificed. What's the crucial follow-up idea? } 3... Qa1+!! (3... Qa2! { This move also wins. But when you have the chance for a winning queen sacrifice, an unspoken rule of chess is that you have to play it! } 4. Qh8+ Bf8 5. Qc3 Qb1+ 6. Kd2 Bh6#) (3... e5!? { Doesn't spoil your advantage, but after Qb2 you need to find the same idea as in the main line. } 4. Qb2 Qa1+ $19) 4. Qxa1 { Outstanding find! Now it's time to finish white off for good! } 4... Bxb4+ 5. Qc3 Bxc3# { Fantastic job finding this Boden's mate to end the game in style.
+This example is a perfect illustration of how you should coordinate all of your pieces towards a common goal. Just because we are focused on activating our rooks and infiltrating to the 7th rank in this study does not mean that we can ignore a chance to use our remaining pieces for a beautiful checkmate. The rook starting on g8 was not coordinating with the rest of our pieces. But once it lands with a thud on d4 or a2, suddenly white's position falls apart! } *
+
+
+[Event "Reykjavik Open"]
+[Site "Reykjavik"]
+[Date "1996.03.16"]
+[Round "9"]
+[White "Margeir Petursson"]
+[Black "Patrik Lyrberg"]
+[Result "1-0"]
+[WhiteTitle "GM"]
+[BlackTitle "IM"]
+[Termination "Resignation"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Rooks | Infiltrate for activity!"]
+[ChapterName "Absolute rook domination"]
+[ChapterURL "https://lichess.org/study/U7tTRtdj/UH6qs9MK"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "1rrn1bk1/1pqn1p1p/p2pp1p1/8/2P1PP2/1NN1B3/PP1RQ1PP/3R3K w - - 7 22"]
+[SetUp "1"]
+
+{ We conclude with a fantastic game by our Icelandic hero, GM Margeir Petursson, showcasing his mastery of different rook infiltrations. The beginning of the game can be found here: https://lichess.org/KTyHdIJo
+
+In this position, he first needs to convert his control of the d file into decisive infiltration on the 7th rank. }
+22. c5!! { Forcibly removing the d6 pawn. } 22... Nxc5 23. Nxc5 dxc5 24. Rd7 Qb6 { With the rook dominant on the 7th rank, GM Petursson turns his attention to the weak dark squares on the kingside. } 25. f5! exf5 26. exf5 Qf6 { Black desperately tries to shore up his weakened dark squares on the kingside, but the queen proves to be the worst defender. } 27. Bf4 Ra8 28. Nd5 (28. Ne4! { White could have had a more direct win in the following entertaining engine lines: } 28... Qxf5 29. Bg5! h5 30. Nf6+ Kh8 (30... Kg7 31. Ne8+ Kh8 32. Bxd8 $18) 31. Qe8 Ne6 32. Rxf7!! $18 { With a powerful Arabian mate similar to the game. } { [%cal Gf7h7] }) 28... Qxf5 29. Bh6! { Tactics abound and every piece is immune from capture!
+In the past 7 moves, the white pieces have exclusively advanced while the black pieces have exclusively retreated. } 29... Qe6 { Black tries to bail out with a queen trade, but the rooks on the 7th rank prove their worth, even in an endgame. } (29... Bxh6?? 30. Ne7+ $18 { The bishop is immune from capture. } { [%cal Ge7f5,Ge7g8] }) (29... Qxd7?? 30. Nf6+ $18 { The rook is immune from capture. } { [%cal Gf6d7,Gf6g8] }) 30. Qxe6 Nxe6 31. Nf6+ Kh8 32. Rxf7! { A powerful move that shows the strength of a rook on the 7th rank. The Arabian mate Rxh7# is threatened. } { [%cal Gf7h7] } 32... Bg7 (32... Bxh6?? 33. Rxh7# { This Arabian mate ensures black cannot untangle. }) 33. Bxg7+ Nxg7 34. Rdd7! { It looks hopeless for black now that the pigs have doubled on the 7th, but Lyrberg finds a clever defense. } 34... Rf8! 35. Rxb7 { But even here, Petursson finds the cleanest path forward. } (35. Rxg7? Rxf6 36. Rxh7+ Kg8 37. Rdg7+ Kf8 38. h4 $16 { White would have to waste a tempo to avoid back-rank checkmate, and is therefore only slightly better in this rook endgame. }) 35... Rxf7 36. Rxf7 $18 { Black resigns not a second too soon! The knight on g7, king on h8, and rook on a8 are all paralyzed by white's two pieces and the threat of Arabian mate or back-rank checkmate. There is no defense to white walking his king up the board towards the queenside, capturing all of the pawns, and queening the a/b pawns. } 1-0
+
+
+[Event "Rooks | Infiltrate for activity!: Thanks for enjoying this study!"]
+[Date "2022.04.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Rooks | Infiltrate for activity!"]
+[ChapterName "Thanks for enjoying this study!"]
+[ChapterURL "https://lichess.org/study/U7tTRtdj/rIhkcLQa"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "7r/ppp1ppkp/6p1/8/8/6P1/PPP1PPKP/3R4 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2022.04.11"]
+[UTCTime "22:49:14"]
+[ChapterMode "gamebook"]
+
+{ Be sure to like this study and share with your friends if you enjoyed it! Feel free to ask/answer any questions in the chat room if you're stuck on a key idea. You can check out my other instructive studies too if you're working on improving your game.
+-NoseKnowsAll
+
+* Beginner endgames you must know! https://lichess.org/study/wukLYIXj
+* Intermediate endgames you must know! https://lichess.org/study/UsqmCsgC
+* More endgames you must know! https://lichess.org/study/xtDSXkyi
+* Advanced endgames you must know! https://lichess.org/study/UO2zqigQ
+* Rook endgames you must know! https://lichess.org/study/bnboDhFM
+* Knights | How to dominate your opponents! https://lichess.org/study/kI8ikTU4
+* Bishops | Slice through the opposition! https://lichess.org/study/kNn68T8l
+* Rooks | Infiltrate for activity! https://lichess.org/study/U7tTRtdj
+* Always sacrifice the exchange! https://lichess.org/study/h3ccaYFE
+* Beautiful checkmates https://lichess.org/study/YtBYXc3m }
+ *
+
+

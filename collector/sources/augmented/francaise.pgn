@@ -1,0 +1,27 @@
+[Event "Défense Française — version commentée"]
+[Site "Augmented"]
+[Source "francaise.pgn"]
+[Annotator "Enrichissement pédagogique"]
+[Result "*"]
+
+1. e4 {Les Blancs prennent le centre — ouverture la plus jouée au monde.}
+e6 {La Française : solidité, contrôle de d5 sans affaiblir f7 tout de suite.}
+2. d4 {Deux pions au centre ; la partie devient stratégique et fermée.}
+d5 {Les Noirs contestent le centre — structure typique e6-d5.}
+3. Nc3 {Développement et pression sur d5 ; prépare ou anticipe ...dxe4.}
+Nf6 {Contre-attaque classique sur e4 avant que les Blancs consolident.}
+4. e5 {Gain d'espace : le cavalier f6 doit reculer, les Blancs gagnent du temps.}
+Nfd7 {Repli obligé ; le cavalier reste sur la case sombre e5 en vue.}
+5. f4 {Le plan avancé : verrouiller e5 et préparer f5 / attaque à l'aile roi.}
+c5 {Contre immédiat au centre — les Noirs ne restent pas passifs.}
+6. Nf3 {Développement ; les Blancs terminent la mise en route des pièces mineures.}
+Nc6 {Pression sur d4 et e5 ; développement harmonieux.}
+7. Be3 {Le fou soutient d4 et vise la colonne c ; prépare la capture en d4.}
+cxd4 {Ouverture du centre : les Noirs cherchent l'activité avant le verrou.}
+8. Nxd4 {Reprise centrale avec pièce active ; le cavalier domine le centre.}
+Bc5 {Fou agressif : pointe vers f2 et la diagonale a7-g1.}
+9. Qd2 {La dame relie les roques et prépare O-O-O ou O-O selon la variante.}
+O-O {Les Noirs roquent : priorité à la sécurité du roi.}
+10. O-O-O {Roque long blanc typique de la variante avancée : roi à l'abri, tour d active.}
+a6 {Prépare ...b5 : plan standard des Noirs pour ouvrir l'aile dame.}
+*

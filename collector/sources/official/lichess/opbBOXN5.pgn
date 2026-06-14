@@ -1,0 +1,288 @@
+[Event "EricRosen's Q & A | July 27: Bd3 Sicilian"]
+[Date "2022.07.27"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B50"]
+[Opening "Sicilian Defense: Kopec System"]
+[StudyName "EricRosen's Q & A | July 27"]
+[ChapterName "Bd3 Sicilian"]
+[ChapterURL "https://lichess.org/study/opbBOXN5/X18QHRnJ"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2022.07.27"]
+[UTCTime "23:36:23"]
+
+1. e4 c5 2. Nf3 d6 3. Bd3 { [%cal Gc2c3,Gd3c2,Gd2d4] } *
+
+
+[Event "EricRosen's Q & A | July 27: Stafford Alternatives"]
+[Date "2022.07.27"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C42"]
+[Opening "Petrov's Defense: Damiano Variation, Kholmov Gambit"]
+[StudyName "EricRosen's Q & A | July 27"]
+[ChapterName "Stafford Alternatives"]
+[ChapterURL "https://lichess.org/study/opbBOXN5/EHOShql5"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2022.07.27"]
+[UTCTime "23:37:40"]
+
+1. e4 e5 2. Nf3 Nf6 (2... Nc6 3. Bc4 Nf6 4. Ng5 Bc5 5. Nxf7 Bxf2+ 6. Kxf2 Nxe4+) 3. Nxe5 Nxe4 { Damiano Petroff } 4. Qe2 Qe7!? (4... Nf6 5. Nc6+) (4... d5 5. d3 { [%csl Ge4] } 5... Nf6 6. Nc6+) 5. Qxe4 d6 6. d4 dxe5 7. dxe5 Nc6 8. Bf4 (8. Bb5 Bd7 9. O-O O-O-O 10. f4 Qc5+) 8... g5 9. Bg3 f5 10. exf6 (10. Qe2 f4 11. Qh5+ { [%csl Gh5] }) 10... Qxe4+ *
+
+
+[Event "EricRosen's Q & A | July 27: Vienna Gambit TRaps"]
+[Date "2022.07.27"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C29"]
+[Opening "Vienna Game: Vienna Gambit, Wurzburger Trap"]
+[StudyName "EricRosen's Q & A | July 27"]
+[ChapterName "Vienna Gambit TRaps"]
+[ChapterURL "https://lichess.org/study/opbBOXN5/aj0hkm96"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2022.07.27"]
+[UTCTime "23:45:30"]
+
+1. e4 e5 2. Nc3 Nf6 3. f4 d5 4. fxe5 Nxe4 5. d3 Qh4+ 6. g3 Nxg3 7. Nf3 Qh5 8. Nxd5 Nxh1 9. Nxc7+ Kd8 10. Nxa8 *
+
+
+[Event "EricRosen's Q & A | July 27: Copy Cat London"]
+[Date "2022.07.27"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D00"]
+[Opening "Queen's Pawn Game: Accelerated London System"]
+[StudyName "EricRosen's Q & A | July 27"]
+[ChapterName "Copy Cat London"]
+[ChapterURL "https://lichess.org/study/opbBOXN5/dYpxcCqk"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2022.07.27"]
+[UTCTime "23:49:28"]
+
+1. d4 d5 2. Bf4 Bf5 3. e3 Nf6 4. Nf3 e6 5. c4 c6 6. Qb3 Qb6 7. c5 Qxb3 8. axb3 { [%csl Rc6,Rd5,Gd2,Ga5,Bb7,Ge2,Gg1,Gh3,Gh2][%cal Gb3b4,Gb4b5,Gb1d2,Gd2b3,Gb3a5,Gf1e2,Ge1g1,Gh2h3,Gf4h2] } *
+
+
+[Event "EricRosen's Q & A | July 27: Ruy Lopez Traps"]
+[Date "2022.07.27"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C71"]
+[Opening "Ruy Lopez: Noah's Ark Trap"]
+[StudyName "EricRosen's Q & A | July 27"]
+[ChapterName "Ruy Lopez Traps"]
+[ChapterURL "https://lichess.org/study/opbBOXN5/ymbvE1Ls"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2022.07.27"]
+[UTCTime "23:49:43"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 d6 { [%csl Gd6][%cal Gd7d6] } 5. d4 b5 6. Bb3 Nxd4 7. Nxd4 exd4 8. Qxd4 c5 9. Qd5 Be6 10. Qc6+ Bd7 11. Qd5 c4 12. Bxc4 bxc4 13. Qxc4 Nf6 14. O-O Bb5 *
+
+
+[Event "EricRosen's Q & A | July 27: Playing against Scotch Gambit"]
+[Date "2022.07.27"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C44"]
+[Opening "Scotch Game: Scotch Gambit, Göring Gambit Declined"]
+[StudyName "EricRosen's Q & A | July 27"]
+[ChapterName "Playing against Scotch Gambit"]
+[ChapterURL "https://lichess.org/study/opbBOXN5/qgccl4zT"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2022.07.27"]
+[UTCTime "23:49:51"]
+
+1. e4 e5 2. Nf3 (2. d4 exd4 3. c3) 2... Nc6 3. d4 exd4 { [%csl Gc4][%cal Gf1c4] } 4. c3 (4. Bc4 Nf6 5. e5 (5. O-O Nxe4 { [%cal Gf1e1] } 6. Re1 d5 7. Bxd5 Qxd5 8. Nc3 Qd7 9. Nxe4 Be7) 5... d5) 4... d5 5. exd5 Qxd5 6. cxd4 Bg4 7. Be2 Bb4+ (7... Bxf3 8. Bxf3 { [%csl Gd4][%cal Gd5d4] } 8... Qxd4 { [%csl Gc6][%cal Gf3c6] } 9. Bxc6+ { [%csl Gd4][%cal Gd1d4] }) 8. Nc3 Bxf3 9. Bxf3 Qc4 10. Bxc6+ bxc6 11. Qe2+ Qxe2+ 12. Kxe2 O-O-O { [%csl Gf5,Ge8,Ga5,Gb6,Rd4,Rc6,Gb7][%cal Gd8d4,Gg8e7,Ge7f5,Gd8d6,Gh8d8,Gh8e8,Gb4a5,Ga5b6,Gb6d4,Gf5d4,Gc8b7] } *
+
+
+[Event "EricRosen's Q & A | July 27: London Questions"]
+[Date "2022.07.27"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D00"]
+[Opening "Queen's Pawn Game: Accelerated London System"]
+[StudyName "EricRosen's Q & A | July 27"]
+[ChapterName "London Questions"]
+[ChapterURL "https://lichess.org/study/opbBOXN5/oHgEAZHv"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2022.07.27"]
+[UTCTime "23:59:39"]
+
+1. d4 d5 (1... Nf6 2. Bf4 c5 3. e3 Qb6 4. Na3 Qxb2 (4... a6 5. Nc4 { [%csl Rb6][%cal Gc4b2,Gc4b6] }) 5. Nb5 { [%csl Gc7,Rb2][%cal Gb5c7,Ga1b1] }) 2. Bf4 Nf6 3. e3 c5 4. Nf3 Nc6 (4... Qb6 5. Nc3 Qxb2 6. Nb5) 5. Nbd2 Qb6 { [%csl Gb6] } 6. dxc5 *
+
+
+[Event "EricRosen's Q & A | July 27: KID thoughts"]
+[Date "2022.07.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "E70"]
+[Opening "King's Indian Defense: Normal Variation"]
+[StudyName "EricRosen's Q & A | July 27"]
+[ChapterName "KID thoughts"]
+[ChapterURL "https://lichess.org/study/opbBOXN5/IefsHwuO"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2022.07.28"]
+[UTCTime "00:04:06"]
+
+1. d4 Nf6 2. c4 (2. Bf4 g6 3. Nc3 Bg7 (3... d5 4. e3 Bg7 5. h4 O-O (5... h5 6. Nf3 O-O 7. Ne5 { [%csl Ge5] } 7... c5 8. dxc5 Qa5 9. Qd2 Qxc5 10. Na4 Qd6 11. Nxg6) (5... h6 6. h5 g5 { [%csl Gh6,Gg5] }) 6. h5 Nxh5 (6... c5) 7. Rxh5 gxh5 8. Qxh5 { [%cal Gf1d3,Gd3h7] }) 4. e4 d6 5. Qd2 O-O 6. O-O-O) 2... g6 3. Nc3 Bg7 4. e4 O-O *
+
+
+[Event "EricRosen's Q & A | July 27: elephant gambit"]
+[Date "2022.07.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C40"]
+[Opening "Elephant Gambit"]
+[StudyName "EricRosen's Q & A | July 27"]
+[ChapterName "elephant gambit"]
+[ChapterURL "https://lichess.org/study/opbBOXN5/r5Olf7hL"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2022.07.28"]
+[UTCTime "01:22:17"]
+
+1. e4 e5 2. Nf3 d5 *
+
+
+[Event "EricRosen's Q & A | July 27: STAFFORD TRAPS"]
+[Date "2022.07.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C42"]
+[Opening "Petrov's Defense: Stafford Gambit"]
+[StudyName "EricRosen's Q & A | July 27"]
+[ChapterName "STAFFORD TRAPS"]
+[ChapterURL "https://lichess.org/study/opbBOXN5/kydfKQJa"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2022.07.28"]
+[UTCTime "01:28:39"]
+
+1. e4 e5 2. Nf3 Nf6 3. Nxe5 Nc6 4. Nxc6 dxc6 5. d3 (5. e5 Ne4 6. d3 (6. d4 Qh4 7. g3 Nxg3 8. fxg3 Qe4+ { [%cal Ge4e1,Ge4h1] }) 6... Bc5 7. Be3 Bxe3 8. fxe3 Qh4+ { [%cal Gh4e1] } 9. g3 Nxg3 10. hxg3 Qxh1 { [%csl Gh1] }) (5. Nc3 Bc5 6. d3 (6. Bc4 Ng4 7. O-O (7. Qf3 Ne5 8. Qe2 Qh4 { [%csl Re1,Rc4,Re4,Rf2,Re2][%cal Gh4e1,Gh4c4,Ge5c4,Gc5f2,Gh4f2,Gg2g3,Gh4h3,Gc8g4,Gg4e2] } 9. g3 (9. d3 Bg4 10. Qf1 Nxc4 11. dxc4 O-O-O) 9... Qh3 { [%csl Gh3,Gg4,Rf3][%cal Gc8g4,Ge5f3,Gg4f3] }) 7... Qh4 8. h3 Nxf2 9. Qf3 Nxh3+ { [%cal Gg1h1,Gg1h2] } 10. Kh1 Nf2+ 11. Kg1 Qh1#) (6. Be2 h5 7. h3 Qd4 { [%csl Gf2][%cal Gd4f2] } 8. O-O Ng4 9. hxg4 hxg4 10. d3 (10. g3 Qe5 11. Kg2 Bxf2 12. Rxf2 (12. Kxf2 Rh2+ 13. Ke3 Qxg3+ 14. Kd4 Be6) 12... Qh5 { [%csl Gh3,Gh1][%cal Gh5h3,Gh3h1] } 13. Rf4 Qh2+ 14. Kf1 Qxg3) 10... Qe5 11. g3 Qxg3# { [%csl Gg1,Gf2][%cal Gc5g1] }) 6... Ng4 { [%csl Rf2][%cal Gg4f2,Gc5f2] } 7. Be3 Nxe3 8. fxe3 Bxe3 { [%csl Rg1,Rc1][%cal Ge3c1,Ge3g1] }) 5... Bc5 6. Bg5 { [%csl Gg5] } (6. e5 Ne4 { [%csl Rf2][%cal Ge4f2,Gc5f2] } 7. dxe4 Bxf2+ 8. Ke2 (8. Kxf2 Qxd1) 8... Bg4+ { [%csl Gd1][%cal Gd8d1] }) (6. Be3 { [%csl Ge3] } 6... Bxe3 7. fxe3 Ng4 8. Qf3 Qg5 { [%csl Re3,Ge1][%cal Gg5e3,Gg4e3] } 9. Kd2 Nxh2 10. Rxh2 { [%csl Gh2] } 10... Qe5 11. Rh5 Qxb2) 6... Nxe4 7. Bxd8 Bxf2+ 8. Ke2 Bg4# { [%csl Gd1][%cal Gg4d1] } *
+
+
+[Event "EricRosen's Q & A | July 27: a3 4 knights question kesey"]
+[Date "2022.07.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C47"]
+[Opening "Four Knights Game: Gunsberg Variation"]
+[StudyName "EricRosen's Q & A | July 27"]
+[ChapterName "a3 4 knights question kesey"]
+[ChapterURL "https://lichess.org/study/opbBOXN5/ddsywlSA"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2022.07.28"]
+[UTCTime "01:44:03"]
+
+1. e4 e5 2. Nf3 Nc6 3. Nc3 Nf6 4. a3 { [%cal Gd7d6] } 4... Bc5 (4... a6 5. d4 exd4 6. Nxd4 Bc5 7. Be3) (4... g6 5. Nxe5 Nxe5 6. d4) (4... d5 5. exd5 Nxd5 6. Nxe5 Nxe5 7. Qe2 f6 { [%csl Gf6][%cal Gf7f6] } (7... Nxc3 8. Qxe5+ Qe7 9. Qxe7+ Bxe7 10. dxc3) 8. d4) (4... d6 { [%cal Gd7d6,Gf8e7] } 5. d4) 5. Nxe5 { [%cal Gf3e5] } 5... Nxe5 (5... Bxf2+ 6. Kxf2 Nxe5 7. d4) 6. d4 *
+
+
+[Event "EricRosen's Q & A | July 27: Anti london openings"]
+[Date "2022.07.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A40"]
+[Opening "Englund Gambit"]
+[StudyName "EricRosen's Q & A | July 27"]
+[ChapterName "Anti london openings"]
+[ChapterURL "https://lichess.org/study/opbBOXN5/Hym6LVgn"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2022.07.28"]
+[UTCTime "01:55:21"]
+
+1. d4 e5 (1... d6 { [%csl Gf4][%cal Gc1f4] } 2. Bf4 Nd7) (1... c5 2. c3) *
+
+
+[Event "EricRosen's Q & A | July 27: Why I didn't play London against Canty"]
+[Date "2022.07.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D01"]
+[Opening "Rapport-Jobava System"]
+[StudyName "EricRosen's Q & A | July 27"]
+[ChapterName "Why I didn't play London against Canty"]
+[ChapterURL "https://lichess.org/study/opbBOXN5/NeZXnY3U"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2022.07.28"]
+[UTCTime "01:58:38"]
+
+1. d4 Nf6 2. Bf4 g6 3. Nc3 d5 4. e3 Bg7 5. h4 O-O (5... h5 { [%csl Gb5][%cal Gc3b5] } 6. Nf3 (6. Nb5) 6... O-O 7. Ne5 c5 8. dxc5 Qa5 9. Qd2 Qxc5 (9... Be6) 10. Na4) *
+
+
+[Event "EricRosen's Q & A | July 27: STafford gambit question about e5"]
+[Date "2022.07.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C42"]
+[Opening "Petrov's Defense: Stafford Gambit"]
+[StudyName "EricRosen's Q & A | July 27"]
+[ChapterName "STafford gambit question about e5"]
+[ChapterURL "https://lichess.org/study/opbBOXN5/tCoOVOSL"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2022.07.28"]
+[UTCTime "02:07:21"]
+
+1. e4 e5 2. Nf3 Nf6 3. Nxe5 Nc6 4. Nxc6 dxc6 5. e5 Ne4 { [%cal Gd2d3] } (5... Nd5 6. d4 c5 7. c4 (7. c3 cxd4 8. cxd4 Bb4+ 9. Bd2 Qh4 10. Bxb4 Nxb4) 7... Nb4 8. d5 Bf5 9. Na3 Qe7 10. Bf4 g5 11. Bg3 Bg7) 6. d3 (6. d4 Qh4 7. g3 (7. Qf3 Ng5 (7... f6 8. g3 Ng5 { [%cal Gh4d4] } 9. gxh4 (9. Qd3 Qxd4 10. Qxd4 Nf3+) 9... Nxf3+) 8. Bxg5 Qxg5) (7. Be3 f6 8. g3 Nxg3 { [%csl Gg3] } 9. fxg3 Qe4 { [%csl Gh1,Ge3][%cal Ge4e3,Ge4h1] }) 7... Nxg3 { [%cal Gg4e4,Ge4h1,Ge4e1] } 8. fxg3 Qe4+) 6... Bc5 *
+
+
+[Event "EricRosen's Q & A | July 27: Staunton Gambit"]
+[Date "2022.07.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A83"]
+[Opening "Dutch Defense: Staunton Gambit"]
+[StudyName "EricRosen's Q & A | July 27"]
+[ChapterName "Staunton Gambit"]
+[ChapterURL "https://lichess.org/study/opbBOXN5/7VHix7y2"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2022.07.28"]
+[UTCTime "02:15:35"]
+
+1. d4 f5 2. e4 fxe4 3. Nc3 { [%csl Gd5,Gh5][%cal Gd7d5,Gd1h5] } 3... Nf6 4. Bg5 *
+
+
+[Event "EricRosen's Q & A | July 27: longest theory"]
+[Date "2022.07.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D36"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Reshevsky Variation"]
+[StudyName "EricRosen's Q & A | July 27"]
+[ChapterName "longest theory"]
+[ChapterURL "https://lichess.org/study/opbBOXN5/1Fppn4uB"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2022.07.28"]
+[UTCTime "02:16:58"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. cxd5 exd5 5. Bg5 c6 6. Qc2 Na6 7. e3 Nb4 8. Qb1 { [%csl Rb4] } 8... g6 9. a3 Bf5 { [%csl Gf5][%cal Gc8f5] } 10. e4 Bxe4 11. Nxe4 dxe4 { [%csl Gb4][%cal Ga3b4] } 12. Bxf6 (12. axb4 Bxb4+ { [%csl Re1][%cal Gb4e1] } 13. Ke2 Qxd4) 12... Qxf6 13. Qxe4+ Kd8 { [%csl Gb4][%cal Ga3b4] } 14. axb4 (14. Nf3 Nd5 15. Bc4 Qe7 16. Bxd5 cxd5 17. Qxe7+ Kxe7 { [%cal Ge7d6] } 18. Kd2 Kd6 { [%csl Gh6,Rc1][%cal Gf8h6,Gh6c1,Ga8c8,Gc8c2] }) 14... Bxb4+ 15. Kd1 Re8 { [%csl Ge1][%cal Ge8e1] } *
+
+
+[Event "EricRosen's Q & A | July 27: Quickest OTB Victory"]
+[Date "2022.07.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A16"]
+[Opening "English Opening: Anglo-Indian Defense, Queen's Knight Variation"]
+[StudyName "EricRosen's Q & A | July 27"]
+[ChapterName "Quickest OTB Victory"]
+[ChapterURL "https://lichess.org/study/opbBOXN5/xXJv8722"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2022.07.28"]
+[UTCTime "02:24:53"]
+
+1. c4 (1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. e3 b6 5. Bd3 Bb7 6. a3 Bxc3+) 1... Nf6 2. Nc3 b6 (2... e6) 3. e4 d6 4. d4 c5 5. e5 dxe5 (5... cxd4 6. exf6 dxc3 7. Qf3 (7. Qd5 Qc7 8. Qxa8 Nc6 { [%csl Gc6] } 9. c5) 7... d5) 6. Qf3 e4 7. Nxe4 Nxe4 (7... Bb7 8. Nxf6+) 8. Qxe4 { [%csl Ga8][%cal Ge4a8] } *
+
+
+[Event "EricRosen's Q & A | July 27: budapest"]
+[Date "2022.07.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A52"]
+[Opening "Indian Defense: Budapest Defense"]
+[StudyName "EricRosen's Q & A | July 27"]
+[ChapterName "budapest"]
+[ChapterURL "https://lichess.org/study/opbBOXN5/hLZEL94j"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2022.07.28"]
+[UTCTime "02:34:53"]
+
+1. d4 Nf6 2. c4 e5 3. dxe5 { [%cal Gf6g4] } 3... Ng4 (3... Ne4 4. Nf3 Bc5 (4... d6 5. exd6 Bxd6) (4... Bb4+ 5. Bd2 Nxd2 6. Nbxd2 Nc6) (4... b6 5. Qd5 { [%csl Gd5] } 5... Nc5 (5... Bb7 6. Qxb7 Nc6 7. Qa6 Nc5 (7... Bb4+ { [%csl Ga6] } 8. Bd2 Nc5)) 6. Qxa8 Bb7 7. Qxa7 Nc6 { [%csl Ga3][%cal Ga7a3] })) *
+
+

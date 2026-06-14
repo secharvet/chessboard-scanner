@@ -1,0 +1,79 @@
+[Event "Opening Principles: 1.1 The King and Other Weak Points - Exercise #1: S.Movsesian-R.Tibensky"]
+[Date "????.??.??"]
+[White "1.1 The King and Other Weak Points"]
+[Black "Exercise #1: S.Movsesian-R.Tibensky"]
+[Result "*"]
+[FEN "1nr1k2r/p2qb1pp/1pn1pp2/2ppP2P/3P1B2/2P2N2/PP2NPP1/R2QR1K1 w k - 0 14"]
+[GameId "2229598706342169"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Opening Principles"]
+[ChapterName "1.1 The King and Other Weak Points - Exercise #1: S.Movsesian-R.Tibensky"]
+[ChapterURL "https://lichess.org/study/Y6XzZ7Go/zwN9JAIR"]
+[Annotator "https://lichess.org/@/BillGeorgeOrJustBG"]
+[FEN "1nr1k2r/p2qb1pp/1pn1pp2/2ppP2P/3P1B2/2P2N2/PP2NPP1/R2QR1K1 w k - 0 14"]
+[SetUp "1"]
+
+{ [%csl Ge1,Ge5,Ge2][%cal Ge5f6,Ge2g3,Gg3h5,Gg3e2] }
+14. exf6 { Initiating an attack on the e6-pawn, just before Black gets castled. } 14... gxf6 { With hindsight 14...Bxf6 should have been preferred; e.g. 15.Bxb8 Rxb8 16.Nf4 O-O 17.Nxe6 Rfe8 18.Nf4 Re4 with some compensation for the pawn. } (14... Bxf6) 15. Bxb8 { White has no objections to swapping the passive knight on b8 if this helps his attack in the centre. } 15... Rxb8 { [%csl Gf4] } 16. Nf4 *
+
+
+[Event "Opening Principles: 1.1 The King and Other Weak Points - Exercise #2: S.Movsesian-R.Tibensky"]
+[Date "????.??.??"]
+[White "1.1 The King and Other Weak Points"]
+[Black "Exercise #2: S.Movsesian-R.Tibensky"]
+[Result "*"]
+[FEN "1r1n3r/p2qbk1p/1p2pp2/2pp3P/3P1N2/2P2N2/PP2QPP1/R3R1K1 w - - 0 18"]
+[GameId "2229599163074849"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Opening Principles"]
+[ChapterName "1.1 The King and Other Weak Points - Exercise #2: S.Movsesian-R.Tibensky"]
+[ChapterURL "https://lichess.org/study/Y6XzZ7Go/3ZEDLvW7"]
+[Annotator "https://lichess.org/@/BillGeorgeOrJustBG"]
+[FEN "1r1n3r/p2qbk1p/1p2pp2/2pp3P/3P1N2/2P2N2/PP2QPP1/R3R1K1 w - - 0 18"]
+[SetUp "1"]
+
+18. c4 { An intuitive advance that further opens the position towards Black's vulnerable king. } (18. dxc5 bxc5 19. c4 d4) 18... cxd4 (18... dxc4 19. Qxc4 { [%csl Ge6,Gd4] }) 19. Nxd4 { [%csl Ge2,Ge1][%cal Gf4e6,Gd4e6] } 19... e5 { [%csl Ge2,Ge1,Ge7] } 20. Nxd5 exd4 { [%csl Ge7] } 21. Qxe7+ (21. Nxe7 Re8 { [%csl Ge8] } 22. Qe4 { [%cal Ge8e7,Ge4h7] }) 21... Qxe7 22. Rxe7+ *
+
+
+[Event "Opening Principles: 1.1 The King and Other Weak Points - Exercise #3: S.Movsesian-R.Tibensky"]
+[Date "????.??.??"]
+[White "1.1 The King and Other Weak Points"]
+[Black "Exercise #3: S.Movsesian-R.Tibensky"]
+[Result "*"]
+[FEN "1r1n1r2/p1q2k1p/1p1bpp2/2p4P/2pP4/5N1N/PP1Q1PP1/3RR1K1 w - - 0 22"]
+[GameId "2229599229061434"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Opening Principles"]
+[ChapterName "1.1 The King and Other Weak Points - Exercise #3: S.Movsesian-R.Tibensky"]
+[ChapterURL "https://lichess.org/study/Y6XzZ7Go/smPtE21x"]
+[Annotator "https://lichess.org/@/BillGeorgeOrJustBG"]
+[FEN "1r1n1r2/p1q2k1p/1p1bpp2/2p4P/2pP4/5N1N/PP1Q1PP1/3RR1K1 w - - 0 22"]
+[SetUp "1"]
+
+22. Re4 { Heading for g4, before Black achieves an artificial castling with ...Kg8-h8. } { [%csl Gg5][%cal Gf6f5,Gf5e4,Gf5g4] } (22. Qh6 { [%cal Gh6h7] } 22... Kg8 { [%cal Gc7g7] } 23. Re4 Qg7 { [%csl Gg4,Gh6,Gg7] } (23... f5 24. Rxe6 Nxe6 25. Qxe6+ { [%cal Gc7f7,Ge6d6] }) 24. Qd2 Kh8 { [%cal Gf8g8] }) (22. dxc5 { [%csl Gd6] } 22... Bxc5 23. Re4 { [%cal Ge4c4,Ge4g4] } (23. Nf4 { [%cal Gf4e6,Ge1e6] })) *
+
+
+[Event "Opening Principles: 1.1 The King and Other Weak Points - S.Movsesian-R.Tibensky Slovakian Championsh"]
+[Date "????.??.??"]
+[White "1.1 The King and Other Weak Points"]
+[Black "S.Movsesian-R.Tibensky Slovakian Championship, Kaskady 2002 French Defence"]
+[Result "*"]
+[GameId "2229598325266698"]
+[Variant "Standard"]
+[ECO "C02"]
+[Opening "French Defense: Advance Variation"]
+[StudyName "Opening Principles"]
+[ChapterName "1.1 The King and Other Weak Points - S.Movsesian-R.Tibensky Slovakian Championsh"]
+[ChapterURL "https://lichess.org/study/Y6XzZ7Go/JE1OqPqd"]
+[Annotator "https://lichess.org/@/BillGeorgeOrJustBG"]
+
+{ Here is a more complex case of exploiting the weakest point in the enemy camp when ahead in development. }
+1. e4 e6 2. d4 d5 3. e5 b6 { A rather slow reply to the Advance Variation. Black prepares ...Ba6 in order to exchange his 'bad' bishop, but also loses some time and activity; that is compared to the usual 3...c5 , hitting the white pawn chain. } 4. c3 { Strengthening the pawn chain; and preventing the immediate 4.c3 Ba6 on account of 5.Bxa6 Nxa6 6.Qa4+ . } 4... Qd7 5. h4 { At first sight a rather surprising move, why not just 5.Nf3 , 5...-- 6.Bd3 and 6...-- 7.O-O , simply bringing out the pieces? Well, closed positions have their particular nature. Since nothing is really going on in the centre White can spend a few tempi on this flank advance, which gains space and enhances future kingside actions, in particular the knight manoeuvre Nh3-f4. } 5... Ba6 { Perhaps the restrictive 5...h5 was better, when White could consider 6.Be2 g6 7.Bg5 , preparing Nd2-f3 and Nh3-f4 - Movsesian. } 6. Bxa6 Nxa6 7. h5 c5 { Black finally launches this standard advance, although the absence of a knight on c6 makes it less powerful than in the main line with 3...c5. } 8. Ne2 { Leaving the f3-square for the other knight. } 8... f6 { A risky attempt at counterplay, since White can complete development much sooner, after which the opening of the e-file will turn to his favour. Besides, the earlier exchange of the light-squared bishops left the e6-pawn more exposed. Safer was the developing 8...Ne7 , followed by ...Nc6, before taking further actions. } 9. Bf4 Ne7 10. Nd2 Nc6 { Another effect of White's early h2-h4-h5 is that ...Ne7-g6 proves impossible. Moreover, as the typical... Ne7-f5 plan cannot be supported by ...h7-h5, the knight can be dislodged easily by g2-g4. } 11. Nf3 { Just like in the old games of Nimzowitsch, White gives maximum priority to the e5-square. } 11... Rc8 { Perhaps 11...O-O-O followed by ...Kb7 was a safer choice - Psakhis. In this case the knight on a6 would prove useful in the king's defence, whereas in the game it will struggle to find a proper destiny. } 12. O-O Nab8 13. Re1 { 13.exf6 gxf6 14.Re1 might have been even stronger, forcing the kind of play that occurs in the game. } 13... Be7 { Tibensky doesn't sense the danger.  After 13...f5 14.Bg5 Be7 15.Nf4 White keeps a pleasant advantage, but at least the position remains closed, which gives Black time to conclude development. } 14. exf6 { Initiating an attack on the e6-pawn, just before Black gets castled. } 14... gxf6 { With hindsight 14...Bxf6 should have been preferred; e.g. 15.Bxb8 Rxb8 16.Nf4 O-O 17.Nxe6 Rfe8 18.Nf4 Re4 with some compensation for the pawn. } 15. Bxb8 { White has no objections to swapping the passive knight on b8 if this helps his attack in the centre. } 15... Rxb8 { Or 15...Nxb8 16.Nf4 Rc6 17.c4 , intending 17...dxc4 18.d5 with strong pressure. } 16. Nf4 Nd8 17. Qe2 Kf7 { If 17...cxd4 then 18.Nxd4 , when 18...e5 19.Qf3 exf4 20.Qxf4 Black is helpless against the threats at b8 , f5 and f6.After the text, how can White step up the pressure? } 18. c4 { An intuitive advance that further opens the position towards Black's vulnerable king. } 18... Bd6 19. Qd2 Qc7 20. Nh3 { The idea of Qh6 is added to White's menu. } 20... dxc4 21. Rad1 { The last piece joins the battle, which makes Black's position very difficult to defend, since virtually any tactical complications will favour White due to his superior development. } 21... Rf8 22. Re4 { Heading for g4, before Black achieves an artificial castling with ...Kg8-h8. } 22... Kg8 23. dxc5 Bxc5 24. Rg4+ Kf7 { Unfortunately for Black, after 24...Kh8 25.Qh6 f5 StartBracketthe threat was Nf4-g6+EndBracket 26.Rxc4 the tactics work in White's favour; e.g. 26...Bxf2+ 27.Nxf2 Qxc4 28.Qxf8 mate  or 26...Qg7 27.Qxg7+ Kxg7 28.b4 Be7 29.Rd7 Kf6 30.Rcc7 winning. } 25. Qc2 Ke8 26. Rxc4 { With the black king back on e8, the rest is easy. } 26... Qe7 27. b4 Bd6 28. Rcd4 Nb7 29. Nd2 { The knight's reaches e4 or c4 with great effect. } 29... Nd8 { This makes no sense but the alternatives were hardly better; e.g. 29...f5 30.Nc4 Bc7 31.Qa4+ .  Or 29...Rd8 30.Ne4 Bb8 31.Qc6+ , in both cases followed by a fatal 32. Rd7. } 30. Qd3 Nb7 31. Ne4 { In view of 31.Ne4 Be5 32.Qb5+ Kf7 33.Rd7 , Black resigned. } *
+
+

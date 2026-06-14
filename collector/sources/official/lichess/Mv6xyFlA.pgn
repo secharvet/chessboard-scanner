@@ -1,0 +1,36 @@
+[Event "Party Puzzle of the Week: #1 - E.Najer - I.Nepomniachtchi, Moscow 2006"]
+[Date "2022.01.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Party Puzzle of the Week"]
+[ChapterName "#1 - E.Najer - I.Nepomniachtchi, Moscow 2006"]
+[ChapterURL "https://lichess.org/study/Mv6xyFlA/ADgDdOyy"]
+[Annotator "https://lichess.org/@/TonyRo"]
+[FEN "5rk1/3R1p2/4p2p/4P1pP/2q4r/P1n1BQ2/2P2PP1/4R1K1 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2022.01.26"]
+[UTCTime "00:04:25"]
+
+1... g4! { There are many little mini-motifs visible in the position, the rook eyeing h1, possibilities of ...Ne2+, possible exploitations of the loose rook on d7, but the real key is seeing that White's queen makes them difficult due to her control of the key e2-square. } (1... Qb5? 2. Rd4 Rxd4 3. Bxd4 { [%cal Gc3d5] } 3... Nd5 4. Qb3 $18 { was the game continuation, when our most recent world championship contender was simply down two pawns. }) 2. Qg3 (2. Rd4 gxf3 (2... Qxd4 { This desperado also wins too, e.g. } 3. Bxd4 gxf3 4. Bxc3 fxg2) 3. Rxc4 Rxc4 $19) 2... Qf1+!! { The real magic here, making full use of the active placement of Black's remaining attacking forces! } 3. Rxf1 (3. Kxf1 Rh1#) 3... Ne2# *
+
+
+[Event "Party Puzzle of the Week: #2 - U.Andersson - M.Tempone, Buenos Aires 1979"]
+[Date "2022.02.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Party Puzzle of the Week"]
+[ChapterName "#2 - U.Andersson - M.Tempone, Buenos Aires 1979"]
+[ChapterURL "https://lichess.org/study/Mv6xyFlA/H1Yt7npy"]
+[Annotator "https://lichess.org/@/TonyRo"]
+[FEN "2r3k1/r4pbp/1pn1p1p1/p1p1P3/P1B2P2/2P1B2P/1PKR1P2/3R4 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2022.02.14"]
+[UTCTime "01:56:28"]
+
+1. Kb3! { White already has some long term positional trumps in the two bishops and dominance of the d-file. Ulf first removes the king from the c-file, which stops any possible ...Nd4+ resources, and hints at either Bb5 or Kc4-b5. } (1. Bb5 Nd4+ (1... Ne7 2. Rd8+ Rxd8 3. Rxd8+ Bf8 4. Rb8 $18) 2. Kb1 (2. cxd4 cxd4+ 3. Kb3 dxe3 4. fxe3 Bf8) 2... Nf5 (2... Nxb5 3. Rd8+ (3. axb5 Rf8 4. Rd8 Rb7 5. R1d6) 3... Rxd8 4. Rxd8+ Bf8 5. axb5 $18 { [%cal Gf4f5,Gd8b8] }) 3. Rd8+ Rxd8 4. Rxd8+ Bf8 5. Bd2! (5. Rb8 Nxe3 6. fxe3 c4! { [%cal Gc5e3,Gf8c5] }) 5... Rb7) (1. Be2 Nd4+ 2. cxd4 cxd4+ 3. Kb3 dxe3 4. fxe3 { [%cal Gg7f8] } 4... Bf8 $10 { [%csl Ge2,Gf8][%cal Gf8c5] }) (1. Rd7? Nd4+ $10) 1... Bf8 2. Bb5! { [%cal Gb3c4,Gc4b5] } (2. Be2! $18) 2... Rcc7? (2... Ne7!) 3. Bxc6 Rxc6 4. Kc4 { [%cal Gc4b5] } 4... Be7 5. Rd7 Rcc7 6. Rxc7 Rxc7 7. Kb5 { [%csl Gb5,Rb6,Rg8][%cal Gd1d7] } 7... Rc8 8. Rd7! (8. Kxb6 { [%cal Gb6a5] } 8... Rb8+ { [%cal Gb8b2] } 9. Kxa5 Rxb2 { is also winning, but why allow Black any activity? }) 8... Kf8 9. Kxb6 Ke8 10. Rb7 Bd8+ 11. Kb5 { [%cal Ge3c5] } 11... c4 12. Bc5 $18 *
+
+

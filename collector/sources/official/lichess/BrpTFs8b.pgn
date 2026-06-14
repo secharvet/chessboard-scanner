@@ -1,0 +1,136 @@
+[Event "ENDGAME: pos 2"]
+[Date "2025.09.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "ENDGAME"]
+[ChapterName "pos 2"]
+[ChapterURL "https://lichess.org/study/BrpTFs8b/NyK0UIZ8"]
+[Annotator "https://lichess.org/@/FILLXS"]
+[FEN "8/8/p2k2p1/1p3pP1/1P1K1P2/P7/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.09.14"]
+[UTCTime "11:57:49"]
+[ChapterMode "gamebook"]
+
+{ [%cal Gd4e3] }
+1. Kc3 (1. Ke3) (1. Kd3) *
+
+
+[Event "ENDGAME: pos 2 black L"]
+[Date "2025.09.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "ENDGAME"]
+[ChapterName "pos 2 black L"]
+[ChapterURL "https://lichess.org/study/BrpTFs8b/xOHTctev"]
+[Annotator "https://lichess.org/@/FILLXS"]
+[FEN "8/8/p2k2p1/1p3pP1/1P1K1P2/P7/8/8 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.09.14"]
+[UTCTime "11:57:57"]
+[ChapterMode "gamebook"]
+
+1... Ke6 2. Kc5 *
+
+
+[Event "ENDGAME: POS.3 D"]
+[Date "2025.09.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "ENDGAME"]
+[ChapterName "POS.3 D"]
+[ChapterURL "https://lichess.org/study/BrpTFs8b/zzjhOlgv"]
+[Annotator "https://lichess.org/@/FILLXS"]
+[FEN "8/8/3p4/2k5/4P3/8/8/1K6 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.09.14"]
+[UTCTime "11:49:38"]
+[ChapterMode "gamebook"]
+
+1. e5 dxe5 2. Kc2 (2. Kc1) (2. Kb2) (2. Ka1) (2. Ka2) 2... Kc4 3. Kd2 Kd4 4. Ke2 Ke4 5. Kd2 Kf3 6. Ke1 Ke3 7. Kf1 Kd2 8. Kf2 e4 9. Kf1 e3 10. Kg2 e2 11. Kg1 e1=Q+ *
+
+
+[Event "ENDGAME: pos.3 black W"]
+[Date "2025.09.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "ENDGAME"]
+[ChapterName "pos.3 black W"]
+[ChapterURL "https://lichess.org/study/BrpTFs8b/FdalW9D6"]
+[Annotator "https://lichess.org/@/FILLXS"]
+[FEN "8/8/3p4/2k5/4P3/8/8/1K6 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.09.14"]
+[UTCTime "11:52:53"]
+[ChapterMode "gamebook"]
+
+1... Kd4 *
+
+
+[Event "ENDGAME: POS.4"]
+[Date "2025.09.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "ENDGAME"]
+[ChapterName "POS.4"]
+[ChapterURL "https://lichess.org/study/BrpTFs8b/BDxI1szH"]
+[Annotator "https://lichess.org/@/FILLXS"]
+[FEN "8/8/4pk2/7P/7p/4K3/8/8 w - - 1 2"]
+[SetUp "1"]
+[UTCDate "2025.09.14"]
+[UTCTime "12:05:43"]
+[ChapterMode "gamebook"]
+
+{ [%cal Ge3f4] }
+2. Kf4 h3 { [%cal Gh5h6] } 3. Kg3 Kg5 4. Kxh3 (4. Kh2 Kxh5 5. Kxh3 Kg6 6. Kg4) *
+
+
+[Event "ENDGAME: POS.4"]
+[Date "2025.09.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "ENDGAME"]
+[ChapterName "POS.4"]
+[ChapterURL "https://lichess.org/study/BrpTFs8b/ARs6cT6S"]
+[Annotator "https://lichess.org/@/FILLXS"]
+[FEN "8/8/4pk2/7P/7p/4K3/8/8 b - - 2 6"]
+[SetUp "1"]
+[UTCDate "2025.09.14"]
+[UTCTime "12:09:51"]
+[ChapterMode "gamebook"]
+
+6... Kg5 7. h6 Kxh6 8. Kf3 h3 9. Kg3 Kg5 10. Kxh3 Kf4 11. Kg2 Ke3 12. Kg3 e5 13. Kg2 Ke2 14. Kg3 e4 15. Kg2 e3 16. Kg1 Kd2 17. Kf1 e2+ 18. Kf2 e1=Q+ *
+
+
+[Event "ENDGAME: POS.5"]
+[Date "2025.09.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "ENDGAME"]
+[ChapterName "POS.5"]
+[ChapterURL "https://lichess.org/study/BrpTFs8b/jQzW0cVA"]
+[Annotator "https://lichess.org/@/FILLXS"]
+[FEN "8/8/8/4p1p1/8/5P2/6K1/3k4 w - - 0 19"]
+[SetUp "1"]
+[UTCDate "2025.09.14"]
+[UTCTime "12:12:39"]
+[ChapterMode "gamebook"]
+
+{ [%cal Gg2g3] }
+19. Kh1 { [%csl Gf1] } 19... g4 20. Kg2 Ke2 21. fxg4 e4 22. g5 e3 23. g6 Kd2 24. g7 e2 25. g8=Q e1=Q *
+
+

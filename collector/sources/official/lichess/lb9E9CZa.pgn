@@ -1,0 +1,120 @@
+[Event "Pawn Structures: Chapter 1"]
+[Date "2025.09.03"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A00"]
+[Opening "Mieses Opening"]
+[StudyName "Pawn Structures"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/lb9E9CZa/jdIkoevl"]
+[Annotator "https://lichess.org/@/Elyson"]
+[UTCDate "2025.09.03"]
+[UTCTime "18:07:25"]
+
+1. d3 (1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. Ng5 d5 5. exd5 Nxd5 (5... Na5 6. Bb5+ c6 7. dxc6 bxc6 8. Be2 h6 9. Nf3 e4 10. Nd4 (10. Ne5 Bd6)) 6. Nxf7 Kxf7 7. Qf3+ Ke8 8. Bxd5 Bd6 9. Qf7#) 1... d5 *
+
+
+[Event "Pawn Structures: Closed Center"]
+[Date "2025.10.24"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Pawn Structures"]
+[ChapterName "Closed Center"]
+[ChapterURL "https://lichess.org/study/lb9E9CZa/7cJiIOv9"]
+[Annotator "https://lichess.org/@/Elyson"]
+[FEN "8/pp3ppp/3p4/2pPp3/2P1P3/8/PP3PPP/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.24"]
+[UTCTime "07:46:00"]
+
+{ With the pawns in the centre wedged against
+each other, it is on the flanks that break-
+throughs are usually made. Often the players
+take one flank each and then try to be first to
+break through. However, the rule "An attack
+on the flank is best answered by a counterat-
+tack in the centre" can be relevant even with
+a closed centre, as it may be possible to dis-
+integrate the centre by sacrificing a piece. }
+ *
+
+
+[Event "Pawn Structures: Ari Ziegler - Mikael Johansson Åstorp 1990"]
+[Date "2025.10.24"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "E98"]
+[Opening "King's Indian Defense: Orthodox Variation, Classical System"]
+[StudyName "Pawn Structures"]
+[ChapterName "Ari Ziegler - Mikael Johansson Åstorp 1990"]
+[ChapterURL "https://lichess.org/study/lb9E9CZa/CoIVU0Hs"]
+[Annotator "https://lichess.org/@/Elyson"]
+[UTCDate "2025.10.24"]
+[UTCTime "07:47:36"]
+
+1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. Nf3 O-O 6. Be2 e5 7. O-O Nc6 8. d5 Ne7 9. Ne1 { This is a common variation of the King's
+Indian Defence. The centre is closed so play
+is shifted to the flanks.
+Black's pieces are placed to act on the kingside. The key move is ... f5 followed by ... f4 and then the g-pawn
+will advance to open up files towards White's
+king. White wants to make his key move, c5, and penetrate on c-File with the major pieces. } 9... Nd7 10. Nd3 { [%cal Gc4c5] } 10... f5 { [%cal Gf7f5] } 11. Bd2 c5 { A radical way to prevent White's key
+move, but White now has a new way to break
+up Black's pawn-structure, with the advance
+b4. More common than the move played is
+11 ... Nf6 12 f3 Kh8 with the idea ... Neg8
+and .... Bh6. } (11... Nf6 12. f3 Kh8) 12. Rb1 Nf6 13. f3 f4 { [%cal Gg2g4] } 14. g4!? { This move looks crazy at first, as you sel-
+dom want to advance the pawns in front of
+your own king. However, in the race to
+break through first, White wants to create a blockade on the kingside. The move g4 is
+similar to Black's ... c5, directed against the
+opponent's natural key move. } { [%cal Gc3c5,Gb3b5,Ga2a5] } 14... h5 (14... fxg3 { [%cal Gf4g3] } 15. hxg3 { [%cal Gf1f2,Gf2h2] }) 15. h3 Kh8 { Black has problems in organizing his pieces.
+The purpose of Kh8 is to free the g8 square for N on e7
+then Nh7 to cleaar out the dark squares for queen and bishop } { [%cal Gg8h8] } 16. Be1 { [%cal Ge1h4] } 16... Nh7 17. Rf2 Ng8 { [%cal Gd8h4] } 18. Rg2 { It is instructive to see how calmly White
+plays. Before his own breakthrough, he sup-
+presses Black's counterplay. Closed positions
+are seldom as sensitive to tempi as open
+ones; instead it is the placing of the pieces
+that is important. } 18... Bf6 (18... Ng5 19. Rh2 { [%csl Gh3,Gg5] }) 19. b4 { [%csl Gc5,Gd6,Ge5] } 19... b6 (19... cxb4 20. Nb5 a5 21. a3 bxa3 { [%csl Ga5] } 22. c5 { [%cal Gc4c5] }) 20. bxc5 bxc5 (20... dxc5 21. a4 { [%cal Ga4a5] } 21... a5 { [%csl Rb6] }) 21. Qa4 a5 22. Nb5 { [%csl Gb5,Gd6] } 22... Ra6 23. Qa3 { White knows the basic rule that an attack
+on a flank is best answered by a counterattack
+in the centre. Therefore he prepares a knight
+sacrifice on d6 or c5. If the two pawns disap-
+pear, the black spine will disappear. White
+gets two dangerous passed pawns, but also
+the possibility of winning the e5-pawn. This
+will allow an attack on the a1-h8 diagonal. } { [%csl Gg4][%cal Gg6g4] } 23... Bh4 24. Bc3 Ng5 { [%cal Gh7g5] } 25. Nxd6 Nxh3+ 26. Kf1 Rxd6 27. Qxc5 Bg3 (27... hxg4 28. Nxe5 Kh7 29. Nxg4) (27... Bf6 28. gxh5 gxh5 29. Nxe5) 28. Nxe5 Kh7 29. Qa7+ Kh6 30. Rb8 { [%cal Gc4c5] } 30... Qe8 31. c5 Qa4 { [%cal Gc5c8,Gd5d7,Ge4e6] } 32. Rxg3 Ba6 33. g5+ Nxg5 34. Ng4+ hxg4 35. Qg7+ Kh5 36. Qh8+ Nh6 37. fxg4+ Kh4 38. Qxh6+ Kxg3 39. Be1# *
+
+
+[Event "Pawn Structures: Miguel Najdorf - Robert Hübner Wijk aan Zee 1971"]
+[Date "2025.10.24"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "E41"]
+[Opening "Nimzo-Indian Defense: Rubinstein System, Hübner Variation"]
+[StudyName "Pawn Structures"]
+[ChapterName "Miguel Najdorf - Robert Hübner Wijk aan Zee 1971"]
+[ChapterURL "https://lichess.org/study/lb9E9CZa/SW3HfvQJ"]
+[Annotator "https://lichess.org/@/Elyson"]
+[UTCDate "2025.10.24"]
+[UTCTime "09:40:34"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. e3 c5 5. Bd3 Nc6 6. Nf3 Bxc3+ 7. bxc3 d6 8. e4 e5 9. d5 { [%cal Gd4d5] } 9... Ne7 10. g3 { Comment } 10... h6 { [%cal Gg7g5] } 11. Nh4 { [%cal Gf2f4] } 11... g5 12. Ng2 (12. Nf5 Nxf5 13. exf5 e4 { [%cal Gc8f5] }) 12... Qa5 13. Qb3 Bh3 14. O-O O-O-O 15. Rb1 { [%csl Ge5,Gd6,Gc5] } 15... Qc7 16. f3 Kb8 17. Rf2 { [%cal Gf2b2] } 17... Rhg8 { [%cal Gg6g2] } 18. Ne3 Bc8 19. Kf1 Rdf8 20. Ke1 Ne8 { [%cal Gf3f4,Gf7f6] } 21. Nf5 Nxf5 22. exf5 f6 23. g4 Rh8 24. Be3 h5 { [%cal Gh5g4,Gh8h3] } 25. Bf1 Rf7 { [%cal Gh5g4,Gf7h7] } 26. h3 { [%csl Gc7] } 26... Qd7 27. Kd2 { [%cal Ge1d2] } 27... Nc7 28. a4 { [%csl Gb6] } 28... Re7 29. Re1 Na8 30. a5 Qd8 { [%cal Gd8a5] } 31. Qa3 Rhh7 32. Rb1 b6 33. Bd3 Rb7 34. axb6 Nxb6 35. Ra1 Qh8 36. Kc2 hxg4 37. hxg4 Bd7 38. Qa2 Rh2 39. Kd2 Rxf2+ 40. Bxf2 Qh2 41. Ke2 Na4 { [%cal Gb7b2] } 42. Qd2 Be8 { [%cal Gb7h7] } (42... Rb2 43. Bc2) 43. Rb1 Rxb1 44. Bxb1 Qf4 45. Bd3 (45. Qd3 Nb2) (45. Qa2 Nxc3+) 45... Qxd2+ 46. Kxd2 Nb6 47. Kc1 Ba4 48. Bc2 Bd7 49. Bd3 Kc7 50. Kb2 Bc8 51. Kb3 Ba6 { [%csl Gc4] } 52. Be3 Nxd5 53. cxd5 Bxd3 *
+
+
+[Event "Pawn Structures: Chapter 5"]
+[Date "2025.10.24"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "E92"]
+[Opening "King's Indian Defense: Petrosian Variation"]
+[StudyName "Pawn Structures"]
+[ChapterName "Chapter 5"]
+[ChapterURL "https://lichess.org/study/lb9E9CZa/B07RWxWw"]
+[Annotator "https://lichess.org/@/Elyson"]
+[UTCDate "2025.10.24"]
+[UTCTime "10:46:03"]
+
+1. d4 Nf6 2. c4 g6 3. Nf3 Bg7 4. Nc3 d6 5. e4 O-O 6. Be2 e5 7. d5 c5 8. O-O Kh8 9. Bd3 Ng8 10. Ne2 f5 11. Bd2 f4 12. b4 b6 13. Kh1 g5 14. g4 Bxg4 15. Nfg1 Nd7 16. f3 Bh5 17. Qa4 g4 18. Qc6 Rc8 19. Qb7 Rc7 20. Qa6 Ngf6 21. b5 Rg8 22. a4 Nb8 23. Qxb6 *
+
+

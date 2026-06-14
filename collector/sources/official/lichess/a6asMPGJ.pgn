@@ -1,0 +1,88 @@
+[Event "Late-Titled-Tuesday-Blitz-April-25-2023"]
+[Site "Chess.com"]
+[Date "2023.04.25"]
+[Round "1"]
+[White "IMRosen"]
+[Black "Fortitudine"]
+[Result "1-0"]
+[WhiteElo "2613"]
+[BlackElo "2294"]
+[TimeControl "180+1"]
+[Termination "IMRosen won by checkmate"]
+[Variant "Standard"]
+[ECO "B50"]
+[Opening "Sicilian Defense: Modern Variations"]
+[StudyName "TT April 25"]
+[ChapterName "IMRosen - Fortitudine"]
+[ChapterURL "https://lichess.org/study/a6asMPGJ/w6TnlBMq"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 { [%eval 0.36] } 1... c5 { [%eval 0.32] } 2. Nf3 { [%eval 0.0] } 2... d6 { [%eval 0.0] } 3. Nc3 { [%eval 0.0] } 3... Nf6 { [%eval 0.35] } 4. e5 { [%eval 0.0] } 4... dxe5 { [%eval -0.01] } 5. Nxe5 { [%eval -0.2] } 5... Nbd7 { [%eval 0.25] } 6. d4 { [%eval 0.32] } 6... cxd4 { [%eval 0.52] } 7. Qxd4 { [%eval 0.41] } 7... e6 { [%eval 0.51] } 8. Bb5 { [%eval 0.34] } 8... a6 { [%eval 0.37] } 9. Bxd7+ { [%eval 0.34] } 9... Nxd7 { [%eval 0.4] } 10. Bf4 { [%eval 0.2] } 10... Qb6 { [%eval 0.63] } 11. Qxb6 { [%eval 0.54] } 11... Nxb6 { [%eval 0.56] } 12. O-O-O { [%eval 0.49] } 12... f6 { [%eval 0.4] } 13. Be3 { [%eval 0.49] } 13... Nd7?! { [%eval 1.22] } { Inaccuracy. Nd5 was best. } (13... Nd5 14. Nxd5) 14. Nc4 { [%eval 1.32] } 14... b5 { [%eval 1.23] } 15. Nd6+ { [%eval 1.08] } 15... Bxd6 { [%eval 1.13] } 16. Rxd6 { [%eval 1.35] } 16... Ne5 { [%eval 1.06] } 17. Rhd1 { [%eval 0.94] } 17... O-O { [%eval 1.13] } 18. Bc5 { [%eval 0.88] } 18... Re8 { [%eval 0.83] } 19. b3?! { [%eval 0.0] } { Inaccuracy. f3 was best. } (19. f3 Bb7 (19... Nc4 20. Rc6 { [%csl Gc7][%cal Gc6c7] }) 20. Rb6 Rab8 21. b3 Rec8 22. Bb4 Rc6 23. Rd6 Rxd6 24. Rxd6 Nc6 25. Bc5 e5) 19... Bb7 { [%eval 0.05] } 20. Bd4 { [%eval 0.21] } 20... Nf7?! { [%eval 0.77] } { Inaccuracy. Bxg2 was best. } (20... Bxg2 21. Rg1) 21. Rd7?! { [%eval -0.3] } { Inaccuracy. Rb6 was best. } (21. Rb6 Re7 22. a4 e5 23. Be3 Bxg2 24. axb5 axb5 25. Kb2 Rb7 26. Rxb7 Bxb7 27. Nxb5 Bf3) 21... Bc6 { [%eval -0.27] } 22. Rc7 { [%eval -0.33] } 22... Rec8 { [%eval -0.17] } 23. Rxc8+ { [%eval -0.29] } 23... Rxc8 { [%eval -0.21] } 24. f4 { [%eval -0.57] } 24... Rd8 { [%eval -0.04] } 25. g3 { [%eval -0.06] } 25... Nh6 { [%eval 0.0] } 26. h3 { [%eval -0.12] } 26... Nf5 { [%eval -0.02] } 27. Bf2 { [%eval -0.1] } 27... Rxd1+ { [%eval -0.12] } 28. Nxd1 { [%eval -0.06] } 28... h5 { [%eval 0.0] } 29. Kd2 { [%eval -0.03] } 29... Kf7 { [%eval 0.0] } 30. Nb2 { [%eval -0.05] } 30... Bg2 { [%eval -0.07] } 31. h4 { [%eval -0.03] } 31... Bb7 { [%eval 0.04] } 32. Nd3 { [%eval -0.03] } 32... Bc8 { [%eval 0.0] } 33. Nc5 { [%eval -0.02] } 33... Nd6 { [%eval -0.07] } 34. Kc3 { [%eval -0.21] } 34... e5 { [%eval 0.0] } 35. fxe5 { [%eval 0.0] } 35... fxe5 { [%eval 0.11] } 36. a4 { [%eval -0.21] } 36... bxa4 { [%eval -0.18] } 37. bxa4 { [%eval -0.21] } 37... g6 { [%eval 0.0] } 38. Kb4 { [%eval 0.0] } 38... Nf5 { [%eval 0.31] } 39. Ka5 { [%eval 0.17] } 39... e4?? { [%eval 2.7] } { Blunder. Nd6 was best. } (39... Nd6 40. Kb6 Nc4+ 41. Kc7 Bf5 42. Nxa6 Bxc2 43. Nc5 Kf6 44. Be1 Bxa4 45. Nxa4 Kf5 46. Nc3) 40. Nxe4 { [%eval 2.91] } 40... Ke6 { [%eval 2.88] } 41. Kb6 { [%eval 2.27] } 41... Kd5 { [%eval 2.73] } 42. Ng5?? { [%eval 0.28] } { Blunder. Nc5 was best. } (42. Nc5 Nd6 43. Kc7 Bh3 44. Nxa6 Ne4 45. Nb4+ Kc4 46. Nd3 Kc3 47. Nf4 Bf1 48. Nd5+ Kd2) 42... Nd4 { [%eval 0.55] } 43. Bxd4 { [%eval 0.46] } 43... Kxd4 { [%eval 0.87] } 44. a5 { [%eval 0.33] } 44... Kc3?? { [%eval 5.3] } { Blunder. Bf5 was best. } (44... Bf5 45. Kxa6 Bxc2 46. Ne6+ Ke3 47. Kb6 Bd3 48. Nf4 Bf1 49. Nxg6 Kf3 50. Nf4 Kxg3 51. Nxh5+) 45. Nf7 { [%eval 5.14] } 45... Kxc2 { [%eval 5.36] } 46. Nd6 { [%eval 5.27] } 46... Be6 { [%eval 5.65] } 47. Kxa6 { [%eval 6.1] } 47... Bd5 { [%eval 5.66] } 48. Kb6 { [%eval 6.11] } 48... Kd3 { [%eval 5.95] } 49. a6 { [%eval 6.18] } 49... Ke3 { [%eval 6.45] } 50. Nb7 { [%eval 6.31] } 50... Bf3 { [%eval 7.37] } 51. a7 { [%eval 7.38] } 51... Kf2 { [%eval 6.98] } 52. a8=Q { [%eval 7.47] } 52... Kxg3 { [%eval 8.93] } 53. Qg8 { [%eval 9.43] } 53... Be4 { [%eval 11.36] } 54. Nd6 { [%eval 12.04] } 54... Bd3?! { [%eval #10] } { Checkmate is now unavoidable. Bc2 was best. } (54... Bc2 55. Qd5) 55. Qd8?! { [%eval 10.62] } { Lost forced checkmate sequence. Qb3 was best. } (55. Qb3 Kxh4 56. Qxd3 Kg4 57. Kc5 h4 58. Kd5 Kh5 59. Ne4 Kh6 60. Qd4 Kh7 61. Ng5+ Kg8) 55... Kg4 { [%eval 16.06] } 56. Qg5+ { [%eval 18.81] } 56... Kh3?! { [%eval #12] } { Checkmate is now unavoidable. Kf3 was best. } (56... Kf3 57. Qd5+ Ke2 58. Nc4 Bxc4 59. Qxc4+ Ke3 60. Qe6+ Kd2 61. Qxg6 Kc1 62. Qxh5 Kc2 63. Qg6+) 57. Kc5?! { [%eval 15.4] } { Lost forced checkmate sequence. Qe3+ was best. } (57. Qe3+ Kxh4 58. Qxd3 Kg4 59. Qxg6+ Kf3 60. Qd3+ Kf4 61. Qh3 h4 62. Kc5 Kg5 63. Kd5 Kf6) 57... Be2?! { [%eval #4] } { Checkmate is now unavoidable. Bb1 was best. } (57... Bb1 58. Qd2 g5 59. Qxg5 Bd3 60. Qxh5 Kg2 61. Qg5+ Kf1 62. h5 Ke2 63. Kd4 Bf5 64. Nxf5) 58. Kd4?! { [%eval 19.6] } { Lost forced checkmate sequence. Ne4 was best. } (58. Ne4 Bg4 59. Qf4 Kg2 60. Qg3+ Kf1 61. Qf2#) 58... Bg4 { [%eval #4] } 59. Ke3 { [%eval #5] } 59... Kg2 { [%eval #5] } 60. Qf4 { [%eval #5] } 60... Kh1 { [%eval #3] } 61. Qg3 { [%eval #2] } 61... Bd7 { [%eval #2] } 62. Kf2 { [%eval #1] } 62... Bc6 { [%eval #1] } 63. Qg1# { 1-0 White wins. } 1-0
+
+
+[Event "Late-Titled-Tuesday-Blitz-April-25-2023"]
+[Site "Chess.com"]
+[Date "2023.04.25"]
+[Round "2"]
+[White "mishanick"]
+[Black "IMRosen"]
+[Result "1-0"]
+[WhiteElo "3080"]
+[BlackElo "2612"]
+[TimeControl "180+1"]
+[Termination "mishanick won by resignation"]
+[Variant "Standard"]
+[ECO "D35"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Positional Variation"]
+[StudyName "TT April 25"]
+[ChapterName "mishanick - IMRosen"]
+[ChapterURL "https://lichess.org/study/a6asMPGJ/YWFtAdGX"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 { [%eval 0.0] } 1... d5 { [%eval 0.27] } 2. c4 { [%eval 0.29] } 2... e6 { [%eval 0.3] } 3. Nc3 { [%eval 0.39] } 3... Nf6 { [%eval 0.43] } 4. cxd5 { [%eval 0.39] } 4... exd5 { [%eval 0.38] } 5. Bg5 { [%eval 0.35] } 5... c6 { [%eval 0.37] } 6. e3 { [%eval 0.28] } 6... Bd6 { [%eval 0.64] } 7. Bd3 { [%eval 0.57] } 7... h6 { [%eval 0.55] } 8. Bh4 { [%eval 0.42] } 8... O-O { [%eval 0.55] } 9. Nf3 { [%eval 0.62] } 9... Be6 { [%eval 0.51] } 10. Ne5 { [%eval 0.59] } 10... c5 { [%eval 0.6] } 11. O-O { [%eval 0.4] } 11... cxd4 { [%eval 0.6] } 12. exd4 { [%eval 0.57] } 12... Nc6 { [%eval 0.62] } 13. Nxc6 { [%eval 0.67] } 13... bxc6 { [%eval 0.62] } 14. Rc1 { [%eval 0.17] } 14... Rb8 { [%eval 0.12] } 15. Na4 { [%eval 0.11] } 15... g5?! { [%eval 0.81] } { Inaccuracy. Bg4 was best. } (15... Bg4) 16. Bg3 { [%eval 0.94] } 16... Ne4?! { [%eval 1.95] } { Inaccuracy. Qc7 was best. } (16... Qc7 17. Qd2 Rbe8 18. Nc5 Nh5 19. Bxd6 Qxd6 20. Bb1 Re7 21. Nd3 Bd7 22. Ne5 Rb8 23. g3) 17. Rxc6 { [%eval 1.31] } 17... Nxg3 { [%eval 1.8] } 18. hxg3 { [%eval 1.32] } 18... Qd7?! { [%eval 2.32] } { Inaccuracy. Re8 was best. } (18... Re8 19. Ra6 Bf8 20. a3 Bg7 21. b4 Qf6 22. Rxa7 Qxd4 23. Nc5 Bg4 24. Qb1 Ra8 25. Rxa8) 19. Ra6 { [%eval 2.52] } 19... Kg7 { [%eval 2.53] } 20. a3 { [%eval 2.62] } 20... Rfc8?! { [%eval 3.62] } { Inaccuracy. Rbe8 was best. } (20... Rbe8 21. b4) 21. b4 { [%eval 3.2] } 21... Rc6?! { [%eval 4.54] } { Inaccuracy. Bg4 was best. } (21... Bg4 22. Rxd6) 22. Nc5 { [%eval 4.65] } 22... Qc7 { [%eval 4.86] } 23. Nxe6+ { [%eval 4.96] } 23... fxe6 { [%eval 4.97] } 24. Rxc6?! { [%eval 3.71] } { Inaccuracy. Qh5 was best. } (24. Qh5 Rxa6 25. Qg6+ Kf8 26. Bxa6 Qf7 27. Qxh6+ Ke7 28. Qxg5+ Qf6 29. Qxf6+ Kxf6 30. Rc1 Rb6) 24... Qxc6 { [%eval 3.41] } 25. Qg4 { [%eval 3.15] } 25... Kf6? { [%eval 6.18] } { Mistake. Re8 was best. } (25... Re8 26. Re1) 26. f4 { [%eval 7.43] } 26... gxf4 { [%eval 8.25] } 27. Rxf4+ { [%eval 8.0] } 27... Bxf4 { [%eval 8.26] } 28. Qxf4+ { [%eval 8.39] } 28... Kg7 { [%eval 8.65] } 29. Qxb8 { [%eval 8.54] } 29... Qc1+ { [%eval 9.02] } 30. Kh2 { [%eval 8.93] } 30... h5 { [%eval 10.83] } 31. Qxa7+ { [%eval 11.08] } 31... Kf6 { [%eval 11.39] } 32. Qh7 { [%eval 10.44] } 32... h4 { [%eval 20.12] } 33. Qxh4+ { [%eval 18.49] } 33... Kf7 { [%eval 18.16] } 34. Qf4+ { [%eval 17.81] } 34... Qxf4 { [%eval 20.37] } 35. gxf4 { [%eval 22.18] } { 1-0 White wins. } 1-0
+
+
+[Event "Late-Titled-Tuesday-Blitz-April-25-2023"]
+[Site "Chess.com"]
+[Date "2023.04.25"]
+[Round "3"]
+[White "IMRosen"]
+[Black "Langua_Chess"]
+[Result "1-0"]
+[WhiteElo "2616"]
+[BlackElo "2421"]
+[TimeControl "180+1"]
+[Termination "IMRosen won on time"]
+[Variant "Standard"]
+[ECO "B36"]
+[Opening "Sicilian Defense: Accelerated Dragon, Maróczy Bind"]
+[StudyName "TT April 25"]
+[ChapterName "IMRosen - Langua_Chess"]
+[ChapterURL "https://lichess.org/study/a6asMPGJ/wmJDqmLs"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 { [%eval 0.36] } 1... c5 { [%eval 0.32] } 2. Nf3 { [%eval 0.0] } 2... g6?! { [%eval 0.64] } { Inaccuracy. d6 was best. } (2... d6 3. c3 Nf6 4. h3 Nc6 5. Bd3 e5 6. O-O Be7 7. Bc2) 3. d4 { [%eval 0.58] } 3... cxd4 { [%eval 0.54] } 4. Nxd4 { [%eval 0.52] } 4... Nc6 { [%eval 0.64] } 5. c4 { [%eval 0.52] } 5... Nf6 { [%eval 0.68] } 6. Nc3 { [%eval 0.51] } 6... d6 { [%eval 0.71] } 7. f3 { [%eval 0.67] } 7... Bg7 { [%eval 0.61] } 8. Be3 { [%eval 0.55] } 8... O-O { [%eval 0.57] } 9. b3 { [%eval 0.26] } 9... Nh5 { [%eval 0.49] } 10. Qd2 { [%eval 0.44] } 10... Bd7 { [%eval 0.82] } 11. Be2?! { [%eval 0.2] } { Inaccuracy. O-O-O was best. } (11. O-O-O Be5 12. Kb1 Qa5 13. Nd5 Qxd2 14. Rxd2 f5 15. exf5 gxf5 16. c5 f4 17. Bf2 Nxd4) 11... a6 { [%eval 0.67] } 12. O-O { [%eval 0.35] } 12... Nf4 { [%eval 0.43] } 13. Rad1 { [%eval 0.0] } 13... Nxd4 { [%eval 0.32] } 14. Bxd4 { [%eval 0.04] } 14... Bxd4+ { [%eval 0.1] } 15. Qxd4 { [%eval 0.05] } 15... b5 { [%eval 0.08] } 16. e5 { [%eval 0.03] } 16... Nxe2+ { [%eval 0.04] } 17. Nxe2 { [%eval -0.05] } 17... bxc4 { [%eval -0.11] } 18. bxc4 { [%eval 0.0] } 18... Ba4 { [%eval -0.05] } 19. Rb1 { [%eval -0.11] } 19... dxe5 { [%eval -0.02] } 20. Qxe5 { [%eval -0.02] } 20... Qd3 { [%eval 0.4] } 21. Nc3 { [%eval 0.06] } 21... Qxc4 { [%eval 0.0] } 22. Nd5 { [%eval 0.13] } 22... Ra7? { [%eval 1.7] } { Mistake. f6 was best. } (22... f6 23. Nxe7+) 23. Nxe7+ { [%eval 1.84] } 23... Rxe7 { [%eval 1.88] } 24. Qxe7 { [%eval 1.81] } 24... Qxa2 { [%eval 1.75] } 25. Qf6 { [%eval 1.76] } 25... Bb5 { [%eval 1.98] } 26. Rfe1 { [%eval 2.04] } 26... Rc8 { [%eval 2.46] } 27. Rbd1 { [%eval 3.04] } 27... a5 { [%eval 2.72] } 28. Rd8+ { [%eval 2.66] } 28... Rxd8 { [%eval 2.5] } 29. Qxd8+ { [%eval 2.61] } 29... Kg7 { [%eval 2.73] } 30. Qd4+ { [%eval 2.64] } 30... Kg8 { [%eval 2.96] } 31. Rc1 { [%eval 2.49] } 31... Qe6 { [%eval 2.3] } 32. h4 { [%eval 2.49] } 32... a4 { [%eval 3.0] } 33. Qb4?? { [%eval -3.76] } { Blunder. h5 was best. } (33. h5) 33... Qe3+ { [%eval -4.02] } 34. Kh2 { [%eval -3.73] } 34... Qxc1 { [%eval -3.97] } 35. Qxb5 { [%eval -3.79] } 35... a3?? { [%eval -0.43] } { Blunder. Qf4+ was best. } (35... Qf4+ 36. g3 Qd4 37. h5 Qf2+ 38. Kh3 Qxf3 39. Qe8+ Kg7 40. Qe5+ f6 41. Qe7+ Kh6 42. Kh2) 36. Qe8+ { [%eval -0.45] } 36... Kg7 { [%eval -0.52] } 37. Qe5+ { [%eval -0.4] } 37... Kg8 { [%eval -0.55] } 38. Qb8+ { [%eval -0.4] } 38... Kg7 { [%eval -0.54] } 39. Qe5+ { [%eval -0.45] } 39... Kh6 { [%eval 0.0] } 40. g4?? { [%eval -8.14] } { Blunder. Qd6 was best. } { 1-0 White wins on time. } (40. Qd6 f5 41. g4 fxg4 42. fxg4 Qc2+ 43. Kh3 Qc3+ 44. Kg2 Qc2+) 1-0
+
+
+[Event "Late-Titled-Tuesday-Blitz-April-25-2023"]
+[Site "Chess.com"]
+[Date "2023.04.25"]
+[Round "4"]
+[White "IMRosen"]
+[Black "MrChessSponge"]
+[Result "1/2-1/2"]
+[WhiteElo "2612"]
+[BlackElo "2429"]
+[TimeControl "180+1"]
+[Termination "Game drawn - insufficient material"]
+[Variant "Standard"]
+[ECO "B50"]
+[Opening "Sicilian Defense: Modern Variations"]
+[StudyName "TT April 25"]
+[ChapterName "IMRosen - MrChessSponge"]
+[ChapterURL "https://lichess.org/study/a6asMPGJ/n2ZewaBk"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 { [%eval 0.36] } 1... c5 { [%eval 0.32] } 2. Nf3 { [%eval 0.0] } 2... d6 { [%eval 0.0] } 3. Nc3 { [%eval 0.0] } 3... Nf6 { [%eval 0.35] } 4. e5 { [%eval 0.0] } 4... dxe5 { [%eval -0.01] } 5. Nxe5 { [%eval -0.2] } 5... Nbd7 { [%eval 0.25] } 6. d4 { [%eval 0.32] } 6... e6 { [%eval 0.33] } 7. Bf4 { [%eval 0.38] } 7... Be7 { [%eval 0.6] } 8. dxc5 { [%eval 0.66] } 8... O-O { [%eval 0.65] } 9. c6 { [%eval 0.22] } 9... Nxe5 { [%eval 0.19] } 10. Qxd8 { [%eval 0.18] } 10... Rxd8 { [%eval 0.06] } 11. c7 { [%eval 0.13] } 11... Rd7 { [%eval 0.21] } 12. Bxe5 { [%eval 0.16] } 12... a6?! { [%eval 1.09] } { Inaccuracy. Bd6 was best. } (12... Bd6) 13. Be2 { [%eval 0.71] } 13... Ne8? { [%eval 1.98] } { Mistake. Bd6 was best. } (13... Bd6 14. Bxd6) 14. Rd1? { [%eval 0.78] } { Mistake. Na4 was best. } (14. Na4) 14... f6 { [%eval 0.79] } 15. Bg3 { [%eval 0.72] } 15... Bb4?! { [%eval 1.49] } { Inaccuracy. Rxd1+ was best. } (15... Rxd1+ 16. Kxd1 b5 17. Kc1 Ra7 18. Rd1 Nxc7 19. f4 Ne8 20. a4 b4 21. Ne4 Rc7 22. Nd2) 16. O-O { [%eval 1.38] } 16... Ba5 { [%eval 1.73] } 17. Bc4? { [%eval 0.16] } { Mistake. Bf3 was best. } (17. Bf3 Nxc7 18. Na4 Nb5 19. c3 Rxd1 20. Rxd1 e5 21. Bd5+ Kh8 22. f4 Bf5 23. Bxb7 Rb8) 17... Kf7 { [%eval 0.28] } 18. Rfe1 { [%eval 0.22] } 18... Rxd1 { [%eval 0.14] } 19. Rxd1 { [%eval 0.14] } 19... Bxc7 { [%eval 0.1] } 20. Bxc7 { [%eval 0.09] } 20... Nxc7 { [%eval 0.19] } 21. Ne4 { [%eval -0.1] } 21... Ke7 { [%eval -0.14] } 22. Bb3 { [%eval -0.14] } 22... Bd7 { [%eval -0.16] } 23. f4 { [%eval -0.09] } 23... Bc6 { [%eval 0.0] } 24. Nc5 { [%eval 0.0] } 24... b6?! { [%eval 0.94] } { Inaccuracy. Re8 was best. } (24... Re8 25. Re1 Kd6 26. Ne4+ Ke7) 25. Nxe6 { [%eval 0.94] } 25... Nxe6 { [%eval 0.88] } 26. Re1 { [%eval 0.91] } 26... Rd8?! { [%eval 1.57] } { Inaccuracy. Bd7 was best. } (26... Bd7 27. Bxe6 Bxe6 28. f5 b5 29. Rxe6+ Kf7 30. Rc6 Rd8 31. h4 Rd1+ 32. Kf2 a5 33. Rc5) 27. Rxe6+ { [%eval 1.49] } 27... Kd7 { [%eval 1.69] } 28. Re2 { [%eval 1.54] } 28... Kc7 { [%eval 1.85] } 29. Re7+ { [%eval 1.66] } 29... Kb8?! { [%eval 2.77] } { Inaccuracy. Rd7 was best. } (29... Rd7 30. Rxd7+ Kxd7 31. c3 a5 32. Kf2 h6 33. Bg8 a4 34. b4 axb3 35. axb3 Ke7 36. g3) 30. Rxg7 { [%eval 2.45] } 30... Rd2 { [%eval 2.89] } 31. h4 { [%eval 3.06] } 31... a5 { [%eval 3.37] } 32. a4 { [%eval 2.85] } 32... b5?! { [%eval 3.98] } { Inaccuracy. h6 was best. } (32... h6 33. Rg6 b5 34. axb5 Bxb5 35. Rxf6 Kc7 36. Rf7+ Kd8 37. f5 a4 38. Be6 Bc6 39. Rg7) 33. axb5 { [%eval 4.0] } 33... Bxb5 { [%eval 4.31] } 34. Rxh7 { [%eval 4.21] } 34... a4 { [%eval 4.2] } 35. Be6 { [%eval 4.19] } 35... Rxc2 { [%eval 4.16] } 36. Bd5?! { [%eval 3.31] } { Inaccuracy. Rh8+ was best. } (36. Rh8+ Ka7 37. h5 Bd3 38. h6 Rxb2 39. h7 Bxh7 40. Rxh7+ Kb6 41. Kh2 Rb5 42. Kg3 a3) 36... Rxb2 { [%eval 3.62] } 37. h5?! { [%eval 2.52] } { Inaccuracy. Rb7+ was best. } (37. Rb7+ Kc8 38. h5 Rb1+ 39. Kh2 Bd3 40. Rf7 Kd8 41. Ra7 Rb5 42. Bf7 Rb4 43. Bg6 Rxf4) 37... Bd3 { [%eval 2.71] } 38. Rh8+ { [%eval 2.42] } 38... Kc7 { [%eval 2.87] } 39. Ra8?! { [%eval 2.17] } { Inaccuracy. h6 was best. } (39. h6 Rb5 40. h7 Rxd5 41. Rc8+ Kxc8 42. h8=Q+ Kb7 43. Qxf6 Bb5 44. Qe7+ Kb6 45. g4 Rd3) 39... Kd6?! { [%eval 3.04] } { Inaccuracy. Rb4 was best. } (39... Rb4) 40. Ra5?? { [%eval 0.78] } { Blunder. Bf3 was best. } (40. Bf3 Bc2 41. h6 Rb4 42. Bd1 Bg6 43. Rxa4 Rb1 44. Rd4+ Ke6 45. Kf2 Rb8 46. g4 Rh8) 40... Rb5?? { [%eval 3.77] } { Blunder. a3 was best. } (40... a3 41. g3) 41. Rxb5 { [%eval 4.01] } 41... Bxb5 { [%eval 3.99] } 42. Ba2 { [%eval 4.13] } 42... Bd3 { [%eval 4.05] } 43. g4 { [%eval 4.46] } 43... Ke7 { [%eval 4.22] } 44. Kf2 { [%eval 5.24] } 44... Bc2 { [%eval 5.51] } 45. Ke3 { [%eval 5.84] } 45... Bd1 { [%eval 5.72] } 46. g5?? { [%eval 0.0] } { Blunder. h6 was best. } (46. h6 Kf8 47. g5 fxg5 48. fxg5 Bc2 49. Kd4 Bg6 50. Bd5 Bb1 51. Ke5 a3 52. Kf6 a2 53. Bxa2 Bxa2 54. h7) 46... Bxh5 { [%eval 0.0] } 47. gxf6+ { [%eval 0.0] } 47... Kxf6 { [%eval 0.0] } 48. Kd4 { [%eval 0.0] } 48... Bf7 { [%eval 0.0] } 49. Bxf7 { [%eval 0.0] } 49... Kxf7 { [%eval 0.0] } 50. Kc3 { [%eval 0.0] } 50... Kf6 { [%eval 0.0] } 51. Kb2 { [%eval 0.0] } 51... Kf5 { [%eval 0.0] } 52. Ka3 { [%eval 0.0] } 52... Kxf4 { [%eval 0.0] } 53. Kxa4 { [%eval 0.0] } { 1/2-1/2 The game is a draw. } 1/2-1/2
+
+

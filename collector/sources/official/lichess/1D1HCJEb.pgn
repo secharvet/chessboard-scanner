@@ -1,0 +1,621 @@
+[Event "Sicilian Kan Repertoire: Introduction and Opening Ideas"]
+[Date "2018.09.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B43"]
+[Opening "Sicilian Defense: Kan Variation, Knight Variation"]
+[StudyName "Sicilian Kan Repertoire"]
+[ChapterName "Introduction and Opening Ideas"]
+[ChapterURL "https://lichess.org/study/1D1HCJEb/e61uypkO"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[UTCDate "2018.09.11"]
+[UTCTime "00:58:57"]
+
+{ Hello chess fans! This is NM Mr_Penings (Daniel He) bringing you all an in-depth guide to the Sicilian Kan. I started playing the Kan as black way back in 2012, and it has been my main defense against 1. e4 ever since!
+❤️Please give this study a like (Heart) and share with others! }
+1. e4 { I would estimate I've played over 3000 games total in the Kan, which includes bullet games online, so I would call myself a "specialist" in the opening. At the end of the course, I have some sample games of mine in the Sicilian Kan to illustrate some key ideas in action. All of the games are played on either chess.com or Lichess.org. } 1... c5 2. Nf3 { In this course, I will be covering 2nd move sidelines 2. c3 (Alapin variation) and 2. Nc3 (Closed Sicilian). For both lines, I recommend a flexible setup that resembles the Kan pawn structure. } 2... e6 3. d4 { Third move sidelines are the variations of the King's Indian Attack (3. d3, 3. g3, and 3. Qe2). 3. c3 and 3. Nc3 usually transposes back to a familiar line. } 3... cxd4 4. Nxd4 a6 { This is the starting position for the Kan Sicilian. The moves I included in the study are the lines I have used successfully over the years. There are definitely other moves for black in these lines, but generally the Kan is more about ideas in the position rather than concrete moves. Enjoy the guide! } 5. Nc3 { The most common 5th moves are 5. Nc3, 5. Bd3, and 5. c4, all of them leading to pretty different positions. All three will be covered extensively in the rest of the course. } 5... Qc7 { The queen is safe on c7 and hits all areas of the board. Notice the queen is safe from any knight attacks (d5 and b5 are off limits for white). Qc7 also prevents e5 so black can play Nf6 next. } 6. Bd3 Nf6 7. O-O Nc6 8. Be3 h5 { This weird looking move, h5, is quite common in the Kan Sicilian. I approve of this move and have very nice kingside attacks that begin with this h pawn move. The idea is obviously to play Ng4, threatening the bishop and checkmate on h2. } 9. h3 b5 { This is a typical setup in the Kan, where black is comfortable playing on all sides of the board. Usually, black knights are developed before bishops because the dark squared bishop in particular can be developed on any square depending on the position. Common ideas include b4 to take more control over the center and Ne5-c4 to place some pressure on white. Black can often get away with not castling since the center is still fairly closed. } *
+
+
+[Event "Sicilian Kan Repertoire: Rare Sidelines"]
+[Date "2019.08.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B40"]
+[Opening "Sicilian Defense: French Variation"]
+[StudyName "Sicilian Kan Repertoire"]
+[ChapterName "Rare Sidelines"]
+[ChapterURL "https://lichess.org/study/1D1HCJEb/rJ0nF7bU"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[UTCDate "2019.08.04"]
+[UTCTime "08:20:47"]
+
+1. e4 c5 2. Nf3 e6 3. Bc4?! { Surprisingly common amongst beginner and intermediate players. When starting out, players are taught the Italian Game (e4 e5 Nf3 Nc6 Bc4) which is a great opening to learn piece development and center control. But these moves are not automatic. I'll be blunt, but against the Kan, it is just plain bad. The a2-g8 diagonal is already closed, so the bishop is not going places on c4. To make matters worse, d5 comes with tempo! } (3. c4 a6 { This often transposes to the Maroczy Bind variation, one of the 3 major lines. See chapters 15-16 }) (3. b3 { An early queenside fianchetto is rare but a reasonable try. The downsides of this line is the a1-h8 diagonal can rarely be opened up because whenever white plays e5, the diagonal closes. Meanwhile, with White's dark squared bishop on b2, there is less control over the g1-a7 diagonal. Often times, Black can play Bc5 and put a lot of pressure down that diagonal. } 3... a6 4. Bb2 b5 5. d4 cxd4 6. Nxd4 Bb7 7. Bd3 Nf6 8. Qe2 Qc7 { Very similar to a Kan structure now. See sample game below in the 3. b3 variation. }) 3... a6 { I recommend this move. 3. d5 is also logical, but the lines with Bb5+ and an early 0-0 and Re1+ sometimes can lead to bad positions if not played accurately. 3. a6 is very straightforward. The idea is 4. d5 or 4. b5, which both can't be stopped. } 4. Nc3 (4. a4 d5) 4... b5 5. Be2 (5. Bb3 c4) 5... Bb7 { Black already has a much better position. b4 is the threat, winning the e4 pawn. } *
+
+
+[Event "Sicilian Kan Repertoire: Sideline: Closed Sicilian Part 1 (2. Nc3 a6 3. f4)"]
+[Date "2018.09.19"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B23"]
+[Opening "Sicilian Defense: Closed"]
+[StudyName "Sicilian Kan Repertoire"]
+[ChapterName "Sideline: Closed Sicilian Part 1 (2. Nc3 a6 3. f4)"]
+[ChapterURL "https://lichess.org/study/1D1HCJEb/WtgeKU4u"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[UTCDate "2018.09.19"]
+[UTCTime "16:48:45"]
+
+1. e4 c5 2. Nc3 { The Closed Sicilian/Grand Prix Attack is a great attacking opening for white. White can fianchetto his kingside bishop or go for a quick attack with f4. A pretty rich opening with lots of ideas. } 2... a6 { I have great success with this move because it strikes back on the queenside immediately with a quick b5, rather than develop on the center/kingside. There are 4 main moves after 2. a6 : f4, g3, Nf3, and a4. } 3. f4 { The other popular line 3. g3 often transposes to the lines in the 3. f4 variation. See chapter 3. } (3. Nf3 e6 { Transposes back to the main line of the Kan Sicilian. See later chapters }) (3. a4 { I'm always happy to see white play 3. a4 because a6 for black is a lot more useful than a4 for white. Yes, it stops the plan of 3. b5, but a6 is a useful move in the Kan, while a4 is not. So I suggest just switching gears back into a Kan with 3. e6 } 3... e6 4. f4 d5 5. Nf3 Nc6 6. d3 Nf6 7. e5 d4 { This is a comfortable position to play for black. }) 3... b5 4. Nf3 Bb7 5. d3 (5. d4 { I've seen this move played plenty of times, and should not be feared. This is basically a Kan with an early f4 for white. } 5... cxd4 6. Nxd4 (6. Qxd4 e6 7. Bd3 Nc6 8. Qf2 Qc7 9. Be3 Nf6 { [%cal Gf6g4] }) 6... b4 7. Nd5 e6 8. Ne3 Bxe4 { A free pawn with no compensation. }) 5... e6 6. g3 d5 { The threat is to play b4 and break open the center. Black wants to tempt white to play e5, closing the center. See variation below. } 7. e5 h5 { This is a common idea for black whenever white pushes e5. Now the f5 square is weakened and a great spot for the black knight, which will hop in from g8-h6-f5. Black has dominance over all sides of the board, with a potential kingside attack with a well-timed h4, and space advantage on the queenside and center. } *
+
+
+[Event "Sicilian Kan Repertoire: Sideline: Closed Sicilian Part 2 (2. Nc3 a6 3. g3)"]
+[Date "2019.08.03"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B23"]
+[Opening "Sicilian Defense: Closed"]
+[StudyName "Sicilian Kan Repertoire"]
+[ChapterName "Sideline: Closed Sicilian Part 2 (2. Nc3 a6 3. g3)"]
+[ChapterURL "https://lichess.org/study/1D1HCJEb/kZKDKXj5"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[UTCDate "2019.08.03"]
+[UTCTime "07:27:32"]
+
+1. e4 c5 2. Nc3 a6 3. g3 b5 4. Bg2 Bb7 5. d3 e6 6. f4 (6. Nge2 b4 { And white's knight is forced to go on a weak square and black has a comfortable position. } 7. Na4) (6. Be3 Nf6 7. f4 d5 8. e5 Ng8 { Knight is headed to f5/g4 again, and the threat of d4 to fork the bishop and knight still stands. }) 6... d5 7. e5 h5 8. Nf3 Nh6 { This is a favorable position for black because of the weak squares g4 and f5 to place for the knight, and a center/queenside space advantage. So basically black has dominance on all sides of the board. Oftentimes, black can play Nf5 and then a well-timed h4 to create a dangerous attack along the h-file. } *
+
+
+[Event "Sicilian Kan Repertoire: Sideline: Sicilian Alapin (2. c3 or 2. Nf3 e6 3. c3)"]
+[Date "2018.09.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B40"]
+[Opening "Sicilian Defense: Delayed Alapin Variation, with e6"]
+[StudyName "Sicilian Kan Repertoire"]
+[ChapterName "Sideline: Sicilian Alapin (2. c3 or 2. Nf3 e6 3. c3)"]
+[ChapterURL "https://lichess.org/study/1D1HCJEb/t7vuNseS"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[UTCDate "2018.09.11"]
+[UTCTime "01:00:05"]
+
+{ This chapter is on the Sicilian Alapin with an early c3. Although White does get a nice pawn center, the pawn on c3 restricts the White knight from coming to the important central square c3. The Alapin is considered a quiet sideline and Black can usually get a balanced position out of the opening. It is important NOT to exchange pawns with cxd4 too early or else white gets Nc3 afterwards. }
+1. e4 c5 2. Nf3 (2. c3 e6 3. d4 d5 { Usually transposes after white plays Nf3. }) 2... e6 3. c3 d5 { I recommend this line (And I play it myself!) because it doesn't require a lot of memorization of theory that comes with 3. Nf6, where white can get a strong initiative if black doesn't play accurately. } (3... Nf6 4. e5 Nd5 5. d4 cxd4 6. cxd4 d6 { Another solid line for black, but requires more opening study. }) 4. exd5 (4. e5 { Against 4. e5, I recommend playing 4. Bd7 and 5. a6 with the idea of trading off the bad bishop immediately with Bb5. This has brought me good results and comfortable positions to play. See my game vs Bolzano-weierstrass below } 4... Bd7 5. d4 a6 6. Bd3 cxd4 7. cxd4 Bb5 8. Bxb5+ axb5 { Although black has doubled pawns, they aren't necessarily weak since black now has the wide open a-file and the b pawns stop the knight from coming out. }) 4... exd5 5. d4 Nc6 6. Bb5 { The most challenging move. } (6. Be3 c4 7. b3 cxb3 8. axb3 Bd6) (6. Be2 Bd6 7. O-O Nge7 { Basically the same line as 6. Bb5, but with a more passive bishop placement on e2 rather than b5. }) (6. Bd3 Bd6 7. O-O Nge7 8. Re1 O-O 9. Bg5 f6 10. Bh4 c4 11. Bc2 Nf5 { With a good position. }) 6... Bd6 7. dxc5 Bxc5 { Yes, white got a tempo on the black bishop, but the position is still balanced because white's c3 move blocks the knight from going there and black's isolated d-pawn is hard to attack. } 8. O-O Ne7 9. Re1 O-O 10. Bg5 (10. Be3 Bxe3 11. Rxe3 Nf5 12. Rd3 Be6 13. Nbd2 Qf6 14. Nb3 a6 15. Bxc6 bxc6 { Black gets a solid position out of the opening, with potential ideas along the open b-file with Rb8 and a5-a4 while maintaining control over the center. }) 10... f6 11. Bf4 (11. Bh4 Nf5 12. Bg3 Nxg3 13. hxg3 Qb6) 11... Qb6 { Always be on the lookout for lines with Qb6, double attack on the bishop and f2 pawn! } *
+
+
+[Event "Sicilian Kan Repertoire: Sideline: King's Indian Attack Part 1 (3. d3)"]
+[Date "2019.08.03"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B40"]
+[Opening "Sicilian Defense: French Variation"]
+[StudyName "Sicilian Kan Repertoire"]
+[ChapterName "Sideline: King's Indian Attack Part 1 (3. d3)"]
+[ChapterURL "https://lichess.org/study/1D1HCJEb/4gvbPi8Z"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[UTCDate "2019.08.03"]
+[UTCTime "07:18:41"]
+
+{ The King's Indian Attack with 3. d3 signals a slow and closed game. My recommendation for black is to put a bind on the d4 square with a reversed Botvinnik English structure. That way, White will have a hard time opening up the position with d4 and the fianchettoed Bg2 will often be blocked by the pawn on e4, limiting it's scope. }
+1. e4 c5 2. Nf3 e6 3. d3 Nc6 4. g3 Nge7 (4... g6 { Slightly inaccurate move order because this allows Bg5, where Black's dark squares are a bit too weak. } 5. Bg5 Nge7 (5... f6 6. Bd2 { This is a playable line, but the kingside pawn structure is not natural for Black and can easily be misplayed. }) 6. Bf6) 5. Bg2 g6 6. O-O Bg7 7. Re1 e5 { Temporarily shutting down the Re1. The e-file must stay closed! } 8. c3 O-O 9. Nbd2 d6 { Black has a very flexible position here with a slow kingside expansion plan of h6 + Be6 + f5. White does have an outpost on d5, but it's not easily accessible for White's knights. } 10. a4 { Securing the c4 square for the knight. } 10... h6 11. Nc4 Be6 12. Ne3 Qd7 { It's very difficult to find a reasonable plan here for White. White's pieces are just not coordinated well enough. f5 is coming for Black next. See the sample games at the end of the course for some ideas in action. } *
+
+
+[Event "Sicilian Kan Repertoire: Sideline: King's Indian Attack Part 2 (3. g3)"]
+[Date "2019.07.22"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B40"]
+[Opening "Sicilian Defense: French Variation"]
+[StudyName "Sicilian Kan Repertoire"]
+[ChapterName "Sideline: King's Indian Attack Part 2 (3. g3)"]
+[ChapterURL "https://lichess.org/study/1D1HCJEb/VAdSey9k"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[UTCDate "2019.07.22"]
+[UTCTime "06:16:31"]
+
+{ 3. g3 is a tricky move order. White may be going for a King's Indian attack with d3, but playing d4 to transpose to an open Sicilian is also possible. Therefore, White's intentions are not revealed with this move, and Black has to be careful. }
+1. e4 c5 2. Nf3 e6 3. g3 d5 { This is the recommended line against 3. g3. Black should punish White for not playing d3, so now Nbd2 is not possible. } 4. exd5 { Basically forced. } 4... exd5 5. d4 (5. Bg2 Nf6 6. O-O Be7 7. Re1 O-O 8. d4 Nc6 { Tranposes to a similar line }) 5... Nf6 6. Bg2 Be7 7. O-O O-O 8. Nc3 Nc6 9. Bg5 Be6 { Should be no problems for black here. Black may end up getting an isolated d pawn, but there is plenty of piece play to compensate. } 10. dxc5 Bxc5 11. Bxf6 Qxf6 12. Nxd5 Qxb2 { A rather dynamic position should make Black's bishop pair quite useful. Rooks are coming to the center soon and Black has a comfortable position. } *
+
+
+[Event "Sicilian Kan Repertoire: Common Trap in the Kan #1"]
+[Date "2018.09.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B43"]
+[Opening "Sicilian Defense: Kan Variation, Knight Variation"]
+[StudyName "Sicilian Kan Repertoire"]
+[ChapterName "Common Trap in the Kan #1"]
+[ChapterURL "https://lichess.org/study/1D1HCJEb/vPJZype8"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[UTCDate "2018.09.11"]
+[UTCTime "05:08:43"]
+
+{ Here are some very common traps in the Kan. Even today in my own games, players have fallen into them. So learn them well and memorize them! }
+1. e4 c5 2. Nf3 e6 3. d4 cxd4 4. Nxd4 a6 5. Nc3 Qc7 6. Be3 { Unlike other Sicilians like the Dragon and Najdorf, it's not good to play Be3 + f3 + Qd2 mainly because black's bishop has the potential to cause trouble with the Bb4 pin. Be3 is a fine move, but f3 or Qd2 to follow up isn't. } 6... Nf6 7. f3? (7. Be2 Bb4 8. O-O Bxc3 9. bxc3 Nxe4 { Wins a pawn, but don't be too greedy as there will be potential weaknesses on the dark squares, so beware and play it safe from here. }) 7... Bb4 8. Qd2 d5! { Black has not committed the d-pawn yet, so d5 is extremely powerful. White is in trouble here due to the pin. } 9. Bd3 { The most common move in this position surprisingly, but it's a blunder. } (9. exd5 Nxd5 { [%csl Ge3,Gc3] } 10. Nde2 Nxe3 11. Qxe3 O-O { Black has a much better position due to the bishop pair and more active position. }) 9... e5 { And white loses a piece due to the fork. Too much pressure. } 10. Nf5 (10. exd5 exd4) (10. a3 Bxc3 11. bxc3 exd4) 10... Bxf5 11. exf5 d4 *
+
+
+[Event "Sicilian Kan Repertoire: Common Trap in the Kan #2"]
+[Date "2019.08.03"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B43"]
+[Opening "Sicilian Defense: Kan Variation, Knight Variation"]
+[StudyName "Sicilian Kan Repertoire"]
+[ChapterName "Common Trap in the Kan #2"]
+[ChapterURL "https://lichess.org/study/1D1HCJEb/3meEsyeA"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[UTCDate "2019.08.03"]
+[UTCTime "07:20:25"]
+
+1. e4 c5 2. Nf3 e6 3. d4 cxd4 4. Nxd4 a6 5. Nc3 Qc7 6. Bd3 Nf6 7. O-O Nc6 8. Be3 h5 9. f4?? { Too ambitious and loses on the spot! This traps shows just how much pressure Black has in the center. 9. h3 is basically forced to not let Black have even the slightest advantage. } 9... Ng4 { Attack on the bishop, therefore the defense on the Nd4 will also be loosened. } 10. Qf3 (10. Nxc6 Nxe3 11. Qe2 Nxf1) 10... Nxe3 11. Qxe3 (11. Nxc6 Nxf1) 11... Nxd4 12. Qxd4 Bc5 { White's queen is pinned! } *
+
+
+[Event "Sicilian Kan Repertoire: 5. Nc3 with 6. Be2"]
+[Date "2018.09.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B43"]
+[Opening "Sicilian Defense: Kan Variation, Knight Variation"]
+[StudyName "Sicilian Kan Repertoire"]
+[ChapterName "5. Nc3 with 6. Be2"]
+[ChapterURL "https://lichess.org/study/1D1HCJEb/EgSOORCL"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[UTCDate "2018.09.11"]
+[UTCTime "04:54:33"]
+
+{ With 6. Be2, White has the option to develop the bishop to f3. A drawback is the e4 pawn is weaker at the moment. Therefore, it is wise and recommended to play an early b5 + Bb7, pressuring the e4 pawn as soon as possible. If }
+1. e4 c5 2. Nf3 e6 3. d4 cxd4 4. Nxd4 a6 5. Nc3 Qc7 6. Be2 b5 { I recommend this move before Nf6 due to the trap line below (I've fallen into it before when I was an NM too!) } (6... Nf6 7. O-O b5 8. Bf3 { And now e5 is a big threat, and black is forced to weaken the position with e5 or other positional aspects. } 8... e5 (8... Bb7 9. e5) 9. Nf5) 7. O-O Bb7 8. Bf3 (8. a3 { a3 in the Kan is almost always good for black, because it's a free tempo. a3 is a safe move, but when Black plays b5, its main purpose isn't to play b5-b4 and winning the e4 pawn. It's more to gain space and develop the light squared bishop to b7. The power of multipurpose moves! } 8... Nf6 9. Bf3 d6 10. Re1 Nbd7 11. Bg5 Be7 { [%cal Gd7e5,Ge5c4] }) 8... Nc6 { The idea is to play Ne5 eventually and then have a strong hold on the center. Nf6, Bb4 or Bc5, and 0-0 with a comfortable position. } 9. Nxc6 (9. Be3 { If White doesn't exchange knights, Black can play Ne5, which has threats of Nc4. The knight just sitting on e5 blocks the Bf3's play, often for a long time. } 9... Ne5) 9... dxc6 { An interesting follow-up idea is Bd6-e5, making the bishop a very strong piece dominating all sides of the board as well as cutting off the Bf3. Rd8 comes next and black has a very active position. } 10. Re1 Bd6 11. g3 Be5 12. Qe2 Nf6 *
+
+
+[Event "Sicilian Kan Repertoire: 5. Nc3 with 6. g3"]
+[Date "2018.09.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B43"]
+[Opening "Sicilian Defense: Kan Variation, Knight Variation"]
+[StudyName "Sicilian Kan Repertoire"]
+[ChapterName "5. Nc3 with 6. g3"]
+[ChapterURL "https://lichess.org/study/1D1HCJEb/Um2Hjsen"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[UTCDate "2018.09.11"]
+[UTCTime "01:00:49"]
+
+1. e4 c5 2. Nf3 e6 3. d4 cxd4 4. Nxd4 a6 5. Nc3 Qc7 6. g3 Bb4 { Both 6. Nf6 and 6. Bb4 are playable and often transposes back to the other. However, I recommend 6. Bb4 because it forces White to play a passive move to defend against the Bxc3 threat. After 6. Bb4, there are two common moves: Bd2 and Ne2. } 7. Bd2 (7. Ne2 Nf6 8. Bg2 Be7 { It's common to retreat the bishop back to e7 so it doesn't get misplaced on b4. The purpose of Bb4 is to force the knight back to a more passive square (d4 to e2) or to force the bishop to d2 where it's not playing a useful role. } 9. O-O O-O 10. h3 d6 11. Be3 Nbd7) 7... Nf6 8. Bg2 Nc6 9. Nxc6 (9. Nb3 Be7 10. O-O d6 11. f4 b5 12. a3 Bb7) 9... dxc6 10. O-O Be7 (10... e5?! { Be careful not to run into any discovered attacks against the Bb4, especially now that black can't play Bxd2 with check. } 11. Nd5) 11. Qe2 e5 { This is a favorable structure for Black since there are no major weaknesses. The pawn structure is very symmetrical and White's Bg2 is currently inactive, so Black can easily take control over light squares in the center and queenside with Be6 + b5. Rooks come to the open d-file next. } 12. a4 O-O 13. h3 { Preparing Be3 next by stopping the annoying threat of Ng4 } 13... Be6 14. Be3 b5 15. Rfd1 Bc4 16. Qe1 { Black has an active position. It is important NOT to play exf4 if White plays f4. It will activate the Bg2 immediately. As long as the pawn stays put on e4, White's Bg2 will be suffering. } *
+
+
+[Event "Sicilian Kan Repertoire: 5. Nc3 with 6. Bd3 and Be3"]
+[Date "2018.09.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B43"]
+[Opening "Sicilian Defense: Kan Variation, Knight Variation"]
+[StudyName "Sicilian Kan Repertoire"]
+[ChapterName "5. Nc3 with 6. Bd3 and Be3"]
+[ChapterURL "https://lichess.org/study/1D1HCJEb/qXo5VEad"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[UTCDate "2018.09.11"]
+[UTCTime "01:01:07"]
+
+1. e4 c5 2. Nf3 e6 3. d4 cxd4 4. Nxd4 a6 5. Nc3 Qc7 6. Bd3 Nf6 7. Be3 { This is one of the most popular lines against the Kan. White's two bishops are protecting all of the key central squares, which makes this setup quite solid. This position can also arise with 6. Be3 and 7.Bd3 as well. } 7... Nc6 8. O-O h5!? { As seen in the Introduction chapter, this h5 move is my recommendation. It leads to the sharpest positions with immediate pressure on white's position. } 9. h3 { h3 is probably the only move that is playable after h5. This stops Ng4 (temporarily! There are lines where Ng4 is played anyways to open the h-file..) } (9. f4?? { A common move, but is quite the blunder. See chapter 9 } 9... Ng4 { White can't save everything! } 10. Qf3 (10. Nxc6 Nxe3 11. Qe2 Nxf1) 10... Nxe3 11. Qxe3 Nxd4 12. Qxd4 Bc5) (9. Nxc6 Ng4! { In-between move! } 10. g3 Nxe3 11. fxe3 dxc6 { White's double isolated e-pawns and the bishop pair in the open position make it much easier to play as black. }) 9... b5 { Switching over to the queenside now. b5 often serves as a multipurpose move in the Kan. Black gains space on the queenside, prepares Bb7, and threaten to kick back the Nc3 with b4. } 10. Nxc6 (10. a3?! { a3 normally is a waste of a tempo for White. Although b4 could be a threat in the near future, there's no immediate follow-up for black at the moment. } 10... Bb7) (10. f4? { f4 is a move that only looks good. It is definitely too early to start pushing pawns in front of White's king. Here, black immediately targets the dark squares. } 10... Bc5! 11. Nce2 { Forcing the knight to retreat just to defend the Nd4. } 11... Bb7 12. c3 e5 { A well-timed e5! Notice that although d5 is now a potential outpost for white's knight, it is difficult for White's knights to reach there due to c3 being played. } 13. fxe5 Nxe5 { Black has lots of pressure in the center and play against the isolated e4 pawn. }) 10... Qxc6 11. e5 (11. a3 Bb7 12. Qe2 Rc8 13. f4 Bc5 { It is about equal here. Black has the open c-file and has chances in the endgame. }) 11... Bb7 { In-between move that develops a piece } 12. f3 Nd5 { It is about equal here, but Black's position is slightly easier to play, with the open c-file and bishops aiming down the board. } 13. Be4 { The start of a forcing series of moves. } 13... Nxc3 14. Bxc6 Nxd1 15. Bxb7 Nxe3 16. Bxa8 Nxf1 17. Kxf1 Bc5 { Very drawish due to the opposite colored bishop ending, but Black should have no troubles at all. } *
+
+
+[Event "Sicilian Kan Repertoire: 5. Nc3 with 6. Bd3 and Nxc6"]
+[Date "2018.09.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B43"]
+[Opening "Sicilian Defense: Kan Variation, Knight Variation"]
+[StudyName "Sicilian Kan Repertoire"]
+[ChapterName "5. Nc3 with 6. Bd3 and Nxc6"]
+[ChapterURL "https://lichess.org/study/1D1HCJEb/tyocG2nk"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[UTCDate "2018.09.11"]
+[UTCTime "05:07:53"]
+
+1. e4 c5 2. Nf3 e6 3. d4 cxd4 4. Nxd4 a6 5. Nc3 Qc7 6. Bd3 Nf6 7. O-O Nc6 8. Nxc6 dxc6! { Although bxc6 is also a playable move, I highly suggest dxc6 and have been playing it ever since I started the Kan. It gives Black a very comfortable position with an upcoming e5, and has play on all sides of the board. } 9. f4 e5 { The key pawn push e5! Otherwise, white plays e5 and has a space advantage. } 10. f5 { This is one of the few must-know positions in the Kan. White has locked up the center, so play on the flanks are now favorable for both sides. Here, black has two options: 1) To play h5 and start a kingside attack. 2) To play b5 and get quick queenside play. Both are logical plans and I have used them both in the past, sometimes at the same time! See the sample game below in the variation for some ideas. } (10. fxe5?! { 10. fxe5 is an interesting by White to try to take advantage of the king in the center. However, Black has a resource that leads to quick piece development, and ultimately results in an isolated e-pawn for White. } 10... Bc5+ 11. Kh1 Ng4 12. Qf3 (12. Qe1?? { Seemingly logical move to guard against Nf2+ threats. However, this fails to the engine move: } 12... Nxh2! 13. Kxh2 Qxe5+ 14. Bf4 Qh5+ 15. Kg3 g5 { White gets mated in a few moves }) 12... Nxe5 13. Qg3 f6 { Everything is protected and White's attack has been stopped. }) (10. Kh1 Bd6 { The goal of Bd6 is to provoke White into playing f5, which closes the center. With the center closed, Black can keep the king in the center and play on the flanks. b5 with a queenside expansion is common, and even h5 with kingside play is possible at the right time. } 11. f5 b5) 10... b5 11. Be3 Bb7 12. Qf3 h5 13. Kh1 Be7 14. Rad1 Rd8 { Eventually, black should play for a well-timed c5 + c4. Be careful of White playing Nd5 though. } *
+
+
+[Event "Sicilian Kan Repertoire: 5. Nc3 with 6. f4"]
+[Date "2019.08.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B43"]
+[Opening "Sicilian Defense: Kan Variation, Knight Variation"]
+[StudyName "Sicilian Kan Repertoire"]
+[ChapterName "5. Nc3 with 6. f4"]
+[ChapterURL "https://lichess.org/study/1D1HCJEb/nP4qTwXP"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[UTCDate "2019.08.04"]
+[UTCTime "07:44:46"]
+
+{ 6. f4 is one of the most aggressive lines against the Kan. White delays castling and immediately goes for a central pawn storm. Here Black has to play dynamically as well. The best defense is an even better offense. An early f4 can lead to major weaknesses along the g1-a7 diagonal for White, so be ready to captialize if White overextends. }
+1. e4 c5 2. Nf3 e6 3. d4 cxd4 4. Nxd4 a6 5. Nc3 Qc7 6. f4 b5 { A most effective approach, striking on the queenside right away. } (6... Nf6?! 7. e5 { The knight has no good square to go to. }) 7. Bd3 Bb7 8. Qe2 Nf6 9. e5 (9. O-O?? { Whenever white plays f4 with the King on g1, there are threats along the g1-a7 diagonal. } 9... Bc5 10. Be3 Qb6 { Unfortunately for White, the Qe2 blocks Nce2, which is a normal resource in these positions. So White loses a piece here. }) 9... b4! { A key but thematic move in many Open Sicilians, and the Kan is no exception. Both the Nc3 and the Nf6 are controlling the e4 and d5 squares, and both sides want to have full control over the square by kicking the enemy knight away. e5 does just that, but Black's counterattack b4 challenges White. } 10. Ne4 (10. exf6 bxc3 11. fxg7 Bxg7 { And Black's bishop is now activated and White can't play bxc3 due to Qxc3+ } 12. bxc3) 10... Nxe4 11. Bxe4 Nc6 12. Nxc6 Bxc6 { An equal endgame, but Black has the "Sicilian endgame" advantage with the open c-file. } *
+
+
+[Event "Sicilian Kan Repertoire: Maroczy Bind with 7. Be2"]
+[Date "2019.08.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B41"]
+[Opening "Sicilian Defense: Kan Variation, Maróczy Bind, Réti Variation"]
+[StudyName "Sicilian Kan Repertoire"]
+[ChapterName "Maroczy Bind with 7. Be2"]
+[ChapterURL "https://lichess.org/study/1D1HCJEb/dTfBS03Q"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[UTCDate "2019.08.04"]
+[UTCTime "07:46:51"]
+
+{ The Maroczy Bind setup has always been a very solid pawn structure for White, and leads to fairly slow and positional games. White keeps a steady bind in the center with the e- and c- pawns. My recommendation against the Maroczy in general is to play Bb4 whenever possible to annoy White by threatening to play Bxc3, creating double isolated c-pawns. If White stops Bb4 with an early a3, switch to a hedgehog setup where the a3 move doesn't really help White. }
+1. e4 c5 2. Nf3 e6 3. d4 cxd4 4. Nxd4 a6 5. c4 Nf6 6. Nc3 Qc7 7. Be2 Bb4 { White has several ways to defend against the threat of Nxe4: 0-0, f3, Qc2, and Qd3. } 8. O-O!? { An interesting move that should not be taken lightly. I have faced this before in a tournament game. White sacrifices a pawn for piece play and the bishop pair. } (8. Qd3 Nc6 9. O-O O-O 10. Bg5 Be7 11. Rac1 Nxd4 12. Qxd4 Ng4 { Threats of Qxh2# and Bxg5. } 13. Bxg4 Bxg5 { Black has the bishop pair }) (8. Qc2 Nc6 { Taking advantage of the unprotected Nd4. } 9. Nxc6 (9. Be3 Ne5 { Double threat of Neg4 and Nxc4 }) 9... dxc6 10. O-O e5 { Back to the familiar symmetrical pawn structure. Black is comfortable here. }) (8. f3 O-O 9. O-O Bxc3 10. bxc3 d6 11. Be3 Nbd7 { Again, with good pressure on the double isolated c-pawns. Follow-up ideas include Nc5, Ne5, or b6 + Bb7. }) 8... O-O!? { After a while of analyzing the complications of the pawn sacrifice, I've concluded that it's risky. So I recommend 8. 0-0! The threat of Bxc3 + Nxe4 still stands and White can't gambit that pawn forever. } 9. Qd3 d6 10. Bg5 Nbd7 11. a3 Bxc3 12. bxc3 (12. Qxc3 Nxe4) 12... b6 { Black has pressure on the double isolated c-pawns with a very solid position. } *
+
+
+[Event "Sicilian Kan Repertoire: Maroczy Bind with 7. a3"]
+[Date "2018.09.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B41"]
+[Opening "Sicilian Defense: Kan Variation, Maróczy Bind, Réti Variation"]
+[StudyName "Sicilian Kan Repertoire"]
+[ChapterName "Maroczy Bind with 7. a3"]
+[ChapterURL "https://lichess.org/study/1D1HCJEb/WEIi3ERD"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[UTCDate "2018.09.11"]
+[UTCTime "01:01:19"]
+
+1. e4 c5 2. Nf3 e6 3. d4 cxd4 4. Nxd4 a6 5. c4 Nf6 6. Nc3 Qc7 7. a3 { Basically if the Bb4 pin is stopped, switch to a hedgehog setup so that white's a3 is lost of a tempo. } 7... b6 { The start of a "Hedgehog Structure". A key setup for black that can be reached with many different opening move-orders. } (7... Nc6 { This is another interesting move that can lead to sharp positions on the kingside and center. See the sample game below. However, b6 is much more positional and principled so I recommend that. }) 8. Be3 Bb7 9. f3 d6 10. Be2 Nbd7 11. O-O Be7 12. Rc1 O-O 13. b4 Rfc8 { An interesting maneuver that I've seen top Grandmasters play. The more common Hedgehog setup involves Rac8 + Qb8 + Qa8. However, Rfc8 is a newer move. } 14. Qd2 Rab8 { Indirectly protecting the b6 pawn. } 15. Rfd1 Qd8 { See Muzychuk - Koneru game below for a sample game. } *
+
+
+[Event "Sicilian Kan Repertoire: 5. Bd3"]
+[Date "2018.09.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B42"]
+[Opening "Sicilian Defense: Kan Variation, Polugaevsky Variation"]
+[StudyName "Sicilian Kan Repertoire"]
+[ChapterName "5. Bd3"]
+[ChapterURL "https://lichess.org/study/1D1HCJEb/ThpVBMD3"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[UTCDate "2018.09.11"]
+[UTCTime "01:02:08"]
+
+{ I only have one chapter for 5. Bd3 not saying it's inferior to the Marcozy and 5. Nc3, but it's less critical. I recommend 5. Bc5 which pushes the knight back to b3. The 5. Bd3 lines are definitely more based on ideas rather than specific move orders. My suggestion is to use opening ideas from the other chapters. Often times, the game can tranpose to a Marcozy Bind with c4, a Hedgehog structure, or just transpose back to the Nc3 lines. }
+1. e4 c5 2. Nf3 e6 3. d4 cxd4 4. Nxd4 a6 5. Bd3 { There are several main moves here: Bc5, Nf6, or Qc7. My recommended move is Bc5 mainly because of its flexibility and avoids the sharp lines where white gets an early f4-f5 in. } 5... Bc5 6. Nb3 (6. c3 { Harmless setup. Now the knight cannot go to c3 anymore. } 6... d6 7. O-O Nf6 { Black is fine for sure. }) 6... Be7 7. Qg4 { The main line which provokes g6 to weaken the kingside a little. } 7... g6 8. Qe2 d6 9. O-O Nd7 (9... Nf6?! { Although seemingly natural, Nf6 is a positional mistake because now Bh6 takes advantage of the weakened dark squares and black can't castle kingside for a while. }) 10. Nc3 (10. c4 { A Maroczy Bind setup is also possible in the Bd3 variation, but it's not as effective because white's Queen, Bishop, and Knight on b3 are not coordinating well together. } 10... Qc7 11. Nc3 h5 { A key move to prevent Bh6! } 12. f4 (12. Be3 Ngf6 13. h3 b6 14. f4 h4 { h4 is a common move after both h3 and f4 are played to play Nh5 and head to the weak g3 square, causing even more annoyance for white. }) 12... Ngf6) 10... Qc7 11. f4 (11. Bd2 h5) 11... Ngf6 12. f5 gxf5 13. exf5 e5 { Although Black cannot castle, usually the king is very safe in the center due to the closed center. And now black has the open g-file for an attack. } *
+
+
+[Event "Rated Rapid game"]
+[Site "https://lichess.org/DUEXRzlE"]
+[Date "2018.01.15"]
+[Round "-"]
+[White "jrsc"]
+[Black "Mr_Penings"]
+[Result "0-1"]
+[WhiteElo "2057"]
+[BlackElo "2112"]
+[BlackTitle "NM"]
+[TimeControl "300+5"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "B41"]
+[Opening "Sicilian Defense: Kan Variation, Maróczy Bind, Réti Variation"]
+[StudyName "Sicilian Kan Repertoire"]
+[ChapterName "Maroczy Bind Game"]
+[ChapterURL "https://lichess.org/study/1D1HCJEb/fJ6Wb1o1"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+
+1. e4 { [%clk 0:05:00] } 1... c5 { [%clk 0:05:00] } 2. Nf3 { [%clk 0:05:03] } 2... e6 { [%clk 0:05:04] } 3. c4 { Signaling a Maroczy Bind structure. } { [%clk 0:05:06] } 3... a6 { [%clk 0:05:06] } 4. d4 { [%clk 0:05:09] } 4... cxd4 { [%clk 0:05:09] } 5. Nxd4 { [%clk 0:05:13] } 5... Nf6 { [%clk 0:05:14] } 6. Nc3 { [%clk 0:05:17] } 6... Qc7 { [%clk 0:05:13] } 7. Bd3 { [%clk 0:05:19] } 7... Nc6 { [%clk 0:05:02] } 8. Nxc6 { [%clk 0:05:17] } 8... dxc6 { Although the pawn structure is now symmetrical, Black stands better because White has a hole (and potential outpost) on d4 while the d5 square is covered for Black. } { [%clk 0:05:07] } 9. O-O { [%clk 0:05:19] } 9... Bd6 { [%clk 0:04:54] } 10. g3 { [%clk 0:05:16] } 10... h5 { A sharp but very typical in the Kan. Black takes advantage of White's weak kingside for an immediate attack. } { [%clk 0:04:42] } 11. f4 { [%clk 0:05:17] } 11... e5 { A key move. Although it does shut down the Bd6 temporarily, White's counterpart, Bd3, is even worse. Black has the option of Bc5 while white does not have Bc4, though. } { [%clk 0:04:21] } 12. f5 { [%clk 0:05:16] } 12... b5 { [%clk 0:03:37] } 13. cxb5 { [%clk 0:04:39] } 13... axb5 { [%clk 0:03:33] } 14. a3 { [%clk 0:04:40] } 14... b4 { [%clk 0:03:06] } 15. Ne2 { [%clk 0:04:26] } 15... h4 { Guarantees the opening of the h-file since now g4 is no longer possible for white. } { [%clk 0:02:26] } 16. Bg5 { [%clk 0:03:32] } 16... hxg3 { [%clk 0:01:21] } 17. Nxg3 { [%clk 0:03:32] } 17... bxa3 { [%clk 0:01:25] } 18. bxa3 { [%clk 0:03:35] } 18... Rxa3 { [%clk 0:00:56] } 19. Rxa3 { [%clk 0:03:35] } 19... Bxa3 { [%clk 0:01:01] } 20. Bxf6 { [%clk 0:03:27] } 20... gxf6 { [%clk 0:01:04] } 21. Nh5 { [%clk 0:03:27] } 21... Ke7 { Although Black's king is still in the center, it's very difficult for White to create threats against it, a very common theme in the Kan. } { [%clk 0:01:02] } 22. Qb3 { [%clk 0:03:16] } 22... Bc5+ { [%clk 0:00:58] } 23. Kh1 { [%clk 0:03:20] } 23... Rxh5 { 0-1 White resigns. } { [%clk 0:01:01] } 0-1
+
+
+[Event "Rated Classical game"]
+[Site "https://lichess.org/mc4DY8KB"]
+[Date "2019.06.14"]
+[Round "-"]
+[White "nelmetwalliany"]
+[Black "Mr_Penings"]
+[Result "0-1"]
+[WhiteElo "2068"]
+[BlackElo "2225"]
+[BlackTitle "NM"]
+[TimeControl "900+15"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "B41"]
+[Opening "Sicilian Defense: Kan Variation, Maróczy Bind, Réti Variation"]
+[StudyName "Sicilian Kan Repertoire"]
+[ChapterName "Maroczy Bind Game"]
+[ChapterURL "https://lichess.org/study/1D1HCJEb/21b2nBby"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+
+1. e4 { [%clk 0:15:00] } 1... c5 { [%clk 0:15:00] } 2. Nf3 { [%clk 0:15:05] } 2... e6 { [%clk 0:15:13] } 3. d4 { [%clk 0:15:03] } 3... cxd4 { [%clk 0:15:17] } 4. Nxd4 { [%clk 0:15:18] } 4... a6 { [%clk 0:15:31] } 5. c4 { [%clk 0:15:29] } 5... Nf6 { [%clk 0:15:42] } 6. Nc3 { [%clk 0:15:39] } 6... Qc7 { [%clk 0:15:53] } 7. Be2 { [%clk 0:15:39] } 7... Bb4 { [%clk 0:16:02] } 8. f3 { [%clk 0:14:26] } 8... Nc6 { [%clk 0:14:25] } 9. Be3 { [%clk 0:14:23] } 9... Bxc3+ { [%clk 0:13:54] } 10. bxc3 { [%clk 0:14:30] } 10... Ne5 { [%clk 0:14:09] } 11. Qb3 { [%clk 0:14:17] } 11... O-O { [%clk 0:14:03] } 12. O-O { [%clk 0:14:13] } 12... Ng6 { [%clk 0:13:46] } 13. g3 { [%clk 0:13:47] } 13... d6 { [%clk 0:13:21] } 14. Rfd1 { [%clk 0:13:36] } 14... Nd7 { Once Black gets a knight to block the double isolated c-pawns, it's much easier to play. } { [%clk 0:13:19] } 15. f4 { [%clk 0:12:53] } 15... Nc5 { [%clk 0:13:22] } 16. Qc2 { [%clk 0:13:03] } 16... b6 { [%clk 0:12:27] } 17. Nb3 { [%clk 0:13:06] } 17... Bb7 { [%clk 0:12:03] } 18. Nxc5 { [%clk 0:12:56] } 18... dxc5 { [%clk 0:12:18] } 19. Bf3 { [%clk 0:12:48] } 19... Rad8 { [%clk 0:09:49] } 20. Rxd8 { [%clk 0:11:22] } 20... Rxd8 { [%clk 0:10:00] } 21. Rd1 { [%clk 0:11:27] } 21... e5 { Obviously I'm fine with trading all the major pieces because I have an endgame advantage in the pawn structure. } { [%clk 0:09:53] } 22. Rxd8+ { [%clk 0:09:58] } 22... Qxd8 { [%clk 0:10:05] } 23. Qd2 { [%clk 0:10:05] } 23... Qxd2 { [%clk 0:10:11] } 24. Bxd2 { [%clk 0:10:14] } 24... f6 { [%clk 0:09:54] } 25. Kf2 { [%clk 0:10:20] } 25... Kf7 { [%clk 0:09:52] } 26. Be3 { [%clk 0:10:12] } 26... Ne7 { [%clk 0:09:35] } 27. a4 { [%clk 0:10:17] } 27... a5 { [%clk 0:09:46] } 28. fxe5 { [%clk 0:07:34] } 28... fxe5 { [%clk 0:09:51] } 29. Ke2 { [%clk 0:07:16] } 29... Bc6 { [%clk 0:09:54] } 30. Kd3 { [%clk 0:07:20] } 30... Bxa4 { [%clk 0:10:07] } 31. Bh5+ { [%clk 0:06:19] } 31... g6 { [%clk 0:09:39] } 32. Bg4 { [%clk 0:06:31] } 32... h5 { [%clk 0:09:49] } 33. Bh3 { [%clk 0:06:41] } 33... Kf6 { [%clk 0:09:20] } 34. Bc1 { [%clk 0:06:31] } 34... g5 { [%clk 0:08:48] } 35. Ba3 { [%clk 0:06:35] } 35... g4 { [%clk 0:09:00] } 36. Bf1 { [%clk 0:06:38] } 36... Nc8 { [%clk 0:09:14] } 37. h3 { [%clk 0:06:29] } 37... Nd6 { [%clk 0:09:11] } 38. hxg4 { [%clk 0:06:19] } 38... hxg4 { [%clk 0:09:23] } 39. Be2 { [%clk 0:06:27] } 39... Kg5 { [%clk 0:09:33] } 40. Bc1+ { [%clk 0:05:59] } 40... Kh5 { [%clk 0:09:44] } 41. Ke3 { [%clk 0:06:10] } 41... Bb3 { [%clk 0:09:46] } 42. Bd3 { [%clk 0:05:08] } 42... Bxc4 { [%clk 0:09:23] } 43. Bxc4 { [%clk 0:04:28] } 43... Nxc4+ { [%clk 0:09:36] } 44. Kd3 { [%clk 0:04:38] } 44... b5 { [%clk 0:09:36] } 45. Kc2 { [%clk 0:04:39] } 45... a4 { [%clk 0:09:47] } 46. Kb1 { [%clk 0:04:38] } 46... Kg6 { [%clk 0:09:45] } 47. Ka2 { [%clk 0:04:49] } 47... Kf6 { [%clk 0:09:58] } 48. Ba3 { [%clk 0:05:02] } 48... Nxa3 { [%clk 0:10:03] } 49. Kxa3 { [%clk 0:05:15] } 49... Ke6 { [%clk 0:10:15] } 50. c4 { [%clk 0:05:26] } 50... bxc4 { [%clk 0:09:54] } 51. Kxa4 { [%clk 0:04:12] } 51... Kd6 { [%clk 0:10:05] } 52. Ka3 { [%clk 0:03:53] } 52... Kc6 { [%clk 0:10:05] } 53. Kb2 { [%clk 0:03:34] } 53... Kb6 { [%clk 0:10:15] } 54. Kc2 { [%clk 0:03:41] } 54... Ka5 { [%clk 0:10:26] } 55. Kc3 { [%clk 0:03:46] } 55... Kb5 { 0-1 White resigns. } { [%clk 0:10:40] } 0-1
+
+
+[Event "1st Silk Road Blitz 2016"]
+[Site "Hancheng CHN"]
+[Date "2016.07.21"]
+[Round "5.2"]
+[White "Muzychuk, Mariya"]
+[Black "Koneru, Humpy"]
+[Result "0-1"]
+[WhiteElo "2545"]
+[BlackElo "2575"]
+[Variant "Standard"]
+[ECO "B41"]
+[Opening "Sicilian Defense: Kan Variation, Maróczy Bind, Réti Variation"]
+[StudyName "Sicilian Kan Repertoire"]
+[ChapterName "Maroczy Bind 7. a3 Game"]
+[ChapterURL "https://lichess.org/study/1D1HCJEb/VdUZAyZG"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+
+1. e4 c5 2. Nf3 e6 3. d4 cxd4 4. Nxd4 a6 5. c4 Qc7 6. Nc3 Nf6 7. a3 b6 8. Be2 Bb7 9. f3 Be7 10. Be3 O-O 11. O-O d6 12. Rc1 Nbd7 13. b4 Rfc8 14. Qe1 Qd8 { The "new" maneuver in the Hedgehog. } 15. Qf2 Rab8 16. Rfd1 Qe8 17. Nb3 Ba8 18. Na4 b5 { b5 and/or d5 are the major pawn breaks to play for as Black in the Hedgehog formation. This leads to opening of the position, which Black's rooks and bishops are waiting for. } 19. cxb5 Rxc1 20. Rxc1 axb5 21. Nc3 d5 { The other pawn break. } 22. Nxb5 dxe4 23. Nc7 Qd8 24. Nxa8 Rxa8 25. Na5 Ne5 26. fxe4 Nfg4 27. Bxg4 Nxg4 28. Qf3 Nxe3 29. Nc6 (29. Qxe3 Bg5 { Skewer! }) 29... Qd2 { Black still has the initiative here since Nxe7+ Kf8 and white still has two pieces undefended. } 30. Nxe7+ Kf8 31. Rb1 (31. Rc7 Qe1+ { With mate next move } 32. Qf1 Qxf1#) 31... Kxe7 32. b5 Rxa3 33. b6 Rb3 34. Ra1 Ra3 35. Rb1 Rb3 36. Ra1 Rxb6 { Risky but necessary. Black's king goes on a march up the board! } 37. Ra7+ Kd6 38. e5+ Kc5 39. Rc7+ Kb5 40. h3 Qe1+ 41. Kh2 Nf1+ { 0-1 White resigns. } 0-1
+
+
+[Event "Let's Play!"]
+[Site "Chess.com"]
+[Date "2018.08.03"]
+[White "suhartadi2016"]
+[Black "Mr_Penings"]
+[Result "0-1"]
+[WhiteElo "1856"]
+[BlackElo "1886"]
+[TimeControl "1/259200"]
+[Termination "Mr_Penings won by checkmate"]
+[Variant "Standard"]
+[ECO "B41"]
+[Opening "Sicilian Defense: Kan Variation, Maróczy Bind, Réti Variation"]
+[StudyName "Sicilian Kan Repertoire"]
+[ChapterName "Maroczy Bind Game"]
+[ChapterURL "https://lichess.org/study/1D1HCJEb/3PGT3Riw"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+
+1. e4 c5 2. Nf3 e6 3. d4 cxd4 4. Nxd4 a6 5. c4 Nf6 6. Nc3 Qc7 7. Be3 Bb4 { If White does not play a3, Black usually plays the pin Bb4. } 8. Bd3 Bxc3+ { It is wise to exchange to double white's c-pawns here as the white bishop can't easily access the a3-f8 diagonal. Therefore, Black can play d6 + Nbd7 + Nc5 in time. } 9. bxc3 d6 10. O-O Nbd7 11. f4 Nc5 12. e5 Nfd7 13. exd6 Qxd6 14. Bc2 b6 { Black has the endgame advantage because of White's double isolated c-pawns. } 15. Qg4 g6 16. Rae1 Bb7 17. Bc1 O-O-O 18. Ba3 h5 19. Qg5 h4 { Pushing the h-pawn up the board to try to open up both the h-file and the h1-a8 diagonal. } 20. Qg4 Nf6 21. Qg5 Nfd7 22. Nb3 Rh5 23. Qg4 h3! { A temporary pawn sacrifice. However, if white accepts the pawn gambit, trouble awaits. The h-file and the bishop diagonal will soon be wide open } 24. g3 (24. gxh3 Rdh8) 24... Nf6 25. Qe2 Qc6 { Queen + Bishop battery against the wide open king. Black is just crushing now. } 26. Bxc5 Qh1+ 27. Kf2 Qxh2+ 28. Ke3 Qxg3+ 29. Rf3 Ng4# 0-1
+
+
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2016.08.09"]
+[White "IamSchrodingersCat"]
+[Black "Mr_Penings"]
+[Result "0-1"]
+[WhiteElo "2437"]
+[BlackElo "2471"]
+[TimeControl "60"]
+[Termination "Mr_Penings won on time"]
+[Variant "Standard"]
+[ECO "B41"]
+[Opening "Sicilian Defense: Kan Variation, Maróczy Bind, Réti Variation"]
+[StudyName "Sicilian Kan Repertoire"]
+[ChapterName "Maroczy Bind Trap!"]
+[ChapterURL "https://lichess.org/study/1D1HCJEb/MwZaAvhc"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+
+{ This is a very common trap in the Maroczy Bind variation. Variations of this trap can also occur in other lines too. }
+1. e4 { [%clk 0:00:59] } 1... c5 { [%clk 0:00:58] } 2. Nf3 { [%clk 0:00:58] } 2... e6 { [%clk 0:00:58] } 3. d4 { [%clk 0:00:58] } 3... cxd4 { [%clk 0:00:58] } 4. Nxd4 { [%clk 0:00:57] } 4... a6 { [%clk 0:00:58] } 5. c4 { [%clk 0:00:57] } 5... Nf6 { [%clk 0:00:57] } 6. Nc3 { [%clk 0:00:56] } 6... Qc7 { [%clk 0:00:56] } 7. a3 { [%clk 0:00:55] } 7... Nc6 { [%clk 0:00:56] } 8. Be3 { [%clk 0:00:54] } 8... h5 { [%clk 0:00:54] } 9. Be2 { [%clk 0:00:53] } 9... b6 { [%clk 0:00:52] } 10. O-O { [%clk 0:00:51] } 10... Ng4 { Double threats of Nxe3 and Qxh2# } { [%clk 0:00:51] } 11. Bxg4 { [%clk 0:00:50] } 11... hxg4 { [%clk 0:00:51] } 12. g3 { [%clk 0:00:50] } 12... Ne5 { Another double threat of Nxc4 and a potential deadly Nf3+ } { [%clk 0:00:50] } 13. b3 { [%clk 0:00:48] } 13... Bc5 { [%clk 0:00:47] } 14. Rc1 { [%clk 0:00:44] } 14... Bxd4 { [%clk 0:00:46] } 15. Bxd4 { [%clk 0:00:42] } 15... Nf3+ { White must give up the queen or else checkmate is coming next move. } { [%clk 0:00:45] } 0-1
+
+
+[Event "Let's Play!"]
+[Site "Chess.com"]
+[Date "2018.07.16"]
+[White "Chato89"]
+[Black "Mr_Penings"]
+[Result "0-1"]
+[WhiteElo "1377"]
+[BlackElo "1574"]
+[TimeControl "1/86400"]
+[Termination "Mr_Penings won by resignation"]
+[Variant "Standard"]
+[ECO "B40"]
+[Opening "Sicilian Defense: French Variation, Westerinen Attack"]
+[StudyName "Sicilian Kan Repertoire"]
+[ChapterName "3. b3 Game"]
+[ChapterURL "https://lichess.org/study/1D1HCJEb/Sz6j0hlB"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+
+1. e4 c5 2. Nf3 e6 3. b3 a6 4. Bb2 b5 5. d4 cxd4 6. Nxd4 Qc7 7. Bd3 Nf6 8. Nd2 Bb7 9. O-O h5 10. Qf3 Ng4 11. g3 Ne5 12. Qe3 Bc5 { The g1-a7 diagonal is the downside of White's queenside fianchetto. } 13. c3 Nbc6 14. f4? { It is not wise to continue to open up the diagonal. I have long term pressure along the diagonals. } 14... Ng4 15. Qe2 b4 { Endless pressure on d4. } 16. Nf3 bxc3 17. Bxc3 Qb6 18. Qb2 e5 19. fxe5 Ngxe5 20. Bc4 Nxf3+ 21. Kg2 Ncxd4 { 0-1 Black wins. } { Ultimately too much pressure on that diagonal. Great illustration of the plan against 3. b3 } 0-1
+
+
+[Event "Let's Play!"]
+[Site "Chess.com"]
+[Date "2019.01.28"]
+[White "Jan-de-Jong"]
+[Black "Mr_Penings"]
+[Result "0-1"]
+[WhiteElo "1798"]
+[BlackElo "1961"]
+[TimeControl "1/259200"]
+[Termination "Mr_Penings won by resignation"]
+[Variant "Standard"]
+[ECO "B40"]
+[Opening "Sicilian Defense: French Variation"]
+[StudyName "Sicilian Kan Repertoire"]
+[ChapterName "King's Indian Attack Game"]
+[ChapterURL "https://lichess.org/study/1D1HCJEb/JOswnZDT"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+
+1. e4 c5 2. Nf3 e6 3. d3 Nc6 4. g3 Nge7 5. Bg2 g6 6. O-O Bg7 7. c3 e5 8. Be3 d6 9. Nbd2 O-O 10. Nb3 a5 11. a4 f5 12. Qd2 Be6 13. Qc2 f4 14. Bd2 h6 15. h4? { h4 does stop g5 temporarily, but also creates a weakness on g4, which my bishop occupies ASAP. } 15... Qd7 16. Rfd1 Bg4 17. d4 (17. Rf1 { This is forced to save the knight. But Black can just double rooks on the f-file and the pressure continues. } 17... Rf7) 17... fxg3 18. Nxe5 gxf2+ 19. Kf1 dxe5 20. Nxc5 Qc8 21. d5 Bh3 22. dxc6 Bxg2+ 23. Kxg2 Qg4+ 24. Kf1 Qh3+ 25. Ke2 Qf3+ 26. Kf1 Qh1+ 27. Ke2 f1=Q+ 28. Rxf1 Qg2+ 29. Ke3 Rxf1 30. Rxf1 Qxf1 31. cxb7 Rd8 32. Qb3+ Kh7 33. b8=Q Qf4+ { 0-1 Black wins. } 0-1
+
+
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2018.07.16"]
+[White "canwedoit"]
+[Black "Mr_Penings"]
+[Result "0-1"]
+[WhiteElo "2451"]
+[BlackElo "2467"]
+[TimeControl "180"]
+[Termination "Mr_Penings won by resignation"]
+[Variant "Standard"]
+[ECO "B40"]
+[Opening "Sicilian Defense: French Variation"]
+[StudyName "Sicilian Kan Repertoire"]
+[ChapterName "Kings Indian Attack Game"]
+[ChapterURL "https://lichess.org/study/1D1HCJEb/oBXaL0Vv"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+
+1. e4 { [%clk 0:02:56] } 1... c5 { [%clk 0:02:59] } 2. Nf3 { [%clk 0:02:55] } 2... e6 { [%clk 0:02:58] } 3. d3 { [%clk 0:02:52] } 3... Nc6 { [%clk 0:02:56] } 4. g3 { [%clk 0:02:50] } 4... Nge7 { [%clk 0:02:56] } 5. Bg2 { [%clk 0:02:50] } 5... d6 { [%clk 0:02:54] } 6. Qe2 { [%clk 0:02:49] } 6... g6 { [%clk 0:02:53] } 7. O-O { [%clk 0:02:48] } 7... Bg7 { [%clk 0:02:50] } 8. Nc3 { [%clk 0:02:45] } 8... O-O { [%clk 0:02:49] } 9. Nd2 { [%clk 0:02:42] } 9... Nd4 { Free tempo on the queen } { [%clk 0:02:45] } 10. Qd1 { [%clk 0:02:41] } 10... f5 { [%clk 0:02:44] } 11. f4 { [%clk 0:02:35] } 11... Rb8 { [%clk 0:02:42] } 12. a4 { [%clk 0:02:32] } 12... a6 { [%clk 0:02:40] } 13. a5 { [%clk 0:02:31] } 13... Nec6 { Black is trying to contest all sides of the board. White played a5 to stop an immediate b5 push by Black. But now, the a5 pawn is a major weakness. } { [%clk 0:02:38] } 14. Nc4 { [%clk 0:02:30] } 14... Nb4 { [%clk 0:01:57] } 15. Rf2 { [%clk 0:02:20] } 15... d5 { [%clk 0:01:55] } 16. Ne5 { [%clk 0:02:09] } 16... dxe4 { [%clk 0:01:50] } 17. dxe4 { [%clk 0:02:08] } 17... Ndxc2 { A nice tactic that wins a key pawn. } { [%clk 0:01:43] } 18. Qxd8 { [%clk 0:01:55] } (18. Rxc2 Qxd1+ 19. Nxd1 Nxc2) 18... Rxd8 { [%clk 0:01:43] } 19. Ra4 { [%clk 0:01:53] } 19... Bxe5 { [%clk 0:01:39] } 20. fxe5 { [%clk 0:01:53] } 20... Bd7 { [%clk 0:01:38] } 21. exf5 { [%clk 0:01:49] } 21... gxf5 { Many in-between moves, but Black should always have the initiative because the Ra4 is being attacked at the moment. } { [%clk 0:01:27] } 22. Bg5 { [%clk 0:01:47] } 22... Re8 { [%clk 0:01:20] } 23. h4 { [%clk 0:01:43] } 23... Bxa4 { [%clk 0:01:17] } 24. Nxa4 { [%clk 0:01:41] } 24... Rbc8 { [%clk 0:01:14] } 25. Nb6 { [%clk 0:01:40] } 25... Rc7 { [%clk 0:01:10] } 26. Bf1 { [%clk 0:01:28] } 26... Nd4 { [%clk 0:01:09] } 27. Bc4 { [%clk 0:01:20] } 27... Nbc6 { [%clk 0:01:07] } 28. Bf6 { [%clk 0:01:15] } 28... Nxa5 { [%clk 0:01:04] } 29. Ba2 { [%clk 0:01:14] } 29... c4 { [%clk 0:01:00] } 30. Kg2 { [%clk 0:01:10] } 30... Rc6 { [%clk 0:00:49] } 31. Nd7 { [%clk 0:01:02] } 31... Kf7 { [%clk 0:00:48] } 32. Bg5 { [%clk 0:00:57] } 32... b5 { [%clk 0:00:44] } 33. Nf6 { [%clk 0:00:55] } 33... Rh8 { [%clk 0:00:43] } 34. h5 { [%clk 0:00:48] } 34... h6 { [%clk 0:00:41] } 35. Bf4 { [%clk 0:00:41] } 35... b4 { [%clk 0:00:40] } 36. Rd2 { [%clk 0:00:39] } 36... Rd8 { [%clk 0:00:38] } 37. Be3 { [%clk 0:00:38] } 37... c3 { [%clk 0:00:34] } 38. bxc3 { [%clk 0:00:36] } 38... bxc3 { [%clk 0:00:33] } 39. Rxd4 { [%clk 0:00:35] } 39... Rxd4 { [%clk 0:00:31] } 40. Bxd4 { [%clk 0:00:35] } 40... c2 { [%clk 0:00:31] } 41. Be3 { [%clk 0:00:34] } 41... c1=Q { [%clk 0:00:30] } 42. Bxc1 { 0-1 Black wins. } { [%clk 0:00:34] } 0-1
+
+
+[Event "Pegasus"]
+[Site "Chess.com"]
+[Date "2016.01.31"]
+[White "bolzano-weierstrass"]
+[Black "Mr_Penings"]
+[Result "0-1"]
+[WhiteElo "1960"]
+[BlackElo "1977"]
+[TimeControl "1/259200"]
+[Termination "Mr_Penings won by resignation"]
+[Variant "Standard"]
+[ECO "B40"]
+[Opening "Sicilian Defense: Delayed Alapin Variation, with e6"]
+[StudyName "Sicilian Kan Repertoire"]
+[ChapterName "Alapin Advanced Game"]
+[ChapterURL "https://lichess.org/study/1D1HCJEb/JPbgYeN4"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+
+1. e4 c5 2. Nf3 e6 3. c3 a6 4. d4 d5 5. e5 Bd7 6. Bd3 cxd4 7. cxd4 Bb5 8. Bxb5+ axb5 9. O-O Nc6 10. Qd3 b4 { The double isolated b-pawns may seem weak at first glance, but they are playing an important role on the queenside. First of all, black has the open a-file with pressure. Secondly, b4 stops the Nb1's development. Thirdly, the b-pawns are weak but hard for white to attack. } 11. Bg5 Nge7 12. Nbd2 h6 13. Bh4 Qb6 14. Nb3 Nf5 15. g4 Nxh4 16. Nxh4 Be7 { Ultimately, the g4 pawn push is a bit overextending to White's position. } 17. Ng2 h5 { Forcing open the h-file. Black has not castled yet, so the Rh8 can play an attacking role. Hmm, where have I seen this idea before? :) } 18. h3 hxg4 19. hxg4 Kd7 20. Ne3 Qa6 21. Qc2 Qb6 22. Qd3 Rh4 23. Kg2 Rah8 24. Rh1 Rxh1 25. Rxh1 Rxh1 26. Kxh1 Qa6 27. Qxa6 { Trading queens simplifying into a slightly better endgame due to the fewer weaknesses. And at the same time, time to undouble the b-pawns. Otherwise, they will be clear targets in the endgame. } 27... bxa6 28. Nc2 a5 29. Nd2 f6 30. f4 fxe5 31. fxe5 Bg5 32. Nf3 Bc1 33. b3 Na7 34. Ng1 Nb5 35. Ne2 Bg5 36. Kg2 Ke7 37. Kf3 Kf7 38. Kg3 Kg6 39. Kh3 Bd2 40. Kg3 Kg5 41. Kh3 Nc3 42. Nxc3 Bxc3 { Now the Nc2 is paralyzed on c2. } 43. Kg3 g6 { Zugzwang! And the opposition. } 44. Kf3 Kh4 45. Kf4 g5+ 46. Kf3 Kh3 47. Ke3 Kxg4 48. a3 Kg3 49. axb4 axb4 50. Kd3 Kf3 51. Ne3 g4 52. Nxd5 g3 53. Ne3 Bb2 54. d5 Bxe5 55. dxe6 Bf6 56. Nc2 Kf2 57. Ne3 Bg5 58. Ke4 Bxe3 59. e7 g2 60. e8=Q g1=Q 61. Qf8+ Ke2 62. Qf3+ Kd2 63. Ke5 Qg7+ 64. Kd6 Qd4+ 65. Ke6 Kc3 66. Qf1 Qe4+ 67. Kd6 Qd3+ { 0-1 Black wins. } 0-1
+
+
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2018.07.26"]
+[White "ChessNut6453v42"]
+[Black "Mr_Penings"]
+[Result "0-1"]
+[WhiteElo "2399"]
+[BlackElo "2505"]
+[TimeControl "120+1"]
+[Termination "Mr_Penings won by resignation"]
+[Variant "Standard"]
+[ECO "B40"]
+[Opening "Sicilian Defense: Delayed Alapin Variation, with e6"]
+[StudyName "Sicilian Kan Repertoire"]
+[ChapterName "Alapin Exchange Game"]
+[ChapterURL "https://lichess.org/study/1D1HCJEb/HWEGLN3j"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+
+1. e4 { [%clk 0:02:00] } 1... c5 { [%clk 0:01:59] } 2. Nf3 { [%clk 0:02:00] } 2... e6 { [%clk 0:01:58] } 3. c3 { [%clk 0:02:00] } 3... d5 { [%clk 0:01:58] } 4. exd5 { [%clk 0:02:00] } 4... exd5 { [%clk 0:01:59] } 5. d4 { [%clk 0:02:00] } 5... Nc6 { [%clk 0:01:59] } 6. Bb5 { [%clk 0:02:01] } 6... Bd6 { [%clk 0:01:59] } 7. dxc5 { [%clk 0:02:01] } 7... Bxc5 { [%clk 0:02:00] } 8. O-O { [%clk 0:02:01] } 8... Ne7 { [%clk 0:02:00] } 9. Nbd2 { [%clk 0:02:00] } 9... O-O { [%clk 0:02:00] } 10. Nb3 { [%clk 0:01:59] } 10... Bb6 { [%clk 0:02:01] } 11. Re1 { [%clk 0:01:54] } 11... Nf5 { [%clk 0:01:54] } 12. Bg5 { [%clk 0:01:40] } 12... f6 { [%clk 0:01:53] } 13. Bf4 { [%clk 0:01:39] } 13... g5 { [%clk 0:01:50] } (13... Bxf2+ { I missed this in the game, but it's winning a pawn. } 14. Kxf2 Qb6+ 15. Nbd4 Ncxd4 16. Nxd4 Nxd4 17. Qxd4 Qxb5) 14. Bc1 { [%clk 0:01:31] } 14... Qd6 { [%clk 0:01:28] } 15. Bd3 { [%clk 0:01:17] } 15... Rf7 { [%clk 0:00:52] } 16. Bd2 { [%clk 0:01:05] } 16... Bd7 { [%clk 0:00:45] } 17. Qc2 { [%clk 0:01:05] } 17... Nh6 { [%clk 0:00:45] } 18. Nfd4 { [%clk 0:00:54] } 18... Ng4 { [%clk 0:00:39] } 19. h3 { [%clk 0:00:49] } (19. g3 { Weakens the kingside, but probably best to not allow the Black queen in. } 19... Rc8 { With lots of pressure on White. }) 19... Qh2+ { [%clk 0:00:26] } 20. Kf1 { [%clk 0:00:49] } 20... Nge5 { [%clk 0:00:16] } 21. Bf5 { [%clk 0:00:40] } 21... Qh1+ { [%clk 0:00:12] } 22. Ke2 { [%clk 0:00:38] } 22... Qxg2 { [%clk 0:00:13] } 23. Kd1 { [%clk 0:00:34] } 23... Nxd4 { [%clk 0:00:11] } 24. Nxd4 { [%clk 0:00:32] } 24... Bxd4 { [%clk 0:00:11] } 25. cxd4 { [%clk 0:00:33] } 25... Rc8 { [%clk 0:00:11] } 26. Qb1 { [%clk 0:00:29] } 26... Qf3+ { 0-1 Black wins. } { Re2 Bb5 coming. } { [%clk 0:00:09] } 0-1
+
+
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2015.09.25"]
+[White "lowcc"]
+[Black "Mr_Penings"]
+[Result "0-1"]
+[WhiteElo "2270"]
+[BlackElo "2331"]
+[TimeControl "180"]
+[Termination "Mr_Penings won on time"]
+[Variant "Standard"]
+[ECO "B42"]
+[Opening "Sicilian Defense: Kan Variation, Polugaevsky Variation"]
+[StudyName "Sicilian Kan Repertoire"]
+[ChapterName "5.Bd3 Game"]
+[ChapterURL "https://lichess.org/study/1D1HCJEb/f3uRPevg"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+
+1. e4 { [%clk 0:03:00] } 1... c5 { [%clk 0:03:00] } 2. Nf3 { [%clk 0:02:59] } 2... e6 { [%clk 0:02:58] } 3. d4 { [%clk 0:02:58] } 3... cxd4 { [%clk 0:02:57] } 4. Nxd4 { [%clk 0:02:58] } 4... a6 { [%clk 0:02:56] } 5. Bd3 { [%clk 0:02:57] } 5... Bc5 { [%clk 0:02:55] } 6. Nb3 { [%clk 0:02:56] } 6... Be7 { [%clk 0:02:54] } 7. O-O { [%clk 0:02:55] } 7... d6 { [%clk 0:02:49] } 8. c4 { [%clk 0:02:53] } 8... Nd7 { [%clk 0:02:48] } 9. Nc3 { [%clk 0:02:53] } 9... Ngf6 { [%clk 0:02:48] } 10. Be3 { [%clk 0:02:52] } 10... b6 { Transposes to a Hedgehog formation. As you can see, 5. Bd3 is a very flexible move that can transpose to many of the other Kan lines. } { [%clk 0:02:46] } 11. f4 { [%clk 0:02:52] } 11... Qc7 { [%clk 0:02:45] } 12. Qf3 { [%clk 0:02:51] } 12... h5 { [%clk 0:02:44] } 13. h3 { [%clk 0:02:44] } (13. e5 { e5 is not a double attack since black has the powerful in-between move Bb7! } 13... Bb7) 13... Bb7 { [%clk 0:02:43] } 14. Rac1 { [%clk 0:02:41] } 14... Rc8 { [%clk 0:02:39] } 15. Bd4 { [%clk 0:02:38] } 15... Qb8 { [%clk 0:02:30] } 16. Qg3 { [%clk 0:02:31] } 16... g6 { [%clk 0:02:23] } 17. e5 { [%clk 0:02:26] } 17... h4 { [%clk 0:02:00] } 18. Qe3 { [%clk 0:02:05] } 18... dxe5 { [%clk 0:01:55] } 19. fxe5 { [%clk 0:02:04] } 19... Nh5 { [%clk 0:01:47] } 20. Ne4 { [%clk 0:01:41] } 20... Bxe4 { Knight is coming in to the sweet outpost on g3! } { [%clk 0:01:20] } 21. Bxe4 { [%clk 0:01:36] } 21... Ng3 { [%clk 0:01:20] } 22. Rf2 { [%clk 0:01:17] } 22... Nc5 { [%clk 0:01:15] } 23. Nxc5 { [%clk 0:01:05] } 23... Bxc5 { [%clk 0:01:13] } 24. Bxc5 { [%clk 0:01:03] } 24... Rxc5 { [%clk 0:01:13] } 25. Qf3 { [%clk 0:00:52] } 25... Nf5 { [%clk 0:01:02] } 26. Bxf5 { [%clk 0:00:42] } 26... gxf5 { [%clk 0:01:02] } 27. Rd2 { [%clk 0:00:31] } 27... O-O { [%clk 0:00:46] } 28. Rd4 { [%clk 0:00:23] } 28... Qxe5 { [%clk 0:00:40] } 29. Rxh4 { [%clk 0:00:22] } 29... Rd8 { [%clk 0:00:34] } 30. Rf1 { [%clk 0:00:13] } 30... b5 { [%clk 0:00:21] } 31. cxb5 { [%clk 0:00:12] } 31... axb5 { [%clk 0:00:20] } 32. b3 { [%clk 0:00:11] } 32... Rc2 { [%clk 0:00:18] } 33. Rf4 { [%clk 0:00:09] } 33... Qe2 { [%clk 0:00:16] } 34. Qg3+ { [%clk 0:00:08] } 34... Kf8 { [%clk 0:00:15] } 35. R4f2 { [%clk 0:00:07] } 35... Qe4 { [%clk 0:00:13] } 36. Qg5 { [%clk 0:00:06] } 36... Rdc8 { [%clk 0:00:07] } 37. Qh6+ { [%clk 0:00:05] } 37... Ke7 { [%clk 0:00:07] } 38. Qg5+ { [%clk 0:00:04] } 38... Ke8 { [%clk 0:00:07] } 39. Qg8+ { [%clk 0:00:03] } 39... Ke7 { [%clk 0:00:06] } 40. Qg5+ { [%clk 0:00:03] } 40... Kd6 { [%clk 0:00:05] } 41. Qf6 { [%clk 0:00:02] } 41... Rxf2 { [%clk 0:00:03] } 42. Rxf2 { [%clk 0:00:01] } 42... Qe1+ { [%clk 0:00:03] } 43. Rf1 { [%clk 0:00:00] } 43... Qe3+ { [%clk 0:00:02] } 44. Kh2 { [%clk 0:00:00] } 44... Qe5+ { 0-1 Black wins. } { [%clk 0:00:02] } 0-1
+
+
+[Event "Sicilian Kan Repertoire: 5. Bd3 Game"]
+[Date "2019.08.05"]
+[White "Jason Cao"]
+[Black "GM Eric Hansen"]
+[Result "0-1"]
+[Variant "Standard"]
+[ECO "B42"]
+[Opening "Sicilian Defense: Kan Variation, Polugaevsky Variation"]
+[StudyName "Sicilian Kan Repertoire"]
+[ChapterName "5. Bd3 Game"]
+[ChapterURL "https://lichess.org/study/1D1HCJEb/548oMJxQ"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[UTCDate "2019.08.05"]
+[UTCTime "01:34:05"]
+
+{ This game was Jason Cao - GM Eric Hansen at the Canadian Open 2014. }
+1. e4 c5 2. Nf3 e6 3. d4 cxd4 4. Nxd4 a6 5. Bd3 Bc5 6. Nb3 Be7 7. O-O d6 8. Qg4 g6 9. Qe2 Nd7 10. a4 b6 11. Na3 Ne5 12. Nc4 Nxc4 13. Bxc4 Bb7 14. f4 Qc7 15. f5 gxf5 16. exf5 e5 17. f6 d5 18. fxe7 dxc4 19. Nd2 Nxe7 20. Nxc4 Rg8 21. Rf2 f6 22. Be3 Nd5 23. a5 bxa5 24. Nxa5 Rg6 25. Nxb7 Qxb7 26. c4 Nxe3 27. Qxe3 Rc8 28. c5 Qc6 29. b4 Rb8 30. Rb2 Rxb4 31. Rd2 Rd4 32. Raa2 Rgg4 33. Rxd4 Rxd4 34. Rc2 Qa4 35. Rc1 Rd1+ 36. Kf2 Qh4+ 37. Kf3 e4+ { 0-1 White resigns. } 0-1
+
+
+[Event "NYC Street Change #2 - Round 1"]
+[Site "Chess.com"]
+[Date "2016.01.14"]
+[White "sherid64"]
+[Black "Mr_Penings"]
+[Result "0-1"]
+[WhiteElo "1708"]
+[BlackElo "1970"]
+[TimeControl "1/259200"]
+[Termination "Mr_Penings won by resignation"]
+[Variant "Standard"]
+[ECO "B43"]
+[Opening "Sicilian Defense: Kan Variation, Knight Variation"]
+[StudyName "Sicilian Kan Repertoire"]
+[ChapterName "5. Nc3 with 7. Nxc6 Game"]
+[ChapterURL "https://lichess.org/study/1D1HCJEb/EMNNNM4l"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+
+1. e4 c5 2. Nf3 e6 3. Nc3 a6 4. d4 cxd4 5. Nxd4 Qc7 6. Bd3 Nc6 7. Nxc6 dxc6 8. O-O Nf6 9. f4 e5 10. Kh1 Bd6 11. f5 h5 12. a3 b5 { Simultaneously grabbing space on the kingside and queenside. } 13. Bg5 Bb7 14. Rf3 O-O-O { A logical move to bring the king to safety on the queenside and rook to the open d-file. Castling is very flexible in the Kan, especially the closed positions. The king can end up basically anywhere! } 15. Rh3 Ng4 16. Bxd8 Nf2+ 17. Kg1 Nxh3+ 18. gxh3 Rxd8 { White ends up with a damaged pawn structure in front of his king. } 19. Qxh5 g6 { Forcing open the g-file. } 20. Qf3 Rg8 21. Kh1 Bc5 22. b4 Bd4 23. Be2 c5 24. Rd1 Bxc3 { Otherwise, white plays Nd5 to shut down the Bb7. } 25. Qxc3 Bxe4+ 26. Bf3 Qc6 27. Rf1 gxf5 28. Qe3 Bxf3+ 29. Rxf3 f4 30. Qe2 c4 31. Qd1 Qe4 32. Qf1 f5 { 0-1 Black wins. } { White is basically paralyzed, and black's passed pawns just roll up the board at once. } 0-1
+
+
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2016.10.10"]
+[White "LazovT"]
+[Black "Mr_Penings"]
+[Result "0-1"]
+[WhiteElo "2444"]
+[BlackElo "2534"]
+[TimeControl "60"]
+[Termination "Mr_Penings won by resignation"]
+[Variant "Standard"]
+[ECO "B43"]
+[Opening "Sicilian Defense: Kan Variation, Knight Variation"]
+[StudyName "Sicilian Kan Repertoire"]
+[ChapterName "5. Nc3 6. Bd3 Game"]
+[ChapterURL "https://lichess.org/study/1D1HCJEb/iD5SzJdU"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+
+1. e4 { [%clk 0:01:00] } 1... c5 { [%clk 0:00:59] } 2. d4 { [%clk 0:00:59] } 2... cxd4 { [%clk 0:00:58] } 3. Nf3 { [%clk 0:00:59] } 3... e6 { [%clk 0:00:57] } 4. Nxd4 { [%clk 0:00:59] } 4... a6 { [%clk 0:00:57] } 5. Nc3 { [%clk 0:00:59] } 5... Qc7 { [%clk 0:00:56] } 6. Bd3 { [%clk 0:00:57] } 6... Nc6 { [%clk 0:00:55] } 7. Nb3 { Normally, lines where White plays Nb3 are harmless since the knight is passive on b3 and would much rather contest the center on d4. } { [%clk 0:00:54] } 7... Nf6 { [%clk 0:00:55] } 8. O-O { [%clk 0:00:53] } 8... h5 { [%clk 0:00:54] } 9. a4 { [%clk 0:00:53] } 9... Ng4 { [%clk 0:00:53] } 10. g3 { [%clk 0:00:48] } 10... Nce5 { [%clk 0:00:52] } 11. h3 { [%clk 0:00:44] } 11... Nf6 { [%clk 0:00:48] } 12. Kg2 { [%clk 0:00:40] } 12... h4 { [%clk 0:00:46] } 13. g4 { [%clk 0:00:39] } 13... b6 { Seeing the King on g2, Black intends to rush the bishop to b7 right away to eye the king. } { [%clk 0:00:45] } 14. f4 { [%clk 0:00:38] } 14... Ng6 { [%clk 0:00:44] } 15. Be3 { [%clk 0:00:35] } 15... Bb7 { [%clk 0:00:43] } 16. Nd4 { [%clk 0:00:34] } 16... Bb4 { Putting even more pressure on the e4 pawn. } { [%clk 0:00:42] } 17. g5 { [%clk 0:00:31] } 17... Nh5 { [%clk 0:00:34] } 18. Kh2 { [%clk 0:00:30] } 18... Nhxf4 { [%clk 0:00:32] } 19. Bxf4 { [%clk 0:00:27] } 19... Nxf4 { [%clk 0:00:32] } 20. e5 { [%clk 0:00:25] } 20... Qxe5 { 0-1 Black wins. } { If Nf3, simply retreating the queen back to c7 or b8 would leave too many threats for White to stop. } { [%clk 0:00:30] } 21. Nf3 Qc7 0-1
+
+
+[Event "Let's Play!"]
+[Site "Chess.com"]
+[Date "2018.07.23"]
+[White "rajandking"]
+[Black "Mr_Penings"]
+[Result "0-1"]
+[WhiteElo "1659"]
+[BlackElo "1815"]
+[TimeControl "1/86400"]
+[Termination "Mr_Penings won by resignation"]
+[Variant "Standard"]
+[ECO "B41"]
+[Opening "Sicilian Defense: Kan Variation"]
+[StudyName "Sicilian Kan Repertoire"]
+[ChapterName "5. Nc3 and 6. g3 Game"]
+[ChapterURL "https://lichess.org/study/1D1HCJEb/fBjg6LHY"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+
+1. e4 c5 2. Nf3 e6 3. d4 cxd4 4. Nxd4 a6 5. g3 Nf6 6. Nc3 Qc7 7. Bg2 Bb4 8. Bd2 Be7 9. O-O Nc6 10. Nxc6 dxc6 11. Re1 e5 { A very familiar idea, the e5 push! } 12. Qe2 Be6 13. Rad1 O-O 14. a3 b5 15. f4 Ng4 16. f5 { White misses the threat of Bc5+. f4 is not a bad move itself, but White has got to be careful afterwards. } (16. Kh1) 16... Bc5+ 17. Kh1 Nf2+ 18. Kg1 Nxd1+ 19. Kf1 Bc4 { 0-1 Black wins. } 0-1
+
+
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2018.08.07"]
+[White "SergeiAza"]
+[Black "Mr_Penings"]
+[Result "1-0"]
+[WhiteElo "2703"]
+[BlackElo "2517"]
+[TimeControl "180+2"]
+[Termination "SergeiAza won by checkmate"]
+[Variant "Standard"]
+[ECO "B41"]
+[Opening "Sicilian Defense: Kan Variation"]
+[StudyName "Sicilian Kan Repertoire"]
+[ChapterName "5. Nc3 and 6. Be2 game"]
+[ChapterURL "https://lichess.org/study/1D1HCJEb/f7Mae7Pd"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+
+{ This was a game I played against famous Grandmaster Sergei Azarov in the chess.com Titled Tuesday event. Although I ended up losing, I got a satisfiable position from the opening. }
+1. e4 { [%clk 0:03:01] } 1... c5 { [%clk 0:03:00] } 2. Nf3 { [%clk 0:03:03] } 2... e6 { [%clk 0:03:01] } 3. d4 { [%clk 0:03:04] } 3... cxd4 { [%clk 0:03:02] } 4. Nxd4 { [%clk 0:03:05] } 4... a6 { [%clk 0:03:04] } 5. Be2 { [%clk 0:03:06] } 5... Qc7 { [%clk 0:03:03] } 6. O-O { [%clk 0:03:06] } 6... Nf6 { [%clk 0:03:01] } 7. Nc3 { [%clk 0:03:07] } 7... Nc6 { [%clk 0:03:03] } 8. Be3 { [%clk 0:03:08] } 8... h5 { Ng4 is a potential idea. } { [%clk 0:03:03] } 9. h3 { [%clk 0:02:54] } 9... b5 { [%clk 0:03:01] } 10. Nxc6 { [%clk 0:02:40] } 10... dxc6 { [%clk 0:02:59] } 11. Bd3 { [%clk 0:02:28] } 11... e5 { The standard e5! } { [%clk 0:02:58] } 12. a4 { [%clk 0:02:25] } 12... Bb7 { [%clk 0:02:53] } 13. Qf3 { [%clk 0:02:17] } 13... Be7 { [%clk 0:02:37] } 14. Ne2 { [%clk 0:02:13] } 14... g6 { [%clk 0:02:26] } 15. Rfd1 { [%clk 0:02:03] } 15... O-O { [%clk 0:02:22] } 16. Ng3 { As long as the Ng3 has no strong outposts on the kingside, I don't have to worry about it. } { [%clk 0:01:59] } 16... h4 { Forcing the knight back } { [%clk 0:02:16] } 17. Nf1 { [%clk 0:01:59] } 17... Nh5 { [%clk 0:02:08] } 18. Nh2 { [%clk 0:01:54] } 18... Nf4 { [%clk 0:01:49] } 19. Bxf4 { [%clk 0:01:47] } 19... exf4 { [%clk 0:01:50] } 20. Ng4 { [%clk 0:01:48] } 20... Bd6 { [%clk 0:01:34] } 21. Re1 { [%clk 0:01:41] } 21... Be5 { [%clk 0:01:17] } 22. c3 { [%clk 0:01:37] } 22... Rad8 { [%clk 0:01:13] } 23. Bc2 { [%clk 0:01:38] } 23... c5 { [%clk 0:01:11] } 24. axb5 { [%clk 0:01:29] } 24... axb5 { [%clk 0:01:13] } 25. Ra7 { [%clk 0:01:30] } 25... Bg7 { [%clk 0:00:51] } 26. e5!? { Interesting move by Azarov, which I did not consider (It's blitz anyways). The e-pawn ultimately became quite strong and I underestimated. } { [%clk 0:01:11] } 26... Bxf3 { [%clk 0:00:48] } 27. Rxc7 { [%clk 0:01:12] } 27... Bxg4 { [%clk 0:00:50] } 28. hxg4 { [%clk 0:01:14] } 28... Rd2 { [%clk 0:00:51] } 29. Bd1 { [%clk 0:00:58] } 29... Rfd8 { [%clk 0:00:47] } (29... c4 { I did not have enough play on the d-file. Instead, should have just consolidated and stopped the e-pawn before it got dangerous. }) 30. Bf3 { [%clk 0:00:59] } 30... Rxb2 { [%clk 0:00:35] } 31. e6 { [%clk 0:00:55] } 31... Bxc3 { [%clk 0:00:14] } 32. exf7+ { [%clk 0:00:41] } 32... Kf8 { [%clk 0:00:15] } 33. Re6 { [%clk 0:00:32] } 33... Rb1+ { [%clk 0:00:07] } 34. Kh2 { [%clk 0:00:33] } 34... Bd4 { [%clk 0:00:04] } 35. Rxg6 { [%clk 0:00:32] } 35... Bg7 { [%clk 0:00:05] } 36. Re6 { [%clk 0:00:32] } 36... Bd4 { [%clk 0:00:05] } 37. Bc6 { [%clk 0:00:31] } 37... Bxf2 { [%clk 0:00:02] } 38. Re8+ { [%clk 0:00:31] } 38... Kg7 { [%clk 0:00:03] } 39. f8=Q+ { [%clk 0:00:32] } 39... Kg6 { [%clk 0:00:03] } 40. Qg7# { I was move short from checkmate. Shows the power of the initiative! } { [%clk 0:00:27] } 1-0
+
+

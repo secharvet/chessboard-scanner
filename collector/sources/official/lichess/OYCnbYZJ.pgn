@@ -1,0 +1,35 @@
+[Event "Kids Class -- 2pm | Cambridge Springs!: Intro to Cambridge Springs"]
+[Date "2018.08.05"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D52"]
+[Opening "Queen's Gambit Declined: Cambridge Springs Defense, Bogoljubow Variation"]
+[StudyName "Kids Class -- 2pm | Cambridge Springs!"]
+[ChapterName "Intro to Cambridge Springs"]
+[ChapterURL "https://lichess.org/study/OYCnbYZJ/PYEdOENq"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2018.08.05"]
+[UTCTime "17:17:08"]
+
+1. d4 d5 2. c4 e6 (2... dxc4 3. e3) 3. Nc3 Nf6 4. Bg5 c6 { "Triangle Formation" } 5. Nf3 Nbd7 6. e3 Qa5 { The Cambridge Springs! } 7. Nd2 { White's best move } (7. Bd3 { Black to move }) 7... Bb4 (7... dxc4 { Tricky, but not good. Why? }) 8. Qc2 O-O 9. Be2 (9. Bd3 { Black to move }) 9... c5 *
+
+
+[Event "2018 US Open"]
+[Date "2018"]
+[Round "99"]
+[White "Opponent"]
+[Black "Student"]
+[Result "0-1"]
+[WhiteElo "1311"]
+[BlackElo "1740"]
+[Variant "Standard"]
+[ECO "D52"]
+[Opening "Queen's Gambit Declined: Cambridge Springs Defense"]
+[StudyName "Kids Class -- 2pm | Cambridge Springs!"]
+[ChapterName "Opponent - Student"]
+[ChapterURL "https://lichess.org/study/OYCnbYZJ/LaJB6TUw"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 d5 2. c4 e6 3. Nc3 c6 4. Nf3 Nf6 5. Bg5 Nbd7 6. e3 Qa5 7. c5 Ne4 8. Qc2 { Black to move } 8... b6 9. cxb6 axb6 10. a3 Bb4 11. Rc1 { Black to move and win a pawn } 11... Bxc3+ 12. bxc3 Qxa3 13. Be2 Ba6 14. h4 Bxe2 15. Kxe2 Qa2 16. Nd2 h6 17. Ra1 { How to continue for black? } 17... Qxc2 18. Rxa8+ Nb8 19. Rxb8+ Kd7 20. Rb7+ Kc8 { 0-1 White resigns. } 0-1
+
+

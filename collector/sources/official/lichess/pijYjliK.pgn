@@ -1,0 +1,89 @@
+[Event "Moscow"]
+[Site "Moscow URS"]
+[Date "1967.05.26"]
+[Round "5"]
+[White "Lajos Portisch"]
+[Black "Tigran Vartanovich Petrosian"]
+[Result "1-0"]
+[Variant "Standard"]
+[ECO "D10"]
+[Opening "Slav Defense: Exchange Variation"]
+[StudyName "Masterpieces with Nose: Lajos Portisch"]
+[ChapterName "Lajos Portisch - Tigran Vartanovich Petrosian"]
+[ChapterURL "https://lichess.org/study/pijYjliK/r2jv49Q4"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+
+1. d4 d5 2. c4 c6 3. cxd5 cxd5 4. Nc3 Nf6 5. Nf3 Nc6 6. Bf4 { [%cal Gc8f5,Gd1b3,Gb3b7,Gb3d5] } 6... e6 7. e3 Bd6 8. Bg3 O-O 9. Bd3 Re8 (9... Qe7!?) 10. Ne5 { Stopping e5 from black } 10... Bxe5 11. dxe5 { [%cal Gf6e4] } 11... Nd7 12. f4 Qb6 { [%cal Gb6b2,Gb6e3] } 13. O-O! { [%cal Gd3h7,Gd1h5] } 13... Qxe3+?? { Taking a pawn with check ends up being a game losing blunder! The london attack is simply too strong. } (13... Nc5 14. Bc2 Qxb2 15. Qd2 Qb6 16. Rab1 Qd8 { A better pawn grab. } { [%cal Gc8f5] }) 14. Kh1 Qb6 15. Qh5 Nf8 { [%cal Gd7f8] } 16. Rf3 { [%csl Ge8][%cal Gg3f2,Gc6d4] } 16... Ng6 { [%csl Ge5][%cal Gf4f5] } (16... f5 { The move you "want" to make hangs a rook } 17. Qxe8) 17. Bf2 (17. f5 exf5 { [%cal Gd3f5,Gc8f5] } (17... Ngxe5 { [%cal Gf5f6,Ge5d3] } 18. fxe6 { [%cal Gd3h7,Gh5h7] } (18. f6 { [%cal Ge5g6] } 18... Nxd3 19. Qg5 { [%cal Gg5g7] } 19... g6 20. Qh6))) 17... Qd8 18. Nb5 { [%cal Gb5d6] } 18... Nce7 19. Nd6 { [%cal Gd6e8,Gd6f7] } 19... Bd7 20. Bh4 { [%cal Gf3h3,Ge7f5,Gg6h4] } 20... Qb6 21. Rh3 { [%csl Gh7][%cal Gf3h3,Gh3h7] } 21... h6 22. Bf6 Qxb2 (22... gxf6 23. Qxh6 { [%cal Gh6h7,Gh7f7] } 23... Nf8 (23... Rf8 24. Qh7#) 24. Qh8#) 23. Rf1 Nf5 24. Bxf5 { 1-0 Black resigns. } 24... exf5 25. Bxg7 Kxg7 26. Qxh6+ Kg8 27. Qh7+ Kf8 28. Qxf7# 1-0
+
+
+[Event "Reggio Emilia 1989/90"]
+[Site "Reggio Emilia ITA"]
+[Date "1990.01.05"]
+[Round "8"]
+[White "Lajos Portisch"]
+[Black "Nick de Firmian"]
+[Result "1-0"]
+[Variant "Standard"]
+[ECO "E14"]
+[Opening "Queen's Indian Defense: Spassky System"]
+[StudyName "Masterpieces with Nose: Lajos Portisch"]
+[ChapterName "Lajos Portisch - Nick de Firmian"]
+[ChapterURL "https://lichess.org/study/pijYjliK/xzZBFa1J"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+
+1. d4 Nf6 2. c4 e6 3. Nf3 b6 4. e3 Bb7 5. Bd3 c5 6. O-O Be7 7. Nc3 d5 8. b3 O-O 9. Bb2 Nc6 { The only difference is in the placement of the bishops } { [%csl Ge7,Gd3] } 10. Re1 Rc8 11. Rc1 cxd4 12. exd4 Re8 (12... dxc4 13. bxc4 { [%csl Gc4,Gd4][%cal Gd4d5] }) 13. cxd5 Nxd5 14. Nxd5 Qxd5 15. Be4 Qd7 { The point of the exchange sacrifice is to get the knight to e5 with tempo and then activate our remaining pieces in a kingside attack. The rook on c1 doesn't participate in any mating attack anyway. } { [%cal Gf3e5] } (15... Qd6 { There's still hope in this position. No immediate tactics work, but d5 is coming fast }) 16. Rxc6 Bxc6 17. Ne5 Qb7 18. Bxh7+ Kf8 (18... Kxh7 19. Qh5+ Kg8 20. Qxf7+ Kh7 21. Re3 { [%cal Ge3h3] } 21... Bxg2 22. d5!! { Deflecting the queen from defending the 7th rank! } { [%cal Gg2d5] } (22. Qg6+ Kg8 { [%cal Gd4d5,Gb7d5] } 23. Rg3 { [%cal Gg6g7] } 23... Bf6 24. Rxg2) (22. Rg3 Bf6 { [%csl Gf7][%cal Gb7f7] } 23. Qg6+ (23. Rxg7+ Bxg7 24. d5 (24. Qxb7 Bxb7) 24... Qxf7) 23... Kg8 24. Qxf6) 22... Qxd5 { [%cal Gb7g7] } 23. Qg6+ Kg8 24. Rg3 (24. Nd7 { [%cal Gb2g7,Gg6g7] }) 24... Bf6 { [%cal Gg6f6] } 25. Qxf6) 19. Qh5 Bb4 { [%cal Gb7f7] } 20. Bd3 { [%cal Gb4a3] } 20... g6 (20... Bxe1 21. Ba3+ (21. Ng6+ fxg6 (21... Kg8 22. Qh8#) 22. Ba3+ Re7 (22... Qe7! { [%cal Gd3g6,Ge7a3,Gh5h8,Gf8e7] } 23. Bxe7+ Kxe7 24. Qxg6 { White doesn't have enough material! }) 23. Bxg6 { [%cal Gh5h8] } 23... Kg8 24. Qh7+ Kf8 25. Qh8#) (21. Qh8+ Ke7 22. Ba3+ (22. Qxg7) 22... Kd8) 21... Re7 (21... Kg8 22. Qh7#) 22. Qxf7#) 21. Qh6+ Ke7 { [%cal Gb4e1] } 22. d5 Bxe1 (22... Bxd5 23. Qh4+ Kf8 (23... Kd6 24. Qf4 { [%cal Gf4d6] }) 24. Nd7+ { [%cal Gb2f6] } 24... Qxd7 (24... Kg8 25. Qh8#) 25. Bf6 { [%cal Gh4h8] }) 23. Ba3+ Kd8 24. Qh4+ Kc7 25. dxc6 { [%cal Gb7c6] } 25... Qa8 26. Qf6 { [%cal Gf6f7,Gf7d7] } 26... b5 27. Bc5 { [%csl Gc8,Ge8,Ga8] } 27... Rcd8 28. Qxf7+ Kc8 29. Bxb5 { [%cal Gb5a6] } 29... a6 30. Qd7+ { 1-0 Black resigns. } 30... Rxd7 31. cxd7+ { [%cal Gd7e8] } 31... Kc7 32. dxe8=Q Qxe8 33. Bxe8 $18 1-0
+
+
+[Event "Budapest"]
+[Site "Budapest"]
+[Date "1969.??.??"]
+[White "Lajos Portisch"]
+[Black "Ivan Radulov"]
+[Result "1-0"]
+[Variant "Standard"]
+[ECO "A10"]
+[Opening "English Opening: Anglo-Dutch Defense"]
+[StudyName "Masterpieces with Nose: Lajos Portisch"]
+[ChapterName "Lajos Portisch - Ivan Radulov"]
+[ChapterURL "https://lichess.org/study/pijYjliK/rY4cc1zl"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+
+1. c4 f5 2. Nf3 Nf6 3. g3 e6 4. Bg2 Be7 5. O-O O-O 6. d4 c6 7. Qc2 b6 8. Nbd2 d5 { [%csl Gc6,Gd5,Ge6,Gf5,Re5] } 9. Ne5 Bb7 10. Nd3 Nbd7 11. b4 Re8 12. a4 Bd6 13. Nf3 Ne4 14. c5 bxc5 15. bxc5 Bc7 16. Bf4 { [%csl Ge5] } 16... Bxf4 17. gxf4 Qc7 18. Nfe5 Nef6 { [%cal Gb7a6,Ga6d3] } 19. Rfb1 { [%csl Gb6] } 19... a5 { [%cal Ga7a5] } 20. Nxd7 Nxd7 21. Ne5 Nxe5 22. fxe5 Reb8 23. Rb6 Ba6 { [%cal Gb7a6] } 24. Rab1 { [%csl Gb6] } 24... Rb7 (24... Rxb6 25. cxb6 { [%cal Gb6b8] }) 25. Qd2 Rxb6 (25... Bc4 26. Rxb7) 26. cxb6 { [%csl Gc7,Ga5] } 26... Qb7 27. Qxa5 Bb5 (27... Bxe2 { [%cal Ga5a8,Gb7a8,Gb6b7] } 28. Qxa8+ (28. Qb4 Ba6 29. Bf1 Bxf1 30. Kxf1 $18 { [%cal Ga4a5,Ga5a6] }) 28... Qxa8 29. b7 Qb8 30. Bf1 { [%cal Ga4a5,Ga5a6,Ga6a7] } 30... Bb5!! 31. axb5 Qxb7 32. b6 $10 { [%cal Gf1a6,Gb7b8] }) (27... Bd3 28. Qxa8+ Qxa8 29. b7 Qb8 30. exd3 $18 { [%cal Ga4a5,Ga5a6,Ga6a7] }) 28. Qb4 Rxa4 29. Qd6 Kf7 (29... Qxb6 { [%cal Gd6e6] } 30. Qxe6+ { [%cal Gg8h8,Ge6e8] } 30... Kf8 31. Bxd5 { [%cal Ge6f7,Gf7g8] }) 30. e4!! { [%csl Ge6][%cal Ge5e8] } 30... Qxb6 (30... fxe4 31. Bh3 Qc8 { [%cal Gb6b7] } 32. Bxe6+ (32. b7 Qxb7 33. Bxe6+ $18) 32... Qxe6 33. Qxe6+ Kxe6 34. b7 $18) (30... dxe4 31. d5!! exd5 (31... Qc8 32. Qxe6+ Qxe6 33. dxe6+ Kxe6 34. b7) 32. e6+ { [%csl Gf6,Gg6][%cal Gf7e8,Ge6e7] } 32... Ke8 33. Rxb5 cxb5 34. Bf1 { [%cal Gf1b5] } 34... Ra1 35. e7 { [%cal Gb7e7,Gd6e7,Ge8e7,Gb6b7] } 35... Kf7 36. Qd8 { [%cal Ge7e8] } 36... Qxe7 37. Qxe7+ Kxe7 38. b7 $18) 31. exf5 { [%cal Ge6f5] } 31... Qa7 32. Qxe6+ Kf8 33. Bxd5 { [%cal Gb1b5] } 33... cxd5 34. Rxb5 Rxd4 35. Qc8+ { 1-0 Black resigns. } 35... Kf7 36. Rb7+ $18 1-0
+
+
+[Event "Thessaloniki Olympiad"]
+[Site "Thessaloniki GRE"]
+[Date "1984.12.01"]
+[Round "12"]
+[White "Mihai Suba"]
+[Black "Lajos Portisch"]
+[Result "0-1"]
+[Variant "Standard"]
+[ECO "A33"]
+[Opening "English Opening: Symmetrical Variation, Anti-Benoni Variation, Spielmann Defense"]
+[StudyName "Masterpieces with Nose: Lajos Portisch"]
+[ChapterName "Mihai Suba - Lajos Portisch"]
+[ChapterURL "https://lichess.org/study/pijYjliK/bD9UmJvp"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+
+1. c4 c5 2. Nf3 Nf6 3. Nc3 Nc6 4. d4 cxd4 5. Nxd4 e6 { [%cal Gd4b5] } 6. Ndb5 { [%cal Gb5d6] } 6... d5 { [%cal Gc1f4,Gf4c7] } 7. cxd5 (7. Bf4 e5 8. cxd5 exf4 9. dxc6 bxc6 10. Qxd8+ Kxd8) 7... Nxd5 8. Nxd5 exd5 9. Qxd5 Bb4+ 10. Bd2 Qe7 11. Nc3 O-O 12. Bg5 { [%cal Gd2g5,Gc1d2] } 12... Qc7 { [%cal Gd8e7,Ge7c7] } 13. e3 { [%cal Gf1d3,Ge1g1] } 13... Be6 14. Qd2 Qa5 { [%csl Gg5][%cal Ga5g5] } 15. Bh4 g5 16. Bg3 Rfd8 { [%cal Gh4d8] } 17. Qc2 Bxc3+ 18. bxc3 { [%csl Gg5,Gh7,Gf7] } 18... Nb4 19. Qe4?? (19. cxb4 Qxb4+ 20. Ke2 Bc4+ 21. Kf3 g4+ 22. Kxg4 Bd3+ $19) (19. Qb2 Nxa2 20. Be2 Qxc3+ 21. Qxc3 Nxc3 22. Bf3 Nd5 23. O-O { Best play. White isn't necessarily dead, but the two connected queenside passed pawns will give black a huge advantage long term, even with the bishop pair }) 19... Nxa2 { [%csl Gd8,Ga8,Ga5,Ge6,Ga2,Rf1,Rh1] } 20. Qb4 { [%csl Ga5,Gb4,Ge1] } 20... Rd1+ { 0-1 White resigns. } 21. Kxd1 (21. Ke2 Nxc3+) (21. Rxd1 Nxb4 { [%cal Ga2b4] }) 21... Nxc3+ { [%cal Ga5b4] } 0-1
+
+
+[Event "Petrosian - Portisch Candidates Quarterfinal"]
+[Site "Palma ESP"]
+[Date "1974.02.08"]
+[Round "10"]
+[White "Lajos Portisch"]
+[Black "Tigran Vartanovich Petrosian"]
+[Result "1-0"]
+[Variant "Standard"]
+[ECO "D63"]
+[Opening "Queen's Gambit Declined: Orthodox Defense, Henneberger Variation"]
+[StudyName "Masterpieces with Nose: Lajos Portisch"]
+[ChapterName "Lajos Portisch - Tigran Vartanovich Petrosian"]
+[ChapterURL "https://lichess.org/study/pijYjliK/YHNI8D8J"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Be7 4. Nf3 Nf6 5. Bg5 O-O 6. e3 Nbd7 7. Rc1 a6 8. c5 { [%cal Gc4c5,Ga7a6,Gb7b6] } 8... c6 (8... b6 9. b4 a5 { [%cal Ga7a6,Ga6a5] } 10. a3) 9. Bd3 { [%cal Ge6e5] } 9... b6 10. cxb6 c5 (10... Qxb6 { Hort, Vlastimil - Portisch, Lajos, 1-0, Madrid, 1973, https://lichess.org/7dzSRNTD } { [%cal Gc3a4] }) 11. O-O { [%cal Gc5d4] } 11... c4 { [%cal Gd3b1] } 12. Bc2 { [%csl Rc8] } 12... Nxb6 13. Ne5 { [%cal Gc2h7,Gd1h5,Gg5f6,Gf2f4,Gf1f3,Gf3h3] } 13... Bb7 { [%csl Gc6] } 14. f4 Rb8 15. f5 { [%cal Gf4f5,Gc8b7] } (15. Bxf6 Bxf6 16. Qh5 (16. Rf3 Nd7 (16... g6 17. Rh3) 17. Bxh7+) 16... g6 17. Qh3) 15... Nbd7 16. Bf4 (16. fxe6 Nxe5 17. dxe5 fxe6) (16. Nxf7 Rxf7 17. fxe6) 16... Rc8 17. Qf3 { [%cal Gf3h3] } 17... exf5 18. Bxf5 { [%cal Ge5d7] } 18... Nxe5 19. dxe5 Ne4 (19... Nd7 { [%csl Gf4,Gf3,Gf1,Gf5][%cal Gf5h7] } 20. Qh3 (20. Bxh7+) 20... g6 { [%cal Gf5d7] } 21. Bxd7) 20. Nxe4 { [%csl Ge4][%cal Gc3e4] } 20... dxe4 21. Qh3 { [%csl Gf5,Gf4,Gh3,Gf1] } 21... g6 22. Rcd1 Qb6 23. Rd7 { [%csl Ge7] } 23... Rce8 (23... Rfe8 24. Rxe7 Rxe7 25. Bxc8) (23... Bc5 { [%cal Gc5e3] } 24. e6 fxe6 (24... gxf5 25. Qg3+ Kh8 26. Be5+ f6 27. Qg7#) 25. Be5 Bxe3+ 26. Kh1) (23... gxf5 24. Rxe7) 24. e6 gxf5 { [%csl Ge7,Gf6,Gg7,Gf8] } (24... fxe6 25. Bxe6+ Kh8 26. Be5+ Bf6 27. Qxh7#) 25. Rxe7 (25. Qg3+ Kh8 26. Bh6 Rg8 27. Qe5+ f6 28. Qxf5 { [%cal Gg8g6] }) (25. Bd6?? Bxd6 26. exf7+ Rxf7) 25... Rxe7 26. Qg3+ (26. Be5) (26. Bd6) 26... Kh8 { [%csl Gg7] } 27. Bh6 { [%cal Gf4h6,Gf4d6] } (27. Be5+ f6 28. Rxf5 { [%cal Gf6e5] } 28... Qxe6 { [%cal Ge5d6] }) (27. Bd6 Ree8 28. e7 (28. Rxf5 { [%csl Ge6] } 28... Rg8 (28... f6 29. Qe5 Qxe3+ 30. Kf1 Qh6) 29. Be5+) (28. Rd1 Rxe6 29. Bxf8) 28... Rg8 29. Qe5+ Rg7 30. Rxf5 (30. Bc5) 30... Qxe3+) 27... fxe6 (27... Ree8 28. Qg7#) (27... Rg8 28. Qe5+ f6 29. Qxf6+ Reg7 { [%cal Gf1d1,Gd1d7] } 30. Rd1 { [%csl Gd7] } 30... Bc6 { [%csl Gd7] } 31. Bxg7+ Rxg7 { [%cal Ge6e7] } 32. Rd8+ $18 (32. e7?? Qxe3+ 33. Kh1 Be8 { [%cal Gf6f8,Gf8f6] })) 28. Bxf8 Rd7 29. Bh6 { [%csl Gh6][%cal Gb7e4] } 29... Qa5 { [%csl Ge5][%cal Gg3e5] } 30. Qb8+ Qd8 31. Qe5+ Kg8 { [%cal Ge5e6] } 32. Qxe6+ Rf7 33. Rxf5 { 1-0 Black resigns. } 33... Qd1+ 34. Kf2 Qd2+ 35. Kg3 { [%cal Gh6e3] } 35... Qe1+ 36. Kh3 1-0
+
+

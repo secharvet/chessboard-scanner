@@ -1,0 +1,57 @@
+[Event "EricRosen's Study: Chapter 1"]
+[Date "2025.04.06"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B77"]
+[Opening "Sicilian Defense: Dragon Variation, Yugoslav Attack, Main Line"]
+[StudyName "EricRosen's Study"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/f3CBwEfp/xTqukXwu"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2025.04.06"]
+[UTCTime "02:35:42"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. f3 O-O 8. Qd2 Nc6 9. Bc4 *
+
+
+[Event "Casual blitz game"]
+[Site "https://lichess.org/az0b403i"]
+[Date "2025.04.06"]
+[White "EricRosen"]
+[Black "pdamorse"]
+[Result "1-0"]
+[WhiteElo "2689"]
+[WhiteTitle "IM"]
+[BlackElo "1526"]
+[TimeControl "300+0"]
+[Termination "Normal"]
+[GameId "az0b403i"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "EricRosen's Study"]
+[ChapterName "IM EricRosen (2689) - pdamorse (1526)"]
+[ChapterURL "https://lichess.org/study/f3CBwEfp/mPP1Y6C4"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[FEN "r1bq1rk1/pp2ppbp/2np1np1/8/2BNP3/2N1BP2/PPPQ2PP/R3K2R w KQq - 0 1"]
+[SetUp "1"]
+
+1. h4 { [%clk 0:05:00] } 1... h5 { [%clk 0:05:00] } 2. Bb3 { [%clk 0:04:29] } 2... Bd7 { [%clk 0:04:53] } 3. g4 { [%clk 0:04:17] } 3... Rc8 { [%clk 0:04:16] } 4. O-O-O { [%clk 0:03:55] } 4... Re8 { [%clk 0:03:04] } 5. Rdg1 { [%clk 0:03:51] } 5... Nxd4 { [%clk 0:02:50] } 6. Bxd4 { [%clk 0:03:47] } 6... Qa5 { [%clk 0:02:46] } 7. gxh5 { [%clk 0:03:40] } 7... Nxh5 { [%clk 0:02:36] } 8. Rxg6 { [%clk 0:03:34] } 8... Kf8 { [%clk 0:01:22] } 9. Bxg7+ { [%clk 0:03:20] } 9... Nxg7 { [%clk 0:01:19] } 10. Qh6 { [%clk 0:03:18] } 10... fxg6 { [%clk 0:00:57] } 11. Qh8# { 1-0 White wins by checkmate. } { [%clk 0:03:15] } 1-0
+
+
+[Event "EricRosen's Study: Chapter 3"]
+[Date "2025.04.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "EricRosen's Study"]
+[ChapterName "Chapter 3"]
+[ChapterURL "https://lichess.org/study/f3CBwEfp/Pf114r4H"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2025.04.14"]
+[UTCTime "03:09:06"]
+
+ *
+
+

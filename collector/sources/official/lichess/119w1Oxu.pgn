@@ -1,0 +1,16 @@
+[Event "How I got crushed in the Queen's Indian: Van Wely and Friedel Crushed me"]
+[Date "????.??.??"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "E15"]
+[Opening "Queen's Indian Defense: Fianchetto Variation"]
+[StudyName "How I got crushed in the Queen's Indian"]
+[ChapterName "Van Wely and Friedel Crushed me"]
+[ChapterURL "https://lichess.org/study/119w1Oxu/UCJDlPbB"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 Nf6 2. c4 e6 3. Nf3 (3. g3 b6) 3... b6 4. g3 Bb4+ 5. Bd2 c5 6. Bxb4 cxb4 7. Bg2 Bb7 8. O-O O-O 9. Qd3 (9. a3 bxa3 10. Rxa3 d6 11. Nbd2 Nc6 12. e4 Qc7 13. d5 Nb4 14. dxe6 fxe6 15. Nd4 Rfe8 16. Nb5 Qb8 17. Re1 a6 18. Nxd6 Qxd6 19. e5 Qd4 20. Bxb7 Ng4 21. Ne4 Qxd1 22. Rxd1 Ra7 23. Nd6 Rd8 24. Bc8 Nxe5 25. Bxe6+ Kf8 26. Re3 Nbc6 27. f4 Re7 28. f5 Nxc4 29. Rc3 N4e5 30. Rd5 b5 31. g4 g6 32. Ne4 Rxd5 33. Bxd5 Nb4 34. f6 Re8 35. Bb3 Nbc6 36. Ng5 Nc4 37. Bxc4 bxc4 38. Rxc4 Rc8 39. Ne6+ Ke8 40. Rxc6 Rxc6 41. f7+ Kxf7 42. Nd8+ Ke7 43. Nxc6+ Kd6 44. Nb4 a5 45. Nd3 Kd5 46. Kf2 Ke4 47. Nc1 a4 48. Ne2 Kd3 49. Nc3 a3 50. bxa3 Kxc3 51. g5 Kb3 52. Ke3 Kxa3 53. Kd4 Kb4 54. Ke5 Kc5 55. Kf6 Kd5 56. Kg7 { 1-0 (56)
+Friedel,J (2506)-Rosen,E (2307) Middleton 2013 }) 9... d6 10. Nbd2 Re8 11. Rfd1 Qc7 12. Rac1 a5 13. Nh4 Bxg2 14. Nxg2 Nbd7 15. e4 e5 16. Ne3 exd4 17. Qxd4 Nc5 18. f3 Ne6 19. Qd3 Nc5 20. Qd4 Ne6 21. Qd3 Nc5 22. Qe2 Re5 23. Nf5 Rae8 24. Nd4 Nfd7 25. Nf1 Nb7 26. Ne3 g6 27. Nd5 Qc5 28. Qf2 Kg7 29. b3 Nd8 30. Rc2 h5 31. h4 f6 32. Rcd2 Nf7 33. Kg2 Rd8 34. Nf4 Nf8 35. Nd3 Qc8 36. Nxe5 dxe5 37. Nb5 Rxd2 38. Qxd2 g5 39. Qd5 Qe8 40. hxg5 { 1-0 (40) Van Wely,L (2662)-Rosen,E
+(2393) Leiden 2016 } *
+
+

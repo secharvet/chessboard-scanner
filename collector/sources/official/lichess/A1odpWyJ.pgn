@@ -1,0 +1,724 @@
+[Event "🏆 Sicilian Najdorf Repertoire 🏆: Sicilian Najdorf - Introduction"]
+[Site "https://lichess.org/study/nHsHvquq/NRukELLM"]
+[Date "2020.07.15"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B90"]
+[Opening "Sicilian Defense: Najdorf Variation"]
+[StudyName "Sicilian Najdorf Repertoire"]
+[ChapterName "Sicilian Najdorf - Introduction"]
+[ChapterURL "https://lichess.org/study/A1odpWyJ/5KdrwDkw"]
+[UTCDate "2020.07.15"]
+[UTCTime "03:08:18"]
+
+{ Hello chess fans! I am proud to bring you the most popular (and one of the most complex) opening in all of chess: The Sicilian Najdorf! To see my other opening repertoires, see lichess.org/study/by/Mr_Penings
+❤️Please give this study a like and share with others! }
+1. e4 c5 2. Nf3 { This opening repertoire will only cover the lines starting 5. a6 for Black. I have written 2 other complete Sicilian guides (Kan and Hyper-Accelerated Dragon) that includes different recommendations against the sidelines such as 2. c3 and 2. Nc3. Check those out! } 2... d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 { The start of the Najdorf variation. This opening is extremely complex and theory heavy because there are just so many possible plans for White and Black, and the variations are just vastly different from one another, which is one of the main differences between the Najdorf and the Kan. } *
+
+
+[Event "🏆 Sicilian Najdorf Repertoire 🏆: ** Sample Game **"]
+[Site "https://lichess.org/study/nHsHvquq/YoHeq4bW"]
+[Date "2020.07.15"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Sicilian Najdorf Repertoire"]
+[ChapterName "** Sample Game **"]
+[ChapterURL "https://lichess.org/study/A1odpWyJ/z2FwVDFn"]
+[UTCDate "2020.07.15"]
+[UTCTime "03:08:18"]
+
+ *
+
+
+[Event "Bosna SuperGM"]
+[Site "Sarajevo BIH"]
+[Date "2000.5.29"]
+[Round "11"]
+[White "Movsesian, Sergei"]
+[Black "Kasparov, Garry"]
+[Result "0-1"]
+[WhiteElo "2668"]
+[BlackElo "2851"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B90"]
+[Opening "Sicilian Defense: Scheveningen Variation, English Attack, with f3"]
+[StudyName "Sicilian Najdorf Repertoire"]
+[ChapterName "Movsesian, Sergei - Kasparov, Garry"]
+[ChapterURL "https://lichess.org/study/A1odpWyJ/3CWx4rCw"]
+
+{ Garry Kasparov, arguably the greatest chess player of all time, was a big believer in the Najdorf. This game is one of my all time favorites, which highlights the dangers of the opening, and a perfect one to introduce the repertoire. Sit back and enjoy the beautiful game! }
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Be3 e6 { 6. e5 is the most popular move nowadays, but Kasparov loved to play 6. e6, which is also my recommendation. } 7. f3 b5 8. Qd2 Nbd7 9. O-O-O Bb7 10. g4 Nb6 { The knight heads to the queenside, while also making room for the Nf6 to retreat to d7. The knights will cause White a lot of trouble. The knights could team up on the c4 square, but Black should not dismiss Na4 ideas in hopes on opening up the b-file at the cost of double isolated a-pawns, which is an interesting trade-off } 11. Qf2 Nfd7 12. Kb1 Rc8 13. Bd3 Rxc3!? { This exchange sacrifice is a thematic one (see Theme #3 below). Black shatters White's queenside pawn structure, and the c3 pawn will be a huge target, being isolated and on an open file. } 14. bxc3 Qc7 15. Ne2 Be7 { Kasparov patiently gets castled to bring the other rook into the game. There is no need to rush as White's broken pawn structure is not able to resolve itself. } 16. g5 O-O 17. h4 { White tries to open up the kingside, but Kasparov simply ignores it. If your attack is faster, any move on the opposite end acts as a "pass" move. } 17... Na4 18. Bc1 Ne5 19. h5 d5!? { Pawn break in the center! A possible idea is to activate the Bb7, which was inactive due to the e4 pawn being quite stable. d5 tries to liquidate the pawn chain } 20. Qh2 Bd6 21. Qh3 Nxd3!? { Did Kasparov intentionally undouble White's weak c-pawns?! Is he insane? Nope! He notices White's queen is far from the queenside, so it is a good time to rush an attack. } 22. cxd3 b4 { Keeping the initiative. An open file will arise for the Black rook to help invade. } 23. cxb4 Rc8 24. Ka1 dxe4 { Now all Black needs to do is rid the White d3 pawn so Be5+ cannot be met by d4 } 25. fxe4 Bxe4 26. g6 (26. dxe4?? Be5+) 26... Bxh1 27. Qxh1 Bxb4 28. gxf7+ Kf8 { Kxf7 is probably fine for Black still, but why allow any counterplay at all? } 29. Qg2 Rb8 30. Bb2 Nxb2 31. Nd4 Nxd1 32. Nxe6+ Kxf7 { The queen cannot be taken due to Bb2+, so White resigns } { 0-1 White resigns. } 0-1
+
+
+[Event "🏆 Sicilian Najdorf Repertoire 🏆: ** Najdorf Important Themes  **"]
+[Site "https://lichess.org/study/nHsHvquq/4inHrTrf"]
+[Date "2020.07.15"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Sicilian Najdorf Repertoire"]
+[ChapterName "** Najdorf Important Themes  **"]
+[ChapterURL "https://lichess.org/study/A1odpWyJ/ZrIshELG"]
+[FEN "rnbqkb1r/1p2pppp/p2p1n2/8/3NP3/2N5/PPP2PPP/R1BQKB1R w KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.07.15"]
+[UTCTime "03:08:18"]
+
+ *
+
+
+[Event "🏆 Sicilian Najdorf Repertoire 🏆: Theme #1"]
+[Site "https://lichess.org/study/nHsHvquq/iHwBIhW0"]
+[Date "2020.07.15"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Sicilian Najdorf Repertoire"]
+[ChapterName "Theme #1"]
+[ChapterURL "https://lichess.org/study/A1odpWyJ/joOr7npM"]
+[FEN "r1b1k2r/2qnbpp1/p2ppn1p/1p6/3NPPP1/P1N2Q2/1PP2B1P/2KR1B1R b kq - 0 13"]
+[SetUp "1"]
+[UTCDate "2020.07.15"]
+[UTCTime "03:08:18"]
+
+{ A typical position in the Najdorf Be3 variation. White has castled queenside and started the dangerous pawn storm on the kingside. Black ideally wants to create a pawn break on the queenside but there are worries about White succeeding first. The position calls for the thematic move: }
+13... g5 { The idea is pretty clear: To slow down White's expansion while also attempting to create a permanent outpost on e5 for your knight. g5 is often played as a pawn sacrifice too. See Dagur Arngrimsson - Alexander Kovchan below for an example. } 14. h4 { White's best try is to concede the e5 square but further complicate the position. } (14. fxg5?! Ne5) 14... gxf4 15. g5 { And a messy game ensues } *
+
+
+[Event "🏆 Sicilian Najdorf Repertoire 🏆: Theme #2"]
+[Site "https://lichess.org/study/nHsHvquq/8wpbgk8a"]
+[Date "2020.07.15"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Sicilian Najdorf Repertoire"]
+[ChapterName "Theme #2"]
+[ChapterURL "https://lichess.org/study/A1odpWyJ/ACGCBZuB"]
+[FEN "r2q1rk1/3nbppp/p2pbn2/1p2p3/4P1P1/1NN1BP2/PPPQ3P/2KR1B1R w - - 0 12"]
+[SetUp "1"]
+[UTCDate "2020.07.15"]
+[UTCTime "03:08:18"]
+
+{ Another common position in the Be3 variation. Both sides are starting their pawn storms on the opposite side as their king. }
+12. g5 b4 13. gxf6 bxc3 14. Qxc3 (14. fxe7?? cxd2+) 14... Nxf6 15. Na5 *
+
+
+[Event "🏆 Sicilian Najdorf Repertoire 🏆: Theme #3"]
+[Site "https://lichess.org/study/nHsHvquq/wYkLwOGk"]
+[Date "2020.07.15"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Sicilian Najdorf Repertoire"]
+[ChapterName "Theme #3"]
+[ChapterURL "https://lichess.org/study/A1odpWyJ/RdratWN3"]
+[FEN "2rqk2r/1b1nbp2/p2pp3/1p2n1p1/3NP3/2N3P1/PPP1QBBP/2KR3R b k - 4 17"]
+[SetUp "1"]
+[UTCDate "2020.07.15"]
+[UTCTime "03:08:18"]
+
+17... Rxc3 18. bxc3 Qa5 *
+
+
+[Event "🏆 Sicilian Najdorf Repertoire 🏆: Theme #4"]
+[Site "https://lichess.org/study/nHsHvquq/jbx1XttJ"]
+[Date "2020.07.15"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Sicilian Najdorf Repertoire"]
+[ChapterName "Theme #4"]
+[ChapterURL "https://lichess.org/study/A1odpWyJ/qZzjxL2x"]
+[FEN "r2qkb1r/1b1n1ppp/p2ppn2/1p6/3NP1P1/2N1BP2/PPPQ3P/2KR1B1R b kq - 0 10"]
+[SetUp "1"]
+[UTCDate "2020.07.15"]
+[UTCTime "03:08:18"]
+
+10... Nb6 11. g5 Nfd7 { The knights reroute themselves onwards to the queenside to take advantage of the nice little holes presented to them. See the sample Grandmaster games below for some illustrated action of these knights. } { [%csl Gc4,Ga4][%cal Gd7e5,Gd7c5] } *
+
+
+[Event "🏆 Sicilian Najdorf Repertoire 🏆: Theme #5"]
+[Site "https://lichess.org/study/nHsHvquq/Dma6vY75"]
+[Date "2020.07.15"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Sicilian Najdorf Repertoire"]
+[ChapterName "Theme #5"]
+[ChapterURL "https://lichess.org/study/A1odpWyJ/JhsqOCEy"]
+[FEN "r3kb1r/1bqn1ppp/p2ppn2/1p6/3NP3/P1N1BP2/1PP1B1PP/R2Q1RK1 w kq - 1 6"]
+[SetUp "1"]
+[UTCDate "2020.07.15"]
+[UTCTime "03:08:18"]
+
+{ A recurring position in the Najdorf, and quite an ideal one for Black, who has reached equality. The setup is a Hedgehog with b5 instead of the typical b6, but this ends up in Black's favor, since common plans now include Nb6-c4. }
+6. Qd2 Be7 { Black, who currently has no weaknesses, will castle next, line rooks up on either e8, d8, or c8, and then try to pawn break in the center at the right moment. } 7. Rad1 O-O 8. Nb3 d5!? { Black is doing well after achieving the standard d5 pawn break. } *
+
+
+[Event "🏆 Sicilian Najdorf Repertoire 🏆: ** Main Lines **"]
+[Site "https://lichess.org/study/nHsHvquq/0Rtr3ja9"]
+[Date "2020.07.15"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Sicilian Najdorf Repertoire"]
+[ChapterName "** Main Lines **"]
+[ChapterURL "https://lichess.org/study/A1odpWyJ/tzqtvsHG"]
+[UTCDate "2020.07.15"]
+[UTCTime "03:08:18"]
+
+ *
+
+
+[Event "🏆 Sicilian Najdorf Repertoire 🏆: be3"]
+[Site "https://lichess.org/study/nHsHvquq/dQBigV8l"]
+[Date "2020.07.15"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Sicilian Najdorf Repertoire"]
+[ChapterName "Be3"]
+[ChapterURL "https://lichess.org/study/A1odpWyJ/VVKshHSl"]
+[FEN "rnbqkb1r/1p2pppp/p2p1n2/8/3NP3/2N5/PPP2PPP/R1BQKB1R w KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.07.15"]
+[UTCTime "03:08:18"]
+
+1. Be3 { The most popular 6th move for White is Be3. There are several ways for Black to combat Be3, with the most popular being e5. While e5 has been played at the super-GM level for years, I believe it also requires a larger amount of theory and understanding of the game to be effective. Therefore, my recommendation is e6, the second most common move, and ppoluarized by Kasparov in the 2000s } 1... e6 { The idea of e6 is to play a bit more reserved, but not create any weaknesses in your own position, unlike the e5 lines where d5 is already an outpost for White's knight. } (1... e5 2. Nb3 Be6 { The main line, which is just as good (if not better) than e6, but far more complex. I have included several Grandmaster games below in this line if you are interested. }) 2. f3 b5 3. Qd2 (3. g4 h6 { We will look at this line in the f3 chapter below. }) 3... Bb7 4. O-O-O { This chapter will be on lines where White castles queenside early on. My suggestion is to play Kasparov style by rerouting the knights over to the queenside and launch a quick attack there. } 4... Nbd7 { It is common for White to castle queenside and launch a pawn storm on the kingside. Black's plan is naturally to utilize the open c-file to aid the attack on the queenside. Black can choose to castle kingside or keep the king in the center, where it can be relatively safe. } 5. g4 Nb6 { We've reached theme #4 above. As stated, the knight is headed to the queenside while also opening up the d7 square for its fellow knight. } 6. g5 Nfd7 7. h4 (7. Kb1 { An early Kb1 removes a flight square from the Nc3. Thus, b4 forces the knight back to e2, which leads to unwanted trouble for White. } 7... b4 8. Nce2 Nc4) (7. a3 { White could play a3, which temporarily stops the b4 push. But Black could use this pawn as a hook to open up the queenside. } 7... Rc8 8. h4 d5 { The idea is to play b4 next, forcing an exchange of pawns }) 7... b4 8. Nb1 d5! { Black immediately strikes back in the center, taking advantage of the fact that the Nc3 is now completely passive on b1. } 9. exd5 Nxd5 { Black gets an active position. As long as you keep your king out of trouble, you have strong play. } *
+
+
+[Event "🏆 Sicilian Najdorf Repertoire 🏆: Be3 part 2"]
+[Site "https://lichess.org/study/nHsHvquq/wXqfMzZS"]
+[Date "2020.07.15"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Sicilian Najdorf Repertoire"]
+[ChapterName "Be3 part 2"]
+[ChapterURL "https://lichess.org/study/A1odpWyJ/5xF9JlTq"]
+[FEN "rnbqkb1r/1p2pppp/p2p1n2/8/3NP3/2N5/PPP2PPP/R1BQKB1R w KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.07.15"]
+[UTCTime "03:08:18"]
+
+1. Be3 e6 2. Be2 { While castling queenside is White's most popular (and ambitious and also risky), playing safer with Be2 and 0-0 is also playable. Black should equalize pretty easily in this line. } 2... Qc7 (2... b5? { The standard move b5 fails in this position to Bf3! This is similar to the Be2 Sicilian Kan variation where an early b5 is also punished by Bf3. } 3. Bf3 e5 { Black is forced to play this ugly move, and self inflicts an outpost for the opponent on d5. } (3... Bb7 4. e5 Bxf3 5. Qxf3) 4. Nf5 g6 5. Nh6) 3. O-O b5 { Now b5 is fine since Bf3 is met by Bb7 and your bishop is defended } 4. f4 { White's most challenging reply allows b4, but it is far from a clean pawn for Black. It leads to very messy play, and I do not recommend Black going into the complications. } (4. a3 { Normally, White's a3 is unnecessary and passive. } 4... Bb7 5. f3 Nbd7 { Typical plans here involve getting castled and get a knight to c4 via b6 or e5. This is similar to a Hedgehog structure, where Black has no weaknesses }) (4. Bf3 Bb7 5. e5? dxe5) 4... Bb7 (4... b4!? 5. Na4 Nxe4 6. c3 { Black is up a pawn, but will have to be under extreme pressure down the soon-to-be open c-file and the long h1-a8 diagonal. White is much better here. }) 5. Bf3 Nbd7 6. a3 Nb6 7. Qe2 Rc8 8. Rad1 Nc4 9. Bc1 Be7 10. g4 Nd7 11. g5 O-O { It is unlikely for White's kingside attack to push through if Black plays resourcefully on the queenside and center. Pushing pawns too far could also backfire for White's king too. Fairly balanced position. } *
+
+
+[Event "🏆 Sicilian Najdorf Repertoire 🏆: bg5"]
+[Site "https://lichess.org/study/nHsHvquq/TfK737Td"]
+[Date "2020.07.15"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Sicilian Najdorf Repertoire"]
+[ChapterName "Bg5"]
+[ChapterURL "https://lichess.org/study/A1odpWyJ/F8dJtrZS"]
+[FEN "rnbqkb1r/1p2pppp/p2p1n2/8/3NP3/2N5/PPP2PPP/R1BQKB1R w KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.07.15"]
+[UTCTime "03:08:18"]
+
+1. Bg5 Nbd7 { Nbd7 is the modern move, which has been becoming more and more popular. e6 has always been the main line for years, but there is just so much theory in that line, it is hard to really understand fully why each move is played. Even top Grandmasters like Caruana and MVL said themselves that they have followed engine recommendations in their preparation. } 2. f4 (2. Bc4 { The second most popular move, which I find quite easy to deal with. The goal for Black here is to try to limit the power of the Bc4 with e6, b5 and a Nc5. } 2... Qb6 { Often, the best way to punish an early development of White's dark squared bishop is to attack the b2 pawn } 3. Bb3 e6 4. Qd2 Be7 5. O-O-O Nc5! { The key move in this variation! If the Bb3 ever gets dangerous, the choice to exchange is in your hands. } 6. Rhe1 h6 7. Be3 Qc7 8. f3 b5 9. Kb1 Bd7 { Flexible position here. Keeping the king in the center is fine, but if the center breaks open, such as if White sacrifices a pawn, you should flee to safety on the kingside. }) 2... Qc7 3. Qf3 h6 4. Bh4 g5!? { Following theme #1 above } 5. fxg5 hxg5 6. Bxg5 Qc5 7. Be3 Ne5 8. Qe2 Neg4 9. Bg1 Bh6 { This is the main line in a fairly theoretical variation. Black prevents White from castling long, and exerts annoying pressure for White on all sides of the board. } 10. h3 (10. Nf5 { The most logical of the discovered attacks. However, the b2 pawn is still vulnerable. } 10... Qb4) (10. a3 Qb6 { Again, the goal is to pressure the b2 pawn. Since White doesn't have the option to 0-0-0, it is quite frustrating to play. }) 10... Bf4 { White cannot capture the knight due to Rxh1. This position is extremely dynamic, but Black scores well in practice. Bg3+ is the threat, with an initiative. } *
+
+
+[Event "🏆 Sicilian Najdorf Repertoire 🏆: bg5 part 2"]
+[Site "https://lichess.org/study/nHsHvquq/gUWm6bki"]
+[Date "2020.07.15"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Sicilian Najdorf Repertoire"]
+[ChapterName "Bg5 part 2"]
+[ChapterURL "https://lichess.org/study/A1odpWyJ/A7bfxPXQ"]
+[FEN "rnbqkb1r/1p2pppp/p2p1n2/8/3NP3/2N5/PPP2PPP/R1BQKB1R w KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.07.15"]
+[UTCTime "03:08:18"]
+
+1. Bg5 Nbd7 2. Qe2 { In this chapter, we will discuss the queen moves Qd2 and Qe2. Both are invitations to a sharp middlegame if White castles long. This is one of the most dynamic lines for White! I suggest studying this line in depth, as it differs from the common approach with e6. } (2. Qd2 e6 3. O-O-O b5) (2. Be2 { White could develop normally and somewhat passively. This gives no problems to Black, and I recommend the standard setup of Theme #5. } 2... Qc7 3. O-O e6 4. Kh1 b5 5. a3 Bb7 { Black is fine here. }) 2... h6 3. Bh4 g6 (3... g5?! { g5 is a bit premature here since White hasn't played f4 yet. You don't achieve the e5 outpost, and you've only overextended the kingside. } 4. Bg3) 4. f4 e5 { e5 is my suggestion here, as is the main line. Playing the usual e6 is just not fitting here since White has e5. } 5. fxe5 (5. O-O-O!? { I've seen this line before in practice. In theory, castling right away is not as strong as inserting fxe5 dxe5 first due to the d-file not being completely open, but it is still extremely sharp. } 5... exd4 6. e5 dxc3 7. exf6+ Ne5 8. fxe5 Be6 { Since the d-file isn't open, Black is actually doing well here. There is ample play on the queenside, so Black doesn't have to solely play passive defense. }) 5... dxe5 6. O-O-O! { To be frank, this line gives me the chills. I have analyzed this with Stockfish to make sure all of the lines are accurate since this is one of the most dangerous (if not THE most) lines in the Najdorf! } 6... Qc7 7. Nb3 (7. Nd5!? { Going all out with Nd5 doesn't cause a ton of harm since Black can castle kingside in time } 7... Nxd5 8. exd5 Bd6) 7... b5 8. Nd5 (8. Rxd7!? { Believe it or not, this line actually is sound! Since Nxd7 is forced (otherwise White wins the other knight as well), White gains full control over the d5 outpost, and has plenty of compensation. However, there is a forced repetition that White has (and Black should take it) } 8... Nxd7 9. Nd5 Qb8 10. Na5 Bg7 11. Qf3 O-O 12. Be7 Re8 13. Nc6 Qb7 14. Na5 Qa7 15. Nc6 Qb7 16. Na5 Qb8 { Draw by repetition 1/2-1/2 }) (8. Qf3 Bg7 9. Rxd7 { Transposes to the draw line above. Again, draw as Black should be fine. Not much else to say on how to avoid a draw without risking being worse. }) 8... Nxd5 9. exd5 Bd6 { At least the center is closed now. Black ideally is fine, but still has to be alert for tactics. } 10. Qd2 { Preventing kingside castling. } 10... f5 { Ambitious but accurate. Black truly can gain space in the center with little risk. } 11. g4 f4 { Welcome to a dynamic middlegame! } *
+
+
+[Event "🏆 Sicilian Najdorf Repertoire 🏆: be2"]
+[Site "https://lichess.org/study/nHsHvquq/BgDHnfuC"]
+[Date "2020.07.15"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Sicilian Najdorf Repertoire"]
+[ChapterName "Be2"]
+[ChapterURL "https://lichess.org/study/A1odpWyJ/CteVYFO5"]
+[FEN "rnbqkb1r/1p2pppp/p2p1n2/8/3NP3/2N5/PPP2PPP/R1BQKB1R w KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.07.15"]
+[UTCTime "03:08:18"]
+
+{ Since most of the variations in the Be2 Najdorf transpose to one another, this chapter will focus on its unique setup: Lines where White delays Be3. To see the Be3 + Be2 variation, see chapter 11 (Be3 part 2) }
+1. Be2 e6 2. O-O Be7 3. f4 O-O 4. Bf3 { These variations all seem to transpose to one another. So I will give you a glimpse of the basic ideas instead of giving concrete variations against every possible move order from White. } (4. a4) (4. Qe1) 4... Qc7 5. Kh1 Bd7 { Preparing Nc6 } 6. Be3 Nc6 7. Qe1 Nxd4 8. Bxd4 e5 { So White doesn't play e5. Now White's Bf3 is out of play. } 9. Be3 (9. fxe5 dxe5 10. Qg3 { Creative way to pin the queen. Fortunately, Black has the resourceful Bd6 to put an end to it. } 10... Bd6 11. Be3 Bc6 12. Bg5 Ne8) 9... Bc6 10. Qg3 Kh8 { Moving out of the way of the pin. Black is fine here. Future plans include b5-b4, but it really still does depend on how White proceeds since they still have the initiative at the moment. } *
+
+
+[Event "🏆 Sicilian Najdorf Repertoire 🏆: Be2 part 2"]
+[Site "https://lichess.org/study/nHsHvquq/t4BTCCqI"]
+[Date "2020.07.15"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Sicilian Najdorf Repertoire"]
+[ChapterName "Be2 part 2"]
+[ChapterURL "https://lichess.org/study/A1odpWyJ/Q0fElnqx"]
+[FEN "rnbqkb1r/1p2pppp/p2p1n2/8/3NP3/2N5/PPP2PPP/R1BQKB1R w KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.07.15"]
+[UTCTime "03:08:18"]
+
+1. Be2 e6 2. O-O (2. Be3 b5 (2... Qc7)) 2... Be7 3. f4 (3. Be3 { Transposes back to chapter 11, Be3 part 2. }) 3... O-O 4. Kh1 (4. Be3 e5) 4... Qc7 5. a4 b6 { If White plays an early a4, I suggest playing b6 to go into a Hedgehog structure. Otherwise, white plays a5 and suddenly your light squared bishop will find a hard time developing } 6. e5 { Lines with e5 are extremely ambitious and it is far from a free pawn! } (6. Bf3 Bb7 7. e5 dxe5 8. fxe5 Nfd7 9. Bxb7 Qxb7 { Black is down space, but I assure you you are fine. Nc6 and Rad8 finished development and you'll be on the path to equality soon. }) 6... dxe5 7. fxe5 Nfd7 (7... Qxe5? { It is usually not a good idea to snatch pawns when down in development. This is no exception. } 8. Bf4 Qc5 9. Nb3 Qb4 10. Bc7 { Extremely tough position to play. Bf3 is White's threat, and dangers come. }) 8. Bf3 Bb7 { You are fairly safe from harm here, even though the e5 pawn looks like a monster. } *
+
+
+[Event "🏆 Sicilian Najdorf Repertoire 🏆: bc4"]
+[Site "https://lichess.org/study/nHsHvquq/GpBzEYWJ"]
+[Date "2020.07.15"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Sicilian Najdorf Repertoire"]
+[ChapterName "Bc4"]
+[ChapterURL "https://lichess.org/study/A1odpWyJ/OY81WmhR"]
+[FEN "rnbqkb1r/1p2pppp/p2p1n2/8/3NP3/2N5/PPP2PPP/R1BQKB1R w KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.07.15"]
+[UTCTime "03:08:19"]
+
+1. Bc4 { The Bc4 line is one of the older main lines, as well as my favorite line to play as White against the Najdorf! With accurate play, White should not have any advantage, likely why this line has gone out of style in the modern times. } 1... e6 2. Bb3 b5 3. Qf3 { The line I had always used in the past for White. It can get tricky if Black is not well-prepared. } (3. Bg5 Be7 4. Qf3 Qc7 5. e5 (5. O-O-O Nbd7 6. e5? Bb7) 5... Bb7 6. exd6 Bxd6 { Black gets a lot of counterplay in the center. A dynamic middelgame ensues }) 3... Qc7 4. O-O (4. e5? Bb7) 4... Be7 5. Qg3 O-O 6. Bh6 Ne8 7. Rad1 Bd7 (7... Bb7? { Bb7 is such a natural looking move, but it allows White to dominate the light squares around the king. No fun! } 8. Bxe6 fxe6 9. Nxe6 { And Black is in big trouble }) 8. f4 Nc6 9. Nxc6 Bxc6 10. f5 Kh8 { Moving out of the way of two major pins. } 11. f6!? { Clever tactic } 11... gxh6 (11... Bxf6?! 12. Rxf6 gxh6 13. Rxh6 { Hmm a bit questionable }) 12. fxe7 Qxe7 { But here, Black has survived and is doing well } *
+
+
+[Event "🏆 Sicilian Najdorf Repertoire 🏆: Bc4 part 2"]
+[Site "https://lichess.org/study/nHsHvquq/zNb649yS"]
+[Date "2020.07.15"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Sicilian Najdorf Repertoire"]
+[ChapterName "Bc4 part 2"]
+[ChapterURL "https://lichess.org/study/A1odpWyJ/8KSciOht"]
+[FEN "rnbqkb1r/1p2pppp/p2p1n2/8/3NP3/2N5/PPP2PPP/R1BQKB1R w KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.07.15"]
+[UTCTime "03:08:19"]
+
+1. Bc4 e6 2. Bb3 b5 3. O-O Be7 4. f4 { The variations where White plays an early f4 should give Black no troubles at all. } 4... O-O 5. f5 (5. Qf3 Bb7) (5. e5 { Just a tad over-aggressive } 5... dxe5 6. fxe5 Nfd7 7. Qh5 (7. Bf4 Nc5) 7... Nc6!? { Taking advantage of a cute little tactic. } 8. Nxc6 Qb6+ 9. Kh1 Qxc6 10. Bf4 Bb7 { Good thing the Bb3 is closed off at the moment, which really slows down White's attempt to attack. }) 5... b4 6. Na4 e5 7. Ne2 Bb7 { Notice how White's aggressiveness early on has led to a clear pawn weakness on e4. Since pawns can't move backwards, the base of the pawn chain (e4) is evidently precarious } (7... Nxe4?? { Not a free pawn! } 8. Qd5) 8. Ng3 Nbd7 9. Bg5 Nxe4 *
+
+
+[Event "🏆 Sicilian Najdorf Repertoire 🏆: ** Sidelines **"]
+[Site "https://lichess.org/study/nHsHvquq/F3dkhqZD"]
+[Date "2020.07.15"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Sicilian Najdorf Repertoire"]
+[ChapterName "** Sidelines **"]
+[ChapterURL "https://lichess.org/study/A1odpWyJ/U0HSJXMk"]
+[UTCDate "2020.07.15"]
+[UTCTime "03:08:19"]
+
+ *
+
+
+[Event "🏆 Sicilian Najdorf Repertoire 🏆: f3"]
+[Site "https://lichess.org/study/nHsHvquq/zwOP4tvO"]
+[Date "2020.07.15"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Sicilian Najdorf Repertoire"]
+[ChapterName "f3"]
+[ChapterURL "https://lichess.org/study/A1odpWyJ/OKsyC6CU"]
+[FEN "rnbqkb1r/1p2pppp/p2p1n2/8/3NP3/2N5/PPP2PPP/R1BQKB1R w KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.07.15"]
+[UTCTime "03:08:19"]
+
+1. f3 e6 2. g4 (2. Be3 b5 { This will transpose to the Be3 variation. } 3. g4 (3. Qd2 { [%cal Ge1c1,Gb8d7,Gd7b6,Gf6d7] }) 3... h6 4. h4 b4 5. Nce2 e5 6. Nb3 d5! { The common theme of striking back in the center whenever you are faced with a flank attack! }) 2... h6 { The idea is to prevent White's expansion too much. White could play h4, but g5 is still not playable due to the undefended rook on h1. } 3. h4 d5 { Striking back in the center. } *
+
+
+[Event "🏆 Sicilian Najdorf Repertoire 🏆: h3"]
+[Site "https://lichess.org/study/nHsHvquq/gjQUUCGv"]
+[Date "2020.07.15"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Sicilian Najdorf Repertoire"]
+[ChapterName "h3"]
+[ChapterURL "https://lichess.org/study/A1odpWyJ/BY0VHDnd"]
+[FEN "rnbqkb1r/1p2pppp/p2p1n2/8/3NP3/2N5/PPP2PPP/R1BQKB1R w KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.07.15"]
+[UTCTime "03:08:40"]
+
+1. h3 { The purpose of this line is to go for an early g4 without f4. This is an exaggerated version of the g3 fianchetto Sicilian but with more space on the kingside. However, playing g4 can lead to overextension, which is exactly what Black wants to punish. } 1... e6 2. g4 d5 { This move seems to score best in practice, and it makes sense. Striking back in the center in response to a flank attack is fairly normal. } 3. exd5 (3. e5?! { Might be just a tad overambitious } 3... Nfd7 4. f4 Qh4+) 3... Nxd5 4. Nde2 (4. Bg2 Nxc3 5. bxc3 Bd6 { I doubt White has enough compensation for the double isolated pawns and exposed kingside. }) 4... Bb4 5. Bg2 (5. Bd2 { Preserves the pawn structure. } 5... Nxc3 6. Bxc3 Bxc3+ 7. Nxc3 Qb6 { Black has good pressure on b2. }) 5... O-O 6. O-O Nxc3 7. Nxc3 Qc7 8. Qd4 Nc6 (8... Bd6 { Riskier but avoids the draw line below. } 9. Be3 Bd7 10. Rad1 Be5) 9. Bxc6 Bxc3 10. Qxc3 Qxc6 { Just about dead drawn. As mentioned before, a draw as Black shouldn't be avoided at all costs. See the Bd6 line above for a sharper line but has more risk for Black. } *
+
+
+[Event "🏆 Sicilian Najdorf Repertoire 🏆: bd3"]
+[Site "https://lichess.org/study/nHsHvquq/VpwSOG5y"]
+[Date "2020.07.15"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Sicilian Najdorf Repertoire"]
+[ChapterName "Bd3"]
+[ChapterURL "https://lichess.org/study/A1odpWyJ/X29KxKoC"]
+[FEN "rnbqkb1r/1p2pppp/p2p1n2/8/3NP3/2N5/PPP2PPP/R1BQKB1R w KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.07.15"]
+[UTCTime "03:08:40"]
+
+1. Bd3 { A popular move at the lower levels, but harmless! I recommend switching to a kingside fianchetto to limit the range of the Bd3 and also hit the unprotected knight on d4 } 1... g6 2. O-O Bg7 { Also eyeing the undefended knight on d4 } 3. h3 (3. Be3? Ng4 4. h3 Nxe3 5. fxe3 O-O) 3... O-O 4. Be3 b5 5. a3 Bb7 { As seen in Theme #5, this is a comfortable position for Black. Nbd7 is next followed by Nc5 or Nb6-Nc4. } *
+
+
+[Event "🏆 Sicilian Najdorf Repertoire 🏆: a4"]
+[Site "https://lichess.org/study/nHsHvquq/CQCSDJzR"]
+[Date "2020.07.15"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Sicilian Najdorf Repertoire"]
+[ChapterName "a4"]
+[ChapterURL "https://lichess.org/study/A1odpWyJ/oOkIiwQW"]
+[FEN "rnbqkb1r/1p2pppp/p2p1n2/8/3NP3/2N5/PPP2PPP/R1BQKB1R w KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.07.15"]
+[UTCTime "03:08:40"]
+
+1. a4 { A somewhat rare move that prevents Black from playing b5 altogether. However, it often transposes to the Be2 line. The best line is to go into a Hedgehog structure. } 1... e6 2. Be2 (2. Be3 Be7 3. Bc4 O-O 4. O-O Qc7 5. Bb3 Nbd7 6. f4 (6. Bxe6!? { I assure you this is totally fine for Black. White gets a rook and two pawns for two minors. But since this is still far from the endgame, those extra pawns mean close to zilch. } 6... fxe6 7. Nxe6 Qc6 8. Nxf8 Nxf8) 6... Nc5 7. Qf3 e5 { Black has a comfortable position }) 2... Be7 3. O-O O-O 4. Be3 Qc7 { Transposing back to the Be2 main lines above. See chapter 15-16 } *
+
+
+[Event "🏆 Sicilian Najdorf Repertoire 🏆: f4"]
+[Site "https://lichess.org/study/nHsHvquq/jx9MC8io"]
+[Date "2020.07.15"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Sicilian Najdorf Repertoire"]
+[ChapterName "f4"]
+[ChapterURL "https://lichess.org/study/A1odpWyJ/cHlKbEax"]
+[FEN "rnbqkb1r/1p2pppp/p2p1n2/8/3NP3/2N5/PPP2PPP/R1BQKB1R w KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.07.15"]
+[UTCTime "03:08:40"]
+
+1. f4 { An immediate f4 can be ambitious, and I recommend a different line in attempt to punish White for overextending too soon. } 1... e5 2. Nf3 { The most testing reply. Other tries are pretty harmless for Black. } (2. Nf5 Bxf5 3. exf5 Nc6 { The f5 pawn is arguably more of a weakness than a strength for White. }) (2. Nb3 Nbd7 3. Be2 Be7 4. O-O b5 { Equality! }) 2... Qc7 3. Bd3 b5 4. O-O Nbd7 5. a3 Bb7 6. Qe1 Be7 7. Nh4 g6 { Stopping any Nf5 tries for White. This is still quite a wild position, and you know the middlegame could lead to fireworks. But in theory, Black should be okay here. Make sure you keep your e5 pawn stable. Do NOT play exf4 without good reason! } *
+
+
+[Event "🏆 Sicilian Najdorf Repertoire 🏆: g3"]
+[Site "https://lichess.org/study/nHsHvquq/5rXKgnnn"]
+[Date "2020.07.15"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Sicilian Najdorf Repertoire"]
+[ChapterName "g3"]
+[ChapterURL "https://lichess.org/study/A1odpWyJ/K6iVsLEk"]
+[FEN "rnbqkb1r/1p2pppp/p2p1n2/8/3NP3/2N5/PPP2PPP/R1BQKB1R w KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.07.15"]
+[UTCTime "03:08:40"]
+
+1. g3 e5 { e5 is my recommendation against the immediate Fianchetto to limit the potential on the long diagonal h1-a8. } 2. Nb3 (2. Nde2 Be7 3. Bg2 O-O 4. O-O b5 { Similar approach to the Nb3 variation above. This line should pose no threat to Black as long as the h1-a8 diagonal stays closed. } 5. a4 b4 6. Nd5 a5) 2... Be7 3. Bg2 O-O 4. O-O b5 { I have played the White side of this position before, and it's always been quite difficult to find ways to add more pressure for Black since the h1-a8 diagonal is completely shut off. Black, meanwhile, has easy development and a simple path to equality. } 5. a4 b4 6. Nd5 a5 { Ba6 is next. Black has reached equality, and is why the fianchetto variation is rarely seen at the top level these days } *
+
+
+[Event "🏆 Sicilian Najdorf Repertoire 🏆: Rg1"]
+[Site "https://lichess.org/study/nHsHvquq/en9Ordrg"]
+[Date "2020.07.15"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Sicilian Najdorf Repertoire"]
+[ChapterName "Rg1"]
+[ChapterURL "https://lichess.org/study/A1odpWyJ/K8ypxWUa"]
+[FEN "rnbqkb1r/1p2pppp/p2p1n2/8/3NP3/2N5/PPP2PPP/R1BQKB1R w KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.07.15"]
+[UTCTime "03:08:40"]
+
+1. Rg1!? { Looks ridiculous, but this is indeed a legitimate line for White. The idea is as obvious as it seems: g4! } 1... b5 2. g4 Bb7 3. Bg2 Nfd7 4. Be3 e6 { I don't recommend anything too crazy against the Rg1 line. Just play normally and reroute the Nf6 to the queenside, making White's early g4 questionable since there are no easy pawn breaks on the kingside. } { [%cal Gd7b6,Gd7b8,Gb6c4] } *
+
+
+[Event "🏆 Sicilian Najdorf Repertoire 🏆: ** Grandmaster Games in the Najdorf **"]
+[Site "https://lichess.org/study/nHsHvquq/N6jDhIjQ"]
+[Date "2020.07.15"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Sicilian Najdorf Repertoire"]
+[ChapterName "** Grandmaster Games in the Najdorf **"]
+[ChapterURL "https://lichess.org/study/A1odpWyJ/iUOuc4oI"]
+[FEN "rnbqkb1r/1p2pppp/p2p1n2/8/3NP3/2N5/PPP2PPP/R1BQKB1R w KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.07.15"]
+[UTCTime "03:08:40"]
+
+{ I have included games in various lines of the Najdorf, not just the lines in my guide. Hopefully they will give you a better sense of the opening principles rather than memorizing a series of moves. }
+ *
+
+
+[Event "13th Amber Rapid"]
+[Site "Monte Carlo MNC"]
+[Date "2004.03.23"]
+[Round "4"]
+[White "Peter Svidler"]
+[Black "Francisco Vallejo Pons"]
+[Result "0-1"]
+[WhiteElo "2747"]
+[BlackElo "2663"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B90"]
+[Opening "Sicilian Defense: Najdorf Variation"]
+[StudyName "Sicilian Najdorf Repertoire"]
+[ChapterName "Peter Svidler - Francisco Vallejo Pons"]
+[ChapterURL "https://lichess.org/study/A1odpWyJ/YTXsGHN8"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. f3 e5 { This is the most popular response. Not my recommendation in this guide, but the game is still worth reviewing. Black just has to be careful not to let White dominate the d5 square with a knight. } 7. Nb3 Be6 8. Be3 Be7 9. Qd2 O-O 10. O-O-O Nbd7 11. g4 b5 12. g5 b4 { We've reached Theme #2! Black responds to the threat on his knight with a counterattack, very common in pawn storms on opposite ends of the board } 13. Ne2 (13. gxf6 bxc3 14. fxe7 cxd2+ { Check! }) 13... Ne8 { [%cal Gf3f4] } 14. Kb1 a5 { The Nb3 aids Black's goal to break open the queenside as a4 comes with tempo on the knight. } 15. Nbc1 a4 16. f4 exf4 17. Bxf4 Nc5 18. Bg2 b3 19. cxb3 axb3 20. a3 { White tries to close off the queenside to the best of his ability. This defines Black's next plan: Remove the a3 pawn! } 20... d5 21. Nd4 (21. exd5? Bf5+ 22. Ka1 Ne4 { Unveiling the hidden threat of Bxa3 which is hard to prevent! }) 21... Nd6 22. exd5 Bg4 23. Rde1 Qd7 24. Qb4 Bf5+ 25. Ka1 Rfb8! { Black willingly sacrifices the knight in order to rid the a3 pawn, which leads to a deadly checkmate down the a-file. } 26. Qxc5 Nc4!! { Yeah... take either minor piece of mine, but a3 still falls and you're mated Svidler! } 27. d6 (27. Qxc4 Rxa3+ 28. bxa3 b2+) (27. Rxe7 Nxa3 28. Rxd7 Nc2+ 29. Kb1 Ra1#) 27... Rxa3+ 28. Qxa3 Nxa3 29. dxe7 Nc2+ 30. Nxc2 Qa4+ { 0-1 White resigns. } 0-1
+
+
+[Event "Linares"]
+[Site "Linares ESP"]
+[Date "2005.03.08"]
+[Round "12"]
+[White "Michael Adams"]
+[Black "Garry Kasparov"]
+[Result "0-1"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B90"]
+[Opening "Sicilian Defense: Najdorf Variation, English Attack"]
+[StudyName "Sicilian Najdorf Repertoire"]
+[ChapterName "Michael Adams - Garry Kasparov"]
+[ChapterURL "https://lichess.org/study/A1odpWyJ/TUScpzPY"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Be3 e6 7. Be2 Qc7 8. Qd2 b5 9. a3 Bb7 10. f3 Nc6 11. O-O-O b4 { Taking advantage of White's a3 move. Pushing pawns in front of your own king is risky because it can allow your opponent to create open lines using pawn breaks. b4 is a pawn break here. } 12. axb4 Nxb4 13. g4 Be7 14. g5 Nd7 15. h4 { White's kingside attack is less feared since Black has not committed to 0-0 yet. } 15... Nc5 16. Kb1 Rb8 { Ah! Utilizing the now-open b-file } 17. h5 O-O!? { Seemingly dubious. Why is Kasparov castling right into White's pawn storm? This move is confusing to me too, but Kasparov must've decided that bringing the other rook into the game via c8 is more essential. } 18. g6 Bf6 19. Rdg1 Ba8 20. Bg5 Be5 21. gxh7+ Kxh7 22. Nb3 Nxc2 { Seizing the initiative. Now White cannot continue his own attack since he has to worry about Black's play on the queenside. } 23. Nxc5 (23. Qxc2 Rxb3 { White's attack is just too slow }) (23. h6) 23... Na3+ 24. Ka2 Qxc5 25. Na4 Nc2 26. Kb1 { [%cal Ga3a1] } (26. Nxc5 Rxb2#) 26... Qa3 { 0-1 White resigns. } 0-1
+
+
+[Event "Cannes World Cup Rapid"]
+[Site "Cannes FRA"]
+[Date "2001.03.24"]
+[Round "1.2"]
+[White "Alexander Grischuk"]
+[Black "Garry Kasparov"]
+[Result "0-1"]
+[WhiteElo "2663"]
+[BlackElo "2849"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B90"]
+[Opening "Sicilian Defense: Scheveningen Variation, English Attack, with f3"]
+[StudyName "Sicilian Najdorf Repertoire"]
+[ChapterName "Alexander Grischuk - Garry Kasparov"]
+[ChapterURL "https://lichess.org/study/A1odpWyJ/N5Kjh17D"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. f3 e6 7. Be3 b5 8. g4 Nfd7 { Thematic idea once again to bring the knight to the queenside } 9. Qd2 Nb6 10. O-O-O N8d7 11. Qf2 Bb7 12. Bd3 Rc8 13. Nce2 Nc5 14. Kb1 Nba4 { The knight on a4 looks passive, but it will cause White a lot of trouble, especially since playing b3 to kick the knight back will lead to permanent weaknesses around White's king. So a4 acts as an outpost in a sense. } 15. h4 Qc7 16. Rc1 d5 17. e5 Qxe5 18. f4 Qd6 19. g5 Be7 20. h5 f5 { In hopes of pausing White's pawn storm. If White captures en passant, Black will happily route the bishop to the long diagonal for free. } 21. Nf3 Ne4 22. Bxe4 dxe4 23. Ne5 Bd5 24. Rh3 Nxb2 { The position just screams this move. Of course White cannot capture the knight } 25. Bd4 (25. Kxb2?? Qa3+ 26. Kb1 Qxa2#) 25... Na4 26. h6 gxh6 27. g6 hxg6 28. Nxg6 Rg8 29. Nxe7 Qxe7 { Black has dealt with all of the chaos so far. He's up 3 pawns and has a relatively safer king still. As with opposite colored bishop middlegames, play on your color square is extremely important. } 30. Ka1 Kd7 31. Qe1 Rg2 32. Re3 Rc4 33. Be5 Qb4 34. Qh4 Rxe2 35. Rxe2 Qa3 36. Rg1 Rc3!! { Deflection! Now there are 2 mate threats: Qb2# and Qxa2# } 37. Rg7+ Kc6 38. Rc7+ Kb6 39. Bd4+ Kxc7 { Black runs out of checks and mate is inevitable next move. } { 0-1 White resigns. } 0-1
+
+
+[Event "World Blitz 2019"]
+[Site "Moscow RUS"]
+[Date "2019.12.30"]
+[Round "14.61"]
+[White "Iljiushenok, Ilia"]
+[Black "Dominguez Perez, Leinier"]
+[Result "0-1"]
+[WhiteElo "2521"]
+[BlackElo "2758"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B94"]
+[Opening "Sicilian Defense: Najdorf Variation"]
+[StudyName "Sicilian Najdorf Repertoire"]
+[ChapterName "Iljiushenok, Ilia - Dominguez Perez, Leinier"]
+[ChapterURL "https://lichess.org/study/A1odpWyJ/phfdhHp0"]
+
+{ This game illustrates the power of the bishop pair and what to do when you have a bishop pair vs your opponent's knight pair }
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bg5 Nbd7 7. Bc4 Qb6 8. Bb3 e6 9. O-O Be7 10. Kh1 Nc5 { Now the knight will be a pest to the Bb3. One of the major ideas of the Nbd7 line. } 11. f4 Qc7 12. Qe2 h6 13. Bxf6 Bxf6 14. Rad1 O-O 15. f5 Nxb3 16. axb3 Bd7 { Notice Dominguez Perez is playing very slowly with the bishop pair, careful not to push pawns too soon. If Black plays e5 at any time, d5 becomes a dream outpost for White's knights. } 17. Qd3 Rad8 18. Qh3 Qc5 19. Nde2 b5 20. Rd2 b4 { Forcing the knight to a more passive square } 21. Nd1 exf5 22. exf5 Rfe8 23. Ng3 Bb5 24. Rg1 Bd4 { Power of the bishop pair! } 25. Qg4 Bxg1 26. Nh5 Bd4 27. h3 Re1+ 28. Kh2 Be5+ { 0-1 White resigns. } 0-1
+
+
+[Event "Norway Chess"]
+[Site "Stavanger NOR"]
+[Date "2016.04.20"]
+[Round "2"]
+[White "Anish Giri"]
+[Black "Maxime Vachier-Lagrave"]
+[Result "0-1"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B96"]
+[Opening "Sicilian Defense: Najdorf Variation"]
+[StudyName "Sicilian Najdorf Repertoire"]
+[ChapterName "Anish Giri - Maxime Vachier-Lagrave"]
+[ChapterURL "https://lichess.org/study/A1odpWyJ/tBo1m9GR"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bg5 e6 7. f4 h6 8. Bh4 Qb6 9. a3 Be7 10. Bf2 Qc7 11. Qf3 Nbd7 12. O-O-O b5 13. g4 g5!? { This is the game where Theme #1 was from. } 14. h4 gxf4 15. Be2 Rg8 16. Rdg1 d5!? { This is a wild move that seems very dubious since White's king is still in the center and d5 looks like a free pawn? Vachier-Lagrave has some tricks up his sleeve, involving Ne5 and Bb7, which are extremely complex } 17. exd5 Ne5 { The queen is out of good squares to retreat to. It cannot continue defending the d5 pawn. } 18. Qh3 (18. Qg2 Bb7 { The pawn will eventually be regained for Black. }) 18... exd5 19. Re1 Kf8 { Black king is surprisingly safe on f8. You know what's coming up next: Queenside attack! } 20. Nf5 Bxf5 21. gxf5 Bc5 22. Qf1 d4 23. Nb1 Ne4 { The pieces are just coming in one at a time. White's king is in a very vulnerable location right now as pressure down the c-file will lead to nasty tactics in Black's favor. Meanwhile, Black's king is safely at home. } 24. Bf3 Nxf2 25. Bxa8 Ned3+ 26. Kd2 Nxe1 27. Qxf2 (27. Qxe1 d3! { Black is almost checkmated with two minor pieces! } { [%cal Gc5e3] }) 27... d3 28. Qxe1 Be3+ { 0-1 White resigns. } 0-1
+
+
+[Event "8th Soviet Team Cup"]
+[Site "Moscow URS"]
+[Date "1974.08.30"]
+[Round "8"]
+[White "Alexander Beliavsky"]
+[Black "Lev Polugaevsky"]
+[Result "0-1"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B93"]
+[Opening "Sicilian Defense: Najdorf Variation, Amsterdam Variation"]
+[StudyName "Sicilian Najdorf Repertoire"]
+[ChapterName "Alexander Beliavsky - Lev Polugaevsky"]
+[ChapterURL "https://lichess.org/study/A1odpWyJ/766pdf6i"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. f4 Qc7 7. Bd3 g6 { Against the Bd3 line, it is advised for Black to play g6 for 2 reasons: 1) To reduce the scope of the Bd3 and 2) Fianchetto the bishop to aid the undefended knight on d4. } 8. O-O Nbd7 9. Kh1 Bg7 10. Be3 b5 11. Qf3 Bb7 12. a3 O-O 13. Rae1 Nb6 14. Nd1 Nc4 { Fairly frequent setup by Black. Both bishops are fianchettoed and aiming down the long diagonals. The knight is maneuverd around, typically to c5 or c4 via b6. } 15. Bc1 e5 16. fxe5 Nxe5 17. Qe2 Nxd3 { Looks dubious at first glance. Why would Black trade an awesome knight on an outpost for a bishop that's utterly useless? Ah, you'll see the tactical shot! } 18. Qxd3 (18. cxd3? Qxc1) 18... Nxe4! { The knight cannot be captured due to the following variation. } 19. Ne3 (19. Rxe4 Bxe4 20. Qxe4 Qc4 { Fork on the Nd4 and Rf1 }) 19... Rae8 20. Nf3 f5 21. Nd5 Qc5 22. Ne3 f4 { Not clearly lost, but it is just suffering for White from now on. } { 0-1 White resigns. } 0-1
+
+
+[Event "Zurich"]
+[Site "Zurich SUI"]
+[Date "1959.05.20"]
+[Round "2"]
+[White "Josef Kupper"]
+[Black "Mikhail Tal"]
+[Result "0-1"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B96"]
+[Opening "Sicilian Defense: Najdorf Variation, Polugaevsky Variation"]
+[StudyName "Sicilian Najdorf Repertoire"]
+[ChapterName "Josef Kupper - Mikhail Tal"]
+[ChapterURL "https://lichess.org/study/A1odpWyJ/thrHOBUj"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bg5 e6 7. f4 b5 8. Qf3 Bb7 9. Bd3 Be7 10. O-O-O Qb6 11. Rhe1 Nbd7 12. Nce2 Nc5 13. Bxf6 Bxf6 14. g4 Na4 { The dark squares are filled with activity, and White not having a dark squared bishop is quite significant in the middlegame. c3 is more or less forced } 15. c3 b4 16. Bc2 Nxb2 { Initiative! } 17. Kxb2 bxc3+ 18. Kxc3 O-O { The White king is out in the open, but black castles? Ah, the other rook is coming in to the attack. } 19. Rb1 Qa5+ 20. Kd3 Rac8 21. Qf2 Ba8 22. Rb3 e5 23. g5 exd4 24. Nxd4 (24. gxf6 Rxc2 25. Kxc2 Qxa2+ { And White's rook is soon to be lost. } 26. Rb2 Bxe4+) 24... Bxd4 { If Qxd4, then Qxe1. If Kxd4, then Qc5+, skewering the queen. } { 0-1 White resigns. } 0-1
+
+
+[Event "58th US Open"]
+[Site "Cleveland, OH USA"]
+[Date "1957.08.11"]
+[Round "7"]
+[White "Igor Garais"]
+[Black "Robert James Fischer"]
+[Result "0-1"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B91"]
+[Opening "Sicilian Defense: Najdorf Variation, Zagreb Variation"]
+[StudyName "Sicilian Najdorf Repertoire"]
+[ChapterName "Igor Garais - Robert James Fischer"]
+[ChapterURL "https://lichess.org/study/A1odpWyJ/ozAJVI3l"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. g3 e5 7. Nde2 Be7 8. Bg2 O-O 9. O-O Nbd7 10. h3 b5 11. Be3 Bb7 12. f4 Qc7 (12... b4 13. Nd5 { White can play Nd5 soon, but it is unclear if the opening of the position favors White or not. } 13... Nxd5 14. exd5 exf4 15. Nxf4 Bf6 { Black now has open e- and c- files and a fairly strong bishop on f6. The d5 pawn acts as a thorn in Black's position, but it is still fairly harmless at the moment and it can also act as a roadblock for White's fianchetto bishop. }) 13. g4 b4 14. Nd5 Nxd5 15. exd5 exf4 16. Rxf4 Bg5 { White's attempt to launch a pawn storm has definitely overextended his king safety, while Black's king is still relatively safe. Now, Black can punish White for overextending } 17. Re4 Bxe3+ 18. Rxe3 Rae8 19. Rxe8 Rxe8 20. Qd2 Qc5+ 21. Kh1 Qf2 { Re1 holds, but White is still completely paralyzed for the rest of the game. Black will just reroute the knight to its ideal square } { 0-1 White resigns. } 0-1
+
+
+[Event "Bermuda Round Robin"]
+[Site "It"]
+[Date "2004.01.22"]
+[Round "7"]
+[White "Alexander Anatolyevich Shabalov"]
+[Black "Boris Gelfand"]
+[Result "0-1"]
+[WhiteElo "2623"]
+[BlackElo "2709"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B96"]
+[Opening "Sicilian Defense: Najdorf Variation"]
+[StudyName "Sicilian Najdorf Repertoire"]
+[ChapterName "Alexander Anatolyevich Shabalov - Boris Gelfand"]
+[ChapterURL "https://lichess.org/study/A1odpWyJ/2ZesBzCL"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bg5 e6 7. f4 Nbd7 8. Qf3 Qc7 9. O-O-O b5 10. Bd3 Bb7 11. Rhe1 Qb6 12. Nd5!? { A very thematic move in the open Sicilian! White sacrifices the knight on d5 to open the e-file against Black's uncastled king. } 12... Qxd4 (12... exd5 13. exd5+ Kd8 14. Bf5 { Plug the position into stockfish and it will say Black is better. But from a human's viewpoint, it is extremely difficult to defend accurately. White's position, on the other hand, is much easier to play. I would happily choose White in this position }) 13. Bxf6 gxf6 14. Bxb5 Qc5 15. b4 { The queen is out of squares! Or is it? } 15... Qxb5 { Sacrificing the queen for 3 minor pieces } (15... Qc8 16. Bxd7+ Qxd7 (16... Kxd7 17. Nb6+) 17. Nxf6+) 16. Nc7+ Ke7 17. Nxb5 axb5 18. Qh5 Rxa2 19. Qxb5 Bh6 20. e5 fxe5 21. Qxb7 Bxf4+ 22. Kb1 Rha8 { White has the queen for Black's bishop and knight, but White's rooks lack open files while Black's are monsters down the a-file. Mating net is soon to come too } 23. g3 R2a7 24. Qc6 Ra6 25. Qc3 Bh6 26. Re4 d5 27. Rh4 d4 28. Qb2 Bg5 29. Rxh7 Nf6 30. h4 Nd5 31. Rd3 Bd2 { Baiting out Rxd2 to enter a forcing variation } 32. Rxd2 Nc3+ 33. Kc1 Ra1+ 34. Qxa1 Rxa1+ 35. Kb2 Rb1+ 36. Ka3 e4 { Simplifies into an endgame where White is up the exchange but he has to deal with Black's passed pawns, which are rolling down the board at top speed. } 37. Rf2 e3 38. Rfxf7+ Kd6 39. Rd7+ Kc6 40. Rc7+ Kd5 41. Rcd7+ Ke4 { The e6 pawn acts as a handy shield for the king } 42. Rde7 Kf3 43. Rxe6 Ke2 44. Rd7 Kd2 45. Rxe3 Kxe3 46. Rf7 Nd5 47. b5 Kd2 { The mating net cannot be stopped. } { 0-1 White resigns. } 0-1
+
+
+[Event "t-EuCh U18"]
+[Site "Balatonlelle HUN"]
+[Date "2000.07.14"]
+[Round "6"]
+[White "Dagur Arngrimsson"]
+[Black "Alexander Kovchan"]
+[Result "0-1"]
+[BlackElo "2420"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B96"]
+[Opening "Sicilian Defense: Najdorf Variation, Neo-Classical Defense"]
+[StudyName "Sicilian Najdorf Repertoire"]
+[ChapterName "Dagur Arngrimsson - Alexander Kovchan"]
+[ChapterURL "https://lichess.org/study/A1odpWyJ/4cmIkzXX"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bg5 e6 7. f4 Nc6 8. Nb3 Be7 9. Qf3 h6 10. Bh4 g5 { g5 theme again! This one can be considered a gambit, but BLack gets ample counterplay } 11. fxg5 Ne5 12. Qe2 Nfd7 { Turns out the pawn will be regained AND Black gets the free outpost for the knight on e5! } 13. O-O-O hxg5 14. Bf2 b5 15. g3 Bb7 16. Bg2 Rc8 17. Nd4 Rxc3 { We see another theme! } 18. bxc3 Qa5 { White's pawn structure is demolished and now Black goes after the weak pawns. } 19. Kb1 Nc4 20. Be3 Bf6 (20... Qxc3 { Also playable and possibly even stronger } 21. Bc1 Nc5) 21. Bc1 Nc5 22. Rhf1 Be5 { Fully utilizing the outpost for the bishop! Na4 is coming up next and it's no fun for White } 23. Rf3 Nxe4 24. Bb2 Rxh2 { Now Black completely dominates all 3 sides of the board. Brilliant! } 25. Nb3 Qc7 26. Rh1 Rxh1+ 27. Bxh1 Nxb2 28. Kxb2 Nxc3 { 0-1 White resigns. } 0-1
+
+
+[Event "19th ch-EUR Indiv 2018"]
+[Site "Batumi GEO"]
+[Date "2018.3.27"]
+[Round "10.3"]
+[White "Piorun, Kacper"]
+[Black "Navara, David"]
+[Result "0-1"]
+[WhiteElo "2653"]
+[BlackElo "2737"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "B94"]
+[Opening "Sicilian Defense: Najdorf Variation"]
+[StudyName "Sicilian Najdorf Repertoire"]
+[ChapterName "Piorun, Kacper - Navara, David"]
+[ChapterURL "https://lichess.org/study/A1odpWyJ/o7teZquB"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bg5 Nbd7 7. Bc4 Qb6 8. Bb3 e6 9. Qd2 Be7 10. O-O-O Nc5 11. Qe2 h6 12. Bh4 Qc7 13. f4 O-O 14. e5 { An early e5 by White should always be taken seriously. If White manages to break open the kingside fast enough, the attack is usually quite convincing. Fortunately for Black, the Nbd7-Nc5 line reduces the effect of White's Bb3 } 14... dxe5 15. fxe5 Nh7 16. Bxe7 Qxe7 17. Ne4 b5 18. Nxc5 (18. Nd6 { White should have taken the outpost. It is not permanent, as Black can offer trades, but at least it's a temporary spot to gain time to advance the kingside pawns. }) 18... Qxc5 19. h4 Rd8 20. c3 Bb7 21. Rh3 b4 { Standard pawn break. The more open lines on the queenside, the stronger Black's attack is. The importance of rooks in the attack is illustrated quite well in this game. } 22. Bc2 Rac8 23. g4 Qa5 24. cxb4 Qxa2 25. Nb3 Bd5 26. Rc3 Rxc3 27. bxc3 Qa3+ 28. Kb1 Rc8 29. Bxh7+ Kxh7 30. Qc2+ Kg8 31. Nc5 a5 { With the intention of opening up the b-file for his rook. That's the final piece needed to checkmate. } 32. Rxd5 exd5 33. e6 fxe6 34. Qg6 Rf8 35. Qxe6+ Kh8 { White resigns as the checks are stopped and the Black rook invades next move. } { 0-1 White resigns. } 0-1
+
+

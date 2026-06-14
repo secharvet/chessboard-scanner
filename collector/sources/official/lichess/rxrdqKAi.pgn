@@ -1,0 +1,279 @@
+[Event "Anti-London | Crazy Knight Attack: Introduction"]
+[Date "2022.12.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "Anti-London | Crazy Knight Attack"]
+[ChapterName "Introduction"]
+[ChapterURL "https://lichess.org/study/rxrdqKAi/TfjO2OpL"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[UTCDate "2022.12.08"]
+[UTCTime "18:07:40"]
+
+1. d4 { The London System is one of White's most popular setups and one of the most annoying to face. London players typically want to play the same opening moves regardless of what we do as Black.
+This response is designed to take the White player out of their comfort zone by disrupting their usual setup and taking the game into uncharted territory! } 1... Nf6 { We have to start with Nf6. Putting a pawn on d5 is not part of our plans. } 2. Bf4 c5 { Immediately challenging the center. White could advance with d5, but most London players aren't happy with advancing so early. } { [%csl Rd4][%cal Gc5d4] } 3. e3 { They want to build the "pawn triangle." } { [%csl Ge3,Gd4,Gc3][%cal Gc2c3] } 3... Nd5!? { The key move of our setup! We are threatening to take the bishop and double their pawns, so they more or less have to retreat. Part of the value of this move is psychological: it looks really weird and takes them out of their usual setup. But it's also completely computer-approved. } { [%csl Rf4][%cal Gd5f4] } 4. Bg3 Qb6 { Now this is our real point. The big downside of the London is that by developing the bishop so early White leaves the queenside undefended. We're threatening b2 and it's not so obvious how to defend it.
+Note also that Black smashes in this position in the Lichess database. 54% vs. 40% with the Black pieces! } { [%csl Rb2][%cal Gb6b2] } *
+
+
+[Event "Anti-London | Crazy Knight Attack: Why 3...Nd5?"]
+[Date "2022.12.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "Anti-London | Crazy Knight Attack"]
+[ChapterName "Why 3...Nd5?"]
+[ChapterURL "https://lichess.org/study/rxrdqKAi/hGTiaUY7"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[UTCDate "2022.12.08"]
+[UTCTime "18:15:29"]
+
+{ But okay, we can't play a weird move JUST to freak out London players. That's not how chess works. It must also be a good move in its own right. In this chapter we'll see why 3... Nd5 actually makes sense. }
+1. d4 Nf6 2. Bf4 c5 3. e3 Qb6 { What if we played 3... Qb6 immediately, without first 3... Nd5? } { [%csl Rb2][%cal Gb6b2] } 4. Nc3! { Now this is a good move. Our main move 3... Nd5 is designed precisely to prevent this. } 4... Qxb2 5. Nb5 { Our queen is sort of trapped and White is threatening a knight fork. The computer says even this is playable, but it doesn't look like much fun. The purpose of Nd5 is to prevent White from playing Nc3. } { [%csl Rb2][%cal Gb5c7] } *
+
+
+[Event "Anti-London | Crazy Knight Attack: 5. Nc3"]
+[Date "2022.12.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "Anti-London | Crazy Knight Attack"]
+[ChapterName "5. Nc3"]
+[ChapterURL "https://lichess.org/study/rxrdqKAi/t3SuFyRa"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[UTCDate "2022.12.08"]
+[UTCTime "18:18:04"]
+
+{ Let's start examining White's responses to our main line. }
+1. d4 Nf6 2. Bf4 c5 3. e3 Nd5 4. Bg3 Qb6 { They have various ways to protect b2, but all of them have downsides. } { [%csl Rb2][%cal Gb6b2] } 5. Nc3 { What if they just do this anyway? } 5... Nxc3 { This is the whole point: we're ready to chop their knight and give them doubled pawns. } 6. bxc3 Qa5 { Immediately targeting the weak c3 pawn. } { [%csl Rc3][%cal Ga5c3] } 7. Qd2 e6 { Getting ready to develop the bishop and castle. There's also a nasty trap in this line. } 8. Nf3 cxd4 9. cxd4?? { Positionally, this is the capture White wants to make to iron out the doubled pawns, but... } 9... Bb4 { Whoopsies. The queen is lost. } { [%cal Gb4e1] } *
+
+
+[Event "Anti-London | Crazy Knight Attack: 5. Qc1"]
+[Date "2022.12.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "Anti-London | Crazy Knight Attack"]
+[ChapterName "5. Qc1"]
+[ChapterURL "https://lichess.org/study/rxrdqKAi/bPtfr92D"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[UTCDate "2022.12.08"]
+[UTCTime "18:20:02"]
+
+1. d4 Nf6 2. Bf4 c5 3. e3 Nd5 4. Bg3 Qb6 5. Qc1 { White defends the b-pawn without compromising their pawn structure, but this drops the d-pawn. } { [%csl Rd4] } 5... cxd4 6. exd4 Qxd4 7. Nf3 Qc5 { White does have some compensation for the pawn in the form of faster development, but with two center pawns against zero I like our chances. } { [%csl Ge7,Gd7] } *
+
+
+[Event "Anti-London | Crazy Knight Attack: 5. b3"]
+[Date "2022.12.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "Anti-London | Crazy Knight Attack"]
+[ChapterName "5. b3"]
+[ChapterURL "https://lichess.org/study/rxrdqKAi/jTgSRSZM"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[UTCDate "2022.12.08"]
+[UTCTime "18:21:45"]
+
+1. d4 Nf6 2. Bf4 c5 3. e3 Nd5 4. Bg3 Qb6 { [%csl Rb2][%cal Gb6b2] } 5. b3 { This is the most common move. It's not a mistake, but it does have the downside of weakening the dark squares on the queenside. } { [%csl Rc3,Rb2,Ra3] } 5... cxd4 { This is a good moment to exchange. } 6. exd4 g6 { Getting ready to bring out the bishop to attack the weakened dark squares. } 7. Nf3 Bh6 { The more standard Bg7 is also fine, but I like this weird move. We're preparing Nf4, and also a queen check. } { [%csl Gf4][%cal Gd5f4,Gh6c1,Gb6a5,Ga5e1] } 8. Bd3 { Let's see what happens if White does their best to continue with a normal London setup. } 8... Qa5+! { This check is awkward to meet. } 9. Nbd2 Nc3! { Taking advantage of the weakened dark squares. } 10. Qc1 { It's awkward to step into the pin, but the queen has no other safe square. } { [%cal Gh6c1] } 10... Nc6 { White is stuck in multiple pins. } { [%cal Gh6c1,Ga5e1,Gd7d5,Gc8f5] } *
+
+
+[Event "Anti-London | Crazy Knight Attack: 5. Na3"]
+[Date "2022.12.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "Anti-London | Crazy Knight Attack"]
+[ChapterName "5. Na3"]
+[ChapterURL "https://lichess.org/study/rxrdqKAi/n5O1OSfV"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[UTCDate "2022.12.08"]
+[UTCTime "18:25:54"]
+
+1. d4 Nf6 2. Bf4 c5 3. e3 Nd5 4. Bg3 Qb6 5. Na3 { It looks odd to move the knight to the rim, but there's some logic to it. The knight has good jumps from here. } { [%cal Ga3b5,Ga3c4] } 5... Qb4+! (5... Qxb2 6. Nb5 { This actually transposes to a line we could get from 3... Qb6 (see the "Why 3... Nd5?" chapter). Playable, but not what we're after. }) 6. c3 Nxc3! { [%csl Ra3] } 7. Qd2 (7. bxc3?? Qxc3+ { [%cal Gc3e1,Gc3a1] } 8. Ke2 Qxa3 { This is just winning. We're up two pawns and White's king is stuck in the center. }) 7... Ne4 8. Qxb4 cxb4 9. Nb5 { [%cal Gb5c7] } 9... Na6 { Our pieces are a bit tangled, but we've got an extra pawn. From here we want to gradually untangle and trade off some pieces. } { [%csl Gc7][%cal Ga6c7,Gd7d6,Gc8d7,Ge4g3] } *
+
+
+[Event "Anti-London | Crazy Knight Attack: 5. c4"]
+[Date "2022.12.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "Anti-London | Crazy Knight Attack"]
+[ChapterName "5. c4"]
+[ChapterURL "https://lichess.org/study/rxrdqKAi/4JMB0TBd"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[UTCDate "2022.12.08"]
+[UTCTime "18:30:16"]
+
+1. d4 Nf6 2. Bf4 c5 3. e3 Nd5 4. Bg3 Qb6 5. c4 { Counterattacking our knight. This is actually a good move, but it wouldn't be most people's first thought, so it's quite rare. } { [%csl Rd5][%cal Gc4d5] } 5... Nf6 (5... Qxb2 6. cxd5 Qxa1 7. Qc2 { We're up an exchange but our queen is at risk of being trapped. This is still highly unclear, but not my cup of tea. } { [%csl Ra1] }) 6. Nc3 Qxb2 { Okay, now I'll take. } 7. Nb5? (7. Nge2 cxd4 8. exd4 e6 { White has enough compensation for the pawn, but not more. } { [%cal Gf8b4] }) 7... Qb4+ 8. Qd2 Qxd2+ 9. Kxd2 Ne4+ 10. Kd3 Nxg3 11. hxg3 Na6 { In this endgame White doesn't really have any compensation for the pawn. } *
+
+
+[Event "Anti-London | Crazy Knight Attack: Reference File"]
+[Site "https://lichess.org/study/rxrdqKAi/xvkqHTsx"]
+[Date "2023.01.21"]
+[Result "*"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "Anti-London | Crazy Knight Attack"]
+[ChapterName "3. d5"]
+[ChapterURL "https://lichess.org/study/rxrdqKAi/gsa7kEmE"]
+[UTCDate "2023.01.21"]
+[UTCTime "18:49:29"]
+
+1. d4 Nf6 2. Bf4 c5 3. d5 { A good move and likely what I would do with White, but most London players are attached to their triangle setup. } 3... b5 { I like this move, going for a Benko Gambit-like setup. We're thinking about surrounding the d-pawn. } { [%csl Rd5][%cal Gc8b7,Gb7d5] } (3... Qb6 4. Nc3 Qxb2 5. Bd2 { I wouldn't recommend grabbing this pawn - White gets good compensation. } { [%cal Ga1b1,Ge2e4] }) 4. c4 (4. a4 b4 5. c4 d6 { With a strategic battle ahead. The break ...e5 can be a good way to gain space in the center. } { [%cal Ge7e5] }) (4. e3 Qa5+ { Defending the b5 pawn with tempo. } 5. c3 Bb7 { White is having problems defending the d5 pawn. } 6. d6 exd6 7. Bxd6 Qb6! 8. Bxf8 Kxf8 { Black has a big lead in development and the king will be safe on g7. } { [%cal Gg7g6,Gf8g7] }) 4... g6 (4... bxc4?! 5. Nc3 { This gives White easy development and central control. } { [%cal Ge2e4,Gf1c4] }) 5. cxb5 a6 6. bxa6 Bg7 { With a Benko where White has played the not-very-helpful Bf4. } { [%cal Ge8g8,Gc8a6] } *
+
+
+[Event "Anti-London | Crazy Knight Attack: 5. Nc3"]
+[Site "https://lichess.org/study/rxrdqKAi/t3SuFyRa"]
+[Date "2022.12.08"]
+[Result "*"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "Anti-London | Crazy Knight Attack"]
+[ChapterName "Practice 1"]
+[ChapterURL "https://lichess.org/study/rxrdqKAi/kzRVvamH"]
+[UTCDate "2022.12.08"]
+[UTCTime "18:48:47"]
+[ChapterMode "gamebook"]
+
+{ Let's start examining White's responses to our main line. }
+1. d4 Nf6 2. Bf4 c5 3. e3 Nd5 4. Bg3 Qb6 { They have various ways to protect b2, but all of them have downsides. } { [%csl Rb2][%cal Gb6b2] } 5. Nc3 { What if they just do this anyway? } 5... Nxc3 { This is the whole point: we're ready to chop their knight and give them doubled pawns. } 6. bxc3 Qa5 { [%csl Rc3][%cal Ga5c3] } 7. Qd2 e6 8. Nf3 cxd4 9. cxd4 Bb4 { [%csl Rd2][%cal Gb4e1] } *
+
+
+[Event "Anti-London | Crazy Knight Attack: 5. b3"]
+[Site "https://lichess.org/study/rxrdqKAi/jTgSRSZM"]
+[Date "2022.12.08"]
+[Result "*"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "Anti-London | Crazy Knight Attack"]
+[ChapterName "Practice 2"]
+[ChapterURL "https://lichess.org/study/rxrdqKAi/cJKaKsVq"]
+[UTCDate "2022.12.08"]
+[UTCTime "18:50:45"]
+[ChapterMode "gamebook"]
+
+1. d4 Nf6 2. Bf4 c5 3. e3 Nd5 4. Bg3 Qb6 { [%csl Rb2][%cal Gb6b2] } 5. b3 { This is the most common move. It's not a mistake, but it does have the downside of weakening the dark squares on the queenside. } { [%csl Rc3,Rb2,Ra3] } 5... cxd4 { This is a good moment to exchange. } 6. exd4 g6 { Getting ready to bring out the bishop to attack the weakened dark squares. } 7. Nf3 Bh6 { The more standard Bg7 is also fine, but I like this weird move. We're preparing Nf4, and also a queen check. } { [%csl Gf4][%cal Gd5f4,Gh6c1,Gb6a5,Ga5e1] } 8. Bd3 { Let's see what happens if White does their best to continue with a normal London setup. } 8... Qa5+! { This check is awkward to meet. } 9. Nbd2 Nc3! { Taking advantage of the weakened dark squares. } 10. Qc1 { It's awkward to step into the pin, but the queen has no other safe square. } { [%cal Gh6c1] } 10... Nc6 { White is stuck in multiple pins. } { [%cal Gh6c1,Ga5e1,Gd7d5,Gc8f5] } *
+
+
+[Event "Anti-London | Crazy Knight Attack: 5. Na3"]
+[Site "https://lichess.org/study/rxrdqKAi/n5O1OSfV"]
+[Date "2022.12.08"]
+[Result "*"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "Anti-London | Crazy Knight Attack"]
+[ChapterName "Practice 3"]
+[ChapterURL "https://lichess.org/study/rxrdqKAi/BhzJ72Hn"]
+[UTCDate "2022.12.08"]
+[UTCTime "18:51:17"]
+[ChapterMode "gamebook"]
+
+1. d4 Nf6 2. Bf4 c5 3. e3 Nd5 4. Bg3 Qb6 5. Na3 { It looks odd to move the knight to the rim, but there's some logic to it. The knight has good jumps from here. } { [%cal Ga3b5,Ga3c4] } 5... Qb4+! (5... Qxb2 6. Nb5 { This actually transposes to a line we could get from 3... Qb6 (see the "Why 3... Nd5?" chapter). Playable, but not what we're after. }) 6. c3 Nxc3! { [%csl Ra3] } 7. Qd2 (7. bxc3?? Qxc3+ { [%cal Gc3e1,Gc3a1] } 8. Ke2 Qxa3 { This is just winning. We're up two pawns and White's king is stuck in the center. }) 7... Ne4 8. Qxb4 cxb4 9. Nb5 { [%cal Gb5c7] } 9... Na6 { Our pieces are a bit tangled, but we've got an extra pawn. From here we want to gradually untangle and trade off some pieces. } { [%csl Gc7][%cal Ga6c7,Gd7d6,Gc8d7,Ge4g3] } *
+
+
+[Event "Anti-London | Crazy Knight Attack: 5. c4"]
+[Site "https://lichess.org/study/rxrdqKAi/4JMB0TBd"]
+[Date "2022.12.08"]
+[Result "*"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "Anti-London | Crazy Knight Attack"]
+[ChapterName "Practice 4"]
+[ChapterURL "https://lichess.org/study/rxrdqKAi/mBtawJgJ"]
+[UTCDate "2022.12.08"]
+[UTCTime "18:51:43"]
+[ChapterMode "gamebook"]
+
+1. d4 Nf6 2. Bf4 c5 3. e3 Nd5 4. Bg3 Qb6 5. c4 { Counterattacking our knight. This is actually a good move, but it wouldn't be most people's first thought, so it's quite rare. } { [%csl Rd5][%cal Gc4d5] } 5... Nf6 (5... Qxb2 6. cxd5 Qxa1 7. Qc2 { We're up an exchange but our queen is at risk of being trapped. This is still highly unclear, but not my cup of tea. } { [%csl Ra1] }) 6. Nc3 Qxb2 { Okay, now I'll take. } 7. Nb5? (7. Nge2 cxd4 8. exd4 e6 { White has enough compensation for the pawn, but not more. } { [%cal Gf8b4] }) 7... Qb4+ 8. Qd2 Qxd2+ 9. Kxd2 Ne4+ 10. Kd3 Nxg3 11. hxg3 Na6 { In this endgame White doesn't really have any compensation for the pawn. } *
+
+
+[Event "Anti-London | Crazy Knight Attack: 5. Qc1"]
+[Site "https://lichess.org/study/rxrdqKAi/bPtfr92D"]
+[Date "2022.12.08"]
+[Result "*"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "Anti-London | Crazy Knight Attack"]
+[ChapterName "Practice 5"]
+[ChapterURL "https://lichess.org/study/rxrdqKAi/0DV72GtS"]
+[UTCDate "2022.12.08"]
+[UTCTime "18:52:13"]
+[ChapterMode "gamebook"]
+
+1. d4 Nf6 2. Bf4 c5 3. e3 Nd5 4. Bg3 Qb6 5. Qc1 { White defends the b-pawn without compromising their pawn structure, but this drops the d-pawn. } { [%csl Rd4] } 5... cxd4 6. exd4 Qxd4 7. Nf3 Qc5 { White does have some compensation for the pawn in the form of faster development, but with two center pawns against zero I like our chances. } { [%csl Ge7,Gd7] } *
+
+
+[Event "Import"]
+[Site "https://lichess.org/YaDc944a"]
+[Date "2022.04.14"]
+[White "Zia, Tahsin Tajwar"]
+[Black "Erigaisi, Arjun"]
+[Result "0-1"]
+[TimeControl "-"]
+[Termination "Unknown"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "Anti-London | Crazy Knight Attack"]
+[ChapterName "Model Game 1: 5. Nc3"]
+[ChapterURL "https://lichess.org/study/rxrdqKAi/bLEO6aGo"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+
+1. d4 Nf6 2. Bf4 c5 3. e3 Nd5 4. Bg3 Qb6 5. Nc3 Nxc3 6. bxc3 Qa5 7. Qd2 d6 8. Bd3 g6 9. h4 Bg7 10. Ne2 Nc6 11. h5 d5 12. Nf4 c4 13. Be2 Bf5 14. Bh2 g5 15. Nh3 h6 16. g4 Bh7 17. f4 gxf4 18. exf4 Be4 19. Rg1 O-O-O 20. Nf2 Bxc2 21. Rc1 Bh7 22. g5 Bf5 23. Ng4 e6 24. Ne3 Be4 25. Bg4 Rde8 26. Nf1 Bf8 27. Ng3 Bd3 28. a3 Bd6 29. Rd1 Qc7 30. Nf1 Bxf1 31. Rxf1 hxg5 32. Rb1 f5 33. Bd1 g4 34. Bg3 Rxh5 35. Kf2 Bxa3 36. Ba4 Reh8 37. Kg2 Qh7 38. Qe3 Rh2+ 39. Kg1 Nd8 { 0-1 Black wins. } 0-1
+
+
+[Event "Dubai bin Rashid Cup Blitz"]
+[Site "Dubai"]
+[Date "2021.12.09"]
+[Round "8"]
+[White "Sukandar, Irine Kharisma"]
+[Black "Santos Ruiz, Miguel"]
+[Result "0-1"]
+[WhiteElo "2265"]
+[BlackElo "2527"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "Anti-London | Crazy Knight Attack"]
+[ChapterName "Model Game 2: 5. b3"]
+[ChapterURL "https://lichess.org/study/rxrdqKAi/E3zcGqdv"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+
+1. d4 Nf6 2. Bf4 c5 3. e3 Nd5 4. Bg3 Qb6 5. b3 cxd4 6. exd4 g6 7. c3 Bg7 8. Bc4 Nf6 9. Nf3 Nc6 10. O-O O-O 11. Nbd2 d5 12. Bd3 Bg4 13. Re1 e6 14. b4 Rfc8 15. a4 Nh5 16. a5 Qd8 17. a6 b6 18. Qa4 Nxg3 19. hxg3 Bxf3 20. Nxf3 Rc7 21. Red1 Ne7 22. Rac1 Rac8 23. Qa3 Qd6 24. Nd2 Bh6 25. Qb2 Bg7 26. Nb1 e5 27. dxe5 Qxe5 28. Re1 Qf6 29. Qe2 Nc6 30. Rcd1 Ne5 31. Bb5 Re7 32. Qd2 Rd8 33. Re2 Ng4 34. Rde1 Rxe2 35. Rxe2 Qf5 36. Qd3 Qh5 { 0-1 Black wins. } 0-1
+
+
+[Event "Anti-London | Crazy Knight Attack: Reference File"]
+[Date "2022.12.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "Anti-London | Crazy Knight Attack"]
+[ChapterName "Reference File"]
+[ChapterURL "https://lichess.org/study/rxrdqKAi/xvkqHTsx"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[UTCDate "2022.12.08"]
+[UTCTime "02:40:02"]
+
+1. d4 Nf6 2. Bf4 c5 3. e3 (3. d5 b5 { I like this move, going for a Benko Gambit-like setup. We're thinking about surrounding the d-pawn. } { [%csl Rd5][%cal Gc8b7,Gb7d5] } 4. c4 (4. a4 b4 5. c4 d6 { With a strategic battle ahead. The break ...e5 can be a good way to gain space in the center. } { [%cal Ge7e5] }) 4... g6 5. cxb5 a6 6. bxa6 Bg7 { With a Benko where White has played the not-very-helpful Bf4. } { [%cal Ge8g8,Gc8a6] }) (3. c3 Qb6 { This works great now. } 4. Qb3 Qxb3 5. axb3 cxd4 6. cxd4 { The doubled isolated b-pawns are a weakness. } { [%csl Rb3,Rb2] } 6... Nc6 7. e3 Nd5 { This knight again! } 8. Bg3 Ndb4 $15 { The knights can't be dislodged. } { [%cal Gd7d5,Gc8f5] }) 3... Nd5 4. Bg3 (4. Bxb8 Rxb8 5. c3 { This was the choice of Aman Hambleton vs. Lawrence Trent in their chessboxing match. It reflects the tendency of London players to go for their favorite structure no matter what, but objectively giving up the bishop pair so easily shouldn't cause Black any problems at all. } 5... e6 { [%cal Gf8e7,Ge8g8,Gb7b6,Gc8b7] }) 4... Qb6 { [%csl Rb2][%cal Gb6b2] } 5. b3 (5. Nc3 Nxc3 6. bxc3 Qa5 7. Qd2 e6 8. Nf3 cxd4 9. cxd4?? (9. exd4 Be7 { Black can play against the weak c-pawns. } { [%csl Rc3][%cal Ge8g8,Gb7b6,Gc8b7] }) 9... Bb4 { I've caught at least one titled player with this silly trap. } { [%cal Ra5e1] }) (5. Qc1 cxd4 6. exd4 Qxd4 7. Nf3 Qc5 { White has some compensation in the form of better development, but in the long run 2 center pawns to 0 is a big advantage. }) (5. c4 Nf6 (5... Qxb2 6. cxd5 Qxa1 7. Qc2 { [%csl Ra1] })) 5... cxd4 6. exd4 (6. Qxd4 Qxd4 7. exd4 Nc6) 6... g6 (6... e5?! { This ALMOST works! Maybe worth a shot just to make a London player spit out their drink. } 7. dxe5 (7. Bxe5? Bb4+ 8. Nd2 d6 9. Bxg7 Rg8 { is great for Black! } { [%cal Gg8g7,Gb6d4] }) 7... Bb4+ 8. Nd2 { Unfortunately White is much better here. }) 7. Nf3 (7. c4 Nf6 8. Nc3 Qa5 9. Qd2 Bh6! 10. f4 (10. Qxh6) 10... O-O { The computer says this is equal, but I'd rather have Black. White's pawns look overextended and the knight on c3 is loose. } { [%cal Gd7d5,Gb8c6] }) 7... Bh6!? { Bg7 is also okay, but I like this weird developing move. It prepares a knight jump to f3 and lays down crossfire on d2. } 8. Bd3 Qa5+! 9. Nbd2 Nc3 10. Qc1 Nc6 { [%cal Gh6c1,Ga5e1] } *
+
+

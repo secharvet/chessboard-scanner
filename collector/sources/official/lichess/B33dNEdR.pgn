@@ -1,0 +1,16 @@
+[Event "EricRosen's Study: Chapter 1"]
+[Date "2023.06.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C00"]
+[Opening "French Defense: Steiner Variation"]
+[StudyName "EricRosen's Study"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/B33dNEdR/EBqn2l7K"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2023.06.04"]
+[UTCTime "22:39:34"]
+
+1. e4 (1. d4 Nf6 2. c4 e6 3. Nf3 a6 4. Nc3) 1... e6 (1... c5 2. Nf3 d6 { [%csl Gb5][%cal Gf1b5] }) 2. c4 d5 3. cxd5 exd5 4. Qa4+ Bd7 (4... c6 5. exd5 Qxd5) 5. Qb3 dxe4 6. Bc4 Qf6 7. Qxb7 Bc6 { [%csl Gc8][%cal Gb7c8] } 8. Qc8+ Ke7 9. b3 { [%csl Ga3][%cal Gc1a3] } 9... Qxa1 10. Ba3+ Kf6 11. Qxf8 Qxb1+ 12. Ke2 *
+
+

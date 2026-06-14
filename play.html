@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jouer — Stockfish</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./play.css" />
+  </head>
+  <body>
+    <div id="bootError" class="boot-error" hidden></div>
+
+    <div class="app">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand__title">Jouer contre Stockfish</div>
+          <div class="brand__subtitle">
+            <a class="topbar__link" href="./index.html">← Lecteur d'ouvertures</a>
+          </div>
+        </div>
+        <div class="topbar__pickers">
+          <div class="topbar__picker">
+            <label class="topbar__picker-label" for="playerColor">Tu joues</label>
+            <select id="playerColor" class="opening-select">
+              <option value="w">Blancs</option>
+              <option value="b">Noirs</option>
+            </select>
+          </div>
+          <div class="topbar__picker">
+            <label class="topbar__picker-label" for="engineLevel">Niveau</label>
+            <select id="engineLevel" class="opening-select">
+              <option value="6">Débutant</option>
+              <option value="8" selected>Intermédiaire</option>
+              <option value="12">Avancé</option>
+              <option value="16">Fort</option>
+            </select>
+          </div>
+          <div class="topbar__picker">
+            <label class="topbar__picker-label" for="boardTheme">Échiquier</label>
+            <select id="boardTheme" class="opening-select" title="Thème des cases">
+              <option value="classic" selected>Classique</option>
+              <option value="brown">Brun</option>
+              <option value="dark">Sombre</option>
+            </select>
+          </div>
+          <button
+            type="button"
+            id="btnHeatmap"
+            class="btn btn--toggle topbar__heatmap"
+            aria-pressed="false"
+            title="Heatmap : bleu = Blancs, rouge = Noirs (intensité ∝ attaquants)"
+          >
+            Contrôle cases
+          </button>
+        </div>
+      </header>
+
+      <main class="layout layout--play">
+        <section class="left">
+          <div class="card card--board">
+            <div class="card__header">
+              <button
+                type="button"
+                class="card__header-toggle"
+                data-collapse="boardCardBody"
+                aria-expanded="true"
+                aria-controls="boardCardBody"
+              >
+                <span class="card__title">Échiquier</span>
+                <span class="card__hint" id="engineStatus">Chargement…</span>
+              </button>
+            </div>
+            <div id="boardCardBody" class="card__collapse-body">
+            <div class="board-wrap">
+              <div id="playBoard" aria-label="Échiquier de jeu"></div>
+            </div>
+            <div class="captured" id="capturedPieces">
+              <div class="captured__row" id="capturedByWhite"></div>
+              <div class="captured__row" id="capturedByBlack"></div>
+            </div>
+            <div id="promoModal" class="promo-modal" hidden>
+              <div class="promo-modal__box" role="dialog" aria-labelledby="promoTitle">
+                <p id="promoTitle" class="promo-modal__title">Promotion du pion</p>
+                <p class="promo-modal__hint">Choisis la pièce (dame en général).</p>
+                <div id="promoChoices" class="promo-modal__choices"></div>
+              </div>
+            </div>
+
+            <div class="nav nav--play">
+              <button class="btn" id="btnUndo" type="button" title="Annuler le dernier coup">Annuler</button>
+              <button class="btn" id="btnRedo" type="button" title="Refaire le coup annulé">Refaire</button>
+              <button class="btn btn--primary" id="btnNewGame" type="button">Nouvelle partie</button>
+            </div>
+            <div class="status">
+              <div class="status__row">
+                <span class="status__label">Partie</span>
+                <span class="status__value" id="playStatus">—</span>
+              </div>
+            </div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="right">
+          <div class="card card--mentor">
+            <div class="card__header card__header--engine">
+              <button
+                type="button"
+                class="card__header-toggle"
+                data-collapse="mentorCardBody"
+                aria-expanded="true"
+                aria-controls="mentorCardBody"
+              >
+                <span class="card__title">Coach</span>
+                <span class="card__hint" id="mentorStatus">Groq · GPT-OSS 120B</span>
+              </button>
+            </div>
+            <div id="mentorCardBody" class="card__collapse-body">
+              <label class="mentor-form__label" for="mentorQuestion">Question (optionnelle)</label>
+              <textarea
+                id="mentorQuestion"
+                class="mentor-form__question"
+                rows="2"
+                placeholder="Quel plan pour les blancs ?"
+              ></textarea>
+              <div class="mentor-form__actions">
+                <button type="button" id="btnAskMentor" class="btn btn--primary btn--coach">
+                  Demander au coach
+                </button>
+              </div>
+              <div
+                id="mentorPanel-groq"
+                class="mentor-panel mentor-advice"
+                aria-live="polite"
+                tabindex="0"
+              >
+                Pose une question ou clique « Demander au coach » à ton tour de jeu.
+              </div>
+            </div>
+          </div>
+
+          <div class="card card--scroll card--engine">
+            <div class="card__header card__header--engine">
+              <button
+                type="button"
+                class="card__header-toggle"
+                data-collapse="engineCardBody"
+                aria-expanded="false"
+                aria-controls="engineCardBody"
+              >
+                <span class="card__title">Analyse du moteur</span>
+                <span class="card__hint" id="engineModeHint">Conseil</span>
+              </button>
+              <div class="card__header-tools">
+                <button
+                  type="button"
+                  id="btnEngineDebug"
+                  class="btn btn--toggle"
+                  aria-pressed="false"
+                  title="Afficher UCI, chess.js et détail par profondeur"
+                >
+                  Debug
+                </button>
+              </div>
+            </div>
+            <div id="engineCardBody" class="card__collapse-body" hidden>
+            <div class="engine-conseil commentary" id="engineConseil">
+              Glisse une pièce ou clique pièce puis case.
+            </div>
+            <div class="engine-pipeline" id="engineDebug" hidden>
+              <section class="engine-pipeline__stage">
+                <button
+                  type="button"
+                  class="engine-pipeline__head"
+                  data-collapse="pipelineBody1"
+                  aria-expanded="false"
+                  aria-controls="pipelineBody1"
+                >
+                  <span class="engine-pipeline__title">1 · Stockfish (UCI brut)</span>
+                </button>
+                <div id="pipelineBody1" class="engine-pipeline__body" hidden>
+                  <pre class="engine-pipeline__raw" id="engineRaw">—</pre>
+                </div>
+              </section>
+              <section class="engine-pipeline__stage">
+                <button
+                  type="button"
+                  class="engine-pipeline__head"
+                  data-collapse="pipelineBody2"
+                  aria-expanded="false"
+                  aria-controls="pipelineBody2"
+                >
+                  <span class="engine-pipeline__title">2 · chess.js (structure)</span>
+                </button>
+                <div id="pipelineBody2" class="engine-pipeline__body" hidden>
+                  <pre class="engine-pipeline__json" id="engineChessJs">—</pre>
+                </div>
+              </section>
+              <section class="engine-pipeline__stage">
+                <button
+                  type="button"
+                  class="engine-pipeline__head"
+                  data-collapse="pipelineBody3"
+                  aria-expanded="false"
+                  aria-controls="pipelineBody3"
+                >
+                  <span class="engine-pipeline__title">3 · Français (moteur)</span>
+                </button>
+                <div id="pipelineBody3" class="engine-pipeline__body" hidden>
+                  <div class="engine-pipeline__human commentary" id="engineHuman">
+                    Glisse une pièce ou clique pièce puis case. L'analyse détaillée
+                    s'affiche quand Stockfish réfléchit.
+                  </div>
+                </div>
+              </section>
+              <section class="engine-pipeline__stage">
+                <button
+                  type="button"
+                  class="engine-pipeline__head"
+                  data-collapse="pipelineBody6"
+                  aria-expanded="false"
+                  aria-controls="pipelineBody6"
+                >
+                  <span class="engine-pipeline__title">4 · Positionnel (faits)</span>
+                </button>
+                <div id="pipelineBody6" class="engine-pipeline__body" hidden>
+                  <pre class="engine-pipeline__json" id="posFacts">—</pre>
+                </div>
+              </section>
+            </div>
+            </div>
+          </div>
+
+          <div class="card card--position">
+            <div class="card__header card__header--engine">
+              <button
+                type="button"
+                class="card__header-toggle"
+                data-collapse="positionCardBody"
+                aria-expanded="false"
+                aria-controls="positionCardBody"
+              >
+                <span class="card__title">Analyse positionnelle</span>
+                <span class="card__hint">31 jetons sémantiques</span>
+              </button>
+            </div>
+            <div id="positionCardBody" class="card__collapse-body" hidden>
+            <div class="positional-panels">
+              <div id="positionalPanel" class="positional-panel commentary">
+                Analyse positionnelle basée sur les 31 jetons sémantiques.
+              </div>
+            </div>
+            </div>
+          </div>
+        </aside>
+      </main>
+
+      <footer class="footer">
+        <div>
+          Moteur et <code>chess.js</code> installés dans l'image Docker uniquement —
+          <code>podman compose -f compose.yaml build web</code>
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="./play.js"></script>
+  </body>
+</html>

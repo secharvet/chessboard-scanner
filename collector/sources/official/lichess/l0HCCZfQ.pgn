@@ -1,0 +1,38 @@
+[Event "Pawn Structures: Isolated pawns"]
+[Date "2025.11.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Pawn Structures"]
+[ChapterName "Isolated pawns"]
+[ChapterURL "https://lichess.org/study/l0HCCZfQ/QafPzjrx"]
+[Annotator "https://lichess.org/@/gianparis_e4"]
+[FEN "4k3/1p1p1p1p/8/8/4P3/8/PP1P1P1P/4K3 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.11.16"]
+[UTCTime "17:46:18"]
+
+{ We call a pawn “isolated” when it cannot be protected by another pawn and has no other pawns of the same color on the adjacent files. Therefore, the pawn will depend on its pieces to be protected. This means that in endgames when there are few pieces on the board, the pawn can often be a weakness. }
+ *
+
+
+[Event "Pawn Structures: Doubled pawns"]
+[Date "2025.11.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Pawn Structures"]
+[ChapterName "Doubled pawns"]
+[ChapterURL "https://lichess.org/study/l0HCCZfQ/x4tjUycS"]
+[Annotator "https://lichess.org/@/gianparis_e4"]
+[FEN "4k3/1p1p1p1p/8/4P3/4P3/8/PP1P3P/4K3 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.11.16"]
+[UTCTime "17:48:33"]
+
+{ Doubled pawns are pawns of the same color that are on the same file. As in all pawn structures, whether they are a strength or a weakness will depend on the arrangement of the pieces. The positive aspect of doubled pawns is that they allow open files that are suitable for major pieces. This means more piece activity for its owner. However, not everything is rosy. Since they are doubled, they cannot move normally, which causes rigidity in the pawn structure and weaknesses. }
+ *
+
+

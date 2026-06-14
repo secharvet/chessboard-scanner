@@ -1,0 +1,34 @@
+[Event "EricRosen's Study: Chapter 1"]
+[Date "2022.05.15"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B17"]
+[Opening "Caro-Kann Defense: Karpov Variation"]
+[StudyName "EricRosen's Study"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/NgzfbsXc/dg0a6A4V"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2022.05.15"]
+[UTCTime "01:20:09"]
+
+1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Nd7 { [%csl Gd7] } 5. Qe2 { [%csl Gf6][%cal Gg8f6] } 5... Ngf6 6. Nd6# *
+
+
+[Event "EricRosen's Study: Chapter 2"]
+[Date "2022.05.15"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "EricRosen's Study"]
+[ChapterName "Chapter 2"]
+[ChapterURL "https://lichess.org/study/NgzfbsXc/NGOkLW2b"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[FEN "8/PKP1Q3/1P6/8/1N3p2/6p1/pp5p/1k1rr3 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2022.05.15"]
+[UTCTime "03:08:44"]
+
+1. Qh7+ Kc1 (1... Ka1 2. Nc2+ Kb1 3. Na3+ { [%csl Gc1][%cal Gh7b1,Ga3b1,Gb1c1,Gh7c2] } (3. Nxe1+ Ka1 4. Nc2+ Kb1 5. Ne3+ { [%csl Gd1] } 5... Ka1 6. Nxd1 { [%csl Gb1,Gh1][%cal Gh2h1,Gb2b1] } 6... b1=Q (6... h1=Q+ 7. Qxh1 b1=Q 8. Qh8+ { [%csl Ga1][%cal Gh8a1,Gh1h8] } 8... Qb2 9. Qxb2# { [%csl Ga1][%cal Gb2a1] }) 7. Qh8+ { [%csl Gb2][%cal Gh8b2] }) (3. Nd4+ { [%cal Gb2b1,Ga2a1] } 3... Ka1 4. Nb3#) 3... Kc1 (3... Ka1 4. Qb1+ { [%csl Gb1] } 4... Rxb1 (4... axb1=Q 5. Nc2+) 5. Nc2#) 4. Qc2#) 2. Qc2# *
+
+

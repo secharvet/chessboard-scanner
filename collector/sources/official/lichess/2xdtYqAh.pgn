@@ -1,0 +1,52 @@
+[Event "39th World Open"]
+[Site "Philadelphia, PA USA"]
+[Date "2011.07.04"]
+[Round "8"]
+[White "Eric S Rosen"]
+[Black "Michael Mulyar"]
+[Result "0-1"]
+[WhiteElo "2216"]
+[BlackElo "2399"]
+[Variant "Standard"]
+[ECO "A25"]
+[Opening "English Opening: King's English Variation, Taimanov Variation"]
+[StudyName "PHILLY OPEN 2015"]
+[ChapterName "Eric S Rosen - Michael Mulyar"]
+[ChapterURL "https://lichess.org/study/2xdtYqAh/HW9Sz5T4"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. c4 (1. d4 c5 2. d5 g6 3. c4 f5) 1... e5 2. Nc3 Nc6 3. g3 g6 4. Bg2 Bg7 5. e3 f5 6. Nge2 Nf6 7. O-O O-O 8. Rb1 a5 9. a3 d6 10. b4 axb4 11. axb4 Ne7 12. d4 c6 13. Qb3 Be6 14. b5 e4 15. Ba3 Bf7 16. Qb4 Nc8 17. Ra1 Qc7 18. Rfb1 Rd8 19. Bf1 Bf8 20. Nc1 c5 21. b6 Qe7 22. Qb3 Ra6 23. dxc5 dxc5 24. Bxc5 Qxc5 25. Rxa6 bxa6 26. b7 Nd7 27. Qa4 Ncb6 28. Qxa6 Bxc4 29. Bxc4+ Qxc4 30. Rxb6 Nxb6 31. Qxb6 Rb8 32. N1e2 Qf7 33. Nf4 Qxb7 34. Qe6+ Qf7 35. Qa6 Bg7 36. Qd6 Re8 37. Ncd5 Be5 38. Qc6 g5 39. Ne2 Rd8 40. Nec3 Kg7 41. Qc5 Qe6 42. Kg2 Rc8 43. Qa5 Kh6 44. Qb4 Qc6 45. Ne7 Qxc3 46. Qb6+ Kg7 47. Qe6 Rf8 48. Nxf5+ Kh8 49. Nh6 Qc7 50. g4 Bg7 51. Nf5 Qe5 52. Qd7 Qf6 53. h3 Qe5 54. Nd6 Qd5 55. Qe7 h6 56. Nxe4 Qc6 57. f3 Qc2+ 58. Nf2 Rb8 59. h4 Rb2 60. Kh3 gxh4 61. f4 Kh7 62. Qd7 Qb1 63. e4 Qf1+ { 0-1 White resigns. } 0-1
+
+
+[Event "PHILLY OPEN 2015: Mulyar - Rosen"]
+[Date "2018.06.10"]
+[Result "0-1"]
+[Variant "Standard"]
+[ECO "A40"]
+[Opening "Queen's Pawn Game: Modern Defense"]
+[StudyName "PHILLY OPEN 2015"]
+[ChapterName "Mulyar - Rosen"]
+[ChapterURL "https://lichess.org/study/2xdtYqAh/GHrb3Oyl"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2018.06.10"]
+[UTCTime "19:15:15"]
+
+1. d4 g6 2. c4 c5 3. Nf3 Bg7 4. d5 f5 { [%csl Gc5,Gf5][%cal Gc7c5,Gf7f5] } 5. g3 Nf6 6. Bg2 d6 7. O-O Na6 8. Nc3 O-O 9. e4 fxe4 10. Ng5 Nc7 11. Ncxe4 Nxe4 12. Bxe4 Bf5 13. Qe2 Qd7 14. Bxf5 Rxf5 { [%csl Gf5][%cal Ga8f8,Gg7b2,Gf5e5] } 15. Re1 Re5 16. Be3 e6 17. Qg4 Rd8 18. Qh3 Bf6 19. Nf3 exd5 20. Qxd7 Rxd7 21. Nxe5 Bxe5 22. Bxc5 dxc4 23. Re2 b6 24. Be3 Bf6 { [%csl Gd6,Gc4,Gb6,Ga7,Gb2,Ga2] } 25. Rd1 d5 26. Bd4 Kf7 27. Bxf6 Kxf6 28. Red2 Ke5 29. f4+ Kd6 30. g4 Rf7 31. Rd4 b5 32. Kg2 Kc5 33. Kg3 b4 34. h4 h5 35. R4d2 hxg4 36. Kxg4 Rf5 37. Re2 c3 38. a3 a5 39. axb4+ axb4 40. bxc3 bxc3 41. Re7 Nb5 42. Re5 Rxe5 43. fxe5 d4 44. Kf3 c2 45. Re1 Kc4 46. e6 d3 47. e7 Nd6 48. Ke3 Kc3 { 0-1 White resigns. } 0-1
+
+
+[Event "PHILLY OPEN 2015: Balakrishnan - Rosen"]
+[Date "2021.06.29"]
+[Result "0-1"]
+[Variant "Standard"]
+[ECO "A43"]
+[Opening "Benoni Defense: Old Benoni, Mujannah Formation"]
+[StudyName "PHILLY OPEN 2015"]
+[ChapterName "Balakrishnan - Rosen"]
+[ChapterURL "https://lichess.org/study/2xdtYqAh/fNVKr2U0"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.06.29"]
+[UTCTime "06:16:17"]
+
+1. d4 c5 2. d5 f5 3. c4 Nf6 4. Nc3 g6 5. g3 d6 6. Bg2 Bg7 7. Nf3 Na6 8. Nd2 O-O 9. O-O Nc7 10. Qc2 Rb8 11. a4 b6 12. b3 a6 13. Bb2 Qe8 14. e4 Qf7 15. Rae1 f4 16. Ne2 Nh5 17. Nf3 h6 18. e5 Bf5 19. Qd2 g5 20. e6 Qg6 21. h3 { [%csl Ge6,Gd5,Gc4,Gb3] } 21... Bd3 22. g4 Nf6 23. Rc1 b5 { [%csl Gb1,Gd3,Gg6][%cal Gb6b5,Gg6b1,Rg7b2,Rb8b2] } 24. Ne1 bxc4 25. bxc4 Rxb2 26. Qxb2 Nfxd5 27. Qd2 { [%csl Gb2] } 27... Nb4 28. Nxd3 Qxd3 29. Qxd3 Nxd3 30. Rcd1 Nb2 31. Be4 Nxd1 32. Rxd1 Rb8 33. Rb1 Rxb1+ 34. Bxb1 Nxe6 35. Kg2 Kf7 36. Kf3 Bb2 37. Ke4 Nc7 38. Ba2 e6 39. f3 a5 40. Bb3 Ke7 41. Ng1 Ne8 42. Ne2 Nf6+ 43. Kd3 Kd7 44. Kc2 Be5 45. Nc1 d5 46. Ba2 Kc6 47. Nb3 Bc7 48. Nd2 Nd7 49. Kd3 Ne5+ 50. Ke2 Kd6 51. Bb3 Nc6 52. Kd3 Bd8 53. Bd1 Bf6 54. Bb3 Bd4 55. Nb1 dxc4+ 56. Kxc4 Ne5+ 57. Kb5 Nxf3 58. Kxa5 Be3 59. Bc4 Nd2 60. Na3 Nxc4+ 61. Nxc4+ Kc6 62. Ka6 Bd4 63. Na5+ Kd5 64. Kb5 f3 65. Nc4 f2 { 0-1 White resigns. } 0-1
+
+

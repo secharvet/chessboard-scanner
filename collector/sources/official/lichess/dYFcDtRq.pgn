@@ -1,0 +1,455 @@
+[Event "Pawns aren't people! Developing plans II: Introduction"]
+[Date "2024.03.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Pawns aren't people! Developing plans II"]
+[ChapterName "Introduction"]
+[ChapterURL "https://lichess.org/study/dYFcDtRq/X3ntPMnt"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "5r1r/p2knpp1/qp2p2p/2ppP2P/P1nP4/2P2R2/2P1NPP1/R1BQ2K1 w - - 13 20"]
+[SetUp "1"]
+[UTCDate "2024.03.28"]
+[UTCTime "17:31:35"]
+[ChapterMode "gamebook"]
+
+{ Welcome to another instructive study by NoseKnowsAll. This interactive study is for players 1900-2400 lichess, taking you through an advanced strategical concept: pawns aren't people! We'll see how pawn structure and material are less important than piece activity in dynamic positions. Importantly, we'll also appreciate how piece activity in the endgame is of prime importance too!
+
+This study is part two of a two-part series on developing plans on the chessboard. Before checking out this study, be sure to master part one:
+
+* Talk to your pieces! | Developing plans I https://lichess.org/study/kjBSgqoA
+
+Throughout this study, I will also provide general tips that these positions showcase. Whenever this general advice occurs, I'll write it just like this:
+
+PRO TIP: Talking to your pieces goes hand in hand with the idea that pawns aren't people.
+
+If you find this study useful, please heart it and share it with any friends! }
+ *
+
+
+[Event "Pawns aren't people! Developing plans II: Pawns aren't people!"]
+[Date "2009.06.10"]
+[White "Rafael Duailibe Leitao"]
+[Black "Andre Diamant"]
+[Result "*"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Pawns aren't people! Developing plans II"]
+[ChapterName "Pawns aren't people!"]
+[ChapterURL "https://lichess.org/study/dYFcDtRq/RH6MHXo0"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "4r1k1/3n1pb1/bq1p2p1/2pP2Pp/1r2PP2/2N3QP/1P3RK1/1BB1R3 w - - 19 37"]
+[SetUp "1"]
+
+{ I hope you've mastered the ideas from part one ( https://lichess.org/study/kjBSgqoA ) because we'll be using them here in more advanced examples!
+
+Let's move on to the strategic concept: "pawns aren't people!" Simply put, this phrase acts as a reminder to put the feelings and desires of your pieces above any concerns for pawn structure or pawn grabbing.
+
+We arrive at a tense Benoni position. White would like to run black over in the center and kingside, while Black is making strides on the queenside. How to make progress here? }
+37. e5! { This thematic break in the Benoni seems impossible at first glance because Black has more defenders on e5 than white has attackers. However, this move is only impossible if you look at this position through a "pawns are people" lens, where you are not allowed to give away pawns (seemingly for free). } (37. f5? $17 { A poor move. All of black's pieces are happy to use the newly opened e5 square. White's knight, LSB on b1, and e1 rook are all saddened to see the e4 pawn still on the board. }) 37... dxe5 { Black captures the "free" pawn and asks white what the point is. } 38. f5! { The point of white's play. In reality, white wanted to break with f5 but first wanted the e4 square free for his knight+bishop and the e file half-open for his rook. The pawn on e4 was actually a traitor to three of white's pieces! } (38. fxe5? { This move only partially improves white's pieces. In reality it activates more of black's pieces than white's after the simple recapture: } 38... Nxe5! $17) 38... e4! { Now it's black's turn to show that they also understand that pawns aren't people! If the extra pawn stays on e5, then black's knight, DSB on g7, and e8 rook are all worse off. It's crucial to instantly give back that pawn, thus freeing all of black's pieces to fulfill their important roles. } (38... Bb7?? { The actual game ended abruptly in time pressure. After: } 39. f6! $18 { Black resigned because moving the bishop allows Bxg6. https://lichess.org/skUpOqgh#77
+For instance: } 39... Bf8 40. Bxg6! fxg6 41. f7+ $18) (38... gxf5?? 39. Bxf5 $18 { A key benefit of sacrificing the e4 pawn has been revealed. The previously dormant bishop on b1 now springs to life. g6 is coming next and black is busted on the kingside. }) 39. Nxe4 $10 { Both players have given away pawns solely for the purpose of activating their pieces. This tense game could still swing either way depending on the next few moves.
+PRO TIP: "Pawns aren't people" applies in the opening, middlegame, and endgame. However, it is most applicable in positions where time is a factor on the chessboard. You don't want to sacrifice your static advantages without gaining dynamic advantages in return. } (39. Bxe4?? { The desirable Bxe4 now fails tactically. } 39... Bxc3! $19 { And the e4 bishop doesn't have enough protection. Note that if black had tried to maintain the extra e pawn earlier, this bishop wouldn't have been making contact with the c3 knight to begin with, and so white would have no problems here. }) (39. f6?! Bf8 { There is no longer a tactical shot for white. } 40. Bxe4 Bd6 $15) *
+
+
+[Event "Pawns aren't people! Developing plans II: Central destruction"]
+[Date "2024.03.28"]
+[White "NoseKnowsAll"]
+[Black "Fingolfin69"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Pawns aren't people! Developing plans II"]
+[ChapterName "Central destruction"]
+[ChapterURL "https://lichess.org/study/dYFcDtRq/utFDkAN7"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "5r1r/p2knpp1/qp2p2p/2ppP2P/P1nP4/2P2R2/2P1NPP1/R1BQ2K1 w - - 13 20"]
+[SetUp "1"]
+[UTCDate "2024.03.28"]
+[UTCTime "17:31:35"]
+
+{ The center is locked in this thematic French Winawer pawn structure. White's pieces (especially the rooks) are more active than black's, and black's king on d7 could come under heavy fire if the center rips opens. However, there doesn't seem like a great way to blow up the center. }
+20. a5!! { A fantastic "pawns aren't people" move. No matter how the tension is resolved, lines will open up on the queenside and center in a way that benefits white's pieces. The a pawn itself is of course completely expendable. } 20... Nxa5? { The most obvious capture - why not just capture a free pawn and keep black's pawn structure intact? } (20... bxa5?! 21. Nf4! $16 { The knight re-routes to d3 and then c5 where it will land with devastating effect. Black's extra doubled isolated a pawn is irrelevant. } { [%cal Gf4d3,Rd3c5] }) (20... b5?! 21. dxc5! $16 { And now the knight has d4 to rely upon. Black's king is looking less and less safe. } { [%cal Ge2d4] }) (20... Nc6! { Probably best - black should simply bring the knight around to help support the near-crumbling queenside. } 21. Nf4 N6xa5?! { Yet the pawn remains taboo! } (21... cxd4!? 22. cxd4 N6xa5 $14 { The only correct way to take the pawn. Regardless, white's center is now rock solid, white's heavy pieces have been opened up, and black's knights are sidelined on the queenside. }) 22. dxc5! { Blowing it open further to expose the c5 pawn and improve next the knight. } 22... bxc5 23. Nd3 { [%cal Gd3c5] } 23... Qc6 24. Rg3 { [%cal Gg3g7] } 24... Rhg8 25. Qf3 $16 { At the cost of a pawn and a "wrecked" pawn structure, white's heavy pieces are now optimally placed and breathing fire across the board, while black's pieces simply cower defensively hoping there isn't a knock-out blow. Already, the threat of Bxh6 should decide the game. } { [%cal Gc1h6] }) 21. dxc5! { Blowing it open to further destabilize black's queenside piece coordination. Since pawns aren't people, white does not care that this leaves their pawn structure a complete wreck. What's important is that the white pieces are springing to life. } 21... bxc5 { Note that black's pawn structure has improved from the following transaction. However, black's static advantage is irrelevant compared to white's dynamic potential from the more active pieces. } 22. c4! { c4 is explosive! Another "pawns aren't people" move rips open the position for all of white's pieces. Note how the white rook on f3 was previously a one-dimensional piece attacking f7, but now gains access to the entire 3rd rank. Importantly, black's king "safety" in the center is now directly questioned. } 22... d4 { The only way to keep it closed for black's king. } (22... Nxc4?? { Oh no, black's queen! } 23. Rxa6 $18) (22... Qxc4?? { Oh no, black's knight! } 23. Rxa5 $18) 23. Rfa3 { White's rook is activated on the now-important a file. } 23... Nec6 24. Bd2 $18 { Black's a5 knight falls, and with it the game.
+PRO TIP: Pawn structure is often overrated. More often than not, active piece play more than compensates for a bad structure. } *
+
+
+[Event "1990 World Chess Championship"]
+[Site "Lyon, France"]
+[Date "1990.12.15"]
+[Round "20"]
+[White "Garry Kasparov"]
+[Black "Anatoly Karpov"]
+[Result "*"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[FEN "r2qrbk1/1b1n1pp1/p2p3p/1ppP4/Pn2P3/5N1P/1P1N1PP1/RBBQR1K1 w - - 1 17"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Pawns aren't people! Developing plans II"]
+[ChapterName "Revisiting Kasparov's coordination"]
+[ChapterURL "https://lichess.org/study/dYFcDtRq/XOSMGTBA"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "r2qrbk1/1b1n1pp1/p2p3p/1ppP4/Pn2P3/5N1P/1P1N1PP1/RBBQR1K1 w - - 1 17"]
+[SetUp "1"]
+
+{ We saw this famous Kasparov - Karpov game from 1990 in the last study on talking to your pieces ( https://lichess.org/study/kjBSgqoA/WOJiXkSD ), but now let's revisit this game through the lens of "pawns aren't people."
+
+As before, we have arrived at a Benoni structure, although the opening was originally from the Zaitsev variation of the Ruy Lopez. }
+17. Ra3! { Kasparov coordinates his heavy pieces, ready for the center to come under heavy fire. } 17... f5!? { A contentious move - striking at the center is logical, but this weakens the kingside a bit and white's pieces are well-placed for a kingside attack as we shall see.
+Immediately, we can see that Karpov is arguing on behalf of pawns being relevant (white's center is sure to collapse), while Kasparov is arguing against them mattering (if the center opens, white's pieces are better coordinated to attack on the kingside). } 18. Rae3 { Already, black can win the d5 pawn. But it comes at the cost of ripping open the position for white's well-coordinated pieces! } 18... Nf6 (18... fxe4?! 19. Nxe4 Nxd5 20. R3e2 $14 { In particular, white's bishop pair has become a menace! } { [%cal Bb1h7,Bc1h6,Be1e8] }) 19. Nh2! { The whole point of this mysterious move is to give white's rook access to the g3 square just in case it gets attacked by black's knight. A true example of talking to your pieces to find a nice prophylactic idea. } 19... Kh8 (19... fxe4? { Now winning a pawn proves fatal for black. } 20. Nxe4 Nfxd5 21. Rg3! $16 { Pawns aren't people! In exchange for the d5 pawn, every single white piece is active, and attacking white's king. Black is not long for this world. } { [%cal Bg3g8,Bc1h6,Bb1h7,Bd1h5] }) 20. b3! { Activating the DSB along the a1-h8 diagonal. } 20... bxa4 21. bxa4 c4?! { Played just to give black's b4 knight the d3 square to shut out white's LSB. However, this move doesn't address the desires of the a8 rook or b7 bishop. } (21... Rb8! 22. Bb2 Ba8! $14 { This is perhaps the best way to coordinate black's pieces - already black has threats against the loose bishops on the b file. Still, white retains excellent attacking potential on the kingside. }) 22. Bb2 { White's army is glaring menacingly at black's king. Karpov cracks and decides that if he's going to suffer, it's best to suffer while up a pawn. } 22... fxe4 23. Nxe4 Nfxd5 24. Rg3 $16 { At least black is up a pawn. But pawns aren't people!
+In exchange for that pawn, every single white piece has built up potential for a kingside attack. Note how powerful the two bishops are, raking across the board, how the queen is ready to jump in to h5 at a moment's notice, and how both knights are ready to sacrifice themselves (either on g5 or h6).
+From this position, Kasparov went on to win a crushing game: https://lichess.org/5WymoNVe#47 } { [%cal Bb2h8,Bb1h7,Bd1h5,Bg3g7] } *
+
+
+[Event "Pawns aren't people! Developing plans II: Exercise 1: Opposite sides castling"]
+[Site "https://lichess.org/GnX1tiGR"]
+[Date "2024.03.26"]
+[White "BigMoneyBigPrizes"]
+[Black "WadeWilson"]
+[Result "*"]
+[FEN "1k1r3r/pp2b3/2ppq1p1/4ppp1/PP1PPn2/1NP1Q2P/5PPK/1RB4R w - - 2 23"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Pawns aren't people! Developing plans II"]
+[ChapterName "Exercise 1: Opposite sides castling"]
+[ChapterURL "https://lichess.org/study/dYFcDtRq/sk1BgfWo"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "1k1r3r/pp2b3/2ppq1p1/4ppp1/PP1PPn2/1NP1Q2P/5PPK/1RB4R w - - 2 23"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+23. b5 { We reach an opposite side's castling position where both sides are getting close to murdering each other's king. What do you play? } 23... c5! { Exactly. Keeping the b file closed is crucial to avoid our king safety becoming the most important factor of this position. The fact that c5 technically sacrifices a pawn is irrelevant because pawns aren't people! The game will be decided by one of the flank attacks breaking through. Now, in every variation, our attack is now much faster than white's "attack" because the b file is closed. } (23... g4?! { This thematic idea was played in the game. While it's not so bad on its own if you calculate perfectly, the counterplay that white creates on the other side of the board should first be prevented. } 24. bxc6 Nxh3! { The only way to justify this sequence. } (24... gxh3?? 25. g3! $18 { The game, after which black got murdered on the queenside. https://lichess.org/GnX1tiGR/black#49 }) 25. gxh3 Rxh3+ 26. Qxh3 gxh3 $17) (23... cxb5 { Opening up lines for your opponent cannot be correct. } 24. Na5! $10) *
+
+
+[Event "Palma de Mallorca Interzonal"]
+[Date "1970"]
+[White "Robert James Fischer"]
+[Black "Mark Taimanov"]
+[Result "*"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Pawns aren't people! Developing plans II"]
+[ChapterName "Exercise 2: Fighting for control"]
+[ChapterURL "https://lichess.org/study/dYFcDtRq/784uSaAM"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "1q1rb1k1/1r3ppp/1p1ppn2/p7/P1P1P3/2N2PQ1/1P2B1PP/2RR2K1 b - - 1 22"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+{ Now let's try a problem on prophylaxis. Put yourself in white's shoes and talk to white's pieces. Is there a plan white should be thinking about after listening to white's bishop complain about how blocked in he is? }
+22... e5! $10 { Exactly! We don't care about the pawn structure's feelings when we play this "ugly" move - it's all about the pieces. Looking through that lens, there's nothing ugly about this move at all!
+The bishop on c6 will easily cover the d5 and b5 holes created by this pawn structure. Meanwhile, our knight can spin around to c5 (or even d4!) where it will prove better than either of white's minor pieces. Finally, we have put a stop to white's possible expansion with f4+f5 or f4+e5, after which our king may come under heat.
+The backwards d6 pawn cannot be upset by you for making this move because pawns aren't people!
+Be sure to check out how Fischer ended up breaking through anyway here: https://lichess.org/study/XVqy23WQ/BfmP8oaU#44 } (22... Bc6!? { Good job talking to your bishop. This is a perfectly sensible move, but due to deep calculation doesn't address a core problem in the position. Check the analysis for more information! } 23. Rd3! { Note that Nd7->c5 is always impossible without hanging the d pawn. } 23... e5?! { The desirable e5 move no longer works. } (23... h6 24. Rcd1 Rbd7 $14 { Passive, but solid defense, is best is black's only option now. }) 24. Rcd1! $14 { Once again preventing Nd7. And now black is left passively defending, for instance with Ne8. }) (22... Qc7!? $14 { A reasonable move after talking to your queen. }) (22... h6?! $14 { This is a perfectly sensible move, but not one that addresses white's main plan in the position. }) *
+
+
+[Event "Pawns aren't people! Developing plans II: Exercise 3: Benoni outposts"]
+[Site "Havana, Cuba"]
+[Date "1986"]
+[White "Walter Arencibia Rodriguez"]
+[Black "Reynaldo Vera Gonzalez Quevedo"]
+[Result "*"]
+[WhiteTitle "IM"]
+[BlackTitle "IM"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Pawns aren't people! Developing plans II"]
+[ChapterName "Exercise 3: Benoni outposts"]
+[ChapterURL "https://lichess.org/study/dYFcDtRq/RlyKOUux"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "3qr1k1/3n1pbp/3p2p1/1p1P4/2p1PPP1/1r2BB1P/1P2RQK1/R7 b - - 0 1"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+{ This is a Benoni gone right for black. Our queenside play has left us with pressure against the b2 pawn, active pieces, and seemingly no weaknesses. What do you play next? }
+1... g5! (1... h6?! { A reasonable move, preparing g5, but white can instantly attack our only weakness with Ra6, after which there's no clear move. } 2. Ra6! Nf8 $15 { Black's still fine here, but this isn't what we wanted. }) (1... Qb8?! $15 { This slow move prevents white from breaking through with e5. But we have much stronger. }) (1... c3?! { Logical. You are breaking through and creating a passed pawn immediately. But after this trade, white's pieces remain well-coordinated and the b pawn isn't queening any time soon. } 2. bxc3 Rxc3 $10) (1... Nc5? { After Bxc5 dxc5 e5! white has an imposing center and black is getting squeezed. } 2. Bxc5 dxc5 3. e5 $16) (1... Qf6? { A reasonable move in isolation, but white is all too happy to play g5 and kick you back. Next h4-h5 is coming. } 2. g5! Qe7 $14) (1... b4?! { Logical. You are breaking through and creating a passed pawn immediately. Unfortunately, white can instantly attack our only weakness with Ra6, after which there's no clear move. } 2. Ra6! Nf8 $15) 2. fxg5 { "Thank you very much for the free pawn" white says. What is the point of your pawn sacrifice? } (2. f5? { Even worse than the game. Now white's not even up any material. } 2... Ne5 $17) 2... Ne5! $17 { Fantastic job activating the knight - now that's talking to your pieces! The fact that we sacrificed a pawn is irrelevant because pawns aren't people!
+Our knight rules the board from e5 and/or d3, and our bishop on g7 will breath fire along the h8-a1 diagonal. Meanwhile, white is never getting in the thematic e5 pawn break, and so white's bishop on f3 remains a tall pawn. Black is borderline winning already.
+PRO TIP: Talking to your pieces goes hand in hand with the idea that pawns aren't people. If you put the wants and needs of your pieces first, you'll find that dynamic pawn sacrifices become more natural.
+This is exactly why you need to master talking to your pieces before you can fully appreciate the pawns aren't people mentality. This is your last chance to revisit part I of this series and master it! https://lichess.org/study/kjBSgqoA } (2... Be5?! { Not a horrible move, but the bishop by itself cannot hurt white. Notice how this bishop doesn't coordinate with any of black's other pieces while a certain other minor piece coordinates on d3 and f3 with the rook. }) *
+
+
+[Event "Barcelona Zonal"]
+[Date "1975"]
+[Round "5"]
+[White "Ludek Pachman"]
+[Black "Ole Jakobsen"]
+[Result "*"]
+[WhiteElo "2510"]
+[WhiteTitle "GM"]
+[BlackElo "2435"]
+[BlackTitle "IM"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Pawns aren't people! Developing plans II"]
+[ChapterName "Exercise 4: Unstoppable infiltration"]
+[ChapterURL "https://lichess.org/study/dYFcDtRq/9wI2RF7V"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "2r5/4bppk/p1q1p2p/B1p4P/2P3Q1/1P6/P4PP1/3R2K1 w - - 1 29"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+{ Talk to your pieces. In a perfect world, what move would you like to play? Now make it so! }
+29. Qf3!! (29. Rd3!? { This move (with the idea of Qd1 next) isn't that bad. Unfortunately black can prevent your idea with a timely Bf6! and Bd4! } 29... Bf6! 30. Qd1? (30. Qf4 $16 { Pressure on f7 is needed if you want to claim any advantage here. Now Rd6 is the threat. }) 30... Bd4 $10) (29. Bc3!? { A playable alternative idea to the game. This one-move threat isn't bad either. However, while you get some play on the kingside, this move does relinquish your queenside bind on black. After Rg8 and Bf6, black will be fighting back. } 29... Rg8 30. Qf4 Bf6! $14) 29... Qxf3 { Excellent move! By forking f7 and c6, black was forced to trade queens. } (29... Kg8?! 30. Qxc6 Rxc6 31. Rd7 $16 { The game continued this way, after which the white rook still infiltrated, and the kingside pawns are still intact: https://lichess.org/ZAxUzc6J#61 }) 30. gxf3 Bf6 { What was the point of this queen trade? } 31. Rd7! $16 { Exactly! Once the queens have been traded, white's rook is free to infiltrate to the all-important 7th rank.
+Pawns aren't people - the damaged kingside pawn structure is irrelevant compared to the activity of white's remaining pieces. } *
+
+
+[Event "1955 Gothenburg Interzonal"]
+[Site "https://lichess.org/study/T3ixjwmg/LpEAT6wx"]
+[Date "2024.03.28"]
+[Round "15"]
+[White "Herman Pilnik"]
+[Black "Efim Geller"]
+[Result "*"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "r2q1rk1/3n3p/3p1bp1/2pPpp2/p1P5/2B2P2/PPB1Q1PP/3R1RK1 b - - 0 1"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Pawns aren't people! Developing plans II"]
+[ChapterName "Exercise 5: Aggressive intentions"]
+[ChapterURL "https://lichess.org/study/dYFcDtRq/riEb7o7l"]
+[FEN "r2q1rk1/3n3p/3p1bp1/2pPpp2/p1P5/2B2P2/PPB1Q1PP/3R1RK1 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.03.28"]
+[UTCTime "17:31:35"]
+[ChapterMode "gamebook"]
+
+{ Our position looks promising since white's bishop pair is currently under control. But how to make progress? Which side of the board should we be playing? }
+1... e4! (1... a3!? { This move is reasonable too, but it is only good if our follow-up is the same as what was played in the game. } 2. b3 e4! $17) (1... Qe7 $15 { Sensible development, but we have a real pawns aren't people move available to us that's much stronger. }) (1... Kg7? $10 { The king is not safer on this square. }) (1... Rb8? $16 { Oh no, our a pawn! }) (1... f4? $10 { Giving up control over the e4 square is not a good way to begin an attack. After Qe4, black is the one under pressure. }) (1... g5? $18 { Oh no, our f5 pawn! }) 2. Bxf6 (2. f4? Bxc3 3. bxc3 $17 { The passed pawn on e4 is still impressive. }) (2. fxe4!? Bxc3 3. bxc3 f4! $17 { The same idea is strong here too. }) 2... Qxf6 (2... Rxf6 $15 { Not bad, but the rook gets in the way of our queen's route to the kingside dark squares. Remember to talk to all of your pieces! }) (2... Nxf6?! $10 { The wrong recapture. Our knight from f6 is not able to reach the more important outpost: e5. Remember to talk to all of your pieces! }) (2... exf3?? { Oops. Qe6+ wins our queen! } 3. Qe6+ $18) 3. fxe4 f4! { The point of our sequence! Sacrificing the potential passed pawn is a thematic way to break through. Remember: pawns aren't people. Now the e5 square is available for the knight, and in fact the e4 pawn is a traitor to white's pieces. } (3... fxe4?? $18 { Oh no, our queen! }) (3... Qe5?! $15 { This keeps the e pawn, but the knight would prefer to land on this square. }) (3... Qxb2?! { A "pawns are people" move. This pawn will always be weak, and after exf5 white's bishop breathes fire towards our newly weakened king. }) (3... Ne5? $16 { The right idea, but let's not give white the chance to play exf5 and open up their light squared bishop. }) *
+
+
+[Event "Pawns aren't people! Developing plans II: To take or not to take?"]
+[Date "2024.03.28"]
+[Result "*"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Pawns aren't people! Developing plans II"]
+[ChapterName "To take or not to take?"]
+[ChapterURL "https://lichess.org/study/dYFcDtRq/ufbXnneJ"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "5rk1/ppR3pp/4p3/3pPp2/1P1P4/Pr4PP/7K/5R2 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.03.28"]
+[UTCTime "17:31:35"]
+
+{ Now let's consider the ramifications of "pawns aren't people" in the endgame. This first example will address materialism.
+
+White is given a choice here: do we capture the free pawn on b7 or play something else? } { [%cal Rc7b7] }
+1. Rfc1! { Of course white should fully dominate the open file rather than start pawn grabbing. } (1. Rxb7? { A bad, "pawns are people" move was played in the game. Grabbing the pawn cedes the only open file to black and does not give us any decisive passed pawn to compensate. Now we are the ones struggling! } 1... Rc8! { Yes, black is more concerned with rook activity than grabbing the useless a3 pawn! } (1... Rxa3? { It's never too late for your opponent to fall captive to the same "pawns are people" illusion! } 2. Rc1! $10 { Transposes to the main line, when white is doing fine. }) 2. Rf2 Rcc3 3. Rg2 Rxa3 $15 { Black's piece activity is tremendous here, and we didn't even win a pawn after all. }) 1... Rxa3!? { Black grabs material. } (1... Rf7! { The most stable defense - trading our passive rook for either of white's rooks is a good trade. } 2. Rxf7 Kxf7 3. Rc7+ Kg6! { Get your king up in the endgame! } 4. Rxb7 Rxa3 $10 { Black is not down any material, and has a somewhat active king. The position is equal. }) (1... Rb8?! { Black really needs to avoid falling into the trap that holding onto all material is correct. The b pawn is irrelevant. What matters is that the f8 rook might as well not be on the board. } 2. Re7 Rxa3 3. Rcc7 $14 { Black is lucky they're not already lost from this position. }) 2. Rxb7 { Note that this move is not about pawn grabbing. Rather, it's about doubling our rooks on the 7th rank. Piece activity remains king. } 2... Rd3?! { Going after more pawns could lead to black's doom. } (2... f4! { This nice idea to get the f8 rook working is playable too. } 3. gxf4 Rxf4 $10) 3. Rcc7 { Now it's black's turn to turn on their "pawns aren't people" hat or immediately lose to white's pigs on the seventh. The only thing that matters is piece activity - how can black get active? } 3... Kh8! { Avoiding the pawn hanging with check. The threat is Rg8, with a passive, but solid defense. } (3... Rxd4?? { That's one pawn too many, black! } 4. Rxg7+ Kh8 5. Rxh7+ Kg8 6. Rbg7#) 4. Rxg7 Rc8! { At all costs, black has activated their last rook and barely has enough to draw the game. } 5. Rxh7+ Kg8 6. Rbg7+ Kf8 $10 { Black is threatening Rc2+, with mate, so white has to bail out into a drawn rook endgame. } *
+
+
+[Event "New York 1924"]
+[Site "New York City, NY"]
+[Date "1924.03.23"]
+[Round "6"]
+[White "Jose Raul Capablanca"]
+[Black "Savielly Tartakower"]
+[Result "*"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Pawns aren't people! Developing plans II"]
+[ChapterName "Capablanca's endgame technique"]
+[ChapterURL "https://lichess.org/study/dYFcDtRq/C9IIK4hZ"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "5k2/p1p4R/1pr5/3p1pP1/P2P1P2/2P2K2/8/8 w - - 0 35"]
+[SetUp "1"]
+
+{ We've already seen that the pawns aren't people mantra holds true in the endgame. In fact, with less pieces on the board, it's potentially even more true in the endgame because every piece matters that much more!
+
+Here's a famous example of proper endgame technique from Capablanca. Capablanca knows that piece activity is crucial; it doesn't matter how many pawns you have. Capablanca's rook is already the master of the 7th rank, and his next moves showcase that he is willing to activate his king in the endgame at all costs. }
+35. Kg3! { PRO TIP: Get your king up in the endgame! Sometimes it's worth even a pawn or two just to get this crucial endgame piece working to his maximum. } 35... Rxc3+ 36. Kh4 Rf3 { Tartakower had seen that both the c and f pawns would fall with check. But Capablanca knows this is irrelevant - his king is walking up the board to its most active square. } 37. g6! { Clearance for Kg5. } 37... Rxf4+ 38. Kg5 Re4 { Capablanca is now down two pawns, but he's not bothered. Pawns aren't people! } 39. Kf6! $18 { Of course white doesn't capture the f5 pawn. White is using the f5 pawn as shelter against black's rook on the f file.
+Now white's king has security against all checks, white is threatening mate, the g6 pawn is very scary, and white has the world's most active rook and king. Black is completely dead, as shown in the rest of the game: https://lichess.org/study/xtDSXkyi/DfIe6e9B#77 } (39. Kxf5?? { Not accurate. Are you still under the delusion that pawns are people? Now our king is less secure once we reach the f6 square. } 39... Rxd4 40. Kf6 Rf4+! $10) *
+
+
+[Event "Wijk aan Zee 2009"]
+[Date "2009.01.30"]
+[Round "11"]
+[White "Wang Yue"]
+[Black "Teimour Radjabov"]
+[Result "*"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Pawns aren't people! Developing plans II"]
+[ChapterName "Exercise 6: Avoiding catastrophe"]
+[ChapterURL "https://lichess.org/study/dYFcDtRq/fDHakgRZ"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "r4rk1/2p3b1/3p3p/p1pPp1p1/2P5/5PN1/PP4PP/1R3RK1 b - - 0 26"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+{ This position is a typical endgame arising from the King's Indian Defense. Black to move - good luck! }
+26... e4! $10 { That's absolutely correct! All other moves on the board allow Ne4, when the amazing knight blockades the e5 pawn and leaves us with a terrible bishop.
+Now that you know that pawns aren't people, it's easy to see that our e pawn was a traitor to our bishop. With the e5 pawn on the board, we would have to be groveling for a draw. Without the e5 pawn on the board, we actually have good chances of outplaying white from this position, simply because the bishop is such a monster on e5 or d4!
+In the game, Radjabov masterfully outplayed his opponent from this position: https://lichess.org/QP3qJvrc#52 } *
+
+
+[Event "1990 Soviet Army Championship"]
+[Date "1990"]
+[White "Alexander Graf"]
+[Black "Alexander Semeniuk"]
+[Result "*"]
+[WhiteTitle "IM"]
+[BlackTitle "IM"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Pawns aren't people! Developing plans II"]
+[ChapterName "Exercise 7: Making progress"]
+[ChapterURL "https://lichess.org/study/dYFcDtRq/4NhRWsFD"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "4k3/1R6/5K1p/p4P2/6P1/8/4r3/8 w - - 0 1"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+{ With a strongly placed king and rook, we're clearly close to winning this endgame. Can you find the final breakthrough? }
+1. g5! (1. Kg7?? { This idea to try and make progress makes sense, but fails to Rg2! when the g pawn is hanging with check. } 1... Rg2 $10) (1. Rb8+?! { Probably not a good idea. Once the king escapes from the back rank, it's hard to imagine you're winning unless you can queen the f pawn immediately. Sadly, you can't because Kd7 Kf7?? Re4! draws the game. } 1... Kd7 2. Kf7?? Re4! 3. f6 Rxg4 4. Kf8 a4 5. f7 a3 $10 { Black will sacrifice the rook for the f pawn and draw the game. }) (1. Ra7!? $18 { This move doesn't throw anything away, so it's also playable. But if you were hoping to win the a pawn, you're still operating under the delusion that pawns are people when they're not! }) 1... hxg5 { Black couldn't allow you to play g6, when the two connected passed pawns would instantly win the game. Was the point of your last move to trade pawns? } 2. Kg7! (2. Kxg5?? { Pawns aren't people! We want our king safe from checks on the g file, not to simply recapture this pawn! }) (2. Kg6 $18 { While this move also wins, there's a more active square for your king instead. }) 2... Rf2 { Exactly! Keep it up! } (2... Re7+ 3. Rxe7+ Kxe7 4. f6+ $18 { [%cal Gf6f8] }) 3. f6! g4 4. f7+! Kd8 5. f8=Q+ Rxf8 6. Kxf8 $18 { Great find! By using black's g pawn as shelter, you were able to get your king up in the endgame as much as possible. Once you're up a rook, picking off black's remaining two pawns is easy. } (6. Rb8+ $18 { Also playable. Just recapture with the king for the solution. }) *
+
+
+[Event "14th Czechoslovak Championship"]
+[Site "Podebrady, Czechia"]
+[Date "1936"]
+[Round "3"]
+[White "Jan Foltys"]
+[Black "Carlos Skalicka"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Pawns aren't people! Developing plans II"]
+[ChapterName "Exercise 8: Queenside play"]
+[ChapterURL "https://lichess.org/study/dYFcDtRq/Ff6esIIM"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "1rr3k1/5ppp/1n2pb2/p1p5/P7/1PP1BP2/1NK3PP/3R3R w - - 0 1"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+{ This position appears at first sight to be reasonably equal. Yet this exercise is quite difficult - can you squeeze blood out of a stone to eke out an advantage here? }
+1. Nc4! (1. c4?? { Oh no! After Bxb2, your c and a pawns are hanging! } 1... Bxb2! 2. Kxb2 Nxc4+ $19) 1... Nxc4 (1... Nd5!? { In actual fact, black should probably avoid the temptation to damage white's pawn structure. } 2. Rd3 $16) 2. bxc4 Rb6 { Your queenside pawn structure has been destroyed. Was there any benefit to allowing the knight trade? } 3. Rb1 Rcb8? { That's right. "Every pawn lost is a file gained." In this case, your double isolated c pawns are fantastic at controlling all of the entrance squares for black's rooks on the b file, and giving you an open file to use yourself! } (3... Rbc6!? { Played in the game. } 4. Rhd1 $16 { But it should be clear that black has nothing positive to say about his position here. Every black piece is saddened by their purely defensive duties. }) 4. Rb5! $18 { Nice job! The rook stands amazingly on b5, from where it threatens both pawns. Moreover, if it is captured, cxb5 simply kills black's rook and gives us a connected passed pawn on b5. Black is completely lost here. } (4. Bxc5!? { This is also a good move, but you have to see that after the trade of rooks, you're not actually winning a pawn because c3 is falling. There's much cleaner in this position instead. } 4... Rxb1! 5. Rxb1 Rxb1 6. Kxb1 Bxc3 7. Kc2 Be1 $18 { [%cal Gc4c8] }) *
+
+
+[Event "Pawns aren't people! Developing plans II: Pawns are people!"]
+[Date "2024.03.28"]
+[White "Ay1010"]
+[Black "NoseKnowsAll"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Pawns aren't people! Developing plans II"]
+[ChapterName "Pawns are people!"]
+[ChapterURL "https://lichess.org/study/dYFcDtRq/8bSHUD23"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "1rbq1rk1/p1p1bppp/4p3/8/QnpP4/2N3P1/PP2PPBP/R1B2RK1 b - - 6 12"]
+[SetUp "1"]
+[UTCDate "2024.03.28"]
+[UTCTime "17:31:35"]
+
+{ It's important to understand both when a rule/principle is true, but also when it is not. While sacrificing a pawn for activity is typically correct in dynamic positions, you have to actually achieve something dynamic in exchange for your pawn. }
+12... Bd7?! { In this game, I decided to (wrongly) sacrifice the a pawn in order to activate all of my pieces. } (12... Rb6! { Correct. Now the a pawn cannot be captured without allowing a perpetual on white's queen. Best play is probably: } 13. a3 (13. Qxa7?! Ra6 14. Qb8 Rb6 15. Qa7 Ra6 $10 { The queen cannot escape the rook. }) 13... Ra6 14. Qd1 Nc6 $14 { where black has kicked back white's queen and almost equalized. }) 13. Qxa7 Rb6?! { I tried to argue that pawns aren't people. In exchange for the pawn, I thought I was trapping the queen in Siberia and getting on with play in the center. } 14. Bf4! { But my opponent shows me the error of my ways! In actual fact, the queen on a7 is well-placed and coordinating well with both bishops. My c pawn is an accessible target, and now I have to spend tempi defending. White is simply up a pawn for nothing. } 14... Bd6 15. Qxb6! { Oops! So much for the queen being offsides! } 15... cxb6 16. Bxd6 Nc6 17. Bxf8 Qxf8 $16 { White has way too much material for the queen here, and probably would have converted if not for later errors under time pressure. } { Ay1010 - NoseKnowsAll, 0-1, -, https://lichess.org/Fcl6tfGK } *
+
+
+[Event "Tata Steel Chess 2023 Masters"]
+[Site "Wijk aan Zee, Netherlands"]
+[Date "2023.01.29"]
+[Round "13"]
+[White "Arjun Erigaisi"]
+[Black "Magnus Carlsen"]
+[Result "*"]
+[WhiteElo "2722"]
+[WhiteTitle "GM"]
+[BlackElo "2859"]
+[BlackTitle "GM"]
+[Board "3"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Pawns aren't people! Developing plans II"]
+[ChapterName "Pawns are people!"]
+[ChapterURL "https://lichess.org/study/dYFcDtRq/Ul1sLzIf"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "2q3k1/2pbbn2/1p1p1n2/1N1Pp1p1/1PP1PpP1/2NQ1P2/6B1/1KB5 b - - 0 34"]
+[SetUp "1"]
+
+{ Here's one more exception to the rule. In this position, Magnus Carlsen uncorks a flashy sequence with the argument that pawns ARE people. }
+34... Nxg4! 35. fxg4 Bxg4 { Carlsen's argument is that the two connected passed pawns on the f and g file control so much space and are so close to queening that they are in fact worth a piece. } 36. Bf3 Bh3 37. Bh5 g4 { Indeed, Carlsen is correct - the pawns are worth a piece. Try coordinating your pieces as white in a way that prevents those pawns from queening. Erigaisi couldn't! } 38. Ne2 Bf1 39. Qd1 Bg2 40. Bg6 Ng5 { Note how patient Carlsen is with pushing his pawns. While the connected passed pawns are his main asset in the position, he's quite comfortable maneuvering his pieces to their optimal squares first. He wants to ensure that when he does push the pawns, he won't be leaving behind holes that white can pounce on. Even after sacrificing a piece, Carlsen shows astute understanding that pawns aren't people. } 41. Nbc3 Bf3 42. Qf1 Kg7 43. Bf5 Qh8 { With the threat of g3-g2-g1 hanging over his head, Erigaisi tries to bail out by sacrificing back the piece for two pawns. } 44. Nxf4?! exf4 45. Bxf4 Bf6 $17 { The problem for white: black's passed g pawn is much stronger than white's backwards e pawn, and every black piece is more active than the white counterpart.
+PRO TIP: A pawn phalanx approaching the 8th rank can sometimes be worth a piece. If you're in such an imbalanced position playing with the piece, then you have to ensure your pieces are as active as possible! If you're in such an imbalanced position playing with the pawns, then you have to keep your opponent's pieces as passive as possible and slowly creep forward with the pawns. } *
+
+
+[Event "36th ECC Open 2021"]
+[Date "2021.09.23"]
+[Round "6.1"]
+[White "Kirill Alekseenko"]
+[Black "Jaime Santos Latasa"]
+[Result "1-0"]
+[WhiteElo "2693"]
+[WhiteTitle "GM"]
+[BlackElo "2627"]
+[BlackTitle "GM"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Pawns aren't people! Developing plans II"]
+[ChapterName "Alekseenko's \"pawns aren't people\" masterpiece"]
+[ChapterURL "https://lichess.org/study/dYFcDtRq/mzukOd51"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "1r5r/2qbkpp1/p2pp3/1p4Rn/3QP3/2N2P2/PPP4P/1K1R1B2 w - - 2 17"]
+[SetUp "1"]
+
+{ We finish this study with an impressive game showcasing Alekseenko's understanding that pawns aren't people.
+
+In this position, Alekseenko already has a strong position because Santos Latasa's king is vulnerable in the center. Here, white plays a crushing sacrifice, embracing the "pawns aren't people" mentality. }
+17. e5! { Blowing open the center while black is unable to get his king to safety. } 17... dxe5 (17... d5?? { The move black wanted to make simply fails tactically. } 18. Qh4! $18 { The knight is hit twice, and hanging with discovered check. Black loses a piece. }) 18. Qb4+! { In exchange for the sacrificed pawn, Alekseenko has opened the e4 square for the knight, the d file for the rook, and the a3-f8 diagonal for the queen. Altogether that's an excellent trade for the life of one measly pawn. } 18... Ke8 19. Ne4! { White uses another advantage of his "pawns aren't people" sacrifice - the e4 square has been cleared for the knight. Nd6+ is unstoppable, further harassing the black king. } 19... a5!? { Poking the queen takes the sting out of Nd6+, but Alekseenko finds a way to continue fighting for the initiative. } (19... Rb6!? 20. Nd6+ Rxd6 21. Qxd6 Qxd6 22. Rxd6 $18 { Black can always sacrifice the exchange and try to bail out into this endgame. But the a and e pawns are both hanging, so this is a clear exchange up for white, and white is winning. }) 20. Nd6+ Kf8! { Black's idea behind a5. There is no scary discovered check! } 21. Qh4! { Hitting the pinned knight gains a tempo for white. Rxe5 is coming next to restore material equality and keep the initiative. } (21. Nxb5+? axb4 22. Nxc7 $10 { Black's point. }) 21... Qd8? { Too fancy. Now Alekseenko shows the whole world that he has mastered the "pawns aren't people" mentality. } (21... g6!? 22. Rxe5 $16 { White restores material equality, but all of white's pieces are attacking something of black's, while each of black's pieces are hoping to defend. Therefore, black is clearly worse. }) 22. f4!! { Opening up more lines for white's pieces - in particular the f1 bishop.
+PRO TIP: Talking to your pieces combines with embracing the fact that pawns aren't people. Pawns are subservient to the wants and desires of the pieces.
+Once you embrace that fact, you will play dynamic moves like this with full confidence that they are correct since this move brings white's bishop's dreams to fruition. } 22... Kg8?! { Black defends the rook so now the knight is apparently unpinned. } (22... exf4?! { Black can't even afford the tempo to capture this offered f pawn. } 23. Be2! g6 24. Bxh5 gxh5 (24... Rxh5?! 25. Rxh5 Qxh4 26. Rxh4 $18 { White emerges a rook up. }) 25. Qxf4 $18 { White's ferocious attack continues, now on the newly opened f file. }) (22... Nxf4?? 23. Qxh8+ $18 { Don't forget the knight is pinned! }) 23. Be2! { Just as Morphy taught us, Alekseenko brings his last piece into the game now that extra lines have been opened up by the previous pawn sacrifices. } 23... Be8 { Black admits defeat and simply allows the knight to be captured. There was no way to save the knight. } (23... Nf6?! { Moving the knight doesn't work because white has the winning tactic: } 24. Qxh8+! Kxh8 25. Nxf7+ Kg8 26. Nxd8 Rxd8 27. fxe5 $18 { White emerges up an exchange and pawn. }) (23... g6?! { Unfortunately for black, the g pawn is pinned. White simply wins a piece here too. } 24. Bxh5 $18) 24. Nxe8 Qxe8 25. Rxh5 Rxh5 26. Bxh5 $18 { Alekseenko, K. - Santos Latasa, J., 1-0, 36th ECC Open 2021, https://lichess.org/NajhFgaY } { Down a full piece, black resigned. } 1-0
+
+
+[Event "Pawns aren't people! Developing plans II: Thanks for enjoying this study!"]
+[Date "2024.03.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Pawns aren't people! Developing plans II"]
+[ChapterName "Thanks for enjoying this study!"]
+[ChapterURL "https://lichess.org/study/dYFcDtRq/j131rUI6"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "5r1r/p2knpp1/qp2p2p/2ppP2P/P1nP4/2P2R2/2P1NPP1/R1BQ2K1 w - - 13 20"]
+[SetUp "1"]
+[UTCDate "2024.03.28"]
+[UTCTime "17:31:35"]
+[ChapterMode "gamebook"]
+
+{ Be sure to like this study and share with your friends if you enjoyed it!
+
+Feel free to ask/answer any questions in the chat room if you're stuck on a key idea. You can check out my other instructive studies too if you're working on improving your game.
+-NoseKnowsAll
+
+* Advanced endgames you must know! https://lichess.org/study/UO2zqigQ
+* Rook endgames you must know! https://lichess.org/study/bnboDhFM
+* Knights | How to dominate your opponents! https://lichess.org/study/kI8ikTU4
+* Bishops | Slice through the opposition! https://lichess.org/study/kNn68T8l
+* Rooks | Infiltrate for activity! https://lichess.org/study/U7tTRtdj
+* Light and Dark Squares | Master color complex strategy! https://lichess.org/study/T3ixjwmg
+* Always sacrifice the exchange! https://lichess.org/study/h3ccaYFE
+* Beautiful checkmates https://lichess.org/study/YtBYXc3m }
+ *
+
+

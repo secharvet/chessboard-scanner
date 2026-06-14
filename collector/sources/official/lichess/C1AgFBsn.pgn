@@ -1,0 +1,16 @@
+[Event "OPENING PRINCIPLES: Chapter 1"]
+[Date "2023.02.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B00"]
+[Opening "Owen Defense"]
+[StudyName "OPENING PRINCIPLES"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/C1AgFBsn/9Ha31d9k"]
+[Annotator "https://lichess.org/@/Raunak_Sharma"]
+[UTCDate "2023.02.12"]
+[UTCTime "23:54:19"]
+
+1. e4 b6 2. d4 { [%csl Gc5,Ge5,Gd5,Gf5][%cal Ge4d5,Ge4f5,Gd4c5,Gd4e5,Gc5f5,Gf5c5] } 2... f6 3. Nf3 d6 4. Nc3 Qd7 5. Be3 Nc6 6. Bd3 { [%cal Gc3d5,Gc3b5,Gd4e5,Gd4c5,Ge4d5,Ge4f5,Gc3a4,Gf3g5,Gf3e5,Gf3h4,Ge3h6,Gd3a6] } 6... g6 7. d5 Nh6 8. Qd2 Bg7 9. O-O *
+
+

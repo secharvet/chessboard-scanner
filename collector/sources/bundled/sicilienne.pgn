@@ -1,0 +1,16 @@
+[Event "Défense Sicilienne — Najdorf (extrait)"]
+[Site "Bundled"]
+[Result "*"]
+
+1. e4 c5 {Contrôle asymétrique du centre.}
+2. Nf3 d6 {Défense Najdorf.}
+3. d4 cxd4 {Échange au centre.}
+4. Nxd4 Nf6 {Contre-attaque sur e4.}
+5. Nc3 a6 {Najdorf : empêche Db5.}
+6. Be3 e5 {Contre au centre.}
+7. Nb3 Be6 {Développement.}
+8. f3 {Attaque Yildiz / English Attack.}
+8... Nbd7 {Développement.}
+9. Qd2 b5 {Aile opposée.}
+10. O-O-O {Roque long blanc typique.}
+*

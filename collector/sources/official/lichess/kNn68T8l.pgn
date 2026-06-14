@@ -1,0 +1,445 @@
+[Event "Bishops | Slice through the opposition!: Introduction"]
+[Date "2022.02.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Bishops | Slice through the opposition!"]
+[ChapterName "Introduction"]
+[ChapterURL "https://lichess.org/study/kNn68T8l/ZMlyDjrW"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "8/8/8/8/3BB3/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2022.02.04"]
+[UTCTime "18:10:24"]
+[ChapterMode "gamebook"]
+
+{ Welcome to another instructive study by NoseKnowsAll. This interactive study is for players <2000 lichess, taking you through an important middlegame strategical concept: activating your bishops. Let's see how we can improve our bishops to their utmost by ripping open important diagonals! Importantly, we'll also learn how best to avoid dooming our own bishops to passivity.
+
+Please check out my other middlegame strategy studies as well:
+* Knights | How to dominate your opponents! https://lichess.org/study/kI8ikTU4
+* Rooks | Infiltrate for activity! https://lichess.org/study/U7tTRtdj
+* Always sacrifice the exchange! https://lichess.org/study/h3ccaYFE
+
+Throughout this study, I will also provide general middlegame tips that these positions showcase. Whenever this general advice occurs, I'll write it just like this:
+
+PRO TIP: Bad bishops can defend good pawns!
+
+If you find this study useful, please heart it and share it with any friends! } { [%cal Bd4a7,Be4a8,Bd4h8,Be4h7,Be4h1,Be4b1,Bd4g1,Bd4a1] }
+ *
+
+
+[Event "Bishops | Slice through the opposition!: Good and bad bishops"]
+[Date "2022.02.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Bishops | Slice through the opposition!"]
+[ChapterName "Good and bad bishops"]
+[ChapterURL "https://lichess.org/study/kNn68T8l/467VfNtg"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "r1bq1rk1/pp2bppp/2n1p3/3pP3/2pP4/2P2N2/PPB2PPP/R1BQ1RK1 w Qq - 0 1"]
+[SetUp "1"]
+[UTCDate "2022.02.04"]
+[UTCTime "18:10:24"]
+
+{ First let's introduce a key concept: a "good" and "bad" bishop.
+
+Good bishops are on the opposite color of your fixed pawns (usually in the center). Because they're on the opposite color as your pawns, they have a lot of freedom to move around the board and often control lots of squares. The good bishops for each side are marked in green here. } { [%csl Gc2,Ge7,Rc1,Rc8] }
+1. g3 { Bad bishops are on the same color of your fixed pawns (usually in the center). Because they're on the same color as your pawns, they are restricted in the number of squares they can move to and control few squares. The bad bishops for each side are marked in red here. } { [%csl Rc1,Rc8,Ge7,Gc2] } 1... b5 { PRO TIP: Your bad bishop is almost always on the same color as your opponent's good bishop and vice versa. Therefore it can be a smart decision to trade your bad bishop for your opponent's good bishop, leaving your opponent with only a bad bishop.
+However, these terms can sometimes be misleading as we shall soon see... } { [%csl Ge7,Gc2,Rc1,Rc8] } *
+
+
+[Event "Bishops | Slice through the opposition!: Active and inactive bishops"]
+[Date "2022.02.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Bishops | Slice through the opposition!"]
+[ChapterName "Active and inactive bishops"]
+[ChapterURL "https://lichess.org/study/kNn68T8l/FwlGQnkK"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "r1bqkb1r/pp3ppp/2n1pn2/2pp4/3P1B2/2PBP3/PP1N1PPP/R2QK1NR b KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2022.02.04"]
+[UTCTime "18:10:24"]
+
+{ Just because a bishop is "bad" does not always mean that the piece is a bad piece! To better explore how that can be, let's look a position that showcases the difference between "active" and "inactive" bishops.
+
+Here is a common position in the London, where black must decide how to finish developing. Notice white's bishop on f4 and black's bishop on c8 are both "bad" due to the locked d pawns. } { [%csl Rf4,Gf8,Gd3,Rc8] }
+1... Bd6! { Black willingly trades their good bishop for white's bad bishop. Why? Because the f4 bishop is an extremely active piece controlling several key squares in black's position! This active, bad bishop is much stronger than black's inactive, good bishop would be on e7. } (1... Be7?! 2. h3 O-O 3. Ngf3 $14 { If black never challenges this f4 bishop, it's not clear how to finish development effectively. Black's bishops are both inactive. }) 2. Bxd6 Qxd6 3. f4 { After getting rid of their bad bishop, white has rushed to place all the pawns on dark squares. The good bishop on d3 remains actively placed towards black's future kingside. White can dream of playing Ngf3-e5. } { [%csl Gd3] } 3... cxd4 4. cxd4 Bd7 $10 { Meanwhile, black's bad bishop remains inactive on d7, locked behind the pawn chain. However, black's king will be reasonably safe on the kingside and there are no weaknesses on the black side of the board, so the position is roughly equal, with white having a slightly easier game. } { [%csl Rd7] } *
+
+
+[Event "French League Top 16"]
+[Site "https://lichess.org/mo4VBDTR"]
+[Date "2005.05.07"]
+[Round "11"]
+[White "Alexander Grischuk"]
+[Black "Christian Bauer"]
+[Result "1-0"]
+[WhiteElo "2724"]
+[WhiteTitle "GM"]
+[BlackElo "2640"]
+[BlackTitle "GM"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Bishops | Slice through the opposition!"]
+[ChapterName "The horrors of a bad bishop"]
+[ChapterURL "https://lichess.org/study/kNn68T8l/XmQpWtZ3"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "r3k2r/pp1qbp1p/1np1ppb1/8/3P3N/1BP2QP1/PP1B1P1P/R3K2R w KQkq - 1 15"]
+[SetUp "1"]
+
+{ We join a Scandinavian game played by none other than GM Alexander Grischuk. His GM opponent in this position is slightly worse because of the doubled f pawns, but if black can castle queenside and use the open g file for an attack on white's king, this position is not so bad. }
+15. O-O f5?! { Unnecessary. Now the bishop on g6, which was already held captive by the h4 knight, is trapped by its own pawn. Since the f5 pawn is not fixed on f5, the g6 bishop is not yet a "bad" bishop, but it is currently doing nothing productive. } 16. Ng2 Nd5 17. Nf4 { Grischuk wisely blockades the f5 pawn so that the bishop on g6 remains inactive. } 17... O-O-O 18. Rfe1 Nxf4?! { It is unwise to trade your active pieces away and leave yourself with bad pieces! The more pieces get taken off the board, the more important this bad bishop on g6 becomes! } (18... Bd6!? 19. Kg2 Nf6 20. Kg1 Kb8 21. Kg2 Ka8 22. Kg1 Bxf4 23. Bxf4 Bh5 $16 { This could have been a last desperate attempt to improve the bishop. Even here though, the bishop on h5 is hardly an active piece. }) 19. Bxf4 Bd6 20. Bxd6 Qxd6 { Bauer is desperate to play f4 and get a little activity against white's king, but Grischuk is quick to stop this idea. } 21. Re5! { f4 is stopped for good. The g6 bishop is looking worse and worse. } (21. Kg2? f4! $14 { And black's bishop sees the light of day. White still has the more active army, but this will at least be a game. }) 21... Kb8 (21... f4? 22. Qxf4 $16 { Yes f4 can technically be played, but that's simply a free pawn for no compensation. }) 22. Bc4 { Essentially up a piece, white can now slowly improve each piece to its optimal square before landing a decisive blow. } 22... Rhe8 23. Rae1 { Stopping f6. Black cannot break out of this dark square bind. } 23... Re7 24. b4 { Stopping c5 forever too. Grischuk slowly removes possible options from his opponent. } 24... Rc7? (24... Rde8!? { Renewing the idea of f6 to break out is best. } 25. Qf4! { Stopping the idea again. } 25... f6 26. Rxf5 e5 27. dxe5 fxe5 28. Qh6 Rd7 29. Rf3 $16 { This complicated line shows Bauer's last chance to break out: sacrifice a pawn just to activate the bishop and get a bad ending. }) 25. h4! { Threatening to trap the poor bishop. } 25... h5 { A sad necessity. Now the bishop on g6 can never use the h5 square either. More pawns fixed on light squares... } 26. a4 Qf8 27. Qf4! { Grischuk already recognizes that black's best attempt is to play f4 even at the cost of a pawn. He doesn't give his opponent the opportunity to do even this.
+At this point, the bad bishop is more of a tall pawn than a bishop. } 27... Rdc8 28. Bf1 Bh7 29. Be2 Bg6 30. Bf3 Ka8 { With Grischuk's pieces optimally placed, he begins an all-out assault on black's king. } 31. b5! Qa3 32. a5! cxb5 (32... Qxa5? 33. bxc6 $18 { [%cal Re5a5] }) 33. Rxb5 a6 34. Rxb7! { Carnage ensues on black's king, while the g6 bishop is helplessly passive. } 34... Rxb7 35. Rb1 Qe7 (35... Rb8? 36. Qc7 $18 { [%cal Gc7b7,Gf3a8,Gb1b7] }) 36. Rxb7 Qxb7 37. Bxb7+ Kxb7 { Having now won a decisive amount of material, the rest is easy. } 38. Qd6 { [%cal Gd6b6] } 38... Rc6 39. Qb4+ Kc8 40. f4 $18 { Black resigned recognizing that his bad bishop will never escape from its cage. } 1-0
+
+
+[Event "Bishops | Slice through the opposition!: Bad bishops defend good pawns"]
+[Date "2022.02.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Bishops | Slice through the opposition!"]
+[ChapterName "Bad bishops defend good pawns"]
+[ChapterURL "https://lichess.org/study/kNn68T8l/Ic8sVrjO"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "2r1r3/1pqbppkp/3p2p1/3P4/B6P/5P2/1PPQ2PK/3RR3 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2022.02.04"]
+[UTCTime "18:10:24"]
+
+{ An important exception to our rule of trading bishops is when you have more space. Then, it's better to avoid all trades.
+
+Here, the pawn on d5 is very strong. With more space, white's pieces have influence on both sides of the board. Black also has to think twice before moving that backwards e pawn because dxe6 will leave black with further weaknesses. }
+1. Bb3! { White's bishop is technically bad on b3, but it is definitely playing an active role. Without this bishop, black would get counterplay on the queenside. With the bishop on b3, it defends the important pawns on c2 and d5, stops black's e pawn from moving forever, and shields b2 from direct attack.
+Meanwhile, what is black's "good" bishop doing on d7? Nothing. } (1. Bxd7? Qxd7 $10 { Now c2 is a weakness on an open file, and playing c3 does not solve the queenside pressure. Eventually, black will get in the b5-b4 minority attack to again create an accessible weakness. }) 1... Qc5 $16 { Black is without a plan, while white can start to attack the black king with h4-h5 or double rooks on the e file to further attack the e7 weakness.
+PRO TIP: Bad bishops defend good pawns! Defending a pawn from behind with a bishop is acceptable if the pawn is restricting your opponent's pieces, and you have active play with the remainder of your pieces. } *
+
+
+[Event "Bishops | Slice through the opposition!: Exercise 1: Bishop trades I"]
+[Date "2022.02.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Bishops | Slice through the opposition!"]
+[ChapterName "Exercise 1: Bishop trades I"]
+[ChapterURL "https://lichess.org/study/kNn68T8l/bY0437u9"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "rn1qk2r/pbp2ppp/1p2p3/3pP3/1b1P4/2NB1N2/PPPQ1PPP/R3K2R b KQkq - 0 9"]
+[SetUp "1"]
+[UTCDate "2022.02.04"]
+[UTCTime "18:10:24"]
+[ChapterMode "gamebook"]
+
+{ White has a huge center, hopes of a kingside attack, and a lead in development. But not everything is as clear cut as it might first appear. }
+9... Ba6! 10. Bxa6 { Exactly! Our bishop on b7 was bad because of our fixed central pawns on e6 and d5. By trading our bad bishop for white's good bishop, we are eliminating any chances of a later kingside attack. Note for instance that h7 is no longer a target. } 10... Nxa6 11. a3 Be7 $10 { Nice! It is best to retain this good bishop for the future since it works well with our pawns fixed on light squares. After an eventual c5 pawn break, the position may open up further and allow this bishop to shine. } (11... Bxc3?! { Probably inaccurate. After Qxc3, why have we given up our good bishop for this knight? } 12. Qxc3 $14) (11... Ba5?? { Oh no! After b4, your bishop is trapped! } 12. b4 $18) *
+
+
+[Event "Bishops | Slice through the opposition!: Exercise 2: Bishop trades II"]
+[Date "2022.02.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Bishops | Slice through the opposition!"]
+[ChapterName "Exercise 2: Bishop trades II"]
+[ChapterURL "https://lichess.org/study/kNn68T8l/xNENJODk"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "r4rk1/2q2ppp/p1p1bn2/2b1pN2/4P3/3B4/PPP3PP/R1BQ1R1K w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2022.02.04"]
+[UTCTime "18:10:24"]
+[ChapterMode "gamebook"]
+
+{ White needs to complete development. Is there a way to accomplish this while preparing a beneficial bishop trade? }
+1. Qe2 (1. Nh6+?! { An interesting try. but after Kh8, it's unclear what your knight is doing on h6, and you still haven't activated your bishops. } 1... Kh8 $10) 1... a5 { The queen was misplaced on the open d file. Taking up a better post on e2 with tempo allows us to implement which beneficial bishop trade? } 2. Bc4! { Exactly! The fixed e4 pawn was keeping our d3 bishop bad and inactive. Now, our bad bishop improves and offers to trade itself for black's best piece. Since black cannot afford the tempo to retreat (among other moves, Nh6+ is currently a threat), we are guaranteed to get in this trade. Moreover, once this defender on e6 is removed, we can dream of attacking the kingside. } *
+
+
+[Event "Bishops | Slice through the opposition!: Exercise 3: Bishop trades III"]
+[Date "2022.02.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Bishops | Slice through the opposition!"]
+[ChapterName "Exercise 3: Bishop trades III"]
+[ChapterURL "https://lichess.org/study/kNn68T8l/FfZCrLSb"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "r3kbnr/p4ppp/bpn1p3/2p5/4P3/2P2NP1/PP3PBP/RNBK3R w kq - 1 3"]
+[SetUp "1"]
+[UTCDate "2022.02.04"]
+[UTCTime "18:10:24"]
+[ChapterMode "gamebook"]
+
+3. Bf1 { White has seen that after O-O-O+, our pieces are menacingly converging on d3 and has played Bf1 to stop this. What is the best way to continue? } 3... O-O-O+ (3... Bxf1?! { Releasing the tension too early. After Rxf1, we have just traded away our piece that can best take advantage of the weaknesses in white's camp. } 4. Rxf1 $10) (3... Bb7?! { Not a bad idea, but there's a better way to get more from this position. }) (3... Rd8+?! { The right idea, but why not get our king out of the center at the same time? }) 4. Nbd2 { It is often a good idea to develop with tempo whenever possible. } 4... Bb7! $15 { Exactly! By rerouting to the long diagonal, our bishop has become a fantastic piece! We have no interest in trading our newly active bishop on b7 for white's misplaced bishop on f1. None of the bishops in this position are "bad" because neither side has fixed pawns.
+From this position, the black player Lajos Portisch (one of the strongest non-Soviet players behind Fischer) went on to win brilliantly. Check out the game here: https://lichess.org/GR8Z7etn#20 } (4... Bxf1?! { Releasing the tension too early. After Rxf1, we have just traded away our piece that can best take advantage of the weaknesses in white's camp. } 5. Rxf1 $10) *
+
+
+[Event "Bishops | Slice through the opposition!: Activating a bad bishop"]
+[Site "Mar del Plata"]
+[Date "March 31, 1966"]
+[Round "15"]
+[White "Leonid Stein"]
+[Black "Samuel Schweber"]
+[Result "*"]
+[WhiteTitle "GM"]
+[BlackTitle "IM"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Bishops | Slice through the opposition!"]
+[ChapterName "Activating a bad bishop"]
+[ChapterURL "https://lichess.org/study/kNn68T8l/d7P4UcVT"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "r3kn1r/p1q1npp1/4p3/1p1pP1Np/b1pP3P/2P3PB/2PB1P2/R2Q1RK1 w kq - 0 1"]
+[SetUp "1"]
+
+{ White has a huge space advantage, a safe king, and the bishop pair. However, black is up a pawn with a solid position. If black has enough time, he will be able to play against the doubled c pawns and push his passed a pawn to victory. }
+1. Bc1! { Always retreat! Stein correctly recognizes that he needs to activate his bad bishop previously stuck behind the central pawn chain. } 1... g6 { Meanwhile black's bad bishop on a4 is at least outside the pawn chain. But it can hardly be considered "active" since it only controls 3 squares and has 2 legal moves - both of which lose the bishop. } 2. Ba3 { The previously inactive bishop now breathes fire along the a3-f8 diagonal. Because black is missing a dark squared bishop, there is no counterpart to challenge this newly created monster. } { [%cal Ba3f8] } 2... Nh7 { PRO TIP: When you are being attacked, trade pieces. Attacks with less pieces are less likely to succeed. } 3. Nf3! { Just as we should not trade active bishops for inactive bishops, we do not trade the active knight on g5 for the passive knight on h7.
+Stein is clearly better and can launch an attack on Schweber's king no matter which side of the board he ends up residing, as in the game: https://lichess.org/ztgf1ASG#41 } *
+
+
+[Event "1990 World Chess Championship"]
+[Date "1990.12.15"]
+[Round "20"]
+[White "Garry Kasparov"]
+[Black "Anatoly Karpov"]
+[Result "*"]
+[WhiteElo "2800"]
+[WhiteTitle "GM"]
+[BlackElo "2730"]
+[BlackTitle "GM"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Bishops | Slice through the opposition!"]
+[ChapterName "Kasparov's killer bishops"]
+[ChapterURL "https://lichess.org/study/kNn68T8l/UdBVQRCq"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "r2qrb1k/1b4p1/p2p1n1p/1ppP1p2/Pn2P3/4R2P/1P1N1PPN/1BBQR1K1 w - - 4 20"]
+[SetUp "1"]
+
+{ In this 1990 WCC game, Karpov has just played Kh8 to tuck his king away to a safer square. Kasparov notices a flaw in this idea and launches a terrific attack, meanwhile activating his worst piece: the c1 bishop. } { [%cal Gg8h8] }
+20. b3! { This bishop heads to b2. On the long diagonal, it sits on a diagonal that cannot be shut down. At the end of this diagonal lies the ultimate target: Karpov's king. } 20... bxa4 21. bxa4 c4 22. Bb2 $16 { Kasparov's bishops have reached their best diagonals. He went on to win this game by launching a beautiful kingside attack, thereby securing a 2 point lead and retaining the world chess championship title. Check out the full game here: https://lichess.org/Zs9FZapB#43 } { [%cal Bb2h8,Bb1h7] } *
+
+
+[Event "Lund Schackstudion"]
+[Date "2011.04.15"]
+[Round "2"]
+[White "Jasmin Bejtovic"]
+[Black "Axel Smith"]
+[Result "*"]
+[WhiteElo "2415"]
+[WhiteTitle "IM"]
+[BlackElo "2452"]
+[BlackTitle "IM"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Bishops | Slice through the opposition!"]
+[ChapterName "Targeting a weakness"]
+[ChapterURL "https://lichess.org/study/kNn68T8l/9OI37YiX"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "8/1p2rkbp/1R4p1/5p2/2Ppp3/3P2P1/4PPBP/6K1 w - - 0 1"]
+[SetUp "1"]
+
+{ Both sides here have bad bishops, and if the rooks are traded, the game will surely end up in an opposite-colored bishop draw. But there is still a lot of play left in the position, so the position becomes a question of who can activate their bishop first. }
+1. g4! { A fantastic move aimed at activating the g2 bishop. } 1... Be5 (1... fxg4? 2. Bxe4 $18 { White's bishop is clearly much better than black's, and the b pawn will soon fall. As long as white can retain rooks on the board, white will win this game. }) 2. gxf5 gxf5 3. Bh3 $16 { White has found a way to activate his bad bishop, which now targets an unprotected pawn. Black is trying to do the same, but h2 is easily defended while f5 is not. White has serious winning chances here. } *
+
+
+[Event "Bishops | Slice through the opposition!: Ripping open a diagonal"]
+[Date "2005.02.10"]
+[White "Marek Vokac"]
+[Black "David Navara"]
+[Result "*"]
+[WhiteElo "2476"]
+[WhiteTitle "GM"]
+[BlackElo "2644"]
+[BlackTitle "GM"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Bishops | Slice through the opposition!"]
+[ChapterName "Ripping open a diagonal"]
+[ChapterURL "https://lichess.org/study/kNn68T8l/i0AYXTc0"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "1nrq1rk1/1b2bppp/p2pp3/1p6/1P2PP2/P1BP1N2/4N1PP/R3QR1K b - - 0 1"]
+[SetUp "1"]
+
+{ In this typical Sicilian position, black has the bishop pair but neither bishop is inspiring. David Navara finds a brilliant way to activate his b7 bishop at all costs. }
+1... d5!? { d5 is almost always a strong move in the Sicilian, since it often creates central tension that activates black's pieces. Here, however, the resulting position is not so clear. } 2. e5?! { Vokac probably thought he was fine in this position. Isn't the b7 bishop now bad, locked behind the pawn chain?
+Well no actually - the d5 pawn is not actually fixed on d5! } (2. Ng3 dxe4 3. dxe4 Bf6 $10 { In this position, at least white's king is not coming under heavy fire. }) (2. exd5? Qxd5 $19 { A dream scenario for black along the long diagonal. }) 2... d4!! { Never take no for an answer! Navara is happy to sacrifice a pawn in order to activate his unopposed light squared bishop on b7. } (2... Nc6? 3. Ned4! $16 { Given only one more move, Ned4 will consolidate white's advantage. The bad bishop on b7 is more of a bystander than a contributor in this position. }) 3. Nexd4 { PRO TIP: A well-timed pawn break can be a crucial tool to activating your pieces. } 3... Nc6 4. Bb2 Nxd4 5. Nxd4 Qd5 $17 { While black is down a pawn, that pawn on d5 would actually be a traitor to black's active pieces. Without that pawn, black is able to use the long diagonal to white's king, and has more than enough compensation.
+Compare each piece in black's position to the starting position and see how much they have improved. Meanwhile white's minor pieces are actually worse off than in the starting position. } *
+
+
+[Event "Bishops | Slice through the opposition!: Exercise 4: Bishop activation I"]
+[Date "2022.02.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Bishops | Slice through the opposition!"]
+[ChapterName "Exercise 4: Bishop activation I"]
+[ChapterURL "https://lichess.org/study/kNn68T8l/b6TqGmmu"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "q4rk1/pbr1bppp/1pn1pn2/8/2PP4/P2B1N2/1B1NQPPP/2RR2K1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2022.02.04"]
+[UTCTime "18:10:24"]
+[ChapterMode "gamebook"]
+
+{ White's pieces look well-placed for a kingside attack, but how can we fully activate our bishop pair? }
+1. d5! (1. Ne4?! $16 { This move does not come with a threat, so black has time to further bolster their kingside defense with Qd8. } 1... Qd8 $17) (1. Ng5?! $16 { A tempting move, but this does not improve the bishop pair. }) (1. Bxh7+?? $17 { It's far too early to consider sacrificing a bishop - most of your pieces are not yet attacking! }) 1... exd5?! { How does sacrificing the d pawn help generate play for our bishop pair? } (1... Na5 { Moving the knight instead does not help black either: } 2. Ne4! exd5 3. Nxf6+ Bxf6 4. Bxf6 gxf6 5. Nh4 $18 { And black will have to hemorrhage material to avoid getting mated. } { [%cal Ge2g4,Gh4f5,Gg4g7] }) 2. cxd5 (2. Bxf6?! { Cashing out too early is not so convincing because we are giving up our amazing bishop pair! } 2... Bxf6 3. cxd5 $18) 2... Nxd5? { A critical position. Black calls your bluff and asks, "Where is your compensation after giving up a central pawn?" } 3. Qe4! (3. Bxh7+?? { This move regains the lost pawn, but why are we giving up our best attacker in order to snag a measly pawn? }) 3... Nf6 { Excellent! There was a double attack on the d5 knight and h7 square, so black's move was forced. } 4. Bxf6! Bxf6 { We finally cash out because recapturing our bishop on f6 was impossible. I'll allow you to do the honors. } 5. Qxh7# { In this exercise, all we needed to overwhelm black's defense was a clearance sacrifice (the d4 pawn) and a removal of black's best defender (the f6 knight). With both bishops activated effectively, tactics were sure to follow.
+PRO TIP: The bishop pair often work well together on adjacent diagonals. On open boards, it is hard for your opponent to shut down both diagonals simultaneously. } *
+
+
+[Event "Bishops | Slice through the opposition!: Exercise 5: Bishop activation II"]
+[Date "2022.02.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Bishops | Slice through the opposition!"]
+[ChapterName "Exercise 5: Bishop activation II"]
+[ChapterURL "https://lichess.org/study/kNn68T8l/5w5ZqsQq"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "r2q1rk1/pb1n2pp/1pp1pb2/3p1p2/NPPPn3/5NP1/PBQ1PPBP/R2R2K1 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2022.02.04"]
+[UTCTime "18:10:24"]
+[ChapterMode "gamebook"]
+
+{ We have reached a common Stonewall Dutch middlegame, but all of our army is not yet deployed efficiently. How to best make progress? }
+1... Ba6! (1... Qe7?! { This normal developing move does not address black's problem piece. }) (1... Qc7? { The queen is not well-placed here because the c file can open and expose her. }) (1... c5? { A combative move that certainly tries to improve the b7 bishop, but tactically opens up the position for white who is better developed. After for instance bxc5 bxc5, Nxc5 Ndxc5, dxc5 your queen is opposite white's d1 rook and the c5 pawn is immune from recapture because it is x-ray defended by white's queen. You'll need an alternative approach here instead. } 2. bxc5 bxc5 3. Nxc5 Ndxc5 4. dxc5 $16) 2. c5 { Nicely done! The Stonewall bishop peaks out from behind the pawn chain in order to further influence the board. What is its optimal square? } 2... Bc4 3. Nd2 { White recognizes the power of this bishop and immediately seeks to challenge it. However, there is a flaw to white's move. } 3... Nxd2 (3... Bxe2?? { Don't get greedy! After Nxe4 Bxd1, Nxf6 comes with check and white will have the uncontested bishop pair against our passive rook on a8. } 4. Nxe4 Bxd1 5. Nxf6+ Qxf6 6. Rxd1 $16) (3... b5? { The right idea, but after Nxc4 bxc4, f3 our knight on e4 gets banished back to our side of the board. Can you improve upon this move order? }) 4. Qxd2 { Trading knights is simple and good. Now we can cement our bishop on c4 and shut down white's queenside play forever. } 4... b5 $17 { The previously sleeping bishop on b7 has become a monster on c4. Furthermore, if it is ever captured, black will get a connected passed pawn on c4 in its place. } *
+
+
+[Event "Bishops | Slice through the opposition!: Exercise 6: Bishop activation III"]
+[Date "2022.02.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Bishops | Slice through the opposition!"]
+[ChapterName "Exercise 6: Bishop activation III"]
+[ChapterURL "https://lichess.org/study/kNn68T8l/vBX0SPrA"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "r1b2rk1/1pq2ppp/p1n1pn2/2p5/3P4/P1P1PN2/4BPPP/R1BQ1RK1 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2022.02.04"]
+[UTCTime "18:10:24"]
+[ChapterMode "gamebook"]
+
+{ In this Nimzo-Indian position, black has given up the bishop pair to speed up development and challenge white's center. Considering both sides' bishops, how can we best activate our pieces? }
+1... Rd8! (1... e5?! { Possibly a little rushed. After d5 Rd8, e4! we would have to move our c6 knight. Note that Nxe4?? in that position runs into Qc2 with a double attack on our knights and black is lost.
+Nowhere in these variations are we activating our c8 bishop. Can we improve upon this idea? } 2. d5 Rd8?! { The most obvious move fails. } (2... e4!? 3. dxc6 Ng4! { The only way to justify this variation. The knight cannot move without allowing a mate on h2. } 4. h3 exf3 5. hxg4 fxe2 6. Qxe2 Qxc6 $10) 3. e4! Nxe4?? 4. Qc2 $18) (1... b5?! { It is an interesting idea to fianchetto the light squared bishop on b7. However, after a4!, white will be able to punish our lack of development and open up the position for their bishop pair. } 2. a4! Bb7 3. axb5 axb5 4. Rxa8 Rxa8 5. Bxb5 $14) (1... b6?! { This soft move doesn't activate the bishop to its best square. After Bb2 Bb7, dxc5 bxc5, c4 - white's bishop pair is felt on the board. } 2. Bb2 Bb7 3. dxc5 bxc5 4. c4 $16) (1... cxd4? { After cxd4, you've just improved white's position tremendously. } 2. cxd4 $16) (1... Na5!? $14 { An interesting idea to get out of the way for the bishop on c6 and the long diagonal. But this move doesn't place enough pressure on white's center, so white has time for Ne5, a4, Ba3 - all improving moves that are tough to meet. }) 2. Qc2 { Rd8 is a nice improving move, so white is quick to get off the same file as the rook. Now that d5 is stopped for good, what is the true idea behind this move though? } 2... e5 (2... Na5!? $10 { An interesting idea to get out of the way for the bishop on c6 and the long diagonal. But this move doesn't place enough pressure on white's center, so white has time for Ne5, a4, Ba3 - all improving moves that are tough to meet. }) 3. Bb2 { Nice! Placing all of our pawns on dark squares complements our remaining light squared bishop. How can we finally activate this piece? } 3... Bg4 $10 { The bishop on g4 places maximum pressure on white's center. With all this tension in the center, none of white's central pawns can move without leaving behind a weakness. Black has full compensation against white's bishop pair. } (3... e4!? { An equally valid move if your follow-up to Nd2 was Bf5. Bad bishops defend good pawns! } 4. Nd2 Bf5 $10) (3... Be6? $16 { After Ng5 our bishop will have to move again immediately. }) (3... Bf5?? { Oh no my bishop! } 4. Qxf5 $18) *
+
+
+[Event "Bishops | Slice through the opposition!: Exercise 7: Bishop activation IV"]
+[Date "1977.04.??"]
+[White "Anatoly Karpov"]
+[Black "Raymond Keene"]
+[Result "*"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Bishops | Slice through the opposition!"]
+[ChapterName "Exercise 7: Bishop activation IV"]
+[ChapterURL "https://lichess.org/study/kNn68T8l/3CHE7ONJ"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "r2q1r1k/pppnn3/3p3b/3Pp3/4Pp2/2N4P/PPPQBBP1/3R1RK1 w - - 0 18"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+{ The 12th World Champion Anatoly Karpov has already won a pawn. However, every pawn lost is a file opened, and Keene will be quick to attack Karpov on the newly opened g file.
+
+How can we activate our bishops while pre-empting any kingside attack? }
+18. Bg4! (18. Rfe1?! { If your idea is following up with Bf1, then nice job on finding a solid defensive setup. Unfortunately, this piece configuration is quite passive and therefore gives black more play than he deserves. }) (18. Bf3? { The bishop is nothing more than a tall pawn and a target from this square. }) (18. Bh4?! { The bishop on f2 was already somewhat active. After Nf6 and a later Ng6, your bishop will simply be kicked backwards. } 18... Nf6 19. Kh1 Ng6 20. Qe1 $14) 18... Nf6 { Our bishop is more effective outside the pawn chain, but what is its ultimate destination? } 19. Be6! { Nicely done. From e6, our "bad" bishop has become a unstoppable force. By controlling g8, it single-handedly prevents black from ever realizing dreams of a kingside attack on the g file.
+From here, Karpov went on to gain space on both the kingside and queenside before suffocating his helpless opponent after 44 moves: https://lichess.org/AzQg7yMV } (19. Qe2?! { This move was played in the game, but after Nxg4 Qxg4, black will still have an attack on the open g file. }) *
+
+
+[Event "76th Brazilian Championship"]
+[Date "2009.12.04"]
+[Round "3"]
+[White "Everaldo Matsuura"]
+[Black "Giovanni Vescovi"]
+[Result "*"]
+[WhiteElo "2478"]
+[WhiteTitle "GM"]
+[BlackElo "2648"]
+[BlackTitle "GM"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Bishops | Slice through the opposition!"]
+[ChapterName "Exercise 8: Bishop activation V"]
+[ChapterURL "https://lichess.org/study/kNn68T8l/KBuiJIcU"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "1r3rk1/3qbppp/p1npbn2/1p2p3/4P3/P1NBN3/1PP2PPP/R2QBR1K b - - 0 1"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+{ We arrive at a tense middlegame in the Sicilian Kalashnikov. Black's pieces are slightly more harmonious than white's, but as compensation white has the d5 hole under his control and therefore the d6 pawn will remain backwards for a long time. How to improve further? }
+1... Bd8! (1... Rfe8?! $10 { A fine move that doesn't change the nature of the position, but we're looking to improve our bishop here instead. }) (1... Ne8? { Retreating this knight to play Bg5 is an interesting idea overall. But retreating removes a key defender of d5 for white to jump into, so white is going to be slightly better here. } 2. Ncd5 $14) (1... d5?? { Directly loses a piece after exd5. }) 2. Qe2 { A star move! Our bad bishop was passively overprotecting a weakness (d6) that is not even attacked. But where is this bishop heading? } 2... Bb6 $10 { Excellent job. Now that the bishop knifes into white's position along the a7-g1 diagonal, black can look to make further progress with his other pieces. I call this maneuver the "bishop wiggle," hopefully for obvious reasons. The bishop wiggle is a common maneuver to activate your bishop in Stonewall structures like in Exercise 5 as well!
+Note that as a long range piece, there's no need for this bishop to continue forward and land on d4. It's performing mostly the same duty safely tucked away on b6. } { [%cal Bb6g1] } (2... Bc7? $14 { This bishop is just as sad here as it was on e7. }) (2... Ba5?! $14 { The knight on c3 is over-protected by the e1 bishop. While not bad, what exactly does this move accomplish? }) *
+
+
+[Event "Bishops | Slice through the opposition!: Morphy showing off bishop mastery"]
+[Site "https://lichess.org/G6WVWnci"]
+[Date "1849"]
+[White "Paul Morphy"]
+[Black "Alonzo Morphy"]
+[Result "1-0"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "C51"]
+[Opening "Italian Game: Evans Gambit, McDonnell Defense"]
+[StudyName "Bishops | Slice through the opposition!"]
+[ChapterName "Morphy showing off bishop mastery"]
+[ChapterURL "https://lichess.org/study/kNn68T8l/Vr6jHXFk"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+
+{ We conclude with a game from the young Paul Morphy against his father in 1849. Morphy had a great sense of how to open up the position and activate his pieces. Let's see one example of him using his bishops to their utmost. }
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. b4 { The fearsome Evans Gambit was a favorite of the Romantic Era. } 4... Bxb4 5. c3 Bc5 6. d4 exd4 7. cxd4 Bb6 8. O-O { In exchange for a single pawn, white has a huge lead in development and the center. } 8... Na5?! { This poor move is no longer played because the knight on the side of the board aims at nothing after Morphy's next move. } 9. Bd3 d5? { Opening up the center before you are castled is unwise. } (9... d6 10. Nc3 Ne7 11. h3 O-O $10 { Black has castled to safety, but white retains full compensation for the pawn. }) 10. exd5 Qxd5 11. Ba3! { Morphy keys in on the problem in black's position: the centralized king! Activating the bishop on a3 controls f8: the black king's escape square, ensuring that a future check on the e file will lead to devastation. } { [%cal Ba3f8] } 11... Be6 { Black hurries to close the e file and castle, but that flimsy defense will only last for so long... } 12. Nc3 Qd7 13. d5! { Morphy removes the e file blockade to continue opening up lines and diagonals towards black's king. } 13... Bxd5 14. Nxd5 Qxd5 15. Bb5+!! { A crushing blow that draws the queen away from the king's defense. Notice how the bishop pair on adjacent diagonals slice across to black's king. } { [%cal Bb5e8,Ba3f8] } 15... Qxb5 (15... c6 16. Qxd5 $18 { And the pawn is pinned. }) 16. Re1+ Ne7 17. Rb1 { A final finesse that further draws the queen away from the defense. } 17... Qa6? (17... Qd7 18. Rxe7+ Qxe7 19. Bxe7 Kxe7 20. Qd5 $18 { Up a queen against black's poorly placed pieces, Morphy would surely convert this position. }) 18. Rxe7+ Kf8 19. Qd5! { Going for style points, Morphy saves his discovered check by creating an even bigger threat: Qxf7#. } { [%cal Rd5f7] } 19... Qc4 { X-ray defense of f7 ends up insufficient. } 20. Rxf7+ Kg8 21. Rf8# { The bishop on a3 has the last laugh, creating an aesthetic double checkmate along the key a3-f8 diagonal. } 1-0
+
+
+[Event "Bishops | Slice through the opposition!: Thanks for enjoying this study!"]
+[Date "2022.02.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Bishops | Slice through the opposition!"]
+[ChapterName "Thanks for enjoying this study!"]
+[ChapterURL "https://lichess.org/study/kNn68T8l/owNOxFsf"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[FEN "8/8/8/8/3BB3/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2022.02.04"]
+[UTCTime "18:10:24"]
+[ChapterMode "gamebook"]
+
+{ Be sure to like this study and share with your friends if you enjoyed it! Feel free to ask/answer any questions in the chat room if you're stuck on a key idea. You can check out my other instructive studies too if you're working on improving your game.
+-NoseKnowsAll
+
+* Beginner endgames you must know! https://lichess.org/study/wukLYIXj
+* Intermediate endgames you must know! https://lichess.org/study/UsqmCsgC
+* More endgames you must know! https://lichess.org/study/xtDSXkyi
+* Advanced endgames you must know! https://lichess.org/study/UO2zqigQ
+* Rook endgames you must know! https://lichess.org/study/bnboDhFM
+* Knights | How to dominate your opponents! https://lichess.org/study/kI8ikTU4
+* Bishops | Slice through the opposition! https://lichess.org/study/kNn68T8l
+* Rooks | Infiltrate for activity! https://lichess.org/study/U7tTRtdj
+* Always sacrifice the exchange! https://lichess.org/study/h3ccaYFE
+* Beautiful checkmates https://lichess.org/study/YtBYXc3m } { [%cal Bd4a7,Be4a8,Bd4h8,Be4h7,Be4h1,Be4b1,Bd4a1,Bd4g1] }
+ *
+
+

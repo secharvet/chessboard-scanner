@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Test Stockfish MultiPV</title>
+  <style>
+    body { font-family: monospace; padding: 1em; background: #1a1a1a; color: #eee; }
+    #output { white-space: pre-wrap; background: #111; color: #0f0; padding: 1em; max-height: 70vh; overflow-y: auto; margin-top: 1em; }
+    .ok { color: #0f0; } .ko { color: #f44; } .info { color: #ff0; }
+    button { padding: 0.5em 1em; font-size: 1rem; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>Test MultiPV — Stockfish WASM (Worker)</h1>
+  <p>Même mécanisme que <code>stockfish-client.js</code> : pas de global <code>Stockfish()</code>.</p>
+  <button type="button" id="btn">Lancer le test</button>
+  <div id="output"></div>
+
+  <script type="module">
+    const out = document.getElementById('output');
+    const btn = document.getElementById('btn');
+
+    function log(msg, cls = '') {
+      const div = document.createElement('div');
+      div.className = cls;
+      div.textContent = msg;
+      out.appendChild(div);
+    }
+
+    function parseMultipv(line) {
+      return Number(line.match(/\bmultipv (\d+)/)?.[1] ?? 1);
+    }
+
+    btn.addEventListener('click', () => {
+      out.innerHTML = '';
+      log('Démarrage Worker…', 'info');
+
+      const worker = new Worker('/vendor/stockfish/stockfish-nnue-16-single.js');
+      const lines = [];
+      /** @type {Map<number, string>} */
+      const multiPvBest = new Map();
+
+      worker.onmessage = (event) => {
+        const line = typeof event.data === 'string' ? event.data : '';
+        if (!line) return;
+        lines.push(line);
+
+        if (line.startsWith('info ') && line.includes('multipv')) {
+          const mpv = parseMultipv(line);
+          const depth = Number(line.match(/\bdepth (\d+)/)?.[1] ?? 0);
+          const prev = multiPvBest.get(mpv);
+          const prevDepth = prev ? Number(prev.match(/\bdepth (\d+)/)?.[1] ?? 0) : -1;
+          if (depth >= prevDepth) multiPvBest.set(mpv, line);
+        }
+
+        if (line.startsWith('bestmove')) {
+          const mpvAll = lines.filter((l) => l.includes('multipv'));
+          const mpvFinal = [...multiPvBest.values()].sort(
+            (a, b) => parseMultipv(a) - parseMultipv(b),
+          );
+
+          log('--- RÉSULTAT ---');
+          log(`Total lignes info : ${lines.filter((l) => l.startsWith('info')).length}`);
+          log(`Lignes contenant "multipv" : ${mpvAll.length}`, mpvAll.length ? 'ok' : 'ko');
+          log(`MultiPV distincts (dernière prof.) : ${mpvFinal.length}`, mpvFinal.length >= 2 ? 'ok' : 'ko');
+          log(`Bestmove : ${line}`);
+
+          if (mpvFinal.length) {
+            log('--- lignes multi-PV retenues ---', 'info');
+            for (const l of mpvFinal) log(l, 'info');
+          } else if (mpvAll.length) {
+            log('--- échantillon brut multipv ---', 'info');
+            for (const l of mpvAll.slice(0, 6)) log(l, 'info');
+          } else {
+            log('AUCUNE ligne multipv — vérifier setoption après uci.', 'ko');
+          }
+
+          worker.terminate();
+        }
+      };
+
+      worker.onerror = (e) => {
+        log(`Erreur Worker : ${e.message}`, 'ko');
+        worker.terminate();
+      };
+
+      const send = (cmd) => worker.postMessage(cmd);
+      send('uci');
+      send('setoption name MultiPV value 3');
+      send('isready');
+      send('ucinewgame');
+      send('position startpos');
+      send('go depth 12');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+[Event "EricRosen's Study: Chapter 1"]
+[Date "2021.02.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A21"]
+[Opening "English Opening: King's English Variation, Reversed Sicilian"]
+[StudyName "EricRosen's Study"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/5sioe6m0/q8qoTJXT"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.02.04"]
+[UTCTime "02:06:44"]
+
+1. c4 { [%csl Gc4] } 1... e5 2. Nc3 d6 3. d4 exd4 4. Qxd4 Nc6 5. Qd2 Be6 { [%csl Gc4] } 6. b3 Nge7 7. g3 d5 8. cxd5 Nxd5 9. a3 { [%csl Gc3,Rh1,Gf3,Gb7,Gb3][%cal Gd5c3,Gd2c3,Gd8d5,Rd5h1,Rd5b3,Gg1f3,Gc3b3,Ge6b3,Ga1b1,Gb1b7] } 9... Nxc3 10. Qxc3 Qd5 11. Nf3 Qxb3 12. Qxb3 Bxb3 13. Rb1 Ba4 (13... O-O-O 14. Rxb3 { [%csl Gc8,Gb3] }) (13... Na5 { [%csl Ra5,Rb3] } 14. Bd2 { [%csl Ga5][%cal Gd2a5,Gb1b3] } 14... b6 15. Bxa5 bxa5 16. Rxb3) 14. Rxb7 O-O-O { [%csl Ge8,Gd8,Gc8,Gb7][%cal Ge8c8] } *
+
+

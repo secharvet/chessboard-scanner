@@ -1,0 +1,104 @@
+[Event "EricRosen's Study: accelerated dragon trappy move order"]
+[Date "2023.08.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B35"]
+[Opening "Sicilian Defense: Accelerated Dragon, Modern Bc4 Variation"]
+[StudyName "EricRosen's Study"]
+[ChapterName "accelerated dragon trappy move order"]
+[ChapterURL "https://lichess.org/study/RQlr8kKe/ZxGsbOrH"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2023.08.26"]
+[UTCTime "21:41:50"]
+
+1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 g6 5. Nc3 Bg7 6. Be3 Nf6 7. Bc4 O-O 8. f3 { [%csl Gf3][%cal Gf2f3] } (8. O-O Nxe4 9. Nxe4 d5 10. Nxc6 bxc6 11. Bd3 dxe4 12. Bxe4 Qc7) (8. Bb3) 8... Qb6 { [%csl Gb6] } 9. Bb3 (9. Nce2 Qb4+) 9... Nxe4 *
+
+
+[Event "EricRosen's Study: center game"]
+[Date "2023.08.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C22"]
+[Opening "Center Game: Berger Variation"]
+[StudyName "EricRosen's Study"]
+[ChapterName "center game"]
+[ChapterURL "https://lichess.org/study/RQlr8kKe/yWXlEHuk"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2023.08.26"]
+[UTCTime "21:46:55"]
+
+1. e4 e5 (1... Nf6 2. e5 Nd5 3. d4 b5 (3... d6 4. exd6 cxd6)) 2. d4 exd4 3. Qxd4 Nc6 { [%csl Gd4] } 4. Qe3 Nf6 5. e5 Ng4 6. Qe2 d6 { [%csl Gd6,Gg4][%cal Gc8g4] } 7. exd6+ Be6 8. dxc7 Qxc7 *
+
+
+[Event "EricRosen's Study: alekhine"]
+[Date "2023.08.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B04"]
+[Opening "Alekhine Defense: Modern Variation, Larsen Variation"]
+[StudyName "EricRosen's Study"]
+[ChapterName "alekhine"]
+[ChapterURL "https://lichess.org/study/RQlr8kKe/kQZRvELz"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2023.08.26"]
+[UTCTime "21:51:02"]
+
+1. e4 Nf6 2. e5 Nd5 3. d4 d6 4. Nf3 (4. c4 Nb6 5. f4 g5 6. fxg5 { [%cal Gf4g5] } (6. Nc3 gxf4 (6... Bg7 7. Nf3 g4 8. Nh4 dxe5 9. fxe5 c5 10. d5 { [%csl Ge5] } 10... Bxe5) 7. Bxf4 Bg7) 6... dxe5) 4... dxe5 5. Nxe5 c6 6. c4 { [%csl Gb4][%cal Gd5b4] } 6... Nb4 7. a3 Qxd4 8. Qxd4 (8. axb4 Qxe5+) 8... Nc2+ *
+
+
+[Event "EricRosen's Study: playing against the giuco piano"]
+[Date "2023.08.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C54"]
+[Opening "Italian Game: Classical Variation, Center Attack"]
+[StudyName "EricRosen's Study"]
+[ChapterName "playing against the giuco piano"]
+[ChapterURL "https://lichess.org/study/RQlr8kKe/bYfIxeWV"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2023.08.26"]
+[UTCTime "21:56:21"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 (4. b4 Bxb4 5. c3 Ba5 6. d4 b5 7. Bxb5 Nxd4 8. Nxd4 exd4 9. Qxd4 Qf6 10. e5 Qb6 11. Qxb6 { [%csl Gc3,Ge5] } (11. Qd3 Ne7 12. O-O O-O 13. Be3 { [%csl Gg6][%cal Gb6g6] } 13... Qg6) 11... axb6) (4. d3) 4... Nf6 5. d4 (5. d3 { [%csl Gd3][%cal Gd2d3] }) *
+
+
+[Event "FRA-Tch"]
+[Site "FRA"]
+[Date "2001.04.01"]
+[Round "7.1"]
+[White "Kevin Spraggett"]
+[Black "Michael Adams"]
+[Result "0-1"]
+[WhiteElo "2526"]
+[BlackElo "2746"]
+[Variant "Standard"]
+[ECO "C54"]
+[Opening "Italian Game: Classical Variation, Giuoco Pianissimo, with a6"]
+[StudyName "EricRosen's Study"]
+[ChapterName "Chapter 6"]
+[ChapterURL "https://lichess.org/study/RQlr8kKe/ls3kVarX"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Bc4 Nf6 3. d3 Nc6 4. Nf3 Bc5 5. c3 a6 { [%csl Ga6] } 6. Bb3 Ba7 { [%csl Ga6,Ga7][%cal Gc5a7] } 7. O-O d6 8. Nbd2 O-O 9. Re1 Ng4 10. Re2 { [%csl Gg4,Ga7] } 10... Kh8 11. h3 Nh6 12. Nf1 f5 13. Bxh6 gxh6 14. exf5 Bxf5 { [%csl Gh3][%cal Gf5h3] } 15. N1h2 Qf6 16. Qd2 Rae8 17. Kh1 Re7 { [%csl Gf5,Ge7,Gf6,Gf8,Gc6,Ga7] } 18. a3 Rg7 19. Rg1 h5 20. Ba2 Bd7 { [%cal Gd7c6] } 21. b4 Ne7 { [%csl Gf5,Gc6][%cal Ge7f5,Gd7c6] } 22. d4 exd4 23. cxd4 Ng6 24. Re4 Nf4 25. h4 Bc6 26. d5 Bb5 27. g3 Nh3 28. Rg2 Bf1 { 0-1 Black wins. } 29. Nxf1 Qxf3 { [%csl Gf2,Rg2][%cal Gh3f2,Ga7f2,Gf3f2,Gf8f2] } 0-1
+
+
+[Event "PRO Chess League (Knock-Out)"]
+[Site "chess.com INT"]
+[Date "2017.03.26"]
+[Round "5.1"]
+[White "Nicholas Rosenthal"]
+[Black "Magnus Carlsen"]
+[Result "0-1"]
+[WhiteElo "2169"]
+[BlackElo "2838"]
+[Variant "Standard"]
+[ECO "C54"]
+[Opening "Italian Game: Classical Variation, Giuoco Pianissimo, Main Line"]
+[StudyName "EricRosen's Study"]
+[ChapterName "Chapter 6"]
+[ChapterURL "https://lichess.org/study/RQlr8kKe/q9yYNGFU"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. O-O d6 5. d3 Nf6 6. c3 a6 7. h3 Ba7 8. Re1 O-O 9. Bb3 h6 { [%csl Gg5][%cal Gc1g5] } 10. Nbd2 Re8 11. Nf1 Be6 { [%csl Re6][%cal Gc8e6] } 12. Bc2 d5 { [%csl Rc2,Rc1,Gd5] } 13. Ng3 d4 { [%csl Gd4,Ge5,Rc2] } 14. a3 Nd7 { [%csl Gc5,Gf6][%cal Gd7c5,Gd8f6,Gf7f6] } 15. c4 b5 { [%csl Rc4] } 16. b3 Rb8 17. Nd2 Ne7 18. Nf3 Ng6 19. Nh2 bxc4 20. bxc4 c6 { [%csl Ga5][%cal Gd8a5] } 21. Bd2 Bc5 22. Ng4 Be7 { [%csl Gg5][%cal Ge7g5] } 23. Nf5 Bg5 24. g3 h5 25. Nh2 { [%cal Gg5d2] } 25... Bxd2 26. Qxd2 Qf6 27. Bd1 Bxf5 28. exf5 Qxf5 29. Bf3 c5 30. Kg2 Nf6 31. Be4 Nxe4 32. Rxe4 Rb3 33. Nf3 Reb8 34. Ra2 f6 { [%cal Gb8b1] } 35. Qe2 Rc3 36. Nd2 a5 37. Qf1 Qd7 38. Nb1 Rcb3 39. Nd2 R3b6 40. Re1 Qc6+ 41. Kh2 h4 42. Ne4 f5 43. Nd2 Rb2 44. Rea1 e4 45. dxe4 fxe4 46. Qg2 Rxa2 47. Rxa2 Re8 48. Ra1 hxg3+ 49. fxg3 Qe6 50. Re1 e3 51. Nb3 Qxc4 52. Qc6 Qf7 53. Kh1 d3 54. a4 c4 55. Nd4 d2 { [%csl Gd2,Ge3] } 56. Rg1 e2 { 0-1 Black wins. } 0-1
+
+

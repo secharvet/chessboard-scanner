@@ -1,0 +1,18 @@
+[Event "Positions: Chapter 1"]
+[Date "2025.12.17"]
+[Result "*"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Positions"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/opYkjvSY/oooyJsG1"]
+[Annotator "https://lichess.org/@/neelansh2948"]
+[FEN "2rr2k1/1p3pp1/p1n1bn2/4p1Bp/4P2P/Q1Pq1PN1/PK2NbP1/1R3B1R b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.12.17"]
+[UTCTime "00:55:36"]
+
+1... Nd4 2. Nxd4 Qxd4 3. cxd4 Bxd4+ 4. Qc3 Bxc3+ *
+
+

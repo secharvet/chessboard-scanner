@@ -1,0 +1,33 @@
+[Event "french options: 1. french options"]
+[Date "2022.11.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C00"]
+[Opening "French Defense: Orthoschnapp Gambit"]
+[StudyName "french options"]
+[ChapterName "1. french options"]
+[ChapterURL "https://lichess.org/study/zdEErW83/UuKL6sLA"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2022.11.28"]
+[UTCTime "03:17:18"]
+
+1. e4 e6 2. c4 (2. Nf3 { [%csl Gf3] } 2... d5 3. Nc3 (3. e5 c5 4. b4 cxb4 5. a3) 3... Nf6 { [%csl Gf6] } 4. e5 Nfd7 5. d4 c5 6. dxc5) (2. d4 d5 3. Nd2 (3. Nc3) (3. e5)) (2. f4) (2. Qe2) 2... d5 3. cxd5 exd5 4. Qb3 *
+
+
+[Event "french options: sharp kingside wing gambits"]
+[Date "2022.11.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Gibbins-Weidenhagen Gambit"]
+[StudyName "french options"]
+[ChapterName "sharp kingside wing gambits"]
+[ChapterURL "https://lichess.org/study/zdEErW83/Dh5XfQ48"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2022.11.28"]
+[UTCTime "03:20:45"]
+
+{ [%cal Ge2e3] }
+1. d4 (1. e3 d5 2. c4 e6 3. Nc3 Nf6 4. Nf3 Bd6 5. g4) 1... Nf6 2. g4 *
+
+

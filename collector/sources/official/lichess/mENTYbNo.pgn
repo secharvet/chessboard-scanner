@@ -1,0 +1,285 @@
+[Event "Advanced Endgame Tactics: Kasparov Solves It"]
+[Date "2020.10.22"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Advanced Endgame Tactics"]
+[ChapterName "Kasparov Solves It"]
+[ChapterURL "https://lichess.org/study/mENTYbNo/mECO1nTl"]
+[Annotator "https://lichess.org/@/Nightro_G"]
+[FEN "8/5p1p/2R5/1P1r1kp1/2K5/3p4/P4PPP/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.10.22"]
+[UTCTime "23:32:03"]
+[ChapterMode "gamebook"]
+
+1. Kxd5 d2 2. g4+ Kxg4 3. Rc4+ Kf3 4. Rd4 *
+
+
+[Event "Advanced Endgame Tactics: Carlsen's Mating Net"]
+[Date "2020.10.22"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Advanced Endgame Tactics"]
+[ChapterName "Carlsen's Mating Net"]
+[ChapterURL "https://lichess.org/study/mENTYbNo/kFc8Ddkn"]
+[Annotator "https://lichess.org/@/Nightro_G"]
+[FEN "8/r5b1/4R2p/7k/p5p1/4P3/2B2PKP/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.10.22"]
+[UTCTime "23:29:11"]
+[ChapterMode "gamebook"]
+
+1. Kg3 Ra5 2. Bg6+ Kg5 3. f4+ gxf3 4. h4# *
+
+
+[Event "Advanced Endgame Tactics: Knight Escorting Pawn"]
+[Date "2020.10.22"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Advanced Endgame Tactics"]
+[ChapterName "Knight Escorting Pawn"]
+[ChapterURL "https://lichess.org/study/mENTYbNo/tNr6O03U"]
+[Annotator "https://lichess.org/@/Nightro_G"]
+[FEN "5rk1/8/ppR3P1/4pP2/4n1K1/P7/8/8 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.10.22"]
+[UTCTime "23:22:22"]
+[ChapterMode "gamebook"]
+
+1... Nf6+ 2. Kg5 e4 3. Rxb6 e3 4. Rb1 e2 5. Re1 Ne4+ 6. Kf4 Nc3 7. Rc1 Nd1 *
+
+
+[Event "Advanced Endgame Tactics: Ivanchuk's Oversight"]
+[Date "2020.10.27"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Advanced Endgame Tactics"]
+[ChapterName "Ivanchuk's Oversight"]
+[ChapterURL "https://lichess.org/study/mENTYbNo/4dS7UFjB"]
+[Annotator "https://lichess.org/@/Nightro_G"]
+[FEN "2r5/4R3/5ppk/8/r3P1P1/1R4K1/5P2/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.10.27"]
+[UTCTime "21:42:17"]
+[ChapterMode "gamebook"]
+
+1. Kf4 g5+ 2. Kf5 Ra5+ 3. e5 Rxe5+ 4. Kxf6 *
+
+
+[Event "Advanced Endgame Tactics: Black to play and secure the win"]
+[Date "2020.10.27"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Advanced Endgame Tactics"]
+[ChapterName "Black to play and secure the win"]
+[ChapterURL "https://lichess.org/study/mENTYbNo/bP36UmOG"]
+[Annotator "https://lichess.org/@/Nightro_G"]
+[FEN "1b6/8/8/8/3K4/2p2k2/2P5/8 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.10.27"]
+[UTCTime "21:47:35"]
+[ChapterMode "gamebook"]
+
+1... Be5+ 2. Kxe5 Ke3 3. Kd5 Kd2 4. Kc4 Kxc2 *
+
+
+[Event "Advanced Endgame Tactics: Underestimated Mating Chances"]
+[Date "2020.10.22"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Advanced Endgame Tactics"]
+[ChapterName "Underestimated Mating Chances"]
+[ChapterURL "https://lichess.org/study/mENTYbNo/A29ITzIU"]
+[Annotator "https://lichess.org/@/Nightro_G"]
+[FEN "5rk1/7p/3N1p2/1p2pP2/1n6/1r3P1P/5P2/R2R2K1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.10.22"]
+[UTCTime "23:25:39"]
+[ChapterMode "gamebook"]
+
+1. Kh2 Kg7 2. Rg1+ Kh6 3. Rg4 Nc6 4. Rag1 Kh5 5. Rg7 h6 6. Ne4 Rxf3 7. R1g4 { [%csl Gg3][%cal Ge4g3] } *
+
+
+[Event "Advanced Endgame Tactics: Not a Draw!"]
+[Date "2020.10.29"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Advanced Endgame Tactics"]
+[ChapterName "Not a Draw!"]
+[ChapterURL "https://lichess.org/study/mENTYbNo/j68xIzBb"]
+[Annotator "https://lichess.org/@/Nightro_G"]
+[FEN "3k4/8/3N4/P1n5/8/8/8/7K w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.10.29"]
+[UTCTime "23:17:25"]
+[ChapterMode "gamebook"]
+
+1. Nb7+ Nxb7 2. a6 Kc7 3. a7 Kb6 4. a8=Q *
+
+
+[Event "Advanced Endgame Tactics: Lasker - NN 1921"]
+[Date "2020.10.29"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Advanced Endgame Tactics"]
+[ChapterName "Lasker - NN 1921"]
+[ChapterURL "https://lichess.org/study/mENTYbNo/KmZRdkvx"]
+[Annotator "https://lichess.org/@/Nightro_G"]
+[FEN "1k5r/1P2q3/1Q6/7p/6p1/6Pp/2R4P/6K1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.10.29"]
+[UTCTime "23:10:38"]
+[ChapterMode "gamebook"]
+
+1. Rc8+ Rxc8 2. Qa7+ Kxa7 3. bxc8=N+ Kb7 4. Nxe7 *
+
+
+[Event "Advanced Endgame Tactics: Peresipkin - Chekhov 1966"]
+[Date "2020.10.29"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Advanced Endgame Tactics"]
+[ChapterName "Peresipkin - Chekhov 1966"]
+[ChapterURL "https://lichess.org/study/mENTYbNo/UQb0jeuZ"]
+[Annotator "https://lichess.org/@/Nightro_G"]
+[FEN "3R4/ppr1ppk1/2p3pp/2P5/4N3/PP3P1P/1bP2P2/6K1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.10.29"]
+[UTCTime "23:13:12"]
+[ChapterMode "gamebook"]
+
+1. Nd6 exd6 2. cxd6 Rc8 3. Rxc8 *
+
+
+[Event "Advanced Endgame Tactics: Averbakh - Korchnoi 1965"]
+[Date "2020.10.29"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Advanced Endgame Tactics"]
+[ChapterName "Averbakh - Korchnoi 1965"]
+[ChapterURL "https://lichess.org/study/mENTYbNo/Xv58q9XN"]
+[Annotator "https://lichess.org/@/Nightro_G"]
+[FEN "8/5pk1/p3p3/3n4/2r3P1/3N2Pp/PR1KPP2/8 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.10.29"]
+[UTCTime "23:15:40"]
+[ChapterMode "gamebook"]
+
+1... Rc1 2. Nxc1 h2 *
+
+
+[Event "Advanced Endgame Tactics: Goryachinka - Gunina 2019"]
+[Date "2020.10.29"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Advanced Endgame Tactics"]
+[ChapterName "Goryachinka - Gunina 2019"]
+[ChapterURL "https://lichess.org/study/mENTYbNo/82WjAFqq"]
+[Annotator "https://lichess.org/@/Nightro_G"]
+[FEN "8/7P/5p2/R1b2N2/6k1/8/7r/5K2 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.10.29"]
+[UTCTime "23:19:19"]
+[ChapterMode "gamebook"]
+
+1. Nh4 Rxh4 2. Ra4+ Kg5 3. Rxh4 Kxh4 4. h8=Q+ *
+
+
+[Event "Advanced Endgame Tactics: Vidit - Areschenko 2017"]
+[Date "2020.10.29"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Advanced Endgame Tactics"]
+[ChapterName "Vidit - Areschenko 2017"]
+[ChapterURL "https://lichess.org/study/mENTYbNo/Z9S8dhr2"]
+[Annotator "https://lichess.org/@/Nightro_G"]
+[FEN "4qr1k/1R5p/3p4/2b5/1pB1pp2/1P4P1/2P2PKP/3Q4 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.10.29"]
+[UTCTime "23:22:29"]
+[ChapterMode "gamebook"]
+
+1. Rb8 Qxb8 2. Qa1+ Bd4 3. Qxd4+ Rf6 4. Qxf6# *
+
+
+[Event "Advanced Endgame Tactics: Khmelnitsky - Kabatiansky 1989"]
+[Date "2020.10.29"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Advanced Endgame Tactics"]
+[ChapterName "Khmelnitsky - Kabatiansky 1989"]
+[ChapterURL "https://lichess.org/study/mENTYbNo/4moFq44L"]
+[Annotator "https://lichess.org/@/Nightro_G"]
+[FEN "2r3k1/4nppp/Q3p3/8/1P1q4/4N1P1/5PP1/4R1K1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.10.29"]
+[UTCTime "23:23:49"]
+[ChapterMode "gamebook"]
+
+1. Nf5 exf5 2. Qxc8+ Nxc8 3. Re8# *
+
+
+[Event "Advanced Endgame Tactics: Ercole del Rio 1750"]
+[Date "2020.10.29"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Advanced Endgame Tactics"]
+[ChapterName "Ercole del Rio 1750"]
+[ChapterURL "https://lichess.org/study/mENTYbNo/O4P1V3Ve"]
+[Annotator "https://lichess.org/@/Nightro_G"]
+[FEN "k7/pb6/1p1Q4/N4q2/5pr1/8/6PP/3R3K w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.10.29"]
+[UTCTime "23:25:59"]
+[ChapterMode "gamebook"]
+
+1. Qc6 Qc8 2. Rd8 Bxc6 3. Rxc8# *
+
+
+[Event "Advanced Endgame Tactics: Macovi - Mahadevan 2020"]
+[Date "2020.10.29"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Advanced Endgame Tactics"]
+[ChapterName "Macovi - Mahadevan 2020"]
+[ChapterURL "https://lichess.org/study/mENTYbNo/uD89eVHS"]
+[Annotator "https://lichess.org/@/Nightro_G"]
+[FEN "r1r5/1q5k/4p1p1/4Q1Pp/7P/1P6/1P6/1KR1R3 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.10.29"]
+[UTCTime "23:28:17"]
+[ChapterMode "gamebook"]
+
+1... Ra1+ 2. Kxa1 Qa6+ 3. Kb1 Qd3+ 4. Ka2 Ra8+ 5. Qa5 Rxa5# *
+
+

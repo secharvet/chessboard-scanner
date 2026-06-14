@@ -1,0 +1,94 @@
+[Event "Pawn Structures: Introduction"]
+[Date "2025.07.25"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Pawn Structures"]
+[ChapterName "Introduction"]
+[ChapterURL "https://lichess.org/study/6eAdZwnq/MSXRROgO"]
+[Annotator "https://lichess.org/@/StudyAccount0x61"]
+[FEN "8/pp2pppp/3p4/2p5/4P3/3P4/PPP2PPP/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.07.25"]
+[UTCTime "13:32:47"]
+
+{ Good resources:
+Chess Structures by Mauricio Flores Rios
+Free Articles: https://simplifychess.com/pawn-structures/complete-guide-chess-pawn-structures/index.html
+Overview on Wikipedia: https://en.m.wikipedia.org/wiki/Pawn_structure }
+ *
+
+
+[Event "Pawn Structures: d5 Chain"]
+[Date "2025.08.02"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Pawn Structures"]
+[ChapterName "d5 Chain"]
+[ChapterURL "https://lichess.org/study/6eAdZwnq/vYiCkQzR"]
+[Annotator "https://lichess.org/@/StudyAccount0x61"]
+[FEN "8/ppp2ppp/3p4/3Pp3/4P3/8/PPP2PPP/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.08.02"]
+[UTCTime "12:09:29"]
+
+ *
+
+
+[Event "Pawn Structures: e5 Chain"]
+[Date "2025.08.02"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Pawn Structures"]
+[ChapterName "e5 Chain"]
+[ChapterURL "https://lichess.org/study/6eAdZwnq/3w0hVTvt"]
+[Annotator "https://lichess.org/@/StudyAccount0x61"]
+[FEN "8/ppp2ppp/4p3/3pP3/3P4/8/PPP2PPP/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.08.02"]
+[UTCTime "12:08:55"]
+
+ *
+
+
+[Event "Pawn Structures: Isolated Queen Pawn"]
+[Date "2025.07.25"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Pawn Structures"]
+[ChapterName "Isolated Queen Pawn"]
+[ChapterURL "https://lichess.org/study/6eAdZwnq/Cf3yIUoC"]
+[Annotator "https://lichess.org/@/StudyAccount0x61"]
+[FEN "8/pp3ppp/4p3/8/3P4/8/PP3PPP/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.07.25"]
+[UTCTime "13:44:23"]
+
+ *
+
+
+[Event "Pawn Structures: Closed Sicilian"]
+[Date "2025.08.02"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Pawn Structures"]
+[ChapterName "Closed Sicilian"]
+[ChapterURL "https://lichess.org/study/6eAdZwnq/G3R1Lwjl"]
+[Annotator "https://lichess.org/@/StudyAccount0x61"]
+[FEN "8/pp2pppp/3p4/2p5/4P3/3P4/PPP2PPP/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.08.02"]
+[UTCTime "12:10:07"]
+
+ *
+
+

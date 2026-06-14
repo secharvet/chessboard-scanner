@@ -1,0 +1,414 @@
+[Event "endgames: Chapitre : 1"]
+[Date "2025.10.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "endgames"]
+[ChapterName "Chapitre : 1"]
+[ChapterURL "https://lichess.org/study/h67oha2i/Ge0s6bOL"]
+[Annotator "https://lichess.org/@/gettin_better13"]
+[FEN "8/3k4/8/3K4/3P4/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.26"]
+[UTCTime "10:38:39"]
+
+1. Ke5 (1. Kc5 Kc7 2. Kb5 Kb7 3. Kc5 Kc7 4. d5 Kd7 5. d6 Kd8 6. Kc6 Kc8 7. d7+ Kd8 8. Kb7 Kxd7!!) 1... Ke7 { [%csl Gf7] } 2. Kf5 Kf7 { [%cal Gf7g6,Gf7e6] } 3. Ke5 Kg6 4. Ke6 Kg5 5. Ke5 Kg4 6. Ke4 Kg3 7. Ke3 Kh4 8. Kf2 Kg4 9. Kg2 Kf4 10. Kf2 Ke4 11. Ke2 Kxd4 *
+
+
+[Event "endgames: Chapitre : 2"]
+[Date "2025.10.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "endgames"]
+[ChapterName "Chapitre : 2"]
+[ChapterURL "https://lichess.org/study/h67oha2i/N5DFieW9"]
+[Annotator "https://lichess.org/@/gettin_better13"]
+[FEN "8/3k4/8/3K4/3P4/8/8/8 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.26"]
+[UTCTime "10:38:52"]
+
+{ [%cal Gd7e7,Gd5e5,Gd5c6] }
+1... Kc7 (1... Ke7 2. Kc6 Ke6 3. d5+ Ke7 4. d6+ Kd8 5. d7 Ke7 6. Kc7 Ke6 7. d8=Q Kf5 8. Qd6 Ke4 9. Qc5 Kd3 10. Qb4 Ke3 11. Kd6 Kd3 12. Kc5 Ke3 13. Kd5 Kd3 14. Qa3+ Kc2 15. Qh3 Kd2 16. Ke4 Kc2 17. Kd4 Kb2 18. Kc4 Kc2 19. Qg2+ Kb1 20. Kb3 Kc1 21. Qc2#) 2. Kc5 (2. Ke6) *
+
+
+[Event "endgames: Chapitre : 3"]
+[Date "2025.10.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "endgames"]
+[ChapterName "Chapitre : 3"]
+[ChapterURL "https://lichess.org/study/h67oha2i/OZ1srOR7"]
+[Annotator "https://lichess.org/@/gettin_better13"]
+[FEN "8/8/4k3/8/8/8/3P4/3K4 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.26"]
+[UTCTime "10:39:58"]
+
+1. Ke2 Kd6 2. Kd3 Kd5 3. Kc3 Kc5 4. d4+ Kd5 (4... Kd6 5. Kc4 Kc6 6. d5+ Kd7 7. Kd4 Kd6 8. Ke4 Ke7 9. Ke5 Kd8 (9... Kd7 10. d6 Kd8 11. Ke6 Ke8 12. d7+ Kd8 13. Kd6) 10. Kd6) 5. Kd3 *
+
+
+[Event "endgames: Triangulation"]
+[Date "2025.10.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "endgames"]
+[ChapterName "Triangulation"]
+[ChapterURL "https://lichess.org/study/h67oha2i/G3whg3A5"]
+[Annotator "https://lichess.org/@/gettin_better13"]
+[FEN "8/8/8/2k1P3/2p2P2/2K5/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.26"]
+[UTCTime "10:44:19"]
+
+{ [%cal Gc3c2,Gc2d2,Gd2c3] }
+1. Kc2 Kd5 { [%cal Gc2d2] } 2. Kd2 Ke4 { [%cal Ge5e8] } (2... Kc5 3. e6 (3. Kc3 Kd5 4. Kc2 Kc5 5. Kc3 (5. e6 Kd6 6. e7 (6. Kc3) (6. f5 Ke7 { [%csl Ge6,Gf5] } 7. Kc3 Kf6 8. Kxc4 Ke7 9. Kd5 Kf6 { [%cal Gf6e7] } 10. Kd6 Kxf5 11. e7 Kf6 12. e8=Q Kg5 13. Qe6 Kf4 14. Qe5+ Kf3 15. Kd5 Kf2 16. Qe4 Kg3 17. Kd4 Kf2 18. Kd3 Kg3 19. Kd4 Kf2 20. Ke5 Kg3 21. Kf5 Kf2 22. Kg4 (22. Qd3 Kg2 23. Qe3 Kf1 24. Kf4 (24. Qd2 Kg1 25. Qe2 Kh1 26. Kf4 Kg1 27. Kf3 Kh1 28. Qg2#)))))) *
+
+
+[Event "endgames: Chapitre : 5"]
+[Date "2025.10.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "endgames"]
+[ChapterName "Chapitre : 5"]
+[ChapterURL "https://lichess.org/study/h67oha2i/iNpTl8YD"]
+[Annotator "https://lichess.org/@/gettin_better13"]
+[FEN "8/8/8/2k1P3/2p2P2/2K5/8/8 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.26"]
+[UTCTime "10:45:13"]
+
+1... Kd5 2. Kd2 Kd4 { [%cal Ge5e6] } 3. e6 Kd5 4. e7 Kd6 5. e8=Q *
+
+
+[Event "endgames: Chapitre : 6"]
+[Date "2025.10.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "endgames"]
+[ChapterName "Chapitre : 6"]
+[ChapterURL "https://lichess.org/study/h67oha2i/cGkkQEN0"]
+[Annotator "https://lichess.org/@/gettin_better13"]
+[FEN "8/1p1k4/1P6/2PK4/8/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.26"]
+[UTCTime "10:47:41"]
+
+ *
+
+
+[Event "endgames: Chapitre : 7"]
+[Date "2025.10.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "endgames"]
+[ChapterName "Chapitre : 7"]
+[ChapterURL "https://lichess.org/study/h67oha2i/6THgoQEh"]
+[Annotator "https://lichess.org/@/gettin_better13"]
+[FEN "5k2/8/5P1p/4K2P/8/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.26"]
+[UTCTime "10:48:36"]
+
+ *
+
+
+[Event "endgames: Chapitre : 9"]
+[Date "2025.10.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "endgames"]
+[ChapterName "Chapitre : 9"]
+[ChapterURL "https://lichess.org/study/h67oha2i/FSWcsLlz"]
+[Annotator "https://lichess.org/@/gettin_better13"]
+[FEN "8/2k5/8/8/2PK4/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.26"]
+[UTCTime "10:50:02"]
+
+1. Kc5 Kd7 2. Kd5 Kc7 3. c5 Kb7 4. Kd6 Kb8 5. c6 Kc8 6. c7 Kb7 7. Kd7 Kb6 8. c8=Q Kb5 9. Qc6+ Kb4 10. Qd5 Ka3 11. Qd4 Kb3 12. Kd6 Kc2 13. Qe3 Kd1 14. Qf2 Kc1 15. Kd5 Kb1 16. Kd4 Kc1 17. Kd3 Kb1 18. Kc3 Ka1 19. Qb2# *
+
+
+[Event "endgames: Chapitre : 11"]
+[Date "2025.11.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "endgames"]
+[ChapterName "Chapitre : 11"]
+[ChapterURL "https://lichess.org/study/h67oha2i/O1paPgqy"]
+[Annotator "https://lichess.org/@/gettin_better13"]
+[FEN "8/4k3/8/8/8/3PK3/8/8 w - - 2 2"]
+[SetUp "1"]
+[UTCDate "2025.11.12"]
+[UTCTime "17:50:43"]
+
+2. Ke4 Ke6 3. d4 Kd6 4. d5 Kd7 5. Ke5 Ke7 6. d6+ Kd8 7. Ke6 Ke8 8. d7+ Kd8 9. Kd6 *
+
+
+[Event "endgames: Chapitre : 8"]
+[Date "2025.10.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "endgames"]
+[ChapterName "Chapitre : 8"]
+[ChapterURL "https://lichess.org/study/h67oha2i/fq05oQ1n"]
+[Annotator "https://lichess.org/@/gettin_better13"]
+[FEN "8/2k5/8/8/2PK4/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.26"]
+[UTCTime "10:49:24"]
+
+ *
+
+
+[Event "endgames: Chapitre : 13"]
+[Date "2025.11.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "endgames"]
+[ChapterName "Chapitre : 13"]
+[ChapterURL "https://lichess.org/study/h67oha2i/kboHBoJe"]
+[Annotator "https://lichess.org/@/gettin_better13"]
+[FEN "8/8/8/8/5k2/8/2P1P3/3K4 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.11.16"]
+[UTCTime "10:31:26"]
+
+1. Kd2 Ke4 2. c3 Kd5 3. Kd3 Ke5 4. e4 Kd6 5. Kd4 Ke6 6. c4 Kd6 7. c5+ Ke6 8. e5 Kd7 9. Kd5 Kc7 10. c6 Kd8 11. e6 Ke7 12. Ke5 (12. c7 Ke8 13. c8=Q+ Ke7 14. Qd7+ Kf8 15. Qf7#) 12... Kd8 13. Kd6 Ke8 14. c7 Kf8 15. e7+ Kf7 16. Kd7 Kg7 17. e8=Q Kh6 18. c8=Q Kg5 19. Qc6 Kg4 20. Qh5+ Kxh5 21. Qf6 Kg4 22. Qe5 *
+
+
+[Event "endgames: Chapitre : 14"]
+[Date "2025.11.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "endgames"]
+[ChapterName "Chapitre : 14"]
+[ChapterURL "https://lichess.org/study/h67oha2i/tRZ8SkTM"]
+[Annotator "https://lichess.org/@/gettin_better13"]
+[FEN "8/8/8/8/5k2/8/2PP4/3K4 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.11.16"]
+[UTCTime "10:32:03"]
+
+1. d3 Ke3 2. Ke1 Kd4 3. Kd2 Kc5 4. c4 Kd4 5. Kc2 Kc5 6. Kc3 Kd6 7. d4 Kc6 8. d5+ Kc5 9. Kb3 (9. Kd3) 9... Kd4 10. Kb4 Ke5 11. Kb5 Kd6 12. c5+ Kxd5 13. c6 Kd6 14. Kb6 Ke7 15. c7 Kd7 16. Kb7 Ke7 17. c8=Q Kf6 18. Qd7 Kg6 19. Qe6+ Kg5 20. Qe5+ Kg6 21. Kc7 Kf7 22. Kd6 Kg6 23. Ke6 Kh7 24. Qf6 Kg8 25. Ke7 Kh7 26. Qg5 (26. Kf7) 26... Kh8 27. Kf7 Kh7 28. Qg7# *
+
+
+[Event "endgames: Chapitre : 15"]
+[Date "2025.11.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "endgames"]
+[ChapterName "Chapitre : 15"]
+[ChapterURL "https://lichess.org/study/h67oha2i/GL4biqMm"]
+[Annotator "https://lichess.org/@/gettin_better13"]
+[FEN "8/8/8/8/5k2/8/5PP1/4K3 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.11.16"]
+[UTCTime "10:32:48"]
+
+1. g3+ Kg4 2. f3+ *
+
+
+[Event "endgames: Chapitre : 10"]
+[Date "2025.10.26"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "endgames"]
+[ChapterName "Chapitre : 10"]
+[ChapterURL "https://lichess.org/study/h67oha2i/w9ket8ee"]
+[Annotator "https://lichess.org/@/gettin_better13"]
+[FEN "4k3/pppppppp/8/8/8/8/PPPPPPPP/4K3 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.10.26"]
+[UTCTime "10:50:39"]
+
+1. e4 e5 2. c4 Ke7 3. Ke2 Kd6 4. b3 Kc5 5. d3 Kd4 6. Kd2 { [%cal Gd2e3,Gd2c3] } 6... g6 7. b4 f5 8. f3 a6 9. a4 h5 10. h3 (10. h4 { [%cal Gh4g5] }) 10... h4 { [%csl Gc4,Gb4,Ga4] } 11. g4 hxg3 (11... fxg4 12. fxg4) 12. b5 axb5 13. cxb5 g2 14. a5 g1=Q (14... g1=N 15. a6 bxa6 16. bxa6 Kc5 17. a7) 15. a6 { [%csl Gb5,Ga6] } 15... Qe3+ (15... bxa6 16. bxa6 Qg2+ (16... Qg4 17. fxg4 f4 (17... fxg4 18. hxg4 Kc5 19. a7 Kb6 20. a8=Q Kb5 21. Kc3 Kb6 22. Qa6+ Kc5 23. Qc4+ Kb6 24. Qb5+ Ka7 25. Kc4 Ka8 26. Kc5 Ka7 27. Qxd7 Ka8 28. Qxc7 g5 29. Kb6))) 16. Kc2 Qxd3+ 17. Kc1 Qxb5 18. a7 Qa6 19. h4 Qxa7 20. exf5 Kc3 21. fxg6 Qg1# *
+
+
+[Event "endgames: Chapitre : 12"]
+[Date "2025.11.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "endgames"]
+[ChapterName "Chapitre : 12"]
+[ChapterURL "https://lichess.org/study/h67oha2i/X4wx3efR"]
+[Annotator "https://lichess.org/@/gettin_better13"]
+[FEN "2K5/2P1k3/8/8/8/8/1r6/3R4 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.11.16"]
+[UTCTime "10:11:01"]
+
+1. Re1+ Kf6 2. Re4 Kf5 3. Ra4 Rb3 4. Kd7 Rd3+ 5. Kc6 Rc3+ 6. Kb6 Rb3+ 7. Kc5 Rc3+ 8. Rc4 Rxc4+ 9. Kxc4 Ke6 10. c8=Q+ Kd6 11. Qc7+ Ke6 12. Qd6+ Kf7 13. Qe6+ Kg7 14. Kd5 Kh8 15. Kd6 Kg7 16. Kd7 Kh8 17. Ke7 Kg7 18. Qf7+ Kh8 { [%csl Gf7][%cal Gh5g5,Gg5f5] } 19. Kf8 *
+
+
+[Event "endgames: Chapitre : 17"]
+[Date "2025.11.23"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "endgames"]
+[ChapterName "Chapitre : 17"]
+[ChapterURL "https://lichess.org/study/h67oha2i/bkewqfjx"]
+[Annotator "https://lichess.org/@/gettin_better13"]
+[FEN "2R5/2K1k3/2P5/8/8/8/1r6/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.11.23"]
+[UTCTime "11:59:02"]
+
+1. Ra8 Rb1 2. Kc8 Rc1 3. c7 Rc2 4. Ra4 Rb2 5. Re4+ Kf6 6. Kd7 Rd2+ 7. Kc6 Rc2+ 8. Kd6 Rd2+ 9. Kc5 Rc2+ 10. Rc4 Rxc4+ 11. Kxc4 Ke7 12. c8=Q Kf6 13. Qc7 Kg6 14. Qd6+ Kg7 15. Kd5 Kh7 16. Ke5 Kg8 17. Qe7 Kh8 18. Ke6 Kg8 19. Kf6 (19. Qf7+ Kh8 20. Kf6) 19... Kh8 20. Qg7# *
+
+
+[Event "endgames: Chapitre : 16"]
+[Date "2025.11.23"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "endgames"]
+[ChapterName "Chapitre : 16"]
+[ChapterURL "https://lichess.org/study/h67oha2i/T59tCENU"]
+[Annotator "https://lichess.org/@/gettin_better13"]
+[FEN "8/8/8/8/3pk3/8/r7/1R1K4 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.11.23"]
+[UTCTime "10:06:37"]
+
+{ [%csl Gd4,Ge4] }
+1. Rb3 Kd5 (1... d3 { [%cal Gb3b8] } 2. Rb8 Ke3 3. Re8+ Kd4) 2. Rh3 Kc4 3. Rf3 d3 4. Rf8 { [%cal Gc4c3] } 4... Kc3 5. Rc8+ Kd4 6. Rd8+ Kc4 7. Rc8+ { [%cal Gc4d5] } 7... Kd5 8. Rd8+ Kc6 9. Rxd3 *
+
+
+[Event "endgames: Chapitre : 19"]
+[Date "????.??.??"]
+[Black "Cornette-Ipatov 2011"]
+[Result "0-1"]
+[Annotator "Alex"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "endgames"]
+[ChapterName "Chapitre : 19"]
+[ChapterURL "https://lichess.org/study/h67oha2i/Qq34APSx"]
+[FEN "r5k1/5p1p/8/4P1p1/1pp3P1/5P1P/1P6/3R2K1 b - - 0 31"]
+[SetUp "1"]
+
+31... Kf8 { A recap: king centralization is one of the key principles of any
+endgame. In our case, king is heading to the e6-square after which White might
+have problems defending his e5-pawn. } 32. Rc1 Rc8 33. Kf2 c3! { From now on
+White's rook is forced to be passive. White cannot win it, since the pawn
+endgame is lost. } 34. bxc3 bxc3 35. Ke3 Ke7 { Diagram [#] } 36. f4 { It is a wise
+choice for the weaker side to exchange some pawns. } (36. Kd3? Ke6 37. Rxc3 Rxc3+ 38. Kxc3 Kxe5 39. Kd3 Kf4 { and Black wins. }) 36... gxf4+ 37. Kxf4 Ke6 38. Ke4 c2! { Diagram [#] Now White can play only with his king and pawns. White cannot
+win the c-pawn because of the black king's penetration to the kingside. } 39. Kd4 h6! { A useful waiting move. Another important endgame principle is applied in
+this game: \"not being in a hurry.\" It works because any of White's further
+moves might worsen his position. Also, Black is not going to win on the
+queenside where he has the passed pawn. That pawn is just a decoy that deflects
+white pieces. In fact, Black is going to win by penetrating with his king to the
+kingside and picking up the white pawns there $1 } 40. Ke4 (40. h4 { As we can see
+from further variations, this move is not helping: } 40... Rc7! { Another useful
+waiting move } 41. h5 (41. g5 hxg5 42. hxg5 Kf5 43. Kd5 Rd7+ 44. Kc6 Rd2 $19) 41... Rc8! 42. Ke4 Rc4+ 43. Kd3 Kd5 44. g5 hxg5 45. e6 (45. h6 Rh4 46. Rxc2 Rh3+! 47. Ke2 Kxe5 $19) 45... fxe6 46. h6 (46. Rxc2 Rxc2 47. Kxc2 Ke5 48. Kd3 Kf6 49. Ke3 Kg7 $19) 46... Rh4 47. Rxc2 Rh3+ 48. Ke2 Rxh6 $19) 40... Rc4+ 41. Kd3 { White has to give up space and Black uses it for his own king's
+centralization. } 41... Kd5 42. Kd2 (42. Rxc2 { is losing by one tempi $1 } 42... Rxc2 43. Kxc2 Kxe5 44. Kd3 Kf4 45. Kd4 Kg3 46. Ke3 Kxh3 47. Kf3 { Diagram [#] } 47... f6! { if it were Black to move in this position, it would have been a
+theoretical draw $1 } 48. Kf4 Kg2 49. Kf5 Kg3 50. Kxf6 Kxg4 51. Kg6 h5 { and Black
+wins }) 42... Kd4 { Diagram [#] Further improving the position of his king. } 43. e6 (43. Re1 c1=Q+ 44. Rxc1 Rxc1 45. Kxc1 Kxe5 { and Black wins thanks to his
+waiting move f7-f6. }) 43... fxe6 44. h4 Ke5! { The kng is moving to the kingside
+to win a pawn there. } 45. Re1+ Kf4 46. Kc1 { White managed to block the pawn with
+his king and activate his rook, but it is too late. } 46... Kxg4 47. Rxe6 h5 48. Rg6+ Kxh4 49. Rg2 Kh3 50. Rg1 h4 { In this game, we saw a few important endgame
+principles: king centralization, two weaknesses, not being a hurry. and
+supporting a passed pawn with the rook from behind. } 0-1
+
+
+[Event "endgames: TWO WEAKNESSES - Flohr-Vidmar 1936"]
+[Date "????.??.??"]
+[White "TWO WEAKNESSES"]
+[Black "Flohr-Vidmar 1936"]
+[Result "1-0"]
+[Annotator "Alex"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "endgames"]
+[ChapterName "TWO WEAKNESSES - Flohr-Vidmar 1936"]
+[ChapterURL "https://lichess.org/study/h67oha2i/9BjA9ZtD"]
+[FEN "2r2k2/5p1p/p1p3p1/2Rp4/8/1P2PP2/P5PP/5K2 w - - 0 32"]
+[SetUp "1"]
+
+32. Ke2! { First of all, White needs to centralize the king. } (32. Ra5? { Black sacrifices a pawn to activate his rook: } 32... c5! 33. Rxa6 c4 { with excellent chances for a draw. }) (32. b4? { is also not precise: } 32... Ke7 33. Ke2 Kd6 34. Kd3 Rb8!? (34... Kc7!?) 35. a3 Rb5) (32. a4 Ke7 33. a5 (33. b4 Kd6 { [%csl Ga4,Gb4,Ga6,Gc6] })) 32... Ke7 33. Kd3 { [%csl Gc6][%cal Gd3d4] } 33... Kd6 34. Ra5! { [%csl Gd6,Gc8,Gc6,Ga6] } (34. Kd4? { in light of } 34... Rb8 35. Ra5 c5+! 36. Kd3 Rb6) 34... Ra8 35. Kd4 { Black must take into account e3-e4 now. } 35... f5!? 36. b4 { White secures control over the c5 and a5-squares and fixes the weaknesses on a6
+and c6. } (36. e4 fxe4 37. fxe4 dxe4 38. Kxe4 Re8+ 39. Kd4 Re2 40. Rxa6 Rxg2) 36... Rb8? { Black is being too passive. The rook had to be activated
+urgently. } { [%cal Gb8b4] } (36... Kc7! { (/
+Kb6) } 37. Kc5 Kb7 38. Kd6 Re8 39. Ra3 { (with the idea Rc3). Now Black should
+open up the e-file and invade into the 2nd rank with his rook. } 39... g5! (39... f4? { is bad in view of } 40. exf4 Re2 41. g4 { with f4-f5 to follow. Black cannot
+fight against the passed f-pawn because another pawn, on f3, is blocking the
+file from rook attacks. }) (39... d4?! 40. exd4 Re2 41. Rc3 Rxg2 (41... Rd2 42. Rc4) 42. Rxc6 Rxh2 43. a4 g5 44. Rc7+! Kb6 45. Rg7!) 40. g3 (40. Rc3 f4 41. exf4 gxf4 { Black maintains enough counterplay, for example } 42. Rxc6 Rd8+ 43. Kc5 d4 44. Re6 (44. Rb6+ Kc7) 44... d3 45. Re1 (45. Re7+ Kc8 46. Re1 Rg8 47. Rd1 Rxg2 48. Rxd3 (48. a4 d2) 48... Rxa2) 45... Rg8) 40... g4! (40... d4?! 41. exd4 Re2 { is dubious here in view of } 42. Ra5! (42. Rc3 Rxh2 { and
+the c6-pawn is inviolable. }) 42... h6! 43. a4! (43. Rxf5 Rxa2 44. Rf7+ Kb6 45. Rc7 Rxh2 46. Rxc6+ Kb5) 43... Rb2 44. Rxf5 Rxb4 45. Kc5 Rxa4 46. Rf7+ { and
+Black's position is difficult. }) 41. fxg4 (41. f4 Re4 42. Rc3 Rc4 $13) 41... fxg4 42. Rc3 Rf8) 37. a3 Ra8 { The b6-square is perhaps even a worse place for the
+rook than a8. } (37... Rb6?!) 38. e4! { White has achieved the maximum on the
+queenside and cannot improve his position there anymore. Therefore Flohr applies
+a standard method: extending the battlefield $1 After the exchange of the central
+pawns, the white king attacks the kingside while the rook gets full control over
+the 5th rank. } (38. a4? Rb8) 38... fxe4 39. fxe4 dxe4 40. Kxe4 Ra7? { Black
+follows the same fatal policy of passively marking time. } (40... Kc7! 41. h4! (41. Kf4? { gives nothing in view of } 41... Rf8+! 42. Kg3 Kb6) (41. Re5!? Kb6 42. Re7 a5! 43. Rxh7 axb4 44. axb4 Ra4 45. Rg7 Rxb4+ 46. Kf3 Rh4! 47. h3 Rh6 48. Kg4 c5 49. Kg5 Rh8 50. Rxg6+ Kb5 51. Rg7 c4 { / Rc8&lt;=&gt; Levenfish, Smyslov }) 41... Kb6 42. g4 (42. Kf4!?) 42... Rf8 (42... Re8+ 43. Re5) 43. h5 $16 { maintains an
+indisputable advantage; the question is solely whether it is sufficient for a
+win. }) 41. Kf4 { [%cal Gf4h6] } 41... h6 (41... Ra8 42. Kg5 Ra7 43. Kh6 Ke6 44. g4 { / h4-h5$18 }) 42. h4! Ke6 43. Kg4 (43. Rc5 { [%cal Gc5c6,Ge6d6] }) 43... Ra8 44. h5! g5 { [%csl Gh6,Ga6,Gc6] } (44... gxh5+ 45. Kxh5 { [%csl Gh6][%cal Gh5h6] } 45... Rg8 (45... Rh8 46. Rxa6) 46. g4 $18) 45. g3! { White has created and
+fixed a new weakness in Black's camp: the h6-pawn. Prior to returning his king
+to the center, he takes control over the f4-square. } (45. Kf3 { is less accurate
+in view of } 45... Rf8+ 46. Ke4? Rf4+) 45... Ra7 46. Kf3! Ra8 47. Ke4 { [%cal Ge4f5,Ge4d5] } 47... Ra7 48. Kd4 Kd6 49. Ke4 Ke6 50. Re5+! { Now we can appreciate the principle of two
+weaknesses: the black king has to decide which way to go. If he goes to the
+kingside, then White will direct his own king towards the queenside and the
+other way around. } 50... Kd6 (50... Kf6 { then } 51. Rc5 Rc7 52. Ra5 Ra7 53. Kd4 Ke6 54. Kc5 Rd7 55. Rxa6 Rd3 56. Rxc6+ Kf7 57. a4 Rxg3 58. Rxh6 $18) 51. Re8 c5 (51... Re7+ 52. Rxe7 Kxe7 53. Ke5 $18 { is winning }) 52. Rd8+! (52. Rh8 cxb4 (52... Re7+)) 52... Kc6 (52... Kc7 53. Rh8 cxb4 54. Rh7+ (54. axb4 { of course, also
+wins. }) 54... Kb8 55. Rxa7 Kxa7 56. axb4 Kb6 57. Kf5 Kb5 58. Kg6 Kxb4 59. Kxh6 a5 60. Kxg5 a4 61. h6 $18 { Other king retreats lose the c5-pawn. }) 53. Rc8+ Kb6 54. Rxc5 Rh7 { The rook has changed its parking space, but the new one is as
+unattractive as the previous. } 55. Re5 Kc6 56. Re6+ Kb5 57. Kf5 Rf7+ { [%cal Gf5e5] } 58. Rf6 { 1-0 White wins. } { [%cal Gf7f6] } 58... Rxf6+ 59. Kxf6 Ka4 60. Kg6 Kxa3 61. Kxh6 Kxb4 62. Kxg5 a5 63. h6 a4 64. h7 a3 65. h8=Q a2 66. Qb8+ Kc3 67. Qa8 Kb2 68. Qb8+ Ka1 69. Qa8 Kb1 70. Kf4 a1=Q 71. Qb8+ (71. Qxa1+ Kxa1 72. g4 Kb2 73. g5 Kc3 74. g6 Kd4 75. g7 Kd5 76. g8=Q+ Kc6 77. Qe6+ Kb7 78. Ke4 Ka8 79. Kd4 Kb8 80. Kc5 Ka8 81. Kb6 Kb8 82. Qd7 Ka8 83. Qb7#) 1-0
+
+
+[Event "endgames: ROOK BEHIND THE PASSED PAWN - Alekhine-Capablanca 1927"]
+[Date "????.??.??"]
+[White "ROOK BEHIND THE PASSED PAWN"]
+[Black "Alekhine-Capablanca 1927"]
+[Result "1-0"]
+[Annotator "Alex"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "endgames"]
+[ChapterName "ROOK BEHIND THE PASSED PAWN - Alekhine-Capablanca 1927"]
+[ChapterURL "https://lichess.org/study/h67oha2i/GXAphFxw"]
+[FEN "8/5pk1/r5pp/P7/3R3P/6P1/5PK1/8 w - - 0 1"]
+[SetUp "1"]
+
+1. Ra4! { Now the black rook is forced to remain passive on the a-file and keep
+blocking the white pawn. } 1... Kf6 2. Kf3! { King centralization $1 White cannot
+win without bringing in the king. It is nice how all principles work together $1 } 2... Ke5 3. Ke3 h5 4. Kd3 Kd5 5. Kc3 Kc5 6. Ra2! { The best square for the rook.
+It supports the a-pawn and protects the f2-pawn. } 6... Kb5 7. Kd4 Rd6+ 8. Ke5 { Introducing principle #3 a bit too early: the principle of two weaknesses.
+Black has one weakness on the queenside. That is White's passed pawn. However,
+it is not enough to win. So White tries to create the second weakness on the
+kingside using the fact that the black king needs to block the a-pawn. } 8... Re6+ 9. Kf4 Ka6 10. Kg5 Re5+ 11. Kh6 Rf5 12. f4?! { Better 12.Kg7 $1 Rf3 13.Kg8 $1
+Rf6 14.f4 Rf5 15.Kg7 and White wins (Alekhine). } (12. Kg7! Rf3 13. Kg8! Rf6 14. f4 Rf5 15. Kg7 $18) 12... Rc5! 13. Ra3 Rc7 14. Kg7 Rd7 15. f5 gxf5 16. Kh6 f4 17. gxf4 Rd5 18. Kg7 Rf5 19. Ra4 Kb5 20. Re4! Ka6 21. Kh6! Rxa5 22. Re5 Ra1 23. Kxh5 Rg1 24. Rg5! Rh1 25. Rf5 Kb6 26. Rxf7 Kc6 27. Re7! { 1-0 White wins. } 27... Kd6 1-0
+
+

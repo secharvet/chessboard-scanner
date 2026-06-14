@@ -1,0 +1,41 @@
+[Event "Washington International 2012"]
+[Site "Rockville USA"]
+[Date "2012.07.29"]
+[Round "4"]
+[White "Rosen, Eric S"]
+[Black "Rozman, Levy"]
+[Result "*"]
+[WhiteElo "2328"]
+[WhiteTitle "FM"]
+[BlackElo "2200"]
+[Variant "Standard"]
+[ECO "D45"]
+[Opening "Semi-Slav Defense: Stoltz Variation"]
+[StudyName "World Cup 2021 |Best Games"]
+[ChapterName "Rosen, Eric S - Rozman, Levy"]
+[ChapterURL "https://lichess.org/study/4pHR1roN/BsY3Msaz"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. c4 c6 2. Nc3 d5 3. e3 Nf6 4. Nf3 e6 5. d4 Nbd7 6. Qc2 Bd6 7. b3 O-O 8. Bb2 Re8 (8... e5 9. Be2 e4 10. Nd2 Re8 (10... h5 11. O-O-O b5) 11. g4 Nf8) 9. Be2 b6 (9... e5) 10. O-O Bb7 11. Rfe1 { [%csl Gb7,Gb2] } 11... Rc8 12. Rad1 Qc7 13. h3 a6 14. Qb1 Rcd8 15. Bd3 c5 16. cxd5 exd5 17. Bc2 h6 18. Rc1 Qb8 19. Red1 c4 20. a4 Ba8 21. Ne2 b5 22. Qa2 Rc8 23. Bf5 g6 24. Bb1 Bc6 25. axb5 axb5 26. Qa5 Qa8 (26... b4 27. bxc4 dxc4 28. Rxc4 Bxf3 (28... Qb7) 29. Rc7 (29. Rxc8 Rxc8 30. gxf3 Qb7)) 27. Qe1 b4 28. bxc4 dxc4 29. Rxc4 Bxf3 30. Rxc8 Rxc8 31. gxf3 Qxf3 32. Qf1 Nb6 33. Bd3 Na4 34. Rb1 Ne4 (34... Nxb2 35. Rxb2 Ra8 (35... Nd5 { [%csl Gd5][%cal Gf6d5] } 36. Qg2 Rc1+ (36... Qxe2 37. Bxe2 Rc1+) 37. Nxc1 (37. Qf1 Qxe2 38. Bxe2) 37... Qd1+ 38. Qf1 Bh2+ 39. Kxh2 { [%csl Gf1][%cal Gd3f1] }) 36. Qg2 { [%csl Ga1] } (36. Rb1 Ra5 { [%csl Gg5][%cal Ga5g5] } 37. Qg2 Rg5 38. Ng3)) 35. Qg2 Ng5 36. h4 { [%csl Gf1,Rc1][%cal Ga4b2,Gb1b2,Gg5h2,Gg1f1,Gc8c1,Ge2c1,Gf3d1] } 36... Qxg2+ 37. Kxg2 Ne6 38. Bb5 Nxb2 39. Rxb2 Rc7 40. e4 h5 41. e5 Be7 42. d5 Rc5 43. Bc6 Nd8 44. Rxb4 { 1/2-1/2 The game is a draw. } *
+
+
+[Event "World Cup 2021"]
+[Site "Sochi"]
+[Date "2021.07.12"]
+[Round "1.24"]
+[White "Andersen Mads (DEN)"]
+[Black "Salinas Herrera Pablo (CHI)"]
+[Result "0-1"]
+[WhiteElo "2579"]
+[BlackElo "2514"]
+[Annotator "https://lichess.org/@/broadcaster"]
+[Variant "Standard"]
+[ECO "A11"]
+[Opening "Réti Opening: Anglo-Slav Variation, Gurevich System"]
+[StudyName "World Cup 2021 |Best Games"]
+[ChapterName "Andersen Mads (DEN) - Salinas Herrera Pablo (CHI)"]
+[ChapterURL "https://lichess.org/study/4pHR1roN/WBHJ3OKk"]
+
+1. Nf3 { [%clk 1:30:53] } 1... d5 { [%clk 1:30:51] } 2. e3 { [%clk 1:31:14] } 2... Nf6 { [%clk 1:30:03] } 3. c4 { [%clk 1:31:33] } 3... c6 { [%clk 1:30:17] } 4. Nc3 { [%clk 1:31:20] } 4... e6 { [%csl Gd2] [%clk 1:30:41] } 5. b3 { [%clk 1:31:08] } 5... Bd6 { [%clk 1:30:03] } 6. d4 { [%clk 1:30:49] } 6... O-O { [%clk 1:29:59] } 7. Qc2 { [%clk 1:28:29] } 7... Nbd7 { [%clk 1:30:16] } 8. Be2 { [%clk 1:28:42] } 8... b6 { [%clk 1:30:37] } 9. O-O { [%clk 1:28:48] } 9... Bb7 { [%clk 1:31:00] } 10. Bb2 { [%clk 1:29:07] } 10... Qe7 { [%clk 1:31:24] } 11. Rad1 { [%clk 1:29:13] } 11... Rad8 { [%clk 1:31:48] } 12. Rfe1 { [%clk 1:29:34] } 12... Rfe8 { [%clk 1:32:13] } 13. Bf1 { [%clk 1:29:32] } 13... c5 { [%clk 1:18:40] } 14. cxd5 { [%clk 1:29:13] } 14... exd5 { [%clk 1:19:04] } 15. g3 { [%clk 1:27:41] } 15... Rc8 { [%clk 1:14:25] } 16. Bh3 { [%clk 1:25:05] } 16... cxd4 { [%clk 1:04:53] } 17. Nxd4 { [%clk 1:19:38] } 17... Bb4 { [%csl Rc2,Rc3,Ge4][%cal Gc8c2,Rc2c3,Rb2c3,Gf6e4] [%clk 1:05:11] } 18. Nde2 { [%clk 0:45:43] } 18... Ne4 { [%clk 1:01:20] } 19. a3 { [%csl Re8,Re7,Ge4,Rf2][%cal Ge8e1,Rg1f2] [%clk 0:36:11] } 19... Nxf2 { [%clk 0:58:54] } 20. axb4 { [%clk 0:21:16] } (20. Kxf2 Qxe3+ 21. Kf1 Qf3+ 22. Kg1 Bc5+ { [%csl Gd4] } 23. Nd4 Rxe1+ 24. Rxe1 Bxd4+) 20... Nxh3+ { [%clk 0:56:07] } 21. Kf1 { [%clk 0:21:40] } 21... Qxe3 { [%clk 0:56:17] } 22. Qf5 { [%clk 0:21:35] } 22... Nf6 { [%csl Gf6] [%clk 0:37:03] } 23. Bc1 { [%csl Re3][%cal Gc1e3] [%clk 0:07:15] } (23. Qxh3 Qf3+ 24. Kg1 Ng4 25. Rf1 Qe3+ { [%csl Rg2,Rh1][%cal Gg1g2,Gg1h1,Gb7h1] } 26. Kg2 d4+) 23... Ng4 { [%csl Re3][%cal Gc1e3] [%clk 0:36:20] } 24. Rd3 { [%clk 0:03:27] } (24. Bxe3 Nxe3# { [%csl Gf1,Gf2,Gg1,Gg2][%cal Ge3f1,Gh3g1,Ge3g2] }) (24. Qxg4 { [%csl Gf2] } 24... Qf2# { [%cal Gf2f1] }) 24... d4 { [%clk 0:36:11] } 25. Red1 { [%clk 0:02:47] } (25. Bxe3 Nxh2# { [%csl Rg2,Rf2,Rg1,Rf1][%cal Gb7g2,Gh3f2,Gh3g1,Gh2f1] }) 25... Qg1+ { [%clk 0:36:26] } 26. Nxg1 { [%clk 0:03:07] } 26... Nxh2# { [%csl Gh3,Gh2] [%clk 0:36:51] } 0-1
+
+

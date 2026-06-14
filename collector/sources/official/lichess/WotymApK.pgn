@@ -1,0 +1,481 @@
+[Event "Winning attempts for white in the Bg5 Sicilian Najdorf: Introduction"]
+[Date "2021.05.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B94"]
+[Opening "Sicilian Defense: Najdorf Variation"]
+[StudyName "Winning attempts for white in the Bg5 Sicilian Najdorf"]
+[ChapterName "Introduction"]
+[ChapterURL "https://lichess.org/study/WotymApK/C5CsFCoT"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[UTCDate "2021.05.14"]
+[UTCTime "21:59:44"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 { This study will be a deep exploration from the white side of the Najdorf. I would caution lower rated (probably even me included), aka <2200 lichess, away from learning these lines because people won't necessarily play them against you. Much more important is learning the ideas for white than the specific moves. } 6. Bg5 { Black has 2 main tries here: e6 and Nbd7, which will be explored throughout this study } *
+
+
+[Event "Winning attempts for white in the Bg5 Sicilian Najdorf: 6...Nbd7 Bc4"]
+[Date "2021.05.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B94"]
+[Opening "Sicilian Defense: Najdorf Variation"]
+[StudyName "Winning attempts for white in the Bg5 Sicilian Najdorf"]
+[ChapterName "6...Nbd7 Bc4"]
+[ChapterURL "https://lichess.org/study/WotymApK/73aK1pyE"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[UTCDate "2021.05.14"]
+[UTCTime "23:30:26"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bg5 Nbd7 { I have determined that this is a tough nut to crack. In many lines, black is not obliged to play e6, "wasting a tempo," and can instead focus on hitting the center and/or quickly getting their knight to c5. I'm attaching two chapters that follow to show my point. For any players out there who play the black side of the Najdorf, those lines are my recommendation. } 7. Bc4!? (7. Qe2!? { Also interesting, and should be further explored... the idea of f4 and O-O-O is still on the cards, albeit with a slightly odd queen placement. }) 7... Qb6 (7... e6 8. O-O Qb6 (8... Qa5 9. f4! Qc5? 10. Bb3 e5? { While it appears like this move is winning a piece, it actually is a huge blunder! } 11. fxe5 dxe5 12. Qh5!! g6 13. Qh4 { Grandelius, N. - Olszewski, Mi, 1-0, Bundesliga 2017-18, 2018, https://lichess.org/2ZAG1rh9 } 13... Be7 14. Rxf6 Nxf6 15. Bxf6 Bxf6 16. Qxf6 O-O 17. Nd5 Qxd4+ 18. Kh1 Re8 19. Rf1 $18) (8... Qc7? 9. Bxe6 fxe6 10. Nxe6 Qc4 11. Nd5 Nxd5 12. exd5 $16 { Sometimes all you need is an open e file. } { [%cal Gd1f3,Gf1e1,Gd1h5] }) 9. Qd2 h6 (9... Qxb2?? 10. Bxe6 $18 { Whenever black gets greedy, we can take on e6. }) 10. Be3 Qc7 (10... Qxb2?? 11. Bxe6 $18) 11. Bxe6!? fxe6 12. Nxe6 Qb8 13. f4 Kf7 14. Rae1 Kxe6 15. Bd4 Kf7 16. e5 $13) (7... Qa5?! 8. Qd2 e6 9. O-O-O { Play similar to the main line, but the queen is not necessarily better placed on a5. }) (7... b5? 8. Bd5! Nxd5 9. Nxd5 { [%cal Gd4c6] } 9... Bb7 10. a4 $16) (7... Qc7?! { Threatens the bishop, but brings you closer to the optimal setup: } 8. Qe2 b5 9. Bb3 e6!? (9... Nc5? 10. Bxf6 gxf6 11. Nd5 $16 { Practically the dream setup. }) 10. O-O-O { The stage is set for sacrifices on e6, d5, or f5. } 10... Be7? (10... Nc5?! 11. Rhe1 Nxb3+ 12. axb3 Bb7 13. Bxf6! gxf6 14. Nd5! $16) (10... b4!? 11. Nd5 $14) (10... Bb7!? 11. Rhe1 $16 { Good luck finding a move here as black that doesn't allow Bxe6, Nd5, or Nf5. } (11. Bxe6?! $14)) 11. Bxe6! $16) 8. Bb3 (8. O-O!? { Wei Yi - Van Wely, L., 1-0, 79th Tata Steel GpA, 2017, https://lichess.org/8M8rM9Wb } { I won't be going this route, but GM Jacob Aagaard thinks that if there is a refutation to this line, it's 8. O-O. }) 8... e6 9. Bxf6! { White takes the knight on f6 unprovoked in order to distract the d7 knight from its ultimate destination at c5 as in the normal Fischer-Sozin attack. } (9. Qd2?! Be7 10. O-O-O Nc5 $10 { Black gets what they want here... }) 9... Nxf6 (9... gxf6?? 10. Bxe6! fxe6 11. Qh5+ Ke7 12. Nxe6!! Kxe6 13. Qe8+ Be7 14. Qxh8 $18) 10. Qd2 Be7 (10... Nd7! 11. O-O-O Nc5 12. Kb1 Bd7 13. f4 { White quickly plays for f5 to attack the e6 pawn and possibly isolate the d pawn, and Nxb3 axb3 doesn't help black's situation. SF 13 seems to think that there's still an advantage for white here, although with best play it seems to simply be a playable middlegame for both sides. } 13... O-O-O 14. f5 $10) (10... Bd7!? { See the next chapter for this line }) 11. O-O-O Bd7!? { Delaying kingside castling for a few more moves is best. You don't want to commit the king to the kingside when white has a huge attack brewing. } (11... O-O!? 12. f4 Qc7!? (12... Bd7!? 13. e5! $14 { The other thematic push works instead. } (13. g4?! Nxg4! $14)) 13. g4! $14 { This pawn sacrifice just makes sense once black has committed to castling kingside. }) 12. f4 Qc5 13. g4 $14 { Not the only move, but certainly the most principled. White has play similar to the mainline Najdorf, except black's play is slightly slower. White should have a slight advantage, and the pawn is not going to be a good one to take. } 13... Nxg4?! (13... O-O-O 14. g5 Ne8 15. Kb1 $14) 14. Rhg1 Nf6 (14... e5 15. fxe5 dxe5 16. Nf5 Bxf5 (16... O-O-O 17. Nxe7+ Qxe7 18. Qe2 $16) 17. exf5 Nf6 18. Rxg7 Rf8 $18) 15. Rg5! (15. Rxg7 { Probably easier, but why give black anything? }) 15... e5 (15... Qc7 16. Rxg7 $16) 16. fxe5 dxe5 17. Nf3 Qc7 18. Rxg7 (18. Bxf7+!? Kxf7 19. Nxe5+ Ke8 { A bit unclear - no need to risk it in such a good position. }) 18... O-O-O 19. Qe3 $16 *
+
+
+[Event "Winning attempts for white in the Bg5 Sicilian Najdorf: 6...Nbd7 Bc4 with black castling queenside"]
+[Date "2021.05.15"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B94"]
+[Opening "Sicilian Defense: Najdorf Variation"]
+[StudyName "Winning attempts for white in the Bg5 Sicilian Najdorf"]
+[ChapterName "6...Nbd7 Bc4 with black castling queenside"]
+[ChapterURL "https://lichess.org/study/WotymApK/Qet0Zf0R"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[UTCDate "2021.05.15"]
+[UTCTime "00:11:40"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bg5 Nbd7 7. Bc4 Qb6 8. Bb3 e6 9. Bxf6 Nxf6 10. Qd2 Bd7 11. O-O-O O-O-O 12. Rhe1 Kb8 (12... Be7?! 13. f4 $14 (13. Kb1!? $14)) 13. Kb1 h5 14. h3! { Stopping Bg4 as in the other line } (14. f4?! d5! 15. exd5 exd5 16. Nxd5 Nxd5 17. Bxd5 Bg4 18. Bf3 Bxf3 19. gxf3 $10) 14... h4 15. f4 d5 16. exd5 exd5 17. Re5 $14 { White can focus on the isolated pawn and take it at a time when it doesn't activate black's bishop pair. } *
+
+
+[Event "Winning attempts for white in the Bg5 Sicilian Najdorf: 6...Nbd7 f4 mainline (black advantage)"]
+[Date "2021.05.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B94"]
+[Opening "Sicilian Defense: Najdorf Variation"]
+[StudyName "Winning attempts for white in the Bg5 Sicilian Najdorf"]
+[ChapterName "6...Nbd7 f4 mainline (black advantage)"]
+[ChapterURL "https://lichess.org/study/WotymApK/RQPN8lRR"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[UTCDate "2021.05.14"]
+[UTCTime "23:15:55"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bg5 Nbd7 7. f4?! { After all the following analysis, I'm convinced that black's position is healthier than white's because of how strong h6+g5 is. I recommend Bc4 instead. } (7. Bc4!? { See the other chapters for a deeper understanding of this move. }) (7. Qe2!? { Unexplored by me, but there have been some great games in this position as well. }) 7... Qc7 8. Qf3 h6 9. Bxf6 { Important to take on f6 here, because white's pieces are misplaced if black wants to play the g5 pawn sacrifice } (9. Bh4?! g5 10. fxg5 hxg5 11. Bxg5 Qc5! { [%cal Gc5g5] } 12. Be3 Ne5 13. Qe2 Neg4 14. Bg1 Bh6 $15) 9... Nxf6 10. f5! { White stops Bg4 and takes further control of the center now that the knight cannot quickly reach the e5 hole } (10. O-O-O?? Bg4) 10... Qc5 11. O-O-O g5!? 12. fxg6 Bg4 13. gxf7+ Kxf7 14. Qd3 Bxd1 15. Nxd1 Bg7 16. Qb3+ d5 17. Nf5 Nxe4 18. Bd3 Nf6 19. Re1 Rhe8 20. Nh4 Kg8 21. Bg6 e6 22. Bxe8 Rxe8 23. Qxb7 { Best play. White doesn't really have enough here for an advantage } *
+
+
+[Event "Winning attempts for white in the Bg5 Sicilian Najdorf: 6...Nbd7 f4 Poisoned Pawn (black advantage)"]
+[Date "2021.05.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B94"]
+[Opening "Sicilian Defense: Najdorf Variation"]
+[StudyName "Winning attempts for white in the Bg5 Sicilian Najdorf"]
+[ChapterName "6...Nbd7 f4 Poisoned Pawn (black advantage)"]
+[ChapterURL "https://lichess.org/study/WotymApK/aBOruB69"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[UTCDate "2021.05.14"]
+[UTCTime "22:53:48"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bg5 Nbd7 7. f4?! { More analysis on showing why I don't believe in this move. } 7... e5 (7... Qc7 8. Qf3 h6 9. Bxf6 Nxf6 10. f5!) (7... h6 8. Bxf6 Nxf6) (7... Qb6 8. Qd2 Qxb2? { This move order is inaccurate, because black will not get in e5 now. } (8... e5 { Transposes to the mainline }) 9. Rb1 Qa3 10. Bxf6! Nxf6 11. e5 dxe5 12. fxe5 Nd7?? (12... Ng4 13. Nd5 Qc5 14. Nb3 Qc6 15. Qa5 b6 16. Nd4! $16 { [%cal Gd5c7] }) 13. Nd5! { Black cannot prevent Nc7+ now } { [%csl Gc7] } 13... Qc5 14. Nb3 Qc6 15. Na5 Qc5 16. Nxb7 Bxb7 17. Rxb7 Rc8 18. Bxa6 $18) 8. Nf5 Qb6 { A rare poisoned pawn variation, but one that is a serious try for black. The knight on f5 is temporarily good, but can get kicked back at any point if white plays inaccurately. } 9. Qd2 Qxb2 10. Rb1 Qa3 11. Be2 h6 (11... exf4 12. Bxf4 Ne5 13. Rb3 Qc5 14. Be3 Qc6 15. Rb6 Qc7 16. O-O (16. Nxd6+!? Bxd6 17. Rxd6 Be6 18. Bb6 Qe7 19. O-O O-O 20. Rd1 $10) 16... Bxf5 17. exf5 d5!? 18. Rxf6 gxf6 19. Nxd5 O-O-O 20. Nxc7 Rxd2 21. Bxd2 Bc5+ 22. Kh1 Kxc7 { White has the bishop pair and a slightly better pawn structure, and can hopefully massage a win here. }) 12. Bh4 exf4 13. O-O { [%csl Gf4][%cal Gf1f4] } 13... g6 14. Rxf4 g5! (14... gxf5?? 15. Rxf5 b5 16. Rb3 Qa5 17. Qf4 { Black's queen is a lot more misplaced on a5 than on the usual square: c5 } { [%cal Gf5f6] }) 15. Rb3 Qa5 16. Nxd6+ Bxd6 17. Qxd6 gxf4 18. Ra3 Qb6+ 19. Qxb6 Nxb6 20. Bxf6 Rg8 21. Rb3 Nd7 22. Nd5 { While this forced line is technically equal, white has a lot of compensation for the exchange, and black is still under the gun for a while unless they give back the exchange soon. With best play, this should definitely be a draw though... } *
+
+
+[Event "Winning attempts for white in the Bg5 Sicilian Najdorf: Browne variation"]
+[Date "2021.05.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B98"]
+[Opening "Sicilian Defense: Najdorf Variation"]
+[StudyName "Winning attempts for white in the Bg5 Sicilian Najdorf"]
+[ChapterName "Browne variation"]
+[ChapterURL "https://lichess.org/study/WotymApK/0tBSnmhh"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[UTCDate "2021.05.14"]
+[UTCTime "22:02:21"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bg5 e6 7. f4 Be7 8. Qf3 h6 { Entering the Browne variation } (8... Qc7 9. O-O-O Nbd7 10. g4 { I play something different against this move order, so it won't transpose. See: chapters on the main line }) 9. Bh4 Nbd7 (9... Qc7 10. O-O-O Nbd7 { Transposes to the mainline }) (9... e5?! 10. Nf5 Bxf5 (10... exf4?? 11. Nxe7 Qxe7 12. Nd5 $18) 11. exf5 $14) 10. O-O-O Qc7 11. Be2! { Not the only try, but the one I'm deeply exploring. It's important to counter black's "threat" of sacrificing a pawn with g5! in order to get the e5 square for their knight. From here, black has 4 serious tries that will be explored further in the next chapters. } (11. g4? g5! 12. fxg5 Ne5 13. Qg3 Nfxg4 $15) 11... g5? 12. fxg5 Ne5 13. Qe3 Nfg4 (13... Nh7?! 14. Nf3 Nxf3) 14. Bxg4 Nxg4 15. Qd2 $16 { Here black doesn't have compensation for the pawn, and will quickly come under an attack on the f file such as in the following unforced line. } 15... Rg8 16. Nf3 hxg5 17. Bxg5 Bxg5 18. Nxg5 Bd7 19. Rhf1 Ne5 20. Qf4 O-O-O 21. Nxf7 Rdf8?? 22. Nxd6+ Qxd6 23. Rxd6 Rxf4 24. Rxf4 $18 *
+
+
+[Event "Winning attempts for white in the Bg5 Sicilian Najdorf: Browne variation 11...b5"]
+[Date "2021.05.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B98"]
+[Opening "Sicilian Defense: Najdorf Variation"]
+[StudyName "Winning attempts for white in the Bg5 Sicilian Najdorf"]
+[ChapterName "Browne variation 11...b5"]
+[ChapterURL "https://lichess.org/study/WotymApK/0CxwHmqo"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[UTCDate "2021.05.14"]
+[UTCTime "22:08:55"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bg5 e6 7. f4 Be7 8. Qf3 h6 9. Bh4 Nbd7 10. O-O-O Qc7 11. Be2 b5 12. Bxf6! { An important move! We take this knight out immediately in order to distract the knight from defending the e5 pawn break } (12. e5?! Bb7 13. Qg3? { The usual queen remaneuver drops an important center pawn. } 13... dxe5 14. fxe5 Qxe5 $17) 12... Nxf6 (12... Bxf6?? 13. e5! dxe5 (13... Bb7 14. Ndxb5!! axb5 15. Nxb5 Qb8 (15... Bxf3?? 16. Nxc7+ Kd8 17. Bxf3 Rxa2 18. Kb1! $18) 16. Qxb7! Qxb7 17. Nxd6+ $18 { [%cal Gd6b7,Gd6e8] }) 14. Ndxb5!! axb5 15. Nxb5 (15. Qxa8 { Also winning, but the main line is more solid. }) 15... Qa5 16. Qxa8 Qxa8 17. Nc7+ Ke7 18. Nxa8 Bb7 19. Bb5 { [%csl Gd7] } 19... Rd8 20. Bxd7 Rxd7 21. Nb6 $18) 13. e5 { The main winning attempt } 13... Bb7 (13... Nd5?? 14. Nxd5 exd5 15. e6 Bxe6 16. Nxe6 fxe6 17. Qg4 $18 { [%cal Gg4g7,Gg4e6] }) 14. Qg3 { This queen maneuver now successfully defends the center } 14... dxe5 (14... Nd5 15. Nxd5 Bxd5 16. Qxg7 $16) 15. fxe5 Nd5 (15... Ne4 { A rare sideline, but one that still requires extreme precision: } 16. Nxe6! Qxc3!! 17. Nxg7+ Kf8 18. Ne6+ Ke8 (18... fxe6?? 19. Rhf1+ $18) 19. Qxc3 Nxc3 20. Nc7+ Kf8 21. bxc3 Rc8 22. Nd5 $14 { Black can once again hope to transition to an opposite color bishop endgame here too, but it should be a worse version for black than the mainline. } { Azarov, Sergei - Cernousek, Lukas, 1-0, CZE-chT 0809, 2009, https://lichess.org/Z7EqlZqr }) (15... Nd7?? 16. Nxe6 fxe6 17. Qg6+ Kd8 18. Qxe6 Re8 19. Qg6 Bg5+ (19... Qxe5?? 20. Qb6+ Kc8 21. Rxd7 Kxd7 22. Bg4+ Qf5 23. Bxf5#) 20. Kb1 $18 { Also should be crushing for white because black's king is exposed in the center. }) 16. Nxe6!! { White has to act quickly or will be over-run on the queenside. } 16... fxe6 17. Qg6+ Kd7 (17... Kf8?? 18. Rhf1+ $18 Kg8 19. Qf7+ Kh7 20. Bd3#) (17... Kd8?? 18. Qxe6 $18 { [%cal Gd1d8] }) 18. Nxd5!? { I am recommending an extremely spicy try for white here. Instead of transitioning into an opposite color bishop (+rook) endgame up a pawn, we can sacrifice an entire rook here and have full compensation. With best play, it's probably still a draw, but white is in the driver seat and black needs to find only moves throughout to avoid immediate death. } (18. Bg4 Qxe5 19. Nxd5 Qg5+ 20. Qxg5 Bxg5+ 21. Kb1 Bxd5 22. Rxd5+ { This endgame is extremely difficult to win because of the opposite color bishops. However, white has the upper hand as this e6 pawn will fall. } { Fleetwood, Daniel M - Stalmach, Kamil, 1-0, MT-Muir/A (USA), 2012, https://lichess.org/rWHDP1gz }) 18... exd5 { Forced. } (18... Bxd5?? 19. Bg4! { And Rxd5 followed by Rd1 will win the queen in basically every line. } 19... Qxe5 (19... Qc6? $18 { Transposes to the Qxe5 line here but black is down an extra pawn. }) 20. Rxd5+ Qxd5 21. Rd1 Bg5+ 22. Kb1 Bd2 23. Bxe6+ Qxe6 24. Rxd2+ Ke7 25. Qxg7+ Ke8 26. Qxh8+ $18) (18... Qxe5?? 19. Nb6+ Kc6 20. Nxa8 Qg5+ 21. Qxg5 Bxg5+ 22. Kb1 Bxa8 23. Bf3+ $18) 19. Bg4+ Kd8 20. Qe6 { The threat is Rxd5+, winning. } 20... Qc6 (20... Bg5+! 21. Kb1 Qe7 22. Qb6+ Qc7 (22... Ke8?? 23. Rhf1 h5 24. Bf5 { [%cal Gf5g6] } 24... Rh6 25. Bg6+ Rxg6 26. Qxg6+ Kd8 27. Rf7 $18 { Or black can lose by force. }) 23. Qe6 Qe7 $10 { Sadly, there is a draw here by force if black finds it... }) 21. Rxd5+! { White sacrifices the rook anyway! } 21... Qxd5 22. Rd1 Bg5+ 23. Kb1 Bd2 (23... Qxd1+ 24. Bxd1 $16 { One try for black. However, with the exposed king, it's pretty clear that white has the winning chances here until black can (if ever) coordinate the rooks and find king safety. }) 24. Qb6+ Ke8 (24... Ke7?? 25. Qc7+ Kf8 26. e6 $18 { And amazingly, black cannot defend the f7 square. }) 25. Bf3! Qxe5 26. Qxb7 { The threat is Bh5+ as well as taking the free rook on a8. Black must tread extremely carefully... } { [%csl Ga8] } 26... Rd8 (26... Rb8?? 27. Bh5+! Qxh5 28. Qxb8+ Ke7 29. Qc7+ Ke6 30. Rxd2 $18) 27. Rf1! { Stopping the king from finding safety! } 27... Rd4 (27... Bf4!? 28. g3 { Moving the bishop anywhere gets mated immediately } 28... Be3?? (28... Kf8 29. gxf4 Qf6 30. Re1 { White can play on here, but with best play black should be able to sacrifice back the exchange and equalize. }) 29. Bc6+! Rd7 30. Qxd7#) 28. Qc8+ Ke7 (28... Rd8?? 29. Bh5+ g6 (29... Qxh5?? 30. Qe6#) 30. Bxg6+ Ke7 31. Rf7+ Kd6 32. Qxa6+ Kd5 33. Qxb5+ Kd6 34. Qb6+ Kd5 35. Qb7+ Kc5 36. Rc7+ Kd6 (36... Kd4 37. Qb6+ Qc5 38. Qxc5#) 37. Qc6#) 29. Qxh8 Rd8 30. Qh7 Bg5 31. Qe4 Qxe4 32. Bxe4 $14 { White is up a pawn but black has real drawing chances here with the opposite color bishops } *
+
+
+[Event "Winning attempts for white in the Bg5 Sicilian Najdorf: Browne variation 11...Rb8"]
+[Date "2021.05.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B98"]
+[Opening "Sicilian Defense: Najdorf Variation"]
+[StudyName "Winning attempts for white in the Bg5 Sicilian Najdorf"]
+[ChapterName "Browne variation 11...Rb8"]
+[ChapterURL "https://lichess.org/study/WotymApK/0UjAq2JP"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[UTCDate "2021.05.14"]
+[UTCTime "22:25:26"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bg5 e6 7. f4 Be7 8. Qf3 h6 9. Bh4 Nbd7 10. O-O-O Qc7 11. Be2 Rb8 12. Qg3! { An important move. We once again stop g5, put pressure on the g7 pawn, and in some lines prepare the thematic e5 break. } 12... O-O (12... Rg8? { The main move here at the pro level is a blunder, and is not played any longer. } 13. Rhf1 (13. Nxe6 { Also completely winning, and equally sharp. } 13... fxe6 14. Qg6+ Kf8 15. Rhf1) 13... g5 14. fxg5 Ne5 (14... hxg5 15. Bxg5 Ne5 16. h4 $16) 15. Nf3 hxg5 16. Bxg5 Nxf3 17. Bxf3 Nd7 18. Bxe7 Rxg3 19. Bxd6 Qxd6 20. Rxd6 Rg8 $18) (12... Kf8? $18 { As long as you don't get greedy looking for a knockout, this is already over. }) (12... b5? 13. Qxg7 Rg8 14. Qxh6 $16) 13. Bf3 { White can calmly build up an attack on the king now that we know where he will reside. Normal attacking moves are sufficient here. } { [%cal Gh1e1,Ge4e5] } 13... Nb6 14. Rhe1 Bd7 (14... Nc4 15. e5 dxe5 16. fxe5 Ne8 17. Bxe7 Qxe7 18. Re4 $16 { [%cal Ge4g4,Gg4h4] }) 15. e5 dxe5 16. fxe5 Nfd5 17. Bxe7 Nxe7 18. Ne4 $16 { Stronger central control, more active pieces, and the knight and rook on the b file are obviously misplaced. } { [%cal Ge4d6] } *
+
+
+[Event "Winning attempts for white in the Bg5 Sicilian Najdorf: Browne variation 11...O-O"]
+[Date "2021.05.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B98"]
+[Opening "Sicilian Defense: Najdorf Variation"]
+[StudyName "Winning attempts for white in the Bg5 Sicilian Najdorf"]
+[ChapterName "Browne variation 11...O-O"]
+[ChapterURL "https://lichess.org/study/WotymApK/T2Mwv3B7"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[UTCDate "2021.05.14"]
+[UTCTime "22:33:44"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bg5 e6 7. f4 Be7 8. Qf3 h6 9. Bh4 Nbd7 10. O-O-O Qc7 11. Be2 O-O 12. Qg3 { Again we go for our Qg3 maneuver, preparing an eventual e5. } (12. g4!? { A super interesting alternative as well: white gets on with their kingside attack. } 12... b5 13. a3 Bb7 14. g5 Nh7 $14 { Salimova, Nurgyul - Ratsma, Rosa, 1-0, 30th Czech Open A 2019, https://lichess.org/HG6kMHCh } (14... hxg5?! 15. Bxg5 b4 16. axb4 a5 17. b5 $16)) 12... Nc5 (12... b5?! 13. Bf3 { [%cal Gf3a8] } 13... Bb7?? 14. e5 dxe5 15. fxe5 Nxe5 (15... Bxf3 16. exf6 Qxg3 17. Bxg3 Bxd1 18. fxe7 Rfe8 19. Rxd1 $18) 16. Bxb7 Nh5 17. Qe1 Bxh4 18. Qxh4 Qxb7 19. Qxh5 $18) 13. e5! { Not the most popular move, and one with poor win-rates, but this basically transitions into a french, where white retains most of their attacking prospects. } (13. Bf3 { Given the chance, white will break with e5 and have a great game, but black can strike first and equalize: } 13... e5! 14. fxe5 dxe5 15. Nf5 Bxf5 16. exf5 Rac8 17. Rhe1 Na4 $10) 13... Nfe4 14. Nxe4 Nxe4 15. Qf3 (15. Qe3?! Nc3!! 16. Bxe7 Nxd1! 17. exd6 Qxe7 18. dxe7 Nxe3 19. exf8=Q+ Kxf8 $14 { Not as convincing as the easy attack white gets in the main line. }) 15... d5 (15... Bxh4 16. Qxe4 $14 { Similar to the mainline, but with more pieces on the board, favoring white - the attacker. }) (15... dxe5 16. Qxe4 exd4 17. Bxe7 Qxe7 18. Rxd4 $14 { This is the main way black has played this position, but it's clear white is the one with the more active pieces and potential attack. }) 16. Bxe7 Qxe7 17. Bd3 { It's a French where black has committed to h6. Normal attacking ideas in the French directly apply to this position as well. For instance: } 17... Nc5 (17... f5?? 18. g4! $18) 18. Qe3 Nxd3+ 19. Rxd3 b5 20. g4 $16 *
+
+
+[Event "Winning attempts for white in the Bg5 Sicilian Najdorf: Browne variation 11...Rg8"]
+[Date "2021.05.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B98"]
+[Opening "Sicilian Defense: Najdorf Variation"]
+[StudyName "Winning attempts for white in the Bg5 Sicilian Najdorf"]
+[ChapterName "Browne variation 11...Rg8"]
+[ChapterURL "https://lichess.org/study/WotymApK/gE2j7pxI"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[UTCDate "2021.05.14"]
+[UTCTime "22:43:43"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bg5 e6 7. f4 Be7 8. Qf3 h6 9. Bh4 Nbd7 10. O-O-O Qc7 11. Be2 Rg8? { Honestly, a mistake, bore out by years of theory and modern engines. White can play similarly to the Rb8 line, but things are even better here... } 12. Rhf1 g5 13. Bg3! (13. fxg5 Ne5 14. Qe3 hxg5 15. Bg3 { Also good, but black has their share of play. }) 13... gxf4 (13... b5!? 14. e5 Bb7 15. Qd3 dxe5 (15... Nc5!? 16. Qe3 dxe5 17. fxe5 Nd5 18. Nxd5 Bxd5 19. Bf3 O-O-O 20. Bxd5 Rxd5 21. Rxf7 $18) 16. Nxe6!! fxe6 17. fxe5 Nd5 (17... Nxe5?? 18. Bxe5 Qxe5 19. Bh5+! Kf8 (19... Nxh5?? 20. Qd7#) 20. Qh7 Rg7 21. Qh8+ Rg8 22. Qxh6+ Rg7 23. Rde1 { [%cal Gf1f6] } 23... Qd4 24. Ne4! Bxe4 25. Rxe4 Qxe4 26. Qh8+ Rg8 27. Rxf6+ Bxf6 28. Qxf6#) 18. Qh7 O-O-O { Black has to abandon the bishop or get killed in the center. } (18... Nxc3?? 19. Qxg8+ Bf8 20. Qf7+ Kd8 21. Qxf8# { [%cal Gd1d8] }) (18... Rf8?? 19. Qg6+ Kd8 20. Qxe6 Rxf1 21. Rxf1 $18 Nxc3?? 22. Qg8+ Bf8 23. Rxf8+ Nxf8 24. Qxf8+ Kd7 25. Bg4+ Kc6 26. Qf6+ Kc5 27. bxc3 $18 { [%cal Gg3f2] }) 19. Nxd5 Bxd5 20. Qxe7 $16) 14. Qxf4 $16 { White avoids Ne5 gaining a tempo on the queen and therefore has a terrific attack. Black has to bail out with only losing a pawn or get completely steamrolled. } 14... Qc5 (14... Ne5? 15. Qxh6 Rg6 16. Qh8+ Rg8 17. Qh4 Ng6 18. Qh6 Rh8 19. Qe3 $18 { Nb5 is the threat - breaking through to d6 and the black king. }) (14... e5?! 15. Nd5! Nxd5?? (15... exf4 16. Nxc7+ Kd8 17. Nxa8 fxg3 18. h4 $18 { Our knight on a8 is getting out. }) 16. Qxf7+ Kd8 17. Ne6#) 15. Qxh6 Qg5+ 16. Qxg5 Rxg5 $16 *
+
+
+[Event "Winning attempts for white in the Bg5 Sicilian Najdorf: Browne feint"]
+[Date "2024.04.06"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B96"]
+[Opening "Sicilian Defense: Najdorf Variation"]
+[StudyName "Winning attempts for white in the Bg5 Sicilian Najdorf"]
+[ChapterName "Browne feint"]
+[ChapterURL "https://lichess.org/study/WotymApK/rtu1Ml7g"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[UTCDate "2024.04.06"]
+[UTCTime "20:28:04"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bg5 e6 7. f4 h6 8. Bh4 Nbd7!? { Can still transition into the proper Browne variation if black continues with Be7, Qc7, etc. So to have a consistent repertoire we should still play Qf3. } 9. Qf3 (9. Qe2!? { Objectively the best move from 2024 theory though. Avoids the main issues with this whole variation. But now we're not following chapters 6-10... }) 9... e5! { Black feints going into the Browne. Instead, we get a mess instantly. This move only works because the knight on e5 hits our queen, and g5 is coming to trap our bishop. } (9... Be7!? 10. O-O-O Qc7 11. Be2! { Transposing to the Browne variation. }) (9... Qc7!? 10. O-O-O Be7 11. Be2! { Transposing to the Browne variation. }) 10. Nf5 exf4 (10... Qc7?! 11. O-O-O $16) 11. Bxf6 Nxf6 12. O-O-O! { An improvement on Qxf4. } (12. Qxf4?! g6! 13. Ne3 h5! $10 { Amazingly, black's bishop pair will come to life here even though black has been moving pawns nearly every move. White has nothing and is in fact risking getting killed by the two bishops. https://lichess.org/5jZXqtwH/white#26 } { [%cal Gf8h6] }) 12... Bxf5 (12... g5?? 13. e5! Bxf5 14. exf6 $16 { Black will actually be punished for their sins on the open e file. }) (12... g6?? 13. e5!! Bxf5 14. exf6 $16 { Black will actually be punished for their sins on the open e file. }) 13. exf5 Be7 14. h4! { Probably the most precise way to play this. All Bg5 tricks are stopped forever. Moreover, the Rxc3 idea can now be handled with Rh3! } (14. Qxf4!? Rc8 $10 { The threat of Rxc3 is annoying. }) 14... Rc8 { If the queen leaves the defense of c3, Black has Rxc3, with complete equality. } (14... O-O 15. Qxf4 Rc8 16. Rh3!? $10 { Transposes to the main line. } (16. Bc4!? $10 { Perunovic, Milos - Tadic, Branko, 1-0, SRB-ch, 2007, https://lichess.org/AbA9HPsz } { Perhaps another way to play as well. If the bishop lands on b3, Rxc3 is no longer damaging. })) 15. Rh3! O-O 16. Qxf4 $10 { White needs to be on the lookout for Rxc3, b5-b4, and Qc7 lining up on c2. A typical opposite sides castling position where black is not worse. } { [%cal Gg2g4] } *
+
+
+[Event "Winning attempts for white in the Bg5 Sicilian Najdorf: Argentine gambit"]
+[Date "2021.05.15"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B98"]
+[Opening "Sicilian Defense: Najdorf Variation, Goteborg Variation"]
+[StudyName "Winning attempts for white in the Bg5 Sicilian Najdorf"]
+[ChapterName "Argentine gambit"]
+[ChapterURL "https://lichess.org/study/WotymApK/x7fUpmXw"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[UTCDate "2021.05.15"]
+[UTCTime "00:27:32"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bg5 e6 7. f4 h6 { A rare move, but one that can easily transpose back into the main line } 8. Bh4 Be7 (8... g5? { Too early } 9. fxg5 Nfd7?? 10. Nxe6 fxe6 11. Qh5+ Ke7 12. gxh6+ $18 Nf6 13. Bxf6+ Kxf6 14. Qh4+ Kf7 15. Qxd8) 9. Qf3 g5?! { This interesting pawn sacrifice was tried by 3 Argetinian GMs (including Miguel Najdorf himself) simultaneously in the 1955 Interzonal tournament against the Soviet team. All three soviets won. } 10. fxg5 Nfd7 11. Qh5! { The modern approved refutation } (11. Nxe6? fxe6 12. Qh5+ Kf8 13. Bb5 { An infamous line that Fischer himself proved to be equal with this sneaky move: } 13... Rh7! $10) 11... Ne5 (11... Bxg5?? 12. Bxg5 Qxg5 13. Nxe6 Qxh5 14. Ng7+ Ke7 15. Nxh5 $18) 12. Bg3 Bxg5 13. Nf3 Nbd7 (13... Nxf3+ 14. Qxf3 Nc6 (14... Qb6 15. h4 Qe3+ 16. Qxe3 Bxe3 17. Bxd6 $16) 15. h4 Bf6 (15... Nd4? 16. Qd3 Bf6 17. O-O-O $16) 16. O-O-O $16) (13... Nbc6?! { Blocking the LSB forever can't be best } 14. Nxg5 Qxg5 15. Be2 b5 16. O-O Bb7 (16... b4 17. Na4 Bb7 18. Rad1 O-O-O 19. Bf4 Qxh5 20. Bxh5 $16 { In this sample line, it's clear white's bishop pair rules the board. }) 17. Rad1 $16) 14. Nxg5 Qxg5 15. Qd1 (15. Be2?! b5 16. O-O b4 17. Na4?! Bb7 $15 { In this variation, the b7 bishop is quite active. }) 15... h5!? (15... b5?! 16. Qxd6 Bb7 $16 { With Qc7 coming next, there are simply too many dark squared weaknesses. }) 16. Be2 h4 17. Bf2 Qxg2 18. Rg1 Qxh2 19. Qd4 { If white can castle queenside and maintain the queens, the attack rages on. } 19... Qf4 20. Be3 Qf6 21. Qxd6 Qe7 22. Qd4 $16 { White will castle queenside next and retain a serious initiative. Practically, this position is great for white, but black has dominant control over the e5 square so it will still take some effort to win. } *
+
+
+[Event "Winning attempts for white in the Bg5 Sicilian Najdorf: Polugaevsky variation"]
+[Date "2021.05.15"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B96"]
+[Opening "Sicilian Defense: Najdorf Variation, Polugaevsky Variation"]
+[StudyName "Winning attempts for white in the Bg5 Sicilian Najdorf"]
+[ChapterName "Polugaevsky variation"]
+[ChapterURL "https://lichess.org/study/WotymApK/CYz9RCXa"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[UTCDate "2021.05.15"]
+[UTCTime "02:17:44"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bg5 e6 7. f4 b5 { Black doesn't stop e5? We play it. } 8. e5 dxe5 9. fxe5 Qc7! { The point of the opening: Black goes for Qe5+ to win our undefended g5 bishop } (9... h6? 10. Bh4 g5 11. exf6 gxh4 12. Qf3! $18 { [%cal Gf3a8] }) 10. exf6 Qe5+ 11. Be2 Qxg5 12. O-O Ra7! { An odd, but only move! Avoids Bf3 with tempo. } (12... Bb7?? 13. Bf3 Qe3+ 14. Kh1 Bxf3 15. Rxf3 Qe5 16. Nxe6! fxe6 (16... Qxe6? 17. Nd5 $18 { [%cal Gd5c7,Gf3e3] }) 17. f7+ Ke7 18. Qf1!! { Getting out of the way of the other rook coming to the important e file, and avoids a potential loss of tempo with Rd8. } 18... Nd7 19. Re1 Qc5 20. Rfe3 e5 21. Qf5 $18 { [%cal Ge3e5] }) (12... Bd6?? 13. Nxe6 $18 { [%cal Gd1d6] } 13... Qe3+ (13... Qe5!? 14. Nxg7+ Kf8 15. g3 $18) 14. Kh1 Qxe6 15. fxg7 Rg8 16. Re1 $18 { [%cal Re1e8] }) (12... Nd7?? 13. Bf3! Ra7 14. Bc6 Bc5 15. Ne4 Qe3+ 16. Kh1 Qxd4 17. fxg7! Qxg7 (17... Rg8? 18. Nf6+ Kd8 19. Qxd4 Bxd4 20. Nxg8 $18) 18. Nxc5 Qe5 19. Nd3 $18) (12... Qe5?? 13. Kh1! Ra7 14. Nf3 Qxf6 15. a4 Bc5 (15... b4?? 16. Ne4 Qg6 17. Nd6+ Bxd6 18. Qxd6 { [%csl Gb8] } 18... Nd7 19. Rad1 $18) 16. Ne4 Qe7 17. Nxc5 Qxc5 18. axb5 O-O (18... axb5?? 19. Rxa7 Qxa7 20. Qd6! $18 { [%cal Rd6b8,Bd6f8] }) 19. Qd4 Qxd4 20. Nxd4 Rd7 21. Nc6 Nxc6 22. bxc6 Rd6 23. Bf3 $16 { White is up a solid connected passed pawn and should go on to win this }) (12... Qe3+? { Inserting this check and trying to get back to main lines is a recipe for disaster: } 13. Kh1 Ra7?? 14. Nf5! exf5 15. Bxb5+ axb5 16. Re1 $18) 13. Qd3 Rd7 14. Ne4 Qe5 (14... Qd5? 15. c3 e5 16. fxg7 Bxg7 17. Qg3 $18) (14... Qg6?! 15. Bf3 Bb7 (15... e5? 16. Qc3 { [%cal Gc3c8] } 16... Bb7 17. Rae1 $18) 16. Qc3! Bxe4 17. Rae1! { Preparing Qc8+ and Rxe6+, crushing. } 17... Bxf3?? 18. Qc8+ Rd8 19. Rxe6+ fxe6 20. Qxe6+ Be7 21. Qxe7#) 15. Nf3! Rxd3 (15... Qxb2? 16. Qe3 Bb7 17. Rab1 Qxc2!? (17... Qxa2!? 18. Kh1 Bxe4 19. Qxe4 Qd5 20. Qf4 { [%cal Gf4b8] } 20... Bd6 21. fxg7! Rg8 22. Qh6 Qf5 23. Bd3 { [%cal Gd3h7] } 23... Bf4! 24. Qh4 Rxd3 25. cxd3 Rxg7 26. Rfc1! Bxc1 27. Rxc1 $18 { [%cal Gc1c8,Gc1c7] }) 18. Nfg5 Qc7 19. a4 b4 20. Rxb4!! Bxb4 21. fxg7 Rg8 22. Nf6+ Kd8 23. Nxg8 $18 Bc5?? 24. Nxe6+!! fxe6 25. Rf8+ Bxf8 26. gxf8=Q#) (15... Qc7!? { The other alternative trades queens and leaves black with a sad endgame: } 16. Qe3 Qa7 (16... Bb7?! { The last try for a "game," but white is better after the simple } 17. a4 b4 18. Kh1 $14 { After which all of the thematic moves (Rae1, Nfg5, fxg7) start to become threats. }) 17. Qxa7 Rxa7 18. a4 $14) 16. Nxe5 Rd4 (16... Re3? 17. fxg7! Bxg7 18. Nd6+ Ke7 19. Nxc8+ Rxc8 20. Rxf7+ Kd6 21. Rxg7 $16) 17. fxg7 Bxg7 18. Nxf7 O-O! (18... Rf8? 19. c3! $16) (18... Rxe4?? 19. Nd6+ $18) 19. Nfg5 Rxf1+ (19... h6?! 20. Rxf8+ Kxf8 21. c3 Ra4 22. Nd6 $16 { [%cal Rd6c8] }) 20. Kxf1! (20. Rxf1?! h6 21. c3 Ra4 { Black has a tempo to attack our undefended a pawn }) 20... h6 21. c3 Ra4 22. Nd6 hxg5 (22... Bd7 23. Nge4 Bc6 24. Bf3 Nd7 25. a3 $14) 23. Nxc8 Rf4+ 24. Kg1 $14 { White must avoid trading down into an opposite color bishop ending, but otherwise could have enough to win this one. } *
+
+
+[Event "Winning attempts for white in the Bg5 Sicilian Najdorf: 7...Nc6"]
+[Date "2021.05.15"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B96"]
+[Opening "Sicilian Defense: Najdorf Variation, Neo-Classical Defense"]
+[StudyName "Winning attempts for white in the Bg5 Sicilian Najdorf"]
+[ChapterName "7...Nc6"]
+[ChapterURL "https://lichess.org/study/WotymApK/8MmY4gRO"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[UTCDate "2021.05.15"]
+[UTCTime "00:44:56"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bg5 e6 7. f4 Nc6? 8. Nxc6 bxc6 9. e5 { This priyome of exchanging on c6 and playing e5 will occur in many lines where black play Nc6 instead of the typical Nbd7. Here especially, black is already in trouble. } 9... h6 (9... dxe5?! 10. Qxd8+ Kxd8 11. fxe5 h6 12. Bh4 g5 13. O-O-O+ Kc7 14. Bg3 Nd5 15. Ne4 $18 { Positionally winning here too. }) 10. Bh4 g5 11. fxg5 Nd5 12. Ne4 Qb6 (12... dxe5 13. Nf6+! Nxf6 14. Qxd8+ Kxd8 15. gxf6 $16) 13. c3! { By pre-empting any checks, white threatens to play g6! and crash through to the centralized black king. } 13... dxe5!? (13... Qe3+!? 14. Qe2 Qxe2+ 15. Bxe2 dxe5 16. g6 f5 17. Nf6+ Nxf6 18. Bxf6 Rg8 19. O-O-O Be7 (19... Rxg6?? 20. Bh5 $18) 20. Bxe5 $18 { Even without the queens, white's dark squared bishop remains king } { [%cal Gg8g6,Ge2h5] }) (13... Qxb2?? 14. g6 fxg6 15. Rb1 Qxa2 16. Bf2 dxe5 17. Bd3 Be7 18. O-O O-O 19. Ra1 Qb2 20. Qg4 Kg7 21. Rfb1 $18 { Black's queen is trapped and his king remains unsafe. }) (13... hxg5? 14. Bxg5 Be7 15. Bxe7 Kxe7 16. exd6+ Kd7 $16) 14. g6! fxg6 15. Bf2 { Prevents Qe3+ and tempts black into once again taking the poisoned b2 pawn } 15... c5 (15... Qxb2? { Transposing to the previous line } 16. Rb1 Qa3 17. Bc4 Be7 (17... Nxc3?? { The following is one of many ways that this goes badly for black. } 18. Qg4! Nxb1 19. Qxg6+ Kd7 20. O-O { [%csl Gd7] } 20... Nc3 21. Qxe6+ Kc7 22. Qxe5+ Bd6 23. Nxd6 Qxd6 24. Qa5+ Kd7 25. Qxc3 $18) 18. Qg4 { [%cal Gg4g6] } 18... Nf4 19. g3 h5 20. Qf3 Nd5 21. O-O Rf8 22. Qd3 $18) 16. Qg4 Nf4 (16... Qxb2?? 17. Qxg6+ Ke7 18. Rd1 $18 { [%cal Gf2h4] }) 17. O-O-O Be7 18. Be3 Qc6 19. Bd3 h5! (19... Nxd3+?? 20. Rxd3 Rg8 21. Bxc5 Bxc5 22. Nf6+ Kf7 23. Nxg8 Kxg8 24. Qxg6+ Kh8 25. Rd8+ $18) 20. Qf3 Bb7 21. Bxf4 exf4 $16 { Markus, Roland - Wosch, Arkadiusz, 1/2-1/2, FICGS__CHESS__CLASS_M__000070, 2014, https://lichess.org/HehMXlwc } *
+
+
+[Event "Winning attempts for white in the Bg5 Sicilian Najdorf: 7...Qc7"]
+[Date "2021.05.15"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B96"]
+[Opening "Sicilian Defense: Najdorf Variation"]
+[StudyName "Winning attempts for white in the Bg5 Sicilian Najdorf"]
+[ChapterName "7...Qc7"]
+[ChapterURL "https://lichess.org/study/WotymApK/zrROWSBq"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[UTCDate "2021.05.15"]
+[UTCTime "00:58:11"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bg5 e6 7. f4 Qc7 8. Bxf6 gxf6 { We reach a Rauzer structure, where white continues in the normal Richter-Rauzer manner. } 9. Qf3 b5 10. a3 Nc6 (10... Be7?! 11. O-O-O Nc6 12. Nxc6 Qxc6 13. Be2 Bd7 14. f5 O-O-O 15. Rd3 $16 { [%cal Gf3h5,Gh1d1] }) 11. Nxc6 Qxc6 12. O-O-O Rb8! (12... Bb7?! 13. f5! $16 { Always an important move to pressure the central light squares }) (12... f5!? 13. Qd3 Bh6 14. Kb1 Bxf4 15. exf5 Be5 16. Be2 { [%cal Ge2f3] } 16... Rb8 17. Bf3 Qc4 18. Qe3 b4 19. Qa7! { [%csl Gb8] } 19... d5 20. Nxd5! Rb7 21. Nf6+ Bxf6 22. Bxb7 $18) 13. f5 b4!? (13... Qc5!? 14. Rd3! b4 15. axb4 Qxb4 16. Nd1 $10) 14. axb4 Rxb4 15. fxe6 fxe6 16. Qxf6 Rg8 17. Be2 $14 { Black has an impressive amount of counterplay, but with Bh5+ and Rhf1 on the cards, white will be playing against black's central king. } *
+
+
+[Event "Winning attempts for white in the Bg5 Sicilian Najdorf: Main line deviations"]
+[Date "2021.05.15"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B99"]
+[Opening "Sicilian Defense: Najdorf Variation, Main Line"]
+[StudyName "Winning attempts for white in the Bg5 Sicilian Najdorf"]
+[ChapterName "Main line deviations"]
+[ChapterURL "https://lichess.org/study/WotymApK/UqxgSGzS"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[UTCDate "2021.05.15"]
+[UTCTime "01:04:49"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bg5 e6 (6... Qb6? 7. Bxf6 Qxb2?? (7... gxf6 8. Nd5 Qxb2?? 9. Rb1 Qxa2 10. Ra1 Qb2 11. Bb5+! $18) 8. Nd5 $18) 7. f4 Be7 { These moves can transpose. White continues the same in every variation. } (7... Nbd7 8. Qf3 Qc7 (8... h6 9. Bh4 Qc7 10. O-O-O Be7 { Transposing to the Browne variation }) 9. O-O-O Be7 { Transposing to the main line } (9... b5 { Transposing to the Anand variation })) (7... Bd7?! 8. Qf3 Nc6 9. O-O-O Nxd4 10. Rxd4 Qb6 11. Bxf6 gxf6 12. Rd3 $14 { With play similar to the Richter-Rauzer. }) 8. Qf3 Qc7 (8... Nbd7 9. O-O-O Qc7 { Transposing to the main line }) 9. O-O-O Nbd7 (9... Nc6?! 10. Nxc6 bxc6 11. e5 dxe5 12. fxe5 Nd5 (12... Qxe5?? 13. Qxc6+ $18) 13. Bxe7 Nxe7 14. Ne4 O-O (14... Qxe5?? 15. Nd6+) 15. Qg3 Nf5 16. Qf4 $14 { White has a great attack } { [%cal Gf1d3,Gd1f1] }) (9... O-O!? { A rare move, but since black has not weakened their kingside with a rash move like h6 before committing the king, it's objectively not bad. } 10. Bd3! (10. g4?! b5 11. Bxf6 Bxf6! 12. g5 Bxd4 13. Rxd4 Nc6 $15 { The usual play is too slow here because black has not committed the queenside knight. }) 10... b5? (10... Nc6!? 11. Nxc6 bxc6 12. h4 h6?? (12... Rb8! $14) 13. g4 $18 { A classic fishing pole attack. Black cannot open the h file without getting mated. }) 11. e5! Bb7?? (11... dxe5 12. Ndxb5 $16 { The usual priyome works here with the rook hanging on a8. }) 12. Qh3 $18 { [%cal Gh3h7,Gd3h7,Gg5e7] }) (9... b5?? 10. e5 Bb7 11. Qg3 Nh5 (11... Nfd7?? 12. Bxe7 Kxe7 13. Ndxb5 $18 { [%cal Ge5d6] }) (11... dxe5 12. fxe5 Ne4 13. Nxe4 Bxe4 14. Bxe7 Qxe7 15. Qxg7 $18) 12. Qg4! { Either the knight is trapped on h5 or Nxe6 will crush black in the center. } 12... g6? (12... Bxg5 13. Qxg5 O-O 14. Qxh5 $18) 13. Nxe6 fxe6 14. exd6 Bxd6 15. Qxe6+ Be7 16. Bxb5+ axb5 17. Nxb5 Qc5 18. Nd6+ Qxd6 19. Rxd6 $18) 10. g4 b5 (10... h6!? { Transposing to the Giri variation }) (10... O-O? 11. Bh4! { White gets in g5 without trading any pieces. The kingside attack is too quick. } { [%cal Gg4g5] } (11. Bxf6? Bxf6 12. g5 Bxd4 13. Rxd4 $10)) 11. Bxf6! { White trades off the bishop in order to gain a subsequent tempo with g5! } 11... Bxf6?! (11... Nxf6 { The main line } 12. g5 Nd7 13. f5 Ne5? 14. Qg3 b4 15. Nce2 $16 { White has a great position after Bg2, Nf4, etc with a lot of pressure on the central light squares (f5, e6, d5). }) (11... gxf6? 12. f5 Ne5 13. Qh3 { Again we reach a Rauzer structure, but both knights will quickly pressure the e6 square, so black's center cannot be maintained. } 13... O-O!? { Fischer's move from 1957 } (13... b4 14. Nce2 $16 { [%cal Ge2f4,Gf4e6] }) 14. Nce2 Kh8 15. Nf4 Rg8 16. Be2! { The improvement. Now d5 is stopped. } 16... Qb7 (16... d5?! 17. fxe6 $16) 17. Rhe1 Qxe4 18. Qf1 Qb7 19. fxe6 fxe6 20. Ndxe6 $16) 12. Bxb5! Rb8! { The more interesting try. Black has sacrificed a pawn for queenside play. } (12... axb5?? 13. Ndxb5 Qc6!? (13... Qb6 14. Nxd6+ Ke7 15. e5 $18) (13... Qb8 14. Nxd6+ Ke7 15. e5 $18) 14. Rxd6! { The only line in which Rxd6 is necessary. Notice how in every line we're playing e5 hitting the bishop and undefended rook on a8. Since black defends the long diagonal with Qc6, we have to first kick the queen out in order to get the same crushing attack to work out. } 14... Qc5 (14... Qb7!? 15. Rxe6+! { [%cal Gb5d6] } 15... Kf8 16. Nd6! $18 { [%cal Ge6e8,Gd6b7] }) 15. e5 $18 { [%cal Gf6e7,Gf3a8] }) (12... Bxd4? 13. Bxd7+ Bxd7 14. Rxd4 $16) 13. Bxd7+ Bxd7 14. Nde2 O-O (14... Qb6!? 15. b3 $14) (14... g5!? 15. e5! Bc6 16. Ne4 Bxe4 (16... dxe5?? 17. Nxf6+ Ke7 18. Qh3 exf4 19. Rhf1 Kxf6?? 20. Qh6+ Ke7 21. Qxg5+ $18) 17. Qxe4 $16) 15. g5 Be7 (15... Bxc3?! 16. Nxc3 Qb6 17. b3 Qb4 18. Kb2 $18 { White's attack is much scarier than black's. A sample line could be: } 18... a5 19. a3 Qc5 20. h4 a4 21. b4 Rfc8 22. Rh3 Rb6 23. h5 Qc4 24. h6 g6 25. Qf2 Rbc6 26. Rd4 Qa6 27. Rhd3 Kf8 $18) 16. Rhg1 $14 { Black has some play for the pawn, but it should be insufficient. } { [%cal Gf4f5] } 16... Rfc8 17. f5 *
+
+
+[Event "Winning attempts for white in the Bg5 Sicilian Najdorf: g5 pawn sacrifices in the main line"]
+[Date "2021.05.15"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B98"]
+[Opening "Sicilian Defense: Najdorf Variation, Browne Variation"]
+[StudyName "Winning attempts for white in the Bg5 Sicilian Najdorf"]
+[ChapterName "g5 pawn sacrifices in the main line"]
+[ChapterURL "https://lichess.org/study/WotymApK/5olPp91e"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[UTCDate "2021.05.15"]
+[UTCTime "01:52:51"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bg5 e6 7. f4 Be7 (7... h6 8. Bh4 Be7 9. Qf3 g5 (9... Nbd7 10. O-O-O g5? 11. fxg5 Ne5 12. gxf6! Nxf3 13. fxe7 Qa5 14. Nxf3 $18 { White has three pieces for the queen and a monster passed pawn on e7. Black cannot castle and is completely lost. }) 10. fxg5 { The Argentine gambit: A legit possibility, but one that keeps black on their toes. See the corresponding chapter. }) (7... Nbd7 8. Qf3 h6 9. Bh4 g5? 10. fxg5 Ne5?? 11. Qxf6 $18) 8. Qf3 h6 (8... Qb6 9. O-O-O Nbd7 10. g4 h6 11. Bh4 g5!? 12. fxg5 Ne5 13. Qg3 Nfxg4 14. g6! Bxh4 15. gxf7+ Kxf7 16. Qxh4 $16) 9. Bh4 Qc7 10. O-O-O Nbd7 { Note that g4 here is bad because g5 is finally prepared. Instead, we have transposed to the Browne variation. See the corresponding chapters. } 11. Be2 g5? 12. fxg5 Ne5 13. Qe3 Nfg4 14. Bxg4 Nxg4 15. Qd2 $16 { White is up a pawn with no problems at all. See the chapter titled "Browne variation" for how this plays out. } *
+
+
+[Event "Winning attempts for white in the Bg5 Sicilian Najdorf: Giri variation"]
+[Date "2021.07.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B99"]
+[Opening "Sicilian Defense: Najdorf Variation, Main Line"]
+[StudyName "Winning attempts for white in the Bg5 Sicilian Najdorf"]
+[ChapterName "Giri variation"]
+[ChapterURL "https://lichess.org/study/WotymApK/nqKvzBcN"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[UTCDate "2021.07.16"]
+[UTCTime "08:29:11"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bg5 e6 7. f4 Be7 8. Qf3 Nbd7 9. O-O-O Qc7 10. g4 h6!? 11. Bxf6 (11. Bh4? g5 12. fxg5 Ne5 $17 { Transitions to a bad variation of the Browne variation }) 11... Bxf6! (11... Nxf6?? 12. h4 g6 13. f5 Qc5 14. g5 hxg5 15. hxg5 Rxh1 16. Qxh1 Nh5 17. Kb1 $18 { Black's pieces are a mess, and you cannot undermine the white center with the black king stuck on e8 still. } { [%cal Gf1e2] } 17... exf5?? 18. Nd5 fxe4 19. Qxe4 $18) (11... gxf6?? 12. f5 { Typical Rauzer ideas. h6 is not helpful to black. }) 12. h4 { Against basically every move, white will continue with g5 next, even if it means misplacing the queen. Playing slowly here loses to b5+Bb7+Nc5 attacking the center. Anish Giri recommends: } 12... Nb6!? { Anish's new idea. Only possible because extensive computer analysis shows it's sound. } (12... Qb6 { The old main line in this variation. } 13. Nde2 Nc5 14. g5 Be7 (14... hxg5?? 15. hxg5 Rxh1 16. Qxh1 Be7 17. Qh7 g6 18. f5 $18) 15. Qh5! { Threatening f5, giving white the d5 square. } { [%cal Gh5h8] } (15. g6?! fxg6 $14 { Probably too soon, black is happy to castle and put the bishop back on f6 asap. }) 15... g6! 16. Qf3 hxg5 (16... h5? 17. f5 $16) 17. hxg5 Rxh1 18. Qxh1 Bd7 19. Qh8+ Bf8 $16 { Kubicki, Tadeusz - Szczepankiewicz, Dariusz, 1-0, POL/C52/final (POL), 2009, https://lichess.org/ObYZG1Wq }) (12... Qc5? { An interesting try, but one that loses tactically. } 13. e5! dxe5 14. Ne4 { With threats against e6, f6, and possible forks in the air, white is close to winning. } 14... Qb6 (14... Qc7? 15. Nxe6!! fxe6 16. Nd6+ Ke7 (16... Kf8? 17. g5 Be7 18. fxe5+ Kg8 19. Qf7+ Kh7 20. g6#) 17. g5 hxg5 18. fxg5 $18) (14... Qd5? 15. Bc4! Qa5 16. Nd6+ Ke7 17. Nxe6!! fxe6 18. g5 $18) 15. Nxf6+ Nxf6 (15... gxf6 16. fxe5 Nxe5 (16... fxe5 17. Ne2 Qc6 18. Qg3! Qc7 (18... Qxh1 19. Bg2 $16) 19. Nc3 $16 { [%cal Gc3e4,Ge4d6] }) 17. Qxf6 $18) 16. fxe5 Nd7 17. g5 Nxe5 18. Qg3 $16) 13. Be2!? { Keeping more tension in the position ensures that black still needs to think. } (13. g5!? { The most testing line, but one which Anish analyzed to a roughly drawn position: } 13... Bxd4 14. Rxd4 Qc5! 15. Rd2 Bd7 16. Kb1 O-O-O 17. Be2 Na4 18. Nxa4 Bxa4 19. Rhd1 $10 { Both sides have their trumps in this position, but white has more space and pressure on the backwards d pawn. Forcing a weakness from black does not seem easy. }) 13... Be7! (13... Bxd4? 14. Rxd4 Qc5 15. Rhd1 $18 { The point of Be2. Since black does not gain a tempo on the d4 rook, this entire idea with Nb6->a4 or c4 is useless. }) (13... Bd7!? 14. g5 Be7! { Correct. Transposing to the main line. } (14... Bxd4? 15. Rxd4 Qc5 16. Rhd1 $16)) (13... Nc4?? 14. g5 Bxd4 (14... hxg5 15. hxg5 Rxh1 16. Qxh1! $18 { [%cal Gh1h8] }) 15. Rxd4 $18 { [%cal Gd4c4,Ge2c4] }) 14. g5 Bd7 (14... hxg5?? 15. hxg5 Rxh1 16. Qxh1 Bd7 17. Qh7 Bf8 (17... O-O-O 18. Qxg7 $16) 18. g6 $16) 15. g6 fxg6 16. Qg4 O-O-O 17. Nxe6 Bxe6 (17... Qc6?? 18. Nxd8 $18 { [%cal Gd8c6] }) 18. Qxe6+ Kb8 19. Qxg6 { White would be completely winning here if not for exactly one resource: } 19... d5!! 20. Qxg7 (20. Nxd5?! Nxd5 21. exd5 Qxf4+ 22. Kb1 Bf6 $10) (20. exd5!? Qxf4+ 21. Kb1 Bf6 22. Qg1!? Rd6! $10 (22... Qb4? 23. a3 Qa5 24. Qg3+ { Defending the a pawn with tempo allows for b4! } 24... Ka7 25. Ne4! Rhe8?? 26. b4! Qa4 27. Nc5 $18)) 20... Qxf4+ 21. Kb1 Bf6! 22. Qg1! { This extra tempo on the knight is crucial to white's advantage. } { [%cal Gg1b6] } 22... Rd6! { Another insane move that keeps all the positives of black's position alive. I believe Anish included this move in his analysis, but regardless it's still a good position for white, albeit probably drawn. } (22... d4!? 23. Rf1 Qd6 24. Nd5 Nxd5 25. exd5 $14 { White will consolidate with Bd3, and target the d4 and h6 weaknesses. }) 23. Nxd5 Nxd5 24. Rxd5 Rxd5 25. exd5 Rd8! { If black doesn't immediately attack white's weaknesses, white is winning after Qh2, trading into an endgame, up two pawns. } (25... Qe5? 26. Qh2! $16) (25... Qb4? 26. Qg3+ Ka8 27. Qb3 $16) 26. Qh2 Qxh2 27. Rxh2 Rxd5 $14 { Probably equal with best play due to the opposite color bishops, but white is up a pawn and so has chances if the rooks can stay on the board. } *
+
+
+[Event "Winning attempts for white in the Bg5 Sicilian Najdorf: Main line 13...O-O"]
+[Date "2021.05.15"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B99"]
+[Opening "Sicilian Defense: Najdorf Variation, Main Line"]
+[StudyName "Winning attempts for white in the Bg5 Sicilian Najdorf"]
+[ChapterName "Main line 13...O-O"]
+[ChapterURL "https://lichess.org/study/WotymApK/7CiLC8UI"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[UTCDate "2021.05.15"]
+[UTCTime "01:16:27"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bg5 e6 7. f4 Be7 8. Qf3 Qc7 9. O-O-O Nbd7 10. g4 b5 11. Bxf6 Nxf6 12. g5 Nd7 13. f5! { We enter the absolute main line of the Bg5 Najdorf. White sacrifices the g pawn in order to speed up an attack on black's king/kingside. Black is usually hesitant to castle kingside directly into white's attack, but recent engines show that this move is quite playable.
+White quickly gets on with the attack before the queenside pawn storm rolls them. } 13... O-O!? { Modern engines believe this is Black's best try. Indeed, black gets a lot of play in the center and queenside too. } 14. Rg1 b4 15. Nce2 e5 (15... Bb7 16. f6! $18) 16. f6 exd4 (16... Bd8?? 17. fxg7 Kxg7 18. Nf5+ $18) 17. fxe7 Re8 18. Nxd4 Ne5 { Black retains the e5 outpost for their knight. But white already has open lines towards black's king, and a further h4-h5-h6 will soften the dark squares or a g6 move to soften up the light squares. } (18... g6? 19. Nf5! { Threatening Nh6+ } 19... gxf5 (19... Ne5?? 20. Nh6+ Kg7 21. Qf6#) 20. exf5 { [%csl Ga8] } 20... Bb7 21. Qe3 Rac8 22. Rd2 { Cañamas Soler, José Vicente - Gómez-Galán Arense, Joaquín, 1-0, ESP/W/C/023 (ESP), 2015, https://lichess.org/YnXcMbrl } 22... Ne5 (22... Qa5?? { An interesting try that falls flat beautifully: } 23. g6!! Qxa2 24. gxf7+ Kxf7 25. Rxd6 $18 { [%cal Ge3e6] }) 23. f6 $16 Qa5 24. g6!! { The same important move. } 24... fxg6 25. Qb3+ d5 26. Bh3 Rc6 { And finally the attack can play itself out. } 27. Re2 Nf7?? 28. Bd7 $18) 19. Qf4 Be6 (19... Rxe7!? 20. Nf5 Bxf5 21. exf5 $14 { Kosintseva, Tatiana - Ju, Wenjun, 1/2-1/2, Nalchik FIDE GP (Women), 2011, https://lichess.org/UwecCNcX }) 20. Nxe6 (20. Nf5!?) 20... fxe6 21. Rg3 (21. h4?! { Too early, the undefended rook on g1 will end up with black gaining a tempo anyway } 21... Rxe7 22. h5? Qc5 { [%cal Gc5g1] } 23. Rg3 Rc7 24. Rd2?? Rf8! $19) 21... Rab8 (21... Rac8 22. Qd2 $14) (21... Rxe7 22. Qd2 $14) 22. h4 Qxe7 (22... Rxe7 23. Qd2! { [%csl Gd6][%cal Gd2d6] } 23... Rb6 (23... Rc8? 24. Bxa6 Ra8 25. Qxd6 $16) 24. h5 $14) 23. h5 Rf8 24. Qe3 $14 { Grobler, David J. - Franks, Keith, 1-0, ENG/Chp2/SFA (ENG), 2019, https://lichess.org/nHH5jmH4 } *
+
+
+[Event "Winning attempts for white in the Bg5 Sicilian Najdorf: Main line 13...Bxg5+"]
+[Date "2021.05.15"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B99"]
+[Opening "Sicilian Defense: Najdorf Variation, Main Line"]
+[StudyName "Winning attempts for white in the Bg5 Sicilian Najdorf"]
+[ChapterName "Main line 13...Bxg5+"]
+[ChapterURL "https://lichess.org/study/WotymApK/Q1cLr5f6"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[UTCDate "2021.05.15"]
+[UTCTime "01:38:46"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bg5 e6 7. f4 Be7 8. Qf3 Qc7 9. O-O-O Nbd7 10. g4 b5 11. Bxf6 Nxf6 12. g5 Nd7 13. f5 Bxg5+ 14. Kb1 Ne5 (14... O-O 15. fxe6 Nb6 (15... fxe6? 16. Qg3 { [%cal Gg3g5,Gd4e6] } 16... Bf6 17. Nxe6 $18) (15... Ne5 16. Qg3 Qd8 (16... Bf6? 17. Nd5 Qd8 18. Bh3 $16) 17. h4 Bf6 18. Bh3 $16 { A clear improvement over the 15. Qh5 lines. The queen is better placed on g3. }) 16. Nd5 Nxd5 17. exd5 fxe6 18. Qg4 { [%cal Gg4g5,Gd4e6] } 18... e5 19. Qxg5 exd4 20. Bd3 g6 $16) (14... Bf6? 15. fxe6 fxe6?? (15... Ne5 16. Nd5! Nxf3 17. Nxc7+ Kd8 18. Nxa8 $18) 16. Nxe6 $18) 15. Qh5! { Pins the f pawn and gains a tempo against the g5 bishop. Note the priyome: g6 is not a threat as long as exf7+ must be met with Kxf7 or Nxf7. } 15... h6 (15... Qd8?! { The most common move for black doesn't seem that inspiring. White has open lines everywhere. } 16. h4 Bf6 17. fxe6 O-O 18. Bh3! fxe6 19. Bxe6+ Kh8 20. Nd5 $16) (15... Qe7?! 16. Nxe6 Bxe6 17. fxe6 O-O (17... g6?! 18. exf7+ Kxf7 (18... Qxf7?? 19. Qxg5 $18) 19. Qh3 $16) 18. Nd5! Qd8 19. h4 Bf6 20. Bh3 $16 { With play quite similar to the other line, white should also be better here too. }) (15... Bf6 16. Nxe6 Bxe6 17. fxe6 O-O (17... g6?! 18. Nd5! Qd8 19. exf7+ Kxf7 20. Qh3 $16) 18. Nd5 Qd8 19. Bh3 $14 { At least here, white has blocked their h pawn, so black can claim some sort of improvement over the other lines... }) 16. Nxe6 Bxe6 17. fxe6 g6 18. exf7+ (18. Nd5?! Qxc2+! { The reason the usual priyome doesn't work. Black's bishop is actually defended for once. } 19. Kxc2 Rc8+ 20. Kb1 gxh5 21. exf7+ Kxf7 22. h4 Be7 $14) 18... Qxf7 19. Qh3 $14 { While black has full control over the e5 outpost, white has full control over the (slightly more important) d5 outpost. White can hope to poke the g5 bishop with h4 and break through to the weakened king, but must also reckon with the eventual b4-b3 push. A sample line goes: } 19... Rd8 20. Be2 O-O 21. Rhf1 Qg7 22. Rxf8+ Qxf8 23. Qg3 $14 { As long as we don't trade queens, but white could be better here. Play continues. } { [%cal Gc3d5] } *
+
+
+[Event "Winning attempts for white in the Bg5 Sicilian Najdorf: Main line 13...Nc5"]
+[Date "2021.05.15"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B99"]
+[Opening "Sicilian Defense: Najdorf Variation, Main Line"]
+[StudyName "Winning attempts for white in the Bg5 Sicilian Najdorf"]
+[ChapterName "Main line 13...Nc5"]
+[ChapterURL "https://lichess.org/study/WotymApK/4OsdzTex"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[UTCDate "2021.05.15"]
+[UTCTime "02:05:06"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bg5 e6 7. f4 Be7 8. Qf3 Qc7 9. O-O-O Nbd7 10. g4 b5 11. Bxf6 Nxf6 12. g5 Nd7 13. f5 Nc5?! { Newer engines hate this move more and more } 14. f6 gxf6 15. gxf6 Bf8 16. Rg1 h5! { Stops our queen from reaching h5. On any other move, Qh5 and Rg7 can combine for lethal threats against the f7 pawn. } (16... Bb7? 17. Bh3! { Black cannot be allowed to castle queenside! } 17... h5 (17... b4 18. Nd5 exd5 19. exd5 Nd7 20. Qh5 $18) (17... O-O-O?? 18. Nd5!) 18. Rg7 b4 19. Nd5! $16) (16... Bd7? 17. Rg7 b4 18. Nd5 exd5 19. exd5 Qa5 20. Qe3+ Kd8 21. Bh3 Qxa2 (21... Bxh3?? 22. Nc6+ $18 { [%cal Gc6a5,Gc6d8] }) 22. Bxd7 Nxd7 23. Rxf7 $18) (16... b4? 17. Nd5 exd5 18. exd5 Nd7 (18... Bb7? 19. Bh3! Nd7 20. Qh5! $16 { [%cal Gd4e6,Gg1e1] }) 19. Nc6! { Stopping Ne5 so that black can no longer clog the e file } 19... Bb7 (19... Ne5?? 20. Nxe5 dxe5 21. d6 Bb7 22. dxc7! Bxf3 23. Bxa6!! $18) 20. Qe4+ Ne5 21. Kb1 { With Bh3 coming, black needs to bail out right now: } 21... Bxc6! 22. dxc6 Qxc6 23. Rd5 O-O-O 24. Rxe5 Qxe4 25. Rxe4 $14) 17. a3 { Taking a time out to prevent b4 allows us to continue possible threats against black's centralized king } (17. Rg7?! b4 18. Nd5 exd5 19. exd5 Nd7 $10) 17... Qb6 (17... Rb8? 18. Re1! b4?! 19. Nd5! $18 { The knight cannot be taken and when the queen moves, we even have time for axb4 with a winning advantage. }) (17... Bd7?! 18. Rg7! $16 { Prevents black from castling to safety. As in https://lichess.org/study/VWxPmx2b/yp6e39pZ }) (17... Bb7? 18. Bh3 $16 { Also stops black from castling: } 18... O-O-O? 19. Nd5 Bxd5 (19... Qa5?? { One humourous way a blitz game ended. } 20. b4! $18 { The queen is trapped! }) 20. exd5 $16) 18. Kb1 b4 (18... Rb8?! 19. Bh3! b4 20. Nd5! exd5 21. exd5 bxa3 22. b3 Bxh3 23. Qxh3 $16 { With all the open lines against black's king, white is borderline winning, even in the face of black's attack. } { [%cal Gg1g7,Gd4c6,Gg1e1] }) 19. axb4 Qxb4 20. Rg7! Rb8 (20... Bxg7?? 21. fxg7 Rg8 22. Nf5 exf5 23. Nd5 $18 { [%cal Gd5f6] }) 21. b3 { Thankfully, black must spend a turn defending the Nc6 threat. } (21. Bb5+!? { Belka, Wieland - Rozenberg, Dov, 1-0, Interzonal TT/7, 2013, https://lichess.org/kRewoKmz }) 21... Bd7 (21... Qa3?? 22. e5! { Threatening Qc6+ } 22... Bb7 23. Qe3 d5 24. Ncb5! axb5 25. Bxb5+ Kd8 26. Rxf7 $18 { [%cal Gd4e6,Ge3b6] }) 22. Bh3! { The threat of e5 and/or Nd5 means that white has full compensation if Bxg7 is ever played in this crazy attacking position. } 22... Qa3?! 23. e5! d5 { Practically forced, although even here the white attack might just break through. } (23... dxe5?? 24. Nxe6! fxe6 (24... Nxb3?? 25. Nc7+ Kd8 26. Rxd7+ Kc8 27. Rd6+ Kxc7 28. Qc6#) 25. Nd5! exd5 26. Bxd7+ Nxd7 27. Qxd5! $18 { [%cal Gd5d7,Gd5f7] }) 24. Bxe6! Nxe6! (24... fxe6?? 25. Nxd5 exd5 26. Qxd5 $18 { Qf7+ and Ne6+ are mate threats. Black is busted. }) (24... Bxe6?? 25. Nxd5!! Bxd5 26. Qxd5 $18) 25. Nxd5 $16 Nxd4?? 26. Nc7+ Kd8 27. Rxd4 Kxc7 28. Rxf7 $18 *
+
+
+[Event "Winning attempts for white in the Bg5 Sicilian Najdorf: Anand variation 11...Qb6"]
+[Date "2021.05.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B96"]
+[Opening "Sicilian Defense: Najdorf Variation"]
+[StudyName "Winning attempts for white in the Bg5 Sicilian Najdorf"]
+[ChapterName "Anand variation 11...Qb6"]
+[ChapterURL "https://lichess.org/study/WotymApK/rzj2vi1d"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[UTCDate "2021.05.16"]
+[UTCTime "09:04:10"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bg5 e6 7. f4 Nbd7 8. Qf3 Qc7 9. O-O-O b5 { Black saves a tempo on the mainline and immediately launches a queenside atatck. } 10. Bd3 { White quickly develops the bishop to d3 so as to play Rhe1 and Nd5 in case black pushes b4 too quickly. } 10... Bb7 (10... b4? 11. Nd5! exd5 (11... Nxd5 12. exd5 $18) 12. Rhe1! Bb7 (12... dxe4 13. Bxe4 $18 { [%cal Ge4a8,Ge1e8] }) 13. exd5+ Kd8 14. Nc6+ Bxc6 15. dxc6 $16 { Marcinkiewicz, Jan - Lybin, Dmitry Vitalievich, 1-0, WC29/ct04, 2009, https://lichess.org/l7OhAmiK }) 11. Rhe1 Qb6!? { The main move and a serious option. } (11... h6!? { Old theory from the 70s. Black tries to play like the Browne variation, but without committing the bishop to e7. } 12. Qh3 O-O-O (12... Be7!? 13. e5! dxe5 14. Nxe6! { Just as in the Browne variation mainlines. } 14... fxe6 15. Bg6+ Kf8 16. Qxe6 Qc4 17. Qh3 $14) 13. Bxf6 Nxf6 14. a4 { An improvement on the famous Timman - Polugaevsky, 1973 game. } (14. Nd5!? { Timman, Jan H - Polugaevsky, Lev, 1-0, AVRO, 1973, https://lichess.org/530Z0wYs }) 14... bxa4 (14... b4? 15. Nd5! Nxd5 (15... Qa5?? { Polu's blunder against Timman still works. } 16. Nb3 { The queen is trapped! } 16... Qxa4 17. Nb6+ $18) 16. exd5 Bxd5 17. Bxa6+ $16) 15. Nxa4 Kb8 16. Be2! $14 { And the queen can swing over to the queenside on b3 or c3, reconnecting with the pieces. e4 can never be captured safely. } { [%cal Gh3c3,Gh3b3] }) (11... O-O-O?! { A disreputable move according to modern theory, but black scores well here practically because white's moves are difficult. } 12. f5! e5!? (12... Ne5? 13. Qh3 $16 { Lining up with c8 and there is too much pressure on e6. } 13... exf5?! (13... b4?! { Hangs a piece in a complicated manner. } 14. fxe6! bxc3 15. e7+! Rd7 16. Bxf6! cxb2+ 17. Kb1 Bxe7 (17... gxf6?? 18. e8=Q+ $18) 18. Bxe7 $18 { Complicated, but white is up a piece. }) 14. Bxf6 gxf6 15. Qxf5+ $16) 13. Nb3 Be7 14. a4! { The key move to remember. Now black's entire setup is called into question. } 14... b4 15. Bxf6! Nxf6 16. Nd5! Nxd5 17. exd5 a5 18. Re4! $16 { Kotronias, Vasilios - Jobava, Baadur, 1-0, EU-ch 3rd, 2002, https://lichess.org/5ChHH6zc } { A model game showing how white can use the weakened light squares. }) 12. Nd5! Qxd4 (12... exd5?! 13. Nc6! dxe4 (13... Bxc6?? 14. exd5+ Be7 15. dxc6 Nc5 16. Bxf6 gxf6 17. Bf5 $16) 14. Bxe4 { This variation is designed around stopping black from running to the queenside. Note the white control over d7 and d8 throughout. } 14... Nc5 (14... Nxe4?? 15. Rxe4+ Ne5 16. Nxe5! dxe5 17. Rxe5+ Be7 18. Rxe7+ Kf8 19. Qb3 $18) 15. Bxf6 gxf6 16. Qg4 Ne6 17. Bg6!! Kd7 18. Bxf7 Kxc6 19. Qxe6 { The threat is Be8+, winning everything. } 19... Qd8 20. Qb3 { If allowed, we want to reposition the queen to d4 (with checks), and then rook lift Rd3->c3. } { [%cal Gc6b6] } 20... Rc8 (20... Qc7?? 21. Rd3 $18) (20... Kb6 21. Qe3+ Kc6 22. Qc3+ Kb6 23. Qd4+ Kc7 24. Rd3 { [%cal Gd3c3] }) 21. Be6 Ra8 (21... Rc7?? 22. Bd5+ Kd7 23. Qh3+ { [%cal Gh3c8] } 23... f5 24. Qxf5#) 22. Qb4 Kb6 23. Rd3 $16 { Komarica, Borut - Jenkins, Richard, 1-0, SLO-USA 2019, https://lichess.org/HhHhZRu8 }) (12... Nxd5?? 13. exd5 Qxd4?? 14. Rxe6+!! fxe6 15. Qh5+ g6 16. Qxg6+!! hxg6 17. Bxg6#) 13. Bxf6 gxf6 14. Bxb5! Qc5 (14... Qa7?? 15. Nxf6+ Ke7 16. Bxd7 Kxf6 17. Qg3 { [%cal Gg3g5] } 17... Ke7 18. Ba4 $18) 15. b4! Qxb5 (15... Qc8?? 16. Bxd7+ Qxd7 (16... Kxd7 17. Nb6+ $18) 17. Nxf6+ $18) 16. Nc7+ Ke7 17. Nxb5 axb5 { A forcing line where white has won the queen for three pieces. White needs to play with the initiative and open up lines against black's king to prove any advantage here. } 18. Qd3 Ra6 19. Qxb5 Rb6 20. Qd3 Bh6 21. g3 Ra8 (21... Rc8 22. a4 Ke8 (22... Ne5?? { White gets in b5 and kills off all the queenside pieces. } 23. Qb3 { [%cal Gb4b5] }) 23. Qa3 Rbc6 24. a5 $13 { White will sacrifice the c pawn, but roll with the a and b pawns, hopefully winning a piece in the process. }) (21... Ba6? 22. Qd2 Ne5 23. a4 { If we can get in b5, our queenside pawns will roll. } 23... Nc4 24. Qc3 Rc8 25. b5 Bb7 26. Qb4 $18 { [%cal Gb4d6,Gd1d6,Ge4e5,Gc1b1] }) 22. a3 e5! { Otherwise white plays e5 and crashes through! } 23. Kb2 exf4 24. e5! fxe5 (24... Nxe5?? 25. Qd4 $18 { [%cal Gd4b6,Gg3f4] }) 25. gxf4 Bg7 (25... Bxf4? 26. Qf5 Bh6 27. Rf1 $16 { While white forces black to defend on the kingside, we will push the queenside pawns forward and win on all sides of the board. }) 26. Qxh7 (26. Kb1!? { Potentially an improvement? }) 26... Bf6 27. fxe5 (27. Re3!? { May very well be an improvement... } 27... Kf8?! (27... Rh8 28. Qf5 Rxh2 29. fxe5 Bxe5+ 30. Rxe5+ Nxe5 31. Re1 $13) 28. Kc1 { The point of Re3: Now a3 is defended. } 28... exf4? 29. Qh6+ $18 { [%cal Gh6f4,Gh6f8] }) 27... Nxe5 (27... Bxe5+ 28. Rd4 Kd8 29. Rxe5 Nxe5 $13 { White has passed pawns on either side of the board, but is down material. If black can fully consolidate, white is probably worse. If white can use the initiative to force some material concession out of black, white should be better. }) 28. Re3 Rh8 29. Qf5 Bc8 30. Qf4 Be6 31. Kb1 $10 { Sacrificing the exchange for one of black's bishops makes sense in order to better rely upon a specific color complex. } *
+
+
+[Event "Winning attempts for white in the Bg5 Sicilian Najdorf: Anand variation 11...Be7"]
+[Date "2021.06.03"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B96"]
+[Opening "Sicilian Defense: Najdorf Variation"]
+[StudyName "Winning attempts for white in the Bg5 Sicilian Najdorf"]
+[ChapterName "Anand variation 11...Be7"]
+[ChapterURL "https://lichess.org/study/WotymApK/M5yXp4YB"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[UTCDate "2021.06.03"]
+[UTCTime "05:26:29"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bg5 e6 7. f4 Nbd7 8. Qf3 Qc7 9. O-O-O b5 10. Bd3 Bb7 11. Rhe1 Be7!? { Transitioning to what appears to be the mainline, but black isn't faced with the typical g4-g5 pawn push as in the mainline. } 12. Qg3 { Getting off the long diagonal prepares both e5 and Nd5. } (12. Kb1?! { I'm unconvinced by this waiting move. After Qb6, black gets a better version of the previous chapter. } 12... Qb6 13. Nd5?? Qxd4 14. Bxf6 Bxf6! $19 { [%csl Gb2][%cal Gd4b2,Gf6b2] }) 12... b4 (12... O-O-O?! 13. Bxb5 axb5 14. Ndxb5 Qb6 15. e5 Nc5 16. exf6 gxf6 17. Bh4 Rhg8 18. Qh3 Bxg2 19. Qe3 Bc6 20. Nd4 Bb7 21. Nf5! Bf8 22. Bxf6! exf5 23. Bxd8 Qxd8 24. Qh3 $14) (12... h6!? 13. Bxf6 Bxf6 14. Bxb5) 13. Nd5! exd5 14. exd5 { If white can play Nf5 and attack the pinned e7 bishop, then black is completely busted. } 14... Kd8! (14... Kf8?? 15. Nf5 Bd8 { [%cal Gf5g7] } 16. Bh6 $18) (14... Bxd5?? 15. Nf5! $18 Be6 16. Nxg7+ $18) (14... Nxd5?? 15. Nf5! $18) 15. Nc6+ Bxc6 16. dxc6 Nc5 (16... Qxc6 17. Bxf6 Nxf6 18. Qxg7 Re8 19. Qxf7 Ra7 20. Rxe7 Raxe7 21. Qxf6 $10) 17. Bh4! { [%cal Gg3g7] } 17... Rg8 (17... Bf8?? 18. Bc4 Ra7 19. Bd5 Kc8?? 20. Bxf6 gxf6 21. Re8+ $18) 18. Bf5 (18. Bxh7!? { Another interesting try, but I believe this leads to a position that black should be happy to enter into: } 18... Rh8 19. Qxg7 Rxh7 20. Qxf6 Rxh4 (20... Bxf6?? 21. Bxf6+ Kc8 22. Re8+ Qd8 23. Rxd8+ Kc7 $18 24. Rxa8 $18) 21. Qxf7 Rh8 22. Re5! Na4 23. Re3 $15) 18... a5 (18... Qxc6 19. Bxh7 Re8 20. Rxe7 Rxe7 21. Qxg7 Nxh7 22. Qxf7 Ra7 23. Qxh7 Qe4 24. Qxe4 Nxe4 25. Rd4 Kc8 26. Bxe7 Rxe7 $10) 19. Qe3 { [%cal Ge3c5] } 19... Ne6 20. Bh3 Re8 21. f5 Nf8 22. g4 Qxc6 23. g5 Kc7 24. Qd4 N6d7 25. f6 (25. Qxg7? Ne5 $15 { White's queen gets trapped in Siberia. Black should probably have the advantage if they can quickly break through on the queenside. }) 25... gxf6 26. gxf6 Bxf6 27. Bxf6 Rxe1 28. Rxe1 Ne6 29. Bxe6 fxe6 30. Rxe6 Qh1+ 31. Qd1 Qxd1+ 32. Kxd1 Rg8 33. Be7 Rg1+ 34. Ke2 Rg2+ 35. Kd1 $10 { Black has a perpetual check if they want it. Sadly, no winning chances here. } *
+
+
+[Event "Winning attempts for white in the Bg5 Sicilian Najdorf: Delayed Poisoned Pawn"]
+[Date "2021.05.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B96"]
+[Opening "Sicilian Defense: Najdorf Variation"]
+[StudyName "Winning attempts for white in the Bg5 Sicilian Najdorf"]
+[ChapterName "Delayed Poisoned Pawn"]
+[ChapterURL "https://lichess.org/study/WotymApK/fblpJDGv"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[UTCDate "2021.05.16"]
+[UTCTime "09:05:06"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bg5 e6 7. f4 h6 8. Bh4 Qb6 (8... Be7 9. Qf3 Nbd7 10. O-O-O Qc7 { Transposes to the Browne variation }) 9. a3 Be7 (9... Nbd7 10. Bf2 Qc7 11. Qf3 { Can transpose to the main line here, but black has the extra option of playing b5 first: } 11... b5 (11... Be7 { Transposing... }) 12. O-O-O Bb7 13. Bd3! (13. g4?! d5! $10 { Black has extra support for the d5 pawn break (and e4 square) in this line. } 14. e5 Ne4) 13... Be7 { This line has more in common with the Anand variation than the delayed poisoned pawn. } 14. Rhe1!? { Similar play to the Anand variation } (14. g4!? { Similar play as to the main line, but admittedly this is a move order that should be explored further })) (9... Qxb2?? 10. Na4 $18 { The point of a3: Black cannot take on b2. }) 10. Bf2 Qc7 11. Qf3 { This position is identical to the main line, except white has inserted a3 and retreated the bishop to f2. } 11... Nbd7 (11... b5 12. g4 Bb7? (12... Nbd7 13. O-O-O { Black would do well here to transpose back to the main line again. }) 13. g5 hxg5 14. fxg5 Nh5 15. g6! $16 { [%csl Gf7,Ge6] }) 12. O-O-O b5 13. g4 Bb7 14. Bg2 O-O { Never been tried before, but a reasonable move overall... } 15. h4 d5 (15... b4?! 16. axb4 a5 17. b5 a4 18. g5 a3 19. b3 hxg5 20. hxg5 Ne8 21. Qh5 $18 { If black doesn't destabilize the center quickly, white's attack rolls over black }) 16. e5 Ne4 17. Be1 b4?! (17... Rfc8 18. Rh3 b4? { A worse version of the other line. } (18... Qb6 19. g5 $16) 19. axb4 a5 20. b5 a4 21. Kb1) 18. axb4 a5 19. b5 a4 20. Kb1 a3 21. b3 Rfc8 22. Rh3 Qb6 23. Ka2 Bb4 24. Nxe4 dxe4 (24... Bxe1 25. Qe3 { Better to avoid letting the queen in to the weakened dark squares than to recapture. } 25... Bb4 26. Nd6 Bxd6 27. exd6 Qxd6 28. Rg3 $18) 25. Qe3 Bxe1 26. Rxe1 Nc5 27. g5 h5 28. g6 fxg6 29. Rg3 Kh7 30. Rg1 Na4 31. Rxg6 $18 { The key to this attack is not to rush it. If black all-ins on the queenside, white can first ensure the center and queenside are safe before launching the true, decisive attack against the naked black king. } 31... Rc3?? 32. Bxe4 Rxe3 33. Rxg7+ Kh8 34. Rh7# *
+
+
+[Event "Winning attempts for white in the Bg5 Sicilian Najdorf: Delayed Poisoned Pawn 13...Bb7"]
+[Date "2021.06.06"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B96"]
+[Opening "Sicilian Defense: Najdorf Variation"]
+[StudyName "Winning attempts for white in the Bg5 Sicilian Najdorf"]
+[ChapterName "Delayed Poisoned Pawn 13...Bb7"]
+[ChapterURL "https://lichess.org/study/WotymApK/EyqO0415"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[UTCDate "2021.06.06"]
+[UTCTime "00:50:30"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bg5 e6 7. f4 h6 8. Bh4 Qb6 9. a3 Be7 10. Bf2 Qc7 11. Qf3 Nbd7 12. O-O-O b5 13. g4 Bb7!? { Played slightly more often than g5. } 14. Bg2 Rc8 (14... g5 15. h4 gxf4 16. g5 { This usual reaction to g5 will be explored further in the 13...g5 chapter } 16... Ne5 17. Qxf4 Nfg4 (17... hxg5!? { MVL line: } 18. hxg5 Rxh1 19. Rxh1 Nfd7 20. Kb1 O-O-O $10 { With best play, this should be equal. However, if a black knight is maintained on the e5 outpost forever, then black will be the one who is better. White must attack the vulnerable e5 and f7 (possibly even e6 too) points to maintain any advantage. } { Kruse, Herbert - Bergmann, Michael, 1/2-1/2, FICGS__CHESS__WCH_CANDIDATES_FINAL__000, 2018, https://lichess.org/J1bMHz2K }) 18. g6!! { Now that the knight is tied down to the g4 knight, white can break down the kingside pawn structure with this pawn sack. } 18... Rf8 (18... fxg6 19. Nxe6 $16) 19. Bg3 $14 { If black ever captures on g6, white has the Nxe6 counterattack. }) 15. Kb1 b4 (15... g5 16. Qh3!? { Simply to get out of the Ne5 move with tempo, thereby threatening e5! } (16. h4 { The usual reaction sort of works here too... but black might be able to wriggle out with a draw... } 16... Rg8! { Nogga, Uwe - Rook, Detlef, 1/2-1/2, GER/GM03 (GER), 2014, https://lichess.org/9tyMycSt } (16... gxf4?! 17. g5 Ne5 18. Qxf4 { Dubovik, Viktor - Korshunov, Sergey, 1/2-1/2, UKR/C32/FL1 (UKR), 2019, https://lichess.org/1IzgboFm })) 16... Nh7 (16... Nc5? { Nakamura, Hi - Vachier Lagrave, Maxime, 1-0, 8th London Classic 2016, https://lichess.org/2hDAhgsB }) 17. e5! Bxg2 18. Qxg2 gxf4 19. exd6 Bxd6 20. Rhe1 $14) 16. axb4 d5 (16... a5 17. b5 a4 18. h4 $16) 17. e5 Ne4 18. Nxe4 dxe4 19. Qe2 Bxb4 20. f5 Nc5 (20... Qxe5?? 21. fxe6 fxe6 22. Bg3 Qf6 23. Rhf1 Qe7 24. Bxe4 $18) (20... Nxe5 21. fxe6 O-O 22. Bxe4 $16 { At least black has castled, but the attack on the kingside is obviously faster than the attack on the queenside }) 21. g5! { Just like black's earlier b4 move, this is purely with the idea of sacrificing pawns to open up files at all costs: } 21... hxg5 22. h4 g4!? (22... Bc3!? 23. fxe6 Bxb2 24. exf7+ Qxf7 25. hxg5 Rxh1 26. Rxh1 Bxd4 27. Bxd4 $16 { White keeps the bishop pair, a slightly safer king, and better piece coordination in this bizarre position. White should be the only one pushing for a win. }) (22... gxh4?? 23. Bxh4 $18 { Threatening Bd8!! Black is dead with his king stuck in the center here. }) 23. h5 Na4 24. h6! gxh6 25. fxe6 Nxb2! 26. exf7+ Qxf7 27. e6 Qg7 28. Nf5 Qf6 29. Bxe4 Na4 30. Bd4! Qxd4! 31. Rxd4 Nc3+ 32. Kb2 Nxe2 33. Rxb4 Bxe4 34. Rxe4 Rb8+ 35. Ka1 $18 { Hilariously, the knight is trapped. The only attempt to save the knight fails spectacularly: } 35... Nc3 36. Rxg4 Nd5 (36... Rf8 37. e7 Rxf5 38. Rg8+ Kxe7 39. Rxb8 $18) 37. Rg7 { Nd6+ is a mate threat, so black has to shed material in order to avoid getting mated } 37... Rb6 38. Ra7 $18 { [%csl Gh8][%cal Ga7a8,Ga8h8] } *
+
+
+[Event "Winning attempts for white in the Bg5 Sicilian Najdorf: Delayed Poisoned Pawn 13...g5"]
+[Date "2021.06.06"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B96"]
+[Opening "Sicilian Defense: Najdorf Variation"]
+[StudyName "Winning attempts for white in the Bg5 Sicilian Najdorf"]
+[ChapterName "Delayed Poisoned Pawn 13...g5"]
+[ChapterURL "https://lichess.org/study/WotymApK/wZrEzgDy"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[UTCDate "2021.06.06"]
+[UTCTime "00:46:28"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bg5 e6 7. f4 h6 8. Bh4 Qb6 9. a3 Be7 10. Bf2 Qc7 11. Qf3 Nbd7 12. O-O-O b5 13. g4 g5!? { Here the thematic pawn sacrifice once again rears its head. However, in this case, the slight lead in development afforded to white compared to the 3-piece mainline of the Najdorf means that white should be able to get away with a big attack. } 14. h4! { We want to play g5 at all costs, even if black stops it temporarily. } 14... gxf4 15. Be2 { Finishing development and avoiding any later issues with the knights taking out g4. } 15... Ne5 (15... Bb7? 16. g5 { If black is too slow, white immediately crashes through: } 16... Ne5 17. Qxf4 hxg5 18. hxg5 Rxh1 19. Rxh1 Ng6 20. Qe3 Nd7 $16) (15... b4? 16. axb4 Ne5 17. Qxf4 { Caruana, F. - Nakamura, Hi, 1-0, 8th London Classic 2016, https://lichess.org/bKoqC7cy } { Similar to the main line below }) (15... Rg8? 16. g5! hxg5 17. hxg5 Ne5 18. Qxf4 Nfd7 19. Kb1 { A more sensible alternative... } (19. Nxe6 { Cvak, Rudolf - Salzmann, Stefan, 1-0, EU/C2016/pr.18, https://lichess.org/dWqfME7M }) 19... Bxg5 20. Qg3 $18 { Rh5 is coming and the black pieces cannot maintain their current outposts. }) 16. Qxf4 Nexg4 (16... b4 17. axb4 { Transposes to the 2016 Caruana game above. }) 17. Bxg4 e5 { The point of black's play. Black regains the piece and then some if white doesn't act immediately. } 18. Qxf6!! { But white can have none of it with this unbelievable queen sacrifice! } 18... Bxf6 19. Nd5 Qd8 20. Nf5 h5! { Black should give back the queen instead of trying to hold onto bad material. } (20... Bxf5 21. Bxf5 $16 { White sacrifices the queen for two pieces, but has amazing compensation in the form of the d5 and f5 squares, total control of the light squares, and black's terrible bishop on f6 is more of a liability than a strength. } 21... Rb8 22. Rd3) (20... Rb8? 21. Nxf6+ Qxf6 22. Nxd6+ Ke7 23. Bc5 Qf4+ 24. Kb1 Qxg4 25. Nxc8+ Ke8 26. Nd6+ Kd7 27. Nxf7+ Kc7 28. Bd6+ Kb7 29. Bxb8 Rxb8 30. Rhg1 $18) 21. Nxf6+!? { White can insist on playing down a queen though! } (21. Bb6!? { A safer but not as exciting alternative. White retains a small edge in the endgame. } 21... hxg4 22. Bxd8 Bxd8 23. Nxd6+ Kf8 24. Nxc8 Rxc8 25. Ne3 $16 { White returns to f5 in order to defend the h4 pawn. With a good knight against a bad bishop, white should be able to play on. } 25... Rg8 (25... Bxh4 26. Kb1 Bf6 27. Rxh8+ Bxh8 28. Nxg4) 26. Nf5) 21... Qxf6 22. Rxd6 Be6 23. Bh3 Rh6! (23... Rc8 24. Rg1 $16 { White has a total grip on the position. Black attempts to untangle fall short: } 24... Kf8 (24... Rc4 25. Be3 Rxe4 26. Bg5 { [%cal Gg5d8,Gd6d8] }) 25. Be3 Rg8 26. Bg5 Rxg5 27. Rxg5) 24. Rhd1 Kf8! (24... Rg6? 25. Bc5) 25. Bc5 Kg8 26. Rg1+ Kh7 27. Rg5 Rd8 28. Rxa6 Rd7 { Stopping Be7. With complete precision, it's possible black can escape the bind. But white remains in control the entire time and can choose to create a passed pawn with b3-a4 ideas. The queen remains dead, even if it reaches d8. } 29. b3 Qd8 30. Kb2 $14 *
+
+
+[Event "Winning attempts for white in the Bg5 Sicilian Najdorf: Poisoned Pawn"]
+[Date "2021.05.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B97"]
+[Opening "Sicilian Defense: Najdorf Variation, Poisoned Pawn Variation"]
+[StudyName "Winning attempts for white in the Bg5 Sicilian Najdorf"]
+[ChapterName "Poisoned Pawn"]
+[ChapterURL "https://lichess.org/study/WotymApK/NVkw6IbO"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[UTCDate "2021.05.16"]
+[UTCTime "09:04:46"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bg5 e6 7. f4 Qb6 { Sadly, I've not found a refutation to the poisoned pawn variation. With best play in this line, black should still be fine. But it's devilishly tricky for black throughout, so this line is at least something worthwhile to try. } 8. Qd3!? { A sideline, but one that has many tricks based on the fact that the queen on a3 may run into Nd5 discovered attacks throughout. } 8... Qxb2 9. Rb1 Qa3 10. f5 (10. Be2!? { I can't tell exactly how strong this sideline is for white, but you do get your king castled, and black needs to play extremely precisely to keep any edge in it: } 10... Nbd7 11. O-O Be7 12. Kh1 { Adhiban, Baskaran - Wei Yi, 1-0, IND-CHN Summit 2015, https://lichess.org/Wqr26Pw3 } 12... Qc5 { This move might just be the improvement though that Wei Yi needed to find to keep a safe advantage. Black will castle next. } 13. Rbd1 O-O 14. Qg3 $13) 10... Be7 (10... e5?! 11. Bxf6 gxf6 12. Nb3 $14 { White will have the d5 square for eternity. }) (10... Qc5!? { Xmask's idea to try something different as black. } 11. Be3 Qc7 (11... Ng4? 12. Nxe6! Qxe3+ 13. Qxe3 Nxe3 14. Nc7+ Kd8 15. Nxa8 $16) 12. fxe6 Bxe6! { The only good recapture. } (12... fxe6?! 13. Be2 Be7 14. O-O O-O 15. Qc4 $14) 13. Nxe6 fxe6 14. Qc4 Qd7 15. Qb3 $10 { This usual regrouping, avoiding d5 and targeting the b pawn keeps the game level. Unfortunately, white will only be equal in the endgame - not better. }) 11. fxe6 fxe6 (11... Bxe6!? 12. Rxb7 Qc5 13. Nd5! Bxd5 14. exd5 Qxd5?? (14... Nxd5? 15. Qe4 $18 { Threatening Rxe7+ Nxe7, Qxa8 }) (14... h6! 15. Qe3 Qa5+ 16. Kd1 O-O $10 { Morokova, Larisa Vasilievna - Hildebrand, Dieter, 1/2-1/2, CT20/pr34, 2013, https://lichess.org/CilVKwez }) 15. Rxe7+! $18) 12. Be2 O-O?! (12... e5? 13. Nf5 Bxf5 14. exf5 Nbd7 15. Rxb7 Rc8 16. Bd2 { White isn't even down a pawn anymore. The bishop pair will make itself felt. } 16... O-O 17. Nd5 Qxd3 18. Nxe7+ Kf7 19. cxd3 Kxe7 20. g4 $16) (12... Qc5! $10 13. Be3 Qa5 14. Bd2 $10 { Transposing to the Be7 chapter. }) 13. Nd5! { [%cal Gd3a3,Gd5e7] } 13... Qxd3 14. Nxe7+ Kf7 15. cxd3 Kxe7 16. O-O $14 { White has a stable center, the two bishops, a slight initiative, and a safe king. For instance as in this line: } 16... h6 17. Bc1! e5 18. Nf3 (18. Ba3!? { Unnecessary, but awesome! } 18... exd4 19. e5 $14) 18... Nc6 19. Ba3 b5 20. d4 b4 21. Bxb4 Nxb4 22. Rxb4 $14 *
+
+
+[Event "Winning attempts for white in the Bg5 Sicilian Najdorf: Poisoned Pawn 10...Nc6"]
+[Date "2021.06.10"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B97"]
+[Opening "Sicilian Defense: Najdorf Variation, Poisoned Pawn Variation"]
+[StudyName "Winning attempts for white in the Bg5 Sicilian Najdorf"]
+[ChapterName "Poisoned Pawn 10...Nc6"]
+[ChapterURL "https://lichess.org/study/WotymApK/N92xmAI3"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[UTCDate "2021.06.10"]
+[UTCTime "22:12:35"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bg5 e6 7. f4 Qb6 8. Qd3 Qxb2 9. Rb1 Qa3 10. f5 Nc6?! { Not a bad move objectively, but it is asking for trouble in so many of the ensuing lines. } 11. fxe6 fxe6 (11... Nxd4?? 12. exf7+ Kxf7 13. Qxd4 $18) 12. Nxc6 bxc6 13. Be2 Qa5! { Gaining a tempo on the undefended bishop is crucial. } (13... Be7? { Transposing to a bad line: see the next chapter }) (13... Qc5? 14. Be3 $16 { Black doesn't gain the tempo they wanted, and will soon run into the e5 break anyway.... }) 14. Bd2 Qc7?! { The main move seems extremely risky: } (14... Qd8!? { Engine recommendation stops e5 temporarily... } 15. Rd1 { [%cal Ge4e5] } 15... e5! 16. O-O Be6 17. Qg3 $10 { Possibly equal, but you can feel how difficult it is for black to untangle. }) (14... Be7!? 15. Nd5 { [%cal Gd2a5] } 15... Qd8 16. Nxe7 Qxe7 17. e5! dxe5 18. O-O O-O 19. Bg5 a5 $10 { White keeps the bishop pair, more active rooks, and chances for a perpetual check, but black has almost fully untangled, so should hold with best play. }) (14... Qe5? 15. O-O Be7 16. Bf4 Qc5+ 17. Kh1 O-O 18. Na4 $16 { Pressure on d6, b6 ensures that black is not simply out of the woods once they castle. } { Lu, Shanglei - Antipov, Mikhail Al, 1-0, Moscow Dvorkovich Cup U16 6th, 2011, https://lichess.org/PscVWanD }) 15. e5! dxe5 (15... Nd5 16. O-O Be7 17. exd6 Bxd6 18. Bh5+ g6 19. Nxd5 cxd5 20. Bxg6+ hxg6 21. Qxg6+ Kd8 (21... Kd7 22. Qg7+ $18) (21... Ke7 22. Qg7+ $18) 22. Qf6+ $18) 16. Ne4 Be7 (16... Nxe4? 17. Qxe4 Bc5 (17... Be7 18. O-O $18 { Now black cannot castle, and their king will be dead in the center. }) 18. Rf1 { [%cal Ge2h5] } 18... g6 19. h4 Rf8 20. Rxf8+ Kxf8 21. h5 $18 { Black simply can't move any pieces. As long as white keeps the queen and rook on the board, white should be winning. }) 17. Nxf6+ Bxf6 18. Bh5+! g6 19. O-O!! O-O (19... gxh5?? 20. Rxf6 $18) 20. Bxg6 hxg6 21. Bh6 { First we stop Qg7 before going in for the kill } 21... Bg7 22. Rxf8+ Kxf8 23. Rf1+ Kg8 24. Qxg6 Ra7 25. h4 { Betker, Jörg - Cardelli, Gabriel, 1-0, GER/Ma02 (GER), 2013, https://lichess.org/h7aFpiKN } 25... Qb6+ (25... Kh8?? 26. Bxg7+ Qxg7 27. Qh5+ Kg8 28. Qe8+ Kh7 29. Rf8 $18 { [%cal Ge8h5] }) (25... Qd8?? 26. Bg5! Qd4+ 27. Kh1 { There's nothing to do. The h pawn will decide the game. } 27... e4 28. h5 Kh8 29. h6 Bxh6 30. Qxh6+ Kg8 31. Rf8#) 26. Kh1 e4 (26... Qd4?? 27. Bg5!) 27. Qe8+ (27. Bg5? { Here, this typical bishop reroute is just not quite in time. } 27... e3! 28. h5 e2! { And white has to take the perpetual check or they are lost. }) 27... Kh7 28. Bxg7 Rxg7 29. Qxc8 $16 { With best play, black enters this dangerous endgame, where their unsafe king could quickly decide the game. } { [%cal Gf1f8] } *
+
+
+[Event "Winning attempts for white in the Bg5 Sicilian Najdorf: Poisoned Pawn 10...Be7"]
+[Date "2021.06.10"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B97"]
+[Opening "Sicilian Defense: Najdorf Variation, Poisoned Pawn Variation"]
+[StudyName "Winning attempts for white in the Bg5 Sicilian Najdorf"]
+[ChapterName "Poisoned Pawn 10...Be7"]
+[ChapterURL "https://lichess.org/study/WotymApK/cMI1zk3t"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[UTCDate "2021.06.10"]
+[UTCTime "22:42:02"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bg5 e6 7. f4 Qb6 8. Qd3 Qxb2 9. Rb1 Qa3 10. f5 Be7 (10... Qa5!? 11. Bxf6 (11. Be2?! { By doing the typical moves, trying to transpose to the main line, black has the extra option of e5 under good circumstances. } 11... Be7 12. Bd2? (12. O-O?! O-O 13. Bd2 Qc7 14. fxe6 fxe6 $15 { A bad line for white: we want instead to have played g4 instead of castling. }) 12... e5! 13. Nd5 Qd8 $17) 11... gxf6 12. fxe6 fxe6 13. Qc4 Qc5? (13... Kd8 14. Rb3! { Defending the knight means that Qc5 can still be met with Nxe6! } 14... Qe5 15. Be2 { Mkrtchian, Lilit - Romanko, Marina, 1-0, EU-ch (Women) 10th, 2009, https://lichess.org/wydQR191 }) 14. Nxe6) 11. fxe6 fxe6 12. Be2 Qa5 (12... Nc6? { Transposing to a bad line: see the next chapter }) (12... O-O?! 13. Nd5 Qxd3 14. Nxe7+ Kf7 15. cxd3 Kxe7 16. O-O $16 { We saw the same idea in the previous chapter as well. }) (12... Qc5 13. Be3 Qc7 14. O-O O-O 15. Qc4! $14 { Essentially winning the e pawn unless black goes through some contortions. } { [%cal Gc4g8] }) 13. Bd2 { [%cal Gc3d5] } 13... Qc7! { The most precise way to play. By avoiding Nc6, black doesn't give white a chance to claim the open b file and ruin black's structure. Moreover, by repositioning the queen ASAP, black is now finally ready to castle. White has to create problems immediately: g5! } 14. g4 { [%cal Gg4g5] } 14... h6 15. Qh3! { [%cal Gg4g5] } (15. Rg1!? Bd7 16. g5 hxg5 17. Rxg5 { Caruana, F. - Nakamura, Hi, 1-0, 5th Norway Chess 2017, https://lichess.org/3lNsMCJI } 17... Rh7 $10) 15... O-O! { Black can and should grab the bull by the horns here to come out alright. } (15... e5?! 16. Nf5 Bxf5 17. gxf5 Nbd7 18. O-O $14 { Black's king has no shelter on either side of the board now due to the open g and b files. }) (15... g5? 16. Rf1! { White now threatens Bg5 under better circumstances, and continues the attack against the unsafe black king. For instance: } (16. Bxg5?? Qc5! { [%cal Gc5g5,Gc5d4,Gc5c3] }) 16... Qc5 17. e5! Qxe5 18. Nf3 Qc5 19. Na4 Qa7 20. Nxg5 $18) 16. g5 hxg5 17. Nxe6 Qc6 (17... Bxe6?? 18. Qxe6+ Kh8 19. Nd5 Nxd5 20. exd5 Rf6 21. Qe4 $18 { This is just one sample line, but if white gains control of the weakened light squares near black's king, black will simply be mated. } { [%cal Ge2d3,Ge4h7] }) 18. Rf1 { White is threatening Qf5, to play Nd5, so black needs to act immediately: } 18... Nxe4 (18... g4!? 19. Bxg4 Nxg4 20. Rxf8+ Bxf8 21. Qxg4 Qd7 22. Nd5! Qxe6 23. Qxe6+ Bxe6 24. Nc7 Ra7 25. Nxe6 b5 26. Nxf8 Kxf8 27. Bf4 $14 { White can hope to press in this endgame with the active bishop against the passive knight. }) 19. Rxf8+ Bxf8 20. Rb6! (20. Qd3!? { An interesting alternative for white, but this endgame should be drawn with best play too: } 20... Bxe6 (20... Nc5 { Krauß, Heiko - Zill, Eberhard, 1-0, GER/SC76p08 (GER), 2016, https://lichess.org/rwpTCclo }) 21. Nxe4 Qd5 22. Nxg5 Qxd3 23. Bxd3 Bxa2 24. Rxb7 Nc6 $10) 20... Qe8! (20... Qxb6?? 21. Nxe4 $18 { And the white queen cannot be prevented from infiltrating on the weakened light squares. } { [%cal Gh3f5,Gh3e6,Gh3h5] }) (20... Qd7?? 21. Bc4 $18 { [%cal Gc4g8] }) 21. Nxe4 (21. Bc4?? { The move we want to play fails spectacularly... } 21... Nc5 $19 { [%cal Ge8e1] }) 21... Bxe6 22. Qd3 { Black is able to barely keep their light squares together, and so should have an equal position with best play as in: } { Traut, Thomas - Schuller, Jean-Claude, 1/2-1/2, S-Open/4-sf06, 2012, https://lichess.org/880OTuwX } 22... Be7 23. Nxg5 Bxg5 24. Bxg5 Nd7 25. Rxd6 Rc8 $10 { At least white has the bishop pair, but the lack of pawn shelter around their king ensures this game is probably drawn if black keeps the queens on the board. } *
+
+
+[Event "Winning attempts for white in the Bg5 Sicilian Najdorf: Poisoned Pawn Nc6 and Be7 together"]
+[Date "2021.06.10"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B97"]
+[Opening "Sicilian Defense: Najdorf Variation, Poisoned Pawn Variation"]
+[StudyName "Winning attempts for white in the Bg5 Sicilian Najdorf"]
+[ChapterName "Poisoned Pawn Nc6 and Be7 together"]
+[ChapterURL "https://lichess.org/study/WotymApK/9x7qEOBr"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[UTCDate "2021.06.10"]
+[UTCTime "23:26:49"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bg5 e6 7. f4 Qb6 8. Qd3 Qxb2 9. Rb1 Qa3 10. f5 Nc6?! { A minor step in the wrong direction. Black must now transpose to the other chapter to keep chances. } (10... Be7 11. fxe6 fxe6 12. Be2 Nc6? 13. Nxc6 bxc6 14. Bh5+ { Transposing to the below line: }) 11. fxe6 fxe6 12. Nxc6 bxc6 13. Be2 Be7? { Combining these two moves is an outright mistake, although quite difficult to punish. } (13... Qa5 $14 { Transposing to the other chapter is now necessary. }) 14. Bh5+!! Nxh5 (14... g6 15. e5! dxe5 (15... gxh5?? 16. exf6 $18) 16. Bxf6 Bxf6 (16... e4?? 17. Bxe7! $18 { [%cal Ge7a3] }) 17. Bxg6+ hxg6 18. Qxg6+ Ke7 19. O-O! $18 { Black's lack of coordination and unsafe king will be their undoing. }) 15. Bxe7 Nf4 (15... Kxe7?? 16. Nd5+ $18 { [%cal Gd3a3,Gd5e7] }) 16. Qd4 { [%cal Ge7d6,Gd4g7] } 16... e5 (16... Kxe7?? 17. Qxg7+ $18 { [%cal Gg7h8,Gg7e7] }) 17. Qxe5!! { [%cal Ge7a3] } 17... Qc1+ (17... dxe5 18. Bxa3 $16 { A better version for white than the mainline: the rook is well-placed on the b file. }) 18. Rxc1 dxe5 19. Bd6 Nxg2+ 20. Kf2 Nf4 21. Rb1 $14 { Carlsson, Pontus - Eriksson, Johan, 1-0, SWE-ch, 2011, https://lichess.org/V9VPqx2Y } *
+
+

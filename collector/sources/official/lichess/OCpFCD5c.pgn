@@ -1,0 +1,314 @@
+[Event "US Championships"]
+[Date "2006.??.??"]
+[White "Christiansen, Larry"]
+[Black "Wojtkiewicz, Alex"]
+[Result "1-0"]
+[Annotator "Rotella, Tony"]
+[Variant "Standard"]
+[ECO "B87"]
+[Opening "Sicilian Defense: Sozin Attack, Flank Variation"]
+[StudyName "Reddit Opening of the Week - Open Sicilian"]
+[ChapterName "L.Christiansen-A.Wojtkiewicz, US Champs 2006"]
+[ChapterURL "https://lichess.org/study/OCpFCD5c/g58ySy0Q"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bc4!? e6 { [%csl Re6][%cal Gb3f7] } (6... Nc6 7. Nxc6 bxc6 8. e5! Nd7 (8... dxe5?? 9. Bxf7+ $18) 9. exd6 (9. e6!?) 9... exd6 10. O-O $14) 7. Bb3 { [%cal Rb7b4] } 7... b5 (7... Nbd7) (7... Be7) 8. Qf3!? (8. O-O Be7 (8... b4 9. Na4 Nxe4 10. Re1 d5 11. Bf4 Be7 12. Nf5) 9. Qf3 Qc7 10. Qg3 O-O 11. Bh6 Ne8 12. Rad1 Bd7 (12... Bb7? 13. Bxe6! fxe6 14. Nxe6 Qd7 15. Nxg7 $16) (12... Nc6 13. Nd5! exd5 14. Nxc6 Qxc6 15. Bxd5) (12... Nd7 13. Bxe6! fxe6 14. Nxe6 $18) 13. Nf3 (13. f4) (13. a3) (13. Nce2!?)) 8... Qc7 9. Bg5 Nbd7 (9... Be7) 10. O-O-O Be7 11. e5!? (11. Bxe6? Ne5!) 11... Bb7 12. Qg3 Nxe5 (12... dxe5!? 13. Bxe6 { [%cal Gg3c7] } 13... fxe6 14. Nxe6 Qc6 15. Nxg7+ Kf7 16. Nf5 { I.Saric-I.Cheparinov,
+European Championships 2007 } { [%csl Gf7][%cal Gf2f4] }) 13. Bxe6! fxe6 (13... O-O!?) 14. f4! (14. Nxe6? Qc8 15. Nxg7+ Kf7 16. Bxf6 Bxf6 17. Nh5 Qf5 18. Nxf6 Qxf6 $19 { K.
+Lahno-I.Novikov, Montreal 2004 }) 14... Ng6? (14... Kf7! 15. fxe5 dxe5 16. Nxe6 Kxe6 17. Qh3+ Kf7 18. Bxf6 gxf6 19. Rd7 Qc6 20. Rhd1 Qxg2 21. Rxe7+ Kxe7 22. Rd7+ Kf8 23. Qe6) (14... Bc8! 15. fxe5 dxe5 16. a3!? $13) 15. Nxe6 Qd7 (15... Qc6 16. Nxg7+ Kf7 17. Nf5 Qxg2 18. Qe3 $16) 16. Rhe1 (16. Nxg7+ Kf7 17. Bxf6 Bxf6 18. Nh5) 16... Kf7 (16... b4 17. f5! bxc3 (17... Ne5 18. Rxe5 bxc3 19. Qxc3 $16) 18. Bxf6 gxf6 19. fxg6 cxb2+ 20. Kb1 $18) 17. f5! Nf8 18. Bxf6 Bxf6 (18... gxf6 19. Qg7+ Ke8 20. Qxh8 $18) 19. Rxd6 Qc8 (19... Qe7 20. Nc5 Be5 21. Rxe5 Qxd6 22. Nxb7 Qh6+ 23. Kb1 $18) 20. Ng5+ Kg8 (20... Bxg5+ 21. Qxg5 Qc7 22. Nd5 Qxd6 23. Re7+ Qxe7 24. Qxe7+ Kg8 25. f6 $18) 21. Rxf6! gxf6 (21... Qb8 22. Rd6 $18) 22. Nge4+ Ng6 (22... Kf7 23. Nd6#) 23. fxg6 { and Black resigned, e.g. } 23... Bxe4 24. Nxe4 Qf5 25. g7 $18 { 1-0 Black resigns. } 1-0
+
+
+[Event "Mar del Plata"]
+[Site "Mar del Plata"]
+[Date "1957.??.??"]
+[White "Jose Thiago Mangini"]
+[Black "Miguel Najdorf"]
+[Result "0-1"]
+[Annotator "Rotella, Tony"]
+[Variant "Standard"]
+[ECO "B92"]
+[Opening "Sicilian Defense: Najdorf Variation, Opocensky Variation"]
+[StudyName "Reddit Opening of the Week - Open Sicilian"]
+[ChapterName "J.Mangini - M.Najdorf, Mar del Plata 1957"]
+[ChapterURL "https://lichess.org/study/OCpFCD5c/NsenqTBZ"]
+
+1. e4 c5 2. Nf3 d6 (2... Nc6 3. d4 cxd4 4. Nxd4 e5 5. Nb5 d6 6. Bc4 Be6 7. Bd5 Be7 8. O-O a6 9. N5c3 Nf6 10. Ne2 O-O 11. Be3 Rc8 12. Nbc3 b5 13. f3 Nb4 14. Bb3 Bxb3 15. cxb3 d5! 16. a3 d4 17. axb4 dxe3 18. Rxa6 Bxb4 19. Qxd8 Rfxd8 20. Rb6 Bc5 21. Rxb5 Rd2 22. Rb1 Bd4) 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Be2 e5 7. Nb3 { [%csl Rb3][%cal Rb3c5,Rb3a5,Rb3d4] } (7. Nf3 h6!? 8. a4 (8. O-O Be6 9. Be3 Be7 10. Qd2 O-O 11. Rad1 Nbd7) 8... Be6 9. O-O Nbd7 10. a5 Rc8 11. Re1 Be7 12. Be3 Rxc3! 13. bxc3 Nxe4 { K.Toma-I.Nepomniachtchi, European Blitz
+Championships 2011 }) 7... Be7 8. Be3 Be6 9. O-O O-O 10. a4?! { [%cal Rb7b5,Ge3b6] } (10. Qd2 Nbd7 (10... Nc6 { [%csl Rb6][%cal Ra8c8,Rc8c3,Gc3d5] } 11. Rfd1 Rc8 12. f3 Qc7 13. Rac1 Rfd8 14. Nd5!) 11. a4! Rc8 12. a5 Qc7 13. Rfd1 Rfd8 14. Qe1 { [%cal Gb3d2,Gd2c4] }) 10... Nc6! 11. f3?! (11. f4 exf4 { [%cal Gc6e5] }) (11. Qd2) 11... Nb4! { [%csl Gc2][%cal Gd6d5] } 12. Re1 Rc8 13. Nc1 d5! 14. exd5 Nfxd5 15. Nxd5 Nxd5 16. Bf2 Qc7 $17 17. c3 Nf4 18. Bf1 Rfd8 19. Qc2 g6 20. g3 Bf5 (20... Nh3+ 21. Bxh3 Bxh3) 21. Qb3 Nh3+ 22. Bxh3 Bxh3 { [%csl Ge7,Rf3,Rg1,Gh3][%cal Gd8d2] } 23. Qb6 Qd7 24. Nb3? Qd5! 25. Na5 Qxf3 26. Qxb7 Rd5 { 0-1 White resigns. } 0-1
+
+
+[Event "Reddit Opening of the Week - Open Sicilian: Najdorf"]
+[Date "2016.01.08"]
+[White "Najdorf"]
+[Result "*"]
+[Annotator "Tony Rotella"]
+[Variant "Standard"]
+[ECO "B90"]
+[Opening "Sicilian Defense: Najdorf Variation, English Attack"]
+[StudyName "Reddit Opening of the Week - Open Sicilian"]
+[ChapterName "Najdorf"]
+[ChapterURL "https://lichess.org/study/OCpFCD5c/XSJNDzL7"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 (5... e6 6. g4) (5... e5?! 6. Bb5+ Nbd7 (6... Bd7 7. Bxd7+ Qxd7 8. Nde2 (8. Nf5 Nxe4!) 8... Be7 9. Bg5) 7. Nf5! a6 8. Bxd7+ Qxd7 9. Bg5! Nxe4 10. Nxg7+ Bxg7 11. Nxe4 O-O (11... d5 12. Nf6+ Bxf6 13. Bxf6 O-O 14. Qf3 $16) 12. Qxd6 f6 13. Qxd7 Bxd7 14. Be3) 6. Be3 (6. h3!? { [%cal Gg2g4] } 6... e6 (6... e5 7. Nde2 h5!? (7... Be6 8. g4 h6 9. Bg2 Nbd7 10. Be3 Rc8 11. Qd2 Be7 12. O-O-O b5 13. Nd5 Bxd5 14. exd5 O-O 15. Kb1 Nb6 16. b3 Qc7 17. Rc1 Rfe8 18. Ng3 $14 { A.Gueci-F.Mignon,
+Correspondence 2010 }) 8. g3!? (8. Bg5 Be6 9. Bxf6 Qxf6 10. Nd5 Qd8 11. Nec3 g6 12. Bc4 Bh6 13. O-O O-O 14. Bb3 Nc6 15. Qd3 Rc8 16. Rad1 Nd4 { H.Nakamura-M.
+Vachier Lagrave, Sinquefield Cup 2014 }) 8... Be6 9. Bg2 Nbd7 10. a4 Be7 11. O-O Rc8 12. Be3 O-O (12... Nb6!? 13. b3 d5!? 14. Bxb6 Qxb6 15. Nxd5 Nxd5 16. exd5 Bd7 17. c4 { F.Caruana-M.Vachier Lagrave, Wijk aan Zee 2015 }) 13. a5 Nc5 14. Qd2 Qc7 15. Rfd1 Rfd8 $13) 7. g4 d5 (7... Be7 8. g5 Nfd7 9. Be3 b5 10. a3 (10. Qd2 Bb7 11. Bg2 Nb6 { [%cal Rb6c4] }) 10... Bb7 11. Qd2 Nb6 12. O-O-O N8d7 13. h4 Rc8 14. h5 $40 { C.Jensen-W.Draeger,
+Correspondence 2013 } { [%cal Gh1h3,Gg5g6,Yd2e1,Yf1c4,Rd7e5,Re5c4] }) (7... b5 8. Bg2 Bb7 9. O-O Nfd7 (9... b4 10. Nd5! exd5 11. exd5 Be7 12. g5 Nfd7 13. Nc6 Qc7 14. Nxe7 Kxe7 15. Qd4 Kf8 16. Bf4 $40 a5 17. Rfe1 Nb6 18. Re8+!? Kxe8 19. Qxg7 Bxd5 (19... Rf8?? 20. Re1+ $18) 20. Qxh8+ Kd7 21. Re1 $13 { H.Nakamura-N.Ninov, French Team Championships 2008 }) 10. a4! b4 11. Na2 a5 12. c3! bxc3 13. Nxc3 Be7 14. Ndb5 Ra6 15. Be3 $14 { H.Hamann-I.Salcedo Mederos, Correspondence 2015 } { [%cal Gf2f4] }) 8. exd5 Nxd5 9. Nde2 Bb4 10. Bg2 O-O 11. O-O { [%cal Gc3d5] } 11... Nxc3 12. Nxc3 Qc7 (12... Bxc3?! 13. Qxd8 Rxd8 14. bxc3 Nc6 15. Rb1 $14 { K.Grigoryan-A.Minasian, Armenian
+Championships 2011 }) (12... Qxd1 13. Rxd1 $16 { [%cal Gc3a4] }) 13. Qd4 Bd6 (13... Nc6 14. Bxc6 Bxc3 15. Qxc3 bxc6 16. Be3 $14 { F.Pinchon-R.Petruzelli,
+Correspondence 2015 }) 14. Be3 Bd7 15. Rad1 Bh2+ 16. Kh1 Be5 17. Qb6 Bc6 18. Qxc7 Bxc7 19. Ne4 $14 { A.Serazeev-F.Mignon, Correspondence
+2013 } { [%cal Ge4d6,Ge4c5] } (19. f4!? $14 { D.Swiercz-A.Firouzja, Qatar Masters 2015 })) (6. Bg5 e6 (6... Nbd7!? { has been popular
+lately, intending to delay ...e6 for a bit. In return, } { [%cal Gf2f4,Gf1c4] } 7. Qe2!? { is becoming a popular retort, planning to castle long as quickly
+as possible and break through with f4 and e5. } { [%cal Ge1c1,Ge4e5] } (7. f4 Qc7 8. Qf3 h6) (7. Bc4 Qb6)) 7. f4 Qb6 (7... Be7 8. Qf3 Qc7 9. O-O-O Nbd7 10. g4! (10. Bd3 b5 11. Rhe1 Bb7 12. Qg3 b4 13. Nd5 exd5 14. exd5 { [%cal Gd4f5] } 14... Kd8 15. Nc6+ Bxc6 16. dxc6 Nc5 (16... Qxc6 17. Bxf6! Nxf6 (17... Bxf6 18. Be4) 18. Qxg7 Re8 19. Qxf7 Ra7 20. Rxe7! Raxe7 21. Qxf6) 17. Bh4! Rg8 (17... g6? 18. Rxe7 Qxe7 (18... Kxe7 19. Qg5 $18) 19. Re1) 18. Bxh7 (18. Bf5 a5) 18... Rh8 19. Qxg7 Rxh7 20. Qxf6 Rxh4 21. Qxf7 Rh8 22. Re5 Na4 23. Re6) 10... b5 11. Bxf6 Nxf6 12. g5 Nd7 13. f5! Bxg5+ (13... Nc5 14. f6 gxf6 15. gxf6 Bf8 16. Rg1) 14. Kb1 Ne5 15. Qh5 { [%csl Ge6][%cal Gh5g5,Gf5e6,Yh5e8] } 15... Qd8 (15... Qe7 16. Nxe6 Bxe6 17. fxe6 g6 18. exf7+ Kxf7 19. Qh3) 16. h4 Bf6 17. fxe6 O-O 18. Bh3 fxe6 19. Bxe6+ Kh8 20. Nd5) 8. Qd2 Qxb2 (8... Nc6 9. Bxf6 gxf6 10. Nb3 Bd7 11. Be2 h5 (11... O-O-O 12. Bh5 $14) 12. O-O-O O-O-O 13. Rhf1 $14) 9. Rb1 Qa3 10. e5 (10. f5!? Nc6 11. fxe6 fxe6 12. Nxc6 bxc6 13. e5!? (13. Be2 Be7 14. O-O O-O 15. Rb3 Qc5+ 16. Be3 Qe5 17. Bf4 Qc5+ 18. Be3 Qa5? 19. Nd5! Qd8 20. Nxe7+ Qxe7 21. e5!)) 10... h6 (10... dxe5 11. fxe5 Nfd7 12. Ne4 Qxa2 (12... h6) 13. Rd1 Qd5 14. Qe3 Qxe5 (14... h6 15. Bh4 Qxe5) 15. Be2 h6 (15... Bc5 16. O-O O-O (16... Nc6? 17. Nxc5! (17. Bf4 Bxd4 18. Rxd4 Qxd4 19. Qxd4) 17... Qxe3+ 18. Bxe3 Nxc5 19. Nxc6 $18) 17. Bf4 Qd5 18. c4 Qc6 19. Bd6 Qb6 20. Bxf8 Nxf8 21. Bh5 f6 22. Nxf6+ gxf6 23. Kh1 Qc7 24. Rxf6 Qe7 25. Rdf1 $18) 16. Bf4 Qa5+ 17. c3 Nc6 18. O-O { [%cal Gd4c6,Yf4d6] } 18... Nxd4 19. cxd4 Be7 20. Qg3 O-O (20... g6 21. Nd6+ Bxd6 22. Bxd6 Qd5 23. Ba3 Nf8 24. Bc4 Qg5 25. Qc3 f6 26. h4 Qxh4 27. Qb4 f5 28. d5 Bd7 29. dxe6 Bc6 30. e7 Ne6 31. Qb2) 21. Bxh6) 11. Bh4 dxe5 12. fxe5 Nfd7 (12... Nd5!? 13. Nxd5 exd5 14. e6! Bxe6 15. Nxe6 fxe6 16. Bd3 Be7 17. Bg6+ Kd8 18. Bxe7+ Qxe7 19. O-O { ->/~/= }) (12... g5!? 13. exf6 gxh4 14. Be2 Qa5 15. O-O Nd7 (15... Bb4? 16. Rxb4! Qxb4 17. Qe3! Nc6 (17... Nd7 18. Nxe6 fxe6 19. Nd5! { [%cal Ge3e6,Gd5c7,Yf6f7,Yd5b4] }) 18. Nxc6 bxc6 19. Rd1! { [%cal Gc3e4,Ge4d6] }) 16. Kh1 Qg5) 13. Ne4 Qxa2 14. Rd1 Qd5 15. Qe3 Qxe5 16. Be2 Bc5 17. Bg3 (17. O-O Nc6 (17... O-O) 18. c3 O-O 19. Bg3 Qd5 { [%cal Re6e5] } 20. Nxc5 Qxc5 $19) 17... Bxd4 (17... Qd5 18. c4 Bxd4 19. Rxd4 Qa5+ 20. Rd2 O-O 21. Bd6 f5! 22. Bxf8 Nxf8 23. Nd6 Nbd7) 18. Rxd4 Qa5+ 19. Rd2 O-O 20. Bd6 { ~~/= } { [%cal Gf8d8,Gb8c6,Gf8e8,Gf7f5] }) 6... e5 (6... Ng4!? 7. Bg5 (7. Bc1 Nf6 8. Be3 Ng4 9. Bc1 { L.McShane-H.Nakamura, Millionaire Chess 2015 }) 7... h6 8. Bh4 g5 9. Bg3 Bg7 10. h3 (10. Be2!? h5! (10... Ne5 11. Nf5!? Bxf5 12. exf5 Nbc6 13. Nd5 e6 14. Ne3 d5 (14... O-O 15. h4!) 15. fxe6 fxe6 16. Bh5+ $16) 11. h3? h4!) (10. f3 Ne3 11. Qd2 Bxd4 $19) 10... Ne5 11. Nf5 (11. f3!? Nbc6 12. Bf2 { [%cal Gh3h4] } 12... Ng6 13. Qd2 (13. h4?! Nxh4! 14. Bxh4? Bxd4 15. Bg3 Bxc3+ 16. bxc3 Be6 $17) 13... Nxd4 14. Bxd4 Bxd4 15. Qxd4 Be6 (15... Qa5 16. O-O-O Be6 17. h4 { /+/= R.Scherer-S.Ohtake, Correspondence 2010 }) 16. h4! gxh4 (16... g4 17. h5 Ne5 18. f4) 17. O-O-O Rg8 18. Qf2! Rc8 19. f4 Bg4 20. Rd3 Rc6 21. Nd5 e6 22. Ne3 h5 23. Rb3 b5 24. f5 Ne5 25. Rxh4 $14 { M.Dorer-A.Audie,
+Correspondence 2015 }) 11... Bxf5 12. exf5 Nbc6 13. Nd5 e6 14. fxe6 fxe6 15. Ne3 O-O 16. Be2 d5 17. O-O Ng6 $132) 7. Nb3 (7. Nf3) 7... Be6 8. f3 Be7 9. Qd2 O-O (9... h5!? { [%cal Ge1c1,Gc3d5,Gf1e2] }) 10. O-O-O Nbd7 (10... Nc6? 11. g4 b5 12. g5 Nh5 (12... b4 13. gxf6 bxc3 14. Qxc3) 13. Nd5! Bxd5 14. exd5) (10... b5 11. g4 b4 12. Nd5 Bxd5 (12... Nxd5 13. exd5 $16 { [%cal Gd2b4] }) 13. exd5 a5 14. Nc5! (14. Kb1 a4 15. Nc1 b3 16. cxb3 axb3) 14... Nbd7 (14... dxc5 15. d6 Nc6 16. Bxc5! Bxd6 17. Qxd6 Qxd6 18. Rxd6 $14 { [%csl Gc5,Gf1] }) 15. Na4! Rb8) 11. g4 b5 12. g5 b4! (12... Nh5 13. Kb1!? (13. Nd5 Bxd5 14. exd5 f5 (14... f6! 15. h4 (15. gxf6 Bxf6 16. Na5 Nf4 17. Nc6 Qc7) 15... fxg5 16. hxg5 Rxf3 17. Rxh5 Rxe3 18. Qxe3 g6 19. Nd4 exd4 20. Qe6+ Kg7 21. Rh2 Bxg5+ 22. Kb1)) 13... f6 (13... Nb6 14. Nd5 Nxd5 (14... Bxd5 15. exd5 { [%csl Rb6][%cal Gb3a5,Rd8a5] }) 15. exd5 Bd7 (15... Bf5 16. Na5!) 16. Na5 Qc7 17. Bd3 $14) 14. h4! fxg5 15. hxg5) 13. Ne2 (13. Nd5 Nxd5 14. exd5 Bf5) 13... Ne8 14. f4 a5! 15. f5 a4! 16. Nbd4 (16. fxe6 axb3 17. cxb3 fxe6 18. Bh3 Rxa2 19. Bxe6+ Kh8 20. Ng3 { [%cal Gg3f5,Gh1f1,Gc1b1,Ge6c4] } 20... Nc7! 21. Bc4 Qa8! 22. Rhf1 (22. Nf5?? Qxe4 $19) 22... Rxf1 23. Rxf1 Ra1+ 24. Kc2 Rxf1 25. Bxf1 d5! $13 { T.Radjabov-M.Vachier Lagrave, Tashkent 2014 }) 16... exd4 17. Nxd4 b3 (17... Bxa2 18. Nc6 Qc7 19. Nxe7+ Kh8 20. Qxb4 $16) 18. Kb1! (18. fxe6?? bxa2 $19) (18. axb3 axb3 19. Kb1 (19. cxb3) 19... Ra1+ 20. Kxa1 Qa8+ $19) 18... bxc2+! (18... bxa2+? 19. Ka1 Nc5 20. fxe6 fxe6 21. Nc6 Qc7 22. Nxe7+ Qxe7 23. Bxc5 dxc5 24. Bc4 $16) 19. Nxc2 Bb3! (19... Nc7) (19... Bxa2+) 20. axb3 axb3 21. Na3 Ne5 { =/~~ } *
+
+
+[Event "Reddit Opening of the Week - Open Sicilian: Sveshnikov"]
+[Date "2016.01.07"]
+[White "Sveshnikov"]
+[Result "*"]
+[Annotator "Tony Rotella"]
+[Variant "Standard"]
+[ECO "B33"]
+[Opening "Sicilian Defense: Lasker-Pelikan Variation, Sveshnikov Variation, Chelyabinsk Variation"]
+[StudyName "Reddit Opening of the Week - Open Sicilian"]
+[ChapterName "Sveshnikov"]
+[ChapterURL "https://lichess.org/study/OCpFCD5c/GgDwimgn"]
+
+1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 e5 { The Sveshnikov Variation
+(named after Evgeny Sveshnikov, the man who dragged this opening out of the
+depths), sometimes called the Pelikan or Chelyabinsk variation as well. The
+move itself looks sort of gross - Black critically weakens the d5 and
+d6-squares, but grabs his fair share of the center, something relatively rare
+in the Sicilian. Only around the 70's & 80's did top level players begin to
+respect the dynamic compensation Black receives for his weaknesses and
+possibly wrecked kingside pawn structure. } 6. Ndb5! (6. Nf3 Bb4 { [%csl Ge4][%cal Gf6e4] } 7. Bd3 d5! $36 { [%cal Gd5d4,Gd5e4] }) 6... d6 { [%csl Rd5,Rd6] } 7. Bg5! { This has
+established itself as the only real try for an advantage, grabbing as much
+control over d5 as possible, and giving White the option to fracture Black's
+pawn structure with ...gxf6 later. } (7. Nd5!? { is possible,
+forcing } { [%cal Rb5c7,Rc7a8] } 7... Nxd5 { , but this line has mostly been thrown to the curb, as
+something like } 8. exd5 Nb8! { (the knight is better here, heading to d7 to
+eventually stop white's ambitions of c4-c5) } 9. c4 Be7 10. Bd3 O-O 11. O-O a6 12. Nc3 f5 $132 { of G.Oparin-P.Tregubov, European Championships 2014, is
+acceptable for the second player. }) 7... a6 8. Na3 b5! { Black keeps White's knight out of c4, and incidentally threatens ...b4. This
+is the main tabiya of the Sveshnikov, and the first real branching point for
+White - does he take on f6 and wreck Black's pawn structure, or simply play
+Nd5? } { [%cal Gb5b4,Ra3c4] } (8... Be6 { is not nearly as good, allowing White to fix his offside
+a3-knight right away with } 9. Nc4! { , e.g. } 9... Rc8 10. Bxf6 gxf6 (10... Qxf6 11. Nb6! Rb8 12. Ncd5 Qd8 13. c3 $14 { [%csl Gd5][%cal Rc6d4] }) 11. Bd3 Ne7 12. Ne3 Bh6 13. Qf3 $14 { [%csl Gd5,Rd6,Re5,Rf6] }) 9. Nd5 (9. Bxf6 gxf6 (9... Qxf6? 10. Nd5 Qd8 11. Bxb5! { is quite bad for Black, e.g. } 11... axb5 12. Nxb5 Qa5+ 13. c3 Kd8 14. a4 Rb8 15. O-O Qa6 16. Qd3 { ->/+/- T.Hagen-H.Dewald,
+Correspondence 2012 }) 10. Nd5 f5 { is another very critical and important main
+line. White shatters Black's pawn structure, but in return gives him a host of
+dynamic imbalances: the two bishops, a possibly imposing central pawn mass,
+and the open g-file. A few examples that highlight the main options for White: } 11. Bd3 (11. Bxb5!? axb5 12. Nxb5 Ra4 (12... Ra7 { has also been played }) 13. Nbc7+ Kd7 { is a terrifying piece sacrifice that is practically but not
+theoretically dangerous for Black! }) (11. c3 Bg7 (11... fxe4 12. Bxb5! axb5 13. Nxb5 { is close to fatal for
+Black given that his two options used above don't work, e.g. } 13... Ra7 14. Nxa7 Nxa7 15. Qa4+ $18) 12. exf5 (12. Bd3 Be6 13. Nxb5!? axb5 14. Bxb5 Bd7 15. exf5 $13 { is a very popular piece sacrifice lately, recommended by Negi in his most
+recent GM Repertoire book }) 12... Bxf5 13. Nc2 O-O 14. Nce3 Be6 15. Bd3 f5 16. O-O { was recommended for White in "Experts vs. the Sicilian" a long time ago,
+but nowadays Black scores well after the prophylactic } 16... Kh8!) 11... Be6 12. O-O (12. Qh5 Rg8 13. g3 { was once quite popular and topical, but either 13...
+Rc8 or } 13... Nd4 $132 { , a la "The Easiest Sicilian", give Black good play }) 12... Bxd5 13. exd5 Ne7 { has historically been the main line, with two important
+options for White: } 14. c3 (14. Nxb5!? { but Black has historically secured adequate counterplay, e.g. } 14... Bg7 15. Nc3 e4 16. Bc4 O-O 17. Qd2 Ng6 18. Bb3 Re8 19. f4 Qb6+ 20. Kh1 e3 21. Qe2 Bxc3 22. bxc3 $44 { R.Langeveld-M.Voss, Correspondence
+2012 } { [%csl Rb3,Gc3,Gd5][%cal Gb6c5] }) 14... Bg7 15. Qh5 e4 16. Bc2 O-O 17. Rae1 Qc8 $13 { J.Tanti-T.Geier, Correspondence 2014 } { [%cal Gc8c5,Gc8f5,Yg6e5,Rf2f3] }) 9... Be7 10. Bxf6 Bxf6 { [%csl Gd5] } 11. c3 { White starts the tedious journey of his knight back to the center
+(usually e3) and will generally prepare a4 to start chipping away at Black's
+far advanced queenside pawns. In turn, Black will play ...Bg5 to meet the
+knight on e3 head-on, and will start to wear away at White's control of the
+d5-square with ...Ne7, ...Be6, and ...f5, usually prepared by ...Kh8 first. } { [%cal Ga3c2,Gc2e3,Ya2a4,Gf6g5,Ge8g8,Gc8e6,Yc6e7] } (11. c4!? b4 12. Nc2 O-O { has been extremely popular lately - White continues
+to search for a small edge here, and has three options for his light squared
+bishop: e2 or h3, with or without tossing in h4 first (which stops ...Bg5). An
+example of each: } 13. g3 (13. Be2 a5 14. O-O Bg5 15. Qd3 { [%csl Rd6][%cal Ga1d1,Gf1d1,Gd3d6] } 15... Be6 16. Rad1 Ra7!? { [%cal Gc6b8,Yb8a6,Ya6c5,Yb8d7,Yd7c5] } 17. b3 Rd7 18. Bf3 Nb8 19. a3 bxa3 20. Nxa3 Na6 21. Nb5?! Bxd5 22. cxd5? (22. exd5 f5 $15) 22... Rb7 23. Be2 Qb8 24. Ra1?! Nb4 25. Qc3 Rxb5 26. Bxb5 Qxb5 $19 { Zhao
+Jun-Wei Yi, Zaozhuang 2015 }) 13... Bg5! { (Black sneaks this in before h4) } 14. Bg2 (14. h4 Bh6 15. Bh3 Be6! { [%csl Rd5][%cal Gh3e6,Gf7e6] } 16. Kf1 a5 17. Kg2 Nb8! { [%cal Gb8d7,Gd7c5] } 18. Bf5 Nd7 19. Nce3 g6 20. Qg4 Nf6 21. Nxf6+ Qxf6 22. Bxe6 Bxe3 23. fxe3 fxe6 24. Raf1 Qe7 25. h5 g5 26. h6 Rxf1 27. Rxf1 Rf8 28. Rxf8+ Kxf8 29. Qf3+ Qf7 { ½-½ M.Rüfenacht-D.Fleetwood,
+Correspondence 2015 }) 14... a5 15. O-O Ne7 16. Nxe7+ Qxe7 17. Qd3 Be6 18. b3 Ra6 19. h4 Bh6 20. a3 bxa3 21. Nxa3 Qa7 22. Nb5 Qc5 23. Rfd1 Rd8 24. Qc3 Rda8 $14 { was slightly better for White in S.Karjakin-Y.Yangyi, World Team
+Championships 2015, but the Russian was unable to make progress and agreed to
+a draw a few moves later. }) 11... O-O 12. Nc2 Bg5 { The
+following 8-12 moves are generally rattled off without much thought - nowadays,
+once White has decided that they're going for 11.c3 and not 12.c4, he has
+little choice if he's searching for an opening advantage. } { [%cal Rc2e3,Gg5e3] } 13. a4! bxa4! (13... Rb8?! { has not scored well in practice - it seems as though Black
+should prefer the weak pawn to be on a5 instead, e.g. } 14. axb5 axb5 15. Bd3 Be6 16. Ncb4 Nxb4 17. Nxb4 Qd7 18. O-O g6 19. Qe2 $14 { A.Wiwe-J.
+Rendboe, Denmark Team Championships 2014 } { [%csl Gb5] }) 14. Rxa4 { [%csl Ra6] } 14... a5 15. Bc4 { [%csl Gd5][%cal Gc4g8] } (15. Bb5 { was once popular, but } 15... Ne7! { is obvious
+and adequate. }) 15... Rb8 { [%csl Gb8][%cal Gb8b2] } 16. b3 (16. Ra2!? { is also
+an important move. }) 16... Kh8 { [%cal Gf7f5,Rc4g8] } 17. Nce3 Ne7! (17... g6!? { was once in vogue, but fell off the face of the Earth
+after Shirov took a massive beating in the pawn-sac line to Giri, who's always
+at the forefront of opening theory. The following moves are sort of forced to
+a point: } { [%cal Gf7f5,Re3f5] } 18. h4! Bxh4 { (else simply h5) } 19. g3 Bg5 20. f4 exf4 21. gxf4 Bh4+ 22. Kf1! { [%csl Rh7][%cal Ga4a2,Ga2h2,Gh2h7] } 22... f5 23. Ra2! fxe4 24. Rah2 g5 25. Qh5 Rb7 (25... Ne5 { is probably a better
+defensive move and has been tried in a few correspondence games, but Black is
+still clearly in a lot of trouble, e.g. } { [%cal Ge5c4,Ge5f3] } 26. Ke2 Nxc4 27. fxg5 Rxb3 28. Rxh4 Rb2+ 29. Ke1 $16 { /-> D.Lafarga Santorromán-A.Voll, Correspondence
+2012 }) 26. Ke2 Be6 27. Qh6 Bg8 28. Rg2 Rbf7 29. Rxh4 gxh4 30. Nf5 { [%cal Gf5h4] } 30... h3 31. Nh4 Qxh4 32. Rxg8+ Rxg8 33. Qxh4 $18 { A.Giri-A.Shirov,
+Hoogeveen 2014 }) 18. Nxe7 Qxe7 19. Nd5 Qd8 20. O-O f5! 21. exf5 Bxf5 22. Qe2 Bd7 (22... Be6 { is also possible. }) 23. Ra2 Be6 24. Rd1 Rc8 { E.Riccio-A.Nickel, Correspondence 2007. There have been about 80
+or so correspondence games from this position, and White has made little
+progress. Optically his position looks great - Black has weak pawns on a5 and
+d6, three pawn islands to White's two, and look at that steed on d5. But after
+an eventual (and inevitable!) exchange on d5, we're left with opposite colored
+bishops. Black will complete the more typical Kalashnikov maneuver with ...
+Bd8-b6 and after that, his rooks will be active, putting pressure on f2 and
+White's queenside pawns. } { [%cal Gd8d7,Yg5d8,Ge6d5] } *
+
+
+[Event "Reddit Opening of the Week - Open Sicilian: Kalashnikov"]
+[Date "2016.01.07"]
+[White "Kalashnikov"]
+[Result "*"]
+[Annotator "Tony Rotella"]
+[Variant "Standard"]
+[ECO "B32"]
+[Opening "Sicilian Defense: Kalashnikov Variation"]
+[StudyName "Reddit Opening of the Week - Open Sicilian"]
+[ChapterName "Kalashnikov"]
+[ChapterURL "https://lichess.org/study/OCpFCD5c/ovGXAOCw"]
+
+1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 e5 { The move that signals the
+Kalashnikov. Just as in the Sveshnikov, Black accepts a critically weak
+d5-square and a backwards d6-pawn in exchange for an equal share of the center,
+a possible counter-weakness on d4, the plan of a beneficial piece exchange
+with ...Be7-g5 and dynamic chances with ...d5 or ...f5 down the road. A
+critical difference between the Sveshnikov and Kalashnikov is that because ...
+Nf6 and Nc3 are not immediately inserted, White doesn't generally get to
+enhance his control over the d5-square with Bg5xf6. However, Black doesn't
+force White to block the c-pawn either, and so White gains the option to push
+c4. } 5. Nb5 { This is by far the best move, forcing ...d6 to a
+certain extent. The other moves allow Black too much counterplay, and usually
+the ...d5-break, for example: } { [%cal Rb5d6] } (5. Nf5 Nf6 (5... d5! { right away is good as
+well, e.g. } 6. Qxd5! Qxd5 7. exd5 Bxf5 8. dxc6 bxc6 9. Bd3 Bxd3 10. cxd3 O-O-O { M.Khachiyan-M.Adams, Chicago Open 2010 }) 6. Nc3 d5! { (the odd
+position of White's knight on f5 is exploited) } 7. exd5 Bxf5 8. dxc6 bxc6 9. Qf3 Qd7 10. Bg5 e4 11. Qe2 Bb4!? { (The Killer Sicilian) }) (5. Nf3 Nf6 6. Nc3 Bb4 { [%cal Gf6e4] } 7. Bd3 d5! 8. exd5 Nxd5 9. Bd2 Nxc3 10. bxc3 Be7 $15 { [%csl Rc2,Rc3,Ge5] }) (5. Nb3 Nf6 6. Nc3 Bb4 7. Bd3 d5! { is similar to 5.Nf3
+above. }) 5... d6 { [%csl Rd5,Rd6] } (5... a6 6. Nd6+ Bxd6 7. Qxd6 Qf6 8. Qd1 Qg6 9. Nc3 Nge7) 6. c4 { This is an important difference between the Sveshnikov &
+Kalashnikov - since Black didn't force Nc3 White can clamp down on the
+d5-square with c4. It's not all advantage for him though - his light-squared
+bishop is now fairly bad, and c4 is not a developing move. The main strategic
+goals for Black are to exchange off his bad Bf8 for White's good Bc1 and to
+enforce a pawn break that shakes up White's center a bit - usually ...b5, but
+occasionally ...f5 as well. White would simply like to avoid exchanges and
+smother Black with his extra space. } { [%csl Gc1,Yc4,Rd4,Rd5,Yd6,Ye4,Ye5,Rf8][%cal Gf8e7,Ge7g5,Gb7b5] } (6. N1c3 a6 7. Na3 Be7!? { This is the
+newest way to play the Kalashnikov, though now less surprising than when I
+started my book. Black doesn't keep White's knight from hopping back into the
+center via the less laborious c4-route, but he does avoid the immediate
+weakening of his queenside as in 7...b5 below, while avoiding Bg5. } (7... b5 { [%cal Gb5b4,Ra3c4] } 8. Nd5 Nge7 { is the older main line, but practice has
+shown that it's not totally easy to keep Black's queenside intact after } (8... Nce7 9. c4! Nxd5 10. exd5 bxc4 11. Nxc4 Nf6 12. Be3 Rb8 13. Be2 Be7 14. O-O O-O 15. a4 $14) 9. c4! { , e.g. } 9... Nxd5 (9... Nd4 10. cxb5 Nxd5 11. exd5 { transposes }) 10. exd5! { (White keeps the tension on the queenside, inducing
+concessions or winning a pawn) } (10. cxd5 Nd4 (10... Ne7 11. Bd3 Ng6) 11. Be3 g6!? 12. Bxd4 (12. Bd3 Bg7 13. O-O O-O) 12... exd4 13. Qxd4 Qa5+ 14. Qd2 Qxd2+ 15. Kxd2 Bg7 { [%cal Gf7f5] }) 10... Nd4 11. cxb5 Bd7! (11... Be7 { is older
+still, and likely worse }) 12. Be3 (12. bxa6 Qa5+) 12... axb5 13. Bxd4 exd4 14. Bd3 (14. Qxd4 Be7! 15. Be2 (15. Qxg7 Bf6 16. Qg3 Bxb2 $19) 15... Qa5+ 16. Qd2 Bf6 $15) 14... Qa5+ { V.Costa Trillo-J.Lecha González, Correspondence 2014 was
+an absolute mess, but just about playable for Black. See "The Complete
+Kalashnikov" by Cornette and Libiszewski for more info here if interested. } 15. Kf1) 8. Nc4! { [%cal Rc1e3,Rc4b6,Re3b6] } (8. Nd5 Nf6 { is basically an
+improved Sveshnikov for Black, trading the weakening ...b5 for the developing .
+..Be7. } 9. Nxf6+ (9. Bd3 Nxd5 10. exd5 Qa5+) 9... Bxf6 10. Nc4 O-O 11. Be3 (11. Nxd6 Be6 12. c3 Qc7 13. Nc4 Rfd8 14. Qc2 b5 15. Ne3 Rac8 16. Be2 Qa5 $44) (11. Qxd6 Qxd6 12. Nxd6 Nb4 13. Bd3 Rd8) 11... Nd4!) (8. Be3!? Nf6 9. Nc4 b5 10. Nb6 Rb8 11. Nxc8 Qxc8! 12. Be2 O-O 13. O-O b4 14. Nd5 Nxe4 15. a3 $44 { of A.Morozevich-T.Radjabov, Zug 2013, is also a popular try for an advantage
+these days - White has good compensation for the pawn. }) 8... b5 (8... Nf6 9. Bg5!) 9. Ne3 { [%csl Rd5] } 9... Nf6 { [%cal Gb5b4,Gf6e4] } 10. g3 { White goes for
+maximum control of the d5-square. } (10. Bd3 { is an obvious enough move,
+kicking off another main line, e.g. } 10... O-O 11. O-O Rb8! { Not easy move to
+understand at first. Perhaps the most important point is that if Black played
+the more obvious 11...Be6 instead, he would not be able to trade
+knight-for-knight when White responds with 12.Ned5, he'd have to give up the
+light-squared bishop, which would be a fairly large concession. Black also
+guards the weak b6-square and preempts White's attempts at attacking on the
+queenside with a4. An example of typical play here is } 12. Ncd5 Nxd5 13. Nxd5 Bg5! { (Black completes the usual plan of exchanging off her bad bishop) } 14. c3 Bxc1 15. Rxc1 Be6 16. a4 Bxd5 17. exd5 Ne7 18. axb5 axb5 { [%csl Rb5,Gd5][%cal Gg7g6,Gf7f5,Ge5e4,Yg8g7,Ye7g8,Yg8f6,Yd8b6,Yb6b7,Rd1e2,Rc1a1,Ra1a5,Ra5a7] } 19. f4 Qb6+ { T.Abrahamyan-I.Krush, US Women's Championship 2014 }) 10... O-O 11. Bg2 b4 12. Ncd5 Nxd5 13. Nxd5 Bg5! { The usual
+stuff by now. } { [%csl Gc1,Rd6,Re5,Rg5] } 14. Bxg5 Qxg5 15. O-O { [%csl Rb4][%cal Rd5c7,Rc7a8,Rd1d6] } 15... Rb8! { Black
+preempts the threat of Nc7 and Qxd6 by moving the rook out of the way. He also
+simultaneously allows his knight to hop into d4 without hanging the b4 pawn
+and preempts White's a3 strike by allowing ...a5. } { [%csl Rg5][%cal Gc8e6,Ge6d5,Ga6a5,Ra2a3,Rd1d3,Ra1d1,Rf2f4,Rf4f6] } 16. Qd3 { [%cal Gd3a6,Rc8e6] } 16... a5 17. a3 Be6 18. axb4 axb4 (18... Nxb4 { S.Karjakin-T.Radjabov, World
+Blitz Championships 2012 }) 19. Ra6 Rfc8 20. c3 Qd8! { Black returns his queen
+to the center/queenside, perfectly harmonizing his pieces. } 21. Rd1 g6 22. Ne3 Rb6 23. h4 h5 { I.Nepomniachtchi-V.Ivanchuk, Tal Memorial 2011 }) 6... Be7! { Black avoids Bg5 and also waits for N1c3 before kicking the knight back,
+since then it will have to go to the poor a3-square. } 7. N1c3 { There are other
+moves, but this natural choice is the main one. } (7. Be2) (7. b3) (7. Bd3) 7... a6 8. Na3 { [%csl Ra3] } 8... f5!? { This is the more aggressive and dynamic option.
+Black accepts some extra-weak light squares and a three pawn island to two
+disadvantage for free, active development and open lines for his pieces. } (8... Be6 { [%csl Gc1,Re7][%cal Ge7g5] } 9. Nc2! (9. Be2 Nd4! { allows Black to
+ease his spacial disadvantage somewhat, grabbing the two bishops and
+exchanging off a set of minor pieces }) 9... Rc8 { Black wants to move his
+knight and attack c4, since protecting it with b3 leaves the knight loose on
+b3 after ...b5! } 10. Be2! (10. b3 Nf6 11. Be2 O-O 12. O-O b5! 13. cxb5 Na7! { [%csl Ge4][%cal Gc8c3,Ya7b5] } 14. Bb2 Nxb5 15. Nxb5 axb5 { [%csl Ge4] } 16. Bd3 Qb6 { S.Pastrana Alvarez-A.Jankowiak, Correspondence 2008 }) 10... Nf6 11. O-O O-O 12. Be3 Nb8! $132 { is another important main line given in my
+book. }) 9. exf5 (9. Bd3 { is also common, but allows } 9... f4! { , changing the
+structure into something that's likely a bit easier for Black to deal with
+than the main line. His extra space on the kingside will grant him reasonable
+attacking chances. White's idea is linked with breaking down the chain
+immediately with } 10. g3 Nf6! (10... fxg3 11. hxg3 Nf6 12. Nc2 O-O 13. Nd5 $14 { is clearly more comfortable for him }) 11. gxf4 exf4 12. Bxf4 O-O { [%cal Gf6g4,Gf8f2] } 13. Bg3 Ng4?! (13... Bh3! { is the correct way for Black to gain sufficient counterplay }) 14. Be2? (14. f4! { gives White a clear edge }) 14... Nxf2!! { Likely all
+preparation, but this game from Nataf is too good to not add in! } 15. Qd5+ Kh8 16. Bxf2 Nb4! (16... Rxf2 17. Kxf2 Bh4+?? 18. Kg2 Nb4 19. Qd2 { as Black's queen finds it
+hard to join the attack without hopping out to g5 }) 17. Qh5 (17. Qd2 Rxf2! 18. Kxf2 Bg5! 19. Qd1 Bh4+ 20. Kg2 Qg5+ { is fatal }) 17... Rxf2! 18. Kxf2 Bh4+ 19. Kg2 g6! 20. Qf3 Qg5+ 21. Kf1 Bh3+!! { A wonderful
+clearance sacrifice! } { [%cal Ga8f8] } 22. Qxh3 Rf8+ 23. Bf3 Qe3 24. Qxh4 Nd3! { Nataf is
+renowned for his attacking skills - instead of bagging the piece right away,
+he brings the final piece into the fray. It's actually mate in 7. } 25. Nd5 Qxf3+ (25... Rxf3+ 26. Kg2 Qe2+ 27. Kg1 g5!! { deflecting the queen from f2 with mate in a few }) 26. Kg1 Nf2 27. Kf1 Qxh1+ 28. Ke2 Qxa1 { and the venerable author, mathematician, and amateur astronomer
+packed it up in the game J.Nunn-I.Nataf, French Team Championships 1999. }) 9... Bxf5 { [%csl Ra6,Rb7,Gd5,Rd6,Re5,Rg7,Rh7][%cal Gg8f6,Ge8g8,Gf1d3,Ga3c2,Gc2e3] } 10. Bd3! { A trade of light-squared bishops will only serve to accentuate
+Black's weaknesses on that color complex and his structural problems in
+general. } 10... Be6! { Black obviously declines. } 11. O-O Nf6 12. Nc2 O-O 13. Ne3 { [%csl Rd5] } 13... Qd7 { [%cal Ge7d8,Gd8b6,Ya8c8,Yc8e8] } 14. Ned5 Rae8 (14... Bd8!?) 15. Be3 Bd8 $13 { M.Bluvshtein-I.Nataf, Montreal 2005 } *
+
+
+[Event "Reddit Opening of the Week - Open Sicilian: Accelerated Dragon"]
+[Date "2016.02.04"]
+[White "The Accelerated Dragon"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B38"]
+[Opening "Sicilian Defense: Accelerated Dragon, Maróczy Bind"]
+[StudyName "Reddit Opening of the Week - Open Sicilian"]
+[ChapterName "Accelerated Dragon"]
+[ChapterURL "https://lichess.org/study/OCpFCD5c/q6xgGyQC"]
+[Annotator "https://lichess.org/@/TonyRo"]
+
+1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 g6 5. c4 (5. Nc3 Bg7 6. Be3 Nf6 7. Bc4 (7. Be2 O-O 8. O-O (8. Nb3 d6 { is just a Classical Dragon, e.g. } 9. O-O Be6 10. f4 Rc8) 8... d5!) (7. f3 O-O 8. Qd2 d5! 9. Nxc6 bxc6 10. O-O-O Qa5 $132 11. exd5 cxd5 12. Nxd5? Qxa2 13. Nxe7+ Kh8 14. Qb4 Be6 15. Nc6? Nd5 $19) 7... O-O (7... Qa5 8. O-O (8. Qd2 Nxe4! 9. Nxc6 Qxc3!) (8. f3 Qb4! 9. Nxc6 (9. Bb3 Nxe4!) 9... bxc6 10. Bb3) 8... O-O 9. Bb3 (9. Nb3 Qc7 10. Bg5!? (10. f4)) 9... d6 10. h3 Bd7 11. f4 (11. Re1!?) 11... Nxd4 12. Bxd4 Bc6 13. Qd3 (13. Nd5 Rae8 { [%cal Gf6e4] }) (13. Qe1 { [%cal Gc3d5,Ya1d1] } 13... Qb4! 14. Rd1 Nxe4 15. Bxg7 Kxg7 16. Nd5 Qc5+ 17. Kh2 e6 { B.Ramnath-Narayanan, World
+U20 Championships 2011 }) 13... Nd7 14. Bxg7 Kxg7 15. Rae1 Qc5+ 16. Kh2 a5 17. a4 Rad8 18. Qg3 Qb4 19. f5 Ne5 (19... Qd4) 20. f6+ exf6 21. Qf4 f5 22. exf5 Qxf4+ 23. Rxf4 g5 $13 { Y.Wei-Y.Yu, Shenzhen 2013 }) 8. Bb3 (8. O-O Nxe4! 9. Nxe4 d5 10. Nxc6 bxc6 11. Bd3 dxe4 12. Bxe4 Ba6) (8. f3 Qb6! 9. Bb3 (9. Nf5 Qxb2 $19) 9... Nxe4!) (8. Qd2 Ng4!) 8... a5 (8... d6 { transposes to a
+normal Dragon }) (8... Ng4 9. Qxg4 Nxd4 10. Qd1 Nxb3 11. axb3 b6 (11... d6 12. Bd4 $14) 12. Bd4 f6 13. h4 Bb7 14. h5 $40 { A.Shabalov-I.Rausis, Latvian
+Championships 1989 }) (8... Qa5!?) (8... d5!?) (8... Re8!?) (8... e6!?) 9. O-O (9. f3 d5! 10. Bxd5 (10. exd5 Nb4 11. Nde2 a4 12. Nxa4 (12. Bc4 Bf5 13. Nd4 Qc7! $17 14. Nxf5 gxf5 15. Be2 a3!) 12... Nfxd5 13. Bf2 Bf5 14. O-O b5 15. Nac3 Nxc3 16. Nxc3 Qxd1 17. Rfxd1 Bxc2) 10... Nxd5 11. exd5 Nb4 12. Nde2 Bf5 (12... e6!?) 13. Rc1 e6 14. dxe6? Qxd1+ 15. Kxd1 Rfd8+) 9... a4 10. Nxa4! (10. Bxa4 Nxe4 11. Nxe4 Rxa4 $36) 10... Nxe4 11. Nb5! { [%cal Ge3b6] } 11... Ra6 (11... d5!? 12. Bb6 (12. Bxd5? Rxa4 $15) 12... Qd7 (12... Qe8? 13. Nc7 $18) 13. Qe2 Ne5 14. Rfd1 e6 15. Bd4 $14 { E.Riccio-V.Cvetnic,
+Correspondence 2008 } { [%cal Ga4b6] }) 12. c4 (12. Qe2!? { P.Svidler-V.Topalov, Linares 1999 }) 12... d6 13. Qe2 Be6 14. Rad1 Na5 15. f3 Nf6 16. Nc5 $14 { S.Grishin-A.Kazoks,
+Correspondence 2014 }) 5... Bg7 (5... Nf6 6. Nc3 Nxd4 7. Qxd4 d6 8. Be2 Bg7 9. Be3 (9. Bg5!?) 9... O-O 10. Qd2 Be6 (10... a5!? 11. O-O a4 12. f3 { [%cal Gc8e6,Gd8a5,Gf8c8] } (12. Rac1)) 11. Rc1 (11. O-O Qa5 12. Rac1 Rfc8 13. b3 a6 14. f3 b5) 11... Qa5 12. f3 Rfc8 13. b3 a6 14. Na4 Qxd2+ 15. Kxd2 Nd7 16. g4 f5 17. exf5 gxf5 18. h3 $14) 6. Be3 (6. Nc2 Nf6 7. Nc3 O-O 8. Be2 d6 9. O-O Nd7 10. Bd2 Nc5 11. b4 Bxc3 (11... Ne6) 12. Bxc3 Nxe4 13. Bb2 { P.
+Svidler-S.Tiviakov, Euro Cup 2002 } { [%cal Ge7e5] }) 6... Nf6 7. Nc3 O-O 8. Be2 d6 9. O-O Bd7 (9... Nxd4 10. Bxd4 Bd7 11. Qd3!?) 10. Qd2 (10. Rc1 Nxd4 11. Bxd4 Bc6 12. f3 a5 13. b3 Nd7 14. Be3 Nc5 15. Qd2) (10. f3!? Nxd4 11. Bxd4 Bc6 (11... a5!) 12. b4!?) 10... Nxd4 11. Bxd4 Bc6 12. f3 a5 13. b3 Nd7 14. Be3 Nc5 15. Rab1 Qb6 16. Rfc1 Rfc8 17. Rc2! (17. a3? Nxb3 18. Bxb6 Nxd2 19. Rb2 Nxc4 20. Bxc4 Bd7!) 17... Qd8 18. Bf1 h5!? 19. a3 Kh7 20. b4 axb4 21. axb4 Ne6 22. Nd5 Ra3 { [%cal Gc6d5] } 23. Kh1 Rca8 $13 { A.Giaccio-R.Felgaer, Mar del Plata 2001 } *
+
+
+[Event "Reddit Opening of the Week - Open Sicilian: Dragon"]
+[Date "2016.02.07"]
+[White "Dragon"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B76"]
+[Opening "Sicilian Defense: Dragon Variation, Yugoslav Attack, Modern Line"]
+[StudyName "Reddit Opening of the Week - Open Sicilian"]
+[ChapterName "Dragon"]
+[ChapterURL "https://lichess.org/study/OCpFCD5c/WqDoiWzp"]
+[Annotator "https://lichess.org/@/TonyRo"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. f3 O-O 8. Qd2 Nc6 9. O-O-O (9. Bc4 Bd7 10. O-O-O (10. h4 h5 11. O-O-O Rc8 12. Bb3 Ne5 (12... Nxd4 13. Bxd4 b5 14. g4! hxg4 15. h5!)) 10... Rc8 11. Bb3 Ne5 (11... Nxd4 12. Bxd4 b5! $132 13. Nd5 (13. e5 dxe5 14. Bxe5 Bc6) (13. Bxa7 b4 14. Nd5 Nxd5 15. exd5 Qa5 16. Bd4?! (16. Qe3 Ba4 17. Bd4 Bxb3 18. Qxb3 Rc7 19. Bxg7 Kxg7 $44 { J.Shahade-T.Kosintseva, Bled 2002 }) 16... Rxc2+! 17. Bxc2 (17. Qxc2 Rc8) (17. Kxc2 Bf5+ 18. Kc1 Rc8+) 17... Qxa2 18. Qe3 Rc8 19. Kd2 Rxc2+ 20. Kxc2 Qc4+ 21. Kd2 Bxd4 $40) (13. h4 a5! 14. h5 a4 15. Bxf6 Bxf6! (15... exf6!?) 16. hxg6 e6! 17. e5!? (17. Qxd6 axb3 18. Qxd7 Qxd7 19. Rxd7 b4 $132) (17. Qh6?? Bg5+ $19) 17... Bg7 (17... Bxe5?? 18. Qh6 $18) 18. Rxh7 Bxe5 19. Rdh1 (19. Qh6 Qf6!) 19... fxg6 { J.Polgar-G.Jones,
+London 2013 } 20. Rh8+ Bxh8 21. Rxh8+ Kxh8 22. Qh6+ Kg8 23. Qxg6+) 13... Nxd5 14. Bxg7 Kxg7 15. exd5! (15. Bxd5 a5 16. a3 Qc7 $132) 15... a5 16. a3 Kg8! 17. Rhe1 (17. h4 b4! 18. axb4 axb4 19. h5 (19. Qxb4 Rb8 20. Qd4 Qa5 $36 { [%cal Gf8c8,Gb8b4,Gd7a4,Ya5a1] }) 19... Bf5! 20. g4? Bxc2! 21. Bxc2 b3 $19) 17... Rc5! { [%cal Gb5b4] } 18. Re3! { [%cal Gd1e1,Ge3b3] } 18... b4 19. axb4 axb4 20. Qxb4 Qa8 $132 { E.Riccio-S.Ham, Correspondence 2012 }) 12. Kb1! (12. h4 h5! 13. Bg5! { [%cal Gg5d8,Gf3f4,Ge4e5,Gc3d5,Yf6g4,Yg4e3,Rc4e3,Re5c4] } (13. g4?! hxg4 14. h5 Nxh5 15. Bh6 e6! (15... Kh7! 16. Bxg7 Kxg7 17. fxg4! (17. Rxh5 gxh5 18. Qg5+ Ng6 19. Nf5+ Bxf5 20. exf5 e6 21. Qxh5 (21. Qxd8 Rcxd8 22. fxg6 Kxg6 $19) 21... Qh4 $19) 17... Bxg4 18. Nf5+ gxf5 19. Rdg1 Rh8 20. Qg5+ Kf8 21. exf5 e6 $15) 16. Rdg1 Qf6 17. Bxg7 (17. fxg4 Bxh6 18. Qxh6 Qf4+! 19. Qxf4 Nxf4) 17... Qxg7 18. fxg4 Nf6 19. g5 Nh5) (13. Bh6 Nc4 (13... Bxh6 14. Qxh6 Rxc3 15. bxc3 Qa5 16. Kb1) 14. Bxc4 Rxc4 15. Bxg7 Kxg7 16. g4 hxg4 17. h5 Rh8! (17... Nxh5 18. Rxh5! gxh5 19. Qg5+ Kh8 20. Qxh5+ Kg7 21. Qg5+ Kh8 22. Rh1#) 18. hxg6 fxg6 19. f4 e5! 20. Nde2 Rxh1 (20... Nxe4 21. Rxh8 Kxh8 22. Qd3 $14) 21. Rxh1 Nxe4 22. Nxe4 (22. Qd3 Rxc3 23. bxc3 Nf2 $19) 22... Rxe4 23. fxe5 Rxe2! (23... dxe5 24. Qh6+ Kf7 25. Qh7+ Ke6 26. Qxg6+ $18) 24. Qxe2 (24. Qh6+ Kf7) 24... Qg5+ 25. Qd2 Qxd2+ 26. Kxd2 dxe5) 13... Rc5! { [%cal Gb7b5,Yd8a5,Yc5a5,Rf8c8,Rc5d5] } (13... Qa5 14. Kb1!) (13... b5 14. Ndxb5 $16) (13... a5 14. a4!) 14. g4 (14. Kb1 b5 (14... Re8!?) 15. g4 hxg4 16. h5 Nxh5 17. Nd5 (17. Rxh5? gxh5 18. Nd5 Rxd5! 19. Bxd5 Nxf3 20. Nxf3 gxf3 21. Bh6 e5! { Y.Wan-C.
+Emiroglu, Albena 2012 }) 17... Re8 18. Rxh5 gxh5 19. Qh2 Rxd5! 20. Bxd5 Qb6! 21. Nf5 (21. Qxh5 e6!) 21... Bxf5 22. exf5 Qc5!) 14... hxg4 15. f4 Nc4 16. Qe2 Na5! 17. e5 Nxb3+ 18. Nxb3 Rxc3 19. bxc3 Bc6 20. exf6 (20. Rhf1 Ne4) 20... exf6 $15) (12. Bh6?! Bxh6! 13. Qxh6 Rxc3! 14. bxc3 a5! 15. a4 Qc7 16. Qe3 Qc5! { PAUSE } 17. Kd2 Bxa4! 18. Ra1 Bxb3 19. cxb3 d5! { E.Geller-V.
+Korchnoi, Candidates 1971 } 20. exd5 Nxd5 21. Qxe5 Qxc3+ 22. Ke2 Qb2+ 23. Kd3 Nb4+ 24. Ke3 Nc2+ $19) (12. g4?! { [%cal Gh2h4,Rh7h5] } 12... b5! 13. g5 (13. h4 b4 14. Nd5 Nxd5 15. Bxd5 e6 16. Bb3 a5 $19) 13... b4! 14. Nce2 Nh5 15. Ng3 a5 16. Nxh5 gxh5 17. f4 a4 $17) 12... a6!? (12... Re8!? 13. h4 h5 14. g4 hxg4 15. h5 Nxh5 16. Bh6 e6 (16... Bf6!?) (16... Kh7!? 17. Bxg7 Kxg7 18. fxg4 Bxg4 19. Nf5+ gxf5 (19... Bxf5 20. exf5 Rh8 21. fxg6 Nxg6 22. Rdf1 $16) 20. Qg5+ Ng6 21. exf5 Bxd1 22. Bxf7 Kxf7 23. Qxg6+ Kf8 24. Rg1 $18) 17. Rdg1 Qf6 (17... g3 18. Nce2 Qf6 19. Bxg7 Qxg7 20. Nxg3 (20. Rxh5!?) 20... Nxg3 21. Rxg3 a5 22. a3 Nc4 23. Bxc4 Rxc4 24. Ne2) 18. fxg4 Bxh6 19. Qxh6 Qg7 20. Qd2 Nf6 21. g5 Nh5 22. Nce2! Nc4 23. Bxc4 Rxc4 24. b3! Rc5 25. Ng3 Nxg3 26. Rxg3 $18 { J.Polgar-G.
+Kaidanov, Hilton Head 2010 }) (12... Nc4 13. Bxc4 Rxc4 14. g4! b5 (14... Qa5 15. g5 Nh5 16. Nd5 Qd8 17. Ne2 $16) 15. g5! (15. b3 b4 16. bxc4 bxc3 17. Qxc3 Qc7 $44) 15... Nh5 16. b3 Rc8 (16... Rc5 17. Nd5 { [%cal Gd4e2] } 17... e6 (17... a5 18. Ne2 Rc6 19. Ng3 a4 20. Nxh5 gxh5 21. Rhg1 $16 { [%cal Gd5f6] }) 18. Ne2! Rc8 19. Nb4 a5 20. Qxd6 axb4 21. Qxd7 Qa5 22. Qa7 Qxa7 23. Bxa7 $16) 17. Ndxb5 $16) 13. h4 h5 14. g4 hxg4 15. h5 Nxh5 16. Rdg1 (16. Bh6 Kh7! 17. Bxg7 Kxg7 18. fxg4 Bxg4 19. Nf5+ gxf5! 20. Qg5+ Ng6 21. exf5 Bxd1 22. Bxf7 Rxf7 23. Qxg6+ Kf8 $17) 16... Rc5 17. Bh6 Kh7 18. Bxg7 Kxg7 19. f4 Nc4 20. Bxc4 Rxc4 21. f5 e5 22. Nde2 Rh8 23. b3 Rc6 24. Rxg4 Nf6 25. Rgg1 Rxh1 26. Rxh1 Ng4 27. Ng3 Kg8 28. Nd5 Rc5 29. Ne3 Nxe3 30. Qxe3 $18 { V.Topalov-M.Carlsen, Bilbao 2008 }) 9... d5! (9... Bd7?! 10. g4 Rc8 11. Kb1!? (11. h4 Ne5 12. h5 Qa5 13. Kb1 Nxf3 14. Nxf3 Rxc3 15. Qxc3 Qxc3 16. bxc3 Bxg4 17. Bg2 Nxe4 $44) 11... Ne5 12. Be2!? Nc4 (12... Qa5 13. Nd5!) (12... b5 13. Ncxb5 $16) (12... a6 13. h4 b5 14. h5 $18 { [%cal Gc3d5,Ge3h6] }) 13. Bxc4 Rxc4 14. h4 $16) (9... Nxd4?! 10. Bxd4 Be6 11. Kb1! Qc7 12. h4! (12. Nb5!? Qc6 13. Be3!? (13. h4 $40) 13... a6 14. Nd4 Qd7 15. g4 b5 16. h4 Bc4 17. Bh3!? (17. h5 $18) 17... Qb7 18. h5 Nd7 19. g5 (19. Bh6! Rac8 20. Nf5!! Bxh6 21. Nxe7+ Kg7 22. g5 $18) 19... Nc5 20. Bg4 Rfd8 21. Qh2 e6 22. hxg6 hxg6 { A.Shabalov-A.Almeida Saenz,
+Chicago Open 2007 } 23. Nf5!! gxf5 24. exf5 exf5 25. Bd4! $18) 12... Rfc8 13. h5! Qa5 14. hxg6! (14. Bxf6?? Rxc3! 15. Qxc3 Qxa2+ 16. Kc1 Bh6+ $19) (14. a3 Nxh5! 15. Bxg7 Kxg7 16. g4 Rxc3! 17. Qxc3+ Qxc3 18. bxc3 Ng3 $44) 14... hxg6 15. a3! Rab8 16. Bd3 Bc4 (16... b5 17. Qg5!) 17. Rh2 (17. Bxc4 Rxc4 18. Qc1! { [%cal Gd4f6,Gc3d5] } 18... e6 19. g4 Rbc8 20. g5 Nh5 21. Bxg7 Kxg7 22. Rxd6 Rxc3 23. bxc3 Ng3! 24. Rh2 Ne2 25. Rxe2 Qb5+ 26. Qb2 Qxe2 27. c4+ Kg8 28. Qc3 $16 { F.Pellegrinon-C.Maltais, Correspondence 2014 }) 17... b5 18. Bxc4 (18. Rdh1 e5! 19. Be3 b4! $132 20. Na2 Bxa2+ 21. Kxa2 Rc3!) 18... bxc4 19. Ka1 Rb7 20. g4 Rcb8 21. Rb1 Kf8 22. Rhh1 $16) 10. exd5 (10. Qe1!?) (10. Kb1!?) 10... Nxd5 11. Nxc6 bxc6 12. Bd4 (12. Nxd5 cxd5 13. Qxd5 Qc7 14. Qc5! Qb7 $44) 12... Bxd4 (12... Nxc3 13. Qxc3 (13. Bxc3!?) 13... Bh6+ 14. Be3 (14. Kb1?? e5 $19) 14... Bxe3+ 15. Qxe3 Qb6 16. Qxe7 (16. Qxb6?! axb6) 16... Be6 17. Qa3 $16 { In the last 3 years, this variation has been played
+23 times in my DB, and White has scored +14 =8 -1. }) (12... e5 13. Bc5 Be6 14. Ne4 (14. Bxf8 Qxf8 $44 15. Ne4? Bh6 16. Ng5 f6) 14... Re8 15. h4 h6 (15... Nf4 16. g3 Qxd2+ 17. Rxd2 Nh5 18. g4 Nf4 19. h5 gxh5 20. gxh5 $14) 16. h5!? (16. g4 Qc7 17. g5 (17. h5 g5 18. Bc4 Red8 19. Qf2) 17... h5 18. Bc4 Red8 19. Qf2 Nf4 20. Bxe6 Nxe6 21. Bd6 Qb6) 16... g5 17. c4 Nf6 18. Qe1 (18. Qxd8 Rexd8 19. Rxd8+ Rxd8 20. Be7 Nxe4 21. Bxd8 Ng3 22. Rg1 Nxf1 23. Rxf1 Bxc4 24. Re1 Bxa2 25. Kd2 $14 { A.Bondi-S.Biasutto,
+Correspondence 2012 }) 18... Qc7 19. Bd6 Qb6 20. Bxe5 Nxe4 21. Bxg7 Kxg7 22. Qxe4 Rab8 23. b3 Qc5 24. Qd4+ Qxd4 25. Rxd4) 13. Qxd4 Qb6 { [%cal Gb6d4,Yd5c3,Ya8b8] } 14. Na4! (14. Nxd5 cxd5 15. Qxd5 (15. Qxb6 axb6 16. a3 Rd8 17. Bb5 Ra5) 15... Be6 16. Qb5 Qf2 $44 { D.Baramidze-G.Jones, European Team
+Championships 2013 }) 14... Qc7 { [%csl Ra7,Rc5,Rc6][%cal Gc8f5,Gf8d8] } (14... Qa5!? { [%cal Ge7e5,Gd4a4] } 15. b3 Be6!? 16. Qe5! { [%cal Gc2c4] } 16... Qb4 17. Kb2 (17. c4 Nf6 18. Bd3 Rfd8 $132 { [%cal Ga7a5,Gf6d7,Gd7c5] }) 17... Rfd8 18. Rd4 Qd6 19. Qxd6 exd6 20. Bc4 Nc7 21. Rhd1 d5 22. Bf1 Kg7 $14 { D.Evans-J.Jirku,
+Correspondence 2012 }) 15. Bc4 (15. Nc5 Rd8 16. g4 (16. c4 e5! 17. Qd2 Bf5! 18. cxd5 cxd5 19. Qc3 d4 20. Qc4 Rdc8 21. b4 a5 22. a3 axb4 23. axb4 Qa7 $19) 16... Rd6 17. Bc4 Nb6 18. Qe4 Nxc4 19. Qxc4 Be6 20. Nxe6 Rxe6) 15... Rd8 16. Bb3 { [%cal Gc2c4] } 16... Be6!? (16... Bf5) 17. Nc5 Nf4 18. Nxe6 Nxe6 19. Qe3 Nf4 20. g3 (20. Rxd8+ Rxd8 21. g3 Nd5 22. Qc5 Qb6 23. Qxb6 Nxb6 24. Re1 e6 25. Re5 Kf8 { M.Sferle-A.Haugen, Correspondence 2012 }) 20... Nd5 21. Qg5 e6 22. Rd4 Rd7 23. Rhd1 Rad8 { ½-½ M.Adams-P.H.Nielsen, FIDE World Cup 2011 } 24. c4 c5 25. R4d3 Nb6 26. Rxd7 Rxd7 27. Rxd7 Nxd7 28. Qe7 Qc6 $132 *
+
+
+[Event "Reddit Opening of the Week - Open Sicilian: Dragon - EOY 2021 Update"]
+[Date "2021.12.12"]
+[White "Dragon Update"]
+[Result "*"]
+[Annotator "TonyRo"]
+[Variant "Standard"]
+[ECO "B78"]
+[Opening "Sicilian Defense: Dragon Variation, Yugoslav Attack, Old Line"]
+[StudyName "Reddit Opening of the Week - Open Sicilian"]
+[ChapterName "Dragon - EOY 2021 Update"]
+[ChapterURL "https://lichess.org/study/OCpFCD5c/aW0VBsVh"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. f3 O-O 8. Qd2 Nc6 { To review, White basically has the choice between posting up the bishop
+on a slightly more active square which also stops ...d5 (but takes a tempo and
+leaves the bishop somewhat more vulnerable), or castling long right away,
+which allows the thematic and much desired ...d5-break. } { [%csl Gg7] } 9. Bc4 (9. O-O-O { [%cal Gc6d4,Gc8d7] } 9... d5! { Black can and should get this, as the alternatives are pretty bad as of now. } { [%cal Gc1b1] } 10. exd5 (10. Nxc6!? { This very direct idea is becoming very trendy actually,
+and it's quite dangerous. } 10... bxc6 11. Bh6 { [%cal Gh2h4,Gh4h5] } 11... Bxh6 { This is the most combative,
+deflecting White's queen away from the center and queenside. } 12. Qxh6 { [%cal Ge7e5] } 12... Rb8!? { [%cal Gh2h4] } (12... e5 { Giri's recommendation, e.g. } 13. exd5 cxd5 14. h4 d4 15. h5 Be6 16. hxg6 fxg6 17. Ne4 Qc7 18. Bd3 Bf5 $13 { K.Griffith - J.Liang, New York 2021 }) 13. e5 (13. h4 Qa5 14. e5 (14. h5 Rxb2! 15. hxg6 fxg6 16. Kxb2 Qb4+ 17. Kc1 Qxc3 18. e5 Qa3+ 19. Kd2 Qa5+ { draws }) (14. a3!? { M.Nayhebaver - M.Hrabusa,
+Slovakian Championship 2019, avoids the draw with ...Rb2 and keeps the game
+quite complex. }) 14... Nh5 15. Bd3 Qb4 16. g4 Qf4+ 17. Qxf4 Nxf4 18. Ne2 Nxd3+ 19. Rxd3 Ba6 20. Rd2 Bxe2 21. Rxe2 e6) 13... Nd7 14. Rd4! { White very
+cleverly seeks to swing the rook over to h4! } { [%cal Gd4h4] } 14... Re8 { [%cal Gd7f8] } 15. e6 fxe6 16. Bd3 Nf8 17. h4 e5 { [%cal Gh4h5] } 18. Ra4 (18. h5 exd4 19. hxg6 Qd6 { [%cal Gd6h6] } 20. gxh7+ Kh8 21. Qg7+! Kxg7 22. h8=Q+ Kf7 23. Rh7+ Nxh7 24. Qxh7+ Kf8 25. Qh8+ Kf7 26. Qh7+ $10) 18... Qd6 19. h5 Bf5 { of A.Fier - M.Perunovic, Belgrade 2021, holds it all together. }) (10. Kb1 Nxd4 11. e5 Nf5 12. exf6 Bxf6 (12... exf6) 13. Nxd5 Qxd5 14. Qxd5 Nxe3 15. Qd2 Nxd1) 10... Nxd5 11. Nxc6 bxc6 { [%cal Ge3d4] } 12. Bd4 { This is the most annoying line for Black, shattering his
+queenside structure then neutralizing the strong bishop along the long
+diagonal. } (12. Nxd5 cxd5 13. Qxd5 Qc7) 12... e5 { Historically, this has been the main choice and is also the
+most combative. } (12... Bxd4 13. Qxd4 Qb6 14. Bc4!? (14. Na4 { is the normal
+move here } { [%csl Gc5][%cal Gb6a5,Gb6c7] } 14... Qa5!? { [%cal Ge7e5,Gd4a4] } (14... Qc7 15. Bc4 (15. Nc5!? { right away is also a good try }) 15... Rd8 { [%cal Gc4b3,Ga4c5] } 16. Nc5 (16. Bb3 { is also playable, and after } 16... Be6 17. Nc5 Nf4 18. Nxe6 Nxe6 19. Qe3 Nf4 { of S.Rublevsky - V.Cmilyte, European Championships 2011,
+play is somewhat similar to our main line with 14...Qa5!? }) 16... Bf5 { [%cal Gf5c2] } 17. Bb3 Nf4 $13 { [%cal Gd8d4] } 18. Qf2 Rxd1+ 19. Rxd1 Rd8 $10 { [%cal Gd1d8,Gd1e1] }) 15. b3 { [%csl Gb3][%cal Gc4b3,Gc8e6] } 15... Qc7 (15... Be6!? { was recommended
+by Jones in his GM Repertoire book and also looks generally playable for Black. } 16. Qe5) 16. Bc4 Rd8 17. g4 { [%csl Gf5][%cal Gc8f5] } (17. Rhe1 { [%cal Gc7h2] } 17... Bf5 (17... Qxh2!? $146) 18. Qe5 Qxe5 19. Rxe5 Bxc2 20. Rd2 (20. Kxc2 Nb4+ 21. Kc3 Nxa2+ 22. Kc2 Nb4+ $10) 20... Bf5 21. Bxd5 cxd5 22. Rxe7 { M.Corallo - M.Bodek, US Masters 2014 } 22... d4 $10 { [%csl Ra4][%cal Ra4c3] }) 17... Be6 18. Nc5 { [%cal Gc5e6] } 18... Nf4 { [%cal Gd8d4] } 19. Nxe6 Nxe6 20. Qe4 Ng5 21. Qe3 Nh3! { [%csl Gh3,Gf4][%cal Gh3f4] } 22. Rhe1 e6 23. Kb2 Nf4 24. Rxd8+ Rxd8 25. Qe5 Qxe5+ 26. Rxe5 Nd5 { A.Savoca - L.
+Parsons, Correspondence 2021 }) 14... Ne3 15. Rd2 Qxd4 16. Rxd4 Nxg2 (16... Bf5!? 17. Bb3 Nxg2 18. Rg1 e5! 19. Rc4 Nf4 20. Re1 Be6! 21. Rxc6 Bxb3 22. axb3 Ne6! 23. Rxe5 Nd4 24. Rc4 Nxf3 25. Re3 Ng5) 17. Re4! $14 { E.Safarli -V.
+Asadli, Azerbaijan Championships 2021 }) (12... Nxc3 13. Qxc3 Bh6+ 14. Be3 Bxe3+ 15. Qxe3 Qb6 { [%cal Ge3e7] } 16. Qxe7 Be6 17. Qa3 { [%cal Ga8d8] } 17... Rad8 (17... Rfd8 18. Bd3 Rd5 19. Rhe1 Ra5 20. Qc3 Rxa2 21. b3 Ra5 { G.Gopal - S.Narayanan, Indian Championships 2009 } 22. Kb2 $146 { +/- }) 18. Bd3 Rd5 19. Rhe1! { [%cal Gf8d8] } 19... Ra5 20. Qc3 Rxa2 21. b3! { [%cal Gc4g8,Gc3h8] } 21... Ra5 { [%cal Ga5d5] } 22. Kb2 { [%cal Ga5d5] } (22. Rxe6!? fxe6 23. Bc4) 22... Rc5 (22... Rd5 23. Bc4 $14 { S.Fedorchuk - A.
+Timofeev, European Championships 2009 } (23. Ra1 $14 { K.Arakhamia Grant - I.
+Gaponenko, European Women's Cup 2009 })) 23. Qf6 { +/-/+/= } 23... a5?? 24. Rxe6! fxe6 25. Qxe6+ Rf7 26. Bc4 Rxc4 27. Qxc4 Qc7 28. Re1 Qxh2 29. Re7 Qf4 30. Qxf7+ Qxf7 31. Rxf7 Kxf7 32. Ka3 $18 { D.Lintchevski - A.Kashlinskaya, Russian Team
+Championships 2009 }) 13. Bc5 { [%cal Gc8e6] } 13... Re8!? { Moving the rook right away has become the
+main choice lately - Black reasons that after 13...Be6 they'll have to move
+the rook eventually, so why not do it now and remain more flexible with your
+other pieces. } { [%csl Ge8][%cal Gc8e6] } (13... Be6 14. Ne4 (14. Bxf8 Qxf8 $44) 14... Re8 15. h4 h6 (15... h5!?) 16. g4 (16. h5!? g5 { [%cal Gg2g4] } 17. c4!? (17. g4) 17... Qc7 (17... Nb6 18. Qc3 $16) 18. Ba3 (18. cxd5?? cxd5 $19) 18... Nf6 19. Nxg5! e4! (19... hxg5? 20. h6 Bh8 21. Qxg5+ Kh7 22. Bd3+ $18) 20. Bd6 Qb7 21. Nxe6 Rxe6 22. Qb4 { +/=/+/- A.Parushev - D.
+Dushkin, Correspondence 2019 }) 16... Qc7 17. h5! (17. g5 h5 18. Bc4 Red8 19. Qf2 { [%csl Gh4,Gg5] }) 17... g5 { [%csl Rg7,Gf3,Gg4,Gh5] } 18. Bc4 Red8 19. Qf2 $16 { Z.Sanner - A.Larsen, Correspondence 2020. Black's kingside majority is not in
+great shape, and in contrast to 17.g5, White won't have to worry about a weak
+h4-pawn in the endgame. } { [%cal Gf7f5] }) 14. Ne4 (14. Nxd5 cxd5 15. Qxd5 Qxd5 16. Rxd5 Be6 { [%cal Ga7a5,Ga5a4] } 17. Rd6 (17. Rd3 Bf5! (17... Bxa2 18. Ra3 Be6 19. Ba6! $16) 18. Ra3 Rec8 { [%cal Gb2b4,Ga7a5] } 19. Ra5 (19. b4 a5 $132) 19... Bh6+ 20. Kb1 Bf8 $44 { Y.Malinarski - T.Slisser,
+Hoogeveen 2003 }) 17... Bxa2 18. b3 Rec8 19. Rd5 a5 20. Kb2 a4 21. Kxa2 axb3+ 22. Kxb3 Ra5 23. Bc4 (23. Kb4 Raxc5 24. Rxc5 Bf8) 23... Raxc5 24. Rxc5 Rxc5 { E.Gufeld - S.Kudrin, Hastings 1986 }) 14... Qc7 15. h4 f5 16. Nd6 Rd8 17. Nxc8 Raxc8 18. h5 Nb6 19. Bxb6 Rxd2 20. Bc4+ Kf8 21. Bxc7 Rxd1+ 22. Rxd1 Rxc7 23. hxg6 Bh6+ 24. Kb1 hxg6 25. Rd6 { [%cal Gd6c6,Gd6g6] } 25... Kg7 26. b4 $14 { D.Swiercz - D.Naroditsky, US
+Championships 2021 }) (9. g4 Be6 10. Nxe6 fxe6) 9... Bd7 (9... Nxd4 10. Bxd4 Be6 { Giri's recommendation -
+Black challenges the bishop immediately along the a2-g8 diagonal, inviting
+double e-pawns. Not that uncommon in the Dragon, e.g. 9.g4 Be6! } 11. Bb3 (11. Bxe6 fxe6 12. O-O-O Qa5 { [%cal Gc1b1] } 13. Kb1 (13. Rhe1!? { [%cal Ge4e5] } 13... Nd7 14. Bxg7 Kxg7 15. e5 d5 (15... Nxe5 16. f4 { [%cal Ge1e6] }) 16. a3! (16. Kb1) 16... Rac8 (16... Nb6? 17. Ne2 Qxd2+ 18. Rxd2 Nc4 19. Rd3 Nxe5 20. Rb3 $16) 17. Ne2 Qxd2+ 18. Rxd2 a5 19. Nd4 Kf7 20. Re3 a4 21. Kb1 g5!) 13... Rac8 14. h4 Nh5!? { J.Auvray - C.Terrazzoni, French Team Championships
+2021 }) 11... Qa5 { [%cal Gf8c8,Ga8c8,Gb7b5,Gb5b4] } 12. O-O-O (12. O-O Nd7 (12... Rfc8)) 12... b5 13. Kb1 { [%cal Gb5b4,Ge6b3] } 13... b4 14. Nd5 (14. Ne2 Bxb3 15. cxb3 (15. axb3 Qb5! $40) 15... e5 16. Bf2 Rfd8 17. Bh4 d5! 18. Bxf6 Bxf6 19. exd5 Rd7 20. Ng3 Rad8 21. Ne4 Bg7 $132) (14. Bxe6 fxe6 15. Ne2 Rfc8 (15... Qb5!? $13 { A.Sukovic - N.Djukic, Montenegro 2021 }) 16. h4 Rc6 17. h5 e5! 18. Be3 Nxh5 $13 { M.Tabatabaei - M.Mchedlishvili, Sharjah
+Masters 2021 }) 14... Bxd5 15. exd5 (15. Bxd5 Nxd5 16. Bxg7 Nc3+ 17. Bxc3 bxc3 18. Qxc3 Qxc3 19. bxc3 Rfc8 20. Rd3 Rc5 21. Re1 Rac8) 15... Qb5! { [%csl Yb3][%cal Ga7a5,Ga5a4] } 16. Rhe1 { [%csl Ge7] } (16. Qd3 Qxd3 17. Rxd3 Nd7 18. Re1 Ne5 19. Rdd1 g5! { V.Ivanchuk - N.
+Djukic, Batumi Olympiad 2018 }) 16... a5 17. Qe2 Qxe2 18. Rxe2 a4 19. Bc4 Rfc8 20. b3 Rc7 $10 { K.Kulaots - E.Sutovsky, Tallinn rapid 2016 } { [%csl Gc7,Re8] }) (9... Qa5!? 10. O-O-O Nxd4 11. Bxd4 Be6) 10. O-O-O Rc8 11. Bb3 Ne5 (11... Nxd4 12. Bxd4 b5 { [%cal Ga7a5,Ga5a4,Gb5b4] } 13. a3!? (13. Nd5 Nxd5 14. Bxg7 Kxg7 15. exd5 a5 16. a3 Kg8) 13... a5 14. Nd5 Nxd5 15. Bxg7 Kxg7 16. exd5 Kg8 17. Rhe1 Rc5! 18. Re3 b4 19. axb4 (19. Rde1? bxa3 20. bxa3 a4 21. Ba2 Qb6 22. Rxe7 Bf5 23. c3 Rb5 $19) 19... axb4 20. Qxb4 Qa8! 21. Bc4 Bf5 22. Ra3 Qc8 23. b3 Qc7 24. Qd2 (24. g4)) 12. Kb1! { [%cal Ga7a6] } (12. Bh6 Bxh6 13. Qxh6 Rxc3 14. bxc3 a5) 12... a6 (12... Nc4 13. Bxc4 Rxc4 14. g4 b5 15. b3! (15. Ndxb5 Qb8! 16. Nd4 Rfc8 17. Ka1 Bxg4!! 18. fxg4 Nxe4 19. Nxe4 Rxc2 $19) 15... b4 (15... Rc5 16. Ne6 fxe6 17. Bxc5 dxc5 18. e5 $18) (15... Rc8 16. Ndxb5) 16. bxc4 bxc3 17. Qxc3 Qc7 18. g5! Nh5 { [%csl Gb3] } (18... Rb8+ 19. Ka1 Ne8 20. Rb1 Rc8 21. Rb2 $18) 19. Rd3! Rc8 20. Qd2 Qxc4 21. Rb3 $18 { J.Ramirez - K.Rodriguez, Correspondence 2020 }) (12... Re8 13. h4 h5 14. g4 hxg4 15. h5 Nxh5 16. Bh6 { [%cal Gg7f6] } (16. Rdg1 Qa5 17. Bh6 Bf6 18. fxg4 Bxg4 19. Bf4 Nxf4 20. Qxf4 Rxc3 21. bxc3 Qxc3 22. Qh6) 16... Kh7 (16... Bf6!? 17. Nd5 Rc5 (17... a5 18. Nxf6+ exf6 19. Rxh5 gxh5 20. Qh2 a4 21. Bd5 Rc5 22. Qxh5 Rxd5 23. exd5 Ng6 24. fxg4 Qa5 25. Ne6 Bxe6 26. dxe6 Qxh5 27. exf7+ Kxf7 28. gxh5 Ne7) 18. Rdg1 Rxd5 19. Bxd5 g3 20. Qd1!? Qc7 21. Rxh5 gxh5 22. Rxg3+ Kh7 23. f4 Ng4 24. Bxf7! { A.Golubenko - I.Chernov, Correspondence 2020 } 24... Kxh6 (24... Nxh6 25. Qxh5 $18) 25. Qh1 h4 26. e5!! dxe5 27. Qe4 $18) 17. Bxg7 Kxg7 18. fxg4 (18. Rxh5 gxh5 19. Qg5+ Ng6 20. Qxh5 { [%cal Gc8c5] } 20... Rc5 $19) 18... Bxg4 (18... Nxg4?? 19. Rxh5 $18 gxh5 20. Qg5+ Kf8 21. Qxh5 e6 22. Qh8+ Ke7 23. Nf5+ exf5 24. Nd5+ Ke6 25. Nf4+ Ke7 26. Ng6+ fxg6 27. Qg7#) 19. Nf5+! Bxf5 (19... gxf5 20. Qg5+ Ng6 21. exf5 Bxd1 22. Bxf7! { [%cal Gg5g6] } 22... Kxf7 23. Qxg6+ Kf8 24. Rg1 $18) 20. exf5 { [%cal Gh1h5] } 20... Rh8 21. fxg6 Nxg6 22. Nd5 (22. Rdf1 Nf6 23. Ne4 { [%cal Gf6e4] } 23... Qb6 (23... Nxe4?? 24. Rxf7+ Kg8 25. Rxh8+ Nxh8 26. Qg2+) 24. Rhg1 { [%cal Ge4g5,Gg5f7] } 24... Rh5 { and Black was able to hold on in S.
+Montella - I.Tateo, Correspondence 2019 }) (22. Qd5 e6 23. Qd4+ Qf6 24. Qxa7 Ng3 25. Rxh8 Rxh8 26. Qxb7 d5 27. a4 { LCZero - Stockfish, TCEC Superfinal 2021 }) 22... Nf6 23. Rxh8 Qxh8 24. Qg2 (24. Nxf6 exf6) 24... Qd8 (24... Nxd5 25. Qxd5 Qe8 26. Rf1 e6 27. Qxb7 $16 { L.Eastoe - J.Rocco Ruiz, Correspondence
+2017. Black may already be losing here. }) 25. Nf4 Qe8 26. Rg1 Qc6 27. Ne6+ Kg8 (27... Kh7 28. Qh3+ Kg8 29. Qh6 $18) 28. Qg3 d5 29. Nf4 Qd6! 30. Qh3 { [%csl Gc8] } 30... Rd8 31. Qh6 Qb6 32. Rg5 (32. Rh1?? Qe3 $19) 32... Qf2 33. a3 Qe1+ 34. Ka2 Qe4 35. c3 (35. Nxg6 fxg6 36. Rxg6+ Kf7 37. Rg7+ Ke8) 35... Rd6 (35... b5? 36. Rg2 Qe3 37. Bc2 $18) 36. Nxg6 fxg6 37. Rxg6+ Kf7 38. Rg1 Ke8 { Stockfish - LCZero, TCEC Superfinal 2021 }) 13. h4 h5 14. g4 hxg4 15. h5 Nxh5 16. Rdg1 (16. Bh6 Kh7 17. Bxg7 Kxg7 18. fxg4 Bxg4 19. Nf5+ gxf5 20. Qg5+ Ng6 21. exf5 Bxd1 22. Bxf7 Rxf7 { [%cal Gg7f8,Gf8e8] } 23. Qxg6+ Kf8 $17 { [%cal Gh1g1,Gf7g7] }) 16... Qa5 (16... Rc5 17. f4 Nc4 18. Bxc4 Rxc4 19. f5 $40 { J.Bjerre - G.Barrenechea Bahamonde,
+Gibraltar 2018 }) 17. Bh6 Bf6 (17... Kh7?? 18. Bxg7 Kxg7 19. Rxh5 gxh5 20. Qg5+ $18 { [%cal Ge5g6,Gg5a5] } 20... Kh7 21. Qxh5+ Kg7 22. Qg5+ { [%cal Ge5g6] }) 18. fxg4 (18. Bxf8 Kxf8 19. fxg4 Bxg4 { [%cal Ga5d2] } 20. Qe3 Rxc3 21. Qxc3 Qxc3 22. bxc3 e6 $17 { S.Karjakin - T.Radjabov, Sochi 2008 } { [%csl Gf6,Gg4,Rc2,Rc3,Re4,Ra2] }) 18... Bxg4 (18... Nxg4? 19. Nf5! Bxf5 20. exf5 Qxf5 21. Qe2! Bxc3 22. Qxg4 Qxg4 23. Rxg4 e6 24. bxc3 Ng7 25. Kb2 $18) 19. Bf4 (19. Bg5!? Bg7 20. Bxe7 Rfe8 21. Bxd6 Rcd8 22. Bxe5 Qxe5 23. Rxg4 Rxd4 24. Qg2 Nf4 25. Bxf7+! Kxf7 26. Rxf4+ Qxf4 27. Rf1 Qxf1+ 28. Qxf1+ Bf6 29. Qf3 Kg7 $13) 19... e6 (19... Nxf4? 20. Qxf4 Rxc3 21. bxc3 Qxc3 22. Qh6 { [%cal Gh6h7] } 22... Re8 23. Rxg4! $18 Nxg4 24. Qxg6+) 20. Bxe5 Qxe5 { [%csl Gd4] } 21. Rxg4 Qxd4 22. Qh6 { [%cal Gg4g6,Gh1h5,Gh6h5] } (22. Qxd4 Bxd4 23. Rxh5 Bxc3 24. bxc3 Rxc3 25. Rh2 Rfc8 { =/~~ }) 22... Bg7 23. Rxg6 fxg6 24. Bxe6+ Rf7 25. Qxg6 { [%csl Gf7] } 25... Qf6 26. Qxf6 Bxf6 27. Bxc8 Bxc3 28. Be6 Ng3 29. Rh2 Be1 30. c3 { [%cal Ge6f7] } 30... Kf8 31. Bxf7 Kxf7 32. Kc2 Ke6 { D.Bobârnac - A.Ametrano, Correspondence 2018 } *
+
+

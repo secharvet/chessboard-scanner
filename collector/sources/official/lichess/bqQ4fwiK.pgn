@@ -1,0 +1,32 @@
+[Event "Just answering some opening questions: Classical Sicilian"]
+[Date "2019.08.29"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B56"]
+[Opening "Sicilian Defense: Classical Variation"]
+[StudyName "Just answering some opening questions"]
+[ChapterName "Classical Sicilian"]
+[ChapterURL "https://lichess.org/study/bqQ4fwiK/ylTKHh9L"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.08.29"]
+[UTCTime "04:03:53"]
+
+1. e4 c5 2. Nf3 Nc6 { [%cal Gf1b5] } (2... d6 { [%cal Gc2c3] } 3. d4 (3. Bb5+) (3. c3) 3... cxd4 4. Nxd4 Nf6 5. Nc3 Nc6 { [%cal Gf1e2,Gh2h3,Gg7g6,Gf8g7,Ge8g8] } 6. Be3 Ng4) 3. d4 (3. Bb5) 3... cxd4 4. Nxd4 Nf6 { [%csl Gf6] } 5. Nc3 d6 *
+
+
+[Event "Just answering some opening questions: Yugoslav Attack (Dragon Sicilian)"]
+[Date "2019.08.29"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B78"]
+[Opening "Sicilian Defense: Dragon Variation, Yugoslav Attack, Old Line"]
+[StudyName "Just answering some opening questions"]
+[ChapterName "Yugoslav Attack (Dragon Sicilian)"]
+[ChapterURL "https://lichess.org/study/bqQ4fwiK/kmRh4jCq"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.08.29"]
+[UTCTime "04:06:04"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 (6... Ng4 7. Bb5+ Bd7 (7... Nc6 8. Nxc6) 8. Qxg4 { [%csl Gd7][%cal Gb5e8] }) 7. f3 (7. Qd2 Ng4) 7... O-O 8. Qd2 Nc6 9. Bc4 (9. O-O-O Nxd4 10. Bxd4 Be6) 9... Bd7 10. O-O-O Rc8 11. Bb3 (11. h4 Nxd4 12. Qxd4 Ng4 { [%csl Rd4][%cal Rg7d4,Gg4e3,Gc8c4] } 13. Qd3 Nxe3 14. Qxe3 Rxc4) 11... Nxd4 12. Bxd4 b5 { [%cal Ga7a5] } 13. Bxa7 b4 14. Nd5 { [%csl Gd5] } 14... Nxd5 15. exd5 Qa5 16. Bd4 Rxc2+ 17. Qxc2 (17. Kxc2 Bf5+ { [%csl Gc8][%cal Gf8c8] }) (17. Bxc2 Qxa2) 17... Rc8 *
+
+

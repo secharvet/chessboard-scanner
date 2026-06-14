@@ -1,0 +1,96 @@
+[Event "How to Create Original Openings: Using Databases"]
+[Date "2017.04.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C44"]
+[Opening "King's Knight Opening: Normal Variation"]
+[StudyName "How to Create Original Openings"]
+[ChapterName "Using Databases"]
+[ChapterURL "https://lichess.org/study/W9cOy7mY/6mVvKuCI"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2017.04.08"]
+[UTCTime "22:48:01"]
+
+1. e4 { You want to surprise somebody with a new opening idea, but think there is nothing new in chess? } 1... e5 { That's just not true, as this study will show. I hope you know enough to do your own opening work by the end of this study. } 2. Nf3 { Go ahead and open your favorite database as we get started: If you don't have one, use one of the many online free databases. Search google for chessbase database or visit "database.chessbase.com" to use my favorite. } 2... Nc6 { This position has been played hundreds of thousands of times, I'm sure your database will tell you the same. If you are hoping to become an expert or master chess player, one of the many main lines - the moves that show up as the most played and most successful - might be your choice. } 3. b3 { However, if you are interested in original chess, the less popular moves can provide a blank canvas to work on, a move like 3. b3 may be your choice. You'll see in your database that this is not a very popular move. } 3... Nf6 { From here, you will need a computer program like stockfish to help you analyze your ideas. Stockfish is an open source chess engine that is free to download and use. With only a few games to draw from, a database will not offer enough game play to test the strongest middle game plans. We are on our own - Just like we wanted! } 4. Bb5 { By move 4, we are in original territory, and the computer agrees that the position is reasonably even. Any amateur can beat any other amateur as black or as white from a position like this. The game of chess, for all of us amateurs is richer than it has ever been in history. } *
+
+
+[Event "How to Create Original Openings: Original Ideas In Common Openings"]
+[Date "2017.04.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C45"]
+[Opening "Scotch Game: Mieses Variation"]
+[StudyName "How to Create Original Openings"]
+[ChapterName "Original Ideas In Common Openings"]
+[ChapterURL "https://lichess.org/study/W9cOy7mY/EBt3sY75"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2017.04.08"]
+[UTCTime "23:03:09"]
+
+1. e4 e5 2. d4 exd4 3. Nf3 Nc6 4. Nxd4 Nf6 { The scotch game is a fairly common opening. This position, whether you arrived here in a different move order or by this one, is a very popular position in the database. } 5. Nxc6 { Sometimes the one or two most common moves are the only moves that hold the status quo. Choosing a less popular move is choosing to be demolished. White could have chosen to defend his e4 pawn with a different move, but the choices were very limited. } 5... bxc6 6. e5 { In some positions, there are only one or two choices. We can not deviate at this moment without taking a significant disadvantage. This is not the moment for which we seek. Qe7 or Nd5. } 6... Qe7 7. Qe2 Nd5 8. c4 { We reach another very popular position with chess masters. Thousands of games have been played from here. } 8... Ba6 { Armed with our database, we can pick the least popular move at this moment, and arrive in original territory - being careful to check it with a computer to make sure black does not have a tactical victory. As long as the computer gives us an analysis between .25 and -.25, we are doing fine. } 9. h4 { Try it with your own openings. Search out a moment between move 5 and 10 where you can deviate from the most popular ideas. There are thousands of unexplored moves. } *
+
+
+[Event "How to Create Original Openings: Studying New Territory"]
+[Date "2017.04.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B27"]
+[Opening "Sicilian Defense: Hyperaccelerated Fianchetto"]
+[StudyName "How to Create Original Openings"]
+[ChapterName "Studying New Territory"]
+[ChapterURL "https://lichess.org/study/W9cOy7mY/iF935Lxk"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2017.04.08"]
+[UTCTime "23:22:35"]
+
+1. e4 c5 2. Nf3 g6 { Let's take a look at an original position that can come up in the Sicilian dragon. } 3. d4 cxd4 4. Qxd4 { This is already a little off of the beaten track, but still played often enough to have plenty of examples. } 4... Nf6 5. Bb5 { When checking the database, white loses more often than he wins from this position. The problem is: the computer likes white! We've got our canvas to work with. } 5... a6 { In order to truly explore this position, we could just try a bunch of stuff, like a6, Nc6, Bb7, d6, and other moves. Maybe we could just play a lot of games from here and learn by practice. My favorite way to be introduced to a new position is to take the opposite side of it against stockfish set to it's hardest setting. Since I'm guaranteed to lose against stockfish in a position where I am clueless, it teaches me how to handle the various ideas that I have. } 6. e5 { In the end, its about familiarity with common tactical themes that can arise when we reach one of our original positions. We amateurs aren't going to remember 10 more moves of analysis from this position tomorrow, let alone a month from now, so maybe its best not to focus on doing so. } 6... axb5 (6... Nh5 7. e6 Bg7 8. exf7+ Kf8 9. Qa4 { In the end, we get to make a judgement call as to whether we would like to see a position like the one after 6. e5 again in a game. }) 7. exf6 Nc6 { Sargissian, Gabriel - Salgado Lopez, Ivan, 1-0, EU-ch 14th, 2013, https://lichess.org/Ngim3pAK } 8. Qh4 { In the end, we get to make a judgement call as to whether we would like to see the positions we might reach after 6.e5 in an actual game. } *
+
+
+[Event "How to Create Original Openings: You Can Afford to be Original"]
+[Date "2017.04.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C78"]
+[Opening "Ruy Lopez: Morphy Defense, Neo-Arkhangelsk Variation"]
+[StudyName "How to Create Original Openings"]
+[ChapterName "You Can Afford to be Original"]
+[ChapterURL "https://lichess.org/study/W9cOy7mY/jaN2Ci2Q"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2017.04.08"]
+[UTCTime "23:37:32"]
+
+1. e4 e5 { Let's look at one from black's perspective. } 2. Nf3 Nc6 3. Bb5 a6 { This is just about the most known position that I... know of... } 4. Ba4 Nf6 5. O-O Bc5 { Leaving the most common ideas. } 6. c3 b5 { Our moment to deviate arrives. } 7. Bb3 Ba7 { We can afford to be creative as the black player because our opponent has the same amount of exact information that we do in this position. Nada. Some ideas will overlap with the main moves, but memorization is out the window. } 8. d3 (8. Qe2) (8. Re1) (8. d4) (8. a4) *
+
+
+[Event "How to Create Original Openings: Play Chess"]
+[Date "2017.04.09"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C00"]
+[Opening "French Defense: Two Knights Variation"]
+[StudyName "How to Create Original Openings"]
+[ChapterName "Play Chess"]
+[ChapterURL "https://lichess.org/study/W9cOy7mY/aEgRNDUS"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2017.04.09"]
+[UTCTime "01:09:24"]
+
+1. e4 e6 2. Nc3 d5 3. Nf3 d4 4. Ne2 { Now that you are armed with the pre-knowledge that there is nothing wrong with your position (because you checked it with a computer). Go forth and play some original chess boldly. } 4... c5 5. c3 Nc6 { Databases can sometimes deceive you, be aware. My database in this position tells me that black wins most of the games. However, after a forced sequence: } 6. cxd4 cxd4 (6... Nf6 7. dxc5 Nxe4 8. Nc3 Nxc3 9. bxc3 Bxc5 10. d4 { The most challenging line to find as white. I still prefer white. }) 7. Qa4 { All of a sudden white wins most of the games in the database. This is because there are not enough games to give us a conclusion as to which side stands better in practice. This is a blank canvas. Good luck! } *
+
+
+[Event "How to Create Original Openings: New Opening"]
+[Date "2023.06.29"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B23"]
+[Opening "Sicilian Defense: Closed, Traditional"]
+[StudyName "How to Create Original Openings"]
+[ChapterName "New Opening"]
+[ChapterURL "https://lichess.org/study/W9cOy7mY/OicGeubV"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2023.06.29"]
+[UTCTime "17:18:27"]
+
+1. e4 c5 2. Nc3 Nc6 3. Bb5 Nd4 4. Bc4 { Svidler, Peter - Leko, Peter, 1-0, Dortmund 3rd-4th, 2004, https://lichess.org/Aup2tdmP } 4... g6 5. Nf3 Bg7 6. Nxd4 cxd4 7. Qf3 Nh6 8. Ne2 O-O 9. d3 Ng4 10. Bb3 d6 11. Qg3 a5 12. a4 Nf6 13. O-O Nd7 14. Bg5 Nc5 15. Qh4 Re8 16. Bd5 Be6 17. Bxe6 Nxe6 18. Bh6 Bf6 19. Qg3 Rc8 20. Rac1 Qb6 21. b3 Rc5 22. f4 Rh5 23. f5 Rxh6 24. fxe6 fxe6 25. Nf4 Qc5 26. Nxe6 Qe5 27. Qxe5 Bxe5 28. g3 Rh5 29. c3 dxc3 30. d4 Bf6 31. Rxc3 Kf7 32. Nc7 Rc8 33. Kg2 Kg8 34. Rd1 Rc5 35. dxc5 Bxc3 36. cxd6 exd6 37. Nb5 Be5 38. Rd5 Rc6 39. Na3 Rc3 40. Rb5 Re3 41. Nc4 Rxe4 42. Nxa5 Re2+ 43. Kf3 Rxh2 44. Nc4 Bd4 45. Rxb7 d5 46. Ne3 h5 47. Nxd5 g5 48. a5 Ra2 49. b4 h4 50. gxh4 gxh4 51. Kg4 Bf2 52. Kg5 Kf8 53. Nf6 Ra3 54. Ng4 Be1 55. Kf6 Bc3+ 56. Ne5 Kg8 57. Rg7+ Kh8 58. Rg4 h3 59. Kf7 Be1 60. Rg7 { Svidler, Peter - Leko, Peter, 1-0, Dortmund 3rd-4th, 2004, https://lichess.org/Aup2tdmP } *
+
+

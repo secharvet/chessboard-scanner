@@ -1,0 +1,36 @@
+[Event "Saint Louis GM"]
+[Site "Saint Louis"]
+[Date "2016.06.08"]
+[Round "1"]
+[White "Rosen, Eric S"]
+[Black "Liang, Awonder"]
+[Result "1-0"]
+[WhiteElo "2392"]
+[BlackElo "2408"]
+[Variant "Standard"]
+[ECO "C85"]
+[Opening "Ruy Lopez: Closed, Delayed Exchange"]
+[StudyName "4/23 analysis"]
+[ChapterName "Rosen, Eric S - Liang, Awonder"]
+[ChapterURL "https://lichess.org/study/Ao4vhArm/iu7XK70X"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Be7 6. Bxc6 dxc6 7. Re1 Nd7 { [%csl Gd7,Gf6,Gc5][%cal Gf6d7,Gf7f6,Gd7c5] } 8. b3 c5 9. Bb2 Bd6 10. d3 f6 11. Nh4 { [%csl Gh4][%cal Gf3h4] } 11... O-O 12. Nf5 Nb8 13. Nd2 Nc6 14. Nc4 Nd4 15. Nfxd6 cxd6 16. c3 Ne6 17. d4 { [%csl Gd4][%cal Gd3d4] } 17... b5 18. Ne3 Bb7 19. Qg4 Nf4 20. Nf5 g6 21. Rad1 { [%csl Rd6][%cal Gd1d6,Gf5d6] } 21... Kh8 22. dxe5 gxf5 23. Qxf4 fxe5 24. c4 { [%csl Ge5,Gd6][%cal Gb2e5,Gd1d8] } 24... fxe4 25. Qh6 Qf6 26. Qxf6+ Rxf6 27. Rxd6 Rxd6 28. Bxe5+ Kg8 29. Bxd6 bxc4 30. bxc4 Rd8 31. Bxc5 Rc8 32. Bb4 Rxc4 33. a3 Kf7 34. h3 h5 35. Re3 Rd4 36. Rc3 Kg6 37. Rg3+ Kf5 38. h4 Rd5 39. Rg7 Bc6 40. Kh2 Bb5 41. Rh7 Kg6 42. Re7 Kf5 43. Bc3 Rc5 44. Bd2 Rc2 45. Be3 Rc3 46. Rg7 Ke6 47. a4 Bxa4 48. Rg6+ Kf7 49. Rxa6 Bd7 50. Kg3 Rc6 51. Ra7 Rg6+ 52. Bg5 Rd6 53. Kf4 Ke6 54. Kxe4 Bc6+ 55. Kf4 Rd4+ 56. Ke3 Re4+ 57. Kd3 Ra4 58. Re7+ Kf5 59. f3 Ra2 60. Bd2 Bb5+ 61. Kc3 Kf6 62. Rh7 Bf1 63. Rh6+ Kf7 64. Rh7+ Kg6 65. Rh6+ Kf7 66. g4 Ra3+ 67. Kc2 Rxf3 68. Rxh5 Bd3+ 69. Kb2 Rf2 70. Kc3 Be2 71. Rh7+ Kg8 72. Rh6 Rf3+ 73. Kb2 Rd3 74. Bc3 Rd5 75. g5 Bg4 76. Kb3 Rc5 77. Kb4 Rf5 78. Kc4 Bf3 79. Kd3 Rd5+ 80. Ke3 Bd1 81. Ke4 Rb5 82. Bd4 Bc2+ 83. Ke3 Rb3+ 84. Kf4 Rb4 85. Ke5 Rb5+ 86. Kd6 Be4 87. Bf6 Kf7 88. Rh8 Rd5+ 89. Kc7 { [%csl Ge4] } 89... Rc5+ 90. Kd6 Rd5+ 91. Kc7 Rc5+ 92. Kb6 Rc6+ 93. Kb5 Rc1 94. Kb4 Bf5 95. Ra8 Rh1 96. Rh8 Rc1 97. Bc3 Bd3 98. Rh6 Rf1 99. Kc5 Bg6 100. Kd6 Rc1 101. Bd4 Rd1 102. Kd5 Re1 103. Rh8 Re8 104. Rxe8 Kxe8 105. Ke6 { 1-0 Black resigns. } 1-0
+
+
+[Event "4/23 analysis: paulsen"]
+[Date "2021.04.23"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B41"]
+[Opening "Sicilian Defense: Kan Variation, Maróczy Bind, Réti Variation"]
+[StudyName "4/23 analysis"]
+[ChapterName "paulsen"]
+[ChapterURL "https://lichess.org/study/Ao4vhArm/pG2HHVH5"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.04.23"]
+[UTCTime "11:54:33"]
+
+1. e4 c5 (1... e5 { [%csl Ge7][%cal Ge8e7] } 2. Ke2 (2. Qh5 Ke7 3. Qxe5#) (2. Bc4 Nc6 3. Qf3 Bc5)) 2. Nf3 e6 3. d4 cxd4 4. Nxd4 a6 (4... Nc6 5. Nc3 (5. c4 Nf6 6. Nc3 Bb4) 5... Qc7 { [%csl Gc7,Gc6] }) 5. c4 Nf6 6. Nc3 Bb4 *
+
+

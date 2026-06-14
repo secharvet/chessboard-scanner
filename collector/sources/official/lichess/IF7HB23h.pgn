@@ -1,0 +1,23 @@
+[Event "MrDodgy Invitational 3.0 | Pool A"]
+[Site "chess24.com"]
+[Date "2022.11.25"]
+[Round "1"]
+[White "Grischuk, Alexander"]
+[Black "Rosen, Eric"]
+[Result "1-0"]
+[WhiteElo "2762"]
+[WhiteTitle "GM"]
+[BlackElo "2362"]
+[BlackTitle "IM"]
+[Board "1"]
+[Variant "Standard"]
+[ECO "A14"]
+[Opening "English Opening: Agincourt Defense, Neo-Catalan Declined"]
+[StudyName "Mr Dodgy Invitational Games"]
+[ChapterName "Grischuk, Alexander - Rosen, Eric"]
+[ChapterURL "https://lichess.org/study/IF7HB23h/Cd1HcZM0"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. Nf3 { [%clk 0:05:00] } 1... d5 { [%clk 0:05:00] } 2. g3 { [%clk 0:04:56] } 2... Nf6 { [%clk 0:04:58] } 3. Bg2 { [%clk 0:04:54] } 3... e6 { [%clk 0:04:57] } 4. O-O { [%clk 0:04:52] } 4... Be7 { [%clk 0:04:56] } 5. c4 { [%clk 0:04:51] } 5... d4 { [%clk 0:04:52] } 6. b4 { [%clk 0:04:45] } 6... c5 { [%clk 0:04:49] } 7. Bb2 { [%clk 0:04:20] } 7... O-O { [%clk 0:04:41] } 8. d3 { [%clk 0:04:19] } 8... Nc6 { [%clk 0:04:30] } 9. b5 { [%clk 0:04:16] } 9... Nb8 { [%clk 0:04:28] } 10. e3 { [%clk 0:03:57] } 10... dxe3 { [%clk 0:04:18] } 11. fxe3 { [%clk 0:03:57] } 11... a6 { [%clk 0:04:17] } 12. a4 { [%clk 0:03:57] } 12... axb5 { [%clk 0:04:13] } 13. axb5 { [%clk 0:03:57] } 13... Rxa1 { [%clk 0:04:12] } 14. Bxa1 { [%clk 0:03:57] } 14... b6 { [%clk 0:04:07] } 15. Ne5 { [%clk 0:03:30] } 15... Qc7 { [%clk 0:04:04] } 16. Nd2 { [%clk 0:03:26] } 16... Rd8 { [%clk 0:04:02] } 17. Qf3 { [%clk 0:02:12] } 17... Bd6 { [%clk 0:03:15] } 18. d4 { [%clk 0:02:10] } 18... cxd4 { [%clk 0:02:57] } 19. exd4 { [%clk 0:02:10] } 19... Nbd7 { [%clk 0:02:34] } 20. Nc6 { [%clk 0:02:08] } 20... Rf8 { [%clk 0:02:29] } 21. Ne4 { [%clk 0:01:53] } 21... Nxe4 { [%clk 0:02:23] } 22. Qxe4 { [%clk 0:01:53] } 22... Bb7 { [%clk 0:02:10] } 23. Qg4 { [%clk 0:01:45] } 23... f5 { [%clk 0:01:54] } 24. Qe2 { [%clk 0:01:43] } 24... Rf6 { [%clk 0:01:24] } 25. Bc3 { [%clk 0:01:42] } 25... Rg6 { [%clk 0:01:08] } 26. d5 { [%clk 0:01:36] } 26... Nc5 { [%clk 0:00:41] } 27. dxe6 { [%clk 0:01:35] } 27... Nxe6 { [%clk 0:00:39] } 28. Rxf5 { [%clk 0:01:28] } 28... h6 { [%clk 0:00:21] } 29. Bd5 { [%clk 0:01:12] } 29... Bc8 { [%clk 0:00:20] } 30. Ne5 { [%clk 0:01:10] } 30... Rf6 { [%clk 0:00:13] } 31. Rxf6 { [%clk 0:01:09] } 31... gxf6 { [%clk 0:00:13] } 32. Ng4 { [%clk 0:01:06] } 32... Kf7 { [%clk 0:00:12] } 33. Nxf6 { [%clk 0:01:02] } 33... Qc5+ { [%clk 0:00:10] } 34. Kg2 { [%clk 0:00:59] } 34... Be7 { [%clk 0:00:09] } 35. Ne4 { [%clk 0:00:58] } 35... Qa3 { [%clk 0:00:07] } 36. Qh5+ { [%clk 0:00:55] } 36... Kf8 { [%clk 0:00:06] } 37. Qf5+ { [%clk 0:00:55] } 37... Ke8 { [%clk 0:00:06] } 38. Bxe6 { [%clk 0:00:53] } 38... Bxe6 { [%clk 0:00:06] } 39. Qxe6 { [%clk 0:00:53] } 39... Qa2+ { [%clk 0:00:06] } 40. Kh3 { [%clk 0:00:52] } 40... Kd8 { [%clk 0:00:05] } 41. Qxb6+ { [%clk 0:00:51] } 41... Ke8 { [%clk 0:00:04] } 42. Qc6+ { [%clk 0:00:51] } 42... Kf7 { [%clk 0:00:04] } 43. Qd5+ { [%clk 0:00:50] } 43... Ke8 { [%clk 0:00:02] } 44. Qe6 { [%clk 0:00:49] } 44... h5 { [%clk 0:00:02] } 45. Nf6+ { [%clk 0:00:45] } 45... Kd8 { [%clk 0:00:02] } 46. Qd7# { 1-0 White wins. } { [%clk 0:00:45] } 1-0
+
+

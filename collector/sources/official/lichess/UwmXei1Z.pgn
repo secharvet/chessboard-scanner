@@ -1,0 +1,79 @@
+[Event "Live Stream Dr Hack - Pedagog 2: Chapter 1"]
+[Date "2018.03.13"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Live Stream Dr Hack - Pedagog 2"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/UwmXei1Z/VtwIBu3Y"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2018.03.13"]
+[UTCTime "00:13:58"]
+
+ *
+
+
+[Event "U2000 Rapid Arena"]
+[Date "2018.02.23"]
+[Round "-"]
+[White "NNNN"]
+[Black "NNNN"]
+[Result "0-1"]
+[WhiteElo "1158"]
+[BlackElo "1619"]
+[TimeControl "600+0"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+[Variant "Standard"]
+[ECO "A06"]
+[Opening "Zukertort Opening: Tennison Gambit"]
+[StudyName "Live Stream Dr Hack - Pedagog 2"]
+[ChapterName "1150-1600"]
+[ChapterURL "https://lichess.org/study/UwmXei1Z/pkiRYqev"]
+
+1. e4 d5 2. Nf3 { A06 Zukertort Opening: Tennison Gambit } 2... dxe4 3. Ng5 e3 4. fxe3 e6 5. Nxf7 Kxf7 6. Qh5+ g6 { White resigns. } 0-1
+
+
+[Event "U2000 Rapid Arena"]
+[Date "2018.02.23"]
+[Round "-"]
+[White "NNNN"]
+[Black "NNNN"]
+[Result "1-0"]
+[WhiteElo "1458"]
+[BlackElo "1163"]
+[TimeControl "600+0"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+[Variant "Standard"]
+[ECO "D15"]
+[Opening "Slav Defense: Geller Gambit"]
+[StudyName "Live Stream Dr Hack - Pedagog 2"]
+[ChapterName "1450-1150"]
+[ChapterURL "https://lichess.org/study/UwmXei1Z/XIyxdNUG"]
+
+1. d4 d5 2. c4 c6 3. Nf3 dxc4 4. e4 Nf6 5. Nc3 { D15 Slav Defense: Geller Gambit #2 } 5... c5 6. Bxc4 cxd4 7. Nxd4 Nc6 8. Be3 Nxd4 9. Bxd4 e5 10. Bxe5 Qxd1+ 11. Rxd1 Bc5 12. O-O Bd7 13. a3 b5 { [%csl Gb5] } 14. Ba2 Bc6 15. Rfe1 Nd7 16. Bxg7 Rg8 17. Bh6 Rg6 18. Bf4 Rf6 19. g3 O-O-O 20. e5 Rf5 21. e6 fxe6 22. Bxe6 Rf6 23. b4 Bd4 24. Nb1 Kb7 25. Rxd4 { Black resigns. } 1-0
+
+
+[Event "U2000 Rapid Arena"]
+[Date "2018.02.23"]
+[Round "-"]
+[White "Crater90"]
+[Black "xavier2017"]
+[Result "0-1"]
+[WhiteElo "1234"]
+[BlackElo "1160"]
+[TimeControl "600+0"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+[Variant "Standard"]
+[ECO "A20"]
+[Opening "English Opening: King's English Variation"]
+[StudyName "Live Stream Dr Hack - Pedagog 2"]
+[ChapterName "1200 - 1150"]
+[ChapterURL "https://lichess.org/study/UwmXei1Z/2YtYO4XJ"]
+
+1. c4 e5 { A20 English Opening: King's English Variation } 2. e3 Nf6 3. Nc3 Nc6 4. d4 exd4 5. exd4 Bd6 6. d5 Ne7 7. Bg5 Be5 8. Nf3 Bxc3+ 9. bxc3 Ne4 { [%csl Gc3] } 10. Bxe7 Qxe7 11. Qe2 Nxc3 12. Qxe7+ Kxe7 13. Bd3 c6 { [%cal Gc6d5,Gc3d5] } 14. dxc6 dxc6 15. O-O Re8 16. Rfe1+ Kf8 17. Bxh7 Rxe1+ 18. Rxe1 Nxa2 19. Re3 Nb4 20. Ne5 Be6 21. c5 Nd5 22. Re1 Nf6 23. Bd3 Rd8 24. Be2 Bb3 25. h3 Ne4 26. Rb1 Nd2 27. Nf3 Nxb1 { White resigns. } 0-1
+
+

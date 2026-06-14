@@ -1,0 +1,192 @@
+[Event "OPTIONS FOR WHITE VS FRENCH: ORTHOSCHNAPP"]
+[Date "2021.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C00"]
+[Opening "French Defense: Orthoschnapp Gambit"]
+[StudyName "OPTIONS FOR WHITE VS FRENCH"]
+[ChapterName "ORTHOSCHNAPP"]
+[ChapterURL "https://lichess.org/study/3CIV2vj4/4GDVSzrr"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.02.11"]
+[UTCTime "00:46:36"]
+
+1. e4 e6 2. c4 d5 3. cxd5 exd5 4. Qb3 { [%csl Ge4][%cal Gd1b3,Gd5e4] } 4... dxe4 5. Bc4 { objectively dubious, but highly venomous and effective for faster time controls or against noobs } *
+
+
+[Event "OPTIONS FOR WHITE VS FRENCH: 2. Qe2 (chigorin variation)🤣"]
+[Date "2021.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C00"]
+[Opening "French Defense: Chigorin Variation"]
+[StudyName "OPTIONS FOR WHITE VS FRENCH"]
+[ChapterName "2. Qe2 (chigorin variation)🤣"]
+[ChapterURL "https://lichess.org/study/3CIV2vj4/puioULaP"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.02.11"]
+[UTCTime "00:48:52"]
+
+1. e4 e6 2. Qe2 d5 (2... c5 { [%csl Gc5] } 3. g3 { [%cal Gf1g2,Gg1f3,Gd2d3,Ge1g1] }) (2... e5 3. f4 { [%csl Ge2][%cal Gd1e2] }) 3. exd5 Qxd5 4. Nc3 *
+
+
+[Event "OPTIONS FOR WHITE VS FRENCH: 2 knights attack"]
+[Date "2021.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C00"]
+[Opening "French Defense: Two Knights Variation"]
+[StudyName "OPTIONS FOR WHITE VS FRENCH"]
+[ChapterName "2 knights attack"]
+[ChapterURL "https://lichess.org/study/3CIV2vj4/yDMU1EIs"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.02.11"]
+[UTCTime "00:50:34"]
+
+1. e4 e6 2. Nf3 { [%csl Gf3] } 2... d5 3. Nc3 Nf6 (3... dxe4) (3... d4 4. Ne2 c5 5. Ng3 { [%csl Gg1][%cal Gf1b5,Gd2d3,Ge1g1] }) (3... c5 4. exd5 exd5 5. d4 { [%csl Gd4] }) 4. e5 Nfd7 5. d4 c5 6. dxc5 Nc6 7. Bf4 Bxc5 8. Bd3 O-O (8... Qb6 { [%csl Gf2][%cal Gb6b2,Gb6f2,Gc2b2] } 9. O-O Qxb2 10. Nb5 { [%csl Gc7][%cal Gb5c7] } 10... O-O 11. Bxh7+ Kxh7 12. Ng5+ Kg8 13. Qd3 { [%csl Gh7][%cal Gd3h7] } 13... g6 14. Qh3 { [%csl Gh7][%cal Gh3h7] }) 9. Bxh7+ Kxh7 10. Ng5+ Kg8 11. Qh5 Re8 12. Qxf7+ Kh8 13. Qh5+ Kg8 14. Qh7+ Kf8 15. Qh8+ Ke7 16. Qxg7# { [%csl Gg7] } *
+
+
+[Event "OPTIONS FOR WHITE VS FRENCH: Tarrasch"]
+[Date "2021.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C03"]
+[Opening "French Defense: Tarrasch Variation"]
+[StudyName "OPTIONS FOR WHITE VS FRENCH"]
+[ChapterName "Tarrasch"]
+[ChapterURL "https://lichess.org/study/3CIV2vj4/59Bs5EFP"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.02.11"]
+[UTCTime "00:52:28"]
+
+1. e4 e6 2. d4 d5 3. Nd2 dxe4 (3... c5) (3... Nf6) (3... Be7) (3... h6) (3... a6) (3... Bd7) (3... Nc6) *
+
+
+[Event "OPTIONS FOR WHITE VS FRENCH: Wing gambit"]
+[Date "2021.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C00"]
+[Opening "French Defense: Wing Gambit"]
+[StudyName "OPTIONS FOR WHITE VS FRENCH"]
+[ChapterName "Wing gambit"]
+[ChapterURL "https://lichess.org/study/3CIV2vj4/OYapjKFk"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.02.11"]
+[UTCTime "00:53:22"]
+
+1. e4 e6 2. Nf3 d5 3. e5 c5 4. b4 cxb4 5. a3 { [%csl Ga3] } 5... bxa3 6. Bxa3 Bxa3 7. Nxa3 a6 8. Nb5 { [%cal Gb5d6] } *
+
+
+[Event "OPTIONS FOR WHITE VS FRENCH: Exchange Variation"]
+[Date "2021.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C01"]
+[Opening "French Defense: Exchange Variation"]
+[StudyName "OPTIONS FOR WHITE VS FRENCH"]
+[ChapterName "Exchange Variation"]
+[ChapterURL "https://lichess.org/study/3CIV2vj4/LA4mdX9i"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.02.11"]
+[UTCTime "00:54:23"]
+
+1. e4 e6 2. d4 d5 3. exd5 exd5 { [%csl Gd5,Gd4] } 4. Nf3 Bd6 5. c4 Ne7 (5... dxc4 6. Bxc4 Ne7 7. Ng5 O-O 8. Qh5) 6. c5 { [%csl Gd6] } *
+
+
+[Event "OPTIONS FOR WHITE VS FRENCH: NC3"]
+[Date "2021.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C15"]
+[Opening "French Defense: Winawer Variation"]
+[StudyName "OPTIONS FOR WHITE VS FRENCH"]
+[ChapterName "NC3"]
+[ChapterURL "https://lichess.org/study/3CIV2vj4/Ud7vwmeQ"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.02.11"]
+[UTCTime "00:56:14"]
+
+1. e4 e6 2. d4 d5 3. Nc3 { most theoretical move } 3... Bb4 (3... Nf6) (3... dxe4) *
+
+
+[Event "OPTIONS FOR WHITE VS FRENCH: b3"]
+[Date "2021.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C00"]
+[Opening "French Defense: Horwitz Attack, Papa-Ticulat Gambit"]
+[StudyName "OPTIONS FOR WHITE VS FRENCH"]
+[ChapterName "b3"]
+[ChapterURL "https://lichess.org/study/3CIV2vj4/WDaz7BA0"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.02.11"]
+[UTCTime "00:56:58"]
+
+1. e4 e6 2. b3 d5 3. Bb2 dxe4 4. Nc3 Nf6 5. g4 { [%csl Gg2,Gc1][%cal Gf1g2,Gd1e2] } *
+
+
+[Event "OPTIONS FOR WHITE VS FRENCH: Advanced Variation"]
+[Date "2021.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C02"]
+[Opening "French Defense: Advance Variation, Milner-Barry Gambit, Main Line"]
+[StudyName "OPTIONS FOR WHITE VS FRENCH"]
+[ChapterName "Advanced Variation"]
+[ChapterURL "https://lichess.org/study/3CIV2vj4/JBde8Wix"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.02.11"]
+[UTCTime "00:57:47"]
+
+1. e4 e6 2. d4 d5 3. e5 { [%csl Ge5] } 3... c5 4. c3 Nc6 5. Nf3 Qb6 6. Bd3 (6. a3 { [%csl Ga3] }) 6... Bd7 7. O-O cxd4 8. cxd4 Nxd4 9. Nxd4 Qxd4 10. Nc3 *
+
+
+[Event "OPTIONS FOR WHITE VS FRENCH: f4 french"]
+[Date "2021.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C00"]
+[Opening "French Defense: La Bourdonnais Variation"]
+[StudyName "OPTIONS FOR WHITE VS FRENCH"]
+[ChapterName "f4 french"]
+[ChapterURL "https://lichess.org/study/3CIV2vj4/gbT5Y7k7"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.02.11"]
+[UTCTime "00:58:44"]
+
+1. e4 e6 2. f4 d5 3. e5 c5 4. Nf3 Nc6 5. c3 Nge7 6. Na3 Nf5 7. Nc2 h5 8. Bd3 g6 9. O-O Be7 10. Bxf5 gxf5 11. d4 h4 12. dxc5 Bxc5+ 13. Be3 Be7 14. h3 b6 15. Qe2 Nb8 16. Rfd1 Ba6 17. Qe1 Nd7 18. b4 Nf8 19. a4 Bc4 20. Ncd4 Qd7 21. b5 Ng6 22. Nc6 Kf8 23. Nd2 Bd3 24. c4 Kg7 25. cxd5 exd5 26. Nb1 Bc4 27. Qc3 Qe6 28. Nd2 Rhc8 29. Nd4 Qd7 30. e6 { Nakamura, Hikaru - Seirawan, Yasser, 1-0, USA-ch, 2012, https://lichess.org/QPo41wS9 } *
+
+
+[Event "OPTIONS FOR WHITE VS FRENCH: Bd3 french"]
+[Date "2021.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C00"]
+[Opening "French Defense: Schlechter Variation"]
+[StudyName "OPTIONS FOR WHITE VS FRENCH"]
+[ChapterName "Bd3 french"]
+[ChapterURL "https://lichess.org/study/3CIV2vj4/jfy3O50H"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.02.11"]
+[UTCTime "00:59:51"]
+
+1. e4 e6 2. d4 d5 3. Bd3 { [%csl Ge4][%cal Gd3e4] } *
+
+
+[Event "OPTIONS FOR WHITE VS FRENCH: Kings indian attack"]
+[Date "2021.02.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C00"]
+[Opening "French Defense: King's Indian Attack"]
+[StudyName "OPTIONS FOR WHITE VS FRENCH"]
+[ChapterName "Kings indian attack"]
+[ChapterURL "https://lichess.org/study/3CIV2vj4/fHHXBExX"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.02.11"]
+[UTCTime "01:00:21"]
+
+1. e4 e6 2. d3 d5 3. Nd2 { [%csl Gg1][%cal Gg2g3,Gf1g2,Gg1f3,Ge1g1] } *
+
+

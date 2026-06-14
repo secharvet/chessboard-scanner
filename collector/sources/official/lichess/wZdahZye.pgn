@@ -1,0 +1,23 @@
+[Event "Rated blitz game"]
+[Site "https://lichess.org/avmUz0R6"]
+[Date "2023.10.28"]
+[White "DragonMaster3000"]
+[Black "CheckRaiseMate"]
+[Result "0-1"]
+[WhiteElo "2470"]
+[BlackElo "2558"]
+[BlackTitle "FM"]
+[TimeControl "180+0"]
+[Termination "Normal"]
+[GameId "avmUz0R6"]
+[Variant "Standard"]
+[ECO "B29"]
+[Opening "Sicilian Defense: Nimzowitsch Variation, Main Line"]
+[StudyName "Game study"]
+[ChapterName "DragonMaster3000 (2470) - FM CheckRaiseMate (2558)"]
+[ChapterURL "https://lichess.org/study/wZdahZye/XPXZRySe"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+
+1. e4 { [%clk 0:03:00] } 1... c5 { [%clk 0:03:00] } 2. Nf3 { [%clk 0:02:59] } 2... Nf6 { [%clk 0:02:59] } 3. e5 { [%clk 0:02:56] } 3... Nd5 { [%clk 0:02:58] } 4. Nc3 { [%clk 0:02:55] } 4... e6 { [%clk 0:02:58] } 5. Nxd5 { [%clk 0:02:53] } 5... exd5 { [%clk 0:02:58] } 6. d4 { [%clk 0:02:53] } 6... Nc6 { [%clk 0:02:57] } 7. dxc5 { [%clk 0:02:50] } 7... Bxc5 { [%clk 0:02:57] } 8. Qxd5 { [%clk 0:02:49] } 8... d6 { [%clk 0:02:56] } 9. exd6 { [%clk 0:02:42] } 9... Qb6 { [%clk 0:02:55] } 10. Bc4 { [%clk 0:02:33] } (10. Qe4+ Be6 11. Qh4) 10... Be6 { [%clk 0:02:36] } (10... Bxf2+ 11. Kf1 O-O) 11. d7+ { [%clk 0:02:31] } 11... Kf8 { [%clk 0:02:29] } 12. Qe4 { [%clk 0:02:26] } 12... Bxf2+ { [%clk 0:02:16] } 13. Kd1 { [%clk 0:02:10] } 13... Bxc4 { [%clk 0:02:11] } 14. Qxc4 { [%clk 0:02:07] } 14... Rd8 { [%clk 0:02:11] } 15. Qd5 { [%clk 0:01:46] } 15... Nb4 { [%clk 0:02:01] } 16. Qd2 { [%clk 0:01:45] } 16... Bc5 { [%clk 0:01:46] } 17. Ne5 { [%clk 0:01:37] } 17... Nc6 { [%clk 0:01:42] } 18. Re1 { [%clk 0:01:25] } 18... Nxe5 { [%clk 0:01:35] } 19. Rxe5 { [%clk 0:01:25] } 19... Bd6 { [%clk 0:01:22] } 20. Rd5 { [%clk 0:01:15] } 20... Rxd7 { [%clk 0:01:21] } 21. b3 { [%clk 0:01:12] } 21... Qg1+ { [%clk 0:01:19] } 22. Ke2 { [%clk 0:01:07] } 22... Qxg2+ { [%clk 0:01:18] } 23. Kd1 { [%clk 0:01:07] } 23... Qf1+ { 0-1 White resigns. } { [%clk 0:01:16] } 0-1
+
+

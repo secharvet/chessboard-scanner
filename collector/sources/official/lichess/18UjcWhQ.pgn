@@ -1,0 +1,58 @@
+[Event "tt 12/13: Chapter 1"]
+[Date "2022.12.13"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "tt 12/13"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/18UjcWhQ/aMjYpwjr"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2022.12.13"]
+[UTCTime "23:29:55"]
+
+ *
+
+
+[Event "Live Chess - chess"]
+[Site "Chess.com"]
+[Date "2022.12.13"]
+[White "dretch"]
+[Black "IMRosen"]
+[Result "1-0"]
+[WhiteElo "2855"]
+[BlackElo "2638"]
+[TimeControl "180+1"]
+[Termination "dretch won by resignation"]
+[Variant "Standard"]
+[ECO "D35"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Positional Variation"]
+[StudyName "tt 12/13"]
+[ChapterName "dretch - IMRosen"]
+[ChapterURL "https://lichess.org/study/18UjcWhQ/QmLCJqwG"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. cxd5 exd5 5. Bg5 c6 6. e3 Bd6 7. Bd3 h6 8. Bh4 O-O 9. Nge2 Re8 10. Qc2 a5 11. h3 Na6 12. a3 Nc7 13. O-O Ne6 14. Kh1 Ng5 (14... g5 15. Bg3 Ng7) 15. Ng1 Qc7 16. f4 Nge4 17. Nf3 Bf5 18. Ne5 Bh7 19. Ne2 c5 20. Bxf6 gxf6 21. Ng4 Kg7 22. Rac1 c4 23. Bxe4 Bxe4 24. Qd2 h5 25. Nf2 b5 { [%csl Ge4] } 26. Nc3 Qb7 27. a4 Bb4 28. Nfxe4 Rxe4 29. axb5 Bxc3 30. Rxc3 Qxb5 31. Qe2 Rh8 32. Ra1 f5 33. b3 Qb4 34. Qc2 Qe7 35. bxc4 dxc4 36. Rxc4 Rxe3 37. Qxf5 Re1+ 38. Rxe1 Qxe1+ 39. Kh2 Rh6 40. Rc5 Rg6 41. Qe5+ Qxe5 42. fxe5 Ra6 43. d5 a4 44. d6 a3 45. d7 a2 46. d8=Q a1=Q 47. Qg5+ Rg6 48. Qd2 Qa7 49. Rd5 Qe7 50. Qf4 h4 51. Rd4 Qe6 52. Qe3 Qf5 53. Rxh4 Rg5 54. Rf4 Qxe5 55. Qf3 Rf5 56. Qg3+ Rg5 57. Rg4 Qxg3+ 58. Kxg3 Rg6 59. Rxg6+ fxg6 60. Kf4 Kf6 61. h4 Kf7 62. Kg5 Kg7 63. g3 Kf7 64. Kh6 Kf6 65. g4 g5 66. hxg5+ Kf7 67. Kh7 Kf8 68. g6 Ke7 69. g7 Kf6 70. g8=Q Ke5 71. g5 { 1-0 White wins. } 1-0
+
+
+[Event "Live Chess - chess"]
+[Site "Chess.com"]
+[Date "2022.12.13"]
+[White "jefferyx"]
+[Black "IMRosen"]
+[Result "1-0"]
+[WhiteElo "3019"]
+[BlackElo "2640"]
+[TimeControl "180+1"]
+[Termination "jefferyx won by checkmate"]
+[Variant "Standard"]
+[ECO "A00"]
+[Opening "Polish Opening: Bugayev Attack"]
+[StudyName "tt 12/13"]
+[ChapterName "jefferyx - IMRosen"]
+[ChapterURL "https://lichess.org/study/18UjcWhQ/cZSfA2S4"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. b4 e5 2. a3 a5 3. b5 d5 4. Bb2 Bd6 5. e3 Ne7 6. c4 c6 7. Nf3 f6 8. d4 e4 9. Nfd2 Nd7 10. Nc3 f5 11. g4 fxg4 12. Qxg4 Kf8 13. Rg1 Rg8 14. bxc6 bxc6 15. cxd5 cxd5 16. Nb5 Nf6 17. Qd1 Bxh2 18. Rg2 Bb8 19. a4 Be6 20. Ba3 Kf7 21. Nb3 Nf5 22. Nc5 Nh4 23. Nxe6 Kxe6 24. Rc1 Nf3+ 25. Ke2 Qe8 26. Rc7 Qh5 27. Re7+ Kf5 28. Qb1 Ra6 29. Bc5 Rc6 30. Rgxg7 Rxg7 31. Rxg7 Bh2 32. Bg2 Nh4+ (32... Nxd4+ 33. Kd2 Qe2+) 33. Kf1 Ng4 34. Bh3 Rg6 35. Rf7+ Ke6 36. Nc3 Kxf7 37. Qb7+ Kf6 38. Qe7+ Kf5 39. Nxd5 Rf6 40. Qxf6# { 1-0 White wins. } 1-0
+
+

@@ -1,0 +1,447 @@
+[Event "Frankfurt sim1"]
+[Site "Frankfurt"]
+[Date "2000.06.19"]
+[White "Kasparov, Garry"]
+[Black "Beutel, Jens"]
+[Result "1/2-1/2"]
+[WhiteElo "2851"]
+[Variant "Standard"]
+[ECO "C54"]
+[Opening "Italian Game: Classical Variation, Giuoco Pianissimo"]
+[StudyName "Kasparov plays the Italian!"]
+[ChapterName "Kasparov, Garry - Beutel, Jens"]
+[ChapterURL "https://lichess.org/study/sricX3Se/5XPuB7kD"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 (1. d4 e5 2. dxe5) 1... e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d3 d6 6. Bb3 h6 7. Nbd2 Bd7 8. h3 Qe7 9. Nf1 Bb6 10. Ne3 a6 { [%csl Gg4][%cal Gg2g4] } 11. a4 { [%csl Ga4] } 11... g5 { [%csl Gc4,Ge3][%cal Ge3c4,Gc1e3] } 12. Ba2 { [%csl Gb4][%cal Gb3a2,Gb2b4] } 12... Nd8 13. Nf5 { [%csl Ge7][%cal Gf5e7,Gd7f5] } 13... Bxf5 14. exf5 Qd7 { [%csl Gg4][%cal Gg2g4] } 15. g4 Nc6 { [%csl Gb4][%cal Gb2b4] } 16. b4 e4 { [%cal Gd3e4,Gf6e4,Ge1g1,Ge4c3,Gd1e1] } 17. Nd2 { [%cal Ge4d3] } 17... exd3 { [%csl Gc4][%cal Gd2c4] } 18. Nc4 { [%csl Gb6,Gd3][%cal Gd2d3] } 18... Ne5 { [%csl Gb6] } 19. O-O O-O-O { [%csl Gb6][%cal Gc4b6] } 20. Nxb6+ cxb6 21. b5 a5 22. f3 { [%cal Gc1e3] } 22... Rhe8 23. Bb1 Qc7 { 1/2-1/2 The game is a draw. } 1/2-1/2
+
+
+[Event "Kasparov Chess sim"]
+[Site "New York"]
+[Date "2000.03.14"]
+[Round "8"]
+[White "Kasparov, Garry"]
+[Black "Zaks, Victoria"]
+[Result "1/2-1/2"]
+[WhiteElo "2851"]
+[Variant "Standard"]
+[ECO "C54"]
+[Opening "Italian Game: Classical Variation, Giuoco Pianissimo"]
+[StudyName "Kasparov plays the Italian!"]
+[ChapterName "Kasparov, Garry - Zaks, Victoria"]
+[ChapterURL "https://lichess.org/study/sricX3Se/MybhW5nJ"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d3 d6 6. Bb3 Bb6 7. Nbd2 a6 8. h3 Ne7 9. Nf1 Ng6 10. Ng3 c6 11. d4 exd4 12. cxd4 O-O 13. O-O d5 14. e5 Ne4 15. Bc2 Nxg3 16. fxg3 c5 17. Be3 cxd4 18. Bxd4 Be6 19. Kh2 Rc8 20. Bb3 Ne7 21. Qd2 Bxd4 22. Nxd4 Nc6 23. Rae1 Qb6 24. Rf4 Rfe8 25. Nf3 Rc7 26. Rh4 Ne7 27. Bc2 Bf5 28. Bb3 Be6 29. Bc2 Bf5 30. Bb3 Be6 31. Bc2 Bf5 { 1/2-1/2 The game is a draw. } 1/2-1/2
+
+
+[Event "Kasparov Chess sim"]
+[Site "New York"]
+[Date "2000.03.14"]
+[Round "20"]
+[White "Kasparov, Garry"]
+[Black "Karmann, Alexander"]
+[Result "1-0"]
+[WhiteElo "2851"]
+[Variant "Standard"]
+[ECO "C54"]
+[Opening "Italian Game: Classical Variation, Giuoco Pianissimo"]
+[StudyName "Kasparov plays the Italian!"]
+[ChapterName "Kasparov, Garry - Karmann, Alexander"]
+[ChapterURL "https://lichess.org/study/sricX3Se/HWfA8h8Y"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d3 d6 6. Bb3 Bg4 7. h3 Bh5 8. Nbd2 O-O 9. Qe2 Re8 10. g4 Bg6 11. Nf1 d5 12. Ng3 dxe4 13. dxe4 a6 14. Bg5 Be7 15. Bd2 b5 16. Nh4 Na5 17. Bc2 Nc4 18. Bc1 Bc5 19. g5 Nd7 20. Nxg6 hxg6 21. h4 Nf8 22. h5 Nd6 23. Bb3 Qd7 24. Qf3 Bb6 25. h6 Ne6 26. hxg7 Nxg7 27. Bd2 c5 28. O-O-O c4 29. Bc2 Qe7 30. Rh6 Qe6 31. Rdh1 Kf8 32. Qf6 Qxf6 33. gxf6 Nh5 34. Rh8# { 1-0 White wins by checkmate. } 1-0
+
+
+[Event "Lisbon Festival sim"]
+[Site "Lisbon"]
+[Date "1999.11.20"]
+[White "Kasparov, Garry"]
+[Black "Teixeira, Rafael Goltsman"]
+[Result "1-0"]
+[WhiteElo "2851"]
+[Variant "Standard"]
+[ECO "C54"]
+[Opening "Italian Game: Classical Variation, Giuoco Pianissimo"]
+[StudyName "Kasparov plays the Italian!"]
+[ChapterName "Kasparov, Garry - Teixeira, Rafael Goltsman"]
+[ChapterURL "https://lichess.org/study/sricX3Se/Fs2TQ29v"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d3 d6 6. Bb3 O-O 7. Nbd2 Be6 8. O-O Qd7 9. Re1 Rfe8 10. Nf1 Ne7 11. Ng3 Bg4 12. h3 Be6 13. Bg5 Kh8 14. Bxf6 gxf6 15. d4 exd4 16. cxd4 Bb4 17. Re3 Rg8 18. d5 Bxh3 19. Qd4 Rg6 20. Qxb4 c5 21. Qc3 Bg4 22. Bc2 Rh6 23. Nh2 b5 24. b4 Rc8 25. Bd3 c4 26. Bc2 Bh5 27. Nxh5 Rxh5 28. Qxf6+ Kg8 29. Bd1 { 1-0 Black resigns. } 1-0
+
+
+[Event "Lisbon Festival sim"]
+[Site "Lisbon"]
+[Date "1999.11.20"]
+[White "Kasparov, Garry"]
+[Black "Costa, Joao Guerra"]
+[Result "1-0"]
+[WhiteElo "2851"]
+[Variant "Standard"]
+[ECO "C54"]
+[Opening "Italian Game: Classical Variation, Giuoco Pianissimo"]
+[StudyName "Kasparov plays the Italian!"]
+[ChapterName "Kasparov, Garry - Costa, Joao Guerra"]
+[ChapterURL "https://lichess.org/study/sricX3Se/wdQAa8Mp"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d3 d6 6. Bb3 Bg4 7. h3 Bh5 8. Nbd2 Qe7 9. Nf1 O-O-O 10. Ng3 Bxf3 11. Qxf3 Kb8 12. Bg5 Rd7 13. Bd5 h6 14. Bxf6 Qxf6 15. Qxf6 gxf6 16. b4 Bb6 17. a4 a6 18. Nh5 Re7 19. Nxf6 Ba7 20. b5 axb5 21. axb5 Nd8 22. Ke2 Ne6 23. g3 Nd8 24. Ra2 Bb6 25. Rha1 { 1-0 Black resigns. } 1-0
+
+
+[Event "Lisbon Festival sim"]
+[Site "Lisbon"]
+[Date "1999.11.20"]
+[White "Kasparov, Garry"]
+[Black "Soares, Diana"]
+[Result "1-0"]
+[WhiteElo "2851"]
+[Variant "Standard"]
+[ECO "C54"]
+[Opening "Italian Game: Classical Variation, Giuoco Pianissimo"]
+[StudyName "Kasparov plays the Italian!"]
+[ChapterName "Kasparov, Garry - Soares, Diana"]
+[ChapterURL "https://lichess.org/study/sricX3Se/qfUJgg1f"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d3 d6 6. Bb3 Bg4 7. h3 Be6 8. Bc2 h6 9. O-O Qd7 10. d4 exd4 11. cxd4 Bc4 12. dxc5 Bxf1 13. Qxf1 dxc5 14. Nc3 Nd4 15. Nxd4 cxd4 16. e5 Ng8 17. Ne4 Ne7 18. Bd3 O-O 19. Bf4 a6 20. Bxh6 Nd5 21. Bd2 Qe7 22. f4 b5 23. Rc1 Rfd8 24. Rc5 Qe6 25. Qf3 Nb6 26. f5 Qxa2 27. f6 g6 28. Qf4 Kf8 29. e6 Qxe6 30. Re5 { 1-0 Black resigns. } 1-0
+
+
+[Event "Lisbon Festival sim"]
+[Site "Lisbon"]
+[Date "1999.11.20"]
+[White "Kasparov, Garry"]
+[Black "Pinheiro, Tiago"]
+[Result "1-0"]
+[WhiteElo "2851"]
+[Variant "Standard"]
+[ECO "C54"]
+[Opening "Italian Game: Classical Variation, Giuoco Pianissimo"]
+[StudyName "Kasparov plays the Italian!"]
+[ChapterName "Kasparov, Garry - Pinheiro, Tiago"]
+[ChapterURL "https://lichess.org/study/sricX3Se/b26iU1Ns"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d3 O-O 6. O-O d6 7. Bb3 Bg4 8. h3 Bh5 9. Nbd2 Qd7 10. Re1 Rfe8 11. Nf1 Nd8 12. Ng3 Bg6 13. Nh4 Ne6 14. Qf3 Qe7 15. Nhf5 Bxf5 16. Nxf5 Qf8 17. Bd2 Rad8 18. Rad1 c6 19. Bc1 Bb6 20. d4 exd4 21. cxd4 d5 22. e5 Nd7 23. h4 Kh8 24. h5 h6 25. Bc2 Ba5 26. Re2 f6 27. Nh4 Kg8 28. Qf5 Qf7 29. Qh7+ Kf8 30. Ng6+ Qxg6 31. Bxg6 { 1-0 Black resigns. } 1-0
+
+
+[Event "Lisbon Festival sim"]
+[Site "Lisbon"]
+[Date "1999.11.20"]
+[White "Kasparov, Garry"]
+[Black "Caeiro, Maria Joao"]
+[Result "1-0"]
+[WhiteElo "2851"]
+[Variant "Standard"]
+[ECO "C54"]
+[Opening "Italian Game: Classical Variation, Giuoco Pianissimo"]
+[StudyName "Kasparov plays the Italian!"]
+[ChapterName "Kasparov, Garry - Caeiro, Maria Joao"]
+[ChapterURL "https://lichess.org/study/sricX3Se/RPgHbOn2"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d3 d6 6. Bb3 O-O 7. Nbd2 Re8 8. h3 Be6 9. O-O d5 10. Ng5 h6 11. Nxe6 Rxe6 12. exd5 Nxd5 13. Ne4 Bf8 14. Qf3 Re8 15. Bxd5 Qd7 16. Bxh6 Re7 17. Be3 Rd8 18. Bb3 Qxd3 19. Rad1 Qa6 20. Ng5 Rdd7 21. Qh5 { 1-0 Black resigns. } 1-0
+
+
+[Event "Patras sim"]
+[Site "Patras"]
+[Date "2001.07.22"]
+[White "Kasparov, Garry"]
+[Black "Tsekouras, Orestis"]
+[Result "1-0"]
+[WhiteElo "2838"]
+[Variant "Standard"]
+[ECO "C54"]
+[Opening "Italian Game: Classical Variation, Giuoco Pianissimo"]
+[StudyName "Kasparov plays the Italian!"]
+[ChapterName "Kasparov, Garry - Tsekouras, Orestis"]
+[ChapterURL "https://lichess.org/study/sricX3Se/lvdP5okT"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d3 O-O 6. O-O d6 7. Bb3 Bg4 8. h3 Bd7 9. Nbd2 Re8 10. Re1 Bc8 11. Nf1 b6 { [%csl Ga4,Rb6][%cal Gb3a4] } 12. Ng3 (12. Ba4 b5 13. Bxb5 Bd7) 12... Bb7 13. Bg5 { [%csl Gg5] } 13... h6 14. Bh4 { [%csl Gf6] } 14... a5 15. Nf5 { [%csl Gf6][%cal Gg3h5,Gh5f6] } 15... Na7 { [%csl Gh2,Gg4][%cal Gf3h2,Gh2g4] } 16. Nh2 c6 17. Ng4 g5 { [%csl Gh6,Gg5][%cal Gg4h6,Gh4g5] } 18. Ngxh6+ Kf8 19. Bxg5 { 1-0 Black resigns. } 1-0
+
+
+[Event "Internet blitz 5'"]
+[Site "ICC INT"]
+[Date "1998.05.29"]
+[White "Kasparov, Garry"]
+[Black "KOCHO"]
+[Result "1-0"]
+[WhiteElo "2825"]
+[Variant "Standard"]
+[ECO "C54"]
+[Opening "Italian Game: Classical Variation, Giuoco Pianissimo"]
+[StudyName "Kasparov plays the Italian!"]
+[ChapterName "Kasparov, Garry - KOCHO"]
+[ChapterURL "https://lichess.org/study/sricX3Se/XrInHWx0"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d3 d6 6. Bb3 h6 7. h3 a6 8. Nbd2 Ba7 9. Nf1 Be6 10. Ng3 Qd7 11. Bc2 O-O 12. O-O Rae8 13. d4 Bxh3 14. gxh3 Qxh3 15. Re1 Ng4 16. Bd3 Nxd4 17. cxd4 Bxd4 18. Nh1 Nxf2 19. Nxf2 Qg3+ 20. Kh1 Bxf2 21. Rf1 Qh3+ 22. Nh2 Bg3 23. Qe2 Bxh2 24. Rf3 Bg3+ 25. Kg1 Qh4 26. Qg2 Bf4 27. Bxf4 exf4 28. Raf1 g5 29. Rxf4 Qh5 30. Bc4 Re7 31. Rf6 Kg7 32. Be2 Qh4 33. R6f4 { 1-0 Black resigns. } 1-0
+
+
+[Event "Sao Paulo 450 anniv sim"]
+[Site "Sao Paulo"]
+[Date "2004.08.21"]
+[White "Kasparov, Garry"]
+[Black "Gomez, Gustavo Pizzocaro"]
+[Result "1-0"]
+[WhiteElo "2817"]
+[BlackElo "1907"]
+[Variant "Standard"]
+[ECO "C54"]
+[Opening "Italian Game: Classical Variation, Giuoco Pianissimo"]
+[StudyName "Kasparov plays the Italian!"]
+[ChapterName "Kasparov, Garry - Gomez, Gustavo Pizzocaro"]
+[ChapterURL "https://lichess.org/study/sricX3Se/hZtyYMbj"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d3 d6 6. Bb3 O-O 7. Bg5 h6 8. Bh4 Be6 9. Nbd2 Bb6 10. Qe2 Qe7 11. Bc2 a5 12. Nf1 Rfe8 13. Ne3 g6 14. Ba4 Rf8 15. Nd2 Nb8 16. Qf3 Kg7 17. Nd5 Bxd5 18. exd5 g5 19. Bg3 Nbd7 20. h4 Nc5 21. hxg5 hxg5 22. Qf5 Rg8 23. Qxg5+ Kf8 24. Qh6+ Rg7 25. Bh4 Nxd3+ 26. Kf1 { 1-0 Black resigns. } 1-0
+
+
+[Event "Sao Paulo 450 anniv sim"]
+[Site "Sao Paulo"]
+[Date "2004.08.21"]
+[White "Kasparov, Garry"]
+[Black "Queiroz, Agnelo"]
+[Result "1-0"]
+[WhiteElo "2817"]
+[Variant "Standard"]
+[ECO "C54"]
+[Opening "Italian Game: Classical Variation, Giuoco Pianissimo"]
+[StudyName "Kasparov plays the Italian!"]
+[ChapterName "Kasparov, Garry - Queiroz, Agnelo"]
+[ChapterURL "https://lichess.org/study/sricX3Se/W0VC3vOL"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d3 d6 6. Bb3 Bg4 7. h3 Bh5 8. Nbd2 O-O 9. Qe2 a6 10. Nf1 h6 11. g4 Bg6 12. Ng3 Ne7 13. Nh4 Nh7 14. Nhf5 Bxf5 15. gxf5 Nf6 16. Rg1 Kh8 17. Nh5 Nxh5 18. Qxh5 Ng8 19. Bxf7 Qf6 20. Bb3 c6 21. Rg6 Qe7 22. Bxg8 Rxg8 23. Bg5 { 1-0 Black resigns. } 1-0
+
+
+[Event "Buenos Aires sim"]
+[Site "Buenos Aires"]
+[Date "1998.12.13"]
+[White "Kasparov, Garry"]
+[Black "Flores, Diego"]
+[Result "1/2-1/2"]
+[WhiteElo "2815"]
+[BlackElo "2205"]
+[Variant "Standard"]
+[ECO "C54"]
+[Opening "Italian Game: Classical Variation, Giuoco Pianissimo"]
+[StudyName "Kasparov plays the Italian!"]
+[ChapterName "Kasparov, Garry - Flores, Diego"]
+[ChapterURL "https://lichess.org/study/sricX3Se/v7J2rgQb"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d3 d6 6. Bb3 a6 7. Nbd2 O-O 8. h3 Ba7 9. Nf1 Ne7 10. Ng3 Ng6 11. O-O h6 12. d4 exd4 13. cxd4 d5 14. e5 Ne4 15. Be3 Be6 16. Bc2 Nxg3 17. fxg3 Qe7 18. Qd3 Rfc8 19. Nh4 Nf8 20. Nf5 Bxf5 21. Qxf5 c5 22. Bd3 Rc6 23. Rae1 cxd4 24. Bd2 Re8 25. Kh1 Re6 26. Qf3 Bb8 27. Qxd5 Bxe5 28. Rf3 Bf4 29. Rxf4 Rxe1+ 30. Bxe1 Qxe1+ 31. Kh2 Re7 32. Rxd4 Rd7 33. Qxd7 Nxd7 34. Rxd7 g5 35. Rxb7 h5 36. Bxa6 h4 37. gxh4 Qe5+ 38. Kh1 Qe1+ { 1/2-1/2 The game is a draw. } 1/2-1/2
+
+
+[Event "BT Wireplay sim"]
+[Site "London"]
+[Date "1998.12.17"]
+[White "Kasparov, Garry"]
+[Black "Johnson, Daniel"]
+[Result "1-0"]
+[WhiteElo "2815"]
+[Variant "Standard"]
+[ECO "C54"]
+[Opening "Italian Game: Classical Variation, Giuoco Pianissimo"]
+[StudyName "Kasparov plays the Italian!"]
+[ChapterName "Kasparov, Garry - Johnson, Daniel"]
+[ChapterURL "https://lichess.org/study/sricX3Se/z5TFQZ5e"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d3 d6 6. Bb3 Bg4 7. h3 Bh5 8. Nbd2 Qd7 9. Qe2 O-O-O 10. Nf1 d5 11. Ng3 Bxf3 12. Qxf3 d4 13. Bc2 Ne8 14. O-O Nd6 15. Bd2 Rdf8 16. b4 Bb6 17. c4 f5 18. exf5 Nxf5 19. Nxf5 Rxf5 20. Qe4 a5 21. c5 Ba7 22. a3 Ne7 23. Bb3 c6 24. Bc4 a4 25. Rab1 Rhf8 26. f4 Bb8 27. b5 Nd5 28. bxc6 bxc6 29. Ba6+ { 1-0 Black resigns. } 1-0
+
+
+[Event "Moenchengladbach simul"]
+[Site "Moenchengladbach"]
+[Date "2016.06.02"]
+[Round "1.3"]
+[White "Kasparov, Garry"]
+[Black "Vovchik, Vladimir"]
+[Result "1-0"]
+[WhiteElo "2812"]
+[BlackElo "1797"]
+[Variant "Standard"]
+[ECO "C54"]
+[Opening "Italian Game: Classical Variation, Giuoco Pianissimo"]
+[StudyName "Kasparov plays the Italian!"]
+[ChapterName "Kasparov, Garry - Vovchik, Vladimir"]
+[ChapterURL "https://lichess.org/study/sricX3Se/QFfvTTmB"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d3 d6 6. Bb3 O-O 7. Bg5 h6 8. Bh4 Qe7 9. Nbd2 a5 10. h3 Be6 11. Ba4 Bd7 12. g4 Nd8 13. Bxf6 gxf6 14. Bxd7 Qxd7 15. d4 exd4 16. cxd4 Bb4 17. d5 c6 18. O-O b5 19. Nd4 Kh7 20. N2f3 h5 21. Nf5 Rg8 22. Kh2 Qe8 23. Qc1 Qf8 24. a3 Bc5 25. gxh5 cxd5 26. exd5 Nb7 27. Qf4 Re8 28. b4 Bb6 29. Rae1 Re5 30. Nxe5 fxe5 31. Qe4 Kh8 32. Rg1 Bxf2 33. Rxg8+ Qxg8 34. Rf1 Bb6 35. Qg4 a4 36. Qxg8+ Kxg8 37. Rc1 { 1-0 Black resigns. } 1-0
+
+
+[Event "Besancon sim2"]
+[Site "Besancon"]
+[Date "1999.08.23"]
+[White "Kasparov, Garry"]
+[Black "Lamorelle, Julien"]
+[Result "1-0"]
+[WhiteElo "2812"]
+[BlackElo "2145"]
+[Variant "Standard"]
+[ECO "C54"]
+[Opening "Italian Game: Classical Variation, Giuoco Pianissimo"]
+[StudyName "Kasparov plays the Italian!"]
+[ChapterName "Kasparov, Garry - Lamorelle, Julien"]
+[ChapterURL "https://lichess.org/study/sricX3Se/4BxQ9umq"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d3 d6 6. Bb3 O-O 7. Bg5 a6 8. Nbd2 Ba7 9. Qe2 Ne7 10. Nh4 Bg4 11. f3 Be6 12. Bxf6 gxf6 13. g4 c6 14. Ng2 d5 15. f4 dxe4 16. Nxe4 Ng6 17. f5 Bxb3 18. axb3 Nf4 19. Nxf4 exf4 20. d4 c5 21. O-O-O Re8 22. Qg2 cxd4 23. g5 Rxe4 24. gxf6+ Kf8 25. Qxe4 Qc8 26. Qe7+ Kg8 { 1-0 Black resigns. } 1-0
+
+
+[Event "Besancon sim2"]
+[Site "Besancon"]
+[Date "1999.08.23"]
+[White "Kasparov, Garry"]
+[Black "Tran, Hien Mai"]
+[Result "1-0"]
+[WhiteElo "2812"]
+[Variant "Standard"]
+[ECO "C54"]
+[Opening "Italian Game: Classical Variation, Giuoco Pianissimo"]
+[StudyName "Kasparov plays the Italian!"]
+[ChapterName "Kasparov, Garry - Tran, Hien Mai"]
+[ChapterURL "https://lichess.org/study/sricX3Se/Tob2leo3"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d3 O-O 6. b4 Bd6 7. O-O a6 8. a4 b6 9. Re1 Bb7 10. Nbd2 b5 11. axb5 axb5 12. Rxa8 Qxa8 13. Bxb5 Ba6 14. Bxa6 Qxa6 15. Nc4 Ra8 16. Bg5 Nh5 17. Nh4 Nf4 18. Nf5 Bf8 19. Nfe3 Ne6 20. Bh4 d6 21. Nd5 Re8 22. h3 Ne7 23. Bxe7 Bxe7 24. Nxe7+ Rxe7 25. Qa1 Qxa1 26. Rxa1 g6 27. g3 f5 28. Ra7 fxe4 29. dxe4 Ng5 30. Nxd6 Nxh3+ 31. Kg2 Ng5 32. Nb5 Nxe4 33. f3 Nf6 34. Rxc7 Re8 35. c4 Rb8 36. Kf2 e4 37. Ke3 Re8 38. Nd6 Rb8 39. b5 exf3 40. Kxf3 h5 41. c5 Nd5 42. Rc8+ { 1-0 Black resigns. } 1-0
+
+
+[Event "Amsterdam Euwe Memorial"]
+[Site "Amsterdam"]
+[Date "1995.05.13"]
+[Round "2"]
+[White "Kasparov, Garry"]
+[Black "Piket, Jeroen"]
+[Result "1-0"]
+[WhiteElo "2805"]
+[BlackElo "2670"]
+[Variant "Standard"]
+[ECO "C51"]
+[Opening "Italian Game: Evans Gambit Declined"]
+[StudyName "Kasparov plays the Italian!"]
+[ChapterName "Kasparov, Garry - Piket, Jeroen"]
+[ChapterURL "https://lichess.org/study/sricX3Se/kVqxjLIp"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. b4 Bb6 5. a4 a5 6. b5 Nd4 7. Nxd4 Bxd4 8. c3 Bb6 9. d4 exd4 10. O-O Ne7 11. Bg5 h6 12. Bxe7 Qxe7 13. cxd4 Qd6 14. Nc3 Bxd4 15. Nd5 Bxa1 16. Qxa1 O-O 17. e5 Qc5 18. Rc1 c6 19. Ba2 Qa3 20. Nb6 d5 21. Nxa8 Kh8 22. Nb6 Be6 23. h3 Rd8 24. bxc6 bxc6 25. Rc3 Qb4 26. Rxc6 Rb8 27. Nxd5 Qxa4 28. Rc1 Qa3 29. Bc4 { 1-0 Black resigns. } 1-0
+
+
+[Event "Riga Tal Memorial"]
+[Site "Riga"]
+[Date "1995.??.??"]
+[Round "4"]
+[White "Kasparov, Garry"]
+[Black "Anand, Viswanathan"]
+[Result "1-0"]
+[WhiteElo "2805"]
+[BlackElo "2715"]
+[Variant "Standard"]
+[ECO "C51"]
+[Opening "Italian Game: Evans Gambit, Anderssen Variation, Cordel Line"]
+[StudyName "Kasparov plays the Italian!"]
+[ChapterName "Kasparov, Garry - Anand, Viswanathan"]
+[ChapterURL "https://lichess.org/study/sricX3Se/3Br3dI1t"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. b4 Bxb4 5. c3 Be7 6. d4 Na5 7. Be2 exd4 8. Qxd4 Nf6 9. e5 Nc6 10. Qh4 Nd5 11. Qg3 g6 12. O-O Nb6 13. c4 d6 14. Rd1 Nd7 15. Bh6 Ncxe5 16. Nxe5 Nxe5 17. Nc3 f6 18. c5 Nf7 19. cxd6 cxd6 20. Qe3 Nxh6 21. Qxh6 Bf8 22. Qe3+ Kf7 23. Nd5 Be6 24. Nf4 Qe7 25. Re1 { 1-0 Black resigns. } 1-0
+
+
+[Event "Linares 12th"]
+[Site "Linares"]
+[Date "1994.??.??"]
+[Round "13"]
+[White "Kasparov, Garry"]
+[Black "Lautier, Joel"]
+[Result "0-1"]
+[WhiteElo "2805"]
+[BlackElo "2625"]
+[Variant "Standard"]
+[ECO "C54"]
+[Opening "Italian Game: Classical Variation, Giuoco Pianissimo"]
+[StudyName "Kasparov plays the Italian!"]
+[ChapterName "Kasparov, Garry - Lautier, Joel"]
+[ChapterURL "https://lichess.org/study/sricX3Se/lgOyQ4ng"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d3 d6 6. Bb3 h6 7. h3 a6 8. Nbd2 Be6 9. Bc2 Ba7 10. Qe2 Qe7 11. b4 d5 12. a4 b5 13. O-O O-O 14. axb5 axb5 15. d4 exd4 16. e5 dxc3 17. exf6 Qxf6 18. Nb3 Nxb4 19. Bb1 d4 20. Rxa7 c2 21. Rxa8 cxb1=Q 22. Rxf8+ Kxf8 23. Qxb5 Qxb3 24. Qb8+ Ke7 25. Qxc7+ Ke8 26. Bd2 Qd8 27. Qe5 Kf8 28. Nxd4 Nd3 29. Qe3 Qc4 { 0-1 White resigns. } 0-1
+
+
+[Event "London rapid m theme"]
+[Site "London"]
+[Date "1993.??.??"]
+[Round "1"]
+[White "Kasparov, Garry"]
+[Black "Short, Nigel D"]
+[Result "1/2-1/2"]
+[WhiteElo "2805"]
+[BlackElo "2655"]
+[Variant "Standard"]
+[ECO "C51"]
+[Opening "Italian Game: Evans Gambit, Anderssen Variation, Cordel Line"]
+[StudyName "Kasparov plays the Italian!"]
+[ChapterName "Kasparov, Garry - Short, Nigel D"]
+[ChapterURL "https://lichess.org/study/sricX3Se/lwTLTLqV"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. b4 Bxb4 5. c3 Be7 6. d4 Na5 7. Nxe5 Nxc4 8. Nxc4 d5 9. exd5 Qxd5 10. Ne3 Qd8 11. O-O Nf6 12. c4 O-O 13. Nc3 c6 14. Rb1 Re8 15. Bb2 Qc7 16. Qf3 Bd7 17. Ne2 Rad8 18. Ng3 Bc8 19. d5 cxd5 20. cxd5 Qa5 21. Rfd1 Qa6 22. Rbc1 Ba3 23. Bxf6 Qxf6 24. Qxf6 gxf6 25. Rc4 b5 26. Rf4 Bb2 27. Rb4 Be5 28. Rxb5 Re7 29. Ngf5 Red7 30. h3 Kf8 31. Rb4 Rc7 32. g4 Rc5 33. d6 Be6 34. f4 Bc3 35. Rb7 Ba5 36. Rxa7 Bxf5 37. gxf5 Bb6 38. Ra6 Rb5 39. Kf2 Rd7 40. Kf3 Bxe3 41. Kxe3 Rxf5 42. a4 Rh5 43. Ke4 Rxh3 44. a5 Rh2 45. Rc6 Ra2 46. a6 Ra5 47. Rc7 Ke8 48. Rd5 Rxa6 49. Rc8+ Rd8 50. Rxd8+ Kxd8 51. Kf5 Kd7 52. Kxf6 Rxd6+ 53. Rxd6+ Kxd6 54. Kxf7 h5 { 1/2-1/2 The game is a draw. } 1/2-1/2
+
+
+[Event "Internet sim1"]
+[Site "ICC INT"]
+[Date "1995.12.04"]
+[White "Kasparov, Garry"]
+[Black "Matabeek, Sunil"]
+[Result "1-0"]
+[WhiteElo "2805"]
+[Variant "Standard"]
+[ECO "C54"]
+[Opening "Italian Game: Classical Variation, Giuoco Pianissimo"]
+[StudyName "Kasparov plays the Italian!"]
+[ChapterName "Kasparov, Garry - Matabeek, Sunil"]
+[ChapterURL "https://lichess.org/study/sricX3Se/K5gqzYwr"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d3 d6 6. Bb3 Bg4 7. h3 Bh5 8. Nbd2 h6 9. Nf1 O-O 10. g4 Bg6 11. Ng3 Re8 12. g5 Nh5 13. Nh4 Nxg3 14. fxg3 Kh7 15. gxh6 gxh6 16. Rf1 Rf8 17. Qg4 Qc8 18. Nf5 Bxf5 19. Rxf5 Ne7 20. Qh5 Nxf5 21. exf5 Qd8 22. Qxh6+ Kg8 23. f6 Qxf6 24. Qxf6 { 1-0 Black resigns. } 1-0
+
+
+[Event "Galicia sim"]
+[Site "Galicia"]
+[Date "1991.07.19"]
+[White "Kasparov, Garry"]
+[Black "Gonzalez Larranaga, Y."]
+[Result "1-0"]
+[WhiteElo "2800"]
+[Variant "Standard"]
+[ECO "C54"]
+[Opening "Italian Game: Classical Variation, Giuoco Pianissimo"]
+[StudyName "Kasparov plays the Italian!"]
+[ChapterName "Kasparov, Garry - Gonzalez Larranaga, Y."]
+[ChapterURL "https://lichess.org/study/sricX3Se/4nRqu3Sv"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d3 h6 6. b4 Bb6 7. a4 a6 8. O-O d5 9. exd5 Nxd5 10. Re1 Bg4 11. h3 Bxf3 12. Qxf3 Nf6 13. Nd2 O-O 14. Ba3 Re8 15. Ne4 Rc8 16. Rad1 Nb8 17. Bc1 Nbd7 18. Ng3 c6 19. Nf5 Qc7 20. Bxh6 g6 21. Qg3 Nd5 22. Bd2 e4 23. Qxc7 Rxc7 24. Ne3 N5f6 25. d4 Ba7 26. a5 Rcc8 27. Bf1 Kg7 28. g3 Rh8 29. Bg2 Nh7 30. Nc2 Ndf6 31. c4 Rcd8 32. Bc3 Ng5 33. h4 Ngh7 34. Rd2 Nf8 35. Ne3 Rd7 36. d5 { 1-0 Black resigns. } 1-0
+
+
+[Event "Jerusalem sim"]
+[Site "Jerusalem"]
+[Date "1996.10.15"]
+[White "Kasparov, Garry"]
+[Black "Geller, I."]
+[Result "1-0"]
+[WhiteElo "2785"]
+[Variant "Standard"]
+[ECO "C54"]
+[Opening "Italian Game: Classical Variation, Giuoco Pianissimo"]
+[StudyName "Kasparov plays the Italian!"]
+[ChapterName "Kasparov, Garry - Geller, I."]
+[ChapterURL "https://lichess.org/study/sricX3Se/8xKsOLTG"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d3 O-O 6. b4 Bb6 7. a4 a6 8. O-O d6 9. a5 Ba7 10. h3 h6 11. Re1 Ne7 12. Bb3 Ng6 13. d4 Qe7 14. Nbd2 Be6 15. Bc2 Rad8 16. Nf1 Rfe8 17. Be3 exd4 18. Nxd4 Bxd4 19. Bxd4 d5 20. e5 Ne4 21. f3 Ng5 22. Nh2 Qd7 23. Qd2 Bf5 24. Ba4 c6 25. Kh1 Kh7 26. Re2 Kg8 27. Rf1 Ne7 28. h4 Ne6 29. Bb6 Rc8 30. g4 Bh7 31. h5 d4 32. c4 d3 33. Ree1 g5 34. hxg6 Nxg6 35. f4 Nd4 36. Qxd3 Rcd8 37. Qg3 Qe7 38. Bc5 Qh4 39. Qxh4 Nxh4 40. f5 h5 41. Re4 Ne6 42. Bf2 Ng5 43. Rf4 { 1-0 Black resigns. } 1-0
+
+

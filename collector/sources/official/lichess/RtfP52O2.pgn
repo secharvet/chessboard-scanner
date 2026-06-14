@@ -1,0 +1,228 @@
+[Event "In The School: In the classroom"]
+[Date "2026.05.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "In The School"]
+[ChapterName "In the classroom"]
+[ChapterURL "https://lichess.org/study/RtfP52O2/0Aar5zfk"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "8/2k5/8/1R1R1R1R/8/1R1r1R1R/8/1R1R1R1R w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.28"]
+[UTCTime "10:38:17"]
+
+{ The students are sitting in front of there tables. There's one student, who'm you hate. Hit the Badboy! } { [%csl Gb2,Gd2,Gf2,Gh2,Gh4,Gf4,Gd4,Gb4,Gb6,Gd6,Gf6,Gh6] }
+ *
+
+
+[Event "In The School: Hit the Badboy!!!"]
+[Date "2026.05.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "In The School"]
+[ChapterName "Hit the Badboy!!!"]
+[ChapterURL "https://lichess.org/study/RtfP52O2/5mJg0wGZ"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "8/2k5/8/1R1R1R1R/8/1R1r1R1R/8/1K1R1R1R b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.28"]
+[UTCTime "11:05:42"]
+[ChapterMode "gamebook"]
+
+{ [%csl Gb2,Gd2,Gf2,Gh2,Gh4,Gf4,Gd4,Gb4,Gb6,Gd6,Gf6,Gh6][%cal Ga8e8,Ge8a8] }
+1... Kc8?? { The teacher goes to the board. Now you can hit the Badboy. The students in this class are really bad ones, so it was a dump idea to go to the board. } { [%csl Gb6,Gd6,Gf6,Gh6,Gh4,Gf4,Gd4,Gb4,Gb2,Gd2,Gf2,Gh2][%cal Ga8e8,Ge8a8] } 2. Rfxd3!! { Good! Next chapter! } { [%csl Gb2,Gd2,Gf2,Gh2,Gh4,Gf4,Gd4,Gb4,Gb6,Gd6,Gf6,Gh6][%cal Ga8e8,Ge8a8] } *
+
+
+[Event "In The School: Punishment task"]
+[Date "2026.05.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "In The School"]
+[ChapterName "Punishment task"]
+[ChapterURL "https://lichess.org/study/RtfP52O2/wuOIHmDV"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "8/rrrrrrrr/8/rrrrrrrr/8/rrRrrrrr/8/rrrrrrrr b - - 0 2"]
+[SetUp "1"]
+[UTCDate "2026.05.28"]
+[UTCTime "13:56:29"]
+
+{ OH NO!!!! You got a punishment task!!! So many Badboys in this room! } { [%csl Gc2,Gd2,Ge2,Gf2,Gg2,Gh2,Ga4,Gb4,Gc4,Gd4,Ge4,Gf4,Gg4,Gh4,Ga6,Gb6,Gc6,Gd6,Ge6,Gf6,Gg6,Gh6,Ga8,Gc8,Ge8,Gf8,Gg8,Gh8,Gd8,Gb8,Ga2,Gb2] }
+ *
+
+
+[Event "In The School: Escape"]
+[Date "2026.05.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "In The School"]
+[ChapterName "Escape"]
+[ChapterURL "https://lichess.org/study/RtfP52O2/LoO0IN0h"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "k1r3bK/rrr1r1r1/4r3/1rrrrrrb/6rr/rrrrr1rR/r7/rrrrrrrr b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.28"]
+[UTCTime "14:08:02"]
+[ChapterMode "gamebook"]
+
+1... Kb8 { Get out of this room full of Badboys! Go to your friend (white king). } 2. Rh2 Ka8 3. Rf2 Kb8 4. Rf4 Ka8 5. Ra4 Kb8 6. Ra6 Ka8 7. Rd6 Kb8 8. Rd8 Ka8 9. Rf8 Kb8 10. Rf6 Ka8 11. Rh6 Kb8 12. Rh7!! { Nice! } *
+
+
+[Event "In The School: The break"]
+[Date "2026.05.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "In The School"]
+[ChapterName "The break"]
+[ChapterURL "https://lichess.org/study/RtfP52O2/VOSitRjl"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "1r4nk/b4rpp/3q4/R7/3R3P/5B2/PP6/KQ4Q1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.28"]
+[UTCTime "14:15:28"]
+
+1. Qgg6 { The break starts! YYYYYYaaaaaaaayyyyyyyy!!!!!!!!! } 1... Qb4 2. Rd8 Bf2 3. Bd1 Ba7 4. Bh5 Rf1 5. Rg5 Qf8 6. Rd1 Qc5 7. Qge4 Rff8 (7... Rb3 8. Qa8 Rbf3 9. Rd8 Qa3 10. Ra5) 8. Qh1 Rb3 9. Rd6 Qd4 10. Qd5 Qe5 11. Qde4 { Oh no, two boys are fighting! } 11... Qf4 12. Qf3 Qg3 13. Qf2 Qf3 14. Qe2 Qf2 15. Qef1 Qe1 16. Qf2 Qe2 17. Qe3 Qd3 18. Qd4 Qc4 19. Qc5 Qd5 20. Qd4 Qc4 21. Qc5 Qb5 22. Qb4 Qa4 23. Qa3 Qb4 24. Qa4 Qa5 25. Qb5 Qb6 { Help white! } *
+
+
+[Event "In The School: Help white!"]
+[Date "2026.05.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "In The School"]
+[ChapterName "Help white!"]
+[ChapterURL "https://lichess.org/study/RtfP52O2/gEhQovMC"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "5rnk/b5pp/1q1R4/1Q4RB/7P/1r6/PP6/KQ6 w - - 50 26"]
+[SetUp "1"]
+[UTCDate "2026.05.28"]
+[UTCTime "14:21:00"]
+[ChapterMode "gamebook"]
+
+{ Hit the black queen! (another Badboy) }
+26. Rxb6! *
+
+
+[Event "In The School: Thank you!"]
+[Date "2026.05.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "In The School"]
+[ChapterName "Thank you!"]
+[ChapterURL "https://lichess.org/study/RtfP52O2/XPuhq4HV"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "1rrrrrr1/r3r2r/r2rr2r/r1r1r2r/r3r2r/r3r2r/r3r1rr/1rrrrrr1 b - - 0 2"]
+[SetUp "1"]
+[UTCDate "2026.05.28"]
+[UTCTime "14:40:55"]
+
+{ Thank you all!!! PLS share, like and comment! 10 Likes = 3 new chapters!
+Mark: a+++++++
+Oral Mark: a++++++++
+
+Wow!!! I got 43 Likes!!! Thank you all again!!! Maybe, in a few days or weeks, this study is going to have more than 100 likes!
+
+100 Likes = 5 new chapters (if I have enough ideas }
+ *
+
+
+[Event "In The School: Chess Club (Beginners)"]
+[Date "2026.05.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "In The School"]
+[ChapterName "Chess Club (Beginners)"]
+[ChapterURL "https://lichess.org/study/RtfP52O2/1HZYEQei"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "Q1b2rk1/p4pp1/1p5p/4B3/5Pq1/4b3/PPP4P/1K1R1B1R b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.30"]
+[UTCTime "18:48:08"]
+[ChapterMode "gamebook"]
+
+{ The Chess Club starts. Your teacher gives you a few tasks. Mate in 1 }
+1... Qxd1#!! *
+
+
+[Event "In The School: Chess Club (Beginners) 2"]
+[Date "2026.05.31"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "In The School"]
+[ChapterName "Chess Club (Beginners) 2"]
+[ChapterURL "https://lichess.org/study/RtfP52O2/tXIbEQBm"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "8/8/8/1q6/4K3/8/k7/4R3 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.31"]
+[UTCTime "11:48:04"]
+[ChapterMode "gamebook"]
+
+{ Mate }
+1... Qe8+ 2. Kd3 Qxe1 3. Kd4 Qe2 4. Kc3 Qd1 5. Kc4 Qd2 6. Kc5 Qd3 7. Kc6 Qd4 8. Kb5 Qc3 9. Kb6 Qc4 10. Ka5 Qb3 11. Ka6 Qb4 12. Ka7 Qb5 13. Ka8 Kb3 14. Ka7 Kc4 15. Ka8 Kc5 16. Ka7 Kc6 17. Ka8 Qb7# *
+
+
+[Event "In The School: Chess Club (Beginners) 3"]
+[Date "2026.05.31"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "In The School"]
+[ChapterName "Chess Club (Beginners) 3"]
+[ChapterURL "https://lichess.org/study/RtfP52O2/yRXAVuAr"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "r2q1rk1/pp3ppp/7n/3P2Nb/1bp4P/2N2P2/PPQ3P1/R1B1K2R w KQ - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.31"]
+[UTCTime "11:55:11"]
+[ChapterMode "gamebook"]
+
+1. Qxh7#!! { Nice! } *
+
+
+[Event "In The School: My next study"]
+[Date "2026.05.31"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "In The School"]
+[ChapterName "My next study"]
+[ChapterURL "https://lichess.org/study/RtfP52O2/jBNZBk6L"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "RRRRRRRR/RrrRRrrR/RrrRRrrR/RRRrrRRR/RRrrrrRR/RRrrrrRR/RRrRRrRR/RRRRRRRR w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.05.31"]
+[UTCTime "12:00:55"]
+
+{ My next study is going to be a MINECRAFT study. Ready in a few days. BYE!
+
+But I still want 100 Likes for the 5 new chapters.
+
+https://lichess.org/study/zGcUIS7h/RQhtpvMH
+
+Now I have 107 Likes=5 new chapters Thank you all so much again and again and again!!!
+
+My next goals: 200, 500, 1000 Likes
+
+If this study gets 1000 likes, I will make a study on your desired topic in the chat. }
+ *
+
+

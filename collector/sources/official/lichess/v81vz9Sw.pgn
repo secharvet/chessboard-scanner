@@ -1,0 +1,180 @@
+[Event "Blitz Tournament: Round 1: Black"]
+[Date "2019.12.01"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C42"]
+[Opening "Petrov's Defense: Stafford Gambit"]
+[StudyName "Blitz Tournament"]
+[ChapterName "Round 1: Black"]
+[ChapterURL "https://lichess.org/study/v81vz9Sw/oVlNPWtT"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.12.01"]
+[UTCTime "17:02:26"]
+
+1. e4 (1. d4 e5 2. dxe5 { [%csl Gc5] } 2... Bc5 (2... Nc6 3. Nf3 Qe7 4. Bf4 Qb4+ 5. Bd2 Qxb2 6. Nc3 Bb4 7. Rb1 Qxc3 8. Bxc3 Bxc3+ { [%csl Gc3] } 9. Nd2) 3. Nf3 d6 4. exd6 Ne7 5. dxe7 { [%csl Gd1] } 5... Bxf2+ 6. Kxf2 Qxd1) 1... e5 2. Nf3 Nf6 3. Nxe5 Nc6 4. Nxc6 dxc6 5. Nc3 Bc5 6. Bc4? Ng4 7. O-O Qh4 8. h3 Nxf2 9. d4 Nxd1 *
+
+
+[Event "Blitz Tournament: Round 1: White"]
+[Date "2019.12.01"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D00"]
+[Opening "Queen's Pawn Game: Accelerated London System"]
+[StudyName "Blitz Tournament"]
+[ChapterName "Round 1: White"]
+[ChapterURL "https://lichess.org/study/v81vz9Sw/JqQoNa9u"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.12.01"]
+[UTCTime "17:03:12"]
+
+1. d4 d5 2. Bf4 e6 3. e3 Nf6 4. Nd2 c5 5. c3 Nc6 6. Ngf3 Bd6 7. Bg3 b6? 8. Bb5 Bb7 9. Qa4 Qc7 10. Bxd6 Qxd6 11. Ne5 Rc8 12. Qxa7 Qc7 13. Ndf3 O-O 14. Bxc6 Bxc6 15. Qxc7 Rxc7 16. Nxc6 Rxc6 *
+
+
+[Event "Blitz Tournament: Round 2: Rosen-Ulrich"]
+[Site "Earth"]
+[Date "2019.11.30"]
+[Round "1"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D00"]
+[Opening "Queen's Pawn Game: Accelerated London System"]
+[StudyName "Blitz Tournament"]
+[ChapterName "Round 2: Rosen-Ulrich"]
+[ChapterURL "https://lichess.org/study/v81vz9Sw/ySjY01Qb"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 d5 2. Bf4 Nf6 3. e3 c5 4. Nf3 Nc6 5. Nbd2 Bf5 (5... cxd4 6. exd4 Bf5 { [%csl Gf5] } 7. c3 e6 { [%csl Gd6][%cal Gf8d6] }) 6. dxc5 e6 7. Nd4 Bg4 { [%cal Gf5g4] } 8. f3 Bh5 9. Bb5 { [%cal Gd8d7] } 9... Rc8 10. Nxc6 (10. b4 Qd7 11. N2b3 Be7) 10... bxc6 11. Ba6 Bxc5 12. Bxc8 Qxc8 13. Qe2 O-O 14. Nb3 Bb6 15. O-O Re8 16. g4 Bg6 17. Bg3 e5 18. h3 d4 19. Bf2 dxe3 20. Bxe3 Bxe3+ 21. Qxe3 Bxc2 22. Rac1 Bxb3 23. Qxb3 h5 24. Qa4 Qb8 *
+
+
+[Event "Blitz Tournament: Round 2: Ulrich - Rosen"]
+[Site "Earth"]
+[Date "2019.11.30"]
+[Round "1"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D36"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Reshevsky Variation"]
+[StudyName "Blitz Tournament"]
+[ChapterName "Round 2: Ulrich - Rosen"]
+[ChapterURL "https://lichess.org/study/v81vz9Sw/U1DtXY2S"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 d5 2. c4 (2. Bf4 Nf6 3. e3 c5 4. Nf3 Nc6 5. Nbd2 Bf5 6. dxc5 e6 7. Nd4 Bg4 8. f3 Bh5 9. Bb5 Rc8 10. Nxc6 bxc6 11. Ba6 Bxc5 12. Bxc8 Qxc8 13. Qe2) 2... e6 3. Nc3 Nf6 4. cxd5 exd5 5. Bg5 c6 6. Qc2 Bd6 7. e3 h6 8. Bh4 O-O 9. Bd3 Re8 10. Nge2 a5 11. Bg3 Na6 12. a3 Nc7 13. O-O Ne6 14. f3 Ng5 15. Bxd6 Qxd6 16. e4 dxe4 17. fxe4 Ng4 18. e5 Qd8 19. Qb3 Re7 20. Rae1 Be6 21. Qa4 b5 22. Qc2 Ne3 23. Qb1 Nxf1 24. Rxf1 b4 25. Ne4 Nxe4 26. Bxe4 Bc4 27. Re1 Bxe2 28. Rxe2 Qxd4+ 29. Kh1 Qxe5 30. Qe1 Rae8 *
+
+
+[Event "Blitz Tournament: Round 3: Rosen - Velikanov"]
+[Date "2019.12.01"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "Blitz Tournament"]
+[ChapterName "Round 3: Rosen - Velikanov"]
+[ChapterURL "https://lichess.org/study/v81vz9Sw/avxt32GB"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.12.01"]
+[UTCTime "17:09:22"]
+
+1. d4 Nf6 2. Bf4 b6 3. e3 Bb7 4. c4 e6 5. Nf3 d5 6. Nc3 Be7 7. Bd3 (7. cxd5 Nxd5 8. Nxd5) 7... O-O 8. cxd5 exd5 9. Qc2 Nbd7 10. O-O c5 11. Ne5 Rc8 12. Rad1 cxd4 13. exd4 Re8 14. Rfe1 (14. Nxd7) 14... Nf8 15. Bf5 Ne6 16. Nxf7 Nxd4 { Black resigns } *
+
+
+[Event "Blitz Tournament: Round 3: Velikanov - Rosen"]
+[Date "2019.12.01"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A07"]
+[Opening "King's Indian Attack, with e6"]
+[StudyName "Blitz Tournament"]
+[ChapterName "Round 3: Velikanov - Rosen"]
+[ChapterURL "https://lichess.org/study/v81vz9Sw/j4vbXTeM"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.12.01"]
+[UTCTime "17:14:31"]
+
+1. Nf3 Nf6 2. g3 d5 3. Bg2 e6 4. O-O Be7 5. d3 O-O 6. Nbd2 b6 7. e4 dxe4 8. Ng5 Bb7 9. Ngxe4 Nxe4 (9... Qc8 10. c3 c5) 10. Nxe4 Qc8 11. c3 c5 12. Qh5 Nd7 13. Bf4 Rd8 14. Rad1 Bxe4 15. dxe4 (15. Bxe4 Nf6) 15... Nf8 *
+
+
+[Event "Blitz Tournament: Round 4: Rosen - Inumerable"]
+[Date "2019.12.01"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "Blitz Tournament"]
+[ChapterName "Round 4: Rosen - Inumerable"]
+[ChapterURL "https://lichess.org/study/v81vz9Sw/QEN5Sq6i"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.12.01"]
+[UTCTime "17:14:43"]
+
+1. d4 Nf6 2. Bf4 e6 3. e3 d5 4. Nd2 Bd6 5. Bg3 c5 6. c3 Nc6 7. Ngf3 O-O 8. Bb5 a6 9. Bxc6 bxc6 10. Qa4 Bb7 11. Bxd6 Qxd6 12. Qa3 Nd7 13. Nb3 a5 14. Nxc5 Nxc5 15. dxc5 Qe7 16. O-O Ba6 17. Rfe1 Rfb8 18. e4 Rb5 19. Nd4 Rb7 20. Nxc6 Qc7 21. exd5 *
+
+
+[Event "Blitz Tournament: Round 4: Inumerable - Rosen"]
+[Date "2019.12.01"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D55"]
+[Opening "Queen's Gambit Declined: Modern Variation, Normal Line"]
+[StudyName "Blitz Tournament"]
+[ChapterName "Round 4: Inumerable - Rosen"]
+[ChapterURL "https://lichess.org/study/v81vz9Sw/GUrekijV"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.12.01"]
+[UTCTime "17:17:15"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Nf3 Be7 5. Bg5 O-O 6. e3 a6 7. Bd3 dxc4 8. Bxc4 b5 9. Bd3 Bb7 10. O-O Nbd7 11. Qc2 c5 12. dxc5 Nxc5 *
+
+
+[Event "Blitz Tournament: Round 5 Li-Rosen"]
+[Date "2019.12.01"]
+[Result "0-1"]
+[Variant "Standard"]
+[ECO "D37"]
+[Opening "Queen's Gambit Declined: Harrwitz Attack, Fianchetto Defense"]
+[StudyName "Blitz Tournament"]
+[ChapterName "Round 5 Li-Rosen"]
+[ChapterURL "https://lichess.org/study/v81vz9Sw/bip26Q5l"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.12.01"]
+[UTCTime "16:41:29"]
+
+1. c4 e6 2. Nc3 d5 3. d4 Nf6 4. Nf3 Be7 5. Bf4 O-O 6. e3 b6 7. cxd5 Nxd5 8. Nxd5 Qxd5 9. Bxc7 (9. a3) (9. Bd3 Ba6 10. Bxc7 Qa5+ 11. Kf1 Rc8 12. Bg3 Nc6 13. a3 Nb4 14. Bxa6 Qxa6+ 15. Kg1 Nd3 16. Qe2 Qc4 17. Rd1 Qc2 18. Qxc2 Rxc2 19. b4 Nb2 20. Ra1 Rac8 21. h4 Nd3 22. h5 a5 23. bxa5 bxa5 24. Ne5 Rc1+ 25. Kh2 Rxh1+ 26. Kxh1 Nxe5 27. Bxe5 f6 28. Bg3 a4 29. Rb1 Bxa3 30. Rb6 Ra8 31. Rxe6 Bb2 32. d5 a3 33. d6 a2 34. d7 a1=Q+) 0-1
+
+
+[Event "Blitz Tournament: Round 5: Rosen-Li"]
+[Date "2019.12.01"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "E12"]
+[Opening "Queen's Indian Defense: Miles Variation"]
+[StudyName "Blitz Tournament"]
+[ChapterName "Round 5: Rosen-Li"]
+[ChapterURL "https://lichess.org/study/v81vz9Sw/eERgO1FW"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.12.01"]
+[UTCTime "16:49:35"]
+
+1. d4 Nf6 2. Bf4 b6 3. c4 e6 4. Nf3 Bb4+ 5. Nfd2 Nh5 6. Bg3 Bb7 7. e3 g6 8. a3 Be7 9. Nc3 d6 10. Qc2 Nd7 11. O-O-O Bf6 12. f3 Nxg3 13. hxg3 d5 14. cxd5 exd5 15. Qb3 c6 16. Kb1 Bg7 17. f4 O-O 18. g4 c5 19. Nf3 cxd4 20. exd4 Nf6 21. Ne5 *
+
+
+[Event "London Chess Classic"]
+[Site "London ENG"]
+[Date "2018.12.13"]
+[Round "1.4"]
+[White "Fabiano Caruana"]
+[Black "Hikaru Nakamura"]
+[Result "0-1"]
+[WhiteElo "2832"]
+[BlackElo "2746"]
+[Variant "Standard"]
+[ECO "D37"]
+[Opening "Queen's Gambit Declined: Harrwitz Attack, Fianchetto Defense"]
+[StudyName "Blitz Tournament"]
+[ChapterName "Fabiano Caruana - Hikaru Nakamura"]
+[ChapterURL "https://lichess.org/study/v81vz9Sw/HGGNLqbz"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 Nf6 2. c4 e6 3. Nf3 d5 4. Nc3 Be7 5. Bf4 O-O 6. e3 b6 7. cxd5 Nxd5 8. Nxd5 Qxd5 9. Bd3 Qa5+ 10. Kf1 Ba6 11. Bxc7 Bxd3+ 12. Qxd3 Na6 13. Bg3 Nb4 14. Qe2 Rfc8 15. a3 Qa4 16. Kg1 Na2 17. h3 Nc1 18. Qf1 Qc2 19. Kh2 Ne2 20. Be5 Qxb2 21. d5 Nc3 22. dxe6 fxe6 23. Rd1 Qxa3 24. Rd7 Nd5 25. Nd4 Bf6 26. Bg3 Bxd4 27. exd4 Qa4 28. Rd6 Rc6 29. Rd7 Rcc8 30. Rd6 Qe8 31. Qa6 Rc6 32. Ra1 Rxd6 33. Bxd6 Qd7 34. Be5 Nb4 35. Qe2 Nc6 36. Bg3 Qd5 37. Qa6 Nxd4 38. Rc1 Nf5 39. Rc8+ Rxc8 40. Qxc8+ Kf7 41. Qc7+ Kf6 42. Bf4 e5 43. Bc1 h6 44. Bb2 Qc5 45. Qb8 a5 46. f4 Kg6 47. Bxe5 Qc6 48. Qa7 h5 49. h4 a4 50. Qa6 Kh7 51. Qd3 Qg6 52. g3 Nh6 53. Qc4 Ng4+ 54. Kh3 Qb1 { 0-1 White resigns. } 0-1
+
+

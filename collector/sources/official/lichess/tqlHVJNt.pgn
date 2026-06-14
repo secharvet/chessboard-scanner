@@ -1,0 +1,56 @@
+[Event "Strategy: Calentamiento"]
+[Date "2023.04.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Strategy"]
+[ChapterName "Calentamiento"]
+[ChapterURL "https://lichess.org/study/tqlHVJNt/e3QSPZCZ"]
+[Annotator "https://lichess.org/@/EstudiosAjedrez"]
+[FEN "r5k1/7p/2pP2pP/1p6/1q3B2/1p2Q1P1/1P6/rNK1R2R b - - 1 31"]
+[SetUp "1"]
+[UTCDate "2023.04.28"]
+[UTCTime "20:38:41"]
+[ChapterMode "gamebook"]
+
+{ [%csl Gb1,Gf6,Gc3][%cal Ga1b1] }
+31... Rxb1+ { Bien hecho, es una secuencia forzada. } 32. Kxb1 Ra1+ (32... Qa4 { [%csl Ga1][%cal Ga4a1] } 33. Qe6+ Kf8 (33... Kh8 34. Qf6+ Kg8 35. Qg7#) 34. Qe7+ Kg8 35. Qf7+ (35. Qg7#)) 33. Kxa1 { [%csl Ga1,Gb4] } 33... Qa4+ 34. Kb1 Qa2+ 35. Kc1 Qa1+ 36. Kd2 Qxb2+ { [%csl Gc2][%cal Ga2c2] } 37. Kd3 Qc2+ 38. Kd4 Qc4+ 39. Ke5 Qd5+ 40. Kf6 Qf7+ 41. Ke5 Qf5+ 42. Kd4 c5+ 43. Kc3 Qc2# *
+
+
+[Event "Strategy: Ataque a la descubierta - Molino"]
+[Date "2023.04.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Strategy"]
+[ChapterName "Ataque a la descubierta - Molino"]
+[ChapterURL "https://lichess.org/study/tqlHVJNt/wlmTGwJE"]
+[Annotator "https://lichess.org/@/EstudiosAjedrez"]
+[FEN "3n3r/2p3k1/1pbbpRpp/6r1/3P4/2PBQ2P/q5P1/5RK1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2023.04.28"]
+[UTCTime "21:06:04"]
+[ChapterMode "gamebook"]
+
+1. Qxg5 hxg5 2. Rxg6+ Kh7 3. Rxe6+ Kg8 4. Rg6+ Kh7 5. Rxd6+ Kg7 6. Rg6+ Kh7 7. Rxc6+ Kg8 8. Rg6+ Kh7 9. Rxb6+ Kg7 10. Rg6+ Kh7 11. Ra6+ Kg7 12. Rxa2 *
+
+
+[Event "Strategy: Fisher-Larsen 1958"]
+[Date "2023.04.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B77"]
+[Opening "Sicilian Defense: Dragon Variation, Yugoslav Attack, Czerniak Variation"]
+[StudyName "Strategy"]
+[ChapterName "Fisher-Larsen 1958"]
+[ChapterURL "https://lichess.org/study/tqlHVJNt/atVMEM2N"]
+[Annotator "https://lichess.org/@/EstudiosAjedrez"]
+[UTCDate "2023.04.28"]
+[UTCTime "17:35:41"]
+
+{ [%csl Ge4,Gf5,Gh1,Gg2][%cal Ge2e4,Ge4d5,Ge4f5,Gf1b5] }
+1. e4 c5 { [%csl Gd4][%cal Gc5d4] } 2. Nf3 d6 { [%csl Gd6][%cal Gd7d6] } 3. d4 { Defensa Siciliana } 3... cxd4 4. Nxd4 { [%csl Gd4][%cal Gf3d4] } 4... Nf6 { [%csl Ge4][%cal Gf6e4] } 5. Nc3 { Como las piezas negras podrían enrocarse para empezar su ataque } { [%csl Ge7][%cal Gd6e7] } 5... g6! { Buena jugada, Blancas: Como podríamos atacar ese fianchetto? } (5... a6 { [%csl Ga6][%cal Ga7a6] }) 6. Be3 { [%csl Gg4] } 6... Bg7 { Como evitamos Cg4? } { [%csl Gh3,Gf3][%cal Gh2h3,Gf2f3] } (6... Ng4? { [%csl Gg4][%cal Gc8g4,Gd1g4] } 7. Bb5+! { [%cal Gc8d7] } (7. Qd2 Nxe3 8. Qxe3 Bg7 { [%cal Gg7b2] }) 7... Bd7 (7... Nc6 8. Nxc6 { [%cal Gb7c6] } 8... bxc6 9. Bxc6+ { [%csl Ga8,Ge8] }) 8. Qxg4 { [%cal Gd7g4,Gb5e8] }) 7. f3 { [%csl Rg4,Ge4][%cal Rf6g4,Gf3e4] } (7. a3 Ng4 8. Bb5+ Kf8 { [%csl Ge3,Gg7,Gd5,Gd4][%cal Gg7d4] }) 7... O-O 8. Qd2 { [%csl Gh6,Gg7][%cal Gd2h6,Ge1c1,Gc1e1] } 8... Nc6 { Que hacemos aqui? 0-0-0 o Ac4 } { [%csl Gc1,Gd1,Gc4,Gf1][%cal Ge1c1,Ga1d1,Gf1c4] } 9. Bc4 { [%csl Gd7,Ga5,Gd5][%cal Gc8d7,Gd8a5] } (9. O-O-O { [%csl Gd5][%cal Gd6d5] } 9... d5! { [%csl Gb2][%cal Gf6d5,Gg7b2] }) 9... Nxd4 { Con que Capturamos? } { [%csl Gd4,Gg7][%cal Ge3d4] } 10. Bxd4 { [%csl Gc4,Gd4] } (10. Qxd4? { [%csl Rd4] } 10... Ng4! { [%csl Rd4,Re3,Gd3][%cal Gg4e3,Gg7d4] } 11. Qd3 Nxe3 12. Qxe3 { [%csl Gg7,Ga1][%cal Ge3h6,Gg7a1] }) 10... Be6 { Axe6 o Ab3? } { [%csl Gb3][%cal Ge6c4,Gc4e6,Gc4b3] } 11. Bb3 { Es mas seguro } { [%csl Gb3][%cal Gc2b3] } (11. Bxe6 fxe6 { Consigue un centro solido. } { [%csl Ge6,Gd6,Gc2,Ge7][%cal Ga8c8,Gc8c2] }) 11... Qa5 (11... Bxb3) 12. O-O-O { Como podemos empezar un ataque? } 12... b5! 13. Kb1 { [%csl Gb1,Rc1,Gc8,Gb4][%cal Gc8c1,Gb5b4,Gc3e2,Gc3b5,Gc3a4,Gc3d5,Gf8c8,Gc8c2] } 13... b4 { Cd5 o Ce2? } { [%csl Ge2,Gd5][%cal Gc3e2,Gc3d5] } 14. Nd5 { Con que pieza capturamos el caballo?? } { [%csl Gd5,Gg7][%cal Gf6d5] } (14. Ne2) 14... Bxd5 (14... Nxd5 { [%cal Gd4g7] } 15. Bxg7 Kxg7 16. exd5 Bd7 { [%csl Gd4][%cal Gg2g5,Gh2h4,Gd2d5,Gh6f8,Gf6h8] }) 15. Bxd5 Rac8 { Con qué jugada podemos defendernos de forma solida con blancas? } { [%csl Gc2][%cal Gc8c2] } 16. Bb3! { [%csl Gc2,Ga2,Gf6,Gg7][%cal Gb3c2,Gb3a2,Gd4g7] } 16... Rc7 17. h4 Qb5 18. h5 Rfc8 19. hxg6 hxg6 20. g4 a5 21. g5 Nh5 22. Rxh5 gxh5 23. g6 e5 { [%csl Rf7] } 24. gxf7+ { [%cal Gc7f7,Gb3f7] } 24... Kf8 25. Be3 { [%csl Ge5] } 25... d5 26. exd5 Rxf7 27. d6 Rf6 { [%cal Gd2d8] } 28. Bg5 Qb7 29. Bxf6 Bxf6 30. d7 Rd8 31. Qd6+ { [%csl Gd6] } (31. Qh6+ Bg7 (31... Ke7 32. Qh7+ Bg7 33. Qxg7#) 32. Qd6#) *
+
+

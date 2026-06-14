@@ -1,0 +1,36 @@
+[Event "Opening Principles: Chapter 1"]
+[Date "2025.07.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Opening Principles"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/QMahfUb0/ZBU57qL7"]
+[Annotator "https://lichess.org/@/ghostfaceny3"]
+[FEN "r1bqkb1r/ppp2ppp/2n2n2/3pp3/2B1P3/3P1N2/PPP2PPP/RNBQK2R w KQkq - 0 5"]
+[SetUp "1"]
+[UTCDate "2025.07.11"]
+[UTCTime "16:15:56"]
+
+5. exd5 Nxd5 6. O-O Bg4 7. h3 Bxf3 8. Qxf3 Nf6 9. Re1 Bd6 10. Bb5 O-O 11. Bxc6 bxc6 12. Qxc6 *
+
+
+[Event "Opening Principles: Tempo on Queen"]
+[Date "2025.07.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Opening Principles"]
+[ChapterName "Tempo on Queen"]
+[ChapterURL "https://lichess.org/study/QMahfUb0/gYxvMZIs"]
+[Annotator "https://lichess.org/@/ghostfaceny3"]
+[FEN "r1b1kb1r/ppp2ppp/2n5/3qp3/8/3P1N2/PPP2PPP/RNBQK2R w KQkq - 0 7"]
+[SetUp "1"]
+[UTCDate "2025.07.11"]
+[UTCTime "16:25:38"]
+
+7. Nc3 Qd6 (7... Qd8) 8. O-O Bg4 9. h3 Bxf3 10. Qxf3 Qe6 11. Qd5 Qxd5 12. Nxd5 O-O-O *
+
+

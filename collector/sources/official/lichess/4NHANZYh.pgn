@@ -1,0 +1,19 @@
+[Event "Flashcards: Chapter 1"]
+[Date "2025.10.22"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Flashcards"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/4NHANZYh/9lhEESPu"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[FEN "rn1r2k1/1b2bppp/pqp1pn2/1p2N3/3PPB2/1QN3P1/P4PBP/R2R2K1 w - - 3 14"]
+[SetUp "1"]
+[UTCDate "2025.10.22"]
+[UTCTime "20:19:06"]
+[ChapterMode "gamebook"]
+
+14. d5 *
+
+

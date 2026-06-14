@@ -1,0 +1,560 @@
+[Event "strategy: creating a plan 1"]
+[Date "2021.08.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "strategy"]
+[ChapterName "creating a plan 1"]
+[ChapterURL "https://lichess.org/study/CPQpMKcx/GxQiP1Vq"]
+[Annotator "https://lichess.org/@/pawnsacrifice97"]
+[FEN "r3r1k1/1b2qpp1/p2p3p/1ppPn3/4P3/P1N3P1/1PQ2PP1/3RRBK1 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2021.08.08"]
+[UTCTime "08:59:17"]
+
+{ Black has a comfortable position thanks to
+White's doubled g-pawns. If the g3-pawn were
+on h2, then White could play f4, meeting ... Ng4
+with h3, after which a central breakthrough by
+e5 would be possible. As it is, f4 is well met by
+... Ng4, since it would then be hard to dislodge
+the knight from g4. Nevertheless, Black must
+find a way to improve his position. The first step
+is always to see what your opponent is intending.
+Here, given a couple of tempi, White will play
+Be2 followed by f4 and Bf3, greatly improving
+his position. Black must take action against this
+plan and he does so by taking the initiative himself on the kingside. }
+1... h5! 2. Qd2 (2. Be2 h4 3. f4? hxg3! 4. fxe5 Qh4 5. Bf3 Rxe5 { with two pawns and
+a dangerous attack for the piece (the immediate
+threat is ... g5-g4). It often happens that the execution of a strategic plan depends on a tactical
+point. } { [%cal Gg7g5,Gg5g4] }) 2... h4 3. Qf4 { White intends to meet ... hxg3 by Qxg3, when
+f4 will again be possible. However, the position
+of the queen gives Black the chance to hold up
+f4 more or less permanently } 3... g5! 4. Qe3 hxg3 5. Qxg3 Qf6 { The prospects for playing f4 become more
+and more distant, especially as Black can play
+... Ng6. The only real downside to Black's plan
+is that it weakens f5, but a knight arriving there (which can only happen after several preparatory moves) can be exchanged by ... Bc8 and
+...Bxf5 } 6. Re3 { Given time, White will play Be2, Rf1 and
+again f4. Up to now, Black's play has been defensive, but now he has the chance to take the
+initiative himself. } 6... Kf8 { The plan is to move the king to e7 or d7 and
+bring the rooks to the kingside, again preventing f4 and starting a kingside attack of his own. } 7. b4 c4 8. Ne2 { heading for f5 } (8. a4 { this move is met with } 8... g4 9. axb5 Ke7 10. bxa6 Bxa6 11. b5 Bc8 { foloowed by ...Rh8 and the black with a decisive attack }) 8... Ke7 9. Nd4 Rh8 10. Nf5+ Kd7 11. Rc3 Kc7 12. Qe3 Bc8 { [%csl Gf5][%cal Gc8f5] } 13. f3? (13. Ng3 { is the only chance. although Black
+keeps a large advantage after } 13... g4 14. Rdc1 Qh4 15. Bd3 Bd7 16. Bc2 Ng6 { [%csl Gh4,Gg2][%cal Gh4h2,Gg6h4,Gh4g2] }) 13... Bxf5 14. exf5 Qxf5 15. Rd4 Qb1 { Black makes things unnecessarily tricky.
+Simply } (15... Qh7 16. Qxg5 f5 17. Kf2 Rag8 18. Qe3 Qg7 { gives him winning attack }) 16. Qxg5 Rag8 17. Qe7+ Kc8 18. Rd2?? Rh1+ 19. Kxh1 Qxf1+ 20. Kh2 Rh8+ 21. Kg3 Qe1+ 22. Rf2 Rg8+ { and it's mate in few moves } *
+
+
+[Event "strategy: When You Can't Think of a Plan 2"]
+[Date "2021.08.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "strategy"]
+[ChapterName "When You Can't Think of a Plan 2"]
+[ChapterURL "https://lichess.org/study/CPQpMKcx/M4zzpxAN"]
+[Annotator "https://lichess.org/@/pawnsacrifice97"]
+[FEN "r3rb1k/1R4pp/3q1p2/2pn4/p2p4/P2P1NP1/Q1R1PPKP/B7 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2021.08.14"]
+[UTCTime "00:41:26"]
+
+{ Assessing this position is not easy, and the
+grandmasters watching the game had sharply
+diverging opinions about its evaluation. The
+most notable feature is the buried bishop on
+a1, which is doing little at the moment. Balanced against this, Black's own bishop isn't
+exactly bursting with activity, while White's
+other pieces are all well placed. On balance,
+the position is roughly level, but some GMs
+thought that the position should favours Black,
+since there's no obvious solution to the problem of the a1-bishop }
+1... g5? { Except if Black creates one! This is a good
+example of the disastrous consequences of
+playing actively when the position isn't strong
+enough to support it. Black hopes to play ... g4,
+chasing away the knight, and then ... Qc6, but
+the line-up of the a1-bishop and the king on h8
+should have rung a warning bell.
+Black should continue more modestly by Reb8 } (1... Reb8 { aiming to exchange or displace the
+active rook on b7. } 2. Qb1 (2. Rcb2 Rxb7 3. Rxb7 Qc6 { also possible }) 2... Rxb7 3. Qxb7 Rb8 4. Qa7 Rb1 5. Bb2 Qe6 6. h3 Nb6) 2. e4 { white doesn't miss the chance to exploit the
+weakening of the long diagonal. } { [%csl Gh8,Gf6,Gb2,Gc3,Gd4,Ge5,Gg7,Ga1] } 2... dxe3 { en passant is the best choice } (2... Ne7? { allows the
+attractive finish } 3. Rxc5!! Qxc5 4. Bxd4 Qc6 5. Nxg5! Qxb7 6. Bxf6+ Bg7 7. Bxg7+ Kxg7 8. Qf7+ Kh6 9. Qxh7+ Kxg5 10. Qg7+ Ng6 11. f4+ Kh5 12. g4+ Kxg4 13. Qxg6+ Kxf4 14. Qg3#) (2... Re7?! 3. Qb1 Rae8 { Black sets
+the trap for exd5? } { [%csl Gc5][%cal Gb7b5,Gc2c5,Gb5c5] } 4. exd5?? g4 5. Rxe7 gxf3+ 6. Kxf3 Rxe7) 3. Nxg5 Kg8? { Black should play Nf4+ } (3... Nf4+ 4. Kg1 (4. gxf4 Qc6+ 5. Kg3 Qxb7 6. Bxf6+ Bg7 7. Nf7+ Kg8 8. Nd6+ Qb3 9. Nxe8 Rxe8 10. Bxg7 Qxa2 11. Rxa2 Kxg7 { this position is deadly draw }) 4... exf2+ 5. Rxf2 Re1+ 6. Rf1 Rxf1+ 7. Kxf1 Qxd3+ 8. Kf2 Qd5 9. Qxd5 Nxd5 { when he still has good drawing chances. }) 4. Ne4? { Missing the instantly decisive Rb6 } (4. Rb6 Qxb6 5. Qxd5+ Kh8 6. Rb2 Qa6 7. Rb7 Re7 8. Rxe7 Bxe7 9. Qe4 { [%csl Gh7,Gf7][%cal Ge4h7,Gh7f7] }) 4... Qe6 5. Rd7?! { White can reach a very favourable ending by } { [%cal Gc5c4,Gd3c4,Ge6d7,Ge4f6,Gd5f6] } (5. Bxf6 exf2 6. Rxf2 Ne3+ 7. Kf3 Qxa2 8. Rxa2 Nd5 9. Bg5) 5... Rad8? { This loses at once. The only move is ...c4
+White retains an advantage due
+to the activity of his bishop on the long diagonal, but Black can still hope to defend. } (5... c4! { to block the queen from d5 square } { [%csl Gd5][%cal Gc2c4,Ga2d5] } 6. Rxc4 Be7 7. Rb7 Rab8 8. Rxb8 Rxb8 9. Qe2) 6. Rxd5 Qxd5 7. Qxd5+ Rxd5 8. Nxf6+ Kf7 9. Nxd5 e2 10. Bc3 e1=Q 11. Bxe1 Rxe1 12. Nc3 Ra1 13. Nxa4 Rxa3 14. Nxc5 { 1-0 } *
+
+
+[Event "strategy: creating a plan 2"]
+[Date "2021.08.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "strategy"]
+[ChapterName "creating a plan 2"]
+[ChapterURL "https://lichess.org/study/CPQpMKcx/vuu5sEb1"]
+[Annotator "https://lichess.org/@/pawnsacrifice97"]
+[FEN "r2q1rk1/p2n1pbp/b2p1np1/1ppP4/8/P1N2NP1/1PQ1PPBP/R1B1R1K1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2021.08.08"]
+[UTCTime "10:00:05"]
+
+{ There are_ various ways of creating a plan,
+but one of the most common is by analogy. A
+knowledge of the plans available in similar positions may suggest one which can be transferred to the situation on the board. Often the
+key factor is the pawn-structure; if this is similar to or the same as a known position, it may
+well be possible to adapt a plan.
+This position arose from a Queen's Indian,
+but the pawn-structure is the same as in the
+Modem Benoni. White has a central pawn majority, and his main plan is based on playing
+e4-eS. This may be reinforced by pieces, for example by Bf4, or it may be supported with f4.
+Black must try to keep control of e5 to prevent
+White's advance. At this stage the chances are
+roughly balanced. } { [%csl Ge5][%cal Ge2e4,Ge4e5] }
+1. e4 Ng4 (1... Qb6 { [%cal Gb5b4] } 2. h3 { [%csl Gg4][%cal Gf6g4,Gh3g4] } 2... Rac8 3. Be3 Qb7 4. Bf1! { favours White. He has prevented ... b4 while
+Black must worry about Bf4 or a4. }) 2. h3 { A perfectly natural plan, which allows White
+to force through f4 as support for an eventual eS. } 2... Nge5 3. Nxe5 Nxe5 4. f4 Nd7?! { Although this retains control of e5, the
+knight is not actively placed on d7. } (4... Nc4 { is
+better, as White cannot play
+The knight on c4
+makes it hard for White to develop his c 1-
+bishop, so he should probably go in for 5 e5 } 5. b3?? { The knight on c4
+makes it hard for White to develop his c 1-
+bishop, so he should probably go in for 5 e5 } (5. e5 dxe5 6. b3 Nd6 7. fxe5 Re8 8. Bf4 g5 { the position is totally unclear. }) 5... Bd4+ 6. Kh2 Qa5 { win for bkack }) 5. Be3 { With the knight on d7, White has no trouble
+completing his development. } 5... Rc8 6. Kh2 { White keeps his rook on al for the moment,
+thereby preventing ... b4 due to the unprotected
+bishop on a6. The bishop is not usually placed
+here in the analogous line of the Modem Benoni,
+and White takes advantage of this factor to hold
+up Black's queenside play. Analogies are never
+perfect and it's important to check the impact of
+any differences. } 6... h5? { The natural 6... Re8 is much better. After
+the move played, White can again find the correct plan by analogy with the Modem Benoni.
+In lines of the Benoni involving f4, White often sacrifices a pawn by means of e5, meeting
+...dxe5 with f5. The same idea is very effective
+here; White clears e4 for his pieces, creates a
+passed d-pawn and blocks in the g7-bishop.
+Note that 6... h5? then proves a serious weakening of Black's kingside, since after White plays
+fS he will already be threatening to take on g6. } 7. e5 dxe5 8. f5 Qb6 9. Qf2?! { missing d6 } (9. d6 Qxd6 10. Rad1 Qe7 11. fxg6 { with a winning attack; for example } 11... Nf6 12. Nd5 Nxd5 13. Bxd5 { and f7 collapses. }) 9... Qf6 10. Ne4 Qxf5 11. Qe2 Nb6 12. Nxc5 Rxc5 13. Bxc5 Rd8 14. Rad1 Nc4?! { Qd7 offers more resistance. } 15. Be7 Re8 16. d6 Bc8 17. b3 Nb6 18. Qxb5 Bd7 19. Qf1 Qe6 20. a4 a5 21. b4 axb4 22. a5 Na4 23. Bd5 Qf5 24. Qg2 Rc8 25. Rf1 Qc2 26. Rd2 Qc3 27. Rxf7 Kh8 28. Bg5 Nc5 29. Rc2 { 1-0 } *
+
+
+[Event "strategy: When You Can't Think of a Plan"]
+[Date "2021.08.13"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "strategy"]
+[ChapterName "When You Can't Think of a Plan"]
+[ChapterURL "https://lichess.org/study/CPQpMKcx/sPY1zEXz"]
+[Annotator "https://lichess.org/@/pawnsacrifice97"]
+[FEN "r4r2/pp1b1pbk/2n1pnpp/q2pN3/3P1B2/P1N3P1/1P1QPPBP/R2R2K1 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2021.08.13"]
+[UTCTime "22:05:32"]
+
+{ This is an important topic because every player
+sometimes experiences the problem of staring
+at the board and being unable to come up with
+an appealing plan. The results are indecision,
+time-trouble and choosing moves that are often
+worse than simply waiting.
+A common cause of difficulty in finding a
+plan is misevaluation of the position. You may
+feel that you have the advantage, but can't see
+any way to increase it or put it to use. The problem here may be that you are not in fact better,
+and should scale down your expectations accordingly. Instead of looking for a large advantage, try to find a way to maintain an edge.
+Failing all else, at least make sure that you do not
+play a move that leads to a disadvantage. This
+problem often arises because a few moves ago
+you were definitely better, but now you cannot
+see a good plan. It's often tough to admit to yourself that you may have thrown away part or all
+of your advantage, but unless you're objective
+about the position, further mistakes are likely.
+Players who prefer active play often react
+badly to passive positions since they tend to
+look for a plan that improves their own position. However, in unfavourable positions it is
+often the case that any attempt at active play
+only weakens your position. Then it's important
+to see what your opponent might do to improve
+his position and find a plan to counteract it.
+Here's an example. }
+ *
+
+
+[Event "strategy: central pawns"]
+[Date "2021.08.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "strategy"]
+[ChapterName "central pawns"]
+[ChapterURL "https://lichess.org/study/CPQpMKcx/8G7dn9lZ"]
+[Annotator "https://lichess.org/@/pawnsacrifice97"]
+[FEN "r2r2k1/p1q1npbp/n1p3p1/1p2p3/3PP1b1/2P2NP1/P1N1QPBP/R1B1R1K1 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2021.08.14"]
+[UTCTime "12:33:43"]
+
+{ In the middlegame, a central pawn is generally more effective than a flank pawn. Here
+White has an advantage thanks to his extra central pawn and Black's poorly-placed a6-knight,
+which has few active prospects. }
+1... exd4 2. cxd4 { Black gives up his foothold in the centre in
+the hope that his pressure on the long dark diagonal will enable him to break up White's pawn
+duo on d4 and e4. } 2... c5 3. Bf4 Qd7 4. d5! { This refutes Black's idea. White intends to
+keep his central pawns even at the cost of the exchange. If Black takes on aI, he will not only
+have to cope with White's pawns, but in addition
+his kingside will be exposed } 4... c4 { Black hopes to activate his a6-knight by Nc5-d3 } { [%cal Ga6c5,Gc5d3] } (4... Bxa1 5. Rxa1 c4 6. d6 Nc6 7. a4 bxa4 8. Qxc4 Bxf3 9. Bxf3 g5 10. Bxg5 Ne5 11. Qe2 Nc5 12. Be7 { with a clear advantage for White. }) 5. Qe3 { An excellent response, not only unpinning
+the f3-knight and thereby threatening Ne5,
+but also preventing Black's ...Nc5 idea. } 5... Bxf3 { Black is forced to make this exchange to stop
+Ne5, but now he faces new problems on the
+long light diagonal. } 6. Bxf3 b4?! { Black's queens ide pawns are far less effective than White's central pawn-mass. Central
+pawns are better because they are more likely
+to attack enemy pieces as they advance, and
+because the advance of central pawns very often leads to an attack on the enemy king } (6... Bxa1 7. Rxa1 f6 8. Qc3 Rf8 9. Qa3 Qb7 10. Rb1 { White's numerous advantages
+(two bishops, passed d-pawn, knight penetrating to d4 and then c6 or e6) are worth far more
+than Black's extra exchange. }) 7. Rab1 { Avoiding the bishop's attack, and gaining
+time by threatening the b4-pawn. } 7... Qa4 8. Nd4 Nc5 { The knight finally escapes from a6, but it's
+too late as White's central pawns are ready to
+advance. } 9. d6 Nd3 10. e5 { This multi-purpose move blocks the long
+dark-square diagonal and so threatens to take
+on e7, and also opens the f3-bishop's diagonal
+to attack the rook on as. } 10... Nxe1 11. Rxe1 { Black is temporarily the exchange up, but the
+central pawns give White a winning position. } 11... Nf5 12. Nxf5 gxf5 13. Bxa8 Rxa8 14. e6 { A devastating move; Black cannot take, since
+... fxe6 29 Qxe6+ Kh8 30 d7 followed by
+Qe8+ leads to a forced mate, so the pawns roll
+on unopposed. } { [%csl Ge6][%cal Gf7e6,Ge3e6,Gg8h8,Gd6d7] } *
+
+
+[Event "strategy: When You Can't Think of a Plan"]
+[Date "2021.08.13"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "strategy"]
+[ChapterName "When You Can't Think of a Plan"]
+[ChapterURL "https://lichess.org/study/CPQpMKcx/pE3Kbt8P"]
+[Annotator "https://lichess.org/@/pawnsacrifice97"]
+[FEN "r4r2/pp1b1pbk/2n1pnpp/q2pN3/3P1B2/P1N3P1/1P1QPPBP/R2R2K1 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2021.08.13"]
+[UTCTime "22:16:39"]
+
+{ White is slightly better here because all his
+minor pieces are in reasonable positions, while
+the d7 -bishop is blocked in by the pawns on e6
+and d5. However, Black's position is very solid
+and he is certainly not under much immediate
+pressure. It doesn't take long to see that Black
+cannot undertake anything active himself, so the
+question then is what White can hope to achieve.
+The first point to note is that White has an
+immediate tactical threat of Nxc6 followed by
+lLlxd5, exploiting the undefended black queen
+to win a pawn. The solution to this immediate
+problem is to exchange on e5 and then withdraw the queen.
+In the longer tenn, White's main plan involves opening the position and activating the
+g2-bishop by playing e4. This, however, involves some risk since it gives White an isolated d-pawn. The easiest way to counter this is
+to have Black's light-squared bishop free to
+move to c6, ready to oppose bishops on the long
+diagonal. This again points to the exchange on
+e5 as being the right decision. Thereafter Black's
+plan is to exchange pieces, develop his rooks
+and prevent White from playing e4 under favourable circumstances. This is of course a
+negative plan, seeking only to nullify White's
+ambitions, but you have to play the position on
+the board. If this gives no scope for active play
+then it's unwise to force matters. }
+1... Nxe5 2. Bxe5 (2. dxe5 Ng4 { white's e5 pawn is weak }) 2... Qb6 3. Rac1 Rac8 4. e3 { White's only chance for active play is e4 } (4. e4 { but after } 4... Nxe4 5. Nxe4 dxe4 6. Bxe4 Ba4 7. Re1 f6 8. Bf4 f5 9. Bf3 Bxd4 10. Bxh6 Rxc1 11. Rxc1 Bxf2+ 12. Qxf2 Qxf2+ 13. Kxf2 Kxh6 { black is fine }) 4... Rfd8 5. Bf1 Ne8 6. Bxg7 { 1/2-1/2 } *
+
+
+[Event "strategy: central pawns 2"]
+[Date "2021.12.05"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "strategy"]
+[ChapterName "central pawns 2"]
+[ChapterURL "https://lichess.org/study/CPQpMKcx/ZsgIF1rs"]
+[Annotator "https://lichess.org/@/pawnsacrifice97"]
+[FEN "r4rk1/1pp1q2p/pnn1bpp1/8/4P3/1PN1QN1P/P3BPP1/2R2RK1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2021.12.05"]
+[UTCTime "14:06:35"]
+
+{ Even a single extra central pawn can confer
+an advantage, although this may be slight.
+Here the position is close to equality, but White
+retains an edge thanks to his e-pawn. It's posªsible that Black's queenside pawns would play
+a significant role in the endgame, but in the
+middlegame White's central majority is a more
+important factor, not only because it offers
+more influence and space in the centre, but
+also because it could provide the foundation
+for an attack against Black's slightly weakened kingside }
+1. Rfe1 Rad8 2. Bf1 { White envisages moving his knight from f3
+and starting an attack by pushing his f-pawn;
+this modest move(Bf1) removes the bishop from attack after a possible ... Nd4. } 2... Bf7 3. Nh2 { If White is given time, a combination of Ng4
+and f4-f5 would generate real kingside threats. } { [%cal Gh2g4,Gf2f4,Gf4f5] } 3... Be6 { Black's bishop returns to e6, ready to take
+the knight if it jumps to g4. The problem is that
+if White manages to force through f4-f5, the
+bishop will have to move again, costing time } 4. f4 Nd4? { A serious error, allowing White to play f5
+without a fight. From a purely visual perspective, the knight looks actively placed on d4, but
+in fact it achieves little there and is unable to
+join in the defence of the threatened kingside. } (4... Rfe8 { this move is far more purposeful, preventing f5,
+at least for the moment, since } 5. f5? { simply
+loses a pawn after } 5... Bxf5 { [%csl Ge3][%cal Ge7e3] }) 5. f5 Bf7 (5... gxf5?? 6. exf5 { black loses a piece } { [%csl Ge7][%cal Ge3e7,Gf5e6] }) 6. Ng4 gxf5 { This is obviously risky, but Black didn't have
+a better move. White threatened to step up the
+pressure by Qh6, when a breakthrough by e5
+would be in the air. Thanks to the bad position
+of the knight on d4, Black no longer has the
+possibility of ... Ne5 to swap off White's dangerous g4-knight. } (6... Nc6 7. Ne2 Ne5 8. Nh6+ Kg7 9. Nxf7 Kxf7 10. Nf4 { Black suffers from the terrible weakness of the e6-square } { [%csl Ge6] }) 7. Nh6+ Kh8 (7... Kg7 8. Qxd4 Kxh6 9. exf5 Rxd4 10. Rxe7 Rd7 11. Rxd7 Nxd7 12. Ne4 { gives White
+a very favourable ending. }) 8. Qf2 fxe4?? { A blunder losing at once } 9. Rxe4 Qd6 10. Rd1 c5 11. Nxf7+ Rxf7 12. b4 f5 13. bxc5 fxe4 14. Qxf7 Nf3+ 15. Qxf3 exf3 16. cxd6 { 1-0 } *
+
+
+[Event "strategy: improving peace position"]
+[Date "2021.12.09"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "strategy"]
+[ChapterName "improving peace position"]
+[ChapterURL "https://lichess.org/study/CPQpMKcx/Hh0FVVt8"]
+[Annotator "https://lichess.org/@/pawnsacrifice97"]
+[FEN "r1qn2k1/3bb2p/r2p1pp1/pp1Pp3/1Pp1P3/P1P4P/1BB1QPPK/R3RN2 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2021.12.09"]
+[UTCTime "14:21:55"]
+
+{ Many plans involve improving the activity of
+a single piece. This position is close to equality,
+with Black's main asset being his pressure along
+the a-file. White always wants to meet ... axb4
+with axb4 because playing cxb4 would leave
+White with a backward a-pawn and Black with a
+protected passed c-pawn. Thus the a-file pressure prevents White from activating his b2-
+bishop by Bc1-e3, since Bcl would be met by
+... axb4. Although White's movements are a little
+restricted, he isn't under any real pressure, so
+Black must find a plan to improve his position. A
+good start is to look for a piece that isn't doing
+much and see if it can be moved to a more active
+square. Here both the d8-knight and the e7-
+bishop aren't pulling their weight, so Black focuses on transferring them to better squares.
+Playing ... Bf8-h6 is a perfectly reasonable idea,
+but Black decides on the equally good plan of
+... Nf7 followed by ... Bd8-b6. }
+1... Nf7 2. Ne3?! { Here and over the next few moves, White
+adopts the wrong plan. He aims for kingside
+play based on f4, but it's hard for this to achieve
+anything when Black has a firm grip on e5 } (2. bxa5 Rxa5 3. Ne3 { is correct, aiming for a4 and
+the liquidation of the pawns on the a- and b-files.
+In this case, Black's a-file pressure is nullified
+and an exchange of all the rooks is very likely. }) 2... Bd8 3. Rf1 Bb6 4. Rae1 { [%cal Gf2f4,Gg2g4,Gg4g5,Gf4f5] } 4... Kg7 5. Bb1 axb4 6. axb4 { White has conceded the a-file, so Black may
+as well swap pawns. Although he cannot penetrate with a rook at the moment, White's bishops are tied down to covering al and a2. } 6... Qe8 { To meet f4 with ... exf4 Rxf4 Qe5. } 7. g3?! { Preparing f4, but weakening the h3-pawn. } 7... Qc8! { Forcing an awkward decision. } 8. g4?! { After this White is in real trouble. h4 is
+better, although after ... h5 followed by ... Nh6
+White will be in no position to play f4 due to the
+resulting weakness of g4. } 8... Bxe3 { Black's plan has succeeded: his bad bishop
+from e7 is exchanged for an active white knight. } 9. fxe3 { [%csl Gf4][%cal Ge3f4] } (9. Qxe3 { is met by another plan based on improving the position of a piece: } 9... g5 { ... g5 followed by ... Nh8-g6-f4 and eventually ... h5. } { [%csl Gf4][%cal Gf7h8,Gh8g6,Gg6f4,Gh7h5] }) 9... Qd8 10. Rf3 Qe7 11. Ref1 Rf8 12. Qg2 { Now ... h5! gives Black a decisive advantage in all lines: } 12... Raa8?! { retaining an edge which he eventually converted into a
+win } (12... h5 13. Rg3 (13. gxh5 Ng5 14. Rg3 Rh8 15. Rh1 Rxh5 16. Kg1 Rh4 17. Kf1 Ra8 18. Ke1 Rah8 { Black wins material }) (13. Rxf6 hxg4 14. h4 Qxf6 15. Rxf6 Kxf6 { also winning for black } { [%cal Gf8h8,Gh8h5,Ga6a8,Ga8h8] }) 13... hxg4 14. hxg4 Rh8+ 15. Kg1 Ng5 { followed by bringing the major
+pieces to the h-file, leads to a decisive attack for
+Black } 16. Kf2 Raa8 17. Rg1 Rh7 18. Rh1 Rxh1 19. Qxh1 Rh8 20. Qg2 Qe8 21. Kg1) *
+
+
+[Event "strategy: Space Advantage"]
+[Date "2021.12.09"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "E84"]
+[Opening "King's Indian Defense: Sämisch Variation, Panno Main Line"]
+[StudyName "strategy"]
+[ChapterName "Space Advantage"]
+[ChapterURL "https://lichess.org/study/CPQpMKcx/CHkydxu7"]
+[Annotator "https://lichess.org/@/pawnsacrifice97"]
+[UTCDate "2021.12.09"]
+[UTCTime "15:16:52"]
+
+1. c4 Nf6 2. Nc3 g6 3. e4 d6 4. d4 Bg7 5. f3 O-O 6. Be3 Nc6 7. Nge2 a6 8. Qd2 Rb8 9. Rc1 e6 10. Nd1 Re8 11. g3 Ne7 12. Bg2 { Black's passive handling of the opening has
+left White with a broad pawn-centre. Such a centre needs to be attacked as quickly as possible,
+since given time White will complete his development and consolidate his space advantage. } 12... b5?! { 12 ... b6 followed by ... c5 is a more effective
+way of challenging White's centre. } 13. c5 b4 14. Nf2 a5 15. O-O Ba6 16. Rfd1 { White's last piece comes into play. A large
+space advantage such as this offers flexibility
+and freedom to manoeuvre, and generally confers an automatic advantage if it can be maintained. Black can exchange his a6-bishop, but
+this would not solve his problems as it would
+leave his queenside vulnerable to penetration. } { [%csl Gh2] } 16... Nd7 { Hoping to continue with ... dxc5 followed by
+... Ne5, but White can easily prevent this } { [%cal Gd6c5,Gd4c5] } 17. f4 d5 18. e5 { The blocked centre cements White's space
+advantage and leaves Black without any effective way of challenging White's central pawns } 18... Nf5 19. Kh1 Ra8 20. Ng1 { The knight had few prospects on e2, so White
+prepares to switch it to f3 or h3. Moreover, Black
+no longer has the option of exchanging his light-squared bishop. Although this bishop may
+appear active, it is easy for White to manoeuvre
+around the squares it controls, with the result
+that it is striking into thin air } 20... Nb8 21. g4 Nxe3 (21... Nh6 22. Bh3 { Black has to worry
+about f5 followed by Bg5 } { [%csl Gg5][%cal Gf4f5,Ge3g5] }) 22. Qxe3 f5 { Black takes action himself; otherwise White
+will play Nf3, Bh3, Rgl and eventually f5. } 23. gxf5 gxf5 24. Qh3 Nc6 { White will always be able to assemble more
+firepower on the kingside than Black, firstly because the a6-bishop is completely cut off from
+the kingside and secondly because White's extra space makes it easier for him to manoeuvre
+his pieces into position. } 25. Bf3 Re7 26. Rd2 Qf8 27. Qh4 Nd8 28. Nfh3 c6 29. Bh5 Raa7 30. Nf3 Bh6 31. Rg1+ Rg7 32. Nfg5 { The side with the space advantage should
+avoid unnecessary exchanges, so here White
+spurns a rook swap. } 32... Kh8 (32... Bxg5? 33. fxg5 { [%csl Gf6,Gg7][%cal Gh3f4,Gh5d1,Gf4h5,Gh5g7,Gh5f6] }) 33. Bf3 Rg6 34. Rdg2 { [%csl Gh7][%cal Gg5h7] } 34... Qe7 { [%csl Gh4][%cal Ge7h4] } 35. Qh5 Bxg5 { [%csl Gg5][%cal Gg2g5] } 36. Nxg5 Qg7 37. Nxh7 Qxh7 38. Rxg6 Qxh5 39. Bxh5 *
+
+
+[Event "strategy: Liquidating to an Endgame"]
+[Date "2021.12.10"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "strategy"]
+[ChapterName "Liquidating to an Endgame"]
+[ChapterURL "https://lichess.org/study/CPQpMKcx/JPwzy33g"]
+[Annotator "https://lichess.org/@/pawnsacrifice97"]
+[FEN "2r2rk1/1p1bbppp/p2ppn2/q7/3NP1P1/2NB1Q2/PPP2P1P/1K1RR3 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2021.12.10"]
+[UTCTime "13:34:59"]
+
+{ In this double-edged Sicilian position, White
+starts a dangerous attack: }
+1. e5!? dxe5 2. Nb3 { After the queen moves, White has ideas based
+on g5 and Bxh7+. Black can try to defend passively by 15 ... Qc7 16 g5 Ne8, since there is
+nothing clear-cut for White, but Hort finds a
+better solution based on liquidation to an endgame. There are several factors indicating that
+this is the best option: Black has a long-term
+positional advantage based on his two bishops
+and better pawn-structure (White has dislocated
+his kingside pawns by pushing the g-pawn),
+and a liquidation will nullify White's attacking
+chances. Later, in Section 60, we shall look at
+the related topic of defence by exchanging individual attacking pieces, but here we are considering more extensive exchanges leading directly
+to an endgame. } 2... Qb4! 3. g5 (3. a3 Qxg4 4. Qxg4 Nxg4 5. Bxh7+ Kxh7 6. Rxd7 Bh4 7. Rxb7 Bxf2 { black wins a pawn }) 3... Bc6 4. Qh3 Qg4 5. Bxh7+ Kh8 { White must swap queens or he loses a piece. } 6. Bf5+ Qxh3 7. Bxh3 Nh7 8. g6 { White uses his g-pawn to break up
+Black's pawns. } 8... Ng5 9. Rxe5 Nxh3 10. Rh5+ Kg8 11. Rxh3 fxg6 12. Nd4 Rxf2 13. Nxe6? (13. Nxc6 Rxc6 14. a3) 13... Bf3 14. Rg1 Bf6? { .. g5! is crushing, since after the coming
+... g4 White's rook will have nowhere to go.
+Playing Rg3 leads to the rook being trapped,
+while after Rh5 Black can reply ... g3. } 15. Nf4 Bxc3 16. Nxg6! Bg4 17. Rhg3?? { This blunder loses at once } 17... Bf6! { [%csl Gc2][%cal Gc8c2,Gf2c2] } 18. Rxg4 Rcxc2 19. Rb4 Rxb2+ 20. Rxb2 Rxb2+ 21. Kc1 Rxa2 22. Rg4 Rxh2 23. Kd1 b5 24. Nf4 Rh4 *
+
+
+[Event "strategy: the minority attack"]
+[Date "2021.12.11"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D37"]
+[Opening "Queen's Gambit Declined: Barmen Variation"]
+[StudyName "strategy"]
+[ChapterName "the minority attack"]
+[ChapterURL "https://lichess.org/study/CPQpMKcx/iXRIRafs"]
+[Annotator "https://lichess.org/@/pawnsacrifice97"]
+[UTCDate "2021.12.11"]
+[UTCTime "22:38:36"]
+
+1. d4 Nf6 2. c4 e6 3. Nf3 d5 4. Nc3 Nbd7 5. cxd5 exd5 6. Bg5 c6 7. e3 Be7 8. Qc2 O-O 9. Bd3 Re8 10. h3 Nf8 11. Bf4 a5 12. O-O Ng6 13. Bh2 Bd6 14. Bxd6 Qxd6 15. Rfe1 Be6 { In positions with this type of Queen's Gambit pawn-structure, White nonnally has only
+two possible plans: he can either play for the
+central break e4, or he can play a3, Rabl and
+b4-bS. Here playing e4 achieves nothing apart
+from giving White an isolated d-pawn, so the
+balance lies firmly in favour of a queenside advance. Such an advance is called a minority attack because it involves advancing White's two
+queenside pawns against Black's three. Black
+sometimes meets this plan by generating kingside counterplay, but here this is difficult as the
+dark-squared bishops have been exchanged. } 16. a3 Re7 17. Rab1 Rae8 18. b4 axb4 19. axb4 Bd7 20. b5 { The point of White's pawn advance is to
+leave Black with a weak queenside pawn; if
+Black takes on b5 then he has isolated b- and dpawns, while allowing the exchange bxc6 bxc6
+will give Black a backward c-pawn. } 20... Ne4 (20... c5 { It's sometimes possible for Black to meet b5
+with ... c5, but here } 21. dxc5 Qxc5 22. Rec1 Rc8 23. Qb2 Qd6 24. Na4 { leaves White with a clear advantage. } { [%cal Gb2d4] }) 21. bxc6 bxc6 22. Rb6 { Black is not only left with a weak pawn, but
+in addition White's pieces are very active. By
+contrast, Black's bishop is passively placed. } 22... Nxc3 23. Qxc3 Qf6 { Black has no counterplay and is reduced to
+the grim defence of a position with few active
+prospects. The threat of ... Bxh3 is a pinprick
+which causes White no real inconvenience. } 24. Bxg6 { The exchange of this knight eliminates
+Black's last prospect of serious kingside play } 24... Qxg6 { [%csl Gh3][%cal Gg6g1,Gd7h3] } (24... hxg6 25. Ne5 Rc8 26. Qc5 { is terrible for Black }) 25. Kf1 (25. Ne5?? Rxe5 26. dxe5 Bxh3 27. Kf1 Qxg2+ 28. Ke2 Bg4+ 29. Kd2 Qxf2+ 30. Kc1 h5 { [%cal Gh5h4,Gh4h3,Gh3h2,Gh2h1,Ge8e6,Ge6h6] }) 25... f6 { lack has managed to keep the knight out of
+e5, but c5 is another tempting outpost. } 26. Ra1 Qh5 27. Ne1 Qf5 { [%csl Ge3][%cal Gf5f1,Ge7e3] } 28. Kg1 Qg5 29. Kh2 Qf5 30. Nd3 Qe6 31. Kg1 Rc8 32. Rb7 Rf7 33. Raa7 Be8 34. Qb4 Rd8 35. Nc5 Qc8 36. Qb6 h5 37. Rc7 Rxc7 38. Rxc7 Qa8 39. Ra7 Qc8 40. Rb7 Bf7 41. Qa7 Rf8 42. Nd7 Re8 43. Nxf6+ gxf6 44. Rxf7 Qf5 45. Rg7+ Kh8 46. Qf7 { [%cal Gg7g6,Gf7g7] } *
+
+
+[Event "strategy: the minority attack"]
+[Date "2021.12.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D58"]
+[Opening "Queen's Gambit Declined: Tartakower Defense"]
+[StudyName "strategy"]
+[ChapterName "the minority attack"]
+[ChapterURL "https://lichess.org/study/CPQpMKcx/BA0qrRle"]
+[Annotator "https://lichess.org/@/pawnsacrifice97"]
+[UTCDate "2021.12.12"]
+[UTCTime "17:13:09"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Bg5 Be7 5. e3 O-O 6. Nf3 h6 7. Bh4 b6 8. Be2 Bb7 9. Bxf6 Bxf6 10. cxd5 exd5 11. O-O c6 12. b4 { has various methods of countering it. One is to meet b4 with ... b5 followed by
+playing a knight to b6 and c4; another, which is
+used in this game, is to arrange to meet b5 with
+... c5. } 12... Re8 13. Qb3 a5 { Black even encourages White to push his b-pawn } 14. b5?! (14. bxa5 Rxa5 15. a4 { better, when White
+has some pressure along the b- and c-files. }) 14... c5 15. dxc5 bxc5 16. Rac1 Bxc3?! (16... a4! { is the simplest method of demonstrating that White has achieved nothing from
+the opening. After } 17. Nxa4 c4 18. Qc2 Nd7 19. Nc3 Ra3 20. Qd2 Nc5 21. Nd4 Qa5 { with
+... Ne6 to come, Black has full compensation
+for the pawn. } { [%csl Ge6][%cal Gc5e6] }) 17. Qxc3 Nd7 18. Rfd1 Qb6 { The minority attack has produced no concrete benefit for White. Black, it is true, has
+hanging pawns in the centre but these can just as easily be strong as weak. } 19. Bf1 Rac8 20. h3 Nf6 21. Nd2 c4!? { Dynamic play by Black. He weakens d4, but
+restricts White's bishop and opens a diagonal
+for his queen. Objectively it is no stronger than
+other moves, but it presents White with tricky
+problems to solve. } 22. a4 Re6 23. Rc2 Rce8 24. Nf3?! { Taking aim at d4 appears logical, but it allows
+Black to develop dangerous piece activity. 24
+Nb1 is better, intending Qd4 followed by Nc3. } 24... Ne4 25. Qa1 Rf6 26. Rd4? { This second error allows Black to break open
+White's kingside and exploit the undefended
+rook on c2 } (26. Nd4 { is more logical, although
+even here } 26... Bc8) 26... Rxf3! 27. gxf3 Qg6+ 28. Bg2 (28. Kh1 Ng3+ 29. fxg3 Qxc2) (28. Kh2 Ng5 29. Qd1 Nxf3+ 30. Qxf3 Qxc2 $19) 28... Ng5 29. Rc1 Nxf3+ 30. Kf1 Nh2+ 31. Kg1 Nf3+ 32. Kf1 Nxd4 33. Qxd4 Qf5 { Black has an extra pawn, but his bad bishop
+means he still has some work to do to exploit it } 34. Kg1 Re5! 35. Qa7 Qc8 36. Kf1 (36. Qxa5 Rg5 37. Kf1 d4 38. Bxb7 Qxb7 39. Rxc4 Qg2+ 40. Ke2 d3+ { s Black a winning attack }) 36... Rg5 37. Qd4 Qf5 38. f4 Rg6 39. Kf2 Kh7 40. Rd1 Qc2+ 41. Rd2 Qxa4 42. b6 Qb4 43. Rb2 Qe7 44. Ra2 Qh4+ { 0-1 } 45. Ke2 *
+
+
+[Event "strategy: Inferior Positions"]
+[Date "2021.12.13"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "strategy"]
+[ChapterName "Inferior Positions"]
+[ChapterURL "https://lichess.org/study/CPQpMKcx/4hHUWtwz"]
+[Annotator "https://lichess.org/@/pawnsacrifice97"]
+[FEN "r1br2k1/pp2qppp/2pp4/8/2PR4/Q4BP1/PP2PP1P/R5K1 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2021.12.13"]
+[UTCTime "12:58:07"]
+
+{ Black stands worse thanks to his weak d6- W
+pawn, which White can easily attack via the
+half-open d-file. White also controls more space,
+although this is not very significant as several
+minor pieces have already been exchanged. It's
+easy to lose a position such as this, since Black
+has no obvious counterplay. black, however,
+saved the game using two basic ideas that apply
+to many inferior positions: finding counterplay,
+and reducing the pressure by liquidation. }
+1... Be6 { Developing a piece and attacking the c4-
+pawn, so that even if White plays Rad1 he will
+not immediately be threatening to win a pawn. } 2. b3 { Unavoidable sooner or later, since otherwise
+White will never be threatening to take on d6. } 2... a5! { The start of an excellent defensive plan. Black
+will meet Radl with ... c5, allowing him to defend the d-pawn by ... Ra6, while the advance of
+the pawn to a4 will not only reduce the material
+on the board, but also open the a-file for possible later counterplay. Moves such as this may
+not get the same plaudits as brilliant sacrifices,
+but they are just as instructive. } { [%csl Gd6][%cal Ga8a6,Ga6d6] } 3. Rad1 c5 { Making the d-pawn permanently backward
+may look dreadful, but it's the only way to
+avoid losing a pawn. A single weakness is usually not fatal in itself, but Black must ensure that White is not given the time to improve his
+position and provoke another weakness somewhere else on the board. } 4. R4d3 a4 5. Qc1 { For the moment White cannot make progress
+since the d-pawn can be attacked three times
+and defended three times. The only chance for
+White to increase his advantage is on the kingside, but preparing any kind of pawn advance
+there is clearly going to take some time } 5... h6 6. Qd2 axb3 7. axb3 Ra3 { Black makes use of the open a-file to counter-attack the b3-pawn. } 8. Qb2 { Expelling the rook from a3, but relieving
+some of the pressure from d6. It's evident that
+White is unable to force Black into the type of
+totally passive position necessary to give him
+time to make progress on the kingside. } 8... Ra6 9. h4 Rb8! { Another fine defensive move. The pressure is
+momentarily off d6, so Black takes the chance to
+force through ... b5. } 10. Qd2 b5 { Black has fully equalized since exchanging
+on b5 leaves the b3-pawn just as weak as the
+one on d6. } 11. Rxd6 Rxd6 12. Qxd6 Qxd6 13. Rxd6 bxc4 14. bxc4 Bxc4 15. Rc6 Re8 16. Rxc5 Bxe2 17. Bxe2 Rxe2 18. Kf1 $10 { 1/2-1/2 } *
+
+

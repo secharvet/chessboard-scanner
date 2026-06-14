@@ -1,0 +1,16 @@
+[Event "Crushing the Danish Gambit: How to play for black"]
+[Date "2018.02.24"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C21"]
+[Opening "Danish Gambit Declined: Sörensen Defense"]
+[StudyName "Crushing the Danish Gambit"]
+[ChapterName "How to play for black"]
+[ChapterURL "https://lichess.org/study/ciGDi5e5/SZuOGtGT"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2018.02.24"]
+[UTCTime "00:05:00"]
+
+1. e4 e5 2. d4 (2. Nf3 Nc6 3. d4 exd4 4. c3 d5 5. exd5 Qxd5 6. cxd4 Bg4 { transposes to mainline }) 2... exd4 3. c3 d5 (3... dxc3 4. Bc4 cxb2 5. Bxb2) 4. exd5 Qxd5 5. cxd4 Nc6 6. Nf3 Bg4 7. Be2 Bb4+ (7... Bxf3 8. Bxf3 Qxd4 9. Bxc6+ { [%csl Rd4] }) 8. Nc3 Bxf3 9. Bxf3 Qc4! { [%cal Gc4f1,Gb4c3] } (9... Qxd4 10. Bxc6+) 10. Bxc6+ bxc6 { [%cal Gb4c3] } (10... Qxc6 { [%cal Ge1g1] }) 11. Qe2+ Qxe2+ 12. Kxe2 { [%csl Rd4,Rc6,Rc7][%cal Ge8c8,Ga8d8,Gg8e7,Ge7f5,Gd8d6,Gh8d8,Gb4a5,Ga5b6] } 12... O-O-O 13. Be3 Ne7 14. Rhd1 Nf5 { [%csl Rd4][%cal Gd8d6,Gh8d8,Gh8e8,Gb4a5,Ga5b6,Gc8b7] } (14... Rhe8) *
+
+

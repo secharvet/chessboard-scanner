@@ -1,0 +1,22 @@
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2026.02.21"]
+[Round "-"]
+[White "BigCastle"]
+[Black "Dragon-h"]
+[Result "0-1"]
+[WhiteElo "1198"]
+[BlackElo "1193"]
+[TimeControl "180+2"]
+[Termination "Dragon-h won on time"]
+[Variant "Standard"]
+[ECO "A20"]
+[Opening "English Opening: King's English Variation"]
+[StudyName "strategy"]
+[ChapterName "BigCastle - Dragon-h"]
+[ChapterURL "https://lichess.org/study/2RStqqmE/rFHZqyJa"]
+[Annotator "https://lichess.org/@/Dragon-h"]
+
+1. c4 e5 2. g3 Nf6 3. Bg2 Bc5 4. Nc3 O-O 5. e3 c6 (5... d5 6. cxd5 Bf5 (6... e4) (6... c6 7. d4 exd4 8. exd4 Bb6 9. dxc6 (9. Bg5 Qe8+ 10. Nge2 Nxd5 11. Nxd5 cxd5 12. Bxd5 Bh3 13. Be3 Nc6 14. Nf4 Ba5+ 15. Qd2 (15. Ke2 Nb4 16. Bxb7 Qb5+ 17. Kf3 Qxb7+ 18. d5 Rad8 19. Qb3 Bf5 20. Rhc1 Qd7 21. a3 Na6 22. Kg2 Be4+ 23. f3 Bxd5 24. Qxd5 Qxd5 25. Nxd5 Rxd5 26. b4 Bb6 27. Bxb6 axb6 28. g4 Rd2+ 29. Kg3 Nb8 30. Rd1 Rxd1 31. Rxd1 Na6 32. Rd7 Ra8 33. Rb7 Kf8 34. Kf4 Rc8 35. Rxb6 Nc7 36. Rd6 Ra8 37. Rd3 Ke7 38. g5 Ra4 39. Re3+ Kd6 40. Rd3+ Kc6 41. Rc3+ Kb6 42. Rd3 Nb5 43. Rd7 Ra7 44. Rxa7 Nxa7 45. Ke5 Kc7 46. f4 Nc6+ 47. Kd5 Ne7+ 48. Kc5 Ng6 49. f5 Ne5 50. a4 Nf3 51. a5 Nxg5 52. b5 Ne4+ 53. Kd5 Nd2 54. b6+ Kb7 55. Kd6 Nf3 56. h3 Nd4 57. Ke5 Nc6+ 58. Kd6 f6 59. Kd5 h5 60. h4 Nxa5 61. Ke6 Nc4 62. Kf7 Nxb6 63. Kxg7 Nd5 64. Kh6 Kc6 65. Kxh5 Kd6 66. Kg4 (66. Kg6 Ke5 67. h5 (67. Kf7 Nf4 68. Kg7 Kxf5 69. Kh6 Kg4 70. Kg7 f5 71. Kf6 Nh5+ 72. Ke5 f4 73. Kd4 Kxh4 74. Kc3 Kg3 75. Kb2 f3 76. Ka3 f2)) 66... Ke5 67. Kg3 Ne3 68. h5)) 9... Nxc6)) 6. Nge2 a6 7. O-O d6 8. d4 exd4 9. exd4 Ba7 10. Bg5 Nbd7 11. d5 c5?! 12. Ne4 Qe7?! 13. Re1 h6 14. Nxf6+?! Nxf6 15. Bf4?! Qd8 16. Nc3 Bg4 17. Qa4 Rb8 18. Qc2?! b5 19. cxb5 axb5 20. Ne4 Nxe4 21. Bxe4 c4 22. Be3?! Bxe3 23. Rxe3 Qf6?! 24. Rae1 Bh5 25. f4?! Kh8?! 26. Kg2 Ra8 27. a3 Rae8 28. b3? Qd4! 29. bxc4?! bxc4?! 30. h3? f5 31. Bf3 Rxe3 (31... Bxf3+) 32. Rxe3 Qxe3 33. Bxh5 Qe4+ 34. Bf3? Qxc2+ { 0-1 Black wins on time. } 0-1
+
+

@@ -1,0 +1,16 @@
+[Event "London 2...c5: Chapter 1"]
+[Date "2025.06.18"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D00"]
+[Opening "Queen's Pawn Game: Accelerated London System, Steinitz Countergambit"]
+[StudyName "London 2...c5"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/IF6YCIHt/lOKRSnjJ"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[UTCDate "2025.06.18"]
+[UTCTime "16:41:03"]
+
+1. d4 (1. e4 c6 2. d4 d5 3. exd5 cxd5 4. Bf4) 1... d5 2. Bf4 (2. Nf3 c5 (2... Nf6 3. Bf4 c5 4. e3 Nc6 5. Nbd2 Qb6 6. dxc5 Qxb2) 3. c4 e6) (2. c4 e6 3. Nf3 c5) 2... c5 3. e3 Nc6 (3... cxd4 4. exd4 Nc6 5. c3 Bf5) *
+
+

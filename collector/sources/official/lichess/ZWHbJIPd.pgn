@@ -1,0 +1,1000 @@
+[Event "🏆 Nimzo/Bogo Indian Repertoire 🏆: Welcome and Introduction"]
+[Site "https://lichess.org/study/DeAekads/W1Xj4zTl"]
+[Date "2020.06.23"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "E20"]
+[Opening "Nimzo-Indian Defense"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "Welcome and Introduction"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/ZX8Br8lZ"]
+[UTCDate "2020.06.23"]
+[UTCTime "18:24:23"]
+
+{ Hello readers! This is my 4th opening repertoire guide on the Nimzo/Bogo Indian Defense for black against 1.d4. Check out my first 3 (Sicilian Kan, English Opening, and Kings Indian) if you haven't already. ❤️Please give this study a like (Heart) and share with others! }
+1. d4 Nf6 2. c4 e6 3. Nc3 (3. Nf3 Bb4+ { I recommend the Bogo Indian against 3. Nf3 due to its flexibility and similarity to the Nimzo Indian. }) (3. g3 Bb4+ { Against the Catalan (3. g3), I also recommend Bb4+, which will transpose to the Bogo Indian majority of the time. }) 3... Bb4 { We reach the starting position of the popular Nimzo Indian } *
+
+
+[Event "🏆 Nimzo/Bogo Indian Repertoire 🏆: ** Sample Game **"]
+[Site "https://lichess.org/study/DeAekads/MZFFByzO"]
+[Date "2020.06.23"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "** Sample Game **"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/LccNaBJu"]
+[UTCDate "2020.06.23"]
+[UTCTime "18:24:23"]
+
+ *
+
+
+[Event "Sinquefield Cup"]
+[Site "Saint Louis, MO USA"]
+[Date "2015.08.26"]
+[Round "4"]
+[White "Wesley So"]
+[Black "Levon Aronian"]
+[Result "0-1"]
+[WhiteElo "2779"]
+[BlackElo "2765"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "E20"]
+[Opening "Nimzo-Indian Defense: Kmoch Variation"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "Wesley So - Levon Aronian"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/eDxvtHi0"]
+
+{ To get us in the mood for Nimzo Indian, we'll take a look at a critical win for Aronian with black which led him to win the 2015 Sinquefield Cup. It illustrates the tactical possibilities even in a solid opening like the Nimzo Indian }
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. f3!? { The f3 Nimzo Indian is a dangerous weapon for White, and can lead to White having a rock solid pawn center with e4, d4, and c4. But there is no perfect opening out there. f3 can also lead to weaknesses around the White king if the early f3 cannot be justified. Aronian accomplishes just that! } 4... c5 5. d5 O-O 6. e4 d6 7. Ne2 a6 (7... b5 { An immediate b5, Benko Gambit style, is also playable. Black wants to attack White's pawn chain as quickly as possible because of White's vulnerability with the king in the center. } 8. cxb5 exd5 9. exd5 Re8 { Hard for White to get castled. The f3 pawn is no longer supporting a pawn chain and just looks awkward. } 10. Kf2 { Often played } 10... Nbd7 11. a3 Ba5 { How does White untangle his pieces? Quite difficult. Black's ready to finish development and break open the lines with c4 + Bb6 any move now. }) 8. a4 Ba5 9. Bd2 exd5 10. cxd5 Nh5 11. g3 Nd7 12. Bg2 b5 13. g4 (13. axb5 axb5 14. Nxb5 { Risky to accept the gambit because the king is forced to recapture on d2 } 14... Bxd2+ 15. Kxd2 Ba6 16. Nbc3 Qb6 { Benko Gambit structure with a white king on d2. Yes, not fun! }) 13... b4 14. Nb1 Qh4+ 15. Kf1 Ne5 16. Be1 (16. gxh5 f5 { By no means a forced win, but Black has his entire army entering the game, while White's king is in the midst of the attack. Very risky for White to accept the piece sac }) 16... Qf6 17. gxh5 Nxf3 18. Bf2 Bg4 { What makes this game so brilliant is how Black is not necessarily creating decisive threats, but White is suffering trying to defend against all possible threats. Plus, Black's pieces are entering the attack one by one. Rooks next } 19. Qc1 Nd4 20. Nxd4 cxd4 21. e5 dxe5 22. Nd2 { Hoping to utilize his extra knight, Wesley sacrifices a pawn back } 22... Rac8 23. Qb1 b3 24. Nxb3 (24. Ne4 Qf4 { Knight can enter to e4, but will just get kicked back next move with f5! Knights on squares are not strong. They need to be on OUTPOSTS! }) 24... Bb6 25. a5 Ba7 26. Kg1 Bf5 27. Be4 Qg5+ 28. Kf1 Qf4 { If Bxf5, then d3 unleashes the Bishop on a7 with the deadly mate threat on f2. This game illustrates the dangers of playing the f3 Nimzo. } { 0-1 White resigns. } 0-1
+
+
+[Event "🏆 Nimzo/Bogo Indian Repertoire 🏆: Important Theme #1"]
+[Site "https://lichess.org/study/DeAekads/H8NKgPcp"]
+[Date "2020.06.23"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "Important Theme #1"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/Z8ZI5s0E"]
+[FEN "r1bq1rk1/pppn1pp1/3ppn1p/8/1bPP3B/2NBPN2/PP3PPP/R2QK2R b KQ - 2 8"]
+[SetUp "1"]
+[UTCDate "2020.06.23"]
+[UTCTime "18:24:23"]
+
+{ This is a very common position in the Nimzo/Bogo indian. I have seen players play c5 here believing this is the correct pawn break. However, this is flawed because there is no follow-up. The Nbd7 does not contribute to the pressure on d4 }
+8... e5! { e5, even though it does move the same pawn again in the first 10 moves, is the thematic break. e4 is a threat in many lines to fork. Almost always, Black will play Bxc3 to double White's c-pawns and then development should come easily afterwards. It is more important to understand the ideas of the opening instead of pure memorization! } (8... c5?! 9. Rc1) *
+
+
+[Event "🏆 Nimzo/Bogo Indian Repertoire 🏆: Important Theme #2"]
+[Site "https://lichess.org/study/DeAekads/MP7lGJD1"]
+[Date "2020.06.23"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "Important Theme #2"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/KjtYQyx9"]
+[FEN "rn1q1rk1/pb1p1ppp/1p2pn2/2p5/1bPP4/2N1PN2/PPQ1BPPP/R1B2RK1 b - - 3 8"]
+[SetUp "1"]
+[UTCDate "2020.06.23"]
+[UTCTime "18:24:23"]
+
+{ A fairly standard position reached in the 4. Qc2 Nimzo. Instead of playing the common Bxc3, Black aims to give White an isolated d4 pawn }
+8... cxd4 9. exd4 (9. Nxd4 { Nxd4 is possible of course, but this just shuts out the Bc1 and loses a center pawn for no good reason } 9... Nc6) 9... d5 10. a3 (10. cxd5 Nxd5) 10... Bxc3 11. Qxc3 (11. bxc3 { Also possible to avoid the isolated pawn, but the Be2 is overloaded! } 11... dxc4 12. Bxc4 Bxf3 13. gxf3 Nc6 { Black will have plenty of play against White's double isolated f-pawns now }) 11... dxc4 12. Qxc4 Ba6 { With a nice endgame due to the isolated d-pawn for White. } *
+
+
+[Event "🏆 Nimzo/Bogo Indian Repertoire 🏆: Important Theme #3"]
+[Site "https://lichess.org/study/DeAekads/21sv2Nu8"]
+[Date "2020.06.23"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "Important Theme #3"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/Vbek1QP4"]
+[FEN "r2q1rk1/pb1p1pp1/1p2pn1p/8/1bPP3B/2NB4/PPQ2PPP/R3K2R w KQ - 2 12"]
+[SetUp "1"]
+[UTCDate "2020.06.23"]
+[UTCTime "18:24:23"]
+
+{ Although Bxc3 is often played in the Nimzo Indian, it should not be played automatically. Typically, in closed structures where the pawns are locked up, it is correct to exchange your bishop for knight due to the slower nature of the position and pawn play. }
+12. a3 Be7! { In this case, the position is fairly open and white does not have the e-pawn anymore. So e4 isn't a threat right now. Therefore, it is best to keep your dark squared bishop. The next plan is to play against the "hanging pawns" d4 and c4 with Rc8 and a timely d5! If Black can force White to have an isolated d4 pawn, that would impose a great weakness. } *
+
+
+[Event "🏆 Nimzo/Bogo Indian Repertoire 🏆: **Sidelines**"]
+[Site "https://lichess.org/study/DeAekads/ANw7kUT2"]
+[Date "2020.06.23"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "** Sidelines **"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/pgGLZNOG"]
+[FEN "rnbqkb1r/pppppppp/5n2/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.06.23"]
+[UTCTime "18:24:23"]
+
+{ The lines I suggest in the sidelines are different than the ones in the Kings Indian guide because the nature of the two openings are very different. In this guide, I have selected more solid approaches to facing the sidelines and ones that do not require a kingside fianchetto. }
+ *
+
+
+[Event "🏆 Nimzo/Bogo Indian Repertoire 🏆: Trompowsky d4 Nf6 Bg5"]
+[Site "https://lichess.org/study/DeAekads/9jj04pYw"]
+[Date "2020.06.23"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Trompowsky Attack: Classical Defense, Big Center Variation"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "Trompowsky d4 Nf6 Bg5"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/RZ9sEWP3"]
+[UTCDate "2020.06.23"]
+[UTCTime "18:24:23"]
+
+1. d4 Nf6 2. Bg5 e6 { 2.e6 against the Trompowsky is very solid, compared to the wild 2. Ne4 from the Kings Indian guide. White usually gives up the bishop pair for a strong pawn center. So the overall plan for Black is to utilize the bishop pair imbalance and not get squeezed in the center. } 3. e4 h6 { This move forces Bxf6. } 4. Bxf6 (4. Bh4 g5 5. Bg3 Nxe4 { Black is up a clean pawn. }) 4... Qxf6 { Here White has several options to continue: The ambitious Nc3 to castle long early, or the more solid c3/Nf3 to hold down d4. } 5. Nc3 { Nc3 is aggressive, but it also has its drawbacks. Bb4 is the preferred move to combat Nc3 and maintain the annoying pin. } 5... Bb4 6. Qd2 (6. e5 Qd8 7. Qg4 O-O { Without the dark squared bishop, it is very difficult for White to launch a successful kingside attack. Now Bxh6 threats are nonexistent. } 8. Bd3 d5 9. Nf3 c5 { Adding pressure to d4. Black stands well, as the kingside is also very safe. A timely f5 is also quite common. }) 6... d5 { Striking back in the center. This resembles a French Defense where White traded off the dark squared bishop. As a result, Black can afford to play a bit more dynamically, not afraid of opening up the center. } 7. e5 Qd8 8. O-O-O c5 9. a3 (9. Nge2 Nc6 10. f4 c4 { The typical thorn in White's position. As usual, b5 and a5 are common plans next to launch the queenside pawn storm. }) (9. f4 cxd4 10. Qxd4 Nc6 11. Qd3 O-O 12. Nf3 Qa5 { Black has a lot of play on the queenside and can utilize the open c-file soon as well. }) 9... Bxc3 10. Qxc3 c4 { Black locks up the queenside and plans a pawn storm next with b5 and a5. The a3 pawn will prove to be a weakness as it only speeds up Black's attack and allows an easy pawn break on the queenside. } *
+
+
+[Event "🏆 Nimzo/Bogo Indian Repertoire 🏆: Trompowsky part 2"]
+[Site "https://lichess.org/study/DeAekads/uSSTHOAF"]
+[Date "2020.06.23"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Trompowsky Attack: Classical Defense, Big Center Variation"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "Trompowsky part 2"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/xCUPlR8H"]
+[UTCDate "2020.06.23"]
+[UTCTime "18:24:23"]
+
+1. d4 Nf6 2. Bg5 e6 3. e4 h6 4. Bxf6 Qxf6 5. Nf3 d5 { Like the previous chapter, I recommend an early d5 to steer the game into a French structure with the bishop pair. A lot of the following variations are rough, not move specific. The main idea is to take advantage of your extra dark squared bishop to play actively on the dark squares and do not let White to get outposts for their knights } 6. e5 (6. Nc3 Bb4) (6. exd5 exd5 7. Bd3 Bd6 8. O-O O-O { The extra bishop will do Black well in the middlegame stage once the position opens up. }) (6. Nbd2 c5 7. exd5 exd5 8. Bb5+ Nc6 9. O-O Be7 10. Re1 O-O { White lacks compensation for giving up the bishop pair on move 4 }) 6... Qd8 7. Bd3 c5 8. c3 Nc6 9. O-O Qb6 { An improved version of the Advanced French arises. Black has the usual pressure on d4 and queenside but White lacks a dark squared bishop to defend. } *
+
+
+[Event "🏆 Nimzo/Bogo Indian Repertoire 🏆: d4 Nf6 Nc3"]
+[Site "https://lichess.org/study/DeAekads/ezZRjClj"]
+[Date "2020.06.23"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "D01"]
+[Opening "Rapport-Jobava System"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "d4 Nf6 Nc3"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/WwaHsuBD"]
+[UTCDate "2020.06.23"]
+[UTCTime "18:24:23"]
+
+1. d4 Nf6 2. Nc3 d5 { 3. Bf4 and 3. Bg5 are the most common moves here. 3. e4 is a very poor version of the Blackmar Diemar Gambit. } 3. Bf4 (3. Bg5 Nbd7 { Here there are usually two ways White can continue: either with f3 or Nf3. } 4. f3 (4. Nf3 { This line is pretty harmless. White cannot get a pawn center with e4 anytime soon. } 4... h6 5. Bh4 e6 6. e3 Bb4 { Completely fine for Black. Nc3 is awkwardly placed }) 4... h6 5. Bh4 c5 6. e3 e6 { White can't claim an advantage with the early f3 if e4 isn't possible }) (3. e4?! Nxe4 4. Nxe4 dxe4 5. f3 e5 6. d5 f5 { White is busted already, getting no attacking chances for the cost of the pawn }) 3... e6 4. Nb5 { The most demanding. } (4. e3 { Harmless move which invites the annoying pin Bb4 } 4... Bb4 5. Bd3 c5 6. dxc5 O-O 7. Ne2 Bxc5 8. O-O Nc6) 4... Na6 5. e3 c6 6. Nc3 Bb4 7. Bxa6 { The most challenging line. } 7... bxa6 8. Ne2 a5 { Making room for Ba6. Black has full control over the diagonal. } 9. a3 Be7 10. Na4 Ba6 *
+
+
+[Event "🏆 Nimzo/Bogo Indian Repertoire 🏆: London System"]
+[Site "https://lichess.org/study/DeAekads/TzNlHqMZ"]
+[Date "2020.06.23"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "A46"]
+[Opening "Indian Defense: London System"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "London System"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/0FMf84xX"]
+[UTCDate "2020.06.23"]
+[UTCTime "18:24:23"]
+
+{ The infamous London System has brought fear to many players. I will teach you how to beat it Nimzo-Indian style. See my Kings Indian guide for my favorite way to counter the London. This guide is aimed at Nimzo Indian players. }
+1. d4 Nf6 2. Nf3 e6 3. Bf4 b6 4. e3 Bb7 { Generally, the London System is less effective if Black hasn't played d5. Here, the goal is to restrict the Bf4 by playing d6 and playing a Hedgehog structure, which prefers flexibility. } 5. Nbd2 c5 6. c3 Be7 7. h3 (7. Bd3 Nh5!? { Guarantees the bishop pair since White does not have h2 to retreat to. This is a tricky move order and happens quite often. } 8. Bg3 d6 { No rush in playing Nxg3. Wait for White to castle first } 9. O-O Nxg3 10. hxg3 O-O) 7... O-O 8. Bd3 d6 { The goal is to play a Hedgehog structure, which lacks space but has no weaknesses. See below for possible continuations. } 9. O-O Nbd7 10. Qe2 cxd4 { It is fine to exchange center pawns because White's knight is already developed to d2. If it was still on b1, White can recapture cxd4 and play Nc3, its ideal spot. } 11. exd4 (11. cxd4 Nd5 12. Bg3 Nb4 13. Bc4 (13. Bb1 Ba6) 13... d5 14. Bb5 a6 15. Ba4 b5 16. Bb3 Rc8 { Black's doing fine here. Likely a lot of trades on the c-file leading to an even endgame. }) 11... a6 { To prevent White from playing Ba6, offering a bishop trade. You may want to keep your bishop since it has activity down the main diagonal. } 12. Rfe1 Re8 13. a4 Qc7 14. Bh2 Bf8 15. Rab1 g6 { See Kamsky - Carlsen 0-1 below for a sample game in this line. } *
+
+
+[Event "🏆 Nimzo/Bogo Indian Repertoire 🏆: Torre Attack with Bg5"]
+[Site "https://lichess.org/study/DeAekads/QE6jCr3B"]
+[Date "2020.06.23"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "A46"]
+[Opening "Torre Attack: Classical Defense, Nimzowitsch Variation"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "Torre Attack with Bg5"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/QHyKiGtU"]
+[UTCDate "2020.06.23"]
+[UTCTime "18:24:23"]
+
+{ The Torre Attack is very very similar to the London System, so logically my recommendations are almost identical. }
+1. d4 Nf6 2. Nf3 e6 3. Bg5 h6 4. Bh4 (4. Bxf6 Qxf6 { Transposes back to the Trompowsky (chapter 6,7) }) 4... c5 5. e3 b6 6. Nbd2 Bb7 7. Bd3 Be7 8. O-O O-O 9. c3 cxd4 { Playing cxd4 early is useful to see which way White recaptures. In practice, exd4 is almost always played due to the consistency with London system plans. } 10. exd4 (10. cxd4 Nc6 11. a3 Rc8 12. Qe2 d5 { A bit dry but Black has no problems }) 10... d6 11. Re1 Nbd7 12. Qe2 a6 13. h3 Re8 14. Bg3 Bf8 { Basically transposed back to the London system in our previous chapter. } *
+
+
+[Event "🏆 Nimzo/Bogo Indian Repertoire 🏆: Colle Attack"]
+[Site "https://lichess.org/study/DeAekads/4zrGvTuv"]
+[Date "2020.06.23"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "A46"]
+[Opening "Yusupov-Rubinstein System"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "Colle Attack"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/8NTjlIj7"]
+[UTCDate "2020.06.23"]
+[UTCTime "18:24:23"]
+
+1. d4 Nf6 2. Nf3 e6 3. e3 { The Colle is a solid system for White which leads to pretty dry middlegames with fairly symmetrical pawn structures. For Black, I suggest playing b6, Bb7, and an early d5. Although I usually do not suggest d5 as Black, White's 3. e3 locks in their Bc1, so d5 further restricts it } 3... b6 4. Bd3 Bb7 5. O-O Be7 6. c4 (6. Nbd2 d5 { To prevent e4 } 7. b3 (7. Ne5 O-O 8. f4 Ne4 { Black has an outpost on e4 for the knight, while White's e5 square is not. THe Ne5 can easily be kicked back with f6 at any time. }) 7... O-O 8. Bb2 Ne4 9. c4 Nd7 10. Qc2 f5 11. Ne5 Nxe5 12. dxe5 Nxd2 13. Qxd2 dxc4 14. bxc4 Be4) 6... O-O 7. Nc3 c5?! { Playing c5 here is inaccurate because White has d5, which successfully locks up the Bb7. } (7... d5 8. b3 dxc4 9. bxc4 c5 { Now c5 is fine because White's d5 does not work tactically. This results in White receiving hanging c and d pawns. } 10. Bb2 cxd4 11. exd4 Nc6 12. Rc1 Rc8 13. Qe2 Nb4 14. Bb1 Bxf3!? { White's hanging pawns are clearly weaknesses instead of strengths. }) 8. d5 exd5 9. cxd5 Nxd5 10. Nxd5 Bxd5 11. Bxh7+ Kxh7 12. Qxd5 { White has a comfortable position with a much safer king. } *
+
+
+[Event "🏆 Nimzo/Bogo Indian Repertoire 🏆: d4 Nf6 Nf3 e6 g3"]
+[Site "https://lichess.org/study/DeAekads/kTiYUKNZ"]
+[Date "2020.06.23"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "A46"]
+[Opening "Indian Defense: Knights Variation"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "d4 Nf6 Nf3 e6 g3"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/hMVK12ci"]
+[UTCDate "2020.06.23"]
+[UTCTime "18:24:23"]
+
+1. d4 Nf6 2. Nf3 e6 3. g3 b5!? { Now that White's plan is to fianchetto the bishop to the long diagonal, Black can safely take more control along the f1-a6 diagonal. b5 also prevents White from gaining space with c4 too. b5 gets the benefits of b6, and more. } 4. Bg2 Bb7 5. O-O c5 6. c3 (6. a4 b4 { The b4 pawn will continuously prevent Nc3. } 7. c4 cxd4 8. Nxd4 Bxg2 9. Kxg2 Qc7 { Black's position is comfortable }) (6. Na3 { The most common move amongst masters. White challenges the b5 pawn right away and confidently states that the b4 pawn has its weaknesses for Black. } 6... a6 7. c4 b4 8. Nc2 cxd4 9. Ncxd4 Be7 10. b3 O-O 11. Bb2 Qb6 { Black has equalized. A knight could head to c5 and further to e4. }) 6... cxd4 7. cxd4 Be7 8. Nc3 b4 9. Na4 O-O 10. Nc5 Bc6 { White cannot claim any outposts while Black's b4 pawn is a big plus, gaining space on the queenside. } *
+
+
+[Event "🏆 Nimzo/Bogo Indian Repertoire 🏆: Stonewall Attack"]
+[Site "https://lichess.org/study/DeAekads/cMKs4MSJ"]
+[Date "2020.06.23"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "D00"]
+[Opening "Queen's Pawn Game: Stonewall Attack"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "Stonewall Attack"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/QJpvAFp0"]
+[UTCDate "2020.06.23"]
+[UTCTime "18:24:24"]
+
+{ I have made strong claims that the Stonewall Attack is bad in my Kings Indian Guide, and I state my refutation there. However, since this guide is for Nimzo/Bogo Indian, I will not suggest a line that requires a fianchetto and largely different structures. The Stonewall is still refutable, and should not cause Black troubles }
+1. d4 Nf6 2. e3 d5 (2... g6 { My recommendation in the Kings Indian Guide } 3. Bd3 Bg7 4. f4 O-O 5. Nf3 d6 6. c3 Nc6 7. O-O e5 { Disrupting the Stonewall structure }) 3. Bd3 c5 4. c3 Nc6 5. f4 Bg4! { Getting the bishop outside the pawn chain before playing e6 is essential } (5... e6?! { A Stonewall Attack player's delight! } 6. Nf3 Bd6 7. Ne5 { Objectively equal but the position is so much easier to play on the White side. }) 6. Nf3 e6 { With the added threat of Bf5, trading off bishops. } 7. O-O Bd6 8. h3 (8. Nbd2 O-O 9. h3 Bf5) (8. Qe1 Bf5) 8... Bf5 { Offering to trade off your bad bishop for White's excellent one. } 9. Bxf5 exf5 10. Ne5 { Worry not! e5 is not an outpost for the knight. However, e4 is one for yours... } 10... O-O { The Bg4 move gives zero advantage for White. If you play e6 too early, White gets a monster knight on e5 and an uncontestable bishop on d3. } *
+
+
+[Event "🏆 Nimzo/Bogo Indian Repertoire 🏆: Rare (Bad) Moves"]
+[Site "https://lichess.org/study/DeAekads/sBaWTMCa"]
+[Date "2020.06.23"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "A50"]
+[Opening "Indian Defense: Normal Variation"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "Rare (Bad) Moves"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/HFa6M5eh"]
+[UTCDate "2020.06.23"]
+[UTCTime "18:24:24"]
+
+1. d4 Nf6 2. c4 e6 3. a3 { An interesting move that stops both the Nimzo Indian and Bogo Indian on the spot. So naturally, the goal is to force White into a line where a3 is not effective. I suggest the Benoni, where usually White will play a4 to slow down Black's future queenside expansion. } 3... c5 4. d5 (4. e3 cxd4 5. exd4 d5) 4... exd5 5. cxd5 b5 { Already a new type of position than typical Benoni structures. White's Nc3 is typically played early, so it's a real pain for White now to even develop the knight at all. } 6. Nc3 (6. e4 { Probably White's best try is to mix things up with e4. } 6... Nxe4 7. Bd3 Nd6 8. Nc3 c4 9. Bc2 Be7) 6... b4 *
+
+
+[Event "🏆 Nimzo/Bogo Indian Repertoire 🏆: **Main Lines**"]
+[Site "https://lichess.org/study/DeAekads/34ClXYv7"]
+[Date "2020.06.23"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "** Main Lines **"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/7qKdKyan"]
+[FEN "rnbqkb1r/pppppppp/5n2/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2020.06.23"]
+[UTCTime "18:24:24"]
+
+ *
+
+
+[Event "🏆 Nimzo/Bogo Indian Repertoire 🏆: Nimzo/Bogo Indian Introduction/Ideas"]
+[Site "https://lichess.org/study/DeAekads/Fo4wntxQ"]
+[Date "2020.06.23"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "E43"]
+[Opening "Nimzo-Indian Defense: St. Petersburg Variation"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "Nimzo/Bogo Indian Introduction/Ideas"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/1Htpfpgv"]
+[UTCDate "2020.06.23"]
+[UTCTime "18:24:24"]
+
+{ If I can describe the tempo of the Nimzo/Bogo Indian, I will say it is basically the opposite of the tempo of the Kings Indian. As we saw in the Kings Indian guide, those positions likely lead to unclear play where both sides are trying to outpace their opponent on their side of the board. Nimzo/Bogo are slower and quieter }
+1. d4 Nf6 2. c4 e6 { d4 Nf6 c4 e6 is the starting position for the Nimzo/Bogo. 3. Nc3 leads to a Nimzo, while 3. Nf3 leads to a Bogo. They can transpose to one another, but usually, they lead to different setups in the position. This opening is known to be very solid, and it's played by grandmasters all the time (if not the most frequent defense against 1. d4) } { [%cal Gg1f3,Gb1c3] } 3. Nc3 Bb4 { As a higher level concept, the Nimzo/Bogo Indian are focused around the e4 square. White would ideally want to play e4 safely and take the full pawn center. Black could play d5 and play a Slav/QGD, but the Nimzo Indian takes an approach of stopping White's e4 without playing d5. } { [%csl Ge4] } 4. e3 { There are four major moves for White on move 4: Qc2, f3, a3, and e3. 4. Nf3 usually transposes back to a Bogo Indian. I will be analyzing each of these moves in detail below. } (4. Qc2) (4. f3) (4. a3) 4... b6 5. Bd3 Bb7 { You can see the battle for the e4 square already forming. Black wants to control e4 without pushing d5 } *
+
+
+[Event "🏆 Nimzo/Bogo Indian Repertoire 🏆: Do not fall for this trap!!"]
+[Site "https://lichess.org/study/DeAekads/d2W7xEQg"]
+[Date "2020.06.23"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "E43"]
+[Opening "Nimzo-Indian Defense: St. Petersburg Variation"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "Do not fall for this trap!!"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/iUwNRXAv"]
+[UTCDate "2020.06.23"]
+[UTCTime "18:24:24"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. e3 b6 5. Bd3 Bb7 6. Nf3 h6 { Not a logical move here, but I'm trying to show a fairly common mistake amongst newer players. } 7. O-O d6?? { Always be on the lookout for Qa4+, which forks the king and bishop. Rule of thumb: Castle early, but if you play d6 before 0-0, you must have a good reason and only if Qa4+ fails. } 8. Qa4+ Nc6 9. d5 { Black loses a minor in all lines } 9... Bxc3 10. dxc6 *
+
+
+[Event "🏆 Nimzo/Bogo Indian Repertoire 🏆: Nimzo Indian 4. e3 lines"]
+[Site "https://lichess.org/study/DeAekads/nqxjJVTV"]
+[Date "2020.06.23"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "E44"]
+[Opening "Nimzo-Indian Defense: St. Petersburg Variation, Romanishin–Psakhis Variation"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "Nimzo Indian 4. e3"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/MLbzhJcu"]
+[UTCDate "2020.06.23"]
+[UTCTime "18:24:24"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. e3 b6 { White has 3 different plans here: Ne2, Bd3, and Nf3. We will go over each of these moves in their own chapters. This chapter is dedicated to Ne2, which is the most challenging one to face. } 5. Ne2 { White's idea is clear: If Black plays Bxc3, white will recapture with the knight and not ruin the pawn structure, as is typically the case in the Nimzo Indian. } 5... c5!? { I recommend this rather unintuitive move. } (5... Bb7 { Bb7 is the most intuitive and Nimzo-Indian style. However, the problem is that the Nc3 will always stay there, even after Bxc3+ since the knights are connected. } 6. a3 Be7 (6... Bxc3+ 7. Nxc3 { Exchanging just loses the bishop pair with no real compensation. }) 7. d5 { Looks quite ugly with both bishops hemmed in by White's space advantage. White scores very well in this position in practice }) 6. a3 { Logical, tempting Black to give up the bishop. } (6. d5 O-O 7. a3 Ba5 8. g3) 6... Ba5!? { No trade! This is the idea of c5. Although unseen in pretty much every other Nimzo Indian variation, this line is particularly strong because it maintains the pin. White will do whatever it takes to push b4 safely and Black will prevent it } 7. Rb1 { Logical move to threaten b4, trapping the bishop } 7... Na6 8. Qa4 { Likely the most critical line here, so you MUST know how to combat Qa4. The threat is b4 to trap the bishop altogether. Do not give in and play Bxc3+! This line has been analyzed by computers, so better memorize the line. } (8. g3 Bb7 9. d5 b5!? { Picking at the pawn chain. Once c4 falls, d5 is looser } 10. Bg2 bxc4 11. O-O O-O 12. e4 exd5 13. e5 (13. exd5 d6 14. Bg5 h6 15. Bxf6 Qxf6 16. Qa4 Bb6) 13... Ng4 14. Nxd5 Nxe5) (8. Bd2 O-O 9. Ng3 Bb7 10. Bd3 d5 11. cxd5 cxd4 (11... exd5?? 12. Bxa6 Bxa6 13. b4 { Be careful not to trap your own bishop on a5! }) 12. exd4 Bxc3 13. bxc3 Qxd5) (8. Ng3 Bb7 9. Bd3!? Bxg2 { Black hasn't castled kingside yet, so the g2 pawn is safer to grab. Rg1 does not line itself against the Black king } 10. Rg1 Bb7) 8... Bb7 9. b4 Bc6! 10. b5 { I will state the Stockfish line below: } (10. Nb5 cxb4 11. axb4 Nxb4 12. Rxb4 O-O 13. Bd2 a6) 10... cxd4 11. exd4 Be4 12. Rb2 e5 13. bxa6 exd4 14. Bd2 dxc3 15. Nxc3 O-O { A dynamic position where White's king is still stuck in the center, unable to castle yet. } *
+
+
+[Event "🏆 Nimzo/Bogo Indian Repertoire 🏆: Nimzo 4. e3 part 2"]
+[Site "https://lichess.org/study/DeAekads/daNik3Hi"]
+[Date "2020.06.23"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "E43"]
+[Opening "Nimzo-Indian Defense: St. Petersburg Variation"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "Nimzo 4. e3 part 2"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/Mp1yHj2r"]
+[UTCDate "2020.06.23"]
+[UTCTime "18:25:03"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. e3 b6 5. Bd3 Bb7 6. f3 (6. Ne2!? { Letting Black play Bxg2 to open up the g-file is common in the Nimzo Indian. It is especially logical if Black has castled and the open g-file is a direct path to the king. However, Black is uncastled and in this case, White is the one whose king will be weaker! } 6... Bxg2 7. Rg1 Bf3 8. Rxg7 Nh5 9. Rg1 Qh4 { h2 is falling soon and Black's doing well }) (6. Nf3 { This tranposes to the next chapter on 5. Nf3 }) 6... c5 { Note the White knight is blocked from reaching f3, so c5 is a natural move to take advantage of it } 7. a3 (7. Ne2 cxd4 8. exd4 O-O 9. a3 Bxc3+ 10. Nxc3 d5 { The f3 pawn does not belong in this structure, where a knight on f3 is much preferred. Black has no trouble here }) 7... Bxc3+ 8. bxc3 Nc6 9. Ne2 O-O 10. e4 Ne8 11. O-O Na5 { Playing against the c4 pawn. Ba6 plus Qc8 or Rc8 would be immense pressure and usually wins the c4 pawn . } *
+
+
+[Event "🏆 Nimzo/Bogo Indian Repertoire 🏆: Nimzo 4. e3 part 3"]
+[Site "https://lichess.org/study/DeAekads/GFmbj9Gv"]
+[Date "2020.06.23"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "E43"]
+[Opening "Nimzo-Indian Defense: St. Petersburg Variation"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "Nimzo 4. e3 part 3"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/KSRmZiFM"]
+[UTCDate "2020.06.23"]
+[UTCTime "18:25:03"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. e3 b6 5. Nf3 Bb7 6. Bd3 { Considered the "normal" development approach, White sets up the knights on f3 and c3 early, bishop on d3, and castles. I find this setup the easiest to play against because Black gets a pretty standard Nimzo indian plan without having to worry about deviations like in the 4. e3 part 1. } 6... Ne4 7. Qc2 (7. O-O Bxc3 8. bxc3 f5 (8... Nxc3 { Somewhat dangerous pawn to take because the knight lacks escape squares } 9. Qc2 Bxf3 10. gxf3 Qg5+ 11. Kh1 Qh5 12. Qxc3 Qxf3+ 13. Kg1 Qg4+ { Black is forced to draw by repetition, but otherwise a very messy position })) 7... f5 8. O-O Bxc3 9. bxc3 O-O { A common theme in the Nimzo/Bogo. This kind of position can also reached in the 4. Nbd2 Bogo Indian. Black plants a knight on e4 followed by f5 and a rook and queen lift for a rapid attack. } 10. Nd2 Qh4 11. f3 Nxd2 12. Bxd2 d6 13. e4 fxe4 14. fxe4 Nd7 { Comfortable position for Black. The knight is on its way to the kingside and White cannot actively utilize the bishop pair, especially with loose pawns in the center (e4 and c4) } *
+
+
+[Event "🏆 Nimzo/Bogo Indian Repertoire 🏆: Crush the Nimzo 4. Qc2 - The Adorjan!"]
+[Site "https://lichess.org/study/DeAekads/5VrAK7DG"]
+[Date "2020.06.23"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "E32"]
+[Opening "Nimzo-Indian Defense: Classical Variation, Vitolins-Adorjan Gambit"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "Crush the Nimzo 4. Qc2 - The Adorjan!"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/TCh8mJr4"]
+[UTCDate "2020.06.23"]
+[UTCTime "18:25:03"]
+
+{ There are numerous ways to play against the popular 4. Qc2. I've played }
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Qc2 O-O 5. a3 Bxc3+ 6. Qxc3 b5!? (6... b6 { b6 is the more Nimzo-Indian friendly line since it follows the same principles. However, 6. b5 is likely to shock White, so you can have an edge in the opening. Plus, it is completely sound! } 7. Bg5 Bb7 8. e3) 7. cxb5 c6 8. Bg5 { Likely the best response to the Adorjan. White develops the bishop and pins the black queen, so Ne4 or Nd5 ideas for black are out the window for now. } (8. bxc6 Nxc6 9. Nf3 Bb7 10. Bg5 Rc8) (8. e3 cxb5 9. Bxb5 { 8. e3 is playable, and will require a pawn gambit by Black, but I ensure you that Black has enough compensation for the pawn. } 9... Ne4 { The Bb5 is awkwardly placed, soon running into Qa5+, forking the white king and bishop. White has to be careful now } 10. Qb3 (10. Qd3 Nd6) 10... Ba6 11. Bxa6 Qa5+ 12. Kf1 Qxa6+ 13. Ne2 Nc6) 8... cxb5 9. e3 Bb7 10. Nf3 (10. Bxb5?? { Obviously not Bxb5 } 10... Bxg2) 10... h6 11. Bh4 g5 12. Bg3 Ne4 13. Qc2 a6 14. Bd3 f5 15. O-O Nxg3 16. hxg3 Nc6 { A fairly balanced position. Do not overextend your pawns on the kingside and develop the rooks to c-file. } *
+
+
+[Event "🏆 Nimzo/Bogo Indian Repertoire 🏆: Nimzo 4. Qc2 5. Nf3"]
+[Site "https://lichess.org/study/DeAekads/43mjt9mR"]
+[Date "2020.06.23"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "E32"]
+[Opening "Nimzo-Indian Defense: Classical Variation"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "Nimzo 4. Qc2 5. Nf3"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/jeeUBg6G"]
+[UTCDate "2020.06.23"]
+[UTCTime "18:25:03"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Qc2 O-O 5. Nf3 c5 { Striking back in the center immediately, taking advantage of white's Qc2 move, which seemingly loses some control over the d4 square. } 6. dxc5 { Most popular move. White doesn't bother with e3, shutting the Bc1 in. } (6. e3 { Harmless } 6... b6 7. Be2 Bb7 8. O-O cxd4 { As seen in the Important Theme #2 chapter! See that chapter for the details } 9. exd4 d5) (6. Bg5 h6 7. Bh4 cxd4 8. Nxd4 Nc6 9. e3 Nxd4 10. exd4 b6 11. a3 (11. Bd3 Bb7 12. a3 Be7 { See Important Theme #3 above }) 11... Be7) 6... Na6 { Bishop is doing great on b4, so the knight is asked to recapture. } 7. g3 Nxc5 8. Bg2 b6 9. O-O (9. Ne5 Bb7 { Harmless for Black. White will have to exchange light squared bishops, which Black should welcome given it is White's fianchetto bishop. }) 9... Bxc3 (9... Bb7) 10. Qxc3 Bb7 11. Rd1 Qe7 12. Bf4 d5 { Cannot allow White to plant a bishop on d6. Rooks head to d8 and c8. Black is fine } 13. Rac1 Rfd8 *
+
+
+[Event "🏆 Nimzo/Bogo Indian Repertoire 🏆: Nimzo 4. Qc2 5. e4"]
+[Site "https://lichess.org/study/DeAekads/znk9PkMF"]
+[Date "2020.06.23"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "E32"]
+[Opening "Nimzo-Indian Defense: Classical Variation"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "Nimzo 4. Qc2 5. e4"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/IOhw1C8r"]
+[UTCDate "2020.06.23"]
+[UTCTime "18:25:03"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Qc2 O-O 5. e4 d6 (5... d5 { The extremely theoretical line. d6 is more standard for Nimzo Indian pawn structures so I suggest that instead. }) 6. a3 (6. Nf3 e5!? { White cannot accept this gambit. White's pawn structure will be too loose, and the added risk of the king still in the center is a bit too much. } 7. dxe5 dxe5 8. Nxe5 Re8 9. f4 Bxc3+ 10. bxc3 Nbd7 11. Nxd7 Rxe4+ 12. Be2 Bxd7) (6. Bd3 c5 { High level rule: If White hasn't committed Nf3 yet, e5 is not as effective because White can play Ne2 and f4 with pressure. Therefore, c5 is also playable. } 7. d5 Bxc3+ 8. Qxc3 exd5 9. cxd5 Re8 { Either d5 or e4 pawn is lost. } 10. Qc4 b5) 6... Bxc3+ 7. bxc3 Nbd7 8. Bd3 c5 { High level rule: If White hasn't committed Nf3 yet, e5 is not as effective because White can play Ne2 and f4 with pressure. Therefore, c5 is also playable. } 9. Ne2 Qc7 10. a4 { White must play this move to stop Black from playing b5! } (10. O-O? b5! { Loads of pressure on c4 now. White cannot play cxb5 due to c4, trapping the bishop. }) 10... b6 11. O-O Ba6 { The c4 pawn is the next target } *
+
+
+[Event "🏆 Nimzo/Bogo Indian Repertoire 🏆: Nimzo/Bogo Nf3 AND Nc3 lines"]
+[Site "https://lichess.org/study/DeAekads/KNicLZS6"]
+[Date "2020.06.23"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "E21"]
+[Opening "Nimzo-Indian Defense: Three Knights Variation"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "Nimzo/Bogo Nf3 AND Nc3"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/Rpfq8xZV"]
+[UTCDate "2020.06.23"]
+[UTCTime "18:25:03"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Nf3 b6 5. Bg5 { The most challenging move } (5. g3 Bb7 6. Bg2 O-O 7. O-O Bxc3 8. bxc3 d6 { A solid position and Nbd7 and e5 coming next. c4 pawn can also be a huge target in the near future. }) 5... h6 6. Bh4 (6. Bxf6 Qxf6 7. e3 Bxc3+ 8. bxc3 Bb7 { Zero weaknesses for Black. }) 6... g5 7. Bg3 Ne4 8. Qc2 Bb7 9. e3 Bxc3+ 10. bxc3 d6 11. Bd3 f5 { As seen already in many variations, this Ne4 + f5 combo gives Black nice expansion ideas on the kingside and acts as a thorn in White's center play. } *
+
+
+[Event "🏆 Nimzo/Bogo Indian Repertoire 🏆: Nimzo Indian 4. a3"]
+[Site "https://lichess.org/study/DeAekads/T4vKGDUB"]
+[Date "2020.06.23"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "E27"]
+[Opening "Nimzo-Indian Defense: Sämisch Variation"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "Nimzo Indian 4. a3"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/kcxTgwBX"]
+[UTCDate "2020.06.23"]
+[UTCTime "18:25:03"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. a3 Bxc3+ 5. bxc3 O-O { White usually plays f3 or e3 } 6. f3 (6. e3 { e3 is the far less challenging move because it does not show any signs (possibly slow plans) of playing e4, and those lines where White grabs the center at all costs are the more dangerous ones. } 6... d6 7. Bd3 e5) 6... c5 7. e4 Ne8 { This strange looking move is the start of a long term plan to attack the weak c4 pawn. } 8. Bd3 Nc6 9. Ne2 b6 10. O-O Ba6 { That's one attacker. } 11. f4 { One of White's dangerous ideas is to sacrifice the c4 pawn but gain tempi on the kingside. This should not be allowed. f5 stops White in his tracks } (11. Ng3 Na5 { That's 2 attackers } 12. Qe2 cxd4 13. cxd4 Rc8 { That's 3! And the pawn is lost. }) (11. Be3 Nd6!? { Now you see the point of Ne8. The knight could also be an attacker of c4! }) 11... f5 12. e5 Na5 { Now back to the queenside } *
+
+
+[Event "🏆 Nimzo/Bogo Indian Repertoire 🏆: Nimzo Indian 4. f3"]
+[Site "https://lichess.org/study/DeAekads/EZJJ7WUW"]
+[Date "2020.06.23"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "E20"]
+[Opening "Nimzo-Indian Defense: Kmoch Variation"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "Nimzo Indian 4. f3"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/YKkgRokN"]
+[UTCDate "2020.06.23"]
+[UTCTime "18:25:03"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. f3 O-O 5. e4 (5. a3 Bxc3+ 6. bxc3 Nh5 { Transposes back to the same position in the 4. a3 chapter. }) 5... c5 6. d5 (6. e5 cxd4 { White center is crumbling } 7. Qxd4 Nc6 8. Qe3) 6... d6 7. Bd3 b5 8. Ne2 (8. cxb5 exd5 9. exd5 a6 { Benko Gambit style! White wishes the f-pawn moved back to f2. It now acts as a huge liability, making the g1-a7 diagonal an attacking opportunity for Black. }) 8... bxc4 9. Bxc4 exd5 10. Bxd5 Nxd5 11. Qxd5 Be6!? { If White takes the bait with Qxa8, the queen is forced to sacrifice itself for 2 rooks, leading to a complicated position } 12. Qxa8 Qb6 13. O-O Nc6 14. Qxf8+ Kxf8 { Very imbalanced position. White has 2 rooks for a queen. } 15. Nf4 { The only way to fight for the outpost. This position is equal objectively, but it should be easier for black to play because White's rooks are still disconnected and not active yet. Black's queen can be a good harasser to White's pawns and force some committal moves. } *
+
+
+[Event "🏆 Nimzo/Bogo Indian Repertoire 🏆: Bogo Indian with 4. Bd2"]
+[Site "https://lichess.org/study/DeAekads/NtfDjoSE"]
+[Date "2020.06.23"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "E11"]
+[Opening "Bogo-Indian Defense: Wade-Smyslov Variation"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "Bogo Indian with 4. Bd2"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/oJmj5VKe"]
+[UTCDate "2020.06.23"]
+[UTCTime "18:25:03"]
+
+1. d4 Nf6 2. c4 e6 3. Nf3 Bb4+ 4. Bd2 a5 { A strange looking move at first, but it will make sense when you analyze the individual reasons for playing this move. Black is saying that if White chooses to double Black's b-pawns, they will act more as an advantage than a weakness since the Nb1 for white cannot go to its favorable square c3. Plus, Black has an open a-file. } 5. g3 d6 { d6 should be played before 0-0. The e5 break is more important right now than bringing the Black king to safety. } (5... O-O 6. Bg2 d6 7. O-O Nbd7 8. Bg5 { Now you see the difference. Black cannot play e5 now because the Bb4 is about to be trapped. } 8... e5?? 9. a3) 6. Bg2 Nbd7 7. O-O e5 { A position that is commonly reached. Black achieves his thematic e5 push. In this position, White has a wide range of moves: Bg5, Nc3, dxe5, a3, and e3. We'll review Bg5 and Nc3 in this chapter and dxe5 and a3 in the next. 8. e3 will be discussed in a later chapter called "Don't fall for this trap in the Bogo Indian!" } 8. Bg5 { Indirectly threatening a3 to trap the bishop. } (8. Nc3 exd4 9. Nxd4 O-O 10. a3 Bc5 11. Nb3 a4 12. Nxc5 Nxc5) 8... exd4 { Now the bishop can retreat with Bc5 just in time! } 9. Nxd4 h6 10. Bf4 O-O 11. a3 Bc5 12. Nc3 a4 { The c4 pawn will be a target next. White cannot play Nxa4 due to the Queen being overloaded. } 13. Ndb5 (13. Nxa4?? Bxd4 14. Qxd4 Rxa4) 13... Nb6 14. Qd3 Re8 *
+
+
+[Event "🏆 Nimzo/Bogo Indian Repertoire 🏆: Bogo 4. Bd2 part 2"]
+[Site "https://lichess.org/study/DeAekads/XxMkHQGL"]
+[Date "2020.06.23"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "E11"]
+[Opening "Bogo-Indian Defense: Wade-Smyslov Variation"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "Bogo 4. Bd2 part 2"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/gf7nsS9T"]
+[UTCDate "2020.06.23"]
+[UTCTime "18:25:03"]
+
+1. d4 Nf6 2. c4 e6 3. Nf3 Bb4+ 4. Bd2 a5 5. g3 d6 6. Bg2 Nbd7 7. O-O e5 8. a3 (8. dxe5 { The exchange lines often are a bit dull and drawish, but does not create any problems for Black in the middlegame. } 8... dxe5 9. Nc3 O-O 10. a3 Bc5 11. Bg5 c6 { Important to play c6 to stop the knight from invading with Nd5 } 12. Ne4 Be7 13. Nd6 Qc7 14. Nxc8 Rfxc8 15. Qc2 a4 { Nc5 is the next plan, seizing the outpost and possibly heading in to b3 at the correct moment. }) 8... Bxd2 9. Qxd2 O-O 10. Nc3 exd4 11. Nxd4 a4 { a4 is a move you always want to watch for. It locks White's pawns in place, since any move of the b pawn by White allows axb3, which ruins the structure. However, the c4 pawn will be a nice target in all cases. } 12. e4 Ne5 13. Qe2 c6 14. f4? { Too ambitious! } 14... Qb6! 15. Rad1 Bg4 { Black takes the initiative and White has to give up material. } *
+
+
+[Event "🏆 Nimzo/Bogo Indian Repertoire 🏆: Bogo 4. Bd2 part 3"]
+[Site "https://lichess.org/study/DeAekads/C81yBKxr"]
+[Date "2020.06.23"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "E11"]
+[Opening "Bogo-Indian Defense: Wade-Smyslov Variation"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "Bogo 4. Bd2 part 3"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/hHUR1SLF"]
+[UTCDate "2020.06.23"]
+[UTCTime "18:25:03"]
+
+1. d4 Nf6 2. c4 e6 3. Nf3 Bb4+ 4. Bd2 a5 5. a3 (5. Nc3 { Another playable move, Nimzo Indian style. Black's a5 move is inconsistent with Nimzo Indian lines, but Black can also argue that White's Bd2 is not useful either so it's a tradeoff. } 5... b6 6. g3 Bb7 7. Bg2 O-O 8. O-O d6) 5... Bxd2+ 6. Nbxd2 (6. Qxd2 O-O 7. Nc3 d6 8. e4 Nc6 9. Bd3 e5 10. d5 Ne7 { A similar position is reached to the main variation below. }) 6... O-O 7. e4 d6 8. Bd3 Nbd7 9. O-O e5 { These positions should need no introduction by now as this is the Standard pawn break. } *
+
+
+[Event "🏆 Nimzo/Bogo Indian Repertoire 🏆: Don't fall for this trap in the Bogo-Indian!"]
+[Site "https://lichess.org/study/DeAekads/M0w0MNKU"]
+[Date "2020.06.23"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "E11"]
+[Opening "Bogo-Indian Defense: Wade-Smyslov Variation"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "Don't fall for this trap in the Bogo-Indian!"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/5mdiMYt6"]
+[UTCDate "2020.06.23"]
+[UTCTime "18:25:03"]
+
+1. d4 Nf6 2. c4 e6 3. Nf3 Bb4+ 4. Bd2 a5 5. g3 d6 6. Bg2 Nbd7 7. O-O e5 8. e3 O-O? 9. Bc1! { Suddenly the Bb4 is trapped even though it is still Black's turn! Happens to the best of us, myself included. } 9... a4 { The best line for black here is to play a4 and sacrifice the pawn in order to make room for an escape square for the bishop. Ugly, but at least no piece is lost. } 10. a3 Ba5 11. Qxa4 *
+
+
+[Event "🏆 Nimzo/Bogo Indian Repertoire 🏆: Bogo Indian with 4. Nbd2"]
+[Site "https://lichess.org/study/DeAekads/yOLgDz0c"]
+[Date "2020.06.23"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "E11"]
+[Opening "Bogo-Indian Defense: Grünfeld Variation"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "Bogo Indian with 4. Nbd2"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/NasrJtqx"]
+[UTCDate "2020.06.23"]
+[UTCTime "18:25:03"]
+
+1. d4 Nf6 2. c4 e6 3. Nf3 Bb4+ 4. Nbd2 b6 5. a3 Bxd2+ { White has the option of playing the standard Bxd2 or the trendy Qxd2!? } 6. Qxd2 { Blocking in the bishop looks crazy at first. However, the bishop will be developed along the a1-h8 diagonal with b4 + Bb2 } 6... a5!? { Surprisingly rare amongst titled players, I like to play this move to prevent White from playing b4. It threatens a4 next as well to firmly keep the b2 pawn where it is. } 7. b3 { White has to concede and play b3, which is just less effective than b4 in every aspect. } 7... Bb7 8. e3 O-O 9. Bb2 Ne4 10. Qc2 f5 11. Be2 d6 12. O-O Nd7 13. d5 { An annoying move in practice that plans on shutting out the Bb7. BLack should not accept the gambit for positional reasons. } (13. Rad1 { Another common move to prepare d5. } 13... Qe7 14. d5 e5 15. Nd2 Nxd2 16. Qxd2 g6 17. f4 exf4 18. Rxf4 Rae8 { White does have the long diagonal a1-h8 in control, so Black has to stick a knight on e5 or f6 to close it. }) 13... e5 (13... exd5!? 14. cxd5 Bxd5 15. Rad1 Bb7 16. Nd4 { White is invading on the light squares e6 and c6. The white bishops will be a nightmare for Black for the rest of the game. }) 14. Nd2 (14. Bd3 Ndc5) 14... Nxd2 15. Qxd2 Qe7 16. b4 (16. f4 Rae8 { Black needs to make sure not to open up the position too soon or else White's bishops will dominate. }) 16... axb4 17. axb4 b5 *
+
+
+[Event "🏆 Nimzo/Bogo Indian Repertoire 🏆: Bogo 4. Nbd2 part 2"]
+[Site "https://lichess.org/study/DeAekads/QnsZPuxi"]
+[Date "2020.06.23"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "E11"]
+[Opening "Bogo-Indian Defense: Grünfeld Variation"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "Bogo 4. Nbd2 part 2"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/BIaoNCJv"]
+[UTCDate "2020.06.23"]
+[UTCTime "18:25:03"]
+
+1. d4 Nf6 2. c4 e6 3. Nf3 Bb4+ 4. Nbd2 b6 5. a3 Bxd2+ 6. Bxd2 Bb7 7. e3 O-O 8. Bd3 Ne4 9. O-O f5 { This is pretty close to most of the positions reached with this structure, so I won't explain the plans again here. See previous chapters. } *
+
+
+[Event "🏆 Nimzo/Bogo Indian Repertoire 🏆: Nimzo/Bogo against the Catalan"]
+[Site "https://lichess.org/study/DeAekads/eC6ONLLX"]
+[Date "2020.06.23"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "E00"]
+[Opening "Catalan Opening"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "Nimzo/Bogo against the Catalan"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/EMu7fapI"]
+[UTCDate "2020.06.23"]
+[UTCTime "18:25:03"]
+
+1. d4 Nf6 2. c4 e6 3. g3 { The Catalan is a theory heavy line, especially in the QGD lines where Black plays d5. However, my recommendation is to steer the game into familiar Bogo Indian territory, while allows me to shorten this topic to just one chapter. } 3... Bb4+ 4. Bd2 a5 { Often transposes to the Bogo Indian with 4. Bd2 } 5. Bg2 d6 6. e4 { This line is unique to the Catalan move order with 3. g3, but often leads to very similar positions anyways to any of the previous variations in the study. } 6... e5 7. Ne2 O-O 8. O-O exd4 9. Nxd4 Bc5 { And black should finish development without much trouble } *
+
+
+[Event "🏆 Nimzo/Bogo Indian Repertoire 🏆: ****Mr_Penings' Games****"]
+[Site "https://lichess.org/study/DeAekads/qbmT9dWY"]
+[Date "2020.06.23"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "** Mr_Penings Sample Games **"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/Ih5b4IA2"]
+[UTCDate "2020.06.23"]
+[UTCTime "18:25:03"]
+
+{ In the following chapters, I have added several of my games in the Nimzo-Indian to show you the main ideas in practice. I've included games from many of the possible white responses in the opening. }
+ *
+
+
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2020.06.14"]
+[White "Chesster_30"]
+[Black "Mr_Penings"]
+[Result "0-1"]
+[WhiteElo "2495"]
+[BlackElo "2700"]
+[TimeControl "180+2"]
+[Termination "Mr_Penings won by resignation"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "A50"]
+[Opening "Mexican Defense"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "Chesster_30 - Mr_Penings"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/B8Ia60te"]
+
+1. d4 { [%clk 0:03:02] } 1... Nf6 { [%clk 0:02:59] } 2. c4 { [%clk 0:03:03] } 2... Nc6 { [%clk 0:03:01] } 3. Nf3 { [%clk 0:02:59] } 3... e6 { [%clk 0:03:02] } 4. g3 { [%clk 0:02:59] } 4... Bb4+ { [%clk 0:02:58] } 5. Bd2 { [%clk 0:03:00] } 5... Qe7 { Transposes back to a Bogo-Indian. Qe7 is another popular line. The idea is to trade off the dark squared bishop and then putting pawns on dark squares. } { [%clk 0:02:58] } 6. Bg2 { [%clk 0:03:00] } 6... Bxd2+ { [%clk 0:02:54] } 7. Nbxd2 { [%clk 0:02:57] } 7... d6 { [%clk 0:02:55] } 8. O-O { [%clk 0:02:33] } 8... e5 { [%clk 0:02:54] } 9. d5 { [%clk 0:02:35] } 9... Nb8 { Knight is headed back to the game from d7. } { [%clk 0:02:56] } 10. e4 { [%clk 0:02:27] } 10... O-O { [%clk 0:02:56] } 11. b4 { [%clk 0:02:25] } 11... Nbd7 { [%clk 0:02:39] } 12. Qc2 { [%clk 0:02:23] } 12... b6 { [%clk 0:02:37] } 13. Nb3 { [%clk 0:02:20] } 13... a5 { [%clk 0:02:30] } 14. a3 { [%clk 0:01:59] } 14... Bb7 { [%clk 0:02:07] } 15. Rab1 { [%clk 0:01:50] } 15... axb4 { [%clk 0:02:07] } 16. axb4 { [%clk 0:01:51] } 16... c5 { Locking up the position, and to prevent White from playing c5. If White successfully pushed c5, Black will be left with a damaged pawn structure. } { [%clk 0:01:51] } (16... Ra7 17. c5 bxc5 18. bxc5 dxc5 { Ugly pawn structure }) 17. bxc5 { [%clk 0:01:40] } 17... Nxc5 { [%clk 0:01:53] } 18. Nxc5 { [%clk 0:01:41] } 18... bxc5 { The position here is dead equal. A series of major piece exchanges will occur on the queenside and neither side can claim an advantage. } { [%clk 0:01:55] } 19. Rb2 { [%clk 0:01:27] } 19... Ra7 { [%clk 0:01:47] } 20. Rfb1 { [%clk 0:01:27] } 20... Rfa8 { [%clk 0:01:42] } 21. Nd2 { [%clk 0:01:28] } 21... g6 { [%clk 0:01:36] } 22. h3 { [%clk 0:01:21] } 22... Kg7 { [%clk 0:01:37] } 23. Kh2 { [%clk 0:01:22] } 23... h5 { [%clk 0:01:37] } 24. Nf1 { [%clk 0:01:23] } 24... h4 { [%clk 0:01:32] } 25. g4? { Likely the critical mistake of the endgame. It is already unpleasant to have all of White's pawns on his own colored bishop's squares. But this committal move gives up the crucial square f4 for Black's pieces! } { [%clk 0:01:09] } 25... Nh7 { [%clk 0:01:31] } 26. Ne3 { [%clk 0:01:09] } 26... Bc8 { [%clk 0:01:29] } 27. Rb3 { [%clk 0:01:02] } 27... Qf6 { [%clk 0:01:25] } 28. Kg1 { [%clk 0:01:01] } 28... Ng5 { [%clk 0:01:25] } 29. Nf1 { [%clk 0:00:51] } 29... Qf4 { [%clk 0:01:14] } 30. Qd2 { [%clk 0:00:49] } 30... Ra2 { [%clk 0:01:06] } 31. R1b2 { [%clk 0:00:43] } (31. Qxf4 exf4 { Queen trade should not be a worry because now the king can march in through the now open e5 square }) 31... Ra1 { [%clk 0:01:03] } 32. Rb1 { [%clk 0:00:22] } 32... R8a2 { [%clk 0:01:01] } 33. Qxf4 { [%clk 0:00:22] } 33... exf4 { [%clk 0:01:02] } 34. Rxa1 { [%clk 0:00:23] } 34... Rxa1 { [%clk 0:01:03] } 35. f3 { [%clk 0:00:22] } 35... Ba6 { [%clk 0:01:00] } 36. Rb6 { [%clk 0:00:11] } 36... Bxc4 { [%clk 0:00:59] } 37. Rxd6 { [%clk 0:00:12] } 37... Bxf1 { [%clk 0:00:44] } 38. Bxf1 { [%clk 0:00:14] } 38... Nxf3+ { [%clk 0:00:44] } 39. Kf2 { [%clk 0:00:15] } 39... Nd2 { [%clk 0:00:39] } 40. Bg2 { [%clk 0:00:11] } 40... Ra3 { Preparing f3, which is crushing } { [%clk 0:00:18] } 41. e5 { [%clk 0:00:10] } 41... f3 { [%clk 0:00:18] } 42. Bxf3 { [%clk 0:00:09] } 42... Nxf3 { [%clk 0:00:17] } 43. e6 { [%clk 0:00:11] } 43... fxe6 { [%clk 0:00:16] } 44. dxe6 { [%clk 0:00:11] } 44... Ng5 { 0-1 Black wins. } { [%clk 0:00:15] } 0-1
+
+
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2020.04.04"]
+[White "ChessNut6453v42"]
+[Black "Mr_Penings"]
+[Result "0-1"]
+[WhiteElo "2477"]
+[BlackElo "2611"]
+[TimeControl "180"]
+[Termination "Mr_Penings won by resignation"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "A46"]
+[Opening "Indian Defense: London System"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "ChessNut6453v42 - Mr_Penings"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/Sddt0pSR"]
+
+1. d4 { [%clk 0:03:00] } 1... Nf6 { [%clk 0:02:56] } 2. Nf3 { [%clk 0:02:58] } 2... e6 { [%clk 0:02:55] } 3. Bf4 { [%clk 0:02:57] } 3... b6 { [%clk 0:02:54] } 4. e3 { [%clk 0:02:55] } 4... Bb7 { [%clk 0:02:54] } 5. Nbd2 { [%clk 0:02:55] } 5... Be7 { [%clk 0:02:52] } 6. Bd3 { [%clk 0:02:53] } 6... c5 { [%clk 0:02:51] } 7. c3 { [%clk 0:02:52] } 7... d6 { [%clk 0:02:50] } 8. e4 { [%clk 0:02:49] } 8... cxd4 { [%clk 0:02:49] } 9. cxd4 { [%clk 0:02:48] } 9... Nh5 { [%clk 0:02:42] } 10. Be3 { [%clk 0:02:45] } 10... Nc6 { [%clk 0:02:37] } 11. a3 { [%clk 0:02:43] } 11... O-O { [%clk 0:02:32] } 12. h4 { [%clk 0:02:38] } 12... e5 { [%clk 0:02:29] } 13. d5 { [%clk 0:02:36] } 13... Nd4 { Pawn sacrifice for activity against White's king. This decision was made partly due to White's early h4, which makes 0-0 for White very dangerous. } { [%clk 0:02:12] } 14. Bxd4 { [%clk 0:02:26] } 14... exd4 { [%clk 0:02:10] } 15. Nxd4 { [%clk 0:02:25] } 15... Nf4 { [%clk 0:02:10] } 16. Bf1 { [%clk 0:02:25] } 16... Bf6 { Black's extra dark squared bishop will be quite useful in this wide open position } { [%clk 0:02:06] } 17. N2f3 { [%clk 0:02:23] } 17... Re8 { [%clk 0:02:05] } 18. Bd3 { [%clk 0:02:11] } 18... Bxd5 { [%clk 0:01:45] } 19. O-O { [%clk 0:01:59] } 19... Nxd3 { [%clk 0:01:42] } 20. Qxd3 { [%clk 0:01:58] } 20... Bxe4 { [%clk 0:01:41] } 21. Qd2 { [%clk 0:01:58] } 21... d5 { [%clk 0:01:32] } 22. h5 { [%clk 0:01:55] } 22... Qd7 { [%clk 0:01:25] } 23. Rad1 { [%clk 0:01:54] } 23... Qg4 { [%clk 0:01:24] } 24. h6 { [%clk 0:01:51] } 24... Bxd4 { 0-1 Black wins. } { [%clk 0:01:18] } 25. Qxd4 Bxf3 { White loses a clean piece, so he resigns } 0-1
+
+
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2020.04.09"]
+[White "Blitzstream"]
+[Black "Mr_Penings"]
+[Result "0-1"]
+[WhiteElo "2705"]
+[BlackElo "2649"]
+[TimeControl "180"]
+[Termination "Mr_Penings won on time"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Trompowsky Attack: Classical Defense"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "Blitzstream - Mr_Penings"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/EHRQfWf6"]
+
+1. d4 { [%clk 0:03:00] } 1... Nf6 { [%clk 0:03:00] } 2. Bg5 { [%clk 0:02:59] } 2... e6 { [%clk 0:02:59] } 3. Nd2 { [%clk 0:02:57] } 3... h6 { [%clk 0:02:58] } 4. Bh4 { [%clk 0:02:54] } 4... b6 { [%clk 0:02:58] } 5. e3 { [%clk 0:02:54] } 5... Bb7 { [%clk 0:02:57] } 6. Ngf3 { [%clk 0:02:53] } 6... c5 { [%clk 0:02:56] } 7. c3 { [%clk 0:02:52] } 7... Be7 { [%clk 0:02:54] } 8. Bd3 { [%clk 0:02:51] } 8... Nc6 { [%clk 0:02:53] } 9. O-O { [%clk 0:02:49] } 9... O-O { [%clk 0:02:49] } 10. Re1 { [%clk 0:02:49] } 10... d6 { [%clk 0:02:46] } 11. Rc1 { [%clk 0:02:46] } 11... Rc8 { [%clk 0:02:45] } 12. a3 { [%clk 0:02:36] } 12... Re8 { [%clk 0:02:44] } 13. b4 { [%clk 0:02:34] } 13... Qc7 { [%clk 0:02:35] } 14. e4 { [%clk 0:02:28] } 14... e5 { Or else White gets to play e5 and the position opens up in White's favor. } { [%clk 0:02:33] } 15. d5 { [%clk 0:02:20] } 15... Nb8 { [%clk 0:02:27] } 16. Nf1 { [%clk 0:02:19] } 16... Nh5 { [%clk 0:02:16] } 17. Bxe7 { [%clk 0:02:11] } 17... Qxe7 { [%clk 0:02:14] } 18. Ne3 { [%clk 0:02:11] } 18... g6 { [%clk 0:02:11] } 19. Ng4 { [%clk 0:02:08] } 19... Kg7 { [%clk 0:02:06] } 20. Qd2 { [%clk 0:02:07] } 20... Rh8 { [%clk 0:02:05] } 21. bxc5 { [%clk 0:01:44] } 21... Rxc5 { c5 square is now a potential outpost for Black's knight. } { [%clk 0:02:05] } 22. Rb1 { [%clk 0:01:33] } 22... Bc8 { [%clk 0:02:03] } 23. Ne3 { [%clk 0:01:28] } 23... Nf4 { [%clk 0:02:01] } 24. Bf1 { [%clk 0:01:27] } 24... h5 { [%clk 0:01:56] } 25. h3 { [%clk 0:01:16] } 25... Nd7 { [%clk 0:01:48] } 26. Kh2 { [%clk 0:01:15] } 26... Nf6 { [%clk 0:01:45] } 27. Nd1 { [%clk 0:00:52] } 27... h4 { [%clk 0:01:28] } 28. Rb5 { [%clk 0:00:42] } 28... Rc7 { [%clk 0:01:26] } 29. a4 { [%clk 0:00:41] } 29... Ba6 { [%clk 0:01:18] } 30. Rb4 { [%clk 0:00:35] } 30... Bxf1 { [%clk 0:01:16] } 31. Rxf1 { [%clk 0:00:35] } 31... a5 { Forcing the rook off the 4th rank, and then the e4 pawn is lost } { [%clk 0:01:15] } 32. Rxb6 { [%clk 0:00:33] } 32... Nxe4 { [%clk 0:01:14] } 33. Qe3 { [%clk 0:00:30] } 33... Nxd5 { [%clk 0:01:06] } 34. Qxe4 { [%clk 0:00:29] } 34... Nxb6 { [%clk 0:01:05] } 35. Ne3 { [%clk 0:00:28] } 35... Rh5 { [%clk 0:01:00] } 36. Qg4 { [%clk 0:00:27] } 36... f5 { [%clk 0:00:55] } 37. Qxh5 { [%clk 0:00:26] } 37... gxh5 { [%clk 0:00:53] } 38. Nxf5+ { [%clk 0:00:26] } 38... Kf6 { [%clk 0:00:53] } 39. Nxe7 { [%clk 0:00:25] } 39... Kxe7 { [%clk 0:00:52] } 40. Nxh4 { [%clk 0:00:25] } 40... Rxc3 { [%clk 0:00:50] } 41. g4 { [%clk 0:00:24] } 41... hxg4 { [%clk 0:00:48] } 42. hxg4 { [%clk 0:00:24] } 42... Nxa4 { [%clk 0:00:47] } 43. g5 { [%clk 0:00:23] } 43... Nc5 { [%clk 0:00:45] } 44. g6 { [%clk 0:00:22] } 44... Kf6 { [%clk 0:00:44] } 45. Rg1 { [%clk 0:00:21] } 45... Ne6 { [%clk 0:00:43] } 46. Ra1 { [%clk 0:00:18] } 46... Kg5 { [%clk 0:00:40] } 47. Ng2 { [%clk 0:00:16] } 47... Rc5 { [%clk 0:00:37] } 48. Ne3 { [%clk 0:00:13] } 48... Kxg6 { [%clk 0:00:36] } 49. Rg1+ { [%clk 0:00:13] } 49... Kf7 { [%clk 0:00:35] } 50. Nf5 { [%clk 0:00:12] } 50... Rd5 { [%clk 0:00:33] } 51. Rb1 { [%clk 0:00:10] } 51... Nf4 { [%clk 0:00:31] } 52. Rb7+ { [%clk 0:00:09] } 52... Ke6 { [%clk 0:00:31] } 53. Ne3 { [%clk 0:00:08] } 53... Rc5 { [%clk 0:00:29] } 54. Kg3 { [%clk 0:00:08] } 54... Ne2+ { [%clk 0:00:27] } 55. Kg4 { [%clk 0:00:07] } 55... Nd4 { [%clk 0:00:27] } 56. Rh7 { [%clk 0:00:06] } 56... a4 { [%clk 0:00:26] } 57. Kg5 { [%clk 0:00:05] } 57... a3 { [%clk 0:00:25] } 58. Ra7 { [%clk 0:00:05] } 58... Nb5 { [%clk 0:00:24] } 59. Ra8 { [%clk 0:00:03] } 59... Kd7 { [%clk 0:00:23] } 60. Kg6 { [%clk 0:00:02] } 60... Kc6 { [%clk 0:00:22] } 61. Kf7 { [%clk 0:00:02] } 61... Kb7 { [%clk 0:00:22] } 62. Ra4 { [%clk 0:00:01] } 62... Rc7+ { 0-1 Black wins. } { [%clk 0:00:20] } 0-1
+
+
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2016.05.05"]
+[White "ChessBrah"]
+[Black "Mr_Penings"]
+[Result "0-1"]
+[WhiteElo "2358"]
+[BlackElo "2424"]
+[TimeControl "180"]
+[Termination "Mr_Penings won by checkmate"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "E20"]
+[Opening "Nimzo-Indian Defense: Kmoch Variation"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "ChessBrah - Mr_Penings"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/CrtOsJUD"]
+
+1. d4 { [%clk 0:02:58] } 1... Nf6 { [%clk 0:03:00] } 2. c4 { [%clk 0:02:55] } 2... e6 { [%clk 0:03:00] } 3. Nc3 { [%clk 0:02:55] } 3... Bb4 { [%clk 0:02:59] } 4. f3 { [%clk 0:02:53] } 4... O-O { [%clk 0:02:58] } 5. a3 { [%clk 0:02:38] } 5... Bxc3+ { [%clk 0:02:56] } 6. bxc3 { [%clk 0:02:38] } 6... Nh5 { Kmoch Variation. Quite tricky, as Qh4+ is threatened, taking advantage of White's early f3 } { [%clk 0:02:56] } 7. Nh3 { [%clk 0:02:36] } 7... f5 { [%clk 0:02:55] } 8. g3 { [%clk 0:02:33] } 8... d6 { [%clk 0:02:51] } 9. Bg2 { [%clk 0:02:27] } 9... Nc6 { [%clk 0:02:50] } 10. O-O { [%clk 0:02:23] } 10... e5 { [%clk 0:02:48] } 11. d5 { [%clk 0:02:15] } 11... Na5 { [%clk 0:02:48] } 12. Qd3 { [%clk 0:02:07] } 12... b6 { c5 looks like a nice outpost! Typical in Nimzo indian pawn structures. } { [%clk 0:02:45] } 13. c5 { [%clk 0:02:03] } 13... Nb3 { [%clk 0:02:41] } 14. cxd6 { A risky shot. White will have to give up the exchange, which is reasonable because moving the rook will be down a clean pawn with no compensation } { [%clk 0:01:55] } 14... Nxa1 { [%clk 0:02:33] } 15. Bg5 { [%clk 0:01:54] } 15... Qxd6 { [%clk 0:02:32] } 16. Rxa1 { [%clk 0:01:53] } 16... Nf6 { [%clk 0:02:23] } 17. e4 { [%clk 0:01:46] } 17... fxe4 { [%clk 0:02:22] } 18. fxe4 { [%clk 0:01:45] } 18... a5 { [%clk 0:02:20] } 19. Qe3 { [%clk 0:01:35] } 19... Ba6 { [%clk 0:02:13] } 20. Nf2 { [%clk 0:01:33] } 20... h6 { [%clk 0:02:09] } 21. Bxf6 { [%clk 0:01:30] } 21... Rxf6 { [%clk 0:02:08] } 22. Bh3 { [%clk 0:01:28] } 22... Raf8 { [%clk 0:02:03] } 23. Be6+ { [%clk 0:01:27] } 23... Kh8 { [%clk 0:01:56] } 24. Ng4 { [%clk 0:01:24] } 24... Rxe6 { Giving back the exchange, but Black is still much better due to the vulnerable White king and superb control of the f-file. } { [%clk 0:01:44] } 25. dxe6 { [%clk 0:01:22] } 25... Qxe6 { [%clk 0:01:44] } 26. Nf2 { [%clk 0:01:19] } 26... Rd8 { [%clk 0:01:37] } 27. Rd1 { [%clk 0:01:16] } 27... Rxd1+ { [%clk 0:01:35] } 28. Nxd1 { [%clk 0:01:15] } 28... Qb3 { [%clk 0:01:20] } 29. Qd2 { [%clk 0:01:11] } 29... Kh7 { [%clk 0:01:07] } 30. Ne3 { [%clk 0:01:03] } 30... Qxa3 { [%clk 0:01:02] } 31. Qf2 { [%clk 0:01:00] } 31... Qc1+ { [%clk 0:00:46] } 32. Kg2 { [%clk 0:00:59] } 32... Bc8 { The f5 square is extremely important because that is the entrance point for perpetual checks. Once that is covered, Black's queenside pawns are free to march } { [%clk 0:00:45] } 33. Nd5 { [%clk 0:00:57] } 33... Bg4 { [%clk 0:00:37] } 34. h3 { [%clk 0:00:52] } 34... Bd7 { [%clk 0:00:35] } 35. Qf7 { [%clk 0:00:47] } 35... Qd2+ { [%clk 0:00:32] } 36. Kf3 { [%clk 0:00:46] } 36... Qd3+ { [%clk 0:00:27] } 37. Kf2 { [%clk 0:00:44] } 37... Qd2+ { [%clk 0:00:23] } 38. Kf3 { [%clk 0:00:43] } 38... Qd3+ { [%clk 0:00:21] } 39. Kf2 { [%clk 0:00:38] } 39... Qd2+ { [%clk 0:00:20] } 40. Kg1 { [%clk 0:00:36] } 40... Qe1+ { [%clk 0:00:19] } 41. Qf1 { [%clk 0:00:34] } 41... Qxf1+ { [%clk 0:00:18] } 42. Kxf1 { [%clk 0:00:33] } 42... Bxh3+ { [%clk 0:00:17] } 43. Ke1 { [%clk 0:00:32] } 43... a4 { [%clk 0:00:17] } 44. Nxc7 { [%clk 0:00:32] } 44... a3 { [%clk 0:00:17] } 45. Kd2 { [%clk 0:00:26] } 45... a2 { [%clk 0:00:16] } 46. Nd5 { [%clk 0:00:25] } 46... a1=Q { [%clk 0:00:15] } 47. Ne3 { [%clk 0:00:25] } 47... Qb2+ { [%clk 0:00:15] } 48. Nc2 { [%clk 0:00:25] } 48... Bg4 { [%clk 0:00:13] } 49. Kd3 { [%clk 0:00:24] } 49... Be2+ { [%clk 0:00:13] } 50. Kd2 { [%clk 0:00:23] } 50... Bc4 { [%clk 0:00:12] } 51. Kd1 { [%clk 0:00:22] } 51... Bb3 { [%clk 0:00:12] } 52. Kd2 { [%clk 0:00:22] } 52... Qxc2+ { [%clk 0:00:12] } 53. Ke3 { [%clk 0:00:22] } 53... Qxc3+ { [%clk 0:00:11] } 54. Kf2 { [%clk 0:00:21] } 54... Bc4 { [%clk 0:00:11] } 55. Kg2 { [%clk 0:00:21] } 55... b5 { [%clk 0:00:11] } 56. Kh3 { [%clk 0:00:21] } 56... b4 { [%clk 0:00:11] } 57. Kh4 { [%clk 0:00:20] } 57... b3 { [%clk 0:00:11] } 58. g4 { [%clk 0:00:20] } 58... b2 { [%clk 0:00:10] } 59. g5 { [%clk 0:00:20] } 59... hxg5+ { [%clk 0:00:10] } 60. Kh5 { [%clk 0:00:19] } 60... Qh3+ { [%clk 0:00:09] } 61. Kxg5 { [%clk 0:00:18] } 61... Qh6+ { [%clk 0:00:08] } 62. Kg4 { [%clk 0:00:18] } 62... Qf6 { [%clk 0:00:08] } 63. Kg3 { [%clk 0:00:17] } 63... Be6 { [%clk 0:00:08] } 64. Kh2 { [%clk 0:00:16] } 64... Qf3 { [%clk 0:00:07] } 65. Kg1 { [%clk 0:00:15] } 65... Qe2 { [%clk 0:00:06] } 66. Kh1 { [%clk 0:00:14] } 66... b1=Q# { 0-1 Black wins by checkmate. } { [%clk 0:00:06] } 0-1
+
+
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2015.06.12"]
+[White "wisdomboy"]
+[Black "Mr_Penings"]
+[Result "0-1"]
+[WhiteElo "1739"]
+[BlackElo "2234"]
+[TimeControl "180"]
+[Termination "Mr_Penings won by checkmate"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "E32"]
+[Opening "Nimzo-Indian Defense: Classical Variation"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "wisdomboy - Mr_Penings"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/SCtywKDo"]
+
+1. d4 { [%clk 0:03:00] } 1... Nf6 { [%clk 0:03:00] } 2. c4 { [%clk 0:02:58] } 2... e6 { [%clk 0:02:56] } 3. Nc3 { [%clk 0:02:50] } 3... Bb4 { [%clk 0:02:54] } 4. Qc2 { [%clk 0:02:48] } 4... O-O { [%clk 0:02:51] } 5. Nf3 { [%clk 0:02:46] } 5... c5 { [%clk 0:02:49] } 6. e3 { [%clk 0:02:42] } 6... Nc6 { [%clk 0:02:42] } 7. Bd3 { [%clk 0:02:38] } 7... d6 { [%clk 0:02:33] } 8. O-O { [%clk 0:02:28] } 8... Bxc3 { [%clk 0:02:24] } 9. bxc3 { [%clk 0:02:26] } 9... e5 { [%clk 0:02:21] } 10. d5 { [%clk 0:02:18] } 10... Ne7 { [%clk 0:02:18] } 11. e4 { Notice White cannot easily activate both bishops. One of them has to be blocked by the e-pawn } { [%clk 0:02:16] } 11... Ng6 { [%clk 0:02:16] } 12. Bg5 { [%clk 0:02:13] } 12... h6 { [%clk 0:02:16] } 13. Be3 { [%clk 0:02:11] } 13... Nh5 { [%clk 0:02:09] } 14. Nd2 { [%clk 0:02:03] } 14... Qf6 { [%clk 0:02:03] } 15. f3 { [%clk 0:01:59] } 15... Nhf4 { [%clk 0:01:55] } 16. Bxf4 { [%clk 0:01:58] } 16... exf4 { White cracked and gave up the bishop. Now Black has a nice outpost on e5 and White has zero counterplay } { [%clk 0:01:51] } 17. Be2 { [%clk 0:01:50] } 17... Ne5 { [%clk 0:01:40] } 18. Nb3 { [%clk 0:01:37] } 18... g5 { When in doubt, use pawn breaks to open the position for the rooks! } { [%clk 0:01:36] } 19. a4 { [%clk 0:01:29] } 19... h5 { [%clk 0:01:33] } 20. Qd1 { [%clk 0:01:23] } 20... Kh8 { [%clk 0:01:30] } 21. Kh1 { [%clk 0:01:21] } 21... Bd7 { [%clk 0:01:28] } 22. Kg1 { [%clk 0:01:18] } 22... Rg8 { [%clk 0:01:27] } 23. Kf2 { [%clk 0:01:17] } 23... g4 { [%clk 0:01:22] } 24. Ke1 { [%clk 0:01:14] } 24... gxf3 { [%clk 0:01:09] } 25. Bxf3 { [%clk 0:01:08] } 25... Nxc4 { [%clk 0:01:08] } 26. Bxh5 { [%clk 0:01:05] } 26... Qxc3+ { [%clk 0:00:53] } 27. Kf2 { [%clk 0:00:59] } 27... Qe3# { 0-1 Black wins by checkmate. } { [%clk 0:00:51] } 0-1
+
+
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2015.09.06"]
+[White "Caissa12"]
+[Black "Mr_Penings"]
+[Result "0-1"]
+[WhiteElo "2308"]
+[BlackElo "2299"]
+[TimeControl "180"]
+[Termination "Mr_Penings won by resignation"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "E44"]
+[Opening "Nimzo-Indian Defense: St. Petersburg Variation, Romanishin–Psakhis Variation"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "Caissa12 - Mr_Penings"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/EqhN8fqd"]
+
+1. d4 { [%clk 0:03:00] } 1... Nf6 { [%clk 0:03:00] } 2. c4 { [%clk 0:03:00] } 2... e6 { [%clk 0:02:59] } 3. Nc3 { [%clk 0:02:59] } 3... Bb4 { [%clk 0:02:58] } 4. e3 { [%clk 0:02:56] } 4... b6 { [%clk 0:02:56] } 5. Ne2 { [%clk 0:02:54] } 5... c5 { [%clk 0:02:55] } 6. a3 { [%clk 0:02:50] } 6... Ba5 { [%clk 0:02:54] } 7. g3 { [%clk 0:02:47] } 7... Bb7 { [%clk 0:02:53] } 8. d5 { [%clk 0:02:45] } 8... b5 { [%clk 0:02:52] } 9. Bg2 { [%clk 0:02:42] } 9... bxc4 { [%clk 0:02:52] } 10. O-O { [%clk 0:02:38] } 10... O-O { [%clk 0:02:30] } 11. e4 { [%clk 0:02:28] } 11... d6 { [%clk 0:02:04] } 12. h3 { [%clk 0:01:51] } 12... Nbd7 { [%clk 0:01:55] } 13. f4 { [%clk 0:01:42] } 13... exd5 { [%clk 0:01:53] } 14. exd5 { [%clk 0:01:41] } 14... Re8 { [%clk 0:01:47] } 15. g4 { [%clk 0:01:39] } 15... Nf8 { [%clk 0:01:32] } 16. Ng3 { [%clk 0:01:34] } 16... Bxc3 { [%clk 0:01:26] } 17. bxc3 { [%clk 0:01:32] } 17... Ng6 { [%clk 0:01:25] } 18. g5 { [%clk 0:01:28] } 18... Nd7 { [%clk 0:01:23] } 19. Nf5 { [%clk 0:01:25] } 19... Nb6 { [%clk 0:01:19] } 20. h4 { Although Black seems to be the one under attack, White is also weakening their own king with each pawn move. } { [%clk 0:01:23] } 20... Bc8 { [%clk 0:01:18] } 21. Bh3? { Tactically flawed because the Bh3 is undefended } { [%clk 0:01:01] } 21... Nxh4 { [%clk 0:01:08] } 22. Nh6+ { [%clk 0:00:56] } 22... gxh6 { [%clk 0:01:05] } 23. f5 { [%clk 0:00:56] } 23... hxg5 { [%clk 0:01:02] } 24. Qh5 { [%clk 0:00:54] } 24... f6 { [%clk 0:01:01] } 25. Ra2 { [%clk 0:00:45] } 25... Qe7 { [%clk 0:00:55] } 26. Rh2 { [%clk 0:00:39] } 26... Qf7 { [%clk 0:00:54] } 27. Qg4 { [%clk 0:00:37] } 27... Bb7 { 0-1 Black wins. } { [%clk 0:00:53] } 0-1
+
+
+[Event "Junior Closed"]
+[Site "https://lichess.org/study/DeAekads/YR7HfXl9"]
+[Date "????.??.??"]
+[Round "3"]
+[White "Roland Feng"]
+[Black "Daniel He"]
+[Result "0-1"]
+[WhiteElo "2270"]
+[BlackElo "2206"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "E32"]
+[Opening "Nimzo-Indian Defense: Classical Variation, Vitolins-Adorjan Gambit"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "Roland Feng - Daniel He"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/tkEiLKaO"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Qc2 O-O 5. a3 Bxc3+ 6. Qxc3 b5 { A Adorjan Gambit, which I like playing as black. } 7. cxb5 c6 8. f3 cxb5 9. e4 Qb6 10. Be3 Ba6 { Going for quick development on the queenside while White is still sort of tangled. } 11. b4 { the c4 square is weak } 11... d6 12. Bd3 Nbd7 13. Ne2 Rfc8 14. Qd2 Qb7 { Making room for the knight on b6 } 15. Kf2?! { Don't see anything wrong with 0-0. } 15... Nb6 16. Bg5 Ne8 17. e5 Nc4 18. Qf4 dxe5 19. dxe5 Qb6+ 20. Kg3 Qc7 21. Bxc4 bxc4 { Strong passed c-pawn. } 22. Qd4 c3 23. Kf2 h6 24. Be3 f6 25. exf6 Nxf6 26. Rhc1 e5! { White's queen has few squares to move to. } 27. Qh4 Qf7! { I have threats of g5, followed by Ne4 or Ng4+. } 28. Ke1 (28. Rxc3 Bxe2 29. Rxc8+ Rxc8 30. Kxe2 Rc4) (28. Nxc3 Rc4) 28... Rc4 29. Qf2 e4 { Opening yet another file for Black's rooks! Notice White's vulnerable king position compared to Black's allows Black to create pawn breaks at little risk. } 30. Rxc3 exf3 31. gxf3 Re8 32. Rac1 Rxc3 33. Nxc3 Qc4 { White's pieces can't move. } 34. Ne2 Qd3 { Immense pressure on the e-file. } 35. Rc3 Qb1+ 36. Rc1 Qb3 37. Rc3 Qb2 38. Rc6 Qxa3 39. Rxa6 Qxa6 40. Bd4 Nd5 41. Qg2 g5 { Black won in a few more moves. } 42. Kd2 Nxb4 43. f4 Qd3+ 44. Ke1 Nc2+ 45. Kf2 Rxe2+ { 0-1 White resigns. } 0-1
+
+
+[Event "Oregon Open 2013"]
+[Site "Oregon"]
+[Date "2013.09.01"]
+[Round "3"]
+[White "Jason Cigan"]
+[Black "Daniel He"]
+[Result "0-1"]
+[WhiteElo "2007"]
+[BlackElo "2175"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "E11"]
+[Opening "Bogo-Indian Defense: Grünfeld Variation"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "Jason Cigan - Daniel He"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/wKeemFyx"]
+
+{ This is an excellent game to show how deadly the kingside attack in the bogo indian can be. }
+1. d4 Nf6 2. c4 e6 3. Nf3 Bb4+ 4. Nbd2 b6 5. a3 Bxd2+ 6. Qxd2 Bb7 7. e3 O-O 8. Be2 a5 9. b3 d6 10. Bb2 Ne4 11. Qc2 f5 12. O-O Nd7 13. Rfd1 Ng5 { Ng5 forces white's knight to move. If Nxg5, my queen is active. If the knight moves back, my bishop becomes very powerful, as seen in the game. } 14. Ne1 Qe8 15. Nd3 Qg6 { This is a very tricky move. I threaten Nh3+ followed by Qxg2. } 16. Nf4 (16. Ne1 { Ne1 seems to be forced. But this is still a very passive retreat. Black can just keep developing and adding more pieces to the attack } 16... Nf6) 16... Nh3+!! { Nh3+!! White cannot capture the knight either way. If Nxh3, Qxg2#. } 17. Kf1 (17. Nxh3 Qxg2#) 17... Nxf4 18. exf4 Qxg2+ 19. Ke1 Be4 20. Qc3 Qg1+ 21. Kd2 Qxf2 22. Rf1 Qxh2 { White resigns } 0-1
+
+
+[Event "🏆 Nimzo/Bogo Indian Repertoire 🏆: **Top Grandmaster Games**"]
+[Site "https://lichess.org/study/DeAekads/VJ8U7CP1"]
+[Date "2020.06.23"]
+[Result "*"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "**Top Grandmaster Games**"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/5TqMcTBX"]
+[UTCDate "2020.06.23"]
+[UTCTime "18:25:38"]
+
+ *
+
+
+[Event "San Francisco"]
+[Site "San Francisco"]
+[Date "1991.??.??"]
+[Round "10"]
+[White "Adianto, Utut"]
+[Black "Christiansen, Larry Mark"]
+[Result "0-1"]
+[WhiteElo "2470"]
+[BlackElo "2590"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "E11"]
+[Opening "Bogo-Indian Defense: Wade-Smyslov Variation"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "Adianto, Utut - Christiansen, Larry Mark"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/j4Nwx6K5"]
+
+1. d4 Nf6 2. Nf3 e6 3. c4 Bb4+ 4. Bd2 a5 5. g3 d6 6. Bg2 Nbd7 7. O-O e5 8. e3 Bxd2 9. Qxd2 O-O 10. Nc3 Qe7 11. Rfd1 Re8 12. Nb5 Nf8 13. c5 e4 14. cxd6 cxd6 15. Ne1 Bg4 16. Rdc1 Ne6 17. Rc2 Qd7 18. a4 Ng5 { Interesting move by Christiansen, intentionally sacrificing the exchange for activity on the light squares near White's king. } 19. Nc7 Bf3 20. Nxf3 (20. Nxe8 Bxg2 21. Nxf6+ gxf6 22. Kxg2 Qh3+ 23. Kg1 Nf3+ 24. Nxf3 exf3 { With unstoppable mate }) 20... exf3 21. Nxe8 Nh3+ 22. Kh1 (22. Kf1 fxg2+ 23. Kxg2) 22... fxg2+ 23. Kxg2 Rxe8 24. Qxa5 d5 25. Qb5 Qf5 26. Rac1 h5 27. Qe2 Ng5 28. f3 h4 29. gxh4 Qh3+ 30. Kh1 Nxf3 31. Qg2 Qxg2+ 32. Kxg2 Rxe3 33. Rc3 Nxh4+ 34. Kf1 Re4 35. Rb3 Rf4+ 36. Kg1 Ne4 37. Rxb7 Rf2 38. Rb3 Rg2+ { 0-1 White resigns. } 0-1
+
+
+[Event "26th North American Open"]
+[Site "Las Vegas USA"]
+[Date "2016.12.29"]
+[Round "8"]
+[White "Anh Dung Nguyen"]
+[Black "Joshua E Friedel"]
+[Result "0-1"]
+[WhiteElo "2482"]
+[BlackElo "2510"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "E32"]
+[Opening "Nimzo-Indian Defense: Classical Variation"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "Anh Dung Nguyen - Joshua E Friedel"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/iE3WtgkI"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Qc2 O-O 5. a3 Bxc3+ 6. Qxc3 d6 7. Nf3 b6 8. e3 Bb7 9. Be2 Nbd7 10. O-O Ne4 11. Qd3 f5 { Achieving the Ne4 + f5 bind. White will expand on the queenside while Black on the kingside } 12. Nd2 Qh4 13. f3 Ng5 14. f4 Ne4 15. Nf3 Qe7 16. Bd2 h6 17. a4 a5 18. Be1 g5 19. Nd2 Nxd2 { Black can trade knowing that he still has another knight available to land in on the juicy outpost e4 } 20. Qxd2 Kh7 21. d5 Nc5 { Headed to b3 or e4, both great squares! } 22. Ra3 g4 23. Qc2 h5 { Black already has plans to play h4, then h3. As a result, the h1-a8 diagonal is going to be wide open for Black's Bb7. Long term planning! } 24. dxe6 Qxe6 25. b4 axb4 26. Bxb4 h4 27. Bxc5 bxc5 28. Rb1 Bc6 29. a5 h3! { Plan achieved. } 30. g3 Rxa5 31. Rxa5 Qxe3+ 32. Kf1 Bg2+ 33. Ke1 Be4 34. Qc1 Qg1+ 35. Kd2 Qd4+ 36. Ke1 Bxb1 37. Qxb1 Qg1+ 38. Bf1 Re8+ 39. Kd2 Qxh2+ 40. Kc3 Qxg3+ 41. Bd3 Kg6 { Amazing how safe Black's king is compared to White's. With another queen coming on the board in 2 moves, Black is just dominating. } 42. Ra1 Qxf4 43. Qb5 Re3 44. Rd1 h2 45. Qb8 { 0-1 White resigns. } 0-1
+
+
+[Event "20th Amber Tournament (Rapid)"]
+[Site "Monaco MNC"]
+[Date "2011.03.14"]
+[Round "3"]
+[White "Boris Gelfand"]
+[Black "Viswanathan Anand"]
+[Result "0-1"]
+[WhiteElo "2733"]
+[BlackElo "2817"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "E44"]
+[Opening "Nimzo-Indian Defense: St. Petersburg Variation, Romanishin–Psakhis Variation"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "Boris Gelfand - Viswanathan Anand"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/RMaUQewA"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. e3 c5 5. Ne2 b6 6. a3 Ba5 7. Rb1 Na6 8. g3 Bb7 9. d5 b5 10. Bg2 bxc4 11. O-O O-O 12. e4 d6 13. Bg5 exd5 14. Nf4 Nc7 15. Nh5 Nce8 { Ugly but necessary. Black could not allow double isolated f-pawns in front of his King } 16. exd5 h6 17. Nxf6+ Nxf6 18. Bxf6 Qxf6 19. Qa4 Bxc3 20. bxc3 Bc8 21. Qxc4 Bf5 22. Rbe1 Rab8 { Even material, but Black's control over the b-file has more potential than White's over the e-file due to entry points. Black has b2 while White does not have e7 } 23. Re3 Bd7 24. Rfe1 Rb2 25. Rf3 Qg5 26. Rfe3 Qf5 27. Rf3 Rb1 28. Re3 (28. Rxf5 Rxe1+ 29. Bf1 Bxf5 { Would have been a crazy imbalance. It is hard to say who stands better here. If Black can get some quick pressure on the White king, then he could claim an advantage. } 30. Kg2 { However, after Kg2, it is hard for Black to keep the initiative }) 28... Rfb8 29. Be4 Rxe1+ 30. Rxe1 Qf6 31. Rb1 Re8 32. h4 g5 33. hxg5 hxg5 34. Qd3 Qe5 35. Rb7 Bg4 36. Bg6!? Re7 (36... fxg6 37. Qxg6+ Kf8 (37... Kh8 38. Qh7#) 38. Qf7#) 37. Rxe7 Qxe7 38. Be4 Qe5 39. Qe3 Kg7 40. f4 Qe7 41. Kf2 Qf6 42. Kg1 gxf4 43. gxf4 Bf5 44. Bg2 c4 45. Kf2 Bd3 46. Qg3+ Kf8 47. Qg5 Qxc3 48. Qd8+ Kg7 49. Qxd6 (49. Qg5+ Bg6 { No perpetual! }) 49... Qd4+ 50. Kg3 c3 { The more advanced passed pawn wins the game! } 51. Qe7 c2 52. Qg5+ Bg6 53. f5 Qc3+ { 0-1 White resigns. } 0-1
+
+
+[Event "US Championship"]
+[Site "St Louis, MO USA"]
+[Date "2015.04.11"]
+[Round "10"]
+[White "Gata Kamsky"]
+[Black "Wesley So"]
+[Result "0-1"]
+[WhiteElo "2683"]
+[BlackElo "2788"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "A46"]
+[Opening "Indian Defense: Knights Variation"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "Gata Kamsky - Wesley So"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/smuHSkts"]
+
+{ This game took place the day after the infamous So - Akobian incident at the US Championship 2015. So bounced back nicely! }
+1. d4 Nf6 2. Nf3 e6 3. g3 b5 4. Bg5 c5 5. Bg2 Bb7 6. c3 cxd4 7. cxd4 Be7 8. O-O h6 9. Bxf6 Bxf6 10. e3 O-O 11. Nc3 b4 { Standard push b4, kicking the night away from the central square } 12. Ne2 (12. Na4 d6 { Knight isn't any better on a4. Knights on the rim are dim, especially if they can't move! }) 12... Qb6 13. Nf4 Rc8 14. Nh5 Be7 15. Ne5 Bxg2 16. Qg4 Bg5 17. Kxg2 Qb7+ 18. Kg1 d6 19. Nd3 Nd7 20. h4 Bf6 21. Rfc1 (21. Nxf6+ Nxf6 { Even if White did exchange knight for bishop, there are just too many holes on the light squares. }) 21... a5 22. Ndf4 Qe4 23. Qe2 Be7 24. Qb5 Nf8 25. Qd3 Qb7 26. Ng2 e5 27. dxe5 dxe5 28. g4 { g4 may be a bit too comittal. Hard to say if White believed this pawn storm would have worked in his favor. Now the h4 pawn is loose } 28... Ng6 29. Qf5 Bxh4 30. Ne1 Re8 31. Rd1 Rad8 32. Ng2 Qb5 33. Rxd8 Rxd8 34. Qc2 Qd5 35. Qe2 Qd2 36. Kf1 a4 37. Ne1 Qd5 38. e4 Qe6 39. Nc2 Bg5 40. Ne3 Bxe3 41. fxe3 Nh4 42. Rd1 Rxd1+ 43. Qxd1 Kh7 44. b3 axb3 45. axb3 g6 46. Ng3 h5 47. Qd5 Qf6+ 48. Ke2 hxg4 49. Kd3 Ng2 50. Qb7 Kg7 51. Qb5 Nxe3 52. Ne2 Nf1 53. Kc4 Qd6 54. Qxb4 Nd2+ 55. Kc3 Nb1+ 56. Kc4 Qa6+ { A piece is lost in every line. If Qb5, black has Na3+, forking king and queen. } { 0-1 White resigns. } 0-1
+
+
+[Event "Aeroflot Open"]
+[Site "Moscow RUS"]
+[Date "2009.02.24"]
+[Round "8"]
+[White "Li Shilong,"]
+[Black "Naiditsch, Arkadij"]
+[Result "0-1"]
+[WhiteElo "2559"]
+[BlackElo "2693"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "E32"]
+[Opening "Nimzo-Indian Defense: Classical Variation, Vitolins-Adorjan Gambit"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "Li Shilong,  - Naiditsch, Arkadij"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/H9baFBXe"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Qc2 O-O 5. a3 Bxc3+ 6. Qxc3 b5 { Signaling a sharp game ahead } 7. cxb5 c6 8. f3 Nd5 9. Qd3 cxb5 10. Nh3 Nc6 11. e4 Nde7 12. Be3 d5 13. e5 Nf5 14. Bf2 Bd7 15. Rd1 b4 { The early b5 allows faster expansion on the queenside. The pieces quickly enter. } 16. Be2 bxa3 17. bxa3 Qa5+ 18. Kf1 Rab8 19. g4 Nfe7 20. Ng5 g6 21. Nh3 Kg7 { Black still has to be careful about the severely weakened dark squares around his king. White has the bishop pair imbalance and Bh4-f6 is dangerous threat. } 22. Qe3 Rb2 23. Bh4 Ng8 24. Nf4 Rfb8 25. Rg1 Kf8 26. Rd3 Bc8 27. Rc3 Qb6 28. Bf2 Ba6 29. Bxa6 Qxa6+ 30. Kg2 Na5 31. Rc7 Nc4 32. Qc1 { The Rc7 is cut off from protection } 32... Qb6 33. Rc5 Qb3 34. Rc7 Qb6 35. Rc5 Ne7 36. Kg3 Nc6 37. Rd1 Rxf2! { Now black invades on the dark squares. Great choice by Naiditsch. } 38. Kxf2 Nxd4 39. Nd3 (39. Rxd4 Qxc5 { White is pinned and Rb2+ is coming next move. }) 39... Nb3 40. Qh6+ Kg8 41. Rb1 Nxa3 { Great series of forcing moves, fully utilizing his initiative } 42. Rb2 Nc4 43. Rb1 Nxe5 44. Nxe5 Qxc5+ 45. Kg3 Qc7 46. Qf4 a5 47. Rb2 Rb4 48. Qf6 Nd4 49. Rxb4 axb4 { Black just has to watch for sneaky perpetuals. } 50. Kh4?? { A creative attempt to play for a win with Kg5-Kh6, but unfortunately for White, there's a tactical error. } 50... Qxe5 { 0-1 White resigns. } 0-1
+
+
+[Event "Amplico ch-EUR Blitz"]
+[Site "Warsaw POL"]
+[Date "2012.12.14"]
+[Round "4.2"]
+[White "Turov, Maxim"]
+[Black "Naiditsch, Arkadij"]
+[Result "0-1"]
+[WhiteElo "2630"]
+[BlackElo "2708"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "E32"]
+[Opening "Nimzo-Indian Defense: Classical Variation, Vitolins-Adorjan Gambit"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "Turov, Maxim - Naiditsch, Arkadij"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/0W5UWuec"]
+
+1. c4 Nf6 2. Nc3 e6 3. d4 Bb4 4. Qc2 O-O 5. a3 Bxc3+ 6. Qxc3 b5 7. cxb5 c6 8. Bg5 cxb5 9. e3 Bb7 10. Nf3 h6 11. Bh4 g5 12. Bg3 Ne4 13. Qd3 a6 14. Nd2 f5 15. Nxe4 Bxe4 16. Qd2 Nc6 17. Bd6 Na5 18. Rd1 (18. Bxf8 Nb3 19. Qd1 Nxa1 { The Black knight threatens more to the White king than White's bishop to Black's king. } 20. Qxa1 Kxf8) 18... Rf7 19. f3 Nb3 20. Qc3 Bd5 21. Bd3 Rc8 22. Qb4 Qb6 23. Be5 Nc1!? { How many times can you say you've played Nc1 as black?! It harasses White's bishop to the max. It really has nowhere to go but back, and even then its not so strong } 24. O-O Nxd3 25. Rxd3 Bc4 26. Rc3 { Pinned? No problem! Anything is possible with initiative } 26... a5 27. Rxc4 (27. Qd6 Rc6 { Protecting the rook, so Bxf1 is now playable }) 27... Rxc4 28. Qe1 d6 29. Bg3 Rfc7 30. h4 b4 31. hxg5 hxg5 32. Bh2 Rc1 33. Qxc1 Rxc1 34. Rxc1 bxa3 35. bxa3 { A rook and bishop is no match for a queen when there are pawns scattered all over the board. To make matters worse, White's bishop and rook and disconnected to the max } 35... f4 36. exf4 Qxd4+ 37. Kh1 gxf4 38. Bg1 Qb2 39. Rc8+ Kf7 40. a4 Qb4 41. Rc6 e5 { 0-1 White resigns. } 0-1
+
+
+[Event "Geneva"]
+[Site "Geneva SUI"]
+[Date "1977.03.27"]
+[Round "2"]
+[White "Jan Timman"]
+[Black "Roman Dzindzichashvili"]
+[Result "0-1"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "E30"]
+[Opening "Nimzo-Indian Defense: Leningrad Variation"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "Jan Timman - Roman Dzindzichashvili"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/bcwx5Edv"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Bg5 h6 5. Bh4 c5 6. d5 Bxc3+ 7. bxc3 d6 8. e3 e5 9. f3 Bf5 10. Qb3 b6 11. h3 Nbd7 12. g4 Bh7 13. Ne2 g5 14. Bf2 h5 { Unclear why Black is trying to create a pawn break on the kingside. White is the one with the bishop pair } 15. h4 { White strangely plays into Black's plan. Now g4 and e4 become outposts. } (15. e4 { White must keep g4 intact so the knights cannot invade }) 15... e4 16. hxg5 exf3 17. gxf6 fxe2 18. Bxe2 Qxf6 19. Rxh5 Bg6 20. Bh4 Qg7 21. Kd2 (21. Rxh8+ Qxh8 { This is too dangerous for White's king, which is one move too late from castling queenside to safety } 22. Bg3 Qh1+ 23. Bf1 Bd3 24. Kf2 Nf6 { White's queen is too far from the action to help the defense }) 21... Bxh5 22. gxh5 Qg2 23. Rf1 Rxh5 24. Rf2 Qh3 25. Bxh5 Qxh4 26. Rf5 Ne5 27. Be2 O-O-O 28. a4 Rg8 29. Qb5 Qe7 30. Rh5 Qd7 31. Qa6+ Qb7 32. Qb5 a6 33. Qb1 Qc7 34. Rh6 Kb7 35. Qf5 Rg6 36. Rh7 Qe7 37. Qh3 Rg8 38. Kc2 Kc7 39. Bh5 Qf6 40. Kb3 Rh8 41. Rxh8 Qxh8 42. Qf5 Qg7 43. Qe4 Qg5 44. Bd1 Qg6 45. Qc2 Qxc2+ 46. Bxc2 { We reach the classic "strong knight vs weaker bishop" endgame. King positioning is key here. Black's king can reach the center faster and can take a higher stake of it. } 46... Ng4 47. e4 Ne5 48. Bd1 a5 { Ensuring the queenside is fully locked. All pawns are on dark squares, off limits to the white bishop, which unfortunately can only attack light squares. } 49. Be2 Kd7 50. Kc2 Ke7 51. Kd2 Kf6 52. Ke3 Kg5 { White has nothing better. } 53. Bd1 Nxc4+ 54. Kf3 f5 55. exf5 Kxf5 56. Ke2 Kf4 57. Bb3 Nb2 58. Kd2 c4 59. Ba2 Ke4 60. Kc2 Nxa4 61. Bxc4 Nc5 62. Kb2 Nd3+ 63. Ka3 Ne5 64. Ba2 b5 { 0-1 White resigns. } 0-1
+
+
+[Event "Tal Memorial (Blitz)"]
+[Site "Moscow RUS"]
+[Date "2008.08.29"]
+[Round "4"]
+[White "Gata Kamsky"]
+[Black "Magnus Carlsen"]
+[Result "0-1"]
+[WhiteElo "2723"]
+[BlackElo "2775"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "A46"]
+[Opening "Indian Defense: London System"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "Gata Kamsky - Magnus Carlsen"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/t7jKMApK"]
+
+1. d4 Nf6 2. Nf3 e6 3. Bf4 c5 4. e3 cxd4 5. exd4 b6 6. c3 Bb7 7. Nbd2 Be7 8. h3 O-O 9. Bd3 d6 10. O-O Nbd7 11. Re1 Qc7 12. a4 a6 13. Bh2 Rfe8 14. Qb3 Bf8 15. Re2 { Finished setting up the Hedgehog structure. No pieces or pawns on the 5th rank or higher, but Black has zero weaknesses! } 15... Bc6 16. c4 Qb7 17. Rae1 d5 { The familiar d5 strike in the center, hoping to create an isolated d-pawn for White. } 18. cxd5 Bxd5 { Success! } 19. Bc4 Rac8 20. Bxd5 Qxd5 21. Qxd5 Nxd5 22. Ne4 Rc6 23. Ne5 Nxe5 24. dxe5 Rec8 { Black gives an opportunity for White to unisolate the d-pawn.. at the cost of shutting the bishop diagonal and letting Black take full control of the c-file. } 25. Bg3 Bb4 26. Rd1 Rc1 27. Rxc1 Rxc1+ 28. Kh2 h6 29. f3 Ra1 { Each of Black's pieces are superior to White's counterparts } 30. Rc2 Kh7 31. Bf2 Rxa4 32. Nd6 Kg6 33. Rc4 f5 34. Rc6 Bd2 35. g3 b5 36. Nb7 Ra2 37. Rxe6+ Kh7 38. Bd4 Be3 39. Bxe3 Rxb2+ 40. Kg1 Nxe3 41. Rxa6 Rg2+ 42. Kh1 Rxg3 43. f4 Rxh3+ 44. Kg1 Nd5 45. Nd6 Nxf4 46. Nxf5 Rh5 47. Nd4 Rxe5 48. Rb6 Ne2+ 49. Nxe2 Rxe2 50. Rxb5 Re6 { 0-1 White resigns. } 0-1
+
+
+[Event "18th Sants Open 2016"]
+[Site "Barcelona ESP"]
+[Date "2016.8.23"]
+[Round "5.1"]
+[White "Cruz, Cristhian"]
+[Black "Bachmann, Axel"]
+[Result "0-1"]
+[WhiteElo "2533"]
+[BlackElo "2656"]
+[Annotator "https://lichess.org/@/Mr_Penings"]
+[Variant "Standard"]
+[ECO "E00"]
+[Opening "Catalan Opening"]
+[StudyName "Nimzo/Bogo Indian Repertoire"]
+[ChapterName "Cruz, Cristhian - Bachmann, Axel"]
+[ChapterURL "https://lichess.org/study/ZWHbJIPd/hMHhgd8C"]
+
+1. d4 Nf6 2. c4 e6 3. g3 Bb4+ 4. Bd2 a5 5. Bg2 d6 6. Nf3 Nbd7 7. O-O e5 8. Bg5 exd4 9. Nxd4 h6 10. Bf4 O-O 11. Qc2 a4 { Thematic a4 to grab the c5 outpost for the near future } 12. Rd1 Nb6 13. Nc3 Qe7 14. Qd3 Bc5 15. h3 c6 16. Rab1 d5 { Accepting an isolated d-pawn but white will have to give up the fianchetto bishop. } 17. cxd5 Nbxd5 18. Nxd5 Nxd5 19. Bxd5 cxd5 20. Kg2 Bxd4 21. Qxd4 Bf5 22. Rbc1 Qxe2 { In opposite colored bishop middlegames, the side with the stronger attack with their bishop usually wins. That is because the bishops cannot contest each other and are playing separate games. } 23. Rd2 Be4+ 24. Kh2 Qf3 25. Rg1 { Black is winning the battle of the bishops! } 25... g5 26. Bd6 Rfc8 27. Qe3 Qxe3 28. fxe3 Ra6 29. Be5 Rac6 30. Rgd1 h5 31. h4 Bf3 32. Rf1 Rc2 33. Rdf2 Be2 34. Re1 Bd3 35. Rxc2 Rxc2+ 36. Kg1 g4 37. a3 Be4 38. Rd1 f6 39. Bxf6 Rg2+ 40. Kf1 Rxg3 41. Bg5 Rh3 { 0-1 White resigns. } 0-1
+
+

@@ -1,0 +1,165 @@
+[Event "From Position Study: HI"]
+[Date "2026.06.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "From Position Study"]
+[ChapterName "HI"]
+[ChapterURL "https://lichess.org/study/oMcSYqSW/aYZEX8uk"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "RR1RR1RR/RR1RR1RR/RR1RR1RR/RRRRR1RR/RRRRR1RR/RR1RR1RR/RR1RR1RR/RR1RR1RR w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.06.04"]
+[UTCTime "14:13:50"]
+
+{ Hi! Today, you can play with the computer from strange posiitions. I can add always more if you want. } { [%cal Ga1a8,Ga8a1,Gb1b8,Gb8b1,Gc5c4,Gc4c5,Gd8d1,Gd1d8,Ge8e1,Ge1e8,Gg8g1,Gg1g8,Gh8h1,Gh1h8] }
+ *
+
+
+[Event "From Position Study: Rook vs Bishop"]
+[Date "2026.06.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "From Position Study"]
+[ChapterName "Rook vs Bishop"]
+[ChapterURL "https://lichess.org/study/oMcSYqSW/4Kcx4gLO"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "4bbbk/4bbbb/4bbbb/4bbbb/RRRR4/RRRR4/RRRR4/KRRR4 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.06.04"]
+[UTCTime "13:53:25"]
+
+{ You have many rooks, but the computer plays better than every player in the world! Can you win the game? Teach the computer a lesson! }
+ *
+
+
+[Event "From Position Study: 15 queens vs 40 pawns"]
+[Date "2026.06.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "From Position Study"]
+[ChapterName "15 queens vs 40 pawns"]
+[ChapterURL "https://lichess.org/study/oMcSYqSW/MN4A8Qz3"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "4k3/pppppppp/pppppppp/pppppppp/pppppppp/pppppppp/QQQQQQQQ/QQQKQQQQ w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.06.04"]
+[UTCTime "13:54:56"]
+
+1. Qcxc3 gxf2 2. Qg2xf2 g3 3. Qhxg3 (3. Qhxh3) 3... bxc3 4. Qgxh3 b4 5. Qbxc3 *
+
+
+[Event "From Position Study: pawn and knight endgame"]
+[Date "2026.06.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "From Position Study"]
+[ChapterName "pawn and knight endgame"]
+[ChapterURL "https://lichess.org/study/oMcSYqSW/GdCm8XLJ"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "2nkn3/2nnn3/2PPP3/2PPP3/2PPP3/3K4/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.06.04"]
+[UTCTime "14:02:36"]
+
+ *
+
+
+[Event "From Position Study: 32 Rooks"]
+[Date "2026.06.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "From Position Study"]
+[ChapterName "32 Rooks"]
+[ChapterURL "https://lichess.org/study/oMcSYqSW/0rwwMiG6"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "rrrrrrrr/rrrrrrrr/k7/8/8/7K/RRRRRRRR/RRRRRRRR w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.06.04"]
+[UTCTime "14:04:12"]
+
+ *
+
+
+[Event "From Position Study: 24 vs 16"]
+[Date "2026.06.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "From Position Study"]
+[ChapterName "24 vs 16"]
+[ChapterURL "https://lichess.org/study/oMcSYqSW/a0Vqq57y"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "1B1nn1Bk/B1BnnB1B/1B1BB1B1/nnB2Bnn/nnB2Bnn/1B1BB1B1/B1BnnB1B/KB1nn1B1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.06.04"]
+[UTCTime "14:09:22"]
+
+ *
+
+
+[Event "From Position Study: Bishop vs knight"]
+[Date "2026.06.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "From Position Study"]
+[ChapterName "Bishop vs knight"]
+[ChapterURL "https://lichess.org/study/oMcSYqSW/SHgbsyST"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "KNNN4/NNNN4/NNNN3b/NNNN2b1/5b1b/4b1b1/3b1b1b/2b1b1bk w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.06.04"]
+[UTCTime "14:11:20"]
+
+ *
+
+
+[Event "From Position Study: Bishop and knight vs queen"]
+[Date "2026.06.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "From Position Study"]
+[ChapterName "Bishop and knight vs queen"]
+[ChapterURL "https://lichess.org/study/oMcSYqSW/oba6tjK1"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "qqqkqqqq/8/8/NNNNNNNN/BBBBBBBB/NNNNNNNN/BBBBBBBB/NNNNNNNN w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.06.04"]
+[UTCTime "14:12:27"]
+
+ *
+
+
+[Event "From Position Study: Kapitel 9"]
+[Date "2026.06.05"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "From Position Study"]
+[ChapterName "Kapitel 9"]
+[ChapterURL "https://lichess.org/study/oMcSYqSW/X26DmU8h"]
+[Annotator "https://lichess.org/@/DanielExmann"]
+[FEN "qqqkqqqq/8/8/NNNNNNNN/BBBBBBBB/NNNNNNNN/BBBBBBBB/NNNNKNNN w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2026.06.05"]
+[UTCTime "12:53:48"]
+
+{ Mate in 1 }
+1. Ngf7# *
+
+

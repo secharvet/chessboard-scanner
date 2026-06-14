@@ -1,0 +1,322 @@
+[Event "Antichess Variant Solved: Introduction"]
+[Date "2019.02.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A00"]
+[Opening "Van't Kruijs Opening"]
+[StudyName "Antichess Variant Solved"]
+[ChapterName "Introduction"]
+[ChapterURL "https://lichess.org/study/Rc3e9Ua4/d8g50qjm"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2019.02.04"]
+[UTCTime "02:56:57"]
+
+{ In this Study, I will show the basic proof that Antichess (known elsewhere as 'Losing Chess' or 'Giveaway') is a forced win for White. This Study is based on the paper of a Sydney computer scientist. }
+1. e3 { This move wins for White by force. } *
+
+
+[Event "Antichess Variant Solved: Chapter 2"]
+[Date "2019.02.04"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A00"]
+[Opening "Van't Kruijs Opening"]
+[StudyName "Antichess Variant Solved"]
+[ChapterName "Chapter 2"]
+[ChapterURL "https://lichess.org/study/Rc3e9Ua4/zUX33leX"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2019.02.04"]
+[UTCTime "03:01:02"]
+
+1. e3 { Here we will note Black's most challenging defences to 1.e3. } 1... b6 (1... c6) (1... Nc6) (1... b5) (1... Nh6) (1... g5) (1... e6) (1... c5) 2. a4 e6 3. Ra3 Bxa3 4. Nxa3 Qh4 5. a5 *
+
+
+[Event "Antichess Variant Solved: Weaker Black Options on Move 1"]
+[Date "2019.02.04"]
+[Result "*"]
+[Variant "Antichess"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Antichess Variant Solved"]
+[ChapterName "Weaker Black Options on Move 1"]
+[ChapterURL "https://lichess.org/study/Rc3e9Ua4/laVMDmw5"]
+[Annotator "https://lichess.org/@/Craze"]
+[FEN "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2019.02.04"]
+[UTCTime "03:11:26"]
+
+1. e3 { The refutations to the Black moves given here are not difficult. If you are unsure of how to deal with them, I would recommend checking the answer with Stockfish in this Study. } 1... f6 (1... d5) (1... d6) (1... Na6) (1... g6) (1... Nf6) (1... e5) (1... h6) (1... h5) (1... f5) (1... a6) (1... a5) 2. Qh5 (2. Ba6) *
+
+
+[Event "Antichess Variant Solved: Basic Antichess Strategy"]
+[Date "2019.02.04"]
+[Result "*"]
+[Variant "Antichess"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Antichess Variant Solved"]
+[ChapterName "Basic Antichess Strategy"]
+[ChapterURL "https://lichess.org/study/Rc3e9Ua4/LV99LPtp"]
+[Annotator "https://lichess.org/@/Craze"]
+[FEN "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2019.02.04"]
+[UTCTime "03:03:41"]
+
+{ - It's usually good to have more choices than your opponent. This often allows you to control the situation against a smaller force to give up all your remaining pieces at once (a 'chain' of captures).
+
+- Bishops are the worst pieces, as they can easily be forced into a 'capturing chain'.
+
+- The same thing can happen to Rooks, but they are often the best piece to promote to in the endgame, due to their selective mobility.
+
+- Queens can often escape capturing chains by threatening several pieces at once.
+
+- One will usually promote to a King when trying to draw.
+
+- Knights are quite slow and lack the ability to gain many tempo. They can also be forced into a chain of captures, though not as easily.
+
+- Pawns should generally be advanced to acquire more space.
+
+- A 'Queen capture race' is when each side captures as many pieces as possible with the Queen, to wipe out the opponent and stop them using their pieces.
+
+- }
+ *
+
+
+[Event "Antichess Variant Solved: 1.e3 c6 Overview"]
+[Date "2019.02.04"]
+[Result "*"]
+[Variant "Antichess"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Antichess Variant Solved"]
+[ChapterName "1.e3 c6 Overview"]
+[ChapterURL "https://lichess.org/study/Rc3e9Ua4/KuYefLpF"]
+[Annotator "https://lichess.org/@/Craze"]
+[FEN "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2019.02.04"]
+[UTCTime "03:14:07"]
+
+1. e3 c6 2. Bb5 cxb5 3. b4 b6 (3... Qa5 4. bxa5 a6 5. Qh5 b4 6. Qxf7 Kxf7 7. Ba3 bxa3 8. Nxa3 b6 9. axb6 Ra7 10. bxa7 Nf6 11. axb8=B e5 12. Bxe5 Bxa3 13. Bxf6 gxf6 14. Rc1 Bxc1 15. f4 Bxd2 16. Kxd2 { [%cal Gg1f3,Gh1d1,Gf4f5] }) 4. Ke2 a5 5. bxa5 bxa5 6. c4 bxc4 7. Kd3 cxd3 8. a4 Na6 9. e4 Qc7 10. e5 Qxc1 11. Qxc1 Rb8 12. Qxc8 Rxb1 13. Rxb1 Nb4 14. Qxe8 g6 15. Qxf7 e6 16. Qxd7 Bd6 17. Qxh7 Rxh7 18. exd6 Rxh2 19. Rxh2 g5 20. Rxb4 axb4 21. g4 b3 (21... e5 22. a5! (22. Rh7)) 22. Rh7 e5 23. Rb7 e4 24. Rxb3 Nf6 25. Rxd3 exd3 26. a5 Nxg4 27. Nh3 Nxf2 28. Nxf2 g4 29. Nxd3 g3 30. a6! (30. Nb2) *
+
+
+[Event "Antichess Variant Solved: 1.e3 Nc6 (Balkan Defence)"]
+[Date "2019.02.04"]
+[Result "*"]
+[Variant "Antichess"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Antichess Variant Solved"]
+[ChapterName "1.e3 Nc6 (Balkan Defence)"]
+[ChapterURL "https://lichess.org/study/Rc3e9Ua4/MqKH8fvZ"]
+[Annotator "https://lichess.org/@/Craze"]
+[FEN "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2019.02.04"]
+[UTCTime "03:17:13"]
+
+1. e3 Nc6 2. Ba6 bxa6 3. a4 Nd4 4. exd4 e5 (4... Nh6) 5. dxe5 Ba3 6. bxa3 Qh4 (6... Nf6) (6... a5) (6... Nh6) *
+
+
+[Event "Antichess Variant Solved: 1.e3 b5 (Classical Defence) - Suicide Variation"]
+[Date "2019.02.04"]
+[Result "*"]
+[Variant "Antichess"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Antichess Variant Solved"]
+[ChapterName "1.e3 b5 (Classical Defence) - Suicide Variation"]
+[ChapterURL "https://lichess.org/study/Rc3e9Ua4/4w1iWtc8"]
+[Annotator "https://lichess.org/@/Craze"]
+[FEN "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2019.02.04"]
+[UTCTime "03:17:56"]
+
+1. e3 b5 2. Bxb5 { Black has a few options from here, with quite a bit of branching in the variations. } 2... Bb7 { This is well-known to be lost for Black since early days. } *
+
+
+[Event "Antichess Variant Solved: 1.e3 b5 2.Bxb5 Nh6"]
+[Date "2019.02.04"]
+[Result "*"]
+[Variant "Antichess"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Antichess Variant Solved"]
+[ChapterName "1.e3 b5 2.Bxb5 Nh6"]
+[ChapterURL "https://lichess.org/study/Rc3e9Ua4/9k5PMuWm"]
+[Annotator "https://lichess.org/@/Craze"]
+[FEN "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2019.02.04"]
+[UTCTime "03:18:50"]
+
+1. e3 b5 2. Bxb5 Nh6 3. Bxd7 Nxd7! (3... Kxd7) (3... Bxd7) 4. e4! (4. c4) *
+
+
+[Event "Antichess Variant Solved: 1.e3 b5 2.Bxb5 e6"]
+[Date "2019.02.04"]
+[Result "*"]
+[Variant "Antichess"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Antichess Variant Solved"]
+[ChapterName "1.e3 b5 2.Bxb5 e6"]
+[ChapterURL "https://lichess.org/study/Rc3e9Ua4/sU7h2STq"]
+[Annotator "https://lichess.org/@/Craze"]
+[FEN "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2019.02.04"]
+[UTCTime "03:19:29"]
+
+1. e3 b5 2. Bxb5 e6 3. Bxd7 Bxd7 4. Na3 Bxa3 5. bxa3 Qh4 (5... Bc8) (5... c6) 6. Qg4 Qxf2 7. Kxf2 Bc8 8. Qxg7 a5 9. Qxf7 Kxf7 10. Nh3 Nf6 11. a4 { [%cal Gc2c4,Gh1d1,Ge3e4] } 11... Ra6 (11... Ke7) *
+
+
+[Event "Antichess Variant Solved: 1.e3 b5 2.Bxb5 Ba6"]
+[Date "2019.02.04"]
+[Result "*"]
+[Variant "Antichess"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Antichess Variant Solved"]
+[ChapterName "1.e3 b5 2.Bxb5 Ba6"]
+[ChapterURL "https://lichess.org/study/Rc3e9Ua4/ryExhuUn"]
+[Annotator "https://lichess.org/@/Craze"]
+[FEN "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2019.02.04"]
+[UTCTime "03:20:34"]
+
+1. e3 b5 2. Bxb5 Ba6 { This seems to be the most tenacious defence for Black. } 3. Bxd7 Nxd7 4. d3 Bxd3 5. Qxd3 Qb8 6. Qxh7 Rxh7 7. Nc3 Qxb2 8. Bxb2 Rxh2 9. Rxh2 a5 10. Ba3 e5 11. Bxf8 Kxf8 (11... Nxf8 12. Rh6 gxh6 13. f4 exf4 14. exf4) 12. Rh6 gxh6 13. f4 exf4 14. exf4 *
+
+
+[Event "Antichess Variant Solved: 1.e3 Nh6 (Hippopotamus Defence)"]
+[Date "2019.02.04"]
+[Result "*"]
+[Variant "Antichess"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Antichess Variant Solved"]
+[ChapterName "1.e3 Nh6 (Hippopotamus Defence)"]
+[ChapterURL "https://lichess.org/study/Rc3e9Ua4/DhFFWMJU"]
+[Annotator "https://lichess.org/@/Craze"]
+[FEN "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2019.02.04"]
+[UTCTime "03:23:40"]
+
+1. e3 Nh6 2. Ba6 bxa6 3. Qh5 g6 (3... c5 4. Qxh6 gxh6 5. b4 cxb4 6. Ba3 bxa3 7. Nxa3 Qc7 8. Nh3 Qxc2 9. Nxc2 Bg7 10. Ke2 Bxa1 11. Rxa1 a5 12. a4 Na6 13. f3 h5 14. Ra3 h4 15. Kd1 f5 16. g3 hxg3 17. hxg3 Kf7 18. Ke1 Rf8 19. Kf2 Rh8 20. g4 fxg4 21. fxg4 Rd8 22. d3 (22. Kg3 { Black may be up material, but he is unable to coordinate his pieces. } { [%csl Ga8,Gc8,Gd8,Ga6] })) 4. Qxg6 fxg6! (4... hxg6) 5. Ne2 Kf7 6. Na3 a5 7. g4 Nxg4 8. Rg1 Nxf2 9. Rxg6 Kxg6 10. Kxf2 Kg5 11. d3 Kf4 12. Nxf4 e6 13. Nxe6 dxe6 14. Nb1 Qxd3 15. cxd3 Bb4 16. Bd2 Bxd2 17. Nxd2 { [%csl Ga8,Gb8,Gc8] } *
+
+
+[Event "Antichess Variant Solved: 1.e3 g5 (Wild Boar Attack)"]
+[Date "2019.02.04"]
+[Result "*"]
+[Variant "Antichess"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Antichess Variant Solved"]
+[ChapterName "1.e3 g5 (Wild Boar Attack)"]
+[ChapterURL "https://lichess.org/study/Rc3e9Ua4/Lwx9dfPY"]
+[Annotator "https://lichess.org/@/Craze"]
+[FEN "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2019.02.04"]
+[UTCTime "03:27:01"]
+
+1. e3 g5 2. Ba6! (2. Bd3) 2... Nxa6 (2... bxa6 3. Qh5 Bh6 4. Qxf7 Kxf7 5. e4 Qe8 6. e5 Bf8 7. Ne2 Nf6 8. exf6 exf6 9. a4 Qxe2 10. Kxe2 Ba3 (10... a5)) 3. Qh5 Bg7 4. Qxh7 Bxb2 5. Qxh8 Bxa1 (5... Bxc1 6. Qxg8 Bxd2 7. Nxd2 (7. Qxe8) 7... c5 (7... b6 8. Qxe8 Qxe8 9. f4) (7... Nb8 8. Qxe8 Qxe8 9. f4) (7... Kf8 8. Qxf8 Qxf8 9. Ne2 Nb8 (9... b6 10. f4) 10. Nb3 b6 11. Kd2)) 6. Qxg8 Kf8 (6... Bc3) 7. Qxf8 Qxf8 8. Bb2 Bxb2 9. d4 Bxd4 10. exd4 e5 11. dxe5 Qa3 12. Nxa3 c5 (12... Nc5) (12... b5) *
+
+
+[Event "Antichess Variant Solved: 1.e3 e6 (Modern Defence)"]
+[Date "2019.02.04"]
+[Result "*"]
+[Variant "Antichess"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Antichess Variant Solved"]
+[ChapterName "1.e3 e6 (Modern Defence)"]
+[ChapterURL "https://lichess.org/study/Rc3e9Ua4/5E4tcPBn"]
+[Annotator "https://lichess.org/@/Craze"]
+[FEN "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2019.02.04"]
+[UTCTime "03:30:45"]
+
+1. e3 e6 2. b4 Bxb4 3. Qg4 Bxd2 4. Qxg7 Bxe3 5. Bxe3 c5 6. Bxc5 b6 7. Bxb6 Qxb6 8. Qxh7 (8. Qxf7! Kxf7 9. Nh3 Qxf2 10. Kxf2 Ba6 11. Bxa6 Nxa6 12. a4 Nc7 13. a5 Ne7 14. Ke3 Rhd8 15. Ra3 Nc8 16. a6 Nxa6 17. Rxa6 Rb8 18. Rxe6 Rxb1 19. Rxb1 Kxe6 20. Kf4 Kf7 21. Rf1 { [%csl Gf7] } 21... Rf8 22. c4 a5 23. c5 a4 24. Nf2 a3 25. Rb1 Nb6 26. Rxb6 h6 27. Rxh6 Rh8 28. Rxh8 a2 29. Rc8 Ke7 30. c6 dxc6 31. Rxc6 Kd8 32. Nd3 a1=K 33. Ne5) 8... Rxh7 9. Nc3 (9. Nd2) (9. Na3) 9... Qxf2 10. Kxf2 Rxh2 11. Rxh2 Nh6 12. Rxh6 Ba6 13. Bxa6 Nxa6 14. Rxe6 fxe6 *
+
+
+[Event "Antichess Variant Solved: 1.e3 c5 (Polish Defence/Goldovski Defence)"]
+[Date "2019.02.04"]
+[Result "*"]
+[Variant "Antichess"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Antichess Variant Solved"]
+[ChapterName "1.e3 c5 (Polish Defence/Goldovski Defence)"]
+[ChapterURL "https://lichess.org/study/Rc3e9Ua4/mczu8pHc"]
+[Annotator "https://lichess.org/@/Craze"]
+[FEN "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2019.02.04"]
+[UTCTime "03:34:29"]
+
+1. e3 c5 2. Bb5 Qc7 (2... g5) (2... c4 3. Bxd7 Kxd7 4. b3 cxb3 5. cxb3 Nh6 6. Ne2 g6 7. e4 Nf5 8. exf5 gxf5 9. f3 h5 10. Ng1 Rh6 11. h4) (2... Nh6 3. Bxd7 Nxd7 4. e4 Ng4 5. Qxg4 g5 6. Qxd7 Kxd7 7. Ne2 Qb6 8. c3 Qxb2 9. Bxb2 e6 10. Rg1 b6 11. g4 b5 12. Bc1 Bg7 13. h4 gxh4 14. Rf1 Bxc3 15. dxc3 h6 (15... Kc6) (15... b4)) 3. Bxd7 Bxd7 4. Qf3 Qxh2 5. Rxh2 h6 6. Rxh6 (6. Qxb7) 6... Nxh6 7. Qxb7 Bh3 8. Nxh3 g5 9. Nxg5 Ng8 10. Nxf7 Kxf7 11. Qxe7 Nxe7 12. b4 cxb4 13. Ba3 bxa3 14. Nxa3 Bh6 15. Nc4 Bxe3 16. dxe3 Na6 17. f4 Ng8 18. Nb2 Rh6 19. g3! (19. Nd1 Nb8 20. Nf2 Rh1 21. Nxh1 Nd7 22. Ng3 a5 23. c4 Nf8 24. f5 (24. Ne2 Nh7 25. Nd4 Ng5 26. fxg5 Ke6 27. Nxe6 Nh6! $10) 24... Ne6 25. fxe6 Kxe6 26. Ke2 Kf5 27. Nxf5 Ne7 28. Nxe7 Rc8 29. Nxc8 a4 30. Rb1 a3 31. Rb2 axb2 $10) *
+
+
+[Event "Antichess Variant Solved: 1.e3 b6 (Liardet Defense)"]
+[Date "2019.02.04"]
+[Result "*"]
+[Variant "Antichess"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Antichess Variant Solved"]
+[ChapterName "1.e3 b6 (Liardet Defense)"]
+[ChapterURL "https://lichess.org/study/Rc3e9Ua4/7TcIuqhQ"]
+[Annotator "https://lichess.org/@/Craze"]
+[FEN "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2019.02.04"]
+[UTCTime "03:47:39"]
+
+1. e3 b6 2. a4 e6 3. Ra3 Bxa3 4. Nxa3 b5 (4... Qe7 5. b4 Qxb4 6. Qf3 Qxa3 7. Qxa8 Qxa4 8. Qxb8 Qxc2 9. Qxc8 Qxc1 10. Qxe8 Qxe1 11. Qxd7 Qxf1 12. Qxf7 Qxg2 13. Qxg8 Rxg8 14. Nf3 Qxh2 15. Nxh2) (4... Qh4 5. a5! (5. h3 Qxf2! (5... Qxa4 6. Qf3 Qxa3 7. Qxa8 Qxb2 8. Qxb8 Qxc2 9. Qxc7 Qxd2 10. Qxc8 Qxe1 11. Qxe8 Qxe3 12. Qxf7 Qxh3 13. Rxh3 Nh6 14. Bxh6 gxh6 15. Qxh7 Rxh7 16. Rxh6 Rxh6 17. Bc4 b5 18. Bxe6 Rxe6 19. f4)) 5... bxa5 6. Qh5 Qxf2 7. Qxa5 Qxe3 8. Qxc7 Qxe1 9. Qxc8 Qxf1 10. Qxe8 Qxc1 11. Qxf7 Qxd2 12. Qxg7 Qxg2 13. Qxg8 Qxg8 14. Nh3 Qg5 15. Nxg5 Re8 16. Nxe6 dxe6 17. c4) (4... Qf6 5. Bd3 Qxf2 6. Kxf2 b5 7. Nxb5 a5 8. Nxc7 e5 9. Bxh7 Rxh7 10. Nxa8 Rxh2 11. Rxh2 Kd8 12. Nc7 Kxc7 13. Rh3) 5. Bxb5 Qg5 6. Bxd7 Qxg2 7. Bxe6 Bxe6 8. h3 Bxh3 9. Rxh3 Qxh3 (9... Qxf2 10. Kxf2 h5 11. Rxh5 Rxh5 12. Qxh5 Ne7 13. Qxf7 Kxf7 14. d4 Ng8 15. e4 Nd7 16. Bh6 Nxh6 17. e5 Nxe5 18. dxe5 Rd8 19. c4) 10. Nxh3 Nd7 11. c4 Nf8 12. c5 Ke7 13. f4 h6 14. Qh5 Nh7 (14... Rc8) 15. Qxh6 gxh6 16. f5 Ng5 17. Nxg5 hxg5 18. b3 Rf8 19. a5 Nf6 20. Nc4 Ng4 (20... Nd5 21. Ke2 Nxe3) 21. Ke2 Nxe3 22. Kxe3 Kd7 (22... Ke8 23. b4) 23. a6 { [%cal Gc4b6] } *
+
+
+[Event "Antichess Variant Solved: Weaker 1st Moves for White"]
+[Date "2019.02.04"]
+[Result "*"]
+[Variant "Antichess"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Antichess Variant Solved"]
+[ChapterName "Weaker 1st Moves for White"]
+[ChapterURL "https://lichess.org/study/Rc3e9Ua4/nAgZLlWq"]
+[Annotator "https://lichess.org/@/Craze"]
+[FEN "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2019.02.04"]
+[UTCTime "03:56:23"]
+
+{ We already saw that 1.e3 wins for White. Now we can see the moves that supposedly lose for White with best play. }
+1. e4 (1. d3) (1. d4) (1. Nc3) (1. Nf3) (1. f4) (1. h4) (1. h3) (1. c3) (1. f3) (1. a3 e6 2. c4 Bxa3 3. Nxa3 c5 4. b3 (4. d4) 4... a5 5. b4 cxb4 6. h3 bxa3 7. Bxa3 Qf6 8. Be7 Qxa1 9. Qxa1 Nxe7 10. Qxg7 Rg8 11. Qxg8 Nxg8 12. h4 a4 13. Rh3 b5 14. cxb5 Ba6 15. bxa6 Nxa6 16. Rb3 axb3) *
+
+
+[Event "Antichess Variant Solved: Do You Have Any Questions?"]
+[Date "2019.02.04"]
+[Result "*"]
+[Variant "Antichess"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Antichess Variant Solved"]
+[ChapterName "Do You Have Any Questions?"]
+[ChapterURL "https://lichess.org/study/Rc3e9Ua4/ykSslmA2"]
+[Annotator "https://lichess.org/@/Craze"]
+[FEN "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2019.02.04"]
+[UTCTime "04:01:56"]
+
+{ If you have any questions, I would consult Stockfish in this Study. If Stockfish's answer is inconclusive, I would suggest asking one of the top Antichess players on Lichess. }
+ *
+
+

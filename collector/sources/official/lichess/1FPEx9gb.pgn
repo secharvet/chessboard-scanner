@@ -1,0 +1,16 @@
+[Event "Advanced Caro: SF disagrees"]
+[Date "2020.02.23"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B12"]
+[Opening "Caro-Kann Defense: Advance Variation"]
+[StudyName "Advanced Caro"]
+[ChapterName "SF disagrees"]
+[ChapterURL "https://lichess.org/study/1FPEx9gb/QfC4hW3f"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+[UTCDate "2020.02.23"]
+[UTCTime "02:40:57"]
+
+1. e4 c6 2. d4 d5 3. e5 Bf5 4. Nd2 e6 5. Nb3 Nd7 6. Nf3 Ne7 { [%cal Gh7h6,Gg7g5] } 7. Bd3 Bxd3 8. cxd3 Qb6 (8... a5 9. a4 Nf5 10. O-O Qb6 (10... Nh4!? { [%cal Gf3h4,Gd8h4,Gf2f4] }) 11. Bd2 Be7 12. h3) *
+
+

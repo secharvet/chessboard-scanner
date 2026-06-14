@@ -1,0 +1,182 @@
+[Event "Opening Preparation: Evans Gambit"]
+[Date "2018.05.07"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C51"]
+[Opening "Italian Game: Evans Gambit, Stone-Ware Variation"]
+[StudyName "Opening Preparation"]
+[ChapterName "Evans Gambit"]
+[ChapterURL "https://lichess.org/study/4FGazO1I/Be2IqIKO"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2018.05.07"]
+[UTCTime "21:04:45"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. b4 Bxb4 5. c3 Bd6 { A so-called solid variation featured in Nakamura-Hess 2012... White probably has good chances leading into the middlegame } (5... Be7) (5... Ba5 6. d4 d6 { secondary line played by Fabiano } (6... exd4 { mainline } 7. O-O Nf6 8. Ba3)) *
+
+
+[Event "Millionaire Chess"]
+[Site "Las Vegas, NV USA"]
+[Date "2015.10.08"]
+[Round "2.2"]
+[White "Ruifeng Li"]
+[Black "Fabiano Caruana"]
+[Result "1/2-1/2"]
+[WhiteElo "2446"]
+[BlackElo "2796"]
+[Variant "Standard"]
+[ECO "C52"]
+[Opening "Italian Game: Evans Gambit, Tartakower Attack"]
+[StudyName "Opening Preparation"]
+[ChapterName "Ruifeng Li - Fabiano Caruana"]
+[ChapterURL "https://lichess.org/study/4FGazO1I/DEpSREMj"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. b4 Bxb4 5. c3 Ba5 (5... Bd6) 6. d4 d6 (6... exd4) 7. Qb3 Qd7 (7... Qe7? 8. d5) (7... Nxd4 8. Nxd4 exd4 9. Bxf7+ Kf8 10. O-O { clearly better for white } 10... dxc3 11. e5) 8. dxe5 Bb6 (8... dxe5 9. O-O) 9. Nbd2 dxe5 (9... Na5) 10. Bb5 f6 11. Nc4 Nge7 12. O-O Qe6 13. Qa4 (13. Ba3 a6 14. Ba4 Ba7) 13... Bd7 14. Nxb6 cxb6 15. Ba3 Na5 16. Rfd1 Bxb5 (16... O-O-O 17. Bb4 Bxb5 18. Qxb5 Nac6 { [%cal Ga2a5,Gc3c5] } 19. a4 Rxd1+ 20. Rxd1 Qb3) 17. Qxb5+ Kf7 18. Rd7 Rhe8 19. Rad1 Nc4 20. Qb3 Rab8 21. h3 a6 22. R1d3 b5 23. Rc7 g6 24. Bb4 { [%cal Gd3d7] } 24... Rbc8 25. Rxb7 Rb8 26. Rc7 (26. Rbd7) 26... Rbc8 27. Rb7 Rb8 28. Rc7 { 1/2-1/2 The game is a draw. } 1/2-1/2
+
+
+[Event "US Championship"]
+[Site "St Louis, MO USA"]
+[Date "2012.05.08"]
+[Round "1"]
+[White "Hikaru Nakamura"]
+[Black "Robert Lee Hess"]
+[Result "1-0"]
+[Variant "Standard"]
+[ECO "C51"]
+[Opening "Italian Game: Evans Gambit, Stone-Ware Variation"]
+[StudyName "Opening Preparation"]
+[ChapterName "Hikaru Nakamura - Robert Lee Hess"]
+[ChapterURL "https://lichess.org/study/4FGazO1I/yYJo70oK"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. b4 Bxb4 5. c3 Bd6 6. d4 Qe7 7. O-O Nf6 8. Nbd2 O-O 9. Re1 Ba3 10. Nxe5 Nxe5 11. dxe5 Ne8 12. f4 Bxc1 13. Rxc1 d6 14. exd6 cxd6 15. Nf3 Bg4 16. h3 Rc8 17. Bb3 Bxf3 18. Qxf3 Rc5 19. Re3 Nc7 20. e5 dxe5 21. Qxb7 a5 22. Qe4 Ne6 23. fxe5 Re8 24. Rd1 Qc7 25. Rdd3 h6 26. Bd5 Qb6 27. c4 Qb1+ 28. Kh2 Qxa2 { [%csl Ge4,Ge3,Gd3,Ge5,Gd5,Gc4] } 29. Bxe6 fxe6 30. Rd7 Kh8 31. Rxg7 Kxg7 32. Rg3+ Kf8 33. Qh7 { 1-0 Black resigns. } { [%cal Gg3g8] } 1-0
+
+
+[Event "Import"]
+[Site "https://lichess.org/rCR5rWCS"]
+[Date "2016.03.20"]
+[Round "-"]
+[White "Kasparov, Garry (2805)"]
+[Black "Anand, Viswanathan (2715)"]
+[Result "1-0"]
+[TimeControl "-"]
+[Termination "Unknown"]
+[Variant "Standard"]
+[ECO "C51"]
+[Opening "Italian Game: Evans Gambit, Anderssen Variation, Cordel Line"]
+[StudyName "Opening Preparation"]
+[ChapterName "Kasparov, Garry (2805) - Anand, Viswanathan (2715)"]
+[ChapterURL "https://lichess.org/study/4FGazO1I/1Nu1ZuSW"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. b4 Bxb4 5. c3 Be7 6. d4 Na5 7. Be2 exd4 8. Qxd4 Nf6 9. e5 Nc6 10. Qh4 Nd5 11. Qg3 g6 12. O-O Nb6 13. c4 d6 14. Rd1 Nd7 15. Bh6 Ncxe5 16. Nxe5 Nxe5 17. Nc3 f6 18. c5 Nf7 19. cxd6 cxd6 20. Qe3 Nxh6 21. Qxh6 Bf8 22. Qe3+ Kf7 23. Nd5 Be6 24. Nf4 Qe7 25. Re1 { 1-0 White wins. } { [%csl Ge7] } 25... Bh6 { [%cal Ge2c4] } (25... Qd7 26. Nxe6 (26. Bb5 { [%csl Ge6] } 26... Qxb5 27. Qxe6+ Kg7 28. Nd5 Qb2 29. Qd7+ Kg8 30. Rab1 { [%csl Gb7][%cal Gb1b8] }) 26... Qxe6 27. Bc4 Qxc4) 1-0
+
+
+[Event "Import"]
+[Site "https://lichess.org/hMLMLUb4"]
+[Date "2017.08.22"]
+[Round "-"]
+[White "Wan, Yunguo (2477)"]
+[Black "Sihite, Chelsie Monica (2254)"]
+[Result "1-0"]
+[TimeControl "-"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "C52"]
+[Opening "Italian Game: Evans Gambit, Anderssen Defense"]
+[StudyName "Opening Preparation"]
+[ChapterName "Wan, Yunguo (2477) - Sihite, Chelsie Monica (2254)"]
+[ChapterURL "https://lichess.org/study/4FGazO1I/rIPWE1PC"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. b4 Bxb4 5. c3 Ba5 6. d4 exd4 7. O-O Nf6 8. Ba3 d6 9. e5 dxc3 10. exf6 Qxf6 11. Re1+ Be6 12. Qb3 Kd7 13. Bxe6+ fxe6 14. Re3 g5 15. Nxc3 Bb6 16. Ree1 g4 17. Ne4 Qf4 18. Nh4 Qf7 19. Bb2 Raf8 20. Bxh8 Rxh8 21. Rad1 Rf8 22. Kh1 h6 23. f3 Qh5 24. Nxd6 { 1-0 Black resigns. } 1-0
+
+
+[Event "Dortmund"]
+[Site "Dortmund GER"]
+[Date "2015.07.05"]
+[Round "7"]
+[White "Liviu Dieter Nisipeanu"]
+[Black "Fabiano Caruana"]
+[Result "0-1"]
+[WhiteElo "2654"]
+[BlackElo "2805"]
+[Variant "Standard"]
+[ECO "C52"]
+[Opening "Italian Game: Evans Gambit, Tartakower Attack"]
+[StudyName "Opening Preparation"]
+[ChapterName "Liviu Dieter Nisipeanu - Fabiano Caruana"]
+[ChapterURL "https://lichess.org/study/4FGazO1I/jD5dqI1g"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. b4 Bxb4 5. c3 Ba5 6. d4 d6 7. Qb3 Qd7 8. dxe5 Bb6 9. a4 Na5 10. Qa2 Nxc4 11. Qxc4 Ne7 12. Ba3 O-O 13. O-O Re8 14. exd6 cxd6 15. Rd1 Qc6 16. Nbd2 Be6 17. Qxc6 Nxc6 18. Bxd6 Rad8 19. Bb4 Rd3 20. a5 Bc7 21. Nf1 Rxd1 22. Rxd1 Nxa5 23. Nd4 { [%csl Gb7,Ga7] } 23... Nc4 24. Nxe6 Rxe6 25. Rd7 Rc6 26. Ng3 g6 27. Ne2 a5 28. Nd4 axb4 29. Nxc6 b3 30. Rxc7 Nd6 { 0-1 White resigns. } 0-1
+
+
+[Event "Import"]
+[Site "https://lichess.org/r2f8HYAI"]
+[Date "2017.02.02"]
+[Round "-"]
+[White "Spraggett, Kevin (2526)"]
+[Black "Adams, Michael (2746)"]
+[Result "0-1"]
+[TimeControl "-"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "C54"]
+[Opening "Italian Game: Classical Variation, Giuoco Pianissimo, with a6"]
+[StudyName "Opening Preparation"]
+[ChapterName "Spraggett, Kevin (2526) - Adams, Michael (2746)"]
+[ChapterURL "https://lichess.org/study/4FGazO1I/jKhJ6Ky8"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Bc4 Nf6 3. d3 Nc6 4. Nf3 Bc5 5. c3 a6 6. Bb3 Ba7 7. O-O d6 8. Nbd2 O-O 9. Re1 Ng4 10. Re2 Kh8 11. h3 Nh6 12. Nf1 f5 13. Bxh6 gxh6 14. exf5 Bxf5 15. N1h2 Qf6 16. Qd2 Rae8 17. Kh1 Re7 18. a3 Rg7 19. Rg1 h5 20. Ba2 Bd7 21. b4 Ne7 22. d4 exd4 23. cxd4 Ng6 24. Re4 Nf4 25. h4 Bc6 26. d5 Bb5 27. g3 Nh3 28. Rg2 Bf1 { 0-1 White resigns. } { [%cal Gh2f1,Gf6f3] } 0-1
+
+
+[Event "Opening Preparation: Chapter 8"]
+[Date "2018.05.10"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A00"]
+[Opening "Mieses Opening"]
+[StudyName "Opening Preparation"]
+[ChapterName "Chapter 8"]
+[ChapterURL "https://lichess.org/study/4FGazO1I/vN5je2Lt"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2018.05.10"]
+[UTCTime "00:01:14"]
+
+1. d3 (1. d4 Nf6 2. Bf4 c6 3. e3 g5 4. Bg3 Qb6 5. b3 Bg7 (5... c5) (5... Ne4 6. Be5 Rg8 7. Bd3 d6)) *
+
+
+[Event "Opening Preparation: Nc3 Sicilian cool line"]
+[Date "2018.05.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B23"]
+[Opening "Sicilian Defense: Closed, Traditional"]
+[StudyName "Opening Preparation"]
+[ChapterName "Nc3 Sicilian cool line"]
+[ChapterURL "https://lichess.org/study/4FGazO1I/pGRD9rEd"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2018.05.16"]
+[UTCTime "18:26:17"]
+
+1. e4 c5 2. Nc3 (2. Nf3 a6 { [%cal Gc2c3,Gc3c4] }) 2... Nc6 (2... a6 { [%cal Gf2f4,Gb7b5] }) 3. Bb5 Nd4 4. Bc4 e6 5. Nge2 Ne7 6. O-O d5 (6... a6 7. d3 (7. a4 d5 8. exd5 exd5 9. Nxd5 Nxd5 10. Nxd4 cxd4 11. Qh5 Be6 12. Re1 Nf4 13. Rxe6+ Nxe6 14. Bxe6 Qe7 { [%csl Ga6,Ga4,Gb5] }) 7... d5 (7... b5 8. Bb3 Nxb3 9. axb3 Bb7) 8. exd5 exd5 9. Nxd5 Nxd5 10. Nxd4 cxd4 11. Qh5 Be6 12. Re1) 7. exd5 exd5 8. Nxd5 Nxd5 9. Nxd4 cxd4 10. Qh5 Be6 11. Re1 Nf4 12. Bb5+ Ke7 13. Qg5+ f6 14. Qxf4 Kf7 15. Rxe6 Kxe6 16. Qe4+ *
+
+
+[Event "Opening Preparation: Nc3 Sicilian: How to crush  2...a6"]
+[Date "2018.05.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B23"]
+[Opening "Sicilian Defense: Closed"]
+[StudyName "Opening Preparation"]
+[ChapterName "Nc3 Sicilian: How to crush  2...a6"]
+[ChapterURL "https://lichess.org/study/4FGazO1I/0brXh2CB"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2018.05.16"]
+[UTCTime "18:34:30"]
+
+1. e4 c5 2. Nc3 a6 3. g3 b5 4. Bg2 Bb7 5. d3 e6 6. f4 d5 7. f5 d4 (7... exf5 8. Nxd5) 8. fxe6 dxc3 (8... fxe6 9. Qh5+ g6 10. Qe5 { [%csl Gh8] } 10... Qf6 11. Qc7 { [%csl Rc3][%cal Gf6e7,Gf6f7,Gf6g7] } 11... Qg7 12. Qxg7 Bxg7 13. Nce2 { [%csl Re6][%cal Gg2h3,Gg1f3,Gf3g5,Ga2a4,Gb2b4,Ge1g1] }) 9. exf7+ Kxf7 10. bxc3 Be7 11. Nf3 g6 12. O-O Kg7 13. d4 Nd7 14. d5 Nb6 15. Bf4 Nc4 16. Nd2 Nb6 17. c4 Nf6 18. d6 Bxd6 19. e5 Be7 20. Bxb7 Ra7 21. exf6+ Bxf6 22. Bc6 Qd4+ 23. Kh1 g5 24. Ne4 gxf4 25. Qg4+ Kf8 26. Rad1 { Kollars, Dmitrij - Thogersen, Rasmus, 1-0, Xtracon Chess Open 2017, https://lichess.org/r0JCpdN1 } *
+
+

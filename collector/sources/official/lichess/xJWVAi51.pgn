@@ -1,0 +1,16 @@
+[Event "Nick's Openings: d4"]
+[Date "2025.11.07"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A70"]
+[Opening "Benoni Defense: Classical Variation"]
+[StudyName "Nick's Openings"]
+[ChapterName "d4"]
+[ChapterURL "https://lichess.org/study/xJWVAi51/x4Z1prEn"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+[UTCDate "2025.11.07"]
+[UTCTime "19:33:08"]
+
+1. d4 Nf6 2. c4 (2. Bf4 c5 3. e3 Nd5 { [%cal Gd5f4] } (3... Qb6 { [%csl Gb2][%cal Gb6b2] } 4. Nc3 Qxb2 5. Nb5 { [%csl Rb2][%cal Gb5c7] }) (3... g5 4. Bxg5) 4. Bg3 Qb6 5. Nc3 (5. b3 cxd4 6. exd4 g6 (6... Nc6 7. Nf3 g6) 7. c4 (7. Be5 Nf6 { [%cal Gf8g7] }) 7... Qa5+ 8. Qd2 Qxd2+ 9. Nxd2 Nb4 10. Kd1 Bg7 (10... d6 { [%csl Rg3][%cal Gf8g7] } 11. a3 N4c6 12. d5 Bg7 13. Ra2 Nd4) 11. Be5) 5... Nxc3 6. bxc3) 2... c5 (2... d6 { [%cal Ge7e5] } 3. Nc3 Nbd7 4. Nf3 e5 5. e4) (2... e6 3. Nf3 d5 4. Nc3 c5 5. cxd5 Nxd5 6. e4 Nxc3 7. bxc3 cxd4 8. cxd4 Bb4+ 9. Bd2 Bxd2+ 10. Qxd2 O-O) (2... g6 3. Nc3 d5 4. cxd5 Nxd5 5. e4 Nxc3 6. bxc3 Bg7 { [%cal Gc7c5] }) 3. d5 e6 (3... b5 4. cxb5 a6) 4. Nc3 exd5 5. cxd5 d6 6. e4 g6 7. Nf3 Bg7 8. Bd3 O-O 9. O-O { [%csl Gc8] } 9... Bg4 10. h3 Bxf3 11. Qxf3 Nbd7 { [%cal Gd7e5,Ge5f3,Ge5d3] } 12. Bf4 Qe7 { [%cal Gd7e5] } (12... Ne5 { [%csl Ge5] } 13. Bxe5 dxe5 { [%csl Ge5] }) 13. Nb5 (13. Rfe1 Nh5 { [%cal Gd7e5] }) 13... Ne5 14. Bxe5 Qxe5 { [%csl Ge5][%cal Ge5b2,Ge5h2] } *
+
+

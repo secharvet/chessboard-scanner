@@ -1,0 +1,18 @@
+[Event "Endgames: The Rule of Square"]
+[Date "2025.09.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Endgames"]
+[ChapterName "The Rule of Square"]
+[ChapterURL "https://lichess.org/study/V57I2w0X/Wmvp4LU4"]
+[Annotator "https://lichess.org/@/MAtharvaa"]
+[FEN "6k1/8/8/8/8/8/P7/7K w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.09.16"]
+[UTCTime "11:57:45"]
+
+1. a4 Kf8 2. a5 Ke7 3. a6 Kd6 4. a7 Kc5 5. a8=Q *
+
+

@@ -1,0 +1,173 @@
+[Event "Solid Gambits?: Stafford (not solid, but highly venomous)"]
+[Date "2019.08.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C42"]
+[Opening "Petrov's Defense: Stafford Gambit"]
+[StudyName "Solid Gambits?"]
+[ChapterName "Stafford (not solid, but highly venomous)"]
+[ChapterURL "https://lichess.org/study/RVOzLtuQ/NytICuKP"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.08.28"]
+[UTCTime "05:32:47"]
+
+1. e4 e5 2. Nf3 Nf6 3. Nxe5 (3. Nc3 Nc6) (3. Bc4 Nxe4 4. Nc3 Nxc3 (4... Nf6 5. Nxe5 d5) 5. dxc3) 3... Nc6 4. Nxc6 dxc6 { Stafford Gambit Accepted } 5. Nc3 (5. d3 Bc5 6. Bg5? { [%csl Gg5] } (6. Be2 h5 7. O-O Ng4 8. h3 Qd6 9. Bxg4 (9. e5 Nxe5) 9... hxg4) 6... Nxe4 7. Bxd8 (7. dxe4 Bxf2+ { [%csl Gd1][%cal Re1d1] } 8. Ke2 Bg4+) (7. Qe2 Qxg5 8. Qxe4+ Kd8) 7... Bxf2+ 8. Ke2 Bg4#) (5. e5 Ne4 6. d3 Bc5) 5... Bc5 6. Be2 (6. d3 { [%csl Gd3] } 6... Ng4 7. Be3 Nxe3 8. fxe3 Bxe3 { [%csl Ge3] } 9. Qf3 Qg5) (6. Bc4 Ng4 7. O-O Qh4 8. h3 Nxf2 9. Qf3 Nxh3+ 10. Kh1 Nf2+ 11. Kg1 Qh1#) 6... h5 7. h3 { [%csl Gh3][%cal Gh2h3] } 7... Qd4 { [%csl Gf2][%cal Gd4f2] } 8. O-O Ng4 9. hxg4 hxg4 10. g3 (10. a3 Qe5 11. g3 Qxg3#) (10. d3 Qe5) (10. Bxg4 Qe5 11. Bh3 Bxh3 12. gxh3 Qg3+ { [%csl Gg3][%cal Gh8h1] }) 10... Qe5 11. Kg2 Bxf2 12. Rxf2 (12. Kxf2 Rh2+ 13. Ke3 Qxg3+ 14. Kd4 Be6 15. Na4 b6 16. c4 O-O-O#) 12... Qh5 13. Qh1 (13. Bxg4 Bxg4) 13... Qxh1# { [%csl Gh1] } *
+
+
+[Event "Solid Gambits?: Schliemann"]
+[Date "2019.08.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C63"]
+[Opening "Ruy Lopez: Schliemann Defense, Schönemann Attack"]
+[StudyName "Solid Gambits?"]
+[ChapterName "Schliemann"]
+[ChapterURL "https://lichess.org/study/RVOzLtuQ/x6CKmVK5"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.08.28"]
+[UTCTime "05:47:28"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 f5 4. d4 (4. d3 fxe4 5. dxe4 Nf6 6. O-O Bc5 7. Qd3 { [%csl Gg8][%cal Gc4g8] } 7... d6 8. Qc4 { [%cal Gc1g5,Gb1c3,Gc3d5] } 8... Qe7 9. Nc3 Bd7 10. Nd5 Nxd5 11. exd5 Nd4 12. Nxd4 Bxd4 13. Bxd7+ Qxd7 14. a4 a6 15. Be3 Bxe3 16. fxe3 O-O-O 17. Rf2 Rdf8 18. Raf1 Qe7 19. Qe4 g6 20. Rf3 Kb8 21. b3 Rxf3 22. Qxf3 Qg5 23. h3 Rc8 24. Kh2 Qh4 25. c4 a5 26. e4 Qh6 27. Qf2 b6 28. g3 Kb7 29. Kg2 Ra8 30. h4 g5 31. Qe3 Rg8 32. Rf5 Qh5 33. hxg5 Qd1 34. Rf7 Qh5 35. Qf3 Qxg5 36. Rxh7 Qf4 37. Rh5 Rg7 38. Qd3 Qc1 39. Qf3 Qf4 40. Qxf4 exf4 41. Rh3 fxg3 42. Rxg3 Rh7 43. Kf3 Rf7+ 44. Ke3 Rf1 45. Kd4 Rd1+ 46. Rd3 Re1 47. Re3 Rd1+ 48. Kc3 Rc1+ 49. Kd2 Rb1 50. e5 dxe5 51. Kc2 Rh1 52. Rxe5 Rh3 53. Re2 Kc8 54. Rd2 Kd7 55. Rd3 Rh2+ 56. Kc3 Rh1 57. Rg3 Rd1 58. Rg7+ Kd6 59. Rg6+ Kd7 60. Rc6 Rc1+ 61. Kb2 Rd1 62. Kc2 Rd4 63. b4 axb4 64. Kb3 Rd1 65. Kxb4 Rb1+ 66. Kc3 Ra1 67. Kb3 Rb1+ 68. Ka2 Rb4 69. Ka3 Rb1 { Carlsen, Magnus - Radjabov, Teimour, 1/2-1/2, Morelia/Linares 25th, 2008, https://lichess.org/1fDqFqG8 }) 4... fxe4 5. Nxe5 Nxe5 6. dxe5 c6 7. Nc3 cxb5 8. Nxe4 *
+
+
+[Event "Solid Gambits?: Albin Counter Gambit"]
+[Date "2019.08.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D08"]
+[Opening "Queen's Gambit Declined: Albin Countergambit, Lasker Trap"]
+[StudyName "Solid Gambits?"]
+[ChapterName "Albin Counter Gambit"]
+[ChapterURL "https://lichess.org/study/RVOzLtuQ/SUMKknXw"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.08.28"]
+[UTCTime "05:52:12"]
+
+1. d4 (1. e4 c5 (1... e5 2. Nf3 Nc6 3. Bc4 Bc5 4. b4) 2. d4) 1... d5 2. c4 e5 3. dxe5 d4 4. e3 (4. a3 Nc6) 4... Bb4+ { [%csl Gb4] } 5. Bd2 dxe3 6. Bxb4 exf2+ 7. Ke2 (7. Kxf2 Qxd1) 7... fxg1=N+ (7... fxg1=Q 8. Qxd8+ Kxd8 9. Rxg1) *
+
+
+[Event "Millionaire Chess"]
+[Site "Las Vegas, NV USA"]
+[Date "2015.10.08"]
+[Round "2.2"]
+[White "Ruifeng Li"]
+[Black "Fabiano Caruana"]
+[Result "1/2-1/2"]
+[WhiteElo "2446"]
+[BlackElo "2796"]
+[Variant "Standard"]
+[ECO "C52"]
+[Opening "Italian Game: Evans Gambit, Tartakower Attack"]
+[StudyName "Solid Gambits?"]
+[ChapterName "Ruifeng Li - Fabiano Caruana"]
+[ChapterURL "https://lichess.org/study/RVOzLtuQ/h6Pevch9"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. b4 Bxb4 5. c3 Ba5 6. d4 d6 7. Qb3 Qd7 8. dxe5 Bb6 9. Nbd2 dxe5 10. Bb5 f6 11. Nc4 Nge7 12. O-O Qe6 13. Qa4 Bd7 14. Nxb6 cxb6 15. Ba3 Na5 16. Rfd1 Bxb5 17. Qxb5+ Kf7 18. Rd7 Rhe8 19. Rad1 Nc4 20. Qb3 Rab8 21. h3 a6 22. R1d3 b5 23. Rc7 { [%cal Ga3e7,Gb3f7,Gc7e7,Ge7f7] } 23... g6 24. Bb4 Rbc8 25. Rxb7 Rb8 26. Rc7 Rbc8 27. Rb7 Rb8 28. Rc7 { 1/2-1/2 The game is a draw. } 1/2-1/2
+
+
+[Event "US Championship"]
+[Site "St Louis, MO USA"]
+[Date "2012.05.08"]
+[Round "1"]
+[White "Hikaru Nakamura"]
+[Black "Robert Lee Hess"]
+[Result "1-0"]
+[Variant "Standard"]
+[ECO "C51"]
+[Opening "Italian Game: Evans Gambit, Stone-Ware Variation"]
+[StudyName "Solid Gambits?"]
+[ChapterName "Hikaru Nakamura - Robert Lee Hess"]
+[ChapterURL "https://lichess.org/study/RVOzLtuQ/zkTBdyRK"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. b4 Bxb4 5. c3 Bd6 6. d4 Qe7 7. O-O Nf6 8. Nbd2 O-O 9. Re1 Ba3 10. Nxe5 Nxe5 11. dxe5 { [%csl Ga3][%cal Ge7a3] } 11... Ne8 (11... Bxc1 12. exf6) 12. f4 Bxc1 13. Rxc1 d6 14. exd6 cxd6 15. Nf3 Bg4 16. h3 Rc8 17. Bb3 Bxf3 18. Qxf3 Rc5 19. Re3 Nc7 20. e5 dxe5 21. Qxb7 a5 22. Qe4 Ne6 23. fxe5 Re8 24. Rd1 Qc7 25. Rdd3 h6 26. Bd5 Qb6 27. c4 Qb1+ 28. Kh2 Qxa2 29. Bxe6 fxe6 30. Rd7 Kh8 31. Rxg7 Kxg7 32. Rg3+ Kf8 33. Qh7 { 1-0 Black resigns. } 1-0
+
+
+[Event "Solid Gambits?: Halloween Gambit"]
+[Date "2019.08.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C47"]
+[Opening "Four Knights Game: Halloween Gambit"]
+[StudyName "Solid Gambits?"]
+[ChapterName "Halloween Gambit"]
+[ChapterURL "https://lichess.org/study/RVOzLtuQ/BRSuu81o"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.08.28"]
+[UTCTime "05:59:39"]
+
+1. e4 e5 2. Nf3 Nc6 3. Nc3 Nf6 4. Nxe5 (4. a3 Bc5 5. Nxe5 Nxe5 6. d4 { [%csl Gd4] }) 4... Nxe5 5. d4 Ng6 6. e5 Bb4 7. exf6 Qxf6 8. Bc4 c6 *
+
+
+[Event "Solid Gambits?: Icelandic Gambit"]
+[Date "2019.08.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B01"]
+[Opening "Scandinavian Defense: Icelandic-Palme Gambit"]
+[StudyName "Solid Gambits?"]
+[ChapterName "Icelandic Gambit"]
+[ChapterURL "https://lichess.org/study/RVOzLtuQ/O1Bo68dm"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.08.28"]
+[UTCTime "06:01:07"]
+
+1. e4 d5 2. exd5 Nf6 3. c4 e6 4. dxe6 *
+
+
+[Event "Solid Gambits?: Chapter 8"]
+[Date "2019.08.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B01"]
+[Opening "Scandinavian Defense: Icelandic-Palme Gambit"]
+[StudyName "Solid Gambits?"]
+[ChapterName "Chapter 8"]
+[ChapterURL "https://lichess.org/study/RVOzLtuQ/PaFUrwVh"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.08.28"]
+[UTCTime "06:02:44"]
+
+1. e4 d5 2. exd5 Nf6 3. c4 e6 4. dxe6 Bxe6 5. d4 Bb4+ 6. Bd2 Qe7 7. Bxb4 Qxb4+ 8. Qd2 Qe7 9. Qe3 Nc6 10. Nf3 Ng4 11. Qe2 O-O-O 12. h3 Rhe8 13. hxg4 Qb4+ 14. Qd2 Bxg4+ 15. Be2 Rxe2+ 16. Kxe2 Nxd4+ 17. Kf1 Qxc4+ 18. Kg1 Nxf3+ 19. gxf3 Bxf3 20. Rh3 Qg4+ 21. Rg3 Qh5 22. Rxf3 Qxf3 *
+
+
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2018.02.28"]
+[White "vsuri97"]
+[Black "MagnusCarlsen"]
+[Result "0-1"]
+[WhiteElo "2560"]
+[BlackElo "2827"]
+[TimeControl "900+2"]
+[Termination "MagnusCarlsen won by resignation"]
+[Variant "Standard"]
+[ECO "B01"]
+[Opening "Scandinavian Defense: Portuguese Gambit, Banker Variation"]
+[StudyName "Solid Gambits?"]
+[ChapterName "vsuri97 - MagnusCarlsen"]
+[ChapterURL "https://lichess.org/study/RVOzLtuQ/QOI5cMG2"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 d5 2. exd5 Nf6 3. d4 Bg4 4. f3 Bf5 5. c4 e6 6. dxe6 Nc6 7. exf7+ Kxf7 8. Be3 Bb4+ 9. Kf2 Re8 10. Nc3 Rxe3!! { This is all in Smerdon's book on the Scandinavian. } 11. Kxe3 Nxd4 12. Kf2 (12. Qxd4 Qe7+ { and whichever way the king runs, ...Rd8 or ...Bc5 pins and wins the queen. Or Kf4 gets mated by Bd6. }) 12... Bc5 13. Na4 Bc2 { Carlsen just wins material and continues to attack. } 14. Nxc5 Bxd1 15. Rxd1 Qe7 16. b4 Re8 17. Bd3 Qe3+ 18. Kf1 b6 19. Ne4 Nxe4 20. Bxe4 c5 21. bxc5 Rxe4 22. fxe4 Qf4+ 23. Ke1 Qxe4+ 24. Kf2 Qc2+ 25. Ke1 bxc5 { 0-1 Black wins. } 0-1
+
+
+[Event "St. Petersburg Open"]
+[Site "St. Petersburg RUS"]
+[Date "1993.??.??"]
+[White "Grigory Yuryevich Serper"]
+[Black "Ioannis Nikolaidis"]
+[Result "1-0"]
+[Variant "Standard"]
+[ECO "E70"]
+[Opening "King's Indian Defense: Kramer Variation"]
+[StudyName "Solid Gambits?"]
+[ChapterName "Grigory Yuryevich Serper - Ioannis Nikolaidis"]
+[ChapterURL "https://lichess.org/study/RVOzLtuQ/MCBzeozx"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+{ https://www.youtube.com/watch?v=mgjk24XFHZ0 }
+1. c4 g6 2. e4 Bg7 3. d4 d6 4. Nc3 Nf6 5. Nge2 Nbd7 6. Ng3 c6 7. Be2 a6 8. Be3 h5 9. f3 b5 10. c5 dxc5 11. dxc5 Qc7 12. O-O h4 13. Nh1 Nh5 14. Qd2 e5 15. Nf2 Nf8 16. a4 b4 17. Nd5 cxd5 18. exd5 f5 19. d6 Qc6 20. Bb5 axb5 21. axb5 { [%csl Gb5,Gc5,Gd6][%cal Gc6b7] } 21... Qxb5 (21... Qb7 { [%cal Gc5c6] }) 22. Rxa8 Qc6 23. Rfa1 { [%csl Ge3] } 23... f4 24. R1a7 Nd7 { [%csl Ge3][%cal Gb8c8] } 25. Rxc8+ Qxc8 26. Qd5 fxe3 27. Qe6+ Kf8 28. Rxd7 exf2+ 29. Kf1 Qe8 30. Rf7+ { [%csl Gf7][%cal Ge8f7] } 30... Qxf7 31. Qc8+ Qe8 32. d7 { [%cal Gd6d7] } 32... Kf7 33. dxe8=Q+ Rxe8 34. Qb7+ Re7 35. c6 e4 36. c7 e3 37. Qd5+ Kf6 38. Qd6+ Kf7 39. Qd5+ Kf6 40. Qd6+ Kf7 41. Qxe7+ Kxe7 42. c8=Q Bh6 43. Qc5+ Ke8 44. Qb5+ Kd8 45. Qb6+ Kd7 46. Qxg6 e2+ 47. Kxf2 Be3+ 48. Ke1 { 1-0 Black resigns. } 1-0
+
+

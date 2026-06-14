@@ -1,0 +1,18 @@
+[Event "EricRosen's Study: Searching for Bobby"]
+[Date "2019.07.09"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "EricRosen's Study"]
+[ChapterName "Searching for Bobby"]
+[ChapterURL "https://lichess.org/study/Iv8KaiiM/sSI1w3Fp"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[FEN "2rb4/p5p1/1n2KP2/4R1B1/4N2P/8/2k5/8 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2019.07.09"]
+[UTCTime "20:07:09"]
+
+1... Bxf6 2. Bxf6 gxf6 3. Nxf6 Rc6+ { [%csl Rf6][%cal Gc6e6] } 4. Kf5 Rxf6+ 5. Kxf6 { [%csl Gf6,Ge5] } 5... Nd7+ 6. Kf5 Nxe5 7. Kxe5 { [%csl Ga7,Gh4] } 7... a5 8. h5 a4 9. h6 a3 10. h7 a2 11. h8=Q a1=Q+ { [%csl Rh8][%cal Ga1e5,Re5h8,Re5d5,Re5e4,Re5f4,Re5f5,Re5e6,Re5d6] } 12. Ke6 Qxh8 13. Kd6 Qf6+ 14. Kd7 Kb3 { [%cal Gf6a6,Gf6f8] } 15. Kc7 Kb4 16. Kd7 Kc5 17. Kc7 Qe7+ 18. Kc8 Kb6 19. Kb8 Qb7# *
+
+

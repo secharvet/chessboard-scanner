@@ -1,0 +1,37 @@
+[Event "CCT: Chapter 1"]
+[Date "2023.05.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "CCT"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/7LCapEEd/j6pYLomT"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2023.05.08"]
+[UTCTime "15:26:50"]
+
+ *
+
+
+[Event "Live Chess - chess"]
+[Site "Chess.com"]
+[Date "2023.05.08"]
+[White "Koutsin"]
+[Black "IMRosen"]
+[Result "0-1"]
+[WhiteElo "2326"]
+[BlackElo "2406"]
+[TimeControl "600+2"]
+[Termination "IMRosen won by resignation"]
+[Variant "Standard"]
+[ECO "D35"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Positional Variation"]
+[StudyName "CCT"]
+[ChapterName "Koutsin - IMRosen"]
+[ChapterURL "https://lichess.org/study/7LCapEEd/KOjwAHHA"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 { [%eval 0.0] } 1... d5 { [%eval 0.27] } 2. c4 { [%eval 0.29] } 2... e6 { [%eval 0.3] } 3. Nc3 { [%eval 0.39] } 3... Nf6 { [%eval 0.43] } 4. cxd5 { [%eval 0.39] } 4... exd5 { [%eval 0.38] } 5. Bg5 { [%eval 0.35] } 5... c6 { [%eval 0.37] } 6. e3 { [%eval 0.28] } 6... Bd6 { [%eval 0.64] } 7. Bd3 { [%eval 0.57] } 7... O-O { [%eval 0.4] } 8. Nge2 { [%eval 0.6] } 8... h6 { [%eval 0.44] } 9. Bh4 { [%eval 0.64] } 9... Re8 { [%eval 0.5] } 10. Qc2 { [%eval 0.48] } 10... a5 { [%eval 0.25] } 11. a3 { [%eval 0.25] } 11... Na6 { [%eval 0.54] } 12. Bg3?! { [%eval -0.02] } { Inaccuracy. Ng1 was best. } (12. Ng1) 12... Nc7 { [%eval 0.11] } 13. O-O { [%eval 0.12] } 13... Ne6 { [%eval 0.19] } 14. f3 { [%eval 0.27] } 14... Bxg3 { [%eval 0.25] } 15. Nxg3 { [%eval 0.2] } 15... c5 { [%eval 0.39] } 16. Qf2 { [%eval 0.0] } 16... cxd4 { [%eval -0.15] } 17. exd4 { [%eval -0.07] } 17... Nf4 { [%eval -0.06] } 18. Qd2 { [%eval 0.0] } 18... Nxd3 { [%eval 0.04] } 19. Qxd3 { [%eval 0.0] } 19... Qb6 { [%eval 0.02] } 20. Rfd1 { [%eval 0.07] } 20... a4 { [%eval 0.35] } 21. Qb5 { [%eval 0.37] } 21... Qd8 { [%eval 0.42] } 22. Rd2 { [%eval 0.14] } 22... Ra6 { [%eval 0.12] } 23. Qf1 { [%eval 0.16] } 23... Bd7 { [%eval 0.15] } 24. Re1 { [%eval 0.1] } 24... Rae6 { [%eval 0.0] } 25. Rxe6 { [%eval 0.15] } 25... Rxe6 { [%eval 0.28] } 26. Qd1 { [%eval 0.0] } 26... Qa5 { [%eval 0.38] } 27. Re2 { [%eval 0.18] } 27... Ne8 { [%eval 0.1] } 28. Rxe6 { [%eval 0.0] } 28... fxe6 { [%eval 0.0] } 29. Qe2? { [%eval -1.32] } { Mistake. Nf1 was best. } (29. Nf1 Nd6 30. Ne3 Bb5 31. Kf2 h5 32. Qc1 Qb6 33. Qd2 Qd8 34. g3 Qb6 35. Ke1 Qa6) 29... Qb6 { [%eval -1.16] } 30. Qf2 { [%eval -1.52] } 30... Nd6 { [%eval -1.35] } 31. Nf1? { [%eval -2.71] } { Mistake. h3 was best. } (31. h3) 31... Nc4?! { [%eval -1.66] } { Inaccuracy. Nf5 was best. } (31... Nf5) 32. Nd1 { [%eval -1.75] } 32... Qb3 { [%eval -1.75] } 33. Nfe3? { [%eval -3.8] } { Mistake. Qe2 was best. } (33. Qe2) 33... Qd3 { [%eval -4.55] } 34. Qc2 { [%eval -4.87] } 34... Qxd4 { [%eval -4.91] } 35. Qe2 { [%eval -4.81] } 35... Bb5 { [%eval -5.25] } 36. Kf2?! { [%eval -7.69] } { Inaccuracy. Qf2 was best. } (36. Qf2 Kf7) 36... Nxe3?! { [%eval -5.62] } { Inaccuracy. Nxa3 was best. } (36... Nxa3 37. bxa3 Bxe2 38. Kxe2 Qc5 39. Kd2 Qxa3 40. Nc2 Qc5 41. f4 a3 42. Nxa3 Qxa3 43. Nc3) 37. Qxe3 { [%eval -5.28] } 37... Qxd1 { [%eval -5.67] } 38. Qxe6+ { [%eval -5.57] } 38... Kf8 { [%eval -5.78] } 39. Qd6+?! { [%eval -7.91] } { Inaccuracy. Qf5+ was best. } (39. Qf5+ Ke7) 39... Kf7 { [%eval -7.92] } 40. Qf4+ { [%eval -8.05] } 40... Ke6 { [%eval -7.01] } 41. Qg4+ { [%eval -7.44] } 41... Kd6 { [%eval -7.54] } 42. Qg6+ { [%eval -8.85] } 42... Kc5 { [%eval -8.15] } 43. Qxg7 { [%eval -8.69] } 43... Qd4+ { [%eval -8.32] } 44. Qxd4+ { [%eval -9.12] } 44... Kxd4 { [%eval -8.37] } 45. g4 { [%eval -9.74] } 45... Kd3 { [%eval -9.69] } 46. h4 { [%eval -9.79] } 46... d4 { [%eval -10.12] } 47. f4 { [%eval -10.58] } 47... Kc2 { [%eval -10.65] } 48. f5 { [%eval -11.15] } 48... d3 { [%eval -11.13] } 49. f6 { [%eval -14.48] } 49... Be8 { [%eval -11.54] } { 0-1 Black wins. } 0-1
+
+

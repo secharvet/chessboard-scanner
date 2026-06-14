@@ -1,0 +1,21 @@
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2021.02.10"]
+[White "enemy_owner"]
+[Black "MatteoZanatta"]
+[Result "0-1"]
+[WhiteElo "1060"]
+[BlackElo "1162"]
+[TimeControl "300+5"]
+[Termination "MatteoZanatta won on time"]
+[Variant "Standard"]
+[ECO "C02"]
+[Opening "French Defense: Advance Variation, Paulsen Attack"]
+[StudyName "EricRosen's Study"]
+[ChapterName "enemy_owner - MatteoZanatta"]
+[ChapterURL "https://lichess.org/study/gTD1QbjR/C9SN6tV0"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e6 2. d4 d5 3. e5 c5 4. c3 Nc6 5. Nf3 Nge7 6. Bb5 Qa5 7. Bxc6+ Nxc6 8. Bd2 (8. O-O) 8... Qb5 9. Qc2 cxd4 10. cxd4 Bd7 11. Nc3 Qc4 12. Be3 { [%csl Gc4,Gf1][%cal Gc4f1] } (12. b3 Qa6) 12... Nb4 13. Qe2 Nd3+ 14. Kf1 Nxb2 { [%csl Gc3][%cal Ga1b1,Gc4c3] } 15. Qxc4 Nxc4 16. Rb1 Rc8 17. Ne2 b5 18. h4 b4 19. h5 h6 20. g4 Nxe3+ 21. fxe3 Rc2 22. Kf2 Bb5 23. Rhe1 a6 { 0-1 Black wins. } 24. Rbc1 Rxa2 25. Rc8+ Kd7 26. Rec1 Rxe2+ 27. Kg3 Rxe3 28. R1c7# 0-1
+
+

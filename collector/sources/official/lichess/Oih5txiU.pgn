@@ -1,0 +1,100 @@
+[Event "How to play against 1.d4: Cambridge Springs for Black"]
+[Date "2018.08.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D52"]
+[Opening "Queen's Gambit Declined: Cambridge Springs Defense, Bogoljubow Variation"]
+[StudyName "How to play against 1.d4"]
+[ChapterName "Cambridge Springs for Black"]
+[ChapterURL "https://lichess.org/study/Oih5txiU/TnhL2nZH"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2018.08.14"]
+[UTCTime "22:56:55"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Bg5 Nbd7 5. e3 (5. cxd5 exd5 6. Nxd5?? { The elephant trap! } 6... Nxd5 7. Bxd8 Bb4+ 8. Qd2 Bxd2+ 9. Kxd2 Kxd8 $19) 5... c6 6. Nf3 Qa5 { The start of the Cambridge Springs -- an aggressive and playable line against d4 mainlines. At the highest levels, the Cambridge Springs isn't as popular since white is slightly better in the mainlines. However, this can be a very effective weapon at the sub-master level as many players will fall victim to black's early initiative. Black plans to quickly increase the pressure with Ne4 and Bb4 } 7. Nd2 { Slightly unusual looking, but probably the best approach for white } (7. Bd3? { A natural looking move which simply loses material } 7... dxc4 8. Bxc4 Ne4 { Forked! } { [%csl Rg5,Rc3][%cal Ge4g5,Ge4c3,Ga5g5,Ga5c3] } 9. Bf4 Nxc3 10. bxc3 Qxc3+ 11. Nd2 Bb4) (7. c5?! Ne4 8. Qc2 b6 $36) (7. cxd5 Nxd5 { Keeping the 5th-rank open and pressure the knight on c3 } 8. Rc1 Nxc3 9. bxc3 Ba3 10. Rc2 b6 { Planning to trade off the bad bishop for white's good bishop } { Gelfand, Boris - Carlsen, Magnus, 0-1, FIDE Candidates, 2013, https://lichess.org/KrEw3E6R } { [%cal Gc8a6] }) (7. Qc2 Ne4 8. Bf4 Bb4 9. Rc1 Qxa2 { A common theme in this line. Black is now ready to trade queens by capturing on c3 }) 7... Bb4 8. Qc2 O-O 9. Be2 (9. Bd3? dxc4 { Winning material } { [%cal Gc4d3,Ga5g5] }) 9... dxc4 10. Bxf6 Nxf6 11. Nxc4 Qc7 12. O-O b6 { Black has less space, but a very clear plan of Bb7 and an eventual c5. } { [%cal Gc8b7,Ga8d8,Gc6c5] } *
+
+
+[Event "How to play against 1.d4: Neutralize the London System"]
+[Date "2018.08.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D00"]
+[Opening "Queen's Pawn Game: Accelerated London System"]
+[StudyName "How to play against 1.d4"]
+[ChapterName "Neutralize the London System"]
+[ChapterURL "https://lichess.org/study/Oih5txiU/bHOnJZSk"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2018.08.14"]
+[UTCTime "22:49:04"]
+
+1. d4 { https://www.youtube.com/watch?v=ulJuHiPm_fM } 1... d5 2. Bf4 (2. Nf3 Nf6 3. Bf4 c5 { Transposes }) 2... Nf6 3. e3 c5 4. Nf3 (4. dxc5 { A recently trendy line where white simply tries to win a pawn } 4... e6 5. b4 a5 6. c3 axb4 7. cxb4 Bd7! $146 { A strong prophylactic, move; Black prevents Bb5+ and prepares the unstoppable b6 to win back the pawn with a pleasant position } { [%csl Rb4,Rc5][%cal Gb7b6] }) 4... Nc6 5. c3 Qb6! { A strong line which leads to a pleasant position-- Black attacks the undefended b-pawn which is one of the main targets in the London } 6. Qb3 (6. Qc2 g6 { [%csl Gf5][%cal Gc8f5] }) 6... c4 7. Qc2 (7. Qxb6 axb6 8. Nbd2 (8. Na3 { More common at the master level to slow down black's b5 expansion, but still leads to a pleasant game for black. } 8... Bf5 9. Nb5 Ra5 10. a4 e6 11. Be2 (11. Bc7 { looks like it's winning a pawn, but... } 11... Bc2! $17 { a strong counterattack }) 11... Kd7 $15 { Zupancic, J. - Diermair, A., 0-1, 27th TCh-SLO 2017, https://lichess.org/ZZ1wy2oQ } { [%cal Gf8e7,Gh8a8] }) 8... b5 { [%cal Gb5b4] } 9. a3 Bf5 10. Rc1 h6 { ensuring the bishop on f5 can retreat to h7 in the event of e6 Nh4 } 11. h3 e6 12. Be2 { [%csl Gd5,Ge6,Gc4,Gb5] } 12... Nd7 { [%csl Rb2][%cal Gf6d7,Gd7b6,Gb6a4,Ga4b2] } 13. g4 Bh7 14. Bd1 Nb6 15. Bc2 Bxc2 16. Rxc2 b4! { Taking advantage of the fact the a3 pawn is pinned to the a1 square } { [%csl Ga1][%cal Ga8a1] } 17. O-O (17. axb4 Ra1+) 17... b3 18. Rcc1 Na4 19. Rb1 Bxa3!! 20. bxa3 Nxc3 21. Rb2 Ne2+ 22. Kg2 Nxf4+ 23. exf4 Rxa3 24. Rc1 Ra2 25. Rbb1 Na5 26. Nf1 b5 27. f5 O-O 28. Ne5 b4 29. Ne3 b2 30. Re1 c3 31. Nd7 Rc8 32. Nb6 Rc6 33. Nexd5 Rxb6 34. Nxb6 c2 35. Kf3 Nb3 { Petkov, V. - Nikolov, Mo, 0-1, 80th ch-BUL 2016, https://lichess.org/z5CEmgRx }) 7... Bf5 8. Qc1 Nh5 9. Bg3 f6 10. Nbd2 e5 11. dxe5 Nxg3 12. hxg3 Nxe5 { [%csl Gd3] } 13. Nxe5 fxe5 14. e4 Bg6 15. exd5 Bc5 { [%csl Rf2] } 16. Nxc4 Bxf2+ 17. Ke2 Qf6 { [%csl Re2] } 18. Nxe5 O-O { [%cal Ge8e2] } 19. Nxg6 Rae8+ 20. Kd3 Qxg6+ 21. Kc4 Re4+ 22. Kb3 Qb6+ 23. Kc2 Be3 24. Qe1 Rf2+ 25. Qxf2 Bxf2 26. Rd1 Bxg3 27. Bd3 Rh4 28. Rxh4 Bxh4 29. d6 Qc6 30. Kb3 Qd7 31. a4 a6 32. c4 Bf2 33. Be4 Bc5 34. Rd5 Bxd6 35. a5 Qe7 36. Rd4 g6 37. Bd5+ Kg7 38. Re4 Qc7 39. Re6 Qc5 40. Kc2 Qb4 41. Kb1 Bc5 { Gonzalez Zamora, Juan Carlos - Laznicka, Viktor, 0-1, Khanty-Mansiysk ol (Men) 39th, 2010, https://lichess.org/P6yHO3gm } *
+
+
+[Event "How to play against 1.d4: QGD Exchange Variation"]
+[Date "2018.08.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D51"]
+[Opening "Queen's Gambit Declined: Modern Variation, Knight Defense"]
+[StudyName "How to play against 1.d4"]
+[ChapterName "QGD Exchange Variation"]
+[ChapterURL "https://lichess.org/study/Oih5txiU/wGEzN2rP"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2018.08.14"]
+[UTCTime "23:09:27"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Bg5 Nbd7 5. e3 (5. cxd5 exd5 { Will likely transpose }) 5... c6 6. cxd5 exd5 7. Bd3 Be7 8. Nf3 O-O 9. O-O Re8 10. Qc2 Nf8 { The beginning of a typical maneuver. Black plans to to get the bishop pair with Ng6, Bd6, and h6. } 11. Rab1 { A typical idea-- white plans to launch a minority attack with b4, a4, and b5 } 11... Ng6 12. b4 a6 { Slowing down the minority attack } 13. a4 Bd6 14. b5 axb5 15. axb5 h6 16. Bxf6 Qxf6 17. e4 { Looks like black is in trouble, but.... } 17... Nf4!! { a brilliant resource } 18. e5 Qe6 19. exd6 Qg4 20. Ne1 Rxe1 21. f3 Rxf1+ 22. Bxf1 Qe6 $17 { Upon winning d6, black will be up a clean pawn } *
+
+
+[Event "How to play against 1.d4: QGD Exchange Variation w/ Early Queen trade"]
+[Date "2018.08.17"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D35"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Positional Variation"]
+[StudyName "How to play against 1.d4"]
+[ChapterName "QGD Exchange Variation w/ Early Queen trade"]
+[ChapterURL "https://lichess.org/study/Oih5txiU/ka82rO80"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2018.08.17"]
+[UTCTime "00:10:10"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. cxd5 exd5 5. Bg5 c6 6. e3 Bf5 7. Qf3 Bg6 8. Bxf6 Qxf6 9. Qxf6 gxf6 { A well known position is reached -- White has damaged black's kingside pawn structure, but black has the bishop pair. The ensuing middlegame will be imbalanced with all three results possible. See Chapter 6 (Bologan-Short) for middlegame strategy } { [%cal Gb8d7,Gd7b6,Gf8e7,Ga7a5,Ga5a4] } *
+
+
+[Event "How to play against 1.d4: Combat the Veresov"]
+[Date "2018.08.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D01"]
+[Opening "Richter-Veresov Attack"]
+[StudyName "How to play against 1.d4"]
+[ChapterName "Combat the Veresov"]
+[ChapterURL "https://lichess.org/study/Oih5txiU/8GoLjHJn"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2018.08.16"]
+[UTCTime "23:24:31"]
+
+1. d4 d5 2. Nc3 { A lesser common but tricky opening where white aims to play an early e4 } 2... Nf6 3. Bg5 (3. e4 dxe4 4. f3 { The Blackmar-Diemer Gambit } 4... c6!? { A tricky response to decline the gambit } 5. fxe4 e5! 6. dxe5 Qxd1+ 7. Kxd1 Ng4 $15 { Black will win back the pawn with a comfortable position }) 3... Nbd7 { Reinforcing f6 and avoiding double pawns } (3... e6 4. e4 { Transposes to a mainline of the French-- usually what white is hoping for }) 4. f3 (4. e4 dxe4 5. f3 c6 { transposes to mainline }) 4... c6!? { Perhaps a suspicious looking move whose idea will become clear soon } 5. e4 dxe4 6. fxe4 e5! 7. dxe5 Qa5! $15 { A great resource! This is the reason black played c6 } { [%cal Ga5g5] } *
+
+
+[Event "Tradewise Gibraltar"]
+[Site "Catalan Bay GIB"]
+[Date "2011.02.03"]
+[Round "10"]
+[White "Viktor Antonovich Bologan"]
+[Black "Nigel Short"]
+[Result "0-1"]
+[WhiteElo "2693"]
+[BlackElo "2658"]
+[Variant "Standard"]
+[ECO "D35"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Positional Variation"]
+[StudyName "How to play against 1.d4"]
+[ChapterName "Viktor Antonovich Bologan - Nigel Short"]
+[ChapterURL "https://lichess.org/study/Oih5txiU/Hr4ydo3x"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 e6 2. c4 Nf6 3. Nc3 d5 4. cxd5 exd5 5. Bg5 c6 6. e3 Bf5 7. Qf3 Bg6 8. Bxf6 Qxf6 9. Qxf6 gxf6 10. Nf3 Nd7 11. g3 Be7 12. Nh4 Nb6 13. f3 a5 14. Kf2 a4 15. Rc1 Nc8 16. Ne2 Ra6 17. Nc3 Ra5 18. Be2 Nd6 19. Rhd1 Kd7 20. Ng2 b5 21. Rd2 Bf8 22. a3 h5 23. Na2 Nc4 24. Bxc4 bxc4 25. Nf4 f5 26. Nc3 Bd6 27. h4 Rg8 28. Rg1 Raa8 29. Ke1 Bc7 30. Kd1 Ba5 31. Nxa4 Bxd2 32. Nc5+ Kd6 33. Kxd2 Rgb8 34. Kc3 Ra5 35. Rc1 Rab5 36. b4 cxb3 37. Kb2 Ra5 38. Ncd3 Re8 39. Nb4 Rxe3 40. Rxc6+ Kd7 41. Rc1 Rxf3 42. Nc6 Rf2+ 43. Kxb3 Rb5+ 44. Ka4 Rb7 45. Ne5+ Kd8 46. Nc6+ Ke8 47. Ka5 Rb3 48. a4 Rxg3 49. Nxd5 f4 50. Kb6 Kf8 51. a5 Be4 52. Ndb4 Rb2 53. Kc7 Rgb3 54. d5 Rxb4 55. Nxb4 Rxb4 56. d6 Rb7+ 57. Kc8 Ra7 58. Ra1 f3 59. a6 f2 60. d7 Ra8+ 61. Kc7 Bg2 { 0-1 White resigns. } 0-1
+
+

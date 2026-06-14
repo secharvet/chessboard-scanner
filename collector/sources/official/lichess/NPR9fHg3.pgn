@@ -1,0 +1,47 @@
+[Event "Strategy Session: Stafford Gambit"]
+[Date "2018.10.10"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C42"]
+[Opening "Petrov's Defense: Stafford Gambit"]
+[StudyName "Strategy Session"]
+[ChapterName "Stafford Gambit"]
+[ChapterURL "https://lichess.org/study/NPR9fHg3/R33MLu2W"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2018.10.10"]
+[UTCTime "01:09:40"]
+
+1. e4 e5 2. Nf3 Nf6 3. Nxe5 Nc6 4. Nxc6 dxc6 5. d3 Bc5 6. Bg5 (6. Be2 h5 7. c3 { [%cal Gd3d4] } 7... Bb6 8. Be3 Bxe3 9. fxe3 Ng4 { [%csl Ge3][%cal Gg4e3,Gd8g5,Gg5h4] } 10. Qd2 (10. Bxg4 hxg4 { [%cal Gh8h1] } 11. Nd2 (11. c4 Qh4+ 12. g3 Qxg3+ 13. hxg3 Rxh1+ 14. Ke2 Rxd1 15. Kxd1 { [%csl Rd3] } 15... c5 { [%csl Rd3][%cal Gc8e6,Ga8d8,Gg7g6,Gf7f5,Ga7a6,Gb7b5] } 16. d4 Be6 17. d5 Bd7 18. Ke2 Ke7 { [%csl Gd3] } 19. e5 Bf5 (19... Rh8 20. Nd2 Rh2+)))) 6... Nxe4 7. Bxd8 Bd4 8. c3 Bxf2+ { [%csl Gb2][%cal Gd4b2] } *
+
+
+[Event "Strategy Session: Chapter 3"]
+[Date "????.??.??"]
+[White "Enter New Game"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C47"]
+[Opening "Four Knights Game: Scotch Variation, Schmid Defense"]
+[StudyName "Strategy Session"]
+[ChapterName "Chapter 3"]
+[ChapterURL "https://lichess.org/study/NPR9fHg3/IjQyG6UG"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 e5 2. Nf3 Nc6 (2... Nf6 3. Nc3 Nc6 4. d4 exd4 5. Nxd4 Nxe4) 3. d4 exd4 4. Nxd4 Nf6 5. Nc3 (5. Nxc6 bxc6 6. e5) 5... Nxe4 6. Nxe4 Qe7 7. f3 (7. Nxc6 Qxe4+ 8. Qe2 Qxe2+ 9. Bxe2 dxc6) 7... d5 8. Bb5 Bd7 (8... dxe4 9. Nxc6 exf3+ 10. Nxe7+) 9. Bxc6 bxc6 10. O-O dxe4 11. Re1 O-O-O (11... Qc5 12. Rxe4+ Be7 { [%csl Ge7] } 13. Be3 { [%cal Ge3c5] } 13... Qd6 14. Qe2 O-O 15. Bf4 Qc5) 12. Rxe4 Qc5 *
+
+
+[Event "Strategy Session: Normal Scotch"]
+[Date "2018.10.10"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C45"]
+[Opening "Scotch Game: Braune Variation"]
+[StudyName "Strategy Session"]
+[ChapterName "Normal Scotch"]
+[ChapterURL "https://lichess.org/study/NPR9fHg3/EPPa3C4I"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2018.10.10"]
+[UTCTime "01:27:03"]
+
+1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Qh4 5. Be3 (5. Qd3 Nf6 6. Nxc6 dxc6 7. Nc3 Bb4 { [%csl Ge4] }) (5. Nc3 Bb4 6. Bd2 (6. Nxc6 Qxe4+) (6. Be2 Bxc3+ (6... Qxe4 7. Nb5 Ba5 { [%csl Ra5][%cal Ra5c7,Ra5e1,Gc3e4] } 8. Nxc7+ Bxc7 9. Nxe4) 7. bxc3 Qxe4 8. Nb5 { [%csl Gc7] } 8... Qxg2 (8... Qe5 { [%cal Re5c7] } 9. f4) (8... Kd8) 9. Bf3 { [%csl Gc7][%cal Gf3g2,Gb5c7] }) 6... Nxd4) 5... Qxe4 6. Bd3 Qxg2 *
+
+

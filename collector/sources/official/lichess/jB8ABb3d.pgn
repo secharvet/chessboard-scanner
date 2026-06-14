@@ -1,0 +1,74 @@
+[Event "Pawn structures: Maroxy bind"]
+[Date "2025.05.23"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Pawn structures"]
+[ChapterName "Maroxy bind"]
+[ChapterURL "https://lichess.org/study/jB8ABb3d/wwENZnfE"]
+[Annotator "https://lichess.org/@/NishikaSaravanan"]
+[FEN "8/p3pp1p/1p1p4/8/2P1P3/1P3P2/P5PP/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.05.23"]
+[UTCTime "15:32:50"]
+
+{ In this setup white puts pressure on thr d5 square and forms a bind kind setup }
+ *
+
+
+[Event "Pawn structures: Example game"]
+[Date "2025.05.23"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B41"]
+[Opening "Sicilian Defense: Kan Variation, Maróczy Bind, Réti Variation"]
+[StudyName "Pawn structures"]
+[ChapterName "Example game"]
+[ChapterURL "https://lichess.org/study/jB8ABb3d/xOYlMDkK"]
+[Annotator "https://lichess.org/@/NishikaSaravanan"]
+[UTCDate "2025.05.23"]
+[UTCTime "15:32:06"]
+
+1. e4 c5 2. Nf3 e6 3. d4 cxd4 4. Nxd4 a6 5. c4 { Example of maroxy bind in real game played by Alireza against Magnus (ref :imp games study) } *
+
+
+[Event "Pawn structures: Carlsbard structure"]
+[Date "2025.05.24"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Pawn structures"]
+[ChapterName "Carlsbard structure"]
+[ChapterURL "https://lichess.org/study/jB8ABb3d/ITspKHHG"]
+[Annotator "https://lichess.org/@/NishikaSaravanan"]
+[FEN "8/pp3ppp/2p5/3p4/3P4/4P3/PP3PPP/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.05.24"]
+[UTCTime "13:39:54"]
+
+{ This is called carlsbard and mainly comes in caro kann.The main strategy of white is to push the a and b pawns and try to break the pawns...
+
+White also tries to attack in the centre sometimes
+
+Players try to keep position dynamic.. }
+ *
+
+
+[Event "Pawn structures: Carlsbard in caro kann"]
+[Date "2025.05.24"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B13"]
+[Opening "Caro-Kann Defense: Exchange Variation"]
+[StudyName "Pawn structures"]
+[ChapterName "Carlsbard in caro kann"]
+[ChapterURL "https://lichess.org/study/jB8ABb3d/Uo9tELSm"]
+[Annotator "https://lichess.org/@/NishikaSaravanan"]
+[UTCDate "2025.05.24"]
+[UTCTime "13:58:01"]
+
+1. e4 c6 2. d4 d5 3. exd5 cxd5 4. c3 e6 { Just in 4 moves we get the carlsbard } *
+
+

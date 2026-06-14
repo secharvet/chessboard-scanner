@@ -1,0 +1,464 @@
+[Event "Opening Principles For Under 1600s: Introduction"]
+[Date "2021.01.21"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Opening Principles For Under 1600s"]
+[ChapterName "Introduction"]
+[ChapterURL "https://lichess.org/study/47gAGm9l/1Ybx0gc0"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2021.01.21"]
+[UTCTime "12:24:35"]
+
+{ Welcome chess players! I am Grandmaster Max Illingworth, here to help you improve your rating by 100+ points fast!
+
+What you will learn:
+
+- The Basic Opening Principles for getting a good game;
+- The Main Traps To Avoid;
+- How To Take Control Of The Game
+
+Coaching Question 1: Let me know (using the chat room to the left): What you think these three opening principles are? }
+ *
+
+
+[Event "Opening Principles For Under 1600s: Basic Principle 1"]
+[Date "2021.01.21"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Opening Principles For Under 1600s"]
+[ChapterName "Basic Principle 1"]
+[ChapterURL "https://lichess.org/study/47gAGm9l/4lZeRBbs"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2021.01.21"]
+[UTCTime "12:25:08"]
+
+{ The Basic Opening Principles Are:
+
+1. Fight For Control Of The Centre (see the highlighted squares d4/d5/e4/e5 in the middle of the board).
+
+Why do we want to control the centre?
+
+Because our pieces have more mobility in the centre of the board. } { [%csl Gd5,Ge5,Ge4,Gd4] }
+ *
+
+
+[Event "Opening Principles For Under 1600s: Basic Principle 2"]
+[Date "2021.01.21"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Opening Principles For Under 1600s"]
+[ChapterName "Basic Principle 2"]
+[ChapterURL "https://lichess.org/study/47gAGm9l/WrDSkdWg"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2021.01.21"]
+[UTCTime "12:30:58"]
+
+{ 2. Develop your pieces as quickly and as actively as possible.
+
+We do this for two reasons:
+
+1. To give our pieces as much mobility (possible moves) as we can.
+2. To clear the way for our other pieces to move.
+3. To have our pieces working together as a team (like in football or any other team sport). }
+ *
+
+
+[Event "Opening Principles For Under 1600s: Basic Principle 3"]
+[Date "2021.01.21"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Opening Principles For Under 1600s"]
+[ChapterName "Basic Principle 3"]
+[ChapterURL "https://lichess.org/study/47gAGm9l/Br1UVcgg"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2021.01.21"]
+[UTCTime "12:31:03"]
+
+{ 3. Get Your King Castled To Safety.
+
+Why is this important?
+
+When our king is in the centre of the board, our king can be attacked from the centre, the left and the right. (see arrows above)
+
+However, when we castle our king, it's much harder for our opponent to threaten our king.
+
+In most cases, they will need to reposition their pieces to the side we have castled if they want to threaten our king. } { [%cal Ga4e8,Gh5e8,Ge4e8] }
+ *
+
+
+[Event "Opening Principles For Under 1600s: The Advanced Principle"]
+[Date "2021.01.21"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B00"]
+[Opening "King's Pawn Game"]
+[StudyName "Opening Principles For Under 1600s"]
+[ChapterName "The Advanced Principle"]
+[ChapterURL "https://lichess.org/study/47gAGm9l/TaTGF0pr"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2021.01.21"]
+[UTCTime "12:25:15"]
+
+{ Coaching Question: Do you remember the three basic principles? Test your knowledge by writing them in the chat room to the left.
+
+Did you know that there is also an 'advanced' principle that guides the previous three?
+
+This principle is called: Take control of the game!
+
+How do we do that?
+
+(See next move for the answer) }
+1. e4 { We do this by threatening moves - moves that both limit the opponent's options, and improve your position at the same time.
+It's through such moves, and fighting for control of the game, that we can make it harder for our opponent to successfully follow the three basic principles (control the centre, develop rapidly and actively, and get the king safe).
+(Advanced - Technically this is known as 'Fighting For The Initiative', with 'Initiative' referring to 'control of the game', or more concretely, 'Having a flow of threats that the opponent is unable to ignore'.)
+That's the 'theory', now let's see it in practice with some moves and examples! } *
+
+
+[Event "Opening Principles For Under 1600s: The Best First Move (Central Control)"]
+[Date "2021.01.21"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C20"]
+[Opening "King's Pawn Game"]
+[StudyName "Opening Principles For Under 1600s"]
+[ChapterName "The Best First Move (Central Control)"]
+[ChapterURL "https://lichess.org/study/47gAGm9l/Wyfte0j4"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2021.01.21"]
+[UTCTime "12:25:27"]
+
+{ Now let's see the 'theory' in practice with some moves and examples!
+
+What is the best first move for White?
+
+I recommend the following first move for beginners: }
+1. e4 { This is the most common move, and with good reason.
+White controls one of the 4 central squares (d5) and occupies a second (e4).
+This move, 1.e4, also helps with rapid development - our bishop and queen have much greater mobility.
+What is Black's best reply to this move, to follow Basic Principle 1 (control the centre)? } { [%csl Gd5,Ge4] } (1. d4 { This move, 1.d4, controls two of the four central squares - d4 and e5.
+This move actually does the best job of all for controlling the centre. It is the second most common move for White at all levels.
+The price White pays for this (compared to 1.e4) is that his piece mobility and development is slightly slower, and it also takes longer for White to get his king castled. } { [%csl Gd4,Ge5,Ge1][%cal Gd1d3] }) 1... e5 { This symmetrical move is the most common reply below the 1600 level (and the 2nd most common overall). Black's ideas with 1...e5 are the same as I mentioned for White with 1.e4.
+(Advanced - the side that manages to keep their central pawn, while exchanging/eliminating the opponent's central pawn, has better chances to obtain the advantage out of the opening.) } { [%cal Gf8a3,Gd8h4] } (1... a6 { This is a much weaker first move for Black, as it doesn't follow any of the basic principles, and allows White to control more of the centre uncontested. } 2. d4 { Now White controls three of the four central squares. He has obtained the 'dream centre' of pawns on d4 and e4. (For Black, the 'dream centre' is pawns on d5 and e5). } { [%csl Ge5,Gd4,Gd5] } 2... h6 3. Nc3 { Now White controls all four of the central squares (d4/d5/e4/e5). He is ready to develop his other pieces and prepare castling his king to safety. } { [%csl Gd5,Ge4,Gd4,Ge5][%cal Gc3e4] }) *
+
+
+[Event "Opening Principles For Under 1600s: Fast Development In Action"]
+[Date "2021.01.21"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C54"]
+[Opening "Italian Game: Classical Variation, Giuoco Pianissimo"]
+[StudyName "Opening Principles For Under 1600s"]
+[ChapterName "Fast Development In Action"]
+[ChapterURL "https://lichess.org/study/47gAGm9l/ACbBgq1O"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2021.01.21"]
+[UTCTime "12:25:44"]
+
+{ You know about the second basic principle - develop your pieces quickly and actively.
+
+How do you do this in practice?
+
+Let's find out. }
+1. e4 e5 2. Nf3 { This is the most active square the knight can develop to - it can move to up to 8 squares from the circled region. } { [%csl Gc3,Gd3,Ge3,Gf3,Gf4,Gf5,Gf6,Ge6,Gd6,Gc6,Gc5,Gc4,Gd4,Gd5,Ge5,Ge4][%cal Gf3e5] } (2. Nh3 { The knight can only move to up to 4 squares from the edge of the board - that's why the knight is misplaced here. }) (2. Ne2 { The knight is more passive on this square, and also blocks the development of the f1-bishop. } { [%csl Ge2][%cal Gf1a6,Gd1h5] }) (2. Nc3 { This is a reasonable developing move.
+But 2.Nf3 is more precise because it also follows Basic Principle 3 (bringing White one move closer to kingside castling) and The Advanced Principle (by threatening the e5-pawn, limiting Black's options). }) 2... Nc6 { Black defends his e5-pawn from the attack, while developing his knight.
+(Advanced - It's usually quite clear in the early moves where your knight should develop, but it may take more moves before the best square for the bishop becomes clear). } 3. Bc4 { White develops his bishop to the most active square possible - it has more mobility on this diagonal than after any of the other bishop moves.
+This is the most common move at the 1600 level and below and is known as the 'Italian Game'.
+Another advantage of this move is that White is ready to castle his king to safety on the next move. } { [%csl Gf1,Gg1][%cal Gc4g8,Gc4a2,Gc4a6,Gc4f1] } (3. Bb5 { This is the 'Ruy Lopez' and we will talk more about this move later. }) (3. Nc3 { This is also a reasonable developing move. However, compared to 3.Bc4 or 3.Bb5, it does not help White castle his king. }) 3... Bc5 { The ideas of this move for Black are the same as 3.Bc4 for White. He is now one move closer to castling short. } { [%csl Gf8,Gg8][%cal Gc5g1] } 4. O-O { White has castled his king to safety (Basic Principle 3).
+Now, he can focus even more on the other principles. } 4... Nf6 { Black prepares kingside castling by developing the knight.
+He also follows The Advanced Principle by making a threat (attacking the e4-pawn).
+This last point is why it's better to develop the knight to f6, than any other square, in this position. } 5. d3 { White defends the e4-pawn, while clearing the way to develop his c1-bishop. } { [%csl Gd3,Ge4][%cal Gc1h6] } 5... O-O { Black has also castled his king to safety. Now we move closer to the middlegame phase, where both sides have their chances.
+I share a few possible moves for White from this position, to give you a taste of the available options. } 6. c3 (6. Bg5 { (Advanced - The knight on f6 cannot move safely in this position, as then White will play Bxd8 and win the queen. This is known as a 'pin' - specifically, the g5-bishop is pinning the f6-knight). } { [%cal Gg5d8] }) (6. Nc3) 6... d6 *
+
+
+[Event "Opening Principles For Under 1600s: King Safety - What To Avoid (Four Move Checkmate)"]
+[Date "2021.01.21"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C20"]
+[Opening "King's Pawn Game: Wayward Queen Attack"]
+[StudyName "Opening Principles For Under 1600s"]
+[ChapterName "King Safety - What To Avoid (Four Move Checkmate)"]
+[ChapterURL "https://lichess.org/study/47gAGm9l/BRijyTOb"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2021.01.21"]
+[UTCTime "12:26:01"]
+
+{ In the previous example, we learned how to develop our pieces rapidly and actively.
+
+We also learned how to clear the way for our king to castle to safety in the opening.
+
+Let's now understand the dangers that can arise when one fails to protect the king against an early attack. }
+1. e4 e5 2. Qh5 { This is the 'Parham Attack'.
+Although it follows the Advanced Principle at first (creating threats), developing the queen early has the disadvantage that the queen will often get kicked around by other pieces.
+The result is that White will lose time, and actually lose control of the game, if Black defends correctly against this early attack. } 2... Nc6 { Black defends the e5-pawn from attack. } (2... g6 { If Black can defend and attack at the same time, it's a good way to take control of the game. But it doesn't work in this exact position, because it doesn't defend against White's big threat. } 3. Qxe5+ { White will take the h8-rook next move, after Black has blocked the check. } 3... Qe7 4. Qxh8) 3. Bc4 { White develops his bishop. In doing so, he threatens the weakest pawn at the start of the game - the f-pawn.
+How should Black defend against this? } { [%csl Gf7] } 3... Nf6 { Black fails to see White's checkmate threat. } (3... g6 { This is the best defence, both defending (there's no more Qxf7 checkmate) and attacking (threatening the h5-queen). } 4. Qf3 { White threatens checkmate again, with Qxf7. } 4... Nf6 { Black blocks the attack on the f7-pawn while developing more pieces. } 5. Ne2 { The move ...g6 may look weakening, but it can be used as a preparation for developing the bishop. } 5... Bg7 { This is known as a 'fianchetto', and is a legitimate way to develop the bishop in several openings. } 6. d3 d6 7. h3 O-O { Black has built a 'home' for his king, which is protected by all 3 pawns, the knight, the fianchettoed bishop and the rook. This makes it very difficult for White to successfully attack the Black king. } { [%csl Gg7,Gf6,Gf8,Gf7,Gg6,Gh7] }) 4. Qxf7# { Checkmate! Black cannot take the queen, because it is defended by the c4-bishop.
+Another way to avoid this 4-move checkmate (technically known as 'Scholar's Mate') is to block the bishop's diagonal with ...e6.
+However, that requires playing a different opening as Black. Furthermore, you'll see in the 3...g6 note that we don't need to fear this early attack, if we know how to defend. } { [%cal Gc4f7,Ge8f7] } *
+
+
+[Event "Opening Principles For Under 1600s: How To Get Castled"]
+[Date "2021.01.21"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B30"]
+[Opening "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack"]
+[StudyName "Opening Principles For Under 1600s"]
+[ChapterName "How To Get Castled"]
+[ChapterURL "https://lichess.org/study/47gAGm9l/tTR3eYhL"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2021.01.21"]
+[UTCTime "12:26:10"]
+
+{ We already saw an example of how to get the king castled quickly in 'Fast Development In Action'. However, let's see how White can successfully follow the principles against another common opening - the Sicilian Defence. }
+1. e4 c5 { This is the Sicilian Defence. It may initially appear inferior to 1...e5, but it's actually the most common move against 1.e4.
+The advantage of this move is that, compared to 1.e4 e5 2.Nf3, where we saw the e5-pawn coming under early pressure, it is much harder for White to sensibly attack the c5-pawn.
+What this move has in common with 1...e5: It discourages d4 from White, as ...cxd4 would allow Black to exchange White's more valuable centre pawn for a flank pawn.
+The disadvantage of 1...c5, compared to 1...e5, is that Black's development will be slower than White's, because it doesn't help him castle more quickly (or develop his bishops, for that matter). } 2. Nf3 { We see the advantage of the Sicilian in action - 2.Nf3 is still the best move for White, but it doesn't threaten a pawn on e5, meaning Black has more good options. } { [%csl Ge5,Gf3] } 2... Nc6 { Black develops his knight and continues to control the central dark squares. } { [%csl Ge5,Gd4] } (2... e6 { This is another option for Black, opening the diagonal for his king's bishop and bringing himself closer to kingside castling.
+After this move, it doesn't make as much sense for White to develop his f1-bishop, as it would do nothing on b5, and on c4 it will get kicked around by ...d5. White should instead go for another plan, and postpone the development of his f1-bishop. } { [%cal Gf8a3] } 3. d4 cxd4 4. Nxd4 { This is the Open Sicilian. White obtains a lead in development and a space advantage, at the price of giving Black a long-term advantage of a 'central majority' (two central pawns to White's one). } { [%csl Gd7,Ge6,Ge4] } 4... Nc6 5. Nc3 { White has many ways to develop the pieces from here - the most natural being to play Be2 and 0-0, getting the king to safety.
+(Advanced - This is known as the 'Taimanov Variation' in case you'd like to explore it yourself.) } { [%cal Gf1e2,Ge1g1] }) 3. Bb5 { White develops his bishop to b5, pinning the Black knight and preparing short castling, completing kingside development as rapidly as possible.
+(Advanced - This is known as the Rossolimo, and it's the second most common move for White, after 3.d4) } { [%cal Ge1g1,Gb5e8] } (3. Bc4 { This bishop development is generally less effective when Black has not played ...e5, because of Black's next move. } 3... e6 { Now the c4-bishop is quite passive, because it hits a pawn on e6 that is defended twice. } { [%csl Ge6][%cal Gc4e6,Gd7e6,Gf7e6] } 4. O-O { White has followed the first three principles, but now Black can take control of the game (The Advanced Principle). } 4... d5 { The c4-bishop is now forced to move a second time to avoid capture. Meanwhile, Black has two pawns side by side in the centre and can claim a comfortable game. } { [%csl Gc5,Gd5] }) (3. d4 { This is known as 'The Open Sicilian'. See the note on 2...e6 for a brief discussion of this opening variation. }) 3... d6 { Black prepares to develop his c8-bishop, and also increases his control over the central dark squares. } { [%csl Ge5][%cal Gc8h3,Gd6e5] } (3... a6 4. Bxc6 bxc6 { (Advanced - White is quite happy to exchange his bishop for Black's knight, especially when provoked by ...a6, because Black now has doubled pawns on the c-file. This means that Black's pawn structure is a lot less flexible, while White keeps a central space advantage and a lead in development.) } { [%csl Gc6,Gc5] } 5. O-O { White's king is safe and he is ready to take the centre and claim an opening advantage. }) 4. O-O { White's king has now castled to safety, and he is ready to think about taking more control of the centre and developing his other pieces. For example: } 4... Bd7 5. Re1 { White develops his rook in anticipation of ...Nf6, which would otherwise threaten the e4-pawn. } 5... Nf6 { Black has developed his queenside minor pieces already, so he develops his kingside and moves closer to kingside castling. } 6. c3 { With this move, White prepares d4 to achieve the 'dream centre' of pawns on d4 and e4.
+(Advanced - If you want to win with a Grandmaster-strength opening 'repertoire' (set of variations) against the Sicilian, check out my course 'Attacking The Sicilian': https://members.illingworthchessacademy.com/offers/R3Z2rfcZ) } { [%csl Gd4,Ge4][%cal Gd2d4] } (6. d4 { This is less effective here than on move 3, because after } 6... cxd4 { White is unable to recapture with a pawn, to keep two pawns side by side in the centre. } { [%cal Gc3d4] }) *
+
+
+[Event "Opening Principles For Under 1600s: Sense Of Danger"]
+[Date "2021.01.21"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C42"]
+[Opening "Petrov's Defense: Damiano Variation"]
+[StudyName "Opening Principles For Under 1600s"]
+[ChapterName "Sense Of Danger"]
+[ChapterURL "https://lichess.org/study/47gAGm9l/Z9M5IY9i"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2021.01.21"]
+[UTCTime "13:47:31"]
+
+{ It's important to understand that the opening is much more than just a transition to the middlegame. There are a lot of hidden dangers lurking for both sides in the early moves of a game!
+
+Those of you who have fallen into opening traps, or watched Youtube videos about opening traps, will know this all too well!
+
+Here, I will show how sometimes the most 'natural' opening moves can also have their dangers! }
+1. e4 e5 2. Nf3 Nf6 { This symmetrical response, counterattacking the e4-pawn, is known as the 'Petroff' or the 'Russian Game'.
+It's a very solid opening for Black, but only if he follows up correctly. } 3. Nxe5 { The most common and obvious move, capturing the e5-pawn. } 3... Nxe4 { Black continues copying White, but here it is a mistake for tactical reasons, as White now uses his extra move to create powerful threats. } (3... d6 { This is the correct move, throwing in the intermediate move ...d6 before regaining the e4-pawn with ...Nxe4. } 4. Nf3 { The most natural square for the knight. } 4... Nxe4 { Now Black's position is safe, as the Qe2 pin is less effective than in our main line. } 5. Qe2 (5. d4 { Advanced - this is the most common move, taking the centre. } { [%cal Gf1d3,Ge1g1] }) 5... Qe7 { Black breaks the pin on the knight to the king, safeguarding the knight in the process. } 6. d3 { Kicking the knight back with tempo, just like Black did before with 3...d6. } 6... Nf6 { The position is symmetrical here as well, but the key difference (compared to 3...Nxe4) is that Black's pieces are safe, and the position is quiet.
+The result is that the position is equal, as White is unable to harness his extra tempo into a real initiative. }) 4. Qe2 { The problem for Black becomes clear - his knight is under attack, and retreating the knight allows a powerful discovered check/attack along the open e-file. } 4... Nf6 { Protecting the knight, but allowing something much worse. In principle, the open e-file spells trouble for the uncastled king, as the queen or rook can attack the king down this open file. } (4... d5 { runs into a similar problem: } 5. d3 { and Black's knight is again unable to retreat to safety. } 5... Nf6 6. Nc6+) (4... Qe7 { This is the best defence, leaving the e4-knight to its fate. } 5. Qxe4 { White is up a piece, but Black recoups some of the material with his next move. } 5... d6 { Now it is White's knight that finds itself in a pin. } { [%cal Ge7e1] } 6. d4 { White defends the knight while preparing further development and controlling the centre. } 6... dxe5 7. dxe5 { White is up a pawn with a good position. }) 5. Nc6+ { Black cannot take the knight, because the king is in check from White's queen. } { [%csl Gc6,Gd8][%cal Ge2e8] } 5... Qe7 { Otherwise Nxd8 wins the queen. } 6. Nxe7 { White wins a queen for a knight - a decisive material advantage. } *
+
+
+[Event "Opening Principles For Under 1600s: Sense Of Danger - 2nd Example"]
+[Date "2021.01.21"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C57"]
+[Opening "Italian Game: Two Knights Defense, Fried Liver Attack"]
+[StudyName "Opening Principles For Under 1600s"]
+[ChapterName "Sense Of Danger - 2nd Example"]
+[ChapterURL "https://lichess.org/study/47gAGm9l/jGKO7pIs"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2021.01.21"]
+[UTCTime "12:26:28"]
+
+{ Now for a more advanced example of what can happen if you lose your sense of danger in the opening. }
+1. e4 { We already talked about the moves up to 3.Bc4 in the game 'Fast Development In Action'. } 1... e5 2. Nf3 Nc6 3. Bc4 { Do you remember the name of this opening?
+That's right, it is the Italian Game - the most common opening at the beginner and junior levels. } 3... Nf6 { Black develops his knight while attacking the e4-pawn. This is known as the 'Two Knights Defence', however to play it successfully, Black must be prepared to sacrifice a pawn out of the opening. } (3... Bc5 { We already saw this move in 'Fast Development In Action'. } { [%cal Gd8g5,Gf3g5] }) 4. Ng5 { White exploits the one disadvantage of 3...Nf6.
+You may remember that the f2 and f7-pawns are the weakest pawns at the start of the game, because they are only defended by the king.
+If Black had already developed his f8-bishop, this attack would not achieve anything for White, due to the reply of castling kingside. } 4... d5 { Only this pawn move blocks the threat of Nxf7, forking the d8-queen and h8-rook (see the 4...h6 note). } (4... h6 5. Nxf7 Qe7 6. Nxh8 { White is up a rook and pawn - a decisive material advantage. }) 5. exd5 { White captures the pawn. In doing so, he also defends his bishop from attack. } 5... Nxd5 { What could be more natural than recapturing the pawn?
+However, this move is very dangerous for Black, because it re-opens the c4-bishop's diagonal, allowing White to pile up heavy pressure against the 'weakest link' on f7 before Black has castled his king to safety.
+To see how Black should play instead, check the 5...Na5 note. } { [%csl Gf7][%cal Gc4f7] } (5... Na5 { Advanced - This is the correct move, known as 'Polerio's Counterattack'. The idea is to eliminate or distract the c4-bishop, avoiding the problems on f7 we'll see after 5...Nxd5. } 6. Bb5+ { White gives a check while dealing with the threat to his bishop. This follows the Advanced Principle (creating threats), as Black can't recapture the d5-pawn while his king is in check. } 6... c6 { Black continues attacking White's bishop to continue the fight for the initiative (control of the game). This entails sacrificing a pawn. } 7. dxc6 bxc6 { Once again, Black recaptures with the pawn to keep making threats against White's pieces. } 8. Be2 { There are other retreats for the bishop, but this one is the most natural, keeping the bishop out of the range of any attacks. } 8... h6 { Black forces the White knight to a less active post with this attack. } 9. Nf3 e4 { Black attacks the White knight again, while gaining more space in the centre (central control). } 10. Ne5 Bc5 { Black has excellent compensation for the pawn, because of his lead in development and central space advantage. } { [%csl Ge5][%cal Gd8d4] }) 6. Nxf7 { This is known as The 'Fried Liver Attack'. It leads to very complicated play, where White sacrifices a piece to drag Black's king into the open centre. } (6. d4 { Advanced - This is known as the 'Lolli Attack' and gives White a safer advantage than 6.Nxf7. However, this falls outside the scope of this Study. }) 6... Kxf7 { Black has no good alternative to accepting the piece sacrifice. Now the king is open to checks. } 7. Qf3+ { This is the correct check, because it attacks the f7-king and d5-knight at once.
+(Advanced - this double attack is known as a 'fork', and is one of the most important tactics to master to become a strong chess player). } { [%cal Gf3d5,Gf3f7] } 7... Ke6 { Only this move both gets out of check and defends the d5-knight from being captured for free.
+The price Black pays is clear - his king is stuck in the centre on e6, and his knight on d5 is in an unpleasant pin from the c4-bishop. } { [%cal Ge6d5] } 8. Nc3 { White increases the pressure on the 'pinned' d5-knight (which cannot move from attack, as then the e6-king would be in check). } { [%csl Gd5][%cal Gc3d5] } 8... Nb4 { Black defends the d5-knight, while attacking the c2-pawn (threatening a 'fork' on the king and rook).
+The position is very complicated and unclear for humans to play, though it's easier to play White, as it's typically easier to attack than defend well, especially at the amateur level. } *
+
+
+[Event "Opening Principles For Under 1600s: Fight For The Intiative - Scotch Gambit For White"]
+[Date "2021.01.21"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C44"]
+[Opening "Scotch Game: Haxo Gambit"]
+[StudyName "Opening Principles For Under 1600s"]
+[ChapterName "Fight For The Intiative - Scotch Gambit For White"]
+[ChapterURL "https://lichess.org/study/47gAGm9l/Ff7W3z3S"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2021.01.21"]
+[UTCTime "12:26:50"]
+
+{ In this example, we will see White sacrificing a pawn to take control of the game and make it harder for the opponent to follow the basic opening principles successfully.
+
+(Advanced - Sacrificing material in the opening is known as an 'Opening Gambit' or 'Gambit' for short.) }
+1. e4 e5 2. Nf3 Nc6 3. d4 { White places his other pawn in the centre, not fearing the capture on d4.
+This move is known as The Scotch Game. } 3... exd4 { Black captures the pawn to eliminate White's 'dream centre' of pawns on d4 and e4. } 4. Bc4 { This is the Scotch Gambit. Compared to 3.Bc4, White has sacrificed a pawn to open the position and develop his pieces more quickly. } { [%cal Gc1h6,Gd1d8] } (4. Nxd4 { (Advanced - Simply recapturing the pawn is known as The Scotch Game. This is the most common move for White.) } 4... Nxd4 { This does not win the knight, as White can recapture with the queen. } 5. Qxd4 { Previously, I was critical of developing the queen too early, because it can be attacked easily by the opponent's pieces with tempo (see 'King Safety - What To Avoid as an example).
+However, Black is not able to easily attack the d4-queen with his knight, as the queen's knight was already traded.
+Therefore, White's lead in development and extra central space gives him an advantage. }) 4... Bc5 { Black defends the d4-pawn from capture, asking White to justify his opening gambit. } { [%csl Gd4] } 5. c3 { A strong move, attacking the d4-pawn. This also sets a trap that many thousands of inexperienced players have fallen for.
+(Advanced - Let's see if you can do better. What would you play here as Black?) } (5. Nxd4 { We can see that the d4-pawn is safe from capture by looking at the attackers and defenders of the pawn: } 5... Nxd4 6. Qxd4 Bxd4 { and Black is up a full queen at the end of the exchanges. }) 5... dxc3 { The most natural move, accepting the pawn sacrifice to keep a material advantage.
+However, this move has a concrete tactical problem, based on two key points:
+1. The f7-pawn is only defended by the king.
+2. The c5-bishop is undefended (making it vulnerable to forks).
+Based on these hints, what move would you play as White here? } (5... Nf6 { is the correct move for Black - see the link at the end of this game for more information. }) 6. Bxf7+ { Well done if you found this intermediate move! White lures the Black king into an exposed position, setting up a strong fork. } (6. Nxc3 d6 { gives Black time to protect his bishop against the Bxf7 tactic and consolidate his position. } { [%csl Gc5,Gd6] }) (6. Qd5 { This is the right idea, but the wrong move order. } { [%csl Ge7] } 6... Qe7 { Black defends the f7-pawn and bishop at once. Next move, Black will play ...Nf6 to kick back the White queen and take control of the game. } { [%csl Gf7,Ge7,Gc5] } 7. Nxc3 Nf6 { [%cal Gf6d5] }) 6... Kxf7 { Black may as well take the bishop, as otherwise he lost a pawn with tempo. } 7. Qd5+ { The point - White forks the Black king and bishop. } { [%cal Gd5f7,Gd5c5] } 7... Ke8 { Black chooses this retreat square, so that Qxc5 does not come with check.
+Now the automatic move is to take the bishop on c5 and regain the sacrificed bishop, but White can do even better. } 8. Qh5+ { A useful intermediate check, as Black is forced to either place his king on a worse square, or weaken his kingside with ...g6. } 8... g6 { Now the long diagonal is opened up. } (8... Kf8 9. Qxc5+ { checks the king, meaning Black does not have time to keep the extra pawn with ...cxb2. } 9... d6 10. Qxc3 { White is much better here, as Black's king remains uncastled, and White has more space and slightly faster development to boot. } { [%csl Ge4,Gf8] }) 9. Qxc5 { White has regained his piece and left the Black king stuck in the centre.
+But what if Black keeps the extra pawn? } 9... cxb2 { This is a very risky move, as it increases White's lead in development. } 10. Bxb2 { Black must deal with the threat of Bxh8. } { [%cal Gb2h8] } 10... Nf6 { Blocking with the knight.
+From here, there are a lot of good moves for White, who has scored extremely well from this position in practice. The simplest is to play } 11. O-O { , realizing that the e4-pawn is 'poisoned' and Black can't take it: } (11. e5 { is tempting too, attacking the knight with tempo, though I prefer castling. }) 11... Nxe4 { Attacking the queen, but this can be punished in several ways. } 12. Re1 { White pins the e4-knight to prevent Nxc5.
+In turn, Black's h8-rook and e4-knight are both under attack, and he must lose at least one of these pieces.
+To learn more about how to play the Scotch Gambit as White and beat 1.e4 e5 in general, check out my course 'How To Beat 1.e4 e5': https://members.illingworthchessacademy.com/offers/7Uxx2XNM } { [%cal Ge1e8,Gb2h8] } *
+
+
+[Event "Opening Principles For Under 1600s: How To Meet Gambits"]
+[Date "2021.01.21"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C44"]
+[Opening "Scotch Game: Scotch Gambit, Göring Gambit Declined"]
+[StudyName "Opening Principles For Under 1600s"]
+[ChapterName "How To Meet Gambits"]
+[ChapterURL "https://lichess.org/study/47gAGm9l/6XE8nLh9"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2021.01.21"]
+[UTCTime "12:27:00"]
+
+{ Conversely, what's the best way to counter opening gambits by our opponent?
+
+In most cases, gambits by Black will be unsound, due to White's extra tempo for development.
+
+However, some of White's gambits can be quite dangerous if Black is not ready for them - as we saw in the previous game. }
+1. e4 e5 2. Nf3 (2. d4 exd4 3. c3 { is the Danish Gambit. It has similar ideas to the 'Goring Gambit' and can actually be met in the same way by Black. }) (2. f4 { This is the King's Gambit. It was played a lot in the 19th century and earlier, but isn't seen as much nowadays, because after } 2... exf4 { , Black is not just up a pawn, but White also has to contend with his weakened kingside and open king, which may be exploited with a check on h4, for example. } { [%cal Gd8h4,Gh4e1] }) 2... Nc6 3. d4 exd4 4. c3 { This is the Goring Gambit.
+What's the best way to deal with such a gambit?
+The critical way is certainly to accept the pawn sacrifice, and fend off the initial attack to eventually win the game with your extra material.
+However, another option is to give back material to wrest control of the game from the opponent. } 4... d5 { Black hits back in the centre, exchanging White's central pawn while activating his queen and queen's bishop. } (4... dxc3 5. Nxc3 { White sacrifices a pawn to gain a lead in development, open the position and eliminate Black's central pawn. } 5... Bb4 { and ...d6/...Nf6 is now a solid way for Black to develop and get a good game, though some more good moves are still required.
+Note that Black placed the bishop on b4 here, rather than the standard c5 square, to pin White's active knight and also avoid the Bc4xf7 tactics we saw in the previous game. } { [%cal Gd7d6,Gg8f6] }) 5. exd5 { White exchanges pawns to get time for cxd4 next move, regaining the pawn. } 5... Qxd5 { Black's queen is active in the centre, though it can also be a target for attack if Black doesn't keep the momentum. } 6. cxd4 { This d4-pawn is known as an 'Isolated Pawn'. It can't be defended by any of White's other pawns.
+However, this pawn is both a weakness and a strength - this d4-pawn is the only pawn in the centre, giving White a space advantage.
+The best way for Black to deal with this is to keep developing actively. } { [%csl Gd4] } 6... Bg4 { Black pins the f3-knight, threatening to take on f3 and remove the defender of the d4-pawn.
+(The rest of this game falls under 'Advanced') } 7. Be2 { White breaks the pin and also indirectly defends the d4-pawn. } 7... Bb4+ { Black continues to develop with tempo, checking the White king to prevent castling. } (7... Bxf3 { Note that the exchanges don't win material for Black: } 8. Bxf3 Qxd4 { This is a blunder - correct is 8...Qc4, with similar play to the 7...Bb4 variation. } 9. Bxc6+ { White removes the defender of the d4-queen with check. } { [%csl Gd4] } 9... bxc6 10. Qxd4 { Always be wary of these tactics (such as removing the defender) when evaluating exchanges and capturing sequences! }) 8. Nc3 { White blocks the check while developing the knight.
+The Black queen can't be captured yet, due to the pin on the knight to the king, but if White gets time to castle next move, the threat to Black's queen would become real. } 8... Bxf3 { Normally a bishop is slightly more valuable than a knight, but in this particular position, an otherwise dubious exchange has a very clever dynamic point. } 9. Bxf3 { White recaptures with the bishop to attack the queen with tempo. } 9... Qc4 { The point. Black exchanged on f3 to deflect White's bishop away from c4, so that Black can keep the White king in the centre (by preventing castling).
+Furthermore, the c3-knight is threatened, and the d4-pawn will come under even more pressure after long castling.
+The position is still about equal, due to White's 'bishop pair' advantage (he has two bishops to Black's one), but Black's initiative makes his position easier to play. } { [%csl Gc3,Gd4][%cal Gc4f1] } *
+
+
+[Event "Opening Principles For Under 1600s: Fight For The Initiative - Ruy Lopez"]
+[Date "2021.01.21"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C67"]
+[Opening "Ruy Lopez: Berlin Defense, Rio Gambit Accepted"]
+[StudyName "Opening Principles For Under 1600s"]
+[ChapterName "Fight For The Initiative - Ruy Lopez"]
+[ChapterURL "https://lichess.org/study/47gAGm9l/moE7V9Hx"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2021.01.21"]
+[UTCTime "12:27:16"]
+
+{ The fight for the initiative is not limited to open positions either - it also happens in more closed positions, though not quite as obviously.
+
+So let's see how with an example. }
+1. e4 e5 2. Nf3 Nc6 3. Bb5 { This is the 'Ruy Lopez' Opening, also known as the 'Spanish'.
+Why is this the most common move for White among advanced players?
+It's because the Ruy Lopez has one big advantage over the Italian (3.Bc4): White attacks and pins the c6-knight, meaning that Black will, at some point, need to resolve the question of how to keep his e5-pawn safe.
+This pressure means that Black's good options are somewhat reduced. } { [%csl Ge5] } 3... Nf6 { The Berlin Defence. Black develops his knight and attacks the e4-pawn. } (3... d6 { This move defends the e5-pawn for now, but turns the pin on the c6-knight into an 'absolute pin' - the c6-knight cannot legally move, as then the e8-king would be in check. } 4. d4 { White increases the pressure on the e5-pawn, forcing Black to deal with the threat in some way. We can see how White is taking control of the game with his 'focus fire' strategy against the e5 strongpoint. } { [%csl Ge5] } 4... exd4 { Black exchanges the pawn, sick of the pressure from White's pieces. } 5. Nxd4 { White has more space in the centre and more active pieces. He has good control of the game too. White keeps an initiative, as evidenced by the new threat to the c6-knight (attacked twice and defended only once). } { [%csl Gc6][%cal Gd4c6,Gb5c6] }) (3... a6 { This, the Morphy Defence, is the most common move for Black. The idea of this attack is that the 'threat' to the e5-pawn is not real just yet, as the following variation shows: } 4. Bxc6 { The 'Exchange Spanish'. White doubles Black's pawns, at the price of giving up the bishop pair. } (4. Ba4 { is my recommendation, but this falls outside the scope of our Study. }) 4... dxc6 { Black recaptures away from the centre, so that he can develop his queenside more rapidly and have more mobility for his queen. } { [%cal Gc8g4,Gd8d1] } 5. Nxe5 { This pawn grab is a mistake, because White will not be able to keep the extra pawn. He should have castled instead. } 5... Qd4 { Black regains the pawn with a simple fork. } 6. Nf3 Qxe4+ { Black's position is preferable here, as he has a strong bishop pair on an open board, whereas the doubled pawns on the c-file can't really be exploited by White. } { [%csl Gc8,Gf8] }) 4. O-O { White ignores the attack on the e4-pawn and castles to complete kingside development. That's because he realizes that Black will not be able to hang on to the extra pawn in any case. } 4... Nxe4 { Black may as well take the pawn, as that was the main idea behind 3...Nf6 and not doing so would be inconsistent. } 5. d4 { White ignores the knight to open up the centre and increase his lead in development. We will see in this example that trying to hang on to the extra material as Black only leads to problems. } (5. Re1 { This is a fine move as well, though Black can defend against this early e-file attack. } 5... Nd6 { Black defends by attacking - the b5-bishop comes under fire. } 6. Nxe5 { White uses tactics to grab the pawn back immediately, as taking the bishop loses the queen to Nxc6 (just like we saw in the 'Sense Of Danger' game). } 6... Be7 { However, White is unable to put more pressure down the e-file in time, because first he must deal with the attack on his b5-bishop. After White retreats the bishop, Black will soon castle, with a solid position. (Advanced - See the next two moves for an illustration of this point). } 7. Bf1 Nxe5 8. Rxe5 O-O) 5... exd4 { This is a mistake, as compared to the 5.Re1 note, the e-file is now completely open, making the pin much more dangerous. } (5... Nd6 { Advanced - This is again the correct move. Instead of trying to keep the extra pawn, Black returns it (much like we saw in 'How To Meet Gambits') to consolidate his position. } 6. Bxc6 { Not the only move, but the most common - White resolves the threat to his bishop by exchanging and buying himself time to regain his pawn. } 6... dxc6 { Black recaptures away from the centre again, to develop his queenside more actively. } 7. dxe5 { White correctly recaptures with the pawn, to gain a tempo on the d6-knight and also increase his space advantage. } 7... Nf5 { This is the most stable square from the knight - it could easily end up trapped or at the very least offside on b5, c4 or e4. } 8. Qxd8+ { White exchanges queens, depriving Black of the right to castle. } 8... Kxd8 { This is the famous 'Berlin Endgame'. This is not the place to analyze or explain it in detail, but we can say that Black's strong bishop pair (specifically, the unopposed light-squared bishop) fully compensates for White's kingside majority and faster development. }) 6. Re1 { This is a thematic reply, pinning the knight and forcing Black to defend with a pawn. } 6... d5 { Black defends the knight while preparing development. However, the new tactical problem is that the knight on c6 is now pinned to the king - the b5-bishop has come to life! } 7. Nxd4 { White regains one of the pawns, and introduces new threats in Nxc6, winning material, and f3, winning the knight on e4.
+In fact, Black must now find a very clever tactic just to stay in the game.
+(The rest of this game falls under 'Advanced'). } 7... Bd6 { Black can't deal with White's threats anymore, so he tries creating some threats of his own. The next moves will take some effort to understand, but doing so will greatly improve your tactical vision: } (7... Bd7 { This is the most natural defence, breaking the pin, but after } 8. Bxc6 { (avoiding any complications with ...Nxd4, discovering an attack on the b5-bishop) } 8... bxc6 9. f3 { , Black loses the e4-knight by force due to the pin. The extra knight proves sufficient for White to win the game. }) 8. Nxc6 { White follows through on his threat, and takes the knight. } 8... Bxh2+ { Black sacrifices the bishop, in the hope of achieving a draw by perpetual check. } (8... bxc6 9. Bxc6+ { would not be playable for Black, as the king and rook are forked. Even worse, the d5-pawn is about to fall, and with it, the e4-knight. } { [%cal Gc6e8,Gc6a8] }) 9. Kh1 { A very difficult move to find, as one must see two things in advance:
+1. 9...Nxf2 is illegal, because of the pin from the e1-rook
+2. 9...Qh4 looks like a crushing attack on White's king, but can be met by a strong deflection tactic. } 9... Qh4 { This would be winning for Black (based on ...Bg3 discovered checks) if White didn't have the next two moves. } 10. Rxe4+ { The point of this exchange sacrifice becomes clear in a couple of moves. } 10... dxe4 { Black takes with the pawn, as recapturing with the queen would have left the h2-bishop en prise. } (10... Qxe4 11. Kxh2) 11. Qd8+ { Now it all becomes clear. White needed to clear the d5-pawn out of the way, so that he could deflect the Black queen away from White's king and from the defence of the h2-bishop.
+Obviously it wouldn't be fair to expect a beginning player to find all these moves for White in a quick game. Nonetheless, such variations give us a taste of the great beauty and depth of chess, and show that there's always room to discover more in chess (even for Grandmasters). } 11... Qxd8 12. Nxd8+ { Check! } 12... Kxd8 13. Kxh2 { Even this endgame is far from simple - after all, on material, it may appear that Black has a slight material advantage, with a rook and two pawns versus White's knight and bishop.
+However, White is actually much better, for a few reasons:
+1. He has a lead in development that will increase with moves like Nc3, Bc4, Bf4 and Rd1.
+2. Black's king is stuck in the centre, and even though the queens have been traded, White has enough pieces to cause some headaches.
+3. Black's pawns are somewhat exposed to attack. For instance, it is not so easy to defend the e4-pawn, as ...f5 here would run into Bg5 checkmate!
+This is the longest and most complicated variation in our Study. However, you can easily avoid it by playing 5.Re1. } *
+
+
+[Event "Opening Principles For Under 1600s: System Openings - London"]
+[Date "2021.01.21"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D02"]
+[Opening "Queen's Pawn Game: London System"]
+[StudyName "Opening Principles For Under 1600s"]
+[ChapterName "System Openings - London"]
+[ChapterURL "https://lichess.org/study/47gAGm9l/cCgqAKAf"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2021.01.21"]
+[UTCTime "12:27:27"]
+
+{ I've covered all the key general opening principles to know, and you're ready to test out the ideas I've shared with you in your own games.
+
+However, there may be some positions where you get stuck, and don't know how you should develop your pieces.
+
+To help you with this, I'll show you two 'System Openings' that can get you into the game quickly.
+
+Our first one is with 1.d4. }
+1. d4 { I believe most beginners will improve more quickly if they master 1.e4 first.
+However, I include this as an alternative, in case you're really struggling with 1.e4. } 1... d5 { The most common reply, matching White in the centre. } (1... Nf6 { This is Black's most common move at higher levels of play, and forms a set of openings known as the 'Indian' Defences, where Black postpones or even avoids the move ...d5. However, the London System can still be played by White: } 2. Nf3 g6 { This Kingside Fianchetto setup is known as the 'King's Indian', at least when Black follows up with ...d6 later. } 3. Bf4 { The London System is characterized by White developing his bishop to f4 at an early stage.
+You may notice that it is very much like the Italian Game from before, only a 'queenside' version.
+(The next moves are 'Advanced' and for illustration.) } 3... Bg7 4. e3 O-O { [%csl Gd3] } 5. Be2 { When Black plays ...g6, the White bishop is often better on e2 than d3. } (5. Bd3 { Here the bishop is banging its head on a brick wall, as the g6-pawn is already defended twice.
+There's also the risk that a later ...d6 and ...e5-e4 will fork the bishop and f3-knight, which would be unpleasant, to say the least. } { [%csl Gg6][%cal Gd3g6,Gf7g6,Gh7g6] }) 5... d6 { Black opts for a dark-squared strategy and bluntens the range of the f4-bishop, as the d6-pawn is defended twice. } { [%csl Gd6][%cal Ge7d6,Gc7d6] } 6. h3 { With this prophylactic move, White is able to keep his 'London' bishop on f4 alive, as ...Nh5 can now be met by Bh2. This is a thematic idea in the London System, though sometimes White can successfully avoid it altogether. } { [%csl Gh2][%cal Gf6h5,Gf4h2] } (6. O-O Nh5 { This attack on the bishop is what I want to avoid with 6.h3, although this is quite an advanced point. }) 6... Nbd7 { Black has many other possible setups - I use this developing move just for illustration. } 7. O-O { Depending on Black's setup, White can choose between a more aggressive setup with c4/Nc3 (my preference), or a more solid approach with c3/Nbd2. } { [%csl Gc3,Gd2][%cal Gc2c4,Gb1c3] }) 2. Nf3 { White develops his knight solidly, moving a step closer to kingside castling. } (2. c4 { (Advanced - This is the Queen's Gambit, and the most common move. I'll show you how to counter this as Black in the next game.) }) 2... Nf6 { Black follows suit. Other moves can be met in the same way. } 3. Bf4 { The starting position of the London System. By developing his bishop actively on f4 (much like a 'Queenside Italian Game'), he exerts early piece pressure and prepares to develop his kingside pieces, without impeding the activity of his other pieces.
+We will see in a later game that this setup can also be employed, in a modified version, as Black. } (3. e3 { This is not a bad move either, but notice how the c1-bishop is suddenly stuck behind the pawn chain - a problem which doesn't arise in the London. } { [%cal Gc1e3] }) 3... e6 { Black has a lot of possible setups, but in each case White's developing moves will be quite similar, with only minor alterations. } 4. e3 { Now we see why it is more harmonious to play 3.Bf4 and only then 4.e3 - now the bishop is actively placed on f4, rather than stuck inside the pawn chain on c1. } { [%csl Gf4,Gc1][%cal Ge2e3] } 4... c5 { Black challenges the White centre with his pawn, much like we saw with the Queen's Gambit on move 2 (2.c4). } 5. Nbd2 { White develops his knight to d2, rather than c3, because he wants to play c2-c3 later to build a nice 'triangle' of pawns from b2 to d4 to f2, overprotecting the d4 strongpoint. } 5... Nc6 { Black, in turn, increases the pressure against the d4-pawn while developing his knight to its most active square. } 6. c3 { White has set up a strong pawn triangle, and his queenside minor pieces are all developed. The next step now is to bring out the kingside pieces with moves like Bd3 and 0-0.
+White can also often launch an attack on Black's king when they castle short, starting with moves like Ne5. This e5-knight is White's main bulwark for launching a kingside attack with the pieces. For example: } { [%csl Gb2,Gc3,Gd4,Ge3,Gf2] } 6... Be7 7. Ne5 { This is a great square for the knight, and also avoids problems with ...Nh5, harrassing our strong London bishop on f4. } { [%csl Gh5,Ge5][%cal Gd1h5] } 7... O-O { Castling is natural but somewhat risky here, as White can quickly build up a strong attack. } 8. Bd3 { From here, White can several attacking possibilities - from Qf3-h3 to a kingside pawn storm - or he can simply castle short with the more active position.
+To learn how to play the London System like a Grandmaster, and win many more of your White games, check out my Grandmasterclass here: https://members.illingworthchessacademy.com/offers/tM5agbGS } { [%csl Gh7][%cal Gd1f3,Gf3h3,Gg2g5,Gh2h5] } *
+
+
+[Event "Opening Principles For Under 1600s: System Openings - Queen's Gambit Declined"]
+[Date "2021.01.21"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D37"]
+[Opening "Queen's Gambit Declined: Three Knights Variation"]
+[StudyName "Opening Principles For Under 1600s"]
+[ChapterName "System Openings - Queen's Gambit Declined"]
+[ChapterURL "https://lichess.org/study/47gAGm9l/oZuXRmTC"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2021.01.21"]
+[UTCTime "16:21:31"]
+
+{ If you are not facing moves other than 1.e4 (like 1.d4) in many games yet, I recommend following this simple setup, known as The Queen's Gambit Declined. It allows you to follow the key opening principles, by getting a pawn firmly in the centre and your king castled by move 5 (unless they exchange pawns or threaten you first). }
+1. d4 (1. e4 { For beginning players, I strongly recommend meeting 1.e4 with } 1... e5 { , to master the fundamentals of chess. See the previous games for the key ideas you should remember as Black, when playing 1.e4 e5. }) (1. Nf3 { The Queen's Gambit Declined setup I'm showing you also works against less common first moves, such as 1.Nf3 and 1.c4. An example: } 1... d5 2. g3 Nf6 3. Bg2 e6 4. O-O Be7 5. d3 O-O { with a solid position for Black in this King's Indian Attack (incidentally, a system opening for White). }) (1. c4 { The English Opening is a bit tricky, as we don't want to play ...d5 unless we can recapture with a pawn on d5 (to keep our central control). Fortunately, } 1... e6 { is a good answer for us, preparing ...d5. After } 2. Nc3 d5 3. d4 { , we have transposed to our main line, with 1.d4 d5 2.c4 e6 3.Nc3. }) 1... d5 2. c4 (2. Nf3 Nf6 3. Bf4 e6 4. e3 { is what we saw before - the London System. However, against more passive setups by White, Black can consider developing the bishop more aggressively, with } 4... Bd6 { and then ...0-0 for a solid game. } { [%cal Ge8g8] }) 2... e6 { This is the Queen's Gambit Declined. Rather than taking the pawn on c4 (which is difficult to hang on to in any case), Black defends his d5-pawn (so that he can keep a pawn in the centre after cxd5) and prepares kingside development. } 3. Nc3 { White continues consistently, increasing the pressure on the d5-pawn. } { [%csl Gd5][%cal Gc3d5,Gc4d5] } 3... Nf6 { In turn, Black develops his knight while overprotecting the d5-pawn and covering the e4-square.
+Black is now one move closer to castling as well, and it's up to White to decide on his setup. } (3... Be7 { and then ...Nf6 is a good alternative move order, if you want to avoid the 'Exchange Variation' lines with 4.cxd5 exd5 5.Bg5 in the note below. } { [%csl Gg5] }) 4. Nf3 { White develops his other knight logically, waiting for Black to show his cards.
+Black has a lot of reasonable moves from this position, but I'll be focusing on the most 'classical' approach of the Queen's Gambit Declined, sticking with the 'System Opening' approach. } (4. cxd5 exd5 5. Bg5 { is the Exchange Variation, and White's main alternative. However, Black can continue developing in the same way, starting with } 5... Be7 { . }) 4... Be7 { Black develops his bishop solidly, so that a pin on the knight with Bg5 will not be unpleasant. The most active square for the bishop, in comparison, is b4 - which is another story altogether. } 5. Bg5 { White is trying to put more pressure on the d5-pawn by pinning the defending knight. } 5... O-O { Black has secured his position by stabilizing a pawn in the centre on d5, while completing kingside development.
+He typically solves the problem of his passive c8-bishop with a queenside fianchetto (...b6 and ...Bb7).
+In the middlegame, he will generally challenge White's centre with ...c5 to equalize the chances. } { [%cal Gh7h6,Gc8b7,Gb7b6,Gb8d7,Gc7c5] } *
+
+
+[Event "Opening Principles For Under 1600s: Conclusion"]
+[Date "2021.01.21"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C50"]
+[Opening "Italian Game"]
+[StudyName "Opening Principles For Under 1600s"]
+[ChapterName "Conclusion"]
+[ChapterURL "https://lichess.org/study/47gAGm9l/Z4lplm6z"]
+[Annotator "https://lichess.org/@/Craze"]
+[UTCDate "2021.01.21"]
+[UTCTime "12:27:44"]
+
+{ Congratulations on reaching the final game of this Study!
+
+I shared a lot of examples with you, so let's summarize the key lessons.
+
+Do you remember the 4 Key Opening Principles?
+
+Let me know your answers in the chat room, before clicking the next move to see for yourself. }
+1. e4 { The 4 Key Opening Principles Are:
+1. Control the centre;
+2. Develop your pieces quickly and actively;
+3. Get your king to safety (by castling);
+4. (Advanced) Fight for control of the game/the initiative.
+Now, do you remember the two main dangers to watch out for in the opening phase?
+See the next move for the answer. } 1... e5 { The two main dangers in the opening are:
+1. Falling into an early and strong attack on the 'weakest link' on f7 as Black (f2 as White)
+2. Being attacked down the open e-file before your king is castled.
+Do you remember the two main tactics we learned from our opening examples?
+See the next move to find out. } { [%csl Gf7,Gf2] } 2. Nf3 { The 2 main tactics we saw at play were:
+1. Forks/double attacks
+2. Pins
+Bonus points if you remembered the discovered checks/attacks, and the advanced deflection from the Ruy Lopez example!
+Next question - Which of these openings are you going to test in your games? } 2... Nc6 { Here are some options from the openings we covered here:
+White: Italian Game; Ruy Lopez; Scotch Gambit; Open Sicilian; Rossolimo Sicilian; London System; Queen's Gambit
+Black: Berlin Defence; Open Games; Sicilian; Queen's Gambit Declined. } 3. Bc4 { Would you like to learn more from me (GM Max Illingworth)?
+Check out my Chess Improvement System to become a strong chess player in the next 12 months: https://members.illingworthchessacademy.com/offers/tM5agbGS } *
+
+

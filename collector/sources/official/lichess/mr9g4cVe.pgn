@@ -1,0 +1,129 @@
+[Event "How to play against 1.e4: A Simple, Fun, and Aggressive Opening Repertoire: Overview: French ATTACK"]
+[Date "2025.06.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C02"]
+[Opening "French Defense: Advance Variation, Extended Bishop Swap"]
+[StudyName "How to play against 1.e4: A Simple, Fun, and Aggressive Opening Repertoire"]
+[ChapterName "Overview: French ATTACK"]
+[ChapterURL "https://lichess.org/study/mr9g4cVe/v8YLFSHX"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2025.06.16"]
+[UTCTime "03:51:20"]
+
+{ The following opening repertoire is known as the "French Attack" and is a fun, aggressive, and offbeat repertoire that can be quite effective at the sub-master level. This repertoire is thoroughly covered in ChessMood's "BlackMood Openings" starter course. Visit chessmood.com/rosen to get free access through the end of June 2025. }
+1. e4 e6 2. d4 (2. b3 d5 3. Bb2 { This gambit line known as the Horwitz Attack has been popularized by IM Levy Rozman (AKA GothamChess). See Chapter 7 for a simple recommendation to avoid white's trickery. }) 2... d5 3. e5 { The advanced variation } (3. Nc3 Nf6 4. e5 (4. Bg5 h6!? { a less common, but aggressive move that will leads to a pawn sacrifice. } 5. Bxf6 Qxf6 6. exd5 Bb4! { The McCutcheon Gambit! See chapter 5. }) 4... Ng8!? { The Kinder Surprise Variation! This rare line will take opponent's out of their opening preparation early and give black easy plans to pressure white's center. See Chapter 4 for more analysis. }) (3. exd5 exd5 { The French Exchange is one of the most common variation seen at the amateur level. While this symmetrical position maybe has a "dry" or "boring" reputation, it can be very fun if you know what to do. See chapter 2 for fun and aggressive strategies for black. }) 3... Bd7!? { An interesting sideline to try and trade off the bad French Bishop and avoid mainline opening theory. See Chapter 3 for more analysis. } *
+
+
+[Event "How to play against 1.e4: A Simple, Fun, and Aggressive Opening Repertoire: Fighting the French Exchange"]
+[Date "2025.06.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C01"]
+[Opening "French Defense: Exchange Variation"]
+[StudyName "How to play against 1.e4: A Simple, Fun, and Aggressive Opening Repertoire"]
+[ChapterName "Fighting the French Exchange"]
+[ChapterURL "https://lichess.org/study/mr9g4cVe/fRDOKPNT"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2025.06.16"]
+[UTCTime "03:51:25"]
+
+1. e4 e6 2. d4 (2. c4 d5 3. cxd5 exd5 4. exd5 Nf6! { Black will eventually recapture on d5 with the knight and have very fluid development while playing against white's isolated d-pawn }) 2... d5 3. exd5 exd5 4. Nf3 (4. c4 { This move is not to be feared! Black will develop harmoniously and white will likely be left with an isolated d-pawn } 4... Nf6 5. Nf3 Bb4+ 6. Nc3 O-O 7. Be2 { This is our cue to now capture on c4 as white will lose a tempo moving the bishop again } 7... dxc4 8. Bxc4 Bg4 { Black has a pleasant position heading into the middlegame with pleasant piece harmony and positional pressure against white's isolated d-pawn } { [%csl Rd4][%cal Gb8d7,Gd7b6,Gc7c6,Gf8e8] }) 4... Nc6 { The following variation will demonstrate white's most common setup with kingside castling and black's optimal setup to create a sharp and attacking game. } 5. Be2 Bg4 6. O-O (6. h3 { Black is usually happy to see this move, as h3 will give black a target to attack in the middlegame. } 6... Bf5 7. O-O Bd6 8. c3 Nge7 9. Re1 Qd7 10. Nbd2 f6 11. Nf1 g5 { because white has committed to h3, the prospect of the g4 pawn break is even more powerful for black. } { [%cal Gh7h5,Gg5g4,Ge8c8] }) 6... Bd6 7. c3 Nge7 8. Re1 Qd7 9. Bg5?! { This natural developing move only gives black more time to expand on the kingside } (9. Nbd2 f6 10. Nf1 O-O-O 11. b4 Ng6 12. b5 Nce7 13. Qa4 Kb8 { [%cal Gh7h3] }) 9... f6 10. Bh4 g5 11. Bg3 Bxg3 12. hxg3 h5! { This position is way more fun to play as black! } { [%cal Gh5h4,Ge8c8,Ge7g6] } *
+
+
+[Event "How to play against 1.e4: A Simple, Fun, and Aggressive Opening Repertoire: Fighting the French Advanced Variation"]
+[Date "2025.06.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C02"]
+[Opening "French Defense: Advance Variation, Extended Bishop Swap"]
+[StudyName "How to play against 1.e4: A Simple, Fun, and Aggressive Opening Repertoire"]
+[ChapterName "Fighting the French Advanced Variation"]
+[ChapterURL "https://lichess.org/study/mr9g4cVe/0tG2OlJS"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2025.06.16"]
+[UTCTime "03:51:50"]
+
+1. e4 e6 2. d4 d5 3. e5 Bd7!? { Already an off-beat move to avoid mainline opening theory. The idea of this move will become clear very soon... } 4. Nf3 a6 { Preparing to trade off our bad bishop for white's good bishop! It is not easy for white to effectively stop this plan } { [%csl Gb5][%cal Gd7b5] } 5. Bd3 (5. Nc3 { This prevents Bb5 but makes c5 stronger since white cannot reply with c3 } 5... c5 6. dxc5 Bxc5 7. Bd3 Nc6 8. Bf4 Nge7 9. O-O Qc7 { [%cal Gh7h6,Gg7g5,Ge8c8] }) (5. b3 c5 { This is an improved version of the of the mainline French since b3 is not useful for white. }) (5. a4 c5 { This is an improved version of the of the mainline French since a4 is not useful for white and actually weakens the b4 square }) (5. c4 dxc4 { This leads to a pleasant transformation for black... } 6. Bxc4 Bc6 { All of a sudden, the "bad" French bishop is now black's best piece! } { [%cal Gc6g2] } 7. O-O Nd7 { [%csl Rd4][%cal Gd7b6,Gg8e7,Ge7f5,Gf8e7] } 8. Nc3 Nb6 9. Bb3 Ne7 10. Be3 Nf5 { very harmonious setup for black! } { [%cal Gf8e7,Gd8d7,Ge8c8,Gh7h6,Gg7g5] }) 5... Bb5 6. Bxb5+ axb5 { Black should be quite happy to achieve these doubled b-pawns on the queenside. They are not at all weak (as long as black doesn't play c5), and black is happy to have the half-open file for the rook. } { [%cal Ga8a2] } 7. O-O Nd7 { The following line will demonstrate black's optimal setup and plan heading into the middle game } 8. c3 Nb6 9. Nbd2 Ne7 10. Re1 Nf5 { [%cal Gg7g5,Gg5g4,Gf8e7,Gh7h5,Gc7c6,Ge8d7] } 11. b3 c6 12. Bb2 (12. Nf1 Be7) 12... Be7 13. Nf1 g5 { [%csl Rc4][%cal Gg5g4,Gh7h5,Ge8d7,Gd8g8,Gg8g6,Gb5c4,Gd5c4] } *
+
+
+[Event "How to play against 1.e4: A Simple, Fun, and Aggressive Opening Repertoire: Kinder Surprise Variation"]
+[Date "2025.06.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C11"]
+[Opening "French Defense: Classical Variation, Steinitz Variation"]
+[StudyName "How to play against 1.e4: A Simple, Fun, and Aggressive Opening Repertoire"]
+[ChapterName "Kinder Surprise Variation"]
+[ChapterURL "https://lichess.org/study/mr9g4cVe/PBIiekdL"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2025.06.16"]
+[UTCTime "03:52:07"]
+
+1. e4 e6 2. d4 d5 3. Nc3 Nf6 4. e5 Ng8!? { Surprise! Black undevelops the knight with the intention to re-route it to f5 where it can help apply maximum pressure against white's d4-pawn } (4... Nfd7 { The traditional mainline with lots of theory }) 5. f4 (5. Nf3 c5 6. dxc5 Bxc5 7. Bd3 Nc6 8. O-O a6 { It's important to play a6 before Nge7 in order to meet Na4 with Ba7. } (8... Nge7? 9. Na4!) 9. Bf4 Nge7 { [%csl Rf4,Rf3,Re5][%cal Gc8d7,Gd8c7,Gh7h6,Gg7g5,Ge7g6,Gh8g8,Ge8c8] }) 5... c5 6. Nf3 Nh6 7. Be3 Nf5 8. Bf2 cxd4 9. Nxd4 Nxd4 10. Bxd4 Nc6 11. Bf2 Bb4 12. a3 Bxc3+ 13. bxc3 Qa5 14. Qd2 b6 { [%csl Ga6,Rc2,Rc3][%cal Gc8a6,Ga8c8,Gc8c2,Ge8g8] } *
+
+
+[Event "How to play against 1.e4: A Simple, Fun, and Aggressive Opening Repertoire: McCutcheon Gambit"]
+[Date "2025.06.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C11"]
+[Opening "French Defense: Classical Variation"]
+[StudyName "How to play against 1.e4: A Simple, Fun, and Aggressive Opening Repertoire"]
+[ChapterName "McCutcheon Gambit"]
+[ChapterURL "https://lichess.org/study/mr9g4cVe/araA1Q4H"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2025.06.16"]
+[UTCTime "03:52:14"]
+
+1. e4 e6 2. d4 d5 3. Nc3 Nf6 4. Bg5 h6!? { A rare move that lots of players will be unprepared for } 5. Bxf6 (5. Bh4? g5 6. Bg3 dxe4 { [%cal Gc7c5,Gb8c6] }) 5... Qxf6 6. exd5 Bb4! 7. dxe6 Bxe6 { Black has full compensation for the pawn! } { [%cal Gc7c5,Ge8g8,Gb8c6,Ga8d8] } *
+
+
+[Event "How to play against 1.e4: A Simple, Fun, and Aggressive Opening Repertoire: Fighting the Tarrasch Variation"]
+[Date "2025.06.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C04"]
+[Opening "French Defense: Tarrasch Variation, Guimard Defense, Main Line"]
+[StudyName "How to play against 1.e4: A Simple, Fun, and Aggressive Opening Repertoire"]
+[ChapterName "Fighting the Tarrasch Variation"]
+[ChapterURL "https://lichess.org/study/mr9g4cVe/3jRjtQiZ"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2025.06.16"]
+[UTCTime "17:51:45"]
+
+1. e4 e6 2. d4 d5 3. Nd2 Nc6!? { An off-beat variation that leads to some fun lines for black... } 4. Ngf3 (4. c3 e5! 5. dxe5 (5. exd5 Qxd5 { The queen can't easily be attacked as Bc4 allows Qxg2 }) 5... dxe4 6. Nxe4 Qxd1+ 7. Kxd1 Nxe5 $15) 4... Nf6 5. e5 (5. Bd3 Nb4 { [%csl Gd3][%cal Gb4d3] }) 5... Nd7 6. Be2 (6. Bd3 Nb4 { [%csl Gc5,Gd3][%cal Gc7c5,Gb4d3] }) 6... f6! { An important break -- there are now 3 attackers against white's e5-pawn and white is obliged to capture on f6. } { [%csl Re5][%cal Gf6e5,Gd7e5,Gc6e5] } 7. exf6 Qxf6 { The most active recapture } 8. c3 Bd6 { e5 is now pretty much unstoppable. } { [%csl Ge5][%cal Ge6e5] } 9. O-O e5 10. dxe5 Ndxe5 { Great harmony for the black pieces! } { [%csl Ge5,Gd6,Gc6,Gg8,Gf2][%cal Ge8g8,Gf8f2,Gc8g4] } *
+
+
+[Event "How to play against 1.e4: A Simple, Fun, and Aggressive Opening Repertoire: Fighting the King's Indian Attack"]
+[Date "2025.06.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C00"]
+[Opening "French Defense: King's Indian Attack"]
+[StudyName "How to play against 1.e4: A Simple, Fun, and Aggressive Opening Repertoire"]
+[ChapterName "Fighting the King's Indian Attack"]
+[ChapterURL "https://lichess.org/study/mr9g4cVe/QKPyyFrr"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2025.06.16"]
+[UTCTime "03:52:27"]
+
+1. e4 e6 2. d3 d5 3. Nd2 e5!? { looks weird at first, but black can get away with it! } 4. exd5 (4. Ngf3 Nc6 5. g3 Nf6 { This is a reverse philidor -- black has fluid development and can get an active position }) 4... Qxd5 5. c4?! Qd8 { [%csl Rd3,Rd4][%cal Gf8c5,Gb8c6,Gg8f6,Gc8f5] } *
+
+
+[Event "How to play against 1.e4: A Simple, Fun, and Aggressive Opening Repertoire: Fighting Gambit Sidelines"]
+[Date "2025.06.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C00"]
+[Opening "French Defense: Orthoschnapp Gambit"]
+[StudyName "How to play against 1.e4: A Simple, Fun, and Aggressive Opening Repertoire"]
+[ChapterName "Fighting Gambit Sidelines"]
+[ChapterURL "https://lichess.org/study/mr9g4cVe/ab5rWX0t"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2025.06.16"]
+[UTCTime "03:52:49"]
+
+1. e4 e6 2. c4 (2. b3 { Horowitz Attack (popularized by GothamChess } 2... d5 3. Bb2 Nf6 { not letting white have any fun by accepting the gambit! } 4. e5 (4. Nc3? { loses a pawn } 4... d4 5. Nce2 Nxe4) 4... Ng8 { [%cal Gg8h6,Gh6f5,Gc7c5,Gb8c6,Gh7h5] }) (2. Nf3 d5 3. e5 Bd7 { by not playing c5, black can fully avoid the wing gambit and likely transpose into similar lines shown in chapter 3 } (3... c5 4. b4)) 2... d5 3. cxd5 exd5 4. Qb3 { Orthoschnapp Gambit } 4... dxe4 5. Bc4 Qe7 6. Nc3 Nd7! { Simply preparing Nc5 to harass the white queen } { [%csl Gc5][%cal Gd7c5] } 7. Nd5 Qe5 $17 { [%csl Gc7,Gc5][%cal Ge5c7,Gd7c5] } *
+
+

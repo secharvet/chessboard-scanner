@@ -1,0 +1,18 @@
+[Event "How Hans became a GM: Chapter 1"]
+[Date "2020.12.23"]
+[White "IM Hans Niemann"]
+[Black "GM Sebastien Maze"]
+[Result "1-0"]
+[Variant "Standard"]
+[ECO "E47"]
+[Opening "Nimzo-Indian Defense: Normal Variation"]
+[StudyName "How Hans became a GM"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/XYTW4FLp/lWivj82b"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2020.12.23"]
+[UTCTime "03:43:15"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 { [%csl Gd4,Gc4] } 3... Bb4 4. e3 (4. e4 { [%csl Ge4][%cal Gf6e4] }) 4... O-O 5. Bd3 b6 { [%csl Gb7][%cal Gc8b7] } 6. Ne2 Bb7 7. a3 Be7 (7... Bxc3+ 8. Nxc3 { [%csl Gc1,Gd3] } 8... Bxg2 9. Rg1 { [%cal Gg1g7] } 9... Bb7 10. e4 { [%csl Ge4,Ge5,Gh6][%cal Ge4e5,Gc1h6,Gd1h5] }) 8. e4 d6 9. O-O c5 10. d5 { [%csl Gc5,Gd6,Gd5,Gc4] } 10... e5 { [%csl Gd6,Gc5,Ge5] } 11. Ng3 Ne8 { [%csl Gg7,Gf5][%cal Gg7g6,Ge8g7,Gf7f5] } 12. Nf5 Bf6 13. g3 Bc8 14. h4 { [%csl Gh6,Gg5,Rg8,Rf8,Re8,Rd8,Rc8,Rb8,Ra8][%cal Gh4h5,Gh5h6,Gc1g5] } 14... g6 15. Nh6+ Kh8 16. Kg2 { [%csl Gh1,Gh5][%cal Gf1h1,Gh4h5] } 16... Bg7 { [%cal Gf7f5] } 17. h5 g5 18. Ng4 { [%csl Gh6][%cal Gh5h6] } 18... Qd7 { [%csl Gg4][%cal Gd7g4] } (18... h6 19. f4 exf4 20. gxf4 gxf4 21. Bxf4 { [%csl Gh6] } 21... Kh7 { [%cal Gh7h6] } 22. e5+ f5 23. exf6+ { [%csl Gh7][%cal Gf6g7,Gd3h7] }) 19. f3 h6 { [%csl Gh6,Gg5] } 20. Rh1 a6 21. Ne3 Nc7 22. Na4 { 1-0 Black resigns. } 22... Ra7 23. Nxb6 Qe7 24. Nxc8 Rxc8 25. Nf5 1-0
+
+

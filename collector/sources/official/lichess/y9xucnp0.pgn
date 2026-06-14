@@ -1,0 +1,72 @@
+[Event "Asian Continental Chess Championship"]
+[Site "Ho Chi Minh VIE"]
+[Date "2012.05.12"]
+[Round "8"]
+[White "Ni Hua"]
+[Black "Le Quang Liem"]
+[Result "1-0"]
+[WhiteElo "2673"]
+[BlackElo "2703"]
+[Variant "Standard"]
+[ECO "B90"]
+[Opening "Sicilian Defense: Najdorf Variation, English Attack"]
+[StudyName "Lesson with Ashwin"]
+[ChapterName "The greatest missed combination of all time"]
+[ChapterURL "https://lichess.org/study/y9xucnp0/nGSEgEpe"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Be3 e6 7. Be2 Qc7 8. g4 b5 9. g5 Nfd7 10. a3 Bb7 11. Qd2 Nc6 12. Nxc6 Bxc6 13. f4 Nc5 14. Bf3 Qb7 15. Qd4 e5 16. fxe5 Ne6 17. Qd2 dxe5 18. Nd5 Bd6 19. O-O-O O-O 20. h4 a5 21. h5 b4 22. h6 bxa3 23. b3 Rfc8 24. Nb6 Bb4 25. Qh2 Bxe4 26. hxg7 a2 27. Kb2 a4 28. c4 axb3 29. g6 h5 (29... Ba3+ 30. Kxb3 (30. Kc3 a1=Q+ 31. Kd2 (31. Rxa1 Rxc4+ 32. Kxb3 Bc2+ 33. Qxc2 Nd4+ 34. Bxd4 Rb4+ 35. Kc3 Qxf3+ 36. Qd3 exd4+ 37. Kd2 Rb2+ 38. Kc1 Qxh1+ 39. Qd1 Qh6+)) 30... a1=N+ 31. Rxa1 Qxb6+ 32. Bxb6 Nd4+ 33. Kc3 (33. Bxd4 Rcb8+ 34. Kc3 Bb4+ 35. Kb2 Bd2+) 33... Rxc4+ 34. Kxc4 (34. Kd2 Nxf3+ 35. Ke3 Nxh2) 34... Rc8+) 30. Qxh5 Ba3+ 31. Kxb3 { 1-0 Black resigns. } 1-0
+
+
+[Event "French Championships"]
+[Site "Aix-les-Bains FRA"]
+[Date "2007.08.23"]
+[Round "10"]
+[White "Robert Fontaine"]
+[Black "Maxime Vachier-Lagrave"]
+[Result "0-1"]
+[WhiteElo "2567"]
+[BlackElo "2595"]
+[Variant "Standard"]
+[ECO "A89"]
+[Opening "Dutch Defense: Leningrad Variation, Matulovic Variation"]
+[StudyName "Lesson with Ashwin"]
+[ChapterName "Robert Fontaine - Maxime Vachier-Lagrave"]
+[ChapterURL "https://lichess.org/study/y9xucnp0/le5JhfgM"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. Nf3 f5 2. d4 Nf6 3. g3 g6 4. Bg2 Bg7 5. O-O O-O 6. c4 d6 7. Nc3 Nc6 8. b3 e5 9. dxe5 dxe5 10. Ba3 e4 11. Bxf8 Qxf8 12. Nd4 Nxd4 13. Qxd4 Be6 14. Qd2 h5 15. Rad1 h4 16. Qg5 Kf7 17. Qf4 Qc5 18. Nb5 hxg3 19. hxg3 Rc8 20. Nd4 Bd7 21. g4 Nxg4 22. Nxf5 Bxf5 23. Rd5 Qxd5 24. cxd5 Be5 25. Qc1 Bh2+ 26. Kh1 Rh8 27. Qc4 Bd6+ 28. Kg1 Bh2+ 29. Kh1 b5 30. Qxb5 e3 31. Bf3 Nxf2+ 32. Rxf2 exf2 33. Kg2 Bg1 34. Qc6 Rh2+ 35. Kg3 f1=N+ 36. Kf4 Rh4+ 37. Kg5 Be3+ 38. Kxh4 g5+ 39. Kh5 Ng3+ { 0-1 White resigns. } 40. Kh6 g4# 0-1
+
+
+[Event "Lesson with Ashwin: Chapter 4"]
+[Date "2018.04.29"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A40"]
+[Opening "Horwitz Defense"]
+[StudyName "Lesson with Ashwin"]
+[ChapterName "Chapter 4"]
+[ChapterURL "https://lichess.org/study/y9xucnp0/xQteXQT0"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2018.04.29"]
+[UTCTime "02:08:00"]
+
+1. d4 e6 2. Nf3 f5 3. Nc3 Nf6 4. Bg5 d5 5. e3 c5 6. Bd3 Nc6 7. O-O h6 8. Bh4 g5 9. Bg3 cxd4 10. Nb5 dxe3 11. fxe3 Bc5 12. Nc7+ Kf7 13. Nxa8 f4 14. Be1 e5 15. b4 Bxe3+ 16. Kh1 e4 17. b5 Ne7 18. Ne5+ Ke6 19. Ng4 Nxg4 20. Qxg4+ Ke5 21. Qd1 exd3 22. Qxd3 Bf5 23. Qa3 Be4 24. c4 Nf5 25. Rd1 Nh4 26. Rg1 Qf8 27. Bb4 Qxa8 28. Bc3+ Kf5 29. Qe7 Rf8 30. cxd5 Qe8 31. Qh7+ Kg4 32. Qxh6 f3 33. h3+ Kg3 34. Qd6+ Rf4 35. Be1+ f2 36. Bxf2+ Bxf2 37. Qa3+ Bf3 38. gxf3+ Bxg1 39. Rxg1+ Kxh3 40. Qb2 Nxf3 41. Rf1 Qe4 42. Qg2+ Kh4 43. d6 Kh5 { [%cal Gf4h4] } *
+
+
+[Event "Lesson with Ashwin: Chapter 4"]
+[Date "2018.04.29"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A21"]
+[Opening "English Opening: King's English Variation, Reversed Sicilian"]
+[StudyName "Lesson with Ashwin"]
+[ChapterName "Chapter 4"]
+[ChapterURL "https://lichess.org/study/y9xucnp0/6n8ptB08"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2018.04.29"]
+[UTCTime "02:17:32"]
+
+1. c4 e5 2. Nc3 d6 3. d4 exd4 4. Qxd4 Nc6 5. Qd2 Be6 6. b3 Nge7 7. g3 d5 8. cxd5 Nxd5 9. a3 { [%csl Gb3][%cal Gd5c3,Gd2c3,Gd8d5,Gg1f3,Gd5b3,Ga1b1,Gb3a4] } 9... Nxc3 10. Qxc3 Qd5 (10... Qd4 11. Qxd4 (11. Bb2 Qxc3+ 12. Bxc3 Bxb3 13. Rb1 Ba4 (13... Bc2 14. Rb2 Ba4 15. Rb1 (15. Rxb7 O-O-O 16. Rb1 Bxa3 17. Bh3+ { [%csl Gc8][%cal Gh3c8,Gd8d7,Gb1a1] } 17... Rd7 18. Ra1) 15... Bxa3) 14. Rxb7 O-O-O)) 11. Nf3 Qxb3 12. Qxb3 Bxb3 13. Rb1 Ba4 14. Rxb7 O-O-O { [%csl Gb7,Gd1] } *
+
+

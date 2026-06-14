@@ -1,0 +1,525 @@
+[Event "Miniature Games in the Pirc/Indian Indian Defense: Original Request"]
+[Date "2023.02.17"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B00"]
+[Opening "Pirc Defense"]
+[StudyName "Miniature Games in the Pirc/Indian Indian Defense"]
+[ChapterName "Original Request"]
+[ChapterURL "https://lichess.org/study/1K4nZmfW/S4PPiaUp"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2023.02.17"]
+[UTCTime "15:28:28"]
+
+{ This study is made in response to this reddit post requesting miniature games from the following opening https://www.reddit.com/r/chess/comments/114i03x/1_e4_d6_2_d4_nf6_3_nc3_nbd7/ }
+1. e4 d6 2. d4 Nf6 3. Nc3 Nbd7 *
+
+
+[Event "AUT-chT 1011"]
+[Site "Austria"]
+[Date "2010.11.19"]
+[Round "1.3"]
+[White "Drabke, Lorenz Maximilian"]
+[Black "Varga, Zoltan"]
+[Result "0-1"]
+[WhiteElo "2439"]
+[WhiteTeam "Salzburg"]
+[BlackElo "2435"]
+[BlackTeam "Lackenbach"]
+[Variant "Standard"]
+[ECO "B07"]
+[Opening "Lion Defense: Anti-Philidor, Lion's Cave"]
+[StudyName "Miniature Games in the Pirc/Indian Indian Defense"]
+[ChapterName "Drabke, Lorenz Maximillian - Varga, Zoltan"]
+[ChapterURL "https://lichess.org/study/1K4nZmfW/0aZPIDoG"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 d6 2. d4 Nf6 3. Nc3 Nbd7 4. f4 e5 5. Nf3 c6 6. Be3 Qe7 7. Qd2 exf4 8. Bxf4 Nxe4 9. Nxe4 Nf6 10. Bxd6 Qxe4+ 11. Kf2 Bxd6 { 0-1 Black wins. } 0-1
+
+
+[Event "Titled Tuesday intern op 20th July"]
+[Site "Chess.com INT"]
+[Date "2021.07.20"]
+[Round "11"]
+[White "Gracia Alvarez, Gerardo Antonio"]
+[Black "Sliwicki, Damian"]
+[Result "0-1"]
+[WhiteElo "2292"]
+[BlackElo "2168"]
+[Variant "Standard"]
+[ECO "C41"]
+[Opening "Philidor Defense: Lion Variation"]
+[StudyName "Miniature Games in the Pirc/Indian Indian Defense"]
+[ChapterName "Gracia Alvarez, Gerardo Antonio - Sliwicki, Damian"]
+[ChapterURL "https://lichess.org/study/1K4nZmfW/rYXYg4EF"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 d6 2. d4 Nf6 3. Nc3 Nbd7 4. Nf3 e5 5. Rg1 c6 6. g4 h6 7. Qe2 Qb6 8. dxe5 dxe5 9. h4 Be7 10. g5 Nh5 11. Nxe5 Nxe5 12. Qxh5 Bg4 13. Rxg4 g6 { 0-1 Black wins. } 0-1
+
+
+[Event "Titled Tuesday intern op 01st Feb-A"]
+[Site "Chess.com INT"]
+[Date "2022.02.01"]
+[Round "3"]
+[White "Vasquez Schroder, Rodrigo Rafael"]
+[Black "Karabalis, Harilos"]
+[Result "1-0"]
+[WhiteElo "2494"]
+[BlackElo "2252"]
+[Variant "Standard"]
+[ECO "C41"]
+[Opening "Philidor Defense: Lion Variation"]
+[StudyName "Miniature Games in the Pirc/Indian Indian Defense"]
+[ChapterName "Vasquez Schroder, Rodrigo Rafael - Karabalis, Harilos"]
+[ChapterURL "https://lichess.org/study/1K4nZmfW/dgxCWjdU"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 d6 2. d4 Nf6 3. Nc3 Nbd7 4. Nf3 e5 5. Bc4 Be7 6. O-O O-O 7. Qe2 c6 8. Rd1 a6 9. dxe5 dxe5 10. Nxe5 Qc7 11. Nxd7 Bxd7 12. e5 Ne8 13. Rxd7 Qxd7 14. e6 { 1-0 White wins. } 1-0
+
+
+[Event "Titled Tuesday intern op 7th July"]
+[Site "Chess.com INT"]
+[Date "2020.07.07"]
+[Round "1"]
+[White "Gumularz, Szymon"]
+[Black "Melaugh, Shane"]
+[Result "1-0"]
+[WhiteElo "2513"]
+[BlackElo "2161"]
+[Variant "Standard"]
+[ECO "C41"]
+[Opening "Philidor Defense: Lion Variation"]
+[StudyName "Miniature Games in the Pirc/Indian Indian Defense"]
+[ChapterName "Gumularz, Szymon - Melaugh, Shane"]
+[ChapterURL "https://lichess.org/study/1K4nZmfW/9uUaIlOv"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 d6 2. d4 Nf6 3. Nc3 Nbd7 4. Nf3 e5 5. Bc4 Be7 6. O-O c6 7. a4 h6 8. Re1 Qc7 9. a5 Nf8 10. h3 g5 11. d5 b5 12. axb6 Qxb6 13. dxc6 Qxc6 14. Bb5 { 1-0 White wins. } 1-0
+
+
+[Event "Barcelona Sants op-A18th"]
+[Site "Barcelona"]
+[Date "2016.08.26"]
+[Round "8"]
+[White "Bachmann, Axel"]
+[Black "Movsziszian, Karen"]
+[Result "1-0"]
+[WhiteElo "2656"]
+[BlackElo "2495"]
+[Variant "Standard"]
+[ECO "C41"]
+[Opening "Philidor Defense: Lion Variation"]
+[StudyName "Miniature Games in the Pirc/Indian Indian Defense"]
+[ChapterName "Bachmann, Axel - Movsziszian, Karen"]
+[ChapterURL "https://lichess.org/study/1K4nZmfW/Fp6kfGBB"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 d6 2. d4 Nf6 3. Nc3 Nbd7 4. Nf3 e5 5. Bc4 Be7 6. O-O O-O 7. Re1 a6 8. a4 b6 9. Ne2 Bb7 10. Ng3 h6 11. dxe5 dxe5 12. Nh4 Re8 13. Qf3 Bf8 14. Qb3 { 1-0 White wins. } 1-0
+
+
+[Event "EU-ch Rapid"]
+[Site "Katowice"]
+[Date "2021.12.19"]
+[Round "7"]
+[White "Kukula, Pawel"]
+[Black "Gretarsson, Helgi Ass"]
+[Result "0-1"]
+[WhiteElo "2109"]
+[BlackElo "2469"]
+[Variant "Standard"]
+[ECO "B07"]
+[Opening "Lion Defense: Anti-Philidor, Lion's Cave"]
+[StudyName "Miniature Games in the Pirc/Indian Indian Defense"]
+[ChapterName "Kukula, Pawel - Gretarsson, Helgi Ass"]
+[ChapterURL "https://lichess.org/study/1K4nZmfW/Ennvn3IX"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 d6 2. d4 Nf6 3. Nc3 Nbd7 4. f4 e5 5. Nf3 exd4 6. Qxd4 c6 7. Be3 d5 8. exd5 Bc5 9. Qd2 Qe7 10. Ne5 Nxe5 11. fxe5 Qxe5 12. Nd1 Nxd5 13. Kf2 Qf4+ 14. Ke2 Bg4+ 15. Kd3 Nxe3 { 0-1 Black wins. } 0-1
+
+
+[Event "Olympiad-44"]
+[Site "Chennai"]
+[Date "2022.07.31"]
+[Round "3.1"]
+[White "Zaibi, Amir"]
+[Black "Carpenter, Paul A"]
+[Result "1-0"]
+[WhiteElo "2398"]
+[WhiteTeam "Tunisia"]
+[BlackElo "1938"]
+[BlackTeam "Jersey"]
+[Variant "Standard"]
+[ECO "B07"]
+[Opening "Lion Defense: Bayonet Attack"]
+[StudyName "Miniature Games in the Pirc/Indian Indian Defense"]
+[ChapterName "Zaibi, Amir - Carpenter, Paul A"]
+[ChapterURL "https://lichess.org/study/1K4nZmfW/JgDfV6Wo"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 d6 2. d4 Nf6 3. Nc3 Nbd7 4. g4 h6 5. h3 e5 6. Bg2 c5 7. dxe5 dxe5 8. f4 Qc7 9. Nf3 a6 10. Qe2 b5 11. Nd5 Qb8 12. fxe5 Nxe5 13. Nxe5 Qxe5 14. Bf4 Qxb2 15. Nc7+ Ke7 16. Rd1 Qc3+ 17. Kf2 { 1-0 White wins. } 1-0
+
+
+[Event "Titled Tuesday intern op 19th Jul Early"]
+[Site "Chess.com INT"]
+[Date "2022.07.19"]
+[Round "9"]
+[White "Tristan, Leonardo"]
+[Black "Bortnyk, Olexandr"]
+[Result "0-1"]
+[WhiteElo "2558"]
+[BlackElo "2604"]
+[Variant "Standard"]
+[ECO "C41"]
+[Opening "Philidor Defense: Lion Variation"]
+[StudyName "Miniature Games in the Pirc/Indian Indian Defense"]
+[ChapterName "Tristan, Leonardo - Bortnyk, Olexandr"]
+[ChapterURL "https://lichess.org/study/1K4nZmfW/XQpS3BpR"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 d6 2. e4 Nf6 3. Nc3 Nbd7 4. Nf3 e5 5. Bc4 Be7 6. O-O c6 7. a4 h6 8. Re1 Qc7 9. a5 g5 10. Bb3 Nf8 11. a6 b5 12. d5 b4 13. Nb1 cxd5 14. exd5 Ng6 15. Ba4+ Bd7 16. Bxd7+ Qxd7 17. Nbd2 g4 { 0-1 Black wins. } 0-1
+
+
+[Event "Titled Tuesday intern op 16th Feb"]
+[Site "Chess.com INT"]
+[Date "2021.02.16"]
+[Round "1"]
+[White "Ljukin, Sergei"]
+[Black "Kadric, Denis"]
+[Result "0-1"]
+[WhiteElo "2362"]
+[BlackElo "2577"]
+[Variant "Standard"]
+[ECO "B07"]
+[Opening "Lion Defense: Anti-Philidor, Lion's Cave"]
+[StudyName "Miniature Games in the Pirc/Indian Indian Defense"]
+[ChapterName "Ljukin, Sergei - Kadric, Denis"]
+[ChapterURL "https://lichess.org/study/1K4nZmfW/rBgS94ru"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 d6 2. d4 Nf6 3. Nc3 Nbd7 4. f4 e5 5. Nf3 exd4 6. Qxd4 c6 7. Be3 d5 8. exd5 Bc5 9. Qd3 Qe7 10. Kd2 Bb4 11. dxc6 bxc6 12. Nd4 Ne4+ 13. Kc1 Ndc5 14. Qe2 Bxc3 15. bxc3 Nxc3 16. Qe1 N5e4 17. Bd2 Qa3# { 0-1 Black wins. } 0-1
+
+
+[Event "EU-ch Online U2300 Qual"]
+[Site "Chess.com INT"]
+[Date "2020.05.25"]
+[Round "7"]
+[White "Hristodoulou, Panagiotis"]
+[Black "Hechl, Gerald"]
+[Result "1-0"]
+[WhiteElo "2302"]
+[BlackElo "2333"]
+[Variant "Standard"]
+[ECO "B07"]
+[Opening "Lion Defense: Anti-Philidor, Lion's Cave"]
+[StudyName "Miniature Games in the Pirc/Indian Indian Defense"]
+[ChapterName "Hristodoulou, Panagiotis - Hechl, Gerald"]
+[ChapterURL "https://lichess.org/study/1K4nZmfW/AuWNEI90"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 d6 2. d4 Nf6 3. Nc3 Nbd7 4. f4 e5 5. Nf3 exd4 6. Qxd4 c6 7. Bd2 d5 8. exd5 Bc5 9. Qc4 O-O 10. dxc6 Re8+ 11. Be2 bxc6 12. O-O-O a5 13. Ne5 Ba6 14. Qxf7+ Kh8 15. Bxa6 Rxa6 16. Qc4 Ra7 17. Nf7+ { 1-0 White wins. } 1-0
+
+
+[Event "Titled Arena Apr 3rd"]
+[Site "Lichess.org INT"]
+[Date "2021.04.03"]
+[White "Tabatabaei, Mohammad Amin"]
+[Black "Bortnyk, Olexandr"]
+[Result "0-1"]
+[WhiteElo "2629"]
+[BlackElo "2598"]
+[Variant "Standard"]
+[ECO "B07"]
+[Opening "Lion Defense: Anti-Philidor, Lion's Cave"]
+[StudyName "Miniature Games in the Pirc/Indian Indian Defense"]
+[ChapterName "Tabatabaei, Mohammad Amin - Bortnyk, Olexandr"]
+[ChapterURL "https://lichess.org/study/1K4nZmfW/ruQZnHA8"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 d6 2. d4 Nf6 3. Nc3 Nbd7 4. f4 e5 5. Nf3 exd4 6. Qxd4 c6 7. Bd2 d5 8. e5 Bc5 9. Qd3 Ng4 10. Qe2 O-O 11. h3 Nf2 12. Rh2 b5 13. g4 b4 14. Na4 Ne4 15. O-O-O Qa5 16. Nxc5 Qxa2 17. Nb3 a5 18. Ng5 a4 { 0-1 Black wins. } 0-1
+
+
+[Event "Titled Tuesday intern op 22nd Nov Early"]
+[Site "Chess.com INT"]
+[Date "2022.11.22"]
+[Round "2"]
+[White "Golubev, Mikhail"]
+[Black "Talibov, Shiroghlan"]
+[Result "1-0"]
+[WhiteElo "2461"]
+[BlackElo "2316"]
+[Variant "Standard"]
+[ECO "C41"]
+[Opening "Philidor Defense: Lion Variation"]
+[StudyName "Miniature Games in the Pirc/Indian Indian Defense"]
+[ChapterName "Golubev, Mikhail - Talibov, Shiroghlan"]
+[ChapterURL "https://lichess.org/study/1K4nZmfW/bPQ3qIFY"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 Nf6 2. Nc3 d6 3. d4 Nbd7 4. Nf3 e5 5. Bc4 Be7 6. a4 a5 7. Bxf7+ Kxf7 8. Ng5+ Kg8 9. Ne6 Qe8 10. Nxc7 Qd8 11. Nxa8 b6 12. dxe5 Nxe5 13. Nd5 Nxd5 14. Qxd5+ Kf8 15. Be3 Nd7 16. O-O-O Ba6 17. Nxb6 Nxb6 18. Qxa5 { 1-0 White wins. } 1-0
+
+
+[Event "Titled Tuesday intern op 17th May Early"]
+[Site "Chess.com INT"]
+[Date "2022.05.17"]
+[Round "2"]
+[White "Delgado Ramirez, Neuris"]
+[Black "Nguyen, Hong Ngoc"]
+[Result "0-1"]
+[WhiteElo "2603"]
+[BlackElo "1917"]
+[Variant "Standard"]
+[ECO "C41"]
+[Opening "Philidor Defense: Lion Variation"]
+[StudyName "Miniature Games in the Pirc/Indian Indian Defense"]
+[ChapterName "Delgado Ramirez, Neuris - Nguyen, Hong Ngoc"]
+[ChapterURL "https://lichess.org/study/1K4nZmfW/i7JXpGW4"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 d6 2. d4 Nf6 3. Nc3 Nbd7 4. Nf3 e5 5. Rg1 c6 6. a4 h5 7. h3 Be7 8. g4 hxg4 9. hxg4 Nf8 10. dxe5 Nxg4 11. exd6 Qxd6 12. Bd3 Ng6 13. Nd2 Nxf2 14. Kxf2 Rh2+ 15. Rg2 Bh4+ 16. Kf1 Rh1+ 17. Rg1 Bh3+ 18. Ke2 Qh2+ { 0-1 Black wins. } 0-1
+
+
+[Event "ECF Charity Marathon UKR"]
+[Site "Chess.com INT"]
+[Date "2022.04.02"]
+[White "Brett, Andrew"]
+[Black "Williams, Simon Kim"]
+[Result "0-1"]
+[WhiteElo "2085"]
+[BlackElo "2464"]
+[Variant "Standard"]
+[ECO "B00"]
+[Opening "Pirc Defense"]
+[StudyName "Miniature Games in the Pirc/Indian Indian Defense"]
+[ChapterName "Brett, Andrew - Williams, Simon Kim"]
+[ChapterURL "https://lichess.org/study/1K4nZmfW/0xtw3smg"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 d6 2. d4 Nf6 3. Nc3 Nbd7 4. h3 e5 5. Nge2 Be7 6. Be3 O-O 7. g4 b5 8. f3 b4 9. Na4 d5 10. g5 Nh5 11. Qd2 Bb7 12. O-O-O dxe4 13. fxe4 Bxe4 14. Rg1 Nb6 15. Nxb6 axb6 16. dxe5 Rxa2 17. Qxd8 Ra1+ 18. Kd2 Rxd8+ { 0-1 Black wins. } 0-1
+
+
+[Event "BLR-ch 84th"]
+[Site "Minsk"]
+[Date "2018.01.28"]
+[Round "11"]
+[White "Zhigalko, Andrey"]
+[Black "Filipets, Egor"]
+[Result "1-0"]
+[WhiteElo "2578"]
+[BlackElo "2366"]
+[Variant "Standard"]
+[ECO "B07"]
+[Opening "Lion Defense: Anti-Philidor, Lion's Cave"]
+[StudyName "Miniature Games in the Pirc/Indian Indian Defense"]
+[ChapterName "Zhigalko, Andrey - Filipets, Egor"]
+[ChapterURL "https://lichess.org/study/1K4nZmfW/04x0T89R"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 d6 2. d4 Nf6 3. Nc3 Nbd7 4. f4 e5 5. Nf3 exd4 6. Qxd4 c6 7. Bd2 d5 8. O-O-O Bc5 9. Qd3 O-O 10. exd5 cxd5 11. Nxd5 Nb6 12. Nxf6+ Qxf6 13. Qc3 Qe7 14. Bd3 Be6 15. Ng5 Nd5 16. Bxh7+ Kh8 17. Qg3 g6 18. Rhe1 Bd4 19. Bxg6 { 1-0 White wins. } 1-0
+
+
+[Event "Titled Tuesday intern op 22 Mar Early"]
+[Site "Chess.com INT"]
+[Date "2022.03.22"]
+[Round "2"]
+[White "Vokhidov, Shamsiddin"]
+[Black "Williams, Simon Kim"]
+[Result "1-0"]
+[WhiteElo "2536"]
+[BlackElo "2464"]
+[Variant "Standard"]
+[ECO "C41"]
+[Opening "Philidor Defense: Lion Variation"]
+[StudyName "Miniature Games in the Pirc/Indian Indian Defense"]
+[ChapterName "Vokhidov, Shamsiddin - Williams, Simon Kim"]
+[ChapterURL "https://lichess.org/study/1K4nZmfW/81vMq0k9"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 d6 2. d4 Nf6 3. Nc3 Nbd7 4. Nf3 e5 5. Bc4 Be7 6. a4 c6 7. O-O Qc7 8. b3 h6 9. Nh4 g6 10. dxe5 dxe5 11. f4 exf4 12. Bxf4 Qb6+ 13. Kh1 g5 14. e5 gxf4 15. exf6 Bxf6 16. Ne4 Bxh4 17. Nd6+ Kf8 18. Qh5 Ne5 19. Qxe5 { 1-0 White wins. } 1-0
+
+
+[Event "BIH-chT 20th"]
+[Site "Neum"]
+[Date "2022.09.17"]
+[Round "8.3"]
+[White "Milosevic, Milos"]
+[Black "Kadric, Denis"]
+[Result "0-1"]
+[WhiteElo "2379"]
+[WhiteTeam "Bihac"]
+[BlackElo "2561"]
+[BlackTeam "Sarajevo CC"]
+[Variant "Standard"]
+[ECO "C41"]
+[Opening "Philidor Defense: Lion Variation"]
+[StudyName "Miniature Games in the Pirc/Indian Indian Defense"]
+[ChapterName "Milosevic, Milos - Kadric, Denis"]
+[ChapterURL "https://lichess.org/study/1K4nZmfW/V9NQ0OM6"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 d6 2. d4 Nf6 3. Nc3 Nbd7 4. Nf3 e5 5. Rg1 h5 6. h3 c6 7. a3 Be7 8. g4 hxg4 9. hxg4 Nf8 10. g5 Ng4 11. Be2 Ng6 12. b4 Bd7 13. Qd3 Rh3 14. Bf1 Rh7 15. Bd2 Qc7 16. d5 Kf8 17. dxc6 bxc6 18. Ne2 Qb6 19. Rg2 Rd8 { 0-1 Black wins. } 0-1
+
+
+[Event "Titled Tuesday intern op 08th Mar Early"]
+[Site "Chess.com INT"]
+[Date "2022.03.08"]
+[Round "4"]
+[White "Fier, Alexandr"]
+[Black "Bortnyk, Olexandr"]
+[Result "0-1"]
+[WhiteElo "2569"]
+[BlackElo "2604"]
+[Variant "Standard"]
+[ECO "C41"]
+[Opening "Philidor Defense: Lion Variation"]
+[StudyName "Miniature Games in the Pirc/Indian Indian Defense"]
+[ChapterName "Fier, Alexandr - Bortnyk, Olexandr"]
+[ChapterURL "https://lichess.org/study/1K4nZmfW/6KSgLz0S"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 d6 2. e4 Nf6 3. Nc3 Nbd7 4. Nf3 e5 5. Rg1 exd4 6. Nxd4 Nb6 7. g4 h6 8. h4 g6 9. g5 hxg5 10. hxg5 Nfd7 11. Be3 Bg7 12. Qd2 Ne5 13. Qe2 c5 14. Nb3 Nec4 15. O-O-O Nxb2 16. Nb5 Nxd1 17. Qxd1 O-O 18. Nxd6 Na4 19. Nxc5 Bb2+ { 0-1 Black wins. } 0-1
+
+
+[Event "Gran Canaria Online Blitz 2nd"]
+[Site "Lichess.org INT"]
+[Date "2022.02.27"]
+[Round "1"]
+[White "Delgado Ramirez, Neuris"]
+[Black "Rodriguez Lorenzo, Yadira"]
+[Result "1-0"]
+[WhiteElo "2615"]
+[BlackElo "1957"]
+[Variant "Standard"]
+[ECO "C41"]
+[Opening "Philidor Defense: Lion Variation"]
+[StudyName "Miniature Games in the Pirc/Indian Indian Defense"]
+[ChapterName "Delgado Ramirez, Neuris - Rodriguez Lorenzo, Yadira"]
+[ChapterURL "https://lichess.org/study/1K4nZmfW/NdFTTHL1"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 d6 2. d4 Nf6 3. Nc3 Nbd7 4. Nf3 e5 5. Rg1 Be7 6. g4 exd4 7. Nxd4 Nc5 8. Qe2 O-O 9. g5 Nfd7 10. Nf5 Re8 11. Be3 Bf8 12. O-O-O Nxe4 13. Nxe4 Rxe4 14. Qf3 Re8 15. Nh6+ gxh6 16. gxh6+ Kh8 17. Qxf7 Nf6 18. Bg5 Bxh6 19. Bxh6 { 1-0 White wins. } 1-0
+
+
+[Event "Ismagambetov Memorial 1st"]
+[Site "Chess.com INT"]
+[Date "2020.06.26"]
+[Round "6"]
+[White "Vovk, Orest"]
+[Black "Murzin, Volodar"]
+[Result "0-1"]
+[WhiteElo "2315"]
+[BlackElo "2465"]
+[Variant "Standard"]
+[ECO "B00"]
+[Opening "Pirc Defense"]
+[StudyName "Miniature Games in the Pirc/Indian Indian Defense"]
+[ChapterName "Vovk, Orest - Murzin, Volodar"]
+[ChapterURL "https://lichess.org/study/1K4nZmfW/mfnyZQUS"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 d6 2. d4 Nf6 3. Nc3 Nbd7 4. f3 e5 5. Be3 g6 6. Qd2 Bg7 7. O-O-O O-O 8. h4 h5 9. g4 hxg4 10. fxg4 Nxg4 11. h5 Nxe3 12. Qxe3 exd4 13. Rxd4 Ne5 14. hxg6 fxg6 15. Be2 Be6 16. Nd5 c6 17. Nf4 Qg5 18. Rxd6 Rxf4 19. Rxe6 Rf1+ 20. Kd2 Rd8+ { 0-1 Black wins. } 0-1
+
+
+[Event "Titled Tuesday intern op 07th Sept"]
+[Site "Chess.com INT"]
+[Date "2021.09.07"]
+[Round "3"]
+[White "Kovacsy, Barnabas"]
+[Black "Grieve, Harry"]
+[Result "0-1"]
+[WhiteElo "2250"]
+[BlackElo "2312"]
+[Variant "Standard"]
+[ECO "C41"]
+[Opening "Philidor Defense: Lion Variation"]
+[StudyName "Miniature Games in the Pirc/Indian Indian Defense"]
+[ChapterName "Kovacsy, Barnabas - Grieve, Harry"]
+[ChapterURL "https://lichess.org/study/1K4nZmfW/R9EJg2bJ"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 d6 2. d4 Nf6 3. Nc3 Nbd7 4. Nf3 e5 5. Bc4 Be7 6. O-O c6 7. a4 h6 8. h3 Qc7 9. Be3 Nf8 10. dxe5 dxe5 11. a5 Ng6 12. Nd2 O-O 13. Nb3 Be6 14. Bxe6 fxe6 15. Nc5 Bxc5 16. Bxc5 Rfd8 17. Qf3 Rd2 18. Qg3 Nf4 19. Rfd1 Rad8 20. Bxa7 Rxd1+ { 0-1 Black wins. } 0-1
+
+
+[Event "EU-Cup 36th"]
+[Site "Struga"]
+[Date "2021.09.22"]
+[Round "5.4"]
+[White "Ertan, Can"]
+[Black "Hautot, Stephane"]
+[Result "1-0"]
+[WhiteElo "2384"]
+[WhiteTeam "Stockholm CC"]
+[BlackElo "2329"]
+[BlackTeam "Wirtzfeld"]
+[Variant "Standard"]
+[ECO "B07"]
+[Opening "Lion Defense: Anti-Philidor, Lion's Cave"]
+[StudyName "Miniature Games in the Pirc/Indian Indian Defense"]
+[ChapterName "Ertan, Can - Hautot, Stephane"]
+[ChapterURL "https://lichess.org/study/1K4nZmfW/ReJtyLlP"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 d6 2. d4 Nf6 3. Nc3 Nbd7 4. f4 e5 5. Nf3 exd4 6. Qxd4 c6 7. Be3 d5 8. e5 Ng4 9. Bg1 Nh6 10. O-O-O Qa5 11. g4 Nxg4 12. f5 Nh6 13. e6 fxe6 14. fxe6 Nf6 15. Bh3 Qb4 16. Qd2 Be7 17. Bd4 Ne4 18. Nxe4 dxe4 19. Bxg7 Rg8 20. Qxh6 { 1-0 White wins. } 1-0
+
+
+[Event "Titled Tuesday intern op 28th Jun Early"]
+[Site "Chess.com INT"]
+[Date "2022.06.28"]
+[Round "5"]
+[White "Andreikin, Dmitry"]
+[Black "Bortnyk, Olexandr"]
+[Result "1-0"]
+[WhiteElo "2729"]
+[BlackElo "2604"]
+[Variant "Standard"]
+[ECO "B07"]
+[Opening "Lion Defense: Anti-Philidor, Lion's Cave"]
+[StudyName "Miniature Games in the Pirc/Indian Indian Defense"]
+[ChapterName "Andreikin, Dmitry - Bortnyk, Olexandr"]
+[ChapterURL "https://lichess.org/study/1K4nZmfW/dKtO18lD"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 d6 2. e4 Nf6 3. Nc3 Nbd7 4. f4 e5 5. Be3 exd4 6. Qxd4 c6 7. O-O-O Ng4 8. Nf3 Nxe3 9. Qxe3 Qb6 10. Qe1 Be7 11. g4 Nc5 12. f5 Bd7 13. Bc4 f6 14. e5 fxe5 15. Nxe5 dxe5 16. Qxe5 Kf8 17. f6 gxf6 18. Rhf1 Ke8 19. Rxf6 Kd8 20. Nd5 { 1-0 White wins. } 1-0
+
+
+[Event "Niedersachsen-ch"]
+[Site "Verden"]
+[Date "2023.01.05"]
+[Round "1"]
+[White "Polster, Christian"]
+[Black "Becker, Stefan"]
+[Result "1-0"]
+[WhiteElo "2233"]
+[BlackElo "2128"]
+[Variant "Standard"]
+[ECO "C41"]
+[Opening "Philidor Defense: Lion Variation"]
+[StudyName "Miniature Games in the Pirc/Indian Indian Defense"]
+[ChapterName "Polster, Christian - Becker, Stefan"]
+[ChapterURL "https://lichess.org/study/1K4nZmfW/tZxnKNWI"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 d6 2. d4 Nf6 3. Nc3 Nbd7 4. Nf3 e5 5. g3 c6 6. Bg2 b5 7. O-O Be7 8. Re1 O-O 9. a3 Re8 10. b3 Bf8 11. Bb2 a6 12. Qd2 h6 13. Rad1 Qc7 14. h3 c5 15. dxe5 dxe5 16. Nd5 Nxd5 17. exd5 Bd6 18. Nxe5 Nxe5 19. Bxe5 Bxe5 20. d6 Qa7 21. Bxa8 { 1-0 White wins. } 1-0
+
+
+[Event "Oberliga Ost-A 2122"]
+[Site "Germany"]
+[Date "2022.05.01"]
+[Round "3.1"]
+[White "Hoepfl, Thomas"]
+[Black "Mueller, Frank1"]
+[Result "1-0"]
+[WhiteElo "2254"]
+[WhiteTeam "Halle USV"]
+[BlackElo "2270"]
+[BlackTeam "Leipzig VfB"]
+[Variant "Standard"]
+[ECO "C41"]
+[Opening "Philidor Defense: Lion Variation"]
+[StudyName "Miniature Games in the Pirc/Indian Indian Defense"]
+[ChapterName "Hoepfl, Thomas - Mueller, Frank1"]
+[ChapterURL "https://lichess.org/study/1K4nZmfW/xv9paqun"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 d6 2. d4 Nf6 3. Nc3 Nbd7 4. Nf3 e5 5. Bc4 Be7 6. O-O c6 7. a4 h6 8. Qe2 a5 9. Rd1 Qc7 10. Ba2 O-O 11. h3 Bd8 12. Be3 Re8 13. Nh4 exd4 14. Bxd4 Nxe4 15. Bxf7+ Kxf7 16. Qh5+ Kf8 17. Bxg7+ Kxg7 18. Nf5+ Kf6 19. Qxh6+ Kf7 20. Qg7+ Ke6 21. Nd4# { 1-0 White wins. } 1-0
+
+

@@ -1,0 +1,241 @@
+[Event "Eric Rosen's National Open Vegas Chess Games: CamelClutcher vs Rosen"]
+[Date "2021.06.17"]
+[White "Daniel Herman"]
+[Black "Eric Rosen"]
+[Result "*"]
+[WhiteElo "2144"]
+[BlackElo "2430"]
+[Variant "Standard"]
+[ECO "C45"]
+[Opening "Scotch Game: Malaniuk Variation"]
+[StudyName "Eric Rosen's National Open Vegas Chess Games"]
+[ChapterName "CamelClutcher vs Rosen"]
+[ChapterURL "https://lichess.org/study/5bVbBMVE/Ijfmhtg3"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.06.17"]
+[UTCTime "06:58:57"]
+
+1. e4 { [%eval 0.24] } 1... e5 { [%eval 0.21] } 2. Nf3 { [%eval 0.18] } 2... Nc6 { [%eval 0.18] [%csl Gc6][%cal Gb8c6] } (2... Nf6) 3. d4 { [%eval 0.12] } 3... exd4 { [%eval 0.13] } 4. Nxd4 { [%eval 0.03] } 4... Bb4+ { [%eval 0.0] } (4... Bc5 5. Nxc6 Qf6) 5. c3 { [%eval 0.33] } 5... Bc5 { [%eval 0.2] } 6. Nxc6 { [%eval 0.39] [%csl Rf6][%cal Gd8f6] } (6. Be3 Bb6) 6... bxc6 { [%eval 0.2] } (6... Qf6 7. Nd4) 7. Bd3 { [%eval 0.0] } 7... Qh4 { [%eval 0.0] } 8. Qe2 { [%eval 0.46] } 8... d6 { [%eval 0.89] [%csl Gf6,Ge7][%cal Gg8f6,Gg8e7] } 9. Nd2 { [%eval 0.72] } 9... Ne7 { [%eval 0.82] [%csl Gg6,Gf5][%cal Ge7g6,Gf7f5] } 10. Nf3 { [%eval 0.47] } 10... Qh5 { [%eval 0.38] } 11. O-O { [%eval 0.24] } 11... O-O { [%eval 0.7] } 12. Nd4 { [%eval 0.0] } (12. Ba6) 12... Qxe2 { [%eval -0.08] } 13. Bxe2 { [%eval 0.08] } 13... a5 { [%eval -0.07] [%csl Ga4][%cal Gb8b2,Ga8b8,Ga5a4] } 14. Be3 { [%eval -0.28] } 14... Rb8 { [%eval 0.14] [%csl Gb2] } 15. b3 { [%eval 0.1] } 15... f5 { [%eval 1.5] } (15... Re8) 16. Nxf5 { [%eval 0.78] } (16. exf5 Bxd4 17. cxd4 Nxf5) (16. Bc4+ Kh8 17. Bg5 Bxd4 18. cxd4 Re8 19. f3 d5 20. exd5 cxd5 21. Bd3 Nc6 22. Rfc1 Nxd4) (16. Bg5 { [%csl Re7,Rc6][%cal Gg5e7,Gd4c6] }) 16... Bxf5 { [%eval 1.0] } 17. Bxc5 { [%eval 0.26] } (17. Bc4+ Kh8 18. Bxc5 Bxe4 { [%csl Gc5][%cal Gd6c5] } (18... dxc5 19. exf5 { [%csl Rc5,Rc7,Rc6] }) 19. Rfe1 dxc5 20. Rxe4 { [%csl Rc5,Rc6,Rc7] }) 17... Bxe4 { [%eval 0.35] } 18. Be3 { [%eval 0.33] } 18... c5 { [%eval 0.43] } 19. Rad1 { [%eval 0.12] } 19... Kh8 { [%eval 0.27] } 20. f3 { [%eval 0.35] } 20... Bg6 { [%eval 0.45] } 21. Rfe1 { [%eval 0.27] [%csl Ra4,Gb3][%cal Ra2a4,Gb8b3] } 21... a4 { [%eval 0.24] [%csl Gb3,Gc2][%cal Ga4b3] } 22. bxa4 { [%eval 0.25] } (22. Bc4 axb3 (22... Bc2) 23. axb3) 22... Bc2 { [%eval 0.12] } 23. Rd2 { [%eval 0.12] } 23... Bxa4 { [%eval 0.08] } 24. Bc4 { [%eval 0.0] } 24... Rbe8 { [%eval 0.23] [%csl Ge1][%cal Ge8e1] } 25. Rb2 { [%eval 0.0] } 25... Bc6 { [%eval -0.08] } 26. Bd2 { [%eval 0.0] } 26... Nd5 { [%eval -0.08] } (26... Nc8 27. Rxe8 Rxe8 28. Bf7 Rf8 29. Rb8 g6) 27. Rxe8 { [%eval -0.01] } 27... Rxe8 { [%eval 0.0] } 28. Kf2 { [%eval 0.0] } (28. Bxd5 Bxd5 { [%csl Ga8][%cal Ge8a8] } 29. c4 Bxc4 (29... Bc6 30. Ba5 Rc8 31. Re2 (31. Bxc7) 31... Kg8) 30. Ba5 Rc8 (30... Ra8) 31. Rb7 Bxa2 32. Rxc7 Rxc7 33. Bxc7 d5 34. Bd6 c4 35. Be5) 28... Nb6 { [%eval -0.16] [%csl Gc4,Gb3][%cal Gc4b3] } 29. Bd3 { [%eval -0.44] } (29. Bb3) 29... Ra8 { [%eval -0.35] [%csl Ra2] } 30. Bg5 { [%eval -0.52] } (30. Bb1 Nc4) (30. Bf4 Nd5 (30... Bd5) 31. Be4) (30. Be4) 30... Bd5 { [%eval -0.64] } 31. Re2 { [%eval -0.72] } 31... h6 { [%eval -0.62] } (31... Rxa2 32. Rxa2) 32. Bh4 { [%eval -1.03] } 32... g5 { [%eval -0.86] } 33. Bg3 { [%eval -0.64] } 33... Rxa2 { [%eval -0.72] } 34. Rxa2 { [%eval -0.42] } (34. Bc2 Bc4 35. Re8+ (35. Rd2 { [%csl Rd2][%cal Ga2d2] } 35... Bb3) 35... Kg7 { [%csl Rc2][%cal Ga2c2] } 36. Re7+ Kf8) 34... Bxa2 { [%eval -0.59] } 35. Ke3 { [%eval -0.37] } (35. f4 Nd5) (35. h4 Kg7 36. hxg5 hxg5 37. Bh2 Be6 38. Bg3) 35... Kg7 { [%eval -0.44] } 36. h4 { [%eval -0.45] } 36... Kf6 { [%eval -0.35] } 37. hxg5+ { [%eval -0.41] } 37... hxg5 { [%eval -0.48] } 38. Bh2 { [%eval -0.48] } 38... Be6 { [%eval -0.42] } 39. Bg3 { [%eval -0.5] [%cal Gh2g3,Gg3h2] } 39... Bf5 { [%eval -0.49] [%csl Gf4,Rg2][%cal Gd3f5,Gf5d3,Gb6d5,Gd5f4] } 40. Bb5 { [%eval -0.49] } 40... Nd5+ { [%eval -0.5] } 41. Kd2 { [%eval -0.56] } 41... Nf4 { [%eval -0.42] } 42. Bf1 { [%eval -0.34] } (42. Bxf4 gxf4 43. Ke2 (43. g4 fxg3 { [%cal Gf4g3] }) (43. Ke1 Kg5 44. Kf2 Kh4) 43... Kg5 44. Kf2 Kh4 45. Be2 d5 46. Bf1 d4 47. cxd4 cxd4 48. Bc4 c5 49. Bb5 Be6) 42... Ng6 { [%eval -0.32] } 43. Ke3 { [%eval -0.31] } 43... Ne7 { [%eval -0.29] } 44. Bh2 { [%eval -0.36] } 44... Be6 { [%eval -0.41] } 45. Kd2 { [%eval -0.27] } 45... Nd5 { [%eval -0.42] } 46. Bg3 { [%eval -0.84] } (46. Bb5 Nb6 47. f4 g4) 46... Nb6 { [%eval -1.0] [%csl Gb6,Gc8,Gd7,Gh3][%cal Gb6d7,Gb6c8,Gf1b5,Gb5a6,Ga6c8,Gc8h3] } 47. f4 { [%eval -1.39] } (47. Bb5 Bc4 48. Bd7 { [%csl Gh3][%cal Gc4f1,Gd7h3] } 48... Bf1 49. Bh3) 47... Bc4 { [%eval -1.01] } 48. fxg5+ { [%eval -1.29] } 48... Kxg5 { [%eval -1.23] } 49. Bxc4 { [%eval -1.28] } 49... Nxc4+ { [%eval -1.37] } 50. Kd3 { [%eval -1.18] } 50... Nb6 { [%eval -1.38] } 51. Ke4 { [%eval -1.37] } 51... Kf6 { [%eval -0.94] } 52. Bh4+ { [%eval -1.0] } 52... Ke6 { [%eval -1.1] } 53. g4 { [%eval -0.97] } 53... d5+ { [%eval -0.88] } 54. Kd3 { [%eval -2.92] } (54. Kf4 Na4 55. c4 d4 56. g5 Nb2 57. g6 Nxc4 58. g7 Kf7 59. Ke4 Kxg7 60. Kd5 Nd2) 54... Nd7 { [%eval -3.09] } 55. Ke3 { [%eval -3.2] } 55... Ne5 { [%eval -3.28] } 56. Bd8 { [%eval -3.46] } 56... Kd7 { [%eval -3.77] [%csl Gg4][%cal Gd7d8,Ge5g4] } 57. Bg5 { [%eval -3.64] } 57... Nxg4+ { [%eval -3.97] } 58. Kf4 { [%eval -3.88] [%cal Gg4f2,Gf2d1,Gd1b2,Gb2c4] } 58... Nf2 { [%eval -4.01] } 59. Bh6 { [%eval -4.03] } 59... Nd3+ { [%eval -3.62] } 60. Kf5 { [%eval -5.63] } (60. Ke3 c4) 60... Kc6 { [%eval -5.5] } 61. Ke6 { [%eval -5.84] } 61... Nb2 { [%eval -4.71] [%csl Gc7][%cal Gc6d5,Gc6c5,Gc6c7] } 62. Bg7 { [%eval -4.21] } 62... Nc4 { [%eval -4.19] } 63. Bf6 { [%eval -4.64] } 63... Nb6 { [%eval -4.49] [%csl Gc3][%cal Gc6b5,Gb5c4,Gc4c3] } 64. Bg7 { [%eval -6.92] } (64. Be5 Na4) 64... Kb5 { [%eval -7.12] } 65. Be5 { [%eval -7.33] } 65... Kc4 { [%eval -7.53] } 66. Bxc7 { [%eval -7.92] } 66... Na4 { [%eval -8.19] [%csl Gc3][%cal Ga4c3] } *
+
+
+[Event "Round 2: Eric S Rosen - Benjamin Gledura"]
+[Site "https://lichess.org/study/L5W7Xhpu/pM9G75Bd"]
+[Date "2021.06.18"]
+[White "Eric S Rosen"]
+[Black "Benjamin Gledura"]
+[Result "0-1"]
+[WhiteTitle "IM"]
+[BlackTitle "GM"]
+[Annotator "https://lichess.org/@/Broadcaster2"]
+[Variant "Standard"]
+[ECO "D00"]
+[Opening "Queen's Pawn Game: Accelerated London System, Steinitz Countergambit"]
+[StudyName "Eric Rosen's National Open Vegas Chess Games"]
+[ChapterName "Eric S Rosen - Benjamin Gledura"]
+[ChapterURL "https://lichess.org/study/5bVbBMVE/Jk6uAep0"]
+[UTCDate "2021.06.18"]
+[UTCTime "07:40:59"]
+
+1. d4 { [%clk 1:30:55] } 1... d5 { [%clk 1:30:47] } 2. Bf4 { [%clk 1:31:19] } 2... c5 { [%clk 1:31:01] } 3. e3 { [%clk 1:31:43] } 3... Nc6 { [%csl Gf6][%cal Gg8f6] [%clk 1:31:19] } 4. Nf3 { [%clk 1:31:48] } 4... Bg4 { [%clk 1:31:26] } 5. Nbd2 { [%clk 1:30:51] } 5... e6 { [%clk 1:31:39] } 6. c3 { [%clk 1:31:03] } (6. h3 Bh5 7. g4 Bg6) 6... cxd4 { [%clk 1:31:37] } (6... Nf6 { [%csl Gf6] } 7. Qa4 Bd6 { [%csl Gd6][%cal Gf8d6] } (7... Bxf3 8. Nxf3 Bd6 9. Ba6) 8. Ba6) 7. exd4 { [%clk 1:31:12] } 7... Bd6 { [%clk 1:31:50] } 8. Bg3 { [%csl Ge7][%cal Gg8e7] [%clk 1:30:22] } 8... Nge7 { [%clk 1:29:58] } 9. Be2 { [%clk 1:28:34] } 9... O-O { [%csl Gf5][%cal Ge1g1,Ge7f5] [%clk 1:26:44] } 10. Nh4 { [%clk 1:25:41] } 10... Bxe2 { [%clk 1:25:17] } 11. Qxe2 { [%clk 1:26:05] } 11... b5 { [%clk 1:20:21] } (11... a6 { [%csl Gb5][%cal Gb7b5] } 12. a4 Rb8) 12. a3 { [%clk 1:19:28] } (12. Qxb5 Rb8 13. Qa4 Rxb2 { [%csl Gb3] } 14. Nb3 Rc2 15. Na5 Rxc3 (15... Bxg3 { [%csl Gh4][%cal Ga4c2] } 16. hxg3 Rxc3)) (12. b4 a5) 12... a5 { [%clk 1:18:32] } 13. O-O { [%clk 1:15:50] } 13... b4 { [%clk 1:07:16] } 14. axb4 { [%clk 1:15:33] } 14... Bxg3 { [%clk 1:07:38] } 15. hxg3 { [%clk 1:15:48] } 15... axb4 { [%clk 1:08:01] } 16. Nb3 { [%clk 1:14:04] } 16... Qb6 { [%clk 0:57:18] } 17. Nc5 { [%clk 1:13:16] } 17... Ra7 { [%clk 0:55:59] } 18. Nf3 { [%clk 1:10:56] } 18... Rfa8 { [%clk 0:49:45] } 19. Rxa7 { [%clk 1:09:33] } 19... Qxa7 { [%csl Gc6,Ga7,Ga8] [%clk 0:49:42] } 20. Ng5 { [%clk 1:03:44] } 20... Nd8 { [%clk 0:46:52] } (20... h6 21. Nxf7 Kxf7 22. Qxe6+ Kf8 { [%csl Gf8] } 23. Nd7+ Ke8 24. Re1 Qxd7 25. Qg8#) 21. Qb5 { [%clk 0:58:11] } 21... Nec6 { [%clk 0:44:41] } (21... h6 22. Qe8# { [%csl Ge8] }) 22. Qd3 { [%csl Gh7,Gb4][%cal Gd3h7] [%clk 0:56:54] } (22. cxb4) 22... g6 { [%clk 0:45:03] } 23. g4 { [%clk 0:45:13] } 23... Qe7 { [%csl Gg5,Gh3] [%clk 0:43:37] } 24. Qe3 { [%clk 0:42:27] } 24... Na5? { Mistake. bxc3 was best. } { [%clk 0:33:59] } (24... bxc3) 25. Nf3?! { Inaccuracy. cxb4 was best. } { [%csl Gh6,Gh8][%cal Ge3h6,Gf3g5,Gh6h7,Gh7h8] [%clk 0:37:03] } (25. cxb4 Nc4 { [%csl Gc6][%cal Ga8b8,Gd8c6] }) 25... Nc4 { [%clk 0:30:22] } 26. Qh6 { [%csl Gb2] [%clk 0:35:46] } 26... bxc3 { [%clk 0:16:23] } 27. bxc3 { [%clk 0:35:46] } 27... f6 { [%clk 0:15:53] } 28. g5 { [%clk 0:26:53] } 28... f5 { [%clk 0:16:16] } 29. Re1 { [%clk 0:24:49] } 29... Nd6?! { Inaccuracy. e5 was best. } { [%csl Ge4][%cal Gd6e4,Gd6f7,Gd8f7] [%clk 0:13:28] } (29... e5 30. Nxe5 Nf7 31. Qh4 Qxg5 32. Qxg5 Nxg5 33. Nxc4 dxc4 34. Kf1 Ra3 35. d5 Ne4 36. Nxe4) 30. Ne5?! { Inaccuracy. Qh4 was best. } { [%clk 0:20:32] } (30. Qh4 Ne4) 30... N6f7 { [%clk 0:13:05] } 31. Nxf7 { [%clk 0:16:49] } 31... Nxf7 { [%clk 0:13:26] } 32. Qh2 { [%clk 0:15:22] } 32... e5 { [%clk 0:13:15] } (32... Nxg5) 33. Qg3 { [%clk 0:08:20] } 33... e4 { [%clk 0:10:45] } 34. Rb1 { [%clk 0:07:19] } (34. Nd3 { [%csl Gd3] } 34... exd3 35. Rxe7 d2) 34... Qxg5 { [%clk 0:11:05] } 35. Rb8+ { [%clk 0:07:16] } 35... Rxb8 { [%clk 0:11:27] } 36. Qxb8+ { [%csl Gg7,Ge6][%cal Gg8g7,Gc5e6,Ge6g7,Ge6g5] [%clk 0:07:40] } 36... Qd8 { [%clk 0:11:52] } 37. Qb7 { [%clk 0:07:28] } 37... Qd6 { [%clk 0:11:51] } 38. Qc8+?! { Inaccuracy. Nd7 was best. } { [%clk 0:03:27] } (38. Nd7 Kg7 39. Nb6 Qf4 40. Nxd5 Qc1+ 41. Kh2 Qd2 42. Qd7 Qxf2 43. Qe7 Qd2 44. Nc7 Qh6+) 38... Kg7 { [%clk 0:10:54] } 39. Ne6+ { [%clk 0:03:43] } (39. Qe6 Qxe6 40. Nxe6+ Kf6 41. Nc7) 39... Kf6 { [%clk 0:09:50] } 40. Nc7 { [%cal Ge6c7,Rc7d5] [%clk 0:03:12] } 40... Kg5 { [%clk 0:07:22] } 41. Ne6+?! { Inaccuracy. Qb7 was best. } { [%clk 0:27:01] } (41. Qb7 { [%csl Rd5][%cal Gb7d5,Gc7d5] } 41... Nd8) 41... Kg4 { [%clk 0:35:45] } 42. c4?? { Blunder. Qe8 was best. } { [%clk 0:24:56] } (42. Qe8 Ng5) 42... Qb4 { [%csl Gc7][%cal Gc8c7] [%clk 0:33:58] } 43. Qc7? { Mistake. Qg8 was best. } { [%csl Gf7] [%clk 0:23:21] } (43. Qg8 Qe1+) 43... Qe1+ { [%clk 0:34:02] } 44. Kh2 { [%clk 0:23:49] } 44... Qxf2 { [%csl Gf2][%cal Ge1f2,Gf2h4,Gh4e1] [%clk 0:34:24] } 45. Qxf7 { [%clk 0:22:11] } 45... Qh4+ { [%clk 0:34:36] } 46. Kg1 { [%clk 0:22:35] } 46... e3 { [%clk 0:34:46] } 47. Qc7?! { Checkmate is now unavoidable. Qe8 was best. } { [%clk 0:08:12] } (47. Qe8 Qf2+) 47... Qf2+ { [%clk 0:34:58] } (47... e2 48. Qf4+ Kh5 49. Ng7#) 48. Kh2 { [%clk 0:08:40] } 48... e2 { [%clk 0:34:33] } 49. Qxh7 { [%clk 0:08:33] } 49... Qg3+ { 0-1 White resigns. } { [%clk 0:34:55] } 0-1
+
+
+[Event "Eric Rosen's National Open Vegas Chess Games: Twitch.tv/DerekWoo vs Eric Rosen"]
+[Date "2021.06.18"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D37"]
+[Opening "Queen's Gambit Declined: Three Knights Variation"]
+[StudyName "Eric Rosen's National Open Vegas Chess Games"]
+[ChapterName "Twitch.tv/DerekWoo vs Eric Rosen"]
+[ChapterURL "https://lichess.org/study/5bVbBMVE/oZRifZ2W"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.06.18"]
+[UTCTime "08:20:32"]
+
+1. d4 d5 2. c4 e6 3. Nf3 Nf6 4. Nc3 a6 5. c5 (5. e3) (5. cxd5 exd5 6. Bg5 (6. Bf4 Bd6 7. Be5)) 5... b6 6. cxb6 (6. b4 a5) 6... cxb6 (6... c5) 7. Bf4 Bd6 8. Bxd6 Qxd6 9. e3 Nbd7 10. Bd3 Bb7 (10... O-O 11. O-O) 11. O-O O-O 12. Rc1 b5 13. Bb1 Nb6 { [%csl Gc4,Rb2][%cal Gb6c4] } (13... b4 14. Na4) 14. Ne5 Nc4 15. Nd3 { [%cal Gd3c5] } (15. Nxc4 dxc4 16. e4 b4 17. e5 Qc6 { [%csl Gg2,Gb2][%cal Gb4c3,Gc3b2] }) 15... Nd7 16. b3 Na3 17. Nf4 { [%csl Gd3,Ra3][%cal Gb1d3] } 17... Nxb1 18. Nxb1 a5 19. Qd2 b4 20. Rc2 Rfc8 21. Rfc1 Rxc2 22. Rxc2 Rc8 23. Rxc8+ Bxc8 24. Qc2 Ba6 25. Nd2 Nb8 { [%csl Gc6][%cal Gd6c6] } 26. Nf3 Qc6 { [%cal Gc6c2] } 27. Qxc6 Nxc6 { [%csl Ge1] } 28. Ne1 Kf8 29. Nfd3 Ke7 30. Nc5 Bb5 31. f4 f6 32. Kf2 e5 33. fxe5 fxe5 34. Nc2 Kd6 (34... e4 35. a4 bxa3 36. Nxa3 { [%csl Gb5] } 36... Bd3 (36... Na7 37. Nxb5 Nxb5 38. Nb7 { [%csl Ga5] }) 37. Nxd3 exd3 { [%cal Ge1d2,Gf2e1] }) 35. Nb7+ Kc7 36. Nc5 Kd6 (36... e4 { [%cal Ge5e4] } 37. Ne6+ { [%csl Gc7] } 37... Kd6 38. Nxg7 Bd3 39. Ne1 Bb1 { [%cal Ga2b3] }) (36... g6 37. a4 bxa3 38. Nxa3 exd4 39. Nxb5+ Kb6 40. Nxd4 Kxc5) 37. Nb7+ Kc7 38. Nc5 Kd6 *
+
+
+[Event "Eric Rosen's National Open Vegas Chess Games: Rosen - Rochelle Wu"]
+[Date "2021.06.18"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B23"]
+[Opening "Sicilian Defense: Closed"]
+[StudyName "Eric Rosen's National Open Vegas Chess Games"]
+[ChapterName "Rosen - Rochelle Wu"]
+[ChapterURL "https://lichess.org/study/5bVbBMVE/QLu1UOGz"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.06.18"]
+[UTCTime "22:40:39"]
+
+1. e4 c5 2. Nc3 d6 3. d4 cxd4 4. Qxd4 a6 5. b3 Nc6 6. Qd2 g6 (6... e5 7. Bb2 Be6) 7. Bb2 Bg7 8. O-O-O Bd7 9. Nd5 Bxb2+ 10. Kxb2 Rc8 11. h4 (11. f4 Qa5) 11... h5 12. Qc3 (12. Nh3) 12... e5 13. Qe3 Nf6 14. Bc4 b5 15. Nxf6+ Qxf6 16. Bd5 Nb4 17. c3 Nxd5 18. Rxd5 O-O 19. Nf3 Bg4 20. Qg5 Qxg5 21. hxg5 f5 (21... Bxf3 22. gxf3 Rc6 (22... Rfd8 23. Rhd1 Rc6 24. Rxe5 dxe5 25. Rxd8+ Kg7 26. Kc2 h4 27. Rd1 (27. Rd7 Rb6) 27... f6) 23. Rhd1 Rfc8 24. R1d3 Kg7 25. Rxd6 h4 (25... Rxd6 26. Rxd6 h4 27. Rd1 f6 (27... Rh8 28. a4 h3 (28... bxa4 29. b4) 29. Ka3 h2 (29... f6 30. Kb4 h2 31. Rh1 bxa4 32. Kxa4)))) 22. Nd2 fxe4 23. Nxe4 Rc6 24. f3 Be6 25. Rxd6 Rxd6 26. Nxd6 Rd8 27. Rd1 Kf8 28. Rd2 Ke7 29. Ne4 Rc8 30. Rd6 Ra8 31. Rb6 Kf7 32. Nc5 Bc8 33. Nd3 Bf5 34. Nxe5+ Kg7 35. Rb7+ Kf8 36. g4 Re8 37. gxf5 Rxe5 38. fxg6 Rxg5 39. Rh7 Kg8 (39... Rf5) 40. Kc2 Rf5 41. a3 Rxf3 42. Rxh5 Kg7 43. Re5 Rf6 44. Kd3 (44. Rg5 Rf2+ 45. Kd3 Rb2) 44... Kxg6 45. c4 Rd6+ 46. Rd5 bxc4+ 47. bxc4 Rb6 48. Kd4 Kf7 49. Re5 Kf6 50. Re3 Rd6+ 51. Kc5 Rd8 52. Kb6 Rd6+ 53. Kc7 Rd4 54. c5 Rd5 55. c6 Rd2 56. Kb7 a5 (56... Rb2+ 57. Kc8) 57. c7 Rb2+ 58. Kc8 Rc2 59. Re4 Rc3 60. Kb7 Rb3+ 61. Kc6 Rc3+ 62. Kb6 Kf5 63. Re8 *
+
+
+[Event "Eric Rosen's National Open Vegas Chess Games: Vidyarthi - Rosen"]
+[Date "2021.06.19"]
+[Result "*"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[Variant "Standard"]
+[ECO "D01"]
+[Opening "Rapport-Jobava System"]
+[StudyName "Eric Rosen's National Open Vegas Chess Games"]
+[ChapterName "Vidyarthi - Rosen"]
+[ChapterURL "https://lichess.org/study/5bVbBMVE/leppsIrj"]
+[UTCDate "2021.06.19"]
+[UTCTime "08:21:06"]
+
+1. d4 d5 2. Nc3 Nf6 3. Bf4 c5 4. e4 { [%csl Re4,Rd4,Gd5,Gc5][%cal Ge2e4] } 4... Nxe4 5. Nxe4 dxe4 6. dxc5 Qa5+ 7. c3 Qxc5 8. Qa4+ Nc6 9. Qxe4 Bf5 10. Qc4 e6 11. Nf3 Rd8 12. Qxc5 Bxc5 13. Bb5 Be4 14. Ne5 O-O 15. Bxc6 bxc6 16. f3 Bd5 17. O-O-O (17. c4 Bxc4 18. Nxc4 Rd4 19. Rc1 Rxf4) 17... f6 18. Nd3 Bb6 { [%csl Gf4][%cal Ge6e5] } 19. Nb4 e5 20. Bd2 Kf7 21. b3 a5 22. Nc2 a4 23. c4 Be6 24. f4 Bc7 { [%cal Gf4e5] } 25. g3 Rb8 { [%csl Gb3] } 26. Nb4 Bd6 27. Nxc6 Ba3+ 28. Kc2 Rb6 29. Na7 { [%csl Gb5][%cal Ga7b5] } 29... axb3+ 30. axb3 Bf5+ 31. Kc3 Rfb8 32. Nb5 (32. Rb1 Bb4+) 32... Rxb5 33. cxb5 Rc8# *
+
+
+[Event "Round 6: Eric S Rosen - Akshat Chandra"]
+[Site "https://lichess.org/study/UZIKzLa6/CPWUqNMO"]
+[Date "2021.06.20"]
+[White "Eric S Rosen"]
+[Black "Akshat Chandra"]
+[Result "0-1"]
+[WhiteTitle "IM"]
+[BlackTitle "GM"]
+[Annotator "https://lichess.org/@/Broadcaster2"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "Eric Rosen's National Open Vegas Chess Games"]
+[ChapterName "Eric S Rosen - Akshat Chandra"]
+[ChapterURL "https://lichess.org/study/5bVbBMVE/QZhB8hLc"]
+[UTCDate "2021.06.20"]
+[UTCTime "21:26:30"]
+
+1. d4 { [%clk 1:30:13] } 1... Nf6 { [%clk 1:27:26] } 2. Bf4 { [%clk 1:30:18] } 2... c5 { [%clk 1:27:47] } 3. e3 { [%clk 1:30:30] } 3... Qb6 { [%clk 1:22:06] } 4. Na3 { [%clk 1:30:11] } 4... cxd4 { [%clk 1:19:55] } 5. exd4 { [%clk 1:29:47] } 5... Nd5 { [%clk 1:19:52] } 6. Bc1 { [%clk 1:29:53] } 6... e6 { [%clk 1:19:42] } 7. Nc4 { [%clk 1:29:14] } 7... Qc7 { [%clk 1:20:01] } 8. Nf3 { [%clk 1:26:53] } 8... b6 { [%clk 1:17:07] } 9. Ne3 { [%clk 1:22:23] } 9... Bb7 { [%clk 1:14:48] } 10. Nxd5 { [%clk 1:21:05] } 10... Bxd5 { [%clk 1:15:14] } 11. Bd3 { [%clk 1:20:31] } 11... Bb4+ { [%clk 1:08:00] } 12. Kf1 { [%clk 1:15:29] } (12. c3 Bxc3+ 13. bxc3 Qxc3+ { [%csl Gc3][%cal Gc3a1] } 14. Bd2 { [%csl Gd3][%cal Gc3d3] }) (12. Bd2 Bxd2+ 13. Qxd2 Bxf3) 12... O-O { [%clk 0:51:07] } 13. h4 { [%cal Gh1h3,Gh3g3] [%clk 1:10:47] } 13... Qb7 { [%clk 0:32:36] } 14. Rh3 { [%clk 1:07:38] } 14... f5 { [%clk 0:30:16] } 15. Bf4 { [%clk 1:05:17] } 15... Be7 { [%clk 0:28:36] } 16. Qe2 { [%clk 0:57:30] } 16... Be4 { [%clk 0:22:09] } 17. Re1 { [%clk 0:53:06] } 17... Bxd3 { [%clk 0:21:40] } 18. Qxd3 { [%clk 0:53:28] } 18... Bf6 { [%clk 0:19:12] } 19. c3?! { Inaccuracy. b3 was best. } { [%clk 0:48:36] } (19. b3 Qa6 20. c4 Qxa2 21. Bd6 Re8 22. h5 Nc6 23. h6 Qb2 24. Rb1 Qa2 25. Rd1 Be7) 19... b5? { Mistake. Qa6 was best. } { [%clk 0:19:39] } (19... Qa6) 20. Bd6 { [%clk 0:45:52] } 20... Re8 { [%clk 0:16:04] } 21. Rg3 { [%csl Gg3,Gf1] [%clk 0:37:21] } 21... Qd5 { [%clk 0:10:54] } 22. Be5 { [%clk 0:33:09] } 22... Rf8 { [%clk 0:07:00] } 23. Bxf6 { [%clk 0:27:35] } 23... Rxf6 { [%clk 0:07:29] } 24. Re5 { [%clk 0:27:39] } 24... Qxa2 { [%clk 0:06:41] } 25. Rxb5 { [%clk 0:27:29] } (25. Rc5) 25... Nc6 { [%clk 0:06:02] } 26. Kg1 { [%clk 0:22:23] } 26... a6 { [%clk 0:02:55] } 27. Rb7 { [%clk 0:19:15] } 27... Rf7?! { Inaccuracy. Ra7 was best. } { [%clk 0:00:55] } (27... Ra7 28. Rxa7) 28. c4 { [%clk 0:17:01] } 28... Na5?! { Inaccuracy. Qa5 was best. } { [%clk 0:00:37] } (28... Qa5) 29. Rc7 { [%clk 0:16:04] } 29... Qxb2 { [%clk 0:00:37] } 30. Ne5 { [%clk 0:14:31] } 30... Qc1+?? { Blunder. Qb6 was best. } { [%clk 0:00:37] } (30... Qb6 31. Rc5 Nc6 32. Nxf7 Kxf7 33. Qe3 Re8 34. Qg5 Rg8 35. Qf4 Qb8 36. Qe3 Qb1+ 37. Kh2) 31. Kh2?? { Blunder. Qf1 was best. } { [%clk 0:14:32] } (31. Qf1) 31... Qf4 { [%clk 0:00:50] } 32. Qf3 { [%clk 0:06:36] } (32. Qe3) 32... Qxh4+ { [%clk 0:00:35] } 33. Rh3 { [%clk 0:05:26] } 33... Qd8?? { Blunder. Qxd4 was best. } { [%clk 0:01:04] } (33... Qxd4 34. Nxf7 Kxf7 35. c5 Qe5+ 36. Qg3 Qxg3+ 37. Rxg3 Rd8 38. Rd3 Ke7 39. Rd6 Nc4 40. Rxa6) 34. Rc5?? { Blunder. Rxh7 was best. } { [%clk 0:03:08] } (34. Rxh7 Kxh7 35. Qh5+) 34... Rf8 { [%clk 0:01:33] } 35. Qh5 { [%clk 0:03:00] } 35... h6 { [%clk 0:01:45] } 36. Rg3 { [%clk 0:01:29] } 36... Rf6 { [%clk 0:02:09] } 37. Rxa5 { [%clk 0:00:42] } 37... Qxa5 { [%clk 0:02:24] } 38. Ng4?? { Blunder. Nxd7 was best. } { [%clk 0:00:56] } (38. Nxd7 Qd8 39. Nxf6+ Qxf6 40. Kg1 a5 41. Qd1 Rd8 42. Rd3 e5 43. dxe5 Rxd3 44. Qxd3 Qxe5) 38... Qd8 { [%clk 0:01:28] } 39. Nxh6+? { Mistake. Nxf6+ was best. } { [%clk 0:00:32] } (39. Nxf6+) 39... Kf8 { [%clk 0:00:36] } 40. Nxf5 { [%clk 0:00:35] } 40... Rxf5 { [%clk 0:00:49] } 41. Qh7 { [%clk 0:25:36] } 41... Rf7 { [%clk 0:13:15] } 42. c5 { [%clk 0:22:54] } 42... g5 { [%clk 0:07:00] } 43. Qh6+ { [%clk 0:22:34] } 43... Rg7 { [%clk 0:07:08] } 44. f4 { [%clk 0:17:30] } 44... Kf7 { [%clk 0:03:30] } 45. Qh5+ { [%clk 0:15:04] } 45... Ke7 { [%clk 0:03:51] } 46. Kg1 { [%clk 0:06:04] } 46... Qh8 { [%clk 0:03:11] } 47. Qg4 { [%clk 0:05:14] } 47... Rf8 { [%clk 0:03:29] } 48. Rh3 { [%clk 0:05:19] } 48... gxf4 { [%clk 0:02:35] } 49. Qf3 { [%clk 0:05:03] } 49... Rh7 { [%clk 0:02:35] } 50. c6 { [%clk 0:04:11] } 50... Rxh3 { 0-1 White resigns. } { [%clk 0:02:47] } 0-1
+
+
+[Event "Eric Rosen's National Open Vegas Chess Games: ROUND 7 -- HALF POINT BYE"]
+[Date "2021.06.20"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Eric Rosen's National Open Vegas Chess Games"]
+[ChapterName "ROUND 7 -- HALF POINT BYE"]
+[ChapterURL "https://lichess.org/study/5bVbBMVE/mlmCQTCa"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.06.20"]
+[UTCTime "21:29:15"]
+
+{ I was tired, and a bunch of people wanted to interview me }
+ *
+
+
+[Event "Eric Rosen's National Open Vegas Chess Games: Rosen - Teddie Wen"]
+[Date "2021.06.20"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "E67"]
+[Opening "King's Indian Defense: Fianchetto Variation, Classical Fianchetto"]
+[StudyName "Eric Rosen's National Open Vegas Chess Games"]
+[ChapterName "Rosen - Teddie Wen"]
+[ChapterURL "https://lichess.org/study/5bVbBMVE/0jyXogt7"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.06.20"]
+[UTCTime "21:26:39"]
+
+1. c4 g6 2. g3 { [%csl Gg3][%cal Gg2g3] } 2... Bg7 3. Bg2 Nf6 4. Nf3 O-O 5. O-O d6 6. Nc3 Nbd7 7. d4 e5 8. Qc2 Re8 9. Rd1 c6 10. b3 Qa5 11. d5 cxd5 12. Nxd5 e4 13. Ng5 h6 14. Nxe4 Nxe4 15. Bxe4 f5 16. Bd2 Qd8 17. Bd3 Bxa1 18. Rxa1 Nf6 19. Bxh6 (19. Ba5) 19... Nxd5 20. cxd5 Qf6 21. Qc1 Bd7 22. Bg5 Qg7 23. Rb1 Rac8 24. Qf4 Qe5 25. Qh4 Rf8 26. Be3 Qf6 27. Qxf6 Rxf6 28. Bxa7 b5 29. Bd4 Rf7 30. a3 Be8 31. f3 Rfc7 32. Bb2 Bf7 33. e4 fxe4 34. fxe4 Be8 35. Kf2 Kh7 36. Ke3 g5 37. Rf1 Bg6 38. Rf6 Rd8 39. h4 gxh4 40. gxh4 Rf7 41. Rxf7+ Bxf7 42. Bxb5 Rg8 43. Bd3 Rg3+ 44. Kd4 Kg8 45. a4 Kf8 46. a5 Ke7 47. a6 Rg4 48. Bc1 Kd7 49. a7 Rg8 50. Bb5+ Kc7 51. Bc6 *
+
+
+[Event "Round 9: Nicolas Checa - Eric S Rosen"]
+[Site "https://lichess.org/study/6FP2th3w/RFhHVnmS"]
+[Date "2021.06.21"]
+[White "Nicolas Checa"]
+[Black "Eric S Rosen"]
+[Result "1/2-1/2"]
+[WhiteTitle "GM"]
+[BlackTitle "IM"]
+[Annotator "https://lichess.org/@/Broadcaster2"]
+[Variant "Standard"]
+[ECO "D37"]
+[Opening "Queen's Gambit Declined: Three Knights Variation"]
+[StudyName "Eric Rosen's National Open Vegas Chess Games"]
+[ChapterName "Nicolas Checa - Eric S Rosen"]
+[ChapterURL "https://lichess.org/study/5bVbBMVE/4FAEwpXr"]
+[UTCDate "2021.06.21"]
+[UTCTime "22:59:37"]
+
+1. d4 { [%clk 1:28:32] } 1... d5 { [%clk 1:30:46] } 2. c4 { [%clk 1:28:48] } 2... e6 { [%clk 1:31:08] } 3. Nc3 { [%clk 1:29:12] } 3... Nf6 { [%clk 1:31:08] } 4. Nf3 { [%clk 1:29:33] } 4... a6 { [%clk 1:31:16] } 5. cxd5 { [%clk 1:26:54] } 5... exd5 { [%clk 1:31:23] } 6. Bg5 { [%clk 1:27:07] } 6... Be7 { [%clk 1:31:40] } 7. e3 { [%clk 1:25:23] } 7... O-O { [%clk 1:31:57] } 8. Bd3 { [%clk 1:23:51] } 8... Nbd7 { [%clk 1:31:24] } 9. O-O { [%clk 1:21:29] } 9... Re8 { [%clk 1:31:16] } 10. h3 { [%clk 1:18:59] } 10... Nf8 { [%clk 1:30:15] } 11. Qc2 { [%clk 1:14:28] } 11... c6 { [%clk 1:27:54] } 12. Bf4 { [%clk 1:09:14] } 12... Ng6 { [%clk 1:26:28] } 13. Bh2 { [%clk 1:09:35] } 13... Bd6 { [%clk 1:26:01] } 14. Rfe1 { [%clk 1:09:59] } 14... Bxh2+ { [%clk 1:23:29] } 15. Nxh2 { [%clk 1:10:05] } 15... Nh4 { [%clk 1:13:46] } 16. f3 { [%clk 1:09:13] } 16... Qd6 { [%clk 1:00:10] } 17. Qf2 { [%clk 1:08:31] } 17... Ng6 { [%clk 0:59:52] } 18. e4 { [%clk 1:01:59] } 18... dxe4 { [%clk 0:55:58] } 19. fxe4 { [%clk 1:02:16] } 19... Qf4 { [%clk 0:55:54] } 20. Nf3 { [%clk 0:59:43] } 20... Be6 { [%clk 0:53:45] } 21. e5 { [%clk 0:54:53] } 21... Nd5 { [%clk 0:53:14] } 22. Bxg6?! { Inaccuracy. Ne4 was best. } { [%clk 0:51:38] } (22. Ne4) 22... fxg6 { [%clk 0:47:27] } 23. Ne4 { [%clk 0:51:43] } 23... Re7 { [%clk 0:45:21] } 24. Neg5 { [%clk 0:46:33] } 24... h6 { [%clk 0:41:58] } 25. Nxe6 { [%clk 0:45:22] } 25... Rxe6 { [%clk 0:42:21] } 26. Rf1 { [%clk 0:38:38] } 26... Rd8 { [%clk 0:34:21] } 27. Rae1 { [%clk 0:36:56] } 27... g5 { [%clk 0:33:07] } 28. Qc2 { [%clk 0:35:34] } 28... Qg3 { [%clk 0:26:52] } 29. Qf2 { [%clk 0:34:39] } 29... Qxf2+ { [%clk 0:24:36] } 30. Rxf2 { [%clk 0:34:50] } 30... Nf4 { [%clk 0:24:32] } 31. Rc2 { [%clk 0:32:44] } 31... Re7 { [%clk 0:24:13] } 32. Re4 { 1/2-1/2 The game is a draw. } { [%clk 0:30:02] } 1/2-1/2
+
+
+[Event "Round 2: Eric S Rosen - Benjamin Gledur"]
+[Site "lichess.org"]
+[Date "2021.06.18"]
+[White "Eric S Rosen"]
+[Black "Benjamin Gledura"]
+[Result "*"]
+[WhiteElo "2353"]
+[BlackElo "2629"]
+[Variant "Standard"]
+[ECO "D00"]
+[Opening "Queen's Pawn Game: Accelerated London System, Steinitz Countergambit"]
+[StudyName "Eric Rosen's National Open Vegas Chess Games"]
+[ChapterName "Eric S Rosen - Benjamin Gledura"]
+[ChapterURL "https://lichess.org/study/5bVbBMVE/23C5ShQf"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 d5 2. Bf4 c5 3. e3 Nc6 4. Nf3 Bg4 5. Nbd2 e6 (5... cxd4 6. exd4 Nxd4 7. Nxd4 Bxd1 8. Bb5+ Qd7 9. Bxd7+ Kxd7 10. Rxd1) 6. c3 cxd4 (6... Nf6 7. Qa4 Bd6 8. Ba6 { [%csl Ga6][%cal Gf1a6] }) 7. exd4 Bd6 8. Bg3 { [%cal Gg8f6] } 8... Nge7 9. Be2 O-O 10. Nh4 { [%cal Gg4e2,Ge2g4] } (10. O-O Nf5) 10... Bxe2 11. Qxe2 b5 (11... a6 { [%csl Gb5,Ga6,Gb4,Rc3,Rb2,Rd4][%cal Gb7b5,Gb5b4] } 12. a4) 12. a3 (12. Qxb5 Rb8 13. Qa4 Rxb2 14. Nb3) 12... a5 13. O-O b4 { [%cal Gc3b4] } 14. axb4 (14. cxb4 axb4 15. a4) 14... Bxg3 (14... axb4 { [%csl Rd8] } 15. Rxa8 Qxa8 16. Bxd6) 15. hxg3 axb4 16. Nb3 Qb6 (16... bxc3 17. bxc3) 17. Nc5 { [%cal Gc5d7] } 17... Ra7 { [%csl Gh4] } 18. Nf3 Rfa8 19. Rxa7 Qxa7 20. Ng5 { [%csl Rh5,Ge6][%cal Ge2h5,Gg5e6] } 20... Nd8 (20... Ng6 { [%csl Gg6] } 21. Ngxe6 fxe6 (21... Re8 { [%cal Ge8e2] } 22. Qb5) 22. Qxe6+ { [%cal Ge6c6,Ge6g8] }) 21. Qb5 Nec6 (21... Ndc6 22. Qe2) 22. Qd3 { [%csl Rh7][%cal Gd3h7] } (22. cxb4) 22... g6 23. g4 { [%csl Gg4][%cal Gg3g4] } 23... Qe7 24. Qe3 Na5 25. Nf3 { [%csl Gh6,Gg5,Rh7][%cal Ge3h6,Gf3g5] } (25. cxb4 Nc4 26. Qf4 Nxb2 27. Rb1) 25... Nc4 26. Qh6 bxc3 27. bxc3 f6 28. g5 f5 29. Re1 Nd6 30. Ne5 N6f7 (30... N8f7 31. Nxg6 { [%cal Ge5g6] }) 31. Nxf7 (31. Nxg6 hxg6 (31... Qxc5) 32. Qxg6+ Kf8) 31... Nxf7 32. Qh2 e5 (32... Nxg5) 33. Qg3 e4 34. Rb1 (34. Nd3 exd3 35. Rxe7 d2 36. Qf3 Ra1+) 34... Qxg5 35. Rb8+ Rxb8 36. Qxb8+ { [%csl Gg7,Ge6][%cal Gg8g7,Gc5e6] } 36... Qd8 37. Qb7 Qd6 38. Qc8+ Kg7 39. Ne6+ (39. Qe6 Qxe6 40. Nxe6+ Kf6 { [%csl Gd5][%cal Ge6c7,Ge6f4] } 41. Nf4) 39... Kf6 40. Nc7 Kg5 41. Ne6+ { [%csl Gc4][%cal Gc3c4] } (41. Qb7 Nd8 { [%cal Gb7d5] } 42. Qxd5 (42. Nxd5 Nxb7) (42. Qa7) 42... Qxc7) 41... Kg4 { [%csl Gc4,Gc7][%cal Gc3c4,Gd6b4,Gc8c7] } (41... Kh6) 42. c4 (42. Qe8) 42... Qb4 (42... dxc4 43. Qxc4 Qb6 44. Qe2+ { [%csl Gg4] } 44... Kh4 45. g3+ Kh3 46. Nf4#) 43. Qc7 Qe1+ 44. Kh2 Qxf2 45. Qxf7 Qh4+ 46. Kg1 e3 47. Qc7 { [%csl Gf4][%cal Gc7f4] } 47... Qf2+ { [%csl Gf4,Gg3] } 48. Kh2 e2 49. Qxh7 Qg3+ (49... e1=Q 50. Qh3# { [%csl Gh3,Gg5,Gf4] }) 50. Kg1 e1=R# *
+
+
+[Event "Eric Rosen's National Open Vegas Chess"]
+[Site "lichess.org"]
+[Date "2021.06.18"]
+[White "Wu, Derek (Twitch.tv/DerekWooo)"]
+[Black "Rosen, Eric"]
+[Result "*"]
+[WhiteElo "2128"]
+[BlackElo "2353"]
+[Variant "Standard"]
+[ECO "D37"]
+[Opening "Queen's Gambit Declined: Three Knights Variation"]
+[StudyName "Eric Rosen's National Open Vegas Chess Games"]
+[ChapterName "Wu, Derek - Rosen, Eric"]
+[ChapterURL "https://lichess.org/study/5bVbBMVE/mst0b56D"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 d5 (1... e5 2. dxe5) 2. c4 e6 3. Nf3 (3. Nc3 a6) 3... Nf6 4. Nc3 a6 (4... Be7 5. Bg5 O-O 6. e3 a6) 5. c5 b6 6. cxb6 (6. b4 a5 7. a3 (7. cxb6 Bxb4) 7... axb4) 6... cxb6 (6... c5 7. dxc5 Bxc5) 7. Bf4 Bd6 8. Bxd6 Qxd6 9. e3 Nbd7 10. Bd3 Bb7 11. O-O O-O 12. Rc1 b5 13. Bb1 Nb6 14. Ne5 Nc4 15. Nd3 (15. Nxc4 dxc4) 15... Nd7 { [%csl Gc5][%cal Gd7c5] } 16. b3 { [%csl Gc4] } 16... Na3 { [%cal Ga3b1] } 17. Nf4 Nxb1 18. Nxb1 a5 19. Qd2 b4 20. Rc2 Rfc8 21. Rfc1 Rxc2 22. Rxc2 Rc8 23. Rxc8+ Bxc8 24. Qc2 Ba6 25. Nd2 Nb8 26. Nf3 Qc6 27. Qxc6 Nxc6 28. Ne1 Kf8 29. Nfd3 Ke7 30. Nc5 { [%csl Gb5,Gc8][%cal Ga6b5,Ga6c8] } 30... Bb5 { [%csl Gf6,Ge5,Rd4,Rc5,Re3,Gb7,Rd6][%cal Ge7d6,Gf7f6,Ge6e5,Gc5b7] } (30... Bc8 { [%csl Rc5,Gd6,Ge5][%cal Ge7d6,Gf7f6,Ge6e5] }) 31. f4 f6 32. Kf2 e5 33. fxe5 fxe5 34. Nc2 Kd6 35. Nb7+ (35. h3 exd4 36. exd4 Nxd4 37. Nxd4 (37. Nb7+ Ke5 38. Nxd4 Kxd4 39. Nxa5 Kc3 { [%csl Gb2,Gd1,Rb3,Ra2][%cal Gc3b2,Gd5d1] }) 37... Kxc5) 35... Kc7 36. Nc5 Kd6 37. Nb7+ Kc7 38. Nc5 Kd6 *
+
+
+[Event "Eric Rosen's National Open Vegas Chess"]
+[Site "lichess.org"]
+[Date "2021.06.18"]
+[White "Rosen, Eric"]
+[Black "Wu, Rochelle"]
+[Result "*"]
+[WhiteElo "2353"]
+[BlackElo "2138"]
+[Variant "Standard"]
+[ECO "B23"]
+[Opening "Sicilian Defense: Closed"]
+[StudyName "Eric Rosen's National Open Vegas Chess Games"]
+[ChapterName "Rosen, Eric - Wu, Rochelle"]
+[ChapterURL "https://lichess.org/study/5bVbBMVE/7Wzd18sq"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 c5 2. Nc3 d6 3. d4 cxd4 4. Qxd4 a6 (4... Nc6 { [%csl Gd2][%cal Gd4d2] } 5. Qd2) 5. b3 Nc6 6. Qd2 g6 7. Bb2 Bg7 8. O-O-O { See photo } 8... Bd7 9. Nd5 Bxb2+ (9... Nf6 10. Nxf6+ { [%csl Gf6][%cal Ge7f6] } 10... Bxf6 11. Bxf6 exf6 12. Qxd6) 10. Kxb2 Rc8 11. h4 h5 12. Qc3 e5 (12... Rh7 { [%cal Gg1f3,Gf3g5] }) (12... Ne5 13. Qd4) 13. Qe3 { [%csl Rb6][%cal Gd5b6] } 13... Nf6 14. Bc4 (14. Nb6 { [%csl Gc8,Gd6][%cal Gb6c8,Gd1d6] } 14... Ng4 { [%csl Rb6][%cal Gg4e3,Re3b6] }) 14... b5 (14... Ng4 15. Qd2 b5 16. Bf1) 15. Nxf6+ Qxf6 16. Bd5 Nb4 17. c3 Nxd5 18. Rxd5 (18. exd5) 18... O-O 19. Nf3 Bg4 20. Qg5 Qxg5 (20... Qe6 21. Nh2) 21. hxg5 f5 (21... Bxf3 22. gxf3 Rc6 23. Rhd1 Kg7 (23... Rd8 { [%csl Ge5][%cal Gd5e5] } 24. Rxe5 Rdc8 { [%csl Gc3,Ge5][%cal Gc6c3,Gd6e5] }) 24. Rxd6 Rxd6 25. Rxd6 h4 26. Rxa6 (26. Rd1 f6 27. gxf6+ Kxf6) 26... Rd8) 22. Nd2 (22. gxf6 Rxf6) 22... fxe4 23. Nxe4 Rc6 24. f3 Be6 25. Rxd6 Rxd6 26. Nxd6 Rd8 27. Rd1 { [%csl Gd1,Gd2,Ge4][%cal Gd1d2,Gd6e4] } 27... Kf8 28. Rd2 Ke7 29. Ne4 Rc8 (29... Rxd2+ 30. Nxd2 { [%csl Gc4,Ge4][%cal Gc3c4,Gb2c3,Gd2e4] }) 30. Rd6 Ra8 31. Rb6 Kf7 32. Nc5 Bc8 33. Nd3 Bf5 34. Nxe5+ Kg7 35. Rb7+ Kf8 36. g4 { [%csl Gh5,Gg6,Gf3,Gg5,Gg4] } 36... Re8 37. gxf5 Rxe5 38. fxg6 Rxg5 39. Rh7 { [%cal Gh7h5] } (39. g7+ Rxg7 40. Rxg7 Kxg7 { [%csl Gh1][%cal Gh5h1] }) 39... Kg8 40. Kc2 Rf5 41. a3 Rxf3 42. Rxh5 Kg7 43. Re5 Rf6 44. Kd3 Kxg6 45. c4 Rd6+ 46. Rd5 bxc4+ 47. bxc4 Rb6 { [%csl Gg6,Gc6][%cal Gg6c6] } 48. Kd4 Kf7 49. Re5 { [%cal Ge3e8] } 49... Kf6 50. Re3 Rd6+ 51. Kc5 Rd8 52. Kb6 { [%csl Gf6,Gc4,Gb6,Gd8][%cal Ge3e8,Gc4c7] } 52... Rd6+ 53. Kc7 Rd4 54. c5 Rd5 55. c6 Rd2 56. Kb7 a5 57. c7 Rb2+ 58. Kc8 Rc2 59. Re4 Rc3 60. Kb7 { [%csl Gb7,Gc8][%cal Gc7c8] } 60... Rb3+ 61. Kc6 Rc3+ 62. Kb6 Kf5 (62... Rb3+ 63. Kc5 Rc3+ { [%csl Ge4] } 64. Rc4) 63. Re8 Rb3+ 64. Ka6 *
+
+
+[Event "NIC Classic KO"]
+[Site "chess24.com INT"]
+[Date "2021.04.28"]
+[Round "1.23"]
+[White "Radjabov, Teimour"]
+[Black "Carlsen, Magnus"]
+[Result "1/2-1/2"]
+[WhiteElo "2765"]
+[BlackElo "2847"]
+[Variant "Standard"]
+[ECO "D37"]
+[Opening "Queen's Gambit Declined: Three Knights Variation"]
+[StudyName "Eric Rosen's National Open Vegas Chess Games"]
+[ChapterName "Radjabov, Teimour - Carlsen, Magnus"]
+[ChapterURL "https://lichess.org/study/5bVbBMVE/CBj6B5f6"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 Nf6 2. c4 e6 3. Nf3 d5 4. Nc3 a6 5. c5 b6 6. cxb6 cxb6 7. Bf4 Bd6 8. Bg3 Bb7 9. e3 Nc6 10. Bd3 O-O 11. Rc1 Rc8 12. Bh4 Be7 13. O-O Ne4 14. Bxe7 Nxe7 15. Ne2 Rxc1 16. Qxc1 Qd6 17. Qb1 Rc8 18. a3 a5 19. Ng3 Nf6 20. Ne5 g6 21. Rc1 Rc7 22. Rc2 Nd7 23. f4 Nf6 24. Qc1 Rxc2 25. Qxc2 Qd8 26. Ne2 Nf5 27. Bxf5 exf5 28. Nc3 Qc7 29. Qa4 Kf8 30. Qb5 Bc8 31. h3 Be6 32. Kh2 Kg7 33. Qc6 Qxc6 34. Nxc6 Ne8 35. b4 axb4 36. Nxb4 Nc7 37. Na4 Na8 38. Nc3 Nc7 39. Na4 Na8 40. Nc3 Nc7 { 1/2-1/2 The game is a draw. } 1/2-1/2
+
+

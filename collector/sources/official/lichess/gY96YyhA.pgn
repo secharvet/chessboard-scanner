@@ -1,0 +1,40 @@
+[Event "Montreal"]
+[Site "Montreal CAN"]
+[Date "1979.04.12"]
+[Round "2"]
+[White "Anatoly Karpov"]
+[Black "Jan Timman"]
+[Result "1-0"]
+[Variant "Standard"]
+[ECO "B07"]
+[Opening "Pirc Defense: Sveshnikov System"]
+[StudyName "EricRosen's Study - Dec 26"]
+[ChapterName "Anatoly Karpov - Jan Timman"]
+[ChapterURL "https://lichess.org/study/gY96YyhA/LaYjJhBo"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 d6 2. d4 Nf6 3. Nc3 g6 4. g3 Bg7 5. Bg2 O-O 6. Nge2 e5 7. O-O Na6 8. Re1 c6 9. h3 Re8 10. Bg5 h6 11. Be3 Qc7 12. Qd2 Kh7 13. Rad1 Bd7 14. g4 Rad8 15. Ng3 Bc8 16. f4 b5 17. a3 b4 18. axb4 Nxb4 19. Nce2 exd4 20. Nxd4 a5 21. c3 Na6 22. Qc2 Bd7 23. Nf3 Re7 24. Bf2 Be8 25. Qd3 Qb7 26. Ra1 Nc7 27. Rxa5 Rdd7 28. b4 Ne6 29. Be3 c5 30. f5 Nd8 31. b5 Kh8 32. Bf2 Qc7 33. Ra4 Qb8 34. c4 Ra7 35. Rxa7 Rxa7 36. e5 dxe5 37. Nxe5 Ra2 38. Bxc5 { 1-0 Black resigns. } 1-0
+
+
+[Event "Rated Rapid game"]
+[Site "https://lichess.org/4JQWvXty"]
+[Date "2021.12.27"]
+[White "Force_Kin"]
+[Black "EricRosen"]
+[Result "0-1"]
+[WhiteElo "1862"]
+[BlackElo "2608"]
+[BlackTitle "IM"]
+[TimeControl "300+5"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "A07"]
+[Opening "King's Indian Attack: Pachman System"]
+[StudyName "EricRosen's Study - Dec 26"]
+[ChapterName "Force_Kin (1862) - IM EricRosen (2608)"]
+[ChapterURL "https://lichess.org/study/gY96YyhA/2m2t3sma"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. Nf3 { [%clk 0:05:00] } 1... d5 { [%clk 0:05:00] } 2. g3 { [%clk 0:04:57] } 2... g6 { [%clk 0:04:42] } 3. Bg2 { [%clk 0:04:59] } 3... Bg7 { [%clk 0:04:46] } 4. O-O { [%clk 0:05:00] } 4... e5 { [%clk 0:04:50] } 5. d3 { [%clk 0:05:00] } 5... Ne7 { [%clk 0:04:38] } 6. Nbd2 { [%clk 0:04:27] } 6... O-O { [%clk 0:04:32] } 7. e4 { [%clk 0:04:28] } 7... Nbc6 { [%clk 0:04:13] } 8. Ne1 { [%clk 0:04:17] } 8... Be6 { [%clk 0:03:40] } 9. f4 { [%clk 0:03:23] } 9... f5 { [%clk 0:02:50] } 10. fxe5 { [%clk 0:02:38] } 10... Nxe5 { [%clk 0:02:52] } 11. d4 { [%clk 0:02:14] } (11. exf5 Nxf5 12. Ndf3) 11... Ng4 { [%clk 0:02:54] } 12. Qe2 { [%clk 0:01:20] } (12. e5 { [%cal Ge4e5] } 12... Ne3 13. Qe2) 12... Bxd4+ { [%clk 0:02:51] } 13. Kh1 { [%clk 0:01:23] } 13... dxe4 { [%clk 0:02:44] } 14. Nxe4 { [%clk 0:01:10] } 14... fxe4 { [%clk 0:02:44] } 15. Rxf8+ { [%clk 0:01:02] } 15... Qxf8 { [%clk 0:02:46] } 16. Qxe4 { [%clk 0:01:04] } 16... Nf2+ { 0-1 White resigns. } { [%clk 0:02:50] } 0-1
+
+

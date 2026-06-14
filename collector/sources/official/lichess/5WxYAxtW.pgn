@@ -1,0 +1,336 @@
+[Event "Training Visual Memory: Task"]
+[Date "2019.03.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A00"]
+[Opening "Clemenz Opening"]
+[StudyName "Training Visual Memory"]
+[ChapterName "Task"]
+[ChapterURL "https://lichess.org/study/5WxYAxtW/rOJUyN5R"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2019.03.30"]
+[UTCTime "12:01:41"]
+
+{ They call it the mind's eye, or the place where you store information you have seen. High level athletes use this skill often to complete tasks, like judging the trajectory of a ball from the foot in order to meet it in the correct place before it arrives. Want to see it on a high level athlete? }
+1. h3 { Christiano Ronaldo scores goals in the dark using visual memory: https://www.youtube.com/watch?v=aoScYO2osb0 } 1... h6 { The visual memory skill in chess helps in calculation - being able to move the pieces and still see them without actually moving them. This makes it an essential skill in every part of the game after the initial memorization of the opening sequence. } 2. a3 { This study handles the training of this skill - especially in very young chess players. If you are a coach and you find that you have young students stuck in the beginner phases of learning, often training visual memory can give them the boost they need to move forward. If you are an expert - there is a good chance that you have a strong visual memory already. } *
+
+
+[Event "Training Visual Memory: Drill 1 - Concrete"]
+[Date "2019.03.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Training Visual Memory"]
+[ChapterName "Drill 1 - Concrete"]
+[ChapterURL "https://lichess.org/study/5WxYAxtW/diFh10Ec"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "8/8/5Q2/8/2Q5/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2019.03.30"]
+[UTCTime "12:14:52"]
+
+{ This drill is fairly popular, so I wouldn't doubt if you've come across it. Mark all of the squares that the queen's have in common. For example: Both queen's might move to the f4 square on this turn - so f4 would get a mark. } { [%csl Gf4,Gc6,Gd4,Gc3,Ge6,Gf7] }
+ *
+
+
+[Event "Training Visual Memory: Drill 1 - Complete"]
+[Date "2019.03.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Training Visual Memory"]
+[ChapterName "Drill 1 - Complete"]
+[ChapterURL "https://lichess.org/study/5WxYAxtW/dSb7S9ME"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "8/8/5Q2/8/2Q5/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2019.03.30"]
+[UTCTime "12:17:04"]
+
+{ All of the squares have now been marked. } { [%csl Gf4,Gc6,Gd4,Gc3,Ge6,Gf7,Gh4,Gf1,Ga6] }
+ *
+
+
+[Event "Training Visual Memory: Drill 1 - Randomized"]
+[Date "2019.03.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Training Visual Memory"]
+[ChapterName "Drill 1 - Randomized"]
+[ChapterURL "https://lichess.org/study/5WxYAxtW/vE4I4Ck7"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "8/3Q4/8/8/8/1Q6/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2019.03.30"]
+[UTCTime "12:18:05"]
+
+{ Dropping the queen's onto random squares on the chess board (on different files and ranks) creates a repeatable exercise to mark common squares and begin the visual memory process. }
+ *
+
+
+[Event "Training Visual Memory: Drill 1 - Competition"]
+[Date "2019.03.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Training Visual Memory"]
+[ChapterName "Drill 1 - Competition"]
+[ChapterURL "https://lichess.org/study/5WxYAxtW/wndKkD3x"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "8/8/5q2/8/8/1Q6/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2019.03.30"]
+[UTCTime "12:20:57"]
+
+{ If a coach happens to have a group of students in person, this drill can be adapted for a very large group. Have each side drop their own queen onto the board and then quickly fill in the common squares using pawns. The player with more of their own color pawns on the board *correctly* gets a point. } { [%csl Gf3,Rb6,Gb2,Gc3,Gf7,Re6] }
+ *
+
+
+[Event "Training Visual Memory: Drill 1 - Advanced"]
+[Date "2019.03.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Training Visual Memory"]
+[ChapterName "Drill 1 - Advanced"]
+[ChapterURL "https://lichess.org/study/5WxYAxtW/6xTWP0tC"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "8/8/5Q2/8/2Q5/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2019.03.30"]
+[UTCTime "12:23:15"]
+
+{ The queen drill falls short of training visual memory for every piece in chess. There are only two linear pieces aside from the queen - namely the bishop and the rook. To train the knights also, add an advanced rule to the drill: The queens may also move like knights. This addition trains knight movement, and also adds a bagillion more squares to the Competition version of Drill 1 - assuming the queen's are placed close enough together. } { [%csl Bd6,Bb6,Be5,Ye4,Yd5,Yg4,Gd4,Gf4,Gh4,Gf1,Gf7,Yg8,Ge6,Gc3,Bb2,Gc6,Ga6][%cal Yf6d5,Yf6e4,Bc4d6,Bc4b6,Bc4e5,Yf6g4,Yf6g8,Bc4b2] }
+ *
+
+
+[Event "Training Visual Memory: Drill 2 - Half Blind Opening"]
+[Date "2019.03.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Training Visual Memory"]
+[ChapterName "Drill 2 - Half Blind Opening"]
+[ChapterURL "https://lichess.org/study/5WxYAxtW/i6Nj7cCN"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2019.03.30"]
+[UTCTime "12:28:19"]
+
+{ Unfortunately, this drill is unplayable online at this time. You'll need a board and a real set of pieces to try it. A willing opponent is also helpful. Clear the board down to no pieces. As soon as you move a piece - it becomes visible, but you still have to remember all of the other pieces in their starting positions. }
+ *
+
+
+[Event "Training Visual Memory: Drill 2 - Half Blind Opening"]
+[Date "2019.03.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Training Visual Memory"]
+[ChapterName "Drill 2 - Half Blind Opening"]
+[ChapterURL "https://lichess.org/study/5WxYAxtW/dwovKc1A"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "8/8/8/8/4P3/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2019.03.30"]
+[UTCTime "12:30:36"]
+
+{ White has played 1.e4 in a half blind opening. The remaining 15 white pieces still exist, but are invisible until they have moved. After each move - run through the pieces on the back row in your mind and remember what they are and where they are. It also helps to notice when pieces are free to move - like the bishop at f1 is now free to develop. Do not move pieces through invisible pawns! }
+ *
+
+
+[Event "Training Visual Memory: Drill 2 - Half Blind Opening"]
+[Date "2019.03.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Training Visual Memory"]
+[ChapterName "Drill 2 - Half Blind Opening"]
+[ChapterURL "https://lichess.org/study/5WxYAxtW/fBjYgia5"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "8/8/p1n2n2/4p3/B3P3/5N2/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2019.03.30"]
+[UTCTime "12:31:56"]
+
+{ The game has just finished move 4 in a Ruy Lopez. This drill also doubles as an opening training tool for raw beginners. If you want a student to see the damage they are causing by moving pieces two or more times in the opening - how about showing them without the clutter of the invisible pieces. }
+ *
+
+
+[Event "Training Visual Memory: Drill 2 - Half Blind Opening"]
+[Date "2019.03.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Training Visual Memory"]
+[ChapterName "Drill 2 - Half Blind Opening"]
+[ChapterURL "https://lichess.org/study/5WxYAxtW/sjuXlpvM"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "8/8/p1np1n2/4p3/B3P3/2P2N2/8/5RK1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2019.03.30"]
+[UTCTime "12:58:54"]
+
+{ Go as deep as possible into each opening sequence. After each move - ask yourself which pieces are still invisible for both sides. Write down your moves so you can play them back with a full chess set to check your answers. Students often play pieces through pawns and make other illegal moves in the first few attempts at this drill. }
+ *
+
+
+[Event "Training Visual Memory: Drill 3 - Square Color"]
+[Date "2019.03.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Training Visual Memory"]
+[ChapterName "Drill 3 - Square Color"]
+[ChapterURL "https://lichess.org/study/5WxYAxtW/jqNwKxKm"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "8/8/8/8/8/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2019.03.30"]
+[UTCTime "12:34:12"]
+
+{ This drill is done WITHOUT the help of a chess board. Memorize the color of the square a1 and then look away from the chess board. Ask yourself, "what color is: d4" Try various squares around the chess board to see if you can visualize where it is and what color it is. }
+ *
+
+
+[Event "Training Visual Memory: Drill 3 - The Crutch"]
+[Date "2019.03.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Training Visual Memory"]
+[ChapterName "Drill 3 - The Crutch"]
+[ChapterURL "https://lichess.org/study/5WxYAxtW/f7qLr8Hx"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "8/8/8/8/8/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2019.03.30"]
+[UTCTime "12:48:47"]
+
+{ When starting out with this drill - it can help to have a chess board turned upside down in front of you. Ask yourself the question: Where on the chess board is the square I am trying to name. Place a marker or pawn in the rough location where the square might be if you could see it. You could also do this on an empty table, visualizing the chess board - or on a blank notebook etc. }
+ *
+
+
+[Event "Training Visual Memory: Drill 3 - Knight Moves"]
+[Date "2019.03.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Training Visual Memory"]
+[ChapterName "Drill 3 - Knight Moves"]
+[ChapterURL "https://lichess.org/study/5WxYAxtW/NCAynEoP"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "8/8/8/8/8/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2019.03.30"]
+[UTCTime "12:37:01"]
+
+{ When you are proficient in naming square colors blind - Add a knight to your mental chess board. Do not look at a chess board for this drill! Place it on a random square in your mind - we will put ours on d4 in this example. Without looking at a chess board, name the squares to which a knight may move on this turn. It might help to write your squares down in order to check them after. } { [%csl Yd4][%cal Bd4c6,Bd4e6,Bd4f5,Bd4f3,Bd4e2,Bd4c2,Bd4b3,Bd4b5] }
+ *
+
+
+[Event "Training Visual Memory: Drill 3 - Diagonals"]
+[Date "2019.03.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Training Visual Memory"]
+[ChapterName "Drill 3 - Diagonals"]
+[ChapterURL "https://lichess.org/study/5WxYAxtW/JLLLRyZP"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "8/8/8/8/8/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2019.03.30"]
+[UTCTime "12:39:33"]
+
+{ Do not look at a chess board during this drill! Name or write down two squares on the chess board - Visualize if they appear on the same diagonal without looking at the chess board. For example: do c3 and g6 fall on the same diagonal? Without looking at a chess board this is tricky at first. } { [%csl Yc3,Yg6] }
+ *
+
+
+[Event "Training Visual Memory: Drill 3 - Advanced"]
+[Date "2019.03.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Training Visual Memory"]
+[ChapterName "Drill 3 - Advanced"]
+[ChapterURL "https://lichess.org/study/5WxYAxtW/emLIPX57"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "8/8/8/8/8/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2019.03.30"]
+[UTCTime "12:41:11"]
+
+{ Do not look at a chess board for this drill! Start a knight on a1 in your visual memory. Look away from the Board and ask yourself how many squares it takes the knight to reach a random square. For this example we will use e5. We find that it takes 4 moves on its shortest path. If you really want a workout - count how many different paths the knight might take to reach e4 in 4 moves. You will find several. :) } { [%csl Ga1,Ge5][%cal Ga1c2,Gc2e3,Ge3g4,Gg4e5,Gc2d4,Gd4f3,Gc2b4,Gb4c6,Gc6e5,Gb4d3,Gd3e5,Gc2e1,Ge1f3,Gf3e5,Ge1d3,Ya1b3,Yb3d4,Yd4c6,Yb3c5,Yc5d7,Yd7e5,Yb3a5,Ya5c6,Ya5c4,Yc4e5] }
+ *
+
+
+[Event "Training Visual Memory: Drill 4 - Full Blind Opening"]
+[Date "2019.03.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Training Visual Memory"]
+[ChapterName "Drill 4 - Full Blind Opening"]
+[ChapterURL "https://lichess.org/study/5WxYAxtW/AB5fqtTr"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "8/8/8/8/8/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2019.03.30"]
+[UTCTime "12:45:19"]
+
+{ This drill is how it sounds. Play the opening blind by yourself or with an opponent. Do not look at a chess board for this drill! Write down your moves on a scoresheet so you can check your moves for quality and legality. Play to move 5 and then check to see if you made all legal moves. Rinse and repeat for different openings. Go to move 7 - to move 10 - and then as far as you can go blind. Whenever an illegal move is made, or when you can no longer remember everything - play the game back from memory with real pieces. }
+ *
+
+
+[Event "Training Visual Memory: Drill 4 - Advanced"]
+[Date "2019.03.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Training Visual Memory"]
+[ChapterName "Drill 4 - Advanced"]
+[ChapterURL "https://lichess.org/study/5WxYAxtW/yIDa0yoN"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "8/8/8/8/8/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2019.03.30"]
+[UTCTime "12:47:15"]
+
+{ This drill can be used as an opening memorization tool for more advanced students. After you've played to the end of your opening line, check a chess database to see if your moves follow the opening path you'd like them to follow. }
+ *
+
+
+[Event "Training Visual Memory: Thanks!"]
+[Date "2019.03.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Training Visual Memory"]
+[ChapterName "Thanks!"]
+[ChapterURL "https://lichess.org/study/5WxYAxtW/1mhXxYOM"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2019.03.30"]
+[UTCTime "13:07:04"]
+
+{ That's all I'm giving away for free. I hope you improve a ton through these methods. Drop me a note if this helps you. I love the feedback and want to feel appreciated, just like the next coach. Good luck to everyone! }
+ *
+
+

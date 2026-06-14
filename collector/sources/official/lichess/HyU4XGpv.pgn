@@ -1,0 +1,320 @@
+[Event "Answering Questions from the Twitch Chat: Which Sicilian line do you like the most for black ?"]
+[Date "2019.01.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B47"]
+[Opening "Sicilian Defense: Taimanov Variation, Bastrikov Variation"]
+[StudyName "Answering Questions from the Twitch Chat"]
+[ChapterName "Which Sicilian line do you like the most for black ?"]
+[ChapterURL "https://lichess.org/study/HyU4XGpv/z9baPu6v"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.01.28"]
+[UTCTime "14:12:15"]
+
+{ Which Sicilian line do you like the most for black ? }
+1. e4 c5 2. Nf3 { Most Popular Sicilian Variations:
+1. Najdorf
+2. Dragon
+3. Sveshnikov
+4. Kann/Taimanov } 2... e6 3. d4 cxd4 4. Nxd4 Nc6 5. Nc3 Qc7 { [%csl Gc5][%cal Ga7a6,Gg8f6,Gf8b4,Gf8e7,Gc6d4,Gb7b5,Gc8b7] } *
+
+
+[Event "Answering Questions from the Twitch Chat: Tell us why the Exchange Ruy is so awesome."]
+[Date "2019.01.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C69"]
+[Opening "Ruy Lopez: Exchange Variation, King's Bishop Variation"]
+[StudyName "Answering Questions from the Twitch Chat"]
+[ChapterName "Tell us why the Exchange Ruy is so awesome."]
+[ChapterURL "https://lichess.org/study/HyU4XGpv/of15tbtL"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.01.28"]
+[UTCTime "14:16:46"]
+
+{ Tell us why the Exchange Ruy is so awesome. }
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Bxc6 dxc6 5. O-O Bd6 6. d4 exd4 7. Nxd4 { [%csl Ge4,Gf2,Gg2,Gh2] } *
+
+
+[Event "Answering Questions from the Twitch Chat: Chapter 3"]
+[Date "2019.01.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Answering Questions from the Twitch Chat"]
+[ChapterName "Chapter 3"]
+[ChapterURL "https://lichess.org/study/HyU4XGpv/NpqQgC1O"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[FEN "4k3/1pp4p/p1p3p1/8/2P5/1P4P1/P3KP1P/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2019.01.28"]
+[UTCTime "14:19:09"]
+
+ *
+
+
+[Event "Answering Questions from the Twitch Chat: Whats your second favourite opening for White?"]
+[Date "2019.01.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B23"]
+[Opening "Sicilian Defense: Closed"]
+[StudyName "Answering Questions from the Twitch Chat"]
+[ChapterName "Whats your second favourite opening for White?"]
+[ChapterURL "https://lichess.org/study/HyU4XGpv/C5mmW8zX"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.01.28"]
+[UTCTime "14:26:21"]
+
+1. e4 c5 2. Nc3 *
+
+
+[Event "4th United Insurance"]
+[Site "Dhaka BAN"]
+[Date "1999.02.19"]
+[Round "6"]
+[White "Nigel Short"]
+[Black "Enamul Hossain"]
+[Result "1-0"]
+[Variant "Standard"]
+[ECO "B26"]
+[Opening "Sicilian Defense: Closed"]
+[StudyName "Answering Questions from the Twitch Chat"]
+[ChapterName "Nigel Short - Enamul Hossain"]
+[ChapterURL "https://lichess.org/study/HyU4XGpv/k7f0Tr8h"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 c5 2. Nc3 { [%cal Gg2g3,Gf1g2,Gd2d3,Gc1e3,Gd1d2,Gf2f4,Gg1f3,Ge1g1] } 2... Nc6 3. g3 g6 4. Bg2 Bg7 5. d3 d6 6. Be3 Rb8 7. Qd2 b5 8. Nge2 Nd4 9. O-O e6 10. Nc1 { [%csl Gd1,Rd4][%cal Gc3d1,Gc2c3,Gg8e7,Ge7c6] } 10... b4 11. Nd1 Ne7 12. c3 bxc3 13. bxc3 Ndc6 14. Bh6 O-O 15. Bxg7 Kxg7 16. Ne3 e5 17. Ne2 Ba6 18. f4 f6 19. Rac1 Qa5 20. Rc2 Rb7 21. Bh3 Rfb8 22. Be6 Rb1 23. Nc1 Qb6 24. Qf2 Rf8 25. h4 Qd8 26. f5 Rxc1 27. Rfxc1 Bxd3 28. Rd2 Bxe4 29. Rcd1 Nc8 30. Nc4 Bxf5 31. Bxf5 gxf5 32. Nxd6 Nxd6 33. Rxd6 Qc8 34. Rd7+ { 1-0 Black resigns. } 1-0
+
+
+[Event "Answering Questions from the Twitch Chat: The last gambit I played"]
+[Date "2019.01.28"]
+[Result "1/2-1/2"]
+[Variant "Standard"]
+[ECO "B23"]
+[Opening "Sicilian Defense: Closed"]
+[StudyName "Answering Questions from the Twitch Chat"]
+[ChapterName "The last gambit I played"]
+[ChapterURL "https://lichess.org/study/HyU4XGpv/BxxTuzMu"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.01.28"]
+[UTCTime "14:34:25"]
+
+1. e4 c5 2. Nc3 d6 3. f4 g6 4. Nf3 Bg7 5. Bc4 Nc6 6. O-O e6 7. d4 cxd4 (7... Nxd4 8. Be3 Nxf3+ 9. Qxf3 { [%csl Gf5][%cal Gf4f5] } 9... Ne7 10. Rad1 (10. f5 exf5 11. exf5) 10... O-O 11. Bxc5 Qc7 12. Bxd6 Qxc4 13. Bxe7 Re8 14. e5 Rxe7 15. Rd8+ Bf8 16. Ne4 Kg7 17. Nf6 Qxc2 18. Qh3 h5 19. Qg3 Qf5 20. Rfd1 b6 21. Rxf8 Kxf8 22. Rd8+ Kg7 23. Rg8+ Kh6 24. h4 { Grischuk, A. - Vachier Lagrave, M., 1-0, chess.com Speed 3m+2spm 2017, https://lichess.org/IvoGCfz9 }) 8. Nb5 Nge7 (8... e5 9. fxe5 dxe5 10. Ng5 { [%csl Rf7][%cal Gc4f7,Gf1f7,Gg5f7] }) 9. Bb3 O-O 10. Nbxd4 Na5 11. Qe2 a6 12. c3 Nxb3 13. axb3 b6 14. Be3 Bb7 { 1/2-1/2 The game is a draw. } 1/2-1/2
+
+
+[Event "Answering Questions from the Twitch Chat: Playing against d4"]
+[Date "2019.01.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Answering Questions from the Twitch Chat"]
+[ChapterName "Playing against d4"]
+[ChapterURL "https://lichess.org/study/HyU4XGpv/LAPfY4sm"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.01.28"]
+[UTCTime "14:39:46"]
+
+{ https://www.youtube.com/watch?v=ulJuHiPm_fM
+Study on how to play against 1.d4 https://lichess.org/study/Oih5txiU }
+ *
+
+
+[Event "Answering Questions from the Twitch Chat: How to play against Closed Sicilian"]
+[Date "2019.01.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B23"]
+[Opening "Sicilian Defense: Closed"]
+[StudyName "Answering Questions from the Twitch Chat"]
+[ChapterName "How to play against Closed Sicilian"]
+[ChapterURL "https://lichess.org/study/HyU4XGpv/LWBLK2FP"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.01.28"]
+[UTCTime "14:43:18"]
+
+1. e4 c5 2. Nc3 a6 3. g3 b5 4. Bg2 Bb7 5. d3 e6 6. f4 d5 7. exd5 (7. e5 h5 { [%csl Gf5,Ge7,Gc6][%cal Gg8h6,Gh6f5,Rg3g4,Gf8e7,Gb8c6,Gd8b6,Gb5b4,Ga6a5] } (7... Nh6)) 7... Nf6 { [%csl Gd5][%cal Gf6d5,Gb7g2] } *
+
+
+[Event "Answering Questions from the Twitch Chat: How does lichess make money? How to donate to lichess?"]
+[Date "2019.01.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Answering Questions from the Twitch Chat"]
+[ChapterName "How does lichess make money? How to donate to lichess?"]
+[ChapterURL "https://lichess.org/study/HyU4XGpv/dBWGfJ8q"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.01.28"]
+[UTCTime "14:46:14"]
+
+{ https://lichess.org/swag
+https://lichess.org/patron }
+ *
+
+
+[Event "Answering Questions from the Twitch Chat: How to play against Elephant Gambit?"]
+[Date "2019.01.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C40"]
+[Opening "Elephant Gambit: Paulsen Countergambit"]
+[StudyName "Answering Questions from the Twitch Chat"]
+[ChapterName "How to play against Elephant Gambit?"]
+[ChapterURL "https://lichess.org/study/HyU4XGpv/juz2B268"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.01.28"]
+[UTCTime "14:49:53"]
+
+1. e4 e5 2. Nf3 d5 3. exd5 e4 4. Qe2 Nf6 (4... Qe7) 5. d3 Qxd5 6. Nbd2 Nc6 7. dxe4 Qh5 8. Qb5 Bc5 9. e5 Nd7 10. e6 fxe6 { [%csl Re6] } 11. Ne4 $146 { [%cal Ge4c5,Gb5h5] } 11... a6 12. Qc4 *
+
+
+[Event "Answering Questions from the Twitch Chat: Difference between the Bird and Polar Bear"]
+[Date "2019.01.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A03"]
+[Opening "Bird Opening: Dutch Variation"]
+[StudyName "Answering Questions from the Twitch Chat"]
+[ChapterName "Difference between the Bird and Polar Bear"]
+[ChapterURL "https://lichess.org/study/HyU4XGpv/0f7HAmtv"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.01.28"]
+[UTCTime "14:57:41"]
+
+1. f4 { [%csl Gf4] } 1... d5 2. b3 Nf6 3. Bb2 { Polar Bear } { [%csl Ge5][%cal Gc1b2,Gb2h8,Gg1f3,Gf3e5,Ge2e3,Gf1d3,Gd3h7] } *
+
+
+[Event "Answering Questions from the Twitch Chat: Favorite e4 e5 openings for white"]
+[Date "2019.01.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C44"]
+[Opening "Ponziani Opening"]
+[StudyName "Answering Questions from the Twitch Chat"]
+[ChapterName "Favorite e4 e5 openings for white"]
+[ChapterURL "https://lichess.org/study/HyU4XGpv/4xefcKjY"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.01.28"]
+[UTCTime "14:59:37"]
+
+1. e4 e5 2. Nf3 Nc6 3. c3 { Ponziani! } { [%csl Gd4][%cal Gd2d4] } (3. Nc3 Nf6 4. a3 Bc5?! (4... a6 5. d4 exd4 6. Nxd4) (4... d5 5. exd5 Nxd5 6. Nxe5 Nxe5 7. Qe2 Nxc3 8. Qxe5+) 5. Nxe5! { [%csl Ge5] }) (3. Bb5) *
+
+
+[Event "Answering Questions from the Twitch Chat: Recommendation against e4 for 1100 rated player"]
+[Date "2019.01.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B45"]
+[Opening "Sicilian Defense: Four Knights Variation"]
+[StudyName "Answering Questions from the Twitch Chat"]
+[ChapterName "Recommendation against e4 for 1100 rated player"]
+[ChapterURL "https://lichess.org/study/HyU4XGpv/AB88iumn"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.01.28"]
+[UTCTime "15:02:44"]
+
+1. e4 c5 2. Nf3 e6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 (5. e5 Qa5+) 5... Nc6 6. Be3 Bb4 { [%cal Gd7d5] } 7. Bd3 d5 { [%cal Ge6e5] } *
+
+
+[Event "Answering Questions from the Twitch Chat: Creating imbalances in Exchange French"]
+[Date "2019.01.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C01"]
+[Opening "French Defense: Exchange Variation"]
+[StudyName "Answering Questions from the Twitch Chat"]
+[ChapterName "Creating imbalances in Exchange French"]
+[ChapterURL "https://lichess.org/study/HyU4XGpv/LrQ37l2f"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.01.28"]
+[UTCTime "15:05:54"]
+
+1. e4 e6 2. d4 d5 3. exd5 exd5 4. Nf3 Bd6 5. Bd3 Ne7 6. Bg5 f6 7. Bh4 Nbc6 8. O-O Bg4 { [%csl Gc8][%cal Gd8d7,Ge8c8] } 9. Nbd2 Qd7 10. Re1 O-O-O { [%csl Gg5,Gg3][%cal Gg7g5,Gh7h5,Gh5h4] } *
+
+
+[Event "Answering Questions from the Twitch Chat: What should you look after if someone plays the Cochrane Gambit (4. Nxf7) in the"]
+[Date "2019.01.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C42"]
+[Opening "Petrov's Defense: Cochrane Gambit, Center Variation"]
+[StudyName "Answering Questions from the Twitch Chat"]
+[ChapterName "What should you look after if someone plays the Cochrane Gambit (4. Nxf7) in the"]
+[ChapterURL "https://lichess.org/study/HyU4XGpv/f27E6xTU"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.01.28"]
+[UTCTime "15:09:17"]
+
+1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6 4. Nxf7 Kxf7 5. d4 Nxe4 (5... c5 6. dxc5 d5 7. e5 Ng4) 6. Qh5+ *
+
+
+[Event "Answering Questions from the Twitch Chat: Pawn Play: When to push?"]
+[Date "2019.01.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B29"]
+[Opening "Sicilian Defense: Nimzowitsch Variation, Main Line"]
+[StudyName "Answering Questions from the Twitch Chat"]
+[ChapterName "Pawn Play: When to push?"]
+[ChapterURL "https://lichess.org/study/HyU4XGpv/HOdYQkjA"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.01.28"]
+[UTCTime "15:13:16"]
+
+1. e4 c5 2. Nf3 Nf6 { [%cal Ge4e5] } (2... Nc6 3. Bc4 e6 4. Nc3 a6 { [%cal Gb7b5] } 5. a4 Nf6 { [%csl Ge5][%cal Ge4e5] } 6. e5 { [%csl Ge5] } 6... Ng4 { https://www.qualitychess.co.uk/products/2/316/small_steps_to_giant_improvement_by_sam_shankland/
+Google: https://www.google.com/search?client=safari&rls=en&q=sam+shankland+secret+life+of+pawns&ie=UTF-8&oe=UTF-8 } 7. Qe2 Qc7) 3. e5 { [%csl Rf6] } 3... Nd5 (3... Ng4 4. h3) 4. Nc3 { [%csl Rd5] } 4... e6 (4... Nxc3 5. dxc3 { [%csl Ge5][%cal Gc1f4,Gf1c4,Ge1g1] }) 5. Nxd5 exd5 6. d4 Nc6 7. dxc5 Bxc5 8. Qxd5 d6 9. Bc4 Qe7 10. Bg5 { https://www.youtube.com/watch?v=1FV_sn8cZwg } 10... f6 11. O-O-O dxe5 12. Rhe1 { Becerra Rivero, Julio - Nakamura, Hikaru, 1-0, USA tt qual, 2009, https://lichess.org/EARK6cRq } { [%csl Ge5,Re8][%cal Gf3e5] } *
+
+
+[Event "Answering Questions from the Twitch Chat: Chapter 17"]
+[Date "2019.01.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Answering Questions from the Twitch Chat"]
+[ChapterName "Chapter 17"]
+[ChapterURL "https://lichess.org/study/HyU4XGpv/Ujcf31on"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.01.28"]
+[UTCTime "15:22:42"]
+
+ *
+
+
+[Event "Answering Questions from the Twitch Chat: Wing Gambit against French"]
+[Date "2019.01.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C00"]
+[Opening "French Defense: Wing Gambit"]
+[StudyName "Answering Questions from the Twitch Chat"]
+[ChapterName "Wing Gambit against French"]
+[ChapterURL "https://lichess.org/study/HyU4XGpv/6OT6tRUG"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.01.28"]
+[UTCTime "15:41:25"]
+
+1. e4 e6 2. Nf3 d5 3. e5 c5 4. b4 cxb4 5. a3 bxa3 (5... Nc6 6. axb4 Nxb4 7. c3 Nc6 8. d4) 6. Bxa3 { [%csl Rf8] } 6... Bxa3 7. Nxa3 { [%csl Gd6][%cal Ga3b5,Gb5d6] } 7... a6 8. Nb5 { [%csl Gd6][%cal Gb5d6] } *
+
+
+[Event "Answering Questions from the Twitch Chat: Tips for learning openings"]
+[Date "2019.01.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Answering Questions from the Twitch Chat"]
+[ChapterName "Tips for learning openings"]
+[ChapterURL "https://lichess.org/study/HyU4XGpv/jdQ6wf9E"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.01.28"]
+[UTCTime "16:00:16"]
+
+{ https://www.youtube.com/watch?v=xGdqaXZWZC8 }
+ *
+
+

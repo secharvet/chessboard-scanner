@@ -1,0 +1,134 @@
+[Event "Weird Opening Traps You've Never Seen Before: A GM Destroyed me after 11 moves - Torre Trap"]
+[Date "2021.04.20"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A46"]
+[Opening "Torre Attack: Classical Defense"]
+[StudyName "Weird Opening Traps You've Never Seen Before"]
+[ChapterName "A GM Destroyed me after 11 moves - Torre Trap"]
+[ChapterURL "https://lichess.org/study/JBLySYqC/Ayn119vd"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.04.20"]
+[UTCTime "07:10:14"]
+
+1. d4 Nf6 2. Bg5 e6 3. Nf3 d5 4. e3 Be7 5. Bd3 O-O 6. Nbd2 Nbd7 7. c3 b6 8. Qa4 Bb7 9. Ne5 Nxe5?? 10. dxe5 Nd7 { GM Bakayoyo - IM EricRosen, 1-0, -, lichess.org/FXo9kZ1W } 11. Qh4! $18 { [%csl Re7,Rh7][%cal Gh4e7,Gh4h7,Gd3h7] } 11... g6 12. Bxe7 { [%cal Ge7f8] } 12... Qe8 13. Bxf8 Qxf8 *
+
+
+[Event "Weird Opening Traps You've Never Seen Before: Dumb Qe7 Trap"]
+[Date "2021.04.20"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C40"]
+[Opening "Gunderam Defense"]
+[StudyName "Weird Opening Traps You've Never Seen Before"]
+[ChapterName "Dumb Qe7 Trap"]
+[ChapterURL "https://lichess.org/study/JBLySYqC/VtWR2IT7"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.04.20"]
+[UTCTime "07:08:41"]
+
+1. e4 e5 2. Nf3 Qe7 3. Bc4 Nf6 4. Ng5?! h6 5. Bxf7+ (5. Nxf7 Rh7 { [%csl Rf7][%cal Gd7d5] } 6. d4 exd4) 5... Kd8 *
+
+
+[Event "Weird Opening Traps You've Never Seen Before: Obscure Caro Kann Trap"]
+[Date "2021.04.20"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B15"]
+[Opening "Caro-Kann Defense: Main Line"]
+[StudyName "Weird Opening Traps You've Never Seen Before"]
+[ChapterName "Obscure Caro Kann Trap"]
+[ChapterURL "https://lichess.org/study/JBLySYqC/WQk6Xotf"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.04.20"]
+[UTCTime "07:12:31"]
+
+1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Nf6 5. Ng3 h5 { [%csl Gh4,Rg3][%cal Gh5h4] } 6. Bg5 h4 7. Bxf6 { [%csl Gf6] } 7... hxg3 8. Be5 { Black to move and win } 8... Rxh2 9. Rxh2 gxh2 (9... Qa5+ 10. c3 (10. Qd2 gxf2+ 11. Kxf2 (11. Ke2 Qxd2+ 12. Kxd2 fxg1=Q) 11... Qxd2+) 10... Qxe5+ 11. dxe5 gxh2 { [%cal Gh2h1,Gh2g1] } 12. Nf3 (12. Qh5 hxg1=Q) 12... h1=Q) 10. Bxh2 *
+
+
+[Event "Weird Opening Traps You've Never Seen Before: Tipsy Grandmaster Alekhine Trap"]
+[Date "2021.04.20"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B04"]
+[Opening "Alekhine Defense: Modern Variation, Larsen Variation"]
+[StudyName "Weird Opening Traps You've Never Seen Before"]
+[ChapterName "Tipsy Grandmaster Alekhine Trap"]
+[ChapterURL "https://lichess.org/study/JBLySYqC/NG3qMh6w"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.04.20"]
+[UTCTime "07:09:37"]
+
+1. e4 Nf6 2. e5 Nd5 3. d4 d6 4. Nf3 dxe5 5. Nxe5 c6 6. c4 (6. Be2) 6... Nb4 7. a3 (7. Be3 Bf5) 7... Qxd4 8. Qxd4 Nc2+ 9. Kd2 Nxd4 *
+
+
+[Event "Weird Opening Traps You've Never Seen Before: Opening Sacrifice Gone Terribly Wrong (Calculation Exercise)"]
+[Date "2021.04.20"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C15"]
+[Opening "French Defense: Winawer Variation, Alekhine-Maróczy Gambit"]
+[StudyName "Weird Opening Traps You've Never Seen Before"]
+[ChapterName "Opening Sacrifice Gone Terribly Wrong (Calculation Exercise)"]
+[ChapterURL "https://lichess.org/study/JBLySYqC/t8k5cwrJ"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.04.20"]
+[UTCTime "07:39:21"]
+
+1. e4 e6 2. d4 d5 3. Nc3 Bb4 4. Ne2 dxe4 5. a3 Be7 6. Nxe4 Nd7 7. Nf4 { [%csl Gf4,Ge4] } 7... Ngf6 { Rosen, E. - Zierk, S., 1/2-1/2, 7th St Louis GM Inv 2015, https://lichess.org/XLuI6Xhw } 8. Ng5 O-O (8... h6 9. Ngxe6 fxe6 10. Nxe6 { [%cal Ge6d8] }) 9. Ngxe6 fxe6 10. Nxe6 Qe8 11. Nxc7 Bb4# *
+
+
+[Event "Weird Opening Traps You've Never Seen Before: Smith Morra Trap"]
+[Date "2021.04.20"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B21"]
+[Opening "Sicilian Defense: Smith-Morra Gambit Accepted"]
+[StudyName "Weird Opening Traps You've Never Seen Before"]
+[ChapterName "Smith Morra Trap"]
+[ChapterURL "https://lichess.org/study/JBLySYqC/0EN2YULB"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.04.20"]
+[UTCTime "07:54:15"]
+
+1. e4 c5 2. d4 cxd4 3. c3 dxc3 4. Nxc3 e6 5. Nf3 Bb4 { [%csl Gb4] } 6. Bc4 (6. Qd4 { [%cal Gb4f8] } 6... Bxc3+ 7. bxc3 Nf6 8. e5 Nc6) 6... Qc7 7. Qe2 { Black to move! } 7... b5 8. Bxb5 Bxc3+ 9. bxc3 Qxc3+ { [%csl Ga1][%cal Gc3e1,Gc3a1] } 10. Nd2 Qxa1 11. O-O *
+
+
+[Event "Weird Opening Traps You've Never Seen Before: \"Du Berry\" Trap"]
+[Date "2021.04.20"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B34"]
+[Opening "Sicilian Defense: Accelerated Dragon, Modern Variation"]
+[StudyName "Weird Opening Traps You've Never Seen Before"]
+[ChapterName "\"Du Berry\" Trap"]
+[ChapterURL "https://lichess.org/study/JBLySYqC/uKWHxpkn"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2021.04.20"]
+[UTCTime "08:10:43"]
+
+1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 g6 5. Nc3 Bg7 6. Be3 a6? { IM Yarebore - DrNykterstein2554, 1-0, -, https://lichess.org/fxYrymxD } { White to move and get a strong advantage! } 7. Nd5 Nf6 (7... Nxd4 8. Bxd4 Bxd4 9. Qxd4 Nf6 { [%csl Gf6] } 10. Nb6 Rb8 11. e5 Nh5 12. Be2) (7... Be5 { [%csl Ge5] } 8. f4 Bc7 9. Qf3 { [%cal Ge1c1] }) 8. Nxc6 { [%cal Gb7c6,Gd7c6] } 8... dxc6 (8... bxc6 9. Bb6) 9. Bb6 Qd7 10. Nc7+ { [%csl Ga8][%cal Gc7a8] } *
+
+
+[Event "Rated UltraBullet tournament https://lichess.org/tournament/fYUiZ76d"]
+[Site "https://lichess.org/zOLEREoV"]
+[Date "2021.01.07"]
+[White "opperwezen"]
+[Black "Kostyakornienko"]
+[Result "1-0"]
+[WhiteElo "2447"]
+[WhiteTitle "IM"]
+[BlackElo "2250"]
+[TimeControl "15+0"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "A00"]
+[Opening "Van Geet Opening"]
+[StudyName "Weird Opening Traps You've Never Seen Before"]
+[ChapterName "WEIRDEST TRAP EVER? IM opperwezen - Kostyakornienko"]
+[ChapterURL "https://lichess.org/study/JBLySYqC/OzInwvd0"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. Nc3 { [%clk 0:00:15] } 1... g6 { [%clk 0:00:15] } 2. d3 { [%clk 0:00:15] } 2... Bg7 { [%clk 0:00:15] } 3. Qd2 { [%clk 0:00:15] } 3... e6 { [%csl Gg8,Gg7,Gg6,Ge6,Rf6,Rh6][%cal Gg8e7] [%clk 0:00:15] } 4. Ne4 { [%clk 0:00:15] } 4... Ne7 { [%csl Gd2][%cal Gd1d2] [%clk 0:00:15] } 5. Qh6 { [%csl Rh6][%cal Rd2h6,Gg7h6] [%clk 0:00:14] } 5... Bxh6 (5... O-O { [%clk 0:00:15] } 6. Qh4 { [%clk 0:00:14] } 6... d5 { [%clk 0:00:14] } 7. Nf6+ { [%clk 0:00:13] } 7... Kh8 { [%clk 0:00:13] } 8. Qxh7# { 1-0 White wins by checkmate. } { [%clk 0:00:12] }) 6. Nf6+ Kf8 7. Bxh6# 1-0
+
+

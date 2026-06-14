@@ -1,0 +1,56 @@
+[Event "STL Class with IM Rosen: Chapter 1"]
+[Date "2018.10.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "STL Class with IM Rosen"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/U5usCQvj/3yOgPWAZ"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2018.10.12"]
+[UTCTime "01:16:42"]
+
+ *
+
+
+[Event "Casual Rapid game"]
+[Site "https://lichess.org/oBg22bUc"]
+[Date "2018.10.12"]
+[Round "-"]
+[White "Shredderroy"]
+[Black "EricRosen"]
+[Result "0-1"]
+[WhiteElo "1937"]
+[BlackElo "2295"]
+[BlackTitle "IM"]
+[TimeControl "900+2"]
+[Termination "Time forfeit"]
+[Variant "Standard"]
+[ECO "B44"]
+[Opening "Sicilian Defense: Taimanov Variation"]
+[StudyName "STL Class with IM Rosen"]
+[ChapterName "Shredderroy - IM EricRosen and Adi"]
+[ChapterURL "https://lichess.org/study/U5usCQvj/3uW6Zwit"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 { [%eval 0.12] [%clk 0:15:00] } 1... c5 { [%eval 0.18] [%clk 0:15:00] } 2. Nf3 { [%eval 0.15] [%clk 0:15:00] } 2... Nc6 { [%eval 0.08] [%clk 0:14:57] } 3. d4 { [%eval 0.15] [%clk 0:15:02] } 3... cxd4 { [%eval 0.0] [%clk 0:14:56] } 4. Nxd4 { [%eval 0.08] [%clk 0:15:04] } 4... e6 { [%eval 0.23] } { Carlsen, M. - Harikrishna, P., 1-0, 4th Norway Blitz 2016, https://lichess.org/d4Mj0VoD } { [%clk 0:14:54] } 5. Nxc6 { [%eval -0.07] [%clk 0:15:02] } 5... bxc6 { [%eval 0.11] [%clk 0:14:51] } 6. Bd3 { [%eval 0.11] [%clk 0:15:03] } 6... Nf6 { [%eval 0.1] [%clk 0:14:46] } 7. O-O { [%eval -0.03] [%clk 0:14:54] } 7... d5 { [%eval 0.18] [%clk 0:14:45] } 8. Bg5?! { [%eval -0.45] } { Inaccuracy. Best move was Nc3. } { [%clk 0:14:44] } (8. Nc3 Be7 9. Bf4 Nd7 10. Na4 O-O 11. Re1 e5 12. Bg3 Bb7) 8... Be7?! { [%eval 0.3] } { Inaccuracy. Best move was Bd6. } { [%clk 0:14:37] } (8... Bd6 9. exd5 cxd5 10. Bb5+ Bd7 11. Bxd7+ Qxd7 12. Bxf6 gxf6 13. Nd2 Rb8 14. Rb1 Rg8 15. g3) 9. Qe2 { [%eval -0.23] [%clk 0:12:27] } 9... O-O { [%eval 0.26] [%clk 0:14:22] } 10. Nc3?! { [%eval -0.41] } { Inaccuracy. Best move was Nd2. } { [%clk 0:12:17] } (10. Nd2 h6 11. Bh4 Nd7 12. Bxe7 Qxe7 13. exd5 cxd5 14. Nb3 Bb7 15. Rfe1 Rfc8 16. c3 Nc5) 10... Rb8?! { [%eval 0.18] } { Inaccuracy. Best move was h6. } { [%clk 0:13:44] } (10... h6 11. Bf4 Nd7 12. Qg4 Kh8 13. exd5 exd5 14. Qf5 Nf6 15. Qe5 Be6 16. Qc7 Qxc7 17. Bxc7) 11. e5 { [%eval -0.37] [%clk 0:11:15] } 11... Nd7 { [%eval 0.0] [%clk 0:13:37] } 12. Bxe7 { [%eval -0.32] [%clk 0:11:15] } 12... Qxe7 { [%eval 0.0] [%clk 0:13:30] } 13. b3 { [%eval -0.32] [%clk 0:11:09] } 13... c5 { [%eval 0.34] [%clk 0:12:31] } 14. Bb5? { [%eval -1.41] } { Mistake. Best move was Nb5. } { [%clk 0:09:35] } (14. Nb5 Ba6 15. a4) 14... d4 { [%eval -1.05] [%clk 0:09:01] } 15. Bxd7?! { [%eval -1.95] } { Inaccuracy. Best move was Na4. } { [%clk 0:09:31] } (15. Na4 Nxe5 16. Rae1 Bd7 17. Bxd7 Nxd7 18. Nb2 Nb6 19. f4 Rfe8 20. Nc4 Nxc4 21. Qxc4 Qc7) 15... Bxd7 { [%eval -1.5] [%clk 0:08:58] } 16. Ne4 { [%eval -1.88] [%clk 0:07:32] } 16... Bb5 { [%eval -1.55] [%clk 0:08:09] } 17. Qg4 { [%eval -2.01] [%clk 0:07:26] } 17... Bxf1 { [%eval -1.77] [%clk 0:07:37] } 18. Nf6+ { [%eval -2.87] [%clk 0:06:50] } 18... Kh8 { [%eval -2.61] [%clk 0:07:37] } 19. Nh5 { [%eval -3.08] [%clk 0:06:49] } 19... Rg8 { [%eval -2.83] [%clk 0:07:00] } 20. Rxf1 { [%eval -3.07] [%clk 0:06:45] } 20... Rbd8? { [%eval -2.06] } { Mistake. Best move was Qc7. } { [%clk 0:06:13] } (20... Qc7 21. Qf4 Rbd8 22. h4 Rd5 23. Re1 Qa5 24. Rc1 Qxa2 25. Qxf7 Qb2 26. Rf1 Rdd8 27. Qxe6) 21. Rd1?! { [%eval -2.79] } { Inaccuracy. Best move was Ng3. } { [%clk 0:05:06] } (21. Ng3 Qc7) 21... f5?! { [%eval -1.93] } { Inaccuracy. Best move was Qc7. } { [%clk 0:05:34] } (21... Qc7 22. Qe2 Rd7 23. h3 Rc8 24. f4 c4 25. Qg4 Rg8 26. Qe2 d3 27. cxd3 cxd3 28. Rxd3) 22. Qe2 { [%eval -2.32] [%clk 0:02:12] } 22... Qg5?! { [%eval -1.77] } { Inaccuracy. Best move was Qh4. } { [%clk 0:05:10] } (22... Qh4 23. Re1 Rc8 24. Ng3 Qd8 25. Nf1 Qa5 26. Nd2 Qxa2 27. Nc4 Rc7 28. Nd6 Rb8 29. Qc4) 23. f4?! { [%eval -2.37] } { Inaccuracy. Best move was g3. } { [%clk 0:02:00] } (23. g3 Qg4 24. Qxg4 fxg4 25. Nf4 Rge8 26. h4 Kg8 27. f3 gxf3 28. Kf2 Kf7 29. Kxf3 Rf8) 23... Qg4 { [%eval -2.08] [%clk 0:04:48] } 24. Qxg4 { [%eval -2.34] [%clk 0:01:45] } 24... fxg4 { [%eval -1.77] [%clk 0:04:49] } 25. Kf2? { [%eval -3.02] } { Mistake. Best move was Ng3. } { [%clk 0:01:26] } (25. Ng3 Rdf8 26. Ne4 Rxf4 27. Nxc5 Re8 28. b4 Rf5 29. Re1 Kg8 30. a4 Rd8 31. Nxe6 Rd5) 25... Rgf8? { [%eval -1.59] } { Mistake. Best move was Rdf8. } { [%clk 0:02:23] } (25... Rdf8 26. h3 gxh3 27. g4 Rc8 28. Kg3 Rgd8 29. Kxh3 c4 30. Rd2 Kg8 31. f5 cxb3 32. axb3) 26. Kg3 { [%eval -1.52] [%clk 0:01:21] } 26... Rf5 { [%eval -1.1] [%clk 0:02:21] } 27. Kxg4 { [%eval -1.52] [%clk 0:01:07] } 27... g5 { [%eval -1.32] [%clk 0:02:21] } 28. Nf6? { [%eval -3.29] } { Mistake. Best move was fxg5. } { [%clk 0:00:45] } (28. fxg5) 28... gxf4 { [%eval -3.21] [%clk 0:02:07] } 29. Re1 { [%eval -3.5] [%clk 0:00:05] } 29... d3 { [%eval -2.84] [%clk 0:01:57] } 30. cxd3 { [%eval -3.04] [%clk 0:00:06] } 30... Rxd3 { [%eval -2.8] [%clk 0:01:56] } 31. Re2? { [%eval -3.88] } { Mistake. Best move was Re4. } { [%clk 0:00:07] } (31. Re4 Rd2) 31... Kg7?! { [%eval -3.31] } { Inaccuracy. Best move was h5+. } { [%clk 0:01:35] } (31... h5+ 32. Kh4 Rd4 33. g4 hxg4 34. Nxg4 Kg7 35. Rg2 Kf8 36. Rc2 Ke7 37. Rxc5 f3 38. Rc7+) 32. Nh5+ { [%eval -3.28] [%clk 0:00:06] } 32... Kf7 { [%eval -3.06] [%clk 0:01:27] } 33. Nxf4? { [%eval -5.69] } { Mistake. Best move was Rf2. } { [%clk 0:00:07] } (33. Rf2 f3 34. gxf3 Rd4+ 35. f4 Rxe5 36. Ng3 Red5 37. h4 Rd2 38. Rxd2 Rxd2 39. Ne4 Rg2+) 33... h5+ { [%eval -5.65] [%clk 0:01:11] } 34. Nxh5 { [%eval -5.57] [%clk 0:00:03] } 34... Rd4+ { [%eval -5.47] } { 0-1 Black wins on time. } { [%clk 0:01:12] } 0-1
+
+
+[Event "Offhand blitz game"]
+[Site "USA"]
+[Date "2013.??.??"]
+[White "Akshay Indusekar"]
+[Black "Eric S Rosen"]
+[Result "0-1"]
+[Variant "Standard"]
+[ECO "A21"]
+[Opening "English Opening: King's English Variation, Reversed Sicilian"]
+[StudyName "STL Class with IM Rosen"]
+[ChapterName "Akshay Indusekar - Eric S Rosen"]
+[ChapterURL "https://lichess.org/study/U5usCQvj/EA9IPlSq"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. c4 e5 2. Nc3 d6 3. d4 exd4 4. Qxd4 Nc6 5. Qd2 Be6 6. b3 Nge7 7. g3 d5 8. cxd5 Nxd5 9. a3 Nxc3 10. Qxc3 Qd5 11. Nf3 Qxb3 12. Qxb3 Bxb3 13. Rb1 Ba4 14. Rxb7 O-O-O { 0-1 White resigns. } 0-1
+
+

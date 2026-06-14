@@ -1,0 +1,48 @@
+[Event "Meeting the Old Benoni (1.d4 c5): 2.dxc5!? - A tricky sideline"]
+[Date "2023.10.27"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A43"]
+[Opening "Benoni Defense: Benoni Gambit Accepted"]
+[StudyName "Meeting the Old Benoni (1.d4 c5)"]
+[ChapterName "2.dxc5!? - A tricky sideline"]
+[ChapterURL "https://lichess.org/study/5I9gFhhY/2smfFUrR"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2023.10.27"]
+[UTCTime "17:04:56"]
+
+1. d4 c5 2. dxc5!? { A slightly offbeat line with an interesting idea in mind... } 2... e6 3. Nc3 Bxc5 4. Ne4! { The main point of this variation. White immediately puts the question to how black will deal with the threads of Nxc5 and Nd6+ } { [%csl Rd6][%cal Ge4c5,Ge4d6] } 4... Be7 { [%cal Ge4d6] } (4... d5!? { While this is an interesting move that a lot of players will try, it is not objectively great for black. } 5. Nxc5 Qa5+ 6. c3 Qxc5 7. e4! $14 { A strong reply! White temporarily sacrifices a pawn to open the position as quickly as possible and make use of the bishop pair. Here's one common example variation of how play can proceed... } 7... dxe4 8. Qg4 { [%csl Gg7,Ge4][%cal Gg4e4,Gg4g7] } 8... Qe5 9. Bf4 Qf6 10. Bxb8 { In this case, it's worth making this trade to take away black's castling rights and to win back the pawn on e4. } 10... Rxb8 11. Bb5+ Kf8 12. Qxe4 $14 { [%csl Rf8][%cal Gg1f3,Ge1c1] }) (4... Nf6 { This is objectively the best move, but only played 8% of the time in the lichess database. The resulting position will be roughly equal and playable for both sides } 5. Nxc5 Qa5+ 6. Qd2!? { I didn't know this move even existed, until making this file. Perhaps it's the best way to fight for a small edge... } 6... Qxc5 7. Qg5 Qxg5 8. Bxg5 $10 { Engine gives +0.1 and there are many ways for this position to branch out. I'd slightly prefer white with the bishop pair. }) 5. Nd6+ Bxd6 6. Qxd6 Qe7 7. Qxe7+ Nxe7 8. e4 $14 { White is slightly better with the bishop pair, more space, and an easy-to-play middlegame } *
+
+
+[Event "Meeting the Old Benoni (1.d4 c5): 2.d5 - How to beat IM Emory Tate in 9 moves"]
+[Date "2023.10.27"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A43"]
+[Opening "Benoni Defense: Old Benoni"]
+[StudyName "Meeting the Old Benoni (1.d4 c5)"]
+[ChapterName "2.d5 - How to beat IM Emory Tate in 9 moves"]
+[ChapterURL "https://lichess.org/study/5I9gFhhY/YNUU0GrQ"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2023.10.27"]
+[UTCTime "17:08:33"]
+
+1. d4 c5 2. d5 { Objectively the best move } 2... e6 3. Nc3!? { Not the main move, but an interesting sideline. White aims to accelerate development and quickly plant the knight on d5. } 3... exd5 4. Nxd5 Ne7 { This logical looking move was played by Emory Tate against GM Alex Yermolinsky in 2001. } (4... Nf6 { This is the mainline. White can achieve a pleasant position after the following sequence... } 5. Bg5 Be7 6. Bxf6 Bxf6 7. c3 O-O 8. g3 d6 9. Bg2 Nc6 10. Nh3! $14 { White is clearly better with an incredible grip on the d5 square excellent piece harmony. White will likely follow with Nhf4, 0-0, and eventually put the rooks on the d-file to exert long-term pressure against black's backward d6 pawn } { [%csl Rd6][%cal Ge1g1,Gh3f4] }) 5. Bg5! { An excellent way to fight for control over d5 and continue devlopment. } { [%cal Gg5d8] } 5... h6 6. Bh4 Qa5+ (6... g5?? 7. Nf6#) 7. c3 Nf5?? { [%cal Gb2b4,Gc5b4] } 8. Qa4!! { Bam! White now wins the queen or checkmates. Emory Tate decided to let the checkmate happen on the board... } (8. b4 cxb4) 8... Qxa4 (8... Qd8 9. Bxd8) (8... Nc6 9. Qxa5 Nxa5 10. Nc7#) 9. Nc7# { It's not every day an IM gets mated after just 9 moves! } *
+
+
+[Event "Meeting the Old Benoni (1.d4 c5): Smith Morra!"]
+[Date "2023.10.27"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B21"]
+[Opening "Sicilian Defense: Smith-Morra Gambit"]
+[StudyName "Meeting the Old Benoni (1.d4 c5)"]
+[ChapterName "Smith Morra!"]
+[ChapterURL "https://lichess.org/study/5I9gFhhY/pSAK7mwm"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2023.10.27"]
+[UTCTime "17:09:29"]
+
+1. d4 c5 2. e4!? { A funny way to reach the Smith Morra Gambit. This move order can work nicely against players who play the Old Benoni, but don't normally play the Sicilian against 1.e4. } *
+
+

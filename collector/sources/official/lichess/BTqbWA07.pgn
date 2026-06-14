@@ -1,0 +1,16 @@
+[Event "EricRosen's Study: Chapter 1"]
+[Date "2019.09.07"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D00"]
+[Opening "Queen's Pawn Game: Accelerated London System, Steinitz Countergambit"]
+[StudyName "EricRosen's Study"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/BTqbWA07/6Vt5RSJn"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.09.07"]
+[UTCTime "21:01:20"]
+
+1. d4 d5 (1... Nf6 2. Bf4 d6 3. e3 g6 4. Nf3 Bg7 5. Be2 O-O 6. O-O Nbd7 7. h3 Re8 8. c4 e5 9. dxe5 dxe5 10. Nxe5 { [%csl Ge5] } 10... Nxe5 { [%csl Ge8,Ge5,Gd8][%cal Ge8d8,Ge8e5] } 11. Qxd8 Rxd8 12. Bxe5) 2. Bf4 c5 3. e3 Nf6 4. Nf3 Nc6 5. c3 e6 { [%csl Ge5] } 6. Nbd2 Be7 (6... Qb6 7. Qb3 c4 8. Qc2 { [%csl Ge4][%cal Ge3e4] }) 7. Bd3 c4 8. Bc2 { [%csl Ge4][%cal Ge6e4] } *
+
+

@@ -1,0 +1,16 @@
+[Event "Opening Principles: Control The Center"]
+[Date "2021.03.16"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C22"]
+[Opening "Center Game: Normal Variation"]
+[StudyName "Opening Principles"]
+[ChapterName "Control The Center"]
+[ChapterURL "https://lichess.org/study/mYPauhho/n8tfS4p6"]
+[Annotator "https://lichess.org/@/atomopawn"]
+[UTCDate "2021.03.16"]
+[UTCTime "21:02:26"]
+
+1. e4 { [%csl Ge4,Gd5][%cal Gf1c4,Gd1f3] } (1. d4 { [%csl Ge5,Gc1] }) 1... e5 { [%csl Ge5] } 2. d4 (2. Nf3 Nc6 3. Bc4 a6 (3... Bc5 4. O-O Nf6 5. Nc3 O-O 6. d3 d6 7. Be3 Bb6 8. Qd2) 4. d3 a5 { [%csl Gf3] } 5. Ng5 { [%cal Gg5f7,Gc4f7] } (5. Nfd2 a4 6. Qf3 b5 7. Qxf7#) 5... a4 6. Nxf7) 2... exd4 { [%csl Gc6] } 3. Qxd4 Nc6 { [%csl Gd4][%cal Gc6d4] } 4. Qd1 Nf6 *
+
+

@@ -1,0 +1,107 @@
+[Event "Rated game"]
+[Site "https://lichess.org/gEQfcc1K"]
+[Date "2016.10.02"]
+[White "TonyRo"]
+[Black "Beauvain"]
+[Result "1-0"]
+[Termination "Normal"]
+[WhiteElo "2392"]
+[BlackElo "2502"]
+[TimeControl "2700+45"]
+[Variant "Standard"]
+[ECO "A20"]
+[Opening "English Opening: King's English Variation"]
+[StudyName "45+45 League TonyRo Games"]
+[ChapterName "LM TonyRo vs Beauvain"]
+[ChapterURL "https://lichess.org/study/ccyuHS2G/zbZNRtkm"]
+[Annotator "https://lichess.org/@/TonyRo"]
+
+1. c4! (1. Nf3 d5 (1... Nf6 2. g3 g6 3. Bg2 Bg7 4. O-O O-O 5. d4 d5) 2. g3 c5 (2... Nf6 3. Bg2 c6 4. c4 (4. O-O Bf5) 4... Bf5) 3. Bg2 Nc6 (3... Nf6 4. O-O Nc6 5. d4) 4. d4 cxd4 (4... Nf6 5. c4 e6 (5... cxd4))) (1. e4 c5 2. Nf3 Nc6 (2... d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 (6. Be2 Bg7 7. O-O O-O 8. Be3 Nc6 9. Nb3 { [%cal Gc3d5,Gd1d5,Ge4d5] })) 3. d4 cxd4 4. Nxd4 g6 { [%csl Gd7][%cal Gd7d5] } 5. Nc3 Bg7 { [%cal Gd7d5] } 6. Be3 Nf6 7. Bc4 (7. Be2 O-O 8. O-O d5) 7... d6 8. f3 { [%cal Gd1d2,Ge1c1] }) 1... e5 2. g3 Nf6 3. Bg2 d5 (3... Nc6 4. Nc3 Bc5 { [%cal Ga2a3,Ge2e3,Gg1f3] } 5. e3!? { [%csl Yc5][%cal Gg1e2,Bd2d4,Bf2f4] } 5... d6 6. Nge2 O-O 7. O-O Bf5 (7... h6) 8. d4 Bb6 { [%cal Ga2a3,Gb2b4,Gc4c5,Gh2h3,Gg3g4,Gf2f4] } 9. h3 h6 10. g4 Bh7 11. f4 { [%cal Gf4f5] }) 4. cxd5 Nxd5 { [%cal Gb1c3,Gg1f3] } 5. Nc3 { [%csl Gd2] } (5. Nf3 Nc6 { [%csl Gf3] } (5... e4 { [%cal Gd1a4,Ga4e4] })) 5... Nb6! { [%cal Yd8d4] } (5... Be6 6. Nf3 Nc6 7. O-O Be7 8. d4! { [%cal Gd2d3,Gd3d4] }) (5... Nxc3 6. bxc3 $14 { [%csl Gd4][%cal Gb2c3,Ba1b1,Bg2b7] }) 6. e3!? { [%csl Yd3][%cal Gg1e2,Bd2d4,Bf2f4] } (6. Nf3 Nc6 { [%cal Yc6d4,Bd2d4] } 7. O-O Be7 { [%cal Ga2a3,Gd2d3,Ga1b1,Bb2b3] }) 6... Nc6 7. Nge2 Be7 8. O-O O-O 9. f4! exf4?! (9... f6! 10. f5 Bd7 11. d4 $13) 10. Nxf4 Ne5 { [%cal Re5d3,Be5g6,Bg6f4,Bc7c6] } 11. d4 Ng6 { [%csl Gf4,Yg6][%cal Be3e4] } 12. Nd3! { [%csl Gd3,Rg6][%cal Rg6e7,Rg6e5,Rg6f4,Rg6h4] } (12. e4 Nxf4 13. Bxf4 $14 { [%csl Gd4,Ge4][%cal Bf4c7,Bg2b7] }) 12... c6 { [%csl Yd3][%cal Rd8d4,Re3e4] } 13. b3 Be6 14. Bb2 Qc8?! { [%cal Ge3e4,Gd1c2,Gd1e2,Ba1c1,Bc1c8,Bf1f2,Ba2a4,Ba4a5,Ba5a6] } (14... Nd5! 15. Nxd5 (15. Qe2!? $14 Nxc3 16. Bxc3 { [%cal Ge3e4] }) 15... Bxd5 (15... cxd5 $14) 16. e4 Be6 17. Qe2 $16 { [%cal Ga1c1,Gc1d1,Gf1d1] }) 15. e4! { [%cal Ge4d5,Gb3c4,Gb3a4,Bg3f4,Bg3h4,Bd4e5] } (15. Qe2!? Rd8 16. Nd1 $14) 15... Rd8 16. Ne2 { [%cal Gd1e1,Gd1d2,Ga1c1] } (16. Qe2 { [%csl Gd3,Ge3,Bb2,Bg2,Yd4,Ye4] } 16... Rxd4! 17. Nd5 cxd5 (17... Rxd3 18. Nxe7+ Nxe7 19. Qxd3 $18) (17... Rxd5! 18. exd5 Nxd5 $10) 18. Bxd4 dxe4 19. Bxe4 $16) 16... Bh3?? 17. Bxh3! Qxh3 18. Rf5! { [%cal Rh3c8,Gd3f2,Gh3h6,Gb2c1] } 18... Nd5!? 19. Nf2 (19. Bc1 { [%cal Rd5e3,Gd3f2] } 19... Nh4! 20. gxh4 (20. Rf2! $16 { [%cal Gg3h4,Ge4d5] }) 20... Qg4+) 19... Ne3 (19... Qh6 { [%csl Gf5] } 20. Bc1? (20. exd5 $18) 20... Ne3 21. Qd3 Nxf5 22. Bxh6 (22. exf5 Qh5 23. fxg6 hxg6 $13) 22... Nxh6 $16) 20. Nxh3 Nxd1 21. Rxd1 $18 a5 { [%cal Ra5a4,Ra4b3] } 22. a3 { [%csl Ya3][%cal Ga5a4,Gb3b4] } (22. a4! { [%cal Gf5a5,Ga8a5] }) 22... f6 (22... a4 23. b4 { [%csl Ga3,Ya4,Re7] }) 23. Nf2 { [%csl Gd1][%cal Gf2d1] } 23... Nh8 { [%cal Yh8f7,Yf7d6] } 24. d5 { [%cal Ge2d4,Ge2f4,Gf4e6,Gd4e6] } (24. e5!? g6 (24... Nf7 25. Ng4 $18) 25. Rf3 f5 26. Nf4 $18) 24... Nf7 25. Nd4 { [%cal Gd4e6,Gd5c6] } 25... cxd5 26. Rxd5 Rdc8 27. Rc1 (27. Rd7! $18 { [%cal Gd7e7,Gd7b7] }) 27... Rxc1+ 28. Bxc1 a4 29. b4 { [%cal Ra8c8,Rc8c3,Rc3a3] } 29... Nd6 (29... Rc8 30. Bf4 Rc3) 30. Nf5 { [%cal Gf5e7,Gf5d6] } 30... Nxf5 31. exf5 Rc8 32. Bf4 Rc3 33. Rd3 Rb3 34. Rxb3 axb3 35. Nd3 { [%cal Gg1c3] } 35... Kf7 36. Kf2 g6 37. Ke2 (37. g4 g5 38. Bc7 { [%cal Re7d8,Gf2c3] }) 37... gxf5 { [%csl Gf6,Gf5] } (37... g5 38. Bc7 { [%csl Ge2] }) 38. Kd2 Ke6 39. Kc3 Kd5 40. Kxb3 Kd4 41. Nb2 { [%cal Gd4e4,Ge4g2,Gh2h4] } 41... b5 42. Nd1 { [%cal Gd1c3,Gd1e3] } 42... Kd5 43. Ne3+ Ke4 44. a4 bxa4+ 45. Kxa4 h5 46. h4 Bf8 47. Kb5 { [%cal Gb5c4,Gb4b5] } (47. b5 Bc5) 47... Kd4 (47... Be7 48. Kc4 Kf3 49. b5) 48. Nxf5+ Ke4 49. Nd6+ Kd5 50. Ka6 { [%cal Gf8d6,Gd6c5,Gc5b4] } 50... Be7 { [%cal Re7d8] } (50... Bxd6 51. Bxd6 Kxd6 52. b5 Kc7 53. Ka7 { [%csl Gb8] }) 51. b5 Bd8 52. Nf7 { [%csl Gc7,Gb6,Ga5] } (52. b6 Bxb6 53. Kxb6 $18) 52... Be7 53. b6 Ke6 54. b7 Kxf7 55. b8=Q Kg7 56. Bd6 Bxd6 57. Qxd6 Kf7 58. Kb6 f5 59. Qh6 f4 60. Qxh5+ Kf6 61. Qg5+ Kf7 62. Qxf4+ Kg6 63. Qg5+ Kh7 { [%csl Gg8,Gg7,Gg6,Gg5][%cal Bh7h8] } 64. Kc6 Kh8 65. Kd6 Kh7 66. Ke6 Kh8 67. Kf7 Kh7 68. Qg7# 1-0
+
+
+[Event "Rated game"]
+[Site "https://lichess.org/Kiark52z"]
+[Date "2016.10.09"]
+[White "Aliquantus"]
+[Black "TonyRo"]
+[Result "0-1"]
+[WhiteElo "2243"]
+[BlackElo "2386"]
+[TimeControl "2700+45"]
+[Annotator "Tony Rotella"]
+[Variant "Standard"]
+[ECO "B03"]
+[Opening "Alekhine Defense: Exchange Variation, Voronezh Variation"]
+[StudyName "45+45 League TonyRo Games"]
+[ChapterName "Aliquantus vs TonyRo"]
+[ChapterURL "https://lichess.org/study/ccyuHS2G/d3LTTKSM"]
+
+1. e4 Nf6!? (1... e6 2. d4 d5 3. Nd2 dxe4 4. Nxe4 Nd7 5. Nf3 Ngf6 6. Nxf6+ Nxf6 7. Bd3 c5 8. dxc5 Bxc5 9. O-O O-O 10. Bg5 b6 { , etc, and so I decided to play Alekhine's Defense,
+worried that it'd be hard to win in the Rubinstein. It's a guilty pleasure of
+mine, and I noticed that my opponent had a terrible score against it, and
+frequently played the Exchange Variation, which I really enjoy playing against. }) 2. e5 Nd5 3. d4 d6 4. c4 (4. Nf3! { is the only move I'm all that
+concerned about theoretically, after which I like to play the Larsen/Kengis
+with } 4... dxe5 5. Nxe5 g6 { , and so on. }) 4... Nb6 5. exd6 cxd6! { This is the
+only move worth playing in my opinion, but only with 9...Bf5. } (5... exd6 { is recommended in a lot of the literature, but just acquiesces to a slight
+disadvantage in a symmetrical structure and is not to my taste. }) 6. Nc3 g6 7. Be3! { The dreaded Voronezh variation, which has caused Black a lot of
+problems in this variation historically. } (7. Nf3 { is more natural, but after } 7... Bg7 8. Be3 O-O { none of White's choices are impressive: } 9. Be2 { is a very
+natural and classical set-up, but is probably even dubious after the obvious } (9. h3 { If White decides to stop ...Bg4 Black gets good counterplay after } 9... Nc6 { and now: } 10. Be2 (10. b3?! { (stopping ...Nc4 as in below) } 10... d5 (10... f5!? $132) 11. c5 Nd7 12. Rc1 (12. Nxd5 Nxc5 { [%cal Gg7a1] }) 12... Nxc5! 13. dxc5 d4 $132) 10... Bf5 11. O-O d5! 12. c5 Nc4 13. Bxc4 dxc4 14. Qa4 Bd3 15. Rfd1 Qe8!? $132 { L.Milman-A.Shabalov,
+Philadelphia 2004 }) 9... Bg4 10. O-O Nc6 11. b3 d5! 12. c5 { [%cal Gb6d7,Gc3d5] } 12... Nc8 { , as Black
+gets a tempo up version of the game. M.Aigner-H.Nakamura, Las Vegas 2007,
+which continued } 13. h3 { [%cal Gg4f3] } 13... Bxf3 14. Bxf3 e6 15. Rc1 N8e7 16. Ne2 Nf5 17. Bg4 Nh4 18. f4 h5 $15) 7... Bg7 { [%cal Gg7b2] } 8. Rc1! O-O 9. b3 { Now it's easier to see White's
+opening idea - all the counterplay down the long diagonal is neutralized, and
+Black has been denied ...Bg4. } 9... Bf5! { Extremely popular lately, and probably
+the only playable move. } (9... Nc6?! { has historically been the move, but
+illustrates another facet of the Voronezh, as after } 10. d5 Ne5 11. Be2! { +/=/+/-, Black's knight on e5 is in rough shape. } { [%csl Re5][%cal Rf2f4] }) 10. Nf3 (10. Be2 { can
+transpose to the game after a later Nf3, but when I looked at this variation a
+few months back, I also thought White had a few independent ideas worth
+investigating, e.g. } 10... d5 11. c5 Nc8 12. g4!? $146 (12. Bf3 e5! $132) 12... Bd7 13. h3 $13 (13. Nxd5? Bc6 $19)) (10. d5!? { was tested recently at the US Champs (Kamsky
+played 10...e5 against Xiong), but I think Black has totally adequate
+compensation in the piece-sac line after } { [%cal Ge3d4] } 10... e6! 11. g4 (11. Bd3 Bxd3 (11... exd5!? $146 12. Bxf5 Bxc3+ 13. Rxc3 Qf6 14. Ne2 Qxf5 15. c5 $13 { is a cute
+Stockfish idea }) 12. Qxd3 exd5 (12... Bxc3+!? $146) 13. Nxd5 N8d7 14. Nf3 Nc5 15. Qd2 Nxd5 16. cxd5 Ne4 $132 { Zhao Jun-Zhou Jianchao, Chinese Team
+Championships 2016 }) 11... Bxc3+ 12. Rxc3 Be4 13. f3 Bxd5 14. cxd5 Nxd5 15. Rd3 { J.Adair-R.Tymrakiewicz, British Championships 2010 } 15... Nxe3 $146 16. Rxe3 Qh4+ $44) 10... d5! 11. c5 Nc8 12. b4!? (12. Be2 Nc6 13. O-O Bg4 14. b4! a6 (14... Nxb4 15. Rb1 $14 { [%cal Gb1b7] }) 15. Rb1 e6 { [%cal Gc8e7,Ge7f5,Gg4f3] } 16. a4 { , etc }) (12. h3 Nc6 13. Be2 Be4! 14. Nxe4 (14. O-O Bxf3 15. Bxf3 e6 16. b4) 14... dxe4 15. Ng5 Nxd4 16. Nxe4 a6! 17. O-O Na7 $10) 12... Bg4 (12... a6! { [%cal Rb4b5,Rb8c6] } 13. h3 Nc6 14. Be2 Be4 $10) 13. Be2 (13. b5!? e6 $13) 13... e6 14. O-O a6 15. a4 $146 (15. Qb3 Nc6 16. Rfd1 N8e7 { D.Shaw-A.Damia, Amantea 2008 }) 15... Nc6 16. b5 axb5? (16... Na5! 17. bxa6 bxa6) 17. axb5 Na5 18. Ra1? (18. Bg5! Ne7 (18... Qd7? 19. Ne5! Bxe5 20. Bxg4 Bg7 21. Be2 $16) 19. Na4! $36 { [%csl Gg5] }) 18... Ne7 19. Na4? (19. Nd2 Bxe2 20. Nxe2 Nf5 21. Qc2) 19... Nc4 (19... Bxf3 20. Bxf3 Nc4 21. Bg5 h6 22. Bxe7 Qxe7 23. Be2 $15 { [%cal Ge7f6,Gf6h4,Gh4d4] }) 20. Qc2? (20. Bxc4 dxc4 21. h3 (21. Nb6? Rxa1 22. Qxa1 Bxf3 23. gxf3 Nf5 $19) (21. Rc1? Bxf3 22. gxf3 Nf5 $17) 21... Bxf3 22. Qxf3 Nd5 $15 23. Rfc1 c3 $15 (23... Qd7! $17)) (20. Bg5 h6 21. Bxe7 (21. Bh4 g5 22. Bg3 Nf5) 21... Qxe7 $17) 20... Nxe3 21. fxe3 Nf5 $19 22. Ra3 Bh6 23. Rb1 (23. Qd2 Qa5 24. Qxa5 Rxa5 $19 { [%cal Gf8a8] }) 23... Bxe3+ 24. Rxe3? (24. Kh1 Bxf3 25. Bxf3 Bxd4 $19) 24... Nxe3 25. Qb3 Bxf3 { [%cal Gb3e3] } 26. Bxf3 (26. Qxe3 Bxe2) 26... Nf5 27. Qd1 Qf6 (27... Ra5) (27... Qg5!) 28. Rb4 Nh4 29. Be2 Qg5 (29... Qf4) 30. Bf1 Qe3+ 31. Kh1 Nf5? { [%csl Gf1] } (31... Qa3! $19) 32. c6 bxc6 33. b6 Qa3 0-1
+
+
+[Event "Lichess 45+45 Team League"]
+[Date "2016.10.12"]
+[Round "3"]
+[White "TonyRo"]
+[Black "spicy-chess"]
+[Result "0-1"]
+[WhiteElo "2393"]
+[BlackElo "2216"]
+[Annotator "Tony Rotella"]
+[Variant "Standard"]
+[ECO "A00"]
+[Opening "Hungarian Opening: Dutch Defense"]
+[StudyName "45+45 League TonyRo Games"]
+[ChapterName "TonyRo vs spicy-chess"]
+[ChapterURL "https://lichess.org/study/ccyuHS2G/y9xATUbx"]
+
+1. g3!? { I knew my opponent was playing the Dutch regardless - it's important
+to have a sense of humor! } 1... f5 2. c4 Nf6 3. Bg2 e6 4. Nf3 Be7 5. O-O O-O 6. b3!? { I have taken to really liking this line for White after seeing some
+analysis by Christof Sielecki. But my opponent surprises me a bit later and I
+mishandle it. Later in the season I have better luck with this move. } (6. d4 { is more usual, e.g. } 6... d6 7. Nc3 Ne4!? { This is the newest move (and
+recommended by expert Simon Williams), but I was perhaps one of the first to
+discover that } (7... a5 8. Re1 Ne4 9. Qc2! { always seemed clearly better for
+White to me }) (7... Qe8) 8. Nxe4! fxe4 9. Nd2 d5 10. f3 Nc6 (10... e3? 11. Nb1 dxc4 12. Bxe3 Bf6 13. Na3 $16) 11. fxe4 Rxf1+ 12. Kxf1! dxc4 13. Nf3 $16 { of E.Tomashevsky-Z.Rahman, FIDE World Cup 2015, is simply way better for
+White - it has been tested quite a few times now, and the first player scores
+really well. }) 6... d6 7. d4 a5!? { This is not a move I looked at in my
+preparation, but it's tricky in that the inclusion of b3 and ...a5 makes the
+usual scheme of Nxe4 and f3 bad here, which I failed to understand. } (7... Qe8 8. Bb2 Qh5 9. Nc3! $14) (7... Ne4 8. Bb2 Bf6 9. Nbd2 Nc6 10. Ne1! $14) 8. Nc3 Ne4 9. Nxe4? { This no longer works, unfortunately for me. I spent little
+time here, as I knew the usual 7...Ne4 8.Nxe4 lines were good for White. } (9. Bb2! Nxc3 (9... Bf6 10. Qc2 Nxc3 11. Bxc3 Nc6 12. e4 $14) 10. Bxc3 Qe8 11. Qd3! (11. Re1 Qh5 12. e4 f4 13. e5 d5 { +/=/~~ }) 11... Qh5 12. e4 f4 13. e5 d5 { F.Graf-T.Rendle, Hastings 2006 } 14. Ne1!? $146 { +/-/+/= }) 9... fxe4 10. Nd2 d5 11. f3 e3! { This is usually not good,
+and as such, I missed it. } 12. Nb1 c5! $132 13. Bxe3 Bf6? (13... cxd4! 14. Bxd4 Nc6 15. Bb2 dxc4!? { is an interesting and better SF suggestion. }) 14. Na3?! Nc6 15. Nb5 cxd4 16. Nxd4 Qb6! { Now my opponent finds some strong,
+and (at least for me) not super intuitive ways to grab the initiative. I
+started using a lot of time here trying to solve my issues. } 17. Nc2 Qa6! (17... d4 { , after which I thought } 18. Bf2 e5 19. Ne1 $14 { would be about equal. }) 18. cxd5 (18. Nd4! dxc4 19. Nxc6 bxc6 20. Rc1 { as a
+clearly better option, but how is any normal human being supposed to allow ...
+c3 here? I thought my move was basically the only try. }) 18... Bxa1 19. Qxa1 (19. dxc6?! Bf6 20. f4 Rd8 $15) 19... exd5 20. f4 Qxe2 21. Bxd5+ Kh8 22. Rf2 Qb5 (22... Qh5 23. Bf3 Bg4 $17 { is apparently much better, though this move
+isn't bad. }) 23. Bc4 Qf5 24. Re2 b5 { I didn't see this at all - clearly just
+not my day. } 25. Nd4 Nxd4 26. Bxd4 bxc4 27. Bxg7+ (27. Re7!?) 27... Kg8 28. Bxf8 Qxf8 29. Qd4! { Computers will give the infamous 0.00 here,
+but from a human perspective, it seems incredibly hard to draw this as White
+given the incredibly weak light squares around the king, and even problems
+along the first or second rank. } 29... Bg4 30. Re5 h6 31. Qxc4+ Qf7 32. Qe4 Rd8 33. Qe3 Rd1+ 34. Kf2 Rd7? (34... Qd7! $19 { was spotted by a few of the
+observers live. }) 35. Rxa5 Qg6 36. Ra8+ Kh7 37. Qc3?? { I had very little time
+on my clock here, less than a minute, and I simply missed Black's next, which
+is incidentally the only win. } 37... Qb6+ 0-1
+
+

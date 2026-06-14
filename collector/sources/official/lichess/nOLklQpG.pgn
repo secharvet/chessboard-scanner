@@ -1,0 +1,22 @@
+[Event "Magnus Carlsen vs Eric Rosen: Magnus Carlsen vs Eric Rosen"]
+[Date "2022.09.02"]
+[White "Magnus Carlsen"]
+[Black "Eric Rosen"]
+[Result "*"]
+[WhiteElo "2861"]
+[WhiteTitle "GM"]
+[BlackElo "2360"]
+[BlackTitle "IM"]
+[Variant "Standard"]
+[ECO "D36"]
+[Opening "Queen's Gambit Declined: Exchange Variation, Reshevsky Variation"]
+[StudyName "Magnus Carlsen vs Eric Rosen"]
+[ChapterName "Magnus Carlsen vs Eric Rosen"]
+[ChapterURL "https://lichess.org/study/nOLklQpG/LvxQ94Py"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2022.09.02"]
+[UTCTime "01:25:18"]
+
+1. c4 (1. e4 e5 2. Nf3 Nf6 3. Nxe5 Nc6) 1... e6 2. Nc3 d5 3. d4 Nf6 4. cxd5 exd5 5. Bg5 c6 6. Qc2 (6. e3 Bf5 7. Qf3) 6... Bd6 { The Kassa Korley variation! This sideline of the Queen's Gambit Declined, has gotten some popularity recently due to some specatular games from IM Kassa Korley } (6... h6 7. Bxf6 Qxf6 8. Nxd5 Qxd4 { is okay for black, but I was couldn't quite figure out the evaluation during the game, so I decided to delay h6 }) 7. e3 O-O 8. Bd3 h6 9. Bh4 Re8 { [%csl Ge2,Gf3][%cal Gg1e2,Gg1f3] } 10. Nf3 (10. Nge2 a5 11. O-O (11. h3 Na6 12. a3 Nc7 { [%csl Gg5][%cal Gc7e6,Ge6g5] }) 11... Bxh2+) 10... Be6 11. O-O (11. Ne5?! c5) 11... Nbd7 12. a3 { [%csl Ga3,Gb5,Rd5,Rc6,Rb7][%cal Gb2b4,Gb4b5] } 12... a5 13. Rab1 Qb8 14. Bg3 b5 { This creates a potentially weak backward c-pawn, but has the later positional idea of a4 and Nb6-c4, establishing a nice outpost } (14... Bxg3 15. hxg3 Bg4 { Engine suggestion }) 15. Ne2 { [%csl Gc6][%cal Gc2c6] } 15... Bxg3 16. hxg3 Qd6 17. Rfc1 Rec8 18. Nf4 a4 19. Nxe6 Qxe6 (19... fxe6) 20. Bf5 Qd6 21. Ne5 Ra7 { [%csl Gc7][%cal Ga7d7,Ga7c7] } 22. Qc3 Rac7 23. Qb4 Qxb4 24. axb4 Nxe5 25. dxe5 (25. Bxc8 Nd3 { [%csl Rc1,Rb4,Rc8] } 26. Rc3 Nxb4 27. Bf5) 25... Nd7 26. b3 axb3 27. Rxb3 { [%csl Rd7,Rc7,Rc8,Rc3][%cal Gf5c8,Gc8c6,Gb3c3] } 27... Kf8 28. f4 { [%csl Ge5,Gf4,Gg3,Ge3][%cal Gf4g3] } 28... Ke7 29. Rbc3 g6 30. Bh3 f6? { This move will haunt me for the rest of my life. I should have listened to Ben Finegold. } 31. exf6+ Kxf6 (31... Kd6 32. e4! { What I had initially overlooked } 32... dxe4 33. Rd1#) 32. Bxd7 Rxd7 33. Rxc6+ Rxc6 34. Rxc6+ Kf5 35. Kf2 { [%csl Rb5,Rd5,Rd7,Gc6] } 35... g5 36. Rxh6 d4 37. Rh5 { [%cal Gf5g6,Gf5f6,Gf5e6] } (37. Rb6 { [%csl Gb5][%cal Gb6b5] } 37... Rd5 38. Kf3 g4+ 39. Ke2 dxe3 40. Kxe3 Rd3+ { my genius idea that still doesn't work. } 41. Ke2 (41. Kxd3) (41. Kf2)) 37... Ke4 38. exd4 Rxd4 39. Rxg5 Rxb4 40. Re5+ Kd4 41. g4 { [%csl Rb5][%cal Gg4g8,Rb4b5] } 41... Kc3 { [%csl Gb2,Gb3,Gb4,Rf4][%cal Gb4f4] } 42. g5 { I was surprised when he played this move... why would he let me take a free pawn with check? } { [%csl Gf4] } 42... Rxf4+ 43. Kg3 { [%csl Gf4,Rb5,Gg8][%cal Gg3f4,Ge5b5,Gg5g8] } 43... Rb4 44. g6 Kd4 45. Rg5 *
+
+

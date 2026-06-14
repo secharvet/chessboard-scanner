@@ -1,0 +1,22 @@
+[Event "Casual correspondence game"]
+[Site "https://lichess.org/xKhiQOE0"]
+[Date "2025.05.30"]
+[White "lichess AI level 8"]
+[Black "Craze"]
+[Result "1/2-1/2"]
+[BlackElo "1500"]
+[BlackTitle "GM"]
+[TimeControl "-"]
+[Variant "Standard"]
+[Termination "Normal"]
+[GameId "xKhiQOE0"]
+[ECO "B54"]
+[Opening "Sicilian Defense: Modern Variations, Main Line"]
+[StudyName "Game study"]
+[ChapterName "Stockfish level 8 - GM Craze (1500?)"]
+[ChapterURL "https://lichess.org/study/XgforOgn/m79XzoF9"]
+[Annotator "https://lichess.org/@/Craze"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Bd3 (5. Nc3) 5... Nc6 6. Nxc6 (6. Be3 Ng4 (6... g6)) 6... bxc6 7. O-O g6 8. c4 (8. b3 Bg7 9. Bb2) 8... Bg7 9. Nc3 O-O 10. Qc2 (10. Bg5 h6 11. Bf4) 10... Nd7 (10... c5 11. h3 (11. Bg5 { [%cal Gf2f4] })) 11. Be2 (11. Be3) (11. b3) 11... Nc5 (11... Rb8) 12. Be3 (12. b4 Nxe4) 12... Ne6 (12... Rb8 13. Rab1 f5) 13. Qd2 c5 { [%csl Gd4] } 14. b3 (14. Bg4 Nd4 15. Bxc8 Qxc8 16. Rae1 { [%csl Ge2,Gc3][%cal Gb2b3,Ge3h6,Gf2f4] }) 14... Nd4 15. Rad1 Bd7 16. Bd3 a5 17. Nb5 Bxb5?! (17... Qb6 18. Nxd4 cxd4 19. Bh6 Qb4) 18. cxb5 Qb6 19. Bxd4 (19. a4 Nxb3 20. Qa2 Nd4 21. f4 e6 22. Kh1 (22. f5)) 19... Bxd4 20. a4 e6 21. g3 Kg7 (21... f5) 22. Rde1 Rae8 (22... d5) 23. Kg2 Qd8 (23... h5) 24. h4 h5 25. Re2 (25. f4 d5) 25... Re7 (25... d5 26. exd5 Qxd5+) 26. Kh2 Rfe8 (26... e5 27. f4 exf4) 27. Ree1 (27. Rd1 d5) 27... Qc7 28. Re2 Qd8 29. Rb1 Qc7 30. Rc1 Qd8 31. Kg2 Qb6 32. Ree1 Qd8 33. Kh2 Qb6 34. Bf1 Qd8 35. Rcd1 Qb6 36. Bg2 Qd8 37. f4 d5! 38. Re2 (38. exd5 exd5 39. Rxe7 Rxe7 40. Re1 Rxe1 41. Qxe1 c4 42. Qd1 Qb6 43. Bxd5 c3) 38... dxe4 39. Bxe4 Qc7 40. Qc1 Rd8 41. Bc6 Rd6 42. Qc2 Qb6 43. Red2 Rd8 44. Kh1 Rd6 45. Kh2 Rd8 46. Rc1 Rd6 47. Re1 Qd8 48. Kg2 Qb6 49. Kh2 Qd8 50. Red1 Qb6 51. Re2 Qd8 52. Kh3 Qb6 53. Bg2 Red7 54. Qe4 Rd8 55. Qb7 Qxb7 56. Bxb7 R8d7 57. Bf3 Rd8 58. Rc1 Kf6 59. Be4 Rc8 60. Kg2 Rc7 61. Bd3 Rc8 62. Be4 Rb8 63. Kf3 Rc8 64. Rd2 Rb8 65. Bc6 Ke7 66. Be4 Kd7 67. Rcc2 Ke7 68. Rd3 Kd7 69. Rdd2 Ke7 70. Kg2 Kd7 71. Rd3 Ke7 72. Bc6 Rdd8 73. Kf3 Rd6 74. Rdd2 Rdd8 75. Ke4 Rd6 76. Rc4 Rbd8 77. Kf3 Rb8 78. Rcc2 Rbd8 79. Ke2 Rb8 80. Rd3 Rbd8 81. Rd1 Rb8 82. Rcd2 Rbd8 83. Kf3 Rb8 84. Rb1 Rbd8 85. Rbd1 Rb8 86. Rc2 Rbd8 87. Kg2 Rb8 88. Kh3 Kf6 89. Kg2 Ke7 90. Kf3 Kf6 91. Rh1 Rh8 92. Rd1 Ke7 93. Ke2 Rb8 94. Rb1 Kf6 95. Kf3 Rh8 96. Kg2 Rb8 97. Re1 Ke7 98. Rd1 Rbd8 99. Kh3 Kf6 100. Rf1 Rh8 101. Rcc1 Ke7 102. Rce1 Kf6 103. Rd1 Ke7 104. Rd2 Kf6 105. Bh1 Ke7 106. Bg2 { 1/2-1/2 The game is a draw. } 1/2-1/2
+
+

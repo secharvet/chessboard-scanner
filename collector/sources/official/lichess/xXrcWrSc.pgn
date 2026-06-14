@@ -1,0 +1,24 @@
+[Event "Champions Showdown 2018"]
+[Site "Saint Louis, United States"]
+[Date "2018.09.11"]
+[Round "3.4"]
+[White "Shankland, Sam"]
+[Black "Vachier-Lagrave, Maxime"]
+[Result "0-1"]
+[WhiteElo "2695"]
+[WhiteTitle "GM"]
+[BlackElo "2796"]
+[BlackTitle "GM"]
+[Annotator "https://lichess.org/@/SaintLouisChessClub"]
+[Variant "Chess960"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Analysis for YouTube"]
+[ChapterName "Shankland, Sam - Vachier-Lagrave, Maxime"]
+[ChapterURL "https://lichess.org/study/xXrcWrSc/tt6QqVro"]
+[FEN "nqbbrkrn/pppppppp/8/8/8/8/PPPPPPPP/NQBBRKRN w KQkq - 0 1"]
+[SetUp "1"]
+
+1. d4 { [%clk 0:04:58] } 1... d5 2. c3 Ng6 { [%clk 0:04:50] } 3. Bc2 { [%clk 0:04:58] } 3... c6 { [%clk 0:04:45] } 4. Ng3 { [%clk 0:04:58] } 4... O-O { [%clk 0:04:31] } (4... Bc7 5. Bd2 Bd7 6. O-O-O) 5. h4 { [%cal Gh4h5] [%clk 0:04:58] } 5... Nxh4 { [%csl Gb1,Gc2] } (5... f5 { [%csl Gf5] [%clk 0:04:12] } 6. h5 { [%clk 0:04:45] } (6. Nxf5 Qh2) 6... f4 { [%clk 0:03:46] } 7. Nf5 { [%clk 0:04:35] } 7... e6 { [%clk 0:03:22] } 8. Nxg7 { [%clk 0:04:27] } 8... Kxg7 { [%clk 0:03:22] } 9. hxg6 { [%clk 0:04:27] } 9... e5 { [%csl Ge8,Gf8][%cal Ge8e1,Gf8f1] [%clk 0:03:15] } 10. dxe5 h6 11. Nb3 Qxe5 { [%csl Gf1] } 12. Bd2 { [%cal Gf1c1] } 12... Nb6 13. Qd1 (13. O-O-O { [%cal Ge5e2] } 13... Qxe2) (13. c4 Nxc4 14. Bc3 d4 15. Bxd4 Qxd4 16. Nxd4 Nd2#) 13... Nc4 14. Nd4 Ne3+ { [%cal Gf8f1] } 15. Bxe3 (15. fxe3 fxe3+) 15... fxe3 16. Nf3 exf2 { [%cal Gf3e5,Gf2e1,Gf2g1] } 17. Nxe5 { [%csl Ge1][%cal Gf2g1,Gf2e1] } 17... Bh4 { [%csl Re1][%cal Gf2e1,Gf2g1,Gh4e1,Gf8f1] } 18. g3 (18. Qd4 fxe1=Q#) 18... Bh3+ 19. Rg2 Bxg3 20. Nf7 fxe1=Q+ 21. Qxe1 Bxg2+ 22. Kxg2 Bxe1) 6. Bxh7+ 0-1
+
+

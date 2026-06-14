@@ -1,0 +1,89 @@
+[Event "HUN-URS"]
+[Site "Budapest HUN"]
+[Date "1955.05.??"]
+[Round "3"]
+[White "Paul Keres"]
+[Black "Laszlo Szabo"]
+[Result "1-0"]
+[Variant "Standard"]
+[ECO "B64"]
+[Opening "Sicilian Defense: Richter-Rauzer Variation, Classical Variation"]
+[StudyName "Masterpieces with Nose: Paul Keres"]
+[ChapterName "Paul Keres - Laszlo Szabo"]
+[ChapterURL "https://lichess.org/study/tzRiMXxT/UnM3ztoE"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+
+1. e4 c5 2. Nf3 Nc6 (2... d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 e6 6. g4) 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 d6 6. Bg5 e6 { [%cal Gg5f6] } 7. Qd2 Be7 8. O-O-O O-O 9. f4 { [%cal Ga7a6] } 9... a6 (9... Bd7 { [%csl Gd6][%cal Gd4b5] }) (9... h6 10. Bh4 Bd7 11. Ndb5) 10. e5 dxe5 11. Nxc6 bxc6 (11... Qxd2+ 12. Rxd2 bxc6 13. fxe5 Nd5 14. Bxe7 Nxe7 { [%cal Gf1d3] }) 12. fxe5 Nd7 13. h4 Rb8 (13... Nxe5 14. Qxd8 Rxd8 15. Rxd8+ Bxd8 16. Bxd8) (13... Bxg5 14. hxg5) 14. Qe3 Re8 15. Rh3 Qa5 16. Bxe7 Rxe7 17. Rg3 Re8 { [%cal Ga5e5,Gd7e5] } (17... Qxe5 18. Qxe5 Nxe5 19. Rd8+) (17... g6 18. Rxd7 (18. h5 Qxe5 19. Qxe5 Nxe5 20. Rd8+ Kg7 21. Ne4) 18... Rxd7 19. h5) 18. Rxd7 Bxd7 19. Bd3 { [%cal Ga5b4] } 19... h6 20. Qf4 (20. Qxh6 Qxe5 21. Rg5 Qe3+ 22. Kd1 Qd4) 20... Kf8 { [%cal Gg3g7] } 21. Rxg7 Kxg7 22. Qf6+ Kf8 { [%csl Gg6][%cal Gd3g6] } 23. Bg6 { 1-0 Black resigns. } 23... Re7 24. Qh8# 1-0
+
+
+[Event "corr"]
+[Site "corr"]
+[Date "1931.??.??"]
+[White "A Karu"]
+[Black "Paul Keres"]
+[Result "0-1"]
+[Variant "Standard"]
+[ECO "D08"]
+[Opening "Queen's Gambit Declined: Albin Countergambit"]
+[StudyName "Masterpieces with Nose: Paul Keres"]
+[ChapterName "A Karu - Paul Keres"]
+[ChapterURL "https://lichess.org/study/tzRiMXxT/9gBSDKnC"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+
+1. d4 d5 2. c4 e5 3. Nc3 exd4 4. Qxd4 Nc6 5. Qxd5 Be6 6. Qb5 a6 7. Qa4 Bb4 { [%cal Ge2e3] } 8. Bd2 (8. e3 { [%cal Gg8f6] } 8... Nf6 9. Nf3 Ne4 10. Qc2 Nxc3 11. bxc3 Be7 12. Bd3 h6 { [%cal Ge1h1,Ge8h8] } 13. O-O O-O 14. Rd1 Qc8 { [%cal Gc1d2,Gd2e1] }) (8. e4 Qd4 9. Ne2 Qxc4 (9... Qxe4 10. Qxb4)) 8... Bxc4 9. a3 b5 10. Qc2 Nd4 11. Qe4+ Be7 { [%cal Gg8f6] } 12. Nf3 c5 13. Rc1 Nf6 14. Qb1 Qd6 15. Nxd4 (15. e3 Nxf3+ (15... Nb3 { [%cal Gc1d1,Gd1d8] }) 16. gxf3 { [%csl Gh2] }) 15... cxd4 16. Ne4 Nxe4 17. Qxe4 O-O 18. Bf4 Qd8 19. Rd1 Bf6 20. Qf3 Re8 { [%cal Ge8e1] } 21. b3 { [%cal Gd4d3] } 21... d3 22. e4 { [%cal Gf6c3] } (22. bxc4 Bc3+ 23. Bd2 Bxd2+ (23... dxe2 24. Bxe2 Bxd2+ 25. Rxd2 Qa5 { [%csl Gd2][%cal Ga8d8] } 26. Kd1 Rad8 27. Bd3 bxc4) 24. Rxd2 bxc4 { [%cal Gc4c3,Gd2d3,Gc3c2] }) 22... Bc3+ 23. Bd2 { [%cal Gd8d4] } 23... Qd4 24. Bxc3 Qxc3+ 25. Rd2 Rxe4+ 26. Qxe4 (26. Kd1 Qa1#) 26... Qc1+ 27. Rd1 d2# { 0-1 Black wins by checkmate. } 0-1
+
+
+[Event "Gothenburg Interzonal"]
+[Site "Gothenburg SWE"]
+[Date "1955.08.19"]
+[Round "4"]
+[White "Paul Keres"]
+[Black "Boris Spassky"]
+[Result "1-0"]
+[Variant "Standard"]
+[ECO "E14"]
+[Opening "Queen's Indian Defense: Spassky System"]
+[StudyName "Masterpieces with Nose: Paul Keres"]
+[ChapterName "Paul Keres - Boris Spassky"]
+[ChapterURL "https://lichess.org/study/tzRiMXxT/PjczC1we"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+
+1. d4 Nf6 2. c4 e6 3. Nf3 b6 4. e3 Bb7 5. Bd3 Be7 6. O-O O-O 7. b3 d5 8. Bb2 Nbd7 9. Nc3 c5 10. Qe2 dxc4 11. bxc4 Qc7 12. Rad1 Rad8 13. d5 a6 { [%cal Ge3e4] } 14. dxe6 (14. e4 Ng4 (14... Bd6 15. h3 (15. Rfe1 Ng4 16. h3 Nh2 (16... Nge5 17. Nxe5 Nxe5)))) 14... fxe6 15. Ng5 Qc6 (15... h6 { [%csl Ge6] } 16. Nxe6 Qc6 17. Nf4 g5 18. Nfd5 { [%cal Gd5e7] }) 16. f4 h6 17. Nf3 Qc7 18. Nh4 Bd6 19. Bb1 { [%cal Ge2c2,Gc2h7] } 19... Rfe8 20. Qf2 { [%cal Gf2g3,Gg3g7,Gb2g7] } 20... Nf8 21. Qg3 Nh5 22. Qh3 Nf6 23. Ng6 e5 24. Nd5 Bxd5 25. fxe5 Bxe5 { [%cal Gg6e5] } 26. Nxe5 { [%cal Gb2g7,Gb1h7] } 26... Be6 27. Qg3 Rxd1 28. Rxd1 b5 29. Rf1 N6d7 { [%csl Gg7][%cal Gg3g7,Gg8g7,Ge5f7,Gd7e5,Gb2e5,Gc7e5,Gf7e5] } (29... N8d7 30. Nxd7 Qxg3 31. Nxf6+ gxf6 32. hxg3) (29... N8h7 30. Qg6 Rd8) 30. Qxg7+ { 1-0 Black resigns. } 30... Kxg7 31. Nxd7+ Kg8 32. Nf6+ { [%csl Gf7,Gg7,Gh8] } 32... Kf7 (32... Kg7 33. Nxe8+ { [%cal Ge8c7] }) (32... Kh8 33. Nxe8+ { [%cal Ge8c7] }) 33. Nd5+ { [%cal Gd5c7] } 1-0
+
+
+[Event "Euwe - Keres 1939/40"]
+[Site "Amsterdam NED"]
+[Date "1940.01.05"]
+[Round "9"]
+[White "Max Euwe"]
+[Black "Paul Keres"]
+[Result "0-1"]
+[Variant "Standard"]
+[ECO "E19"]
+[Opening "Queen's Indian Defense: Classical Variation, Traditional Variation, Main Line"]
+[StudyName "Masterpieces with Nose: Paul Keres"]
+[ChapterName "Max Euwe - Paul Keres"]
+[ChapterURL "https://lichess.org/study/tzRiMXxT/DuFu38Gb"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+
+1. d4 Nf6 2. c4 e6 3. Nf3 b6 4. g3 Bb7 5. Bg2 Be7 6. O-O (6. Nc3 O-O 7. d5) 6... O-O 7. Nc3 (7. d5 exd5 8. Nh4 c6 9. cxd5 Nxd5 10. Nf5) 7... Ne4 (7... d5) 8. Qc2 Nxc3 9. Qxc3 d6 { [%csl Gd6][%cal Ge6e5,Gc7c5] } 10. Qc2 f5 11. Ne1 Qc8 12. e4 Nd7 13. d5 fxe4 14. Qxe4 (14. dxe6 Nf6 15. Bh3 { [%cal Gc8e8,Ge8h5] } (15. f3 Qxe6 16. fxe4 Bxe4 (16... Nxe4) 17. Rxf6!) 15... Qe8 16. Ng2) 14... Nc5 15. Qe2 { [%csl Ge7][%cal Ge2e7] } 15... Bf6 16. Bh3 Re8 17. Be3 Qd8 18. Bxc5 exd5 19. Be6+ (19. Be3 d4) 19... Kh8 20. Rd1 (20. cxd5 Bxd5 21. Bxd5 Rxe2 22. Bxa8 Qxa8 23. Be3 Rxb2 { [%cal Gd6d1,Gc7c1] }) 20... dxc5 21. Ng2 d4 22. f4 { [%csl Ge6][%cal Gf4f5,Gg2f4] } 22... d3 { [%csl Ge6][%cal Ge2d3] } 23. Rxd3 Qxd3 (23... Bd4+ 24. Kh1 Qd6 (24... Qf6 25. f5) 25. f5 g6 26. g4 Re7 { [%csl Gg7,Ge7][%cal Ge7g7,Ga8e8] } (26... gxf5 27. gxf5 Rg8 28. Bxg8 Rxg8) 27. Rg3 Rae8 28. b3 Rxe6 29. fxe6 Rxe6 30. Qd3 { [%cal Gd4g1,Gb7h1] }) 24. Qxd3 Bd4+ 25. Rf2 (25. Kh1 Rxe6) 25... Rxe6 { [%csl Gd4,Gb7] } 26. Kf1 Rae8 27. f5 { [%cal Gb7g2] } 27... Re5 (27... Rh6 { [%csl Gg2][%cal Gh6h2] } 28. h4) (27... Bxg2+ 28. Kxg2 Re1 29. Rd2 Rg1+ 30. Kh3 Re3 31. Qxe3 Bxe3 32. Rd8#) 28. f6 (28. Nf4 Re1#) 28... gxf6 { [%cal Gg7f6] } 29. Rd2 (29. Rxf6 Bxg2+ 30. Kxg2 Re2+ { [%csl Ge2,Ge8,Gd4] }) 29... Bc8 { [%cal Gc8h3] } 30. Nf4 Re3 31. Qb1 Rf3+ 32. Kg2 Rxf4 33. gxf4 Rg8+ 34. Kf3 (34. Kh1 Bb7+) (34. Kf1 Rg1+ { [%cal Gg1b1] }) 34... Bg4+ { 0-1 White resigns. } 35. Ke4 Re8+ 36. Kd3 (36. Kd5 Bf3+ { [%cal Gf3a8,Gd4g1] } 37. Qe4 Bxe4#) 36... Bf5# { [%csl Ge2,Ge3,Ge4,Gc3,Gd2,Gc2][%cal Gf5b1,Gd4g1] } 0-1
+
+
+[Event "Keres - Geller 2nd place Candidates Playoff"]
+[Site "Moscow URS"]
+[Date "1962.08.25"]
+[Round "8"]
+[White "Paul Keres"]
+[Black "Efim Geller"]
+[Result "1-0"]
+[Variant "Standard"]
+[ECO "D41"]
+[Opening "Queen's Gambit Declined: Semi-Tarrasch Defense, Pillsbury Variation"]
+[StudyName "Masterpieces with Nose: Paul Keres"]
+[ChapterName "Paul Keres - Efim Geller"]
+[ChapterURL "https://lichess.org/study/tzRiMXxT/fUrLP4Oy"]
+[Annotator "https://lichess.org/@/NoseKnowsAll"]
+
+1. d4 Nf6 2. c4 e6 3. Nf3 d5 4. Nc3 c5 5. cxd5 Nxd5 6. e3 (6. e4 Nxc3 7. bxc3 cxd4 8. cxd4 Bb4+ 9. Bd2 Bxd2+ 10. Qxd2 { [%cal Gd4d5,Ge6d5,Ge4e5] }) 6... Nc6 7. Bc4 Nxc3 8. bxc3 Be7 9. O-O O-O 10. e4 { [%cal Gb7b6,Gc8b7] } 10... b6 11. Bb2 { [%cal Gc5d4,Gc3d4] } 11... Bb7 12. Qe2 Na5 { [%cal Gc4g8] } 13. Bd3 Rc8 (13... Qc7) 14. Rad1 cxd4 15. cxd4 Bb4 16. d5 { [%cal Gd4d5] } 16... exd5 17. exd5 Qe7 (17... Bc3 18. Qe4 (18. Bxh7+ Kxh7 19. Qd3+ { [%cal Gb2c3] } 19... Kg8 20. Bxc3)) (17... Re8 18. Ne5) 18. Ne5 f6 19. Qh5 g6 20. Nxg6 hxg6 21. Bxg6 Qg7 (21... Bc3 22. d6 Qg7 23. Rd3 Bxb2 24. Rg3) (21... Nc4 22. Rd3 Ne5 (22... Nxb2 23. Rg3 Qg7 24. Bf5 Rf7 25. Qh7+ Kf8 26. Rxg7 Rxg7 27. Qh8+ Kf7 { [%cal Gg7g8,Gh8h5] } 28. Bxc8) 23. Rg3 { [%cal Gg6f7] }) 22. Rd3 Bd6 23. f4 (23. Rh3 Rc7) 23... Qh8 24. Qg4 Bc5+ 25. Kh1 Rc7 26. Bh7+ Kf7 (26... Kxh7 27. Rh3#) 27. Qe6+ Kg7 28. Rg3+ { 1-0 Black resigns. } 28... Kxh7 29. Qh3# 1-0
+
+

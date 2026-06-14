@@ -1,0 +1,112 @@
+[Event "Blog games 3: Erdogmus vs Vachier-Lagrave - Question 1 of 3"]
+[Date "2025.12.09"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C69"]
+[Opening "Ruy Lopez: Exchange Variation, Normal Variation"]
+[StudyName "Blog games 3"]
+[ChapterName "Erdogmus vs Vachier-Lagrave - Question 1 of 3"]
+[ChapterURL "https://lichess.org/study/XjOZWs9p/5nYZTa1f"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2025.12.09"]
+[UTCTime "03:14:27"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Bxc6 dxc6 5. O-O Qf6 6. d4 exd4 7. Bg5 Qd6 8. Nxd4 { [%cal Bf3d4,Rd1d4] } *
+
+
+[Event "Blog games 3: Erdogmus vs Vachier-Lagrave - Question 2 of 3"]
+[Date "2025.12.09"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C69"]
+[Opening "Ruy Lopez: Exchange Variation, Normal Variation"]
+[StudyName "Blog games 3"]
+[ChapterName "Erdogmus vs Vachier-Lagrave - Question 2 of 3"]
+[ChapterURL "https://lichess.org/study/XjOZWs9p/uHNQ3Bhp"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2025.12.09"]
+[UTCTime "03:13:55"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Bxc6 dxc6 5. O-O Qf6 6. d4 exd4 7. Bg5 Qd6 8. Nxd4 Be7 9. Be3 { [%csl Be7,Be3][%cal Bg5e3] } *
+
+
+[Event "Blog games 3: Erdogmus vs Vachier-Lagrave - Question 3 of 3"]
+[Date "2025.12.09"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C69"]
+[Opening "Ruy Lopez: Exchange Variation, Normal Variation"]
+[StudyName "Blog games 3"]
+[ChapterName "Erdogmus vs Vachier-Lagrave - Question 3 of 3"]
+[ChapterURL "https://lichess.org/study/XjOZWs9p/9Icc4zfc"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2025.12.09"]
+[UTCTime "03:10:28"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Bxc6 dxc6 5. O-O Qf6 6. d4 exd4 7. Bg5 Qd6 8. Nxd4 Be7 9. Be3 Nh6 10. Qd2 c5 11. Ne2 Qxd2 12. Nxd2 Be6 13. h3 O-O-O 14. Nf4 Bf6 15. c3 { [%cal Bc2c3] } *
+
+
+[Event "Blog games 3: Caruana vs Nakamura - Question 1 of 4"]
+[Date "2026.03.31"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A13"]
+[Opening "English Opening: Agincourt Defense"]
+[StudyName "Blog games 3"]
+[ChapterName "Caruana vs Nakamura - Question 1 of 4"]
+[ChapterURL "https://lichess.org/study/XjOZWs9p/M8RTo87S"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2026.03.31"]
+[UTCTime "04:05:10"]
+
+1. Nf3 d5 2. c4 e6 3. g3 d4 4. Bg2 Nc6 5. O-O Bc5 6. e3 Nge7 7. Nxd4 Nxd4 8. b4 Bxb4 9. exd4 O-O 10. Qb3 Ba5 11. Nc3 Nf5 12. Ba3 Nxd4 13. Qa4 { [%cal Bb3a4] } *
+
+
+[Event "Blog games 3: Caruana vs Nakamura - Question 2 of 4"]
+[Date "2026.03.31"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A13"]
+[Opening "English Opening: Agincourt Defense"]
+[StudyName "Blog games 3"]
+[ChapterName "Caruana vs Nakamura - Question 2 of 4"]
+[ChapterURL "https://lichess.org/study/XjOZWs9p/FZkbPuEP"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2026.03.31"]
+[UTCTime "04:04:08"]
+
+1. Nf3 d5 2. c4 e6 3. g3 d4 4. Bg2 Nc6 5. O-O Bc5 6. e3 Nge7 7. Nxd4 Nxd4 8. b4 Bxb4 9. exd4 O-O 10. Qb3 Ba5 11. Nc3 Nf5 12. Ba3 Re8 13. d5 Nd4 14. Qa4 b6 15. Rae1 Bd7 16. Qd1 c5 17. Bb2 Rb8 18. a4 a6 19. dxe6 Bxe6 20. Nd5 Qd6 21. Bxd4 cxd4 22. Re4 Bxd5 23. Rxe8+ Rxe8 24. Bxd5 { [%cal Bg2d5] } *
+
+
+[Event "Blog games 3: Caruana vs Nakamura - Question 3 of 4"]
+[Date "2026.03.31"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A13"]
+[Opening "English Opening: Agincourt Defense"]
+[StudyName "Blog games 3"]
+[ChapterName "Caruana vs Nakamura - Question 3 of 4"]
+[ChapterURL "https://lichess.org/study/XjOZWs9p/Serl7Mn2"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2026.03.31"]
+[UTCTime "04:04:32"]
+
+1. Nf3 d5 2. c4 e6 3. g3 d4 4. Bg2 Nc6 5. O-O Bc5 6. e3 Nge7 7. Nxd4 Nxd4 8. b4 Bxb4 9. exd4 O-O 10. Qb3 Ba5 11. Nc3 Nf5 12. Ba3 Re8 13. d5 Nd4 14. Qa4 b6 15. Rae1 Bd7 16. Qd1 c5 17. Bb2 Rb8 18. a4 a6 19. dxe6 Bxe6 20. Nd5 Qd6 21. Bxd4 cxd4 22. Re4 Bxd5 23. Rxe8+ Rxe8 24. Bxd5 Bb4 25. h4 a5 26. d3 Qf6 27. Kg2 Qe5 28. Qf3 Qf6 29. Qg4 Bc5 30. h5 h6 31. Rh1 Qg5 32. Qd1 Qe7 33. Bc6 Rc8 34. Re1 Qc7 35. Bd5 Kf8 36. Qg4 Rd8 37. Qe4 Kg8 38. Qf5 Qd7 39. Qf3 Rf8 40. Re5 Bd6 41. Rf5 Qe7 42. Qg4 Be5 43. Rf3 Bf6 44. Rf4 Qd8 45. Be4 Re8 46. Rf5 Qd7 47. Qf4 Bg5 48. Qf3 Qc7 49. Rxf7 Qxf7 50. Bd5 Re6 51. Qg4 Kf8 52. Bxe6 Qe8 53. Bd7 Qa8+ 54. Kg1 Bf6 55. Qe6 Qd8 56. Bc6 Qe7 57. Qc8+ Qd8 58. Qb7 Be5 59. Bd5 Qc7 60. Qa8+ Ke7 61. Qg8 Kd6 62. Be4 Ke7 63. Bg6 Bf6 64. Qf7+ Kd6 65. Qd5+ Ke7 66. Bf5 Be5 67. f4 Bf6 68. Kg2 Qd6 69. Qb7+ Kf8 70. Kf3 Qe7 71. Qe4 Qxe4+ 72. dxe4 Be7 73. e5 Bb4 74. Bd3 Be1 75. g4 Ke7 76. Ke4 Bg3 77. f5 Kd7 78. Kd5 { [%cal Be4d5] } *
+
+
+[Event "Blog games 3: Caruana vs Nakamura - Question 4 of 4"]
+[Date "2026.03.31"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A13"]
+[Opening "English Opening: Agincourt Defense"]
+[StudyName "Blog games 3"]
+[ChapterName "Caruana vs Nakamura - Question 4 of 4"]
+[ChapterURL "https://lichess.org/study/XjOZWs9p/hI4OfObZ"]
+[Annotator "https://lichess.org/@/Chess-Network"]
+[UTCDate "2026.03.31"]
+[UTCTime "04:04:50"]
+
+1. Nf3 d5 2. c4 e6 3. g3 d4 4. Bg2 Nc6 5. O-O Bc5 6. e3 Nge7 7. Nxd4 Nxd4 8. b4 Bxb4 9. exd4 O-O 10. Qb3 Ba5 11. Nc3 Nf5 12. Ba3 Re8 13. d5 Nd4 14. Qa4 b6 15. Rae1 Bd7 16. Qd1 c5 17. Bb2 Rb8 18. a4 a6 19. dxe6 Bxe6 20. Nd5 Qd6 21. Bxd4 cxd4 22. Re4 Bxd5 23. Rxe8+ Rxe8 24. Bxd5 Bb4 25. h4 a5 26. d3 Qf6 27. Kg2 Qe5 28. Qf3 Qf6 29. Qg4 Bc5 30. h5 h6 31. Rh1 Qg5 32. Qd1 Qe7 33. Bc6 Rc8 34. Re1 Qc7 35. Bd5 Kf8 36. Qg4 Rd8 37. Qe4 Kg8 38. Qf5 Qd7 39. Qf3 Rf8 40. Re5 Bd6 41. Rf5 Qe7 42. Qg4 Be5 43. Rf3 Bf6 44. Rf4 Qd8 45. Be4 Re8 46. Rf5 Qd7 47. Qf4 Bg5 48. Qf3 Qc7 49. Rxf7 Qxf7 50. Bd5 Re6 51. Qg4 Kf8 52. Bxe6 Qe8 53. Bd7 Qa8+ 54. Kg1 Bf6 55. Qe6 Qd8 56. Bc6 Qe7 57. Qc8+ Qd8 58. Qb7 Be5 59. Bd5 Qc7 60. Qa8+ Ke7 61. Qg8 Kd6 62. Be4 Ke7 63. Bg6 Bf6 64. Qf7+ Kd6 65. Qd5+ Ke7 66. Bf5 Be5 67. f4 Bf6 68. Kg2 Qd6 69. Qb7+ Kf8 70. Kf3 Qe7 71. Qe4 Qxe4+ 72. dxe4 Be7 73. e5 Bb4 74. Bd3 Be1 75. g4 Ke7 76. Ke4 Bg3 77. f5 Kd7 78. Kd5 Bh4 79. f6 gxf6 80. e6+ { [%cal Be5e6] } *
+
+

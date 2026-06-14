@@ -1,0 +1,34 @@
+[Event "Strategy Session: Rosen - Some guy"]
+[Date "2018.08.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B17"]
+[Opening "Caro-Kann Defense: Karpov Variation"]
+[StudyName "Strategy Session"]
+[ChapterName "Rosen - Some guy"]
+[ChapterURL "https://lichess.org/study/M0mzAlDz/SybwbTv4"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2018.08.08"]
+[UTCTime "01:13:53"]
+
+1. e4 { [%eval 0.0] } 1... c6 { [%eval 0.39] } 2. d4 { [%eval 0.29] } 2... d5 { [%eval 0.39] } 3. Nd2 { [%eval 0.15] } 3... dxe4 { [%eval 0.3] } 4. Nxe4 { [%eval 0.06] } 4... Nd7 { [%eval 0.45] } 5. Qe2 { [%eval 0.34] [%csl Rf1][%cal Ge7e6] } 5... Ngf6?? { [%eval #1] } { Checkmate is now unavoidable. Best move was Ndf6. } (5... Ndf6 6. Nf3 Bf5 7. Ng3 Bg4 8. c3 Qd5 9. Qe5 Bxf3 10. gxf3) 6. Nd6#! *
+
+
+[Event "Strategy Session: Chapter 2"]
+[Date "2018.08.08"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Strategy Session"]
+[ChapterName "Chapter 2"]
+[ChapterURL "https://lichess.org/study/M0mzAlDz/CFD5wYI2"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[FEN "8/8/4K3/5R2/8/2bk4/8/8 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2018.08.08"]
+[UTCTime "01:18:24"]
+
+ *
+
+

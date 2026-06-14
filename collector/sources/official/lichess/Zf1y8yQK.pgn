@@ -1,0 +1,20 @@
+[Event "GCT Blitz Croatia 2021"]
+[Site "Zagreb CRO"]
+[Date "2021.07.10"]
+[Round "9.3"]
+[White "Garry Kasparov"]
+[Black "Ian Nepomniachtchi"]
+[Result "0-1"]
+[WhiteElo "2812"]
+[BlackElo "2792"]
+[Variant "Standard"]
+[ECO "D38"]
+[Opening "Queen's Gambit Declined: Ragozin Defense"]
+[StudyName "EricRosen's Study"]
+[ChapterName "Garry Kasparov - Ian Nepomniachtchi"]
+[ChapterURL "https://lichess.org/study/Zf1y8yQK/kDxAQrxv"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Nf3 d5 5. cxd5 exd5 6. Bf4 Ne4 7. Rc1 Nd7 8. e3 g5 9. Bg3 h5 { [%csl Gb3] } 10. Qb3 Bxc3+ 11. bxc3 c6 12. Nd2 Nxd2 13. Kxd2 h4 14. Bd6 Qf6 { [%csl Gf2,Gd6][%cal Gf6d6,Gf6f2] } 15. Ba3 Qxf2+ 16. Be2 Nf6 17. Qb4 Ne4+ 18. Kd1 c5 { 0-1 Black wins. } 0-1
+
+

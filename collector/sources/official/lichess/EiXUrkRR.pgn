@@ -1,0 +1,64 @@
+[Event "Q&A with gms: Chapter 1"]
+[Date "2019.05.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C39"]
+[Opening "King's Gambit Accepted: King's Knight's Gambit"]
+[StudyName "Q&A with gms"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/EiXUrkRR/QSoRH7T7"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.05.30"]
+[UTCTime "03:23:30"]
+
+1. e4 e5 2. f4 (2. d4 exd4 3. c3 dxc3 (3... d5 4. exd5 Qxd5 5. cxd4 Nc6 6. Nf3 Bg4 7. Be2 Bb4+ 8. Nc3 Bxf3 9. Bxf3 Qc4 10. Bxc6+ bxc6 11. Qe2+ Qxe2+ 12. Kxe2 O-O-O) 4. Bc4 cxb2 5. Bxb2) 2... exf4 (2... d5 3. exd5 e4 4. d3 Nf6 5. Nc3 Bb4 6. Bd2 e3 7. Bxe3 Nxd5 8. Bd2 Bxc3 9. Qe2+ Kd7 { [%cal Gh8e8,Ge8e2] } 10. Qg4+ Kc6 11. Qf3 Bxd2+ 12. Kxd2 Qf6) 3. Nf3 g5 (3... h6) 4. h4 (4. Bc4 g4 (4... Nc6 5. O-O d6 { [%csl Gf4,Gg5,Gd6] } 6. h4 h6 { [%csl Gh6,Gg5,Gf4][%cal Gf8g7,Gg8e7] } 7. d4 Bg7 8. c3) 5. O-O gxf3 6. Qxf3 Qf6 7. d4 (7. e5 Qxe5 8. Bxf7+ Kxf7 9. d4 Qxd4+ 10. Be3)) 4... g4 *
+
+
+[Event "Q&A with gms: taimanov"]
+[Date "2019.05.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B48"]
+[Opening "Sicilian Defense: Taimanov Variation, Bastrikov Variation, English Attack"]
+[StudyName "Q&A with gms"]
+[ChapterName "taimanov"]
+[ChapterURL "https://lichess.org/study/EiXUrkRR/GbAWtCXc"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.05.30"]
+[UTCTime "03:29:11"]
+
+1. e4 c5 2. Nf3 e6 3. d4 cxd4 4. Nxd4 Nc6 5. Nc3 Qc7 { [%csl Gg2][%cal Gg2g3] } 6. Be3 a6 { [%cal Gd1d2,Ge1c1,Gf2f3] } 7. Qf3 { [%csl Gf3][%cal Ge1c1,Gf3g3] } (7. Qd2 Nf6 8. O-O-O { [%cal Gf2f3,Gg2g4] } 8... Bb4 9. f3 Ne5 10. Nb3 b5 11. Kb1 (11. Qe1 Be7 12. f4 Ng6 13. e5 Ng4 14. Ne4 Nxe3 15. Qxe3 Bb7 (15... O-O 16. h4 Bb7 17. h5 (17. Nd6 f6 18. Nxb7 { [%cal Gh4h5] } 18... Nxe5 (18... fxe5 { [%cal Ge5f4] } 19. f5 Rac8 20. c3 { [%cal Gb7c5,Ge7c5] } 20... exf5 (20... Rxf5 21. Bd3 Rf6 22. N7a5 { [%csl Ga5,Gb3][%cal Gb3a5,Ga5b3,Gc7a5,Gd7d5,Ge5e4] } 22... d5))) 17... Rac8 18. Bd3 Nxe5 19. fxe5 Qxe5 20. Nbd2 f5 21. Nf3 Qc7 22. Neg5 Bd5 23. Nh4 Qc5 24. Qd2 Bf6 25. a3 b4 26. axb4 Qd4 27. c3 Bxg5 28. Qxg5 Rxc3+ 29. Bc2 Rxc2+ 30. Kxc2 Rc8+ 31. Kb1 Be4+ 32. Ka1 Qxb4 33. Qe3 Rc5 34. Rd3 Rb5 { Ter Sahakyan, Samvel - Potkin, Vladimir, 0-1, EU-ch 12th, 2011, https://lichess.org/MInHesl8 })) 11... Be7) *
+
+
+[Event "Q&A with gms: Favorite opener black side"]
+[Date "2019.05.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C00"]
+[Opening "French Defense"]
+[StudyName "Q&A with gms"]
+[ChapterName "Favorite opener black side"]
+[ChapterURL "https://lichess.org/study/EiXUrkRR/SSFp2INt"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.05.30"]
+[UTCTime "03:36:02"]
+
+1. e4 e6 (1... c5) (1... e5 2. Nf3 Nf6 3. Nxe5 Nc6 4. Nxc6 dxc6 5. e5 (5. d3 Bc5 6. Bg5 (6. h3 Bxf2+ 7. Kxf2 Nxe4+ 8. Ke3 (8. Kg1 Qd4+ 9. Kh2 Qe5+ 10. Kg1 Ng3) 8... O-O 9. Kxe4) (6. Be2) 6... Nxe4) (5. Nc3 Bc5 6. d3 (6. Be2 h5 7. h3 Qd4 8. O-O Ng4) 6... Ng4) 5... Ne4 6. d3 (6. d4 Qh4 7. Be3 f6 8. g3 Nxg3 9. fxg3 Qe4) 6... Bc5) *
+
+
+[Event "Q&A with gms: Chapter 4"]
+[Date "2019.05.30"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D00"]
+[Opening "Queen's Pawn Game: Accelerated London System"]
+[StudyName "Q&A with gms"]
+[ChapterName "Chapter 4"]
+[ChapterURL "https://lichess.org/study/EiXUrkRR/pA5BSGUt"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.05.30"]
+[UTCTime "03:43:30"]
+
+1. d4 d5 2. Bf4 Nf6 3. e3 e6 { [%csl Gb5] } 4. Nd2 c5 5. c3 Nc6 6. Ngf3 Bd6 7. Bg3 O-O 8. Bb5 Ne7 { [%csl Ge7] } 9. Bd3 c4 10. Bc2 b5 11. e4 dxe4 12. Nxe4 Nxe4 13. Bxe4 Rb8 14. Bxh7+ Kxh7 15. Ng5+ Kg6 *
+
+

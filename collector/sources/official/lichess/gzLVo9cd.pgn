@@ -1,0 +1,88 @@
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2025.08.12"]
+[Round "-"]
+[White "dajua"]
+[Black "NateSolon"]
+[Result "1-0"]
+[WhiteElo "2525"]
+[BlackElo "2572"]
+[TimeControl "180"]
+[Termination "dajua won by resignation"]
+[Variant "Standard"]
+[ECO "C11"]
+[Opening "French Defense: Steinitz Variation, Boleslavsky Variation"]
+[StudyName "My Blitz Games"]
+[ChapterName "dajua - NateSolon"]
+[ChapterURL "https://lichess.org/study/gzLVo9cd/WNOqj8kY"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+
+1. e4 { [%eval 0.18] } 1... e6 { [%eval 0.28] } 2. d4 { [%eval 0.29] } 2... d5 { [%eval 0.37] } 3. Nc3 { [%eval 0.28] } 3... Nf6 { [%eval 0.32] } 4. e5 { [%eval 0.39] } 4... Nfd7 { [%eval 0.29] } 5. f4 { [%eval 0.25] } 5... c5 { [%eval 0.27] } 6. Nf3 { [%eval 0.26] } 6... Nc6 { [%eval 0.36] } 7. Be3 { [%eval 0.21] } 7... cxd4 { [%eval 0.42] } 8. Nxd4 { [%eval 0.4] } 8... Bc5 { [%eval 0.42] } 9. Qd2 { [%eval 0.47] } 9... Nxd4 { [%eval 0.32] } 10. Bxd4 { [%eval 0.37] } 10... Bxd4 { [%eval 0.42] } 11. Qxd4 { [%eval 0.37] } 11... Qb6 { [%eval 0.47] } 12. Qxb6 { [%eval 0.38] } 12... Nxb6 { [%eval 0.42] } 13. a4 { [%eval 0.26] } 13... a5 { [%eval 0.16] } 14. Nb5 { [%eval 0.02] } 14... Ke7 { [%eval 0.11] } 15. b3 { [%eval 0.12] } 15... Bd7 { [%eval 0.26] } 16. O-O-O { [%eval 0.0] } 16... Bxb5 { [%eval 0.0] } 17. Bxb5 { [%eval 0.04] } 17... Rac8 { [%eval 0.03] } 18. Kb2 { [%eval 0.03] } 18... Rc5 { [%eval 0.04] } 19. c3 { [%eval 0.01] } 19... Rhc8 { [%eval 0.02] } 20. Rd3 { [%eval 0.0] } 20... d4?? { [%eval 2.22] } { Blunder. h5 was best. } (20... h5 21. Rf1 g6 22. Rc1 R5c7 23. g3 Rc5 24. Rd4 Kf8 25. h3 Ke7 26. h4) 21. c4 { [%eval 1.95] } 21... f6?! { [%eval 2.83] } { Inaccuracy. Rd8 was best. } (21... Rd8 22. Rhd1 f6 23. exf6+ gxf6 24. Rxd4 Rxd4 25. Rxd4 Rc7 26. b4 axb4 27. Kb3) 22. exf6+ { [%eval 2.77] } 22... gxf6 { [%eval 2.79] } 23. Rxd4 { [%eval 2.73] } 23... Rg8 { [%eval 3.28] } 24. g3 { [%eval 3.09] } { 1-0 White wins. } 1-0
+
+
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2025.08.12"]
+[Round "-"]
+[White "ibrahim_yasser00"]
+[Black "NateSolon"]
+[Result "0-1"]
+[WhiteElo "2506"]
+[BlackElo "2579"]
+[TimeControl "180"]
+[Termination "NateSolon won by checkmate"]
+[Variant "Standard"]
+[ECO "A11"]
+[Opening "English Opening: Caro-Kann Defensive System"]
+[StudyName "My Blitz Games"]
+[ChapterName "ibrahim_yasser00 - NateSolon"]
+[ChapterURL "https://lichess.org/study/gzLVo9cd/5tZFyDK2"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+
+1. c4 c6 2. Nf3 d5 3. g3 Bg4 4. Bg2 Nd7 5. O-O Bxf3 6. Bxf3 Ne5 7. cxd5 Nxf3+ 8. exf3 Qxd5 9. Nc3 Qd7 10. d4 e6 11. Be3 Nf6 12. Qb3 Be7 13. Rad1 O-O 14. Ne4 Rfd8 15. Nc5 Bxc5 16. dxc5 Nd5 17. Kg2 e5 18. h4 Qe7 19. h5 h6 20. Rc1 Rd7 21. Qc4 Rad8 22. Qg4 Nf6 23. Qh4 Qe6 24. b3 Nd5 25. Rfe1 Qf5 26. g4 Qe6 27. g5 hxg5 28. Qxg5 Nb4 29. Rc4 f6 30. Qg3 Nd3 31. Rh1 Qf5 32. Rg4 Kh7 33. Rg6 a5 34. Rh4 Ne1+ 35. Kf1 Nxf3 36. Rh1 Rd1+ 37. Kg2 Rxh1 38. Kxh1 Qxh5+ 39. Kg2 Ne1+ 40. Kf1 Qxg6 41. Qh4+ Kg8 42. Kxe1 Qb1+ 43. Ke2 Qd1# { 0-1 Black wins. } 0-1
+
+
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2025.08.12"]
+[Round "-"]
+[White "NateSolon"]
+[Black "wanyaland"]
+[Result "1-0"]
+[WhiteElo "2585"]
+[BlackElo "2501"]
+[TimeControl "180"]
+[Termination "NateSolon won by resignation"]
+[Variant "Standard"]
+[ECO "A43"]
+[Opening "Benoni Defense: Old Benoni"]
+[StudyName "My Blitz Games"]
+[ChapterName "NateSolon - wanyaland"]
+[ChapterURL "https://lichess.org/study/gzLVo9cd/BWbjNGtT"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+
+1. d4 c5 2. d5 d6 3. e4 Nf6 4. Nc3 g6 5. Nf3 Bg7 6. Bb5+ Bd7 7. a4 a6 8. Bc4 O-O 9. h3 Qa5 10. O-O b5 11. Bd3 c4 12. Be2 b4 13. Nb1 Nxe4 14. Bxc4 Nf6 15. Re1 Re8 16. Nbd2 Qc7 17. Bd3 Nxd5 18. Ng5 Nf6 19. Nde4 Nc6 20. Rb1 Ne5 21. Bf1 Bxa4 22. b3 Bd7 23. Bb2 a5 24. Bxe5 dxe5 25. Bc4 e6 26. Qf3 Qd8 27. Rbd1 Ra7 28. Rd3 Qe7 29. Nd6 Rf8 30. Red1 h6 31. Nge4 Nxe4 32. Qxe4 f5 33. Qe3 Rc7 34. Qb6 Rc6 35. Qb7 Rd8 36. Nxf5 gxf5 37. Rxd7 Rxd7 38. Rxd7 Rb6 39. Rxe7 Rxb7 40. Rxb7 { 1-0 White wins. } 1-0
+
+
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2025.08.13"]
+[Round "-"]
+[White "Ganec4"]
+[Black "NateSolon"]
+[Result "1-0"]
+[WhiteElo "2566"]
+[BlackElo "2576"]
+[TimeControl "180"]
+[Termination "Ganec4 won by checkmate"]
+[Variant "Standard"]
+[ECO "B29"]
+[Opening "Sicilian Defense: Nimzowitsch Variation, Closed Variation"]
+[StudyName "My Blitz Games"]
+[ChapterName "Ganec4 - NateSolon"]
+[ChapterURL "https://lichess.org/study/gzLVo9cd/PeKIwLHt"]
+[Annotator "https://lichess.org/@/CheckRaiseMate"]
+
+1. e4 c5 2. Nf3 Nf6 3. Nc3 d5 4. e5 Nfd7 5. Bb5 e6 6. d3 a6 7. Bxd7+ Bxd7 8. O-O Nc6 9. Bf4 Be7 10. Qd2 O-O 11. g3 b5 12. h4 h6 13. h5 Kh7 14. Rae1 b4 15. Nd1 a5 16. Ne3 Re8 17. Kg2 Nd4 18. Ng4 Nxf3 19. Kxf3 Bf8 20. Kg2 d4 21. Kh2 Bc6 22. Bxh6 gxh6 23. Nf6+ Kh8 24. Qf4 Bg7 25. g4 Bxf6 26. Qxh6+ Kg8 27. exf6 Qd6+ 28. f4 Qf8 29. Qg5+ Kh7 30. Qh4 Qd6 31. Re5 Rh8 32. Rg1 b3 33. axb3 a4 34. g5 Kg8 35. g6 axb3 36. gxf7+ Kxf7 37. Rg7+ Kf8 38. cxb3 Ra2 39. h6 Rxb2+ 40. Kh3 Rxb3 41. Qh5 Rxd3+ 42. Kh4 Qd8 43. Qf7# { 1-0 White wins. } 1-0
+
+

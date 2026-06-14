@@ -1,0 +1,19 @@
+[Event "Tactics For Beginners: Pin"]
+[Date "2021.09.06"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Tactics For Beginners"]
+[ChapterName "Pin"]
+[ChapterURL "https://lichess.org/study/xn4t4Bpn/76IUApQT"]
+[Annotator "https://lichess.org/@/Bhargav529"]
+[FEN "3k4/8/3n4/8/8/8/8/K2R4 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2021.09.06"]
+[UTCTime "12:02:16"]
+
+{ A pin is a move in which a piece 'freezes' an opponent piece. If the 'frozen' piece moves, then a more valuable piece gets attacked. In this example, the rook 'pins' the opponent knight. }
+ *
+
+

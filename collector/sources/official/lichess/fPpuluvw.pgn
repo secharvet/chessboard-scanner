@@ -1,0 +1,157 @@
+[Event "Q&A with IM Rosen | January 12: Where do I start to get better?"]
+[Date "2019.01.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Q&A with IM Rosen | January 12"]
+[ChapterName "Where do I start to get better?"]
+[ChapterURL "https://lichess.org/study/fPpuluvw/j2guT1a4"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.01.12"]
+[UTCTime "13:44:09"]
+
+{ For complete beginners: https://lichess.org/learn
+
+For beginners: https://lichess.org/practice }
+ *
+
+
+[Event "Q&A with IM Rosen | January 12: Creating a repertoire from an opening book"]
+[Date "2019.01.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Q&A with IM Rosen | January 12"]
+[ChapterName "Creating a repertoire from an opening book"]
+[ChapterURL "https://lichess.org/study/fPpuluvw/DT6mBEOl"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.01.12"]
+[UTCTime "15:00:13"]
+
+{ niall_homer: Hi Eric! I can't stay for long. How would you go about learning a repertoire for a particular opening from a book? I find the the multiple sidelines in the example games confusing. thanks }
+ *
+
+
+[Event "Q&A with IM Rosen | January 12: Favorite Gambits"]
+[Date "2019.01.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A52"]
+[Opening "Indian Defense: Budapest Defense"]
+[StudyName "Q&A with IM Rosen | January 12"]
+[ChapterName "Favorite Gambits"]
+[ChapterURL "https://lichess.org/study/fPpuluvw/m4gjMN8x"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.01.12"]
+[UTCTime "15:17:10"]
+
+1. d4 (1. e4 e5 (1... d5 2. exd5 Qxd5 3. Nc3 Qa5 4. b4 { Leonhardt Gambit } 4... Qxb4 5. Nb5 Qa5 6. Bc4 c6? 7. Bxf7+ Kd8 (7... Kxf7 8. Qh5+ g6 9. Nd6+ { [%csl Gf7,Ga5][%cal Gd6f7,Gh5a5] })) 2. Nf3 Nf6 3. Nxe5 Nc6 { Stafford Gambit } 4. Nxc6 dxc6 5. d3 Bc5 6. Bg5 Nxe4 7. Bxd8 (7. Qe2 Qxg5 8. Qxe4+ Kd8 9. Be2 Qc1+ { Yuuki_is_here - IM EricRosen, 0-1, -, https://lichess.org/f2yOCAVe } 10. Bd1 Re8) 7... Bxf2+ 8. Ke2 Bg4#) 1... Nf6 2. c4 e5 { Budapest Gambit } 3. dxe5 Ng4 *
+
+
+[Event "Q&A with IM Rosen | January 12: Tip for studying endgames"]
+[Date "2019.01.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Q&A with IM Rosen | January 12"]
+[ChapterName "Tip for studying endgames"]
+[ChapterURL "https://lichess.org/study/fPpuluvw/ZPaf07yP"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.01.12"]
+[UTCTime "15:26:52"]
+
+ *
+
+
+[Event "Q&A with IM Rosen | January 12: Lucena Position (Tip for studying endgames)"]
+[Date "2019.01.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Q&A with IM Rosen | January 12"]
+[ChapterName "Lucena Position (Tip for studying endgames)"]
+[ChapterURL "https://lichess.org/study/fPpuluvw/zKLwC7c7"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[FEN "8/8/3k4/1K6/1P6/8/6R1/7r w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2019.01.12"]
+[UTCTime "15:28:41"]
+
+ *
+
+
+[Event "Q&A with IM Rosen | January 12: Top 5 Favourite Chess Players"]
+[Date "2019.01.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Q&A with IM Rosen | January 12"]
+[ChapterName "Top 5 Favourite Chess Players"]
+[ChapterURL "https://lichess.org/study/fPpuluvw/R3rc5u8j"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[FEN "8/8/3k4/1K6/1P6/8/6R1/7r w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2019.01.12"]
+[UTCTime "15:35:45"]
+
+{ Karpov
+Aronian
+Yasser
+Michael Adams
+Carlsen }
+ *
+
+
+[Event "Q&A with IM Rosen | January 12: 1.d4 g6"]
+[Date "2019.01.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A40"]
+[Opening "Queen's Pawn Game: Modern Defense"]
+[StudyName "Q&A with IM Rosen | January 12"]
+[ChapterName "1.d4 g6"]
+[ChapterURL "https://lichess.org/study/fPpuluvw/EWUqyNEj"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.01.12"]
+[UTCTime "15:39:16"]
+
+1. d4 g6 { [%cal Gg7g6] } 2. e4 *
+
+
+[Event "Q&A with IM Rosen | January 12: Chapter 9"]
+[Date "2019.01.12"]
+[Result "1-0"]
+[Variant "Standard"]
+[ECO "B06"]
+[Opening "Modern Defense"]
+[StudyName "Q&A with IM Rosen | January 12"]
+[ChapterName "Chapter 9"]
+[ChapterURL "https://lichess.org/study/fPpuluvw/17u3Yxxa"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.01.12"]
+[UTCTime "15:41:06"]
+
+1. e4 g6 (1... d6 2. d4 Nf6) 2. d4 Bg7 3. Nf3 d6 4. Bc4 Nf6 5. Qe2 O-O (5... c6 6. Bb3 O-O 7. O-O a5 8. a3 Bg4 9. Nbd2 Nbd7 10. h3 Bxf3 11. Nxf3 e5 12. dxe5 dxe5 13. c3 Nc5 14. Bc2 { [%csl Gb4][%cal Gb2b4] } 14... a4 15. Nxe5 Re8 16. f4 Nh5 17. Qf2 Qe7 (17... Bxe5 18. fxe5 { [%csl Gf7] }) 18. Be3 Nb3 19. Bxb3 axb3 20. Rad1 f6 21. Bc5 Qe6 22. Nd7 { [%cal Gd7b6] } 22... Rad8 23. Rd6 Qxe4 24. g4 b6 25. Bxb6 Qe7 26. Rfd1 Nxf4 27. Qxf4 { Carlsen, M. - Nakamura, Hi, 1-0, chess.com Blitz Final 1m+1spm 2016, https://lichess.org/FWqNBnnl }) 6. e5 Ne8 (6... dxe5 7. dxe5 Nd5 { [%csl Gd5] } 8. O-O { [%csl Gd1][%cal Gf1d1] } 8... c6 9. h3) 7. O-O c6 8. Bf4 d5 9. Bd3 Nc7 10. c3 Ne6 11. Be3 f5 12. exf6 exf6 13. Nbd2 a5 14. Rfe1 Na6 15. Nf1 Nac7 16. Qd2 Qd6 17. Ng3 b5 18. h4 f5 19. Bh6 f4 20. Bxg7 Nxg7 21. Nf1 Bf5 22. Re5 Bxd3 23. Qxd3 Rae8 24. Rae1 Rxe5 25. Nxe5 Nf5 26. Qh3 Ne8 27. h5 Kg7 28. hxg6 hxg6 29. Qg4 Nc7 30. Qxf4 Ne6 31. Qg4 Rf6 32. Ng3 Nxg3 33. Qxg3 Nf4 34. Ng4 Rf5 35. Qh4 Rh5 36. Qe7+ Qxe7 37. Rxe7+ Kf8 38. Re3 Rg5 39. f3 b4 40. g3 Nh5 41. Kf2 Ng7 42. cxb4 Nf5 43. bxa5 Nxe3 44. Kxe3 Rh5 45. Ne5 Rh2 46. a6 Rxb2 47. a4 Ra2 48. Nd7+ Kg7 49. Nb6 Ra3+ 50. Kf4 Rb3 51. a7 Rxb6 52. a8=Q Kh6 53. Qh8# { 1-0 White wins by checkmate. } 1-0
+
+
+[Event "Q&A with IM Rosen | January 12: Kings Gambit"]
+[Date "2019.01.12"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C33"]
+[Opening "King's Gambit Accepted: Bishop's Gambit"]
+[StudyName "Q&A with IM Rosen | January 12"]
+[ChapterName "Kings Gambit"]
+[ChapterURL "https://lichess.org/study/fPpuluvw/RY0TUbUR"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.01.12"]
+[UTCTime "15:54:31"]
+
+1. e4 e5 2. f4 exf4 (2... d5 3. exd5 exf4 4. Nf3 Nf6) 3. Bc4 Qh4+ 4. Kf1 { [%csl Gf3,Gd4][%cal Gg1f3,Gd2d4] } *
+
+

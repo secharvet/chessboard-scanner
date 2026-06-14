@@ -1,0 +1,108 @@
+[Event "endgame: Chapter 1"]
+[Date "2025.11.15"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "endgame"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/39JHDcxo/HXgxI303"]
+[Annotator "https://lichess.org/@/Temenyansen"]
+[FEN "8/2p5/6K1/8/8/5k2/P7/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.11.15"]
+[UTCTime "06:32:46"]
+
+1. Kf5 (1. a4 { [%cal Ga4a8] } 1... Ke4 2. Kf6 (2. a5 Kd5 3. a6 Kc6 4. a7 Kb7) 2... Kd5) 1... c5 (1... Ke3 2. Ke5 Kd3 3. Kd5 Kc3 4. Kc5 c6 5. a4 Kb3 6. a5) 2. Ke5 Ke3 (2... c4 3. Kd4 c3 4. Kxc3 Ke4 5. Kc4 Ke5 6. Kc5 Ke6 7. Kc6 Ke7 8. Kc7 Ke6 9. a4 Kd5 10. a5 Kc5 11. a6 Kb5 12. a7) 3. Kd5 Kd3 4. Kxc5 *
+
+
+[Event "endgame: Chapter 2"]
+[Date "2025.11.15"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "endgame"]
+[ChapterName "Chapter 2"]
+[ChapterURL "https://lichess.org/study/39JHDcxo/EBc8XwrF"]
+[Annotator "https://lichess.org/@/Temenyansen"]
+[FEN "8/5r2/8/PP6/2K1k3/8/8/8 w - - 0 6"]
+[SetUp "1"]
+[UTCDate "2025.11.15"]
+[UTCTime "06:38:02"]
+
+6. b6 { [%cal Ga6g6] } 6... Rf1 (6... Ke5 7. a6 Kd6 8. a7 Rf8 9. Kb5 Rf5+ 10. Ka6 Rf8 11. b7 Kc7 12. a8=Q) 7. a6 Rc1+ 8. Kb4 Kd4 9. a7 Rb1+ 10. Ka3 Kc3 { [%cal Ga7a8,Gb1a1] } 11. Ka2 Rb2+ 12. Ka1 Rxb6 13. a8=Q *
+
+
+[Event "endgame: Chapter 3"]
+[Date "2025.11.15"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "endgame"]
+[ChapterName "Chapter 3"]
+[ChapterURL "https://lichess.org/study/39JHDcxo/bndLsOlf"]
+[Annotator "https://lichess.org/@/Temenyansen"]
+[FEN "k7/8/1p6/p1p5/2P4K/8/PP6/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.11.15"]
+[UTCTime "06:45:03"]
+
+ *
+
+
+[Event "endgame: Chapter 4"]
+[Date "2025.11.15"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "endgame"]
+[ChapterName "Chapter 4"]
+[ChapterURL "https://lichess.org/study/39JHDcxo/9wj1OvGa"]
+[Annotator "https://lichess.org/@/Temenyansen"]
+[FEN "7K/8/k7/3p4/8/2P1P3/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.11.15"]
+[UTCTime "06:45:42"]
+
+1. Kg8 Ka7 { [%csl Ga7] } (1... Kb7 2. Kf7 Kc6 (2... Kc7 3. Ke7 Kb6 4. Kd6) 3. Ke6) 2. Kg7 (2. Kf7 Kb7) 2... Kb7 3. Kf7 Kc7 (3... Kc6 4. Ke6 Kc5 { [%cal Ge6e5] } 5. Kd7 Kc4 6. Kc6 Kxc3 7. Kxd5) 4. Ke7 Kc6 5. Ke6 *
+
+
+[Event "endgame: Chapter 5"]
+[Date "2025.11.17"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "endgame"]
+[ChapterName "Chapter 5"]
+[ChapterURL "https://lichess.org/study/39JHDcxo/gyFfmGiq"]
+[Annotator "https://lichess.org/@/Temenyansen"]
+[FEN "2b3K1/8/4Pkp1/8/8/7P/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.11.17"]
+[UTCTime "02:34:10"]
+
+1. e7 Kxe7 (1... Bd7 2. Kf8 Kg5 3. Kf7 { [%cal Gg5h4] } 3... Bb5 4. e8=Q Bxe8+ 5. Kxe8 Kh4 6. Kf7 g5 7. Kg6 Kxh3 8. Kxg5) 2. Kg7 Bf5 3. h4 Bd3 (3... Ke6 4. Kh6 Kf6 5. h5 { [%cal Gg6h5] } 5... g5 { [%cal Gf5h7] }) 4. Kh6 Kf6 5. h5 *
+
+
+[Event "endgame: Chapter 6"]
+[Date "2025.11.17"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "endgame"]
+[ChapterName "Chapter 6"]
+[ChapterURL "https://lichess.org/study/39JHDcxo/QQ0h55Am"]
+[Annotator "https://lichess.org/@/Temenyansen"]
+[FEN "4K3/7p/1n2R3/8/7k/8/6p1/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.11.17"]
+[UTCTime "03:35:37"]
+
+1. Rxb6 (1. Rh6+ Kg5 2. Rxh7 { [%cal Gg2g1,Gh7g7] } 2... Kg6 3. Rh8 { [%cal Gh8g8] } 3... Kg7 4. Rh5 g1=Q 5. Rg5+ Qxg5 { [%cal Ge8f8,Ge8d8] }) 1... g1=Q 2. Rh6+ Kg5 *
+
+

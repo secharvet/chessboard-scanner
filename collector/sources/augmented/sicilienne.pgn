@@ -1,0 +1,26 @@
+[Event "Défense Sicilienne — version commentée"]
+[Site "Augmented"]
+[Source "sicilienne.pgn"]
+[Annotator "Enrichissement pédagogique"]
+[Result "*"]
+
+1. e4 {Les Blancs prennent le centre.}
+c5 {Sicilienne : combat asymétrique — les Noirs attaquent le centre latéralement.}
+2. Nf3 {Développement et menace sur d5 ; prépare d4.}
+d6 {Schéma Najdorf / Dragon : flexible, le roi peut rester longtemps au centre.}
+3. d4 {Les Blancs ouvrent le centre — moment charnière de la Sicilienne.}
+cxd4 {Échange forcé : structure ouverte, pièces actives des deux côtés.}
+4. Nxd4 {Cavalier central fort ; les Blancs ont un pion de plus au centre (e4).}
+Nf6 {Contre-attaque sur e4 : les Noirs ne restent pas passifs.}
+5. Nc3 {Développement ; protège e4 et prépare Be3, f3 ou autre selon le système.}
+a6 {Najdorf : empêche Db5 et prépare ...b5 ou ...e5 selon la variante.}
+6. Be3 {Système classique : le fou contrôle d4 et prépare f3 / Qd2.}
+e5 {Les Noirs frappent au centre : chassent le cavalier d4 et gagnent de l'espace.}
+7. Nb3 {Recul obligatoire : le cavalier garde la pression sur d5 et c5.}
+Be6 {Développement : le fou soutient d5 et prépare le roque.}
+8. f3 {English Attack : verrou sur e4 et préparation g4 / Qd2 / O-O-O.}
+Nbd7 {Développement en coulisse ; le cavalier rejoint c5 ou e5 plus tard.}
+9. Qd2 {La dame relie les tours et prépare le roque long ou O-O.}
+b5 {Plan Najdorf : contre-jeu immédiat à l'aile dame.}
+10. O-O-O {Roque long typique : roi à l'abri, tour d prête pour l'aile opposée.}
+*

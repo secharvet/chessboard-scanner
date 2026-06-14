@@ -1,0 +1,249 @@
+[Event "DrHack's Study: Chapter 2"]
+[Date "2023.11.21"]
+[White "Decent_Session2955"]
+[Black "NNNN"]
+[Result "0-1"]
+[WhiteElo "1200"]
+[WhiteTitle "Redditor Super Hero"]
+[BlackTitle "Evil Mastermind"]
+[Variant "Standard"]
+[ECO "A80"]
+[Opening "Dutch Defense: Raphael Variation"]
+[StudyName "DrHack's Study"]
+[ChapterName "Chapter 2"]
+[ChapterURL "https://lichess.org/study/WAGm14WO/mOwWDtg6"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2023.11.21"]
+[UTCTime "12:31:42"]
+
+1. d4 (1. e4) 1... f5 2. Nc3 Nf6 3. Bf4 d5 { open the master's database and look at 4.g4. It doesn't exist. Nobody has even tried your madness :). } 4. g4 Nc6 5. gxf5 Bxf5 6. Nb5 e5 7. Bxe5 Bd6 8. Nxd6+ cxd6 9. Bxf6 Qxf6 10. Nf3 O-O 11. Bg2 Qg6 12. Rg1 Bxc2 13. Nh4 Bxd1 14. Bxd5+ Kh8 15. Nxg6+ hxg6 16. Rxd1 Rf5 17. Bxc6 bxc6 18. Rxg6 Raf8 19. f3 Rd8 20. e4 Rh5 21. Rd2 Kh7 22. Rdg2 Rg8 23. R6g5 Rh6 24. Ke2 Re6 25. Kd3 d5 26. exd5 cxd5 27. Rh5+ Rh6 28. Rxd5 Rb8 29. b3 Rh3 30. Ke4 Re8+ 31. Re5 Rc8 32. d5 Rh4+ 33. f4 Rc3 34. Kd4 Rc1 35. Rd2 Rxf4+ 36. Re4 Rf6 37. Rh4+ Kg8 38. Re2 Rd1+ 39. Kc4 Rd6 40. Rh5 Rc1+ 41. Kb4 a5+ 42. Kxa5 Rc5+ 43. Kb4 Rc8 44. Re6 Rb8+ 45. Kc4 Rc8+ 46. Kd4 Rdd8 47. d6 Rc2 48. a4 Rd2+ 49. Kc5 Rc2+ 50. Kb4 Rd2 51. a5 Rd4+ 52. Kc3 Rd1 53. a6 Rc8+ 54. Kb4 Rb8+ 55. Rb5 Rd4+ 56. Ka5 Rc8 57. d7 Rxd7 58. a7 Rxa7+ 59. Kb6 Rac7 60. Rc6 Rxc6+ 61. Kb7 R6c7+ 62. Kb6 Rc2 63. b4 Rxh2 64. Kb7 Rd8 65. Rc5 Rhd2 66. Kc7 R2d7+ 67. Kc6 Rd1 68. Kb6 Rb8+ 69. Ka5 Rb1 70. b5 g5 { 0-1 Black wins. } 0-1
+
+
+[Event "DrHack's Study: Chapter 2"]
+[Date "2023.11.24"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Trompowsky Attack: Edge Variation"]
+[StudyName "DrHack's Study"]
+[ChapterName "Chapter 2"]
+[ChapterURL "https://lichess.org/study/WAGm14WO/QmpA8im6"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2023.11.24"]
+[UTCTime "20:56:51"]
+
+1. d4 Nf6 2. Bg5 { [%cal Gc1g5] } 2... Ne4 3. Bh4 (3. Bf4 c5 4. f3 Qa5+ 5. c3 Nf6 6. d5 g6 7. e4 d6 8. Nd2 Bg7 9. Nc4 Qd8 10. a4 b6 11. g4 (11. Qd2 O-O (11... Ba6 12. Nh3 (12. Bh6 Kf8))) (11. Bd3 O-O 12. Ne2 Ba6 13. g4 Nbd7 14. Ng3 Ne8 15. Qd2 e6 16. dxe6 fxe6 17. Be2 e5 (17... Kh8 18. Bg5 Bf6 19. Nxd6 (19. Bh6 Bg7 20. Bxg7+ Nxg7 21. Nxd6 Bxe2 22. Qxe2 Ne5 23. O-O-O Qg5+ 24. Kb1 Nxf3 25. h3 Qf4 26. Nf1 Rad8 27. Nh2 Rxd6 28. Rxd6 Qxd6 29. Nxf3)))) 3... c5 4. f3 Nf6 (4... g5 5. fxe4 gxh4 6. d5 Bh6) *
+
+
+[Event "DrHack's Study: Chapter 3"]
+[Date "2024.01.10"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B90"]
+[Opening "Sicilian Defense: Najdorf Variation, Adams Attack"]
+[StudyName "DrHack's Study"]
+[ChapterName "Chapter 3"]
+[ChapterURL "https://lichess.org/study/WAGm14WO/IX9VwU2j"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2024.01.10"]
+[UTCTime "13:14:30"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. h3 (6. f3 Nbd7 7. Be3 d5 8. Nxd5 Nxd5 9. exd5 Nf6 10. c4) 6... Nbd7 7. g4 d5 8. exd5 Nb6 9. Bg2 Nfxd5 10. Nxd5 Nxd5 11. O-O e6 12. c4 Nb6 (12... Ne7 13. Be3 Qc7 14. Qb3 Ng6 15. Rad1 Be7 16. Rfe1 O-O 17. Ne2 Bd7 (17... Rb8 18. Bb6) (17... Bc5 18. Bxc5 Qxc5 19. Nc3 Qc7 20. Na4 Bd7 21. Rxd7 Qxd7 22. Nb6 Qc7 23. Nxa8 Rxa8 24. Qxb7 Qxb7 25. Bxb7 Rb8 26. Bxa6 Rxb2 27. Ra1)) 13. Be3 Be7 14. Qb3 O-O *
+
+
+[Event "DrHack's Study: Chapter 4"]
+[Date "2024.04.22"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "DrHack's Study"]
+[ChapterName "Chapter 4"]
+[ChapterURL "https://lichess.org/study/WAGm14WO/Q770SEtV"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "8/8/8/8/8/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.04.22"]
+[UTCTime "14:09:03"]
+
+ *
+
+
+[Event "DrHack's Study: Kings"]
+[Date "2024.04.22"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "DrHack's Study"]
+[ChapterName "Kings"]
+[ChapterURL "https://lichess.org/study/WAGm14WO/Xs422cTZ"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "k7/8/8/8/8/8/8/K7 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.04.22"]
+[UTCTime "14:21:49"]
+
+ *
+
+
+[Event "DrHack's Study: 1-sequence to opposition"]
+[Date "2024.04.22"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "DrHack's Study"]
+[ChapterName "1-sequence to opposition"]
+[ChapterURL "https://lichess.org/study/WAGm14WO/fcnlujq2"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "k7/8/8/8/8/8/1K6/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.04.22"]
+[UTCTime "14:23:09"]
+
+ *
+
+
+[Event "DrHack's Study: Chapter 8"]
+[Date "2024.04.22"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "DrHack's Study"]
+[ChapterName "Chapter 8"]
+[ChapterURL "https://lichess.org/study/WAGm14WO/FlRs4fGC"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "1k6/8/8/8/8/8/1K6/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.04.22"]
+[UTCTime "14:23:30"]
+
+ *
+
+
+[Event "DrHack's Study: Chapter 9"]
+[Date "2024.04.22"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "DrHack's Study"]
+[ChapterName "Chapter 9"]
+[ChapterURL "https://lichess.org/study/WAGm14WO/j3WAyzDx"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "1k6/8/8/8/8/2K5/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.04.22"]
+[UTCTime "14:23:37"]
+
+ *
+
+
+[Event "DrHack's Study: Chapter 10"]
+[Date "2024.04.22"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "DrHack's Study"]
+[ChapterName "Chapter 10"]
+[ChapterURL "https://lichess.org/study/WAGm14WO/CfUNJHpf"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "8/2k5/8/8/8/2K5/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.04.22"]
+[UTCTime "14:23:42"]
+
+ *
+
+
+[Event "DrHack's Study: Chapter 11"]
+[Date "2024.04.22"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "DrHack's Study"]
+[ChapterName "Chapter 11"]
+[ChapterURL "https://lichess.org/study/WAGm14WO/2NFMa7co"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "8/2k5/8/8/3K4/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.04.22"]
+[UTCTime "14:23:46"]
+
+ *
+
+
+[Event "DrHack's Study: opposition - 1"]
+[Date "2024.04.22"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "DrHack's Study"]
+[ChapterName "opposition - 1"]
+[ChapterURL "https://lichess.org/study/WAGm14WO/4tqkZj1y"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "8/8/3k4/8/3K4/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.04.22"]
+[UTCTime "14:23:51"]
+
+ *
+
+
+[Event "DrHack's Study: kings2"]
+[Date "2024.04.22"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "DrHack's Study"]
+[ChapterName "kings2"]
+[ChapterURL "https://lichess.org/study/WAGm14WO/o7TCREQO"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "k7/8/8/8/8/8/8/K7 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.04.22"]
+[UTCTime "14:24:47"]
+
+ *
+
+
+[Event "DrHack's Study: Chapter 13"]
+[Date "2024.04.22"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "DrHack's Study"]
+[ChapterName "Chapter 13"]
+[ChapterURL "https://lichess.org/study/WAGm14WO/6WVCEby0"]
+[Annotator "https://lichess.org/@/DrHack"]
+[FEN "8/3k4/8/3K4/3P4/8/8/8 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.04.22"]
+[UTCTime "16:18:30"]
+
+ *
+
+
+[Event "DrHack's Study: Chapter 14"]
+[Date "2024.05.03"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A15"]
+[Opening "English Opening: Anglo-Indian Defense"]
+[StudyName "DrHack's Study"]
+[ChapterName "Chapter 14"]
+[ChapterURL "https://lichess.org/study/WAGm14WO/hI1b5IQU"]
+[Annotator "https://lichess.org/@/DrHack"]
+[UTCDate "2024.05.03"]
+[UTCTime "18:34:46"]
+
+1. c4 Nf6 2. e3 d5 3. Nf3 *
+
+

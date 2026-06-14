@@ -1,0 +1,20 @@
+[Event "Chapter 5"]
+[Site "Game 4"]
+[Date "2022.02.23"]
+[White "Chapter 5"]
+[Black "Game 4"]
+[Result "1-0"]
+[Annotator "Petrisor Adrian"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "strategy"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/xLrtzynw/xjdP175r"]
+[FEN "r2qk2r/pbpp1ppp/1pn1p3/8/2PP4/2bBPN2/P4PPP/1RBQ1RK1 w kq - 0 1"]
+[SetUp "1"]
+
+{ [#] }
+1. Qc2 { 1-0 White wins. } 1-0
+
+

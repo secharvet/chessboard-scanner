@@ -1,0 +1,123 @@
+[Event "EricRosen's Study: Chapter 1"]
+[Date "2019.12.20"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "EricRosen's Study"]
+[ChapterName "Chapter 1"]
+[ChapterURL "https://lichess.org/study/YtGqjTzC/Yu7HHCCC"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.12.20"]
+[UTCTime "03:08:27"]
+
+ *
+
+
+[Event "Rated Rapid game"]
+[Site "https://lichess.org/vFEP6Zni"]
+[Date "2019.12.20"]
+[Round "-"]
+[White "EricRosen"]
+[Black "rattascalpel"]
+[Result "0-1"]
+[WhiteElo "2391"]
+[WhiteTitle "IM"]
+[BlackElo "2263"]
+[TimeControl "600+0"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "EricRosen's Study"]
+[ChapterName "IM EricRosen - rattascalpel"]
+[ChapterURL "https://lichess.org/study/YtGqjTzC/Vw8qoyKD"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 { [%clk 0:10:00] } 1... Nf6 { [%clk 0:10:00] } 2. Bf4 { [%clk 0:09:59] } 2... e6 { [%clk 0:09:59] } 3. e3 { [%clk 0:09:57] } 3... Be7 { [%clk 0:09:58] } 4. Nd2 { [%clk 0:09:55] } 4... O-O { [%clk 0:09:57] } 5. Ngf3 { [%clk 0:09:45] } 5... d6 { [%clk 0:09:55] } 6. c4 { [%clk 0:09:42] } 6... b6 { [%clk 0:09:53] } 7. Qc2 { [%clk 0:09:39] } 7... Bb7 { [%clk 0:09:52] } 8. Bd3 { [%clk 0:09:34] } 8... Nbd7 { [%clk 0:09:49] } 9. O-O-O { [%clk 0:09:28] } 9... h6 { [%clk 0:09:47] } 10. Rhg1 { [%clk 0:08:47] } 10... Rc8 { [%clk 0:09:44] } 11. e4 { [%clk 0:07:46] } (11. g4 c5 12. g5) 11... Ng4 { [%clk 0:09:25] } 12. Bg3 { [%clk 0:06:37] } 12... c5 { [%clk 0:09:07] } 13. h3 { [%clk 0:06:23] } 13... Ngf6 { [%clk 0:06:27] } 14. d5 { [%clk 0:06:19] } 14... exd5 { [%clk 0:06:14] } 15. exd5 { [%clk 0:06:15] } 15... b5 { [%clk 0:06:09] } 16. Nf1 { [%clk 0:05:08] } 16... bxc4 { [%clk 0:06:05] } 17. Bxc4 { [%clk 0:05:08] } 17... Nb6 { [%clk 0:06:01] } 18. Ne3 { [%clk 0:05:06] } 18... Nxc4 { [%clk 0:05:50] } 19. Qxc4 { [%clk 0:05:01] } 19... Qa5 { [%clk 0:05:48] } 20. Nf5 { [%clk 0:04:40] } 20... Rfe8 { [%clk 0:05:15] } 21. Kb1 { [%clk 0:03:44] } 21... Bf8 { [%clk 0:05:08] } 22. Bxd6 { [%clk 0:02:46] } 22... Re4 { [%clk 0:04:55] } 23. Qc2 { [%clk 0:02:12] } 23... Rd8 { [%clk 0:04:46] } 24. Bxf8 { [%clk 0:02:06] } 24... Kxf8 { [%csl Ge3][%cal Gf5e3] [%clk 0:04:44] } 25. d6 { [%csl Gd6,Ge4][%cal Gd5d6,Gb7e4] [%clk 0:01:51] } (25. Ne3) 25... Ra4 { [%clk 0:04:30] } 26. Qb3 { [%clk 0:00:40] } 26... Be4+ { [%clk 0:04:23] } 27. Ka1 { [%clk 0:00:39] } 27... Bxf5 { [%clk 0:04:21] } 28. Rge1 { [%clk 0:00:35] } 28... c4 { [%clk 0:04:01] } 29. Qxa4 { [%clk 0:00:25] } 29... Qxa4 { [%clk 0:03:57] } 30. Nd4 { [%clk 0:00:25] } 30... Rxd6 { [%clk 0:03:53] } 31. Ne6+ { [%clk 0:00:22] } 31... Rxe6 { [%clk 0:03:51] } 32. Rd6 { [%clk 0:00:22] } 32... Rxe1+ { 0-1 White resigns. } { [%clk 0:03:48] } 0-1
+
+
+[Event "Casual Rapid game"]
+[Site "https://lichess.org/oAt50Yc2"]
+[Date "2019.12.20"]
+[Round "-"]
+[White "EricRosen"]
+[Black "Bein_Jon"]
+[Result "1-0"]
+[WhiteElo "2370"]
+[WhiteTitle "IM"]
+[BlackElo "1177"]
+[TimeControl "300+5"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Gibbins-Weidenhagen Gambit"]
+[StudyName "EricRosen's Study"]
+[ChapterName "IM EricRosen - Bein_Jon"]
+[ChapterURL "https://lichess.org/study/YtGqjTzC/SRFQHdbk"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 { [%clk 0:05:00] } 1... Nf6 { [%clk 0:05:00] } 2. g4 { [%csl Gg4][%cal Gg2g4] [%clk 0:05:02] } 2... g5 { [%clk 0:05:01] } 3. h4 { [%clk 0:04:52] } 3... h6 { [%clk 0:04:57] } 4. hxg5 { [%clk 0:04:54] } 4... Nxg4 { [%clk 0:04:33] } 5. e4 { [%clk 0:04:45] } 5... d6 { [%clk 0:04:27] } 6. f3 { [%clk 0:04:36] } 6... b6 { [%clk 0:03:47] } 7. fxg4 { [%csl Gg5,Gg4] [%clk 0:04:36] } 7... e6 { [%clk 0:02:33] } 8. Nc3 { [%clk 0:04:27] } 8... Qe7 { [%clk 0:01:44] } 9. Nf3 { [%clk 0:04:19] } 9... Bb7 { [%clk 0:01:42] } 10. gxh6 { [%clk 0:03:59] } 10... Nc6 { [%clk 0:01:32] } 11. Bb5 { [%clk 0:03:44] } 11... O-O-O { [%clk 0:01:27] } 12. a4 { [%clk 0:03:39] } 12... e5 { [%clk 0:01:13] } 13. Nd5 { [%clk 0:03:06] } 13... Qd7 { [%clk 0:00:58] } 14. Bg5 { [%csl Gg4][%cal Gd7g4] [%clk 0:02:57] } 14... Qe6 { [%clk 0:00:37] } 15. Bxc6 { [%clk 0:02:01] } 15... Bxc6 { [%clk 0:00:39] } 16. Nf6 { [%clk 0:02:04] } 16... exd4 { [%clk 0:00:33] } 17. Nxd4 { [%clk 0:02:09] } 17... Bxe4 { [%clk 0:00:29] } 18. Nxe6 { [%clk 0:02:08] } 18... fxe6 { [%clk 0:00:32] } 19. Nxe4 { [%clk 0:01:49] } 19... Rd7 { [%clk 0:00:33] } 20. Qe2 { [%clk 0:01:51] } 20... Be7 { [%clk 0:00:34] } 21. Qa6+ { [%clk 0:01:53] } 21... Kb8 { [%clk 0:00:37] } 22. Bxe7 { [%clk 0:01:54] } 22... Rxe7 { [%clk 0:00:40] } 23. Nc3 { [%clk 0:01:57] } 23... Ka8 { [%clk 0:00:41] } 24. Nb5 { [%clk 0:01:59] } 24... c6 { [%csl Gb6,Gc6,Gd6,Ge6,Ga7][%cal Ge7a7,Ga6a7] [%clk 0:00:42] } 25. Nxd6 { [%clk 0:02:00] } 25... Rd7 { [%clk 0:00:45] } 26. O-O-O { [%clk 0:02:03] } 26... e5 { [%clk 0:00:47] } 27. Nc4 { [%clk 0:02:06] } 27... Rb8 { [%clk 0:00:49] } 28. Rxd7 { [%clk 0:02:05] } 28... b5 { [%clk 0:00:52] } 29. Qxa7# { 1-0 White wins by checkmate. } { [%clk 0:02:02] } 1-0
+
+
+[Event "EricRosen's Study: London vs KID"]
+[Date "2019.12.20"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A48"]
+[Opening "London System, with Be2"]
+[StudyName "EricRosen's Study"]
+[ChapterName "London vs KID"]
+[ChapterURL "https://lichess.org/study/YtGqjTzC/SZLT3BSr"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.12.20"]
+[UTCTime "03:51:50"]
+
+1. d4 Nf6 2. Bf4 g6 3. e3 (3. Nc3 Bg7 (3... d5 { [%csl Gd5][%cal Gd7d5] } 4. e3 Bg7 5. h4) 4. e4) 3... Bg7 4. Nf3 { [%csl Gd4,Ge3,Gf3,Gf4] } 4... O-O { [%csl Gd3,Rg6,Rh7][%cal Gf1d3,Rd3g6,Gd7d6,Ge7e5,Ge5e4] } 5. Be2 d6 6. O-O Nbd7 7. c4 Re8 8. Nc3 e5 9. dxe5 dxe5 10. Nxe5 Nxe5 { [%csl Ge8] } 11. Qxd8 Rxd8 12. Bxe5 *
+
+
+[Event "Rated Bullet game"]
+[Site "https://lichess.org/MtFXwB8T"]
+[Date "2019.12.18"]
+[Round "-"]
+[White "EricRosen"]
+[Black "Indra_AR"]
+[Result "1-0"]
+[WhiteElo "2705"]
+[WhiteTitle "IM"]
+[BlackElo "2244"]
+[TimeControl "60+0"]
+[Termination "Time forfeit"]
+[Variant "Standard"]
+[ECO "D00"]
+[Opening "Queen's Pawn Game: Accelerated London System"]
+[StudyName "EricRosen's Study"]
+[ChapterName "IM EricRosen - Indra_AR"]
+[ChapterURL "https://lichess.org/study/YtGqjTzC/VY19Uomy"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. d4 { [%clk 0:01:00] } 1... d5 { [%clk 0:01:00] } 2. Bf4 { [%clk 0:01:00] } 2... Nc6 { [%clk 0:00:59] } 3. e3 { [%clk 0:00:59] } 3... e6 { [%clk 0:00:59] } 4. Nd2 { [%clk 0:00:59] } 4... Bd6 { [%clk 0:00:59] } 5. Bg3 { [%clk 0:00:58] } 5... Bxg3 { [%clk 0:00:58] } 6. hxg3 { [%clk 0:00:58] } 6... Nf6 { [%clk 0:00:58] } 7. Ngf3 { [%clk 0:00:57] } 7... Bd7 { [%clk 0:00:57] } 8. Bd3 { [%clk 0:00:57] } 8... Qe7 { [%clk 0:00:57] } 9. Ne5 { [%clk 0:00:56] } 9... h6 { [%clk 0:00:56] } 10. c3 { [%clk 0:00:54] } 10... O-O-O { [%clk 0:00:55] } 11. Qb3 { [%clk 0:00:51] } 11... Kb8 { [%clk 0:00:53] } 12. a4 { [%clk 0:00:50] } 12... a6 { [%clk 0:00:52] } 13. Bxa6 { [%clk 0:00:49] } 13... Na5 { [%clk 0:00:51] } 14. Qb4 { [%clk 0:00:47] } 14... Qxb4 { [%clk 0:00:50] } 15. cxb4 { [%clk 0:00:47] } 15... bxa6 { [%clk 0:00:49] } 16. bxa5 { [%cal Gb2b5] [%clk 0:00:46] } 16... Be8 { [%clk 0:00:48] } 17. b4 { [%clk 0:00:45] } 17... Ne4 { [%clk 0:00:47] } 18. Nb3 { [%clk 0:00:43] } 18... f6 { [%clk 0:00:46] } 19. Nd3 { [%clk 0:00:42] } 19... g5 { [%clk 0:00:43] } 20. Nbc5 { [%clk 0:00:40] } 20... Ka7 { [%clk 0:00:41] } 21. Ra3 { [%clk 0:00:35] } 21... Bf7 { [%clk 0:00:39] } 22. Rh3 { [%clk 0:00:33] } 22... h5 { [%clk 0:00:38] } 23. f3 { [%clk 0:00:33] } 23... Nd6 { [%clk 0:00:36] } 24. Ke2 { [%clk 0:00:31] } 24... Nc4 { [%clk 0:00:35] } 25. Rb3 { [%clk 0:00:30] } 25... Be8 { [%clk 0:00:33] } 26. Rh1 { [%clk 0:00:29] } 26... Bf7 { [%clk 0:00:32] } 27. Ra1 { [%clk 0:00:29] } 27... h4 { [%clk 0:00:31] } 28. g4 { [%clk 0:00:27] } 28... h3 { [%clk 0:00:30] } 29. g3 { [%csl Ga5,Ga4] [%clk 0:00:27] } 29... h2 { [%clk 0:00:29] } 30. Rh1 { [%clk 0:00:26] } 30... Rh3 { [%clk 0:00:28] } 31. Kf2 { [%csl Ga5,Ga4,Gb4] [%clk 0:00:26] } 31... Rdh8 { [%clk 0:00:27] } 32. Ne1 { [%clk 0:00:26] } 32... Bg6 { [%clk 0:00:25] } 33. Ncd3 { [%clk 0:00:24] } 33... Bxd3 { [%clk 0:00:24] } 34. Nxd3 { [%clk 0:00:24] } 34... f5 { [%clk 0:00:23] } 35. Ne5 { [%clk 0:00:22] } 35... Nxe5 { [%clk 0:00:22] } 36. dxe5 { [%clk 0:00:22] } 36... fxg4 { [%clk 0:00:21] } 37. fxg4 { [%csl Ga5,Ga4,Ge5,Ge3,Gg4,Gg3] [%clk 0:00:22] } 37... R8h7 { [%clk 0:00:18] } 38. Kg2 { [%clk 0:00:20] } 38... R3h6 { [%clk 0:00:17] } 39. Rc3 { [%clk 0:00:20] } 39... Kb7 { [%clk 0:00:17] } 40. Rc5 { [%clk 0:00:18] } 40... c6 { [%clk 0:00:16] } 41. Rc3 { [%clk 0:00:17] } 41... Rh8 { [%clk 0:00:14] } 42. Rc2 { [%clk 0:00:16] } 42... R8h7 { [%clk 0:00:12] } 43. Rf2 { [%clk 0:00:15] } 43... Rh8 { [%clk 0:00:12] } 44. Rf7+ { [%clk 0:00:15] } 44... Kb8 { [%clk 0:00:11] } 45. Rd7 { [%clk 0:00:14] } 45... Rh3 { [%clk 0:00:10] } 46. Re7 { [%clk 0:00:12] } 46... R8h6 { [%clk 0:00:09] } 47. Re8+ { [%clk 0:00:11] } 47... Kc7 { [%clk 0:00:08] } 48. Re7+ { [%clk 0:00:11] } 48... Kd8 { [%clk 0:00:07] } 49. Ra7 { [%clk 0:00:10] } 49... Rh8 { [%clk 0:00:06] } 50. Rxa6 { [%clk 0:00:09] } 50... Ke7 { [%clk 0:00:05] } 51. Rxc6 { [%clk 0:00:09] } 51... Kf7 { [%clk 0:00:04] } 52. Rc7+ { [%clk 0:00:08] } 52... Kg6 { [%clk 0:00:04] } 53. a6 { [%clk 0:00:08] } 53... Ra8 { [%clk 0:00:03] } 54. b5 { [%clk 0:00:07] } 54... Rhh8 { [%clk 0:00:02] } 55. Rxh2 { [%clk 0:00:06] } 55... Rhf8 { [%clk 0:00:01] } 56. Rc6 { 1-0 White wins on time. } { [%clk 0:00:05] } 1-0
+
+
+[Event "Casual Blitz game"]
+[Site "https://lichess.org/Avww5Csh"]
+[Date "2019.12.20"]
+[Round "-"]
+[White "lichess AI level 8"]
+[Black "EricRosen"]
+[Result "1-0"]
+[BlackElo "2472"]
+[BlackTitle "IM"]
+[TimeControl "180+0"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "C54"]
+[Opening "Italian Game: Classical Variation, Greco Gambit, Modern Line"]
+[StudyName "EricRosen's Study"]
+[ChapterName "A.I. level 8 - IM EricRosen"]
+[ChapterURL "https://lichess.org/study/YtGqjTzC/qxt5erJy"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 { [%clk 0:03:00] } 1... e5 { [%clk 0:03:00] } 2. Nf3 { [%clk 0:02:58] } 2... Nc6 { [%clk 0:02:59] } 3. Bc4 { [%clk 0:02:56] } 3... Bc5 { [%clk 0:02:57] } 4. c3 { [%clk 0:02:53] } 4... Nf6 { [%clk 0:02:55] } 5. d4 { [%clk 0:02:51] } 5... exd4 { [%clk 0:02:53] } 6. e5 { [%clk 0:02:48] } 6... d5 { [%clk 0:02:51] } 7. Bb5 { [%clk 0:02:45] } 7... Ne4 { [%clk 0:02:50] } 8. cxd4 { [%clk 0:02:43] } 8... Bb6 { [%clk 0:02:45] } 9. O-O { [%clk 0:02:40] } 9... O-O { [%clk 0:02:40] } 10. Be3 { [%clk 0:02:36] } 10... Bg4 { [%clk 0:02:38] } 11. Nc3 { [%clk 0:02:34] } 11... f6 { [%clk 0:02:23] } 12. exf6 { [%clk 0:02:32] } 12... Rxf6 { [%clk 0:02:17] } 13. Be2 { [%clk 0:02:29] } 13... Qd6 { [%clk 0:01:37] } 14. Rc1 { [%clk 0:02:27] } 14... Re8 { [%clk 0:01:30] } 15. Nxd5 { [%clk 0:02:25] } 15... Rff8 { [%clk 0:01:16] } 16. Nc3 { [%clk 0:02:22] } 16... Nf6 { [%clk 0:01:09] } 17. Nb5 { [%clk 0:02:19] } 17... Qd7 { [%clk 0:01:02] } 18. h3 { [%clk 0:02:16] } 18... Bh5 { [%clk 0:00:54] } 19. Nc3 { [%clk 0:02:14] } 19... Nb4 { [%clk 0:00:44] } 20. Qb3+ { [%clk 0:02:11] } 20... Nbd5 { [%clk 0:00:43] } 21. Ne5 { [%clk 0:02:09] } 21... Qe6 { [%clk 0:00:38] } 22. Bc4 { [%clk 0:02:07] } (22. Bxh5 Nxc3 23. Bxe8 Qxb3 24. axb3 Ne2+ { [%csl Gc1] }) 22... c6 { [%clk 0:00:30] } 23. Rfe1 { [%clk 0:02:04] } 23... Bf7 { [%clk 0:00:21] } 24. Bd2 { [%clk 0:02:02] } 24... Qf5 { [%clk 0:00:17] } 25. g4 { [%clk 0:02:00] } 25... Qc8 { [%clk 0:00:12] } 26. Nxf7 { [%clk 0:01:58] } 26... Rxf7 { [%clk 0:00:11] } 27. g5 { [%clk 0:01:56] } 27... Nh5 { [%clk 0:00:09] } 28. Nxd5 { [%clk 0:01:54] } 28... Rxe1+ { [%clk 0:00:06] } 29. Rxe1 { 1-0 Black resigns. } { [%clk 0:01:52] } 1-0
+
+

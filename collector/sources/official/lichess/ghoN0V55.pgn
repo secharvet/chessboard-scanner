@@ -1,0 +1,55 @@
+[Event "Qd8 Scandi (Secret Preparation): Rosen - Dale (December 2018)"]
+[Date "2019.01.13"]
+[Result "1/2-1/2"]
+[Variant "Standard"]
+[ECO "B01"]
+[Opening "Scandinavian Defense: Valencian Variation, Main Line"]
+[StudyName "Qd8 Scandi (Secret Preparation)"]
+[ChapterName "Rosen - Dale (December 2018)"]
+[ChapterURL "https://lichess.org/study/ghoN0V55/rGhhvTXN"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.01.13"]
+[UTCTime "13:03:54"]
+
+1. e4 d5 2. exd5 Qxd5 3. Nc3 Qd8 4. d4 Nf6 5. Nf3 Bg4 6. h3 Bxf3 7. Qxf3 c6 8. Be3 e6 9. Bd3 Nbd7 10. O-O Bd6 11. Ne4 Nxe4 12. Qxe4 Nf6 13. Qf3 Nd5 14. Bd2 Qf6 15. Qxf6 gxf6 16. c4 { 1/2-1/2 The game is a draw. } 1/2-1/2
+
+
+[Event "Casual Rapid game"]
+[Site "https://lichess.org/OdPnvS7i"]
+[Date "2019.01.13"]
+[Round "-"]
+[White "EricRosen"]
+[Black "Maqqa"]
+[Result "1-0"]
+[WhiteElo "2329"]
+[WhiteTitle "IM"]
+[BlackElo "1963"]
+[TimeControl "600+0"]
+[Termination "Normal"]
+[Variant "Standard"]
+[ECO "B01"]
+[Opening "Scandinavian Defense: Valencian Variation, Main Line"]
+[StudyName "Qd8 Scandi (Secret Preparation)"]
+[ChapterName "IM EricRosen - Maqqa"]
+[ChapterURL "https://lichess.org/study/ghoN0V55/tHo6Jw4z"]
+[Annotator "https://lichess.org/@/EricRosen"]
+
+1. e4 { [%clk 0:10:00] } 1... d5 { [%clk 0:10:00] } 2. exd5 { [%clk 0:09:55] } 2... Qxd5 { [%clk 0:10:00] } 3. Nc3 { [%clk 0:09:52] } 3... Qd8 { [%clk 0:09:57] } 4. d4 { [%clk 0:09:46] } 4... Nf6 { [%clk 0:09:55] } 5. Nf3 { [%clk 0:09:37] } 5... Bg4 { [%clk 0:09:54] } 6. h3 { [%clk 0:09:12] } 6... Bxf3 { [%clk 0:09:53] } 7. Qxf3 { [%clk 0:09:11] } 7... c6 { [%clk 0:09:53] } 8. Bf4 { [%clk 0:08:00] } 8... Qxd4 { [%clk 0:09:08] } 9. Bd3 { [%clk 0:05:14] } (9. Nb5 cxb5 10. Qxb7 (10. Bxb5+ Nbd7 11. Qxb7 Rd8 12. Bc7 Qe4+ 13. Qxe4 Nxe4 14. O-O-O Nd6 15. Rxd6 exd6 16. Re1+ Be7 17. Bxd6) 10... Qe4+ 11. Qxe4 Nxe4 12. Bxb5+ Kd8 { [%csl Gd6][%cal Ge4d6] }) 9... e6 { [%clk 0:08:46] } 10. Nb5 { [%clk 0:04:36] } 10... Bb4+ { [%clk 0:07:21] } 11. c3 { [%clk 0:02:46] } 11... cxb5 { [%clk 0:07:17] } 12. O-O-O { [%clk 0:02:37] } 12... Qc5 { [%clk 0:06:08] } 13. Bd6 { [%clk 0:01:54] } 13... Qxd6 { [%clk 0:04:49] } 14. Bxb5+ { [%clk 0:01:51] } 14... Nbd7 { [%clk 0:04:40] } 15. Rxd6 { [%clk 0:01:47] } 15... Bxd6 { [%clk 0:04:36] } 16. Rd1 { [%clk 0:01:45] } 16... Bc5 { [%clk 0:03:30] } 17. Bxd7+ { [%clk 0:01:28] } 17... Nxd7 { [%clk 0:03:19] } 18. Qxb7 { [%clk 0:01:11] } 18... Rd8 { [%clk 0:03:17] } 19. Rxd7 { [%clk 0:01:05] } 19... Rxd7 { [%clk 0:02:19] } 20. Qc8+ { [%clk 0:01:03] } 20... Rd8 { [%clk 0:02:17] } 21. Qxc5 { [%clk 0:01:02] } 21... a6 { [%clk 0:01:48] } 22. Qc6+ { [%clk 0:00:58] } 22... Ke7 { [%clk 0:01:42] } 23. Qxa6 { [%clk 0:00:57] } 23... Rd5 { [%clk 0:01:38] } 24. Qb7+ { [%clk 0:00:54] } 24... Kf6 { [%clk 0:01:32] } 25. a4 { [%clk 0:00:49] } 25... Rhd8 { [%clk 0:01:30] } 26. Qb6 { [%clk 0:00:42] } 26... Rd1+ { [%clk 0:01:14] } 27. Kc2 { [%clk 0:00:41] } 27... R8d2+ { [%clk 0:01:13] } 28. Kb3 { [%clk 0:00:39] } 28... Rb1 { [%clk 0:01:04] } 29. Ka2 { [%clk 0:00:37] } 29... Rf1 { [%clk 0:00:51] } 30. a5 { [%clk 0:00:34] } 30... Rfd1 { [%clk 0:00:42] } 31. a6 { [%clk 0:00:32] } 31... Rd8 { [%clk 0:00:40] } 32. a7 { [%clk 0:00:31] } 32... R1d7 { [%clk 0:00:37] } 33. Qb8 { 1-0 Black resigns. } { [%clk 0:00:28] } 1-0
+
+
+[Event "Qd8 Scandi (Secret Preparation): Qd8 Preparation"]
+[Date "2019.01.13"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "B01"]
+[Opening "Scandinavian Defense: Valencian Variation, Main Line"]
+[StudyName "Qd8 Scandi (Secret Preparation)"]
+[ChapterName "Qd8 Preparation"]
+[ChapterURL "https://lichess.org/study/ghoN0V55/0z9W2KR4"]
+[Annotator "https://lichess.org/@/EricRosen"]
+[UTCDate "2019.01.13"]
+[UTCTime "13:09:56"]
+
+1. e4 d5 2. exd5 Qxd5 3. Nc3 Qd8 4. d4 Nf6 5. Nf3 Bg4 6. h3 Bxf3 7. Qxf3 c6 8. Bf4 e6 9. O-O-O Bb4 *
+
+
