@@ -57,6 +57,16 @@ make stop
 - Coach IA : posez une question à votre tour, réponse contextualisée à la position et aux coups joués
 - Annuler / Refaire, Nouvelle partie
 
+#### Visualisation combinée : heatmap + coach + analyse positionnelle
+
+![Contrôle des cases, coach IA et analyse positionnelle](screenshots/game-coach.png)
+
+Le bouton **Contrôle cases** superpose une heatmap sur le plateau : chaque case est colorée selon le rapport de force entre les deux camps (rouge → contrôle blanc, bleu → contrôle noir, intensité proportionnelle à l'écart). C'est un outil visuel immédiat pour repérer les cases faibles et les zones de tension.
+
+Le panneau **Coach** envoie la position (FEN), la couleur, l'historique des coups et votre question à un grand modèle de langage (Groq · GPT-OSS 120B). La réponse arrive en streaming et couvre : évaluation globale, menaces immédiates, plan recommandé, coups candidats et pièges à éviter.
+
+L'**Analyse positionnelle** est produite par un moteur expert maison (répertoire `positional/`) sans LLM : chaque module inspecte un aspect spécifique de la position (structure de pions, sécurité du roi, avant-postes, colonnes ouvertes, activité des pièces…) et émet des jetons sémantiques prioritaires. L'interpréteur les convertit ensuite en conseils en prose française, triés par importance (critique → neutre).
+
 ---
 
 ## Architecture
