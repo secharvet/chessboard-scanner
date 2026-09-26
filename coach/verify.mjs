@@ -8,7 +8,7 @@
  *   4. chaque concept nommé (clouage, colonne, case faible…) doit apparaître dans une des sources citées.
  */
 
-const CITE_RE = /\[((?:[A-Z]\d+[a-z]?[+\-m]?\d*)(?:\s*[,;]\s*[A-Z]\d+[a-z]?[+\-m]?\d*)*)\]/g;
+const CITE_RE = /\[((?:[A-Z]\d+[a-z]?[+\-mt]?\d*)(?:\s*[,;]\s*[A-Z]\d+[a-z]?[+\-mt]?\d*)*)\]/g;
 const SQUARE_RE = /(?<![a-zA-Z])([a-h][1-8])(?![0-9])/g;
 
 /** Concepts : regex dans la phrase du coach → regex attendue dans la source citée. */
@@ -33,6 +33,8 @@ const CONCEPTS = [
   ['bon fou', /bon fou/i],
   ['en prise|non défendu', /en prise|non défendue?/i],
   ['mat\\b|mater', /\bmat\b/i],
+  ['sacrifi', /sacrifice/i],
+  ['coup intermédiaire', /intermédiaire/i],
   ['majorité', /majorité/i],
   ['développement', /développ/i],
 ];

@@ -15,6 +15,7 @@ import { tokenKey } from '../positional/tokens.js';
 import { toFrenchSan } from './notation.mjs';
 import { STRUCTURES, OPPOSITE_CASTLING_PLAN } from '../positional/structures.js';
 import { buildBalance } from '../positional/balance.js';
+import { lineMotifs } from './motifs.mjs';
 
 const PIECE_VALUE = { p: 1, n: 3, b: 3, r: 5, q: 9, k: 0 };
 
@@ -96,6 +97,7 @@ function describeLine(fen, line, player, toMove) {
     pvSan: numberedSan(fen, steps.map((s) => s.san)),
     horizonSan: numberedSan(fen, steps.slice(0, end).map((s) => s.san)),
     changes: diffFacts(fen, endFen),
+    motifs: lineMotifs(fen, line.pv.slice(0, steps.length)).map((m) => `${m.san} : ${m.motifs.join(', ')}`),
     material: materialBalance(endFen) - materialBalance(fen),
   };
 }
@@ -298,6 +300,7 @@ function renderContext(d) {
     out.push(`### ${i + 1}. ${c.move} — ${formatEval(c.evalPlayer)}`);
     cite(`Ligne ${i + 1} : ${c.pvSan} (${formatEval(c.evalPlayer)}).`, L);
     cite(`Au bout de « ${c.horizonSan} » : ${formatMaterial(c.material, d.player)}.`, `${L}m`);
+    (c.motifs ?? []).forEach((m, j) => cite(`Motif tactique dans la ligne ${i + 1} : ${m}.`, `${L}t${j + 1}`));
     c.changes.gained.forEach((g, j) => cite(`La ligne ${i + 1} crée : ${g}`, `${L}+${j + 1}`));
     c.changes.lost.forEach((g, j) => cite(`La ligne ${i + 1} fait disparaître : ${g}`, `${L}-${j + 1}`));
   });
