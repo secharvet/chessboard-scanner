@@ -6,6 +6,7 @@
  *   LLM_MODEL      ex. sonnet, deepseek-flash, claude-sonnet-5
  *   LLM_API_KEY    clé API (sauf claude-cli)
  *   LLM_BASE_URL   pour un endpoint compatible OpenAI
+ *   LLM_EFFORT     claude-cli : low | medium | high | max (optionnel)
  */
 
 import { spawn } from 'node:child_process';
@@ -26,6 +27,7 @@ export function llmConfig(env = process.env) {
     model: env.LLM_MODEL || d.model,
     apiKey: env.LLM_API_KEY || '',
     baseUrl: env.LLM_BASE_URL || d.baseUrl,
+    effort: env.LLM_EFFORT || '',
   };
 }
 
@@ -51,6 +53,7 @@ function claudeCli({ system, user }, cfg) {
     '-p', '--output-format', 'json', '--model', cfg.model,
     '--system-prompt', system,
     '--tools', '', '--no-session-persistence', '--strict-mcp-config', '--setting-sources', '',
+    ...(cfg.effort ? ['--effort', cfg.effort] : []),
   ];
   return new Promise((resolve, reject) => {
     const proc = spawn(process.env.CLAUDE_BIN || 'claude', args, {

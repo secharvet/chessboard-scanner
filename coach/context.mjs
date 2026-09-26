@@ -14,6 +14,7 @@ import { renderToken, tokenWeight } from '../positional/interpreter.js';
 import { tokenKey } from '../positional/tokens.js';
 import { toFrenchSan } from './notation.mjs';
 import { STRUCTURES, OPPOSITE_CASTLING_PLAN } from '../positional/structures.js';
+import { buildBalance } from '../positional/balance.js';
 
 const PIECE_VALUE = { p: 1, n: 3, b: 3, r: 5, q: 9, k: 0 };
 
@@ -53,9 +54,10 @@ export async function buildCoachContext({ fen, side, moves = [], engine, depth =
   const threat = await findThreat(fen, lines[0], engine, toMove, player);
   const allFacts = buildAllFacts(fen);
   const staticFacts = selectStaticFacts(allFacts);
+  const balance = buildBalance(allFacts);
   const structures = describeStructures(allFacts, player);
 
-  const data = { fen, player, toMove, phase, candidates, threat, staticFacts, structures, moves };
+  const data = { fen, player, toMove, phase, candidates, threat, staticFacts, balance, structures, moves };
   return { text: renderContext(data), data };
 }
 
@@ -310,8 +312,19 @@ function renderContext(d) {
   }
 
   out.push('');
-  out.push('## Faits positionnels actuels (moteur de règles)');
-  for (const f of d.staticFacts) out.push(`- ${f}`);
+  out.push('## Bilan des déséquilibres (moteur de règles, position actuelle)');
+  const me = d.player;
+  const opp = me === 'w' ? 'b' : 'w';
+  const section = (title, items, max) => {
+    out.push(`### ${title}`);
+    if (!items.length) out.push('- (rien de notable)');
+    for (const it of items.slice(0, max)) out.push(`- ${it}`);
+  };
+  section('Tes atouts', d.balance[me].assets, 8);
+  section('Tes faiblesses', d.balance[me].weaknesses, 8);
+  section("Atouts de l'adversaire", d.balance[opp].assets, 8);
+  section("Faiblesses de l'adversaire", d.balance[opp].weaknesses, 8);
+  section('Contexte général', d.balance.context, 5);
 
   return out.join('\n');
 }

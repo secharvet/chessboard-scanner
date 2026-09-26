@@ -64,10 +64,28 @@ const PRIORITY = {
   ROQUE_GRAND:         { weight: 2, label: 'NEUTRE' },
   PIONS_ROI_BOUCLIER:  { weight: 2, label: 'NEUTRE' },
 
-  // ── Module 6 — Attaques (8) ──
-  PIECE_MENACEE: { weight: 8, label: 'HAUTE' },
-  CLOUAGE:       { weight: 8, label: 'HAUTE' },
-  FOURCHETTE:    { weight: 8, label: 'HAUTE' },
+  // ── Module 6 — Tactique (8-10) ──
+  PIECE_MENACEE:       { weight: 8, label: 'HAUTE' },
+  CLOUAGE:             { weight: 8, label: 'HAUTE' },
+  CLOUAGE_RELATIF:     { weight: 7, label: 'HAUTE' },
+  FOURCHETTE:          { weight: 8, label: 'HAUTE' },
+  ENFILADE:            { weight: 8, label: 'HAUTE' },
+  DECOUVERTE_POSSIBLE: { weight: 7, label: 'HAUTE' },
+  SURCHARGE:           { weight: 7, label: 'HAUTE' },
+  PIECE_PIEGEE:        { weight: 9, label: 'HAUTE' },
+  RANGEE_FAIBLE:       { weight: 6, label: 'MOYENNE' },
+
+  // ── Déséquilibres (4-7) ──
+  COMPLEXE_FAIBLE:     { weight: 7, label: 'HAUTE' },
+  CONTROLE_COLONNE:    { weight: 6, label: 'MOYENNE' },
+  CASE_ENTREE:         { weight: 5, label: 'MOYENNE' },
+  TOUR_7E:             { weight: 7, label: 'HAUTE' },
+  ACTIVITE:            { weight: 6, label: 'MOYENNE' },
+  PIECE_PASSIVE:       { weight: 5, label: 'MOYENNE' },
+  CONTROLE_CENTRE:     { weight: 5, label: 'MOYENNE' },
+  CENTRE:              { weight: 5, label: 'MOYENNE' },
+  FOU_CONTRE_CAVALIER: { weight: 5, label: 'MOYENNE' },
+  DEVELOPPEMENT:       { weight: 6, label: 'MOYENNE' },
 };
 
 // ── Rédaction ──
@@ -104,6 +122,54 @@ export function renderToken(t) {
 
     case 'ROQUES_OPPOSES':
       return `Roques opposés.`;
+
+    case 'CLOUAGE_RELATIF':
+      return `Clouage relatif : la pièce ${colorLabel(/** @type {string} */ (p.color))} en ${p.square} (${p.type}) masque une pièce plus chère en ${p.behind} face à la pièce en ${p.by}.`;
+
+    case 'ENFILADE':
+      return `Enfilade pour les ${colorLabel(/** @type {string} */ (p.color))} : la pièce en ${p.square} attaque ${p.front}, qui en bougeant découvrira ${p.back}.`;
+
+    case 'DECOUVERTE_POSSIBLE':
+      return `${p.check ? 'Échec à la découverte possible' : 'Attaque à la découverte possible'} pour les ${colorLabel(/** @type {string} */ (p.color))} : déplacer la pièce en ${p.mover} démasque la pièce en ${p.slider} sur ${p.target}.`;
+
+    case 'SURCHARGE':
+      return `Pièce surchargée ${colorLabel(/** @type {string} */ (p.color))} en ${p.square} (${p.type}) : seule à défendre ${p.defends}.`;
+
+    case 'PIECE_PIEGEE':
+      return `Pièce ${colorLabel(/** @type {string} */ (p.color))} piégée en ${p.square} (${p.type}) : menacée et sans case de fuite sûre.`;
+
+    case 'RANGEE_FAIBLE':
+      return `Dernière rangée faible chez les ${colorLabel(/** @type {string} */ (p.color))} : le roi en ${p.king} n'a pas de case de fuite${p.guarded ? ' (une seule pièce lourde garde la rangée)' : ''}.`;
+
+    case 'COMPLEXE_FAIBLE':
+      return `Complexe de cases ${p.shade} affaibli chez les ${colorLabel(/** @type {string} */ (p.color))} (${p.squares}) : plus de fou de cette couleur pour les défendre${p.enemyBishop ? ", et l'adversaire a encore le sien" : ''}.`;
+
+    case 'CONTROLE_COLONNE':
+      return `Les ${colorLabel(/** @type {string} */ (p.color))} contrôlent la colonne ${p.file}${p.doubled ? ' (pièces lourdes doublées)' : ''}.`;
+
+    case 'CASE_ENTREE':
+      return `Case d'entrée pour les ${colorLabel(/** @type {string} */ (p.color))} en ${p.square} (colonne ${p.file}).`;
+
+    case 'TOUR_7E':
+      return `${p.type === 'q' ? 'Dame' : 'Tour'} ${colorLabel(/** @type {string} */ (p.color))} en 7e rangée (${p.square}).`;
+
+    case 'ACTIVITE':
+      return `Pièces ${colorLabel(/** @type {string} */ (p.color))} nettement plus actives (mobilité ${p.mine} contre ${p.theirs}).`;
+
+    case 'PIECE_PASSIVE':
+      return `Pièce ${colorLabel(/** @type {string} */ (p.color))} passive en ${p.square} (${p.type}) : presque aucune case.`;
+
+    case 'CONTROLE_CENTRE':
+      return `Les ${colorLabel(/** @type {string} */ (p.color))} contrôlent mieux le centre (d4, d5, e4, e5).`;
+
+    case 'CENTRE':
+      return `Centre ${p.type}.`;
+
+    case 'FOU_CONTRE_CAVALIER':
+      return `Fou contre cavalier : fou aux ${colorLabel(/** @type {string} */ (p.bishop))}, cavalier aux ${colorLabel(/** @type {string} */ (p.knight))}.`;
+
+    case 'DEVELOPPEMENT':
+      return `Avance de développement des ${colorLabel(/** @type {string} */ (p.color))} (${p.lead} pièce(s) de plus en jeu).`;
 
     case 'PHASE':
       return `Phase de jeu : ${p.phase}.`;

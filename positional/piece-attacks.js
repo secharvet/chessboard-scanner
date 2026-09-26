@@ -1,279 +1,141 @@
 /**
- * Module 6 — Attaques de pièces (menaces, clouages, fourchettes).
+ * Module 6 — Tactique statique : motifs géométriques présents sur l'échiquier.
+ *
+ * PIECE_MENACEE, FOURCHETTE, CLOUAGE (au roi), CLOUAGE_RELATIF (à une pièce plus chère),
+ * ENFILADE, DECOUVERTE_POSSIBLE, SURCHARGE, PIECE_PIEGEE, RANGEE_FAIBLE.
+ *
+ * Convention `color` : camp qui SUBIT (menace, clouage, surcharge, pièce piégée, rangée faible)
+ * ou camp qui PROFITE (fourchette, enfilade, découverte) — voir positional/balance.js.
  */
 
-import { parseFenPieces } from './fen-board.js';
+import { buildAttackMap, VALUE, other, relRank, sliderDirs, sq } from './attack-map.js';
 import { token } from './tokens.js';
-
-// ── Attaques brutes (sans bloqueurs) ──
-
-const KNIGHT_MOVES = [
-  [-2, -1], [-2, 1], [-1, -2], [-1, 2],
-  [1, -2], [1, 2], [2, -1], [2, 1],
-];
-const KING_MOVES = [
-  [-1, -1], [-1, 0], [-1, 1], [0, -1], [0, 1], [1, -1], [1, 0], [1, 1],
-];
-const DIAGONALS = [[-1, -1], [-1, 1], [1, -1], [1, 1]];
-const STRAIGHTS = [[-1, 0], [1, 0], [0, -1], [0, 1]];
-
-/** @typedef {{ fileIdx: number, rank: number }} Pos */
-/** @typedef {import('./fen-board.js').Piece & { attacks: Pos[] }} ArmedPiece */
-
-/**
- * @param {Pos} sq
- * @param {number} df
- * @param {number} dr
- */
-function step(sq, df, dr) {
-  return { fileIdx: sq.fileIdx + df, rank: sq.rank + dr };
-}
-
-function onBoard(sq) {
-  return sq.fileIdx >= 0 && sq.fileIdx < 8 && sq.rank >= 1 && sq.rank <= 8;
-}
-
-// ── Générateur d'attaques (avec bloqueurs) ──
-
-/**
- * @param {import('./fen-board.js').Piece[]} pieces
- * @returns {{ bySquare: Record<string, ArmedPiece>, byColor: Record<string, ArmedPiece[]> }}
- */
-function armedPieces(pieces) {
-  /** @type {Record<string, ArmedPiece>} */
-  const bySquare = {};
-  /** @type {Record<string, ArmedPiece[]>} */
-  const byColor = { w: [], b: [] };
-
-  for (const p of pieces) {
-    /** @type {ArmedPiece} */
-    const armed = { ...p, attacks: [] };
-    bySquare[p.square] = armed;
-    byColor[p.color].push(armed);
-  }
-
-  // Calculer les attaques (avec bloqueurs pour les pièces glissantes)
-  for (const p of pieces) {
-    const armed = bySquare[p.square];
-    const targets = [];
-
-    switch (armed.type) {
-      case 'n': // Cavalier
-        for (const [df, dr] of KNIGHT_MOVES) {
-          const s = step(armed, df, dr);
-          if (onBoard(s)) targets.push(s);
-        }
-        break;
-
-      case 'k': // Roi
-        for (const [df, dr] of KING_MOVES) {
-          const s = step(armed, df, dr);
-          if (onBoard(s)) targets.push(s);
-        }
-        break;
-
-      case 'p': // Pion — diagonales avant
-        {
-          const dr = armed.color === 'w' ? 1 : -1;
-          for (const df of [-1, 1]) {
-            const s = step(armed, df, dr);
-            if (onBoard(s)) targets.push(s);
-          }
-        }
-        break;
-
-      case 'b': // Fou — diagonales
-        for (const [df, dr] of DIAGONALS) {
-          let sq = step(armed, df, dr);
-          while (onBoard(sq)) {
-            targets.push({ ...sq });
-            if (bySquare[`${'abcdefgh'[sq.fileIdx]}${sq.rank}`]) break;
-            sq = step(sq, df, dr);
-          }
-        }
-        break;
-
-      case 'r': // Tour — lignes droites
-        for (const [df, dr] of STRAIGHTS) {
-          let sq = step(armed, df, dr);
-          while (onBoard(sq)) {
-            targets.push({ ...sq });
-            if (bySquare[`${'abcdefgh'[sq.fileIdx]}${sq.rank}`]) break;
-            sq = step(sq, df, dr);
-          }
-        }
-        break;
-
-      case 'q': // Dame — diagonales + droites
-        for (const dirs of [DIAGONALS, STRAIGHTS]) {
-          for (const [df, dr] of dirs) {
-            let sq = step(armed, df, dr);
-            while (onBoard(sq)) {
-              targets.push({ ...sq });
-              if (bySquare[`${'abcdefgh'[sq.fileIdx]}${sq.rank}`]) break;
-              sq = step(sq, df, dr);
-            }
-          }
-        }
-        break;
-    }
-
-    armed.attacks = targets;
-  }
-
-  return { bySquare, byColor };
-}
-
-// ── Faits tactiques ──
-
-const VALUE = { p: 1, n: 3, b: 3, r: 5, q: 9, k: 100 };
-
-/** @param {Pos} a */
-function sqName(a) {
-  return `abcdefgh`[a.fileIdx] + a.rank;
-}
-
-/** @param {string} c */
-function otherColor(c) {
-  return c === 'w' ? 'b' : 'w';
-}
-
-/**
- * Pièces de `color` qui attaquent (ou défendent) la case `square`.
- * @param {string} square
- * @param {string} color
- * @param {Record<string, ArmedPiece[]>} byColor
- */
-function attackersOf(square, color, byColor) {
-  return byColor[color].filter((a) => a.square !== square && a.attacks.some((t) => sqName(t) === square));
-}
 
 /**
  * @param {string} fen
  * @returns {import('./tokens.js').PositionalToken[]}
  */
 export function buildTacticalFacts(fen) {
-  const { pieces } = parseFenPieces(fen);
-  const { bySquare, byColor } = armedPieces(pieces);
+  const map = buildAttackMap(fen);
+  const { pieces, at, attacks, attackersOf, piecesOnRay, isDefended } = map;
   /** @type {import('./tokens.js').PositionalToken[]} */
   const out = [];
 
-  // ── PIECE_MENACEE ──
-  // Seulement les pièces réellement en prise : non défendues, ou attaquées
-  // par une pièce de moindre valeur (sinon l'échange ne gagne rien).
+  /** Une pièce attaquée est-elle réellement en prise ? */
+  const enPrise = (p) => {
+    const attackers = attackersOf(p.square, other(p.color));
+    if (!attackers.length) return false;
+    const cheapest = Math.min(...attackers.map((a) => VALUE[a.type]));
+    return !isDefended(p.square, p.color) || cheapest < VALUE[p.type];
+  };
+
+  // ── PIECE_MENACEE : non défendue, ou attaquée par une pièce de moindre valeur ──
+  for (const p of pieces) {
+    if (p.type === 'k' || !enPrise(p)) continue;
+    out.push(token('PIECE_MENACEE', {
+      square: p.square, color: p.color, type: p.type, defended: isDefended(p.square, p.color),
+    }));
+  }
+
+  // ── FOURCHETTE : au moins deux cibles rentables (roi, pièce plus chère, pièce non défendue) ──
   for (const p of pieces) {
     if (p.type === 'k') continue;
-    const attackers = attackersOf(p.square, otherColor(p.color), byColor);
-    if (!attackers.length) continue;
-    const defended = attackersOf(p.square, p.color, byColor).length > 0;
-    const cheapest = Math.min(...attackers.map((a) => VALUE[a.type]));
-    if (!defended || cheapest < VALUE[p.type]) {
-      out.push(token('PIECE_MENACEE', {
-        square: p.square, color: p.color, type: p.type, defended,
+    const victims = attacks.get(p)
+      .map((s) => at[s])
+      .filter((t) => t && t.color !== p.color && t.type !== 'p')
+      .filter((t) => t.type === 'k' || VALUE[t.type] > VALUE[p.type] || !isDefended(t.square, t.color));
+    if (victims.length >= 2) {
+      out.push(token('FOURCHETTE', {
+        square: p.square, color: p.color, type: p.type, targets: victims.map((v) => v.square).join(','),
       }));
     }
   }
 
-  // ── CLOUAGE ──
-  for (const p of pieces) {
-    const king = pieces.find((k) => k.type === 'k' && k.color === p.color);
-    if (!king) continue;
-    if (p.type === 'k') continue;
-    if (p.color === king.color) {
-      // Vérifier si cette pièce est clouée : un slider adverse attaque le roi à travers elle
-      for (const slider of pieces) {
-        if (slider.color === p.color) continue;
-        if (!['b', 'r', 'q'].includes(slider.type)) continue;
+  // ── Motifs de ligne : clouage, enfilade, découverte ──
+  for (const s of pieces) {
+    for (const dir of sliderDirs(s)) {
+      const [p1, p2] = piecesOnRay(s, dir, 2);
+      if (!p1 || !p2) continue;
 
-        // Attaque brute du slider (sans bloqueurs) pour voir s'il vise le roi
-        const rawAttacks = sliderRawAttacks(slider);
-        const hitsKing = rawAttacks.some(
-          (a) => `abcdefgh`[a.fileIdx] + a.rank === king.square,
-        );
-        const hitsPiece = rawAttacks.some(
-          (a) => `abcdefgh`[a.fileIdx] + a.rank === p.square,
-        );
-        if (!hitsKing || !hitsPiece) continue;
-
-        // La pièce doit être entre le slider et le roi, sur la même ligne
-        if (isBetween(p, slider, king)) {
-          // Vérifier qu'il n'y a PAS d'autre pièce entre la pièce et le slider
-          // (sinon le clouage est bloqué avant)
-          if (!hasBlockerBetween(slider, p, pieces) && !hasBlockerBetween(p, king, pieces)) {
-            out.push(token('CLOUAGE', { square: p.square, color: p.color, type: p.type }));
-          }
+      // Une pièce qui peut prendre la pièce clouante le long de la ligne n'est pas vraiment clouée.
+      const canTakePinner = p1.type !== 'n' && attacks.get(p1).includes(s.square);
+      if (p1.color !== s.color && p2.color !== s.color && p1.type !== 'k' && !canTakePinner) {
+        if (p2.type === 'k') {
+          out.push(token('CLOUAGE', { square: p1.square, color: p1.color, type: p1.type, by: s.square }));
+        } else if (VALUE[p2.type] > VALUE[p1.type] && VALUE[p2.type] > VALUE[s.type]) {
+          out.push(token('CLOUAGE_RELATIF', {
+            square: p1.square, color: p1.color, type: p1.type, by: s.square, behind: p2.square,
+          }));
         }
+      }
+
+      // Enfilade : la pièce de devant (roi ou plus chère) doit bouger et découvre celle de derrière.
+      if (p1.color !== s.color && p2.color !== s.color && p2.type !== 'k'
+        && (p1.type === 'k' || VALUE[p1.type] > VALUE[p2.type])
+        && (!isDefended(p2.square, p2.color) || VALUE[p2.type] > VALUE[s.type])) {
+        out.push(token('ENFILADE', { square: s.square, color: s.color, front: p1.square, back: p2.square }));
+      }
+
+      // Découverte : une pièce amie masque une ligne vers le roi, la dame ou une pièce non défendue.
+      if (p1.color === s.color && p2.color !== s.color
+        && (p2.type === 'k' || p2.type === 'q' || (p2.type !== 'p' && !isDefended(p2.square, p2.color)))) {
+        out.push(token('DECOUVERTE_POSSIBLE', {
+          color: s.color, slider: s.square, mover: p1.square, target: p2.square, check: p2.type === 'k',
+        }));
       }
     }
   }
 
-  // ── FOURCHETTE ──
-  // Une pièce attaque au moins deux cibles « rentables » : le roi, une pièce
-  // plus chère qu'elle, ou une pièce non défendue.
-  for (const p of pieces) {
-    if (p.type === 'k') continue;
-    const armed = bySquare[p.square];
-    const victims = [];
-    for (const target of pieces) {
-      if (target.color === p.color || target.type === 'p') continue; // exclure les pions (trop fréquents)
-      if (!armed.attacks.some((a) => sqName(a) === target.square)) continue;
-      const profitable =
-        target.type === 'k' ||
-        VALUE[target.type] > VALUE[p.type] ||
-        attackersOf(target.square, target.color, byColor).length === 0;
-      if (profitable) victims.push(target);
-    }
-    if (victims.length >= 2) {
-      out.push(token('FOURCHETTE', {
-        square: p.square, color: p.color, type: p.type,
-        targets: victims.map((v) => v.square).join(','),
+  // ── SURCHARGE : seul défenseur de deux pièces attaquées ──
+  for (const d of pieces) {
+    if (d.type === 'k') continue;
+    const duties = pieces.filter(
+      (p) => p.color === d.color && p !== d && p.type !== 'k'
+        && attackersOf(p.square, other(p.color)).length > 0
+        && attacks.get(d).includes(p.square)
+        && attackersOf(p.square, p.color).length === 1,
+    );
+    if (duties.length >= 2) {
+      out.push(token('SURCHARGE', {
+        square: d.square, color: d.color, type: d.type, defends: duties.map((p) => p.square).join(','),
       }));
     }
   }
 
-  return out;
-}
-
-/** Vérifie si `piece` est sur la ligne droite/diagonale entre `slider` et `king`. */
-function isBetween(piece, slider, king) {
-  const dfk = Math.sign(king.fileIdx - slider.fileIdx);
-  const drk = Math.sign(king.rank - slider.rank);
-  if (dfk === 0 && drk === 0) return false;
-
-  const dfp = Math.sign(piece.fileIdx - slider.fileIdx);
-  const drp = Math.sign(piece.rank - slider.rank);
-  if (dfp !== dfk || drp !== drk) return false;
-
-  const distKing = Math.max(
-    Math.abs(king.fileIdx - slider.fileIdx),
-    Math.abs(king.rank - slider.rank),
-  );
-  const distPiece = Math.max(
-    Math.abs(piece.fileIdx - slider.fileIdx),
-    Math.abs(piece.rank - slider.rank),
-  );
-  return distPiece < distKing;
-}
-
-/** Attaques brutes d'un slider (sans bloqueurs). */
-function sliderRawAttacks(slider) {
-  const dirs = slider.type === 'b' ? DIAGONALS : slider.type === 'r' ? STRAIGHTS : [...DIAGONALS, ...STRAIGHTS];
-  const out = [];
-  for (const [df, dr] of dirs) {
-    let sq = step(slider, df, dr);
-    while (onBoard(sq)) { out.push({ ...sq }); sq = step(sq, df, dr); }
+  // ── PIECE_PIEGEE : pièce menacée sans aucune case de fuite sûre ──
+  for (const p of pieces) {
+    if (!['n', 'b', 'r', 'q'].includes(p.type) || !enPrise(p)) continue;
+    const exits = attacks.get(p).filter((s) => at[s]?.color !== p.color);
+    const safe = exits.some((s) => {
+      const hunters = attackersOf(s, other(p.color));
+      const target = at[s];
+      if (target && VALUE[target.type] >= VALUE[p.type]) return true; // prise rentable
+      if (!hunters.length) return true;
+      return Math.min(...hunters.map((h) => VALUE[h.type])) >= VALUE[p.type] && isDefended(s, p.color, p);
+    });
+    if (!safe) out.push(token('PIECE_PIEGEE', { square: p.square, color: p.color, type: p.type }));
   }
-  return out;
-}
 
-/** Y a-t-il un bloqueur entre slider et target ? */
-function hasBlockerBetween(slider, target, pieces) {
-  const df = Math.sign(target.fileIdx - slider.fileIdx);
-  const dr = Math.sign(target.rank - slider.rank);
-  let sq = step(slider, df, dr);
-  while (onBoard(sq) && (sq.fileIdx !== target.fileIdx || sq.rank !== target.rank)) {
-    if (pieces.some(p => `abcdefgh`[sq.fileIdx] + sq.rank === p.square)) return true;
-    sq = step(sq, df, dr);
+  // ── RANGEE_FAIBLE : roi sur sa première rangée sans case de fuite, adversaire avec tour/dame ──
+  for (const color of /** @type {const} */ (['w', 'b'])) {
+    const king = pieces.find((p) => p.type === 'k' && p.color === color);
+    if (!king || relRank(king.rank, color) !== 1) continue;
+    const heavy = pieces.some((p) => p.color !== color && (p.type === 'r' || p.type === 'q'));
+    if (!heavy) continue;
+    const up = color === 'w' ? 1 : -1;
+    const escapes = [-1, 0, 1]
+      .map((df) => [king.fileIdx + df, king.rank + up])
+      .filter(([f]) => f >= 0 && f < 8)
+      .map(([f, r]) => sq(f, r))
+      .filter((s) => !at[s] && attackersOf(s, other(color)).length === 0);
+    // Une tour/dame amie sur la rangée la garde ; deux pièces lourdes = rangée tenue.
+    const guards = pieces.filter(
+      (p) => p.color === color && (p.type === 'r' || p.type === 'q') && p.rank === king.rank,
+    ).length;
+    if (escapes.length === 0 && guards <= 1) {
+      out.push(token('RANGEE_FAIBLE', { color, king: king.square, guarded: guards === 1 }));
+    }
   }
-  return false;
+
+  return out;
 }

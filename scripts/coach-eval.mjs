@@ -107,7 +107,7 @@ const summary = modes.map((mode) => {
   return { mode, hit, total, ung, clean, n: rs.length };
 });
 
-const lines = [`# Évaluation du coach — ${new Date().toISOString()}`, '', `Modèle : ${cfg.provider} / ${cfg.model}`, ''];
+const lines = [`# Évaluation du coach — ${new Date().toISOString()}`, '', `Modèle : ${cfg.provider} / ${cfg.model}${cfg.effort ? ` (effort ${cfg.effort})` : ''}`, ''];
 lines.push('| Mode | Thèmes trouvés | Coups hors contexte | Réponses sans coup inventé |', '|---|---|---|---|');
 for (const s of summary) {
   lines.push(`| ${s.mode} | ${s.hit}/${s.total} (${Math.round((100 * s.hit) / s.total)} %) | ${s.ung} | ${s.clean}/${s.n} |`);

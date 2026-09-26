@@ -9,6 +9,7 @@ import { buildSpaceFacts } from './space.js';
 import { buildTacticalFacts } from './piece-attacks.js';
 import { buildPhaseFacts, detectPhase } from './phase.js';
 import { buildStructureFacts } from './structures.js';
+import { buildImbalanceFacts } from './imbalances.js';
 
 export {
   buildPawnStructureFacts,
@@ -23,6 +24,7 @@ export {
   buildPhaseFacts,
   detectPhase,
   buildStructureFacts,
+  buildImbalanceFacts,
 };
 export { parseFenPawns } from './fen-board.js';
 export { findToken, sortTokens, token, tokenKey } from './tokens.js';
@@ -45,5 +47,6 @@ export function buildAllFacts(fen) {
     ...buildSpaceFacts(fen),
     ...buildTacticalFacts(fen),
     ...buildStructureFacts(fen),
+    ...buildImbalanceFacts(fen),
   ];
 }
