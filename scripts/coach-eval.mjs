@@ -4,6 +4,7 @@
  *   node scripts/coach-eval.mjs                 # toutes les positions, les deux modes
  *   node scripts/coach-eval.mjs --only 3,9      # sous-ensemble (index à partir de 1)
  *   node scripts/coach-eval.mjs --mode grounded # un seul mode
+ *   node scripts/coach-eval.mjs --judge         # + note de justesse par le relecteur (JUDGE_*)
  *
  * Rapport Markdown dans reports/.
  */
@@ -15,6 +16,7 @@ import { buildCoachContext } from '../coach/context.mjs';
 import { loadEnv } from '../coach/env.mjs';
 import { EVAL_POSITIONS } from '../coach/eval-positions.mjs';
 import { findUngroundedMoves } from '../coach/guard.mjs';
+import { judgeAnswer, judgeConfig } from '../coach/judge.mjs';
 import { complete, llmConfig } from '../coach/llm.mjs';
 import { UciEngine } from '../coach/uci-engine.mjs';
 
@@ -28,6 +30,8 @@ const only = opt('--only')?.split(',').map(Number);
 const modes = opt('--mode') ? [opt('--mode')] : ['naive', 'grounded'];
 const concurrency = Number(opt('--jobs') ?? 3);
 const cfg = llmConfig();
+const useJudge = args.includes('--judge');
+const jcfg = judgeConfig();
 const engine = new UciEngine();
 
 const NAIVE_SYSTEM = `Tu es un coach d'échecs francophone pour joueurs de club. Analyse la position fournie (FEN) et réponds à la question de l'élève : évaluation, plan, coup conseillé, pièges à éviter. Notation française (R, D, T, F, C). 180 mots maximum, Markdown.`;
@@ -52,7 +56,7 @@ async function runNaive(p) {
   const ctx = await buildCoachContext({ ...p, engine });
   const user = `Question : ${p.question}\nFEN : ${p.fen}\nCamp de l'élève : ${p.side}\nCoups joués : ${p.moves.join(' ') || '(aucun)'}`;
   const advice = await complete({ system: NAIVE_SYSTEM, user }, cfg);
-  return { advice, ungrounded: findUngroundedMoves(advice, ctx.data), context: '' };
+  return { advice, ungrounded: findUngroundedMoves(advice, ctx.data), context: ctx.text, problems: [], hideContext: true };
 }
 
 function score(advice, themes) {
@@ -85,14 +89,18 @@ const results = await pool(jobs, concurrency, async ({ pos, mode }) => {
   try {
     const r = mode === 'naive' ? await runNaive(p) : await askCoach({ ...p, engine, cfg });
     const hits = score(r.advice, pos.themes);
+    const verdict = useJudge ? await judgeAnswer(r.context, r.advice, jcfg).catch((e) => ({ erreurs: [], note: null, raw: e.message })) : null;
+    const graves = verdict?.erreurs.filter((e) => e.gravite === 'grave').length ?? 0;
     console.log(
       `#${pos.index} ${mode.padEnd(8)} thèmes ${hits.filter((h) => h.hit).length}/${hits.length}` +
-      `  hors contexte ${r.ungrounded.length}  ${((Date.now() - t0) / 1000).toFixed(1)} s  — ${pos.name}`,
+      `  hors contexte ${r.ungrounded.length}  citations KO ${r.problems?.length ?? 0}${r.revised ? ' (réécrit)' : ''}` +
+      (verdict ? `  note ${verdict.note ?? '?'}/10, graves ${graves}` : '') +
+      `  ${((Date.now() - t0) / 1000).toFixed(1)} s  — ${pos.name}`,
     );
-    return { pos, mode, p, ...r, hits };
+    return { pos, mode, p, ...r, hits, verdict };
   } catch (e) {
     console.log(`#${pos.index} ${mode} ERREUR ${e.message}`);
-    return { pos, mode, p, advice: `ERREUR : ${e.message}`, ungrounded: [], hits: score('', pos.themes), context: '' };
+    return { pos, mode, p, advice: `ERREUR : ${e.message}`, ungrounded: [], problems: [], hits: score('', pos.themes), context: '', verdict: null };
   }
 });
 engine.stop();
@@ -104,24 +112,35 @@ const summary = modes.map((mode) => {
   const total = rs.reduce((a, r) => a + r.hits.length, 0);
   const ung = rs.reduce((a, r) => a + r.ungrounded.length, 0);
   const clean = rs.filter((r) => r.ungrounded.length === 0).length;
-  return { mode, hit, total, ung, clean, n: rs.length };
+  const notes = rs.map((r) => r.verdict?.note).filter((x) => Number.isFinite(x));
+  const avg = notes.length ? (notes.reduce((a, b) => a + b, 0) / notes.length).toFixed(1) : '—';
+  const graves = rs.reduce((a, r) => a + (r.verdict?.erreurs.filter((e) => e.gravite === 'grave').length ?? 0), 0);
+  const citeKo = rs.reduce((a, r) => a + (r.problems?.length ?? 0), 0);
+  return { mode, hit, total, ung, clean, n: rs.length, avg, graves, citeKo };
 });
 
-const lines = [`# Évaluation du coach — ${new Date().toISOString()}`, '', `Modèle : ${cfg.provider} / ${cfg.model}${cfg.effort ? ` (effort ${cfg.effort})` : ''}`, ''];
-lines.push('| Mode | Thèmes trouvés | Coups hors contexte | Réponses sans coup inventé |', '|---|---|---|---|');
+const lines = [`# Évaluation du coach — ${new Date().toISOString()}`, '', `Modèle : ${cfg.provider} / ${cfg.model}${cfg.effort ? ` (effort ${cfg.effort})` : ''}`];
+if (useJudge) lines.push(`Relecteur : ${jcfg.provider} / ${jcfg.model}${jcfg.effort ? ` (effort ${jcfg.effort})` : ''}`);
+lines.push('', '| Mode | Thèmes trouvés | Coups hors contexte | Réponses sans coup inventé | Citations KO restantes | Note relecteur | Erreurs graves |', '|---|---|---|---|---|---|---|');
 for (const s of summary) {
-  lines.push(`| ${s.mode} | ${s.hit}/${s.total} (${Math.round((100 * s.hit) / s.total)} %) | ${s.ung} | ${s.clean}/${s.n} |`);
+  lines.push(`| ${s.mode} | ${s.hit}/${s.total} (${Math.round((100 * s.hit) / s.total)} %) | ${s.ung} | ${s.clean}/${s.n} | ${s.citeKo} | ${s.avg} | ${s.graves} |`);
 }
 for (const pos of selected) {
   lines.push('', `## ${pos.index}. ${pos.name}`, '', `FEN : \`${prepare(pos).fen}\``);
   for (const r of results.filter((x) => x.pos === pos)) {
     const found = r.hits.map((h) => `${h.hit ? '✅' : '❌'} \`${h.theme}\``).join(' ');
-    lines.push('', `### ${r.mode}`, '', `Thèmes : ${found}`, `Coups hors contexte : ${r.ungrounded.join(', ') || 'aucun'}`, '', r.advice);
-    if (r.context) lines.push('', '<details><summary>Contexte envoyé</summary>', '', '```', r.context, '```', '</details>');
+    lines.push('', `### ${r.mode}`, '', `Thèmes : ${found}`, `Coups hors contexte : ${r.ungrounded.join(', ') || 'aucun'}`);
+    if (r.problems?.length) lines.push('', 'Citations KO :', ...r.problems.map((x) => `- ${x}`));
+    if (r.verdict) {
+      lines.push('', `Relecteur : ${r.verdict.note ?? '?'}/10`);
+      for (const e of r.verdict.erreurs) lines.push(`- **${e.gravite}** — « ${e.phrase} » : ${e.raison}`);
+    }
+    lines.push('', r.advice);
+    if (r.context && !r.hideContext) lines.push('', '<details><summary>Contexte envoyé</summary>', '', '```', r.context, '```', '</details>');
   }
 }
 mkdirSync('reports', { recursive: true });
 const file = `reports/coach-eval-${Date.now()}.md`;
 writeFileSync(file, lines.join('\n'));
-console.log('\n' + summary.map((s) => `${s.mode}: thèmes ${s.hit}/${s.total}, hors contexte ${s.ung}, propres ${s.clean}/${s.n}`).join('\n'));
+console.log('\n' + summary.map((s) => `${s.mode}: thèmes ${s.hit}/${s.total}, hors contexte ${s.ung}, propres ${s.clean}/${s.n}, citations KO ${s.citeKo}, note ${s.avg}/10, erreurs graves ${s.graves}`).join('\n'));
 console.log(`Rapport : ${file}`);

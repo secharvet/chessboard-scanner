@@ -22,7 +22,7 @@ export function getMentorApiBase() {
  *   question?: string,
  *   signal?: AbortSignal,
  * }} payload
- * @returns {Promise<string>}
+ * @returns {Promise<{ advice: string, problems: string[], revised: boolean }>}
  */
 export async function askGroqMentor(payload) {
   const base = getMentorApiBase();
@@ -60,7 +60,7 @@ export async function askGroqMentor(payload) {
     if (advice == null || String(advice).trim() === '') {
       throw new Error('Réponse vide du serveur (groq).');
     }
-    return advice;
+    return { advice, problems: data.problems ?? [], revised: Boolean(data.revised) };
   } catch (e) {
     if (e?.name === 'AbortError') {
       throw new Error(

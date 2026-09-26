@@ -58,7 +58,8 @@ export async function buildCoachContext({ fen, side, moves = [], engine, depth =
   const structures = describeStructures(allFacts, player);
 
   const data = { fen, player, toMove, phase, candidates, threat, staticFacts, balance, structures, moves };
-  return { text: renderContext(data), data };
+  const rendered = renderContext(data);
+  return { text: rendered.text, data: { ...data, facts: rendered.facts } };
 }
 
 // ── Lignes du moteur ──
@@ -267,35 +268,47 @@ function materialVsEval(d) {
 
 // ── Rendu texte (entrée du LLM) ──
 
+/**
+ * Chaque affirmation vérifiable reçoit un identifiant ([E1], [L2], [F7]…) que le coach doit citer.
+ * @returns {{ text: string, facts: Record<string, string> }}
+ */
 function renderContext(d) {
   const colorName = (c) => (c === 'w' ? 'Blancs' : 'Noirs');
   const out = [];
+  /** @type {Record<string, string>} */
+  const facts = {};
+  let n = 0;
+  const cite = (text, prefix = 'F') => {
+    const id = prefix === 'F' ? `F${++n}` : prefix;
+    facts[id] = text;
+    out.push(`- [${id}] ${text}`);
+  };
 
   out.push('## Situation');
-  out.push(`- Tu joues les ${colorName(d.player)}. Trait aux ${colorName(d.toMove)}.`);
-  out.push(`- Phase : ${d.phase}.`);
+  out.push(`- Tu joues les ${colorName(d.player)}. Trait aux ${colorName(d.toMove)}. Phase : ${d.phase}.`);
   if (d.moves.length) out.push(`- Derniers coups : ${d.moves.slice(-8).map(toFrenchSan).join(' ')}`);
-  if (d.candidates[0]) out.push(`- Évaluation Stockfish (meilleur coup) : ${formatEval(d.candidates[0].evalPlayer)}`);
+  if (d.candidates[0]) cite(`Évaluation Stockfish (meilleur coup) : ${formatEval(d.candidates[0].evalPlayer)}.`, 'E1');
   const note = materialVsEval(d);
-  if (note) out.push(`- ⚠ ${note}`);
+  if (note) cite(note, 'E2');
 
   out.push('');
   out.push('## Coups candidats (Stockfish, du meilleur au moins bon)');
   d.candidates.forEach((c, i) => {
+    const L = `L${i + 1}`;
     out.push(`### ${i + 1}. ${c.move} — ${formatEval(c.evalPlayer)}`);
-    out.push(`- Ligne : ${c.pvSan}`);
-    out.push(`- Au bout de « ${c.horizonSan} » : ${formatMaterial(c.material, d.player)}.`);
-    if (c.changes.gained.length) out.push(`- Ce que la ligne crée : ${c.changes.gained.join(' ')}`);
-    if (c.changes.lost.length) out.push(`- Ce que la ligne fait disparaître : ${c.changes.lost.join(' ')}`);
+    cite(`Ligne ${i + 1} : ${c.pvSan} (${formatEval(c.evalPlayer)}).`, L);
+    cite(`Au bout de « ${c.horizonSan} » : ${formatMaterial(c.material, d.player)}.`, `${L}m`);
+    c.changes.gained.forEach((g, j) => cite(`La ligne ${i + 1} crée : ${g}`, `${L}+${j + 1}`));
+    c.changes.lost.forEach((g, j) => cite(`La ligne ${i + 1} fait disparaître : ${g}`, `${L}-${j + 1}`));
   });
 
   out.push('');
   out.push('## Structure de pions reconnue (plans classiques, connaissance générale)');
   if (d.structures.length) {
-    for (const st of d.structures) {
+    d.structures.forEach((st, i) => {
       out.push(`### ${st.label}`);
-      for (const p of st.plans) out.push(`- ${p}`);
-    }
+      st.plans.forEach((p, j) => cite(p, `S${i + 1}${'abc'[j]}`));
+    });
   } else {
     out.push('- Aucune structure type reconnue.');
   }
@@ -303,12 +316,13 @@ function renderContext(d) {
   out.push('');
   out.push('## Menace');
   if (d.threat) {
-    out.push(
-      `- Si le camp au trait passait son tour, ${d.threat.by === 'toi' ? 'tu jouerais' : "l'adversaire jouerait"} ${d.threat.move} ` +
+    cite(
+      `Si le camp au trait passait son tour, ${d.threat.by === 'toi' ? 'tu jouerais' : "l'adversaire jouerait"} ${d.threat.move} ` +
       `(ligne : ${d.threat.line} ; ${formatMaterial(d.threat.material, d.player)}).`,
+      'M1',
     );
   } else {
-    out.push('- Aucune menace immédiate significative détectée par le moteur.');
+    cite('Aucune menace immédiate significative détectée par le moteur.', 'M0');
   }
 
   out.push('');
@@ -318,7 +332,7 @@ function renderContext(d) {
   const section = (title, items, max) => {
     out.push(`### ${title}`);
     if (!items.length) out.push('- (rien de notable)');
-    for (const it of items.slice(0, max)) out.push(`- ${it}`);
+    for (const it of items.slice(0, max)) cite(it);
   };
   section('Tes atouts', d.balance[me].assets, 8);
   section('Tes faiblesses', d.balance[me].weaknesses, 8);
@@ -326,5 +340,5 @@ function renderContext(d) {
   section("Faiblesses de l'adversaire", d.balance[opp].weaknesses, 8);
   section('Contexte général', d.balance.context, 5);
 
-  return out.join('\n');
+  return { text: out.join('\n'), facts };
 }

@@ -136,7 +136,7 @@ export function buildStructureFacts(fen) {
     const wing = (k) => (k.fileIdx >= 5 ? 'roi' : k.fileIdx <= 2 ? 'dame' : null);
     const ww = wing(wk);
     const bw = wing(bk);
-    if (ww && bw && ww !== bw) out.push(token('ROQUES_OPPOSES', {}));
+    if (ww && bw && ww !== bw) out.push(token('ROQUES_OPPOSES', { white: ww, black: bw }));
   }
 
   return out;

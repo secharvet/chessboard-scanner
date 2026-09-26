@@ -121,7 +121,9 @@ export function renderToken(t) {
       return `Structure : ${STRUCTURES[/** @type {string} */ (p.name)]?.label ?? p.name} (${colorLabel(/** @type {string} */ (p.color))}).`;
 
     case 'ROQUES_OPPOSES':
-      return `Roques opposés.`;
+      return p.white
+        ? `Roques opposés : roi blanc à l'aile ${p.white}, roi noir à l'aile ${p.black}. Chaque camp attaque du côté du roi adverse : les Blancs à l'aile ${p.black}, les Noirs à l'aile ${p.white}.`
+        : `Roques opposés.`;
 
     case 'CLOUAGE_RELATIF':
       return `Clouage relatif : la pièce ${colorLabel(/** @type {string} */ (p.color))} en ${p.square} (${p.type}) masque une pièce plus chère en ${p.behind} face à la pièce en ${p.by}.`;

@@ -105,14 +105,19 @@ export function bindMentorPanel(options) {
     const base = options.getPayload();
 
     try {
-      const advice = await askGroqMentor({
+      const { advice, problems } = await askGroqMentor({
         ...base,
         question,
         signal: abort.signal,
       });
       cache = { text: advice };
       renderPanel(advice);
-      if ($status) $status.textContent = `${COACH_LABEL} · ${advice.length} car.`;
+      if ($status) {
+        $status.textContent = problems.length
+          ? `${COACH_LABEL} · ⚠ ${problems.length} affirmation(s) non vérifiée(s)`
+          : `${COACH_LABEL} · ✓ sources vérifiées`;
+        $status.title = problems.join('\n');
+      }
     } catch (e) {
       if (e?.name === 'AbortError') return;
       const msg = e?.message ?? String(e);
