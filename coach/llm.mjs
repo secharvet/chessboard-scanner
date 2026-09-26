@@ -3,7 +3,7 @@
  *
  * Variables d'environnement :
  *   LLM_PROVIDER   claude-cli | deepseek | openai | anthropic   (défaut : claude-cli)
- *   LLM_MODEL      ex. sonnet, deepseek-chat, claude-sonnet-5
+ *   LLM_MODEL      ex. sonnet, deepseek-flash, claude-sonnet-5
  *   LLM_API_KEY    clé API (sauf claude-cli)
  *   LLM_BASE_URL   pour un endpoint compatible OpenAI
  */
@@ -12,7 +12,7 @@ import { spawn } from 'node:child_process';
 
 const DEFAULTS = {
   'claude-cli': { model: 'sonnet' },
-  deepseek: { model: 'deepseek-chat', baseUrl: 'https://api.deepseek.com' },
+  deepseek: { model: 'deepseek-flash', baseUrl: 'https://api.deepseek.com' },
   openai: { model: 'gpt-4o-mini', baseUrl: 'https://api.openai.com/v1' },
   anthropic: { model: 'claude-sonnet-5', baseUrl: 'https://api.anthropic.com' },
 };
