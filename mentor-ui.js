@@ -1,11 +1,11 @@
 /**
- * Panneau coach Groq — appel API llm-factory (openai/gpt-oss-120b).
+ * Panneau coach — appel au serveur coach/ (Stockfish + règles + LLM).
  */
 
 import { askGroqMentor, checkMentorHealth } from './mentor-client.js';
 import { renderMentorMarkdown } from './mentor-markdown.js';
 
-const COACH_LABEL = 'Groq · GPT-OSS 120B';
+const COACH_LABEL = 'Coach ancré';
 
 /**
  * @param {{

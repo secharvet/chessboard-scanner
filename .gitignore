@@ -2,3 +2,5 @@ node_modules/
 archive/
 data/
 test-results/
+.env
+reports/

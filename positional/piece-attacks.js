@@ -126,32 +126,51 @@ function armedPieces(pieces) {
 
 // ── Faits tactiques ──
 
+const VALUE = { p: 1, n: 3, b: 3, r: 5, q: 9, k: 100 };
+
+/** @param {Pos} a */
+function sqName(a) {
+  return `abcdefgh`[a.fileIdx] + a.rank;
+}
+
+/** @param {string} c */
+function otherColor(c) {
+  return c === 'w' ? 'b' : 'w';
+}
+
+/**
+ * Pièces de `color` qui attaquent (ou défendent) la case `square`.
+ * @param {string} square
+ * @param {string} color
+ * @param {Record<string, ArmedPiece[]>} byColor
+ */
+function attackersOf(square, color, byColor) {
+  return byColor[color].filter((a) => a.square !== square && a.attacks.some((t) => sqName(t) === square));
+}
+
 /**
  * @param {string} fen
  * @returns {import('./tokens.js').PositionalToken[]}
  */
 export function buildTacticalFacts(fen) {
   const { pieces } = parseFenPieces(fen);
-  const { bySquare } = armedPieces(pieces);
+  const { bySquare, byColor } = armedPieces(pieces);
   /** @type {import('./tokens.js').PositionalToken[]} */
   const out = [];
 
   // ── PIECE_MENACEE ──
-  /** @type {Set<string>} */
-  const menaced = new Set();
+  // Seulement les pièces réellement en prise : non défendues, ou attaquées
+  // par une pièce de moindre valeur (sinon l'échange ne gagne rien).
   for (const p of pieces) {
-    const square = p.square;
-    for (const defender of pieces) {
-      if (defender.color === p.color) continue;
-      const armed = bySquare[defender.square];
-      if (!armed) continue;
-      if (armed.attacks.some((a) => `abcdefgh`[a.fileIdx] + a.rank === square)) {
-        const key = `${p.type}:${square}:${p.color}`;
-        if (!menaced.has(key)) {
-          menaced.add(key);
-          out.push(token('PIECE_MENACEE', { square, color: p.color, type: p.type }));
-        }
-      }
+    if (p.type === 'k') continue;
+    const attackers = attackersOf(p.square, otherColor(p.color), byColor);
+    if (!attackers.length) continue;
+    const defended = attackersOf(p.square, p.color, byColor).length > 0;
+    const cheapest = Math.min(...attackers.map((a) => VALUE[a.type]));
+    if (!defended || cheapest < VALUE[p.type]) {
+      out.push(token('PIECE_MENACEE', {
+        square: p.square, color: p.color, type: p.type, defended,
+      }));
     }
   }
 
@@ -180,7 +199,7 @@ export function buildTacticalFacts(fen) {
         if (isBetween(p, slider, king)) {
           // Vérifier qu'il n'y a PAS d'autre pièce entre la pièce et le slider
           // (sinon le clouage est bloqué avant)
-          if (!hasBlockerBetween(slider, p, pieces, p.color)) {
+          if (!hasBlockerBetween(slider, p, pieces) && !hasBlockerBetween(p, king, pieces)) {
             out.push(token('CLOUAGE', { square: p.square, color: p.color, type: p.type }));
           }
         }
@@ -189,18 +208,26 @@ export function buildTacticalFacts(fen) {
   }
 
   // ── FOURCHETTE ──
+  // Une pièce attaque au moins deux cibles « rentables » : le roi, une pièce
+  // plus chère qu'elle, ou une pièce non défendue.
   for (const p of pieces) {
+    if (p.type === 'k') continue;
     const armed = bySquare[p.square];
-    if (!armed) continue;
     const victims = [];
     for (const target of pieces) {
       if (target.color === p.color || target.type === 'p') continue; // exclure les pions (trop fréquents)
-      if (armed.attacks.some((a) => `abcdefgh`[a.fileIdx] + a.rank === target.square)) {
-        victims.push(target);
-      }
+      if (!armed.attacks.some((a) => sqName(a) === target.square)) continue;
+      const profitable =
+        target.type === 'k' ||
+        VALUE[target.type] > VALUE[p.type] ||
+        attackersOf(target.square, target.color, byColor).length === 0;
+      if (profitable) victims.push(target);
     }
     if (victims.length >= 2) {
-      out.push(token('FOURCHETTE', { square: p.square, color: p.color, type: p.type }));
+      out.push(token('FOURCHETTE', {
+        square: p.square, color: p.color, type: p.type,
+        targets: victims.map((v) => v.square).join(','),
+      }));
     }
   }
 

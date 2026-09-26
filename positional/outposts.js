@@ -4,7 +4,7 @@
 
 import {
   FILES,
-  isSquareAttackedByPawn,
+  canPawnsEverAttack,
   parseFenPawns,
   pawnAttackTargets,
   pawnsOfColor,
@@ -37,7 +37,8 @@ export function buildOutpostFacts(fen) {
         const sq = FILES[t.fileIdx] + t.rank;
         if (emitted.has(sq + color)) continue;
 
-        if (!isSquareAttackedByPawn(t, enemies, color === 'w' ? 'b' : 'w')) {
+        // Un avant-poste ne peut jamais être chassé par un pion adverse.
+        if (!canPawnsEverAttack(t, enemies, color === 'w' ? 'b' : 'w')) {
           emitted.add(sq + color);
           out.push(token('AVANT_POSTE', { square: sq, color }));
         }

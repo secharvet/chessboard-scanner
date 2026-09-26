@@ -66,12 +66,17 @@ describe('Module 5 — espace', () => {
     assert.ok(has(t, 'AVANTAGE_ESPACE', { color: 'w' }));
   });
 
-  it('case faible noire après 1.e4 : d5 et f5', () => {
-    // e4 attaque d5 et f5. Ces cases sont en territoire noir (rangs 5-8),
-    // inattaquables par les pions noirs en rang 7 (ils attaquent rang 6).
+  it('après 1.e4, d5 et f5 ne sont pas des trous (c7/e7/g7 peuvent encore les couvrir)', () => {
     const t = buildSpaceFacts('rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1');
+    assert.ok(!has(t, 'CASE_FAIBLE', { square: 'd5', color: 'b' }));
+    assert.ok(!has(t, 'CASE_FAIBLE', { square: 'f5', color: 'b' }));
+  });
+
+  it('Sicilienne ...e5 sans pion c : trou noir en d5', () => {
+    // 1.e4 c5 2.Nf3 Nc6 3.d4 cxd4 4.Nxd4 Nf6 5.Nc3 e5
+    const t = buildSpaceFacts('r1bqkb1r/pp1p1ppp/2n2n2/4p3/3NP3/2N5/PPP2PPP/R1BQKB1R w KQkq e6 0 6');
     assert.ok(has(t, 'CASE_FAIBLE', { square: 'd5', color: 'b' }));
-    assert.ok(has(t, 'CASE_FAIBLE', { square: 'f5', color: 'b' }));
+    assert.ok(!has(t, 'CASE_FAIBLE', { square: 'f5', color: 'b' }));
   });
 });
 
@@ -82,6 +87,6 @@ describe('Modules 3-5 — buildAllFacts', () => {
     assert.ok(has(t, 'PIECE_NON_DEVELOPPEE'));
     assert.ok(has(t, 'NOMBRE_ILOTS_BLANC'));
     assert.ok(has(t, 'PAIRE_FOUS'));
-    assert.ok(has(t, 'ROI_AU_CENTRE'));
+    assert.ok(!has(t, 'ROI_AU_CENTRE')); // normal au 1er coup
   });
 });

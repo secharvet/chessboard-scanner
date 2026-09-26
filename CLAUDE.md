@@ -27,7 +27,7 @@ make build-web
 
 **Runtime**: The app requires the Podman container for Stockfish WASM and PGN serving. `scripts/serve-dev.sh` is a fallback (Python HTTP server, no Stockfish).
 
-**Adding a new root-level JS module**: you must also add a bind-mount line in `compose.dev.yaml` under `services.web.volumes`, otherwise the dev container won't serve the new file.
+**Dev container**: `compose.dev.yaml` mounts the whole repo on the nginx web root (read-only), so any edit is live on F5 — no rebuild, no restart. Vendor files live in the image under `/opt/vendor` (served at `/vendor/`). `docker/web/nginx.conf` blocks dotfiles (`.env`), server code (`coach/`), `node_modules/`, `.md/.mjs/.json` etc. — keep that list up to date when adding server-side files. New root-level browser modules still need adding to the `COPY` list in `docker/web/Dockerfile` for the prod image.
 
 ## Architecture
 
@@ -65,8 +65,13 @@ This is a **vanilla JS, no-build-step** chess web app served by nginx in Podman.
 - `positional/tokens.js` defines the `PositionalToken` type and helpers (`token()`, `findToken()`, `sortTokens()`)
 - `eval-fr.js`: bridges UCI output → chess.js SAN → French advice using the positional engine
 
-**AI coach** (`mentor-client.js` / `mentor-ui.js`):
-- POSTs `{fen, side, moves, question}` to `/api/chess/mentor/groq` (llm-factory backend, Groq · GPT-OSS 120B)
+**AI coach** (`coach/` server + `mentor-client.js` / `mentor-ui.js`):
+- Principle: the LLM never calculates. `coach/context.mjs` builds everything it may say: native Stockfish lines (MultiPV 3), what each line changes in the position (diff of positional facts at a quiet horizon), opponent threat (null-move), recognized pawn structure with classical plans (`positional/structures.js`), cleaned static facts. Moves are rendered in French SAN (`coach/notation.mjs`).
+- `coach/server.mjs` (port 8000, replaces llm-factory; nginx proxies `/api/chess/mentor/`) → `coach/coach.mjs` → `coach/llm.mjs` (providers: `claude-cli`, `deepseek`, `openai`, `anthropic`; config in `.env`, see `.env.example`).
+- `coach/guard.mjs` flags moves cited by the LLM that are neither legal now nor in the provided lines.
+- `make coach-eval` / `scripts/coach-eval.mjs`: naive (FEN-only) vs grounded on `coach/eval-positions.mjs`, report in `reports/`.
+- Requires native Stockfish on the host (`apt install stockfish`, default `/usr/games/stockfish`).
+- The client POSTs `{fen, side, moves, question}` to `/api/chess/mentor/groq` (path kept for compatibility)
 - API base auto-detected: uses `window.CHESS_MENTOR_API` if set, else `window.location.origin`, else `http://127.0.0.1:8000`
 - `mentor-ui.js` → `bindMentorPanel()` handles button state, abort controller, streaming display, and markdown rendering
 

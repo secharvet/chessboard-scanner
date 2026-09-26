@@ -19,8 +19,13 @@ function facts(fen) {
 }
 
 describe('Module 1.4 — roque', () => {
-  it('position initiale : roi au centre pour les deux camps', () => {
+  it('position initiale : roi au centre normal, pas signalé', () => {
     const t = facts('rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1');
+    assert.ok(!has(t, 'ROI_AU_CENTRE'));
+  });
+
+  it('roi encore au centre au 10e coup : signalé pour les deux camps', () => {
+    const t = facts('r1bqkb1r/pppp1ppp/2n2n2/4p3/4P3/2N2N2/PPPP1PPP/R1BQKB1R w KQkq - 0 10');
     assert.ok(has(t, 'ROI_AU_CENTRE', { color: 'w' }));
     assert.ok(has(t, 'ROI_AU_CENTRE', { color: 'b' }));
   });

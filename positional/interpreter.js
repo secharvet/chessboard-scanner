@@ -9,6 +9,8 @@
  *   2  — Neutre (confort, roque effectué)
  */
 
+import { STRUCTURES } from './structures.js';
+
 /** @typedef {import('./tokens.js').PositionalToken} PosToken */
 /** @typedef {{ weight: number, label: string }} Priority */
 
@@ -16,7 +18,6 @@
 const PRIORITY = {
   // ── Critique (10) ──
   AVANTAGE_MATERIEL: { weight: 10, label: 'CRITIQUE' },
-  EGALITE_MATERIEL:  { weight: 10, label: 'CRITIQUE' },
   ROI_AU_CENTRE:     { weight: 10, label: 'CRITIQUE' },
   PIONS_ROI_AFFAIBLI:{ weight: 10, label: 'CRITIQUE' },
 
@@ -51,6 +52,14 @@ const PRIORITY = {
   FOU_MAUVAIS:          { weight: 4, label: 'INFO' },
 
   // ── Neutre (2) ──
+  EGALITE_MATERIEL:    { weight: 2, label: 'NEUTRE' },
+
+  // ── Structures (6) ──
+  STRUCTURE:           { weight: 6, label: 'MOYENNE' },
+  ROQUES_OPPOSES:      { weight: 6, label: 'MOYENNE' },
+
+  // ── Contexte (1) ──
+  PHASE:               { weight: 1, label: 'CONTEXTE' },
   ROQUE_PETIT:         { weight: 2, label: 'NEUTRE' },
   ROQUE_GRAND:         { weight: 2, label: 'NEUTRE' },
   PIONS_ROI_BOUCLIER:  { weight: 2, label: 'NEUTRE' },
@@ -74,7 +83,7 @@ function colorCap(c) {
 }
 
 /** @param {PosToken} t */
-function renderToken(t) {
+export function renderToken(t) {
   const p = t.params;
 
   switch (t.id) {
@@ -88,7 +97,16 @@ function renderToken(t) {
       return `Roi ${colorLabel(/** @type {string} */ (p.color))} encore au centre — roquer est prioritaire.`;
 
     case 'PIONS_ROI_AFFAIBLI':
-      return `Bouclier de pions affaibli devant le roi ${colorLabel(/** @type {string} */ (p.color))}.`;
+      return `Bouclier de pions affaibli devant le roi ${colorLabel(/** @type {string} */ (p.color))}${p.files ? ` (colonne ${p.files} sans pion protecteur)` : ''}.`;
+
+    case 'STRUCTURE':
+      return `Structure : ${STRUCTURES[/** @type {string} */ (p.name)]?.label ?? p.name} (${colorLabel(/** @type {string} */ (p.color))}).`;
+
+    case 'ROQUES_OPPOSES':
+      return `Roques opposés.`;
+
+    case 'PHASE':
+      return `Phase de jeu : ${p.phase}.`;
 
     case 'PION_PASSE':
       return `Pion passé ${colorLabel(/** @type {string} */ (p.color))} en ${p.square}.`;
@@ -172,13 +190,13 @@ function renderToken(t) {
       return `Bouclier de pions intact devant le roi ${colorLabel(/** @type {string} */ (p.color))}.`;
 
     case 'PIECE_MENACEE':
-      return `Pièce menacée ${colorLabel(/** @type {string} */ (p.color))} en ${p.square} (${p.type}).`;
+      return `Pièce ${colorLabel(/** @type {string} */ (p.color))} en prise en ${p.square} (${p.type}${p.defended === false ? ', non défendue' : ', attaquée par une pièce de moindre valeur'}).`;
 
     case 'CLOUAGE':
       return `Clouage ${colorLabel(/** @type {string} */ (p.color))} en ${p.square} (${p.type}).`;
 
     case 'FOURCHETTE':
-      return `Fourchette ${colorLabel(/** @type {string} */ (p.color))} en ${p.square} (${p.type}).`;
+      return `Fourchette ${colorLabel(/** @type {string} */ (p.color))} : la pièce en ${p.square} (${p.type}) attaque ${p.targets ?? 'deux cibles'}.`;
 
     default:
       return `${t.id}: ${JSON.stringify(p)}`;
@@ -186,6 +204,11 @@ function renderToken(t) {
 }
 
 // ── API publique ──
+
+/** @param {PosToken} t */
+export function tokenWeight(t) {
+  return PRIORITY[t.id]?.weight ?? 0;
+}
 
 /**
  * Interprétation complète — utilisée par l'affichage positionnel.

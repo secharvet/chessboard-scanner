@@ -1,5 +1,5 @@
 /**
- * Client HTTP llm-factory — POST /api/chess/mentor/groq
+ * Client HTTP du serveur coach — POST /api/chess/mentor/groq (chemin conservé pour compatibilité)
  */
 
 const GROQ_TIMEOUT_MS = 120_000;

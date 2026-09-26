@@ -5,7 +5,7 @@ export WEB_PORT
 .DEFAULT_GOAL := help
 
 .PHONY: help dev start stop logs build-web collect check check-headed \
-	check-mentor check-mentor-all screenshot install test test-pawn
+	check-mentor check-mentor-all screenshot install test test-pawn coach coach-eval
 
 help: ## Affiche cette aide
 	@echo "Chess — cibles Make (port web : $(WEB_PORT))"
@@ -36,6 +36,12 @@ logs: ## Logs du service web
 	else \
 		podman-compose -f compose.yaml logs -f web; \
 	fi
+
+coach: ## Serveur du coach sur :8000 (Stockfish natif + règles + LLM, voir .env)
+	node coach/server.mjs
+
+coach-eval: ## Banc d'essai du coach : naïf vs ancré → reports/
+	node scripts/coach-eval.mjs
 
 build-web: ## Rebuild image web (vendor chess.js + Stockfish)
 	@if command -v podman >/dev/null 2>&1 && podman compose version >/dev/null 2>&1; then \

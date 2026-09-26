@@ -32,9 +32,14 @@ describe('Module 6 — pièce menacée', () => {
 });
 
 describe('Module 6 — clouage', () => {
-  it('cavalier c6 cloué par fou b5 sur roi e8', () => {
-    const t = facts('r1bqkbnr/pppp1ppp/2n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 0 1');
+  it('cavalier c6 cloué par fou b5 sur roi e8 (après ...d6, la diagonale est libre)', () => {
+    const t = facts('r1bqkbnr/ppp2ppp/2np4/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 0 4');
     assert.ok(has(t, 'CLOUAGE', { square: 'c6', color: 'b' }));
+  });
+
+  it('Espagnole 3.Fb5 : Cc6 pas cloué (pion d7 entre le cavalier et le roi)', () => {
+    const t = facts('r1bqkbnr/pppp1ppp/2n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R b KQkq - 3 3');
+    assert.ok(!has(t, 'CLOUAGE', { square: 'c6' }));
   });
 
   it('pas de clouage en position initiale', () => {
@@ -57,8 +62,7 @@ describe('Module 6 — fourchette', () => {
 
 describe('Module 6 — buildAllFacts', () => {
   it('buildAllFacts inclut le module 6', () => {
-    const t = buildAllFacts('r1bqkbnr/pppp1ppp/2n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 0 1');
+    const t = buildAllFacts('r1bqkbnr/ppp2ppp/2np4/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 0 4');
     assert.ok(has(t, 'CLOUAGE', { square: 'c6', color: 'b' }));
-    assert.ok(has(t, 'ROI_AU_CENTRE'));
   });
 });

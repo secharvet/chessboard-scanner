@@ -46,11 +46,15 @@ export function buildMinorPiecesFacts(fen) {
       out.push(token('PAIRE_FOUS', { color }));
     }
 
-    // FOU_BON / FOU_MAUVAIS
+    // FOU_BON / FOU_MAUVAIS : on compare les pions centraux (c-f) sur la couleur du fou
+    // et sur l'autre couleur. Situation équilibrée → aucun jugement.
     for (const b of bishops) {
       const complex = (b.fileIdx + b.rank) % 2;
-      const blocked = pawns.filter((p) => (p.fileIdx + p.rank) % 2 === complex).length;
-      out.push(token(blocked >= 2 ? 'FOU_MAUVAIS' : 'FOU_BON', { color, square: b.square }));
+      const central = pawns.filter((p) => p.fileIdx >= 2 && p.fileIdx <= 5);
+      const same = central.filter((p) => (p.fileIdx + p.rank) % 2 === complex).length;
+      const other = central.length - same;
+      if (same >= 2 && same > other) out.push(token('FOU_MAUVAIS', { color, square: b.square }));
+      else if (other >= 2 && same === 0) out.push(token('FOU_BON', { color, square: b.square }));
     }
 
     // CAVALIER_AVANT_POSTE

@@ -33,20 +33,18 @@ describe('Module 2 — paire de fous', () => {
 });
 
 describe('Module 2 — bon / mauvais fou', () => {
-  it('fou blanc c4 : pions majoritairement sur cases claires → mauvais', () => {
-    // Position initiale : blancs ont 4 pions sur cases claires (a2,c2,e2,g2) et 4 sur foncées
+  it('position initiale : pions centraux équilibrés → aucun jugement', () => {
     const t = facts('rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1');
-    const f1 = facts('rnbqkbnr/pppppppp/8/8/2B5/8/PPPPPPPP/RN1QKBNR b KQkq - 0 1');
-    // Fou sur c4 (case claire) avec 4 pions sur cases claires (a2,c2,e2,g2) → mauvais
-    assert.ok(has(f1, 'FOU_MAUVAIS', { color: 'w' }));
+    assert.ok(!has(t, 'FOU_MAUVAIS'));
+    assert.ok(!has(t, 'FOU_BON'));
   });
 
-  it('fou noir c8 : pions sur cases foncées → bon fou', () => {
-    const t = facts('rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1');
-    // Fou noir c8 (case claire). Pions noirs : a7,b7,c7,d7,e7,f7,g7,h7.
-    // Cases claires noires : a7(? 0+7=7 impair → claire), c7(2+7=9 impair→claire), e7, g7 → 4 pions
-    // Donc fou c8 sur case claire, 4 pions sur clair → FOU_MAUVAIS
-    assert.ok(has(t, 'FOU_MAUVAIS', { color: 'b' }));
+  it('Française avance : fou c8 noir mauvais (pions d5/e6 sur cases claires)', () => {
+    // 1.e4 e6 2.d4 d5 3.e5
+    const t = facts('rnbqkbnr/ppp2ppp/4p3/3pP3/3P4/8/PPP2PPP/RNBQKBNR b KQkq - 0 3');
+    assert.ok(has(t, 'FOU_MAUVAIS', { color: 'b', square: 'c8' }));
+    assert.ok(has(t, 'FOU_MAUVAIS', { color: 'w', square: 'c1' }));
+    assert.ok(!has(t, 'FOU_MAUVAIS', { color: 'b', square: 'f8' }));
   });
 });
 
@@ -85,6 +83,6 @@ describe('Module 2 — buildAllFacts', () => {
   it('inclut module 2 dans buildAllFacts', () => {
     const t = buildAllFacts('rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1');
     assert.ok(has(t, 'PAIRE_FOUS', { color: 'w' }));
-    assert.ok(has(t, 'ROI_AU_CENTRE', { color: 'w' }));
+    assert.ok(!has(t, 'ROI_AU_CENTRE', { color: 'w' })); // normal au 1er coup
   });
 });
