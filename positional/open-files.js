@@ -46,7 +46,7 @@ export function buildOpenFilesFacts(fen) {
     }
   }
 
-  // ── 3. Pions arrière doubles (≥2 arrière adjacents) ──
+  // ── 3. Deux pions arriérés côte à côte (rare avec la définition classique) ──
   const allFacts = buildPawnStructureFacts(fen);
   const backward = allFacts.filter((t) => t.id === 'PION_ARRIERE');
 

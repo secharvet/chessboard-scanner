@@ -13,6 +13,7 @@ import { toFrenchSan } from './notation.mjs';
 
 const VALUE = { p: 1, n: 3, b: 3, r: 5, q: 9, k: 0 };
 const NAME = { p: 'pion', n: 'cavalier', b: 'fou', r: 'tour', q: 'dame', k: 'roi' };
+const THE = { p: 'le pion', n: 'le cavalier', b: 'le fou', r: 'la tour', q: 'la dame', k: 'le roi' };
 
 /**
  * @param {string} fen  position de départ de la ligne
@@ -106,7 +107,7 @@ export function lineMotifs(fen, pvUci, maxMoves = 3) {
         motifs.push(`sacrifice ${move.piece === 'r' && taken >= 3 ? 'de qualité' : `du ${NAME[move.piece]}`} (${san}, repris par ${reply.san})`);
       }
     } else if (move.captured && !isRecapture && !reply?.move.captured) {
-      motifs.push(`gain : prend le ${NAME[move.captured]} en ${move.to}`);
+      motifs.push(`gain : prend ${THE[move.captured]} en ${move.to}`);
     }
 
     if (motifs.length) out.push({ ply: i, san, motifs: [...new Set(motifs)] });

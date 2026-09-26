@@ -38,7 +38,9 @@ export function buildKingSafetyFacts(fen) {
       out.push(token('ROQUE_GRAND', { color }));
       addShield(out, pawns, color, ['a', 'b', 'c']);
     } else if ((king.fileIdx === 3 || king.fileIdx === 4) && centreIsAlarming) {
-      out.push(token('ROI_AU_CENTRE', { color }));
+      const rights = fen.split(' ')[2] ?? '-';
+      const canCastle = color === 'w' ? /[KQ]/.test(rights) : /[kq]/.test(rights);
+      out.push(token('ROI_AU_CENTRE', { color, canCastle }));
     }
   }
 

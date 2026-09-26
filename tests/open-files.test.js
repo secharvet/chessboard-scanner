@@ -68,12 +68,12 @@ describe('Module 1.2 — doublons', () => {
 });
 
 describe('Module 1.2 — pion arrière double', () => {
-  // c3 arrière (d4+d5), d2 arrière (e3+e4) — adjacents en c et d
+  // d2 arriéré (e3+e4) ; c3 ne l’est pas : d2, resté derrière, peut encore monter le soutenir
   const FEN_DOUBLE = '8/8/8/3p4/3Pp3/2P1P3/3P4/8 w - - 0 1';
 
-  it('deux pions arrière adjacents c3+d2', () => {
+  it('c3 n’est pas arriéré tant que d2 peut monter le soutenir → pas de paire', () => {
     const t = facts(FEN_DOUBLE);
-    assert.ok(has(t, 'PION_ARRIERE_DOUBLE', { color: 'w' }));
+    assert.ok(!has(t, 'PION_ARRIERE_DOUBLE', { color: 'w' }));
   });
 
   it('un seul pion arrière → pas de jeton', () => {

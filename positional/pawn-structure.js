@@ -68,6 +68,12 @@ function isBackward(pawn, allies, enemies) {
   const front = frontSquare(pawn);
   if (!isOnBoard(front)) return false;
   if (!hasAdvancedAdjacentAlly(pawn, allies)) return false;
+  // Un voisin resté derrière (ou à hauteur) peut encore monter le soutenir : pas arriéré.
+  const supportBehind = allies.some(
+    (a) => Math.abs(a.fileIdx - pawn.fileIdx) === 1
+      && (pawn.color === 'w' ? a.rank <= pawn.rank : a.rank >= pawn.rank),
+  );
+  if (supportBehind) return false;
   if (alliedPawnProtectsFront(pawn, allies)) return false;
   if (!enemyPawnAttacksFront(pawn, enemies)) return false;
   return true;

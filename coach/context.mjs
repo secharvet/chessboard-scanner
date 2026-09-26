@@ -96,6 +96,7 @@ function describeLine(fen, line, player, toMove) {
     evalPlayer: scoreForPlayer(line.score, toMove, player),
     pvSan: numberedSan(fen, steps.map((s) => s.san)),
     horizonSan: numberedSan(fen, steps.slice(0, end).map((s) => s.san)),
+    endKings: kingState(endFen),
     changes: diffFacts(fen, endFen),
     motifs: lineMotifs(fen, line.pv.slice(0, steps.length)).map((m) => `${m.san} : ${m.motifs.join(', ')}`),
     material: materialBalance(endFen) - materialBalance(fen),
@@ -191,6 +192,32 @@ function dedupeText(facts) {
 }
 
 // ── Utilitaires ──
+
+/** Rois et droits de roque : ce qui change le plus souvent entre « maintenant » et « après la ligne ». */
+function kingState(fen) {
+  const [board, , castling] = fen.split(' ');
+  const find = (ch) => {
+    const rows = board.split('/');
+    for (let r = 0; r < 8; r++) {
+      let f = 0;
+      for (const c of rows[r]) {
+        if (/\d/.test(c)) f += Number(c);
+        else {
+          if (c === ch) return `${'abcdefgh'[f]}${8 - r}`;
+          f++;
+        }
+      }
+    }
+    return '?';
+  };
+  const rights = (up) => {
+    const r = [];
+    if (castling.includes(up ? 'K' : 'k')) r.push('petit');
+    if (castling.includes(up ? 'Q' : 'q')) r.push('grand');
+    return r.length ? `roque encore possible (${r.join(' et ')})` : 'ne peut plus roquer';
+  };
+  return `roi blanc en ${find('K')} (${rights(true)}), roi noir en ${find('k')} (${rights(false)})`;
+}
 
 function materialBalance(fen) {
   let total = 0;
@@ -289,6 +316,7 @@ function renderContext(d) {
   out.push('## Situation');
   out.push(`- Tu joues les ${colorName(d.player)}. Trait aux ${colorName(d.toMove)}. Phase : ${d.phase}.`);
   if (d.moves.length) out.push(`- Derniers coups : ${d.moves.slice(-8).map(toFrenchSan).join(' ')}`);
+  cite(`[Position actuelle] ${kingState(d.fen)}.`, 'E0');
   if (d.candidates[0]) cite(`Évaluation Stockfish (meilleur coup) : ${formatEval(d.candidates[0].evalPlayer)}.`, 'E1');
   const note = materialVsEval(d);
   if (note) cite(note, 'E2');
@@ -299,10 +327,11 @@ function renderContext(d) {
     const L = `L${i + 1}`;
     out.push(`### ${i + 1}. ${c.move} — ${formatEval(c.evalPlayer)}`);
     cite(`Ligne ${i + 1} : ${c.pvSan} (${formatEval(c.evalPlayer)}).`, L);
-    cite(`Au bout de « ${c.horizonSan} » : ${formatMaterial(c.material, d.player)}.`, `${L}m`);
-    (c.motifs ?? []).forEach((m, j) => cite(`Motif tactique dans la ligne ${i + 1} : ${m}.`, `${L}t${j + 1}`));
-    c.changes.gained.forEach((g, j) => cite(`La ligne ${i + 1} crée : ${g}`, `${L}+${j + 1}`));
-    c.changes.lost.forEach((g, j) => cite(`La ligne ${i + 1} fait disparaître : ${g}`, `${L}-${j + 1}`));
+    const after = `[Après la ligne ${i + 1}, au bout de « ${c.horizonSan} »]`;
+    cite(`${after} ${formatMaterial(c.material, d.player)} ; ${c.endKings}.`, `${L}m`);
+    (c.motifs ?? []).forEach((m, j) => cite(`[Pendant la ligne ${i + 1}] Motif tactique : ${m}.`, `${L}t${j + 1}`));
+    c.changes.gained.forEach((g, j) => cite(`${after} apparaît : ${g}`, `${L}+${j + 1}`));
+    c.changes.lost.forEach((g, j) => cite(`${after} n'est plus vrai : ${g}`, `${L}-${j + 1}`));
   });
 
   out.push('');
@@ -317,7 +346,7 @@ function renderContext(d) {
   }
 
   out.push('');
-  out.push('## Menace');
+  out.push('## Menace (position actuelle)');
   if (d.threat) {
     cite(
       `Si le camp au trait passait son tour, ${d.threat.by === 'toi' ? 'tu jouerais' : "l'adversaire jouerait"} ${d.threat.move} ` +
@@ -329,7 +358,7 @@ function renderContext(d) {
   }
 
   out.push('');
-  out.push('## Bilan des déséquilibres (moteur de règles, position actuelle)');
+  out.push('## Bilan des déséquilibres — [Position actuelle], AVANT tout coup des lignes');
   const me = d.player;
   const opp = me === 'w' ? 'b' : 'w';
   const section = (title, items, max) => {

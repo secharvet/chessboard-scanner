@@ -112,7 +112,9 @@ export function renderToken(t) {
       return `Matériel égal.`;
 
     case 'ROI_AU_CENTRE':
-      return `Roi ${colorLabel(/** @type {string} */ (p.color))} encore au centre — roquer est prioritaire.`;
+      return p.canCastle === false
+        ? `Roi ${colorLabel(/** @type {string} */ (p.color))} au centre et privé de roque : il faut l'abriter autrement.`
+        : `Roi ${colorLabel(/** @type {string} */ (p.color))} encore au centre — roquer est prioritaire.`;
 
     case 'PIONS_ROI_AFFAIBLI':
       return `Bouclier de pions affaibli devant le roi ${colorLabel(/** @type {string} */ (p.color))}${p.files ? ` (colonne ${p.files} sans pion protecteur)` : ''}.`;
@@ -186,10 +188,10 @@ export function renderToken(t) {
       return `Pion isolé ${colorLabel(/** @type {string} */ (p.color))} en ${p.square}.`;
 
     case 'PION_ARRIERE':
-      return `Pion arrière ${colorLabel(/** @type {string} */ (p.color))} en ${p.square}.`;
+      return `Pion arriéré ${colorLabel(/** @type {string} */ (p.color))} en ${p.square}.`;
 
     case 'PION_FAIBLE':
-      return `Pion faible (isolé + arrière) ${colorLabel(/** @type {string} */ (p.color))} en ${p.square}.`;
+      return `Pion faible (isolé et arriéré) ${colorLabel(/** @type {string} */ (p.color))} en ${p.square}.`;
 
     case 'AVANT_POSTE':
       return `Avant-poste pour les ${colorLabel(/** @type {string} */ (p.color))} en ${p.square}.`;
@@ -237,7 +239,7 @@ export function renderToken(t) {
       return `Chaîne de pions ${colorLabel(/** @type {string} */ (p.color))}.`;
 
     case 'PION_ARRIERE_DOUBLE':
-      return `Pions arrière doubles chez les ${colorLabel(/** @type {string} */ (p.color))}.`;
+      return `Deux pions arriérés côte à côte chez les ${colorLabel(/** @type {string} */ (p.color))}.`;
 
     case 'PAIRE_FOUS':
       return `Paire de fous ${colorLabel(/** @type {string} */ (p.color))}.`;

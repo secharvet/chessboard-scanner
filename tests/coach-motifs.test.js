@@ -12,7 +12,7 @@ describe('Motifs de ligne', () => {
   it('fourchette royale Cc7+ puis gain de la tour', () => {
     const m = all(lineMotifs('r3k3/8/8/1N6/8/8/8/4K3 w - - 0 1', ['b5c7', 'e8d7', 'c7a8']));
     assert.match(m, /fourchette \(a8,e8\)/);
-    assert.match(m, /gain : prend le tour en a8/);
+    assert.match(m, /gain : prend la tour en a8/);
   });
   it('piège de l’éléphant : découverte puis coup intermédiaire Fb4+', () => {
     const fen = 'r1bqkb1r/pppn1ppp/5n2/3N2B1/3P4/8/PP2PPPP/R2QKBNR b KQkq - 0 6';

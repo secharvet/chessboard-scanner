@@ -93,3 +93,13 @@ describe('Structures de pions', () => {
     assert.ok(has(t, 'ROQUES_OPPOSES'));
   });
 });
+
+describe('Roi au centre et droits de roque', () => {
+  it('roi au centre sans droit de roque : pas de « roquer est prioritaire »', async () => {
+    const { renderToken } = await import('../positional/interpreter.js');
+    const t = buildKingSafetyFacts('r1bqk2r/ppp2ppp/2n2n2/8/8/2N2N2/PPP2PPP/R1BQK2R w - - 0 12');
+    const tok = findToken(t, 'ROI_AU_CENTRE', { color: 'w', canCastle: false });
+    assert.ok(tok);
+    assert.doesNotMatch(renderToken(tok), /roquer est prioritaire/);
+  });
+});
