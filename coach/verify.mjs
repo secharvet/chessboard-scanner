@@ -37,6 +37,12 @@ const CONCEPTS = [
   ['sacrifi', /sacrifice/i],
   ['coup intermédiaire', /intermédiaire/i],
   ['majorité', /majorité/i],
+  ['française', /française|chaîne/i],
+  ['carlsbad', /carlsbad/i],
+  ['maroczy', /maroczy/i],
+  ['est-indienne', /est-indienne|chaîne/i],
+  ['pions pendants', /pendants/i],
+  ['structure', /structure/i],
   ['développement', /développ/i],
 ];
 

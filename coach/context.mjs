@@ -58,7 +58,8 @@ export async function buildCoachContext({ fen, side, moves = [], engine, depth =
   const threat = await findThreat(fen, lines[0], engine, toMove, player);
   const allFacts = buildAllFacts(fen);
   const staticFacts = selectStaticFacts(allFacts);
-  const balance = buildBalance(allFacts);
+  const heavyPieces = /[RrQq]/.test(fen.split(' ')[0]);
+  const balance = buildBalance(allFacts, { heavyPieces });
   // Ce que l'adversaire prépare (un coup calme, puis la menace), noté par Stockfish ;
   // manœuvres sûres vers les cases stratégiques (plans à plus long terme).
   const opp = player === 'w' ? 'b' : 'w';
@@ -326,12 +327,16 @@ function renderContext(d) {
   out.push(`- Tu joues les ${colorName(d.player)}. Trait aux ${colorName(d.toMove)}. Phase : ${d.phase}.`);
   if (d.moves.length) out.push(`- Derniers coups : ${d.moves.slice(-8).map(toFrenchSan).join(' ')}`);
   cite(`[Position actuelle] ${kingState(d.fen)}.`, 'E0');
-  if (d.candidates[0]) cite(`Évaluation Stockfish (meilleur coup) : ${formatEval(d.candidates[0].evalPlayer)}.`, 'E1');
+  if (d.candidates[0]) cite(`Évaluation Stockfish, de TON point de vue (positif = bon pour toi) : ${formatEval(d.candidates[0].evalPlayer)}.`, 'E1');
   const note = materialVsEval(d);
   if (note) cite(note, 'E2');
 
   out.push('');
-  out.push('## Coups candidats (Stockfish, du meilleur au moins bon)');
+  if (d.toMove === d.player) {
+    out.push('## Coups candidats (Stockfish, du meilleur au moins bon) — c\'est à TOI de jouer');
+  } else {
+    out.push("## Coups candidats — c'est à l'ADVERSAIRE de jouer : chaque ligne commence par un de SES meilleurs coups selon Stockfish, puis ta réponse. Ton coup à jouer est le 2e coup de la ligne, APRÈS son coup.");
+  }
   d.candidates.forEach((c, i) => {
     const L = `L${i + 1}`;
     out.push(`### ${i + 1}. ${c.move} — ${formatEval(c.evalPlayer)}`);
@@ -373,7 +378,11 @@ function renderContext(d) {
 
   out.push('');
   out.push('## Manœuvres possibles — [Position actuelle] (itinéraires sûrs vers des cases stratégiques, plans à plus long terme)');
-  if (d.maneuvers.length) d.maneuvers.forEach((m, i) => cite(`[Position actuelle] ${m.text}.`, `K${i + 1}`));
+  if (d.maneuvers.length) {
+    // Compatible si le premier pas de la manœuvre apparaît dans une ligne du moteur.
+    const inLines = (m) => d.candidates.some((c) => (c.pvUci ?? []).some((u) => u.slice(0, 4) === m.path[0] + m.path[1]));
+    d.maneuvers.forEach((m, i) => cite(`[Position actuelle] ${m.text}${inLines(m) ? ' — son premier pas figure dans une ligne du moteur' : ' — plan à long terme, ABSENT des lignes du moteur : ne pas le conseiller comme coup à jouer'}.`, `K${i + 1}`));
+  }
   else out.push('- (rien de notable)');
 
   out.push('');

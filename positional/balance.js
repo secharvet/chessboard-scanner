@@ -30,11 +30,14 @@ const SKIP = new Set([
   'ROQUE_PETIT', 'ROQUE_GRAND', 'CHAINE_PIONS',
 ]);
 
+/** Faits de colonnes : sans objet s'il n'y a plus ni tour ni dame (finales de pièces mineures ou de pions). */
+const FILE_FACTS = new Set(['COLONNE_OUVERTE', 'COLONNE_SEMI_OUVERTE', 'TOUR_COLONNE_OUVERTE', 'CONTROLE_COLONNE', 'CASE_ENTREE', 'TOUR_7E']);
+
 /**
  * @param {import('./tokens.js').PositionalToken[]} facts
  * @returns {{ w: { assets: string[], weaknesses: string[] }, b: { assets: string[], weaknesses: string[] }, context: string[] }}
  */
-export function buildBalance(facts) {
+export function buildBalance(facts, { heavyPieces = true } = {}) {
   const sorted = [...facts].sort((a, b) => tokenWeight(b) - tokenWeight(a));
   const res = { w: { assets: [], weaknesses: [] }, b: { assets: [], weaknesses: [] }, context: [] };
   const push = (list, t) => {
@@ -44,6 +47,7 @@ export function buildBalance(facts) {
 
   for (const t of sorted) {
     if (SKIP.has(t.id)) continue;
+    if (!heavyPieces && FILE_FACTS.has(t.id)) continue;
     const c = /** @type {'w'|'b'} */ (t.params.color);
     if (CONTEXT.has(t.id) || !c) push(res.context, t);
     else if (ASSETS.has(t.id)) push(res[c].assets, t);
