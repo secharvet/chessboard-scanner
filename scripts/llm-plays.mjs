@@ -21,6 +21,8 @@ import { buildAllFacts, detectPhase } from '../positional/index.js';
 import { buildBalance } from '../positional/balance.js';
 import { judgeConfig } from '../coach/judge.mjs';
 import { blunderCheck, scanTactics } from '../coach/threats.mjs';
+import { describeForcing, forcingLines } from '../coach/forcing.mjs';
+import { findManeuvers } from '../coach/maneuvers.mjs';
 
 loadEnv();
 const args = process.argv.slice(2);
@@ -62,7 +64,8 @@ const SYSTEM = `Tu joues une partie d'échecs complète. Tu n'as AUCUN moteur de
 Règles :
 - Choisis UN coup dans la liste des coups légaux, recopié exactement (notation française : R roi, D dame, T tour, F fou, C cavalier).
 - Vérifie d'abord la sécurité : la liste « Menaces de l'adversaire » dit ce qu'il gagnerait s'il jouait maintenant ; pare la plus grave, sauf si tu as mieux (un mat, ou un gain plus gros que ce que tu perds).
-- Regarde ensuite « Tes occasions tactiques » : un gain de matériel sûr passe souvent avant le plan.
+- Regarde ensuite « Tes occasions tactiques » et « Tes combinaisons forcées » (lignes calculées jusqu'au bout en ne jouant que des coups forcés) : un gain sûr ou un mat passe avant le plan.
+- Pour le plan, « Manœuvres possibles » donne des itinéraires sûrs vers des cases stratégiques (avant-postes, cases de blocage, colonnes ouvertes, pions faibles à attaquer). Un bon plan tient souvent en une manœuvre de 2 à 4 coups : annonce-la et suis-la.
 - Garde un plan cohérent d'un coup à l'autre ; change de plan seulement si la position l'exige, et dis pourquoi.
 Réponds UNIQUEMENT en JSON : {"plan": "ton plan en une ou deux phrases", "raison": "pourquoi ce coup", "coup": "Cf3"}`;
 
@@ -78,6 +81,9 @@ function perception(fen, color) {
     list('Contexte :', b.context),
     list("Menaces de l'adversaire (ce qu'il gagnerait s'il jouait maintenant) :", scanTactics(fen, opp).map((t) => t.text)),
     list('Tes occasions tactiques (coups qui gagnent quelque chose tout de suite) :', scanTactics(fen, color).map((t) => t.text)),
+    list('Tes combinaisons forcées (échecs, prises, jusqu\'au bout) :', forcingLines(fen, color).map(describeForcing)),
+    list("Combinaisons forcées de l'adversaire (s'il jouait maintenant) :", forcingLines(fen, opp).map(describeForcing)),
+    list('Manœuvres possibles :', findManeuvers(fen, color).map((m) => m.text)),
   ].join('\n\n');
 }
 
@@ -116,7 +122,11 @@ Coups légaux : ${legal.join(' ')}`;
       // Contrôle anti-gaffe (une seule fois) : le coup laisse-t-il un gain immédiat à l'adversaire ?
       const after = new Chess(fen);
       after.move(played.san);
-      const danger = blunderCheck(after.fen(), LLM_COLOR);
+      const oppColor = LLM_COLOR === 'w' ? 'b' : 'w';
+      const danger = [
+        ...blunderCheck(after.fen(), LLM_COLOR),
+        ...forcingLines(after.fen(), oppColor, { minGain: 2 }).map((l) => ({ text: `ligne forcée ${describeForcing(l)}` })),
+      ];
       if (danger.length && !blunderChecked) {
         blunderChecked = true;
         warnings++;
@@ -154,7 +164,9 @@ while (!chess.isGameOver() && chess.history().length < MAX_MOVES * 2) {
   const fen = chess.fen();
   if (chess.turn() === LLM_COLOR) {
     const before = await evalFor(fen);
+    const t0 = Date.now();
     const m = await llmMove(chess, plan, chess.history());
+    const secs = ((Date.now() - t0) / 1000).toFixed(0);
     chess.move(m.san);
     const after = -(await evalFor(chess.fen()));
     const loss = Math.max(0, Math.min(1000, before - after));
@@ -162,7 +174,7 @@ while (!chess.isGameOver() && chess.history().length < MAX_MOVES * 2) {
     if (plan && m.plan && m.plan !== plan) planChanges++;
     plan = m.plan || plan;
     log.push({ n: Math.ceil(chess.history().length / 2), san: toFrenchSan(m.san), loss, tag, plan: m.plan, raison: m.raison, illegal: Math.max(0, m.illegal), evalAfter: after, warned: m.warned });
-    console.log(`${String(log.at(-1).n).padStart(2)}. ${log.at(-1).san.padEnd(7)} perte ${String(loss).padStart(4)} ${tag.padEnd(11)}${m.warned ? '⚑ ' : '  '}${m.plan.slice(0, 80)}`);
+    console.log(`${String(log.at(-1).n).padStart(2)}. ${log.at(-1).san.padEnd(7)} perte ${String(loss).padStart(4)} ${tag.padEnd(11)}${m.warned ? '⚑ ' : '  '}${String(secs).padStart(3)}s ${m.plan.slice(0, 80)}`);
   } else {
     const uci = await opponent.move(fen);
     chess.move({ from: uci.slice(0, 2), to: uci.slice(2, 4), promotion: uci[4] });
