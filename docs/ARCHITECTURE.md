@@ -14,6 +14,7 @@
 6. [Le joueur LLM (expérience)](#6-le-joueur-llm-expérience)
 7. [La mémoire d'expérience](#7-la-mémoire-dexpérience)
 8. [Fournisseurs LLM et réglages](#8-fournisseurs-llm-et-réglages)
+8 bis. [Profil de style d'un joueur](#8-bis-profil-de-style-dun-joueur)
 9. [Résultats mesurés](#9-résultats-mesurés)
 10. [Limites connues et pistes d'amélioration](#10-limites-connues-et-pistes-damélioration)
 11. [Carte des fichiers](#11-carte-des-fichiers)
@@ -136,6 +137,28 @@ Objectif : *se souvenir de situations semblables, pas de positions exactes*, com
 
 Reprise automatique sur limite de débit (429) et pannes 5xx, avec le délai annoncé. Variables : `LLM_PROVIDER`, `LLM_MODEL`, `LLM_API_KEY`, `GROQ_API_KEY`, `LLM_EFFORT`, `JUDGE_*` (relecteur), `COACH_MEMORY`.
 
+## 8 bis. Profil de style d'un joueur
+
+Objectif : détecter un style (« il attaque sans arrêt », « il est prudent ») à partir des **coups joués**, pas d'étiquettes. Chaque trait a une définition opérationnelle calculée avec les outils de perception (`coach/profile.mjs`), sur les coups 9 à 60, en parties lentes seulement.
+
+On distingue trois notions : le **style** (préférences stables, mesurées sur les coups), le **niveau** (perte par coup selon Stockfish, par phase) et l'**état** (préparation, zeitnot : il faut la pendule ou une base d'ouvertures, donc impossible contre Stockfish).
+
+**Validation** (`scripts/profile-groups.mjs`) : 8 joueurs, 40 parties lentes chacun. Attaquants : Tal, Shirov, Morozevich, Topalov ; prudents : Petrosian, Andersson, Karpov, Kramnik. *Cohérence* = part des paires (attaquant, prudent) correctement ordonnées (100 % = séparation parfaite, 50 % = hasard).
+
+| Trait | Cohérence |
+|---|---|
+| coups qui créent une menace | 100 % |
+| sacrifices | 100 % |
+| options tactiques laissées à l'adversaire (plus bas chez les prudents) | 100 % |
+| échecs donnés | 94 % |
+| « réactions » (menaces adverses à parer : parties agitées) | 94 % |
+| sacrifices sains (jugés par Stockfish) | 81 % |
+| prophylaxie tactique, prophylaxie de plans, restriction, simplification, échanges, paire de fous, espace, assaut de pions, proximité du roi | 19 à 69 % : non retenus |
+
+Indice d'agressivité (moyenne des écarts réduits des traits validés) : Shirov +1,71 ; Tal +0,73 ; Morozevich +0,13 ; Topalov −0,02 ; Kramnik −0,21 ; Petrosian −0,52 ; Karpov −0,77 ; Andersson −1,04. Aucune inversion entre les deux groupes.
+
+**Ce qu'on sait mesurer** : un axe robuste **jeu tranchant ↔ jeu sûr**. **Ce qu'on ne sait pas mesurer (encore)** : une prudence *indépendante* de cet axe (la prophylaxie « à la Petrosian » empêche des plans, ce que des comptages simples ne captent pas). Usages envisagés : portrait de l'élève ou d'un adversaire (parties Lichess), joueur LLM qui adopte un style vérifié par le même indice, partenaire d'entraînement qui imite un style (choix parmi les coups quasi équivalents de Stockfish).
+
 ## 9. Résultats mesurés
 
 ### Coach (16 positions de référence, relecteur DeepSeek-Pro)
@@ -179,6 +202,9 @@ Enseignements : **sans ancrage, un modèle plus fort ne sert à rien** ; avec an
 11. Souvenirs : premières leçons peu nombreuses ; la correspondance a été resserrée (nature du coup et punition possible) mais n'a pas encore été mesurée sur une série de parties. Piste : une série de 5 parties avec carnet, qui compte les erreurs de même signature.
 12. Estimation d'Elo : non fiable sur si peu de parties. Piste : des séries contre plusieurs niveaux (1350, 1600, 1800).
 
+**Profil de style**
+12 bis. Un seul axe validé (tranchant ↔ sûr) ; la prophylaxie et les préférences de pièces ne sont pas mesurées de façon fiable. Pistes : prophylaxie jugée par Stockfish (le coup réduit-il l'évaluation des meilleurs plans adverses ?), base d'ouvertures (Lichess) pour la préparation, pendule (`%clk`) pour la vitesse, plus de joueurs et d'époques pour la validation (les collections mélangent époques et cadences).
+
 **Technique**
 13. `scripts/llm-plays.mjs` est devenu long (joueur, arbitre, mesure, rapport) : à découper en modules.
 14. Clés d'API collées dans une conversation : **à régénérer** avant toute mise en ligne.
@@ -206,6 +232,7 @@ Enseignements : **sans ancrage, un modèle plus fort ne sert à rien** ; avec an
 | `scripts/llm-plays.mjs` | le joueur LLM contre Stockfish bridé |
 | `scripts/diagnose-game.mjs` | diagnostic et leçons après coup (`--learn`) |
 | `scripts/rebuild-lessons.mjs` | recalcul des signatures du carnet |
+| `coach/profile.mjs` · `scripts/profile-players.mjs` · `scripts/profile-groups.mjs` | profil de style, validation attaquants / prudents |
 | `tests/` | tests unitaires (`npm test`, sans réseau ni LLM) |
 
 ## 12. Commandes utiles
@@ -221,6 +248,7 @@ node scripts/llm-plays.mjs --elo 1350 --think auto --stop-before 20      # le jo
   #   --referee stockfish|rules|none   --no-memory   --no-review   --material-only
 node scripts/diagnose-game.mjs reports/partie-XXXX.pgn --learn           # diagnostic et leçons après coup
 node scripts/rebuild-lessons.mjs                                         # signatures du carnet
+node scripts/profile-groups.mjs --games 40                               # validation du profil de style (data/players/*.pgn)
 ```
 
 ## 13. Glossaire

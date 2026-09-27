@@ -8,7 +8,7 @@
 
 import { Chess } from 'chess.js';
 import { scanTactics } from './threats.mjs';
-import { preparedThreats } from './prep-threats.mjs';
+import { findManeuvers } from './maneuvers.mjs';
 import { buildAttackMap } from '../positional/attack-map.js';
 
 const VALUE = { p: 1, n: 3, b: 3, r: 5, q: 9, k: 0 };
@@ -23,7 +23,11 @@ export const TRAITS = {
   proximite_roi: { label: 'pièces à 3 cases ou moins du roi adverse', unit: 'pièces en moyenne', family: 'agressivité' },
   assaut_pions: { label: "poussées de pions d'attaque (roques opposés, ou pion qui touche le roque adverse)", unit: '/100 coups', family: 'agressivité' },
   reactions: { label: 'réactions : coups qui font disparaître une menace adverse existante', unit: '/100 coups', family: 'tactique' },
-  prophylaxie: { label: "prophylaxie : coup calme qui réduit ce que l'adversaire prépare (sans menace immédiate)", unit: '% des coups calmes testés', family: 'prudence' },
+  prophylaxie_plans: { label: "prophylaxie de plans : coup calme qui réduit les manœuvres et ruptures adverses", unit: '% des coups calmes', family: 'prudence' },
+  options_adverses: { label: "options tactiques laissées à l'adversaire après le coup", unit: 'options en moyenne', family: 'prudence' },
+  materiel_20_40: { label: 'pièces (hors pions) restant sur l\'échiquier, coups 20 à 40', unit: 'points en moyenne', family: 'simplification' },
+  dames_echangees: { label: 'dames échangées avant le coup 30 (échange initié par le joueur)', unit: '/partie', family: 'simplification' },
+  pions_devant_son_roi: { label: 'poussées de pions devant son propre roi roqué', unit: '/100 coups', family: 'prudence' },
   restriction: { label: 'restriction : mobilité adverse retirée par le coup', unit: 'cases en moyenne', family: 'prudence' },
   retraits: { label: 'retraits de pièces', unit: '/100 coups', family: 'prudence' },
   echanges: { label: 'échanges à valeur égale initiés', unit: '/100 coups', family: 'simplification' },
@@ -35,6 +39,24 @@ export const TRAITS = {
 };
 
 const rel = (rank, c) => (c === 'w' ? rank : 9 - rank);
+
+/** Plans disponibles pour `side` : manœuvres sûres + ruptures de pions (poussée qui attaque un pion adverse). */
+function opponentPlans(fen, side) {
+  const p = fen.split(' ');
+  if (p[1] !== side) { p[1] = side; p[3] = '-'; }
+  let c;
+  try { c = new Chess(p.join(' ')); } catch { return 0; }
+  const breaks = c.moves({ verbose: true }).filter((m) => {
+    if (m.piece !== 'p' || m.captured) return false;
+    const df = side === 'w' ? 1 : -1;
+    return [-1, 1].some((d) => {
+      const f = FILES[FILES.indexOf(m.to[0]) + d];
+      const t = f && c.get(`${f}${Number(m.to[1]) + df}`);
+      return t && t.type === 'p' && t.color !== side;
+    });
+  }).length;
+  return findManeuvers(c.fen(), side, { max: 20 }).length + breaks;
+}
 const cheb = (a, b) => Math.max(Math.abs(FILES.indexOf(a[0]) - FILES.indexOf(b[0])), Math.abs(Number(a[1]) - Number(b[1])));
 
 function materialFor(board, color) {
@@ -48,11 +70,12 @@ function materialFor(board, color) {
  * @param {string[]} sans  coups de la partie (notation anglaise)
  * @param {'w'|'b'} color
  */
-export async function profileGame(sans, color, { from = 9, to = 60, engine = null, prophylaxisSamples = 10 } = {}) {
+export async function profileGame(sans, color, { from = 9, to = 60, engine = null } = {}) {
   const c = new Chess();
   const counts = Object.fromEntries(Object.keys(TRAITS).map((k) => [k, 0]));
   let moves = 0;
   let quietTested = 0;
+  let midMoves = 0;
   const opp = color === 'w' ? 'b' : 'w';
 
   for (let i = 0; i < sans.length; i++) {
@@ -90,14 +113,28 @@ export async function profileGame(sans, color, { from = 9, to = 60, engine = nul
     };
     counts.restriction += oppMobility(before) - oppMobility(after);
 
-    // Prophylaxie (échantillonnée, coûteuse) : coup calme, sans menace immédiate adverse,
-    // qui réduit le nombre d'idées graves que l'adversaire prépare.
+    // Prophylaxie de plans : coup calme, sans menace immédiate, qui réduit les manœuvres sûres
+    // et les ruptures de pions disponibles pour l'adversaire.
     const quiet = !m.captured && !/[+#]/.test(m.san) && !threatsBefore.length;
-    if (quiet && quietTested < prophylaxisSamples && moves % 2 === 0) {
+    if (quiet) {
       quietTested++;
-      const grave = (f) => preparedThreats(f, color, { max: 6 }).filter((t) => t.severity >= 12 || t.threat.startsWith('piège')).length;
-      if (grave(after) < grave(before)) counts.prophylaxie++;
+      if (opponentPlans(after, opp) < opponentPlans(before, opp)) counts.prophylaxie_plans++;
     }
+
+    // Options tactiques laissées à l'adversaire (toutes menaces, même mineures).
+    counts.options_adverses += scanTactics(after, opp, 20).length;
+
+    // Pion poussé devant son propre roi (roqué sur une aile).
+    const myKingNow = board.flat().find((p) => p && p.type === 'k' && p.color === color);
+    if (m.piece === 'p' && myKingNow && (FILES.indexOf(myKingNow.square[0]) >= 5 || FILES.indexOf(myKingNow.square[0]) <= 2)
+      && Math.abs(FILES.indexOf(m.from[0]) - FILES.indexOf(myKingNow.square[0])) <= 1) counts.pions_devant_son_roi++;
+
+    // Simplification : matériel (hors pions) sur l'échiquier entre les coups 20 et 40.
+    if (moveNo >= 20 && moveNo <= 40) {
+      counts.materiel_20_40 += board.flat().filter((p) => p && !['p', 'k'].includes(p.type)).reduce((a, p) => a + VALUE[p.type], 0);
+      midMoves++;
+    }
+    if (m.captured === 'q' && m.piece === 'q' && moveNo < 30) counts.dames_echangees++;
 
     // Retrait : une pièce recule.
     if (m.piece !== 'p' && m.piece !== 'k' && rel(Number(m.to[1]), color) < rel(Number(m.from[1]), color)) counts.retraits++;
@@ -164,7 +201,7 @@ export async function profileGame(sans, color, { from = 9, to = 60, engine = nul
     if (mineOnBoard.filter((p) => p.type === 'b').length >= 2) counts.paire_de_fous++;
     counts.espace += mineOnBoard.filter((p) => p.type === 'p' && rel(Number(p.square[1]), color) >= 5).length;
   }
-  return { moves, counts, quietTested };
+  return { moves, counts, quietTested, midMoves };
 }
 
 /**
@@ -179,7 +216,8 @@ export function aggregate(games) {
       const v = g.counts[k];
       if (def.unit === '/100 coups') return (100 * v) / g.moves;
       if (def.unit === '%') return (100 * v) / g.moves;
-      if (def.unit === '% des coups calmes testés') return g.quietTested ? (100 * v) / g.quietTested : null;
+      if (def.unit === '% des coups calmes') return g.quietTested ? (100 * v) / g.quietTested : null;
+      if (k === 'materiel_20_40') return g.midMoves ? v / g.midMoves : null;
       if (def.unit === '/partie') return v;
       return v / g.moves; // moyennes par coup
     });
