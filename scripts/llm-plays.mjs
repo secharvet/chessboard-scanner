@@ -7,6 +7,8 @@
  *   LLM_MODEL=deepseek-v4-pro node scripts/llm-plays.mjs --elo 1600
  *   --referee stockfish|rules|none   arbitre des coups confirmés malgré une alerte (défaut : stockfish)
  *   --stop-before 20                 arrêter la partie à la première gaffe avant ce coup
+ *   --no-memory                      sans le carnet de leçons (comparaison)
+ *   --no-review                      sans analyse d'après-partie (le carnet n'apprend rien)
  *
  * Alerte anti-gaffe → « es-tu sûr ? » → si le LLM confirme, l'arbitre tranche :
  *   stockfish : refusé si le coup perd ≥ 2 pions à l'évaluation, sinon sacrifice validé ;
@@ -32,6 +34,8 @@ import { blunderCheck, scanTactics } from '../coach/threats.mjs';
 import { describeForcing, forcingLines } from '../coach/forcing.mjs';
 import { findManeuvers } from '../coach/maneuvers.mjs';
 import { diagnoseMistake } from '../coach/diagnose.mjs';
+import { loadLessons, moveTags, recall, remindsOf, situationTags } from '../coach/memory.mjs';
+import { learnFromMistake, markRecall } from '../coach/review.mjs';
 
 loadEnv();
 const args = process.argv.slice(2);
@@ -45,6 +49,11 @@ const MAX_MOVES = Number(opt('--moves', 60));
 const REFEREE = opt('--referee', 'stockfish');
 const STOP_BEFORE = Number(opt('--stop-before', 0));
 const VETO_CP = 200;
+const USE_MEMORY = !args.includes('--no-memory');
+const REVIEW = !args.includes('--no-review');
+const lessons = USE_MEMORY ? loadLessons() : [];
+const recalls = [];
+const learned = [];
 const cfg = llmConfig();
 
 // ── Adversaire : Stockfish bridé ──
@@ -96,6 +105,9 @@ function perception(fen, color) {
     list('Tes combinaisons forcées (échecs, prises, jusqu\'au bout) :', forcingLines(fen, color).map(describeForcing)),
     list("Combinaisons forcées de l'adversaire (s'il jouait maintenant) :", forcingLines(fen, opp).map(describeForcing)),
     list('Manœuvres possibles :', findManeuvers(fen, color).map((m) => m.text)),
+    ...(lessons.length ? [list('Souvenirs de tes parties précédentes (situations semblables) :',
+      recall(lessons, { situation: situationTags(fen, color) }).map(({ lesson: l }) =>
+        `${l.titre} — ${l.lecon} Signal : ${l.signal}${l.count > 1 ? ` (erreur commise ${l.count} fois)` : ''}`))] : []),
   ].join('\n\n');
 }
 
@@ -119,6 +131,7 @@ Coups légaux : ${legal.join(' ')}`;
   const forbidden = new Set();
   const asked = new Set();
   const events = [];
+  const pendingRecalls = [];
   let illegal = 0;
   let lastError = '';
 
@@ -157,7 +170,17 @@ Coups légaux : ${legal.join(' ')}`;
       ...blunderCheck(after.fen(), LLM_COLOR),
       ...forcingLines(after.fen(), oppColor, { minGain: 2 }).map((l) => ({ text: `ligne forcée ${describeForcing(l)}`, line: l })),
     ];
-    const ok = { san: played.san, plan: parsed.plan ?? '', raison: parsed.raison ?? '', illegal, events };
+    const ok = { san: played.san, plan: parsed.plan ?? '', raison: parsed.raison ?? '', illegal, events, pendingRecalls };
+
+    // « Attends, ça me rappelle… » : le coup ressemble-t-il à une erreur passée ?
+    const reminder = lessons.length && !asked.has(played.san)
+      ? remindsOf(lessons, situationTags(fen, LLM_COLOR), moveTags(fen, played.san)) : null;
+    if (reminder) {
+      const l = reminder.lesson;
+      danger.push({ text: `SOUVENIR — ça te rappelle une erreur passée : « ${l.titre} » : ${l.lecon}` });
+      pendingRecalls.push({ id: l.id, san: played.san, titre: l.titre });
+      events.push(`💭 souvenir sur ${fr} : ${l.titre}`);
+    }
     if (!danger.length) return ok;
 
     const dangerText = danger.map((d) => d.text).join(' ; ');
@@ -198,7 +221,7 @@ Coups légaux : ${legal.join(' ')}`;
   // Trop d'échecs : premier coup légal non refusé (compté comme défaillance du LLM).
   const any = chess.moves().find((m) => !forbidden.has(m)) ?? chess.moves()[0];
   events.push('coup de secours après trop de réponses refusées ou illégales');
-  return { san: any, plan, raison: '(coup de secours)', illegal: illegal + 1, events };
+  return { san: any, plan, raison: '(coup de secours)', illegal: illegal + 1, events, pendingRecalls };
 }
 
 // ── Mesure du coût d'un coup ──
@@ -239,14 +262,27 @@ while (!chess.isGameOver() && chess.history().length < MAX_MOVES * 2) {
     const tag = loss >= 300 ? 'gaffe' : loss >= 100 ? 'erreur' : loss >= 50 ? 'imprécision' : '';
     if (plan && m.plan && m.plan !== plan) planChanges++;
     plan = m.plan || plan;
+    // Souvenirs rappelés : ont-ils évité une erreur ? (coup abandonné qui aurait coûté ≥ 1 pion)
+    for (const r of m.pendingRecalls ?? []) {
+      let helped = false;
+      if (r.san !== m.san) {
+        const alt = new Chess(fen);
+        alt.move(r.san);
+        helped = before - -(await evalFor(alt.fen())) >= 100;
+      }
+      markRecall(r.id, helped);
+      recalls.push({ n: Math.ceil(chess.history().length / 2), titre: r.titre, abandoned: r.san !== m.san, helped });
+      m.events.push(`💭 ${r.titre} : ${r.san !== m.san ? `coup abandonné${helped ? ' — erreur évitée ✓' : ' (il n\'était pas si mauvais)'}` : 'rappel ignoré, coup maintenu'}`);
+    }
+    let diag = null;
     if (loss >= 100) {
       const played = toFrenchSan(m.san);
-      const d = await diagnoseMistake(judge, fen, chess.fen(), { ...m, alerted: m.events.some((e) => e.startsWith(`⚑ alerte sur ${played}`)) });
-      m.events.push(`🔎 ${d.text}`);
+      diag = await diagnoseMistake(judge, fen, chess.fen(), { ...m, alerted: m.events.some((e) => e.startsWith(`⚑ alerte sur ${played}`)) });
+      m.events.push(`🔎 ${diag.text}`);
     }
     const warned = m.events.some((e) => e.startsWith('⚑'));
     const vetoed = m.events.filter((e) => e.startsWith('⛔')).length;
-    log.push({ n: Math.ceil(chess.history().length / 2), san: toFrenchSan(m.san), loss, tag, plan: m.plan, raison: m.raison, illegal: m.illegal, evalAfter: after, warned, vetoed, events: m.events });
+    log.push({ n: Math.ceil(chess.history().length / 2), san: toFrenchSan(m.san), sanEn: m.san, fenBefore: fen, fenAfter: chess.fen(), diag, loss, tag, plan: m.plan, raison: m.raison, illegal: m.illegal, evalAfter: after, warned, vetoed, events: m.events });
     console.log(`${String(log.at(-1).n).padStart(2)}. ${log.at(-1).san.padEnd(7)} perte ${String(loss).padStart(4)} ${tag.padEnd(11)}${warned ? '⚑' : ' '}${vetoed ? `⛔${vetoed}` : '  '} ${String(secs).padStart(3)}s ${m.plan.slice(0, 80)}`);
     for (const e of m.events) console.log(`      ${e.slice(0, 200)}`);
     appendFileSync(eventsPath, `${log.at(-1).n}. ${log.at(-1).san} (perte ${loss}) — plan : ${m.plan} — raison : ${m.raison}\n${m.events.map((e) => `   ${e}`).join('\n')}\n`);
@@ -279,6 +315,21 @@ try {
 } catch (e) {
   coherence = { note: null, points_faibles: [`relecteur indisponible : ${e.message}`] };
 }
+// Analyse d'après-partie : une leçon par erreur, rangée dans le carnet.
+if (REVIEW) {
+  for (const x of log.filter((e) => e.loss >= 100 && e.diag?.refutationUci)) {
+    try {
+      const r = await learnFromMistake({
+        fenBefore: x.fenBefore, san: x.sanEn, fenAfter: x.fenAfter, plan: x.plan, raison: x.raison,
+        refutationUci: x.diag.refutationUci, cause: x.diag.cause, loss: x.loss,
+      }, cfg);
+      learned.push({ n: x.n, san: x.san, ...r });
+      console.log(`📓 leçon ${r.action} (coup ${x.n}. ${x.san}) : ${r.lesson.titre} — ${r.lesson.lecon}`);
+    } catch (e) {
+      console.log(`📓 analyse impossible pour ${x.n}. ${x.san} : ${e.message}`);
+    }
+  }
+}
 writeReport(coherence, finalEval);
 
 function writeReport(coherence, finalEval = null) {
@@ -304,6 +355,10 @@ function writeReport(coherence, finalEval = null) {
       const diags = log.filter((x) => x.loss >= 100).map((x) => `- ${x.n}. ${x.san} (−${x.loss} cp) : ${x.events.find((e) => e.startsWith('🔎'))?.slice(2).trim() ?? '—'}`);
       return diags.length ? diags : ['- aucune erreur'];
     })(),
+    '', '## Carnet de leçons', '',
+    `- Leçons disponibles au début de la partie : ${lessons.length} ; rappels : ${recalls.length} (coups abandonnés : ${recalls.filter((r) => r.abandoned).length}, erreurs évitées : ${recalls.filter((r) => r.helped).length})`,
+    ...recalls.map((r) => `- coup ${r.n} : « ${r.titre} » — ${r.abandoned ? (r.helped ? 'erreur évitée ✓' : 'coup abandonné') : 'rappel ignoré'}`),
+    ...(learned.map((l) => `- 📓 leçon ${l.action} après ${l.n}. ${l.san} : **${l.lesson.titre}** — ${l.lesson.lecon} (signal : ${l.lesson.signal}) [${l.lesson.move.join(', ')} → ${l.lesson.punishment.join(', ') || 'positionnel'}]`)),
     '', '## Coups du LLM', '', '| Coup | Perte (cp) | | Plan annoncé | Raison | Alertes / arbitrage |', '|---|---|---|---|---|---|',
     ...log.map((x) => `| ${x.n}. ${x.san} | ${x.loss} | ${x.tag} | ${x.plan.replace(/\|/g, '/')} | ${x.raison.replace(/\|/g, '/')} | ${x.events.join(' ; ').replace(/\|/g, '/')} |`),
     '', '## PGN', '', '```', pgn, '```',

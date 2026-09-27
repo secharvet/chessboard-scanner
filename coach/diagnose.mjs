@@ -52,6 +52,7 @@ export async function diagnoseMistake(engine, fenBefore, fenAfter, move) {
   }[cause];
   return {
     cause,
+    refutationUci: ref.pv.slice(0, 6),
     text: `${label} — réfutation Stockfish : ${line}${mentions ? ` (sa justification évoquait pourtant ${pv[0].to})` : ''}`,
   };
 }
