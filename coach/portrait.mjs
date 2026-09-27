@@ -36,6 +36,29 @@ export async function fetchLichessGames(user, { max = 20, perf = 'blitz,rapid,cl
   throw new Error('Lichess : limite de débit persistante');
 }
 
+/**
+ * Parties récentes d'un joueur Chess.com (API publique, sans compte) : archives mensuelles
+ * parcourues de la plus récente à la plus ancienne ; parties classées, bullet exclu.
+ * @param {string} user
+ */
+export async function fetchChessComGames(user, { max = 20, classes = ['blitz', 'rapid', 'daily'] } = {}) {
+  const get = async (url) => {
+    const res = await fetch(url, { headers: { 'User-Agent': UA } });
+    if (!res.ok) throw new Error(`Chess.com HTTP ${res.status} (${url})`);
+    return res.json();
+  };
+  const { archives = [] } = await get(`https://api.chess.com/pub/player/${encodeURIComponent(user.toLowerCase())}/games/archives`);
+  const pgns = [];
+  for (const month of [...archives].reverse()) {
+    const { games = [] } = await get(month);
+    for (const g of [...games].reverse()) {
+      if (g.rated && classes.includes(g.time_class) && g.rules === 'chess' && g.pgn) pgns.push(g.pgn.trim());
+      if (pgns.length >= max) return pgns.join('\n\n');
+    }
+  }
+  return pgns.join('\n\n');
+}
+
 /** Pendule restante (secondes) après chaque demi-coup, lue dans les commentaires %clk. */
 function clocks(pgnChunk) {
   return [...pgnChunk.matchAll(/\[%clk (\d+):(\d+):(\d+(?:\.\d+)?)\]/g)].map((m) => Number(m[1]) * 3600 + Number(m[2]) * 60 + Number(m[3]));
@@ -110,7 +133,8 @@ export async function analyzePlayer(pgnText, user, engine, opts = {}) {
       phases[phase].loss += loss;
       phases[phase].n++;
       const remaining = clk[i] ?? null;
-      const zeitnot = remaining != null && initial != null && (remaining < 60 || remaining < initial * 0.1);
+      // Zeitnot relatif à la cadence : moins de 10 % du temps initial (ou moins de 10 s).
+      const zeitnot = remaining != null && initial != null && (remaining < 10 || remaining < initial * 0.1);
       if (zeitnot) zeitnotMoves++;
       if (loss >= 150 && e0 > -500) { // erreurs réelles, hors positions déjà perdues
         if (zeitnot) zeitnotMistakes++;
@@ -179,7 +203,7 @@ export function portraitFacts(a, index) {
   const add = (text) => { f[`F${++n}`] = text; };
   add(`Parties analysées : ${a.games} (${a.style.moves} coups hors ouverture pour le style).`);
   if (index != null) {
-    add(`Indice « jeu tranchant ↔ jeu sûr » : ${index >= 0 ? '+' : ''}${index.toFixed(2)} (0 = moyenne de 8 grands maîtres de référence ; positif = plus tranchant, comme Tal ou Shirov ; négatif = plus sûr, comme Karpov ou Andersson).`);
+    add(`Indice « jeu tranchant ↔ jeu sûr » : ${index >= 0 ? '+' : ''}${index.toFixed(2)} (0 = moyenne de 8 grands maîtres en parties LENTES ; positif = plus tranchant, comme Tal ou Shirov ; négatif = plus sûr, comme Karpov ou Andersson). Référence imparfaite pour des parties rapides ou un joueur de club : à interpréter avec prudence.`);
   }
   const t = a.style.traits;
   add(`Menaces créées : ${t.menaces.mean.toFixed(1)} coups sur 100 ; sacrifices : ${t.sacrifices.mean.toFixed(1)} pour 100 coups ; options tactiques laissées à l'adversaire : ${t.options_adverses.mean.toFixed(2)} par coup.`);
@@ -193,7 +217,7 @@ export function portraitFacts(a, index) {
   for (const [motif, k] of Object.entries(a.byPunishment).sort((x, y) => y[1] - x[1]).slice(0, 5)) {
     add(`Erreurs punies par le motif « ${motif} » : ${k} fois.`);
   }
-  if (a.zeitnot.moves) add(`Zeitnot (moins de 60 s ou de 10 % du temps) : ${a.zeitnot.moves} coups joués, dont ${a.zeitnot.mistakes} erreurs.`);
+  if (a.zeitnot.moves) add(`Zeitnot (moins de 10 % du temps initial ou de 10 s) : ${a.zeitnot.moves} coups joués, dont ${a.zeitnot.mistakes} erreurs.`);
   for (const [name, o] of Object.entries(a.openings).sort((x, y) => y[1].games - x[1].games).slice(0, 5)) {
     add(`Ouverture « ${name} » : ${o.games} parties, score ${Math.round((100 * o.points) / o.games)} % (Blancs ${o.color.w}, Noirs ${o.color.b}).`);
   }

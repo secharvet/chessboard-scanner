@@ -2,6 +2,7 @@
  * Portrait d'un joueur.
  *
  *   node scripts/portrait.mjs --lichess <pseudo> [--games 20] [--perf blitz,rapid,classical]
+ *   node scripts/portrait.mjs --chesscom <pseudo> [--games 20]
  *   node scripts/portrait.mjs --pgn mes-parties.pgn --user "Nom exact" [--games 20]
  *
  * Rapport : reports/portrait-<joueur>-<date>.md (+ .json)
@@ -10,7 +11,7 @@
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { loadEnv } from '../coach/env.mjs';
 import { complete, llmConfig } from '../coach/llm.mjs';
-import { analyzePlayer, axisIndex, fetchLichessGames, PORTRAIT_SYSTEM, portraitFacts } from '../coach/portrait.mjs';
+import { analyzePlayer, axisIndex, fetchChessComGames, fetchLichessGames, PORTRAIT_SYSTEM, portraitFacts } from '../coach/portrait.mjs';
 import { stripCitations, verifyCitations } from '../coach/verify.mjs';
 import { UciEngine } from '../coach/uci-engine.mjs';
 
@@ -19,11 +20,13 @@ const args = process.argv.slice(2);
 const val = (k, d) => (args.includes(k) ? args[args.indexOf(k) + 1] : d);
 const max = Number(val('--games', 20));
 const lichess = val('--lichess', null);
-const user = lichess ?? val('--user', null);
-if (!user) throw new Error('Préciser --lichess <pseudo> ou --pgn <fichier> --user <nom>');
+const chesscom = val('--chesscom', null);
+const user = lichess ?? chesscom ?? val('--user', null);
+if (!user) throw new Error('Préciser --lichess <pseudo>, --chesscom <pseudo> ou --pgn <fichier> --user <nom>');
 
 const pgn = lichess ? await fetchLichessGames(lichess, { max, perf: val('--perf', 'blitz,rapid,classical') })
-  : readFileSync(val('--pgn'), 'utf8').split(/\n(?=\[Event )/).slice(0, max).join('\n');
+  : chesscom ? await fetchChessComGames(chesscom, { max })
+    : readFileSync(val('--pgn'), 'utf8').split(/\n(?=\[Event )/).slice(0, max).join('\n');
 
 const engine = new UciEngine({ threads: 2 });
 const t0 = Date.now();
