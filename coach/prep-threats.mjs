@@ -10,7 +10,7 @@
 import { Chess } from 'chess.js';
 import { buildTacticalFacts } from '../positional/piece-attacks.js';
 import { describeForcing, forcingLines } from './forcing.mjs';
-import { toFrenchSan } from './notation.mjs';
+import { toFrenchSan, withPieceName } from './notation.mjs';
 import { scanTactics } from './threats.mjs';
 
 const THE = { p: 'le pion', n: 'le cavalier', b: 'le fou', r: 'la tour', q: 'la dame', k: 'le roi' };
@@ -59,7 +59,7 @@ export function preparedThreats2(fen, me, { max = 4, width = 8 } = {}) {
         out.push({
           severity: t.severity, prep: `${toFrenchSan(m1.san)} puis ${dots}${toFrenchSan(m2.san)}`, preps: [toFrenchSan(m1.san)],
           threat: t.san, seqEn: [m1.san, '--', m2.san, '--', t.sanEn],
-          text: `${dots}${toFrenchSan(m1.san)} puis ${dots}${toFrenchSan(m2.san)} préparerait ${t.text}`,
+          text: `${dots}${withPieceName(toFrenchSan(m1.san))} puis ${dots}${withPieceName(toFrenchSan(m2.san))} préparerait ${t.text}`,
         });
       }
     }
@@ -110,17 +110,17 @@ export function preparedThreats(fen, me, opts = {}) {
       // Bruit exclu : un pion gagné (sévérité 11) ne vaut pas une alerte ; on garde ≥ 2 points, mat,
       // fourchette, découverte (sévérités 8-9 hors prises).
       if (now.has(t.san) || t.severity < 8 || t.severity === 11) continue;
-      out.push({ severity: t.severity, prep, threat: t.san, seqEn: [m.san, '--', t.sanEn], text: `${dots}${prep} préparerait ${t.text}` });
+      out.push({ severity: t.severity, prep, threat: t.san, seqEn: [m.san, '--', t.sanEn], text: `${dots}${withPieceName(prep)} préparerait ${t.text}` });
     }
     if (opts.forcing === true) { // coûteux (jusqu'à 30 s) pour peu de gain mesuré : désactivé par défaut
       for (const l of forcingLines(afterFen, opp, { maxNodes: 3000, max: 1 })) {
         if (nowForcing.has(l.san)) continue;
-        out.push({ severity: l.mate ? 90 : 10 + l.gain, prep, threat: l.san, seqEn: [m.san, '--', ...l.pv], text: `${dots}${prep} préparerait la suite forcée ${describeForcing(l)}` });
+        out.push({ severity: l.mate ? 90 : 10 + l.gain, prep, threat: l.san, seqEn: [m.san, '--', ...l.pv], text: `${dots}${withPieceName(prep)} préparerait la suite forcée ${describeForcing(l)}` });
       }
     }
     for (const t of buildTacticalFacts(afterFen)) {
       if (t.id !== 'PIECE_PIEGEE' || t.params.color !== me || trappedNow.has(t.params.square)) continue;
-      out.push({ severity: 9, prep, threat: `piège ${t.params.square}`, seqEn: [m.san], text: `${dots}${prep} piégerait ${THE[t.params.type]} en ${t.params.square} (plus de case de fuite sûre)` });
+      out.push({ severity: 9, prep, threat: `piège ${t.params.square}`, seqEn: [m.san], text: `${dots}${withPieceName(prep)} piégerait ${THE[t.params.type]} en ${t.params.square} (plus de case de fuite sûre)` });
     }
   }
 
@@ -140,7 +140,7 @@ export function preparedThreats(fen, me, opts = {}) {
     .slice(0, opts.max ?? 4)
     .map((t) => {
       const d = t.text.startsWith('…') ? '…' : '';
-      const preps = t.preps.slice(0, 3).map((p) => `${d}${p}`).join(' ou ');
-      return { ...t, prep: t.preps[0], text: t.text.replace(/^…?\S+/, preps) };
+      const preps = t.preps.slice(0, 3).map((p) => `${d}${withPieceName(p)}`).join(' ou ');
+      return { ...t, prep: t.preps[0], text: t.text.replace(/^…?\S+ \([^)]*\)/, preps) };
     });
 }
