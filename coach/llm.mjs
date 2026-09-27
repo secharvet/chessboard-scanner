@@ -2,9 +2,9 @@
  * Fournisseurs LLM : claude-cli (abonnement local), deepseek / openai-compatible, anthropic.
  *
  * Variables d'environnement :
- *   LLM_PROVIDER   claude-cli | deepseek | openai | anthropic   (défaut : claude-cli)
+ *   LLM_PROVIDER   claude-cli | deepseek | groq | openai | anthropic   (défaut : claude-cli)
  *   LLM_MODEL      ex. sonnet, deepseek-flash, claude-sonnet-5
- *   LLM_API_KEY    clé API (sauf claude-cli)
+ *   LLM_API_KEY    clé API (sauf claude-cli) ; GROQ_API_KEY prioritaire pour groq
  *   LLM_BASE_URL   pour un endpoint compatible OpenAI
  *   LLM_EFFORT     claude-cli : low | medium | high | max (optionnel)
  *
@@ -17,6 +17,7 @@ import { spawn } from 'node:child_process';
 const DEFAULTS = {
   'claude-cli': { model: 'sonnet' },
   deepseek: { model: 'deepseek-flash', baseUrl: 'https://api.deepseek.com' },
+  groq: { model: 'openai/gpt-oss-120b', baseUrl: 'https://api.groq.com/openai/v1' },
   openai: { model: 'gpt-4o-mini', baseUrl: 'https://api.openai.com/v1' },
   anthropic: { model: 'claude-sonnet-5', baseUrl: 'https://api.anthropic.com' },
 };
@@ -28,7 +29,7 @@ export function llmConfig(env = process.env) {
   return {
     provider,
     model: env.LLM_MODEL || d.model,
-    apiKey: env.LLM_API_KEY || '',
+    apiKey: (provider === 'groq' ? env.GROQ_API_KEY : '') || env.LLM_API_KEY || '',
     baseUrl: env.LLM_BASE_URL || d.baseUrl,
     effort: env.LLM_EFFORT || '',
   };
@@ -92,6 +93,8 @@ async function openAiCompatible({ system, user }, cfg, opts = {}) {
       temperature: 0.3,
       messages: [{ role: 'system', content: system }, { role: 'user', content: user }],
       ...(opts.think === false && cfg.provider === 'deepseek' ? { thinking: { type: 'disabled' } } : {}),
+      // Groq / gpt-oss : effort de raisonnement réglable.
+      ...(cfg.provider === 'groq' && /gpt-oss/.test(cfg.model) ? { reasoning_effort: opts.think === false ? 'low' : 'medium' } : {}),
     }),
   });
   const data = await res.json().catch(() => ({}));
