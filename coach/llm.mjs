@@ -83,7 +83,22 @@ function claudeCli({ system, user }, cfg) {
   });
 }
 
-async function openAiCompatible({ system, user }, cfg, opts = {}) {
+async function openAiCompatible(prompt, cfg, opts = {}) {
+  // Limite de débit (429) ou panne passagère (5xx) : on attend le délai annoncé et on réessaie.
+  for (let attempt = 0; ; attempt++) {
+    try {
+      return await openAiOnce(prompt, cfg, opts);
+    } catch (e) {
+      const status = e.status ?? 0;
+      if (attempt >= 6 || !(status === 429 || status >= 500)) throw e;
+      const wait = e.retryAfter ?? Math.min(60, 5 * 2 ** attempt);
+      console.error(`[llm] ${cfg.provider} ${status} : nouvel essai dans ${wait.toFixed(0)} s`);
+      await new Promise((r) => setTimeout(r, wait * 1000));
+    }
+  }
+}
+
+async function openAiOnce({ system, user }, cfg, opts = {}) {
   if (!cfg.apiKey) throw new Error(`LLM_API_KEY manquante pour ${cfg.provider}`);
   const res = await fetch(`${cfg.baseUrl.replace(/\/$/, '')}/chat/completions`, {
     method: 'POST',
@@ -98,7 +113,16 @@ async function openAiCompatible({ system, user }, cfg, opts = {}) {
     }),
   });
   const data = await res.json().catch(() => ({}));
-  if (!res.ok) throw new Error(`${cfg.provider} HTTP ${res.status} : ${data?.error?.message ?? ''}`);
+  if (!res.ok) {
+    const err = new Error(`${cfg.provider} HTTP ${res.status} : ${data?.error?.message ?? ''}`);
+    err.status = res.status;
+    // Délai : en-tête retry-after, ou « try again in 12.5s » dans le message.
+    const header = Number(res.headers.get('retry-after'));
+    const inMsg = String(data?.error?.message ?? '').match(/try again in ([\d.]+)(ms|s|m)/i);
+    err.retryAfter = Number.isFinite(header) && header > 0 ? header
+      : inMsg ? Number(inMsg[1]) * (inMsg[2] === 'ms' ? 0.001 : inMsg[2] === 'm' ? 60 : 1) + 1 : undefined;
+    throw err;
+  }
   return String(data.choices?.[0]?.message?.content ?? '').trim();
 }
 
