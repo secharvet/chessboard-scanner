@@ -101,7 +101,16 @@ export function buildBrief(data) {
   const gain = c0 ? (me === 'w' ? c0.material : -c0.material) : 0;
 
   let reason = null;
-  if (data.threat?.mates) {
+  // Un coup qui PREND et gagne gros (la dame aventurée en h5) : c'est la raison principale, même s'il
+  // pare aussi un mat ou une menace — on le dit en second.
+  if (first?.captured && gain >= 3) {
+    pieces.add(`${first.captured}|opp|${first.to}`);
+    const also = data.threat?.mates ? ` Et du même coup, il pare la menace de mat ${data.threat.move}.`
+      : data.threat && (me === 'w' ? -data.threat.material : data.threat.material) >= 2 ? ` Et du même coup, il pare la menace ${data.threat.move}.` : '';
+    reason = { kind: 'win', points: gain, move: bestSan, alsoParries: also ? data.threat.move : null };
+    sentences.push(`${bestSan} prend ${pieceRef(first.captured, 'opp', first.to)} : une fois les échanges terminés, tu as ${gain} point(s) de plus.${also}`);
+  }
+  if (!reason && data.threat?.mates) {
     reason = { kind: 'parry_mate', threat: data.threat.move, move: bestSan };
     sentences.push(`Attention : si tu ne fais rien, l'adversaire joue ${data.threat.move} et te met échec et mat. Priorité absolue : ${bestSan} pare ce mat.`);
   }

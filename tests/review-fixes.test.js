@@ -72,3 +72,18 @@ describe('Mode fiche : contrôle de la reformulation', async () => {
     assert.equal(checkRephrase('**Coup conseillé** — Fb5, puis Cg5 sur f7.', brief, data).length >= 2, true);
   });
 });
+
+describe('Mode fiche : hiérarchie des raisons', async () => {
+  const { buildBrief } = await import('../coach/brief.mjs');
+  it('une prise qui gagne la dame passe avant « parer le mat » (et le mentionne)', () => {
+    const data = {
+      fen: 'rnbqkb1r/pppp1ppp/5n2/4p2Q/2B1P3/8/PPPP1PPP/RNB1K1NR b KQkq - 3 3', player: 'b', toMove: 'b', phase: 'ouverture',
+      candidates: [{ move: 'Cxh5', pvUci: ['f6h5', 'c4f7', 'e8f7'], evalPlayer: { type: 'cp', value: 650 }, material: -6 }],
+      threat: { move: 'Dxf7#', mates: true, material: 0 }, prepared: [], structures: [],
+    };
+    const b = buildBrief(data);
+    assert.equal(b.items.find((x) => x.kind === 'reason').kind, 'win');
+    assert.match(b.text, /Cxh5 prend sa dame en h5/);
+    assert.match(b.text, /pare la menace de mat Dxf7#/);
+  });
+});
