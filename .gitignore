@@ -7,3 +7,4 @@ reports/
 # Carnet de leçons du joueur LLM (propre à chaque machine)
 memory/
 logs/
+data/lichess/
