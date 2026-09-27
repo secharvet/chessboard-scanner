@@ -296,7 +296,8 @@ while (!chess.isGameOver() && chess.history().length < MAX_MOVES * 2) {
     const m = await llmMove(chess, plan, chess.history(), before);
     const secs = ((Date.now() - t0) / 1000).toFixed(0);
     chess.move(m.san);
-    const after = -(await evalFor(chess.fen()));
+    // Mat donné : pas de perte (l'évaluation d'une position matée n'a pas de ligne).
+    const after = chess.isCheckmate() ? 10000 : -(await evalFor(chess.fen()));
     const loss = Math.max(0, Math.min(1000, before - after));
     const tag = loss >= 300 ? 'gaffe' : loss >= 100 ? 'erreur' : loss >= 50 ? 'imprécision' : '';
     if (plan && m.plan && m.plan !== plan) planChanges++;
