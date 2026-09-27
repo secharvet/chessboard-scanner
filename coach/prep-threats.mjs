@@ -55,17 +55,17 @@ export function preparedThreats(fen, me, opts = {}) {
       // Bruit exclu : un pion gagné (sévérité 11) ne vaut pas une alerte ; on garde ≥ 2 points, mat,
       // fourchette, découverte (sévérités 8-9 hors prises).
       if (now.has(t.san) || t.severity < 8 || t.severity === 11) continue;
-      out.push({ severity: t.severity, prep, threat: t.san, text: `…${prep} préparerait ${t.text}` });
+      out.push({ severity: t.severity, prep, threat: t.san, seqEn: [m.san, '--', t.sanEn], text: `…${prep} préparerait ${t.text}` });
     }
     if (opts.forcing === true) { // coûteux (jusqu'à 30 s) pour peu de gain mesuré : désactivé par défaut
       for (const l of forcingLines(afterFen, opp, { maxNodes: 3000, max: 1 })) {
         if (nowForcing.has(l.san)) continue;
-        out.push({ severity: l.mate ? 90 : 10 + l.gain, prep, threat: l.san, text: `…${prep} préparerait la suite forcée ${describeForcing(l)}` });
+        out.push({ severity: l.mate ? 90 : 10 + l.gain, prep, threat: l.san, seqEn: [m.san, '--', ...l.pv], text: `…${prep} préparerait la suite forcée ${describeForcing(l)}` });
       }
     }
     for (const t of buildTacticalFacts(afterFen)) {
       if (t.id !== 'PIECE_PIEGEE' || t.params.color !== me || trappedNow.has(t.params.square)) continue;
-      out.push({ severity: 9, prep, threat: `piège ${t.params.square}`, text: `…${prep} piégerait ${THE[t.params.type]} en ${t.params.square} (plus de case de fuite sûre)` });
+      out.push({ severity: 9, prep, threat: `piège ${t.params.square}`, seqEn: [m.san], text: `…${prep} piégerait ${THE[t.params.type]} en ${t.params.square} (plus de case de fuite sûre)` });
     }
   }
 
@@ -74,10 +74,10 @@ export function preparedThreats(fen, me, opts = {}) {
   const byThreat = new Map();
   for (const t of out) {
     const cur = byThreat.get(t.threat);
-    if (!cur) byThreat.set(t.threat, { severity: t.severity, preps: [t.prep], text: t.text, threat: t.threat });
+    if (!cur) byThreat.set(t.threat, { severity: t.severity, preps: [t.prep], text: t.text, threat: t.threat, seqEn: t.seqEn });
     else {
       if (!cur.preps.includes(t.prep)) cur.preps.push(t.prep);
-      if (t.severity > cur.severity) Object.assign(cur, { severity: t.severity, text: t.text });
+      if (t.severity > cur.severity) Object.assign(cur, { severity: t.severity, text: t.text, seqEn: t.seqEn });
     }
   }
   return [...byThreat.values()]

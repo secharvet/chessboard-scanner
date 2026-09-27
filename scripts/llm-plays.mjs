@@ -8,6 +8,7 @@
  *   --referee stockfish|rules|none   arbitre des coups confirmés malgré une alerte (défaut : stockfish)
  *   --stop-before 20                 arrêter la partie à la première gaffe avant ce coup
  *   --no-memory                      sans le carnet de leçons (comparaison)
+ *   --material-only                  nos lignes notées au matériel seulement (sans l'évaluation Stockfish)
  *   --think auto|on|off|low|high     réflexion du LLM ; auto (défaut) : aucune au calme, low en position
  *                                    critique, high après une alerte ou un veto
  *   --no-review                      sans analyse d'après-partie (le carnet n'apprend rien)
@@ -36,6 +37,7 @@ import { blunderCheck, scanTactics } from '../coach/threats.mjs';
 import { describeForcing, forcingLines } from '../coach/forcing.mjs';
 import { findManeuvers } from '../coach/maneuvers.mjs';
 import { preparedThreats } from '../coach/prep-threats.mjs';
+import { scoreForcingLines, scorePrepared, scoreTactics } from '../coach/engine-eval.mjs';
 import { diagnoseMistake } from '../coach/diagnose.mjs';
 import { loadLessons, moveTags, recall, remindsOf, situationTags } from '../coach/memory.mjs';
 import { learnFromMistake, markRecall } from '../coach/review.mjs';
@@ -54,6 +56,13 @@ const STOP_BEFORE = Number(opt('--stop-before', 0));
 const VETO_CP = 200;
 const USE_MEMORY = !args.includes('--no-memory');
 const THINK = opt('--think', 'auto');
+const ENGINE_SCORING = !args.includes('--material-only');
+/** Nos lignes (calcul forcé, scanner, préparations) notées par Stockfish (profondeur 10) si activé. */
+const scored = {
+  forcing: (fen, side, lines) => (ENGINE_SCORING ? scoreForcingLines(judge, fen, side, lines) : lines),
+  tactics: (fen, side, ts) => (ENGINE_SCORING ? scoreTactics(judge, fen, side, ts) : ts),
+  prepared: (fen, side, ps) => (ENGINE_SCORING ? scorePrepared(judge, fen, side, ps) : ps),
+};
 let thinkCalls = 0;
 let fastCalls = 0;
 const REVIEW = !args.includes('--no-review');
@@ -97,7 +106,7 @@ Règles :
 - Indique le type de ton coup : "plan" (il fait avancer ton plan), "parade" (il pare une menace ; dis comment tu reprends ton plan ensuite) ou "tactique" (il exploite une occasion).
 Réponds UNIQUEMENT en JSON : {"plan": "ton plan en une ou deux phrases", "type": "plan|parade|tactique", "raison": "pourquoi ce coup", "coup": "Cf3"}`;
 
-function perception(fen, color) {
+async function perception(fen, color) {
   const b = buildBalance(buildAllFacts(fen));
   const opp = color === 'w' ? 'b' : 'w';
   const list = (t, xs) => `${t}\n${xs.length ? xs.slice(0, 10).map((x) => `- ${x}`).join('\n') : '- (rien de notable)'}`;
@@ -107,11 +116,11 @@ function perception(fen, color) {
     list("Atouts de l'adversaire (dont ses menaces tactiques) :", b[opp].assets),
     list("Faiblesses de l'adversaire :", b[opp].weaknesses),
     list('Contexte :', b.context),
-    list("Menaces de l'adversaire (ce qu'il gagnerait s'il jouait maintenant) :", scanTactics(fen, opp).map((t) => t.text)),
-    list('Tes occasions tactiques (coups qui gagnent quelque chose tout de suite) :', scanTactics(fen, color).map((t) => t.text)),
-    list('Tes combinaisons forcées (échecs, prises, jusqu\'au bout) :', forcingLines(fen, color).map(describeForcing)),
-    list("Combinaisons forcées de l'adversaire (s'il jouait maintenant) :", forcingLines(fen, opp).map(describeForcing)),
-    list("Ce que l'adversaire prépare (un coup calme de sa part, puis la menace) :", preparedThreats(fen, color).map((t) => t.text)),
+    list("Menaces de l'adversaire (ce qu'il gagnerait s'il jouait maintenant) :", (await scored.tactics(fen, opp, scanTactics(fen, opp))).map((t) => t.text)),
+    list('Tes occasions tactiques (coups qui gagnent quelque chose tout de suite) :', (await scored.tactics(fen, color, scanTactics(fen, color))).map((t) => t.text)),
+    list('Tes combinaisons forcées (échecs, prises, jusqu\'au bout) :', (await scored.forcing(fen, color, forcingLines(fen, color))).map(describeForcing)),
+    list("Combinaisons forcées de l'adversaire (s'il jouait maintenant) :", (await scored.forcing(fen, opp, forcingLines(fen, opp))).map(describeForcing)),
+    list("Ce que l'adversaire prépare (un coup calme de sa part, puis la menace) :", (await scored.prepared(fen, opp, preparedThreats(fen, color))).map((t) => t.text)),
     list('Manœuvres possibles :', findManeuvers(fen, color).map((m) => m.text)),
     ...(lessons.length ? [list('Souvenirs de tes parties précédentes (situations semblables) :',
       recall(lessons, { situation: situationTags(fen, color) }).map(({ lesson: l }) =>
@@ -131,7 +140,7 @@ FEN : ${fen}
 Derniers coups : ${history.slice(-10).map(toFrenchSan).join(' ') || '(début de partie)'}
 Ton plan précédent : ${plan || '(aucun)'}
 
-${perception(fen, LLM_COLOR)}
+${await perception(fen, LLM_COLOR)}
 
 Coups légaux : ${legal.join(' ')}`;
 
@@ -184,12 +193,17 @@ Coups légaux : ${legal.join(' ')}`;
 
     const after = new Chess(fen);
     after.move(played.san);
+    // Après mon coup : gains immédiats, suites forcées et préparations graves de l'adversaire,
+    // notés par Stockfish (seuil : ≥ 1,5 pion) pour éviter les fausses alertes du simple matériel.
+    const afterFen = after.fen();
     const danger = [
-      ...blunderCheck(after.fen(), LLM_COLOR),
-      ...forcingLines(after.fen(), oppColor, { minGain: 2 }).map((l) => ({ text: `ligne forcée ${describeForcing(l)}`, line: l })),
-      // Menaces en préparation graves seulement (≥ 3 points, pièce piégée, mat) pour limiter les alertes.
-      ...preparedThreats(after.fen(), LLM_COLOR, { max: 2 })
-        .filter((t) => t.severity >= 13 || t.threat.startsWith('piège'))
+      ...(await scored.tactics(afterFen, oppColor, blunderCheck(afterFen, LLM_COLOR))).filter((t) => (t.engineGain ?? 99) >= 1.5),
+      ...(await scored.forcing(afterFen, oppColor, forcingLines(afterFen, oppColor, { minGain: 2 })))
+        .filter((l) => l.mate || (l.engineGain ?? 99) >= 1.5)
+        .map((l) => ({ text: `ligne forcée ${describeForcing(l)}`, line: l })),
+      ...(await scored.prepared(afterFen, oppColor, preparedThreats(afterFen, LLM_COLOR, { max: 2 })
+        .filter((t) => t.severity >= 13 || t.threat.startsWith('piège'))))
+        .filter((t) => (t.engineGain ?? 99) >= 1.5)
         .map((t) => ({ text: `préparation adverse : ${t.text}` })),
     ];
     const ok = { san: played.san, plan: parsed.plan ?? '', type: parsed.type ?? '', raison: parsed.raison ?? '', illegal, events, pendingRecalls };

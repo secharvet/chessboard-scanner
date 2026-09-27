@@ -25,7 +25,7 @@ function material(c) {
  * @param {string} fen
  * @param {'w'|'b'} side  camp qui cherche à forcer (on le met au trait si besoin)
  * @param {{ maxPly?: number, maxNodes?: number, minGain?: number, max?: number }} [opts]
- * @returns {{ san: string, line: string, gain: number, mate: boolean }[]}  lignes forcées gagnantes
+ * @returns {{ san: string, pv: string[], line: string, gain: number, mate: boolean }[]}  lignes forcées gagnantes (pv en notation anglaise)
  */
 export function forcingLines(fen, side, opts = {}) {
   const maxPly = opts.maxPly ?? 8;
@@ -90,13 +90,15 @@ export function forcingLines(fen, side, opts = {}) {
     const mate = score > MATE - 50;
     const gain = mate ? MATE : score - base;
     if (mate || gain >= minGain) {
-      results.push({ san: toFrenchSan(m.san), line: [m.san, ...child.pv].map(toFrenchSan).join(' '), gain, mate });
+      results.push({ san: toFrenchSan(m.san), pv: [m.san, ...child.pv], line: [m.san, ...child.pv].map(toFrenchSan).join(' '), gain, mate });
     }
   }
   return results.sort((a, b) => b.gain - a.gain).slice(0, opts.max ?? 3);
 }
 
-/** Texte lisible d'une ligne forcée. @param {{ line: string, gain: number, mate: boolean }} l */
+/** Texte lisible d'une ligne forcée (note Stockfish si disponible). @param {{ line: string, gain: number, mate: boolean, engineGain?: number }} l */
 export function describeForcing(l) {
-  return l.mate ? `${l.line} : mat` : `${l.line} : gain d'environ ${l.gain} point(s)`;
+  if (l.mate) return `${l.line} : mat`;
+  if (l.engineGain != null) return `${l.line} : ${l.engineGain >= 0 ? 'gain' : 'perte'} d'environ ${Math.abs(l.engineGain).toFixed(1)} pion(s) (évaluation Stockfish de la position finale)`;
+  return `${l.line} : gain d'environ ${l.gain} point(s)`;
 }

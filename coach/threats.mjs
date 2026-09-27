@@ -17,7 +17,7 @@ import { toFrenchSan } from './notation.mjs';
 const THE = { p: 'le pion', n: 'le cavalier', b: 'le fou', r: 'la tour', q: 'la dame', k: 'le roi' };
 
 /**
- * @typedef {{ severity: number, san: string, text: string }} Tactic
+ * @typedef {{ severity: number, san: string, sanEn: string, text: string }} Tactic
  */
 
 /**
@@ -49,10 +49,11 @@ export function scanTactics(fen, side, max = 6) {
     const after = new Chess(start);
     after.move(m.san);
     const san = toFrenchSan(m.san);
+    const sanEn = m.san;
     const afterFen = after.fen();
 
     if (after.isCheckmate()) {
-      out.push({ severity: 100, san, text: `${san} est mat` });
+      out.push({ severity: 100, san, sanEn, text: `${san} est mat` });
       continue;
     }
 
@@ -70,6 +71,7 @@ export function scanTactics(fen, side, max = 6) {
         out.push({
           severity: 10 + gain,
           san,
+          sanEn,
           text: `${san} prend ${THE[m.captured]} en ${m.to}${defended ? '' : ' (non défendu)'} : gain d'environ ${gain} point(s)`,
         });
       }
@@ -84,14 +86,14 @@ export function scanTactics(fen, side, max = 6) {
         const check = san.includes('+');
         // Fourchette illusoire si la pièce se fait prendre (même en donnant échec : la prise pare l'échec).
         if (movedHangs) continue;
-        out.push({ severity: check ? 9 : 8, san, text: `${san} : fourchette sur ${t.params.targets}${check ? ' avec échec' : ''}` });
+        out.push({ severity: check ? 9 : 8, san, sanEn, text: `${san} : fourchette sur ${t.params.targets}${check ? ' avec échec' : ''}` });
       }
       if (t.id === 'ENFILADE' && t.params.color === side && t.params.square === m.to && !movedHangs) {
-        out.push({ severity: 8, san, text: `${san} : enfilade (${t.params.front} puis ${t.params.back})` });
+        out.push({ severity: 8, san, sanEn, text: `${san} : enfilade (${t.params.front} puis ${t.params.back})` });
       }
       // Clouer un simple pion n'est pas une occasion tactique.
       if ((t.id === 'CLOUAGE' || t.id === 'CLOUAGE_RELATIF') && t.params.color === opp && t.params.by === m.to && !movedHangs && t.params.type !== 'p') {
-        out.push({ severity: t.id === 'CLOUAGE' ? 6 : 5, san, text: `${san} : cloue la pièce en ${t.params.square}` });
+        out.push({ severity: t.id === 'CLOUAGE' ? 6 : 5, san, sanEn, text: `${san} : cloue la pièce en ${t.params.square}` });
       }
     }
 
@@ -105,6 +107,7 @@ export function scanTactics(fen, side, max = 6) {
         out.push({
           severity: target.type === 'k' ? 9 : 8,
           san,
+          sanEn,
           text: `${san} : ${target.type === 'k' ? 'échec à la découverte' : `attaque à la découverte sur ${THE[target.type]} en ${target.square}`}`,
         });
       }
