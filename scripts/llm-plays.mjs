@@ -9,6 +9,7 @@
  *   --stop-before 20                 arrêter la partie à la première gaffe avant ce coup
  *   --no-memory                      sans le carnet de leçons (comparaison)
  *   --material-only                  nos lignes notées au matériel seulement (sans l'évaluation Stockfish)
+ *   --style attaquant|prudent        consigne de style ; le style réellement joué est mesuré (indice tranchant ↔ sûr)
  *   --think auto|on|off|low|high     réflexion du LLM ; auto (défaut) : aucune au calme, low en position
  *                                    critique, high après une alerte ou un veto
  *   --no-review                      sans analyse d'après-partie (le carnet n'apprend rien)
@@ -24,7 +25,7 @@
 
 import { spawn } from 'node:child_process';
 import { createInterface } from 'node:readline';
-import { appendFileSync, mkdirSync, writeFileSync } from 'node:fs';
+import { appendFileSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { Chess } from 'chess.js';
 import { loadEnv } from '../coach/env.mjs';
 import { complete, llmConfig } from '../coach/llm.mjs';
@@ -39,6 +40,9 @@ import { findManeuvers } from '../coach/maneuvers.mjs';
 import { preparedThreats } from '../coach/prep-threats.mjs';
 import { scoreForcingLines, scorePrepared, scoreTactics } from '../coach/engine-eval.mjs';
 import { diagnoseMistake } from '../coach/diagnose.mjs';
+import { aggregate, profileGame } from '../coach/profile.mjs';
+import { axisIndex } from '../coach/portrait.mjs';
+import { readdirSync } from 'node:fs';
 import { loadLessons, moveTags, recall, remindsOf, situationTags, threatTags } from '../coach/memory.mjs';
 import { learnFromMistake, markRecall } from '../coach/review.mjs';
 
@@ -56,6 +60,11 @@ const STOP_BEFORE = Number(opt('--stop-before', 0));
 const VETO_CP = 200;
 const USE_MEMORY = !args.includes('--no-memory');
 const THINK = opt('--think', 'auto');
+const STYLE = opt('--style', null);
+const STYLES = {
+  attaquant: "STYLE IMPOSÉ : tu joues comme un attaquant (Tal, Shirov). Tu cherches l'initiative, les menaces et l'attaque du roi, tu acceptes les complications et les sacrifices corrects. Entre deux coups de valeur proche, choisis le plus actif et le plus tranchant. La sécurité (menaces graves, anti-gaffe) passe toujours avant.",
+  prudent: "STYLE IMPOSÉ : tu joues comme un joueur prudent (Karpov, Andersson). Sécurité d'abord : pas de complications inutiles, tu limites les options tactiques de l'adversaire, tu améliores lentement tes pièces et tu échanges quand ça simplifie. Entre deux coups de valeur proche, choisis le plus sûr.",
+};
 const ENGINE_SCORING = !args.includes('--material-only');
 /** Nos lignes (calcul forcé, scanner, préparations) notées par Stockfish (profondeur 10) si activé. */
 const scored = {
@@ -165,7 +174,8 @@ Coups légaux : ${legal.join(' ')}`;
     const think = THINK === 'auto' ? (afterVeto ? 'high' : attempt > 0 || critical ? 'low' : 'none')
       : THINK === 'off' ? 'none' : THINK === 'on' ? true : THINK;
     if (think === 'none') fastCalls++; else thinkCalls++;
-    const raw = await complete({ system: SYSTEM, user: lastError ? `${user}\n\n${lastError}` : user }, cfg, { think });
+    const system = STYLE && STYLES[STYLE] ? `${SYSTEM}\n\n${STYLES[STYLE]}` : SYSTEM;
+    const raw = await complete({ system, user: lastError ? `${user}\n\n${lastError}` : user }, cfg, { think });
     let parsed;
     try {
       parsed = JSON.parse(raw.match(/\{[\s\S]*\}/)?.[0] ?? '');
@@ -304,6 +314,7 @@ let plan = '';
 let planChanges = 0;
 let warnings = 0;
 let sacrificesOk = 0;
+let styleIndex = null;
 const vetoes = [];
 const stamp = Date.now();
 mkdirSync('reports', { recursive: true });
@@ -395,6 +406,13 @@ if (REVIEW) {
     }
   }
 }
+// Style réellement joué (mêmes traits que la validation sur les grands maîtres).
+try {
+  const played = aggregate([await profileGame(chess.history(), LLM_COLOR)]);
+  const refs = readdirSync('reports').filter((f) => /^profil-[A-Z].*\.json$/.test(f))
+    .map((f) => JSON.parse(readFileSync(`reports/${f}`, 'utf8')).agg);
+  if (refs.length >= 2) styleIndex = axisIndex(played, refs);
+} catch { /* pas de référence disponible */ }
 writeReport(coherence, finalEval);
 
 function writeReport(coherence, finalEval = null) {
@@ -413,6 +431,7 @@ function writeReport(coherence, finalEval = null) {
     `- Types de coups : plan ${log.filter((x) => x.type === 'plan').length}, parade ${log.filter((x) => x.type === 'parade').length}, tactique ${log.filter((x) => x.type === 'tactique').length}`,
     `- Réponses illégales : ${illegal} ; changements de plan : ${planChanges} ; réflexion : ${THINK} (appels avec réflexion : ${thinkCalls}, rapides : ${fastCalls})`,
     coherence ? `- Cohérence stratégique (relecteur) : **${coherence.note ?? '?'}/10**` : '',
+    `- Style : ${STYLE ?? 'libre'} ; indice tranchant ↔ sûr réellement joué : ${typeof styleIndex === 'number' ? styleIndex.toFixed(2) : '—'} (0 = moyenne de 8 GM en parties lentes)`,
     '', ...(coherence?.points_forts ?? []).map((x) => `- ✅ ${x}`), ...(coherence?.points_faibles ?? []).map((x) => `- ⚠ ${x}`),
     '', '## Gaffes voulues bloquées par l\'arbitre', '',
     ...(vetoes.length ? vetoes.map((v) => `- coup ${v.n} : ${v.san} — ${v.verdict} — justification : ${v.raison}`) : ['- aucune']),
