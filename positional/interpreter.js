@@ -90,6 +90,9 @@ const PRIORITY = {
 
 // ── Rédaction ──
 
+/** Nom des pièces (masculin, pour « cavalier noir cloué »). */
+const PIECE_FR = { p: 'Pion', n: 'Cavalier', b: 'Fou', r: 'Tour', q: 'Dame', k: 'Roi' };
+
 /** @param {string} c */
 function colorLabel(c) {
   return c === 'w' ? 'blancs' : 'noirs';
@@ -128,7 +131,7 @@ export function renderToken(t) {
         : `Roques opposés.`;
 
     case 'CLOUAGE_RELATIF':
-      return `Clouage relatif : la pièce ${colorLabel(/** @type {string} */ (p.color))} en ${p.square} (${p.type}) masque une pièce plus chère en ${p.behind} face à la pièce en ${p.by}.`;
+      return `Clouage relatif : le ${(PIECE_FR[/** @type {string} */ (p.type)] ?? 'pièce').toLowerCase()} ${p.color === 'w' ? 'blanc' : 'noir'} en ${p.square} est cloué par la pièce ${p.color === 'w' ? 'noire' : 'blanche'} en ${p.by} : s'il bouge, la pièce plus chère en ${p.behind} est prise.`;
 
     case 'ENFILADE':
       return `Enfilade pour les ${colorLabel(/** @type {string} */ (p.color))} : la pièce en ${p.square} attaque ${p.front}, qui en bougeant découvrira ${p.back}.`;
@@ -262,8 +265,12 @@ export function renderToken(t) {
     case 'PIECE_MENACEE':
       return `Pièce ${colorLabel(/** @type {string} */ (p.color))} en prise en ${p.square} (${p.type}${p.defended === false ? ', non défendue' : ', attaquée par une pièce de moindre valeur'}).`;
 
-    case 'CLOUAGE':
-      return `Clouage ${colorLabel(/** @type {string} */ (p.color))} en ${p.square} (${p.type}).`;
+    case 'CLOUAGE': {
+      // Sans ambiguïté : QUI est cloué, et PAR QUI (« clouage noirs » se lisait « clouage des Noirs »).
+      const pinned = /** @type {string} */ (p.color);
+      const by = p.by ? ` par la pièce ${pinned === 'w' ? 'noire' : 'blanche'} en ${p.by}` : '';
+      return `${PIECE_FR[/** @type {string} */ (p.type)] ?? 'Pièce'} ${pinned === 'w' ? 'blanc' : 'noir'} en ${p.square} cloué contre son roi${by} (il ne peut pas bouger).`;
+    }
 
     case 'FOURCHETTE':
       return `Fourchette ${colorLabel(/** @type {string} */ (p.color))} : la pièce en ${p.square} (${p.type}) attaque ${p.targets ?? 'deux cibles'}.`;
