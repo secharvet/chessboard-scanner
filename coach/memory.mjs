@@ -62,6 +62,7 @@ export function situationTags(fen, side) {
 }
 
 const PIECE = { p: 'pion', n: 'cavalier', b: 'fou', r: 'tour', q: 'dame', k: 'roi' };
+const VALUE = { p: 1, n: 3, b: 3, r: 5, q: 9, k: 100 };
 
 /** Tags décrivant le coup joué (pas les cases : le TYPE de coup). */
 export function moveTags(fen, san) {
@@ -72,6 +73,11 @@ export function moveTags(fen, san) {
   const tags = new Set([`piece:${PIECE[m.piece]}`]);
   if (/[+#]/.test(m.san)) tags.add('echec');
   if (m.captured) tags.add(m.captured === m.piece ? 'echange' : 'prise');
+  // Prise perdante : une pièce plus chère prend sur une case que l'adversaire défend.
+  if (m.captured && VALUE[m.piece] > VALUE[m.captured]) {
+    const defenders = c.moves({ verbose: true }).filter((x) => x.to === m.to && x.captured);
+    if (defenders.length) tags.add('prise_perdante');
+  }
   if (m.san.startsWith('O-O')) tags.add('roque');
   const up = side === 'w' ? 1 : -1;
   const dr = (Number(m.to[1]) - Number(m.from[1])) * up;
@@ -94,6 +100,20 @@ export function moveTags(fen, san) {
   const still = new Set(severe(c.fen()).map((t) => t.san));
   const ignored = before.filter((t) => still.has(t.san));
   if (ignored.length) tags.add(ignored.some((t) => t.severity >= 100) ? 'ignore_menace_mat' : 'ignore_menace');
+  return [...tags];
+}
+
+/** Types de menaces dont l'adversaire disposerait après un coup (pour vérifier qu'une punition est possible). */
+export function threatTags(fenAfter, opp) {
+  const tags = new Set();
+  for (const t of scanTactics(fenAfter, opp, 6)) {
+    if (t.severity >= 100) tags.add('mat');
+    else if (t.severity >= 12) tags.add('gain');
+    if (/fourchette/.test(t.text)) tags.add('fourchette');
+    if (/découverte/.test(t.text)) tags.add('decouverte');
+    if (/cloue/.test(t.text)) tags.add('clouage');
+    if (/enfilade/.test(t.text)) tags.add('enfilade');
+  }
   return [...tags];
 }
 
@@ -133,7 +153,7 @@ export function saveLessons(lessons, path = MEMORY_PATH) {
 }
 
 /** Poids d'un tag : la NATURE du coup compte plus que la pièce ou la direction. */
-const weight = (t) => (t.startsWith('piece:') || t === 'avancee' || t === 'retrait' ? 0.25 : 1);
+const weight = (t) => (t.startsWith('piece:') || ['avancee', 'retrait', 'prise', 'echange'].includes(t) ? 0.25 : 1);
 
 /** Recouvrement pondéré (Jaccard) de deux ensembles de tags. */
 const overlap = (a, b) => {
@@ -171,10 +191,16 @@ export function recall(lessons, { situation, move = null }, { k = 3, min = 0.25 
 }
 
 /** Leçon suffisamment proche pour déclencher « attends, ça me rappelle… » sur un coup envisagé. */
-export function remindsOf(lessons, situation, move) {
-  // Il faut que la NATURE du coup corresponde (pas seulement la pièce ou la situation).
+export function remindsOf(lessons, situation, move, threatsAfter = null) {
+  // Il faut que la NATURE du coup corresponde (pas seulement la pièce ou la situation)…
   const candidates = recall(lessons, { situation, move }, { k: 5, min: 0.3 })
-    .filter((r) => sharesNature(r.lesson.move, move) && overlap(r.lesson.move, move) >= 0.33);
+    .filter((r) => sharesNature(r.lesson.move, move) && overlap(r.lesson.move, move) >= 0.33)
+    // …et que la punition d'origine soit possible ici (même type de menace après le coup).
+    .filter((r) => {
+      const punish = (r.lesson.punishment ?? []).filter((t) => t !== 'echec');
+      if (!threatsAfter || !punish.length) return true;
+      return punish.some((t) => threatsAfter.includes(t) || (t === 'coup_intermediaire' && threatsAfter.length > 0));
+    });
   return candidates[0] ?? null;
 }
 

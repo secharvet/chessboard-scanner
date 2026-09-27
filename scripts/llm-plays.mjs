@@ -39,7 +39,7 @@ import { findManeuvers } from '../coach/maneuvers.mjs';
 import { preparedThreats } from '../coach/prep-threats.mjs';
 import { scoreForcingLines, scorePrepared, scoreTactics } from '../coach/engine-eval.mjs';
 import { diagnoseMistake } from '../coach/diagnose.mjs';
-import { loadLessons, moveTags, recall, remindsOf, situationTags } from '../coach/memory.mjs';
+import { loadLessons, moveTags, recall, remindsOf, situationTags, threatTags } from '../coach/memory.mjs';
 import { learnFromMistake, markRecall } from '../coach/review.mjs';
 
 loadEnv();
@@ -210,7 +210,7 @@ Coups légaux : ${legal.join(' ')}`;
 
     // « Attends, ça me rappelle… » : le coup ressemble-t-il à une erreur passée ?
     const reminder = lessons.length && !asked.has(played.san)
-      ? remindsOf(lessons, situationTags(fen, LLM_COLOR), moveTags(fen, played.san)) : null;
+      ? remindsOf(lessons, situationTags(fen, LLM_COLOR), moveTags(fen, played.san), threatTags(afterFen, oppColor)) : null;
     if (reminder) {
       const l = reminder.lesson;
       danger.push({ text: `SOUVENIR — ça te rappelle une erreur passée : « ${l.titre} » : ${l.lecon}` });

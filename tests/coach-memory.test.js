@@ -44,3 +44,26 @@ describe('Rappel par situation semblable (pas la même position)', () => {
     assert.equal(recall([lesson], { situation: sit })[0]?.lesson.id, 'L1');
   });
 });
+
+import { threatTags } from '../coach/memory.mjs';
+
+describe('Souvenirs resserrés', () => {
+  it('prise perdante : pièce plus chère qui prend sur une case défendue', () => {
+    // Fc4xd5, le pion d5 étant défendu par la dame d8.
+    const fen = 'rnbqkbnr/pp3ppp/4p3/3p4/2B5/8/PPPP1PPP/RNBQK1NR w KQkq - 0 5';
+    assert.ok(moveTags(fen, 'Bxd5').includes('prise_perdante'));
+    // Prise d'un pion non défendu : pas « perdante ».
+    assert.ok(!moveTags('rnbqkbnr/pp3ppp/4p3/8/2Bp4/8/PPPP1PPP/RNBQK1NR w KQkq - 0 5', 'Bd5').includes('prise_perdante'));
+  });
+  it('pas de souvenir si la punition d’origine est impossible après le coup', () => {
+    const l = { id: 'X', titre: 't', lecon: 'l', signal: 's', count: 1, situation: ['phase:milieu'], move: ['prise_perdante', 'piece:fou'], punishment: ['gain'] };
+    const sit = ['phase:milieu'];
+    const mv = ['prise_perdante', 'piece:fou'];
+    assert.equal(remindsOf([l], sit, mv, ['gain'])?.lesson.id, 'X');
+    assert.equal(remindsOf([l], sit, mv, []), null);
+  });
+  it('threatTags voit un gain de matériel (Txd5 prend la dame non défendue)', () => {
+    assert.ok(threatTags('4k3/8/8/3q4/8/8/8/3RK3 w - - 0 1', 'w').includes('gain'));
+    assert.deepEqual(threatTags('rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1', 'w'), []);
+  });
+});
