@@ -947,4 +947,29 @@ code {
   .card__hint {
     display: none;
   }
+
+  /* Échiquier du lecteur : le conteneur n'a pas de hauteur en colonne ; on le dimensionne
+     par la largeur (carré), sans dépasser la hauteur visible. */
+  .board-wrap {
+    flex: 0 0 auto;
+    width: min(100%, calc(100svh - 8rem));
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    container-type: inline-size;
+  }
+
+  .board-wrap .board {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+  }
+
+  /* Télécommande au-dessus de l'échiquier (et non plus par-dessus la 8e rangée). */
+  .board-remote {
+    position: static;
+    align-self: center;
+    margin-bottom: 6px;
+  }
 }

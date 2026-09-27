@@ -729,3 +729,68 @@ button.engine-pipeline__head:hover {
   color: var(--text-muted, #888);
   margin-right: 2px;
 }
+
+/* ── Mobile et écrans étroits : une seule colonne, échiquier pleine largeur ── */
+@media (max-width: 900px) {
+  .layout--play {
+    grid-template-columns: minmax(0, 1fr);
+    min-height: 0;
+    padding: 0 4px 8px;
+    gap: 6px;
+    /* L'échiquier prend toute la largeur, sans dépasser la hauteur visible. */
+    --board-max: min(100%, calc(100svh - 5rem));
+  }
+
+  .layout--play .board-wrap {
+    width: min(100%, var(--board-max));
+  }
+
+  .layout--play .right {
+    min-height: 0;
+    overflow: visible;
+  }
+
+  /* Barre du haut compacte : titre au-dessus, sélecteurs en grille pleine largeur. */
+  .topbar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 6px 8px;
+    gap: 6px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .brand__title {
+    font-size: 1.05rem;
+  }
+
+  .topbar__pickers {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+    width: 100%;
+  }
+
+  .topbar__picker {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+  }
+
+  .topbar__picker-label {
+    font-size: 0.72rem;
+  }
+
+  .topbar__pickers select,
+  .topbar__pickers button {
+    width: 100%;
+    min-width: 0;
+    font-size: 0.85rem;
+  }
+}
