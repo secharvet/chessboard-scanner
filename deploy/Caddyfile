@@ -2,6 +2,10 @@
 # Domaine provisoire sslip.io ; remplacer par le vrai domaine le moment venu.
 162-19-25-49.sslip.io {
 	encode zstd gzip
+	# Accès réservé : un seul compte (mot de passe haché en bcrypt, jamais en clair).
+	basicauth {
+		Orion <HACHAGE — caddy hash-password --plaintext …>
+	}
 	reverse_proxy 127.0.0.1:6400 {
 		header_up X-Real-IP {remote_host}
 	}

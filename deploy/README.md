@@ -9,6 +9,7 @@
 | Port 8000 (API du coach) | **fermé depuis l'extérieur** : `iptables -A INPUT -p tcp --dport 8000 -i lo -j ACCEPT` puis `-j DROP`, sauvegardé par `netfilter-persistent` |
 | Abus / coûts | limite de requêtes par visiteur (`COACH_RATE_MAX`, `COACH_RATE_WINDOW_S`) et d'analyses simultanées (`COACH_MAX_CONCURRENT`) |
 | **HTTPS** | **Caddy** (`/etc/caddy/Caddyfile`, copie : `deploy/Caddyfile`), certificat Let's Encrypt automatique, redirection http → https ; adresse provisoire **https://162-19-25-49.sslip.io** |
+| **Accès** | **un seul compte** (authentification HTTP de Caddy, par-dessus le HTTPS) : tout le site et l'API sont protégés ; mot de passe haché en bcrypt dans `/etc/caddy/Caddyfile` (jamais dans le dépôt). Changer le mot de passe : `caddy hash-password --plaintext 'nouveau'`, remplacer le hachage, `sudo systemctl reload caddy` |
 | Port 6400 (site) | **fermé depuis l'extérieur** (même règle que le 8000) : tout passe par Caddy ; nginx reprend l'adresse du visiteur (`real_ip_header X-Real-IP`) |
 
 Reste à faire :
