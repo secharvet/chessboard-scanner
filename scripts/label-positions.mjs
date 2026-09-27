@@ -94,7 +94,16 @@ function scanLine(fen, pv) {
     let ply = -1;
     if (fresh.length && levers[color].length) {
       const opened = timeline.findIndex((snap) => [...openFiles(snap.facts, color)].some((x) => fresh.includes(x)));
-      if (levers[color][0] <= opened) ply = opened;
+      // La rupture doit TRANSFORMER la position, pas liquider une tension : une tour du camp occupe la
+      // colonne ouverte à la fin, ou la structure change (faiblesse adverse ou pion passé nouveaux).
+      const opp = color === 'w' ? 'b' : 'w';
+      const rookUses = end.board.board().flat().some((p) => p && p.type === 'r' && p.color === color && fresh.includes(p.square[0]));
+      const key = (t) => `${t.id}|${t.params.color}|${String(t.params.square ?? '')[0]}`;
+      const had = new Set(start.facts.map(key));
+      const structural = end.facts.some((t) => !had.has(key(t))
+        && ((['PION_ISOLE', 'PION_ARRIERE', 'PION_FAIBLE'].includes(t.id) && t.params.color === opp)
+          || (t.id === 'PION_PASSE' && t.params.color === color)));
+      if (levers[color][0] <= opened && (rookUses || structural)) ply = opened;
     }
     out[`rupture_${color}`] = ply;
   }
