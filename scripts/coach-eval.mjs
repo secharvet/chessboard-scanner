@@ -94,7 +94,7 @@ const results = await pool(jobs, concurrency, async ({ pos, mode }) => {
     console.log(
       `#${pos.index} ${mode.padEnd(8)} thèmes ${hits.filter((h) => h.hit).length}/${hits.length}` +
       `  hors contexte ${r.ungrounded.length}  citations KO ${r.problems?.length ?? 0}${r.revised ? ' (réécrit)' : ''}` +
-      (verdict ? `  note ${verdict.note ?? '?'}/10, graves ${graves}` : '') +
+      (verdict ? `  note ${verdict.note ?? '?'}/10, profondeur ${verdict.profondeur ?? '?'}/10, graves ${graves}` : '') +
       `  ${((Date.now() - t0) / 1000).toFixed(1)} s  — ${pos.name}`,
     );
     return { pos, mode, p, ...r, hits, verdict };
@@ -114,16 +114,18 @@ const summary = modes.map((mode) => {
   const clean = rs.filter((r) => r.ungrounded.length === 0).length;
   const notes = rs.map((r) => r.verdict?.note).filter((x) => Number.isFinite(x));
   const avg = notes.length ? (notes.reduce((a, b) => a + b, 0) / notes.length).toFixed(1) : '—';
+  const deps = rs.map((r) => r.verdict?.profondeur).filter((x) => Number.isFinite(x));
+  const depth = deps.length ? (deps.reduce((a, b) => a + b, 0) / deps.length).toFixed(1) : '—';
   const graves = rs.reduce((a, r) => a + (r.verdict?.erreurs.filter((e) => e.gravite === 'grave').length ?? 0), 0);
   const citeKo = rs.reduce((a, r) => a + (r.problems?.length ?? 0), 0);
-  return { mode, hit, total, ung, clean, n: rs.length, avg, graves, citeKo };
+  return { mode, hit, total, ung, clean, n: rs.length, avg, depth, graves, citeKo };
 });
 
 const lines = [`# Évaluation du coach — ${new Date().toISOString()}`, '', `Modèle : ${cfg.provider} / ${cfg.model}${cfg.effort ? ` (effort ${cfg.effort})` : ''}`];
 if (useJudge) lines.push(`Relecteur : ${jcfg.provider} / ${jcfg.model}${jcfg.effort ? ` (effort ${jcfg.effort})` : ''}`);
-lines.push('', '| Mode | Thèmes trouvés | Coups hors contexte | Réponses sans coup inventé | Citations KO restantes | Note relecteur | Erreurs graves |', '|---|---|---|---|---|---|---|');
+lines.push('', '| Mode | Thèmes trouvés | Coups hors contexte | Réponses sans coup inventé | Citations KO restantes | Note relecteur | Profondeur | Erreurs graves |', '|---|---|---|---|---|---|---|---|');
 for (const s of summary) {
-  lines.push(`| ${s.mode} | ${s.hit}/${s.total} (${Math.round((100 * s.hit) / s.total)} %) | ${s.ung} | ${s.clean}/${s.n} | ${s.citeKo} | ${s.avg} | ${s.graves} |`);
+  lines.push(`| ${s.mode} | ${s.hit}/${s.total} (${Math.round((100 * s.hit) / s.total)} %) | ${s.ung} | ${s.clean}/${s.n} | ${s.citeKo} | ${s.avg} | ${s.depth} | ${s.graves} |`);
 }
 for (const pos of selected) {
   lines.push('', `## ${pos.index}. ${pos.name}`, '', `FEN : \`${prepare(pos).fen}\``);
@@ -132,7 +134,7 @@ for (const pos of selected) {
     lines.push('', `### ${r.mode}`, '', `Thèmes : ${found}`, `Coups hors contexte : ${r.ungrounded.join(', ') || 'aucun'}`);
     if (r.problems?.length) lines.push('', 'Citations KO :', ...r.problems.map((x) => `- ${x}`));
     if (r.verdict) {
-      lines.push('', `Relecteur : ${r.verdict.note ?? '?'}/10`);
+      lines.push('', `Relecteur : ${r.verdict.note ?? '?'}/10 (profondeur ${r.verdict.profondeur ?? '?'}/10)`);
       for (const e of r.verdict.erreurs) lines.push(`- **${e.gravite}** — « ${e.phrase} » : ${e.raison}`);
     }
     lines.push('', r.advice);

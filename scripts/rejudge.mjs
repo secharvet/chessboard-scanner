@@ -47,12 +47,14 @@ await Promise.all(Array.from({ length: jobs }, async () => {
     const it = items[k];
     const v = await judgeAnswer(it.context, it.advice, cfg).catch((e) => ({ erreurs: [], note: null, raw: e.message }));
     const graves = v.erreurs.filter((e) => e.gravite === 'grave');
-    results[k] = { ...it, note: v.note, graves };
-    console.log(`${it.name} : ${v.note ?? '?'}/10 (ancien relecteur ${it.oldNote}/10), graves ${graves.length}`);
+    results[k] = { ...it, note: v.note, depth: v.profondeur, graves };
+    console.log(`${it.name} : ${v.note ?? '?'}/10, profondeur ${v.profondeur ?? '?'}/10 (ancien relecteur ${it.oldNote}/10), graves ${graves.length}`);
     for (const g of graves) console.log(`   grave — « ${g.phrase} » : ${String(g.raison).slice(0, 220)}`);
   }
 }));
 const notes = results.map((r) => r.note).filter(Number.isFinite);
 const old = results.map((r) => r.oldNote).filter(Number.isFinite);
 const avg = (a) => (a.length ? (a.reduce((x, y) => x + y, 0) / a.length).toFixed(2) : '—');
-console.log(`\nMoyenne : ${avg(notes)}/10 (ancien relecteur : ${avg(old)}/10) ; réponses avec erreur grave : ${results.filter((r) => r.graves.length).length}/${results.length}`);
+const depths = results.map((r) => r.depth).filter(Number.isFinite);
+console.log(`\nProfondeur moyenne : ${avg(depths)}/10`);
+console.log(`Moyenne : ${avg(notes)}/10 (ancien relecteur : ${avg(old)}/10) ; réponses avec erreur grave : ${results.filter((r) => r.graves.length).length}/${results.length}`);

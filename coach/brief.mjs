@@ -195,6 +195,16 @@ export function buildBrief(data) {
   }
   items.push({ ...reason, kind: 'reason', type: reason.kind });
 
+  // Position calme : un PLAN en 2-3 étapes, construit par le code (manœuvre, colonne, cible, structure).
+  if (['develop', 'center', 'castle', 'plan', 'basics', 'best'].includes(reason.kind)) {
+    const steps3 = planSteps(data, me, opp, pieces, items);
+    if (steps3.length) {
+      items.push({ kind: 'plan_steps', steps: steps3 });
+      const [s1, s2, s3] = steps3;
+      sentences.push(`Ton plan : ${s1}${s2 ? `, ensuite ${s2}` : ''}${s3 ? `, et ${s3}` : ''}.`);
+    }
+  }
+
   // Coups qui se valent (écart ≤ 0,3).
   const close = data.candidates.slice(1).filter((c) => c.evalPlayer.type === 'cp' && c0.evalPlayer.type === 'cp'
     && c0.evalPlayer.value - c.evalPlayer.value <= 30).map((c) => c.move);
@@ -220,6 +230,56 @@ export function buildBrief(data) {
     sentences.push(`À surveiller : ${txt}.`);
   }
   return finish(items, sentences, pieces, data);
+}
+
+/**
+ * Étapes d'un plan, du plus concret au plus général. Tout est typé ou écrit par nous :
+ *   manœuvre sûre (de préférence amorcée par une ligne du moteur) → colonne pour une tour →
+ *   cible (faiblesse adverse) → idée de la structure de pions.
+ */
+function planSteps(data, me, opp, pieces, items) {
+  const out = [];
+  const board = new Chess(data.fen);
+  const inLines = (m) => data.candidates.some((c) => (c.pvUci ?? []).some((u) => u.slice(0, 4) === m.path[0] + m.path[1]));
+  const man = [...(data.maneuvers ?? [])].sort((a, b) => Number(inLines(b)) - Number(inLines(a)))[0];
+  let rookPlanned = false;
+  if (man) {
+    const type = board.get(man.from)?.type;
+    if (type) {
+      pieces.add(`${type}|me|${man.from}`);
+      rookPlanned = type === 'r';
+      out.push(`amène ${FEM[type] ? 'ta' : 'ton'} ${NAME[type]} de ${man.from} vers ${man.to} (${man.why}), par ${man.path.join('-')}`);
+    }
+  }
+  const facts = buildAllFacts(data.fen);
+  if (!rookPlanned && board.board().flat().some((p) => p && p.type === 'r' && p.color === me)) {
+    const file = facts.find((t) => (t.id === 'COLONNE_OUVERTE' || (t.id === 'COLONNE_SEMI_OUVERTE' && t.params.color === me))
+      && !board.board().flat().some((p) => p && p.type === 'r' && p.color === me && p.square[0] === String(t.params.file)));
+    if (file) out.push(`place une tour sur la colonne ${file.params.file} ${file.id === 'COLONNE_OUVERTE' ? 'ouverte' : 'semi-ouverte'}`);
+  }
+  const TARGET = { PION_FAIBLE: 'faible', PION_ISOLE: 'isolé', PION_ARRIERE: 'arriéré' };
+  const target = facts.find((t) => TARGET[t.id] && t.params.color === opp);
+  if (target) {
+    pieces.add(`p|opp|${target.params.square}`);
+    out.push(`vise le pion ${TARGET[target.id]} adverse en ${target.params.square}`);
+  } else if (facts.some((t) => t.id === 'ROI_AU_CENTRE' && t.params.color === opp)) {
+    out.push('vise son roi resté au centre en ouvrant le jeu');
+  }
+  // Finale : le roi devient une pièce d'attaque, et une majorité de pions crée un pion passé.
+  if (data.phase === 'finale') {
+    const king = board.board().flat().find((p) => p && p.type === 'k' && p.color === me);
+    const central = king && 'cdef'.includes(king.square[0]) && '3456'.includes(king.square[1]);
+    if (king && !central) { pieces.add(`k|me|${king.square}`); out.push(`active ton roi (en ${king.square}) vers le centre`); }
+    const maj = facts.find((t) => (t.id === 'MAJORITE_AILE_DAME' || t.id === 'MAJORITE_AILE_ROI') && t.params.color === me);
+    if (maj) out.push(`avance ta majorité de pions à l'aile ${maj.id === 'MAJORITE_AILE_DAME' ? 'dame' : 'roi'} pour créer un pion passé`);
+  }
+  const st = data.structures?.[0];
+  const mine = st?.plans?.find((x) => /\((?:toi|you)\)/.test(String(x)));
+  if (out.length < 3 && mine && !items.some((x) => x.kind === 'structure')) {
+    const idea = String(mine).replace(/^[^:]*:\s*/, '').split(/(?<=\.)\s/)[0].replace(/\.$/, '');
+    out.push(`garde en tête l'idée de la structure (${st.label.replace(/ — .*/, '')}) : ${lowerFirst(idea)}`);
+  }
+  return out.slice(0, 3);
 }
 
 function finish(items, sentences, pieces, data) {

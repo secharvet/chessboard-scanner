@@ -15,8 +15,9 @@ Ta tâche : repérer les erreurs de FOND dans l'explication.
 - recommandation qui ne correspond pas aux lignes du moteur.
 Datation des faits : « [Après la ligne N, au bout de « X »] » décrit la position juste après la séquence X (qui peut s'arrêter avant la fin de la ligne affichée), pas après toute la ligne : ne compte pas comme une erreur un fait cité avec cette datation.
 Ignore le style, la longueur et les formulations maladroites mais justes.
-Réponds UNIQUEMENT en JSON : {"erreurs":[{"phrase":"...","raison":"...","gravite":"grave|mineure"}],"note":0-10}
-La note mesure la justesse globale (10 = rien à redire).`;
+Réponds UNIQUEMENT en JSON : {"erreurs":[{"phrase":"...","raison":"...","gravite":"grave|mineure"}],"note":0-10,"profondeur":0-10}
+La note mesure la justesse globale (10 = rien à redire).
+La profondeur mesure, INDÉPENDAMMENT de la justesse, la valeur de coach pour un débutant : donne-t-il un vrai plan concret (quoi faire dans les prochains coups, avec quelles pièces, vers quelles cases ou cibles) et le pourquoi du coup conseillé, ou seulement une paraphrase prudente ? 10 = plan clair, concret et instructif ; 5 = raison du coup sans plan ; 0 = rien d'utile.`;
 
 export function judgeConfig(env = process.env) {
   return llmConfig({
@@ -42,7 +43,7 @@ export async function judgeAnswer(contextText, answer, cfg = judgeConfig()) {
   const json = raw.match(/\{[\s\S]*\}/)?.[0];
   try {
     const parsed = JSON.parse(json ?? '');
-    return { erreurs: Array.isArray(parsed.erreurs) ? parsed.erreurs : [], note: Number(parsed.note ?? NaN) };
+    return { erreurs: Array.isArray(parsed.erreurs) ? parsed.erreurs : [], note: Number(parsed.note ?? NaN), profondeur: Number(parsed.profondeur ?? NaN) };
   } catch {
     return { erreurs: [], note: null, raw };
   }
