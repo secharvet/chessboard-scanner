@@ -16,6 +16,9 @@ import { toFrenchSan } from './notation.mjs';
 import { STRUCTURES, OPPOSITE_CASTLING_PLAN } from '../positional/structures.js';
 import { buildBalance } from '../positional/balance.js';
 import { lineMotifs } from './motifs.mjs';
+import { preparedThreats } from './prep-threats.mjs';
+import { findManeuvers } from './maneuvers.mjs';
+import { scorePrepared } from './engine-eval.mjs';
 
 const PIECE_VALUE = { p: 1, n: 3, b: 3, r: 5, q: 9, k: 0 };
 
@@ -56,9 +59,15 @@ export async function buildCoachContext({ fen, side, moves = [], engine, depth =
   const allFacts = buildAllFacts(fen);
   const staticFacts = selectStaticFacts(allFacts);
   const balance = buildBalance(allFacts);
+  // Ce que l'adversaire prépare (un coup calme, puis la menace), noté par Stockfish ;
+  // manœuvres sûres vers les cases stratégiques (plans à plus long terme).
+  const opp = player === 'w' ? 'b' : 'w';
+  const prepared = await scorePrepared(engine, fen, opp, preparedThreats(fen, player, { max: 4 }), 1)
+    .catch(() => []);
+  const maneuvers = findManeuvers(fen, player, { max: 4 });
   const structures = describeStructures(allFacts, player);
 
-  const data = { fen, player, toMove, phase, candidates, threat, staticFacts, balance, structures, moves };
+  const data = { fen, player, toMove, phase, candidates, threat, staticFacts, balance, structures, prepared, maneuvers, moves };
   const rendered = renderContext(data);
   return { text: rendered.text, data: { ...data, facts: rendered.facts } };
 }
@@ -356,6 +365,16 @@ function renderContext(d) {
   } else {
     cite('Aucune menace immédiate significative détectée par le moteur.', 'M0');
   }
+
+  out.push('');
+  out.push("## Ce que l'adversaire prépare — [Position actuelle] (un coup calme de sa part, puis la menace, SI TU NE RÉAGIS PAS ; gains notés par Stockfish dans ce cas)");
+  if (d.prepared.length) d.prepared.forEach((t, i) => cite(`[Position actuelle] ${t.text}.`, `P${i + 1}`));
+  else out.push('- (rien de notable)');
+
+  out.push('');
+  out.push('## Manœuvres possibles — [Position actuelle] (itinéraires sûrs vers des cases stratégiques, plans à plus long terme)');
+  if (d.maneuvers.length) d.maneuvers.forEach((m, i) => cite(`[Position actuelle] ${m.text}.`, `K${i + 1}`));
+  else out.push('- (rien de notable)');
 
   out.push('');
   out.push('## Bilan des déséquilibres — [Position actuelle], AVANT tout coup des lignes');

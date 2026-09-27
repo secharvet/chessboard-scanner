@@ -22,6 +22,8 @@ Ce que tu dois faire :
 - Si le matériel change au bout de la ligne, ou s'il y a une menace, c'est la priorité : commence par là. Un mat annoncé dans une ligne ou une menace est un mat : ne l'édulcore pas en « perte de matériel ».
 - Si plusieurs candidats ont des évaluations proches (écart < 0.3), dis que plusieurs plans se valent et explique l'idée commune ou la différence.
 - Le « Bilan des déséquilibres » liste atouts et faiblesses des deux camps : un bon plan exploite un atout ou vise une faiblesse adverse. Choisis le ou les déséquilibres que les lignes du moteur exploitent vraiment.
+- « Ce que l'adversaire prépare » ([P…]) : ses IDÉES pour les coups suivants, dangereuses seulement si on les ignore. Présente-les comme « à surveiller » dans **Attention**, jamais comme une urgence ou une perte certaine, et ne cite pas leur chiffre Stockfish (il suppose qu'on ne réagit pas). Si la ligne du coup conseillé les neutralise, dis-le.
+- « Manœuvres possibles » ([K…]) : des itinéraires de pièces vers des cases stratégiques. Tu peux en citer une comme plan pour la suite, UNIQUEMENT si elle ne contredit pas le coup conseillé par le moteur ; jamais à la place de ce coup.
 - Hiérarchise : une ou deux idées maximum, pas un inventaire de tous les faits.
 - Parle simplement, comme à un élève. Les évaluations sont exprimées de son point de vue (« pour toi »).
 - Les coups sont déjà en notation française (R roi, D dame, T tour, F fou, C cavalier) : recopie-les exactement tels qu'ils apparaissent.

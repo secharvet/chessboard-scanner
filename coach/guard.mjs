@@ -25,6 +25,11 @@ export function findUngroundedMoves(advice, data) {
   };
   for (const c of data.candidates ?? []) addLine(c.pvSan);
   if (data.threat) addLine(data.threat.line);
+  // Idées de l'adversaire (menaces en préparation) : coups préparatoires et menaces citables.
+  for (const t of data.prepared ?? []) {
+    for (const p of t.preps ?? [t.prep]) if (p) allowed.add(norm(p));
+    if (t.threat) allowed.add(norm(t.threat));
+  }
   // Un coup légal immédiat cité sans être dans les lignes reste toléré (ex. « évite Dxb7 »).
   for (const m of new Chess(data.fen).moves()) allowed.add(norm(toFrenchSan(m)));
 
