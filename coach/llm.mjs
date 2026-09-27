@@ -8,8 +8,9 @@
  *   LLM_BASE_URL   pour un endpoint compatible OpenAI
  *   LLM_EFFORT     claude-cli : low | medium | high | max (optionnel)
  *
- * complete(prompt, cfg, { think: false }) désactive la réflexion quand le fournisseur le permet
- * (DeepSeek : thinking disabled ; ses paramètres d'effort et de budget sont ignorés).
+ * complete(prompt, cfg, { think }) règle la réflexion quand le fournisseur le permet :
+ *   think = false | 'none' → désactivée ; 'low' | 'high' | 'max' → niveau d'effort ; true → défaut du modèle.
+ * DeepSeek (doc « Thinking Mode ») : reasoning_effort ET thinking {type: enabled|disabled} ensemble.
  */
 
 import { spawn } from 'node:child_process';
@@ -43,7 +44,7 @@ export function llmConfig(env = process.env) {
 export async function complete(prompt, cfg = llmConfig(), opts = {}) {
   switch (cfg.provider) {
     case 'claude-cli':
-      return claudeCli(prompt, opts.think === false ? { ...cfg, effort: 'low' } : cfg);
+      return claudeCli(prompt, opts.think === false || opts.think === 'none' || opts.think === 'low' ? { ...cfg, effort: 'low' } : cfg);
     case 'anthropic':
       return anthropic(prompt, cfg);
     default:
@@ -105,11 +106,9 @@ async function openAiOnce({ system, user }, cfg, opts = {}) {
     headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${cfg.apiKey}` },
     body: JSON.stringify({
       model: cfg.model,
-      temperature: 0.3,
+      temperature: 0.3, // ignorée par DeepSeek en mode réflexion
       messages: [{ role: 'system', content: system }, { role: 'user', content: user }],
-      ...(opts.think === false && cfg.provider === 'deepseek' ? { thinking: { type: 'disabled' } } : {}),
-      // Groq / gpt-oss : effort de raisonnement réglable.
-      ...(cfg.provider === 'groq' && /gpt-oss/.test(cfg.model) ? { reasoning_effort: opts.think === false ? 'low' : 'medium' } : {}),
+      ...thinkingParams(cfg, opts.think),
     }),
   });
   const data = await res.json().catch(() => ({}));
@@ -124,6 +123,20 @@ async function openAiOnce({ system, user }, cfg, opts = {}) {
     throw err;
   }
   return String(data.choices?.[0]?.message?.content ?? '').trim();
+}
+
+/** Paramètres de réflexion propres au fournisseur. */
+function thinkingParams(cfg, think) {
+  const off = think === false || think === 'none';
+  const level = typeof think === 'string' && think !== 'none' ? think : null;
+  if (cfg.provider === 'deepseek') {
+    if (off) return { thinking: { type: 'disabled' } };
+    return level ? { thinking: { type: 'enabled' }, reasoning_effort: level } : {};
+  }
+  if (cfg.provider === 'groq' && /gpt-oss/.test(cfg.model)) {
+    return { reasoning_effort: off || level === 'low' ? 'low' : level === 'max' ? 'high' : 'medium' };
+  }
+  return {};
 }
 
 async function anthropic({ system, user }, cfg) {

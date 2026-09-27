@@ -8,7 +8,8 @@
  *   --referee stockfish|rules|none   arbitre des coups confirmés malgré une alerte (défaut : stockfish)
  *   --stop-before 20                 arrêter la partie à la première gaffe avant ce coup
  *   --no-memory                      sans le carnet de leçons (comparaison)
- *   --think auto|on|off              réflexion du LLM : auto = seulement dans les positions critiques (défaut)
+ *   --think auto|on|off|low|high     réflexion du LLM ; auto (défaut) : aucune au calme, low en position
+ *                                    critique, high après une alerte ou un veto
  *   --no-review                      sans analyse d'après-partie (le carnet n'apprend rien)
  *
  * Alerte anti-gaffe → « es-tu sûr ? » → si le LLM confirme, l'arbitre tranche :
@@ -34,6 +35,7 @@ import { judgeConfig } from '../coach/judge.mjs';
 import { blunderCheck, scanTactics } from '../coach/threats.mjs';
 import { describeForcing, forcingLines } from '../coach/forcing.mjs';
 import { findManeuvers } from '../coach/maneuvers.mjs';
+import { preparedThreats } from '../coach/prep-threats.mjs';
 import { diagnoseMistake } from '../coach/diagnose.mjs';
 import { loadLessons, moveTags, recall, remindsOf, situationTags } from '../coach/memory.mjs';
 import { learnFromMistake, markRecall } from '../coach/review.mjs';
@@ -109,6 +111,7 @@ function perception(fen, color) {
     list('Tes occasions tactiques (coups qui gagnent quelque chose tout de suite) :', scanTactics(fen, color).map((t) => t.text)),
     list('Tes combinaisons forcées (échecs, prises, jusqu\'au bout) :', forcingLines(fen, color).map(describeForcing)),
     list("Combinaisons forcées de l'adversaire (s'il jouait maintenant) :", forcingLines(fen, opp).map(describeForcing)),
+    list("Ce que l'adversaire prépare (un coup calme de sa part, puis la menace) :", preparedThreats(fen, color).map((t) => t.text)),
     list('Manœuvres possibles :', findManeuvers(fen, color).map((m) => m.text)),
     ...(lessons.length ? [list('Souvenirs de tes parties précédentes (situations semblables) :',
       recall(lessons, { situation: situationTags(fen, color) }).map(({ lesson: l }) =>
@@ -147,8 +150,9 @@ Coups légaux : ${legal.join(' ')}`;
 
   for (let attempt = 0; attempt < 7; attempt++) {
     // Relance après alerte, veto ou erreur : toujours avec réflexion.
-    const think = THINK === 'on' || (THINK === 'auto' && (critical || attempt > 0));
-    if (think) thinkCalls++; else fastCalls++;
+    const think = THINK === 'auto' ? (attempt > 0 ? 'high' : critical ? 'low' : 'none')
+      : THINK === 'off' ? 'none' : THINK === 'on' ? true : THINK;
+    if (think === 'none') fastCalls++; else thinkCalls++;
     const raw = await complete({ system: SYSTEM, user: lastError ? `${user}\n\n${lastError}` : user }, cfg, { think });
     let parsed;
     try {
