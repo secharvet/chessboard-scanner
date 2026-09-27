@@ -468,9 +468,11 @@ function renderContext(d) {
   if (d.threat) {
     cite(tr(
       `Si le camp au trait passait son tour, ${d.threat.by === 'toi' ? 'tu jouerais' : "l'adversaire jouerait"} ${d.threat.move} ` +
-      `(ligne : ${d.threat.line} ; ${d.threat.mates ? 'la ligne se termine par un ÉCHEC ET MAT' : formatMaterial(d.threat.material, d.player)}).`,
+      `(ligne : ${d.threat.line} ; ${d.threat.mates ? 'la ligne se termine par un ÉCHEC ET MAT' : formatMaterial(d.threat.material, d.player)}). ` +
+      "C'est ce qui arriverait si ce camp ne jouait RIEN, pas après n'importe quel autre coup : ce que donnent les autres coups, ce sont les lignes candidates.",
       `If the side to move passed, ${d.threat.by === 'toi' ? 'you would play' : 'the opponent would play'} ${d.threat.move} ` +
-      `(line: ${d.threat.line}; ${d.threat.mates ? 'the line ends in CHECKMATE' : formatMaterial(d.threat.material, d.player)}).`,
+      `(line: ${d.threat.line}; ${d.threat.mates ? 'the line ends in CHECKMATE' : formatMaterial(d.threat.material, d.player)}). ` +
+      'This is what would happen if that side played NOTHING, not after any other move: what other moves lead to is given by the candidate lines.',
     ), 'M1');
   } else {
     cite(tr('Aucune menace immédiate significative détectée par le moteur.', 'No significant immediate threat detected by the engine.'), 'M0');
