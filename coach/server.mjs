@@ -17,6 +17,31 @@ const HOST = process.env.COACH_HOST || '0.0.0.0';
 const cfg = llmConfig();
 const engine = new UciEngine();
 
+// Protection d'un service public : requêtes par visiteur et analyses simultanées limitées.
+const RATE_MAX = Number(process.env.COACH_RATE_MAX || 12); // requêtes par fenêtre et par visiteur
+const RATE_WINDOW_MS = Number(process.env.COACH_RATE_WINDOW_S || 600) * 1000;
+const MAX_CONCURRENT = Number(process.env.COACH_MAX_CONCURRENT || 2);
+/** @type {Map<string, number[]>} */
+const hits = new Map();
+let running = 0;
+
+/** Adresse du visiteur : en-tête X-Real-IP posé par nginx, sinon l'adresse de la connexion. */
+function clientIp(req) {
+  return String(req.headers['x-real-ip'] || req.socket.remoteAddress || '?');
+}
+
+function rateLimited(ip) {
+  const now = Date.now();
+  const list = (hits.get(ip) ?? []).filter((t) => now - t < RATE_WINDOW_MS);
+  if (list.length >= RATE_MAX) {
+    hits.set(ip, list);
+    return true;
+  }
+  list.push(now);
+  hits.set(ip, list);
+  return false;
+}
+
 /** @param {import('node:http').ServerResponse} res @param {number} status @param {unknown} body */
 function send(res, status, body) {
   res.writeHead(status, {
@@ -47,6 +72,14 @@ const server = createServer(async (req, res) => {
     return send(res, 404, { ok: false, error: 'Not found' });
   }
 
+  const ip = clientIp(req);
+  if (rateLimited(ip)) {
+    return send(res, 429, { ok: false, error: `Trop de questions : ${RATE_MAX} par ${Math.round(RATE_WINDOW_MS / 60000)} minutes. Réessaie un peu plus tard.` });
+  }
+  if (running >= MAX_CONCURRENT) {
+    return send(res, 503, { ok: false, error: 'Le coach est très sollicité, réessaie dans quelques secondes.' });
+  }
+
   let payload;
   try {
     payload = await readJson(req);
@@ -57,16 +90,19 @@ const server = createServer(async (req, res) => {
     return send(res, 400, { ok: false, error: 'FEN manquante ou invalide' });
   }
 
+  running++;
   try {
     const result = await askCoach({ ...payload, engine, cfg });
     console.log(
-      `[coach] ${cfg.provider}/${cfg.model} contexte ${result.timings.context} ms, LLM ${result.timings.llm} ms` +
+      `[coach] ${ip} via ${req.socket.remoteAddress} — ${cfg.provider}/${cfg.model} contexte ${result.timings.context} ms, LLM ${result.timings.llm} ms` +
       (result.ungrounded.length ? `, coups hors contexte : ${result.ungrounded.join(' ')}` : ''),
     );
     return send(res, 200, { ok: true, ...result });
   } catch (e) {
     console.error('[coach] erreur', e);
     return send(res, 502, { ok: false, error: String(e?.message ?? e) });
+  } finally {
+    running--;
   }
 });
 
