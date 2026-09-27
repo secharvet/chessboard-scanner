@@ -54,3 +54,11 @@ describe('Gain différé', () => {
     assert.doesNotMatch(m, /prend le pion en d5/);
   });
 });
+
+describe('Échange', () => {
+  it('Cxc6 bxc6 est nommé « échange cavalier contre cavalier »', () => {
+    const fen = 'r1bqk2r/pppp1ppp/2n2n2/8/1b1NP3/2N5/PPP2PPP/R1BQKB1R w KQkq - 4 6';
+    const m = lineMotifs(fen, ['d4c6', 'b7c6', 'f1d3', 'e8g8']).flatMap((r) => r.motifs).join(' | ');
+    assert.match(m, /échange cavalier contre cavalier \(Cxc6, repris par bxc6\)/);
+  });
+});

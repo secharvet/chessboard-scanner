@@ -103,6 +103,13 @@ function describeLine(fen, line, player, toMove) {
   while (end < steps.length && end < 12 && busy(end)) end++;
   const endFen = end > 0 ? steps[end - 1].fen : fen;
 
+  // Effet IMMÉDIAT du coup : après lui et la réponse adverse (échange terminé), pour ne pas attribuer
+  // au premier coup ce que produit la suite de la ligne (le roque qui supprime un clouage, par ex.).
+  // L'échange est terminé dès que le demi-coup suivant n'est plus une prise (ni une parade d'échec).
+  let imm = Math.min(steps.length, 2);
+  while (imm < steps.length && imm < 6 && (steps[imm]?.capture || steps[imm - 1]?.check)) imm++;
+  const immFen = imm > 0 ? steps[imm - 1].fen : fen;
+
   return {
     move: steps[0]?.san ?? line.pv[0],
     pvUci: line.pv.slice(0, steps.length),
@@ -111,6 +118,8 @@ function describeLine(fen, line, player, toMove) {
     horizonSan: numberedSan(fen, steps.slice(0, end).map((s) => s.san)),
     endKings: kingState(endFen),
     changes: diffFacts(fen, endFen),
+    immediateSan: imm < end ? numberedSan(fen, steps.slice(0, imm).map((s) => s.san)) : null,
+    immediate: imm < end ? diffFacts(fen, immFen) : null,
     motifs: lineMotifs(fen, line.pv.slice(0, steps.length)).map((m) => `${m.san} : ${m.motifs.join(', ')}`),
     material: materialBalance(endFen) - materialBalance(fen),
   };
@@ -347,6 +356,12 @@ function renderContext(d) {
     const after = `[Après la ligne ${i + 1}, au bout de « ${c.horizonSan} »]`;
     cite(`${after} ${formatMaterial(c.material, d.player)} ; ${c.endKings}.`, `${L}m`);
     (c.motifs ?? []).forEach((m, j) => cite(`[Pendant la ligne ${i + 1}] Motif tactique : ${m}.`, `${L}t${j + 1}`));
+    if (c.immediate) {
+      const now = `[Juste après « ${c.immediateSan} » — effet du coup lui-même]`;
+      c.immediate.gained.forEach((g, j) => cite(`${now} apparaît : ${g}`, `${L}i+${j + 1}`));
+      c.immediate.lost.forEach((g, j) => cite(`${now} n'est plus vrai : ${g}`, `${L}i-${j + 1}`));
+      if (!c.immediate.gained.length && !c.immediate.lost.length) cite(`${now} aucun changement positionnel notable.`, `${L}i0`);
+    }
     c.changes.gained.forEach((g, j) => cite(`${after} apparaît : ${g}`, `${L}+${j + 1}`));
     c.changes.lost.forEach((g, j) => cite(`${after} n'est plus vrai : ${g}`, `${L}-${j + 1}`));
   });

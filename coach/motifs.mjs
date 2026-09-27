@@ -119,11 +119,13 @@ export function lineMotifs(fen, pvUci, maxMoves = 3) {
       motifs.push(`coup intermédiaire (${san}) au lieu de reprendre en ${prev.move.to}`);
     }
 
-    // Sacrifice : la pièce jouée est reprise aussitôt, et l'échange coûte du matériel.
+    // Échange ou sacrifice : la pièce jouée est reprise aussitôt.
     if (reply && reply.move.to === move.to && reply.move.captured) {
       const given = VALUE[move.piece];
       const taken = move.captured ? VALUE[move.captured] : 0;
-      if (given - taken >= 2) {
+      if (move.captured && Math.abs(given - taken) <= 0) {
+        motifs.push(`échange ${NAME[move.piece]} contre ${NAME[move.captured]} (${san}, repris par ${reply.san}) : ni gain ni perte de matériel`);
+      } else if (given - taken >= 2) {
         motifs.push(`sacrifice ${move.piece === 'r' && taken >= 3 ? 'de qualité' : `du ${NAME[move.piece]}`} (${san}, repris par ${reply.san})`);
       }
     } else if (move.captured && !isRecapture && replyKnown && !reply.move.captured && stillAhead(i)) {
