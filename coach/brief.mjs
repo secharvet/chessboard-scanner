@@ -108,7 +108,10 @@ export function buildBrief(data) {
     const also = data.threat?.mates ? ` Et du même coup, il pare la menace de mat ${data.threat.move}.`
       : data.threat && (me === 'w' ? -data.threat.material : data.threat.material) >= 2 ? ` Et du même coup, il pare la menace ${data.threat.move}.` : '';
     reason = { kind: 'win', points: gain, move: bestSan, alsoParries: also ? data.threat.move : null };
-    sentences.push(`${bestSan} prend ${pieceRef(first.captured, 'opp', first.to)} : une fois les échanges terminés, tu as ${gain} point(s) de plus.${also}`);
+    // Un gain qui ne tient que par une suite tactique (coup intermédiaire, clouage…) : on donne la suite.
+    const tactical = (c0.motifs ?? []).some((m) => /intermédiaire|découverte|fourchette|clouage|enfilade|échec double|sacrifice|dévie/.test(m));
+    const how = tactical ? ` Attention, le gain passe par une suite précise : ${c0.horizonSan}.` : '';
+    sentences.push(`${bestSan} prend ${pieceRef(first.captured, 'opp', first.to)} : une fois les échanges terminés, tu as ${gain} point(s) de plus.${how}${also}`);
   }
   if (!reason && data.threat?.mates) {
     reason = { kind: 'parry_mate', threat: data.threat.move, move: bestSan };
@@ -241,7 +244,8 @@ function planSteps(data, me, opp, pieces, items) {
   const out = [];
   const board = new Chess(data.fen);
   const inLines = (m) => data.candidates.some((c) => (c.pvUci ?? []).some((u) => u.slice(0, 4) === m.path[0] + m.path[1]));
-  const man = [...(data.maneuvers ?? [])].sort((a, b) => Number(inLines(b)) - Number(inLines(a)))[0];
+  // Seulement une manœuvre dont le premier pas figure dans une ligne du moteur (sinon ce n'est pas un plan sûr).
+  const man = (data.maneuvers ?? []).find(inLines);
   let rookPlanned = false;
   if (man) {
     const type = board.get(man.from)?.type;
@@ -270,7 +274,14 @@ function planSteps(data, me, opp, pieces, items) {
     const king = board.board().flat().find((p) => p && p.type === 'k' && p.color === me);
     const central = king && 'cdef'.includes(king.square[0]) && '3456'.includes(king.square[1]);
     if (king && !central) { pieces.add(`k|me|${king.square}`); out.push(`active ton roi (en ${king.square}) vers le centre`); }
-    const maj = facts.find((t) => (t.id === 'MAJORITE_AILE_DAME' || t.id === 'MAJORITE_AILE_ROI') && t.params.color === me);
+    // Une vraie majorité (au moins deux pions contre un) et pas déjà de pion passé : sinon, rien à « créer ».
+    const hasPassed = facts.some((t) => (t.id === 'PION_PASSE' || t.id === 'PION_PASSE_PROTEGE') && t.params.color === me);
+    const count = (color, files) => board.board().flat().filter((p) => p && p.type === 'p' && p.color === color && files.includes(p.square[0])).length;
+    const maj = hasPassed ? null : facts.find((t) => {
+      if (!((t.id === 'MAJORITE_AILE_DAME' || t.id === 'MAJORITE_AILE_ROI') && t.params.color === me)) return false;
+      const files = t.id === 'MAJORITE_AILE_DAME' ? 'abcd' : 'efgh';
+      return count(me, files) >= 2 && count(me, files) > count(opp, files);
+    });
     if (maj) out.push(`avance ta majorité de pions à l'aile ${maj.id === 'MAJORITE_AILE_DAME' ? 'dame' : 'roi'} pour créer un pion passé`);
   }
   const st = data.structures?.[0];
