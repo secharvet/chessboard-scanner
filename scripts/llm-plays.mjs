@@ -91,8 +91,9 @@ Règles :
 - Vérifie d'abord la sécurité : la liste « Menaces de l'adversaire » dit ce qu'il gagnerait s'il jouait maintenant ; pare la plus grave, sauf si tu as mieux (un mat, ou un gain plus gros que ce que tu perds).
 - Regarde ensuite « Tes occasions tactiques » et « Tes combinaisons forcées » (lignes calculées jusqu'au bout en ne jouant que des coups forcés) : un gain sûr ou un mat passe avant le plan.
 - Pour le plan, « Manœuvres possibles » donne des itinéraires sûrs vers des cases stratégiques (avant-postes, cases de blocage, colonnes ouvertes, pions faibles à attaquer). Un bon plan tient souvent en une manœuvre de 2 à 4 coups : annonce-la et suis-la.
-- Garde un plan cohérent d'un coup à l'autre ; change de plan seulement si la position l'exige, et dis pourquoi.
-Réponds UNIQUEMENT en JSON : {"plan": "ton plan en une ou deux phrases", "raison": "pourquoi ce coup", "coup": "Cf3"}`;
+- CONTINUITÉ : un plan se poursuit sur plusieurs coups. Parer une menace n'est pas changer de plan : pare, puis reviens à ton plan. Ne change de plan que si la structure de pions ou le matériel a changé, et dis alors pourquoi.
+- Indique le type de ton coup : "plan" (il fait avancer ton plan), "parade" (il pare une menace ; dis comment tu reprends ton plan ensuite) ou "tactique" (il exploite une occasion).
+Réponds UNIQUEMENT en JSON : {"plan": "ton plan en une ou deux phrases", "type": "plan|parade|tactique", "raison": "pourquoi ce coup", "coup": "Cf3"}`;
 
 function perception(fen, color) {
   const b = buildBalance(buildAllFacts(fen));
@@ -183,7 +184,7 @@ Coups légaux : ${legal.join(' ')}`;
       ...blunderCheck(after.fen(), LLM_COLOR),
       ...forcingLines(after.fen(), oppColor, { minGain: 2 }).map((l) => ({ text: `ligne forcée ${describeForcing(l)}`, line: l })),
     ];
-    const ok = { san: played.san, plan: parsed.plan ?? '', raison: parsed.raison ?? '', illegal, events, pendingRecalls };
+    const ok = { san: played.san, plan: parsed.plan ?? '', type: parsed.type ?? '', raison: parsed.raison ?? '', illegal, events, pendingRecalls };
 
     // « Attends, ça me rappelle… » : le coup ressemble-t-il à une erreur passée ?
     const reminder = lessons.length && !asked.has(played.san)
@@ -320,7 +321,7 @@ while (!chess.isGameOver() && chess.history().length < MAX_MOVES * 2) {
     }
     const warned = m.events.some((e) => e.startsWith('⚑'));
     const vetoed = m.events.filter((e) => e.startsWith('⛔')).length;
-    log.push({ fallback: Boolean(m.fallback), n: Math.ceil(chess.history().length / 2), san: toFrenchSan(m.san), sanEn: m.san, fenBefore: fen, fenAfter: chess.fen(), diag, loss, tag, plan: m.plan, raison: m.raison, illegal: m.illegal, evalAfter: after, warned, vetoed, events: m.events });
+    log.push({ type: m.type ?? '', fallback: Boolean(m.fallback), n: Math.ceil(chess.history().length / 2), san: toFrenchSan(m.san), sanEn: m.san, fenBefore: fen, fenAfter: chess.fen(), diag, loss, tag, plan: m.plan, raison: m.raison, illegal: m.illegal, evalAfter: after, warned, vetoed, events: m.events });
     console.log(`${String(log.at(-1).n).padStart(2)}. ${log.at(-1).san.padEnd(7)} perte ${String(loss).padStart(4)} ${tag.padEnd(11)}${warned ? '⚑' : ' '}${vetoed ? `⛔${vetoed}` : '  '} ${String(secs).padStart(3)}s ${m.plan.slice(0, 80)}`);
     for (const e of m.events) console.log(`      ${e.slice(0, 200)}`);
     appendFileSync(eventsPath, `${log.at(-1).n}. ${log.at(-1).san} (perte ${loss}) — plan : ${m.plan} — raison : ${m.raison}\n${m.events.map((e) => `   ${e}`).join('\n')}\n`);
@@ -383,6 +384,7 @@ function writeReport(coherence, finalEval = null) {
     `- LLM avec les ${LLM_COLOR === 'w' ? 'Blancs' : 'Noirs'} ; résultat : **${result}**${finalEval != null ? ` ; éval finale (pour le LLM) : ${(finalEval / 100).toFixed(1)}` : ''}`,
     `- Arbitre : ${REFEREE} ; vetos : **${vetoes.length}** ; coups confirmés malgré une alerte : ${sacrificesOk} ; alertes : ${warnings}`,
     `- Perte moyenne par coup joué (ACPL) : **${acpl}** ; gaffes : ${count('gaffe')}, erreurs : ${count('erreur')}, imprécisions : ${count('imprécision')}`,
+    `- Types de coups : plan ${log.filter((x) => x.type === 'plan').length}, parade ${log.filter((x) => x.type === 'parade').length}, tactique ${log.filter((x) => x.type === 'tactique').length}`,
     `- Réponses illégales : ${illegal} ; changements de plan : ${planChanges} ; réflexion : ${THINK} (appels avec réflexion : ${thinkCalls}, rapides : ${fastCalls})`,
     coherence ? `- Cohérence stratégique (relecteur) : **${coherence.note ?? '?'}/10**` : '',
     '', ...(coherence?.points_forts ?? []).map((x) => `- ✅ ${x}`), ...(coherence?.points_faibles ?? []).map((x) => `- ⚠ ${x}`),
@@ -398,7 +400,7 @@ function writeReport(coherence, finalEval = null) {
     ...recalls.map((r) => `- coup ${r.n} : « ${r.titre} » — ${r.abandoned ? (r.helped ? 'erreur évitée ✓' : 'coup abandonné') : 'rappel ignoré'}`),
     ...(learned.map((l) => `- 📓 leçon ${l.action} après ${l.n}. ${l.san} : **${l.lesson.titre}** — ${l.lesson.lecon} (signal : ${l.lesson.signal}) [${l.lesson.move.join(', ')} → ${l.lesson.punishment.join(', ') || 'positionnel'}]`)),
     '', '## Coups du LLM', '', '| Coup | Perte (cp) | | Plan annoncé | Raison | Alertes / arbitrage |', '|---|---|---|---|---|---|',
-    ...log.map((x) => `| ${x.n}. ${x.san} | ${x.loss} | ${x.tag} | ${x.plan.replace(/\|/g, '/')} | ${x.raison.replace(/\|/g, '/')} | ${x.events.join(' ; ').replace(/\|/g, '/')} |`),
+    ...log.map((x) => `| ${x.n}. ${x.san}${x.type ? ` (${x.type})` : ''} | ${x.loss} | ${x.tag} | ${x.plan.replace(/\|/g, '/')} | ${x.raison.replace(/\|/g, '/')} | ${x.events.join(' ; ').replace(/\|/g, '/')} |`),
     '', '## PGN', '', '```', pgn, '```',
   ];
   writeFileSync(`reports/partie-${stamp}.md`, lines.join('\n'));
