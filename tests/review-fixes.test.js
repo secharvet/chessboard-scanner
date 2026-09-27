@@ -50,3 +50,25 @@ describe('Relecture des parties commentées', () => {
     assert.match(texts('4k3/4q3/8/8/3p4/4P3/8/4K3 w - - 0 1'), /Pion blanc en e3 cloué/); // exd4 interdit
   });
 });
+
+describe('Mode fiche : contrôle de la reformulation', async () => {
+  const { checkRephrase } = await import('../coach/brief.mjs');
+  const fen = 'r1bqkbnr/pppp1ppp/2n5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3';
+  const data = { fen, player: 'w', candidates: [{ pvUci: ['f1b5', 'a7a6'] }] };
+  const brief = {
+    items: [{ kind: 'reason', move: 'Fb5' }],
+    allowed: { squares: new Set(['b5', 'c6', 'f3']), moves: new Set(['Fb5', 'Fc4']), pieces: new Set() },
+  };
+  it('accepte une reformulation fidèle', () => {
+    assert.deepEqual(checkRephrase('**Coup conseillé** — Fb5 : ton fou attaque le cavalier c6. Fc4 se vaut presque.', brief, data), []);
+  });
+  it('refuse une pièce attribuée au mauvais camp', () => {
+    assert.equal(checkRephrase('**Coup conseillé** — Fb5 contre ton cavalier en c6.', brief, data).length, 1);
+  });
+  it('refuse une alternative à la place du coup conseillé', () => {
+    assert.equal(checkRephrase('**Coup conseillé** — Fc4 ou Fb5 se valent.', brief, data).length, 1);
+  });
+  it('refuse une case ou un coup inventés', () => {
+    assert.equal(checkRephrase('**Coup conseillé** — Fb5, puis Cg5 sur f7.', brief, data).length >= 2, true);
+  });
+});

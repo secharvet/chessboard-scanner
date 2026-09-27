@@ -11,6 +11,7 @@ import { buildRevisionPromptEn, buildUserPromptEn, systemPromptEn } from './prom
 import { factLang } from '../positional/lang.js';
 import { frenchDisplay } from './notation.mjs';
 import { translateToFrench } from './translate.mjs';
+import { REPHRASE_SYSTEM, buildBrief, checkRephrase } from './brief.mjs';
 import { stripCitations, verifyCitations } from './verify.mjs';
 
 /**
@@ -39,6 +40,27 @@ export async function askCoach({ fen, side, moves, question, engine, cfg = llmCo
   const system = en ? systemPromptEn(answer) : SYSTEM_PROMPT;
   const revision = en ? buildRevisionPromptEn : buildRevisionPrompt;
   const user = (en ? buildUserPromptEn : buildUserPrompt)({ question, contextText: context.text });
+
+  // Mode « fiche » (COACH_MODE=brief) : le code décide du contenu (buildBrief), le LLM reformule
+  // seulement ; contrôle exact, une nouvelle tentative, sinon on affiche le texte du code.
+  if (process.env.COACH_MODE === 'brief') {
+    const brief = buildBrief(context.data);
+    const ask = (extra = '') => complete({ system: REPHRASE_SYSTEM, user: `Question de l'élève : ${question?.trim() || 'Que dois-je jouer ?'}\n\n# Texte à reformuler\n\n${brief.text}${extra}` }, cfg, { think: false });
+    let out = (await ask()).trim();
+    let problems = checkRephrase(out, brief, context.data);
+    let revised = false;
+    if (problems.length) {
+      revised = true;
+      out = (await ask(`\n\n# Ta première version avait ces problèmes\n${problems.map((x) => `- ${x}`).join('\n')}\nRecommence en respectant strictement le texte.`)).trim();
+      problems = checkRephrase(out, brief, context.data);
+    }
+    const fallback = problems.length > 0;
+    return {
+      advice: fallback ? brief.text : out, adviceWorking: brief.text, brief: brief.items, context: context.text,
+      ungrounded: [], problems: fallback ? [] : problems, rejected: fallback ? problems : [], revised, fallback,
+      timings: { context: tContext, llm: Date.now() - t0 - tContext },
+    };
+  }
   const check = (raw) => {
     const clean = stripCitations(raw);
     const ungrounded = findUngroundedMoves(clean, context.data);
