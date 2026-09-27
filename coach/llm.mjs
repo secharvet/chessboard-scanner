@@ -7,6 +7,9 @@
  *   LLM_API_KEY    clé API (sauf claude-cli)
  *   LLM_BASE_URL   pour un endpoint compatible OpenAI
  *   LLM_EFFORT     claude-cli : low | medium | high | max (optionnel)
+ *
+ * complete(prompt, cfg, { think: false }) désactive la réflexion quand le fournisseur le permet
+ * (DeepSeek : thinking disabled ; ses paramètres d'effort et de budget sont ignorés).
  */
 
 import { spawn } from 'node:child_process';
@@ -36,14 +39,14 @@ export function llmConfig(env = process.env) {
  * @param {ReturnType<typeof llmConfig>} cfg
  * @returns {Promise<string>}
  */
-export async function complete(prompt, cfg = llmConfig()) {
+export async function complete(prompt, cfg = llmConfig(), opts = {}) {
   switch (cfg.provider) {
     case 'claude-cli':
-      return claudeCli(prompt, cfg);
+      return claudeCli(prompt, opts.think === false ? { ...cfg, effort: 'low' } : cfg);
     case 'anthropic':
       return anthropic(prompt, cfg);
     default:
-      return openAiCompatible(prompt, cfg);
+      return openAiCompatible(prompt, cfg, opts);
   }
 }
 
@@ -79,7 +82,7 @@ function claudeCli({ system, user }, cfg) {
   });
 }
 
-async function openAiCompatible({ system, user }, cfg) {
+async function openAiCompatible({ system, user }, cfg, opts = {}) {
   if (!cfg.apiKey) throw new Error(`LLM_API_KEY manquante pour ${cfg.provider}`);
   const res = await fetch(`${cfg.baseUrl.replace(/\/$/, '')}/chat/completions`, {
     method: 'POST',
@@ -88,6 +91,7 @@ async function openAiCompatible({ system, user }, cfg) {
       model: cfg.model,
       temperature: 0.3,
       messages: [{ role: 'system', content: system }, { role: 'user', content: user }],
+      ...(opts.think === false && cfg.provider === 'deepseek' ? { thinking: { type: 'disabled' } } : {}),
     }),
   });
   const data = await res.json().catch(() => ({}));

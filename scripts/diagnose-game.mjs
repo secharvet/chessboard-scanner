@@ -46,7 +46,7 @@ for (const san of moves) {
   const d = await diagnoseMistake(engine, fen, board.fen(), { san, plan, raison, alerted });
   counts[d.cause] = (counts[d.cause] ?? 0) + 1;
   console.log(`${n}. ${fr} (−${loss} cp) : ${d.text}`);
-  if (learn) {
+  if (learn && !raison.includes('coup de secours')) {
     const r = await learnFromMistake({ fenBefore: fen, san, fenAfter: board.fen(), plan, raison, refutationUci: d.refutationUci, cause: d.cause, loss }, llmConfig());
     console.log(`   📓 leçon ${r.action} : ${r.lesson.titre} — ${r.lesson.lecon} (signal : ${r.lesson.signal})`);
   }
