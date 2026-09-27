@@ -8,6 +8,8 @@
 
 import { Chess } from 'chess.js';
 import { scanTactics } from './threats.mjs';
+import { preparedThreats } from './prep-threats.mjs';
+import { buildAttackMap } from '../positional/attack-map.js';
 
 const VALUE = { p: 1, n: 3, b: 3, r: 5, q: 9, k: 0 };
 const FILES = 'abcdefgh';
@@ -17,9 +19,12 @@ export const TRAITS = {
   menaces: { label: 'coups qui créent une menace', unit: '/100 coups', family: 'agressivité' },
   echecs: { label: 'échecs donnés', unit: '/100 coups', family: 'agressivité' },
   sacrifices: { label: 'sacrifices (matériel donné et non récupéré 4 demi-coups plus tard)', unit: '/100 coups', family: 'agressivité' },
+  sacrifices_sains: { label: 'sacrifices sains (Stockfish : évaluation ≥ −1 malgré le matériel donné)', unit: '/100 coups', family: 'agressivité' },
   proximite_roi: { label: 'pièces à 3 cases ou moins du roi adverse', unit: 'pièces en moyenne', family: 'agressivité' },
-  assaut_pions: { label: 'poussées de pions vers le roi adverse', unit: '/100 coups', family: 'agressivité' },
-  parades: { label: 'coups qui font disparaître une menace adverse', unit: '/100 coups', family: 'prudence' },
+  assaut_pions: { label: "poussées de pions d'attaque (roques opposés, ou pion qui touche le roque adverse)", unit: '/100 coups', family: 'agressivité' },
+  reactions: { label: 'réactions : coups qui font disparaître une menace adverse existante', unit: '/100 coups', family: 'tactique' },
+  prophylaxie: { label: "prophylaxie : coup calme qui réduit ce que l'adversaire prépare (sans menace immédiate)", unit: '% des coups calmes testés', family: 'prudence' },
+  restriction: { label: 'restriction : mobilité adverse retirée par le coup', unit: 'cases en moyenne', family: 'prudence' },
   retraits: { label: 'retraits de pièces', unit: '/100 coups', family: 'prudence' },
   echanges: { label: 'échanges à valeur égale initiés', unit: '/100 coups', family: 'simplification' },
   prises: { label: 'prises', unit: '/100 coups', family: 'simplification' },
@@ -43,10 +48,11 @@ function materialFor(board, color) {
  * @param {string[]} sans  coups de la partie (notation anglaise)
  * @param {'w'|'b'} color
  */
-export function profileGame(sans, color, { from = 9, to = 60 } = {}) {
+export async function profileGame(sans, color, { from = 9, to = 60, engine = null, prophylaxisSamples = 10 } = {}) {
   const c = new Chess();
   const counts = Object.fromEntries(Object.keys(TRAITS).map((k) => [k, 0]));
   let moves = 0;
+  let quietTested = 0;
   const opp = color === 'w' ? 'b' : 'w';
 
   for (let i = 0; i < sans.length; i++) {
@@ -69,12 +75,28 @@ export function profileGame(sans, color, { from = 9, to = 60 } = {}) {
     const was = new Set(mine(before).map(key));
     if (mine(after).some((t) => !was.has(key(t)))) counts.menaces++;
 
-    // Parade : une menace adverse grave présente avant disparaît après le coup.
+    // Réaction : une menace adverse grave présente avant disparaît après le coup.
     const theirs = (f) => scanTactics(f, opp, 6).filter((t) => t.severity >= 11);
     const threatsBefore = theirs(before);
     if (threatsBefore.length) {
       const still = new Set(theirs(after).map(key));
-      if (threatsBefore.some((t) => !still.has(key(t)))) counts.parades++;
+      if (threatsBefore.some((t) => !still.has(key(t)))) counts.reactions++;
+    }
+
+    // Restriction : mobilité des pièces adverses (hors roi et pions) retirée par le coup.
+    const oppMobility = (f) => {
+      const map = buildAttackMap(f);
+      return map.pieces.filter((p) => p.color === opp && !['k', 'p'].includes(p.type)).reduce((a, p) => a + map.mobility(p), 0);
+    };
+    counts.restriction += oppMobility(before) - oppMobility(after);
+
+    // Prophylaxie (échantillonnée, coûteuse) : coup calme, sans menace immédiate adverse,
+    // qui réduit le nombre d'idées graves que l'adversaire prépare.
+    const quiet = !m.captured && !/[+#]/.test(m.san) && !threatsBefore.length;
+    if (quiet && quietTested < prophylaxisSamples && moves % 2 === 0) {
+      quietTested++;
+      const grave = (f) => preparedThreats(f, color, { max: 6 }).filter((t) => t.severity >= 12 || t.threat.startsWith('piège')).length;
+      if (grave(after) < grave(before)) counts.prophylaxie++;
     }
 
     // Retrait : une pièce recule.
@@ -86,8 +108,20 @@ export function profileGame(sans, color, { from = 9, to = 60 } = {}) {
       counts.proximite_roi += board.flat().filter(
         (p) => p && p.color === color && !['p', 'k'].includes(p.type) && cheb(p.square, enemyKing.square) <= 3,
       ).length;
-      if (m.piece === 'p' && Math.abs(FILES.indexOf(m.to[0]) - FILES.indexOf(enemyKing.square[0])) <= 2
-        && rel(Number(m.to[1]), color) >= 4) counts.assaut_pions++;
+      // Assaut : pion qui avance sur l'aile du roi adverse quand les roques sont opposés,
+      // ou pion qui, après le coup, touche une case voisine du roi adverse ou un pion de son bouclier.
+      if (m.piece === 'p') {
+        const myKing = board.flat().find((p) => p && p.type === 'k' && p.color === color);
+        const wing = (k) => (FILES.indexOf(k.square[0]) >= 5 ? 'roi' : FILES.indexOf(k.square[0]) <= 2 ? 'dame' : 'centre');
+        const opposite = myKing && wing(myKing) !== 'centre' && wing(enemyKing) !== 'centre' && wing(myKing) !== wing(enemyKing);
+        const onKingWing = Math.abs(FILES.indexOf(m.to[0]) - FILES.indexOf(enemyKing.square[0])) <= 2;
+        const df = color === 'w' ? 1 : -1;
+        const hits = [-1, 1].map((d) => `${FILES[FILES.indexOf(m.to[0]) + d] ?? ''}${Number(m.to[1]) + df}`)
+          .filter((sq) => sq.length === 2);
+        const touches = hits.some((sq) => cheb(sq, enemyKing.square) <= 1
+          || board.flat().some((p) => p && p.square === sq && p.type === 'p' && p.color === opp && cheb(sq, enemyKing.square) <= 2));
+        if ((opposite && onKingWing) || touches) counts.assaut_pions++;
+      }
     }
 
     // Échanges initiés (prise reprise aussitôt), et fou contre cavalier.
@@ -113,14 +147,24 @@ export function profileGame(sans, color, { from = 9, to = 60 } = {}) {
       for (let k = 1; k <= 4 && sans[i + k]; k++) {
         try { look.move(sans[i + k]); plies.push(materialFor(look.board(), color) - start); } catch { ok = false; break; }
       }
-      if (ok && plies.length >= 2 && plies[0] <= -2 && plies.at(-1) <= -2) counts.sacrifices++;
+      if (ok && plies.length >= 2 && plies[0] <= -2 && plies.at(-1) <= -2) {
+        counts.sacrifices++;
+        if (engine) {
+          const [l] = await engine.analyze(look.fen(), { depth: 10, multipv: 1 });
+          if (l) {
+            const cp = l.score.type === 'mate' ? (l.score.value > 0 ? 10000 : -10000) : l.score.value;
+            const forMe = look.turn() === color ? cp : -cp;
+            if (forMe >= -100) counts.sacrifices_sains++;
+          }
+        }
+      }
     }
 
     const mineOnBoard = board.flat().filter((p) => p && p.color === color);
     if (mineOnBoard.filter((p) => p.type === 'b').length >= 2) counts.paire_de_fous++;
     counts.espace += mineOnBoard.filter((p) => p.type === 'p' && rel(Number(p.square[1]), color) >= 5).length;
   }
-  return { moves, counts };
+  return { moves, counts, quietTested };
 }
 
 /**
@@ -135,9 +179,11 @@ export function aggregate(games) {
       const v = g.counts[k];
       if (def.unit === '/100 coups') return (100 * v) / g.moves;
       if (def.unit === '%') return (100 * v) / g.moves;
+      if (def.unit === '% des coups calmes testés') return g.quietTested ? (100 * v) / g.quietTested : null;
       if (def.unit === '/partie') return v;
       return v / g.moves; // moyennes par coup
     });
+    vals.splice(0, vals.length, ...vals.filter((v) => v != null));
     const n = vals.length;
     const mean = vals.reduce((a, b) => a + b, 0) / Math.max(1, n);
     const sd = Math.sqrt(vals.reduce((a, b) => a + (b - mean) ** 2, 0) / Math.max(1, n - 1));
