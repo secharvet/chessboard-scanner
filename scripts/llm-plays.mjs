@@ -20,6 +20,7 @@ import { UciEngine } from '../coach/uci-engine.mjs';
 import { buildAllFacts, detectPhase } from '../positional/index.js';
 import { buildBalance } from '../positional/balance.js';
 import { judgeConfig } from '../coach/judge.mjs';
+import { blunderCheck, scanTactics } from '../coach/threats.mjs';
 
 loadEnv();
 const args = process.argv.slice(2);
@@ -60,7 +61,8 @@ const SYSTEM = `Tu joues une partie d'échecs complète. Tu n'as AUCUN moteur de
 À chaque coup tu reçois : la position (FEN), les derniers coups, le bilan des déséquilibres, les faits tactiques, ton plan précédent et la liste des coups légaux.
 Règles :
 - Choisis UN coup dans la liste des coups légaux, recopié exactement (notation française : R roi, D dame, T tour, F fou, C cavalier).
-- Vérifie d'abord la sécurité : tes pièces en prise, les menaces adverses, les fourchettes et clouages signalés.
+- Vérifie d'abord la sécurité : la liste « Menaces de l'adversaire » dit ce qu'il gagnerait s'il jouait maintenant ; pare la plus grave, sauf si tu as mieux (un mat, ou un gain plus gros que ce que tu perds).
+- Regarde ensuite « Tes occasions tactiques » : un gain de matériel sûr passe souvent avant le plan.
 - Garde un plan cohérent d'un coup à l'autre ; change de plan seulement si la position l'exige, et dis pourquoi.
 Réponds UNIQUEMENT en JSON : {"plan": "ton plan en une ou deux phrases", "raison": "pourquoi ce coup", "coup": "Cf3"}`;
 
@@ -74,6 +76,8 @@ function perception(fen, color) {
     list("Atouts de l'adversaire (dont ses menaces tactiques) :", b[opp].assets),
     list("Faiblesses de l'adversaire :", b[opp].weaknesses),
     list('Contexte :', b.context),
+    list("Menaces de l'adversaire (ce qu'il gagnerait s'il jouait maintenant) :", scanTactics(fen, opp).map((t) => t.text)),
+    list('Tes occasions tactiques (coups qui gagnent quelque chose tout de suite) :', scanTactics(fen, color).map((t) => t.text)),
   ].join('\n\n');
 }
 
@@ -90,7 +94,8 @@ ${perception(fen, LLM_COLOR)}
 Coups légaux : ${legal.join(' ')}`;
 
   let lastError = '';
-  for (let attempt = 0; attempt < 3; attempt++) {
+  let blunderChecked = false;
+  for (let attempt = 0; attempt < 4; attempt++) {
     const raw = await complete({ system: SYSTEM, user: lastError ? `${user}\n\n${lastError}` : user }, cfg);
     let parsed;
     try {
@@ -100,11 +105,26 @@ Coups légaux : ${legal.join(' ')}`;
       continue;
     }
     const wanted = String(parsed.coup ?? '').trim().replace(/[!?]+$/, '');
+    let played = null;
     for (const san of [fromFrenchSan(wanted), wanted]) {
       try {
         const m = new Chess(fen).move(san);
-        if (m) return { san: m.san, plan: parsed.plan ?? '', raison: parsed.raison ?? '', illegal: attempt };
+        if (m) { played = m; break; }
       } catch { /* essai suivant */ }
+    }
+    if (played) {
+      // Contrôle anti-gaffe (une seule fois) : le coup laisse-t-il un gain immédiat à l'adversaire ?
+      const after = new Chess(fen);
+      after.move(played.san);
+      const danger = blunderCheck(after.fen(), LLM_COLOR);
+      if (danger.length && !blunderChecked) {
+        blunderChecked = true;
+        warnings++;
+        lastError = `Contrôle anti-gaffe : après ${toFrenchSan(played.san)}, l'adversaire aurait : ${danger.map((d) => d.text).join(' ; ')}. `
+          + 'Confirme ce coup seulement si tu as vérifié que c\'est voulu (sacrifice calculé, ou mal moindre) ; sinon choisis-en un autre.';
+        continue;
+      }
+      return { san: played.san, plan: parsed.plan ?? '', raison: parsed.raison ?? '', illegal: attempt - (blunderChecked ? 1 : 0), warned: blunderChecked };
     }
     lastError = `Le coup « ${wanted} » est illégal. Choisis exactement un coup de la liste des coups légaux.`;
   }
@@ -127,6 +147,7 @@ const opponent = new LimitedEngine(ELO);
 const log = [];
 let plan = '';
 let planChanges = 0;
+let warnings = 0;
 console.log(`LLM (${cfg.provider}/${cfg.model}) avec les ${LLM_COLOR === 'w' ? 'Blancs' : 'Noirs'} contre Stockfish ${ELO} Elo`);
 
 while (!chess.isGameOver() && chess.history().length < MAX_MOVES * 2) {
@@ -140,8 +161,8 @@ while (!chess.isGameOver() && chess.history().length < MAX_MOVES * 2) {
     const tag = loss >= 300 ? 'gaffe' : loss >= 100 ? 'erreur' : loss >= 50 ? 'imprécision' : '';
     if (plan && m.plan && m.plan !== plan) planChanges++;
     plan = m.plan || plan;
-    log.push({ n: Math.ceil(chess.history().length / 2), san: toFrenchSan(m.san), loss, tag, plan: m.plan, raison: m.raison, illegal: m.illegal, evalAfter: after });
-    console.log(`${String(log.at(-1).n).padStart(2)}. ${log.at(-1).san.padEnd(7)} perte ${String(loss).padStart(4)} ${tag.padEnd(11)} ${m.plan.slice(0, 80)}`);
+    log.push({ n: Math.ceil(chess.history().length / 2), san: toFrenchSan(m.san), loss, tag, plan: m.plan, raison: m.raison, illegal: Math.max(0, m.illegal), evalAfter: after, warned: m.warned });
+    console.log(`${String(log.at(-1).n).padStart(2)}. ${log.at(-1).san.padEnd(7)} perte ${String(loss).padStart(4)} ${tag.padEnd(11)}${m.warned ? '⚑ ' : '  '}${m.plan.slice(0, 80)}`);
   } else {
     const uci = await opponent.move(fen);
     chess.move({ from: uci.slice(0, 2), to: uci.slice(2, 4), promotion: uci[4] });
@@ -178,11 +199,11 @@ const lines = [
   `# Partie : LLM (${cfg.model}) contre Stockfish ${ELO} Elo`, '',
   `- LLM avec les ${LLM_COLOR === 'w' ? 'Blancs' : 'Noirs'} ; résultat : **${result}** ; éval finale (pour le LLM) : ${(finalEval / 100).toFixed(1)}`,
   `- Perte moyenne par coup (ACPL) : **${acpl}** ; gaffes : ${count('gaffe')}, erreurs : ${count('erreur')}, imprécisions : ${count('imprécision')}`,
-  `- Réponses illégales : ${illegal} ; changements de plan : ${planChanges}`,
+  `- Réponses illégales : ${illegal} ; changements de plan : ${planChanges} ; alertes anti-gaffe : ${warnings}`,
   coherence ? `- Cohérence stratégique (relecteur) : **${coherence.note ?? '?'}/10**` : '',
   '', ...(coherence?.points_forts ?? []).map((x) => `- ✅ ${x}`), ...(coherence?.points_faibles ?? []).map((x) => `- ⚠ ${x}`),
   '', '## Coups du LLM', '', '| Coup | Perte (cp) | | Plan annoncé | Raison |', '|---|---|---|---|---|',
-  ...log.map((x) => `| ${x.n}. ${x.san} | ${x.loss} | ${x.tag} | ${x.plan.replace(/\|/g, '/')} | ${x.raison.replace(/\|/g, '/')} |`),
+  ...log.map((x) => `| ${x.n}. ${x.san}${x.warned ? ' ⚑' : ''} | ${x.loss} | ${x.tag} | ${x.plan.replace(/\|/g, '/')} | ${x.raison.replace(/\|/g, '/')} |`),
   '', '## PGN', '', '```', pgn, '```',
 ];
 mkdirSync('reports', { recursive: true });
