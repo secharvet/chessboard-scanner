@@ -193,7 +193,7 @@ export function buildBrief(data) {
       }
     }
   }
-  items.push({ kind: 'reason', ...reason });
+  items.push({ ...reason, kind: 'reason', type: reason.kind });
 
   // Coups qui se valent (écart ≤ 0,3).
   const close = data.candidates.slice(1).filter((c) => c.evalPlayer.type === 'cp' && c0.evalPlayer.type === 'cp'

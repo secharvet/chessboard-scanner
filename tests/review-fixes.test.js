@@ -82,7 +82,7 @@ describe('Mode fiche : hiérarchie des raisons', async () => {
       threat: { move: 'Dxf7#', mates: true, material: 0 }, prepared: [], structures: [],
     };
     const b = buildBrief(data);
-    assert.equal(b.items.find((x) => x.kind === 'reason').kind, 'win');
+    assert.equal(b.items.find((x) => x.kind === 'reason').type, 'win');
     assert.match(b.text, /Cxh5 prend sa dame en h5/);
     assert.match(b.text, /pare la menace de mat Dxf7#/);
   });
