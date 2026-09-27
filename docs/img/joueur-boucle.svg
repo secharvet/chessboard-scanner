@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" font-family="Helvetica, Arial, sans-serif" font-size="13">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect width="960" height="640" fill="#ffffff"/>
+  <text x="480" y="28" text-anchor="middle" font-size="20" font-weight="bold" fill="#0f172a">Le joueur LLM : un coup, puis l'apprentissage entre les parties</text>
+
+  <!-- Coup : ligne du haut -->
+  <rect x="20" y="60" width="200" height="120" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="120" y="84" text-anchor="middle" font-weight="bold" fill="#14532d">1. Perception</text>
+  <text x="120" y="106" text-anchor="middle" font-size="12" fill="#334155">bilan, menaces, occasions,</text>
+  <text x="120" y="123" text-anchor="middle" font-size="12" fill="#334155">lignes forcées, préparations,</text>
+  <text x="120" y="140" text-anchor="middle" font-size="12" fill="#334155">manœuvres, souvenirs</text>
+  <text x="120" y="162" text-anchor="middle" font-size="11" fill="#15803d">(notées par Stockfish, prof. 10)</text>
+
+  <rect x="255" y="60" width="200" height="120" rx="10" fill="#faf5ff" stroke="#9333ea" stroke-width="1.5"/>
+  <text x="355" y="84" text-anchor="middle" font-weight="bold" fill="#581c87">2. Le LLM choisit</text>
+  <text x="355" y="106" text-anchor="middle" font-size="12" fill="#334155">JSON : plan, type</text>
+  <text x="355" y="123" text-anchor="middle" font-size="12" fill="#334155">(plan / parade / tactique),</text>
+  <text x="355" y="140" text-anchor="middle" font-size="12" fill="#334155">raison, coup</text>
+  <text x="355" y="162" text-anchor="middle" font-size="11" fill="#581c87">réflexion : none / low / high</text>
+
+  <rect x="490" y="60" width="210" height="120" rx="10" fill="#fff1f2" stroke="#e11d48" stroke-width="1.5"/>
+  <text x="595" y="84" text-anchor="middle" font-weight="bold" fill="#881337">3. Anti-gaffe</text>
+  <text x="595" y="106" text-anchor="middle" font-size="12" fill="#334155">après le coup : gains adverses,</text>
+  <text x="595" y="123" text-anchor="middle" font-size="12" fill="#334155">lignes forcées, préparations</text>
+  <text x="595" y="140" text-anchor="middle" font-size="12" fill="#334155">graves (≥ 1,5 pion Stockfish)</text>
+  <text x="595" y="162" text-anchor="middle" font-size="11" fill="#881337">+ « ça te rappelle… » (carnet)</text>
+
+  <rect x="735" y="60" width="205" height="120" rx="10" fill="#fefce8" stroke="#ca8a04" stroke-width="1.5"/>
+  <text x="837" y="84" text-anchor="middle" font-weight="bold" fill="#713f12">4. « Es-tu sûr ? »</text>
+  <text x="837" y="106" text-anchor="middle" font-size="12" fill="#334155">change de coup, ou justifie</text>
+  <text x="837" y="123" text-anchor="middle" font-size="12" fill="#334155">le sacrifice ; s'il confirme,</text>
+  <text x="837" y="140" text-anchor="middle" font-size="12" fill="#334155">l'arbitre Stockfish refuse si</text>
+  <text x="837" y="157" text-anchor="middle" font-size="12" fill="#334155">≥ 2 pions perdus (veto)</text>
+
+  <line x1="220" y1="120" x2="253" y2="120" stroke="#475569" stroke-width="1.8" marker-end="url(#a)"/>
+  <line x1="455" y1="120" x2="488" y2="120" stroke="#475569" stroke-width="1.8" marker-end="url(#a)"/>
+  <line x1="700" y1="120" x2="733" y2="120" stroke="#475569" stroke-width="1.8" marker-end="url(#a)"/>
+  <path d="M 837 59 C 780 44 420 44 360 59" fill="none" stroke="#ca8a04" stroke-width="1.5" marker-end="url(#a)"/>
+  <text x="600" y="54" text-anchor="middle" font-size="11" fill="#713f12">refus ou changement → nouvelle proposition</text>
+
+  <!-- Coup joué -->
+  <rect x="735" y="215" width="205" height="95" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="837" y="239" text-anchor="middle" font-weight="bold" fill="#1e3a8a">5. Coup joué, mesuré</text>
+  <text x="837" y="261" text-anchor="middle" font-size="12" fill="#334155">perte en centipions (Stockfish,</text>
+  <text x="837" y="278" text-anchor="middle" font-size="12" fill="#334155">invisible pour le LLM) :</text>
+  <text x="837" y="295" text-anchor="middle" font-size="12" fill="#334155">imprécision / erreur / gaffe</text>
+  <line x1="837" y1="180" x2="837" y2="213" stroke="#475569" stroke-width="1.8" marker-end="url(#a)"/>
+
+  <rect x="490" y="215" width="210" height="95" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5"/>
+  <text x="595" y="239" text-anchor="middle" font-weight="bold" fill="#7c2d12">6. Diagnostic (erreur ≥ 1 pion)</text>
+  <text x="595" y="261" text-anchor="middle" font-size="12" fill="#334155">AVERTI mais confirmé ?</text>
+  <text x="595" y="278" text-anchor="middle" font-size="12" fill="#334155">menace LISTÉE mais ignorée ?</text>
+  <text x="595" y="295" text-anchor="middle" font-size="12" fill="#334155">PAS VU (calme / profond) ?</text>
+  <line x1="735" y1="262" x2="702" y2="262" stroke="#475569" stroke-width="1.8" marker-end="url(#a)"/>
+
+  <rect x="255" y="215" width="200" height="95" rx="10" fill="#f8fafc" stroke="#64748b" stroke-width="1.5"/>
+  <text x="355" y="239" text-anchor="middle" font-weight="bold" fill="#0f172a">Adversaire</text>
+  <text x="355" y="261" text-anchor="middle" font-size="12" fill="#334155">Stockfish bridé</text>
+  <text x="355" y="278" text-anchor="middle" font-size="12" fill="#334155">(UCI_Elo, ex. 1350)</text>
+  <text x="355" y="295" text-anchor="middle" font-size="12" fill="#334155">joue son coup</text>
+  <path d="M 255 262 Q 120 262 120 182" fill="none" stroke="#475569" stroke-width="1.5" marker-end="url(#a)"/>
+  <text x="140" y="245" font-size="11" fill="#475569">coup suivant</text>
+
+  <!-- Apprentissage -->
+  <rect x="20" y="360" width="920" height="255" rx="12" fill="#fdf4ff" stroke="#a21caf" stroke-width="1.5"/>
+  <text x="480" y="386" text-anchor="middle" font-size="16" font-weight="bold" fill="#701a75">Entre les parties : le carnet de leçons (mémoire d'expérience)</text>
+
+  <rect x="40" y="405" width="270" height="130" rx="10" fill="#fff" stroke="#a21caf"/>
+  <text x="175" y="428" text-anchor="middle" font-weight="bold" fill="#701a75">Analyse d'après-partie</text>
+  <text x="175" y="450" text-anchor="middle" font-size="12" fill="#334155">review.mjs : pour chaque erreur, le LLM</text>
+  <text x="175" y="467" text-anchor="middle" font-size="12" fill="#334155">écrit une leçon GÉNÉRALE :</text>
+  <text x="175" y="484" text-anchor="middle" font-size="12" fill="#334155">titre, leçon, signal d'alerte</text>
+  <text x="175" y="506" text-anchor="middle" font-size="11" fill="#701a75">« Vérifier les menaces avant de développer »</text>
+
+  <rect x="345" y="405" width="270" height="130" rx="10" fill="#fff" stroke="#a21caf"/>
+  <text x="480" y="428" text-anchor="middle" font-weight="bold" fill="#701a75">Signature (calculée par le code)</text>
+  <text x="480" y="450" text-anchor="middle" font-size="12" fill="#334155">situation : phase, structure, rois,</text>
+  <text x="480" y="467" text-anchor="middle" font-size="12" fill="#334155">déséquilibres, menaces en cours</text>
+  <text x="480" y="484" text-anchor="middle" font-size="12" fill="#334155">coup : ignore une menace, prise perdante…</text>
+  <text x="480" y="501" text-anchor="middle" font-size="12" fill="#334155">punition : fourchette, mat, gain…</text>
+  <text x="480" y="522" text-anchor="middle" font-size="11" fill="#701a75">fusion des leçons semblables (compteur)</text>
+
+  <rect x="650" y="405" width="270" height="130" rx="10" fill="#fff" stroke="#a21caf"/>
+  <text x="785" y="428" text-anchor="middle" font-weight="bold" fill="#701a75">Rappel dans la partie suivante</text>
+  <text x="785" y="450" text-anchor="middle" font-size="12" fill="#334155">souvenirs proches dans la perception ;</text>
+  <text x="785" y="467" text-anchor="middle" font-size="12" fill="#334155">« attends, ça te rappelle… » si le coup</text>
+  <text x="785" y="484" text-anchor="middle" font-size="12" fill="#334155">a la même nature ET que la même</text>
+  <text x="785" y="501" text-anchor="middle" font-size="12" fill="#334155">punition est possible</text>
+  <text x="785" y="522" text-anchor="middle" font-size="11" fill="#701a75">utilité mesurée ; oubli des leçons inutiles</text>
+
+  <line x1="310" y1="470" x2="343" y2="470" stroke="#475569" stroke-width="1.8" marker-end="url(#a)"/>
+  <line x1="615" y1="470" x2="648" y2="470" stroke="#475569" stroke-width="1.8" marker-end="url(#a)"/>
+  <path d="M 595 310 L 595 338 L 175 338 L 175 403" fill="none" stroke="#a21caf" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#a)"/>
+  <text x="385" y="332" text-anchor="middle" font-size="11" fill="#701a75">erreurs diagnostiquées</text>
+    <text x="40" y="595" font-size="12" fill="#334155">Rappel humain : on ne revoit jamais deux fois la même position, mais sans cesse les mêmes situations.</text>
+</svg>

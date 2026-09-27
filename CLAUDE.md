@@ -31,6 +31,8 @@ make build-web
 
 ## Architecture
 
+Functional architecture of the coach / analysis brain (diagrams, measured results, known limits): `docs/ARCHITECTURE.md` — keep it updated when changing coach/ or positional/.
+
 This is a **vanilla JS, no-build-step** chess web app served by nginx in Podman. All JS is ES modules loaded directly by the browser — no bundler, no TypeScript.
 
 ### Two pages

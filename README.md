@@ -71,6 +71,8 @@ L'**Analyse positionnelle** est produite par un moteur expert maison (répertoir
 
 ## Architecture
 
+> Architecture fonctionnelle détaillée du coach et du « cerveau d'analyse » (diagrammes, résultats, limites) : **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)**.
+
 ```
 index.html / app.js       ← Lecteur d'ouvertures
 play.html  / play.js      ← Jouer contre Stockfish
