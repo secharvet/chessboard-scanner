@@ -5,13 +5,21 @@
  *
  *   node scripts/llm-plays.mjs --elo 1350 --color white --moves 60
  *   LLM_MODEL=deepseek-v4-pro node scripts/llm-plays.mjs --elo 1600
+ *   --referee stockfish|rules|none   arbitre des coups confirmés malgré une alerte (défaut : stockfish)
+ *   --stop-before 20                 arrêter la partie à la première gaffe avant ce coup
+ *
+ * Alerte anti-gaffe → « es-tu sûr ? » → si le LLM confirme, l'arbitre tranche :
+ *   stockfish : refusé si le coup perd ≥ 2 pions à l'évaluation, sinon sacrifice validé ;
+ *   rules     : refusé si le calcul forcé montre un mat ou une perte ≥ 3 points ;
+ *   none      : le LLM a le dernier mot.
+ * Les vetos sont comptés à part : la perte mesurée n'est plus celle du LLM seul.
  *
  * Rapport : reports/partie-<date>.md (+ .pgn)
  */
 
 import { spawn } from 'node:child_process';
 import { createInterface } from 'node:readline';
-import { mkdirSync, writeFileSync } from 'node:fs';
+import { appendFileSync, mkdirSync, writeFileSync } from 'node:fs';
 import { Chess } from 'chess.js';
 import { loadEnv } from '../coach/env.mjs';
 import { complete, llmConfig } from '../coach/llm.mjs';
@@ -33,6 +41,9 @@ const opt = (name, def) => {
 const ELO = Number(opt('--elo', 1350));
 const LLM_COLOR = opt('--color', 'white') === 'black' ? 'b' : 'w';
 const MAX_MOVES = Number(opt('--moves', 60));
+const REFEREE = opt('--referee', 'stockfish');
+const STOP_BEFORE = Number(opt('--stop-before', 0));
+const VETO_CP = 200;
 const cfg = llmConfig();
 
 // ── Adversaire : Stockfish bridé ──
@@ -87,7 +98,11 @@ function perception(fen, color) {
   ].join('\n\n');
 }
 
-async function llmMove(chess, plan, history) {
+/**
+ * Choisit le coup du LLM, avec contrôle anti-gaffe et arbitrage.
+ * @param {number} before  évaluation (cp, point de vue du LLM) avant le coup
+ */
+async function llmMove(chess, plan, history, before) {
   const fen = chess.fen();
   const legal = chess.moves().map(toFrenchSan);
   const user = `Tu joues les ${LLM_COLOR === 'w' ? 'Blancs' : 'Noirs'}. Phase : ${detectPhase(fen)}.
@@ -99,14 +114,20 @@ ${perception(fen, LLM_COLOR)}
 
 Coups légaux : ${legal.join(' ')}`;
 
+  const oppColor = LLM_COLOR === 'w' ? 'b' : 'w';
+  const forbidden = new Set();
+  const asked = new Set();
+  const events = [];
+  let illegal = 0;
   let lastError = '';
-  let blunderChecked = false;
-  for (let attempt = 0; attempt < 4; attempt++) {
+
+  for (let attempt = 0; attempt < 7; attempt++) {
     const raw = await complete({ system: SYSTEM, user: lastError ? `${user}\n\n${lastError}` : user }, cfg);
     let parsed;
     try {
       parsed = JSON.parse(raw.match(/\{[\s\S]*\}/)?.[0] ?? '');
     } catch {
+      illegal++;
       lastError = 'Ta réponse précédente n\'était pas un JSON valide. Réponds uniquement en JSON.';
       continue;
     }
@@ -118,29 +139,65 @@ Coups légaux : ${legal.join(' ')}`;
         if (m) { played = m; break; }
       } catch { /* essai suivant */ }
     }
-    if (played) {
-      // Contrôle anti-gaffe (une seule fois) : le coup laisse-t-il un gain immédiat à l'adversaire ?
-      const after = new Chess(fen);
-      after.move(played.san);
-      const oppColor = LLM_COLOR === 'w' ? 'b' : 'w';
-      const danger = [
-        ...blunderCheck(after.fen(), LLM_COLOR),
-        ...forcingLines(after.fen(), oppColor, { minGain: 2 }).map((l) => ({ text: `ligne forcée ${describeForcing(l)}` })),
-      ];
-      if (danger.length && !blunderChecked) {
-        blunderChecked = true;
-        warnings++;
-        lastError = `Contrôle anti-gaffe : après ${toFrenchSan(played.san)}, l'adversaire aurait : ${danger.map((d) => d.text).join(' ; ')}. `
-          + 'Confirme ce coup seulement si tu as vérifié que c\'est voulu (sacrifice calculé, ou mal moindre) ; sinon choisis-en un autre.';
-        continue;
-      }
-      return { san: played.san, plan: parsed.plan ?? '', raison: parsed.raison ?? '', illegal: attempt - (blunderChecked ? 1 : 0), warned: blunderChecked };
+    if (!played) {
+      illegal++;
+      lastError = `Le coup « ${wanted} » est illégal. Choisis exactement un coup de la liste des coups légaux.`;
+      continue;
     }
-    lastError = `Le coup « ${wanted} » est illégal. Choisis exactement un coup de la liste des coups légaux.`;
+    const fr = toFrenchSan(played.san);
+    if (forbidden.has(played.san)) {
+      lastError = `${fr} a déjà été refusé par l'arbitre. Choisis un AUTRE coup. Coups refusés : ${[...forbidden].map(toFrenchSan).join(', ')}.`;
+      continue;
+    }
+
+    const after = new Chess(fen);
+    after.move(played.san);
+    const danger = [
+      ...blunderCheck(after.fen(), LLM_COLOR),
+      ...forcingLines(after.fen(), oppColor, { minGain: 2 }).map((l) => ({ text: `ligne forcée ${describeForcing(l)}`, line: l })),
+    ];
+    const ok = { san: played.san, plan: parsed.plan ?? '', raison: parsed.raison ?? '', illegal, events };
+    if (!danger.length) return ok;
+
+    const dangerText = danger.map((d) => d.text).join(' ; ');
+    if (!asked.has(played.san)) {
+      // 1) « Es-tu sûr ? »
+      asked.add(played.san);
+      warnings++;
+      events.push(`⚑ alerte sur ${fr} : ${dangerText}`);
+      lastError = `Contrôle anti-gaffe : après ${fr}, l'adversaire aurait : ${dangerText}.\n`
+        + `Es-tu sûr ? Si c'est un sacrifice, explique dans "raison" ce qu'il rapporte concrètement (mat, gain de matériel supérieur, attaque décisive). Sinon choisis un autre coup.`;
+      continue;
+    }
+
+    // 2) Le LLM confirme : l'arbitre tranche.
+    let veto = false;
+    let verdict = '';
+    if (REFEREE === 'stockfish') {
+      const afterEval = -(await evalFor(after.fen()));
+      const loss = before - afterEval;
+      veto = loss >= VETO_CP;
+      verdict = `Stockfish : ${veto ? 'perd' : 'coûte'} environ ${(loss / 100).toFixed(1)} pion(s)`;
+    } else if (REFEREE === 'rules') {
+      const worst = forcingLines(after.fen(), oppColor, { minGain: 3 })[0];
+      veto = Boolean(worst);
+      verdict = worst ? `calcul forcé : ${describeForcing(worst)}` : 'calcul forcé : pas de perte démontrée';
+    }
+    if (veto) {
+      forbidden.add(played.san);
+      vetoes.push({ n: Math.ceil((history.length + 1) / 2), san: fr, verdict, raison: parsed.raison ?? '' });
+      events.push(`⛔ ${fr} refusé (${verdict}) — justification du LLM : ${parsed.raison ?? ''}`);
+      lastError = `Coup refusé par l'arbitre : ${fr} (${verdict}). Choisis un autre coup.`;
+      continue;
+    }
+    sacrificesOk++;
+    events.push(`✓ ${fr} confirmé malgré l'alerte (${verdict || 'pas d\'arbitre'})`);
+    return ok;
   }
-  // Trois échecs : coup légal au hasard (compté comme erreur du LLM).
-  const any = chess.moves()[0];
-  return { san: any, plan, raison: '(coup de secours après 3 réponses illégales)', illegal: 3 };
+  // Trop d'échecs : premier coup légal non refusé (compté comme défaillance du LLM).
+  const any = chess.moves().find((m) => !forbidden.has(m)) ?? chess.moves()[0];
+  events.push('coup de secours après trop de réponses refusées ou illégales');
+  return { san: any, plan, raison: '(coup de secours)', illegal: illegal + 1, events };
 }
 
 // ── Mesure du coût d'un coup ──
@@ -158,6 +215,14 @@ const log = [];
 let plan = '';
 let planChanges = 0;
 let warnings = 0;
+let sacrificesOk = 0;
+const vetoes = [];
+const stamp = Date.now();
+mkdirSync('reports', { recursive: true });
+const pgnPath = `reports/partie-${stamp}.pgn`;
+const eventsPath = `reports/partie-${stamp}.log`;
+let stopped = false;
+process.on('SIGTERM', () => { stopped = true; writeReport(null); process.exit(0); });
 console.log(`LLM (${cfg.provider}/${cfg.model}) avec les ${LLM_COLOR === 'w' ? 'Blancs' : 'Noirs'} contre Stockfish ${ELO} Elo`);
 
 while (!chess.isGameOver() && chess.history().length < MAX_MOVES * 2) {
@@ -165,7 +230,7 @@ while (!chess.isGameOver() && chess.history().length < MAX_MOVES * 2) {
   if (chess.turn() === LLM_COLOR) {
     const before = await evalFor(fen);
     const t0 = Date.now();
-    const m = await llmMove(chess, plan, chess.history());
+    const m = await llmMove(chess, plan, chess.history(), before);
     const secs = ((Date.now() - t0) / 1000).toFixed(0);
     chess.move(m.san);
     const after = -(await evalFor(chess.fen()));
@@ -173,25 +238,28 @@ while (!chess.isGameOver() && chess.history().length < MAX_MOVES * 2) {
     const tag = loss >= 300 ? 'gaffe' : loss >= 100 ? 'erreur' : loss >= 50 ? 'imprécision' : '';
     if (plan && m.plan && m.plan !== plan) planChanges++;
     plan = m.plan || plan;
-    log.push({ n: Math.ceil(chess.history().length / 2), san: toFrenchSan(m.san), loss, tag, plan: m.plan, raison: m.raison, illegal: Math.max(0, m.illegal), evalAfter: after, warned: m.warned });
-    console.log(`${String(log.at(-1).n).padStart(2)}. ${log.at(-1).san.padEnd(7)} perte ${String(loss).padStart(4)} ${tag.padEnd(11)}${m.warned ? '⚑ ' : '  '}${String(secs).padStart(3)}s ${m.plan.slice(0, 80)}`);
+    const warned = m.events.some((e) => e.startsWith('⚑'));
+    const vetoed = m.events.filter((e) => e.startsWith('⛔')).length;
+    log.push({ n: Math.ceil(chess.history().length / 2), san: toFrenchSan(m.san), loss, tag, plan: m.plan, raison: m.raison, illegal: m.illegal, evalAfter: after, warned, vetoed, events: m.events });
+    console.log(`${String(log.at(-1).n).padStart(2)}. ${log.at(-1).san.padEnd(7)} perte ${String(loss).padStart(4)} ${tag.padEnd(11)}${warned ? '⚑' : ' '}${vetoed ? `⛔${vetoed}` : '  '} ${String(secs).padStart(3)}s ${m.plan.slice(0, 80)}`);
+    for (const e of m.events) console.log(`      ${e.slice(0, 200)}`);
+    appendFileSync(eventsPath, `${log.at(-1).n}. ${log.at(-1).san} (perte ${loss}) — plan : ${m.plan} — raison : ${m.raison}\n${m.events.map((e) => `   ${e}`).join('\n')}\n`);
+    writeFileSync(pgnPath, chess.pgn());
+    if (STOP_BEFORE && tag === 'gaffe' && log.at(-1).n < STOP_BEFORE) {
+      console.log(`Arrêt : gaffe au coup ${log.at(-1).n} (avant le coup ${STOP_BEFORE}).`);
+      break;
+    }
   } else {
     const uci = await opponent.move(fen);
     chess.move({ from: uci.slice(0, 2), to: uci.slice(2, 4), promotion: uci[4] });
+    writeFileSync(pgnPath, chess.pgn());
   }
 }
 opponent.stop();
 
 // ── Bilan ──
-const result = chess.isCheckmate()
-  ? (chess.turn() === LLM_COLOR ? 'défaite (mat)' : 'victoire (mat)')
-  : chess.isGameOver() ? 'nulle' : `arrêtée au coup ${Math.ceil(chess.history().length / 2)}`;
 const finalEval = await evalFor(chess.fen()) * (chess.turn() === LLM_COLOR ? 1 : -1);
 judge.stop();
-
-const acpl = Math.round(log.reduce((a, x) => a + x.loss, 0) / Math.max(1, log.length));
-const count = (t) => log.filter((x) => x.tag === t).length;
-const illegal = log.reduce((a, x) => a + x.illegal, 0);
 
 // Cohérence du plan, jugée par le relecteur.
 let coherence = null;
@@ -200,27 +268,37 @@ try {
   const raw = await complete({
     system: `Tu es entraîneur d'échecs. On te donne, coup par coup, le plan annoncé par un joueur et le coup joué. Juge la COHÉRENCE stratégique : le joueur suit-il ses plans, ses changements de plan sont-ils justifiés, ses coups servent-ils le plan annoncé, applique-t-il des principes justes ? Réponds UNIQUEMENT en JSON : {"note": 0-10, "points_forts": ["..."], "points_faibles": ["..."]}`,
     user: log.map((x) => `${x.n}. ${x.san} (perte ${x.loss} cp${x.tag ? `, ${x.tag}` : ''}) — plan : ${x.plan} — raison : ${x.raison}`).join('\n'),
-  }, jcfg);
+  }, judgeConfig());
   coherence = JSON.parse(raw.match(/\{[\s\S]*\}/)?.[0] ?? 'null');
 } catch (e) {
   coherence = { note: null, points_faibles: [`relecteur indisponible : ${e.message}`] };
 }
+writeReport(coherence, finalEval);
 
-const pgn = chess.pgn();
-const lines = [
-  `# Partie : LLM (${cfg.model}) contre Stockfish ${ELO} Elo`, '',
-  `- LLM avec les ${LLM_COLOR === 'w' ? 'Blancs' : 'Noirs'} ; résultat : **${result}** ; éval finale (pour le LLM) : ${(finalEval / 100).toFixed(1)}`,
-  `- Perte moyenne par coup (ACPL) : **${acpl}** ; gaffes : ${count('gaffe')}, erreurs : ${count('erreur')}, imprécisions : ${count('imprécision')}`,
-  `- Réponses illégales : ${illegal} ; changements de plan : ${planChanges} ; alertes anti-gaffe : ${warnings}`,
-  coherence ? `- Cohérence stratégique (relecteur) : **${coherence.note ?? '?'}/10**` : '',
-  '', ...(coherence?.points_forts ?? []).map((x) => `- ✅ ${x}`), ...(coherence?.points_faibles ?? []).map((x) => `- ⚠ ${x}`),
-  '', '## Coups du LLM', '', '| Coup | Perte (cp) | | Plan annoncé | Raison |', '|---|---|---|---|---|',
-  ...log.map((x) => `| ${x.n}. ${x.san}${x.warned ? ' ⚑' : ''} | ${x.loss} | ${x.tag} | ${x.plan.replace(/\|/g, '/')} | ${x.raison.replace(/\|/g, '/')} |`),
-  '', '## PGN', '', '```', pgn, '```',
-];
-mkdirSync('reports', { recursive: true });
-const stamp = Date.now();
-writeFileSync(`reports/partie-${stamp}.md`, lines.join('\n'));
-writeFileSync(`reports/partie-${stamp}.pgn`, pgn);
-console.log(`\n${result} — ACPL ${acpl}, gaffes ${count('gaffe')}, erreurs ${count('erreur')}, imprécisions ${count('imprécision')}, illégaux ${illegal}, cohérence ${coherence?.note ?? '?'}/10`);
-console.log(`Rapport : reports/partie-${stamp}.md`);
+function writeReport(coherence, finalEval = null) {
+  const result = chess.isCheckmate()
+    ? (chess.turn() === LLM_COLOR ? 'défaite (mat)' : 'victoire (mat)')
+    : chess.isGameOver() ? 'nulle' : `arrêtée au coup ${Math.ceil(chess.history().length / 2)}`;
+  const acpl = Math.round(log.reduce((a, x) => a + x.loss, 0) / Math.max(1, log.length));
+  const count = (t) => log.filter((x) => x.tag === t).length;
+  const illegal = log.reduce((a, x) => a + x.illegal, 0);
+  const pgn = chess.pgn();
+  const lines = [
+    `# Partie : LLM (${cfg.model}) contre Stockfish ${ELO} Elo`, '',
+    `- LLM avec les ${LLM_COLOR === 'w' ? 'Blancs' : 'Noirs'} ; résultat : **${result}**${finalEval != null ? ` ; éval finale (pour le LLM) : ${(finalEval / 100).toFixed(1)}` : ''}`,
+    `- Arbitre : ${REFEREE} ; vetos : **${vetoes.length}** ; coups confirmés malgré une alerte : ${sacrificesOk} ; alertes : ${warnings}`,
+    `- Perte moyenne par coup joué (ACPL) : **${acpl}** ; gaffes : ${count('gaffe')}, erreurs : ${count('erreur')}, imprécisions : ${count('imprécision')}`,
+    `- Réponses illégales : ${illegal} ; changements de plan : ${planChanges}`,
+    coherence ? `- Cohérence stratégique (relecteur) : **${coherence.note ?? '?'}/10**` : '',
+    '', ...(coherence?.points_forts ?? []).map((x) => `- ✅ ${x}`), ...(coherence?.points_faibles ?? []).map((x) => `- ⚠ ${x}`),
+    '', '## Gaffes voulues bloquées par l\'arbitre', '',
+    ...(vetoes.length ? vetoes.map((v) => `- coup ${v.n} : ${v.san} — ${v.verdict} — justification : ${v.raison}`) : ['- aucune']),
+    '', '## Coups du LLM', '', '| Coup | Perte (cp) | | Plan annoncé | Raison | Alertes / arbitrage |', '|---|---|---|---|---|---|',
+    ...log.map((x) => `| ${x.n}. ${x.san} | ${x.loss} | ${x.tag} | ${x.plan.replace(/\|/g, '/')} | ${x.raison.replace(/\|/g, '/')} | ${x.events.join(' ; ').replace(/\|/g, '/')} |`),
+    '', '## PGN', '', '```', pgn, '```',
+  ];
+  writeFileSync(`reports/partie-${stamp}.md`, lines.join('\n'));
+  writeFileSync(pgnPath, pgn);
+  console.log(`\n${result} — ACPL ${acpl}, gaffes ${count('gaffe')}, erreurs ${count('erreur')}, imprécisions ${count('imprécision')}, vetos ${vetoes.length}, illégaux ${illegal}, cohérence ${coherence?.note ?? '?'}/10`);
+  console.log(`Rapport : reports/partie-${stamp}.md`);
+}
