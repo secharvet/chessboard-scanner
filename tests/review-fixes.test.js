@@ -44,4 +44,9 @@ describe('Relecture des parties commentées', () => {
     assert.equal(verifyCitations('Il te faut trouver un abri [L1].', facts).problems.length, 0);
     assert.equal(verifyCitations('C\'est mat [L1].', facts).problems.length, 1);
   });
+  it('clouage d\'un pion au roi : signalé seulement s\'il lui retire un coup', () => {
+    assert.match(texts('4k3/8/8/2b5/8/8/5P2/6K1 w - - 0 1'), /Pion blanc en f2 cloué/); // f3 libre
+    assert.ok(!/cloué/.test(texts('4k3/8/8/2b5/8/5N2/5P2/6K1 w - - 0 1'))); // Cf3 bloque : rien à perdre
+    assert.match(texts('4k3/4q3/8/8/3p4/4P3/8/4K3 w - - 0 1'), /Pion blanc en e3 cloué/); // exd4 interdit
+  });
 });

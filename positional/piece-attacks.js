@@ -52,6 +52,25 @@ export function buildTacticalFacts(fen) {
     }
   }
 
+  /**
+   * Le clouage retire-t-il au pion un coup qu'il aurait eu ? Avance (hors de la ligne du clouage)
+   * ou prise d'une pièce adverse hors de cette ligne.
+   */
+  const pawnPinBites = (p, dir) => {
+    const f = 'abcdefgh'.indexOf(p.square[0]);
+    const r = Number(p.square[1]);
+    const step = p.color === 'w' ? 1 : -1;
+    const onRay = (df, dr) => (dir[0] === 0 ? df === 0 : dir[1] === 0 ? dr === 0 : df * dir[1] === dr * dir[0] && df !== 0);
+    const ahead = `${p.square[0]}${r + step}`;
+    if (r + step >= 1 && r + step <= 8 && !at[ahead] && !onRay(0, step)) return true;
+    for (const df of [-1, 1]) {
+      const file = 'abcdefgh'[f + df];
+      const target = file && at[`${file}${r + step}`];
+      if (target && target.color !== p.color && !onRay(df, step)) return true;
+    }
+    return false;
+  };
+
   // ── Motifs de ligne : clouage, enfilade, découverte ──
   for (const s of pieces) {
     for (const dir of sliderDirs(s)) {
@@ -62,7 +81,10 @@ export function buildTacticalFacts(fen) {
       const canTakePinner = p1.type !== 'n' && attacks.get(p1).includes(s.square);
       if (p1.color !== s.color && p2.color !== s.color && p1.type !== 'k' && !canTakePinner) {
         if (p2.type === 'k') {
-          out.push(token('CLOUAGE', { square: p1.square, color: p1.color, type: p1.type, by: s.square, byType: s.type }));
+          // Un pion cloué qui ne pourrait de toute façon ni avancer ni prendre (f2 bloqué par le
+          // cavalier f3 dans l'Italienne) : le clouage ne lui retire rien, ce n'est pas un fait utile.
+          if (p1.type !== 'p' || pawnPinBites(p1, dir))
+            out.push(token('CLOUAGE', { square: p1.square, color: p1.color, type: p1.type, by: s.square, byType: s.type }));
         } else if (p1.type !== 'p' && VALUE[p2.type] > VALUE[p1.type] && VALUE[p2.type] > VALUE[s.type]) {
           // Un pion « cloué » sur une pièce (pas sur le roi) : bruit pour un débutant, on l'ignore.
           out.push(token('CLOUAGE_RELATIF', {

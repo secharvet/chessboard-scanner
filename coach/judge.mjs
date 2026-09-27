@@ -13,6 +13,7 @@ Ta tâche : repérer les erreurs de FOND dans l'explication.
 - affirmation absente de l'analyse et non évidente ;
 - raisonnement contraire aux principes échiquéens établis (ex. attaquer du côté de son propre roi en roques opposés, conseiller d'échanger quand on a le pion isolé, promettre un gain quand l'évaluation est nulle) ;
 - recommandation qui ne correspond pas aux lignes du moteur.
+Datation des faits : « [Après la ligne N, au bout de « X »] » décrit la position juste après la séquence X (qui peut s'arrêter avant la fin de la ligne affichée), pas après toute la ligne : ne compte pas comme une erreur un fait cité avec cette datation.
 Ignore le style, la longueur et les formulations maladroites mais justes.
 Réponds UNIQUEMENT en JSON : {"erreurs":[{"phrase":"...","raison":"...","gravite":"grave|mineure"}],"note":0-10}
 La note mesure la justesse globale (10 = rien à redire).`;
