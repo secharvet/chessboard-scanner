@@ -10,6 +10,7 @@
 
 import { Chess } from 'chess.js';
 import { buildAllFacts, detectPhase } from '../positional/index.js';
+import { buildAttackMap } from '../positional/attack-map.js';
 import { renderToken, tokenWeight } from '../positional/interpreter.js';
 import { tokenKey } from '../positional/tokens.js';
 import { toFrenchSan } from './notation.mjs';
@@ -119,7 +120,8 @@ function describeLine(fen, line, player, toMove) {
     endKings: kingState(endFen),
     changes: diffFacts(fen, endFen),
     immediateSan: imm < end ? numberedSan(fen, steps.slice(0, imm).map((s) => s.san)) : null,
-    immediate: imm < end ? diffFacts(fen, immFen) : null,
+    immediate: imm < end ? diffFacts(fen, immFen, { tactical: true }) : null,
+    basics: firstMoveBasics(fen, steps[0]),
     motifs: lineMotifs(fen, line.pv.slice(0, steps.length)).map((m) => `${m.san} : ${m.motifs.join(', ')}`),
     material: materialBalance(endFen) - materialBalance(fen),
   };
@@ -161,6 +163,34 @@ async function findThreat(fen, best, engine, toMove, player) {
   };
 }
 
+// ── Effets élémentaires du premier coup (pour débutants) ──
+
+/**
+ * Ce que le coup fait « à l'œil » : cases centrales contrôlées, pièces libérées (mobilité gagnée).
+ * @param {string} fen
+ * @param {{ fen: string } | undefined} step  position après le coup
+ */
+function firstMoveBasics(fen, step) {
+  if (!step) return [];
+  const mover = fen.split(' ')[1];
+  const NAME = { n: 'cavalier', b: 'fou', r: 'tour', q: 'dame' };
+  const before = buildAttackMap(fen);
+  const after = buildAttackMap(step.fen);
+  const out = [];
+  const center = ['d4', 'e4', 'd5', 'e5'];
+  const ctl = (map) => center.filter((s) => map.attackersOf(s, mover).length > 0 || (map.at[s]?.color === mover && map.at[s].type === 'p'));
+  const gained = ctl(after).filter((s) => !ctl(before).includes(s));
+  if (gained.length) out.push(`contrôle ou occupe désormais ${gained.length > 1 ? 'les cases centrales' : 'la case centrale'} ${gained.join(', ')}`);
+  for (const p of after.pieces) {
+    if (p.color !== mover || !NAME[p.type]) continue;
+    const old = before.pieces.find((q) => q.square === p.square && q.type === p.type && q.color === mover);
+    if (!old) continue; // pièce qui vient de bouger : pas une « libération »
+    const delta = after.mobility(p) - before.mobility(old);
+    if (delta >= 3) out.push(`libère ${NAME[p.type] === 'dame' ? 'la' : NAME[p.type] === 'tour' ? 'la' : 'le'} ${NAME[p.type]} ${p.square} (+${delta} cases)`);
+  }
+  return out;
+}
+
 // ── Structures ──
 
 /** Plans classiques des structures reconnues, formulés du point de vue du joueur. */
@@ -186,9 +216,11 @@ function describeStructures(facts, player) {
 // ── Faits ──
 
 /** Faits qui apparaissent / disparaissent entre deux positions. */
-function diffFacts(fenBefore, fenAfter) {
-  const before = buildAllFacts(fenBefore).filter((f) => !DIFF_IGNORED.has(f.id));
-  const after = buildAllFacts(fenAfter).filter((f) => !DIFF_IGNORED.has(f.id));
+function diffFacts(fenBefore, fenAfter, { tactical = false } = {}) {
+  // Pour l'effet immédiat d'un coup, on garde les faits tactiques (pièce qui n'est plus en prise…).
+  const ignored = (f) => DIFF_IGNORED.has(f.id) && !(tactical && f.id === 'PIECE_MENACEE');
+  const before = buildAllFacts(fenBefore).filter((f) => !ignored(f));
+  const after = buildAllFacts(fenAfter).filter((f) => !ignored(f));
   const beforeKeys = new Set(before.map(tokenKey));
   const afterKeys = new Set(after.map(tokenKey));
 
@@ -356,6 +388,7 @@ function renderContext(d) {
     const after = `[Après la ligne ${i + 1}, au bout de « ${c.horizonSan} »]`;
     cite(`${after} ${formatMaterial(c.material, d.player)} ; ${c.endKings}.`, `${L}m`);
     (c.motifs ?? []).forEach((m, j) => cite(`[Pendant la ligne ${i + 1}] Motif tactique : ${m}.`, `${L}t${j + 1}`));
+    if (c.basics?.length) cite(`[Effet élémentaire de ${c.move}] ${c.move} ${c.basics.join(' ; ')}.`, `${L}b`);
     if (c.immediate) {
       const now = `[Juste après « ${c.immediateSan} » — effet du coup lui-même]`;
       c.immediate.gained.forEach((g, j) => cite(`${now} apparaît : ${g}`, `${L}i+${j + 1}`));

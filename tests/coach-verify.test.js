@@ -63,3 +63,11 @@ describe('Portée d’une notion', () => {
     assert.deepEqual(r.problems, []);
   });
 });
+
+describe('Contrôle case par case limité aux notions de case', () => {
+  it('« …d3 préparerait Df2#, qui est mat, et …Cf2 prendrait ta dame en d1 » : pas de fausse alerte', () => {
+    const f = { P1: '…d3 préparerait Df2# est mat.', P2: '…Cf2 préparerait Cxd1 prend la dame en d1.' };
+    const r = verifyCitations('Attention : …d3 préparerait Df2#, qui est mat, et …Cf2 prendrait ta dame en d1 [P1][P2].', f);
+    assert.deepEqual(r.problems, []);
+  });
+});

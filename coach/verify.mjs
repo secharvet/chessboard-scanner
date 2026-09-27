@@ -46,6 +46,9 @@ const CONCEPTS = [
   ['développement', /développ/i],
 ];
 
+/** Notions qui qualifient une case précise (contrôle case par case). */
+const SQUARE_BOUND = /isolé|arriéré|doublé|passé|avant-poste|case faible|clou|piégé|complexe/i;
+
 /** @param {string} text */
 export function splitSentences(text) {
   return text
@@ -92,7 +95,9 @@ export function verifyCitations(answer, facts) {
         continue;
       }
       // Les cases qui SUIVENT la notion dans la proposition (« isolés en a7, c7 et c6 ») doivent chacune
-      // figurer dans une source qui porte cette notion ET cette case.
+      // figurer dans une source qui porte cette notion ET cette case — seulement pour les notions
+      // qui qualifient une case (pas « mat » ni « en prise », suivis d'autres idées).
+      if (!SQUARE_BOUND.test(word)) continue;
       const at = bare.search(new RegExp(word, 'i'));
       if (at < 0) continue;
       // Portée : jusqu'à la ponctuation forte ou jusqu'à la notion suivante (« clouage en c3, … case faible en c5 »).
