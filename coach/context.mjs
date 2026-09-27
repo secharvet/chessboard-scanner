@@ -25,7 +25,7 @@ const PIECE_VALUE = { p: 1, n: 3, b: 3, r: 5, q: 9, k: 0 };
 
 /** Faits trop volatils ou trop bavards pour décrire un plan. */
 const DIFF_IGNORED = new Set([
-  'PHASE', 'PIECE_MENACEE', 'EGALITE_MATERIEL', 'AVANTAGE_MATERIEL',
+  'PHASE', 'PIECE_MENACEE', 'CASE_FAIBLE', 'EGALITE_MATERIEL', 'AVANTAGE_MATERIEL',
   'NOMBRE_ILOTS_BLANC', 'NOMBRE_ILOTS_NOIR', 'PIONS_ROI_BOUCLIER', 'ROQUES_OPPOSES',
 ]);
 const STATIC_IGNORED = new Set(['STRUCTURE', 'ROQUES_OPPOSES', 'PHASE', 'EGALITE_MATERIEL', 'NOMBRE_ILOTS_BLANC', 'NOMBRE_ILOTS_NOIR']);
@@ -178,9 +178,12 @@ function firstMoveBasics(fen, step) {
   const after = buildAttackMap(step.fen);
   const out = [];
   const center = ['d4', 'e4', 'd5', 'e5'];
-  const ctl = (map) => center.filter((s) => map.attackersOf(s, mover).length > 0 || (map.at[s]?.color === mover && map.at[s].type === 'p'));
-  const gained = ctl(after).filter((s) => !ctl(before).includes(s));
-  if (gained.length) out.push(`contrôle ou occupe désormais ${gained.length > 1 ? 'les cases centrales' : 'la case centrale'} ${gained.join(', ')}`);
+  const occ = (map) => center.filter((s) => map.at[s]?.color === mover);
+  const ctl = (map) => center.filter((s) => map.attackersOf(s, mover).length > 0);
+  const occupied = occ(after).filter((s) => !occ(before).includes(s));
+  const controlled = ctl(after).filter((s) => !ctl(before).includes(s) && !occupied.includes(s));
+  if (occupied.length) out.push(`occupe la case centrale ${occupied.join(', ')}`);
+  if (controlled.length) out.push(`contrôle (attaque) ${controlled.length > 1 ? 'les cases centrales' : 'la case centrale'} ${controlled.join(', ')}`);
   for (const p of after.pieces) {
     if (p.color !== mover || !NAME[p.type]) continue;
     const old = before.pieces.find((q) => q.square === p.square && q.type === p.type && q.color === mover);
@@ -228,8 +231,8 @@ function diffFacts(fenBefore, fenAfter, { tactical = false } = {}) {
   const gained = after.filter((f) => !beforeKeys.has(tokenKey(f))).sort(byWeight);
   const lost = before.filter((f) => !afterKeys.has(tokenKey(f))).sort(byWeight);
   return {
-    gained: dedupeText(gained).slice(0, 6),
-    lost: dedupeText(lost).slice(0, 6),
+    gained: dedupeText(gained).slice(0, 4),
+    lost: dedupeText(lost).slice(0, 4),
   };
 }
 
@@ -386,7 +389,14 @@ function renderContext(d) {
     out.push(`### ${i + 1}. ${c.move} — ${formatEval(c.evalPlayer)}`);
     cite(`Ligne ${i + 1} : ${c.pvSan} (${formatEval(c.evalPlayer)}).`, L);
     const after = `[Après la ligne ${i + 1}, au bout de « ${c.horizonSan} »]`;
-    cite(`${after} ${formatMaterial(c.material, d.player)} ; ${c.endKings}.`, `${L}m`);
+    // Matériel perdu (ou gagné) mais évaluation proche de la meilleure : compensation, pas une gaffe.
+    const forPlayer = d.player === 'w' ? c.material : -c.material;
+    const best = d.candidates[0]?.evalPlayer;
+    const close = best && best.type === 'cp' && c.evalPlayer.type === 'cp' && best.value - c.evalPlayer.value <= 50;
+    const comp = forPlayer <= -1 && close
+      ? " (le moteur juge ce matériel compensé : activité, initiative ou attaque — ce n'est pas une perte sèche)"
+      : '';
+    cite(`${after} ${formatMaterial(c.material, d.player)}${comp} ; ${c.endKings}.`, `${L}m`);
     (c.motifs ?? []).forEach((m, j) => cite(`[Pendant la ligne ${i + 1}] Motif tactique : ${m}.`, `${L}t${j + 1}`));
     if (c.basics?.length) cite(`[Effet élémentaire de ${c.move}] ${c.move} ${c.basics.join(' ; ')}.`, `${L}b`);
     if (c.immediate) {

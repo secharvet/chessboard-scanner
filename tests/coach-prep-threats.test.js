@@ -36,3 +36,15 @@ describe('Menaces à deux coups calmes', () => {
     assert.deepEqual(preparedThreats2('rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1', 'w'), []);
   });
 });
+
+describe('Notation des idées adverses', () => {
+  it('pas de « … » devant un coup blanc (idée Fb5 contre le cavalier c6)', () => {
+    const t = preparedThreats('4k3/8/2n5/8/8/8/8/4KB2 b - - 0 1', 'b');
+    assert.ok(t.length > 0);
+    assert.ok(t.every((x) => !x.text.startsWith('…')));
+  });
+  it('« … » devant un coup noir', () => {
+    const t = preparedThreats('4k3/6p1/7p/8/5B2/8/8/4K3 w - - 0 1', 'w');
+    assert.ok(t.length > 0 && t.every((x) => x.text.startsWith('…')));
+  });
+});

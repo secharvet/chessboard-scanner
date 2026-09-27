@@ -81,3 +81,14 @@ describe('Bilan', () => {
     assert.ok(b.b.weaknesses.some((s) => /Dernière rangée faible/.test(s)));
   });
 });
+
+describe('Découverte par un pion', () => {
+  it('pion a2 devant la tour a1 et une dame en a6 : pas de découverte (le pion reste sur sa colonne)', () => {
+    const t = buildTacticalFacts('4k3/8/q7/8/8/8/P7/R3K3 w - - 0 1');
+    assert.ok(!has(t, 'DECOUVERTE_POSSIBLE', { mover: 'a2' }));
+  });
+  it('même position mais le pion peut prendre en b3 : découverte possible', () => {
+    const t = buildTacticalFacts('4k3/8/q7/8/8/1n6/P7/R3K3 w - - 0 1');
+    assert.ok(has(t, 'DECOUVERTE_POSSIBLE', { mover: 'a2', target: 'a6' }));
+  });
+});

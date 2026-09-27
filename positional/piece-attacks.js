@@ -77,7 +77,10 @@ export function buildTacticalFacts(fen) {
       }
 
       // Découverte : une pièce amie masque une ligne vers le roi, la dame ou une pièce non défendue.
-      if (p1.color === s.color && p2.color !== s.color
+      // Un pion ne quitte sa colonne qu'en prenant : sur une ligne verticale, il faut une prise possible.
+      const pawnStuck = p1.type === 'p' && dir[0] === 0
+        && !attacks.get(p1).some((sqr) => at[sqr] && at[sqr].color !== p1.color);
+      if (!pawnStuck && p1.color === s.color && p2.color !== s.color
         && (p2.type === 'k' || p2.type === 'q' || (p2.type !== 'p' && !isDefended(p2.square, p2.color)))) {
         out.push(token('DECOUVERTE_POSSIBLE', {
           color: s.color, slider: s.square, mover: p1.square, target: p2.square, check: p2.type === 'k',

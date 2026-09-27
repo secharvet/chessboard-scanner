@@ -262,8 +262,13 @@ export function renderToken(t) {
     case 'PIONS_ROI_BOUCLIER':
       return `Bouclier de pions intact devant le roi ${colorLabel(/** @type {string} */ (p.color))}.`;
 
-    case 'PIECE_MENACEE':
-      return `Pièce ${colorLabel(/** @type {string} */ (p.color))} en prise en ${p.square} (${p.type}${p.defended === false ? ', non défendue' : ', attaquée par une pièce de moindre valeur'}).`;
+    case 'PIECE_MENACEE': {
+      // Nommer la pièce (« ta dame en b6 », pas « ta pièce ») : c'est ce qui parle à un débutant.
+      const name = PIECE_FR[/** @type {string} */ (p.type)] ?? 'Pièce';
+      const fem = p.type === 'q' || p.type === 'r';
+      const col = p.color === 'w' ? (fem ? 'blanche' : 'blanc') : (fem ? 'noire' : 'noir');
+      return `${name} ${col} en prise en ${p.square} (${p.defended === false ? `non ${fem ? 'défendue' : 'défendu'}` : `${fem ? 'attaquée' : 'attaqué'} par une pièce de moindre valeur`}).`;
+    }
 
     case 'CLOUAGE': {
       // Sans ambiguïté : QUI est cloué, et PAR QUI (« clouage noirs » se lisait « clouage des Noirs »).
