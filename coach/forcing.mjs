@@ -11,6 +11,9 @@
 import { Chess } from 'chess.js';
 import { toFrenchSan } from './notation.mjs';
 
+// Sous-promotions ignorées : pour un débutant, « bxa1=T+ » est du bruit, la menace est la promotion en dame.
+const queenOnly = (m) => !m.promotion || m.promotion === 'q';
+
 const VALUE = { p: 1, n: 3, b: 3, r: 5, q: 9, k: 0 };
 const MATE = 1000;
 
@@ -57,7 +60,7 @@ export function forcingLines(fen, side, opts = {}) {
     }
     if (ply >= maxPly || nodes > maxNodes) return { score: inCheck ? stand - 1 : stand, pv: [] };
 
-    let moves = chess.moves({ verbose: true });
+    let moves = chess.moves({ verbose: true }).filter(queenOnly);
     if (!inCheck) {
       moves = moves.filter((m) => m.captured || m.promotion || (checksAllowed && /[+#]/.test(m.san)));
     }
@@ -82,7 +85,7 @@ export function forcingLines(fen, side, opts = {}) {
 
   const base = material(chess);
   const results = [];
-  for (const m of chess.moves({ verbose: true }).filter((x) => x.captured || x.promotion || /[+#]/.test(x.san))) {
+  for (const m of chess.moves({ verbose: true }).filter(queenOnly).filter((x) => x.captured || x.promotion || /[+#]/.test(x.san))) {
     chess.move(m.san);
     const child = search(1, -MATE, MATE, true);
     chess.undo();

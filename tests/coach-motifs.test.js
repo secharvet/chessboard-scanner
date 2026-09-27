@@ -11,19 +11,23 @@ const all = (res) => res.flatMap((r) => r.motifs).join(' | ');
 describe('Motifs de ligne', () => {
   it('fourchette royale Cc7+ puis gain de la tour', () => {
     const m = all(lineMotifs('r3k3/8/8/1N6/8/8/8/4K3 w - - 0 1', ['b5c7', 'e8d7', 'c7a8', 'd7c6']));
-    assert.match(m, /fourchette \(a8,e8\)/);
+    assert.match(m, /fourchette sur la tour noire en a8 et le roi noir en e8|fourchette sur le roi noir en e8 et la tour noire en a8/);
     assert.match(m, /gain : prend la tour en a8/);
   });
   it('piège de l’éléphant : découverte puis coup intermédiaire Fb4+', () => {
     const fen = 'r1bqkb1r/pppn1ppp/5n2/3N2B1/3P4/8/PP2PPPP/R2QKBNR b KQkq - 0 6';
     const res = lineMotifs(fen, ['f6d5', 'g5d8', 'f8b4', 'd1d2', 'b4d2', 'e1d2', 'e8d8']);
-    assert.match(all(res), /attaque à la découverte sur g5/);
+    assert.match(all(res), /attaque à la découverte sur le fou blanc en g5/);
     assert.match(all(res), /coup intermédiaire \(Fb4\+\) au lieu de reprendre en d8/);
     assert.ok(!/au lieu de reprendre en d2/.test(all(res)));
   });
   it('clouage exécuté par Te8 sur le fou e4', () => {
     const m = all(lineMotifs('r7/8/8/2k5/4B3/8/8/4K3 b - - 0 1', ['a8e8', 'e1f2', 'e8e4']));
-    assert.match(m, /clouage de la pièce en e4 sur le roi/);
+    assert.match(m, /clouage du fou blanc en e4 sur son roi/);
+  });
+  it('un pion cloué sur une pièce n\'est pas un motif (g3 puis Fg2 contre b7/a8)', () => {
+    const m = all(lineMotifs('rnbqkbnr/pppp1ppp/8/4p3/2P5/8/PP1PPPPP/RNBQKBNR w KQkq - 0 2', ['g2g3', 'g8f6', 'f1g2', 'd7d5']));
+    assert.ok(!/clouage/.test(m), m);
   });
   it('sacrifice : la pièce jouée est reprise et coûte du matériel', () => {
     // Fxh7+ Rxh7 : le fou est donné pour un pion.

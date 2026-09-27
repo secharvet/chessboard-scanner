@@ -25,7 +25,9 @@ const CONCEPTS = [
   ['case faible|trou', /case faible|trou|complexe/i],
   ['complexe', /complexe/i],
   ['pion passé', /passé/i],
-  ['isolé|PDI', /isolé|PDI/i],
+  ['isolé', /isolé/i],
+  // « Pion dame isolé » est une STRUCTURE (pion d isolé avec des pièces) : il faut un fait [S] qui la nomme.
+  ['pion dame isolé|PDI', /pion[- ]dame isolé|PDI/i],
   ['arriéré', /arriéré/i],
   ['doublé|doublon', /doublon|doublé/i],
   ['7e rangée|septième', /7e rangée/i],

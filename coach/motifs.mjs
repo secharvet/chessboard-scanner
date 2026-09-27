@@ -8,6 +8,7 @@
  */
 
 import { Chess } from 'chess.js';
+import { namedPiece } from '../positional/interpreter.js';
 import { buildTacticalFacts } from '../positional/piece-attacks.js';
 import { toFrenchSan } from './notation.mjs';
 
@@ -21,6 +22,16 @@ const THE = { p: 'le pion', n: 'le cavalier', b: 'le fou', r: 'la tour', q: 'la 
  * @param {number} [maxMoves]  nombre de coups du camp au trait à analyser
  * @returns {{ ply: number, san: string, motifs: string[] }[]}
  */
+/** « de le fou » → « du fou ». */
+const de = (named) => named.replace(/^le /, 'du ').replace(/^la /, 'de la ');
+
+/** Cibles d'une fourchette, nommées : « la tour noire en d1 et la tour noire en h1 ». */
+function targetsNamed(params, color) {
+  const types = String(params.targetTypes ?? '').split(',');
+  const names = String(params.targets ?? '').split(',').filter(Boolean).map((s, i) => namedPiece(types[i], color, s));
+  return names.length > 1 ? `${names.slice(0, -1).join(', ')} et ${names.at(-1)}` : names[0] ?? 'deux cibles';
+}
+
 export function lineMotifs(fen, pvUci, maxMoves = 3) {
   const chess = new Chess(fen);
   const mover = chess.turn();
@@ -82,21 +93,21 @@ export function lineMotifs(fen, pvUci, maxMoves = 3) {
     if (disco) {
       const checkByMover = san.includes('+') && isCheckFrom(after, move.to);
       if (disco.params.check && checkByMover) motifs.push('échec double');
-      else motifs.push(disco.params.check ? 'échec à la découverte' : `attaque à la découverte sur ${disco.params.target}`);
+      else motifs.push(disco.params.check ? 'échec à la découverte' : `attaque à la découverte sur ${namedPiece(disco.params.targetType, opp, disco.params.target)}`);
     }
 
     for (const t of movedIsTaken ? [] : fresh) {
       if (t.id === 'FOURCHETTE' && t.params.color === mover && t.params.square === move.to) {
-        motifs.push(`fourchette (${t.params.targets})`);
+        motifs.push(`fourchette sur ${targetsNamed(t.params, opp)}`);
       }
       if (t.id === 'CLOUAGE' && t.params.color === opp && t.params.by === move.to) {
-        motifs.push(`clouage de la pièce en ${t.params.square} sur le roi`);
+        motifs.push(`clouage ${de(namedPiece(t.params.type, opp, t.params.square))} sur son roi`);
       }
       if (t.id === 'CLOUAGE_RELATIF' && t.params.color === opp && t.params.by === move.to) {
-        motifs.push(`clouage de la pièce en ${t.params.square} (pièce plus chère derrière en ${t.params.behind})`);
+        motifs.push(`clouage ${de(namedPiece(t.params.type, opp, t.params.square))} (derrière : ${namedPiece(t.params.behindType, opp, t.params.behind)})`);
       }
       if (t.id === 'ENFILADE' && t.params.color === mover && t.params.square === move.to) {
-        motifs.push(`enfilade (${t.params.front} puis ${t.params.back})`);
+        motifs.push(`enfilade sur ${namedPiece(t.params.frontType, opp, t.params.front)} puis ${namedPiece(t.params.backType, opp, t.params.back)}`);
       }
       if (t.id === 'PIECE_PIEGEE' && t.params.color === opp) {
         motifs.push(`piège la pièce adverse en ${t.params.square}`);

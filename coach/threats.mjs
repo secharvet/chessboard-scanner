@@ -14,6 +14,9 @@ import { buildAttackMap, VALUE } from '../positional/attack-map.js';
 import { buildTacticalFacts } from '../positional/piece-attacks.js';
 import { toFrenchSan, withPieceName } from './notation.mjs';
 
+// Sous-promotions ignorées : pour un débutant, « bxa1=T+ » est du bruit, la menace est la promotion en dame.
+const queenOnly = (m) => !m.promotion || m.promotion === 'q';
+
 const THE = { p: 'le pion', n: 'le cavalier', b: 'le fou', r: 'la tour', q: 'la dame', k: 'le roi' };
 
 /**
@@ -45,7 +48,7 @@ export function scanTactics(fen, side, max = 6) {
   /** @type {Tactic[]} */
   const out = [];
 
-  for (const m of chess.moves({ verbose: true })) {
+  for (const m of chess.moves({ verbose: true }).filter(queenOnly)) {
     const after = new Chess(start);
     after.move(m.san);
     const san = toFrenchSan(m.san);

@@ -47,6 +47,7 @@ export function buildTacticalFacts(fen) {
     if (victims.length >= 2) {
       out.push(token('FOURCHETTE', {
         square: p.square, color: p.color, type: p.type, targets: victims.map((v) => v.square).join(','),
+        targetTypes: victims.map((v) => v.type).join(','),
       }));
     }
   }
@@ -61,19 +62,24 @@ export function buildTacticalFacts(fen) {
       const canTakePinner = p1.type !== 'n' && attacks.get(p1).includes(s.square);
       if (p1.color !== s.color && p2.color !== s.color && p1.type !== 'k' && !canTakePinner) {
         if (p2.type === 'k') {
-          out.push(token('CLOUAGE', { square: p1.square, color: p1.color, type: p1.type, by: s.square }));
-        } else if (VALUE[p2.type] > VALUE[p1.type] && VALUE[p2.type] > VALUE[s.type]) {
+          out.push(token('CLOUAGE', { square: p1.square, color: p1.color, type: p1.type, by: s.square, byType: s.type }));
+        } else if (p1.type !== 'p' && VALUE[p2.type] > VALUE[p1.type] && VALUE[p2.type] > VALUE[s.type]) {
+          // Un pion « cloué » sur une pièce (pas sur le roi) : bruit pour un débutant, on l'ignore.
           out.push(token('CLOUAGE_RELATIF', {
-            square: p1.square, color: p1.color, type: p1.type, by: s.square, behind: p2.square,
+            square: p1.square, color: p1.color, type: p1.type, by: s.square, byType: s.type,
+            behind: p2.square, behindType: p2.type,
           }));
         }
       }
 
       // Enfilade : la pièce de devant (roi ou plus chère) doit bouger et découvre celle de derrière.
-      if (p1.color !== s.color && p2.color !== s.color && p2.type !== 'k'
+      // La cible de derrière doit valoir mieux qu'un pion : « la dame bouge et découvre un pion » n'est pas une enfilade.
+      if (p1.color !== s.color && p2.color !== s.color && p2.type !== 'k' && p2.type !== 'p'
         && (p1.type === 'k' || VALUE[p1.type] > VALUE[p2.type])
         && (!isDefended(p2.square, p2.color) || VALUE[p2.type] > VALUE[s.type])) {
-        out.push(token('ENFILADE', { square: s.square, color: s.color, front: p1.square, back: p2.square }));
+        out.push(token('ENFILADE', {
+          square: s.square, color: s.color, type: s.type, front: p1.square, frontType: p1.type, back: p2.square, backType: p2.type,
+        }));
       }
 
       // Découverte : une pièce amie masque une ligne vers le roi, la dame ou une pièce non défendue.
@@ -84,6 +90,7 @@ export function buildTacticalFacts(fen) {
         && (p2.type === 'k' || p2.type === 'q' || (p2.type !== 'p' && !isDefended(p2.square, p2.color)))) {
         out.push(token('DECOUVERTE_POSSIBLE', {
           color: s.color, slider: s.square, mover: p1.square, target: p2.square, check: p2.type === 'k',
+          sliderType: s.type, moverType: p1.type, targetType: p2.type,
         }));
       }
     }

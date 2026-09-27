@@ -93,6 +93,26 @@ const PRIORITY = {
 /** Nom des pièces (masculin, pour « cavalier noir cloué »). */
 const PIECE_FR = { p: 'Pion', n: 'Cavalier', b: 'Fou', r: 'Tour', q: 'Dame', k: 'Roi' };
 
+/**
+ * « le fou blanc en d3 », « la tour noire en a8 » — ou « la pièce en d3 » si le type est inconnu.
+ * @param {string | undefined} type @param {string} color @param {string} square
+ */
+export function namedPiece(type, color, square) {
+  if (!type || !PIECE_FR[type]) return `la pièce en ${square}`;
+  const fem = type === 'q' || type === 'r';
+  const col = color === 'w' ? (fem ? 'blanche' : 'blanc') : (fem ? 'noire' : 'noir');
+  return `${fem ? 'la' : 'le'} ${PIECE_FR[type].toLowerCase()} ${col} en ${square}`;
+}
+
+/** Cibles d'une fourchette : « la tour noire en d1 et la dame noire en h1 ». */
+function namedTargets(p, victimColor) {
+  const sqs = String(p.targets ?? '').split(',').filter(Boolean);
+  const types = String(p.targetTypes ?? '').split(',');
+  if (!sqs.length) return 'deux cibles';
+  const names = sqs.map((s, i) => namedPiece(types[i], victimColor, s));
+  return names.length > 1 ? `${names.slice(0, -1).join(', ')} et ${names.at(-1)}` : names[0];
+}
+
 /** @param {string} c */
 function colorLabel(c) {
   return c === 'w' ? 'blancs' : 'noirs';
@@ -131,13 +151,16 @@ export function renderToken(t) {
         : `Roques opposés.`;
 
     case 'CLOUAGE_RELATIF':
-      return `Clouage relatif : le ${(PIECE_FR[/** @type {string} */ (p.type)] ?? 'pièce').toLowerCase()} ${p.color === 'w' ? 'blanc' : 'noir'} en ${p.square} est cloué par la pièce ${p.color === 'w' ? 'noire' : 'blanche'} en ${p.by} : s'il bouge, la pièce plus chère en ${p.behind} est prise.`;
+      return `Clouage relatif : ${namedPiece(/** @type {string} */ (p.type), /** @type {string} */ (p.color), /** @type {string} */ (p.square))} est cloué par ${namedPiece(/** @type {string} */ (p.byType), p.color === 'w' ? 'b' : 'w', /** @type {string} */ (p.by))} : s'il bouge, ${namedPiece(/** @type {string} */ (p.behindType), /** @type {string} */ (p.color), /** @type {string} */ (p.behind))}, plus chère, est prise.`;
 
     case 'ENFILADE':
-      return `Enfilade pour les ${colorLabel(/** @type {string} */ (p.color))} : la pièce en ${p.square} attaque ${p.front}, qui en bougeant découvrira ${p.back}.`;
+      {
+        const opp = p.color === 'w' ? 'b' : 'w';
+        return `Enfilade pour les ${colorLabel(/** @type {string} */ (p.color))} : ${namedPiece(/** @type {string} */ (p.type), /** @type {string} */ (p.color), /** @type {string} */ (p.square))} attaque ${namedPiece(/** @type {string} */ (p.frontType), opp, /** @type {string} */ (p.front))}, qui en bougeant découvrira ${namedPiece(/** @type {string} */ (p.backType), opp, /** @type {string} */ (p.back))}.`;
+      }
 
     case 'DECOUVERTE_POSSIBLE':
-      return `${p.check ? 'Échec à la découverte possible' : 'Attaque à la découverte possible'} pour les ${colorLabel(/** @type {string} */ (p.color))} : déplacer la pièce en ${p.mover} démasque la pièce en ${p.slider} sur ${p.target}.`;
+      return `${p.check ? 'Échec à la découverte possible' : 'Attaque à la découverte possible'} pour les ${colorLabel(/** @type {string} */ (p.color))} : déplacer ${namedPiece(/** @type {string} */ (p.moverType), /** @type {string} */ (p.color), /** @type {string} */ (p.mover))} démasque ${namedPiece(/** @type {string} */ (p.sliderType), /** @type {string} */ (p.color), /** @type {string} */ (p.slider))} sur ${namedPiece(/** @type {string} */ (p.targetType), p.color === 'w' ? 'b' : 'w', /** @type {string} */ (p.target))}.`;
 
     case 'SURCHARGE':
       return `Pièce surchargée ${colorLabel(/** @type {string} */ (p.color))} en ${p.square} (${p.type}) : seule à défendre ${p.defends}.`;
@@ -273,12 +296,12 @@ export function renderToken(t) {
     case 'CLOUAGE': {
       // Sans ambiguïté : QUI est cloué, et PAR QUI (« clouage noirs » se lisait « clouage des Noirs »).
       const pinned = /** @type {string} */ (p.color);
-      const by = p.by ? ` par la pièce ${pinned === 'w' ? 'noire' : 'blanche'} en ${p.by}` : '';
+      const by = p.by ? ` par ${namedPiece(/** @type {string} */ (p.byType), pinned === 'w' ? 'b' : 'w', /** @type {string} */ (p.by))}` : '';
       return `${PIECE_FR[/** @type {string} */ (p.type)] ?? 'Pièce'} ${pinned === 'w' ? 'blanc' : 'noir'} en ${p.square} cloué contre son roi${by} (il ne peut pas bouger).`;
     }
 
     case 'FOURCHETTE':
-      return `Fourchette ${colorLabel(/** @type {string} */ (p.color))} : la pièce en ${p.square} (${p.type}) attaque ${p.targets ?? 'deux cibles'}.`;
+      return `Fourchette ${colorLabel(/** @type {string} */ (p.color))} : ${namedPiece(/** @type {string} */ (p.type), /** @type {string} */ (p.color), /** @type {string} */ (p.square))} attaque en même temps ${namedTargets(p, p.color === 'w' ? 'b' : 'w')}.`;
 
     default:
       return `${t.id}: ${JSON.stringify(p)}`;

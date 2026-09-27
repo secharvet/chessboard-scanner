@@ -13,6 +13,9 @@ import { describeForcing, forcingLines } from './forcing.mjs';
 import { toFrenchSan, withPieceName } from './notation.mjs';
 import { scanTactics } from './threats.mjs';
 
+// Sous-promotions ignorées : pour un débutant, « bxa1=T+ » est du bruit, la menace est la promotion en dame.
+const queenOnly = (m) => !m.promotion || m.promotion === 'q';
+
 const THE = { p: 'le pion', n: 'le cavalier', b: 'le fou', r: 'la tour', q: 'la dame', k: 'le roi' };
 
 const FILES_ = 'abcdefgh';
@@ -42,7 +45,7 @@ export function preparedThreats2(fen, me, { max = 4, width = 8 } = {}) {
   try { start = new Chess(withTurn(fen, opp)); } catch { return []; }
   const now = new Set(scanTactics(start.fen(), opp, 10).map((t) => t.san));
   const dots = opp === 'b' ? '…' : '';
-  const quiet = (b) => b.moves({ verbose: true })
+  const quiet = (b) => b.moves({ verbose: true }).filter(queenOnly)
     .filter((m) => !m.captured && !/[+#]/.test(m.san) && !m.promotion && purposeful(b, m, me))
     .slice(0, width);
   const out = [];
@@ -98,7 +101,7 @@ export function preparedThreats(fen, me, opts = {}) {
   );
 
   const out = [];
-  for (const m of board.moves({ verbose: true })) {
+  for (const m of board.moves({ verbose: true }).filter(queenOnly)) {
     if (m.captured || /[+#]/.test(m.san) || m.promotion) continue;
     const after = new Chess(start);
     after.move(m.san);

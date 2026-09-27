@@ -124,6 +124,9 @@ function describeLine(fen, line, player, toMove) {
     basics: firstMoveBasics(fen, steps[0]),
     motifs: lineMotifs(fen, line.pv.slice(0, steps.length)).map((m) => `${m.san} : ${m.motifs.join(', ')}`),
     material: materialBalance(endFen) - materialBalance(fen),
+    // Échange en cours : la ligne commence par une reprise ; matériel une fois l'échange terminé.
+    firstCapture: steps[0]?.capture ? steps[0].san : null,
+    immMaterial: materialBalance(immFen) - materialBalance(fen),
   };
 }
 
@@ -341,8 +344,21 @@ function gameOverReason(chess) {
 function materialVsEval(d) {
   const best = d.candidates[0]?.evalPlayer;
   if (!best || best.type !== 'cp') return null;
-  const mat = materialBalance(d.fen) * (d.player === 'w' ? 1 : -1);
+  const sign = d.player === 'w' ? 1 : -1;
+  const mat = materialBalance(d.fen) * sign;
   const ev = best.value / 100;
+  // Échange pas terminé (l'adversaire vient de prendre, tu reprends) : le bilan actuel est trompeur.
+  const c0 = d.candidates[0];
+  if (d.toMove === d.player && c0?.firstCapture && mat <= -1) {
+    const after = mat + c0.immMaterial * sign;
+    // Échange en cours = l'adversaire vient de prendre. Sans historique, on exige que la reprise
+    // rétablisse le matériel (sinon c'est une simple prise, pas la fin d'un échange).
+    const last = d.moves.at(-1);
+    const pending = last ? /x/.test(last) && after > mat : after >= 0;
+    if (pending) {
+      return `Un échange est en cours : pour l'instant tu as ${-mat} point(s) de matériel en moins, mais tu peux reprendre tout de suite (${toFrenchSan(c0.firstCapture)}) ; une fois l'échange terminé, ${after === 0 ? 'le matériel est égal' : after > 0 ? `tu as ${after} point(s) en plus` : `tu as encore ${-after} point(s) en moins`}.`;
+    }
+  }
   if (mat >= 1 && ev < 0.5) {
     return `Tu as ${mat} point(s) de matériel en plus, mais le moteur juge la position ${ev < -0.4 ? 'défavorable' : 'égale (probablement nulle)'} : l'avantage matériel ne suffit pas ici, c'est l'idée principale à expliquer.`;
   }
