@@ -89,7 +89,8 @@ export function scanTactics(fen, side, max = 6) {
       if (t.id === 'ENFILADE' && t.params.color === side && t.params.square === m.to && !movedHangs) {
         out.push({ severity: 8, san, text: `${san} : enfilade (${t.params.front} puis ${t.params.back})` });
       }
-      if ((t.id === 'CLOUAGE' || t.id === 'CLOUAGE_RELATIF') && t.params.color === opp && t.params.by === m.to && !movedHangs) {
+      // Clouer un simple pion n'est pas une occasion tactique.
+      if ((t.id === 'CLOUAGE' || t.id === 'CLOUAGE_RELATIF') && t.params.color === opp && t.params.by === m.to && !movedHangs && t.params.type !== 'p') {
         out.push({ severity: t.id === 'CLOUAGE' ? 6 : 5, san, text: `${san} : cloue la pièce en ${t.params.square}` });
       }
     }

@@ -129,7 +129,14 @@ export function buildImbalanceFacts(fen) {
       for (const rr of alreadyIn ? [] : [7, 6]) {
         const r = color === 'w' ? rr : 9 - rr;
         const s = sq(f, r);
-        if (at[s]?.color === color) continue;
+        if (at[s]) continue; // case occupée (par un pion adverse notamment) : ce n'est pas une case d'entrée
+        const heavyOnFile = pieces.filter((p) => p.color === color && p.fileIdx === f && (p.type === 'r' || p.type === 'q'));
+        const reachable = heavyOnFile.some((h) => {
+          const step = r > h.rank ? 1 : -1;
+          for (let rr = h.rank + step; rr !== r; rr += step) if (at[sq(f, rr)]) return false;
+          return true;
+        });
+        if (!reachable) continue;
         const pawnGuard = attackersOf(s, opp).some((p) => p.type === 'p');
         if (!pawnGuard) {
           out.push(token('CASE_ENTREE', { square: s, color, file }));
