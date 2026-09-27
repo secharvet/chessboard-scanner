@@ -95,9 +95,12 @@ function describeLine(fen, line, player, toMove) {
     steps.push({ san: toFrenchSan(m.san), fen: chess.fen(), capture: Boolean(m.captured), check: m.san.includes('+') });
   }
 
-  // Point d'arrivée « calme » : on ne s'arrête pas au milieu d'un échange ou d'une série d'échecs.
+  // Point d'arrivée « calme » : pas au milieu d'un échange ni d'une série d'échecs. On avance tant que
+  // le dernier coup est une prise ou un échec, OU qu'une prise suit dans les deux demi-coups
+  // (8.exd5 O-O 9.O-O cxd5 : la reprise n'est pas encore faite après 8...O-O).
+  const busy = (k) => steps[k - 1]?.capture || steps[k - 1]?.check || steps[k]?.capture || steps[k + 1]?.capture;
   let end = Math.min(steps.length, 6);
-  while (end < steps.length && end < 10 && (steps[end - 1].capture || steps[end - 1].check)) end++;
+  while (end < steps.length && end < 12 && busy(end)) end++;
   const endFen = end > 0 ? steps[end - 1].fen : fen;
 
   return {

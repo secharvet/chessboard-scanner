@@ -26,7 +26,7 @@ export function lineMotifs(fen, pvUci, maxMoves = 3) {
   const mover = chess.turn();
   /** @type {{ san: string, move: import('chess.js').Move, before: string, after: string }[]} */
   const plies = [];
-  for (const uci of pvUci.slice(0, maxMoves * 2 + 1)) {
+  for (const uci of pvUci.slice(0, maxMoves * 2 + 5)) {
     const before = chess.fen();
     let move;
     try {
@@ -36,6 +36,21 @@ export function lineMotifs(fen, pvUci, maxMoves = 3) {
     }
     plies.push({ san: toFrenchSan(move.san), move, before, after: chess.fen() });
   }
+
+  // Le gain matériel tient-il encore 4 demi-coups plus tard (pas de reprise différée) ?
+  const VAL = { p: 1, n: 3, b: 3, r: 5, q: 9, k: 0 };
+  const mat = (f) => {
+    let m = 0;
+    for (const ch of f.split(' ')[0]) {
+      const v = VAL[ch.toLowerCase()];
+      if (v != null) m += ((ch === ch.toUpperCase()) === (mover === 'w') ? 1 : -1) * v;
+    }
+    return m;
+  };
+  const stillAhead = (i) => {
+    const later = plies[Math.min(i + 4, plies.length - 1)];
+    return mat(later.after) > mat(plies[i].before);
+  };
 
   const out = [];
   for (let i = 0; i < plies.length; i += 2) {
@@ -53,6 +68,11 @@ export function lineMotifs(fen, pvUci, maxMoves = 3) {
     const known = new Set(factsBefore.map(key));
     const fresh = factsAfter.filter((t) => !known.has(key(t)));
     const opp = mover === 'w' ? 'b' : 'w';
+    // La pièce jouée est-elle prise au coup suivant ? Alors ses « fourchettes », clouages et pièges
+    // sont illusoires (Cxc6 bxc6 n'est pas une fourchette sur b4 et d8).
+    const movedIsTaken = Boolean(reply && reply.move.captured && reply.move.to === move.to);
+    // Sans la réponse adverse (dernier coup de la ligne), on ne conclut rien sur un gain.
+    const replyKnown = Boolean(reply);
 
     // Découverte : la pièce jouée était le « masque » d'une découverte possible.
     const disco = factsBefore.find(
@@ -65,7 +85,7 @@ export function lineMotifs(fen, pvUci, maxMoves = 3) {
       else motifs.push(disco.params.check ? 'échec à la découverte' : `attaque à la découverte sur ${disco.params.target}`);
     }
 
-    for (const t of fresh) {
+    for (const t of movedIsTaken ? [] : fresh) {
       if (t.id === 'FOURCHETTE' && t.params.color === mover && t.params.square === move.to) {
         motifs.push(`fourchette (${t.params.targets})`);
       }
@@ -106,7 +126,7 @@ export function lineMotifs(fen, pvUci, maxMoves = 3) {
       if (given - taken >= 2) {
         motifs.push(`sacrifice ${move.piece === 'r' && taken >= 3 ? 'de qualité' : `du ${NAME[move.piece]}`} (${san}, repris par ${reply.san})`);
       }
-    } else if (move.captured && !isRecapture && !reply?.move.captured) {
+    } else if (move.captured && !isRecapture && replyKnown && !reply.move.captured && stillAhead(i)) {
       motifs.push(`gain : prend ${THE[move.captured]} en ${move.to}`);
     }
 

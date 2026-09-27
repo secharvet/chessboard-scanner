@@ -25,9 +25,9 @@ const CONCEPTS = [
   ['case faible|trou', /case faible|trou|complexe/i],
   ['complexe', /complexe/i],
   ['pion passé', /passé/i],
-  ['pion isolé|PDI', /isolé|PDI/i],
-  ['pion arriéré|pion arrière', /arriéré/i],
-  ['doublé', /doublon|doublé/i],
+  ['isolé|PDI', /isolé|PDI/i],
+  ['arriéré', /arriéré/i],
+  ['doublé|doublon', /doublon|doublé/i],
   ['7e rangée|septième', /7e rangée/i],
   ['paire de fous', /paire de fous/i],
   ['mauvais fou', /mauvais fou/i],
@@ -89,6 +89,27 @@ export function verifyCitations(answer, facts) {
     for (const [word, expected] of concepts) {
       if (!expected.test(sources)) {
         problems.push(`Notion « ${word.split('|')[0]} » absente des sources citées (${ids.join(', ')}) : « ${bare.trim()} »`);
+        continue;
+      }
+      // Les cases qui SUIVENT la notion dans la proposition (« isolés en a7, c7 et c6 ») doivent chacune
+      // figurer dans une source qui porte cette notion ET cette case.
+      const at = bare.search(new RegExp(word, 'i'));
+      if (at < 0) continue;
+      // Portée : jusqu'à la ponctuation forte ou jusqu'à la notion suivante (« clouage en c3, … case faible en c5 »).
+      let clause = bare.slice(at).split(/[.;:!?]/)[0];
+      const firstLen = (clause.match(new RegExp(word, 'i'))?.[0].length) ?? 0;
+      let cut = clause.length;
+      for (const [other] of CONCEPTS) {
+        if (other === word) continue;
+        const m = clause.slice(firstLen).search(new RegExp(other, 'i'));
+        if (m >= 0) cut = Math.min(cut, m + firstLen);
+      }
+      clause = clause.slice(0, cut);
+      const factsWithConcept = ids.filter((id) => id in facts && expected.test(facts[id])).map((id) => facts[id]);
+      for (const sq of new Set([...clause.matchAll(SQUARE_RE)].map((m) => m[1]))) {
+        if (!factsWithConcept.some((f) => f.includes(sq))) {
+          problems.push(`Case ${sq} présentée comme « ${word.split('|')[0]} » sans source qui le dise : « ${bare.trim()} »`);
+        }
       }
     }
   }

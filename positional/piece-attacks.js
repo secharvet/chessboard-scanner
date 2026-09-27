@@ -105,6 +105,9 @@ export function buildTacticalFacts(fen) {
   // ── PIECE_PIEGEE : pièce menacée sans aucune case de fuite sûre ──
   for (const p of pieces) {
     if (!['n', 'b', 'r', 'q'].includes(p.type) || !enPrise(p)) continue;
+    // Si l'on peut prendre la pièce qui attaque, la pièce n'est pas piégée.
+    const hunters = attackersOf(p.square, other(p.color));
+    if (hunters.some((h) => attackersOf(h.square, p.color).length > 0)) continue;
     const exits = attacks.get(p).filter((s) => at[s]?.color !== p.color);
     const safe = exits.some((s) => {
       const hunters = attackersOf(s, other(p.color));

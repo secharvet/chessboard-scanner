@@ -42,3 +42,24 @@ describe('Vérification des citations', () => {
     assert.equal(stripCitations('Joue Te1 [L1][F4]. Position égale [E1, F5].'), 'Joue Te1. Position égale.');
   });
 });
+
+describe('Notion appliquée à chaque case', () => {
+  const f = { F1: 'Pion isolé noirs en a7.', F2: 'Doublon noirs en colonne c (c6, c7).' };
+  it('« isolés en a7, c7 et c6 » alors que seul a7 est isolé : signalé', () => {
+    const r = verifyCitations('Les pions noirs sont isolés en a7, c7 et c6 [F1][F2].', f);
+    assert.ok(r.problems.some((p) => /Case c7 présentée comme « isol/.test(p)));
+    assert.ok(r.problems.some((p) => /Case c6 présentée comme « isol/.test(p)));
+  });
+  it('case citée AVANT la notion : pas concernée', () => {
+    const r = verifyCitations('Après l’échange en c6, le pion a7 est isolé [F1].', { F1: 'Pion isolé noirs en a7. Ligne : Cxc6 bxc6.' });
+    assert.deepEqual(r.problems, []);
+  });
+});
+
+describe('Portée d’une notion', () => {
+  it('« clouage en c3 …, case faible en c5 » : c5 relève de la case faible, pas du clouage', () => {
+    const f = { F1: 'Clouage blancs en c3 (n).', F2: 'Case faible noirs en c5.' };
+    const r = verifyCitations('Le clouage en c3 disparaît et une case faible apparaît en c5 [F1][F2].', f);
+    assert.deepEqual(r.problems, []);
+  });
+});
