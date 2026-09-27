@@ -4,6 +4,9 @@
 
 import { askGroqMentor, checkMentorHealth } from './mentor-client.js';
 import { renderMentorMarkdown } from './mentor-markdown.js';
+import { bindBoardLinks, linkifyChess } from './board-links.js';
+
+const MOBILE = '(max-width: 900px)';
 
 const COACH_LABEL = 'Coach ancré';
 
@@ -14,6 +17,8 @@ const COACH_LABEL = 'Coach ancré';
  *   canAsk: () => boolean,
  *   defaultQuestion: () => string,
  *   idleMessage: string,
+ *   board?: () => HTMLElement | null,
+ *   getOrientation?: () => 'white' | 'black',
  * }} options
  */
 export function bindMentorPanel(options) {
@@ -22,6 +27,38 @@ export function bindMentorPanel(options) {
   const $question = root.querySelector('#mentorQuestion');
   const $panel = root.querySelector('#mentorPanel-groq');
   const $status = root.querySelector('#mentorStatus');
+
+  // Cases et coups de la réponse reliés à l'échiquier (survol / toucher).
+  if ($panel && options.board) {
+    bindBoardLinks($panel, {
+      board: options.board,
+      getFen: () => options.getPayload().fen,
+      getOrientation: options.getOrientation,
+    });
+  }
+
+  // Sur téléphone : la réponse s'ouvre en panneau fixé en bas de l'écran, sous l'échiquier.
+  const $close = document.createElement('button');
+  $close.type = 'button';
+  $close.className = 'mentor-sheet__close';
+  $close.setAttribute('aria-label', 'Fermer la réponse du coach');
+  $close.textContent = '✕';
+  $close.addEventListener('click', () => closeSheet());
+
+  function openSheet() {
+    if (!$panel || !window.matchMedia(MOBILE).matches) return;
+    const board = options.board?.();
+    board?.scrollIntoView({ block: 'start', behavior: 'instant' });
+    const top = board ? Math.max(board.getBoundingClientRect().bottom + 4, window.innerHeight * 0.35) : window.innerHeight * 0.4;
+    $panel.style.setProperty('--sheet-top', `${Math.round(Math.min(top, window.innerHeight - 180))}px`);
+    $panel.classList.add('mentor-sheet');
+    if (!$close.isConnected) $panel.prepend($close);
+  }
+
+  function closeSheet() {
+    $panel?.classList.remove('mentor-sheet');
+    $close.remove();
+  }
 
   /** @type {{ text: string, error?: boolean } | null} */
   let cache = null;
@@ -55,7 +92,9 @@ export function bindMentorPanel(options) {
       return;
     }
     $panel.innerHTML = renderMentorMarkdown(content);
+    linkifyChess($panel);
     $panel.scrollTop = 0;
+    openSheet();
     const overflow = $panel.scrollHeight > $panel.clientHeight + 4;
     $panel.title = overflow
       ? `${content.length} caractères — faites défiler pour lire la suite`

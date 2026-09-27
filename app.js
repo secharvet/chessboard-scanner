@@ -535,6 +535,7 @@ async function init() {
     defaultQuestion: defaultMentorQuestion,
     idleMessage:
       'Navigue dans la variante puis demande un plan pour la position affichée.',
+    board: () => document.getElementById('board'),
   });
   $openingSelect.disabled = true;
   $versionSelect.disabled = true;

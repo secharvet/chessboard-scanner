@@ -973,3 +973,61 @@ code {
     margin-bottom: 6px;
   }
 }
+
+/* ── Liens de la réponse du coach vers l'échiquier ── */
+.mv-link,
+.mentor-panel .sq-link {
+  color: var(--accent2);
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.mv-link:hover,
+.mv-link.is-active,
+.mentor-panel .sq-link:hover,
+.mentor-panel .sq-link.is-active {
+  background: color-mix(in srgb, var(--accent2) 22%, transparent);
+}
+
+
+/* Panneau du bas (téléphone) */
+.mentor-sheet__close {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .mentor-panel.mentor-sheet {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: var(--sheet-top, 45vh);
+    bottom: 0;
+    max-height: none;
+    min-height: 0;
+    z-index: 50;
+    margin: 0;
+    padding: 34px 14px 16px;
+    border-radius: 14px 14px 0 0;
+    background: var(--surface, #151a23);
+    border-top: 1px solid var(--border);
+    box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.45);
+    font-size: 0.95rem;
+  }
+
+  .mentor-sheet .mentor-sheet__close {
+    display: block;
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    color: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+}

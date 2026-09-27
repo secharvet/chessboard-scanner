@@ -794,3 +794,8 @@ button.engine-pipeline__head:hover {
     font-size: 0.85rem;
   }
 }
+
+/* Réponse agrandie sur ordinateur */
+.layout--play .card--mentor .mentor-panel {
+  max-height: min(62vh, 40rem);
+}

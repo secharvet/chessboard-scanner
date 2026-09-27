@@ -636,6 +636,8 @@ async function init() {
     defaultQuestion: defaultMentorQuestion,
     idleMessage:
       'Pose une question ou clique « Demander au coach » à ton tour de jeu.',
+    board: () => document.getElementById('playBoard'),
+    getOrientation: () => orientation,
   });
 
   $promoModal?.addEventListener('click', (e) => {
