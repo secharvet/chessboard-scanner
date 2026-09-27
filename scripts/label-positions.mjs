@@ -16,8 +16,8 @@
 import { createReadStream, existsSync, mkdirSync, readFileSync, appendFileSync } from 'node:fs';
 import { createInterface } from 'node:readline';
 import { Chess } from 'chess.js';
-import { buildAllFacts } from '../positional/index.js';
 import { UciEngine } from '../coach/uci-engine.mjs';
+import { scanLine } from '../coach/plan-concepts.mjs';
 
 const args = process.argv.slice(2);
 const opt = (k, d) => (args.includes(k) ? args[args.indexOf(k) + 1] : d);
@@ -29,86 +29,7 @@ const PLIES = Number(opt('--plies', 24));
 const EVERY = Number(opt('--every', 6));
 const MAX = Number(opt('--max', 100000));
 
-// ── Concepts (états buts vérifiables, par camp) ──
-// Chaque détecteur reçoit les faits d'une position et renvoie les couleurs pour lesquelles le concept est vrai.
-const has = (facts, id, color) => facts.some((t) => t.id === id && t.params.color === color);
-const WEAK_PAWN = new Set(['PION_ISOLE', 'PION_ARRIERE', 'PION_FAIBLE', 'PION_PASSE']);
-const CONCEPTS = {
-  tour_colonne: (facts, color) => has(facts, 'TOUR_COLONNE_OUVERTE', color),
-  cavalier_avant_poste: (facts, color) => has(facts, 'CAVALIER_AVANT_POSTE', color),
-  // Blocage : un cavalier ou un fou installé juste devant un pion adverse isolé, arriéré, faible ou passé.
-  blocage: (facts, color, board) => facts.some((t) => {
-    if (!WEAK_PAWN.has(t.id) || t.params.color === color || typeof t.params.square !== 'string') return false;
-    const sq = t.params.square;
-    const front = `${sq[0]}${Number(sq[1]) + (t.params.color === 'w' ? 1 : -1)}`;
-    const p = board.get(front);
-    return Boolean(p && p.color === color && (p.type === 'n' || p.type === 'b'));
-  }),
-};
-const COLORS = ['w', 'b'];
-
-/** Colonnes ouvertes ou semi-ouvertes POUR `color`. */
-const openFiles = (facts, color) => new Set(facts
-  .filter((t) => t.id === 'COLONNE_OUVERTE' || (t.id === 'COLONNE_SEMI_OUVERTE' && t.params.color === color))
-  .map((t) => String(t.params.file)));
-
-/**
- * Déroule une suite et renvoie, pour chaque concept et chaque camp, le demi-coup d'apparition (ou -1).
- * Rupture de pions : un coup de pion du camp qui attaque ou prend un pion adverse (levier), suivi dans
- * la suite d'une nouvelle colonne ouverte ou semi-ouverte pour ce camp, encore présente à la fin.
- */
-function scanLine(fen, pv) {
-  const c = new Chess(fen);
-  const start = { facts: buildAllFacts(fen), board: new Chess(fen) };
-  const timeline = [];
-  const levers = { w: [], b: [] };
-  for (const [i, u] of pv.slice(0, PLIES).entries()) {
-    let m;
-    try { m = c.move({ from: u.slice(0, 2), to: u.slice(2, 4), promotion: u[4] }); } catch { break; }
-    if (m.piece === 'p') {
-      const dir = m.color === 'w' ? 1 : -1;
-      const f = m.to.charCodeAt(0);
-      const attacks = [-1, 1].some((d) => {
-        const p = c.get(`${String.fromCharCode(f + d)}${Number(m.to[1]) + dir}`);
-        return p && p.type === 'p' && p.color !== m.color;
-      });
-      if (attacks || m.captured === 'p') levers[m.color].push(i);
-    }
-    timeline.push({ facts: buildAllFacts(c.fen()), board: new Chess(c.fen()) });
-  }
-  const out = {};
-  if (!timeline.length) return out;
-  const end = timeline.at(-1);
-  for (const [name, test] of Object.entries(CONCEPTS)) {
-    for (const color of COLORS) {
-      let ply = -1;
-      const ok = (snap) => test(snap.facts, color, snap.board);
-      if (!ok(start) && ok(end)) ply = timeline.findIndex(ok);
-      out[`${name}_${color}`] = ply;
-    }
-  }
-  for (const color of COLORS) {
-    const before = openFiles(start.facts, color);
-    const after = openFiles(end.facts, color);
-    const fresh = [...after].filter((f) => !before.has(f));
-    let ply = -1;
-    if (fresh.length && levers[color].length) {
-      const opened = timeline.findIndex((snap) => [...openFiles(snap.facts, color)].some((x) => fresh.includes(x)));
-      // La rupture doit TRANSFORMER la position, pas liquider une tension : une tour du camp occupe la
-      // colonne ouverte à la fin, ou la structure change (faiblesse adverse ou pion passé nouveaux).
-      const opp = color === 'w' ? 'b' : 'w';
-      const rookUses = end.board.board().flat().some((p) => p && p.type === 'r' && p.color === color && fresh.includes(p.square[0]));
-      const key = (t) => `${t.id}|${t.params.color}|${String(t.params.square ?? '')[0]}`;
-      const had = new Set(start.facts.map(key));
-      const structural = end.facts.some((t) => !had.has(key(t))
-        && ((['PION_ISOLE', 'PION_ARRIERE', 'PION_FAIBLE'].includes(t.id) && t.params.color === opp)
-          || (t.id === 'PION_PASSE' && t.params.color === color)));
-      if (levers[color][0] <= opened && (rookUses || structural)) ply = opened;
-    }
-    out[`rupture_${color}`] = ply;
-  }
-  return out;
-}
+// Concepts et apparition le long d'une suite : coach/plan-concepts.mjs
 
 // ── Lecture des parties ──
 async function* games(path) {
@@ -162,7 +83,9 @@ async function labelGame(engine, game) {
     const rec = {
       game: game.index, ply: pos.ply, fen: pos.fen, elo,
       evals: lines.map((l) => toCp(l.score)),
-      lines: lines.map((l) => scanLine(pos.fen, l.pv)),
+      lines: lines.map((l) => scanLine(pos.fen, l.pv, PLIES)),
+      // Suites elles-mêmes (UCI) : filtres et vérifications possibles après coup, sans recalcul.
+      pvs: lines.map((l) => l.pv.slice(0, PLIES)),
     };
     appendFileSync(OUT, `${JSON.stringify(rec)}\n`);
     written++;
