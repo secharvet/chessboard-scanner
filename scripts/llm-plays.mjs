@@ -9,6 +9,7 @@
  *   --stop-before 20                 arrêter la partie à la première gaffe avant ce coup
  *   --no-memory                      sans le carnet de leçons (comparaison)
  *   --material-only                  nos lignes notées au matériel seulement (sans l'évaluation Stockfish)
+ *   --deep-prep                      menaces en préparation à deux coups calmes (élagage humain, +2 à 5 s par coup)
  *   --plan-tracker                   plan courant tenu par le code (manœuvre choisie, étape suivante, abandon justifié)
  *   --style attaquant|prudent        consigne de style ; le style réellement joué est mesuré (indice tranchant ↔ sûr)
  *   --think auto|on|off|low|high     réflexion du LLM ; auto (défaut) : aucune au calme, low en position
@@ -38,7 +39,7 @@ import { judgeConfig } from '../coach/judge.mjs';
 import { blunderCheck, scanTactics } from '../coach/threats.mjs';
 import { describeForcing, forcingLines } from '../coach/forcing.mjs';
 import { findManeuvers } from '../coach/maneuvers.mjs';
-import { preparedThreats } from '../coach/prep-threats.mjs';
+import { preparedThreats, preparedThreats2 } from '../coach/prep-threats.mjs';
 import { scoreForcingLines, scorePrepared, scoreTactics } from '../coach/engine-eval.mjs';
 import { diagnoseMistake } from '../coach/diagnose.mjs';
 import { aggregate, profileGame } from '../coach/profile.mjs';
@@ -63,6 +64,7 @@ const USE_MEMORY = !args.includes('--no-memory');
 const THINK = opt('--think', 'auto');
 const STYLE = opt('--style', null);
 const PLAN_TRACKER = args.includes('--plan-tracker');
+const DEEP_PREP = args.includes('--deep-prep');
 /** Plan courant : manœuvre choisie par le LLM, suivie par le code. */
 let currentPlan = null; // { text, piece, path, target, step, since }
 const planStats = { started: 0, completed: 0, abandoned: 0, broken: 0, durations: [] };
@@ -136,7 +138,10 @@ async function perception(fen, color) {
     list('Tes occasions tactiques (coups qui gagnent quelque chose tout de suite) :', (await scored.tactics(fen, color, scanTactics(fen, color))).map((t) => t.text)),
     list('Tes combinaisons forcées (échecs, prises, jusqu\'au bout) :', (await scored.forcing(fen, color, forcingLines(fen, color))).map(describeForcing)),
     list("Combinaisons forcées de l'adversaire (s'il jouait maintenant) :", (await scored.forcing(fen, opp, forcingLines(fen, opp))).map(describeForcing)),
-    list("Ce que l'adversaire prépare (un coup calme de sa part, puis la menace) :", (await scored.prepared(fen, opp, preparedThreats(fen, color))).map((t) => t.text)),
+    list("Ce que l'adversaire prépare (un ou deux coups calmes de sa part, puis la menace) :", (await scored.prepared(fen, opp, [
+      ...preparedThreats(fen, color),
+      ...(DEEP_PREP ? preparedThreats2(fen, color) : []),
+    ])).map((t) => t.text)),
     list('Manœuvres possibles :', (lastManeuvers = findManeuvers(fen, color)).map((m, i) => `${PLAN_TRACKER ? `[K${i + 1}] ` : ''}${m.text}`)),
     ...(PLAN_TRACKER ? [list('Ton plan en cours (tenu par le code) :', currentPlan
       ? [`${currentPlan.text} — commencé au coup ${currentPlan.since}, étape suivante : ${currentPlan.path[currentPlan.step]} (${currentPlan.path.length - currentPlan.step} case(s) restante(s)). Poursuis-le, ou abandonne-le en disant pourquoi.`]

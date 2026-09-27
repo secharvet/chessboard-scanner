@@ -23,3 +23,16 @@ describe('Menaces en préparation', () => {
     assert.match(a6.text, / ou /);
   });
 });
+
+import { preparedThreats2 } from '../coach/prep-threats.mjs';
+
+describe('Menaces à deux coups calmes', () => {
+  it('deux poussées de pion pour attaquer un cavalier (…g6 puis …g5 contre Cf4)', () => {
+    // Cavalier blanc f4, pion noir g7 : …g6 ne touche rien, …g5 attaque le cavalier.
+    const t = preparedThreats2('4k3/6p1/8/8/5N2/8/8/4K3 w - - 0 1', 'w');
+    assert.ok(t.some((x) => /cavalier en f4/.test(x.text) && /puis/.test(x.text)));
+  });
+  it('rien en position initiale', () => {
+    assert.deepEqual(preparedThreats2('rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1', 'w'), []);
+  });
+});

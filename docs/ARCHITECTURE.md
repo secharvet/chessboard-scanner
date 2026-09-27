@@ -15,6 +15,7 @@
 7. [La mémoire d'expérience](#7-la-mémoire-dexpérience)
 8. [Fournisseurs LLM et réglages](#8-fournisseurs-llm-et-réglages)
 8 bis. [Profil de style d'un joueur](#8-bis-profil-de-style-dun-joueur)
+8 ter. [Portrait d'un joueur](#8-ter-portrait-dun-joueur)
 9. [Résultats mesurés](#9-résultats-mesurés)
 10. [Limites connues et pistes d'amélioration](#10-limites-connues-et-pistes-damélioration)
 11. [Carte des fichiers](#11-carte-des-fichiers)
@@ -159,6 +160,18 @@ Indice d'agressivité (moyenne des écarts réduits des traits validés) : Shiro
 
 **Ce qu'on sait mesurer** : un axe robuste **jeu tranchant ↔ jeu sûr**. **Ce qu'on ne sait pas mesurer (encore)** : une prudence *indépendante* de cet axe (la prophylaxie « à la Petrosian » empêche des plans, ce que des comptages simples ne captent pas). Usages envisagés : portrait de l'élève ou d'un adversaire (parties Lichess), joueur LLM qui adopte un style vérifié par le même indice, partenaire d'entraînement qui imite un style (choix parmi les coups quasi équivalents de Stockfish).
 
+## 8 ter. Portrait d'un joueur
+
+`scripts/portrait.mjs --lichess <pseudo> | --chesscom <pseudo> | --pgn <fichier> --user <nom>` (`coach/portrait.mjs`). À partir de ses parties (API publiques Lichess et Chess.com, sans compte) :
+
+- **style** : indice tranchant ↔ sûr (traits validés, référence : 8 grands maîtres en parties lentes — imparfaite pour du blitz ou un joueur de club) ;
+- **précision par phase** (Stockfish, profondeur 12) ;
+- **erreurs récurrentes** (≥ 1,5 pion, hors positions déjà perdues) : cause (diagnostic) et motif qui les a punies ;
+- **temps** : erreurs en zeitnot (moins de 10 % du temps initial ou de 10 s, pendule `%clk`) ;
+- **répertoire** : ouverture reconnue par les coups (liste publique `lichess-org/chess-openings`, `coach/openings.mjs`).
+
+Chaque chiffre devient un fait numéroté ; le portrait (style, points forts, ce qui coûte des points, répertoire, trois axes d'entraînement) est rédigé par le LLM et vérifié par citations, comme le coach.
+
 ## 9. Résultats mesurés
 
 ### Coach (16 positions de référence, relecteur DeepSeek-Pro)
@@ -197,6 +210,7 @@ Enseignements : **sans ancrage, un modèle plus fort ne sert à rien** ; avec an
 8. Le carnet de leçons n'est pas encore utilisé par le coach (« cette erreur ressemble à celle de la semaine dernière ») : il faut connaître le joueur et l'historique de ses parties.
 
 **Joueur**
+8 bis. Options ajoutées depuis : `--style attaquant|prudent` (style réellement joué mesuré par l'indice), `--plan-tracker` (plan courant tenu par le code : manœuvre choisie, étape suivante, abandon motivé ; premier essai : 3 manœuvres commencées, 1 terminée, 2 abandonnées à juste titre), `--deep-prep` (menaces à deux coups calmes avec élagage humain : 4 réfutations sur 13 signalées contre 3). Réflexion auto : criticité jugée par les menaces notées Stockfish, relances en « low ».
 9. **Cohérence du plan** faible (4/10, plus de 25 changements de plan par partie) malgré la consigne de continuité : il devient réactif sous la pression. Piste : un « plan courant » maintenu par le code (manœuvre en cours, cible), que le LLM doit explicitement poursuivre ou abandonner.
 10. Réflexion « auto » peu discriminante : presque toutes les positions ont été jugées critiques. Piste : n'utiliser que les menaces **notées par Stockfish** au-dessus d'un seuil.
 11. Souvenirs : premières leçons peu nombreuses ; la correspondance a été resserrée (nature du coup et punition possible) mais n'a pas encore été mesurée sur une série de parties. Piste : une série de 5 parties avec carnet, qui compte les erreurs de même signature.
