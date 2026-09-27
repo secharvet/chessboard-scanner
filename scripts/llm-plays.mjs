@@ -139,7 +139,7 @@ Coups légaux : ${legal.join(' ')}`;
   // Position critique ? (menace grave, combinaison forcée, souvenir) → le LLM réfléchit.
   const critical = scanTactics(fen, oppColor).some((t) => t.severity >= 10)
     || forcingLines(fen, LLM_COLOR).length > 0 || forcingLines(fen, oppColor).length > 0
-    || (lessons.length > 0 && recall(lessons, { situation: situationTags(fen, LLM_COLOR) }, { k: 1, min: 0.5 }).length > 0);
+    || (lessons.length > 0 && recall(lessons, { situation: situationTags(fen, LLM_COLOR) }, { k: 1, min: 0.7 }).length > 0);
   const forbidden = new Set();
   const asked = new Set();
   const events = [];
