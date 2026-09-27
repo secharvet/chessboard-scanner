@@ -187,6 +187,10 @@ Coups légaux : ${legal.join(' ')}`;
     const danger = [
       ...blunderCheck(after.fen(), LLM_COLOR),
       ...forcingLines(after.fen(), oppColor, { minGain: 2 }).map((l) => ({ text: `ligne forcée ${describeForcing(l)}`, line: l })),
+      // Menaces en préparation graves seulement (≥ 3 points, pièce piégée, mat) pour limiter les alertes.
+      ...preparedThreats(after.fen(), LLM_COLOR, { max: 2 })
+        .filter((t) => t.severity >= 13 || t.threat.startsWith('piège'))
+        .map((t) => ({ text: `préparation adverse : ${t.text}` })),
     ];
     const ok = { san: played.san, plan: parsed.plan ?? '', type: parsed.type ?? '', raison: parsed.raison ?? '', illegal, events, pendingRecalls };
 
