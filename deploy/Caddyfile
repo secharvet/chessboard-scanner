@@ -1,0 +1,8 @@
+# Coach d'échecs — HTTPS automatique (Let's Encrypt) devant le site (nginx dans Podman, port 6400).
+# Domaine provisoire sslip.io ; remplacer par le vrai domaine le moment venu.
+162-19-25-49.sslip.io {
+	encode zstd gzip
+	reverse_proxy 127.0.0.1:6400 {
+		header_up X-Real-IP {remote_host}
+	}
+}
