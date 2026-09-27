@@ -1,6 +1,6 @@
 # Plans et concepts : définitions et protocole
 
-Document de travail, septembre 2026. Il fait suite au bilan des essais « LLM stratège ». Un LLM se trompe
+Document de travail, septembre 2026 (révisé après relecture critique : horizon, entrées, transpositions, concept de blocage). Il fait suite au bilan des essais « LLM stratège ». Un LLM se trompe
 encore sur 5 à 12 % des explications, qu'il reçoive un long contexte ou une fiche. Il peut servir de voix,
 pas de stratège. La nouvelle piste sort le LLM de la boucle : **de petits réseaux spécialisés, chacun
 entraîné à reconnaître un principe d'échecs, s'allument quand ce principe est le bon plan ; leurs
@@ -80,6 +80,7 @@ détectés par le moteur de règles (`positional/`) ; ce qui manque, c'est de sa
 | 8 | Créer et pousser un pion passé | un pion passé apparaît ou avance de 2 rangées ou plus | `PION_PASSE`, `PION_PASSE_PROTEGE` |
 | 9 | Activer son roi en finale | le roi atteint le centre ou les pions adverses | phase de finale et position du roi |
 | 10 | Attaquer le roi | bouclier adverse affaibli, pièces proches du roi adverse | `PIONS_ROI_AFFAIBLI`, à compléter |
+| 10 bis | Bloquer un pion faible | un cavalier ou un fou s'installe juste devant un pion adverse isolé, arriéré, faible ou passé (souvent le précurseur de l'avant-poste) | faits de pions et occupant de la case de blocage |
 
 ### Avancé
 
@@ -88,7 +89,7 @@ détectés par le moteur de règles (`positional/`) ; ce qui manque, c'est de sa
 | 11 | Rupture de pions | un levier de pions ouvre une colonne ou libère une chaîne | à écrire (levier puis colonne ouverte) |
 | 12 | Attaque de minorité | les pions de l'aile dame avancent contre une majorité, créant une faiblesse | structure Carlsbad plus faiblesse créée |
 | 13 | Échanger son mauvais fou | le mauvais fou disparaît contre une pièce adverse | `FOU_MAUVAIS` disparaît par échange |
-| 14 | Prophylaxie | le plan adverse le plus probable devient impossible ou perd sa valeur | activation du détecteur adverse qui chute |
+| 14 | Prophylaxie | le plan adverse le plus probable devient impossible ou perd sa valeur | activation du détecteur adverse qui chute — **reporté** après la première expérience (état but difficile à définir de façon symbolique) |
 | 15 | Transformer un avantage | un avantage (matériel, espace) devient un autre, plus durable (pion passé, faiblesse fixée) | combinaison de 4, 5 et 8 |
 
 La liste est un point de départ. Elle sera révisée selon ce que les données montrent.
@@ -99,12 +100,17 @@ La liste est un point de départ. Elle sera révisée selon ce que les données 
 
 Pour chaque position tirée de vraies parties (base publique de Lichess) :
 
-1. **Stockfish** donne ses 3 meilleures suites (multipv 3), de 12 à 16 demi-coups chacune.
+1. **Stockfish** donne ses 3 meilleures suites (multipv 3, profondeur 16) ; on en exploite jusqu'à 24 demi-coups.
 2. Le **moteur de règles** relève, pour chaque concept, s'il **apparaît** le long de chaque suite, pour chaque camp.
 3. **Étiquette positive** « le concept C est le plan du camp X » si les trois conditions suivantes sont réunies :
    - C apparaît dans la meilleure suite pour X ;
    - C y est encore présent à la fin ;
    - C n'apparaît pas dans les suites qui valent au moins 0,3 pion de moins.
+
+   Le contraste porte sur l'**apparition du concept** le long des suites, pas sur leur premier coup. Deux suites à peu près
+   équivalentes qui mènent au même concept par des ordres de coups différents (transpositions) **renforcent** l'étiquette
+   positive : elles ne sont pas une raison d'exclure la position. On n'exclut que les positions où des suites équivalentes
+   mènent à des concepts **différents**.
 4. **Étiquette négative** si C est possible (les ingrédients sont là) mais n'apparaît pas dans la meilleure suite.
 5. On garde aussi l'**horizon** (à quel demi-coup C apparaît) et l'**Elo des joueurs** de la partie, pour les niveaux.
 
@@ -115,7 +121,10 @@ Tout est calculé, reproductible, et vérifiable position par position.
 ## 5. Les petits réseaux
 
 - **Entrée** : l'échiquier codé en 12 plans de 8×8 (une couche par type de pièce et par couleur), plus le trait et
-  les droits de roque. On peut ajouter en option le vecteur des faits du moteur de règles.
+  les droits de roque. **Deux variantes seront comparées** : l'échiquier seul, et l'échiquier plus le vecteur des faits
+  du moteur de règles (structure de pions, cartes de contrôle des cases, colonnes, avant-postes). Avec ces faits, le
+  réseau n'a pas à réapprendre la géométrie de l'échiquier et peut se concentrer sur la question « ce concept va-t-il
+  devenir le plan ? ».
 - **Un petit réseau par concept et par camp** (« mon plan » / « son plan ») : quelques couches, quelques centaines
   de milliers de paramètres, sortie = probabilité que ce concept soit le plan. On gardera plus tard l'option d'un
   tronc commun avec une tête par concept.
@@ -134,7 +143,9 @@ Tout est calculé, reproductible, et vérifiable position par position.
 
 ## 6. Première expérience (réfutable)
 
-- **Concepts** : 6 (tour sur colonne ouverte), 7 (cavalier sur avant-poste), 11 (rupture de pions).
+- **Concepts** : 6 (tour sur colonne ouverte), 7 (cavalier sur avant-poste), 10 bis (blocage), 11 (rupture de pions).
+- **Contrôle visuel d'abord** : environ 1 000 positions étiquetées sont relues devant l'échiquier (planches avec la
+  suite de Stockfish) pour vérifier que chaque étiquette correspond à l'intuition d'un joueur, avant tout entraînement.
 - **Données** : 50 000 à 100 000 positions (milieux de partie), étiquetées sur le serveur, en plusieurs nuits de calcul.
 - **Référence à battre** : nos règles actuelles (présence statique des ingrédients du concept).
 - **Critère de succès** : sur des positions jamais vues, le réseau prédit que Stockfish va jouer ce plan nettement
@@ -146,7 +157,9 @@ Tout est calculé, reproductible, et vérifiable position par position.
 
 - **Qualité des étiquettes** : les états buts détectés par nos règles peuvent être imparfaits. Une règle fausse
   apprend un concept faux. Les relectures devant l'échiquier restent indispensables.
-- **Horizon** : 12 à 16 demi-coups de Stockfish ne montrent pas toujours un plan de 15 coups.
+- **Horizon** : 24 demi-coups de Stockfish ne montrent pas toujours un plan de 15 coups ; risque de faux négatifs
+  pour les plans lents (attaque de minorité, roi actif, transformation d'avantage). Piste : prolonger la suite en
+  relançant Stockfish depuis sa dernière position, ou adapter la longueur au concept.
 - **Suites équivalentes** : quand trois coups se valent, le contraste disparaît ; ces positions seront exclues ou marquées.
 - **Niveaux** : le plan optimal selon Stockfish n'est pas toujours enseignable à un débutant. L'Elo des parties
   servira à étudier ce que les joueurs de chaque niveau réussissent réellement.
