@@ -9,6 +9,7 @@
  *   --stop-before 20                 arrêter la partie à la première gaffe avant ce coup
  *   --no-memory                      sans le carnet de leçons (comparaison)
  *   --material-only                  nos lignes notées au matériel seulement (sans l'évaluation Stockfish)
+ *   --plan-tracker                   plan courant tenu par le code (manœuvre choisie, étape suivante, abandon justifié)
  *   --style attaquant|prudent        consigne de style ; le style réellement joué est mesuré (indice tranchant ↔ sûr)
  *   --think auto|on|off|low|high     réflexion du LLM ; auto (défaut) : aucune au calme, low en position
  *                                    critique, high après une alerte ou un veto
@@ -61,6 +62,11 @@ const VETO_CP = 200;
 const USE_MEMORY = !args.includes('--no-memory');
 const THINK = opt('--think', 'auto');
 const STYLE = opt('--style', null);
+const PLAN_TRACKER = args.includes('--plan-tracker');
+/** Plan courant : manœuvre choisie par le LLM, suivie par le code. */
+let currentPlan = null; // { text, piece, path, target, step, since }
+const planStats = { started: 0, completed: 0, abandoned: 0, broken: 0, durations: [] };
+let lastManeuvers = [];
 const STYLES = {
   attaquant: "STYLE IMPOSÉ : tu joues comme un attaquant (Tal, Shirov). Tu cherches l'initiative, les menaces et l'attaque du roi, tu acceptes les complications et les sacrifices corrects. Entre deux coups de valeur proche, choisis le plus actif et le plus tranchant. La sécurité (menaces graves, anti-gaffe) passe toujours avant.",
   prudent: "STYLE IMPOSÉ : tu joues comme un joueur prudent (Karpov, Andersson). Sécurité d'abord : pas de complications inutiles, tu limites les options tactiques de l'adversaire, tu améliores lentement tes pièces et tu échanges quand ça simplifie. Entre deux coups de valeur proche, choisis le plus sûr.",
@@ -113,7 +119,8 @@ Règles :
 - Pour le plan, « Manœuvres possibles » donne des itinéraires sûrs vers des cases stratégiques (avant-postes, cases de blocage, colonnes ouvertes, pions faibles à attaquer). Un bon plan tient souvent en une manœuvre de 2 à 4 coups : annonce-la et suis-la.
 - CONTINUITÉ : un plan se poursuit sur plusieurs coups. Parer une menace n'est pas changer de plan : pare, puis reviens à ton plan. Ne change de plan que si la structure de pions ou le matériel a changé, et dis alors pourquoi.
 - Indique le type de ton coup : "plan" (il fait avancer ton plan), "parade" (il pare une menace ; dis comment tu reprends ton plan ensuite) ou "tactique" (il exploite une occasion).
-Réponds UNIQUEMENT en JSON : {"plan": "ton plan en une ou deux phrases", "type": "plan|parade|tactique", "raison": "pourquoi ce coup", "coup": "Cf3"}`;
+Réponds UNIQUEMENT en JSON : {"plan": "ton plan en une ou deux phrases", "type": "plan|parade|tactique", "raison": "pourquoi ce coup", "coup": "Cf3"}
+Si un « plan en cours » t'est indiqué, ajoute "suite": "poursuivre" ou "abandonner" (avec la raison) ; pour choisir une nouvelle manœuvre, ajoute "manoeuvre": "K2".`;
 
 async function perception(fen, color) {
   const b = buildBalance(buildAllFacts(fen));
@@ -130,7 +137,10 @@ async function perception(fen, color) {
     list('Tes combinaisons forcées (échecs, prises, jusqu\'au bout) :', (await scored.forcing(fen, color, forcingLines(fen, color))).map(describeForcing)),
     list("Combinaisons forcées de l'adversaire (s'il jouait maintenant) :", (await scored.forcing(fen, opp, forcingLines(fen, opp))).map(describeForcing)),
     list("Ce que l'adversaire prépare (un coup calme de sa part, puis la menace) :", (await scored.prepared(fen, opp, preparedThreats(fen, color))).map((t) => t.text)),
-    list('Manœuvres possibles :', findManeuvers(fen, color).map((m) => m.text)),
+    list('Manœuvres possibles :', (lastManeuvers = findManeuvers(fen, color)).map((m, i) => `${PLAN_TRACKER ? `[K${i + 1}] ` : ''}${m.text}`)),
+    ...(PLAN_TRACKER ? [list('Ton plan en cours (tenu par le code) :', currentPlan
+      ? [`${currentPlan.text} — commencé au coup ${currentPlan.since}, étape suivante : ${currentPlan.path[currentPlan.step]} (${currentPlan.path.length - currentPlan.step} case(s) restante(s)). Poursuis-le, ou abandonne-le en disant pourquoi.`]
+      : ['aucun — tu peux choisir une manœuvre [K…] comme plan (champ "manoeuvre").'])] : []),
     ...(lessons.length ? [list('Souvenirs de tes parties précédentes (situations semblables) :',
       recall(lessons, { situation: situationTags(fen, color) }).map(({ lesson: l }) =>
         `${l.titre} — ${l.lecon} Signal : ${l.signal}${l.count > 1 ? ` (erreur commise ${l.count} fois)` : ''}`))] : []),
@@ -219,7 +229,7 @@ Coups légaux : ${legal.join(' ')}`;
         .filter((t) => (t.engineGain ?? 99) >= 1.5)
         .map((t) => ({ text: `préparation adverse : ${t.text}` })),
     ];
-    const ok = { san: played.san, plan: parsed.plan ?? '', type: parsed.type ?? '', raison: parsed.raison ?? '', illegal, events, pendingRecalls };
+    const ok = { san: played.san, plan: parsed.plan ?? '', type: parsed.type ?? '', raison: parsed.raison ?? '', illegal, events, pendingRecalls, suite: parsed.suite ?? '', manoeuvre: parsed.manoeuvre ?? '' };
 
     // « Attends, ça me rappelle… » : le coup ressemble-t-il à une erreur passée ?
     const reminder = lessons.length && !asked.has(played.san)
@@ -338,6 +348,41 @@ while (!chess.isGameOver() && chess.history().length < MAX_MOVES * 2) {
     const tag = loss >= 300 ? 'gaffe' : loss >= 100 ? 'erreur' : loss >= 50 ? 'imprécision' : '';
     if (plan && m.plan && m.plan !== plan) planChanges++;
     plan = m.plan || plan;
+    // Suivi du plan courant (option --plan-tracker).
+    if (PLAN_TRACKER) {
+      const nMove = Math.ceil(chess.history().length / 2);
+      const played = new Chess(fen).move(m.san);
+      if (currentPlan && /abandon/i.test(m.suite ?? '')) {
+        planStats.abandoned++;
+        planStats.durations.push(nMove - currentPlan.since);
+        m.events.push(`🗺 plan abandonné : ${currentPlan.text}`);
+        currentPlan = null;
+      }
+      const pick = String(m.manoeuvre ?? '').match(/K(\d+)/);
+      if (!currentPlan && pick && lastManeuvers[Number(pick[1]) - 1]) {
+        const mv = lastManeuvers[Number(pick[1]) - 1];
+        currentPlan = { text: mv.text, piece: mv.from, path: mv.path, target: mv.to, step: 1, since: nMove };
+        planStats.started++;
+        m.events.push(`🗺 plan choisi : ${mv.text}`);
+      }
+      if (currentPlan) {
+        if (played.from === currentPlan.piece && played.to === currentPlan.path[currentPlan.step]) {
+          currentPlan.piece = played.to;
+          currentPlan.step++;
+          if (currentPlan.step >= currentPlan.path.length) {
+            planStats.completed++;
+            planStats.durations.push(nMove - currentPlan.since + 1);
+            m.events.push(`🗺 manœuvre terminée ✓ : ${currentPlan.text}`);
+            currentPlan = null;
+          }
+        } else if (!new Chess(chess.fen()).get(currentPlan.piece) || new Chess(chess.fen()).get(currentPlan.piece).color !== LLM_COLOR) {
+          planStats.broken++;
+          m.events.push(`🗺 plan interrompu (pièce prise ou déplacée) : ${currentPlan.text}`);
+          currentPlan = null;
+        }
+      }
+    }
+
     // Souvenirs rappelés : ont-ils évité une erreur ? (coup abandonné qui aurait coûté ≥ 1 pion)
     for (const r of m.pendingRecalls ?? []) {
       let helped = false;
@@ -431,6 +476,7 @@ function writeReport(coherence, finalEval = null) {
     `- Types de coups : plan ${log.filter((x) => x.type === 'plan').length}, parade ${log.filter((x) => x.type === 'parade').length}, tactique ${log.filter((x) => x.type === 'tactique').length}`,
     `- Réponses illégales : ${illegal} ; changements de plan : ${planChanges} ; réflexion : ${THINK} (appels avec réflexion : ${thinkCalls}, rapides : ${fastCalls})`,
     coherence ? `- Cohérence stratégique (relecteur) : **${coherence.note ?? '?'}/10**` : '',
+    ...(PLAN_TRACKER ? [`- Plans (manœuvres) : commencés ${planStats.started}, terminés ${planStats.completed}, abandonnés ${planStats.abandoned}, interrompus ${planStats.broken} ; durée moyenne ${planStats.durations.length ? (planStats.durations.reduce((a, b) => a + b, 0) / planStats.durations.length).toFixed(1) : '—'} coups`] : []),
     `- Style : ${STYLE ?? 'libre'} ; indice tranchant ↔ sûr réellement joué : ${typeof styleIndex === 'number' ? styleIndex.toFixed(2) : '—'} (0 = moyenne de 8 GM en parties lentes)`,
     '', ...(coherence?.points_forts ?? []).map((x) => `- ✅ ${x}`), ...(coherence?.points_faibles ?? []).map((x) => `- ⚠ ${x}`),
     '', '## Gaffes voulues bloquées par l\'arbitre', '',
