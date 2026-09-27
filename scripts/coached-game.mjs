@@ -72,7 +72,7 @@ while (!chess.isGameOver() && chess.history().length < MAX_MOVES * 2) {
     const uci = await student.move(fen);
     const m = chess.move({ from: uci.slice(0, 2), to: uci.slice(2, 4), promotion: uci[4] });
     const loss = Math.max(0, Math.min(1000, before + (await evalFor(chess.fen()))));
-    turns.push({ n, fen, advice: r.advice, problems: r.problems, revised: r.revised, context: r.context, played: toFrenchSan(m.san), loss, secs: Math.round((Date.now() - t0) / 1000) });
+    turns.push({ n, fen, advice: r.advice, adviceWorking: r.adviceWorking, problems: r.problems, revised: r.revised, context: r.context, played: toFrenchSan(m.san), loss, secs: Math.round((Date.now() - t0) / 1000) });
     console.error(`${n}. conseil reçu (${turns.at(-1).secs} s, ${r.problems.length} problème(s)) — l'élève joue ${turns.at(-1).played} (perte ${loss} cp)`);
     writeReport();
   } else {

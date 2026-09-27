@@ -11,45 +11,50 @@
 const CITE_RE = /\[((?:[A-Z]\d+[a-z]?[+\-mt]?\d*)(?:\s*[,;]\s*[A-Z]\d+[a-z]?[+\-mt]?\d*)*)\]/g; // ex. [L1i-2], [L1t1], [F7]
 const SQUARE_RE = /(?<![a-zA-Z])([a-h][1-8])(?![0-9])/g;
 
-/** Concepts : regex dans la phrase du coach → regex attendue dans la source citée. */
+/**
+ * Concepts : regex dans la phrase du coach → regex attendue dans la source citée.
+ * Français ET anglais des deux côtés : la réponse peut être dans une langue et les faits dans
+ * l'autre (COACH_LANG=en avec réponse en français).
+ */
 const CONCEPTS = [
-  ['clou', /clou/i],
-  ['fourchette|double attaque', /fourchette|attaque .*et|cibles/i],
-  ['enfilade', /enfilade/i],
-  ['découverte', /découverte|démasque/i],
-  ['surcharg', /surcharg|seule à défendre/i],
-  ['piégé', /piégée?/i],
-  ['dernière rangée|rangée faible', /dernière rangée/i],
-  ['colonne', /colonne/i],
-  ['avant-poste', /avant-poste/i],
-  ['case faible|trou', /case faible|trou|complexe/i],
-  ['complexe', /complexe/i],
-  ['pion passé', /passé/i],
-  ['isolé', /isolé/i],
+  ['clou|\\bpin(?:s|ned|ning)?\\b', /clou|\bpin/i],
+  ['fourchette|double attaque|\\bfork|double attack', /fourchette|attaque .*et|cibles|fork|at the same time|attacks .* and/i],
+  ['enfilade|skewer', /enfilade|skewer/i],
+  ['découverte|discover', /découverte|démasque|discover|unmask/i],
+  ['surcharg|overload', /surcharg|seule à défendre|overload|only defender/i],
+  ['piégé|trapped', /piégée?|trapped/i],
+  ['dernière rangée|rangée faible|back rank|back-rank', /dernière rangée|back rank/i],
+  ['colonne|\\bfile\\b', /colonne|\bfile\b/i],
+  ['avant-poste|outpost', /avant-poste|outpost/i],
+  ['case faible|\\btrous?\\b|weak square|\\bhole', /case faible|trou|complexe|weak square|hole|complex/i],
+  ['complexe|complex', /complexe|complex/i],
+  ['pion passé|passed pawn|\\bpasser', /passé|passed/i],
+  ['isolé|isolated', /isolé|isolated/i],
   // « Pion dame isolé » est une STRUCTURE (pion d isolé avec des pièces) : il faut un fait [S] qui la nomme.
-  ['pion dame isolé|PDI', /pion[- ]dame isolé|PDI/i],
-  ['arriéré', /arriéré/i],
-  ['doublé|doublon', /doublon|doublé/i],
-  ['7e rangée|septième', /7e rangée/i],
-  ['paire de fous', /paire de fous/i],
-  ['mauvais fou', /mauvais fou/i],
-  ['bon fou', /bon fou/i],
-  ['en prise|non défendu', /en prise|non défendue?/i],
-  ['mat\\b|mater', /\bmat\b/i],
-  ['sacrifi', /sacrifice/i],
-  ['coup intermédiaire', /intermédiaire/i],
-  ['majorité', /majorité/i],
-  ['française', /française|chaîne/i],
+  ['pion dame isolé|PDI|isolated queen|IQP|isolani', /pion[- ]dame isolé|PDI|isolated queen|IQP/i],
+  ['arriéré|backward', /arriéré|backward/i],
+  ['doublé|doublon|doubled', /doublon|doublé|doubled/i],
+  ['7e rangée|septième|7th rank|seventh rank', /7e rangée|7th rank/i],
+  ['paire de fous|bishop pair|two bishops', /paire de fous|bishop pair/i],
+  ['mauvais fou|bad bishop', /mauvais fou|bad bishop/i],
+  ['bon fou|good bishop', /bon fou|good bishop/i],
+  ['en prise|non défendu|hanging|undefended', /en prise|non défendue?|hanging|undefended/i],
+  // « matériel » n'est pas « mat » (pour \\b, « é » n'est pas une lettre) : fin de mot explicite.
+  ['\\bmat(?![a-zà-ÿ])|\\bmater\\b|\\bmate\\b|checkmate|\\bmating\\b', /\bmat(?![a-zà-ÿ])|\bmate\b|checkmate/i],
+  ['sacrifi', /sacrific/i],
+  ['coup intermédiaire|in-between|zwischenzug|intermezzo', /intermédiaire|in-between/i],
+  ['majorité|majority', /majorité|majority/i],
+  ['française|french structure', /française|chaîne|french|chain/i],
   ['carlsbad', /carlsbad/i],
   ['maroczy', /maroczy/i],
-  ['est-indienne', /est-indienne|chaîne/i],
-  ['pions pendants', /pendants/i],
+  ['est-indienne|king.s indian', /est-indienne|chaîne|king.s indian|chain/i],
+  ['pions pendants|hanging pawns', /pendants|hanging pawns/i],
   ['structure', /structure/i],
-  ['développement', /développ/i],
+  ['développement|develop', /développ|develop/i],
 ];
 
 /** Notions qui qualifient une case précise (contrôle case par case). */
-const SQUARE_BOUND = /isolé|arriéré|doublé|passé|avant-poste|case faible|clou|piégé|complexe/i;
+const SQUARE_BOUND = /isolé|arriéré|doublé|passé|avant-poste|case faible|clou|piégé|complexe|isolated|backward|doubled|passed|outpost|weak square|\bpin|trapped|complex/i;
 
 /** @param {string} text */
 export function splitSentences(text) {

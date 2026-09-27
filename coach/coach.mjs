@@ -7,6 +7,10 @@ import { findUngroundedMoves } from './guard.mjs';
 import { judgeAnswer, judgeConfig } from './judge.mjs';
 import { complete, llmConfig } from './llm.mjs';
 import { SYSTEM_PROMPT, buildRevisionPrompt, buildUserPrompt } from './prompt.mjs';
+import { buildRevisionPromptEn, buildUserPromptEn, systemPromptEn } from './prompt-en.mjs';
+import { factLang } from '../positional/lang.js';
+import { frenchDisplay } from './notation.mjs';
+import { translateToFrench } from './translate.mjs';
 import { stripCitations, verifyCitations } from './verify.mjs';
 
 /**
@@ -28,7 +32,13 @@ export async function askCoach({ fen, side, moves, question, engine, cfg = llmCo
     };
   }
 
-  const user = buildUserPrompt({ question, contextText: context.text });
+  // Langue de travail du LLM : français (défaut) ou anglais (COACH_LANG=en). En anglais, la réponse
+  // est écrite directement en français (COACH_ANSWER=fr) ou en anglais puis traduite (translate).
+  const en = factLang() === 'en';
+  const answer = process.env.COACH_ANSWER === 'fr' ? 'fr' : 'en';
+  const system = en ? systemPromptEn(answer) : SYSTEM_PROMPT;
+  const revision = en ? buildRevisionPromptEn : buildRevisionPrompt;
+  const user = (en ? buildUserPromptEn : buildUserPrompt)({ question, contextText: context.text });
   const check = (raw) => {
     const clean = stripCitations(raw);
     const ungrounded = findUngroundedMoves(clean, context.data);
@@ -37,23 +47,26 @@ export async function askCoach({ fen, side, moves, question, engine, cfg = llmCo
     return { raw, clean, ungrounded, problems: all, cited, sentences };
   };
 
-  let result = check(await complete({ system: SYSTEM_PROMPT, user }, cfg));
+  let result = check(await complete({ system, user }, cfg));
   let revised = false;
   if (result.problems.length) {
     // Une seule réécriture : on renvoie au LLM la liste précise des affirmations mal sourcées.
     const retry = check(await complete({
-      system: SYSTEM_PROMPT,
-      user: `${user}\n\n# Ta première réponse\n\n${result.raw}\n\n${buildRevisionPrompt(result.problems)}`,
+      system,
+      user: `${user}\n\n${en ? '# Your first answer' : '# Ta première réponse'}\n\n${result.raw}\n\n${revision(result.problems)}`,
     }, cfg));
     revised = true;
     if (retry.problems.length <= result.problems.length) result = retry;
   }
+  // Affichage : toujours en français, coups en notation française.
+  const shown = !en ? result.clean : answer === 'fr' ? frenchDisplay(result.clean) : await translateToFrench(result.clean, cfg);
   const tLlm = Date.now() - t0 - tContext;
 
-  const verdict = judge ? await judgeAnswer(context.text, result.clean, judgeConfig()) : null;
+  const verdict = judge ? await judgeAnswer(context.text, shown, judgeConfig()) : null;
 
   return {
-    advice: result.clean,
+    advice: shown,
+    adviceWorking: en ? result.clean : undefined,
     adviceCited: result.raw,
     context: context.text,
     ungrounded: result.ungrounded,

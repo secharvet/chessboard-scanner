@@ -37,4 +37,11 @@ describe('Relecture des parties commentées', () => {
     assert.ok(promos.length > 0, 'la menace de promotion doit être vue');
     assert.ok(promos.every((t) => /=D/.test(t)), promos.join(', '));
   });
+  it('« matériel » et « material » ne sont pas « mat » ; « trouver » n\'est pas un « trou »', () => {
+    const facts = { L1: 'Ligne 1 : 5. Fc4 (+0.3) ; tu gagnes 1 point(s) de matériel.' };
+    assert.equal(verifyCitations('Sinon tu perds du matériel [L1].', facts).problems.length, 0);
+    assert.equal(verifyCitations('Otherwise you lose material [L1].', facts).problems.length, 0);
+    assert.equal(verifyCitations('Il te faut trouver un abri [L1].', facts).problems.length, 0);
+    assert.equal(verifyCitations('C\'est mat [L1].', facts).problems.length, 1);
+  });
 });

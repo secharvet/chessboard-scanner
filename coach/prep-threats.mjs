@@ -12,11 +12,14 @@ import { buildTacticalFacts } from '../positional/piece-attacks.js';
 import { describeForcing, forcingLines } from './forcing.mjs';
 import { toFrenchSan, withPieceName } from './notation.mjs';
 import { scanTactics } from './threats.mjs';
+import { tr } from '../positional/lang.js';
 
 // Sous-promotions ignorées : pour un débutant, « bxa1=T+ » est du bruit, la menace est la promotion en dame.
 const queenOnly = (m) => !m.promotion || m.promotion === 'q';
 
-const THE = { p: 'le pion', n: 'le cavalier', b: 'le fou', r: 'la tour', q: 'la dame', k: 'le roi' };
+const THE_FR = { p: 'le pion', n: 'le cavalier', b: 'le fou', r: 'la tour', q: 'la dame', k: 'le roi' };
+const THE_EN = { p: 'the pawn', n: 'the knight', b: 'the bishop', r: 'the rook', q: 'the queen', k: 'the king' };
+const THE = new Proxy({}, { get: (_, k) => tr(THE_FR, THE_EN)[k] });
 
 const FILES_ = 'abcdefgh';
 const dist = (a, b) => Math.max(Math.abs(FILES_.indexOf(a[0]) - FILES_.indexOf(b[0])), Math.abs(Number(a[1]) - Number(b[1])));
@@ -60,9 +63,9 @@ export function preparedThreats2(fen, me, { max = 4, width = 8 } = {}) {
       for (const t of scanTactics(b2.fen(), opp, 3)) {
         if (now.has(t.san) || t.severity < 12) continue;
         out.push({
-          severity: t.severity, prep: `${toFrenchSan(m1.san)} puis ${dots}${toFrenchSan(m2.san)}`, preps: [toFrenchSan(m1.san)],
+          severity: t.severity, prep: `${toFrenchSan(m1.san)}${tr(' puis ', ' then ')}${dots}${toFrenchSan(m2.san)}`, preps: [toFrenchSan(m1.san)],
           threat: t.san, seqEn: [m1.san, '--', m2.san, '--', t.sanEn],
-          text: `${dots}${withPieceName(toFrenchSan(m1.san))} puis ${dots}${withPieceName(toFrenchSan(m2.san))} préparerait ${t.text}`,
+          text: `${dots}${withPieceName(toFrenchSan(m1.san))}${tr(' puis ', ' then ')}${dots}${withPieceName(toFrenchSan(m2.san))}${tr(' préparerait ', ' would prepare ')}${t.text}`,
         });
       }
     }
@@ -113,17 +116,17 @@ export function preparedThreats(fen, me, opts = {}) {
       // Bruit exclu : un pion gagné (sévérité 11) ne vaut pas une alerte ; on garde ≥ 2 points, mat,
       // fourchette, découverte (sévérités 8-9 hors prises).
       if (now.has(t.san) || t.severity < 8 || t.severity === 11) continue;
-      out.push({ severity: t.severity, prep, threat: t.san, seqEn: [m.san, '--', t.sanEn], text: `${dots}${withPieceName(prep)} préparerait ${t.text}` });
+      out.push({ severity: t.severity, prep, threat: t.san, seqEn: [m.san, '--', t.sanEn], text: `${dots}${withPieceName(prep)}${tr(' préparerait ', ' would prepare ')}${t.text}` });
     }
     if (opts.forcing === true) { // coûteux (jusqu'à 30 s) pour peu de gain mesuré : désactivé par défaut
       for (const l of forcingLines(afterFen, opp, { maxNodes: 3000, max: 1 })) {
         if (nowForcing.has(l.san)) continue;
-        out.push({ severity: l.mate ? 90 : 10 + l.gain, prep, threat: l.san, seqEn: [m.san, '--', ...l.pv], text: `${dots}${withPieceName(prep)} préparerait la suite forcée ${describeForcing(l)}` });
+        out.push({ severity: l.mate ? 90 : 10 + l.gain, prep, threat: l.san, seqEn: [m.san, '--', ...l.pv], text: `${dots}${withPieceName(prep)}${tr(' préparerait la suite forcée ', ' would prepare the forcing line ')}${describeForcing(l)}` });
       }
     }
     for (const t of buildTacticalFacts(afterFen)) {
       if (t.id !== 'PIECE_PIEGEE' || t.params.color !== me || trappedNow.has(t.params.square)) continue;
-      out.push({ severity: 9, prep, threat: `piège ${t.params.square}`, seqEn: [m.san], text: `${dots}${withPieceName(prep)} piégerait ${THE[t.params.type]} en ${t.params.square} (plus de case de fuite sûre)` });
+      out.push({ severity: 9, prep, threat: `piège ${t.params.square}`, seqEn: [m.san], text: tr(`${dots}${withPieceName(prep)} piégerait ${THE[t.params.type]} en ${t.params.square} (plus de case de fuite sûre)`, `${dots}${withPieceName(prep)} would trap ${THE[t.params.type]} on ${t.params.square} (no safe escape square left)`) });
     }
   }
 
@@ -143,7 +146,7 @@ export function preparedThreats(fen, me, opts = {}) {
     .slice(0, opts.max ?? 4)
     .map((t) => {
       const d = t.text.startsWith('…') ? '…' : '';
-      const preps = t.preps.slice(0, 3).map((p) => `${d}${withPieceName(p)}`).join(' ou ');
+      const preps = t.preps.slice(0, 3).map((p) => `${d}${withPieceName(p)}`).join(tr(' ou ', ' or '));
       return { ...t, prep: t.preps[0], text: t.text.replace(/^…?\S+ \([^)]*\)/, preps) };
     });
 }

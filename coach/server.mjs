@@ -5,6 +5,7 @@
  *   GET  /health
  */
 
+import { appendFile, mkdir } from 'node:fs/promises';
 import { createServer } from 'node:http';
 import { askCoach } from './coach.mjs';
 import { loadEnv } from './env.mjs';
@@ -14,6 +15,23 @@ import { UciEngine } from './uci-engine.mjs';
 loadEnv();
 const PORT = Number(process.env.COACH_PORT || 8000);
 const HOST = process.env.COACH_HOST || '0.0.0.0';
+// Journal des consultations (une ligne JSON par réponse) : réponse affichée ET réponse d'origine du LLM
+// (en mode anglais, avant traduction), pour relire plus tard d'où vient une erreur. Pas d'IP ici.
+const ANSWER_LOG = process.env.COACH_ANSWER_LOG || 'logs/coach-answers.jsonl';
+async function logAnswer(payload, result) {
+  const entry = {
+    at: new Date().toISOString(), lang: process.env.COACH_LANG || 'fr', answer: process.env.COACH_ANSWER || null,
+    model: `${cfg.provider}/${cfg.model}`, fen: payload.fen, side: payload.side, question: payload.question,
+    advice: result.advice, adviceWorking: result.adviceWorking ?? null, adviceCited: result.adviceCited ?? null,
+    problems: result.problems, revised: result.revised, timings: result.timings,
+  };
+  try {
+    await mkdir(ANSWER_LOG.replace(/\/[^/]*$/, ''), { recursive: true });
+    await appendFile(ANSWER_LOG, `${JSON.stringify(entry)}\n`);
+  } catch (e) {
+    console.error('[coach] journal impossible', e.message);
+  }
+}
 const cfg = llmConfig();
 const engine = new UciEngine();
 
@@ -97,6 +115,7 @@ const server = createServer(async (req, res) => {
       `[coach] ${ip} via ${req.socket.remoteAddress} — ${cfg.provider}/${cfg.model} contexte ${result.timings.context} ms, LLM ${result.timings.llm} ms` +
       (result.ungrounded.length ? `, coups hors contexte : ${result.ungrounded.join(' ')}` : ''),
     );
+    await logAnswer(payload, result);
     return send(res, 200, { ok: true, ...result });
   } catch (e) {
     console.error('[coach] erreur', e);

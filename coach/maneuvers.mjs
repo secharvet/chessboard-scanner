@@ -9,13 +9,15 @@
  */
 
 import { buildAttackMap, FILES, VALUE, relRank, sq } from '../positional/attack-map.js';
+import { tr } from '../positional/lang.js';
 import { buildAllFacts } from '../positional/index.js';
 
 const KNIGHT = [[-2, -1], [-2, 1], [-1, -2], [-1, 2], [1, -2], [1, 2], [2, -1], [2, 1]];
 const DIAG = [[-1, -1], [-1, 1], [1, -1], [1, 1]];
 const STRAIGHT = [[-1, 0], [1, 0], [0, -1], [0, 1]];
-const LETTER = { n: 'C', b: 'F', r: 'T' };
-const NAME = { n: 'cavalier', b: 'fou', r: 'tour' };
+const LETTER = new Proxy({}, { get: (_, k) => tr({ n: 'C', b: 'F', r: 'T' }, { n: 'N', b: 'B', r: 'R' })[k] });
+const NAME = new Proxy({}, { get: (_, k) => tr({ n: 'cavalier', b: 'fou', r: 'tour' }, { n: 'knight', b: 'bishop', r: 'rook' })[k] });
+const SHADE_EN = { claires: 'light', noires: 'dark', clair: 'light', noir: 'dark' };
 
 /**
  * @param {string} fen
@@ -36,18 +38,18 @@ export function findManeuvers(fen, side, opts = {}) {
   const rookTargets = new Map();
   for (const f of facts) {
     const p = f.params;
-    if (f.id === 'AVANT_POSTE' && p.color === side) minorTargets.set(String(p.square), 'avant-poste');
-    if (f.id === 'CASE_FAIBLE' && p.color === opp) minorTargets.set(String(p.square), 'case faible adverse');
+    if (f.id === 'AVANT_POSTE' && p.color === side) minorTargets.set(String(p.square), tr('avant-poste', 'outpost'));
+    if (f.id === 'CASE_FAIBLE' && p.color === opp) minorTargets.set(String(p.square), tr('case faible adverse', 'enemy weak square'));
     if (f.id === 'COMPLEXE_FAIBLE' && p.color === opp) {
-      for (const s of String(p.squares).split(',')) if (!minorTargets.has(s)) minorTargets.set(s, `trou du complexe de cases ${p.shade}`);
+      for (const s of String(p.squares).split(',')) if (!minorTargets.has(s)) minorTargets.set(s, tr(`trou du complexe de cases ${p.shade}`, `hole in the ${SHADE_EN[String(p.shade)] ?? p.shade}-square complex`));
     }
-    if (f.id === 'CASE_ENTREE' && p.color === side) rookTargets.set(String(p.square), "case d'entrée");
+    if (f.id === 'CASE_ENTREE' && p.color === side) rookTargets.set(String(p.square), tr("case d'entrée", 'entry square'));
     const openForMe = f.id === 'COLONNE_OUVERTE' || (f.id === 'COLONNE_SEMI_OUVERTE' && p.color === side);
     if (openForMe) {
       const fi = FILES.indexOf(String(p.file));
       for (const rr of [1, 2]) {
         const s = sq(fi, side === 'w' ? rr : 9 - rr);
-        if (!map.at[s] && !rookTargets.has(s)) rookTargets.set(s, `colonne ${p.file} ${f.id === 'COLONNE_OUVERTE' ? 'ouverte' : 'semi-ouverte'}`);
+        if (!map.at[s] && !rookTargets.has(s)) rookTargets.set(s, tr(`colonne ${p.file} ${f.id === 'COLONNE_OUVERTE' ? 'ouverte' : 'semi-ouverte'}`, `${f.id === 'COLONNE_OUVERTE' ? 'open' : 'half-open'} ${p.file}-file`));
       }
     }
   }
@@ -56,7 +58,7 @@ export function findManeuvers(fen, side, opts = {}) {
     if (!['PION_ISOLE', 'PION_PASSE', 'PION_PASSE_PROTEGE', 'PION_FAIBLE'].includes(f.id) || f.params.color !== opp) continue;
     const w = String(f.params.square);
     const front = sq(FILES.indexOf(w[0]), Number(w[1]) + (opp === 'w' ? 1 : -1));
-    if (!map.at[front] || map.at[front].color === side) minorTargets.set(front, `case de blocage devant le pion ${f.id.startsWith('PION_PASSE') ? 'passé' : 'isolé'} en ${w}`);
+    if (!map.at[front] || map.at[front].color === side) minorTargets.set(front, tr(`case de blocage devant le pion ${f.id.startsWith('PION_PASSE') ? 'passé' : 'isolé'} en ${w}`, `blockade square in front of the ${f.id.startsWith('PION_PASSE') ? 'passed' : 'isolated'} pawn on ${w}`));
   }
 
   // Pions faibles adverses : cases d'où un cavalier les attaque, colonne du pion pour les tours.
@@ -68,7 +70,7 @@ export function findManeuvers(fen, side, opts = {}) {
     for (const [df, dr] of KNIGHT) {
       const t = sq(wf + df, wr + dr);
       if (wf + df >= 0 && wf + df < 8 && wr + dr >= 1 && wr + dr <= 8 && !minorTargets.has(t)) {
-        minorTargets.set(t, `attaque le pion faible en ${w}`);
+        minorTargets.set(t, tr(`attaque le pion faible en ${w}`, `attacks the weak pawn on ${w}`));
       }
     }
     const mine = map.pieces.some((p) => p.type === 'p' && p.color === side && p.fileIdx === wf);
@@ -76,14 +78,14 @@ export function findManeuvers(fen, side, opts = {}) {
       for (let r = 1; r <= 8; r++) {
         const t = sq(wf, r);
         const between = side === 'w' ? r < wr : r > wr;
-        if (between && !map.at[t] && !rookTargets.has(t)) rookTargets.set(t, `pression sur le pion faible en ${w}`);
+        if (between && !map.at[t] && !rookTargets.has(t)) rookTargets.set(t, tr(`pression sur le pion faible en ${w}`, `pressure on the weak pawn on ${w}`));
       }
     }
   }
 
   for (let f = 0; f < 8; f++) {
     const s = sq(f, side === 'w' ? 7 : 2);
-    if (!map.at[s] && !rookTargets.has(s)) rookTargets.set(s, '7e rangée');
+    if (!map.at[s] && !rookTargets.has(s)) rookTargets.set(s, tr('7e rangée', '7th rank'));
   }
 
   // ── Sécurité d'une case pour une pièce de valeur v ──
@@ -125,7 +127,7 @@ export function findManeuvers(fen, side, opts = {}) {
             out.push({
               piece: `${LETTER[piece.type]}${piece.square}`,
               from: piece.square, to, path, moves: depth, why: targets.get(to),
-              text: `${NAME[piece.type]} ${piece.square} → ${to} (${targets.get(to)}) en ${depth} coup(s) : ${path.join('-')}`,
+              text: tr(`${NAME[piece.type]} ${piece.square} → ${to} (${targets.get(to)}) en ${depth} coup(s) : ${path.join('-')}`, `${NAME[piece.type]} ${piece.square} → ${to} (${targets.get(to)}) in ${depth} move(s): ${path.join('-')}`),
             });
           }
         }

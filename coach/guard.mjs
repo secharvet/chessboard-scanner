@@ -3,12 +3,23 @@
  */
 
 import { Chess } from 'chess.js';
+import { factLang } from '../positional/lang.js';
 import { toFrenchSan } from './notation.mjs';
 
-// Coups de pièce (Cd5, Fxe6, Tfd1…), prises de pion (exd5) et roques.
+// Coups de pièce (Cd5, Fxe6, Tfd1…), prises de pion (exd5) et roques — lettres de la langue des faits.
 // Notation longue (Cb1-d2, e2-e4, Fc4xf7) : vérifiée par case de départ et d'arrivée.
-const LONG_RE = /(?<![\w-])([RDTFC]?)([a-h][1-8])[-x]([a-h][1-8])(?![\w])/g;
-const MOVE_RE = /(?<![\w-])(O-O(?:-O)?|[RDTFC][a-h]?[1-8]?x?[a-h][1-8](?:=[DTFC])?|[a-h]x[a-h][1-8](?:=[DTFC])?)[+#]?(?![\w])/g;
+const LETTERS = {
+  fr: { pieces: 'RDTFC', promo: 'DTFC', type: { R: 'k', D: 'q', T: 'r', F: 'b', C: 'n' } },
+  en: { pieces: 'KQRBN', promo: 'QRBN', type: { K: 'k', Q: 'q', R: 'r', B: 'b', N: 'n' } },
+};
+const patterns = () => {
+  const L = LETTERS[factLang()];
+  return {
+    L,
+    LONG_RE: new RegExp(`(?<![\\w-])([${L.pieces}]?)([a-h][1-8])[-x]([a-h][1-8])(?![\\w])`, 'g'),
+    MOVE_RE: new RegExp(`(?<![\\w-])(O-O(?:-O)?|[${L.pieces}][a-h]?[1-8]?x?[a-h][1-8](?:=[${L.promo}])?|[a-h]x[a-h][1-8](?:=[${L.promo}])?)[+#]?(?![\\w])`, 'g'),
+  };
+};
 
 /** @param {string} s */
 const norm = (s) => s.replace(/[+#!?]/g, '');
@@ -19,6 +30,7 @@ const norm = (s) => s.replace(/[+#!?]/g, '');
  * @returns {string[]} coups cités mais absents du contexte
  */
 export function findUngroundedMoves(advice, data) {
+  const { L, LONG_RE, MOVE_RE } = patterns();
   const allowed = new Set();
   const addLine = (line) => {
     for (const tok of line.split(/\s+/)) if (!/^\d+\.+$/.test(tok)) allowed.add(norm(tok));
@@ -49,10 +61,9 @@ export function findUngroundedMoves(advice, data) {
   }
   // « Fc5 », « Tf1 » : désignation d'une pièce existante sur sa case, pas un coup.
   const board = new Chess(data.fen);
-  const FR_TYPE = { R: 'k', D: 'q', T: 'r', F: 'b', C: 'n' };
   const isPieceRef = (tok) => {
-    const m = tok.match(/^([RDTFC])([a-h][1-8])$/);
-    return Boolean(m && board.get(m[2])?.type === FR_TYPE[m[1]]);
+    const m = tok.match(new RegExp(`^([${L.pieces}])([a-h][1-8])$`));
+    return Boolean(m && board.get(m[2])?.type === L.type[m[1]]);
   };
   const cited = [...text.matchAll(MOVE_RE)].map((m) => norm(m[1])).filter((m) => !isPieceRef(m));
   return [...new Set([...bad, ...cited.filter((m) => !allowed.has(m))])];

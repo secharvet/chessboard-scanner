@@ -136,6 +136,8 @@ for (const pos of selected) {
       for (const e of r.verdict.erreurs) lines.push(`- **${e.gravite}** — « ${e.phrase} » : ${e.raison}`);
     }
     lines.push('', r.advice);
+    // Mode anglais : on garde la réponse d'origine (avant traduction / conversion des coups).
+    if (r.adviceWorking) lines.push('', "<details><summary>Réponse d'origine du LLM (avant traduction)</summary>", '', r.adviceWorking, '', '</details>');
     if (r.context && !r.hideContext) lines.push('', '<details><summary>Contexte envoyé</summary>', '', '```', r.context, '```', '</details>');
   }
 }

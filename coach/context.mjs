@@ -14,7 +14,8 @@ import { buildAttackMap } from '../positional/attack-map.js';
 import { renderToken, tokenWeight } from '../positional/interpreter.js';
 import { tokenKey } from '../positional/tokens.js';
 import { toFrenchSan } from './notation.mjs';
-import { STRUCTURES, OPPOSITE_CASTLING_PLAN } from '../positional/structures.js';
+import { tr } from '../positional/lang.js';
+import { STRUCTURES, oppositeCastlingPlan } from '../positional/structures.js';
 import { buildBalance } from '../positional/balance.js';
 import { lineMotifs } from './motifs.mjs';
 import { preparedThreats } from './prep-threats.mjs';
@@ -51,7 +52,7 @@ export async function buildCoachContext({ fen, side, moves = [], engine, depth =
   const phase = detectPhase(fen);
 
   if (chess.isGameOver()) {
-    return { text: `Partie terminée (${gameOverReason(chess)}).`, data: { gameOver: true } };
+    return { text: tr(`Partie terminée (${gameOverReason(chess)}).`, `Game over (${gameOverReason(chess)}).`), data: { gameOver: true } };
   }
 
   const lines = await engine.analyze(fen, { depth, multipv: 3 });
@@ -93,7 +94,7 @@ function describeLine(fen, line, player, toMove) {
     } catch {
       break;
     }
-    steps.push({ san: toFrenchSan(m.san), fen: chess.fen(), capture: Boolean(m.captured), check: m.san.includes('+') });
+    steps.push({ san: toFrenchSan(m.san), fen: chess.fen(), capture: Boolean(m.captured), captured: m.captured, check: m.san.includes('+') });
   }
 
   // Point d'arrivée « calme » : pas au milieu d'un échange ni d'une série d'échecs. On avance tant que
@@ -124,8 +125,11 @@ function describeLine(fen, line, player, toMove) {
     basics: firstMoveBasics(fen, steps[0]),
     motifs: lineMotifs(fen, line.pv.slice(0, steps.length)).map((m) => `${m.san} : ${m.motifs.join(', ')}`),
     material: materialBalance(endFen) - materialBalance(fen),
+    // Une ligne qui finit par un mat se dit « mat », pas « tu perds 1 point ».
+    mates: steps.some((s) => s.san.endsWith('#')),
     // Échange en cours : la ligne commence par une reprise ; matériel une fois l'échange terminé.
     firstCapture: steps[0]?.capture ? steps[0].san : null,
+    firstCaptureValue: steps[0]?.captured ? { p: 1, n: 3, b: 3, r: 5, q: 9, k: 0 }[steps[0].captured] : 0,
     immMaterial: materialBalance(immFen) - materialBalance(fen),
   };
 }
@@ -163,6 +167,7 @@ async function findThreat(fen, best, engine, toMove, player) {
     pvUci: threatLine.pvUci,
     by: opp === player ? 'toi' : "l'adversaire",
     material: threatLine.material,
+    mates: threatLine.mates,
   };
 }
 
@@ -177,6 +182,7 @@ function firstMoveBasics(fen, step) {
   if (!step) return [];
   const mover = fen.split(' ')[1];
   const NAME = { n: 'cavalier', b: 'fou', r: 'tour', q: 'dame' };
+  const NAME_EN = { n: 'knight', b: 'bishop', r: 'rook', q: 'queen' };
   const before = buildAttackMap(fen);
   const after = buildAttackMap(step.fen);
   const out = [];
@@ -185,14 +191,14 @@ function firstMoveBasics(fen, step) {
   const ctl = (map) => center.filter((s) => map.attackersOf(s, mover).length > 0);
   const occupied = occ(after).filter((s) => !occ(before).includes(s));
   const controlled = ctl(after).filter((s) => !ctl(before).includes(s) && !occupied.includes(s));
-  if (occupied.length) out.push(`occupe la case centrale ${occupied.join(', ')}`);
-  if (controlled.length) out.push(`contrôle (attaque) ${controlled.length > 1 ? 'les cases centrales' : 'la case centrale'} ${controlled.join(', ')}`);
+  if (occupied.length) out.push(tr(`occupe la case centrale ${occupied.join(', ')}`, `occupies the central square ${occupied.join(', ')}`));
+  if (controlled.length) out.push(tr(`contrôle (attaque) ${controlled.length > 1 ? 'les cases centrales' : 'la case centrale'} ${controlled.join(', ')}`, `controls (attacks) the central square${controlled.length > 1 ? 's' : ''} ${controlled.join(', ')}`));
   for (const p of after.pieces) {
     if (p.color !== mover || !NAME[p.type]) continue;
     const old = before.pieces.find((q) => q.square === p.square && q.type === p.type && q.color === mover);
     if (!old) continue; // pièce qui vient de bouger : pas une « libération »
     const delta = after.mobility(p) - before.mobility(old);
-    if (delta >= 3) out.push(`libère ${NAME[p.type] === 'dame' ? 'la' : NAME[p.type] === 'tour' ? 'la' : 'le'} ${NAME[p.type]} ${p.square} (+${delta} cases)`);
+    if (delta >= 3) out.push(tr(`libère ${NAME[p.type] === 'dame' ? 'la' : NAME[p.type] === 'tour' ? 'la' : 'le'} ${NAME[p.type]} ${p.square} (+${delta} cases)`, `frees the ${NAME_EN[p.type]} on ${p.square} (+${delta} squares)`));
   }
   return out;
 }
@@ -203,17 +209,20 @@ function firstMoveBasics(fen, step) {
 function describeStructures(facts, player) {
   const out = [];
   for (const f of facts) {
-    if (f.id === 'ROQUES_OPPOSES') out.push({ label: 'roques opposés', plans: [OPPOSITE_CASTLING_PLAN] });
+    if (f.id === 'ROQUES_OPPOSES') out.push({ label: tr('roques opposés', 'opposite-side castling'), plans: [oppositeCastlingPlan()] });
     if (f.id !== 'STRUCTURE') continue;
     const s = STRUCTURES[/** @type {string} */ (f.params.name)];
     if (!s) continue;
     const mine = f.params.color === player;
     out.push({
-      label: `${s.label} — ${mine ? 'chez toi' : "chez l'adversaire"}`,
-      plans: [
+      label: tr(`${s.label} — ${mine ? 'chez toi' : "chez l'adversaire"}`, `${s.label} — ${mine ? 'yours' : "the opponent's"}`),
+      plans: tr([
         `Plan du camp qui a cette structure (${mine ? 'toi' : "l'adversaire"}) : ${s.owner}`,
         `Plan de l'autre camp (${mine ? "l'adversaire" : 'toi'}) : ${s.opponent}`,
-      ],
+      ], [
+        `Plan for the side that has this structure (${mine ? 'you' : 'the opponent'}): ${s.owner}`,
+        `Plan for the other side (${mine ? 'the opponent' : 'you'}): ${s.opponent}`,
+      ]),
     });
   }
   return out;
@@ -274,9 +283,10 @@ function kingState(fen) {
     const r = [];
     if (castling.includes(up ? 'K' : 'k')) r.push('petit');
     if (castling.includes(up ? 'Q' : 'q')) r.push('grand');
-    return r.length ? `roque encore possible (${r.join(' et ')})` : 'ne peut plus roquer';
+    return r.length ? tr(`roque encore possible (${r.join(' et ')})`, `can still castle (${r.join(' and ')})`) : tr('ne peut plus roquer', 'can no longer castle');
   };
-  return `roi blanc en ${find('K')} (${rights(true)}), roi noir en ${find('k')} (${rights(false)})`;
+  return tr(`roi blanc en ${find('K')} (${rights(true)}), roi noir en ${find('k')} (${rights(false)})`,
+    `white king on ${find('K')} (${rights(true)}), black king on ${find('k')} (${rights(false)})`);
 }
 
 function materialBalance(fen) {
@@ -302,19 +312,19 @@ function scoreForPlayer(score, toMove, player) {
 
 function formatEval(e) {
   if (e.type === 'mate') {
-    return e.value > 0 ? `mat pour toi en ${e.value}` : `mat contre toi en ${-e.value}`;
+    return e.value > 0 ? tr(`mat pour toi en ${e.value}`, `mate for you in ${e.value}`) : tr(`mat contre toi en ${-e.value}`, `mate against you in ${-e.value}`);
   }
   const p = e.value / 100;
   const abs = Math.abs(p);
-  const tier = abs < 0.4 ? 'égalité' : abs < 1.2 ? 'léger avantage' : abs < 2.5 ? 'net avantage' : 'avantage décisif';
-  const who = abs < 0.4 ? '' : p > 0 ? ' pour toi' : " pour l'adversaire";
+  const tier = abs < 0.4 ? tr('égalité', 'equal') : abs < 1.2 ? tr('léger avantage', 'slight advantage') : abs < 2.5 ? tr('net avantage', 'clear advantage') : tr('avantage décisif', 'decisive advantage');
+  const who = abs < 0.4 ? '' : p > 0 ? tr(' pour toi', ' for you') : tr(" pour l'adversaire", ' for the opponent');
   return `${p > 0 ? '+' : ''}${p.toFixed(1)} (${tier}${who})`;
 }
 
 function formatMaterial(delta, player) {
   const forPlayer = player === 'w' ? delta : -delta;
-  if (forPlayer === 0) return 'matériel inchangé';
-  return forPlayer > 0 ? `tu gagnes ${forPlayer} point(s) de matériel` : `tu perds ${-forPlayer} point(s) de matériel`;
+  if (forPlayer === 0) return tr('matériel inchangé', 'material unchanged');
+  return forPlayer > 0 ? tr(`tu gagnes ${forPlayer} point(s) de matériel`, `you win ${forPlayer} point(s) of material`) : tr(`tu perds ${-forPlayer} point(s) de matériel`, `you lose ${-forPlayer} point(s) of material`);
 }
 
 function numberedSan(fen, sans) {
@@ -333,11 +343,11 @@ function numberedSan(fen, sans) {
 }
 
 function gameOverReason(chess) {
-  if (chess.isCheckmate()) return 'échec et mat';
-  if (chess.isStalemate()) return 'pat';
-  if (chess.isThreefoldRepetition()) return 'répétition';
-  if (chess.isInsufficientMaterial()) return 'matériel insuffisant';
-  return 'nulle';
+  if (chess.isCheckmate()) return tr('échec et mat', 'checkmate');
+  if (chess.isStalemate()) return tr('pat', 'stalemate');
+  if (chess.isThreefoldRepetition()) return tr('répétition', 'repetition');
+  if (chess.isInsufficientMaterial()) return tr('matériel insuffisant', 'insufficient material');
+  return tr('nulle', 'draw');
 }
 
 /** Le matériel et l'évaluation racontent-ils deux histoires différentes ? */
@@ -354,16 +364,26 @@ function materialVsEval(d) {
     // Échange en cours = l'adversaire vient de prendre. Sans historique, on exige que la reprise
     // rétablisse le matériel (sinon c'est une simple prise, pas la fin d'un échange).
     const last = d.moves.at(-1);
-    const pending = last ? /x/.test(last) && after > mat : after >= 0;
+    // Sans historique : la prise elle-même doit combler le retard (on reprend la dame qu'on vient de perdre).
+    const pending = last ? /x/.test(last) && after > mat : after >= 0 && c0.firstCaptureValue >= -mat;
     if (pending) {
-      return `Un échange est en cours : pour l'instant tu as ${-mat} point(s) de matériel en moins, mais tu peux reprendre tout de suite (${toFrenchSan(c0.firstCapture)}) ; une fois l'échange terminé, ${after === 0 ? 'le matériel est égal' : after > 0 ? `tu as ${after} point(s) en plus` : `tu as encore ${-after} point(s) en moins`}.`;
+      return tr(
+        `Un échange est en cours : pour l'instant tu as ${-mat} point(s) de matériel en moins, mais tu peux reprendre tout de suite (${toFrenchSan(c0.firstCapture)}) ; une fois l'échange terminé, ${after === 0 ? 'le matériel est égal' : after > 0 ? `tu as ${after} point(s) en plus` : `tu as encore ${-after} point(s) en moins`}.`,
+        `An exchange is in progress: right now you are ${-mat} point(s) of material down, but you can recapture immediately (${toFrenchSan(c0.firstCapture)}); once the exchange is over, ${after === 0 ? 'material is equal' : after > 0 ? `you are ${after} point(s) up` : `you are still ${-after} point(s) down`}.`,
+      );
     }
   }
   if (mat >= 1 && ev < 0.5) {
-    return `Tu as ${mat} point(s) de matériel en plus, mais le moteur juge la position ${ev < -0.4 ? 'défavorable' : 'égale (probablement nulle)'} : l'avantage matériel ne suffit pas ici, c'est l'idée principale à expliquer.`;
+    return tr(
+      `Tu as ${mat} point(s) de matériel en plus, mais le moteur juge la position ${ev < -0.4 ? 'défavorable' : 'égale (probablement nulle)'} : l'avantage matériel ne suffit pas ici, c'est l'idée principale à expliquer.`,
+      `You are ${mat} point(s) of material up, but the engine judges the position ${ev < -0.4 ? 'unfavourable' : 'equal (probably drawn)'}: the material advantage is not enough here, that is the main idea to explain.`,
+    );
   }
   if (mat <= -1 && ev > -0.5) {
-    return `Tu as ${-mat} point(s) de matériel en moins, mais le moteur juge la position ${ev > 0.4 ? 'favorable' : 'égale'} : tu as une compensation (activité, initiative, structure).`;
+    return tr(
+      `Tu as ${-mat} point(s) de matériel en moins, mais le moteur juge la position ${ev > 0.4 ? 'favorable' : 'égale'} : tu as une compensation (activité, initiative, structure).`,
+      `You are ${-mat} point(s) of material down, but the engine judges the position ${ev > 0.4 ? 'favourable' : 'equal'}: you have compensation (activity, initiative, structure).`,
+    );
   }
   return null;
 }
@@ -375,7 +395,8 @@ function materialVsEval(d) {
  * @returns {{ text: string, facts: Record<string, string> }}
  */
 function renderContext(d) {
-  const colorName = (c) => (c === 'w' ? 'Blancs' : 'Noirs');
+  const colorName = (c) => (c === 'w' ? tr('Blancs', 'White') : tr('Noirs', 'Black'));
+  const none = tr('- (rien de notable)', '- (nothing notable)');
   const out = [];
   /** @type {Record<string, string>} */
   const facts = {};
@@ -387,95 +408,107 @@ function renderContext(d) {
   };
 
   out.push('## Situation');
-  out.push(`- Tu joues les ${colorName(d.player)}. Trait aux ${colorName(d.toMove)}. Phase : ${d.phase}.`);
-  if (d.moves.length) out.push(`- Derniers coups : ${d.moves.slice(-8).map(toFrenchSan).join(' ')}`);
-  cite(`[Position actuelle] ${kingState(d.fen)}.`, 'E0');
-  if (d.candidates[0]) cite(`Évaluation Stockfish, de TON point de vue (positif = bon pour toi) : ${formatEval(d.candidates[0].evalPlayer)}.`, 'E1');
+  out.push(tr(`- Tu joues les ${colorName(d.player)}. Trait aux ${colorName(d.toMove)}. Phase : ${d.phase}.`,
+    `- You play ${colorName(d.player)}. ${colorName(d.toMove)} to move. Phase: ${d.phase}.`));
+  if (d.moves.length) out.push(`${tr('- Derniers coups : ', '- Last moves: ')}${d.moves.slice(-8).map(toFrenchSan).join(' ')}`);
+  cite(`${tr('[Position actuelle]', '[Current position]')} ${kingState(d.fen)}.`, 'E0');
+  if (d.candidates[0]) cite(`${tr('Évaluation Stockfish, de TON point de vue (positif = bon pour toi) : ', 'Stockfish evaluation, from YOUR point of view (positive = good for you): ')}${formatEval(d.candidates[0].evalPlayer)}.`, 'E1');
   const note = materialVsEval(d);
   if (note) cite(note, 'E2');
 
   out.push('');
   if (d.toMove === d.player) {
-    out.push('## Coups candidats (Stockfish, du meilleur au moins bon) — c\'est à TOI de jouer');
+    out.push(tr('## Coups candidats (Stockfish, du meilleur au moins bon) — c\'est à TOI de jouer', '## Candidate moves (Stockfish, best first) — it is YOUR move'));
   } else {
-    out.push("## Coups candidats — c'est à l'ADVERSAIRE de jouer : chaque ligne commence par un de SES meilleurs coups selon Stockfish, puis ta réponse. Ton coup à jouer est le 2e coup de la ligne, APRÈS son coup.");
+    out.push(tr("## Coups candidats — c'est à l'ADVERSAIRE de jouer : chaque ligne commence par un de SES meilleurs coups selon Stockfish, puis ta réponse. Ton coup à jouer est le 2e coup de la ligne, APRÈS son coup.",
+      "## Candidate moves — it is the OPPONENT's move: each line starts with one of THEIR best moves according to Stockfish, then your answer. Your move to play is the 2nd move of the line, AFTER theirs."));
   }
   d.candidates.forEach((c, i) => {
     const L = `L${i + 1}`;
     out.push(`### ${i + 1}. ${c.move} — ${formatEval(c.evalPlayer)}`);
-    cite(`Ligne ${i + 1} : ${c.pvSan} (${formatEval(c.evalPlayer)}).`, L);
-    const after = `[Après la ligne ${i + 1}, au bout de « ${c.horizonSan} »]`;
+    cite(`${tr('Ligne', 'Line')} ${i + 1}${tr(' : ', ': ')}${c.pvSan} (${formatEval(c.evalPlayer)}).`, L);
+    const after = tr(`[Après la ligne ${i + 1}, au bout de « ${c.horizonSan} »]`, `[After line ${i + 1}, at the end of "${c.horizonSan}"]`);
     // Matériel perdu (ou gagné) mais évaluation proche de la meilleure : compensation, pas une gaffe.
     const forPlayer = d.player === 'w' ? c.material : -c.material;
     const best = d.candidates[0]?.evalPlayer;
     const close = best && best.type === 'cp' && c.evalPlayer.type === 'cp' && best.value - c.evalPlayer.value <= 50;
     const comp = forPlayer <= -1 && close
-      ? " (le moteur juge ce matériel compensé : activité, initiative ou attaque — ce n'est pas une perte sèche)"
+      ? tr(" (le moteur juge ce matériel compensé : activité, initiative ou attaque — ce n'est pas une perte sèche)",
+        ' (the engine judges this material compensated: activity, initiative or attack — not a plain loss)')
       : '';
-    cite(`${after} ${formatMaterial(c.material, d.player)}${comp} ; ${c.endKings}.`, `${L}m`);
-    (c.motifs ?? []).forEach((m, j) => cite(`[Pendant la ligne ${i + 1}] Motif tactique : ${m}.`, `${L}t${j + 1}`));
-    if (c.basics?.length) cite(`[Effet élémentaire de ${c.move}] ${c.move} ${c.basics.join(' ; ')}.`, `${L}b`);
+    const mateNote = c.mates ? tr(' ; la ligne complète se termine par un ÉCHEC ET MAT', '; the full line ends in CHECKMATE') : '';
+    cite(`${after} ${formatMaterial(c.material, d.player)}${comp}${mateNote}${tr(' ; ', '; ')}${c.endKings}.`, `${L}m`);
+    const APPEARS = tr('apparaît : ', 'appears: ');
+    const GONE = tr("n'est plus vrai : ", 'no longer true: ');
+    (c.motifs ?? []).forEach((m, j) => cite(tr(`[Pendant la ligne ${i + 1}] Motif tactique : ${m}.`, `[During line ${i + 1}] Tactical motif: ${m}.`), `${L}t${j + 1}`));
+    if (c.basics?.length) cite(tr(`[Effet élémentaire de ${c.move}] ${c.move} ${c.basics.join(' ; ')}.`, `[Elementary effect of ${c.move}] ${c.move} ${c.basics.join('; ')}.`), `${L}b`);
     if (c.immediate) {
-      const now = `[Juste après « ${c.immediateSan} » — effet du coup lui-même]`;
-      c.immediate.gained.forEach((g, j) => cite(`${now} apparaît : ${g}`, `${L}i+${j + 1}`));
-      c.immediate.lost.forEach((g, j) => cite(`${now} n'est plus vrai : ${g}`, `${L}i-${j + 1}`));
-      if (!c.immediate.gained.length && !c.immediate.lost.length) cite(`${now} aucun changement positionnel notable.`, `${L}i0`);
+      const now = tr(`[Juste après « ${c.immediateSan} » — effet du coup lui-même]`, `[Right after "${c.immediateSan}" — effect of the move itself]`);
+      c.immediate.gained.forEach((g, j) => cite(`${now} ${APPEARS}${g}`, `${L}i+${j + 1}`));
+      c.immediate.lost.forEach((g, j) => cite(`${now} ${GONE}${g}`, `${L}i-${j + 1}`));
+      if (!c.immediate.gained.length && !c.immediate.lost.length) cite(`${now} ${tr('aucun changement positionnel notable.', 'no notable positional change.')}`, `${L}i0`);
     }
-    c.changes.gained.forEach((g, j) => cite(`${after} apparaît : ${g}`, `${L}+${j + 1}`));
-    c.changes.lost.forEach((g, j) => cite(`${after} n'est plus vrai : ${g}`, `${L}-${j + 1}`));
+    c.changes.gained.forEach((g, j) => cite(`${after} ${APPEARS}${g}`, `${L}+${j + 1}`));
+    c.changes.lost.forEach((g, j) => cite(`${after} ${GONE}${g}`, `${L}-${j + 1}`));
   });
 
   out.push('');
-  out.push('## Structure de pions reconnue (plans classiques, connaissance générale)');
+  out.push(tr('## Structure de pions reconnue (plans classiques, connaissance générale)', '## Recognised pawn structure (classical plans, general knowledge)'));
   if (d.structures.length) {
     d.structures.forEach((st, i) => {
       out.push(`### ${st.label}`);
       st.plans.forEach((p, j) => cite(p, `S${i + 1}${'abc'[j]}`));
     });
   } else {
-    out.push('- Aucune structure type reconnue.');
+    out.push(tr('- Aucune structure type reconnue.', '- No typical structure recognised.'));
   }
 
   out.push('');
-  out.push('## Menace (position actuelle)');
+  out.push(tr('## Menace (position actuelle)', '## Threat (current position)'));
   if (d.threat) {
-    cite(
+    cite(tr(
       `Si le camp au trait passait son tour, ${d.threat.by === 'toi' ? 'tu jouerais' : "l'adversaire jouerait"} ${d.threat.move} ` +
-      `(ligne : ${d.threat.line} ; ${formatMaterial(d.threat.material, d.player)}).`,
-      'M1',
-    );
+      `(ligne : ${d.threat.line} ; ${d.threat.mates ? 'la ligne se termine par un ÉCHEC ET MAT' : formatMaterial(d.threat.material, d.player)}).`,
+      `If the side to move passed, ${d.threat.by === 'toi' ? 'you would play' : 'the opponent would play'} ${d.threat.move} ` +
+      `(line: ${d.threat.line}; ${d.threat.mates ? 'the line ends in CHECKMATE' : formatMaterial(d.threat.material, d.player)}).`,
+    ), 'M1');
   } else {
-    cite('Aucune menace immédiate significative détectée par le moteur.', 'M0');
+    cite(tr('Aucune menace immédiate significative détectée par le moteur.', 'No significant immediate threat detected by the engine.'), 'M0');
   }
 
   out.push('');
-  out.push("## Ce que l'adversaire prépare — [Position actuelle] (un coup calme de sa part, puis la menace, SI TU NE RÉAGIS PAS ; gains notés par Stockfish dans ce cas)");
-  if (d.prepared.length) d.prepared.forEach((t, i) => cite(`[Position actuelle] ${t.text}.`, `P${i + 1}`));
-  else out.push('- (rien de notable)');
+  const NOW = tr('[Position actuelle]', '[Current position]');
+  out.push(tr("## Ce que l'adversaire prépare — [Position actuelle] (un coup calme de sa part, puis la menace, SI TU NE RÉAGIS PAS ; gains notés par Stockfish dans ce cas)",
+    '## What the opponent is preparing — [Current position] (one quiet move by them, then the threat, IF YOU DO NOT REACT; gains scored by Stockfish in that case)'));
+  if (d.prepared.length) d.prepared.forEach((t, i) => cite(`${NOW} ${t.text}.`, `P${i + 1}`));
+  else out.push(none);
 
   out.push('');
-  out.push('## Manœuvres possibles — [Position actuelle] (itinéraires sûrs vers des cases stratégiques, plans à plus long terme)');
+  out.push(tr('## Manœuvres possibles — [Position actuelle] (itinéraires sûrs vers des cases stratégiques, plans à plus long terme)',
+    '## Possible manoeuvres — [Current position] (safe routes towards strategic squares, longer-term plans)'));
   if (d.maneuvers.length) {
     // Compatible si le premier pas de la manœuvre apparaît dans une ligne du moteur.
     const inLines = (m) => d.candidates.some((c) => (c.pvUci ?? []).some((u) => u.slice(0, 4) === m.path[0] + m.path[1]));
-    d.maneuvers.forEach((m, i) => cite(`[Position actuelle] ${m.text}${inLines(m) ? ' — son premier pas figure dans une ligne du moteur' : ' — plan à long terme, ABSENT des lignes du moteur : ne pas le conseiller comme coup à jouer'}.`, `K${i + 1}`));
+    d.maneuvers.forEach((m, i) => cite(`${NOW} ${m.text}${inLines(m)
+      ? tr(' — son premier pas figure dans une ligne du moteur', ' — its first step appears in an engine line')
+      : tr(' — plan à long terme, ABSENT des lignes du moteur : ne pas le conseiller comme coup à jouer', ' — long-term plan, absent from the engine lines: do not advise it as the move to play')}.`, `K${i + 1}`));
   }
-  else out.push('- (rien de notable)');
+  else out.push(none);
 
   out.push('');
-  out.push('## Bilan des déséquilibres — [Position actuelle], AVANT tout coup des lignes');
+  out.push(tr('## Bilan des déséquilibres — [Position actuelle], AVANT tout coup des lignes', '## Imbalance balance sheet — [Current position], BEFORE any move of the lines'));
   const me = d.player;
   const opp = me === 'w' ? 'b' : 'w';
   const section = (title, items, max) => {
     out.push(`### ${title}`);
-    if (!items.length) out.push('- (rien de notable)');
+    if (!items.length) out.push(none);
     for (const it of items.slice(0, max)) cite(it);
   };
-  section('Tes atouts', d.balance[me].assets, 8);
-  section('Tes faiblesses', d.balance[me].weaknesses, 8);
-  section("Atouts de l'adversaire", d.balance[opp].assets, 8);
-  section("Faiblesses de l'adversaire", d.balance[opp].weaknesses, 8);
-  section('Contexte général', d.balance.context, 5);
+  section(tr('Tes atouts', 'Your assets'), d.balance[me].assets, 8);
+  section(tr('Tes faiblesses', 'Your weaknesses'), d.balance[me].weaknesses, 8);
+  section(tr("Atouts de l'adversaire", "Opponent's assets"), d.balance[opp].assets, 8);
+  section(tr("Faiblesses de l'adversaire", "Opponent's weaknesses"), d.balance[opp].weaknesses, 8);
+  section(tr('Contexte général', 'General context'), d.balance.context, 5);
 
   return { text: out.join('\n'), facts };
 }

@@ -9,6 +9,7 @@
  */
 
 import { Chess } from 'chess.js';
+import { tr } from '../positional/lang.js';
 import { toFrenchSan } from './notation.mjs';
 
 // Sous-promotions ignorées : pour un débutant, « bxa1=T+ » est du bruit, la menace est la promotion en dame.
@@ -101,7 +102,10 @@ export function forcingLines(fen, side, opts = {}) {
 
 /** Texte lisible d'une ligne forcée (note Stockfish si disponible). @param {{ line: string, gain: number, mate: boolean, engineGain?: number }} l */
 export function describeForcing(l) {
-  if (l.mate) return `${l.line} : mat`;
-  if (l.engineGain != null) return `${l.line} : ${l.engineGain >= 0 ? 'gain' : 'perte'} d'environ ${Math.abs(l.engineGain).toFixed(1)} pion(s) (évaluation Stockfish de la position finale)`;
-  return `${l.line} : gain d'environ ${l.gain} point(s)`;
+  if (l.mate) return tr(`${l.line} : mat`, `${l.line}: mate`);
+  if (l.engineGain != null) {
+    return tr(`${l.line} : ${l.engineGain >= 0 ? 'gain' : 'perte'} d'environ ${Math.abs(l.engineGain).toFixed(1)} pion(s) (évaluation Stockfish de la position finale)`,
+      `${l.line}: ${l.engineGain >= 0 ? 'gain' : 'loss'} of about ${Math.abs(l.engineGain).toFixed(1)} pawn(s) (Stockfish evaluation of the final position)`);
+  }
+  return tr(`${l.line} : gain d'environ ${l.gain} point(s)`, `${l.line}: gain of about ${l.gain} point(s)`);
 }

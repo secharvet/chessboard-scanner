@@ -15,7 +15,7 @@ describe('Scanner de menaces', () => {
     assert.match(t[0].text, /Dxf7# \(dame\) est mat/);
   });
   it('voit la fourchette royale Cc7+', () => {
-    assert.match(texts(scanTactics('r3k3/8/8/1N6/8/8/8/4K3 w - - 0 1', 'w')), /Cc7\+ \(cavalier\) : fourchette sur a8,e8 avec échec/);
+    assert.match(texts(scanTactics('r3k3/8/8/1N6/8/8/8/4K3 w - - 0 1', 'w')), /Cc7\+ \(cavalier\) : fourchette sur la tour noire en a8 et le roi noir en e8 avec échec/);
   });
   it('voit une pièce non défendue à prendre', () => {
     assert.match(texts(scanTactics('r1bqkb1r/pppn1ppp/5n2/3N2B1/3P4/8/PP2PPPP/R2QKBNR b KQkq - 0 6', 'b')), /Cxd5 \(cavalier\) prend le cavalier en d5/);

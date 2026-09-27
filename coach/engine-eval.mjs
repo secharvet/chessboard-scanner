@@ -6,8 +6,14 @@
  */
 
 import { Chess } from 'chess.js';
+import { tr } from '../positional/lang.js';
+
+// Estimation grossière remplacée par la note Stockfish (français ou anglais).
+const GAIN_RE = / : gain d'environ \d+ point\(s\)|: gain of about \d+ point\(s\)/;
 
 const DEPTH = 10;
+// Un coup préparatoire qui coûte près d'un pion selon Stockfish (…b5 que Fxb5 ramasse) n'est pas une vraie idée.
+const PREP_MAX_COST = 80;
 const toCp = (s) => (s.type === 'mate' ? (s.value > 0 ? 10000 - s.value : -10000 - s.value) : s.value);
 
 const VALUE = { p: 1, n: 3, b: 3, r: 5, q: 9, k: 0 };
@@ -89,7 +95,7 @@ export async function scoreTactics(engine, fen, side, tactics, minGain = 1) {
     if (t.severity >= 100) { out.push({ ...t, engineGain: 100 }); continue; } // mat en un : certain
     const r = await lineGain(engine, fen, side, [t.sanEn]);
     if (r && (r.mate || r.gain >= minGain)) {
-      out.push({ ...t, engineGain: r.gain, text: `${t.text.replace(/ : gain d'environ \d+ point\(s\)/, '')} (Stockfish : ${r.mate ? 'mat' : `+${r.gain.toFixed(1)} pion(s)`})` });
+      out.push({ ...t, engineGain: r.gain, text: `${t.text.replace(GAIN_RE, '')} ${tr(`(Stockfish : ${r.mate ? 'mat' : `+${r.gain.toFixed(1)} pion(s)`})`, `(Stockfish: ${r.mate ? 'mate' : `+${r.gain.toFixed(1)} pawn(s)`})`)}` });
     }
   }
   return out;
@@ -101,10 +107,19 @@ export async function scoreTactics(engine, fen, side, tactics, minGain = 1) {
  */
 export async function scorePrepared(engine, fen, side, preps, minGain = 1) {
   const out = [];
+  // Le coup préparatoire doit être jouable : s'il perd du matériel (…Fg4 alors que Dxg4 prend le fou,
+  // …b5 qui lâche un pion), ce n'est pas une idée à surveiller mais une faute adverse.
+  let now = null;
+  try { now = await evalFor(engine, withTurn(fen, side), side); } catch { /* position illisible */ }
   for (const t of preps) {
+    if (now != null && t.seqEn[0] && t.seqEn[0] !== '--') {
+      let afterPrep = null;
+      try { const c = new Chess(withTurn(fen, side)); c.move(t.seqEn[0]); afterPrep = c.fen(); } catch { /* coup illégal */ }
+      if (afterPrep && (await evalFor(engine, afterPrep, side)) < now - PREP_MAX_COST) continue;
+    }
     const r = await lineGain(engine, fen, side, t.seqEn);
     if (r && (r.mate || r.gain >= minGain)) {
-      out.push({ ...t, engineGain: r.gain, text: `${t.text.replace(/ : gain d'environ \d+ point\(s\)/, '')} (Stockfish : ${r.mate ? 'mat' : `+${r.gain.toFixed(1)} pion(s)`})` });
+      out.push({ ...t, engineGain: r.gain, text: `${t.text.replace(GAIN_RE, '')} ${tr(`(Stockfish : ${r.mate ? 'mat' : `+${r.gain.toFixed(1)} pion(s)`})`, `(Stockfish: ${r.mate ? 'mate' : `+${r.gain.toFixed(1)} pawn(s)`})`)}` });
     }
   }
   return out;

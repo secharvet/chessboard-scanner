@@ -12,12 +12,23 @@
 import { Chess } from 'chess.js';
 import { buildAttackMap, VALUE } from '../positional/attack-map.js';
 import { buildTacticalFacts } from '../positional/piece-attacks.js';
+import { tr } from '../positional/lang.js';
+import { namedPiece } from '../positional/interpreter.js';
 import { toFrenchSan, withPieceName } from './notation.mjs';
 
 // Sous-promotions ignorées : pour un débutant, « bxa1=T+ » est du bruit, la menace est la promotion en dame.
 const queenOnly = (m) => !m.promotion || m.promotion === 'q';
 
-const THE = { p: 'le pion', n: 'le cavalier', b: 'le fou', r: 'la tour', q: 'la dame', k: 'le roi' };
+const THE_FR = { p: 'le pion', n: 'le cavalier', b: 'le fou', r: 'la tour', q: 'la dame', k: 'le roi' };
+const THE_EN = { p: 'the pawn', n: 'the knight', b: 'the bishop', r: 'the rook', q: 'the queen', k: 'the king' };
+const THE = new Proxy({}, { get: (_, k) => tr(THE_FR, THE_EN)[k] });
+
+/** Cibles nommées d'une fourchette. */
+const targetsOf = (params, color) => {
+  const types = String(params.targetTypes ?? '').split(',');
+  const names = String(params.targets ?? '').split(',').filter(Boolean).map((s, i) => namedPiece(types[i], color, s));
+  return names.length > 1 ? `${names.slice(0, -1).join(', ')}${tr(' et ', ' and ')}${names.at(-1)}` : names[0] ?? '';
+};
 
 /**
  * @typedef {{ severity: number, san: string, sanEn: string, text: string }} Tactic
@@ -57,7 +68,7 @@ export function scanTactics(fen, side, max = 6) {
     const afterFen = after.fen();
 
     if (after.isCheckmate()) {
-      out.push({ severity: 100, san, sanEn, text: `${said} est mat` });
+      out.push({ severity: 100, san, sanEn, text: tr(`${said} est mat`, `${said} is mate`) });
       continue;
     }
 
@@ -76,7 +87,8 @@ export function scanTactics(fen, side, max = 6) {
           severity: 10 + gain,
           san,
           sanEn,
-          text: `${said} prend ${THE[m.captured]} en ${m.to}${defended ? '' : ' (non défendu)'} : gain d'environ ${gain} point(s)`,
+          text: tr(`${said} prend ${THE[m.captured]} en ${m.to}${defended ? '' : ` (non ${m.captured === 'q' || m.captured === 'r' ? 'défendue' : 'défendu'})`} : gain d'environ ${gain} point(s)`,
+            `${said} takes ${THE[m.captured]} on ${m.to}${defended ? '' : ' (undefended)'}: gain of about ${gain} point(s)`),
         });
       }
     }
@@ -90,14 +102,14 @@ export function scanTactics(fen, side, max = 6) {
         const check = san.includes('+');
         // Fourchette illusoire si la pièce se fait prendre (même en donnant échec : la prise pare l'échec).
         if (movedHangs) continue;
-        out.push({ severity: check ? 9 : 8, san, sanEn, text: `${said} : fourchette sur ${t.params.targets}${check ? ' avec échec' : ''}` });
+        out.push({ severity: check ? 9 : 8, san, sanEn, text: tr(`${said} : fourchette sur ${targetsOf(t.params, opp)}${check ? ' avec échec' : ''}`, `${said}: fork on ${targetsOf(t.params, opp)}${check ? ' with check' : ''}`) });
       }
       if (t.id === 'ENFILADE' && t.params.color === side && t.params.square === m.to && !movedHangs) {
-        out.push({ severity: 8, san, sanEn, text: `${said} : enfilade (${t.params.front} puis ${t.params.back})` });
+        out.push({ severity: 8, san, sanEn, text: tr(`${said} : enfilade sur ${namedPiece(t.params.frontType, opp, t.params.front)} puis ${namedPiece(t.params.backType, opp, t.params.back)}`, `${said}: skewer on ${namedPiece(t.params.frontType, opp, t.params.front)} then ${namedPiece(t.params.backType, opp, t.params.back)}`) });
       }
       // Clouer un simple pion n'est pas une occasion tactique.
       if ((t.id === 'CLOUAGE' || t.id === 'CLOUAGE_RELATIF') && t.params.color === opp && t.params.by === m.to && !movedHangs && t.params.type !== 'p') {
-        out.push({ severity: t.id === 'CLOUAGE' ? 6 : 5, san, sanEn, text: `${said} : cloue la pièce en ${t.params.square}` });
+        out.push({ severity: t.id === 'CLOUAGE' ? 6 : 5, san, sanEn, text: tr(`${said} : cloue ${namedPiece(t.params.type, opp, t.params.square)}`, `${said}: pins ${namedPiece(t.params.type, opp, t.params.square)}`) });
       }
     }
 
@@ -112,7 +124,8 @@ export function scanTactics(fen, side, max = 6) {
           severity: target.type === 'k' ? 9 : 8,
           san,
           sanEn,
-          text: `${said} : ${target.type === 'k' ? 'échec à la découverte' : `attaque à la découverte sur ${THE[target.type]} en ${target.square}`}`,
+          text: target.type === 'k' ? tr(`${said} : échec à la découverte`, `${said}: discovered check`)
+            : tr(`${said} : attaque à la découverte sur ${THE[target.type]} en ${target.square}`, `${said}: discovered attack on ${THE[target.type]} on ${target.square}`),
         });
       }
     }

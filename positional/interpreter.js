@@ -10,6 +10,7 @@
  */
 
 import { STRUCTURES } from './structures.js';
+import { factLang, tr } from './lang.js';
 
 /** @typedef {import('./tokens.js').PositionalToken} PosToken */
 /** @typedef {{ weight: number, label: string }} Priority */
@@ -98,6 +99,11 @@ const PIECE_FR = { p: 'Pion', n: 'Cavalier', b: 'Fou', r: 'Tour', q: 'Dame', k: 
  * @param {string | undefined} type @param {string} color @param {string} square
  */
 export function namedPiece(type, color, square) {
+  return factLang() === 'en' ? namedPieceEn(type, color, square) : namedPieceFr(type, color, square);
+}
+
+/** @param {string | undefined} type @param {string} color @param {string} square */
+function namedPieceFr(type, color, square) {
   if (!type || !PIECE_FR[type]) return `la pièce en ${square}`;
   const fem = type === 'q' || type === 'r';
   const col = color === 'w' ? (fem ? 'blanche' : 'blanc') : (fem ? 'noire' : 'noir');
@@ -109,7 +115,7 @@ function namedTargets(p, victimColor) {
   const sqs = String(p.targets ?? '').split(',').filter(Boolean);
   const types = String(p.targetTypes ?? '').split(',');
   if (!sqs.length) return 'deux cibles';
-  const names = sqs.map((s, i) => namedPiece(types[i], victimColor, s));
+  const names = sqs.map((s, i) => namedPieceFr(types[i], victimColor, s));
   return names.length > 1 ? `${names.slice(0, -1).join(', ')} et ${names.at(-1)}` : names[0];
 }
 
@@ -124,7 +130,7 @@ function colorCap(c) {
 }
 
 /** @param {PosToken} t */
-export function renderToken(t) {
+function renderTokenFr(t) {
   const p = t.params;
 
   switch (t.id) {
@@ -151,16 +157,16 @@ export function renderToken(t) {
         : `Roques opposés.`;
 
     case 'CLOUAGE_RELATIF':
-      return `Clouage relatif : ${namedPiece(/** @type {string} */ (p.type), /** @type {string} */ (p.color), /** @type {string} */ (p.square))} est cloué par ${namedPiece(/** @type {string} */ (p.byType), p.color === 'w' ? 'b' : 'w', /** @type {string} */ (p.by))} : s'il bouge, ${namedPiece(/** @type {string} */ (p.behindType), /** @type {string} */ (p.color), /** @type {string} */ (p.behind))}, plus chère, est prise.`;
+      return `Clouage relatif : ${namedPieceFr(/** @type {string} */ (p.type), /** @type {string} */ (p.color), /** @type {string} */ (p.square))} est cloué par ${namedPieceFr(/** @type {string} */ (p.byType), p.color === 'w' ? 'b' : 'w', /** @type {string} */ (p.by))} : s'il bouge, ${namedPieceFr(/** @type {string} */ (p.behindType), /** @type {string} */ (p.color), /** @type {string} */ (p.behind))}, plus chère, est prise.`;
 
     case 'ENFILADE':
       {
         const opp = p.color === 'w' ? 'b' : 'w';
-        return `Enfilade pour les ${colorLabel(/** @type {string} */ (p.color))} : ${namedPiece(/** @type {string} */ (p.type), /** @type {string} */ (p.color), /** @type {string} */ (p.square))} attaque ${namedPiece(/** @type {string} */ (p.frontType), opp, /** @type {string} */ (p.front))}, qui en bougeant découvrira ${namedPiece(/** @type {string} */ (p.backType), opp, /** @type {string} */ (p.back))}.`;
+        return `Enfilade pour les ${colorLabel(/** @type {string} */ (p.color))} : ${namedPieceFr(/** @type {string} */ (p.type), /** @type {string} */ (p.color), /** @type {string} */ (p.square))} attaque ${namedPieceFr(/** @type {string} */ (p.frontType), opp, /** @type {string} */ (p.front))}, qui en bougeant découvrira ${namedPieceFr(/** @type {string} */ (p.backType), opp, /** @type {string} */ (p.back))}.`;
       }
 
     case 'DECOUVERTE_POSSIBLE':
-      return `${p.check ? 'Échec à la découverte possible' : 'Attaque à la découverte possible'} pour les ${colorLabel(/** @type {string} */ (p.color))} : déplacer ${namedPiece(/** @type {string} */ (p.moverType), /** @type {string} */ (p.color), /** @type {string} */ (p.mover))} démasque ${namedPiece(/** @type {string} */ (p.sliderType), /** @type {string} */ (p.color), /** @type {string} */ (p.slider))} sur ${namedPiece(/** @type {string} */ (p.targetType), p.color === 'w' ? 'b' : 'w', /** @type {string} */ (p.target))}.`;
+      return `${p.check ? 'Échec à la découverte possible' : 'Attaque à la découverte possible'} pour les ${colorLabel(/** @type {string} */ (p.color))} : déplacer ${namedPieceFr(/** @type {string} */ (p.moverType), /** @type {string} */ (p.color), /** @type {string} */ (p.mover))} démasque ${namedPieceFr(/** @type {string} */ (p.sliderType), /** @type {string} */ (p.color), /** @type {string} */ (p.slider))} sur ${namedPieceFr(/** @type {string} */ (p.targetType), p.color === 'w' ? 'b' : 'w', /** @type {string} */ (p.target))}.`;
 
     case 'SURCHARGE':
       return `Pièce surchargée ${colorLabel(/** @type {string} */ (p.color))} en ${p.square} (${p.type}) : seule à défendre ${p.defends}.`;
@@ -296,12 +302,253 @@ export function renderToken(t) {
     case 'CLOUAGE': {
       // Sans ambiguïté : QUI est cloué, et PAR QUI (« clouage noirs » se lisait « clouage des Noirs »).
       const pinned = /** @type {string} */ (p.color);
-      const by = p.by ? ` par ${namedPiece(/** @type {string} */ (p.byType), pinned === 'w' ? 'b' : 'w', /** @type {string} */ (p.by))}` : '';
+      const by = p.by ? ` par ${namedPieceFr(/** @type {string} */ (p.byType), pinned === 'w' ? 'b' : 'w', /** @type {string} */ (p.by))}` : '';
       return `${PIECE_FR[/** @type {string} */ (p.type)] ?? 'Pièce'} ${pinned === 'w' ? 'blanc' : 'noir'} en ${p.square} cloué contre son roi${by} (il ne peut pas bouger).`;
     }
 
     case 'FOURCHETTE':
-      return `Fourchette ${colorLabel(/** @type {string} */ (p.color))} : ${namedPiece(/** @type {string} */ (p.type), /** @type {string} */ (p.color), /** @type {string} */ (p.square))} attaque en même temps ${namedTargets(p, p.color === 'w' ? 'b' : 'w')}.`;
+      return `Fourchette ${colorLabel(/** @type {string} */ (p.color))} : ${namedPieceFr(/** @type {string} */ (p.type), /** @type {string} */ (p.color), /** @type {string} */ (p.square))} attaque en même temps ${namedTargets(p, p.color === 'w' ? 'b' : 'w')}.`;
+
+    default:
+      return `${t.id}: ${JSON.stringify(p)}`;
+  }
+}
+
+// ── Rédaction anglaise (COACH_LANG=en) ──
+
+/** Nom anglais des pièces (minuscules). */
+const PIECE_EN = { p: 'pawn', n: 'knight', b: 'bishop', r: 'rook', q: 'queen', k: 'king' };
+
+/** Paramètres codés en français → anglais (phase, nuance de cases, type de centre, aile). */
+const PARAM_EN = {
+  ouverture: 'opening', milieu: 'middlegame', finale: 'endgame',
+  claires: 'light', noires: 'dark',
+  fermé: 'closed', ouvert: 'open',
+  roi: 'kingside', dame: 'queenside',
+};
+
+/** Libellés de priorité (titres de `interpretFacts`). */
+const PRIORITY_LABEL_EN = {
+  CRITIQUE: 'CRITICAL', HAUTE: 'HIGH', MOYENNE: 'MEDIUM', INFO: 'INFO',
+  NEUTRE: 'NEUTRAL', CONTEXTE: 'CONTEXT', INCONNU: 'UNKNOWN',
+};
+
+/** @param {unknown} v */
+const paramEn = (v) => PARAM_EN[/** @type {string} */ (v)] ?? String(v);
+
+/** @param {string} s */
+const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);
+
+/** « the white bishop on d3 », ou « the piece on d3 » si le type est inconnu. */
+function namedPieceEn(type, color, square) {
+  if (!type || !PIECE_EN[type]) return `the piece on ${square}`;
+  return `the ${color === 'w' ? 'white' : 'black'} ${PIECE_EN[type]} on ${square}`;
+}
+
+/** « white knight » / « black piece » (sans article). */
+function pieceEn(type, color) {
+  return `${color === 'w' ? 'white' : 'black'} ${PIECE_EN[type] ?? 'piece'}`;
+}
+
+/** Camp : « White » / « Black ». */
+function sideEn(c) {
+  return c === 'w' ? 'White' : 'Black';
+}
+
+/** « a, b and c » à partir d'une liste. */
+function listEn(items) {
+  return items.length > 1 ? `${items.slice(0, -1).join(', ')} and ${items.at(-1)}` : (items[0] ?? '');
+}
+
+/** Cibles d'une fourchette : « the black rook on d1 and the black queen on h1 ». */
+function namedTargetsEn(p, victimColor) {
+  const sqs = String(p.targets ?? '').split(',').filter(Boolean);
+  const types = String(p.targetTypes ?? '').split(',');
+  if (!sqs.length) return 'two targets';
+  return listEn(sqs.map((s, i) => namedPieceEn(types[i], victimColor, s)));
+}
+
+/** @param {PosToken} t */
+export function renderToken(t) {
+  return factLang() === 'en' ? renderTokenEn(t) : renderTokenFr(t);
+}
+
+/** @param {PosToken} t */
+function renderTokenEn(t) {
+  const p = /** @type {Record<string, any>} */ (t.params);
+  const side = sideEn(p.color);
+  const opp = p.color === 'w' ? 'b' : 'w';
+
+  switch (t.id) {
+    case 'AVANTAGE_MATERIEL':
+      return `Material advantage for ${side} (+${p.score}).`;
+
+    case 'EGALITE_MATERIEL':
+      return `Material is equal.`;
+
+    case 'ROI_AU_CENTRE':
+      return p.canCastle === false
+        ? `The ${side.toLowerCase()} king is in the center and can no longer castle: it must find shelter another way.`
+        : `The ${side.toLowerCase()} king is still in the center: castling is a priority.`;
+
+    case 'PIONS_ROI_AFFAIBLI': {
+      const files = String(p.files ?? '').split(',').filter(Boolean);
+      const detail = !files.length ? ''
+        : files.length === 1 ? ` (no protecting pawn on the ${files[0]}-file)`
+          : ` (no protecting pawn on the ${listEn(files)} files)`;
+      return `Weakened pawn shield in front of the ${side.toLowerCase()} king${detail}.`;
+    }
+
+    case 'STRUCTURE':
+      return `Structure: ${STRUCTURES[p.name]?.label ?? p.name} (${side}).`;
+
+    case 'ROQUES_OPPOSES':
+      return p.white
+        ? `Opposite-side castling: white king on the ${paramEn(p.white)}, black king on the ${paramEn(p.black)}. Each side attacks toward the enemy king: White on the ${paramEn(p.black)}, Black on the ${paramEn(p.white)}.`
+        : `Opposite-side castling.`;
+
+    case 'CLOUAGE_RELATIF':
+      return `Relative pin: ${namedPieceEn(p.type, p.color, p.square)} is pinned by ${namedPieceEn(p.byType, opp, p.by)}: if it moves, ${namedPieceEn(p.behindType, p.color, p.behind)}, worth more, is taken.`;
+
+    case 'ENFILADE':
+      return `Skewer for ${side}: ${namedPieceEn(p.type, p.color, p.square)} attacks ${namedPieceEn(p.frontType, opp, p.front)}, which, when it moves, will expose ${namedPieceEn(p.backType, opp, p.back)}.`;
+
+    case 'DECOUVERTE_POSSIBLE':
+      return `${p.check ? 'Discovered check' : 'Discovered attack'} available for ${side}: moving ${namedPieceEn(p.moverType, p.color, p.mover)} unmasks ${namedPieceEn(p.sliderType, p.color, p.slider)} against ${namedPieceEn(p.targetType, opp, p.target)}.`;
+
+    case 'SURCHARGE':
+      return `Overloaded ${pieceEn(p.type, p.color)} on ${p.square}: it is the only defender of ${listEn(String(p.defends ?? '').split(',').filter(Boolean))}.`;
+
+    case 'PIECE_PIEGEE':
+      return `Trapped ${pieceEn(p.type, p.color)} on ${p.square}: attacked and with no safe escape square.`;
+
+    case 'RANGEE_FAIBLE':
+      return `Weak back rank for ${side}: the king on ${p.king} has no escape square${p.guarded ? ' (only one heavy piece guards the rank)' : ''}.`;
+
+    case 'COMPLEXE_FAIBLE':
+      return `Weakened ${paramEn(p.shade)}-square complex for ${side} (${p.squares}): no bishop of that color left to defend it${p.enemyBishop ? ', while the opponent still has theirs' : ''}.`;
+
+    case 'CONTROLE_COLONNE':
+      return `${side} controls the ${p.file}-file${p.doubled ? ' (heavy pieces doubled)' : ''}.`;
+
+    case 'CASE_ENTREE':
+      return `Entry square for ${side} on ${p.square} (${p.file}-file).`;
+
+    case 'TOUR_7E':
+      return `${side} ${p.type === 'q' ? 'queen' : 'rook'} on the 7th rank (${p.square}).`;
+
+    case 'ACTIVITE':
+      return `${side}'s pieces are clearly more active (mobility ${p.mine} vs ${p.theirs}).`;
+
+    case 'PIECE_PASSIVE':
+      return `Passive ${pieceEn(p.type, p.color)} on ${p.square}: it has almost no squares.`;
+
+    case 'CONTROLE_CENTRE':
+      return `${side} controls the center better (d4, d5, e4, e5).`;
+
+    case 'CENTRE':
+      return `${cap(paramEn(p.type))} center.`;
+
+    case 'FOU_CONTRE_CAVALIER':
+      return `Bishop vs knight: ${sideEn(p.bishop)} has the bishop, ${sideEn(p.knight)} has the knight.`;
+
+    case 'DEVELOPPEMENT':
+      return `${side} leads in development (${p.lead} more ${Number(p.lead) === 1 ? 'piece' : 'pieces'} in play).`;
+
+    case 'PHASE':
+      return `Game phase: ${paramEn(p.phase)}.`;
+
+    case 'PION_PASSE':
+      return `${side} passed pawn on ${p.square}.`;
+
+    case 'PION_PASSE_PROTEGE':
+      return `${side} protected passed pawn on ${p.square}.`;
+
+    case 'PION_ISOLE':
+      return `${side} isolated pawn on ${p.square}.`;
+
+    case 'PION_ARRIERE':
+      return `${side} backward pawn on ${p.square}.`;
+
+    case 'PION_FAIBLE':
+      return `${side} weak pawn (isolated and backward) on ${p.square}.`;
+
+    case 'AVANT_POSTE':
+      return `Outpost for ${side} on ${p.square}.`;
+
+    case 'CAVALIER_AVANT_POSTE':
+      return `${side} knight on an outpost on ${p.square}.`;
+
+    case 'COLONNE_OUVERTE':
+      return `Open ${p.file}-file.`;
+
+    case 'COLONNE_SEMI_OUVERTE':
+      return `Half-open ${p.file}-file for ${side}.`;
+
+    case 'TOUR_COLONNE_OUVERTE':
+      return `${side} rook on ${p.square} on an open/half-open file.`;
+
+    case 'AVANTAGE_ESPACE':
+      return `Space advantage for ${side}.`;
+
+    case 'CASE_FAIBLE':
+      return `Weak square (hole) in ${side}'s camp on ${p.square}.`;
+
+    case 'PIECE_NON_DEVELOPPEE':
+      return `Undeveloped ${pieceEn(p.type, p.color)} on ${p.square}.`;
+
+    case 'DAME_SORTIE_TOT':
+      return `${side} queen developed too early, minor pieces still on their starting squares.`;
+
+    case 'NOMBRE_ILOTS_BLANC':
+      return `White pawn islands: ${p.count}.`;
+
+    case 'NOMBRE_ILOTS_NOIR':
+      return `Black pawn islands: ${p.count}.`;
+
+    case 'MAJORITE_AILE_DAME':
+      return `${side} queenside pawn majority.`;
+
+    case 'MAJORITE_AILE_ROI':
+      return `${side} kingside pawn majority.`;
+
+    case 'DOUBLON':
+      return `${side} doubled pawns on the ${p.file}-file.`;
+
+    case 'CHAINE_PIONS':
+      return `${side} pawn chain.`;
+
+    case 'PION_ARRIERE_DOUBLE':
+      return `Two adjacent backward pawns for ${side}.`;
+
+    case 'PAIRE_FOUS':
+      return `${side} has the bishop pair.`;
+
+    case 'FOU_BON':
+      return `${side} good bishop on ${p.square}.`;
+
+    case 'FOU_MAUVAIS':
+      return `${side} bad bishop on ${p.square}.`;
+
+    case 'ROQUE_PETIT':
+      return `${side} has castled kingside.`;
+
+    case 'ROQUE_GRAND':
+      return `${side} has castled queenside.`;
+
+    case 'PIONS_ROI_BOUCLIER':
+      return `Pawn shield intact in front of the ${side.toLowerCase()} king.`;
+
+    case 'PIECE_MENACEE':
+      return `${cap(pieceEn(p.type, p.color))} hanging on ${p.square} (${p.defended === false ? 'undefended' : 'attacked by a lower-value piece'}).`;
+
+    case 'CLOUAGE': {
+      const by = p.by ? ` by ${namedPieceEn(p.byType, opp, p.by)}` : '';
+      return `${cap(pieceEn(p.type, p.color))} on ${p.square} pinned to its king${by} (it cannot move).`;
+    }
+
+    case 'FOURCHETTE':
+      return `Fork by ${side}: ${namedPieceEn(p.type, p.color, p.square)} attacks ${namedTargetsEn(p, opp)} at the same time.`;
 
     default:
       return `${t.id}: ${JSON.stringify(p)}`;
@@ -321,7 +568,7 @@ export function tokenWeight(t) {
  * @returns {string}
  */
 export function interpretFacts(facts) {
-  if (!facts.length) return 'Aucun fait positionnel détecté.';
+  if (!facts.length) return tr('Aucun fait positionnel détecté.', 'No positional facts detected.');
 
   // Grouper par poids décroissant
   const groups = new Map();
@@ -347,8 +594,9 @@ export function interpretFacts(facts) {
       }
     }
     const label = PRIORITY[uniqueTokens[0]?.id]?.label ?? 'INCONNU';
+    const shown = tr(label, PRIORITY_LABEL_EN[label] ?? label);
     const prefix = weight >= 8 ? '##' : weight >= 6 ? '###' : '-';
-    lines.push(`\n${prefix} ${label}`);
+    lines.push(`\n${prefix} ${shown}`);
     for (const f of uniqueTokens) {
       lines.push(`  ${renderToken(f)}`);
     }
