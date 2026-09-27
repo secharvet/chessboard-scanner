@@ -31,6 +31,7 @@ import { judgeConfig } from '../coach/judge.mjs';
 import { blunderCheck, scanTactics } from '../coach/threats.mjs';
 import { describeForcing, forcingLines } from '../coach/forcing.mjs';
 import { findManeuvers } from '../coach/maneuvers.mjs';
+import { diagnoseMistake } from '../coach/diagnose.mjs';
 
 loadEnv();
 const args = process.argv.slice(2);
@@ -238,6 +239,11 @@ while (!chess.isGameOver() && chess.history().length < MAX_MOVES * 2) {
     const tag = loss >= 300 ? 'gaffe' : loss >= 100 ? 'erreur' : loss >= 50 ? 'imprécision' : '';
     if (plan && m.plan && m.plan !== plan) planChanges++;
     plan = m.plan || plan;
+    if (loss >= 100) {
+      const played = toFrenchSan(m.san);
+      const d = await diagnoseMistake(judge, fen, chess.fen(), { ...m, alerted: m.events.some((e) => e.startsWith(`⚑ alerte sur ${played}`)) });
+      m.events.push(`🔎 ${d.text}`);
+    }
     const warned = m.events.some((e) => e.startsWith('⚑'));
     const vetoed = m.events.filter((e) => e.startsWith('⛔')).length;
     log.push({ n: Math.ceil(chess.history().length / 2), san: toFrenchSan(m.san), loss, tag, plan: m.plan, raison: m.raison, illegal: m.illegal, evalAfter: after, warned, vetoed, events: m.events });
@@ -293,6 +299,11 @@ function writeReport(coherence, finalEval = null) {
     '', ...(coherence?.points_forts ?? []).map((x) => `- ✅ ${x}`), ...(coherence?.points_faibles ?? []).map((x) => `- ⚠ ${x}`),
     '', '## Gaffes voulues bloquées par l\'arbitre', '',
     ...(vetoes.length ? vetoes.map((v) => `- coup ${v.n} : ${v.san} — ${v.verdict} — justification : ${v.raison}`) : ['- aucune']),
+    '', '## Diagnostic des erreurs (perte ≥ 1 pion)', '',
+    ...(() => {
+      const diags = log.filter((x) => x.loss >= 100).map((x) => `- ${x.n}. ${x.san} (−${x.loss} cp) : ${x.events.find((e) => e.startsWith('🔎'))?.slice(2).trim() ?? '—'}`);
+      return diags.length ? diags : ['- aucune erreur'];
+    })(),
     '', '## Coups du LLM', '', '| Coup | Perte (cp) | | Plan annoncé | Raison | Alertes / arbitrage |', '|---|---|---|---|---|---|',
     ...log.map((x) => `| ${x.n}. ${x.san} | ${x.loss} | ${x.tag} | ${x.plan.replace(/\|/g, '/')} | ${x.raison.replace(/\|/g, '/')} | ${x.events.join(' ; ').replace(/\|/g, '/')} |`),
     '', '## PGN', '', '```', pgn, '```',
