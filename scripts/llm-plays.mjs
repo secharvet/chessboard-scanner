@@ -145,9 +145,11 @@ ${await perception(fen, LLM_COLOR)}
 Coups légaux : ${legal.join(' ')}`;
 
   const oppColor = LLM_COLOR === 'w' ? 'b' : 'w';
-  // Position critique ? (menace grave, combinaison forcée, souvenir) → le LLM réfléchit.
-  const critical = scanTactics(fen, oppColor).some((t) => t.severity >= 10)
-    || forcingLines(fen, LLM_COLOR).length > 0 || forcingLines(fen, oppColor).length > 0
+  // Position critique ? Menace adverse ou combinaison qui rapporte VRAIMENT ≥ 1 pion (note Stockfish),
+  // ou souvenir très proche → le LLM réfléchit (low) ; sinon il joue vite.
+  const critical = (await scored.tactics(fen, oppColor, scanTactics(fen, oppColor))).length > 0
+    || (await scored.forcing(fen, LLM_COLOR, forcingLines(fen, LLM_COLOR))).length > 0
+    || (await scored.forcing(fen, oppColor, forcingLines(fen, oppColor))).length > 0
     || (lessons.length > 0 && recall(lessons, { situation: situationTags(fen, LLM_COLOR) }, { k: 1, min: 0.7 }).length > 0);
   const forbidden = new Set();
   const asked = new Set();
@@ -158,8 +160,9 @@ Coups légaux : ${legal.join(' ')}`;
   let lastError = '';
 
   for (let attempt = 0; attempt < 7; attempt++) {
-    // Relance après alerte, veto ou erreur : toujours avec réflexion.
-    const think = THINK === 'auto' ? (attempt > 0 ? 'high' : critical ? 'low' : 'none')
+    // Relance : « high » seulement après un veto (il doit vraiment peser son coup), « low » sinon.
+    const afterVeto = events.some((e) => e.startsWith('⛔'));
+    const think = THINK === 'auto' ? (afterVeto ? 'high' : attempt > 0 || critical ? 'low' : 'none')
       : THINK === 'off' ? 'none' : THINK === 'on' ? true : THINK;
     if (think === 'none') fastCalls++; else thinkCalls++;
     const raw = await complete({ system: SYSTEM, user: lastError ? `${user}\n\n${lastError}` : user }, cfg, { think });
