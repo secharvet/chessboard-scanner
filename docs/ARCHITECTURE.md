@@ -208,7 +208,7 @@ Enseignements : **sans ancrage, un modèle plus fort ne sert à rien** ; avec an
 **Technique**
 13. `scripts/llm-plays.mjs` est devenu long (joueur, arbitre, mesure, rapport) : à découper en modules.
 14. Clés d'API collées dans une conversation : **à régénérer** avant toute mise en ligne.
-15. Mise en ligne : domaine, HTTPS (Caddy), limitation de débit par IP, service systemd pour le serveur coach, plafond d'analyses Stockfish simultanées.
+15. Mise en ligne : fait en partie (service systemd, port 8000 fermé à l'extérieur, limite de requêtes par visiteur et d'analyses simultanées) ; reste le domaine, le HTTPS (Caddy), l'image de production et la rotation des clés — voir `deploy/README.md`.
 16. Pistes produit : **Maia** (réseau entraîné sur des parties humaines par niveau) comme adversaire crédible, et pour prédire « ce que l'adversaire va probablement jouer ».
 
 ## 11. Carte des fichiers

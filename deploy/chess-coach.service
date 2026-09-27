@@ -1,0 +1,13 @@
+[Unit]
+Description=Serveur du coach d'échecs (Stockfish + règles + LLM), port 8000
+After=network-online.target
+
+[Service]
+WorkingDirectory=/home/ubuntu/chessboard-scanner
+ExecStart=/usr/bin/node coach/server.mjs
+Restart=on-failure
+RestartSec=5
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=default.target
