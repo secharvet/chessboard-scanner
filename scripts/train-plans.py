@@ -1,0 +1,202 @@
+"""
+Premiers réseaux de plans et leurs références (docs/PLANS-ET-CONCEPTS.md, §5, §6, §6 bis).
+
+Pour chaque concept, un modèle « mon plan » : chaque position donne deux exemples, un par camp, vus du camp
+concerné (échiquier retourné pour les Noirs, pièces du camp dans les 6 premiers plans, faits « à moi » et
+« à l'adversaire »). Quatre modèles comparés sur des parties jamais vues (découpage par partie) :
+
+  logreg   régression logistique sur les faits du moteur de règles (règles linéaires) ;
+  arbres   arbres de décision à gradient sur les mêmes faits : la VRAIE référence du §6 bis ;
+  cnn      petit réseau convolutif, échiquier seul ;
+  cnn+f    le même, avec les faits en entrée.
+
+Critère du §6 bis : le réseau doit battre les arbres (AUC). Sinon, on garde règles + arbres.
+
+  ~/laya-venv/bin/python scripts/train-plans.py data/datasets/plans-v1.jsonl [--concepts rupture,tour_colonne]
+      [--epochs 8] [--threads 2] [--out reports/train-plans.json]
+"""
+
+import argparse
+import json
+import zlib
+
+import numpy as np
+import torch
+from sklearn.ensemble import HistGradientBoostingClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import average_precision_score, roc_auc_score
+from sklearn.preprocessing import StandardScaler
+from torch import nn
+
+PIECES = 'PNBRQKpnbrqk'
+
+
+def board_planes(fen, side):
+    """18 plans 8x8 vus du camp `side` : 6 pièces à moi, 6 à l'adversaire, trait, 4 roques (moi, lui), 1 constant."""
+    parts = fen.split()
+    x = np.zeros((18, 8, 8), dtype=np.float32)
+    for r, row in enumerate(parts[0].split('/')):
+        f = 0
+        for ch in row:
+            if ch.isdigit():
+                f += int(ch)
+                continue
+            rank = 7 - r  # 0 = 1re rangée
+            idx = PIECES.index(ch)
+            white = idx < 6
+            mine = white == (side == 'w')
+            rr = rank if side == 'w' else 7 - rank  # retourné pour les Noirs : « ma » 1re rangée en bas
+            x[(idx % 6) + (0 if mine else 6), rr, f] = 1
+            f += 1
+    x[12] = 1.0 if parts[1] == side else 0.0
+    c = parts[2]
+    own, opp = ('KQ', 'kq') if side == 'w' else ('kq', 'KQ')
+    for i, ch in enumerate(own + opp):
+        x[13 + i] = 1.0 if ch in c else 0.0
+    x[17] = 1.0
+    return x
+
+
+def load(path, concepts):
+    recs = [json.loads(l) for l in open(path, encoding='utf8') if l.strip()]
+    keys = sorted({k.split('|')[0] for r in recs for k in r['facts']})
+    kidx = {k: i for i, k in enumerate(keys)}
+    data = {c: {'fen': [], 'side': [], 'y': [], 'facts': [], 'split': [], 'eval': []} for c in concepts}
+    for r in recs:
+        # Découpage par partie (pas de fuite d'une position à la voisine) : 80 % entraînement, 10 % validation, 10 % test.
+        h = zlib.crc32(str(r['game']).encode()) % 10
+        split = 'test' if h == 0 else 'val' if h == 1 else 'train'
+        for c in concepts:
+            for side in 'wb':
+                y = r['y'].get(f'{c}_{side}')
+                if y is None:
+                    continue
+                v = np.zeros(2 * len(keys), dtype=np.float32)
+                for k, n in r['facts'].items():
+                    fid, col = k.split('|')
+                    off = 0 if col in (side, '-') else len(keys)
+                    v[kidx[fid] + off] += n
+                d = data[c]
+                d['fen'].append(r['fen'])
+                d['side'].append(side)
+                d['y'].append(y)
+                d['facts'].append(v)
+                d['split'].append(split)
+                d['eval'].append(r['eval'] if side == 'w' else -r['eval'])
+    return data, keys
+
+
+class PlanNet(nn.Module):
+    """Petit réseau : 3 convolutions 3x3, puis une tête ; les faits (optionnels) rejoignent la tête."""
+
+    def __init__(self, n_facts=0, ch=48):
+        super().__init__()
+        self.conv = nn.Sequential(
+            nn.Conv2d(18, ch, 3, padding=1), nn.ReLU(),
+            nn.Conv2d(ch, ch, 3, padding=1), nn.ReLU(),
+            nn.Conv2d(ch, ch, 3, padding=1), nn.ReLU(),
+        )
+        self.n_facts = n_facts
+        self.head = nn.Sequential(nn.Linear(ch * 64 + n_facts, 128), nn.ReLU(), nn.Dropout(0.2), nn.Linear(128, 1))
+
+    def forward(self, board, facts=None):
+        z = self.conv(board).flatten(1)
+        if self.n_facts:
+            z = torch.cat([z, facts], 1)
+        return self.head(z).squeeze(1)
+
+
+def train_net(Xb, Xf, y, split, use_facts, epochs, seed=0):
+    torch.manual_seed(seed)
+    tr, va = split == 'train', split == 'val'
+    net = PlanNet(Xf.shape[1] if use_facts else 0)
+    opt = torch.optim.AdamW(net.parameters(), lr=1e-3, weight_decay=1e-4)
+    pos = max(1.0, float((y[tr] == 0).sum()) / max(1, (y[tr] == 1).sum()))
+    loss_fn = nn.BCEWithLogitsLoss(pos_weight=torch.tensor(min(pos, 50.0)))
+    B = torch.from_numpy(Xb)
+    F = torch.from_numpy(Xf)
+    Y = torch.from_numpy(y.astype(np.float32))
+    idx_tr = np.where(tr)[0]
+    best, best_state = -1, None
+    for _ in range(epochs):
+        net.train()
+        np.random.shuffle(idx_tr)
+        for i in range(0, len(idx_tr), 256):
+            b = idx_tr[i:i + 256]
+            opt.zero_grad()
+            loss = loss_fn(net(B[b], F[b]), Y[b])
+            loss.backward()
+            opt.step()
+        p = predict(net, B, F, np.where(va)[0])
+        auc = roc_auc_score(y[va], p) if len(set(y[va])) > 1 else 0
+        if auc > best:
+            best, best_state = auc, {k: v.clone() for k, v in net.state_dict().items()}
+    net.load_state_dict(best_state)
+    return net
+
+
+def predict(net, B, F, idx):
+    net.eval()
+    out = []
+    with torch.no_grad():
+        for i in range(0, len(idx), 2048):
+            b = idx[i:i + 2048]
+            out.append(torch.sigmoid(net(B[b], F[b])).numpy())
+    return np.concatenate(out) if out else np.zeros(0)
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument('dataset')
+    ap.add_argument('--concepts', default='tour_colonne,rupture,affaiblir,blocage,cavalier_avant_poste')
+    ap.add_argument('--epochs', type=int, default=8)
+    ap.add_argument('--threads', type=int, default=2)
+    ap.add_argument('--out', default='reports/train-plans.json')
+    a = ap.parse_args()
+    torch.set_num_threads(a.threads)
+    concepts = a.concepts.split(',')
+    data, keys = load(a.dataset, concepts)
+    results = {}
+    for c in concepts:
+        d = data[c]
+        y = np.array(d['y'])
+        split = np.array(d['split'])
+        Xf = np.stack(d['facts']) if d['facts'] else np.zeros((0, 2 * len(keys)), dtype=np.float32)
+        te, tr = split == 'test', split == 'train'
+        npos = {s: int(y[split == s].sum()) for s in ('train', 'val', 'test')}
+        print(f'\n== {c} : {len(y)} exemples, positifs {npos}')
+        if min(npos.values()) < 20:
+            print('   trop peu de positifs, concept sauté')
+            continue
+        res = {'n': len(y), 'positifs': npos}
+        scaler = StandardScaler().fit(Xf[tr])
+        Xs = scaler.transform(Xf).astype(np.float32)
+        lr = LogisticRegression(max_iter=2000, class_weight='balanced').fit(Xs[tr], y[tr])
+        gb = HistGradientBoostingClassifier(max_iter=300, learning_rate=0.08, class_weight='balanced').fit(Xf[tr], y[tr])
+        Xb = np.stack([board_planes(f, s) for f, s in zip(d['fen'], d['side'])])
+        cnn = train_net(Xb, Xs, y, split, False, a.epochs)
+        cnnf = train_net(Xb, Xs, y, split, True, a.epochs)
+        idx = np.where(te)[0]
+        preds = {
+            'logreg': lr.predict_proba(Xs[te])[:, 1],
+            'arbres': gb.predict_proba(Xf[te])[:, 1],
+            'cnn': predict(cnn, torch.from_numpy(Xb), torch.from_numpy(Xs), idx),
+            'cnn+f': predict(cnnf, torch.from_numpy(Xb), torch.from_numpy(Xs), idx),
+        }
+        for name, p in preds.items():
+            auc = roc_auc_score(y[te], p)
+            ap_ = average_precision_score(y[te], p)
+            res[name] = {'auc': round(float(auc), 4), 'ap': round(float(ap_), 4)}
+            print(f'   {name:7s} AUC {auc:.3f}   précision moyenne {ap_:.3f}')
+        best_net = max(res['cnn']['auc'], res['cnn+f']['auc'])
+        res['verdict'] = 'réseau > arbres (+0,02 ou plus)' if best_net >= res['arbres']['auc'] + 0.02 else 'réseau ne bat pas les arbres'
+        print(f'   -> {res["verdict"]}')
+        results[c] = res
+        torch.save({'cnn': cnn.state_dict(), 'cnn+f': cnnf.state_dict(), 'keys': keys,
+                    'mean': scaler.mean_.tolist(), 'scale': scaler.scale_.tolist()}, f'data/datasets/plan-{c}.pt')
+    json.dump(results, open(a.out, 'w'), ensure_ascii=False, indent=2)
+    print(f'\nRésultats : {a.out}')
+
+
+if __name__ == '__main__':
+    main()

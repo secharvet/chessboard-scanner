@@ -300,6 +300,28 @@ Premier lot (48 952 positions, 23 595 positifs bruts) :
 Environ 15 % des positifs bruts survivent ; la plupart des rejets sont des suites tactiques, ce que le filtre doit écarter.
 Contrôle visuel (3 séries de planches) : rupture et tour sur colonne correspondent à l'intuition dans 9 à 10 cas sur 10.
 
+**Chaîne d'entraînement prête** (`scripts/build-dataset.mjs`, `scripts/train-plans.py`) : étiquettes recalculées
+depuis les suites, 4 modèles comparés sur des parties jamais vues (règle linéaire sur les faits, arbres de décision
+sur les faits, petit réseau sur l'échiquier seul, réseau avec les faits). Essai sur 7 900 positions : la chaîne
+fonctionne ; les AUC (0,55 à 0,62) ne veulent encore rien dire, faute de positifs (moins de 50 en test).
+
+**Effet de bord de la prolongation : le contraste s'effondre pour les concepts fréquents.** Sur 1 500 positions,
+en passant de 24 à 48 demi-coups :
+
+| Concept | Dans la meilleure suite | Contraste réussi | Présent dans les 3 suites |
+|---|---|---|---|
+| Tour sur colonne ouverte | 1 099 → 1 574 | 147 → **74** | 506 → 1 153 |
+| Affaiblir la structure | 1 249 → 1 875 | 280 → **221** | 425 → 1 003 |
+| Rupture de pions | 567 → 756 | 171 → 199 | 115 → 214 |
+| Blocage | 184 → 312 | 98 → 146 | 17 → 26 |
+| Cavalier sur avant-poste | 99 → 175 | 57 → 92 | 7 → 9 |
+
+Sur 24 coups, une tour finit presque toujours sur une colonne ouverte, quelle que soit la suite : ce n'est plus un
+plan, c'est inévitable. Les concepts rares, eux, gagnent 16 à 60 % d'exemples. Piste : un **contraste de tempo**, le
+concept apparaît dans la meilleure suite au moins 8 à 12 demi-coups plus tôt que dans les suites moins bonnes
+(« c'est le moment »). Il rend 206 à 254 exemples de tour sur colonne et 382 à 462 d'affaiblissement ; à valider sur
+planches avant de l'adopter.
+
 **Prochaines étapes**
 
 1. Planches sur les exemples vérifiés (dont les premiers avant-postes).

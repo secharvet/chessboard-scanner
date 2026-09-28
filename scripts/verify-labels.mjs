@@ -16,8 +16,7 @@
  */
 
 import { appendFileSync, readFileSync } from 'node:fs';
-import { Chess } from 'chess.js';
-import { scanLine } from '../coach/plan-concepts.mjs';
+import { quietReason, scanLine } from '../coach/plan-concepts.mjs';
 import { UciEngine } from '../coach/uci-engine.mjs';
 import { extendPv } from '../coach/extend-line.mjs';
 
@@ -27,41 +26,12 @@ const OUT = opt('--out', args[0].replace(/\.jsonl$/, '-verifie.jsonl'));
 const MAX = Number(opt('--max', 2000));
 const WORKERS = Number(opt('--workers', 1));
 const DEPTH2 = Number(opt('--depth2', 18));
-const VALUE = { p: 1, n: 3, b: 3, r: 5, q: 9, k: 0 };
 const CONCEPTS = ['tour_colonne', 'cavalier_avant_poste', 'blocage', 'rupture', 'affaiblir'];
-
-const material = (chess) => chess.board().flat().reduce((s, p) => s + (p ? (p.color === 'w' ? 1 : -1) * VALUE[p.type] : 0), 0);
 
 /** Positif brut : dans la meilleure suite, pas dans les suites qui valent au moins 0,3 pion de moins. */
 const positive = (r, k) => r.lines[0][k] >= 0
   && r.lines.slice(1).some((_, i) => r.evals[0] - r.evals[i + 1] >= 30)
   && !r.lines.slice(1).some((l, i) => r.evals[0] - r.evals[i + 1] >= 30 && l[k] >= 0);
-
-/**
- * La suite est-elle calme jusqu'à l'apparition du concept ? Renvoie la raison du rejet, ou null.
- * Le matériel est comparé aux POINTS CALMES (après un coup qui n'est pas suivi d'une prise) : une
- * rupture ou un échange décale le matériel le temps de la reprise, ce n'est pas de la tactique.
- * On vérifie jusqu'à la fin de l'échange qui fait apparaître le concept.
- */
-export function quietReason(fen, pv, ply, concept) {
-  const c = new Chess(fen);
-  const start = material(c);
-  const moves = [];
-  const mat = [];
-  for (const u of pv.slice(0, ply + 7)) {
-    try { moves.push(c.move({ from: u.slice(0, 2), to: u.slice(2, 4), promotion: u[4] })); } catch { break; }
-    mat.push(material(c));
-  }
-  if (moves.length <= ply) return 'suite illisible';
-  const quiet = (i) => i === moves.length - 1 || !moves[i + 1].captured;
-  let endOfExchange = ply;
-  while (endOfExchange < moves.length - 1 && !quiet(endOfExchange)) endOfExchange++;
-  for (let i = 0; i <= endOfExchange; i++) {
-    if (quiet(i) && mat[i] !== start) return 'matériel changé (tactique)';
-  }
-  if (concept === 'tour_colonne' && moves[ply].san.startsWith('O-O')) return 'apparaît par un roque';
-  return null;
-}
 
 // Étiquettes RECALCULÉES depuis les suites enregistrées, avec la définition actuelle des concepts
 // (coach/plan-concepts.mjs) : une définition corrigée s'applique sans relancer Stockfish.

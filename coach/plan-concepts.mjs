@@ -159,3 +159,33 @@ export function scanLine(fen, pv, PLIES = 48) {
   }
   return out;
 }
+
+// ── Suite calme (filtre des exemples positifs, scripts/verify-labels.mjs et build-dataset.mjs) ──
+const VALUE = { p: 1, n: 3, b: 3, r: 5, q: 9, k: 0 };
+const material = (chess) => chess.board().flat().reduce((s, p) => s + (p ? (p.color === 'w' ? 1 : -1) * VALUE[p.type] : 0), 0);
+
+/**
+ * La suite est-elle calme jusqu'à l'apparition du concept ? Renvoie la raison du rejet, ou null.
+ * Le matériel est comparé aux POINTS CALMES (après un coup qui n'est pas suivi d'une prise) : une
+ * rupture ou un échange décale le matériel le temps de la reprise, ce n'est pas de la tactique.
+ * On vérifie jusqu'à la fin de l'échange qui fait apparaître le concept.
+ */
+export function quietReason(fen, pv, ply, concept) {
+  const c = new Chess(fen);
+  const start = material(c);
+  const moves = [];
+  const mat = [];
+  for (const u of pv.slice(0, ply + 7)) {
+    try { moves.push(c.move({ from: u.slice(0, 2), to: u.slice(2, 4), promotion: u[4] })); } catch { break; }
+    mat.push(material(c));
+  }
+  if (moves.length <= ply) return 'suite illisible';
+  const quiet = (i) => i === moves.length - 1 || !moves[i + 1].captured;
+  let endOfExchange = ply;
+  while (endOfExchange < moves.length - 1 && !quiet(endOfExchange)) endOfExchange++;
+  for (let i = 0; i <= endOfExchange; i++) {
+    if (quiet(i) && mat[i] !== start) return 'matériel changé (tactique)';
+  }
+  if (concept === 'tour_colonne' && moves[ply].san.startsWith('O-O')) return 'apparaît par un roque';
+  return null;
+}
