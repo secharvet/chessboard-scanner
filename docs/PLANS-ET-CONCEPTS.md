@@ -300,6 +300,12 @@ Premier lot (48 952 positions, 23 595 positifs bruts) :
 Environ 15 % des positifs bruts survivent ; la plupart des rejets sont des suites tactiques, ce que le filtre doit écarter.
 Contrôle visuel (3 séries de planches) : rupture et tour sur colonne correspondent à l'intuition dans 9 à 10 cas sur 10.
 
+**Moteur** : Stockfish 19 officiel (BMI2/AVX2) depuis le 28 septembre au soir, à la place du paquet Ubuntu 17.1
+(SSE2). Au banc mono-fil, 1,8 fois plus de nœuds par seconde ; en production (4 moteurs sur 4 vCPU, profondeur 16
+fixe), le gain réel est modeste : génération 2 300 positions/h (inchangé), prolongation 1 600/h (+16 %). Une
+profondeur nominale coûte plus de nœuds dans la version 19, et les vCPU partagent leurs unités de calcul. On garde
+la 19 (plus forte, même coût) ; chaque enregistrement porte le nom du moteur.
+
 **Chaîne d'entraînement prête** (`scripts/build-dataset.mjs`, `scripts/train-plans.py`) : étiquettes recalculées
 depuis les suites, 4 modèles comparés sur des parties jamais vues (règle linéaire sur les faits, arbres de décision
 sur les faits, petit réseau sur l'échiquier seul, réseau avec les faits). Essai sur 7 900 positions : la chaîne
