@@ -17,6 +17,7 @@ import { renderToken } from '../positional/interpreter.js';
 import { scanLine } from '../coach/plan-concepts.mjs';
 import { toFrenchSan } from '../coach/notation.mjs';
 import { UciEngine } from '../coach/uci-engine.mjs';
+import { extendPv } from '../coach/extend-line.mjs';
 
 const args = process.argv.slice(2);
 const opt = (k, d) => (args.includes(k) ? args[args.indexOf(k) + 1] : d);
@@ -63,7 +64,7 @@ for (const { r, c, side } of picks) {
   n++;
   // Suites recalculées (Stockfish n'est pas parfaitement déterministe) : la planche montre SA suite.
   const lines = await engine.analyze(r.fen, { depth: 16, multipv: 3 });
-  const pv = lines[0]?.pv ?? [];
+  const pv = lines[0] ? await extendPv(engine, r.fen, lines[0].pv) : [];
   const scan = scanLine(r.fen, pv);
   const k = `${c}_${side}`;
   const ply = scan[k];

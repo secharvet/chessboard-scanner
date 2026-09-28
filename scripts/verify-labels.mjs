@@ -7,6 +7,7 @@
  *  2. STABILITÉ : le concept doit réapparaître (calmement) dans une recherche PLUS PROFONDE (18 au lieu
  *     de 16). Une recherche identique serait inutile : à un fil et table de hachage vidée (ce que fait
  *     UciEngine avant chaque analyse), Stockfish est déterministe. Un vrai plan survit à plus de calcul.
+ *     La seconde suite est prolongée comme la première (coach/extend-line.mjs) si celle-ci l'a été.
  *
  *   node scripts/verify-labels.mjs data/labels/2013-01.jsonl [--out data/labels/2013-01-verifie.jsonl]
  *        [--workers 1] [--max 2000]
@@ -18,6 +19,7 @@ import { appendFileSync, readFileSync } from 'node:fs';
 import { Chess } from 'chess.js';
 import { scanLine } from '../coach/plan-concepts.mjs';
 import { UciEngine } from '../coach/uci-engine.mjs';
+import { extendPv } from '../coach/extend-line.mjs';
 
 const args = process.argv.slice(2);
 const opt = (k, d) => (args.includes(k) ? args[args.indexOf(k) + 1] : d);
@@ -82,9 +84,10 @@ await Promise.all(engines.map(async (engine) => {
     let ply2 = null;
     if (!reason) {
       const [l] = await engine.analyze(r.fen, { depth: DEPTH2, multipv: 1 });
-      ply2 = l ? scanLine(r.fen, l.pv)[k] : -1;
+      const pv2 = l && r.ext ? await extendPv(engine, r.fen, l.pv, { plies: r.ext }) : l?.pv;
+      ply2 = pv2 ? scanLine(r.fen, pv2)[k] : -1;
       if (ply2 < 0) reason = 'instable (absent de la recherche plus profonde)';
-      else if (quietReason(r.fen, l.pv, ply2, c)) reason = 'instable (seconde suite non calme)';
+      else if (quietReason(r.fen, pv2, ply2, c)) reason = 'instable (seconde suite non calme)';
     }
     bump(c, reason ?? 'vérifié');
     appendFileSync(OUT, `${JSON.stringify({ fen: r.fen, game: r.game, ply: r.ply, elo: r.elo, concept: c, side, appear: ply, appear2: ply2, ok: !reason, reason })}\n`);

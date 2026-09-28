@@ -14,6 +14,7 @@ import { Chess } from 'chess.js';
 import { scanLine } from '../coach/plan-concepts.mjs';
 import { toFrenchSan } from '../coach/notation.mjs';
 import { UciEngine } from '../coach/uci-engine.mjs';
+import { extendPv } from '../coach/extend-line.mjs';
 
 const args = process.argv.slice(2);
 const DEPTH = Number(args.includes('--depth') ? args[args.indexOf('--depth') + 1] : 16);
@@ -30,6 +31,20 @@ const CASES = [
     expect: ['rupture_w', 'affaiblir_w'], plan: 'Blancs : b4-b5 puis bxc6, pion c6 ou d5 faible, colonne c ouverte' },
   { name: 'Sicilienne Pelikan, case d5', moves: 'e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 Nf6 Nc3 e5 Ndb5 d6 Bg5 a6 Na3 b5 Bxf6 gxf6',
     expect: ['cavalier_avant_poste_w'], plan: 'Blancs : cavalier installé en d5, case trouée par les pions noirs' },
+  { name: 'Tarrasch, pion isolé d5', moves: 'd4 d5 c4 e6 Nc3 c5 cxd5 exd5 Nf3 Nc6 g3 Nf6 Bg2 Be7 O-O O-O',
+    expect: ['blocage_w'], plan: 'Blancs : bloquer le pion isolé d5 par une pièce en d4' },
+  { name: 'Slave, variante d\'échange', moves: 'd4 d5 c4 c6 cxd5 cxd5 Nc3 Nf6 Nf3 Nc6 Bf4 Bf5 e3 e6 Bd3 Bxd3 Qxd3 Bd6 O-O O-O',
+    expect: ['tour_colonne_w'], plan: 'Blancs : prendre la colonne c ouverte avec les tours' },
+  { name: 'Hollandaise Stonewall', moves: 'd4 f5 g3 Nf6 Bg2 e6 Nf3 d5 O-O Bd6 c4 c6 b3 Qe7',
+    expect: ['cavalier_avant_poste_w'], plan: 'Blancs : cavalier en e5, case que les pions noirs ne peuvent plus chasser' },
+  { name: 'Najdorf, structure e5', moves: 'e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Be2 e5 Nb3 Be7 O-O O-O Be3 Be6',
+    expect: ['rupture_b'], plan: 'Noirs : rupture d5 qui libère le pion arriéré d6' },
+  { name: 'Rossolimo, pions doublés', moves: 'e4 c5 Nf3 Nc6 Bb5 g6 O-O Bg7 Re1',
+    expect: ['affaiblir_w'], plan: 'Blancs : Fxc6 pour doubler les pions noirs' },
+  { name: 'Grünfeld, échange', moves: 'd4 Nf6 c4 g6 Nc3 d5 cxd5 Nxd5 e4 Nxc3 bxc3 Bg7 Bc4 c5 Ne2 Nc6 Be3 O-O O-O',
+    expect: ['tour_colonne_b'], plan: 'Noirs : pression sur d4, tour sur la colonne d ou c' },
+  { name: 'Benoni moderne', moves: 'd4 Nf6 c4 c5 d5 e6 Nc3 exd5 cxd5 d6 e4 g6 Nf3 Bg7 Be2 O-O O-O Re8 Nd2',
+    expect: ['rupture_b'], plan: 'Noirs : a6 et b5, jeu à l\'aile dame ; Blancs : f4 et e5' },
 ];
 
 const engine = new UciEngine({ threads: 1 });
@@ -57,9 +72,8 @@ for (const cs of CASES) {
   const fen = c.fen();
   const [best] = await engine.analyze(fen, { depth: DEPTH, multipv: 1 });
   const pv24 = best.pv.slice(0, 24);
-  // Prolongation : Stockfish relancé depuis la dernière position de la suite.
-  const [more] = await engine.analyze(endFen(fen, pv24), { depth: DEPTH, multipv: 1 });
-  const pv48 = [...pv24, ...(more?.pv ?? [])].slice(0, 48);
+  // Prolongation : Stockfish relancé depuis la dernière position de la suite (coach/extend-line.mjs).
+  const pv48 = await extendPv(engine, fen, best.pv, { plies: 48, depth: DEPTH });
   const s24 = scanLine(fen, pv24, 24);
   const s48 = scanLine(fen, pv48, 48);
   console.log(`\n## ${cs.name}  (éval ${(best.score.value / 100).toFixed(2)}, trait aux ${c.turn() === 'w' ? 'Blancs' : 'Noirs'})`);

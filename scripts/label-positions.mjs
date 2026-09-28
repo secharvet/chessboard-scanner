@@ -8,7 +8,10 @@
  * d'étiquetage (contraste, seuils) se décident à l'entraînement, sans tout recalculer.
  *
  *   node scripts/label-positions.mjs data/lichess/2013-01.pgn [--out data/labels/2013-01.jsonl]
- *        [--workers 3] [--depth 12] [--plies 16] [--every 6] [--max 100000]
+ *        [--workers 3] [--depth 12] [--plies 48] [--every 6] [--max 100000]
+ *
+ * Les suites sont PROLONGÉES jusqu'à --plies demi-coups (Stockfish relancé depuis leur dernière position,
+ * coach/extend-line.mjs) : à profondeur 16, une suite s'arrête d'elle-même vers 17 demi-coups.
  *
  * Reprise automatique : les parties déjà traitées (index dans le fichier de sortie) sont sautées.
  */
@@ -18,6 +21,7 @@ import { createInterface } from 'node:readline';
 import { Chess } from 'chess.js';
 import { UciEngine } from '../coach/uci-engine.mjs';
 import { scanLine } from '../coach/plan-concepts.mjs';
+import { extendPv } from '../coach/extend-line.mjs';
 
 const args = process.argv.slice(2);
 const opt = (k, d) => (args.includes(k) ? args[args.indexOf(k) + 1] : d);
@@ -25,7 +29,7 @@ const PGN = args[0];
 const OUT = opt('--out', `data/labels/${PGN.split('/').pop().replace(/\.pgn$/, '')}.jsonl`);
 const WORKERS = Number(opt('--workers', 3));
 const DEPTH = Number(opt('--depth', 12));
-const PLIES = Number(opt('--plies', 24));
+const PLIES = Number(opt('--plies', 48));
 const EVERY = Number(opt('--every', 6));
 const MAX = Number(opt('--max', 100000));
 
@@ -80,12 +84,15 @@ async function labelGame(engine, game) {
     if (!lines.length) continue;
     const best = toCp(lines[0].score);
     if (Math.abs(best) > 400) continue; // position déjà décidée : pas de plan à apprendre
+    const pvs = [];
+    for (const l of lines) pvs.push(await extendPv(engine, pos.fen, l.pv, { plies: PLIES, depth: DEPTH }));
     const rec = {
       game: game.index, ply: pos.ply, fen: pos.fen, elo,
       evals: lines.map((l) => toCp(l.score)),
-      lines: lines.map((l) => scanLine(pos.fen, l.pv, PLIES)),
-      // Suites elles-mêmes (UCI) : filtres et vérifications possibles après coup, sans recalcul.
-      pvs: lines.map((l) => l.pv.slice(0, PLIES)),
+      lines: pvs.map((pv) => scanLine(pos.fen, pv, PLIES)),
+      // Suites elles-mêmes (UCI, prolongées) : filtres et vérifications possibles après coup, sans recalcul.
+      pvs,
+      ext: PLIES,
     };
     appendFileSync(OUT, `${JSON.stringify(rec)}\n`);
     written++;

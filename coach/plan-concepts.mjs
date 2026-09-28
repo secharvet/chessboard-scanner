@@ -23,6 +23,13 @@ export const CONCEPTS = {
   }),
 };
 export const COLORS = ['w', 'b'];
+/**
+ * Un concept compte s'il TIENT au moins HOLD demi-coups après son apparition (ou jusqu'au bout de la suite si
+ * elle s'arrête avant). Remplace « encore présent en fin de suite » : un cavalier installé en d5 puis échangé
+ * dix demi-coups plus loin a bien réalisé le plan (test d'horizon, Sicilienne Pélikan), et les suites
+ * prolongées à 48 demi-coups rendraient la condition de fin de suite presque impossible.
+ */
+export const HOLD = 6;
 
 /** Colonnes ouvertes ou semi-ouvertes POUR `color`. */
 const openFiles = (facts, color) => new Set(facts
@@ -45,13 +52,14 @@ const AGENT = {
 
 /**
  * Déroule une suite et renvoie, pour chaque concept et chaque camp, le demi-coup d'apparition (ou -1).
- * Apparition = absent au départ, réalisé par un coup CALME et DÉLIBÉRÉ du camp (voir AGENT), et encore
- * vrai à la fin de la suite.
+ * Apparition = absent au départ, réalisé par un coup CALME et DÉLIBÉRÉ du camp (voir AGENT), et tenu
+ * au moins HOLD demi-coups.
  * Rupture de pions : une POUSSÉE de pion du camp (pas une prise) qui attaque un pion adverse (levier),
- * suivie d'une nouvelle colonne ouverte ou semi-ouverte pour ce camp qui transforme la position (tour du
- * camp dessus à la fin, ou faiblesse adverse ou pion passé nouveaux). Attribuée au seul camp qui pousse.
+ * suivie d'une nouvelle colonne ouverte ou semi-ouverte pour ce camp, qui tient, et qui transforme la
+ * position (tour du camp dessus plus loin, ou faiblesse adverse ou pion passé nouveaux et qui tiennent).
+ * Attribuée au seul camp qui pousse.
  */
-export function scanLine(fen, pv, PLIES = 24) {
+export function scanLine(fen, pv, PLIES = 48) {
   const c = new Chess(fen);
   const start = { facts: buildAllFacts(fen), board: new Chess(fen) };
   const timeline = [];
@@ -74,33 +82,41 @@ export function scanLine(fen, pv, PLIES = 24) {
   }
   const out = {};
   if (!timeline.length) return out;
-  const end = timeline.at(-1);
+  /** La condition est-elle vraie du demi-coup i jusqu'à i + HOLD (ou jusqu'au bout de la suite) ? */
+  const holds = (i, pred) => timeline.slice(i, i + HOLD + 1).every(pred);
   for (const [name, test] of Object.entries(CONCEPTS)) {
     for (const color of COLORS) {
       let ply = -1;
       const ok = (snap) => test(snap.facts, color, snap.board);
-      if (!ok(start) && ok(end)) {
-        ply = timeline.findIndex((snap, i) => moves[i].color === color && !moves[i].captured && AGENT[name](moves[i], snap, color));
+      if (!ok(start)) {
+        ply = timeline.findIndex((snap, i) => moves[i].color === color && !moves[i].captured
+          && AGENT[name](moves[i], snap, color) && holds(i, ok));
       }
       out[`${name}_${color}`] = ply;
     }
   }
   for (const color of COLORS) {
     const before = openFiles(start.facts, color);
-    const after = openFiles(end.facts, color);
-    const fresh = [...after].filter((f) => !before.has(f));
+    const opp = color === 'w' ? 'b' : 'w';
     let ply = -1;
-    if (fresh.length && levers[color].length) {
-      const opened = timeline.findIndex((snap) => [...openFiles(snap.facts, color)].some((x) => fresh.includes(x)));
-      const opp = color === 'w' ? 'b' : 'w';
-      const rookUses = end.board.board().flat().some((p) => p && p.type === 'r' && p.color === color && fresh.includes(p.square[0]));
+    // Première colonne nouvelle (pour ce camp) qui reste ouverte au moins HOLD demi-coups.
+    let fresh = [];
+    const opened = timeline.findIndex((snap, i) => {
+      fresh = [...openFiles(snap.facts, color)].filter((f) => !before.has(f) && holds(i, (s) => openFiles(s.facts, color).has(f)));
+      return fresh.length > 0;
+    });
+    if (opened >= 0 && levers[color].length) {
+      const later = timeline.slice(opened);
+      const rookUses = later.some((snap) => snap.board.board().flat().some((p) => p && p.type === 'r' && p.color === color && fresh.includes(p.square[0])));
       const key = (t) => `${t.id}|${t.params.color}|${String(t.params.square ?? '')[0]}`;
       const had = new Set(start.facts.map(key));
-      const structural = end.facts.some((t) => !had.has(key(t))
+      const isStructural = (t) => !had.has(key(t))
         && ((['PION_ISOLE', 'PION_ARRIERE', 'PION_FAIBLE'].includes(t.id) && t.params.color === opp)
-          || (t.id === 'PION_PASSE' && t.params.color === color)));
+          || (t.id === 'PION_PASSE' && t.params.color === color));
+      const structural = later.some((snap, j) => snap.facts.some((t) => isStructural(t)
+        && holds(opened + j, (s) => s.facts.some((u) => key(u) === key(t)))));
       // Le levier doit venir du camp ET précéder l'ouverture ; l'autre camp, qui la subit, n'est pas crédité.
-      const firstLever = Math.min(levers[color][0] ?? Infinity, Infinity);
+      const firstLever = levers[color][0] ?? Infinity;
       const oppLever = levers[opp][0] ?? Infinity;
       if (firstLever <= opened && firstLever < oppLever && (rookUses || structural)) ply = opened;
     }
@@ -108,8 +124,8 @@ export function scanLine(fen, pv, PLIES = 24) {
   }
 
   // Affaiblir la structure adverse (plan à étages : MOYEN → DÉSÉQUILIBRE) : une faiblesse nouvelle
-  // apparaît chez l'adversaire dans la suite calme et y reste. Moyen : « échange » (le camp prend une
-  // pièce, l'adversaire reprend avec un pion) ou « poussée » (levier de pion du camp). On note aussi si
+  // apparaît chez l'adversaire dans la suite calme et tient au moins HOLD demi-coups. Moyen : « échange »
+  // (le camp prend une pièce, l'adversaire reprend avec un pion) ou « poussée » (levier de pion du camp). On note aussi si
   // l'adversaire pouvait encore roquer du côté affaibli (« avant le roque » : on lui enlève son abri).
   const weakKey = (t) => (t.id === 'DOUBLON' ? `D|${t.params.color}|${t.params.file}`
     : t.id === 'PION_ISOLE' || t.id === 'PION_ARRIERE' ? `${t.id}|${t.params.color}|${t.params.square[0]}`
@@ -118,13 +134,12 @@ export function scanLine(fen, pv, PLIES = 24) {
   for (const color of COLORS) {
     const opp = color === 'w' ? 'b' : 'w';
     const had = new Set(start.facts.filter((t) => t.params.color === opp).map(weakKey).filter(Boolean));
-    const atEnd = new Set(end.facts.filter((t) => t.params.color === opp).map(weakKey).filter(Boolean));
     let ply = -1;
     let means = null;
     let wing = null;
     for (let i = 0; i < timeline.length && ply < 0; i++) {
       const fresh = timeline[i].facts.filter((t) => t.params.color === opp).map((t) => [weakKey(t), t])
-        .filter(([k]) => k && !had.has(k) && atEnd.has(k));
+        .filter(([k]) => k && !had.has(k) && holds(i, (s) => s.facts.some((u) => u.params.color === opp && weakKey(u) === k)));
       if (!fresh.length) continue;
       const m = moves[i];
       const prev = moves[i - 1];

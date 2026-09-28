@@ -191,6 +191,14 @@ dans le générateur avant tout entraînement.
 - **le plan de Stockfish n'est pas toujours celui des manuels** : dans la Française avance, il préfère le jeu à l'aile
   dame (Ca5-b3) à la rupture f6 dans les 20 premiers demi-coups. Ce n'est pas forcément une erreur de notre part.
 
+*Après corrections (suites prolongées à 48 demi-coups, concept tenu 6 demi-coups au lieu de « jusqu'à la fin »),
+12 positions* : 7 plans sur 13 à 24 demi-coups, **9 sur 13** à 48. Les 4 manqués :
+- Française avance : Stockfish joue h4-h5 puis f4-f5 pour les Blancs, pas de f6 noir dans sa suite ;
+- Pélikan : le cavalier va en d5, mais Stockfish abandonne lui-même l'appui du pion e4 deux coups plus tard (exf5) ;
+- Najdorf : notre position de test mène à une suite tactique (Cd5 Cxe4) ; cas de test mal choisi ;
+- Benoni : la poussée b5 est jouée, mais notre définition de rupture exige une colonne utilisée par une tour ou une
+  faiblesse créée ; b5 gagne de l'espace et prépare c4. **La définition de la rupture est trop étroite.**
+
 **2. Fausse attribution (coups d'attente).** Quand la vraie raison du meilleur coup est prophylactique, un concept
 peut apparaître par hasard plus loin dans la suite (une tour qui finit sur une colonne ouverte). L'étiquette est
 vraie sur l'échiquier mais ce n'est pas la raison. Test : 50 planches vérifiées par concept, dont une part tirée
@@ -262,8 +270,10 @@ Tout repose sur les suites enregistrées par le générateur : l'analyse ne dema
 
 ## 9. État d'avancement (28 septembre 2026)
 
-**Génération des étiquettes** : en cours sur le serveur (Stockfish profondeur 16, 3 moteurs à un fil, environ
-7 500 positions par heure). 80 000 positions faites sur un objectif de 400 000, fin prévue le 30 septembre.
+**Génération des étiquettes** : en cours sur le serveur (Stockfish profondeur 16, 3 moteurs à un fil). 80 000
+positions faites avant le test d'horizon (suites non prolongées, environ 7 500 positions par heure) ; depuis le
+28 septembre, les suites sont prolongées à 48 demi-coups, et les 80 000 premières le sont après coup
+(`scripts/extend-labels.mjs`).
 
 **Vérification des exemples positifs** (`scripts/verify-labels.mjs`). Deux filtres s'ajoutent à l'étiquetage du §4 :
 
