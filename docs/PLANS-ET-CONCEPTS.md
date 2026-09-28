@@ -162,11 +162,41 @@ Tout est calculé, reproductible, et vérifiable position par position.
 - **Contrôle visuel d'abord** : environ 1 000 positions étiquetées sont relues devant l'échiquier (planches avec la
   suite de Stockfish) pour vérifier que chaque étiquette correspond à l'intuition d'un joueur, avant tout entraînement.
 - **Données** : 50 000 à 100 000 positions (milieux de partie), étiquetées sur le serveur, en plusieurs nuits de calcul.
-- **Référence à battre** : nos règles actuelles (présence statique des ingrédients du concept).
+- **Référence à battre** : nos règles actuelles (présence statique des ingrédients du concept), puis un modèle simple sur les faits du moteur de règles (§6 bis, test 3).
 - **Critère de succès** : sur des positions jamais vues, le réseau prédit que Stockfish va jouer ce plan nettement
   mieux que la référence (AUC supérieure d'au moins 0,1).
 - **Si c'est un succès** : on élargit aux 15 concepts et on branche l'explication.
 - **Sinon** : on sait, pour pas cher, que cette voie ne suffit pas.
+
+## 6 bis. Tests de rupture
+
+Trois tests conçus pour faire échouer l'approche vite et pour pas cher (issus d'une relecture adverse). Chacun a
+un critère d'échec écrit à l'avance.
+
+**1. Horizon (positions fermées).** Un plan de position fermée (rupture f5-f4 dans l'Est-Indienne, f6 dans la
+Française avance, attaque de minorité dans la structure Carlsbad) peut demander plus de 12 coups. Si le concept
+n'apparaît pas dans les 24 demi-coups, le générateur ne produit rien : le risque est de **manquer** les plans lents
+(faux négatifs), pas d'en inventer. Test : une série de positions de manuel au plan connu (`scripts/horizon-test.mjs`),
+à 24 demi-coups puis à 48 en prolongeant la suite (Stockfish relancé depuis sa dernière position).
+**Échec** : les plans attendus manquent même à 48 demi-coups. S'ils n'apparaissent qu'à 48, on prolonge les suites
+dans le générateur avant tout entraînement.
+
+**2. Fausse attribution (coups d'attente).** Quand la vraie raison du meilleur coup est prophylactique, un concept
+peut apparaître par hasard plus loin dans la suite (une tour qui finit sur une colonne ouverte). L'étiquette est
+vraie sur l'échiquier mais ce n'est pas la raison. Test : 50 planches vérifiées par concept, dont une part tirée
+exprès parmi les positions où le premier coup de Stockfish est un coup de roi ou un petit coup de pion, relues par
+un joueur de plus de 1800 Elo. **Échec** : plus de 30 % des planches jugées « ce n'est pas le plan ».
+
+**3. Le réseau doit battre une vraie référence.** Le réseau ne reconnaît pas un concept (les règles le font par
+définition) : il prédit qu'il **deviendra** le plan. La référence « ingrédients présents » est trop faible. Nouvelle
+référence : un modèle simple et classique (arbres de décision à gradient) entraîné sur les faits du moteur de
+règles. **Échec** : le réseau ne bat pas ce modèle simple ; on garde alors règles plus modèle simple, plus facile à
+expliquer. Complément, **tests contrefactuels** : déplacer la tour d'une case, retirer le pion de levier, changer une
+pièce sans toucher la structure ; la probabilité du réseau doit réagir dans le bon sens, sinon il a appris une fausse
+corrélation.
+
+**Ordre** : l'horizon d'abord (une heure, sans attendre la fin de l'étiquetage), puis la référence et les tests
+contrefactuels avec l'entraînement, puis la relecture par un joueur fort dès qu'un relecteur est disponible.
 
 ## 7. Risques connus
 
