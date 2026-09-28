@@ -5,6 +5,7 @@
 
 import { Chess } from 'chess.js';
 import { buildAllFacts } from '../positional/index.js';
+import { squareColor } from '../positional/attack-map.js';
 
 // ── Concepts (états buts vérifiables, par camp) ──
 // Chaque détecteur reçoit les faits d'une position et renvoie les couleurs pour lesquelles le concept est vrai.
@@ -156,6 +157,26 @@ export function scanLine(fen, pv, PLIES = 48) {
     // L'adversaire pouvait-il encore roquer de ce côté au départ ?
     const rights = opp === 'w' ? { roi: 'K', dame: 'Q' } : { roi: 'k', dame: 'q' };
     out[`affaiblir_avant_roque_${color}`] = ply >= 0 && wing ? castling.includes(rights[wing]) : false;
+  }
+
+  // Dominer une couleur (plan à étages) : le camp PREND le fou adverse de la couleur S sur laquelle l'adversaire
+  // est faible (au moins deux trous de cette couleur), en gardant son propre fou de S. Le fait COMPLEXE_FAIBLE
+  // adverse « avec fou ennemi » apparaît à l'instant où son fou disparaît, et doit tenir HOLD demi-coups. Le
+  // moyen est un échange (la suite calme l'admet) ; l'exploitation (pièces et attaque sur S) viendra ensuite.
+  for (const color of COLORS) {
+    const opp = color === 'w' ? 'b' : 'w';
+    const dominated = (snap, shade) => snap.facts.some((t) => t.id === 'COMPLEXE_FAIBLE' && t.params.color === opp && t.params.shade === shade && t.params.enemyBishop);
+    let ply = -1;
+    let shadeOut = null;
+    for (let i = 0; i < moves.length && ply < 0; i++) {
+      const m = moves[i];
+      if (m.color !== color || m.captured !== 'b') continue;
+      const shade = squareColor(m.to);
+      if (dominated(start, shade)) continue; // déjà établi au départ
+      if (holds(i, (s) => dominated(s, shade))) { ply = i; shadeOut = shade; }
+    }
+    out[`dominer_${color}`] = ply;
+    out[`dominer_couleur_${color}`] = shadeOut;
   }
   return out;
 }

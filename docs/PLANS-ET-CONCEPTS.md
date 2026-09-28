@@ -105,7 +105,7 @@ détectés par le moteur de règles (`positional/`) ; ce qui manque, c'est de sa
 | 14 | Prophylaxie | le plan adverse le plus probable devient impossible ou perd sa valeur | activation du détecteur adverse qui chute — **reporté** après la première expérience (état but difficile à définir de façon symbolique) |
 | 15 | Transformer un avantage | un avantage (matériel, espace) devient un autre, plus durable (pion passé, faiblesse fixée) | combinaison de 4, 5 et 8 |
 | 16 | Paire de fous dans une position qui s'ouvre | un camp garde ses deux fous contre fou et cavalier ou deux cavaliers, et des pions centraux disparaissent (colonnes et diagonales qui s'ouvrent) | nombre de fous et structure centrale — candidat |
-| 17 | Affaiblir un complexe de cases | après une poussée de pion (g3, g6, f6…), des cases d'une couleur autour du roi adverse ne sont plus défendues par un pion, et le fou de cette couleur a disparu | cartes de contrôle des cases et fous restants — candidat, prolonge 10 ter |
+| 17 | Dominer une couleur de cases | plan à étages (formulation de l'auteur) : l'adversaire est faible sur une couleur (au moins deux trous) ; **moyen** : je prends son fou de cette couleur en gardant le mien ; **déséquilibre** : `COMPLEXE_FAIBLE` adverse « avec fou ennemi » apparaît et tient ; **exploitation** (à venir) : mes pièces et mon attaque s'installent sur cette couleur | `COMPLEXE_FAIBLE` (couleur, trous, fou ennemi) — étages 1 et 2 codés (`dominer`) |
 
 La liste est un point de départ. Elle sera révisée selon ce que les données montrent.
 

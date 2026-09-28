@@ -26,7 +26,7 @@ const OUT = opt('--out', args[0].replace(/\.jsonl$/, '-verifie.jsonl'));
 const MAX = Number(opt('--max', 2000));
 const WORKERS = Number(opt('--workers', 1));
 const DEPTH2 = Number(opt('--depth2', 18));
-const CONCEPTS = ['tour_colonne', 'cavalier_avant_poste', 'blocage', 'rupture', 'affaiblir'];
+const CONCEPTS = ['tour_colonne', 'cavalier_avant_poste', 'blocage', 'rupture', 'affaiblir', 'dominer'];
 
 /** Positif brut : contraste du concept (strict ou de tempo, CONTRAST), avant les filtres calme et stabilité. */
 const positive = (r, k) => {

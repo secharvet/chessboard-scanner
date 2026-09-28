@@ -34,12 +34,13 @@ const TEMPO = Number(opt('--tempo', 0));
 const rand = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
 mkdirSync(OUT, { recursive: true });
 
-const CONCEPTS = opt('--concepts', 'tour_colonne,cavalier_avant_poste,blocage,rupture,affaiblir').split(',');
-const NAMES = { tour_colonne: 'tour sur colonne ouverte', cavalier_avant_poste: 'cavalier sur avant-poste', blocage: 'blocage d\'un pion faible', rupture: 'rupture de pions', affaiblir: 'affaiblir la structure adverse' };
+const CONCEPTS = opt('--concepts', 'tour_colonne,cavalier_avant_poste,blocage,rupture,affaiblir,dominer').split(',');
+const NAMES = { tour_colonne: 'tour sur colonne ouverte', cavalier_avant_poste: 'cavalier sur avant-poste', blocage: 'blocage d\'un pion faible', rupture: 'rupture de pions', affaiblir: 'affaiblir la structure adverse', dominer: 'dominer une couleur de cases' };
 const RELEVANT = {
   tour_colonne: ['TOUR_COLONNE_OUVERTE'], cavalier_avant_poste: ['CAVALIER_AVANT_POSTE'],
   blocage: ['PION_ISOLE', 'PION_ARRIERE', 'PION_FAIBLE', 'PION_PASSE'], rupture: ['COLONNE_OUVERTE', 'COLONNE_SEMI_OUVERTE', 'PION_ISOLE', 'PION_ARRIERE', 'PION_FAIBLE', 'PION_PASSE'],
   affaiblir: ['DOUBLON', 'PION_ISOLE', 'PION_ARRIERE', 'PIONS_ROI_AFFAIBLI'],
+  dominer: ['COMPLEXE_FAIBLE', 'CASE_FAIBLE', 'AVANT_POSTE', 'CAVALIER_AVANT_POSTE'],
 };
 
 /** Exemple positif : dans la meilleure suite, pas (ou bien plus tard, --tempo) dans les suites au moins 0,3 pion moins bonnes. */
