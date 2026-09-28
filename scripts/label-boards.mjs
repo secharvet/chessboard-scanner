@@ -6,7 +6,13 @@
  * et la légende : concept, camp, évaluations, suite jouée, fait qui apparaît.
  *
  *   node scripts/label-boards.mjs data/labels/2013-01.jsonl [--per 12] [--out dossier] [--seed 1]
+ *        [--concepts tour_colonne,affaiblir] [--tempo 8] [--nouveaux]
  * (le site doit tourner sur http://localhost:6400)
+ *
+ * Sans --tempo : contraste strict (le concept n'apparaît pas dans les suites au moins 0,3 pion moins bonnes).
+ * Avec --tempo N : contraste de TEMPO (§9 du doc) : dans ces suites, le concept est absent OU apparaît au moins
+ * N demi-coups plus tard que dans la meilleure. Dans les deux cas, la suite doit être calme (quietReason).
+ * Les suites enregistrées (prolongées) sont utilisées telles quelles : pas de recalcul Stockfish.
  */
 
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
@@ -14,7 +20,7 @@ import { Chess } from 'chess.js';
 import { chromium } from 'playwright';
 import { buildAllFacts } from '../positional/index.js';
 import { renderToken } from '../positional/interpreter.js';
-import { scanLine } from '../coach/plan-concepts.mjs';
+import { quietReason, scanLine } from '../coach/plan-concepts.mjs';
 import { toFrenchSan } from '../coach/notation.mjs';
 import { UciEngine } from '../coach/uci-engine.mjs';
 import { extendPv } from '../coach/extend-line.mjs';
@@ -24,10 +30,11 @@ const opt = (k, d) => (args.includes(k) ? args[args.indexOf(k) + 1] : d);
 const PER = Number(opt('--per', 12));
 const OUT = opt('--out', `reports/planches-concepts-${Date.now()}`);
 let seed = Number(opt('--seed', 1));
+const TEMPO = Number(opt('--tempo', 0));
 const rand = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
 mkdirSync(OUT, { recursive: true });
 
-const CONCEPTS = ['tour_colonne', 'cavalier_avant_poste', 'blocage', 'rupture', 'affaiblir'];
+const CONCEPTS = opt('--concepts', 'tour_colonne,cavalier_avant_poste,blocage,rupture,affaiblir').split(',');
 const NAMES = { tour_colonne: 'tour sur colonne ouverte', cavalier_avant_poste: 'cavalier sur avant-poste', blocage: 'blocage d\'un pion faible', rupture: 'rupture de pions', affaiblir: 'affaiblir la structure adverse' };
 const RELEVANT = {
   tour_colonne: ['TOUR_COLONNE_OUVERTE'], cavalier_avant_poste: ['CAVALIER_AVANT_POSTE'],
@@ -35,12 +42,20 @@ const RELEVANT = {
   affaiblir: ['DOUBLON', 'PION_ISOLE', 'PION_ARRIERE', 'PIONS_ROI_AFFAIBLI'],
 };
 
-/** Exemple positif : dans la meilleure suite, pas dans les suites qui valent au moins 0,3 pion de moins. */
-const positive = (r, k) => r.lines[0][k] >= 0
-  && r.lines.slice(1).some((_, i) => r.evals[0] - r.evals[i + 1] >= 30)
-  && !r.lines.slice(1).some((l, i) => r.evals[0] - r.evals[i + 1] >= 30 && l[k] >= 0);
+/** Exemple positif : dans la meilleure suite, pas (ou bien plus tard, --tempo) dans les suites au moins 0,3 pion moins bonnes. */
+const positive = (r, k) => {
+  const p = r.lines[0][k];
+  if (!(p >= 0)) return false;
+  const worse = r.lines.slice(1).filter((_, i) => r.evals[0] - r.evals[i + 1] >= 30);
+  if (!worse.length || worse.some((l) => l[k] >= 0 && (!TEMPO || l[k] < p + TEMPO))) return false;
+  // --nouveaux : seulement les exemples que le contraste strict aurait rejetés (ce que le tempo ajoute).
+  if (TEMPO && args.includes('--nouveaux') && !worse.some((l) => l[k] >= 0)) return false;
+  return !quietReason(r.fen, r.pvs[0], p, k.replace(/_[wb]$/, ''));
+};
 
-const records = readFileSync(args[0], 'utf8').trim().split('\n').map((l) => JSON.parse(l));
+// Étiquettes recalculées depuis les suites enregistrées, avec la définition actuelle des concepts.
+const records = readFileSync(args[0], 'utf8').trim().split('\n').map((l) => JSON.parse(l)).filter((r) => r.pvs)
+  .map((r) => ({ ...r, lines: r.pvs.map((pv) => scanLine(r.fen, pv, r.ext ?? 24)) }));
 // --verified : le fichier d'entrée est la sortie de verify-labels.mjs (on ne garde que ok: true).
 const VERIFIED = args.includes('--verified');
 const picks = [];
@@ -53,7 +68,7 @@ for (const c of CONCEPTS) {
   console.log(`${NAMES[c]} : ${pool.length} positifs, ${Math.min(PER, pool.length)} tirés`);
 }
 
-// Un seul fil : même recherche que le générateur (déterministe), la planche montre la suite de l'étiquette.
+// Moteur seulement pour les entrées sans suite enregistrée (--verified) : un fil, même recherche que le générateur.
 const engine = new UciEngine({ threads: 1 });
 const browser = await chromium.launch();
 const page = await browser.newPage({ viewport: { width: 1120, height: 760 }, deviceScaleFactor: 1 });
@@ -62,10 +77,9 @@ const index = [];
 let n = 0;
 for (const { r, c, side } of picks) {
   n++;
-  // Suites recalculées (Stockfish n'est pas parfaitement déterministe) : la planche montre SA suite.
-  const lines = await engine.analyze(r.fen, { depth: 16, multipv: 3 });
-  const pv = lines[0] ? await extendPv(engine, r.fen, lines[0].pv) : [];
-  const scan = scanLine(r.fen, pv);
+  const pv = r.pvs ? r.pvs[0] : await (async () => { const [l] = await engine.analyze(r.fen, { depth: 16, multipv: 1 }); return l ? extendPv(engine, r.fen, l.pv) : []; })();
+  const scan = scanLine(r.fen, pv, r.ext ?? 48);
+  const evals = r.evals ?? [];
   const k = `${c}_${side}`;
   const ply = scan[k];
   const chess = new Chess(r.fen);
@@ -80,11 +94,11 @@ for (const { r, c, side } of picks) {
   const arrows = moves.slice(0, 4).map((m) => ({ color: m.color === side ? 'G' : 'R', from: m.from, to: m.to }));
   const sanLine = moves.map((m) => toFrenchSan(m.san)).join(' ');
   const caption = `#${n} — plan des ${side === 'w' ? 'Blancs' : 'Noirs'} : ${NAMES[c]}`
-    + ` | éval ${lines.map((l) => (l.score.type === 'mate' ? `mat ${l.score.value}` : (l.score.value / 100).toFixed(2))).join(' / ')}`
+    + ` | éval ${evals.map((e) => (e / 100).toFixed(2)).join(' / ')}`
     + ` | apparaît au demi-coup ${ply >= 0 ? ply + 1 : '— (plus dans la suite recalculée)'}`;
   await page.evaluate(async ({ fen, goalFen, arrows, caption, sanLine, fresh, orientation }) => {
     const { renderFenBoard } = await import('/board-view.js');
-    document.body.innerHTML = `<div id="pl" style="width:1100px;padding:10px;background:#fff;font:15px sans-serif">
+    document.body.innerHTML = `<div id="pl" style="width:1100px;padding:10px;background:#fff;color:#111;font:15px sans-serif">
       <div style="display:flex;gap:20px"><div id="a" class="board" style="width:520px;height:520px"></div><div id="b" class="board" style="width:520px;height:520px"></div></div>
       <div style="margin-top:8px;font-weight:bold">${caption}</div>
       <div>Suite : ${sanLine}</div><div>Apparaît : ${fresh.join(' ; ') || '(aucun fait nouveau lisible)'}</div></div>`;
