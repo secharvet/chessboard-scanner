@@ -184,6 +184,17 @@ export function scanLine(fen, pv, PLIES = 48) {
     }
     out[`dominer_${color}`] = ply;
     out[`dominer_couleur_${color}`] = shadeOut;
+    // Étage 3, exploitation : après l'échange, une de mes pièces (pas un pion) s'installe sur un des trous de
+    // cette couleur, ou mon fou de cette couleur ou ma dame donne échec. Demi-coup, ou -1 (pas encore dans la suite).
+    let exploit = -1;
+    if (ply >= 0) {
+      const holesOf = (snap) => new Set(snap.facts.filter((t) => t.id === 'COMPLEXE_FAIBLE' && t.params.color === opp && t.params.shade === shadeOut)
+        .flatMap((t) => String(t.params.squares).split(',')));
+      exploit = timeline.findIndex((snap, i) => i > ply && moves[i].color === color && (
+        (moves[i].piece !== 'p' && holesOf(snap).has(moves[i].to))
+        || (moves[i].san.includes('+') && (moves[i].piece === 'q' || moves[i].piece === 'b') && squareColor(moves[i].to) === shadeOut)));
+    }
+    out[`dominer_exploite_${color}`] = exploit;
   }
   return out;
 }
