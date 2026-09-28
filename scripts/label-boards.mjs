@@ -9,9 +9,9 @@
  *        [--concepts tour_colonne,affaiblir] [--tempo 8] [--nouveaux]
  * (le site doit tourner sur http://localhost:6400)
  *
- * Sans --tempo : contraste strict (le concept n'apparaît pas dans les suites au moins 0,3 pion moins bonnes).
- * Avec --tempo N : contraste de TEMPO (§9 du doc) : dans ces suites, le concept est absent OU apparaît au moins
- * N demi-coups plus tard que dans la meilleure. Dans les deux cas, la suite doit être calme (quietReason).
+ * Sans --tempo : la règle de chaque concept (planLabel, CONTRAST dans coach/plan-concepts.mjs).
+ * Avec --tempo N : force pour tous un contraste de TEMPO de N demi-coups (essai d'une règle) ; --nouveaux ne
+ * garde que les exemples que le contraste strict rejette. La suite doit toujours être calme (quietReason).
  * Les suites enregistrées (prolongées) sont utilisées telles quelles : pas de recalcul Stockfish.
  */
 
@@ -20,7 +20,7 @@ import { Chess } from 'chess.js';
 import { chromium } from 'playwright';
 import { buildAllFacts } from '../positional/index.js';
 import { renderToken } from '../positional/interpreter.js';
-import { quietReason, scanLine } from '../coach/plan-concepts.mjs';
+import { planLabel, quietReason, scanLine } from '../coach/plan-concepts.mjs';
 import { toFrenchSan } from '../coach/notation.mjs';
 import { UciEngine } from '../coach/uci-engine.mjs';
 import { extendPv } from '../coach/extend-line.mjs';
@@ -44,13 +44,15 @@ const RELEVANT = {
 
 /** Exemple positif : dans la meilleure suite, pas (ou bien plus tard, --tempo) dans les suites au moins 0,3 pion moins bonnes. */
 const positive = (r, k) => {
+  const [c, side] = [k.replace(/_[wb]$/, ''), k.slice(-1)];
+  if (!TEMPO) return planLabel(r, r.lines, c, side) === 1;
   const p = r.lines[0][k];
   if (!(p >= 0)) return false;
   const worse = r.lines.slice(1).filter((_, i) => r.evals[0] - r.evals[i + 1] >= 30);
-  if (!worse.length || worse.some((l) => l[k] >= 0 && (!TEMPO || l[k] < p + TEMPO))) return false;
+  if (!worse.length || worse.some((l) => l[k] >= 0 && l[k] < p + TEMPO)) return false;
   // --nouveaux : seulement les exemples que le contraste strict aurait rejetés (ce que le tempo ajoute).
-  if (TEMPO && args.includes('--nouveaux') && !worse.some((l) => l[k] >= 0)) return false;
-  return !quietReason(r.fen, r.pvs[0], p, k.replace(/_[wb]$/, ''));
+  if (args.includes('--nouveaux') && !worse.some((l) => l[k] >= 0)) return false;
+  return !quietReason(r.fen, r.pvs[0], p, c);
 };
 
 // Étiquettes recalculées depuis les suites enregistrées, avec la définition actuelle des concepts.

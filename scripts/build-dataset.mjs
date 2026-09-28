@@ -2,10 +2,10 @@
  * Jeu de données pour les petits réseaux de plans (docs/PLANS-ET-CONCEPTS.md, §5, §6, §6 bis).
  *
  * Pour chaque position étiquetée AVEC suites prolongées (champ `ext`), et pour chaque concept et chaque camp :
- *   y = 1  le concept est le plan du camp : il apparaît dans la meilleure suite, pas dans celles qui valent au
- *          moins 0,3 pion de moins, et la suite est calme jusqu'à son apparition (quietReason) ;
+ *   y = 1  le concept est le plan du camp (planLabel : meilleure suite, contraste strict ou de tempo selon le
+ *          concept, suite calme jusqu'à l'apparition) ;
  *   y = 0  le concept n'apparaît pas dans la meilleure suite ;
- *   null   cas ambigus, exclus (apparaît, mais sans contraste ou par une suite tactique).
+ *   null   cas ambigus, exclus (apparaît, mais sans contraste, trop tard, ou par une suite tactique).
  * Les étiquettes sont RECALCULÉES depuis les suites avec la définition actuelle des concepts.
  * Le filtre de stabilité (recherche plus profonde) demande Stockfish : il n'est pas appliqué ici.
  *
@@ -19,22 +19,12 @@
 import { createReadStream, writeFileSync, appendFileSync } from 'node:fs';
 import { createInterface } from 'node:readline';
 import { buildAllFacts } from '../positional/index.js';
-import { quietReason, scanLine } from '../coach/plan-concepts.mjs';
+import { planLabel, scanLine } from '../coach/plan-concepts.mjs';
 
 const args = process.argv.slice(2);
 const OUT = args.includes('--out') ? args[args.indexOf('--out') + 1] : 'data/datasets/plans-v1.jsonl';
 const inputs = args.filter((a, i) => !a.startsWith('--') && args[i - 1] !== '--out');
 const CONCEPTS = ['tour_colonne', 'cavalier_avant_poste', 'blocage', 'rupture', 'affaiblir'];
-
-/** y pour un concept et un camp (voir en-tête). */
-function label(r, lines, c, side) {
-  const k = `${c}_${side}`;
-  const ply = lines[0][k];
-  if (!(ply >= 0)) return 0;
-  const worse = lines.slice(1).map((l, i) => ({ l, gap: r.evals[0] - r.evals[i + 1] })).filter((x) => x.gap >= 30);
-  if (!worse.length || worse.some((x) => x.l[k] >= 0)) return null;
-  return quietReason(r.fen, r.pvs[0], ply, c) ? null : 1;
-}
 
 writeFileSync(OUT, '');
 const seen = new Set();
@@ -50,7 +40,7 @@ for (const file of inputs) {
     const lines = r.pvs.map((pv) => scanLine(r.fen, pv, r.ext));
     const y = {};
     for (const c of CONCEPTS) for (const side of ['w', 'b']) {
-      const v = label(r, lines, c, side);
+      const v = planLabel(r, lines, c, side);
       y[`${c}_${side}`] = v;
       counts[c] ??= { 1: 0, 0: 0, null: 0 };
       counts[c][v]++;

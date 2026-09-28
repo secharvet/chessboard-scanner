@@ -319,8 +319,20 @@ en passant de 24 à 48 demi-coups :
 Sur 24 coups, une tour finit presque toujours sur une colonne ouverte, quelle que soit la suite : ce n'est plus un
 plan, c'est inévitable. Les concepts rares, eux, gagnent 16 à 60 % d'exemples. Piste : un **contraste de tempo**, le
 concept apparaît dans la meilleure suite au moins 8 à 12 demi-coups plus tôt que dans les suites moins bonnes
-(« c'est le moment »). Il rend 206 à 254 exemples de tour sur colonne et 382 à 462 d'affaiblissement ; à valider sur
-planches avant de l'adopter.
+(« c'est le moment »). Il rend 206 à 254 exemples de tour sur colonne et 382 à 462 d'affaiblissement.
+
+*Décision (28 septembre, planches tempo série 1, 20 exemples que le strict rejette)*. Deux règles retenues :
+- **le prix est borné** (idée de l'auteur : si la suite est longue, l'écart d'évaluation n'est pas attribuable au
+  concept) : pour un exemple de tempo, le concept doit apparaître dans les 10 premiers demi-coups ;
+- **le tempo se décide concept par concept** (`CONTRAST` dans `coach/plan-concepts.mjs`). Tour sur colonne :
+  aucune des planches qui passent la règle du prix n'est un vrai plan (une tour qui se pose sur une colonne
+  semi-ouverte, c'est du développement ordinaire) ; contraste strict conservé. Affaiblir : 5 justes, 1 doute,
+  2 bruit sur 8 (le bruit : la « faiblesse » créée était un pion isolé sur la bande pendant que le vrai plan était
+  une attaque de pions) ; tempo adopté. Sur 1 500 positions : 82 exemples d'affaiblissement au lieu de 63.
+
+Remarque sur « l'avantage doit se diriger vers nous » : le long de la meilleure suite, l'évaluation est constante par
+construction ; ce qui se mesure, c'est l'écart entre suites (déjà le critère). « Enfermer le roi adverse » relève de
+l'étage d'exploitation du §8 (un fait d'attaque doit suivre le déséquilibre) : à traiter avec les plans à étages.
 
 **Prochaines étapes**
 

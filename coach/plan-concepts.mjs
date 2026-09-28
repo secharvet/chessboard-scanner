@@ -189,3 +189,34 @@ export function quietReason(fen, pv, ply, concept) {
   if (concept === 'tour_colonne' && moves[ply].san.startsWith('O-O')) return 'apparaît par un roque';
   return null;
 }
+
+// ── Étiquette « ce concept est le plan » (docs/PLANS-ET-CONCEPTS.md, §4 et §9) ──
+/**
+ * Contraste par concept. `tempo: 0` = contraste strict : le concept n'apparaît pas dans les suites au moins
+ * 0,3 pion moins bonnes. `tempo: N` = contraste de tempo : dans ces suites, il est absent OU apparaît au moins
+ * N demi-coups plus tard ; et `maxPly` borne le prix (le concept doit apparaître tôt, sinon l'écart d'évaluation
+ * ne lui est pas attribuable). Relecture des planches tempo, septembre 2026 : le tempo n'apporte que du bruit
+ * pour la tour sur colonne (développement ordinaire), il tient pour l'affaiblissement (5 justes sur 8).
+ */
+export const CONTRAST = {
+  default: { tempo: 0, maxPly: Infinity },
+  affaiblir: { tempo: 8, maxPly: 10 },
+};
+export const GAP = 30;
+
+/**
+ * 1 : le concept est le plan de `side` (dans la meilleure suite, calme, contraste réussi) ;
+ * 0 : il n'apparaît pas dans la meilleure suite ;
+ * null : ambigu (apparaît sans contraste, ou par une suite tactique, ou trop tard) : à exclure.
+ * `r` : { fen, evals, pvs } ; `lines` : scanLine de chaque suite.
+ */
+export function planLabel(r, lines, concept, side) {
+  const k = `${concept}_${side}`;
+  const p = lines[0][k];
+  if (!(p >= 0)) return 0;
+  const { tempo, maxPly } = CONTRAST[concept] ?? CONTRAST.default;
+  if (p >= maxPly) return null;
+  const worse = lines.slice(1).filter((_, i) => r.evals[0] - r.evals[i + 1] >= GAP);
+  if (!worse.length || worse.some((l) => l[k] >= 0 && (!tempo || l[k] < p + tempo))) return null;
+  return quietReason(r.fen, r.pvs[0], p, concept) ? null : 1;
+}

@@ -16,7 +16,7 @@
  */
 
 import { appendFileSync, readFileSync } from 'node:fs';
-import { quietReason, scanLine } from '../coach/plan-concepts.mjs';
+import { CONTRAST, GAP, quietReason, scanLine } from '../coach/plan-concepts.mjs';
 import { UciEngine } from '../coach/uci-engine.mjs';
 import { extendPv } from '../coach/extend-line.mjs';
 
@@ -28,10 +28,15 @@ const WORKERS = Number(opt('--workers', 1));
 const DEPTH2 = Number(opt('--depth2', 18));
 const CONCEPTS = ['tour_colonne', 'cavalier_avant_poste', 'blocage', 'rupture', 'affaiblir'];
 
-/** Positif brut : dans la meilleure suite, pas dans les suites qui valent au moins 0,3 pion de moins. */
-const positive = (r, k) => r.lines[0][k] >= 0
-  && r.lines.slice(1).some((_, i) => r.evals[0] - r.evals[i + 1] >= 30)
-  && !r.lines.slice(1).some((l, i) => r.evals[0] - r.evals[i + 1] >= 30 && l[k] >= 0);
+/** Positif brut : contraste du concept (strict ou de tempo, CONTRAST), avant les filtres calme et stabilité. */
+const positive = (r, k) => {
+  const p = r.lines[0][k];
+  if (!(p >= 0)) return false;
+  const { tempo, maxPly } = CONTRAST[k.replace(/_[wb]$/, '')] ?? CONTRAST.default;
+  if (p >= maxPly) return false;
+  const worse = r.lines.slice(1).filter((_, i) => r.evals[0] - r.evals[i + 1] >= GAP);
+  return worse.length > 0 && !worse.some((l) => l[k] >= 0 && (!tempo || l[k] < p + tempo));
+};
 
 // Étiquettes RECALCULÉES depuis les suites enregistrées, avec la définition actuelle des concepts
 // (coach/plan-concepts.mjs) : une définition corrigée s'applique sans relancer Stockfish.
