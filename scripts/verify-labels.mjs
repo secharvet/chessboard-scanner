@@ -26,7 +26,7 @@ const MAX = Number(opt('--max', 2000));
 const WORKERS = Number(opt('--workers', 1));
 const DEPTH2 = Number(opt('--depth2', 18));
 const VALUE = { p: 1, n: 3, b: 3, r: 5, q: 9, k: 0 };
-const CONCEPTS = ['tour_colonne', 'cavalier_avant_poste', 'blocage', 'rupture'];
+const CONCEPTS = ['tour_colonne', 'cavalier_avant_poste', 'blocage', 'rupture', 'affaiblir'];
 
 const material = (chess) => chess.board().flat().reduce((s, p) => s + (p ? (p.color === 'w' ? 1 : -1) * VALUE[p.type] : 0), 0);
 

@@ -106,5 +106,41 @@ export function scanLine(fen, pv, PLIES = 24) {
     }
     out[`rupture_${color}`] = ply;
   }
+
+  // Affaiblir la structure adverse (plan à étages : MOYEN → DÉSÉQUILIBRE) : une faiblesse nouvelle
+  // apparaît chez l'adversaire dans la suite calme et y reste. Moyen : « échange » (le camp prend une
+  // pièce, l'adversaire reprend avec un pion) ou « poussée » (levier de pion du camp). On note aussi si
+  // l'adversaire pouvait encore roquer du côté affaibli (« avant le roque » : on lui enlève son abri).
+  const weakKey = (t) => (t.id === 'DOUBLON' ? `D|${t.params.color}|${t.params.file}`
+    : t.id === 'PION_ISOLE' || t.id === 'PION_ARRIERE' ? `${t.id}|${t.params.color}|${t.params.square[0]}`
+      : t.id === 'PIONS_ROI_AFFAIBLI' ? `K|${t.params.color}` : null);
+  const castling = fen.split(' ')[2] ?? '-';
+  for (const color of COLORS) {
+    const opp = color === 'w' ? 'b' : 'w';
+    const had = new Set(start.facts.filter((t) => t.params.color === opp).map(weakKey).filter(Boolean));
+    const atEnd = new Set(end.facts.filter((t) => t.params.color === opp).map(weakKey).filter(Boolean));
+    let ply = -1;
+    let means = null;
+    let wing = null;
+    for (let i = 0; i < timeline.length && ply < 0; i++) {
+      const fresh = timeline[i].facts.filter((t) => t.params.color === opp).map((t) => [weakKey(t), t])
+        .filter(([k]) => k && !had.has(k) && atEnd.has(k));
+      if (!fresh.length) continue;
+      const m = moves[i];
+      const prev = moves[i - 1];
+      if (m.color === opp && m.piece === 'p' && m.captured && m.captured !== 'p' && prev?.color === color && prev.captured) means = 'echange';
+      else if (levers[color].some((l) => l <= i)) means = 'poussee';
+      else continue; // faiblesse sans moyen identifiable du camp : pas un plan de ce type
+      ply = i;
+      const t = fresh[0][1];
+      const file = t.params.file ?? t.params.square?.[0] ?? String(t.params.files ?? '')[0];
+      wing = file && 'efgh'.includes(file) ? 'roi' : file ? 'dame' : null;
+    }
+    out[`affaiblir_${color}`] = ply;
+    out[`affaiblir_moyen_${color}`] = means;
+    // L'adversaire pouvait-il encore roquer de ce côté au départ ?
+    const rights = opp === 'w' ? { roi: 'K', dame: 'Q' } : { roi: 'k', dame: 'q' };
+    out[`affaiblir_avant_roque_${color}`] = ply >= 0 && wing ? castling.includes(rights[wing]) : false;
+  }
   return out;
 }

@@ -26,11 +26,12 @@ let seed = Number(opt('--seed', 1));
 const rand = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
 mkdirSync(OUT, { recursive: true });
 
-const CONCEPTS = ['tour_colonne', 'cavalier_avant_poste', 'blocage', 'rupture'];
-const NAMES = { tour_colonne: 'tour sur colonne ouverte', cavalier_avant_poste: 'cavalier sur avant-poste', blocage: 'blocage d\'un pion faible', rupture: 'rupture de pions' };
+const CONCEPTS = ['tour_colonne', 'cavalier_avant_poste', 'blocage', 'rupture', 'affaiblir'];
+const NAMES = { tour_colonne: 'tour sur colonne ouverte', cavalier_avant_poste: 'cavalier sur avant-poste', blocage: 'blocage d\'un pion faible', rupture: 'rupture de pions', affaiblir: 'affaiblir la structure adverse' };
 const RELEVANT = {
   tour_colonne: ['TOUR_COLONNE_OUVERTE'], cavalier_avant_poste: ['CAVALIER_AVANT_POSTE'],
   blocage: ['PION_ISOLE', 'PION_ARRIERE', 'PION_FAIBLE', 'PION_PASSE'], rupture: ['COLONNE_OUVERTE', 'COLONNE_SEMI_OUVERTE', 'PION_ISOLE', 'PION_ARRIERE', 'PION_FAIBLE', 'PION_PASSE'],
+  affaiblir: ['DOUBLON', 'PION_ISOLE', 'PION_ARRIERE', 'PIONS_ROI_AFFAIBLI'],
 };
 
 /** Exemple positif : dans la meilleure suite, pas dans les suites qui valent au moins 0,3 pion de moins. */
