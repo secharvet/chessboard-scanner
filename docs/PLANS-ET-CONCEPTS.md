@@ -206,6 +206,37 @@ Tout repose sur les suites enregistrées par le générateur : l'analyse ne dema
 **Première exploration** (en parallèle de l'expérience du §6), à partir d'environ 50 000 positions : extraire les
 20 enchaînements les plus fréquents et les plus discriminants, avec planches, et juger si de vrais plans en sortent.
 
+## 9. État d'avancement (28 septembre 2026)
+
+**Génération des étiquettes** : en cours sur le serveur (Stockfish profondeur 16, 3 moteurs à un fil, environ
+7 500 positions par heure). 80 000 positions faites sur un objectif de 400 000, fin prévue le 30 septembre.
+
+**Vérification des exemples positifs** (`scripts/verify-labels.mjs`). Deux filtres s'ajoutent à l'étiquetage du §4 :
+
+1. **Suite calme** : jusqu'à l'apparition du concept, le matériel reste le même aux points calmes (échanges
+   équilibrés permis, pas de gain ni de sacrifice) ; une tour posée par le roque ne compte pas.
+2. **Stabilité** : le concept doit réapparaître, calmement, dans une recherche plus profonde (profondeur 18).
+
+Premier lot (48 952 positions, 23 595 positifs bruts) :
+
+| Concept | Vérifiés | Rejetés : tactique | Rejetés : instable |
+|---|---|---|---|
+| Tour sur colonne ouverte | 1 180 / 6 223 | 3 701 | 1 342 |
+| Affaiblir la structure adverse | 1 400 / 9 003 | 5 608 | 1 995 |
+| Rupture de pions | 777 / 4 989 | 3 005 | 1 207 |
+| Blocage d'un pion faible | 156 / 2 129 | 1 315 | 658 |
+| Cavalier sur avant-poste | 104 / 1 251 | 691 | 456 |
+
+Environ 15 % des positifs bruts survivent ; la plupart des rejets sont des suites tactiques, ce que le filtre doit écarter.
+Contrôle visuel (3 séries de planches) : rupture et tour sur colonne correspondent à l'intuition dans 9 à 10 cas sur 10.
+
+**Prochaines étapes**
+
+1. Planches sur les exemples vérifiés (dont les premiers avant-postes).
+2. Premiers réseaux (tour sur colonne, rupture, affaiblir), comparés aux règles (critère du §6), sur le processeur
+   du serveur ; l'entraînement passera sur une carte graphique (RTX 5070 Ti) dès qu'elle sera disponible.
+3. Outil d'émergence (§8) sur les suites enregistrées.
+
 ## Références
 
 - T. McGrath et al., « Acquisition of chess knowledge in AlphaZero », *PNAS*, 2022 : des concepts humains se lisent
