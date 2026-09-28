@@ -199,6 +199,12 @@ dans le générateur avant tout entraînement.
 - Benoni : la poussée b5 est jouée, mais notre définition de rupture exige une colonne utilisée par une tour ou une
   faiblesse créée ; b5 gagne de l'espace et prépare c4. **La définition de la rupture est trop étroite.**
 
+*Essai d'une « rupture d'espace » (28 septembre, écarté)* : compter aussi une rupture quand, après le levier, le camp
+pousse un pion voisin dans le camp adverse. La Benoni est alors trouvée (b5 puis c4), mais sur 800 positions les
+exemples positifs de rupture augmentent de 28 %, et les exemples nouveaux relus sont surtout du bruit : poussées de
+pions passés en finale, 30 à 45 demi-coups après un levier sans rapport. Définition écartée ; à reprendre avec des
+garde-fous (milieu de partie, pion non passé, poussée proche du levier) si d'autres cas manqués le justifient.
+
 **2. Fausse attribution (coups d'attente).** Quand la vraie raison du meilleur coup est prophylactique, un concept
 peut apparaître par hasard plus loin dans la suite (une tour qui finit sur une colonne ouverte). L'étiquette est
 vraie sur l'échiquier mais ce n'est pas la raison. Test : 50 planches vérifiées par concept, dont une part tirée
