@@ -13,7 +13,8 @@
  * Les suites sont PROLONGÉES jusqu'à --plies demi-coups (Stockfish relancé depuis leur dernière position,
  * coach/extend-line.mjs) : à profondeur 16, une suite s'arrête d'elle-même vers 17 demi-coups.
  *
- * Reprise automatique : les parties déjà traitées (index dans le fichier de sortie) sont sautées.
+ * Reprise automatique : les parties déjà traitées sont sautées (index dans le fichier de sortie, plus le fichier
+ * `<sortie>.done` qui note aussi les parties sans position retenue : sans lui, chaque redémarrage les réanalysait).
  */
 
 import { createReadStream, existsSync, mkdirSync, readFileSync, appendFileSync } from 'node:fs';
@@ -69,6 +70,8 @@ function positions(game) {
 mkdirSync(OUT.replace(/\/[^/]*$/, ''), { recursive: true });
 const done = new Set();
 if (existsSync(OUT)) for (const l of readFileSync(OUT, 'utf8').split('\n')) if (l) done.add(JSON.parse(l).game);
+const DONE = `${OUT}.done`;
+if (existsSync(DONE)) for (const l of readFileSync(DONE, 'utf8').split('\n')) if (l) done.add(Number(l));
 console.error(`${done.size} parties déjà traitées — sortie ${OUT}, ${WORKERS} moteurs, profondeur ${DEPTH}`);
 
 const engines = Array.from({ length: WORKERS }, () => new UciEngine({ threads: 1 }));
@@ -120,6 +123,7 @@ await Promise.all(engines.map(async (engine) => {
     const game = await take();
     if (!game) return;
     await labelGame(engine, game).catch((e) => console.error(`partie ${game.index} : ${e.message}`));
+    appendFileSync(DONE, `${game.index}\n`);
     processed++;
     if (processed % 50 === 0) {
       const rate = written / ((Date.now() - t0) / 3600000);
