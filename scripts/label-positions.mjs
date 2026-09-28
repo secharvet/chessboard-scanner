@@ -88,6 +88,7 @@ async function labelGame(engine, game) {
     for (const l of lines) pvs.push(await extendPv(engine, pos.fen, l.pv, { plies: PLIES, depth: DEPTH }));
     const rec = {
       game: game.index, ply: pos.ply, fen: pos.fen, elo,
+      engine: engine.name,
       evals: lines.map((l) => toCp(l.score)),
       lines: pvs.map((pv) => scanLine(pos.fen, pv, PLIES)),
       // Suites elles-mêmes (UCI, prolongées) : filtres et vérifications possibles après coup, sans recalcul.

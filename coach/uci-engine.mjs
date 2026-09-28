@@ -3,6 +3,7 @@
  */
 
 import { spawn } from 'node:child_process';
+import { existsSync } from 'node:fs';
 import { createInterface } from 'node:readline';
 
 /**
@@ -13,7 +14,10 @@ import { createInterface } from 'node:readline';
 export class UciEngine {
   /** @param {{ path?: string, threads?: number, hashMb?: number }} [opts] */
   constructor(opts = {}) {
-    this.path = opts.path ?? process.env.STOCKFISH_PATH ?? '/usr/games/stockfish';
+    // Le binaire officiel (/usr/local/bin, compilé BMI2/AVX2) est 1,8 fois plus rapide que le paquet Ubuntu (SSE2).
+    this.path = opts.path ?? process.env.STOCKFISH_PATH ?? ['/usr/local/bin/stockfish', '/usr/games/stockfish'].find(existsSync) ?? 'stockfish';
+    /** Nom annoncé par le moteur (« Stockfish 19 »), connu après start(). */
+    this.name = null;
     this.threads = opts.threads ?? 2;
     this.hashMb = opts.hashMb ?? 128;
     /** @type {import('node:child_process').ChildProcess | null} */
@@ -28,7 +32,7 @@ export class UciEngine {
     this.proc = spawn(this.path, [], { stdio: ['pipe', 'pipe', 'inherit'] });
     this.proc.on('exit', () => { this.proc = null; });
     createInterface({ input: this.proc.stdout }).on('line', (line) => this.onLine?.(line));
-    await this.#waitFor('uci', (l) => l === 'uciok');
+    await this.#waitFor('uci', (l) => { if (l.startsWith('id name ')) this.name = l.slice(8); return l === 'uciok'; });
     this.#send(`setoption name Threads value ${this.threads}`);
     this.#send(`setoption name Hash value ${this.hashMb}`);
     await this.#waitFor('isready', (l) => l === 'readyok');

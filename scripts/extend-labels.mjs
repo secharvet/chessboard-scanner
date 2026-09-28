@@ -47,7 +47,7 @@ await Promise.all(engines.map(async (engine) => {
   for (let r = await take(); r; r = await take()) {
     const pvs = [];
     for (const pv of r.pvs) pvs.push(await extendPv(engine, r.fen, pv, { plies: PLIES, depth: DEPTH }));
-    appendFileSync(OUT, `${JSON.stringify({ ...r, pvs, lines: pvs.map((pv) => scanLine(r.fen, pv, PLIES)), ext: PLIES })}\n`);
+    appendFileSync(OUT, `${JSON.stringify({ ...r, pvs, lines: pvs.map((pv) => scanLine(r.fen, pv, PLIES)), ext: PLIES, engine: engine.name })}\n`);
     if (++written % 500 === 0) console.error(`${written} positions (${Math.round(written / ((Date.now() - t0) / 3600000))} positions/h)`);
   }
 }));
