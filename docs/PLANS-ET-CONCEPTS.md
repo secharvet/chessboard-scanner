@@ -311,6 +311,13 @@ depuis les suites, 4 modèles comparés sur des parties jamais vues (règle lin�
 sur les faits, petit réseau sur l'échiquier seul, réseau avec les faits). Essai sur 7 900 positions : la chaîne
 fonctionne ; les AUC (0,55 à 0,62) ne veulent encore rien dire, faute de positifs (moins de 50 en test).
 
+**Tests contrefactuels prêts** (`scripts/counterfactuals.mjs`, `scripts/score-counterfactuals.py`) : pour chaque
+exemple positif, une variante « tuer » (l'ingrédient du concept retiré : pion de levier, fou de la couleur conquise,
+colonne rebouchée, pièce mineure à installer) et une variante « neutre » (un pion de bord avance). Sur les modèles de
+l'essai : le réseau « échiquier seul » ne bouge pas d'un millième dans les deux cas (il n'a rien appris, sortie
+constante) ; le réseau avec faits baisse dans 22 % des cas pour la rupture. Critère pour jeudi : baisse nette
+(Δ ≤ -0,10) dans la majorité des cas « tuer », stabilité (|Δ| < 0,05) dans la majorité des cas « neutre ».
+
 **Effet de bord de la prolongation : le contraste s'effondre pour les concepts fréquents.** Sur 1 500 positions,
 en passant de 24 à 48 demi-coups :
 

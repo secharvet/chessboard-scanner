@@ -27,40 +27,15 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import average_precision_score, roc_auc_score
 from sklearn.preprocessing import StandardScaler
 from torch import nn
+import sys
+from pathlib import Path
 
-PIECES = 'PNBRQKpnbrqk'
-
-
-def board_planes(fen, side):
-    """18 plans 8x8 vus du camp `side` : 6 pièces à moi, 6 à l'adversaire, trait, 4 roques (moi, lui), 1 constant."""
-    parts = fen.split()
-    x = np.zeros((18, 8, 8), dtype=np.float32)
-    for r, row in enumerate(parts[0].split('/')):
-        f = 0
-        for ch in row:
-            if ch.isdigit():
-                f += int(ch)
-                continue
-            rank = 7 - r  # 0 = 1re rangée
-            idx = PIECES.index(ch)
-            white = idx < 6
-            mine = white == (side == 'w')
-            rr = rank if side == 'w' else 7 - rank  # retourné pour les Noirs : « ma » 1re rangée en bas
-            x[(idx % 6) + (0 if mine else 6), rr, f] = 1
-            f += 1
-    x[12] = 1.0 if parts[1] == side else 0.0
-    c = parts[2]
-    own, opp = ('KQ', 'kq') if side == 'w' else ('kq', 'KQ')
-    for i, ch in enumerate(own + opp):
-        x[13 + i] = 1.0 if ch in c else 0.0
-    x[17] = 1.0
-    return x
-
+sys.path.insert(0, str(Path(__file__).parent))
+from train_plans_lib import PlanNet, board_planes, facts_vector  # noqa: E402
 
 def load(path, concepts):
     recs = [json.loads(l) for l in open(path, encoding='utf8') if l.strip()]
     keys = sorted({k.split('|')[0] for r in recs for k in r['facts']})
-    kidx = {k: i for i, k in enumerate(keys)}
     data = {c: {'fen': [], 'side': [], 'y': [], 'facts': [], 'split': [], 'eval': []} for c in concepts}
     for r in recs:
         # Découpage par partie (pas de fuite d'une position à la voisine) : 80 % entraînement, 10 % validation, 10 % test.
@@ -71,11 +46,7 @@ def load(path, concepts):
                 y = r['y'].get(f'{c}_{side}')
                 if y is None:
                     continue
-                v = np.zeros(2 * len(keys), dtype=np.float32)
-                for k, n in r['facts'].items():
-                    fid, col = k.split('|')
-                    off = 0 if col in (side, '-') else len(keys)
-                    v[kidx[fid] + off] += n
+                v = facts_vector(r['facts'], keys, side)
                 d = data[c]
                 d['fen'].append(r['fen'])
                 d['side'].append(side)
@@ -84,26 +55,6 @@ def load(path, concepts):
                 d['split'].append(split)
                 d['eval'].append(r['eval'] if side == 'w' else -r['eval'])
     return data, keys
-
-
-class PlanNet(nn.Module):
-    """Petit réseau : 3 convolutions 3x3, puis une tête ; les faits (optionnels) rejoignent la tête."""
-
-    def __init__(self, n_facts=0, ch=48):
-        super().__init__()
-        self.conv = nn.Sequential(
-            nn.Conv2d(18, ch, 3, padding=1), nn.ReLU(),
-            nn.Conv2d(ch, ch, 3, padding=1), nn.ReLU(),
-            nn.Conv2d(ch, ch, 3, padding=1), nn.ReLU(),
-        )
-        self.n_facts = n_facts
-        self.head = nn.Sequential(nn.Linear(ch * 64 + n_facts, 128), nn.ReLU(), nn.Dropout(0.2), nn.Linear(128, 1))
-
-    def forward(self, board, facts=None):
-        z = self.conv(board).flatten(1)
-        if self.n_facts:
-            z = torch.cat([z, facts], 1)
-        return self.head(z).squeeze(1)
 
 
 def train_net(Xb, Xf, y, split, use_facts, epochs, seed=0):
