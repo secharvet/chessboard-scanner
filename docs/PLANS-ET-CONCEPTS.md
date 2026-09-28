@@ -86,6 +86,7 @@ détectés par le moteur de règles (`positional/`) ; ce qui manque, c'est de sa
 
 | # | Concept | État but | Base existante |
 |---|---|---|---|
+| 10 ter | Affaiblir la structure adverse | une faiblesse nouvelle apparaît chez l'adversaire (pions doublés, isolés, arriérés, bouclier du roi) ; moyen noté : échange qui force une reprise de pion, ou poussée ; drapeau « avant le roque » | faits de pions et droits de roque (voir §8) |
 | 11 | Rupture de pions | un levier de pions ouvre une colonne ou libère une chaîne | à écrire (levier puis colonne ouverte) |
 | 12 | Attaque de minorité | les pions de l'aile dame avancent contre une majorité, créant une faiblesse | structure Carlsbad plus faiblesse créée |
 | 13 | Échanger son mauvais fou | le mauvais fou disparaît contre une pièce adverse | `FOU_MAUVAIS` disparaît par échange |
@@ -163,6 +164,47 @@ Tout est calculé, reproductible, et vérifiable position par position.
 - **Suites équivalentes** : quand trois coups se valent, le contraste disparaît ; ces positions seront exclues ou marquées.
 - **Niveaux** : le plan optimal selon Stockfish n'est pas toujours enseignable à un débutant. L'Elo des parties
   servira à étudier ce que les joueurs de chaque niveau réussissent réellement.
+
+## 8. Plans à étages et émergence
+
+### Un plan a plusieurs étages
+
+Un vrai plan ne se réduit pas à « quoi faire ». Exemple d'entraîneur : *fragiliser la structure de pions adverse
+à l'aile roi avant que l'adversaire roque, par une poussée de pions ou par un échange qui l'oblige à reprendre avec
+un pion ; ce déséquilibre dicte ensuite la stratégie* (garder son roi au centre, attaquer sur la colonne ouverte, viser
+les pions doublés…). On distingue donc trois étages :
+
+1. **Le moyen** : poussée de pions, échange de pièce légère ou lourde, manœuvre.
+2. **Le déséquilibre créé** : faiblesse de structure, roi privé d'abri, paire de fous, colonne, pion passé…
+3. **L'exploitation** : la stratégie que ce déséquilibre rend juste.
+
+Le concept 10 ter (« affaiblir la structure adverse ») modélise les étages 1 et 2 de façon vérifiable : le moyen est
+identifié automatiquement (échange ou poussée) et le moment est noté (l'adversaire pouvait-il encore roquer du côté
+affaibli ?). L'étage 3 demande un horizon plus long (prolongation des suites, §7).
+
+### Laisser les plans émerger
+
+Jusqu'ici, c'est nous qui écrivons les concepts : on ne trouve que ce qu'on sait déjà nommer. L'émergence inverse le
+sens : **les données proposent des plans, l'humain les nomme et les valide.**
+
+1. **Signature de la meilleure suite.** Pour chaque position, on relève coup par coup, et pour chaque camp, TOUS les
+   faits du moteur de règles qui apparaissent ou disparaissent le long de la meilleure suite, dans l'ordre, et en quoi
+   ils diffèrent des suites moins bonnes. Exemple : « échange fou contre cavalier → pions doublés adverses à l'aile
+   roi → roi adverse au centre → tour et dame sur la colonne g ».
+2. **Recherche de motifs.** Sur des centaines de milliers de positions : quels enchaînements reviennent souvent ET
+   distinguent la meilleure suite des moins bonnes ? Recherche de motifs séquentiels et regroupement de signatures,
+   sans LLM.
+3. **Plans candidats.** Chaque enchaînement fréquent et discriminant devient un plan candidat (moyen → déséquilibre →
+   exploitation), accompagné de ses exemples réels.
+4. **Validation humaine sur planches** : vrai plan (nommé), bruit, ou plan jamais formulé mais juste.
+
+Tout repose sur les suites enregistrées par le générateur : l'analyse ne demande que du calcul, pas de Stockfish en plus.
+
+**Limites** : beaucoup de motifs seront triviaux (« il roque ») ou du bruit ; on ne découvre que des plans dont les
+étapes sont visibles par le moteur de règles (d'où l'intérêt de l'enrichir) ; l'horizon limite les plans très lents.
+
+**Première exploration** (en parallèle de l'expérience du §6), à partir d'environ 50 000 positions : extraire les
+20 enchaînements les plus fréquents et les plus discriminants, avec planches, et juger si de vrais plans en sortent.
 
 ## Références
 
