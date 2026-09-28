@@ -163,14 +163,21 @@ export function scanLine(fen, pv, PLIES = 48) {
   // est faible (au moins deux trous de cette couleur), en gardant son propre fou de S. Le fait COMPLEXE_FAIBLE
   // adverse « avec fou ennemi » apparaît à l'instant où son fou disparaît, et doit tenir HOLD demi-coups. Le
   // moyen est un échange (la suite calme l'admet) ; l'exploitation (pièces et attaque sur S) viendra ensuite.
+  // Agentivité : c'est MOI qui provoque l'échange. Ma prise du fou compte si elle n'est pas une reprise, ou si
+  // elle reprend un échange que j'ai offert (mon coup précédent a posé la pièce que son fou vient de prendre :
+  // Cf6+ Fxf6 Dxf6). Reprendre après que l'adversaire a lui-même donné son fou n'est pas mon plan.
   for (const color of COLORS) {
     const opp = color === 'w' ? 'b' : 'w';
     const dominated = (snap, shade) => snap.facts.some((t) => t.id === 'COMPLEXE_FAIBLE' && t.params.color === opp && t.params.shade === shade && t.params.enemyBishop);
+    const offered = (i) => moves[i - 1]?.captured && moves[i - 1].to === moves[i].to
+      && moves[i - 1].piece === 'b' && moves[i - 2]?.color === color && !moves[i - 2].captured && moves[i - 2].to === moves[i].to;
+    const recapture = (i) => Boolean(moves[i - 1]?.captured && moves[i - 1].to === moves[i].to);
     let ply = -1;
     let shadeOut = null;
     for (let i = 0; i < moves.length && ply < 0; i++) {
       const m = moves[i];
       if (m.color !== color || m.captured !== 'b') continue;
+      if (recapture(i) && !offered(i)) continue;
       const shade = squareColor(m.to);
       if (dominated(start, shade)) continue; // déjà établi au départ
       if (holds(i, (s) => dominated(s, shade))) { ply = i; shadeOut = shade; }
@@ -222,6 +229,8 @@ export function quietReason(fen, pv, ply, concept) {
 export const CONTRAST = {
   default: { tempo: 0, maxPly: Infinity },
   affaiblir: { tempo: 8, maxPly: 10 },
+  // Un échange de fous se décide tôt ; tard dans la suite, l'écart d'évaluation ne lui est pas attribuable.
+  dominer: { tempo: 0, maxPly: 12 },
 };
 export const GAP = 30;
 
