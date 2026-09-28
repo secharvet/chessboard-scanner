@@ -181,6 +181,16 @@ n'apparaît pas dans les 24 demi-coups, le générateur ne produit rien : le ris
 **Échec** : les plans attendus manquent même à 48 demi-coups. S'ils n'apparaissent qu'à 48, on prolonge les suites
 dans le générateur avant tout entraînement.
 
+*Premier résultat (28 septembre, 5 positions, `reports/horizon-test.txt`)* : plans attendus trouvés 3 fois sur 6 à
+24 demi-coups, 4 sur 6 en prolongeant. Trois enseignements :
+- **l'horizon réel est plus court que prévu** : à profondeur 16, la meilleure suite de Stockfish s'arrête d'elle-même
+  vers 17 demi-coups en médiane (12 à 23 ; 9 % seulement atteignent 24). La prolongation est donc nécessaire ;
+- **« encore présent en fin de suite » est trop strict** pour les pièces : dans la Pélikan, le cavalier va bien en d5
+  au premier coup, puis il est échangé, et le plan n'est pas compté. Piste : exiger que le concept tienne un
+  nombre minimal de demi-coups, plutôt que jusqu'à la fin ;
+- **le plan de Stockfish n'est pas toujours celui des manuels** : dans la Française avance, il préfère le jeu à l'aile
+  dame (Ca5-b3) à la rupture f6 dans les 20 premiers demi-coups. Ce n'est pas forcément une erreur de notre part.
+
 **2. Fausse attribution (coups d'attente).** Quand la vraie raison du meilleur coup est prophylactique, un concept
 peut apparaître par hasard plus loin dans la suite (une tour qui finit sur une colonne ouverte). L'étiquette est
 vraie sur l'échiquier mais ce n'est pas la raison. Test : 50 planches vérifiées par concept, dont une part tirée

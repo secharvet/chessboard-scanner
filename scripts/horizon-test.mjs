@@ -1,7 +1,7 @@
 /**
  * Test de rupture n°1 — l'horizon (docs/PLANS-ET-CONCEPTS.md, §6 bis). Des positions fermées ou
  * structurelles classiques, dont le plan est connu des manuels : le concept attendu apparaît-il dans la
- * meilleure suite de Stockfish à 24 demi-coups (réglage du générateur) ? Sinon, à 48 demi-coups en
+ * meilleure suite de Stockfish à 24 demi-coups au plus (réglage du générateur ; les suites de Stockfish à profondeur 16 font en pratique 17 demi-coups en médiane) ? Sinon, à 48 demi-coups en
  * prolongeant la suite (Stockfish relancé depuis la dernière position) ?
  *
  *   node scripts/horizon-test.mjs [--depth 16]
@@ -65,7 +65,7 @@ for (const cs of CASES) {
   console.log(`\n## ${cs.name}  (éval ${(best.score.value / 100).toFixed(2)}, trait aux ${c.turn() === 'w' ? 'Blancs' : 'Noirs'})`);
   console.log(`Plan attendu : ${cs.plan}`);
   console.log(`Suite (24) : ${san(fen, pv24)}`);
-  console.log(`Prolongée  : ${san(endFen(fen, pv24), pv48.slice(24))}`);
+  console.log(`Prolongée  : ${san(endFen(fen, pv24), pv48.slice(pv24.length))}`);
   console.log(`Concepts à 24 : ${found(s24).join(', ') || 'aucun'}`);
   console.log(`Concepts à 48 : ${found(s48).join(', ') || 'aucun'}`);
   for (const k of cs.expect) {
