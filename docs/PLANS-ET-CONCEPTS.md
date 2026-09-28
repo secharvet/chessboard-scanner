@@ -54,9 +54,21 @@ Un plan de débutant n'est pas un plan de joueur à 2000. On définit trois nive
 | Intermédiaire | 1200 à 1600 | 5 à 10 coups | un ou deux concepts enchaînés |
 | Avancé | 1600 à 2000 et plus | 8 à 15 coups | plusieurs étapes, prophylaxie, transformation de structure |
 
+**Tactique et plan restent séparés à tous les niveaux.** Pièce en prise, double attaque, clouage, mat du couloir :
+c'est de la tactique, déjà traitée (et juste par construction) par le mode fiche. Les niveaux ci-dessus ne concernent
+que les plans, c'est-à-dire les suites de coups calmes.
+
+**Hors cible : le niveau expert (plus de 2000).** Sacrifices positionnels, transitions vers une finale, domination
+des pièces adverses : notre coach vise les débutants, et ces plans ne se vérifient pas avec nos outils.
+
+**La grille sera mesurée, pas décrétée.** Chaque position étiquetée porte l'Elo de la partie. Une fois l'étiquetage
+terminé, on mesure pour chaque concept et chaque tranche d'Elo à quelle fréquence les joueurs jouent réellement le plan
+que Stockfish voulait. Un concept que les joueurs à 1300 réussissent déjà est de leur niveau ; un concept que même les
+joueurs à 1800 ratent est avancé. Le tableau ci-dessus est une hypothèse de départ que ces chiffres corrigeront.
+
 ---
 
-## 3. Liste de départ : 15 concepts
+## 3. Liste de départ : 15 concepts (plus 2 candidats)
 
 Pour chaque concept, la colonne « État but » donne la condition vérifiable. La plupart des états buts sont déjà
 détectés par le moteur de règles (`positional/`) ; ce qui manque, c'est de savoir **quand** ce concept est le plan.
@@ -92,6 +104,8 @@ détectés par le moteur de règles (`positional/`) ; ce qui manque, c'est de sa
 | 13 | Échanger son mauvais fou | le mauvais fou disparaît contre une pièce adverse | `FOU_MAUVAIS` disparaît par échange |
 | 14 | Prophylaxie | le plan adverse le plus probable devient impossible ou perd sa valeur | activation du détecteur adverse qui chute — **reporté** après la première expérience (état but difficile à définir de façon symbolique) |
 | 15 | Transformer un avantage | un avantage (matériel, espace) devient un autre, plus durable (pion passé, faiblesse fixée) | combinaison de 4, 5 et 8 |
+| 16 | Paire de fous dans une position qui s'ouvre | un camp garde ses deux fous contre fou et cavalier ou deux cavaliers, et des pions centraux disparaissent (colonnes et diagonales qui s'ouvrent) | nombre de fous et structure centrale — candidat |
+| 17 | Affaiblir un complexe de cases | après une poussée de pion (g3, g6, f6…), des cases d'une couleur autour du roi adverse ne sont plus défendues par un pion, et le fou de cette couleur a disparu | cartes de contrôle des cases et fous restants — candidat, prolonge 10 ter |
 
 La liste est un point de départ. Elle sera révisée selon ce que les données montrent.
 
