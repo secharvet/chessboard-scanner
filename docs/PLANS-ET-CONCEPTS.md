@@ -633,6 +633,35 @@ pion, et chaque reprise possible crée pions doublés, pion isolé, ou dégarnit
   « poussière tactique en contre-signal » relevé par la sonde ; informative, sans seuil.
 Sinon, les disponibilités codées ne captent pas ce que le réseau voit, et on retourne aux planches.
 
+**Résultat : critère atteint** (29 septembre, tard le soir ; jeu `humains-v3.jsonl`, mêmes étiquettes que v2,
+seul le vecteur de faits change ; `reports/train-plans-gpu-4-dispos.json`, ablation `-gpu-5-sans-tactique.json`,
+sonde `reports/sonde-echiquier-v3.json`) :
+
+| Concept | Arbres v2 → v3 | Écart réseau − arbres v2 → v3 | Sonde v2 → v3 |
+|---|---|---|---|
+| Rupture de pions | 0,744 → **0,769** (+0,025) | +0,051 → +0,025 (−51 %) | 171 → 99 (−42 %) |
+| Affaiblir la structure | 0,685 → **0,708** (+0,023) | +0,024 → +0,014 (−42 %) | 275 → 187 (−32 %) |
+| Blocage | 0,756 → **0,779** (+0,023) | +0,017 → +0,007 (−59 %) | 48 → 19 (−60 %) |
+| Cavalier sur avant-poste | 0,748 → **0,812** (+0,064) | +0,077 → +0,018 (−77 %) | 42 → 32 (−24 %) |
+| Tour sur colonne (contrôle) | 0,881 → 0,882 | +0,013 → +0,017 | 20 → 16 |
+| Dominer (contrôle) | 0,823 → 0,827 | +0,018 → +0,002 | 8 → 2 |
+| Baïonnette (contrôle) | 0,934 → 0,937 | +0,049 → +0,045 | 0 → 0 |
+
+- (a) **4 concepts sur 4** gagnent plus de +0,010 aux arbres (seuil : 2) — l'avant-poste gagne +0,064 à lui
+  seul : la route du cavalier était l'essentiel de ce que le réseau voyait ;
+- (b) l'écart se referme d'au moins la moitié sur **3 concepts sur 4** (seuil : 2) ;
+- (c) la sonde retient −42 % sur la rupture (seuil : −33 %) et **−32 % sur affaiblir, un point sous le
+  seuil** : il reste là un signal que `ECHANGE_ABIMANT` ne capte pas entièrement (planches à refaire sur
+  les 187 restantes) ;
+- ablation sans faits tactiques : les arbres perdent 0,001 à 0,015 selon le concept — la poussière tactique
+  apporte un peu plus qu'elle ne coûte, le « contre-signal » vu par la sonde n'est pas un défaut net du
+  vecteur ; on garde les faits tactiques.
+Les réseaux, eux, n'ont presque pas bougé (cnn + f : rupture 0,795 → 0,794, affaiblir 0,710 → 0,722) :
+les disponibilités ont surtout transféré aux arbres ce que l'échiquier montrait déjà aux réseaux.
+C'est le cycle recherché : **le réseau échiquier seul trouve la lacune, la planche la nomme, le fait la
+code, les arbres la récupèrent** — et le modèle de production reste explicable. Modèles de production :
+v3, vecteur complet (`plan-*.pt`, `plan-*-faits.pkl`).
+
 **Lot 2016 équilibré** : 250 000 parties de janvier 2016 (100 000 avec les deux joueurs < 1300, 100 000 > 1900,
 50 000 entre, bullet exclu ; `scripts/filter-pgn.mjs`), étiquetage lancé le 29 septembre à 18 h 27 (Paris), avec
 les atomes de la défense.
