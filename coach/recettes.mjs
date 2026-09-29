@@ -41,6 +41,19 @@ export const RECETTES = [
   { nom: 'Échanger le fou de fianchetto', source: 'attaque du roque', suite: ['échange FxF', '→ affaiblir'], niveau: 'avancé' },
   { nom: 'Affaiblir le roque puis ouvrir la colonne', source: 'attaque du roi', suite: ['→ affaiblir', 'levier·R', '→ rupture'], niveau: 'avancé' },
   { nom: 'Roquer puis échanger', source: 'sécurité d\'abord', suite: ['petit roque', 'échange *x*'], niveau: 'débutant' },
+  // ── Recettes signalées par l'émergence sur les parties humaines (29 septembre) ──
+  { nom: 'Créer le trou puis l\'occuper', source: 'Nimzowitsch, l\'avant-poste (signalé par l\'émergence)', suite: ['→ affaiblir', '→ cavalier_avant_poste'], niveau: 'avancé' },
+  { nom: 'Doubler puis pénétrer à la 7e', source: 'Nimzowitsch, la 7e rangée absolue (signalé par l\'émergence)', suite: ['doublement (colonne)', 'tour 7e'], niveau: 'intermédiaire' },
+  { nom: 'Échanger le fou puis tour à la 7e', source: 'à nommer (signalé par l\'émergence, à relire)', suite: ['échange FxC', 'tour 7e'], niveau: 'avancé' },
+  // ── Défense et contre-attaque (réactions : la recette commence par un événement adverse « lui : … ») ──
+  { nom: 'Contre-attaque sur l\'autre aile', source: 'Steinitz ; roques opposés', suite: ['lui : levier·R', 'espace·D'], niveau: 'avancé', reaction: true },
+  { nom: 'Contre-attaque au centre', source: 'Steinitz : à une attaque de flanc, répondre au centre', suite: ['lui : levier·R', 'levier·C'], niveau: 'avancé', reaction: true },
+  { nom: 'Échanger l\'attaquant', source: 'Lasker, Steinitz', suite: ['lui : levier·R', 'échange *x*'], niveau: 'intermédiaire', reaction: true },
+  { nom: 'Simplifier face à l\'attaque', source: 'Capablanca', suite: ['lui : levier·R', 'échange DxD'], niveau: 'intermédiaire', reaction: true },
+  { nom: 'Blocus du pion passé', source: 'Nimzowitsch, le blocus', suite: ['lui : → rupture', '→ blocage'], niveau: 'intermédiaire', reaction: true },
+  { nom: 'Reprendre la colonne', source: 'Nimzowitsch, lutte pour la colonne', suite: ['lui : → tour_colonne', '→ tour_colonne'], niveau: 'intermédiaire', reaction: true },
+  { nom: 'Pion passé éloigné pendant sa marche', source: 'finales : la majorité éloignée', suite: ['lui : marche du roi', 'espace·D'], niveau: 'intermédiaire', reaction: true },
+  { nom: 'Se mettre à l\'abri face au levier', source: 'sécurité du roi', suite: ['lui : levier·C', 'petit roque'], niveau: 'débutant', reaction: true },
   // ── Finale ──
   { nom: 'Roi actif', source: 'finales : le roi est une pièce', suite: ['marche du roi'], niveau: 'intermédiaire' },
   { nom: 'Roi actif puis levier', source: 'finales de pions', suite: ['marche du roi', 'levier·*'], niveau: 'intermédiaire' },
@@ -68,13 +81,15 @@ export function containsRecipe(recette, events) {
  * nombre d'éléments en commun en ignorant l'aile ou la pièce). Renvoie { exact: [...], proches: [...] }.
  */
 export function nameMotif(a, b) {
-  const kind = (l) => l.replace(/·[DCR]$/, '·*').replace(/^(manœuvre|échange) .*/, '$1 *');
+  const kind = (l) => l.replace(/·[DCR]$/, '·*').replace(/^(lui : )?(manœuvre|échange) .*/, '$1$2 *');
   const exact = RECETTES.filter((r) => containsRecipe(r, [a, b]));
   if (exact.length) return { exact, proches: [] };
+  // Voisin : les DEUX éléments se retrouvent dans la recette, à l'aile ou à la pièce près (un seul élément commun
+  // ne dit rien : presque tout contient une manœuvre ou un échange).
   const scored = RECETTES.map((r) => {
     const suite = r.suite.map(kind);
     const score = [a, b].filter((x) => suite.some((p) => matchLabel(p, kind(x)) || p === kind(x))).length;
     return { r, score };
-  }).filter((x) => x.score > 0).sort((x, y) => y.score - x.score);
+  }).filter((x) => x.score === 2).sort((x, y) => y.score - x.score);
   return { exact: [], proches: scored.slice(0, 3).map((x) => ({ nom: x.r.nom, commun: x.score })) };
 }
