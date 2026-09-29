@@ -14,6 +14,10 @@
  *
  *   node scripts/build-dataset.mjs data/labels/2013-01.jsonl data/labels/2013-01-48.jsonl
  *        [--out data/datasets/plans-v1.jsonl]
+ *
+ * Enregistrements de PLANS HUMAINS (scripts/label-human.mjs, champ `played`) : y = 1 si le concept apparaît par une
+ * suite calme dans les coups joués, 0 s'il n'apparaît pas, null s'il apparaît par une suite non calme. On garde
+ * l'Elo des deux joueurs et la trajectoire d'évaluation de chaque plan (`traj`), pour les seuils et la grille.
  */
 
 import { createReadStream, writeFileSync, appendFileSync } from 'node:fs';
@@ -35,12 +39,19 @@ for (const file of inputs) {
     if (!line) continue;
     const r = JSON.parse(line);
     const id = `${r.game}:${r.ply}`;
-    if (!r.ext || !r.pvs || seen.has(id)) continue;
+    const human = Boolean(r.played);
+    if ((!human && (!r.ext || !r.pvs)) || seen.has(id)) continue;
     seen.add(id);
-    const lines = r.pvs.map((pv) => scanLine(r.fen, pv, r.ext));
+    const lines = human ? null : r.pvs.map((pv) => scanLine(r.fen, pv, r.ext));
     const y = {};
+    const traj = {};
     for (const c of CONCEPTS) for (const side of ['w', 'b']) {
-      const v = planLabel(r, lines, c, side);
+      let v;
+      if (human) {
+        const p = r.plans.find((x) => x.concept === c && x.side === side);
+        v = !p ? 0 : p.quiet ? 1 : null;
+        if (p) traj[`${c}_${side}`] = { appear: p.appear, quiet: p.quiet, ...p.deltas };
+      } else v = planLabel(r, lines, c, side);
       y[`${c}_${side}`] = v;
       counts[c] ??= { 1: 0, 0: 0, null: 0 };
       counts[c][v]++;
@@ -50,7 +61,7 @@ for (const file of inputs) {
       const key = `${t.id}|${t.params.color ?? '-'}`;
       facts[key] = (facts[key] ?? 0) + 1;
     }
-    appendFileSync(OUT, `${JSON.stringify({ game: r.game, ply: r.ply, elo: r.elo, fen: r.fen, eval: r.evals[0], y, facts })}\n`);
+    appendFileSync(OUT, `${JSON.stringify({ game: r.game, ply: r.ply, elo: r.elo, fen: r.fen, eval: human ? r.eval0 : r.evals[0], source: human ? 'humain' : 'moteur', y, traj, facts })}\n`);
     if (++n % 5000 === 0) console.error(`${n} positions`);
   }
 }

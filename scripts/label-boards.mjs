@@ -13,6 +13,8 @@
  * Avec --tempo N : force pour tous un contraste de TEMPO de N demi-coups (essai d'une règle) ; --nouveaux ne
  * garde que les exemples que le contraste strict rejette. La suite doit toujours être calme (quietReason).
  * Les suites enregistrées (prolongées) sont utilisées telles quelles : pas de recalcul Stockfish.
+ * Enregistrements de PLANS HUMAINS (champ `played`) : la « suite » est la partie réelle ; positif = concept apparu
+ * par une suite calme ; la légende donne l'Elo du joueur et la trajectoire d'évaluation.
  */
 
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
@@ -46,6 +48,7 @@ const RELEVANT = {
 /** Exemple positif : dans la meilleure suite, pas (ou bien plus tard, --tempo) dans les suites au moins 0,3 pion moins bonnes. */
 const positive = (r, k) => {
   const [c, side] = [k.replace(/_[wb]$/, ''), k.slice(-1)];
+  if (r.played) return Boolean(r.plans.find((p) => p.concept === c && p.side === side && p.quiet));
   if (!TEMPO) return planLabel(r, r.lines, c, side) === 1;
   const p = r.lines[0][k];
   if (!(p >= 0)) return false;
@@ -57,8 +60,10 @@ const positive = (r, k) => {
 };
 
 // Étiquettes recalculées depuis les suites enregistrées, avec la définition actuelle des concepts.
-const records = readFileSync(args[0], 'utf8').trim().split('\n').map((l) => JSON.parse(l)).filter((r) => r.pvs)
-  .map((r) => ({ ...r, lines: r.pvs.map((pv) => scanLine(r.fen, pv, r.ext ?? 24)) }));
+const records = readFileSync(args[0], 'utf8').trim().split('\n').map((l) => JSON.parse(l))
+  .map((r) => (r.played ? { ...r, pvs: [r.played], evals: [r.eval0], ext: 24, lines: [scanLine(r.fen, r.played, 24)] } : r))
+  .filter((r) => r.pvs)
+  .map((r) => (r.played ? r : { ...r, lines: r.pvs.map((pv) => scanLine(r.fen, pv, r.ext ?? 24)) }));
 // --verified : le fichier d'entrée est la sortie de verify-labels.mjs (on ne garde que ok: true).
 const VERIFIED = args.includes('--verified');
 const picks = [];
@@ -96,8 +101,10 @@ for (const { r, c, side } of picks) {
     .map(renderToken).slice(0, 3);
   const arrows = moves.slice(0, 4).map((m) => ({ color: m.color === side ? 'G' : 'R', from: m.from, to: m.to }));
   const sanLine = moves.map((m) => toFrenchSan(m.san)).join(' ');
+  const hp = r.played ? r.plans.find((p) => p.concept === c && p.side === side) : null;
   const caption = `#${n} — plan des ${side === 'w' ? 'Blancs' : 'Noirs'} : ${NAMES[c]}`
-    + ` | éval ${evals.map((e) => (e / 100).toFixed(2)).join(' / ')}`
+    + (hp ? ` | partie réelle, joueur ${r.elo?.[side] ?? '?'} Elo | éval ${(r.eval0 / 100).toFixed(2)}, puis Δ +2 : ${hp.deltas[2]}, +8 : ${hp.deltas[8]}, +16 : ${hp.deltas[16]} (centipions)`
+      : ` | éval ${evals.map((e) => (e / 100).toFixed(2)).join(' / ')}`)
     + ` | apparaît au demi-coup ${ply >= 0 ? ply + 1 : '— (plus dans la suite recalculée)'}`;
   await page.evaluate(async ({ fen, goalFen, arrows, caption, sanLine, fresh, orientation }) => {
     const { renderFenBoard } = await import('/board-view.js');
