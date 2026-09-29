@@ -138,7 +138,7 @@ Tout est calculé, reproductible, et vérifiable position par position.
 Objection de l'auteur (29 septembre) : Stockfish ne fait pas de plan, il calcule ; sa meilleure suite est un
 sous-produit de la recherche, et y « reconnaître » un plan revient souvent à lire une intention là où il n'y a qu'un
 ordre de coups qui change avec la version du moteur (§7, dépendance au moteur : avec l'accord de deux moteurs exigé,
-**18 positifs sur 191** survivent sur 400 positions, 9 %). Un plan est une compression humaine : un déplacement,
+**18 positifs sur 191** survivent sur 400 positions, 9 %). Un plan est une idée humaine qui résume et donne sens à une suite de coups : un déplacement,
 une configuration, voulus.
 
 **Inversion des rôles.** Les intentions se trouvent dans les parties humaines (Lichess, Chess.com : des milliards de
@@ -402,5 +402,5 @@ l'étage d'exploitation du §8 (un fait d'attaque doit suivre le déséquilibre)
   concepts extraits de l'espace latent d'AlphaZero, jamais formulés par les humains, enseignés à des grands maîtres
   qui progressent. Preuve de principe de l'émergence (§8).
 - M. Sadler et N. Regan, *Game Changer*, 2019 : les « plans » d'AlphaZero sont des récits humains a posteriori ; le
-  moteur ne planifie pas, mais ces compressions ont été utiles aux joueurs. C'est l'objet pédagogique visé ici : une
-  compression reconnaissable par un humain et vérifiée par le moteur.
+  moteur ne planifie pas, mais ces récits ont servi à la compréhension des joueurs. C'est l'objet pédagogique visé ici : une
+  idée reconnaissable par un humain et vérifiée par le moteur.

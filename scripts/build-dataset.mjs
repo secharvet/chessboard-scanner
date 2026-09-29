@@ -49,7 +49,8 @@ for (const file of inputs) {
       let v;
       if (human) {
         const p = r.plans.find((x) => x.concept === c && x.side === side);
-        v = !p ? 0 : p.quiet ? 1 : null;
+        // Règle du prix (§9) : le plan doit apparaître tôt pour être attribué à CETTE position ; plus tard, ambigu.
+        v = !p ? 0 : p.quiet && p.appear < 12 ? 1 : null;
         if (p) traj[`${c}_${side}`] = { appear: p.appear, quiet: p.quiet, ...p.deltas };
       } else v = planLabel(r, lines, c, side);
       y[`${c}_${side}`] = v;
