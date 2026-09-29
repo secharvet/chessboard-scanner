@@ -9,7 +9,9 @@
  */
 
 import { Chess } from 'chess.js';
+import { existsSync } from 'node:fs';
 import { extendPv } from './extend-line.mjs';
+import { UciEngine } from './uci-engine.mjs';
 import { detectPlans } from './plans.mjs';
 import { buildAllFacts, detectPhase } from '../positional/index.js';
 import { buildAttackMap } from '../positional/attack-map.js';
@@ -82,10 +84,34 @@ export async function buildCoachContext({ fen, side, moves = [], engine, depth =
 
 // ── Lignes du moteur ──
 
-async function verifiedPlans(engine, fen, lines) {
+/**
+ * Un plan n'est annoncé que si DEUX moteurs différents le trouvent (Stockfish 19 et 17.1 quand les deux sont
+ * installés) : sur 60 plans étiquetés par l'un, l'autre n'en retrouvait que 17 à la même profondeur (29 septembre).
+ * Ce qui dépend de la version du moteur n'est pas le plan de la position.
+ */
+const SECOND_ENGINE = ['/usr/games/stockfish', '/usr/local/bin/stockfish'];
+let second = null;
+function secondEngine(engine) {
+  if (second !== null) return second || null;
+  const other = SECOND_ENGINE.find((p) => p !== engine.path && existsSync(p));
+  second = other ? new UciEngine({ path: other, threads: engine.threads ?? 1 }) : false;
+  return second || null;
+}
+
+async function plansWith(engine, fen, lines) {
   const extended = [];
   for (const l of lines) extended.push({ pv: await extendPv(engine, fen, l.pv, { plies: 24, depth: 12, relaunch: 1 }), score: l.score });
   return detectPlans({ fen, lines: extended, plies: 24, maxPly: 12 });
+}
+
+async function verifiedPlans(engine, fen, lines) {
+  const first = await plansWith(engine, fen, lines);
+  const other = engine.path ? secondEngine(engine) : null;
+  if (!other) return first;
+  const lines2 = await other.analyze(fen, { depth: 16, multipv: 3 });
+  const confirm = await plansWith(other, fen, lines2);
+  const both = (side) => first[side].filter((p) => confirm[side].some((q) => q.concept === p.concept));
+  return { w: both('w'), b: both('b') };
 }
 
 /**
