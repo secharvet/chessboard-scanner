@@ -11,7 +11,7 @@ def board_planes(fen, side):
     """18 plans 8x8 vus du camp `side` : 6 pièces à moi, 6 à l'adversaire, trait, 4 roques (moi, lui), 1 constant.
     Pour les Noirs, l'échiquier est retourné : « ma » première rangée est en bas."""
     parts = fen.split()
-    x = np.zeros((18, 8, 8), dtype=np.float32)
+    x = np.zeros((18, 8, 8), dtype=np.uint8)  # octets : quatre fois moins de mémoire que des flottants
     for r, row in enumerate(parts[0].split('/')):
         f = 0
         for ch in row:

@@ -66,7 +66,7 @@ def train_net(Xb, Xf, y, split, use_facts, epochs, seed=0):
     opt = torch.optim.AdamW(net.parameters(), lr=1e-3, weight_decay=1e-4)
     pos = max(1.0, float((y[tr] == 0).sum()) / max(1, (y[tr] == 1).sum()))
     loss_fn = nn.BCEWithLogitsLoss(pos_weight=torch.tensor(min(pos, 50.0)))
-    B = torch.from_numpy(Xb)
+    B = torch.from_numpy(Xb)  # uint8, converti en flottants par lot
     F = torch.from_numpy(Xf)
     Y = torch.from_numpy(y.astype(np.float32))
     idx_tr = np.where(tr)[0]
@@ -77,7 +77,7 @@ def train_net(Xb, Xf, y, split, use_facts, epochs, seed=0):
         for i in range(0, len(idx_tr), 256):
             b = idx_tr[i:i + 256]
             opt.zero_grad()
-            loss = loss_fn(net(B[b], F[b]), Y[b])
+            loss = loss_fn(net(B[b].float(), F[b]), Y[b])
             loss.backward()
             opt.step()
         p = predict(net, B, F, np.where(va)[0])
@@ -94,8 +94,11 @@ def predict(net, B, F, idx):
     with torch.no_grad():
         for i in range(0, len(idx), 2048):
             b = idx[i:i + 2048]
-            out.append(torch.sigmoid(net(B[b], F[b])).numpy())
+            out.append(torch.sigmoid(net(B[b].float(), F[b])).numpy())
     return np.concatenate(out) if out else np.zeros(0)
+
+
+NEG_PER_POS = 5
 
 
 def main():
@@ -110,10 +113,18 @@ def main():
     concepts = a.concepts.split(',')
     data, keys = load(a.dataset, concepts)
     results = {}
+    rng = np.random.default_rng(0)
     for c in concepts:
-        d = data[c]
+        d = data.pop(c)  # libéré après ce concept : la mémoire est la contrainte (7,7 Go, tueur OOM le 29 septembre)
         y = np.array(d['y'])
         split = np.array(d['split'])
+        # Entraînement : tous les positifs, au plus NEG_PER_POS négatifs par positif (tirage fixe) ; validation et
+        # test restent complets pour des mesures honnêtes.
+        pos_tr = np.where((split == 'train') & (y == 1))[0]
+        neg_tr = np.where((split == 'train') & (y == 0))[0]
+        keep = rng.choice(neg_tr, size=min(len(neg_tr), max(NEG_PER_POS * len(pos_tr), 20000)), replace=False)
+        drop = np.setdiff1d(neg_tr, keep)
+        split[drop] = 'ignore'
         Xf = np.stack(d['facts']) if d['facts'] else np.zeros((0, 2 * len(keys) + 1), dtype=np.float32)
         te, tr = split == 'test', split == 'train'
         npos = {s: int(y[split == s].sum()) for s in ('train', 'val', 'test')}
@@ -126,7 +137,7 @@ def main():
         Xs = scaler.transform(Xf).astype(np.float32)
         lr = LogisticRegression(max_iter=2000, class_weight='balanced').fit(Xs[tr], y[tr])
         gb = HistGradientBoostingClassifier(max_iter=300, learning_rate=0.08, class_weight='balanced').fit(Xf[tr], y[tr])
-        Xb = np.stack([board_planes(f, s) for f, s in zip(d['fen'], d['side'])])
+        Xb = np.stack([board_planes(f, s) for f, s in zip(d['fen'], d['side'])])  # uint8
         cnn = train_net(Xb, Xs, y, split, False, a.epochs)
         cnnf = train_net(Xb, Xs, y, split, True, a.epochs)
         idx = np.where(te)[0]
