@@ -571,6 +571,47 @@ Puis deux variantes, réponse à la question « l'écart réseaux − arbres se 
   reste disponible par `train-plans.py --large` (drapeau enregistré dans le checkpoint et relu par
   `score-counterfactuals.py`), et l'entraînement garde les tenseurs sur la carte avec des lots de 1024.
 
+**Sonde « échiquier seul » : ce que le réseau voit que les règles ne voient pas** (29 septembre au soir,
+`scripts/sonde-echiquier.py` + `scripts/sonde-boards.mjs`, `reports/sonde-echiquier-complet.json`,
+planches `reports/planches-sonde/`). Méthode : sur le jeu de test du mois complet, chaque positif est classé
+par le réseau échiquier seul et par les arbres (rangs sur le jeu de test, les scores bruts n'étant pas
+comparables) ; on retient les positifs où le réseau est très confiant (rang ≥ 0,85) et les arbres nettement
+moins (écart de rangs ≥ 0,35), soit « l'échiquier porte un signal que les faits ne portent pas ».
+
+| Concept | Positifs de test | Vus par l'échiquier seul, ratés par les arbres |
+|---|---|---|
+| Affaiblir la structure | 6 262 | 275 (4,4 %) |
+| Rupture de pions | 4 416 | 171 (3,9 %) |
+| Blocage | 906 | 48 (5,3 %) |
+| Cavalier sur avant-poste | 944 | 42 (4,4 %) |
+| Tour sur colonne ouverte | 6 954 | 20 (0,3 %) |
+| Dominer une couleur | 311 | 8 |
+| Baïonnette | 125 | 0 |
+
+Les effectifs suivent les écarts d'AUC : là où le réseau bat les arbres, il y a des positions que les faits
+n'expliquent pas ; pour la tour sur colonne et la baïonnette, les faits suffisent (cohérent avec l'AUC 0,98
+« précondition facile » de la baïonnette). Relecture des planches (8 à 12 par concept) : trois faits statiques
+manquent au moteur de règles, chacun étant la version « disponible maintenant » d'un moyen que nous ne
+détectons aujourd'hui que comme événement le long de la suite :
+
+1. **Le levier disponible** (rupture) : des pions à une case du contact, la tension prête (c6 + e6 face à d4
+   → c5 ou e5 ; a4 contre b5). Le levier n'existe chez nous que comme atome-événement une fois joué ;
+   aucun fait ne dit « une rupture est dans l'air ». Planches rupture-02, -03, -04.
+2. **La route du cavalier** (avant-poste, blocage) : un cavalier à un ou deux bonds d'un trou déjà fixé par
+   la structure (Ce4 + pion e5 → d6 ; Cc1 → d3 → c5 appuyé par b4 et d4). Nos faits nomment la case
+   (`CASE_FAIBLE`, `AVANT_POSTE`) mais pas « une pièce peut l'atteindre sûrement en ≤ 2 coups » ;
+   `coach/maneuvers.mjs` calcule déjà ces itinéraires, mais hors du vecteur de faits. Planches
+   cavalier_avant_poste-01, -03, -04.
+3. **L'échange abîmant disponible** (affaiblir) : une prise dont la reprise est forcée par un pion, surtout
+   près du roi (Cxh6 gxh6, Cxe6 fxe6, Fxc3 bxc3). Même situation : l'échange est un atome-événement,
+   pas un fait « cet échange est sur l'échiquier maintenant ». Planches affaiblir-01, -04, -05.
+
+Biais transversal relevé : les positions de la sonde portent souvent `PIECE_MENACEE` et un déséquilibre
+matériel — les arbres semblent traiter la poussière tactique et le matériel comme des contre-signaux alors
+que le joueur déroule quand même son plan calme. À garder en tête, mais le remède est le même : donner aux
+faits les trois « disponibilités » ci-dessus, réentraîner les arbres, et mesurer si l'écart réseau − arbres
+se referme (c'est le critère de réussite de la sonde).
+
 **Lot 2016 équilibré** : 250 000 parties de janvier 2016 (100 000 avec les deux joueurs < 1300, 100 000 > 1900,
 50 000 entre, bullet exclu ; `scripts/filter-pgn.mjs`), étiquetage lancé le 29 septembre à 18 h 27 (Paris), avec
 les atomes de la défense.
@@ -582,8 +623,9 @@ Sur DENEB :
 1. ~~Reproduire la table du mois complet avec 10 passes, puis des réseaux plus larges (canaux 96, tête 256)~~ —
    fait (29 septembre au soir, voir ci-dessus) : l'écart ne se creuse pas, le réseau large surapprend les concepts
    rares ; modèles retenus = 10 passes, architecture d'origine.
-2. Réseau échiquier seul comme sonde : lister les positions de test où il bat nettement les arbres, les relire sur
-   planches, en déduire les faits qui manquent au moteur de règles.
+2. ~~Réseau échiquier seul comme sonde~~ — fait (29 septembre au soir, voir ci-dessus) : trois faits manquent au
+   moteur de règles, les « disponibilités » (levier disponible, route du cavalier vers le trou, échange abîmant
+   disponible). Suite : les coder dans `positional/`, réentraîner les arbres, vérifier que l'écart se referme.
 3. Contrefactuels complets, dont la variante « tuer » de la tour sur colonne sur la colonne cible (ajouter
    `tour_colonne_case` à la sortie de `scanLine`, à l'`extra` des étiquettes et au jeu de données).
 4. Émergence à trois éléments et motifs triviaux filtrés (manœuvre ⇒ manœuvre) ; planches des candidats les plus

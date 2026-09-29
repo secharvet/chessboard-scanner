@@ -1,0 +1,253 @@
+# Sonde échiquier seul : positifs vus par le réseau, ratés par les arbres
+
+## tour_colonne (20 positions retenues sur 6954 positifs de test)
+
+### tour_colonne-01
+- FEN : `2kr3b/pp2p2Q/4b3/2ppq3/1P1n4/3P4/1P1B1NPP/1K1R1B1R w - - 1 22` — plan des Blancs (partie 119087, demi-coup 42, Elo 1178)
+- réseau échiquier seul : 0.889 (rang 0.958) ; arbres sur les faits : 0.251 (rang 0.489)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, PION_ISOLE, PION_PASSE, MAJORITE_AILE_ROI, COLONNE_SEMI_OUVERTE, COLONNE_OUVERTE, DOUBLON, ROQUE_GRAND, PIONS_ROI_AFFAIBLI, PAIRE_FOUS, AVANTAGE_MATERIEL, PIECE_NON_DEVELOPPEE, DAME_SORTIE_TOT, CASE_FAIBLE, TOUR_7E
+
+### tour_colonne-02
+- FEN : `rn2qrk1/pbpp1pb1/1p1P2pp/8/7B/2n2N2/PPP1BPPP/R2Q1RK1 w - - 0 13` — plan des Blancs (partie 39783, demi-coup 24, Elo 1682)
+- réseau échiquier seul : 0.804 (rang 0.876) ; arbres sur les faits : 0.148 (rang 0.426)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, COLONNE_OUVERTE, AVANT_POSTE, ROQUE_PETIT, PIONS_ROI_BOUCLIER, PAIRE_FOUS, AVANTAGE_ESPACE, PIECE_MENACEE, SURCHARGE
+
+### tour_colonne-03
+- FEN : `r4rk1/p1qn1ppb/2N1pb1p/1p6/1P1Pn3/P3PN1P/1B2BPP1/R2QK2R w KQ - 1 16` — plan des Blancs (partie 61600, demi-coup 30, Elo 1491)
+- réseau échiquier seul : 0.918 (rang 0.981) ; arbres sur les faits : 0.317 (rang 0.532)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, PION_ARRIERE, MAJORITE_AILE_DAME, COLONNE_OUVERTE, CHAINE_PIONS, AVANT_POSTE, ROI_AU_CENTRE, PAIRE_FOUS, AVANTAGE_MATERIEL, CASE_FAIBLE, PIECE_MENACEE, CONTROLE_CENTRE
+
+### tour_colonne-04
+- FEN : `r1bNk2r/pp1pppbp/6p1/8/8/8/PPP1BPPP/R1Bn1RK1 w kq - 0 10` — plan des Blancs (partie 101906, demi-coup 18, Elo 1758)
+- réseau échiquier seul : 0.915 (rang 0.978) ; arbres sur les faits : 0.319 (rang 0.533)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, COLONNE_SEMI_OUVERTE, ROQUE_PETIT, PIONS_ROI_BOUCLIER, PAIRE_FOUS, PIECE_NON_DEVELOPPEE, PIECE_MENACEE, DECOUVERTE_POSSIBLE, PIECE_PIEGEE
+
+### tour_colonne-05
+- FEN : `r4rk1/2q2ppp/b1p2n2/p3p3/1P1pP3/1P1PQPN1/P1N3PP/R4RK1 w - - 0 19` — plan des Blancs (partie 11346, demi-coup 36, Elo 1500)
+- réseau échiquier seul : 0.869 (rang 0.939) ; arbres sur les faits : 0.278 (rang 0.507)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, PION_ARRIERE, MAJORITE_AILE_DAME, COLONNE_SEMI_OUVERTE, DOUBLON, CHAINE_PIONS, AVANT_POSTE, ROQUE_PETIT, PIONS_ROI_BOUCLIER, AVANTAGE_MATERIEL, CASE_FAIBLE, PIECE_MENACEE, SURCHARGE, COMPLEXE_FAIBLE, CENTRE, FOU_CONTRE_CAVALIER
+
+### tour_colonne-06
+- FEN : `r6r/4Q1p1/1k2P2p/p7/1ppP2P1/2P4P/PPKB4/q7 w - - 1 31` — plan des Noirs (partie 119981, demi-coup 60, Elo 1750)
+- réseau échiquier seul : 0.958 (rang 0.998) ; arbres sur les faits : 0.406 (rang 0.587)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, COLONNE_SEMI_OUVERTE, COLONNE_OUVERTE, AVANT_POSTE, AVANTAGE_MATERIEL, AVANTAGE_ESPACE, CASE_FAIBLE, PIECE_MENACEE, COMPLEXE_FAIBLE
+
+### tour_colonne-07
+- FEN : `r4rk1/pp1R4/7p/6p1/2p1np2/P3B3/1P4PP/RN4K1 w - - 0 22` — plan des Noirs (partie 110607, demi-coup 42, Elo 1470)
+- réseau échiquier seul : 0.827 (rang 0.899) ; arbres sur les faits : 0.263 (rang 0.497)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, MAJORITE_AILE_DAME, MAJORITE_AILE_ROI, COLONNE_OUVERTE, CHAINE_PIONS, AVANT_POSTE, ROQUE_PETIT, PIONS_ROI_AFFAIBLI, AVANTAGE_ESPACE, CASE_FAIBLE, PIECE_MENACEE, COMPLEXE_FAIBLE, CENTRE
+
+### tour_colonne-08
+- FEN : `1n1qk2r/4b3/Qp2pn1p/8/1p6/4PP2/6BP/BN2K1NR w Kk - 0 19` — plan des Noirs (partie 72584, demi-coup 36, Elo 1615)
+- réseau échiquier seul : 0.864 (rang 0.934) ; arbres sur les faits : 0.319 (rang 0.533)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, PION_ISOLE, PION_PASSE, MAJORITE_AILE_DAME, COLONNE_OUVERTE, COLONNE_SEMI_OUVERTE, DOUBLON, AVANT_POSTE, ROI_AU_CENTRE, PIECE_NON_DEVELOPPEE, AVANTAGE_ESPACE, CASE_FAIBLE, CLOUAGE_RELATIF, CONTROLE_COLONNE, CASE_ENTREE
+
+## rupture (50 positions retenues sur 4416 positifs de test)
+
+### rupture-01
+- FEN : `2bqk2r/2rnbp2/1Bp5/3pP2p/1p3Qp1/6P1/1PP2PBP/4R1K1 w k - 4 25` — plan des Blancs (partie 95689, demi-coup 48, Elo 1531)
+- réseau échiquier seul : 0.83 (rang 0.967) ; arbres sur les faits : 0.077 (rang 0.06)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, PION_ARRIERE, MAJORITE_AILE_ROI, COLONNE_OUVERTE, COLONNE_SEMI_OUVERTE, AVANT_POSTE, ROQUE_PETIT, PIONS_ROI_BOUCLIER, PAIRE_FOUS, CASE_FAIBLE, PIECE_MENACEE, RANGEE_FAIBLE, CONTROLE_CENTRE
+
+### rupture-02
+- FEN : `1n1qk2r/1b2bppp/2p1pn2/8/Q2P4/4PN2/1P2BPPP/1NB2RK1 w k - 4 13` — plan des Noirs (partie 16825, demi-coup 24, Elo 1463)
+- réseau échiquier seul : 0.826 (rang 0.964) ; arbres sur les faits : 0.162 (rang 0.16)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, PION_ISOLE, COLONNE_OUVERTE, COLONNE_SEMI_OUVERTE, AVANT_POSTE, ROI_AU_CENTRE, PAIRE_FOUS, PIECE_NON_DEVELOPPEE, CASE_FAIBLE, CLOUAGE, CONTROLE_COLONNE
+
+### rupture-03
+- FEN : `r2qk1nr/2p2pb1/b2pp2p/6p1/p1nPP3/P1P2PB1/1P2B1PP/R1NQK1NR w KQkq - 5 16` — plan des Blancs (partie 22351, demi-coup 30, Elo 1450)
+- réseau échiquier seul : 0.775 (rang 0.928) ; arbres sur les faits : 0.138 (rang 0.133)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, PION_ARRIERE, MAJORITE_AILE_DAME, CHAINE_PIONS, ROI_AU_CENTRE, PAIRE_FOUS, AVANTAGE_MATERIEL, PIECE_NON_DEVELOPPEE, CASE_FAIBLE, PIECE_MENACEE, CONTROLE_CENTRE
+
+### rupture-04
+- FEN : `rnb2rk1/p4ppp/2pp1n2/1p6/2B1P3/2PP1NP1/P1P2P1P/R1B2RK1 w - - 0 13` — plan des Blancs (partie 112682, demi-coup 24, Elo 1429)
+- réseau échiquier seul : 0.861 (rang 0.983) ; arbres sur les faits : 0.204 (rang 0.209)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, PION_ISOLE, MAJORITE_AILE_ROI, COLONNE_SEMI_OUVERTE, DOUBLON, CHAINE_PIONS, ROQUE_PETIT, PIONS_ROI_BOUCLIER, PAIRE_FOUS, AVANTAGE_MATERIEL, PIECE_NON_DEVELOPPEE, CASE_FAIBLE, PIECE_MENACEE, SURCHARGE, CONTROLE_CENTRE, FOU_CONTRE_CAVALIER
+
+### rupture-05
+- FEN : `2r2rk1/2q3p1/2npppp1/p2p2N1/Bp1P1P1P/4P1P1/PPP4R/2K4R w - - 0 25` — plan des Blancs (partie 35588, demi-coup 48, Elo 1411)
+- réseau échiquier seul : 0.773 (rang 0.926) ; arbres sur les faits : 0.163 (rang 0.162)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, PION_ARRIERE, ROQUE_GRAND, PIONS_ROI_BOUCLIER, CASE_FAIBLE, PIECE_MENACEE, ROQUES_OPPOSES
+
+### rupture-06
+- FEN : `2b1r1k1/n2p2pp/1p6/2p2p2/5Pq1/2P3P1/PP2N1BP/RNB2RK1 w - - 0 19` — plan des Noirs (partie 55577, demi-coup 36, Elo 1333)
+- réseau échiquier seul : 0.712 (rang 0.868) ; arbres sur les faits : 0.119 (rang 0.11)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, COLONNE_SEMI_OUVERTE, COLONNE_OUVERTE, AVANT_POSTE, ROQUE_PETIT, PIONS_ROI_AFFAIBLI, TOUR_COLONNE_OUVERTE, PIECE_NON_DEVELOPPEE, DAME_SORTIE_TOT, CASE_FAIBLE, CONTROLE_COLONNE, CASE_ENTREE, CENTRE
+
+### rupture-07
+- FEN : `rn1q1rk1/1bp3pp/1p1ppn2/4Q3/p2PN3/P2B1P2/1PP3PP/2KR2NR w - - 0 13` — plan des Noirs (partie 4847, demi-coup 24, Elo 1474)
+- réseau échiquier seul : 0.78 (rang 0.931) ; arbres sur les faits : 0.18 (rang 0.181)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, COLONNE_SEMI_OUVERTE, ROQUE_PETIT, PIONS_ROI_AFFAIBLI, TOUR_COLONNE_OUVERTE, EGALITE_MATERIEL, PIECE_NON_DEVELOPPEE, AVANTAGE_ESPACE, CASE_FAIBLE, PIECE_MENACEE, ROQUES_OPPOSES, CONTROLE_COLONNE
+
+### rupture-08
+- FEN : `r5k1/pp1b2pp/2n1p3/1Nppq3/8/2PP4/PP2BQP1/R5K1 w - - 2 19` — plan des Blancs (partie 112003, demi-coup 36, Elo 1738)
+- réseau échiquier seul : 0.73 (rang 0.886) ; arbres sur les faits : 0.155 (rang 0.152)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, PION_ISOLE, COLONNE_SEMI_OUVERTE, COLONNE_OUVERTE, ROQUE_PETIT, PIONS_ROI_AFFAIBLI, CASE_FAIBLE, RANGEE_FAIBLE, COMPLEXE_FAIBLE, CONTROLE_COLONNE, CASE_ENTREE
+
+## affaiblir (50 positions retenues sur 6262 positifs de test)
+
+### affaiblir-01
+- FEN : `4B3/2Q2ppk/pp1p1qnp/3bpN2/PP2P3/7P/5PP1/6K1 w - - 0 28` — plan des Blancs (partie 13867, demi-coup 54, Elo 2041)
+- réseau échiquier seul : 0.822 (rang 0.972) ; arbres sur les faits : 0.105 (rang 0.022)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, COLONNE_OUVERTE, COLONNE_SEMI_OUVERTE, AVANT_POSTE, ROQUE_PETIT, PIONS_ROI_BOUCLIER, CASE_FAIBLE, PIECE_MENACEE, CONTROLE_COLONNE, TOUR_7E
+
+### affaiblir-02
+- FEN : `5rk1/pp2rb1p/2n2qp1/2p2p2/2P5/1P1NPPP1/P1Q3BP/4RNK1 w - - 3 25` — plan des Blancs (partie 34088, demi-coup 48, Elo 1681)
+- réseau échiquier seul : 0.753 (rang 0.939) ; arbres sur les faits : 0.133 (rang 0.045)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, MAJORITE_AILE_ROI, COLONNE_OUVERTE, CHAINE_PIONS, AVANT_POSTE, ROQUE_PETIT, PIONS_ROI_BOUCLIER, CASE_FAIBLE, CENTRE
+
+### affaiblir-03
+- FEN : `r3k2r/pp4pp/2n2n2/3B1b2/P1p2P1P/2P1P3/1P6/R1B1K1NR w KQkq - 1 16` — plan des Blancs (partie 37235, demi-coup 30, Elo 1395)
+- réseau échiquier seul : 0.783 (rang 0.956) ; arbres sur les faits : 0.166 (rang 0.075)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, PION_ISOLE, PION_PASSE, PION_ARRIERE, MAJORITE_AILE_ROI, COLONNE_OUVERTE, COLONNE_SEMI_OUVERTE, AVANT_POSTE, ROI_AU_CENTRE, PAIRE_FOUS, AVANTAGE_MATERIEL, PIECE_NON_DEVELOPPEE, CASE_FAIBLE, PIECE_MENACEE, CENTRE, FOU_CONTRE_CAVALIER
+
+### affaiblir-04
+- FEN : `2kr3r/pp3pp1/1qn1b3/4Pp1p/1b1p1N1P/5NQ1/PP3PP1/R1B1R1K1 w - - 4 16` — plan des Blancs (partie 14173, demi-coup 30, Elo 2066)
+- réseau échiquier seul : 0.724 (rang 0.916) ; arbres sur les faits : 0.15 (rang 0.061)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, COLONNE_OUVERTE, COLONNE_SEMI_OUVERTE, AVANT_POSTE, ROQUE_PETIT, PIONS_ROI_AFFAIBLI, PIECE_NON_DEVELOPPEE, DAME_SORTIE_TOT, CASE_FAIBLE, PIECE_MENACEE, ROQUES_OPPOSES, FOU_CONTRE_CAVALIER
+
+### affaiblir-05
+- FEN : `r4rk1/ppp1nppp/8/8/1bBq4/2N2Q2/PP3PPP/R4RK1 w - - 0 13` — plan des Noirs (partie 40909, demi-coup 24, Elo 1844)
+- réseau échiquier seul : 0.724 (rang 0.917) ; arbres sur les faits : 0.157 (rang 0.067)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, MAJORITE_AILE_DAME, COLONNE_OUVERTE, ROQUE_PETIT, PIONS_ROI_BOUCLIER, AVANTAGE_MATERIEL, PIECE_MENACEE, CLOUAGE, CONTROLE_COLONNE, CASE_ENTREE, CENTRE
+
+### affaiblir-06
+- FEN : `r2q1rk1/pp3ppp/2n1b3/3pN3/2pP1B2/2b4P/B1P2PP1/1R1QR1K1 w - - 0 16` — plan des Blancs (partie 47628, demi-coup 30, Elo 1749)
+- réseau échiquier seul : 0.715 (rang 0.909) ; arbres sur les faits : 0.161 (rang 0.07)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, COLONNE_SEMI_OUVERTE, COLONNE_OUVERTE, ROQUE_PETIT, PIONS_ROI_BOUCLIER, PAIRE_FOUS, TOUR_COLONNE_OUVERTE, CASE_FAIBLE, PIECE_MENACEE, SURCHARGE, CONTROLE_COLONNE
+
+### affaiblir-07
+- FEN : `3r3r/kp3pb1/pn1p1p1p/3N4/PP2P3/2P2P2/6PP/R3RBK1 w - - 1 22` — plan des Blancs (partie 83947, demi-coup 42, Elo 1777)
+- réseau échiquier seul : 0.737 (rang 0.927) ; arbres sur les faits : 0.181 (rang 0.091)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, MAJORITE_AILE_ROI, COLONNE_SEMI_OUVERTE, CHAINE_PIONS, AVANT_POSTE, ROQUE_PETIT, PIONS_ROI_BOUCLIER, CAVALIER_AVANT_POSTE, AVANTAGE_MATERIEL, PIECE_NON_DEVELOPPEE, CASE_FAIBLE
+
+### affaiblir-08
+- FEN : `r4rk1/2p2ppp/p2p1q2/1pbP4/8/P2PBP2/1PP2P1P/R2QK2R w KQ - 0 16` — plan des Blancs (partie 66155, demi-coup 30, Elo 1374)
+- réseau échiquier seul : 0.742 (rang 0.931) ; arbres sur les faits : 0.19 (rang 0.099)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, PION_ISOLE, MAJORITE_AILE_DAME, COLONNE_OUVERTE, COLONNE_SEMI_OUVERTE, DOUBLON, AVANT_POSTE, ROI_AU_CENTRE, AVANTAGE_MATERIEL, AVANTAGE_ESPACE, PIECE_MENACEE
+
+## blocage (48 positions retenues sur 906 positifs de test)
+
+### blocage-01
+- FEN : `1k1r3r/pq2b3/3p3p/5Bp1/pPb5/Q3BP1P/6P1/1R3RK1 w - - 0 28` — plan des Noirs (partie 99785, demi-coup 54, Elo 1752)
+- réseau échiquier seul : 0.855 (rang 0.953) ; arbres sur les faits : 0.084 (rang 0.043)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, PION_ISOLE, PION_PASSE, MAJORITE_AILE_DAME, COLONNE_SEMI_OUVERTE, COLONNE_OUVERTE, DOUBLON, AVANT_POSTE, ROQUE_GRAND, PIONS_ROI_AFFAIBLI, PAIRE_FOUS, AVANTAGE_MATERIEL, AVANTAGE_ESPACE, CASE_FAIBLE, PIECE_MENACEE, STRUCTURE, ROQUES_OPPOSES, CONTROLE_COLONNE, CENTRE
+
+### blocage-02
+- FEN : `1k1r3r/1bqpb3/p1n1p2p/PP1pPp2/1P1P4/3B1p2/2RBQPPP/2R3K1 w - - 0 22` — plan des Noirs (partie 45604, demi-coup 42, Elo 1850)
+- réseau échiquier seul : 0.864 (rang 0.958) ; arbres sur les faits : 0.166 (rang 0.156)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, PION_ARRIERE, PION_ISOLE, COLONNE_SEMI_OUVERTE, COLONNE_OUVERTE, DOUBLON, CHAINE_PIONS, AVANT_POSTE, ROQUE_GRAND, PIONS_ROI_AFFAIBLI, PAIRE_FOUS, FOU_MAUVAIS, FOU_BON, AVANTAGE_MATERIEL, CASE_FAIBLE, PIECE_MENACEE, CLOUAGE_RELATIF, ROQUES_OPPOSES, CENTRE
+
+### blocage-03
+- FEN : `2kr1bnr/ppp3pp/2b2p2/4P3/8/3B1P2/PPP3PP/RNB1K2R w KQ - 0 10` — plan des Noirs (partie 37843, demi-coup 18, Elo 1598)
+- réseau échiquier seul : 0.777 (rang 0.901) ; arbres sur les faits : 0.134 (rang 0.103)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, COLONNE_OUVERTE, COLONNE_SEMI_OUVERTE, ROQUE_GRAND, PIONS_ROI_BOUCLIER, PAIRE_FOUS, TOUR_COLONNE_OUVERTE, PIECE_NON_DEVELOPPEE, CASE_FAIBLE, CONTROLE_COLONNE, CENTRE
+
+### blocage-04
+- FEN : `r3r1k1/pp4pp/2p2p2/3pPb2/1P1P1P1q/P3Q2P/1BP3P1/R4RK1 w - - 0 22` — plan des Noirs (partie 26323, demi-coup 42, Elo 1590)
+- réseau échiquier seul : 0.716 (rang 0.852) ; arbres sur les faits : 0.181 (rang 0.183)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, COLONNE_SEMI_OUVERTE, CHAINE_PIONS, AVANT_POSTE, ROQUE_PETIT, PIONS_ROI_BOUCLIER, TOUR_COLONNE_OUVERTE, CASE_FAIBLE, CONTROLE_COLONNE
+
+### blocage-05
+- FEN : `1k1r3r/pq2b3/3p3p/p2bnBp1/1P6/4BP1P/1Q1N2P1/2R2RK1 w - - 0 25` — plan des Noirs (partie 99785, demi-coup 48, Elo 1752)
+- réseau échiquier seul : 0.869 (rang 0.961) ; arbres sur les faits : 0.237 (rang 0.298)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, PION_ISOLE, PION_PASSE, MAJORITE_AILE_DAME, COLONNE_SEMI_OUVERTE, COLONNE_OUVERTE, DOUBLON, AVANT_POSTE, ROQUE_GRAND, PIONS_ROI_AFFAIBLI, PAIRE_FOUS, AVANTAGE_MATERIEL, CASE_FAIBLE, PIECE_MENACEE, STRUCTURE, ROQUES_OPPOSES, CONTROLE_COLONNE, CENTRE
+
+### blocage-06
+- FEN : `r3r1k1/pp1qnpp1/2p1b2p/3p4/2P4B/1PNP4/1P3PPP/R2QR1K1 w - - 3 19` — plan des Noirs (partie 58739, demi-coup 36, Elo 1986)
+- réseau échiquier seul : 0.888 (rang 0.97) ; arbres sur les faits : 0.259 (rang 0.343)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, COLONNE_OUVERTE, CHAINE_PIONS, ROQUE_PETIT, PIONS_ROI_BOUCLIER, TOUR_COLONNE_OUVERTE, EGALITE_MATERIEL, CASE_FAIBLE
+
+### blocage-07
+- FEN : `r4r2/pp3p2/2p3k1/4PbB1/4N3/3P3P/PP4PK/4R3 w - - 1 25` — plan des Blancs (partie 5725, demi-coup 48, Elo 1724)
+- réseau échiquier seul : 0.904 (rang 0.978) ; arbres sur les faits : 0.27 (rang 0.366)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, PION_PASSE, PION_PASSE_PROTEGE, MAJORITE_AILE_ROI, COLONNE_SEMI_OUVERTE, AVANT_POSTE, EGALITE_MATERIEL, AVANTAGE_ESPACE, CASE_FAIBLE, ACTIVITE
+
+### blocage-08
+- FEN : `3q1r1r/pp1bn1k1/2pb3p/3N1p2/2BPPPp1/PN4Q1/1P4P1/2KR3R w - - 0 28` — plan des Noirs (partie 66845, demi-coup 54, Elo 1858)
+- réseau échiquier seul : 0.74 (rang 0.871) ; arbres sur les faits : 0.219 (rang 0.261)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, COLONNE_SEMI_OUVERTE, AVANT_POSTE, ROQUE_PETIT, PIONS_ROI_AFFAIBLI, PAIRE_FOUS, EGALITE_MATERIEL, AVANTAGE_ESPACE, CASE_FAIBLE, ROQUES_OPPOSES, CONTROLE_COLONNE, FOU_CONTRE_CAVALIER
+
+## cavalier_avant_poste (42 positions retenues sur 944 positifs de test)
+
+### cavalier_avant_poste-01
+- FEN : `r2nk2r/bpp1nppp/p7/3bP3/1P2NPP1/2P5/P3B2P/R1B1K1NR w KQkq - 1 13` — plan des Blancs (partie 97870, demi-coup 24, Elo 1281)
+- réseau échiquier seul : 0.818 (rang 0.946) ; arbres sur les faits : 0.026 (rang 0.001)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, MAJORITE_AILE_ROI, COLONNE_OUVERTE, ROI_AU_CENTRE, PAIRE_FOUS, AVANTAGE_MATERIEL, PIECE_NON_DEVELOPPEE, AVANTAGE_ESPACE, CASE_FAIBLE, PIECE_MENACEE, CLOUAGE_RELATIF, CENTRE
+
+### cavalier_avant_poste-02
+- FEN : `4rr1k/pp2Nppp/3p4/2n5/2P2BB1/6P1/PPP2b1P/R4K1n w - - 1 19` — plan des Blancs (partie 79343, demi-coup 36, Elo 1463)
+- réseau échiquier seul : 0.864 (rang 0.969) ; arbres sur les faits : 0.117 (rang 0.13)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, MAJORITE_AILE_DAME, COLONNE_SEMI_OUVERTE, COLONNE_OUVERTE, DOUBLON, AVANT_POSTE, ROQUE_PETIT, PIONS_ROI_AFFAIBLI, PAIRE_FOUS, CASE_FAIBLE, PIECE_MENACEE, DECOUVERTE_POSSIBLE, CENTRE, FOU_CONTRE_CAVALIER
+
+### cavalier_avant_poste-03
+- FEN : `3q1rk1/3b2pp/2Q1p3/1p1pPp2/pP1P1P2/P3B1P1/6BP/2N4K w - - 3 31` — plan des Blancs (partie 98140, demi-coup 60, Elo 1609)
+- réseau échiquier seul : 0.704 (rang 0.869) ; arbres sur les faits : 0.15 (rang 0.184)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, PION_ARRIERE, COLONNE_OUVERTE, CHAINE_PIONS, AVANT_POSTE, ROQUE_PETIT, PIONS_ROI_AFFAIBLI, PAIRE_FOUS, FOU_MAUVAIS, FOU_BON, AVANTAGE_MATERIEL, CASE_FAIBLE, PIECE_MENACEE, RANGEE_FAIBLE, STRUCTURE, CONTROLE_COLONNE, ACTIVITE, CONTROLE_CENTRE, CENTRE
+
+### cavalier_avant_poste-04
+- FEN : `r1b1kb1r/1pq2ppp/p1n2n2/3pp3/3P4/PN2PN1P/1P3PP1/R1BQKB1R w KQkq - 0 10` — plan des Blancs (partie 40630, demi-coup 18, Elo 1622)
+- réseau échiquier seul : 0.785 (rang 0.928) ; arbres sur les faits : 0.21 (rang 0.282)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, COLONNE_OUVERTE, CHAINE_PIONS, ROI_AU_CENTRE, PAIRE_FOUS, EGALITE_MATERIEL, PIECE_NON_DEVELOPPEE, CASE_FAIBLE
+
+### cavalier_avant_poste-05
+- FEN : `r1b2r1k/pp1nNp1p/3p2p1/q7/2P1P3/1P2BB2/P5PP/bN1Q1RK1 w - - 1 16` — plan des Blancs (partie 68952, demi-coup 30, Elo 1930)
+- réseau échiquier seul : 0.907 (rang 0.985) ; arbres sur les faits : 0.247 (rang 0.345)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, PION_ISOLE, COLONNE_SEMI_OUVERTE, CHAINE_PIONS, AVANT_POSTE, ROQUE_PETIT, PIONS_ROI_AFFAIBLI, PAIRE_FOUS, TOUR_COLONNE_OUVERTE, PIECE_NON_DEVELOPPEE, CASE_FAIBLE, PIECE_MENACEE, DECOUVERTE_POSSIBLE, STRUCTURE, CONTROLE_COLONNE
+
+### cavalier_avant_poste-06
+- FEN : `r4rk1/p1qn1ppb/2N1pb1p/1p6/1P1Pn3/P3PN1P/1B2BPP1/R2QK2R w KQ - 1 16` — plan des Blancs (partie 61600, demi-coup 30, Elo 1491)
+- réseau échiquier seul : 0.776 (rang 0.922) ; arbres sur les faits : 0.21 (rang 0.283)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, PION_ARRIERE, MAJORITE_AILE_DAME, COLONNE_OUVERTE, CHAINE_PIONS, AVANT_POSTE, ROI_AU_CENTRE, PAIRE_FOUS, AVANTAGE_MATERIEL, CASE_FAIBLE, PIECE_MENACEE, CONTROLE_CENTRE
+
+### cavalier_avant_poste-07
+- FEN : `3r1bk1/rp3pp1/p1n4p/2p5/P1N5/2NP4/1PP2PPP/R3R1K1 w - - 11 19` — plan des Blancs (partie 24875, demi-coup 36, Elo 1722)
+- réseau échiquier seul : 0.847 (rang 0.961) ; arbres sur les faits : 0.237 (rang 0.328)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, MAJORITE_AILE_DAME, COLONNE_OUVERTE, ROQUE_PETIT, PIONS_ROI_BOUCLIER, TOUR_COLONNE_OUVERTE, AVANTAGE_MATERIEL, CONTROLE_COLONNE, CASE_ENTREE, ACTIVITE, CENTRE, FOU_CONTRE_CAVALIER
+
+### cavalier_avant_poste-08
+- FEN : `2r3k1/5ppp/4p3/p3P3/5B2/2NR2PK/2r4P/8 w - - 4 28` — plan des Blancs (partie 31519, demi-coup 54, Elo 1288)
+- réseau échiquier seul : 0.835 (rang 0.955) ; arbres sur les faits : 0.238 (rang 0.331)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, PION_ISOLE, COLONNE_SEMI_OUVERTE, COLONNE_OUVERTE, AVANT_POSTE, TOUR_COLONNE_OUVERTE, AVANTAGE_ESPACE, CASE_FAIBLE, CONTROLE_COLONNE, CASE_ENTREE, CONTROLE_CENTRE
+
+## dominer (8 positions retenues sur 311 positifs de test)
+
+### dominer-01
+- FEN : `r2qk1nr/ppp3bp/3p1p2/4n1N1/2B1Ppb1/1P6/PBPP2PP/RN2QRK1 w kq - 1 10` — plan des Blancs (partie 97177, demi-coup 18, Elo 1525)
+- réseau échiquier seul : 0.801 (rang 0.92) ; arbres sur les faits : 0.094 (rang 0.223)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, COLONNE_SEMI_OUVERTE, AVANT_POSTE, ROQUE_PETIT, PIONS_ROI_AFFAIBLI, PAIRE_FOUS, TOUR_COLONNE_OUVERTE, EGALITE_MATERIEL, PIECE_NON_DEVELOPPEE, DAME_SORTIE_TOT, CASE_FAIBLE, PIECE_MENACEE, CONTROLE_COLONNE, CONTROLE_CENTRE
+
+### dominer-02
+- FEN : `r4rk1/1p3pbp/p5p1/3n4/2pNp1Pq/2P1B3/PP3PP1/R2QR1K1 w - - 1 25` — plan des Noirs (partie 39427, demi-coup 48, Elo 1677)
+- réseau échiquier seul : 0.809 (rang 0.926) ; arbres sur les faits : 0.168 (rang 0.397)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, MAJORITE_AILE_ROI, COLONNE_OUVERTE, AVANT_POSTE, ROQUE_PETIT, PIONS_ROI_BOUCLIER, AVANTAGE_MATERIEL, AVANTAGE_ESPACE, CASE_FAIBLE, CENTRE
+
+### dominer-03
+- FEN : `r1b2rk1/1p3pbp/pn4p1/6q1/2pNp3/2P1N2P/PP3PP1/R1BQR1K1 w - - 2 22` — plan des Noirs (partie 39427, demi-coup 42, Elo 1677)
+- réseau échiquier seul : 0.849 (rang 0.954) ; arbres sur les faits : 0.187 (rang 0.436)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, MAJORITE_AILE_ROI, COLONNE_OUVERTE, AVANT_POSTE, ROQUE_PETIT, PIONS_ROI_BOUCLIER, PAIRE_FOUS, AVANTAGE_MATERIEL, PIECE_NON_DEVELOPPEE, DAME_SORTIE_TOT, AVANTAGE_ESPACE, CASE_FAIBLE, CONTROLE_CENTRE, CENTRE, FOU_CONTRE_CAVALIER
+
+### dominer-04
+- FEN : `6r1/1r1k4/4p1q1/1Nbp1n1p/P4Q2/6P1/1P1B3P/R4R1K w - - 0 25` — plan des Blancs (partie 77057, demi-coup 48, Elo 1925)
+- réseau échiquier seul : 0.895 (rang 0.981) ; arbres sur les faits : 0.236 (rang 0.527)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, PION_PASSE, MAJORITE_AILE_DAME, COLONNE_OUVERTE, COLONNE_SEMI_OUVERTE, AVANT_POSTE, ROQUE_PETIT, PIONS_ROI_AFFAIBLI, CAVALIER_AVANT_POSTE, TOUR_COLONNE_OUVERTE, AVANTAGE_MATERIEL, CASE_FAIBLE, CONTROLE_COLONNE
+
+### dominer-05
+- FEN : `8/1b3pkp/p4np1/1p1p4/3N4/2PB1P1P/PP4P1/6K1 w - - 0 31` — plan des Noirs (partie 23728, demi-coup 60, Elo 1896)
+- réseau échiquier seul : 0.916 (rang 0.989) ; arbres sur les faits : 0.268 (rang 0.575)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, PION_ISOLE, COLONNE_SEMI_OUVERTE, COLONNE_OUVERTE, EGALITE_MATERIEL, CASE_FAIBLE, STRUCTURE, CENTRE
+
+### dominer-06
+- FEN : `r1bq1r2/1p3pkp/p1np4/2pNp1p1/2B1P3/3P4/PPPQ1PPP/R4RK1 w - - 0 13` — plan des Blancs (partie 102229, demi-coup 24, Elo 1651)
+- réseau échiquier seul : 0.751 (rang 0.88) ; arbres sur les faits : 0.206 (rang 0.473)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, CHAINE_PIONS, AVANT_POSTE, ROQUE_PETIT, PIONS_ROI_BOUCLIER, CAVALIER_AVANT_POSTE, EGALITE_MATERIEL
+
+### dominer-07
+- FEN : `r2q1rk1/1b3ppp/p2bpn2/1pnp4/8/P1N1PN2/1PP1BPPP/R1BQ1RK1 w - - 1 13` — plan des Noirs (partie 11882, demi-coup 24, Elo 1586)
+- réseau échiquier seul : 0.862 (rang 0.961) ; arbres sur les faits : 0.258 (rang 0.561)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, COLONNE_SEMI_OUVERTE, CHAINE_PIONS, ROQUE_PETIT, PIONS_ROI_BOUCLIER, PAIRE_FOUS, EGALITE_MATERIEL, CASE_FAIBLE
+
+### dominer-08
+- FEN : `3r1rk1/1ppq1ppp/p1np1b2/5N2/2P1nPQ1/1PN5/PB4PP/R4RK1 w - - 2 16` — plan des Noirs (partie 78635, demi-coup 30, Elo 1753)
+- réseau échiquier seul : 0.868 (rang 0.965) ; arbres sur les faits : 0.291 (rang 0.606)
+- faits du camp : PHASE, NOMBRE_ILOTS_BLANC, NOMBRE_ILOTS_NOIR, MAJORITE_AILE_DAME, COLONNE_OUVERTE, ROQUE_PETIT, PIONS_ROI_BOUCLIER, AVANTAGE_MATERIEL, PIECE_MENACEE, CENTRE
