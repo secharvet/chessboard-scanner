@@ -550,12 +550,25 @@ L'entraînement passe sur une machine GPU (`docs/MACHINE-GPU.md`) ; le VPS garde
 50 000 entre, bullet exclu ; `scripts/filter-pgn.mjs`), étiquetage lancé le 29 septembre à 18 h 27 (Paris), avec
 les atomes de la défense.
 
-**Prochaines étapes**
+**Prochaines étapes** (mises à jour le 29 septembre au soir ; deux machines : le VPS étiquette et sert le coach,
+DENEB (RTX 5070 Ti, `docs/MACHINE-GPU.md`) entraîne)
 
-1. Planches sur les exemples vérifiés (dont les premiers avant-postes).
-2. Premiers réseaux (tour sur colonne, rupture, affaiblir), comparés aux règles (critère du §6), sur le processeur
-   du serveur ; l'entraînement passera sur une carte graphique (RTX 5070 Ti) dès qu'elle sera disponible.
-3. Outil d'émergence (§8) sur les suites enregistrées.
+Sur DENEB :
+1. Reproduire la table du mois complet avec 10 passes (`train-plans.py --epochs 10`), puis des réseaux plus larges
+   (canaux 96, tête 256) : l'écart réseaux − arbres se creuse-t-il ? Garder par concept le meilleur des deux.
+2. Réseau échiquier seul comme sonde : lister les positions de test où il bat nettement les arbres, les relire sur
+   planches, en déduire les faits qui manquent au moteur de règles.
+3. Contrefactuels complets, dont la variante « tuer » de la tour sur colonne sur la colonne cible (ajouter
+   `tour_colonne_case` à la sortie de `scanLine`, à l'`extra` des étiquettes et au jeu de données).
+4. Émergence à trois éléments et motifs triviaux filtrés (manœuvre ⇒ manœuvre) ; planches des candidats les plus
+   solides (échange CxF ⇒ espace au centre ; il pousse à l'aile roi ⇒ espace au centre ; échange FxC ⇒ tour à la 7e).
+5. Quand les étiquettes 2016 arrivent (rsync) : grille par Elo avec les débutants, entraînement v3, recettes
+   défensives (atomes fermeture, restriction, regroupement).
+
+Sur le VPS :
+6. Service local « intentions » (Python, modèles sur les faits) interrogé par le coach ; phrase « à ton niveau, le
+   plan naturel ici… » et « il prépare souvent… » dans la fiche, derrière un drapeau, puis banc de milieux de partie.
+7. Relire la baïonnette (AUC 0,98 suspecte : précondition facile).
 
 ## Références
 
