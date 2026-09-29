@@ -7,11 +7,13 @@
  *   espace       poussée de pion dans le camp adverse (5e rangée et au-delà) qui n'attaque rien et qui TIENT
  *   manoeuvre    une pièce (pas un pion, pas le roi) fait au moins deux coups calmes pour s'installer sur une case
  *                où elle TIENT ; on note la case d'arrivée
- *   doublement   deux tours du camp sur la même colonne (ou la même rangée), et ça tient
+ *   doublement   deux tours du camp sur la même colonne (ou sur la 7e rangée), et ça tient ; deux tours côte à
+ *                côte sur la première rangée ne comptent pas
  *   septieme     une tour du camp atteint la 7e rangée (vue du camp) et y tient
  *   roque        petit ou grand
  *   marche_roi   en finale (pas de dame), le roi fait au moins deux pas vers le centre ou vers les pions adverses
- *   sacrifice    le camp perd un pion (ou plus) à un point calme, sans le récupérer dans la fenêtre
+ *   perte        le camp perd un pion (ou plus) à un point calme, sans le récupérer dans la fenêtre ; « perte » et
+ *                non « sacrifice » : on ne sait pas si c'était voulu, la trajectoire d'évaluation le dira
  * Chaque atome : { kind, side, ply, ...details }. Les atomes servent aux recettes (coach/plan-concepts.mjs) et à
  * l'émergence (scripts/emergence.mjs).
  */
@@ -95,7 +97,7 @@ export function detectAtoms(fen, pv, plies = 48) {
     if (m.piece !== 'r' || m.captured) continue;
     const b = boards[i];
     const rooks = b.board().flat().filter((p) => p && p.type === 'r' && p.color === m.color).map((p) => p.square);
-    const other = rooks.find((sq) => sq !== m.to && (sq[0] === m.to[0] || sq[1] === m.to[1]));
+    const other = rooks.find((sq) => sq !== m.to && (sq[0] === m.to[0] || (sq[1] === m.to[1] && relRank(m.to, m.color) === 7)));
     if (other && stays(i, m.to, 'r', m.color)) atoms.push({ kind: 'doublement', side: m.color, ply: i, squares: [m.to, other], axis: other[0] === m.to[0] ? 'colonne' : 'rangee' });
     if (relRank(m.to, m.color) === 7 && stays(i, m.to, 'r', m.color)) atoms.push({ kind: 'septieme', side: m.color, ply: i, square: m.to });
   }
@@ -112,13 +114,13 @@ export function detectAtoms(fen, pv, plies = 48) {
     if (kingSteps[m.color] === 2) atoms.push({ kind: 'marche_roi', side: m.color, ply: i, to: m.to });
   }
 
-  // Sacrifice : à un point calme, le camp a perdu au moins un pion de matériel par rapport au départ, et ne l'a
+  // Perte de matériel : à un point calme, le camp a perdu au moins un pion de matériel par rapport au départ, et ne l'a
   // pas récupéré à la fin de la fenêtre (les échanges équilibrés ne changent pas le solde).
   for (const side of ['w', 'b']) {
     const sign = side === 'w' ? 1 : -1;
     const i = mats.findIndex((mat, k) => quietAt(k) && sign * (mat - startMat) <= -1);
     if (i >= 0 && sign * (mats[n - 1] - startMat) <= -1 && !boards[i].isCheck()) {
-      atoms.push({ kind: 'sacrifice', side, ply: i, pawns: -sign * (mats[i] - startMat) });
+      atoms.push({ kind: 'perte', side, ply: i, pawns: -sign * (mats[i] - startMat) });
     }
   }
 

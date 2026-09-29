@@ -87,7 +87,7 @@ describe('atomes et recettes', () => {
     assert.ok(kinds.includes('roque:w@1') && kinds.includes('roque:b@2'), kinds.join(' '));
     assert.ok(atoms.some((a) => a.kind === 'echange' && a.side === 'w' && a.takes === 'n' && a.gives === 'b'), 'Fxf6 Dxf6 : échange fou contre cavalier');
     assert.ok(atoms.some((a) => a.kind === 'manoeuvre' && a.side === 'b' && a.piece === 'n' && a.to === 'f4' && a.steps >= 2), 'Cc6-e7-g6-f4 : manœuvre');
-    assert.ok(atoms.some((a) => a.kind === 'doublement' && a.side === 'w' && a.axis === 'rangee'), 'Te1 et Td1 sur la première rangée');
+    assert.ok(!atoms.some((a) => a.kind === 'doublement' && a.side === 'w'), 'Te1 et Td1 côte à côte sur la première rangée : pas un doublement');
   });
   it('recette : attaque de minorité dans la Carlsbad (b4-b5, pion c6 faible, tour sur la colonne)', async () => {
     const { scanLine } = await import('../coach/plan-concepts.mjs');
