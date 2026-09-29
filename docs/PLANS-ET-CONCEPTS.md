@@ -387,6 +387,25 @@ Remarque sur « l'avantage doit se diriger vers nous » : le long de la meilleur
 construction ; ce qui se mesure, c'est l'écart entre suites (déjà le critère). « Enfermer le roi adverse » relève de
 l'étage d'exploitation du §8 (un fait d'attaque doit suivre le déséquilibre) : à traiter avec les plans à étages.
 
+**Plans humains, premières mesures** (29 septembre, 58 000 positions de janvier 2013, `scripts/human-grid.mjs`,
+`reports/grille-elo-1.md`). Générateur à 34 000 positions par heure sur 4 processus.
+
+1. *La fréquence des plans monte avec le niveau, pour tous les concepts.* Part des demi-positions où le joueur
+   réalise le plan par une suite calme, de < 1200 à 2000 + : tour sur colonne 10 → 22 %, affaiblir 9 → 17 %,
+   rupture 6,6 → 11 %, blocage 1,4 → 3,5 %, cavalier sur avant-poste 0,5 → 3,1 %, dominer autour de 1 %.
+   C'est la grille du §2 mesurée (réserve : la tranche < 1200 est petite, 1 574 demi-positions).
+2. *La trajectoire d'évaluation mesure le joueur plus que le plan.* Témoin sur 24 demi-coups : un joueur à 2000 +
+   gagne +104 centipions sans plan et +89 avec ; un joueur < 1200 perd −348 sans plan et −107 avec. Les forts
+   gagnent quoi qu'ils fassent, et « sans plan » inclut les positions où l'adversaire déroule le sien. Isoler
+   l'effet propre du plan demande une comparaison à niveau, évaluation de départ et plan adverse égaux : une étude,
+   pas un seuil. Aucune règle de réfutation n'est écrite.
+3. *Planches* (36, `reports/planches-humains-1`) : la détection correspond aux définitions (cavalier sur avant-poste
+   central, Fxg6 hxg6 qui double les pions devant le roi, levier puis tour sur la colonne). Ce que les planches ne
+   disent pas, c'est si l'idée était bonne : c'est la question 2.
+4. *Étiquette retenue pour l'entraînement* : « ce joueur, à ce niveau, réalise ce plan ici » (suite calme, apparition
+   avant le 12e demi-coup, règle du prix). Propre, abondante (des milliers d'exemples par concept, sauf dominer),
+   indépendante de la version du moteur, graduée par niveau.
+
 **Prochaines étapes**
 
 1. Planches sur les exemples vérifiés (dont les premiers avant-postes).
