@@ -482,6 +482,17 @@ Les modèles ont donc bien appris, au moins en partie, l'ingrédient du concept 
 « tuer » de la tour sur colonne (reboucher la colonne de la tour actuelle) ne vise pas la bonne colonne quand la tour
 n'y est pas encore ; à refaire avec la colonne cible.
 
+**Émergence sur les parties humaines, première passe** (29 septembre, 8 200 positions avec atomes,
+`scripts/emergence-humain.mjs`, `reports/emergence-humain-1.md`). Trois familles de motifs sortent :
+- des **liens de définition** (levier → échange de pions, levier → rupture, échange fou-contre-cavalier → affaiblir) :
+  le même événement vu deux fois ; sans intérêt, mais ils valident la chaîne ;
+- des **pertes** (perte de pion → n'importe quoi, Δ24 autour de −400) : le blitz ;
+- des **candidats recettes**, fréquents et bien au-dessus de la référence de dérive : gain d'espace au centre puis
+  échange de pions (+259, n = 75), échange cavalier-contre-fou puis petit roque (+176), manœuvre de cavalier puis
+  doublement des tours (+172), échange de cavaliers puis levier à l'aile roi (+134, n = 104), tour sur colonne puis
+  gain d'espace au centre (+165). À rejouer sur le volume complet (support ≥ 300) et à relire sur planches ; le Δ
+  reste un indice (il mesure aussi le joueur).
+
 **Prochaines étapes**
 
 1. Planches sur les exemples vérifiés (dont les premiers avant-postes).
