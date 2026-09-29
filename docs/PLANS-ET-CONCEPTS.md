@@ -452,6 +452,28 @@ l'étage d'exploitation du §8 (un fait d'attaque doit suivre le déséquilibre)
    avant le 12e demi-coup, règle du prix). Propre, abondante (des milliers d'exemples par concept, sauf dominer),
    indépendante de la version du moteur, graduée par niveau.
 
+**Premier entraînement sur les plans humains** (29 septembre, 63 000 positions, parties de test jamais vues,
+`reports/train-plans-humains-1.json`) :
+
+| Concept | Positifs (test) | Règle linéaire | Arbres | Réseau échiquier | Réseau + faits |
+|---|---|---|---|---|---|
+| Tour sur colonne ouverte | 1 408 | 0,863 | 0,879 | 0,870 | **0,884** |
+| Rupture de pions | 843 | 0,721 | 0,735 | **0,752** | 0,747 |
+| Affaiblir la structure | 1 173 | 0,658 | 0,666 | 0,645 | **0,671** |
+| Blocage | 164 | 0,698 | **0,717** | 0,623 | 0,706 |
+| Cavalier sur avant-poste | 111 | 0,736 | 0,743 | 0,673 | **0,784** |
+
+(AUC ; le hasard vaut 0,5.) Trois lectures :
+1. **L'intention humaine se prédit depuis la position seule** : 0,67 à 0,88 d'AUC selon le concept, alors que la
+   voie « suites de moteur » n'avait rien donné (0,55 à 0,62 sur des étiquettes fragiles). Les étiquettes humaines
+   portent un signal réel et régulier.
+2. **Les réseaux ne battent pas les arbres** au seuil fixé (+0,02), sauf sur le cavalier sur avant-poste (+0,04
+   pour le réseau avec faits) ; le réseau échiquier seul gagne de peu sur la rupture. Conformément au §6 bis : la
+   référence « règles + arbres » est retenue comme modèle de production, les réseaux restent une option pour les
+   concepts à forte composante géométrique.
+3. **Le signal dépend du concept** : la tour sur la colonne ouverte est presque déterminée par la position (0,88),
+   l'affaiblissement de la structure l'est peu (0,67) : c'est un choix, pas une conséquence.
+
 **Prochaines étapes**
 
 1. Planches sur les exemples vérifiés (dont les premiers avant-postes).
