@@ -40,7 +40,8 @@ def main():
         nets = {}
         for name, use_facts in (('cnn', False), ('cnn+f', True)):
             n_facts = 2 * len(keys) + (1 if ck.get('elo_feature') else 0)  # + l'Elo du joueur (modèles récents)
-            net = PlanNet(n_facts if use_facts else 0)
+            large = bool(ck.get('large'))
+            net = PlanNet(n_facts if use_facts else 0, ch=96 if large else 48, hidden=256 if large else 128)
             net.load_state_dict(ck[name])
             net.eval()
             nets[name] = net

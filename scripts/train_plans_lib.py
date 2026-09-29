@@ -52,7 +52,7 @@ def facts_vector(facts, keys, side, elo=None):
 class PlanNet(nn.Module):
     """Petit réseau : 3 convolutions 3x3, puis une tête ; les faits (optionnels) rejoignent la tête."""
 
-    def __init__(self, n_facts=0, ch=48):
+    def __init__(self, n_facts=0, ch=48, hidden=128):
         super().__init__()
         self.conv = nn.Sequential(
             nn.Conv2d(18, ch, 3, padding=1), nn.ReLU(),
@@ -60,7 +60,7 @@ class PlanNet(nn.Module):
             nn.Conv2d(ch, ch, 3, padding=1), nn.ReLU(),
         )
         self.n_facts = n_facts
-        self.head = nn.Sequential(nn.Linear(ch * 64 + n_facts, 128), nn.ReLU(), nn.Dropout(0.2), nn.Linear(128, 1))
+        self.head = nn.Sequential(nn.Linear(ch * 64 + n_facts, hidden), nn.ReLU(), nn.Dropout(0.2), nn.Linear(hidden, 1))
 
     def forward(self, board, facts=None):
         z = self.conv(board).flatten(1)

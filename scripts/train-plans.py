@@ -60,25 +60,27 @@ def load(path, concepts):
     return data, keys
 
 
-def train_net(Xb, Xf, y, split, use_facts, epochs, seed=0):
+def train_net(Xb, Xf, y, split, use_facts, epochs, seed=0, large=False):
     torch.manual_seed(seed)
     tr, va = split == 'train', split == 'val'
-    net = PlanNet(Xf.shape[1] if use_facts else 0).to(DEVICE)
+    net = PlanNet(Xf.shape[1] if use_facts else 0, ch=96 if large else 48, hidden=256 if large else 128).to(DEVICE)
     opt = torch.optim.AdamW(net.parameters(), lr=1e-3, weight_decay=1e-4)
     pos = max(1.0, float((y[tr] == 0).sum()) / max(1, (y[tr] == 1).sum()))
     loss_fn = nn.BCEWithLogitsLoss(pos_weight=torch.tensor(min(pos, 50.0), device=DEVICE))
-    B = torch.from_numpy(Xb)  # uint8, converti en flottants par lot
-    F = torch.from_numpy(Xf)
-    Y = torch.from_numpy(y.astype(np.float32))
+    # Tout sur le dispositif une fois pour toutes (uint8 : 630 000 échiquiers = 725 Mo) : sur GPU, plus de copie par lot.
+    B = torch.from_numpy(Xb).to(DEVICE)
+    F = torch.from_numpy(Xf).to(DEVICE)
+    Y = torch.from_numpy(y.astype(np.float32)).to(DEVICE)
+    BATCH = 1024 if DEVICE.type == 'cuda' else 256
     idx_tr = np.where(tr)[0]
     best, best_state = -1, None
     for _ in range(epochs):
         net.train()
         np.random.shuffle(idx_tr)
-        for i in range(0, len(idx_tr), 256):
-            b = idx_tr[i:i + 256]
+        for i in range(0, len(idx_tr), BATCH):
+            b = idx_tr[i:i + BATCH]
             opt.zero_grad()
-            loss = loss_fn(net(B[b].float().to(DEVICE), F[b].to(DEVICE)), Y[b].to(DEVICE))
+            loss = loss_fn(net(B[b].float(), F[b]), Y[b])
             loss.backward()
             opt.step()
         p = predict(net, B, F, np.where(va)[0])
@@ -95,7 +97,7 @@ def predict(net, B, F, idx):
     with torch.no_grad():
         for i in range(0, len(idx), 2048):
             b = idx[i:i + 2048]
-            out.append(torch.sigmoid(net(B[b].float().to(DEVICE), F[b].to(DEVICE))).cpu().numpy())
+            out.append(torch.sigmoid(net(B[b].float(), F[b])).cpu().numpy())
     return np.concatenate(out) if out else np.zeros(0)
 
 
@@ -111,6 +113,7 @@ def main():
     ap.add_argument('--epochs', type=int, default=8)
     ap.add_argument('--threads', type=int, default=2)
     ap.add_argument('--out', default='reports/train-plans.json')
+    ap.add_argument('--large', action='store_true', help='réseaux plus larges (96 canaux, tête 256)')
     a = ap.parse_args()
     torch.set_num_threads(a.threads)
     concepts = a.concepts.split(',')
@@ -141,15 +144,17 @@ def main():
         lr = LogisticRegression(max_iter=2000, class_weight='balanced').fit(Xs[tr], y[tr])
         gb = HistGradientBoostingClassifier(max_iter=300, learning_rate=0.08, class_weight='balanced').fit(Xf[tr], y[tr])
         Xb = np.stack([board_planes(f, s) for f, s in zip(d['fen'], d['side'])])  # uint8
-        cnn = train_net(Xb, Xs, y, split, False, a.epochs)
-        cnnf = train_net(Xb, Xs, y, split, True, a.epochs)
+        cnn = train_net(Xb, Xs, y, split, False, a.epochs, large=a.large)
+        cnnf = train_net(Xb, Xs, y, split, True, a.epochs, large=a.large)
         idx = np.where(te)[0]
+        Bd, Sd = torch.from_numpy(Xb).to(DEVICE), torch.from_numpy(Xs).to(DEVICE)
         preds = {
             'logreg': lr.predict_proba(Xs[te])[:, 1],
             'arbres': gb.predict_proba(Xf[te])[:, 1],
-            'cnn': predict(cnn, torch.from_numpy(Xb), torch.from_numpy(Xs), idx),
-            'cnn+f': predict(cnnf, torch.from_numpy(Xb), torch.from_numpy(Xs), idx),
+            'cnn': predict(cnn, Bd, Sd, idx),
+            'cnn+f': predict(cnnf, Bd, Sd, idx),
         }
+        del Bd, Sd
         for name, p in preds.items():
             auc = roc_auc_score(y[te], p)
             ap_ = average_precision_score(y[te], p)
@@ -159,7 +164,7 @@ def main():
         res['verdict'] = 'réseau > arbres (+0,02 ou plus)' if best_net >= res['arbres']['auc'] + 0.02 else 'réseau ne bat pas les arbres'
         print(f'   -> {res["verdict"]}')
         results[c] = res
-        torch.save({'cnn': {k: v.cpu() for k, v in cnn.state_dict().items()}, 'cnn+f': {k: v.cpu() for k, v in cnnf.state_dict().items()}, 'keys': keys, 'elo_feature': True,
+        torch.save({'cnn': {k: v.cpu() for k, v in cnn.state_dict().items()}, 'cnn+f': {k: v.cpu() for k, v in cnnf.state_dict().items()}, 'keys': keys, 'elo_feature': True, 'large': a.large,
                     'mean': scaler.mean_.tolist(), 'scale': scaler.scale_.tolist()}, f'data/datasets/plan-{c}.pt')
         # Les modèles sur les faits (arbres, règle linéaire) servent le coach (coach/intentions-server.py).
         with open(f'data/datasets/plan-{c}-faits.pkl', 'wb') as fh:
