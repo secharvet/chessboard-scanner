@@ -95,6 +95,11 @@ export function scanLine(fen, pv, PLIES = 48) {
           && AGENT[name](moves[i], snap, color) && holds(i, ok));
       }
       out[`${name}_${color}`] = ply;
+      // Avant-poste : l'adversaire peut-il encore échanger le cavalier (fou de la couleur, cavalier) ?
+      if (name === 'cavalier_avant_poste' && ply >= 0) {
+        const t = timeline[ply].facts.find((f) => f.id === 'CAVALIER_AVANT_POSTE' && f.params.color === color && f.params.square === moves[ply].to);
+        out[`cavalier_avant_poste_echangeable_${color}`] = t ? Boolean(t.params.echangeable) : null;
+      }
     }
   }
   for (const color of COLORS) {
