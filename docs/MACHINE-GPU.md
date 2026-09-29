@@ -13,7 +13,10 @@ git checkout coach-grounded && npm ci
 
 # 2. Python (venv) : torch CUDA + scikit-learn
 python3 -m venv ~/plans-venv && ~/plans-venv/bin/pip install --upgrade pip
-~/plans-venv/bin/pip install torch --index-url https://download.pytorch.org/whl/cu124   # adapter cu12x au pilote
+# torch depuis l'index PyTorch (cet index ne contient QUE torch) : cu128 pour une RTX 50xx (Blackwell, torch ≥ 2.7),
+# cu124 suffit pour une RTX 30xx/40xx ; `nvidia-smi` indique la version CUDA du pilote.
+~/plans-venv/bin/pip install torch --index-url https://download.pytorch.org/whl/cu128
+# le reste depuis PyPI (index par défaut)
 ~/plans-venv/bin/pip install scikit-learn numpy
 ~/plans-venv/bin/python -c "import torch; print(torch.cuda.is_available(), torch.cuda.get_device_name(0))"
 
