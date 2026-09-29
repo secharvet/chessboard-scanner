@@ -84,7 +84,7 @@ for (const file of files) {
         if (ev[j][0] <= ev[i][0] || ev[i][1] === ev[j][1]) continue;
         // On garde : mes enchaînements, et « lui : X → moi : Y » (réponses). Pas « moi → lui » ni « lui → lui ».
         if (ev[j][1].startsWith('lui : ')) continue;
-        const k = `${ev[i][1]} → ${ev[j][1]}`;
+        const k = `${ev[i][1]} ⇒ ${ev[j][1]}`; // « ⇒ » sépare les deux événements (« → » est dans les libellés de concept)
         if (seen.has(k)) continue;
         seen.add(k);
         const m = motifs.get(k) ?? { n: 0, byBr: {}, drift: [], ex: [] };
@@ -103,29 +103,24 @@ const rows = [...motifs.entries()].filter(([, m]) => m.n >= MIN).map(([k, m]) =>
 const san = (fen, played, upto) => { const c = new Chess(fen); const out = []; for (const u of played.slice(0, upto + 1)) { try { out.push(toFrenchSan(c.move({ from: u.slice(0, 2), to: u.slice(2, 4), promotion: u[4] }).san)); } catch { break; } } return out.join(' '); };
 const fmt = (s) => rows.length && s.map((r) => `| ${r.k} | ${r.n} | ${BR.map(([b]) => r.byBr[b] ?? 0).join(' / ')} | ${r.med} | ${r.gain >= 0 ? '+' : ''}${r.gain} |`);
 const md = [`# Émergence sur les parties humaines — ${n} positions avec atomes`, '',
-  `Motif = « événement, puis événement » du même camp (écart ≤ ${WINDOW} demi-coups). Support par tranche d'Elo (<1200 / 1200-1600 / 1600-2000 / 2000+).`,
+  `Motif = « événement ⇒ événement » (écart ≤ ${WINDOW} demi-coups) ; « lui : » = événement de l'adversaire (le motif est alors une réponse). Support par tranche d'Elo (<1200 / 1200-1600 / 1600-2000 / 2000+).`,
   `Δ24 = dérive médiane de l'évaluation du camp sur la fenêtre (centipions) ; référence toutes positions : ${allBase} (par tranche : ${BR.map(([b]) => `${b} ${baseMed[b] ?? '—'}`).join(', ')}).`,
   'Le Δ mesure le joueur autant que le plan (§9) : à lire comme un indice, pas comme une preuve.', '',
   `## Les plus fréquents (support ≥ ${MIN})`, '', '| Motif | n | par Elo | Δ24 méd. | vs réf. |', '|---|---|---|---|---|',
   ...fmt([...rows].sort((a, b) => b.n - a.n).slice(0, TOP)), '',
   '## Recettes : un moyen, puis un déséquilibre (« → concept »)', '', '| Motif | n | par Elo | Δ24 méd. | vs réf. |', '|---|---|---|---|---|',
-  ...fmt(rows.filter((r) => r.k.includes(' → → ') || /^(?!→).* → → /.test(r.k) || (/ → → /.test(r.k))).slice(0, 0)),
-  ...fmt(rows.filter((r) => !r.k.startsWith('→') && r.k.split(' → ').slice(1).join(' → ').startsWith('→')).sort((a, b) => b.n - a.n).slice(0, TOP)), '',
+  ...fmt(rows.filter((r) => !r.k.startsWith('→') && !r.k.startsWith('lui') && r.k.split(' ⇒ ')[1]?.startsWith('→')).sort((a, b) => b.n - a.n).slice(0, TOP)), '',
   '## Les plus payants (Δ24 le plus au-dessus de la référence, support ≥ ' + MIN * 2 + ')', '', '| Motif | n | par Elo | Δ24 méd. | vs réf. |', '|---|---|---|---|---|',
   ...fmt(rows.filter((r) => r.n >= MIN * 2).sort((a, b) => b.gain - a.gain).slice(0, TOP)), '',
   '## Les plus coûteux', '', '| Motif | n | par Elo | Δ24 méd. | vs réf. |', '|---|---|---|---|---|',
   ...fmt(rows.filter((r) => r.n >= MIN * 2).sort((a, b) => a.gain - b.gain).slice(0, 15)), '', '## Exemples des recettes les plus fréquentes', ''];
-for (const r of rows.filter((r) => !r.k.startsWith('→') && r.k.split(' → ').slice(1).join(' → ').startsWith('→')).sort((a, b) => b.n - a.n).slice(0, 12)) {
+for (const r of rows.filter((r) => !r.k.startsWith('→') && !r.k.startsWith('lui') && r.k.split(' ⇒ ')[1]?.startsWith('→')).sort((a, b) => b.n - a.n).slice(0, 12)) {
   md.push(`### ${r.k} (n = ${r.n})`);
   for (const e of r.ex) md.push(`- ${e.side === 'w' ? 'Blancs' : 'Noirs'} ${e.elo} Elo — \`${e.fen}\` — ${san(e.fen, e.played, e.upto)}`);
   md.push('');
 }
 // ── Nommer les motifs : reconnus dans le catalogue, variantes proches, inconnus ──
-const splitMotif = (k) => {
-  // « X → → concept » : le second élément est un déséquilibre (libellé « → concept ») ; « lui : → concept » possible.
-  const m = k.match(/^(.*?) → (→ .*|lui : → .*|.*)$/);
-  return m ? [m[1], m[2]] : k.split(' → ');
-};
+const splitMotif = (k) => k.split(' ⇒ ');
 const named = rows.filter((r) => r.n >= MIN * 2).map((r) => {
   const [a, b] = splitMotif(r.k);
   return { ...r, a, b, ...nameMotif(a, b) };
