@@ -34,7 +34,7 @@ const DEPTH = Number(opt('--depth', 12));
 const PLIES = Number(opt('--plies', 24));
 const EVERY = Number(opt('--every', 6));
 const MAX = Number(opt('--max', 1000000));
-const CONCEPTS = ['tour_colonne', 'cavalier_avant_poste', 'blocage', 'rupture', 'affaiblir', 'dominer'];
+const CONCEPTS = ['tour_colonne', 'cavalier_avant_poste', 'blocage', 'rupture', 'affaiblir', 'dominer', 'attaque_minorite', 'baionnette'];
 const [SHARD, SHARDS] = (opt('--shard', '0/1')).split('/').map(Number);
 
 async function* games(path) {
@@ -134,7 +134,9 @@ async function labelGame(engine, game) {
     const rec = {
       game: game.index, ply: s.ply, fen: s.fen, elo, result: game.headers.Result ?? null, played: s.next,
       eval0: e0, evals, plans,
-      extra: Object.fromEntries(Object.entries(scan).filter(([k]) => /moyen|avant_roque|faiblesse|couleur|exploite|levier|colonne_|echangeable|rangee|_colonne/.test(k) && scan[k] !== null && scan[k] !== -1 && scan[k] !== false)),
+      extra: Object.fromEntries(Object.entries(scan).filter(([k]) => k !== 'atomes' && /moyen|avant_roque|faiblesse|couleur|exploite|levier|colonne_|echangeable|rangee|_colonne/.test(k) && scan[k] !== null && scan[k] !== -1 && scan[k] !== false)),
+      // Atomes (moyens) le long de la partie : matière de l'émergence et des recettes futures.
+      atomes: scan.atomes,
       engine: engine.name,
     };
     appendFileSync(OUT, `${JSON.stringify(rec)}\n`);

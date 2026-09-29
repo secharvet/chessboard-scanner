@@ -6,6 +6,7 @@
 import { Chess } from 'chess.js';
 import { buildAllFacts } from '../positional/index.js';
 import { squareColor } from '../positional/attack-map.js';
+import { detectAtoms } from './atoms.mjs';
 
 // ── Concepts (états buts vérifiables, par camp) ──
 // Chaque détecteur reçoit les faits d'une position et renvoie les couleurs pour lesquelles le concept est vrai.
@@ -216,6 +217,47 @@ export function scanLine(fen, pv, PLIES = 48) {
         || (moves[i].san.includes('+') && (moves[i].piece === 'q' || moves[i].piece === 'b') && squareColor(moves[i].to) === shadeOut)));
     }
     out[`dominer_exploite_${color}`] = exploit;
+  }
+  // ── Recettes (§3 bis) : moyen → déséquilibre → exploitation, sur les atomes et les faits ──
+  const { atoms } = detectAtoms(fen, pv.slice(0, PLIES), PLIES);
+  out.atomes = atoms;
+  for (const color of COLORS) {
+    const opp = color === 'w' ? 'b' : 'w';
+    const has = (snap, id, col, pred = () => true) => snap.facts.some((t) => t.id === id && t.params.color === col && pred(t));
+    // Attaque de minorité : structure Carlsbad du camp au départ ; levier du camp sur la colonne b (b4-b5 ou b5-b4)
+    // ; puis pion c adverse faible (isolé ou arriéré) ou colonne b ouverte pour le camp, et ça tient ; exploitation :
+    // une tour du camp sur la colonne b ou c.
+    let ply = -1;
+    let exploit = -1;
+    if (has(start, 'STRUCTURE', color, (t) => t.params.name === 'CARLSBAD')) {
+      const lever = atoms.find((a) => a.kind === 'levier' && a.side === color && a.file === 'b');
+      if (lever) {
+        const weak = (snap) => snap.facts.some((t) => (t.id === 'PION_ISOLE' || t.id === 'PION_ARRIERE' || t.id === 'PION_FAIBLE') && t.params.color === opp && String(t.params.square ?? '')[0] === 'c')
+          || snap.facts.some((t) => t.id === 'COLONNE_OUVERTE' && String(t.params.file) === 'b')
+          || snap.facts.some((t) => t.id === 'COLONNE_SEMI_OUVERTE' && t.params.color === color && String(t.params.file) === 'b');
+        ply = timeline.findIndex((snap, i) => i >= lever.ply && weak(snap) && holds(i, weak));
+        if (ply >= 0) exploit = timeline.findIndex((snap, i) => i > ply && moves[i].color === color && moves[i].piece === 'r' && 'bc'.includes(moves[i].to[0]));
+      }
+    }
+    out[`attaque_minorite_${color}`] = ply;
+    out[`attaque_minorite_exploite_${color}`] = exploit;
+
+    // Attaque à la baïonnette : l'adversaire a roqué petit derrière un fianchetto (pion g6 ou g3) ; levier du camp
+    // sur la colonne h (h4-h5 ou h5-h4) ; puis bouclier du roi adverse affaibli, et ça tient ; exploitation : dame ou
+    // tour du camp sur la colonne h, ou échange du fou de fianchetto.
+    ply = -1; exploit = -1;
+    const kingSq = start.board.board().flat().find((p) => p && p.type === 'k' && p.color === opp)?.square;
+    const fianchetto = kingSq && 'gh'.includes(kingSq[0]) && start.board.get(opp === 'w' ? 'g3' : 'g6')?.type === 'p';
+    if (fianchetto) {
+      const lever = atoms.find((a) => a.kind === 'levier' && a.side === color && a.file === 'h');
+      if (lever) {
+        const broken = (snap) => has(snap, 'PIONS_ROI_AFFAIBLI', opp);
+        ply = timeline.findIndex((snap, i) => i >= lever.ply && broken(snap) && holds(i, broken));
+        if (ply >= 0) exploit = timeline.findIndex((snap, i) => i > ply && moves[i].color === color && ((moves[i].piece === 'q' || moves[i].piece === 'r') && moves[i].to[0] === 'h'));
+      }
+    }
+    out[`baionnette_${color}`] = ply;
+    out[`baionnette_exploite_${color}`] = exploit;
   }
   return out;
 }

@@ -77,3 +77,24 @@ describe('dominer une couleur', () => {
     assert.equal(s.dominer_w, -1);
   });
 });
+
+describe('atomes et recettes', () => {
+  it('atomes : échange, levier, manœuvre, doublement, roque', async () => {
+    const { detectAtoms } = await import('../coach/atoms.mjs');
+    const fen = 'r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/2N2N2/PPPP1PPP/R1BQK2R w KQkq - 4 5';
+    const { atoms } = detectAtoms(fen, ['e1g1', 'e8g8', 'd2d3', 'd7d6', 'c1g5', 'h7h6', 'g5f6', 'd8f6', 'c3d5', 'f6d8', 'c2c3', 'a7a6', 'a2a4', 'c8e6', 'f1e1', 'e6d5', 'c4d5', 'c6e7', 'd5b3', 'e7g6', 'd1d2', 'g6f4', 'a1d1', 'a8b8'], 24);
+    const kinds = atoms.map((a) => `${a.kind}:${a.side}@${a.ply + 1}`);
+    assert.ok(kinds.includes('roque:w@1') && kinds.includes('roque:b@2'), kinds.join(' '));
+    assert.ok(atoms.some((a) => a.kind === 'echange' && a.side === 'w' && a.takes === 'n' && a.gives === 'b'), 'Fxf6 Dxf6 : échange fou contre cavalier');
+    assert.ok(atoms.some((a) => a.kind === 'manoeuvre' && a.side === 'b' && a.piece === 'n' && a.to === 'f4' && a.steps >= 2), 'Cc6-e7-g6-f4 : manœuvre');
+    assert.ok(atoms.some((a) => a.kind === 'doublement' && a.side === 'w' && a.axis === 'rangee'), 'Te1 et Td1 sur la première rangée');
+  });
+  it('recette : attaque de minorité dans la Carlsbad (b4-b5, pion c6 faible, tour sur la colonne)', async () => {
+    const { scanLine } = await import('../coach/plan-concepts.mjs');
+    // Carlsbad type : Blancs d4 sans pion c, Noirs c6 d5 sans pion e.
+    const fen = 'r1bq1rk1/pp1nbppp/2p2n2/3p4/3P1B2/2N1PN2/PPQ2PPP/2KR1B1R w - - 0 10';
+    const s = scanLine(fen, ['b2b4', 'a7a6', 'a2a4', 'f8e8', 'b4b5', 'a6b5', 'a4b5', 'c6b5', 'c3b5', 'd8b6', 'd1b1', 'c8b7', 'h1d1', 'a8c8', 'c2b3', 'e7d6', 'f4d6', 'b6d6'], 24);
+    assert.ok(s.attaque_minorite_w >= 0, `attaque de minorité attendue, atomes : ${s.atomes.map((a) => a.kind + '@' + (a.ply + 1)).join(' ')}`);
+    assert.ok(s.atomes.some((a) => a.kind === 'levier' && a.file === 'b' && a.side === 'w'));
+  });
+});

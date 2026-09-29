@@ -28,7 +28,7 @@ import { planLabel, scanLine } from '../coach/plan-concepts.mjs';
 const args = process.argv.slice(2);
 const OUT = args.includes('--out') ? args[args.indexOf('--out') + 1] : 'data/datasets/plans-v1.jsonl';
 const inputs = args.filter((a, i) => !a.startsWith('--') && args[i - 1] !== '--out');
-const CONCEPTS = ['tour_colonne', 'cavalier_avant_poste', 'blocage', 'rupture', 'affaiblir', 'dominer'];
+const CONCEPTS = ['tour_colonne', 'cavalier_avant_poste', 'blocage', 'rupture', 'affaiblir', 'dominer', 'attaque_minorite', 'baionnette'];
 
 writeFileSync(OUT, '');
 const seen = new Set();
