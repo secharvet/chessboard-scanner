@@ -32,8 +32,12 @@ const PIECE_VALUE = { p: 1, n: 3, b: 3, r: 5, q: 9, k: 0 };
 const DIFF_IGNORED = new Set([
   'PHASE', 'PIECE_MENACEE', 'CASE_FAIBLE', 'EGALITE_MATERIEL', 'AVANTAGE_MATERIEL',
   'NOMBRE_ILOTS_BLANC', 'NOMBRE_ILOTS_NOIR', 'PIONS_ROI_BOUCLIER', 'ROQUES_OPPOSES',
-]);
-const STATIC_IGNORED = new Set(['STRUCTURE', 'ROQUES_OPPOSES', 'PHASE', 'EGALITE_MATERIEL', 'NOMBRE_ILOTS_BLANC', 'NOMBRE_ILOTS_NOIR']);
+,
+  // Disponibilités (positional/disponibilites.js) : faits d'entraînement, muets dans les textes du coach tant que
+  // leur formulation n'a pas été relue (interpreter.js n'a pas encore de phrase pour eux).
+  'LEVIER_DISPONIBLE', 'ROUTE_CAVALIER', 'ECHANGE_ABIMANT']);
+const STATIC_IGNORED = new Set(['STRUCTURE', 'ROQUES_OPPOSES', 'PHASE', 'EGALITE_MATERIEL', 'NOMBRE_ILOTS_BLANC', 'NOMBRE_ILOTS_NOIR',
+  'LEVIER_DISPONIBLE', 'ROUTE_CAVALIER', 'ECHANGE_ABIMANT']);
 
 /**
  * @typedef {import('./uci-engine.mjs').EngineLine} EngineLine
