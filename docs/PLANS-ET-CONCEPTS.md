@@ -505,6 +505,19 @@ pratique** : part des demi-positions où chaque plan des livres est joué, par t
 5 à 6 % partout ; la manœuvre puis doublement 0 % sous 1200, 5,8 % à 2000 + ; l'attaque de minorité 0,6 % à tous
 les niveaux). À relire sur le volume complet.
 
+**Réponses : « lui fait X, puis je fais Y »** (29 septembre, 45 900 positions avec atomes). L'émergence met les
+événements des deux camps dans la même chronologie et ne garde que « lui : X → moi : Y ». Les réponses fréquentes
+sont triviales (lever → prendre le pion ; manœuvre → manœuvre). Les « plus payantes » sont dominées par « → tour
+à la 7e », qui est une **conséquence** d'une partie déjà gagnée, pas une réponse : le biais du Δ (§9) en plein.
+Trois motifs méritent des planches : *lui : levier à l'aile roi → moi : gain d'espace à l'aile dame* (+161,
+n = 386, la contre-attaque sur l'autre aile), *lui : levier au centre → moi : échange cavalier-contre-fou* (+176,
+n = 377), *lui : marche du roi → moi : gain d'espace à l'aile dame* (+201, finales : le pion passé éloigné). Pour
+voir de vraies réponses défensives il manque les **atomes de la défense** (§3 bis) : fermeture (poussée qui
+verrouille), restriction et prophylaxie (un levier adverse possible ne l'est plus après mon coup), regroupement
+(manœuvre vers mon roi quand des attaquants sont là), retour de matériel voulu. À écrire, avec les recettes
+« réaction à » du catalogue (prophylaxie, surprotection, blocus, échanger l'attaquant, simplifier, fermer le flanc,
+contre-attaque au centre, regroupement, forteresse).
+
 **Prochaines étapes**
 
 1. Planches sur les exemples vérifiés (dont les premiers avant-postes).

@@ -66,17 +66,24 @@ for (const file of files) {
       if (!br || r.evals[last] == null) continue;
       const drift = (side === 'w' ? 1 : -1) * (r.evals[last] - r.eval0);
       (base[br] ??= []).push(drift);
+      // Les événements de l'ADVERSAIRE sont dans la même chronologie, préfixés « lui : » : un motif
+      // « lui : levier·R → échange CxC » est une RÉPONSE (défense, contre-attaque), pas un plan isolé.
+      const opp = side === 'w' ? 'b' : 'w';
       const ev = [
         ...r.atomes.filter((a) => a.side === side).map((a) => [a.ply, label(a)]),
         ...r.plans.filter((p) => p.side === side && p.quiet).map((p) => [p.appear, `→ ${p.concept}`]),
+        ...r.atomes.filter((a) => a.side === opp).map((a) => [a.ply, `lui : ${label(a)}`]),
+        ...r.plans.filter((p) => p.side === opp && p.quiet).map((p) => [p.appear, `lui : → ${p.concept}`]),
       ].sort((a, b) => a[0] - b[0]);
       halfByBr[br] = (halfByBr[br] ?? 0) + 1;
-      const labels = ev.map((e) => e[1]);
+      const labels = ev.filter((e) => !e[1].startsWith('lui : ')).map((e) => e[1]);
       for (const rec of RECETTES) if (containsRecipe(rec, labels)) { const c = coverage.get(rec.nom); c.byBr[br] = (c.byBr[br] ?? 0) + 1; c.drift.push(drift); }
       const seen = new Set();
       for (let i = 0; i < ev.length; i++) for (let j = i + 1; j < ev.length; j++) {
         if (ev[j][0] - ev[i][0] > WINDOW) break;
         if (ev[j][0] <= ev[i][0] || ev[i][1] === ev[j][1]) continue;
+        // On garde : mes enchaînements, et « lui : X → moi : Y » (réponses). Pas « moi → lui » ni « lui → lui ».
+        if (ev[j][1].startsWith('lui : ')) continue;
         const k = `${ev[i][1]} → ${ev[j][1]}`;
         if (seen.has(k)) continue;
         seen.add(k);
@@ -114,11 +121,16 @@ for (const r of rows.filter((r) => !r.k.startsWith('→') && r.k.split(' → ').
   md.push('');
 }
 // ── Nommer les motifs : reconnus dans le catalogue, variantes proches, inconnus ──
-const named = rows.filter((r) => r.n >= MIN * 2 && !(r.k.split(' → ').length === 3 && r.k.split(' → ')[1] === '' )).map((r) => {
+const named = rows.filter((r) => r.n >= MIN * 2 && !r.k.startsWith('lui : ') && !(r.k.split(' → ').length === 3 && r.k.split(' → ')[1] === '' )).map((r) => {
   const [a, b] = r.k.split(' → ').length === 3 ? [r.k.split(' → ')[0], `→ ${r.k.split(' → ')[2]}`] : r.k.split(' → ');
   return { ...r, a, b, ...nameMotif(a, b) };
 });
 const skipTrivial = (r) => !/perte de pion/.test(r.k) && !(/^levier/.test(r.a) && r.b === 'échange PxP');
+const reactions = rows.filter((r) => r.k.startsWith('lui : ') && !/perte de pion/.test(r.k));
+md.push('## Réponses : « lui fait X, puis je fais Y » (défense, contre-attaque)', '', '| Motif | n | par Elo | Δ24 méd. | vs réf. |', '|---|---|---|---|---|',
+  ...fmt([...reactions].sort((a, b) => b.n - a.n).slice(0, 25)), '',
+  '### Les réponses les plus payantes (support ≥ ' + MIN * 2 + ')', '', '| Motif | n | par Elo | Δ24 méd. | vs réf. |', '|---|---|---|---|---|',
+  ...fmt(reactions.filter((r) => r.n >= MIN * 2).sort((a, b) => b.gain - a.gain).slice(0, 20)), '');
 md.push('## Motifs reconnus dans le catalogue de la théorie', '', '| Motif | n | Δ24 vs réf. | Plan nommé (source) |', '|---|---|---|---|');
 for (const r of named.filter((x) => x.exact.length && skipTrivial(x)).sort((x, y) => y.n - x.n).slice(0, 25)) md.push(`| ${r.k} | ${r.n} | ${r.gain >= 0 ? '+' : ''}${r.gain} | ${r.exact.map((e) => `${e.nom} (${e.source})`).join(' ; ')} |`);
 md.push('', '## Motifs sans nom : variantes proches d\'un plan connu', '', '| Motif | n | Δ24 vs réf. | Plus proches voisins |', '|---|---|---|---|');
