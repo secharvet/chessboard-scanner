@@ -98,3 +98,30 @@ describe('atomes et recettes', () => {
     assert.ok(s.atomes.some((a) => a.kind === 'levier' && a.file === 'b' && a.side === 'w'));
   });
 });
+
+describe('atomes de la défense', () => {
+  it('fermeture : la poussée vient buter contre un pion adverse', async () => {
+    const { detectAtoms } = await import('../coach/atoms.mjs');
+    // Française : après e4 e6 d4 d5, e5 ferme le centre contre d5 ? Non : e5 face à e6. Puis ...c5 d'un côté, et f4 ; on
+    // teste 1.e4 e6 2.d4 d5 3.e5 : le pion e5 fait face au pion e6 et tient.
+    const { atoms } = detectAtoms('rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1', ['e2e4', 'e7e6', 'd2d4', 'd7d5', 'e4e5', 'c7c5', 'c2c3', 'b8c6', 'g1f3', 'd8b6', 'a2a3', 'c5c4'], 12);
+    assert.ok(atoms.some((a) => a.kind === 'fermeture' && a.side === 'w' && a.square === 'e5'), atoms.map((a) => a.kind + '@' + (a.ply + 1)).join(' '));
+    assert.ok(atoms.some((a) => a.kind === 'fermeture' && a.side === 'b' && a.square === 'c4'), 'c4 vient buter contre c3');
+  });
+  it('restriction : ma pièce devant son pion lui interdit le levier', async () => {
+    const { detectAtoms } = await import('../coach/atoms.mjs');
+    // Blancs : pions d4 e4 ; Noirs : pion c7 (levier ...c5 contre d4 possible). Cb5-d6 ? Plus simple : Cc3-b5 puis Cb5-... non.
+    // Position : le cavalier blanc vient en c5 devant le pion c6 noir ? Le levier ...c5 n'est possible que depuis c6→c5
+    // attaquant d4/b4. Noirs pion c6, Blancs pion d4 : ...c5 attaque d4 : levier jouable. Le cavalier blanc joue en c5.
+    const fen = 'r1bqkbnr/pp3ppp/2p1p3/8/3PN3/8/PPP2PPP/R1BQKBNR w KQkq - 0 6';
+    const { atoms } = detectAtoms(fen, ['e4c5', 'f8c5', 'd4c5', 'd8a5', 'c2c3', 'a5c5', 'c1e3', 'c5e7'], 8);
+    assert.ok(atoms.some((a) => a.kind === 'restriction' && a.side === 'w' && a.square === 'c5' && a.levier === 'c6c5'), atoms.map((a) => a.kind + ':' + (a.levier ?? '') + '@' + (a.ply + 1)).join(' '));
+  });
+  it('regroupement : une pièce revient près du roi assiégé', async () => {
+    const { detectAtoms } = await import('../coach/atoms.mjs');
+    // Roi blanc g1, dame et cavalier noirs autour (h4, g4) ; le cavalier blanc revient de b1 en d2 puis f1 (défense).
+    const fen = 'r1b2rk1/ppp2ppp/2n5/8/6nq/3B4/PPP2PPP/RNBQR1K1 w - - 0 12';
+    const { atoms } = detectAtoms(fen, ['b1d2', 'a8b8', 'd2f1', 'b8a8', 'f1g3', 'a8b8', 'g3e4', 'b8a8'], 8);
+    assert.ok(atoms.some((a) => a.kind === 'regroupement' && a.side === 'w' && a.to === 'f1'), atoms.map((a) => a.kind + '@' + (a.ply + 1)).join(' '));
+  });
+});

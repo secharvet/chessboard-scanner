@@ -14,6 +14,13 @@
  *   marche_roi   en finale (pas de dame), le roi fait au moins deux pas vers le centre ou vers les pions adverses
  *   perte        le camp perd un pion (ou plus) à un point calme, sans le récupérer dans la fenêtre ; « perte » et
  *                non « sacrifice » : on ne sait pas si c'était voulu, la trajectoire d'évaluation le dira
+ * Atomes de la DÉFENSE (§3 bis : la défense, c'est souvent ce qu'on empêche) :
+ *   fermeture    poussée de pion du camp qui vient se bloquer contre un pion adverse (les deux pions face à face,
+ *                la colonne est verrouillée) et qui tient
+ *   restriction  coup calme du camp après lequel un levier adverse qui était jouable (poussée de pion attaquant un
+ *                de mes pions) ne l'est plus (case occupée ou pion cloué par ma pièce devant lui) ; prophylaxie
+ *   regroupement coup calme d'une pièce (pas pion, pas roi) qui la rapproche de mon roi (distance ≤ 2 à l'arrivée,
+ *                plus près qu'au départ) alors qu'au moins deux pièces adverses (pas pions) sont à distance ≤ 3 du roi
  * Chaque atome : { kind, side, ply, ...details }. Les atomes servent aux recettes (coach/plan-concepts.mjs) et à
  * l'émergence (scripts/emergence.mjs).
  */
@@ -112,6 +119,56 @@ export function detectAtoms(fen, pv, plies = 48) {
       || relRank(m.to, m.color) > relRank(m.from, m.color);
     kingSteps[m.color] = toward ? kingSteps[m.color] + 1 : 0;
     if (kingSteps[m.color] === 2) atoms.push({ kind: 'marche_roi', side: m.color, ply: i, to: m.to });
+  }
+
+  // Fermeture : ma poussée vient buter contre un pion adverse (face à face) et le verrou tient.
+  for (let i = 0; i < n; i++) {
+    const m = moves[i];
+    if (m.piece !== 'p' || m.captured) continue;
+    const dir = m.color === 'w' ? 1 : -1;
+    const ahead = `${m.to[0]}${rankOf(m.to) + dir}`;
+    const p = boards[i].get(ahead);
+    if (p && p.type === 'p' && p.color !== m.color && stays(i, m.to, 'p', m.color)) atoms.push({ kind: 'fermeture', side: m.color, ply: i, square: m.to, file: m.to[0] });
+  }
+
+  // Restriction (prophylaxie) : un levier adverse jouable avant mon coup ne l'est plus après.
+  const leversFor = (board, side) => {
+    const out = new Set();
+    for (const p of board.board().flat()) {
+      if (!p || p.type !== 'p' || p.color !== side) continue;
+      const dir = side === 'w' ? 1 : -1;
+      for (const step of [1, 2]) {
+        if (step === 2 && relRank(p.square, side) !== 2) break;
+        const to = `${p.square[0]}${rankOf(p.square) + dir * step}`;
+        if (rankOf(to) < 1 || rankOf(to) > 8 || board.get(to)) break;
+        const attacks = [-1, 1].some((d) => { const q = board.get(`${String.fromCharCode(to.charCodeAt(0) + d)}${rankOf(to) + dir}`); return q && q.type === 'p' && q.color !== side; });
+        if (attacks) out.add(`${p.square}${to}`);
+      }
+    }
+    return out;
+  };
+  for (let i = 0; i < n; i++) {
+    const m = moves[i];
+    if (m.captured || m.piece === 'k' || m.san.includes('+')) continue;
+    const opp = m.color === 'w' ? 'b' : 'w';
+    const before = leversFor(i === 0 ? start : boards[i - 1], opp);
+    if (!before.size) continue;
+    const after = leversFor(boards[i], opp);
+    const removed = [...before].filter((l) => !after.has(l));
+    // Seulement si c'est MON coup qui l'empêche (pièce posée devant le pion), pas le hasard d'un pion qui bouge.
+    if (removed.length && removed.some((l) => l.slice(2, 4) === m.to)) atoms.push({ kind: 'restriction', side: m.color, ply: i, square: m.to, levier: removed[0] });
+  }
+
+  // Regroupement : je ramène une pièce près de mon roi quand des pièces adverses rôdent autour.
+  const dist = (a, b) => Math.max(Math.abs(fileOf(a) - fileOf(b)), Math.abs(rankOf(a) - rankOf(b)));
+  for (let i = 0; i < n; i++) {
+    const m = moves[i];
+    if (m.captured || m.piece === 'p' || m.piece === 'k') continue;
+    const b = boards[i];
+    const king = b.board().flat().find((p) => p && p.type === 'k' && p.color === m.color)?.square;
+    if (!king) continue;
+    const raiders = b.board().flat().filter((p) => p && p.color !== m.color && p.type !== 'p' && p.type !== 'k' && dist(p.square, king) <= 3).length;
+    if (raiders >= 2 && dist(m.to, king) <= 2 && dist(m.to, king) < dist(m.from, king)) atoms.push({ kind: 'regroupement', side: m.color, ply: i, piece: m.piece, to: m.to });
   }
 
   // Perte de matériel : à un point calme, le camp a perdu au moins un pion de matériel par rapport au départ, et ne l'a

@@ -43,6 +43,9 @@ function label(a) {
     case 'roque': return a.long ? 'grand roque' : 'petit roque';
     case 'marche_roi': return 'marche du roi';
     case 'perte': return 'perte de pion';
+    case 'fermeture': return `fermeture·${wing(a.file)}`;
+    case 'restriction': return 'restriction';
+    case 'regroupement': return `regroupement ${P[a.piece]}`;
     default: return a.kind;
   }
 }
