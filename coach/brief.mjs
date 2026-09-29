@@ -13,6 +13,7 @@
 import { Chess } from 'chess.js';
 import { buildAttackMap } from '../positional/attack-map.js';
 import { buildAllFacts } from '../positional/index.js';
+import { planSentence } from './plans.mjs';
 import { renderToken } from '../positional/interpreter.js';
 import { buildTacticalFacts } from '../positional/piece-attacks.js';
 import { enToFr } from './notation.mjs';
@@ -198,13 +199,21 @@ export function buildBrief(data) {
   }
   items.push({ ...reason, kind: 'reason', type: reason.kind });
 
-  // Position calme : un PLAN en 2-3 étapes, construit par le code (manœuvre, colonne, cible, structure).
+  // Position calme : un PLAN en 2-3 étapes. D'abord le plan VÉRIFIÉ par le moteur (coach/plans.mjs : le concept
+  // apparaît dans sa meilleure suite et pas dans les autres), puis les étapes construites par le code.
+  const verified = data.plans?.[me]?.[0] ?? null;
   if (['develop', 'center', 'castle', 'plan', 'basics', 'best'].includes(reason.kind)) {
-    const steps3 = planSteps(data, me, opp, pieces, items);
+    let first = null;
+    if (verified) {
+      items.push({ kind: 'plan_verified', ...verified });
+      for (const [t, o, sq] of verified.pieceRefs) pieces.add(`${t}|${o === me ? 'me' : 'opp'}|${sq}`);
+      first = planSentence(verified, 'me');
+    }
+    const steps3 = [first, ...planSteps(data, me, opp, pieces, items, { skipRook: verified?.concept === 'tour_colonne', verifiedTo: verified?.to ?? null })].filter(Boolean).slice(0, 3);
     if (steps3.length) {
       items.push({ kind: 'plan_steps', steps: steps3 });
       const [s1, s2, s3] = steps3;
-      sentences.push(`Ton plan : ${s1}${s2 ? `, ensuite ${s2}` : ''}${s3 ? `, et ${s3}` : ''}.`);
+      sentences.push(`Ton plan${verified ? ' (vérifié dans la meilleure suite du moteur)' : ''} : ${s1}${s2 ? `, ensuite ${s2}` : ''}${s3 ? `, et ${s3}` : ''}.`);
     }
   }
 
@@ -227,10 +236,19 @@ export function buildBrief(data) {
 
   // À surveiller : la première idée adverse (déjà nommée par le détecteur), sans chiffre Stockfish.
   const p0 = data.prepared?.[0];
-  if (p0 && reason.kind !== 'parry' && reason.kind !== 'parry_mate') {
-    const txt = p0.text.replace(/\s*\(Stockfish[^)]*\)\)?/, '').replace(/ \((?:pion|cavalier|fou|tour|dame|roi|roque)\)/g, '');
-    items.push({ kind: 'watch', text: txt });
-    sentences.push(`À surveiller : ${txt}.`);
+  const his = data.plans?.[opp]?.[0] ?? null;
+  if (reason.kind !== 'parry' && reason.kind !== 'parry_mate' && (p0 || his)) {
+    const parts = [];
+    if (p0) parts.push(p0.text.replace(/\s*\(Stockfish[^)]*\)\)?/, '').replace(/ \((?:pion|cavalier|fou|tour|dame|roi|roque)\)/g, ''));
+    // Le plan de l'adversaire, vérifié dans SA meilleure suite : la base de la prophylaxie.
+    if (his) {
+      items.push({ kind: 'opp_plan', ...his });
+      for (const [t, o, sq] of his.pieceRefs) pieces.add(`${t}|${o === me ? 'me' : 'opp'}|${sq}`);
+      const s = planSentence(his, 'opp');
+      parts.push(`son plan est ${/^[aeiouyéèêh]/i.test(s) ? "d'" : 'de '}${s}`);
+    }
+    items.push({ kind: 'watch', text: parts.join(' ; ') });
+    sentences.push(`À surveiller : ${parts.join(' ; ')}.`);
   }
   return finish(items, sentences, pieces, data);
 }
@@ -240,13 +258,14 @@ export function buildBrief(data) {
  *   manœuvre sûre (de préférence amorcée par une ligne du moteur) → colonne pour une tour →
  *   cible (faiblesse adverse) → idée de la structure de pions.
  */
-function planSteps(data, me, opp, pieces, items) {
+function planSteps(data, me, opp, pieces, items, { skipRook = false, verifiedTo = null } = {}) {
   const out = [];
   const board = new Chess(data.fen);
   const inLines = (m) => data.candidates.some((c) => (c.pvUci ?? []).some((u) => u.slice(0, 4) === m.path[0] + m.path[1]));
-  // Seulement une manœuvre dont le premier pas figure dans une ligne du moteur (sinon ce n'est pas un plan sûr).
-  const man = (data.maneuvers ?? []).find(inLines);
-  let rookPlanned = false;
+  // Seulement une manœuvre dont le premier pas figure dans une ligne du moteur (sinon ce n'est pas un plan sûr),
+  // et pas celle que le plan vérifié vient déjà de dire (même case d'arrivée).
+  const man = (data.maneuvers ?? []).find((m) => inLines(m) && m.to !== verifiedTo);
+  let rookPlanned = skipRook;
   if (man) {
     const type = board.get(man.from)?.type;
     if (type) {

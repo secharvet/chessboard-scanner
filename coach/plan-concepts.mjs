@@ -66,6 +66,7 @@ export function scanLine(fen, pv, PLIES = 48) {
   const timeline = [];
   const moves = [];
   const levers = { w: [], b: [] };
+  const leverFiles = { w: [], b: [] }; // colonne (0-7) de chaque levier, même index que levers
   for (const [i, u] of pv.slice(0, PLIES).entries()) {
     let m;
     try { m = c.move({ from: u.slice(0, 2), to: u.slice(2, 4), promotion: u[4] }); } catch { break; }
@@ -77,7 +78,7 @@ export function scanLine(fen, pv, PLIES = 48) {
         const p = c.get(`${String.fromCharCode(f + d)}${Number(m.to[1]) + dir}`);
         return p && p.type === 'p' && p.color !== m.color;
       });
-      if (attacks) levers[m.color].push(i);
+      if (attacks) { levers[m.color].push(i); leverFiles[m.color].push(m.to.charCodeAt(0) - 97); }
     }
     timeline.push({ facts: buildAllFacts(c.fen()), board: new Chess(c.fen()) });
   }
@@ -122,6 +123,12 @@ export function scanLine(fen, pv, PLIES = 48) {
       if (firstLever <= opened && firstLever < oppLever && (rookUses || structural)) ply = opened;
     }
     out[`rupture_${color}`] = ply;
+    // Pour l'explication : la colonne ouverte, et LE levier qui l'a ouverte (le dernier, avant l'ouverture, sur
+    // cette colonne ou une voisine) ; à défaut le premier levier du camp.
+    const fileIdx = ply >= 0 ? fresh[0].charCodeAt(0) - 97 : -1;
+    const near = ply >= 0 ? levers[color].map((l, k) => [l, leverFiles[color][k]]).filter(([l, f]) => l <= ply && Math.abs(f - fileIdx) <= 1) : [];
+    out[`rupture_levier_${color}`] = ply >= 0 ? (near.at(-1)?.[0] ?? levers[color][0]) : -1;
+    out[`rupture_colonne_${color}`] = ply >= 0 ? fresh[0] : null;
   }
 
   // Affaiblir la structure adverse (plan à étages : MOYEN → DÉSÉQUILIBRE) : une faiblesse nouvelle
@@ -138,22 +145,29 @@ export function scanLine(fen, pv, PLIES = 48) {
     let ply = -1;
     let means = null;
     let wing = null;
+    let weakness = null;
     for (let i = 0; i < timeline.length && ply < 0; i++) {
       const fresh = timeline[i].facts.filter((t) => t.params.color === opp).map((t) => [weakKey(t), t])
         .filter(([k]) => k && !had.has(k) && holds(i, (s) => s.facts.some((u) => u.params.color === opp && weakKey(u) === k)));
       if (!fresh.length) continue;
       const m = moves[i];
       const prev = moves[i - 1];
+      const t = fresh[0][1];
+      const wFile = (t.params.file ?? t.params.square?.[0] ?? String(t.params.files ?? '')[0] ?? '').charCodeAt(0) - 97;
+      // Le moyen doit être lié à la faiblesse : la reprise de pion qui la crée, ou un levier voisin de sa colonne.
+      const lever = levers[color].map((l, k) => [l, leverFiles[color][k]]).filter(([l, f]) => l <= i && (wFile < 0 || Math.abs(f - wFile) <= 1)).at(-1);
       if (m.color === opp && m.piece === 'p' && m.captured && m.captured !== 'p' && prev?.color === color && prev.captured) means = 'echange';
-      else if (levers[color].some((l) => l <= i)) means = 'poussee';
+      else if (lever) means = 'poussee';
       else continue; // faiblesse sans moyen identifiable du camp : pas un plan de ce type
       ply = i;
-      const t = fresh[0][1];
+      out[`affaiblir_levier_${color}`] = means === 'poussee' ? lever[0] : -1;
+      weakness = { id: t.id, square: t.params.square ?? null, file: t.params.file ?? null };
       const file = t.params.file ?? t.params.square?.[0] ?? String(t.params.files ?? '')[0];
       wing = file && 'efgh'.includes(file) ? 'roi' : file ? 'dame' : null;
     }
     out[`affaiblir_${color}`] = ply;
     out[`affaiblir_moyen_${color}`] = means;
+    out[`affaiblir_faiblesse_${color}`] = weakness;
     // L'adversaire pouvait-il encore roquer de ce côté au départ ?
     const rights = opp === 'w' ? { roi: 'K', dame: 'Q' } : { roi: 'k', dame: 'q' };
     out[`affaiblir_avant_roque_${color}`] = ply >= 0 && wing ? castling.includes(rights[wing]) : false;
@@ -249,15 +263,24 @@ export const GAP = 30;
  * 1 : le concept est le plan de `side` (dans la meilleure suite, calme, contraste réussi) ;
  * 0 : il n'apparaît pas dans la meilleure suite ;
  * null : ambigu (apparaît sans contraste, ou par une suite tactique, ou trop tard) : à exclure.
- * `r` : { fen, evals, pvs } ; `lines` : scanLine de chaque suite.
+ * `r` : { fen, evals, pvs } ; `lines` : scanLine de chaque suite ; `override` : { maxPly, consensus }.
+ *   maxPly : le coach borne l'horizon à ce qu'il peut raconter maintenant.
+ *   consensus : quand AUCUNE suite n'est nettement moins bonne (coups qui se valent, cas fréquent en direct),
+ *   le concept est le plan s'il apparaît dans TOUTES les suites équivalentes (des ordres de coups différents
+ *   qui mènent au même état but renforcent l'étiquette, §4) ; sinon ambigu.
  */
-export function planLabel(r, lines, concept, side) {
+export function planLabel(r, lines, concept, side, override = {}) {
   const k = `${concept}_${side}`;
   const p = lines[0][k];
   if (!(p >= 0)) return 0;
-  const { tempo, maxPly } = CONTRAST[concept] ?? CONTRAST.default;
+  const rule = CONTRAST[concept] ?? CONTRAST.default;
+  const tempo = rule.tempo;
+  const maxPly = Math.min(rule.maxPly, override.maxPly ?? Infinity);
   if (p >= maxPly) return null;
   const worse = lines.slice(1).filter((_, i) => r.evals[0] - r.evals[i + 1] >= GAP);
-  if (!worse.length || worse.some((l) => l[k] >= 0 && (!tempo || l[k] < p + tempo))) return null;
+  if (!worse.length) {
+    const others = lines.slice(1);
+    if (!override.consensus || !others.length || !others.every((l) => l[k] >= 0)) return null;
+  } else if (worse.some((l) => l[k] >= 0 && (!tempo || l[k] < p + tempo))) return null;
   return quietReason(r.fen, r.pvs[0], p, concept) ? null : 1;
 }

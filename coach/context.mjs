@@ -9,6 +9,8 @@
  */
 
 import { Chess } from 'chess.js';
+import { extendPv } from './extend-line.mjs';
+import { detectPlans } from './plans.mjs';
 import { buildAllFacts, detectPhase } from '../positional/index.js';
 import { buildAttackMap } from '../positional/attack-map.js';
 import { renderToken, tokenWeight } from '../positional/interpreter.js';
@@ -69,13 +71,22 @@ export async function buildCoachContext({ fen, side, moves = [], engine, depth =
     .catch(() => []);
   const maneuvers = findManeuvers(fen, player, { max: 4 });
   const structures = describeStructures(allFacts, player);
+  // Plans vérifiés (coach/plans.mjs) : suites prolongées à 24 demi-coups (une relance légère du moteur),
+  // puis contraste entre la meilleure suite et les autres. Les deux camps : « ton plan » et « il veut ».
+  const plans = await verifiedPlans(engine, fen, lines).catch(() => ({ w: [], b: [] }));
 
-  const data = { fen, player, toMove, phase, candidates, threat, staticFacts, balance, structures, prepared, maneuvers, moves };
+  const data = { fen, player, toMove, phase, candidates, threat, staticFacts, balance, structures, prepared, maneuvers, moves, plans };
   const rendered = renderContext(data);
   return { text: rendered.text, data: { ...data, facts: rendered.facts } };
 }
 
 // ── Lignes du moteur ──
+
+async function verifiedPlans(engine, fen, lines) {
+  const extended = [];
+  for (const l of lines) extended.push({ pv: await extendPv(engine, fen, l.pv, { plies: 24, depth: 12, relaunch: 1 }), score: l.score });
+  return detectPlans({ fen, lines: extended, plies: 24, maxPly: 12 });
+}
 
 /**
  * @param {string} fen
