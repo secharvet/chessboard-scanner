@@ -230,6 +230,12 @@ contrefactuels avec l'entraînement, puis la relecture par un joueur fort dès q
   pour les plans lents (attaque de minorité, roi actif, transformation d'avantage). Piste : prolonger la suite en
   relançant Stockfish depuis sa dernière position, ou adapter la longueur au concept.
 - **Suites équivalentes** : quand trois coups se valent, le contraste disparaît ; ces positions seront exclues ou marquées.
+- **Dépendance au moteur** (mesurée le 29 septembre) : sur 60 plans étiquetés avec Stockfish 17.1 (profondeur 16,
+  stables à 18), Stockfish 19 à la même profondeur ne remet le concept dans sa meilleure suite que 34 fois et ne
+  redonne un plan positif que 17 fois ; Stockfish 17.1 rejoué redonne 54 sur 60 (déterminisme). Une part des
+  « plans » est donc une manie d'une version du moteur, pas une propriété de la position. **Règle adoptée** : un
+  plan ne compte que si **deux moteurs différents** le trouvent (vérification des étiquettes et coach). Moins
+  d'exemples, mais des plans qui tiennent.
 - **Niveaux** : le plan optimal selon Stockfish n'est pas toujours enseignable à un débutant. L'Elo des parties
   servira à étudier ce que les joueurs de chaque niveau réussissent réellement.
 
@@ -305,6 +311,14 @@ Contrôle visuel (3 séries de planches) : rupture et tour sur colonne correspon
 fixe), le gain réel est modeste : génération 2 300 positions/h (inchangé), prolongation 1 600/h (+16 %). Une
 profondeur nominale coûte plus de nœuds dans la version 19, et les vCPU partagent leurs unités de calcul. On garde
 la 19 (plus forte, même coût) ; chaque enregistrement porte le nom du moteur.
+
+**Plan vérifié dans le coach** (29 septembre, `coach/plans.mjs`) : en mode fiche, les suites du moteur sont
+prolongées à 24 demi-coups, chaque concept passe par `planLabel` (horizon 12 demi-coups ; quand aucune suite n'est
+nettement moins bonne, cas fréquent en direct, le **consensus** de toutes les suites équivalentes vaut contraste), et
+la fiche écrit « Ton plan (vérifié …) » et « son plan est de … » (prophylaxie). Sur le banc de 16 positions (débuts,
+pièges, finales), le plan ne sort que dans 1 réponse : le banc ne mesure pas ce module, il faudra un banc de
+milieux de partie tirés des étiquettes vérifiées. Rappel sur 60 plans étiquetés : 20 % avec Stockfish 19 seul,
+cause identifiée ci-dessus (§7, dépendance au moteur) ; le coach exige désormais l'accord des deux moteurs.
 
 **Chaîne d'entraînement prête** (`scripts/build-dataset.mjs`, `scripts/train-plans.py`) : étiquettes recalculées
 depuis les suites, 4 modèles comparés sur des parties jamais vues (règle linéaire sur les faits, arbres de décision
