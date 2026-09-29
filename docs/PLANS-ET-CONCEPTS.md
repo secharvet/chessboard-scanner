@@ -111,6 +111,52 @@ La liste est un point de départ. Elle sera révisée selon ce que les données 
 
 ---
 
+## 3 bis. Une grammaire plutôt qu'une liste : moyens, déséquilibres, recettes
+
+**État des lieux (29 septembre).** Six concepts codés comme plans (tour sur colonne, cavalier sur avant-poste,
+blocage, rupture, affaiblir, dominer une couleur), onze listés au §3 sans code, une cinquantaine de faits du moteur
+de règles comme ingrédients. La théorie (Steinitz, Nimzowitsch, Pachman, Silman, Soltis, Dvoretsky) nomme **50 à
+60 plans** ; ce qui manque, par famille :
+
+| Famille | Chez nous | Manquant ou incomplet |
+|---|---|---|
+| Pièces lourdes | tour sur colonne | doublement des tours, tour à la 7e, tour derrière le pion passé, dame centralisée, levée de tour |
+| Pièces mineures | avant-poste, dominer une couleur, blocage | échanger le mauvais fou, fou contre cavalier selon la structure, paire de fous et ouverture du jeu, reroutage d'un cavalier, « la pire pièce d'abord » |
+| Structure de pions | rupture, affaiblir, blocage | attaque de minorité, avance de la majorité, création du pion passé, fixation des pions adverses, sape de la base d'une chaîne, pions pendants, plans du PDI, gain d'espace |
+| Roi | affaiblir avant le roque, complexe faible près du roi | tempête de pions sur roques opposés, attaque h4-h5 contre le fianchetto, échange du défenseur clé, ouverture de lignes vers le roi, roi actif en finale |
+| Dynamique | — | initiative et tempo, ouvrir quand on est mieux développé, fermer sinon, contre-attaque au centre face à une attaque de flanc, sacrifice positionnel |
+| Défense | — | simplification quand on est devant, échange des pièces attaquantes, blocus d'un pion passé, prophylaxie, forteresse |
+| Finale | — | activation du roi, pion passé éloigné, majorité, coupure du roi adverse, opposition |
+| Par structure (Soltis) | Carlsbad, PDI, chaînes Est-indienne et Française reconnues | les 2 ou 3 plans canoniques de chaque structure, par camp |
+
+**Granularité : les plans nommés sont composites.** Décomposés, ils ont tous la même grammaire (§8) :
+- *attaque de minorité* = levier b4-b5 → pion c6 faible ou colonne b ouverte → tours sur c6 ;
+- *attaque à la baïonnette* = levier h4-h5 → bouclier du roi brisé → pièces sur la colonne h ;
+- *dominer une couleur* = échange du fou → complexe faible → pièces sur ces cases ;
+- *pion passé éloigné* = échanges → majorité → poussée → pion passé → roi adverse attiré.
+
+Le vocabulaire atomique est petit :
+- une douzaine de **moyens** (opérations, événements le long de la partie) : échange (quelle pièce contre laquelle),
+  levier, poussée de gain d'espace, manœuvre d'une pièce vers une case, occupation d'une colonne ou d'une rangée,
+  doublement, roque, marche du roi, sacrifice de pion ;
+- une vingtaine de **déséquilibres** (faits qui apparaissent ou disparaissent) : colonne ouverte, pion faible,
+  avant-poste, complexe faible, bouclier brisé, pion passé, paire de fous, roi au centre, espace…
+
+Les plans de la théorie sont des **recettes** sur ce vocabulaire, nommées après coup, comme Nimzowitsch a nommé ce
+que les forts joueurs faisaient déjà. Décisions :
+1. détecter les **atomes** (moyens comme événements, déséquilibres comme faits) plutôt qu'ajouter des concepts
+   monolithiques ; il manque comme moyens : manœuvre, poussée d'espace, doublement, sacrifice ;
+2. écrire chaque plan nommé comme une **recette** (triplet avec contraintes de proximité, comme le levier voisin de
+   la colonne qu'il ouvre) ; six existent, une quarantaine tiennent en quelques lignes chacune ;
+3. laisser l'**émergence** (§8) proposer les recettes non nommées, sur les parties humaines ;
+4. adapter la granularité au niveau : l'atome au débutant (« mets ta tour sur la colonne ouverte »), la recette à
+   l'intermédiaire, la recette avec sa condition et sa prophylaxie à l'avancé.
+
+Pour les réseaux : prédire les **déséquilibres visés** (une vingtaine de sorties, chacune bien fournie) plutôt que
+les recettes (soixante, dont la moitié rares) ; la recette se reconstitue symboliquement.
+
+---
+
 ## 4. Fabriquer les étiquettes sans LLM ni humain
 
 Pour chaque position tirée de vraies parties (base publique de Lichess) :
