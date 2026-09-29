@@ -17,6 +17,7 @@ import { createReadStream, writeFileSync } from 'node:fs';
 import { createInterface } from 'node:readline';
 import { Chess } from 'chess.js';
 import { toFrenchSan } from '../coach/notation.mjs';
+import { RECETTES, containsRecipe, nameMotif } from '../coach/recettes.mjs';
 
 const args = process.argv.slice(2);
 const opt = (k, d) => (args.includes(k) ? args[args.indexOf(k) + 1] : d);
@@ -48,6 +49,9 @@ function label(a) {
 
 const med = (arr) => { if (!arr.length) return null; const s = [...arr].sort((x, y) => x - y); return s[s.length >> 1]; };
 const motifs = new Map(); // motif -> { n, byBr: {br: n}, drift: [], ex: [] }
+// Couverture du catalogue : combien de demi-positions contiennent chaque recette de la théorie, par tranche.
+const coverage = new Map(RECETTES.map((r) => [r.nom, { byBr: {}, drift: [] }]));
+const halfByBr = {};
 const base = {}; // br -> drifts
 let n = 0;
 for (const file of files) {
@@ -66,6 +70,9 @@ for (const file of files) {
         ...r.atomes.filter((a) => a.side === side).map((a) => [a.ply, label(a)]),
         ...r.plans.filter((p) => p.side === side && p.quiet).map((p) => [p.appear, `→ ${p.concept}`]),
       ].sort((a, b) => a[0] - b[0]);
+      halfByBr[br] = (halfByBr[br] ?? 0) + 1;
+      const labels = ev.map((e) => e[1]);
+      for (const rec of RECETTES) if (containsRecipe(rec, labels)) { const c = coverage.get(rec.nom); c.byBr[br] = (c.byBr[br] ?? 0) + 1; c.drift.push(drift); }
       const seen = new Set();
       for (let i = 0; i < ev.length; i++) for (let j = i + 1; j < ev.length; j++) {
         if (ev[j][0] - ev[i][0] > WINDOW) break;
@@ -105,6 +112,26 @@ for (const r of rows.filter((r) => !r.k.startsWith('→') && r.k.split(' → ').
   md.push(`### ${r.k} (n = ${r.n})`);
   for (const e of r.ex) md.push(`- ${e.side === 'w' ? 'Blancs' : 'Noirs'} ${e.elo} Elo — \`${e.fen}\` — ${san(e.fen, e.played, e.upto)}`);
   md.push('');
+}
+// ── Nommer les motifs : reconnus dans le catalogue, variantes proches, inconnus ──
+const named = rows.filter((r) => r.n >= MIN * 2 && !(r.k.split(' → ').length === 3 && r.k.split(' → ')[1] === '' )).map((r) => {
+  const [a, b] = r.k.split(' → ').length === 3 ? [r.k.split(' → ')[0], `→ ${r.k.split(' → ')[2]}`] : r.k.split(' → ');
+  return { ...r, a, b, ...nameMotif(a, b) };
+});
+const skipTrivial = (r) => !/perte de pion/.test(r.k) && !(/^levier/.test(r.a) && r.b === 'échange PxP');
+md.push('## Motifs reconnus dans le catalogue de la théorie', '', '| Motif | n | Δ24 vs réf. | Plan nommé (source) |', '|---|---|---|---|');
+for (const r of named.filter((x) => x.exact.length && skipTrivial(x)).sort((x, y) => y.n - x.n).slice(0, 25)) md.push(`| ${r.k} | ${r.n} | ${r.gain >= 0 ? '+' : ''}${r.gain} | ${r.exact.map((e) => `${e.nom} (${e.source})`).join(' ; ')} |`);
+md.push('', '## Motifs sans nom : variantes proches d\'un plan connu', '', '| Motif | n | Δ24 vs réf. | Plus proches voisins |', '|---|---|---|---|');
+for (const r of named.filter((x) => !x.exact.length && x.proches.length && skipTrivial(x)).sort((x, y) => y.gain - x.gain).slice(0, 20)) md.push(`| ${r.k} | ${r.n} | ${r.gain >= 0 ? '+' : ''}${r.gain} | ${r.proches.map((p) => `${p.nom} (${p.commun}/2)`).join(' ; ')} |`);
+md.push('', '## Motifs sans rien de proche (candidats nouveaux)', '', '| Motif | n | Δ24 vs réf. |', '|---|---|---|');
+for (const r of named.filter((x) => !x.exact.length && !x.proches.length && skipTrivial(x)).sort((x, y) => y.n - x.n).slice(0, 15)) md.push(`| ${r.k} | ${r.n} | ${r.gain >= 0 ? '+' : ''}${r.gain} |`);
+md.push('', '## Les plans des livres que les humains jouent, par niveau', '', `Part des demi-positions contenant la recette (${BR.map(([b]) => `${b} : ${halfByBr[b] ?? 0}`).join(', ')}).`, '',
+  '| Plan (source) | Niveau supposé | ' + BR.map(([b]) => b).join(' | ') + ' | Δ24 méd. |', '|---|---|' + BR.map(() => '---').join('|') + '|---|');
+for (const rec of RECETTES) {
+  const c = coverage.get(rec.nom);
+  const tot = Object.values(c.byBr).reduce((x, y) => x + y, 0);
+  if (!tot) continue;
+  md.push(`| ${rec.nom} (${rec.source}) | ${rec.niveau} | ${BR.map(([b]) => (halfByBr[b] ? `${(100 * (c.byBr[b] ?? 0) / halfByBr[b]).toFixed(1)} %` : '—')).join(' | ')} | ${med(c.drift)} |`);
 }
 writeFileSync(OUT, `${md.join('\n')}\n`);
 console.log(`${rows.length} motifs (support ≥ ${MIN}) sur ${n} positions -> ${OUT}`);

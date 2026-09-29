@@ -493,6 +493,18 @@ n'y est pas encore ; à refaire avec la colonne cible.
   gain d'espace au centre (+165). À rejouer sur le volume complet (support ≥ 300) et à relire sur planches ; le Δ
   reste un indice (il mesure aussi le joueur).
 
+**Catalogue de la théorie et nommage des motifs** (`coach/recettes.mjs`, 30 recettes à ce jour, écrites dans le
+vocabulaire des atomes avec leur source et leur niveau supposé). Chaque motif qui émerge est **reconnu** (sous-séquence
+d'une recette), **voisin** (mêmes éléments à l'aile ou à la pièce près, plus proches voisins listés) ou **inconnu**.
+Première passe sur 10 700 positions : les motifs fréquents sont presque tous reconnus (affaiblir par l'échange
+fou-contre-cavalier, rupture centrale, ouvrir puis occuper la colonne, roquer puis échanger…). Parmi les voisins
+bien au-dessus de la référence de dérive : *affaiblir puis cavalier sur avant-poste* (créer le trou, l'occuper,
++190, n = 68), *doubler puis tour à la 7e* (+161), *échange fou-contre-cavalier puis tour à la 7e* (+208) : des
+recettes connues qui manquaient au catalogue, à y ajouter. Dans l'autre sens, **la couverture de la théorie par la
+pratique** : part des demi-positions où chaque plan des livres est joué, par tranche d'Elo (le roi actif en finale
+5 à 6 % partout ; la manœuvre puis doublement 0 % sous 1200, 5,8 % à 2000 + ; l'attaque de minorité 0,6 % à tous
+les niveaux). À relire sur le volume complet.
+
 **Prochaines étapes**
 
 1. Planches sur les exemples vérifiés (dont les premiers avant-postes).
