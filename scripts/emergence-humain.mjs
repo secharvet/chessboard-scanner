@@ -76,7 +76,7 @@ for (const file of files) {
         ...r.plans.filter((p) => p.side === opp && p.quiet).map((p) => [p.appear, `lui : → ${p.concept}`]),
       ].sort((a, b) => a[0] - b[0]);
       halfByBr[br] = (halfByBr[br] ?? 0) + 1;
-      const labels = ev.filter((e) => !e[1].startsWith('lui : ')).map((e) => e[1]);
+      const labels = ev.map((e) => e[1]);
       for (const rec of RECETTES) if (containsRecipe(rec, labels)) { const c = coverage.get(rec.nom); c.byBr[br] = (c.byBr[br] ?? 0) + 1; c.drift.push(drift); }
       const seen = new Set();
       for (let i = 0; i < ev.length; i++) for (let j = i + 1; j < ev.length; j++) {
@@ -121,8 +121,13 @@ for (const r of rows.filter((r) => !r.k.startsWith('→') && r.k.split(' → ').
   md.push('');
 }
 // ── Nommer les motifs : reconnus dans le catalogue, variantes proches, inconnus ──
-const named = rows.filter((r) => r.n >= MIN * 2 && !r.k.startsWith('lui : ') && !(r.k.split(' → ').length === 3 && r.k.split(' → ')[1] === '' )).map((r) => {
-  const [a, b] = r.k.split(' → ').length === 3 ? [r.k.split(' → ')[0], `→ ${r.k.split(' → ')[2]}`] : r.k.split(' → ');
+const splitMotif = (k) => {
+  // « X → → concept » : le second élément est un déséquilibre (libellé « → concept ») ; « lui : → concept » possible.
+  const m = k.match(/^(.*?) → (→ .*|lui : → .*|.*)$/);
+  return m ? [m[1], m[2]] : k.split(' → ');
+};
+const named = rows.filter((r) => r.n >= MIN * 2).map((r) => {
+  const [a, b] = splitMotif(r.k);
   return { ...r, a, b, ...nameMotif(a, b) };
 });
 const skipTrivial = (r) => !/perte de pion/.test(r.k) && !(/^levier/.test(r.a) && r.b === 'échange PxP');
