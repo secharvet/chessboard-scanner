@@ -19,7 +19,7 @@
  * un fil par processus) ; chacun a son propre fichier de sortie.
  */
 
-import { createReadStream, existsSync, mkdirSync, readFileSync, appendFileSync } from 'node:fs';
+import { createReadStream, existsSync, mkdirSync, readFileSync, readdirSync, appendFileSync } from 'node:fs';
 import { createInterface } from 'node:readline';
 import { Chess } from 'chess.js';
 import { UciEngine } from '../coach/uci-engine.mjs';
@@ -76,10 +76,16 @@ function samples(game) {
 }
 
 mkdirSync(OUT.replace(/\/[^/]*$/, ''), { recursive: true });
+// Parties déjà traitées : par ce fichier ET par les autres tranches (`<base>.s<k>.jsonl`), pour pouvoir changer
+// le nombre de tranches en cours de route sans retraiter ni perdre de parties.
 const done = new Set();
-if (existsSync(OUT)) for (const l of readFileSync(OUT, 'utf8').split('\n')) if (l) done.add(JSON.parse(l).game);
+const dir = OUT.replace(/\/[^/]*$/, '') || '.';
+const base = OUT.split('/').pop().replace(/\.s\d+\.jsonl$/, '').replace(/\.jsonl$/, '');
+for (const f of readdirSync(dir)) {
+  if (!f.startsWith(base) || !(f.endsWith('.jsonl') || f.endsWith('.jsonl.done'))) continue;
+  for (const l of readFileSync(`${dir}/${f}`, 'utf8').split('\n')) if (l) done.add(f.endsWith('.done') ? Number(l) : JSON.parse(l).game);
+}
 const DONE = `${OUT}.done`;
-if (existsSync(DONE)) for (const l of readFileSync(DONE, 'utf8').split('\n')) if (l) done.add(Number(l));
 console.error(`${done.size} parties déjà traitées — sortie ${OUT}, ${WORKERS} moteur(s), profondeur ${DEPTH}`);
 
 const engines = Array.from({ length: WORKERS }, () => new UciEngine({ threads: 1 }));
