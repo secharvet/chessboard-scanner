@@ -62,10 +62,10 @@ def load(path, concepts):
 def train_net(Xb, Xf, y, split, use_facts, epochs, seed=0):
     torch.manual_seed(seed)
     tr, va = split == 'train', split == 'val'
-    net = PlanNet(Xf.shape[1] if use_facts else 0)
+    net = PlanNet(Xf.shape[1] if use_facts else 0).to(DEVICE)
     opt = torch.optim.AdamW(net.parameters(), lr=1e-3, weight_decay=1e-4)
     pos = max(1.0, float((y[tr] == 0).sum()) / max(1, (y[tr] == 1).sum()))
-    loss_fn = nn.BCEWithLogitsLoss(pos_weight=torch.tensor(min(pos, 50.0)))
+    loss_fn = nn.BCEWithLogitsLoss(pos_weight=torch.tensor(min(pos, 50.0), device=DEVICE))
     B = torch.from_numpy(Xb)  # uint8, converti en flottants par lot
     F = torch.from_numpy(Xf)
     Y = torch.from_numpy(y.astype(np.float32))
@@ -77,13 +77,13 @@ def train_net(Xb, Xf, y, split, use_facts, epochs, seed=0):
         for i in range(0, len(idx_tr), 256):
             b = idx_tr[i:i + 256]
             opt.zero_grad()
-            loss = loss_fn(net(B[b].float(), F[b]), Y[b])
+            loss = loss_fn(net(B[b].float().to(DEVICE), F[b].to(DEVICE)), Y[b].to(DEVICE))
             loss.backward()
             opt.step()
         p = predict(net, B, F, np.where(va)[0])
         auc = roc_auc_score(y[va], p) if len(set(y[va])) > 1 else 0
         if auc > best:
-            best, best_state = auc, {k: v.clone() for k, v in net.state_dict().items()}
+            best, best_state = auc, {k: v.detach().clone() for k, v in net.state_dict().items()}
     net.load_state_dict(best_state)
     return net
 
@@ -94,11 +94,13 @@ def predict(net, B, F, idx):
     with torch.no_grad():
         for i in range(0, len(idx), 2048):
             b = idx[i:i + 2048]
-            out.append(torch.sigmoid(net(B[b].float(), F[b])).numpy())
+            out.append(torch.sigmoid(net(B[b].float().to(DEVICE), F[b].to(DEVICE))).cpu().numpy())
     return np.concatenate(out) if out else np.zeros(0)
 
 
 NEG_PER_POS = 5
+# GPU si présent (machine d'entraînement), sinon processeur (VPS) : même script, mêmes résultats.
+DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 
 def main():
@@ -156,7 +158,7 @@ def main():
         res['verdict'] = 'réseau > arbres (+0,02 ou plus)' if best_net >= res['arbres']['auc'] + 0.02 else 'réseau ne bat pas les arbres'
         print(f'   -> {res["verdict"]}')
         results[c] = res
-        torch.save({'cnn': cnn.state_dict(), 'cnn+f': cnnf.state_dict(), 'keys': keys, 'elo_feature': True,
+        torch.save({'cnn': {k: v.cpu() for k, v in cnn.state_dict().items()}, 'cnn+f': {k: v.cpu() for k, v in cnnf.state_dict().items()}, 'keys': keys, 'elo_feature': True,
                     'mean': scaler.mean_.tolist(), 'scale': scaler.scale_.tolist()}, f'data/datasets/plan-{c}.pt')
         # Les modèles sur les faits (arbres, règle linéaire) servent le coach (coach/intentions-server.py).
         with open(f'data/datasets/plan-{c}-faits.pkl', 'wb') as fh:
