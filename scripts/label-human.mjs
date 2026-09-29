@@ -134,7 +134,7 @@ async function labelGame(engine, game) {
     const rec = {
       game: game.index, ply: s.ply, fen: s.fen, elo, result: game.headers.Result ?? null, played: s.next,
       eval0: e0, evals, plans,
-      extra: Object.fromEntries(Object.entries(scan).filter(([k]) => /moyen|avant_roque|faiblesse|couleur|exploite|levier|colonne_/.test(k) && scan[k] !== null && scan[k] !== -1 && scan[k] !== false)),
+      extra: Object.fromEntries(Object.entries(scan).filter(([k]) => /moyen|avant_roque|faiblesse|couleur|exploite|levier|colonne_|echangeable|rangee|_colonne/.test(k) && scan[k] !== null && scan[k] !== -1 && scan[k] !== false)),
       engine: engine.name,
     };
     appendFileSync(OUT, `${JSON.stringify(rec)}\n`);

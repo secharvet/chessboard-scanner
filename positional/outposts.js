@@ -27,8 +27,9 @@ export function buildOutpostFacts(fen) {
   for (const color of /** @type {const} */ (['w', 'b'])) {
     const allies = pawnsOfColor(pawns, color);
     const enemies = pawnsOfColor(pawns, color === 'w' ? 'b' : 'w');
-    const minRank = color === 'w' ? 5 : 1;
-    const maxRank = color === 'w' ? 8 : 4;
+    // Camp adverse, 4e rangée comprise (un cavalier en d4 soutenu par e3, sans pion noir c ni e, est un avant-poste).
+    const minRank = color === 'w' ? 4 : 1;
+    const maxRank = color === 'w' ? 8 : 5;
 
     for (const p of allies) {
       const targets = pawnAttackTargets(p.color, p.fileIdx, p.rank);
@@ -40,7 +41,13 @@ export function buildOutpostFacts(fen) {
         // Un avant-poste ne peut jamais être chassé par un pion adverse.
         if (!canPawnsEverAttack(t, enemies, color === 'w' ? 'b' : 'w')) {
           emitted.add(sq + color);
-          out.push(token('AVANT_POSTE', { square: sq, color }));
+          // Rangée vue du camp (4 = la sienne, 5 et plus = camp adverse) et état de la colonne (Nimzowitsch :
+          // l'avant-poste sur la colonne ouverte est une base d'attaque).
+          const rangee = color === 'w' ? t.rank : 9 - t.rank;
+          const ownOnFile = allies.some((p) => p.fileIdx === t.fileIdx);
+          const enemyOnFile = enemies.some((p) => p.fileIdx === t.fileIdx);
+          const colonne = !ownOnFile && !enemyOnFile ? 'ouverte' : !ownOnFile ? 'semi-ouverte' : 'fermee';
+          out.push(token('AVANT_POSTE', { square: sq, color, rangee, colonne }));
         }
       }
     }

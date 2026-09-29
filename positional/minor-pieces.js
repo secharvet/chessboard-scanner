@@ -20,6 +20,7 @@ export function buildMinorPiecesFacts(fen) {
 
   // Références croisées : avant-postes et colonnes
   const outposts = buildOutpostFacts(fen).filter((t) => t.id === 'AVANT_POSTE');
+  const outpostInfo = new Map(outposts.map((t) => [/** @type {string} */ (t.params.square) + t.params.color, t.params]));
   const outpostSet = new Set(
     outposts.map((t) => /** @type {string} */ (t.params.square) + t.params.color),
   );
@@ -70,7 +71,8 @@ export function buildMinorPiecesFacts(fen) {
       if (outpostSet.has(n.square + color)) {
         const shade = squareColor(n.square);
         const echangeable = enemyMinors.some((p) => p.type === 'n' || squareColor(p.square) === shade);
-        out.push(token('CAVALIER_AVANT_POSTE', { square: n.square, color, echangeable }));
+        const info = outpostInfo.get(n.square + color) ?? {};
+        out.push(token('CAVALIER_AVANT_POSTE', { square: n.square, color, echangeable, rangee: info.rangee, colonne: info.colonne }));
       }
     }
 

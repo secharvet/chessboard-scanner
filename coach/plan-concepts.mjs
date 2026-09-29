@@ -99,6 +99,8 @@ export function scanLine(fen, pv, PLIES = 48) {
       if (name === 'cavalier_avant_poste' && ply >= 0) {
         const t = timeline[ply].facts.find((f) => f.id === 'CAVALIER_AVANT_POSTE' && f.params.color === color && f.params.square === moves[ply].to);
         out[`cavalier_avant_poste_echangeable_${color}`] = t ? Boolean(t.params.echangeable) : null;
+        out[`cavalier_avant_poste_rangee_${color}`] = t?.params.rangee ?? null;
+        out[`cavalier_avant_poste_colonne_${color}`] = t?.params.colonne ?? null;
       }
     }
   }
