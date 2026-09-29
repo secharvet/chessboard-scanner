@@ -101,7 +101,7 @@ const baseMed = Object.fromEntries(Object.entries(base).map(([b, d]) => [b, med(
 const allBase = med(Object.values(base).flat());
 const rows = [...motifs.entries()].filter(([, m]) => m.n >= MIN).map(([k, m]) => ({ k, ...m, med: med(m.drift), gain: med(m.drift) - allBase }));
 const san = (fen, played, upto) => { const c = new Chess(fen); const out = []; for (const u of played.slice(0, upto + 1)) { try { out.push(toFrenchSan(c.move({ from: u.slice(0, 2), to: u.slice(2, 4), promotion: u[4] }).san)); } catch { break; } } return out.join(' '); };
-const fmt = (s) => rows.length && s.map((r) => `| ${r.k} | ${r.n} | ${BR.map(([b]) => r.byBr[b] ?? 0).join(' / ')} | ${r.med} | ${r.gain >= 0 ? '+' : ''}${r.gain} |`);
+const fmt = (s) => s.map((r) => `| ${r.k} | ${r.n} | ${BR.map(([b]) => r.byBr[b] ?? 0).join(' / ')} | ${r.med} | ${r.gain >= 0 ? '+' : ''}${r.gain} |`);
 const md = [`# Émergence sur les parties humaines — ${n} positions avec atomes`, '',
   `Motif = « événement ⇒ événement » (écart ≤ ${WINDOW} demi-coups) ; « lui : » = événement de l'adversaire (le motif est alors une réponse). Support par tranche d'Elo (<1200 / 1200-1600 / 1600-2000 / 2000+).`,
   `Δ24 = dérive médiane de l'évaluation du camp sur la fenêtre (centipions) ; référence toutes positions : ${allBase} (par tranche : ${BR.map(([b]) => `${b} ${baseMed[b] ?? '—'}`).join(', ')}).`,
