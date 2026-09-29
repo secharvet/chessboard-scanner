@@ -674,6 +674,14 @@ justes ; les actions, par priorité :
    coup contre la meilleure ligne), a posteriori sur les enregistrements existants (on a les coups joués), et
    retenir pour l'entraînement l'étiquette « plan réalisé **et bien joué** ». Écrire noir sur blanc : le modèle
    propose, Stockfish vérifie, le code explique ; *l'activation n'est pas l'explication*. — DENEB (calcul), VPS (doc).
+   Spécification de la mesure (précisions du relecteur, adoptées) : (a) la perte de chaque coup se mesure en
+   **espérance de score**, pas en centipions bruts (à ±6 pions un coup neutre « coûte » 200 cp) : convertir chaque
+   évaluation en probabilité de gain par la formule de Lichess, `50 + 50 × (2 / (1 + exp(−0,00368208 × cp)) − 1)`,
+   et soustraire dans cet espace ; (b) **deux seuils** : moyenne du segment sous X *et* aucun coup du camp au-dessus
+   de Y (une gaffe au milieu, et le plan n'a pas « tenu ») ; X et Y se calibrent sur les 36 planches humaines déjà
+   relues (`reports/planches-humains-1`), dont on sait si l'idée était bonne ; (c) coût : une recherche par coup du
+   camp sur le segment (4 à 6 à profondeur 12), sur les positifs candidats seulement. Effet de bord : la grille par
+   Elo passe de « réalise le plan » à « réalise **et réussit** le plan », la vraie question du §2.
 2. **Jeu de test contaminé par la sonde** (les disponibilités ont été conçues sur les positifs du test) : le gain
    mesuré est optimiste. Reconfirmer sur le lot 2016, jamais utilisé ; désormais la sonde tourne sur la validation,
    jamais sur le test. — DENEB.
