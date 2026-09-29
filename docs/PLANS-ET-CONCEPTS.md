@@ -546,6 +546,31 @@ dans 69 à 86 % des cas « neutre ». La tour sur colonne attend sa variante « 
 avec. Correctifs : échiquiers en octets, négatifs sous-échantillonnés, un processus par concept, 2 Go d'échange.
 L'entraînement passe sur une machine GPU (`docs/MACHINE-GPU.md`) ; le VPS garde le site, le coach et l'étiquetage.
 
+**Passes et largeur sur DENEB** (29 septembre au soir, mois complet, RTX 5070 Ti, ~6 minutes par table complète
+contre plusieurs heures sur le VPS ; `reports/train-plans-gpu-1/2/3-*.json`). La table du mois complet est d'abord
+reproduite à 8 passes sur le GPU (AUC à ±0,008 de la table du VPS : le matériel ne change pas les conclusions).
+Puis deux variantes, réponse à la question « l'écart réseaux − arbres se creuse-t-il ? » : **non.**
+
+| Concept | Réseau + faits, 8 passes | 10 passes | 10 passes, large (96 canaux, tête 256) |
+|---|---|---|---|
+| Tour sur colonne ouverte | 0,895 | 0,895 | 0,895 |
+| Rupture de pions | 0,792 | 0,795 | 0,794 |
+| Affaiblir la structure | 0,705 | 0,710 | 0,708 |
+| Blocage | 0,770 | 0,773 | 0,765 |
+| Cavalier sur avant-poste | 0,822 | 0,825 | 0,819 |
+| Dominer une couleur | 0,835 | 0,841 | 0,825 |
+| Baïonnette | 0,983 | 0,983 | 0,983 |
+
+- **10 passes** : gain de +0,003 en moyenne, l'affaiblissement repasse le seuil (+0,024) ; les mêmes 4 concepts
+  sur 7 restent au-dessus de +0,02 (rupture, affaiblir, avant-poste, baïonnette).
+- **Le réseau large (1,76 M de paramètres contre 444 k) n'apporte rien** et perd sur les concepts rares
+  (dominer 0,825 contre 0,841 ; blocage 0,765) : avec 1 000 à 2 300 positifs d'entraînement, la capacité en plus
+  surapprend. À ce volume, la limite n'est ni la profondeur d'entraînement ni la taille du réseau : c'est le
+  signal des étiquettes (et le nombre de positifs pour les concepts rares — le lot 2016 en apportera).
+- Modèles retenus : les 10 passes en architecture d'origine (`plan-*.pt`, `plan-*-faits.pkl`) ; la variante large
+  reste disponible par `train-plans.py --large` (drapeau enregistré dans le checkpoint et relu par
+  `score-counterfactuals.py`), et l'entraînement garde les tenseurs sur la carte avec des lots de 1024.
+
 **Lot 2016 équilibré** : 250 000 parties de janvier 2016 (100 000 avec les deux joueurs < 1300, 100 000 > 1900,
 50 000 entre, bullet exclu ; `scripts/filter-pgn.mjs`), étiquetage lancé le 29 septembre à 18 h 27 (Paris), avec
 les atomes de la défense.
@@ -554,8 +579,9 @@ les atomes de la défense.
 DENEB (RTX 5070 Ti, `docs/MACHINE-GPU.md`) entraîne)
 
 Sur DENEB :
-1. Reproduire la table du mois complet avec 10 passes (`train-plans.py --epochs 10`), puis des réseaux plus larges
-   (canaux 96, tête 256) : l'écart réseaux − arbres se creuse-t-il ? Garder par concept le meilleur des deux.
+1. ~~Reproduire la table du mois complet avec 10 passes, puis des réseaux plus larges (canaux 96, tête 256)~~ —
+   fait (29 septembre au soir, voir ci-dessus) : l'écart ne se creuse pas, le réseau large surapprend les concepts
+   rares ; modèles retenus = 10 passes, architecture d'origine.
 2. Réseau échiquier seul comme sonde : lister les positions de test où il bat nettement les arbres, les relire sur
    planches, en déduire les faits qui manquent au moteur de règles.
 3. Contrefactuels complets, dont la variante « tuer » de la tour sur colonne sur la colonne cible (ajouter
