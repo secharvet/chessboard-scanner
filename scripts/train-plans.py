@@ -35,9 +35,9 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 from train_plans_lib import PlanNet, board_planes, facts_vector  # noqa: E402
 
-def load(path, concepts):
+def load(path, concepts, drop=()):
     recs = [json.loads(l) for l in open(path, encoding='utf8') if l.strip()]
-    keys = sorted({k.split('|')[0] for r in recs for k in r['facts']})
+    keys = sorted({k.split('|')[0] for r in recs for k in r['facts']} - set(drop))
     data = {c: {'fen': [], 'side': [], 'y': [], 'facts': [], 'split': [], 'eval': []} for c in concepts}
     for r in recs:
         # Découpage par partie (pas de fuite d'une position à la voisine) : 80 % entraînement, 10 % validation, 10 % test.
@@ -114,10 +114,12 @@ def main():
     ap.add_argument('--threads', type=int, default=2)
     ap.add_argument('--out', default='reports/train-plans.json')
     ap.add_argument('--large', action='store_true', help='réseaux plus larges (96 canaux, tête 256)')
+    ap.add_argument('--drop-facts', default='', dest='drop_facts',
+                    help='identifiants de faits à retirer du vecteur (ablation), séparés par des virgules')
     a = ap.parse_args()
     torch.set_num_threads(a.threads)
     concepts = a.concepts.split(',')
-    data, keys = load(a.dataset, concepts)
+    data, keys = load(a.dataset, concepts, [f for f in a.drop_facts.split(',') if f])
     results = {}
     rng = np.random.default_rng(0)
     for c in concepts:

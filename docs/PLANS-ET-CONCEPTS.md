@@ -612,6 +612,27 @@ que le joueur déroule quand même son plan calme. À garder en tête, mais le r
 faits les trois « disponibilités » ci-dessus, réentraîner les arbres, et mesurer si l'écart réseau − arbres
 se referme (c'est le critère de réussite de la sonde).
 
+**Les trois disponibilités codées** (29 septembre au soir, `positional/disponibilites.js`, branché dans
+`buildAllFacts`, 14 tests) : `LEVIER_DISPONIBLE` (poussée légale d'un pion qui attaquerait un pion adverse,
+sans se faire prendre gratuitement sur la case d'arrivée), `ROUTE_CAVALIER` (un cavalier atteint en 1 ou 2
+bonds sûrs un avant-poste à soi ou la case de blocage devant un pion adverse isolé, arriéré, faible ou passé ;
+mêmes règles de sécurité que `coach/maneuvers.mjs`, restatées car `positional/` est du code navigateur et ne
+peut pas importer `coach/`), `ECHANGE_ABIMANT` (une prise sans perte de matériel dont la seule reprise est un
+pion, et chaque reprise possible crée pions doublés, pion isolé, ou dégarnit l'abri d'un roi d'aile).
+
+**Critère écrit avant la mesure** (jeu de données reconstruit avec les nouveaux faits, réentraînement à
+10 passes, mêmes découpages) :
+- réussite si, sur les 4 concepts de la sonde (rupture, affaiblir, blocage, avant-poste), l'AUC des arbres
+  gagne au moins +0,010 sur au moins 2 concepts, ET l'écart meilleur-réseau − arbres se referme d'au moins
+  la moitié sur au moins 2 ;
+- contrôle : tour sur colonne et baïonnette ne bougent pas (± 0,005) ;
+- la sonde relancée sur les nouveaux modèles doit retenir au moins un tiers de positions en moins sur
+  rupture et affaiblir ;
+- ablation « sans faits tactiques » (arbres réentraînés sans CLOUAGE, CLOUAGE_RELATIF, DECOUVERTE_POSSIBLE,
+  ENFILADE, FOURCHETTE, PIECE_MENACEE, PIECE_PIEGEE, RANGEE_FAIBLE, SURCHARGE) : mesure le biais
+  « poussière tactique en contre-signal » relevé par la sonde ; informative, sans seuil.
+Sinon, les disponibilités codées ne captent pas ce que le réseau voit, et on retourne aux planches.
+
 **Lot 2016 équilibré** : 250 000 parties de janvier 2016 (100 000 avec les deux joueurs < 1300, 100 000 > 1900,
 50 000 entre, bullet exclu ; `scripts/filter-pgn.mjs`), étiquetage lancé le 29 septembre à 18 h 27 (Paris), avec
 les atomes de la défense.
