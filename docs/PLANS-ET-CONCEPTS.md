@@ -518,6 +518,38 @@ verrouille), restriction et prophylaxie (un levier adverse possible ne l'est plu
 « réaction à » du catalogue (prophylaxie, surprotection, blocus, échanger l'attaquant, simplifier, fermer le flanc,
 contre-attaque au centre, regroupement, forteresse).
 
+**Entraînement sur le mois complet** (29 septembre au soir, 315 669 positions, Elo du joueur en entrée, négatifs
+sous-échantillonnés à 5 par positif à l'entraînement, test complet ; `reports/train-plans-humains-2-*.json`) :
+
+| Concept | Positifs (test) | Arbres | Réseau échiquier | Réseau + faits | Écart réseau − arbres |
+|---|---|---|---|---|---|
+| Tour sur colonne ouverte | 6 954 | 0,881 | 0,889 | **0,895** | +0,014 |
+| Rupture de pions | 4 416 | 0,745 | 0,782 | **0,796** | **+0,051** |
+| Affaiblir la structure | 6 262 | 0,687 | 0,693 | **0,714** | **+0,027** |
+| Blocage | 906 | 0,762 | 0,746 | **0,770** | +0,008 |
+| Cavalier sur avant-poste | 944 | 0,745 | 0,776 | **0,829** | **+0,084** |
+| Dominer une couleur | 311 | 0,819 | 0,810 | **0,833** | +0,014 |
+| Baïonnette (recette) | 125 | 0,927 | 0,980 | **0,983** | **+0,056** |
+
+Avec cinq fois plus de données, **les réseaux décrochent les arbres sur 4 concepts sur 7** (seuil +0,02) et font au
+moins jeu égal partout ; les arbres n'ont presque pas bougé depuis 63 000 positions (rupture 0,735 → 0,745), les
+réseaux si (0,747 → 0,796). Réponse à la question du §6 : le volume profite aux réseaux, pas aux arbres. Règle de
+production : par concept, le meilleur des deux ; le réseau échiquier seul reste la sonde des lacunes du moteur de
+règles (là où il bat les arbres, il manque un fait). La baïonnette à 0,98 doit être relue : sa précondition
+(fianchetto, roi roqué) est facile, l'AUC en profite.
+
+*Contrefactuels* (400 triplets par concept) : réseau + faits, baisse nette dans **87 %** des cas « tuer » pour
+l'avant-poste (cavalier retiré : Δ moyen −0,44), 46 % rupture, 43 % affaiblir, 35 % blocage, 28 % dominer ; stable
+dans 69 à 86 % des cas « neutre ». La tour sur colonne attend sa variante « tuer » sur la colonne cible.
+
+*Incident* : deux entraînements tués par le noyau (OOM, 6,4 et 6,8 Go sur 7,7, sans mémoire d'échange), la session
+avec. Correctifs : échiquiers en octets, négatifs sous-échantillonnés, un processus par concept, 2 Go d'échange.
+L'entraînement passe sur une machine GPU (`docs/MACHINE-GPU.md`) ; le VPS garde le site, le coach et l'étiquetage.
+
+**Lot 2016 équilibré** : 250 000 parties de janvier 2016 (100 000 avec les deux joueurs < 1300, 100 000 > 1900,
+50 000 entre, bullet exclu ; `scripts/filter-pgn.mjs`), étiquetage lancé le 29 septembre à 18 h 27 (Paris), avec
+les atomes de la défense.
+
 **Prochaines étapes**
 
 1. Planches sur les exemples vérifiés (dont les premiers avant-postes).

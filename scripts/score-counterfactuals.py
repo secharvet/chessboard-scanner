@@ -39,7 +39,8 @@ def main():
         keys, mean, scale = ck['keys'], np.array(ck['mean'], dtype=np.float32), np.array(ck['scale'], dtype=np.float32)
         nets = {}
         for name, use_facts in (('cnn', False), ('cnn+f', True)):
-            net = PlanNet(2 * len(keys) if use_facts else 0)
+            n_facts = 2 * len(keys) + (1 if ck.get('elo_feature') else 0)  # + l'Elo du joueur (modèles récents)
+            net = PlanNet(n_facts if use_facts else 0)
             net.load_state_dict(ck[name])
             net.eval()
             nets[name] = net
