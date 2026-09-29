@@ -138,6 +138,7 @@ async function labelGame(engine, game) {
       // Atomes (moyens) le long de la partie : matière de l'émergence et des recettes futures.
       atomes: scan.atomes,
       engine: engine.name,
+      depth: DEPTH,
     };
     appendFileSync(OUT, `${JSON.stringify(rec)}\n`);
     written++;
