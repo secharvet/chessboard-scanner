@@ -474,6 +474,14 @@ l'étage d'exploitation du §8 (un fait d'attaque doit suivre le déséquilibre)
 3. **Le signal dépend du concept** : la tour sur la colonne ouverte est presque déterminée par la position (0,88),
    l'affaiblissement de la structure l'est peu (0,67) : c'est un choix, pas une conséquence.
 
+*Contrefactuels sur ces modèles* (300 triplets par concept ; « tuer » = ingrédient retiré, « neutre » = pion de bord
+avancé) : le réseau avec faits baisse nettement (Δ ≤ −0,10) dans **57 %** des cas « tuer » pour la rupture, **56 %**
+pour l'avant-poste, 49 % pour l'affaiblissement, 25 % pour le blocage, et reste stable dans 74 à 83 % des cas
+« neutre » ; le réseau échiquier seul réagit deux à trois fois moins (il a appris des corrélations plus diffuses).
+Les modèles ont donc bien appris, au moins en partie, l'ingrédient du concept et non un décor. Limite : la variante
+« tuer » de la tour sur colonne (reboucher la colonne de la tour actuelle) ne vise pas la bonne colonne quand la tour
+n'y est pas encore ; à refaire avec la colonne cible.
+
 **Prochaines étapes**
 
 1. Planches sur les exemples vérifiés (dont les premiers avant-postes).
