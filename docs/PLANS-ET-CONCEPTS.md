@@ -133,6 +133,32 @@ Tout est calculé, reproductible, et vérifiable position par position.
 
 ---
 
+## 4 bis. Source humaine : chercher les plans là où il y a des intentions
+
+Objection de l'auteur (29 septembre) : Stockfish ne fait pas de plan, il calcule ; sa meilleure suite est un
+sous-produit de la recherche, et y « reconnaître » un plan revient souvent à lire une intention là où il n'y a qu'un
+ordre de coups qui change avec la version du moteur (§7, dépendance au moteur : avec l'accord de deux moteurs exigé,
+**18 positifs sur 191** survivent sur 400 positions, 9 %). Un plan est une compression humaine : un déplacement,
+une configuration, voulus.
+
+**Inversion des rôles.** Les intentions se trouvent dans les parties humaines (Lichess, Chess.com : des milliards de
+parties, avec l'Elo des deux joueurs ; le blitz convient, le bruit se filtre) ; Stockfish ne décide plus, il **juge**.
+
+1. **Détection dans les coups réellement joués** : depuis chaque position, les 24 demi-coups suivants de la partie
+   passent par le même `scanLine` (mêmes concepts, agentivité, tenue, suite calme).
+2. **Jugement** : Stockfish évalue la position de départ et celle où le concept apparaît (après la réponse adverse).
+   Le plan a **tenu** si l'évaluation du joueur n'a pas baissé de plus de 0,3 pion ; sinon il a été **réfuté**.
+   C'est la mesure « l'avantage se dirige vers nous » qui n'avait pas de sens le long d'une suite de moteur
+   (évaluation constante par construction) et qui en a le long d'une partie humaine.
+3. **Ce que devient l'étiquette** : « à ce niveau, les humains font ce plan ici, et il tient ». C'est le plan
+   enseignable de la grille par Elo (§2), et il ne dépend plus des manies d'une version : évaluer une séquence fixe
+   de coups joués est bien plus stable que choisir une suite.
+4. **Coût** : deux évaluations à profondeur 12 par position, au lieu de trois suites prolongées.
+
+Les suites de Stockfish gardent deux rôles : le plan vérifié dans le coach (« ce plan est-il bon *ici* ? », avec
+l'accord de deux moteurs), et une seconde source d'étiquettes, marquée comme telle. Générateur :
+`scripts/label-human.mjs`, sortie `data/labels/human-*.jsonl`.
+
 ## 5. Les petits réseaux
 
 - **Entrée** : l'échiquier codé en 12 plans de 8×8 (une couche par type de pièce et par couleur), plus le trait et
