@@ -683,6 +683,12 @@ Sur DENEB :
 5. Quand les étiquettes 2016 arrivent (rsync) : grille par Elo avec les débutants, entraînement v3, recettes
    défensives (atomes fermeture, restriction, regroupement).
 
+Avant la prochaine grande session d'étiquetage (décidé le 29 septembre au soir) :
+- **inventorier les concepts restants** : il en reste 20 à 30 à définir et à coder (voir la table du §3 bis et les
+  recettes défensives), tous avec un état but vérifiable, avant de relancer un étiquetage massif ;
+- l'étiquetage se fera **en duo** : le VPS (4 vCPU, ~34 000 positions/h) et DENEB (16 fils, 8 à 12 fois plus), sur
+  des tranches disjointes du même PGN, fichiers fusionnés par `rsync` ; le même Stockfish 19 des deux côtés.
+
 Sur le VPS :
 6. Service local « intentions » (Python, modèles sur les faits) interrogé par le coach ; phrase « à ton niveau, le
    plan naturel ici… » et « il prépare souvent… » dans la fiche, derrière un drapeau, puis banc de milieux de partie.
