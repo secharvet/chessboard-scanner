@@ -18,6 +18,7 @@ Critère du §6 bis : le réseau doit battre les arbres (AUC). Sinon, on garde r
 
 import argparse
 import json
+import os
 import pickle
 import zlib
 
@@ -106,7 +107,7 @@ DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('dataset')
-    ap.add_argument('--concepts', default='tour_colonne,rupture,affaiblir,blocage,cavalier_avant_poste')
+    ap.add_argument('--concepts', default='tour_colonne,rupture,affaiblir,blocage,cavalier_avant_poste,dominer,baionnette')
     ap.add_argument('--epochs', type=int, default=8)
     ap.add_argument('--threads', type=int, default=2)
     ap.add_argument('--out', default='reports/train-plans.json')
@@ -163,6 +164,7 @@ def main():
         # Les modèles sur les faits (arbres, règle linéaire) servent le coach (coach/intentions-server.py).
         with open(f'data/datasets/plan-{c}-faits.pkl', 'wb') as fh:
             pickle.dump({'arbres': gb, 'logreg': lr, 'scaler': scaler, 'keys': keys, 'elo_feature': True, 'auc': res}, fh)
+    os.makedirs(os.path.dirname(a.out) or '.', exist_ok=True)  # reports/ n'est pas dans le dépôt
     json.dump(results, open(a.out, 'w'), ensure_ascii=False, indent=2)
     print(f'\nRésultats : {a.out}')
 
