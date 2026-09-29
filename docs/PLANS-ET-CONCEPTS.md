@@ -398,3 +398,9 @@ l'étage d'exploitation du §8 (un fait d'attaque doit suivre le déséquilibre)
 
 - T. McGrath et al., « Acquisition of chess knowledge in AlphaZero », *PNAS*, 2022 : des concepts humains se lisent
   dans le réseau d'AlphaZero.
+- L. Schut et al., « Bridging the human-AI knowledge gap: concept discovery and transfer in AlphaZero », 2023 : des
+  concepts extraits de l'espace latent d'AlphaZero, jamais formulés par les humains, enseignés à des grands maîtres
+  qui progressent. Preuve de principe de l'émergence (§8).
+- M. Sadler et N. Regan, *Game Changer*, 2019 : les « plans » d'AlphaZero sont des récits humains a posteriori ; le
+  moteur ne planifie pas, mais ces compressions ont été utiles aux joueurs. C'est l'objet pédagogique visé ici : une
+  compression reconnaissable par un humain et vérifiée par le moteur.
