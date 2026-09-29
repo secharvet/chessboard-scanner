@@ -18,6 +18,7 @@ Critère du §6 bis : le réseau doit battre les arbres (AUC). Sinon, on garde r
 
 import argparse
 import json
+import pickle
 import zlib
 
 import numpy as np
@@ -46,7 +47,8 @@ def load(path, concepts):
                 y = r['y'].get(f'{c}_{side}')
                 if y is None:
                     continue
-                v = facts_vector(r['facts'], keys, side)
+                elo = (r.get('elo') or {}).get(side) if isinstance(r.get('elo'), dict) else r.get('elo')
+                v = facts_vector(r['facts'], keys, side, elo)
                 d = data[c]
                 d['fen'].append(r['fen'])
                 d['side'].append(side)
@@ -112,7 +114,7 @@ def main():
         d = data[c]
         y = np.array(d['y'])
         split = np.array(d['split'])
-        Xf = np.stack(d['facts']) if d['facts'] else np.zeros((0, 2 * len(keys)), dtype=np.float32)
+        Xf = np.stack(d['facts']) if d['facts'] else np.zeros((0, 2 * len(keys) + 1), dtype=np.float32)
         te, tr = split == 'test', split == 'train'
         npos = {s: int(y[split == s].sum()) for s in ('train', 'val', 'test')}
         print(f'\n== {c} : {len(y)} exemples, positifs {npos}')
@@ -143,8 +145,11 @@ def main():
         res['verdict'] = 'réseau > arbres (+0,02 ou plus)' if best_net >= res['arbres']['auc'] + 0.02 else 'réseau ne bat pas les arbres'
         print(f'   -> {res["verdict"]}')
         results[c] = res
-        torch.save({'cnn': cnn.state_dict(), 'cnn+f': cnnf.state_dict(), 'keys': keys,
+        torch.save({'cnn': cnn.state_dict(), 'cnn+f': cnnf.state_dict(), 'keys': keys, 'elo_feature': True,
                     'mean': scaler.mean_.tolist(), 'scale': scaler.scale_.tolist()}, f'data/datasets/plan-{c}.pt')
+        # Les modèles sur les faits (arbres, règle linéaire) servent le coach (coach/intentions-server.py).
+        with open(f'data/datasets/plan-{c}-faits.pkl', 'wb') as fh:
+            pickle.dump({'arbres': gb, 'logreg': lr, 'scaler': scaler, 'keys': keys, 'elo_feature': True, 'auc': res}, fh)
     json.dump(results, open(a.out, 'w'), ensure_ascii=False, indent=2)
     print(f'\nRésultats : {a.out}')
 

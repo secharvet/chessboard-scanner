@@ -8,3 +8,4 @@ reports/
 memory/
 logs/
 data/lichess/
+__pycache__/

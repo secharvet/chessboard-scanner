@@ -34,16 +34,18 @@ def board_planes(fen, side):
     return x
 
 
-def facts_vector(facts, keys, side):
-    """Faits du moteur de règles comptés par identifiant : [à moi ou sans camp | à l'adversaire]."""
+def facts_vector(facts, keys, side, elo=None):
+    """Faits du moteur de règles comptés par identifiant : [à moi ou sans camp | à l'adversaire], puis le niveau
+    du joueur qui agit (Elo / 1000, 1,5 si inconnu) : le plan naturel dépend du niveau (§2, grille mesurée)."""
     kidx = {k: i for i, k in enumerate(keys)}
-    v = np.zeros(2 * len(keys), dtype=np.float32)
+    v = np.zeros(2 * len(keys) + 1, dtype=np.float32)
     for k, n in facts.items():
         fid, col = k.split('|')
         if fid not in kidx:
             continue
         off = 0 if col in (side, '-') else len(keys)
         v[kidx[fid] + off] += n
+    v[-1] = (elo / 1000.0) if elo else 1.5
     return v
 
 

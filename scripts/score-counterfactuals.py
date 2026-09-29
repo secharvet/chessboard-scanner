@@ -46,7 +46,7 @@ def main():
 
         def score(net, fen, facts, side):
             b = torch.from_numpy(board_planes(fen, side)[None])
-            f = torch.from_numpy(((facts_vector(facts, keys, side) - mean) / scale).astype(np.float32)[None])
+            f = torch.from_numpy(((facts_vector(facts, keys, side, r.get('elo')) - mean) / scale).astype(np.float32)[None])
             with torch.no_grad():
                 return float(torch.sigmoid(net(b, f))[0])
 

@@ -113,7 +113,7 @@ for await (const line of createInterface({ input: createReadStream(args[0]), crl
     if (!kill || !neut) continue;
     counts[concept] = (counts[concept] ?? 0) + 1;
     n++;
-    appendFileSync(OUT, `${JSON.stringify({ concept, side, fen: r.fen, kill, neutral: neut, facts: r.facts, factsKill: facts(kill), factsNeutral: facts(neut) })}\n`);
+    appendFileSync(OUT, `${JSON.stringify({ concept, side, fen: r.fen, elo: r.elo?.[side] ?? null, kill, neutral: neut, facts: r.facts, factsKill: facts(kill), factsNeutral: facts(neut) })}\n`);
   }
 }
 console.log(`${n} triplets -> ${OUT}`, counts);
