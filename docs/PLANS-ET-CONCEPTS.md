@@ -666,6 +666,35 @@ v3, vecteur complet (`plan-*.pt`, `plan-*-faits.pkl`).
 50 000 entre, bullet exclu ; `scripts/filter-pgn.mjs`), étiquetage lancé le 29 septembre à 18 h 27 (Paris), avec
 les atomes de la défense.
 
+**Relecture critique du 29 septembre au soir (le document entier), décisions prises.** Neuf points, presque tous
+justes ; les actions, par priorité :
+
+1. **L'étiquette mesure ce que les humains font, pas ce qui est bon** (point décisif). Décision : calculer, pour chaque
+   plan réalisé, la **perte en centipions des seuls coups du camp sur le segment du plan** (ACPL du camp, coup par
+   coup contre la meilleure ligne), a posteriori sur les enregistrements existants (on a les coups joués), et
+   retenir pour l'entraînement l'étiquette « plan réalisé **et bien joué** ». Écrire noir sur blanc : le modèle
+   propose, Stockfish vérifie, le code explique ; *l'activation n'est pas l'explication*. — DENEB (calcul), VPS (doc).
+2. **Jeu de test contaminé par la sonde** (les disponibilités ont été conçues sur les positifs du test) : le gain
+   mesuré est optimiste. Reconfirmer sur le lot 2016, jamais utilisé ; désormais la sonde tourne sur la validation,
+   jamais sur le test. — DENEB.
+3. **Incertitude et métriques produit** : bootstrap sur le test et trois graines pour les AUC (±0,01 d'erreur-type
+   avec 900 positifs : « +0,008 » n'est pas un résultat) ; précision au seuil d'exploitation, précision au premier
+   plan par position, calibration. — DENEB.
+4. **Grille par Elo conditionnelle** : rapporter P(plan | ingrédients présents) par tranche, les disponibilités
+   servant de dénominateurs (levier disponible, route de cavalier, échange abîmant). — VPS.
+5. **Consensus (coach) contre contraste (étiquettes)** : deux questions différentes (« bon ici » contre
+   « distinctif »), à écrire ; et mesurer enfin la précision du plan vérifié sur planches (test 2 du §6 bis). — VPS.
+6. **Le document** : séparer une spécification stable d'un journal daté ; réécrire l'introduction (la thèse réelle :
+   intentions humaines, modèle qui propose, moteur qui vérifie, code qui explique, réseau échiquier comme sonde) ;
+   inscrire l'échec des étiquettes moteur au §6 et le passage du critère +0,1 à +0,02 ; réconcilier §1 et §3 bis
+   (l'état but est le déséquilibre, le moyen est ce qui manquait) ; assumer que **le débutant relève d'heuristiques**
+   (concepts 1 à 4, déjà servis par la fiche) et que les plans appris commencent à l'intermédiaire ; dire quels
+   critères de la sonde étaient bloquants ; renuméroter ; mettre en tête **la question produit : un débutant
+   progresse-t-il quand on lui montre le plan ?** et une liste priorisée à la place des fronts ouverts. — VPS.
+7. Noter la baisse du taux « tuer » des contrefactuels avec le volume (57 → 46 % rupture) ; régularisation par
+   contrefactuels notée pour plus tard. Migrer les règles d'itinéraire dupliquées dans `positional/` (le coach peut
+   l'importer, pas l'inverse). — DENEB.
+
 **Prochaines étapes** (mises à jour le 29 septembre au soir ; deux machines : le VPS étiquette et sert le coach,
 DENEB (RTX 5070 Ti, `docs/MACHINE-GPU.md`) entraîne)
 
