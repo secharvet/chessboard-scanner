@@ -451,6 +451,17 @@ Le journal daté est dans `JOURNAL-PLANS.md`. Par ordre, ce qui compte :
    « réalisé et bien joué » et la grille « réalise et réussit » par niveau.
 3. **Une évaluation propre** : reconfirmation des disponibilités sur le lot 2016, intervalles, métriques produit.
 4. **Le service « intentions »** dans le coach, derrière un drapeau, puis les phrases des disponibilités relues.
+   **Prérequis relevé par l'auteur le 30 septembre : l'estimation du niveau d'un joueur anonyme.** Les modèles
+   prennent l'Elo en entrée ; en production il n'est pas connu. Feature à ajouter (non prévue à l'origine) : un
+   module `coach/niveau.mjs` qui estime l'Elo en continu à partir de la perte des coups joués (la mesure du jugement
+   d'exécution, dont la relation au niveau est mesurée sur notre million de positions : perte médiane 5 → 2 points de
+   1100 à 2000 +), affinée par les plans réalisés et réussis (la grille lue à l'envers), remplacée par l'Elo réel si
+   le joueur donne un pseudo Lichess ou Chess.com, avec un réglage manuel à trois positions en repli. Le niveau est
+   une entrée continue et tout plan annoncé reste vérifié par le moteur : une erreur d'estimation décale, elle ne
+   casse pas. Validation : sur des parties de test, retrouver l'Elo réel à 200 points près après 20 coups. Décision
+   d'y aller conditionnée à une mesure préalable : le plan proposé change-t-il vraiment selon le niveau donné en
+   entrée, pour les débutants (< 1200) et les forts (> 2000) ? Si non, le niveau par défaut suffit et la feature
+   attend.
 5. **Conditionner mon plan au plan adverse et à son stade** (arbres conditionnels, puis sélecteur de décision).
 6. L'inventaire des 20 à 30 concepts restants, les recettes défensives, puis la prochaine grande session
    d'étiquetage en duo (VPS et DENEB).
