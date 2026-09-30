@@ -395,3 +395,25 @@ Sur le VPS :
 6. Service local « intentions » (Python, modèles sur les faits) interrogé par le coach ; phrase « à ton niveau, le
    plan naturel ici… » et « il prépare souvent… » dans la fiche, derrière un drapeau, puis banc de milieux de partie.
 7. Relire la baïonnette (AUC 0,98 suspecte : précondition facile).
+
+**Jugement d'exécution : chaîne en place, seuils proposés** (30 septembre, DENEB). `scripts/juge-plans.mjs` :
+pour chaque plan positif (calme, apparition < 12), la perte de chaque coup du camp sur le segment, en espérance
+de score (formule Lichess, §4.2), Stockfish 19 profondeur 12, 14 moteurs ; les évaluations déjà présentes dans
+l'étiquette sont réutilisées ; sortie en fichier compagnon `*.juge.jsonl`, reprise possible. Calcul lancé sur
+2013 + 2016 : 429 999 positions, 636 670 plans positifs, ~85 000 positions/h (~5 h).
+
+*Calibration sur les planches* (`reports/calibration-acpl.md`) : sur les 36 planches de
+`reports/planches-humains-1`, 21 portent un plan positif au sens actuel. Verdicts relus planche par planche
+(par Claude, à confirmer) : 15 bien joués, 4 mal joués (#21 : la rupture e4 crée un pion passé adverse, 44 points
+perdus sur un coup ; #36 : gaffe au milieu d'un plan correct, le cas prévu pour le second seuil), 2 « idée bonne,
+exécution qui fuit ». **Seuils proposés : X = 10 (moyenne du segment), Y = 20 (pire coup)** — seul couple qui
+sépare exactement les deux groupes ; sensibilité documentée dans le rapport. Étiquette « réalisé et bien joué »
+implémentée (`build-dataset.mjs --juge`) : le réalisé-mal-joué devient null (ni bon exemple, ni vrai négatif).
+Au passage, les identifiants de partie sont préfixés par le lot (les numéros recommencent à zéro à chaque lot :
+2013 et 2016 seraient entrés en collision dans `seen` et dans le découpage par partie).
+
+**Mesures d'incertitude dans l'entraînement** (30 septembre, décision 3 du 29) : `train-plans.py --seeds N`
+(AUC des réseaux en moyenne ± écart-type), `--bootstrap N` (IC à 95 % des AUC arbres et réseau + faits, et de
+leur ÉCART, bootstrap apparié sur le test), précision et rappel au seuil qui maximise F1 sur la validation,
+calibration (ECE à 10 paniers). Premier signal utile : l'ECE vaut ~0,15 — les sorties ne sont pas des
+probabilités lisibles, le coach devra recalibrer (Platt ou isotone) avant toute phrase du type « souvent ici… ».

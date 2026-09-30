@@ -116,6 +116,8 @@ def main():
     ap.add_argument('--large', action='store_true', help='réseaux plus larges (96 canaux, tête 256)')
     ap.add_argument('--drop-facts', default='', dest='drop_facts',
                     help='identifiants de faits à retirer du vecteur (ablation), séparés par des virgules')
+    ap.add_argument('--seeds', type=int, default=1, help='graines pour les réseaux (moyenne ± écart-type)')
+    ap.add_argument('--bootstrap', type=int, default=0, help='rééchantillonnages du test pour les IC à 95 %% des AUC')
     a = ap.parse_args()
     torch.set_num_threads(a.threads)
     concepts = a.concepts.split(',')
@@ -146,22 +148,85 @@ def main():
         lr = LogisticRegression(max_iter=2000, class_weight='balanced').fit(Xs[tr], y[tr])
         gb = HistGradientBoostingClassifier(max_iter=300, learning_rate=0.08, class_weight='balanced').fit(Xf[tr], y[tr])
         Xb = np.stack([board_planes(f, s) for f, s in zip(d['fen'], d['side'])])  # uint8
-        cnn = train_net(Xb, Xs, y, split, False, a.epochs, large=a.large)
-        cnnf = train_net(Xb, Xs, y, split, True, a.epochs, large=a.large)
+        # Graines multiples (décision du 29 septembre : ±0,01 d'erreur-type avec 900 positifs) : les AUC des
+        # réseaux sont rapportées en moyenne ± écart-type ; les modèles sauvés sont ceux de la graine 0.
         idx = np.where(te)[0]
         Bd, Sd = torch.from_numpy(Xb).to(DEVICE), torch.from_numpy(Xs).to(DEVICE)
+        nets = {'cnn': [], 'cnn+f': []}
+        net_preds = {'cnn': [], 'cnn+f': []}
+        for seed in range(a.seeds):
+            nets['cnn'].append(train_net(Xb, Xs, y, split, False, a.epochs, seed=seed, large=a.large))
+            nets['cnn+f'].append(train_net(Xb, Xs, y, split, True, a.epochs, seed=seed, large=a.large))
+            for name in nets:
+                net_preds[name].append(predict(nets[name][-1], Bd, Sd, idx))
+        cnn, cnnf = nets['cnn'][0], nets['cnn+f'][0]
+        del Bd, Sd
         preds = {
             'logreg': lr.predict_proba(Xs[te])[:, 1],
             'arbres': gb.predict_proba(Xf[te])[:, 1],
-            'cnn': predict(cnn, Bd, Sd, idx),
-            'cnn+f': predict(cnnf, Bd, Sd, idx),
+            'cnn': net_preds['cnn'][0],
+            'cnn+f': net_preds['cnn+f'][0],
         }
-        del Bd, Sd
+        yte = y[te]
         for name, p in preds.items():
-            auc = roc_auc_score(y[te], p)
-            ap_ = average_precision_score(y[te], p)
+            auc = roc_auc_score(yte, p)
+            ap_ = average_precision_score(yte, p)
             res[name] = {'auc': round(float(auc), 4), 'ap': round(float(ap_), 4)}
-            print(f'   {name:7s} AUC {auc:.3f}   précision moyenne {ap_:.3f}')
+            if name in net_preds and a.seeds > 1:
+                aucs = [roc_auc_score(yte, q) for q in net_preds[name]]
+                res[name]['auc'] = round(float(np.mean(aucs)), 4)
+                res[name]['auc_sd'] = round(float(np.std(aucs)), 4)
+            print(f'   {name:7s} AUC {res[name]["auc"]:.3f}'
+                  + (f' ± {res[name]["auc_sd"]:.3f}' if 'auc_sd' in res[name] else '')
+                  + f'   précision moyenne {ap_:.3f}')
+        # Bootstrap apparié sur le test : IC à 95 % de l'AUC des arbres, du réseau + faits, et de leur ÉCART
+        # (le même rééchantillon note les deux modèles : c'est l'écart qui a un sens statistique).
+        if a.bootstrap:
+            rng_b = np.random.default_rng(1)
+            b_gb, b_nn, b_diff = [], [], []
+            p_gb, p_nn = preds['arbres'], preds['cnn+f']
+            for _ in range(a.bootstrap):
+                s = rng_b.integers(0, len(yte), len(yte))
+                if len(set(yte[s])) < 2:
+                    continue
+                ag, an = roc_auc_score(yte[s], p_gb[s]), roc_auc_score(yte[s], p_nn[s])
+                b_gb.append(ag)
+                b_nn.append(an)
+                b_diff.append(an - ag)
+            ci = lambda v: [round(float(np.percentile(v, q)), 4) for q in (2.5, 97.5)]
+            res['ic95'] = {'arbres': ci(b_gb), 'cnn+f': ci(b_nn), 'ecart': ci(b_diff)}
+            print(f"   IC95 arbres {res['ic95']['arbres']}  cnn+f {res['ic95']['cnn+f']}  écart {res['ic95']['ecart']}")
+        # Précision au seuil d'exploitation (seuil qui maximise F1 sur la VALIDATION, mesuré sur le test)
+        # et calibration (ECE, 10 paniers) : les métriques produit de la décision du 29 septembre.
+        va_idx = np.where(split == 'val')[0]
+        for name, p_all in (('arbres', gb.predict_proba(Xf)[:, 1]), ('cnn+f', None)):
+            if p_all is None:
+                Bd2, Sd2 = torch.from_numpy(Xb).to(DEVICE), torch.from_numpy(Xs).to(DEVICE)
+                p_va, p_te = predict(cnnf, Bd2, Sd2, va_idx), preds['cnn+f']
+                del Bd2, Sd2
+            else:
+                p_va, p_te = p_all[va_idx], p_all[te]
+            yv = y[va_idx]
+            best_f1, seuil = -1, 0.5
+            for t in np.linspace(0.05, 0.95, 19):
+                pr = (p_va >= t)
+                tp = int((pr & (yv == 1)).sum())
+                if not tp:
+                    continue
+                f1 = 2 * tp / (2 * tp + int((pr & (yv == 0)).sum()) + int(((~pr) & (yv == 1)).sum()))
+                if f1 > best_f1:
+                    best_f1, seuil = f1, t
+            pr = (p_te >= seuil)
+            prec = float((yte[pr] == 1).mean()) if pr.any() else None
+            rapp = float(pr[yte == 1].mean())
+            bins = np.clip((p_te * 10).astype(int), 0, 9)
+            ece = float(sum(abs(p_te[bins == b].mean() - (yte[bins == b] == 1).mean()) * (bins == b).sum()
+                            for b in range(10) if (bins == b).any()) / len(yte))
+            res[name]['seuil'] = round(float(seuil), 2)
+            res[name]['precision_seuil'] = round(prec, 3) if prec is not None else None
+            res[name]['rappel_seuil'] = round(rapp, 3)
+            res[name]['ece'] = round(ece, 4)
+            print(f'   {name:7s} seuil {seuil:.2f} : précision {prec if prec is None else round(prec, 3)}, rappel {rapp:.3f}, ECE {ece:.4f}')
         best_net = max(res['cnn']['auc'], res['cnn+f']['auc'])
         res['verdict'] = 'réseau > arbres (+0,02 ou plus)' if best_net >= res['arbres']['auc'] + 0.02 else 'réseau ne bat pas les arbres'
         print(f'   -> {res["verdict"]}')

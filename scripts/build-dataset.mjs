@@ -20,28 +20,56 @@
  * l'Elo des deux joueurs et la trajectoire d'évaluation de chaque plan (`traj`), pour les seuils et la grille.
  */
 
-import { createReadStream, writeFileSync, appendFileSync } from 'node:fs';
+import { createReadStream, writeFileSync, appendFileSync, existsSync, readFileSync } from 'node:fs';
 import { createInterface } from 'node:readline';
 import { buildAllFacts } from '../positional/index.js';
 import { planLabel, scanLine } from '../coach/plan-concepts.mjs';
 
 const args = process.argv.slice(2);
 const OUT = args.includes('--out') ? args[args.indexOf('--out') + 1] : 'data/datasets/plans-v1.jsonl';
-const inputs = args.filter((a, i) => !a.startsWith('--') && args[i - 1] !== '--out');
+// Jugement d'exécution (§4.2, seuils calibrés dans reports/calibration-acpl.md) : avec --juge, un plan positif
+// n'est étiqueté 1 que s'il est « réalisé ET bien joué » (perte moyenne ≤ X, pire coup ≤ Y, espérance de score) ;
+// réalisé mais mal joué (ou non jugé) → null : ni bon exemple, ni vrai négatif.
+const JUGE = args.includes('--juge');
+const SEUIL_MOY = Number(args.includes('--seuil-moyenne') ? args[args.indexOf('--seuil-moyenne') + 1] : 10);
+const SEUIL_PIRE = Number(args.includes('--seuil-pire') ? args[args.indexOf('--seuil-pire') + 1] : 20);
+const optNames = ['--out', '--seuil-moyenne', '--seuil-pire'];
+const inputs = args.filter((a, i) => !a.startsWith('--') && !optNames.includes(args[i - 1]));
 const CONCEPTS = ['tour_colonne', 'cavalier_avant_poste', 'blocage', 'rupture', 'affaiblir', 'dominer', 'attaque_minorite', 'baionnette'];
 
 writeFileSync(OUT, '');
 const seen = new Set();
 const counts = {};
 let n = 0;
+let malJoue = 0;
+let nonJuge = 0;
 for (const file of inputs) {
+  // Les numéros de partie recommencent à zéro à chaque lot (2013, 2016...) : l'identifiant est préfixé par le
+  // lot pour que `seen` et le découpage par partie (crc32) ne confondent jamais deux lots.
+  const lot = file.split('/').pop().replace(/^human-/, '').replace(/\.s\d+.*$/, '').replace(/\.jsonl$/, '');
+  // Jugements d'exécution (scripts/juge-plans.mjs) : fichier compagnon `<entrée>.juge.jsonl`, clé game:ply.
+  const juge = new Map();
+  if (JUGE) {
+    const jf = file.replace(/\.jsonl$/, '.juge.jsonl');
+    if (existsSync(jf)) {
+      for (const l of readFileSync(jf, 'utf8').split('\n')) {
+        if (!l) continue;
+        try {
+          const j = JSON.parse(l);
+          juge.set(`${j.game}:${j.ply}`, Object.fromEntries(j.plans.map((p) => [`${p.concept}_${p.side}`, p])));
+        } catch { /* ligne tronquée */ }
+      }
+    }
+    console.error(`${file} : ${juge.size} positions jugées`);
+  }
   for await (const line of createInterface({ input: createReadStream(file), crlfDelay: Infinity })) {
     if (!line) continue;
     const r = JSON.parse(line);
-    const id = `${r.game}:${r.ply}`;
+    const id = `${lot}:${r.game}:${r.ply}`;
     const human = Boolean(r.played);
     if ((!human && (!r.ext || !r.pvs)) || seen.has(id)) continue;
     seen.add(id);
+    const jugements = JUGE ? juge.get(`${r.game}:${r.ply}`) : null;
     const lines = human ? null : r.pvs.map((pv) => scanLine(r.fen, pv, r.ext));
     const y = {};
     const traj = {};
@@ -52,6 +80,15 @@ for (const file of inputs) {
         // Règle du prix (§9) : le plan doit apparaître tôt pour être attribué à CETTE position ; plus tard, ambigu.
         v = !p ? 0 : p.quiet && p.appear < 12 ? 1 : null;
         if (p) traj[`${c}_${side}`] = { appear: p.appear, quiet: p.quiet, ...p.deltas };
+        // « Réalisé ET bien joué » (§4.2) : le positif doit passer les deux seuils du jugement d'exécution.
+        if (JUGE && v === 1) {
+          const j = jugements?.[`${c}_${side}`];
+          if (!j || j.perteMoyenne === null) { v = null; nonJuge++; } else {
+            traj[`${c}_${side}`].perteMoyenne = j.perteMoyenne;
+            traj[`${c}_${side}`].pertePire = j.pertePire;
+            if (j.perteMoyenne > SEUIL_MOY || j.pertePire > SEUIL_PIRE) { v = null; malJoue++; }
+          }
+        }
       } else v = planLabel(r, lines, c, side);
       y[`${c}_${side}`] = v;
       counts[c] ??= { 1: 0, 0: 0, null: 0 };
@@ -62,9 +99,10 @@ for (const file of inputs) {
       const key = `${t.id}|${t.params.color ?? '-'}`;
       facts[key] = (facts[key] ?? 0) + 1;
     }
-    appendFileSync(OUT, `${JSON.stringify({ game: r.game, ply: r.ply, elo: r.elo, fen: r.fen, eval: human ? r.eval0 : r.evals[0], source: human ? 'humain' : 'moteur', y, traj, facts })}\n`);
+    appendFileSync(OUT, `${JSON.stringify({ game: `${lot}:${r.game}`, ply: r.ply, elo: r.elo, fen: r.fen, eval: human ? r.eval0 : r.evals[0], source: human ? 'humain' : 'moteur', y, traj, facts })}\n`);
     if (++n % 5000 === 0) console.error(`${n} positions`);
   }
 }
 console.log(`${n} positions -> ${OUT}`);
+if (JUGE) console.log(`jugement : ${malJoue} positifs mal joués exclus, ${nonJuge} positifs sans jugement exclus (seuils ${SEUIL_MOY}/${SEUIL_PIRE})`);
 for (const [c, v] of Object.entries(counts)) console.log(`${c.padEnd(22)} positifs ${v[1]}  négatifs ${v[0]}  exclus ${v.null}`);
