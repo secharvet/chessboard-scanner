@@ -35,7 +35,12 @@ export class UciEngine {
     await this.#waitFor('uci', (l) => { if (l.startsWith('id name ')) this.name = l.slice(8); return l === 'uciok'; });
     this.#send(`setoption name Threads value ${this.threads}`);
     this.#send(`setoption name Hash value ${this.hashMb}`);
+    // « ucinewgame » une seule fois : la table de hachage est conservée entre les analyses, si bien que les
+    // analyses suivantes d'une même fiche (menace, préparations, prolongements) réutilisent le travail de la
+    // première au lieu de repartir de zéro. La table est indexée par position : aucun risque de mélange.
+    this.#send('ucinewgame');
     await this.#waitFor('isready', (l) => l === 'readyok');
+    this.multipv = null;
   }
 
   stop() {
@@ -53,9 +58,11 @@ export class UciEngine {
       await this.start();
       const multipv = opts.multipv ?? 3;
       const depth = opts.depth ?? 16;
-      this.#send(`setoption name MultiPV value ${multipv}`);
-      this.#send('ucinewgame');
-      await this.#waitFor('isready', (l) => l === 'readyok');
+      if (multipv !== this.multipv) {
+        this.#send(`setoption name MultiPV value ${multipv}`);
+        await this.#waitFor('isready', (l) => l === 'readyok');
+        this.multipv = multipv;
+      }
 
       /** @type {Map<number, EngineLine>} */
       const lines = new Map();

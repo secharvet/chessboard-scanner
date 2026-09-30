@@ -656,3 +656,27 @@ et peut en sortir. Les 4 erreurs graves restantes sont **toutes dans la logique 
    nomme est jouable ici et figure dans une ligne ; sinon il disparaît.
 Objectif : **zéro** sur ce banc, en corrigeant ces trois règles, puis relecture humaine de tout ce que le relecteur
 signale encore (il se trompe aussi : position 3, même phrase jugée grave une fois sur deux).
+
+## 30 septembre, soir — vitesse de la fiche, et le moteur ne redonne pas deux fois la même fiche
+
+- **Mise en ligne** (18 h 55, Paris) : le serveur du coach tournait depuis le 28 septembre ; relancé sur le code actuel,
+  `COACH_REPHRASE=0` (texte du code, sans LLM), `COACH_INTENTIONS=0`. Le site (nginx dans Podman) était injoignable
+  (502 derrière le login) depuis le 29 septembre 12 h 27 : le lien de port rootless du conteneur avait disparu ;
+  `podman restart` a échoué (« kill network process: permission denied »), `podman start` après l'arrêt a suffi.
+- **Où passe le temps d'une fiche** (`scripts/coach-timing.mjs`, `data.timings` dans `coach/context.mjs`), 36 positions
+  du banc, avant : 4 608 ms en moyenne = analyse principale 1 039 (33 %), menace 133 (4 %), préparations adverses
+  1 282 (40 %, jusqu'à 9 analyses à profondeur 10), plans deux moteurs 2 176 sur 3 positions (le second moteur, lent,
+  attendait le premier).
+- **Deux changements sans toucher aux profondeurs** : `ucinewgame` une seule fois au démarrage (la table de hachage
+  est conservée entre les analyses d'une fiche) ; le second moteur part dès l'analyse principale finie, en parallèle.
+  Après : **3 157 ms** en moyenne (−31 %), maximum 6 226 → 4 546 ms. En production : 4 à 5 s sur une position dure.
+- **Découverte** : deux exécutions du MÊME code (avant) donnent des textes différents sur **34 fiches sur 36** (29 hors
+  chiffres d'évaluation) : Stockfish à 2 fils n'est pas déterministe, et le plan « vérifié » peut changer d'une
+  exécution à l'autre (#6 : « tour en e1 » puis « fou a5-b4 »). Conséquences : (1) les passes du banc comparées jusqu'ici
+  portaient aussi ce bruit-là, pas seulement celui du relecteur ; (2) pour mesurer, il faut un mode déterministe
+  (1 fil, table vidée par requête) ; (3) un plan qui dépend du bruit de recherche n'est pas assez robuste : à traiter.
+- Décisions produit du soir (à consigner dans la spécification) : la fiche ne doit plus donner le meilleur coup par
+  défaut (« ça revient à faire rejouer Stockfish contre lui-même ») : idée avant, jugement du coup joué après, indices
+  par paliers, coup révélé sur demande ou après l'erreur ; le joueur automatique ne rejoue pas la ligne du moteur, il
+  joue d'après les motifs et les conseils (centre, développement, pièce menacée), Stockfish ne fait que le juger ;
+  le concept de gambit manque au catalogue (sacrifice de pion volontaire contre développement, centre, initiative).

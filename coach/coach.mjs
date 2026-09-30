@@ -51,7 +51,7 @@ export async function askCoach({ fen, side, moves, question, engine, cfg = llmCo
       return {
         advice: brief.text, adviceWorking: brief.text, brief: brief.items, context: context.text,
         ungrounded: [], problems: [], rejected: [], revised: false, fallback: false,
-        timings: { context: tContext, llm: 0 },
+        timings: { context: tContext, llm: 0, steps: context.data.timings ?? [] },
       };
     }
     const ask = (extra = '') => complete({ system: REPHRASE_SYSTEM, user: `Question de l'élève : ${question?.trim() || 'Que dois-je jouer ?'}\n\n# Texte à reformuler\n\n${brief.text}${extra}` }, cfg, { think: false });

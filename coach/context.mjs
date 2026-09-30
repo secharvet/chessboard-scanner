@@ -64,9 +64,18 @@ export async function buildCoachContext({ fen, side, moves = [], engine, depth =
     return { text: tr(`Partie terminée (${gameOverReason(chess)}).`, `Game over (${gameOverReason(chess)}).`), data: { gameOver: true } };
   }
 
+  // Chronométrage par étape (ms), renvoyé dans data.timings : c'est ce qui dit où passe le temps d'une fiche.
+  const timings = [];
+  let tLast = Date.now();
+  const mark = (label) => { const now = Date.now(); timings.push([label, now - tLast]); tLast = now; };
   const lines = await engine.analyze(fen, { depth, multipv: 3 });
+  mark('analyse principale');
+  // Le second moteur (règle des deux moteurs, voir verifiedPlans) part tout de suite, en parallèle du reste :
+  // son travail ne dépend de rien d'autre et le serveur a des cœurs pour deux.
+  const secondPlans = startSecondPlans(engine, fen);
   const candidates = lines.map((l) => describeLine(fen, l, player, toMove));
   const threat = await findThreat(fen, lines[0], engine, toMove, player);
+  mark('menace (coup nul)');
   const allFacts = buildAllFacts(fen);
   const staticFacts = selectStaticFacts(allFacts);
   const heavyPieces = /[RrQq]/.test(fen.split(' ')[0]);
@@ -76,17 +85,20 @@ export async function buildCoachContext({ fen, side, moves = [], engine, depth =
   const opp = player === 'w' ? 'b' : 'w';
   const prepared = await scorePrepared(engine, fen, opp, preparedThreats(fen, player, { max: 4 }), 1)
     .catch(() => []);
+  mark('préparations adverses');
   const maneuvers = findManeuvers(fen, player, { max: 4 });
   const structures = describeStructures(allFacts, player);
   // Plans vérifiés (coach/plans.mjs) : suites prolongées à 24 demi-coups (une relance légère du moteur),
   // puis contraste entre la meilleure suite et les autres. Les deux camps : « ton plan » et « il veut ».
-  const plans = await verifiedPlans(engine, fen, lines).catch(() => ({ w: [], b: [] }));
+  const plans = await verifiedPlans(engine, fen, lines, secondPlans).catch(() => ({ w: [], b: [] }));
+  mark('plans (deux moteurs)');
   // Intentions (modèles entraînés sur les plans humains, coach/intentions.mjs) : ce que les joueurs de ce niveau
   // entreprennent ici, et ce que l'adversaire prépare. Une proposition, pas une explication ; null si le service
   // est absent ou désactivé (COACH_INTENTIONS).
   const intentions = await predictIntentions({ fen, facts: allFacts, elo: { w: elo ?? 1500, b: elo ?? 1500 } });
 
-  const data = { fen, player, toMove, phase, candidates, threat, staticFacts, balance, structures, prepared, maneuvers, moves, plans, intentions, elo };
+  mark('faits et intentions');
+  const data = { fen, player, toMove, phase, candidates, threat, staticFacts, balance, structures, prepared, maneuvers, moves, plans, intentions, elo, timings };
   const rendered = renderContext(data);
   return { text: rendered.text, data: { ...data, facts: rendered.facts } };
 }
@@ -119,12 +131,19 @@ async function plansWith(engine, fen, lines) {
   return detectPlans({ fen, lines: extended, plies: 24, maxPly: 12 });
 }
 
-async function verifiedPlans(engine, fen, lines) {
-  const first = await plansWith(engine, fen, lines);
+/** Lance l'analyse du second moteur (ses 3 lignes, prolongées) sans l'attendre ; null s'il n'y a pas de second moteur. */
+function startSecondPlans(engine, fen) {
   const other = engine.path ? secondEngine(engine) : null;
-  if (!other) return first;
-  const lines2 = await other.analyze(fen, { depth: 16, multipv: 3 });
-  const confirm = await plansWith(other, fen, lines2);
+  if (!other) return null;
+  const p = other.analyze(fen, { depth: 16, multipv: 3 }).then((lines2) => plansWith(other, fen, lines2));
+  p.catch(() => {}); // l'erreur est traitée à l'attente, dans verifiedPlans
+  return p;
+}
+
+async function verifiedPlans(engine, fen, lines, secondPlans = startSecondPlans(engine, fen)) {
+  const first = await plansWith(engine, fen, lines);
+  if (!secondPlans) return first;
+  const confirm = await secondPlans;
   const both = (side) => first[side].filter((p) => confirm[side].some((q) => q.concept === p.concept));
   return { w: both('w'), b: both('b') };
 }
