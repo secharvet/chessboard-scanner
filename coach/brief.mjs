@@ -324,9 +324,13 @@ function planSteps(data, me, opp, pieces, items, { skipRook = false, verifiedTo 
   }
   const facts = buildAllFacts(data.fen);
   if (!rookPlanned && board.board().flat().some((p) => p && p.type === 'r' && p.color === me)) {
-    // La colonne doit être encore ouverte (ou semi-ouverte pour moi) à la fin de la ligne.
+    // La colonne doit être encore ouverte (ou semi-ouverte pour moi) à la fin de la ligne, ET une de mes tours doit
+    // s'y trouver à ce moment-là : l'étape est alors réalisée par le moteur, pas décrétée par nous (banc, positions
+    // 17 et 20 : « la colonne c » quand la ligne met la tour en e1).
+    const rookAtEndOn = (f) => endBoard.board().flat().some((p) => p && p.type === 'r' && p.color === me && p.square[0] === String(f));
     const file = facts.find((t) => (t.id === 'COLONNE_OUVERTE' || (t.id === 'COLONNE_SEMI_OUVERTE' && t.params.color === me))
       && !board.board().flat().some((p) => p && p.type === 'r' && p.color === me && p.square[0] === String(t.params.file))
+      && rookAtEndOn(t.params.file)
       && endFacts.some((u) => (u.id === 'COLONNE_OUVERTE' || (u.id === 'COLONNE_SEMI_OUVERTE' && u.params.color === me)) && String(u.params.file) === String(t.params.file)));
     if (file) out.push(`place une tour sur la colonne ${file.params.file} ${file.id === 'COLONNE_OUVERTE' ? 'ouverte' : 'semi-ouverte'}`);
   }

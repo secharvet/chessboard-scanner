@@ -481,3 +481,21 @@ profondeur**, parce qu'elle est vague (« préparer une rupture de pions ») là
    c6→c5), « installer le cavalier en d5 » (ROUTE_CAVALIER), « échanger sur e6 pour lui laisser un pion isolé »
    (ECHANGE_ABIMANT). La proposition du modèle choisit le concept ; la disponibilité donne la matière.
 Les intentions restent derrière leur drapeau jusque-là.
+
+## 30 septembre 2026 — Étapes génériques vérifiées dans la ligne : 12 → 5 erreurs graves
+
+Troisième passe du banc de milieux de partie (sans intentions, moteur sur un fil, étapes génériques confirmées par la
+fin de la meilleure ligne : roi adverse « resté au centre » seulement s'il ne peut plus roquer, cible encore présente
+et attaquée, colonne encore ouverte, pas de manœuvre vers une case occupée dans la ligne ; plus de mobilité chiffrée ;
+faits « dans la suite » tenus jusqu'à l'horizon) :
+
+| | Note relecteur | Profondeur | Erreurs graves |
+|---|---|---|---|
+| Passe 1 (étapes génériques libres) | 7,8/10 | 4,67 | 12 |
+| Passe 3 (étapes vérifiées) | **8,3/10** | 4,75 | **5** |
+
+Les 5 restantes : une tour proposée sur une colonne que la ligne n'occupe pas (2 cas : l'étape « tour sur la
+colonne » exige désormais qu'une tour y soit à la fin de la ligne), un fait cité sans exploitation (bouclier
+affaibli sur la colonne h), une lecture tactique fausse (« mettre la tour à l'abri » quand le coup est un sacrifice
+de dame : hiérarchie de la fiche, à traiter), une idée de structure contredite par la ligne. Règle confirmée :
+**tout ce que la fiche affirme comme plan doit être réalisé ou maintenu dans la meilleure ligne du moteur.**
