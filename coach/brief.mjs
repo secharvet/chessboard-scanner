@@ -219,7 +219,18 @@ export function buildBrief(data) {
     const victim = cap1 ? ` : tu prends ${pieceRef(cap1.move.captured, 'opp', cap1.move.to, { article: 'poss' })}` : '';
     if (cap1) pieces.add(`${cap1.move.captured}|opp|${cap1.move.to}`);
     reason = { kind: 'win', points: gain, move: bestSan };
-    sentences.push(`${bestSan} gagne du matériel${victim}. Une fois les échanges terminés, tu as ${gain} point(s) de plus.`);
+    if (cap1 && cap1 !== steps[0]) {
+      // Le coup conseillé ne prend RIEN : il prépare la prise, faite plus tard par une autre pièce (partie réelle du
+      // 30 septembre : « Te1 gagne du matériel : tu prends son pion en e4 » lu comme Txe4, qui perd la tour ; la
+      // prise est Fxe4, deux coups plus tard). On nomme le coup qui prend, et on met en garde si la pièce jouée
+      // n'est pas celle qui prend.
+      const capSan = enToFr(cap1.move.san);
+      const moved = first.piece !== cap1.move.piece || first.to !== cap1.move.from
+        ? ` Ce n'est pas ${first.piece === 'r' || first.piece === 'q' ? 'ta' : 'ton'} ${NAME[first.piece]} qui prend : c'est ${capSan}.` : '';
+      sentences.push(`${bestSan} ne prend rien tout de suite, il prépare un gain : dans la suite ${c0.horizonSan}, ${capSan} prend ${pieceRef(cap1.move.captured, 'opp', cap1.move.to, { article: 'poss' })}.${moved} Une fois les échanges terminés, tu as ${gain} point(s) de plus.`);
+    } else {
+      sentences.push(`${bestSan} gagne du matériel${victim}. Une fois les échanges terminés, tu as ${gain} point(s) de plus.`);
+    }
   }
   if (!reason && first && data.phase === 'ouverture') {
     if (first.san.startsWith('O-O')) {
@@ -442,7 +453,14 @@ function planSteps(data, me, opp, pieces, items, { skipRook = false, verifiedTo 
     if (type) {
       pieces.add(`${type}|me|${man.from}`);
       rookPlanned = type === 'r';
-      out.push(`amène ${FEM[type] ? 'ta' : 'ton'} ${NAME[type]} de ${man.from} vers ${man.to} (${man.why}), par ${man.path.join('-')}`);
+      // Le trajet dit est celui que la pièce fait DANS la ligne (coup précédent de la même partie : « amène ta tour de
+      // f1 vers e1, par f1-e1 » alors que le coup conseillé était Td1, puis Te1).
+      const route = [man.from];
+      for (const st of bestSteps) {
+        if (st.move.color === me && st.move.from === route.at(-1)) route.push(st.move.to);
+        if (route.at(-1) === man.to) break;
+      }
+      out.push(`amène ${FEM[type] ? 'ta' : 'ton'} ${NAME[type]} de ${man.from} vers ${man.to} (${man.why}), par ${route.join('-')}`);
     }
   }
   const facts = buildAllFacts(data.fen);
