@@ -174,6 +174,7 @@ export function bindMentorPanel(options) {
   showCached();
 
   return {
+    ask,
     reset,
     cancel,
     updateButton,

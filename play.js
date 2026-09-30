@@ -392,6 +392,8 @@ async function engineReply() {
   const hadPlayerMove = playerMovedThisCycle;
   const gen = ++engineGeneration;
   const fenBefore = game.fen();
+  // Le joueur vient de jouer : un conseil encore en cours porterait sur l'ancienne position.
+  mentorPanel?.cancel();
   thinking = true;
   $engine.textContent = 'Stockfish réfléchit…';
   lastFenAnalyzed = fenBefore;
@@ -436,8 +438,27 @@ async function engineReply() {
       if (hadPlayerMove) {
         playerMovedThisCycle = false;
       }
+      // Conseil automatique : à chaque fois que c'est au joueur de jouer (sans LLM, le coach se consulte à volonté).
+      autoAdvice();
     }
   }
+}
+
+// ── Conseil du coach à chaque coup ──
+const $mentorAuto = document.getElementById('mentorAuto');
+try {
+  const saved = localStorage.getItem('mentorAuto');
+  if ($mentorAuto && saved != null) $mentorAuto.checked = saved === '1';
+} catch { /* stockage indisponible : on garde la case telle quelle */ }
+$mentorAuto?.addEventListener('change', () => {
+  try { localStorage.setItem('mentorAuto', $mentorAuto.checked ? '1' : '0'); } catch { /* idem */ }
+  if ($mentorAuto.checked) autoAdvice();
+});
+
+function autoAdvice() {
+  if (!$mentorAuto?.checked || !mentorPanel) return;
+  if (!isPlayerTurn() || game.isGameOver() || thinking) return;
+  void mentorPanel.ask();
 }
 
 function undoMove() {
@@ -635,7 +656,7 @@ async function init() {
       isPlayerTurn() && !game.isGameOver() && !thinking && !mentorPanel?.isBusy(),
     defaultQuestion: defaultMentorQuestion,
     idleMessage:
-      'Pose une question ou clique « Demander au coach » à ton tour de jeu.',
+      'Le coach te conseille à chaque coup (décoche « Conseil à chaque coup » pour ne l\'appeler qu\'à la demande).',
     board: () => document.getElementById('playBoard'),
     getOrientation: () => orientation,
   });
@@ -671,6 +692,7 @@ async function init() {
   mentorPanel.updateButton();
 
   if (!isPlayerTurn()) void engineReply();
+  else autoAdvice();
 }
 
 init().catch((e) => showError(e?.message ?? String(e)));

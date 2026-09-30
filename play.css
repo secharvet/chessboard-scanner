@@ -116,6 +116,16 @@
   width: 100%;
 }
 
+.mentor-form__auto {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: var(--muted, inherit);
+  cursor: pointer;
+}
+
 .mentor-tabs {
   display: flex;
   gap: 4px;
