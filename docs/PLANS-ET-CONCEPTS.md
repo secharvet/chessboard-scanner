@@ -703,6 +703,18 @@ justes ; les actions, par priorité :
    contrefactuels notée pour plus tard. Migrer les règles d'itinéraire dupliquées dans `positional/` (le coach peut
    l'importer, pas l'inverse). — DENEB.
 
+**Lot 2016 étiqueté** (30 septembre, 10 h 30) : 250 000 parties, **670 796 positions** avec plan humain candidat
+(2,7 par partie), sans incident ni recours à la mémoire d'échange ; atomes de la défense compris. Avec les 315 669
+du mois 2013 : près d'un million de positions.
+
+**Idée à venir (l'auteur, 30 septembre) : conditionner mon plan au plan adverse.** Aujourd'hui les deux camps sont
+prédits indépendamment depuis la position ; la position contient le dispositif adverse, pas son intention. Deux
+temps : (1) arbres conditionnels, P(mon plan | position, plan adverse prédit et son **stade** dans la recette : combien
+d'atomes déjà joués, le troisième étage imminent vaut alarme), entraînés sur les plans adverses observés et
+inférés sur les prédits, avec validation croisée pour éviter la boucle ; l'ACPL du camp dit quelles interruptions
+étaient bonnes ; (2) si ça marche, un sélecteur de décision (continuer ou parer) jugé par le moteur, l'idée initiale
+du sélecteur de stratégie, à condition de rester racontable via les recettes à étages. Après l'ACPL et 2016.
+
 **Prochaines étapes** (mises à jour le 29 septembre au soir ; deux machines : le VPS étiquette et sert le coach,
 DENEB (RTX 5070 Ti, `docs/MACHINE-GPU.md`) entraîne)
 
