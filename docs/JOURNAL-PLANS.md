@@ -505,3 +505,26 @@ de dame : hiérarchie de la fiche, à traiter), une idée de structure contredit
 après un cavalier en e5 qui ne l'attaque pas (l'attaque est vérifiée au départ ou à la fin, pas depuis la case
 d'arrivée de la manœuvre : à resserrer), un fait cité sans exploitation (colonne h), et la lecture tactique « mets ta
 tour à l'abri » pour un sacrifice de dame (hiérarchie des raisons).
+
+## 30 septembre 2026 — Disponibilités reconfirmées sur le lot 2016 (données jamais vues)
+
+Décision 2 de la relecture du 29 : le gain des disponibilités avait été mesuré sur le jeu de test qui avait servi à
+les concevoir. Reconfirmation sur le lot 2016 (670 796 positions, 992 789 exemples pour la tour, jamais utilisés
+pour concevoir quoi que ce soit ; calcul DENEB, 10 passes, bootstrap 200 ; `reports/train-plans-2016-dispos.json`,
+`-sansdispo.json`). Arbres sans → avec les trois disponibilités (AUC) :
+
+| Concept | Arbres sans → avec | Réseau + faits sans → avec | Écart réseau − arbres sans → avec |
+|---|---|---|---|
+| Tour sur colonne ouverte | 0,891 → 0,891 | 0,909 → 0,910 | +0,018 → +0,019 |
+| Rupture de pions | 0,750 → **0,776** (+0,026) | 0,804 → 0,804 | +0,055 → +0,029 |
+| Affaiblir la structure | 0,698 → **0,723** (+0,024) | 0,736 → 0,742 | +0,037 → +0,019 |
+| Blocage | 0,766 → **0,783** (+0,017) | 0,799 → 0,809 | +0,034 → +0,027 |
+| Cavalier sur avant-poste | 0,785 → **0,835** (+0,050) | 0,852 → 0,858 | +0,067 → +0,024 |
+| Dominer une couleur | 0,834 → 0,837 | 0,840 → 0,837 | +0,006 → 0,000 |
+| Baïonnette | 0,921 → 0,923 | 0,980 → 0,981 | +0,058 → +0,058 |
+
+**Confirmé sur des données neuves** : les disponibilités apportent aux arbres +0,017 à +0,050 sur les quatre concepts
+de la sonde, rien aux contrôles ; les réseaux ne bougent pas (ils voyaient déjà) ; l'écart réseau − arbres se referme
+de moitié environ (rupture 0,055 → 0,029, avant-poste 0,067 → 0,024). Le cycle « le réseau montre, la règle code,
+les arbres récupèrent » tient hors du jeu qui l'a inspiré. Ce qui reste d'écart (0,02 à 0,03) est ce que
+l'échiquier dit encore et que les faits ne disent pas.
