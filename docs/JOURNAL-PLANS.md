@@ -551,3 +551,26 @@ est la même pour tous les concepts. C'est la réponse au point 2 de la relectur
 sur des parties de débutants apprendrait leurs fautes une fois sur trois. L'étiquette d'entraînement retenue est
 « réalisé **et** bien joué » ; les réalisés-mal-joués sont exclus (ni bons exemples, ni vrais négatifs). Prochaine
 action : réentraîner sur cette étiquette (DENEB), puis décider du branchement dans le coach.
+
+## 30 septembre 2026 — Modèles v4 : entraînés sur les plans réalisés ET bien joués (16 h 33 → 16 h 58, DENEB)
+
+Jeu de données `humains-v4-juge.jsonl` (2013 + 2016, 986 465 positions ; `build-dataset.mjs --juge`, seuils 10/20) :
+95 917 positifs mal joués exclus. Entraînement 10 passes, bootstrap 200 (`reports/train-plans-v4-juge.json`).
+Comparaison avec les modèles précédents (2016, étiquette « réalisé », mêmes faits) :
+
+| Concept | Positifs (test) | Arbres avant → après | Réseau + faits avant → après | Écart réseau − arbres |
+|---|---|---|---|---|
+| Tour sur colonne ouverte | 18 880 | 0,891 → 0,895 | 0,910 → 0,913 | +0,018 |
+| Rupture de pions | 11 296 | 0,776 → 0,787 | 0,804 → **0,820** | +0,033 |
+| Affaiblir la structure | 15 942 | 0,723 → 0,729 | 0,742 → 0,754 | +0,024 |
+| Blocage | 2 607 | 0,783 → **0,807** | 0,809 → **0,830** | +0,023 |
+| Cavalier sur avant-poste | 2 818 | 0,835 → 0,841 | 0,858 → 0,868 | +0,027 |
+| Dominer une couleur | 759 | 0,837 → 0,839 | 0,837 → **0,861** | +0,022 |
+| Baïonnette | 412 | 0,923 → 0,929 | 0,981 → 0,983 | +0,054 |
+
+Lecture : l'étiquette plus exigeante n'a rien coûté ; elle a **légèrement amélioré** tous les concepts (le bruit des
+plans mal joués gênait l'apprentissage), surtout blocage (+0,024 arbres) et dominer (+0,023 réseau). Les réseaux
+gardent 0,02 à 0,03 d'avance, significative (intervalles disjoints). Les modèles v4 (`plan-*-v4.pt`,
+`plan-*-v4-faits.pkl`) sont les candidats à la production ; calibration toujours mauvaise (ECE 0,08 à 0,30), à
+traiter avant tout affichage de probabilité. Étape suivante : la mesure « le plan proposé change-t-il selon le
+niveau en entrée ? » qui décide de l'ordre entre module de niveau et branchement.
