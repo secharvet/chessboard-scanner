@@ -420,7 +420,17 @@ function planSteps(data, me, opp, pieces, items, { skipRook = false, verifiedTo 
     && (square === undefined || t.params.square === square || (typeof t.params.square === 'string' && typeof square === 'string' && id.startsWith('PION_') && t.params.square[0] === square[0])));
   // Dans la ligne du coup conseillé seulement : une manœuvre de la ligne 2 contredit le coup de la ligne 1 (banc #20 :
   // « joue Cxe6, puis amène ton cavalier de c5 en a6 »).
-  const inLines = (m) => (data.candidates[0]?.pvUci ?? []).some((u) => u.slice(0, 4) === m.path[0] + m.path[1]);
+  // …et la pièce doit ARRIVER à destination dans cette ligne (passe 8, #10 : « g5-f3-e5-c6 » alors que la ligne joue
+  // Cf3 puis Cxd4 : le premier pas ne prouve pas la manœuvre).
+  const inLines = (m) => {
+    let sq = m.from;
+    for (const s of bestSteps) {
+      if (s.move.color !== me) continue;
+      if (s.move.from === sq) sq = s.move.to;
+      if (sq === m.to) return true;
+    }
+    return false;
+  };
   // Seulement une manœuvre dont le premier pas figure dans une ligne du moteur (sinon ce n'est pas un plan sûr),
   // pas celle que le plan vérifié vient déjà de dire (même case d'arrivée), et pas vers une case qu'une autre de
   // mes pièces occupe à la fin de la ligne (« le cavalier en d5, puis le fou vers d5 »).

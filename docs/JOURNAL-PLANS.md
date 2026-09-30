@@ -706,3 +706,15 @@ signale encore (il se trompe aussi : position 3, même phrase jugée grave une f
   pas de meilleur coup imposé, joueur automatique guidé par les motifs et non par la ligne du moteur, concept de
   gambit ; (6) niveau du joueur envoyé par la page (déclaré) ; (7) défauts d'étiquettes signalés par DeepSeek
   (blocage, rupture par prise, affaiblir, dominer) avant tout réentraînement.
+
+## 30 septembre, 21 h 40 — passe 8 du relecteur (après les corrections)
+
+- `reports/coach-eval-1790796058412.md`, 38 positions, texte du code : note 7,9, **4 « graves » signalées**, contre 4 à
+  la passe 7. Mais 3 des 4 sont des erreurs du relecteur, vérifiées sur les FEN : il affirme qu'il n'y a pas de fou
+  noir en b6 (#1), en c6 (#2), en g6 (#17) alors que les trois sont sur l'échiquier, et il oublie la dame b3 qui
+  reprend en a4 (#2). Les phrases « X attaque la case…, mais Y la défend : s'il prend, tu reprends et gagnes 2 » sont
+  justes (échange statique pièce par pièce). Le relecteur lit le texte d'analyse, pas l'échiquier : c'est sa limite.
+- La 4e était réelle (#10) : manœuvre « g5-f3-e5-c6 » dont seul le premier pas figurait dans la ligne, qui joue ensuite
+  Cxd4. Corrigé : une manœuvre n'est annoncée que si la pièce ARRIVE à destination dans la ligne du coup conseillé.
+  Rejoué : seule la fiche #10 change. **Erreurs graves réelles sur le banc : 0 sur 38** (relecture humaine encore due
+  sur les 23 fiches modifiées). Coach en ligne relancé sur cette version.
