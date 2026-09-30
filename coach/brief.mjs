@@ -14,6 +14,7 @@ import { Chess } from 'chess.js';
 import { buildAttackMap } from '../positional/attack-map.js';
 import { buildAllFacts } from '../positional/index.js';
 import { planSentence } from './plans.mjs';
+import { topIntention } from './intentions.mjs';
 import { renderToken } from '../positional/interpreter.js';
 import { buildTacticalFacts } from '../positional/piece-attacks.js';
 import { enToFr } from './notation.mjs';
@@ -215,6 +216,13 @@ export function buildBrief(data) {
       const [s1, s2, s3] = steps3;
       sentences.push(`Ton plan${verified ? ' (vérifié dans la meilleure suite du moteur)' : ''} : ${s1}${s2 ? `, ensuite ${s2}` : ''}${s3 ? `, et ${s3}` : ''}.`);
     }
+    // Intention (modèles sur les plans humains) : ce que les joueurs de ce niveau entreprennent ici. Une tendance,
+    // dite comme telle, jamais comme un conseil vérifié ; tue si c'est déjà le plan vérifié.
+    const mine = topIntention(data.intentions?.[me], { exclude: verified ? [verified.concept] : [] });
+    if (mine) {
+      items.push({ kind: 'intention', concept: mine.concept, p: mine.p });
+      sentences.push(`À ton niveau, dans ce genre de position, les joueurs entreprennent souvent : ${INTENT[mine.concept] ?? mine.concept} (${Math.round(mine.p * 100)} % des cas).`);
+    }
   }
 
   // Coups qui se valent (écart ≤ 0,3).
@@ -240,6 +248,12 @@ export function buildBrief(data) {
   if (reason.kind !== 'parry' && reason.kind !== 'parry_mate' && (p0 || his)) {
     const parts = [];
     if (p0) parts.push(p0.text.replace(/\s*\(Stockfish[^)]*\)\)?/, '').replace(/ \((?:pion|cavalier|fou|tour|dame|roi|roque)\)/g, ''));
+    // Ce qu'il prépare probablement, d'après les plans humains (proposition, pas vérification).
+    const hisIntent = his ? null : topIntention(data.intentions?.[opp], { min: 0.4 });
+    if (hisIntent) {
+      items.push({ kind: 'opp_intention', concept: hisIntent.concept, p: hisIntent.p });
+      parts.push(`à son niveau, il prépare souvent ${INTENT_OPP[hisIntent.concept] ?? hisIntent.concept}`);
+    }
     // Le plan de l'adversaire, vérifié dans SA meilleure suite : la base de la prophylaxie.
     if (his) {
       items.push({ kind: 'opp_plan', ...his });
@@ -258,6 +272,19 @@ export function buildBrief(data) {
  *   manœuvre sûre (de préférence amorcée par une ligne du moteur) → colonne pour une tour →
  *   cible (faiblesse adverse) → idée de la structure de pions.
  */
+/** Noms des plans pour les phrases d'intention (tutoiement pour l'élève, tournure neutre pour l'adversaire). */
+const INTENT = {
+  tour_colonne: 'mettre une tour sur la colonne ouverte', cavalier_avant_poste: 'installer un cavalier sur un avant-poste',
+  blocage: 'bloquer un pion faible adverse', rupture: 'préparer une rupture de pions', affaiblir: 'affaiblir la structure adverse',
+  dominer: 'échanger le fou adverse pour dominer une couleur de cases', attaque_minorite: 'lancer une attaque de minorité',
+  baionnette: 'pousser h4-h5 contre le fianchetto',
+};
+const INTENT_OPP = {
+  tour_colonne: 'une tour sur la colonne ouverte', cavalier_avant_poste: 'un cavalier sur un avant-poste',
+  blocage: 'le blocage d\'un de tes pions faibles', rupture: 'une rupture de pions', affaiblir: 'un affaiblissement de ta structure',
+  dominer: 'l\'échange de ton fou pour dominer une couleur', attaque_minorite: 'une attaque de minorité', baionnette: 'la poussée h4-h5 contre ton fianchetto',
+};
+
 function planSteps(data, me, opp, pieces, items, { skipRook = false, verifiedTo = null } = {}) {
   const out = [];
   const board = new Chess(data.fen);

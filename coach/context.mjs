@@ -13,6 +13,7 @@ import { existsSync } from 'node:fs';
 import { extendPv } from './extend-line.mjs';
 import { UciEngine } from './uci-engine.mjs';
 import { detectPlans } from './plans.mjs';
+import { predictIntentions } from './intentions.mjs';
 import { buildAllFacts, detectPhase } from '../positional/index.js';
 import { buildAttackMap } from '../positional/attack-map.js';
 import { renderToken, tokenWeight } from '../positional/interpreter.js';
@@ -53,7 +54,7 @@ const STATIC_IGNORED = new Set(['STRUCTURE', 'ROQUES_OPPOSES', 'PHASE', 'EGALITE
  *   depth?: number,
  * }} input
  */
-export async function buildCoachContext({ fen, side, moves = [], engine, depth = 16 }) {
+export async function buildCoachContext({ fen, side, moves = [], engine, depth = 16, elo = null }) {
   const chess = new Chess(fen);
   const toMove = chess.turn();
   const player = side === 'black' ? 'b' : side === 'white' ? 'w' : toMove;
@@ -80,8 +81,12 @@ export async function buildCoachContext({ fen, side, moves = [], engine, depth =
   // Plans vérifiés (coach/plans.mjs) : suites prolongées à 24 demi-coups (une relance légère du moteur),
   // puis contraste entre la meilleure suite et les autres. Les deux camps : « ton plan » et « il veut ».
   const plans = await verifiedPlans(engine, fen, lines).catch(() => ({ w: [], b: [] }));
+  // Intentions (modèles entraînés sur les plans humains, coach/intentions.mjs) : ce que les joueurs de ce niveau
+  // entreprennent ici, et ce que l'adversaire prépare. Une proposition, pas une explication ; null si le service
+  // est absent ou désactivé (COACH_INTENTIONS).
+  const intentions = await predictIntentions({ fen, facts: allFacts, elo: { w: elo ?? 1500, b: elo ?? 1500 } });
 
-  const data = { fen, player, toMove, phase, candidates, threat, staticFacts, balance, structures, prepared, maneuvers, moves, plans };
+  const data = { fen, player, toMove, phase, candidates, threat, staticFacts, balance, structures, prepared, maneuvers, moves, plans, intentions, elo };
   const rendered = renderContext(data);
   return { text: rendered.text, data: { ...data, facts: rendered.facts } };
 }
