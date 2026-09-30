@@ -338,7 +338,10 @@ function planSteps(data, me, opp, pieces, items, { skipRook = false, verifiedTo 
   if (target) {
     pieces.add(`p|opp|${target.params.square}`);
     out.push(`vise le pion ${TARGET[target.id]} adverse en ${target.params.square}`);
-  } else if (facts.some((t) => t.id === 'ROI_AU_CENTRE' && t.params.color === opp) && stillAtEnd('ROI_AU_CENTRE', opp)) {
+  } else if (facts.some((t) => t.id === 'ROI_AU_CENTRE' && t.params.color === opp) && stillAtEnd('ROI_AU_CENTRE', opp)
+    && !new RegExp(opp === 'w' ? '[KQ]' : '[kq]').test(endBoard.fen().split(' ')[2])) {
+    // « Resté au centre » n'est une cible que s'il ne peut plus roquer à la fin de la ligne : sinon il roque au
+    // coup suivant et le plan est faux (banc de milieux, positions 7, 9, 21, 27).
     out.push('vise son roi resté au centre en ouvrant le jeu');
   }
   // Finale : le roi devient une pièce d'attaque, et une majorité de pions crée un pion passé.

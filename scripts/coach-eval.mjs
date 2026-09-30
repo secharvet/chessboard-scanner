@@ -35,7 +35,8 @@ const concurrency = Number(opt('--jobs') ?? 3);
 const cfg = llmConfig();
 const useJudge = args.includes('--judge');
 const jcfg = judgeConfig();
-const engine = new UciEngine();
+// Un fil : le banc doit être reproductible d'une passe à l'autre (à deux fils, les lignes changent, et les notes avec).
+const engine = new UciEngine({ threads: 1 });
 
 const NAIVE_SYSTEM = `Tu es un coach d'échecs francophone pour joueurs de club. Analyse la position fournie (FEN) et réponds à la question de l'élève : évaluation, plan, coup conseillé, pièges à éviter. Notation française (R, D, T, F, C). 180 mots maximum, Markdown.`;
 
