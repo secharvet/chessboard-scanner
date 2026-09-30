@@ -12,6 +12,7 @@
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { Chess } from 'chess.js';
 import { askCoach } from '../coach/coach.mjs';
+import { stopSecondEngine } from '../coach/context.mjs';
 import { buildCoachContext } from '../coach/context.mjs';
 import { loadEnv } from '../coach/env.mjs';
 // --positions <module> : un autre banc (coach/eval-positions-milieux.mjs, tiré des étiquettes humaines).
@@ -106,6 +107,8 @@ const results = await pool(jobs, concurrency, async ({ pos, mode }) => {
   }
 });
 engine.stop();
+stopSecondEngine(); // le second moteur (règle des deux moteurs) gardait le processus en vie après le rapport
+
 
 // ── Rapport ──
 const summary = modes.map((mode) => {

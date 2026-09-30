@@ -107,6 +107,12 @@ function secondEngine(engine) {
   return second || null;
 }
 
+/** Arrête le second moteur (les scripts qui finissent doivent l'appeler, sinon Node ne se termine pas). */
+export function stopSecondEngine() {
+  if (second) second.stop();
+  second = null;
+}
+
 async function plansWith(engine, fen, lines) {
   const extended = [];
   for (const l of lines) extended.push({ pv: await extendPv(engine, fen, l.pv, { plies: 24, depth: 12, relaunch: 1 }), score: l.score });
