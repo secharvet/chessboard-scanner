@@ -221,7 +221,7 @@ export function buildBrief(data) {
     const mine = topIntention(data.intentions?.[me], { exclude: verified ? [verified.concept] : [] });
     if (mine) {
       items.push({ kind: 'intention', concept: mine.concept, p: mine.p });
-      sentences.push(`À ton niveau, dans ce genre de position, les joueurs entreprennent souvent : ${INTENT[mine.concept] ?? mine.concept} (${Math.round(mine.p * 100)} % des cas).`);
+      sentences.push(`À ton niveau, dans ce genre de position, les joueurs entreprennent souvent : ${INTENT[mine.concept] ?? mine.concept}.`);
     }
   }
 
@@ -249,7 +249,7 @@ export function buildBrief(data) {
     const parts = [];
     if (p0) parts.push(p0.text.replace(/\s*\(Stockfish[^)]*\)\)?/, '').replace(/ \((?:pion|cavalier|fou|tour|dame|roi|roque)\)/g, ''));
     // Ce qu'il prépare probablement, d'après les plans humains (proposition, pas vérification).
-    const hisIntent = his ? null : topIntention(data.intentions?.[opp], { min: 0.4 });
+    const hisIntent = his ? null : topIntention(data.intentions?.[opp], { min: 0.55, margin: 0.15 });
     if (hisIntent) {
       items.push({ kind: 'opp_intention', concept: hisIntent.concept, p: hisIntent.p });
       parts.push(`à son niveau, il prépare souvent ${INTENT_OPP[hisIntent.concept] ?? hisIntent.concept}`);

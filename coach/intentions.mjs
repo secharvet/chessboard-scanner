@@ -41,12 +41,22 @@ export async function predictIntentions({ fen, facts, elo }) {
   }
 }
 
-/** Le plan le plus probable d'un camp, si sa probabilité passe le seuil ; le score retenu est celui des arbres. */
-export function topIntention(byConcept, { min = 0.35, exclude = [] } = {}) {
+/**
+ * Le plan le plus probable d'un camp. Les probabilités des arbres sont entraînées avec des classes rééquilibrées :
+ * elles CLASSENT bien mais ne sont pas calibrées (0,6 ne veut pas dire « 60 % des cas ») ; on ne les affiche donc
+ * jamais comme des pourcentages, et on exige une marge nette sur le second pour parler. Les recettes à précondition
+ * (baïonnette, attaque de minorité) sont exclues tant qu'elles ne sont pas calibrées : leur rareté rend les
+ * probabilités rééquilibrées peu fiables.
+ */
+const NOT_YET = ['baionnette', 'attaque_minorite'];
+export function topIntention(byConcept, { min = 0.5, margin = 0.1, exclude = [] } = {}) {
   if (!byConcept) return null;
-  const best = Object.entries(byConcept)
-    .filter(([c]) => !exclude.includes(c))
+  const ranked = Object.entries(byConcept)
+    .filter(([c]) => !exclude.includes(c) && !NOT_YET.includes(c))
     .map(([concept, p]) => ({ concept, p: p.arbres ?? p.reseau ?? 0 }))
-    .sort((a, b) => b.p - a.p)[0];
-  return best && best.p >= min ? best : null;
+    .sort((a, b) => b.p - a.p);
+  const [best, second] = ranked;
+  if (!best || best.p < min) return null;
+  if (second && best.p - second.p < margin) return null;
+  return best;
 }
