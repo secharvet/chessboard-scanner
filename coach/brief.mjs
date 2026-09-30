@@ -169,14 +169,18 @@ export function buildBrief(data) {
         ? `${t.id}|${t.params.color}|${t.params.square[0]}` : `${t.id}|${JSON.stringify(t.params)}`);
       const before = new Set(buildAllFacts(data.fen).map(key));
       // Par ordre d'importance pour expliquer un plan ; pas de « case faible » isolée (trop vague).
+      // Pas de mobilité chiffrée (volatile, et les nombres changent d'un demi-coup à l'autre : banc de milieux, 30 sept.).
       const RANK = [
         ['TOUR_COLONNE_OUVERTE', me], ['CONTROLE_COLONNE', me], ['CAVALIER_AVANT_POSTE', me], ['PION_PASSE_PROTEGE', me],
         ['PION_PASSE', me], ['ROI_AU_CENTRE', opp], ['PIONS_ROI_AFFAIBLI', opp], ['PION_FAIBLE', opp], ['PION_ISOLE', opp],
         ['PION_ARRIERE', opp], ['DOUBLON', opp], ['AVANT_POSTE', me], ['CONTROLE_CENTRE', me], ['AVANTAGE_ESPACE', me],
-        ['ACTIVITE', me], ['PAIRE_FOUS', me],
+        ['PAIRE_FOUS', me],
       ];
       const rank = (t) => RANK.findIndex(([id, c]) => id === t.id && t.params.color === c);
-      const fresh = buildAllFacts(end).filter((t) => !before.has(key(t)) && rank(t) >= 0)
+      // Un fait « dans la suite » doit apparaître tôt ET tenir jusqu'au bout de l'horizon : sinon c'est un état
+      // passager d'un échange en cours, pas une raison.
+      const atHorizon = new Set(buildAllFacts(steps.at(-1).fen).map(key));
+      const fresh = buildAllFacts(end).filter((t) => !before.has(key(t)) && atHorizon.has(key(t)) && rank(t) >= 0)
         .sort((x, y) => rank(x) - rank(y)).slice(0, 2);
       if (fresh.length) reason = { kind: 'plan', tokens: fresh, move: bestSan };
       for (const t of fresh) why.push(`dans la suite, ${lowerFirst(renderToken(t).replace(/\.$/, ''))}`);
@@ -295,10 +299,20 @@ const INTENT_OPP = {
 function planSteps(data, me, opp, pieces, items, { skipRook = false, verifiedTo = null } = {}) {
   const out = [];
   const board = new Chess(data.fen);
+  // Fin de la meilleure ligne du moteur : toute étape générique doit y être encore vraie (banc de milieux de
+  // partie, 30 septembre : « vise son roi resté au centre » alors qu'il roque dans toutes les lignes, étapes vers
+  // une case que la ligne occupe déjà, cible que la ligne fait disparaître). Sinon l'étape se tait.
+  const bestSteps = play(data.fen, data.candidates[0]?.pvUci ?? []);
+  const endBoard = new Chess(bestSteps.at(-1)?.fen ?? data.fen);
+  const endFacts = buildAllFacts(endBoard.fen());
+  const stillAtEnd = (id, color, square) => endFacts.some((t) => t.id === id && t.params.color === color
+    && (square === undefined || t.params.square === square || (typeof t.params.square === 'string' && typeof square === 'string' && id.startsWith('PION_') && t.params.square[0] === square[0])));
   const inLines = (m) => data.candidates.some((c) => (c.pvUci ?? []).some((u) => u.slice(0, 4) === m.path[0] + m.path[1]));
   // Seulement une manœuvre dont le premier pas figure dans une ligne du moteur (sinon ce n'est pas un plan sûr),
-  // et pas celle que le plan vérifié vient déjà de dire (même case d'arrivée).
-  const man = (data.maneuvers ?? []).find((m) => inLines(m) && m.to !== verifiedTo);
+  // pas celle que le plan vérifié vient déjà de dire (même case d'arrivée), et pas vers une case qu'une autre de
+  // mes pièces occupe à la fin de la ligne (« le cavalier en d5, puis le fou vers d5 »).
+  const man = (data.maneuvers ?? []).find((m) => inLines(m) && m.to !== verifiedTo
+    && !(endBoard.get(m.to) && endBoard.get(m.to).color === me && endBoard.get(m.to).type !== board.get(m.from)?.type));
   let rookPlanned = skipRook;
   if (man) {
     const type = board.get(man.from)?.type;
@@ -310,16 +324,21 @@ function planSteps(data, me, opp, pieces, items, { skipRook = false, verifiedTo 
   }
   const facts = buildAllFacts(data.fen);
   if (!rookPlanned && board.board().flat().some((p) => p && p.type === 'r' && p.color === me)) {
+    // La colonne doit être encore ouverte (ou semi-ouverte pour moi) à la fin de la ligne.
     const file = facts.find((t) => (t.id === 'COLONNE_OUVERTE' || (t.id === 'COLONNE_SEMI_OUVERTE' && t.params.color === me))
-      && !board.board().flat().some((p) => p && p.type === 'r' && p.color === me && p.square[0] === String(t.params.file)));
+      && !board.board().flat().some((p) => p && p.type === 'r' && p.color === me && p.square[0] === String(t.params.file))
+      && endFacts.some((u) => (u.id === 'COLONNE_OUVERTE' || (u.id === 'COLONNE_SEMI_OUVERTE' && u.params.color === me)) && String(u.params.file) === String(t.params.file)));
     if (file) out.push(`place une tour sur la colonne ${file.params.file} ${file.id === 'COLONNE_OUVERTE' ? 'ouverte' : 'semi-ouverte'}`);
   }
   const TARGET = { PION_FAIBLE: 'faible', PION_ISOLE: 'isolé', PION_ARRIERE: 'arriéré' };
-  const target = facts.find((t) => TARGET[t.id] && t.params.color === opp);
+  // La cible doit exister encore à la fin de la ligne, et une de mes pièces doit l'attaquer (au départ ou à la fin) :
+  // sinon « vise le pion a7 » après « ta tour en e1 » n'a pas de sens.
+  const attacked = (sq) => { try { return board.attackers(sq, me).length > 0 || endBoard.attackers(sq, me).length > 0; } catch { return true; } };
+  const target = facts.find((t) => TARGET[t.id] && t.params.color === opp && stillAtEnd(t.id, opp, t.params.square) && attacked(t.params.square));
   if (target) {
     pieces.add(`p|opp|${target.params.square}`);
     out.push(`vise le pion ${TARGET[target.id]} adverse en ${target.params.square}`);
-  } else if (facts.some((t) => t.id === 'ROI_AU_CENTRE' && t.params.color === opp)) {
+  } else if (facts.some((t) => t.id === 'ROI_AU_CENTRE' && t.params.color === opp) && stillAtEnd('ROI_AU_CENTRE', opp)) {
     out.push('vise son roi resté au centre en ouvrant le jeu');
   }
   // Finale : le roi devient une pièce d'attaque, et une majorité de pions crée un pion passé.
