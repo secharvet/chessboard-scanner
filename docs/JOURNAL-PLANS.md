@@ -454,3 +454,30 @@ proposé « une tour sur la colonne ouverte » dans une finale de pions sans tou
 pas ; les ingrédients de la grille conditionnelle servent de filtre). Sur les 16 positions du banc : 4 intentions,
 plausibles après filtre (rupture pour les Noirs dans la Française avance et l'Est-indienne, tour sur la colonne
 dans le PDI). Production : après calibration et banc de milieux de partie.
+
+## 30 septembre 2026 — Banc de milieux de partie : sans et avec intentions
+
+Banc `coach/eval-positions-milieux.mjs` (36 positions de test tirées des étiquettes humaines, un plan réalisé par un
+joueur de niveau connu, le coach conseille le camp au trait avec son Elo), mode fiche, relecteur DeepSeek Pro.
+
+| | Thèmes trouvés | Note relecteur | Profondeur | Erreurs graves |
+|---|---|---|---|---|
+| Sans intentions | 28/72 (39 %) | 7,8/10 | 4,67 | 12 |
+| Avec intentions | 36/72 (50 %) | 7,4/10 | 4,64 | 13 |
+
+Lecture honnête : les intentions sont apparues dans 18 réponses sur 36 (« il prépare souvent » dans 9) ; **aucune
+erreur grave ne porte sur une phrase d'intention** ; les thèmes du plan sont plus souvent cités (la phrase nomme le
+concept) ; mais la note et la profondeur ne bougent pas (l'écart de 0,4 est dans la variance du relecteur, et le
+moteur du coach, sur 2 fils, change de lignes d'une passe à l'autre). Sur les 12 positions avec intention, la note
+baisse 8 fois, monte 4 fois : bruit. Conclusion : **la phrase d'intention ne nuit pas mais n'apporte pas de
+profondeur**, parce qu'elle est vague (« préparer une rupture de pions ») là où le relecteur attend du concret
+(« la rupture c5, disponible maintenant »). Deux corrections en découlent, dans cet ordre :
+1. **Les 12 erreurs graves viennent des étapes génériques du plan** (`planSteps`), écrites sans regarder les lignes :
+   « vise son roi resté au centre » alors qu'il roque dans toutes les lignes (4 cas), étapes géométriquement
+   impossibles (« la tour en e1 puis le pion a7 », « le cavalier en d5 puis le fou vers d5 »), mobilité prise au
+   mauvais instant. Règle : une étape générique doit être **confirmée par les lignes du moteur** (le fait visé
+   subsiste, la case est libre, la pièce existe) ou se taire. Le banc historique ne voyait pas ces défauts.
+2. **Rendre l'intention concrète** en la reliant aux disponibilités : « préparer la rupture c5 » (LEVIER_DISPONIBLE
+   c6→c5), « installer le cavalier en d5 » (ROUTE_CAVALIER), « échanger sur e6 pour lui laisser un pion isolé »
+   (ECHANGE_ABIMANT). La proposition du modèle choisit le concept ; la disponibilité donne la matière.
+Les intentions restent derrière leur drapeau jusque-là.
