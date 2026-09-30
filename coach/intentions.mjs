@@ -94,25 +94,25 @@ export function concreteIntention(concept, facts, side, who = 'me', fen = null) 
       const l = of('LEVIER_DISPONIBLE', side)[0];
       if (!l) return null;
       const cible = String(l.params.cible).split(',')[0];
-      return { text: me ? `prépare la rupture ${l.params.square} (ton pion ${l.params.pawn} contre ${cible})` : `la rupture ${l.params.square} (son pion ${l.params.pawn} contre ${cible})`, squares: [l.params.square, l.params.pawn, cible] };
+      return { text: me ? `prépare la rupture ${l.params.square} (ton pion ${l.params.pawn} contre ${cible})` : `la rupture ${l.params.square} (son pion ${l.params.pawn} contre ${cible})`, squares: [l.params.square, l.params.pawn, cible], moves: [`${l.params.pawn}${l.params.square}`] };
     }
     case 'cavalier_avant_poste': {
       const r = of('ROUTE_CAVALIER', side).sort((a, b) => a.params.moves - b.params.moves)[0];
       if (!r) return null;
-      return { text: me ? `installe ton cavalier de ${r.params.from} en ${r.params.to} (${r.params.moves === 1 ? 'un bond' : 'deux bonds'})` : `son cavalier de ${r.params.from} vers ${r.params.to}`, squares: [r.params.from, r.params.to] };
+      return { text: me ? `installe ton cavalier de ${r.params.from} en ${r.params.to} (${r.params.moves === 1 ? 'un bond' : 'deux bonds'})` : `son cavalier de ${r.params.from} vers ${r.params.to}`, squares: [r.params.from, r.params.to], moves: [`${r.params.from}${r.params.to}`], fromSquare: r.params.from, piece: 'n' };
     }
     case 'blocage': {
       const r = of('ROUTE_CAVALIER', side).find((t) => /bloc/i.test(String(t.params.but ?? ''))) ?? of('ROUTE_CAVALIER', side)[0];
       if (!r) return null;
-      return { text: me ? `bloque son pion avec ton cavalier de ${r.params.from} en ${r.params.to}` : `le blocage de ton pion par son cavalier en ${r.params.to}`, squares: [r.params.from, r.params.to] };
+      return { text: me ? `bloque son pion avec ton cavalier de ${r.params.from} en ${r.params.to}` : `le blocage de ton pion par son cavalier en ${r.params.to}`, squares: [r.params.from, r.params.to], moves: [`${r.params.from}${r.params.to}`], fromSquare: r.params.from, piece: 'n' };
     }
     case 'affaiblir': {
       const e = of('ECHANGE_ABIMANT', side)[0];
-      if (e) return { text: me ? `échange sur ${e.params.cible} avec ta pièce de ${e.params.from} : il lui restera ${DEGAT[e.params.degat] ?? 'une faiblesse'}` : `l'échange sur ${e.params.cible}, qui te laisserait ${DEGAT[e.params.degat] ?? 'une faiblesse'}`, squares: [e.params.cible, e.params.from] };
+      if (e) return { text: me ? `échange sur ${e.params.cible} avec ta pièce de ${e.params.from} : il lui restera ${DEGAT[e.params.degat] ?? 'une faiblesse'}` : `l'échange sur ${e.params.cible}, qui te laisserait ${DEGAT[e.params.degat] ?? 'une faiblesse'}`, squares: [e.params.cible, e.params.from], moves: [`${e.params.from}${e.params.cible}`] };
       const l = of('LEVIER_DISPONIBLE', side)[0];
       if (!l) return null;
       const cible = String(l.params.cible).split(',')[0];
-      return { text: me ? `pousse ${l.params.square} contre ${cible} pour abîmer sa structure` : `la poussée ${l.params.square} contre ${cible}`, squares: [l.params.square, cible] };
+      return { text: me ? `pousse ${l.params.square} contre ${cible} pour abîmer sa structure` : `la poussée ${l.params.square} contre ${cible}`, squares: [l.params.square, cible], moves: [`${l.params.pawn}${l.params.square}`] };
     }
     case 'dominer': {
       const c = of('COMPLEXE_FAIBLE', opp)[0] ?? of('CASE_FAIBLE', opp)[0];
@@ -121,18 +121,63 @@ export function concreteIntention(concept, facts, side, who = 'me', fen = null) 
       const sq = typeof c.params.square === 'string' ? c.params.square : null;
       const shade = c.params.shade ?? (sq ? ((sq.charCodeAt(0) - 97 + Number(sq[1])) % 2 === 1 ? 'noires' : 'claires') : null);
       if (!shade) return null;
-      return { text: me ? `échange son fou des cases ${shade} en gardant le tien : il est faible sur ces cases` : `l'échange de ton fou des cases ${shade}`, squares: [] };
+      return { text: me ? `échange son fou des cases ${shade} en gardant le tien : il est faible sur ces cases` : `l'échange de ton fou des cases ${shade}`, squares: [], captureBishopShade: shade };
     }
     case 'tour_colonne': {
       const f = of('COLONNE_OUVERTE', '-')[0] ?? of('COLONNE_SEMI_OUVERTE', side)[0];
       if (!f) return null;
       const kind = f.id === 'COLONNE_OUVERTE' ? 'ouverte' : 'semi-ouverte';
-      return { text: me ? `mets une tour sur la colonne ${f.params.file} ${kind}` : `une tour sur la colonne ${f.params.file} ${kind}`, squares: [] };
+      return { text: me ? `mets une tour sur la colonne ${f.params.file} ${kind}` : `une tour sur la colonne ${f.params.file} ${kind}`, squares: [], rookToFile: String(f.params.file) };
     }
     default:
       return null;
   }
 }
+
+/**
+ * L'intention est-elle COMPATIBLE avec les lignes du moteur ? Son coup concret doit figurer dans une des lignes
+ * (candidates[].pvUci), joué par `side` : la poussée du levier, le saut du cavalier depuis sa case, la prise de
+ * l'échange, une tour qui arrive sur la colonne, la prise du fou adverse de la couleur visée. Sinon, une tendance
+ * statistique contredite par le moteur devient une erreur (banc du 30 septembre, passe 5 : 5 erreurs graves sur 8).
+ */
+export function compatibleWithLines(intent, candidates, fen, side) {
+  if (!intent) return false;
+  const lines = (candidates ?? []).map((c) => c.pvUci ?? []).filter((l) => l.length);
+  if (!lines.length) return false;
+  const mine = (i) => (fen.split(' ')[1] === side ? i % 2 === 0 : i % 2 === 1); // demi-coups joués par `side`
+  const plays = (pred) => lines.some((l) => l.some((u, i) => mine(i) && pred(u, i, l)));
+  if (intent.moves?.length) {
+    if (plays((u) => intent.moves.includes(u.slice(0, 4)))) return true;
+    if (intent.fromSquare) return plays((u) => u.slice(0, 2) === intent.fromSquare); // route en deux bonds : le premier pas suffit
+    return false;
+  }
+  if (intent.rookToFile) return plays((u, i, l) => u[2] === intent.rookToFile && isRookMove(fen, l, i));
+  if (intent.captureBishopShade) return plays((u, i, l) => capturesBishopOfShade(fen, l, i, intent.captureBishopShade));
+  return false;
+}
+
+// Rejeu léger d'une ligne pour connaître la pièce qui joue le demi-coup i (chargé paresseusement : chess.js).
+let ChessCtor = null;
+async function loadChess() { ChessCtor ??= (await import('chess.js')).Chess; return ChessCtor; }
+const REPLAY = new Map();
+function replay(fen, line) {
+  const key = `${fen}|${line.join(' ')}`;
+  if (REPLAY.has(key)) return REPLAY.get(key);
+  if (!ChessCtor) return null;
+  const c = new ChessCtor(fen);
+  const moves = [];
+  for (const u of line) { try { moves.push(c.move({ from: u.slice(0, 2), to: u.slice(2, 4), promotion: u[4] })); } catch { break; } }
+  REPLAY.set(key, moves);
+  return moves;
+}
+function isRookMove(fen, line, i) { const m = replay(fen, line)?.[i]; return Boolean(m && m.piece === 'r'); }
+function capturesBishopOfShade(fen, line, i, shade) {
+  const m = replay(fen, line)?.[i];
+  if (!m || m.captured !== 'b') return false;
+  const dark = (m.to.charCodeAt(0) - 97 + Number(m.to[1])) % 2 === 1;
+  return (shade === 'noires') === dark;
+}
+loadChess().catch(() => {});
 
 export function topIntention(byConcept, { min = 0.5, margin = 0.1, exclude = [], facts = null, fen = null, side = null } = {}) {
   if (!byConcept) return null;

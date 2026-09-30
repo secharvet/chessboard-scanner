@@ -70,3 +70,21 @@ describe('intentions concrètes (disponibilités)', async () => {
     assert.equal(concreteIntention('rupture', [], 'w', 'me'), null);
   });
 });
+
+describe('intentions compatibles avec les lignes du moteur', async () => {
+  const { compatibleWithLines } = await import('../coach/intentions.mjs');
+  const fen = 'r1bq1rk1/pp2bppp/2n1pn2/3p4/2PP4/2N1PN2/PP3PPP/R2QKB1R w KQ - 0 8';
+  it('le levier est dans une ligne : compatible', () => {
+    const intent = { moves: ['c4c5'] };
+    assert.equal(compatibleWithLines(intent, [{ pvUci: ['c4c5', 'b7b6', 'c5b6'] }], fen, 'w'), true);
+  });
+  it('le levier n\'est dans aucune ligne : incompatible', () => {
+    const intent = { moves: ['c4c5'] };
+    assert.equal(compatibleWithLines(intent, [{ pvUci: ['f1d3', 'd5c4', 'd3c4'] }], fen, 'w'), false);
+  });
+  it('un coup de l\'adversaire ne compte pas pour moi', () => {
+    const intent = { moves: ['d5c4'] };
+    assert.equal(compatibleWithLines(intent, [{ pvUci: ['f1d3', 'd5c4', 'd3c4'] }], fen, 'w'), false);
+    assert.equal(compatibleWithLines(intent, [{ pvUci: ['f1d3', 'd5c4', 'd3c4'] }], fen, 'b'), true);
+  });
+});

@@ -14,7 +14,7 @@ import { Chess } from 'chess.js';
 import { buildAttackMap } from '../positional/attack-map.js';
 import { buildAllFacts } from '../positional/index.js';
 import { planSentence } from './plans.mjs';
-import { concreteIntention, topIntention } from './intentions.mjs';
+import { compatibleWithLines, concreteIntention, topIntention } from './intentions.mjs';
 import { renderToken } from '../positional/interpreter.js';
 import { buildTacticalFacts } from '../positional/piece-attacks.js';
 import { enToFr } from './notation.mjs';
@@ -227,7 +227,8 @@ export function buildBrief(data) {
       // Concret ou rien : la case et le pion viennent des disponibilités (banc du 30 septembre : la phrase vague
       // n'apportait pas de profondeur).
       const c = concreteIntention(mine.concept, allFactsForIntent(data), me, 'me', data.fen);
-      if (c) {
+      // Et le moteur doit être d'accord : le coup concret figure dans une de ses lignes (passe 5 du banc).
+      if (c && compatibleWithLines(c, data.candidates, data.fen, me)) {
         items.push({ kind: 'intention', concept: mine.concept, p: mine.p, text: c.text });
         sentences.push(`À ton niveau, dans ce genre de position, les joueurs entreprennent souvent ceci : ${c.text}.`);
       }
@@ -261,7 +262,7 @@ export function buildBrief(data) {
     const hisIntent = his ? null : topIntention(data.intentions?.[opp], { min: 0.55, margin: 0.15, facts: allFactsForIntent(data), fen: data.fen, side: opp });
     if (hisIntent) {
       const c = concreteIntention(hisIntent.concept, allFactsForIntent(data), opp, 'opp', data.fen);
-      if (c) {
+      if (c && compatibleWithLines(c, data.candidates, data.fen, opp)) {
         items.push({ kind: 'opp_intention', concept: hisIntent.concept, p: hisIntent.p, text: c.text });
         parts.push(`à son niveau, il prépare souvent ${c.text}`);
       }
