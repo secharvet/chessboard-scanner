@@ -680,3 +680,14 @@ signale encore (il se trompe aussi : position 3, même phrase jugée grave une f
   par paliers, coup révélé sur demande ou après l'erreur ; le joueur automatique ne rejoue pas la ligne du moteur, il
   joue d'après les motifs et les conseils (centre, développement, pièce menacée), Stockfish ne fait que le juger ;
   le concept de gambit manque au catalogue (sacrifice de pion volontaire contre développement, centre, initiative).
+
+## 30 septembre, 20 h 30 — première partie réelle avec la fiche du code
+
+- Page de jeu : conseil affiché **à chaque coup du joueur** (case « Conseil à chaque coup », mémorisée) ; limite par
+  visiteur 12 → 200 requêtes par 10 min ; la liste des coups est journalisée avec chaque fiche.
+- Incident : en échec (…Dh4+), « préparations adverses » retournait le trait → position illégale → Stockfish muet →
+  62 s. Corrigé (pas de préparation en échec ; `engineLegal` dans `UciEngine.analyze`). 239 tests verts.
+- **Retour de l'utilisateur après une partie entière gagnée** : « aucune erreur grave, le meilleur coup est toujours
+  présent mais il en propose d'autres, j'aime bien quand il donne un plan, c'est souvent juste ». Deux cas de test à
+  ajouter au banc : 1.e4 Cc6 2.d4 (dire que d4 est attaqué par le cavalier mais défendu par la dame) et la position en
+  échec ci-dessus.
