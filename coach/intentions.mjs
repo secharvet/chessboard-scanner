@@ -117,7 +117,10 @@ export function concreteIntention(concept, facts, side, who = 'me', fen = null) 
     case 'dominer': {
       const c = of('COMPLEXE_FAIBLE', opp)[0] ?? of('CASE_FAIBLE', opp)[0];
       if (!c) return null;
-      const shade = c.params.shade ?? 'faibles';
+      // Couleur des cases : donnée par le complexe, sinon déduite de la case faible (a1 est noire).
+      const sq = typeof c.params.square === 'string' ? c.params.square : null;
+      const shade = c.params.shade ?? (sq ? ((sq.charCodeAt(0) - 97 + Number(sq[1])) % 2 === 1 ? 'noires' : 'claires') : null);
+      if (!shade) return null;
       return { text: me ? `échange son fou des cases ${shade} en gardant le tien : il est faible sur ces cases` : `l'échange de ton fou des cases ${shade}`, squares: [] };
     }
     case 'tour_colonne': {
