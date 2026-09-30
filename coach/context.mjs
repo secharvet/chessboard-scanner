@@ -68,6 +68,11 @@ export async function buildCoachContext({ fen, side, moves = [], engine, depth =
   const timings = [];
   let tLast = Date.now();
   const mark = (label) => { const now = Date.now(); timings.push([label, now - tLast]); tLast = now; };
+  if (process.env.COACH_DETERMINISTIC === '1') {
+    // Mode de mesure : chaque fiche repart d'une table vide, sur les deux moteurs (voir UciEngine.newGame).
+    await engine.newGame?.();
+    await secondEngine(engine)?.newGame();
+  }
   const lines = await engine.analyze(fen, { depth, multipv: 3 });
   mark('analyse principale');
   // Le second moteur (règle des deux moteurs, voir verifiedPlans) part tout de suite, en parallèle du reste :

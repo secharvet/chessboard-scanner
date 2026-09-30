@@ -16,6 +16,8 @@ const args = process.argv.slice(2);
 const opt = (k, d) => (args.includes(k) ? args[args.indexOf(k) + 1] : d);
 const N = Number(opt('--n', EVAL_POSITIONS.length));
 const OUT = opt('--out', `reports/timing-${Date.now()}.json`);
+// Banc : mode déterministe par défaut (un fil, table vidée à chaque fiche) ; COACH_DETERMINISTIC=0 pour mesurer la production.
+process.env.COACH_DETERMINISTIC ??= '1';
 const engine = new UciEngine();
 const rows = [];
 const totals = {};

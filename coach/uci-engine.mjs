@@ -33,7 +33,8 @@ export class UciEngine {
     this.path = opts.path ?? process.env.STOCKFISH_PATH ?? ['/usr/local/bin/stockfish', '/usr/games/stockfish'].find(existsSync) ?? 'stockfish';
     /** Nom annoncé par le moteur (« Stockfish 19 »), connu après start(). */
     this.name = null;
-    this.threads = opts.threads ?? 2;
+    // COACH_DETERMINISTIC=1 (banc) : un seul fil, sinon Stockfish ne redonne pas deux fois la même recherche.
+    this.threads = opts.threads ?? (process.env.COACH_DETERMINISTIC === '1' ? 1 : 2);
     this.hashMb = opts.hashMb ?? 128;
     /** @type {import('node:child_process').ChildProcess | null} */
     this.proc = null;
@@ -61,6 +62,21 @@ export class UciEngine {
   stop() {
     this.proc?.stdin?.write('quit\n');
     this.proc = null;
+  }
+
+  /**
+   * Repart de zéro (table de hachage vidée). Mode de mesure déterministe (COACH_DETERMINISTIC=1, banc) : appelé au
+   * début de chaque fiche, avec un seul fil, pour que la même position donne toujours la même fiche. Serialisé
+   * derrière les analyses en cours.
+   */
+  newGame() {
+    const run = async () => {
+      await this.start();
+      await this.#waitFor('ucinewgame\nisready', (l) => l === 'readyok');
+    };
+    const p = this.queue.then(run, run);
+    this.queue = p.catch(() => {});
+    return p;
   }
 
   /**
