@@ -21,9 +21,9 @@ import { stripCitations, verifyCitations } from './verify.mjs';
  *   judge?: boolean,
  * }} input
  */
-export async function askCoach({ fen, side, moves, question, engine, cfg = llmConfig(), depth, judge }) {
+export async function askCoach({ fen, side, moves, question, engine, cfg = llmConfig(), depth, judge, elo = null }) {
   const t0 = Date.now();
-  const context = await buildCoachContext({ fen, side, moves, engine, depth });
+  const context = await buildCoachContext({ fen, side, moves, engine, depth, elo });
   const tContext = Date.now() - t0;
 
   if (context.data.gameOver) {

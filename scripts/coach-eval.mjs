@@ -14,7 +14,9 @@ import { Chess } from 'chess.js';
 import { askCoach } from '../coach/coach.mjs';
 import { buildCoachContext } from '../coach/context.mjs';
 import { loadEnv } from '../coach/env.mjs';
-import { EVAL_POSITIONS } from '../coach/eval-positions.mjs';
+// --positions <module> : un autre banc (coach/eval-positions-milieux.mjs, tiré des étiquettes humaines).
+const POSITIONS_MODULE = process.argv.includes('--positions') ? process.argv[process.argv.indexOf('--positions') + 1] : '../coach/eval-positions.mjs';
+const { EVAL_POSITIONS } = await import(POSITIONS_MODULE.startsWith('.') || POSITIONS_MODULE.startsWith('/') ? POSITIONS_MODULE : `../${POSITIONS_MODULE}`);
 import { findUngroundedMoves } from '../coach/guard.mjs';
 import { judgeAnswer, judgeConfig } from '../coach/judge.mjs';
 import { complete, llmConfig } from '../coach/llm.mjs';
@@ -87,7 +89,7 @@ const results = await pool(jobs, concurrency, async ({ pos, mode }) => {
   const p = prepare(pos);
   const t0 = Date.now();
   try {
-    const r = mode === 'naive' ? await runNaive(p) : await askCoach({ ...p, engine, cfg });
+    const r = mode === 'naive' ? await runNaive(p) : await askCoach({ elo: pos.elo ?? null, ...p, engine, cfg });
     const hits = score(r.advice, pos.themes);
     const verdict = useJudge ? await judgeAnswer(r.context, r.advice, jcfg).catch((e) => ({ erreurs: [], note: null, raw: e.message })) : null;
     const graves = verdict?.erreurs.filter((e) => e.gravite === 'grave').length ?? 0;
