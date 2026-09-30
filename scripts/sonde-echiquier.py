@@ -46,14 +46,18 @@ def main():
     ap.add_argument('--rang-cnn', type=float, default=0.85, dest='rang_cnn')
     ap.add_argument('--ecart', type=float, default=0.35)
     ap.add_argument('--max', type=int, default=50)
+    ap.add_argument('--split', default='val', choices=['val', 'test'])
     ap.add_argument('--out', default='reports/sonde-echiquier.json')
     a = ap.parse_args()
     concepts = a.concepts.split(',')
 
     recs = [json.loads(l) for l in open(a.dataset, encoding='utf8') if l.strip()]
-    # Jeu de test : le même découpage par partie que train-plans.py.
-    recs = [r for r in recs if zlib.crc32(str(r['game']).encode()) % 10 == 0]
-    print(f'{len(recs)} enregistrements de test')
+    # Découpage par partie de train-plans.py. Décision du 29 septembre (test contaminé) : la sonde tourne
+    # par défaut sur la VALIDATION (h == 1), jamais sur le test (h == 0) ; --split test reste possible pour
+    # reproduire les anciennes mesures, en le disant.
+    h = {'val': 1, 'test': 0}[a.split]
+    recs = [r for r in recs if zlib.crc32(str(r['game']).encode()) % 10 == h]
+    print(f'{len(recs)} enregistrements ({a.split})')
 
     out = {}
     for c in concepts:

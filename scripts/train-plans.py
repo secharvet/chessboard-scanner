@@ -117,6 +117,7 @@ def main():
     ap.add_argument('--drop-facts', default='', dest='drop_facts',
                     help='identifiants de faits à retirer du vecteur (ablation), séparés par des virgules')
     ap.add_argument('--seeds', type=int, default=1, help='graines pour les réseaux (moyenne ± écart-type)')
+    ap.add_argument('--suffix', default='', help='suffixe des fichiers de modèles (ex. =-2016), pour ne pas écraser la production')
     ap.add_argument('--bootstrap', type=int, default=0, help='rééchantillonnages du test pour les IC à 95 %% des AUC')
     a = ap.parse_args()
     torch.set_num_threads(a.threads)
@@ -232,9 +233,9 @@ def main():
         print(f'   -> {res["verdict"]}')
         results[c] = res
         torch.save({'cnn': {k: v.cpu() for k, v in cnn.state_dict().items()}, 'cnn+f': {k: v.cpu() for k, v in cnnf.state_dict().items()}, 'keys': keys, 'elo_feature': True, 'large': a.large,
-                    'mean': scaler.mean_.tolist(), 'scale': scaler.scale_.tolist()}, f'data/datasets/plan-{c}.pt')
+                    'mean': scaler.mean_.tolist(), 'scale': scaler.scale_.tolist()}, f'data/datasets/plan-{c}{a.suffix}.pt')
         # Les modèles sur les faits (arbres, règle linéaire) servent le coach (coach/intentions-server.py).
-        with open(f'data/datasets/plan-{c}-faits.pkl', 'wb') as fh:
+        with open(f'data/datasets/plan-{c}{a.suffix}-faits.pkl', 'wb') as fh:
             pickle.dump({'arbres': gb, 'logreg': lr, 'scaler': scaler, 'keys': keys, 'elo_feature': True, 'auc': res}, fh)
     os.makedirs(os.path.dirname(a.out) or '.', exist_ok=True)  # reports/ n'est pas dans le dépôt
     json.dump(results, open(a.out, 'w'), ensure_ascii=False, indent=2)
