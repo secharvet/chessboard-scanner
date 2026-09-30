@@ -691,3 +691,18 @@ signale encore (il se trompe aussi : position 3, même phrase jugée grave une f
   présent mais il en propose d'autres, j'aime bien quand il donne un plan, c'est souvent juste ». Deux cas de test à
   ajouter au banc : 1.e4 Cc6 2.d4 (dire que d4 est attaqué par le cavalier mais défendu par la dame) et la position en
   échec ci-dessus.
+
+## 30 septembre, 21 h 10 — état à la pause (reprise dans quelques jours)
+
+- **En ligne** : coach relancé à 21 h 10 sur les corrections de la fiche (commit 839a07e) ; conseil à chaque coup ;
+  texte du code sans LLM ; ~3 s par fiche.
+- **Banc** : mode déterministe (0 fiche différente sur 36 entre deux passes) ; corrections rejouées : 23/36 fiches
+  changent, les 5 planches sont corrigées, relues une à une. Relecteur (passe 8, unité `passe8-juge`) lancé à 20 h 55 :
+  rapport `reports/coach-eval-<horodatage>.md` le plus récent, à comparer aux 4 erreurs graves de la passe 7.
+- **Retour utilisateur** : partie entière gagnée avec le coach à chaque coup, « aucune erreur grave », plans appréciés.
+- **À reprendre, dans l'ordre** : (3) la fiche sans « le meilleur coup » par défaut : idée, menace, plan ; coup derrière
+  un bouton d'indice par paliers (pièce → case → coup), révélé après l'erreur ; (4) mode joueur : jugement de chaque coup
+  joué (espérance de score, suit le plan ou non) ; (5) consigner dans la spécification les décisions produit (§0/§9) :
+  pas de meilleur coup imposé, joueur automatique guidé par les motifs et non par la ligne du moteur, concept de
+  gambit ; (6) niveau du joueur envoyé par la page (déclaré) ; (7) défauts d'étiquettes signalés par DeepSeek
+  (blocage, rupture par prise, affaiblir, dominer) avant tout réentraînement.
