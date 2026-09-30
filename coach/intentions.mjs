@@ -77,6 +77,60 @@ export function pieceCounts(fen, side) {
   return { r: pick('r'), n: pick('n'), b: pick('b') };
 }
 
+const DEGAT = { isole: 'un pion isolé', double: 'des pions doublés', abri: 'un roi sans abri' };
+const NOM_PIECE = { n: 'cavalier', b: 'fou', r: 'tour', q: 'dame' };
+
+/**
+ * Phrase CONCRÈTE d'une intention, écrite par le code à partir des disponibilités (positional/disponibilites.js) :
+ * le modèle a choisi le concept, la disponibilité donne la case ou le pion. `who` : 'me' (tutoiement) ou 'opp'
+ * (« il prépare … »). Renvoie null si aucune disponibilité ne correspond (on se tait plutôt que de rester vague).
+ */
+export function concreteIntention(concept, facts, side, who = 'me', fen = null) {
+  const opp = side === 'w' ? 'b' : 'w';
+  const of = (id, color) => facts.filter((t) => t.id === id && (color === '-' ? t.params.color === undefined : t.params.color === color));
+  const me = who === 'me';
+  switch (concept) {
+    case 'rupture': {
+      const l = of('LEVIER_DISPONIBLE', side)[0];
+      if (!l) return null;
+      const cible = String(l.params.cible).split(',')[0];
+      return { text: me ? `prépare la rupture ${l.params.square} (ton pion ${l.params.pawn} contre ${cible})` : `la rupture ${l.params.square} (son pion ${l.params.pawn} contre ${cible})`, squares: [l.params.square, l.params.pawn, cible] };
+    }
+    case 'cavalier_avant_poste': {
+      const r = of('ROUTE_CAVALIER', side).sort((a, b) => a.params.moves - b.params.moves)[0];
+      if (!r) return null;
+      return { text: me ? `installe ton cavalier de ${r.params.from} en ${r.params.to} (${r.params.moves === 1 ? 'un bond' : 'deux bonds'})` : `son cavalier de ${r.params.from} vers ${r.params.to}`, squares: [r.params.from, r.params.to] };
+    }
+    case 'blocage': {
+      const r = of('ROUTE_CAVALIER', side).find((t) => /bloc/i.test(String(t.params.but ?? ''))) ?? of('ROUTE_CAVALIER', side)[0];
+      if (!r) return null;
+      return { text: me ? `bloque son pion avec ton cavalier de ${r.params.from} en ${r.params.to}` : `le blocage de ton pion par son cavalier en ${r.params.to}`, squares: [r.params.from, r.params.to] };
+    }
+    case 'affaiblir': {
+      const e = of('ECHANGE_ABIMANT', side)[0];
+      if (e) return { text: me ? `échange sur ${e.params.cible} avec ta pièce de ${e.params.from} : il lui restera ${DEGAT[e.params.degat] ?? 'une faiblesse'}` : `l'échange sur ${e.params.cible}, qui te laisserait ${DEGAT[e.params.degat] ?? 'une faiblesse'}`, squares: [e.params.cible, e.params.from] };
+      const l = of('LEVIER_DISPONIBLE', side)[0];
+      if (!l) return null;
+      const cible = String(l.params.cible).split(',')[0];
+      return { text: me ? `pousse ${l.params.square} contre ${cible} pour abîmer sa structure` : `la poussée ${l.params.square} contre ${cible}`, squares: [l.params.square, cible] };
+    }
+    case 'dominer': {
+      const c = of('COMPLEXE_FAIBLE', opp)[0] ?? of('CASE_FAIBLE', opp)[0];
+      if (!c) return null;
+      const shade = c.params.shade ?? 'faibles';
+      return { text: me ? `échange son fou des cases ${shade} en gardant le tien : il est faible sur ces cases` : `l'échange de ton fou des cases ${shade}`, squares: [] };
+    }
+    case 'tour_colonne': {
+      const f = of('COLONNE_OUVERTE', '-')[0] ?? of('COLONNE_SEMI_OUVERTE', side)[0];
+      if (!f) return null;
+      const kind = f.id === 'COLONNE_OUVERTE' ? 'ouverte' : 'semi-ouverte';
+      return { text: me ? `mets une tour sur la colonne ${f.params.file} ${kind}` : `une tour sur la colonne ${f.params.file} ${kind}`, squares: [] };
+    }
+    default:
+      return null;
+  }
+}
+
 export function topIntention(byConcept, { min = 0.5, margin = 0.1, exclude = [], facts = null, fen = null, side = null } = {}) {
   if (!byConcept) return null;
   const pieces = fen && side ? pieceCounts(fen, side) : null;

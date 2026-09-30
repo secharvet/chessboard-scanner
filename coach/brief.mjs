@@ -14,7 +14,7 @@ import { Chess } from 'chess.js';
 import { buildAttackMap } from '../positional/attack-map.js';
 import { buildAllFacts } from '../positional/index.js';
 import { planSentence } from './plans.mjs';
-import { topIntention } from './intentions.mjs';
+import { concreteIntention, topIntention } from './intentions.mjs';
 import { renderToken } from '../positional/interpreter.js';
 import { buildTacticalFacts } from '../positional/piece-attacks.js';
 import { enToFr } from './notation.mjs';
@@ -224,8 +224,13 @@ export function buildBrief(data) {
     // dite comme telle, jamais comme un conseil vérifié ; tue si c'est déjà le plan vérifié.
     const mine = topIntention(data.intentions?.[me], { exclude: verified ? [verified.concept] : [], facts: allFactsForIntent(data), fen: data.fen, side: me });
     if (mine) {
-      items.push({ kind: 'intention', concept: mine.concept, p: mine.p });
-      sentences.push(`À ton niveau, dans ce genre de position, les joueurs entreprennent souvent : ${INTENT[mine.concept] ?? mine.concept}.`);
+      // Concret ou rien : la case et le pion viennent des disponibilités (banc du 30 septembre : la phrase vague
+      // n'apportait pas de profondeur).
+      const c = concreteIntention(mine.concept, allFactsForIntent(data), me, 'me', data.fen);
+      if (c) {
+        items.push({ kind: 'intention', concept: mine.concept, p: mine.p, text: c.text });
+        sentences.push(`À ton niveau, dans ce genre de position, les joueurs entreprennent souvent ceci : ${c.text}.`);
+      }
     }
   }
 
@@ -255,8 +260,11 @@ export function buildBrief(data) {
     // Ce qu'il prépare probablement, d'après les plans humains (proposition, pas vérification).
     const hisIntent = his ? null : topIntention(data.intentions?.[opp], { min: 0.55, margin: 0.15, facts: allFactsForIntent(data), fen: data.fen, side: opp });
     if (hisIntent) {
-      items.push({ kind: 'opp_intention', concept: hisIntent.concept, p: hisIntent.p });
-      parts.push(`à son niveau, il prépare souvent ${INTENT_OPP[hisIntent.concept] ?? hisIntent.concept}`);
+      const c = concreteIntention(hisIntent.concept, allFactsForIntent(data), opp, 'opp', data.fen);
+      if (c) {
+        items.push({ kind: 'opp_intention', concept: hisIntent.concept, p: hisIntent.p, text: c.text });
+        parts.push(`à son niveau, il prépare souvent ${c.text}`);
+      }
     }
     // Le plan de l'adversaire, vérifié dans SA meilleure suite : la base de la prophylaxie.
     if (his) {

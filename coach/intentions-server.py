@@ -34,14 +34,14 @@ torch.set_num_threads(1)
 MODELS = {}
 
 
-def load_models(folder):
-    for f in sorted(glob.glob(f'{folder}/plan-*-faits.pkl')):
-        concept = Path(f).name[len('plan-'):-len('-faits.pkl')]
-        if '-large' in concept:
+def load_models(folder, suffix=''):
+    for f in sorted(glob.glob(f'{folder}/plan-*{suffix}-faits.pkl')):
+        concept = Path(f).name[len('plan-'):-len(f'{suffix}-faits.pkl')]
+        if '-' in concept:  # autres variantes (-large, -v3…) : pas celles demandées
             continue
         m = pickle.load(open(f, 'rb'))
         entry = {'arbres': m['arbres'], 'scaler': m['scaler'], 'keys': m['keys'], 'elo': bool(m.get('elo_feature')), 'net': None}
-        pt = Path(f'{folder}/plan-{concept}.pt')
+        pt = Path(f'{folder}/plan-{concept}{suffix}.pt')
         if pt.exists():
             ck = torch.load(pt, weights_only=False)
             n_facts = 2 * len(ck['keys']) + (1 if ck.get('elo_feature') else 0)
@@ -110,8 +110,9 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--port', type=int, default=8001)
     ap.add_argument('--models', default='data/datasets')
+    ap.add_argument('--suffix', default='', help='suffixe des fichiers de modèles (ex. -v4)')
     a = ap.parse_args()
-    concepts = load_models(a.models)
+    concepts = load_models(a.models, a.suffix)
     print(f'[intentions] {len(concepts)} concepts : {", ".join(concepts)} — http://127.0.0.1:{a.port}', flush=True)
     ThreadingHTTPServer(('127.0.0.1', a.port), Handler).serve_forever()
 

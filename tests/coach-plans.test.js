@@ -54,3 +54,19 @@ describe('intentions : la matière du plan doit être là', async () => {
     assert.equal(topIntention({ tour_colonne: { arbres: 0.62 }, rupture: { arbres: 0.58 } }), null);
   });
 });
+
+describe('intentions concrètes (disponibilités)', async () => {
+  const { concreteIntention } = await import('../coach/intentions.mjs');
+  it('rupture : la case du levier et sa cible', () => {
+    const facts = [{ id: 'LEVIER_DISPONIBLE', params: { color: 'w', pawn: 'c4', square: 'c5', cible: 'd6' } }];
+    assert.equal(concreteIntention('rupture', facts, 'w', 'me').text, 'prépare la rupture c5 (ton pion c4 contre d6)');
+    assert.equal(concreteIntention('rupture', facts, 'w', 'opp').text, 'la rupture c5 (son pion c4 contre d6)');
+  });
+  it('avant-poste : la route la plus courte', () => {
+    const facts = [{ id: 'ROUTE_CAVALIER', params: { color: 'b', from: 'c6', to: 'd4', moves: 2 } }, { id: 'ROUTE_CAVALIER', params: { color: 'b', from: 'f6', to: 'e4', moves: 1 } }];
+    assert.equal(concreteIntention('cavalier_avant_poste', facts, 'b', 'me').text, 'installe ton cavalier de f6 en e4 (un bond)');
+  });
+  it('sans disponibilité correspondante : silence', () => {
+    assert.equal(concreteIntention('rupture', [], 'w', 'me'), null);
+  });
+});
