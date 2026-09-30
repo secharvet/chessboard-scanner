@@ -574,3 +574,20 @@ gardent 0,02 à 0,03 d'avance, significative (intervalles disjoints). Les modèl
 `plan-*-v4-faits.pkl`) sont les candidats à la production ; calibration toujours mauvaise (ECE 0,08 à 0,30), à
 traiter avant tout affichage de probabilité. Étape suivante : la mesure « le plan proposé change-t-il selon le
 niveau en entrée ? » qui décide de l'ordre entre module de niveau et branchement.
+
+## 30 septembre 2026 — Le niveau en entrée change-t-il le plan proposé ? (mesure préalable, 17 h 05)
+
+Modèles v4 (arbres), 1 500 demi-positions par tranche du lot 2016, plan le plus probable parmi ceux dont les
+ingrédients sont présents, avec l'Elo réel puis avec 1500 (le défaut du coach) :
+
+| Tranche | Plan proposé différent avec 1500 | Aucun plan proposable |
+|---|---|---|
+| < 1200 | **12,8 %** | 1,6 % |
+| 1200-2000 | 7,1 % | 0,3 % |
+| > 2000 | **13,4 %** | 0,2 % |
+
+Lecture : prendre tout le monde pour un 1500 change le plan proposé dans une position sur huit aux deux extrémités,
+une sur quatorze au milieu. Ce n'est pas dominant (la position décide dans 87 % des cas), mais c'est la cible
+(débutants) qui est la plus touchée. **Décision** : brancher les modèles v4 d'abord avec un niveau **déclaré**
+(réglage à trois positions dans l'interface, 1500 par défaut, Elo réel si pseudo Lichess ou Chess.com donné) ;
+l'estimation automatique à partir des coups joués vient juste après, sans bloquer le branchement.
