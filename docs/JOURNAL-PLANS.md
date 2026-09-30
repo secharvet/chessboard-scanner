@@ -528,3 +528,26 @@ de la sonde, rien aux contrôles ; les réseaux ne bougent pas (ils voyaient dé
 de moitié environ (rupture 0,055 → 0,029, avant-poste 0,067 → 0,024). Le cycle « le réseau montre, la règle code,
 les arbres récupèrent » tient hors du jeu qui l'a inspiré. Ce qui reste d'écart (0,02 à 0,03) est ce que
 l'échiquier dit encore et que les faits ne disent pas.
+
+## 30 septembre 2026 — Grille « réalise et réussit » (jugement d'exécution, 986 465 positions)
+
+Jugement calculé sur DENEB (`scripts/juge-plans.mjs`, 429 947 positions, 5 h 12), joint aux étiquettes
+(`scripts/human-grid-reussite.mjs`, `reports/grille-elo-reussite-1.md`). Seuils calibrés sur planches : perte
+moyenne des coups du camp ≤ 10 points d'espérance de score et pire coup ≤ 20.
+
+| Concept | < 1200 | 1200-1600 | 1600-2000 | 2000 + |
+|---|---|---|---|---|
+| Tour sur colonne ouverte | 68 % | 79 % | 87 % | 92 % |
+| Rupture de pions | 63 % | 75 % | 85 % | 90 % |
+| Affaiblir la structure | 68 % | 78 % | 85 % | 90 % |
+| Blocage | 65 % | 77 % | 85 % | 89 % |
+| Cavalier sur avant-poste | 68 % | 80 % | 86 % | 90 % |
+| Dominer une couleur | 65 % | 75 % | 83 % | 87 % |
+
+(part des plans réalisés qui sont aussi bien joués ; perte moyenne médiane de 5 points sous 1200 à 2 points à 2000 +)
+
+Lecture : **un tiers des plans réalisés par les débutants sont mal joués**, un dixième chez les forts ; la courbe
+est la même pour tous les concepts. C'est la réponse au point 2 de la relecture : sans ce filtre, un coach entraîné
+sur des parties de débutants apprendrait leurs fautes une fois sur trois. L'étiquette d'entraînement retenue est
+« réalisé **et** bien joué » ; les réalisés-mal-joués sont exclus (ni bons exemples, ni vrais négatifs). Prochaine
+action : réentraîner sur cette étiquette (DENEB), puis décider du branchement dans le coach.
