@@ -499,3 +499,9 @@ colonne » exige désormais qu'une tour y soit à la fin de la ligne), un fait c
 affaibli sur la colonne h), une lecture tactique fausse (« mettre la tour à l'abri » quand le coup est un sacrifice
 de dame : hiérarchie de la fiche, à traiter), une idée de structure contredite par la ligne. Règle confirmée :
 **tout ce que la fiche affirme comme plan doit être réalisé ou maintenu dans la meilleure ligne du moteur.**
+
+*Quatrième passe* (14 h 25, la « tour sur la colonne » seulement si une tour y est à la fin de la ligne) : note
+**8,3/10**, profondeur **4,89**, **3 erreurs graves** (contre 12 le matin). Restent : une étape « vise le pion b7 »
+après un cavalier en e5 qui ne l'attaque pas (l'attaque est vérifiée au départ ou à la fin, pas depuis la case
+d'arrivée de la manœuvre : à resserrer), un fait cité sans exploitation (colonne h), et la lecture tactique « mets ta
+tour à l'abri » pour un sacrifice de dame (hiérarchie des raisons).
