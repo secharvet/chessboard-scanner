@@ -42,4 +42,7 @@ export const EVAL_POSITIONS = [
   { name: 'dominer une couleur — intermediaire 1478 (blancs)', fen: 'r2qk2r/5pbp/bn2p1p1/1p1p4/p2P1P2/P1PQ1NP1/1P3N1P/R1B1R1K1 w kq - 6 19', side: 'white', elo: 1478, concept: 'dominer', themes: ["fou","cases? (noires|claires|blanches)|couleur|complexe"] },
   { name: 'dominer une couleur — avance 1703 (blancs)', fen: 'r2q1rk1/1b1nbppp/2n1p3/3pP3/pppP2N1/2P2N1P/PPB2PP1/R1BQR1K1 w - - 2 16', side: 'white', elo: 1703, concept: 'dominer', themes: ["fou","cases? (noires|claires|blanches)|couleur|complexe"] },
   { name: 'dominer une couleur — avance 2235 (blancs)', fen: 'r2q1rk1/2nb1pbn/p2p2p1/1ppPp1P1/P1P1P2p/2NBBP1P/1PKQN3/3R3R w - - 0 22', side: 'white', elo: 2235, concept: 'dominer', themes: ["fou","cases? (noires|claires|blanches)|couleur|complexe"] },
+  // Cas réels (partie du 30 septembre au soir) : la case du coup conseillé est attaquée mais défendue ; position en échec.
+  { name: 'cas réel — d4 attaqué par le cavalier, défendu par la dame (blancs)', fen: 'r1bqkbnr/pppppppp/2n5/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 1 2', side: 'white', elo: 1200, concept: 'centre', themes: ["d4"] },
+  { name: 'cas réel — en échec (…Dh4+), plus de préparation adverse (blancs)', fen: 'r3kb1r/ppp2ppp/2n1p1n1/3pP3/3Pb1Pq/2P2P2/PP1NB2P/R1BQK1NR w KQkq - 1 9', side: 'white', elo: 1200, concept: 'echec', themes: ["Rf1"] },
 ];

@@ -30,7 +30,7 @@ export function pieceRef(type, owner, square, { article = 'poss' } = {}) {
   return `${fem ? 'la' : 'le'} ${NAME[type]} ${owner === 'me' ? '' : 'adverse '}en ${square}`.replace('  ', ' ');
 }
 const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);
-const lowerFirst = (s) => (/^[A-ZÉ][a-zé]/.test(s) ? s.charAt(0).toLowerCase() + s.slice(1) : s);
+const lowerFirst = (s) => (/^[A-ZÉ]['’a-zé]/.test(s) ? s.charAt(0).toLowerCase() + s.slice(1) : s);
 
 /** Joue des coups UCI depuis `fen` ; renvoie les positions successives et les coups verbeux. */
 function play(fen, uci) {
@@ -53,6 +53,62 @@ function materialOf(fen, color) {
     s += (ch === t ? -1 : 1) * VALUE[t];
   }
   return color === 'w' ? s : -s;
+}
+
+/** Suit une pièce le long d'une ligne : sa case à la fin, ou null si elle est prise en route. */
+function trackPiece(steps, square, maxPlies = 10) {
+  let sq = square;
+  for (const s of steps.slice(0, maxPlies)) {
+    const m = s.move;
+    if (m.to === sq && m.from !== sq) return null;
+    if (m.from === sq) sq = m.to;
+  }
+  return sq;
+}
+
+/** Échange statique : ce que le camp au trait gagne au mieux en prenant sur `square` (0 = mieux vaut ne pas prendre). */
+function staticExchange(fen, square, depth = 0) {
+  if (depth > 10) return 0;
+  const c = new Chess(fen);
+  const target = c.get(square);
+  if (!target) return 0;
+  const caps = c.moves({ verbose: true }).filter((m) => m.to === square).sort((a, b) => VALUE[a.piece] - VALUE[b.piece]);
+  if (!caps.length) return 0;
+  c.move(caps[0].san);
+  return Math.max(0, VALUE[target.type] - staticExchange(c.fen(), square, depth + 1));
+}
+
+/** Ce que le camp au trait gagne (ou perd, valeur négative) s'il PREND sur `square` avec sa pièce la moins chère ; null s'il ne peut pas. */
+function exchangeIfTaken(fen, square) {
+  const c = new Chess(fen);
+  const target = c.get(square);
+  if (!target) return null;
+  const caps = c.moves({ verbose: true }).filter((m) => m.to === square).sort((a, b) => VALUE[a.piece] - VALUE[b.piece]);
+  if (!caps.length) return null;
+  c.move(caps[0].san);
+  return VALUE[target.type] - staticExchange(c.fen(), square);
+}
+
+/**
+ * La menace est-elle exécutée quand même dans la ligne ? On regarde ses PRISES (…Te8 puis Txe4+ : la menace, c'est
+ * Txe4+, pas Te8) : si l'adversaire joue l'une d'elles dans la meilleure ligne, le coup conseillé ne l'a pas parée.
+ */
+function threatExecuted(threat, steps, fen, maxPlies = 8) {
+  const pv = threat?.pvUci ?? [];
+  if (!pv.length) return false;
+  const parts = fen.split(' ');
+  parts[1] = parts[1] === 'w' ? 'b' : 'w';
+  parts[3] = '-';
+  const captures = new Set(play(parts.join(' '), pv.slice(0, 6)).filter((s, i) => i % 2 === 0 && s.move.captured).map((s) => s.move.from + s.move.to));
+  if (!captures.size) return false;
+  return steps.slice(0, maxPlies).some((s, i) => i % 2 === 1 && captures.has(s.move.from + s.move.to));
+}
+
+/** Un texte de structure (« f4-f5 », « c4-c5, b4 ») n'est gardé que si un de mes coups de la ligne va sur une de ses cases. */
+function structureProven(idea, steps) {
+  const squares = [...String(idea).matchAll(/\b([a-h][1-8])\b/g)].map((m) => m[1]);
+  if (!squares.length) return false;
+  return steps.some((s, i) => i % 2 === 0 && squares.includes(s.move.to));
 }
 
 function evalSentence(e) {
@@ -116,13 +172,21 @@ export function buildBrief(data) {
     sentences.push(`${bestSan} prend ${pieceRef(first.captured, 'opp', first.to)} : une fois les échanges terminés, tu as ${gain} point(s) de plus.${how}${also}`);
   }
   if (!reason && data.threat?.mates) {
-    reason = { kind: 'parry_mate', threat: data.threat.move, move: bestSan };
-    sentences.push(`Attention : si tu ne fais rien, l'adversaire joue ${data.threat.move} et te met échec et mat. Priorité absolue : ${bestSan} pare ce mat.`);
+    // Tous mes coups de la ligne sont des échecs et l'évaluation est nulle : c'est un échec perpétuel, pas une parade
+    // (banc #22 : « Dh5+ pare ce mat » alors que la partie est nulle par répétition).
+    const perpetual = steps.length >= 2 && steps.every((s, i) => i % 2 === 1 || s.move.san.includes('+'))
+      && c0.evalPlayer.type === 'cp' && Math.abs(c0.evalPlayer.value) <= 30;
+    reason = { kind: 'parry_mate', threat: data.threat.move, move: bestSan, perpetual };
+    sentences.push(perpetual
+      ? `Attention : si tu ne fais rien, l'adversaire joue ${data.threat.move} et te met échec et mat. ${bestSan} pare ce mat en donnant des échecs sans fin : la partie sera nulle par échec perpétuel.`
+      : `Attention : si tu ne fais rien, l'adversaire joue ${data.threat.move} et te met échec et mat. Priorité absolue : ${bestSan} pare ce mat.`);
   }
   if (!reason && hanging.length) {
     const h = hanging[0];
     const newSquare = first && first.from === h.square ? first.to : h.square;
-    const saved = !hangingAfter.includes(newSquare);
+    // « À l'abri » seulement si la pièce SURVIT dans la meilleure ligne et que la suite ne coûte rien : un sacrifice
+    // (« mets ta tour à l'abri : joue Dxe3 », banc #25) ou un pion poussé sous la prise (#12) n'en sont pas.
+    const saved = !hangingAfter.includes(newSquare) && trackPiece(steps, h.square) !== null && gain >= 0;
     if (saved) {
       const attackers = map.attackersOf(h.square, opp).sort((a, b) => VALUE[a.type] - VALUE[b.type]);
       const by = attackers[0] ? ` par ${pieceRef(attackers[0].type, 'opp', attackers[0].square, { article: 'def' })}` : '';
@@ -134,8 +198,21 @@ export function buildBrief(data) {
   }
   if (!reason && data.threat && (me === 'w' ? -data.threat.material : data.threat.material) >= 2) {
     const loss = Math.abs(data.threat.material);
-    reason = { kind: 'parry', threat: data.threat.move, loss, move: bestSan };
-    sentences.push(`L'adversaire menace ${data.threat.move}, qui te coûterait ${loss} point(s) de matériel. ${bestSan} pare cette menace.`);
+    if (!threatExecuted(data.threat, steps, data.fen)) {
+      reason = { kind: 'parry', threat: data.threat.move, loss, move: bestSan };
+      // Une parade qui est un sacrifice (banc #25 : Dxe3 « pare » Fxh4 en donnant la dame) : on le dit, avec la suite.
+      // Sacrifice = le coup lui-même donne du matériel (motif détecté, ou échange immédiat perdant), pas une perte
+      // plus loin dans une position déjà mauvaise (#15, #28).
+      const isSac = (c0.motifs ?? []).some((m) => /sacrifice/.test(m)) || (c0.immMaterial != null && (me === 'w' ? c0.immMaterial : -c0.immMaterial) < 0);
+      const sac = isSac && gain < 0 ? ` Attention, ${bestSan} est un sacrifice : dans la suite ${c0.horizonSan}, tu perds ${-gain} point(s), que le moteur juge compensés (${lowerFirst(evalSentence(c0.evalPlayer).replace(/\.$/, ''))}).` : '';
+      sentences.push(`L'adversaire menace ${data.threat.move}, qui te coûterait ${loss} point(s) de matériel. ${bestSan} pare cette menace.${sac}`);
+    } else {
+      // La menace s'exécute quand même dans la ligne (banc #32 : « Fxb5+ pare cette menace » puis fxe5) : on le dit,
+      // avec ce que la ligne donne réellement.
+      const mat = gain > 0 ? `tu gagnes ${gain} point(s)` : gain === 0 ? 'le matériel revient à l\'égalité' : `tu ne perds que ${-gain} point(s)`;
+      reason = { kind: 'limit', threat: data.threat.move, loss, move: bestSan, after: gain };
+      sentences.push(`L'adversaire menace ${data.threat.move}, qui te coûterait ${loss} point(s) de matériel. ${bestSan} ne l'empêche pas, mais c'est le meilleur coup : dans la suite ${c0.horizonSan}, ${mat}, et ${lowerFirst(evalSentence(c0.evalPlayer).replace(/\.$/, ''))}.`);
+    }
   }
   if (!reason && gain >= 2 && first) {
     const cap1 = steps.find((s, i) => i % 2 === 0 && s.move.captured);
@@ -195,7 +272,7 @@ export function buildBrief(data) {
       const st = data.structures?.[0];
       // Le plan de l'ÉLÈVE : celui marqué « (toi) » (le camp qui a la structure ou l'autre camp).
       const mine = st?.plans?.find((x) => /\((?:toi|you)\)/.test(String(x))) ?? (st?.label?.startsWith('roques opposés') ? st.plans[0] : null);
-      if (mine) {
+      if (mine && structureProven(mine, steps)) {
         const plan = String(mine).replace(/^[^:]*:\s*/, '').split(/(?<=\.)\s/)[0];
         items.push({ kind: 'structure', label: st.label, plan });
         sentences.push(`Idée générale (${st.label}) : ${plan}`);
@@ -203,6 +280,31 @@ export function buildBrief(data) {
     }
   }
   items.push({ ...reason, kind: 'reason', type: reason.kind });
+
+  // Le coup conseillé va sur une case attaquée : dire qui l'attaque et qui la défend, avec le bilan de l'échange
+  // (partie réelle du 30 septembre, 1.e4 Cc6 2.d4 : « d4 est attaqué et non défendu ? » — la dame le défend).
+  if (first && steps[0] && !first.captured && ['develop', 'center', 'castle', 'plan', 'basics', 'best', 'save'].includes(reason.kind)) {
+    const after = new Chess(steps[0].fen);
+    const who = (sqs) => sqs.map((sq) => ({ square: sq, type: after.get(sq).type })).sort((a, b) => VALUE[a.type] - VALUE[b.type]);
+    const attackers = who(after.attackers(first.to, opp));
+    if (attackers.length) {
+      const defenders = who(after.attackers(first.to, me));
+      const theirs = exchangeIfTaken(steps[0].fen, first.to); // ce que l'adversaire gagne (ou perd) s'il prend
+      const a = attackers[0];
+      if (theirs != null && theirs <= 0 && defenders.length) {
+        const d = defenders[0];
+        pieces.add(`${a.type}|opp|${a.square}`);
+        pieces.add(`${d.type}|me|${d.square}`);
+        items.push({ kind: 'square_defended', square: first.to, attacker: a, defender: d, net: -theirs });
+        sentences.push(`${cap(pieceRef(a.type, 'opp', a.square, { article: 'def' }))} attaque la case ${first.to}, mais ${pieceRef(d.type, 'me', d.square)} la défend : s'il prend, tu reprends${-theirs > 0 ? ` et gagnes ${-theirs} point(s)` : ''}.`);
+      } else if (theirs != null && theirs > 0) {
+        pieces.add(`${a.type}|opp|${a.square}`);
+        const mat = gain > 0 ? `tu gagnes ${gain} point(s)` : gain === 0 ? 'le matériel revient à l\'égalité' : `tu ne perds que ${-gain} point(s)`;
+        items.push({ kind: 'square_attacked', square: first.to, attacker: a, loss: theirs });
+        sentences.push(`Attention : ${pieceRef(a.type, 'opp', a.square, { article: 'def' })} attaque la case ${first.to} et peut y prendre. Le moteur l'accepte, parce que dans la suite ${c0.horizonSan}, ${mat}, et ${lowerFirst(evalSentence(c0.evalPlayer).replace(/\.$/, ''))}.`);
+      }
+    }
+  }
 
   // Position calme : un PLAN en 2-3 étapes. D'abord le plan VÉRIFIÉ par le moteur (coach/plans.mjs : le concept
   // apparaît dans sa meilleure suite et pas dans les autres), puis les étapes construites par le code.
@@ -316,7 +418,9 @@ function planSteps(data, me, opp, pieces, items, { skipRook = false, verifiedTo 
   const endFacts = buildAllFacts(endBoard.fen());
   const stillAtEnd = (id, color, square) => endFacts.some((t) => t.id === id && t.params.color === color
     && (square === undefined || t.params.square === square || (typeof t.params.square === 'string' && typeof square === 'string' && id.startsWith('PION_') && t.params.square[0] === square[0])));
-  const inLines = (m) => data.candidates.some((c) => (c.pvUci ?? []).some((u) => u.slice(0, 4) === m.path[0] + m.path[1]));
+  // Dans la ligne du coup conseillé seulement : une manœuvre de la ligne 2 contredit le coup de la ligne 1 (banc #20 :
+  // « joue Cxe6, puis amène ton cavalier de c5 en a6 »).
+  const inLines = (m) => (data.candidates[0]?.pvUci ?? []).some((u) => u.slice(0, 4) === m.path[0] + m.path[1]);
   // Seulement une manœuvre dont le premier pas figure dans une ligne du moteur (sinon ce n'est pas un plan sûr),
   // pas celle que le plan vérifié vient déjà de dire (même case d'arrivée), et pas vers une case qu'une autre de
   // mes pièces occupe à la fin de la ligne (« le cavalier en d5, puis le fou vers d5 »).
@@ -374,7 +478,9 @@ function planSteps(data, me, opp, pieces, items, { skipRook = false, verifiedTo 
   }
   const st = data.structures?.[0];
   const mine = st?.plans?.find((x) => /\((?:toi|you)\)/.test(String(x)));
-  if (out.length < 3 && mine && !items.some((x) => x.kind === 'structure')) {
+  // Texte de structure seulement si la ligne du moteur joue une de ses cases (banc #35 « f4-f5 » avec le pion f2 bloqué
+  // par le cavalier f3 ; #36 « ouvrir c4-c5, b4 » devant son propre roi).
+  if (out.length < 3 && mine && !items.some((x) => x.kind === 'structure') && structureProven(mine, bestSteps)) {
     const idea = String(mine).replace(/^[^:]*:\s*/, '').split(/(?<=\.)\s/)[0].replace(/\.$/, '');
     out.push(`garde en tête l'idée de la structure (${st.label.replace(/ — .*/, '')}) : ${lowerFirst(idea)}`);
   }
