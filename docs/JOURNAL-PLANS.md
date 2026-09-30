@@ -610,3 +610,30 @@ intention que si son coup concret (la poussée du levier, le premier pas de la r
 dans une des trois lignes du moteur ; sinon silence. Si la passe 6 ne fait pas mieux que la passe 4 (3 erreurs,
 profondeur 4,89), le rôle des modèles dans le coach se limite à **choisir et ordonner** parmi les plans vérifiés,
 et à la grille par niveau ; ils ne produisent plus de phrase.
+
+## 30 septembre 2026 — Passe 6 : intentions compatibles avec les lignes (17 h 43 → 18 h 04) ; décision
+
+| | Note | Profondeur | Erreurs graves | dont sur une intention |
+|---|---|---|---|---|
+| Passe 4 (sans intentions) | 8,3 | 4,89 | 3 | — |
+| Passe 5 (intentions concrètes) | 7,7 | 4,69 | 8 | 5 |
+| Passe 6 (intentions vérifiées dans les lignes) | 7,9 | 4,58 | 9 | **0** |
+
+La vérification dans les lignes a fait son travail : plus aucune erreur grave ne porte sur une intention (10 phrases
+émises, 3 « il prépare »). Mais la profondeur ne monte pas, et les 9 erreurs graves de la passe 6 sont des défauts
+**déjà connus de la fiche** (« O-O pare cette menace » alors que le fou reste en prise ; « mets ta tour à l'abri » pour
+un sacrifice de dame ; « Dh5+ pare ce mat » pour un perpétuel ; la manœuvre de tour que notre propre contexte marque
+absente des lignes ; le texte de structure Est-indienne qui parle de c4-c5 sans pion c ; « équilibrée » avec un pion
+de plus), présents à des degrés divers dans toutes les passes. **La variance entre passes est grande** (3 → 9 erreurs
+sur le même code de fiche, mêmes lignes de moteur à un fil) : elle vient de la reformulation par le LLM et du
+relecteur, pas du code. Deux conséquences :
+
+**Décision sur les intentions** : le critère fixé (≤ 3 erreurs, profondeur ≥ 4,89) n'est pas atteint ; les
+intentions ne produisent plus de phrase dans la fiche. Le rôle des modèles dans le coach devient : **choisir et
+ordonner** parmi les plans vérifiés par le moteur, et alimenter la grille par niveau. Le drapeau reste, le service
+est arrêté. Ce n'est pas un échec des modèles (ils prédisent bien ce que les joueurs font) : c'est que le coach ne
+doit dire que ce que le moteur confirme, et alors le plan vérifié suffit.
+
+**Décision sur la mesure** : le banc jugera désormais d'abord le **texte écrit par le code** (`adviceWorking`), sans
+reformulation, pour mesurer la fiche elle-même sans le bruit du LLM ; la reformulation sera mesurée à part. À faire
+avant toute nouvelle correction de la fiche.
