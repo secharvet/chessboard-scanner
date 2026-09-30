@@ -45,6 +45,15 @@ export async function askCoach({ fen, side, moves, question, engine, cfg = llmCo
   // seulement ; contrôle exact, une nouvelle tentative, sinon on affiche le texte du code.
   if (process.env.COACH_MODE === 'brief') {
     const brief = buildBrief(context.data);
+    // COACH_REPHRASE=0 : le texte du code tel quel, sans reformulation (banc déterministe : on mesure la fiche,
+    // pas la paraphrase du LLM ; journal du 30 septembre).
+    if (process.env.COACH_REPHRASE === '0') {
+      return {
+        advice: brief.text, adviceWorking: brief.text, brief: brief.items, context: context.text,
+        ungrounded: [], problems: [], rejected: [], revised: false, fallback: false,
+        timings: { context: tContext, llm: 0 },
+      };
+    }
     const ask = (extra = '') => complete({ system: REPHRASE_SYSTEM, user: `Question de l'élève : ${question?.trim() || 'Que dois-je jouer ?'}\n\n# Texte à reformuler\n\n${brief.text}${extra}` }, cfg, { think: false });
     let out = (await ask()).trim();
     let problems = checkRephrase(out, brief, context.data);
