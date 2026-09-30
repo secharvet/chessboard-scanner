@@ -396,6 +396,30 @@ Sur le VPS :
    plan naturel ici… » et « il prépare souvent… » dans la fiche, derrière un drapeau, puis banc de milieux de partie.
 7. Relire la baïonnette (AUC 0,98 suspecte : précondition facile).
 
+## 30 septembre 2026 — Grille par Elo conditionnelle (2013 + 2016, 986 465 positions)
+
+`scripts/human-grid-cond.mjs`, `reports/grille-elo-conditionnelle-1.md`. Réponse au point 7 de la relecture du
+29 septembre (la part brute confondait le plan et le type de position) : part des demi-positions où le plan est
+réalisé **sachant que ses ingrédients sont présents**, les disponibilités servant de dénominateurs.
+
+| Concept | Ingrédients présents (< 1200 → 2000 +) | Réalisé, brut | **Réalisé sachant ingrédients** |
+|---|---|---|---|
+| Tour sur colonne ouverte | 82 → 88 % | 11,0 → 17,2 % | **12,6 → 18,1 %** |
+| Rupture de pions | 56 → 66 % | 5,2 → 8,8 % | **7,8 → 11,7 %** |
+| Cavalier sur avant-poste | 20 → 20 % | 0,8 → 2,4 % | **2,5 → 7,8 %** |
+| Blocage | 48 → 48 % | 0,9 → 2,1 % | **1,5 → 3,5 %** |
+| Affaiblir la structure | 60 → 69 % | 8,0 → 14,3 % | **10,2 → 16,6 %** |
+| Dominer une couleur | 75 → 89 % | 0,2 → 0,6 % | **0,3 → 0,7 %** |
+
+Lecture : la montée avec le niveau **tient** une fois les ingrédients contrôlés, pour tous les concepts ; elle est
+donc une propension, pas un artefact du type de positions. La disponibilité des ingrédients monte un peu avec
+l'Elo (colonnes ouvertes 82 → 88 %, leviers 56 → 66 %), ce qui expliquait une part de l'effet brut, mais l'essentiel
+reste : à ingrédients égaux, un joueur à 2000 + installe un cavalier sur un avant-poste trois fois plus souvent qu'un
+joueur sous 1200 (7,8 % contre 2,5 %). Dominer une couleur reste rare à tous les niveaux (moins de 1 %). La tranche
+< 1200 compte maintenant 93 000 à 134 000 demi-positions selon le concept (lot 2016) : ses chiffres tiennent.
+Prochaine version de la grille : « réalise **et réussit** » (perte des coups du camp), quand DENEB aura calculé le
+jugement d'exécution.
+
 **Jugement d'exécution : chaîne en place, seuils proposés** (30 septembre, DENEB). `scripts/juge-plans.mjs` :
 pour chaque plan positif (calme, apparition < 12), la perte de chaque coup du camp sur le segment, en espérance
 de score (formule Lichess, §4.2), Stockfish 19 profondeur 12, 14 moteurs ; les évaluations déjà présentes dans
