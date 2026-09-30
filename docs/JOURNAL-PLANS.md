@@ -591,3 +591,22 @@ une sur quatorze au milieu. Ce n'est pas dominant (la position décide dans 87 %
 (débutants) qui est la plus touchée. **Décision** : brancher les modèles v4 d'abord avec un niveau **déclaré**
 (réglage à trois positions dans l'interface, 1500 par défaut, Elo réel si pseudo Lichess ou Chess.com donné) ;
 l'estimation automatique à partir des coups joués vient juste après, sans bloquer le branchement.
+
+## 30 septembre 2026 — Passe 5 du banc : modèles v4 et intentions concrètes (17 h 19 → 17 h 40)
+
+| | Note | Profondeur | Erreurs graves |
+|---|---|---|---|
+| Passe 4 (sans intentions) | 8,3 | 4,89 | 3 |
+| Passe 5 (v4, intentions concrètes) | 7,7 | 4,69 | **8** |
+
+Intentions présentes dans 16 réponses (+ 9 « il prépare souvent »). **Cinq des huit erreurs graves viennent des
+phrases d'intention** : « il prépare l'échange de ton fou » alors que le coup prend la dame ; « mets une tour sur la
+colonne a » quand aucune ligne du moteur n'y va ; « échange son fou des cases noires » quand le complexe est ailleurs.
+Le relecteur a raison : une tendance statistique lue comme un conseil pour CETTE position est une erreur dès que la
+ligne du moteur la contredit. On avait sauté l'étape « Stockfish vérifie » pour les intentions.
+
+**Décision** : les intentions restent hors production. Prochaine et dernière tentative dans ce sens : n'énoncer une
+intention que si son coup concret (la poussée du levier, le premier pas de la route, la prise de l'échange) figure
+dans une des trois lignes du moteur ; sinon silence. Si la passe 6 ne fait pas mieux que la passe 4 (3 erreurs,
+profondeur 4,89), le rôle des modèles dans le coach se limite à **choisir et ordonner** parmi les plans vérifiés,
+et à la grille par niveau ; ils ne produisent plus de phrase.
