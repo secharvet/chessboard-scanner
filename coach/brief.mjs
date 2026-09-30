@@ -218,7 +218,7 @@ export function buildBrief(data) {
     }
     // Intention (modèles sur les plans humains) : ce que les joueurs de ce niveau entreprennent ici. Une tendance,
     // dite comme telle, jamais comme un conseil vérifié ; tue si c'est déjà le plan vérifié.
-    const mine = topIntention(data.intentions?.[me], { exclude: verified ? [verified.concept] : [] });
+    const mine = topIntention(data.intentions?.[me], { exclude: verified ? [verified.concept] : [], facts: allFactsForIntent(data), fen: data.fen, side: me });
     if (mine) {
       items.push({ kind: 'intention', concept: mine.concept, p: mine.p });
       sentences.push(`À ton niveau, dans ce genre de position, les joueurs entreprennent souvent : ${INTENT[mine.concept] ?? mine.concept}.`);
@@ -249,7 +249,7 @@ export function buildBrief(data) {
     const parts = [];
     if (p0) parts.push(p0.text.replace(/\s*\(Stockfish[^)]*\)\)?/, '').replace(/ \((?:pion|cavalier|fou|tour|dame|roi|roque)\)/g, ''));
     // Ce qu'il prépare probablement, d'après les plans humains (proposition, pas vérification).
-    const hisIntent = his ? null : topIntention(data.intentions?.[opp], { min: 0.55, margin: 0.15 });
+    const hisIntent = his ? null : topIntention(data.intentions?.[opp], { min: 0.55, margin: 0.15, facts: allFactsForIntent(data), fen: data.fen, side: opp });
     if (hisIntent) {
       items.push({ kind: 'opp_intention', concept: hisIntent.concept, p: hisIntent.p });
       parts.push(`à son niveau, il prépare souvent ${INTENT_OPP[hisIntent.concept] ?? hisIntent.concept}`);
@@ -272,6 +272,13 @@ export function buildBrief(data) {
  *   manœuvre sûre (de préférence amorcée par une ligne du moteur) → colonne pour une tour →
  *   cible (faiblesse adverse) → idée de la structure de pions.
  */
+/** Faits complets de la position (calculés une fois par fiche) pour vérifier la matière des intentions. */
+const FACTS_CACHE = new WeakMap();
+function allFactsForIntent(data) {
+  if (!FACTS_CACHE.has(data)) FACTS_CACHE.set(data, buildAllFacts(data.fen));
+  return FACTS_CACHE.get(data);
+}
+
 /** Noms des plans pour les phrases d'intention (tutoiement pour l'élève, tournure neutre pour l'adversaire). */
 const INTENT = {
   tour_colonne: 'mettre une tour sur la colonne ouverte', cavalier_avant_poste: 'installer un cavalier sur un avant-poste',

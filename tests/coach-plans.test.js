@@ -34,3 +34,23 @@ describe('detectPlans', () => {
     assert.deepEqual(plans, { w: [], b: [] });
   });
 });
+
+describe('intentions : la matière du plan doit être là', async () => {
+  const { ingredientsPresent, pieceCounts, topIntention } = await import('../coach/intentions.mjs');
+  it('finale de pions : pas de « tour sur la colonne ouverte » sans tour', () => {
+    const fen = '8/5k2/8/3K4/3P4/8/8/8 w - - 0 1';
+    const facts = [{ id: 'COLONNE_OUVERTE', params: { file: 'e' } }];
+    assert.deepEqual(pieceCounts(fen, 'w'), { r: 0, n: 0, b: 0 });
+    assert.equal(ingredientsPresent('tour_colonne', facts, 'w', pieceCounts(fen, 'w')), false);
+    assert.equal(topIntention({ tour_colonne: { arbres: 0.9 }, rupture: { arbres: 0.1 } }, { facts, fen, side: 'w' }), null);
+  });
+  it('avec une tour et une colonne ouverte, la proposition passe', () => {
+    const fen = '4k3/8/8/8/8/8/8/R3K3 w Q - 0 1';
+    const facts = [{ id: 'COLONNE_OUVERTE', params: { file: 'e' } }];
+    const best = topIntention({ tour_colonne: { arbres: 0.9 }, rupture: { arbres: 0.1 } }, { facts, fen, side: 'w' });
+    assert.equal(best?.concept, 'tour_colonne');
+  });
+  it('marge insuffisante entre les deux premiers : on se tait', () => {
+    assert.equal(topIntention({ tour_colonne: { arbres: 0.62 }, rupture: { arbres: 0.58 } }), null);
+  });
+});

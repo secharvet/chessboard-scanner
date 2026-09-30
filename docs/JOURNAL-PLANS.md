@@ -441,3 +441,16 @@ Au passage, les identifiants de partie sont préfixés par le lot (les numéros 
 leur ÉCART, bootstrap apparié sur le test), précision et rappel au seuil qui maximise F1 sur la validation,
 calibration (ECE à 10 paniers). Premier signal utile : l'ECE vaut ~0,15 — les sorties ne sont pas des
 probabilités lisibles, le coach devra recalibrer (Platt ou isotone) avant toute phrase du type « souvent ici… ».
+
+## 30 septembre 2026 — Service « intentions » branché dans la fiche (VPS)
+
+`coach/intentions-server.py` (Python local, 127.0.0.1:8001, modèles v3 : arbres et réseau + faits, sept concepts,
+210 ms par position), `coach/intentions.mjs` (client, drapeau `COACH_INTENTIONS`, silence en cas d'absence du
+service). La fiche dit « à ton niveau, dans ce genre de position, les joueurs entreprennent souvent : … » et, dans
+« À surveiller », « à son niveau, il prépare souvent … », jamais à la place d'un plan vérifié. Trois garde-fous
+posés à l'essai : **pas de pourcentage** (probabilités rééquilibrées, ECE ≈ 0,15 mesuré par DENEB : à recalibrer
+avant production), **marge exigée** sur le second plan, **matière exigée** (sur le banc, la première version a
+proposé « une tour sur la colonne ouverte » dans une finale de pions sans tour : le modèle classe, il ne vérifie
+pas ; les ingrédients de la grille conditionnelle servent de filtre). Sur les 16 positions du banc : 4 intentions,
+plausibles après filtre (rupture pour les Noirs dans la Française avance et l'Est-indienne, tour sur la colonne
+dans le PDI). Production : après calibration et banc de milieux de partie.
