@@ -637,3 +637,22 @@ doit dire que ce que le moteur confirme, et alors le plan vérifié suffit.
 **Décision sur la mesure** : le banc jugera désormais d'abord le **texte écrit par le code** (`adviceWorking`), sans
 reformulation, pour mesurer la fiche elle-même sans le bruit du LLM ; la reformulation sera mesurée à part. À faire
 avant toute nouvelle correction de la fiche.
+
+## 30 septembre 2026 — Passe 7 : référence déterministe (texte du code, sans LLM ni intentions), 18 h 06 → 18 h 23
+
+| | Note | Profondeur | Erreurs graves |
+|---|---|---|---|
+| Passe 4 (reformulée par le LLM) | 8,3 | 4,89 | 3 |
+| **Passe 7 (texte du code, sans reformulation)** | **8,6** | 4,53 | **4** |
+
+Le texte brut du code est jugé aussi bien ou mieux que sa reformulation : le LLM ne sert donc à rien dans la fiche
+et peut en sortir. Les 4 erreurs graves restantes sont **toutes dans la logique de la fiche**, avec leur cause :
+1. (n° 20) une manœuvre prise dans la **ligne 2** du moteur (« son premier pas figure dans une ligne ») alors que la
+   meilleure ligne fait autre chose : la manœuvre doit venir de la meilleure ligne, ou d'une ligne qui vaut autant ;
+2. (n° 32) « Fxb5+ pare cette menace » alors que la menace s'exécute quand même dans la ligne (le cavalier tombe) :
+   une parade ne peut être annoncée que si, dans la meilleure ligne après le coup, la perte menacée n'a pas lieu ;
+3. (n° 35, 36) le texte de théorie de la structure reconnue (« la chaîne pointe vers l'aile dame : c4-c5, b4 »)
+   contredit la position (pas de pion c) ou la ligne : ce texte générique ne sera cité que si un des coups qu'il
+   nomme est jouable ici et figure dans une ligne ; sinon il disparaît.
+Objectif : **zéro** sur ce banc, en corrigeant ces trois règles, puis relecture humaine de tout ce que le relecteur
+signale encore (il se trompe aussi : position 3, même phrase jugée grave une fois sur deux).
