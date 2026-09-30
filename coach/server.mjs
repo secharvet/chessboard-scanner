@@ -21,7 +21,7 @@ const ANSWER_LOG = process.env.COACH_ANSWER_LOG || 'logs/coach-answers.jsonl';
 async function logAnswer(payload, result) {
   const entry = {
     at: new Date().toISOString(), lang: process.env.COACH_LANG || 'fr', answer: process.env.COACH_ANSWER || null,
-    model: `${cfg.provider}/${cfg.model}`, fen: payload.fen, side: payload.side, question: payload.question,
+    model: `${cfg.provider}/${cfg.model}`, fen: payload.fen, side: payload.side, moves: payload.moves ?? [], question: payload.question,
     advice: result.advice, adviceWorking: result.adviceWorking ?? null, adviceCited: result.adviceCited ?? null,
     problems: result.problems, revised: result.revised, timings: result.timings,
   };

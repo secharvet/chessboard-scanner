@@ -83,7 +83,9 @@ export async function buildCoachContext({ fen, side, moves = [], engine, depth =
   // Ce que l'adversaire prépare (un coup calme, puis la menace), noté par Stockfish ;
   // manœuvres sûres vers les cases stratégiques (plans à plus long terme).
   const opp = player === 'w' ? 'b' : 'w';
-  const prepared = await scorePrepared(engine, fen, opp, preparedThreats(fen, player, { max: 4 }), 1)
+  // Pas de « préparation adverse » quand le camp au trait est en échec : retourner le trait donnerait une position
+  // illégale (roi prenable), sur laquelle Stockfish ne répond jamais (60 s d'attente le 30 septembre au soir).
+  const prepared = chess.inCheck() ? [] : await scorePrepared(engine, fen, opp, preparedThreats(fen, player, { max: 4 }), 1)
     .catch(() => []);
   mark('préparations adverses');
   const maneuvers = findManeuvers(fen, player, { max: 4 });

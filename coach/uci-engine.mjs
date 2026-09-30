@@ -5,6 +5,21 @@
 import { spawn } from 'node:child_process';
 import { existsSync } from 'node:fs';
 import { createInterface } from 'node:readline';
+import { Chess } from 'chess.js';
+
+/**
+ * Position que Stockfish accepte : le roi du camp qui n'a PAS le trait ne doit pas être en prise (sinon le moteur
+ * ne renvoie aucun « bestmove » et l'appel attend jusqu'au délai). Arrive quand on retourne le trait d'une position
+ * où le camp au trait est en échec.
+ */
+export function engineLegal(fen) {
+  let c;
+  try { c = new Chess(fen); } catch { return false; }
+  const mover = c.turn();
+  const other = mover === 'w' ? 'b' : 'w';
+  const king = c.board().flat().find((sq) => sq && sq.type === 'k' && sq.color === other);
+  return Boolean(king) && !c.isAttacked(king.square, mover);
+}
 
 /**
  * @typedef {{ type: 'cp' | 'mate', value: number }} Score  // point de vue du camp au trait
@@ -54,6 +69,7 @@ export class UciEngine {
    * @returns {Promise<EngineLine[]>}
    */
   analyze(fen, opts = {}) {
+    if (!engineLegal(fen)) return Promise.resolve([]);
     const run = async () => {
       await this.start();
       const multipv = opts.multipv ?? 3;
