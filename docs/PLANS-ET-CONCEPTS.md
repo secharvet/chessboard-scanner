@@ -22,6 +22,20 @@ ci-dessous n'a de valeur si la réponse est non ; elle n'est pas encore mesurée
 - **l'activation d'un modèle n'est pas une explication.** L'explication, c'est l'état but vérifié sur l'échiquier et
   la phrase du code ; le modèle ne fait que choisir quoi vérifier.
 
+**Décisions produit de l'auteur (30 septembre – 1er octobre 2026, après la première partie réelle)** :
+- **le coach ne souffle pas le coup.** Donner le meilleur coup « revient à faire rejouer Stockfish contre lui-même » :
+  le joueur exécute, il n'apprend pas, et le test est faussé (il gagne parce qu'il joue le coup du moteur). Avant le
+  coup, la fiche donne **l'idée** (menace, pièce attaquée, cible, plan) ; le coup est derrière des **indices par
+  paliers** (la pièce, puis la case, puis la fiche complète) ; **après** le coup, le coach **juge le coup joué**
+  (perte d'espérance de score, réfutation lue dans la ligne du moteur, coup qu'il fallait). En place le 1er octobre ;
+- **le joueur automatique** (outil de validation, §9) ne rejouera pas la ligne de Stockfish : il joue d'après les
+  motifs reconnus et les conseils de la fiche (« prends le centre », « développe-toi », « ton fou est menacé »), et
+  Stockfish ne sert qu'à le juger. C'est la seule façon de mesurer si les conseils, suivis, font bien jouer ;
+- **le gambit** manque au catalogue : sacrifice volontaire d'un pion contre du développement, le centre ou
+  l'initiative. À écrire comme recette (atome `perte` + compensation mesurée par le moteur) et à faire proposer par la
+  fiche seulement quand les deux moteurs confirment la compensation, avec l'explication du déséquilibre créé. Pas
+  prioritaire tant que les erreurs graves ne sont pas à zéro (l'auteur : « pour l'instant ça rajoute du vocabulaire »).
+
 **Ce qui a été essayé et abandonné** (détails et chiffres dans le journal) : la thèse initiale « de petits réseaux
 dont les activations, vérifiées par Stockfish, sont l'explication », entraînés sur des étiquettes lues dans les suites
 de Stockfish. Les étiquettes se sont révélées fragiles (9 % survivent à l'accord de deux versions du moteur) et peu
@@ -440,9 +454,15 @@ que du calcul, pas de Stockfish.
 **Première exploration** (en parallèle de l'expérience du §6), à partir d'environ 50 000 positions : extraire les
 20 enchaînements les plus fréquents et les plus discriminants, avec planches, et juger si de vrais plans en sortent.
 
-## 9. Priorités en vigueur (30 septembre 2026)
+## 9. Priorités en vigueur (1er octobre 2026)
 
 Le journal daté est dans `JOURNAL-PLANS.md`. Par ordre, ce qui compte :
+
+0. **Zéro erreur grave dans la fiche, en partie réelle.** Règle de construction : toute phrase a sa preuve dans la
+   ligne du coup conseillé ou dans les faits, sinon silence. Mesure : banc de milieux en mode déterministe
+   (`COACH_DETERMINISTIC=1`, 40 positions dont 4 tirées de parties réelles) et parties jouées par l'auteur avec le
+   conseil et le jugement à chaque coup. Le relecteur LLM signale aussi de fausses erreurs (il lit l'analyse, pas
+   l'échiquier) : chaque « grave » est vérifiée sur la position avant d'être comptée.
 
 1. **La question produit** : un banc de milieux de partie tiré des plans humains bien joués, la fiche du coach avec le
    plan proposé puis vérifié, et une mesure de ce qu'un débutant en retire (au minimum : relecture par un joueur
