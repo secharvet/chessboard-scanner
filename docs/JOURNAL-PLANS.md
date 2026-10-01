@@ -886,3 +886,15 @@ elle n'annonce alors plus que sur 2,3 % des positions et ne voit que 9 % des cas
 intentions restent hors de la fiche comme affirmation ; les modèles peuvent servir à **choisir quoi vérifier**
 (classer les plans candidats avant la vérification par le moteur), jamais à dire « il prépare X ».
 `reports/prediction-courbe-v5.md`.
+
+## 1er octobre, 16 h 35 — « la théorie d'abord » : catalogue de 59 concepts, lot 1 codé
+
+Décision de l'auteur (16 h 20) : étendre le vocabulaire des plans avant de mesurer le rattachement (« avec un concept
+sur trente, on ne rattache rien : ça explique les 10 % »). `docs/CATALOGUE-CONCEPTS.md` : 59 entrées en six familles
+(pièces lourdes, mineures, structure, roi, dynamique, plans par structure), à la grille moyen → déséquilibre →
+exploitation, avec le piège (clause d'exclusion), les faits disponibles et le statut (8 codés, 40 en lot 1, 9 en
+lot 2 avec un fait à écrire, 2 en lot 3 à discuter : tempo, transformation). Sources datées.
+Lot 1, première fournée (`coach/plan-concepts.mjs`, états buts + agents + tenue 6 demi-coups) : doublement_tours,
+tour_septieme, tour_derriere_passe, dame_centralisee, colonne_controlee, pion_passe, pion_passe_protege,
+pion_passe_avance. Liste partagée `coach/concept-list.mjs` (16 concepts). Tests verts. Mesure de couverture lancée
+(inventaire des coups, 8 fichiers, deux machines).
