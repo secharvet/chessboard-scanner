@@ -113,6 +113,16 @@ comme un grand maître*, 1971), Vuković (*L'art de l'attaque*, 1965), Soltis (*
 | F7 | Maróczy (pions c4-e4) | étau : restriction des leviers b5/d5 (E11) | leviers b5 ou f5, échange du cavalier c3 | *STRUCTURE Maróczy* | lot 2 |
 | F8 | Structure sicilienne ouverte (e4 contre d6-e6) | f4-f5, e4-e5, attaque du roi (D6) | b5-b4, pression sur e4, colonne c | STRUCTURE | lot 2 |
 
+### F bis. Les ouvertures (remarque de l'auteur, 1er octobre, 16 h 40)
+
+Une ouverture est une recette de l'étage des coups, nommée, qui réalise des concepts des étages du dessus : elle
+produit une structure (famille F), donc des plans canoniques, et des déséquilibres d'ouverture (développement, centre,
+roi à l'abri, gambit = E9). Elle entre au catalogue par la structure qu'elle produit, pas comme un concept à part.
+À faire, après les lots en cours : (1) le **fait** `OUVERTURE` (nom, code ECO, structure attendue) à partir de la base
+de 3 820 lignes déjà présente (`coach/openings.mjs`, utilisée seulement par le portrait) ; (2) la **grille
+ouverture × plan** sur le million de positions, par niveau (quels plans suivent quelle ouverture : a priori fort pour
+les modèles, vérification de la théorie des structures) ; (3) dans la fiche, nommer l'ouverture et son idée.
+
 ## Décompte
 
 Codés : 8 (A1, B1, B2, B3, C1, C2, C3, D2) et le drapeau D4. **Lot 1** (faits et atomes existants) : 40 entrées.
