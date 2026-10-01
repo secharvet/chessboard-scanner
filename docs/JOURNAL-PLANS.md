@@ -911,3 +911,7 @@ pion_passe_avance. Liste partagée `coach/concept-list.mjs` (16 concepts). Tests
   perte), regroupement défensif. **29 concepts étiquetés** (`coach/concept-list.mjs`). Les atomes sont calculés avant
   les concepts et passés aux agents. Tests verts. Les ouvertures : famille F bis du catalogue (fait OUVERTURE, grille
   ouverture × plan), à coder après les lots.
+- **Mesure du lot 2** (17 h 11, 23 concepts) : coups calmes réalisant un plan nommé **12,7 % → 17,2 %** (roi à l'abri
+  2,7 %, gain d'espace 1,3 %, roi actif 0,3 %, fixation 0,3 %…). **Couverture par fenêtre** (nouvelle mesure) : un camp
+  réalise au moins un plan nommé en 12 demi-coups dans **58,5 %** des cas (55,5 % sous 1200, 59,5 % au-dessus de
+  2000). `reports/inventaire-coups-4.md`. Mesure avec les 29 concepts lancée (inventaire5).
