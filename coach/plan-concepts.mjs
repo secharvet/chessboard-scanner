@@ -49,6 +49,35 @@ export const CONCEPTS = {
   pion_passe_protege: (facts, color) => has(facts, 'PION_PASSE_PROTEGE', color),
   // C5 Pion passé poussé : un pion passé à moi a atteint la 6e rangée (vue de moi) : le cadre exige l'apparition par mon coup.
   pion_passe_avance: (facts, color) => facts.some((t) => (t.id === 'PION_PASSE' || t.id === 'PION_PASSE_PROTEGE') && t.params.color === color && relRank(t.params.square, color) >= 6),
+  // ── Lot 1, deuxième fournée : développement, centre, roi, espace ──
+  // E1 Développement : avance de développement (au moins deux pièces d'écart), gagnée par une sortie de pièce.
+  developpement: (facts, color) => has(facts, 'DEVELOPPEMENT', color),
+  // E2 Prendre le centre : contrôle du centre, gagné par un pion central.
+  centre: (facts, color) => has(facts, 'CONTROLE_CENTRE', color),
+  // D1 Roi à l'abri : roi roqué (case de roque, vue de mon camp) derrière un bouclier intact.
+  roi_abri: (facts, color, board) => {
+    const k = board.board().flat().find((p) => p && p.type === 'k' && p.color === color);
+    return Boolean(k) && relRank(k.square, color) === 1 && 'abcgh'.includes(k.square[0]) && has(facts, 'PIONS_ROI_BOUCLIER', color);
+  },
+  // D10 Roi actif en finale : en finale, mon roi hors de sa première rangée, au centre ou dans le camp adverse.
+  roi_actif: (facts, color, board) => {
+    if (!facts.some((t) => t.id === 'PHASE' && t.params.phase === 'finale')) return false;
+    const k = board.board().flat().find((p) => p && p.type === 'k' && p.color === color);
+    return Boolean(k) && (relRank(k.square, color) >= 4 || ('cdef'.includes(k.square[0]) && relRank(k.square, color) >= 3));
+  },
+  // C14 Gain d'espace.
+  gain_espace: (facts, color) => has(facts, 'AVANTAGE_ESPACE', color),
+  // C8 Pion passé éloigné : en finale, mon pion passé sur l'aile opposée au roi adverse.
+  pion_passe_eloigne: (facts, color, board) => {
+    if (!facts.some((t) => t.id === 'PHASE' && t.params.phase === 'finale')) return false;
+    const opp = color === 'w' ? 'b' : 'w';
+    const k = board.board().flat().find((p) => p && p.type === 'k' && p.color === opp);
+    if (!k) return false;
+    const kf = k.square.charCodeAt(0) - 97;
+    return facts.some((t) => (t.id === 'PION_PASSE' || t.id === 'PION_PASSE_PROTEGE') && t.params.color === color && Math.abs(t.params.square.charCodeAt(0) - 97 - kf) >= 4);
+  },
+  // C9 Fixation : l'adversaire se retrouve avec un mauvais fou (ses pions fixés sur la couleur de son fou), par ma poussée de pion.
+  fixation_mauvais_fou: (facts, color) => has(facts, 'FOU_MAUVAIS', color === 'w' ? 'b' : 'w'),
   // Blocage : un cavalier ou un fou installé juste devant un pion adverse isolé, arriéré, faible ou passé.
   blocage: (facts, color, board) => facts.some((t) => {
     if (!WEAK_PAWN.has(t.id) || t.params.color === color || typeof t.params.square !== 'string') return false;
@@ -93,6 +122,13 @@ const AGENT = {
   pion_passe: (m, snap, color) => m.piece === 'p' && snap.facts.some((t) => (t.id === 'PION_PASSE' || t.id === 'PION_PASSE_PROTEGE') && t.params.color === color && t.params.square === m.to),
   pion_passe_protege: (m, snap, color) => m.piece === 'p' && snap.facts.some((t) => t.id === 'PION_PASSE_PROTEGE' && t.params.color === color),
   pion_passe_avance: (m, snap, color) => m.piece === 'p' && relRank(m.to, color) >= 6 && snap.facts.some((t) => (t.id === 'PION_PASSE' || t.id === 'PION_PASSE_PROTEGE') && t.params.color === color && t.params.square === m.to),
+  developpement: (m, snap, color) => (m.piece === 'n' || m.piece === 'b') && relRank(m.from, color) === 1,
+  centre: (m, snap, color) => m.piece === 'p' && CENTRAL.has(m.to),
+  roi_abri: (m) => m.san.startsWith('O-O'),
+  roi_actif: (m) => m.piece === 'k',
+  gain_espace: (m, snap, color) => m.piece === 'p' && relRank(m.to, color) >= 5,
+  pion_passe_eloigne: (m) => m.piece === 'p',
+  fixation_mauvais_fou: (m) => m.piece === 'p',
 };
 /** Tous les concepts étiquetés : coach/concept-list.mjs (sans dépendance) ; vérifié ici contre les états buts codés. */
 export { CONCEPT_LIST };
