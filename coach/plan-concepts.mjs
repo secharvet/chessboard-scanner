@@ -166,7 +166,8 @@ const AGENT = {
   tempete_roques_opposes: (m, snap, color) => m.piece === 'p' && relRank(m.to, color) >= 5,
   attaque_roi_pieces: (m) => m.piece !== 'p' && m.piece !== 'k',
   piece_reactivee: (m) => m.piece !== 'p' && m.piece !== 'k',
-  prophylaxie_levier: (m) => m.piece !== 'k',
+  // Prophylaxie : seulement si c'est MON coup qui retire le levier (atome restriction), pas un hasard de la position.
+  prophylaxie_levier: (m, snap, color, i, atoms) => atoms.some((a) => a.kind === 'restriction' && a.side === color && a.ply === i),
 };
 /** Tous les concepts étiquetés : coach/concept-list.mjs (sans dépendance) ; vérifié ici contre les états buts codés. */
 export { CONCEPT_LIST };
@@ -205,6 +206,8 @@ export function scanLine(fen, pv, PLIES = 48) {
   }
   const out = {};
   if (!timeline.length) return out;
+  // Atomes (moyens) : calculés d'abord, car certains agents en ont besoin (prophylaxie = atome restriction).
+  const { atoms } = detectAtoms(fen, pv.slice(0, PLIES), PLIES);
   /** La condition est-elle vraie du demi-coup i jusqu'à i + HOLD (ou jusqu'au bout de la suite) ? */
   const holds = (i, pred) => timeline.slice(i, i + HOLD + 1).every(pred);
   for (const [name, test] of Object.entries(CONCEPTS)) {
@@ -215,7 +218,7 @@ export function scanLine(fen, pv, PLIES = 48) {
         // Ni prise ni échec : un échec force la réponse, ce n'est pas l'exécution calme d'un plan (planche #14 du
         // 30 septembre : « blocage » réalisé par …Cc3+, qui attaque aussi la tour).
         ply = timeline.findIndex((snap, i) => moves[i].color === color && !moves[i].captured && !moves[i].san.includes('+')
-          && AGENT[name](moves[i], snap, color) && holds(i, ok));
+          && AGENT[name](moves[i], snap, color, i, atoms) && holds(i, ok));
       }
       out[`${name}_${color}`] = ply;
       // Avant-poste : l'adversaire peut-il encore échanger le cavalier (fou de la couleur, cavalier) ?
@@ -345,7 +348,6 @@ export function scanLine(fen, pv, PLIES = 48) {
     out[`dominer_exploite_${color}`] = exploit;
   }
   // ── Recettes (§3 bis) : moyen → déséquilibre → exploitation, sur les atomes et les faits ──
-  const { atoms } = detectAtoms(fen, pv.slice(0, PLIES), PLIES);
   out.atomes = atoms;
   for (const color of COLORS) {
     const opp = color === 'w' ? 'b' : 'w';
