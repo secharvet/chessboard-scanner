@@ -825,3 +825,7 @@ montrer sur planches à un maître. `reports/inexpliques.md` et `.json` (exemple
   corrigées. Chaîne v5 (`scripts/pipeline-v5.sh`, DENEB, 13 h 10) : recalcul des étiquettes avec les nouveaux atomes
   → jeu `humains-v5-juge.jsonl` (plans déplacés exclus, jugement du fichier d'origine) → modèles v5 (10 passes,
   bootstrap 200) → courbes de prédiction v4 et v5 sur les mêmes parties de test.
+- **Partage du calcul** (demande de l'auteur, 13 h 45 : « le VPS se tourne les pouces ») : `scripts/repartir.sh`,
+  un processus par fichier, 4 sur 5 à DENEB (16 fils), 1 sur 5 au VPS en `nice 10` (un cœur gardé au coach),
+  attente bornée sur les marques TERMINÉ, rapatriement des sorties. Testé à 13 h 56. La chaîne v5 en cours n'a pas
+  été redécoupée (gain ≈ 12 min, risque au milieu d'une chaîne qui tourne).
