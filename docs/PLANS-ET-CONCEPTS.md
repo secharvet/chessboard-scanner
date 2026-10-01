@@ -194,9 +194,14 @@ de règles comme ingrédients. La théorie (Steinitz, Nimzowitsch, Pachman, Silm
 - *pion passé éloigné* = échanges → majorité → poussée → pion passé → roi adverse attiré.
 
 Le vocabulaire atomique est petit :
-- une douzaine de **moyens** (opérations, événements le long de la partie) : échange (quelle pièce contre laquelle),
+- quinze **moyens** (opérations, événements le long de la partie) : échange (quelle pièce contre laquelle),
   levier, poussée de gain d'espace, manœuvre d'une pièce vers une case, occupation d'une colonne ou d'une rangée,
-  doublement, roque, marche du roi, sacrifice de pion ;
+  doublement, roque, marche du roi, perte de pion ; les moyens de la défense : fermeture, restriction, regroupement ;
+  et, depuis l'inventaire du 1er octobre 2026, les trois mots qui manquaient aux coups de pièces : **menace** (mettre
+  une pièce adverse en prise), **pression** (attaquer une pièce défendue), **soutien** (défendre une pièce à moi).
+  L'inventaire (97 025 positions de test, `scripts/inventaire-coups.mjs`, `scripts/inexpliques.mjs`) a mesuré que nos
+  8 plans n'expliquent que 10 % des coups calmes, la défense d'une pièce attaquée 28 %, et que le reste « inexpliqué »
+  (22 %) tient à 99,6 % dans ces trois mots et leurs effets voisins (reculer, centraliser, libérer une ligne) ;
 - une vingtaine de **déséquilibres** (faits qui apparaissent ou disparaissent) : colonne ouverte, pion faible,
   avant-poste, complexe faible, bouclier brisé, pion passé, paire de fous, roi au centre, espace…
 

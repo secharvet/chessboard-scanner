@@ -812,3 +812,16 @@ n'est pas attaquée : consolidation, prophylaxie). Avec « sauve » et « protè
 la fiche peut dire ce que fait presque tout coup calme d'un débutant. Les préparations lointaines que l'auteur
 voulait inventorier se cachent dans les 20 % « rien ne suit » et dans les « suivi:manœuvre » : ce sont ceux-là à
 montrer sur planches à un maître. `reports/inexpliques.md` et `.json` (exemples par groupe, FEN et suite).
+
+## 1er octobre, 13 h 07 — les trois mots en ligne ; atomes ; chaîne v5 lancée
+
+- **Fiche et jugement** : `coach/move-class.mjs` → `moveEffects` (menace, pression, soutien, lus avant / après le coup,
+  jamais pour le roi). Le « pourquoi » d'un coup calme commence par son effet (« Cg4 : attaque son cavalier en f6, qui
+  est défendu : c'est de la pression ») ; l'idée le dit sans la case (« une pièce adverse défendue mérite qu'on mette
+  la pression dessus ») ; le jugement nomme l'intention (« Cd2 : bon coup. Il soutient ton fou en f1 »). Banc : 17
+  fiches sur 40 changent, relues ; en ligne à 13 h 07.
+- **Atomes** `menace`, `pression`, `soutien` dans `coach/atoms.mjs` (avec la cible) : 15 moyens. Spécification §3 bis.
+- **Réponse à l'auteur** (« faut-il tout réentraîner ? ») : non pour les mots (règles), oui pour les étiquettes
+  corrigées. Chaîne v5 (`scripts/pipeline-v5.sh`, DENEB, 13 h 10) : recalcul des étiquettes avec les nouveaux atomes
+  → jeu `humains-v5-juge.jsonl` (plans déplacés exclus, jugement du fichier d'origine) → modèles v5 (10 passes,
+  bootstrap 200) → courbes de prédiction v4 et v5 sur les mêmes parties de test.
