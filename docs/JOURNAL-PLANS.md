@@ -898,3 +898,8 @@ Lot 1, première fournée (`coach/plan-concepts.mjs`, états buts + agents + ten
 tour_septieme, tour_derriere_passe, dame_centralisee, colonne_controlee, pion_passe, pion_passe_protege,
 pion_passe_avance. Liste partagée `coach/concept-list.mjs` (16 concepts). Tests verts. Mesure de couverture lancée
 (inventaire des coups, 8 fichiers, deux machines).
+- **Mesure du lot 1** (16 h 50, 582 150 coups de test) : coups calmes réalisant un plan nommé **10,5 % → 12,7 %**
+  (colonne contrôlée 1,0 %, doublement 0,4 %, pion passé créé 0,2 %, tour 7e 0,2 %, pion passé protégé 0,2 %, tour
+  derrière le passé 0,1 %, pion passé avancé 0,1 %, dame centralisée 0,1 %). Chaque concept est rare pris seul : la
+  part des COUPS sous-estime par construction (un plan = un coup sur douze au mieux) ; ajout d'une couverture par
+  FENÊTRE (le camp réalise au moins un plan en 12 demi-coups) pour la mesure du lot 2. `reports/inventaire-coups-3.md`.

@@ -43,6 +43,7 @@ async function inventory() {
   const OUT = opt('--out', `reports/inventaire-${IN.split('/').pop().replace(/\.jsonl$/, '')}.json`);
   const MAX = Number(opt('--max', 0));
   const counts = {}; // bracket -> category -> n
+  const windows = {}; // bracket -> { sides, withPlan }
   let records = 0;
   let moves = 0;
   const t0 = Date.now();
@@ -54,6 +55,14 @@ async function inventory() {
     if (MAX && records > MAX) break;
     const scan = scanLine(r.fen, r.played, r.played.length);
     const atoms = scan.atomes ?? [];
+    // Couverture par FENÊTRE : ce camp réalise-t-il au moins un plan nommé dans les 12 premiers demi-coups ?
+    // (un plan, c'est un coup sur douze au mieux : la part des coups le sous-estime par construction)
+    for (const side of ['w', 'b']) {
+      const b = bracket(r.elo?.[side] ?? -1);
+      const w = ((windows[b] ??= { sides: 0, withPlan: 0 }));
+      w.sides++;
+      if (CONCEPTS.some((k) => scan[`${k}_${side}`] >= 0 && scan[`${k}_${side}`] < 12)) w.withPlan++;
+    }
     const c = new Chess(r.fen);
     for (let i = 0; i < Math.min(COUNTED, r.played.length); i++) {
       const u = r.played[i];
@@ -70,7 +79,7 @@ async function inventory() {
     }
     if (records % 5000 === 0) console.log(`${records} positions, ${moves} coups, ${Math.round((Date.now() - t0) / 1000)} s`);
   }
-  writeFileSync(OUT, JSON.stringify({ lot, file: IN, records, moves, counts }, null, 1));
+  writeFileSync(OUT, JSON.stringify({ lot, file: IN, records, moves, counts, windows }, null, 1));
   console.log(JSON.stringify({ records, moves }));
   console.log('TERMINÉ');
 }
@@ -79,12 +88,14 @@ function merge() {
   const files = args.filter((a) => a.endsWith('.json'));
   const MD = opt('--md', 'reports/inventaire-coups.md');
   const counts = {};
+  const windows = {};
   let records = 0;
   let moves = 0;
   for (const f of files) {
     const d = JSON.parse(readFileSync(f, 'utf8'));
     records += d.records;
     moves += d.moves;
+    for (const [b, w] of Object.entries(d.windows ?? {})) { const t = (windows[b] ??= { sides: 0, withPlan: 0 }); t.sides += w.sides; t.withPlan += w.withPlan; }
     for (const [b, cats] of Object.entries(d.counts)) for (const [k, n] of Object.entries(cats)) ((counts[b] ??= {})[k] ??= 0, counts[b][k] += n);
   }
   const brackets = BR.map(([b]) => b).filter((b) => counts[b]);
@@ -103,6 +114,13 @@ function merge() {
   for (const g of ['non calme', 'défense', 'plan', 'moyen', 'autre coup calme', 'inexpliqué']) {
     const n = groups[g] ?? 0;
     md.push(`| ${g} | ${n} | ${pct(n, all)} | ${g === 'non calme' ? '—' : pct(n, calm)} |`);
+  }
+  if (Object.keys(windows).length) {
+    const ws = Object.values(windows).reduce((a, w) => a + w.sides, 0);
+    const wp = Object.values(windows).reduce((a, w) => a + w.withPlan, 0);
+    md.push('', '## Couverture par fenêtre (12 demi-coups) : le camp réalise au moins un plan nommé', '', '| Niveau du camp | Camps | Avec un plan nommé |', '|---|---|---|');
+    for (const b of brackets) if (windows[b]) md.push(`| ${b} | ${windows[b].sides} | ${pct(windows[b].withPlan, windows[b].sides)} |`);
+    md.push(`| **tous** | ${ws} | **${pct(wp, ws)}** |`);
   }
   md.push('', '## Le détail', '', `| Catégorie | Coups | Part des coups calmes | ${brackets.join(' | ')} |`, `|---|---|---|${brackets.map(() => '---').join('|')}|`);
   const calmBy = Object.fromEntries(brackets.map((b) => [b, Object.entries(counts[b]).filter(([k]) => group(k) !== 'non calme').reduce((a, [, n]) => a + n, 0)]));
