@@ -876,3 +876,13 @@ n'est pas dans la page), deux échiquiers (départ, après le coup clé), la sui
 pas sûr) et une remarque, enregistrées dans la base de la page. Clé de correction locale :
 `reports/verite-terrain-cle.json`. Dépouillement : un « non » sur un positif ou un « oui » sur un piège met la
 définition en cause ; l'accord humain/programme par concept est la première vérité de terrain du §1.
+
+## 1er octobre, 16 h 14 — étape 3 : le seuil d'annonce des intentions (modèles v5, réseau, test)
+
+Pour chaque concept, précision de « p ≥ t » pour t de 0,50 à 0,95 (vérité : le plan se réalise, suite calme, 24
+demi-coups). **Aucun concept n'atteint 60 % de précision avant 0,95** ; seule la tour sur colonne y arrive, à 0,95 :
+elle n'annonce alors plus que sur 2,3 % des positions et ne voit que 9 % des cas. À 0,9 : affaiblir 53,5 %, rupture
+44 %, tour sur colonne 57 %, avant-poste 20 %, blocage 19,5 %, baïonnette 11 %, dominer 6 %. Décision : les
+intentions restent hors de la fiche comme affirmation ; les modèles peuvent servir à **choisir quoi vérifier**
+(classer les plans candidats avant la vérification par le moteur), jamais à dire « il prépare X ».
+`reports/prediction-courbe-v5.md`.
