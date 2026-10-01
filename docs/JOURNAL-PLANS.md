@@ -767,3 +767,26 @@ de test (parties jamais vues à l'entraînement, découpage par partie), modèle
   faudrait un seuil par concept calé sur une précision cible (≥ 60 %), au prix du rappel, et ne parler que des trois
   concepts fréquents. La couverture de 35 % dit que les 8 concepts ne décrivent qu'un tiers des suites calmes :
   argument pour l'inventaire des concepts manquants par les coups inexpliqués (étage 2 de l'étagement proposé).
+
+## 1er octobre, 12 h 07 → 12 h 15 — Inventaire des coups (DENEB, `scripts/inventaire-coups.mjs`)
+
+Étape 1 de l'inventaire du vocabulaire (décidée avec l'auteur : « on n'a pas les mots »). 97 025 positions de test,
+582 150 coups joués (chaque coup de partie compté une fois), rangés par priorité. `reports/inventaire-coups.md`.
+
+| Tas | Part des coups | Part des coups calmes |
+|---|---|---|
+| non calme (prise, échec, promotion) | 29,7 % | — |
+| défense (sauve une pièce en prise 13,8 ; protège une pièce attaquée 11,2 ; sort de l'échec 3,0) | 19,7 % | 28,1 % |
+| plan (coup qui réalise un des 8 plans, ou son levier) | 7,4 % | 10,5 % |
+| moyen (atome : roque 4,0 ; restriction 3,4 ; manœuvre 2,6 ; espace 2,2 ; levier 1,5 ; fermeture 1,3…) | 11,4 % | 16,3 % |
+| autre coup calme (poussée de pion 13,1 ; développement 7,3 ; coup de roi 2,4) | 16,0 % | 22,7 % |
+| **inexpliqué** (cavalier 6,6 ; tour 5,7 ; dame 5,3 ; fou 4,8) | 15,8 % | **22,4 %** |
+
+- Le tas vraiment inexpliqué est **un coup calme sur cinq**, pas deux sur trois : la défense (28 %) et les coups
+  simples (22 %) sont dicibles par des règles déjà disponibles, que la fiche ne dit pas encore.
+- Il est **stable selon le niveau** (21 % sous 1200, 23 % au-dessus de 2000), légèrement plus fourni chez les forts
+  en coups de tour et de dame : ce n'est pas seulement du bruit de débutant.
+- Les plans ne comptent ici que par leur coup de réalisation (10,5 %) ; les coups qui les préparent sont dans
+  « moyen » ou « inexpliqué ». « Sort de l'échec » est trois fois plus fréquent sous 1200 (6,9 %) qu'au-dessus de 1600.
+- Suite (étape 2) : regrouper les 91 725 coups inexpliqués par leurs effets (faits qui changent, cases attaquées et
+  défendues, ce qui se réalise dans les 12 demi-coups suivants) pour en sortir des planches par groupe.
