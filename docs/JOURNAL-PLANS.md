@@ -915,3 +915,10 @@ pion_passe_avance. Liste partagée `coach/concept-list.mjs` (16 concepts). Tests
   2,7 %, gain d'espace 1,3 %, roi actif 0,3 %, fixation 0,3 %…). **Couverture par fenêtre** (nouvelle mesure) : un camp
   réalise au moins un plan nommé en 12 demi-coups dans **58,5 %** des cas (55,5 % sous 1200, 59,5 % au-dessus de
   2000). `reports/inventaire-coups-4.md`. Mesure avec les 29 concepts lancée (inventaire5).
+- **Mesure du lot 3** (17 h 31, 29 concepts) : coups calmes réalisant un plan nommé **17,2 % → 18,8 %** ; par fenêtre
+  **61,6 %** des camps (58,2 % sous 1200, 62,7 % au-dessus de 2000). Nouveaux : surprotection 0,5 %, prophylaxie 0,5 %,
+  pièce réactivée 0,3 %, majorité avancée 0,2 %, tempête 0,1 %, sacrifice de pion 0,1 %, regroupement, PDI poussé,
+  sacrifice de qualité rares. **Jamais vus : gambit** (les positions étiquetées commencent en milieu de partie : à
+  mesurer sur des fenêtres d'ouverture) **et attaque_roi_pieces** (à vérifier demain : état trop exigeant ou défaut).
+  Bilan de la journée sur la couverture des plans : 8 → 29 concepts, coups 10,5 % → 18,8 %, fenêtres 61,6 %.
+  `reports/inventaire-coups-5.md`.
