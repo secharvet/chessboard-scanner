@@ -8,6 +8,7 @@
 import { appendFile, mkdir } from 'node:fs/promises';
 import { createServer } from 'node:http';
 import { askCoach } from './coach.mjs';
+import { judgeMove } from './move-judge.mjs';
 import { loadEnv } from './env.mjs';
 import { llmConfig } from './llm.mjs';
 import { UciEngine } from './uci-engine.mjs';
@@ -109,6 +110,22 @@ const server = createServer(async (req, res) => {
   }
 
   running++;
+  // Jugement du coup joué (mode joueur) : { fen (avant le coup), move } → { text, category, loss, best… }.
+  if (url.pathname === '/api/chess/mentor/judge') {
+    try {
+      const t0 = Date.now();
+      const verdict = await judgeMove({ fen: payload.fen, move: String(payload.move ?? ''), engine });
+      console.log(`[coach] ${ip} jugement ${verdict.move} → ${verdict.category} (${verdict.loss}) ${Date.now() - t0} ms`);
+      try {
+        await appendFile(ANSWER_LOG, `${JSON.stringify({ at: new Date().toISOString(), kind: 'judge', fen: payload.fen, moveIn: payload.move, ...verdict })}\n`);
+      } catch { /* journal facultatif */ }
+      return send(res, 200, { ok: true, ...verdict });
+    } catch (e) {
+      return send(res, 400, { ok: false, error: String(e?.message ?? e) });
+    } finally {
+      running--;
+    }
+  }
   try {
     const result = await askCoach({ ...payload, engine, cfg });
     console.log(

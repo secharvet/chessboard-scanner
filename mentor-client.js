@@ -91,3 +91,23 @@ export async function checkMentorHealth() {
     return false;
   }
 }
+
+/**
+ * Jugement du coup joué : fen AVANT le coup, coup en UCI (e2e4). Renvoie { text, category, loss, best } ou null.
+ * @param {{ fen: string, move: string, signal?: AbortSignal }} payload
+ */
+export async function judgePlayedMove(payload) {
+  const base = getMentorApiBase();
+  try {
+    const res = await fetch(`${base}/api/chess/mentor/judge`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ fen: payload.fen, move: payload.move }),
+      signal: payload.signal,
+    });
+    const data = await res.json().catch(() => ({}));
+    return res.ok && data.ok ? data : null;
+  } catch {
+    return null;
+  }
+}

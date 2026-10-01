@@ -112,13 +112,17 @@ export function bindMentorPanel(options) {
     renderCurrent();
   });
 
+  // Jugement du coup précédent (mode joueur) : affiché en tête du conseil suivant.
+  /** @type {string | null} */
+  let verdict = null;
+
   function renderCurrent() {
     if (!cache || cache.error) return;
     const hints = cache.hints ?? [];
     let text;
     if (!cache.idea || cache.level > hints.length) text = cache.text;
     else text = [cache.idea, ...hints.slice(0, cache.level)].join('\n\n');
-    renderPanel(text);
+    renderPanel(verdict ? `**Ton coup** — ${verdict}\n\n**Maintenant** — ${text}` : text);
     const done = !cache.idea || cache.level > hints.length;
     if (!done && $panel) {
       $hint.textContent = cache.level < hints.length ? `Indice (${cache.level + 1}/${hints.length + 1})` : 'Montrer le coup';
@@ -203,6 +207,12 @@ export function bindMentorPanel(options) {
 
   return {
     ask,
+    /** Jugement du dernier coup joué (texte) ; null pour l'effacer. Réaffiche le panneau s'il y a un conseil. */
+    setVerdict(text) {
+      verdict = text;
+      if (cache && !cache.error) renderCurrent();
+      else if (text) renderPanel(`**Ton coup** — ${text}`);
+    },
     reset,
     cancel,
     updateButton,

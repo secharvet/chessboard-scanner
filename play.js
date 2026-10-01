@@ -13,6 +13,7 @@ import { buildAllFacts } from './positional/index.js';
 import { interpretFacts } from './positional/interpreter.js';
 import { parseFenPieces } from './positional/fen-board.js';
 import { bindMentorPanel } from './mentor-ui.js';
+import { judgePlayedMove } from './mentor-client.js';
 
 const $board = document.getElementById('playBoard');
 const $status = document.getElementById('playStatus');
@@ -268,8 +269,17 @@ function refreshBoard() {
 }
 
 function applyMove(from, to, promotion) {
+  const fenBefore = game.fen();
+  const mover = game.turn();
   const m = game.move({ from, to, promotion: promotion || undefined });
   if (!m) return false;
+  // Mode joueur : le coup du joueur est jugé (pendant que le moteur répond), affiché en tête du conseil suivant.
+  if (mover === playerColor && $mentorAuto?.checked) {
+    mentorPanel?.setVerdict(null);
+    void judgePlayedMove({ fen: fenBefore, move: `${from}${to}${m.promotion ?? ''}` }).then((v) => {
+      if (v?.text && game.history().length >= 1) mentorPanel?.setVerdict(v.text);
+    });
+  }
   lastMove = { from, to };
   selected = null;
   targets = [];
