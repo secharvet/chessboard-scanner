@@ -98,9 +98,12 @@ export function moveEffects(fenBefore, m) {
       }
     }
   }
-  for (const p of after.board().flat()) {
-    if (!p || p.color !== color || p.type === 'k' || p.square === m.to) continue;
-    if (after.attackers(p.square, color).includes(m.to) && !before.attackers(p.square, color).includes(m.from)) {
+  // Parmi les pièces que le coup vient défendre, la pièce CLÉ est celle qui est attaquée (le plus) ; sinon la première.
+  const defended = after.board().flat().filter((p) => p && p.color === color && p.type !== 'k' && p.square !== m.to
+    && after.attackers(p.square, color).includes(m.to) && !before.attackers(p.square, color).includes(m.from))
+    .sort((a, b) => after.attackers(b.square, opp).length - after.attackers(a.square, opp).length || VALUE[b.type] - VALUE[a.type]);
+  for (const p of defended.slice(0, 1)) {
+    {
       // Le rapport attaquants / défenseurs (demande de l'auteur, vérité de terrain du 1er octobre : « on veut au moins
       // égaler en soutien le nombre de menaces sur une pièce clé, le pion racine d'une structure par exemple »).
       const att = after.attackers(p.square, opp).length;
