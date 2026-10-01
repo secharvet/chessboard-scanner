@@ -7,14 +7,48 @@ import { Chess } from 'chess.js';
 import { buildAllFacts } from '../positional/index.js';
 import { squareColor } from '../positional/attack-map.js';
 import { detectAtoms } from './atoms.mjs';
+import { CONCEPT_LIST } from './concept-list.mjs';
 
 // ── Concepts (états buts vérifiables, par camp) ──
 // Chaque détecteur reçoit les faits d'une position et renvoie les couleurs pour lesquelles le concept est vrai.
-const has = (facts, id, color) => facts.some((t) => t.id === id && t.params.color === color);
+const has = (facts, id, color, pred = () => true) => facts.some((t) => t.id === id && t.params.color === color && pred(t));
 const WEAK_PAWN = new Set(['PION_ISOLE', 'PION_ARRIERE', 'PION_FAIBLE', 'PION_PASSE']);
+const myRooks = (board, color) => board.board().flat().filter((p) => p && p.type === 'r' && p.color === color);
+const relRank = (sq, color) => (color === 'w' ? Number(sq[1]) : 9 - Number(sq[1]));
+const CENTRAL = new Set(['d4', 'e4', 'd5', 'e5']);
+/** Un pion adverse peut-il (encore) venir attaquer `sq` : pion adverse sur une colonne voisine, devant la case (vu de lui) ? */
+const pawnCanAttack = (board, sq, color) => {
+  const opp = color === 'w' ? 'b' : 'w';
+  const f = sq.charCodeAt(0) - 97;
+  const r = Number(sq[1]);
+  return board.board().flat().some((p) => p && p.type === 'p' && p.color === opp && Math.abs((p.square.charCodeAt(0) - 97) - f) === 1
+    && (opp === 'w' ? Number(p.square[1]) < r : Number(p.square[1]) > r));
+};
 export const CONCEPTS = {
   tour_colonne: (facts, color) => has(facts, 'TOUR_COLONNE_OUVERTE', color),
   cavalier_avant_poste: (facts, color) => has(facts, 'CAVALIER_AVANT_POSTE', color),
+  // ── Lot 1 du catalogue (docs/CATALOGUE-CONCEPTS.md, 1er octobre) : pièces lourdes et pion passé ──
+  // A2 Doublement des tours : deux de mes tours sur une même colonne ouverte ou semi-ouverte pour moi.
+  doublement_tours: (facts, color, board) => {
+    const rooks = myRooks(board, color);
+    return rooks.some((a) => rooks.some((b) => b !== a && b.square[0] === a.square[0]
+      && facts.some((t) => (t.id === 'COLONNE_OUVERTE' || (t.id === 'COLONNE_SEMI_OUVERTE' && t.params.color === color)) && String(t.params.file) === a.square[0])));
+  },
+  // A3 Tour à la 7e rangée (le moteur de règles exige roi adverse à la 8e ou pions adverses à la 7e).
+  tour_septieme: (facts, color) => has(facts, 'TOUR_7E', color, (t) => t.params.type === 'r'),
+  // A4 Tour derrière mon pion passé, sur sa colonne.
+  tour_derriere_passe: (facts, color, board) => facts.some((t) => (t.id === 'PION_PASSE' || t.id === 'PION_PASSE_PROTEGE') && t.params.color === color
+    && myRooks(board, color).some((r) => r.square[0] === t.params.square[0] && relRank(r.square, color) < relRank(t.params.square, color))),
+  // A6 Dame centralisée : sur d4/e4/d5/e5, hors de portée des pions adverses.
+  dame_centralisee: (facts, color, board) => board.board().flat().some((p) => p && p.type === 'q' && p.color === color && CENTRAL.has(p.square) && !pawnCanAttack(board, p.square, color)),
+  // A7 Colonne disputée gagnée : je contrôle une colonne ouverte (CONTROLE_COLONNE).
+  colonne_controlee: (facts, color) => has(facts, 'CONTROLE_COLONNE', color),
+  // C4 Pion passé créé (nouveau par rapport au départ : vérifié par le cadre « absent au départ »).
+  pion_passe: (facts, color) => has(facts, 'PION_PASSE', color) || has(facts, 'PION_PASSE_PROTEGE', color),
+  // C6 Pion passé protégé.
+  pion_passe_protege: (facts, color) => has(facts, 'PION_PASSE_PROTEGE', color),
+  // C5 Pion passé poussé : un pion passé à moi a atteint la 6e rangée (vue de moi) : le cadre exige l'apparition par mon coup.
+  pion_passe_avance: (facts, color) => facts.some((t) => (t.id === 'PION_PASSE' || t.id === 'PION_PASSE_PROTEGE') && t.params.color === color && relRank(t.params.square, color) >= 6),
   // Blocage : un cavalier ou un fou installé juste devant un pion adverse isolé, arriéré, faible ou passé.
   blocage: (facts, color, board) => facts.some((t) => {
     if (!WEAK_PAWN.has(t.id) || t.params.color === color || typeof t.params.square !== 'string') return false;
@@ -50,7 +84,19 @@ const AGENT = {
     if (!WEAK_PAWN.has(t.id) || t.params.color === color || typeof t.params.square !== 'string') return false;
     return `${t.params.square[0]}${Number(t.params.square[1]) + (t.params.color === 'w' ? 1 : -1)}` === m.to;
   }),
+  // Lot 1 : le coup calme de la pièce concernée réalise l'état.
+  doublement_tours: (m, snap, color) => m.piece === 'r' && myRooks(snap.board, color).some((r) => r.square !== m.to && r.square[0] === m.to[0]),
+  tour_septieme: (m, snap, color) => m.piece === 'r' && snap.facts.some((t) => t.id === 'TOUR_7E' && t.params.color === color && t.params.square === m.to),
+  tour_derriere_passe: (m, snap, color) => m.piece === 'r' && snap.facts.some((t) => (t.id === 'PION_PASSE' || t.id === 'PION_PASSE_PROTEGE') && t.params.color === color && t.params.square[0] === m.to[0] && relRank(m.to, color) < relRank(t.params.square, color)),
+  dame_centralisee: (m, snap, color) => m.piece === 'q' && CENTRAL.has(m.to),
+  colonne_controlee: (m, snap, color) => (m.piece === 'r' || m.piece === 'q') && snap.facts.some((t) => t.id === 'CONTROLE_COLONNE' && t.params.color === color && String(t.params.file) === m.to[0]),
+  pion_passe: (m, snap, color) => m.piece === 'p' && snap.facts.some((t) => (t.id === 'PION_PASSE' || t.id === 'PION_PASSE_PROTEGE') && t.params.color === color && t.params.square === m.to),
+  pion_passe_protege: (m, snap, color) => m.piece === 'p' && snap.facts.some((t) => t.id === 'PION_PASSE_PROTEGE' && t.params.color === color),
+  pion_passe_avance: (m, snap, color) => m.piece === 'p' && relRank(m.to, color) >= 6 && snap.facts.some((t) => (t.id === 'PION_PASSE' || t.id === 'PION_PASSE_PROTEGE') && t.params.color === color && t.params.square === m.to),
 };
+/** Tous les concepts étiquetés : coach/concept-list.mjs (sans dépendance) ; vérifié ici contre les états buts codés. */
+export { CONCEPT_LIST };
+for (const k of Object.keys(CONCEPTS)) if (!CONCEPT_LIST.includes(k)) throw new Error(`concept ${k} absent de coach/concept-list.mjs`);
 
 /**
  * Déroule une suite et renvoie, pour chaque concept et chaque camp, le demi-coup d'apparition (ou -1).

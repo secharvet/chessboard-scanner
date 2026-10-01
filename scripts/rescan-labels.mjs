@@ -12,7 +12,7 @@
 
 import { createReadStream, writeFileSync, createWriteStream } from 'node:fs';
 import { createInterface } from 'node:readline';
-import { scanLine, quietReason } from '../coach/plan-concepts.mjs';
+import { scanLine, quietReason, CONCEPT_LIST } from '../coach/plan-concepts.mjs';
 
 const args = process.argv.slice(2);
 const IN = args[0];
@@ -22,7 +22,7 @@ const OUT = args.includes('--out') ? args[args.indexOf('--out') + 1] : IN.replac
 const SKIP = Number(args.includes('--skip') ? args[args.indexOf('--skip') + 1] : 0);
 const LIMIT = Number(args.includes('--limit') ? args[args.indexOf('--limit') + 1] : Infinity);
 let index = -1;
-const CONCEPTS = ['tour_colonne', 'cavalier_avant_poste', 'blocage', 'rupture', 'affaiblir', 'dominer', 'attaque_minorite', 'baionnette'];
+const CONCEPTS = CONCEPT_LIST;
 const stats = { records: 0, kept: 0, removed: 0, moved: 0, added: 0, byConcept: {} };
 const bump = (c, k) => { stats[k]++; (stats.byConcept[c] ??= { kept: 0, removed: 0, moved: 0, added: 0 })[k]++; };
 const out = createWriteStream(OUT);

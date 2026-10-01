@@ -6,7 +6,8 @@
 import { Chess } from 'chess.js';
 
 export const VALUE = { p: 1, n: 3, b: 3, r: 5, q: 9, k: 0 };
-export const CONCEPTS = ['tour_colonne', 'cavalier_avant_poste', 'blocage', 'rupture', 'affaiblir', 'dominer', 'attaque_minorite', 'baionnette'];
+import { CONCEPT_LIST } from './concept-list.mjs';
+export const CONCEPTS = CONCEPT_LIST;
 
 /** Pièces de `color` en prise : attaquées, et non défendues ou attaquées par moins cher. */
 export function enPrise(c, color) {
