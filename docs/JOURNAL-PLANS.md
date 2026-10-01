@@ -743,3 +743,27 @@ signale encore (il se trompe aussi : position 3, même phrase jugée grave une f
   80 370 supprimés (3,8 %), 14 885 déplacés (marqués `stale` : trajectoire et jugement à recalculer), 2 929 nouveaux.
   Par concept, supprimés : blocage 9,1 %, avant-poste 8,6 %, affaiblir 5,5 %, tour sur colonne 3,0 % ; rupture et
   dominer inchangés. Fichiers `*.v2.jsonl` sur DENEB, à côté des originaux (non écrasés).
+
+## 1er octobre, 11 h 52 → 11 h 58 — Courbe de prédiction le long de la partie (DENEB, `scripts/prediction-courbe.py`)
+
+Demande de l'auteur : sur des parties déjà jouées (qui ne tiennent pas compte de nous), à chaque position, le modèle
+annonce le plan du camp au trait ; on compte ce qui se réalise, selon la distance à la réalisation. 97 025 positions
+de test (parties jamais vues à l'entraînement, découpage par partie), modèles v4, 8 concepts. `reports/prediction-courbe.md`.
+
+- **Rappel selon la distance** (le plan se réalise à d demi-coups ; le modèle l'annonçait-il, p ≥ 0,5 ?) : réseau
+  91 % à 0-1 demi-coup, 83 % à 2-3, 78 % à 4-5, 76 % à 6-7, 71 % à 8-11, 61 % à 12-23. La courbe monte à mesure que
+  les choses s'engagent, comme attendu ; arbres 2 à 3 points en dessous.
+- **Précision des annonces** (règle de production : p ≥ 0,5, marge 0,1) : **25 %** ; le modèle annonce un plan sur
+  47-52 % des positions alors qu'un de nos 8 plans ne suit que dans **35 %** des positions (c'est la couverture du
+  vocabulaire à l'étage plan). Par concept : tour sur colonne 37-41 % (taux de base 17 %), affaiblir 32 % (16 %),
+  rupture 24-26 % (10 %), avant-poste 9-10 % (2,7 %), blocage 6-8 % (2,8 %), baïonnette 4-6 % (0,6 %), dominer 3 %
+  (0,8 %) : 2 à 10 fois le hasard, mais trois annonces sur quatre ne se réalisent pas. Par niveau : 16-18 % sous 1200,
+  26-28 % au-dessus de 1600.
+- AUC sur le test : 0,74 (affaiblir) à 0,98 (baïonnette), cohérent avec le rapport d'entraînement (tour sur colonne
+  0,90-0,92). Correction d'une phrase fausse dite à l'oral ce matin : « à peine mieux que le hasard » valait pour les
+  étiquettes MOTEUR (0,55-0,62) ; sur les étiquettes humaines les modèles classent bien.
+- Lecture : le modèle sait **classer** (AUC) mais pas **affirmer** (précision 25 % au seuil 0,5, calibration connue
+  mauvaise) ; cela confirme le retrait des intentions de la fiche (30 septembre). Pour annoncer « il prépare X » il
+  faudrait un seuil par concept calé sur une précision cible (≥ 60 %), au prix du rappel, et ne parler que des trois
+  concepts fréquents. La couverture de 35 % dit que les 8 concepts ne décrivent qu'un tiers des suites calmes :
+  argument pour l'inventaire des concepts manquants par les coups inexpliqués (étage 2 de l'étagement proposé).
