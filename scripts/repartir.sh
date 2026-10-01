@@ -40,7 +40,8 @@ for i in "${!FILES[@]}"; do
   cmd="${CMD//\{in\}/$f}"; cmd="${cmd//\{out\}/$out}"
   if [ $((i % cycle)) -lt "$PART_DENEB" ]; then
     WHERE[$i]=deneb
-    ssh deneb "cd '$REMOTE_DIR' && setsid nohup bash -c '$cmd' > '$out.log' 2>&1 < /dev/null &"
+    # ssh -n et une commande après le « & » : sinon ssh attend la fin du travail distant (constaté le 1er octobre).
+    ssh -n deneb "cd '$REMOTE_DIR' && setsid nohup bash -c '$cmd' > '$out.log' 2>&1 < /dev/null & sleep 0.5; echo lancé" > /dev/null
   else
     WHERE[$i]=vps
     setsid nohup nice -n 10 bash -c "$cmd" > "$out.log" 2>&1 < /dev/null &
