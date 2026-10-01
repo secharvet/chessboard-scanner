@@ -18,6 +18,7 @@ import { compatibleWithLines, concreteIntention, topIntention } from './intentio
 import { renderToken } from '../positional/interpreter.js';
 import { buildTacticalFacts } from '../positional/piece-attacks.js';
 import { enToFr } from './notation.mjs';
+import { moveEffects } from './move-class.mjs';
 
 const VALUE = { p: 1, n: 3, b: 3, r: 5, q: 9, k: 0 };
 const NAME = { p: 'pion', n: 'cavalier', b: 'fou', r: 'tour', q: 'dame', k: 'roi' };
@@ -269,7 +270,16 @@ export function buildBrief(data) {
     //   (a) ce que fait le coup lui-même (cases centrales, pièce libérée) : faits du code ;
     //   (b) ce que sa suite fait apparaître de bon pour toi (typé, rendu par le moteur de règles).
     const why = [];
-    for (const b of (c0.basics ?? []).slice(0, 2)) why.push(b);
+    const whyIdea = []; // même liste, sans ce qui désignerait le coup
+    // Les trois mots de l'inventaire du 1er octobre (menace, pression, soutien) : l'effet immédiat du coup sur les
+    // pièces, lu sur l'échiquier. C'est ce que fait presque tout coup calme, et la fiche ne le disait pas.
+    const eff = first ? moveEffects(data.fen, first)[0] : null;
+    if (eff) {
+      for (const [t, o, sq] of eff.pieces) pieces.add(`${t}|${o}|${sq}`);
+      why.push(eff.text);
+      whyIdea.push({ menace: 'une pièce adverse peut être mise en prise', pression: 'une pièce adverse défendue mérite qu\'on mette la pression dessus', soutien: 'une de tes pièces mérite d\'être soutenue' }[eff.kind]);
+    }
+    for (const b of (c0.basics ?? []).slice(0, 2)) { why.push(b); whyIdea.push(b); }
     if (steps.length >= 2) {
       const end = steps[Math.min(steps.length, 4) - 1].fen;
       // Un pion qui avance reste le même pion : on l'identifie par sa colonne, pas par sa case.
@@ -291,13 +301,13 @@ export function buildBrief(data) {
       const fresh = buildAllFacts(end).filter((t) => !before.has(key(t)) && atHorizon.has(key(t)) && rank(t) >= 0)
         .sort((x, y) => rank(x) - rank(y)).slice(0, 2);
       if (fresh.length) reason = { kind: 'plan', tokens: fresh, move: bestSan };
-      for (const t of fresh) why.push(`dans la suite, ${lowerFirst(renderToken(t).replace(/\.$/, ''))}`);
+      for (const t of fresh) { const txt = `dans la suite, ${lowerFirst(renderToken(t).replace(/\.$/, ''))}`; why.push(txt); whyIdea.push(txt); }
     }
     if (why.length) {
       reason ??= { kind: 'basics', move: bestSan };
       // L'idée ne doit pas dire « calme » quand le coup est une prise ou un échec (banc : Fxb5+, Fxa4, axb5).
       const kindOf = first?.captured ? 'Regarde les prises : un échange est à ton avantage.' : first?.san.includes('+') ? 'Regarde les échecs : il y en a un d\'utile.' : 'Pas de tactique ici : cherche un coup calme.';
-      say(`Le meilleur coup est ${bestSan} : ${why.join(' ; ')}.`, `${kindOf} Ce qu'il apporte : ${why.join(' ; ')}.`);
+      say(`Le meilleur coup est ${bestSan} : ${why.join(' ; ')}.`, `${kindOf} Ce qu'il apporte : ${whyIdea.join(' ; ')}.`);
     } else {
       reason = { kind: 'best', move: bestSan };
       say(`Le meilleur coup du moteur est ${bestSan}.`, first?.captured ? 'Regarde les prises : un échange est à ton avantage.' : first?.san.includes('+') ? 'Regarde les échecs : il y en a un d\'utile.' : 'Pas de tactique ici : cherche un coup qui améliore ta position.');

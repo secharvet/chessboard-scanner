@@ -10,6 +10,7 @@
 
 import { Chess } from 'chess.js';
 import { toFrenchSan } from './notation.mjs';
+import { moveEffects } from './move-class.mjs';
 
 const NAME = { p: 'pion', n: 'cavalier', b: 'fou', r: 'tour', q: 'dame', k: 'roi' };
 const FEM = { q: true, r: true };
@@ -88,12 +89,13 @@ export async function judgeMove({ fen, move, engine, depth = 14 }) {
   const sentences = [];
   if (cat === 'mat') {
     sentences.push(`${playedFr} : échec et mat, bravo !`);
-  } else if (cat === 'meilleur') {
-    sentences.push(`${playedFr} : c'est le coup du moteur. Bien joué.`);
-  } else if (cat === 'bon') {
-    sentences.push(`${playedFr} : bon coup, presque aussi bon que ${bestSan}.`);
-  } else if (cat === 'correct') {
-    sentences.push(`${playedFr} : coup correct. ${bestSan} était un peu plus précis.`);
+  } else if (cat === 'meilleur' || cat === 'bon' || cat === 'correct') {
+    // Ce que le coup FAIT (menace, pression, soutien : inventaire du 1er octobre), pour nommer l'intention du joueur.
+    const eff = moveEffects(fen, played)[0];
+    const does = eff ? ` Il ${eff.text}.` : '';
+    if (cat === 'meilleur') sentences.push(`${playedFr} : c'est le coup du moteur. Bien joué.${does}`);
+    else if (cat === 'bon') sentences.push(`${playedFr} : bon coup, presque aussi bon que ${bestSan}.${does}`);
+    else sentences.push(`${playedFr} : coup correct.${does} ${bestSan} était un peu plus précis.`);
   } else {
     const label = { imprecision: 'imprécision', erreur: 'erreur', gaffe: 'grosse erreur' }[cat];
     sentences.push(`${playedFr} : ${label}. L'évaluation passe de ${pawns(bestScore)} à ${pawns(afterScore)}.`);
