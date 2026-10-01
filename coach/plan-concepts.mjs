@@ -78,6 +78,37 @@ export const CONCEPTS = {
   },
   // C9 Fixation : l'adversaire se retrouve avec un mauvais fou (ses pions fixés sur la couleur de son fou), par ma poussée de pion.
   fixation_mauvais_fou: (facts, color) => has(facts, 'FOU_MAUVAIS', color === 'w' ? 'b' : 'w'),
+  // ── Lot 1, troisième fournée : structure, pièces, roi, prophylaxie ──
+  // C7 Avance de la majorité : sur l'aile où j'ai plus de pions, mon pion le plus avancé a atteint la 5e rangée.
+  majorite_avance: (facts, color, board) => ['MAJORITE_AILE_DAME', 'MAJORITE_AILE_ROI'].some((id) => has(facts, id, color)
+    && board.board().flat().some((p) => p && p.type === 'p' && p.color === color && (id === 'MAJORITE_AILE_DAME' ? 'abcd' : 'efgh').includes(p.square[0]) && relRank(p.square, color) >= 5)),
+  // B10 Surprotection : un de mes pions centraux (d/e, 4e-6e rangée) défendu par au moins trois de mes pièces.
+  surprotection: (facts, color, board) => board.board().flat().some((p) => p && p.type === 'p' && p.color === color && 'de'.includes(p.square[0]) && relRank(p.square, color) >= 4
+    && board.attackers(p.square, color).length >= 3),
+  // C12 Pion dame isolé poussé : j'ai la structure PDI et mon pion d a atteint la 5e rangée.
+  pdi_poussee: (facts, color, board) => has(facts, 'STRUCTURE', color, (t) => t.params.name === 'PDI')
+    && board.board().flat().some((p) => p && p.type === 'p' && p.color === color && p.square[0] === 'd' && relRank(p.square, color) >= 5),
+  // D3 Tempête de pions sur roques opposés : roques opposés, et un de mes pions sur l'aile du roi adverse a atteint la 5e rangée.
+  tempete_roques_opposes: (facts, color, board) => {
+    if (!facts.some((t) => t.id === 'ROQUES_OPPOSES')) return false;
+    const opp = color === 'w' ? 'b' : 'w';
+    const k = board.board().flat().find((p) => p && p.type === 'k' && p.color === opp);
+    if (!k) return false;
+    const wing = k.square[0] <= 'c' ? 'abc' : k.square[0] >= 'f' ? 'fgh' : null;
+    return Boolean(wing) && board.board().flat().some((p) => p && p.type === 'p' && p.color === color && wing.includes(p.square[0]) && relRank(p.square, color) >= 5);
+  },
+  // D6 Attaque du roi : au moins trois de mes pièces (pas pions, pas roi) à distance ≤ 2 du roi adverse.
+  attaque_roi_pieces: (facts, color, board) => {
+    const opp = color === 'w' ? 'b' : 'w';
+    const k = board.board().flat().find((p) => p && p.type === 'k' && p.color === opp);
+    if (!k) return false;
+    const d = (a, b) => Math.max(Math.abs(a.charCodeAt(0) - b.charCodeAt(0)), Math.abs(Number(a[1]) - Number(b[1])));
+    return board.board().flat().filter((p) => p && p.color === color && p.type !== 'p' && p.type !== 'k' && d(p.square, k.square) <= 2).length >= 3;
+  },
+  // E12 Pièce passive réactivée : je n'ai plus de pièce passive (le cadre exige qu'il y en ait eu une au départ).
+  piece_reactivee: (facts, color) => !has(facts, 'PIECE_PASSIVE', color),
+  // E11 Prophylaxie : l'adversaire n'a plus de levier disponible (il en avait au départ) après mon coup calme.
+  prophylaxie_levier: (facts, color) => !has(facts, 'LEVIER_DISPONIBLE', color === 'w' ? 'b' : 'w'),
   // Blocage : un cavalier ou un fou installé juste devant un pion adverse isolé, arriéré, faible ou passé.
   blocage: (facts, color, board) => facts.some((t) => {
     if (!WEAK_PAWN.has(t.id) || t.params.color === color || typeof t.params.square !== 'string') return false;
@@ -129,6 +160,13 @@ const AGENT = {
   gain_espace: (m, snap, color) => m.piece === 'p' && relRank(m.to, color) >= 5,
   pion_passe_eloigne: (m) => m.piece === 'p',
   fixation_mauvais_fou: (m) => m.piece === 'p',
+  majorite_avance: (m, snap, color) => m.piece === 'p' && relRank(m.to, color) >= 5,
+  surprotection: (m, snap, color) => m.piece !== 'p' && m.piece !== 'k' && snap.board.board().flat().some((p) => p && p.type === 'p' && p.color === color && 'de'.includes(p.square[0]) && snap.board.attackers(p.square, color).includes(m.to)),
+  pdi_poussee: (m, snap, color) => m.piece === 'p' && m.from[0] === 'd' && relRank(m.to, color) >= 5,
+  tempete_roques_opposes: (m, snap, color) => m.piece === 'p' && relRank(m.to, color) >= 5,
+  attaque_roi_pieces: (m) => m.piece !== 'p' && m.piece !== 'k',
+  piece_reactivee: (m) => m.piece !== 'p' && m.piece !== 'k',
+  prophylaxie_levier: (m) => m.piece !== 'k',
 };
 /** Tous les concepts étiquetés : coach/concept-list.mjs (sans dépendance) ; vérifié ici contre les états buts codés. */
 export { CONCEPT_LIST };
