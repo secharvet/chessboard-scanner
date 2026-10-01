@@ -92,7 +92,9 @@ export function scanLine(fen, pv, PLIES = 48) {
       let ply = -1;
       const ok = (snap) => test(snap.facts, color, snap.board);
       if (!ok(start)) {
-        ply = timeline.findIndex((snap, i) => moves[i].color === color && !moves[i].captured
+        // Ni prise ni échec : un échec force la réponse, ce n'est pas l'exécution calme d'un plan (planche #14 du
+        // 30 septembre : « blocage » réalisé par …Cc3+, qui attaque aussi la tour).
+        ply = timeline.findIndex((snap, i) => moves[i].color === color && !moves[i].captured && !moves[i].san.includes('+')
           && AGENT[name](moves[i], snap, color) && holds(i, ok));
       }
       out[`${name}_${color}`] = ply;
@@ -164,7 +166,11 @@ export function scanLine(fen, pv, PLIES = 48) {
       const wFile = (t.params.file ?? t.params.square?.[0] ?? String(t.params.files ?? '')[0] ?? '').charCodeAt(0) - 97;
       // Le moyen doit être lié à la faiblesse : la reprise de pion qui la crée, ou un levier voisin de sa colonne.
       const lever = levers[color].map((l, k) => [l, leverFiles[color][k]]).filter(([l, f]) => l <= i && (wFile < 0 || Math.abs(f - wFile) <= 1)).at(-1);
-      if (m.color === opp && m.piece === 'p' && m.captured && m.captured !== 'p' && prev?.color === color && prev.captured) means = 'echange';
+      // Échange : la reprise de pion doit créer la faiblesse, donc être sur sa colonne ou une voisine (planche #25 du
+      // 30 septembre : reprise …dxe4 créditée d'un pion arriéré en b7, sans rapport).
+      const nearFile = (sq) => wFile < 0 || Math.abs(sq.charCodeAt(0) - 97 - wFile) <= 1;
+      if (m.color === opp && m.piece === 'p' && m.captured && m.captured !== 'p' && prev?.color === color && prev.captured
+        && (nearFile(m.from) || nearFile(m.to))) means = 'echange';
       else if (lever) means = 'poussee';
       else continue; // faiblesse sans moyen identifiable du camp : pas un plan de ce type
       ply = i;
