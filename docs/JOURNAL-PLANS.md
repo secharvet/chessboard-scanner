@@ -903,3 +903,11 @@ pion_passe_avance. Liste partagée `coach/concept-list.mjs` (16 concepts). Tests
   derrière le passé 0,1 %, pion passé avancé 0,1 %, dame centralisée 0,1 %). Chaque concept est rare pris seul : la
   part des COUPS sous-estime par construction (un plan = un coup sur douze au mieux) ; ajout d'une couverture par
   FENÊTRE (le camp réalise au moins un plan en 12 demi-coups) pour la mesure du lot 2. `reports/inventaire-coups-3.md`.
+- **Fournées 2 à 4 du lot 1** (16 h 50 → 17 h 05) : développement, centre, roi à l'abri, roi actif en finale, gain
+  d'espace, pion passé éloigné, fixation (mauvais fou adverse) ; avance de la majorité, surprotection, PDI poussé,
+  tempête sur roques opposés, attaque du roi par les pièces, pièce passive réactivée, prophylaxie (agent = atome
+  restriction, sinon 190/300 fenêtres : trop lâche) ; gambit, sacrifice positionnel de pion, sacrifice de qualité
+  (état but décalé de 2 demi-coups : il faut que l'adversaire prenne ; agent = mon coup calme suivi de l'atome
+  perte), regroupement défensif. **29 concepts étiquetés** (`coach/concept-list.mjs`). Les atomes sont calculés avant
+  les concepts et passés aux agents. Tests verts. Les ouvertures : famille F bis du catalogue (fait OUVERTURE, grille
+  ouverture × plan), à coder après les lots.
