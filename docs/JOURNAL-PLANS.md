@@ -718,3 +718,24 @@ signale encore (il se trompe aussi : position 3, même phrase jugée grave une f
   Cxd4. Corrigé : une manœuvre n'est annoncée que si la pièce ARRIVE à destination dans la ligne du coup conseillé.
   Rejoué : seule la fiche #10 change. **Erreurs graves réelles sur le banc : 0 sur 38** (relecture humaine encore due
   sur les 23 fiches modifiées). Coach en ligne relancé sur cette version.
+
+## 1er octobre, matin — fiche sans coup soufflé, jugement du coup joué, étiquettes
+
+- **Fiche sans meilleur coup** (en ligne) : par défaut, l'IDÉE (menace, pièce attaquée, cible, plan) ; bouton « Indice »
+  à paliers : la pièce, puis la case, puis la fiche complète. En échec, la fiche le dit d'abord. Une prise ou un échec
+  n'est jamais présenté comme « coup calme ». Dans l'idée, une manœuvre qui commence par le coup conseillé perd son
+  trajet (« amène une pièce vers e1 »). Contrôle automatique sur le banc (40 positions) : le coup conseillé n'apparaît
+  dans l'idée que 2 fois, et c'est le plan lui-même (« prépare la rupture d5 », structure « poussée f5 ») ; accepté.
+- **Jugement du coup joué** (`coach/move-judge.mjs`, route `/api/chess/mentor/judge`) : perte d'espérance de score
+  (seuils Lichess 10/20/30) avec un plancher en pions (1,5 → imprécision, 3 → erreur : à +7 l'espérance sature) ;
+  réfutation lue dans la ligne du moteur (« l'adversaire joue fxg5 et prend ton fou en g5 »), coup qu'il fallait.
+  Affiché en tête du conseil suivant (« Ton coup — … / Maintenant — … »). Journalisé.
+- **Banc** : 40 positions (dont 4 de parties réelles) ; textes complets inchangés par ces étapes ; 0 erreur grave réelle.
+- **Étiquettes** : sur les 7 planches que DeepSeek jugeait « bruit », 5 étaient des erreurs du relecteur — la planche
+  ne montrait la suite que jusqu'au coup étiqueté, il ne pouvait pas voir que le plan tient 6 demi-coups (#1, #13 :
+  e6 est bien arriéré, #19-#20 : rupture = levier puis ouverture par prise, conforme, #31 : échange offert). Deux défauts
+  réels corrigés : un ÉCHEC compté comme coup de plan (#14, …Cc3+) ; « affaiblir » par échange crédité d'une faiblesse
+  sans rapport avec la reprise (#25). `scripts/rescan-labels.mjs` recalcule les étiquettes sans moteur à partir des 24
+  demi-coups gardés (inchangé / supprimé / déplacé → `stale` / nouveau → `stale`) ; il applique aussi les règles
+  changées depuis l'étiquetage (avant-poste en 4e rangée, recettes). Échantillon de 300 enregistrements : 569 plans
+  gardés, 30 supprimés, 10 déplacés, 14 nouveaux. Lancé sur DENEB à 9 h 52 sur les 986 465 enregistrements.
