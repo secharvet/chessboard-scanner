@@ -41,7 +41,9 @@ for i in "${!FILES[@]}"; do
   if [ $((i % cycle)) -lt "$PART_DENEB" ]; then
     WHERE[$i]=deneb
     # ssh -n et une commande après le « & » : sinon ssh attend la fin du travail distant (constaté le 1er octobre).
-    ssh -n deneb "cd '$REMOTE_DIR' && setsid nohup bash -c '$cmd' > '$out.log' 2>&1 < /dev/null & sleep 0.5; echo lancé" > /dev/null
+    # « cd … ; … & » et non « cd … && … & » : avec &&, c'est un sous-shell entier qui passe en arrière-plan, et il garde
+    # la sortie de ssh ouverte jusqu'à la fin du travail (lancements en série constatés le 1er octobre, 15 h 40).
+    ssh -n deneb "cd '$REMOTE_DIR'; setsid nohup bash -c '$cmd' > '$out.log' 2>&1 < /dev/null & sleep 0.3; echo lancé" > /dev/null
   else
     WHERE[$i]=vps
     setsid nohup nice -n 10 bash -c "$cmd" > "$out.log" 2>&1 < /dev/null &
