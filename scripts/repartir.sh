@@ -45,7 +45,7 @@ for i in "${!FILES[@]}"; do
     WHERE[$i]=vps
     setsid nohup nice -n 10 bash -c "$cmd" > "$out.log" 2>&1 < /dev/null &
   fi
-  echo "$(date +%H:%M) lancé sur ${WHERE[$i]} : $f → $out"
+  echo "$(TZ=Europe/Paris date +%H:%M) lancé sur ${WHERE[$i]} : $f → $out"
 done
 
 finished() {  # 0 si le journal $2 sur la machine $1 porte la marque
@@ -55,11 +55,11 @@ for minute in $(seq 0 "$MAX"); do
   done_n=0
   for i in "${!FILES[@]}"; do finished "${WHERE[$i]}" "${OUTS[$i]}.log" && done_n=$((done_n + 1)); done
   if [ "$done_n" -eq ${#FILES[@]} ]; then break; fi
-  if [ $((minute % 5)) -eq 0 ]; then echo "$(date +%H:%M) $done_n/${#FILES[@]} terminés"; fi
+  if [ $((minute % 5)) -eq 0 ]; then echo "$(TZ=Europe/Paris date +%H:%M) $done_n/${#FILES[@]} terminés"; fi
   sleep 60
 done
 if [ "$done_n" -ne ${#FILES[@]} ]; then echo "délai dépassé ($MAX min) : $done_n/${#FILES[@]} terminés"; exit 1; fi
 for i in "${!FILES[@]}"; do
   [ "${WHERE[$i]}" = deneb ] && scp -q "deneb:$REMOTE_DIR/${OUTS[$i]}" "deneb:$REMOTE_DIR/${OUTS[$i]}.log" "$OUT_DIR/"
 done
-echo "$(date +%H:%M) tout terminé ; sorties dans $OUT_DIR"
+echo "$(TZ=Europe/Paris date +%H:%M) tout terminé ; sorties dans $OUT_DIR"
