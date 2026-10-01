@@ -24,7 +24,7 @@ echo "[$(date +%H:%M)] entraînement v5"
 $PY scripts/train-plans.py data/datasets/humains-v5-juge.jsonl --suffix=-v5 --epochs 10 --bootstrap 200 --out reports/train-plans-v5-juge.json 2>&1 | grep -v Warning | tail -40
 echo "[$(date +%H:%M)] ÉTAPE 3 TERMINÉE : modèles v5"
 echo "[$(date +%H:%M)] courbes de prédiction v4 et v5 sur le jeu v5"
-$PY scripts/prediction-courbe.py --dataset data/datasets/humains-v5-juge.jsonl --suffix -v4 --out reports/prediction-courbe-v4-sur-v5.json --md reports/prediction-courbe-v4-sur-v5.md 2>&1 | grep "^\[courbe\]" | tail -2
-$PY scripts/prediction-courbe.py --dataset data/datasets/humains-v5-juge.jsonl --suffix -v5 --out reports/prediction-courbe-v5.json --md reports/prediction-courbe-v5.md 2>&1 | grep "^\[courbe\]" | tail -2
+$PY scripts/prediction-courbe.py --dataset data/datasets/humains-v5-juge.jsonl --suffix=-v4 --out reports/prediction-courbe-v4-sur-v5.json --md reports/prediction-courbe-v4-sur-v5.md 2>&1 | grep "^\[courbe\]" | tail -2
+$PY scripts/prediction-courbe.py --dataset data/datasets/humains-v5-juge.jsonl --suffix=-v5 --out reports/prediction-courbe-v5.json --md reports/prediction-courbe-v5.md 2>&1 | grep "^\[courbe\]" | tail -2
 echo "[$(date +%H:%M)] ÉTAPE 4 TERMINÉE : courbes"
 echo TERMINÉ
