@@ -199,9 +199,9 @@ def main():
             for t in np.arange(0.5, 0.96, 0.05):
                 ann = P[:, j] >= t
                 n = int(ann.sum())
-                prec = float((yc & ann).sum() / n) if n else None
+                pr = float((yc & ann).sum() / n) if n else None  # pas « prec » : c'est le dictionnaire des annonces
                 rec = float((yc & ann).sum() / yc.sum()) if yc.sum() else None
-                rows.append({'t': round(float(t), 2), 'annonces': n, 'taux': float(ann.mean()), 'precision': prec, 'rappel': rec})
+                rows.append({'t': round(float(t), 2), 'annonces': n, 'taux': float(ann.mean()), 'precision': pr, 'rappel': rec})
             first60 = next((r for r in rows if r['precision'] is not None and r['precision'] >= 0.6), None)
             sweep[c] = {'rows': rows, 'seuil_60': first60}
         results['models'][kind] = {
