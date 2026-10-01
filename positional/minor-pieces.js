@@ -72,7 +72,7 @@ export function buildMinorPiecesFacts(fen) {
         const shade = squareColor(n.square);
         const echangeable = enemyMinors.some((p) => p.type === 'n' || squareColor(p.square) === shade);
         const info = outpostInfo.get(n.square + color) ?? {};
-        out.push(token('CAVALIER_AVANT_POSTE', { square: n.square, color, echangeable, rangee: info.rangee, colonne: info.colonne }));
+        out.push(token('CAVALIER_AVANT_POSTE', { square: n.square, color, echangeable, rangee: info.rangee, colonne: info.colonne, soutenu: info.soutenu }));
       }
     }
 

@@ -31,24 +31,45 @@ export function buildOutpostFacts(fen) {
     const minRank = color === 'w' ? 4 : 1;
     const maxRank = color === 'w' ? 8 : 5;
 
+    // Cases candidates : celles qu'un pion à moi soutient déjà (soutenu = true) et celles qu'un pion à moi
+    // pourra venir soutenir plus tard (soutenu = false : le pion est derrière sur une colonne voisine et rien ne
+    // le bloque jusqu'à la case de soutien). Vérité de terrain du 1er octobre : l'auteur accepte l'avant-poste
+    // dont le soutien reste à jouer (f2-f4 derrière un cavalier en e5), pas celui qu'un pion adverse peut chasser.
+    /** @type {Map<string, { fileIdx: number, rank: number, soutenu: boolean }>} */
+    const candidates = new Map();
+    const dir = color === 'w' ? 1 : -1;
     for (const p of allies) {
-      const targets = pawnAttackTargets(p.color, p.fileIdx, p.rank);
-      for (const t of targets) {
+      for (const t of pawnAttackTargets(p.color, p.fileIdx, p.rank)) {
         if (t.rank < minRank || t.rank > maxRank) continue;
-        const sq = FILES[t.fileIdx] + t.rank;
-        if (emitted.has(sq + color)) continue;
-
-        // Un avant-poste ne peut jamais être chassé par un pion adverse.
-        if (!canPawnsEverAttack(t, enemies, color === 'w' ? 'b' : 'w')) {
-          emitted.add(sq + color);
-          // Rangée vue du camp (4 = la sienne, 5 et plus = camp adverse) et état de la colonne (Nimzowitsch :
-          // l'avant-poste sur la colonne ouverte est une base d'attaque).
-          const rangee = color === 'w' ? t.rank : 9 - t.rank;
-          const ownOnFile = allies.some((p) => p.fileIdx === t.fileIdx);
-          const enemyOnFile = enemies.some((p) => p.fileIdx === t.fileIdx);
-          const colonne = !ownOnFile && !enemyOnFile ? 'ouverte' : !ownOnFile ? 'semi-ouverte' : 'fermee';
-          out.push(token('AVANT_POSTE', { square: sq, color, rangee, colonne }));
+        candidates.set(FILES[t.fileIdx] + t.rank, { ...t, soutenu: true });
+      }
+      for (const df of [-1, 1]) {
+        const fileIdx = p.fileIdx + df;
+        if (fileIdx < 0 || fileIdx > 7) continue;
+        for (let rank = p.rank + 2 * dir; rank >= 1 && rank <= 8; rank += dir) {
+          // Le pion doit pouvoir avancer jusqu'à la case juste derrière (rank - dir) : aucun pion sur son chemin.
+          const blocked = pawns.some((q) => q.fileIdx === p.fileIdx && (dir > 0 ? q.rank > p.rank && q.rank <= rank - dir : q.rank < p.rank && q.rank >= rank - dir));
+          if (blocked) break;
+          if (rank < minRank || rank > maxRank) continue;
+          const key = FILES[fileIdx] + rank;
+          if (!candidates.has(key)) candidates.set(key, { fileIdx, rank, soutenu: false });
         }
+      }
+    }
+
+    for (const [sq, t] of candidates) {
+      if (emitted.has(sq + color)) continue;
+
+      // Un avant-poste ne peut jamais être chassé par un pion adverse.
+      if (!canPawnsEverAttack(t, enemies, color === 'w' ? 'b' : 'w')) {
+        emitted.add(sq + color);
+        // Rangée vue du camp (4 = la sienne, 5 et plus = camp adverse) et état de la colonne (Nimzowitsch :
+        // l'avant-poste sur la colonne ouverte est une base d'attaque).
+        const rangee = color === 'w' ? t.rank : 9 - t.rank;
+        const ownOnFile = allies.some((p) => p.fileIdx === t.fileIdx);
+        const enemyOnFile = enemies.some((p) => p.fileIdx === t.fileIdx);
+        const colonne = !ownOnFile && !enemyOnFile ? 'ouverte' : !ownOnFile ? 'semi-ouverte' : 'fermee';
+        out.push(token('AVANT_POSTE', { square: sq, color, rangee, colonne, soutenu: t.soutenu }));
       }
     }
   }

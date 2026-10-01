@@ -937,3 +937,19 @@ attaquants / défenseurs d'une pièce clé (pion racine d'une chaîne) manque au
 soutien de la fiche (`moveEffects`) et au catalogue (B10 bis), concept à coder. Défaut de tirage : planches 9 et 10
 tirées de la même partie à six demi-coups d'écart (même coup clé) → une planche par partie et par concept
 (`verite-terrain.mjs`), à appliquer au prochain tirage, pas pendant le jugement en cours.
+
+## 1er octobre, 22 h 15 — vérité de terrain : les planches « cavalier sur avant-poste »
+
+Neuf planches jugées (la 9 est restée sans réponse). Accord sur 7 : les 4 positifs du programme acceptés (1, 4, 7, 8)
+et les pièges 2, 3 et 10 reconnus, avec la définition de l'auteur en commentaire (planche 2) : « une case qui ne
+peut plus être attaquée par un pion adverse et qui est protégée par un de tes propres pions ». Deux désaccords, les
+pièges 5 et 6, tous deux des cases **sans soutien de pion** : l'auteur dit oui parce que le soutien peut venir
+(« pouvoir pousser f2-f4 pour consolider le cavalier entre totalement dans la stratégie de l'avant-poste »). La règle
+exigeait le soutien présent : trop stricte. Correction (`positional/outposts.js`) : l'avant-poste est une case
+qu'aucun pion adverse ne pourra jamais attaquer, soutenue par un pion à moi **ou soutenable** (un pion à moi
+derrière, sur une colonne voisine, chemin libre de pions) ; nouveau paramètre `soutenu`. Après correction, la
+planche 6 (cavalier noir en e3, les Blancs n'ont plus de pion d ni f) devient un positif, comme l'auteur ; la
+planche 5 reste un piège : le pion noir est encore en f7 et f7-f6 chasse le cavalier de e5, ce qui contredit la
+première condition de la définition écrite par l'auteur lui-même (à lui trancher). Tests ajoutés (4), suite complète
+verte (245). Les étiquettes `.v2` ont été calculées avec l'ancienne règle : à recalculer avec les corrections des
+colonnes (A1 / A1 bis) au prochain recalcul, après la fin du jugement des 60 planches.
