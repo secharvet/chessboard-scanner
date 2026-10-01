@@ -40,6 +40,7 @@ const full = () => CONCEPTS.every((c) => pos[c].length >= POOL && trap[c].length
 const has = (facts, id, color, pred = () => true) => facts.some((t) => t.id === id && t.params.color === color && pred(t));
 const front = (sq, color) => `${sq[0]}${Number(sq[1]) + (color === 'w' ? 1 : -1)}`;
 
+const seenGame = new Set(); // une planche par partie et par concept : deux fenêtres voisines montrent le même coup
 function sample(r, side, ply, extra) {
   const c = new Chess(r.fen);
   const sans = [];
@@ -61,7 +62,7 @@ for await (const line of createInterface({ input: createReadStream(IN), crlfDela
     if (!CONCEPTS.includes(p.concept) || !p.quiet || p.stale || !(p.appear < 12)) continue;
     const j = jp.find((x) => x.concept === p.concept && x.side === p.side);
     if (!j || typeof j.perteMoyenne !== 'number' || j.perteMoyenne > 10 || j.pertePire > 20) continue;
-    if (pos[p.concept].length < POOL) pos[p.concept].push(sample(r, p.side, p.appear, { kind: 'positif', perteMoyenne: j.perteMoyenne, pertePire: j.pertePire }));
+    if (pos[p.concept].length < POOL && !seenGame.has(`${p.concept}:${r.game}`)) { seenGame.add(`${p.concept}:${r.game}`); pos[p.concept].push(sample(r, p.side, p.appear, { kind: 'positif', perteMoyenne: j.perteMoyenne, pertePire: j.pertePire })); }
   }
   // Pièges : rejouer les 12 premiers demi-coups.
   const realised = new Set((r.plans ?? []).filter((p) => p.quiet).map((p) => `${p.concept}_${p.side}`));
@@ -128,6 +129,8 @@ for await (const line of createInterface({ input: createReadStream(IN), crlfDela
   }
 }
 
+// Pièges : même règle, une partie au plus par concept.
+for (const c of CONCEPTS) { const seen = new Set(); trap[c] = trap[c].filter((t) => { if (seen.has(t.game)) return false; seen.add(t.game); return true; }); }
 const pick = (arr) => { const a = [...arr]; const out = []; while (a.length && out.length < PER) out.push(a.splice(Math.floor(rand() * a.length), 1)[0]); return out; };
 const result = { records, concepts: Object.fromEntries(CONCEPTS.map((c) => [c, { positifs: pick(pos[c]), pieges: pick(trap[c]), pools: { positifs: pos[c].length, pieges: trap[c].length } }])) };
 writeFileSync(OUT, JSON.stringify(result, null, 1));

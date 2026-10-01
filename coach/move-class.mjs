@@ -101,8 +101,13 @@ export function moveEffects(fenBefore, m) {
   for (const p of after.board().flat()) {
     if (!p || p.color !== color || p.type === 'k' || p.square === m.to) continue;
     if (after.attackers(p.square, color).includes(m.to) && !before.attackers(p.square, color).includes(m.from)) {
-      const attacked = after.attackers(p.square, opp).length > 0;
-      out.push({ kind: 'soutien', text: `${attacked ? 'protège' : 'soutient'} ${ref(p.type, 'me', p.square)}`, pieces: [[p.type, 'me', p.square]] });
+      // Le rapport attaquants / défenseurs (demande de l'auteur, vérité de terrain du 1er octobre : « on veut au moins
+      // égaler en soutien le nombre de menaces sur une pièce clé, le pion racine d'une structure par exemple »).
+      const att = after.attackers(p.square, opp).length;
+      const defBefore = before.attackers(p.square, color).length;
+      const defAfter = after.attackers(p.square, color).length;
+      const bilan = att > 0 ? ` : attaqué${FEM[p.type] ? 'e' : ''} ${att} fois, défendu${FEM[p.type] ? 'e' : ''} ${defBefore} fois, ${defAfter > att ? 'maintenant' : 'désormais'} ${defAfter} fois` : '';
+      out.push({ kind: 'soutien', text: `${att > 0 ? 'protège' : 'soutient'} ${ref(p.type, 'me', p.square)}${bilan}`, pieces: [[p.type, 'me', p.square]], attaquants: att, defenseursAvant: defBefore, defenseursApres: defAfter });
       break;
     }
   }

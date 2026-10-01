@@ -922,3 +922,18 @@ pion_passe_avance. Liste partagée `coach/concept-list.mjs` (16 concepts). Tests
   mesurer sur des fenêtres d'ouverture) **et attaque_roi_pieces** (à vérifier demain : état trop exigeant ou défaut).
   Bilan de la journée sur la couverture des plans : 8 → 29 concepts, coups 10,5 % → 18,8 %, fenêtres 61,6 %.
   `reports/inventaire-coups-5.md`.
+
+## 1er octobre, 19 h 05 — vérité de terrain : les dix planches « tour sur colonne ouverte »
+
+Dépouillement (clé `reports/verite-terrain-cle.json`) : les 5 pièges tous reconnus (verdict non) ; sur les 5 positifs
+du programme, l'auteur en accepte 2 (planches 1 et 7) et en refuse 3 (3 : « Td5 occupe déjà la colonne, c'est un
+doublement » ; 4 : « Tae1 occupe une colonne semi-ouverte disputée par la tour e8 » ; 6 : « oui mais semi-ouverte »).
+Trois corrections de définition : (1) **séparer** tour sur colonne ouverte (aucun pion) et tour sur colonne
+semi-ouverte (un pion adverse seul), définitions de l'auteur au catalogue (A1, A1 bis) ; (2) exclure la colonne où
+j'ai déjà une tour (c'est A2, doublement) ; (3) exclure la colonne déjà tenue par une tour adverse (disputée, A7).
+Deux leçons au-delà du concept : sur les pièges 8 et 9, l'auteur lit le vrai sens du coup, un **soutien** avec son
+compte (« f7 attaqué 2 fois par les tours, défendu 1 fois par le roi » ; « tripler la défense de d4 ») : le rapport
+attaquants / défenseurs d'une pièce clé (pion racine d'une chaîne) manque au vocabulaire → ajouté à la phrase de
+soutien de la fiche (`moveEffects`) et au catalogue (B10 bis), concept à coder. Défaut de tirage : planches 9 et 10
+tirées de la même partie à six demi-coups d'écart (même coup clé) → une planche par partie et par concept
+(`verite-terrain.mjs`), à appliquer au prochain tirage, pas pendant le jugement en cours.
