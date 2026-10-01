@@ -207,6 +207,13 @@ export function bindMentorPanel(options) {
 
   return {
     ask,
+    /** Le joueur vient de jouer : l'ancien conseil (position précédente) et l'ancien jugement ne valent plus. */
+    newTurn() {
+      cancel();
+      cache = null;
+      verdict = null;
+      renderPanel('Le coach regarde ton coup…', { plain: true });
+    },
     /** Jugement du dernier coup joué (texte) ; null pour l'effacer. Réaffiche le panneau s'il y a un conseil. */
     setVerdict(text) {
       verdict = text;

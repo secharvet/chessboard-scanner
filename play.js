@@ -275,7 +275,7 @@ function applyMove(from, to, promotion) {
   if (!m) return false;
   // Mode joueur : le coup du joueur est jugé (pendant que le moteur répond), affiché en tête du conseil suivant.
   if (mover === playerColor && $mentorAuto?.checked) {
-    mentorPanel?.setVerdict(null);
+    mentorPanel?.newTurn();
     void judgePlayedMove({ fen: fenBefore, move: `${from}${to}${m.promotion ?? ''}` }).then((v) => {
       if (v?.text && game.history().length >= 1) mentorPanel?.setVerdict(v.text);
     });
