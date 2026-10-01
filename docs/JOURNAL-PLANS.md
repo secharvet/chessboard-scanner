@@ -829,3 +829,20 @@ montrer sur planches à un maître. `reports/inexpliques.md` et `.json` (exemple
   un processus par fichier, 4 sur 5 à DENEB (16 fils), 1 sur 5 au VPS en `nice 10` (un cœur gardé au coach),
   attente bornée sur les marques TERMINÉ, rapatriement des sorties. Testé à 13 h 56. La chaîne v5 en cours n'a pas
   été redécoupée (gain ≈ 12 min, risque au milieu d'une chaîne qui tourne).
+
+## 1er octobre, 15 h 05 — chaîne v5 terminée : les étiquettes corrigées ne changent pas les modèles
+
+- Recalcul 2016 redécoupé à 14 h 02 en 16 morceaux (13 DENEB, 3 VPS en nice 10, `rescan-labels --skip/--limit`),
+  recollé à 14 h 30 : étape 1 finie 40 min plus tôt. Jeu `humains-v5-juge.jsonl` : 986 465 positions (14 h 46).
+  Modèles v5 : 14 h 59 (`reports/train-plans-v5-juge.json`). Courbes : 15 h 02. Copie DENEB → VPS (étiquettes v2,
+  jeu v5, modèles v5) vérifiée (tailles, md5).
+- **AUC v4 → v5** (réseau + faits, test par parties) : tour sur colonne 0,913 → 0,911 ; rupture 0,820 → 0,821 ;
+  affaiblir 0,754 → 0,752 ; blocage 0,830 → 0,826 ; avant-poste 0,868 → 0,867 ; dominer 0,861 → 0,860 ; baïonnette
+  0,983 → 0,984. Intervalles à 95 % recouvrants partout : **aucune différence mesurable**.
+- **Courbe de prédiction sur le jeu v5** (réseau) : précision des annonces v4 24,7 % → v5 25,1 % ; rappel à 0-1
+  demi-coup 91,5 → 90,8 %, à 12-23 61,0 → 59,9 %. Par concept, rupture 23,7 → 25,6 %, le reste à ± 1 point.
+- Lecture : la correction des étiquettes (3,8 % de plans retirés) a rendu la **référence** plus juste, pas les
+  modèles plus forts : ce qu'ils apprenaient était déjà le signal des 96 % de plans justes. La précision des
+  annonces reste à 25 % : le levier n'est pas dans l'entraînement mais dans le **seuil d'annonce** (et dans le
+  vocabulaire : 8 plans couvrent 10 % des coups calmes). v5 remplace v4 comme référence (étiquettes propres), sans
+  attente de gain. En production les intentions restent débranchées.
