@@ -953,3 +953,17 @@ planche 5 reste un piège : le pion noir est encore en f7 et f7-f6 chasse le cav
 première condition de la définition écrite par l'auteur lui-même (à lui trancher). Tests ajoutés (4), suite complète
 verte (245). Les étiquettes `.v2` ont été calculées avec l'ancienne règle : à recalculer avec les corrections des
 colonnes (A1 / A1 bis) au prochain recalcul, après la fin du jugement des 60 planches.
+
+## 1er octobre, 22 h 50 — vérité de terrain : les planches « blocage d'un pion faible »
+
+Neuf planches jugées (la 5 sans réponse). Accord sur 6 : les 4 positifs vus (1 à 4) acceptés, les pièges 7 et 10
+reconnus (« g6 est défendu par h7 »). Trois désaccords, tous des pièges acceptés par l'auteur : planche 8 (Cf4 devant
+un pion f3 **doublé**), planche 9 (Cd5 devant d4, **base de la chaîne** d4-e5 sans pion c), planche 6 (Fh6 devant h7
+alors que g6 est déjà passé). La liste « isolé, arriéré, passé » était trop courte ; la définition de l'auteur
+(planche 1) donne la bonne règle : la case devant un pion faible est à l'abri de ce pion, la pièce s'y installe à
+l'abri d'une poussée frontale. Nouvelle règle commune au concept et au tirage des pièges (`blocked`,
+`coach/plan-concepts.mjs`) : pièce mineure devant un pion adverse **qu'aucun pion adverse ne pourra plus chasser**
+(aucun pion adverse sur les colonnes voisines derrière la case), ou devant un pion passé. Rejouée sur les dix
+planches : 9 accords sur 9 jugées. Six tests (`tests/blocage.test.js`), suite complète verte. Même défaut de tirage
+que la veille : planches 6 et 10 tirées de la même position (partie 1623), déjà corrigé pour le prochain tirage.
+Reste à faire au prochain recalcul des étiquettes : colonnes (A1 / A1 bis), avant-poste soutenable, blocage élargi.

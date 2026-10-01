@@ -18,6 +18,7 @@ import { crc32 } from 'node:zlib';
 import { Chess } from 'chess.js';
 import { buildAllFacts } from '../positional/index.js';
 import { toFrenchSan } from '../coach/notation.mjs';
+import { blocked } from '../coach/plan-concepts.mjs';
 
 const args = process.argv.slice(2);
 const opt = (k, d) => (args.includes(k) ? args[args.indexOf(k) + 1] : d);
@@ -28,7 +29,6 @@ let seed = Number(opt('--seed', 1));
 const rand = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
 const POOL = Number(opt('--pool', 25)); // candidats gardés avant tirage
 const CONCEPTS = ['tour_colonne', 'cavalier_avant_poste', 'blocage', 'rupture', 'affaiblir', 'dominer'];
-const WEAK = new Set(['PION_ISOLE', 'PION_ARRIERE', 'PION_FAIBLE', 'PION_PASSE']);
 const lot = IN.split('/').pop().replace(/^human-/, '').replace(/\.s\d+.*$/, '');
 const juge = new Map();
 const jf = IN.replace(/(\.v\d+)?\.jsonl$/, '.juge.jsonl');
@@ -105,8 +105,8 @@ for await (const line of createInterface({ input: createReadStream(IN), crlfDela
     }
     if ((m.piece === 'n' || m.piece === 'b') && !realised.has(`blocage_${side}`) && trap.blocage.length < POOL) {
       const behind = c.get(front(m.to, side));
-      if (behind && behind.type === 'p' && behind.color === opp && !factsAfter.some((t) => WEAK.has(t.id) && t.params.color === opp && t.params.square === front(m.to, side))) {
-        trap.blocage.push(sample(r, side, i, { kind: 'piège', raison: `la pièce se place devant le pion ${front(m.to, side)}, qui n'est ni isolé, ni arriéré, ni passé` }));
+      if (behind && behind.type === 'p' && behind.color === opp && !blocked(factsAfter, c, front(m.to, side), opp, side)) {
+        trap.blocage.push(sample(r, side, i, { kind: 'piège', raison: `la pièce se place devant le pion ${front(m.to, side)}, mais un pion adverse peut encore la chasser` }));
       }
     }
     if (isLever && !realised.has(`rupture_${side}`) && trap.rupture.length < POOL) {

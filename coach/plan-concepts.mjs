@@ -12,7 +12,6 @@ import { CONCEPT_LIST } from './concept-list.mjs';
 // ── Concepts (états buts vérifiables, par camp) ──
 // Chaque détecteur reçoit les faits d'une position et renvoie les couleurs pour lesquelles le concept est vrai.
 const has = (facts, id, color, pred = () => true) => facts.some((t) => t.id === id && t.params.color === color && pred(t));
-const WEAK_PAWN = new Set(['PION_ISOLE', 'PION_ARRIERE', 'PION_FAIBLE', 'PION_PASSE']);
 const myRooks = (board, color) => board.board().flat().filter((p) => p && p.type === 'r' && p.color === color);
 const relRank = (sq, color) => (color === 'w' ? Number(sq[1]) : 9 - Number(sq[1]));
 const CENTRAL = new Set(['d4', 'e4', 'd5', 'e5']);
@@ -141,14 +140,25 @@ export const CONCEPTS = {
     const guards = board.board().flat().filter((p) => p && p.color === color && p.type !== 'p' && p.type !== 'k' && d(p.square, k.square) <= 2).length;
     return raiders >= 2 && guards >= 2;
   },
-  // Blocage : un cavalier ou un fou installé juste devant un pion adverse isolé, arriéré, faible ou passé.
-  blocage: (facts, color, board) => facts.some((t) => {
-    if (!WEAK_PAWN.has(t.id) || t.params.color === color || typeof t.params.square !== 'string') return false;
-    const sq = t.params.square;
-    const front = `${sq[0]}${Number(sq[1]) + (t.params.color === 'w' ? 1 : -1)}`;
-    const p = board.get(front);
-    return Boolean(p && p.color === color && (p.type === 'n' || p.type === 'b'));
-  }),
+  // Blocage : un cavalier ou un fou installé juste devant un pion adverse que ses pions ne pourront plus chasser
+  // (le pion bloqué n'a plus de pion voisin derrière ou à sa hauteur : isolé, arriéré, base de chaîne, doublé de
+  // tête) ou devant un pion passé. Vérité de terrain du 1er octobre : « la case devant un pion faible est à l'abri
+  // de ce pion ; la pièce bloqueuse s'y installe à l'abri d'une poussée frontale ».
+  blocage: (facts, color, board) => board.board().flat().some((p) => p && p.type === 'p' && p.color !== color
+    && blocked(facts, board, p.square, p.color, color)),
+};
+/** `sq` porte un pion adverse (couleur `pc`) ; ma pièce mineure est devant lui et aucun pion adverse ne pourra la chasser. */
+export const blocked = (facts, board, sq, pc, color) => {
+  const front = `${sq[0]}${Number(sq[1]) + (pc === 'w' ? 1 : -1)}`;
+  const b = board.get(front);
+  if (!b || b.color !== color || (b.type !== 'n' && b.type !== 'b')) return false;
+  return !pawnCanAttack(board, front, color) || has(facts, 'PION_PASSE', pc, (t) => t.params.square === sq);
+};
+export const blockadeTarget = (board, sq, color) => {
+  const pc = color === 'w' ? 'b' : 'w';
+  const pawnSq = `${sq[0]}${Number(sq[1]) + (pc === 'w' ? -1 : 1)}`;
+  const p = board.get(pawnSq);
+  return p && p.type === 'p' && p.color === pc ? pawnSq : null;
 };
 export const COLORS = ['w', 'b'];
 /**
@@ -172,10 +182,11 @@ const openFiles = (facts, color) => new Set(facts
 const AGENT = {
   tour_colonne: (m, snap, color) => m.piece === 'r' && snap.facts.some((t) => t.id === 'TOUR_COLONNE_OUVERTE' && t.params.color === color && t.params.square === m.to),
   cavalier_avant_poste: (m, snap, color) => m.piece === 'n' && snap.facts.some((t) => t.id === 'CAVALIER_AVANT_POSTE' && t.params.color === color && t.params.square === m.to),
-  blocage: (m, snap, color) => (m.piece === 'n' || m.piece === 'b') && snap.facts.some((t) => {
-    if (!WEAK_PAWN.has(t.id) || t.params.color === color || typeof t.params.square !== 'string') return false;
-    return `${t.params.square[0]}${Number(t.params.square[1]) + (t.params.color === 'w' ? 1 : -1)}` === m.to;
-  }),
+  blocage: (m, snap, color) => {
+    if (m.piece !== 'n' && m.piece !== 'b') return false;
+    const pawnSq = blockadeTarget(snap.board, m.to, color);
+    return Boolean(pawnSq) && blocked(snap.facts, snap.board, pawnSq, color === 'w' ? 'b' : 'w', color);
+  },
   // Lot 1 : le coup calme de la pièce concernée réalise l'état.
   doublement_tours: (m, snap, color) => m.piece === 'r' && myRooks(snap.board, color).some((r) => r.square !== m.to && r.square[0] === m.to[0]),
   tour_septieme: (m, snap, color) => m.piece === 'r' && snap.facts.some((t) => t.id === 'TOUR_7E' && t.params.color === color && t.params.square === m.to),
