@@ -739,3 +739,7 @@ signale encore (il se trompe aussi : position 3, même phrase jugée grave une f
   demi-coups gardés (inchangé / supprimé / déplacé → `stale` / nouveau → `stale`) ; il applique aussi les règles
   changées depuis l'étiquetage (avant-poste en 4e rangée, recettes). Échantillon de 300 enregistrements : 569 plans
   gardés, 30 supprimés, 10 déplacés, 14 nouveaux. Lancé sur DENEB à 9 h 52 sur les 986 465 enregistrements.
+- **Recalcul terminé** (DENEB, 9 h 52 → 11 h 07, 8 processus) sur 986 465 enregistrements : 2 023 201 plans gardés,
+  80 370 supprimés (3,8 %), 14 885 déplacés (marqués `stale` : trajectoire et jugement à recalculer), 2 929 nouveaux.
+  Par concept, supprimés : blocage 9,1 %, avant-poste 8,6 %, affaiblir 5,5 %, tour sur colonne 3,0 % ; rupture et
+  dominer inchangés. Fichiers `*.v2.jsonl` sur DENEB, à côté des originaux (non écrasés).
