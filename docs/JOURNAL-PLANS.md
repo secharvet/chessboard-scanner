@@ -790,3 +790,25 @@ de test (parties jamais vues à l'entraînement, découpage par partie), modèle
   « moyen » ou « inexpliqué ». « Sort de l'échec » est trois fois plus fréquent sous 1200 (6,9 %) qu'au-dessus de 1600.
 - Suite (étape 2) : regrouper les 91 725 coups inexpliqués par leurs effets (faits qui changent, cases attaquées et
   défendues, ce qui se réalise dans les 12 demi-coups suivants) pour en sortir des planches par groupe.
+
+## 1er octobre, 12 h 37 → 12 h 47 — Les coups inexpliqués, regroupés par effets (DENEB, `scripts/inexpliques.mjs`)
+
+91 732 coups inexpliqués (22 % des coups calmes des parties de test). Effets relevés (un coup peut en avoir plusieurs) :
+**défend** une pièce à moi qu'il ne défendait pas 60,3 % ; **attaque** une pièce adverse défendue (pression) 36,2 % ;
+**menace** (une pièce adverse se retrouve en prise) 27,2 % ; recule 21,7 % ; centralise 18,9 % ; vers le roi 15,4 % ;
+libère une ligne 14,8 % ; libère une case reprise ensuite 9,4 % ; prend ensuite avec la même pièce 22,4 %.
+**Aucun effet relevé : 0,4 %** (334 coups). Ce qui suit dans les 12 demi-coups : une manœuvre 25 %, un levier 12 %,
+une tour sur colonne 10 %, un affaiblissement 8 %, rien 20 %.
+
+Par pièce et effet principal (ordre menace > attaque > défend > …) : tour-défend 11,2 %, cavalier-attaque 10,9 %,
+dame-attaque 10,8 %, cavalier-menace 8,8 %, fou-attaque 8,3 %, cavalier-défend 7,2 %, dame-défend 6,7 %, fou-menace
+6,5 %, tour-menace 6,2 %, tour-attaque 6,2 %, dame-menace 5,6 %, fou-défend 3,9 % ; le reste (recule, libère, suite
+seule) < 1,5 % chacun. Δ d'évaluation en fin de fenêtre proche de 0 partout (−0,8 à +0,2 pion) : ces coups ne décident
+rien à court terme, ce sont des coups de position.
+
+**Lecture** : le tas « inexpliqué » n'est pas mystérieux. Il tient en trois mots de l'étage MOYEN qui manquaient :
+**menace** (mettre une pièce en prise), **pression** (attaquer une pièce défendue), **soutien** (défendre une pièce qui
+n'est pas attaquée : consolidation, prophylaxie). Avec « sauve » et « protège » (inventaire, 28 % des coups calmes),
+la fiche peut dire ce que fait presque tout coup calme d'un débutant. Les préparations lointaines que l'auteur
+voulait inventorier se cachent dans les 20 % « rien ne suit » et dans les « suivi:manœuvre » : ce sont ceux-là à
+montrer sur planches à un maître. `reports/inexpliques.md` et `.json` (exemples par groupe, FEN et suite).
