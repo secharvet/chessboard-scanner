@@ -864,3 +864,15 @@ montrer sur planches à un maître. `reports/inexpliques.md` et `.json` (exemple
   attaque aile roi + jeu au centre, attaque aile roi + course sur roques opposés. `reports/inventaire-strategie.md`
   (12 exemples par mot, à relire : premières définitions, validées par leur fréquence seulement).
 - Répartiteur corrigé (lancements distants réellement parallèles : un `&&` mettait tout un sous-shell en arrière-plan).
+
+## 1er octobre, 16 h 25 — étape 2 : la page de vérité de terrain des plans
+
+`scripts/verite-terrain.mjs` : pour 6 concepts, 5 **positifs stricts** (réalisé, calme, avant le 12e demi-coup, bien
+joué : perte moyenne ≤ 10, pire ≤ 20) et 5 **pièges** (même apparence sans le concept : tour sur une colonne non
+ouverte, cavalier chassable, pièce devant un pion non faible, levier qui n'ouvre rien, échange repris par un pion sans
+faiblesse, prise du fou sans complexe faible), tirés des parties de test. Page publiée (privée) :
+https://claude.ai/artifact/KdJrsQCFLH2FFoGNtPso7x — 60 planches en aveugle (positifs et pièges mélangés, la nature
+n'est pas dans la page), deux échiquiers (départ, après le coup clé), la suite jouée, trois réponses (oui / non /
+pas sûr) et une remarque, enregistrées dans la base de la page. Clé de correction locale :
+`reports/verite-terrain-cle.json`. Dépouillement : un « non » sur un positif ou un « oui » sur un piège met la
+définition en cause ; l'accord humain/programme par concept est la première vérité de terrain du §1.
