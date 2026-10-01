@@ -50,7 +50,8 @@ for (const file of inputs) {
   // Jugements d'exécution (scripts/juge-plans.mjs) : fichier compagnon `<entrée>.juge.jsonl`, clé game:ply.
   const juge = new Map();
   if (JUGE) {
-    const jf = file.replace(/\.jsonl$/, '.juge.jsonl');
+    // Étiquettes recalculées (`.v2.jsonl`, scripts/rescan-labels.mjs) : le jugement est celui du fichier d'origine.
+    const jf = file.replace(/(\.v\d+)?\.jsonl$/, '.juge.jsonl');
     if (existsSync(jf)) {
       for (const l of readFileSync(jf, 'utf8').split('\n')) {
         if (!l) continue;
@@ -78,7 +79,8 @@ for (const file of inputs) {
       if (human) {
         const p = r.plans.find((x) => x.concept === c && x.side === side);
         // Règle du prix (§9) : le plan doit apparaître tôt pour être attribué à CETTE position ; plus tard, ambigu.
-        v = !p ? 0 : p.quiet && p.appear < 12 ? 1 : null;
+        // Plan déplacé ou nouveau au recalcul (`stale`) : son jugement d'exécution est périmé → ambigu, pas un exemple.
+        v = !p ? 0 : p.stale ? null : p.quiet && p.appear < 12 ? 1 : null;
         if (p) traj[`${c}_${side}`] = { appear: p.appear, quiet: p.quiet, ...p.deltas };
         // « Réalisé ET bien joué » (§4.2) : le positif doit passer les deux seuils du jugement d'exécution.
         if (JUGE && v === 1) {
