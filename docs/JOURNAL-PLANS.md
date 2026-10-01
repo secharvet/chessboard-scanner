@@ -846,3 +846,21 @@ montrer sur planches à un maître. `reports/inexpliques.md` et `.json` (exemple
   annonces reste à 25 % : le levier n'est pas dans l'entraînement mais dans le **seuil d'annonce** (et dans le
   vocabulaire : 8 plans couvrent 10 % des coups calmes). v5 remplace v4 comme référence (étiquettes propres), sans
   attente de gain. En production les intentions restent débranchées.
+
+## 1er octobre, 15 h 55 — après les trois mots : 98 % des coups calmes ont un nom ; premiers mots de stratégie
+
+- **Inventaire refait** (étiquettes v2, atomes menace/pression/soutien ; 97 025 positions de test, 582 150 coups) :
+  inexpliqué **22,4 % → 1,7 %** des coups calmes. Moyens 71,5 % (soutien 23,2 %, pression 17,1 %, menace 15,4 %,
+  roque 4,0 %, restriction 3,4 %, manœuvre 2,6 %, espace 2,2 %, levier 1,5 %, fermeture 1,3 %), plans 10,5 %, autres
+  coups calmes 10,8 %, défense d'une pièce attaquée 5,4 % (le reste est absorbé par « soutien », classé avant).
+  La menace est le mot des débutants (19,9 % sous 1200, 14,0 % au-dessus de 2000), le soutien celui des forts
+  (18,4 % → 24,8 %). `reports/inventaire-coups-2.md`.
+- **Mots de stratégie** (`coach/strategy.mjs`, 7 mots, fenêtres de 12 demi-coups, par camp ; `scripts/inventaire-strategie.mjs`,
+  194 050 camps) : attaque à l'aile roi 19,1 %, attaque à l'aile dame 15,1 %, jeu au centre 9,1 %, consolidation
+  7,3 % (3,7 % sous 1200 → 8,8 % au-dessus de 2000 : le mot des forts), course sur roques opposés 1,5 %,
+  simplification 1,2 %, poussée du pion passé 0,9 %. **Sans aucun mot : 53,7 %** des camps (57,7 % sous 1200,
+  52,0 % au-dessus de 2000). Un mot va avec un de nos 8 plans dans 27-31 % des cas seulement : les deux étages
+  sont largement indépendants, ce qui est attendu (le plan dit quoi, la stratégie dit où). Paires fréquentes :
+  attaque aile roi + jeu au centre, attaque aile roi + course sur roques opposés. `reports/inventaire-strategie.md`
+  (12 exemples par mot, à relire : premières définitions, validées par leur fréquence seulement).
+- Répartiteur corrigé (lancements distants réellement parallèles : un `&&` mettait tout un sous-shell en arrière-plan).
