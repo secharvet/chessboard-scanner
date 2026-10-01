@@ -101,9 +101,36 @@ export function bindMentorPanel(options) {
       : '';
   }
 
+  // ── Indices par paliers ──
+  const $hint = document.createElement('button');
+  $hint.type = 'button';
+  $hint.id = 'btnMentorHint';
+  $hint.className = 'btn mentor-hint';
+  $hint.addEventListener('click', () => {
+    if (!cache || cache.error) return;
+    cache.level += 1;
+    renderCurrent();
+  });
+
+  function renderCurrent() {
+    if (!cache || cache.error) return;
+    const hints = cache.hints ?? [];
+    let text;
+    if (!cache.idea || cache.level > hints.length) text = cache.text;
+    else text = [cache.idea, ...hints.slice(0, cache.level)].join('\n\n');
+    renderPanel(text);
+    const done = !cache.idea || cache.level > hints.length;
+    if (!done && $panel) {
+      $hint.textContent = cache.level < hints.length ? `Indice (${cache.level + 1}/${hints.length + 1})` : 'Montrer le coup';
+      $panel.append($hint);
+    } else {
+      $hint.remove();
+    }
+  }
+
   function showCached() {
     if (cache?.error) renderPanel(cache.text, { error: true });
-    else if (cache?.text) renderPanel(cache.text);
+    else if (cache?.text) renderCurrent();
     else renderPanel(options.idleMessage, { plain: true });
   }
 
@@ -144,13 +171,14 @@ export function bindMentorPanel(options) {
     const base = options.getPayload();
 
     try {
-      const { advice, problems } = await askGroqMentor({
+      const { advice, problems, idea, hints } = await askGroqMentor({
         ...base,
         question,
         signal: abort.signal,
       });
-      cache = { text: advice };
-      renderPanel(advice);
+      // Par défaut, l'IDÉE (sans le coup) ; le bouton « Indice » donne la pièce, puis la case, puis la fiche complète.
+      cache = { text: advice, idea, hints, level: idea ? 0 : 99 };
+      renderCurrent();
       if ($status) {
         $status.textContent = problems.length
           ? `${COACH_LABEL} · ⚠ ${problems.length} affirmation(s) non vérifiée(s)`

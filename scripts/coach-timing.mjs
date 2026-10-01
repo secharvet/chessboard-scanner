@@ -27,7 +27,7 @@ for (const p of EVAL_POSITIONS.slice(0, N)) {
   const ms = Date.now() - t0;
   const steps = r.timings?.steps ?? [];
   for (const [label, d] of steps) totals[label] = (totals[label] ?? 0) + d;
-  rows.push({ name: p.name, fen: p.fen, ms, steps, advice: r.advice });
+  rows.push({ name: p.name, fen: p.fen, ms, steps, advice: r.advice, idea: r.idea, hints: r.hints });
   console.log(`${String(ms).padStart(6)} ms  ${p.name}  ${steps.map(([l, d]) => `${l} ${d}`).join(' | ')}`);
 }
 stopSecondEngine();

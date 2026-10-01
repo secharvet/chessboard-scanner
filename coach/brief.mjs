@@ -139,15 +139,28 @@ export function buildBrief(data) {
 
   items.push({ kind: 'eval', eval: c0?.evalPlayer });
   const sentences = [evalSentence(c0.evalPlayer)];
+  // Deux textes : la fiche complète (avec le coup) et l'IDÉE (sans le coup), montrée par défaut ; le coup est derrière
+  // des indices par paliers (décision du 30 septembre : donner le coup revient à faire rejouer Stockfish).
+  // say(complet, idée) : idée === undefined → même phrase ; idée === null → rien dans l'idée.
+  const idea = [sentences[0]];
+  const say = (full, hidden) => { sentences.push(full); if (hidden !== null) idea.push(hidden === undefined ? full : hidden); };
 
   // Au trait de l'adversaire : on dit seulement ce qu'il va probablement jouer et la réponse.
   if (!myTurn) {
     const reply = steps[1]?.move;
     items.push({ kind: 'their_move', move: bestSan, reply: reply && enToFr(reply.san) });
-    sentences.push(`C'est à l'adversaire de jouer ; son meilleur coup est ${bestSan}${reply ? `, et tu répondrais alors ${enToFr(reply.san)}` : ''}.`);
-    return finish(items, sentences, pieces, data);
+    say(`C'est à l'adversaire de jouer ; son meilleur coup est ${bestSan}${reply ? `, et tu répondrais alors ${enToFr(reply.san)}` : ''}.`);
+    return finish(items, sentences, pieces, data, idea, []);
   }
 
+  // En échec : on le dit d'abord (cas réel du 30 septembre, …Dh4+ : « Rf1 prépare un gain » sans dire qu'il est forcé).
+  const board0 = new Chess(data.fen);
+  if (board0.inCheck()) {
+    const k = board0.board().flat().find((q) => q && q.type === 'k' && q.color === me);
+    const by = k ? board0.attackers(k.square, opp).map((sq) => ({ square: sq, type: board0.get(sq).type })) : [];
+    for (const b of by) pieces.add(`${b.type}|opp|${b.square}`);
+    say(`Tu es en échec${by[0] ? ` : ${pieceRef(by[0].type, 'opp', by[0].square, { article: 'def' })} attaque ton roi` : ''}. Commence par parer l'échec.`);
+  }
   const map = buildAttackMap(data.fen);
   const hanging = buildTacticalFacts(data.fen)
     .filter((t) => t.id === 'PIECE_MENACEE' && t.params.color === me)
@@ -169,7 +182,8 @@ export function buildBrief(data) {
     // Un gain qui ne tient que par une suite tactique (coup intermédiaire, clouage…) : on donne la suite.
     const tactical = (c0.motifs ?? []).some((m) => /intermédiaire|découverte|fourchette|clouage|enfilade|échec double|sacrifice|dévie/.test(m));
     const how = tactical ? ` Attention, le gain passe par une suite précise : ${c0.horizonSan}.` : '';
-    sentences.push(`${bestSan} prend ${pieceRef(first.captured, 'opp', first.to)} : une fois les échanges terminés, tu as ${gain} point(s) de plus.${how}${also}`);
+    say(`${bestSan} prend ${pieceRef(first.captured, 'opp', first.to)} : une fois les échanges terminés, tu as ${gain} point(s) de plus.${how}${also}`,
+      `Tu peux gagner du matériel : ${pieceRef(first.captured, 'opp', first.to)} est prenable. Une fois les échanges terminés, tu aurais ${gain} point(s) de plus.`);
   }
   if (!reason && data.threat?.mates) {
     // Tous mes coups de la ligne sont des échecs et l'évaluation est nulle : c'est un échec perpétuel, pas une parade
@@ -177,9 +191,10 @@ export function buildBrief(data) {
     const perpetual = steps.length >= 2 && steps.every((s, i) => i % 2 === 1 || s.move.san.includes('+'))
       && c0.evalPlayer.type === 'cp' && Math.abs(c0.evalPlayer.value) <= 30;
     reason = { kind: 'parry_mate', threat: data.threat.move, move: bestSan, perpetual };
-    sentences.push(perpetual
+    say(perpetual
       ? `Attention : si tu ne fais rien, l'adversaire joue ${data.threat.move} et te met échec et mat. ${bestSan} pare ce mat en donnant des échecs sans fin : la partie sera nulle par échec perpétuel.`
-      : `Attention : si tu ne fais rien, l'adversaire joue ${data.threat.move} et te met échec et mat. Priorité absolue : ${bestSan} pare ce mat.`);
+      : `Attention : si tu ne fais rien, l'adversaire joue ${data.threat.move} et te met échec et mat. Priorité absolue : ${bestSan} pare ce mat.`,
+    `Attention : si tu ne fais rien, l'adversaire joue ${data.threat.move} et te met échec et mat. Priorité absolue : trouve le coup qui pare ce mat.`);
   }
   if (!reason && hanging.length) {
     const h = hanging[0];
@@ -193,7 +208,8 @@ export function buildBrief(data) {
       if (attackers[0]) pieces.add(`${attackers[0].type}|opp|${attackers[0].square}`);
       reason = { kind: 'save', piece: { type: h.type, square: h.square }, attacker: attackers[0] && { type: attackers[0].type, square: attackers[0].square }, move: bestSan };
       const fem = FEM[h.type];
-      sentences.push(`${cap(note(h.type, 'me', h.square))} est attaqué${fem ? 'e' : ''}${by}${h.defended ? '' : ` et n'est pas défendu${fem ? 'e' : ''}`}. Mets-${fem ? 'la' : 'le'} à l'abri : joue ${bestSan}.`);
+      const attackedTxt = `${cap(note(h.type, 'me', h.square))} est attaqué${fem ? 'e' : ''}${by}${h.defended ? '' : ` et n'est pas défendu${fem ? 'e' : ''}`}.`;
+      say(`${attackedTxt} Mets-${fem ? 'la' : 'le'} à l'abri : joue ${bestSan}.`, `${attackedTxt} Mets-${fem ? 'la' : 'le'} à l'abri.`);
     }
   }
   if (!reason && data.threat && (me === 'w' ? -data.threat.material : data.threat.material) >= 2) {
@@ -205,13 +221,15 @@ export function buildBrief(data) {
       // plus loin dans une position déjà mauvaise (#15, #28).
       const isSac = (c0.motifs ?? []).some((m) => /sacrifice/.test(m)) || (c0.immMaterial != null && (me === 'w' ? c0.immMaterial : -c0.immMaterial) < 0);
       const sac = isSac && gain < 0 ? ` Attention, ${bestSan} est un sacrifice : dans la suite ${c0.horizonSan}, tu perds ${-gain} point(s), que le moteur juge compensés (${lowerFirst(evalSentence(c0.evalPlayer).replace(/\.$/, ''))}).` : '';
-      sentences.push(`L'adversaire menace ${data.threat.move}, qui te coûterait ${loss} point(s) de matériel. ${bestSan} pare cette menace.${sac}`);
+      say(`L'adversaire menace ${data.threat.move}, qui te coûterait ${loss} point(s) de matériel. ${bestSan} pare cette menace.${sac}`,
+        `L'adversaire menace ${data.threat.move}, qui te coûterait ${loss} point(s) de matériel. Trouve comment parer cette menace.`);
     } else {
       // La menace s'exécute quand même dans la ligne (banc #32 : « Fxb5+ pare cette menace » puis fxe5) : on le dit,
       // avec ce que la ligne donne réellement.
       const mat = gain > 0 ? `tu gagnes ${gain} point(s)` : gain === 0 ? 'le matériel revient à l\'égalité' : `tu ne perds que ${-gain} point(s)`;
       reason = { kind: 'limit', threat: data.threat.move, loss, move: bestSan, after: gain };
-      sentences.push(`L'adversaire menace ${data.threat.move}, qui te coûterait ${loss} point(s) de matériel. ${bestSan} ne l'empêche pas, mais c'est le meilleur coup : dans la suite ${c0.horizonSan}, ${mat}, et ${lowerFirst(evalSentence(c0.evalPlayer).replace(/\.$/, ''))}.`);
+      say(`L'adversaire menace ${data.threat.move}, qui te coûterait ${loss} point(s) de matériel. ${bestSan} ne l'empêche pas, mais c'est le meilleur coup : dans la suite ${c0.horizonSan}, ${mat}, et ${lowerFirst(evalSentence(c0.evalPlayer).replace(/\.$/, ''))}.`,
+        `L'adversaire menace ${data.threat.move}, qui te coûterait ${loss} point(s) de matériel. Tu ne pourras pas tout empêcher : cherche le coup qui limite les dégâts.`);
     }
   }
   if (!reason && gain >= 2 && first) {
@@ -227,21 +245,23 @@ export function buildBrief(data) {
       const capSan = enToFr(cap1.move.san);
       const moved = first.piece !== cap1.move.piece || first.to !== cap1.move.from
         ? ` Ce n'est pas ${first.piece === 'r' || first.piece === 'q' ? 'ta' : 'ton'} ${NAME[first.piece]} qui prend : c'est ${capSan}.` : '';
-      sentences.push(`${bestSan} ne prend rien tout de suite, il prépare un gain : dans la suite ${c0.horizonSan}, ${capSan} prend ${pieceRef(cap1.move.captured, 'opp', cap1.move.to, { article: 'poss' })}.${moved} Une fois les échanges terminés, tu as ${gain} point(s) de plus.`);
+      say(`${bestSan} ne prend rien tout de suite, il prépare un gain : dans la suite ${c0.horizonSan}, ${capSan} prend ${pieceRef(cap1.move.captured, 'opp', cap1.move.to, { article: 'poss' })}.${moved} Une fois les échanges terminés, tu as ${gain} point(s) de plus.`,
+        `Il y a du matériel à gagner : ${pieceRef(cap1.move.captured, 'opp', cap1.move.to, { article: 'poss' })} est une cible, mais pas tout de suite. Cherche le coup qui prépare la prise.`);
     } else {
-      sentences.push(`${bestSan} gagne du matériel${victim}. Une fois les échanges terminés, tu as ${gain} point(s) de plus.`);
+      say(`${bestSan} gagne du matériel${victim}. Une fois les échanges terminés, tu as ${gain} point(s) de plus.`,
+        cap1 ? `Tu peux gagner du matériel : ${pieceRef(cap1.move.captured, 'opp', cap1.move.to, { article: 'poss' })} est une cible.` : 'Tu peux gagner du matériel.');
     }
   }
   if (!reason && first && data.phase === 'ouverture') {
     if (first.san.startsWith('O-O')) {
       reason = { kind: 'castle', move: bestSan };
-      sentences.push(`Mets ton roi à l'abri : roque avec ${bestSan}.`);
+      say(`Mets ton roi à l'abri : roque avec ${bestSan}.`, 'Pense à la sécurité de ton roi.');
     } else if ((first.piece === 'n' || first.piece === 'b') && (first.from[1] === '1' || first.from[1] === '8')) {
       reason = { kind: 'develop', piece: first.piece, move: bestSan };
-      sentences.push(`Sors tes pièces : ${bestSan} développe ${note(first.piece, 'me', first.from)}, qui n'avait pas encore joué.`);
+      say(`Sors tes pièces : ${bestSan} développe ${note(first.piece, 'me', first.from)}, qui n'avait pas encore joué.`, 'Sors tes pièces : certaines n\'ont pas encore joué.');
     } else if (first.piece === 'p' && ['d4', 'e4', 'd5', 'e5'].includes(first.to)) {
       reason = { kind: 'center', square: first.to, move: bestSan };
-      sentences.push(`Prends le centre : ${bestSan} installe un pion sur la case centrale ${first.to}.`);
+      say(`Prends le centre : ${bestSan} installe un pion sur la case centrale ${first.to}.`, 'Prends le centre avec un pion.');
     }
   }
   if (!reason) {
@@ -275,10 +295,12 @@ export function buildBrief(data) {
     }
     if (why.length) {
       reason ??= { kind: 'basics', move: bestSan };
-      sentences.push(`Le meilleur coup est ${bestSan} : ${why.join(' ; ')}.`);
+      // L'idée ne doit pas dire « calme » quand le coup est une prise ou un échec (banc : Fxb5+, Fxa4, axb5).
+      const kindOf = first?.captured ? 'Regarde les prises : un échange est à ton avantage.' : first?.san.includes('+') ? 'Regarde les échecs : il y en a un d\'utile.' : 'Pas de tactique ici : cherche un coup calme.';
+      say(`Le meilleur coup est ${bestSan} : ${why.join(' ; ')}.`, `${kindOf} Ce qu'il apporte : ${why.join(' ; ')}.`);
     } else {
       reason = { kind: 'best', move: bestSan };
-      sentences.push(`Le meilleur coup du moteur est ${bestSan}.`);
+      say(`Le meilleur coup du moteur est ${bestSan}.`, first?.captured ? 'Regarde les prises : un échange est à ton avantage.' : first?.san.includes('+') ? 'Regarde les échecs : il y en a un d\'utile.' : 'Pas de tactique ici : cherche un coup qui améliore ta position.');
       // Pas de raison concrète : le plan général de la structure reconnue (théorie écrite par nous).
       const st = data.structures?.[0];
       // Le plan de l'ÉLÈVE : celui marqué « (toi) » (le camp qui a la structure ou l'autre camp).
@@ -286,7 +308,7 @@ export function buildBrief(data) {
       if (mine && structureProven(mine, steps)) {
         const plan = String(mine).replace(/^[^:]*:\s*/, '').split(/(?<=\.)\s/)[0];
         items.push({ kind: 'structure', label: st.label, plan });
-        sentences.push(`Idée générale (${st.label}) : ${plan}`);
+        say(`Idée générale (${st.label}) : ${plan}`);
       }
     }
   }
@@ -307,12 +329,12 @@ export function buildBrief(data) {
         pieces.add(`${a.type}|opp|${a.square}`);
         pieces.add(`${d.type}|me|${d.square}`);
         items.push({ kind: 'square_defended', square: first.to, attacker: a, defender: d, net: -theirs });
-        sentences.push(`${cap(pieceRef(a.type, 'opp', a.square, { article: 'def' }))} attaque la case ${first.to}, mais ${pieceRef(d.type, 'me', d.square)} la défend : s'il prend, tu reprends${-theirs > 0 ? ` et gagnes ${-theirs} point(s)` : ''}.`);
+        say(`${cap(pieceRef(a.type, 'opp', a.square, { article: 'def' }))} attaque la case ${first.to}, mais ${pieceRef(d.type, 'me', d.square)} la défend : s'il prend, tu reprends${-theirs > 0 ? ` et gagnes ${-theirs} point(s)` : ''}.`, null);
       } else if (theirs != null && theirs > 0) {
         pieces.add(`${a.type}|opp|${a.square}`);
         const mat = gain > 0 ? `tu gagnes ${gain} point(s)` : gain === 0 ? 'le matériel revient à l\'égalité' : `tu ne perds que ${-gain} point(s)`;
         items.push({ kind: 'square_attacked', square: first.to, attacker: a, loss: theirs });
-        sentences.push(`Attention : ${pieceRef(a.type, 'opp', a.square, { article: 'def' })} attaque la case ${first.to} et peut y prendre. Le moteur l'accepte, parce que dans la suite ${c0.horizonSan}, ${mat}, et ${lowerFirst(evalSentence(c0.evalPlayer).replace(/\.$/, ''))}.`);
+        say(`Attention : ${pieceRef(a.type, 'opp', a.square, { article: 'def' })} attaque la case ${first.to} et peut y prendre. Le moteur l'accepte, parce que dans la suite ${c0.horizonSan}, ${mat}, et ${lowerFirst(evalSentence(c0.evalPlayer).replace(/\.$/, ''))}.`, null);
       }
     }
   }
@@ -331,7 +353,7 @@ export function buildBrief(data) {
     if (steps3.length) {
       items.push({ kind: 'plan_steps', steps: steps3 });
       const [s1, s2, s3] = steps3;
-      sentences.push(`Ton plan${verified ? ' (vérifié dans la meilleure suite du moteur)' : ''} : ${s1}${s2 ? `, ensuite ${s2}` : ''}${s3 ? `, et ${s3}` : ''}.`);
+      say(`Ton plan${verified ? ' (vérifié dans la meilleure suite du moteur)' : ''} : ${s1}${s2 ? `, ensuite ${s2}` : ''}${s3 ? `, et ${s3}` : ''}.`);
     }
     // Intention (modèles sur les plans humains) : ce que les joueurs de ce niveau entreprennent ici. Une tendance,
     // dite comme telle, jamais comme un conseil vérifié ; tue si c'est déjà le plan vérifié.
@@ -343,7 +365,7 @@ export function buildBrief(data) {
       // Et le moteur doit être d'accord : le coup concret figure dans une de ses lignes (passe 5 du banc).
       if (c && compatibleWithLines(c, data.candidates, data.fen, me)) {
         items.push({ kind: 'intention', concept: mine.concept, p: mine.p, text: c.text });
-        sentences.push(`À ton niveau, dans ce genre de position, les joueurs entreprennent souvent ceci : ${c.text}.`);
+        say(`À ton niveau, dans ce genre de position, les joueurs entreprennent souvent ceci : ${c.text}.`);
       }
     }
   }
@@ -353,7 +375,7 @@ export function buildBrief(data) {
     && c0.evalPlayer.value - c.evalPlayer.value <= 30).map((c) => c.move);
   if (close.length) {
     items.push({ kind: 'alternatives', moves: close });
-    sentences.push(`${close.join(' ou ')} ${close.length > 1 ? 'se valent' : 'se vaut'} presque.`);
+    say(`${close.join(' ou ')} ${close.length > 1 ? 'se valent' : 'se vaut'} presque.`, null);
   }
 
   // Comparaison : un candidat nettement moins bon qui coûte du matériel (lu dans SA ligne).
@@ -362,7 +384,7 @@ export function buildBrief(data) {
   if (worse) {
     const lost = Math.abs(worse.material);
     items.push({ kind: 'avoid', move: worse.move, loss: lost });
-    sentences.push(`Évite ${worse.move} : dans sa suite, tu perds ${lost} point(s) de matériel.`);
+    say(`Évite ${worse.move} : dans sa suite, tu perds ${lost} point(s) de matériel.`);
   }
 
   // À surveiller : la première idée adverse (déjà nommée par le détecteur), sans chiffre Stockfish.
@@ -388,9 +410,16 @@ export function buildBrief(data) {
       parts.push(`son plan est ${/^[aeiouyéèêh]/i.test(s) ? "d'" : 'de '}${s}`);
     }
     items.push({ kind: 'watch', text: parts.join(' ; ') });
-    sentences.push(`À surveiller : ${parts.join(' ; ')}.`);
+    say(`À surveiller : ${parts.join(' ; ')}.`);
   }
-  return finish(items, sentences, pieces, data);
+  // Indices par paliers : la pièce, puis la case, puis le coup (et la fiche complète).
+  const hints = [];
+  if (first) {
+    const castle = first.san.startsWith('O-O');
+    hints.push(castle ? 'Indice : c\'est ton roi qui joue (pense au roque).' : `Indice : c'est ${pieceRef(first.piece, 'me', first.from)} qui joue.`);
+    hints.push(`Indice : ${castle ? 'le roi' : `ce${FEM[first.piece] ? 'tte' : ''} ${NAME[first.piece]}`} va en ${first.to}${first.captured ? ', en prenant' : ''}.`);
+  }
+  return finish(items, sentences, pieces, data, idea, hints);
 }
 
 /**
@@ -515,11 +544,11 @@ function planSteps(data, me, opp, pieces, items, { skipRook = false, verifiedTo 
   return out.slice(0, 3);
 }
 
-function finish(items, sentences, pieces, data) {
+function finish(items, sentences, pieces, data, idea = sentences, hints = []) {
   const text = sentences.join(' ');
   const squares = new Set(text.match(/(?<![a-zA-Z])[a-h][1-8](?![0-9])/g) ?? []);
   const moves = new Set(text.match(/(?<![\w-])(?:O-O(?:-O)?|[RDTFC]?[a-h]?[1-8]?x?[a-h][1-8](?:=[DTFC])?[+#]?)(?![\w])/g) ?? []);
-  return { items, text, allowed: { squares, moves, pieces }, player: data.player, fen: data.fen };
+  return { items, text, idea: idea.join(' '), hints, allowed: { squares, moves, pieces }, player: data.player, fen: data.fen };
 }
 
 // ── Reformulation par le LLM : la voix seulement, contrôlée exactement ──

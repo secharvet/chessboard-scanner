@@ -49,7 +49,7 @@ export async function askCoach({ fen, side, moves, question, engine, cfg = llmCo
     // pas la paraphrase du LLM ; journal du 30 septembre).
     if (process.env.COACH_REPHRASE === '0') {
       return {
-        advice: brief.text, adviceWorking: brief.text, brief: brief.items, context: context.text,
+        advice: brief.text, adviceWorking: brief.text, idea: brief.idea, hints: brief.hints, brief: brief.items, context: context.text,
         ungrounded: [], problems: [], rejected: [], revised: false, fallback: false,
         timings: { context: tContext, llm: 0, steps: context.data.timings ?? [] },
       };

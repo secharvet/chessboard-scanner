@@ -809,3 +809,8 @@ button.engine-pipeline__head:hover {
 .layout--play .card--mentor .mentor-panel {
   max-height: min(62vh, 40rem);
 }
+
+.mentor-hint {
+  display: block;
+  margin-top: 12px;
+}

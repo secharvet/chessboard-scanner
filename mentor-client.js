@@ -60,7 +60,12 @@ export async function askGroqMentor(payload) {
     if (advice == null || String(advice).trim() === '') {
       throw new Error('Réponse vide du serveur (groq).');
     }
-    return { advice, problems: data.problems ?? [], revised: Boolean(data.revised) };
+    return {
+      advice, problems: data.problems ?? [], revised: Boolean(data.revised),
+      // Idée sans le coup et indices par paliers (fiche du code) ; absents avec l'ancien coach à LLM.
+      idea: typeof data.idea === 'string' && data.idea.trim() ? data.idea : null,
+      hints: Array.isArray(data.hints) ? data.hints : [],
+    };
   } catch (e) {
     if (e?.name === 'AbortError') {
       throw new Error(
