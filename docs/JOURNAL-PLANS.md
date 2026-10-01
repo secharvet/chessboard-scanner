@@ -865,7 +865,7 @@ montrer sur planches à un maître. `reports/inexpliques.md` et `.json` (exemple
   (12 exemples par mot, à relire : premières définitions, validées par leur fréquence seulement).
 - Répartiteur corrigé (lancements distants réellement parallèles : un `&&` mettait tout un sous-shell en arrière-plan).
 
-## 1er octobre, 16 h 25 — étape 2 : la page de vérité de terrain des plans
+## 1er octobre, 16 h 12 — étape 2 : la page de vérité de terrain des plans
 
 `scripts/verite-terrain.mjs` : pour 6 concepts, 5 **positifs stricts** (réalisé, calme, avant le 12e demi-coup, bien
 joué : perte moyenne ≤ 10, pire ≤ 20) et 5 **pièges** (même apparence sans le concept : tour sur une colonne non

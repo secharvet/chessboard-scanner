@@ -190,6 +190,20 @@ def main():
                     ps.append(P[i, j])
             aucs[c] = auc(ys, ps)
         covered = float(np.mean([len(t) > 0 for t in truth]))
+        # Seuil d'annonce par concept (1er octobre, étape 3) : précision et rappel de « p_c ≥ t » pour t de 0,50 à 0,95,
+        # et le premier seuil qui atteint 60 % de précision (vérité : le plan se réalise, suite calme, 24 demi-coups).
+        sweep = {}
+        for j, c in enumerate(concepts):
+            yc = np.array([c in t for t in truth])
+            rows = []
+            for t in np.arange(0.5, 0.96, 0.05):
+                ann = P[:, j] >= t
+                n = int(ann.sum())
+                prec = float((yc & ann).sum() / n) if n else None
+                rec = float((yc & ann).sum() / yc.sum()) if yc.sum() else None
+                rows.append({'t': round(float(t), 2), 'annonces': n, 'taux': float(ann.mean()), 'precision': prec, 'rappel': rec})
+            first60 = next((r for r in rows if r['precision'] is not None and r['precision'] >= 0.6), None)
+            sweep[c] = {'rows': rows, 'seuil_60': first60}
         results['models'][kind] = {
             'recall_by_distance': {k: {'n': v['n'], 'recall': (v['hit'] / v['n']) if v['n'] else None, 'p_mean': (v['psum'] / v['n']) if v['n'] else None} for k, v in recall.items()},
             'recall_by_concept': {c: {k: {'n': v['n'], 'recall': (v['hit'] / v['n']) if v['n'] else None} for k, v in d.items()} for c, d in recall_c.items()},
@@ -198,7 +212,7 @@ def main():
             'precision_by_concept': {c: {'n': v['n'], 'precision': (v['realised'] / v['n']) if v['n'] else None} for c, v in prec_c.items()},
             'precision_by_elo': {k: {'n': v['n'], 'precision': (v['realised'] / v['n']) if v['n'] else None} for k, v in prec['by_elo'].items()},
             'realised_by_distance': prec['by_distance'],
-            'base_rate': base, 'auc_test': aucs, 'coverage_any_plan': covered,
+            'base_rate': base, 'auc_test': aucs, 'coverage_any_plan': covered, 'seuils': sweep,
         }
     Path(a.out).parent.mkdir(parents=True, exist_ok=True)
     json.dump(results, open(a.out, 'w'), indent=1)
@@ -230,6 +244,13 @@ def main():
         md += ['', '### Précision des annonces par niveau du joueur', '', '| Elo | Annonces | Précision |', '|---|---|---|']
         for k, v in sorted(R['precision_by_elo'].items()):
             md.append(f'| {k} | {v["n"]} | {pct(v["precision"])} |')
+        md += ['', '### Seuil d\'annonce par concept (précision cible 60 %)', '', '| Concept | Taux de base | Seuil pour 60 % | Annonces à ce seuil (part des positions) | Rappel à ce seuil | Précision à 0,5 | Précision à 0,9 |', '|---|---|---|---|---|---|---|']
+        for c in concepts:
+            sw = R['seuils'][c]
+            f = sw['seuil_60']
+            r50 = sw['rows'][0]
+            r90 = next((r for r in sw['rows'] if abs(r['t'] - 0.9) < 1e-6), None)
+            md.append(f"| {c} | {pct(R['base_rate'][c])} | {f['t'] if f else 'jamais'} | {(str(f['annonces']) + ' (' + pct(f['taux']) + ')') if f else '—'} | {pct(f['rappel']) if f else '—'} | {pct(r50['precision'])} | {pct(r90['precision']) if r90 else '—'} |")
         md += ['', '### Quand une annonce se réalise, à quelle distance ?', '', '| Distance | Annonces réalisées |', '|---|---|']
         for k, v in R['realised_by_distance'].items():
             md.append(f'| {k} | {v} |')
