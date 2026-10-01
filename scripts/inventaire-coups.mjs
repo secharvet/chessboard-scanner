@@ -22,12 +22,11 @@ import { createReadStream, readFileSync, writeFileSync } from 'node:fs';
 import { createInterface } from 'node:readline';
 import { Chess } from 'chess.js';
 import { scanLine } from '../coach/plan-concepts.mjs';
+import { classify, enPrise, CONCEPTS } from '../coach/move-class.mjs';
 import { crc32 } from 'node:zlib';
 
 const args = process.argv.slice(2);
 const opt = (k, d) => (args.includes(k) ? args[args.indexOf(k) + 1] : d);
-const VALUE = { p: 1, n: 3, b: 3, r: 5, q: 9, k: 0 };
-const CONCEPTS = ['tour_colonne', 'cavalier_avant_poste', 'blocage', 'rupture', 'affaiblir', 'dominer', 'attaque_minorite', 'baionnette'];
 const BR = [['< 1200', 0, 1200], ['1200-1600', 1200, 1600], ['1600-2000', 1600, 2000], ['2000 +', 2000, 9999]];
 const bracket = (elo) => BR.find(([, lo, hi]) => elo >= lo && elo < hi)?.[0] ?? 'inconnu';
 const COUNTED = 6;
@@ -36,49 +35,6 @@ if (args.includes('--merge')) {
   merge();
 } else {
   await inventory();
-}
-
-/** Pièces de `color` en prise : attaquées, et non défendues ou attaquées par moins cher. */
-function enPrise(c, color) {
-  const opp = color === 'w' ? 'b' : 'w';
-  const out = new Map();
-  for (const p of c.board().flat()) {
-    if (!p || p.color !== color || p.type === 'k') continue;
-    const att = c.attackers(p.square, opp);
-    if (!att.length) continue;
-    const def = c.attackers(p.square, color);
-    const cheapest = Math.min(...att.map((sq) => VALUE[c.get(sq).type]));
-    out.set(p.square, { type: p.type, attacked: true, defenders: def.length, hanging: def.length === 0 || cheapest < VALUE[p.type] });
-  }
-  return out;
-}
-
-function classify(c, m, i, scan, atoms, inCheckBefore, before) {
-  const color = m.color;
-  if (m.captured) return 'prise';
-  if (m.san.includes('+') || m.san.includes('#')) return 'échec';
-  if (m.promotion) return 'promotion';
-  if (inCheckBefore) return "sort de l'échec";
-  for (const k of CONCEPTS) {
-    if (scan[`${k}_${color}`] === i) return `plan:${k}`;
-    if ((k === 'rupture' && scan[`rupture_levier_${color}`] === i && scan[`rupture_${color}`] >= 0)
-      || (k === 'affaiblir' && scan[`affaiblir_levier_${color}`] === i && scan[`affaiblir_${color}`] >= 0)) return `plan:${k}`;
-  }
-  const atom = atoms.find((a) => a.side === color && a.ply === i);
-  if (atom) return `moyen:${atom.kind}`;
-  // Défense : pièces en prise avant / après (la pièce déplacée est suivie sur sa nouvelle case).
-  const after = enPrise(c, color);
-  const track = (sq) => (sq === m.from ? m.to : sq);
-  const wasHanging = [...before.entries()].filter(([, v]) => v.hanging);
-  if (wasHanging.length && wasHanging.every(([sq]) => !after.get(track(sq))?.hanging)) return 'défense:sauve';
-  for (const [sq, v] of before) {
-    const now = after.get(track(sq));
-    if (v.attacked && now && now.defenders > v.defenders && sq !== m.from) return 'défense:protège';
-  }
-  if ((m.piece === 'n' || m.piece === 'b') && m.from[1] === (color === 'w' ? '1' : '8')) return 'développement';
-  if (m.piece === 'p') return 'poussée de pion';
-  if (m.piece === 'k') return 'coup de roi';
-  return `inexpliqué:${m.piece}`;
 }
 
 async function inventory() {
