@@ -353,7 +353,13 @@ export function buildBrief(data) {
     if (steps3.length) {
       items.push({ kind: 'plan_steps', steps: steps3 });
       const [s1, s2, s3] = steps3;
-      say(`Ton plan${verified ? ' (vérifié dans la meilleure suite du moteur)' : ''} : ${s1}${s2 ? `, ensuite ${s2}` : ''}${s3 ? `, et ${s3}` : ''}.`);
+      const planTxt = `Ton plan${verified ? ' (vérifié dans la meilleure suite du moteur)' : ''} : ${s1}${s2 ? `, ensuite ${s2}` : ''}${s3 ? `, et ${s3}` : ''}.`;
+      // Dans l'IDÉE, une manœuvre qui commence par le coup conseillé ne donne pas son trajet (sinon le plan dit le coup) :
+      // « amène ta tour de d1 vers e1, par d1-e1 » devient « amène une pièce vers e1 ».
+      const mv0 = steps[0]?.move; // (« first » est ici la phrase du plan vérifié, pas le coup)
+      const planIdea = mv0 ? planTxt.replace(/amène (?:ton|ta) \S+ de ([a-h][1-8]) vers ([a-h][1-8]) (\([^)]*\)), par ([a-h1-8-]+)/g,
+        (all, from, to, why, route) => (route.startsWith(`${mv0.from}-${mv0.to}`) ? `amène une pièce vers ${to} ${why}` : all)) : planTxt;
+      say(planTxt, planIdea);
     }
     // Intention (modèles sur les plans humains) : ce que les joueurs de ce niveau entreprennent ici. Une tendance,
     // dite comme telle, jamais comme un conseil vérifié ; tue si c'est déjà le plan vérifié.

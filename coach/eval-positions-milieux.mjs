@@ -45,4 +45,6 @@ export const EVAL_POSITIONS = [
   // Cas réels (partie du 30 septembre au soir) : la case du coup conseillé est attaquée mais défendue ; position en échec.
   { name: 'cas réel — d4 attaqué par le cavalier, défendu par la dame (blancs)', fen: 'r1bqkbnr/pppppppp/2n5/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 1 2', side: 'white', elo: 1200, concept: 'centre', themes: ["d4"] },
   { name: 'cas réel — en échec (…Dh4+), plus de préparation adverse (blancs)', fen: 'r3kb1r/ppp2ppp/2n1p1n1/3pP3/3Pb1Pq/2P2P2/PP1NB2P/R1BQK1NR w KQkq - 1 9', side: 'white', elo: 1200, concept: 'echec', themes: ["Rf1"] },
+  { name: 'cas réel — Td1 conseillé, la tour passe par d1 pour aller en e1 (blancs)', fen: 'r2k1b1r/1pp4p/p3qp2/5n1Q/2Pnp2N/6P1/PP3PBP/R1B2RK1 w - - 0 17', side: 'white', elo: 1200, concept: 'tour_colonne', themes: ["e1"] },
+  { name: 'cas réel — Te1 cloue le pion e4, Fxe4 le prend ensuite (blancs)', fen: 'r4b1r/1pp1k2p/p3qp2/5n1Q/2Pnp2N/6P1/PP3PBP/R1BR2K1 w - - 2 18', side: 'white', elo: 1200, concept: 'clouage', themes: ["e4"] },
 ];
