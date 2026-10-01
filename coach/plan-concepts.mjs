@@ -109,6 +109,38 @@ export const CONCEPTS = {
   piece_reactivee: (facts, color) => !has(facts, 'PIECE_PASSIVE', color),
   // E11 Prophylaxie : l'adversaire n'a plus de levier disponible (il en avait au départ) après mon coup calme.
   prophylaxie_levier: (facts, color) => !has(facts, 'LEVIER_DISPONIBLE', color === 'w' ? 'b' : 'w'),
+  // ── Lot 1, quatrième fournée : les sacrifices (l'état but n'apparaît qu'après la prise adverse : DELAY = 2) ──
+  // E9 Gambit : dans l'ouverture, un pion de moins contre une avance de développement, le centre ou un roi adverse au centre.
+  gambit: (facts, color) => {
+    const opp = color === 'w' ? 'b' : 'w';
+    return facts.some((t) => t.id === 'PHASE' && t.params.phase === 'ouverture')
+      && has(facts, 'AVANTAGE_MATERIEL', opp, (t) => t.params.score === 1)
+      && (has(facts, 'DEVELOPPEMENT', color) || has(facts, 'CONTROLE_CENTRE', color) || has(facts, 'ROI_AU_CENTRE', opp, (t) => !t.params.canCastle));
+  },
+  // E8 Sacrifice positionnel de pion (milieu, finale) : un pion de moins contre un déséquilibre durable à moi.
+  sacrifice_pion: (facts, color) => {
+    const opp = color === 'w' ? 'b' : 'w';
+    return !facts.some((t) => t.id === 'PHASE' && t.params.phase === 'ouverture')
+      && has(facts, 'AVANTAGE_MATERIEL', opp, (t) => t.params.score === 1)
+      && (has(facts, 'PION_PASSE', color) || has(facts, 'PION_PASSE_PROTEGE', color) || has(facts, 'CAVALIER_AVANT_POSTE', color)
+        || has(facts, 'TOUR_COLONNE_OUVERTE', color) || has(facts, 'COMPLEXE_FAIBLE', opp) || has(facts, 'ROI_AU_CENTRE', opp, (t) => !t.params.canCastle));
+  },
+  // E10 Sacrifice de qualité : deux points de moins contre la paire de fous, un avant-poste ou un complexe faible adverse.
+  sacrifice_qualite: (facts, color) => {
+    const opp = color === 'w' ? 'b' : 'w';
+    return has(facts, 'AVANTAGE_MATERIEL', opp, (t) => t.params.score === 2)
+      && (has(facts, 'PAIRE_FOUS', color) || has(facts, 'CAVALIER_AVANT_POSTE', color) || has(facts, 'COMPLEXE_FAIBLE', opp) || has(facts, 'PION_PASSE_PROTEGE', color));
+  },
+  // D8 Regroupement défensif : au moins deux de mes pièces près de mon roi alors que des pièces adverses rôdent.
+  regroupement_defensif: (facts, color, board) => {
+    const opp = color === 'w' ? 'b' : 'w';
+    const k = board.board().flat().find((p) => p && p.type === 'k' && p.color === color);
+    if (!k) return false;
+    const d = (a, b) => Math.max(Math.abs(a.charCodeAt(0) - b.charCodeAt(0)), Math.abs(Number(a[1]) - Number(b[1])));
+    const raiders = board.board().flat().filter((p) => p && p.color === opp && p.type !== 'p' && p.type !== 'k' && d(p.square, k.square) <= 3).length;
+    const guards = board.board().flat().filter((p) => p && p.color === color && p.type !== 'p' && p.type !== 'k' && d(p.square, k.square) <= 2).length;
+    return raiders >= 2 && guards >= 2;
+  },
   // Blocage : un cavalier ou un fou installé juste devant un pion adverse isolé, arriéré, faible ou passé.
   blocage: (facts, color, board) => facts.some((t) => {
     if (!WEAK_PAWN.has(t.id) || t.params.color === color || typeof t.params.square !== 'string') return false;
@@ -168,7 +200,14 @@ const AGENT = {
   piece_reactivee: (m) => m.piece !== 'p' && m.piece !== 'k',
   // Prophylaxie : seulement si c'est MON coup qui retire le levier (atome restriction), pas un hasard de la position.
   prophylaxie_levier: (m, snap, color, i, atoms) => atoms.some((a) => a.kind === 'restriction' && a.side === color && a.ply === i),
+  // Sacrifices : mon coup calme offre le matériel, l'atome « perte » le constate dans les demi-coups qui suivent.
+  gambit: (m, snap, color, i, atoms) => m.piece === 'p' && atoms.some((a) => a.kind === 'perte' && a.side === color && a.ply >= i && a.ply <= i + 3),
+  sacrifice_pion: (m, snap, color, i, atoms) => m.piece !== 'k' && atoms.some((a) => a.kind === 'perte' && a.side === color && a.pawns === 1 && a.ply >= i && a.ply <= i + 3),
+  sacrifice_qualite: (m, snap, color, i, atoms) => m.piece === 'r' && atoms.some((a) => a.kind === 'perte' && a.side === color && a.pawns === 2 && a.ply >= i && a.ply <= i + 3),
+  regroupement_defensif: (m, snap, color, i, atoms) => atoms.some((a) => a.kind === 'regroupement' && a.side === color && a.ply === i),
 };
+/** Décalage entre mon coup (l'agent) et l'état but : 2 demi-coups pour un sacrifice (il faut que l'adversaire prenne). */
+const DELAY = { gambit: 2, sacrifice_pion: 2, sacrifice_qualite: 2 };
 /** Tous les concepts étiquetés : coach/concept-list.mjs (sans dépendance) ; vérifié ici contre les états buts codés. */
 export { CONCEPT_LIST };
 for (const k of Object.keys(CONCEPTS)) if (!CONCEPT_LIST.includes(k)) throw new Error(`concept ${k} absent de coach/concept-list.mjs`);
@@ -217,8 +256,9 @@ export function scanLine(fen, pv, PLIES = 48) {
       if (!ok(start)) {
         // Ni prise ni échec : un échec force la réponse, ce n'est pas l'exécution calme d'un plan (planche #14 du
         // 30 septembre : « blocage » réalisé par …Cc3+, qui attaque aussi la tour).
+        const delay = DELAY[name] ?? 0;
         ply = timeline.findIndex((snap, i) => moves[i].color === color && !moves[i].captured && !moves[i].san.includes('+')
-          && AGENT[name](moves[i], snap, color, i, atoms) && holds(i, ok));
+          && i + delay < timeline.length && AGENT[name](moves[i], snap, color, i, atoms) && holds(i + delay, ok));
       }
       out[`${name}_${color}`] = ply;
       // Avant-poste : l'adversaire peut-il encore échanger le cavalier (fou de la couleur, cavalier) ?
