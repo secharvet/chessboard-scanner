@@ -14,6 +14,11 @@
  *   marche_roi   en finale (pas de dame), le roi fait au moins deux pas vers le centre ou vers les pions adverses
  *   perte        le camp perd un pion (ou plus) à un point calme, sans le récupérer dans la fenêtre ; « perte » et
  *                non « sacrifice » : on ne sait pas si c'était voulu, la trajectoire d'évaluation le dira
+ * Atomes des PIÈCES (inventaire du 1er octobre 2026 : 60 % des coups calmes « inexpliqués » soutiennent, 36 % pressent,
+ * 27 % menacent ; coach/move-class.mjs) :
+ *   menace       coup calme après lequel une pièce adverse est en prise qui ne l'était pas
+ *   pression     la pièce jouée attaque une pièce adverse défendue qu'elle n'attaquait pas
+ *   soutien      la pièce jouée défend une pièce à moi (pas le roi) qu'elle ne défendait pas
  * Atomes de la DÉFENSE (§3 bis : la défense, c'est souvent ce qu'on empêche) :
  *   fermeture    poussée de pion du camp qui vient se bloquer contre un pion adverse (les deux pions face à face,
  *                la colonne est verrouillée) et qui tient
@@ -26,6 +31,7 @@
  */
 
 import { Chess } from 'chess.js';
+import { moveEffects } from './move-class.mjs';
 
 const VALUE = { p: 1, n: 3, b: 3, r: 5, q: 9, k: 0 };
 export const HOLD_ATOM = 6;
@@ -157,6 +163,14 @@ export function detectAtoms(fen, pv, plies = 48) {
     const removed = [...before].filter((l) => !after.has(l));
     // Seulement si c'est MON coup qui l'empêche (pièce posée devant le pion), pas le hasard d'un pion qui bouge.
     if (removed.length && removed.some((l) => l.slice(2, 4) === m.to)) atoms.push({ kind: 'restriction', side: m.color, ply: i, square: m.to, levier: removed[0] });
+  }
+
+  // Menace, pression, soutien : l'effet immédiat d'un coup calme sur les pièces (le premier relevé, par priorité).
+  for (let i = 0; i < n; i++) {
+    const m = moves[i];
+    if (m.captured || m.piece === 'k' || m.san.includes('+')) continue;
+    const eff = moveEffects(i === 0 ? fen : boards[i - 1].fen(), m)[0];
+    if (eff) atoms.push({ kind: eff.kind, side: m.color, ply: i, piece: m.piece, to: m.to, cible: eff.pieces[0]?.[2] ?? null });
   }
 
   // Regroupement : je ramène une pièce près de mon roi quand des pièces adverses rôdent autour.
