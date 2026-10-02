@@ -46,7 +46,11 @@ export function buildOutpostFacts(fen) {
       for (const df of [-1, 1]) {
         const fileIdx = p.fileIdx + df;
         if (fileIdx < 0 || fileIdx > 7) continue;
-        for (let rank = p.rank + 2 * dir; rank >= 1 && rank <= 8; rank += dir) {
+        // Soutien à venir : seulement sur les 4e, 5e et 6e rangées vues du camp. Au-delà, toute case est « hors
+        // d'atteinte des pions adverses » par construction (un pion n'attaque pas en arrière) et le fait polluait
+        // la fiche (« avant-poste en c8 », banc du 2 octobre).
+        const farRank = color === 'w' ? 6 : 3;
+        for (let rank = p.rank + 2 * dir; rank >= 1 && rank <= 8 && (dir > 0 ? rank <= farRank : rank >= farRank); rank += dir) {
           // Le pion doit pouvoir avancer jusqu'à la case juste derrière (rank - dir) : aucun pion sur son chemin.
           const blocked = pawns.some((q) => q.fileIdx === p.fileIdx && (dir > 0 ? q.rank > p.rank && q.rank <= rank - dir : q.rank < p.rank && q.rank >= rank - dir));
           if (blocked) break;
