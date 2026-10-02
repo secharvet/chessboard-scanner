@@ -967,3 +967,26 @@ l'abri d'une poussée frontale. Nouvelle règle commune au concept et au tirage 
 planches : 9 accords sur 9 jugées. Six tests (`tests/blocage.test.js`), suite complète verte. Même défaut de tirage
 que la veille : planches 6 et 10 tirées de la même position (partie 1623), déjà corrigé pour le prochain tirage.
 Reste à faire au prochain recalcul des étiquettes : colonnes (A1 / A1 bis), avant-poste soutenable, blocage élargi.
+
+## 2 octobre, 17 h 15 — plafond du vocabulaire : cinquante coups calmes classés à la main
+
+Point 1 de la critique du catalogue (« la prémisse 10 % expliqués = vocabulaire au dixième n'est pas acquise »).
+Tirage (`scripts/plafond-tirage.mjs`) : parties de test du lot 2016-01, joueurs à 2000 et plus, 8 199 positions,
+22 821 coups calmes qu'aucun des 29 détecteurs ne rattache à un plan, 50 tirés, classés un par un
+(`reports/plafond-50.md`). Résultat : **9 plans du catalogue non codés** (reroutage du cavalier × 3, batterie de
+pièces lourdes sur une colonne, pion clou h6 — absent du catalogue —, provocation / fixation vue du bon camp, sape de
+la base de la chaîne, attaque du pion faible, éviter l'échange qui abîme la structure), **4 plans codés non crédités
+au coup** (réalisation aussitôt échangée, levier crédité deux demi-coups plus tard, tenue du roi actif, et un défaut
+de construction : une seconde tour sur une seconde colonne ouverte n'est pas créditée parce que l'état était déjà
+vrai), **17 coups tactiques** (menaces, parades, gains de tempo) et **20 coups utiles sans plan** (défense,
+prophylaxie, repli, échange, préparation). Conclusion : le plan récupérable est 13 / 50 = 26 % des non rattachés,
+soit 21 points de couverture : **le plafond des plans est vers 40 % des coups calmes**, pas 100 % ; les 60 % restants
+sont de la tactique et des devoirs, qui relèvent de la fiche (menace, parade, soutien) et du jugement du coup, pas
+d'un plan. L'ordre des lots doit suivre ce tirage : B7, batterie sur colonne, pion clou, provocation, sape, attaque
+du pion faible, B6. Marge : ± 14 points à 50 tirages.
+Défaut du classeur corrigé au passage (`classify`) : six parades sur 50 (pièce attaquée par un pion qui se replie)
+étaient rangées en « soutien » ou « pression », parce que les trois atomes au niveau de la pièce passaient avant la
+parade ; ordre désormais : moyen de structure → parade → menace / pression / soutien → protège. Les inventaires
+`inventaire-coups-*.md` ont été comptés avec l'ancien ordre : la part « défense : sauve » y est sous-estimée.
+Autre observation du tirage : le classeur ne distingue pas « échec donné » et « coup calme avec échec dans la suite »
+(sans effet ici).

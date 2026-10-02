@@ -35,13 +35,20 @@ export function classify(c, m, i, scan, atoms, inCheckBefore, before) {
     if ((k === 'rupture' && scan[`rupture_levier_${color}`] === i && scan[`rupture_${color}`] >= 0)
       || (k === 'affaiblir' && scan[`affaiblir_levier_${color}`] === i && scan[`affaiblir_${color}`] >= 0)) return `plan:${k}`;
   }
-  const atom = atoms.find((a) => a.side === color && a.ply === i);
-  if (atom) return `moyen:${atom.kind}`;
+  // Moyens de structure d'abord (levier, manœuvre, roque…), puis la parade d'une pièce en prise, puis les trois
+  // effets au niveau de la pièce (menace, pression, soutien) : un fou attaqué par un pion qui se replie « soutient »
+  // souvent quelque chose au passage, mais c'est une parade (plafond du vocabulaire, 2 octobre : 6 cas sur 50).
+  const PIECE_LEVEL = new Set(['menace', 'pression', 'soutien']);
+  const mine = atoms.filter((a) => a.side === color && a.ply === i);
+  const structural = mine.find((a) => !PIECE_LEVEL.has(a.kind));
+  if (structural) return `moyen:${structural.kind}`;
   // Défense : pièces en prise avant / après (la pièce déplacée est suivie sur sa nouvelle case).
   const after = enPrise(c, color);
   const track = (sq) => (sq === m.from ? m.to : sq);
   const wasHanging = [...before.entries()].filter(([, v]) => v.hanging);
   if (wasHanging.length && wasHanging.every(([sq]) => !after.get(track(sq))?.hanging)) return 'défense:sauve';
+  const effect = mine.find((a) => PIECE_LEVEL.has(a.kind));
+  if (effect) return `moyen:${effect.kind}`;
   for (const [sq, v] of before) {
     const now = after.get(track(sq));
     if (v.attacked && now && now.defenders > v.defenders && sq !== m.from) return 'défense:protège';
