@@ -4,7 +4,7 @@
  *
  *   COACH_MODE=brief COACH_REPHRASE=0 node scripts/coach-timing.mjs [--n 36] [--out reports/timing-<tag>.json]
  */
-import { writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync } from 'node:fs';
 import { loadEnv } from '../coach/env.mjs';
 import { UciEngine } from '../coach/uci-engine.mjs';
 import { askCoach } from '../coach/coach.mjs';
@@ -14,14 +14,16 @@ import { EVAL_POSITIONS } from '../coach/eval-positions-milieux.mjs';
 loadEnv();
 const args = process.argv.slice(2);
 const opt = (k, d) => (args.includes(k) ? args[args.indexOf(k) + 1] : d);
-const N = Number(opt('--n', EVAL_POSITIONS.length));
+const EXTRA = opt('--positions', null); // fichier JSON de positions ajoutées au banc (banc de cent, 2 octobre)
+const POSITIONS = EXTRA ? [...EVAL_POSITIONS, ...JSON.parse(readFileSync(EXTRA, 'utf8'))] : EVAL_POSITIONS;
+const N = Number(opt('--n', POSITIONS.length));
 const OUT = opt('--out', `reports/timing-${Date.now()}.json`);
 // Banc : mode déterministe par défaut (un fil, table vidée à chaque fiche) ; COACH_DETERMINISTIC=0 pour mesurer la production.
 process.env.COACH_DETERMINISTIC ??= '1';
 const engine = new UciEngine();
 const rows = [];
 const totals = {};
-for (const p of EVAL_POSITIONS.slice(0, N)) {
+for (const p of POSITIONS.slice(0, N)) {
   const t0 = Date.now();
   const r = await askCoach({ fen: p.fen, side: p.side, moves: [], question: '', engine, elo: p.elo });
   const ms = Date.now() - t0;
