@@ -228,6 +228,9 @@ function renderTokenFr(t) {
     case 'AVANT_POSTE':
       return `Avant-poste pour les ${colorLabel(/** @type {string} */ (p.color))} en ${p.square}.`;
 
+    case 'AVANT_POSTE_POSSIBLE':
+      return `Avant-poste possible pour les ${colorLabel(/** @type {string} */ (p.color))} en ${p.square} (un pion peut encore venir le soutenir).`;
+
     case 'CAVALIER_AVANT_POSTE':
       return `Cavalier ${colorLabel(/** @type {string} */ (p.color))} sur avant-poste en ${p.square}.`;
 
@@ -475,6 +478,9 @@ function renderTokenEn(t) {
 
     case 'AVANT_POSTE':
       return `Outpost for ${side} on ${p.square}.`;
+
+    case 'AVANT_POSTE_POSSIBLE':
+      return `Possible outpost for ${p.color === 'w' ? 'White' : 'Black'} on ${p.square} (a pawn can still come to support it).`;
 
     case 'CAVALIER_AVANT_POSTE':
       return `${side} knight on an outpost on ${p.square}.`;

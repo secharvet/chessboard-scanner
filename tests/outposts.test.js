@@ -52,7 +52,8 @@ describe('Module 1.3 — avant-postes', () => {
 describe('Module 1.3 — avant-poste dont le soutien reste à jouer', () => {
   it('cavalier noir en e3, Blancs sans pion d ni f : avant-poste même sans pion noir qui le soutient (planche 6)', () => {
     const t = facts('5rk1/5p1p/p2p1qpQ/3n1p2/2N1b3/2Pn3N/R5PP/5RK1 w - - 3 28');
-    assert.ok(has(t, 'AVANT_POSTE', { square: 'e3', color: 'b', soutenu: false }));
+    assert.ok(has(t, 'AVANT_POSTE_POSSIBLE', { square: 'e3', color: 'b' }));
+    assert.ok(!has(t, 'AVANT_POSTE', { square: 'e3', color: 'b' }));
   });
 
   it('cavalier blanc en e5, pion noir encore en f7 : pas un avant-poste, f6 le chasse (planche 5)', () => {
@@ -67,14 +68,16 @@ describe('Module 1.3 — avant-poste dont le soutien reste à jouer', () => {
 
   it('soutien à venir : pas d\'avant-poste au-delà de la 6e rangée (c8 n\'est pas un avant-poste parce que d4 pourrait aller en d7)', () => {
     const t = facts('8/8/8/8/3P4/8/8/8 w - - 0 1');
-    assert.ok(!has(t, 'AVANT_POSTE', { square: 'c8', color: 'w' }));
-    assert.ok(!has(t, 'AVANT_POSTE', { square: 'c7', color: 'w' }));
-    assert.ok(has(t, 'AVANT_POSTE', { square: 'c6', color: 'w' }));
+    assert.ok(!has(t, 'AVANT_POSTE_POSSIBLE', { square: 'c8', color: 'w' }));
+    assert.ok(!has(t, 'AVANT_POSTE_POSSIBLE', { square: 'c7', color: 'w' }));
+    assert.ok(has(t, 'AVANT_POSTE_POSSIBLE', { square: 'c6', color: 'w' }));
+    assert.ok(!has(t, 'AVANT_POSTE', { square: 'c6', color: 'w' }));
   });
 
   it('pion blanc bloqué en d2 par un pion en d3 : il ne soutiendra jamais e5', () => {
     const t = facts('8/8/8/8/8/3p4/3P4/8 w - - 0 1');
     assert.ok(!has(t, 'AVANT_POSTE', { square: 'e5', color: 'w' }));
+    assert.ok(!has(t, 'AVANT_POSTE_POSSIBLE', { square: 'e5', color: 'w' }));
   });
 });
 

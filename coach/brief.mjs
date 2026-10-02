@@ -253,11 +253,14 @@ export function buildBrief(data) {
         cap1 ? `Tu peux gagner du matériel : ${pieceRef(cap1.move.captured, 'opp', cap1.move.to, { article: 'poss' })} est une cible.` : 'Tu peux gagner du matériel.');
     }
   }
+  // Le roque a sa raison à toute phase (banc du 2 octobre : en milieu de partie, « Le meilleur coup du moteur est O-O »
+  // sans un mot, depuis que « O-O soutient ton pion en g2 » est exclu des effets).
+  if (!reason && first && first.san.startsWith('O-O')) {
+    reason = { kind: 'castle', move: bestSan };
+    say(`Mets ton roi à l'abri : roque avec ${bestSan}.`, 'Pense à la sécurité de ton roi.');
+  }
   if (!reason && first && data.phase === 'ouverture') {
-    if (first.san.startsWith('O-O')) {
-      reason = { kind: 'castle', move: bestSan };
-      say(`Mets ton roi à l'abri : roque avec ${bestSan}.`, 'Pense à la sécurité de ton roi.');
-    } else if ((first.piece === 'n' || first.piece === 'b') && (first.from[1] === '1' || first.from[1] === '8')) {
+    if ((first.piece === 'n' || first.piece === 'b') && (first.from[1] === '1' || first.from[1] === '8')) {
       reason = { kind: 'develop', piece: first.piece, move: bestSan };
       say(`Sors tes pièces : ${bestSan} développe ${note(first.piece, 'me', first.from)}, qui n'avait pas encore joué.`, 'Sors tes pièces : certaines n\'ont pas encore joué.');
     } else if (first.piece === 'p' && ['d4', 'e4', 'd5', 'e5'].includes(first.to)) {

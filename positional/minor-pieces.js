@@ -19,7 +19,7 @@ export function buildMinorPiecesFacts(fen) {
   const out = [];
 
   // Références croisées : avant-postes et colonnes
-  const outposts = buildOutpostFacts(fen).filter((t) => t.id === 'AVANT_POSTE');
+  const outposts = buildOutpostFacts(fen).filter((t) => t.id === 'AVANT_POSTE' || t.id === 'AVANT_POSTE_POSSIBLE');
   const outpostInfo = new Map(outposts.map((t) => [/** @type {string} */ (t.params.square) + t.params.color, t.params]));
   const outpostSet = new Set(
     outposts.map((t) => /** @type {string} */ (t.params.square) + t.params.color),

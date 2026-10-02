@@ -73,7 +73,9 @@ export function buildOutpostFacts(fen) {
         const ownOnFile = allies.some((p) => p.fileIdx === t.fileIdx);
         const enemyOnFile = enemies.some((p) => p.fileIdx === t.fileIdx);
         const colonne = !ownOnFile && !enemyOnFile ? 'ouverte' : !ownOnFile ? 'semi-ouverte' : 'fermee';
-        out.push(token('AVANT_POSTE', { square: sq, color, rangee, colonne, soutenu: t.soutenu }));
+        // AVANT_POSTE : soutenu par un pion (le fait historique, cité par la fiche et visé par les manœuvres) ;
+        // AVANT_POSTE_POSSIBLE : le soutien reste à jouer (ne sert qu'à CAVALIER_AVANT_POSTE, définition de l'auteur).
+        out.push(token(t.soutenu ? 'AVANT_POSTE' : 'AVANT_POSTE_POSSIBLE', { square: sq, color, rangee, colonne, soutenu: t.soutenu }));
       }
     }
   }
