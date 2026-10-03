@@ -97,7 +97,8 @@ input:focus-visible,textarea:focus-visible,button:focus-visible{outline:2px soli
 <script>
 const ITEMS = ${JSON.stringify(items)};
 const DEF = ${JSON.stringify(DEF)};
-const glyph={K:'\\u2654',Q:'\\u2655',R:'\\u2656',B:'\\u2657',N:'\\u2658',P:'\\u2659',k:'\\u265A',q:'\\u265B',r:'\\u265C',b:'\\u265D',n:'\\u265E',p:'\\u265F'};
+// Toutes les pièces avec les glyphes PLEINS (ceux des noires), colorés par le remplissage : avec les glyphes creux des blanches, certaines polices rendaient la dame et le cavalier blancs comme des pièces noires (remarque de l'auteur, 2 octobre).
+const glyph={K:'\\u265A',Q:'\\u265B',R:'\\u265C',B:'\\u265D',N:'\\u265E',P:'\\u265F',k:'\\u265A',q:'\\u265B',r:'\\u265C',b:'\\u265D',n:'\\u265E',p:'\\u265F'};
 const NS='http://www.w3.org/2000/svg';
 function drawBoard(svg,fen,from,to){
   while(svg.firstChild) svg.removeChild(svg.firstChild);

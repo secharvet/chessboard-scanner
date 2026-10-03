@@ -51,7 +51,7 @@ describe('dominer une couleur', () => {
     const { scanLine } = await import('../coach/plan-concepts.mjs');
     const fen = 'r4rk1/p1q2pb1/1p5p/4p1p1/1nP1N3/4BQ2/PP3PPP/R2R2K1 w - - 2 19';
     const s = scanLine(fen, ['e4f6', 'g7f6', 'f3f6', 'c7c4', 'd1d2', 'c4c6', 'f6f3', 'c6e6', 'a1d1', 'a7a5', 'h2h4', 'g5h4'], 12);
-    assert.equal(s.dominer_w, 2);
+    assert.equal(s.dominer_w, 0); // daté à l'offre Cf6+ (vérité de terrain du 2 octobre : « le vrai coup clé est Cd6+ »)
     assert.equal(s.dominer_couleur_w, 'noires');
     assert.equal(s.dominer_exploite_w, -1); // pas encore exploité dans cette suite
   });
@@ -60,7 +60,7 @@ describe('dominer une couleur', () => {
     const fen = 'r4rk1/p1q2pb1/1p5p/4p1p1/1nP1N3/4BQ2/PP3PPP/R2R2K1 w - - 2 19';
     // Cf6+ Fxf6 Dxf6 Dxc4 Dxh6 Dc6 Dxg5+ : la dame donne échec sur une case noire, mon fou noir reste.
     const s = scanLine(fen, ['e4f6', 'g7f6', 'f3f6', 'c7c4', 'f6h6', 'c4c6', 'h6g5', 'g8h7', 'g5h4', 'h7g8', 'd1d3', 'c6c2'], 12);
-    assert.equal(s.dominer_w, 2);
+    assert.equal(s.dominer_w, 0); // daté à l'offre Cf6+ (vérité de terrain du 2 octobre : « le vrai coup clé est Cd6+ »)
     assert.equal(s.dominer_exploite_w, 6);
   });
   it('ne compte pas quand l\'adversaire donne son fou de lui-même et que je ne fais que reprendre', async () => {

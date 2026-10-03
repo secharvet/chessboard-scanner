@@ -19,6 +19,7 @@ import { Chess } from 'chess.js';
 import { buildAllFacts } from '../positional/index.js';
 import { toFrenchSan } from '../coach/notation.mjs';
 import { blocked, scanLine } from '../coach/plan-concepts.mjs';
+import { squareColor } from '../positional/attack-map.js';
 
 const args = process.argv.slice(2);
 const opt = (k, d) => (args.includes(k) ? args[args.indexOf(k) + 1] : d);
@@ -99,7 +100,17 @@ for await (const line of createInterface({ input: createReadStream(IN), crlfDela
       if (m.captured === 'b' && !realised.has(`dominer_${side}`) && trap.dominer.length < POOL
         && !has(factsAfter, 'COMPLEXE_FAIBLE', opp, (t) => t.params.enemyBishop)) {
         const prev = r.played[i - 1];
-        if (!(prev && prev.slice(2, 4) === m.to)) trap.dominer.push(sample(r, side, i, { kind: 'piège', raison: 'prend le fou adverse, mais aucun complexe de cases faible n\'apparaît chez l\'adversaire' }));
+        if (!(prev && prev.slice(2, 4) === m.to)) {
+          // Raison lue sur la position une fois l'échange terminé (règles de l'auteur du 2 octobre).
+          const shade = squareColor(m.to);
+          const d2 = new Chess(c.fen()); let k = i + 1; const nx = r.played.slice(i + 1, i + 3);
+          for (const u of nx) { try { const mm = d2.move({ from: u.slice(0, 2), to: u.slice(2, 4), promotion: u[4] }); if (!(mm.captured && mm.to === m.to)) break; } catch { break; } }
+          const myB = d2.board().flat().some((q) => q && q.type === 'b' && q.color === side && squareColor(q.square) === shade);
+          const hisB = d2.board().flat().some((q) => q && q.type === 'b' && q.color === opp && squareColor(q.square) === shade);
+          const raison = !myB ? `prend le fou adverse, mais une fois l'échange terminé ce camp n'a plus de fou de cases ${shade} non plus : simple échange de fous`
+            : hisB ? `prend un fou adverse, mais l'adversaire garde un fou de cases ${shade}` : `prend le fou adverse en gardant le sien, mais aucun complexe de cases ${shade} faible n'apparaît chez l'adversaire`;
+          trap.dominer.push(sample(r, side, i, { kind: 'piège', raison }));
+        }
       }
       continue;
     }

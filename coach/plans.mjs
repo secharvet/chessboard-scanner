@@ -89,7 +89,9 @@ function describe(concept, side, scan, best, fen) {
     }
     case 'dominer': {
       const ex = scan[`dominer_exploite_${side}`];
-      Object.assign(plan, { shade: scan[`dominer_couleur_${side}`], exploit: ex >= 0 ? san(ex) : null });
+      // Daté à l'offre quand je force l'échange (Cf6+ Fxf6 Dxf6) : la prise effective est deux demi-coups plus loin.
+      const cap = best.moves[ply]?.captured === 'b' ? null : san(ply + 2);
+      Object.assign(plan, { shade: scan[`dominer_couleur_${side}`], exploit: ex >= 0 ? san(ex) : null, capture: cap });
       break;
     }
     default:
@@ -134,8 +136,8 @@ export function planSentence(p, who = 'me') {
         : `affaiblir ta structure par ${how}${w ? ` (${w} pour toi)` : ''}`;
     }
     case 'dominer':
-      return me ? `échange son fou des cases ${p.shade} par ${p.move} en gardant le tien : il est faible sur ces cases${p.exploit ? `, puis ${p.exploit}` : ''}`
-        : `échanger ton fou des cases ${p.shade} par ${p.move} pour dominer ces cases`;
+      return me ? `${p.capture ? `force l'échange de son fou des cases ${p.shade} par ${p.move} (puis ${p.capture})` : `échange son fou des cases ${p.shade} par ${p.move}`} en gardant le tien : il est faible sur ces cases${p.exploit ? `, puis ${p.exploit}` : ''}`
+        : `${p.capture ? `forcer l'échange de ton fou des cases ${p.shade} par ${p.move}` : `échanger ton fou des cases ${p.shade} par ${p.move}`} pour dominer ces cases`;
     default:
       return '';
   }

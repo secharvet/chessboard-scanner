@@ -15,11 +15,12 @@ describe('detectPlans', () => {
     const plans = detectPlans({ fen, lines: [{ pv: best, score: cp(300) }, { pv: quiet, score: cp(90) }, { pv: quiet, score: cp(80) }] });
     const p = plans.w.find((x) => x.concept === 'dominer');
     assert.ok(p, 'plan dominer attendu');
-    assert.equal(p.move, 'Dxf6');
+    assert.equal(p.move, 'Cf6+');
+    assert.equal(p.capture, 'Dxf6');
     assert.equal(p.shade, 'noires');
     assert.equal(p.exploit, 'Dxg5+');
-    assert.match(planSentence(p, 'me'), /^échange son fou des cases noires par Dxf6 en gardant le tien : il est faible sur ces cases, puis Dxg5\+$/);
-    assert.match(planSentence(p, 'opp'), /^échanger ton fou des cases noires par Dxf6/);
+    assert.match(planSentence(p, 'me'), /^force l'échange de son fou des cases noires par Cf6\+ \(puis Dxf6\) en gardant le tien : il est faible sur ces cases, puis Dxg5\+$/);
+    assert.match(planSentence(p, 'opp'), /^forcer l'échange de ton fou des cases noires par Cf6\+/);
   });
   it('sans contraste (les autres suites valent autant), pas de plan', () => {
     const plans = detectPlans({ fen, lines: [{ pv: best, score: cp(300) }, { pv: quiet, score: cp(290) }, { pv: quiet, score: cp(285) }] });

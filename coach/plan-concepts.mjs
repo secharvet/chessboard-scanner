@@ -385,28 +385,48 @@ export function scanLine(fen, pv, PLIES = 48) {
     out[`affaiblir_avant_roque_${color}`] = ply >= 0 && wing ? castling.includes(rights[wing]) : false;
   }
 
-  // Dominer une couleur (plan à étages) : le camp PREND le fou adverse de la couleur S sur laquelle l'adversaire
-  // est faible (au moins deux trous de cette couleur), en gardant son propre fou de S. Le fait COMPLEXE_FAIBLE
-  // adverse « avec fou ennemi » apparaît à l'instant où son fou disparaît, et doit tenir HOLD demi-coups. Le
-  // moyen est un échange (la suite calme l'admet) ; l'exploitation (pièces et attaque sur S) viendra ensuite.
-  // Agentivité : c'est MOI qui provoque l'échange. Ma prise du fou compte si elle n'est pas une reprise, ou si
-  // elle reprend un échange que j'ai offert (mon coup précédent a posé la pièce que son fou vient de prendre :
-  // Cf6+ Fxf6 Dxf6). Reprendre après que l'adversaire a lui-même donné son fou n'est pas mon plan.
+  // Dominer une couleur (plan à étages ; règles de l'auteur, vérité de terrain du 2 octobre, 2 justes sur 10 avant) :
+  //  1. la position se juge une fois l'échange TERMINÉ (plus de prise sur la case dans les deux demi-coups qui
+  //     suivent, échanges intercalés compris) ;
+  //  2. après l'échange, j'ai encore un fou de la couleur S et l'adversaire n'en a plus ;
+  //  3. c'est MOI qui prends son fou : ma prise n'est pas une reprise, sauf si elle reprend une pièce que j'ai
+  //     offerte (Cd6+ Fxd6 exd6) ; le plan est alors daté à l'offre, l'initiative ; une prise forcée par un échec
+  //     adverse n'est pas mon plan ;
+  //  4. mon fou conservé n'est pas un mauvais fou (fait FOU_MAUVAIS, ou au moins trois quarts de mes pions sur sa couleur) ;
+  //  5. il est encore sur l'échiquier au bout de la tenue ;
+  //  et le complexe de cases S adverse est faible (COMPLEXE_FAIBLE « avec fou ennemi »), apparu avec l'échange et tenu.
   for (const color of COLORS) {
     const opp = color === 'w' ? 'b' : 'w';
     const dominated = (snap, shade) => snap.facts.some((t) => t.id === 'COMPLEXE_FAIBLE' && t.params.color === opp && t.params.shade === shade && t.params.enemyBishop);
     const offered = (i) => moves[i - 1]?.captured && moves[i - 1].to === moves[i].to
       && moves[i - 1].piece === 'b' && moves[i - 2]?.color === color && !moves[i - 2].captured && moves[i - 2].to === moves[i].to;
     const recapture = (i) => Boolean(moves[i - 1]?.captured && moves[i - 1].to === moves[i].to);
+    const forcedByCheck = (i) => Boolean(moves[i - 1]?.san.includes('+'));
+    const bishopsOf = (board, c, shade) => board.board().flat().filter((q) => q && q.type === 'b' && q.color === c && squareColor(q.square) === shade);
+    const pawnsOnShade = (board, c, shade) => { const ps = board.board().flat().filter((q) => q && q.type === 'p' && q.color === c); return ps.length ? ps.filter((q) => squareColor(q.square) === shade).length / ps.length : 0; };
     let ply = -1;
     let shadeOut = null;
     for (let i = 0; i < moves.length && ply < 0; i++) {
       const m = moves[i];
       if (m.color !== color || m.captured !== 'b') continue;
       if (recapture(i) && !offered(i)) continue;
+      if (forcedByCheck(i)) continue;
       const shade = squareColor(m.to);
       if (dominated(start, shade)) continue; // déjà établi au départ
-      if (holds(i, (s) => dominated(s, shade))) { ply = i; shadeOut = shade; }
+      // Règle 1 : fin de l'échange sur cette case.
+      let end = i;
+      while (end + 2 < moves.length && (moves[end + 1].captured || moves[end + 2].captured) && (moves[end + 1].to === m.to || moves[end + 2].to === m.to)) end += (moves[end + 1].captured && moves[end + 1].to === m.to) ? 1 : 2;
+      const after = timeline[end].board;
+      // Règles 2, 4, 5.
+      const mine = bishopsOf(after, color, shade);
+      if (!mine.length || bishopsOf(after, opp, shade).length) continue;
+      // Règle 4 : le fait FOU_MAUVAIS (pions centraux fixés sur sa couleur), ou presque tous mes pions sur sa couleur.
+      // Le seuil « la moitié » proposé par l'auteur rejetait sa propre planche 6 (4 pions blancs sur 7 en cases claires).
+      const bad = timeline[end].facts.some((t) => t.id === 'FOU_MAUVAIS' && t.params.color === color && mine.some((q) => q.square === t.params.square));
+      if (bad || pawnsOnShade(after, color, shade) >= 0.75) continue;
+      const last = timeline[Math.min(end + HOLD, timeline.length - 1)].board;
+      if (!bishopsOf(last, color, shade).length) continue;
+      if (holds(end, (s) => dominated(s, shade))) { ply = offered(i) ? i - 2 : i; shadeOut = shade; }
     }
     out[`dominer_${color}`] = ply;
     out[`dominer_couleur_${color}`] = shadeOut;
