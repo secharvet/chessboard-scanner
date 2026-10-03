@@ -21,7 +21,9 @@ import { UciEngine } from '../coach/uci-engine.mjs';
 const args = process.argv.slice(2);
 const opt = (k, d) => (args.includes(k) ? args[args.indexOf(k) + 1] : d);
 const DEPTH = Number(opt('--depth', 12));
-const WORKERS = Number(opt('--workers', 14));
+import os from 'node:os';
+// Par défaut, les cœurs de la machine moins deux (DENEB 16 → 14, VPS 4 → 2 : le coach garde sa place).
+const WORKERS = Number(opt('--workers', Math.max(2, os.cpus().length - 2)));
 const inputs = args.filter((a, i) => !a.startsWith('--') && !['--depth', '--workers'].includes(args[i - 1]));
 
 /** Espérance de score (0 à 100) depuis des centipions, formule de Lichess (spec §4.2). */
@@ -88,12 +90,15 @@ async function judgeRecord(engine, r, out) {
 }
 
 for (const input of inputs) {
-  const out = input.replace(/\.jsonl$/, '.juge.jsonl');
-  const done = new Set();
+  // Étiquettes recalculées (`.v3.jsonl`) : le jugement reste le compagnon du fichier d'ORIGINE (comme build-dataset).
+  const out = input.replace(/(\.v\d+)?\.jsonl$/, '.juge.jsonl');
+  // Reprise par PLAN et non par position : une position déjà jugée mais dont un plan a été ajouté ou déplacé au
+  // recalcul (`stale`) est rejugée ; le nouvel enregistrement remplace l'ancien à la lecture (dernier écrit gagne).
+  const done = new Map();
   if (existsSync(out)) {
     for (const l of readFileSync(out, 'utf8').split('\n')) {
       if (!l) continue;
-      try { const j = JSON.parse(l); done.add(`${j.game}:${j.ply}`); } catch { /* ligne tronquée (arrêt brutal) : rejugée */ }
+      try { const j = JSON.parse(l); done.set(`${j.game}:${j.ply}`, new Set(j.plans.map((p) => `${p.concept}:${p.side}:${p.appear}`))); } catch { /* ligne tronquée (arrêt brutal) : rejugée */ }
     }
   }
   console.error(`${input} → ${out} (${done.size} déjà jugées)`);
@@ -109,7 +114,8 @@ for (const input of inputs) {
       if (end) return;
       if (!value) continue;
       const r = JSON.parse(value);
-      if (done.has(`${r.game}:${r.ply}`)) continue;
+      const had = done.get(`${r.game}:${r.ply}`);
+      if (had && (r.plans ?? []).filter((p) => p.quiet && p.appear < 12).every((p) => had.has(`${p.concept}:${p.side}:${p.appear}`))) continue;
       await judgeRecord(engine, r, out);
     }
   }));

@@ -114,10 +114,14 @@ for await (const line of createInterface({ input: createReadStream(IN), crlfDela
       }
       continue;
     }
-    if (m.piece === 'r' && !realised.has(`tour_colonne_${side}`) && trap.tour_colonne.length < POOL
-      && !has(factsAfter, 'TOUR_COLONNE_OUVERTE', side, (t) => t.params.square === m.to)
+    if (m.piece === 'r' && !realised.has(`tour_colonne_${side}`) && !realised.has(`tour_colonne_semi_ouverte_${side}`) && trap.tour_colonne.length < POOL
       && factsBefore.some((t) => t.id === 'TOUR_COLONNE_OUVERTE' || t.id === 'COLONNE_OUVERTE' || t.id === 'COLONNE_SEMI_OUVERTE')) {
-      trap.tour_colonne.push(sample(r, side, i, { kind: 'piège', raison: `la tour va en ${m.to}, sur une colonne qui n'est pas ouverte pour ce camp` }));
+      const t = factsAfter.find((t) => t.id === 'TOUR_COLONNE_OUVERTE' && t.params.color === side && t.params.square === m.to);
+      const doubled = c.board().flat().some((q) => q && q.type === 'r' && q.color === side && q.square !== m.to && q.square[0] === m.to[0]);
+      const raison = !t ? `la tour va en ${m.to}, sur une colonne qui n'est ni ouverte ni semi-ouverte pour ce camp`
+        : t.params.disputee ? `la tour va en ${m.to}, sur une colonne ${t.params.ouverte ? 'ouverte' : 'semi-ouverte'} déjà tenue par une tour adverse : colonne disputée, pas conquise`
+          : doubled ? `la tour rejoint en ${m.to} une tour déjà sur la colonne : c'est un doublement, pas une prise de colonne` : null;
+      if (raison) trap.tour_colonne.push(sample(r, side, i, { kind: 'piège', raison }));
     }
     if (m.piece === 'n' && rel >= 4 && !realised.has(`cavalier_avant_poste_${side}`) && trap.cavalier_avant_poste.length < POOL
       && !has(factsAfter, 'CAVALIER_AVANT_POSTE', side, (t) => t.params.square === m.to)) {

@@ -56,7 +56,7 @@ for await (const line of createInterface({ input: createReadStream(IN), crlfDela
     const q = quietReason(r.fen, r.played, f.appear, f.concept);
     plans.push({ ...f, quiet: q === null, quietReason: q, stale: true });
   }
-  out.write(`${JSON.stringify({ ...r, plans, rules: '2026-10-01' })}\n`);
+  out.write(`${JSON.stringify({ ...r, plans, rules: '2026-10-02' })}\n`);
   if (stats.records % 20000 === 0) console.log(`${stats.records} enregistrements, ${Math.round((Date.now() - t0) / 1000)} s`);
 }
 out.end();

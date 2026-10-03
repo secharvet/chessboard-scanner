@@ -38,7 +38,10 @@ export const zoneAttackers = (board, color) => {
   return set.size;
 };
 export const CONCEPTS = {
-  tour_colonne: (facts, color) => has(facts, 'TOUR_COLONNE_OUVERTE', color),
+  // A1 / A1 bis (définitions de l'auteur, 1er octobre) : colonne OUVERTE (aucun pion) ou SEMI-OUVERTE pour moi (un seul
+  // pion, à l'adversaire), non disputée par une tour adverse ; le doublement est A2, pas ici.
+  tour_colonne: (facts, color) => has(facts, 'TOUR_COLONNE_OUVERTE', color, (t) => t.params.ouverte && !t.params.disputee),
+  tour_colonne_semi_ouverte: (facts, color) => has(facts, 'TOUR_COLONNE_OUVERTE', color, (t) => !t.params.ouverte && !t.params.disputee),
   cavalier_avant_poste: (facts, color) => has(facts, 'CAVALIER_AVANT_POSTE', color),
   // ── Lot 1 du catalogue (docs/CATALOGUE-CONCEPTS.md, 1er octobre) : pièces lourdes et pion passé ──
   // A2 Doublement des tours : deux de mes tours sur une même colonne ouverte ou semi-ouverte pour moi.
@@ -190,7 +193,10 @@ const openFiles = (facts, color) => new Set(facts
  * série d'échanges, ne sont pas des plans (relecture des planches, septembre 2026).
  */
 const AGENT = {
-  tour_colonne: (m, snap, color) => m.piece === 'r' && snap.facts.some((t) => t.id === 'TOUR_COLONNE_OUVERTE' && t.params.color === color && t.params.square === m.to),
+  tour_colonne: (m, snap, color) => m.piece === 'r' && !myRooks(snap.board, color).some((r) => r.square !== m.to && r.square[0] === m.to[0])
+    && snap.facts.some((t) => t.id === 'TOUR_COLONNE_OUVERTE' && t.params.color === color && t.params.square === m.to && t.params.ouverte && !t.params.disputee),
+  tour_colonne_semi_ouverte: (m, snap, color) => m.piece === 'r' && !myRooks(snap.board, color).some((r) => r.square !== m.to && r.square[0] === m.to[0])
+    && snap.facts.some((t) => t.id === 'TOUR_COLONNE_OUVERTE' && t.params.color === color && t.params.square === m.to && !t.params.ouverte && !t.params.disputee),
   cavalier_avant_poste: (m, snap, color) => m.piece === 'n' && snap.facts.some((t) => t.id === 'CAVALIER_AVANT_POSTE' && t.params.color === color && t.params.square === m.to),
   blocage: (m, snap, color) => {
     if (m.piece !== 'n' && m.piece !== 'b') return false;
@@ -511,7 +517,7 @@ export function quietReason(fen, pv, ply, concept) {
   for (let i = 0; i <= endOfExchange; i++) {
     if (quiet(i) && mat[i] !== start) return 'matériel changé (tactique)';
   }
-  if (concept === 'tour_colonne' && moves[ply].san.startsWith('O-O')) return 'apparaît par un roque';
+  if ((concept === 'tour_colonne' || concept === 'tour_colonne_semi_ouverte') && moves[ply].san.startsWith('O-O')) return 'apparaît par un roque';
   return null;
 }
 

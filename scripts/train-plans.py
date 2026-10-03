@@ -109,7 +109,7 @@ DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('dataset')
-    ap.add_argument('--concepts', default='tour_colonne,rupture,affaiblir,blocage,cavalier_avant_poste,dominer,baionnette')
+    ap.add_argument('--concepts', default='tour_colonne,tour_colonne_semi_ouverte,rupture,affaiblir,blocage,cavalier_avant_poste,dominer,baionnette')
     ap.add_argument('--epochs', type=int, default=8)
     ap.add_argument('--threads', type=int, default=2)
     ap.add_argument('--out', default='reports/train-plans.json')

@@ -77,9 +77,12 @@ export function buildMinorPiecesFacts(fen) {
     }
 
     // TOUR_COLONNE_OUVERTE
+    // `ouverte` : aucun pion (sinon semi-ouverte pour moi) ; `disputee` : une tour adverse tient déjà la colonne
+    // (vérité de terrain du 1er octobre : « une colonne semi-ouverte défendue par la tour e8 n'est pas conquise »).
+    const enemyRooks = pieces.filter((p) => p.type === 'r' && p.color !== color);
     for (const r of rooks) {
       if (openSet.has(r.file) || semiOpenFor[r.file]?.has(color)) {
-        out.push(token('TOUR_COLONNE_OUVERTE', { square: r.square, color }));
+        out.push(token('TOUR_COLONNE_OUVERTE', { square: r.square, color, ouverte: openSet.has(r.file), disputee: enemyRooks.some((e) => e.file === r.file) }));
       }
     }
   }

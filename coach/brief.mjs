@@ -287,7 +287,10 @@ export function buildBrief(data) {
       const end = steps[Math.min(steps.length, 4) - 1].fen;
       // Un pion qui avance reste le même pion : on l'identifie par sa colonne, pas par sa case.
       const key = (t) => (t.id.startsWith('PION_') && typeof t.params.square === 'string'
-        ? `${t.id}|${t.params.color}|${t.params.square[0]}` : `${t.id}|${JSON.stringify(t.params)}`);
+        ? `${t.id}|${t.params.color}|${t.params.square[0]}`
+        // La tour sur colonne porte des drapeaux volatils (colonne disputée par une tour adverse qui bouge) : la preuve
+        // « apparaît tôt et tient » se fait sur la tour et sa case, pas sur ces drapeaux (banc du 2 octobre).
+        : t.id === 'TOUR_COLONNE_OUVERTE' ? `${t.id}|${t.params.color}|${t.params.square}` : `${t.id}|${JSON.stringify(t.params)}`);
       const before = new Set(buildAllFacts(data.fen).map(key));
       // Par ordre d'importance pour expliquer un plan ; pas de « case faible » isolée (trop vague).
       // Pas de mobilité chiffrée (volatile, et les nombres changent d'un demi-coup à l'autre : banc de milieux, 30 sept.).
@@ -362,7 +365,7 @@ export function buildBrief(data) {
       for (const [t, o, sq] of verified.pieceRefs) pieces.add(`${t}|${o === me ? 'me' : 'opp'}|${sq}`);
       first = planSentence(verified, 'me');
     }
-    const steps3 = [first, ...planSteps(data, me, opp, pieces, items, { skipRook: verified?.concept === 'tour_colonne', verifiedTo: verified?.to ?? null })].filter(Boolean).slice(0, 3);
+    const steps3 = [first, ...planSteps(data, me, opp, pieces, items, { skipRook: verified?.concept === 'tour_colonne' || verified?.concept === 'tour_colonne_semi_ouverte', verifiedTo: verified?.to ?? null })].filter(Boolean).slice(0, 3);
     if (steps3.length) {
       items.push({ kind: 'plan_steps', steps: steps3 });
       const [s1, s2, s3] = steps3;
@@ -455,13 +458,13 @@ function allFactsForIntent(data) {
 
 /** Noms des plans pour les phrases d'intention (tutoiement pour l'élève, tournure neutre pour l'adversaire). */
 const INTENT = {
-  tour_colonne: 'mettre une tour sur la colonne ouverte', cavalier_avant_poste: 'installer un cavalier sur un avant-poste',
+  tour_colonne: 'mettre une tour sur la colonne ouverte', tour_colonne_semi_ouverte: 'mettre une tour sur la colonne semi-ouverte', cavalier_avant_poste: 'installer un cavalier sur un avant-poste',
   blocage: 'bloquer un pion faible adverse', rupture: 'préparer une rupture de pions', affaiblir: 'affaiblir la structure adverse',
   dominer: 'échanger le fou adverse pour dominer une couleur de cases', attaque_minorite: 'lancer une attaque de minorité',
   baionnette: 'pousser h4-h5 contre le fianchetto',
 };
 const INTENT_OPP = {
-  tour_colonne: 'une tour sur la colonne ouverte', cavalier_avant_poste: 'un cavalier sur un avant-poste',
+  tour_colonne: 'une tour sur la colonne ouverte', tour_colonne_semi_ouverte: 'une tour sur la colonne semi-ouverte', cavalier_avant_poste: 'un cavalier sur un avant-poste',
   blocage: 'le blocage d\'un de tes pions faibles', rupture: 'une rupture de pions', affaiblir: 'un affaiblissement de ta structure',
   dominer: 'l\'échange de ton fou pour dominer une couleur', attaque_minorite: 'une attaque de minorité', baionnette: 'la poussée h4-h5 contre ton fianchetto',
 };

@@ -10,7 +10,7 @@ import { buildAllFacts } from '../positional/index.js';
 import { planLabel, scanLine } from './plan-concepts.mjs';
 import { toFrenchSan } from './notation.mjs';
 
-const CONCEPTS = ['rupture', 'affaiblir', 'dominer', 'cavalier_avant_poste', 'blocage', 'tour_colonne'];
+const CONCEPTS = ['rupture', 'affaiblir', 'dominer', 'cavalier_avant_poste', 'blocage', 'tour_colonne', 'tour_colonne_semi_ouverte'];
 const toCp = (s) => (s.type === 'mate' ? (s.value > 0 ? 10000 - s.value : -10000 - s.value) : s.value);
 const NAME = { n: 'cavalier', b: 'fou', r: 'tour', q: 'dame', k: 'roi', p: 'pion' };
 
@@ -58,8 +58,9 @@ function describe(concept, side, scan, best, fen) {
   const plan = { concept, side, ply, move: san(ply), to: m.to, pieceRefs: [] };
   const opp = side === 'w' ? 'b' : 'w';
   switch (concept) {
-    case 'tour_colonne': {
-      const open = buildAllFacts(best.fens[ply]).some((t) => t.id === 'COLONNE_OUVERTE' && String(t.params.file) === m.to[0]);
+    case 'tour_colonne':
+    case 'tour_colonne_semi_ouverte': {
+      const open = concept === 'tour_colonne';
       Object.assign(plan, { file: m.to[0], open });
       plan.pieceRefs.push(['r', side, m.to]);
       break;
@@ -118,6 +119,7 @@ export function planSentence(p, who = 'me') {
   const me = who === 'me';
   switch (p.concept) {
     case 'tour_colonne':
+    case 'tour_colonne_semi_ouverte':
       return me ? `amène ta tour en ${p.to} : la colonne ${p.file} est ${p.open ? 'ouverte' : 'semi-ouverte'}`
         : `mettre sa tour en ${p.to}, sur la colonne ${p.file} ${p.open ? 'ouverte' : 'semi-ouverte'}`;
     case 'cavalier_avant_poste':

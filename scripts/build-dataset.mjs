@@ -35,7 +35,7 @@ const SEUIL_MOY = Number(args.includes('--seuil-moyenne') ? args[args.indexOf('-
 const SEUIL_PIRE = Number(args.includes('--seuil-pire') ? args[args.indexOf('--seuil-pire') + 1] : 20);
 const optNames = ['--out', '--seuil-moyenne', '--seuil-pire'];
 const inputs = args.filter((a, i) => !a.startsWith('--') && !optNames.includes(args[i - 1]));
-const CONCEPTS = ['tour_colonne', 'cavalier_avant_poste', 'blocage', 'rupture', 'affaiblir', 'dominer', 'attaque_minorite', 'baionnette'];
+const CONCEPTS = ['tour_colonne', 'tour_colonne_semi_ouverte', 'cavalier_avant_poste', 'blocage', 'rupture', 'affaiblir', 'dominer', 'attaque_minorite', 'baionnette'];
 
 writeFileSync(OUT, '');
 const seen = new Set();
@@ -80,7 +80,9 @@ for (const file of inputs) {
         const p = r.plans.find((x) => x.concept === c && x.side === side);
         // Règle du prix (§9) : le plan doit apparaître tôt pour être attribué à CETTE position ; plus tard, ambigu.
         // Plan déplacé ou nouveau au recalcul (`stale`) : son jugement d'exécution est périmé → ambigu, pas un exemple.
-        v = !p ? 0 : p.stale ? null : p.quiet && p.appear < 12 ? 1 : null;
+        // Sauf s'il a été rejugé depuis (jugement au même demi-coup d'apparition) : il redevient un exemple (2 octobre).
+        const rejuge = p?.stale && JUGE && jugements?.[`${c}_${side}`]?.appear === p.appear;
+        v = !p ? 0 : (p.stale && !rejuge) ? null : p.quiet && p.appear < 12 ? 1 : null;
         if (p) traj[`${c}_${side}`] = { appear: p.appear, quiet: p.quiet, ...p.deltas };
         // « Réalisé ET bien joué » (§4.2) : le positif doit passer les deux seuils du jugement d'exécution.
         if (JUGE && v === 1) {

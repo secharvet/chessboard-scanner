@@ -60,7 +60,8 @@ export function ingredientsPresent(concept, facts, side, pieces) {
   const opp = side === 'w' ? 'b' : 'w';
   const has = (id, color) => facts.some((t) => t.id === id && (color === '-' ? t.params.color === undefined : t.params.color === color));
   switch (concept) {
-    case 'tour_colonne': return pieces.r > 0 && (has('COLONNE_OUVERTE', '-') || has('COLONNE_SEMI_OUVERTE', side));
+    case 'tour_colonne':
+    case 'tour_colonne_semi_ouverte': return pieces.r > 0 && (has('COLONNE_OUVERTE', '-') || has('COLONNE_SEMI_OUVERTE', side));
     case 'rupture': return has('LEVIER_DISPONIBLE', side);
     case 'cavalier_avant_poste': return pieces.n > 0 && has('ROUTE_CAVALIER', side);
     case 'blocage': return pieces.n + pieces.b > 0 && (has('ROUTE_CAVALIER', side) || ['PION_ISOLE', 'PION_ARRIERE', 'PION_FAIBLE', 'PION_PASSE'].some((id) => has(id, opp)));
@@ -123,7 +124,8 @@ export function concreteIntention(concept, facts, side, who = 'me', fen = null) 
       if (!shade) return null;
       return { text: me ? `échange son fou des cases ${shade} en gardant le tien : il est faible sur ces cases` : `l'échange de ton fou des cases ${shade}`, squares: [], captureBishopShade: shade };
     }
-    case 'tour_colonne': {
+    case 'tour_colonne':
+    case 'tour_colonne_semi_ouverte': {
       const f = of('COLONNE_OUVERTE', '-')[0] ?? of('COLONNE_SEMI_OUVERTE', side)[0];
       if (!f) return null;
       const kind = f.id === 'COLONNE_OUVERTE' ? 'ouverte' : 'semi-ouverte';
