@@ -18,7 +18,7 @@ import { crc32 } from 'node:zlib';
 import { Chess } from 'chess.js';
 import { buildAllFacts } from '../positional/index.js';
 import { toFrenchSan } from '../coach/notation.mjs';
-import { blocked } from '../coach/plan-concepts.mjs';
+import { blocked, scanLine } from '../coach/plan-concepts.mjs';
 
 const args = process.argv.slice(2);
 const opt = (k, d) => (args.includes(k) ? args[args.indexOf(k) + 1] : d);
@@ -38,6 +38,14 @@ const pos = Object.fromEntries(CONCEPTS.map((c) => [c, []]));
 const trap = Object.fromEntries(CONCEPTS.map((c) => [c, []]));
 const full = () => CONCEPTS.every((c) => pos[c].length >= POOL && trap[c].length >= POOL);
 const has = (facts, id, color, pred = () => true) => facts.some((t) => t.id === id && t.params.color === color && pred(t));
+// Coup surligné d'une planche positive : le coup d'INITIATIVE du camp, jamais la reprise adverse (vérité de terrain du
+// 2 octobre) : le levier pour la rupture, la prise qui force la reprise de pion pour l'affaiblissement.
+const initiative = (r, p) => {
+  if (p.concept !== 'rupture' && p.concept !== 'affaiblir') return p.appear;
+  const scan = scanLine(r.fen, r.played, r.played.length);
+  const k = p.concept === 'rupture' ? scan[`rupture_levier_${p.side}`] : (scan[`affaiblir_levier_${p.side}`] >= 0 ? scan[`affaiblir_levier_${p.side}`] : scan[`affaiblir_${p.side}`]);
+  return typeof k === 'number' && k >= 0 ? k : p.appear;
+};
 const front = (sq, color) => `${sq[0]}${Number(sq[1]) + (color === 'w' ? 1 : -1)}`;
 
 const seenGame = new Set(); // une planche par partie et par concept : deux fenêtres voisines montrent le même coup
@@ -62,7 +70,7 @@ for await (const line of createInterface({ input: createReadStream(IN), crlfDela
     if (!CONCEPTS.includes(p.concept) || !p.quiet || p.stale || !(p.appear < 12)) continue;
     const j = jp.find((x) => x.concept === p.concept && x.side === p.side);
     if (!j || typeof j.perteMoyenne !== 'number' || j.perteMoyenne > 10 || j.pertePire > 20) continue;
-    if (pos[p.concept].length < POOL && !seenGame.has(`${p.concept}:${r.game}`)) { seenGame.add(`${p.concept}:${r.game}`); pos[p.concept].push(sample(r, p.side, p.appear, { kind: 'positif', perteMoyenne: j.perteMoyenne, pertePire: j.pertePire })); }
+    if (pos[p.concept].length < POOL && !seenGame.has(`${p.concept}:${r.game}`)) { seenGame.add(`${p.concept}:${r.game}`); pos[p.concept].push(sample(r, p.side, initiative(r, p), { kind: 'positif', perteMoyenne: j.perteMoyenne, pertePire: j.pertePire })); }
   }
   // Pièges : rejouer les 12 premiers demi-coups.
   const realised = new Set((r.plans ?? []).filter((p) => p.quiet).map((p) => `${p.concept}_${p.side}`));

@@ -990,3 +990,22 @@ parade ; ordre désormais : moyen de structure → parade → menace / pression 
 `inventaire-coups-*.md` ont été comptés avec l'ancien ordre : la part « défense : sauve » y est sous-estimée.
 Autre observation du tirage : le classeur ne distingue pas « échec donné » et « coup calme avec échec dans la suite »
 (sans effet ici).
+
+## 2 octobre, 18 h 00 — vérité de terrain : rupture et affaiblissement
+
+**Affaiblissement : 0 accord sur 10, inversion parfaite, et ce n'est pas une erreur de l'auteur.** Les cinq positifs
+surlignaient la **reprise de pion de l'adversaire** (bxc3, exd5, axb5, fxg3, exf5) : le programme datait le plan au
+moment où la faiblesse apparaît, donc au coup adverse ; l'auteur juge le coup surligné et répond non. Les cinq pièges
+surlignaient la prise du camp (Fxh6, Txe5, Fxf4, Fxe4, Fxc3+), qui crée bel et bien des pions doublés ou isolés :
+l'auteur répond oui, et il a raison ; la raison écrite par le tirage (« aucune faiblesse nouvelle ne tient ») était
+fausse pour quatre d'entre eux (le tirage traitait comme pièges les échanges que le pipeline d'étiquettes avait
+écartés pour d'autres motifs, dont le changement de matériel). Correction (`scanLine`) : le plan par échange est daté
+à la prise du camp ; la fiche (`plans.mjs`) compensait déjà, elle ne change pas (banc de 40 rejoué : 0 fiche
+différente). Règle d'attribution écrite au catalogue, confirmée par l'auteur.
+**Rupture : 6 accords sur 10.** Positifs 1, 2, 3, 8 acceptés ; positif 9 refusé : le coup surligné était la reprise
+axb3, pas la rupture …cxb3 (même cause). Pièges 6, 7 et 10 acceptés : l'auteur appelle rupture le levier qui attaque
+la structure pour ouvrir des lignes, colonnes ou diagonales, même si l'ouverture n'arrive pas dans la fenêtre ; piège 4
+refusé (le pion attaqué avance et contourne le levier). Planches 5 et 7 : le même coup f5 de la même partie, tiré deux
+fois ; réponses non puis oui avec commentaire, on retient la réponse commentée. Définition de la rupture à trancher
+avec l'auteur avant de toucher au code. Tirage : les prochaines planches positives surlignent le coup d'initiative
+(levier, ou prise qui force la reprise).

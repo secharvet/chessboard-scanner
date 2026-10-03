@@ -52,8 +52,8 @@ comme un grand maître*, 1971), Vuković (*L'art de l'attaque*, 1965), Soltis (*
 
 | # | Concept | Source | Niveau | Moyen | Déséquilibre | Exploitation | Piège | Faits | Statut |
 |---|---|---|---|---|---|---|---|---|---|
-| C1 | Rupture de pions | Kmoch, leviers | inter. | levier de pion | colonne nouvelle ouverte ou semi-ouverte pour moi, utilisée (tour) ou faiblesse adverse nouvelle | colonne, pion passé | levier qui n'ouvre rien | COLONNE_OUVERTE, COLONNE_SEMI_OUVERTE | codé |
-| C2 | Affaiblir la structure adverse | Nimzowitsch, pions doublés | avancé | échange repris par un pion, ou levier | DOUBLON, PION_ISOLE, PION_ARRIERE ou PIONS_ROI_AFFAIBLI nouveau chez l'adversaire, et ça tient | pression sur la faiblesse | reprise de pion sans faiblesse durable | faits de pions | codé |
+| C1 | Rupture de pions | Kmoch, leviers | inter. | levier de pion | colonne nouvelle ouverte ou semi-ouverte pour moi, utilisée (tour) ou faiblesse adverse nouvelle | colonne, pion passé | levier qui n'ouvre rien | COLONNE_OUVERTE, COLONNE_SEMI_OUVERTE | codé ; **vérité de terrain du 2 octobre** : l'auteur appelle rupture le levier qui attaque la structure pour ouvrir des lignes (colonnes **ou diagonales**), même si l'ouverture n'a pas lieu dans la fenêtre (3 leviers sur 4 acceptés, refusé : le levier contourné par la poussée du pion attaqué) ; la reprise qui ouvre la colonne n'est jamais la rupture. Définition à trancher avec l'auteur avant de coder |
+| C2 | Affaiblir la structure adverse | Nimzowitsch, pions doublés | avancé | échange repris par un pion, ou levier | DOUBLON, PION_ISOLE, PION_ARRIERE ou PIONS_ROI_AFFAIBLI nouveau chez l'adversaire, et ça tient | pression sur la faiblesse | reprise de pion sans faiblesse durable | faits de pions | codé ; **attribution corrigée le 2 octobre** : le plan est daté à la prise du camp qui force la reprise de pion, jamais à la reprise adverse (5 planches sur 5 refusées pour cette seule raison) |
 | C3 | Attaque de minorité | Soltis, Carlsbad | avancé | levier b4-b5 (ou b5-b4) | pion c adverse faible ou colonne b ouverte | tours sur b et c | poussée b sans structure Carlsbad | STRUCTURE Carlsbad | codé (recette) |
 | C4 | Création du pion passé | Capablanca | inter. | levier ou échange de pions | PION_PASSE nouveau pour moi, et il tient | poussée, tour derrière | pion passé immédiatement bloqué et attaqué | PION_PASSE | lot 1 |
 | C5 | Poussée du pion passé | Nimzowitsch, « la soif d'expansion » | inter. | poussées successives | mon pion passé avance d'au moins 2 rangées dans la fenêtre | promotion, pièces adverses liées | poussée qui perd le pion | PION_PASSE | lot 1 |
@@ -140,3 +140,10 @@ Ordre de codage proposé pour le lot 1, par rendement attendu sur les coups calm
 Chaque lot : détecteur (état but, agent, tenue de 6 demi-coups, clause du piège), recalcul des étiquettes sur les deux
 machines (sans moteur), inventaire (fréquence par niveau, part des coups calmes rattachés), dix planches par concept,
 jugement humain en aveugle (page de vérité de terrain), puis seulement le jugement d'exécution par le moteur.
+
+## Règle d'attribution des plans par échange (2 octobre 2026)
+
+Un plan réalisé par un échange appartient au camp qui prend l'**initiative** : la prise qui force la reprise, ou le
+levier qui provoque le contact. La reprise, réponse forcée pour garder l'équilibre matériel, ne porte jamais le
+plan (définition de l'auteur, vérité de terrain du 2 octobre : « il ne faut pas confondre l'initiative de la rupture
+et la réaction mécanique ou structurelle qui s'ensuit »). S'applique à C1, C2, D4, B4, B5, B9, E3, E6, D7, A7.

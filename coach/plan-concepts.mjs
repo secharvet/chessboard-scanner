@@ -357,7 +357,10 @@ export function scanLine(fen, pv, PLIES = 48) {
         && (nearFile(m.from) || nearFile(m.to))) means = 'echange';
       else if (lever) means = 'poussee';
       else continue; // faiblesse sans moyen identifiable du camp : pas un plan de ce type
-      ply = i;
+      // Le plan est daté au coup du camp qui prend l'initiative, jamais à la reprise adverse (vérité de terrain du
+      // 2 octobre : les cinq planches positives surlignaient la reprise de pion de l'adversaire, refusées toutes les
+      // cinq ; l'auteur : « la reprise est la réponse forcée, elle ne porte pas le plan »).
+      ply = means === 'echange' ? i - 1 : i;
       out[`affaiblir_levier_${color}`] = means === 'poussee' ? lever[0] : -1;
       weakness = { id: t.id, square: t.params.square ?? null, file: t.params.file ?? null };
       const file = t.params.file ?? t.params.square?.[0] ?? String(t.params.files ?? '')[0];

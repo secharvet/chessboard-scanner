@@ -83,7 +83,7 @@ function describe(concept, side, scan, best, fen) {
       const w = scan[`affaiblir_faiblesse_${side}`];
       // Le coup qui crée la faiblesse : ma prise qui force la reprise de pion (échange), ou le levier lié.
       const leverPly = scan[`affaiblir_levier_${side}`] ?? -1;
-      Object.assign(plan, { means, weakness: w, beforeCastle: scan[`affaiblir_avant_roque_${side}`], move: san(means === 'poussee' && leverPly >= 0 ? leverPly : ply - 1) ?? plan.move });
+      Object.assign(plan, { means, weakness: w, beforeCastle: scan[`affaiblir_avant_roque_${side}`], move: san(means === 'poussee' && leverPly >= 0 ? leverPly : ply) ?? plan.move });
       if (w?.square) plan.pieceRefs.push(['p', opp, w.square]);
       break;
     }
