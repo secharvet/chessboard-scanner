@@ -1025,3 +1025,31 @@ contre 308 avec l'ancienne règle (284 communs) : **le concept devient 2,5 fois 
 camps-fenêtres ; le contraste et le « bien joué » filtreront ensuite. Tirage des pièges : la raison nomme l'issue du
 levier. Trois tests (planches 4 et 7, tension Espagnole). Banc de 40 : 2 fiches changent, un plan de rupture apparaît
 (c3 puis c4 ouvre la colonne c), l'autre dit maintenant que la colonne e s'ouvre pour les deux.
+
+## 2 octobre, 20 h 45 — domination : 10 sur 10 ; colonnes séparées ; recalcul v3 lancé (carte blanche DENEB)
+
+**Domination d'une couleur** (dix planches, toutes commentées par l'auteur) : 2 justes sur 10 avant. L'auteur a
+écrit les règles qui manquaient, codées telles quelles : (1) juger la position une fois l'échange terminé, reprises
+intercalées comprises ; (2) j'ai encore un fou de la couleur, l'adversaire plus aucun ; (3) c'est moi qui prends, ou
+qui force l'échange par une offre (daté à l'offre : Cd6+, pas exd6), jamais une reprise ni une prise forcée par un
+échec ; (4) mon fou conservé n'est pas un mauvais fou (fait FOU_MAUVAIS ou trois quarts de mes pions sur sa
+couleur : son seuil « la moitié » rejetait sa propre planche 6) ; (5) il est encore là au bout de la tenue. Rejouées :
+10 accords sur 10, le coup clé des planches 2 et 6 est le sien. Banc de 40 : 0 fiche changée. Remarque d'affichage
+de l'auteur (dame et cavalier blancs rendus comme des noirs) : glyphes pleins pour toutes les pièces, colorés par le
+remplissage.
+**Colonnes** : A1 (ouverte) et A1 bis (semi-ouverte) codées sur ses définitions : non disputée par une tour adverse,
+sans tour à moi déjà dessus ; fait TOUR_COLONNE_OUVERTE avec `ouverte` et `disputee` ; nouveau concept
+`tour_colonne_semi_ouverte` (liste, fiche, jeu de données, entraînement). Les quatre planches jugées concordent.
+Effet de bord vu au banc : la preuve « apparaît tôt et tient » de la fiche portait sur tous les paramètres du fait, et
+`disputee` change quand la tour adverse bouge → la phrase « dans la suite, tour en e1 sur colonne… » disparaissait ;
+clé de preuve ramenée à la tour et sa case.
+**Bilan des 60 planches** : 58 jugées (avant-poste 9 et blocage 5 sans réponse). Accord brut programme / auteur :
+tour 7/10, avant-poste 7/9, blocage 6/9, rupture 6/10, affaiblir 0/10, domination 2/10, soit 28 / 58. Après les
+corrections de la journée, rejouées sur les mêmes planches : tour 4/4 (planches testées), avant-poste 8/9 (la 5 en
+question), blocage 9/9, affaiblir 10/10 par construction (coup d'initiative), domination 10/10, rupture : définition
+changée (deux étages), 9/10 attendus. L'offre de l'auteur de rejuger une seconde série est acceptée : nouveau tirage
+après le recalcul, sur les règles du 2 octobre, une planche par partie et par concept, coup d'initiative surligné.
+**Recalcul v3** lancé à 20 h 45 : 24 morceaux identiques sur les deux machines (`split`, md5 vérifié), répartis 4/5
+DENEB 1/5 VPS (`repartir.sh`), sortie `reports/rescan-v3/*.v3.jsonl`, règles « 2026-10-02 ». Suite sur DENEB
+(`scripts/pipeline-v6.sh`) : jugement moteur des plans ajoutés ou déplacés (reprise par plan), jeu v6, modèles v6,
+courbes v5 et v6, inventaire de couverture.

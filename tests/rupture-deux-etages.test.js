@@ -5,12 +5,12 @@
 import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
 import { Chess } from 'chess.js';
-import { readFileSync } from 'node:fs';
 import { scanLine } from '../coach/plan-concepts.mjs';
 
 const fr = (s) => s.replace(/^[CFTDR]/, (x) => ({ C: 'N', F: 'B', T: 'R', D: 'Q', R: 'K' })[x]);
 const uci = (fen, sans) => { const c = new Chess(fen); return sans.map((s) => { const m = c.move(fr(s)); return m.from + m.to + (m.promotion ?? ''); }); };
-const key = JSON.parse(readFileSync(new URL('../reports/verite-terrain-cle.json', import.meta.url), 'utf8'));
+// Positions des planches 7 et 4, copiées ici pour que le test tourne sans les rapports locaux.
+const key = { 'rupture-07': { fen: 'r3k1nr/1b1pqpbp/p1n1p1p1/1pp5/4P3/P1PPBN2/BP3PPP/RN1Q1RK1 w kq - 3 10' }, 'rupture-04': { fen: 'r4rk1/ppq2ppp/5n2/2p1b3/8/2PP2Pb/PP2B2P/RNBQ1RK1 w - - 1 13' } };
 
 describe('Rupture : issue du levier', () => {
   it('planche 7 : f5 puis …exf5 → rupture réalisée, datée au levier f5', () => {
