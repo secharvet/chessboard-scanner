@@ -74,6 +74,7 @@ for await (const line of createInterface({ input: createReadStream(IN), crlfDela
   }
   // Pièges : rejouer les 12 premiers demi-coups.
   const realised = new Set((r.plans ?? []).filter((p) => p.quiet).map((p) => `${p.concept}_${p.side}`));
+  let scanR = null; // analyse de la suite jouée, calculée au besoin (pièges de rupture)
   const c = new Chess(r.fen);
   let cacheFen = null;
   let cacheFacts = null;
@@ -118,7 +119,10 @@ for await (const line of createInterface({ input: createReadStream(IN), crlfDela
       }
     }
     if (isLever && !realised.has(`rupture_${side}`) && trap.rupture.length < POOL) {
-      trap.rupture.push(sample(r, side, i, { kind: 'piège', raison: `levier ${m.san} : il attaque un pion, mais aucune colonne nouvelle ne s'ouvre pour ce camp dans la suite` }));
+      scanR ??= scanLine(r.fen, r.played, r.played.length);
+      const rec = (scanR[`rupture_leviers_${side}`] ?? []).find((x) => x.levier === i);
+      const ISSUE = { contournee: 'le pion attaqué avance et contourne le levier : la position se ferme', dissoute: 'une pièce prend l\'un des deux pions : échange ou sacrifice, pas une rupture de pions', tension: 'la tension est maintenue, aucun des deux pions ne prend dans la suite', prise: 'les pions se prennent mais aucune colonne nouvelle ne s\'ouvre' };
+      trap.rupture.push(sample(r, side, i, { kind: 'piège', raison: `levier ${toFrenchSan(m.san)} : ${ISSUE[rec?.issue] ?? ISSUE.tension}` }));
     }
   }
   // affaiblir : échange repris par un pion adverse (ma prise puis sa reprise de pion) sans faiblesse nouvelle.

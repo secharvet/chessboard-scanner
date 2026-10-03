@@ -1009,3 +1009,19 @@ refusé (le pion attaqué avance et contourne le levier). Planches 5 et 7 : le m
 fois ; réponses non puis oui avec commentaire, on retient la réponse commentée. Définition de la rupture à trancher
 avec l'auteur avant de toucher au code. Tirage : les prochaines planches positives surlignent le coup d'initiative
 (levier, ou prise qui force la reprise).
+
+## 2 octobre, 20 h 05 — rupture en deux étages : le levier suivi jusqu'à son issue
+
+Décision de l'auteur (sur la théorie, Kmoch) : le levier est le moyen, la rupture réalisée est le levier résolu par une
+prise de pion qui ouvre une ligne ; plutôt qu'allonger la fenêtre, suivre chaque levier jusqu'à l'une de ses quatre
+issues (prise, contourné, dissous, tension) ; enregistrer quelle colonne s'ouvre et pour qui, sans juger ; mesurer les
+colonnes d'abord, les diagonales plus tard ; la percée de finale est un autre concept. Codé dans `scanLine`
+(`rupture_leviers_<camp>`, `rupture_colonne`, `rupture_colonne_adverse`, `rupture_prise`, `rupture_tour`) ; la colonne
+nouvelle se lit à la fin de l'échange, après les reprises sur la même case (d5 exd5 exd5 : la colonne e est ouverte
+pour les deux, pas « pour lui »). Le plan est daté au levier (initiative). La condition ancienne « tour dessus ou
+faiblesse adverse » passe à l'étage exploitation. Mesure sur 2 000 positions de test (lot 2013) : 1 134 leviers dans
+les 12 premiers demi-coups, issues prise 838 / contourné 197 / dissous 62 / tension 37 ; rupture réalisée 777 camps
+contre 308 avec l'ancienne règle (284 communs) : **le concept devient 2,5 fois plus fréquent**, 19 % des
+camps-fenêtres ; le contraste et le « bien joué » filtreront ensuite. Tirage des pièges : la raison nomme l'issue du
+levier. Trois tests (planches 4 et 7, tension Espagnole). Banc de 40 : 2 fiches changent, un plan de rupture apparaît
+(c3 puis c4 ouvre la colonne c), l'autre dit maintenant que la colonne e s'ouvre pour les deux.

@@ -291,38 +291,49 @@ export function scanLine(fen, pv, PLIES = 48) {
       }
     }
   }
+  // Rupture, en deux étages (Kmoch ; décision de l'auteur du 2 octobre 2026). Le LEVIER est le moyen : poussée de
+  // pion du camp qui attaque un pion adverse. La RUPTURE RÉALISÉE est le levier résolu par une prise de pion (l'un des
+  // deux pions prend l'autre) qui ouvre ou semi-ouvre une colonne nouvelle, pour l'un ou l'autre camp, et qui tient.
+  // Autres issues du levier : contourné (un des deux pions avance), dissous (une pièce prend l'un des pions : à part,
+  // souvent un sacrifice de rupture), tension (rien dans la suite). On enregistre quelle colonne s'ouvre et pour qui ;
+  // l'évaluation appartient à l'étage du déséquilibre. Le plan est attribué au camp qui a poussé et daté au levier
+  // (l'initiative), jamais à la reprise.
   for (const color of COLORS) {
-    const before = openFiles(start.facts, color);
     const opp = color === 'w' ? 'b' : 'w';
-    let ply = -1;
-    // Première colonne nouvelle (pour ce camp) qui reste ouverte au moins HOLD demi-coups.
-    let fresh = [];
-    const opened = timeline.findIndex((snap, i) => {
-      fresh = [...openFiles(snap.facts, color)].filter((f) => !before.has(f) && holds(i, (s) => openFiles(s.facts, color).has(f)));
-      return fresh.length > 0;
+    const dir = color === 'w' ? 1 : -1;
+    const recs = levers[color].map((L) => {
+      const S = moves[L].to;
+      const targets = [-1, 1].map((d) => `${String.fromCharCode(S.charCodeAt(0) + d)}${Number(S[1]) + dir}`)
+        .filter((sq) => { const q = timeline[L].board.get(sq); return q && q.type === 'p' && q.color === opp; });
+      const rec = { levier: L, issue: 'tension', at: -1, colonne: null, colonneAdverse: null, tour: false };
+      for (let i = L + 1; i < moves.length; i++) {
+        const x = moves[i];
+        if (x.piece === 'p' && x.captured === 'p' && ((x.from === S && targets.includes(x.to)) || (targets.includes(x.from) && x.to === S))) { rec.issue = 'prise'; rec.at = i; break; }
+        if (x.piece === 'p' && !x.captured && (x.from === S || targets.includes(x.from))) { rec.issue = 'contournee'; rec.at = i; break; }
+        if (x.captured && (x.to === S || targets.includes(x.to))) { rec.issue = 'dissoute'; rec.at = i; break; }
+      }
+      if (rec.issue === 'prise') {
+        const prior = L > 0 ? timeline[L - 1].facts : start.facts;
+        const before = { me: openFiles(prior, color), his: openFiles(prior, opp) };
+        // La colonne nouvelle se lit à la FIN de l'échange (après les reprises sur la même case), pas au milieu :
+        // après d5 exd5, la colonne e est semi-ouverte pour lui un demi-coup, puis ouverte pour les deux après exd5.
+        let end = rec.at;
+        while (end + 1 < moves.length && moves[end + 1].captured && moves[end + 1].to === moves[end].to) end++;
+        rec.fin = end;
+        rec.colonne = [...openFiles(timeline[end].facts, color)].find((f) => !before.me.has(f) && holds(end, (s) => openFiles(s.facts, color).has(f))) ?? null;
+        rec.colonneAdverse = [...openFiles(timeline[end].facts, opp)].find((f) => !before.his.has(f) && holds(end, (s) => openFiles(s.facts, opp).has(f))) ?? null;
+        if (rec.colonne) rec.tour = timeline.slice(end).some((snap) => snap.board.board().flat().some((q) => q && q.type === 'r' && q.color === color && q.square[0] === rec.colonne));
+      }
+      return rec;
     });
-    if (opened >= 0 && levers[color].length) {
-      const later = timeline.slice(opened);
-      const rookUses = later.some((snap) => snap.board.board().flat().some((p) => p && p.type === 'r' && p.color === color && fresh.includes(p.square[0])));
-      const key = (t) => `${t.id}|${t.params.color}|${String(t.params.square ?? '')[0]}`;
-      const had = new Set(start.facts.map(key));
-      const isStructural = (t) => !had.has(key(t))
-        && ((['PION_ISOLE', 'PION_ARRIERE', 'PION_FAIBLE'].includes(t.id) && t.params.color === opp)
-          || (t.id === 'PION_PASSE' && t.params.color === color));
-      const structural = later.some((snap, j) => snap.facts.some((t) => isStructural(t)
-        && holds(opened + j, (s) => s.facts.some((u) => key(u) === key(t)))));
-      // Le levier doit venir du camp ET précéder l'ouverture ; l'autre camp, qui la subit, n'est pas crédité.
-      const firstLever = levers[color][0] ?? Infinity;
-      const oppLever = levers[opp][0] ?? Infinity;
-      if (firstLever <= opened && firstLever < oppLever && (rookUses || structural)) ply = opened;
-    }
-    out[`rupture_${color}`] = ply;
-    // Pour l'explication : la colonne ouverte, et LE levier qui l'a ouverte (le dernier, avant l'ouverture, sur
-    // cette colonne ou une voisine) ; à défaut le premier levier du camp.
-    const fileIdx = ply >= 0 ? fresh[0].charCodeAt(0) - 97 : -1;
-    const near = ply >= 0 ? levers[color].map((l, k) => [l, leverFiles[color][k]]).filter(([l, f]) => l <= ply && Math.abs(f - fileIdx) <= 1) : [];
-    out[`rupture_levier_${color}`] = ply >= 0 ? (near.at(-1)?.[0] ?? levers[color][0]) : -1;
-    out[`rupture_colonne_${color}`] = ply >= 0 ? fresh[0] : null;
+    const done = recs.find((r) => r.issue === 'prise' && (r.colonne || r.colonneAdverse));
+    out[`rupture_${color}`] = done ? done.levier : -1;
+    out[`rupture_levier_${color}`] = done ? done.levier : -1;
+    out[`rupture_prise_${color}`] = done ? done.at : -1;
+    out[`rupture_colonne_${color}`] = done?.colonne ?? null;
+    out[`rupture_colonne_adverse_${color}`] = done?.colonneAdverse ?? null;
+    out[`rupture_tour_${color}`] = Boolean(done?.tour);
+    out[`rupture_leviers_${color}`] = recs;
   }
 
   // Affaiblir la structure adverse (plan à étages : MOYEN → DÉSÉQUILIBRE) : une faiblesse nouvelle

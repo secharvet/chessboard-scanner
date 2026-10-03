@@ -75,7 +75,7 @@ function describe(concept, side, scan, best, fen) {
     }
     case 'rupture': {
       const lever = scan[`rupture_levier_${side}`];
-      Object.assign(plan, { lever: san(lever), leverPly: lever, file: scan[`rupture_colonne_${side}`] });
+      Object.assign(plan, { lever: san(lever), leverPly: lever, file: scan[`rupture_colonne_${side}`], oppFile: scan[`rupture_colonne_adverse_${side}`] });
       break;
     }
     case 'affaiblir': {
@@ -125,7 +125,7 @@ export function planSentence(p, who = 'me') {
       return me ? `bloque son pion ${p.pawn} avec ton ${NAME[p.piece]} en ${p.to}`
         : `bloquer ton pion ${p.pawn} avec son ${NAME[p.piece]} en ${p.to}`;
     case 'rupture':
-      return me ? `prépare la rupture ${p.lever}${p.file ? ` : elle ouvre la colonne ${p.file}` : ''}`
+      return me ? `prépare la rupture ${p.lever}${p.file ? ` : elle ouvre la colonne ${p.file}` : p.oppFile ? ` : les pions se prennent et le jeu s'ouvre (colonne ${p.oppFile} pour lui)` : ''}`
         : `jouer la rupture ${p.lever}${p.file ? ` pour ouvrir la colonne ${p.file}` : ''}`;
     case 'affaiblir': {
       const how = p.means === 'echange' ? `l'échange ${p.move}` : `la poussée ${p.move}`;
