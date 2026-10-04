@@ -1064,3 +1064,27 @@ l'auteur) : coach arrêté à 22 h 00, jugement moteur à 4 fils, reprise par pl
 fin estimée vers 8 h 15. Minuterie de réveil du coach à 7 h 30 : la première s'était déclenchée aussitôt (date
 passée), remise à 5 h 30 UTC. Dates : les trois entrées précédentes avaient été écrites « 2 octobre » alors que le
 travail était du 3 (changement de jour non vu) ; corrigées.
+
+## 4 octobre, 10 h 35 — matin de calcul : DENEB synchronisé, seconde série de planches, couverture avec les règles corrigées
+
+- **Nuit** : jugement moteur sur le VPS fini à 8 h 20, 553 512 positions jugées en 10 h 20 (4 fils, évaluations des
+  étiquettes réutilisées), 228 sautées ; `.juge.jsonl` complets (983 459 lignes). Coach relancé à 7 h 30.
+- **DENEB** rallumé à 10 h 08 : morceaux manquants copiés, 8 fichiers v3 recollés (986 465 lignes), jugements copiés
+  (tunnel à 90 Mo/s, sommes de contrôle égales) ; chaîne v6 lancée à 10 h 13 (jugement : plus rien à faire ; jeu v6
+  construit en 15 min ; modèles en cours).
+- **Seconde série de planches** (offre de l'auteur) : https://claude.ai/artifact/7iwNH5YSUe3iSxgvf1zXVj — 70 planches,
+  7 concepts (colonne ouverte et semi-ouverte séparées), lot 2016 s0 recalculé et rejugé, parties jamais tirées, coup
+  d'initiative surligné, une planche par partie et par concept pièges compris (le tirage précédent avait encore deux
+  doublons côté pièges), définitions de l'auteur affichées, glyphes pleins ; réponses dans la collection `verdicts2`,
+  clé `reports/verite-terrain-2-cle.json`. Les plans recalculés (`stale`) sont admis dès lors qu'ils ont été rejugés au
+  même demi-coup (sinon rupture et colonne semi-ouverte n'avaient aucun positif).
+- **Couverture avec les règles du 3 octobre** (`reports/inventaire-coups-6-2013.md`, parties de test du lot 2013 s0,
+  47 000 coups) : plans **19,3 %** des coups calmes (18,8 % avant, sur les deux lots) ; par fenêtre de 12 demi-coups,
+  64 % des camps réalisent un plan nommé (61,6 % avant). Rupture 4,3 → 4,7 % ; tour sur colonne 4,2 % → ouverte 1,4 %
+  + semi-ouverte 1,7 % (le reste était des doublements et des colonnes disputées, désormais exclus) ; roi à l'abri
+  2,7 → 3,1 % ; colonne contrôlée 1,0 → 1,5 %. **Défense** 5,3 → **17,0 %** et moyens 63,7 → 51,8 % : c'est la
+  correction de l'ordre du classeur (la parade passe avant soutien / pression), pas un changement de jeu. La couverture
+  des plans ne monte presque pas : cohérent avec le plafond mesuré le 2 octobre (vers 40 % au mieux, le reste est
+  tactique et devoirs).
+- **Jeu v6** (`humains-v6-juge.jsonl`, 986 465 positions) : blocage 33 825 positifs, rupture 191 112, affaiblir
+  163 433, domination 5 068 (règles strictes : 6 fois moins qu'avant), baïonnette 4 445, minorité 454.
