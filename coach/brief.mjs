@@ -418,24 +418,21 @@ export function buildBrief(data) {
   }
 
   // À surveiller : la première idée adverse (déjà nommée par le détecteur), sans chiffre Stockfish.
-  // Une menace « préparée » n'est dite que si elle survit à ma meilleure réponse : après mon coup conseillé et sa
-  // préparation, si j'ai une réponse après laquelle sa prise ne gagne plus rien (ou n'existe plus), ce n'est pas une
-  // menace (banc du 4 octobre, fiche 84 : « …Cb2 préparerait Cxd1 prend la dame » alors que Fxb2 ou un pas de dame suffit).
+  // Une menace « préparée » n'est dite que si, après mon coup conseillé, sa préparation tient debout : le coup de
+  // préparation est légal, la pièce qu'il joue ne se fait pas prendre à perte, et sa cible est encore là (banc du
+  // 4 octobre, fiche 84 : « …Cb2 préparerait Cxd1 prend la dame » alors qu'après Fc1, Fxb2 gagne le cavalier).
+  // Qu'elle soit parable ne la disqualifie pas : « préparerait » dit déjà qu'elle n'est pas forcée.
   const prepBites = (p) => {
     try {
       if (!steps[0] || !p?.seqEn?.length) return true;
-      const target = String(p.seqEn.at(-1)).match(/x([a-h][1-8])/)?.[1];
-      if (!target) return true; // mat ou menace sans prise : on garde
       const b = new Chess(steps[0].fen);
       if (b.turn() !== opp) return true;
-      b.move(p.seqEn[0]);
-      for (const reply of b.moves({ verbose: true })) {
-        const c = new Chess(b.fen()); c.move(reply.san);
-        const cap = c.moves({ verbose: true }).find((x) => x.to === target && x.captured);
-        if (!cap) return false;
-        const g = exchangeIfTaken(c.fen(), target);
-        if (g != null && g <= 0) return false;
-      }
+      const prep = b.move(p.seqEn[0]);
+      if (!prep) return false;
+      const mine = exchangeIfTaken(b.fen(), prep.to); // ce que JE gagne en prenant la pièce qui vient de se préparer
+      if (mine != null && mine > 0) return false;
+      const target = String(p.seqEn.at(-1)).match(/x([a-h][1-8])/)?.[1];
+      if (target && !b.get(target)) return false;
       return true;
     } catch { return true; }
   };
