@@ -18,6 +18,7 @@ const IN = opt('--in', 'reports/verite-terrain.json');
 const CLE = opt('--cle', 'reports/verite-terrain-cle.json');
 const COLL = opt('--collection', 'verdicts'); // collection des réponses dans la base de la page (une par série)
 const SERIE = opt('--serie', '');
+const QUESTIONS = opt('--questions', null) ? JSON.parse(readFileSync(opt('--questions', null), 'utf8')) : {}; // id → { question, note } : page de questions de définition
 const data = JSON.parse(readFileSync(IN, 'utf8'));
 // Clé : ordre et identifiants figés des planches. Créée au premier passage (positifs et pièges mélangés, graine fixe),
 // jamais réécrite ensuite : les réponses enregistrées y sont attachées.
@@ -57,7 +58,7 @@ const items = Object.entries(key).sort(([a], [b]) => a.localeCompare(b)).map(([i
     const m = c.move(fromFrenchSan(san));
     steps.push({ san, from: m.from, to: m.to, fen: c.fen() });
   }
-  return { id, concept, fen: b.fen, side: b.side, ply: b.ply, elo: b.elo, steps, start: Number(b.fen.split(' ')[5]) || 1, blackFirst: b.fen.split(' ')[1] === 'b' };
+  return { id, concept, fen: b.fen, side: b.side, ply: b.ply, elo: b.elo, steps, start: Number(b.fen.split(' ')[5]) || 1, blackFirst: b.fen.split(' ')[1] === 'b', question: QUESTIONS[id]?.question ?? null, note: QUESTIONS[id]?.note ?? null };
 });
 
 const page = `<title>Vérité de terrain des plans${SERIE ? ` — ${SERIE}` : ''}</title>
@@ -137,7 +138,7 @@ function drawBoard(svg,fen,from,to){
 function label(it,i){ const idx=i+(it.blackFirst?1:0); const mv=it.start+Math.floor(idx/2); return (idx%2===0)?mv+'. '+it.steps[i].san:((i===0)?mv+'… ':'')+it.steps[i].san; }
 const verdicts={}; let db=null;
 const $sections=document.getElementById('sections');
-for(const c of Object.keys(DEF)){
+for(const c of Object.keys(DEF).filter(c=>ITEMS.some(it=>it.concept===c))){
   const sec=document.createElement('section'); sec.id='c-'+c;
   sec.innerHTML='<h2>'+DEF[c][0]+'</h2><p class="def">'+DEF[c][1]+'</p>';
   ITEMS.filter(it=>it.concept===c).forEach((it,k)=>{
@@ -147,8 +148,8 @@ for(const c of Object.keys(DEF)){
     card.innerHTML='<header><span class="num">'+(k+1)+'</span><span><b>Le camp qui agit : '+side+'</b></span><span class="meta">joueur Elo '+(it.elo??'?')+'</span><span class="meta">coup clé selon le programme : <b>'+label(it,it.ply)+'</b></span></header>'
       +'<div><svg class="board"></svg><div class="cap"></div><div class="nav"><button type="button" data-go="-1">Départ</button><button type="button" data-go="prev">◀</button><button type="button" data-go="next">▶</button><button type="button" data-go="key">Coup clé</button></div></div>'
       +'<div class="moves"><div class="hint">Survolez un coup : la position après ce coup s\\'affiche. Cliquez pour la fixer.</div><span class="mv start" data-i="-1">départ</span> '+it.steps.map((s,i)=>'<span class="mv'+(i===it.ply?' key':'')+'" data-i="'+i+'">'+label(it,i)+'</span>').join(' ')+'</div>'
-      +'<div class="form" data-id="'+it.id+'"><div class="q">'+DEF[c][0]+' : réalisé par '+side+' dans cette suite ?</div>'
-      +'<label><input type="radio" name="v-'+it.id+'" value="oui"> Oui, c\\'est bien ça</label>'
+      +'<div class="form" data-id="'+it.id+'"><div class="q">'+(it.question||(DEF[c][0]+' : réalisé par '+side+' dans cette suite ?'))+'</div>'+(it.note?'<p class="def">'+it.note+'</p>':'')
+      +'<label><input type="radio" name="v-'+it.id+'" value="oui"> '+(it.question?'Oui':'Oui, c\\'est bien ça')+'</label>'
       +'<label><input type="radio" name="v-'+it.id+'" value="non"> Non</label>'
       +'<label><input type="radio" name="v-'+it.id+'" value="pas_sur"> Pas sûr</label>'
       +'<textarea id="c-'+it.id+'" placeholder="Remarque (facultatif) : pourquoi, ce qui manque, le vrai nom…"></textarea><div class="saved" id="s-'+it.id+'"></div></div>';
