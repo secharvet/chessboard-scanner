@@ -406,8 +406,11 @@ export function buildBrief(data) {
   }
 
   // Comparaison : un candidat nettement moins bon qui coûte du matériel (lu dans SA ligne).
+  // « Tu perds du matériel » seulement si la ligne le confirme par l'évaluation (au moins 1,5 pion de moins que le
+  // meilleur coup) : un bilan de pièces à l'horizon d'une ligne équilibrée n'est pas une perte forcée (banc du
+  // 4 octobre, fiche 67 : « Évite Te1+ : tu perds 1 point » pour un coup 0,8 pion moins bon, encore largement gagnant).
   const worse = data.candidates.slice(1).find((c) => c.evalPlayer.type === 'cp' && c0.evalPlayer.type === 'cp'
-    && c0.evalPlayer.value - c.evalPlayer.value >= 60 && (me === 'w' ? c.material : -c.material) <= -1);
+    && c0.evalPlayer.value - c.evalPlayer.value >= 150 && (me === 'w' ? c.material : -c.material) <= -1);
   if (worse) {
     const lost = Math.abs(worse.material);
     items.push({ kind: 'avoid', move: worse.move, loss: lost });
@@ -512,11 +515,15 @@ function planSteps(data, me, opp, pieces, items, { skipRook = false, verifiedTo 
       // Le trajet dit est celui que la pièce fait DANS la ligne (coup précédent de la même partie : « amène ta tour de
       // f1 vers e1, par f1-e1 » alors que le coup conseillé était Td1, puis Te1).
       const route = [man.from];
+      let arrival = null;
       for (const st of bestSteps) {
         if (st.move.color === me && st.move.from === route.at(-1)) route.push(st.move.to);
-        if (route.at(-1) === man.to) break;
+        if (route.at(-1) === man.to) { arrival = st; break; }
       }
-      out.push(`amène ${FEM[type] ? 'ta' : 'ton'} ${NAME[type]} de ${man.from} vers ${man.to} (${man.why}), par ${route.join('-')}`);
+      // Une manœuvre pendant laquelle la ligne me coûte du matériel n'est pas « ton plan » : le moteur la joue parce
+      // que tout est mauvais (banc du 4 octobre, fiche 65 : « amène ton cavalier de f3 vers b5 » alors que Cd4 lâche e5).
+      const costs = arrival ? materialOf(data.fen, me) - materialOf(arrival.fen, me) : 0;
+      if (costs < 1) out.push(`amène ${FEM[type] ? 'ta' : 'ton'} ${NAME[type]} de ${man.from} vers ${man.to} (${man.why}), par ${route.join('-')}`);
     }
   }
   const facts = buildAllFacts(data.fen);
