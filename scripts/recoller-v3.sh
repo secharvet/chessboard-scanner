@@ -3,7 +3,8 @@
 # puis sur DENEB (les morceaux faits sur le VPS y sont copiés d'abord), et additionne les statistiques.
 set -eu
 cd "$(dirname "$0")/.."
-R=~/dev/chessboard/chessboard-scanner
+# Chemin distant NON développé localement (le foyer de DENEB n'est pas celui du VPS : échec du scp le 2 octobre au soir).
+R='~/dev/chessboard/chessboard-scanner'
 for f in human-2013-01.s0 human-2013-01.s1 human-2013-01.s2 human-2013-01.s3 human-2016-01f.s0 human-2016-01f.s1 human-2016-01f.s2 human-2016-01f.s3; do
   n=$(ls reports/rescan-v3/$f.c*.v3.jsonl | wc -l); [ "$n" -ge 2 ] || { echo "ÉCHEC : morceaux manquants pour $f"; exit 1; }
   cat $(ls reports/rescan-v3/$f.c*.v3.jsonl | sort) > data/labels/$f.v3.jsonl
@@ -13,7 +14,7 @@ for f in human-2013-01.s0 human-2013-01.s1 human-2013-01.s2 human-2013-01.s3 hum
 done
 # Morceaux faits sur le VPS → DENEB, puis recollage là-bas.
 for f in reports/rescan-v3/*.v3.jsonl; do
-  ssh -n deneb "test -s '$R/$f'" 2>/dev/null || scp -q "$f" "deneb:$R/$f"
+  ssh -n deneb "test -s $R/$f" 2>/dev/null || scp -q "$f" "deneb:$R/$f"
 done
 ssh -n deneb "cd $R && for f in human-2013-01.s0 human-2013-01.s1 human-2013-01.s2 human-2013-01.s3 human-2016-01f.s0 human-2016-01f.s1 human-2016-01f.s2 human-2016-01f.s3; do cat \$(ls reports/rescan-v3/\$f.c*.v3.jsonl | sort) > data/labels/\$f.v3.jsonl; echo \"deneb \$f : \$(wc -l < data/labels/\$f.v3.jsonl) lignes\"; done"
 # Statistiques (stats.json de chaque morceau : DENEB puis VPS).
