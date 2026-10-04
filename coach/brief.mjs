@@ -100,7 +100,9 @@ function threatExecuted(threat, steps, fen, maxPlies = 8) {
   const parts = fen.split(' ');
   parts[1] = parts[1] === 'w' ? 'b' : 'w';
   parts[3] = '-';
-  const captures = new Set(play(parts.join(' '), pv.slice(0, 6)).filter((s, i) => i % 2 === 0 && s.move.captured).map((s) => s.move.from + s.move.to));
+  // Seule LA menace compte (son premier coup), pas les autres prises de sa ligne : banc du 4 octobre, fiche 42,
+  // « Fxh6 ne l'empêche pas » alors que Fxh6 prend le fou qui menaçait Fxc1 ; c'est dxc3, plus loin, qui s'exécutait.
+  const captures = new Set(play(parts.join(' '), pv.slice(0, 1)).filter((s) => s.move.captured).map((s) => s.move.from + s.move.to));
   if (!captures.size) return false;
   return steps.slice(0, maxPlies).some((s, i) => i % 2 === 1 && captures.has(s.move.from + s.move.to));
 }
