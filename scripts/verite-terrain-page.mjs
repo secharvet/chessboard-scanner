@@ -7,22 +7,42 @@
  *
  *   node scripts/verite-terrain-page.mjs [--out <fichier.html>]
  */
-import { readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { Chess } from 'chess.js';
 import { fromFrenchSan } from '../coach/notation.mjs';
 
 const args = process.argv.slice(2);
-const OUT = args.includes('--out') ? args[args.indexOf('--out') + 1] : 'reports/verite-terrain.html';
-const data = JSON.parse(readFileSync('reports/verite-terrain.json', 'utf8'));
-const key = JSON.parse(readFileSync('reports/verite-terrain-cle.json', 'utf8'));
+const opt = (k, d) => (args.includes(k) ? args[args.indexOf(k) + 1] : d);
+const OUT = opt('--out', 'reports/verite-terrain.html');
+const IN = opt('--in', 'reports/verite-terrain.json');
+const CLE = opt('--cle', 'reports/verite-terrain-cle.json');
+const COLL = opt('--collection', 'verdicts'); // collection des réponses dans la base de la page (une par série)
+const SERIE = opt('--serie', '');
+const data = JSON.parse(readFileSync(IN, 'utf8'));
+// Clé : ordre et identifiants figés des planches. Créée au premier passage (positifs et pièges mélangés, graine fixe),
+// jamais réécrite ensuite : les réponses enregistrées y sont attachées.
+let key;
+if (existsSync(CLE)) key = JSON.parse(readFileSync(CLE, 'utf8'));
+else {
+  let seed = 7; const rnd = () => { seed = (seed * 1103515245 + 12345) & 0x7fffffff; return seed / 0x7fffffff; };
+  key = {};
+  for (const [c, v] of Object.entries(data.concepts)) {
+    const all = [...v.positifs.map((b) => ({ ...b, kind: 'positif' })), ...v.pieges.map((b) => ({ ...b, kind: 'piège' }))];
+    for (let i = all.length - 1; i > 0; i--) { const j = Math.floor(rnd() * (i + 1)); [all[i], all[j]] = [all[j], all[i]]; }
+    all.forEach((b, i) => { key[`${c}-${String(i + 1).padStart(2, '0')}`] = { kind: b.kind, raison: b.raison ?? null, perteMoyenne: b.perteMoyenne ?? null, lot: b.lot, game: b.game, position: b.position, fen: b.fen, ply: b.ply }; });
+  }
+  writeFileSync(CLE, JSON.stringify(key, null, 1));
+  console.log(`clé créée : ${CLE} (${Object.keys(key).length} planches)`);
+}
 
 const DEF = {
-  tour_colonne: ['Tour sur colonne ouverte', 'Une tour vient se placer, par un coup calme, sur une colonne ouverte (sans aucun pion) ou semi-ouverte pour ce camp (sans pion à lui), et elle y reste.'],
-  cavalier_avant_poste: ['Cavalier sur avant-poste', 'Un cavalier s\'installe dans le camp adverse sur une case soutenue par un pion à lui, qu\'aucun pion adverse ne peut plus venir attaquer, et il y reste.'],
-  blocage: ['Blocage d\'un pion faible', 'Un cavalier ou un fou vient se placer juste devant un pion adverse faible (isolé, arriéré ou passé) pour l\'immobiliser, et il y reste.'],
-  rupture: ['Rupture de pions', 'Une poussée de pion qui attaque un pion adverse, suivie de l\'ouverture d\'une colonne nouvelle pour ce camp, qu\'il utilise avec une tour ou qui laisse à l\'adversaire une faiblesse durable.'],
-  affaiblir: ['Affaiblir la structure adverse', 'Par un échange que l\'adversaire doit reprendre avec un pion, ou par une poussée de pion, ce camp lui crée une faiblesse durable : pions doublés, pion isolé ou arriéré, bouclier du roi abîmé.'],
-  dominer: ['Dominer une couleur de cases', 'Ce camp échange le fou adverse d\'une couleur sur laquelle l\'adversaire a déjà des cases faibles, en gardant son propre fou de cette couleur.'],
+  tour_colonne: ['Tour sur colonne ouverte', 'Une tour vient se placer, par un coup calme, sur une colonne ouverte (aucun pion, ni blanc ni noir), où ce camp n\'avait pas encore de tour, et qu\'aucune tour adverse ne tient déjà ; et elle y reste.'],
+  tour_colonne_semi_ouverte: ['Tour sur colonne semi-ouverte', 'Une tour vient se placer, par un coup calme, sur une colonne semi-ouverte pour ce camp (un seul pion, celui de l\'adversaire : une cible), où ce camp n\'avait pas encore de tour, et qu\'aucune tour adverse ne tient déjà ; et elle y reste.'],
+  cavalier_avant_poste: ['Cavalier sur avant-poste', 'Un cavalier s\'installe dans le camp adverse (4e rangée comprise) sur une case qu\'aucun pion adverse ne pourra plus jamais attaquer, soutenue par un pion à lui ou qu\'un pion à lui peut encore venir soutenir ; et il y reste.'],
+  blocage: ['Blocage d\'un pion', 'Un cavalier ou un fou vient se placer juste devant un pion adverse qu\'aucun pion adverse ne pourra plus chasser de là (isolé, arriéré, base de chaîne, doublé de tête), ou devant un pion passé ; et il y reste.'],
+  rupture: ['Rupture de pions (réalisée)', 'Une poussée de pion de ce camp qui attaque un pion adverse (le levier), que l\'un des deux pions prend ensuite, et qui ouvre ou semi-ouvre une colonne nouvelle, pour l\'un ou l\'autre camp. Le coup surligné est le levier. Un levier contourné (le pion attaqué avance), dissous par une pièce, ou laissé en tension n\'est pas une rupture.'],
+  affaiblir: ['Affaiblir la structure adverse', 'Par une prise que l\'adversaire doit reprendre avec un pion, ou par une poussée de pion, ce camp lui crée une faiblesse durable : pions doublés, pion isolé ou arriéré, bouclier du roi abîmé. Le coup surligné est la prise ou la poussée de ce camp, jamais la reprise adverse.'],
+  dominer: ['Dominer une couleur de cases', 'Ce camp prend lui-même le fou adverse d\'une couleur (ou force l\'échange par une offre), garde son propre fou de cette couleur, et l\'adversaire n\'en a plus une fois l\'échange terminé ; le fou conservé n\'est pas enfermé derrière ses pions, et l\'adversaire est faible sur ces cases.'],
 };
 
 // Reconstituer les planches dans l'ordre des identifiants (concept-01 … concept-10), avec les positions après chaque coup.
@@ -40,7 +60,7 @@ const items = Object.entries(key).sort(([a], [b]) => a.localeCompare(b)).map(([i
   return { id, concept, fen: b.fen, side: b.side, ply: b.ply, elo: b.elo, steps, start: Number(b.fen.split(' ')[5]) || 1, blackFirst: b.fen.split(' ')[1] === 'b' };
 });
 
-const page = `<title>Vérité de terrain des plans</title>
+const page = `<title>Vérité de terrain des plans${SERIE ? ` — ${SERIE}` : ''}</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 /* Une fiche par planche : un échiquier, la suite jouée (survol = position après ce coup), le formulaire. */
@@ -143,7 +163,7 @@ for(const c of Object.keys(DEF)){
   $sections.appendChild(sec);
 }
 function updateCount(){const n=Object.values(verdicts).filter(v=>v&&v.verdict).length;document.getElementById('count').textContent=n+' / '+ITEMS.length+' jugées';document.getElementById('barfill').style.width=(100*n/ITEMS.length)+'%';}
-async function save(id,patch){ const v=Object.assign(verdicts[id]||{},patch,{at:new Date().toISOString()}); verdicts[id]=v; updateCount(); const $s=document.getElementById('s-'+id); if(!db){$s.textContent='non enregistré (hors connexion)';return;} try{ await db.doc('verdicts/'+id).set(v); $s.textContent='enregistré'; document.getElementById(id).classList.toggle('done',Boolean(v.verdict)); }catch(e){ $s.textContent='échec de l\\'enregistrement : '+(e.code||e.message||e); } }
+async function save(id,patch){ const v=Object.assign(verdicts[id]||{},patch,{at:new Date().toISOString()}); verdicts[id]=v; updateCount(); const $s=document.getElementById('s-'+id); if(!db){$s.textContent='non enregistré (hors connexion)';return;} try{ await db.doc('${COLL}/'+id).set(v); $s.textContent='enregistré'; document.getElementById(id).classList.toggle('done',Boolean(v.verdict)); }catch(e){ $s.textContent='échec de l\\'enregistrement : '+(e.code||e.message||e); } }
 document.addEventListener('change',e=>{ if(e.target.matches('input[type=radio]')){ save(e.target.name.slice(2),{verdict:e.target.value}); } });
 const tmr={}; document.addEventListener('input',e=>{ if(e.target.matches('textarea')){ const id=e.target.id.slice(2); clearTimeout(tmr[id]); tmr[id]=setTimeout(()=>save(id,{comment:e.target.value}),800); } });
 function applyVerdict(id,v){ verdicts[id]=v; const r=document.querySelector('input[name="v-'+id+'"][value="'+v.verdict+'"]'); if(r) r.checked=true; const t=document.getElementById('c-'+id); if(t&&v.comment!=null&&t.value!==v.comment) t.value=v.comment; const card=document.getElementById(id); if(card) card.classList.toggle('done',Boolean(v.verdict)); }
@@ -153,7 +173,7 @@ function applyVerdict(id,v){ verdicts[id]=v; const r=document.querySelector('inp
   db=await window.claude.use('db');
   if(!db){ $st.textContent='réponses non enregistrées (connectez-vous)'; return; }
   $st.textContent='réponses enregistrées automatiquement';
-  try{ const snap=await db.collection('verdicts').get(); snap.docs.forEach(d=>{ const v=d.data(); if(v) applyVerdict(d.id,v); }); updateCount(); }catch(e){ $st.textContent='lecture des réponses impossible : '+(e.code||e.message); }
+  try{ const snap=await db.collection('${COLL}').get(); snap.docs.forEach(d=>{ const v=d.data(); if(v) applyVerdict(d.id,v); }); updateCount(); }catch(e){ $st.textContent='lecture des réponses impossible : '+(e.code||e.message); }
 })();
 </script>
 `;

@@ -29,7 +29,7 @@ const OUT = opt('--out', 'reports/verite-terrain.json');
 let seed = Number(opt('--seed', 1));
 const rand = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
 const POOL = Number(opt('--pool', 25)); // candidats gardés avant tirage
-const CONCEPTS = ['tour_colonne', 'cavalier_avant_poste', 'blocage', 'rupture', 'affaiblir', 'dominer'];
+const CONCEPTS = ['tour_colonne', 'tour_colonne_semi_ouverte', 'cavalier_avant_poste', 'blocage', 'rupture', 'affaiblir', 'dominer'];
 const lot = IN.split('/').pop().replace(/^human-/, '').replace(/\.s\d+.*$/, '');
 const juge = new Map();
 const jf = IN.replace(/(\.v\d+)?\.jsonl$/, '.juge.jsonl');
@@ -46,6 +46,12 @@ const initiative = (r, p) => {
   const scan = scanLine(r.fen, r.played, r.played.length);
   const k = p.concept === 'rupture' ? scan[`rupture_levier_${p.side}`] : (scan[`affaiblir_levier_${p.side}`] >= 0 ? scan[`affaiblir_levier_${p.side}`] : scan[`affaiblir_${p.side}`]);
   return typeof k === 'number' && k >= 0 ? k : p.appear;
+};
+/** Une planche par partie et par concept, positifs ET pièges (seconde série, 4 octobre) : refuse le doublon. */
+const pushTrap = (concept, item, game) => {
+  if (seenGame.has(`${concept}:${game}`)) return;
+  seenGame.add(`${concept}:${game}`);
+  trap[concept].push(item);
 };
 const front = (sq, color) => `${sq[0]}${Number(sq[1]) + (color === 'w' ? 1 : -1)}`;
 
@@ -68,8 +74,10 @@ for await (const line of createInterface({ input: createReadStream(IN), crlfDela
   const jp = juge.get(`${r.game}:${r.ply}`) ?? [];
   // Positifs stricts.
   for (const p of r.plans ?? []) {
-    if (!CONCEPTS.includes(p.concept) || !p.quiet || p.stale || !(p.appear < 12)) continue;
+    if (!CONCEPTS.includes(p.concept) || !p.quiet || !(p.appear < 12)) continue;
     const j = jp.find((x) => x.concept === p.concept && x.side === p.side);
+    // Plan recalculé (`stale`) : admis s'il a été rejugé au même demi-coup d'apparition (nuit du 3 au 4 octobre).
+    if (p.stale && j?.appear !== p.appear) continue;
     if (!j || typeof j.perteMoyenne !== 'number' || j.perteMoyenne > 10 || j.pertePire > 20) continue;
     if (pos[p.concept].length < POOL && !seenGame.has(`${p.concept}:${r.game}`)) { seenGame.add(`${p.concept}:${r.game}`); pos[p.concept].push(sample(r, p.side, initiative(r, p), { kind: 'positif', perteMoyenne: j.perteMoyenne, pertePire: j.pertePire })); }
   }
@@ -109,35 +117,37 @@ for await (const line of createInterface({ input: createReadStream(IN), crlfDela
           const hisB = d2.board().flat().some((q) => q && q.type === 'b' && q.color === opp && squareColor(q.square) === shade);
           const raison = !myB ? `prend le fou adverse, mais une fois l'échange terminé ce camp n'a plus de fou de cases ${shade} non plus : simple échange de fous`
             : hisB ? `prend un fou adverse, mais l'adversaire garde un fou de cases ${shade}` : `prend le fou adverse en gardant le sien, mais aucun complexe de cases ${shade} faible n'apparaît chez l'adversaire`;
-          trap.dominer.push(sample(r, side, i, { kind: 'piège', raison }));
+          pushTrap('dominer', sample(r, side, i, { kind: 'piège', raison }), r.game);
         }
       }
       continue;
     }
-    if (m.piece === 'r' && !realised.has(`tour_colonne_${side}`) && !realised.has(`tour_colonne_semi_ouverte_${side}`) && trap.tour_colonne.length < POOL
+    if (m.piece === 'r' && !realised.has(`tour_colonne_${side}`) && !realised.has(`tour_colonne_semi_ouverte_${side}`) && (trap.tour_colonne.length < POOL || trap.tour_colonne_semi_ouverte.length < POOL)
       && factsBefore.some((t) => t.id === 'TOUR_COLONNE_OUVERTE' || t.id === 'COLONNE_OUVERTE' || t.id === 'COLONNE_SEMI_OUVERTE')) {
       const t = factsAfter.find((t) => t.id === 'TOUR_COLONNE_OUVERTE' && t.params.color === side && t.params.square === m.to);
       const doubled = c.board().flat().some((q) => q && q.type === 'r' && q.color === side && q.square !== m.to && q.square[0] === m.to[0]);
       const raison = !t ? `la tour va en ${m.to}, sur une colonne qui n'est ni ouverte ni semi-ouverte pour ce camp`
         : t.params.disputee ? `la tour va en ${m.to}, sur une colonne ${t.params.ouverte ? 'ouverte' : 'semi-ouverte'} déjà tenue par une tour adverse : colonne disputée, pas conquise`
           : doubled ? `la tour rejoint en ${m.to} une tour déjà sur la colonne : c'est un doublement, pas une prise de colonne` : null;
-      if (raison) trap.tour_colonne.push(sample(r, side, i, { kind: 'piège', raison }));
+      // Les pièges de tour servent aux deux concepts de colonne : au moins fourni des deux.
+      const which = trap.tour_colonne_semi_ouverte && trap.tour_colonne_semi_ouverte.length < trap.tour_colonne.length ? 'tour_colonne_semi_ouverte' : 'tour_colonne';
+      if (raison) pushTrap(which, sample(r, side, i, { kind: 'piège', raison }), r.game);
     }
     if (m.piece === 'n' && rel >= 4 && !realised.has(`cavalier_avant_poste_${side}`) && trap.cavalier_avant_poste.length < POOL
       && !has(factsAfter, 'CAVALIER_AVANT_POSTE', side, (t) => t.params.square === m.to)) {
-      trap.cavalier_avant_poste.push(sample(r, side, i, { kind: 'piège', raison: `le cavalier s'installe en ${m.to}, dans le camp adverse, mais un pion adverse peut encore le chasser (ou la case n'est pas soutenue)` }));
+      pushTrap('cavalier_avant_poste', sample(r, side, i, { kind: 'piège', raison: `le cavalier s'installe en ${m.to}, dans le camp adverse, mais un pion adverse peut encore le chasser (ou la case n'est pas soutenue)` }), r.game);
     }
     if ((m.piece === 'n' || m.piece === 'b') && !realised.has(`blocage_${side}`) && trap.blocage.length < POOL) {
       const behind = c.get(front(m.to, side));
       if (behind && behind.type === 'p' && behind.color === opp && !blocked(factsAfter, c, front(m.to, side), opp, side)) {
-        trap.blocage.push(sample(r, side, i, { kind: 'piège', raison: `la pièce se place devant le pion ${front(m.to, side)}, mais un pion adverse peut encore la chasser` }));
+        pushTrap('blocage', sample(r, side, i, { kind: 'piège', raison: `la pièce se place devant le pion ${front(m.to, side)}, mais un pion adverse peut encore la chasser` }), r.game);
       }
     }
     if (isLever && !realised.has(`rupture_${side}`) && trap.rupture.length < POOL) {
       scanR ??= scanLine(r.fen, r.played, r.played.length);
       const rec = (scanR[`rupture_leviers_${side}`] ?? []).find((x) => x.levier === i);
       const ISSUE = { contournee: 'le pion attaqué avance et contourne le levier : la position se ferme', dissoute: 'une pièce prend l\'un des deux pions : échange ou sacrifice, pas une rupture de pions', tension: 'la tension est maintenue, aucun des deux pions ne prend dans la suite', prise: 'les pions se prennent mais aucune colonne nouvelle ne s\'ouvre' };
-      trap.rupture.push(sample(r, side, i, { kind: 'piège', raison: `levier ${toFrenchSan(m.san)} : ${ISSUE[rec?.issue] ?? ISSUE.tension}` }));
+      pushTrap('rupture', sample(r, side, i, { kind: 'piège', raison: `levier ${toFrenchSan(m.san)} : ${ISSUE[rec?.issue] ?? ISSUE.tension}` }), r.game);
     }
   }
   // affaiblir : échange repris par un pion adverse (ma prise puis sa reprise de pion) sans faiblesse nouvelle.
@@ -150,7 +160,7 @@ for await (const line of createInterface({ input: createReadStream(IN), crlfDela
     const a = ms[i];
     const b = ms[i + 1];
     if (a.captured && b.captured && b.piece === 'p' && b.to === a.to && b.captured !== 'p' && !realised.has(`affaiblir_${a.color}`) && trap.affaiblir.length < POOL) {
-      trap.affaiblir.push(sample(r, a.color, i, { kind: 'piège', raison: `${toFrenchSan(a.san)} ${toFrenchSan(b.san)} : l'adversaire reprend avec un pion, mais aucune faiblesse nouvelle ne tient ensuite` }));
+      pushTrap('affaiblir', sample(r, a.color, i, { kind: 'piège', raison: `${toFrenchSan(a.san)} ${toFrenchSan(b.san)} : l'adversaire reprend avec un pion, mais aucune faiblesse nouvelle ne tient ensuite` }), r.game);
       break;
     }
   }
