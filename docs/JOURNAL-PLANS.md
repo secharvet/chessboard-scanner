@@ -1176,3 +1176,27 @@ du 3 : les faux positifs d'installation sont partis), défense 16,8 %, moyens 53
 étiquettes 48 → 74 → 90 % ; erreurs graves de la fiche 9 → 0 ; temps de fiche 6 → 3,2 s ; couverture 10,5 → 18 %
 (plafond vers 40 %) ; AUC 0,91 → 0,84 sur la tour (étiquette plus vraie, plus dure). Lecture : ce qui a progressé,
 c'est la vérité des étiquettes et la fiche ; la couverture et l'AUC ne sont pas les bons indicateurs de ce travail.
+
+## 4 octobre, 19 h 00 — cent fiches relues par Fable : onze erreurs graves trouvées, dix corrigées le jour même
+
+Banc de cent (40 + 60 réelles) regénéré à 15 h 46 avec le coach du jour ; `scripts/fiches-fable.mjs` : image de la
+position, FEN, texte de la fiche, Fable liste les GRAVES (affirmation fausse sur l'échiquier, conseil qui perd du
+matériel ou mate, menace inventée) et les mineures ; 70 à 135 s par fiche ; interrompu une fois par la limite d'usage
+(reprise `--from`), un appel expiré resoumis. **99 + 1 fiches relues : 11 fiches avec au moins une grave (12 graves),
+256 remarques mineures.** Chaque grave vérifiée sur la position, souvent avec la ligne du moteur : **10 réelles**, toutes
+corrigées, testées (275 tests), banc de 40 rejoué à chaque fois, coach relancé :
+1. échange intercalé (fiche 15) : plan daté à ma prise que son pion reprend (Cxb5), pas à la reprise Dxc1 ;
+2. attaquant cloué (33) : attaquants de la case d'arrivée = prises légales ;
+3. plan type de structure non retourné (33) : cases miroir quand la structure appartient aux Noirs ;
+4. menace « non parée » (42) : parée dès que son premier coup ne s'exécute plus ;
+5. manœuvre qui coûte du matériel dans la ligne (65) : plus proposée ;
+6. « Évite X : tu perds du matériel » (67) : seulement si la ligne est 1,5 pion moins bonne ;
+7. menace préparée par un coup qui perd une pièce (84, 92) : la préparation doit tenir debout après mon coup ;
+8. « menace » qui n'était que la fuite d'un cavalier en prise (88) : gain immédiat ou mat exigé ;
+9. fou « attaquant » un pion d'une autre couleur de cases (95) : cible vue en diagonale ;
+10. rupture « ouvrant la colonne c » ouverte par un autre échange (99) : colonnes des deux pions du levier seulement.
+Discutée (86) : « Cd4 pare cette menace », Fable voit Fxd4 puis le retour de la menace ; la ligne du moteur ne le montre
+pas dans l'horizon. Mineures fréquentes et justes : « dans la suite, avant-poste en b6 » annoncé avant d'être acquis,
+« bouclier affaibli » lu dans une suite non montrée, « s'il prend, tu reprends et gagnes 2 points » quand il ne prendra
+pas. Page : https://claude.ai/artifact/KwnhALPJ5wy645e7ur3MW6. Le « zéro sur 100 » après corrections n'est pas mesuré :
+seconde passe de relecture à décider par l'auteur (deux heures de Fable).
