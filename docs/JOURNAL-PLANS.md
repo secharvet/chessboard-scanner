@@ -991,7 +991,7 @@ parade ; ordre désormais : moyen de structure → parade → menace / pression 
 Autre observation du tirage : le classeur ne distingue pas « échec donné » et « coup calme avec échec dans la suite »
 (sans effet ici).
 
-## 2 octobre, 18 h 00 — vérité de terrain : rupture et affaiblissement
+## 3 octobre, 18 h 00 — vérité de terrain : rupture et affaiblissement
 
 **Affaiblissement : 0 accord sur 10, inversion parfaite, et ce n'est pas une erreur de l'auteur.** Les cinq positifs
 surlignaient la **reprise de pion de l'adversaire** (bxc3, exd5, axb5, fxg3, exf5) : le programme datait le plan au
@@ -1010,7 +1010,7 @@ fois ; réponses non puis oui avec commentaire, on retient la réponse commenté
 avec l'auteur avant de toucher au code. Tirage : les prochaines planches positives surlignent le coup d'initiative
 (levier, ou prise qui force la reprise).
 
-## 2 octobre, 20 h 05 — rupture en deux étages : le levier suivi jusqu'à son issue
+## 3 octobre, 20 h 05 — rupture en deux étages : le levier suivi jusqu'à son issue
 
 Décision de l'auteur (sur la théorie, Kmoch) : le levier est le moyen, la rupture réalisée est le levier résolu par une
 prise de pion qui ouvre une ligne ; plutôt qu'allonger la fenêtre, suivre chaque levier jusqu'à l'une de ses quatre
@@ -1026,7 +1026,7 @@ camps-fenêtres ; le contraste et le « bien joué » filtreront ensuite. Tirage
 levier. Trois tests (planches 4 et 7, tension Espagnole). Banc de 40 : 2 fiches changent, un plan de rupture apparaît
 (c3 puis c4 ouvre la colonne c), l'autre dit maintenant que la colonne e s'ouvre pour les deux.
 
-## 2 octobre, 20 h 45 — domination : 10 sur 10 ; colonnes séparées ; recalcul v3 lancé (carte blanche DENEB)
+## 3 octobre, 20 h 45 — domination : 10 sur 10 ; colonnes séparées ; recalcul v3 lancé (carte blanche DENEB)
 
 **Domination d'une couleur** (dix planches, toutes commentées par l'auteur) : 2 justes sur 10 avant. L'auteur a
 écrit les règles qui manquaient, codées telles quelles : (1) juger la position une fois l'échange terminé, reprises
@@ -1049,7 +1049,18 @@ corrections de la journée, rejouées sur les mêmes planches : tour 4/4 (planch
 question), blocage 9/9, affaiblir 10/10 par construction (coup d'initiative), domination 10/10, rupture : définition
 changée (deux étages), 9/10 attendus. L'offre de l'auteur de rejuger une seconde série est acceptée : nouveau tirage
 après le recalcul, sur les règles du 2 octobre, une planche par partie et par concept, coup d'initiative surligné.
-**Recalcul v3** lancé à 20 h 45 : 24 morceaux identiques sur les deux machines (`split`, md5 vérifié), répartis 4/5
+**Recalcul v3** lancé à 20 h 43 (3 octobre) : 24 morceaux identiques sur les deux machines (`split`, md5 vérifié), répartis 4/5
 DENEB 1/5 VPS (`repartir.sh`), sortie `reports/rescan-v3/*.v3.jsonl`, règles « 2026-10-02 ». Suite sur DENEB
 (`scripts/pipeline-v6.sh`) : jugement moteur des plans ajoutés ou déplacés (reprise par plan), jeu v6, modèles v6,
 courbes v5 et v6, inventaire de couverture.
+
+## 4 octobre, 3 h 05 — nuit de calcul : recalcul fini, jugement moteur en cours sur le VPS
+
+Recalcul v3 terminé à 21 h 59 (3 octobre), 24 morceaux recollés sur le VPS (8 fichiers, 986 465 lignes, tailles
+vérifiées). Défaut : la copie des 4 morceaux faits sur le VPS vers DENEB a échoué (chemin du foyer de DENEB développé
+localement), à refaire quand DENEB sera rallumé (script corrigé). Chaîne de nuit sur le VPS « full power » (accord de
+l'auteur) : coach arrêté à 22 h 00, jugement moteur à 4 fils, reprise par plan : 273 000 positions jugées en 5 h
+(54 000 / h, les évaluations déjà présentes dans les étiquettes sont réutilisées), fichier 6 sur 8 commencé à 3 h 00,
+fin estimée vers 8 h 15. Minuterie de réveil du coach à 7 h 30 : la première s'était déclenchée aussitôt (date
+passée), remise à 5 h 30 UTC. Dates : les trois entrées précédentes avaient été écrites « 2 octobre » alors que le
+travail était du 3 (changement de jour non vu) ; corrigées.

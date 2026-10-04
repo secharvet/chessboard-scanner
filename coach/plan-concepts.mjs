@@ -297,7 +297,7 @@ export function scanLine(fen, pv, PLIES = 48) {
       }
     }
   }
-  // Rupture, en deux étages (Kmoch ; décision de l'auteur du 2 octobre 2026). Le LEVIER est le moyen : poussée de
+  // Rupture, en deux étages (Kmoch ; décision de l'auteur du 3 octobre 2026). Le LEVIER est le moyen : poussée de
   // pion du camp qui attaque un pion adverse. La RUPTURE RÉALISÉE est le levier résolu par une prise de pion (l'un des
   // deux pions prend l'autre) qui ouvre ou semi-ouvre une colonne nouvelle, pour l'un ou l'autre camp, et qui tient.
   // Autres issues du levier : contourné (un des deux pions avance), dissous (une pièce prend l'un des pions : à part,
@@ -375,7 +375,7 @@ export function scanLine(fen, pv, PLIES = 48) {
       else if (lever) means = 'poussee';
       else continue; // faiblesse sans moyen identifiable du camp : pas un plan de ce type
       // Le plan est daté au coup du camp qui prend l'initiative, jamais à la reprise adverse (vérité de terrain du
-      // 2 octobre : les cinq planches positives surlignaient la reprise de pion de l'adversaire, refusées toutes les
+      // 3 octobre : les cinq planches positives surlignaient la reprise de pion de l'adversaire, refusées toutes les
       // cinq ; l'auteur : « la reprise est la réponse forcée, elle ne porte pas le plan »).
       ply = means === 'echange' ? i - 1 : i;
       out[`affaiblir_levier_${color}`] = means === 'poussee' ? lever[0] : -1;
@@ -391,7 +391,7 @@ export function scanLine(fen, pv, PLIES = 48) {
     out[`affaiblir_avant_roque_${color}`] = ply >= 0 && wing ? castling.includes(rights[wing]) : false;
   }
 
-  // Dominer une couleur (plan à étages ; règles de l'auteur, vérité de terrain du 2 octobre, 2 justes sur 10 avant) :
+  // Dominer une couleur (plan à étages ; règles de l'auteur, vérité de terrain du 3 octobre, 2 justes sur 10 avant) :
   //  1. la position se juge une fois l'échange TERMINÉ (plus de prise sur la case dans les deux demi-coups qui
   //     suivent, échanges intercalés compris) ;
   //  2. après l'échange, j'ai encore un fou de la couleur S et l'adversaire n'en a plus ;
