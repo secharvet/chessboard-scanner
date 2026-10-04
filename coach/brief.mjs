@@ -335,7 +335,10 @@ export function buildBrief(data) {
   if (first && steps[0] && !first.captured && ['develop', 'center', 'castle', 'plan', 'basics', 'best', 'save'].includes(reason.kind)) {
     const after = new Chess(steps[0].fen);
     const who = (sqs) => sqs.map((sq) => ({ square: sq, type: after.get(sq).type })).sort((a, b) => VALUE[a.type] - VALUE[b.type]);
-    const attackers = who(after.attackers(first.to, opp));
+    // Attaquants RÉELS : les pièces adverses qui peuvent légalement prendre sur la case (une pièce clouée sur son roi
+    // n'en est pas un : banc du 4 octobre, fiche 33, « le pion e6 attaque f5 » alors que la tour e1 le cloue).
+    const legalCaptures = after.turn() === opp ? [...new Set(after.moves({ verbose: true }).filter((x) => x.to === first.to && x.captured).map((x) => x.from))] : after.attackers(first.to, opp);
+    const attackers = who(legalCaptures);
     if (attackers.length) {
       const defenders = who(after.attackers(first.to, me));
       const theirs = exchangeIfTaken(steps[0].fen, first.to); // ce que l'adversaire gagne (ou perd) s'il prend

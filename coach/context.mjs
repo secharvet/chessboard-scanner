@@ -292,14 +292,18 @@ function describeStructures(facts, player) {
     const s = STRUCTURES[/** @type {string} */ (f.params.name)];
     if (!s) continue;
     const mine = f.params.color === player;
+    // Les plans types sont écrits avec les cases du camp BLANC propriétaire de la structure ; quand elle appartient aux
+    // Noirs, on retourne les rangées (Carlsbad des Noirs : « cavalier en e4 » devient « cavalier en e5 » pour les
+    // Blancs ; banc du 4 octobre, fiche 33 : Ce4 perdait un cavalier contre le pion d5).
+    const flip = (t) => (f.params.color === 'b' ? String(t).replace(/\b([a-h])([1-8])\b/g, (m, file, rank) => `${file}${9 - Number(rank)}`) : String(t));
     out.push({
       label: tr(`${s.label} — ${mine ? 'chez toi' : "chez l'adversaire"}`, `${s.label} — ${mine ? 'yours' : "the opponent's"}`),
       plans: tr([
-        `Plan du camp qui a cette structure (${mine ? 'toi' : "l'adversaire"}) : ${s.owner}`,
-        `Plan de l'autre camp (${mine ? "l'adversaire" : 'toi'}) : ${s.opponent}`,
+        `Plan du camp qui a cette structure (${mine ? 'toi' : "l'adversaire"}) : ${flip(s.owner)}`,
+        `Plan de l'autre camp (${mine ? "l'adversaire" : 'toi'}) : ${flip(s.opponent)}`,
       ], [
-        `Plan for the side that has this structure (${mine ? 'you' : 'the opponent'}): ${s.owner}`,
-        `Plan for the other side (${mine ? 'the opponent' : 'you'}): ${s.opponent}`,
+        `Plan for the side that has this structure (${mine ? 'you' : 'the opponent'}): ${flip(s.owner)}`,
+        `Plan for the other side (${mine ? 'the opponent' : 'you'}): ${flip(s.opponent)}`,
       ]),
     });
   }
