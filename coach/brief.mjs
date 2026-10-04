@@ -418,7 +418,28 @@ export function buildBrief(data) {
   }
 
   // À surveiller : la première idée adverse (déjà nommée par le détecteur), sans chiffre Stockfish.
-  const p0 = data.prepared?.[0];
+  // Une menace « préparée » n'est dite que si elle survit à ma meilleure réponse : après mon coup conseillé et sa
+  // préparation, si j'ai une réponse après laquelle sa prise ne gagne plus rien (ou n'existe plus), ce n'est pas une
+  // menace (banc du 4 octobre, fiche 84 : « …Cb2 préparerait Cxd1 prend la dame » alors que Fxb2 ou un pas de dame suffit).
+  const prepBites = (p) => {
+    try {
+      if (!steps[0] || !p?.seqEn?.length) return true;
+      const target = String(p.seqEn.at(-1)).match(/x([a-h][1-8])/)?.[1];
+      if (!target) return true; // mat ou menace sans prise : on garde
+      const b = new Chess(steps[0].fen);
+      if (b.turn() !== opp) return true;
+      b.move(p.seqEn[0]);
+      for (const reply of b.moves({ verbose: true })) {
+        const c = new Chess(b.fen()); c.move(reply.san);
+        const cap = c.moves({ verbose: true }).find((x) => x.to === target && x.captured);
+        if (!cap) return false;
+        const g = exchangeIfTaken(c.fen(), target);
+        if (g != null && g <= 0) return false;
+      }
+      return true;
+    } catch { return true; }
+  };
+  const p0 = (data.prepared ?? []).find(prepBites) ?? null;
   const his = data.plans?.[opp]?.[0] ?? null;
   if (reason.kind !== 'parry' && reason.kind !== 'parry_mate' && (p0 || his)) {
     const parts = [];
