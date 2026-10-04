@@ -67,6 +67,14 @@ function trackPiece(steps, square, maxPlies = 10) {
   return sq;
 }
 
+/** Case où se trouvait AU DÉPART la pièce prise au demi-coup `idx` de la ligne (elle a pu venir là pendant la ligne). */
+function originOf(steps, idx) {
+  const m = steps[idx].move;
+  let sq = /e/.test(m.flags ?? '') ? m.to[0] + m.from[1] : m.to; // en passant : le pion pris n'est pas sur la case d'arrivée
+  for (let j = idx - 1; j >= 0; j--) if (steps[j].move.to === sq) sq = steps[j].move.from;
+  return sq;
+}
+
 /** Échange statique : ce que le camp au trait gagne au mieux en prenant sur `square` (0 = mieux vaut ne pas prendre). */
 function staticExchange(fen, square, depth = 0) {
   if (depth > 10) return 0;
@@ -248,8 +256,19 @@ export function buildBrief(data) {
       const capSan = enToFr(cap1.move.san);
       const moved = first.piece !== cap1.move.piece || first.to !== cap1.move.from
         ? ` Ce n'est pas ${first.piece === 'r' || first.piece === 'q' ? 'ta' : 'ton'} ${NAME[first.piece]} qui prend : c'est ${capSan}.` : '';
-      say(`${bestSan} ne prend rien tout de suite, il prépare un gain : dans la suite ${c0.horizonSan}, ${capSan} prend ${pieceRef(cap1.move.captured, 'opp', cap1.move.to, { article: 'poss' })}.${moved} Une fois les échanges terminés, tu as ${gain} point(s) de plus.`,
-        `Il y a du matériel à gagner : ${pieceRef(cap1.move.captured, 'opp', cap1.move.to, { article: 'poss' })} est une cible, mais pas tout de suite. Cherche le coup qui prépare la prise.`);
+      const origin = originOf(steps, steps.indexOf(cap1));
+      if (origin === cap1.move.to) {
+        say(`${bestSan} ne prend rien tout de suite, il prépare un gain : dans la suite ${c0.horizonSan}, ${capSan} prend ${pieceRef(cap1.move.captured, 'opp', cap1.move.to, { article: 'poss' })}.${moved} Une fois les échanges terminés, tu as ${gain} point(s) de plus.`,
+          `Il y a du matériel à gagner : ${pieceRef(cap1.move.captured, 'opp', cap1.move.to, { article: 'poss' })} est une cible, mais pas tout de suite. Cherche le coup qui prépare la prise.`);
+      } else {
+        // La pièce prise n'est PAS sur cette case aujourd'hui : c'est l'adversaire qui l'y amène pendant la ligne (partie
+        // réelle du 4 octobre : « son pion en h5 est une cible », h5 vide, le pion venait de h7 par …h5). On ne parle pas
+        // de cible : on dit d'où vient la pièce et que le gain est une conséquence de la suite, pas un but du coup.
+        pieces.delete(`${cap1.move.captured}|opp|${cap1.move.to}`);
+        pieces.add(`${cap1.move.captured}|opp|${origin}`);
+        say(`${bestSan} ne prend rien tout de suite. Dans la suite ${c0.horizonSan}, ${capSan} prend ${pieceRef(cap1.move.captured, 'opp', cap1.move.to, { article: 'poss' })}, venu de ${origin} : c'est l'adversaire qui l'amène là, ce n'est pas une cible aujourd'hui.${moved} Une fois les échanges terminés, tu as ${gain} point(s) de plus.`,
+          'Pas de prise à préparer tout de suite : joue le coup utile, le gain vient plus tard dans la suite du moteur.');
+      }
     } else {
       say(`${bestSan} gagne du matériel${victim}. Une fois les échanges terminés, tu as ${gain} point(s) de plus.`,
         cap1 ? `Tu peux gagner du matériel : ${pieceRef(cap1.move.captured, 'opp', cap1.move.to, { article: 'poss' })} est une cible.` : 'Tu peux gagner du matériel.');

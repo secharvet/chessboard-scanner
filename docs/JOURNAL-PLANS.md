@@ -1200,3 +1200,12 @@ pas dans l'horizon. Mineures fréquentes et justes : « dans la suite, avant-pos
 « bouclier affaibli » lu dans une suite non montrée, « s'il prend, tu reprends et gagnes 2 points » quand il ne prendra
 pas. Page : https://claude.ai/artifact/KwnhALPJ5wy645e7ur3MW6. Le « zéro sur 100 » après corrections n'est pas mesuré :
 seconde passe de relecture à décider par l'auteur (deux heures de Fable).
+
+### 4 octobre 2026, soir : « son pion en h5 est une cible » (h5 vide)
+
+Partie réelle de l'auteur (Française avance, 9e coup) : la fiche disait « Il y a du matériel à gagner : son pion en h5 est
+une cible », alors que h5 était vide : le pion venait de h7 par …h5, dans la ligne du moteur. La phrase nommait la case
+de la prise, pas la case actuelle de la pièce. Correction : la pièce prise plus tard est suivie en arrière jusqu'à sa case
+d'aujourd'hui ; si elle n'est pas encore là, on ne parle plus de cible (« venu de h7 : c'est l'adversaire qui l'amène là »)
+et l'indice devient « pas de prise à préparer tout de suite ». Test `tests/fiche-cible-future.test.js`. Famille à ajouter
+au relecteur : tout objet nommé dans la fiche doit exister sur l'échiquier au moment où elle est lue.
