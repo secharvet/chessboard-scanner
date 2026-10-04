@@ -23,9 +23,10 @@ mkdir -p reports/rescan-${V}/stats
 scp -q "deneb:$R/reports/rescan-${V}/*.stats.json" reports/rescan-${V}/stats/ 2>/dev/null || true
 cp reports/rescan-${V}/*.stats.json reports/rescan-${V}/stats/ 2>/dev/null || true
 python3 - <<'PY'
-import json, glob
+import json, glob, os
+V=os.environ.get('V','v3')
 tot={'records':0,'kept':0,'removed':0,'moved':0,'added':0}; by={}
-for f in glob.glob('reports/rescan-${V}/stats/*.stats.json'):
+for f in glob.glob(f'reports/rescan-{V}/stats/*.stats.json'):
     d=json.load(open(f))
     for k in tot: tot[k]+=d.get(k,0)
     for c,v in d.get('byConcept',{}).items():
@@ -33,6 +34,6 @@ for f in glob.glob('reports/rescan-${V}/stats/*.stats.json'):
         for k in b: b[k]+=v.get(k,0)
 print('total', tot)
 for c,v in sorted(by.items(), key=lambda x:-(x[1]['kept']+x[1]['added'])): print(f"{c:28} gardés {v['kept']:7} retirés {v['removed']:6} déplacés {v['moved']:6} ajoutés {v['added']:7}")
-json.dump({'total':tot,'byConcept':by}, open('reports/rescan-${V}/stats-total.json','w'), indent=1)
+json.dump({'total':tot,'byConcept':by}, open(f'reports/rescan-{V}/stats-total.json','w'), indent=1)
 PY
 echo "RECOLLÉ"
