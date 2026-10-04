@@ -1137,3 +1137,42 @@ pendant la tenue : Fb2 devant Tb1 trois coups plus tard n'annule pas la prise de
 jamais de piège là où le programme réalise le concept, raison « colonne bouchée ». Tests : 274, dont dix tirés des
 désaccords (`tests/serie2-fable.test.js`, 24 demi-coups des étiquettes d'origine). Banc de 40 : une fiche perd un
 « À surveiller » dont la tenue n'est plus prouvable dans la suite du moteur.
+
+## 4 octobre, 14 h 00 — étiquettes v4 (règles du 4 octobre) : recalcul, jugement, chaîne de l'après-midi
+
+Recalcul v4 lancé à 12 h 31 sur les 24 morceaux (DENEB 4/5, VPS 1/5), fini à 13 h 49 ; incident : vingt processus sur
+DENEB au lieu de quatorze (« sinon je freeze ») → six mis en pause à 12 h 52, reprise à 13 h 30 ; `repartir.sh` a
+maintenant une file d'attente avec plafonds (DENEB 14, VPS 3). Recollage à 13 h 50 sur les deux machines (tailles
+vérifiées). **Jugement moteur** des plans qui ont bougé par rapport à la nuit : 2 135 positions sur le VPS (3 min),
+10 654 sur DENEB (5 min) : la quasi-totalité des jugements de la nuit reste valable (reprise par plan). Modèles v7 et
+inventaire lancés sur DENEB à 13 h 55 ; troisième série de planches (lot 2016 s1, graine 3, 7 concepts) et Fable sur
+le VPS dans la foulée.
+**Comptes v4 par rapport aux étiquettes d'origine** (tous demi-coups, calmes ou non ; `reports/rescan-v4/stats-total.json`) :
+tour sur colonne ouverte gardées 108 429 (v3 : 212 852) ; semi-ouverte ajoutées 153 275 (v3 : 287 767) ; cavalier sur
+avant-poste gardées 62 595 (v3 : 96 085) ; blocage 65 083 (v3 : 106 285) ; domination 8 665 (v3 : 31 493) ; rupture et
+affaiblir redatées par construction. Les règles du jour (tenue sur la pièce avec fenêtre entière, colonne vue par la
+tour, bande soutenue, domination exploitée) retirent donc un tiers à deux tiers des étiquettes d'installation : c'est
+attendu, elles comptaient les passages et les fins de suite.
+
+## 4 octobre, 15 h 15 — série 3 : 90 % d'accord, la boucle d'affinage s'arrête ; modèles v7 ; courbes v1 → v7
+
+**Série 3** (étiquettes v4, lot 2016 s1, 70 planches, Fable) : première passe à 14 h 25, 57 appels sur 70 refusés par le
+service en quatre minutes et comptés « oui » par le script (la consigne contient « VERDICT : oui ») : faux 59 %
+détecté avant envoi ; script corrigé (verdict en tête de réponse, erreurs à part, arrêt après trois refus) ; seconde
+passe à 14 h 43 sur les 57 : 0 refus. **Résultat : 63 accords sur 70 (90 %)** contre 52 sur 70 (74 %) la veille au
+matin et 28 sur 58 (48 %) avec l'auteur sur la première série ; blocage, rupture et colonne ouverte 10 / 10. Les sept
+désaccords (page publiée, voir la mémoire de reprise) sont des lectures d'intention (coup « d'abord tactique »,
+tour qui quitte la colonne après la tenue) et une nuance de règle : une tour adverse DERRIÈRE son propre pion sur la
+colonne (Ta1 derrière a4) ne la « tient » pas (semi-ouverte 8) : à corriger au prochain lot. **Condition d'arrêt
+atteinte** (≥ 90 %) : la boucle d'affinage des sept concepts s'arrête ici ; l'auteur l'avait demandé (« est-ce
+rentable ces planches ou on fait du surplace »).
+**Modèles v7** (étiquettes v4, 10 h 44 → 14 h 26) : AUC réseau + faits v6 → v7 : tour 0,848 → 0,836 ; semi-ouverte
+0,848 → 0,843 ; rupture 0,809 → 0,812 ; affaiblir 0,752 → 0,746 ; blocage 0,800 → 0,800 ; avant-poste 0,852 → 0,857 ;
+domination 0,821 → 0,829 (200 positifs de test seulement) ; baïonnette 0,984. Positifs du jeu : tour 45 319,
+semi-ouverte 50 598, avant-poste 32 574, blocage 32 221, rupture 192 569, affaiblir 138 747, domination 2 090.
+Couverture avec les règles du 4 octobre (lot 2016 s0 test) : plans 18,0 % des coups calmes (18,9 % avec les règles
+du 3 : les faux positifs d'installation sont partis), défense 16,8 %, moyens 53,1 %.
+**Courbes v1 → v7** publiées à la demande de l'auteur (https://claude.ai/artifact/8rTn6SUd9JBC6DD5M7V81B) : accord des
+étiquettes 48 → 74 → 90 % ; erreurs graves de la fiche 9 → 0 ; temps de fiche 6 → 3,2 s ; couverture 10,5 → 18 %
+(plafond vers 40 %) ; AUC 0,91 → 0,84 sur la tour (étiquette plus vraie, plus dure). Lecture : ce qui a progressé,
+c'est la vérité des étiquettes et la fiche ; la couverture et l'AUC ne sont pas les bons indicateurs de ce travail.
