@@ -342,8 +342,11 @@ export function scanLine(fen, pv, PLIES = 48) {
         let end = rec.at;
         while (end + 1 < moves.length && moves[end + 1].captured && moves[end + 1].to === moves[end].to) end++;
         rec.fin = end;
-        rec.colonne = [...openFiles(timeline[end].facts, color)].find((f) => !before.me.has(f) && holds(end, (s) => openFiles(s.facts, color).has(f))) ?? null;
-        rec.colonneAdverse = [...openFiles(timeline[end].facts, opp)].find((f) => !before.his.has(f) && holds(end, (s) => openFiles(s.facts, opp).has(f))) ?? null;
+        // Seules les colonnes des deux pions du levier peuvent s'ouvrir par lui (banc du 4 octobre, fiche 99 : « la
+        // rupture e5 pour ouvrir la colonne c », colonne ouverte par un autre échange de la même suite).
+        const leverFiles = new Set([S[0], ...targets.map((t) => t[0])]);
+        rec.colonne = [...openFiles(timeline[end].facts, color)].find((f) => leverFiles.has(f) && !before.me.has(f) && holds(end, (s) => openFiles(s.facts, color).has(f))) ?? null;
+        rec.colonneAdverse = [...openFiles(timeline[end].facts, opp)].find((f) => leverFiles.has(f) && !before.his.has(f) && holds(end, (s) => openFiles(s.facts, opp).has(f))) ?? null;
         if (rec.colonne) rec.tour = timeline.slice(end).some((snap) => snap.board.board().flat().some((q) => q && q.type === 'r' && q.color === color && q.square[0] === rec.colonne));
       }
       return rec;

@@ -239,6 +239,11 @@ async function findThreat(fen, best, engine, toMove, player) {
   if (nullForOpp + bestForMover < 150) return null;
 
   const threatLine = describeLine(nullFen, line, opp, opp);
+  // Une menace gagne du matériel ou mate. Un coup calme qui améliore simplement sa position si je passe (sauver
+  // son cavalier en prise : banc du 4 octobre, fiche 88, « il pare la menace Cc6 ») n'en est pas une.
+  // Le gain doit être IMMÉDIAT (la prise et sa reprise), pas ce qu'il ramasserait si je passais encore deux fois.
+  const gainOpp = (opp === 'w' ? 1 : -1) * (threatLine.immMaterial ?? threatLine.material ?? 0);
+  if (!threatLine.mates && gainOpp < 1) return null;
   return {
     move: threatLine.move,
     line: threatLine.horizonSan,

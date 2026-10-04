@@ -103,9 +103,20 @@ export function findManeuvers(fen, side, opts = {}) {
     const targets = new Map(piece.type === 'r' ? rookTargets : minorTargets); // copie : le filtre des fous ne doit pas toucher les autres pièces
     if (!targets.size) continue;
     if (piece.type === 'b') {
-      // Un fou ne change jamais de couleur de case.
-      for (const s of [...targets.keys()]) {
-        if ((FILES.indexOf(s[0]) + Number(s[1])) % 2 !== (piece.fileIdx + piece.rank) % 2) targets.delete(s);
+      // Un fou ne change jamais de couleur de case ; et « attaque le pion faible en X » a été calculé pour un
+      // cavalier (cases à un saut du pion) : pour un fou, la case doit VOIR le pion en diagonale, chemin libre
+      // (banc du 4 octobre, fiche 95 : « amène ton fou vers e3 (attaque le pion faible en d5) », cases de couleurs opposées).
+      const seesDiag = (from, to) => {
+        const df = Math.sign(FILES.indexOf(to[0]) - FILES.indexOf(from[0])), dr = Math.sign(Number(to[1]) - Number(from[1]));
+        if (Math.abs(FILES.indexOf(to[0]) - FILES.indexOf(from[0])) !== Math.abs(Number(to[1]) - Number(from[1])) || !df) return false;
+        let f = FILES.indexOf(from[0]) + df, r = Number(from[1]) + dr;
+        while (sq(f, r) !== to) { if (map.at[sq(f, r)]) return false; f += df; r += dr; }
+        return true;
+      };
+      for (const [s, why] of [...targets.entries()]) {
+        if ((FILES.indexOf(s[0]) + Number(s[1])) % 2 !== (piece.fileIdx + piece.rank) % 2) { targets.delete(s); continue; }
+        const w = String(why).match(/(?:pion faible en|weak pawn on) ([a-h][1-8])/)?.[1];
+        if (w && !seesDiag(s, w)) targets.delete(s);
       }
     }
     const v = VALUE[piece.type];
