@@ -31,7 +31,9 @@ const DEF = {
   dominer: 'Dominer une couleur de cases : ce camp prend lui-même le fou adverse d\'une couleur (ou force l\'échange par une offre), garde son propre fou de cette couleur, et l\'adversaire n\'en a plus une fois l\'échange terminé ; le fou conservé n\'est pas enfermé derrière ses pions, et l\'adversaire est faible sur ces cases.',
 };
 const results = [];
+let erreurs = 0;
 for (const id of ids) {
+  if (erreurs >= 3) { console.log(`${id}: non soumis (trois erreurs de suite : quota ou panne)`); results.push({ id, concept: id.replace(/-\d+$/, ''), programme: key[id]?.kind, fable: 'non soumis', texte: '' }); continue; }
   const concept = id.replace(/-\d+$/, '');
   const f = fens(id);
   const prompt = `Regarde l'image ${dir}/${id}.png (lis-la avec l'outil Read). C'est une planche d'échecs : l'échiquier juste après le coup clé surligné, la suite des coups réellement joués (le coup surligné en couleur), le camp qui agit et une question.
@@ -44,7 +46,10 @@ Réponds en français. Première ligne exactement « VERDICT : oui », « VERDIC
   try {
     text = execFileSync('claude', ['-p', '--model', 'fable', '--allowedTools', 'Read', '--permission-mode', 'dontAsk', '--max-turns', '3', prompt], { encoding: 'utf8', timeout: 240000, stdio: ['ignore', 'pipe', 'pipe'] });
   } catch (e) { text = `ERREUR : ${e.message}`; }
-  const verdict = (text.match(/VERDICT\s*:\s*(oui|non|pas sûr)/i)?.[1] ?? '?').toLowerCase();
+  // Le verdict se lit en TÊTE de la réponse, jamais dans l'écho de la consigne (série 3 : 57 appels en erreur ont été
+  // comptés « oui » parce que la consigne contient « VERDICT : oui »).
+  erreurs = text.startsWith('ERREUR') ? erreurs + 1 : 0;
+  const verdict = text.startsWith('ERREUR') ? 'erreur' : (text.trim().match(/^VERDICT\s*:\s*(oui|non|pas sûr)/i)?.[1] ?? '?').toLowerCase();
   writeFileSync(`${dir}/${id}.txt`, text);
   results.push({ id, concept, programme: key[id]?.kind, raisonProgramme: key[id]?.raison ?? null, fable: verdict, secondes: Math.round((Date.now() - t0) / 1000), texte: text.trim() });
   console.log(`${id}: programme ${key[id]?.kind} | Fable ${verdict} (${Math.round((Date.now() - t0) / 1000)} s)`);
