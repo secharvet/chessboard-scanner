@@ -59,7 +59,8 @@ const seenGame = new Set(); // une planche par partie et par concept : deux fen�
 function sample(r, side, ply, extra) {
   const c = new Chess(r.fen);
   const sans = [];
-  for (const u of r.played.slice(0, 12)) { try { sans.push(toFrenchSan(c.move({ from: u.slice(0, 2), to: u.slice(2, 4), promotion: u[4] }).san)); } catch { break; } }
+  // 24 demi-coups : la tenue (6) et la résolution d'un levier doivent être visibles sur la planche (4 octobre).
+  for (const u of r.played.slice(0, 24)) { try { sans.push(toFrenchSan(c.move({ from: u.slice(0, 2), to: u.slice(2, 4), promotion: u[4] }).san)); } catch { break; } }
   return { fen: r.fen, side, ply, moves: sans, elo: r.elo?.[side] ?? null, lot, game: r.game, position: r.ply, ...extra };
 }
 
@@ -105,7 +106,8 @@ for await (const line of createInterface({ input: createReadStream(IN), crlfDela
     const isLever = m.piece === 'p' && !m.captured && [-1, 1].some((d) => { const q = c.get(`${String.fromCharCode(m.to.charCodeAt(0) + d)}${Number(m.to[1]) + dir}`); return q && q.type === 'p' && q.color === opp; });
     if (m.captured || m.san.includes('+')) {
       // dominer : prise du fou adverse (pas une reprise) sans complexe faible.
-      if (m.captured === 'b' && !realised.has(`dominer_${side}`) && trap.dominer.length < POOL
+      scanR ??= scanLine(r.fen, r.played, r.played.length);
+      if (m.captured === 'b' && !realised.has(`dominer_${side}`) && scanR[`dominer_${side}`] !== i && scanR[`fou_sans_vis_a_vis_${side}`] !== i && trap.dominer.length < POOL
         && !has(factsAfter, 'COMPLEXE_FAIBLE', opp, (t) => t.params.enemyBishop)) {
         const prev = r.played[i - 1];
         if (!(prev && prev.slice(2, 4) === m.to)) {
@@ -122,29 +124,33 @@ for await (const line of createInterface({ input: createReadStream(IN), crlfDela
       }
       continue;
     }
-    if (m.piece === 'r' && !realised.has(`tour_colonne_${side}`) && !realised.has(`tour_colonne_semi_ouverte_${side}`) && (trap.tour_colonne.length < POOL || trap.tour_colonne_semi_ouverte.length < POOL)
+    scanR ??= scanLine(r.fen, r.played, r.played.length);
+    // Jamais un piège là où le programme réalise le concept à ce coup, même hors des positifs (suite non calme : gain
+    // de matériel, échange de dames) : série 2, cinq « pièges » étaient de vraies réalisations (Fable, 4 octobre).
+    const doneHere = (c) => scanR[`${c}_${side}`] === i;
+    if (m.piece === 'r' && !realised.has(`tour_colonne_${side}`) && !realised.has(`tour_colonne_semi_ouverte_${side}`) && !doneHere('tour_colonne') && !doneHere('tour_colonne_semi_ouverte') && (trap.tour_colonne.length < POOL || trap.tour_colonne_semi_ouverte.length < POOL)
       && factsBefore.some((t) => t.id === 'TOUR_COLONNE_OUVERTE' || t.id === 'COLONNE_OUVERTE' || t.id === 'COLONNE_SEMI_OUVERTE')) {
       const t = factsAfter.find((t) => t.id === 'TOUR_COLONNE_OUVERTE' && t.params.color === side && t.params.square === m.to);
       const doubled = c.board().flat().some((q) => q && q.type === 'r' && q.color === side && q.square !== m.to && q.square[0] === m.to[0]);
       const raison = !t ? `la tour va en ${m.to}, sur une colonne qui n'est ni ouverte ni semi-ouverte pour ce camp`
+        : !t.params.degagee ? `la tour va en ${m.to}, mais une de ses propres pièces lui bouche la colonne : elle ne voit pas le pion cible`
         : t.params.disputee ? `la tour va en ${m.to}, sur une colonne ${t.params.ouverte ? 'ouverte' : 'semi-ouverte'} déjà tenue par une tour adverse : colonne disputée, pas conquise`
           : doubled ? `la tour rejoint en ${m.to} une tour déjà sur la colonne : c'est un doublement, pas une prise de colonne` : null;
       // Les pièges de tour servent aux deux concepts de colonne : au moins fourni des deux.
       const which = trap.tour_colonne_semi_ouverte && trap.tour_colonne_semi_ouverte.length < trap.tour_colonne.length ? 'tour_colonne_semi_ouverte' : 'tour_colonne';
       if (raison) pushTrap(which, sample(r, side, i, { kind: 'piège', raison }), r.game);
     }
-    if (m.piece === 'n' && rel >= 4 && !realised.has(`cavalier_avant_poste_${side}`) && trap.cavalier_avant_poste.length < POOL
+    if (m.piece === 'n' && rel >= 4 && !realised.has(`cavalier_avant_poste_${side}`) && !doneHere('cavalier_avant_poste') && trap.cavalier_avant_poste.length < POOL
       && !has(factsAfter, 'CAVALIER_AVANT_POSTE', side, (t) => t.params.square === m.to)) {
       pushTrap('cavalier_avant_poste', sample(r, side, i, { kind: 'piège', raison: `le cavalier s'installe en ${m.to}, dans le camp adverse, mais un pion adverse peut encore le chasser (ou la case n'est pas soutenue)` }), r.game);
     }
-    if ((m.piece === 'n' || m.piece === 'b') && !realised.has(`blocage_${side}`) && trap.blocage.length < POOL) {
+    if ((m.piece === 'n' || m.piece === 'b') && !realised.has(`blocage_${side}`) && !doneHere('blocage') && trap.blocage.length < POOL) {
       const behind = c.get(front(m.to, side));
       if (behind && behind.type === 'p' && behind.color === opp && !blocked(factsAfter, c, front(m.to, side), opp, side)) {
         pushTrap('blocage', sample(r, side, i, { kind: 'piège', raison: `la pièce se place devant le pion ${front(m.to, side)}, mais un pion adverse peut encore la chasser` }), r.game);
       }
     }
-    if (isLever && !realised.has(`rupture_${side}`) && trap.rupture.length < POOL) {
-      scanR ??= scanLine(r.fen, r.played, r.played.length);
+    if (isLever && !realised.has(`rupture_${side}`) && !doneHere('rupture') && trap.rupture.length < POOL) {
       const rec = (scanR[`rupture_leviers_${side}`] ?? []).find((x) => x.levier === i);
       const ISSUE = { contournee: 'le pion attaqué avance et contourne le levier : la position se ferme', dissoute: 'une pièce prend l\'un des deux pions : échange ou sacrifice, pas une rupture de pions', tension: 'la tension est maintenue, aucun des deux pions ne prend dans la suite', prise: 'les pions se prennent mais aucune colonne nouvelle ne s\'ouvre' };
       pushTrap('rupture', sample(r, side, i, { kind: 'piège', raison: `levier ${toFrenchSan(m.san)} : ${ISSUE[rec?.issue] ?? ISSUE.tension}` }), r.game);
@@ -159,7 +165,8 @@ for await (const line of createInterface({ input: createReadStream(IN), crlfDela
     if (!ok) break;
     const a = ms[i];
     const b = ms[i + 1];
-    if (a.captured && b.captured && b.piece === 'p' && b.to === a.to && b.captured !== 'p' && !realised.has(`affaiblir_${a.color}`) && trap.affaiblir.length < POOL) {
+    scanR ??= scanLine(r.fen, r.played, r.played.length);
+    if (a.captured && b.captured && b.piece === 'p' && b.to === a.to && b.captured !== 'p' && !realised.has(`affaiblir_${a.color}`) && scanR[`affaiblir_${a.color}`] !== i && trap.affaiblir.length < POOL) {
       pushTrap('affaiblir', sample(r, a.color, i, { kind: 'piège', raison: `${toFrenchSan(a.san)} ${toFrenchSan(b.san)} : l'adversaire reprend avec un pion, mais aucune faiblesse nouvelle ne tient ensuite` }), r.game);
       break;
     }

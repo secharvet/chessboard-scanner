@@ -43,17 +43,22 @@ describe('dominer une couleur', () => {
     // Blancs : cavalier en d5, fou de cases noires en g5. Cxe7+ Dxe7 : les Noirs n'ont plus de fou noir, moi si.
     const fen = 'r2q1rk1/pp2b2p/2p1p1p1/3N1pB1/3P4/2N2B2/PPP2PPP/R2Q1RK1 w - - 0 12';
     const s = scanLine(fen, ['d5e7', 'd8e7', 'd1d2', 'a7a6', 'a1e1', 'e7f7', 'g5f4', 'a8d8'], 12);
-    assert.equal(s.dominer_w, 0);
-    assert.equal(s.dominer_couleur_w, 'noires');
+    // 4 octobre : la lettre est le moyen « fou sans vis-à-vis » ; la domination exige une exploitation dans la suite.
+    assert.equal(s.fou_sans_vis_a_vis_w, 0);
+    assert.equal(s.fou_sans_vis_a_vis_couleur_w, 'noires');
+    assert.equal(s.dominer_w, -1);
     assert.equal(s.dominer_b, -1);
   });
   it('compte aussi quand je force l\'échange par une offre : Cf6+ Fxf6 Dxf6 (planche réelle)', async () => {
     const { scanLine } = await import('../coach/plan-concepts.mjs');
     const fen = 'r4rk1/p1q2pb1/1p5p/4p1p1/1nP1N3/4BQ2/PP3PPP/R2R2K1 w - - 2 19';
     const s = scanLine(fen, ['e4f6', 'g7f6', 'f3f6', 'c7c4', 'd1d2', 'c4c6', 'f6f3', 'c6e6', 'a1d1', 'a7a5', 'h2h4', 'g5h4'], 12);
-    assert.equal(s.dominer_w, 0); // daté à l'offre Cf6+ (vérité de terrain du 2 octobre : « le vrai coup clé est Cd6+ »)
-    assert.equal(s.dominer_couleur_w, 'noires');
-    assert.equal(s.dominer_exploite_w, -1); // pas encore exploité dans cette suite
+    // Daté à l'offre Cf6+ (« le vrai coup clé est Cd6+ ») ; sans exploitation dans la suite, c'est le moyen « fou sans
+    // vis-à-vis », pas encore la domination (décision de l'auteur du 4 octobre).
+    assert.equal(s.fou_sans_vis_a_vis_w, 0);
+    assert.equal(s.fou_sans_vis_a_vis_couleur_w, 'noires');
+    assert.equal(s.dominer_w, -1);
+    assert.equal(s.dominer_exploite_w, -1);
   });
   it('étage 3 : une pièce s\'installe sur un trou de la couleur conquise', async () => {
     const { scanLine } = await import('../coach/plan-concepts.mjs');

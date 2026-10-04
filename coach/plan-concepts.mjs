@@ -40,6 +40,8 @@ export const zoneAttackers = (board, color) => {
 export const CONCEPTS = {
   // A1 / A1 bis (définitions de l'auteur, 1er octobre) : colonne OUVERTE (aucun pion) ou SEMI-OUVERTE pour moi (un seul
   // pion, à l'adversaire), non disputée par une tour adverse ; le doublement est A2, pas ici.
+  // `degagee` (la tour voit sa colonne) se vérifie au coup qui l'installe (agent), pas pendant la tenue : une pièce
+  // à moi qui passe sur la colonne trois coups plus tard (Fb2 devant Tb1) n'annule pas la prise de colonne.
   tour_colonne: (facts, color) => has(facts, 'TOUR_COLONNE_OUVERTE', color, (t) => t.params.ouverte && !t.params.disputee),
   tour_colonne_semi_ouverte: (facts, color) => has(facts, 'TOUR_COLONNE_OUVERTE', color, (t) => !t.params.ouverte && !t.params.disputee),
   cavalier_avant_poste: (facts, color) => has(facts, 'CAVALIER_AVANT_POSTE', color),
@@ -194,9 +196,9 @@ const openFiles = (facts, color) => new Set(facts
  */
 const AGENT = {
   tour_colonne: (m, snap, color) => m.piece === 'r' && !myRooks(snap.board, color).some((r) => r.square !== m.to && r.square[0] === m.to[0])
-    && snap.facts.some((t) => t.id === 'TOUR_COLONNE_OUVERTE' && t.params.color === color && t.params.square === m.to && t.params.ouverte && !t.params.disputee),
+    && snap.facts.some((t) => t.id === 'TOUR_COLONNE_OUVERTE' && t.params.color === color && t.params.square === m.to && t.params.ouverte && !t.params.disputee && t.params.degagee),
   tour_colonne_semi_ouverte: (m, snap, color) => m.piece === 'r' && !myRooks(snap.board, color).some((r) => r.square !== m.to && r.square[0] === m.to[0])
-    && snap.facts.some((t) => t.id === 'TOUR_COLONNE_OUVERTE' && t.params.color === color && t.params.square === m.to && !t.params.ouverte && !t.params.disputee),
+    && snap.facts.some((t) => t.id === 'TOUR_COLONNE_OUVERTE' && t.params.color === color && t.params.square === m.to && !t.params.ouverte && !t.params.disputee && t.params.degagee),
   cavalier_avant_poste: (m, snap, color) => m.piece === 'n' && snap.facts.some((t) => t.id === 'CAVALIER_AVANT_POSTE' && t.params.color === color && t.params.square === m.to),
   blocage: (m, snap, color) => {
     if (m.piece !== 'n' && m.piece !== 'b') return false;
@@ -276,6 +278,14 @@ export function scanLine(fen, pv, PLIES = 48) {
   const { atoms } = detectAtoms(fen, pv.slice(0, PLIES), PLIES);
   /** La condition est-elle vraie du demi-coup i jusqu'à i + HOLD (ou jusqu'au bout de la suite) ? */
   const holds = (i, pred) => timeline.slice(i, i + HOLD + 1).every(pred);
+  // Concepts d'installation : « et il y reste » se vérifie sur LA pièce jouée, encore sur SA case (un cavalier qui passe
+  // par h4 pour aller en f5 n'est pas installé en h4 ; vérité de terrain du 4 octobre, planches avant-poste 7 et
+  // blocage 3), et la fenêtre de tenue doit exister en entier : une suite qui s'arrête ne prouve rien.
+  // Une pièce mineure ou la dame reste sur sa case ; une tour reste sur sa colonne (Tg1 puis Tg2 tient la colonne g),
+  // ou sur sa rangée pour la septième.
+  const STAYS = { tour_colonne: 'file', tour_colonne_semi_ouverte: 'file', doublement_tours: 'file', tour_derriere_passe: 'file', tour_septieme: 'rank', cavalier_avant_poste: 'square', blocage: 'square', dame_centralisee: 'square' };
+  const stays = (i, color, how) => holds(i, (s) => s.board.board().flat().some((q) => q && q.color === color && q.type === moves[i].piece
+    && (how === 'square' ? q.square === moves[i].to : how === 'file' ? q.square[0] === moves[i].to[0] : q.square[1] === moves[i].to[1])));
   for (const [name, test] of Object.entries(CONCEPTS)) {
     for (const color of COLORS) {
       let ply = -1;
@@ -285,7 +295,8 @@ export function scanLine(fen, pv, PLIES = 48) {
         // 30 septembre : « blocage » réalisé par …Cc3+, qui attaque aussi la tour).
         const delay = DELAY[name] ?? 0;
         ply = timeline.findIndex((snap, i) => moves[i].color === color && !moves[i].captured && !moves[i].san.includes('+')
-          && i + delay < timeline.length && AGENT[name](moves[i], snap, color, i, atoms) && holds(i + delay, ok));
+          && i + delay + HOLD < timeline.length && AGENT[name](moves[i], snap, color, i, atoms) && holds(i + delay, ok)
+          && (!STAYS[name] || stays(i, color, STAYS[name])));
       }
       out[`${name}_${color}`] = ply;
       // Avant-poste : l'adversaire peut-il encore échanger le cavalier (fou de la couleur, cavalier) ?
@@ -312,11 +323,16 @@ export function scanLine(fen, pv, PLIES = 48) {
       const targets = [-1, 1].map((d) => `${String.fromCharCode(S.charCodeAt(0) + d)}${Number(S[1]) + dir}`)
         .filter((sq) => { const q = timeline[L].board.get(sq); return q && q.type === 'p' && q.color === opp; });
       const rec = { levier: L, issue: 'tension', at: -1, colonne: null, colonneAdverse: null, tour: false };
-      for (let i = L + 1; i < moves.length; i++) {
+      // Un levier peut avoir deux cibles (d4 contre c3 et e3) : une cible qui avance ne contourne que sa part ; le
+      // levier est contourné quand le pion du levier avance ou qu'il ne reste plus de cible (planche rupture 2, 4 octobre).
+      const tg = [...targets];
+      for (let i = L + 1; i < moves.length && tg.length; i++) {
         const x = moves[i];
-        if (x.piece === 'p' && x.captured === 'p' && ((x.from === S && targets.includes(x.to)) || (targets.includes(x.from) && x.to === S))) { rec.issue = 'prise'; rec.at = i; break; }
-        if (x.piece === 'p' && !x.captured && (x.from === S || targets.includes(x.from))) { rec.issue = 'contournee'; rec.at = i; break; }
-        if (x.captured && (x.to === S || targets.includes(x.to))) { rec.issue = 'dissoute'; rec.at = i; break; }
+        if (x.piece === 'p' && x.captured === 'p' && ((x.from === S && tg.includes(x.to)) || (tg.includes(x.from) && x.to === S))) { rec.issue = 'prise'; rec.at = i; break; }
+        if (x.piece === 'p' && !x.captured && x.from === S) { rec.issue = 'contournee'; rec.at = i; break; }
+        if (x.piece === 'p' && !x.captured && tg.includes(x.from)) { tg.splice(tg.indexOf(x.from), 1); if (!tg.length) { rec.issue = 'contournee'; rec.at = i; } continue; }
+        if (x.captured && x.to === S) { rec.issue = 'dissoute'; rec.at = i; break; }
+        if (x.captured && tg.includes(x.to)) { tg.splice(tg.indexOf(x.to), 1); if (!tg.length) { rec.issue = 'dissoute'; rec.at = i; } continue; }
       }
       if (rec.issue === 'prise') {
         const prior = L > 0 ? timeline[L - 1].facts : start.facts;
@@ -357,9 +373,23 @@ export function scanLine(fen, pv, PLIES = 48) {
     let means = null;
     let wing = null;
     let weakness = null;
+    // Un pion arriéré n'est une faiblesse que si sa colonne est ouverte devant lui pour moi (aucun pion à moi devant) :
+    // derrière d5 blanc, le pion d6 noir est inattaquable (planche affaiblir 8, 4 octobre).
+    const exposed = (board, t) => {
+      if (t.id !== 'PION_ARRIERE') return true;
+      const sq = t.params.square; const dir = t.params.color === 'w' ? 1 : -1;
+      for (let r = Number(sq[1]) + dir; r >= 1 && r <= 8; r += dir) { const q = board.get(`${sq[0]}${r}`); if (q && q.type === 'p' && q.color !== t.params.color) return false; }
+      return true;
+    };
     for (let i = 0; i < timeline.length && ply < 0; i++) {
+      // La faiblesse doit NAÎTRE ici d'un coup qui touche sa structure : un coup de pion adverse (reprise, avance) ou ma
+      // prise d'un de ses pions ; pas d'un coup de roi adverse (planche affaiblir 2 : le bouclier « affaibli » par Rf2).
+      const m0 = moves[i];
+      const structural = (m0.color === opp && m0.piece === 'p') || (m0.color === color && m0.captured === 'p');
+      if (!structural) continue;
+      const prevHas = (k) => (i === 0 ? start : timeline[i - 1]).facts.some((u) => u.params.color === opp && weakKey(u) === k);
       const fresh = timeline[i].facts.filter((t) => t.params.color === opp).map((t) => [weakKey(t), t])
-        .filter(([k]) => k && !had.has(k) && holds(i, (s) => s.facts.some((u) => u.params.color === opp && weakKey(u) === k)));
+        .filter(([k, t]) => k && !had.has(k) && !prevHas(k) && exposed(timeline[i].board, t) && holds(i, (s) => s.facts.some((u) => u.params.color === opp && weakKey(u) === k)));
       if (!fresh.length) continue;
       const m = moves[i];
       const prev = moves[i - 1];
@@ -412,6 +442,9 @@ export function scanLine(fen, pv, PLIES = 48) {
     const pawnsOnShade = (board, c, shade) => { const ps = board.board().flat().filter((q) => q && q.type === 'p' && q.color === c); return ps.length ? ps.filter((q) => squareColor(q.square) === shade).length / ps.length : 0; };
     let ply = -1;
     let shadeOut = null;
+    let exploit = -1;
+    let letter = -1;
+    let letterShade = null;
     for (let i = 0; i < moves.length && ply < 0; i++) {
       const m = moves[i];
       if (m.color !== color || m.captured !== 'b') continue;
@@ -432,20 +465,24 @@ export function scanLine(fen, pv, PLIES = 48) {
       if (bad || pawnsOnShade(after, color, shade) >= 0.75) continue;
       const last = timeline[Math.min(end + HOLD, timeline.length - 1)].board;
       if (!bishopsOf(last, color, shade).length) continue;
-      if (holds(end, (s) => dominated(s, shade))) { ply = offered(i) ? i - 2 : i; shadeOut = shade; }
+      if (!holds(end, (s) => dominated(s, shade))) continue;
+      // La lettre (je garde le seul fou de la couleur, lui n'en a plus, ses cases sont faibles) est le MOYEN « fou sans
+      // vis-à-vis ». La DOMINATION exige en plus l'exploitation dans la suite : une de mes pièces (pas un pion)
+      // s'installe sur un des trous de cette couleur, ou mon fou de cette couleur ou ma dame donne échec (décision de
+      // l'auteur du 4 octobre : « ce qui manque, c'est l'état lui-même, pas la manière d'y arriver »).
+      const cand = offered(i) ? i - 2 : i;
+      const holesOf = (snap) => new Set(snap.facts.filter((t) => t.id === 'COMPLEXE_FAIBLE' && t.params.color === opp && t.params.shade === shade)
+        .flatMap((t) => String(t.params.squares).split(',')));
+      const ex = timeline.findIndex((snap, j) => j > end && moves[j].color === color && (
+        (moves[j].piece !== 'p' && holesOf(snap).has(moves[j].to))
+        || (moves[j].san.includes('+') && (moves[j].piece === 'q' || moves[j].piece === 'b') && squareColor(moves[j].to) === shade)));
+      if (letter < 0) { letter = cand; letterShade = shade; }
+      if (ex >= 0) { ply = cand; shadeOut = shade; exploit = ex; }
     }
+    out[`fou_sans_vis_a_vis_${color}`] = letter;
+    out[`fou_sans_vis_a_vis_couleur_${color}`] = letterShade;
     out[`dominer_${color}`] = ply;
     out[`dominer_couleur_${color}`] = shadeOut;
-    // Étage 3, exploitation : après l'échange, une de mes pièces (pas un pion) s'installe sur un des trous de
-    // cette couleur, ou mon fou de cette couleur ou ma dame donne échec. Demi-coup, ou -1 (pas encore dans la suite).
-    let exploit = -1;
-    if (ply >= 0) {
-      const holesOf = (snap) => new Set(snap.facts.filter((t) => t.id === 'COMPLEXE_FAIBLE' && t.params.color === opp && t.params.shade === shadeOut)
-        .flatMap((t) => String(t.params.squares).split(',')));
-      exploit = timeline.findIndex((snap, i) => i > ply && moves[i].color === color && (
-        (moves[i].piece !== 'p' && holesOf(snap).has(moves[i].to))
-        || (moves[i].san.includes('+') && (moves[i].piece === 'q' || moves[i].piece === 'b') && squareColor(moves[i].to) === shadeOut)));
-    }
     out[`dominer_exploite_${color}`] = exploit;
   }
   // ── Recettes (§3 bis) : moyen → déséquilibre → exploitation, sur les atomes et les faits ──

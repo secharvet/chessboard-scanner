@@ -1110,3 +1110,30 @@ Cinq planches : 5 verdicts sur 5 égaux à la clé du programme (2 positifs oui,
 case par case sur les positions : exactes, y compris les finesses (prise en passant possible, dame manquante, pion e2 à
 un pas de la promotion), 16 à 38 s par planche. Convaincu : les 70 planches sont soumises à 11 h 05 (fin vers 11 h 40),
 pour donner à l'auteur une troisième colonne (programme / Fable / lui) et lui épargner les cas d'accord.
+
+## 4 octobre, 12 h 30 — Fable juge la série 2 ; trois décisions de l'auteur ; six défauts corrigés
+
+**Idée de l'auteur** : il avait jugé la première série en montrant les captures à Fable (« il s'en sort mieux en image
+qu'en texte »). Essai sur 5 planches (`scripts/planches-captures.mjs`, `scripts/planches-fable.mjs` : claude -p, modèle
+fable, outil Read seul, une planche à la fois, définition + question + FEN avant / après) : 5 / 5 égaux à la clé,
+justifications vérifiées case par case. Puis les 70 : 26 min, 23 s par planche, **52 accords sur 70 (74 %)**, 2 « pas
+sûr », 16 désaccords (`reports/fable-planches-serie2.md`, page https://claude.ai/artifact/AJb47F5i1VEsGDaQ9zkYCU).
+Dans les désaccords, Fable avait raison presque partout : cinq « pièges » étaient de vraies réalisations non calmes
+(rupture 3, 4, 5 ; affaiblir 3, 10 : le tirage rangeait en piège tout ce qui n'était pas un positif calme) ; levier à
+deux cibles arrêté à la première issue (rupture 2) ; tenue vérifiée sur l'état et non sur la pièce, et acquise quand
+la suite s'arrête (avant-poste 5, 6, 7 ; blocage 3) ; faiblesse née d'un coup de roi adverse attribuée à mon levier
+(affaiblir 2) ; pion arriéré sur colonne fermée compté (affaiblir 8) ; planches de 12 demi-coups pour des étiquettes
+sur 24 (rupture 10, domination 5).
+**Trois questions de définition tranchées par l'auteur devant l'échiquier** (page
+https://claude.ai/artifact/1zr7cqX24kfEvAgnCx7LRs) : (1) cavalier sur la bande : oui, exclure a et h sauf pion qui
+soutient déjà ; (2) colonne semi-ouverte : oui, la tour doit voir le pion cible ; (3) domination : non à la lettre
+seule : « la lettre décrit un fou sans vis-à-vis (moyen), pas une domination ; il faut des cases faibles de cette
+couleur et une pièce qui les exploite ; l'origine tactique n'est pas le problème ».
+**Code** (`plan-concepts.mjs`, `minor-pieces.js`, `verite-terrain.mjs`) : tenue par pièce (case pour mineure et dame,
+colonne pour tour, rangée pour la septième) et fenêtre de tenue entière exigée ; levier multi-cibles ; faiblesse née
+d'un coup de pion adverse ou de ma prise de pion, pion arriéré exposé seulement ; `fou_sans_vis_a_vis` (moyen) et
+`dominer` = moyen + exploitation ; cavalier de bande soutenu ; `degagee` sur le fait tour (vérifié au coup, pas
+pendant la tenue : Fb2 devant Tb1 trois coups plus tard n'annule pas la prise de colonne) ; tirage : 24 demi-coups,
+jamais de piège là où le programme réalise le concept, raison « colonne bouchée ». Tests : 274, dont dix tirés des
+désaccords (`tests/serie2-fable.test.js`, 24 demi-coups des étiquettes d'origine). Banc de 40 : une fiche perd un
+« À surveiller » dont la tenue n'est plus prouvable dans la suite du moteur.
