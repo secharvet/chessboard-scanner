@@ -10,7 +10,9 @@ import { resolve } from 'node:path';
 import { chromium } from 'playwright';
 const [timing, dir, out] = process.argv.slice(2);
 const MAX = Number(process.argv.includes('--max') ? process.argv[process.argv.indexOf('--max') + 1] : 1000);
-const rows = JSON.parse(readFileSync(timing, 'utf8')).rows.slice(0, MAX);
+const FROM = Number(process.argv.includes('--from') ? process.argv[process.argv.indexOf('--from') + 1] : 0); // reprise après une coupure
+const allRows = JSON.parse(readFileSync(timing, 'utf8')).rows;
+const rows = allRows.slice(FROM, MAX);
 mkdirSync(dir, { recursive: true });
 // Une page avec un échiquier par fiche (glyphes pleins colorés par le remplissage), capturée carte par carte.
 const G = { k: '♚', q: '♛', r: '♜', b: '♝', n: '♞', p: '♟' };
@@ -28,15 +30,15 @@ const board = (fen) => {
   return s + '</svg>';
 };
 const html = `<!doctype html><meta charset="utf-8"><style>body{background:#fff;margin:0}article{width:560px;padding:20px;background:#fff}p{font:16px system-ui;margin:8px 0 0}</style>` +
-  rows.map((r, i) => `<article id="f${i}">${board(r.fen)}<p>Trait aux ${r.fen.split(' ')[1] === 'w' ? 'Blancs' : 'Noirs'} — ${r.fen}</p></article>`).join('');
+  rows.map((r, k) => { const i = FROM + k; return `<article id="f${i}">${board(r.fen)}<p>Trait aux ${r.fen.split(' ')[1] === 'w' ? 'Blancs' : 'Noirs'} — ${r.fen}</p></article>`; }).join('');
 writeFileSync(`${dir}/fiches.html`, html);
 const browser = await chromium.launch(); const page = await browser.newPage({ viewport: { width: 700, height: 800 }, deviceScaleFactor: 2 });
 await page.goto('file://' + resolve(`${dir}/fiches.html`)); await page.waitForTimeout(500);
-for (let i = 0; i < rows.length; i++) { const el = page.locator(`#f${i}`); await el.scrollIntoViewIfNeeded(); await el.screenshot({ path: `${dir}/f${i}.png` }); }
+for (let k = 0; k < rows.length; k++) { const i = FROM + k; const el = page.locator(`#f${i}`); await el.scrollIntoViewIfNeeded(); await el.screenshot({ path: `${dir}/f${i}.png` }); }
 await browser.close(); console.log(`${rows.length} images`);
 const results = []; let erreurs = 0;
-for (let i = 0; i < rows.length; i++) {
-  const r = rows[i]; const side = r.fen.split(' ')[1] === 'w' ? 'les Blancs' : 'les Noirs';
+for (let k = 0; k < rows.length; k++) {
+  const i = FROM + k; const r = rows[k]; const side = r.fen.split(' ')[1] === 'w' ? 'les Blancs' : 'les Noirs';
   if (erreurs >= 3) { results.push({ i, name: r.name, fen: r.fen, advice: r.advice, graves: null, texte: 'non soumis' }); continue; }
   const prompt = `Regarde l'image ${resolve(dir)}/f${i}.png avec l'outil Read : c'est une position d'échecs. Trait aux ${side}. FEN exacte : ${r.fen}.
 Voici la fiche qu'un coach d'échecs pour débutants affiche sur cette position (elle tutoie le joueur qui a le trait) :
@@ -50,7 +52,7 @@ Réponds en français. Première ligne exactement « GRAVES : n » (n = nombre d
   const graves = text.startsWith('ERREUR') ? null : Number(text.trim().match(/^GRAVES\s*:\s*(\d+)/i)?.[1] ?? NaN);
   writeFileSync(`${dir}/f${i}.txt`, text);
   results.push({ i, name: r.name, fen: r.fen, advice: r.advice, graves, secondes: Math.round((Date.now() - t0) / 1000), texte: text.trim() });
-  console.log(`${i + 1}/${rows.length} ${r.name.slice(0, 50)} : graves ${graves ?? 'erreur'} (${Math.round((Date.now() - t0) / 1000)} s)`);
+  console.log(`${i + 1}/${allRows.length} ${r.name.slice(0, 50)} : graves ${graves ?? 'erreur'} (${Math.round((Date.now() - t0) / 1000)} s)`);
   writeFileSync(out, JSON.stringify(results, null, 1));
 }
 const ok = results.filter((x) => typeof x.graves === 'number');
