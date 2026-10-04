@@ -13,6 +13,9 @@
 set -u
 cd "$(dirname "$0")/.."
 CMD=""; OUT_DIR="reports/repartir"; SUFFIX=".json"; PART_DENEB=4; PART_VPS=1; MAX=240
+# Plafonds de travaux SIMULTANÉS par machine (4 octobre 2026 : DENEB est l'ordinateur principal de l'auteur, « laisse
+# 2 cœurs libres sinon je freeze ») : au-delà, les travaux attendent leur tour dans une file.
+CAP_DENEB=${CAP_DENEB:-14}; CAP_VPS=${CAP_VPS:-3}
 FILES=()
 while [ $# -gt 0 ]; do
   case "$1" in
@@ -38,25 +41,43 @@ for i in "${!FILES[@]}"; do
   out="$OUT_DIR/$base$SUFFIX"
   OUTS[$i]="$out"
   cmd="${CMD//\{in\}/$f}"; cmd="${cmd//\{out\}/$out}"
-  if [ $((i % cycle)) -lt "$PART_DENEB" ]; then
-    WHERE[$i]=deneb
-    # ssh -n et une commande après le « & » : sinon ssh attend la fin du travail distant (constaté le 1er octobre).
-    # « cd … ; … & » et non « cd … && … & » : avec &&, c'est un sous-shell entier qui passe en arrière-plan, et il garde
-    # la sortie de ssh ouverte jusqu'à la fin du travail (lancements en série constatés le 1er octobre, 15 h 40).
-    ssh -n deneb "cd '$REMOTE_DIR'; setsid nohup bash -c '$cmd' > '$out.log' 2>&1 < /dev/null & sleep 0.3; echo lancé" > /dev/null
-  else
-    WHERE[$i]=vps
-    setsid nohup nice -n 10 bash -c "$cmd" > "$out.log" 2>&1 < /dev/null &
-  fi
-  echo "$(TZ=Europe/Paris date +%H:%M) lancé sur ${WHERE[$i]} : $f → $out"
+  if [ $((i % cycle)) -lt "$PART_DENEB" ]; then WHERE[$i]=deneb; else WHERE[$i]=vps; fi
+  CMDS[$i]="$cmd"
 done
+
 
 finished() {  # 0 si le journal $2 sur la machine $1 porte la marque
   if [ "$1" = deneb ]; then ssh deneb "grep -q TERMINÉ '$REMOTE_DIR/$2' 2>/dev/null"; else grep -q TERMINÉ "$2" 2>/dev/null; fi
 }
+
+running() {  # nombre de travaux lancés et non terminés sur la machine $1
+  local n=0
+  for j in "${!FILES[@]}"; do [ "${WHERE[$j]}" = "$1" ] && [ "${STARTED[$j]:-0}" = 1 ] && ! finished "$1" "${OUTS[$j]}.log" && n=$((n + 1)); done
+  echo $n
+}
+launch() {  # lance le travail $1 sur sa machine
+  local i=$1 cmd="${CMDS[$i]}" out="${OUTS[$i]}"
+  if [ "${WHERE[$i]}" = deneb ]; then
+    # ssh -n et une commande après le « & » : sinon ssh attend la fin du travail distant (constaté le 1er octobre).
+    # « cd … ; … & » et non « cd … && … & » : avec &&, c'est un sous-shell entier qui passe en arrière-plan, et il garde
+    # la sortie de ssh ouverte jusqu'à la fin du travail (lancements en série constatés le 1er octobre, 15 h 40).
+    ssh -n deneb "cd '$REMOTE_DIR'; setsid nohup nice -n 10 bash -c '$cmd' > '$out.log' 2>&1 < /dev/null & sleep 0.3; echo lancé" > /dev/null
+  else
+    setsid nohup nice -n 10 bash -c "$cmd" > "$out.log" 2>&1 < /dev/null &
+  fi
+  STARTED[$i]=1
+  echo "$(TZ=Europe/Paris date +%H:%M) lancé sur ${WHERE[$i]} : ${FILES[$i]} → $out"
+}
+declare -a CMDS STARTED
 for minute in $(seq 0 "$MAX"); do
+  # File d'attente : lancer ce qui peut l'être sous les plafonds.
+  for i in "${!FILES[@]}"; do
+    [ "${STARTED[$i]:-0}" = 1 ] && continue
+    if [ "${WHERE[$i]}" = deneb ]; then cap=$CAP_DENEB; else cap=$CAP_VPS; fi
+    [ "$(running "${WHERE[$i]}")" -lt "$cap" ] && launch "$i"
+  done
   done_n=0
-  for i in "${!FILES[@]}"; do finished "${WHERE[$i]}" "${OUTS[$i]}.log" && done_n=$((done_n + 1)); done
+  for i in "${!FILES[@]}"; do [ "${STARTED[$i]:-0}" = 1 ] && finished "${WHERE[$i]}" "${OUTS[$i]}.log" && done_n=$((done_n + 1)); done
   if [ "$done_n" -eq ${#FILES[@]} ]; then break; fi
   if [ $((minute % 5)) -eq 0 ]; then echo "$(TZ=Europe/Paris date +%H:%M) $done_n/${#FILES[@]} terminés"; fi
   sleep 60
