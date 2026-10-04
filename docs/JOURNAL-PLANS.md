@@ -1088,3 +1088,25 @@ travail était du 3 (changement de jour non vu) ; corrigées.
   tactique et devoirs).
 - **Jeu v6** (`humains-v6-juge.jsonl`, 986 465 positions) : blocage 33 825 positifs, rupture 191 112, affaiblir
   163 433, domination 5 068 (règles strictes : 6 fois moins qu'avant), baïonnette 4 445, minorité 454.
+
+## 4 octobre, 11 h 05 — modèles v6 : des étiquettes plus justes et plus dures à prédire ; essai « une planche à Fable »
+
+**Chaîne v6 terminée sur DENEB à 10 h 53** (jeu 10 h 28, modèles 10 h 44, courbes, inventaire). AUC (test par
+parties, réseau + faits) v5 → v6 : tour sur colonne **ouverte** 0,911 → 0,848 ; colonne semi-ouverte (nouveau) 0,848 ;
+rupture 0,821 → 0,809 ; affaiblir 0,752 → 0,752 ; blocage 0,826 → 0,800 ; avant-poste 0,867 → 0,852 ; domination
+0,860 → 0,821 ; baïonnette 0,984 → 0,984. Lecture : l'étiquette v5 de la tour sur colonne, la plus facile à prédire,
+était celle que l'auteur refusait aux trois cinquièmes (« c'est semi-ouverte », « c'est un doublement », « colonne
+disputée ») ; la séparer et exclure ces cas enlève le signal facile (il existe une colonne semi-ouverte) et laisse deux
+concepts voisins que le réseau confond. Même mouvement sur l'avant-poste, le blocage et la domination : les règles de
+l'auteur rendent les positifs plus rares et plus exigeants. La baisse d'AUC n'est pas une régression du modèle, c'est
+la mesure d'une étiquette plus juste (point 8 de la critique du catalogue : à dire dans le journal, c'est fait).
+Couverture, lot 2016 s0 test (`reports/inventaire-coups-6.md`) : plans 18,9 % des coups calmes, défense 16,6 %,
+moyens 52,3 % ; par fenêtre 61 à 64 % des camps selon le niveau.
+**Essai « une planche à Fable »** (idée de l'auteur : il a jugé la première série en montrant les captures à Fable, qui
+« s'en sort mieux en image qu'en texte ») : `scripts/planches-captures.mjs` (Chromium, une carte par image) et
+`scripts/planches-fable.mjs` (claude -p --model fable, outil Read seul, une planche à la fois, définition de l'auteur et
+question dans la consigne, FEN avant / après le coup clé en texte parce que l'image ne montre pas la pièce prise).
+Cinq planches : 5 verdicts sur 5 égaux à la clé du programme (2 positifs oui, 3 pièges non), justifications vérifiées
+case par case sur les positions : exactes, y compris les finesses (prise en passant possible, dame manquante, pion e2 à
+un pas de la promotion), 16 à 38 s par planche. Convaincu : les 70 planches sont soumises à 11 h 05 (fin vers 11 h 40),
+pour donner à l'auteur une troisième colonne (programme / Fable / lui) et lui épargner les cas d'accord.
