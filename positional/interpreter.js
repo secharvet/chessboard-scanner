@@ -146,7 +146,7 @@ function renderTokenFr(t) {
         : `Roi ${colorLabel(/** @type {string} */ (p.color))} encore au centre — roquer est prioritaire.`;
 
     case 'PIONS_ROI_AFFAIBLI':
-      return `Bouclier de pions affaibli devant le roi ${colorLabel(/** @type {string} */ (p.color))}${p.files ? ` (colonne ${p.files} sans pion protecteur)` : ''}.`;
+      return `Bouclier de pions affaibli devant le roi ${p.color === 'w' ? 'blanc' : 'noir'}${p.files ? ` (colonne ${p.files} sans pion protecteur)` : ''}.`;
 
     case 'STRUCTURE':
       return `Structure : ${STRUCTURES[/** @type {string} */ (p.name)]?.label ?? p.name} (${colorLabel(/** @type {string} */ (p.color))}).`;
@@ -292,7 +292,7 @@ function renderTokenFr(t) {
       return `Grand roque ${colorLabel(/** @type {string} */ (p.color))} effectué.`;
 
     case 'PIONS_ROI_BOUCLIER':
-      return `Bouclier de pions intact devant le roi ${colorLabel(/** @type {string} */ (p.color))}.`;
+      return `Bouclier de pions intact devant le roi ${p.color === 'w' ? 'blanc' : 'noir'}.`;
 
     case 'PIECE_MENACEE': {
       // Nommer la pièce (« ta dame en b6 », pas « ta pièce ») : c'est ce qui parle à un débutant.
