@@ -400,14 +400,18 @@ export function scanLine(fen, pv, PLIES = 48) {
       // Échange : la reprise de pion doit créer la faiblesse, donc être sur sa colonne ou une voisine (planche #25 du
       // 30 septembre : reprise …dxe4 créditée d'un pion arriéré en b7, sans rapport).
       const nearFile = (sq) => wFile < 0 || Math.abs(sq.charCodeAt(0) - 97 - wFile) <= 1;
-      if (m.color === opp && m.piece === 'p' && m.captured && m.captured !== 'p' && prev?.color === color && prev.captured
-        && (nearFile(m.from) || nearFile(m.to))) means = 'echange';
+      // Échange : sa reprise de pion répond à MA prise sur la même case, un ou trois demi-coups plus tôt (un échange
+      // intercalé ailleurs, Txc1 Dxc1, ne change pas l'auteur de l'échange : banc du 4 octobre, fiche 15, « l'échange
+      // Dxc1 » alors que c'est Cxb5 qui force axb5 et isole b7).
+      const init = m.color === opp && m.piece === 'p' && m.captured && m.captured !== 'p' && (nearFile(m.from) || nearFile(m.to))
+        ? [i - 1, i - 3].find((j) => j >= 0 && moves[j].color === color && moves[j].captured && moves[j].to === m.to) : undefined;
+      if (init !== undefined) means = 'echange';
       else if (lever) means = 'poussee';
       else continue; // faiblesse sans moyen identifiable du camp : pas un plan de ce type
       // Le plan est daté au coup du camp qui prend l'initiative, jamais à la reprise adverse (vérité de terrain du
       // 3 octobre : les cinq planches positives surlignaient la reprise de pion de l'adversaire, refusées toutes les
       // cinq ; l'auteur : « la reprise est la réponse forcée, elle ne porte pas le plan »).
-      ply = means === 'echange' ? i - 1 : i;
+      ply = means === 'echange' ? init : i;
       out[`affaiblir_levier_${color}`] = means === 'poussee' ? lever[0] : -1;
       weakness = { id: t.id, square: t.params.square ?? null, file: t.params.file ?? null };
       const file = t.params.file ?? t.params.square?.[0] ?? String(t.params.files ?? '')[0];
