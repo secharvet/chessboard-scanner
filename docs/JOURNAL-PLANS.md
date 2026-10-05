@@ -1217,3 +1217,13 @@ Journal de la partie du 4 au soir : mat en 1 disponible, le juge disait « Ta1 :
 « pression » et de « pion isolé c7 ». Corrections : juge → mat raté = erreur (« tu avais un mat en N par X »), mat gardé
 mais plus long = imprécision, mat aussi court = bien joué ; fiche → raison « mate » avant tout, plus de plan type, de
 « se valent presque » ni de « à surveiller » quand le mat est là. Tests `tests/mat-force.test.js` ; banc de 40 inchangé.
+
+### 5 octobre 2026, matin : deux récits à la main, test du modèle « partir des coups joués »
+
+Opéra 1858 : 23 phrases, 10 mélodies, 5 faits statiques, 8 tactique, 0 moteur seul. Fischer – Spassky 1972 (6) : 16 phrases,
+14 mélodies, 1 fait, 1 tactique, 0 moteur seul. Aucune phrase contredite par les références. Nos détecteurs sur les mêmes
+parties : Morphy → que des « pression / menace / soutien » ; Fischer → dix plans sur 41 coups blancs, mais jamais le
+pourquoi (Fb5 « développement » au lieu de « empêche …Cd7 » ; Dh3 « pression e6 » au lieu de « transfert vers l'aile roi »).
+Trous confirmés (après Chernev la veille) : intention, prophylaxie, bilan comparé, transfert de pièces, chaîne qui prépare
+une rupture, pions pendants ; règle de tenue qui efface la tour sur la colonne ouverte (12.O-O-O chez Morphy).
+Pages : docs/recits/opera-1858.html, docs/recits/fischer-spassky-1972-6.html. Décision de l'auteur attendue.
