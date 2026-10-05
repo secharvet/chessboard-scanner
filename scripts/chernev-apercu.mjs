@@ -68,5 +68,5 @@ for (const g of games) {
   out.push({ titre: header.Event?.replace(/^Logical Chess Move-by-Move:\s*/, ''), intro, rows });
   console.log(`${out.length}. ${out.at(-1).titre} : ${rows.length} coups, ${rows.filter((r) => r.maitre.length).length} commentés`);
 }
-writeFileSync('reports/chernev-apercu.json', JSON.stringify({ source: IN, totals, parties: out }, null, 1));
+writeFileSync(process.argv[4] ?? 'reports/chernev-apercu.json', JSON.stringify({ source: IN, totals, parties: out }, null, 1));
 console.log('TOTAL', JSON.stringify(totals));
