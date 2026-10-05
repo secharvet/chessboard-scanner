@@ -1227,3 +1227,15 @@ pourquoi (Fb5 « développement » au lieu de « empêche …Cd7 » ; Dh3 « pre
 Trous confirmés (après Chernev la veille) : intention, prophylaxie, bilan comparé, transfert de pièces, chaîne qui prépare
 une rupture, pions pendants ; règle de tenue qui efface la tour sur la colonne ouverte (12.O-O-O chez Morphy).
 Pages : docs/recits/opera-1858.html, docs/recits/fischer-spassky-1972-6.html. Décision de l'auteur attendue.
+
+### 5 octobre 2026, soir : le catalogue des mélodies, consolidé seul
+
+L'auteur a validé l'idée (« le pourquoi est la clé ») et délégué la consolidation. Catalogue de 41 mélodies en six
+familles (docs/MELODIES.md, page publiée), chacune avec : ce que c'est, l'affirmer si, se taire si, réponse enseignée,
+source théorique, exemple, fréquence chez Chernev, état du vocabulaire (10 acquises, 13 partielles, 18 absentes).
+Étiquetage à la main des 226 commentaires de fond de Chernev : 189 rattachés (84 %) (reports/chernev-melodies-tags.json).
+Les plus fréquents : frapper le centre 24, préparer la rupture 11, accumuler sur un point 11, roi à l'abri 11, libérer
+une pièce 11. Ordre de réalisation proposé (fréquence × absence) : préparer la rupture, empêcher un coup, garder sa bonne
+pièce, clouer puis charger, supprimer le défenseur, retard de développement, fianchetto, batterie vers h7, bilan comparé,
+libérer une pièce. Règle de sûreté en tête de catalogue. Nvidia abandonné (trop lent) ; images et comparaison de juges
+restent dans le code. Prochaine étape : corrections de l'auteur, puis définitions sur ses mots, puis planches.
