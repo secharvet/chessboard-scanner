@@ -1209,3 +1209,11 @@ de la prise, pas la case actuelle de la pièce. Correction : la pièce prise plu
 d'aujourd'hui ; si elle n'est pas encore là, on ne parle plus de cible (« venu de h7 : c'est l'adversaire qui l'amène là »)
 et l'indice devient « pas de prise à préparer tout de suite ». Test `tests/fiche-cible-future.test.js`. Famille à ajouter
 au relecteur : tout objet nommé dans la fiche doit exister sur l'échiquier au moment où elle est lue.
+
+### 5 octobre 2026, matin : le mat forcé
+
+Journal de la partie du 4 au soir : mat en 1 disponible, le juge disait « Ta1 : bon coup, presque aussi bon que Db7# »
+(le mat était comparé comme un score ordinaire, saturé à 100 % des deux côtés) ; la fiche, avec un mat en 2, parlait de
+« pression » et de « pion isolé c7 ». Corrections : juge → mat raté = erreur (« tu avais un mat en N par X »), mat gardé
+mais plus long = imprécision, mat aussi court = bien joué ; fiche → raison « mate » avant tout, plus de plan type, de
+« se valent presque » ni de « à surveiller » quand le mat est là. Tests `tests/mat-force.test.js` ; banc de 40 inchangé.

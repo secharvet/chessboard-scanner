@@ -84,11 +84,28 @@ export async function judgeMove({ fen, move, engine, depth = 14 }) {
   let base = category(loss);
   const floor = drop >= 300 ? 'erreur' : drop >= 150 ? 'imprecision' : 'bon';
   if (ORDER.indexOf(floor) > ORDER.indexOf(base)) base = floor;
+  // Un mat forcé ne se compare pas comme un score (partie réelle du 4 octobre : mat en 1 disponible, « Ta1 : bon coup,
+  // presque aussi bon que Db7# »). Mat raté → erreur ; mat gardé mais plus long → imprécision ; mat aussi court → bien joué.
+  const mateBest = bestScore.type === 'mate' && bestScore.value > 0 ? bestScore.value : 0;
+  const mateAfter = afterScore.type === 'mate' && afterScore.value > 0 ? afterScore.value : 0;
+  let mateMiss = null;
+  if (!board.isCheckmate() && !isBest && mateBest) {
+    if (!mateAfter) { base = 'erreur'; mateMiss = 'perdu'; }
+    else if (mateAfter > mateBest) { base = 'imprecision'; mateMiss = 'plus long'; }
+    else { base = 'bon'; mateMiss = 'aussi court'; }
+  }
   const cat = board.isCheckmate() ? 'mat' : isBest ? 'meilleur' : base;
 
   const sentences = [];
+  const en = (n) => `mat en ${n} coup${n > 1 ? 's' : ''}`;
   if (cat === 'mat') {
     sentences.push(`${playedFr} : échec et mat, bravo !`);
+  } else if (mateMiss === 'aussi court') {
+    sentences.push(`${playedFr} : ${en(mateAfter)}, aussi vite que ${bestSan}. Bien joué.`);
+  } else if (mateMiss === 'plus long') {
+    sentences.push(`${playedFr} : imprécision. Tu avais un ${en(mateBest)} par ${bestSan}. Ton coup garde un mat, mais en ${mateAfter} coups.`);
+  } else if (mateMiss === 'perdu') {
+    sentences.push(`${playedFr} : erreur. Tu avais un ${en(mateBest)} par ${bestSan}. Après ton coup, il n'y a plus de mat forcé (${pawns(afterScore)}).`);
   } else if (cat === 'meilleur' || cat === 'bon' || cat === 'correct') {
     // Ce que le coup FAIT (menace, pression, soutien : inventaire du 1er octobre), pour nommer l'intention du joueur.
     const eff = moveEffects(fen, played)[0];

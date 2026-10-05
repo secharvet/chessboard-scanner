@@ -172,6 +172,14 @@ export function buildBrief(data) {
     for (const b of by) pieces.add(`${b.type}|opp|${b.square}`);
     say(`Tu es en échec${by[0] ? ` : ${pieceRef(by[0].type, 'opp', by[0].square, { article: 'def' })} attaque ton roi` : ''}. Commence par parer l'échec.`);
   }
+  // Un mat forcé passe avant tout le reste (partie réelle du 4 octobre : « mat en 1 … Ton plan : vise le pion isolé c7 »).
+  let reason = null;
+  if (c0?.evalPlayer?.type === 'mate' && c0.evalPlayer.value > 0 && first) {
+    const mine = steps.filter((s, i) => i % 2 === 0).map((s) => enToFr(s.move.san));
+    reason = { kind: 'mate', in: c0.evalPlayer.value, move: bestSan };
+    say(first.san.endsWith('#') ? `${bestSan} : échec et mat.` : `Commence par ${bestSan}${mine.length > 1 ? `, puis ${mine.slice(1, 3).join(', ')}` : ''} : le mat est forcé.`,
+      first.san.includes('+') || first.san.endsWith('#') ? 'Cherche le mat : commence par un échec.' : 'Cherche le mat : il y a une suite forcée.');
+  }
   const map = buildAttackMap(data.fen);
   const hanging = buildTacticalFacts(data.fen)
     .filter((t) => t.id === 'PIECE_MENACEE' && t.params.color === me)
@@ -182,7 +190,6 @@ export function buildBrief(data) {
     : [];
   const gain = c0 ? (me === 'w' ? c0.material : -c0.material) : 0;
 
-  let reason = null;
   // Un coup qui PREND et gagne gros (la dame aventurée en h5) : c'est la raison principale, même s'il
   // pare aussi un mat ou une menace — on le dit en second.
   if (first?.captured && gain >= 3) {
@@ -457,7 +464,7 @@ export function buildBrief(data) {
   };
   const p0 = (data.prepared ?? []).find(prepBites) ?? null;
   const his = data.plans?.[opp]?.[0] ?? null;
-  if (reason.kind !== 'parry' && reason.kind !== 'parry_mate' && (p0 || his)) {
+  if (reason.kind !== 'parry' && reason.kind !== 'parry_mate' && reason.kind !== 'mate' && (p0 || his)) {
     const parts = [];
     if (p0) parts.push(p0.text.replace(/\s*\(Stockfish[^)]*\)\)?/, '').replace(/ \((?:pion|cavalier|fou|tour|dame|roi|roque)\)/g, ''));
     // Ce qu'il prépare probablement, d'après les plans humains (proposition, pas vérification).
