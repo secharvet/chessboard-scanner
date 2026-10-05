@@ -1,7 +1,7 @@
 /** Bilan des verdicts de Fable sur une série de planches : accord avec la clé du programme, désaccords détaillés. */
 import { readFileSync, writeFileSync } from 'node:fs';
 const [resFile, out] = process.argv.slice(2);
-const rows = JSON.parse(readFileSync(resFile, 'utf8'));
+const rows = JSON.parse(readFileSync(resFile, 'utf8')).map((r) => ({ ...r, fable: r.verdict ?? r.fable }));
 const by = {};
 for (const r of rows) {
   const b = (by[r.concept] ??= { n: 0, accord: 0, pasSur: 0, desaccords: [], nonJuge: 0 });

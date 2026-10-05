@@ -2,7 +2,8 @@
  * Fournisseurs LLM : claude-cli (abonnement local), deepseek / openai-compatible, anthropic.
  *
  * Variables d'environnement :
- *   LLM_PROVIDER   claude-cli | deepseek | groq | openai | anthropic   (défaut : claude-cli)
+ *   LLM_PROVIDER   claude-cli | deepseek | groq | openai | nvidia | anthropic   (défaut : claude-cli)
+ *   NVIDIA_API_KEY clé du catalogue d'inférence Nvidia (compatible OpenAI, images acceptées) ; prioritaire pour nvidia
  *   LLM_MODEL      ex. sonnet, deepseek-flash, claude-sonnet-5
  *   LLM_API_KEY    clé API (sauf claude-cli) ; GROQ_API_KEY prioritaire pour groq
  *   LLM_BASE_URL   pour un endpoint compatible OpenAI
@@ -14,12 +15,14 @@
  */
 
 import { spawn } from 'node:child_process';
+import { readFileSync } from 'node:fs';
 
 const DEFAULTS = {
   'claude-cli': { model: 'sonnet' },
   deepseek: { model: 'deepseek-flash', baseUrl: 'https://api.deepseek.com' },
   groq: { model: 'openai/gpt-oss-120b', baseUrl: 'https://api.groq.com/openai/v1' },
   openai: { model: 'gpt-4o-mini', baseUrl: 'https://api.openai.com/v1' },
+  nvidia: { model: 'deepseek-ai/deepseek-v4.1-flash', baseUrl: 'https://integrate.api.nvidia.com/v1' },
   anthropic: { model: 'claude-sonnet-5', baseUrl: 'https://api.anthropic.com' },
 };
 
@@ -30,18 +33,23 @@ export function llmConfig(env = process.env) {
   return {
     provider,
     model: env.LLM_MODEL || d.model,
-    apiKey: (provider === 'groq' ? env.GROQ_API_KEY : '') || env.LLM_API_KEY || '',
+    apiKey: (provider === 'groq' ? env.GROQ_API_KEY : provider === 'nvidia' ? env.NVIDIA_API_KEY : '') || env.LLM_API_KEY || '',
     baseUrl: env.LLM_BASE_URL || d.baseUrl,
     effort: env.LLM_EFFORT || '',
   };
 }
 
 /**
- * @param {{ system: string, user: string }} prompt
+ * @param {{ system: string, user: string, images?: { path?: string, base64?: string, mime?: string }[] }} prompt
+ *   `images` : fichiers PNG/JPEG joints au message utilisateur (fournisseurs compatibles OpenAI seulement : le contenu
+ *   devient une liste de parties texte + image_url en data: URI, comme dans l'exemple du catalogue Nvidia).
  * @param {ReturnType<typeof llmConfig>} cfg
  * @returns {Promise<string>}
  */
 export async function complete(prompt, cfg = llmConfig(), opts = {}) {
+  if (prompt.images?.length && (cfg.provider === 'claude-cli' || cfg.provider === 'anthropic')) {
+    throw new Error(`images non prises en charge par le fournisseur ${cfg.provider} dans ce client`);
+  }
   switch (cfg.provider) {
     case 'claude-cli':
       return claudeCli(prompt, opts.think === false || opts.think === 'none' || opts.think === 'low' ? { ...cfg, effort: 'low' } : cfg);
@@ -99,15 +107,28 @@ async function openAiCompatible(prompt, cfg, opts = {}) {
   }
 }
 
-async function openAiOnce({ system, user }, cfg, opts = {}) {
+/** Message utilisateur : texte seul, ou liste de parties texte + images (data: URI) quand des images sont jointes. */
+export function userContent(user, images = []) {
+  if (!images?.length) return user;
+  const parts = [{ type: 'text', text: user }];
+  for (const im of images) {
+    const mime = im.mime ?? (/\.jpe?g$/i.test(im.path ?? '') ? 'image/jpeg' : 'image/png');
+    const b64 = im.base64 ?? readFileSync(im.path).toString('base64');
+    parts.push({ type: 'image_url', image_url: { url: `data:${mime};base64,${b64}` } });
+  }
+  return parts;
+}
+
+async function openAiOnce({ system, user, images }, cfg, opts = {}) {
   if (!cfg.apiKey) throw new Error(`LLM_API_KEY manquante pour ${cfg.provider}`);
   const res = await fetch(`${cfg.baseUrl.replace(/\/$/, '')}/chat/completions`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${cfg.apiKey}` },
     body: JSON.stringify({
       model: cfg.model,
-      temperature: 0.3, // ignorée par DeepSeek en mode réflexion
-      messages: [{ role: 'system', content: system }, { role: 'user', content: user }],
+      temperature: opts.temperature ?? 0.3, // ignorée par DeepSeek en mode réflexion
+      ...(opts.maxTokens ? { max_tokens: opts.maxTokens } : {}),
+      messages: [...(system ? [{ role: 'system', content: system }] : []), { role: 'user', content: userContent(user, images) }],
       ...thinkingParams(cfg, opts.think),
     }),
   });
@@ -122,7 +143,9 @@ async function openAiOnce({ system, user }, cfg, opts = {}) {
       : inMsg ? Number(inMsg[1]) * (inMsg[2] === 'ms' ? 0.001 : inMsg[2] === 'm' ? 60 : 1) + 1 : undefined;
     throw err;
   }
-  return String(data.choices?.[0]?.message?.content ?? '').trim();
+  const msg = data.choices?.[0]?.message ?? {};
+  const content = Array.isArray(msg.content) ? msg.content.map((p) => p.text ?? '').join('') : msg.content;
+  return String(content ?? '').trim();
 }
 
 /** Paramètres de réflexion propres au fournisseur. */
