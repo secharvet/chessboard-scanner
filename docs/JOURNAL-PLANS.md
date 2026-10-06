@@ -1260,3 +1260,19 @@ fou c1 », « O-O met le roi à l'abri avant d'attaquer »). Défauts vus : « a
 coup roi en e1 (le moteur le met premier) ; milieu de jeu toujours plat (chantier des mélodies) ; livre vite dépassé,
 une ouverture sur vingt. Défaut corrigé au passage : « Fg5 préparerait Fxd8 prend la dame » (menace parable par deux coups
 gratuits : filtrée, `tests/menace-preparee-parable.test.js`).
+
+### 6 octobre 2026, après-midi : les arbres stratégiques appris (deux passes)
+
+Après le rejet du POC d'ouverture (« heuristique hardcodée »), l'auteur a précisé sa vision : regarder comment les grains
+s'enchaînent dans des milliers de parties humaines, arbres bicolores portant menaces, contrôle et étiquettes, vectorisés,
+regroupés, inventoriés, nommés, interrogeables ; aucune règle écrite. Spec consolidée en brainstorming (docs/ARBRES.md) :
+grains relationnels (zones relatives aux rois, cibles, sans cases), fenêtres de 16 demi-coups vues du camp qui joue, AVENIR
+(faits des 10 demi-coups suivants) comme définition opérationnelle de l'intention, encodeur transformeur entraîné à prédire
+l'avenir + voisinage temporel, témoin coups seuls, FAISS, k-moyennes, critères soutien/compacité/prévisibilité, nommage par
+LLM vérifié par les comptes. Corpus : Lichess Elite 2021-01..03 (1,65 M parties 2400+). Passe 1 (88 k parties, toutes
+phases) : AUC 0,763 contre 0,728 (témoin) ; arbres dominés par « rupture » et finales ; sans étiquettes de plan, même AUC.
+Passe 2 (136 k parties, milieu de jeu, 300 arbres à deux niveaux) : AUC 0,743 contre 0,703 ; arbres plus variés ; retrouvés
+seuls : attaque de minorité, libération en hérisson, centre bloqué/ailes opposées, lutte pour la colonne ouverte, attaque du
+pion isolé, assaut par la colonne ouverte. Reste : doublons « chasse au roi par échecs », finales de pièces lourdes, fenêtres
+de 40, accord avec les parties annotées, lecture à l'aveugle par l'auteur, branchement au coach. Rappel reçu (3e fois) :
+DENEB ≤ 12 processus en nice 19 ; VPS chargeable à fond.

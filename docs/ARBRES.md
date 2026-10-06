@@ -2,7 +2,7 @@
 
 *Comment on fait émerger, sans règle écrite, les chorégraphies qui reviennent dans les parties humaines, pour qu'un coach parle d'intention plutôt que de coups.*
 
-Document de travail, 6 octobre 2026. Les nombres de la section 8 sont ceux de la première passe (88 000 parties) ; ils seront remplacés à chaque passe.
+Document de travail, 6 octobre 2026. Les nombres de la section 9 couvrent les deux premières passes ; ils seront complétés à chaque passe.
 
 ---
 
@@ -137,14 +137,19 @@ Le code est `scripts/arbres/nommer.mjs`.
 
 Trois mesures, un témoin :
 
-| Mesure | Première passe |
-|---|---|
-| AUC moyenne de la prédiction de l'avenir, 135 faits, parties jamais vues, modèle grains | 0,763 |
-| Même mesure, témoin coups seuls | 0,728 |
-| Même mesure, constante (fréquences) | 0,500 |
-| Groupes d'au moins 200 parties | 1 998 sur 2 000 |
+| Mesure | Passe 1 (toutes phases, 88 000 parties) | Passe 2 (milieu de jeu, 136 000 parties) |
+|---|---|---|
+| Fenêtres | 2 120 787 | 2 480 587 |
+| AUC moyenne de la prédiction de l'avenir, parties jamais vues, modèle grains | 0,763 | 0,743 |
+| Même mesure, témoin coups seuls | 0,728 | 0,703 |
+| Même mesure, constante (fréquences) | 0,500 | 0,500 |
+| Même mesure, modèle sans les étiquettes de plan | 0,763 | — |
+| Arbres retenus | 1 998 groupes fins | 300 arbres (2 000 groupes fondus) |
+| Sur les 50 à 60 premiers nommés : finales / milieu / ouverture | 20 / 30 / 0 | 25 / 26 / 9 |
 
-Lecture honnête : les grains aident, modestement. Les premiers arbres de la liste sont dominés par mes étiquettes de plan (« rupture ») : le modèle réapprend en partie mes détecteurs. Deux parades sont en cours : une variante entraînée **sans** les étiquettes de plan, pour voir ce qui émerge des seuls faits bruts ; et une seconde passe limitée au milieu de partie, car la première laisse les finales peser lourd dans les comptes.
+Lecture honnête, passe 1 : les grains aident modestement ; les premiers arbres sont dominés par les étiquettes de plan « rupture » et par les finales ; le modèle entraîné sans les étiquettes de plan prédit aussi bien, donc l'apprentissage ne dépend pas de mes règles. Passe 2 : l'écart entre grains et coups seuls s'élargit en milieu de jeu (+0,04) ; les arbres sont plus variés : lutte pour la colonne ouverte, attaque du pion isolé, assaut du roi par la colonne ouverte, chasse au roi non roqué, levier devant son propre roi, assaut de pions avant le roque, centre fermé et mauvais fou, pion isolé devenu passé ; mais les chasses au roi par échecs répétés, qui sont de la tactique, forment encore un gros paquet de doublons, et le filtre de matériel laisse passer des finales de pièces lourdes.
+
+Les deux passes ont retrouvé seules des choses connues : l'attaque de minorité (« rupture b4 contre la chaîne c5, préparée par a3 et Tb1 »), la libération en hérisson (« …b5 ou …d5 une fois développé »), le centre bloqué avec assauts sur ailes opposées.
 
 Les deux autres mesures, accord avec les parties annotées et lecture à l'aveugle, viennent après le nommage.
 
