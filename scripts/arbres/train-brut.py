@@ -54,7 +54,7 @@ class Plies:
         me_black = (self.PW[last, 64] == 0)  # après mon coup, le trait est à l'autre : trait blanc ⇒ je suis noir
         idx = g[:, None] - W + np.arange(W)[None, :]
         x = np.where(me_black[:, None, None], self.PB[idx], self.PW[idx]).astype(np.int64)
-        nxt = np.where(me_black[:, None], self.PB[g], self.PW[g])
+        gq = np.minimum(g, len(self.PW) - 1); nxt = np.where(me_black[:, None], self.PB[gq], self.PW[gq])
         hz = None
         if H:
             # horizon : les H demi-coups suivants (bornés à la fin de la partie) ; cibles multi-étiquettes [B, 256] :
@@ -96,11 +96,12 @@ def main():
     ap.add_argument('--w-move', type=float, default=1.0, help='poids de la perte du prochain coup')
     ap.add_argument('--embed', default='', help='ne pas entraîner : charger ce modèle (.pt) et plonger les fenêtres des entrées (sonde croisée entre corpus)')
     ap.add_argument('--max-per-file', type=int, default=0, help='ne lire que les N premières parties de chaque fichier')
+    ap.add_argument('--min-plies', type=int, default=30)
     a = ap.parse_args()
-    games = load_games(a.inputs, a.max_games, max_per_file=a.max_per_file); P = Plies(games); print(f'{len(P.PW)} demi-coups chargés ({P.PW.nbytes * 2 / 1e9:.1f} Go)', file=sys.stderr)
+    games = load_games(a.inputs, a.max_games, min_plies=a.min_plies, max_per_file=a.max_per_file); P = Plies(games); print(f'{len(P.PW)} demi-coups chargés ({P.PW.nbytes * 2 / 1e9:.1f} Go)', file=sys.stderr)
     W = a.window
     # index des fenêtres : (partie, fin) ; la cible « prochain coup » exige end < n
-    index = np.array([(gi, end) for gi, (_, raw) in enumerate(games) for end in range(a.start + W, min(len(raw), a.max_end + 1), a.stride) if end < len(raw)], dtype=np.int64)
+    index = np.array([(gi, end) for gi, (_, raw) in enumerate(games) for end in range(a.start + W, min(len(raw) + (1 if a.embed else 0), a.max_end + 1), a.stride) if end < len(raw) + (1 if a.embed else 0)], dtype=np.int64)
     IG, IE = index[:, 0], index[:, 1]; del games
     N = len(index); print(f'{len(P.ids)} parties, {N} fenêtres', file=sys.stderr)
     gid = IG; h = np.array([zlib.crc32(str(P.ids[g]).encode()) % 10 for g in range(len(P.ids))]); val = h[IG] == 0

@@ -31,8 +31,8 @@ function* games(lines) {
 const sans = (text) => text.replace(/\{[^}]*\}/g, '').replace(/\([^)]*\)/g, '').replace(/\$\d+/g, '').split(/\s+/)
   .filter((t) => t && !/^\d+\.+$/.test(t) && !/^(1-0|0-1|1\/2-1\/2|\*)$/.test(t)).map((t) => t.replace(/^\d+\.+/, '').replace(/[!?]+$/, ''));
 
-export function plateaux(uci) {
-  const c = new Chess(); const rows = [];
+export function plateaux(uci, fen) {
+  const c = fen ? new Chess(fen) : new Chess(); const rows = [];
   for (const u of uci) {
     let m; try { m = c.move({ from: u.slice(0, 2), to: u.slice(2, 4), promotion: u[4] }); } catch { break; }
     const buf = Buffer.alloc(72);

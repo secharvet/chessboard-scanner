@@ -226,6 +226,35 @@ Lecture : le modèle élevé sur les maîtres lit un peu mieux les deux populati
 **Corpus annoté multi-auteurs.** 314 études Lichess publiques lues, 97 gardées (au moins trente commentaires de fond), 20 053 commentaires : Chernev, Capablanca (*Chess Fundamentals*), Steinitz–Chigorin et Steinitz–Zukertort, La Bourdonnais–McDonnell annoté par Morphy, Fischer, et des parties amateurs commentées par leurs auteurs. À dédoublonner (Chernev y est cinq fois). Il servira au test d'accord au grain du coup : le commentaire d'un coup contre l'avenir que la sonde prédit pour ce coup.
 
 
+## 14. L'épreuve des mots des maîtres (nuit du 6 au 7 octobre)
+
+Le thermomètre de la section 13 plafonnait parce que sa cible était mal choisie. Nouvelle épreuve, construite dans la nuit : **le vecteur de la fenêtre qui se termine par un coup commenté sait-il de quoi parle le commentateur ?**
+
+**Matière.** 84 études Lichess uniques, 1 076 chapitres rejoués (variations ignorées, coups commentés rattachés au coup qu'ils suivent), 12 022 commentaires, 9 914 après le quinzième demi-coup. Chaque commentaire classé par Fable en un à trois thèmes parmi dix-sept thèmes stratégiques (attaque de roi, défense du roi, colonne ouverte, structure, case faible, échange de pièces, développement, centre, levier, prophylaxie, manœuvre, initiative, tactique, finale, matériel, blocus, aile dame) plus trois poubelles (évaluation, erreur, autre). 8 834 coups gardés. Un lexique de mots-clés a servi d'étalon grossier avant Fable.
+
+**Protocole.** Petite tête à une couche cachée, validation croisée en cinq plis **par étude** : un annotateur n'est jamais à la fois en apprentissage et en test. Témoins : vecteurs au hasard ; **traits triviaux** (numéro du coup, camp, matériel des deux camps, nombre de pièces, droits de roque, prise, échec) ; sac des grains de la fenêtre.
+
+| Lecteur | AUC moyenne, 17 thèmes |
+|---|---|
+| vecteurs au hasard | 0,49 |
+| sac de grains (nos étiquettes, sans modèle) | 0,64 |
+| traits triviaux | 0,66 |
+| espace brut v1 | 0,67 |
+| espace OTB | 0,68 |
+| espace brut v2 | **0,68** |
+| brut v2 + triviaux | 0,68 |
+
+**Par thème**, là où l'espace dépasse nettement les traits triviaux : aile dame (0,76 contre 0,67), levier (0,73 contre 0,69), attaque de roi (0,70 contre 0,67), case faible (0,68 contre 0,64), défense du roi (0,62 contre 0,57). Là où il ne dépasse rien : finale (0,88, mais 0,91 avec le seul compte du matériel), développement, centre, manœuvre, prophylaxie, échange, tactique, initiative (0,58).
+
+**Lecture honnête.**
+
+1. L'espace brut lit les mots des maîtres **mieux que nos étiquettes à la main** (0,68 contre 0,64) et sur tous les thèmes sauf la case faible. C'est l'argument le plus solide à ce jour pour l'étage 1 contre les grains.
+2. Mais il ne dépasse les traits triviaux que de 0,015 en moyenne. Le signal existe, sur une poignée de thèmes de terrain (où l'on joue, contre quoi), et il est mince. Pas d'émergence à cette échelle : seize demi-coups, 128 à 192 dimensions, quatre époques.
+3. Les thèmes abstraits (prophylaxie, initiative, moment de l'échange) ne se lisent ni dans l'espace, ni dans les étiquettes, ni dans le trivial. Soit ils vivent à une autre échelle de temps, soit ils ne sont pas dans la position mais dans la tête du commentateur.
+
+**Ce que ça décide.** Ne plus chercher l'intention en changeant l'objectif à la marge. Changer d'échelle (fenêtres de quarante à soixante demi-coups, modèle plusieurs fois plus large, dix époques, les deux corpus réunis), ce qui est le cas où louer une grosse carte quelques heures se justifie ; ou changer de représentation. Cette épreuve reste le juge : elle est reproductible en dix minutes sur n'importe quel nouvel espace (`sonder-mots.py`).
+
+
 ---
 
 ## Annexe : fichiers
@@ -244,3 +273,6 @@ Lecture : le modèle élevé sur les maîtres lit un peu mieux les deux populati
 | Sonde d'avenir | `scripts/arbres/sonder.py` | `data/brut*/sonde*.json` |
 | Arbres de l'espace brut | `scripts/arbres/index-brut.py` | `data/brut*/arbres.*` |
 | Corpus annoté | `scripts/arbres/corpus-annote.mjs` | `data/reference/annotes/` |
+| Coups commentés | `scripts/arbres/annotes-coups.mjs` | `coups.jsonl`, `data/plateaux/annotes.bin` |
+| Thèmes des commentaires | `scripts/arbres/themes-fable.mjs`, `themes-lexique.py` | `themes-fable.jsonl`, `themes-lexique.jsonl` |
+| Épreuve des mots | `scripts/arbres/sonder-mots.py` | `sonde-mots-*.json` |

@@ -1311,3 +1311,11 @@ avant-poste ». Remarque de l'auteur : « quoi qu'on fasse, on arrive au même c
 plafonne, pas les modèles. Proposé pour demain : les mots des maîtres comme cible au grain du coup (84 études), avenir
 à trente demi-coups, lecture à l'aveugle. Données DENEB : data/brut, data/brut2, data/brut-otb (modèles, vecteurs, sondes,
 arbres), data/grains/otb-2400.s*.jsonl ; VPS : data/grains/otb-2400.*, data/reference/annotes/.
+
+**7 octobre, 0 h 20 : épreuve des mots des maîtres.** 84 études, 1 076 chapitres, 9 914 commentaires classés par Fable
+(six travailleurs, 40 min) en 17 thèmes ; sonde par étude (5 plis). AUC moyenne : hasard 0,49, sac de grains 0,64, traits
+triviaux 0,66, brut v1 0,67, OTB 0,68, brut v2 0,68. L'espace lit les maîtres mieux que nos étiquettes mais à peine mieux que
+le numéro du coup et le matériel ; signal réel sur aile dame, levier, attaque de roi, case faible, défense du roi ; rien sur
+prophylaxie, initiative, échange, tactique. Décision proposée : changer d'échelle (fenêtres 40-60, modèle plus large, dix
+époques, deux corpus) plutôt que l'objectif ; l'épreuve des mots devient le juge. Scripts : annotes-coups.mjs,
+themes-fable.mjs, themes-lexique.py, grains-coups.mjs, sonder-mots.py. v3 (horizon 30) en cours, résultat à suivre.
