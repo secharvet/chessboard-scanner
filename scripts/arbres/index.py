@@ -40,6 +40,8 @@ def main():
         _, l2 = km2.index.search(cents, 1); lab = l2[lab, 0]; a.k = a.k2
         print(f'second niveau : {a.k2} arbres', file=sys.stderr)
     np.save(a.out + '.labels.npy', lab)
+    np.save(a.out + '.centres.npy', km.centroids)
+    if a.k2: np.save(a.out + '.centres2.npy', km2.centroids); np.save(a.out + '.fin2arbre.npy', l2[:, 0])
     # statistiques globales des traits (pour la sur-représentation)
     Xf = X.reshape(N, -1)
     glob_x = np.zeros(len(vx));

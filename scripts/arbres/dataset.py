@@ -87,6 +87,9 @@ def main():
     ap.add_argument('--min-count', type=int, default=20, help='un trait vu moins de N fois est ignoré')
     ap.add_argument('--max-end', type=int, default=0, help='dernier demi-coup admis pour la fin d\'une fenêtre (0 = pas de borne)')
     ap.add_argument('--min-material', type=int, default=0, help='matériel minimal (pions) de chaque camp à la fin de la fenêtre : 14 écarte les finales')
+    ap.add_argument('--max-checks', type=int, default=0, help='au-delà de N échecs donnés par un même camp dans la fenêtre, elle est écartée (tactique, pas stratégie) ; 0 = pas de filtre')
+    ap.add_argument('--vocab', default='', help='réutiliser le vocabulaire de ce fichier .vocab.json (pour plonger de nouvelles parties avec un modèle existant)')
+    ap.add_argument('--keep-all', action='store_true', help='garder toutes les fenêtres (pas de filtre) : pour les parties annotées')
     a = ap.parse_args()
     files = [f for pat in a.inputs for f in sorted(glob.glob(pat))]
     W, F = a.window, a.future
@@ -107,8 +110,11 @@ def main():
                 for t in node_feats(n, me): cnt_x[t] = cnt_x.get(t, 0) + 1
         for me in ('w', 'b'):
             for t in future_feats(g['nodes'][:F], me): cnt_y[t] = cnt_y.get(t, 0) + 1
-    vocab_x = ['<pad>'] + sorted(t for t, c in cnt_x.items() if c >= a.min_count)
-    vocab_y = sorted(t for t, c in cnt_y.items() if c >= a.min_count)
+    if a.vocab:
+        vv = json.load(open(a.vocab)); vocab_x = vv['x']; vocab_y = vv['y']
+    else:
+        vocab_x = ['<pad>'] + sorted(t for t, c in cnt_x.items() if c >= a.min_count)
+        vocab_y = sorted(t for t, c in cnt_y.items() if c >= a.min_count)
     ix = {t: i for i, t in enumerate(vocab_x)}; iy = {t: i for i, t in enumerate(vocab_y)}
     print(f'{games} parties ; vocabulaire : {len(vocab_x)} traits de nœud, {len(vocab_y)} traits d\'avenir', file=sys.stderr)
     # Passe 2 : fenêtres
@@ -125,8 +131,14 @@ def main():
             if nd.get('cap'): mat['b' if nd['s'] == 'w' else 'w'] -= VAL.get(nd['cap'], 0)
             mat_after.append(min(mat['w'], mat['b']))
         for end in range(a.start + W, n - F + 1, a.stride):
-            if a.max_end and end > a.max_end: break
-            if a.min_material and mat_after[end - 1] < a.min_material: break
+            if not a.keep_all:
+                if a.max_end and end > a.max_end: break
+                if a.min_material and mat_after[end - 1] < a.min_material: break
+                if a.max_checks:
+                    chk = {'w': 0, 'b': 0}
+                    for nd in nodes[end - W:end]:
+                        if nd.get('chk'): chk[nd['s']] += 1
+                    if max(chk.values()) > a.max_checks: continue
             win = nodes[end - W:end]; fut = nodes[end:end + F]
             me = win[-1]['s']  # la fenêtre est vue du camp qui vient de jouer
             toks = np.zeros((W, K), dtype=np.int16)
