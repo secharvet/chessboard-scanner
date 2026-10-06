@@ -12,7 +12,7 @@ cette réserve : ce modèle a vu la plupart de ces parties à l'entraînement.
 """
 import argparse, glob, json, sys, os, zlib, time
 import numpy as np, torch, torch.nn.functional as F
-sys.path.insert(0, os.path.dirname(__file__)); from dataset import future_feats
+sys.path.insert(0, os.path.dirname(__file__)); from dataset import future_feats, node_feats
 
 def auc_mean(P, T):
     aucs = []
@@ -23,31 +23,33 @@ def auc_mean(P, T):
         n1 = t.sum(); n0 = len(t) - n1; aucs.append((ranks[t == 1].sum() - n1 * (n1 + 1) / 2) / (n1 * n0))
     return float(np.mean(aucs)), len(aucs), aucs
 
-def probe(X, Y, tr, va, dev, epochs=8, name=''):
+def probe(X, Y, tr, va, dev, epochs=8, name='', hidden=0):
     mu = X[tr].mean(0); sd = X[tr].std(0) + 1e-6; Xn = torch.from_numpy((X - mu) / sd).float(); Yt = torch.from_numpy(Y).float()
-    lin = torch.nn.Linear(X.shape[1], Y.shape[1]).to(dev); opt = torch.optim.AdamW(lin.parameters(), lr=3e-3, weight_decay=1e-4)
+    lin = (torch.nn.Sequential(torch.nn.Linear(X.shape[1], hidden), torch.nn.GELU(), torch.nn.Dropout(0.1), torch.nn.Linear(hidden, Y.shape[1])) if hidden else torch.nn.Linear(X.shape[1], Y.shape[1])).to(dev); opt = torch.optim.AdamW(lin.parameters(), lr=3e-3 if not hidden else 1e-3, weight_decay=1e-4)
     base = Yt[tr].mean(0).clamp(1e-4, 1 - 1e-4)
     for ep in range(epochs):
         perm = np.random.permutation(tr)
         for s in range(0, len(perm), 4096):
             b = perm[s:s + 4096]; loss = F.binary_cross_entropy_with_logits(lin(Xn[b].to(dev)), Yt[b].to(dev)); opt.zero_grad(); loss.backward(); opt.step()
+    lin.eval()
     with torch.no_grad():
         P = torch.cat([torch.sigmoid(lin(Xn[va[s:s + 8192]].to(dev))).cpu() for s in range(0, len(va), 8192)]).numpy(); T = Y[va]
         vl = F.binary_cross_entropy(torch.from_numpy(P), torch.from_numpy(T).float()).item(); vb = F.binary_cross_entropy(base.expand_as(torch.from_numpy(T)), torch.from_numpy(T).float()).item()
     m, n, aucs = auc_mean(P, T)
+    name = name + (f' [cachée {hidden}]' if hidden else ' [linéaire]')
     print(f'{name}: AUC moyenne {m:.3f} sur {n} traits ; perte {vl:.4f} vs constante {vb:.4f}', file=sys.stderr)
     return {'auc_moyenne': m, 'n_traits_auc': n, 'perte_val': vl, 'perte_constante': vb, 'aucs': aucs}
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--brut', required=True); ap.add_argument('--grains', required=True); ap.add_argument('--vocab', required=True)
-    ap.add_argument('--grains-model', default=''); ap.add_argument('--future', type=int, default=10); ap.add_argument('--out', required=True); ap.add_argument('--epochs', type=int, default=8)
+    ap.add_argument('--grains-model', default=''); ap.add_argument('--future', type=int, default=10); ap.add_argument('--out', required=True); ap.add_argument('--epochs', type=int, default=8); ap.add_argument('--hidden', type=int, default=0, help='sonde à une couche cachée (0 = linéaire)')
     a = ap.parse_args(); dev = 'cuda' if torch.cuda.is_available() else 'cpu'
-    vocab_y = json.load(open(a.vocab))['y']; iy = {t: i for i, t in enumerate(vocab_y)}
+    vv = json.load(open(a.vocab)); vocab_y = vv['y']; iy = {t: i for i, t in enumerate(vocab_y)}; vx = vv['x']; ix = {t: i for i, t in enumerate(vx)}; W = vv['window']
     meta = [json.loads(l) for l in open(a.brut + '.meta.jsonl')]; E = np.load(a.brut + '.emb.npy', mmap_mode='r')
     want = {}; 
     for i, (gid, end, me) in enumerate(meta): want.setdefault(gid, []).append((i, end, me))
-    rows, Y, gids = [], [], []
+    rows, Y, gids, BAG = [], [], [], []
     for fn in sorted(glob.glob(a.grains)):
         for l in open(fn):
             gid = l[7:l.index('"', 7)]
@@ -58,12 +60,18 @@ def main():
                 y = np.zeros(len(vocab_y), dtype=np.uint8)
                 for t in future_feats(nodes[end:end + a.future], me):
                     if t in iy: y[iy[t]] = 1
-                rows.append(i); Y.append(y); gids.append(gid)
-    rows = np.array(rows); Y = np.stack(Y); gids = np.array(gids)
+                bag = np.zeros(len(vx), dtype=np.uint8)
+                for nd in nodes[end - W:end]:
+                    for t in node_feats(nd, me):
+                        if t in ix: bag[ix[t]] = 1
+                bag[0] = 0; rows.append(i); Y.append(y); gids.append(gid); BAG.append(bag)
+    rows = np.array(rows); Y = np.stack(Y); gids = np.array(gids); BAG = np.stack(BAG).astype(np.float32)
     print(f'{len(rows)} fenêtres jointes sur {len(meta)} ({len(set(gids))} parties)', file=sys.stderr)
     h = np.array([zlib.crc32(g.encode()) % 10 for g in gids]); va = np.where(h == 0)[0]; tr = np.where(h != 0)[0]
     X = np.asarray(E[rows]); report = {'fenetres': int(len(rows)), 'parties': len(set(gids)), 'traits': vocab_y}
-    report['brut'] = probe(X, Y, tr, va, dev, a.epochs, 'sonde sur le modèle brut')
+    report['brut'] = probe(X, Y, tr, va, dev, a.epochs, 'sonde sur le modèle brut', a.hidden)
+    report['sac_de_grains'] = probe(BAG, Y, tr, va, dev, a.epochs, 'sonde sur le sac de grains de la fenêtre (étiquettes à la main, sans modèle)', a.hidden)
+    report['brut_plus_sac'] = probe(np.concatenate([X, BAG], 1), Y, tr, va, dev, a.epochs, 'sonde sur brut + sac de grains', a.hidden)
     rng = np.random.default_rng(0); report['hasard'] = probe(rng.standard_normal(X.shape).astype(np.float32), Y, tr, va, dev, 2, 'sonde sur des vecteurs au hasard (témoin)')
     if a.grains_model:
         gm = {}; 

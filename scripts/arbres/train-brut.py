@@ -46,7 +46,7 @@ class Plies:
     def __init__(self, games):
         self.ids = [g for g, _ in games]; lens = np.array([len(r) for _, r in games]); self.off = np.concatenate([[0], np.cumsum(lens)]); self.len = lens
         W_, B_ = zip(*(oriented(r) for _, r in games)); self.PW = np.concatenate(W_); self.PB = np.concatenate(B_)
-    def batch(self, gi, end, W):
+    def batch(self, gi, end, W, H=0):
         """gi, end : tableaux [B]. Fenêtre = demi-coups [end-W, end) de la partie, vue du camp qui vient de jouer (le demi-coup
         end-1) ; cible = coup joué au demi-coup end, dans la même orientation."""
         g = self.off[gi] + end; last = g - 1
@@ -54,7 +54,15 @@ class Plies:
         idx = g[:, None] - W + np.arange(W)[None, :]
         x = np.where(me_black[:, None, None], self.PB[idx], self.PW[idx]).astype(np.int64)
         nxt = np.where(me_black[:, None], self.PB[g], self.PW[g])
-        return x, nxt[:, 66].astype(np.int64), nxt[:, 67].astype(np.int64)
+        hz = None
+        if H:
+            # horizon : les H demi-coups suivants (bornés à la fin de la partie) ; cibles multi-étiquettes [B, 256] :
+            # cases d'arrivée de mes coups (64), cases d'arrivée des siens (64), cases de départ des miens (64), des siens (64)
+            lim = (self.off[gi] + self.len[gi])[:, None]; fi = g[:, None] + np.arange(H)[None, :]; ok = fi < lim; fi = np.minimum(fi, lim - 1)
+            fut = np.where(me_black[:, None, None], self.PB[fi], self.PW[fi]); mine = (np.arange(H)[None, :] % 2 == 0) & ok; his = (np.arange(H)[None, :] % 2 == 1) & ok
+            hz = np.zeros((len(gi), 256), dtype=np.float32); r = np.arange(len(gi))[:, None].repeat(H, 1)
+            hz[r[mine], fut[..., 67][mine]] = 1; hz[r[his], 64 + fut[..., 67][his]] = 1; hz[r[mine], 128 + fut[..., 66][mine]] = 1; hz[r[his], 192 + fut[..., 66][his]] = 1
+        return x, nxt[:, 66].astype(np.int64), nxt[:, 67].astype(np.int64), hz
 
 class Brut(nn.Module):
     def __init__(self, W, dim=128, layers=4, heads=4):
@@ -65,7 +73,7 @@ class Brut(nn.Module):
         self.pos = nn.Parameter(torch.zeros(1, W + 1, dim)); self.cls = nn.Parameter(torch.zeros(1, 1, dim))
         enc = nn.TransformerEncoderLayer(dim, heads, dim * 4, dropout=0.1, batch_first=True, norm_first=True)
         self.tr = nn.TransformerEncoder(enc, layers); self.norm = nn.LayerNorm(dim)
-        self.head_from = nn.Linear(dim, 64); self.head_to = nn.Linear(dim, 64)
+        self.head_from = nn.Linear(dim, 64); self.head_to = nn.Linear(dim, 64); self.head_hz = nn.Linear(dim, 256)
         self.proj = nn.Sequential(nn.Linear(dim, dim), nn.GELU(), nn.Linear(dim, dim))
         for p in (self.square, self.pos, self.cls): nn.init.normal_(p, std=0.02)
     def forward(self, x):  # x : [B, W, 70]
@@ -74,7 +82,7 @@ class Brut(nn.Module):
         e = self.board_proj(b.reshape(B, W, -1)) + self.turn(x[..., 64]) + self.cast(x[..., 65]) + self.emb_fr(x[..., 66]) + self.emb_to(x[..., 67]) + self.cap(x[..., 68]) + self.chk(x[..., 69])
         e = torch.cat([self.cls.expand(B, -1, -1), e], 1) + self.pos
         h = self.norm(self.tr(e))[:, 0]
-        return h, self.head_from(h), self.head_to(h), F.normalize(self.proj(h), dim=-1)
+        return h, self.head_from(h), self.head_to(h), F.normalize(self.proj(h), dim=-1), self.head_hz(h)
 
 def main():
     ap = argparse.ArgumentParser()
@@ -82,6 +90,9 @@ def main():
     ap.add_argument('--window', type=int, default=16); ap.add_argument('--stride', type=int, default=2); ap.add_argument('--start', type=int, default=10)
     ap.add_argument('--epochs', type=int, default=2); ap.add_argument('--batch', type=int, default=256); ap.add_argument('--dim', type=int, default=128); ap.add_argument('--layers', type=int, default=4)
     ap.add_argument('--lr', type=float, default=3e-4); ap.add_argument('--max-games', type=int, default=0); ap.add_argument('--max-end', type=int, default=80); ap.add_argument('--tau', type=float, default=0.1)
+    ap.add_argument('--horizon', type=int, default=0, help='H > 0 : prédire aussi les cases jouées des H prochains demi-coups (regard plus loin que le coup suivant)')
+    ap.add_argument('--nce-gap', type=int, default=1, help='la fenêtre voisine pour InfoNCE est la G-ième suivante de la même partie (1 = la suivante)')
+    ap.add_argument('--w-move', type=float, default=1.0, help='poids de la perte du prochain coup')
     a = ap.parse_args()
     games = load_games(a.inputs, a.max_games); P = Plies(games); print(f'{len(P.PW)} demi-coups chargés ({P.PW.nbytes * 2 / 1e9:.1f} Go)', file=sys.stderr)
     W = a.window
@@ -90,22 +101,23 @@ def main():
     IG, IE = index[:, 0], index[:, 1]; del games
     N = len(index); print(f'{len(P.ids)} parties, {N} fenêtres', file=sys.stderr)
     gid = IG; h = np.array([zlib.crc32(str(P.ids[g]).encode()) % 10 for g in range(len(P.ids))]); val = h[IG] == 0
-    nxt_idx = np.arange(N) + 1; same = np.concatenate([gid[1:] == gid[:-1], [False]]); nxt_idx = np.where(same, nxt_idx, np.arange(N))
+    G = a.nce_gap; nxt_idx = np.minimum(np.arange(N) + G, N - 1); same = gid[nxt_idx] == gid; nxt_idx = np.where(same, nxt_idx, np.arange(N))
     dev = 'cuda' if torch.cuda.is_available() else 'cpu'
     model = Brut(W, a.dim, a.layers).to(dev); opt = torch.optim.AdamW(model.parameters(), lr=a.lr, weight_decay=0.01)
     idx_tr = np.where(~val)[0]; idx_val = np.where(val)[0]
     steps = a.epochs * math.ceil(len(idx_tr) / a.batch); sched = torch.optim.lr_scheduler.OneCycleLR(opt, a.lr, total_steps=steps)
     def batch(ids):
-        x, f, t = P.batch(IG[ids], IE[ids], W)
-        return torch.from_numpy(x).to(dev), torch.from_numpy(f).to(dev), torch.from_numpy(t).to(dev)
+        x, f, t, hz = P.batch(IG[ids], IE[ids], W, a.horizon)
+        return torch.from_numpy(x).to(dev), torch.from_numpy(f).to(dev), torch.from_numpy(t).to(dev), (torch.from_numpy(hz).to(dev) if hz is not None else None)
     # témoin : fréquence des cases de départ / d'arrivée
     t0 = time.time(); report = {'epochs': [], 'games': len(P.ids), 'windows': N}
     for ep in range(a.epochs):
         model.train(); np.random.shuffle(idx_tr); tot = 0; nb = 0
         for s in range(0, len(idx_tr), a.batch):
-            b = idx_tr[s:s + a.batch]; x, fr, to = batch(b); x2, _, _ = batch(nxt_idx[b])
-            h1, lf, lt, z1 = model(x); _, _, _, z2 = model(x2)
-            loss_move = F.cross_entropy(lf, fr) + F.cross_entropy(lt, to)
+            b = idx_tr[s:s + a.batch]; x, fr, to, hz = batch(b); x2, _, _, _ = batch(nxt_idx[b])
+            h1, lf, lt, z1, lh = model(x); _, _, _, z2, _ = model(x2)
+            loss_move = a.w_move * (F.cross_entropy(lf, fr) + F.cross_entropy(lt, to))
+            if hz is not None: loss_move = loss_move + 4.0 * F.binary_cross_entropy_with_logits(lh, hz)
             sim = z1 @ z2.T / a.tau; lab = torch.arange(len(b), device=dev)
             loss_nce = (F.cross_entropy(sim, lab) + F.cross_entropy(sim.T, lab)) / 2
             loss = loss_move + 0.5 * loss_nce
@@ -115,16 +127,16 @@ def main():
         model.eval(); ok_fr = ok_to = ok_both = n = 0
         with torch.no_grad():
             for s in range(0, len(idx_val), 1024):
-                b = idx_val[s:s + 1024]; x, fr, to = batch(b); _, lf, lt, _ = model(x)
+                b = idx_val[s:s + 1024]; x, fr, to, _ = batch(b); _, lf, lt, _, _ = model(x)
                 pf = lf.argmax(1); pt = lt.argmax(1); ok_fr += (pf == fr).sum().item(); ok_to += (pt == to).sum().item(); ok_both += ((pf == fr) & (pt == to)).sum().item(); n += len(b)
         e = {'epoch': ep + 1, 'prochain_coup_case_depart': ok_fr / n, 'prochain_coup_case_arrivee': ok_to / n, 'prochain_coup_exact': ok_both / n, 'minutes': (time.time() - t0) / 60}
         report['epochs'].append(e); print(json.dumps(e), file=sys.stderr)
     os.makedirs(os.path.dirname(a.out) or '.', exist_ok=True)
-    torch.save({'state': model.state_dict(), 'W': W, 'dim': a.dim, 'layers': a.layers}, a.out + '.pt')
+    torch.save({'state': model.state_dict(), 'W': W, 'dim': a.dim, 'layers': a.layers, 'horizon': a.horizon}, a.out + '.pt')
     model.eval(); embs = []
     with torch.no_grad():
         for s in range(0, N, 1024):
-            x, _, _ = batch(np.arange(s, min(N, s + 1024))); hh, _, _, _ = model(x); embs.append(hh.cpu().numpy().astype(np.float32))
+            x, _, _, _ = batch(np.arange(s, min(N, s + 1024))); hh, _, _, _, _ = model(x); embs.append(hh.cpu().numpy().astype(np.float32))
     E = np.concatenate(embs); np.save(a.out + '.emb.npy', E)
     with open(a.out + '.meta.jsonl', 'w') as fh:
         for gi, end in index: fh.write(json.dumps([P.ids[gi], int(end), 'b' if P.PW[P.off[gi] + end - 1, 64] == 0 else 'w']) + '\n')
