@@ -1276,3 +1276,13 @@ seuls : attaque de minorité, libération en hérisson, centre bloqué/ailes opp
 pion isolé, assaut par la colonne ouverte. Reste : doublons « chasse au roi par échecs », finales de pièces lourdes, fenêtres
 de 40, accord avec les parties annotées, lecture à l'aveugle par l'auteur, branchement au coach. Rappel reçu (3e fois) :
 DENEB ≤ 12 processus en nice 19 ; VPS chargeable à fond.
+
+### 6 octobre 2026, soir : passe 3, échelle 40, accord Chernev ; décision des deux étages
+
+Passe 3 (milieu, échecs répétés écartés, 200 arbres) : AUC 0,731 contre 0,691 (témoin) ; 80 arbres nommés par Fable
+(DeepSeek sans crédit, Groq jugé faible, Nvidia muet) : 51 de milieu de jeu mais souvent des situations génériques.
+Échelle 40 : 281 k fenêtres, AUC 0,667, non concluant. Accord avec Chernev (57 paires, Fable) : même idée 2 %, voisine
+42 %, rien à voir 56 % ; le test compare le but d'un coup au contexte de seize demi-coups, à refaire au bon grain.
+Décision avec l'auteur : étage 1 = apprendre sur l'échiquier brut (auto-supervisé, 1,65 M parties, sans étiquettes en
+entrée ; registre Maia, pas AlphaZero : lire, pas jouer) ; étage 2 = greffer les noms (fenêtres annotées, plans, arbres
+nommés → sondes linéaires ; l'explicable d'abord). Prérequis : corpus annoté multi-auteurs (études Lichess, domaine public).

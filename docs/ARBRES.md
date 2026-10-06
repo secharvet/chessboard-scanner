@@ -137,17 +137,20 @@ Le code est `scripts/arbres/nommer.mjs`.
 
 Trois mesures, un témoin :
 
-| Mesure | Passe 1 (toutes phases, 88 000 parties) | Passe 2 (milieu de jeu, 136 000 parties) |
-|---|---|---|
-| Fenêtres | 2 120 787 | 2 480 587 |
-| AUC moyenne de la prédiction de l'avenir, parties jamais vues, modèle grains | 0,763 | 0,743 |
-| Même mesure, témoin coups seuls | 0,728 | 0,703 |
-| Même mesure, constante (fréquences) | 0,500 | 0,500 |
-| Même mesure, modèle sans les étiquettes de plan | 0,763 | — |
-| Arbres retenus | 1 998 groupes fins | 300 arbres (2 000 groupes fondus) |
-| Sur les 50 à 60 premiers nommés : finales / milieu / ouverture | 20 / 30 / 0 | 25 / 26 / 9 |
+| Mesure | Passe 1 (toutes phases, 88 000 parties) | Passe 2 (milieu de jeu, 136 000) | Passe 3 (milieu, sans séquences d'échecs, 136 000) |
+|---|---|---|---|
+| Fenêtres | 2 120 787 | 2 480 587 | 1 925 811 |
+| AUC moyenne de la prédiction de l'avenir, parties jamais vues, modèle grains | 0,763 | 0,743 | 0,731 |
+| Même mesure, témoin coups seuls | 0,728 | 0,703 | 0,691 |
+| Même mesure, constante (fréquences) | 0,500 | 0,500 | 0,500 |
+| Même mesure, modèle sans les étiquettes de plan | 0,763 | — | — |
+| Arbres retenus | 1 998 groupes fins | 300 arbres | 200 arbres |
+| Sur les premiers nommés : finales / milieu / ouverture | 20 / 30 / 0 | 25 / 26 / 9 | 8 / 51 / 21 |
+| Accord avec les commentaires de Chernev (57 paires, jugées par Fable) | — | — | même idée 2 %, voisine 42 %, rien à voir 56 % |
 
-Lecture honnête, passe 1 : les grains aident modestement ; les premiers arbres sont dominés par les étiquettes de plan « rupture » et par les finales ; le modèle entraîné sans les étiquettes de plan prédit aussi bien, donc l'apprentissage ne dépend pas de mes règles. Passe 2 : l'écart entre grains et coups seuls s'élargit en milieu de jeu (+0,04) ; les arbres sont plus variés : lutte pour la colonne ouverte, attaque du pion isolé, assaut du roi par la colonne ouverte, chasse au roi non roqué, levier devant son propre roi, assaut de pions avant le roque, centre fermé et mauvais fou, pion isolé devenu passé ; mais les chasses au roi par échecs répétés, qui sont de la tactique, forment encore un gros paquet de doublons, et le filtre de matériel laisse passer des finales de pièces lourdes.
+Échelle de 40 demi-coups (passe 3, 281 000 fenêtres seulement, 3 époques) : AUC 0,667, arbres dominés par les séquences d'échecs ; non concluant à cette taille.
+
+Lecture honnête, passe 1 : les grains aident modestement ; les premiers arbres sont dominés par les étiquettes de plan « rupture » et par les finales ; le modèle entraîné sans les étiquettes de plan prédit aussi bien, donc l'apprentissage ne dépend pas de mes règles. Passe 2 : l'écart entre grains et coups seuls s'élargit en milieu de jeu (+0,04) ; les arbres sont plus variés : lutte pour la colonne ouverte, attaque du pion isolé, assaut du roi par la colonne ouverte, chasse au roi non roqué, levier devant son propre roi, assaut de pions avant le roque, centre fermé et mauvais fou, pion isolé devenu passé ; mais les chasses au roi par échecs répétés forment encore un gros paquet de doublons. Passe 3 : les échecs écartés, l'écart grains / coups seuls se maintient (+0,04) ; 51 arbres de milieu de jeu sur 80, mais beaucoup sont des situations génériques (roque, colonne ouverte, développement achevé) plutôt que des intentions ; l'accord avec Chernev est faible, et le test lui-même compare deux grains de finesse différents : le maître commente le but d'UN coup (« empêche Cf5 », « ouvre la voie à la dame »), l'arbre décrit le contexte de seize demi-coups. C'est la limite du vocabulaire actuel, pas seulement du test.
 
 Les deux passes ont retrouvé seules des choses connues : l'attaque de minorité (« rupture b4 contre la chaîne c5, préparée par a3 et Tb1 »), la libération en hérisson (« …b5 ou …d5 une fois développé »), le centre bloqué avec assauts sur ailes opposées.
 
@@ -163,7 +166,13 @@ Les deux autres mesures, accord avec les parties annotées et lecture à l'aveug
 
 ---
 
-## 11. Les limites connues
+## 11. Ce que les trois passes ont appris, et la suite
+
+- Les grains relationnels aident à prédire l'avenir au-delà des coups seuls, de façon stable (+0,04 d'AUC sur trois passes). L'apprentissage ne dépend pas des étiquettes de plan.
+- Des stratégies connues émergent seules, mais la majorité des arbres décrivent des situations, pas des intentions, et l'accord avec les commentaires des maîtres est faible : le vocabulaire de mes détecteurs borne ce que l'espace peut distinguer.
+- Suite décidée avec l'auteur : **laisser le modèle apprendre sur l'échiquier brut** (étage 1, auto-supervisé sur le million et demi de parties, sans aucune de mes étiquettes en entrée), puis **greffer les noms** (étage 2 : fenêtres commentées par les maîtres, plans du catalogue, arbres nommés, projetés dans l'espace ; une petite couche apprend à lire chaque nom ; les régions sans nom restent muettes : l'explicable d'abord). Prérequis : un corpus annoté de 2 000 à 5 000 coups commentés par plusieurs auteurs (études Lichess publiques, livres du domaine public), et un test d'accord au bon grain : le commentaire d'un coup contre ce que l'arbre prédit pour ce coup, pas contre le contexte entier.
+
+## 12. Les limites connues
 
 - Les grains viennent de mes détecteurs. Ils sont descriptifs, pas stratégiques, mais leur grain de finesse borne ce que le modèle peut distinguer. Deux grosseurs seront comparées.
 - Seize demi-coups peuvent être trop courts pour la stratégie. Des fenêtres de quarante seront mesurées.
