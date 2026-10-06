@@ -209,7 +209,15 @@ Trois lectures :
 
 **Les groupes de l'espace brut** (200 arbres, lus a posteriori par les grains de 2021-02) sont pour l'instant dominés par le très court terme : « je viens de prendre un cavalier au centre → il reprend » arrive en tête, parce que l'objectif « coup suivant » récompense surtout la reprise immédiate. C'est le défaut attendu de cet objectif. La version 2, lancée dans la foulée, demande au modèle les cases que les deux camps joueront dans les dix prochains demi-coups et prend comme voisin la fenêtre située huit demi-coups plus loin ; modèle plus large (d = 192, 6 couches, 4 époques).
 
-**Second corpus : les maîtres sur l'échiquier.** LumbrasGigabase « OTB Elite » (CC BY-NC-SA 4.0) : 864 000 parties jouées à la pendule entre joueurs classés au-dessus de 2400, de 1990 à 2026. Plateaux extraits (826 000 parties de trente demi-coups ou plus), même modèle en cours d'entraînement. Un échantillon de 13 200 de ces parties reçoit des grains pour pouvoir sonder cet espace de la même manière. La question : un modèle élevé sur des parties lentes de maîtres porte-t-il des régularités différentes de celui élevé sur du blitz en ligne ?
+**Second corpus : les maîtres sur l'échiquier.** LumbrasGigabase « OTB Elite » (CC BY-NC-SA 4.0) : 864 000 parties jouées à la pendule entre joueurs classés au-dessus de 2400, de 1990 à 2026. Plateaux extraits (826 000 parties de trente demi-coups ou plus, 18,5 millions de fenêtres), même modèle, 47 minutes de GPU ; coup exact deviné 22 fois sur 100. Un échantillon de 13 200 de ces parties a reçu des grains pour sonder cet espace de la même manière, et chaque modèle a aussi été sondé sur les parties de l'autre :
+
+| Sonde (couche cachée de 256) | sur parties Lichess (943 k fenêtres) | sur parties OTB (273 k fenêtres) |
+|---|---|---|
+| modèle élevé sur Lichess | 0,724 | 0,711 |
+| modèle élevé sur OTB | **0,729** | **0,716** |
+| sac de grains, sans modèle | 0,744 | 0,728 |
+
+Lecture : le modèle élevé sur les maîtres lit un peu mieux les deux populations, y compris le blitz en ligne, sans doute parce qu'il a vu deux fois et demie plus de fenêtres. Les deux espaces se transfèrent d'une population à l'autre presque sans perte. Les colonnes ne se comparent pas entre elles (la sonde OTB apprend sur trois fois moins de fenêtres). La question « des régularités différentes chez les maîtres ? » n'est donc pas tranchée par cette sonde ; elle le sera par l'inventaire des arbres, dont les premiers groupes OTB ressemblent à ceux de Lichess (reprise au centre, roque adverse, pion isolé puis colonne semi-ouverte), avec une place plus visible pour les structures de pions (majorité à l'aile dame, chaîne de pions).
 
 **Corpus annoté multi-auteurs.** 314 études Lichess publiques lues, 97 gardées (au moins trente commentaires de fond), 20 053 commentaires : Chernev, Capablanca (*Chess Fundamentals*), Steinitz–Chigorin et Steinitz–Zukertort, La Bourdonnais–McDonnell annoté par Morphy, Fischer, et des parties amateurs commentées par leurs auteurs. À dédoublonner (Chernev y est cinq fois). Il servira au test d'accord au grain du coup : le commentaire d'un coup contre l'avenir que la sonde prédit pour ce coup.
 

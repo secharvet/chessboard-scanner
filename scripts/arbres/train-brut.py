@@ -17,11 +17,12 @@ import argparse, glob, json, math, sys, time, os, zlib
 import numpy as np, torch, torch.nn as nn, torch.nn.functional as F
 
 REC = 72
-def load_games(patterns, max_games=0, min_plies=30):
+def load_games(patterns, max_games=0, min_plies=30, max_per_file=0):
     games = []
     for pat in patterns:
         for fn in sorted(glob.glob(pat)):
             idx = [json.loads(l) for l in open(fn + '.idx.jsonl')]
+            if max_per_file: idx = idx[:max_per_file]
             with open(fn, 'rb') as fh:
                 for g in idx:
                     fh.seek(g['off']); raw = np.frombuffer(fh.read(REC * g['n']), dtype=np.uint8).reshape(g['n'], REC)
@@ -93,8 +94,10 @@ def main():
     ap.add_argument('--horizon', type=int, default=0, help='H > 0 : prédire aussi les cases jouées des H prochains demi-coups (regard plus loin que le coup suivant)')
     ap.add_argument('--nce-gap', type=int, default=1, help='la fenêtre voisine pour InfoNCE est la G-ième suivante de la même partie (1 = la suivante)')
     ap.add_argument('--w-move', type=float, default=1.0, help='poids de la perte du prochain coup')
+    ap.add_argument('--embed', default='', help='ne pas entraîner : charger ce modèle (.pt) et plonger les fenêtres des entrées (sonde croisée entre corpus)')
+    ap.add_argument('--max-per-file', type=int, default=0, help='ne lire que les N premières parties de chaque fichier')
     a = ap.parse_args()
-    games = load_games(a.inputs, a.max_games); P = Plies(games); print(f'{len(P.PW)} demi-coups chargés ({P.PW.nbytes * 2 / 1e9:.1f} Go)', file=sys.stderr)
+    games = load_games(a.inputs, a.max_games, max_per_file=a.max_per_file); P = Plies(games); print(f'{len(P.PW)} demi-coups chargés ({P.PW.nbytes * 2 / 1e9:.1f} Go)', file=sys.stderr)
     W = a.window
     # index des fenêtres : (partie, fin) ; la cible « prochain coup » exige end < n
     index = np.array([(gi, end) for gi, (_, raw) in enumerate(games) for end in range(a.start + W, min(len(raw), a.max_end + 1), a.stride) if end < len(raw)], dtype=np.int64)
@@ -103,9 +106,12 @@ def main():
     gid = IG; h = np.array([zlib.crc32(str(P.ids[g]).encode()) % 10 for g in range(len(P.ids))]); val = h[IG] == 0
     G = a.nce_gap; nxt_idx = np.minimum(np.arange(N) + G, N - 1); same = gid[nxt_idx] == gid; nxt_idx = np.where(same, nxt_idx, np.arange(N))
     dev = 'cuda' if torch.cuda.is_available() else 'cpu'
+    if a.embed:
+        ck = torch.load(a.embed, map_location=dev); a.dim = ck['dim']; a.layers = ck['layers']; assert ck['W'] == W
     model = Brut(W, a.dim, a.layers).to(dev); opt = torch.optim.AdamW(model.parameters(), lr=a.lr, weight_decay=0.01)
+    if a.embed: model.load_state_dict(ck['state'], strict=False); a.epochs = 0; print(f'plongement avec {a.embed}', file=sys.stderr)
     idx_tr = np.where(~val)[0]; idx_val = np.where(val)[0]
-    steps = a.epochs * math.ceil(len(idx_tr) / a.batch); sched = torch.optim.lr_scheduler.OneCycleLR(opt, a.lr, total_steps=steps)
+    steps = max(1, a.epochs) * math.ceil(len(idx_tr) / a.batch); sched = torch.optim.lr_scheduler.OneCycleLR(opt, a.lr, total_steps=steps)
     def batch(ids):
         x, f, t, hz = P.batch(IG[ids], IE[ids], W, a.horizon)
         return torch.from_numpy(x).to(dev), torch.from_numpy(f).to(dev), torch.from_numpy(t).to(dev), (torch.from_numpy(hz).to(dev) if hz is not None else None)
@@ -132,7 +138,7 @@ def main():
         e = {'epoch': ep + 1, 'prochain_coup_case_depart': ok_fr / n, 'prochain_coup_case_arrivee': ok_to / n, 'prochain_coup_exact': ok_both / n, 'minutes': (time.time() - t0) / 60}
         report['epochs'].append(e); print(json.dumps(e), file=sys.stderr)
     os.makedirs(os.path.dirname(a.out) or '.', exist_ok=True)
-    torch.save({'state': model.state_dict(), 'W': W, 'dim': a.dim, 'layers': a.layers, 'horizon': a.horizon}, a.out + '.pt')
+    if not a.embed: torch.save({'state': model.state_dict(), 'W': W, 'dim': a.dim, 'layers': a.layers, 'horizon': a.horizon}, a.out + '.pt')
     model.eval(); embs = []
     with torch.no_grad():
         for s in range(0, N, 1024):
