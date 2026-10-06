@@ -85,6 +85,8 @@ def main():
     ap.add_argument('--stride', type=int, default=2)
     ap.add_argument('--max-games', type=int, default=0)
     ap.add_argument('--min-count', type=int, default=20, help='un trait vu moins de N fois est ignoré')
+    ap.add_argument('--max-end', type=int, default=0, help='dernier demi-coup admis pour la fin d\'une fenêtre (0 = pas de borne)')
+    ap.add_argument('--min-material', type=int, default=0, help='matériel minimal (pions) de chaque camp à la fin de la fenêtre : 14 écarte les finales')
     a = ap.parse_args()
     files = [f for pat in a.inputs for f in sorted(glob.glob(pat))]
     W, F = a.window, a.future
@@ -116,7 +118,15 @@ def main():
         games += 1
         if a.max_games and games > a.max_games: break
         nodes = g['nodes']; n = len(nodes)
+        # matériel restant par camp après chaque demi-coup, estimé par les prises (39 au départ)
+        VAL = {'p': 1, 'n': 3, 'b': 3, 'r': 5, 'q': 9}
+        mat = {'w': 39, 'b': 39}; mat_after = []
+        for nd in nodes:
+            if nd.get('cap'): mat['b' if nd['s'] == 'w' else 'w'] -= VAL.get(nd['cap'], 0)
+            mat_after.append(min(mat['w'], mat['b']))
         for end in range(a.start + W, n - F + 1, a.stride):
+            if a.max_end and end > a.max_end: break
+            if a.min_material and mat_after[end - 1] < a.min_material: break
             win = nodes[end - W:end]; fut = nodes[end:end + F]
             me = win[-1]['s']  # la fenêtre est vue du camp qui vient de jouer
             toks = np.zeros((W, K), dtype=np.int16)

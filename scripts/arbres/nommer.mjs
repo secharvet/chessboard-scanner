@@ -27,13 +27,13 @@ Ce qui suit d'habitude dans les dix demi-coups suivants :
 ${avenir}
 Exemples :
 ${ex}
-Question : quelle idée stratégique ou tactique ces fenêtres ont-elles en commun ? Réponds en JSON strict, sans rien d'autre : {"nom": "trois à six mots", "sens": "une phrase en français courant pour un débutant, ce que le camp cherche et ce que l'adversaire doit craindre", "preuves": ["deux ou trois traits de la liste ci-dessus, recopiés tels quels"], "confiance": "haute|moyenne|basse"}. Si les fenêtres n'ont rien de commun de reconnaissable, réponds {"nom": "pas d'idée commune", "sens": "", "preuves": [], "confiance": "basse"}.`;
+Question : quelle idée stratégique ou tactique ces fenêtres ont-elles en commun ? Réponds en JSON strict, sans rien d'autre : {"phase": "ouverture|milieu|finale", "nom": "trois à six mots", "sens": "une phrase en français courant pour un débutant, ce que le camp cherche et ce que l'adversaire doit craindre", "preuves": ["deux ou trois traits de la liste ci-dessus, recopiés tels quels"], "confiance": "haute|moyenne|basse"}. Si les fenêtres n'ont rien de commun de reconnaissable, réponds {"nom": "pas d'idée commune", "sens": "", "preuves": [], "confiance": "basse"}.`;
   let text;
   try { text = execFileSync('claude', ['-p', '--model', 'fable', '--tools', '', '--max-turns', '1', prompt], { encoding: 'utf8', timeout: 180000, stdio: ['ignore', 'pipe', 'pipe'] }); erreurs = 0; }
   catch (e) { erreurs++; console.log(`${r + FROM + 1}. groupe ${g.groupe} : ERREUR ${e.message.slice(0, 80)}`); continue; }
   let j = null; try { j = JSON.parse(text.slice(text.indexOf('{'), text.lastIndexOf('}') + 1)); } catch { j = { nom: 'réponse illisible', sens: text.trim().slice(0, 200), preuves: [], confiance: 'basse' }; }
-  const fournis = new Set([...g.traits, ...g.avenir].map(([t]) => lis(t).trim()));
-  j.verifie = (j.preuves ?? []).filter((p) => fournis.has(String(p).trim())).length >= 1;
+  const mots = new Set([...g.traits, ...g.avenir].flatMap(([t]) => lis(t).toLowerCase().match(/[a-zéèêàçô_]{4,}/g) ?? []));
+  j.verifie = (j.preuves ?? []).some((p) => (String(p).toLowerCase().match(/[a-zéèêàçô_]{4,}/g) ?? []).filter((m) => mots.has(m)).length >= 2);
   noms[g.groupe] = j;
   writeFileSync(outFile, JSON.stringify(noms, null, 1));
   console.log(`${r + FROM + 1}. groupe ${g.groupe} (${g.parties} parties) : ${j.nom} [${j.confiance}${j.verifie ? ', vérifié' : ''}]`);

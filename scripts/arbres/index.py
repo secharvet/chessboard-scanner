@@ -18,6 +18,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('prefix'); ap.add_argument('model'); ap.add_argument('--out', required=True)
     ap.add_argument('--k', type=int, default=2000); ap.add_argument('--min-games', type=int, default=200)
+    ap.add_argument('--k2', type=int, default=0, help='second niveau : regrouper les centres des k groupes en k2 arbres (0 = un seul niveau)')
     ap.add_argument('--examples', type=int, default=6)
     ap.add_argument('--grains', nargs='*', default=[], help='fichiers de grains, pour joindre les coups des exemples')
     a = ap.parse_args()
@@ -30,6 +31,14 @@ def main():
     print(f'index : {N} vecteurs de dimension {D}', file=sys.stderr)
     km = faiss.Kmeans(D, a.k, niter=25, seed=1, spherical=True, verbose=False); km.train(E)
     _, lab = km.index.search(E, 1); lab = lab[:, 0]
+    if a.k2:
+        # Second niveau : les centres des groupes fins, pondérés par leur taille, regroupés en k2 arbres.
+        cents = km.centroids.copy(); faiss.normalize_L2(cents)
+        sizes = np.bincount(lab, minlength=a.k).astype(np.float32)
+        rep = np.repeat(np.arange(a.k), np.maximum(1, (sizes / sizes.mean() * 4).astype(int)))
+        km2 = faiss.Kmeans(D, a.k2, niter=40, seed=2, spherical=True); km2.train(cents[rep])
+        _, l2 = km2.index.search(cents, 1); lab = l2[lab, 0]; a.k = a.k2
+        print(f'second niveau : {a.k2} arbres', file=sys.stderr)
     np.save(a.out + '.labels.npy', lab)
     # statistiques globales des traits (pour la sur-représentation)
     Xf = X.reshape(N, -1)
