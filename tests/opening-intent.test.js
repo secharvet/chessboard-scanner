@@ -37,7 +37,7 @@ describe('Coach d’ouverture : intentions', () => {
   it('désambiguïsation : Cbd7 du moteur vaut Cd7 du livre', () => {
     const r = openingIntent({ moves: ['e4', 'e6', 'd4', 'd5', 'Nc3', 'dxe4', 'Nxe4', 'Nf6', 'Nc3', 'Bd6', 'a3'], player: 'b', candidates: cand('Cbd7', 'O-O', 'c5') });
     assert.equal(r.conseil.san, 'Cbd7');
-    assert.match(r.texte, /Maintenant : Cbd7 prépare …Cgf6/);
+    assert.match(r.texte, /Cbd7 prépare …Cgf6/);
   });
   it('un coup du plan dont la suite n’est pas décrite n’est pas un écart', () => {
     const r = openingIntent({ moves: ['e4', 'e6', 'd4', 'd5', 'e5', 'c5', 'c3', 'Nc6', 'Nf3', 'Qb6', 'Be2', 'Nh6'], player: 'w', candidates: cand('Fxh6') });
@@ -52,7 +52,7 @@ describe('Coach d’ouverture : intentions', () => {
     assert.equal(openingIntent({ moves, player: 'w', candidates: cand('Fe3') }), null);
     // Hors livre mais proche : le plan parle encore, et le conseil suit l'ordre du plan parmi les coups du moteur.
     const r = openingIntent({ moves: ['e4', 'e6', 'd4', 'd5', 'e5', 'Ne7', 'Nf3', 'a6'], player: 'w', candidates: cand('b4', 'c3', 'Fd3') });
-    assert.match(r.texte, /Maintenant : c3 soutient la base d4/);
+    assert.match(r.texte, /c3 soutient la base d4/);
     assert.equal(r.conseil.rang, 1);
   });
 });

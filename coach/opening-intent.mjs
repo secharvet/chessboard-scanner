@@ -112,19 +112,31 @@ export function openingIntent({ moves = [], player = 'w', candidates = [] } = {}
     // un coup type du plan devient le conseil, avec son pourquoi. Sinon le moteur a une raison concrète : la fiche la dira.
     const types = schema[moi === 'w' ? 'coupsBlancs' : 'coupsNoirs'] ?? [];
     const dejaJoues = new Set(etapes.filter((e) => e.color === moi).map((e) => e.san));
+    // Un coup d'attaque (h4, g4, Dg4, f4-f5…) n'est conseillé qu'une fois le roi à l'abri ou trois pièces mineures sorties,
+    // sauf si le moteur le met premier (partie du 6 octobre : « h4 lance l'aile roi » au 8e coup, roi en e1).
+    const ATTAQUE = new Set(['h4', 'g4', 'Qg4', 'f4', 'f5', 'g5', 'h5', 'Qh5', 'Ng5', 'h3', 'g3']);
+    const b = new Chess(courante.fen);
+    const rangDepart = moi === 'w' ? '1' : '8';
+    const mineurs = ['b', 'g'].flatMap((f) => [`${f}${rangDepart}`]).concat([`c${rangDepart}`, `f${rangDepart}`]);
+    const sortis = mineurs.filter((sq) => { const pc = b.get(sq); return !(pc && pc.color === moi && (pc.type === 'n' || pc.type === 'b')); }).length;
+    const roi = b.board().flat().find((q) => q && q.type === 'k' && q.color === moi)?.square;
+    const pret = (roi && roi !== `e${rangDepart}`) || sortis >= 3;
     const choix = types.map((t) => ({ san: top[rang(t.san)] ?? fr(t.san), pourquoi: t.pourquoi, rang: rang(t.san), deja: [...dejaJoues].some((d) => norm(fr(d)) === norm(fr(t.san))) }))
-      .filter((t) => !t.deja && t.rang >= 0 && t.rang < 3); // ordre du plan : le premier coup type encore à jouer
+      .filter((t) => !t.deja && t.rang >= 0 && t.rang < 3)
+      .filter((t) => pret || t.rang === 0 || !ATTAQUE.has(t.san.replace(/[+#]/g, '').replace(/^[CFTDR]/, (x) => ({ C: 'N', F: 'B', T: 'R', D: 'Q', R: 'K' })[x]))); // ordre du plan
+    const loin = horsLivre >= 3; // le plan a déjà été énoncé aux coups précédents : on va à l'essentiel
     if (choix.length) {
       conseil = choix[0];
       plan = choix;
-      say(`Le plan ${camp(moi)} ici : ${mien[0]}. Maintenant : ${conseil.san} ${conseil.pourquoi}.${choix[1] ? ` Aussi dans le plan : ${choix[1].san} (${choix[1].pourquoi}).` : ''}`,
-        `Le plan ${camp(moi)} ici : ${mien[0]}. Cherche le coup du plan.`);
+      const tete = loin ? 'Plan de l\'ouverture' : `Le plan ${camp(moi)} ici : ${mien[0]}. Maintenant`;
+      say(`${tete} : ${conseil.san} ${conseil.pourquoi}.${choix[1] && !loin ? ` Aussi dans le plan : ${choix[1].san} (${choix[1].pourquoi}).` : ''}`,
+        loin ? `Plan de l'ouverture : ${conseil.pourquoi}. Cherche le coup.` : `Le plan ${camp(moi)} ici : ${mien[0]}. Cherche le coup du plan.`);
       if (top.length && conseil.rang > 0) say(`Le moteur met ${top[0]} devant, mais ${conseil.san} est dans ses premiers choix et suit le plan.`, null);
-    } else {
-      say(`Le plan ${camp(moi)} dans cette structure : ${mien.join(' ; ')}. Lui va chercher à : ${sien[0]}.`,
+    } else if (!loin) {
+      say(`Le plan ${camp(moi)} dans cette structure : ${mien[0]}. Lui va chercher à : ${sien[0]}.`,
         `Le plan ${camp(moi)} dans cette structure : ${mien[0]}.`);
     }
-    items.push({ kind: 'opening_schema', moi: mien, lui: sien, conseil });
+    if (choix.length || !loin) items.push({ kind: 'opening_schema', moi: mien, lui: sien, conseil });
   }
 
   // 5. Les erreurs à éviter, si le moteur confirme qu'elles sont mauvaises (hors de ses trois premiers coups).
@@ -135,5 +147,7 @@ export function openingIntent({ moves = [], player = 'w', candidates = [] } = {}
   }
 
   if (!items.length) return null; // le nom seul n'est pas un conseil
-  return { nom, enLivre: Boolean(courante.entree), dernier, plan, ecart, schema, conseil, items, texte: phrases.join(' '), idee: idee.join(' ') };
+  // Résumé en deux phrases au plus, pour quand une raison tactique prend le pas dans la fiche.
+  const resume = [`Ouverture : ${nom}.`, dernier ? `Son ${dernier.san} ${dernier.sens}.` : (schema ? `Le plan ${camp(moi)} : ${schema[moi === 'w' ? 'blancs' : 'noirs'][0]}.` : '')].filter(Boolean).join(' ');
+  return { nom, enLivre: Boolean(courante.entree), dernier, plan, ecart, schema, conseil, items, texte: phrases.join(' '), idee: idee.join(' '), resume };
 }

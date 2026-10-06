@@ -63,9 +63,8 @@ export const LIVRE = [
   { coups: 'e4 e6 d4 d5 e5 c5 c3', sens: 'soutient la base d4 avec un pion : quoi qu\'il arrive sur d4, un pion pourra reprendre',
     plan: [
       { san: 'Nc6', pourquoi: 'deuxième attaquant de d4, en développant' },
-      { san: 'Qb6', pourquoi: 'attaque d4 ET b2 : la dame gêne le fou c1 (il ne peut plus sortir sans laisser b2)' },
-    ],
-    erreurs: [{ san: 'cxd4', pourquoi: 'trop tôt : cxd4 et la chaîne est reconstruite, le pion c noir n\'attaque plus rien' }] },
+      { san: 'Qb6', pourquoi: 'attaque d4 ET b2 : la dame gêne le fou c1 (il ne peut plus sortir sans laisser b2)' }
+    ] },
   { coups: 'e4 e6 d4 d5 e5 c5 c3 Nc6', nom: 'Avance, ligne principale', sens: 'deuxième attaquant de d4 ; prépare …Db6 pour un troisième',
     menace: '…cxd4 cxd4 Db6 : d4 attaqué trois fois (c6, b6, et plus tard un cavalier en f5), défendu par la dame seule',
     plan: [
@@ -88,7 +87,6 @@ export const LIVRE = [
       { san: 'Be2', pourquoi: 'développe et roque vite ; d4 est tenu par la dame et le cavalier, c\'est assez pour l\'instant' }
     ],
     erreurs: [
-      { san: 'Bd3', pourquoi: 'joué sans connaître la suite, il perd un pion : …cxd4 cxd4 Cxd4 Cxd4 Dxd4, et Fb5+ ne marche que si le roi noir peut aller en d8… en pratique, Fe2 est plus sûr' },
       { san: 'b3', pourquoi: 'défend b2 mais affaiblit c3 et la grande diagonale ; …cxd4 cxd4 Fb4+ gêne' }
     ],
     schema: {
@@ -115,8 +113,7 @@ export const LIVRE = [
       { san: 'a3', pourquoi: 'prépare b4 et empêche …Fb5 d\'être suivi de …Fb4' },
     ] },
   { coups: 'e4 e6 d4 d5 e5 c5 c3 Qb6', sens: 'attaque d4 et b2 d\'un coup : la dame gêne le fou c1',
-    plan: [{ san: 'Nf3', pourquoi: 'défend d4 en développant' }],
-    erreurs: [{ san: 'Bd3', pourquoi: 'laisse d4 insuffisamment défendu : …cxd4 cxd4 Dxd4 gagne un pion' }] },
+    plan: [{ san: 'Nf3', pourquoi: 'défend d4 en développant' }] },
   { coups: 'e4 e6 d4 d5 e5 c5 Nf3', nom: 'Avance, système Nimzowitsch', sens: 'défend d4 en développant, sans c3 : accepte l\'échange des pions sur d4',
     plan: [
       { san: 'cxd4', pourquoi: 'échange : la chaîne blanche disparaît, le cavalier d4 pourra être échangé ou chassé' },

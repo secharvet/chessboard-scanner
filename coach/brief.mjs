@@ -293,7 +293,7 @@ export function buildBrief(data) {
   // Le roque a sa raison à toute phase (banc du 2 octobre : en milieu de partie, « Le meilleur coup du moteur est O-O »
   // sans un mot, depuis que « O-O soutient ton pion en g2 » est exclu des effets).
   // Ouverture connue : le récit d'intention remplace « sors tes pièces » (POC du 6 octobre).
-  if (!reason && first && op?.texte) {
+  if (!reason && first && op?.texte && (op.conseil || op.ecart)) {
     reason = { kind: 'opening', move: bestSan, nom: op.nom, enLivre: op.enLivre };
     say(op.texte, op.idee);
     for (const it of op.items) items.push(it);
@@ -376,7 +376,7 @@ export function buildBrief(data) {
   // Le coup conseillé va sur une case attaquée : dire qui l'attaque et qui la défend, avec le bilan de l'échange
   // (partie réelle du 30 septembre, 1.e4 Cc6 2.d4 : « d4 est attaqué et non défendu ? » — la dame le défend).
   // Une raison tactique a pris le pas : on garde quand même le nom et le sens du dernier coup adverse, en une phrase.
-  if (op?.dernier && reason.kind !== 'opening') say(`Ouverture : ${op.nom}. Son ${op.dernier.san} ${op.dernier.sens}.`, undefined);
+  if (op?.resume && reason.kind !== 'opening') say(op.resume, undefined);
   if (first && steps[0] && !first.captured && ['develop', 'center', 'castle', 'plan', 'basics', 'best', 'save', 'opening'].includes(reason.kind)) {
     const after = new Chess(steps[0].fen);
     const who = (sqs) => sqs.map((sq) => ({ square: sq, type: after.get(sq).type })).sort((a, b) => VALUE[a.type] - VALUE[b.type]);
@@ -482,8 +482,18 @@ export function buildBrief(data) {
       if (victim && victim.color === me && victim.type !== 'k' && !/fourchette|découverte|mat\b|piég|enfilade/i.test(p.text ?? '')) {
         const parts = b.fen().split(' '); parts[1] = me; parts[3] = '-';
         const mine2 = new Chess(parts.join(' '));
-        const safe = mine2.moves({ square: target, verbose: true }).some((m) => !m.captured && mine2.attackers(m.to, opp).length === 0);
-        if (safe) return false;
+        // Parades gratuites : mes coups après lesquels la prise annoncée n'existe plus ou ne gagne plus rien (fuite,
+        // interposition, défense), et qui ne mettent pas la pièce jouée en prise. Deux parades ou plus : c'est du bruit.
+        const parries = mine2.moves({ verbose: true }).filter((m) => {
+          if (/[+#]/.test(m.san) || m.captured) return false;
+          const t = new Chess(mine2.fen()); t.move(m.san);
+          const lost = exchangeIfTaken(t.fen(), m.to); // ce que l'adversaire gagne en prenant la pièce que je viens de jouer
+          if (lost != null && lost > 0) return false;
+          const sq = m.from === target ? m.to : target;
+          const g = exchangeIfTaken(t.fen(), sq);
+          return g == null || g <= 0;
+        });
+        if (parries.length >= 2) return false;
       }
       return true;
     } catch { return true; }
