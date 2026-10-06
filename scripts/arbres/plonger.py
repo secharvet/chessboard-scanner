@@ -20,4 +20,5 @@ sim = H @ C.T; fin = sim.argmax(1); cos = sim.max(1)
 try: f2a = np.load(a.arbres + '.fin2arbre.npy'); arbre = f2a[fin]
 except FileNotFoundError: arbre = fin
 np.savez(a.out, H=H, fin=fin, arbre=arbre, cos=cos)
+json.dump({'arbre': arbre.tolist(), 'cos': [round(float(c), 4) for c in cos]}, open(a.out.replace('.npz', '') + '.json', 'w'))
 print(f'{len(H)} fenêtres plongées → {a.out}', file=sys.stderr)
