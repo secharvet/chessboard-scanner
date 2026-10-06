@@ -1319,3 +1319,6 @@ le numéro du coup et le matériel ; signal réel sur aile dame, levier, attaque
 prophylaxie, initiative, échange, tactique. Décision proposée : changer d'échelle (fenêtres 40-60, modèle plus large, dix
 époques, deux corpus) plutôt que l'objectif ; l'épreuve des mots devient le juge. Scripts : annotes-coups.mjs,
 themes-fable.mjs, themes-lexique.py, grains-coups.mjs, sonder-mots.py. v3 (horizon 30) en cours, résultat à suivre.
+**7 octobre, 0 h 15 : fin de nuit.** v3 (horizon 30, voisin 16, d 192, 6 couches, 45 min) : coup exact 24 %, avenir 0,757
+seul / 0,776 avec sac, mots des maîtres 0,681 (+0,004 sur v2). Tout consigné, plus rien ne tourne. Recommandation : changer
+d'échelle (fenêtres 40-60, modèle large, dix époques, deux corpus, GPU loué), juge = épreuve des mots.

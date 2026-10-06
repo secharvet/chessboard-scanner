@@ -241,8 +241,9 @@ Le thermomètre de la section 13 plafonnait parce que sa cible était mal choisi
 | traits triviaux | 0,66 |
 | espace brut v1 | 0,67 |
 | espace OTB | 0,68 |
-| espace brut v2 | **0,68** |
-| brut v2 + triviaux | 0,68 |
+| espace brut v2 | 0,68 |
+| espace brut v3 (horizon trente demi-coups) | **0,68** (0,681) |
+| brut v3 + triviaux | 0,69 |
 
 **Par thème**, là où l'espace dépasse nettement les traits triviaux : aile dame (0,76 contre 0,67), levier (0,73 contre 0,69), attaque de roi (0,70 contre 0,67), case faible (0,68 contre 0,64), défense du roi (0,62 contre 0,57). Là où il ne dépasse rien : finale (0,88, mais 0,91 avec le seul compte du matériel), développement, centre, manœuvre, prophylaxie, échange, tactique, initiative (0,58).
 
@@ -250,7 +251,8 @@ Le thermomètre de la section 13 plafonnait parce que sa cible était mal choisi
 
 1. L'espace brut lit les mots des maîtres **mieux que nos étiquettes à la main** (0,68 contre 0,64) et sur tous les thèmes sauf la case faible. C'est l'argument le plus solide à ce jour pour l'étage 1 contre les grains.
 2. Mais il ne dépasse les traits triviaux que de 0,015 en moyenne. Le signal existe, sur une poignée de thèmes de terrain (où l'on joue, contre quoi), et il est mince. Pas d'émergence à cette échelle : seize demi-coups, 128 à 192 dimensions, quatre époques.
-3. Les thèmes abstraits (prophylaxie, initiative, moment de l'échange) ne se lisent ni dans l'espace, ni dans les étiquettes, ni dans le trivial. Soit ils vivent à une autre échelle de temps, soit ils ne sont pas dans la position mais dans la tête du commentateur.
+3. La version 3 (horizon de trente demi-coups, voisin à seize) confirme la tendance : avenir 0,757 seul et 0,776 avec le sac, mots des maîtres 0,681, soit quelques millièmes de mieux que la v2 à chaque fois. Allonger l'horizon de l'objectif ne suffit pas.
+4. Les thèmes abstraits (prophylaxie, initiative, moment de l'échange) ne se lisent ni dans l'espace, ni dans les étiquettes, ni dans le trivial. Soit ils vivent à une autre échelle de temps, soit ils ne sont pas dans la position mais dans la tête du commentateur.
 
 **Ce que ça décide.** Ne plus chercher l'intention en changeant l'objectif à la marge. Changer d'échelle (fenêtres de quarante à soixante demi-coups, modèle plusieurs fois plus large, dix époques, les deux corpus réunis), ce qui est le cas où louer une grosse carte quelques heures se justifie ; ou changer de représentation. Cette épreuve reste le juge : elle est reproductible en dix minutes sur n'importe quel nouvel espace (`sonder-mots.py`).
 
