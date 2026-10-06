@@ -1286,3 +1286,19 @@ Passe 3 (milieu, échecs répétés écartés, 200 arbres) : AUC 0,731 contre 0,
 Décision avec l'auteur : étage 1 = apprendre sur l'échiquier brut (auto-supervisé, 1,65 M parties, sans étiquettes en
 entrée ; registre Maia, pas AlphaZero : lire, pas jouer) ; étage 2 = greffer les noms (fenêtres annotées, plans, arbres
 nommés → sondes linéaires ; l'explicable d'abord). Prérequis : corpus annoté multi-auteurs (études Lichess, domaine public).
+
+
+## 6 octobre 2026, 21 h 45 : étage 1 lancé et mesuré ; corpus OTB de maîtres ; corpus annoté récolté
+
+Fait le soir même (« C'est parti, VPS, DENEB gogogo ») : scripts/plateaux.mjs (72 octets par demi-coup, aucune étiquette),
+scripts/arbres/train-brut.py (positions brutes → transformeur ; prochain coup + voisinage ; v2 : cases jouées des 10 prochains
+demi-coups, voisin à 8), scripts/arbres/sonder.py (sonde figée → 141 faits d'avenir, témoins), scripts/arbres/index-brut.py,
+scripts/arbres/realigner-ids.mjs (ids numériques des grains 2021-02 réparés, 48 000/48 000). Modèle brut 1 : 348 k parties
+Lichess, 7,7 M fenêtres, 33 min GPU ; coup exact 21 %. Sonde (parties jamais vues) : hasard 0,50 ; brut linéaire 0,71 ; brut
++ couche cachée 0,72 ; sac de grains sans modèle 0,74 (> modèle à grains bout en bout 0,73 : le transformeur sur grains
+n'ajoutait rien) ; brut + sac 0,76 (meilleur score, les deux sont complémentaires). Groupes bruts dominés par la reprise
+immédiate (défaut de l'objectif « coup suivant ») → v2 à horizon 10 lancée (d 192, 6 couches, 4 époques). Second corpus :
+LumbrasGigabase OTB Elite > 2400 (864 k parties, CC BY-NC-SA, via Mega + megatools sur DENEB), plateaux extraits (826 k),
+modèle OTB en entraînement ; grains sur 13 200 parties OTB (VPS) pour sonder. Corpus annoté : 314 études, 97 gardées,
+84 uniques, 16 158 commentaires de fond (Chernev, Capablanca, Steinitz, Morphy, Fischer, amateurs). Doc : ARBRES.md § 13 +
+figure arbres-10. DENEB : 12 processus nice 19 respectés.

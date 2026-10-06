@@ -179,6 +179,41 @@ Les deux autres mesures, accord avec les parties annotées et lecture à l'aveug
 - Les parties Lichess à 2400 sont surtout du blitz : les stratégies y sont présentes mais plus brouillonnes.
 - Le nommage par LLM reste une explication produite par un modèle de langage, hors ligne et vérifiée par les comptes ; une erreur de nom est possible, mais elle est visible et corrigible, et elle n'invente rien en direct.
 
+## 13. Étage 1 : apprendre sur l'échiquier brut (6 octobre, soir)
+
+Décision de la section 11 mise en œuvre le soir même. Le modèle ne reçoit plus aucun de mes grains : seulement, pour chacun des seize derniers demi-coups, les 64 cases telles quelles (pièce et couleur), le trait, les droits de roque et le coup qui vient d'être joué (case de départ, case d'arrivée, prise, échec). L'échiquier est retourné pour les Noirs : « moi » est toujours en bas. Il doit deviner le coup suivant (case de départ et case d'arrivée) et reconnaître la fenêtre suivante de la même partie parmi 255 autres. C'est le registre de Maia (lire les humains), pas celui d'AlphaZero (jouer mieux qu'eux).
+
+**Données.** 348 000 parties Lichess Elite (2021-02 et 2021-03), 7,7 millions de fenêtres. Un petit modèle (d = 128, 4 couches) apprend en 10 minutes par époque sur le GPU, deux fois plus vite que le modèle à grains.
+
+**Prochain coup.** Après trois époques, il devine la case de départ 47 fois sur 100, la case d'arrivée 33 fois sur 100, le coup exact 21 fois sur 100, sur des parties jamais vues. Pour l'échelle : un modèle qui ne verrait que la position et aucune histoire ferait sans doute mieux ; ici le coup n'est qu'un prétexte pour forcer le modèle à lire la séquence.
+
+**La sonde (début de l'étage 2).** On fige les vecteurs et on apprend une petite tête (une couche cachée de 256) qui doit prédire les 141 faits d'avenir de la section 6, sur les 46 719 parties de 2021-02 qui ont aussi des grains ; mesure sur des parties que ni le modèle ni la sonde n'ont vues.
+
+![Sonde d'avenir](figures/arbres-10-sonde-brut.svg)
+
+| Lecteur | AUC moyenne |
+|---|---|
+| vecteurs au hasard (témoin) | 0,50 |
+| coups seuls (témoin de la passe 3) | 0,69 |
+| échiquier brut, sonde linéaire | 0,71 |
+| échiquier brut, sonde à une couche cachée | **0,72** |
+| modèle à grains bout en bout (passe 3) | 0,73 |
+| sac de grains de la fenêtre, sans modèle | 0,74 |
+| échiquier brut + sac de grains | **0,76** |
+
+Trois lectures :
+
+1. **Le modèle brut a appris quelque chose de réel sans aucune étiquette** : 0,72 contre 0,50 au hasard et 0,69 pour les coups seuls, alors qu'il n'a jamais vu un seul fait d'avenir et que la sonde n'a qu'une couche.
+2. **Humilité pour la passe 3** : un simple sac des grains de la fenêtre, sans transformeur, fait 0,74, soit mieux que le modèle à grains bout en bout (0,73). Le transformeur sur grains n'ajoutait rien à la somme des étiquettes.
+3. **Les deux sont complémentaires** : brut + sac donne 0,76, le meilleur score à ce jour. L'échiquier brut contient des régularités que mes détecteurs ne décrivent pas, et réciproquement. C'est exactement l'argument des deux étages : l'espace brut porte plus que les étiquettes, et les étiquettes servent à le lire.
+
+**Les groupes de l'espace brut** (200 arbres, lus a posteriori par les grains de 2021-02) sont pour l'instant dominés par le très court terme : « je viens de prendre un cavalier au centre → il reprend » arrive en tête, parce que l'objectif « coup suivant » récompense surtout la reprise immédiate. C'est le défaut attendu de cet objectif. La version 2, lancée dans la foulée, demande au modèle les cases que les deux camps joueront dans les dix prochains demi-coups et prend comme voisin la fenêtre située huit demi-coups plus loin ; modèle plus large (d = 192, 6 couches, 4 époques).
+
+**Second corpus : les maîtres sur l'échiquier.** LumbrasGigabase « OTB Elite » (CC BY-NC-SA 4.0) : 864 000 parties jouées à la pendule entre joueurs classés au-dessus de 2400, de 1990 à 2026. Plateaux extraits (826 000 parties de trente demi-coups ou plus), même modèle en cours d'entraînement. Un échantillon de 13 200 de ces parties reçoit des grains pour pouvoir sonder cet espace de la même manière. La question : un modèle élevé sur des parties lentes de maîtres porte-t-il des régularités différentes de celui élevé sur du blitz en ligne ?
+
+**Corpus annoté multi-auteurs.** 314 études Lichess publiques lues, 97 gardées (au moins trente commentaires de fond), 20 053 commentaires : Chernev, Capablanca (*Chess Fundamentals*), Steinitz–Chigorin et Steinitz–Zukertort, La Bourdonnais–McDonnell annoté par Morphy, Fischer, et des parties amateurs commentées par leurs auteurs. À dédoublonner (Chernev y est cinq fois). Il servira au test d'accord au grain du coup : le commentaire d'un coup contre l'avenir que la sonde prédit pour ce coup.
+
+
 ---
 
 ## Annexe : fichiers
@@ -192,3 +227,8 @@ Les deux autres mesures, accord avec les parties annotées et lecture à l'aveug
 | Nommage | `scripts/arbres/nommer.mjs` | `noms.json` |
 | Inventaire lisible | `scripts/arbres/inventaire-page.py` | page HTML |
 | Chaîne DENEB | `scripts/arbres/chaine-deneb.sh` | journaux `logs/arbres-*.log` |
+| Plateaux bruts (étage 1) | `scripts/plateaux.mjs` | `data/plateaux/*.bin`, `*.idx.jsonl` |
+| Modèle brut | `scripts/arbres/train-brut.py` | `data/brut*/model.{pt,emb.npy,meta.jsonl,report.json}` |
+| Sonde d'avenir | `scripts/arbres/sonder.py` | `data/brut*/sonde*.json` |
+| Arbres de l'espace brut | `scripts/arbres/index-brut.py` | `data/brut*/arbres.*` |
+| Corpus annoté | `scripts/arbres/corpus-annote.mjs` | `data/reference/annotes/` |
