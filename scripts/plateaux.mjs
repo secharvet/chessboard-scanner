@@ -58,7 +58,7 @@ async function main() {
     const c = new Chess(); const uci = [];
     for (const san of list.slice(0, MAX_PLIES)) { let m; try { m = c.move(san); } catch { return; } uci.push(m.from + m.to + (m.promotion ?? '')); }
     const rows = plateaux(uci); if (!rows.length) return;
-    const head = JSON.stringify({ id: (g.headers.LichessURL ?? g.headers.Site ?? '').split('/').pop() || String(i), we: Number(g.headers.WhiteElo || 0), be: Number(g.headers.BlackElo || 0), res: g.headers.Result, eco: g.headers.ECO, n: rows.length }) + '\n';
+    const head = JSON.stringify({ id: (g.headers.LichessURL ? g.headers.LichessURL.split('/').pop() : '') || String(i), we: Number(g.headers.WhiteElo || 0), be: Number(g.headers.BlackElo || 0), res: g.headers.Result, eco: g.headers.ECO, n: rows.length }) + '\n';
     const hb = Buffer.from(head); writeSync(fd, hb); const body = Buffer.concat(rows); writeSync(fd, body);
     idx.push({ id: JSON.parse(head).id, off: offset + hb.length, n: rows.length, we: JSON.parse(head).we, be: JSON.parse(head).be, res: g.headers.Result });
     offset += hb.length + body.length; kept++;
