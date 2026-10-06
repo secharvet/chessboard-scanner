@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 340" width="940" height="340" role="img" aria-label="Les deux objectifs"><defs><marker id="ar" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#6b6457"/></marker></defs><rect width="100%" height="100%" fill="#faf8f2"/><text x="470" y="30" text-anchor="middle" font-family="Georgia, serif" font-size="18" font-weight="600" fill="#1f1d18">Deux objectifs d’apprentissage, une seule idée : le vecteur dit vers quoi la partie va</text>
+<rect x="30" y="70" width="420" height="250" rx="10" fill="#e6f1e8" stroke="#c9c2b2" stroke-width="1.5"/>
+<text x="240.0" y="94" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="600" fill="#1f1d18">1. Prédire l’avenir</text>
+<text x="60" y="120" text-anchor="start" font-family="system-ui, sans-serif" font-size="13" font-weight="400" fill="#1f1d18">fenêtre t  →  h  →  p(fait) pour 139 faits</text>
+<text x="60" y="145" text-anchor="start" font-family="system-ui, sans-serif" font-size="12" font-weight="400" fill="#6b6457">perte : entropie croisée binaire, pondérée pour les faits rares</text>
+<text x="60" y="175" text-anchor="start" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#1f1d18">exemples de faits d’avenir :</text>
+<text x="70" y="196" text-anchor="start" font-family="system-ui, sans-serif" font-size="12" font-weight="400" fill="#6b6457">• pression sur son roi qui monte (dk lui +)</text>
+<text x="70" y="214" text-anchor="start" font-family="system-ui, sans-serif" font-size="12" font-weight="400" fill="#6b6457">• colonne ouverte apparaît (moi)</text>
+<text x="70" y="232" text-anchor="start" font-family="system-ui, sans-serif" font-size="12" font-weight="400" fill="#6b6457">• pion passé apparaît (moi)</text>
+<text x="70" y="250" text-anchor="start" font-family="system-ui, sans-serif" font-size="12" font-weight="400" fill="#6b6457">• défenseur échangé, matériel moi +2</text>
+<text x="70" y="268" text-anchor="start" font-family="system-ui, sans-serif" font-size="12" font-weight="400" fill="#6b6457">• levier (moi), roque (lui), plan tour_colonne (moi)</text>
+<text x="60" y="300" text-anchor="start" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#2f6f4f">Deux chemins différents vers le même avenir → vecteurs proches.</text>
+<rect x="490" y="70" width="420" height="250" rx="10" fill="#f6e5e5" stroke="#c9c2b2" stroke-width="1.5"/>
+<text x="700.0" y="94" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="600" fill="#1f1d18">2. Voisinage temporel (InfoNCE)</text>
+<text x="520" y="120" text-anchor="start" font-family="system-ui, sans-serif" font-size="13" font-weight="400" fill="#1f1d18">fenêtre t et fenêtre t+2 de la même partie : positives</text>
+<text x="520" y="142" text-anchor="start" font-family="system-ui, sans-serif" font-size="13" font-weight="400" fill="#1f1d18">toutes les autres fenêtres du lot : négatives</text>
+<text x="520" y="170" text-anchor="start" font-family="system-ui, sans-serif" font-size="12" font-weight="400" fill="#6b6457">perte : −log  exp(s⁺/τ) / Σ exp(s/τ),  τ = 0,1</text>
+<text x="520" y="200" text-anchor="start" font-family="system-ui, sans-serif" font-size="12" font-weight="400" fill="#6b6457">effet : l’espace est lisse dans le temps, une même</text>
+<text x="520" y="218" text-anchor="start" font-family="system-ui, sans-serif" font-size="12" font-weight="400" fill="#6b6457">chorégraphie reste au même endroit pendant qu’elle se joue.</text>
+<text x="520" y="250" text-anchor="start" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#1f1d18">perte totale = avenir + 0,5 × voisinage</text>
+<text x="520" y="300" text-anchor="start" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#9b3b3b">Sans cible humaine, sans règle : seulement la partie elle-même.</text></svg>

@@ -12,9 +12,12 @@ import argparse, json, math, time, sys
 import numpy as np
 import torch, torch.nn as nn, torch.nn.functional as Fn
 
-def load(prefix, control=False):
+def load(prefix, control=False, drop=()):
     z = np.load(prefix + '.npz'); X = z['X']; Y = z['Y']
     vocab = json.load(open(prefix + '.vocab.json'))
+    if drop:  # variante : on retire des familles de traits (ex. pl = plans détectés) pour voir ce qui émerge des faits bruts
+        keep = np.array([t.split(':')[0] not in drop for t in vocab['x']]); keep[0] = True
+        X = np.where(keep[X], X, 0)
     if control:
         keep = np.array([t.split(':')[0] in ('<pad>', 'side', 'pc', 'cap', 'chk', 'cas', 'zt') for t in vocab['x']])
         mask = keep[X]
@@ -48,8 +51,9 @@ def main():
     ap.add_argument('--dim', type=int, default=128); ap.add_argument('--layers', type=int, default=4)
     ap.add_argument('--lr', type=float, default=3e-4); ap.add_argument('--control', action='store_true')
     ap.add_argument('--tau', type=float, default=0.1); ap.add_argument('--max', type=int, default=0)
+    ap.add_argument('--drop', default='', help='familles de traits à retirer, séparées par des virgules (ex. pl,at)')
     a = ap.parse_args()
-    X, Y, vocab, meta = load(a.prefix, a.control)
+    X, Y, vocab, meta = load(a.prefix, a.control, tuple(x for x in a.drop.split(',') if x))
     if a.max: X, Y, meta = X[:a.max], Y[:a.max], meta[:a.max]
     N, W, K = X.shape
     dev = 'cuda' if torch.cuda.is_available() else 'cpu'
@@ -70,7 +74,7 @@ def main():
     # témoin de prédiction : la fréquence de chaque trait d'avenir (meilleure constante)
     base = Yt[tr].mean(0).clamp(1e-4, 1 - 1e-4)
     def bce(logits, y): return Fn.binary_cross_entropy_with_logits(logits, y, pos_weight=pos_w)
-    t0 = time.time(); report = {'control': a.control, 'epochs': []}
+    t0 = time.time(); report = {'control': a.control, 'drop': a.drop, 'epochs': []}
     for ep in range(a.epochs):
         model.train(); np.random.shuffle(idx_tr); tot = 0; nb = 0
         for s in range(0, len(idx_tr), a.batch):
