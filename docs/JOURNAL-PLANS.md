@@ -1302,3 +1302,12 @@ LumbrasGigabase OTB Elite > 2400 (864 k parties, CC BY-NC-SA, via Mega + megatoo
 modèle OTB en entraînement ; grains sur 13 200 parties OTB (VPS) pour sonder. Corpus annoté : 314 études, 97 gardées,
 84 uniques, 16 158 commentaires de fond (Chernev, Capablanca, Steinitz, Morphy, Fischer, amateurs). Doc : ARBRES.md § 13 +
 figure arbres-10. DENEB : 12 processus nice 19 respectés.
+
+**6 octobre, 23 h 10.** Modèle OTB (826 k parties, 18,5 M fenêtres, 47 min) : sonde 0,716 sur OTB, 0,729 sur Lichess ; modèle
+Lichess : 0,724 / 0,711 ; les espaces se transfèrent. Version 2 (horizon 10, d 192, 6 couches) : coup exact 25 %, sonde
+0,750 seul (> sac 0,744 > modèle à grains 0,731), 0,773 avec le sac ; premier arbre « levier → doublon, colonne semi-ouverte,
+avant-poste ». Remarque de l'auteur : « quoi qu'on fasse, on arrive au même chiffre » ; détail par fait : 25 faits > 0,85
+(évidents : roque, développement), 79 entre 0,60 et 0,75 (bruit : échange, manœuvre, case faible). Conclusion : la cible
+plafonne, pas les modèles. Proposé pour demain : les mots des maîtres comme cible au grain du coup (84 études), avenir
+à trente demi-coups, lecture à l'aveugle. Données DENEB : data/brut, data/brut2, data/brut-otb (modèles, vecteurs, sondes,
+arbres), data/grains/otb-2400.s*.jsonl ; VPS : data/grains/otb-2400.*, data/reference/annotes/.

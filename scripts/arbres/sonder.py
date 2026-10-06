@@ -15,13 +15,13 @@ import numpy as np, torch, torch.nn.functional as F
 sys.path.insert(0, os.path.dirname(__file__)); from dataset import future_feats, node_feats
 
 def auc_mean(P, T):
-    aucs = []
+    aucs = []; kept = []
     for j in range(T.shape[1]):
         t = T[:, j]; p = P[:, j]
         if t.sum() < 20 or (1 - t).sum() < 20: continue
         order = np.argsort(p); ranks = np.empty_like(order, dtype=np.float64); ranks[order] = np.arange(1, len(p) + 1)
-        n1 = t.sum(); n0 = len(t) - n1; aucs.append((ranks[t == 1].sum() - n1 * (n1 + 1) / 2) / (n1 * n0))
-    return float(np.mean(aucs)), len(aucs), aucs
+        n1 = t.sum(); n0 = len(t) - n1; aucs.append((ranks[t == 1].sum() - n1 * (n1 + 1) / 2) / (n1 * n0)); kept.append(j)
+    return float(np.mean(aucs)), len(aucs), aucs, kept
 
 def probe(X, Y, tr, va, dev, epochs=8, name='', hidden=0):
     mu = X[tr].mean(0); sd = X[tr].std(0) + 1e-6; Xn = torch.from_numpy((X - mu) / sd).float(); Yt = torch.from_numpy(Y).float()
@@ -35,10 +35,10 @@ def probe(X, Y, tr, va, dev, epochs=8, name='', hidden=0):
     with torch.no_grad():
         P = torch.cat([torch.sigmoid(lin(Xn[va[s:s + 8192]].to(dev))).cpu() for s in range(0, len(va), 8192)]).numpy(); T = Y[va]
         vl = F.binary_cross_entropy(torch.from_numpy(P), torch.from_numpy(T).float()).item(); vb = F.binary_cross_entropy(base.expand_as(torch.from_numpy(T)), torch.from_numpy(T).float()).item()
-    m, n, aucs = auc_mean(P, T)
+    m, n, aucs, kept = auc_mean(P, T)
     name = name + (f' [cachée {hidden}]' if hidden else ' [linéaire]')
     print(f'{name}: AUC moyenne {m:.3f} sur {n} traits ; perte {vl:.4f} vs constante {vb:.4f}', file=sys.stderr)
-    return {'auc_moyenne': m, 'n_traits_auc': n, 'perte_val': vl, 'perte_constante': vb, 'aucs': aucs}
+    return {'auc_moyenne': m, 'n_traits_auc': n, 'perte_val': vl, 'perte_constante': vb, 'aucs': aucs, 'traits_gardes': kept, 'frequence': [float(Y[va][:, j].mean()) for j in kept]}
 
 def main():
     ap = argparse.ArgumentParser()
