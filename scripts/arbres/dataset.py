@@ -95,7 +95,8 @@ def main():
         for fn in files:
             with open(fn) as fh:
                 for line in fh:
-                    yield json.loads(line)
+                    try: yield json.loads(line)
+                    except json.JSONDecodeError: continue  # dernière ligne d'un lot encore en cours d'écriture
     for g in iter_games():
         games += 1
         if a.max_games and games > a.max_games: break
