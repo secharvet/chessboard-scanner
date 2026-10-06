@@ -12,7 +12,10 @@ Sortie : <out>.npz (tokens int16 [N, W, K], futures uint8 [N, T], meta) et <out>
 import argparse, json, glob, sys, os
 import numpy as np
 
-K = 28  # traits par nœud (identifiants dans le vocabulaire, 0 = vide)
+K = 40  # traits par nœud (identifiants dans le vocabulaire, 0 = vide)
+# Faits qui clignotent à chaque coup (« possible », « disponible », activité) : ils ne décrivent pas ce que le coup fait.
+VOLATILE = ('DECOUVERTE_POSSIBLE', 'LEVIER_DISPONIBLE', 'ROUTE_CAVALIER', 'AVANT_POSTE_POSSIBLE', 'CASE_ENTREE', 'ACTIVITE', 'MOYENNE', 'CONTROLE_CENTRE', 'CONTROLE_COLONNE', 'PRIORITY', 'NOMBRE_ILOTS_BLANC', 'NOMBRE_ILOTS_NOIR')
+def stable(tag): return not tag.split(':')[0] in VOLATILE
 
 def rel(tag, me):
     """':w'/':b' → ':me'/':him' relatif au camp `me`."""
@@ -37,8 +40,10 @@ def node_feats(n, me):
     for e in n.get('ef', []): f.append(f'ef:{who}:{e}')
     for a in n.get('at', []): f.append(f'at:{who}:{a}')
     for p in n.get('pl', []): f.append(f'pl:{rel(p, me)}')
-    for a in n.get('fa', []): f.append(f'fa:{rel(a, me)}')
-    for a in n.get('fl', []): f.append(f'fl:{rel(a, me)}')
+    for a in n.get('fa', []):
+        if stable(a): f.append(f'fa:{rel(a, me)}')
+    for a in n.get('fl', []):
+        if stable(a): f.append(f'fl:{rel(a, me)}')
     dk = n.get('dk', 0)
     if dk >= 2: f.append(f'dk:{who}:+')
     elif dk <= -2: f.append(f'dk:{who}:-')
@@ -56,7 +61,8 @@ def future_feats(nodes, me):
     cap = {'me': 0, 'him': 0}
     for n in nodes:
         who = 'me' if n['s'] == me else 'him'
-        for a in n.get('fa', []): f.add(f'fa:{rel(a, me)}')
+        for a in n.get('fa', []):
+            if stable(a): f.add(f'fa:{rel(a, me)}')
         for p in n.get('pl', []): f.add(f'pl:{rel(p, me)}')
         for a in n.get('at', []):
             if a in ('levier', 'echange', 'roque', 'manoeuvre', 'espace', 'doublement', 'septieme'): f.add(f'at:{who}:{a}')
