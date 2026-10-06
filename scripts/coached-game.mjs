@@ -3,7 +3,7 @@
  * plus fort ; à chaque coup de l'élève, on demande conseil au COACH (le pipeline du site), puis on
  * mesure le coup réellement joué. Le compte rendu sert à relire les explications une par une.
  *
- *   node scripts/coached-game.mjs [--student 1320] [--opponent 1500] [--moves 40] [--color white]
+ *   node scripts/coached-game.mjs [--student 1320] [--opponent 1500] [--moves 40] [--color white] [--opening "e4 e6 d4 d5 e5"]
  *
  * Rapport : reports/partie-commentee-<date>.md (+ .json)
  */
@@ -26,6 +26,7 @@ const OPP_ELO = Number(opt('--opponent', 1500));
 const MAX_MOVES = Number(opt('--moves', 40));
 const COLOR = opt('--color', 'white') === 'black' ? 'b' : 'w';
 const QUESTION = opt('--question', 'Quel est le plan ? Que dois-je jouer ?');
+const OPENING = (opt('--opening', '') || '').split(/\s+/).filter(Boolean); // premiers coups imposés (SAN anglais)
 const STAMP = Date.now();
 
 class Limited {
@@ -60,6 +61,7 @@ const evalFor = async (fen) => {
 };
 
 const chess = new Chess();
+for (const san of OPENING) chess.move(san);
 const turns = [];
 console.error(`Partie commentée : élève ${STUDENT_ELO} (${COLOR === 'w' ? 'Blancs' : 'Noirs'}) contre ${OPP_ELO} — coach ${cfg.provider}/${cfg.model}`);
 while (!chess.isGameOver() && chess.history().length < MAX_MOVES * 2) {
@@ -72,7 +74,7 @@ while (!chess.isGameOver() && chess.history().length < MAX_MOVES * 2) {
     const uci = await student.move(fen);
     const m = chess.move({ from: uci.slice(0, 2), to: uci.slice(2, 4), promotion: uci[4] });
     const loss = Math.max(0, Math.min(1000, before + (await evalFor(chess.fen()))));
-    turns.push({ n, fen, advice: r.advice, adviceWorking: r.adviceWorking, problems: r.problems, revised: r.revised, context: r.context, played: toFrenchSan(m.san), loss, secs: Math.round((Date.now() - t0) / 1000) });
+    turns.push({ n, fen, moves: chess.history().slice(0, -1), advice: r.advice, adviceWorking: r.adviceWorking, problems: r.problems, revised: r.revised, context: r.context, played: toFrenchSan(m.san), loss, secs: Math.round((Date.now() - t0) / 1000) });
     console.error(`${n}. conseil reçu (${turns.at(-1).secs} s, ${r.problems.length} problème(s)) — l'élève joue ${turns.at(-1).played} (perte ${loss} cp)`);
     writeReport();
   } else {

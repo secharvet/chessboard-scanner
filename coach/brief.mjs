@@ -12,6 +12,7 @@
 
 import { Chess } from 'chess.js';
 import { buildAttackMap } from '../positional/attack-map.js';
+import { openingIntent } from './opening-intent.mjs';
 import { buildAllFacts } from '../positional/index.js';
 import { planSentence } from './plans.mjs';
 import { compatibleWithLines, concreteIntention, topIntention } from './intentions.mjs';
@@ -139,6 +140,14 @@ function evalSentence(e) {
 export function buildBrief(data) {
   const me = data.player;
   const opp = me === 'w' ? 'b' : 'w';
+  // Coach d'ouverture (POC du 6 octobre) : lu AVANT le moteur. S'il conseille un coup du livre qui n'est pas le premier
+  // du moteur mais dans ses trois premiers à moins de 0,3, toute la fiche se construit sur ce coup-là.
+  const op = (process.env.COACH_OPENING !== '0' && data.toMove === me && (data.phase === 'ouverture' || (data.moves?.length ?? 0) <= 24))
+    ? (() => { try { return openingIntent({ moves: data.moves ?? [], player: me, candidates: data.candidates }); } catch { return null; } })() : null;
+  if (op?.conseil && op.conseil.rang > 0) {
+    const i = op.conseil.rang;
+    data = { ...data, candidates: [data.candidates[i], ...data.candidates.filter((_, j) => j !== i)] };
+  }
   const c0 = data.candidates[0];
   const items = [];
   const pieces = new Set(); // « type|owner|case » cités par la fiche
@@ -283,6 +292,12 @@ export function buildBrief(data) {
   }
   // Le roque a sa raison à toute phase (banc du 2 octobre : en milieu de partie, « Le meilleur coup du moteur est O-O »
   // sans un mot, depuis que « O-O soutient ton pion en g2 » est exclu des effets).
+  // Ouverture connue : le récit d'intention remplace « sors tes pièces » (POC du 6 octobre).
+  if (!reason && first && op?.texte) {
+    reason = { kind: 'opening', move: bestSan, nom: op.nom, enLivre: op.enLivre };
+    say(op.texte, op.idee);
+    for (const it of op.items) items.push(it);
+  }
   if (!reason && first && first.san.startsWith('O-O')) {
     reason = { kind: 'castle', move: bestSan };
     say(`Mets ton roi à l'abri : roque avec ${bestSan}.`, 'Pense à la sécurité de ton roi.');
@@ -360,7 +375,9 @@ export function buildBrief(data) {
 
   // Le coup conseillé va sur une case attaquée : dire qui l'attaque et qui la défend, avec le bilan de l'échange
   // (partie réelle du 30 septembre, 1.e4 Cc6 2.d4 : « d4 est attaqué et non défendu ? » — la dame le défend).
-  if (first && steps[0] && !first.captured && ['develop', 'center', 'castle', 'plan', 'basics', 'best', 'save'].includes(reason.kind)) {
+  // Une raison tactique a pris le pas : on garde quand même le nom et le sens du dernier coup adverse, en une phrase.
+  if (op?.dernier && reason.kind !== 'opening') say(`Ouverture : ${op.nom}. Son ${op.dernier.san} ${op.dernier.sens}.`, undefined);
+  if (first && steps[0] && !first.captured && ['develop', 'center', 'castle', 'plan', 'basics', 'best', 'save', 'opening'].includes(reason.kind)) {
     const after = new Chess(steps[0].fen);
     const who = (sqs) => sqs.map((sq) => ({ square: sq, type: after.get(sq).type })).sort((a, b) => VALUE[a.type] - VALUE[b.type]);
     // Attaquants RÉELS : les pièces adverses qui peuvent légalement prendre sur la case (une pièce clouée sur son roi
@@ -459,6 +476,15 @@ export function buildBrief(data) {
       if (mine != null && mine > 0) return false;
       const target = String(p.seqEn.at(-1)).match(/x([a-h][1-8])/)?.[1];
       if (target && !b.get(target)) return false;
+      // Une « menace » sur une pièce qui n'a qu'à bouger n'en est pas une (partie du 6 octobre : « Fg5 préparerait Fxd8
+      // prend la dame ») : si la cible a une case sûre, on se tait ; sauf fourchette, découverte, mat, pièce piégée.
+      const victim = target ? b.get(target) : null;
+      if (victim && victim.color === me && victim.type !== 'k' && !/fourchette|découverte|mat\b|piég|enfilade/i.test(p.text ?? '')) {
+        const parts = b.fen().split(' '); parts[1] = me; parts[3] = '-';
+        const mine2 = new Chess(parts.join(' '));
+        const safe = mine2.moves({ square: target, verbose: true }).some((m) => !m.captured && mine2.attackers(m.to, opp).length === 0);
+        if (safe) return false;
+      }
       return true;
     } catch { return true; }
   };
