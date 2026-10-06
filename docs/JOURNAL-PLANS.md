@@ -1239,3 +1239,24 @@ une pièce 11. Ordre de réalisation proposé (fréquence × absence) : prépare
 pièce, clouer puis charger, supprimer le défenseur, retard de développement, fianchetto, batterie vers h7, bilan comparé,
 libérer une pièce. Règle de sûreté en tête de catalogue. Nvidia abandonné (trop lent) ; images et comparaison de juges
 restent dans le code. Prochaine étape : corrections de l'auteur, puis définitions sur ses mots, puis planches.
+
+### 6 octobre 2026, matin : POC « coach d'ouverture » sur la Défense française
+
+Demande de l'auteur : « un POC où le coach parle d'intention, de menaces, de plans ; on ne lit plus le premier coup de
+Stockfish ». Choix : partir des ouvertures, « des gammes », une seule pour commencer.
+Fait : `coach/openings/francaise.mjs`, livre des intentions (60 positions : avance, échange, Tarrasch, classique,
+Winawer, Rubinstein), avec pour chaque position le sens du dernier coup, la menace type, le plan (coups recommandés et
+pourquoi), les erreurs fréquentes et, aux carrefours, le schéma des deux camps et les coups types des plans.
+`coach/opening-intent.mjs` lit les coups JOUÉS, retrouve la position par FEN (interversions comprises), dit le sens du
+coup adverse, explique une sortie de théorie (une fois), et choisit le conseil : en livre, le coup du plan s'il est dans
+les trois premiers du moteur à moins de 0,3 ; hors livre, le premier coup type du plan encore à jouer, même règle ;
+les coups d'attaque attendent le roque sauf si le moteur les met premiers. Branché dans `brief.mjs` AVANT la raison
+moteur ; la tactique (pièce en prise, menace, gain, mat) garde la priorité, le résumé d'ouverture suit alors en une phrase.
+Vérification du livre au moteur (profondeur 18) : 97 coups de plan sur 99 à moins de 0,4 du meilleur ; 12 erreurs sur 12
+confirmées (trois retirées en route). Deux parties jouées (élève 1320 contre 1500, premiers coups imposés), rejouées
+AVANT/APRÈS : `scripts/partie-avant-apres.mjs`, page `scripts/poc-ouverture-page.py`. Les adversaires ont quitté le
+livre au 3e coup (…Ce7, …dxe4) : le plan guide alors le conseil (« c3 soutient la base d4 », « Cb3 tient d4 et libère le
+fou c1 », « O-O met le roi à l'abri avant d'attaquer »). Défauts vus : « a3 prépare b4 » quand b4 est jouable ; h4 au 8e
+coup roi en e1 (le moteur le met premier) ; milieu de jeu toujours plat (chantier des mélodies) ; livre vite dépassé,
+une ouverture sur vingt. Défaut corrigé au passage : « Fg5 préparerait Fxd8 prend la dame » (menace parable par deux coups
+gratuits : filtrée, `tests/menace-preparee-parable.test.js`).
