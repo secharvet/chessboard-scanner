@@ -14,8 +14,8 @@ const games = Object.fromEntries(readFileSync(grainsFile, 'utf8').trim().split('
 const meta = readFileSync(metaFile, 'utf8').trim().split('\n').map((l) => JSON.parse(l));
 const plonge = JSON.parse(readFileSync(plongeFile, 'utf8'));
 const noms = JSON.parse(readFileSync(nomsFile, 'utf8'));
-const provider = process.env.GROQ_API_KEY ? 'groq' : 'nvidia';
-const cfg = llmConfig({ ...process.env, LLM_PROVIDER: provider, LLM_MODEL: provider === 'groq' ? 'openai/gpt-oss-120b' : 'meta/muse-glimmer-30b' });
+const provider = process.env.ARBRES_PROVIDER || (process.env.GROQ_API_KEY ? 'groq' : 'claude-cli');
+const cfg = llmConfig({ ...process.env, LLM_PROVIDER: provider, LLM_MODEL: provider === 'groq' ? 'openai/gpt-oss-120b' : provider === 'claude-cli' ? 'fable' : (process.env.LLM_MODEL || '') });
 const paires = [];
 for (const [i, m] of meta.entries()) {
   const [gid, end, me] = m; const g = games[gid]; if (!g) continue;
