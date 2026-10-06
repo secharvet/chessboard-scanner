@@ -1288,7 +1288,7 @@ entrée ; registre Maia, pas AlphaZero : lire, pas jouer) ; étage 2 = greffer l
 nommés → sondes linéaires ; l'explicable d'abord). Prérequis : corpus annoté multi-auteurs (études Lichess, domaine public).
 
 
-## 6 octobre 2026, 21 h 45 : étage 1 lancé et mesuré ; corpus OTB de maîtres ; corpus annoté récolté
+## 6 octobre 2026, 21 h 35 : étage 1 lancé et mesuré ; corpus OTB de maîtres ; corpus annoté récolté
 
 Fait le soir même (« C'est parti, VPS, DENEB gogogo ») : scripts/plateaux.mjs (72 octets par demi-coup, aucune étiquette),
 scripts/arbres/train-brut.py (positions brutes → transformeur ; prochain coup + voisinage ; v2 : cases jouées des 10 prochains
