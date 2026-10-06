@@ -102,7 +102,7 @@ async function main() {
     if (list.length < MIN_PLIES) return;
     const c = new Chess(); const uci = [];
     for (const san of list.slice(0, MAX_PLIES)) { let m; try { m = c.move(san); } catch { return; } uci.push(m.from + m.to + (m.promotion ?? '')); }
-    const rec = grains(uci, { id: g.headers.Site?.split('/').pop() ?? String(i), we, be, res: g.headers.Result, eco: g.headers.ECO, op: g.headers.Opening, tc: g.headers.TimeControl, total: list.length });
+    const rec = grains(uci, { id: (g.headers.LichessURL ?? g.headers.Site ?? '').split('/').pop() || String(i), we, be, res: g.headers.Result, eco: g.headers.ECO, op: g.headers.Opening, tc: g.headers.TimeControl, total: list.length });
     if (!rec) return;
     out.write(JSON.stringify(rec) + '\n'); kept++;
     if (kept % 50 === 0) console.error(`${kept} parties (${((Date.now() - t0) / 1000 / kept).toFixed(2)} s/partie)`);

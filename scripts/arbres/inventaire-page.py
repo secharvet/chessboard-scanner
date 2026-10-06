@@ -14,7 +14,12 @@ def trait(t):
 rows = []
 for r, g in enumerate(inv['groupes'][:a.top], 1):
     nom = noms.get(str(g['groupe']), {})
-    ex = ' · '.join(f"<a href='https://lichess.org/{esc(m[0])}#{int(m[1])}' target=_blank>{esc(m[0])}#{int(m[1])}</a>" for m in g['exemples'][:6])
+    import re as _re
+    def lien(m):
+        gid = str(m[0]); return f"<a href='https://lichess.org/{esc(gid)}#{int(m[1])}' target=_blank>{esc(gid)}#{int(m[1])}</a>" if _re.fullmatch(r'[A-Za-z0-9]{8}', gid) else f"partie {esc(gid)} #{int(m[1])}"
+    ex = ' · '.join(lien(m) for m in g['exemples'][:6])
+    coups = g.get('exemples_coups', [])[:3]
+    if coups: ex += '<div class=n>' + '<br>'.join(f"{esc(c['fenetre'])} <b>‖</b> {esc(c['suite'])}" for c in coups) + '</div>'
     rows.append(f"<tr><td class=num>{r}</td><td><b>{esc(nom.get('nom', '—'))}</b><div class=n>{esc(nom.get('sens', ''))}</div></td><td class=num>{g['parties']}<br><span class=n>{g['fenetres']} fenêtres</span></td><td class=num>{g['previsibilite']:.2f}</td><td>{' '.join(trait(t) for t,_,_ in g['traits'][:8])}</td><td>{' '.join(trait(t) for t,_,_ in g['avenir'][:6])}</td><td class=ex>{ex}</td></tr>")
 def rapport(rp, titre):
     if not rp: return ''
