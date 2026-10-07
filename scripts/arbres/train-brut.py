@@ -97,6 +97,9 @@ def main():
     ap.add_argument('--embed', default='', help='ne pas entraîner : charger ce modèle (.pt) et plonger les fenêtres des entrées (sonde croisée entre corpus)')
     ap.add_argument('--max-per-file', type=int, default=0, help='ne lire que les N premières parties de chaque fichier')
     ap.add_argument('--min-plies', type=int, default=30)
+    ap.add_argument('--resume', action='store_true', help='reprendre depuis <out>.ckpt.pt si présent (sauvegarde à chaque époque)')
+    ap.add_argument('--amp', action='store_true', help='précision mixte bf16 (H100, A100)')
+    ap.add_argument('--heads', type=int, default=4)
     a = ap.parse_args()
     games = load_games(a.inputs, a.max_games, min_plies=a.min_plies, max_per_file=a.max_per_file); P = Plies(games); print(f'{len(P.PW)} demi-coups chargés ({P.PW.nbytes * 2 / 1e9:.1f} Go)', file=sys.stderr)
     W = a.window
@@ -108,26 +111,52 @@ def main():
     G = a.nce_gap; nxt_idx = np.minimum(np.arange(N) + G, N - 1); same = gid[nxt_idx] == gid; nxt_idx = np.where(same, nxt_idx, np.arange(N))
     dev = 'cuda' if torch.cuda.is_available() else 'cpu'
     if a.embed:
-        ck = torch.load(a.embed, map_location=dev); a.dim = ck['dim']; a.layers = ck['layers']; assert ck['W'] == W
-    model = Brut(W, a.dim, a.layers).to(dev); opt = torch.optim.AdamW(model.parameters(), lr=a.lr, weight_decay=0.01)
+        ck = torch.load(a.embed, map_location=dev); a.dim = ck['dim']; a.layers = ck['layers']; a.heads = ck.get('heads', 4); assert ck['W'] == W
+    torch.backends.cuda.matmul.allow_tf32 = True; torch.backends.cudnn.allow_tf32 = True
+    model = Brut(W, a.dim, a.layers, a.heads).to(dev); opt = torch.optim.AdamW(model.parameters(), lr=a.lr, weight_decay=0.01)
     if a.embed: model.load_state_dict(ck['state'], strict=False); a.epochs = 0; print(f'plongement avec {a.embed}', file=sys.stderr)
     idx_tr = np.where(~val)[0]; idx_val = np.where(val)[0]
     steps = max(1, a.epochs) * math.ceil(len(idx_tr) / a.batch); sched = torch.optim.lr_scheduler.OneCycleLR(opt, a.lr, total_steps=steps)
+    start_ep = 0; ck_path = a.out + '.ckpt.pt'
+    if a.resume and os.path.exists(ck_path):
+        ck = torch.load(ck_path, map_location=dev); model.load_state_dict(ck['state']); opt.load_state_dict(ck['opt']); start_ep = ck['epoch']; report = ck.get('report', {'epochs': [], 'games': len(P.ids), 'windows': N})
+        import warnings
+        with warnings.catch_warnings():
+            warnings.simplefilter('ignore')
+            for _ in range(start_ep * math.ceil(len(idx_tr) / a.batch)): sched.step()  # avance le planificateur jusqu'au point de reprise
+        print(f'reprise après l\'époque {start_ep}', file=sys.stderr)
+    import threading, queue
+    def prefetch(ids_all, bs, with_next):
+        # un fil prépare les lots numpy pendant que le GPU calcule
+        q = queue.Queue(maxsize=6)
+        def work():
+            for s in range(0, len(ids_all), bs):
+                b = ids_all[s:s + bs]; x, f, t, hz = P.batch(IG[b], IE[b], W, a.horizon)
+                x2 = P.batch(IG[nxt_idx[b]], IE[nxt_idx[b]], W, 0)[0] if with_next else None
+                q.put((x, f, t, hz, x2))
+            q.put(None)
+        threading.Thread(target=work, daemon=True).start()
+        while True:
+            item = q.get()
+            if item is None: return
+            x, f, t, hz, x2 = item
+            yield (torch.from_numpy(x).to(dev, non_blocking=True), torch.from_numpy(f).to(dev), torch.from_numpy(t).to(dev), (torch.from_numpy(hz).to(dev) if hz is not None else None), (torch.from_numpy(x2).to(dev, non_blocking=True) if x2 is not None else None))
     def batch(ids):
         x, f, t, hz = P.batch(IG[ids], IE[ids], W, a.horizon)
         return torch.from_numpy(x).to(dev), torch.from_numpy(f).to(dev), torch.from_numpy(t).to(dev), (torch.from_numpy(hz).to(dev) if hz is not None else None)
     # témoin : fréquence des cases de départ / d'arrivée
-    t0 = time.time(); report = {'epochs': [], 'games': len(P.ids), 'windows': N}
-    for ep in range(a.epochs):
-        model.train(); np.random.shuffle(idx_tr); tot = 0; nb = 0
-        for s in range(0, len(idx_tr), a.batch):
-            b = idx_tr[s:s + a.batch]; x, fr, to, hz = batch(b); x2, _, _, _ = batch(nxt_idx[b])
-            h1, lf, lt, z1, lh = model(x); _, _, _, z2, _ = model(x2)
-            loss_move = a.w_move * (F.cross_entropy(lf, fr) + F.cross_entropy(lt, to))
-            if hz is not None: loss_move = loss_move + 4.0 * F.binary_cross_entropy_with_logits(lh, hz)
-            sim = z1 @ z2.T / a.tau; lab = torch.arange(len(b), device=dev)
-            loss_nce = (F.cross_entropy(sim, lab) + F.cross_entropy(sim.T, lab)) / 2
-            loss = loss_move + 0.5 * loss_nce
+    t0 = time.time()
+    if not (a.resume and start_ep): report = {'epochs': [], 'games': len(P.ids), 'windows': N}
+    for ep in range(start_ep, a.epochs):
+        model.train(); np.random.seed(ep); np.random.shuffle(idx_tr); tot = 0; nb = 0
+        for x, fr, to, hz, x2 in prefetch(idx_tr, a.batch, True):
+            with torch.autocast('cuda', dtype=torch.bfloat16, enabled=a.amp and dev == 'cuda'):
+                h1, lf, lt, z1, lh = model(x); _, _, _, z2, _ = model(x2)
+                loss_move = a.w_move * (F.cross_entropy(lf.float(), fr) + F.cross_entropy(lt.float(), to))
+                if hz is not None: loss_move = loss_move + 4.0 * F.binary_cross_entropy_with_logits(lh.float(), hz)
+                sim = z1.float() @ z2.float().T / a.tau; lab = torch.arange(len(fr), device=dev)
+                loss_nce = (F.cross_entropy(sim, lab) + F.cross_entropy(sim.T, lab)) / 2
+                loss = loss_move + 0.5 * loss_nce
             opt.zero_grad(); loss.backward(); torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0); opt.step(); sched.step()
             tot += loss.item(); nb += 1
             if nb % 200 == 0: print(f'ep {ep + 1} pas {nb}/{math.ceil(len(idx_tr) / a.batch)} perte {tot / nb:.3f} ({(time.time() - t0) / 60:.1f} min)', file=sys.stderr)
@@ -138,12 +167,16 @@ def main():
                 pf = lf.argmax(1); pt = lt.argmax(1); ok_fr += (pf == fr).sum().item(); ok_to += (pt == to).sum().item(); ok_both += ((pf == fr) & (pt == to)).sum().item(); n += len(b)
         e = {'epoch': ep + 1, 'prochain_coup_case_depart': ok_fr / n, 'prochain_coup_case_arrivee': ok_to / n, 'prochain_coup_exact': ok_both / n, 'minutes': (time.time() - t0) / 60}
         report['epochs'].append(e); print(json.dumps(e), file=sys.stderr)
+        os.makedirs(os.path.dirname(a.out) or '.', exist_ok=True)
+        torch.save({'state': model.state_dict(), 'opt': opt.state_dict(), 'sched': sched.state_dict(), 'epoch': ep + 1, 'W': W, 'dim': a.dim, 'layers': a.layers, 'heads': a.heads, 'horizon': a.horizon, 'report': report}, ck_path)
     os.makedirs(os.path.dirname(a.out) or '.', exist_ok=True)
-    if not a.embed: torch.save({'state': model.state_dict(), 'W': W, 'dim': a.dim, 'layers': a.layers, 'horizon': a.horizon}, a.out + '.pt')
+    if not a.embed: torch.save({'state': model.state_dict(), 'W': W, 'dim': a.dim, 'layers': a.layers, 'heads': a.heads, 'horizon': a.horizon}, a.out + '.pt')
     model.eval(); embs = []
     with torch.no_grad():
-        for s in range(0, N, 1024):
-            x, _, _, _ = batch(np.arange(s, min(N, s + 1024))); hh, _, _, _, _ = model(x); embs.append(hh.cpu().numpy().astype(np.float32))
+        for x, _, _, _, _ in prefetch(np.arange(N), 2048, False):
+            with torch.autocast('cuda', dtype=torch.bfloat16, enabled=a.amp and dev == 'cuda'):
+                hh, _, _, _, _ = model(x)
+            embs.append(hh.float().cpu().numpy())
     E = np.concatenate(embs); np.save(a.out + '.emb.npy', E)
     with open(a.out + '.meta.jsonl', 'w') as fh:
         for gi, end in index: fh.write(json.dumps([P.ids[gi], int(end), 'b' if P.PW[P.off[gi] + end - 1, 64] == 0 else 'w']) + '\n')

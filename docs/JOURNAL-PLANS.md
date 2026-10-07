@@ -1322,3 +1322,14 @@ themes-fable.mjs, themes-lexique.py, grains-coups.mjs, sonder-mots.py. v3 (horiz
 **7 octobre, 0 h 15 : fin de nuit.** v3 (horizon 30, voisin 16, d 192, 6 couches, 45 min) : coup exact 24 %, avenir 0,757
 seul / 0,776 avec sac, mots des maîtres 0,681 (+0,004 sur v2). Tout consigné, plus rien ne tourne. Recommandation : changer
 d'échelle (fenêtres 40-60, modèle large, dix époques, deux corpus, GPU loué), juge = épreuve des mots.
+
+## 7 octobre 2026, soir : H100 louée (RunPod), modèle à l'échelle, correction d'une annonce trop rapide
+
+Pod RunPod H100 SXM (3,49 $/h, Islande, volume réseau 60 Go, clé SSH du VPS ; plugin runpod@runpod installé pour Claude Code,
+OAuth non fait). Transferts DENEB → pod 5 Mo/s par flux (15 en quatre). train-brut.py : --amp, préchargement, --resume
+(sauvegarde par époque, planificateur avancé). Modèle échelle (W 40, d 384, 8 couches, horizon 30, 6 époques, 348 k parties,
+2 h 20) : coup exact 27,1 %, avenir 0,763 (0,780 avec sac). Mots des maîtres : 0,803 annoncé comme émergence, puis corrigé :
+sur les mêmes 4 284 coups (après le 39e demi-coup), v2 d'hier fait 0,785 → gain réel +0,02 ; le milieu de jeu se lit à 0,80
+loin du trivial 0,66, thèmes abstraits compris. Leçon notée : comparer à population égale avant d'annoncer. Erreurs du soir :
+pkill -f a tué ma propre relance (GPU à vide 20 min, vu par l'auteur) ; point de 20 h manqué ; « réponds quand je t'interroge ».
+OTB à l'échelle lancé 22 h 02 (6 époques, ~20 $, crédit 25 $), sondes en file. Résultats VPS : data/brut-x/.

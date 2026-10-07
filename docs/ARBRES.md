@@ -257,6 +257,23 @@ Le thermomètre de la section 13 plafonnait parce que sa cible était mal choisi
 **Ce que ça décide.** Ne plus chercher l'intention en changeant l'objectif à la marge. Changer d'échelle (fenêtres de quarante à soixante demi-coups, modèle plusieurs fois plus large, dix époques, les deux corpus réunis), ce qui est le cas où louer une grosse carte quelques heures se justifie ; ou changer de représentation. Cette épreuve reste le juge : elle est reproductible en dix minutes sur n'importe quel nouvel espace (`sonder-mots.py`).
 
 
+## 15. L'échelle, sur une H100 louée (7 octobre, soir)
+
+Pod RunPod (H100 SXM 80 Go, 3,49 $ de l'heure, Islande), monté par l'auteur en une heure ; données acheminées depuis DENEB (goulot : 5 Mo/s par connexion vers le pod, 15 Mo/s en quatre flux ; la fibre de l'auteur monte à 700 Mbit/s). Scripts inchangés, avec trois ajouts : précision mixte bf16, préchargement des lots dans un fil, sauvegarde à chaque époque et reprise (`--resume`), parce que le pod a redémarré une fois sans prévenir.
+
+**Modèle « échelle »** : fenêtres de 40 demi-coups, 384 dimensions, 8 couches, 8 têtes, horizon 30, voisin à 8, six époques sur les 348 000 parties Lichess (5,0 millions de fenêtres), 2 h 20 de H100, 16 millions de paramètres (64 Mo). Coup exact : 12,5 → 18,7 → 22,4 → 24,9 → 26,6 → **27,1 %** (v3 hier : 23,6 %). Sonde d'avenir : **0,763** seul, 0,780 avec le sac (v3 : 0,757 / 0,776).
+
+**Épreuve des mots des maîtres.** Premier chiffre : 0,803 contre 0,657 au trivial. Annoncé trop vite comme une émergence : la fenêtre de 40 ne sonde que les coups commentés après le 39e demi-coup (4 284 coups au lieu de 8 834), qui sont bien plus lisibles que ceux de l'ouverture. **Rejoué sur exactement les mêmes coups, le modèle v2 d'hier fait 0,785.** Le gain réel de l'échelle est de **+0,02** (0,785 → 0,803), petit mais dans le même sens sur presque tous les thèmes : tactique et échange +0,04, initiative, manœuvre et développement +0,03, structure, case faible, colonne, matériel +0,02, levier et aile dame 0.
+
+Trois choses apprises :
+
+1. **Le milieu de jeu se lit.** Sur les coups après le 39e demi-coup, les deux modèles lisent les thèmes des maîtres à 0,79 et 0,80, loin du trivial (0,66), y compris les thèmes « dans la tête » (prophylaxie 0,79, initiative 0,74, échange 0,78) qui semblaient hors de portée hier soir sur l'ensemble des coups. Ce qui tirait le score vers le bas hier, c'étaient les commentaires d'ouverture.
+2. **Grossir seul ne fait pas de miracle** : +0,02 pour un modèle quatre fois plus large et des fenêtres deux fois et demie plus longues. Les prochains dollars iront plutôt à plus de parties (un mois sur trois seulement a été utilisé) et au test de la longueur de fenêtre à taille égale.
+3. **Le modèle reste petit à l'usage** : 64 Mo, une passe avant en quelques millisecondes sur le processeur du VPS. Seule la base vectorielle est lourde (5 millions × 384 = 7,7 Go) ; un index FAISS compressé la ramène à une centaine de Mo.
+
+Modèle OTB à la même échelle en cours (826 000 parties de maîtres, six époques, fin dans la nuit), pour la question « les maîtres portent-ils d'autres régularités que le blitz ? ».
+
+
 ---
 
 ## Annexe : fichiers
