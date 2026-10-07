@@ -271,7 +271,7 @@ Trois choses apprises :
 2. **Grossir seul ne fait pas de miracle** : +0,02 pour un modèle quatre fois plus large et des fenêtres deux fois et demie plus longues. Les prochains dollars iront plutôt à plus de parties (un mois sur trois seulement a été utilisé) et au test de la longueur de fenêtre à taille égale.
 3. **Le modèle reste petit à l'usage** : 64 Mo, une passe avant en quelques millisecondes sur le processeur du VPS. Seule la base vectorielle est lourde (5 millions × 384 = 7,7 Go) ; un index FAISS compressé la ramène à une centaine de Mo.
 
-Modèle OTB à la même échelle en cours (826 000 parties de maîtres, six époques, fin dans la nuit), pour la question « les maîtres portent-ils d'autres régularités que le blitz ? ».
+**Modèle OTB à la même échelle** (826 000 parties de maîtres, 12,0 millions de fenêtres, six époques, 2 h 40 de H100, environ 9,5 $) : coup exact 26,7 %, sonde d'avenir sur les parties de maîtres 0,724 (petit modèle OTB d'hier : 0,716), **mots des maîtres 0,806 contre 0,804 pour le modèle Lichess, sur les mêmes 4 284 coups**. Réponse à la question « les maîtres portent-ils d'autres régularités que le blitz ? » : pas que cette épreuve sache voir. Les deux espaces lisent les commentaires des maîtres pareil, à deux millièmes près. Le corpus de maîtres n'apporte donc pas, à cette échelle et avec ce juge, une lecture différente ; il reste utile comme second témoin et pour doubler le nombre de parties.
 
 
 ---

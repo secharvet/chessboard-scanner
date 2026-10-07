@@ -1333,3 +1333,7 @@ sur les mêmes 4 284 coups (après le 39e demi-coup), v2 d'hier fait 0,785 → g
 loin du trivial 0,66, thèmes abstraits compris. Leçon notée : comparer à population égale avant d'annoncer. Erreurs du soir :
 pkill -f a tué ma propre relance (GPU à vide 20 min, vu par l'auteur) ; point de 20 h manqué ; « réponds quand je t'interroge ».
 OTB à l'échelle lancé 22 h 02 (6 époques, ~20 $, crédit 25 $), sondes en file. Résultats VPS : data/brut-x/.
+**8 octobre, 0 h 55.** OTB à l'échelle fini (2 h 40, plus vite que prévu) : coup exact 26,7 %, avenir 0,724, mots des maîtres
+0,806 vs Lichess 0,804 à coups égaux → maîtres et blitz se lisent pareil. Résultats et plongements annotés rapatriés
+(data/brut-x, data/brut-otb-x). Indexation des arbres du modèle échelle lancée sur le pod (inventaire à rapatrier), puis le pod
+est à ARRÊTER par l'auteur (bouton Stop).
