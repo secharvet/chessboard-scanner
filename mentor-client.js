@@ -61,6 +61,8 @@ export async function askGroqMentor(payload) {
       throw new Error('Réponse vide du serveur (groq).');
     }
     return {
+      lecture: data.lecture ?? null,
+      lectureTexte: data.lectureTexte ?? '',
       advice, problems: data.problems ?? [], revised: Boolean(data.revised),
       // Idée sans le coup et indices par paliers (fiche du code) ; absents avec l'ancien coach à LLM.
       idea: typeof data.idea === 'string' && data.idea.trim() ? data.idea : null,

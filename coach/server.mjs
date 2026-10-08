@@ -9,6 +9,7 @@ import { appendFile, mkdir } from 'node:fs/promises';
 import { createServer } from 'node:http';
 import { askCoach } from './coach.mjs';
 import { judgeMove } from './move-judge.mjs';
+import { lireLaPartie, texteLecture } from './lecteur.mjs';
 import { loadEnv } from './env.mjs';
 import { llmConfig } from './llm.mjs';
 import { UciEngine } from './uci-engine.mjs';
@@ -126,14 +127,26 @@ const server = createServer(async (req, res) => {
       running--;
     }
   }
+  // Lecture seule (étage 1 + sonde des maîtres) : { moves } → ce que le modèle voit dans les 40 derniers demi-coups.
+  if (url.pathname === '/api/chess/mentor/lecture') {
+    try {
+      const lecture = await lireLaPartie(payload.moves ?? []);
+      return send(res, 200, { ok: true, lecture, lectureTexte: texteLecture(lecture) });
+    } catch (e) {
+      return send(res, 400, { ok: false, error: String(e?.message ?? e) });
+    } finally {
+      running--;
+    }
+  }
   try {
-    const result = await askCoach({ ...payload, engine, cfg });
+    const [result, lecture] = await Promise.all([askCoach({ ...payload, engine, cfg }), lireLaPartie(payload.moves ?? []).catch(() => null)]);
+    if (lecture && !lecture.tropTot) console.log(`[coach] lecture : ${texteLecture(lecture)}`);
     console.log(
       `[coach] ${ip} via ${req.socket.remoteAddress} — ${cfg.provider}/${cfg.model} contexte ${result.timings.context} ms, LLM ${result.timings.llm} ms` +
       (result.ungrounded.length ? `, coups hors contexte : ${result.ungrounded.join(' ')}` : ''),
     );
     await logAnswer(payload, result);
-    return send(res, 200, { ok: true, ...result });
+    return send(res, 200, { ok: true, ...result, lecture, lectureTexte: texteLecture(lecture) });
   } catch (e) {
     console.error('[coach] erreur', e);
     return send(res, 502, { ok: false, error: String(e?.message ?? e) });
