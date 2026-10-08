@@ -22,6 +22,7 @@ function entree(c = game) { return livre.get(cle(c)) ?? null; }
 function numero(c, san) { const n = Math.ceil((c.history().length + 1) / 2); return c.turn() === 'w' ? `${n}. ${fr(san)}` : `${n}… ${fr(san)}`; }
 
 function render(lastMove = null) {
+  selected = null; targets = [];
   renderPlayBoard($('ouvBoard'), { fen: game.fen(), orientation, lastMove: lastMove ?? dernier(), targets: [] });
   renderLigne(); renderPanneau();
 }
@@ -99,10 +100,25 @@ function arreterApercu() {
 
 function jouer(san) { try { game.move(san); } catch { return; } render(); }
 
+// Déplacement des pièces : clic sur une pièce puis sur une case cible, ou glisser-déposer (comme la page de jeu).
+let selected = null; let targets = [];
+function refreshBoard() { renderPlayBoard($('ouvBoard'), { fen: game.fen(), orientation, lastMove: dernier(), targets, dragFrom: selected }); }
+function tenter(from, to) {
+  selected = null; targets = [];
+  try { game.move({ from, to, promotion: 'q' }); } catch { refreshBoard(); return; }
+  render();
+}
 bindPlayBoardInput($('ouvBoard'), {
-  onSelect: (sq) => { const p = game.get(sq); if (p && p.color === game.turn()) renderPlayBoard($('ouvBoard'), { fen: game.fen(), orientation, lastMove: dernier(), targets: game.moves({ square: sq, verbose: true }).map((m) => m.to), dragFrom: sq }); },
-  onMove: (from, to) => { try { game.move({ from, to, promotion: 'q' }); } catch { render(); return; } render(); },
-  onDragStart: () => {}, onDragCancel: () => render(),
+  onSquareClick: (sq) => {
+    if (selected && targets.includes(sq)) { tenter(selected, sq); return; }
+    const p = game.get(sq);
+    if (p && p.color === game.turn()) { selected = sq; targets = game.moves({ square: sq, verbose: true }).map((m) => m.to); }
+    else { selected = null; targets = []; }
+    refreshBoard();
+  },
+  onDragStart: (from) => { const p = game.get(from); if (p && p.color === game.turn()) { selected = from; targets = game.moves({ square: from, verbose: true }).map((m) => m.to); refreshBoard(); } },
+  onDrop: (from, to) => { if (targets.includes(to)) tenter(from, to); else { selected = null; targets = []; refreshBoard(); } },
+  onDragCancel: () => { selected = null; targets = []; refreshBoard(); },
 });
 $('btnDebut').addEventListener('click', () => { game = new Chess(); render(); });
 $('btnRetour').addEventListener('click', () => { game.undo(); render(); });
