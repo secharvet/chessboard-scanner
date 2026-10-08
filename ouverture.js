@@ -20,7 +20,8 @@ let orientation = 'white';
 let apercu = null; // { timer, saved: Chess }
 let recit = null; // punition en cours : { coups: string[], i, cle, retourFen, bonCoup }
 
-function entree(c = game) { return livre.get(cle(c)) ?? null; }
+const RACINE = { plan: [{ san: 'e4', pourquoi: 'ouvre le centre et libère la dame et le fou roi : le premier coup de la Défense française, côté Blancs' }] };
+function entree(c = game) { return livre.get(cle(c)) ?? (c.history().length === 0 ? RACINE : null); }
 function numero(c, san) { const n = Math.ceil((c.history().length + 1) / 2); return c.turn() === 'w' ? `${n}. ${fr(san)}` : `${n}… ${fr(san)}`; }
 
 
@@ -79,6 +80,7 @@ function renderPanneau() {
   const recit = $('ouvRecit'); recit.innerHTML = '';
   if (!last) {
     recit.innerHTML = `<p>La <span class="qui">Défense française</span> commence par 1. e4 e6 : les Noirs préparent …d5 pour contester le centre avec un pion soutenu. Clique sur un coup à droite, ou sur « Suivant », pour dérouler la ligne principale phrase par phrase.</p>`;
+    if (!e || e === RACINE) { /* la racine n'a pas de texte de livre : on garde l'introduction */ }
   } else {
     const qui = last.color === 'w' ? 'Les Blancs' : 'Les Noirs';
     if (e) {
@@ -151,12 +153,17 @@ function afficherRecit() {
     else html += `<p><button class="btn" id="btnRembobiner">⏪ Revenir</button></p>`;
   }
   box.innerHTML = html;
-  $('btnRembobiner')?.addEventListener('click', () => { const fen = r.retourFen; const h = game.history(); const n = h.length - 1 - 0; recit = null; game = new Chess(); const hist = h; let k = 0; const c = new Chess(); for (const s of hist) { if (c.fen() === fen) break; c.move(s); k++; } for (const s of hist.slice(0, k)) game.move(s); render(); if (r.bon) jouer(r.bon.san); });
+  $('btnRembobiner')?.addEventListener('click', rembobiner);
   $('ouvEtat').textContent = 'récit d\'une faute';
+}
+function rembobiner() {
+  if (!recit) return; const r = recit; const fen = r.retourFen; const hist = game.history(); recit = null;
+  const c = new Chess(); let k = 0; for (const s of hist) { if (c.fen() === fen) break; c.move(s); k++; }
+  game = new Chess(); for (const s of hist.slice(0, k)) game.move(s); render(); if (r.bon) jouer(r.bon.san);
 }
 function pasRecit() {
   if (!recit) return false;
-  if (recit.i >= recit.coups.length) return true;
+  if (recit.i >= recit.coups.length) { rembobiner(); return true; }
   recit.phrases = recit.phrases ?? [];
   const c = new Chess(game.fen()); recit.phrases.push(phraseCoup(c, recit.coups[recit.i])); game.move(recit.coups[recit.i]); recit.i++;
   renderPlayBoard($('ouvBoard'), { fen: game.fen(), orientation, lastMove: dernier(), targets: [] }); renderLigne(); afficherRecit();
@@ -211,6 +218,9 @@ bindPlayBoardInput($('ouvBoard'), {
 });
 $('btnDebut').addEventListener('click', () => { recit = null; game = new Chess(); render(); });
 $('btnRetour').addEventListener('click', () => { recit = null; game.undo(); render(); });
-$('btnSuivant').addEventListener('click', () => { if (pasRecit()) return; const e = entree(); const s = e?.plan?.[0]?.san; if (s) jouer(s); });
+$('btnSuivant').addEventListener('click', () => {
+  try { if (pasRecit()) return; const e = entree(); const s = e?.plan?.[0]?.san; if (s) jouer(s); else $('ouvEtat').textContent = 'le livre s\'arrête ici'; }
+  catch (err) { console.error('[ouverture] Suivant', err); $('ouvEtat').textContent = 'erreur : ' + err.message; }
+});
 $('btnTourner').addEventListener('click', () => { orientation = orientation === 'white' ? 'black' : 'white'; render(); });
 render();
