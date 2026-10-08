@@ -84,3 +84,4 @@
 .ent__ligne { font-family: var(--mono); font-size: 0.72rem; color: var(--muted); margin-top: 4px; }
 @media (max-width: 800px) { .ouv__entrainement { display: none; } .ouv__gauche { position: static; } }
 @media (max-width: 1100px) and (min-width: 801px) { .ouv__layout { grid-template-columns: 1fr; } .ouv__gauche { position: static; } }
+.ouv__recit .bascule { color: var(--accent2); font-weight: 600; }

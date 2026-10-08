@@ -6,22 +6,38 @@
 import { Chess } from '/vendor/chess.js';
 import { renderPlayBoard, bindPlayBoardInput } from './play-board.js';
 import { getEngineMove } from './stockfish-client.js';
-import { LIVRE, OUVERTURE, positionsDuLivre } from './livres/francaise.js';
-import { PUNITIONS } from './livres/francaise-punitions.js';
+import { LIVRES } from './livres/index.js';
 
 const $ = (id) => document.getElementById(id);
 const FR = { K: 'R', Q: 'D', R: 'T', B: 'F', N: 'C' };
 const fr = (san) => san.replace(/[KQRBN]/g, (m) => FR[m]);
 const PIECE_FR = { p: 'le pion', n: 'le cavalier', b: 'le fou', r: 'la tour', q: 'la dame', k: 'le roi' };
-const livre = positionsDuLivre(Chess);
 const cle = (c) => c.fen().split(' ').slice(0, 4).join(' ');
+// Tous les livres sont chargés ; `courant` est celui qu'on suit, et on bascule automatiquement vers un autre livre
+// quand la position jouée n'est plus dans le courant mais existe ailleurs (les Noirs disposent !).
+const BOOKS = {};
+for (const L of LIVRES) {
+  const [m, p] = await Promise.all([import(L.module), import(L.punitions).catch(() => ({ PUNITIONS: {} }))]);
+  BOOKS[L.id] = { ...L, LIVRE: m.LIVRE, OUVERTURE: m.OUVERTURE, map: m.positionsDuLivre(Chess), PUNITIONS: p.PUNITIONS ?? {} };
+}
+let courant = LIVRES[0].id;
+const livre = { // même interface qu'une Map, mais sur tous les livres, le courant d'abord
+  get(k) { const b = BOOKS[courant]; if (b.map.has(k)) return b.map.get(k); for (const id in BOOKS) { if (id !== courant && BOOKS[id].map.has(k)) { basculer(id); return BOOKS[id].map.get(k); } } return undefined; },
+  has(k) { return Object.values(BOOKS).some((b) => b.map.has(k)); },
+};
+function basculer(id) {
+  if (id === courant) return; courant = id; const sel = $('ouvSelect'); if (sel && sel.value !== id) sel.value = id;
+  const n = $('ouvNom'); if (n) n.dataset.bascule = `On passe à « ${BOOKS[id].OUVERTURE} » : c'est ce que la position annonce.`;
+}
+const OUVERTURE_COURANTE = () => BOOKS[courant].OUVERTURE;
+const PUNITIONS_COURANTES = () => BOOKS[courant].PUNITIONS;
 
 let game = new Chess();
 let orientation = 'white';
 let apercu = null; // { timer, saved: Chess }
 let recit = null; // punition en cours : { coups: string[], i, cle, retourFen, bonCoup }
 
-const RACINE = { plan: [{ san: 'e4', pourquoi: 'ouvre le centre et libère la dame et le fou roi : le premier coup de la Défense française, côté Blancs' }] };
+const RACINE = { plan: [{ san: 'e4', pourquoi: 'ouvre le centre et libère la dame et le fou roi : le premier coup des deux livres (Française, Italienne) ; ce sont les Noirs qui choisiront l\'ouverture' }] };
 function entree(c = game) { return livre.get(cle(c)) ?? (c.history().length === 0 ? RACINE : null); }
 function numero(c, san) { const n = Math.ceil((c.history().length + 1) / 2); return c.turn() === 'w' ? `${n}. ${fr(san)}` : `${n}… ${fr(san)}`; }
 
@@ -76,11 +92,12 @@ function allerA(n) { recit = null; const h = game.history(); game = new Chess();
 
 function renderPanneau() {
   const e = entree(); const h = game.history({ verbose: true }); const last = h.at(-1);
-  $('ouvNom').textContent = e?.nom ?? OUVERTURE;
+  $('ouvNom').textContent = e?.nom ?? OUVERTURE_COURANTE();
   const etat = $('ouvEtat'); etat.textContent = e ? (e.auteur ? `${e.auteur}${e.date ? ' · ' + e.date : ''}` : '') : 'hors du livre';
   const recit = $('ouvRecit'); recit.innerHTML = '';
+  const nomEl = $('ouvNom'); if (nomEl?.dataset.bascule) { recit.innerHTML += `<p class="bascule">${nomEl.dataset.bascule}</p>`; delete nomEl.dataset.bascule; }
   if (!last) {
-    recit.innerHTML = `<p>La <span class="qui">Défense française</span> commence par 1. e4 e6 : les Noirs préparent …d5 pour contester le centre avec un pion soutenu. Clique sur un coup à droite, ou sur « Suivant », pour dérouler la ligne principale phrase par phrase.</p>`;
+    recit.innerHTML += `<p>Deux livres pour l'instant : la <span class="qui">Défense française</span> (1. e4 e6) et la <span class="qui">Partie italienne</span> (1. e4 e5 2. Cf3 Cc6 3. Fc4). Les Blancs proposent 1. e4, les Noirs choisissent ; l'assistant suit automatiquement le livre que la position annonce. Clique sur un coup à droite, ou sur « Suivant », pour dérouler la ligne principale phrase par phrase.</p>`;
     if (!e || e === RACINE) { /* la racine n'a pas de texte de livre : on garde l'introduction */ }
   } else {
     const qui = last.color === 'w' ? 'Les Blancs' : 'Les Noirs';
@@ -89,7 +106,7 @@ function renderPanneau() {
       if (e.menace) recit.innerHTML += `<p class="menace">Menace : ${e.menace}.</p>`;
     } else {
       const n = game.history().length;
-      const hint = n <= 2 ? ` La Défense française commence par <b>1. e4 e6</b> : ce coup mène à une autre ouverture, pas encore écrite ici.` : '';
+      const hint = n <= 2 ? ` Les livres écrits commencent par <b>1. e4 e6</b> (Française) ou <b>1. e4 e5</b> (Italienne) : ce coup mène ailleurs.` : '';
       recit.innerHTML += `<p><span class="qui">${numero(avant(), last.san)}</span> — <span class="hors">ce coup n'est pas dans le livre : il n'est pas forcément mauvais, mais personne ne l'a encore expliqué ici.${hint} « Retour » pour revenir aux coups connus.</span></p>`;
     }
   }
@@ -110,7 +127,7 @@ function sensPhrase(s) { return s.replace(/^son /, 'leur ').replace(/\bson\b/g, 
 
 function carte(san, pourquoi, tag, erreur, clePunition = null) {
   const d = document.createElement('div'); d.className = 'coup' + (tag === 'principal' ? ' coup--principal' : '') + (erreur ? ' coup--erreur' : '');
-  const pun = clePunition ? PUNITIONS[clePunition] : null;
+  const pun = clePunition ? PUNITIONS_COURANTES()[clePunition] : null;
   d.innerHTML = `<div class="coup__san">${fr(san)}<small>${tag}</small></div><div class="coup__why">${pourquoi}${pun ? ` <span class="coup__pun">— punition : ${pun.ligne.map(fr).join(' ')}</span>` : ''}</div>`;
   d.addEventListener('mouseenter', () => { dessinerFleches(flechesDuLivre(san)); demarrerApercu(san, pun ? pun.ligne : null); });
   d.addEventListener('mouseleave', arreterApercu);
@@ -220,6 +237,8 @@ bindPlayBoardInput($('ouvBoard'), {
   onDragCancel: () => { selected = null; targets = []; refreshBoard(); },
 });
 $('btnDebut').addEventListener('click', () => { recit = null; game = new Chess(); render(); });
+{ const sel = $('ouvSelect'); if (sel) { sel.innerHTML = LIVRES.map((L) => `<option value="${L.id}">${L.nom}</option>`).join(''); sel.value = courant;
+  sel.addEventListener('change', () => { courant = sel.value; recit = null; game = new Chess(); for (const m of BOOKS[courant].signature.split(' ')) game.move(m); render(); }); } }
 $('btnRetour').addEventListener('click', () => { recit = null; game.undo(); render(); });
 $('btnSuivant').addEventListener('click', () => {
   try { if (pasRecit()) return; const e = entree(); const s = e?.plan?.[0]?.san; if (s) jouer(s); else $('ouvEtat').textContent = 'le livre s\'arrête ici'; }

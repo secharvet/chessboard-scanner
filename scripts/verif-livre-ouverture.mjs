@@ -1,9 +1,9 @@
 /** Vérifie au moteur le livre des intentions : chaque coup de `plan` doit être dans les 3 premiers à moins de 0,3 du
- * meilleur ; chaque coup d'`erreurs` doit être hors des 3 premiers ou à plus de 0,3. Sortie : reports/verif-livre-francaise.md */
+ * meilleur ; chaque coup d'`erreurs` doit être hors des 3 premiers ou à plus de 0,3. Sortie : reports/verif-livre-' + (process.argv[3] ?? 'francaise') + '.md */
 import { writeFileSync } from 'node:fs';
 import { Chess } from 'chess.js';
 import { UciEngine } from '../coach/uci-engine.mjs';
-import { LIVRE } from '../coach/openings/francaise.mjs';
+const { LIVRE } = await import('../coach/openings/' + (process.argv[3] ?? 'francaise') + '.mjs');
 import { toFrenchSan } from '../coach/notation.mjs';
 const engine = new UciEngine({ threads: 1 });
 const DEPTH = Number(process.argv[2] ?? 18);
@@ -29,5 +29,5 @@ for (const e of LIVRE) {
 engine.stop();
 const md = [`# Vérification du livre de la Française au moteur (profondeur ${DEPTH})`, '', `Coups de plan confirmés : ${okPlan}/${nPlan}. Erreurs confirmées mauvaises : ${okErr}/${nErr}.`, '', '| Position | Type | Coup | Rang moteur | Écart (pions) | OK |', '|---|---|---|---|---|---|'];
 for (const r of rows) md.push(`| ${r.coups} | ${r.type} | ${r.san} | ${r.rang} | ${r.ecart} | ${r.ok ? '✓' : '✗'} |`);
-writeFileSync('reports/verif-livre-francaise.md', md.join('\n') + '\n');
+writeFileSync('reports/verif-livre-' + (process.argv[3] ?? 'francaise') + '.md', md.join('\n') + '\n');
 console.log(`TERMINÉ plan ${okPlan}/${nPlan} erreurs ${okErr}/${nErr}`);
