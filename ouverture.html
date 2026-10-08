@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Assistant d'ouverture — Défense française</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./play.css" />
+    <link rel="stylesheet" href="./ouverture.css" />
+  </head>
+  <body>
+    <div class="app ouv">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand__title">Assistant d'ouverture <span class="ouv__maquette">maquette</span></div>
+          <div class="brand__subtitle"><a class="topbar__link" href="./play.html">← Jouer</a> · <a class="topbar__link" href="./index.html">Lecteur d'ouvertures</a></div>
+        </div>
+        <div class="topbar__pickers">
+          <div class="topbar__picker">
+            <label class="topbar__picker-label" for="ouvSelect">Ouverture</label>
+            <select id="ouvSelect" class="opening-select"><option value="francaise">Défense française</option></select>
+          </div>
+          <div class="topbar__picker">
+            <label class="topbar__picker-label" for="ouvProf">Professeur</label>
+            <select id="ouvProf" class="opening-select"><option value="ia">Brouillon IA (à relire)</option></select>
+          </div>
+        </div>
+      </header>
+
+      <main class="ouv__layout">
+        <section class="ouv__gauche">
+          <div class="ouv__board-wrap"><div id="ouvBoard" class="board"></div></div>
+          <div class="ouv__ligne" id="ouvLigne" aria-label="Coups joués"></div>
+          <div class="ouv__boutons">
+            <button id="btnDebut" class="btn" title="Revenir au début">⏮ Début</button>
+            <button id="btnRetour" class="btn" title="Un coup en arrière">◀ Retour</button>
+            <button id="btnSuivant" class="btn btn--primary" title="Jouer le coup du livre et lire sa phrase">Suivant ▶</button>
+            <button id="btnTourner" class="btn" title="Retourner l'échiquier">⟲</button>
+          </div>
+          <p class="ouv__aide">Survole un coup pour voir l'enchaînement, clique pour le jouer. Tu peux aussi déplacer les pièces.</p>
+        </section>
+
+        <aside class="ouv__droite">
+          <div class="ouv__titre"><span id="ouvNom">Défense française</span> <span class="ouv__etat" id="ouvEtat"></span></div>
+          <div class="ouv__recit" id="ouvRecit"></div>
+          <div class="ouv__bloc" id="ouvCoups"><h3>Coups du livre</h3><div class="ouv__liste" id="ouvListeCoups"></div></div>
+          <div class="ouv__bloc" id="ouvErreurs" hidden><h3>Fautes typiques</h3><div class="ouv__liste" id="ouvListeErreurs"></div></div>
+          <div class="ouv__bloc" id="ouvSchema" hidden><h3>Ce que chacun va chercher ensuite</h3><div id="ouvSchemaCorps"></div></div>
+          <div class="ouv__signature">Textes : brouillons rédigés par l'IA le 6 octobre 2026, vérifiés au moteur, <b>à relire par un enseignant</b>. Chaque enseignant pourra signer sa version.</div>
+        </aside>
+      </main>
+    </div>
+    <script type="module" src="./ouverture.js"></script>
+  </body>
+</html>

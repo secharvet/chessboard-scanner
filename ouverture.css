@@ -1,0 +1,42 @@
+/* Assistant d'ouverture (maquette, 8 octobre 2026) : échiquier compact à gauche, récit à droite. */
+.ouv__layout { display: grid; grid-template-columns: minmax(280px, 440px) minmax(0, 1fr); gap: 20px; padding: 16px; align-items: start; }
+.ouv__board-wrap { width: 100%; max-width: 440px; aspect-ratio: 1; }
+.ouv__board-wrap .board { width: 100%; height: 100%; }
+.ouv__ligne { margin-top: 10px; font-family: var(--mono); font-size: 0.9rem; line-height: 1.7; color: var(--muted); min-height: 1.7em; }
+.ouv__ligne .mv { cursor: pointer; padding: 1px 4px; border-radius: 4px; }
+.ouv__ligne .mv:hover { background: rgba(255,255,255,0.08); color: var(--text); }
+.ouv__ligne .mv--cur { color: var(--text); background: rgba(124,92,255,0.25); }
+.ouv__boutons { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+.btn { background: rgba(255,255,255,0.06); border: 1px solid var(--border); color: var(--text); border-radius: 8px; padding: 7px 12px; cursor: pointer; font: inherit; }
+.btn:hover { background: rgba(255,255,255,0.12); }
+.btn--primary { background: var(--accent); border-color: transparent; }
+.btn--primary:hover { filter: brightness(1.1); }
+.ouv__aide { color: var(--muted); font-size: 0.85rem; margin-top: 8px; }
+.ouv__droite { background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 20px; min-width: 0; }
+.ouv__titre { font-size: 1.25rem; font-weight: 600; margin-bottom: 6px; display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+.ouv__etat { font-size: 0.8rem; color: var(--muted); font-weight: normal; }
+.ouv__maquette { font-size: 0.7rem; color: var(--accent2); border: 1px solid var(--accent2); border-radius: 999px; padding: 1px 8px; vertical-align: middle; margin-left: 6px; }
+.ouv__recit { line-height: 1.55; font-size: 1.02rem; margin: 10px 0 18px; }
+.ouv__recit p { margin: 0 0 8px; }
+.ouv__recit .qui { color: var(--accent2); font-weight: 600; }
+.ouv__recit .menace { color: #ffb86b; }
+.ouv__recit .hors { color: var(--muted); font-style: italic; }
+.ouv__bloc { margin-top: 14px; }
+.ouv__bloc h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin: 0 0 8px; font-weight: 600; }
+.ouv__liste { display: flex; flex-direction: column; gap: 6px; }
+.coup { display: grid; grid-template-columns: 5.5em 1fr; gap: 10px; align-items: start; padding: 8px 10px; border-radius: 8px; border: 1px solid var(--border); background: rgba(255,255,255,0.02); cursor: pointer; }
+.coup:hover { background: rgba(124,92,255,0.12); border-color: rgba(124,92,255,0.5); }
+.coup__san { font-family: var(--mono); font-weight: 700; font-size: 1rem; }
+.coup__san small { display: block; font-weight: normal; color: var(--muted); font-size: 0.72rem; }
+.coup__why { color: var(--text); line-height: 1.45; font-size: 0.95rem; }
+.coup--principal .coup__san { color: var(--accent2); }
+.coup--erreur { border-color: rgba(255,120,120,0.35); }
+.coup--erreur:hover { background: rgba(255,120,120,0.1); border-color: rgba(255,120,120,0.7); }
+.coup--erreur .coup__san { color: #ff8a8a; }
+.ouv__schema { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; font-size: 0.93rem; line-height: 1.45; }
+.ouv__schema div { background: rgba(255,255,255,0.03); border-radius: 8px; padding: 10px; }
+.ouv__schema b { display: block; margin-bottom: 4px; color: var(--muted); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; }
+.ouv__signature { margin-top: 20px; padding-top: 12px; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.82rem; line-height: 1.45; }
+.ouv__apercu { position: absolute; left: 12px; top: 12px; background: rgba(0,0,0,0.6); color: #fff; font-size: 0.8rem; padding: 3px 8px; border-radius: 6px; pointer-events: none; }
+.ouv__board-wrap { position: relative; }
+@media (max-width: 800px) { .ouv__layout { grid-template-columns: 1fr; } .ouv__board-wrap { max-width: 100%; } .ouv__schema { grid-template-columns: 1fr; } }
