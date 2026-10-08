@@ -1385,3 +1385,9 @@ trois passes (120 + 60 + 150 requêtes Fable, zéro échec de rédaction) : 60 �
 10e coup, 330 brouillons signés « IA, à relire », punitions recalculées (`livres/francaise-punitions.js`). Livre servi :
 `livres/francaise.js` (assemblé par `construire.mjs` ; nginx refuse .mjs et data/), source des brouillons versionnée dans
 `livres/sources/francaise-ext.json`. Prochain : relecture par l'auteur, modèle de données enseignants/versions, autres ouvertures.
+
+**8 octobre, 20 h 10 : deuxième livre, la Partie italienne.** Noyau de 29 positions écrit à la main (coach/openings/italienne.mjs),
+vérifié au moteur (54/60 plans, 45/49 fautes, écarts corrigés), prolongé en trois passes (330 requêtes Fable, zéro rejet) :
+**305 positions**, lignes jusqu'au 10e coup, 428 punitions. Assistant multi-livres : livres/index.js, bascule automatique selon
+la position, sélecteur, adversaire d'entraînement qui tire son livre au sort après 1. e4. Bug corrigé : chemins relatifs de
+l'index (échiquiers gris) ; punitions : fins de partie gérées. Restent 222 variantes secondaires non écrites dans l'Italienne.
