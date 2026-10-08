@@ -172,11 +172,19 @@ function isPlayerTurn() {
 }
 
 function snapshot() {
-  return { fen: game.fen(), lastMove: lastMove ? { ...lastMove } : null };
+  // On garde la liste complète des coups : game.load(fen) effacerait l'historique, et le coach (lecteur) a besoin
+  // de toute la partie depuis le début pour lire la séquence.
+  return { fen: game.fen(), moves: game.history(), lastMove: lastMove ? { ...lastMove } : null };
 }
 
 function loadSnapshot(snap) {
-  game.load(snap.fen);
+  if (Array.isArray(snap.moves)) {
+    const g = new Chess();
+    try { for (const m of snap.moves) g.move(m); } catch { g.load(snap.fen); }
+    if (g.fen() === snap.fen) game = g; else game.load(snap.fen);
+  } else {
+    game.load(snap.fen);
+  }
   lastMove = snap.lastMove;
 }
 
