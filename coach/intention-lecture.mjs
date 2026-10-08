@@ -46,11 +46,11 @@ function effets(c, m, color) {
 function phrase(e, color, toi) {
   const qui = toi ? 'tu' : 'il'; const bits = [];
   if (e.mat) return `${e.san} serait mat.`;
-  if (e.prise) bits.push(`prend ${e.prise === 'pion' ? 'un pion' : 'le ' + e.prise}`);
+  if (e.prise) bits.push(`prend ${e.prise === 'pion' ? 'un pion' : (e.prise === 'tour' || e.prise === 'dame' ? 'la ' : 'le ') + e.prise}`);
   if (e.echec) bits.push('donne échec');
   const att = e.attaque.filter((a) => !a.defendu).slice(0, 2); const att2 = e.attaque.filter((a) => a.defendu).slice(0, 1);
-  if (att.length) bits.push(`attaque ${att.map((a) => `${NOM[a.type]} ${a.sq} non défendu${a.type === 'r' || a.type === 'q' ? 'e' : ''}`).join(' et ')}`);
-  else if (att2.length) bits.push(`attaque ${att2.map((a) => `${NOM[a.type]} ${a.sq}`).join(' et ')}`);
+  if (att.length) bits.push(`attaque ${att.map((a) => `${LE[a.type]} ${a.sq} non défendu${a.type === 'r' || a.type === 'q' ? 'e' : ''}`).join(' et ')}`);
+  else if (att2.length) bits.push(`attaque ${att2.map((a) => `${LE[a.type]} ${a.sq}`).join(' et ')}`);
   if (e.levier) bits.push('fait levier contre la chaîne de pions');
   if (!bits.length && e.roi <= 2 && e.piece !== 'k') bits.push(`s'approche du roi (${e.roi === 1 ? 'au contact' : 'à deux cases'})`);
   if (!bits.length) return '';
