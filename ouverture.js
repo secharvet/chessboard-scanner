@@ -87,7 +87,9 @@ function renderPanneau() {
       recit.innerHTML += `<p><span class="qui">${numero(avant(), last.san)}</span> — ${qui} ${e.sens ? sensPhrase(e.sens) : 'jouent un coup du livre.'}</p>`;
       if (e.menace) recit.innerHTML += `<p class="menace">Menace : ${e.menace}.</p>`;
     } else {
-      recit.innerHTML += `<p><span class="qui">${numero(avant(), last.san)}</span> — <span class="hors">ce coup n'est pas dans le livre : il n'est pas forcément mauvais, mais personne ne l'a encore expliqué ici. Reviens en arrière pour voir les coups connus.</span></p>`;
+      const n = game.history().length;
+      const hint = n <= 2 ? ` La Défense française commence par <b>1. e4 e6</b> : ce coup mène à une autre ouverture, pas encore écrite ici.` : '';
+      recit.innerHTML += `<p><span class="qui">${numero(avant(), last.san)}</span> — <span class="hors">ce coup n'est pas dans le livre : il n'est pas forcément mauvais, mais personne ne l'a encore expliqué ici.${hint} « Retour » pour revenir aux coups connus.</span></p>`;
     }
   }
   // coups du livre (plan) pour le camp au trait
