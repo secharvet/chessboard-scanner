@@ -1,0 +1,23 @@
+/* Panneau latéral commun */
+.site-nav { display: none; }
+@media (min-width: 1100px) {
+  body.has-site-nav { padding-left: 220px; }
+  .site-nav { display: flex; flex-direction: column; gap: 6px; position: fixed; left: 0; top: 0; bottom: 0; width: 220px; box-sizing: border-box; padding: 18px 14px; background: rgba(255,255,255,0.025); border-right: 1px solid var(--border); z-index: 30; }
+  .site-nav__marque { font-weight: 700; font-size: 1.1rem; margin-bottom: 12px; line-height: 1.2; }
+  .site-nav__marque small { font-weight: normal; color: var(--muted); font-size: 0.75rem; }
+  .site-nav__lien { display: flex; flex-direction: column; gap: 2px; padding: 9px 10px; border-radius: 8px; color: var(--text); text-decoration: none; border: 1px solid transparent; }
+  .site-nav__lien:hover { background: rgba(255,255,255,0.06); }
+  .site-nav__lien--actif { background: rgba(124,92,255,0.18); border-color: rgba(124,92,255,0.45); }
+  .site-nav__titre { font-weight: 600; font-size: 0.95rem; }
+  .site-nav__titre em { font-style: normal; font-size: 0.65rem; color: var(--accent2); border: 1px solid var(--accent2); border-radius: 999px; padding: 0 6px; vertical-align: middle; margin-left: 4px; }
+  .site-nav__sous { font-size: 0.78rem; color: var(--muted); }
+  .site-nav__pied { margin-top: auto; font-size: 0.75rem; color: var(--muted); line-height: 1.4; }
+  body.has-site-nav .brand__subtitle .topbar__link { display: none; } /* les liens « ← Jouer » deviennent inutiles */
+}
+@media (min-width: 801px) and (max-width: 1099px) {
+  .site-nav { display: flex; gap: 6px; padding: 8px 16px 0; flex-wrap: wrap; align-items: center; }
+  .site-nav__marque, .site-nav__pied, .site-nav__sous { display: none; }
+  .site-nav__lien { padding: 5px 10px; border-radius: 999px; border: 1px solid var(--border); color: var(--text); text-decoration: none; font-size: 0.85rem; }
+  .site-nav__lien--actif { background: rgba(124,92,255,0.18); border-color: rgba(124,92,255,0.45); }
+  .site-nav__titre em { display: none; }
+}
