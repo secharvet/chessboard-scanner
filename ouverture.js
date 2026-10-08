@@ -276,7 +276,10 @@ async function entMoteur() {
   if (ent.game.isGameOver() || ent.game.turn() === ent.couleur) return;
   // Tant que la position est dans le livre, l'adversaire suit le livre (principal 7 fois sur 10, sinon une variante) :
   // c'est le seul moyen de s'entraîner à CETTE ouverture. Hors du livre, Stockfish joue librement.
-  const e = entEntree();
+  // Si plusieurs livres connaissent la position (après 1. e4 : Française et Italienne), l'adversaire tire son livre au sort :
+  // tu ne sais pas à l'avance ce qu'il va jouer, comme en vrai.
+  const k = cle(ent.game); const livresIci = Object.keys(BOOKS).filter((id) => BOOKS[id].map.has(k));
+  const e = livresIci.length > 1 ? BOOKS[livresIci[Math.floor(Math.random() * livresIci.length)]].map.get(k) : entEntree();
   if (e?.plan?.length) {
     const choix = e.plan.length > 1 && Math.random() > 0.7 ? e.plan[1 + Math.floor(Math.random() * (e.plan.length - 1))] : e.plan[0];
     await new Promise((r) => setTimeout(r, 350));
