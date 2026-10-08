@@ -1355,3 +1355,20 @@ en tête de la fiche ; sur Fischer–Spassky après 25...a5, les trois premiers 
 comme joueur (scripts/arbres/joueur.py, coup le plus probable sans calcul, ouvertures humaines, Stockfish bridé 50 ms) : 1/20 à
 1320, 1/20 à 1500, 1,5/20 à 1800, 0,5/20 à 2100 → moins de 1200 Elo : il lit, il ne calcule pas ; Stockfish garde la tactique.
 Demande de l'auteur : ne plus lui lister de coups, donner des résultats et des phrases ; il attend la suite et jugera en jouant.
+
+## 8 octobre 2026, 5 h 30 : clôture du projet (décision de l'auteur)
+
+Après la mise en ligne du lecteur (modèle brut + sonde des maîtres + suite probable + intention/menace mécaniques), l'auteur a joué
+et conclu : « rien n'a changé, coach insipide », « mauvais joueur, mauvais coach, j'arrête les frais », « jamais une IA n'égalera
+un coach humain ». Le projet est clos à sa demande.
+
+État laissé : branche coach-grounded poussée (tout commité) ; site en ligne inchangé (coach + jugement Stockfish + lecteur) ;
+service lecteur arrêté sur le VPS pour libérer la mémoire (COACH_LECTEUR reste à 1 dans .env, le coach se tait sans service) ;
+pod RunPod arrêté par l'auteur, volume réseau chess_storage (60 Go, ~4 $/mois) à supprimer par lui s'il ne compte pas reprendre ;
+clés Nvidia collées dans le chat à révoquer. Données : DENEB data/{grains,plateaux,arbres*,brut*,otb}, VPS data/{brut-x,brut3,
+reference,lecteur}.
+
+Acquis mesurés : grains > coups seuls (+0,04 AUC) ; sac de grains = modèle à grains ; échiquier brut auto-supervisé lit les mots
+des maîtres mieux que les étiquettes (0,68 contre 0,64 sur tous les coups ; 0,80 en milieu de jeu contre 0,66 au trivial) ;
+l'échelle (H100) n'apporte que +0,02 ; maîtres OTB et blitz se lisent pareil ; le modèle comme joueur < 1200 Elo.
+Non obtenu : la formulation du but (le plan au-delà du coup), seule chose qui aurait rendu le coach éclairant.
