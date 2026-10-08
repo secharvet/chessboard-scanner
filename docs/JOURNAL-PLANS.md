@@ -1391,3 +1391,7 @@ vérifié au moteur (54/60 plans, 45/49 fautes, écarts corrigés), prolongé en
 **305 positions**, lignes jusqu'au 10e coup, 428 punitions. Assistant multi-livres : livres/index.js, bascule automatique selon
 la position, sélecteur, adversaire d'entraînement qui tire son livre au sort après 1. e4. Bug corrigé : chemins relatifs de
 l'index (échiquiers gris) ; punitions : fins de partie gérées. Restent 222 variantes secondaires non écrites dans l'Italienne.
+**8 octobre, 21 h 25.** Italienne recentrée : les portes vers d'autres ouvertures (Espagnole, Petrov, Philidor, Écossaise,
+viennoise, Sicilienne, Française) sont marquées `porte` dans le livre et ne sont plus prolongées ; les 206 brouillons qui en
+dépendaient sont retirés (gardés dans l'historique Git pour amorcer ces livres). Italienne finale : **179 positions**, 10e coup
+partout, 269 punitions. Deux livres en ligne : Française 390, Italienne 179.
