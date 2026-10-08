@@ -5,6 +5,7 @@
  */
 import { Chess } from '/vendor/chess.js';
 import { renderPlayBoard, bindPlayBoardInput } from './play-board.js';
+import { getEngineMove } from './stockfish-client.js';
 import { LIVRE, OUVERTURE, positionsDuLivre } from './livres/francaise.js';
 import { PUNITIONS } from './livres/francaise-punitions.js';
 
@@ -226,3 +227,64 @@ $('btnSuivant').addEventListener('click', () => {
 });
 $('btnTourner').addEventListener('click', () => { orientation = orientation === 'white' ? 'black' : 'white'; render(); });
 render();
+
+
+// ---------------------------------------------------------------- Entraînement contre Stockfish (PC), le livre à côté
+const ent = { game: new Chess(), couleur: 'b', sel: null, targets: [], pensant: false };
+const $ent = $('entBoard');
+function entRender() {
+  if (!$ent) return;
+  const last = ent.game.history({ verbose: true }).at(-1);
+  renderPlayBoard($ent, { fen: ent.game.fen(), orientation: ent.couleur === 'w' ? 'white' : 'black', lastMove: last ? { from: last.from, to: last.to } : null, targets: ent.targets, dragFrom: ent.sel });
+}
+function entEntree() { return livre.get(cle(ent.game)) ?? (ent.game.history().length === 0 ? RACINE : null); }
+function entPanneau(note = '') {
+  const box = $('entPanneau'); if (!box) return;
+  const h = ent.game.history(); const e = entEntree(); const last = ent.game.history({ verbose: true }).at(-1);
+  let html = '';
+  if (note) html += `<p>${note}</p>`;
+  if (last) {
+    const qui = last.color === ent.couleur ? 'Toi' : 'Stockfish';
+    if (e) html += `<p><span class="ok">Encore dans le livre.</span> ${qui} : <b>${fr(last.san)}</b>${e.sens ? ' — ' + sensPhrase(e.sens) : ''}</p>`;
+    else html += `<p><span class="ko">Hors du livre</span> depuis ${qui === 'Toi' ? 'ton coup' : 'la réponse de Stockfish'} <b>${fr(last.san)}</b>. Le livre n'a rien écrit ici ; « Voir dans le livre » t'amène à la dernière position connue.</p>`;
+  }
+  if (e?.plan?.length && ent.game.turn() === ent.couleur) html += `<p>Le livre te propose : ${e.plan.map((p, i) => `<b>${fr(p.san)}</b>${i === 0 ? ' (principal)' : ''}`).join(', ')}.</p>`;
+  if (ent.game.isGameOver()) html += `<p><b>Partie terminée.</b></p>`;
+  html += `<div class="ent__ligne">${h.map((m, i) => (i % 2 === 0 ? `${i / 2 + 1}. ` : '') + fr(m)).join(' ') || 'Position de départ'}</div>`;
+  box.innerHTML = html; $('entEtat').textContent = ent.pensant ? 'Stockfish réfléchit…' : (e ? 'dans le livre' : (h.length ? 'hors du livre' : ''));
+}
+async function entMoteur() {
+  if (ent.game.isGameOver() || ent.game.turn() === ent.couleur) return;
+  ent.pensant = true; entPanneau();
+  try {
+    const depth = Number($('entNiveau').value); const r = await getEngineMove(ent.game.fen(), { depth });
+    if (r.bestmove && r.bestmove.length >= 4) ent.game.move({ from: r.bestmove.slice(0, 2), to: r.bestmove.slice(2, 4), promotion: r.bestmove[4] || 'q' });
+  } catch (err) { console.error('[entraînement] moteur', err); }
+  ent.pensant = false; entRender(); entPanneau();
+}
+function entJouer(from, to) {
+  ent.sel = null; ent.targets = [];
+  try { ent.game.move({ from, to, promotion: 'q' }); } catch { entRender(); return; }
+  entRender(); entPanneau(); entMoteur();
+}
+if ($ent) {
+  bindPlayBoardInput($ent, {
+    canInteract: () => !ent.pensant && ent.game.turn() === ent.couleur && !ent.game.isGameOver(),
+    getPiece: (sq) => ent.game.get(sq), playerColor: () => ent.couleur,
+    onSquareClick: (sq) => { if (ent.sel && ent.targets.includes(sq)) { entJouer(ent.sel, sq); return; } const p = ent.game.get(sq); if (p && p.color === ent.couleur) { ent.sel = sq; ent.targets = ent.game.moves({ square: sq, verbose: true }).map((m) => m.to); } else { ent.sel = null; ent.targets = []; } entRender(); },
+    onDragStart: (from) => { const p = ent.game.get(from); if (p && p.color === ent.couleur) { ent.sel = from; ent.targets = ent.game.moves({ square: from, verbose: true }).map((m) => m.to); entRender(); } },
+    onDrop: (from, to) => { if (ent.targets.includes(to)) entJouer(from, to); else { ent.sel = null; ent.targets = []; entRender(); } },
+    onDragCancel: () => { ent.sel = null; ent.targets = []; entRender(); },
+  });
+  const nouvelle = () => { ent.game = new Chess(); ent.couleur = $('entCouleur').value; ent.sel = null; ent.targets = []; entRender(); entPanneau(ent.couleur === 'b' ? 'Nouvelle partie : Stockfish a les Blancs et commence.' : 'Nouvelle partie : à toi.'); entMoteur(); };
+  $('entNouvelle').addEventListener('click', nouvelle);
+  $('entCouleur').addEventListener('change', nouvelle);
+  $('entLivre').addEventListener('click', () => {
+    // amener l'échiquier du livre sur la dernière position de la partie connue du livre
+    const h = ent.game.history(); let n = h.length; const c = new Chess();
+    const connu = []; for (let i = 0; i < h.length; i++) { c.move(h[i]); if (livre.has(cle(c))) connu.push(i + 1); }
+    n = connu.length ? connu.at(-1) : 0; recit = null; game = new Chess(); for (const s of h.slice(0, n)) game.move(s); render();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  entRender(); entPanneau(); entMoteur();
+}

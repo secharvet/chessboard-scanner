@@ -1,5 +1,6 @@
 /* Assistant d'ouverture (maquette, 8 octobre 2026) : échiquier compact à gauche, récit à droite. */
-.ouv__layout { display: grid; grid-template-columns: minmax(280px, 440px) minmax(0, 1fr); gap: 20px; padding: 16px; align-items: start; }
+.ouv__layout { display: grid; grid-template-columns: minmax(280px, 440px) minmax(0, 1fr); grid-template-areas: 'gauche droite' 'gauche entrainement'; gap: 20px; padding: 16px; align-items: start; }
+.ouv__gauche { grid-area: gauche; } .ouv__droite { grid-area: droite; } .ouv__entrainement { grid-area: entrainement; }
 .ouv__board-wrap { width: 100%; max-width: 440px; aspect-ratio: 1; }
 .ouv__board-wrap .board { width: 100%; height: 100%; }
 .ouv__ligne { margin-top: 10px; font-family: var(--mono); font-size: 0.9rem; line-height: 1.7; color: var(--muted); min-height: 1.7em; }
@@ -63,3 +64,19 @@
   .ouv__boutons { position: fixed; left: 0; right: 0; bottom: 0; margin: 0; padding: 6px 8px calc(6px + env(safe-area-inset-bottom, 0px)); background: rgba(11, 15, 23, 0.92); backdrop-filter: blur(6px); border-top: 1px solid var(--border); justify-content: space-between; flex-wrap: nowrap; z-index: 20; }
   .ouv__boutons .btn { padding: 5px 9px; font-size: 0.8rem; flex: 1 1 0; }
 }
+
+/* Échiquier d'entraînement (PC) */
+.ouv__entrainement { background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 16px; min-width: 0; }
+.ent__tete { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 10px; }
+.ent__titre { font-weight: 600; display: flex; gap: 10px; align-items: baseline; }
+.ent__options { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; font-size: 0.85rem; color: var(--muted); }
+.ent__options select { margin-left: 4px; }
+.ent__corps { display: grid; grid-template-columns: minmax(240px, 340px) minmax(0, 1fr); gap: 16px; align-items: start; }
+.ent__board-wrap { width: 100%; max-width: 340px; aspect-ratio: 1; position: relative; }
+.ent__board-wrap .board { width: 100%; height: 100%; }
+.ent__panneau { font-size: 0.95rem; line-height: 1.5; }
+.ent__panneau p { margin: 0 0 8px; }
+.ent__panneau .ok { color: var(--accent2); } .ent__panneau .ko { color: #ffb86b; }
+.ent__ligne { font-family: var(--mono); font-size: 0.85rem; color: var(--muted); margin-top: 6px; }
+@media (max-width: 800px) { .ouv__entrainement { display: none; } .ouv__layout { grid-template-areas: none; } }
+@media (max-width: 1100px) and (min-width: 801px) { .ouv__layout { grid-template-columns: 1fr; grid-template-areas: 'gauche' 'droite' 'entrainement'; } }

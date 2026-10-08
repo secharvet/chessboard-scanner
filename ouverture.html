@@ -48,6 +48,22 @@
           <div class="ouv__bloc" id="ouvSchema" hidden><h3>Ce que chacun va chercher ensuite</h3><div id="ouvSchemaCorps"></div></div>
           <div class="ouv__signature">Textes : brouillons rédigés par l'IA le 6 octobre 2026, vérifiés au moteur, <b>à relire par un enseignant</b>. Chaque enseignant pourra signer sa version.</div>
         </aside>
+
+        <section class="ouv__entrainement" id="ouvEntrainement">
+          <div class="ent__tete">
+            <div class="ent__titre">S'entraîner contre Stockfish <span class="ouv__etat" id="entEtat"></span></div>
+            <div class="ent__options">
+              <label>Tu joues <select id="entCouleur" class="opening-select"><option value="w">Blancs</option><option value="b" selected>Noirs</option></select></label>
+              <label>Niveau <select id="entNiveau" class="opening-select"><option value="4">Débutant</option><option value="8" selected>Intermédiaire</option><option value="14">Fort</option></select></label>
+              <button class="btn" id="entNouvelle">Nouvelle partie</button>
+              <button class="btn" id="entLivre" title="Amener l'échiquier du livre sur la position de la partie">Voir dans le livre ⤴</button>
+            </div>
+          </div>
+          <div class="ent__corps">
+            <div class="ent__board-wrap"><div id="entBoard" class="board"></div></div>
+            <div class="ent__panneau" id="entPanneau"><p class="hors">Joue tes coups ici ; Stockfish répond. À chaque coup, je te dis si la partie est encore dans le livre et ce que le livre pense de la réponse du moteur.</p></div>
+          </div>
+        </section>
       </main>
     </div>
     <script type="module" src="./ouverture.js"></script>
