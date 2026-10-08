@@ -163,6 +163,9 @@ function tenter(from, to) {
   render();
 }
 bindPlayBoardInput($('ouvBoard'), {
+  canInteract: () => true,
+  getPiece: (sq) => game.get(sq),
+  playerColor: () => game.turn(),
   onSquareClick: (sq) => {
     if (selected && targets.includes(sq)) { tenter(selected, sq); return; }
     const p = game.get(sq);
