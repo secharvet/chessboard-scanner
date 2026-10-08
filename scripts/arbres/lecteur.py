@@ -58,13 +58,25 @@ class Lecteur:
         P = self.Plies([('p', raw)])
         with torch.no_grad():
             x, _, _, _ = P.batch(np.array([0]), np.array([end]), self.W, 0)
-            h, _, _, _, _ = self.model(torch.from_numpy(x)); h = h[0].numpy()
+            h, _, _, _, hz = self.model(torch.from_numpy(x)); h = h[0].numpy(); hz = torch.sigmoid(hz[0]).numpy()
             z = (h - self.mu) / self.sd; p = torch.sigmoid(self.net(torch.from_numpy(z).float()[None]))[0].numpy()
+        # tête « horizon » : cases d'arrivée des 30 prochains demi-coups, pour « moi » (le camp qui vient de jouer) et « lui »,
+        # dans le repère orienté (moi en bas) ; on remet dans le repère réel si « moi » est noir.
+        me_black = (end - 1) % 2 == 1
+        def cases(v):
+            idx = np.argsort(-v)[:6]; out = []
+            for i in idx:
+                sq = int(i); r, f = divmod(sq, 8)
+                if me_black: r = 7 - r
+                out.append({'case': 'abcdefgh'[f] + str(r + 1), 'p': float(v[i])})
+            return out
+        # hz[:64] : cases d'arrivée du camp AU TRAIT (le premier demi-coup à venir), hz[64:128] : celles du camp qui vient de jouer
+        attendu = {('w' if me_black else 'b'): cases(hz[:64]), ('b' if me_black else 'w'): cases(hz[64:128])}
         lift = p / (self.base + 1e-6); order = np.argsort(-p)
         themes = [{'theme': THEMES[j], 'libelle': LIBELLE[THEMES[j]], 'p': float(p[j]), 'x': float(lift[j])} for j in order[:5]]
         v = h / (np.linalg.norm(h) + 1e-9); sims = self.cent @ v; top = np.argsort(-sims)[:3]
         arbres = [{'groupe': int(c), 'sim': float(sims[c]), 'nom': self.noms.get(int(c), {}).get('nom', ''), 'sens': self.noms.get(int(c), {}).get('sens', ''), 'phase': self.noms.get(int(c), {}).get('phase', ''), 'confiance': self.noms.get(int(c), {}).get('confiance', ''), 'parties': self.inv.get(int(c), {}).get('parties', 0)} for c in top]
-        return {'demi_coup': int(end), 'camp': 'w' if (end - 1) % 2 == 0 else 'b', 'themes': themes, 'arbres': arbres}
+        return {'demi_coup': int(end), 'camp': 'w' if (end - 1) % 2 == 0 else 'b', 'themes': themes, 'arbres': arbres, 'attendu': attendu}
 
 def serveur(a):
     import base64

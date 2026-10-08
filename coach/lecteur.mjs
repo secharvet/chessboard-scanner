@@ -21,17 +21,28 @@ export async function lireLaPartie(moves) {
     const j = await res.json(); if (!j.ok) return null;
     if (j.trop_tot) return { tropTot: true, demiCoups: j.demi_coups, fenetre: j.fenetre };
     const l = j.lectures?.[0]; if (!l) return null;
-    return { demiCoup: l.demi_coup, camp: l.camp, themes: l.themes, arbres: l.arbres };
+    return { demiCoup: l.demi_coup, camp: l.camp, themes: l.themes, arbres: l.arbres, attendu: l.attendu ?? null };
   } catch { return null; } finally { clearTimeout(timer); }
 }
 
-/** Texte court pour la fiche : thèmes saillants (× ≥ 1,3 ou p ≥ 0,5) et le premier arbre nommé. */
+/** Thèmes qui disent quelque chose par eux-mêmes ; « manœuvre », « tactique », « initiative » restent muets sans contenu. */
+const CONCRETS = new Set(['attaque_roi', 'defense_roi', 'colonne_ouverte', 'structure_pions', 'case_faible_avant_poste', 'echange_pieces', 'developpement', 'centre_espace', 'levier_rupture', 'prophylaxie', 'blocus', 'aile_dame', 'finale', 'materiel']);
+const zone = (sq) => { const f = sq.charCodeAt(0) - 97; return f <= 2 ? 'aile dame' : f >= 5 ? 'aile roi' : 'centre'; };
+
+/** Texte court pour la fiche : cases attendues des deux camps, thèmes concrets, phrase de l'arbre. */
 export function texteLecture(l) {
   if (!l || l.tropTot) return '';
-  const th = l.themes.filter((t) => t.x >= 1.3 || t.p >= 0.5).slice(0, 3).map((t) => `${t.libelle} (${Math.round(t.p * 100)} %)`);
-  const a = l.arbres.find((x) => x.nom);
   const parts = [];
-  if (th.length) parts.push(`Dans les derniers coups, je vois surtout : ${th.join(', ')}.`);
-  if (a) parts.push(`La séquence ressemble à « ${a.nom} » (${a.parties.toLocaleString('fr-FR')} parties).`);
+  if (l.attendu?.w && l.attendu?.b) {
+    const top = (arr) => arr.filter((c) => c.p >= 0.25).slice(0, 3);
+    const w = top(l.attendu.w); const b = top(l.attendu.b);
+    const dire = (camp, arr) => arr.length ? `${camp} vers ${arr.map((c) => c.case).join(', ')} (${[...new Set(arr.map((c) => zone(c.case)))].join(' et ')})` : '';
+    const d = [dire('les Blancs', w), dire('les Noirs', b)].filter(Boolean);
+    if (d.length) parts.push(`D'après des milliers de parties semblables, les prochains coups iront plutôt : ${d.join(' ; ')}.`);
+  }
+  const th = l.themes.filter((t) => CONCRETS.has(t.theme) && t.p >= 0.2 && (t.x >= 1.5 || t.p >= 0.5)).slice(0, 2).map((t) => `${t.libelle} (${Math.round(t.p * 100)} %)`);
+  if (th.length) parts.push(`Thèmes du moment : ${th.join(', ')}.`);
+  const a = l.arbres.find((x) => x.nom && x.sens);
+  if (a && a.sim >= 0.4) parts.push(`Séquence proche de « ${a.nom} » : ${a.sens.replace(/\s+/g, ' ').slice(0, 180)}${a.sens.length > 180 ? '…' : ''}`);
   return parts.join(' ');
 }
