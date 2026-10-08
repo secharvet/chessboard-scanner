@@ -6,6 +6,7 @@
 import { Chess } from '/vendor/chess.js';
 import { renderPlayBoard, bindPlayBoardInput } from './play-board.js';
 import { LIVRE, OUVERTURE, positionsDuLivre } from './livres/francaise.js';
+import { PUNITIONS } from './livres/francaise-punitions.js';
 
 const $ = (id) => document.getElementById(id);
 const FR = { K: 'R', Q: 'D', R: 'T', B: 'F', N: 'C' };
@@ -17,6 +18,7 @@ const cle = (c) => c.fen().split(' ').slice(0, 4).join(' ');
 let game = new Chess();
 let orientation = 'white';
 let apercu = null; // { timer, saved: Chess }
+let recit = null; // punition en cours : { coups: string[], i, cle, retourFen, bonCoup }
 
 function entree(c = game) { return livre.get(cle(c)) ?? null; }
 function numero(c, san) { const n = Math.ceil((c.history().length + 1) / 2); return c.turn() === 'w' ? `${n}. ${fr(san)}` : `${n}… ${fr(san)}`; }
@@ -24,7 +26,7 @@ function numero(c, san) { const n = Math.ceil((c.history().length + 1) / 2); ret
 function render(lastMove = null) {
   selected = null; targets = [];
   renderPlayBoard($('ouvBoard'), { fen: game.fen(), orientation, lastMove: lastMove ?? dernier(), targets: [] });
-  renderLigne(); renderPanneau();
+  renderLigne(); if (recit) afficherRecit(); else renderPanneau();
 }
 function dernier() { const h = game.history({ verbose: true }); const m = h.at(-1); return m ? { from: m.from, to: m.to } : null; }
 
@@ -37,7 +39,7 @@ function renderLigne() {
     s.addEventListener('click', () => { allerA(i + 1); }); el.append(s);
   });
 }
-function allerA(n) { const h = game.history(); game = new Chess(); for (const san of h.slice(0, n)) game.move(san); render(); }
+function allerA(n) { recit = null; const h = game.history(); game = new Chess(); for (const san of h.slice(0, n)) game.move(san); render(); }
 
 function renderPanneau() {
   const e = entree(); const h = game.history({ verbose: true }); const last = h.at(-1);
@@ -62,7 +64,7 @@ function renderPanneau() {
   plan.forEach((p, i) => liste.append(carte(p.san, p.pourquoi, i === 0 ? 'principal' : 'variante', false)));
   // erreurs
   const err = e?.erreurs ?? []; $('ouvErreurs').hidden = !err.length; const le = $('ouvListeErreurs'); le.innerHTML = '';
-  err.forEach((x) => le.append(carte(x.san, x.pourquoi, 'à éviter', true)));
+  err.forEach((x) => le.append(carte(x.san, x.pourquoi, 'à éviter', true, `${e.coups} ${x.san}`)));
   // schéma
   const sch = e?.schema; $('ouvSchema').hidden = !sch;
   if (sch) $('ouvSchemaCorps').innerHTML = `<div class="ouv__schema"><div><b>Les Blancs</b>${sch.blancs ?? ''}${sch.coupsBlancs ? `<br><small>${fr(sch.coupsBlancs)}</small>` : ''}</div><div><b>Les Noirs</b>${sch.noirs ?? ''}${sch.coupsNoirs ? `<br><small>${fr(sch.coupsNoirs)}</small>` : ''}</div></div>`;
@@ -70,21 +72,73 @@ function renderPanneau() {
 function avant() { const h = game.history(); const c = new Chess(); for (const s of h.slice(0, -1)) c.move(s); return c; }
 function sensPhrase(s) { return s.replace(/^son /, 'leur ').replace(/\bson\b/g, 'leur').replace(/\bsa\b/g, 'leur').replace(/\bses\b/g, 'leurs') + (/[.!?]$/.test(s) ? '' : '.'); }
 
-function carte(san, pourquoi, tag, erreur) {
+function carte(san, pourquoi, tag, erreur, clePunition = null) {
   const d = document.createElement('div'); d.className = 'coup' + (tag === 'principal' ? ' coup--principal' : '') + (erreur ? ' coup--erreur' : '');
-  d.innerHTML = `<div class="coup__san">${fr(san)}<small>${tag}</small></div><div class="coup__why">${pourquoi}</div>`;
-  d.addEventListener('mouseenter', () => demarrerApercu(san));
+  const pun = clePunition ? PUNITIONS[clePunition] : null;
+  d.innerHTML = `<div class="coup__san">${fr(san)}<small>${tag}</small></div><div class="coup__why">${pourquoi}${pun ? ` <span class="coup__pun">— punition : ${pun.ligne.map(fr).join(' ')}</span>` : ''}</div>`;
+  d.addEventListener('mouseenter', () => demarrerApercu(san, pun ? pun.ligne : null));
   d.addEventListener('mouseleave', arreterApercu);
-  d.addEventListener('click', () => { arreterApercu(); jouer(san); });
+  d.addEventListener('click', () => { arreterApercu(); if (pun) demarrerRecit(san, pun, pourquoi); else jouer(san); });
   return d;
 }
 
+/** Phrase mécanique pour un demi-coup de punition : prise, échec, pièce attaquée sans défense. */
+function phraseCoup(c, san) {
+  const who = c.turn() === 'w' ? 'Les Blancs' : 'Les Noirs'; const m = c.move(san); if (!m) return '';
+  const bits = [];
+  if (m.captured) bits.push(`prennent ${PIECE_FR[m.captured]}${m.captured === 'p' ? '' : ''} en ${m.to}`);
+  if (m.san.includes('#')) bits.push('font mat'); else if (m.san.includes('+')) bits.push('donnent échec');
+  if (!bits.length && typeof c.attackers === 'function') {
+    const other = m.color === 'w' ? 'b' : 'w'; const cibles = [];
+    for (const row of c.board()) for (const p of row) {
+      if (!p || p.color !== other || p.type === 'k') continue;
+      if (c.attackers(p.square, m.color).includes(m.to) && c.attackers(p.square, other).length === 0) cibles.push(`${PIECE_FR[p.type]} ${p.square}`);
+    }
+    if (cibles.length) bits.push(`attaquent ${cibles.slice(0, 2).join(' et ')}, sans défense`);
+  }
+  if (!bits.length) bits.push(m.piece === 'p' ? 'avancent le pion' : `replacent ${PIECE_FR[m.piece]}`);
+  return `${who} ${bits.join(', ')}.`;
+}
+
+/** Récit d'une faute : on joue la faute, puis « Suivant » déroule la punition une phrase à la fois, puis bilan et retour. */
+function demarrerRecit(san, pun, pourquoi) {
+  const retourFen = game.fen(); const e = entree(); const bon = e?.plan?.[0] ?? null;
+  try { game.move(san); } catch { return; }
+  recit = { coups: pun.ligne, i: 0, retourFen, bon, pun, pourquoi, fauteSan: san };
+  render(); afficherRecit();
+}
+function afficherRecit() {
+  if (!recit) return;
+  const r = recit; const box = $('ouvRecit'); const fautif = r.pun.fautif === 'w' ? 'les Blancs' : 'les Noirs';
+  let html = `<p><span class="qui faute">Faute : ${fr(r.fauteSan)}</span> — ${r.pourquoi}</p>`;
+  for (let k = 0; k < r.i; k++) html += `<p class="pas">${k + 1}. ${r.phrases[k]}</p>`;
+  if (r.i < r.coups.length) html += `<p class="hors">« Suivant » joue la réponse (${r.coups.length - r.i} demi-coup${r.coups.length - r.i > 1 ? 's' : ''} restants).</p>`;
+  else {
+    const perte = Math.abs(r.pun.perte) / 100;
+    html += `<p class="bilan">Bilan : au bout de ${Math.ceil(r.coups.length / 2)} coups, ${fautif} ont perdu l'équivalent de ${perte >= 0.95 ? perte.toFixed(1).replace('.', ',') + ' pion' + (perte >= 1.95 ? 's' : '') : 'une demi-position (' + perte.toFixed(2).replace('.', ',') + ' pion)'}${r.pun.mat ? ', et c\'est mat' : ''}. Voilà pourquoi on ne joue pas ${fr(r.fauteSan)}.</p>`;
+    if (r.bon) html += `<p><button class="btn btn--primary" id="btnRembobiner">⏪ Revenir et jouer ${fr(r.bon.san)}</button> <span class="hors">${r.bon.pourquoi}</span></p>`;
+    else html += `<p><button class="btn" id="btnRembobiner">⏪ Revenir</button></p>`;
+  }
+  box.innerHTML = html;
+  $('btnRembobiner')?.addEventListener('click', () => { const fen = r.retourFen; const h = game.history(); const n = h.length - 1 - 0; recit = null; game = new Chess(); const hist = h; let k = 0; const c = new Chess(); for (const s of hist) { if (c.fen() === fen) break; c.move(s); k++; } for (const s of hist.slice(0, k)) game.move(s); render(); if (r.bon) jouer(r.bon.san); });
+  $('ouvEtat').textContent = 'récit d\'une faute';
+}
+function pasRecit() {
+  if (!recit) return false;
+  if (recit.i >= recit.coups.length) return true;
+  recit.phrases = recit.phrases ?? [];
+  const c = new Chess(game.fen()); recit.phrases.push(phraseCoup(c, recit.coups[recit.i])); game.move(recit.coups[recit.i]); recit.i++;
+  renderPlayBoard($('ouvBoard'), { fen: game.fen(), orientation, lastMove: dernier(), targets: [] }); renderLigne(); afficherRecit();
+  return true;
+}
+
 /** Aperçu muet : on joue le coup, puis la ligne principale du livre, un demi-coup toutes les 700 ms, sans toucher au récit. */
-function demarrerApercu(san) {
+function demarrerApercu(san, ligne = null) {
   arreterApercu();
   const c = new Chess(game.fen()); const saved = game; let step = 0; const coups = [san];
   const t = new Chess(game.fen()); try { t.move(san); } catch { return; }
-  for (let i = 0; i < 5; i++) { const e = livre.get(cle(t)); const nxt = e?.plan?.[0]?.san; if (!nxt) break; try { t.move(nxt); coups.push(nxt); } catch { break; } }
+  if (ligne) coups.push(...ligne);
+  else for (let i = 0; i < 5; i++) { const e = livre.get(cle(t)); const nxt = e?.plan?.[0]?.san; if (!nxt) break; try { t.move(nxt); coups.push(nxt); } catch { break; } }
   const badge = document.createElement('div'); badge.className = 'ouv__apercu'; badge.textContent = `aperçu : ${coups.map(fr).join(' ')}`; $('ouvBoard').parentElement.append(badge);
   const tick = () => {
     if (step >= coups.length) return;
@@ -98,7 +152,7 @@ function arreterApercu() {
   renderPlayBoard($('ouvBoard'), { fen: game.fen(), orientation, lastMove: dernier(), targets: [] });
 }
 
-function jouer(san) { try { game.move(san); } catch { return; } render(); }
+function jouer(san) { recit = null; try { game.move(san); } catch { return; } render(); }
 
 // Déplacement des pièces : clic sur une pièce puis sur une case cible, ou glisser-déposer (comme la page de jeu).
 let selected = null; let targets = [];
@@ -120,8 +174,8 @@ bindPlayBoardInput($('ouvBoard'), {
   onDrop: (from, to) => { if (targets.includes(to)) tenter(from, to); else { selected = null; targets = []; refreshBoard(); } },
   onDragCancel: () => { selected = null; targets = []; refreshBoard(); },
 });
-$('btnDebut').addEventListener('click', () => { game = new Chess(); render(); });
-$('btnRetour').addEventListener('click', () => { game.undo(); render(); });
-$('btnSuivant').addEventListener('click', () => { const e = entree(); const s = e?.plan?.[0]?.san; if (s) jouer(s); });
+$('btnDebut').addEventListener('click', () => { recit = null; game = new Chess(); render(); });
+$('btnRetour').addEventListener('click', () => { recit = null; game.undo(); render(); });
+$('btnSuivant').addEventListener('click', () => { if (pasRecit()) return; const e = entree(); const s = e?.plan?.[0]?.san; if (s) jouer(s); });
 $('btnTourner').addEventListener('click', () => { orientation = orientation === 'white' ? 'black' : 'white'; render(); });
 render();
