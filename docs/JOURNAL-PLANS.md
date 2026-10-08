@@ -1372,3 +1372,16 @@ Acquis mesurés : grains > coups seuls (+0,04 AUC) ; sac de grains = modèle à 
 des maîtres mieux que les étiquettes (0,68 contre 0,64 sur tous les coups ; 0,80 en milieu de jeu contre 0,66 au trivial) ;
 l'échelle (H100) n'apporte que +0,02 ; maîtres OTB et blitz se lisent pareil ; le modèle comme joueur < 1200 Elo.
 Non obtenu : la formulation du but (le plan au-delà du coup), seule chose qui aurait rendu le coach éclairant.
+
+## 8 octobre 2026, après-midi : réorientation en plateforme éducative ; assistant d'ouverture sur la Française
+
+Décision de l'auteur (matin) : plus de coach IA ; une plateforme éducative ouverte pour les clubs, où des enseignants signent
+leurs explications coup par coup, l'apprenant choisit son professeur, l'IA ne fait que des brouillons vérifiés. Maquette
+`ouverture.html` (échiquier compact, récit du dernier coup, coups du livre avec pourquoi, flèches vert/bleu/rouge, aperçu au
+survol, clic pour jouer, fautes typiques jouées avec punition Stockfish narrée pas à pas, bilan, rembobinage vers le bon coup,
+mise en page téléphone). Jugement de l'auteur : « le format me convient parfaitement, c'est la ligne dont je rêvais ».
+Livre de la Française prolongé par `scripts/ouvertures/etendre.mjs` (Stockfish multipv 12 → Fable rédige → vérification) en
+trois passes (120 + 60 + 150 requêtes Fable, zéro échec de rédaction) : 60 → **390 positions**, toutes les lignes jusqu'au
+10e coup, 330 brouillons signés « IA, à relire », punitions recalculées (`livres/francaise-punitions.js`). Livre servi :
+`livres/francaise.js` (assemblé par `construire.mjs` ; nginx refuse .mjs et data/), source des brouillons versionnée dans
+`livres/sources/francaise-ext.json`. Prochain : relecture par l'auteur, modèle de données enseignants/versions, autres ouvertures.
