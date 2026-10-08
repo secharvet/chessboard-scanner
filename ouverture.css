@@ -39,8 +39,27 @@
 .ouv__signature { margin-top: 20px; padding-top: 12px; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.82rem; line-height: 1.45; }
 .ouv__apercu { position: absolute; left: 12px; top: 12px; background: rgba(0,0,0,0.6); color: #fff; font-size: 0.8rem; padding: 3px 8px; border-radius: 6px; pointer-events: none; }
 .ouv__board-wrap { position: relative; }
-@media (max-width: 800px) { .ouv__layout { grid-template-columns: 1fr; } .ouv__board-wrap { max-width: 100%; } .ouv__schema { grid-template-columns: 1fr; } }
+
 .coup__pun { color: var(--muted); font-family: var(--mono); font-size: 0.8rem; }
 .ouv__recit .faute { color: #ff8a8a; }
 .ouv__recit .pas { padding-left: 10px; border-left: 2px solid rgba(255,255,255,0.12); }
 .ouv__recit .bilan { background: rgba(255,138,138,0.08); border: 1px solid rgba(255,138,138,0.3); border-radius: 8px; padding: 8px 10px; }
+
+/* Téléphone : échiquier collé en haut, texte défilant dessous, boutons petits fixés en bas, rien d'autre. */
+@media (max-width: 800px) {
+  .ouv .topbar, .ouv__aide { display: none; }
+  .ouv { padding: 0 !important; margin: 0; }
+  .ouv__layout { display: flex; flex-direction: column; gap: 0; padding: 0; height: 100dvh; height: 100vh; }
+  .ouv__gauche { flex: 0 0 auto; display: flex; flex-direction: column; }
+  .ouv__board-wrap { max-width: 100vw; width: 100vw; }
+  .ouv__ligne { margin: 4px 10px 0; font-size: 0.78rem; line-height: 1.5; min-height: 0; max-height: 2.6em; overflow-y: auto; }
+  .ouv__droite { flex: 1 1 auto; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; border-radius: 0; border-left: 0; border-right: 0; padding: 10px 12px 64px; }
+  .ouv__titre { font-size: 1.05rem; }
+  .ouv__recit { font-size: 0.95rem; margin: 6px 0 12px; }
+  .coup { grid-template-columns: 4.5em 1fr; padding: 6px 8px; gap: 8px; }
+  .coup__why { font-size: 0.88rem; }
+  .ouv__schema { grid-template-columns: 1fr; }
+  .ouv__signature { font-size: 0.75rem; }
+  .ouv__boutons { position: fixed; left: 0; right: 0; bottom: 0; margin: 0; padding: 6px 8px calc(6px + env(safe-area-inset-bottom, 0px)); background: rgba(11, 15, 23, 0.92); backdrop-filter: blur(6px); border-top: 1px solid var(--border); justify-content: space-between; flex-wrap: nowrap; z-index: 20; }
+  .ouv__boutons .btn { padding: 5px 9px; font-size: 0.8rem; flex: 1 1 0; }
+}
