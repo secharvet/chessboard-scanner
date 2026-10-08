@@ -10,6 +10,8 @@ import { createServer } from 'node:http';
 import { askCoach } from './coach.mjs';
 import { judgeMove } from './move-judge.mjs';
 import { lireLaPartie, texteLecture } from './lecteur.mjs';
+import { expliquerLecture } from './intention-lecture.mjs';
+const texteIntention = (lecture, payload) => { if (!lecture || lecture.tropTot) return ''; const toi = payload.side === 'black' ? 'b' : 'w'; const x = expliquerLecture(lecture.fen, lecture, toi); return x.texte || texteLecture(lecture); };
 import { loadEnv } from './env.mjs';
 import { llmConfig } from './llm.mjs';
 import { UciEngine } from './uci-engine.mjs';
@@ -131,7 +133,7 @@ const server = createServer(async (req, res) => {
   if (url.pathname === '/api/chess/mentor/lecture') {
     try {
       const lecture = await lireLaPartie(payload.moves ?? []);
-      return send(res, 200, { ok: true, lecture, lectureTexte: texteLecture(lecture) });
+      return send(res, 200, { ok: true, lecture, lectureTexte: texteIntention(lecture, payload) });
     } catch (e) {
       return send(res, 400, { ok: false, error: String(e?.message ?? e) });
     } finally {
@@ -140,13 +142,13 @@ const server = createServer(async (req, res) => {
   }
   try {
     const [result, lecture] = await Promise.all([askCoach({ ...payload, engine, cfg }), lireLaPartie(payload.moves ?? []).catch(() => null)]);
-    if (lecture && !lecture.tropTot) console.log(`[coach] lecture : ${texteLecture(lecture)}`);
+    if (lecture && !lecture.tropTot) console.log(`[coach] lecture : ${texteIntention(lecture, payload)}`);
     console.log(
       `[coach] ${ip} via ${req.socket.remoteAddress} — ${cfg.provider}/${cfg.model} contexte ${result.timings.context} ms, LLM ${result.timings.llm} ms` +
       (result.ungrounded.length ? `, coups hors contexte : ${result.ungrounded.join(' ')}` : ''),
     );
     await logAnswer(payload, result);
-    return send(res, 200, { ok: true, ...result, lecture, lectureTexte: texteLecture(lecture) });
+    return send(res, 200, { ok: true, ...result, lecture, lectureTexte: texteIntention(lecture, payload) });
   } catch (e) {
     console.error('[coach] erreur', e);
     return send(res, 502, { ok: false, error: String(e?.message ?? e) });

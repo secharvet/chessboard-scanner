@@ -1337,3 +1337,16 @@ OTB à l'échelle lancé 22 h 02 (6 époques, ~20 $, crédit 25 $), sondes en fi
 0,806 vs Lichess 0,804 à coups égaux → maîtres et blitz se lisent pareil. Résultats et plongements annotés rapatriés
 (data/brut-x, data/brut-otb-x). Indexation des arbres du modèle échelle lancée sur le pod (inventaire à rapatrier), puis le pod
 est à ARRÊTER par l'auteur (bouton Stop).
+
+## 8 octobre 2026, soir : le lecteur dans le coach (étage 2, première greffe)
+
+L'auteur a joué et « n'a vu aucune différence », puis « manœuvre ne veut rien dire », puis « aucune explication d'intention ni
+de menace, rien d'éclairant… très décevant ». Fait en réponse : scripts/arbres/lecteur.py (sonde des thèmes des maîtres +
+mode serveur, port 8002, relais W16 brut3 → W40 brut-x à partir du 40e demi-coup) ; coach/lecteur.mjs (client, COACH_LECTEUR=1) ;
+coach/intention-lecture.mjs : les cases de départ et d'arrivée prédites par la tête horizon (30 demi-coups) sont reliées aux
+coups légaux (score p_départ × p_arrivée), chaque coup est décrit mécaniquement (prise, échec, pièce attaquée et défendue ou
+non, levier, approche du roi) et une phrase d'ensemble est donnée quand les cases convergent (attaque du roi, aile) ; aucune
+règle ne choisit le plan. Fiche : « Ce que je vois » en tête. Vérifié sur Fischer–Spassky 1972 (f5 levier avant 26.f5 ; Rf7 ;
+cases f5/g3) et sur la partie de l'auteur (Ne4, Nf6, Nxe4 annoncés avant d'être joués). Limite : phrases au niveau du coup,
+pas encore du plan ; arbres biaisés finales (160/200) à refaire en milieu de jeu. Page de lecture :
+https://claude.ai/artifact/1Nc85Rb64nkZy6enMpQGnw ; arbres échelle nommés : https://claude.ai/artifact/LfE1M4ZUwt9tCyJCVZ9dUN.

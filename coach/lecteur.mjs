@@ -21,7 +21,7 @@ export async function lireLaPartie(moves) {
     const j = await res.json(); if (!j.ok) return null;
     if (j.trop_tot) return { tropTot: true, demiCoups: j.demi_coups, fenetre: j.fenetre };
     const l = j.lectures?.[0]; if (!l) return null;
-    return { demiCoup: l.demi_coup, camp: l.camp, themes: l.themes, arbres: l.arbres, attendu: l.attendu ?? null };
+    return { demiCoup: l.demi_coup, camp: l.camp, fenetre: l.fenetre, themes: l.themes, arbres: l.arbres, attendu: l.attendu ?? null, depart: l.depart ?? null, fen: c.fen() };
   } catch { return null; } finally { clearTimeout(timer); }
 }
 

@@ -45,8 +45,11 @@ class Lecteur:
         self.model = self.Brut(self.W, ck['dim'], ck['layers'], ck.get('heads', 4)); self.model.load_state_dict(ck['state'], strict=False); self.model.eval()
         sk = torch.load(sonde, map_location='cpu', weights_only=False); self.mu, self.sd, self.base = sk['mu'], sk['sd'], sk['base']
         self.net = torch.nn.Sequential(torch.nn.Linear(ck['dim'], sk['hidden']), torch.nn.GELU(), torch.nn.Dropout(0.3), torch.nn.Linear(sk['hidden'], len(THEMES))); self.net.load_state_dict(sk['state']); self.net.eval()
-        cent = np.load(arbres + '.centres2.npy') if os.path.exists(arbres + '.centres2.npy') else np.load(arbres + '.centres.npy'); self.cent = cent / (np.linalg.norm(cent, axis=1, keepdims=True) + 1e-9)
-        groupes = json.load(open(arbres + '.inventaire.json'))['groupes'] if os.path.exists(arbres + '.inventaire.json') else []
+        self.cent = None
+        if arbres and (os.path.exists(arbres + '.centres2.npy') or os.path.exists(arbres + '.centres.npy')):
+            cent = np.load(arbres + '.centres2.npy') if os.path.exists(arbres + '.centres2.npy') else np.load(arbres + '.centres.npy')
+            if cent.shape[1] == ck['dim']: self.cent = cent / (np.linalg.norm(cent, axis=1, keepdims=True) + 1e-9)
+        groupes = json.load(open(arbres + '.inventaire.json'))['groupes'] if arbres and os.path.exists(arbres + '.inventaire.json') else []
         self.inv = {g['groupe']: g for g in groupes}; self.noms = {}
         if noms:
             nn_ = json.load(open(noms)); items = nn_ if isinstance(nn_, list) else list(nn_.values())
@@ -64,7 +67,7 @@ class Lecteur:
         # dans le repère orienté (moi en bas) ; on remet dans le repère réel si « moi » est noir.
         me_black = (end - 1) % 2 == 1
         def cases(v):
-            idx = np.argsort(-v)[:6]; out = []
+            idx = np.argsort(-v)[:10]; out = []
             for i in idx:
                 sq = int(i); r, f = divmod(sq, 8)
                 if me_black: r = 7 - r
@@ -72,33 +75,42 @@ class Lecteur:
             return out
         # hz[:64] : cases d'arrivée du camp AU TRAIT (le premier demi-coup à venir), hz[64:128] : celles du camp qui vient de jouer
         attendu = {('w' if me_black else 'b'): cases(hz[:64]), ('b' if me_black else 'w'): cases(hz[64:128])}
+        # cases de DÉPART attendues (quelles pièces vont bouger), même convention
+        depart = {('w' if me_black else 'b'): cases(hz[128:192]), ('b' if me_black else 'w'): cases(hz[192:256])}
         lift = p / (self.base + 1e-6); order = np.argsort(-p)
         themes = [{'theme': THEMES[j], 'libelle': LIBELLE[THEMES[j]], 'p': float(p[j]), 'x': float(lift[j])} for j in order[:5]]
-        v = h / (np.linalg.norm(h) + 1e-9); sims = self.cent @ v; top = np.argsort(-sims)[:3]
-        arbres = [{'groupe': int(c), 'sim': float(sims[c]), 'nom': self.noms.get(int(c), {}).get('nom', ''), 'sens': self.noms.get(int(c), {}).get('sens', ''), 'phase': self.noms.get(int(c), {}).get('phase', ''), 'confiance': self.noms.get(int(c), {}).get('confiance', ''), 'parties': self.inv.get(int(c), {}).get('parties', 0)} for c in top]
-        return {'demi_coup': int(end), 'camp': 'w' if (end - 1) % 2 == 0 else 'b', 'themes': themes, 'arbres': arbres, 'attendu': attendu}
+        arbres = []
+        if self.cent is not None:
+          v = h / (np.linalg.norm(h) + 1e-9); sims = self.cent @ v; top = np.argsort(-sims)[:3]
+          arbres = [{'groupe': int(c), 'sim': float(sims[c]), 'nom': self.noms.get(int(c), {}).get('nom', ''), 'sens': self.noms.get(int(c), {}).get('sens', ''), 'phase': self.noms.get(int(c), {}).get('phase', ''), 'confiance': self.noms.get(int(c), {}).get('confiance', ''), 'parties': self.inv.get(int(c), {}).get('parties', 0)} for c in top]
+        return {'demi_coup': int(end), 'camp': 'w' if (end - 1) % 2 == 0 else 'b', 'themes': themes, 'arbres': arbres, 'attendu': attendu, 'depart': depart}
 
 def serveur(a):
     import base64
     from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
     L = Lecteur(a.model, a.sonde, a.arbres, a.noms); W = L.W
+    L2 = Lecteur(a.model2, a.sonde2, a.arbres2, a.noms2) if a.model2 else None  # relais à fenêtre courte
+    Wmin = L2.W if L2 else W
     class H(BaseHTTPRequestHandler):
         def log_message(self, *x): pass
         def _send(self, code, obj):
             b = json.dumps(obj, ensure_ascii=False).encode(); self.send_response(code); self.send_header('Content-Type', 'application/json; charset=utf-8'); self.send_header('Content-Length', str(len(b))); self.end_headers(); self.wfile.write(b)
         def do_GET(self):
-            if self.path == '/health': return self._send(200, {'ok': True, 'fenetre': W, 'themes': THEMES, 'arbres': len(L.cent)})
+            if self.path == '/health': return self._send(200, {'ok': True, 'fenetre': W, 'fenetre_min': Wmin, 'themes': THEMES, 'arbres': 0 if L.cent is None else len(L.cent)})
             self._send(404, {'ok': False})
         def do_POST(self):
             try:
                 n = int(self.headers.get('Content-Length', 0)); body = json.loads(self.rfile.read(n) or b'{}')
                 raw = np.frombuffer(base64.b64decode(body['plateaux']), dtype=np.uint8).reshape(-1, REC)
-                if len(raw) < W: return self._send(200, {'ok': True, 'trop_tot': True, 'demi_coups': int(len(raw)), 'fenetre': W})
+                if len(raw) < Wmin: return self._send(200, {'ok': True, 'trop_tot': True, 'demi_coups': int(len(raw)), 'fenetre': Wmin})
                 ends = body.get('fins') or [len(raw)]
-                return self._send(200, {'ok': True, 'lectures': [L.lire_fin(raw, int(e)) for e in ends if W <= int(e) <= len(raw)]})
+                def lire(e):
+                    e = int(e); M = L if e >= W else L2
+                    r = M.lire_fin(raw, e); r['fenetre'] = M.W; return r
+                return self._send(200, {'ok': True, 'lectures': [lire(e) for e in ends if Wmin <= int(e) <= len(raw)]})
             except Exception as e:
                 return self._send(400, {'ok': False, 'error': str(e)})
-    print(f'lecteur prêt sur 127.0.0.1:{a.port} (fenêtre {W}, {len(L.cent)} arbres)', file=sys.stderr, flush=True)
+    print(f'lecteur prêt sur 127.0.0.1:{a.port} (fenêtre {W}, relais {Wmin}, {0 if L.cent is None else len(L.cent)} arbres)', file=sys.stderr, flush=True)
     ThreadingHTTPServer(('127.0.0.1', a.port), H).serve_forever()
 
 def lire(a):
@@ -142,6 +154,6 @@ def lire(a):
 if __name__ == '__main__':
     ap = argparse.ArgumentParser(); sub = ap.add_subparsers(dest='cmd', required=True)
     e = sub.add_parser('entrainer'); e.add_argument('--emb', required=True); e.add_argument('--themes', required=True); e.add_argument('--out', required=True); e.add_argument('--hidden', type=int, default=128); e.add_argument('--epochs', type=int, default=40)
-    sv = sub.add_parser('serveur'); sv.add_argument('--model', required=True); sv.add_argument('--sonde', required=True); sv.add_argument('--arbres', required=True); sv.add_argument('--noms', default=''); sv.add_argument('--port', type=int, default=8002)
+    sv = sub.add_parser('serveur'); sv.add_argument('--model', required=True); sv.add_argument('--sonde', required=True); sv.add_argument('--arbres', required=True); sv.add_argument('--noms', default=''); sv.add_argument('--port', type=int, default=8002); sv.add_argument('--model2', default=''); sv.add_argument('--sonde2', default=''); sv.add_argument('--arbres2', default=''); sv.add_argument('--noms2', default='')
     l = sub.add_parser('lire'); l.add_argument('partie'); l.add_argument('--model', required=True); l.add_argument('--sonde', required=True); l.add_argument('--arbres', required=True); l.add_argument('--noms', default=''); l.add_argument('--start', type=int, default=40); l.add_argument('--lift', type=float, default=1.3); l.add_argument('--json', default='')
     a = ap.parse_args(); {'entrainer': entrainer, 'lire': lire, 'serveur': serveur}[a.cmd](a)
