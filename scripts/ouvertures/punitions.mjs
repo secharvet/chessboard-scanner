@@ -22,9 +22,9 @@ for (const e of LIVRE) {
     const [best] = await engine.analyze(c.fen(), { depth: DEPTH, multipv: 1 });
     const ligne = []; const t = new Chess(c.fen());
     for (const u of best.pv.slice(0, 6)) { const mv = t.move({ from: u.slice(0, 2), to: u.slice(2, 4), promotion: u[4] }); if (!mv) break; ligne.push(mv.san); }
-    const [fin] = await engine.analyze(t.fen(), { depth: Math.max(10, DEPTH - 6), multipv: 1 });
-    // évaluations du point de vue du FAUTIF : avant la faute, après la punition
-    const evalAvant = cp(avant.score, 1); const evalApres = cp(fin.score, t.turn() === fautif ? 1 : -1);
+    const [fin] = t.isGameOver() ? [] : await engine.analyze(t.fen(), { depth: Math.max(10, DEPTH - 6), multipv: 1 });
+    // évaluations du point de vue du FAUTIF : avant la faute, après la punition (mat ou partie finie : on prend la ligne du moteur)
+    const evalAvant = avant ? cp(avant.score, 1) : 0; const evalApres = fin ? cp(fin.score, t.turn() === fautif ? 1 : -1) : (t.isCheckmate() ? (t.turn() === fautif ? -10000 : 10000) : cp(best.score, -1));
     out[`${e.coups} ${err.san}`] = { coups: e.coups, faute: m.san, fautif, ligne, evalAvant, evalApres, perte: evalAvant - evalApres, mat: best.score.type === 'mate' };
     console.error(`${e.coups} ${m.san} → ${ligne.join(' ')} (${evalAvant} → ${evalApres}, perte ${evalAvant - evalApres})`); n++;
   }
