@@ -181,7 +181,7 @@ export function bindMentorPanel(options) {
         signal: abort.signal,
       });
       // Par défaut, l'IDÉE (sans le coup) ; le bouton « Indice » donne la pièce, puis la case, puis la fiche complète.
-      cache = { text: lectureTexte ? `${advice}\n\n**Ce que je vois** — ${lectureTexte}` : advice, idea, hints, level: idea ? 0 : 99 };
+      cache = { text: lectureTexte ? `**Ce que je vois** — ${lectureTexte}\n\n${advice}` : advice, idea, hints, level: idea ? 0 : 99 };
       renderCurrent();
       if ($status) {
         $status.textContent = problems.length
