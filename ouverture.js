@@ -230,7 +230,7 @@ render();
 
 
 // ---------------------------------------------------------------- Entraînement contre Stockfish (PC), le livre à côté
-const ent = { game: new Chess(), couleur: 'b', sel: null, targets: [], pensant: false };
+const ent = { game: new Chess(), couleur: 'w', sel: null, targets: [], pensant: false };
 const $ent = $('entBoard');
 function entRender() {
   if (!$ent) return;
@@ -285,7 +285,7 @@ if ($ent) {
     onDrop: (from, to) => { if (ent.targets.includes(to)) entJouer(from, to); else { ent.sel = null; ent.targets = []; entRender(); } },
     onDragCancel: () => { ent.sel = null; ent.targets = []; entRender(); },
   });
-  const nouvelle = () => { ent.game = new Chess(); ent.couleur = $('entCouleur').value; ent.sel = null; ent.targets = []; entRender(); entPanneau(ent.couleur === 'b' ? 'Nouvelle partie : Stockfish a les Blancs et commence.' : 'Nouvelle partie : à toi.'); entMoteur(); };
+  const nouvelle = () => { ent.game = new Chess(); ent.couleur = $('entCouleur').value; orientation = ent.couleur === 'w' ? 'white' : 'black'; render(); ent.sel = null; ent.targets = []; entRender(); entPanneau(ent.couleur === 'b' ? 'Nouvelle partie : Stockfish a les Blancs et commence.' : 'Nouvelle partie : à toi.'); entMoteur(); };
   $('entNouvelle').addEventListener('click', nouvelle);
   $('entCouleur').addEventListener('change', nouvelle);
   $('entLivre').addEventListener('click', () => {
