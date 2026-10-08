@@ -75,7 +75,7 @@ function allerA(n) { recit = null; const h = game.history(); game = new Chess();
 function renderPanneau() {
   const e = entree(); const h = game.history({ verbose: true }); const last = h.at(-1);
   $('ouvNom').textContent = e?.nom ?? OUVERTURE;
-  const etat = $('ouvEtat'); etat.textContent = e ? '' : 'hors du livre';
+  const etat = $('ouvEtat'); etat.textContent = e ? (e.auteur ? `${e.auteur}${e.date ? ' · ' + e.date : ''}` : '') : 'hors du livre';
   const recit = $('ouvRecit'); recit.innerHTML = '';
   if (!last) {
     recit.innerHTML = `<p>La <span class="qui">Défense française</span> commence par 1. e4 e6 : les Noirs préparent …d5 pour contester le centre avec un pion soutenu. Clique sur un coup à droite, ou sur « Suivant », pour dérouler la ligne principale phrase par phrase.</p>`;
