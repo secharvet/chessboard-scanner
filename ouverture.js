@@ -114,7 +114,7 @@ function renderPanneau() {
   const liste = $('ouvListeCoups'); liste.innerHTML = '';
   const plan = e?.plan ?? [];
   if (!plan.length) { liste.innerHTML = `<div class="hors">Le livre s'arrête ici pour cette ligne.</div>`; }
-  plan.forEach((p, i) => liste.append(carte(p.san, p.pourquoi, i === 0 ? 'principal' : 'variante', false)));
+  plan.forEach((p, i) => liste.append(carte(p.san, p.pourquoi + (p.porte ? ' <span class="coup__pun">— autre ouverture, livre à venir</span>' : ''), p.porte ? 'autre livre' : (i === 0 ? 'principal' : 'variante'), false)));
   // erreurs
   const err = e?.erreurs ?? []; $('ouvErreurs').hidden = !err.length; const le = $('ouvListeErreurs'); le.innerHTML = '';
   err.forEach((x) => le.append(carte(x.san, x.pourquoi, 'à éviter', true, `${e.coups} ${x.san}`)));

@@ -28,6 +28,7 @@ function manquants() {
   for (const e of tout()) {
     const n = e.coups.split(' ').length;
     (e.plan ?? []).forEach((p, i) => {
+      if (p.porte) return; // porte vers une autre ouverture : on ne la prolonge pas ici
       if (i === 0 ? n + 1 > PP : n + 1 > PV) return;
       if (i > 0 && n >= 12) return; // au-delà du 6e coup, on ne suit plus que la ligne principale
       const c = new Chess(); for (const s of e.coups.split(' ')) c.move(s); try { c.move(p.san); } catch { return; }
