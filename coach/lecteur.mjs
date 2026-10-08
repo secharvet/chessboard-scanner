@@ -6,7 +6,7 @@
 import { Chess } from 'chess.js';
 import { plateaux } from '../scripts/plateaux.mjs';
 const URL = process.env.LECTEUR_URL ?? 'http://127.0.0.1:8002/lecture';
-const TIMEOUT_MS = Number(process.env.LECTEUR_TIMEOUT_MS ?? 1500);
+const TIMEOUT_MS = Number(process.env.LECTEUR_TIMEOUT_MS ?? 2500);
 
 /** @param {string[]} moves coups SAN (ou UCI) depuis la position initiale */
 export async function lireLaPartie(moves) {
@@ -16,12 +16,12 @@ export async function lireLaPartie(moves) {
   const rows = plateaux(uci); if (!rows.length) return null;
   const ctrl = new AbortController(); const timer = setTimeout(() => ctrl.abort(), TIMEOUT_MS);
   try {
-    const res = await fetch(URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ plateaux: Buffer.concat(rows).toString('base64') }), signal: ctrl.signal });
+    const res = await fetch(URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ plateaux: Buffer.concat(rows).toString('base64'), fen: c.fen(), suite: 8 }), signal: ctrl.signal });
     if (!res.ok) return null;
     const j = await res.json(); if (!j.ok) return null;
     if (j.trop_tot) return { tropTot: true, demiCoups: j.demi_coups, fenetre: j.fenetre };
     const l = j.lectures?.[0]; if (!l) return null;
-    return { demiCoup: l.demi_coup, camp: l.camp, fenetre: l.fenetre, themes: l.themes, arbres: l.arbres, attendu: l.attendu ?? null, depart: l.depart ?? null, fen: c.fen() };
+    return { demiCoup: l.demi_coup, camp: l.camp, fenetre: l.fenetre, themes: l.themes, arbres: l.arbres, attendu: l.attendu ?? null, depart: l.depart ?? null, fen: c.fen(), coups: j.coups ?? [], suite: j.suite ?? [] };
   } catch { return null; } finally { clearTimeout(timer); }
 }
 

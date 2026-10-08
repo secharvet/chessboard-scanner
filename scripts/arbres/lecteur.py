@@ -85,6 +85,57 @@ class Lecteur:
           arbres = [{'groupe': int(c), 'sim': float(sims[c]), 'nom': self.noms.get(int(c), {}).get('nom', ''), 'sens': self.noms.get(int(c), {}).get('sens', ''), 'phase': self.noms.get(int(c), {}).get('phase', ''), 'confiance': self.noms.get(int(c), {}).get('confiance', ''), 'parties': self.inv.get(int(c), {}).get('parties', 0)} for c in top]
         return {'demi_coup': int(end), 'camp': 'w' if (end - 1) % 2 == 0 else 'b', 'themes': themes, 'arbres': arbres, 'attendu': attendu, 'depart': depart}
 
+# ---- échiquier en Python (python-chess), même format que scripts/plateaux.mjs : 72 octets par demi-coup
+def rangee(board, move):
+    """Rangée de 72 octets APRÈS le coup `move` joué sur `board` (board est déjà dans la position d'après)."""
+    import chess
+    b = np.zeros(REC, dtype=np.uint8)
+    for sq, pc in board.piece_map().items(): b[sq] = pc.piece_type + (0 if pc.color == chess.WHITE else 6)
+    b[64] = 0 if board.turn == chess.WHITE else 1
+    b[65] = (1 if board.has_kingside_castling_rights(chess.WHITE) else 0) | (2 if board.has_queenside_castling_rights(chess.WHITE) else 0) | (4 if board.has_kingside_castling_rights(chess.BLACK) else 0) | (8 if board.has_queenside_castling_rights(chess.BLACK) else 0)
+    b[66] = move.from_square; b[67] = move.to_square
+    return b
+def plateaux_depuis(moves_san=None, moves_uci=None):
+    import chess
+    board = chess.Board(); rows = []
+    for m in (moves_san or moves_uci or []):
+        mv = board.parse_san(m) if moves_san else chess.Move.from_uci(m)
+        cap = board.piece_at(mv.to_square); is_cap = cap is not None or board.is_en_passant(mv)
+        board.push(mv); r = rangee(board, mv); r[68] = (cap.piece_type if cap else (1 if is_cap else 0)); r[69] = 2 if board.is_checkmate() else (1 if board.is_check() else 0); rows.append(r)
+    return np.stack(rows) if rows else np.zeros((0, REC), dtype=np.uint8), board
+
+def coup_probable(L, raw, board, k=3):
+    """Coups légaux les plus probables pour le camp au trait, d'après les têtes « prochain coup » du modèle (sans calcul)."""
+    import chess
+    n = len(raw); W = L.W
+    if n < W: return []
+    P = L.Plies([('p', raw)])
+    with torch.no_grad():
+        x, _, _, _ = P.batch(np.array([0]), np.array([n]), W, 0)
+        _, lf, lt, _, _ = L.model(torch.from_numpy(x)); pf = torch.softmax(lf[0], 0).numpy(); pt = torch.softmax(lt[0], 0).numpy()
+    me_black = (n - 1) % 2 == 1  # le camp qui vient de jouer ; le repère est retourné si c'est les Noirs
+    def ori(sq): return sq if not me_black else (7 - sq // 8) * 8 + sq % 8
+    cands = []
+    for mv in board.legal_moves:
+        sc = float(pf[ori(mv.from_square)] * pt[ori(mv.to_square)]); cands.append((sc, mv))
+    cands.sort(key=lambda t: -t[0]); tot = sum(c for c, _ in cands) or 1.0
+    return [{'uci': mv.uci(), 'san': board.san(mv), 'p': sc / tot} for sc, mv in cands[:k]]
+
+def suite_probable(L, L2, raw, board, n_plies=8):
+    """Déroule la suite la plus probable (gourmand), en s'arrêtant sur mat/nulle. Retourne la liste SAN."""
+    raw = raw.copy(); out = []
+    for _ in range(n_plies):
+        M = L if len(raw) >= L.W else L2
+        if M is None or len(raw) < M.W: break
+        c = coup_probable(M, raw, board, 1)
+        if not c: break
+        import chess
+        mv = chess.Move.from_uci(c[0]['uci']); san = board.san(mv); cap = board.piece_at(mv.to_square); is_cap = cap is not None or board.is_en_passant(mv)
+        board.push(mv); r = rangee(board, mv); r[68] = (cap.piece_type if cap else (1 if is_cap else 0)); r[69] = 2 if board.is_checkmate() else (1 if board.is_check() else 0)
+        raw = np.concatenate([raw, r[None]]); out.append(san)
+        if board.is_game_over(): break
+    return out
+
 def serveur(a):
     import base64
     from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -107,7 +158,13 @@ def serveur(a):
                 def lire(e):
                     e = int(e); M = L if e >= W else L2
                     r = M.lire_fin(raw, e); r['fenetre'] = M.W; return r
-                return self._send(200, {'ok': True, 'lectures': [lire(e) for e in ends if Wmin <= int(e) <= len(raw)]})
+                out = {'ok': True, 'lectures': [lire(e) for e in ends if Wmin <= int(e) <= len(raw)]}
+                if body.get('fen'):
+                    import chess
+                    board = chess.Board(body['fen']); M = L if len(raw) >= W else L2
+                    out['coups'] = coup_probable(M, raw, board, 3)
+                    out['suite'] = suite_probable(L, L2, raw, board.copy(), int(body.get('suite', 8)))
+                return self._send(200, out)
             except Exception as e:
                 return self._send(400, {'ok': False, 'error': str(e)})
     print(f'lecteur prêt sur 127.0.0.1:{a.port} (fenêtre {W}, relais {Wmin}, {0 if L.cent is None else len(L.cent)} arbres)', file=sys.stderr, flush=True)

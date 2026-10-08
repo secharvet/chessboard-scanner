@@ -11,7 +11,20 @@ import { askCoach } from './coach.mjs';
 import { judgeMove } from './move-judge.mjs';
 import { lireLaPartie, texteLecture } from './lecteur.mjs';
 import { expliquerLecture } from './intention-lecture.mjs';
-const texteIntention = (lecture, payload) => { if (!lecture || lecture.tropTot) return ''; const toi = payload.side === 'black' ? 'b' : 'w'; const x = expliquerLecture(lecture.fen, lecture, toi); return x.texte || texteLecture(lecture); };
+import { toFrenchSan } from './notation.mjs';
+const texteIntention = (lecture, payload) => {
+  if (!lecture || lecture.tropTot) return '';
+  const toi = payload.side === 'black' ? 'b' : 'w'; const x = expliquerLecture(lecture.fen, lecture, toi);
+  const parts = [];
+  if (lecture.suite?.length) {
+    // numérotation à partir du trait courant
+    const ply0 = lecture.fen.split(' ')[1] === 'w' ? 0 : 1; const num = Number(lecture.fen.split(' ')[5] || 1);
+    const txt = lecture.suite.map((san, i) => { const k = ply0 + i; const n = num + Math.floor(k / 2); const fr = toFrenchSan(san); return k % 2 === 0 ? `${n}.${fr}` : (i === 0 ? `${n}...${fr}` : fr); }).join(' ');
+    parts.push(`Suite probable d'après des parties semblables : ${txt}.`);
+  }
+  if (x.texte) parts.push(x.texte); else if (!parts.length) parts.push(texteLecture(lecture));
+  return parts.join(' ');
+};
 import { loadEnv } from './env.mjs';
 import { llmConfig } from './llm.mjs';
 import { UciEngine } from './uci-engine.mjs';

@@ -1350,3 +1350,8 @@ règle ne choisit le plan. Fiche : « Ce que je vois » en tête. Vérifié sur 
 cases f5/g3) et sur la partie de l'auteur (Ne4, Nf6, Nxe4 annoncés avant d'être joués). Limite : phrases au niveau du coup,
 pas encore du plan ; arbres biaisés finales (160/200) à refaire en milieu de jeu. Page de lecture :
 https://claude.ai/artifact/1Nc85Rb64nkZy6enMpQGnw ; arbres échelle nommés : https://claude.ai/artifact/LfE1M4ZUwt9tCyJCVZ9dUN.
+**8 octobre, soir, suite.** Suite probable (déroulé gourmand des têtes « prochain coup », python-chess dans le service) affichée
+en tête de la fiche ; sur Fischer–Spassky après 25...a5, les trois premiers demi-coups prédits sont ceux de la partie. Le modèle
+comme joueur (scripts/arbres/joueur.py, coup le plus probable sans calcul, ouvertures humaines, Stockfish bridé 50 ms) : 1/20 à
+1320, 1/20 à 1500, 1,5/20 à 1800, 0,5/20 à 2100 → moins de 1200 Elo : il lit, il ne calcule pas ; Stockfish garde la tactique.
+Demande de l'auteur : ne plus lui lister de coups, donner des résultats et des phrases ; il attend la suite et jugera en jouant.
