@@ -23,9 +23,40 @@ let recit = null; // punition en cours : { coups: string[], i, cle, retourFen, b
 function entree(c = game) { return livre.get(cle(c)) ?? null; }
 function numero(c, san) { const n = Math.ceil((c.history().length + 1) / 2); return c.turn() === 'w' ? `${n}. ${fr(san)}` : `${n}… ${fr(san)}`; }
 
+
+/** Flèches des coups proposés : vert = coup principal, bleu = variantes, rouge = fautes typiques, orange = coup survolé. */
+const COULEUR = { principal: '#3ee6b5', variante: '#6ea8ff', erreur: '#ff6b6b', survol: '#ffb86b' };
+function coordCase(sq) { const f = sq.charCodeAt(0) - 97; const r = Number(sq[1]) - 1; const x = orientation === 'white' ? f : 7 - f; const y = orientation === 'white' ? 7 - r : r; return [x * 12.5 + 6.25, y * 12.5 + 6.25]; }
+function dessinerFleches(fleches) {
+  const wrap = $('ouvBoard').querySelector('.fen-board-wrap'); if (!wrap) return;
+  wrap.querySelector('.fen-board__arrows')?.remove();
+  if (!fleches.length) return;
+  const NS = 'http://www.w3.org/2000/svg'; const svg = document.createElementNS(NS, 'svg');
+  svg.setAttribute('class', 'fen-board__arrows'); svg.setAttribute('viewBox', '0 0 100 100'); svg.setAttribute('aria-hidden', 'true');
+  for (const a of fleches) {
+    const [x1, y1] = coordCase(a.from); const [x2, y2] = coordCase(a.to); const dx = x2 - x1, dy = y2 - y1; const len = Math.hypot(dx, dy); if (!len) continue;
+    const ux = dx / len, uy = dy / len; const marge = 3.2, tete = 3.6, larg = a.epais ? 2.6 : 1.9;
+    const sx = x1 + ux * marge, sy = y1 + uy * marge; const ex = x2 - ux * tete, ey = y2 - uy * tete;
+    const line = document.createElementNS(NS, 'line'); line.setAttribute('x1', sx); line.setAttribute('y1', sy); line.setAttribute('x2', ex); line.setAttribute('y2', ey);
+    line.setAttribute('stroke', a.couleur); line.setAttribute('stroke-width', larg); line.setAttribute('stroke-linecap', 'round'); line.setAttribute('opacity', a.epais ? '0.95' : '0.75'); svg.appendChild(line);
+    const px = -uy, py = ux; const poly = document.createElementNS(NS, 'polygon');
+    poly.setAttribute('points', `${x2 - ux * 1.2},${y2 - uy * 1.2} ${ex + px * 2.4},${ey + py * 2.4} ${ex - px * 2.4},${ey - py * 2.4}`); poly.setAttribute('fill', a.couleur); poly.setAttribute('opacity', a.epais ? '0.95' : '0.75'); svg.appendChild(poly);
+  }
+  wrap.appendChild(svg);
+}
+function flechesDuLivre(surlign = null) {
+  const e = entree(); if (!e) return [];
+  const out = []; const c = game.fen();
+  const ajouter = (san, type) => { const t = new Chess(c); let m; try { m = t.move(san); } catch { return; } out.push({ from: m.from, to: m.to, couleur: surlign === san ? COULEUR.survol : COULEUR[type], epais: surlign === san || type === 'principal' }); };
+  (e.plan ?? []).forEach((p, i) => ajouter(p.san, i === 0 ? 'principal' : 'variante'));
+  (e.erreurs ?? []).forEach((x) => ajouter(x.san, 'erreur'));
+  return out;
+}
+
 function render(lastMove = null) {
   selected = null; targets = [];
   renderPlayBoard($('ouvBoard'), { fen: game.fen(), orientation, lastMove: lastMove ?? dernier(), targets: [] });
+  if (!recit) dessinerFleches(flechesDuLivre());
   renderLigne(); if (recit) afficherRecit(); else renderPanneau();
 }
 function dernier() { const h = game.history({ verbose: true }); const m = h.at(-1); return m ? { from: m.from, to: m.to } : null; }
@@ -76,7 +107,7 @@ function carte(san, pourquoi, tag, erreur, clePunition = null) {
   const d = document.createElement('div'); d.className = 'coup' + (tag === 'principal' ? ' coup--principal' : '') + (erreur ? ' coup--erreur' : '');
   const pun = clePunition ? PUNITIONS[clePunition] : null;
   d.innerHTML = `<div class="coup__san">${fr(san)}<small>${tag}</small></div><div class="coup__why">${pourquoi}${pun ? ` <span class="coup__pun">— punition : ${pun.ligne.map(fr).join(' ')}</span>` : ''}</div>`;
-  d.addEventListener('mouseenter', () => demarrerApercu(san, pun ? pun.ligne : null));
+  d.addEventListener('mouseenter', () => { dessinerFleches(flechesDuLivre(san)); demarrerApercu(san, pun ? pun.ligne : null); });
   d.addEventListener('mouseleave', arreterApercu);
   d.addEventListener('click', () => { arreterApercu(); if (pun) demarrerRecit(san, pun, pourquoi); else jouer(san); });
   return d;
@@ -150,13 +181,14 @@ function demarrerApercu(san, ligne = null) {
 function arreterApercu() {
   if (!apercu) return; clearTimeout(apercu.timer); apercu.badge?.remove(); apercu = null;
   renderPlayBoard($('ouvBoard'), { fen: game.fen(), orientation, lastMove: dernier(), targets: [] });
+  if (!recit) dessinerFleches(flechesDuLivre());
 }
 
 function jouer(san) { recit = null; try { game.move(san); } catch { return; } render(); }
 
 // Déplacement des pièces : clic sur une pièce puis sur une case cible, ou glisser-déposer (comme la page de jeu).
 let selected = null; let targets = [];
-function refreshBoard() { renderPlayBoard($('ouvBoard'), { fen: game.fen(), orientation, lastMove: dernier(), targets, dragFrom: selected }); }
+function refreshBoard() { renderPlayBoard($('ouvBoard'), { fen: game.fen(), orientation, lastMove: dernier(), targets, dragFrom: selected }); if (!recit) dessinerFleches(flechesDuLivre()); }
 function tenter(from, to) {
   selected = null; targets = [];
   try { game.move({ from, to, promotion: 'q' }); } catch { refreshBoard(); return; }
