@@ -1,18 +1,19 @@
 /* Assistant d'ouverture (maquette, 8 octobre 2026) : échiquier compact à gauche, récit à droite. */
-.ouv__layout { display: grid; grid-template-columns: minmax(280px, 440px) minmax(0, 1fr); grid-template-areas: 'gauche droite' 'gauche entrainement'; gap: 20px; padding: 16px; align-items: start; }
-.ouv__gauche { grid-area: gauche; } .ouv__droite { grid-area: droite; } .ouv__entrainement { grid-area: entrainement; }
-.ouv__board-wrap { width: 100%; max-width: 440px; aspect-ratio: 1; }
+.ouv__layout { display: grid; grid-template-columns: minmax(300px, 400px) minmax(0, 1fr); gap: 20px; padding: 12px 16px; align-items: start; }
+.ouv__gauche { position: sticky; top: 10px; align-self: start; display: flex; flex-direction: column; gap: 6px; }
+.ouv__board-wrap { width: min(100%, calc(100vh - 460px)); min-width: 280px; max-width: 400px; aspect-ratio: 1; }
 .ouv__board-wrap .board { width: 100%; height: 100%; }
-.ouv__ligne { margin-top: 10px; font-family: var(--mono); font-size: 0.9rem; line-height: 1.7; color: var(--muted); min-height: 1.7em; }
+.ouv__ligne { margin-top: 6px; font-family: var(--mono); font-size: 0.82rem; line-height: 1.6; color: var(--muted); min-height: 1.6em; max-height: 3.2em; overflow-y: auto; }
 .ouv__ligne .mv { cursor: pointer; padding: 1px 4px; border-radius: 4px; }
 .ouv__ligne .mv:hover { background: rgba(255,255,255,0.08); color: var(--text); }
 .ouv__ligne .mv--cur { color: var(--text); background: rgba(124,92,255,0.25); }
-.ouv__boutons { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+.ouv__boutons { display: flex; gap: 6px; margin-top: 6px; flex-wrap: wrap; }
+.ouv__boutons .btn { padding: 5px 10px; font-size: 0.85rem; }
 .btn { background: rgba(255,255,255,0.06); border: 1px solid var(--border); color: var(--text); border-radius: 8px; padding: 7px 12px; cursor: pointer; font: inherit; }
 .btn:hover { background: rgba(255,255,255,0.12); }
 .btn--primary { background: var(--accent); border-color: transparent; }
 .btn--primary:hover { filter: brightness(1.1); }
-.ouv__aide { color: var(--muted); font-size: 0.85rem; margin-top: 8px; }
+.ouv__aide { color: var(--muted); font-size: 0.78rem; margin: 4px 0 6px; }
 .ouv__droite { background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 20px; min-width: 0; }
 .ouv__titre { font-size: 1.25rem; font-weight: 600; margin-bottom: 6px; display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
 .ouv__etat { font-size: 0.8rem; color: var(--muted); font-weight: normal; }
@@ -52,7 +53,7 @@
   .ouv { padding: 0 !important; margin: 0; }
   .ouv__layout { display: flex; flex-direction: column; gap: 0; padding: 0; height: calc(100dvh - 42px); height: calc(100vh - 42px); }
   .ouv__gauche { flex: 0 0 auto; display: flex; flex-direction: column; }
-  .ouv__board-wrap { max-width: 100vw; width: 100vw; }
+  .ouv__board-wrap { max-width: 100vw; width: 100vw; min-width: 0; }
   .ouv__ligne { margin: 4px 10px 0; font-size: 0.78rem; line-height: 1.5; min-height: 0; max-height: 2.6em; overflow-y: auto; }
   .ouv__droite { flex: 1 1 auto; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; border-radius: 0; border-left: 0; border-right: 0; padding: 10px 12px 64px; }
   .ouv__titre { font-size: 1.05rem; }
@@ -66,17 +67,18 @@
 }
 
 /* Échiquier d'entraînement (PC) */
-.ouv__entrainement { background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 16px; min-width: 0; }
-.ent__tete { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 10px; }
-.ent__titre { font-weight: 600; display: flex; gap: 10px; align-items: baseline; }
-.ent__options { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; font-size: 0.85rem; color: var(--muted); }
+.ouv__entrainement { background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: var(--radius); padding: 8px 10px; min-width: 0; margin-top: 4px; }
+.ent__tete { display: flex; flex-direction: column; gap: 4px; margin-bottom: 6px; }
+.ent__titre { font-weight: 600; font-size: 0.9rem; display: flex; gap: 8px; align-items: baseline; }
+.ent__options { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; font-size: 0.78rem; color: var(--muted); }
+.ent__options .btn { padding: 3px 8px; font-size: 0.78rem; }
 .ent__options select { margin-left: 4px; }
-.ent__corps { display: grid; grid-template-columns: minmax(240px, 340px) minmax(0, 1fr); gap: 16px; align-items: start; }
-.ent__board-wrap { width: 100%; max-width: 340px; aspect-ratio: 1; position: relative; }
+.ent__corps { display: grid; grid-template-columns: minmax(180px, 240px) minmax(0, 1fr); gap: 10px; align-items: start; }
+.ent__board-wrap { width: 100%; max-width: 240px; aspect-ratio: 1; position: relative; }
 .ent__board-wrap .board { width: 100%; height: 100%; }
-.ent__panneau { font-size: 0.95rem; line-height: 1.5; }
+.ent__panneau { font-size: 0.8rem; line-height: 1.4; max-height: 240px; overflow-y: auto; }
 .ent__panneau p { margin: 0 0 8px; }
 .ent__panneau .ok { color: var(--accent2); } .ent__panneau .ko { color: #ffb86b; }
-.ent__ligne { font-family: var(--mono); font-size: 0.85rem; color: var(--muted); margin-top: 6px; }
-@media (max-width: 800px) { .ouv__entrainement { display: none; } .ouv__layout { grid-template-areas: none; } }
-@media (max-width: 1100px) and (min-width: 801px) { .ouv__layout { grid-template-columns: 1fr; grid-template-areas: 'gauche' 'droite' 'entrainement'; } }
+.ent__ligne { font-family: var(--mono); font-size: 0.72rem; color: var(--muted); margin-top: 4px; }
+@media (max-width: 800px) { .ouv__entrainement { display: none; } .ouv__gauche { position: static; } }
+@media (max-width: 1100px) and (min-width: 801px) { .ouv__layout { grid-template-columns: 1fr; } .ouv__gauche { position: static; } }
