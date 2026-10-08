@@ -244,7 +244,7 @@ function entPanneau(note = '') {
   let html = '';
   if (note) html += `<p>${note}</p>`;
   if (last) {
-    const qui = last.color === ent.couleur ? 'Toi' : 'Stockfish';
+    const qui = last.color === ent.couleur ? 'Toi' : (e ? 'L\'adversaire (suit le livre)' : 'Stockfish');
     if (e) html += `<p><span class="ok">Encore dans le livre.</span> ${qui} : <b>${fr(last.san)}</b>${e.sens ? ' — ' + sensPhrase(e.sens) : ''}</p>`;
     else html += `<p><span class="ko">Hors du livre</span> depuis ${qui === 'Toi' ? 'ton coup' : 'la réponse de Stockfish'} <b>${fr(last.san)}</b>. Le livre n'a rien écrit ici ; « Voir dans le livre » t'amène à la dernière position connue.</p>`;
   }
@@ -255,6 +255,15 @@ function entPanneau(note = '') {
 }
 async function entMoteur() {
   if (ent.game.isGameOver() || ent.game.turn() === ent.couleur) return;
+  // Tant que la position est dans le livre, l'adversaire suit le livre (principal 7 fois sur 10, sinon une variante) :
+  // c'est le seul moyen de s'entraîner à CETTE ouverture. Hors du livre, Stockfish joue librement.
+  const e = entEntree();
+  if (e?.plan?.length) {
+    const choix = e.plan.length > 1 && Math.random() > 0.7 ? e.plan[1 + Math.floor(Math.random() * (e.plan.length - 1))] : e.plan[0];
+    await new Promise((r) => setTimeout(r, 350));
+    try { ent.game.move(choix.san); ent.livreCoup = choix; } catch { /* coup illisible : on passe au moteur */ }
+    if (ent.game.turn() === ent.couleur) { entRender(); entPanneau(); return; }
+  }
   ent.pensant = true; entPanneau();
   try {
     const depth = Number($('entNiveau').value); const r = await getEngineMove(ent.game.fen(), { depth });
