@@ -8,13 +8,13 @@ export const PUNITIONS = {
    "dxe4",
    "Bxe4",
    "Nf6",
-   "Bf3",
+   "Bd3",
    "c5",
-   "Ne2"
+   "c3"
   ],
-  "evalAvant": 37,
-  "evalApres": -15,
-  "perte": 52,
+  "evalAvant": 42,
+  "evalApres": -27,
+  "perte": 69,
   "mat": false
  },
  "e4 e6 d4 d5 f3": {
@@ -24,14 +24,14 @@ export const PUNITIONS = {
   "ligne": [
    "dxe4",
    "Nc3",
+   "Nc6",
+   "Bb5",
    "Bb4",
-   "fxe4",
-   "Qh4+",
-   "Ke2"
+   "fxe4"
   ],
-  "evalAvant": 31,
-  "evalApres": -44,
-  "perte": 75,
+  "evalAvant": 41,
+  "evalApres": -55,
+  "perte": 96,
   "mat": false
  },
  "e4 e6 d4 d5 e5 Nc6": {
@@ -41,13 +41,13 @@ export const PUNITIONS = {
   "ligne": [
    "Nf3",
    "f6",
-   "c3",
-   "fxe5",
-   "Nxe5",
-   "Nxe5"
+   "Bd3",
+   "Nb4",
+   "Be2",
+   "c5"
   ],
-  "evalAvant": -27,
-  "evalApres": -79,
+  "evalAvant": -21,
+  "evalApres": -73,
   "perte": 52,
   "mat": false
  },
@@ -63,9 +63,9 @@ export const PUNITIONS = {
    "h5",
    "g5"
   ],
-  "evalAvant": -28,
-  "evalApres": -113,
-  "perte": 85,
+  "evalAvant": -27,
+  "evalApres": -105,
+  "perte": 78,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 dxc5": {
@@ -78,11 +78,11 @@ export const PUNITIONS = {
    "Bxc5",
    "a3",
    "f6",
-   "b4"
+   "Bb5"
   ],
-  "evalAvant": 29,
-  "evalApres": -75,
-  "perte": 104,
+  "evalAvant": 33,
+  "evalApres": -46,
+  "perte": 79,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 Qg4": {
@@ -92,14 +92,14 @@ export const PUNITIONS = {
   "ligne": [
    "Nc6",
    "Nf3",
-   "cxd4",
-   "Bd3",
    "h5",
-   "Qf4"
+   "Qf4",
+   "f6",
+   "h4"
   ],
-  "evalAvant": 31,
-  "evalApres": -101,
-  "perte": 132,
+  "evalAvant": 26,
+  "evalApres": -92,
+  "perte": 118,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 Nc3": {
@@ -114,9 +114,9 @@ export const PUNITIONS = {
    "Bc5",
    "Nbxd4"
   ],
-  "evalAvant": 35,
-  "evalApres": -52,
-  "perte": 87,
+  "evalAvant": 26,
+  "evalApres": -57,
+  "perte": 83,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 c3 Nc6 f4": {
@@ -124,16 +124,16 @@ export const PUNITIONS = {
   "faute": "f4",
   "fautif": "w",
   "ligne": [
-   "Nh6",
-   "Nf3",
    "Qb6",
-   "dxc5",
-   "Bxc5",
-   "Bd3"
+   "Nf3",
+   "Nh6",
+   "Na3",
+   "cxd4",
+   "cxd4"
   ],
-  "evalAvant": 30,
-  "evalApres": -60,
-  "perte": 90,
+  "evalAvant": 22,
+  "evalApres": -38,
+  "perte": 60,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 c3 Nc6 Bd3": {
@@ -146,11 +146,11 @@ export const PUNITIONS = {
    "dxc3",
    "Nxc3",
    "f6",
-   "Qe2"
+   "Qa4"
   ],
-  "evalAvant": 26,
-  "evalApres": -58,
-  "perte": 84,
+  "evalAvant": 29,
+  "evalApres": -53,
+  "perte": 82,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 b3": {
@@ -160,14 +160,14 @@ export const PUNITIONS = {
   "ligne": [
    "cxd4",
    "Bd3",
-   "dxc3",
-   "Nxc3",
    "f6",
-   "O-O"
+   "cxd4",
+   "Bb4+",
+   "Bd2"
   ],
-  "evalAvant": 35,
-  "evalApres": -30,
-  "perte": 65,
+  "evalAvant": 33,
+  "evalApres": -57,
+  "perte": 90,
   "mat": false
  },
  "e4 e6 d4 d5 Nc3 Bb4 Bd3": {
@@ -182,9 +182,9 @@ export const PUNITIONS = {
    "O-O",
    "Ne2"
   ],
-  "evalAvant": 65,
-  "evalApres": 0,
-  "perte": 65,
+  "evalAvant": 63,
+  "evalApres": 2,
+  "perte": 61,
   "mat": false
  },
  "e4 e6 d4 d5 Nc3 dxe4 Nxe4 Nf6 Nc3": {
@@ -192,16 +192,16 @@ export const PUNITIONS = {
   "faute": "Nc3",
   "fautif": "w",
   "ligne": [
-   "Be7",
-   "Nf3",
-   "O-O",
-   "Be2",
-   "b6",
-   "Ne5"
+   "a6",
+   "g3",
+   "c5",
+   "dxc5",
+   "Qxd1+",
+   "Nxd1"
   ],
-  "evalAvant": 72,
-  "evalApres": -11,
-  "perte": 83,
+  "evalAvant": 82,
+  "evalApres": -7,
+  "perte": 89,
   "mat": false
  },
  "e4 e6 d4 d5 e5 Nc6 Nf3 Be7": {
@@ -216,9 +216,9 @@ export const PUNITIONS = {
    "exf6",
    "Bxf6"
   ],
-  "evalAvant": -83,
-  "evalApres": -133,
-  "perte": 50,
+  "evalAvant": -63,
+  "evalApres": -141,
+  "perte": 78,
   "mat": false
  },
  "e4 e6 d4 d5 e5 Nc6 Nf3 Qe7": {
@@ -226,16 +226,16 @@ export const PUNITIONS = {
   "faute": "Qe7",
   "fautif": "b",
   "ligne": [
-   "Bd3",
+   "Be2",
    "f6",
    "O-O",
-   "Qf7",
-   "a3",
-   "Nge7"
+   "fxe5",
+   "dxe5",
+   "Nh6"
   ],
-  "evalAvant": -70,
-  "evalApres": -148,
-  "perte": 78,
+  "evalAvant": -95,
+  "evalApres": -140,
+  "perte": 45,
   "mat": false
  },
  "e4 e6 d4 d5 e5 Bd7 Nf3 Nh6": {
@@ -246,13 +246,13 @@ export const PUNITIONS = {
    "Bxh6",
    "gxh6",
    "c4",
-   "dxc4",
-   "Bxc4",
-   "c5"
+   "Bg7",
+   "Nc3",
+   "O-O"
   ],
-  "evalAvant": -29,
-  "evalApres": -103,
-  "perte": 74,
+  "evalAvant": -25,
+  "evalApres": -84,
+  "perte": 59,
   "mat": false
  },
  "e4 e6 d4 d5 e5 Bd7 Nf3 c6": {
@@ -265,11 +265,11 @@ export const PUNITIONS = {
    "c3",
    "Nc6",
    "O-O",
-   "cxd4"
+   "a6"
   ],
-  "evalAvant": -23,
-  "evalApres": -86,
-  "perte": 63,
+  "evalAvant": -28,
+  "evalApres": -101,
+  "perte": 73,
   "mat": false
  },
  "e4 e6 d4 d5 Nd2 Nc6 Ngf3 Be7": {
@@ -282,11 +282,11 @@ export const PUNITIONS = {
    "Nxe4",
    "Nf6",
    "Bd3",
-   "b6"
+   "Nxe4"
   ],
-  "evalAvant": -61,
-  "evalApres": -131,
-  "perte": 70,
+  "evalAvant": -67,
+  "evalApres": -129,
+  "perte": 62,
   "mat": false
  },
  "e4 e6 d4 d5 Nd2 Nc6 Ngf3 Nb8": {
@@ -295,15 +295,15 @@ export const PUNITIONS = {
   "fautif": "b",
   "ligne": [
    "Bd3",
-   "Nf6",
-   "Qe2",
    "c5",
-   "dxc5",
-   "Bxc5"
+   "exd5",
+   "exd5",
+   "O-O",
+   "Nf6"
   ],
-  "evalAvant": -67,
-  "evalApres": -120,
-  "perte": 53,
+  "evalAvant": -73,
+  "evalApres": -157,
+  "perte": 84,
   "mat": false
  },
  "e4 e6 d4 d5 e5 Nc6 Nf3 f6 h3": {
@@ -312,15 +312,15 @@ export const PUNITIONS = {
   "fautif": "w",
   "ligne": [
    "fxe5",
-   "Nxe5",
-   "Nxe5",
    "dxe5",
-   "Ne7",
-   "Bd3"
+   "Nh6",
+   "Bb5",
+   "Nf5",
+   "Nc3"
   ],
-  "evalAvant": 89,
-  "evalApres": 38,
-  "perte": 51,
+  "evalAvant": 64,
+  "evalApres": 36,
+  "perte": 28,
   "mat": false
  },
  "e4 e6 d4 d5 e5 Bd7 Nf3 c5 Nc3": {
@@ -335,9 +335,9 @@ export const PUNITIONS = {
    "a6",
    "O-O"
   ],
-  "evalAvant": 24,
-  "evalApres": -21,
-  "perte": 45,
+  "evalAvant": 20,
+  "evalApres": -14,
+  "perte": 34,
   "mat": false
  },
  "e4 e6 d4 d5 e5 Bd7 Nf3 c5 a4": {
@@ -352,9 +352,9 @@ export const PUNITIONS = {
    "Nbc6",
    "Nf3"
   ],
-  "evalAvant": 25,
+  "evalAvant": 23,
   "evalApres": -31,
-  "perte": 56,
+  "perte": 54,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 Nf3 cxd4 Be2": {
@@ -369,9 +369,9 @@ export const PUNITIONS = {
    "Ng6",
    "Re1"
   ],
-  "evalAvant": -11,
+  "evalAvant": -9,
   "evalApres": -72,
-  "perte": 61,
+  "perte": 63,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 Nf3 cxd4 a3": {
@@ -380,15 +380,15 @@ export const PUNITIONS = {
   "fautif": "w",
   "ligne": [
    "Nc6",
-   "c3",
-   "dxc3",
-   "Nxc3",
-   "a6",
-   "Bf4"
+   "Bf4",
+   "Nge7",
+   "Bd3",
+   "Ng6",
+   "Bg3"
   ],
-  "evalAvant": -2,
-  "evalApres": -82,
-  "perte": 80,
+  "evalAvant": -14,
+  "evalApres": -67,
+  "perte": 53,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 Qg4 cxd4 Qd1": {
@@ -396,16 +396,16 @@ export const PUNITIONS = {
   "faute": "Qd1",
   "fautif": "w",
   "ligne": [
-   "Nc6",
-   "f4",
    "f6",
    "Nf3",
-   "fxe5",
-   "fxe5"
+   "Nc6",
+   "Nxd4",
+   "Nxe5",
+   "Bb5+"
   ],
-  "evalAvant": -87,
-  "evalApres": -171,
-  "perte": 84,
+  "evalAvant": -92,
+  "evalApres": -156,
+  "perte": 64,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 Qg4 cxd4 Qh3": {
@@ -414,15 +414,15 @@ export const PUNITIONS = {
   "fautif": "w",
   "ligne": [
    "Nc6",
-   "Nf3",
-   "f6",
-   "Bd3",
-   "Qc7",
-   "O-O"
+   "f4",
+   "Nb4",
+   "Qb3",
+   "a5",
+   "c3"
   ],
-  "evalAvant": -89,
-  "evalApres": -177,
-  "perte": 88,
+  "evalAvant": -88,
+  "evalApres": -171,
+  "perte": 83,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 dxc5 Bxc5 f4": {
@@ -430,16 +430,16 @@ export const PUNITIONS = {
   "faute": "f4",
   "fautif": "w",
   "ligne": [
-   "Nc6",
-   "Nd2",
    "Nh6",
    "Bd3",
+   "Nc6",
+   "Nd2",
    "O-O",
    "Nb3"
   ],
-  "evalAvant": -32,
-  "evalApres": -107,
-  "perte": 75,
+  "evalAvant": -37,
+  "evalApres": -106,
+  "perte": 69,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 dxc5 Bxc5 c4": {
@@ -451,12 +451,12 @@ export const PUNITIONS = {
    "Qc2",
    "Nc6",
    "Nf3",
-   "Bd7",
+   "Nge7",
    "Nc3"
   ],
-  "evalAvant": -37,
-  "evalApres": -76,
-  "perte": 39,
+  "evalAvant": -34,
+  "evalApres": -82,
+  "perte": 48,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 c3 Qb6 Nf3 Ne7": {
@@ -465,15 +465,15 @@ export const PUNITIONS = {
   "fautif": "b",
   "ligne": [
    "Bd3",
-   "Nd7",
-   "O-O",
-   "Nc6",
+   "Nbc6",
    "dxc5",
-   "Nxc5"
+   "Qxc5",
+   "O-O",
+   "Ng6"
   ],
-  "evalAvant": -33,
-  "evalApres": -105,
-  "perte": 72,
+  "evalAvant": -22,
+  "evalApres": -93,
+  "perte": 71,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 c3 Qb6 Nf3 f6": {
@@ -484,13 +484,13 @@ export const PUNITIONS = {
    "Bd3",
    "Nc6",
    "O-O",
-   "Be7",
-   "Re1",
-   "fxe5"
+   "Bd7",
+   "a4",
+   "a6"
   ],
-  "evalAvant": -37,
-  "evalApres": -107,
-  "perte": 70,
+  "evalAvant": -31,
+  "evalApres": -102,
+  "perte": 71,
   "mat": false
  },
  "e4 e6 d4 d5 exd5 exd5 c4 Nf6 h3": {
@@ -505,9 +505,9 @@ export const PUNITIONS = {
    "Ne4",
    "Bd2"
   ],
-  "evalAvant": -7,
-  "evalApres": -46,
-  "perte": 39,
+  "evalAvant": -3,
+  "evalApres": -66,
+  "perte": 63,
   "mat": false
  },
  "e4 e6 d4 d5 Nd2 Nc6 Ngf3 Nf6 exd5": {
@@ -522,9 +522,9 @@ export const PUNITIONS = {
    "Qe7",
    "Qxe7+"
   ],
-  "evalAvant": 70,
+  "evalAvant": 73,
   "evalApres": 0,
-  "perte": 70,
+  "perte": 73,
   "mat": false
  },
  "e4 e6 d4 d5 Nd2 Nc6 Ngf3 Nf6 Bd3": {
@@ -539,9 +539,9 @@ export const PUNITIONS = {
    "dxe4",
    "dxe4"
   ],
-  "evalAvant": 76,
-  "evalApres": 2,
-  "perte": 74,
+  "evalAvant": 71,
+  "evalApres": 1,
+  "perte": 70,
   "mat": false
  },
  "e4 e6 d4 d5 e5 Bd7 Nf3 c5 c3 b5": {
@@ -556,9 +556,9 @@ export const PUNITIONS = {
    "O-O",
    "Nc6"
   ],
-  "evalAvant": -31,
-  "evalApres": -78,
-  "perte": 47,
+  "evalAvant": -25,
+  "evalApres": -77,
+  "perte": 52,
   "mat": false
  },
  "e4 e6 d4 d5 e5 Nc6 Nf3 f6 Bb5 Nh6": {
@@ -569,13 +569,13 @@ export const PUNITIONS = {
    "Bxh6",
    "gxh6",
    "O-O",
-   "Bg7",
-   "Nbd2",
-   "Bd7"
+   "Bd7",
+   "Re1",
+   "a6"
   ],
-  "evalAvant": -86,
-  "evalApres": -177,
-  "perte": 91,
+  "evalAvant": -66,
+  "evalApres": -176,
+  "perte": 110,
   "mat": false
  },
  "e4 e6 d4 d5 e5 Nc6 Nf3 f6 Bb5 Qe7": {
@@ -584,15 +584,15 @@ export const PUNITIONS = {
   "fautif": "b",
   "ligne": [
    "c4",
-   "Bd7",
-   "Nc3",
-   "Qf7",
+   "dxc4",
    "O-O",
-   "Nge7"
+   "Bd7",
+   "Bxc4",
+   "O-O-O"
   ],
-  "evalAvant": -86,
-  "evalApres": -149,
-  "perte": 63,
+  "evalAvant": -67,
+  "evalApres": -153,
+  "perte": 86,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 Qg4 cxd4 Nf3 Qd7": {
@@ -600,16 +600,16 @@ export const PUNITIONS = {
   "faute": "Qd7",
   "fautif": "b",
   "ligne": [
-   "Nxd4",
-   "h5",
-   "Qf4",
+   "Bd3",
    "Nc6",
-   "Nxc6",
-   "bxc6"
+   "O-O",
+   "f6",
+   "Re1",
+   "Qf7"
   ],
-  "evalAvant": 116,
-  "evalApres": -10,
-  "perte": 126,
+  "evalAvant": 114,
+  "evalApres": -24,
+  "perte": 138,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 Qg4 cxd4 Nf3 Qc7": {
@@ -622,11 +622,11 @@ export const PUNITIONS = {
    "Bb5+",
    "Nc6",
    "Qxd4",
-   "Kf7"
+   "a6"
   ],
-  "evalAvant": 108,
-  "evalApres": 68,
-  "perte": 40,
+  "evalAvant": 116,
+  "evalApres": 46,
+  "perte": 70,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 Nf3 cxd4 Nxd4 Qb6": {
@@ -641,9 +641,9 @@ export const PUNITIONS = {
    "Rb1",
    "a6"
   ],
-  "evalAvant": -2,
-  "evalApres": -38,
-  "perte": 36,
+  "evalAvant": 5,
+  "evalApres": -44,
+  "perte": 49,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 Nf3 cxd4 Nxd4 Qa5+": {
@@ -656,11 +656,11 @@ export const PUNITIONS = {
    "Nb3",
    "Qc7",
    "f4",
-   "Bd7"
+   "Nh6"
   ],
-  "evalAvant": 3,
-  "evalApres": -60,
-  "perte": 63,
+  "evalAvant": 6,
+  "evalApres": -55,
+  "perte": 61,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 dxc5 Bxc5 Nd2 Be7": {
@@ -675,9 +675,9 @@ export const PUNITIONS = {
    "Nxe5",
    "Nf6"
   ],
-  "evalAvant": 39,
-  "evalApres": -10,
-  "perte": 49,
+  "evalAvant": 32,
+  "evalApres": -15,
+  "perte": 47,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 dxc5 Bxc5 Nd2 Bd7": {
@@ -692,9 +692,9 @@ export const PUNITIONS = {
    "Bd3",
    "Nc6"
   ],
-  "evalAvant": 36,
-  "evalApres": -37,
-  "perte": 73,
+  "evalAvant": 26,
+  "evalApres": -34,
+  "perte": 60,
   "mat": false
  },
  "e4 e6 d4 d5 Nd2 Nc6 Ngf3 Nf6 e5 Ne4": {
@@ -703,15 +703,15 @@ export const PUNITIONS = {
   "fautif": "b",
   "ligne": [
    "c3",
-   "f6",
-   "exf6",
-   "Nxf6",
-   "Bd3",
-   "Bd6"
+   "f5",
+   "Ng1",
+   "Nb8",
+   "Nh3",
+   "c5"
   ],
-  "evalAvant": -76,
-  "evalApres": -129,
-  "perte": 53,
+  "evalAvant": -75,
+  "evalApres": -127,
+  "perte": 52,
   "mat": false
  },
  "e4 e6 d4 d5 Nd2 Nc6 Ngf3 Nf6 e5 Nxd4": {
@@ -726,9 +726,9 @@ export const PUNITIONS = {
    "h3",
    "Bg7"
   ],
-  "evalAvant": -70,
-  "evalApres": -482,
-  "perte": 412,
+  "evalAvant": -78,
+  "evalApres": -488,
+  "perte": 410,
   "mat": false
  },
  "e4 e6 d4 d5 exd5 exd5 Nf3 Bd6 c4 Bg4": {
@@ -736,16 +736,16 @@ export const PUNITIONS = {
   "faute": "Bg4",
   "fautif": "b",
   "ligne": [
-   "Qb3",
-   "Bxf3",
-   "gxf3",
-   "Nc6",
    "cxd5",
-   "Nce7"
+   "Nf6",
+   "h3",
+   "Bb4+",
+   "Nc3",
+   "Bxf3"
   ],
-  "evalAvant": -12,
-  "evalApres": -75,
-  "perte": 63,
+  "evalAvant": -17,
+  "evalApres": -56,
+  "perte": 39,
   "mat": false
  },
  "e4 e6 d4 d5 exd5 exd5 Nf3 Bd6 c4 Nd7": {
@@ -755,14 +755,14 @@ export const PUNITIONS = {
   "ligne": [
    "c5",
    "Be7",
+   "Nc3",
+   "Nf8",
    "Bd3",
-   "Bf6",
-   "O-O",
-   "Nf8"
+   "Bf6"
   ],
-  "evalAvant": -12,
-  "evalApres": -90,
-  "perte": 78,
+  "evalAvant": -17,
+  "evalApres": -79,
+  "perte": 62,
   "mat": false
  },
  "e4 e6 d4 d5 e5 Nc6 Nf3 f6 Bb5 a6 Nc3": {
@@ -777,9 +777,9 @@ export const PUNITIONS = {
    "Nh6",
    "O-O"
   ],
-  "evalAvant": 73,
-  "evalApres": -551,
-  "perte": 624,
+  "evalAvant": 93,
+  "evalApres": -547,
+  "perte": 640,
   "mat": false
  },
  "e4 e6 d4 d5 e5 Nc6 Nf3 f6 Bb5 a6 O-O": {
@@ -794,9 +794,9 @@ export const PUNITIONS = {
    "fxe5",
    "dxe5"
   ],
-  "evalAvant": 83,
-  "evalApres": -632,
-  "perte": 715,
+  "evalAvant": 79,
+  "evalApres": -618,
+  "perte": 697,
   "mat": false
  },
  "e4 e6 d4 d5 Nd2 c5 exd5 exd5 Ngf3 Qd7": {
@@ -805,15 +805,15 @@ export const PUNITIONS = {
   "fautif": "b",
   "ligne": [
    "Ne5",
-   "Qe6",
-   "Be2",
-   "cxd4",
-   "Ndf3",
-   "Nf6"
+   "Qc7",
+   "Bb5+",
+   "Nc6",
+   "Qe2",
+   "Be7"
   ],
-  "evalAvant": -6,
-  "evalApres": -82,
-  "perte": 76,
+  "evalAvant": -2,
+  "evalApres": -73,
+  "perte": 71,
   "mat": false
  },
  "e4 e6 d4 d5 Nd2 c5 exd5 Qxd5 Ngf3 Qd8": {
@@ -828,9 +828,9 @@ export const PUNITIONS = {
    "Nxd4",
    "a6"
   ],
-  "evalAvant": -18,
-  "evalApres": -71,
-  "perte": 53,
+  "evalAvant": -8,
+  "evalApres": -67,
+  "perte": 59,
   "mat": false
  },
  "e4 e6 d4 d5 Nd2 c5 exd5 Qxd5 Ngf3 Bd7": {
@@ -845,9 +845,9 @@ export const PUNITIONS = {
    "Bd3",
    "Qh5"
   ],
-  "evalAvant": -18,
-  "evalApres": -123,
-  "perte": 105,
+  "evalAvant": -11,
+  "evalApres": -117,
+  "perte": 106,
   "mat": false
  },
  "e4 e6 d4 d5 Nc3 Nf6 e5 Nfd7 f4 c5 Be2": {
@@ -862,9 +862,9 @@ export const PUNITIONS = {
    "Bb4+",
    "Kf1"
   ],
-  "evalAvant": 42,
-  "evalApres": -57,
-  "perte": 99,
+  "evalAvant": 43,
+  "evalApres": -60,
+  "perte": 103,
   "mat": false
  },
  "e4 e6 d4 d5 Nc3 Nf6 e5 Nfd7 f4 c5 h4": {
@@ -879,9 +879,9 @@ export const PUNITIONS = {
    "Nxd4",
    "Qxd4"
   ],
-  "evalAvant": 40,
-  "evalApres": -27,
-  "perte": 67,
+  "evalAvant": 43,
+  "evalApres": -29,
+  "perte": 72,
   "mat": false
  },
  "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Bxc3+ Bd2": {
@@ -889,16 +889,16 @@ export const PUNITIONS = {
   "faute": "Bd2",
   "fautif": "w",
   "ligne": [
-   "Bxd4",
-   "Nf3",
-   "Qc7",
-   "Nxd4",
+   "Bxd2+",
+   "Qxd2",
+   "Nc6",
+   "c3",
    "cxd4",
-   "f4"
+   "cxd4"
   ],
-  "evalAvant": 66,
-  "evalApres": -706,
-  "perte": 772,
+  "evalAvant": 65,
+  "evalApres": -705,
+  "perte": 770,
   "mat": false
  },
  "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Bxc3+ Qd2": {
@@ -908,14 +908,14 @@ export const PUNITIONS = {
   "ligne": [
    "Bxd2+",
    "Bxd2",
-   "Bd7",
-   "f4",
-   "Nc6",
-   "Nf3"
+   "c4",
+   "h4",
+   "b6",
+   "Bg5"
   ],
-  "evalAvant": 61,
-  "evalApres": -917,
-  "perte": 978,
+  "evalAvant": 70,
+  "evalApres": -958,
+  "perte": 1028,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 Qg4 cxd4 Nf3 Nc6 Qf4": {
@@ -930,9 +930,9 @@ export const PUNITIONS = {
    "Nf6",
    "cxd4"
   ],
-  "evalAvant": -122,
-  "evalApres": -208,
-  "perte": 86,
+  "evalAvant": -129,
+  "evalApres": -188,
+  "perte": 59,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 Qg4 cxd4 Nf3 Nc6 Qh3": {
@@ -945,11 +945,11 @@ export const PUNITIONS = {
    "Nge7",
    "Bd3",
    "f6",
-   "O-O"
+   "exf6"
   ],
-  "evalAvant": -128,
-  "evalApres": -227,
-  "perte": 99,
+  "evalAvant": -126,
+  "evalApres": -209,
+  "perte": 83,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 Nf3 cxd4 Nxd4 Nc6 Be3": {
@@ -960,13 +960,13 @@ export const PUNITIONS = {
    "Nxe5",
    "f4",
    "Nc6",
-   "c3",
+   "Nc3",
    "Nf6",
-   "Bd3"
+   "Qd2"
   ],
-  "evalAvant": -10,
-  "evalApres": -155,
-  "perte": 145,
+  "evalAvant": -6,
+  "evalApres": -145,
+  "perte": 139,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 Nf3 cxd4 Nxd4 Nc6 Nc3": {
@@ -975,15 +975,15 @@ export const PUNITIONS = {
   "fautif": "w",
   "ligne": [
    "Nxe5",
-   "Be3",
-   "Nf6",
    "f4",
    "Nc6",
+   "Be3",
+   "Nf6",
    "Qd2"
   ],
-  "evalAvant": -13,
-  "evalApres": -151,
-  "perte": 138,
+  "evalAvant": -7,
+  "evalApres": -149,
+  "perte": 142,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 dxc5 Bxc5 Nd2 Qb6 Nb3": {
@@ -996,11 +996,11 @@ export const PUNITIONS = {
    "Bxg1",
    "Qe1",
    "Ne7",
-   "Kd1"
+   "a4"
   ],
-  "evalAvant": -29,
-  "evalApres": -739,
-  "perte": 710,
+  "evalAvant": -20,
+  "evalApres": -737,
+  "perte": 717,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 dxc5 Bxc5 Nd2 Qb6 Qf3": {
@@ -1010,14 +1010,14 @@ export const PUNITIONS = {
   "ligne": [
    "Nc6",
    "Nb3",
-   "Nxe5",
-   "Qg3",
-   "Ng6",
-   "Nxc5"
+   "Bd4",
+   "Nxd4",
+   "Qxd4",
+   "Qe3"
   ],
-  "evalAvant": -22,
-  "evalApres": -68,
-  "perte": 46,
+  "evalAvant": -13,
+  "evalApres": -63,
+  "perte": 50,
   "mat": false
  },
  "e4 e6 d4 d5 exd5 exd5 c4 Nf6 Nc3 Bb4 Bd2": {
@@ -1032,9 +1032,9 @@ export const PUNITIONS = {
    "Bf5",
    "Nf3"
   ],
-  "evalAvant": -10,
-  "evalApres": -65,
-  "perte": 55,
+  "evalAvant": -6,
+  "evalApres": -78,
+  "perte": 72,
   "mat": false
  },
  "e4 e6 d4 d5 exd5 exd5 c4 Nf6 Nc3 Bb4 Qc2": {
@@ -1049,9 +1049,9 @@ export const PUNITIONS = {
    "Bg4",
    "c5"
   ],
-  "evalAvant": -6,
-  "evalApres": -77,
-  "perte": 71,
+  "evalAvant": -14,
+  "evalApres": -86,
+  "perte": 72,
   "mat": false
  },
  "e4 e6 d4 d5 Nd2 c5 exd5 exd5 Ngf3 Nf6 Bd3": {
@@ -1064,11 +1064,11 @@ export const PUNITIONS = {
    "Bd6",
    "c3",
    "O-O",
-   "b3"
+   "O-O"
   ],
-  "evalAvant": 11,
-  "evalApres": -42,
-  "perte": 53,
+  "evalAvant": 25,
+  "evalApres": -48,
+  "perte": 73,
   "mat": false
  },
  "e4 e6 d4 d5 Nc3 Nf6 e5 Nfd7 f4 c5 Nf3 Nb6": {
@@ -1080,12 +1080,12 @@ export const PUNITIONS = {
    "Nc6",
    "dxc5",
    "Nd7",
-   "Qd2",
+   "a3",
    "Bxc5"
   ],
   "evalAvant": -41,
-  "evalApres": -94,
-  "perte": 53,
+  "evalApres": -105,
+  "perte": 64,
   "mat": false
  },
  "e4 e6 d4 d5 Nc3 Nf6 e5 Nfd7 f4 c5 Nf3 f5": {
@@ -1096,13 +1096,13 @@ export const PUNITIONS = {
    "Be3",
    "Nc6",
    "Qd2",
-   "Be7",
-   "Rg1",
-   "cxd4"
+   "cxd4",
+   "Nxd4",
+   "Nxd4"
   ],
-  "evalAvant": -38,
-  "evalApres": -94,
-  "perte": 56,
+  "evalAvant": -43,
+  "evalApres": -103,
+  "perte": 60,
   "mat": false
  },
  "e4 e6 d4 d5 e5 Nc6 Nf3 f6 Bb5 a6 Bxc6+ Bd7": {
@@ -1112,14 +1112,14 @@ export const PUNITIONS = {
   "ligne": [
    "Bxd7+",
    "Qxd7",
+   "Nbd2",
+   "c5",
    "c3",
-   "O-O-O",
-   "b4",
-   "Kb8"
+   "cxd4"
   ],
-  "evalAvant": -64,
-  "evalApres": -766,
-  "perte": 702,
+  "evalAvant": -89,
+  "evalApres": -752,
+  "perte": 663,
   "mat": false
  },
  "e4 e6 d4 d5 e5 Nc6 Nf3 f6 Bb5 a6 Bxc6+ Kf7": {
@@ -1129,14 +1129,14 @@ export const PUNITIONS = {
   "ligne": [
    "Ba4",
    "c5",
-   "dxc5",
-   "Bxc5",
-   "O-O",
-   "Ne7"
+   "c3",
+   "c4",
+   "exf6",
+   "gxf6"
   ],
-  "evalAvant": -63,
-  "evalApres": -782,
-  "perte": 719,
+  "evalAvant": -68,
+  "evalApres": -816,
+  "perte": 748,
   "mat": false
  },
  "e4 e6 d4 d5 Nd2 c5 exd5 Qxd5 Ngf3 cxd4 Nb3": {
@@ -1151,9 +1151,9 @@ export const PUNITIONS = {
    "Bg4",
    "Be2"
   ],
-  "evalAvant": 14,
-  "evalApres": -42,
-  "perte": 56,
+  "evalAvant": 9,
+  "evalApres": -52,
+  "perte": 61,
   "mat": false
  },
  "e4 e6 d4 d5 Nd2 c5 exd5 Qxd5 Ngf3 cxd4 Nc4": {
@@ -1165,12 +1165,12 @@ export const PUNITIONS = {
    "Bd3",
    "Bb4+",
    "Ncd2",
-   "Nf6",
+   "e5",
    "O-O"
   ],
-  "evalAvant": 19,
-  "evalApres": -111,
-  "perte": 130,
+  "evalAvant": 11,
+  "evalApres": -109,
+  "perte": 120,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 Qg4 cxd4 Nf3 Nc6 Bd3 g6": {
@@ -1185,9 +1185,9 @@ export const PUNITIONS = {
    "Bb5",
    "fxe5"
   ],
-  "evalAvant": 137,
-  "evalApres": 61,
-  "perte": 76,
+  "evalAvant": 135,
+  "evalApres": 53,
+  "perte": 82,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 Qg4 cxd4 Nf3 Nc6 Bd3 Qa5+": {
@@ -1202,9 +1202,9 @@ export const PUNITIONS = {
    "Bb5",
    "Nh6"
   ],
-  "evalAvant": 126,
+  "evalAvant": 110,
   "evalApres": 54,
-  "perte": 72,
+  "perte": 56,
   "mat": false
  },
  "e4 e6 d4 d5 Nd2 Nc6 Ngf3 Nf6 e5 Nd7 c3 Be7": {
@@ -1213,15 +1213,15 @@ export const PUNITIONS = {
   "fautif": "b",
   "ligne": [
    "Bd3",
-   "f6",
-   "exf6",
-   "Bxf6",
+   "Ncb8",
    "O-O",
-   "O-O"
+   "c5",
+   "Re1",
+   "Nc6"
   ],
-  "evalAvant": -50,
-  "evalApres": -154,
-  "perte": 104,
+  "evalAvant": -54,
+  "evalApres": -128,
+  "perte": 74,
   "mat": false
  },
  "e4 e6 d4 d5 Nd2 Nc6 Ngf3 Nf6 e5 Nd7 c3 Nb6": {
@@ -1233,12 +1233,12 @@ export const PUNITIONS = {
    "a5",
    "h4",
    "h6",
-   "a4",
-   "Nb8"
+   "Kf1",
+   "Qe7"
   ],
   "evalAvant": -49,
-  "evalApres": -184,
-  "perte": 135,
+  "evalApres": -200,
+  "perte": 151,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 Nh6 Nbd2": {
@@ -1248,14 +1248,14 @@ export const PUNITIONS = {
   "ligne": [
    "cxd4",
    "cxd4",
-   "Nxd4",
+   "Nf5",
    "Bd3",
-   "Nc6",
-   "h3"
+   "Nfxd4",
+   "b4"
   ],
-  "evalAvant": 22,
-  "evalApres": -45,
-  "perte": 67,
+  "evalAvant": 27,
+  "evalApres": -37,
+  "perte": 64,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 Nh6 Qd2": {
@@ -1270,9 +1270,9 @@ export const PUNITIONS = {
    "Be7",
    "Bb2"
   ],
-  "evalAvant": 27,
-  "evalApres": -45,
-  "perte": 72,
+  "evalAvant": 22,
+  "evalApres": -68,
+  "perte": 90,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 dxc5 Bxc5 Nd2 Qb6 Qe2 h5": {
@@ -1281,15 +1281,15 @@ export const PUNITIONS = {
   "fautif": "b",
   "ligne": [
    "Nb3",
-   "Nc6",
-   "Nxc5",
-   "Qxc5",
+   "Be7",
    "Nf3",
-   "Bd7"
+   "Nc6",
+   "Be3",
+   "Qc7"
   ],
-  "evalAvant": 21,
-  "evalApres": -35,
-  "perte": 56,
+  "evalAvant": 13,
+  "evalApres": -38,
+  "perte": 51,
   "mat": false
  },
  "e4 e6 d4 d5 exd5 exd5 Nf3 Bd6 c4 Nf6 c5 O-O": {
@@ -1299,14 +1299,14 @@ export const PUNITIONS = {
   "ligne": [
    "cxd6",
    "Qxd6",
-   "Nc3",
-   "c5",
    "Be2",
-   "c4"
+   "c5",
+   "O-O",
+   "Nc6"
   ],
-  "evalAvant": -22,
-  "evalApres": -646,
-  "perte": 624,
+  "evalAvant": -19,
+  "evalApres": -651,
+  "perte": 632,
   "mat": false
  },
  "e4 e6 d4 d5 exd5 exd5 Nf3 Bd6 c4 Nf6 c5 Bxc5": {
@@ -1316,14 +1316,14 @@ export const PUNITIONS = {
   "ligne": [
    "dxc5",
    "Nbd7",
-   "Qe2+",
-   "Ne4",
-   "Bg5",
-   "f6"
+   "Be3",
+   "Qe7",
+   "Be2",
+   "Nxc5"
   ],
-  "evalAvant": -19,
-  "evalApres": -533,
-  "perte": 514,
+  "evalAvant": -15,
+  "evalApres": -530,
+  "perte": 515,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 Be2 Nh6 b4": {
@@ -1335,12 +1335,12 @@ export const PUNITIONS = {
    "Bxh6",
    "gxh6",
    "O-O",
-   "Bd7",
-   "Qd2"
+   "Bg7",
+   "a3"
   ],
-  "evalAvant": 39,
-  "evalApres": -7,
-  "perte": 46,
+  "evalAvant": 33,
+  "evalApres": -15,
+  "perte": 48,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 Be2 Nh6 Nbd2": {
@@ -1350,14 +1350,14 @@ export const PUNITIONS = {
   "ligne": [
    "cxd4",
    "O-O",
-   "dxc3",
-   "bxc3",
    "Be7",
-   "h3"
+   "Nb3",
+   "dxc3",
+   "bxc3"
   ],
-  "evalAvant": 41,
-  "evalApres": -17,
-  "perte": 58,
+  "evalAvant": 35,
+  "evalApres": -18,
+  "perte": 53,
   "mat": false
  },
  "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 Bxe7 Kxe7": {
@@ -1369,12 +1369,12 @@ export const PUNITIONS = {
    "h6",
    "f4",
    "c5",
-   "Nb5",
-   "Qa5+"
+   "O-O-O",
+   "a6"
   ],
-  "evalAvant": -21,
-  "evalApres": -124,
-  "perte": 103,
+  "evalAvant": -45,
+  "evalApres": -119,
+  "perte": 74,
   "mat": false
  },
  "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 Bxe7 c5": {
@@ -1384,14 +1384,14 @@ export const PUNITIONS = {
   "ligne": [
    "Bxd8",
    "Kxd8",
-   "h4",
+   "dxc5",
    "Ke7",
-   "Rh3",
-   "c4"
+   "c6",
+   "Nc5"
   ],
-  "evalAvant": -18,
-  "evalApres": -1066,
-  "perte": 1048,
+  "evalAvant": -19,
+  "evalApres": -1060,
+  "perte": 1041,
   "mat": false
  },
  "e4 e6 d4 d5 Nc3 dxe4 Nxe4 Nf6 Nxf6+ Qxf6 h4": {
@@ -1403,12 +1403,12 @@ export const PUNITIONS = {
    "Nf3",
    "h6",
    "Be3",
-   "a6",
-   "Be2"
+   "Bd7",
+   "Qd2"
   ],
-  "evalAvant": 70,
-  "evalApres": 39,
-  "perte": 31,
+  "evalAvant": 67,
+  "evalApres": 35,
+  "perte": 32,
   "mat": false
  },
  "e4 e6 d4 d5 Nc3 dxe4 Nxe4 Nf6 Nxf6+ Qxf6 Be2": {
@@ -1416,16 +1416,16 @@ export const PUNITIONS = {
   "faute": "Be2",
   "fautif": "w",
   "ligne": [
-   "Bd6",
-   "Nf3",
-   "h6",
-   "Be3",
    "Nc6",
-   "c4"
+   "Nf3",
+   "Bd6",
+   "Bg5",
+   "Qg6",
+   "Bd3"
   ],
-  "evalAvant": 69,
-  "evalApres": 28,
-  "perte": 41,
+  "evalAvant": 63,
+  "evalApres": 19,
+  "perte": 44,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 Nf3 cxd4 Nxd4 Nc6 Nxc6 Qc7": {
@@ -1440,9 +1440,9 @@ export const PUNITIONS = {
    "f4",
    "Qc7"
   ],
-  "evalAvant": 4,
-  "evalApres": -583,
-  "perte": 587,
+  "evalAvant": 13,
+  "evalApres": -562,
+  "perte": 575,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 Nf3 cxd4 Nxd4 Nc6 Nxc6 Qd7": {
@@ -1451,15 +1451,15 @@ export const PUNITIONS = {
   "fautif": "b",
   "ligne": [
    "Nd4",
-   "a6",
-   "Bd3",
+   "Ne7",
+   "c3",
    "Qc7",
-   "Qe2",
-   "Bc5"
+   "Be3",
+   "Bd7"
   ],
-  "evalAvant": 4,
-  "evalApres": -742,
-  "perte": 746,
+  "evalAvant": 14,
+  "evalApres": -734,
+  "perte": 748,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Bd7 Be2 Nge7 b3": {
@@ -1470,13 +1470,13 @@ export const PUNITIONS = {
    "cxd4",
    "cxd4",
    "Qa5+",
-   "Bd2",
-   "Qb6",
-   "Bc3"
+   "Kf1",
+   "Rc8",
+   "Bb2"
   ],
-  "evalAvant": 25,
-  "evalApres": -41,
-  "perte": 66,
+  "evalAvant": 21,
+  "evalApres": -35,
+  "perte": 56,
   "mat": false
  },
  "e4 e6 d4 d5 Nc3 Nf6 e5 Nfd7 f4 c5 Nf3 Nc6 Bd3": {
@@ -1484,15 +1484,15 @@ export const PUNITIONS = {
   "faute": "Bd3",
   "fautif": "w",
   "ligne": [
+   "Nxd4",
+   "Nxd4",
    "cxd4",
    "Ne2",
    "Bc5",
-   "O-O",
-   "f6",
-   "Qe1"
+   "O-O"
   ],
-  "evalAvant": 36,
-  "evalApres": -21,
+  "evalAvant": 41,
+  "evalApres": -16,
   "perte": 57,
   "mat": false
  },
@@ -1502,15 +1502,15 @@ export const PUNITIONS = {
   "fautif": "w",
   "ligne": [
    "Bxc5",
-   "Bd3",
+   "Na4",
+   "Be7",
+   "Be2",
    "a6",
-   "Qe2",
-   "b5",
-   "Nd1"
+   "O-O"
   ],
-  "evalAvant": 35,
-  "evalApres": -25,
-  "perte": 60,
+  "evalAvant": 39,
+  "evalApres": -28,
+  "perte": 67,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 Qg4 cxd4 Nf3 Nc6 Bd3 h5 Qh4": {
@@ -1525,9 +1525,9 @@ export const PUNITIONS = {
    "Nxd3+",
    "cxd3"
   ],
-  "evalAvant": -100,
-  "evalApres": -418,
-  "perte": 318,
+  "evalAvant": -101,
+  "evalApres": -439,
+  "perte": 338,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 Qg4 cxd4 Nf3 Nc6 Bd3 h5 Qxd4": {
@@ -1537,14 +1537,14 @@ export const PUNITIONS = {
   "ligne": [
    "Nxd4",
    "Nxd4",
-   "Qc7",
-   "Nc3",
    "a6",
-   "Be3"
+   "Nd2",
+   "g6",
+   "c3"
   ],
   "evalAvant": -100,
-  "evalApres": -766,
-  "perte": 666,
+  "evalApres": -801,
+  "perte": 701,
   "mat": false
  },
  "e4 e6 d4 d5 Nd2 Nc6 Ngf3 Nf6 e5 Nd7 c3 f6 Bd3": {
@@ -1553,15 +1553,15 @@ export const PUNITIONS = {
   "fautif": "w",
   "ligne": [
    "fxe5",
-   "Nxe5",
-   "Ndxe5",
    "dxe5",
+   "Ndxe5",
+   "Nxe5",
    "Nxe5",
    "Qh5+"
   ],
-  "evalAvant": 59,
-  "evalApres": -34,
-  "perte": 93,
+  "evalAvant": 45,
+  "evalApres": -33,
+  "perte": 78,
   "mat": false
  },
  "e4 e6 d4 d5 Nd2 Nc6 Ngf3 Nf6 e5 Nd7 c3 f6 Be2": {
@@ -1571,14 +1571,14 @@ export const PUNITIONS = {
   "ligne": [
    "fxe5",
    "O-O",
+   "Qf6",
+   "Nb3",
    "Bd6",
-   "dxe5",
-   "Ndxe5",
-   "Nxe5"
+   "dxe5"
   ],
-  "evalAvant": 52,
-  "evalApres": -86,
-  "perte": 138,
+  "evalAvant": 53,
+  "evalApres": -105,
+  "perte": 158,
   "mat": false
  },
  "e4 e6 d4 d5 Nd2 c5 exd5 exd5 Ngf3 Nf6 Bb5+ Nbd7": {
@@ -1587,15 +1587,15 @@ export const PUNITIONS = {
   "fautif": "b",
   "ligne": [
    "O-O",
-   "Be7",
-   "dxc5",
    "a6",
    "Bxd7+",
-   "Bxd7"
+   "Bxd7",
+   "Re1+",
+   "Be7"
   ],
-  "evalAvant": -8,
-  "evalApres": -74,
-  "perte": 66,
+  "evalAvant": -15,
+  "evalApres": -73,
+  "perte": 58,
   "mat": false
  },
  "e4 e6 d4 d5 Nd2 c5 exd5 exd5 Ngf3 Nf6 Bb5+ Qd7": {
@@ -1604,15 +1604,15 @@ export const PUNITIONS = {
   "fautif": "b",
   "ligne": [
    "Bxd7+",
-   "Nbxd7",
+   "Bxd7",
    "O-O",
-   "Be7",
-   "Re1",
-   "cxd4"
+   "cxd4",
+   "Re1+",
+   "Be7"
   ],
-  "evalAvant": -17,
-  "evalApres": -836,
-  "perte": 819,
+  "evalAvant": -9,
+  "evalApres": -810,
+  "perte": 801,
   "mat": false
  },
  "e4 e6 d4 d5 Nd2 c5 exd5 Qxd5 Ngf3 cxd4 Bc4 Nf6": {
@@ -1625,11 +1625,11 @@ export const PUNITIONS = {
    "O-O",
    "Nc6",
    "Re1+",
-   "Be6"
+   "Be7"
   ],
-  "evalAvant": -15,
-  "evalApres": -774,
-  "perte": 759,
+  "evalAvant": -14,
+  "evalApres": -802,
+  "perte": 788,
   "mat": false
  },
  "e4 e6 d4 d5 Nd2 c5 exd5 Qxd5 Ngf3 cxd4 Bc4 Be7": {
@@ -1640,13 +1640,13 @@ export const PUNITIONS = {
    "Bxd5",
    "exd5",
    "O-O",
-   "Nf6",
+   "Nc6",
    "Nb3",
-   "Ne4"
+   "Nf6"
   ],
-  "evalAvant": -19,
-  "evalApres": -801,
-  "perte": 782,
+  "evalAvant": -10,
+  "evalApres": -775,
+  "perte": 765,
   "mat": false
  },
  "e4 e6 d4 d5 e5 Nc6 Nf3 f6 Bb5 a6 Bxc6+ bxc6 Qe2": {
@@ -1661,9 +1661,9 @@ export const PUNITIONS = {
    "Bxe3",
    "Qxe3"
   ],
-  "evalAvant": 65,
-  "evalApres": 5,
-  "perte": 60,
+  "evalAvant": 60,
+  "evalApres": 14,
+  "perte": 46,
   "mat": false
  },
  "e4 e6 d4 d5 e5 Nc6 Nf3 f6 Bb5 a6 Bxc6+ bxc6 h3": {
@@ -1672,15 +1672,15 @@ export const PUNITIONS = {
   "fautif": "w",
   "ligne": [
    "c5",
-   "c3",
-   "Ne7",
    "O-O",
-   "Ng6",
-   "Re1"
+   "cxd4",
+   "Qxd4",
+   "fxe5",
+   "Nxe5"
   ],
-  "evalAvant": 68,
-  "evalApres": 17,
-  "perte": 51,
+  "evalAvant": 58,
+  "evalApres": 16,
+  "perte": 42,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 Nh6 Bd3 f6": {
@@ -1688,16 +1688,16 @@ export const PUNITIONS = {
   "faute": "f6",
   "fautif": "b",
   "ligne": [
-   "O-O",
-   "Nf7",
+   "exf6",
+   "gxf6",
    "dxc5",
    "Qxc5",
-   "exf6",
-   "gxf6"
+   "O-O",
+   "e5"
   ],
-  "evalAvant": -25,
-  "evalApres": -85,
-  "perte": 60,
+  "evalAvant": -28,
+  "evalApres": -86,
+  "perte": 58,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 Nh6 Bd3 c4": {
@@ -1706,15 +1706,15 @@ export const PUNITIONS = {
   "fautif": "b",
   "ligne": [
    "Bc2",
-   "f6",
-   "Nbd2",
    "Bd7",
+   "Nbd2",
+   "f6",
    "O-O",
    "Nf7"
   ],
-  "evalAvant": -23,
-  "evalApres": -108,
-  "perte": 85,
+  "evalAvant": -28,
+  "evalApres": -80,
+  "perte": 52,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 dxc5 Bxc5 Nd2 Qb6 Qe2 Qc7 Qh5": {
@@ -1725,13 +1725,13 @@ export const PUNITIONS = {
    "Ne7",
    "c3",
    "Nbc6",
-   "Nb3",
-   "Bb6",
-   "Bf4"
+   "f4",
+   "g6",
+   "Qe2"
   ],
-  "evalAvant": -21,
-  "evalApres": -102,
-  "perte": 81,
+  "evalAvant": -16,
+  "evalApres": -83,
+  "perte": 67,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 dxc5 Bxc5 Nd2 Qb6 Qe2 Qc7 f3": {
@@ -1739,16 +1739,16 @@ export const PUNITIONS = {
   "faute": "f3",
   "fautif": "w",
   "ligne": [
-   "b6",
-   "f4",
-   "Ba6",
-   "Qd1",
-   "Bxf1",
-   "Kxf1"
+   "Bxg1",
+   "Rxg1",
+   "Nc6",
+   "Nb3",
+   "Nxe5",
+   "Bd2"
   ],
-  "evalAvant": -16,
-  "evalApres": -124,
-  "perte": 108,
+  "evalAvant": -9,
+  "evalApres": -101,
+  "perte": 92,
   "mat": false
  },
  "e4 e6 d4 d5 Nc3 dxe4 Nxe4 Nd7 Nf3 Ngf6 Nxf6+ gxf6": {
@@ -1756,16 +1756,16 @@ export const PUNITIONS = {
   "faute": "gxf6",
   "fautif": "b",
   "ligne": [
-   "Be3",
+   "a4",
    "a6",
-   "Bd3",
-   "c5",
-   "O-O",
-   "Be7"
+   "g3",
+   "Bg7",
+   "Bg2",
+   "O-O"
   ],
   "evalAvant": -45,
-  "evalApres": -125,
-  "perte": 80,
+  "evalApres": -103,
+  "perte": 58,
   "mat": false
  },
  "e4 e6 d4 d5 Nc3 dxe4 Nxe4 Nd7 Nf3 Ngf6 Nxf6+ Qxf6": {
@@ -1780,8 +1780,8 @@ export const PUNITIONS = {
    "Bd2",
    "Bb4"
   ],
-  "evalAvant": -43,
-  "evalApres": -157,
+  "evalAvant": -47,
+  "evalApres": -161,
   "perte": 114,
   "mat": false
  },
@@ -1797,9 +1797,9 @@ export const PUNITIONS = {
    "h3",
    "f6"
   ],
-  "evalAvant": -72,
+  "evalAvant": -62,
   "evalApres": -121,
-  "perte": 49,
+  "perte": 59,
   "mat": false
  },
  "e4 e6 d4 d5 Nc3 dxe4 Nxe4 Nf6 Nxf6+ Qxf6 Nf3 Nd7": {
@@ -1815,8 +1815,8 @@ export const PUNITIONS = {
    "Bb4"
   ],
   "evalAvant": -69,
-  "evalApres": -156,
-  "perte": 87,
+  "evalApres": -147,
+  "perte": 78,
   "mat": false
  },
  "e4 e6 d4 d5 exd5 exd5 c4 Nf6 Nc3 Bb4 Nf3 O-O Bd2": {
@@ -1824,16 +1824,16 @@ export const PUNITIONS = {
   "faute": "Bd2",
   "fautif": "w",
   "ligne": [
-   "Re8+",
+   "Bg4",
    "Be2",
    "dxc4",
    "O-O",
-   "Be6",
-   "Ng5"
+   "Nc6",
+   "Ne5"
   ],
-  "evalAvant": -13,
-  "evalApres": -76,
-  "perte": 63,
+  "evalAvant": -11,
+  "evalApres": -68,
+  "perte": 57,
   "mat": false
  },
  "e4 e6 d4 d5 exd5 exd5 c4 Nf6 Nc3 Bb4 Nf3 O-O Bf4": {
@@ -1843,14 +1843,14 @@ export const PUNITIONS = {
   "ligne": [
    "Re8+",
    "Be2",
+   "Bxc3+",
+   "bxc3",
    "dxc4",
-   "O-O",
-   "Bxc3",
-   "bxc3"
+   "O-O"
   ],
-  "evalAvant": -16,
-  "evalApres": -74,
-  "perte": 58,
+  "evalAvant": -14,
+  "evalApres": -80,
+  "perte": 66,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 Be2 Nh6 Bxh6 Qxb2": {
@@ -1865,9 +1865,9 @@ export const PUNITIONS = {
    "Nxd4",
    "Ba3"
   ],
-  "evalAvant": -36,
-  "evalApres": -187,
-  "perte": 151,
+  "evalAvant": -31,
+  "evalApres": -211,
+  "perte": 180,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 Be2 Nh6 Bxh6 cxd4": {
@@ -1878,13 +1878,13 @@ export const PUNITIONS = {
    "Bc1",
    "dxc3",
    "Nxc3",
-   "d4",
-   "Nb1",
-   "Nxe5"
+   "Bd7",
+   "O-O",
+   "Be7"
   ],
-  "evalAvant": -32,
-  "evalApres": -614,
-  "perte": 582,
+  "evalAvant": -33,
+  "evalApres": -617,
+  "perte": 584,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 Nf3 cxd4 Nxd4 Nc6 Nxc6 bxc6 Nc3": {
@@ -1897,11 +1897,11 @@ export const PUNITIONS = {
    "Nh6",
    "Bd3",
    "Be7",
-   "O-O"
+   "Qe2"
   ],
-  "evalAvant": -10,
-  "evalApres": -80,
-  "perte": 70,
+  "evalAvant": -6,
+  "evalApres": -65,
+  "perte": 59,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 Nf3 cxd4 Nxd4 Nc6 Nxc6 bxc6 f4": {
@@ -1911,14 +1911,14 @@ export const PUNITIONS = {
   "ligne": [
    "Nh6",
    "Bd3",
-   "Bc5",
-   "Nc3",
+   "Nf5",
    "O-O",
-   "Bd2"
+   "Qb6+",
+   "Kh1"
   ],
-  "evalAvant": -4,
-  "evalApres": -75,
-  "perte": 71,
+  "evalAvant": -14,
+  "evalApres": -104,
+  "perte": 90,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Bd7 Be2 Nge7 O-O c4": {
@@ -1930,12 +1930,12 @@ export const PUNITIONS = {
    "Rb8",
    "Nc2",
    "b5",
-   "a3",
-   "Na5"
+   "Bd2",
+   "a5"
   ],
-  "evalAvant": -16,
-  "evalApres": -65,
-  "perte": 49,
+  "evalAvant": -13,
+  "evalApres": -69,
+  "perte": 56,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Bd7 Be2 Nge7 O-O Qc8": {
@@ -1944,14 +1944,14 @@ export const PUNITIONS = {
   "fautif": "b",
   "ligne": [
    "Na3",
-   "Nf5",
+   "cxd4",
+   "cxd4",
+   "Qd8",
    "Nc2",
-   "a5",
-   "Bd2",
-   "cxd4"
+   "a5"
   ],
-  "evalAvant": -17,
-  "evalApres": -63,
+  "evalAvant": -22,
+  "evalApres": -68,
   "perte": 46,
   "mat": false
  },
@@ -1960,16 +1960,16 @@ export const PUNITIONS = {
   "faute": "Be7",
   "fautif": "b",
   "ligne": [
-   "O-O",
-   "g5",
-   "Nxg5",
-   "Bxg5",
-   "Qxg5",
-   "Qxg5"
+   "Nxd4",
+   "Nh6",
+   "Nxc6",
+   "bxc6",
+   "Nd2",
+   "g5"
   ],
-  "evalAvant": 112,
-  "evalApres": 52,
-  "perte": 60,
+  "evalAvant": 101,
+  "evalApres": 42,
+  "perte": 59,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 Qg4 cxd4 Nf3 Nc6 Bd3 h5 Qf4 Nh6": {
@@ -1980,13 +1980,13 @@ export const PUNITIONS = {
    "O-O",
    "Be7",
    "Re1",
-   "Nf5",
-   "a4",
-   "Rg8"
+   "Bd7",
+   "Nxd4",
+   "g5"
   ],
-  "evalAvant": 120,
-  "evalApres": 26,
-  "perte": 94,
+  "evalAvant": 100,
+  "evalApres": 17,
+  "perte": 83,
   "mat": false
  },
  "e4 e6 d4 d5 Nd2 Nc6 Ngf3 Nf6 e5 Nd7 c3 f6 Bb5 Be7": {
@@ -1996,14 +1996,14 @@ export const PUNITIONS = {
   "ligne": [
    "exf6",
    "Nxf6",
-   "O-O",
-   "O-O",
-   "Re1",
-   "a5"
+   "Ne5",
+   "Bd7",
+   "Nxd7",
+   "Qxd7"
   ],
-  "evalAvant": -51,
-  "evalApres": -124,
-  "perte": 73,
+  "evalAvant": -55,
+  "evalApres": -119,
+  "perte": 64,
   "mat": false
  },
  "e4 e6 d4 d5 Nd2 Nc6 Ngf3 Nf6 e5 Nd7 c3 f6 Bb5 Qe7": {
@@ -2018,9 +2018,9 @@ export const PUNITIONS = {
    "Ba4",
    "b5"
   ],
-  "evalAvant": -45,
-  "evalApres": -112,
-  "perte": 67,
+  "evalAvant": -57,
+  "evalApres": -111,
+  "perte": 54,
   "mat": false
  },
  "e4 e6 d4 d5 Nd2 Nf6 e5 Nfd7 Bd3 c5 c3 Nc6 Ngf3 g5": {
@@ -2029,15 +2029,15 @@ export const PUNITIONS = {
   "fautif": "b",
   "ligne": [
    "h3",
-   "Be7",
+   "h5",
    "Be2",
-   "Nf8",
+   "Rg8",
    "Nb3",
-   "c4"
+   "g4"
   ],
-  "evalAvant": -42,
-  "evalApres": -88,
-  "perte": 46,
+  "evalAvant": -50,
+  "evalApres": -56,
+  "perte": 6,
   "mat": false
  },
  "e4 e6 d4 d5 Nd2 c5 exd5 exd5 Ngf3 Nf6 Bb5+ Bd7 O-O": {
@@ -2050,11 +2050,11 @@ export const PUNITIONS = {
    "Be7",
    "dxc5",
    "O-O",
-   "b4"
+   "a4"
   ],
-  "evalAvant": 24,
-  "evalApres": -613,
-  "perte": 637,
+  "evalAvant": 14,
+  "evalApres": -592,
+  "perte": 606,
   "mat": false
  },
  "e4 e6 d4 d5 Nd2 c5 exd5 exd5 Ngf3 Nf6 Bb5+ Bd7 Bc4": {
@@ -2064,14 +2064,14 @@ export const PUNITIONS = {
   "ligne": [
    "dxc4",
    "Nxc4",
-   "Be6",
-   "Nce5",
-   "Nbd7",
-   "Nxd7"
+   "cxd4",
+   "Nxd4",
+   "Be7",
+   "O-O"
   ],
-  "evalAvant": 9,
+  "evalAvant": 10,
   "evalApres": -635,
-  "perte": 644,
+  "perte": 645,
   "mat": false
  },
  "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Bxc3+ bxc3 Ne7 Qg4 Nbc6": {
@@ -2086,9 +2086,9 @@ export const PUNITIONS = {
    "Nf3",
    "Qc7"
   ],
-  "evalAvant": -55,
-  "evalApres": -115,
-  "perte": 60,
+  "evalAvant": -57,
+  "evalApres": -103,
+  "perte": 46,
   "mat": false
  },
  "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Bxc3+ bxc3 Ne7 Qg4 h5": {
@@ -2104,8 +2104,8 @@ export const PUNITIONS = {
    "Qa5"
   ],
   "evalAvant": -66,
-  "evalApres": -185,
-  "perte": 119,
+  "evalApres": -182,
+  "perte": 116,
   "mat": false
  },
  "e4 e6 d4 d5 e5 Nc6 Nf3 f6 Bb5 a6 Bxc6+ bxc6 Be3 fxe5": {
@@ -2115,14 +2115,14 @@ export const PUNITIONS = {
   "ligne": [
    "Nxe5",
    "Nf6",
-   "Nd2",
+   "O-O",
    "Bd6",
    "Nxc6",
    "Qd7"
   ],
-  "evalAvant": -73,
-  "evalApres": -135,
-  "perte": 62,
+  "evalAvant": -70,
+  "evalApres": -121,
+  "perte": 51,
   "mat": false
  },
  "e4 e6 d4 d5 e5 Nc6 Nf3 f6 Bb5 a6 Bxc6+ bxc6 Be3 c5": {
@@ -2132,14 +2132,14 @@ export const PUNITIONS = {
   "ligne": [
    "dxc5",
    "Ne7",
+   "O-O",
+   "a5",
    "Nc3",
-   "Ng6",
-   "Qd4",
-   "Be7"
+   "Ng6"
   ],
-  "evalAvant": -77,
-  "evalApres": -125,
-  "perte": 48,
+  "evalAvant": -53,
+  "evalApres": -126,
+  "perte": 73,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 dxc5 Bxc5 Nd2 Qb6 Qe2 Qc7 Nb3 Bd7": {
@@ -2154,9 +2154,9 @@ export const PUNITIONS = {
    "Nf3",
    "Nh6"
   ],
-  "evalAvant": 15,
-  "evalApres": -37,
-  "perte": 52,
+  "evalAvant": 28,
+  "evalApres": -45,
+  "perte": 73,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 dxc5 Bxc5 Nd2 Qb6 Qe2 Qc7 Nb3 Bb4+": {
@@ -2167,13 +2167,13 @@ export const PUNITIONS = {
    "c3",
    "Be7",
    "Nf3",
-   "Bd7",
+   "Nc6",
    "Bf4",
-   "Nc6"
+   "Nh6"
   ],
-  "evalAvant": 20,
-  "evalApres": -76,
-  "perte": 96,
+  "evalAvant": 17,
+  "evalApres": -71,
+  "perte": 88,
   "mat": false
  },
  "e4 e6 d4 d5 exd5 exd5 Nf3 Bd6 c4 Nf6 c5 Be7 Bd3 Nbd7": {
@@ -2181,16 +2181,16 @@ export const PUNITIONS = {
   "faute": "Nbd7",
   "fautif": "b",
   "ligne": [
+   "O-O",
+   "O-O",
    "Nc3",
-   "O-O",
-   "O-O",
    "Re8",
    "h3",
-   "c6"
+   "a5"
   ],
   "evalAvant": -20,
-  "evalApres": -109,
-  "perte": 89,
+  "evalApres": -112,
+  "perte": 92,
   "mat": false
  },
  "e4 e6 d4 d5 exd5 exd5 Nf3 Bd6 c4 Nf6 c5 Be7 Bd3 g6": {
@@ -2198,15 +2198,15 @@ export const PUNITIONS = {
   "faute": "g6",
   "fautif": "b",
   "ligne": [
-   "O-O",
-   "O-O",
    "Nc3",
+   "O-O",
+   "O-O",
    "b6",
    "Bg5",
    "bxc5"
   ],
-  "evalAvant": -17,
-  "evalApres": -79,
+  "evalAvant": -27,
+  "evalApres": -89,
   "perte": 62,
   "mat": false
  },
@@ -2216,15 +2216,15 @@ export const PUNITIONS = {
   "fautif": "w",
   "ligne": [
    "Nc6",
-   "Be3",
+   "Qe3",
    "Bd6",
-   "O-O-O",
-   "O-O",
-   "g4"
+   "Bd3",
+   "g5",
+   "c3"
   ],
-  "evalAvant": 64,
-  "evalApres": -1,
-  "perte": 65,
+  "evalAvant": 60,
+  "evalApres": 44,
+  "perte": 16,
   "mat": false
  },
  "e4 e6 d4 d5 Nc3 dxe4 Nxe4 Nf6 Nxf6+ Qxf6 Nf3 h6 g3": {
@@ -2232,16 +2232,16 @@ export const PUNITIONS = {
   "faute": "g3",
   "fautif": "w",
   "ligne": [
-   "Bd6",
-   "Bg2",
-   "O-O",
-   "O-O",
    "Nc6",
-   "Be3"
+   "Bg2",
+   "Bd6",
+   "O-O",
+   "O-O",
+   "c3"
   ],
-  "evalAvant": 74,
-  "evalApres": 24,
-  "perte": 50,
+  "evalAvant": 58,
+  "evalApres": 32,
+  "perte": 26,
   "mat": false
  },
  "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 Bxe7 Qxe7 f4 f6": {
@@ -2253,12 +2253,12 @@ export const PUNITIONS = {
    "g6",
    "Qh6",
    "c5",
-   "O-O-O",
+   "Nf3",
    "Nc6"
   ],
-  "evalAvant": -26,
-  "evalApres": -114,
-  "perte": 88,
+  "evalAvant": -25,
+  "evalApres": -103,
+  "perte": 78,
   "mat": false
  },
  "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 Bxe7 Qxe7 f4 Qh4+": {
@@ -2273,9 +2273,9 @@ export const PUNITIONS = {
    "h4",
    "c5"
   ],
-  "evalAvant": -47,
-  "evalApres": -70,
-  "perte": 23,
+  "evalAvant": -23,
+  "evalApres": -71,
+  "perte": 48,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 Nh6 Bd3 cxd4 b3": {
@@ -2288,11 +2288,11 @@ export const PUNITIONS = {
    "Ng4",
    "Qe2",
    "d4",
-   "Nb5"
+   "Na4"
   ],
-  "evalAvant": 24,
-  "evalApres": -69,
-  "perte": 93,
+  "evalAvant": 16,
+  "evalApres": -64,
+  "perte": 80,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 Nh6 Bd3 cxd4 Qc2": {
@@ -2303,13 +2303,13 @@ export const PUNITIONS = {
    "Ng4",
    "Qe2",
    "dxc3",
-   "O-O",
-   "cxb2",
-   "Bxb2"
+   "Nxc3",
+   "d4",
+   "Nb5"
   ],
-  "evalAvant": 26,
-  "evalApres": -83,
-  "perte": 109,
+  "evalAvant": 22,
+  "evalApres": -85,
+  "perte": 107,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 Qg4 cxd4 Nf3 Nc6 Bd3 h5 Qf4 f6 Nxd4": {
@@ -2318,15 +2318,15 @@ export const PUNITIONS = {
   "fautif": "w",
   "ligne": [
    "Nxe5",
-   "Be2",
+   "Qe3",
+   "Nxd3+",
+   "Qxd3",
    "Bd6",
-   "Qg3",
-   "Kf7",
    "f4"
   ],
-  "evalAvant": -127,
-  "evalApres": -295,
-  "perte": 168,
+  "evalAvant": -106,
+  "evalApres": -282,
+  "perte": 176,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 Qg4 cxd4 Nf3 Nc6 Bd3 h5 Qf4 f6 O-O": {
@@ -2341,9 +2341,9 @@ export const PUNITIONS = {
    "Kd7",
    "Nxg5"
   ],
-  "evalAvant": -117,
-  "evalApres": -191,
-  "perte": 74,
+  "evalAvant": -122,
+  "evalApres": -194,
+  "perte": 72,
   "mat": false
  },
  "e4 e6 d4 d5 Nd2 Nc6 Ngf3 Nf6 e5 Nd7 c3 f6 Bb5 a6 Ba4": {
@@ -2352,15 +2352,15 @@ export const PUNITIONS = {
   "fautif": "w",
   "ligne": [
    "fxe5",
+   "Nxe5",
+   "Ndxe5",
    "dxe5",
    "b5",
-   "Bc2",
-   "Ndxe5",
-   "Nxe5"
+   "Bc2"
   ],
-  "evalAvant": 56,
-  "evalApres": -15,
-  "perte": 71,
+  "evalAvant": 53,
+  "evalApres": -4,
+  "perte": 57,
   "mat": false
  },
  "e4 e6 d4 d5 Nd2 Nc6 Ngf3 Nf6 e5 Nd7 c3 f6 Bb5 a6 Be2": {
@@ -2371,13 +2371,13 @@ export const PUNITIONS = {
    "fxe5",
    "O-O",
    "Qf6",
-   "dxe5",
-   "Ndxe5",
+   "Nb3",
+   "Bd6",
    "Nxe5"
   ],
-  "evalAvant": 59,
-  "evalApres": -105,
-  "perte": 164,
+  "evalAvant": 60,
+  "evalApres": -125,
+  "perte": 185,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Bd7 Be2 Nge7 O-O Nf5 g4": {
@@ -2388,12 +2388,12 @@ export const PUNITIONS = {
    "Nh4",
    "Nxh4",
    "Qxh4",
-   "Be3",
+   "f4",
    "f6",
-   "f4"
+   "Be3"
   ],
-  "evalAvant": 20,
-  "evalApres": -42,
+  "evalAvant": 31,
+  "evalApres": -31,
   "perte": 62,
   "mat": false
  },
@@ -2409,9 +2409,9 @@ export const PUNITIONS = {
    "Be7",
    "c4"
   ],
-  "evalAvant": 33,
-  "evalApres": -41,
-  "perte": 74,
+  "evalAvant": 35,
+  "evalApres": -33,
+  "perte": 68,
   "mat": false
  },
  "e4 e6 d4 d5 Nd2 Nf6 e5 Nfd7 Bd3 c5 c3 Nc6 Ne2 cxd4 Nxd4": {
@@ -2426,9 +2426,9 @@ export const PUNITIONS = {
    "Bg7",
    "f4"
   ],
-  "evalAvant": 19,
-  "evalApres": -148,
-  "perte": 167,
+  "evalAvant": 24,
+  "evalApres": -141,
+  "perte": 165,
   "mat": false
  },
  "e4 e6 d4 d5 Nd2 Nf6 e5 Nfd7 Bd3 c5 c3 Nc6 Ne2 cxd4 O-O": {
@@ -2440,12 +2440,12 @@ export const PUNITIONS = {
    "Bb1",
    "dxc3",
    "bxc3",
-   "Bd7",
-   "Nd4"
+   "Bc5",
+   "Nb3"
   ],
-  "evalAvant": 26,
-  "evalApres": -393,
-  "perte": 419,
+  "evalAvant": 33,
+  "evalApres": -391,
+  "perte": 424,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 Be2 Nh6 Bxh6 gxh6 O-O": {
@@ -2460,9 +2460,9 @@ export const PUNITIONS = {
    "Qa3",
    "dxc5"
   ],
-  "evalAvant": 37,
-  "evalApres": -95,
-  "perte": 132,
+  "evalAvant": 26,
+  "evalApres": -94,
+  "perte": 120,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 Be2 Nh6 Bxh6 gxh6 Nbd2": {
@@ -2471,15 +2471,15 @@ export const PUNITIONS = {
   "fautif": "w",
   "ligne": [
    "Qxb2",
-   "O-O",
+   "Rc1",
    "c4",
-   "Bxc4",
-   "dxc4",
-   "Ne4"
+   "O-O",
+   "b5",
+   "a4"
   ],
-  "evalAvant": 37,
-  "evalApres": -107,
-  "perte": 144,
+  "evalAvant": 31,
+  "evalApres": -100,
+  "perte": 131,
   "mat": false
  },
  "e4 e6 d4 d5 Nd2 Nf6 e5 Nfd7 Bd3 c5 c3 Nc6 Ngf3 Qb6 Kf1": {
@@ -2487,16 +2487,16 @@ export const PUNITIONS = {
   "faute": "Kf1",
   "fautif": "w",
   "ligne": [
-   "cxd4",
-   "cxd4",
-   "Nxd4",
-   "Nxd4",
-   "Qxd4",
-   "Nf3"
+   "Be7",
+   "g3",
+   "f6",
+   "exf6",
+   "Bxf6",
+   "h4"
   ],
-  "evalAvant": 42,
-  "evalApres": -59,
-  "perte": 101,
+  "evalAvant": 36,
+  "evalApres": -90,
+  "perte": 126,
   "mat": false
  },
  "e4 e6 d4 d5 Nd2 Nf6 e5 Nfd7 Bd3 c5 c3 Nc6 Ngf3 Qb6 dxc5": {
@@ -2504,16 +2504,16 @@ export const PUNITIONS = {
   "faute": "dxc5",
   "fautif": "w",
   "ligne": [
+   "Bxc5",
+   "Qe2",
    "Qc7",
-   "O-O",
-   "Ndxe5",
-   "Nxe5",
-   "Nxe5",
-   "Bb5+"
+   "Nb3",
+   "Bb6",
+   "Bf4"
   ],
-  "evalAvant": 46,
-  "evalApres": -31,
-  "perte": 77,
+  "evalAvant": 50,
+  "evalApres": -25,
+  "perte": 75,
   "mat": false
  },
  "e4 e6 d4 d5 Nd2 c5 exd5 Qxd5 Ngf3 cxd4 Bc4 Qd6 O-O Be7": {
@@ -2529,8 +2529,8 @@ export const PUNITIONS = {
    "Bxf6"
   ],
   "evalAvant": -17,
-  "evalApres": -65,
-  "perte": 48,
+  "evalApres": -60,
+  "perte": 43,
   "mat": false
  },
  "e4 e6 d4 d5 Nd2 c5 exd5 Qxd5 Ngf3 cxd4 Bc4 Qd6 O-O Qd8": {
@@ -2541,13 +2541,13 @@ export const PUNITIONS = {
    "Qe2",
    "Nf6",
    "Rd1",
-   "Be7",
+   "Nc6",
    "Nb3",
-   "Nc6"
+   "Qc7"
   ],
-  "evalAvant": -13,
-  "evalApres": -107,
-  "perte": 94,
+  "evalAvant": -15,
+  "evalApres": -121,
+  "perte": 106,
   "mat": false
  },
  "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Bxc3+ bxc3 Ne7 Qg4 Qc7 Be3": {
@@ -2562,9 +2562,9 @@ export const PUNITIONS = {
    "Nxd4",
    "Qxd4"
   ],
-  "evalAvant": 57,
-  "evalApres": -48,
-  "perte": 105,
+  "evalAvant": 61,
+  "evalApres": -36,
+  "perte": 97,
   "mat": false
  },
  "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Bxc3+ bxc3 Ne7 Qg4 Qc7 Bf4": {
@@ -2579,9 +2579,9 @@ export const PUNITIONS = {
    "Qc7",
    "Nf3"
   ],
-  "evalAvant": 56,
-  "evalApres": -75,
-  "perte": 131,
+  "evalAvant": 57,
+  "evalApres": -67,
+  "perte": 124,
   "mat": false
  },
  "e4 e6 d4 d5 e5 Nc6 Nf3 f6 Bb5 a6 Bxc6+ bxc6 Be3 Ne7 c3": {
@@ -2594,11 +2594,11 @@ export const PUNITIONS = {
    "Nxe3",
    "fxe3",
    "a5",
-   "exf6"
+   "Nbd2"
   ],
-  "evalAvant": 61,
-  "evalApres": 32,
-  "perte": 29,
+  "evalAvant": 64,
+  "evalApres": 7,
+  "perte": 57,
   "mat": false
  },
  "e4 e6 d4 d5 e5 Nc6 Nf3 f6 Bb5 a6 Bxc6+ bxc6 Be3 Ne7 h4": {
@@ -2610,12 +2610,12 @@ export const PUNITIONS = {
    "Qd3",
    "Rb8",
    "Nbd2",
-   "Rxb2",
-   "Nb3"
+   "Nxe3",
+   "Qxe3"
   ],
-  "evalAvant": 69,
-  "evalApres": 6,
-  "perte": 63,
+  "evalAvant": 63,
+  "evalApres": 18,
+  "perte": 45,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 dxc5 Bxc5 Nd2 Qb6 Qe2 Qc7 Nb3 Bb6 c4": {
@@ -2624,15 +2624,15 @@ export const PUNITIONS = {
   "fautif": "w",
   "ligne": [
    "dxc4",
+   "Nd2",
+   "Ba5",
    "Qxc4",
-   "Qxe5+",
-   "Be2",
-   "Ne7",
+   "Nc6",
    "Nf3"
   ],
-  "evalAvant": -30,
-  "evalApres": -99,
-  "perte": 69,
+  "evalAvant": -16,
+  "evalApres": -94,
+  "perte": 78,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 dxc5 Bxc5 Nd2 Qb6 Qe2 Qc7 Nb3 Bb6 Bg5": {
@@ -2643,13 +2643,13 @@ export const PUNITIONS = {
    "Nc6",
    "Nf3",
    "Nge7",
-   "h4",
-   "O-O",
-   "a4"
+   "O-O-O",
+   "Ng6",
+   "Kb1"
   ],
-  "evalAvant": -18,
-  "evalApres": -93,
-  "perte": 75,
+  "evalAvant": -12,
+  "evalApres": -107,
+  "perte": 95,
   "mat": false
  },
  "e4 e6 d4 d5 Nc3 dxe4 Nxe4 Nf6 Nxf6+ Qxf6 Nf3 h6 Bd3 c5": {
@@ -2658,15 +2658,15 @@ export const PUNITIONS = {
   "fautif": "b",
   "ligne": [
    "Be3",
-   "Bd7",
-   "Qe2",
-   "Bc6",
-   "O-O-O",
-   "Be7"
+   "Nc6",
+   "dxc5",
+   "Qxb2",
+   "O-O",
+   "Qf6"
   ],
-  "evalAvant": -67,
-  "evalApres": -219,
-  "perte": 152,
+  "evalAvant": -70,
+  "evalApres": -140,
+  "perte": 70,
   "mat": false
  },
  "e4 e6 d4 d5 Nc3 dxe4 Nxe4 Nf6 Nxf6+ Qxf6 Nf3 h6 Bd3 Qd8": {
@@ -2674,15 +2674,15 @@ export const PUNITIONS = {
   "faute": "Qd8",
   "fautif": "b",
   "ligne": [
-   "Bd2",
+   "Qe2",
    "Nc6",
    "c3",
    "Bd6",
-   "Qe2",
+   "Bd2",
    "Bd7"
   ],
-  "evalAvant": -54,
-  "evalApres": -139,
+  "evalAvant": -69,
+  "evalApres": -154,
   "perte": 85,
   "mat": false
  },
@@ -2694,13 +2694,13 @@ export const PUNITIONS = {
    "Nxe5",
    "Nxe5",
    "Qxe5",
-   "Qf6",
-   "Qc7",
-   "Qf7"
+   "Qd6",
+   "Bg6+",
+   "Kd7"
   ],
-  "evalAvant": 115,
-  "evalApres": 2,
-  "perte": 113,
+  "evalAvant": 87,
+  "evalApres": -10,
+  "perte": 97,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 Qg4 cxd4 Nf3 Nc6 Bd3 h5 Qf4 f6 h4 Nh6": {
@@ -2709,15 +2709,15 @@ export const PUNITIONS = {
   "fautif": "b",
   "ligne": [
    "Bg6+",
-   "Ke7",
-   "Bxh5",
    "Kd7",
-   "Nxd4",
-   "Nf5"
+   "c4",
+   "Ng4",
+   "cxd5",
+   "Qa5+"
   ],
-  "evalAvant": 119,
-  "evalApres": 99,
-  "perte": 20,
+  "evalAvant": 106,
+  "evalApres": 79,
+  "perte": 27,
   "mat": false
  },
  "e4 e6 d4 d5 Nd2 c5 exd5 exd5 Ngf3 Nf6 Bb5+ Bd7 Bxd7+ Kxd7": {
@@ -2726,15 +2726,15 @@ export const PUNITIONS = {
   "fautif": "b",
   "ligne": [
    "O-O",
-   "cxd4",
-   "Nb3",
-   "Nc6",
-   "Nbxd4",
-   "Bc5"
+   "Kc8",
+   "Ng5",
+   "Qd7",
+   "Ndf3",
+   "Nc6"
   ],
-  "evalAvant": -12,
-  "evalApres": -294,
-  "perte": 282,
+  "evalAvant": -19,
+  "evalApres": -261,
+  "perte": 242,
   "mat": false
  },
  "e4 e6 d4 d5 Nd2 c5 exd5 exd5 Ngf3 Nf6 Bb5+ Bd7 Bxd7+ Ke7": {
@@ -2742,16 +2742,16 @@ export const PUNITIONS = {
   "faute": "Ke7",
   "fautif": "b",
   "ligne": [
-   "Ba4",
-   "Nc6",
-   "O-O",
+   "Bh3",
    "Ke8",
-   "Re1+",
-   "Be7"
+   "O-O",
+   "Be7",
+   "dxc5",
+   "Na6"
   ],
-  "evalAvant": -17,
-  "evalApres": -869,
-  "perte": 852,
+  "evalAvant": -19,
+  "evalApres": -960,
+  "perte": 941,
   "mat": false
  },
  "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 Bxe7 Qxe7 f4 O-O Nge2": {
@@ -2760,15 +2760,15 @@ export const PUNITIONS = {
   "fautif": "w",
   "ligne": [
    "a6",
-   "Qd2",
+   "a3",
    "b5",
-   "h4",
+   "g3",
    "c5",
-   "h5"
+   "dxc5"
   ],
-  "evalAvant": 57,
-  "evalApres": -14,
-  "perte": 71,
+  "evalAvant": 15,
+  "evalApres": -12,
+  "perte": 27,
   "mat": false
  },
  "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 Bxe7 Qxe7 f4 O-O Qg4": {
@@ -2780,12 +2780,12 @@ export const PUNITIONS = {
    "Nf3",
    "Nc6",
    "O-O-O",
-   "f6",
-   "Bd3"
+   "cxd4",
+   "Nxd4"
   ],
-  "evalAvant": 60,
+  "evalAvant": 46,
   "evalApres": -4,
-  "perte": 64,
+  "perte": 50,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 Nh6 Bd3 cxd4 O-O Qd8": {
@@ -2796,13 +2796,13 @@ export const PUNITIONS = {
    "Bxh6",
    "gxh6",
    "cxd4",
-   "f6",
-   "Nc3",
-   "Bg7"
+   "Bg7",
+   "Re1",
+   "O-O"
   ],
-  "evalAvant": -21,
-  "evalApres": -159,
-  "perte": 138,
+  "evalAvant": -24,
+  "evalApres": -165,
+  "perte": 141,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 Nh6 Bd3 cxd4 O-O g6": {
@@ -2813,13 +2813,13 @@ export const PUNITIONS = {
    "cxd4",
    "Nf5",
    "Bxf5",
-   "exf5",
+   "gxf5",
    "Nc3",
-   "Be6"
+   "Na5"
   ],
-  "evalAvant": -27,
-  "evalApres": -167,
-  "perte": 140,
+  "evalAvant": -22,
+  "evalApres": -139,
+  "perte": 117,
   "mat": false
  },
  "e4 e6 d4 d5 exd5 exd5 c4 Nf6 Nc3 Bb4 Nf3 O-O Be2 dxc4 Bg5": {
@@ -2828,15 +2828,15 @@ export const PUNITIONS = {
   "fautif": "w",
   "ligne": [
    "h6",
-   "Bh4",
-   "Be6",
+   "Bxf6",
+   "Qxf6",
    "O-O",
-   "Nbd7",
+   "Be6",
    "d5"
   ],
-  "evalAvant": -15,
-  "evalApres": -64,
-  "perte": 49,
+  "evalAvant": -10,
+  "evalApres": -54,
+  "perte": 44,
   "mat": false
  },
  "e4 e6 d4 d5 exd5 exd5 c4 Nf6 Nc3 Bb4 Nf3 O-O Be2 dxc4 Qc2": {
@@ -2849,11 +2849,11 @@ export const PUNITIONS = {
    "Be6",
    "O-O",
    "h6",
-   "Rad1"
+   "Nd1"
   ],
-  "evalAvant": -9,
-  "evalApres": -142,
-  "perte": 133,
+  "evalAvant": -6,
+  "evalApres": -170,
+  "perte": 164,
   "mat": false
  },
  "e4 e6 d4 d5 Nd2 Nc6 Ngf3 Nf6 e5 Nd7 c3 f6 Bb5 a6 Bxc6 fxe5": {
@@ -2864,13 +2864,13 @@ export const PUNITIONS = {
    "Bxd7+",
    "Bxd7",
    "Nxe5",
-   "Bd6",
+   "c5",
    "Ndf3",
-   "Bxe5"
+   "cxd4"
   ],
-  "evalAvant": -40,
-  "evalApres": -755,
-  "perte": 715,
+  "evalAvant": -53,
+  "evalApres": -708,
+  "perte": 655,
   "mat": false
  },
  "e4 e6 d4 d5 Nd2 Nc6 Ngf3 Nf6 e5 Nd7 c3 f6 Bb5 a6 Bxc6 Be7": {
@@ -2879,15 +2879,15 @@ export const PUNITIONS = {
   "fautif": "b",
   "ligne": [
    "exf6",
-   "gxf6",
-   "Ba4",
-   "e5",
-   "Bc2",
-   "O-O"
+   "bxc6",
+   "fxe7",
+   "Qxe7",
+   "O-O",
+   "c5"
   ],
-  "evalAvant": -42,
-  "evalApres": -806,
-  "perte": 764,
+  "evalAvant": -51,
+  "evalApres": -756,
+  "perte": 705,
   "mat": false
  },
  "e4 e6 d4 d5 Nc3 dxe4 Nxe4 Nd7 Nf3 Ngf6 Nxf6+ Nxf6 Bd3 Bb4+": {
@@ -2897,14 +2897,14 @@ export const PUNITIONS = {
   "ligne": [
    "c3",
    "Be7",
-   "Qe2",
+   "Bf4",
    "O-O",
-   "Bg5",
-   "Bd7"
+   "Qc2",
+   "b6"
   ],
-  "evalAvant": -32,
-  "evalApres": -104,
-  "perte": 72,
+  "evalAvant": -33,
+  "evalApres": -98,
+  "perte": 65,
   "mat": false
  },
  "e4 e6 d4 d5 Nc3 dxe4 Nxe4 Nd7 Nf3 Ngf6 Nxf6+ Nxf6 Bd3 h6": {
@@ -2915,13 +2915,13 @@ export const PUNITIONS = {
    "Qe2",
    "c5",
    "Be3",
-   "Qc7",
-   "O-O-O",
+   "Qa5+",
+   "c3",
    "a6"
   ],
-  "evalAvant": -28,
-  "evalApres": -96,
-  "perte": 68,
+  "evalAvant": -25,
+  "evalApres": -108,
+  "perte": 83,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 Nf3 cxd4 Nxd4 Nc6 Nxc6 bxc6 Bd3 Qc7 O-O": {
@@ -2931,14 +2931,14 @@ export const PUNITIONS = {
   "ligne": [
    "Qxe5",
    "Re1",
-   "Qb8",
+   "Qc7",
    "c4",
    "Nf6",
-   "cxd5"
+   "Nc3"
   ],
-  "evalAvant": -11,
-  "evalApres": -74,
-  "perte": 63,
+  "evalAvant": 1,
+  "evalApres": -68,
+  "perte": 69,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 Nf3 cxd4 Nxd4 Nc6 Nxc6 bxc6 Bd3 Qc7 Nc3": {
@@ -2953,9 +2953,9 @@ export const PUNITIONS = {
    "Bd6",
    "Kh1"
   ],
-  "evalAvant": -10,
-  "evalApres": -189,
-  "perte": 179,
+  "evalAvant": 6,
+  "evalApres": -190,
+  "perte": 196,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Bd7 Be2 Nge7 O-O Nf5 dxc5 Nfe7": {
@@ -2970,8 +2970,8 @@ export const PUNITIONS = {
    "Nxc4",
    "Bxc5"
   ],
-  "evalAvant": -31,
-  "evalApres": -194,
+  "evalAvant": -36,
+  "evalApres": -199,
   "perte": 163,
   "mat": false
  },
@@ -2987,9 +2987,9 @@ export const PUNITIONS = {
    "Bd3",
    "O-O"
   ],
-  "evalAvant": -32,
-  "evalApres": -193,
-  "perte": 161,
+  "evalAvant": -43,
+  "evalApres": -200,
+  "perte": 157,
   "mat": false
  },
  "e4 e6 d4 d5 Nc3 Nf6 e5 Nfd7 f4 c5 Nf3 Nc6 Be3 Be7 dxc5 f6": {
@@ -2999,14 +2999,14 @@ export const PUNITIONS = {
   "ligne": [
    "exf6",
    "Bxf6",
-   "Qd2",
-   "O-O",
    "Bb5",
+   "O-O",
+   "O-O",
    "a6"
   ],
-  "evalAvant": -33,
-  "evalApres": -148,
-  "perte": 115,
+  "evalAvant": -22,
+  "evalApres": -128,
+  "perte": 106,
   "mat": false
  },
  "e4 e6 d4 d5 Nc3 Nf6 e5 Nfd7 f4 c5 Nf3 Nc6 Be3 Be7 dxc5 b6": {
@@ -3014,16 +3014,16 @@ export const PUNITIONS = {
   "faute": "b6",
   "fautif": "b",
   "ligne": [
-   "Bb5",
-   "Bb7",
    "cxb6",
    "Nxb6",
+   "Bf2",
    "O-O",
-   "O-O"
+   "Bb5",
+   "Qc7"
   ],
-  "evalAvant": -35,
-  "evalApres": -141,
-  "perte": 106,
+  "evalAvant": -24,
+  "evalApres": -143,
+  "perte": 119,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 Be2 Nh6 Bxh6 gxh6 Qd2 Be7": {
@@ -3038,9 +3038,9 @@ export const PUNITIONS = {
    "b4",
    "Bf8"
   ],
-  "evalAvant": -37,
-  "evalApres": -114,
-  "perte": 77,
+  "evalAvant": -39,
+  "evalApres": -110,
+  "perte": 71,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 Be2 Nh6 Bxh6 gxh6 Qd2 Ne7": {
@@ -3049,15 +3049,15 @@ export const PUNITIONS = {
   "fautif": "b",
   "ligne": [
    "O-O",
-   "Bd7",
-   "a4",
    "a6",
-   "a5",
-   "Qc7"
+   "a4",
+   "Nc6",
+   "Na3",
+   "cxd4"
   ],
-  "evalAvant": -43,
-  "evalApres": -139,
-  "perte": 96,
+  "evalAvant": -40,
+  "evalApres": -118,
+  "perte": 78,
   "mat": false
  },
  "e4 e6 d4 d5 Nd2 Nf6 e5 Nfd7 Bd3 c5 c3 Nc6 Ngf3 Qb6 O-O f6": {
@@ -3068,13 +3068,13 @@ export const PUNITIONS = {
    "exf6",
    "Nxf6",
    "Re1",
-   "Be7",
+   "cxd4",
    "Ng5",
-   "cxd4"
+   "Be7"
   ],
-  "evalAvant": -43,
-  "evalApres": -120,
-  "perte": 77,
+  "evalAvant": -47,
+  "evalApres": -137,
+  "perte": 90,
   "mat": false
  },
  "e4 e6 d4 d5 Nd2 Nf6 e5 Nfd7 Bd3 c5 c3 Nc6 Ngf3 Qb6 O-O Qa5": {
@@ -3082,16 +3082,16 @@ export const PUNITIONS = {
   "faute": "Qa5",
   "fautif": "b",
   "ligne": [
-   "Re1",
-   "Qb6",
-   "dxc5",
-   "Bxc5",
-   "Qe2",
-   "a5"
+   "Ng5",
+   "Be7",
+   "Qh5",
+   "g6",
+   "Qh6",
+   "Bf8"
   ],
-  "evalAvant": -41,
-  "evalApres": -133,
-  "perte": 92,
+  "evalAvant": -47,
+  "evalApres": -149,
+  "perte": 102,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 dxc5 Bxc5 Nd2 Qb6 Qe2 Qc7 Nb3 Bb6 f4 h6": {
@@ -3100,15 +3100,15 @@ export const PUNITIONS = {
   "fautif": "b",
   "ligne": [
    "Be3",
-   "Ne7",
+   "Bd7",
    "O-O-O",
-   "Nbc6",
+   "Nc6",
    "Nf3",
-   "Bd7"
+   "Nge7"
   ],
-  "evalAvant": 16,
-  "evalApres": -48,
-  "perte": 64,
+  "evalAvant": 27,
+  "evalApres": -43,
+  "perte": 70,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 dxc5 Bxc5 Nd2 Qb6 Qe2 Qc7 Nb3 Bb6 f4 d4": {
@@ -3123,9 +3123,9 @@ export const PUNITIONS = {
    "Nfxd4",
    "a6"
   ],
-  "evalAvant": 10,
-  "evalApres": -37,
-  "perte": 47,
+  "evalAvant": 18,
+  "evalApres": -45,
+  "perte": 63,
   "mat": false
  },
  "e4 e6 d4 d5 Nd2 Nf6 e5 Nfd7 Bd3 c5 c3 Nc6 Ne2 cxd4 cxd4 Nb6": {
@@ -3133,16 +3133,16 @@ export const PUNITIONS = {
   "faute": "Nb6",
   "fautif": "b",
   "ligne": [
+   "Nf3",
+   "Bd7",
    "h4",
-   "f6",
-   "Nf4",
-   "Qc7",
-   "O-O",
-   "Nxd4"
+   "Nb4",
+   "Bb1",
+   "Bb5"
   ],
-  "evalAvant": -24,
-  "evalApres": -120,
-  "perte": 96,
+  "evalAvant": -37,
+  "evalApres": -121,
+  "perte": 84,
   "mat": false
  },
  "e4 e6 d4 d5 Nd2 Nf6 e5 Nfd7 Bd3 c5 c3 Nc6 Ne2 cxd4 cxd4 Be7": {
@@ -3151,15 +3151,15 @@ export const PUNITIONS = {
   "fautif": "b",
   "ligne": [
    "O-O",
-   "Nb6",
+   "O-O",
+   "Bb1",
+   "Qb6",
    "Nf3",
-   "Bd7",
-   "Nf4",
-   "a5"
+   "f6"
   ],
-  "evalAvant": -30,
-  "evalApres": -121,
-  "perte": 91,
+  "evalAvant": -36,
+  "evalApres": -105,
+  "perte": 69,
   "mat": false
  },
  "e4 e6 d4 d5 e5 Nc6 Nf3 f6 Bb5 a6 Bxc6+ bxc6 Be3 Ne7 Nc3 c5": {
@@ -3170,13 +3170,13 @@ export const PUNITIONS = {
    "dxc5",
    "Ng6",
    "h4",
-   "fxe5",
-   "h5",
-   "Nf4"
+   "Rb8",
+   "Qd4",
+   "Be7"
   ],
-  "evalAvant": -65,
-  "evalApres": -171,
-  "perte": 106,
+  "evalAvant": -69,
+  "evalApres": -130,
+  "perte": 61,
   "mat": false
  },
  "e4 e6 d4 d5 e5 Nc6 Nf3 f6 Bb5 a6 Bxc6+ bxc6 Be3 Ne7 Nc3 Bb7": {
@@ -3188,12 +3188,12 @@ export const PUNITIONS = {
    "Nf5",
    "Qe2",
    "c5",
-   "Nxc5",
-   "Bxc5"
+   "O-O-O",
+   "Nxe3"
   ],
-  "evalAvant": -70,
-  "evalApres": -131,
-  "perte": 61,
+  "evalAvant": -64,
+  "evalApres": -129,
+  "perte": 65,
   "mat": false
  },
  "e4 e6 d4 d5 exd5 exd5 Nf3 Bd6 c4 Nf6 c5 Be7 Bd3 O-O O-O a6": {
@@ -3201,16 +3201,16 @@ export const PUNITIONS = {
   "faute": "a6",
   "fautif": "b",
   "ligne": [
-   "h3",
+   "Re1",
    "b6",
-   "Be3",
-   "bxc5",
-   "dxc5",
-   "a5"
+   "cxb6",
+   "cxb6",
+   "Nc3",
+   "Nc6"
   ],
-  "evalAvant": -22,
-  "evalApres": -83,
-  "perte": 61,
+  "evalAvant": -15,
+  "evalApres": -80,
+  "perte": 65,
   "mat": false
  },
  "e4 e6 d4 d5 exd5 exd5 Nf3 Bd6 c4 Nf6 c5 Be7 Bd3 O-O O-O Kh8": {
@@ -3219,15 +3219,15 @@ export const PUNITIONS = {
   "fautif": "b",
   "ligne": [
    "Bf4",
-   "Bg4",
-   "Nbd2",
-   "Nc6",
-   "h3",
-   "Bh5"
+   "c6",
+   "Nc3",
+   "Nh5",
+   "Be3",
+   "Bg4"
   ],
-  "evalAvant": -19,
-  "evalApres": -68,
-  "perte": 49,
+  "evalAvant": -14,
+  "evalApres": -82,
+  "perte": 68,
   "mat": false
  },
  "e4 e6 d4 d5 Nc3 dxe4 Nxe4 Nf6 Nxf6+ Qxf6 Nf3 h6 Bd3 Bd6 b3": {
@@ -3240,11 +3240,11 @@ export const PUNITIONS = {
    "Bc6",
    "Ne5",
    "Qg5",
-   "Bf1"
+   "Qd2"
   ],
-  "evalAvant": 75,
-  "evalApres": 12,
-  "perte": 63,
+  "evalAvant": 78,
+  "evalApres": 8,
+  "perte": 70,
   "mat": false
  },
  "e4 e6 d4 d5 Nc3 dxe4 Nxe4 Nf6 Nxf6+ Qxf6 Nf3 h6 Bd3 Bd6 a4": {
@@ -3253,15 +3253,15 @@ export const PUNITIONS = {
   "fautif": "w",
   "ligne": [
    "Nc6",
+   "O-O",
+   "O-O",
    "Be4",
-   "O-O",
-   "O-O",
    "Rd8",
    "Be3"
   ],
-  "evalAvant": 55,
-  "evalApres": 3,
-  "perte": 52,
+  "evalAvant": 69,
+  "evalApres": 5,
+  "perte": 64,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 Qg4 cxd4 Nf3 Nc6 Bd3 h5 Qf4 f6 h4 Qc7 c3": {
@@ -3270,15 +3270,15 @@ export const PUNITIONS = {
   "fautif": "w",
   "ligne": [
    "Nxe5",
-   "O-O",
-   "Bd6",
    "Nxe5",
-   "Bxe5",
-   "Qf3"
+   "Qxe5+",
+   "Qxe5",
+   "fxe5",
+   "cxd4"
   ],
-  "evalAvant": -117,
-  "evalApres": -289,
-  "perte": 172,
+  "evalAvant": -112,
+  "evalApres": -213,
+  "perte": 101,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 Qg4 cxd4 Nf3 Nc6 Bd3 h5 Qf4 f6 h4 Qc7 Nxd4": {
@@ -3291,11 +3291,11 @@ export const PUNITIONS = {
    "Nxe5",
    "Be2",
    "Kf7",
-   "c3"
+   "O-O"
   ],
-  "evalAvant": -129,
-  "evalApres": -280,
-  "perte": 151,
+  "evalAvant": -102,
+  "evalApres": -265,
+  "perte": 163,
   "mat": false
  },
  "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Bxc3+ bxc3 Ne7 Qg4 Qc7 Qxg7 Rf8": {
@@ -3310,9 +3310,9 @@ export const PUNITIONS = {
    "Rc1",
    "Qe4+"
   ],
-  "evalAvant": -58,
-  "evalApres": -183,
-  "perte": 125,
+  "evalAvant": -62,
+  "evalApres": -185,
+  "perte": 123,
   "mat": false
  },
  "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Bxc3+ bxc3 Ne7 Qg4 Qc7 Qxg7 Ng6": {
@@ -3322,14 +3322,14 @@ export const PUNITIONS = {
   "ligne": [
    "Bd2",
    "Qe7",
-   "h4",
+   "Nf3",
    "Qf8",
    "Qxf8+",
    "Nxf8"
   ],
   "evalAvant": -66,
-  "evalApres": -404,
-  "perte": 338,
+  "evalApres": -402,
+  "perte": 336,
   "mat": false
  },
  "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 Bxe7 Qxe7 f4 O-O Nf3 Nc6": {
@@ -3337,16 +3337,16 @@ export const PUNITIONS = {
   "faute": "Nc6",
   "fautif": "b",
   "ligne": [
-   "Qd2",
+   "Bd3",
    "f6",
-   "O-O-O",
+   "a3",
    "Nd8",
-   "exf6",
-   "Nxf6"
+   "Ne2",
+   "c5"
   ],
-  "evalAvant": -30,
-  "evalApres": -109,
-  "perte": 79,
+  "evalAvant": -31,
+  "evalApres": -143,
+  "perte": 112,
   "mat": false
  },
  "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 Bxe7 Qxe7 f4 O-O Nf3 f5": {
@@ -3361,9 +3361,9 @@ export const PUNITIONS = {
    "c3",
    "cxd4"
   ],
-  "evalAvant": -30,
-  "evalApres": -87,
-  "perte": 57,
+  "evalAvant": -40,
+  "evalApres": -89,
+  "perte": 49,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 Nh6 Bd3 cxd4 O-O Bd7 cxd4": {
@@ -3378,9 +3378,9 @@ export const PUNITIONS = {
    "Bc5",
    "Bxh6"
   ],
-  "evalAvant": 18,
-  "evalApres": -35,
-  "perte": 53,
+  "evalAvant": 23,
+  "evalApres": -26,
+  "perte": 49,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 Nh6 Bd3 cxd4 O-O Bd7 a4": {
@@ -3391,13 +3391,13 @@ export const PUNITIONS = {
    "dxc3",
    "Nxc3",
    "Bc5",
-   "Bf4",
-   "a6",
+   "Bd2",
+   "a5",
    "Rc1"
   ],
-  "evalAvant": 20,
-  "evalApres": -40,
-  "perte": 60,
+  "evalAvant": 22,
+  "evalApres": -30,
+  "perte": 52,
   "mat": false
  },
  "e4 e6 d4 d5 Nd2 Nc6 Ngf3 Nf6 e5 Nd7 c3 f6 Bb5 a6 Bxc6 bxc6 h4": {
@@ -3406,15 +3406,15 @@ export const PUNITIONS = {
   "fautif": "w",
   "ligne": [
    "c5",
-   "O-O",
-   "fxe5",
    "Qa4",
-   "Be7",
-   "dxe5"
+   "cxd4",
+   "O-O",
+   "dxc3",
+   "bxc3"
   ],
-  "evalAvant": 45,
-  "evalApres": -41,
-  "perte": 86,
+  "evalAvant": 56,
+  "evalApres": 3,
+  "perte": 53,
   "mat": false
  },
  "e4 e6 d4 d5 Nd2 Nc6 Ngf3 Nf6 e5 Nd7 c3 f6 Bb5 a6 Bxc6 bxc6 a3": {
@@ -3423,15 +3423,15 @@ export const PUNITIONS = {
   "fautif": "w",
   "ligne": [
    "fxe5",
-   "Nxe5",
-   "Nxe5",
    "dxe5",
-   "Qg5",
-   "O-O"
+   "a5",
+   "O-O",
+   "a4",
+   "Re1"
   ],
-  "evalAvant": 51,
+  "evalAvant": 41,
   "evalApres": -29,
-  "perte": 80,
+  "perte": 70,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 Be2 Nh6 Bxh6 gxh6 Qd2 Bg7 Qe3": {
@@ -3441,14 +3441,14 @@ export const PUNITIONS = {
   "ligne": [
    "Qxb2",
    "O-O",
-   "cxd4",
-   "cxd4",
-   "Qxa1",
-   "Qd2"
+   "b6",
+   "Nbd2",
+   "Qa3",
+   "Nb1"
   ],
-  "evalAvant": 30,
-  "evalApres": -56,
-  "perte": 86,
+  "evalAvant": 41,
+  "evalApres": -24,
+  "perte": 65,
   "mat": false
  },
  "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 Be2 Nh6 Bxh6 gxh6 Qd2 Bg7 dxc5": {
@@ -3457,15 +3457,1681 @@ export const PUNITIONS = {
   "fautif": "w",
   "ligne": [
    "Qxc5",
-   "O-O",
-   "O-O",
    "Na3",
    "Nxe5",
-   "Nxe5"
+   "Nxe5",
+   "Bxe5",
+   "Bb5+"
+  ],
+  "evalAvant": 39,
+  "evalApres": -41,
+  "perte": 80,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nd2 c5 exd5 Qxd5 Ngf3 cxd4 Bc4 Qd6 O-O Nf6 Nb3 Qb6": {
+  "coups": "e4 e6 d4 d5 Nd2 c5 exd5 Qxd5 Ngf3 cxd4 Bc4 Qd6 O-O Nf6 Nb3",
+  "faute": "Qb6",
+  "fautif": "b",
+  "ligne": [
+   "a4",
+   "a6",
+   "Nbxd4",
+   "Be7",
+   "Qe2",
+   "Bd7"
+  ],
+  "evalAvant": -5,
+  "evalApres": -78,
+  "perte": 73,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nd2 c5 exd5 Qxd5 Ngf3 cxd4 Bc4 Qd6 O-O Nf6 Nb3 h6": {
+  "coups": "e4 e6 d4 d5 Nd2 c5 exd5 Qxd5 Ngf3 cxd4 Bc4 Qd6 O-O Nf6 Nb3",
+  "faute": "h6",
+  "fautif": "b",
+  "ligne": [
+   "Nbxd4",
+   "a6",
+   "Qe2",
+   "b5",
+   "Bb3",
+   "Qb6"
+  ],
+  "evalAvant": -16,
+  "evalApres": -96,
+  "perte": 80,
+  "mat": false
+ },
+ "e4 e6 d4 d5 e5 c5 dxc5 Bxc5 Nd2 Qb6 Qe2 Qc7 Nb3 Bb6 f4 Ne7 Be3": {
+  "coups": "e4 e6 d4 d5 e5 c5 dxc5 Bxc5 Nd2 Qb6 Qe2 Qc7 Nb3 Bb6 f4 Ne7",
+  "faute": "Be3",
+  "fautif": "w",
+  "ligne": [
+   "Bxe3",
+   "Qxe3",
+   "Qxc2",
+   "Qd2",
+   "Qc6",
+   "h4"
+  ],
+  "evalAvant": 0,
+  "evalApres": -82,
+  "perte": 82,
+  "mat": false
+ },
+ "e4 e6 d4 d5 e5 c5 dxc5 Bxc5 Nd2 Qb6 Qe2 Qc7 Nb3 Bb6 f4 Ne7 h4": {
+  "coups": "e4 e6 d4 d5 e5 c5 dxc5 Bxc5 Nd2 Qb6 Qe2 Qc7 Nb3 Bb6 f4 Ne7",
+  "faute": "h4",
+  "fautif": "w",
+  "ligne": [
+   "Nbc6",
+   "Be3",
+   "O-O",
+   "Nf3",
+   "Nf5",
+   "Bf2"
+  ],
+  "evalAvant": 0,
+  "evalApres": -111,
+  "perte": 111,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nd2 Nf6 e5 Nfd7 Bd3 c5 c3 Nc6 Ne2 cxd4 cxd4 f6 Nf3": {
+  "coups": "e4 e6 d4 d5 Nd2 Nf6 e5 Nfd7 Bd3 c5 c3 Nc6 Ne2 cxd4 cxd4 f6",
+  "faute": "Nf3",
+  "fautif": "w",
+  "ligne": [
+   "fxe5",
+   "dxe5",
+   "Ncxe5",
+   "Nxe5",
+   "Nxe5",
+   "O-O"
+  ],
+  "evalAvant": 27,
+  "evalApres": -111,
+  "perte": 138,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nd2 Nf6 e5 Nfd7 Bd3 c5 c3 Nc6 Ne2 cxd4 cxd4 f6 O-O": {
+  "coups": "e4 e6 d4 d5 Nd2 Nf6 e5 Nfd7 Bd3 c5 c3 Nc6 Ne2 cxd4 cxd4 f6",
+  "faute": "O-O",
+  "fautif": "w",
+  "ligne": [
+   "fxe5",
+   "Nc3",
+   "g6",
+   "Nf3",
+   "e4",
+   "Ng5"
+  ],
+  "evalAvant": 32,
+  "evalApres": -136,
+  "perte": 168,
+  "mat": false
+ },
+ "e4 e6 d4 d5 exd5 exd5 Nf3 Bd6 c4 Nf6 c5 Be7 Bd3 O-O O-O b6 Re1": {
+  "coups": "e4 e6 d4 d5 exd5 exd5 Nf3 Bd6 c4 Nf6 c5 Be7 Bd3 O-O O-O b6",
+  "faute": "Re1",
+  "fautif": "w",
+  "ligne": [
+   "bxc5",
+   "dxc5",
+   "Bxc5",
+   "Bg5",
+   "h6",
+   "Bh4"
+  ],
+  "evalAvant": 19,
+  "evalApres": -48,
+  "perte": 67,
+  "mat": false
+ },
+ "e4 e6 d4 d5 exd5 exd5 Nf3 Bd6 c4 Nf6 c5 Be7 Bd3 O-O O-O b6 Ne5": {
+  "coups": "e4 e6 d4 d5 exd5 exd5 Nf3 Bd6 c4 Nf6 c5 Be7 Bd3 O-O O-O b6",
+  "faute": "Ne5",
+  "fautif": "w",
+  "ligne": [
+   "bxc5",
+   "dxc5",
+   "Bxc5",
+   "Bf4",
+   "Bd6",
+   "Re1"
+  ],
+  "evalAvant": 6,
+  "evalApres": -100,
+  "perte": 106,
+  "mat": false
+ },
+ "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Bd7 Be2 Nge7 O-O Nf5 dxc5 Bxc5 Bf4": {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Bd7 Be2 Nge7 O-O Nf5 dxc5 Bxc5",
+  "faute": "Bf4",
+  "fautif": "w",
+  "ligne": [
+   "h6",
+   "Nbd2",
+   "Bb6",
+   "Nb3",
+   "g5",
+   "Bd2"
+  ],
+  "evalAvant": 39,
+  "evalApres": -14,
+  "perte": 53,
+  "mat": false
+ },
+ "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Bd7 Be2 Nge7 O-O Nf5 dxc5 Bxc5 b3": {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Bd7 Be2 Nge7 O-O Nf5 dxc5 Bxc5",
+  "faute": "b3",
+  "fautif": "w",
+  "ligne": [
+   "Nh4",
+   "Nbd2",
+   "Ng6",
+   "c4",
+   "O-O",
+   "Bb2"
+  ],
+  "evalAvant": 37,
+  "evalApres": -63,
+  "perte": 100,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Nf6 e5 Nfd7 f4 c5 Nf3 Nc6 Be3 Be7 dxc5 Bxc5 Bd2": {
+  "coups": "e4 e6 d4 d5 Nc3 Nf6 e5 Nfd7 f4 c5 Nf3 Nc6 Be3 Be7 dxc5 Bxc5",
+  "faute": "Bd2",
+  "fautif": "w",
+  "ligne": [
+   "a6",
+   "Bd3",
+   "b5",
+   "Qe2",
+   "Bb6",
+   "Nd1"
+  ],
+  "evalAvant": 31,
+  "evalApres": -40,
+  "perte": 71,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Nf6 e5 Nfd7 f4 c5 Nf3 Nc6 Be3 Be7 dxc5 Bxc5 Kf2": {
+  "coups": "e4 e6 d4 d5 Nc3 Nf6 e5 Nfd7 f4 c5 Nf3 Nc6 Be3 Be7 dxc5 Bxc5",
+  "faute": "Kf2",
+  "fautif": "w",
+  "ligne": [
+   "Bxe3+",
+   "Kxe3",
+   "Qb6+",
+   "Kd2",
+   "Qb4",
+   "Ke3"
+  ],
+  "evalAvant": 41,
+  "evalApres": -273,
+  "perte": 314,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nd2 Nf6 e5 Nfd7 Bd3 c5 c3 Nc6 Ngf3 Qb6 O-O cxd4 Re1": {
+  "coups": "e4 e6 d4 d5 Nd2 Nf6 e5 Nfd7 Bd3 c5 c3 Nc6 Ngf3 Qb6 O-O cxd4",
+  "faute": "Re1",
+  "fautif": "w",
+  "ligne": [
+   "dxc3",
+   "bxc3",
+   "Qc7",
+   "Qe2",
+   "Nc5",
+   "Bc2"
   ],
   "evalAvant": 36,
-  "evalApres": -33,
+  "evalApres": -63,
+  "perte": 99,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nd2 Nf6 e5 Nfd7 Bd3 c5 c3 Nc6 Ngf3 Qb6 O-O cxd4 Nxd4": {
+  "coups": "e4 e6 d4 d5 Nd2 Nf6 e5 Nfd7 Bd3 c5 c3 Nc6 Ngf3 Qb6 O-O cxd4",
+  "faute": "Nxd4",
+  "fautif": "w",
+  "ligne": [
+   "Ndxe5",
+   "N2b3",
+   "Bd6",
+   "Be3",
+   "Qd8",
+   "Be2"
+  ],
+  "evalAvant": 47,
+  "evalApres": -143,
+  "perte": 190,
+  "mat": false
+ },
+ "e4 e6 d4 d5 e5 Nc6 Nf3 f6 Bb5 a6 Bxc6+ bxc6 Be3 Ne7 Nc3 Nf5 b3": {
+  "coups": "e4 e6 d4 d5 e5 Nc6 Nf3 f6 Bb5 a6 Bxc6+ bxc6 Be3 Ne7 Nc3 Nf5",
+  "faute": "b3",
+  "fautif": "w",
+  "ligne": [
+   "c5",
+   "O-O",
+   "cxd4",
+   "Nxd4",
+   "Nxd4",
+   "Qxd4"
+  ],
+  "evalAvant": 66,
+  "evalApres": 1,
+  "perte": 65,
+  "mat": false
+ },
+ "e4 e6 d4 d5 e5 Nc6 Nf3 f6 Bb5 a6 Bxc6+ bxc6 Be3 Ne7 Nc3 Nf5 Rc1": {
+  "coups": "e4 e6 d4 d5 e5 Nc6 Nf3 f6 Bb5 a6 Bxc6+ bxc6 Be3 Ne7 Nc3 Nf5",
+  "faute": "Rc1",
+  "fautif": "w",
+  "ligne": [
+   "c5",
+   "O-O",
+   "cxd4",
+   "Nxd4",
+   "Nxd4",
+   "Qxd4"
+  ],
+  "evalAvant": 66,
+  "evalApres": -19,
+  "perte": 85,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 dxe4 Nxe4 Nf6 Nxf6+ Qxf6 Nf3 h6 Bd3 Bd6 Qe2 O-O": {
+  "coups": "e4 e6 d4 d5 Nc3 dxe4 Nxe4 Nf6 Nxf6+ Qxf6 Nf3 h6 Bd3 Bd6 Qe2",
+  "faute": "O-O",
+  "fautif": "b",
+  "ligne": [
+   "Qe4",
+   "Re8",
+   "Qh7+",
+   "Kf8",
+   "Be3",
+   "Nc6"
+  ],
+  "evalAvant": -62,
+  "evalApres": -159,
+  "perte": 97,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 dxe4 Nxe4 Nf6 Nxf6+ Qxf6 Nf3 h6 Bd3 Bd6 Qe2 Bf4": {
+  "coups": "e4 e6 d4 d5 Nc3 dxe4 Nxe4 Nf6 Nxf6+ Qxf6 Nf3 h6 Bd3 Bd6 Qe2",
+  "faute": "Bf4",
+  "fautif": "b",
+  "ligne": [
+   "O-O",
+   "Bxc1",
+   "Raxc1",
+   "O-O",
+   "c3",
+   "Nc6"
+  ],
+  "evalAvant": -49,
+  "evalApres": -138,
+  "perte": 89,
+  "mat": false
+ },
+ "e4 e6 d4 d5 e5 c5 Qg4 cxd4 Nf3 Nc6 Bd3 h5 Qf4 f6 h4 Qc7 O-O Bb4": {
+  "coups": "e4 e6 d4 d5 e5 c5 Qg4 cxd4 Nf3 Nc6 Bd3 h5 Qf4 f6 h4 Qc7 O-O",
+  "faute": "Bb4",
+  "fautif": "b",
+  "ligne": [
+   "a3",
+   "fxe5",
+   "Nxe5",
+   "Qxe5",
+   "axb4",
+   "Qxf4"
+  ],
+  "evalAvant": 106,
+  "evalApres": 18,
+  "perte": 88,
+  "mat": false
+ },
+ "e4 e6 d4 d5 e5 c5 Qg4 cxd4 Nf3 Nc6 Bd3 h5 Qf4 f6 h4 Qc7 O-O Nge7": {
+  "coups": "e4 e6 d4 d5 e5 c5 Qg4 cxd4 Nf3 Nc6 Bd3 h5 Qf4 f6 h4 Qc7 O-O",
+  "faute": "Nge7",
+  "fautif": "b",
+  "ligne": [
+   "Re1",
+   "Bd7",
+   "Qg3",
+   "O-O-O",
+   "Bf4",
+   "g5"
+  ],
+  "evalAvant": 96,
+  "evalApres": -38,
+  "perte": 134,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 Bxe7 Qxe7 f4 O-O Nf3 c5 Be2": {
+  "coups": "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 Bxe7 Qxe7 f4 O-O Nf3 c5",
+  "faute": "Be2",
+  "fautif": "w",
+  "ligne": [
+   "Nc6",
+   "dxc5",
+   "Nxc5",
+   "O-O",
+   "f5",
+   "exf6"
+  ],
+  "evalAvant": 34,
+  "evalApres": 5,
+  "perte": 29,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 Bxe7 Qxe7 f4 O-O Nf3 c5 h4": {
+  "coups": "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 Bxe7 Qxe7 f4 O-O Nf3 c5",
+  "faute": "h4",
+  "fautif": "w",
+  "ligne": [
+   "f6",
+   "exf6",
+   "Nxf6",
+   "dxc5",
+   "Qxc5",
+   "Qd2"
+  ],
+  "evalAvant": 35,
+  "evalApres": -32,
+  "perte": 67,
+  "mat": false
+ },
+ "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 Nh6 Bd3 cxd4 O-O Bd7 b4 dxc3": {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 Nh6 Bd3 cxd4 O-O Bd7 b4",
+  "faute": "dxc3",
+  "fautif": "b",
+  "ligne": [
+   "Nxc3",
+   "Be7",
+   "Bf4",
+   "a6",
+   "Qd2",
+   "Nd4"
+  ],
+  "evalAvant": -20,
+  "evalApres": -84,
+  "perte": 64,
+  "mat": false
+ },
+ "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 Nh6 Bd3 cxd4 O-O Bd7 b4 Ne7": {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 Nh6 Bd3 cxd4 O-O Bd7 b4",
+  "faute": "Ne7",
+  "fautif": "b",
+  "ligne": [
+   "cxd4",
+   "Rc8",
+   "Bxh6",
+   "gxh6",
+   "Qd2",
+   "Nc6"
+  ],
+  "evalAvant": -14,
+  "evalApres": -139,
+  "perte": 125,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Bxc3+ bxc3 Ne7 Qg4 Qc7 Qxg7 Rg8 Qh6": {
+  "coups": "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Bxc3+ bxc3 Ne7 Qg4 Qc7 Qxg7 Rg8",
+  "faute": "Qh6",
+  "fautif": "w",
+  "ligne": [
+   "cxd4",
+   "Ne2",
+   "dxc3",
+   "Qxh7",
+   "Nbc6",
+   "f4"
+  ],
+  "evalAvant": 64,
+  "evalApres": -34,
+  "perte": 98,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Bxc3+ bxc3 Ne7 Qg4 Qc7 Qxg7 Rg8 Qg3": {
+  "coups": "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Bxc3+ bxc3 Ne7 Qg4 Qc7 Qxg7 Rg8",
+  "faute": "Qg3",
+  "fautif": "w",
+  "ligne": [
+   "Rxg3",
+   "hxg3",
+   "cxd4",
+   "Kd1",
+   "Ng6",
+   "Nf3"
+  ],
+  "evalAvant": 54,
+  "evalApres": -577,
+  "perte": 631,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 dxe4 Nxe4 Nd7 Nf3 Ngf6 Nxf6+ Nxf6 Bd3 c5 dxc5 Be7": {
+  "coups": "e4 e6 d4 d5 Nc3 dxe4 Nxe4 Nd7 Nf3 Ngf6 Nxf6+ Nxf6 Bd3 c5 dxc5",
+  "faute": "Be7",
+  "fautif": "b",
+  "ligne": [
+   "Qe2",
+   "O-O",
+   "Bd2",
+   "Bxc5",
+   "O-O-O",
+   "b5"
+  ],
+  "evalAvant": -18,
+  "evalApres": -64,
+  "perte": 46,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 dxe4 Nxe4 Nd7 Nf3 Ngf6 Nxf6+ Nxf6 Bd3 c5 dxc5 Qc7": {
+  "coups": "e4 e6 d4 d5 Nc3 dxe4 Nxe4 Nd7 Nf3 Ngf6 Nxf6+ Nxf6 Bd3 c5 dxc5",
+  "faute": "Qc7",
+  "fautif": "b",
+  "ligne": [
+   "b4",
+   "b6",
+   "Bb5+",
+   "Bd7",
+   "Bxd7+",
+   "Nxd7"
+  ],
+  "evalAvant": -14,
+  "evalApres": -66,
+  "perte": 52,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nd2 c5 exd5 exd5 Ngf3 Nf6 Bb5+ Bd7 Bxd7+ Nbxd7 O-O cxd4": {
+  "coups": "e4 e6 d4 d5 Nd2 c5 exd5 exd5 Ngf3 Nf6 Bb5+ Bd7 Bxd7+ Nbxd7 O-O",
+  "faute": "cxd4",
+  "fautif": "b",
+  "ligne": [
+   "Qe2+",
+   "Be7",
+   "Re1",
+   "Kf8",
+   "Nb3",
+   "h5"
+  ],
+  "evalAvant": -16,
+  "evalApres": -120,
+  "perte": 104,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nd2 c5 exd5 exd5 Ngf3 Nf6 Bb5+ Bd7 Bxd7+ Nbxd7 O-O Bd6": {
+  "coups": "e4 e6 d4 d5 Nd2 c5 exd5 exd5 Ngf3 Nf6 Bb5+ Bd7 Bxd7+ Nbxd7 O-O",
+  "faute": "Bd6",
+  "fautif": "b",
+  "ligne": [
+   "Re1+",
+   "Be7",
+   "Qe2",
+   "Rc8",
+   "Nf1",
+   "Nf8"
+  ],
+  "evalAvant": -10,
+  "evalApres": -117,
+  "perte": 107,
+  "mat": false
+ },
+ "e4 e6 d4 d5 exd5 exd5 c4 Nf6 Nc3 Bb4 Nf3 O-O Be2 dxc4 Bxc4 Bg4 Bf4": {
+  "coups": "e4 e6 d4 d5 exd5 exd5 c4 Nf6 Nc3 Bb4 Nf3 O-O Be2 dxc4 Bxc4 Bg4",
+  "faute": "Bf4",
+  "fautif": "w",
+  "ligne": [
+   "Bxf3",
+   "gxf3",
+   "Nc6",
+   "O-O",
+   "Qxd4",
+   "Qxd4"
+  ],
+  "evalAvant": -13,
+  "evalApres": -115,
+  "perte": 102,
+  "mat": false
+ },
+ "e4 e6 d4 d5 exd5 exd5 c4 Nf6 Nc3 Bb4 Nf3 O-O Be2 dxc4 Bxc4 Bg4 Bg5": {
+  "coups": "e4 e6 d4 d5 exd5 exd5 c4 Nf6 Nc3 Bb4 Nf3 O-O Be2 dxc4 Bxc4 Bg4",
+  "faute": "Bg5",
+  "fautif": "w",
+  "ligne": [
+   "Re8+",
+   "Be3",
+   "Bxf3",
+   "gxf3",
+   "Qd7",
+   "O-O"
+  ],
+  "evalAvant": -14,
+  "evalApres": -76,
+  "perte": 62,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nd2 Nc6 Ngf3 Nf6 e5 Nd7 c3 f6 Bb5 a6 Bxc6 bxc6 O-O c5": {
+  "coups": "e4 e6 d4 d5 Nd2 Nc6 Ngf3 Nf6 e5 Nd7 c3 f6 Bb5 a6 Bxc6 bxc6 O-O",
+  "faute": "c5",
+  "fautif": "b",
+  "ligne": [
+   "Re1",
+   "f5",
+   "Nb3",
+   "a5",
+   "Ng5",
+   "Ra6"
+  ],
+  "evalAvant": -37,
+  "evalApres": -58,
+  "perte": 21,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nd2 Nc6 Ngf3 Nf6 e5 Nd7 c3 f6 Bb5 a6 Bxc6 bxc6 O-O Be7": {
+  "coups": "e4 e6 d4 d5 Nd2 Nc6 Ngf3 Nf6 e5 Nd7 c3 f6 Bb5 a6 Bxc6 bxc6 O-O",
+  "faute": "Be7",
+  "fautif": "b",
+  "ligne": [
+   "exf6",
+   "gxf6",
+   "Nh4",
+   "O-O",
+   "Re1",
+   "Kh8"
+  ],
+  "evalAvant": -57,
+  "evalApres": -154,
+  "perte": 97,
+  "mat": false
+ },
+ "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 Be2 Nh6 Bxh6 gxh6 Qd2 Bg7 Na3 Ne7": {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 Be2 Nh6 Bxh6 gxh6 Qd2 Bg7 Na3",
+  "faute": "Ne7",
+  "fautif": "b",
+  "ligne": [
+   "Bb5+",
+   "Nc6",
+   "O-O",
+   "O-O",
+   "Rfe1",
+   "Bd7"
+  ],
+  "evalAvant": -34,
+  "evalApres": -88,
+  "perte": 54,
+  "mat": false
+ },
+ "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 Be2 Nh6 Bxh6 gxh6 Qd2 Bg7 Na3 Nd8": {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 Be2 Nh6 Bxh6 gxh6 Qd2 Bg7 Na3",
+  "faute": "Nd8",
+  "fautif": "b",
+  "ligne": [
+   "Nc2",
+   "cxd4",
+   "cxd4",
+   "Bd7",
+   "O-O",
+   "O-O"
+  ],
+  "evalAvant": -27,
+  "evalApres": -110,
+  "perte": 83,
+  "mat": false
+ },
+ "e4 e6 d4 d5 e5 c5 dxc5 Bxc5 Nd2 Qb6 Qe2 Qc7 Nb3 Bb6 f4 Ne7 Nf3 f6": {
+  "coups": "e4 e6 d4 d5 e5 c5 dxc5 Bxc5 Nd2 Qb6 Qe2 Qc7 Nb3 Bb6 f4 Ne7 Nf3",
+  "faute": "f6",
+  "fautif": "b",
+  "ligne": [
+   "exf6",
+   "gxf6",
+   "Nfd4",
+   "Nbc6",
+   "Nb5",
+   "Qd8"
+  ],
+  "evalAvant": 8,
+  "evalApres": -49,
+  "perte": 57,
+  "mat": false
+ },
+ "e4 e6 d4 d5 e5 c5 dxc5 Bxc5 Nd2 Qb6 Qe2 Qc7 Nb3 Bb6 f4 Ne7 Nf3 Nf5": {
+  "coups": "e4 e6 d4 d5 e5 c5 dxc5 Bxc5 Nd2 Qb6 Qe2 Qc7 Nb3 Bb6 f4 Ne7 Nf3",
+  "faute": "Nf5",
+  "fautif": "b",
+  "ligne": [
+   "g4",
+   "Ne7",
+   "Nbd4",
+   "a6",
+   "Be3",
+   "Nbc6"
+  ],
+  "evalAvant": 8,
+  "evalApres": -66,
+  "perte": 74,
+  "mat": false
+ },
+ "e4 e6 d4 d5 exd5 exd5 Nf3 Bd6 c4 Nf6 c5 Be7 Bd3 O-O O-O b6 Be3 a5": {
+  "coups": "e4 e6 d4 d5 exd5 exd5 Nf3 Bd6 c4 Nf6 c5 Be7 Bd3 O-O O-O b6 Be3",
+  "faute": "a5",
+  "fautif": "b",
+  "ligne": [
+   "cxb6",
+   "c6",
+   "Ne5",
+   "Ba6",
+   "Bxa6",
+   "Rxa6"
+  ],
+  "evalAvant": -17,
+  "evalApres": -57,
+  "perte": 40,
+  "mat": false
+ },
+ "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Bd7 Be2 Nge7 O-O Nf5 dxc5 Bxc5 b4 Nxb4": {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Bd7 Be2 Nge7 O-O Nf5 dxc5 Bxc5 b4",
+  "faute": "Nxb4",
+  "fautif": "b",
+  "ligne": [
+   "cxb4",
+   "Bxb4",
+   "Bd3",
+   "Ne7",
+   "Bd2",
+   "Nc6"
+  ],
+  "evalAvant": -33,
+  "evalApres": -492,
+  "perte": 459,
+  "mat": false
+ },
+ "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Bd7 Be2 Nge7 O-O Nf5 dxc5 Bxc5 b4 f6": {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Bd7 Be2 Nge7 O-O Nf5 dxc5 Bxc5 b4",
+  "faute": "f6",
+  "fautif": "b",
+  "ligne": [
+   "bxc5",
+   "fxe5",
+   "Na3",
+   "O-O",
+   "Nc2",
+   "Qf6"
+  ],
+  "evalAvant": -38,
+  "evalApres": -551,
+  "perte": 513,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nd2 Nf6 e5 Nfd7 Bd3 c5 c3 Nc6 Ne2 cxd4 cxd4 f6 exf6 gxf6": {
+  "coups": "e4 e6 d4 d5 Nd2 Nf6 e5 Nfd7 Bd3 c5 c3 Nc6 Ne2 cxd4 cxd4 f6 exf6",
+  "faute": "gxf6",
+  "fautif": "b",
+  "ligne": [
+   "O-O",
+   "Bd6",
+   "Nb3",
+   "Nf8",
+   "Bh6",
+   "Ng6"
+  ],
+  "evalAvant": -32,
+  "evalApres": -186,
+  "perte": 154,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nd2 Nf6 e5 Nfd7 Bd3 c5 c3 Nc6 Ne2 cxd4 cxd4 f6 exf6 e5": {
+  "coups": "e4 e6 d4 d5 Nd2 Nf6 e5 Nfd7 Bd3 c5 c3 Nc6 Ne2 cxd4 cxd4 f6 exf6",
+  "faute": "e5",
+  "fautif": "b",
+  "ligne": [
+   "f7+",
+   "Kxf7",
+   "O-O",
+   "Nf6",
+   "Bc2",
+   "exd4"
+  ],
+  "evalAvant": -31,
+  "evalApres": -95,
+  "perte": 64,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Nf6 e5 Nfd7 f4 c5 Nf3 Nc6 Be3 Be7 dxc5 Bxc5 Qd2 Be7": {
+  "coups": "e4 e6 d4 d5 Nc3 Nf6 e5 Nfd7 f4 c5 Nf3 Nc6 Be3 Be7 dxc5 Bxc5 Qd2",
+  "faute": "Be7",
+  "fautif": "b",
+  "ligne": [
+   "O-O-O",
+   "O-O",
+   "Kb1",
+   "f6",
+   "exf6",
+   "Nxf6"
+  ],
+  "evalAvant": -34,
+  "evalApres": -90,
+  "perte": 56,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Nf6 e5 Nfd7 f4 c5 Nf3 Nc6 Be3 Be7 dxc5 Bxc5 Qd2 Qe7": {
+  "coups": "e4 e6 d4 d5 Nc3 Nf6 e5 Nfd7 f4 c5 Nf3 Nc6 Be3 Be7 dxc5 Bxc5 Qd2",
+  "faute": "Qe7",
+  "fautif": "b",
+  "ligne": [
+   "O-O-O",
+   "O-O",
+   "Bxc5",
+   "Nxc5",
+   "Qe3",
+   "a6"
+  ],
+  "evalAvant": -38,
+  "evalApres": -80,
+  "perte": 42,
+  "mat": false
+ },
+ "e4 e6 d4 d5 e5 Nc6 Nf3 f6 Bb5 a6 Bxc6+ bxc6 Be3 Ne7 Nc3 Nf5 Qd3 Nxe3": {
+  "coups": "e4 e6 d4 d5 e5 Nc6 Nf3 f6 Bb5 a6 Bxc6+ bxc6 Be3 Ne7 Nc3 Nf5 Qd3",
+  "faute": "Nxe3",
+  "fautif": "b",
+  "ligne": [
+   "Qxe3",
+   "Rb8",
+   "O-O-O",
+   "Qe7",
+   "a3",
+   "c5"
+  ],
+  "evalAvant": -63,
+  "evalApres": -111,
+  "perte": 48,
+  "mat": false
+ },
+ "e4 e6 d4 d5 e5 Nc6 Nf3 f6 Bb5 a6 Bxc6+ bxc6 Be3 Ne7 Nc3 Nf5 Qd3 c5": {
+  "coups": "e4 e6 d4 d5 e5 Nc6 Nf3 f6 Bb5 a6 Bxc6+ bxc6 Be3 Ne7 Nc3 Nf5 Qd3",
+  "faute": "c5",
+  "fautif": "b",
+  "ligne": [
+   "dxc5",
+   "Nxe3",
+   "Qxe3",
+   "Qe7",
+   "Qf4",
+   "Qf7"
+  ],
+  "evalAvant": -74,
+  "evalApres": -120,
+  "perte": 46,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 dxe4 Nxe4 Nf6 Nxf6+ Qxf6 Nf3 h6 Bd3 Bd6 Qe2 Bd7 c3": {
+  "coups": "e4 e6 d4 d5 Nc3 dxe4 Nxe4 Nf6 Nxf6+ Qxf6 Nf3 h6 Bd3 Bd6 Qe2 Bd7",
+  "faute": "c3",
+  "fautif": "w",
+  "ligne": [
+   "Bc6",
+   "Be4",
+   "Bxe4",
+   "Qxe4",
+   "c6",
+   "Bd2"
+  ],
+  "evalAvant": 62,
+  "evalApres": 13,
+  "perte": 49,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 dxe4 Nxe4 Nf6 Nxf6+ Qxf6 Nf3 h6 Bd3 Bd6 Qe2 Bd7 Qe3": {
+  "coups": "e4 e6 d4 d5 Nc3 dxe4 Nxe4 Nf6 Nxf6+ Qxf6 Nf3 h6 Bd3 Bd6 Qe2 Bd7",
+  "faute": "Qe3",
+  "fautif": "w",
+  "ligne": [
+   "Bc6",
+   "Be4",
+   "Bxe4",
+   "Qxe4",
+   "Nc6",
+   "Be3"
+  ],
+  "evalAvant": 62,
+  "evalApres": 13,
+  "perte": 49,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 Bxe7 Qxe7 f4 O-O Nf3 c5 Qd2 b6": {
+  "coups": "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 Bxe7 Qxe7 f4 O-O Nf3 c5 Qd2",
+  "faute": "b6",
+  "fautif": "b",
+  "ligne": [
+   "Nb5",
+   "a6",
+   "Nd6",
+   "cxd4",
+   "Nxd4",
+   "Nc5"
+  ],
+  "evalAvant": -25,
+  "evalApres": -132,
+  "perte": 107,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 Bxe7 Qxe7 f4 O-O Nf3 c5 Qd2 Nb6": {
+  "coups": "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 Bxe7 Qxe7 f4 O-O Nf3 c5 Qd2",
+  "faute": "Nb6",
+  "fautif": "b",
+  "ligne": [
+   "h4",
+   "f6",
+   "h5",
+   "cxd4",
+   "Nb5",
+   "fxe5"
+  ],
+  "evalAvant": -19,
+  "evalApres": -78,
+  "perte": 59,
+  "mat": false
+ },
+ "e4 e6 d4 d5 e5 c5 Nf3 cxd4 Nxd4 Nc6 Nxc6 bxc6 Bd3 Qc7 Qe2 f5 c3 Bc5": {
+  "coups": "e4 e6 d4 d5 e5 c5 Nf3 cxd4 Nxd4 Nc6 Nxc6 bxc6 Bd3 Qc7 Qe2 f5 c3",
+  "faute": "Bc5",
+  "fautif": "b",
+  "ligne": [
+   "b4",
+   "Bb6",
+   "Nd2",
+   "Ne7",
+   "Nf3",
+   "a5"
+  ],
+  "evalAvant": 16,
+  "evalApres": -44,
+  "perte": 60,
+  "mat": false
+ },
+ "e4 e6 d4 d5 e5 c5 Nf3 cxd4 Nxd4 Nc6 Nxc6 bxc6 Bd3 Qc7 Qe2 f5 c3 Be7": {
+  "coups": "e4 e6 d4 d5 e5 c5 Nf3 cxd4 Nxd4 Nc6 Nxc6 bxc6 Bd3 Qc7 Qe2 f5 c3",
+  "faute": "Be7",
+  "fautif": "b",
+  "ligne": [
+   "O-O",
+   "a5",
+   "Re1",
+   "Bc5",
+   "Be3",
+   "Bxe3"
+  ],
+  "evalAvant": 14,
+  "evalApres": -40,
+  "perte": 54,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nd2 Nf6 e5 Nfd7 Bd3 c5 c3 Nc6 Ngf3 Qb6 O-O cxd4 cxd4 f6": {
+  "coups": "e4 e6 d4 d5 Nd2 Nf6 e5 Nfd7 Bd3 c5 c3 Nc6 Ngf3 Qb6 O-O cxd4 cxd4",
+  "faute": "f6",
+  "fautif": "b",
+  "ligne": [
+   "Nb3",
+   "Be7",
+   "Be3",
+   "O-O",
+   "Rc1",
+   "Qd8"
+  ],
+  "evalAvant": -37,
+  "evalApres": -143,
+  "perte": 106,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nd2 Nf6 e5 Nfd7 Bd3 c5 c3 Nc6 Ngf3 Qb6 O-O cxd4 cxd4 Be7": {
+  "coups": "e4 e6 d4 d5 Nd2 Nf6 e5 Nfd7 Bd3 c5 c3 Nc6 Ngf3 Qb6 O-O cxd4 cxd4",
+  "faute": "Be7",
+  "fautif": "b",
+  "ligne": [
+   "Nb3",
+   "Nb4",
+   "Bb1",
+   "a5",
+   "Be3",
+   "Qd8"
+  ],
+  "evalAvant": -46,
+  "evalApres": -87,
+  "perte": 41,
+  "mat": false
+ },
+ "e4 e6 d4 d5 e5 c5 Qg4 cxd4 Nf3 Nc6 Bd3 h5 Qf4 f6 h4 Qc7 O-O Nxe5 Nxd4": {
+  "coups": "e4 e6 d4 d5 e5 c5 Qg4 cxd4 Nf3 Nc6 Bd3 h5 Qf4 f6 h4 Qc7 O-O Nxe5",
+  "faute": "Nxd4",
+  "fautif": "w",
+  "ligne": [
+   "Qb6",
+   "Be2",
+   "Ng4",
+   "Nb5",
+   "e5",
+   "Qa4"
+  ],
+  "evalAvant": -95,
+  "evalApres": -247,
+  "perte": 152,
+  "mat": false
+ },
+ "e4 e6 d4 d5 e5 c5 Qg4 cxd4 Nf3 Nc6 Bd3 h5 Qf4 f6 h4 Qc7 O-O Nxe5 Bg6+": {
+  "coups": "e4 e6 d4 d5 e5 c5 Qg4 cxd4 Nf3 Nc6 Bd3 h5 Qf4 f6 h4 Qc7 O-O Nxe5",
+  "faute": "Bg6+",
+  "fautif": "w",
+  "ligne": [
+   "Kd8",
+   "Nxe5",
+   "Qxe5",
+   "Qf3",
+   "Qc7",
+   "Re1"
+  ],
+  "evalAvant": -86,
+  "evalApres": -283,
+  "perte": 197,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Bxc3+ bxc3 Ne7 Qg4 Qc7 Qxg7 Rg8 Qxh7 Nbc6": {
+  "coups": "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Bxc3+ bxc3 Ne7 Qg4 Qc7 Qxg7 Rg8 Qxh7",
+  "faute": "Nbc6",
+  "fautif": "b",
+  "ligne": [
+   "Bf4",
+   "cxd4",
+   "Nf3",
+   "Bd7",
+   "Bd3",
+   "O-O-O"
+  ],
+  "evalAvant": -55,
+  "evalApres": -103,
+  "perte": 48,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Bxc3+ bxc3 Ne7 Qg4 Qc7 Qxg7 Rg8 Qxh7 Bd7": {
+  "coups": "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Bxc3+ bxc3 Ne7 Qg4 Qc7 Qxg7 Rg8 Qxh7",
+  "faute": "Bd7",
+  "fautif": "b",
+  "ligne": [
+   "Rb1",
+   "Nbc6",
+   "Qd3",
+   "O-O-O",
+   "Nf3",
+   "f6"
+  ],
+  "evalAvant": -61,
+  "evalApres": -273,
+  "perte": 212,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nd2 Nc6 Ngf3 Nf6 e5 Nd7 c3 f6 Bb5 a6 Bxc6 bxc6 O-O a5 b3": {
+  "coups": "e4 e6 d4 d5 Nd2 Nc6 Ngf3 Nf6 e5 Nd7 c3 f6 Bb5 a6 Bxc6 bxc6 O-O a5",
+  "faute": "b3",
+  "fautif": "w",
+  "ligne": [
+   "fxe5",
+   "Nxe5",
+   "Nxe5",
+   "dxe5",
+   "Qg5",
+   "Nf3"
+  ],
+  "evalAvant": 39,
+  "evalApres": -35,
+  "perte": 74,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nd2 Nc6 Ngf3 Nf6 e5 Nd7 c3 f6 Bb5 a6 Bxc6 bxc6 O-O a5 Nb1": {
+  "coups": "e4 e6 d4 d5 Nd2 Nc6 Ngf3 Nf6 e5 Nd7 c3 f6 Bb5 a6 Bxc6 bxc6 O-O a5",
+  "faute": "Nb1",
+  "fautif": "w",
+  "ligne": [
+   "fxe5",
+   "dxe5",
+   "Ba6",
+   "Re1",
+   "Bc5",
+   "Bg5"
+  ],
+  "evalAvant": 40,
+  "evalApres": -16,
+  "perte": 56,
+  "mat": false
+ },
+ "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 Be2 Nh6 Bxh6 gxh6 Qd2 Bg7 Na3 O-O dxc5": {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 Be2 Nh6 Bxh6 gxh6 Qd2 Bg7 Na3 O-O",
+  "faute": "dxc5",
+  "fautif": "w",
+  "ligne": [
+   "Qxc5",
+   "O-O",
+   "Nxe5",
+   "Nxe5",
+   "Bxe5",
+   "Kh1"
+  ],
+  "evalAvant": 34,
+  "evalApres": -40,
+  "perte": 74,
+  "mat": false
+ },
+ "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 Be2 Nh6 Bxh6 gxh6 Qd2 Bg7 Na3 O-O Bb5": {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 Be2 Nh6 Bxh6 gxh6 Qd2 Bg7 Na3 O-O",
+  "faute": "Bb5",
+  "fautif": "w",
+  "ligne": [
+   "cxd4",
+   "cxd4",
+   "f6",
+   "exf6",
+   "Rxf6",
+   "Qe3"
+  ],
+  "evalAvant": 40,
+  "evalApres": -30,
+  "perte": 70,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nd2 c5 exd5 Qxd5 Ngf3 cxd4 Bc4 Qd6 O-O Nf6 Nb3 Nc6 Re1 Qc7": {
+  "coups": "e4 e6 d4 d5 Nd2 c5 exd5 Qxd5 Ngf3 cxd4 Bc4 Qd6 O-O Nf6 Nb3 Nc6 Re1",
+  "faute": "Qc7",
+  "fautif": "b",
+  "ligne": [
+   "Nbxd4",
+   "Nxd4",
+   "Qxd4",
+   "Be7",
+   "Bd3",
+   "b6"
+  ],
+  "evalAvant": -15,
+  "evalApres": -119,
+  "perte": 104,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nd2 c5 exd5 Qxd5 Ngf3 cxd4 Bc4 Qd6 O-O Nf6 Nb3 Nc6 Re1 Ng4": {
+  "coups": "e4 e6 d4 d5 Nd2 c5 exd5 Qxd5 Ngf3 cxd4 Bc4 Qd6 O-O Nf6 Nb3 Nc6 Re1",
+  "faute": "Ng4",
+  "fautif": "b",
+  "ligne": [
+   "Qe2",
+   "Be7",
+   "h3",
+   "Nf6",
+   "Bg5",
+   "Qc7"
+  ],
+  "evalAvant": -17,
+  "evalApres": -68,
+  "perte": 51,
+  "mat": false
+ },
+ "e4 e6 d4 d5 e5 c5 dxc5 Bxc5 Nd2 Qb6 Qe2 Qc7 Nb3 Bb6 f4 Ne7 Nf3 O-O Bd2": {
+  "coups": "e4 e6 d4 d5 e5 c5 dxc5 Bxc5 Nd2 Qb6 Qe2 Qc7 Nb3 Bb6 f4 Ne7 Nf3 O-O",
+  "faute": "Bd2",
+  "fautif": "w",
+  "ligne": [
+   "Qxc2",
+   "Bb4",
+   "Qxe2+",
+   "Bxe2",
+   "Nbc6",
+   "Bd6"
+  ],
+  "evalAvant": 0,
+  "evalApres": -121,
+  "perte": 121,
+  "mat": false
+ },
+ "e4 e6 d4 d5 e5 c5 dxc5 Bxc5 Nd2 Qb6 Qe2 Qc7 Nb3 Bb6 f4 Ne7 Nf3 O-O h4": {
+  "coups": "e4 e6 d4 d5 e5 c5 dxc5 Bxc5 Nd2 Qb6 Qe2 Qc7 Nb3 Bb6 f4 Ne7 Nf3 O-O",
+  "faute": "h4",
+  "fautif": "w",
+  "ligne": [
+   "f6",
+   "h5",
+   "Nbc6",
+   "c3",
+   "fxe5",
+   "fxe5"
+  ],
+  "evalAvant": 0,
+  "evalApres": -111,
+  "perte": 111,
+  "mat": false
+ },
+ "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Bd7 Be2 Nge7 O-O Nf5 dxc5 Bxc5 b4 Bb6 Na3": {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Bd7 Be2 Nge7 O-O Nf5 dxc5 Bxc5 b4 Bb6",
+  "faute": "Na3",
+  "fautif": "w",
+  "ligne": [
+   "Nh4",
+   "Nxh4",
+   "Qxh4",
+   "c4",
+   "O-O",
+   "c5"
+  ],
+  "evalAvant": 36,
+  "evalApres": -64,
+  "perte": 100,
+  "mat": false
+ },
+ "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Bd7 Be2 Nge7 O-O Nf5 dxc5 Bxc5 b4 Bb6 Bg5": {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Bd7 Be2 Nge7 O-O Nf5 dxc5 Bxc5 b4 Bb6",
+  "faute": "Bg5",
+  "fautif": "w",
+  "ligne": [
+   "Qc7",
+   "Bd3",
+   "h6",
+   "Bd2",
+   "O-O",
+   "a4"
+  ],
+  "evalAvant": 40,
+  "evalApres": -22,
+  "perte": 62,
+  "mat": false
+ },
+ "e4 e6 d4 d5 e5 Nc6 Nf3 f6 Bb5 a6 Bxc6+ bxc6 Be3 Ne7 Nc3 Nf5 Qd3 a5 Bf4": {
+  "coups": "e4 e6 d4 d5 e5 Nc6 Nf3 f6 Bb5 a6 Bxc6+ bxc6 Be3 Ne7 Nc3 Nf5 Qd3 a5",
+  "faute": "Bf4",
+  "fautif": "w",
+  "ligne": [
+   "g5",
+   "g4",
+   "Nxd4",
+   "Qxd4",
+   "c5",
+   "Qd2"
+  ],
+  "evalAvant": 64,
+  "evalApres": -11,
+  "perte": 75,
+  "mat": false
+ },
+ "e4 e6 d4 d5 e5 Nc6 Nf3 f6 Bb5 a6 Bxc6+ bxc6 Be3 Ne7 Nc3 Nf5 Qd3 a5 h3": {
+  "coups": "e4 e6 d4 d5 e5 Nc6 Nf3 f6 Bb5 a6 Bxc6+ bxc6 Be3 Ne7 Nc3 Nf5 Qd3 a5",
+  "faute": "h3",
+  "fautif": "w",
+  "ligne": [
+   "fxe5",
+   "Nxe5",
+   "Bd6",
+   "O-O-O",
+   "Bxe5",
+   "dxe5"
+  ],
+  "evalAvant": 67,
+  "evalApres": -16,
+  "perte": 83,
+  "mat": false
+ },
+ "e4 e6 d4 d5 exd5 exd5 Nf3 Bd6 c4 Nf6 c5 Be7 Bd3 O-O O-O b6 Be3 bxc5 Nc3": {
+  "coups": "e4 e6 d4 d5 exd5 exd5 Nf3 Bd6 c4 Nf6 c5 Be7 Bd3 O-O O-O b6 Be3 bxc5",
+  "faute": "Nc3",
+  "fautif": "w",
+  "ligne": [
+   "cxd4",
+   "Bxd4",
+   "Nbd7",
+   "b4",
+   "Bxb4",
+   "Qb3"
+  ],
+  "evalAvant": 25,
+  "evalApres": -88,
+  "perte": 113,
+  "mat": false
+ },
+ "e4 e6 d4 d5 exd5 exd5 Nf3 Bd6 c4 Nf6 c5 Be7 Bd3 O-O O-O b6 Be3 bxc5 Qc2": {
+  "coups": "e4 e6 d4 d5 exd5 exd5 Nf3 Bd6 c4 Nf6 c5 Be7 Bd3 O-O O-O b6 Be3 bxc5",
+  "faute": "Qc2",
+  "fautif": "w",
+  "ligne": [
+   "cxd4",
+   "Bxd4",
+   "Nbd7",
+   "Ne5",
+   "Nxe5",
+   "Bxe5"
+  ],
+  "evalAvant": 23,
+  "evalApres": -103,
+  "perte": 126,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Nf6 e5 Nfd7 f4 c5 Nf3 Nc6 Be3 Be7 dxc5 Bxc5 Qd2 Qb6 Bg1": {
+  "coups": "e4 e6 d4 d5 Nc3 Nf6 e5 Nfd7 f4 c5 Nf3 Nc6 Be3 Be7 dxc5 Bxc5 Qd2 Qb6",
+  "faute": "Bg1",
+  "fautif": "w",
+  "ligne": [
+   "Bxg1",
+   "Nxg1",
+   "Qxb2",
+   "Rb1",
+   "Qa3",
+   "Nf3"
+  ],
+  "evalAvant": 36,
+  "evalApres": -121,
+  "perte": 157,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Nf6 e5 Nfd7 f4 c5 Nf3 Nc6 Be3 Be7 dxc5 Bxc5 Qd2 Qb6 Nd4": {
+  "coups": "e4 e6 d4 d5 Nc3 Nf6 e5 Nfd7 f4 c5 Nf3 Nc6 Be3 Be7 dxc5 Bxc5 Qd2 Qb6",
+  "faute": "Nd4",
+  "fautif": "w",
+  "ligne": [
+   "Bxd4",
+   "Bxd4",
+   "Qxd4",
+   "Qxd4",
+   "Nxd4",
+   "O-O-O"
+  ],
+  "evalAvant": 29,
+  "evalApres": -598,
+  "perte": 627,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 dxe4 Nxe4 Nf6 Nxf6+ Qxf6 Nf3 h6 Bd3 Bd6 Qe2 Bd7 O-O O-O": {
+  "coups": "e4 e6 d4 d5 Nc3 dxe4 Nxe4 Nf6 Nxf6+ Qxf6 Nf3 h6 Bd3 Bd6 Qe2 Bd7 O-O",
+  "faute": "O-O",
+  "fautif": "b",
+  "ligne": [
+   "Qe4",
+   "g6",
+   "Bxh6",
+   "Bc6",
+   "Qe3",
+   "Bxf3"
+  ],
+  "evalAvant": -92,
+  "evalApres": -168,
+  "perte": 76,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 dxe4 Nxe4 Nf6 Nxf6+ Qxf6 Nf3 h6 Bd3 Bd6 Qe2 Bd7 O-O b6": {
+  "coups": "e4 e6 d4 d5 Nc3 dxe4 Nxe4 Nf6 Nxf6+ Qxf6 Nf3 h6 Bd3 Bd6 Qe2 Bd7 O-O",
+  "faute": "b6",
+  "fautif": "b",
+  "ligne": [
+   "Ne5",
+   "Nc6",
+   "Nxd7",
+   "Kxd7",
+   "c3",
+   "Ne7"
+  ],
+  "evalAvant": -61,
+  "evalApres": -175,
+  "perte": 114,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 Bxe7 Qxe7 f4 O-O Nf3 c5 Qd2 Nc6 Be2": {
+  "coups": "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 Bxe7 Qxe7 f4 O-O Nf3 c5 Qd2 Nc6",
+  "faute": "Be2",
+  "fautif": "w",
+  "ligne": [
+   "cxd4",
+   "Nb5",
+   "f6",
+   "Nbxd4",
+   "fxe5",
+   "Nxc6"
+  ],
+  "evalAvant": 22,
+  "evalApres": -34,
+  "perte": 56,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 Bxe7 Qxe7 f4 O-O Nf3 c5 Qd2 Nc6 Rd1": {
+  "coups": "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 Bxe7 Qxe7 f4 O-O Nf3 c5 Qd2 Nc6",
+  "faute": "Rd1",
+  "fautif": "w",
+  "ligne": [
+   "cxd4",
+   "Nxd4",
+   "f6",
+   "exf6",
+   "Qxf6",
+   "g3"
+  ],
+  "evalAvant": 21,
+  "evalApres": -44,
+  "perte": 65,
+  "mat": false
+ },
+ "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 Nh6 Bd3 cxd4 O-O Bd7 b4 Nf5 Re1 dxc3": {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 Nh6 Bd3 cxd4 O-O Bd7 b4 Nf5 Re1",
+  "faute": "dxc3",
+  "fautif": "b",
+  "ligne": [
+   "Nxc3",
+   "Ncd4",
+   "Nxd4",
+   "Qxd4",
+   "Bb2",
+   "Rc8"
+  ],
+  "evalAvant": -40,
+  "evalApres": -86,
+  "perte": 46,
+  "mat": false
+ },
+ "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 Nh6 Bd3 cxd4 O-O Bd7 b4 Nf5 Re1 Nfe7": {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 Nh6 Bd3 cxd4 O-O Bd7 b4 Nf5 Re1",
+  "faute": "Nfe7",
+  "fautif": "b",
+  "ligne": [
+   "Bb2",
+   "Rc8",
+   "Nbd2",
+   "dxc3",
+   "Bxc3",
+   "a6"
+  ],
+  "evalAvant": -42,
+  "evalApres": -101,
+  "perte": 59,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nd2 Nf6 e5 Nfd7 Bd3 c5 c3 Nc6 Ngf3 Qb6 O-O cxd4 cxd4 a5 a4": {
+  "coups": "e4 e6 d4 d5 Nd2 Nf6 e5 Nfd7 Bd3 c5 c3 Nc6 Ngf3 Qb6 O-O cxd4 cxd4 a5",
+  "faute": "a4",
+  "fautif": "w",
+  "ligne": [
+   "Nxd4",
+   "Nxd4",
+   "Qxd4",
+   "Nf3",
+   "Qb6",
+   "Bb5"
+  ],
+  "evalAvant": 50,
+  "evalApres": -38,
+  "perte": 88,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nd2 Nf6 e5 Nfd7 Bd3 c5 c3 Nc6 Ngf3 Qb6 O-O cxd4 cxd4 a5 Rb1": {
+  "coups": "e4 e6 d4 d5 Nd2 Nf6 e5 Nfd7 Bd3 c5 c3 Nc6 Ngf3 Qb6 O-O cxd4 cxd4 a5",
+  "faute": "Rb1",
+  "fautif": "w",
+  "ligne": [
+   "Nb4",
+   "Qe2",
+   "Nxa2",
+   "Ra1",
+   "Nb4",
+   "Bb5"
+  ],
+  "evalAvant": 34,
+  "evalApres": -42,
+  "perte": 76,
+  "mat": false
+ },
+ "e4 e6 d4 d5 e5 c5 Qg4 cxd4 Nf3 Nc6 Bd3 h5 Qf4 f6 h4 Qc7 O-O Nxe5 Nxe5 fxe5": {
+  "coups": "e4 e6 d4 d5 e5 c5 Qg4 cxd4 Nf3 Nc6 Bd3 h5 Qf4 f6 h4 Qc7 O-O Nxe5 Nxe5",
+  "faute": "fxe5",
+  "fautif": "b",
+  "ligne": [
+   "Bg6+",
+   "Ke7",
+   "Qf7+",
+   "Kd6",
+   "Qxf8+",
+   "Qe7"
+  ],
+  "evalAvant": 120,
+  "evalApres": -532,
+  "perte": 652,
+  "mat": false
+ },
+ "e4 e6 d4 d5 e5 c5 Qg4 cxd4 Nf3 Nc6 Bd3 h5 Qf4 f6 h4 Qc7 O-O Nxe5 Nxe5 g5": {
+  "coups": "e4 e6 d4 d5 e5 c5 Qg4 cxd4 Nf3 Nc6 Bd3 h5 Qf4 f6 h4 Qc7 O-O Nxe5 Nxe5",
+  "faute": "g5",
+  "fautif": "b",
+  "ligne": [
+   "hxg5",
+   "Qxe5",
+   "Qh4",
+   "fxg5",
+   "Bxg5",
+   "Be7"
+  ],
+  "evalAvant": 82,
+  "evalApres": -193,
+  "perte": 275,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nd2 Nc6 Ngf3 Nf6 e5 Nd7 c3 f6 Bb5 a6 Bxc6 bxc6 O-O a5 Re1 Be7": {
+  "coups": "e4 e6 d4 d5 Nd2 Nc6 Ngf3 Nf6 e5 Nd7 c3 f6 Bb5 a6 Bxc6 bxc6 O-O a5 Re1",
+  "faute": "Be7",
+  "fautif": "b",
+  "ligne": [
+   "exf6",
+   "Nxf6",
+   "Ne5",
+   "c5",
+   "Nc6",
+   "Qd7"
+  ],
+  "evalAvant": -62,
+  "evalApres": -167,
+  "perte": 105,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nd2 Nc6 Ngf3 Nf6 e5 Nd7 c3 f6 Bb5 a6 Bxc6 bxc6 O-O a5 Re1 c5": {
+  "coups": "e4 e6 d4 d5 Nd2 Nc6 Ngf3 Nf6 e5 Nd7 c3 f6 Bb5 a6 Bxc6 bxc6 O-O a5 Re1",
+  "faute": "c5",
+  "fautif": "b",
+  "ligne": [
+   "exf6",
+   "Nxf6",
+   "Nb3",
+   "c4",
+   "Nc5",
+   "Bxc5"
+  ],
+  "evalAvant": -54,
+  "evalApres": -163,
+  "perte": 109,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Bxc3+ bxc3 Ne7 Qg4 Qc7 Qxg7 Rg8 Qxh7 cxd4 Bd3": {
+  "coups": "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Bxc3+ bxc3 Ne7 Qg4 Qc7 Qxg7 Rg8 Qxh7 cxd4",
+  "faute": "Bd3",
+  "fautif": "w",
+  "ligne": [
+   "Qxc3+",
+   "Ke2",
+   "Qxa1",
+   "Nh3",
+   "Nbc6",
+   "Re1"
+  ],
+  "evalAvant": 53,
+  "evalApres": -471,
+  "perte": 524,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Bxc3+ bxc3 Ne7 Qg4 Qc7 Qxg7 Rg8 Qxh7 cxd4 Bb5+": {
+  "coups": "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Bxc3+ bxc3 Ne7 Qg4 Qc7 Qxg7 Rg8 Qxh7 cxd4",
+  "faute": "Bb5+",
+  "fautif": "w",
+  "ligne": [
+   "Bd7",
+   "Bxd7+",
+   "Nxd7",
+   "Ne2",
+   "dxc3",
+   "Bf4"
+  ],
+  "evalAvant": 46,
+  "evalApres": -82,
+  "perte": 128,
+  "mat": false
+ },
+ "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 Be2 Nh6 Bxh6 gxh6 Qd2 Bg7 Na3 O-O O-O Qc7": {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 Be2 Nh6 Bxh6 gxh6 Qd2 Bg7 Na3 O-O O-O",
+  "faute": "Qc7",
+  "fautif": "b",
+  "ligne": [
+   "Nc2",
+   "Bd7",
+   "Rac1",
+   "a6",
+   "Nce1",
+   "Qb6"
+  ],
+  "evalAvant": -33,
+  "evalApres": -91,
+  "perte": 58,
+  "mat": false
+ },
+ "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 Be2 Nh6 Bxh6 gxh6 Qd2 Bg7 Na3 O-O O-O Ne7": {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 Be2 Nh6 Bxh6 gxh6 Qd2 Bg7 Na3 O-O O-O",
+  "faute": "Ne7",
+  "fautif": "b",
+  "ligne": [
+   "dxc5",
+   "Qxc5",
+   "Bd3",
+   "f6",
+   "exf6",
+   "Rxf6"
+  ],
+  "evalAvant": -38,
+  "evalApres": -95,
+  "perte": 57,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nd2 c5 exd5 Qxd5 Ngf3 cxd4 Bc4 Qd6 O-O Nf6 Nb3 Nc6 Re1 Be7 Bd3": {
+  "coups": "e4 e6 d4 d5 Nd2 c5 exd5 Qxd5 Ngf3 cxd4 Bc4 Qd6 O-O Nf6 Nb3 Nc6 Re1 Be7",
+  "faute": "Bd3",
+  "fautif": "w",
+  "ligne": [
+   "e5",
+   "Nbd2",
+   "Be6",
+   "Qe2",
+   "Nd7",
+   "Nc4"
+  ],
+  "evalAvant": 12,
+  "evalApres": -59,
+  "perte": 71,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nd2 c5 exd5 Qxd5 Ngf3 cxd4 Bc4 Qd6 O-O Nf6 Nb3 Nc6 Re1 Be7 Bd2": {
+  "coups": "e4 e6 d4 d5 Nd2 c5 exd5 Qxd5 Ngf3 cxd4 Bc4 Qd6 O-O Nf6 Nb3 Nc6 Re1 Be7",
+  "faute": "Bd2",
+  "fautif": "w",
+  "ligne": [
+   "O-O",
+   "Bb5",
+   "Rd8",
+   "a3",
+   "b6",
+   "Bxc6"
+  ],
+  "evalAvant": 12,
+  "evalApres": -52,
+  "perte": 64,
+  "mat": false
+ },
+ "e4 e6 d4 d5 e5 c5 dxc5 Bxc5 Nd2 Qb6 Qe2 Qc7 Nb3 Bb6 f4 Ne7 Nf3 O-O Be3 Ng6": {
+  "coups": "e4 e6 d4 d5 e5 c5 dxc5 Bxc5 Nd2 Qb6 Qe2 Qc7 Nb3 Bb6 f4 Ne7 Nf3 O-O Be3",
+  "faute": "Ng6",
+  "fautif": "b",
+  "ligne": [
+   "Bxb6",
+   "axb6",
+   "g3",
+   "Nd7",
+   "Nbd4",
+   "Nc5"
+  ],
+  "evalAvant": -3,
+  "evalApres": -89,
+  "perte": 86,
+  "mat": false
+ },
+ "e4 e6 d4 d5 e5 c5 dxc5 Bxc5 Nd2 Qb6 Qe2 Qc7 Nb3 Bb6 f4 Ne7 Nf3 O-O Be3 Na6": {
+  "coups": "e4 e6 d4 d5 e5 c5 dxc5 Bxc5 Nd2 Qb6 Qe2 Qc7 Nb3 Bb6 f4 Ne7 Nf3 O-O Be3",
+  "faute": "Na6",
+  "fautif": "b",
+  "ligne": [
+   "c3",
+   "Bd7",
+   "Qf2",
+   "h6",
+   "Be2",
+   "Ba4"
+  ],
+  "evalAvant": -2,
+  "evalApres": -52,
+  "perte": 50,
+  "mat": false
+ },
+ "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Bd7 Be2 Nge7 O-O Nf5 dxc5 Bxc5 b4 Bb6 Bd3 Nh6": {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Bd7 Be2 Nge7 O-O Nf5 dxc5 Bxc5 b4 Bb6 Bd3",
+  "faute": "Nh6",
+  "fautif": "b",
+  "ligne": [
+   "b5",
+   "Na5",
+   "Nbd2",
+   "Rc8",
+   "c4",
+   "O-O"
+  ],
+  "evalAvant": -40,
+  "evalApres": -105,
+  "perte": 65,
+  "mat": false
+ },
+ "e4 e6 d4 d5 e5 c5 Nf3 cxd4 Nxd4 Nc6 Nxc6 bxc6 Bd3 Qc7 Qe2 f5 c3 c5 O-O Bb7": {
+  "coups": "e4 e6 d4 d5 e5 c5 Nf3 cxd4 Nxd4 Nc6 Nxc6 bxc6 Bd3 Qc7 Qe2 f5 c3 c5 O-O",
+  "faute": "Bb7",
+  "fautif": "b",
+  "ligne": [
+   "Nd2",
+   "Ne7",
+   "b4",
+   "Nc6",
+   "bxc5",
+   "Bxc5"
+  ],
+  "evalAvant": 15,
+  "evalApres": -54,
   "perte": 69,
+  "mat": false
+ },
+ "e4 e6 d4 d5 e5 c5 Nf3 cxd4 Nxd4 Nc6 Nxc6 bxc6 Bd3 Qc7 Qe2 f5 c3 c5 O-O Be7": {
+  "coups": "e4 e6 d4 d5 e5 c5 Nf3 cxd4 Nxd4 Nc6 Nxc6 bxc6 Bd3 Qc7 Qe2 f5 c3 c5 O-O",
+  "faute": "Be7",
+  "fautif": "b",
+  "ligne": [
+   "b4",
+   "c4",
+   "Bc2",
+   "a5",
+   "b5",
+   "a4"
+  ],
+  "evalAvant": 13,
+  "evalApres": -61,
+  "perte": 74,
   "mat": false
  }
 };
