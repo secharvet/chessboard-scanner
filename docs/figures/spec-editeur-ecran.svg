@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" font-family="system-ui, sans-serif" font-size="12">
+  <rect width="900" height="540" fill="#0b0f17"/>
+  <!-- panneau latéral -->
+  <rect x="0" y="0" width="120" height="540" fill="#121826"/>
+  <text x="14" y="28" fill="#fff" font-weight="700" font-size="14">Échecs</text>
+  <text x="14" y="62" fill="#9aa">Lecteur</text><text x="14" y="86" fill="#9aa">Jouer</text><text x="14" y="110" fill="#fff">Assistant</text>
+  <rect x="8" y="128" width="104" height="22" rx="6" fill="#7c5cff" opacity="0.35"/><text x="14" y="143" fill="#fff" font-weight="600">Éditeur</text>
+  <!-- barre de modes -->
+  <g transform="translate(140,16)">
+    <rect width="420" height="30" rx="8" fill="#1a2233" stroke="#2b3550"/>
+    <rect x="6" y="5" width="62" height="20" rx="5" fill="#3ee6b5" opacity="0.9"/><text x="14" y="19" fill="#0b0f17" font-weight="600">Jouer</text>
+    <text x="80" y="19" fill="#cdd">Surligner</text><text x="150" y="19" fill="#cdd">Flèche</text>
+    <circle cx="214" cy="14" r="6" fill="#3ee6b5"/><circle cx="232" cy="14" r="6" fill="#6ea8ff"/><circle cx="250" cy="14" r="6" fill="#ff6b6b"/><circle cx="268" cy="14" r="6" fill="#ffb86b"/>
+    <text x="290" y="19" fill="#cdd">Démonstration ●</text><text x="395" y="19" fill="#9aa">Effacer</text>
+  </g>
+  <!-- échiquier -->
+  <g transform="translate(140,60)">
+    <rect width="320" height="320" fill="#edebd0"/>
+    <g fill="#5f8d5a">
+      <rect x="40" y="0" width="40" height="40"/><rect x="120" y="0" width="40" height="40"/><rect x="200" y="0" width="40" height="40"/><rect x="280" y="0" width="40" height="40"/>
+      <rect x="0" y="40" width="40" height="40"/><rect x="80" y="40" width="40" height="40"/><rect x="160" y="40" width="40" height="40"/><rect x="240" y="40" width="40" height="40"/>
+      <rect x="40" y="80" width="40" height="40"/><rect x="120" y="80" width="40" height="40"/><rect x="200" y="80" width="40" height="40"/><rect x="280" y="80" width="40" height="40"/>
+      <rect x="0" y="120" width="40" height="40"/><rect x="80" y="120" width="40" height="40"/><rect x="160" y="120" width="40" height="40"/><rect x="240" y="120" width="40" height="40"/>
+      <rect x="40" y="160" width="40" height="40"/><rect x="120" y="160" width="40" height="40"/><rect x="200" y="160" width="40" height="40"/><rect x="280" y="160" width="40" height="40"/>
+      <rect x="0" y="200" width="40" height="40"/><rect x="80" y="200" width="40" height="40"/><rect x="160" y="200" width="40" height="40"/><rect x="240" y="200" width="40" height="40"/>
+      <rect x="40" y="240" width="40" height="40"/><rect x="120" y="240" width="40" height="40"/><rect x="200" y="240" width="40" height="40"/><rect x="280" y="240" width="40" height="40"/>
+      <rect x="0" y="280" width="40" height="40"/><rect x="80" y="280" width="40" height="40"/><rect x="160" y="280" width="40" height="40"/><rect x="240" y="280" width="40" height="40"/>
+    </g>
+    <!-- cases surlignées et flèches d'exemple : d4 et e5 (chaîne), flèche c7→c5 verte (coup principal), f6 rouge (faute) -->
+    <rect x="120" y="160" width="40" height="40" fill="#3ee6b5" opacity="0.45"/><rect x="160" y="120" width="40" height="40" fill="#3ee6b5" opacity="0.45"/>
+    <rect x="200" y="80" width="40" height="40" fill="#ff6b6b" opacity="0.45"/>
+    <line x1="100" y1="60" x2="100" y2="130" stroke="#3ee6b5" stroke-width="7" stroke-linecap="round" opacity="0.9"/><polygon points="100,142 90,124 110,124" fill="#3ee6b5"/>
+    <line x1="220" y1="60" x2="220" y2="92" stroke="#ff6b6b" stroke-width="6" stroke-linecap="round" opacity="0.9"/><polygon points="220,104 211,88 229,88" fill="#ff6b6b"/>
+    <text x="4" y="316" fill="#333" font-size="10">a</text><text x="4" y="14" fill="#333" font-size="10">8</text>
+  </g>
+  <text x="140" y="398" fill="#9aa" font-family="monospace">1. e4 e6 2. d4 d5 3. e5</text>
+  <g transform="translate(140,410)" fill="#cdd"><rect width="60" height="22" rx="6" fill="#1a2233"/><text x="8" y="15">⏮ Début</text><rect x="66" width="68" height="22" rx="6" fill="#1a2233"/><text x="74" y="15">◀ Retour</text><rect x="140" width="70" height="22" rx="6" fill="#7c5cff"/><text x="148" y="15" fill="#fff">Suivant ▶</text></g>
+  <!-- démonstration en cours -->
+  <g transform="translate(140,446)">
+    <rect width="320" height="78" rx="8" fill="#1a2233" stroke="#ffb86b"/>
+    <text x="10" y="18" fill="#ffb86b" font-weight="600">Démonstration en cours — coup « c5 » (principal)</text>
+    <text x="10" y="38" fill="#cdd">pas 2/4 : 4. c3</text>
+    <rect x="10" y="46" width="300" height="22" rx="4" fill="#0b0f17" stroke="#2b3550"/><text x="16" y="61" fill="#9aa" font-style="italic">phrase pour ce pas : soutient d4 et prépare…</text>
+  </g>
+  <!-- formulaire -->
+  <g transform="translate(480,16)">
+    <rect width="404" height="508" rx="10" fill="#121826" stroke="#2b3550"/>
+    <text x="14" y="26" fill="#fff" font-weight="700" font-size="14">Française, variante d'avance</text>
+    <text x="14" y="42" fill="#9aa" font-size="10">Marc Q. · version 3 · brouillon (auto-enregistré il y a 12 s) · parti du brouillon IA</text>
+    <text x="14" y="68" fill="#9aa" font-size="10" letter-spacing="1">SENS DU DERNIER COUP (3. e5)</text>
+    <rect x="14" y="74" width="376" height="42" rx="5" fill="#0b0f17" stroke="#2b3550"/><text x="20" y="90" fill="#cdd" font-size="11">fixe le centre : la chaîne d4-e5 donne l'espace et vise</text><text x="20" y="104" fill="#cdd" font-size="11">l'aile roi ; mais la base d4 devient la cible ▮</text>
+    <text x="14" y="134" fill="#9aa" font-size="10" letter-spacing="1">MENACE</text>
+    <rect x="14" y="140" width="376" height="22" rx="5" fill="#0b0f17" stroke="#2b3550"/><text x="20" y="155" fill="#667" font-size="11">(facultatif)</text>
+    <text x="14" y="184" fill="#9aa" font-size="10" letter-spacing="1">COUPS PROPOSÉS (arbre partagé)</text>
+    <g transform="translate(14,190)">
+      <rect width="376" height="54" rx="6" fill="#0b0f17" stroke="#3ee6b5"/>
+      <text x="8" y="16" fill="#3ee6b5" font-family="monospace" font-weight="700">c5</text><text x="34" y="16" fill="#9aa" font-size="10">principal ▾</text>
+      <text x="8" y="32" fill="#cdd" font-size="11">attaque la base d4 tout de suite : c'est le plan de la Française</text>
+      <text x="8" y="47" fill="#ffb86b" font-size="10">▶ suite enregistrée : 4 pas · ✎ modifier · 2 flèches</text>
+    </g>
+    <g transform="translate(14,250)">
+      <rect width="376" height="40" rx="6" fill="#0b0f17" stroke="#6ea8ff"/>
+      <text x="8" y="16" fill="#6ea8ff" font-family="monospace" font-weight="700">Nc6</text><text x="40" y="16" fill="#9aa" font-size="10">variante ▾</text>
+      <text x="8" y="32" fill="#cdd" font-size="11">développe d'abord, …c5 viendra ensuite ▮</text>
+    </g>
+    <g transform="translate(14,296)">
+      <rect width="376" height="54" rx="6" fill="#0b0f17" stroke="#ff6b6b"/>
+      <text x="8" y="16" fill="#ff6b6b" font-family="monospace" font-weight="700">f6</text><text x="30" y="16" fill="#9aa" font-size="10">faute ▾</text>
+      <text x="8" y="32" fill="#cdd" font-size="11">ouvre le roi : exf6 et la diagonale vers e8 est à nu</text>
+      <text x="8" y="47" fill="#9aa" font-size="10">punition : ⚙ générer au moteur · ✓ vérifiée −0,9 pion</text>
+    </g>
+    <text x="14" y="370" fill="#7c5cff" font-size="11">+ Ajouter un coup (ou joue-le sur l'échiquier)</text>
+    <text x="14" y="398" fill="#9aa" font-size="10" letter-spacing="1">CE QUE CHACUN VA CHERCHER ENSUITE</text>
+    <rect x="14" y="404" width="184" height="30" rx="5" fill="#0b0f17" stroke="#2b3550"/><text x="20" y="416" fill="#9aa" font-size="9">BLANCS</text><text x="20" y="428" fill="#cdd" font-size="10">attaque à l'aile roi…</text>
+    <rect x="206" y="404" width="184" height="30" rx="5" fill="#0b0f17" stroke="#2b3550"/><text x="212" y="416" fill="#9aa" font-size="9">NOIRS</text><text x="212" y="428" fill="#cdd" font-size="10">pression sur d4, …f6</text>
+    <g transform="translate(14,452)" font-size="11">
+      <rect width="64" height="24" rx="6" fill="#1a2233"/><text x="10" y="16" fill="#cdd">Aperçu</text>
+      <rect x="70" width="104" height="24" rx="6" fill="#1a2233"/><text x="78" y="16" fill="#cdd">Enregistrer brouillon</text>
+      <rect x="180" width="60" height="24" rx="6" fill="#3ee6b5"/><text x="190" y="16" fill="#0b0f17" font-weight="600">Publier</text>
+      <rect x="246" width="70" height="24" rx="6" fill="#1a2233"/><text x="254" y="16" fill="#cdd">Historique</text>
+      <rect x="322" width="68" height="24" rx="6" fill="#1a2233"/><text x="328" y="16" fill="#cdd">Remarques</text>
+    </g>
+    <text x="14" y="498" fill="#667" font-size="10">Vérification au moteur : 2 coups confirmés · 1 avertissement (Cc6 à 0,45 du meilleur)</text>
+  </g>
+</svg>
