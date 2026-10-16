@@ -1,0 +1,20 @@
+[Unit]
+Description=Postgres — plateforme échecs
+
+[Container]
+Image=docker.io/library/postgres:16-alpine
+ContainerName=chess-db
+Network=chess.network
+Volume=chess-db.volume:/var/lib/postgresql/data
+EnvironmentFile=/home/ubuntu/chessboard-scanner/db/.env.db
+Volume=/home/ubuntu/chessboard-scanner/db/schema.sql:/docker-entrypoint-initdb.d/0001_init.sql:ro,Z
+HealthCmd=pg_isready -U chess -d chess
+HealthInterval=5s
+HealthRetries=10
+HealthStartPeriod=10s
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target

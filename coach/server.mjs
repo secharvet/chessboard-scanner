@@ -10,6 +10,7 @@ import { createServer } from 'node:http';
 import { askCoach } from './coach.mjs';
 import { judgeMove } from './move-judge.mjs';
 import { lireLaPartie, texteLecture } from './lecteur.mjs';
+import { pool } from './db.mjs';
 import { expliquerLecture } from './intention-lecture.mjs';
 import { toFrenchSan } from './notation.mjs';
 const texteIntention = (lecture, payload) => {
@@ -102,6 +103,14 @@ const server = createServer(async (req, res) => {
   if (req.method === 'OPTIONS') return send(res, 204, {});
   if (req.method === 'GET' && url.pathname === '/health') {
     return send(res, 200, { ok: true, provider: cfg.provider, model: cfg.model });
+  }
+  if (req.method === 'GET' && url.pathname === '/db-health') {
+    try {
+      const { rows } = await pool.query('select version(), (select count(*) from users) as users');
+      return send(res, 200, { ok: true, postgres: rows[0].version, users: Number(rows[0].users) });
+    } catch (e) {
+      return send(res, 500, { ok: false, error: String(e?.message ?? e) });
+    }
   }
   if (req.method !== 'POST' || !url.pathname.startsWith('/api/chess/mentor/')) {
     return send(res, 404, { ok: false, error: 'Not found' });

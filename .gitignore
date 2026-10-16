@@ -9,3 +9,4 @@ memory/
 logs/
 data/lichess/
 __pycache__/
+db/.env.db

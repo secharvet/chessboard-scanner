@@ -1,0 +1,22 @@
+# API Node (coach/server.mjs) : dépôt entier monté en volume, AUCUN build. `node --watch` relance le process
+# automatiquement à chaque modification de fichier source — éditer, sauvegarder, c'est tout.
+[Unit]
+Description=API plateforme échecs (Node, source en volume, --watch)
+After=chess-db.service
+Requires=chess-db.service
+
+[Container]
+Image=docker.io/library/node:22-alpine
+ContainerName=chess-api
+Network=chess.network
+Volume=/home/ubuntu/chessboard-scanner:/app:Z
+WorkingDir=/app
+Exec=node --watch coach/server.mjs
+EnvironmentFile=/home/ubuntu/chessboard-scanner/db/.env.db
+PublishPort=8000:8000
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target
