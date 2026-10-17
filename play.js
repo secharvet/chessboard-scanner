@@ -282,7 +282,7 @@ function applyMove(from, to, promotion) {
   const mover = game.turn();
   const m = game.move({ from, to, promotion: promotion || undefined });
   if (!m) return false;
-  jouerSonCoup();
+  jouerSonCoup({ capture: !!m.captured });
   // Mode joueur : le coup du joueur est jugé (pendant que le moteur répond), affiché en tête du conseil suivant.
   if (mover === playerColor && $mentorAuto?.checked) {
     mentorPanel?.newTurn();
