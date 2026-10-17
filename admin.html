@@ -24,6 +24,14 @@
           <p id="lien" class="adm__lien" hidden></p>
           <p class="cpt__info">Le lien vaut sept jours, à transmettre toi-même (courriel, message) tant que l'envoi automatique n'est pas configuré.</p>
           <p class="cpt__erreur" id="erreur" hidden></p>
+          <h2 style="font-size:1.05rem;margin:22px 0 4px">Auteur de référence par livre</h2>
+          <p class="cpt__info">L'auteur lu par défaut, et le repli quand le professeur choisi n'a rien écrit sur une position. Réservé à l'administrateur.</p>
+          <form id="fReference">
+            <label>Livre <select name="livre" id="refLivre"></select></label>
+            <label>Auteur <select name="author_id" id="refAuteur"></select></label>
+            <button class="btn" type="submit">Définir la référence</button>
+          </form>
+          <p id="refEtat" class="cpt__info"></p>
           <h2 style="font-size:1.05rem;margin:22px 0 4px">Comptes</h2>
           <table><thead><tr><th>Nom</th><th>Courriel</th><th>Rôle</th><th>Club</th><th>Textes publiés</th></tr></thead><tbody id="comptes"></tbody></table>
           <p class="cpt__pied"><a href="./ouverture.html">← Assistant d'ouverture</a> · <a href="./editeur.html">Éditeur</a></p>
@@ -46,7 +54,18 @@
         try { const j = await api('/api/admin/invitations', { email: f.get('email'), role: f.get('role'), club: f.get('club') || null }); $('lien').textContent = location.origin + j.lien; $('lien').hidden = false; }
         catch (e) { erreur(e.message); }
       });
-      charger().catch((e) => erreur(e.message));
+      async function chargerReference() {
+        const { livres } = await api('/api/livres'); const { utilisateurs } = await api('/api/admin/utilisateurs');
+        $('refLivre').innerHTML = livres.map((l) => `<option value="${esc(l.id)}">${esc(l.nom)}</option>`).join('');
+        $('refAuteur').innerHTML = utilisateurs.filter((u) => ['enseignant', 'validateur', 'admin'].includes(u.role)).map((u) => `<option value="${esc(u.id)}">${esc(u.display_name)} (${u.publiees} publiés)</option>`).join('');
+        $('refEtat').textContent = livres.map((l) => `${l.nom} : ${l.auteurs.length} auteur${l.auteurs.length > 1 ? 's' : ''} publié${l.auteurs.length > 1 ? 's' : ''}`).join(' · ');
+      }
+      $('fReference').addEventListener('submit', async (ev) => {
+        ev.preventDefault(); erreur(''); const f = new FormData(ev.target);
+        try { await api('/api/admin/reference', { livre: f.get('livre'), author_id: f.get('author_id') }); $('refEtat').textContent = 'Référence enregistrée.'; }
+        catch (e) { erreur(e.message); }
+      });
+      charger().then(chargerReference).catch((e) => erreur(e.message));
     </script>
   </body>
 </html>

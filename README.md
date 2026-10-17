@@ -155,3 +155,32 @@ Nécessaire uniquement si `docker/web/package.json` ou le `Dockerfile` changent 
 ```bash
 make build-web
 ```
+
+---
+
+## Plateforme d'apprentissage (octobre 2026)
+
+Le site devient une plateforme ouverte pour les clubs : les ouvertures expliquées coup par coup, les fautes typiques
+jouées et punies sous les yeux de l'apprenant, et des **enseignants** qui signent leurs explications. Spécification :
+`docs/SPEC-EDITEUR-ENSEIGNANT.md`.
+
+| Page | Rôle |
+|---|---|
+| `accueil.html` | présentation |
+| `ouverture.html` | assistant d'ouverture : récit coup par coup, choix et comparaison de professeurs, entraînement contre Stockfish qui suit le livre |
+| `editeur.html` | éditeur des enseignants (cases, flèches, démonstrations pas à pas, brouillon, publication, historique, remarques) — réservé |
+| `admin.html` | invitations, comptes, auteur de référence par livre — réservé aux validateurs et administrateurs |
+| `connexion.html` | connexion et acceptation d'une invitation (licence CC BY-SA 4.0) |
+| `guide-enseignant.html` | mode d'emploi de l'éditeur |
+
+**Backend** : `coach/server.mjs` (Node, port 8000) ; comptes `coach/auth.mjs` (scrypt natif, sessions, invitations) ;
+API `coach/plateforme.mjs` ; Postgres 16. Le tout en conteneurs Podman déclarés par Quadlet : `deploy/quadlet/`
+(README dedans). L'API tourne avec le dépôt monté en volume et `node --watch` : modifier un fichier suffit.
+
+**Données** : `db/migrations/*.sql` (appliquées par `scripts/db/migrer.mjs`), import des livres statiques
+`scripts/db/importer-livres.mjs`, export inverse `scripts/db/exporter-livres.mjs`, sauvegarde quotidienne
+`scripts/db/sauvegarder.sh` (minuteur systemd).
+
+**Tests** : `npm test` (unitaires) ; dans le conteneur, `podman exec chess-api node --test tests/plateforme-api.test.js`
+(bout en bout de l'API) ; `node scripts/verifier-pages.mjs` et `node scripts/scenario-editeur.mjs` (Chromium sans tête :
+pages sans erreur, scénario complet d'un enseignant).

@@ -26,6 +26,10 @@ async function verifier(url, attentes = []) {
 const r = await ctx.request.post(`${base}/api/auth/connexion`, { data: compte });
 const j = await r.json().catch(() => ({})); console.log(j.ok ? `connecté : ${j.utilisateur.display_name} (${j.utilisateur.role})` : `connexion impossible : ${j.error}`);
 const coups = encodeURIComponent('e4 e6 d4 d5');
+await verifier(`${base}/accueil.html`, ['.acc__grille a', '.site-nav']);
+await verifier(`${base}/index.html`, ['.site-nav']);
+await verifier(`${base}/play.html`, ['.site-nav', '.board']);
+await verifier(`${base}/guide-enseignant.html`, ['.gde table']);
 await verifier(`${base}/connexion.html`, ['form#fConnexion']);
 await verifier(`${base}/ouverture.html`, ['#ouvBoard .fen-board', '#ouvRecit']);
 await verifier(`${base}/editeur.html?livre=francaise&coups=${coups}`, ['.fen-board', async function formulaire(p) { return (await p.locator('textarea, input[type=text]').count()) >= 2; }, async function cartesDeCoups(p) { const t = await p.locator('body').innerText(); return /e5/.test(t) && /Cc3|Nc3/.test(t); }]);
