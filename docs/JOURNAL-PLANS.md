@@ -1428,3 +1428,7 @@ rédigées par l'expert (lignes …b5, Steinitz différée 5.c3, échange 5…f6
 (prof. 16), 0 illégal. Extension `etendre.mjs` en deux passes (2 × 150 rédactions IA, 0 échec), **342 positions** jusqu'au
 10e–11e coup, 1 378 coups cités tous légaux, **520 punitions** (prof. 16). Reste une frontière de ~150 positions profondes
 pour une passe ultérieure. Livre enregistré (`livres/index.js`, signature `e4 e5 Nf3 Nc6 Bb5`), importé en base, en ligne.
+**17 octobre, soir.** Passe 3 d'extension (go de l'auteur) : **492 positions** (48 à la main + 444 rédactions IA), 1 969 coups
+cités tous légaux, **730 punitions** recalculées ; reste une frontière de ~190 positions au-delà du 10e coup, laissée là.
+Même jour : son des coups mesuré hors-ligne (crête 0,14 → 0,48, 23 → 103 ms) après que l'auteur l'a trouvé inaudible —
+l'enveloppe exponentielle vers zéro vidait le son en quelques millisecondes.
