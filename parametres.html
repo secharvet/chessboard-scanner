@@ -55,6 +55,20 @@
               </div>
             </div>
 
+            <div class="par__champ">
+              <div class="par__ti">Jeu de pièces</div>
+              <div class="par__de">Le style des pièces sur tous les échiquiers du site.</div>
+              <select id="pieceSet" class="form-select" style="max-width: 280px;">
+                <option value="cburnett">Cburnett (classique)</option>
+                <option value="fresca">Fresca</option>
+                <option value="california">California</option>
+                <option value="tatiana">Tatiana</option>
+                <option value="maestro">Maestro</option>
+                <option value="gioco">Gioco</option>
+              </select>
+              <div id="pieceApercu" aria-hidden="true" style="display:flex;gap:8px;margin-top:12px;background:#8496a9;border:1px solid var(--border);border-radius:10px;padding:8px 10px;width:max-content;max-width:100%;flex-wrap:wrap"></div>
+            </div>
+
             <div class="par__champ" id="compteChamp" hidden>
               <div class="par__ti">Mon compte</div>
               <div class="par__de" id="compteInfo">—</div>
@@ -100,6 +114,15 @@
       bScale.value = String(Math.round(lireScale() * 100));
       majScale(lireScale());
       bScale.addEventListener('input', () => majScale(parseInt(bScale.value, 10) / 100));
+
+      // Jeu de pièces, mémorisé ; aperçu de quelques figures.
+      const SETS = ['cburnett', 'fresca', 'california', 'tatiana', 'maestro', 'gioco'];
+      const sel = document.getElementById('pieceSet');
+      const apercu = document.getElementById('pieceApercu');
+      function litSet() { try { const v = localStorage.getItem('piece-set'); if (SETS.includes(v)) return v; } catch (e) {} return 'cburnett'; }
+      function majApercu(set) { apercu.innerHTML = ['wK', 'wQ', 'wN', 'bR', 'bB', 'bP'].map((c) => '<img src="./assets/pieces/' + set + '/' + c + '.svg" width="34" height="34" alt="" style="display:block" />').join(''); }
+      sel.value = litSet(); majApercu(litSet());
+      sel.addEventListener('change', () => { try { localStorage.setItem('piece-set', sel.value); } catch (e) {} majApercu(sel.value); });
 
       // Compte
       fetch('/api/auth/moi', { credentials: 'same-origin' }).then((r) => (r.ok ? r.json() : null)).then((j) => {
