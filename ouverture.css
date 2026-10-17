@@ -1,5 +1,5 @@
 /* Assistant d'ouverture (maquette, 8 octobre 2026) : échiquier compact à gauche, récit à droite. */
-.ouv__layout { --plateau: clamp(400px, calc(100vh - 230px), 700px); display: grid; grid-template-columns: var(--plateau) minmax(0, 1fr); gap: 28px; padding: 12px 16px; align-items: start; }
+.ouv__layout { --plateau: calc(clamp(340px, calc(100vh - 250px), 680px) * var(--board-scale, 0.9)); display: grid; grid-template-columns: var(--plateau) minmax(0, 1fr); gap: 28px; padding: 12px 16px; align-items: start; }
 .ouv__gauche { position: sticky; top: 10px; align-self: start; display: flex; flex-direction: column; gap: 6px; min-height: calc(100vh - 96px); justify-content: center; }
 .ouv__board-wrap { width: var(--plateau); aspect-ratio: 1; }
 .ouv__board-wrap .board { width: 100%; height: 100%; }
