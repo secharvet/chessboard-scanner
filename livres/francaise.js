@@ -14809,6 +14809,12 @@ export const LIVRE = [
     "pourquoi": "l'autre moitié du centre : avec …Cc6 et …d5, les Noirs s'installent large"
    }
   ],
+  "erreurs": [
+   {
+    "san": "Nf6",
+    "pourquoi": "invite e5 ! : le cavalier déménage (…Cd5) et d4 suivra — les Blancs prennent gratis le grand centre que 2.d3 refusait"
+   }
+  ],
   "auteur": "brouillon IA (Expert échecs), vérifié au moteur, à relire",
   "date": "2026-10-17"
  },
