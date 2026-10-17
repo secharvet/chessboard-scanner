@@ -237,6 +237,13 @@ f. **Vidéo** : hors de ce lot ; prévoir seulement un champ « lien vidéo » p
 
 ## 8. Étapes de réalisation
 
+**État au 17 octobre 2026 (nuit de carte blanche)** : étapes 1 à 6 livrées en première version (voir journal) : schéma et
+import, comptes par invitation, API, assistant sur l'API avec choix et comparaison de professeurs, éditeur complet (modes,
+démonstrations, aperçu, historique, remarques, vérification moteur), sauvegarde quotidienne, guide de l'enseignant, pages
+vérifiées dans Chromium. Reste de l'étape 7 : courriels (confirmation, invitations envoyées automatiquement) quand un SMTP
+existera ; réordonnancement des coups par glisser ; comparaison de deux versions côte à côte dans l'historique ; premier
+enseignant réel invité.
+
 | Étape | Contenu | Durée estimée |
 |---|---|---|
 | 1 | Schéma complet (§4), migration des deux livres en base, export des fichiers statiques depuis la base | 1 jour |

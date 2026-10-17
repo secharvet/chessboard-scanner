@@ -5,6 +5,7 @@ const ENTREES = [
   { href: './play.html', titre: 'Jouer contre Stockfish', court: 'Jouer', sous: 'avec le jugement des coups' },
   { href: './ouverture.html', titre: 'Assistant d\'ouverture', court: 'Ouverture', sous: 'Française et Italienne, coup par coup' },
   { href: './editeur.html', titre: 'Éditeur', court: 'Éditer', sous: 'pour les enseignants', roles: ['enseignant', 'validateur', 'admin'] },
+  { href: './guide-enseignant.html', titre: 'Guide de l\'enseignant', court: 'Guide', sous: 'écrire, montrer, publier', roles: ['enseignant', 'validateur', 'admin'] },
   { href: './admin.html', titre: 'Administration', court: 'Admin', sous: 'comptes et invitations', roles: ['validateur', 'admin'] },
 ];
 const ici = location.pathname.split('/').pop() || 'index.html';
