@@ -13,6 +13,9 @@ import { toFrenchSan } from '../../coach/notation.mjs';
 const args = process.argv.slice(2); const opt = (k, d) => (args.includes(k) ? args[args.indexOf(k) + 1] : d);
 const [IN, OUT] = args.filter((a) => !a.startsWith('--') && !/^\d+$/.test(a));
 const MAX = Number(opt('--max', 120)); const PP = Number(opt('--prof-principal', 20)); const PV = Number(opt('--prof-variante', 16)); const DEPTH = Number(opt('--depth', 16));
+// --niveau-max N (17 oct. 2026) : ne prolonge que les lignes à au plus N écarts du coup principal depuis le départ
+// (0 = ligne principale pure, 1 = variantes de premier niveau…). Sans l'option : comportement inchangé.
+const NIVEAU_MAX = Number(opt('--niveau-max', Infinity));
 const { LIVRE, OUVERTURE } = await import('../../' + IN);
 const ext = existsSync(OUT) ? JSON.parse(readFileSync(OUT, 'utf8')) : [];
 const cfg = llmConfig({ ...process.env, LLM_PROVIDER: 'claude-cli', LLM_MODEL: 'fable' });
@@ -23,12 +26,23 @@ const tout = () => [...LIVRE, ...ext];
 const index = () => { const m = new Map(); for (const e of tout()) { const c = new Chess(); for (const s of e.coups.split(' ')) c.move(s); m.set(cle(c), e); } return m; };
 const ligneFr = (coups) => coups.split(' ').map((s, i) => (i % 2 === 0 ? `${i / 2 + 1}.` : '') + toFrenchSan(s)).join(' ');
 
+/** Nombre d'écarts au coup principal sur le chemin d'une position (Infinity si une étape est inconnue ou passe par une faute). */
+function ecarts(coups, parCoups) {
+  const l = coups.split(' '); let d = 0;
+  for (let i = 1; i < l.length; i++) {
+    const parent = parCoups.get(l.slice(0, i).join(' ')); if (!parent) return Infinity;
+    const k = (parent.plan ?? []).findIndex((p) => p.san === l[i]); if (k < 0) return Infinity; if (k > 0) d++;
+  }
+  return d;
+}
+
 function manquants() {
-  const idx = index(); const out = [];
+  const idx = index(); const out = []; const parCoups = new Map(tout().map((e) => [e.coups, e]));
   for (const e of tout()) {
     const n = e.coups.split(' ').length;
     (e.plan ?? []).forEach((p, i) => {
       if (p.porte) return; // porte vers une autre ouverture : on ne la prolonge pas ici
+      if (ecarts(e.coups, parCoups) + (i > 0 ? 1 : 0) > NIVEAU_MAX) return; // trop loin de la ligne principale
       if (i === 0 ? n + 1 > PP : n + 1 > PV) return;
       if (i > 0 && n >= 12) return; // au-delà du 6e coup, on ne suit plus que la ligne principale
       const c = new Chess(); for (const s of e.coups.split(' ')) c.move(s); try { c.move(p.san); } catch { return; }
