@@ -144,7 +144,7 @@
 
       // Son des coups : activation + 3 réglages (volume, hauteur, sec/rond), mémorisés.
       const sonActif = document.getElementById('sonActif');
-      const SON = { 'son-volume': ['sonVolume', 70], 'son-hauteur': ['sonHauteur', 100], 'son-sec': ['sonSec', 70] };
+      const SON = { 'son-volume': ['sonVolume', 90], 'son-hauteur': ['sonHauteur', 100], 'son-sec': ['sonSec', 100] };
       function litNum(k, d) { try { const v = parseFloat(localStorage.getItem(k)); return Number.isFinite(v) ? v : d; } catch (e) { return d; } }
       function sonOn() { try { return localStorage.getItem('son-actif') !== '0'; } catch (e) { return true; } }
       function setSonActif(on) { try { localStorage.setItem('son-actif', on ? '1' : '0'); } catch (e) {} document.getElementById('sonReglages').style.opacity = on ? '1' : '0.5'; }
