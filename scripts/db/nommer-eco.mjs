@@ -63,6 +63,8 @@ const MOTS = {
   Early: 'précoce', Reversed: 'inversée', Accelerated: 'accélérée', Traditional: 'traditionnelle', Normal: 'normale', Positional: 'positionnelle',
   Fianchetto: 'fianchetto', Trap: 'piège', Formation: 'formation', Invitation: 'invitation', Double: 'double', "Queen's": 'de la dame', "King's": 'du roi',
   Counterattack: 'contre-attaque', Counterthrust: 'contre-poussée', Retreat: 'retraite', Center: 'centre',
+  Spanish: 'espagnole', Italian: 'italienne', French: 'française', English: 'anglaise', Russian: 'russe', Hungarian: 'hongroise',
+  Scandinavian: 'scandinave', Norwegian: 'norvégienne', Swedish: 'suédoise', Vienna: 'viennoise', Scotch: 'écossaise',
 };
 const SUFFIXES = { Attack: 'attaque', Gambit: 'gambit', Defense: 'défense', Defence: 'défense', System: 'système', Line: 'ligne', Counterattack: 'contre-attaque' };
 export function traduireSegment(s) {
@@ -114,13 +116,18 @@ if (args[0] === '--essai') {
 } else {
   const { pool } = await import('../../coach/db.mjs');
   const { parFen, n } = chargerReferentiel();
+  await pool.query('update positions set eco = null, nom_eco = null'); // rejouable : on repart de zéro
   const { rows } = await pool.query('select id, opening_id, fen_key from positions');
-  const stats = {}; let maj = 0;
+  let directs = 0;
   for (const p of rows) {
-    const r = parFen.get(p.fen_key); const s = stats[p.opening_id] ??= { total: 0, nommees: 0 }; s.total++;
-    if (!r) continue; s.nommees++; maj++;
+    const r = parFen.get(p.fen_key); if (!r) continue; directs++;
     await pool.query('update positions set eco = $1, nom_eco = $2 where id = $3', [r.eco, r.nom, p.id]);
   }
-  for (const [o, s] of Object.entries(stats)) console.log(`${o} : ${s.nommees}/${s.total} positions avec un nom ECO`);
-  console.log(`TERMINÉ ${maj} positions nommées (référentiel : ${n} lignes)`); await pool.end();
+  // Héritage : une position que le référentiel ne nomme pas prend le nom de son plus proche ancêtre nommé (on est
+  // toujours « dans » cette variante), un niveau de profondeur par passage.
+  let herites = 0;
+  for (;;) { const r = await pool.query('update positions p set eco = q.eco, nom_eco = q.nom_eco from positions q where p.parent_id = q.id and p.eco is null and q.eco is not null'); if (!r.rowCount) break; herites += r.rowCount; }
+  const { rows: stats } = await pool.query('select opening_id, count(*) filter (where eco is not null) as nommees, count(*) as total from positions group by 1 order by 1');
+  for (const s of stats) console.log(`${s.opening_id} : ${s.nommees}/${s.total} positions avec un nom ECO`);
+  console.log(`TERMINÉ ${directs} positions nommées par le référentiel (${n} lignes), ${herites} par héritage`); await pool.end();
 }
