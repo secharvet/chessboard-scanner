@@ -5,10 +5,18 @@
 export const FILES = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
 export const PIECE_IMG_BASE = './assets/pieces';
 
+// Jeux de pièces disponibles (sous-dossiers de assets/pieces/, en SVG). Le choix se fait dans Paramètres.
+export const PIECE_SETS = ['cburnett', 'fresca', 'california', 'tatiana', 'maestro', 'gioco'];
+
+export function pieceSetCourant() {
+  try { const v = localStorage.getItem('piece-set'); if (PIECE_SETS.includes(v)) return v; } catch (e) {}
+  return 'cburnett';
+}
+
 export function pieceImageUrl(piece) {
   const isWhite = piece === piece.toUpperCase();
   const type = piece.toUpperCase();
-  return `${PIECE_IMG_BASE}/${isWhite ? 'w' : 'b'}${type}.png`;
+  return `${PIECE_IMG_BASE}/${pieceSetCourant()}/${isWhite ? 'w' : 'b'}${type}.svg`;
 }
 
 export function fenToSquares(fen) {
