@@ -8,15 +8,76 @@
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./site-nav.css" />
     <link rel="stylesheet" href="./compte.css" />
+    <style>
+      .adm { max-width: 1180px; margin: 0 auto; padding: 24px 20px 56px; width: 100%; }
+      .adm__tete { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+      .adm__sous { color: var(--muted); font-size: 0.9rem; }
+      .adm__tabs { display: flex; gap: 2px; border-bottom: 1px solid var(--border); margin: 16px 0 22px; flex-wrap: wrap; }
+      .adm__tab { border: 0; background: none; color: var(--muted); font: inherit; font-weight: 600; padding: 10px 16px; border-bottom: 2px solid transparent; cursor: pointer; }
+      .adm__tab:hover { color: var(--text); }
+      .adm__tab[aria-selected="true"] { color: var(--text); border-bottom-color: var(--accent); }
+      .adm__panel[hidden] { display: none; }
+      .adm__card { background: var(--veil); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px; margin-bottom: 20px; }
+      .adm__card h2 { font-size: 1rem; margin: 0 0 4px; }
+      .adm__card .cpt__info { margin-top: 6px; }
+      .matrix-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius); }
+      table.matrix { border-collapse: collapse; width: 100%; min-width: 640px; }
+      table.matrix th, table.matrix td { padding: 11px 14px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: middle; }
+      table.matrix thead th { color: var(--muted); font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.06em; position: sticky; top: 0; background: var(--surface); }
+      table.matrix th.role, table.matrix td.role { text-align: center; width: 7.5rem; }
+      table.matrix tbody tr:hover { background: var(--veil); }
+      .matrix__page b { font-weight: 600; }
+      .matrix__page small { display: block; color: var(--muted); font-family: var(--mono); font-size: 0.74rem; margin-top: 1px; }
+      .matrix__sec td { background: var(--veil); font-weight: 700; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+      .matrix input { width: 18px; height: 18px; accent-color: var(--accent); cursor: pointer; }
+      .matrix input:disabled { opacity: 0.45; cursor: not-allowed; }
+      .adm__etat { font-size: 0.82rem; color: var(--accent2); min-height: 1.2em; margin-top: 8px; }
+    </style>
   </head>
   <body>
     <div class="app">
-      <main class="cpt adm">
-        <section class="cpt__carte card" style="width:min(100%,760px)">
-          <div class="card-body p-4">
-            <h1 class="h4 mb-2">Administration</h1>
-            <p class="cpt__sous" id="moi"></p>
-            <h2 class="h6 mt-4 mb-2">Inviter quelqu'un</h2>
+      <main class="adm">
+        <div class="adm__tete">
+          <h1 class="h4 mb-0">Administration</h1>
+          <span class="adm__sous" id="moi"></span>
+        </div>
+
+        <div class="adm__tabs" role="tablist">
+          <button class="adm__tab" role="tab" data-tab="securite" aria-selected="true" id="tabSecurite" hidden>Sécurité</button>
+          <button class="adm__tab" role="tab" data-tab="comptes" aria-selected="false">Comptes</button>
+          <button class="adm__tab" role="tab" data-tab="invitations" aria-selected="false">Invitations &amp; référence</button>
+        </div>
+        <p class="cpt__erreur" id="erreur" hidden></p>
+
+        <!-- Onglet SÉCURITÉ : matrice rôles × pages -->
+        <section class="adm__panel" data-panel="securite" hidden>
+          <div class="adm__card">
+            <h2>Qui a accès à quelle page</h2>
+            <p class="cpt__info">Coche pour donner l'accès d'un rôle à une page. Le menu de chaque personne reflète ces cases. L'administrateur garde toujours accès à tout (anti-verrouillage).</p>
+            <div class="matrix-wrap">
+              <table class="matrix">
+                <thead><tr><th>Page</th><th class="role" id="mtxApprenant">apprenant</th><th class="role">enseignant</th><th class="role">validateur</th><th class="role">admin</th></tr></thead>
+                <tbody id="mtxCorps"><tr><td colspan="5" class="cpt__info" style="padding:16px">Chargement…</td></tr></tbody>
+              </table>
+            </div>
+            <p class="adm__etat" id="mtxEtat"></p>
+          </div>
+        </section>
+
+        <!-- Onglet COMPTES -->
+        <section class="adm__panel" data-panel="comptes" hidden>
+          <div class="adm__card">
+            <h2>Comptes</h2>
+            <div class="table-responsive">
+              <table class="table table-sm align-middle mb-0"><thead><tr><th>Nom</th><th>Courriel</th><th>Rôle</th><th>Club</th><th>Textes publiés</th></tr></thead><tbody id="comptes"></tbody></table>
+            </div>
+          </div>
+        </section>
+
+        <!-- Onglet INVITATIONS & RÉFÉRENCE -->
+        <section class="adm__panel" data-panel="invitations" hidden>
+          <div class="adm__card">
+            <h2>Inviter quelqu'un</h2>
             <form id="fInvite">
               <div class="row g-2">
                 <div class="col-md-5"><label class="form-label mb-1" for="invCourriel">Courriel</label><input class="form-control form-control-sm" id="invCourriel" type="email" name="email" required /></div>
@@ -26,10 +87,11 @@
               <button class="btn btn--primary mt-3" type="submit">Créer le lien d'invitation</button>
             </form>
             <p id="lien" class="adm__lien mt-3" hidden></p>
-            <p class="cpt__info mt-2">Le lien vaut sept jours, à transmettre toi-même (courriel, message) tant que l'envoi automatique n'est pas configuré.</p>
-            <p class="cpt__erreur" id="erreur" hidden></p>
-            <h2 class="h6 mt-4 mb-2">Auteur de référence par livre</h2>
-            <p class="cpt__info">L'auteur lu par défaut, et le repli quand le professeur choisi n'a rien écrit sur une position. Réservé à l'administrateur.</p>
+            <p class="cpt__info mt-2">Le lien vaut sept jours, à transmettre toi-même tant que l'envoi automatique n'est pas configuré.</p>
+          </div>
+          <div class="adm__card">
+            <h2>Auteur de référence par livre</h2>
+            <p class="cpt__info">L'auteur lu par défaut, et le repli quand le professeur choisi n'a rien écrit sur une position.</p>
             <form id="fReference">
               <div class="row g-2 align-items-end">
                 <div class="col-md-4"><label class="form-label mb-1" for="refLivre">Livre</label><select class="form-select form-select-sm" name="livre" id="refLivre"></select></div>
@@ -38,11 +100,6 @@
               </div>
             </form>
             <p id="refEtat" class="cpt__info mt-2"></p>
-            <h2 class="h6 mt-4 mb-2">Comptes</h2>
-            <div class="table-responsive">
-              <table class="table table-sm align-middle mb-2"><thead><tr><th>Nom</th><th>Courriel</th><th>Rôle</th><th>Club</th><th>Textes publiés</th></tr></thead><tbody id="comptes"></tbody></table>
-            </div>
-            <p class="cpt__pied mb-0"><a href="./ouverture.html">← Assistant d'ouverture</a> · <a href="./editeur.html">Éditeur</a></p>
           </div>
         </section>
       </main>
@@ -51,13 +108,58 @@
     <script type="module">
       const $ = (id) => document.getElementById(id);
       const erreur = (m) => { $('erreur').textContent = m; $('erreur').hidden = !m; };
-      const api = async (p, b) => { const r = await fetch(p, b ? { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(b) } : {}); const j = await r.json().catch(() => ({ ok: false })); if (!j.ok) throw new Error(j.error || `HTTP ${r.status}`); return j; };
       const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-      async function charger() {
-        const { utilisateur } = await api('/api/auth/moi'); $('moi').textContent = utilisateur ? `${utilisateur.display_name} · ${utilisateur.role}` : '';
+      const api = async (p, b, methode) => {
+        const opt = b ? { method: methode || 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(b) } : {};
+        const r = await fetch(p, opt); const j = await r.json().catch(() => ({ ok: false }));
+        if (!j.ok) throw new Error(j.error || `HTTP ${r.status}`); return j;
+      };
+
+      // Onglets
+      const onglets = [...document.querySelectorAll('.adm__tab')];
+      function montrer(tab) {
+        onglets.forEach((t) => t.setAttribute('aria-selected', String(t.dataset.tab === tab)));
+        document.querySelectorAll('.adm__panel').forEach((p) => { p.hidden = p.dataset.panel !== tab; });
+      }
+      onglets.forEach((t) => t.addEventListener('click', () => montrer(t.dataset.tab)));
+
+      // Matrice de sécurité
+      async function chargerSecurite() {
+        const { pages, roles, matrice } = await api('/api/acces');
+        const corps = $('mtxCorps'); corps.innerHTML = '';
+        let sectionCourante = null;
+        for (const pg of pages) {
+          if (pg.section !== sectionCourante) {
+            sectionCourante = pg.section;
+            const trs = document.createElement('tr'); trs.className = 'matrix__sec';
+            trs.innerHTML = `<td colspan="${roles.length + 1}">${esc(pg.section)}</td>`; corps.appendChild(trs);
+          }
+          const tr = document.createElement('tr');
+          const cases = roles.map((role) => {
+            const on = !!matrice[pg.id]?.[role];
+            const fige = role === 'admin';
+            return `<td class="role"><input type="checkbox" data-page="${esc(pg.id)}" data-role="${esc(role)}" ${on ? 'checked' : ''} ${fige ? 'disabled title="l\'administrateur garde toujours accès"' : ''} aria-label="${esc(pg.label)} — ${esc(role)}" /></td>`;
+          }).join('');
+          tr.innerHTML = `<td class="matrix__page"><b>${esc(pg.label)}</b><small>${esc(pg.path)}</small></td>${cases}`;
+          corps.appendChild(tr);
+        }
+        corps.querySelectorAll('input[type="checkbox"]:not(:disabled)').forEach((cb) => {
+          cb.addEventListener('change', async () => {
+            $('mtxEtat').textContent = 'Enregistrement…';
+            try { await api('/api/admin/acces', { changements: [{ page_id: cb.dataset.page, role: cb.dataset.role, allowed: cb.checked }] }, 'PUT');
+              $('mtxEtat').textContent = 'Enregistré. Le menu des ' + cb.dataset.role + 's suit ce réglage.'; }
+            catch (e) { cb.checked = !cb.checked; $('mtxEtat').textContent = ''; erreur(e.message); }
+          });
+        });
+      }
+
+      // Comptes
+      async function chargerComptes() {
         const { utilisateurs } = await api('/api/admin/utilisateurs');
         $('comptes').innerHTML = utilisateurs.map((u) => `<tr><td>${esc(u.display_name)}</td><td>${esc(u.email)}</td><td>${esc(u.role)}</td><td>${esc(u.club ?? '')}</td><td>${u.publiees}</td></tr>`).join('');
       }
+
+      // Invitations + référence
       $('fInvite').addEventListener('submit', async (ev) => {
         ev.preventDefault(); erreur(''); const f = new FormData(ev.target);
         try { const j = await api('/api/admin/invitations', { email: f.get('email'), role: f.get('role'), club: f.get('club') || null }); $('lien').textContent = location.origin + j.lien; $('lien').hidden = false; }
@@ -74,7 +176,18 @@
         try { await api('/api/admin/reference', { livre: f.get('livre'), author_id: f.get('author_id') }); $('refEtat').textContent = 'Référence enregistrée.'; }
         catch (e) { erreur(e.message); }
       });
-      charger().then(chargerReference).catch((e) => erreur(e.message));
+
+      (async () => {
+        try {
+          const { utilisateur } = await api('/api/auth/moi');
+          $('moi').textContent = utilisateur ? `${utilisateur.display_name} · ${utilisateur.role}` : '';
+          const estAdmin = utilisateur?.role === 'admin';
+          if (estAdmin) { $('tabSecurite').hidden = false; montrer('securite'); await chargerSecurite(); }
+          else { montrer('comptes'); }
+          await chargerComptes();
+          await chargerReference();
+        } catch (e) { erreur(e.message); }
+      })();
     </script>
   </body>
 </html>

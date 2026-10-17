@@ -32,6 +32,11 @@
 .site-nav__act:hover { background: var(--veil-2); color: var(--text); }
 .site-nav__act-ic { width: 16px; text-align: center; }
 
+/* bandeau « vue apprenant » (aperçu admin) */
+.site-vue-apercu { position: sticky; top: 0; z-index: 60; display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; background: var(--warn); color: #241700; font-weight: 600; font-size: 0.85rem; padding: 6px 12px; }
+.site-vue-apercu button { border: 1px solid rgba(0,0,0,0.3); background: rgba(0,0,0,0.08); color: #241700; font: inherit; font-weight: 700; padding: 3px 10px; border-radius: 6px; cursor: pointer; }
+.site-vue-apercu button:hover { background: rgba(0,0,0,0.16); }
+
 /* bouton thème clair/sombre (soleil/lune) */
 .site-nav__theme { border: 0; background: none; color: var(--muted); cursor: pointer; font: inherit; border-radius: 8px; display: inline-grid; place-items: center; }
 .site-nav__theme:hover { background: var(--veil-2); color: var(--text); }

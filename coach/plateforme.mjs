@@ -21,6 +21,41 @@ function nettoyerAnnotations(a) {
 }
 const texte = (v, max = 2000) => (typeof v === 'string' ? v.trim().slice(0, max) : '') || null;
 
+// Accès des pages par rôle : matrice éditable par l'admin (onglet Sécurité), source de vérité du menu.
+const ROLES_ORDRE = ['apprenant', 'enseignant', 'validateur', 'admin'];
+const PAGES_SITE = [
+  { id: 'accueil', label: 'Accueil', path: '/accueil.html', section: 'Public' },
+  { id: 'ouverture', label: "Assistant d'ouverture", path: '/ouverture.html', section: 'Public' },
+  { id: 'index', label: "Lecteur d'ouvertures", path: '/index.html', section: 'Public' },
+  { id: 'play', label: 'Jouer contre Stockfish', path: '/play.html', section: 'Public' },
+  { id: 'parametres', label: 'Paramètres', path: '/parametres.html', section: 'Public' },
+  { id: 'connexion', label: 'Connexion', path: '/connexion.html', section: 'Public' },
+  { id: 'editeur', label: 'Éditeur', path: '/editeur.html', section: 'Enseignants' },
+  { id: 'guide', label: "Guide de l'enseignant", path: '/guide-enseignant.html', section: 'Enseignants' },
+  { id: 'admin', label: 'Administration', path: '/admin.html', section: 'Administration' },
+];
+const TOUS = ['apprenant', 'enseignant', 'validateur', 'admin'];
+const ACCES_DEFAUT = {
+  accueil: TOUS, ouverture: TOUS, index: TOUS, play: TOUS, parametres: TOUS, connexion: TOUS,
+  editeur: ['enseignant', 'validateur', 'admin'], guide: ['enseignant', 'validateur', 'admin'], admin: ['validateur', 'admin'],
+};
+let tableAccesPrete = false;
+async function assurerTableAcces() { if (tableAccesPrete) return; await pool.query('create table if not exists page_access (page_id text not null, role text not null, allowed boolean not null, primary key (page_id, role))'); tableAccesPrete = true; }
+async function lireMatriceAcces() {
+  await assurerTableAcces();
+  const { rows } = await pool.query('select page_id, role, allowed from page_access');
+  const over = {}; for (const r of rows) (over[r.page_id] ??= {})[r.role] = r.allowed;
+  const matrice = {};
+  for (const p of PAGES_SITE) {
+    matrice[p.id] = {};
+    for (const role of ROLES_ORDRE) {
+      const def = (ACCES_DEFAUT[p.id] ?? []).includes(role);
+      matrice[p.id][role] = role === 'admin' ? true : (over[p.id]?.[role] ?? def); // l'admin garde toujours accès (anti-verrouillage)
+    }
+  }
+  return matrice;
+}
+
 /** Valide et normalise un `content` d'explication pour une position donnée ; lève une erreur lisible sinon. */
 async function normaliserContent(c, position, content) {
   if (!content || typeof content !== 'object') throw new Error('contenu manquant');
@@ -126,6 +161,23 @@ export async function routerPlateforme({ req, res, url, readJson, send, engine, 
     await pool.query('delete from reference where opening_id = $1 and coalesce(position_id, 0) = coalesce($2, 0)', [b.livre, b.position_id ?? null]);
     await pool.query('insert into reference (opening_id, position_id, author_id) values ($1,$2,$3)', [b.livre, b.position_id ?? null, b.author_id]); send(res, 200, { ok: true }); return true;
   }
+  // ---- accès des pages par rôle (matrice de sécurité, onglet Sécurité de l'administration)
+  if (path === '/api/acces' && m === 'GET') { send(res, 200, { ok: true, pages: PAGES_SITE, roles: ROLES_ORDRE, matrice: await lireMatriceAcces() }); return true; }
+  if (path === '/api/admin/acces' && m === 'PUT') {
+    if (!exiger('admin')) return true; const b = await readJson(req);
+    const chs = Array.isArray(b.changements) ? b.changements : [];
+    const cx = await pool.connect();
+    try {
+      await assurerTableAcces(); await cx.query('begin');
+      for (const ch of chs) {
+        if (!PAGES_SITE.some((p) => p.id === ch.page_id) || !ROLES_ORDRE.includes(ch.role) || ch.role === 'admin') continue;
+        await cx.query('insert into page_access (page_id, role, allowed) values ($1,$2,$3) on conflict (page_id, role) do update set allowed = excluded.allowed', [ch.page_id, ch.role, !!ch.allowed]);
+      }
+      await cx.query('commit');
+    } catch (e) { await cx.query('rollback'); return refuser(500, e.message); } finally { cx.release(); }
+    send(res, 200, { ok: true, matrice: await lireMatriceAcces() }); return true;
+  }
+
   // ---- lecture
   if (path === '/api/livres' && m === 'GET') {
     const { rows } = await pool.query(`select o.id, o.nom, o.signature, o.ordre,
