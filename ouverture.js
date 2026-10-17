@@ -48,7 +48,8 @@ export function fusionner(reponse, expl) {
   const c = expl?.content ?? {};
   return {
     id: reponse.position?.id ?? null, livre: reponse.position?.livre ?? null, coups: reponse.position?.coups ?? '',
-    nom: c.nom ?? null, sens: c.sens ?? '', menace: c.menace ?? null, schema: c.schema ?? null, annotations: c.annotations ?? [],
+    nom: c.nom ?? null, eco: reponse.position?.eco ?? null, nom_eco: reponse.position?.nom_eco ?? null,
+    sens: c.sens ?? '', menace: c.menace ?? null, schema: c.schema ?? null, annotations: c.annotations ?? [],
     plan: coups.filter((x) => x.kind !== 'faute'), erreurs: coups.filter((x) => x.kind === 'faute'),
     auteur: expl ? { id: expl.author.id, nom: expl.author.display_name, date: expl.published_at, ia: estIA(expl.author) } : null,
     explication: expl ?? null, api: true,
@@ -59,7 +60,7 @@ export function fusionner(reponse, expl) {
 export function entreeStatique(e, punitions = {}) {
   const seq = (san) => { const p = punitions[`${e.coups} ${san}`]; return p ? { pas: p.ligne.map((s) => ({ san: s, phrase: '', annotations: [] })), eval: { avant: p.evalAvant, apres: p.evalApres, perte: p.perte, mat: p.mat, fautif: p.fautif }, origine: 'moteur' } : null; };
   return {
-    id: null, livre: null, coups: e.coups, nom: e.nom ?? null, sens: e.sens ?? '', menace: e.menace ?? null, schema: e.schema ?? null, annotations: [],
+    id: null, livre: null, coups: e.coups, nom: e.nom ?? null, eco: e.eco ?? null, nom_eco: e.nom_eco ?? null, sens: e.sens ?? '', menace: e.menace ?? null, schema: e.schema ?? null, annotations: [],
     plan: (e.plan ?? []).map((p, i) => ({ san: p.san, move_id: null, kind: p.porte ? 'porte' : (i === 0 ? 'principal' : 'variante'), porte: p.porte ?? null, pourquoi: p.pourquoi ?? '', annotations: [], sequence: null })),
     erreurs: (e.erreurs ?? []).map((x) => ({ san: x.san, move_id: null, kind: 'faute', porte: null, pourquoi: x.pourquoi ?? '', annotations: [], sequence: seq(x.san) })),
     auteur: { id: IA_ID, nom: e.auteur ?? 'livre statique', date: e.date ?? null, ia: true }, explication: null, api: false,
@@ -237,7 +238,11 @@ function signature(e) {
 
 function renderPanneau() {
   const e = entree(); const h = game.history({ verbose: true }); const last = h.at(-1);
-  $('ouvNom').textContent = e?.nom ?? nomLivre(courant);
+  // Titre : le nom officiel de la variante (référentiel ECO) en gras d'abord, puis notre propre nom s'il en diffère.
+  const officiel = e?.nom_eco || null; const notre = e?.nom ?? null;
+  $('ouvNom').innerHTML = officiel
+    ? `<b>${esc(officiel)}</b>${e.eco ? ` <small class="ouv__ecoCode" title="code ECO">${esc(e.eco)}</small>` : ''}${notre && notre !== officiel ? ` <span class="ouv__notreNom">${esc(notre)}</span>` : ''}`
+    : esc(notre ?? nomLivre(courant));
   const etat = $('ouvEtat'); etat.textContent = e ? (e.auteur?.ia ? 'brouillon IA' : (e.auteur?.nom ?? '')) : 'hors du livre';
   // bouton éditeur (enseignant connecté)
   const btn = $('ouvEditer'); if (btn) { btn.hidden = !ENSEIGNANT || !apiDispo; btn.textContent = e ? 'Modifier cette position' : 'Écrire cette position'; btn.href = lienEditeur(); }
