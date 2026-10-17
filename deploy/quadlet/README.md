@@ -27,3 +27,10 @@ Contrôle de bout en bout : `curl http://127.0.0.1:8000/db-health` (API → rés
 Le site statique (nginx, `docker/web/`) n'a pas été touché : il continue de joindre l'API via `host.containers.internal:8000`,
 exactement comme avant quand l'API tournait sans conteneur. Le faire rejoindre le réseau `chess` est une étape séparée,
 volontairement pas faite aujourd'hui pour ne pas mélanger deux changements sur le site qui est en service.
+
+## Sauvegarde
+
+`chess-sauvegarde.timer` (unité systemd --user, fichiers ici, à copier dans `~/.config/systemd/user/`) lance chaque jour à
+4 h 30 UTC `scripts/db/sauvegarder.sh` : `pg_dump` compressé dans `~/sauvegardes/chess/` (14 jours conservés), puis export
+des livres statiques (`scripts/db/exporter-livres.mjs`). Lancer à la main : `systemctl --user start chess-sauvegarde.service`.
+Restauration : `gunzip -c chess-AAAAMMJJ-HHMM.sql.gz | podman exec -i chess-db psql -U chess chess` (sur une base vide).

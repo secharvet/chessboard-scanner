@@ -223,7 +223,7 @@ function renderColonne(suf, e, last, principale) {
   } else {
     const qui = last.color === 'w' ? 'Blancs' : 'Noirs';
     if (e) {
-      recitEl.innerHTML += `<p><span class="qui">${numero(avant(), last.san)}</span> — ${qui} ${e.sens ? sensPhrase(esc(e.sens)) : 'jouent un coup du livre.'}</p>`;
+      recitEl.innerHTML += `<p><span class="qui">${numero(avant(), last.san)}</span> <span class="camp">(${qui})</span> — ${e.sens ? sensPhrase(esc(e.sens)) : 'coup du livre.'}</p>`;
       if (e.menace) recitEl.innerHTML += `<p class="menace">Menace : ${esc(e.menace)}.</p>`;
       if (e.explication?.video_url) recitEl.innerHTML += `<p><a class="ouv__video" href="${esc(e.explication.video_url)}" target="_blank" rel="noopener">▶ Vidéo du professeur</a></p>`;
     } else if (principale) {

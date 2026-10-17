@@ -99,3 +99,4 @@
 .ouv__signature b { color: var(--text); font-weight: 600; }
 @media (max-width: 1100px) { .ouv__colonnes--deux { grid-template-columns: 1fr; } .ouv__col--deux { border-left: 0; padding-left: 0; border-top: 1px solid var(--border); padding-top: 14px; } }
 @media (max-width: 800px) { .ouv__col--deux { display: none; } .ouv__horsligne { margin: 6px 10px 0; } .ouv__editer { display: none; } }
+.ouv__recit .camp { color: var(--muted); font-size: 0.85em; }
