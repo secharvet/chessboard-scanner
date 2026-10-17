@@ -35,6 +35,9 @@
 .ouv__schema div { background: var(--veil); border-radius: 8px; padding: 10px; }
 .ouv__schema b { display: block; margin-bottom: 4px; color: var(--muted); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; }
 .ouv__signature { margin-top: 20px; padding-top: 12px; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.82rem; line-height: 1.45; }
+.mention { font-family: var(--mono); font-size: 0.92em; border-bottom: 1px dotted var(--accent2); border-radius: 3px; cursor: default; }
+.mention:hover { background: rgba(var(--accent-rgb),0.18); }
+.mention--jouable { cursor: pointer; }
 .ouv__apercu { position: absolute; left: 12px; top: 12px; background: rgba(0,0,0,0.6); color: #fff; font-size: 0.8rem; padding: 3px 8px; border-radius: 6px; pointer-events: none; }
 .ouv__board-wrap { position: relative; }
 
