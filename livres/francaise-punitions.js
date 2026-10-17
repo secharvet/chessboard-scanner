@@ -1,5 +1,5 @@
 // Généré par scripts/ouvertures/punitions.mjs (Stockfish). Ne pas éditer à la main.
-// 502 punitions d'origine conservées telles quelles ; 163 ajoutées le 2026-10-17 (lignes principales profondes).
+// 502 punitions d'origine conservées telles quelles ; 163 ajoutées le 2026-10-17 (lignes principales profondes) ; 42 ajoutées le 2026-10-17 (compléments de l'Expert échecs).
 export const PUNITIONS = {
  "e4 e6 d4 d5 Bd3": {
   "coups": "e4 e6 d4 d5",
@@ -11304,6 +11304,720 @@ export const PUNITIONS = {
   "evalAvant": 50,
   "evalApres": -7,
   "perte": 57,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 h4 O-O": {
+  "coups": "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 h4",
+  "faute": "O-O",
+  "fautif": "b",
+  "ligne": [
+   "Qg4",
+   "f6",
+   "Bd3",
+   "Rf7",
+   "Nf3",
+   "Nc6"
+  ],
+  "evalAvant": -49,
+  "evalApres": -88,
+  "perte": 39,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 h4 f6": {
+  "coups": "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 h4",
+  "faute": "f6",
+  "fautif": "b",
+  "ligne": [
+   "Qh5+",
+   "g6",
+   "exf6",
+   "gxh5",
+   "fxe7",
+   "Qxe7"
+  ],
+  "evalAvant": -61,
+  "evalApres": -106,
+  "perte": 45,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 h4 a6": {
+  "coups": "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 h4",
+  "faute": "a6",
+  "fautif": "b",
+  "ligne": [
+   "Qg4",
+   "c5",
+   "Bxe7",
+   "Qxe7",
+   "Qxg7",
+   "Qf8"
+  ],
+  "evalAvant": -66,
+  "evalApres": -104,
+  "perte": 38,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 h4 Bxg5 Nf3": {
+  "coups": "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 h4 Bxg5",
+  "faute": "Nf3",
+  "fautif": "w",
+  "ligne": [
+   "Be7",
+   "Ng5",
+   "Bxg5",
+   "hxg5",
+   "Qxg5",
+   "Nb5"
+  ],
+  "evalAvant": 39,
+  "evalApres": -637,
+  "perte": 676,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 h4 Bxg5 hxg5 h6": {
+  "coups": "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 h4 Bxg5 hxg5",
+  "faute": "h6",
+  "fautif": "b",
+  "ligne": [
+   "Qd2",
+   "a6",
+   "gxh6",
+   "Rxh6",
+   "Rxh6",
+   "gxh6"
+  ],
+  "evalAvant": -22,
+  "evalApres": -310,
+  "perte": 288,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 h4 Bxg5 hxg5 Qxg5 Qg4": {
+  "coups": "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 h4 Bxg5 hxg5 Qxg5",
+  "faute": "Qg4",
+  "fautif": "w",
+  "ligne": [
+   "Qxg4",
+   "Nf3",
+   "f5",
+   "Be2",
+   "Kd8",
+   "Kd1"
+  ],
+  "evalAvant": 19,
+  "evalApres": -988,
+  "perte": 1007,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 h4 Bxg5 hxg5 Qxg5 Rxh7": {
+  "coups": "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 h4 Bxg5 hxg5 Qxg5",
+  "faute": "Rxh7",
+  "fautif": "w",
+  "ligne": [
+   "Rxh7",
+   "Nh3",
+   "Qe7",
+   "Qf3",
+   "Nc6",
+   "Bd3"
+  ],
+  "evalAvant": 13,
+  "evalApres": -674,
+  "perte": 687,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 h4 c5 dxc5": {
+  "coups": "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 h4 c5",
+  "faute": "dxc5",
+  "fautif": "w",
+  "ligne": [
+   "Nxe5",
+   "Nf3",
+   "Ned7",
+   "Bxe7",
+   "Qxe7",
+   "Qd2"
+  ],
+  "evalAvant": 76,
+  "evalApres": -51,
+  "perte": 127,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Nf6 Bg5 dxe4 Bxf6": {
+  "coups": "e4 e6 d4 d5 Nc3 Nf6 Bg5 dxe4",
+  "faute": "Bxf6",
+  "fautif": "w",
+  "ligne": [
+   "gxf6",
+   "Nxe4",
+   "f5",
+   "Nc3",
+   "Bg7",
+   "Nf3"
+  ],
+  "evalAvant": 29,
+  "evalApres": -44,
+  "perte": 73,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Nf6 Bg5 dxe4 Nxe4 Nxe4": {
+  "coups": "e4 e6 d4 d5 Nc3 Nf6 Bg5 dxe4 Nxe4",
+  "faute": "Nxe4",
+  "fautif": "b",
+  "ligne": [
+   "Bxd8",
+   "Kxd8",
+   "c3",
+   "Nd7",
+   "g3",
+   "Ndf6"
+  ],
+  "evalAvant": -29,
+  "evalApres": -685,
+  "perte": 656,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Nf6 Bg5 dxe4 Nxe4 Be7 Nf3": {
+  "coups": "e4 e6 d4 d5 Nc3 Nf6 Bg5 dxe4 Nxe4 Be7",
+  "faute": "Nf3",
+  "fautif": "w",
+  "ligne": [
+   "Nxe4",
+   "h4",
+   "Nd7",
+   "Bf4",
+   "a6",
+   "Bd3"
+  ],
+  "evalAvant": 27,
+  "evalApres": -608,
+  "perte": 635,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Nf6 Bg5 Bb4 Nf3": {
+  "coups": "e4 e6 d4 d5 Nc3 Nf6 Bg5 Bb4",
+  "faute": "Nf3",
+  "fautif": "w",
+  "ligne": [
+   "dxe4",
+   "Ne5",
+   "Nbd7",
+   "a3",
+   "Bxc3+",
+   "bxc3"
+  ],
+  "evalAvant": 44,
+  "evalApres": -79,
+  "perte": 123,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Nf6 Bg5 Bb4 a3": {
+  "coups": "e4 e6 d4 d5 Nc3 Nf6 Bg5 Bb4",
+  "faute": "a3",
+  "fautif": "w",
+  "ligne": [
+   "Bxc3+",
+   "bxc3",
+   "dxe4",
+   "Ne2",
+   "h6",
+   "Bxf6"
+  ],
+  "evalAvant": 33,
+  "evalApres": -88,
+  "perte": 121,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Nf6 Bg5 Bb4 e5 Nfd7": {
+  "coups": "e4 e6 d4 d5 Nc3 Nf6 Bg5 Bb4 e5",
+  "faute": "Nfd7",
+  "fautif": "b",
+  "ligne": [
+   "Bxd8",
+   "Kxd8",
+   "h4",
+   "Nc6",
+   "a3",
+   "Ba5"
+  ],
+  "evalAvant": -59,
+  "evalApres": -886,
+  "perte": 827,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Nf6 Bg5 Bb4 e5 Ne4": {
+  "coups": "e4 e6 d4 d5 Nc3 Nf6 Bg5 Bb4 e5",
+  "faute": "Ne4",
+  "fautif": "b",
+  "ligne": [
+   "Bxd8",
+   "Bd7",
+   "Bxc7",
+   "Nxc3",
+   "Qd2",
+   "Ne4"
+  ],
+  "evalAvant": -57,
+  "evalApres": -825,
+  "perte": 768,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Nf6 Bg5 Bb4 e5 h6 Bh4": {
+  "coups": "e4 e6 d4 d5 Nc3 Nf6 Bg5 Bb4 e5 h6",
+  "faute": "Bh4",
+  "fautif": "w",
+  "ligne": [
+   "g5",
+   "Bg3",
+   "Ne4",
+   "Ne2",
+   "Nxg3",
+   "hxg3"
+  ],
+  "evalAvant": 56,
+  "evalApres": 0,
+  "perte": 56,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Nf6 Bg5 Bb4 e5 h6 Bd2 Ne4": {
+  "coups": "e4 e6 d4 d5 Nc3 Nf6 Bg5 Bb4 e5 h6 Bd2",
+  "faute": "Ne4",
+  "fautif": "b",
+  "ligne": [
+   "Nxe4",
+   "Bxd2+",
+   "Nxd2",
+   "O-O",
+   "Be2",
+   "f6"
+  ],
+  "evalAvant": -58,
+  "evalApres": -780,
+  "perte": 722,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Nf6 Bg5 Bb4 e5 h6 Bd2 Ng8": {
+  "coups": "e4 e6 d4 d5 Nc3 Nf6 Bg5 Bb4 e5 h6 Bd2",
+  "faute": "Ng8",
+  "fautif": "b",
+  "ligne": [
+   "h4",
+   "Bf8",
+   "h5",
+   "c5",
+   "Qg4",
+   "cxd4"
+  ],
+  "evalAvant": -67,
+  "evalApres": -140,
+  "perte": 73,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Nf6 Bg5 Bb4 e5 h6 Bd2 Bxc3 bxc3 Ne4 f3": {
+  "coups": "e4 e6 d4 d5 Nc3 Nf6 Bg5 Bb4 e5 h6 Bd2 Bxc3 bxc3 Ne4",
+  "faute": "f3",
+  "fautif": "w",
+  "ligne": [
+   "Qh4+",
+   "g3",
+   "Nxg3",
+   "hxg3",
+   "Qxh1",
+   "Nh3"
+  ],
+  "evalAvant": 44,
+  "evalApres": -73,
+  "perte": 117,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nd2 Be7 Qg4": {
+  "coups": "e4 e6 d4 d5 Nd2 Be7",
+  "faute": "Qg4",
+  "fautif": "w",
+  "ligne": [
+   "Nf6",
+   "Qxg7",
+   "Rg8",
+   "Qh6",
+   "dxe4",
+   "Qe3"
+  ],
+  "evalAvant": 52,
+  "evalApres": -82,
+  "perte": 134,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 dxe4 Nxe4 Bd7 Qg4": {
+  "coups": "e4 e6 d4 d5 Nc3 dxe4 Nxe4 Bd7",
+  "faute": "Qg4",
+  "fautif": "w",
+  "ligne": [
+   "f5",
+   "Qh5+",
+   "g6",
+   "Qf3",
+   "fxe4",
+   "Qxe4"
+  ],
+  "evalAvant": 64,
+  "evalApres": -456,
+  "perte": 520,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 dxe4 Nxe4 Bd7 Nf3 Bb5": {
+  "coups": "e4 e6 d4 d5 Nc3 dxe4 Nxe4 Bd7 Nf3",
+  "faute": "Bb5",
+  "fautif": "b",
+  "ligne": [
+   "Bxb5+",
+   "c6",
+   "Bd3",
+   "Na6",
+   "Bxa6",
+   "Qa5+"
+  ],
+  "evalAvant": -56,
+  "evalApres": -812,
+  "perte": 756,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 dxe4 Nxe4 Bd7 Nf3 Bc6 Be2": {
+  "coups": "e4 e6 d4 d5 Nc3 dxe4 Nxe4 Bd7 Nf3 Bc6",
+  "faute": "Be2",
+  "fautif": "w",
+  "ligne": [
+   "Bxe4",
+   "O-O",
+   "Be7",
+   "Re1",
+   "Nd7",
+   "h4"
+  ],
+  "evalAvant": 59,
+  "evalApres": -653,
+  "perte": 712,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Bxc3+ bxc3 Qc7 dxc5": {
+  "coups": "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Bxc3+ bxc3 Qc7",
+  "faute": "dxc5",
+  "fautif": "w",
+  "ligne": [
+   "Ne7",
+   "Nf3",
+   "Nd7",
+   "Bb5",
+   "Qxc5",
+   "Rb1"
+  ],
+  "evalAvant": 54,
+  "evalApres": -32,
+  "perte": 86,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Bxc3+ bxc3 Qa5 Qg4": {
+  "coups": "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Bxc3+ bxc3 Qa5",
+  "faute": "Qg4",
+  "fautif": "w",
+  "ligne": [
+   "Qxc3+",
+   "Kd1",
+   "Nh6",
+   "Qxg7",
+   "Qxd4+",
+   "Bd3"
+  ],
+  "evalAvant": 68,
+  "evalApres": -409,
+  "perte": 477,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Bxc3+ bxc3 Qa5 Nf3": {
+  "coups": "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Bxc3+ bxc3 Qa5",
+  "faute": "Nf3",
+  "fautif": "w",
+  "ligne": [
+   "cxd4",
+   "Qxd4",
+   "Nc6",
+   "Qe3",
+   "Nge7",
+   "Bd2"
+  ],
+  "evalAvant": 70,
+  "evalApres": 10,
+  "perte": 60,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Ba5 dxc5": {
+  "coups": "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Ba5",
+  "faute": "dxc5",
+  "fautif": "w",
+  "ligne": [
+   "Bxc3+",
+   "bxc3",
+   "Qc7",
+   "Nf3",
+   "Nd7",
+   "Qd4"
+  ],
+  "evalAvant": 62,
+  "evalApres": 15,
+  "perte": 47,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Ba5 b4 Bxb4": {
+  "coups": "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Ba5 b4",
+  "faute": "Bxb4",
+  "fautif": "b",
+  "ligne": [
+   "axb4",
+   "cxb4",
+   "Nb5",
+   "Kf8",
+   "Nd6",
+   "Nc6"
+  ],
+  "evalAvant": -69,
+  "evalApres": -733,
+  "perte": 664,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Ba5 b4 Bb6": {
+  "coups": "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Ba5 b4",
+  "faute": "Bb6",
+  "fautif": "b",
+  "ligne": [
+   "Qg4",
+   "Kf8",
+   "dxc5",
+   "Bc7",
+   "Nf3",
+   "Nc6"
+  ],
+  "evalAvant": -70,
+  "evalApres": -236,
+  "perte": 166,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Bb4 Ne2 Bxc3+": {
+  "coups": "e4 e6 d4 d5 Nc3 Bb4 Ne2",
+  "faute": "Bxc3+",
+  "fautif": "b",
+  "ligne": [
+   "Nxc3",
+   "Ne7",
+   "b3",
+   "dxe4",
+   "Nxe4",
+   "b6"
+  ],
+  "evalAvant": -20,
+  "evalApres": -97,
+  "perte": 77,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Bb4 Ne2 dxe4 f3": {
+  "coups": "e4 e6 d4 d5 Nc3 Bb4 Ne2 dxe4",
+  "faute": "f3",
+  "fautif": "w",
+  "ligne": [
+   "exf3",
+   "gxf3",
+   "Qh4+",
+   "Ng3",
+   "Ne7",
+   "Be3"
+  ],
+  "evalAvant": 18,
+  "evalApres": -252,
+  "perte": 270,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Bb4 Ne2 dxe4 a3 f5": {
+  "coups": "e4 e6 d4 d5 Nc3 Bb4 Ne2 dxe4 a3",
+  "faute": "f5",
+  "fautif": "b",
+  "ligne": [
+   "axb4",
+   "Nc6",
+   "b5",
+   "Nb4",
+   "h4",
+   "c5"
+  ],
+  "evalAvant": -9,
+  "evalApres": -720,
+  "perte": 711,
+  "mat": false
+ },
+ "e4 e6 d4 d5 Nc3 Bb4 Ne2 dxe4 a3 Bd6": {
+  "coups": "e4 e6 d4 d5 Nc3 Bb4 Ne2 dxe4 a3",
+  "faute": "Bd6",
+  "fautif": "b",
+  "ligne": [
+   "Nxe4",
+   "Nf6",
+   "Nxd6+",
+   "cxd6",
+   "Nc3",
+   "Nc6"
+  ],
+  "evalAvant": -14,
+  "evalApres": -69,
+  "perte": 55,
+  "mat": false
+ },
+ "e4 e6 d4 d5 e5 c5 c3 Qb6 Nf3 Qxb2": {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Qb6 Nf3",
+  "faute": "Qxb2",
+  "fautif": "b",
+  "ligne": [
+   "Bxb2",
+   "Nd7",
+   "Ba3",
+   "g5",
+   "Nxg5",
+   "h6"
+  ],
+  "evalAvant": -25,
+  "evalApres": -1074,
+  "perte": 1049,
+  "mat": false
+ },
+ "e4 e6 d4 d5 e5 c5 c3 Qb6 Nf3 Bd7 dxc5": {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Qb6 Nf3 Bd7",
+  "faute": "dxc5",
+  "fautif": "w",
+  "ligne": [
+   "Bxc5",
+   "Qc2",
+   "f6",
+   "b4",
+   "Be7",
+   "a4"
+  ],
+  "evalAvant": 40,
+  "evalApres": -45,
+  "perte": 85,
+  "mat": false
+ },
+ "e4 e6 d3 c5 d4": {
+  "coups": "e4 e6 d3 c5",
+  "faute": "d4",
+  "fautif": "w",
+  "ligne": [
+   "cxd4",
+   "Qxd4",
+   "Nf6",
+   "Nf3",
+   "Nc6",
+   "Qe3"
+  ],
+  "evalAvant": 4,
+  "evalApres": -37,
+  "perte": 41,
+  "mat": false
+ },
+ "e4 e6 Nf3 Nf6": {
+  "coups": "e4 e6 Nf3",
+  "faute": "Nf6",
+  "fautif": "b",
+  "ligne": [
+   "e5",
+   "Nd5",
+   "c4",
+   "Ne7",
+   "d4",
+   "d6"
+  ],
+  "evalAvant": -18,
+  "evalApres": -113,
+  "perte": 95,
+  "mat": false
+ },
+ "e4 e6 Nf3 d5 Bd3": {
+  "coups": "e4 e6 Nf3 d5",
+  "faute": "Bd3",
+  "fautif": "w",
+  "ligne": [
+   "dxe4",
+   "Bxe4",
+   "Nf6",
+   "Nc3",
+   "Nxe4",
+   "Nxe4"
+  ],
+  "evalAvant": 18,
+  "evalApres": -20,
+  "perte": 38,
+  "mat": false
+ },
+ "e4 e6 Nf3 d5 Nc3 Bb4": {
+  "coups": "e4 e6 Nf3 d5 Nc3",
+  "faute": "Bb4",
+  "fautif": "b",
+  "ligne": [
+   "e5",
+   "Ne7",
+   "a3",
+   "Bxc3",
+   "dxc3",
+   "c5"
+  ],
+  "evalAvant": 1,
+  "evalApres": -62,
+  "perte": 63,
+  "mat": false
+ },
+ "e4 e6 d4 c5 dxc5": {
+  "coups": "e4 e6 d4 c5",
+  "faute": "dxc5",
+  "fautif": "w",
+  "ligne": [
+   "Bxc5",
+   "Nc3",
+   "Nc6",
+   "Nf3",
+   "Nf6",
+   "Bb5"
+  ],
+  "evalAvant": 73,
+  "evalApres": 2,
+  "perte": 71,
+  "mat": false
+ },
+ "e4 e6 d4 c5 d5 e5": {
+  "coups": "e4 e6 d4 c5 d5",
+  "faute": "e5",
+  "fautif": "b",
+  "ligne": [
+   "Nd2",
+   "d6",
+   "Bd3",
+   "Nf6",
+   "Ne2",
+   "Be7"
+  ],
+  "evalAvant": -70,
+  "evalApres": -158,
+  "perte": 88,
+  "mat": false
+ },
+ "e4 e6 d4 c5 Nf3 Nc6": {
+  "coups": "e4 e6 d4 c5 Nf3",
+  "faute": "Nc6",
+  "fautif": "b",
+  "ligne": [
+   "d5",
+   "Na5",
+   "d6",
+   "b6",
+   "Nc3",
+   "Bb7"
+  ],
+  "evalAvant": -31,
+  "evalApres": -235,
+  "perte": 204,
   "mat": false
  }
 };
