@@ -54,4 +54,15 @@ if (invitation) {
     try { await api('/api/auth/connexion', { email: f.get('email'), mot_de_passe: f.get('mot_de_passe') }); location.href = suite; }
     catch (e) { erreur(e.message === 'courriel ou mot de passe incorrect' ? 'Courriel ou mot de passe incorrect. Si tu n\'as pas encore de compte, ouvre d\'abord ton lien d\'invitation.' : e.message); }
   });
+  // Mot de passe oublié : bascule simple entre les deux formulaires
+  const bascule = (vers) => { $('fConnexion').hidden = (vers !== 'connexion'); $('fOublie').hidden = (vers !== 'oublie'); $('oublieOk').hidden = true; erreur(''); if (vers === 'oublie') { const e = $('cEmail').value; if (e) $('oEmail').value = e; $('oEmail').focus(); } };
+  $('lienOublie')?.addEventListener('click', (ev) => { ev.preventDefault(); bascule('oublie'); });
+  $('lienRetour')?.addEventListener('click', (ev) => { ev.preventDefault(); bascule('connexion'); });
+  $('fOublie')?.addEventListener('submit', async (ev) => {
+    ev.preventDefault(); erreur('');
+    const email = String($('oEmail').value || '').trim(); if (!email.includes('@')) return erreur('Indique ton courriel.');
+    const bouton = ev.target.querySelector('button[type=submit]'); bouton.disabled = true; bouton.textContent = 'Envoi…';
+    try { await api('/api/auth/mot-de-passe-oublie', { email }); $('fOublie').hidden = true; $('oublieOk').hidden = false; }
+    catch (e) { erreur(e.message); } finally { bouton.disabled = false; bouton.textContent = 'Envoyer le lien'; }
+  });
 }

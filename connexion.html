@@ -27,8 +27,17 @@
               <div class="mb-3"><label class="form-label" for="cEmail">Courriel</label><input class="form-control" id="cEmail" type="email" name="email" required autocomplete="username" /></div>
               <div class="mb-3"><label class="form-label" for="cMdp">Mot de passe</label><input class="form-control" id="cMdp" type="password" name="mot_de_passe" required autocomplete="current-password" /></div>
               <button class="btn btn--primary w-100" type="submit">Se connecter</button>
+              <p class="cpt__info mt-2 mb-0"><a href="#" id="lienOublie">Mot de passe oublié ?</a></p>
               <p class="cpt__info mt-3 mb-0">Pas encore de compte ? Les comptes se créent à partir d'un <b>lien d'invitation</b> reçu d'un administrateur : ouvre ce lien, il te proposera de créer ton compte.</p>
             </form>
+            <form id="fOublie" method="post" action="#" novalidate hidden>
+              <h2 class="h6 mt-0 mb-3">Mot de passe oublié</h2>
+              <p class="cpt__sous">Saisis le courriel de ton compte. Si une adresse correspond, un lien de réinitialisation (valide une heure) t'est envoyé.</p>
+              <div class="mb-3"><label class="form-label" for="oEmail">Courriel</label><input class="form-control" id="oEmail" type="email" name="email" required autocomplete="username" /></div>
+              <button class="btn btn--primary w-100" type="submit">Envoyer le lien</button>
+              <p class="cpt__info mt-2 mb-0"><a href="#" id="lienRetour">← Retour à la connexion</a></p>
+            </form>
+            <p id="oublieOk" class="cpt__info mt-3 mb-0" hidden>Si cette adresse existe, un lien vient de partir ; vérifie ta boîte (et les indésirables). Le lien est valide une heure.</p>
             <form id="fMotDePasse" method="post" action="#" novalidate hidden>
               <h2 class="h6 mt-3 mb-3">Changer mon mot de passe</h2>
               <div class="mb-3"><label class="form-label" for="mdpActuel">Mot de passe actuel</label><input class="form-control" id="mdpActuel" type="password" name="actuel" autocomplete="current-password" /></div>

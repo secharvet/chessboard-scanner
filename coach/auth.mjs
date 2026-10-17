@@ -77,3 +77,29 @@ export async function accepterInvitation(token, { motDePasse, displayName, licen
 }
 /** Garde : renvoie l'utilisateur si son rôle atteint le niveau demandé, sinon null. */
 export function aLeNiveau(u, role) { return !!u && NIVEAU[u.role] >= NIVEAU[role]; }
+
+/** Récupération du mot de passe : fabrique un jeton pour cet email s'il existe, SILENCIEUSEMENT sinon (l'API ne doit jamais dire si l'email est en base). Expire 1 h. */
+export const DUREE_REINIT_H = 1;
+export async function creerReinit(email, ip = null) {
+  const { rows } = await pool.query('select id, email, display_name from users where lower(email) = lower($1)', [String(email ?? '').trim()]);
+  if (!rows.length) return null;
+  const token = randomBytes(32).toString('base64url');
+  await pool.query('insert into password_reset (token, user_id, expires_at, ip) values ($1,$2, now() + ($3 || \' hours\')::interval, $4)', [token, rows[0].id, String(DUREE_REINIT_H), ip]);
+  return { token, userId: rows[0].id, email: rows[0].email, displayName: rows[0].display_name };
+}
+/** Applique un jeton : vérifie, change le mot de passe, marque le jeton utilisé, ferme toutes les sessions actives (reconnexion forcée partout). Jette avec un message lisible si le jeton est invalide/expiré/utilisé ou si le mot de passe est trop court. */
+export async function appliquerReinit(token, nouveau) {
+  if (!nouveau || String(nouveau).length < 10) throw new Error('mot de passe trop court (10 caractères au moins)');
+  const c = await pool.connect();
+  try {
+    await c.query('begin');
+    const { rows } = await c.query('select user_id from password_reset where token = $1 and used_at is null and expires_at > now() for update', [token]);
+    if (!rows.length) throw new Error('lien invalide ou expiré ; redemande un lien de réinitialisation');
+    const uid = rows[0].user_id;
+    await c.query('update users set password_hash = $1 where id = $2', [hacher(String(nouveau)), uid]);
+    await c.query('update password_reset set used_at = now() where token = $1', [token]);
+    await c.query('delete from sessions where user_id = $1', [uid]);
+    await c.query('commit'); return uid;
+  } catch (e) { try { await c.query('rollback'); } catch {} throw e; }
+  finally { c.release(); }
+}

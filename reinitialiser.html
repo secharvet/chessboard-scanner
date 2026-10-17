@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="fr" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nouveau mot de passe</title>
+    <link rel="stylesheet" href="./vendor-web/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./site-nav.css" />
+    <link rel="stylesheet" href="./compte.css" />
+    <style>
+      .pw-wrap { position: relative; }
+      .pw-wrap .form-control { padding-right: 42px; }
+      .pw-eye { position: absolute; right: 4px; top: 50%; transform: translateY(-50%); width: 32px; height: 32px; border: 0; background: none; color: var(--muted); border-radius: 7px; cursor: pointer; display: grid; place-items: center; font-size: 15px; }
+      .pw-eye:hover { background: var(--veil-2); color: var(--text); }
+    </style>
+  </head>
+  <body>
+    <div class="app">
+      <main class="cpt">
+        <section class="cpt__carte card">
+          <div class="card-body p-4">
+            <h1 class="h4 mb-2">Nouveau mot de passe</h1>
+            <p class="cpt__erreur" id="erreur" role="alert" aria-live="assertive" hidden></p>
+            <p class="cpt__sous" id="sous">Choisis un nouveau mot de passe : 10 caractères au moins. Tes autres appareils connectés devront se reconnecter.</p>
+            <form id="fReinit" method="post" action="#" novalidate>
+              <div class="mb-3"><label class="form-label" for="rNouveau">Nouveau mot de passe</label><input class="form-control" id="rNouveau" type="password" minlength="10" required autocomplete="new-password" /></div>
+              <div class="mb-3"><label class="form-label" for="rConf">Confirmer</label><input class="form-control" id="rConf" type="password" minlength="10" required autocomplete="new-password" /></div>
+              <button class="btn btn--primary w-100" type="submit">Changer mon mot de passe</button>
+            </form>
+            <p class="cpt__pied mt-3 mb-0"><a href="./connexion.html">← Retour à la connexion</a></p>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="./site-nav.js"></script>
+    <script type="module">
+      const $ = (id) => document.getElementById(id);
+      const jeton = new URLSearchParams(location.search).get('jeton') ?? '';
+      if (!jeton) { $('erreur').textContent = 'Lien incomplet : il manque le jeton. Redemande un nouveau lien.'; $('erreur').hidden = false; $('fReinit').hidden = true; }
+      $('fReinit').addEventListener('submit', async (ev) => {
+        ev.preventDefault(); $('erreur').hidden = true;
+        const n = $('rNouveau').value, c = $('rConf').value;
+        if (n !== c) { $('erreur').textContent = 'Les deux mots de passe sont différents.'; $('erreur').hidden = false; return; }
+        try {
+          const r = await fetch('/api/auth/reinitialiser', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ jeton, nouveau: n }) });
+          const j = await r.json().catch(() => ({}));
+          if (!r.ok || !j.ok) throw new Error(j.error ?? ('erreur ' + r.status));
+          location.href = './accueil.html';
+        } catch (e) { $('erreur').textContent = e.message; $('erreur').hidden = false; }
+      });
+      /* œil afficher/masquer sur les champs mot de passe */
+      document.querySelectorAll('input[type="password"]').forEach((inp) => {
+        const wrap = document.createElement('div'); wrap.className = 'pw-wrap';
+        inp.parentNode.insertBefore(wrap, inp); wrap.appendChild(inp);
+        const b = document.createElement('button'); b.type = 'button'; b.className = 'pw-eye';
+        b.setAttribute('aria-label', 'Afficher le mot de passe'); b.textContent = '\u{1F441}';
+        b.addEventListener('click', () => { const r = inp.type === 'password'; inp.type = r ? 'text' : 'password'; b.setAttribute('aria-label', r ? 'Masquer le mot de passe' : 'Afficher le mot de passe'); });
+        wrap.appendChild(b);
+      });
+    </script>
+  </body>
+</html>
