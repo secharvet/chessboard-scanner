@@ -1451,3 +1451,13 @@ par fusion SQL dans l'explication IA existante. **42 punitions** (prof. 18) fusi
 de 0,3 à cette profondeur retirées (cxd4 après Fe2 : 0,22 ; 2…Cf6 dans l'est-indienne : 0,27). Arbitrages du pilote : exf6
 (Chigorin, à 0,34 du meilleur) gardé en plan car variante nommée et position toujours favorable ; …Fb4 des deux cavaliers
 (0,62) classé en faute avec l'explication (une Winawer sans d4 ne marche pas). Française en base : 553 positions.
+**17 octobre, soir : relecture des 13 schémas « ce que chacun va chercher ensuite » (Expert échecs).** Go de l'auteur après avoir
+trouvé le bloc « enrichissant » mais demandé d'où il venait (réponse : brouillon IA, théorie classique reformulée, non vérifiée
+phrase à phrase). Relecture de fond du premier noyau de la Française, moteur sur chaque affirmation vérifiable : une vingtaine de
+corrections, dont quatre listes réécrites. Les plus graves étaient des copier-coller du tronc 3.Cc3 vers des positions filles où
+ils n'avaient plus de sens : la Classique après Fxe7 Dxe7 citait Fb4, Fxc3+, Fg5, Fe3 alors que les deux fous de cases noires
+sont échangés (réécrite autour de Cb5 vers le trou d6, +0,38 et meilleur coup, d'où …a6 côté noir) ; la Steinitz f4 citait e5, f4,
+Cfd7 déjà joués ; le Tarrasch fermé promettait « Cf4 vise e6 et d5 après …f6 exf6 », réfuté brut (−1,33 : …Cxd4 !), remplacé par
+la vraie manœuvre Ff4 puis Cxf4 ; la Classique 3…Cf6 n'avait aucune liste (ajoutée, 10 + 10). Mises à jour directement dans les
+explications IA en base (13/13), sauvegarde des versions précédentes conservée ; doublon de clés coupsBlancs/coupsNoirs nettoyé
+dans le noyau source. Leçon de méthode : un schéma de milieu de jeu doit être écrit position par position, jamais hérité du tronc.
