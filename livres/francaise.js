@@ -41,12 +41,12 @@ export const LIVRE = [
   "sens": "défie e4 : les Blancs doivent choisir ce qu'ils font de leur pion e4, et ce choix décide de toute la partie",
   "plan": [
    {
-    "san": "e5",
-    "pourquoi": "avance : gagne de l'espace, enferme le cavalier g8 et le fou c8 ; la chaîne d4-e5 pointe vers l'aile roi, c'est là que les Blancs attaqueront. En échange, d4 devient la cible des Noirs"
-   },
-   {
     "san": "Nc3",
     "pourquoi": "défend e4 en développant : la variante classique, ou la Winawer si …Fb4 cloue le cavalier"
+   },
+   {
+    "san": "e5",
+    "pourquoi": "avance : gagne de l'espace, enferme le cavalier g8 et le fou c8 ; la chaîne d4-e5 pointe vers l'aile roi, c'est là que les Blancs attaqueront. En échange, d4 devient la cible des Noirs"
    },
    {
     "san": "Nd2",
@@ -375,12 +375,12 @@ export const LIVRE = [
   ],
   "erreurs": [
    {
-    "san": "Nc6",
-    "pourquoi": "bloque le pion c : le levier …c5, le plan principal des Noirs, devient difficile"
-   },
-   {
     "san": "f6",
     "pourquoi": "attaque la tête de la chaîne trop tôt : après exf6 le roi noir est à l'air et e6 reste faible"
+   },
+   {
+    "san": "Nc6",
+    "pourquoi": "bloque le pion c : le levier …c5, le plan principal des Noirs, devient difficile"
    }
   ],
   "schema": {

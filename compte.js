@@ -12,18 +12,26 @@ const invitation = params.get('invitation');
 if (invitation) {
   $('fConnexion').hidden = true; $('titre').textContent = 'Créer mon compte'; $('sous').textContent = '';
   api(`/api/auth/invitation/${encodeURIComponent(invitation)}`).then((j) => {
-    $('invEmail').textContent = j.email; $('invRole').textContent = j.role; $('fInvitation').hidden = false;
+    $('invEmail').textContent = j.email; $('invRole').textContent = j.role; roleInvite = j.role; $('fInvitation').hidden = false;
     if (j.role === 'apprenant') $('licenceBloc').hidden = true;
   }).catch((e) => erreur(e.message));
+  let roleInvite = 'enseignant';
   $('fInvitation').addEventListener('submit', async (ev) => {
     ev.preventDefault(); erreur(''); const f = new FormData(ev.target);
-    try { await api(`/api/auth/invitation/${encodeURIComponent(invitation)}`, { mot_de_passe: f.get('mot_de_passe'), display_name: f.get('display_name'), licence: !!f.get('licence') }); location.href = suite; }
-    catch (e) { erreur(e.message === 'courriel ou mot de passe incorrect' ? 'Courriel ou mot de passe incorrect. Si tu n\'as pas encore de compte, ouvre d\'abord ton lien d\'invitation.' : e.message); }
+    // validation en clair ici plutôt que par les bulles du navigateur, invisibles sur téléphone
+    const nom = String(f.get('display_name') || '').trim(); const mdp = String(f.get('mot_de_passe') || '');
+    if (!nom) return erreur('Indique le nom qui sera affiché à côté de tes textes.');
+    if (mdp.length < 10) return erreur(`Le mot de passe doit faire au moins 10 caractères (il en a ${mdp.length}).`);
+    if (roleInvite !== 'apprenant' && !f.get('licence')) return erreur('Coche la case de la licence CC BY-SA pour pouvoir publier.');
+    const bouton = ev.target.querySelector('button[type=submit]'); bouton.disabled = true; bouton.textContent = 'Création…';
+    try { await api(`/api/auth/invitation/${encodeURIComponent(invitation)}`, { mot_de_passe: mdp, display_name: nom, licence: !!f.get('licence') }); bouton.textContent = 'Compte créé, redirection…'; location.href = suite; }
+    catch (e) { erreur(e.message); bouton.disabled = false; bouton.textContent = 'Créer mon compte'; }
   });
 } else {
   api('/api/auth/moi').then((j) => { if (j.utilisateur) { $('sous').innerHTML = `Connecté en tant que <b>${j.utilisateur.display_name}</b> (${j.utilisateur.role}). <a href="#" id="dec">Se déconnecter</a>`; $('dec').addEventListener('click', async (ev) => { ev.preventDefault(); await api('/api/auth/deconnexion', {}); location.reload(); }); } }).catch(() => {});
   $('fConnexion').addEventListener('submit', async (ev) => {
     ev.preventDefault(); erreur(''); const f = new FormData(ev.target);
+    if (!String(f.get('email') || '').includes('@')) return erreur('Indique ton courriel.'); if (!f.get('mot_de_passe')) return erreur('Indique ton mot de passe.');
     try { await api('/api/auth/connexion', { email: f.get('email'), mot_de_passe: f.get('mot_de_passe') }); location.href = suite; }
     catch (e) { erreur(e.message === 'courriel ou mot de passe incorrect' ? 'Courriel ou mot de passe incorrect. Si tu n\'as pas encore de compte, ouvre d\'abord ton lien d\'invitation.' : e.message); }
   });
