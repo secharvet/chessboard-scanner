@@ -91,14 +91,17 @@ let courant = (livresDispo()[0] ?? LIVRES[0]).id;
 const cachePos = new Map();
 async function reponsePosition(livreId, c) {
   const k = `${livreId}|${cle(c)}`; if (cachePos.has(k)) return cachePos.get(k);
-  let rep = null;
+  let rep = null; let depuisApi = false;
   if (apiDispo) {
     try {
       const r = await api(`/api/positions?livre=${encodeURIComponent(livreId)}&coups=${encodeURIComponent(c.history().join(' '))}`);
       if (r.status === 200 && r.json.ok) rep = r.json; else if (r.status !== 404) throw new Error(r.json.error || `HTTP ${r.status}`);
-    } catch (e) { console.warn('[assistant] API indisponible, repli statique :', e.message); apiDispo = false; bandeauHorsLigne(true); }
+      depuisApi = true; bandeauHorsLigne(false);
+    } catch (e) { console.warn('[assistant] API injoignable, repli statique provisoire :', e.message); bandeauHorsLigne(true); }
   }
-  if (!apiDispo) { const e = BOOKS[livreId]?.map.get(cle(c)); rep = e ? { statique: e, livre: livreId } : null; }
+  // Un échec réseau n'est pas définitif : le repli statique sert pour cette position seulement (pas mis en cache),
+  // l'API est réessayée au coup suivant et le bandeau disparaît dès qu'elle répond.
+  if (!depuisApi) { const e = BOOKS[livreId]?.map.get(cle(c)); return e ? { statique: e, livre: livreId } : null; }
   cachePos.set(k, rep); return rep;
 }
 /** Entrée normalisée pour une position et un choix de professeur ; cherche dans le livre courant puis dans les autres (bascule). */
@@ -164,6 +167,39 @@ function annotationsAffichees(surlign = null, coupSurligne = null) {
 }
 const dessiner = (surlign = null, coup = null) => dessinerAnnotations($('ouvBoard'), annotationsAffichees(surlign, coup), orientation);
 
+// ---------------------------------------------------------------- Mentions survolables (cases et coups cités dans les textes)
+const EN = { R: 'K', D: 'Q', T: 'R', F: 'B', C: 'N' };
+const en = (san) => san.replace(/[RDTFC]/g, (m) => EN[m]);
+const RX_MENTION = /(…|\.\.\.)?(?<![\p{L}\d])(O-O(?:-O)?|[RDTFC][a-h]?[1-8]?x?[a-h][1-8](?:=[DTFC])?|[a-h]x[a-h][1-8](?:=[DTFC])?|[a-h][1-8])[+#]?(?![\p{L}\d])/gu;
+/** Rend survolables les cases et coups cités dans un texte déjà échappé ; `camp` ('w'/'b') si le texte ne parle que d'un camp. */
+function lier(html, camp = null) {
+  return html.replace(RX_MENTION, (tout, pts, san) => `<span class="mention" data-san="${san}" data-camp="${pts ? 'b' : (camp ?? '')}">${tout}</span>`);
+}
+/** Ce que désigne une mention depuis la position affichée : une case, un coup légal (flèche, jouable si c'est au trait), sinon la case visée. */
+function cibleMention(el) {
+  const san = el.dataset.san; const camp = el.dataset.camp || null; const tour = game.turn();
+  // « e4 » seul : la case si elle est occupée et qu'aucun camp n'est précisé (« défend e4 »), sinon la poussée de pion si elle est légale
+  if (/^[a-h][1-8]$/.test(san) && !camp && game.get(san)) return { cases: [{ case: san, couleur: 'orange' }], fleches: [] };
+  const sanEn = en(san.replace(/[+#]$/, ''));
+  const camps = camp ? [camp] : [tour, tour === 'w' ? 'b' : 'w'];
+  for (const cp of camps) {
+    const f = game.fen().split(' '); f[1] = cp; f[3] = '-';
+    let m; try { m = new Chess(f.join(' ')).move(sanEn); } catch { continue; }
+    return { cases: [], fleches: [{ de: m.from, a: m.to, couleur: 'orange', epais: true }], jouable: cp === tour, san: sanEn };
+  }
+  const dest = sanEn.match(/[a-h][1-8]/g)?.at(-1); return dest ? { cases: [{ case: dest, couleur: 'orange' }], fleches: [] } : null;
+}
+function survolMention(el) {
+  if (recit) return; arreterApercu(); const t = cibleMention(el); if (!t) return;
+  const base = annotationsAffichees(); dessinerAnnotations($('ouvBoard'), { cases: [...base.cases, ...t.cases], fleches: [...base.fleches, ...t.fleches] }, orientation);
+  el.classList.toggle('mention--jouable', !!t.jouable);
+}
+{ const zone = $('ouvColonnes');
+  zone.addEventListener('mouseover', (ev) => { const el = ev.target.closest('.mention'); if (el) survolMention(el); });
+  zone.addEventListener('mouseout', (ev) => { if (ev.target.closest('.mention') && !recit) dessiner(); });
+  zone.addEventListener('click', (ev) => { const el = ev.target.closest('.mention'); if (!el || recit) return; const t = cibleMention(el); if (t?.jouable) { ev.stopPropagation(); jouer(t.san); } });
+}
+
 let rendu = 0; // numéro de rendu, pour ignorer une réponse arrivée après un rendu plus récent
 async function render(lastMove = null) {
   selected = null; targets = []; const mon = ++rendu;
@@ -224,8 +260,8 @@ function renderColonne(suf, e, last, principale) {
   } else {
     const qui = last.color === 'w' ? 'Blancs' : 'Noirs';
     if (e) {
-      recitEl.innerHTML += `<p><span class="qui">${numero(avant(), last.san)}</span> <span class="camp">(${qui})</span> — ${e.sens ? sensPhrase(esc(e.sens)) : 'coup du livre.'}</p>`;
-      if (e.menace) recitEl.innerHTML += `<p class="menace">Menace : ${esc(e.menace)}.</p>`;
+      recitEl.innerHTML += `<p><span class="qui">${numero(avant(), last.san)}</span> <span class="camp">(${qui})</span> — ${e.sens ? lier(sensPhrase(esc(e.sens))) : 'coup du livre.'}</p>`;
+      if (e.menace) recitEl.innerHTML += `<p class="menace">Menace : ${lier(esc(e.menace))}.</p>`;
       if (e.explication?.video_url) recitEl.innerHTML += `<p><a class="ouv__video" href="${esc(e.explication.video_url)}" target="_blank" rel="noopener">▶ Vidéo du professeur</a></p>`;
     } else if (principale) {
       const n = game.history().length;
@@ -243,10 +279,10 @@ function renderColonne(suf, e, last, principale) {
   const sch = e?.schema && (e.schema.blancs || e.schema.noirs) ? e.schema : null; $('ouvSchema' + suf).hidden = !sch;
   // Deux formats cohabitent : texte simple (éditeur, extensions) ou listes (premier noyau) : phrases en tableau,
   // coups en tableau d'objets { san, pourquoi }. On normalise avant d'afficher.
-  const phrases = (x) => (Array.isArray(x) ? x.filter(Boolean).map(String).join(' ; ') : (x ?? ''));
-  const coupsTxt = (x) => { if (!x) return ''; if (typeof x === 'string') return fr(esc(x)); if (!Array.isArray(x)) return ''; return x.map((o) => (typeof o === 'string' ? fr(esc(o)) : `<b>${fr(esc(o.san ?? ''))}</b>${o.pourquoi ? ' — ' + esc(o.pourquoi) : ''}`)).join(' · '); };
-  if (sch) { const cb = coupsTxt(sch.coupsBlancs), cn = coupsTxt(sch.coupsNoirs);
-    $('ouvSchemaCorps' + suf).innerHTML = `<div class="ouv__schema"><div><b>Les Blancs</b>${esc(phrases(sch.blancs))}${cb ? `<br><small>${cb}</small>` : ''}</div><div><b>Les Noirs</b>${esc(phrases(sch.noirs))}${cn ? `<br><small>${cn}</small>` : ''}</div></div>`; }
+  const phrases = (x, camp) => lier(esc(Array.isArray(x) ? x.filter(Boolean).map(String).join(' ; ') : (x ?? '')), camp);
+  const coupsTxt = (x, camp) => { if (!x) return ''; if (typeof x === 'string') return lier(fr(esc(x)), camp); if (!Array.isArray(x)) return ''; return x.map((o) => (typeof o === 'string' ? lier(fr(esc(o)), camp) : `${lier(fr(esc(o.san ?? '')), camp)}${o.pourquoi ? ' — ' + lier(esc(o.pourquoi), camp) : ''}`)).join(' · '); };
+  if (sch) { const cb = coupsTxt(sch.coupsBlancs, 'w'), cn = coupsTxt(sch.coupsNoirs, 'b');
+    $('ouvSchemaCorps' + suf).innerHTML = `<div class="ouv__schema"><div><b>Les Blancs</b>${phrases(sch.blancs, 'w')}${cb ? `<br><small>${cb}</small>` : ''}</div><div><b>Les Noirs</b>${phrases(sch.noirs, 'b')}${cn ? `<br><small>${cn}</small>` : ''}</div></div>`; }
   const sig = $('ouvSignature' + suf); if (sig) sig.innerHTML = e ? (signature(e) + (e.auteur?.ia ? ' Chaque enseignant peut signer sa version.' : '')) : '';
 }
 function avant() { const h = game.history(); const c = new Chess(); for (const s of h.slice(0, -1)) c.move(s); return c; }
@@ -257,7 +293,7 @@ function carte(x, tag, erreur) {
   const d = document.createElement('div'); d.className = 'coup' + (tag === 'principal' ? ' coup--principal' : '') + (erreur ? ' coup--erreur' : '');
   const seq = x.sequence; const suite = seq ? seq.pas.map((p) => fr(p.san)).join(' ') : '';
   const extra = x.kind === 'porte' ? ` <span class="coup__pun">— autre ouverture${x.porte && livresDispo().some((l) => l.id === x.porte) ? '' : ', livre à venir'}</span>` : (seq ? ` <span class="coup__pun">— ${erreur ? 'punition' : 'suite'} : ${esc(suite)}${seq.origine === 'moteur' ? '' : ' · ' + (x.annotations?.length || seq.pas.some((p) => p.annotations?.length) ? 'annotée' : 'du professeur')}</span>` : '');
-  d.innerHTML = `<div class="coup__san">${fr(x.san)}<small>${esc(tag)}</small></div><div class="coup__why">${esc(x.pourquoi)}${extra}</div>`;
+  d.innerHTML = `<div class="coup__san">${fr(x.san)}<small>${esc(tag)}</small></div><div class="coup__why">${lier(esc(x.pourquoi))}${extra}</div>`;
   d.addEventListener('mouseenter', () => { dessiner(x.san, x); demarrerApercu(x); });
   d.addEventListener('mouseleave', arreterApercu);
   d.addEventListener('click', () => { arreterApercu(); if (erreur && seq) demarrerRecit(x); else jouer(x.san); });
