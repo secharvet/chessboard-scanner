@@ -33,6 +33,9 @@ function appliquerTheme(t) {
 function dispositionChoisie() { try { const v = localStorage.getItem('site-shell'); if (v === 'top' || v === 'side') return v; } catch (e) {} return 'side'; }
 document.body.dataset.shell = dispositionChoisie();
 
+/* Taille de l'échiquier (réglée dans Paramètres, appliquée partout via une variable CSS). */
+(function () { let s = 0.9; try { const v = parseFloat(localStorage.getItem('board-scale')); if (v >= 0.5 && v <= 1.5) s = v; } catch (e) {} root.style.setProperty('--board-scale', String(s)); })();
+
 /* Vue d'aperçu : un admin peut regarder le site dans un autre rôle (apprenant par défaut). */
 function vueRole() { try { return sessionStorage.getItem('vue-role'); } catch (e) { return null; } }
 function estAdminReel() { return utilisateurReel?.role === 'admin'; }

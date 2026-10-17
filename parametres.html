@@ -46,6 +46,15 @@
               <p class="text-body-secondary small mt-2 mb-0" id="themeNote"></p>
             </div>
 
+            <div class="par__champ">
+              <div class="par__ti">Taille de l'échiquier</div>
+              <div class="par__de">Agrandir ou réduire l'échiquier de l'assistant d'ouverture.</div>
+              <div style="display: flex; align-items: center; gap: 14px; max-width: 380px;">
+                <input type="range" id="boardScale" min="60" max="120" step="5" class="form-range" style="flex: 1;" aria-label="Taille de l'échiquier en pourcentage" />
+                <span id="boardScaleVal" style="font-family: var(--mono); min-width: 3.4em; text-align: right;"></span>
+              </div>
+            </div>
+
             <div class="par__champ" id="compteChamp" hidden>
               <div class="par__ti">Mon compte</div>
               <div class="par__de" id="compteInfo">—</div>
@@ -82,6 +91,15 @@
       appliquerTheme(themeCourant());
       document.querySelectorAll('[data-theme-opt]').forEach((b) => b.addEventListener('click', () => appliquerTheme(b.dataset.themeOpt)));
       document.getElementById('themeNote').textContent = 'Astuce : le bouton soleil/lune de la barre bascule aussi clair ↔ sombre d’un clic.';
+
+      // Taille de l'échiquier (assistant), mémorisée et appliquée via une variable CSS.
+      const bScale = document.getElementById('boardScale');
+      const bScaleVal = document.getElementById('boardScaleVal');
+      function lireScale() { try { const v = parseFloat(localStorage.getItem('board-scale')); if (v >= 0.5 && v <= 1.5) return v; } catch (e) {} return 0.9; }
+      function majScale(v) { try { localStorage.setItem('board-scale', String(v)); } catch (e) {} root.style.setProperty('--board-scale', String(v)); bScaleVal.textContent = Math.round(v * 100) + ' %'; }
+      bScale.value = String(Math.round(lireScale() * 100));
+      majScale(lireScale());
+      bScale.addEventListener('input', () => majScale(parseInt(bScale.value, 10) / 100));
 
       // Compte
       fetch('/api/auth/moi', { credentials: 'same-origin' }).then((r) => (r.ok ? r.json() : null)).then((j) => {
