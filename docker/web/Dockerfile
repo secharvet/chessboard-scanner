@@ -24,6 +24,7 @@ COPY positional /usr/share/nginx/html/positional/
 
 # Statique
 COPY assets /usr/share/nginx/html/assets/
+COPY vendor-web /usr/share/nginx/html/vendor-web/
 
 # Vendor (chess.js + stockfish WASM) depuis l'étape npm
 # Hors de la racine web : le mode dev monte les sources sur /usr/share/nginx/html
