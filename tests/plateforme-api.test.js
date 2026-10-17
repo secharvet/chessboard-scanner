@@ -7,6 +7,9 @@ import { randomUUID } from 'node:crypto';
 const BASE = process.env.PLATEFORME_URL ?? 'http://127.0.0.1:8000';
 let dispo = false;
 try { const r = await fetch(`${BASE}/db-health`); dispo = r.ok; } catch { dispo = false; }
+// le test écrit aussi directement en base : il faut que Postgres soit joignable d'ici (vrai dans le conteneur chess-api,
+// faux sur l'hôte où Postgres n'est pas publié) ; sinon on saute plutôt que d'échouer.
+if (dispo) { try { const pg = (await import('pg')).default; const c = new pg.Client({ connectionTimeoutMillis: 1500 }); await c.connect(); await c.end(); } catch { dispo = false; } }
 
 // client minimal avec cookie de session
 function client() {
