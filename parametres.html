@@ -73,12 +73,15 @@
       function themeCourant() { try { const v = localStorage.getItem('theme'); if (v) return v; } catch (e) {} return 'system'; }
       function appliquerTheme(t) {
         try { localStorage.setItem('theme', t); } catch (e) {}
-        if (t === 'system') root.removeAttribute('data-theme'); else root.setAttribute('data-theme', t);
+        let eff = t;
+        if (t === 'system') { root.removeAttribute('data-theme'); eff = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'; }
+        else root.setAttribute('data-theme', t);
+        root.setAttribute('data-bs-theme', eff);
         document.querySelectorAll('[data-theme-opt]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.themeOpt === t)));
       }
       appliquerTheme(themeCourant());
       document.querySelectorAll('[data-theme-opt]').forEach((b) => b.addEventListener('click', () => appliquerTheme(b.dataset.themeOpt)));
-      document.getElementById('themeNote').textContent = 'Le thème clair est en cours de finition ; pour l’instant le site reste en thème sombre.';
+      document.getElementById('themeNote').textContent = 'Astuce : le bouton soleil/lune de la barre bascule aussi clair ↔ sombre d’un clic.';
 
       // Compte
       fetch('/api/auth/moi', { credentials: 'same-origin' }).then((r) => (r.ok ? r.json() : null)).then((j) => {

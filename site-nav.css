@@ -32,6 +32,10 @@
 .site-nav__act:hover { background: var(--veil-2); color: var(--text); }
 .site-nav__act-ic { width: 16px; text-align: center; }
 
+/* bouton thème clair/sombre (soleil/lune) */
+.site-nav__theme { border: 0; background: none; color: var(--muted); cursor: pointer; font: inherit; border-radius: 8px; display: inline-grid; place-items: center; }
+.site-nav__theme:hover { background: var(--veil-2); color: var(--text); }
+
 /* ===================== disposition CÔTÉ (barre latérale) ===================== */
 @media (min-width: 1100px) {
   body[data-shell="side"].has-site-nav { padding-left: 234px; }
@@ -43,6 +47,7 @@
   body[data-shell="side"] .site-nav__liens { flex-direction: column; gap: 2px; }
   body[data-shell="side"] .site-nav__lien { padding: 8px 10px; border-radius: 8px; }
   body[data-shell="side"] .site-nav__compte { margin-top: auto; border-top: 1px solid var(--border); padding-top: 8px; }
+  body[data-shell="side"] .site-nav__theme { width: 36px; height: 36px; font-size: 16px; margin: 6px 0 4px 2px; }
   body[data-shell="side"] .brand__subtitle { display: none; }
 }
 
@@ -61,7 +66,7 @@
   body[data-shell="top"] .site-nav__moi { padding: 4px 6px; }
   body[data-shell="top"] .site-nav__moi-txt span { display: none; }
   body[data-shell="top"] .site-nav__act { width: auto; border: 1px solid var(--border); border-radius: 8px; }
-  body[data-shell="top"] .site-nav__act--mc { }
+  body[data-shell="top"] .site-nav__theme { width: 38px; height: 38px; font-size: 16px; border: 1px solid var(--border); flex: none; }
 }
 
 /* ===================== écran moyen pour la barre latérale : pastilles ===================== */
@@ -74,6 +79,7 @@
   body[data-shell="side"] .site-nav__compte { flex-direction: row; align-items: center; gap: 6px; }
   body[data-shell="side"] .site-nav__moi-txt, body[data-shell="side"] .site-nav__act span:not(.site-nav__act-ic) { display: none; }
   body[data-shell="side"] .site-nav__act { width: auto; border: 1px solid var(--border); }
+  body[data-shell="side"] .site-nav__theme { width: 34px; height: 34px; font-size: 15px; border: 1px solid var(--border); }
 }
 
 /* ===================== téléphone : onglets en haut (les deux dispositions) ===================== */
@@ -91,4 +97,5 @@
   .site-nav__moi { padding: 0 8px; }
   .site-nav__act { width: auto; border-radius: 0; padding: 0 12px; display: flex; align-items: center; }
   .site-nav__act span:not(.site-nav__act-ic) { display: none; }
+  .site-nav__theme { width: 46px; font-size: 15px; border-radius: 0; flex: none; }
 }
