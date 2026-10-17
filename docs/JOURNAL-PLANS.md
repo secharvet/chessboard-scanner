@@ -1408,3 +1408,8 @@ remarques), vérifications dans Chromium (5 pages sans erreur, scénario enseign
 Régression trouvée et corrigée : le conteneur API Alpine n'avait pas Stockfish depuis le 9 octobre (le juge tuait le serveur) →
 image Debian + binaire de l'hôte monté + sonde de santé avec redémarrage, et le moteur ne fait plus tomber le processus.
 Piège noté : `sed -i` sur un fichier monté seul dans un conteneur (nginx.conf) casse le montage.
+**17 octobre, 2 h 35 : fin de la nuit.** Ajouts : assistant sur l'API (choix/comparaison de professeurs, annotations et
+séquences de l'auteur, bouton Modifier), accueil, guide de l'enseignant, 404, administration avec auteur de référence,
+réordonnancement et changement de type des coups, comparaison de versions, sauvegarde quotidienne, README. Contrôles :
+9 pages sans erreur dans Chromium, scénario enseignant complet, test API de bout en bout, 298 tests. Reste : courriels
+(SMTP), glisser tactile, annotations dans la comparaison, premier enseignant réel. Invitation admin de l'auteur en attente.
