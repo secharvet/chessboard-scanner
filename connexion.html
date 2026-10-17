@@ -15,13 +15,13 @@
           <h1 id="titre">Connexion</h1>
           <p class="cpt__erreur" id="erreur" role="alert" aria-live="assertive" hidden></p>
           <p class="cpt__sous" id="sous">Réservé aux comptes créés par invitation. Les apprenants n'ont pas besoin de compte pour lire.</p>
-          <form id="fConnexion" method="post" action="#" autocomplete="on">
+          <form id="fConnexion" method="post" action="#" autocomplete="on" novalidate>
             <label>Courriel <input type="email" name="email" required autocomplete="username" /></label>
             <label>Mot de passe <input type="password" name="mot_de_passe" required autocomplete="current-password" /></label>
             <button class="btn btn--primary" type="submit">Se connecter</button>
             <p class="cpt__info">Pas encore de compte ? Les comptes se créent à partir d'un <b>lien d'invitation</b> reçu d'un administrateur : ouvre ce lien, il te proposera de créer ton compte.</p>
           </form>
-          <form id="fInvitation" method="post" action="#" hidden>
+          <form id="fInvitation" method="post" action="#" novalidate hidden>
             <p class="cpt__info">Invitation pour <b id="invEmail"></b> avec le rôle <b id="invRole"></b>.</p>
             <label>Nom affiché <input type="text" name="display_name" required maxlength="60" placeholder="ex. Marc Q., club de Sceaux" /></label>
             <label>Mot de passe (10 caractères au moins) <input type="password" name="mot_de_passe" required minlength="10" autocomplete="new-password" /></label>
