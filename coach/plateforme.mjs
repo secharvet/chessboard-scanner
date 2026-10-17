@@ -130,6 +130,25 @@ export async function routerPlateforme({ req, res, url, readJson, send, engine, 
     send(res, 200, { ok: true }); return true;
   }
   if (path === '/api/auth/deconnexion' && m === 'POST') { await auth.fermerSession(u?.sid); res.setHeader('Set-Cookie', auth.cookieEffacement()); send(res, 200, { ok: true }); return true; }
+  if (path === '/api/auth/mot-de-passe-oublie' && m === 'POST') {
+    // Pas d'énumération : on répond toujours OK. Rate-limit par IP comme la connexion.
+    if (limiterConnexion(ip)) return refuser(429, 'trop de demandes, réessaie dans un quart d\'heure');
+    const b = await readJson(req); const r = await auth.creerReinit(b.email, ip);
+    if (r) { const mail = await import('./mail.mjs');
+      const lien = `${mail.siteUrl()}/reinitialiser.html?jeton=${encodeURIComponent(r.token)}`;
+      const texte = `Bonjour ${r.displayName || ''},\n\nUne demande de réinitialisation de mot de passe a été faite pour ce courriel sur l'école ouverte d'échecs.\n\nSi c'est bien toi, ouvre le lien ci-dessous (valide une heure, usable une seule fois) :\n\n${lien}\n\nSi tu n'es pas à l'origine de cette demande, ne clique pas : ton mot de passe actuel reste valable.\n\nL'école ouverte d'échecs.\n`;
+      await mail.envoyer({ a: r.email, sujet: 'Réinitialisation de ton mot de passe', texte }); }
+    send(res, 200, { ok: true }); return true;
+  }
+  if (path === '/api/auth/reinitialiser' && m === 'POST') {
+    const b = await readJson(req);
+    try { const uid = await auth.appliquerReinit(String(b.jeton ?? ''), b.nouveau);
+      const sid = await auth.ouvrirSession(uid, req.headers['user-agent'] ?? ''); res.setHeader('Set-Cookie', auth.cookieSession(sid));
+      const { rows } = await pool.query('select id, email, display_name, role, club from users where id = $1', [uid]);
+      send(res, 200, { ok: true, utilisateur: rows[0] });
+    } catch (e) { return refuser(400, e.message); }
+    return true;
+  }
   let mm = path.match(/^\/api\/auth\/invitation\/([A-Za-z0-9_-]+)$/);
   if (mm && m === 'GET') { const inv = await auth.lireInvitation(mm[1]); if (!inv) return refuser(404, 'invitation inconnue ou expirée'); send(res, 200, { ok: true, email: inv.email, role: inv.role, club: inv.club }); return true; }
   if (mm && m === 'POST') {
