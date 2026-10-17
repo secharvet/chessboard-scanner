@@ -10,6 +10,7 @@ import {
   buildConseil,
 } from './eval-fr.js';
 import { buildAllFacts } from './positional/index.js';
+import { jouerSonCoup } from './sons.js';
 import { interpretFacts } from './positional/interpreter.js';
 import { parseFenPieces } from './positional/fen-board.js';
 import { bindMentorPanel } from './mentor-ui.js';
@@ -281,6 +282,7 @@ function applyMove(from, to, promotion) {
   const mover = game.turn();
   const m = game.move({ from, to, promotion: promotion || undefined });
   if (!m) return false;
+  jouerSonCoup();
   // Mode joueur : le coup du joueur est jugé (pendant que le moteur répond), affiché en tête du conseil suivant.
   if (mover === playerColor && $mentorAuto?.checked) {
     mentorPanel?.newTurn();

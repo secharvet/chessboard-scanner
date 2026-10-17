@@ -9,6 +9,7 @@ import { renderPlayBoard, bindPlayBoardInput } from './play-board.js';
 import { getEngineMove } from './stockfish-client.js';
 import { LIVRES } from './livres/index.js';
 import { dessinerAnnotations, COULEUR_PAR_TYPE } from './fleches.js';
+import { jouerSonCoup } from './sons.js';
 
 const $ = (id) => document.getElementById(id);
 const FR = { K: 'R', Q: 'D', R: 'T', B: 'F', N: 'C' };
@@ -353,7 +354,7 @@ function arreterApercu() {
   if (!recit) dessiner();
 }
 
-function jouer(san) { recit = null; try { game.move(san); } catch { return; } render(); }
+function jouer(san) { recit = null; try { game.move(san); } catch { return; } jouerSonCoup(); render(); }
 
 // Déplacement des pièces : clic sur une pièce puis sur une case cible, ou glisser-déposer (comme la page de jeu).
 let selected = null; let targets = [];
@@ -361,6 +362,7 @@ function refreshBoard() { renderPlayBoard($('ouvBoard'), { fen: game.fen(), orie
 function tenter(from, to) {
   selected = null; targets = [];
   try { game.move({ from, to, promotion: 'q' }); } catch { refreshBoard(); return; }
+  jouerSonCoup();
   render();
 }
 bindPlayBoardInput($('ouvBoard'), {

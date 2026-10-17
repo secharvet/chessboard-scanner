@@ -16,6 +16,9 @@
       .seg { display: inline-flex; background: var(--surface-2); border: 1px solid var(--border); border-radius: 10px; padding: 3px; gap: 3px; }
       .seg button { border: 0; background: none; color: var(--muted); font: inherit; font-weight: 700; font-size: 0.85rem; padding: 7px 15px; border-radius: 7px; cursor: pointer; }
       .seg button[aria-pressed="true"] { background: var(--surface); color: var(--text); box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
+      .volrow { display: flex; align-items: center; gap: 12px; margin: 10px 0; color: var(--muted); font-size: 13px; }
+      .volrow span:first-child { min-width: 6.5em; }
+      .volrow input[type="range"] { flex: 1; max-width: 220px; }
     </style>
   </head>
   <body>
@@ -69,6 +72,20 @@
               <div id="pieceApercu" aria-hidden="true" style="display:flex;gap:8px;margin-top:12px;background:#8496a9;border:1px solid var(--border);border-radius:10px;padding:8px 10px;width:max-content;max-width:100%;flex-wrap:wrap"></div>
             </div>
 
+            <div class="par__champ">
+              <div class="par__ti">Son des coups</div>
+              <div class="par__de">Un petit « toc » sec quand une pièce bouge.</div>
+              <label style="display:inline-flex;align-items:center;gap:10px;margin:2px 0 6px;">
+                <input type="checkbox" id="sonActif" class="form-check-input" style="margin:0;" /> <span>Activer le son</span>
+              </label>
+              <div id="sonReglages">
+                <div class="volrow"><span>Volume</span><input id="sonVolume" type="range" min="0" max="100" /><span id="sonVolumeV"></span></div>
+                <div class="volrow"><span>Hauteur</span><input id="sonHauteur" type="range" min="55" max="175" /><span id="sonHauteurV"></span></div>
+                <div class="volrow"><span>Sec ⟷ Rond</span><input id="sonSec" type="range" min="40" max="160" /><span id="sonSecV"></span></div>
+                <button type="button" class="btn" id="sonTest">Tester le son</button>
+              </div>
+            </div>
+
             <div class="par__champ" id="compteChamp" hidden>
               <div class="par__ti">Mon compte</div>
               <div class="par__de" id="compteInfo">—</div>
@@ -80,6 +97,7 @@
     </div>
     <script type="module" src="./site-nav.js"></script>
     <script type="module">
+      import { jouerSonCoup } from './sons.js';
       const root = document.documentElement;
 
       // Disposition du menu (barre latérale / barre en haut)
@@ -123,6 +141,21 @@
       function majApercu(set) { apercu.innerHTML = ['wK', 'wQ', 'wN', 'bR', 'bB', 'bP'].map((c) => '<img src="./assets/pieces/' + set + '/' + c + '.svg" width="34" height="34" alt="" style="display:block" />').join(''); }
       sel.value = litSet(); majApercu(litSet());
       sel.addEventListener('change', () => { try { localStorage.setItem('piece-set', sel.value); } catch (e) {} majApercu(sel.value); });
+
+      // Son des coups : activation + 3 réglages (volume, hauteur, sec/rond), mémorisés.
+      const sonActif = document.getElementById('sonActif');
+      const SON = { 'son-volume': ['sonVolume', 70], 'son-hauteur': ['sonHauteur', 100], 'son-sec': ['sonSec', 70] };
+      function litNum(k, d) { try { const v = parseFloat(localStorage.getItem(k)); return Number.isFinite(v) ? v : d; } catch (e) { return d; } }
+      function sonOn() { try { return localStorage.getItem('son-actif') !== '0'; } catch (e) { return true; } }
+      function setSonActif(on) { try { localStorage.setItem('son-actif', on ? '1' : '0'); } catch (e) {} document.getElementById('sonReglages').style.opacity = on ? '1' : '0.5'; }
+      sonActif.checked = sonOn(); setSonActif(sonActif.checked);
+      sonActif.addEventListener('change', () => setSonActif(sonActif.checked));
+      for (const [k, [id, def]] of Object.entries(SON)) {
+        const el = document.getElementById(id), lab = document.getElementById(id + 'V');
+        el.value = String(litNum(k, def)); lab.textContent = el.value + ' %';
+        el.addEventListener('input', () => { try { localStorage.setItem(k, el.value); } catch (e) {} lab.textContent = el.value + ' %'; });
+      }
+      document.getElementById('sonTest').addEventListener('click', () => jouerSonCoup());
 
       // Compte
       fetch('/api/auth/moi', { credentials: 'same-origin' }).then((r) => (r.ok ? r.json() : null)).then((j) => {
