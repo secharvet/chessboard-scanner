@@ -60,8 +60,10 @@ async function reponsePosition(p, u) {
     reference_author_id: ref[0]?.author_id ?? null, utilisateur: u ? { id: u.id, role: u.role } : null };
 }
 
+// Plafond réglable pour les scénarios de test (AUTH_MAX_TENTATIVES) ; 20 par défaut en production.
+const MAX_TENTATIVES = Math.max(1, Number(process.env.AUTH_MAX_TENTATIVES) || 20);
 function limiterConnexion(ip) {
-  const now = Date.now(); const l = (tentatives.get(ip) ?? []).filter((t) => now - t < 15 * 60e3); l.push(now); tentatives.set(ip, l); return l.length > 20;
+  const now = Date.now(); const l = (tentatives.get(ip) ?? []).filter((t) => now - t < 15 * 60e3); l.push(now); tentatives.set(ip, l); return l.length > MAX_TENTATIVES;
 }
 
 /** Point d'entrée : renvoie true si la route a été traitée. */
