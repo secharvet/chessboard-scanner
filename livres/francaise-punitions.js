@@ -1,5 +1,5 @@
 // Généré par scripts/ouvertures/punitions.mjs (Stockfish). Ne pas éditer à la main.
-// 502 punitions d'origine conservées telles quelles ; 163 ajoutées le 2026-10-17 (lignes principales profondes) ; 42 ajoutées le 2026-10-17 (compléments de l'Expert échecs).
+// 502 punitions d'origine conservées telles quelles ; 163 ajoutées le 2026-10-17 (lignes principales profondes) ; 43 ajoutées le 2026-10-17 (compléments de l'Expert échecs).
 export const PUNITIONS = {
  "e4 e6 d4 d5 Bd3": {
   "coups": "e4 e6 d4 d5",
@@ -12018,6 +12018,23 @@ export const PUNITIONS = {
   "evalAvant": -31,
   "evalApres": -235,
   "perte": 204,
+  "mat": false
+ },
+ "e4 e6 d3 Nf6": {
+  "coups": "e4 e6 d3",
+  "faute": "Nf6",
+  "fautif": "b",
+  "ligne": [
+   "e5",
+   "Nd5",
+   "d4",
+   "c5",
+   "c4",
+   "Ne7"
+  ],
+  "evalAvant": 0,
+  "evalApres": -35,
+  "perte": 35,
   "mat": false
  }
 };
