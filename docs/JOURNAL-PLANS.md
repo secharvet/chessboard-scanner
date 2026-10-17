@@ -1439,3 +1439,15 @@ Option `--niveau-max` ajoutée à `etendre.mjs`. Française : **120 positions aj
 ajoutées, **rien d'existant modifié** (contrôle : 392 anciennes intactes, 502 punitions intactes). Piège évité : `livres/francaise.js`
 est désormais régénéré chaque nuit depuis la base (export) — on n'y a ajouté les nouvelles positions qu'en annexe de l'export, et
 c'est l'import en base qui fait foi.
+**17 octobre, soir : lignes nommées manquantes de la Française (Expert échecs).** Constat de l'auteur après le nommage ECO :
+une quinzaine de variantes qu'un joueur de club rencontre n'avaient aucune position (Alekhine-Chatard, Burn, MacCutcheon,
+Tarrasch 3…Fe7 et 3…a6, Fort Knox, Winawer 6…Dc7 / 6…Da5 / 5…Fa5 / 4.Ce2, Wade, est-indienne, deux cavaliers,
+franco-sicilienne). Rédigées par la session Expert échecs : 38 entrées (dont 8 positions de liaison pour éviter les trous),
+chaque coup légal, chaque plan dans le MultiPV de tête et chaque faute confirmée à Stockfish 19 prof. 20 MultiPV 4 — le
+moteur a corrigé l'expert lui-même trois fois (dans la MacCutcheon, …Cfd7 et …Ce4 après e5 perdent la dame par Fxd8 ; Dg4 ??
+dans le Chatard accepté perd la dame ; bxa5 dans l'arménienne n'est pas une faute). Intégration additive : **35 entrées en
+annexe** du livre exporté (512 → 547, anciennes intactes), les 3 positions déjà expliquées reçoivent leurs 5 fautes nouvelles
+par fusion SQL dans l'explication IA existante. **42 punitions** (prof. 18) fusionnées (665 → 707) ; deux fautes sous le seuil
+de 0,3 à cette profondeur retirées (cxd4 après Fe2 : 0,22 ; 2…Cf6 dans l'est-indienne : 0,27). Arbitrages du pilote : exf6
+(Chigorin, à 0,34 du meilleur) gardé en plan car variante nommée et position toujours favorable ; …Fb4 des deux cavaliers
+(0,62) classé en faute avec l'explication (une Winawer sans d4 ne marche pas). Française en base : 553 positions.
