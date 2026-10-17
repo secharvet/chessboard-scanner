@@ -172,6 +172,12 @@ fichiers ; à terme elle lit l'API.
 | `POST /api/verifier` | vérifications moteur d'un brouillon (3.5) | enseignant |
 | `POST /api/admin/invitations`, `/reference` | inviter un enseignant, désigner une référence | admin |
 
+Précisions d'implémentation (17 octobre) : `GET /api/positions` **crée la position à la volée** pour un enseignant connecté
+quand le coup est légal depuis une position connue (prolonger une ligne) ; `POST /api/positions/:id/coups` sur un coup déjà
+présent **change son type** (un coup déclaré principal rétrograde l'ancien principal en variante) ; `reprendre` accepte ses
+propres anciennes versions (restauration) ; `GET /api/explications/:id/contenu` renvoie une version visible ; les
+identifiants sont numériques dans le JSON ; `/api/auth/verifier?role=` sert à `auth_request` de nginx.
+
 Comptes : création par invitation de l'administrateur au départ (un lien par courriel) ; inscription libre des
 apprenants plus tard si tu le veux. Mots de passe hachés (argon2), sessions en base, cookies `HttpOnly` et `Secure`.
 
