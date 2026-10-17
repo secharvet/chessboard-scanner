@@ -10,6 +10,8 @@ import * as auth from './auth.mjs';
 const cle = (c) => c.fen().split(' ').slice(0, 4).join(' ');
 const CASE = /^[a-h][1-8]$/; const COULEURS = new Set(['vert', 'bleu', 'rouge', 'orange']);
 const tentatives = new Map(); // anti-force-brute connexion : ip -> [timestamps]
+const ecritures = new Map(); // écritures par utilisateur : id -> [timestamps] (120 par 10 min)
+function tropDEcritures(uid) { const now = Date.now(); const l = (ecritures.get(uid) ?? []).filter((t) => now - t < 10 * 60e3); l.push(now); ecritures.set(uid, l); return l.length > 120; }
 
 function rejouer(coups) { const c = new Chess(); for (const s of (coups ? coups.split(' ') : [])) c.move(s); return c; }
 function nettoyerAnnotations(a) {
@@ -67,7 +69,8 @@ export async function routerPlateforme({ req, res, url, readJson, send, engine, 
   const path = url.pathname; const m = req.method;
   const u = await auth.utilisateurCourant(req);
   const refuser = (code, msg) => { send(res, code, { ok: false, error: msg }); return true; };
-  const exiger = (role) => { if (!u) { refuser(401, 'connexion requise'); return false; } if (!auth.aLeNiveau(u, role)) { refuser(403, `rôle ${role} requis`); return false; } return true; };
+  const exiger = (role) => { if (!u) { refuser(401, 'connexion requise'); return false; } if (!auth.aLeNiveau(u, role)) { refuser(403, `rôle ${role} requis`); return false; }
+    if (m !== 'GET' && tropDEcritures(u.id)) { refuser(429, 'trop d\'écritures en peu de temps, attends quelques minutes'); return false; } return true; };
 
   // ---- comptes
   if (path === '/api/auth/moi' && m === 'GET') { send(res, 200, { ok: true, utilisateur: u ? { id: u.id, email: u.email, display_name: u.display_name, role: u.role, club: u.club } : null }); return true; }
@@ -144,6 +147,17 @@ export async function routerPlateforme({ req, res, url, readJson, send, engine, 
       return refuser(404, `position hors du livre${connu !== null ? ` (connue jusqu'à : ${connu || 'position de départ'})` : ''}`);
     }
     send(res, 200, await reponsePosition(p, u)); return true;
+  }
+  mm = path.match(/^\/api\/positions\/(\d+)\/coups\/ordre$/);
+  if (mm && m === 'PATCH') {
+    if (!exiger('enseignant')) return true; const p = await chargerPosition(Number(mm[1])); if (!p) return refuser(404, 'position inconnue');
+    const b = await readJson(req); const ids = Array.isArray(b.ids) ? b.ids.map(Number).filter(Number.isFinite) : [];
+    const { rows: moves } = await pool.query('select id, kind from moves where position_id = $1', [p.id]); const connus = new Set(moves.map((x) => Number(x.id)));
+    if (!ids.length || !ids.every((id) => connus.has(id))) return refuser(400, 'liste de coups invalide');
+    const cx = await pool.connect();
+    try { await cx.query('begin'); for (const [i, id] of ids.entries()) await cx.query('update moves set ord = $1 where id = $2 and position_id = $3', [i, id, p.id]); await cx.query('commit'); }
+    catch (e) { await cx.query('rollback'); return refuser(500, e.message); } finally { cx.release(); }
+    const { rows } = await pool.query('select id, san, kind, ord from moves where position_id = $1 order by ord, id', [p.id]); send(res, 200, { ok: true, coups: rows }); return true;
   }
   mm = path.match(/^\/api\/positions\/(\d+)\/(coups|explication|historique)$/);
   if (mm) {

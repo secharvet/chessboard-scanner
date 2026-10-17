@@ -57,6 +57,14 @@ test('plateforme : invitation, connexion, écriture, publication, historique, re
   r = await prof('POST', `/api/positions/${pos.id}/coups`, { san: 'Nf3', kind: 'principal' }); assert.equal(r.status, 403);
   r = await prof('POST', `/api/positions/${pos.id}/coups`, { san: 'O-O', kind: 'faute' }); assert.equal(r.status, 400, 'coup illégal refusé');
 
+  // réordonner les coups : l'ordre renvoyé suit la liste envoyée ; liste invalide refusée ; anonyme refusé
+  r = await prof('GET', `/api/positions?livre=francaise&coups=e4%20e6%20d4%20d5`); const ordreInitial = r.json.coups.map((c) => c.id);
+  const inverse = [...ordreInitial].reverse();
+  r = await prof('PATCH', `/api/positions/${pos.id}/coups/ordre`, { ids: inverse }); assert.equal(r.status, 200); assert.deepEqual(r.json.coups.map((c) => c.id), inverse);
+  r = await prof('PATCH', `/api/positions/${pos.id}/coups/ordre`, { ids: [999999] }); assert.equal(r.status, 400);
+  r = await anonyme('PATCH', `/api/positions/${pos.id}/coups/ordre`, { ids: ordreInitial }); assert.equal(r.status, 401);
+  r = await prof('PATCH', `/api/positions/${pos.id}/coups/ordre`, { ids: ordreInitial }); assert.equal(r.status, 200, 'ordre rétabli');
+
   // brouillon : contenu normalisé (coup inconnu ignoré, séquence vérifiée)
   const principal = coups.find((c) => c.kind === 'principal');
   const content = { nom: 'Essai', sens: 'un texte de test', menace: null, annotations: [{ type: 'case', case: 'e5', couleur: 'vert' }, { type: 'fleche', de: 'e4', a: 'e5', couleur: 'vert' }, { type: 'case', case: 'z9', couleur: 'vert' }],
