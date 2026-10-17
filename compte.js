@@ -38,7 +38,16 @@ if (invitation) {
       $('fConnexion').before(p);
     }).catch(() => memo.set(null));
   }
-  api('/api/auth/moi').then((j) => { if (j.utilisateur) { $('sous').innerHTML = `Connecté en tant que <b>${j.utilisateur.display_name}</b> (${j.utilisateur.role}). <a href="#" id="dec">Se déconnecter</a>`; $('dec').addEventListener('click', async (ev) => { ev.preventDefault(); await api('/api/auth/deconnexion', {}); location.reload(); }); } }).catch(() => {});
+  api('/api/auth/moi').then((j) => { if (j.utilisateur) {
+    $('titre').textContent = 'Mon compte'; $('fConnexion').hidden = true; $('fMotDePasse').hidden = false;
+    $('sous').innerHTML = `Connecté en tant que <b>${j.utilisateur.display_name}</b> (${j.utilisateur.role}). <a href="#" id="dec">Se déconnecter</a>`;
+    $('dec').addEventListener('click', async (ev) => { ev.preventDefault(); await api('/api/auth/deconnexion', {}); location.reload(); }); } }).catch(() => {});
+  $('fMotDePasse').addEventListener('submit', async (ev) => {
+    ev.preventDefault(); erreur(''); const f = new FormData(ev.target);
+    if (String(f.get('nouveau') || '').length < 10) return erreur('Le nouveau mot de passe doit faire au moins 10 caractères.');
+    try { await api('/api/auth/mot-de-passe', { actuel: f.get('actuel'), nouveau: f.get('nouveau') }); ev.target.reset(); const ok = $('erreur'); ok.textContent = 'Mot de passe changé.'; ok.hidden = false; ok.classList.add('cpt__ok'); }
+    catch (e) { erreur(e.message); }
+  });
   $('fConnexion').addEventListener('submit', async (ev) => {
     ev.preventDefault(); erreur(''); const f = new FormData(ev.target);
     if (!String(f.get('email') || '').includes('@')) return erreur('Indique ton courriel.'); if (!f.get('mot_de_passe')) return erreur('Indique ton mot de passe.');

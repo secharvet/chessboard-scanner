@@ -21,6 +21,12 @@
             <button class="btn btn--primary" type="submit">Se connecter</button>
             <p class="cpt__info">Pas encore de compte ? Les comptes se créent à partir d'un <b>lien d'invitation</b> reçu d'un administrateur : ouvre ce lien, il te proposera de créer ton compte.</p>
           </form>
+          <form id="fMotDePasse" method="post" action="#" novalidate hidden>
+            <h2 style="font-size:1.05rem;margin:14px 0 0">Changer mon mot de passe</h2>
+            <label>Mot de passe actuel <input type="password" name="actuel" autocomplete="current-password" /></label>
+            <label>Nouveau mot de passe (10 caractères au moins) <input type="password" name="nouveau" autocomplete="new-password" /></label>
+            <button class="btn" type="submit">Changer</button>
+          </form>
           <form id="fInvitation" method="post" action="#" novalidate hidden>
             <p class="cpt__info">Invitation pour <b id="invEmail"></b> avec le rôle <b id="invRole"></b>.</p>
             <label>Nom affiché <input type="text" name="display_name" required maxlength="60" placeholder="ex. Marc Q., club de Sceaux" /></label>

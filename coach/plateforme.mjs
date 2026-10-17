@@ -83,6 +83,15 @@ export async function routerPlateforme({ req, res, url, readJson, send, engine, 
     const { rows } = await pool.query('select id, email, display_name, role, club from users where id = $1', [uid]);
     send(res, 200, { ok: true, utilisateur: rows[0] }); return true;
   }
+  if (path === '/api/auth/mot-de-passe' && m === 'POST') {
+    if (!u) return refuser(401, 'connexion requise'); const b = await readJson(req);
+    if (!b.nouveau || String(b.nouveau).length < 10) return refuser(400, 'nouveau mot de passe trop court (10 caractères au moins)');
+    const { rows } = await pool.query('select password_hash from users where id = $1', [u.id]);
+    if (!auth.verifierMotDePasse(String(b.actuel ?? ''), rows[0]?.password_hash)) return refuser(401, 'mot de passe actuel incorrect');
+    await pool.query('update users set password_hash = $1 where id = $2', [auth.hacher(String(b.nouveau)), u.id]);
+    await pool.query('delete from sessions where user_id = $1 and id <> $2', [u.id, u.sid]);  // les autres appareils sont déconnectés
+    send(res, 200, { ok: true }); return true;
+  }
   if (path === '/api/auth/deconnexion' && m === 'POST') { await auth.fermerSession(u?.sid); res.setHeader('Set-Cookie', auth.cookieEffacement()); send(res, 200, { ok: true }); return true; }
   let mm = path.match(/^\/api\/auth\/invitation\/([A-Za-z0-9_-]+)$/);
   if (mm && m === 'GET') { const inv = await auth.lireInvitation(mm[1]); if (!inv) return refuser(404, 'invitation inconnue ou expirée'); send(res, 200, { ok: true, email: inv.email, role: inv.role, club: inv.club }); return true; }
