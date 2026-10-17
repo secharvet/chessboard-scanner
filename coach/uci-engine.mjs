@@ -47,6 +47,8 @@ export class UciEngine {
     if (this.proc) return;
     this.proc = spawn(this.path, [], { stdio: ['pipe', 'pipe', 'inherit'] });
     this.proc.on('exit', () => { this.proc = null; });
+    // Un moteur introuvable ou qui meurt ne doit jamais faire tomber le serveur : on journalise, et analyze() échouera proprement.
+    this.proc.on('error', (e) => { console.error(`[moteur] ${this.path} : ${e.message}`); this.proc = null; });
     createInterface({ input: this.proc.stdout }).on('line', (line) => this.onLine?.(line));
     await this.#waitFor('uci', (l) => { if (l.startsWith('id name ')) this.name = l.slice(8); return l === 'uciok'; });
     this.#send(`setoption name Threads value ${this.threads}`);

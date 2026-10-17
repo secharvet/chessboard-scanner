@@ -1,0 +1,97 @@
+/* Éditeur enseignant (16 octobre 2026). S'appuie sur ouverture.css pour la grille et les cartes. */
+.edi__bandeau { margin: 8px 16px 0; padding: 8px 12px; border-radius: 8px; font-size: 0.9rem; background: rgba(255,184,107,0.12); border: 1px solid rgba(255,184,107,0.5); color: var(--text); }
+.edi__bandeau a { color: var(--accent2); }
+.edi__bandeau--erreur { background: rgba(255,107,107,0.12); border-color: rgba(255,107,107,0.5); }
+.edi__telephone { display: none; }
+.edi__moi { font-size: 0.8rem; color: var(--muted); max-width: 240px; text-align: right; }
+.edi__moi b { color: var(--text); }
+
+/* barre de modes */
+.edi__modes { display: flex; gap: 6px; align-items: center; padding: 6px 8px; border-radius: 8px; background: rgba(255,255,255,0.04); border: 1px solid var(--border); margin-bottom: 6px; flex-wrap: wrap; }
+.edi__mode { background: transparent; border: 1px solid transparent; color: var(--muted); border-radius: 6px; padding: 4px 10px; cursor: pointer; font: inherit; font-size: 0.85rem; }
+.edi__mode:hover { background: rgba(255,255,255,0.06); color: var(--text); }
+.edi__mode--actif { background: var(--accent2); color: #0b0f17; font-weight: 600; }
+.edi__mode--effacer { margin-left: auto; }
+.edi__couleurs { display: inline-flex; gap: 6px; align-items: center; padding: 0 6px; border-left: 1px solid var(--border); }
+.edi__couleur { width: 16px; height: 16px; border-radius: 50%; border: 2px solid transparent; background: var(--c); cursor: pointer; padding: 0; opacity: 0.7; }
+.edi__couleur--actif { opacity: 1; border-color: #fff; transform: scale(1.15); }
+.edi__cible { font-size: 0.8rem; color: var(--muted); margin-top: 4px; }
+.edi__cible b { color: var(--accent2); font-weight: 600; }
+.edi__board-mode-fleche .fen-board__sq, .edi__board-mode-surligner .fen-board__sq { cursor: crosshair; }
+.edi__board-mode-fleche .fen-board__piece, .edi__board-mode-surligner .fen-board__piece { cursor: crosshair; }
+
+/* démonstration */
+.edi__demo { margin-top: 8px; border: 1px solid #ffb86b; border-radius: 8px; padding: 8px 10px; background: rgba(255,184,107,0.06); font-size: 0.88rem; }
+.edi__demo h4 { margin: 0 0 6px; color: #ffb86b; font-size: 0.85rem; }
+.edi__demo .pas { display: grid; grid-template-columns: 6.5em 1fr; gap: 6px; align-items: center; padding: 3px 0; }
+.edi__demo .pas--cur { background: rgba(255,184,107,0.12); border-radius: 4px; }
+.edi__demo .pas b { font-family: var(--mono); font-size: 0.85rem; }
+.edi__demo .pas input { width: 100%; box-sizing: border-box; background: rgba(0,0,0,0.3); color: var(--text); border: 1px solid var(--border); border-radius: 4px; padding: 3px 6px; font: inherit; font-size: 0.85rem; }
+.edi__demo .boutons { display: flex; gap: 6px; margin-top: 6px; flex-wrap: wrap; }
+.edi__demo .boutons .btn { padding: 3px 8px; font-size: 0.8rem; }
+.edi__demo .hors { color: var(--muted); font-style: italic; }
+
+/* formulaire */
+.edi__droite { padding: 16px 18px; }
+.edi__fil { font-family: var(--mono); font-size: 0.78rem; color: var(--muted); margin: 0 0 10px; }
+.edi__form { display: flex; flex-direction: column; gap: 10px; }
+.edi__champ { display: flex; flex-direction: column; gap: 4px; font-size: 0.8rem; color: var(--muted); }
+.edi__champ > span { text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.72rem; font-weight: 600; }
+.edi__champ small, .edi__sous { text-transform: none; letter-spacing: 0; font-weight: normal; color: var(--muted); }
+.edi__form input[type=text], .edi__form input[type=url], .edi__form textarea, .edi__schema textarea { width: 100%; box-sizing: border-box; background: rgba(0,0,0,0.3); color: var(--text); border: 1px solid var(--border); border-radius: 6px; padding: 7px 9px; font: inherit; font-size: 0.95rem; line-height: 1.4; resize: vertical; }
+.edi__form input:focus, .edi__form textarea:focus { outline: none; border-color: var(--accent); }
+.edi__schema label { display: flex; flex-direction: column; gap: 4px; }
+.edi__ajout { margin-top: 8px; font-size: 0.85rem; color: var(--accent); background: transparent; border-style: dashed; }
+
+/* cartes de coups (éditables) */
+.ccoup { display: grid; grid-template-columns: 5.5em 1fr; gap: 8px 10px; padding: 8px 10px; border-radius: 8px; border: 1px solid var(--border); background: rgba(255,255,255,0.02); cursor: pointer; }
+.ccoup:hover { background: rgba(255,255,255,0.05); }
+.ccoup--cible { border-color: var(--accent2); box-shadow: 0 0 0 1px var(--accent2) inset; background: rgba(62,230,181,0.06); }
+.ccoup--principal .ccoup__san { color: #3ee6b5; } .ccoup--variante .ccoup__san { color: #6ea8ff; } .ccoup--faute .ccoup__san { color: #ff6b6b; } .ccoup--porte .ccoup__san { color: #ffb86b; }
+.ccoup__san { font-family: var(--mono); font-weight: 700; font-size: 1rem; }
+.ccoup__type { grid-column: 1; font-size: 0.72rem; }
+.ccoup__type select { width: 100%; background: rgba(0,0,0,0.3); color: var(--text); border: 1px solid var(--border); border-radius: 4px; font: inherit; font-size: 0.72rem; padding: 2px 4px; }
+.ccoup__why { grid-column: 2; grid-row: 1 / span 2; }
+.ccoup__why textarea { width: 100%; box-sizing: border-box; min-height: 3.2em; }
+.ccoup__pied { grid-column: 1 / -1; display: flex; gap: 10px; align-items: center; font-size: 0.75rem; color: var(--muted); flex-wrap: wrap; }
+.ccoup__pied .btn { padding: 2px 8px; font-size: 0.75rem; }
+.ccoup__pied .ok { color: #3ee6b5; } .ccoup__pied .ko { color: #ffb86b; }
+
+/* actions et sauvegarde */
+.edi__actions { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; margin-top: 6px; padding-top: 10px; border-top: 1px solid var(--border); }
+.edi__actions .btn { padding: 6px 10px; font-size: 0.85rem; }
+.edi__sauvegarde { font-size: 0.78rem; color: var(--muted); min-height: 1.2em; }
+.edi__sauvegarde .ko { color: #ff8a8a; }
+.edi__avertissements { font-size: 0.85rem; border: 1px solid rgba(255,184,107,0.5); background: rgba(255,184,107,0.08); border-radius: 8px; padding: 8px 10px; }
+.edi__avertissements ul { margin: 4px 0 0; padding-left: 18px; }
+.edi__avertissements .ok { color: #3ee6b5; }
+.edi__lecture .edi__form, .edi__lecture .edi__modes { opacity: 0.55; pointer-events: none; }
+
+/* tiroir (historique, remarques) */
+.edi__tiroir { position: fixed; right: 0; top: 0; bottom: 0; width: min(440px, 92vw); background: #121826; border-left: 1px solid var(--border); box-shadow: -8px 0 30px rgba(0,0,0,0.4); z-index: 50; padding: 14px 16px; overflow-y: auto; font-size: 0.9rem; }
+.edi__tiroir-tete { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.edi__tiroir .version { padding: 8px 10px; border: 1px solid var(--border); border-radius: 8px; margin-bottom: 6px; display: flex; justify-content: space-between; gap: 8px; align-items: center; }
+.edi__tiroir .version small { color: var(--muted); display: block; }
+.edi__tiroir .version--publie { border-color: rgba(62,230,181,0.5); }
+.edi__tiroir .remarque { padding: 6px 0; border-bottom: 1px solid var(--border); }
+.edi__tiroir .remarque small { color: var(--muted); }
+.edi__tiroir textarea { width: 100%; box-sizing: border-box; background: rgba(0,0,0,0.3); color: var(--text); border: 1px solid var(--border); border-radius: 6px; padding: 6px 8px; font: inherit; margin-top: 8px; }
+
+/* dialogue (ajout d'un coup) */
+.edi__dialogue { position: fixed; inset: 0; background: rgba(0,0,0,0.55); z-index: 60; display: flex; align-items: center; justify-content: center; }
+.edi__dialogue .boite { background: #121826; border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; width: min(420px, 92vw); font-size: 0.95rem; }
+.edi__dialogue .boite h4 { margin: 0 0 10px; }
+.edi__dialogue .boite label { display: block; margin: 6px 0; }
+.edi__dialogue .boite .boutons { display: flex; gap: 8px; justify-content: flex-end; margin-top: 12px; }
+
+/* aperçu : on réutilise le panneau de droite */
+.edi__apercu .qui { color: var(--accent2); font-weight: 600; }
+.edi__apercu .menace { color: #ffb86b; }
+
+/* téléphone : lecture seule */
+@media (max-width: 800px) {
+  .edi__telephone { display: block; margin: 10px 12px; padding: 10px 12px; border-radius: 8px; background: rgba(255,184,107,0.12); border: 1px solid rgba(255,184,107,0.5); font-size: 0.9rem; }
+  .edi__layout { height: auto; }
+  .edi__modes, .edi__form, .edi__demo, .edi__cible { display: none !important; }
+  .edi__droite { display: none; }
+}

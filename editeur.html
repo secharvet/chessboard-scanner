@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Éditeur enseignant — ouvertures</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./site-nav.css" />
+    <link rel="stylesheet" href="./play.css" />
+    <link rel="stylesheet" href="./ouverture.css" />
+    <link rel="stylesheet" href="./editeur.css" />
+  </head>
+  <body>
+    <div class="app ouv edi">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand__title">Éditeur enseignant <span class="ouv__maquette">version 1</span></div>
+          <div class="brand__subtitle"><a class="topbar__link" href="./ouverture.html">← Assistant</a></div>
+        </div>
+        <div class="topbar__pickers">
+          <div class="topbar__picker">
+            <label class="topbar__picker-label" for="ediLivre">Ouverture</label>
+            <select id="ediLivre" class="opening-select"><option value="francaise">Défense française</option><option value="italienne">Partie italienne</option></select>
+          </div>
+          <div class="topbar__picker edi__moi" id="ediMoi" title="Compte connecté">…</div>
+        </div>
+      </header>
+
+      <div id="ediBandeau" class="edi__bandeau" hidden></div>
+      <div class="edi__telephone">L'édition se fait sur ordinateur : l'écran est trop petit pour l'échiquier et le formulaire côte à côte. Tu peux lire la position dans l'<a href="./ouverture.html">assistant</a>.</div>
+
+      <main class="ouv__layout edi__layout">
+        <section class="ouv__gauche">
+          <div class="edi__modes" id="ediModes" role="toolbar" aria-label="Modes de l'échiquier">
+            <button class="edi__mode edi__mode--actif" data-mode="jouer" title="Déplacer une pièce : naviguer dans l'arbre ou proposer un coup">Jouer</button>
+            <button class="edi__mode" data-mode="surligner" title="Clic sur une case : surligner (clics suivants : changer la couleur, puis retirer)">Surligner</button>
+            <button class="edi__mode" data-mode="fleche" title="Glisser d'une case à une autre : flèche (refaire la même flèche la retire)">Flèche</button>
+            <span class="edi__couleurs" id="ediCouleurs" aria-label="Couleur">
+              <button class="edi__couleur edi__couleur--actif" data-couleur="vert" style="--c:#3ee6b5" title="vert : coup principal"></button>
+              <button class="edi__couleur" data-couleur="bleu" style="--c:#6ea8ff" title="bleu : variante"></button>
+              <button class="edi__couleur" data-couleur="rouge" style="--c:#ff6b6b" title="rouge : faute"></button>
+              <button class="edi__couleur" data-couleur="orange" style="--c:#ffb86b" title="orange : libre"></button>
+            </span>
+            <button class="edi__mode edi__mode--effacer" id="ediEffacer" title="Retirer toutes les annotations de l'élément ciblé">Effacer</button>
+          </div>
+          <div class="ouv__board-wrap"><div id="ediBoard" class="board"></div></div>
+          <div class="edi__cible" id="ediCible">Annotations : <b>la position</b></div>
+          <div class="ouv__ligne" id="ediLigne" aria-label="Coups joués"></div>
+          <div class="ouv__boutons">
+            <button id="btnDebut" class="btn" title="Position de départ">⏮ Début</button>
+            <button id="btnRetour" class="btn" title="Un coup en arrière">◀ Retour</button>
+            <button id="btnTourner" class="btn" title="Retourner l'échiquier">⟲</button>
+            <a id="lienAssistant" class="btn" href="./ouverture.html" title="Voir cette position dans l'assistant">Voir dans l'assistant ⤴</a>
+          </div>
+          <div class="edi__demo" id="ediDemo" hidden></div>
+        </section>
+
+        <aside class="ouv__droite edi__droite" id="ediDroite">
+          <div class="ouv__titre"><span id="ediNom">Position</span> <span class="ouv__etat" id="ediEtat"></span></div>
+          <div class="edi__fil" id="ediFil"></div>
+          <form id="ediForm" class="edi__form" autocomplete="off">
+            <label class="edi__champ"><span>Nom de la variante <small>(facultatif)</small></span><input id="fNom" type="text" maxlength="120" placeholder="ex. Française, variante d'avance" /></label>
+            <label class="edi__champ"><span>Sens du dernier coup <small id="fSensCoup"></small></span><textarea id="fSens" rows="3" placeholder="Ce que cherche le coup qui vient d'être joué, en une à trois phrases."></textarea></label>
+            <label class="edi__champ"><span>Menace <small>(facultatif)</small></span><input id="fMenace" type="text" placeholder="La menace concrète créée par ce coup" /></label>
+            <label class="edi__champ"><span>Lien vidéo <small>(facultatif)</small></span><input id="fVideo" type="url" placeholder="https://…" /></label>
+
+            <div class="ouv__bloc"><h3>Coups proposés <small class="edi__sous">arbre partagé · clique une carte pour y rattacher tes flèches</small></h3><div class="ouv__liste" id="fCoups"></div>
+              <button type="button" class="btn edi__ajout" id="btnAjoutCoup">+ Ajouter un coup (ou joue-le sur l'échiquier)</button></div>
+            <div class="ouv__bloc" id="fFautesBloc"><h3>Fautes typiques</h3><div class="ouv__liste" id="fFautes"></div></div>
+            <div class="ouv__bloc"><h3>Ce que chacun va chercher ensuite <small class="edi__sous">(facultatif)</small></h3>
+              <div class="ouv__schema edi__schema"><label><b>Les Blancs</b><textarea id="fBlancs" rows="2"></textarea></label><label><b>Les Noirs</b><textarea id="fNoirs" rows="2"></textarea></label></div></div>
+
+            <div class="edi__actions">
+              <button type="button" class="btn" id="btnApercu">Aperçu</button>
+              <button type="button" class="btn" id="btnEnregistrer">Enregistrer le brouillon</button>
+              <button type="button" class="btn btn--primary" id="btnPublier">Publier</button>
+              <button type="button" class="btn" id="btnVerifier" title="Vérifier au moteur">Vérifier</button>
+              <button type="button" class="btn" id="btnHistorique">Historique</button>
+              <button type="button" class="btn" id="btnRemarques">Remarques</button>
+              <select id="selReprendre" class="opening-select" title="Partir du texte d'un autre auteur"><option value="">Partir du texte de…</option></select>
+            </div>
+            <div class="edi__sauvegarde" id="ediSauvegarde"></div>
+            <div class="edi__avertissements" id="ediAvertissements" hidden></div>
+          </form>
+          <div class="ouv__signature">Textes publiés sous licence CC BY-SA 4.0, signés de leur auteur. Un brouillon n'est visible que de toi.</div>
+        </aside>
+      </main>
+
+      <aside class="edi__tiroir" id="ediTiroir" hidden>
+        <div class="edi__tiroir-tete"><b id="ediTiroirTitre">Historique</b><button type="button" class="btn" id="btnFermerTiroir">Fermer</button></div>
+        <div id="ediTiroirCorps"></div>
+      </aside>
+      <div class="edi__dialogue" id="ediDialogue" hidden></div>
+    </div>
+    <script type="module" src="./editeur.js"></script>
+    <script type="module" src="./site-nav.js"></script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Administration</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./site-nav.css" />
+    <link rel="stylesheet" href="./compte.css" />
+  </head>
+  <body>
+    <div class="app">
+      <main class="cpt adm">
+        <section class="cpt__carte" style="width:min(100%,760px)">
+          <h1>Administration</h1>
+          <p class="cpt__sous" id="moi"></p>
+          <h2 style="font-size:1.05rem;margin:18px 0 4px">Inviter quelqu'un</h2>
+          <form id="fInvite">
+            <label>Courriel <input type="email" name="email" required /></label>
+            <label>Rôle <select name="role"><option value="enseignant">enseignant</option><option value="validateur">validateur</option><option value="admin">admin</option><option value="apprenant">apprenant</option></select></label>
+            <label>Club (facultatif) <input type="text" name="club" maxlength="80" /></label>
+            <button class="btn btn--primary" type="submit">Créer le lien d'invitation</button>
+          </form>
+          <p id="lien" class="adm__lien" hidden></p>
+          <p class="cpt__info">Le lien vaut sept jours, à transmettre toi-même (courriel, message) tant que l'envoi automatique n'est pas configuré.</p>
+          <p class="cpt__erreur" id="erreur" hidden></p>
+          <h2 style="font-size:1.05rem;margin:22px 0 4px">Comptes</h2>
+          <table><thead><tr><th>Nom</th><th>Courriel</th><th>Rôle</th><th>Club</th><th>Textes publiés</th></tr></thead><tbody id="comptes"></tbody></table>
+          <p class="cpt__pied"><a href="./ouverture.html">← Assistant d'ouverture</a> · <a href="./editeur.html">Éditeur</a></p>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="./site-nav.js"></script>
+    <script type="module">
+      const $ = (id) => document.getElementById(id);
+      const erreur = (m) => { $('erreur').textContent = m; $('erreur').hidden = !m; };
+      const api = async (p, b) => { const r = await fetch(p, b ? { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(b) } : {}); const j = await r.json().catch(() => ({ ok: false })); if (!j.ok) throw new Error(j.error || `HTTP ${r.status}`); return j; };
+      const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+      async function charger() {
+        const { utilisateur } = await api('/api/auth/moi'); $('moi').textContent = utilisateur ? `${utilisateur.display_name} · ${utilisateur.role}` : '';
+        const { utilisateurs } = await api('/api/admin/utilisateurs');
+        $('comptes').innerHTML = utilisateurs.map((u) => `<tr><td>${esc(u.display_name)}</td><td>${esc(u.email)}</td><td>${esc(u.role)}</td><td>${esc(u.club ?? '')}</td><td>${u.publiees}</td></tr>`).join('');
+      }
+      $('fInvite').addEventListener('submit', async (ev) => {
+        ev.preventDefault(); erreur(''); const f = new FormData(ev.target);
+        try { const j = await api('/api/admin/invitations', { email: f.get('email'), role: f.get('role'), club: f.get('club') || null }); $('lien').textContent = location.origin + j.lien; $('lien').hidden = false; }
+        catch (e) { erreur(e.message); }
+      });
+      charger().catch((e) => erreur(e.message));
+    </script>
+  </body>
+</html>

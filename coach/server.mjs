@@ -11,6 +11,7 @@ import { askCoach } from './coach.mjs';
 import { judgeMove } from './move-judge.mjs';
 import { lireLaPartie, texteLecture } from './lecteur.mjs';
 import { pool } from './db.mjs';
+import { routerPlateforme } from './plateforme.mjs';
 import { expliquerLecture } from './intention-lecture.mjs';
 import { toFrenchSan } from './notation.mjs';
 const texteIntention = (lecture, payload) => {
@@ -111,6 +112,12 @@ const server = createServer(async (req, res) => {
     } catch (e) {
       return send(res, 500, { ok: false, error: String(e?.message ?? e) });
     }
+  }
+  // Plateforme d'apprentissage : comptes, livres, positions, explications (coach/plateforme.mjs)
+  if (url.pathname.startsWith('/api/') && !url.pathname.startsWith('/api/chess/mentor/')) {
+    try { if (await routerPlateforme({ req, res, url, readJson, send, engine, ip: clientIp(req) })) return; }
+    catch (e) { console.error('[plateforme] erreur', e); return send(res, 500, { ok: false, error: String(e?.message ?? e) }); }
+    return send(res, 404, { ok: false, error: 'Not found' });
   }
   if (req.method !== 'POST' || !url.pathname.startsWith('/api/chess/mentor/')) {
     return send(res, 404, { ok: false, error: 'Not found' });

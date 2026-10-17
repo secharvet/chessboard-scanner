@@ -184,7 +184,38 @@ apprenants plus tard si tu le veux. Mots de passe hachés (argon2), sessions en 
 | proposer un coup à l'arbre | | oui | oui |
 | valider un coup proposé à l'arbre, inviter, désigner une référence, archiver un texte | | | oui |
 
-## 7. Questions à trancher
+## 7. Décisions (16 octobre 2026, avec l'auteur)
+
+a. **Comparaison** : l'apprenant peut lire un professeur, ou en mettre deux côte à côte sur la même position.
+b. **Arbre partagé** : un enseignant ajoute librement un coup (variante ou faute) ; changer le coup **principal**
+   demande une validation. Rôle **validateur**, distinct du rôle professeur, souvent porté par la même personne dans
+   un petit club, utile quand des professeurs apprentis écrivent.
+c. **Publication** : libre pour tout enseignant invité, sans relecture ; l'administrateur peut archiver.
+d. **Brouillons IA** : visibles aux apprenants, marqués comme tels : c'est la base de départ ; un club qui construit
+   son cours peut les masquer ou les effacer de sa vue.
+e. **Licence** : **CC BY-SA 4.0** pour les textes publiés (attribution, partage dans les mêmes conditions), acceptée à
+   la création du compte enseignant. Valable en droit français ; l'auteur conserve son droit moral, inaliénable en
+   France. Ce n'est pas un avis juridique : à faire relire par quelqu'un de qualifié si la plateforme grandit.
+f. **Vidéo** : un champ « lien vidéo » par explication, rien de plus pour l'instant.
+
+### 7 bis. Connexion : recommandation
+
+Pour un public de clubs, le plus simple et le plus sain : **courriel + mot de passe**, comptes créés **par
+invitation** (un lien généré par l'administrateur ou un validateur, transmis à la main ou par courriel), et confirmation
+du courriel dès qu'un envoi de messages sera configuré (un compte gratuit chez un fournisseur comme Brevo suffit, 300
+courriels par jour). Mots de passe hachés avec `scrypt` (natif dans Node, aucune dépendance), sessions en base, cookie
+`HttpOnly`, `Secure`, `SameSite=Lax`, trente jours.
+
+« Se connecter avec Google » : possible plus tard (il faut déclarer une application chez Google, un quart d'heure),
+pratique pour les élèves, mais il impose un compte Google à tous ; à ajouter en option, pas en remplacement. GitHub :
+sans intérêt pour des joueurs de club. Les liens magiques sans mot de passe sont une bonne alternative une fois les
+courriels en place.
+
+**Contrôle d'accès** : côté serveur toujours (l'API refuse ce que le rôle ne permet pas) ; les pages réservées
+(éditeur, administration) sont servies derrière une vérification de session par nginx (`auth_request` vers l'API),
+pas seulement cachées par le navigateur.
+
+## 7 ter. Questions d'origine (pour mémoire)
 
 a. **Un professeur à la fois, ou comparaison** : l'apprenant lit un seul professeur (simple) ou peut mettre deux
    versions côte à côte sur la même position (plus riche, écran plus chargé) ?
