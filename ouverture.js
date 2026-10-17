@@ -354,15 +354,15 @@ function arreterApercu() {
   if (!recit) dessiner();
 }
 
-function jouer(san) { recit = null; try { game.move(san); } catch { return; } jouerSonCoup(); render(); }
+function jouer(san) { recit = null; let m; try { m = game.move(san); } catch { return; } jouerSonCoup({ capture: !!m?.captured }); render(); }
 
 // Déplacement des pièces : clic sur une pièce puis sur une case cible, ou glisser-déposer (comme la page de jeu).
 let selected = null; let targets = [];
 function refreshBoard() { renderPlayBoard($('ouvBoard'), { fen: game.fen(), orientation, lastMove: dernier(), targets, dragFrom: selected }); if (!recit) dessiner(); }
 function tenter(from, to) {
   selected = null; targets = [];
-  try { game.move({ from, to, promotion: 'q' }); } catch { refreshBoard(); return; }
-  jouerSonCoup();
+  let m; try { m = game.move({ from, to, promotion: 'q' }); } catch { refreshBoard(); return; }
+  jouerSonCoup({ capture: !!m?.captured });
   render();
 }
 bindPlayBoardInput($('ouvBoard'), {

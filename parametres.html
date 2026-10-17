@@ -74,14 +74,13 @@
 
             <div class="par__champ">
               <div class="par__ti">Son des coups</div>
-              <div class="par__de">Un petit « toc » sec quand une pièce bouge.</div>
+              <div class="par__de">Le « clac » de bois de Lichess quand une pièce bouge, et un son distinct pour une prise.</div>
               <label style="display:inline-flex;align-items:center;gap:10px;margin:2px 0 6px;">
                 <input type="checkbox" id="sonActif" class="form-check-input" style="margin:0;" /> <span>Activer le son</span>
               </label>
               <div id="sonReglages">
                 <div class="volrow"><span>Volume</span><input id="sonVolume" type="range" min="0" max="100" /><span id="sonVolumeV"></span></div>
                 <div class="volrow"><span>Hauteur</span><input id="sonHauteur" type="range" min="55" max="175" /><span id="sonHauteurV"></span></div>
-                <div class="volrow"><span>Sec ⟷ Rond</span><input id="sonSec" type="range" min="40" max="160" /><span id="sonSecV"></span></div>
                 <button type="button" class="btn" id="sonTest">Tester le son</button>
               </div>
             </div>
@@ -144,7 +143,7 @@
 
       // Son des coups : activation + 3 réglages (volume, hauteur, sec/rond), mémorisés.
       const sonActif = document.getElementById('sonActif');
-      const SON = { 'son-volume': ['sonVolume', 90], 'son-hauteur': ['sonHauteur', 100], 'son-sec': ['sonSec', 100] };
+      const SON = { 'son-volume': ['sonVolume', 90], 'son-hauteur': ['sonHauteur', 100] };
       function litNum(k, d) { try { const v = parseFloat(localStorage.getItem(k)); return Number.isFinite(v) ? v : d; } catch (e) { return d; } }
       function sonOn() { try { return localStorage.getItem('son-actif') !== '0'; } catch (e) { return true; } }
       function setSonActif(on) { try { localStorage.setItem('son-actif', on ? '1' : '0'); } catch (e) {} document.getElementById('sonReglages').style.opacity = on ? '1' : '0.5'; }
