@@ -1,15 +1,61 @@
+/* ── Palette du site ──────────────────────────────────────────────────────
+   Toutes les couleurs passent par ces variables : la thématique de couleurs
+   et l'identité visuelle (chantier à venir) se règleront ici, en un endroit. */
 :root {
   color-scheme: dark;
-  --bg: #0b0f17;
+  --bg: #0b0f17;            /* fond de page */
+  --bg-2: #0d1118;          /* bandeaux (barre du haut, barres fixes) */
+  --surface: #12161f;       /* cartes et panneaux */
+  --surface-2: #1a2130;     /* champs et éléments interactifs */
+  --veil: rgba(255, 255, 255, 0.03);   /* panneau très léger posé sur le fond */
+  --veil-2: rgba(255, 255, 255, 0.06); /* bouton discret, survol */
   --border: rgba(255, 255, 255, 0.1);
   --text: rgba(255, 255, 255, 0.92);
   --muted: rgba(255, 255, 255, 0.62);
-  --accent: #7c5cff;
-  --accent2: #3ee6b5;
+  --accent: #7c5cff;        /* violet : action principale, élément courant */
+  --accent-rgb: 124, 92, 255;
+  --accent2: #3ee6b5;       /* turquoise : liens, coup principal, succès */
+  --accent2-rgb: 62, 230, 181;
+  --ok: var(--accent2);
+  --warn: #ffb86b;          /* avertissements, démonstrations */
+  --warn-rgb: 255, 184, 107;
+  --danger: #ff6b6b;        /* fautes, erreurs */
+  --danger-rgb: 255, 107, 107;
+  --danger-text: #ff8a8a;   /* texte d'erreur lisible sur fond sombre */
+  --info: #6ea8ff;          /* variantes, information neutre */
   --radius: 10px;
   --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   --sans: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, sans-serif;
   --board-max: min(100%, calc(100vh - 5rem));
+}
+
+/* Pont vers Bootstrap (pages qui chargent vendor-web/bootstrap/) : ses composants
+   prennent nos couleurs. Sans Bootstrap, ces variables sont simplement inertes. */
+:root,
+[data-bs-theme='dark'] {
+  --bs-body-bg: var(--bg);
+  --bs-body-color: var(--text);
+  --bs-emphasis-color: #fff;
+  --bs-secondary-color: var(--muted);
+  --bs-tertiary-color: rgba(255, 255, 255, 0.45);
+  --bs-secondary-bg: var(--surface-2);
+  --bs-tertiary-bg: var(--surface);
+  --bs-border-color: var(--border);
+  --bs-border-color-translucent: var(--border);
+  --bs-border-radius: 8px;
+  --bs-border-radius-lg: var(--radius);
+  --bs-link-color: var(--accent2);
+  --bs-link-color-rgb: var(--accent2-rgb);
+  --bs-link-hover-color: #7df0cd;
+  --bs-link-hover-color-rgb: 125, 240, 205;
+  --bs-primary: var(--accent);
+  --bs-primary-rgb: var(--accent-rgb);
+  --bs-success-rgb: var(--accent2-rgb);
+  --bs-danger-rgb: var(--danger-rgb);
+  --bs-warning-rgb: var(--warn-rgb);
+  --bs-focus-ring-color: rgba(var(--accent-rgb), 0.3);
+  --bs-body-font-family: var(--sans);
+  --bs-code-color: var(--accent2);
 }
 
 * {
@@ -24,7 +70,7 @@ body {
 
 body {
   font-family: var(--sans);
-  background: #0a0d12;
+  background: var(--bg);
   color: var(--text);
 }
 
@@ -42,7 +88,7 @@ code {
 .topbar {
   flex-shrink: 0;
   border-bottom: 1px solid var(--border);
-  background: #0d1118;
+  background: var(--bg-2);
   display: flex;
   align-items: center;
   gap: 8px;
@@ -65,11 +111,21 @@ code {
   padding: 4px 6px;
   border-radius: 6px;
   border: 1px solid var(--border);
-  background: #1a2130;
+  background-color: var(--surface-2);
   color: var(--text);
   font-size: 0.68rem;
   font-weight: 600;
   line-height: 1.2;
+}
+
+/* Un .opening-select qui porte aussi form-select (pages Bootstrap) garde la flèche,
+   mais nos dimensions compactes. */
+.opening-select.form-select {
+  display: inline-block;
+  width: auto;
+  padding-right: 1.9rem;
+  background-position: right 0.45rem center;
+  background-size: 14px 10px;
 }
 
 .opening-select[hidden] {
@@ -107,13 +163,13 @@ code {
   font-weight: 700;
   text-decoration: none;
   white-space: nowrap;
-  border-color: rgba(62, 230, 181, 0.35);
-  background: rgba(62, 230, 181, 0.12);
+  border-color: rgba(var(--accent2-rgb), 0.35);
+  background: rgba(var(--accent2-rgb), 0.12);
   color: #9ef0d4;
 }
 
 .btn--play:hover {
-  background: rgba(62, 230, 181, 0.22);
+  background: rgba(var(--accent2-rgb), 0.22);
   color: #c8ffe8;
 }
 
@@ -144,7 +200,10 @@ code {
 }
 
 .card {
-  background: #12161f;
+  --bs-card-bg: var(--surface);
+  --bs-card-border-color: var(--border);
+  --bs-card-color: var(--text);
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
@@ -597,30 +656,116 @@ code {
   z-index: 2;
 }
 
+/* Boutons : une seule définition pour tout le site. Les variables --bs-btn-* font
+   fonctionner les états Bootstrap (focus, active) sur les pages qui le chargent ;
+   les propriétés posées en dur suffisent sur les pages sans Bootstrap. */
 .btn {
+  --bs-btn-padding-y: 6px;
+  --bs-btn-padding-x: 12px;
+  --bs-btn-font-size: 0.85rem;
+  --bs-btn-font-weight: 600;
+  --bs-btn-border-radius: 8px;
+  --bs-btn-color: var(--text);
+  --bs-btn-bg: var(--veil-2);
+  --bs-btn-border-color: var(--border);
+  --bs-btn-hover-color: var(--text);
+  --bs-btn-hover-bg: rgba(255, 255, 255, 0.12);
+  --bs-btn-hover-border-color: var(--border);
+  --bs-btn-active-color: var(--text);
+  --bs-btn-active-bg: rgba(255, 255, 255, 0.16);
+  --bs-btn-active-border-color: var(--border);
+  --bs-btn-disabled-color: var(--muted);
+  --bs-btn-disabled-bg: var(--veil-2);
+  --bs-btn-disabled-border-color: var(--border);
+  --bs-btn-focus-shadow-rgb: var(--accent-rgb);
   appearance: none;
+  display: inline-block;
   border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.06);
+  background: var(--veil-2);
   color: var(--text);
-  padding: 8px 6px;
+  padding: 6px 12px;
   border-radius: 8px;
   cursor: pointer;
+  font: inherit;
   font-weight: 600;
   font-size: 0.85rem;
+  line-height: 1.4;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  user-select: none;
 }
 
 .btn:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--text);
 }
 
 .btn--primary {
-  border-color: rgba(124, 92, 255, 0.5);
-  background: rgba(124, 92, 255, 0.28);
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--accent);
+  --bs-btn-border-color: transparent;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: color-mix(in srgb, var(--accent) 86%, white);
+  --bs-btn-hover-border-color: transparent;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: color-mix(in srgb, var(--accent) 78%, white);
+  --bs-btn-active-border-color: transparent;
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: var(--accent);
+  --bs-btn-disabled-border-color: transparent;
+  border-color: transparent;
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn--primary:hover {
+  background: color-mix(in srgb, var(--accent) 86%, white);
+  color: #fff;
 }
 
 .btn:disabled {
   opacity: 0.45;
   cursor: not-allowed;
+  pointer-events: auto;
+}
+
+/* Champs de formulaire Bootstrap sur fond sombre : nos surfaces, notre accent. */
+.form-control,
+.form-select,
+.form-check-input {
+  background-color: var(--surface-2);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus {
+  background-color: var(--surface-2);
+  color: var(--text);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 0.2rem rgba(var(--accent-rgb), 0.25);
+}
+
+.form-check-input:checked {
+  background-color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* Tableaux Bootstrap : fond transparent (ils vivent dans des cartes), en-têtes discrets. */
+.table {
+  --bs-table-bg: transparent;
+  --bs-table-color: var(--text);
+  --bs-table-border-color: var(--border);
+}
+
+.table th {
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .status {
@@ -731,12 +876,12 @@ code {
 }
 
 .move--current {
-  border-color: rgba(124, 92, 255, 0.55);
-  background: rgba(124, 92, 255, 0.22);
+  border-color: rgba(var(--accent-rgb), 0.55);
+  background: rgba(var(--accent-rgb), 0.22);
 }
 
 .move--branchpoint {
-  border-color: rgba(62, 230, 181, 0.35);
+  border-color: rgba(var(--accent2-rgb), 0.35);
 }
 
 .commentary {
@@ -775,8 +920,8 @@ code {
 
 .branch-btn {
   appearance: none;
-  border: 1px solid rgba(124, 92, 255, 0.45);
-  background: rgba(124, 92, 255, 0.22);
+  border: 1px solid rgba(var(--accent-rgb), 0.45);
+  background: rgba(var(--accent-rgb), 0.22);
   color: #c5b8ff;
   font-family: var(--mono);
   font-size: 0.72rem;
@@ -788,7 +933,7 @@ code {
 }
 
 .branch-btn:hover {
-  background: rgba(124, 92, 255, 0.4);
+  background: rgba(var(--accent-rgb), 0.4);
   color: #fff;
 }
 
@@ -866,7 +1011,7 @@ code {
 
 .mentor-tab--active {
   color: var(--text);
-  background: rgba(124, 92, 255, 0.22);
+  background: rgba(var(--accent-rgb), 0.22);
   border: 1px solid var(--border);
   border-bottom-color: transparent;
 }

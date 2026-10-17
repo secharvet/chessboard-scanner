@@ -1,9 +1,10 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr" data-bs-theme="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Administration</title>
+    <link rel="stylesheet" href="./vendor-web/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./site-nav.css" />
     <link rel="stylesheet" href="./compte.css" />
@@ -11,30 +12,38 @@
   <body>
     <div class="app">
       <main class="cpt adm">
-        <section class="cpt__carte" style="width:min(100%,760px)">
-          <h1>Administration</h1>
-          <p class="cpt__sous" id="moi"></p>
-          <h2 style="font-size:1.05rem;margin:18px 0 4px">Inviter quelqu'un</h2>
-          <form id="fInvite">
-            <label>Courriel <input type="email" name="email" required /></label>
-            <label>Rôle <select name="role"><option value="enseignant">enseignant</option><option value="validateur">validateur</option><option value="admin">admin</option><option value="apprenant">apprenant</option></select></label>
-            <label>Club (facultatif) <input type="text" name="club" maxlength="80" /></label>
-            <button class="btn btn--primary" type="submit">Créer le lien d'invitation</button>
-          </form>
-          <p id="lien" class="adm__lien" hidden></p>
-          <p class="cpt__info">Le lien vaut sept jours, à transmettre toi-même (courriel, message) tant que l'envoi automatique n'est pas configuré.</p>
-          <p class="cpt__erreur" id="erreur" hidden></p>
-          <h2 style="font-size:1.05rem;margin:22px 0 4px">Auteur de référence par livre</h2>
-          <p class="cpt__info">L'auteur lu par défaut, et le repli quand le professeur choisi n'a rien écrit sur une position. Réservé à l'administrateur.</p>
-          <form id="fReference">
-            <label>Livre <select name="livre" id="refLivre"></select></label>
-            <label>Auteur <select name="author_id" id="refAuteur"></select></label>
-            <button class="btn" type="submit">Définir la référence</button>
-          </form>
-          <p id="refEtat" class="cpt__info"></p>
-          <h2 style="font-size:1.05rem;margin:22px 0 4px">Comptes</h2>
-          <table><thead><tr><th>Nom</th><th>Courriel</th><th>Rôle</th><th>Club</th><th>Textes publiés</th></tr></thead><tbody id="comptes"></tbody></table>
-          <p class="cpt__pied"><a href="./ouverture.html">← Assistant d'ouverture</a> · <a href="./editeur.html">Éditeur</a></p>
+        <section class="cpt__carte card" style="width:min(100%,760px)">
+          <div class="card-body p-4">
+            <h1 class="h4 mb-2">Administration</h1>
+            <p class="cpt__sous" id="moi"></p>
+            <h2 class="h6 mt-4 mb-2">Inviter quelqu'un</h2>
+            <form id="fInvite">
+              <div class="row g-2">
+                <div class="col-md-5"><label class="form-label mb-1" for="invCourriel">Courriel</label><input class="form-control form-control-sm" id="invCourriel" type="email" name="email" required /></div>
+                <div class="col-md-3"><label class="form-label mb-1" for="invRole">Rôle</label><select class="form-select form-select-sm" id="invRole" name="role"><option value="enseignant">enseignant</option><option value="validateur">validateur</option><option value="admin">admin</option><option value="apprenant">apprenant</option></select></div>
+                <div class="col-md-4"><label class="form-label mb-1" for="invClub">Club (facultatif)</label><input class="form-control form-control-sm" id="invClub" type="text" name="club" maxlength="80" /></div>
+              </div>
+              <button class="btn btn--primary mt-3" type="submit">Créer le lien d'invitation</button>
+            </form>
+            <p id="lien" class="adm__lien mt-3" hidden></p>
+            <p class="cpt__info mt-2">Le lien vaut sept jours, à transmettre toi-même (courriel, message) tant que l'envoi automatique n'est pas configuré.</p>
+            <p class="cpt__erreur" id="erreur" hidden></p>
+            <h2 class="h6 mt-4 mb-2">Auteur de référence par livre</h2>
+            <p class="cpt__info">L'auteur lu par défaut, et le repli quand le professeur choisi n'a rien écrit sur une position. Réservé à l'administrateur.</p>
+            <form id="fReference">
+              <div class="row g-2 align-items-end">
+                <div class="col-md-4"><label class="form-label mb-1" for="refLivre">Livre</label><select class="form-select form-select-sm" name="livre" id="refLivre"></select></div>
+                <div class="col-md-5"><label class="form-label mb-1" for="refAuteur">Auteur</label><select class="form-select form-select-sm" name="author_id" id="refAuteur"></select></div>
+                <div class="col-md-3"><button class="btn w-100" type="submit">Définir la référence</button></div>
+              </div>
+            </form>
+            <p id="refEtat" class="cpt__info mt-2"></p>
+            <h2 class="h6 mt-4 mb-2">Comptes</h2>
+            <div class="table-responsive">
+              <table class="table table-sm align-middle mb-2"><thead><tr><th>Nom</th><th>Courriel</th><th>Rôle</th><th>Club</th><th>Textes publiés</th></tr></thead><tbody id="comptes"></tbody></table>
+            </div>
+            <p class="cpt__pied mb-0"><a href="./ouverture.html">← Assistant d'ouverture</a> · <a href="./editeur.html">Éditeur</a></p>
+          </div>
         </section>
       </main>
     </div>

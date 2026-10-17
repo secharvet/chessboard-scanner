@@ -1,9 +1,10 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr" data-bs-theme="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Connexion</title>
+    <link rel="stylesheet" href="./vendor-web/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./site-nav.css" />
     <link rel="stylesheet" href="./compte.css" />
@@ -11,30 +12,35 @@
   <body>
     <div class="app">
       <main class="cpt">
-        <section class="cpt__carte" id="carte">
-          <h1 id="titre">Connexion</h1>
-          <p class="cpt__erreur" id="erreur" role="alert" aria-live="assertive" hidden></p>
-          <p class="cpt__sous" id="sous">Réservé aux comptes créés par invitation. Les apprenants n'ont pas besoin de compte pour lire.</p>
-          <form id="fConnexion" method="post" action="#" autocomplete="on" novalidate>
-            <label>Courriel <input type="email" name="email" required autocomplete="username" /></label>
-            <label>Mot de passe <input type="password" name="mot_de_passe" required autocomplete="current-password" /></label>
-            <button class="btn btn--primary" type="submit">Se connecter</button>
-            <p class="cpt__info">Pas encore de compte ? Les comptes se créent à partir d'un <b>lien d'invitation</b> reçu d'un administrateur : ouvre ce lien, il te proposera de créer ton compte.</p>
-          </form>
-          <form id="fMotDePasse" method="post" action="#" novalidate hidden>
-            <h2 style="font-size:1.05rem;margin:14px 0 0">Changer mon mot de passe</h2>
-            <label>Mot de passe actuel <input type="password" name="actuel" autocomplete="current-password" /></label>
-            <label>Nouveau mot de passe (10 caractères au moins) <input type="password" name="nouveau" autocomplete="new-password" /></label>
-            <button class="btn" type="submit">Changer</button>
-          </form>
-          <form id="fInvitation" method="post" action="#" novalidate hidden>
-            <p class="cpt__info">Invitation pour <b id="invEmail"></b> avec le rôle <b id="invRole"></b>.</p>
-            <label>Nom affiché <input type="text" name="display_name" required maxlength="60" placeholder="ex. Marc Q., club de Sceaux" /></label>
-            <label>Mot de passe (10 caractères au moins) <input type="password" name="mot_de_passe" required minlength="10" autocomplete="new-password" /></label>
-            <label class="cpt__case" id="licenceBloc"><input type="checkbox" name="licence" /> <span>Je publie mes textes sous licence <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr" target="_blank" rel="noopener">CC BY-SA 4.0</a> (attribution, partage dans les mêmes conditions). Je reste l'auteur de ce que j'écris.</span></label>
-            <button class="btn btn--primary" type="submit">Créer mon compte</button>
-          </form>
-          <p class="cpt__pied"><a href="./ouverture.html">← Retour à l'assistant d'ouverture</a></p>
+        <section class="cpt__carte card" id="carte">
+          <div class="card-body p-4">
+            <h1 class="h4 mb-2" id="titre">Connexion</h1>
+            <p class="cpt__erreur" id="erreur" role="alert" aria-live="assertive" hidden></p>
+            <p class="cpt__sous" id="sous">Réservé aux comptes créés par invitation. Les apprenants n'ont pas besoin de compte pour lire.</p>
+            <form id="fConnexion" method="post" action="#" autocomplete="on" novalidate>
+              <div class="mb-3"><label class="form-label" for="cEmail">Courriel</label><input class="form-control" id="cEmail" type="email" name="email" required autocomplete="username" /></div>
+              <div class="mb-3"><label class="form-label" for="cMdp">Mot de passe</label><input class="form-control" id="cMdp" type="password" name="mot_de_passe" required autocomplete="current-password" /></div>
+              <button class="btn btn--primary w-100" type="submit">Se connecter</button>
+              <p class="cpt__info mt-3 mb-0">Pas encore de compte ? Les comptes se créent à partir d'un <b>lien d'invitation</b> reçu d'un administrateur : ouvre ce lien, il te proposera de créer ton compte.</p>
+            </form>
+            <form id="fMotDePasse" method="post" action="#" novalidate hidden>
+              <h2 class="h6 mt-3 mb-3">Changer mon mot de passe</h2>
+              <div class="mb-3"><label class="form-label" for="mdpActuel">Mot de passe actuel</label><input class="form-control" id="mdpActuel" type="password" name="actuel" autocomplete="current-password" /></div>
+              <div class="mb-3"><label class="form-label" for="mdpNouveau">Nouveau mot de passe (10 caractères au moins)</label><input class="form-control" id="mdpNouveau" type="password" name="nouveau" autocomplete="new-password" /></div>
+              <button class="btn" type="submit">Changer</button>
+            </form>
+            <form id="fInvitation" method="post" action="#" novalidate hidden>
+              <p class="cpt__info">Invitation pour <b id="invEmail"></b> avec le rôle <b id="invRole"></b>.</p>
+              <div class="mb-3"><label class="form-label" for="invNom">Nom affiché</label><input class="form-control" id="invNom" type="text" name="display_name" required maxlength="60" placeholder="ex. Marc Q., club de Sceaux" /></div>
+              <div class="mb-3"><label class="form-label" for="invMdp">Mot de passe (10 caractères au moins)</label><input class="form-control" id="invMdp" type="password" name="mot_de_passe" required minlength="10" autocomplete="new-password" /></div>
+              <div class="form-check mb-3" id="licenceBloc">
+                <input class="form-check-input" type="checkbox" name="licence" id="invLicence" />
+                <label class="form-check-label cpt__info" for="invLicence">Je publie mes textes sous licence <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr" target="_blank" rel="noopener">CC BY-SA 4.0</a> (attribution, partage dans les mêmes conditions). Je reste l'auteur de ce que j'écris.</label>
+              </div>
+              <button class="btn btn--primary w-100" type="submit">Créer mon compte</button>
+            </form>
+            <p class="cpt__pied mt-3 mb-0"><a href="./ouverture.html">← Retour à l'assistant d'ouverture</a></p>
+          </div>
         </section>
       </main>
     </div>

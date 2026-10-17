@@ -3,11 +3,13 @@
  * Vérification des pages de la plateforme dans Chromium sans tête (17 octobre 2026) : erreurs JS, console, éléments clés.
  * Se connecte via l'API avec un compte de test, puis charge l'éditeur, l'administration, la connexion et l'assistant.
  *   node scripts/verifier-pages.mjs            (BASE=http://localhost:6400 par défaut : nginx direct, sans Caddy)
+ *   LARGEUR=390 node scripts/verifier-pages.mjs   (largeur téléphone ; l'éditeur y est en lecture seule)
  */
 import { chromium } from 'playwright';
 const base = (process.env.BASE || 'http://localhost:6400').replace(/\/$/, '');
 const compte = { email: process.env.EMAIL || 'prof-demo@demo.local', mot_de_passe: process.env.MDP || 'demo-demo-demo' };
-const browser = await chromium.launch(); const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 } });
+const largeur = Number(process.env.LARGEUR || 1440); const telephone = largeur <= 800;
+const browser = await chromium.launch(); const ctx = await browser.newContext({ viewport: { width: largeur, height: Number(process.env.HAUTEUR || (telephone ? 844 : 900)) } });
 const problemes = []; let total = 0;
 async function verifier(url, attentes = []) {
   const page = await ctx.newPage(); const erreurs = [];
@@ -32,7 +34,10 @@ await verifier(`${base}/play.html`, ['.site-nav', '.board']);
 await verifier(`${base}/guide-enseignant.html`, ['.gde table']);
 await verifier(`${base}/connexion.html`, ['form#fConnexion']);
 await verifier(`${base}/ouverture.html`, ['#ouvBoard .fen-board', '#ouvRecit']);
-await verifier(`${base}/editeur.html?livre=francaise&coups=${coups}`, ['.fen-board', async function formulaire(p) { return (await p.locator('textarea, input[type=text]').count()) >= 2; }, async function cartesDeCoups(p) { const t = await p.locator('body').innerText(); return /e5/.test(t) && /Cc3|Nc3/.test(t); }]);
+// Téléphone : l'édition est volontairement coupée (lecture seule), on vérifie le message plutôt que le formulaire.
+await verifier(`${base}/editeur.html?livre=francaise&coups=${coups}`, telephone
+  ? ['.fen-board', async function messageLectureSeule(p) { return p.locator('.edi__telephone').isVisible(); }]
+  : ['.fen-board', async function formulaire(p) { return (await p.locator('textarea, input[type=text]').count()) >= 2; }, async function cartesDeCoups(p) { const t = await p.locator('body').innerText(); return /e5/.test(t) && /Cc3|Nc3/.test(t); }]);
 await verifier(`${base}/admin.html`, []);  // avec un simple enseignant : redirection vers la connexion attendue (pas une erreur)
 // administration avec un compte admin
 await ctx.request.post(`${base}/api/auth/deconnexion`);

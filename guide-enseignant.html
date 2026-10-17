@@ -1,33 +1,33 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr" data-bs-theme="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Guide de l'enseignant</title>
+    <link rel="stylesheet" href="./vendor-web/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./site-nav.css" />
     <style>
-      .gde { max-width: 820px; margin: 0 auto; padding: 28px 16px 48px; line-height: 1.55; }
-      .gde h1 { font-size: 1.7rem; margin: 0 0 4px; } .gde h2 { font-size: 1.15rem; margin: 26px 0 8px; color: var(--accent2); }
-      .gde p, .gde li { max-width: 70ch; } .gde .sous { color: var(--muted); }
-      .gde table { border-collapse: collapse; width: 100%; font-size: 0.93rem; margin: 8px 0 14px; }
-      .gde th, .gde td { text-align: left; padding: 7px 8px; border-bottom: 1px solid var(--border); vertical-align: top; }
-      .gde th { color: var(--muted); font-weight: 600; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; }
-      .gde kbd { font-family: var(--mono); background: rgba(255,255,255,0.08); padding: 1px 6px; border-radius: 4px; font-size: 0.85em; }
+      .gde { max-width: 820px; line-height: 1.55; }
+      .gde h2 { font-size: 1.15rem; margin: 26px 0 8px; color: var(--accent2); }
+      .gde p, .gde li { max-width: 70ch; }
+      .gde table { font-size: 0.93rem; }
+      .gde td { vertical-align: top; }
+      .gde kbd { font-family: var(--mono); background: var(--veil-2); color: var(--text); padding: 1px 6px; border-radius: 4px; font-size: 0.85em; }
       .pastille { display: inline-block; width: 10px; height: 10px; border-radius: 50%; vertical-align: middle; margin-right: 4px; }
     </style>
   </head>
   <body>
     <div class="app">
-      <main class="gde">
-        <h1>Guide de l'enseignant</h1>
-        <p class="sous">Comment écrire, montrer et publier une explication d'ouverture. Cinq minutes de lecture.</p>
+      <main class="gde container px-3 py-4 py-md-5">
+        <h1 class="h3 mb-1">Guide de l'enseignant</h1>
+        <p class="text-body-secondary">Comment écrire, montrer et publier une explication d'ouverture. Cinq minutes de lecture.</p>
 
         <h2>1. Où écrit-on ?</h2>
         <p>Dans l'<a href="./ouverture.html">assistant d'ouverture</a>, place-toi sur une position (joue les coups, ou clique dans la ligne), puis <b>« Modifier cette position »</b>. Tu arrives dans l'éditeur : l'échiquier à gauche, ton texte à droite. Si la position n'est pas encore dans le livre, l'éditeur la crée quand tu y arrives en jouant un coup légal depuis une position connue.</p>
 
         <h2>2. Ce que contient une explication</h2>
-        <table>
+        <table class="table table-sm">
           <tr><th>Champ</th><th>Ce qu'on y met</th></tr>
           <tr><td>Nom de la variante</td><td>Seulement si la position en a un (« Française, variante d'avance »).</td></tr>
           <tr><td>Sens du dernier coup</td><td>Une à trois phrases : ce que cherche le coup qui vient d'être joué, et ce qu'il laisse à l'adversaire.</td></tr>
@@ -40,7 +40,7 @@
 
         <h2>3. Montrer sur l'échiquier</h2>
         <p>Au-dessus de l'échiquier, quatre modes :</p>
-        <table>
+        <table class="table table-sm">
           <tr><th>Mode</th><th>Geste</th><th>Effet</th></tr>
           <tr><td><b>Jouer</b></td><td>déplacer une pièce</td><td>naviguer vers la position suivante ; si le coup n'est pas dans l'arbre, proposition de l'ajouter</td></tr>
           <tr><td><b>Surligner</b></td><td>clic sur une case</td><td>la case se colore ; clics suivants : <span class="pastille" style="background:#3ee6b5"></span>vert → <span class="pastille" style="background:#6ea8ff"></span>bleu → <span class="pastille" style="background:#ff6b6b"></span>rouge → <span class="pastille" style="background:#ffb86b"></span>orange → retrait</td></tr>
@@ -67,7 +67,7 @@
         <h2>7. La licence</h2>
         <p>Les textes publiés sont sous <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr" target="_blank" rel="noopener">CC BY-SA 4.0</a> : n'importe qui peut les réutiliser en citant l'auteur et en partageant dans les mêmes conditions. Tu restes l'auteur de ce que tu écris.</p>
 
-        <p class="sous" style="margin-top:28px"><a href="./editeur.html">Ouvrir l'éditeur</a> · <a href="./ouverture.html">Assistant d'ouverture</a></p>
+        <p class="text-body-secondary mt-5 mb-0"><a href="./editeur.html">Ouvrir l'éditeur</a> · <a href="./ouverture.html">Assistant d'ouverture</a></p>
       </main>
     </div>
     <script type="module" src="./site-nav.js"></script>

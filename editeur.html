@@ -1,9 +1,10 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr" data-bs-theme="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Éditeur enseignant — ouvertures</title>
+    <link rel="stylesheet" href="./vendor-web/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./site-nav.css" />
     <link rel="stylesheet" href="./play.css" />
@@ -20,7 +21,7 @@
         <div class="topbar__pickers">
           <div class="topbar__picker">
             <label class="topbar__picker-label" for="ediLivre">Ouverture</label>
-            <select id="ediLivre" class="opening-select"><option value="francaise">Défense française</option><option value="italienne">Partie italienne</option></select>
+            <select id="ediLivre" class="opening-select form-select form-select-sm"><option value="francaise">Défense française</option><option value="italienne">Partie italienne</option></select>
           </div>
           <div class="topbar__picker edi__moi" id="ediMoi" title="Compte connecté">…</div>
         </div>
@@ -77,7 +78,7 @@
               <button type="button" class="btn" id="btnVerifier" title="Vérifier au moteur">Vérifier</button>
               <button type="button" class="btn" id="btnHistorique">Historique</button>
               <button type="button" class="btn" id="btnRemarques">Remarques</button>
-              <select id="selReprendre" class="opening-select" title="Partir du texte d'un autre auteur"><option value="">Partir du texte de…</option></select>
+              <select id="selReprendre" class="opening-select form-select form-select-sm" title="Partir du texte d'un autre auteur"><option value="">Partir du texte de…</option></select>
             </div>
             <div class="edi__sauvegarde" id="ediSauvegarde"></div>
             <div class="edi__avertissements" id="ediAvertissements" hidden></div>

@@ -17,7 +17,7 @@ function rendre(utilisateur) {
   const compte = utilisateur
     ? `<a class="site-nav__lien site-nav__compte" href="./connexion.html"><span class="site-nav__titre"><span class="site-nav__long">${utilisateur.display_name}</span><span class="site-nav__court">Moi</span></span><span class="site-nav__sous">${utilisateur.role}${utilisateur.club ? ' · ' + utilisateur.club : ''}</span></a>`
     : `<a class="site-nav__lien site-nav__compte${ici === 'connexion.html' ? ' site-nav__lien--actif' : ''}" href="./connexion.html"><span class="site-nav__titre"><span class="site-nav__long">Connexion</span><span class="site-nav__court">Compte</span></span><span class="site-nav__sous">enseignants invités</span></a>`;
-  nav.innerHTML = `<a class="site-nav__marque" href="./accueil.html" style="text-decoration:none;color:inherit">Échecs<br><small>plateforme d'apprentissage</small></a>` + visibles.map(lien).join('') + compte + `<div class="site-nav__pied">Projet ouvert, par passion, pour les clubs.</div>`;
+  nav.innerHTML = `<a class="site-nav__marque" href="./accueil.html">Échecs<br><small>plateforme d'apprentissage</small></a>` + visibles.map(lien).join('') + compte + `<div class="site-nav__pied">Projet ouvert, par passion, pour les clubs.</div>`;
 }
 rendre(null); document.body.prepend(nav); document.body.classList.add('has-site-nav');
 fetch('/api/auth/moi', { credentials: 'same-origin' }).then((r) => r.ok ? r.json() : null).then((j) => { if (j?.utilisateur) rendre(j.utilisateur); }).catch(() => {});

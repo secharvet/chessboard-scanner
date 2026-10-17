@@ -102,6 +102,7 @@ This is a **vanilla JS, no-build-step** chess web app served by nginx in Podman.
 
 ### Vendor / Docker split
 
+- `vendor-web/` — browser libraries committed to the repo (Bootstrap 5 CSS/JS), served statically from the repo mount in dev; the prod Dockerfile must COPY it alongside the pages
 - `vendor/chess.js` — copied from `node_modules` by `npm postinstall` (for host-side tests and scripts)
 - `/vendor/` inside the container — built into the Docker image (`docker/web/package.json` installs chess.js 1.4.0 + stockfish 16.0.0)
 - Never import from `node_modules` directly in browser code; use `/vendor/chess.js`

@@ -291,7 +291,7 @@ function carteCoup(m) {
   const nPas = e.sequence?.pas?.length ?? 0; const nAnn = e.annotations.length + (e.sequence?.pas ?? []).reduce((s, p) => s + (p.annotations?.length ?? 0), 0);
   d.innerHTML = `<div class="ccoup__san">${esc(fr(m.san))}</div>
     <div class="ccoup__why"><textarea placeholder="Pourquoi ce coup : ce qu'il fait, ce qu'il prépare, ce qu'il laisse à l'adversaire.">${esc(e.pourquoi)}</textarea></div>
-    <div class="ccoup__type"><select>${Object.entries(TYPES).map(([k, v]) => `<option value="${k}" ${k === m.kind ? 'selected' : ''} ${(k === 'principal' && !estValidateur() && m.kind !== 'principal') || (k === 'porte' && m.kind !== 'porte') ? 'disabled' : ''}>${v}</option>`).join('')}</select></div>
+    <div class="ccoup__type"><select class="form-select form-select-sm">${Object.entries(TYPES).map(([k, v]) => `<option value="${k}" ${k === m.kind ? 'selected' : ''} ${(k === 'principal' && !estValidateur() && m.kind !== 'principal') || (k === 'porte' && m.kind !== 'porte') ? 'disabled' : ''}>${v}</option>`).join('')}</select></div>
     <div class="ccoup__pied"><span>${nAnn} annotation${nAnn > 1 ? 's' : ''}</span>
       <button type="button" class="btn" data-demo>${nPas ? `Modifier la suite (${nPas} pas)` : 'Enregistrer une suite'}</button>
       ${m.kind !== 'porte' ? '<button type="button" class="btn ccoup__jouer" data-jouer title="Aller à la position après ce coup">jouer ce coup ▸</button>' : ''}
