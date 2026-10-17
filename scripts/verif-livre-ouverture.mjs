@@ -8,7 +8,8 @@ import { toFrenchSan } from '../coach/notation.mjs';
 const engine = new UciEngine({ threads: 1 });
 const DEPTH = Number(process.argv[2] ?? 18);
 const cp = (s) => (s.type === 'mate' ? (s.value > 0 ? 10000 : -10000) : s.value);
-const rows = []; let okPlan = 0, nPlan = 0, okErr = 0, nErr = 0;
+const rows = []; let okPlan = 0, nPlan = 0, okErr = 0, nErr = 0, nIllegal = 0;
+const NOM = process.argv[3] ?? 'francaise';
 for (const e of LIVRE) {
   if (!e.plan?.length && !e.erreurs?.length) continue;
   const c = new Chess(); for (const san of e.coups.split(' ')) c.move(san);
@@ -16,6 +17,9 @@ for (const e of LIVRE) {
   const top = lines.map((l) => { const cc = new Chess(c.fen()); const m = cc.move({ from: l.pv[0].slice(0, 2), to: l.pv[0].slice(2, 4), promotion: l.pv[0][4] }); return { san: m.san, cp: cp(l.score) }; });
   const best = top[0]?.cp ?? 0;
   const verdict = (san, attenduBon) => {
+    // Un SAN illégal n'est jamais dans le top 5 : sans ce test il passerait pour une « erreur confirmée ».
+    let legal = true; try { new Chess(c.fen()).move(san); } catch { legal = false; }
+    if (!legal) { nIllegal++; return { san, rang: 'ILLÉGAL', ecart: '—', ok: false }; }
     const i = top.findIndex((t) => t.san === san);
     const d = i >= 0 ? best - top[i].cp : null;
     const bon = i >= 0 && d <= 40; // plan : à moins de 0,4 du meilleur (les ouvertures ont souvent cinq coups équivalents)
@@ -27,7 +31,7 @@ for (const e of LIVRE) {
   console.log(`${e.coups} : moteur ${top.slice(0, 3).map((t) => `${toFrenchSan(t.san)} ${t.cp}`).join(', ')}`);
 }
 engine.stop();
-const md = [`# Vérification du livre de la Française au moteur (profondeur ${DEPTH})`, '', `Coups de plan confirmés : ${okPlan}/${nPlan}. Erreurs confirmées mauvaises : ${okErr}/${nErr}.`, '', '| Position | Type | Coup | Rang moteur | Écart (pions) | OK |', '|---|---|---|---|---|---|'];
+const md = [`# Vérification du livre « ${NOM} » au moteur (profondeur ${DEPTH})`, '', `Coups de plan confirmés : ${okPlan}/${nPlan}. Erreurs confirmées mauvaises : ${okErr}/${nErr}. Coups ILLÉGAUX : ${nIllegal}.`, '', '| Position | Type | Coup | Rang moteur | Écart (pions) | OK |', '|---|---|---|---|---|---|'];
 for (const r of rows) md.push(`| ${r.coups} | ${r.type} | ${r.san} | ${r.rang} | ${r.ecart} | ${r.ok ? '✓' : '✗'} |`);
-writeFileSync('reports/verif-livre-' + (process.argv[3] ?? 'francaise') + '.md', md.join('\n') + '\n');
-console.log(`TERMINÉ plan ${okPlan}/${nPlan} erreurs ${okErr}/${nErr}`);
+writeFileSync('reports/verif-livre-' + NOM + '.md', md.join('\n') + '\n');
+console.log(`TERMINÉ plan ${okPlan}/${nPlan} erreurs ${okErr}/${nErr} illégaux ${nIllegal}`);

@@ -1413,3 +1413,18 @@ séquences de l'auteur, bouton Modifier), accueil, guide de l'enseignant, 404, a
 réordonnancement et changement de type des coups, comparaison de versions, sauvegarde quotidienne, README. Contrôles :
 9 pages sans erreur dans Chromium, scénario enseignant complet, test API de bout en bout, 298 tests. Reste : courriels
 (SMTP), glisser tactile, annotations dans la comparaison, premier enseignant réel. Invitation admin de l'auteur en attente.
+
+## 17 octobre 2026, après-midi : troisième livre, la Partie espagnole
+
+Décision de l'auteur (après la refonte visuelle, le choix des pièces et le son des coups) : ajouter l'Espagnole, l'ouverture
+la plus instructive après l'Italienne et déjà annoncée comme « porte » dans ce livre. Noyau écrit à la main par le pilote
+(`coach/openings/espagnole.mjs`) : Morphy, Espagnole fermée jusqu'à la Tchigorine 11.d4, Ouverte, Berlinoise, variante
+d'échange, Steinitz différée avec l'Arche de Noé. **Relecture par la session Expert échecs** : 6 coups illégaux dans les
+fautes (Fxc6 alors que …b5 bloque la diagonale, Fa2 pion en a2, cavalier c6 cloué…), 3 « pourquoi » faux (après Te1, la
+réfutation de …Cxe4 est Txe4 ! et non d4), menaces de l'échange et de l'Arche de Noé réécrites, 8 positions manquantes
+rédigées par l'expert (lignes …b5, Steinitz différée 5.c3, échange 5…f6, finale berlinoise). **Bug corrigé dans
+`scripts/verif-livre-ouverture.mjs`** : un SAN illégal n'était jamais dans le top 5 du moteur et passait donc pour une
+« faute confirmée » ; il est désormais signalé ILLÉGAL. Noyau final : 48 positions, 106/106 plans et 78/78 fautes confirmés
+(prof. 16), 0 illégal. Extension `etendre.mjs` en deux passes (2 × 150 rédactions IA, 0 échec), **342 positions** jusqu'au
+10e–11e coup, 1 378 coups cités tous légaux, **520 punitions** (prof. 16). Reste une frontière de ~150 positions profondes
+pour une passe ultérieure. Livre enregistré (`livres/index.js`, signature `e4 e5 Nf3 Nc6 Bb5`), importé en base, en ligne.

@@ -146,7 +146,7 @@ let recit = null;  // récit pas à pas d'une faute : { coups, phrases, annots, 
 let entreeCourante = null; // entrée normalisée (professeur principal) pour la position affichée
 let entree2 = null;        // idem pour le professeur comparé
 const RACINE = { nom: null, sens: '', menace: null, schema: null, annotations: [], erreurs: [], auteur: null, api: true,
-  plan: [{ san: 'e4', move_id: null, kind: 'principal', porte: null, pourquoi: 'ouvre le centre et libère la dame et le fou roi : le premier coup des deux livres (Française, Italienne) ; ce sont les Noirs qui choisiront l\'ouverture', annotations: [], sequence: null }] };
+  plan: [{ san: 'e4', move_id: null, kind: 'principal', porte: null, pourquoi: 'ouvre le centre et libère la dame et le fou roi : le premier coup des trois livres (Française, Italienne, Espagnole) ; ce sont les Noirs qui choisiront l\'ouverture', annotations: [], sequence: null }] };
 const entree = () => entreeCourante;
 function numero(c, san) { const n = Math.ceil((c.history().length + 1) / 2); return c.turn() === 'w' ? `${n}. ${fr(san)}` : `${n}… ${fr(san)}`; }
 
