@@ -1432,3 +1432,10 @@ pour une passe ultérieure. Livre enregistré (`livres/index.js`, signature `e4 
 cités tous légaux, **730 punitions** recalculées ; reste une frontière de ~190 positions au-delà du 10e coup, laissée là.
 Même jour : son des coups mesuré hors-ligne (crête 0,14 → 0,48, 23 → 103 ms) après que l'auteur l'a trouvé inaudible —
 l'enveloppe exponentielle vers zéro vidait le son en quelques millisecondes.
+**17 octobre, soir : lignes principales profondes (Française).** Constat sur l'Espagnole : les variantes sont bien explorées
+(jusqu'à 4 écarts du principal) mais tout s'arrête au 10e coup. Politique retenue avec l'auteur : prolonger la ligne principale
+et les variantes de 1er niveau (là où la littérature est solide) jusqu'au 15e coup, sans brancher, et laisser le reste au 10e.
+Option `--niveau-max` ajoutée à `etendre.mjs`. Française : **120 positions ajoutées** (ligne principale au 15e coup), 163 punitions
+ajoutées, **rien d'existant modifié** (contrôle : 392 anciennes intactes, 502 punitions intactes). Piège évité : `livres/francaise.js`
+est désormais régénéré chaque nuit depuis la base (export) — on n'y a ajouté les nouvelles positions qu'en annexe de l'export, et
+c'est l'import en base qui fait foi.

@@ -1,4 +1,4 @@
-// Exporté de la base par scripts/db/exporter-livres.mjs le 2026-10-17 : 392 positions, auteur de référence. Ne pas éditer à la main.
+// Livre exporté de la base (392 positions, intactes) + 120 prolongements « lignes principales profondes » du 17 octobre 2026, en attendant le prochain export nocturne. Ne pas éditer à la main.
 export const OUVERTURE = "Défense française";
 export const LIVRE = [
  {
@@ -10955,6 +10955,3294 @@ export const LIVRE = [
    }
   ],
   "auteur": "IA (brouillon)"
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 Nh6 Bd3 cxd4 O-O Bd7 b4 Nf5 Re1 a6 c4",
+  "nom": "Défense française, variante d'avance, ligne 6.a3",
+  "sens": "Attaque d5 et ouvre la colonne c pendant que le roi noir est encore au centre. Les Blancs abandonnent l'idée de reprendre d4 : ils veulent de l'activité et des lignes ouvertes contre un roi non roqué.",
+  "menace": "cxd5 : le pion e6 doit reprendre, puis e5-e6 ou d5-d6 vient casser le centre noir et gêner le développement.",
+  "plan": [
+   {
+    "san": "dxc4",
+    "pourquoi": "Prend le pion attaqué avant qu'il ne prenne d5. Le fou blanc va se recentrer sur c4 ou e4 et viser f7, mais les Noirs gardent le pion d4 en plus et leur cavalier f5 reste solide. C'est le seul coup qui ne perd pas de matériel : il faut ensuite jouer vite Be7 et O-O pour mettre le roi à l'abri."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Nxb4",
+    "pourquoi": "Prendre un pion avec le cavalier semble gratuit, mais après axb4 le cavalier est perdu. Reprendre ensuite en c4 ne suffit pas : Bxf5 rend la pièce et les Noirs restent avec une pièce de moins."
+   },
+   {
+    "san": "Qd8",
+    "pourquoi": "Retirer la dame sort de l'attaque sur b4, mais laisse tomber d5. Après cxd5 exd5 e6 ! le pion blanc fourche le fou d7 et le pion f7 : le centre noir s'écroule et le roi au centre devient cible."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -48
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 Be2 Nh6 Bxh6 gxh6 Qd2 Bg7 Na3 O-O O-O f6 exf6",
+  "sens": "échange le pion e5 attaqué au lieu de le défendre : il prend f6 et menace la pièce qui le reprendra, tout en ouvrant la colonne f pour les Noirs.",
+  "menace": "fxg7, qui gagne le fou g7 et détruit le roque noir.",
+  "plan": [
+   {
+    "san": "Rxf6",
+    "pourquoi": "Reprend avec la tour et garde le fou g7 actif sur la grande diagonale. La tour arrive sur la colonne f ouverte et vise f2 ; le cavalier c6 pourra ensuite sauter en e5. Les Noirs ont le centre et des pièces actives, en échange des pions h6 et h7 doublés et faibles."
+   },
+   {
+    "san": "Bxf6",
+    "pourquoi": "Reprend avec le fou, qui défend bien le roi et le pion h6. Mais le fou quitte la grande diagonale et la tour f8 reste derrière lui. Solide, un peu moins actif que Txf6."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Bh8",
+    "pourquoi": "Sauve le fou mais laisse le pion f6 vivant : il coupe la position noire en deux et la dame blanche prend h6 avec échec d'attaque sur le roi. Toujours reprendre d'abord."
+   },
+   {
+    "san": "Nxd4",
+    "pourquoi": "Ignore la menace pour prendre un pion : fxg7 gagne le fou, et après Cxf3 Fxf3 les Blancs ont une pièce de plus avec un roi noir dénudé."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -37
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Bd7 Be2 Nge7 O-O Nf5 dxc5 Bxc5 b4 Bb6 Bd3 O-O Re1",
+  "nom": "Défense française, variante d'avance (système 5...Fd7 6.Fe2 Cge7)",
+  "sens": "renforce le pion e5 et laisse la case f1 au fou, qui pourra reculer si on le chasse. La tour attend aussi que la colonne e s'ouvre après un éventuel ...f6.",
+  "plan": [
+   {
+    "san": "a6",
+    "pourquoi": "Le pion b4 voudrait avancer en b5 pour chasser le cavalier c6. a6 lui ferme la porte et prépare parfois ...b5 pour fixer l'aile dame. Si Fxf5, les Noirs reprennent exf5 : le fou d7 respire enfin."
+   },
+   {
+    "san": "Nce7",
+    "pourquoi": "Le deuxième cavalier vient soutenir f5 et surveiller d5. Il quitte aussi la diagonale du pion b4 : plus rien à chasser. Les Blancs gardent leur pion e5 solide, mais sans cible."
+   },
+   {
+    "san": "Qc7",
+    "pourquoi": "La dame regarde e5 et c3, et libère d8 pour une tour. Elle laisse aux Blancs le temps de jouer Fb2 ou Ca3, mais les Noirs ont terminé leur développement en premier."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "f6",
+    "pourquoi": "Le coup qui semble logique arrive au mauvais moment. Après 12.Fxf5, reprendre exf5 ouvre la colonne e sur le roi et laisse e5 bien défendu ; reprendre fxe5 coûte simplement une pièce, et 13.Fg5 vient encore attaquer. Il fallait d'abord protéger ou déplacer le cavalier f5."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -46
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 Nf3 cxd4 Nxd4 Nc6 Nxc6 bxc6 Bd3 Qc7 Qe2 f5 c3 c5 O-O Ne7 Be3",
+  "sens": "Développe le cavalier en attaquant e5 une deuxième fois : avec la dame sur c7, le pion e5 est menacé pour de bon et les Blancs doivent réagir. Libère aussi la case e7 pour le fou, ce qui prépare le roque.",
+  "menace": "...Qxe5 ou ...Nxe5 : gagner le pion e5, désormais attaqué deux fois et défendu une seule fois.",
+  "plan": [
+   {
+    "san": "Ng6",
+    "pourquoi": "Attaque e5 une deuxième fois (dame + cavalier) et laisse la case e7 au fou pour roquer vite. Les Blancs doivent défendre par f4, ce qui affaiblit un peu leur roi ; ensuite ...Be7, ...O-O et ...Bd7 terminent le développement. Attention : le cavalier en g6 peut être chassé par h4-h5, il faut avoir roqué avant."
+   },
+   {
+    "san": "Nc6",
+    "pourquoi": "Même idée : une deuxième attaque sur e5. Le cavalier est plus stable qu'en g6 (pas de h4-h5) mais il bloque le pion c5, qui doit alors être défendu par ...Be7 ou ...Qb6. Les Blancs répondent f4 et la position reste fermée et solide."
+   },
+   {
+    "san": "Bd7",
+    "pourquoi": "Développe calmement et protège le pion c5 par avance (la dame peut venir sur b6 ou c6 ensuite). Prépare ...Bc6 et ...Nc6. Les Blancs ont le temps de jouer Nd2 et f4 pour consolider e5 : la lutte reste équilibrée."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Kf7",
+    "pourquoi": "Le roi sort au centre pour défendre e6 et c5 : erreur de principe. Après Nd2 et f4, les Blancs ouvrent la colonne f (f4-f5 ou g4) et le roi noir en f7 est en première ligne. Il faut roquer, pas marcher avec le roi."
+   },
+   {
+    "san": "h6",
+    "pourquoi": "Coup d'attente qui ne fait rien et laisse les Blancs frapper : b4 ! attaque le pion c5, qui est mal défendu. Après ...c4 Bc2, les pions noirs du centre sont figés, le fou c8 reste enfermé derrière d5 et e6, et les Blancs ont une cible permanente en c4."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 4
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 Nh6 Bd3 cxd4 O-O Bd7 b4 Nf5 Re1 a6 c4 dxc4",
+  "sens": "Capture le pion c4 qui attaquait d5 et menaçait de casser le centre noir : les Noirs restent avec un pion d4 de plus, mais le fou blanc d3 est maintenant attaqué par ce pion c4.",
+  "menace": "Le pion c4 attaque le fou d3 ; s'il n'est pas repris, c4xd3 gagne le fou.",
+  "plan": [
+   {
+    "san": "Bxc4",
+    "pourquoi": "Reprend le pion et sauve le fou en un seul coup. Sur c4, le fou vise à nouveau f7 et le roi noir resté au centre. C'est le seul coup qui ne perd pas de matériel : tous les autres laissent le pion c4 vivre, et il avance ensuite en c3 ou d3 pour tout casser. Les Noirs doivent maintenant jouer vite Be7 et O-O."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Be4",
+    "pourquoi": "Le fou fuit au lieu de reprendre : le pion c4 n'est plus attaqué et file en c3, à une case de la promotion, en coupant le cavalier b1 de la partie. Après a4 Bxb4 les Noirs gagnent encore un pion et dominent."
+   },
+   {
+    "san": "Nbd2",
+    "pourquoi": "Développe une pièce, mais ignore la menace : c4xd3 gagne le fou pour rien. Ensuite g4 pour chasser le cavalier ne répare rien, les Blancs ont une pièce de moins et leur roi est affaibli."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 54
+ },
+ {
+  "coups": "e4 e6 d4 d5 exd5 exd5 Nf3 Bd6 c4 Nf6 c5 Be7 Bd3 O-O O-O b6 Be3 bxc5 dxc5 Ng4 Bf4",
+  "sens": "Recule sans perdre de temps : depuis f4 le fou garde la diagonale b8-h2, interdit la case e5 au cavalier et prépare h3 pour le renvoyer. Le pion c5 reste en l'air : les Blancs comptent sur le sacrifice Fxh7+ pour le protéger, mais ce calcul est faux.",
+  "menace": "h3 pour chasser le cavalier de g4 ; une fois le cavalier reculé, les Blancs consolident c5 par Cc3 et b4 et gardent un avantage d'espace.",
+  "plan": [
+   {
+    "san": "Bxc5",
+    "pourquoi": "Prend le pion offert : c'est le meilleur coup. Le sacrifice Fxh7+ Rxh7 Dxd5 ne marche pas : les Noirs répondent Df6, attaquent f2 et f4, et récupèrent le matériel avec l'initiative. Après Fxc5, les Noirs ont un pion de plus et un fou très actif."
+   },
+   {
+    "san": "Nf6",
+    "pourquoi": "Recule le cavalier avant d'être chassé par h3 et renforce d5. C'est solide, mais on laisse aux Blancs le temps de défendre c5 par Cc3 ou Dc2 : moins ambitieux que la prise immédiate."
+   },
+   {
+    "san": "Na6",
+    "pourquoi": "Développe en attaquant c5 une deuxième fois : les Blancs auront du mal à tenir le pion. En échange, le cavalier est sur le bord et reviendra en c7 ou b4 plus tard."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Bb7",
+    "pourquoi": "Développer le fou paraît naturel, mais il laisse c5 aux Blancs et ignore le cavalier mal placé en g4. Après Dc2, h7 est attaqué : il faut jouer g6, puis h3 renvoie le cavalier. Les Noirs ont perdu un pion et affaibli leur roque pour rien."
+   },
+   {
+    "san": "h6",
+    "pourquoi": "Donne une case de repli au cavalier, mais perd un temps crucial. Après Cc3, si les Noirs prennent enfin Fxc5, le cavalier blanc capture Cxd5 : le pion central tombe et le roi noir est moins bien abrité. Il fallait prendre c5 tout de suite."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -22
+ },
+ {
+  "coups": "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 Bxe7 Qxe7 f4 O-O Nf3 c5 Qd2 Nc6 dxc5 Nxc5 Qe3",
+  "nom": "Variante classique (ligne 7.f4 avec 10.dxc5)",
+  "sens": "Attaque le cavalier c5 avec la dame tout en protégeant f4 et en surveillant d4. Elle vide aussi la case d2 et prépare le grand roque.",
+  "menace": "La dame vise le cavalier c5 : s'il bouge mal, les Blancs prennent le contrôle de d4 et de la colonne d.",
+  "plan": [
+   {
+    "san": "a6",
+    "pourquoi": "Empêche Fb5, qui clouerait le cavalier c6. Le cavalier c5 reste en place, bien défendu par la dame. Les Noirs préparent ...b5 et ...Fb7 pour jouer à l'aile dame."
+   },
+   {
+    "san": "Bd7",
+    "pourquoi": "Développe le fou et relie les pièces. Le fou défend c6 et libère la tour a8 pour aller en c8 ou d8. Les Noirs acceptent une position un peu passive mais solide."
+   },
+   {
+    "san": "f6",
+    "pourquoi": "Attaque le pion e5, la base du centre blanc. Si exf6, la dame reprend et le fou c8 respire enfin. Attention : cela ouvre un peu le roi noir."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "b6",
+    "pourquoi": "Semble naturel pour sortir le fou en b7, mais après Fb5 le cavalier c6 est cloué. Les Noirs doivent jouer ...Fd7, puis Fxc6 et les Blancs gagnent du temps et affaiblissent la structure noire."
+   },
+   {
+    "san": "Nd7",
+    "pourquoi": "Recule sans raison et laisse les Blancs rouquer tranquillement. Après O-O-O et ...Dc5, la dame blanche revient en e1 : les Noirs ont perdu deux coups et le cavalier bloque le fou c8."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -24
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Bd7 Be2 Nge7 O-O Nf5 dxc5 Bxc5 b4 Bb6 Bd3 O-O Re1 a6",
+  "nom": "Défense française, variante d'avance (ligne Nimzowitsch avec 5...Fd7 6.Fe2 Cge7)",
+  "sens": "ferme la porte au pion b4 : il ne pourra plus venir en b5 chasser le cavalier c6. Le coup garde aussi en réserve ...b5 pour fixer les pions blancs de l'aile dame. Et si le fou d3 prend le cavalier f5, la reprise exf5 ouvre la diagonale au fou d7.",
+  "plan": [
+   {
+    "san": "a4",
+    "pourquoi": "Empêche ...b5 et prépare a5 pour chasser le fou b6 : il devra quitter la diagonale qui vise f2. Les Blancs prennent de l'espace à l'aile dame avant de développer le cavalier b1."
+   },
+   {
+    "san": "Nbd2",
+    "pourquoi": "Sort la dernière pièce du coin et protège e4, b3 et f3. Le cavalier pourra ensuite aller en b3 pour contester le fou b6. Coup calme : on finit le développement avant d'agir."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Bxf5",
+    "pourquoi": "Donne le bon fou pour un cavalier. Après exf5 le fou d7 n'est plus enfermé par son pion e6 et la colonne e s'ouvre pour la tour noire : exactement ce que voulaient les Noirs."
+   },
+   {
+    "san": "h3",
+    "pourquoi": "Perd du temps et affaiblit le roi. Après Ce7 puis g4, le cavalier saute en g3 et harcèle le roi blanc : les pions avancés deviennent des cibles au lieu de chasser quoi que ce soit."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 43
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 Nf3 cxd4 Nxd4 Nc6 Nxc6 bxc6 Bd3 Qc7 Qe2 f5 c3 c5 O-O Ne7 Be3 Ng6",
+  "sens": "attaque e5 une deuxième fois (dame et cavalier) et libère la case e7 pour le fou, afin de roquer rapidement.",
+  "menace": "...Cxe5 ou ...Dxe5 : le pion e5 n'est défendu qu'une fois (dame e2) et attaqué deux fois.",
+  "plan": [
+   {
+    "san": "Nd2",
+    "pourquoi": "Développe le cavalier en ajoutant un deuxième défenseur sur e5 : le pion tient sans jouer f4. Le cavalier pourra ensuite aller en f3 ou b3. Les Blancs gardent une structure saine et pourront ensuite jouer f4 ou Tae1 pour renforcer le centre."
+   },
+   {
+    "san": "f4",
+    "pourquoi": "Défend e5 solidement avec un pion : le cavalier g6 ne peut plus rien prendre. En échange, la case e3 et la diagonale g1-a7 sont un peu affaiblies, et le fou e3 peut devenir une cible après ...d4. Les Noirs continuent avec ...Fe7 et ...O-O."
+   },
+   {
+    "san": "Bb5+",
+    "pourquoi": "Donne un échec intermédiaire qui gêne le roque noir : après ...Rf7 le roi noir reste au centre, et après ...Fd7 le fou b5 peut échanger le bon fou de case blanche des Noirs. Ensuite les Blancs défendent e5 tranquillement par Cd2 ou f4."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "h4",
+    "pourquoi": "Veut chasser le cavalier g6, mais oublie que e5 est attaqué deux fois : les Noirs prennent simplement ...Cxh4 et gagnent un pion net. Il faut d'abord défendre e5, et seulement ensuite penser à h4-h5."
+   },
+   {
+    "san": "Rd1",
+    "pourquoi": "Coup de développement naturel, mais il ne défend pas e5 : ...Dxe5 gagne un pion, et après Cd2 la dame se replie en c7 sans dommage. Avant tout coup de tour, il faut compter les attaquants sur e5."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -2
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 Be2 Nh6 Bxh6 gxh6 Qd2 Bg7 Na3 O-O O-O f6 exf6 Rxf6",
+  "sens": "Reprend le pion en gardant le fou g7 sur la grande diagonale : la tour ouvre la colonne f et regarde f2, et le cavalier c6 pourra sauter en e5.",
+  "menace": "Txf3 suivi de cxd4 ou Cxd4 pour détruire le centre blanc ; aussi cxd4 cxd4 Cxd4 car le pion d4 n'est protégé que par le cavalier f3.",
+  "plan": [
+   {
+    "san": "Nc2",
+    "pourquoi": "Ramène le cavalier mal placé de a3 vers le centre : il protège d4 et e3, et pourra aller en e3 pour contrôler d5 et f5. Il laisse aux Noirs le temps de jouer e5, mais le centre blanc tiendra."
+   },
+   {
+    "san": "dxc5",
+    "pourquoi": "Échange le pion d4 attaqué contre c5 : après Dxc5 le centre noir d5-e6 reste isolé et la case d4 devient un bon poste pour un cavalier blanc. Les Noirs gardent l'activité des pièces, mais les Blancs n'ont plus de pion faible à défendre."
+   },
+   {
+    "san": "Rae1",
+    "pourquoi": "Développe la dernière pièce sur la colonne e, face au pion e6 : elle prépare Fd3 et un cavalier en e5 ou e3. Les Blancs doivent surveiller d4, car Cxd4 reste dans l'air si le pion perd ses défenseurs."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 39
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 Nh6 Bd3 cxd4 O-O Bd7 b4 Nf5 Re1 a6 c4 dxc4 Bxc4",
+  "sens": "Récupère le pion en sortant le fou de la ligne du pion d3. Depuis c4, le fou regarde e6 et f7, juste devant le roi noir qui n'a pas encore roqué, et il appuie une future poussée b4-b5.",
+  "menace": "b4-b5 : le cavalier c6 est chassé, le pion d4 perd son défenseur et peut tomber ; la dame blanche vient aussi en b3 ou e4 pour peser sur e6 et b7.",
+  "plan": [
+   {
+    "san": "Rc8",
+    "pourquoi": "Met la tour en face du fou c4 sur la colonne c. Le fou est gêné, et le cavalier peut sauter en a5 avec gain de temps si b5 arrive. La tour protège aussi la case c6."
+   },
+   {
+    "san": "Be7",
+    "pourquoi": "Développe et prépare le roque pour mettre le roi à l'abri. C'est le plan le plus simple : finir le développement avant de penser au pion d4 en plus."
+   },
+   {
+    "san": "Na7",
+    "pourquoi": "Retire à l'avance le cavalier de la case que b5 va attaquer. Il vise ensuite b5 ou c6 et garde le contrôle de d4. Cela coûte un tour de jeu, mais rien ne pend."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Nfe7",
+    "pourquoi": "Le cavalier recule sur la case du fou f8 : il bloque son propre développement et retarde le roque. Après Nbd2 Ng6, les Blancs jouent h4 puis h5 et chassent encore le cavalier, en gagnant des tours de jeu contre le roi noir resté au centre."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -47
+ },
+ {
+  "coups": "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 Bxe7 Qxe7 f4 O-O Nf3 c5 Qd2 Nc6 dxc5 Nxc5 Qe3 a6",
+  "nom": "Variante classique, système Steinitz avec 7.f4 (ligne 10.dxc5)",
+  "sens": "retire au fou blanc la case b5 : plus de clouage du cavalier c6. Le cavalier c5 reste solide, protégé par la dame. Prépare ...b5 puis ...Fb7 pour se développer et attaquer à l'aile dame.",
+  "plan": [
+   {
+    "san": "Rd1",
+    "pourquoi": "Place la tour sur la colonne d, ouverte depuis dxc5. Elle regarde d7 et surveille le pion d5, qui ne peut plus avancer sans perdre son soutien. Les Blancs gardent le choix entre petit roque et roi en e2 ou f2."
+   },
+   {
+    "san": "a3",
+    "pourquoi": "Enlève la case b4 au cavalier c6 et au pion b. Ainsi, après ...b5, les Noirs ne peuvent plus chasser le cavalier c3 avec ...b4. Coup calme qui prépare tranquillement le roque."
+   },
+   {
+    "san": "O-O-O",
+    "pourquoi": "Met le roi à l'abri en un coup et place la tour en d1. Mais attention : les Noirs ont déjà préparé ...b5 et ...b4 contre ce roi ; le jeu devient tranchant des deux côtés."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 21
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Bd7 Be2 Nge7 O-O Nf5 dxc5 Bxc5 b4 Bb6 Bd3 O-O Re1 a6 a4",
+  "sens": "fixe l'aile dame : le pion b5 est interdit aux Noirs et le pion a va monter en a5 pour chasser le fou b6, qui perdra sa belle diagonale vers f2. Les Blancs gagnent de l'espace avant de sortir le cavalier b1.",
+  "menace": "a5 : le fou b6 doit reculer (sur c7 ou a7), et les Blancs gagnent du temps et de l'espace à l'aile dame.",
+  "plan": [
+   {
+    "san": "Rc8",
+    "pourquoi": "Place la tour sur la colonne c, demi-ouverte depuis dxc5. Elle vise le pion c3 et prépare ...Bc7 quand a5 arrivera : le fou reculera sans perdre de temps, la tour étant déjà bien placée."
+   },
+   {
+    "san": "Qc7",
+    "pourquoi": "La dame appuie le fou b6 sur la diagonale et attaque le pion e5, point clé des Blancs. Elle libère aussi d8 pour une tour. Attention tout de même : après a5 Bc7, le fou gêne un peu la dame."
+   },
+   {
+    "san": "h6",
+    "pourquoi": "Coup de sécurité : enlève la case g5 au fou c1 et au cavalier f3, et donne une case d'air au roi. Les Noirs ne font rien de concret mais ne laissent aucune prise aux Blancs."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Be8",
+    "pourquoi": "Le fou recule sur une case passive où il bloque la tour f8 et ne défend plus rien d'utile. Les Blancs jouent Ba3 : le fou vise la case e7 et la tour f8, puis Nbd2 termine le développement. Les Noirs ont perdu un coup entier pour rien."
+   },
+   {
+    "san": "Nh6",
+    "pourquoi": "Le cavalier quitte f5, sa meilleure case (il y pressait d4 et pouvait sauter en d4 ou h4). Pire : Bg5 attaque la dame d8 et le cavalier h6 est mal placé. Après Qb8 et h3, les pièces noires sont désorganisées et les Blancs gagnent du temps."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -34
+ },
+ {
+  "coups": "e4 e6 d4 d5 exd5 exd5 Nf3 Bd6 c4 Nf6 c5 Be7 Bd3 O-O O-O b6 Be3 bxc5 dxc5 Ng4 Bf4 Bxc5",
+  "sens": "Empoche le pion gratuit en développant le fou sur sa meilleure diagonale : il vise f2, déjà regardé par le cavalier g4, et le roi blanc commence à sentir la pression.",
+  "menace": "Doubler l'attaque sur f2 (Nxf2 ou Bxf2+) et amener la dame en f6 pour cumuler les cibles f2, f4 et b2.",
+  "plan": [
+   {
+    "san": "Bxh7+",
+    "pourquoi": "Maintenant le sacrifice marche : après Kxh7 la dame va en d5 avec échec virtuel sur f7, attaque la tour a8 et le fou c5 en même temps. Les Noirs ne peuvent pas tout sauver, les Blancs récupèrent leur pion et le roi noir reste déshabillé. Égalité pratique, position vivante."
+   },
+   {
+    "san": "Qc2",
+    "pourquoi": "Forme une batterie dame-fou sur h7 : les Noirs doivent répondre à la menace de mat (g6 ou Nf6) au lieu de continuer leur attaque sur f2. Les Blancs gagnent le temps nécessaire pour développer le cavalier b1 et contester le pion d5."
+   },
+   {
+    "san": "Nc3",
+    "pourquoi": "Développe en attaquant le pion isolé d5, la vraie cible blanche. Les Blancs restent un pion de moins, mais l'activité des pièces et la faiblesse de d5 compensent presque : on joue pour récupérer le pion tranquillement."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Bc2",
+    "pourquoi": "Retire le fou en espérant un futur Fxh7+. Mais après Ba6 la tour f1 est clouée et le sacrifice Bxh7+ Kxh7 ne donne rien : plus de dame en d5 possible, les Noirs gardent le pion et le fou a6 paralyse l'aile roi blanche."
+   },
+   {
+    "san": "a3",
+    "pourquoi": "Coup d'attente sans but. Les Noirs répondent Bd6 : échange des fous après Bxd6 Qxd6, et il ne reste qu'un pion de plus pour les Noirs dans une position simplifiée, sans la moindre compensation blanche."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 12
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 Nf3 cxd4 Nxd4 Nc6 Nxc6 bxc6 Bd3 Qc7 Qe2 f5 c3 c5 O-O Ne7 Be3 Ng6 Nd2",
+  "sens": "Ajoute un défenseur au pion e5 sans toucher la structure : le cavalier soutient le centre et pourra rebondir en f3 ou b3 vers les points faibles noirs.",
+  "menace": "Pas de menace immédiate ; les Blancs préparent f4 ou Tae1 pour consolider e5, puis des coups comme Fb5+ si le roi noir reste au centre.",
+  "plan": [
+   {
+    "san": "Be7",
+    "pourquoi": "Développe et prépare le petit roque : le roi quitte le centre avant que Fb5+ ou Cf3 ne deviennent gênants. Le fou peut aussi venir en g5 pour échanger le bon fou blanc e3."
+   },
+   {
+    "san": "a5",
+    "pourquoi": "Prend de l'espace à l'aile dame et empêche b4, le coup qui attaquerait le pion c5. Prépare aussi Fa6 pour échanger le fou d3, meilleure pièce blanche."
+   },
+   {
+    "san": "Nxe5",
+    "pourquoi": "Gagne le pion e5 tactiquement : après Fxf5 exf5 Dxe5+, les Blancs récupèrent le pion et la position reste équilibrée. À ne jouer que si l'on a vu toute la suite."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Qxe5",
+    "pourquoi": "La dame prend un pion mais le roi noir est encore au centre : Fb5+ force Rf7, puis Cf3 chasse la dame avec gain de temps. Les Blancs développent tout en attaquant."
+   },
+   {
+    "san": "Bb7",
+    "pourquoi": "Le fou se retrouve bloqué derrière ses propres pions c5 et d5. Après Cf3 Fe7 b4, le pion c5 est attaqué et la structure noire s'effrite."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 6
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 Be2 Nh6 Bxh6 gxh6 Qd2 Bg7 Na3 O-O O-O f6 exf6 Rxf6 Nc2",
+  "nom": "Défense française, variante d'avance, 5...Db6 6.Fe2 Ch6 7.Fxh6",
+  "sens": "Replie le cavalier mal placé de a3 vers le centre : depuis c2 il soutient d4 et surveille e3, d'où il visera d5 et f5. Les Blancs renoncent pour l'instant à b4 et acceptent de laisser aux Noirs le temps de pousser e5.",
+  "plan": [
+   {
+    "san": "Bd7",
+    "pourquoi": "Développe le dernier pion-bloqueur de l'aile dame : le fou français, souvent enfermé par e6, sort avant que la position ne se referme. Il relie les tours et prépare Tf8 ou Taf8 pour doubler sur la colonne f ouverte. Les Blancs peuvent jouer Ce3 ou dxc5, mais le centre noir reste solide."
+   },
+   {
+    "san": "cxd4",
+    "pourquoi": "Échange tout de suite en d4 : après cxd4, le pion blanc d4 devient une cible isolée au milieu, attaquée par Db6, Cc6 et le fou g7 sur la grande diagonale. Les Noirs fixent le centre avant que les Blancs ne gagnent de l'espace par b4. En contrepartie, le pion e5 noir sera plus difficile à pousser."
+   },
+   {
+    "san": "a5",
+    "pourquoi": "Empêche b4 : les Blancs voudraient chasser le pion c5 pour desserrer d4. Avec a5 fixé, le cavalier c6 et la dame b6 gardent leur pression. Coup tranquille qui laisse aux Blancs le temps de jouer Ce3, mais sans concession."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Rb8",
+    "pourquoi": "Semble préparer b5, mais la tour quitte la colonne a sans menacer rien. Les Blancs répondent b4 ! : après cxd4 cxd4 le pion d4 est protégé et b4-b5 chassera le cavalier c6, le centre blanc tient et l'aile dame noire ne bouge plus."
+   },
+   {
+    "san": "Nd8",
+    "pourquoi": "Veut amener le cavalier en f7, mais il abandonne la pression sur d4 et e5 au pire moment. Après Ce3 cxd4 cxd4, les Blancs ont un cavalier idéal en e3 qui tient d5 et f5, et les Noirs ont perdu deux temps dans une position déjà délicate."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -42
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 Nh6 Bd3 cxd4 O-O Bd7 b4 Nf5 Re1 a6 c4 dxc4 Bxc4 Rc8",
+  "sens": "Place la tour face au fou c4 pour l'embêter : chaque coup de ce fou peut maintenant coûter du temps aux Blancs. Le cavalier c6 est libre de bondir en a5 ou en b4, et la tour couvre déjà la case c6.",
+  "menace": "...Cxb4 ! : si axb4, Fxb4 attaque la tour e1 et les Noirs récupèrent le pion avec de l'activité. Et ...Ca5 chasse le fou c4 avec gain de temps.",
+  "plan": [
+   {
+    "san": "Bd3",
+    "pourquoi": "Le fou quitte la colonne c avant d'être chassé. Il vise maintenant le cavalier f5 et surveille la case d3, que le pion d4 aimerait envahir. Le fou n'a plus de pression sur e6, mais il restera stable."
+   },
+   {
+    "san": "Nbd2",
+    "pourquoi": "Développe la dernière pièce mineure et couvre les cases b3 et c4. Le cavalier pourra aller en b3 ou e4. Cela laisse ...Ca5, mais le fou pourra alors reculer sans drame."
+   },
+   {
+    "san": "Bf1",
+    "pourquoi": "Retraite modeste mais sûre : le fou n'est plus attaquable par ...Ca5 et il garde un œil sur la case d3. Il laisse le centre aux pièces et aux pions pour l'instant."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "h3",
+    "pourquoi": "Un petit coup de pion qui ignore la menace : ...Cxb4 ! prend un pion. Si axb4, Fxb4 attaque la tour e1 et le fou revient bien placé. Les Blancs ont perdu un pion pour rien."
+   },
+   {
+    "san": "Qd3",
+    "pourquoi": "La dame se met devant le pion d4 et bouche la case de retraite du fou c4. Après ...Fe7 et ...Ca7, les Noirs préparent ...Fb5 ou ...Cb5 et toutes les pièces blanches se gênent. Les Noirs sont déjà mieux."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 60
+ },
+ {
+  "coups": "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 Bxe7 Qxe7 f4 O-O Nf3 c5 Qd2 Nc6 dxc5 Nxc5 Qe3 a6 Rd1",
+  "nom": "Défense française, variante classique (ligne 6.Fxe7)",
+  "sens": "Met la tour sur la seule colonne ouverte, face à la dame et au pion d5. La tour vise d5, qui n'est tenu que par e6, et empêche toute poussée ...d4. Elle libère aussi la case d2 pour un futur Cd2 et laisse le roi blanc choisir plus tard entre roque et case e2.",
+  "plan": [
+   {
+    "san": "Nd7",
+    "pourquoi": "Le cavalier revient en d7 pour attaquer le pion e5, la pointe du centre blanc. Il prépare ...f6 avec deux pièces sur e5 (cavalier et dame) et quitte c5, où un pion b4 aurait pu le chasser. Les Noirs retardent d'un coup l'action sur l'aile dame."
+   },
+   {
+    "san": "b5",
+    "pourquoi": "Gagne de l'espace à l'aile dame et prépare ...b4 pour chasser le cavalier c3, principal défenseur de d5 et de e4. Le fou c8 trouvera b7 ou pourra sortir après ...Fd7. En échange, les Noirs ne touchent pas encore au pion e5."
+   },
+   {
+    "san": "f6",
+    "pourquoi": "Attaque tout de suite le pion e5. Après exf6 Dxf6, la colonne f s'ouvre pour la tour f8 et la dame vise f4 et b2. Les Noirs acceptent un pion e6 arriéré, mais leurs pièces respirent enfin."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "a5",
+    "pourquoi": "Ne menace rien et affaiblit b5 : un cavalier blanc pourra s'y installer plus tard. Après Fe2 le cavalier c5 n'a plus de bonne case : Ca6 puis a3 le laisse au bord de l'échiquier. Les Noirs ont perdu un temps et le petit pion a5 devient une cible au lieu d'une force."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -8
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Bd7 Be2 Nge7 O-O Nf5 dxc5 Bxc5 b4 Bb6 Bd3 O-O Re1 a6 a4 Rc8",
+  "nom": "Défense française, variante d'avance, système ...Cge7-f5 avec 8.dxc5 et 9.b4",
+  "sens": "Occupe la colonne c, demi-ouverte depuis dxc5. La tour regarde le pion c3 et, derrière lui, la case c1 : si le fou de c1 bouge sans précaution, le pion c3 devient une cible pour le cavalier (...Cxb4 ou ...Ccd4). Le fou b6 pourra aussi reculer en c7 quand a5 arrivera, sans perdre de temps.",
+  "plan": [
+   {
+    "san": "Nbd2",
+    "pourquoi": "Développe la dernière pièce mineure. Le cavalier protège indirectement c3 (il surveille b3 et c4) et vise b3 : de là il contrôle c5 et d4, et il pourra chasser le fou b6. Le fou c1 garde le choix entre b2 et a3. Les Noirs répondent souvent ...Ce7-g6 pour attaquer e5."
+   },
+   {
+    "san": "Bb2",
+    "pourquoi": "Défend solidement c3, la cible désignée par la tour, et libère la case c1 : la tour noire ne regarde plus rien derrière le pion. Le fou soutient aussi e5 à distance sur la grande diagonale. Il laisse aux Noirs le plan ...Cce7-g6 contre e5."
+   },
+   {
+    "san": "g3",
+    "pourquoi": "Prend la case h4 au cavalier f5 : plus de ...Ch4 pour échanger le cavalier f3, meilleur défenseur de e5. Prépare aussi Fe4 ou Fd3-f1 sans craindre les sauts. Le prix : les cases claires f3 et h3 sont un peu affaiblies autour du roi."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Bd2",
+    "pourquoi": "Le fou y est passif et bouche la colonne d sans rien défendre. Après ...h6 (pour garder le cavalier f5 au chaud), le cavalier menace ...Ch4 et l'échange du cavalier f3, défenseur de e5 : le fou doit repartir en c1 et les Blancs ont perdu deux temps."
+   },
+   {
+    "san": "a5",
+    "pourquoi": "Semble gagner du temps sur le fou, mais ...Fa7 le met à l'abri sans rien céder. Le pion a5 est désormais fixé, le pion b4 n'est plus soutenu que par c3, et les Noirs enchaînent ...Ce7-g6 contre e5. Les Blancs ont dépensé un coup pour affaiblir leur propre aile dame."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 45
+ },
+ {
+  "coups": "e4 e6 d4 d5 Nd2 c5 exd5 exd5 Ngf3 Nf6 Bb5+ Bd7 Bxd7+ Nbxd7 O-O Be7 dxc5 Nxc5 Nb3 Nce4 Be3",
+  "nom": "Tarrasch, variante 3...c5 avec échange en d5",
+  "sens": "sort le dernier fou sur une diagonale sûre : il garde d4 et vise a7, tout en laissant le cavalier noir e4 sans cible. Les Blancs pourront ensuite jouer Cfd4 ou c3 pour consolider.",
+  "plan": [
+   {
+    "san": "O-O",
+    "pourquoi": "Met le roi à l'abri avant toute chose. Le développement est terminé, le pion d5 isolé est bien protégé par les deux cavaliers, et la tour f8 pourra venir en c8 ou e8 pour prendre la colonne ouverte."
+   },
+   {
+    "san": "a5",
+    "pourquoi": "Chasse le cavalier b3 avec a5-a4 : il devra bouger et le cavalier noir en e4 restera tranquille. Cela gagne de l'espace à l'aile dame mais retarde le roque d'un coup, donc à jouer seulement si on connaît le plan."
+   },
+   {
+    "san": "Qd7",
+    "pourquoi": "Relie la dame aux tours et prépare Tc8 ou Td8. La dame protège aussi d5 et surveille la case b5. Simple et sans risque, en attendant de roquer."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -4
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 Nf3 cxd4 Nxd4 Nc6 Nxc6 bxc6 Bd3 Qc7 Qe2 f5 c3 c5 O-O Ne7 Be3 Ng6 Nd2 Be7",
+  "sens": "Développe la dernière pièce mineure et prépare le petit roque. Le fou vise aussi g5 pour échanger le bon fou e3, et le cavalier g6 avec la dame c7 pèsent sur le pion e5.",
+  "menace": "Cxe5 : le pion e5 n'est plus défendu, le cavalier g6 et la dame c7 l'attaquent.",
+  "plan": [
+   {
+    "san": "f4",
+    "pourquoi": "Défend e5 une fois pour toutes et ferme la case g5 : le fou e7 ne peut plus venir échanger le fou e3. La chaîne e5-f4 bloque le centre noir ; le fou d3 restera à surveiller f5."
+   },
+   {
+    "san": "g3",
+    "pourquoi": "Prépare f4 en gardant h2 couvert, et ouvre la case h3 au fou pour appuyer sur f5 et e6. Plus lent que f4 : les Noirs ont le temps de roquer."
+   },
+   {
+    "san": "Bb5+",
+    "pourquoi": "Échec immédiat : le roi n'a pas encore roqué, il doit aller en f7 ou f8 et perd le droit de roquer. En échange le fou quitte d3 et ne presse plus f5."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "h3",
+    "pourquoi": "Coup d'attente qui ne défend rien. Les Noirs répondent Tb8, puis après b4 jouent c4 : le fou d3 est chassé, l'aile dame noire avance et e5 reste faible."
+   },
+   {
+    "san": "Rad1",
+    "pourquoi": "La tour vient sur une colonne fermée par le pion d5 : elle ne fait rien. Les Noirs jouent Tb8 et roquent tranquillement, tandis que le pion b2 n'a plus de tour pour le protéger."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -11
+ },
+ {
+  "coups": "e4 e6 d4 d5 exd5 exd5 Nf3 Bd6 c4 Nf6 c5 Be7 Bd3 O-O O-O b6 Be3 bxc5 dxc5 Ng4 Bf4 Bxc5 Bxh7+",
+  "sens": "Sacrifie le fou pour arracher le roi noir de sa cachette : une fois sur h7, le roi est exposé et la dame blanche va surgir en d5 avec de nouvelles menaces.",
+  "menace": "Après Kxh7, Dd5 attaque à la fois la tour a8, le fou c5 et le pion f7 : les Noirs ne peuvent pas tout protéger.",
+  "plan": [
+   {
+    "san": "Kxh7",
+    "pourquoi": "Il faut prendre : refuser le cadeau laisse le fou vivant et perd un pion pour rien. Après Dd5, les Noirs rendent du matériel (tour a8 ou fou c5) mais gardent une position jouable, le roi pourra revenir en g8."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Kh8",
+    "pourquoi": "Le roi se cache mais le fou h7 s'échappe tranquillement en c2 : les Blancs ont gagné un pion gratuitement et le roi noir reste sans pion h pour le protéger."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -18
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 Be2 Nh6 Bxh6 gxh6 Qd2 Bg7 Na3 O-O O-O f6 exf6 Rxf6 Nc2 Bd7",
+  "nom": "Variante d'avance, ligne 5...Db6 6.Fe2 Ch6",
+  "sens": "Sort le fou dame avant que le centre ne se ferme : il relie les tours et prépare Taf8 pour doubler sur la colonne f ouverte, tout en soutenant c6 et e6.",
+  "plan": [
+   {
+    "san": "b4",
+    "pourquoi": "Chasse le pion c5 et gagne de l'espace à l'aile dame. Après cxb4 cxb4, le pion b4 avance vers b5 pour déloger le cavalier c6. Les Noirs doivent réagir vite car leur contre-jeu sur c5 disparaît."
+   },
+   {
+    "san": "Ne5",
+    "pourquoi": "Occupe la case forte au centre : le cavalier attaque c6 et d7 et bloque la colonne f. Si Cxe5 dxe5, le pion e5 chasse la tour f6 et ouvre la diagonale d2-h6 vers le pion h6 affaibli."
+   },
+   {
+    "san": "dxc5",
+    "pourquoi": "Échange le centre pour attirer la dame : après Dxc5, les Blancs gagnent du temps avec Ce3 ou b4 et visent la case d4. Mais cela libère le fou g7 et donne aux Noirs un centre mobile avec e5."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 49
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 Nh6 Bd3 cxd4 O-O Bd7 b4 Nf5 Re1 a6 c4 dxc4 Bxc4 Rc8 Bd3",
+  "sens": "Met le fou à l'abri de la tour c8 tout en pointant le cavalier f5. Il garde aussi un œil sur d4 : le pion noir avancé reste une cible, et les Blancs préparent Cbd2-b3 ou Da4 pour le récupérer.",
+  "menace": "Fxf5 suivi de exf5, qui casse les pions noirs du roque et laisse le pion d4 isolé ; aussi b5 pour chasser le cavalier c6 et affaiblir d4.",
+  "plan": [
+   {
+    "san": "Be7",
+    "pourquoi": "Développe et prépare le roque. Le fou e7 protège aussi la case d6 et pourra revenir en g5. Les Noirs ont un pion de plus : il faut d'abord mettre le roi en sécurité, puis consolider d4."
+   },
+   {
+    "san": "Na7",
+    "pourquoi": "Le cavalier quitte la colonne c avant b5, et vise b5 puis c3 ou d6. Il libère aussi la tour c8 sur la colonne. En échange, il laisse momentanément d4 moins soutenu."
+   },
+   {
+    "san": "Nd8",
+    "pourquoi": "Retrait tranquille vers e6 ou b7, d'où le cavalier reviendra défendre d4 et le pion e5 adverse sera attaqué. Un peu lent, mais solide."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "h5",
+    "pourquoi": "Affaiblit les cases g5 et g6 sans rien défendre d'utile. Les Blancs jouent Cbd2 puis Cb3 : le pion d4 tombe, et le roi noir n'a plus de bon roque."
+   },
+   {
+    "san": "a5",
+    "pourquoi": "Après b5 le cavalier c6 doit fuir en e7, puis g4 chasse l'autre cavalier de f5 : les deux pièces se gênent et d4 perd ses défenseurs. Les Noirs ont ouvert la position au profit de l'adversaire."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -58
+ },
+ {
+  "coups": "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 Bxe7 Qxe7 f4 O-O Nf3 c5 Qd2 Nc6 dxc5 Nxc5 Qe3 a6 Rd1 Nd7",
+  "nom": "Variante classique, système Alekhine-Chatard évité (ligne principale avec 7.f4)",
+  "sens": "ramène le cavalier sur la case d'où il vise e5 : avec la dame déjà en e7, les Noirs préparent ...f6 pour ouvrir la colonne f et grignoter la pointe du centre blanc. Le cavalier quitte aussi c5 avant qu'un pion b4 ne le chasse.",
+  "menace": "...f6, puis ...fxe5 : le pion e5 est attaqué par le cavalier et la dame, et il ne tient que grâce au pion f4 et au cavalier f3.",
+  "plan": [
+   {
+    "san": "Bd3",
+    "pourquoi": "développe le dernier fou vers le roi noir : il regarde h7 et prépare le roque. Si ...f6, Blancs répondent exf6 et gardent une position saine. Il laisse b4 aux Noirs, mais c'est un pion peu utile pour eux."
+   },
+   {
+    "san": "a3",
+    "pourquoi": "petit coup utile : il retire b4 aux Noirs et prépare éventuellement b4 pour gagner de l'espace à l'aile dame. Il ne presse pas, mais il ne crée aucune faiblesse."
+   },
+   {
+    "san": "Be2",
+    "pourquoi": "développe le fou sur une case solide, qui protège aussi le cavalier f3 : après ...f6 exf6 Cxf6, la pièce clé du centre blanc reste bien défendue. Moins actif que Fd3, mais plus sûr."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "b3",
+    "pourquoi": "coup lent qui ne défend rien : après ...f6, le centre blanc craque. Si Td2 pour tenir, ...fxe5 gagne le pion e5 et ouvre la colonne f contre le roi blanc encore au centre."
+   },
+   {
+    "san": "Qd2",
+    "pourquoi": "la dame recule et abandonne e5 : après ...f6 exf6 Cxf6, le cavalier noir arrive en f6 avec gain de temps et les pions noirs d5-e6 contrôlent tout le centre. Les Blancs ont perdu deux coups de dame pour rien."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 12
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Bd7 Be2 Nge7 O-O Nf5 dxc5 Bxc5 b4 Bb6 Bd3 O-O Re1 a6 a4 Rc8 Nbd2",
+  "sens": "Développe la dernière pièce mineure et pointe vers b3 : de là le cavalier contrôlera c5 et d4 et, avec a4-a5, chassera le fou b6. Le fou c1 reste libre de choisir entre b2 et a3.",
+  "menace": "Cb3 suivi de a5 pour chasser le fou b6, et Fxf5 pour casser le blocus du cavalier sur f5.",
+  "plan": [
+   {
+    "san": "Nce7",
+    "pourquoi": "Le cavalier c6 quitte la case où il gênait la tour c8 : la colonne c s'ouvre vers c3. Il garde le cavalier f5 et pourra aller en g6 pour attaquer e5. Les Blancs jouent souvent Cb3 et a5, il faut alors reculer le fou en a7 ou c7."
+   },
+   {
+    "san": "Nh6",
+    "pourquoi": "Le cavalier f5 s'écarte avant d'être pris par Fxf5, ce qui aurait abîmé les pions noirs. De h6 il prépare ...f6 pour frapper e5. Cela laisse aux Blancs le temps de jouer Cb3 et Fb2."
+   },
+   {
+    "san": "Re8",
+    "pourquoi": "Met la tour en face du pion e5 avant d'ouvrir le centre par ...f6. La tour protège aussi e6 à l'avance. Coup utile mais lent : les Blancs peuvent jouer Cb3 et a5 pour gagner de l'espace."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "f6",
+    "pourquoi": "Trop tôt. Les Blancs prennent Fxf5 exf5, puis poussent e6 : le pion attaque le fou d7 et s'enfonce dans le camp noir. Les Noirs perdent du temps et leur roi est affaibli."
+   },
+   {
+    "san": "Nh4",
+    "pourquoi": "Cherche l'échange sur f3, mais après Cxh4 Dxh4 Cf3 la dame est chassée avec gain de temps : les Blancs développent en attaquant et les Noirs ont perdu leur bon cavalier f5 pour rien."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -42
+ },
+ {
+  "coups": "e4 e6 d4 d5 Nd2 c5 exd5 exd5 Ngf3 Nf6 Bb5+ Bd7 Bxd7+ Nbxd7 O-O Be7 dxc5 Nxc5 Nb3 Nce4 Be3 O-O",
+  "nom": "Variante Tarrasch, ligne 3...c5 4.exd5 exd5",
+  "sens": "Met le roi à l'abri et termine le développement : la tour f8 est prête à venir en e8 ou c8 sur les colonnes ouvertes, et les deux cavaliers tiennent déjà le pion isolé d5.",
+  "plan": [
+   {
+    "san": "c3",
+    "pourquoi": "Solidifie d4 et ferme la grande diagonale au cavalier e4 : le pion c3 contrôle b4 et d4, et la dame pourra aller en c2 pour viser e4. Les Noirs auront un pion isolé en d5 à défendre toute la partie."
+   },
+   {
+    "san": "Re1",
+    "pourquoi": "Met la tour sur la colonne e ouverte, face au cavalier e4 et au fou e7. Cela gêne les pièces noires sur e4 et prépare un futur Cfd4 ou Fd4 sans craindre de clouage."
+   },
+   {
+    "san": "Nbd2",
+    "pourquoi": "Remet le cavalier au centre pour contester la case e4 : si les Noirs échangent, un pion isolé d5 restera sans son défenseur. Cela laisse la case b3 libre mais garde une structure saine."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 15
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 Nf3 cxd4 Nxd4 Nc6 Nxc6 bxc6 Bd3 Qc7 Qe2 f5 c3 c5 O-O Ne7 Be3 Ng6 Nd2 Be7 f4",
+  "sens": "Consolide e5 avec un pion et retire la case g5 au fou e7 : le fou e3 ne pourra plus être échangé. La chaîne e5-f4 bloque le centre, et le fou d3 reste braqué sur f5.",
+  "menace": "Rien d'immédiat, mais b4 arrive vite : attaquer c5 pour ouvrir la colonne b et déloger le pion qui tient d4.",
+  "plan": [
+   {
+    "san": "a5",
+    "pourquoi": "Empêche b4 avant qu'il ne soit joué : le pion c5 reste solide et le centre noir tient. Les Noirs gardent ensuite Fa6 pour échanger le fou d3, leur pièce la plus gênante."
+   },
+   {
+    "san": "O-O",
+    "pourquoi": "Met le roi à l'abri avant d'ouvrir le jeu. Le cavalier g6 et la tour f8 soutiendront la poussée ...g5 contre la chaîne. Laisse b4 aux Blancs, mais ...a5 pourra répondre ensuite."
+   },
+   {
+    "san": "Bd7",
+    "pourquoi": "Développe le dernier mineur et prépare Tb8 ou Fb5 pour échanger le fou d3. Le roque suivra ; les Blancs n'ont pas de cible concrète."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Qb6",
+    "pourquoi": "La dame vise b2, mais b4 répond : après ...a5, Fb5+ gêne le roi noir au centre et c5 tombe. La dame est mal placée face à l'attaque de pions."
+   },
+   {
+    "san": "Kf7",
+    "pourquoi": "Mettre le roi à pied sur f7 semble connecter les tours, mais b4 ouvre tout : après ...a5 bxc5, le roi est exposé sur la diagonale a2-g8 et la colonne f."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 12
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 Be2 Nh6 Bxh6 gxh6 Qd2 Bg7 Na3 O-O O-O f6 exf6 Rxf6 Nc2 Bd7 b4",
+  "sens": "Attaque le pion c5 pour le chasser ou l'échanger : si le pion c5 disparaît, la tension sur d4 tombe et les Blancs gagnent de l'espace à l'aile dame. Le pion b veut ensuite aller en b5 pour déloger le cavalier c6.",
+  "menace": "b4xc5 : la dame b6 serait attaquée et devrait reculer, laissant les Blancs maîtres de la case c5 et de l'aile dame.",
+  "plan": [
+   {
+    "san": "cxd4",
+    "pourquoi": "Prend d'abord sur d4 avant que b4xc5 ne vienne. Après cxd4, le pion d4 blanc est isolé et attaqué par le cavalier c6 et la dame b6 ; la tour f6 et le fou g7 pressent aussi sur la colonne f et la diagonale. Les Noirs gardent du jeu actif, même si les Blancs restent un peu mieux."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "cxb4",
+    "pourquoi": "Semble naturel, mais après cxb4 Cxb4 Cxb4 (ou simplement Cxb4) le pion d4 est protégé, et le cavalier f3 saute en e5 : il domine le centre et attaque le fou d7. Les Noirs perdent toute pression sur d4 et le pion h6 doublé devient une cible."
+   },
+   {
+    "san": "Qc7",
+    "pourquoi": "Recule trop tôt. Les Blancs jouent b4xc5 et gardent un pion de plus sur l'aile dame ; la case c5 devient un poste blanc solide. Les Noirs n'ont plus de contre-jeu et sont nettement plus mal."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -54
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 Nh6 Bd3 cxd4 O-O Bd7 b4 Nf5 Re1 a6 c4 dxc4 Bxc4 Rc8 Bd3 Be7",
+  "sens": "Développe la dernière pièce mineure et prépare le petit roque. Le fou protège d6 et pourra plus tard aller en g5 pour échanger le fou c1 ou gêner les Blancs.",
+  "plan": [
+   {
+    "san": "Nbd2",
+    "pourquoi": "Développe le cavalier dame vers c4 ou b3, d'où il attaque le pion d4. Le pion d4 est la cible : il est avancé et isolé, les Noirs doivent le défendre avec des pièces. Le cavalier laisse la case b2 au fou c1."
+   },
+   {
+    "san": "Bb2",
+    "pourquoi": "Développe le fou sur la grande diagonale, juste derrière le pion d4. Dès que d4 tombe, le fou regardera g7 et la case e5 sera bien tenue. Les Noirs vont roquer et jouer f6 pour libérer leur jeu."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Qb3",
+    "pourquoi": "Semble gagner du temps en visant b7 et le cavalier f5, mais la dame est mal placée face à la dame noire. Après O-O et Cbd2, les Noirs jouent Dd8 : elle doit revenir et les Blancs n'ont rien gagné. Le pion d4 reste solide."
+   },
+   {
+    "san": "g4",
+    "pourquoi": "Chasser le cavalier f5 avec un pion affaiblit le roi blanc. Après Ch4 Cxh4 Fxh4, les Noirs ont échangé une pièce, gardent leur pion de plus et le roi blanc a perdu sa protection g2-g3."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 54
+ },
+ {
+  "coups": "e4 e6 d4 d5 exd5 exd5 Nf3 Bd6 c4 Nf6 c5 Be7 Bd3 O-O O-O b6 Be3 bxc5 dxc5 Ng4 Bf4 Bxc5 Bxh7+ Kxh7",
+  "sens": "Prend le fou offert en h7 : refuser le cadeau laisserait le fou vivant pour rien. Le roi noir est exposé un instant, mais il compte revenir en g8 dès que possible.",
+  "menace": "Les Noirs ont un fou de plus et menacent Fxf2+ ou Cxf2, qui gagnent du matériel sur la case faible f2.",
+  "plan": [
+   {
+    "san": "Qc2+",
+    "pourquoi": "Donne échec sur la diagonale c2-h7 ouverte par le sacrifice. Le roi doit revenir en g8, puis la dame prend le fou en c5 : les Blancs récupèrent la pièce et la position redevient équilibrée. Les Noirs conservent un pion de plus en jeu actif, mais leur roi est en sécurité."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Ng5+",
+    "pourquoi": "L'échec paraît fort mais le roi va en g8 tranquillement. Ensuite Dc2 ne gagne plus le fou : les Noirs répondent Fxf2+ puis Cxf2 et gardent une pièce de plus."
+   },
+   {
+    "san": "h3",
+    "pourquoi": "Chasser le cavalier ne marche pas : Cxf2 fourche dame et tour. Après Txf2 Fxf2+, les Noirs ont gagné une tour pour rien et restent avec une pièce de plus."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 22
+ },
+ {
+  "coups": "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 Bxe7 Qxe7 f4 O-O Nf3 c5 Qd2 Nc6 dxc5 Nxc5 Qe3 a6 Rd1 Nd7 Bd3",
+  "nom": "Variante classique, système Alekhine-Chatard évité (ligne 7.f4 avec Dd2-De3)",
+  "sens": "développe le dernier fou vers le roi noir : il regarde h7 et prépare le roque. Si ...f6, les Blancs répondent exf6 et gardent une position saine. Il laisse b4 aux Noirs, mais c'est un pion peu utile pour eux.",
+  "menace": "Fxh7+ dès que la dame noire quitte e7 (par exemple après ...Dc5 ou ...Db4) : Rxh7 Cg5+ et la dame blanche arrive sur h5 avec une attaque décisive.",
+  "plan": [
+   {
+    "san": "f6",
+    "pourquoi": "attaque la pointe e5 : c'est le levier de toute la Française. Après exf6 Dxf6 (ou Cxf6), la colonne f s'ouvre pour la tour, le cavalier d7 revient en jeu et le pion e6 pourra avancer. Les Noirs gardent une case faible en e6, mais leurs pièces respirent enfin."
+   },
+   {
+    "san": "h6",
+    "pourquoi": "coupe l'épine du pied : h7 n'est plus en prise et le cavalier blanc n'aura jamais g5. Les Noirs préparent ...f6 tranquillement. Cela coûte un temps et laisse les Blancs roquer d'abord, mais le roi noir est à l'abri."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Qc5",
+    "pourquoi": "on veut échanger les dames, mais la dame abandonne la défense de h7. Fxh7+ ! Rxh7 Cg5+ et la dame blanche suit sur h5 : le roi noir est mat ou perd la dame. Plus de deux pions perdus."
+   },
+   {
+    "san": "d4",
+    "pourquoi": "le pion fourche cavalier et dame, mais Cxd4 reprend simplement : d4 n'était défendu que par la dame, et après ...Dc5 Fe4 les Blancs restent un pion de plus avec le centre solide. Avant de pousser, compter les défenseurs."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -7
+ },
+ {
+  "coups": "e4 e6 d4 d5 Nd2 c5 exd5 exd5 Ngf3 Nf6 Bb5+ Bd7 Bxd7+ Nbxd7 O-O Be7 dxc5 Nxc5 Nb3 Nce4 Be3 O-O c3",
+  "nom": "Défense française, variante Tarrasch, ligne 3...c5 4.exd5 exd5 (position à pion isolé)",
+  "sens": "ferme la diagonale b4-d4 au cavalier e4 et retire la case d4 aux pièces noires : le pion c3 contrôle b4 et d4, prépare Dc2 pour attaquer le cavalier e4 et libère la case d4 pour un cavalier blanc. Les Blancs veulent ensuite bloquer et assiéger le pion isolé d5.",
+  "plan": [
+   {
+    "san": "Qc7",
+    "pourquoi": "sort la dame sur la colonne c, prend d'avance le contrôle de c2 (la dame blanche n'y viendra plus sans gêne) et protège indirectement le cavalier e4 : si on l'attaque, il reculera en d6 ou c5 sans perdre de temps. La dame regarde aussi h2 pour une attaque future."
+   },
+   {
+    "san": "Re8",
+    "pourquoi": "place la tour sur la colonne ouverte e derrière le cavalier e4 : le cavalier est maintenant soutenu, et si les Blancs jouent Dc2 les Noirs répondent tranquillement. C'est le coup de développement le plus naturel avec un pion isolé : les pièces doivent être actives pour compenser."
+   },
+   {
+    "san": "Bd6",
+    "pourquoi": "ramène le fou sur la diagonale b8-h2 où il vise h2 et le roi blanc. Avec le cavalier e4 et la dame qui viendra en c7, les Noirs créent une petite pression sur l'aile roi. Attention : il faut ensuite surveiller la case e4, car après Dc2 le cavalier devra bouger."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -8
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 Nf3 cxd4 Nxd4 Nc6 Nxc6 bxc6 Bd3 Qc7 Qe2 f5 c3 c5 O-O Ne7 Be3 Ng6 Nd2 Be7 f4 a5",
+  "nom": "Défense française, variante d'avance (ligne 3...c5 4.Cf3 cxd4 5.Cxd4)",
+  "sens": "Interdit b4 une fois pour toutes : le pion c5 ne pourra plus être chassé et le centre noir reste figé mais solide. Il libère aussi la case a6 pour le fou, qui ira échanger le fou blanc d3.",
+  "plan": [
+   {
+    "san": "b3",
+    "pourquoi": "Prépare c4 pour attaquer d5 et empêche a4 noir de fixer la structure. Si les Noirs jouent Fa6, Fxa6 Txa6 laisse une tour noire mal placée. Les Blancs renoncent à b4 mais gardent un jeu simple au centre."
+   },
+   {
+    "san": "Nf3",
+    "pourquoi": "Ramène le cavalier vers e5 et h4 : il défend le centre et peut sauter sur g6 ou e5 après un échange. Il laisse temporairement c4 sans soutien, les Noirs peuvent préparer d4."
+   },
+   {
+    "san": "a4",
+    "pourquoi": "Fixe la case b5 pour le fou : Fb5+ devient possible et le fou d3 ne sera plus échangé facilement en a6. Le pion a4 peut par contre devenir une cible après c4 noir."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -11
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Bd7 Be2 Nge7 O-O Nf5 dxc5 Bxc5 b4 Bb6 Bd3 O-O Re1 a6 a4 Rc8 Nbd2 Nce7",
+  "nom": "Variante d'avance, système 5.Cf3 Fd7 6.Fe2",
+  "sens": "Dégage la colonne c pour la tour c8 et garde le cavalier f5 : le pion c3 devient une cible directe, et le cavalier pourra aller en g6 pour attaquer e5.",
+  "menace": "Txc3 : la tour prend le pion c3, défendu seulement par des pièces qui ne veulent pas quitter leur poste.",
+  "plan": [
+   {
+    "san": "Bb2",
+    "pourquoi": "Le fou protège c3 depuis b2 et vise la grande diagonale. Il ne gêne pas les autres pièces et laisse la dame libre. Les Noirs n'ont plus de cible immédiate sur c3."
+   },
+   {
+    "san": "c4",
+    "pourquoi": "Le pion attaqué avance au lieu d'attendre : il frappe d5 et ouvre la diagonale au fou c1. Si ...dxc4 Cxc4, le cavalier arrive sur une belle case. Attention : d4 est alors libre pour un cavalier noir."
+   },
+   {
+    "san": "Qb3",
+    "pourquoi": "La dame défend c3 et regarde b6 et d5. Elle prépare a5 pour chasser le fou b6. En échange, elle quitte la défense de d3 et du roque."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "a5",
+    "pourquoi": "Chasse le fou en a7, mais oublie la menace : après Cb3 les Noirs jouent Txc3 et gagnent un pion. Il faut d'abord défendre c3, ensuite attaquer."
+   },
+   {
+    "san": "Qe2",
+    "pourquoi": "Semble soutenir e5, mais la dame bloque le fou d3 et c3 reste faible. Après ...Cg6 puis Fxf5 exf5, les Noirs ouvrent la colonne e, menacent e5 et ont un centre solide."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 44
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 Be2 Nh6 Bxh6 gxh6 Qd2 Bg7 Na3 O-O O-O f6 exf6 Rxf6 Nc2 Bd7 b4 cxd4",
+  "sens": "Prend sur d4 avant que b4xc5 ne chasse le pion c5 ; le pion d4 blanc devient isolé et attaqué par le cavalier c6 et la dame b6, tandis que la tour f6 et le fou g7 pressent la colonne f et la grande diagonale.",
+  "menace": "...dxc3, qui gagne un pion : si la dame reprend en c3, elle est clouée sur la diagonale du fou g7 et la tour f6 peut venir en f7 ou f3.",
+  "plan": [
+   {
+    "san": "cxd4",
+    "pourquoi": "Reprend tout de suite et ferme la grande diagonale : le pion d4 bouche la vue du fou g7 et protège aussi le cavalier f3 contre une prise en f3. Les Noirs gardent du jeu (Cxb4, pression sur f3), mais les Blancs restent un peu mieux grâce au pion d4 solide et au fou e2 bien placé."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Nfxd4",
+    "pourquoi": "Reprendre du cavalier semble naturel mais laisse le pion c3 en l'air et déséquilibre le centre : les Blancs perdent l'avantage et les Noirs rejouent avec confort."
+   },
+   {
+    "san": "Rac1",
+    "pourquoi": "Ignore la prise dxc3 ! Après ...dxc3 Dxc3, la dame est en face du fou g7 et la tour f6 vient en f7 ; les Noirs ont gagné un pion et une attaque contre le roi blanc."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 44
+ },
+ {
+  "coups": "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 Bxe7 Qxe7 f4 O-O Nf3 c5 Qd2 Nc6 dxc5 Nxc5 Qe3 a6 Rd1 Nd7 Bd3 f6",
+  "nom": "Défense française, variante classique (6.Fxe7 Dxe7)",
+  "sens": "ouvre une seconde brèche contre e5 et libère la colonne f pour la tour ; le cavalier d7 et la dame visent déjà la pointe blanche, et le pion e6 pourra avancer dès que e5 tombera.",
+  "menace": "pas de gain immédiat (e5 est défendu trois fois), mais la pression monte : les Noirs préparent fxe5 pour ouvrir la colonne f, et Db4 guette le pion b2.",
+  "plan": [
+   {
+    "san": "Ne2",
+    "pourquoi": "le cavalier quitte c3 pour c'est le seul qui ne défendait pas e5 : il va en d4 ou g3 et renforce le centre. Il laisse aussi la case c3 libre au pion pour couper la diagonale b4-e1. Les Noirs prendront en e5 mais sans gagner de matériel."
+   },
+   {
+    "san": "O-O",
+    "pourquoi": "met le roi à l'abri avant que la colonne f ne s'ouvre, et la tour f1 va défendre f4. C'est le coup de bon sens : d'abord la sécurité, ensuite le combat pour e5."
+   },
+   {
+    "san": "a3",
+    "pourquoi": "petit coup prophylactique : il interdit Db4, qui attaquait b2 et gênait le roque. Les Blancs y perdent un temps, mais le cavalier c3 reste en place."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Nb1",
+    "pourquoi": "le cavalier recule pour aller en d2 défendre e5, mais il abandonne b2 : Db4+ frappe et après Cd2 Dxb2 les Noirs gagnent un pion net et le roi blanc n'a pas roqué."
+   },
+   {
+    "san": "a4",
+    "pourquoi": "le pion part dans le vide : il ne contrôle plus b4 et Db4 arrive quand même. Après O-O d4 ! la dame e3 est chassée et le centre blanc s'écroule."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 18
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 Nf3 cxd4 Nxd4 Nc6 Nxc6 bxc6 Bd3 Qc7 Qe2 f5 c3 c5 O-O Ne7 Be3 Ng6 Nd2 Be7 f4 a5 b3",
+  "sens": "prépare c4 pour frapper le pion d5 et interdit a4 qui fixerait les pions blancs de l'aile dame ; renonce à b4 mais garde un centre solide avec e5 et f4.",
+  "plan": [
+   {
+    "san": "O-O",
+    "pourquoi": "Met le roi à l'abri avant d'ouvrir le jeu. Le pion f5 et le cavalier g6 protègent déjà l'aile roi. Ensuite les Noirs peuvent jouer Fb7 ou Tb8 pour presser la colonne b."
+   },
+   {
+    "san": "Bb7",
+    "pourquoi": "Développe le fou derrière le pion d5 : il soutiendra d4 et surveillera la diagonale vers g2 si le centre s'ouvre. Laisse aux Blancs c4, mais après c4 d4 le fou noir tient la case e4."
+   },
+   {
+    "san": "Qb6",
+    "pourquoi": "Place la dame sur la diagonale a7-g1, en face du roi blanc, et pousse d4 ou c4 en appui. Vise aussi b3 pour gêner le plan blanc. La dame quitte c7 et ne défend plus e5 pour autant que c5 reste solide."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 19
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 Nh6 Bd3 cxd4 O-O Bd7 b4 Nf5 Re1 a6 c4 dxc4 Bxc4 Rc8 Bd3 Be7 Nbd2",
+  "sens": "Développe la dernière pièce mineure vers c4 ou b3 pour attaquer le pion d4, isolé et avancé, que les Noirs doivent protéger avec des pièces. Il libère aussi la case b2 pour le fou c1.",
+  "menace": "Nc4 (ou Nb3) attaque le pion d4, qui n'est défendu que par le cavalier f5 ; le fou d3 peut aussi l'échanger contre ce cavalier pour affaiblir d4.",
+  "plan": [
+   {
+    "san": "Qd8",
+    "pourquoi": "Recule la dame sur sa colonne pour défendre d4 et quitter la case b6, exposée à Nc4. Elle garde un œil sur la diagonale d8-h4 et laisse le roi roquer tranquillement."
+   },
+   {
+    "san": "O-O",
+    "pourquoi": "Met le roi à l'abri avant que les Blancs ne lancent g4 contre le cavalier f5. Après le roque, les Noirs peuvent jouer f6 pour casser le centre blanc."
+   },
+   {
+    "san": "Qc7",
+    "pourquoi": "Place la dame sur la colonne c, en face de la tour, et vise le pion e5. Elle quitte la case b6 avant que le cavalier arrive en c4 avec gain de temps."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "h6",
+    "pourquoi": "Ce coup prudent donne du temps aux Blancs : g4 chasse le cavalier f5 vers h4, où Nxh4 le capture. Le cavalier n'a plus de case de repli et le pion d4 tombe ensuite."
+   },
+   {
+    "san": "Nb8",
+    "pourquoi": "Reculer le cavalier c6 défait tout le développement et laisse d4 sans soutien : g4 chasse le cavalier f5 en h4, où Nxh4 le prend. Les Noirs perdent une pièce ou le centre."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -44
+ },
+ {
+  "coups": "e4 e6 d4 d5 Nd2 c5 exd5 exd5 Ngf3 Nf6 Bb5+ Bd7 Bxd7+ Nbxd7 O-O Be7 dxc5 Nxc5 Nb3 Nce4 Be3 O-O c3 Qc7",
+  "nom": "Défense française, variante Tarrasch, ligne ouverte 3...c5 avec 4.exd5 exd5 (pion isolé d5)",
+  "sens": "Place la dame sur la colonne c, en face de la case c2, et soutient le cavalier avancé e4 : si on le chasse, il aura une case de repli. La dame vise aussi h2 pour plus tard.",
+  "plan": [
+   {
+    "san": "Bd4",
+    "pourquoi": "Centralise le fou sur une case solide (protégée par c3 et le cavalier b3). De d4, le fou bloque le pion isolé d5, surveille la grande diagonale vers g7 et libère e3 pour la dame ou une tour. Le cavalier e4 reste en l'air : une tour viendra sur e1 pour le questionner."
+   },
+   {
+    "san": "Re1",
+    "pourquoi": "Met la tour sur la colonne e, en face du cavalier e4 et du fou e7. Le cavalier devra se justifier ou reculer, et la tour profitera ensuite de la colonne ouverte. Les Blancs ne cherchent pas de combinaison : ils améliorent leurs pièces une par une."
+   },
+   {
+    "san": "Qc2",
+    "pourquoi": "Occupe c2 malgré la dame noire sur c7, car le pion c3 et le fou e3 protègent tout : la dame attaque le cavalier e4 une deuxième fois et prend la diagonale b1-h7. Les Noirs devront bouger le cavalier, et les Blancs gagneront un temps."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 12
+ },
+ {
+  "coups": "e4 e6 d4 d5 exd5 exd5 Nf3 Bd6 c4 Nf6 c5 Be7 Bd3 O-O O-O b6 Be3 bxc5 dxc5 Ng4 Bf4 Bxc5 Bxh7+ Kxh7 Qc2+",
+  "sens": "Donne échec au roi en h7 sur la diagonale ouverte par le sacrifice en h7, et attaque en même temps le fou noir en c5. Les Blancs veulent récupérer la pièce rendue.",
+  "menace": "Prendre le fou en c5 avec la dame (Dxc5) et rétablir l'égalité matérielle.",
+  "plan": [
+   {
+    "san": "Kg8",
+    "pourquoi": "Le roi revient se mettre à l'abri sur la case la plus sûre. Le fou c5 sera perdu, mais les Noirs gardent un pion de plus et leur cavalier g4 reste actif. La position est équilibrée, sans danger pour le roi."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "g6",
+    "pourquoi": "Bloque l'échec mais affaiblit les cases noires autour du roi. La dame prend quand même le fou en c5, puis revient en c3 sur la grande diagonale : le roi en h7, sans pion g7, devient une cible durable."
+   },
+   {
+    "san": "Bf5",
+    "pourquoi": "Interpose le fou, mais il n'est défendu par personne : la dame le prend simplement. Après le retour du roi en g8, elle capture aussi le cavalier en g4. Deux pièces de perdues pour rien."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -16
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Bd7 Be2 Nge7 O-O Nf5 dxc5 Bxc5 b4 Bb6 Bd3 O-O Re1 a6 a4 Rc8 Nbd2 Nce7 Bb2",
+  "nom": "Défense française, variante d'avance (ligne 5.Cf3 Fd7 6.Fe2)",
+  "sens": "achève le développement en plaçant le fou sur une case tranquille : il couvre c3, soutient le pion e5 depuis la grande diagonale et libère la dame pour aller en c2 ou en b3.",
+  "plan": [
+   {
+    "san": "Ng6",
+    "pourquoi": "Le cavalier attaque le pion e5, pilier du centre blanc. Les Blancs doivent le défendre (Cb3, Dc2 ou Fxf5 avant). Il prépare aussi f6 pour ouvrir la colonne f et libérer le fou d7 vers e8 et h5."
+   },
+   {
+    "san": "Bc7",
+    "pourquoi": "Le fou recule hors de portée d'un futur a5 et pointe sur e5 depuis c7. Il garde la pression sur le centre et laisse la case b6 libre à la dame."
+   },
+   {
+    "san": "Qc7",
+    "pourquoi": "La dame se place sur la colonne c, en face de la tour et du pion c3, et renforce la pression sur e5. Elle prépare Tfc8 ou Tc8-Tfc8 pour doubler sur la colonne."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -46
+ },
+ {
+  "coups": "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 Bxe7 Qxe7 f4 O-O Nf3 c5 Qd2 Nc6 dxc5 Nxc5 Qe3 a6 Rd1 Nd7 Bd3 f6 Ne2",
+  "nom": "Défense française, variante classique (6.Fxe7 Dxe7 7.f4)",
+  "sens": "retire le seul cavalier qui ne défendait pas e5 pour le ramener vers d4 ou g3, où il tiendra le centre ; libère aussi c3 pour le pion afin de fermer la diagonale b4-e1 à la dame noire.",
+  "plan": [
+   {
+    "san": "fxe5",
+    "pourquoi": "prend tout de suite, avant que le cavalier n'arrive en d4 pour tout verrouiller. Après fxe5 la colonne f s'ouvre pour la tour f8 et le centre blanc perd sa pointe. Les Blancs reprennent (fxe5 ou Cd4) sans perdre de pion, mais la position se dégage et le fou c8 pourra sortir par d7."
+   },
+   {
+    "san": "Qc5",
+    "pourquoi": "propose l'échange des dames : si les Blancs acceptent, Cxc5 attaque le fou d3 et le roi blanc n'a plus d'attaque. S'ils refusent, la dame reste active sur la diagonale c5-g1 et vise b4 et e3. Laisse aux Blancs le temps de roquer."
+   },
+   {
+    "san": "Nc5",
+    "pourquoi": "le cavalier revient attaquer le fou d3 et surveille e4 ; il prépare fxe5 en ajoutant une pièce active. Petit défaut : il quitte la défense de e5 et f6, les Blancs peuvent répondre tranquillement en gardant leur chaîne de pions."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "f5",
+    "pourquoi": "ferme la position au mauvais moment : le pion e5 devient un clou définitif dans le camp noir, la colonne f ne s'ouvre jamais et le fou c8 reste enterré. Les Blancs roquent, posent le cavalier en d4 et jouent sans risque sur l'aile roi."
+   },
+   {
+    "san": "Qd8",
+    "pourquoi": "recule sans raison et abandonne la lutte pour e5 : les Blancs jouent exf6 Txf6 puis Cd4 et obtiennent un cavalier central indélogeable, tandis que la dame noire en d8 ne participe plus à rien."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -10
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 Nf3 cxd4 Nxd4 Nc6 Nxc6 bxc6 Bd3 Qc7 Qe2 f5 c3 c5 O-O Ne7 Be3 Ng6 Nd2 Be7 f4 a5 b3 O-O",
+  "nom": "Défense française, variation d'avance (ligne 4.Cf3 cxd4 5.Cxd4 avec ...f5)",
+  "sens": "Met le roi à l'abri sur l'aile roi, relie les tours et prépare l'ouverture de la colonne b par Fb7 ou Tb8 ; le pion f5 et le cavalier g6 forment déjà un rempart.",
+  "plan": [
+   {
+    "san": "h3",
+    "pourquoi": "Enlève la case g4 au cavalier et au fou noirs : plus de ...Cg4 contre le fou e3 ni de ...Fg4 pour gêner la dame. C'est un coup d'attente utile qui garde la structure. Il laisse aux Noirs le temps de jouer Fb7 ou Tb8, mais la position blanche reste solide."
+   },
+   {
+    "san": "Rac1",
+    "pourquoi": "Place la tour derrière le pion c3 : si les Noirs poussent ...c4, le fou reculera en c2 ou e2 sans perdre de temps, et la tour soutiendra une future poussée c4 pour ouvrir le centre. Cela laisse la colonne b aux Noirs, mais la tour de c1 la couvre indirectement."
+   },
+   {
+    "san": "Nf3",
+    "pourquoi": "Ramène le cavalier vers le centre : il protège d4, e5 et vise g5 pour harceler le roi noir. Il libère aussi la case d2 pour une tour ou la dame. En contrepartie, le pion e5 reste à défendre si les Noirs jouent ...Fb7 puis ...d4."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -9
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 Be2 Nh6 Bxh6 gxh6 Qd2 Bg7 Na3 O-O O-O f6 exf6 Rxf6 Nc2 Bd7 b4 cxd4 cxd4",
+  "nom": "Défense française, variante d'avance (ligne 6.Fe2 Ch6 7.Fxh6)",
+  "sens": "reprend en d4 avec un pion solide qui bouche la diagonale du fou g7 et protège le cavalier f3 ; le pion b4 peut maintenant avancer en b5 pour chasser le cavalier c6.",
+  "menace": "b4-b5 : le cavalier c6 doit partir, le pion d4 n'est plus attaqué et la dame b6 se retrouve à l'étroit (a2-a4 suit).",
+  "plan": [
+   {
+    "san": "a6",
+    "pourquoi": "Empêche b5 : le cavalier reste en c6 et continue d'appuyer sur d4. Le fou g7 et la dame b6 gardent d4 dans leur viseur. Les Blancs restent un peu mieux mais n'ont plus de coup gratuit à l'aile dame."
+   },
+   {
+    "san": "Rf7",
+    "pourquoi": "Recule la tour qui était un peu exposée en f6 (un cavalier en e3 puis g4 ou e5 la gênait). La tour couvre la 7e rangée et laisse f8 libre pour l'autre tour. Les Blancs peuvent jouer b5, mais le cavalier va en e7 puis f5 attaquer d4."
+   },
+   {
+    "san": "Ne7",
+    "pourquoi": "Devance b5 et vise f5, d'où le cavalier attaque le pion d4 que les Blancs doivent défendre. Il laisse la case c6 : attention, la dame b6 doit garder un chemin de sortie si a4 et b5 arrivent."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Rc8",
+    "pourquoi": "Coup naturel sur la colonne c, mais 15.b5 chasse le cavalier (Ce7) et 16.a4 suit : la dame b6 est coincée par les pions a4-b5, la tour c8 ne sert à rien et les Blancs ont gagné une pleine demi-pièce d'avantage sans effort."
+   },
+   {
+    "san": "Qd8",
+    "pourquoi": "Semble mettre la dame en sécurité, mais c'est trop passif : 15.b5 chasse le cavalier et après Ce7 16.Ce5 le cavalier blanc s'installe au centre, attaque le fou d7 et la tour f6 ; le pion d4 n'est plus attaqué par personne."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -45
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 Nh6 Bd3 cxd4 O-O Bd7 b4 Nf5 Re1 a6 c4 dxc4 Bxc4 Rc8 Bd3 Be7 Nbd2 Qd8",
+  "nom": "Défense française, variante d'avance (ligne 6.a3)",
+  "sens": "Met la dame à l'abri : en b6 elle était une cible pour un cavalier venant en c4, en d8 elle n'est plus attaquable. Elle libère aussi le roi pour le petit roque et surveille la diagonale d8-h4 pour empêcher un cavalier blanc de s'installer en g5 ou h4 sans risque.",
+  "plan": [
+   {
+    "san": "Ne4",
+    "pourquoi": "Le cavalier de d2 saute vers le centre. De e4, il vise d6 (via c5) : un cavalier en d6 bloquerait toute la position noire et attaquerait b7 et f7. Il regarde aussi g5 pour une attaque sur le roi noir quand il roquera. Les Noirs gardent leur pion d4 de plus, mais ils doivent d'abord parer cette intrusion."
+   },
+   {
+    "san": "h3",
+    "pourquoi": "Petit coup utile : il enlève la case g4 au cavalier et au fou noirs, et donne au roi blanc une case de fuite en h2. Les Blancs ne sont pas pressés, car les Noirs n'ont pas de menace ; ils améliorent leur position avant d'aller reprendre le pion d4. Les Noirs peuvent roquer, mais leur pion d4 reste faible."
+   },
+   {
+    "san": "Nb3",
+    "pourquoi": "Le cavalier attaque directement le pion d4, que la dame noire ne défend plus (le fou d7 lui bouche la vue). Il prépare aussi Cc5 pour s'installer sur une case forte. Les Noirs doivent défendre d4, par exemple avec ...Ce7-c6 ou ...Fc6, ce qui ralentit leur roque."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 48
+ },
+ {
+  "coups": "e4 e6 d4 d5 Nd2 c5 exd5 exd5 Ngf3 Nf6 Bb5+ Bd7 Bxd7+ Nbxd7 O-O Be7 dxc5 Nxc5 Nb3 Nce4 Be3 O-O c3 Qc7 Bd4",
+  "nom": "Défense française, variante Tarrasch (3...c5 avec pion isolé d5)",
+  "sens": "Centralise le fou sur une case solide, protégée par c3 et le cavalier b3. De d4, il bloque le pion isolé d5, surveille la diagonale vers g7 et libère e3 pour la dame ou une tour. Le cavalier e4 reste en l'air : une tour viendra sur e1 pour le questionner.",
+  "plan": [
+   {
+    "san": "Rfe8",
+    "pourquoi": "La tour vient soutenir le cavalier e4 avant que Te1 ne le gêne. Elle contrôle aussi la colonne e, la seule ouverte. Les Blancs peuvent continuer Te1 ou Dd3 pour presser d5, mais le cavalier est désormais bien défendu."
+   },
+   {
+    "san": "Rad8",
+    "pourquoi": "La tour défend le pion isolé d5, le point faible des Noirs. Elle libère aussi a8 sans affaiblir les pions. Les Blancs garderont la pression avec Dd3 et Tfe1, mais d5 tient."
+   },
+   {
+    "san": "h6",
+    "pourquoi": "Petit coup utile : il enlève g5 au cavalier et au fou blanc, donc le cavalier f6 ne sera jamais chassé par Cg5 ou Fg5. Il prépare tranquillement Tfe8 et Tad8. En échange, les Noirs ne gagnent pas de temps pour attaquer."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -6
+ },
+ {
+  "coups": "e4 e6 d4 d5 exd5 exd5 Nf3 Bd6 c4 Nf6 c5 Be7 Bd3 O-O O-O b6 Be3 bxc5 dxc5 Ng4 Bf4 Bxc5 Bxh7+ Kxh7 Qc2+ Kg8",
+  "nom": "Variante d'échange",
+  "sens": "Le roi quitte la colonne h et la diagonale b1-h7 pour revenir dans son abri. Il laisse le fou c5 se faire prendre, mais le cavalier g4 reste bien placé et les Noirs ont un pion de plus.",
+  "menace": "Bxf2+ : le fou prend le pion f2 avec échec, soutenu par le cavalier g4, et gagne la tour f1.",
+  "plan": [
+   {
+    "san": "Qxc5",
+    "pourquoi": "Prend le fou tout de suite. C'est le seul bon coup : il récupère la pièce et supprime d'un coup la menace Bxf2+. Le matériel redevient égal (les Noirs gardent un pion de plus, les Blancs ont la qualité de jeu). Les Noirs répondront sans doute par ...Nc6 ou ...Nxf2, mais après Qxc5 la position est tenable."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "h3",
+    "pourquoi": "Chasse le cavalier, mais oublie la menace. Les Noirs jouent Bxf2+ : la tour f1 doit reprendre, puis Nxf2 gagne la tour. Les Blancs perdent gros."
+   },
+   {
+    "san": "Nc3",
+    "pourquoi": "Développe une pièce au lieu de prendre le fou c5. Les Noirs le gardent avec c6 et restent avec une pièce entière de plus. Il faut d'abord reprendre, ensuite développer."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 20
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Bd7 Be2 Nge7 O-O Nf5 dxc5 Bxc5 b4 Bb6 Bd3 O-O Re1 a6 a4 Rc8 Nbd2 Nce7 Bb2 Ng6",
+  "sens": "Ajoute un deuxième attaquant sur e5, le pilier du centre blanc, et prépare Nh4 pour échanger le cavalier f3, principal défenseur de e5. Il libère aussi la case f6 pour casser le centre avec f6.",
+  "menace": "Nh4 : échanger le cavalier f3, puis e5 tombe (attaqué par Nf5 et Ng6). Nf4 et Nxe5 sont aussi dans l'air.",
+  "plan": [
+   {
+    "san": "g3",
+    "pourquoi": "Le seul bon coup. Le pion g3 contrôle h4 et f4 : les cavaliers noirs n'ont plus de case de saut et le cavalier f3 reste à son poste pour garder e5. Le roi est un peu aéré, mais les Noirs n'ont aucune pièce pour l'attaquer. Ensuite les Blancs pourront jouer Nb3 ou Qe2 tranquillement."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Nb3",
+    "pourquoi": "Développe le cavalier, mais oublie la menace. Après 15...Nh4 16.Nxh4 Nxh4, le défenseur f3 a disparu : le pion e5 est attaqué et va tomber, et le cavalier h4 vise le roi blanc."
+   },
+   {
+    "san": "Qc2",
+    "pourquoi": "Défend e5 en diagonale, mais 15...Nh4 16.Nxh4 Qxh4 amène la dame noire devant le roi : e5 reste attaqué, f2 est visé par le fou b6, et les Blancs sont sur la défensive."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 48
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 Nf3 cxd4 Nxd4 Nc6 Nxc6 bxc6 Bd3 Qc7 Qe2 f5 c3 c5 O-O Ne7 Be3 Ng6 Nd2 Be7 f4 a5 b3 O-O h3",
+  "nom": "Défense française, variante d'avance, ligne 4.Cf3 cxd4 avec ...f5",
+  "sens": "coup d'attente prophylactique : retire la case g4 aux pièces noires, protège le fou e3 d'une attaque de cavalier et évite que la dame blanche soit gênée par un fou en g4. Les Blancs gardent leur structure sans rien engager.",
+  "plan": [
+   {
+    "san": "Bb7",
+    "pourquoi": "développe la dernière pièce mineure sur la grande diagonale, où le fou vise b3 et la case a6-f1 après un futur ...c4. Il prépare ...Tb8 ou ...Tab8 pour pousser sur la colonne b. Il laisse aux Blancs le temps de jouer Tf2 ou g4, mais la position noire est saine."
+   },
+   {
+    "san": "Rd8",
+    "pourquoi": "met la tour derrière le pion d5 avant de pousser ...d4 ou ...c4. La tour soutient le centre et libère f8 pour l'autre tour. Elle ne menace rien tout de suite, mais chaque pièce noire gagne en activité."
+   },
+   {
+    "san": "Qb6",
+    "pourquoi": "cloue la pression sur b3 et sur la diagonale a7-g1, là où le roi blanc respire. Avec ...c4 à suivre, le fou d3 doit bouger. Les Blancs peuvent répondre Cf3 ou Tab1, donc la dame doit rester prête à revenir en c7."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 15
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 Be2 Nh6 Bxh6 gxh6 Qd2 Bg7 Na3 O-O O-O f6 exf6 Rxf6 Nc2 Bd7 b4 cxd4 cxd4 a6",
+  "nom": "Défense française, variante d'avance (ligne Ch6)",
+  "sens": "Ferme l'aile dame aux Blancs : le pion b ne peut plus avancer en b5 pour chasser le cavalier c6, qui continue d'appuyer sur d4 avec le fou g7 et la dame b6.",
+  "plan": [
+   {
+    "san": "a4",
+    "pourquoi": "Prépare a5 pour chasser la dame b6 de la colonne b et gagner de l'espace. Si la dame recule, la pression sur d4 et b4 diminue. Les Blancs doivent surveiller la case b4, que les Noirs peuvent viser avec Rb8 ou Nxb4."
+   },
+   {
+    "san": "Rab1",
+    "pourquoi": "Protège le pion b4 une fois pour toutes, et prépare a4-a5 sans laisser de tactique sur b4. La tour sort du coin et peut viser b7 plus tard. Laisse aux Noirs le temps de doubler sur la colonne f."
+   },
+   {
+    "san": "h3",
+    "pourquoi": "Donne une case de fuite au roi en h2 et empêche ...Bg4 qui clouerait le cavalier f3, défenseur de d4. Coup tranquille : les Blancs consolident avant d'agir, mais ne gagnent rien tout de suite."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 45
+ },
+ {
+  "coups": "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 Bxe7 Qxe7 f4 O-O Nf3 c5 Qd2 Nc6 dxc5 Nxc5 Qe3 a6 Rd1 Nd7 Bd3 f6 Ne2 fxe5",
+  "nom": "Variante classique (Alekhine-Chatard évitée), ligne avec 7.f4 et 9.Dd2",
+  "sens": "Prend le pion e5 pour ouvrir la colonne f à sa tour et casser la pointe du centre blanc ; il force aussi les Blancs à reprendre tout de suite, sinon le pion e5 avance et gagne le fou d3 ou le cavalier.",
+  "menace": "e4 : le pion avance en fourchette sur le fou d3 et le cavalier f3 ; les Noirs gagnent une pièce ou un pion net.",
+  "plan": [
+   {
+    "san": "fxe5",
+    "pourquoi": "Reprend avec le pion f : il garde un pion solide en e5 qui cloue encore le centre noir et protège la case d4 pour le cavalier. La colonne f reste contestée et le roi blanc pourra roquer tranquillement ensuite. La position est à peu près égale ; les Noirs sortiront le fou par d7 et joueront Txf1 ou Cb6."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Nxe5",
+    "pourquoi": "Reprendre du cavalier semble naturel mais il est échangé aussitôt : Cxe5 fxe5 Dc7 et le pion e5, isolé et attaqué par la dame, tombe. Les Blancs se retrouvent avec un pion de moins et un roi encore au centre."
+   },
+   {
+    "san": "O-O",
+    "pourquoi": "Roquer sans reprendre laisse e4 : le pion fourchette le fou d3 et le cavalier f3. Après Fxe4 dxe4 les Blancs ont perdu une pièce entière. Avant de penser à la sécurité du roi, il faut d'abord régler le problème du pion e5."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 7
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 Nh6 Bd3 cxd4 O-O Bd7 b4 Nf5 Re1 a6 c4 dxc4 Bxc4 Rc8 Bd3 Be7 Nbd2 Qd8 Ne4",
+  "nom": "Variante d'avance de la Défense française",
+  "sens": "centralise le cavalier : de e4, il vise d6 (via c5) pour bloquer la position noire et attaquer b7 et f7, et il regarde g5 en vue d'une attaque sur le roi noir après le roque.",
+  "menace": "Nc5 ou Nd6 pour s'installer dans le camp noir ; surtout g4 qui chasse le cavalier f5, pièce clé qui tient d4.",
+  "plan": [
+   {
+    "san": "O-O",
+    "pourquoi": "Met le roi à l'abri avant tout. Si g4, le cavalier f5 peut aller en h4 ou h6 sans que le roi reste exposé au centre. Les Noirs gardent leur pion d4 de plus et préparent Bb5 ou Nd6 pour chasser les pièces blanches."
+   },
+   {
+    "san": "h5",
+    "pourquoi": "Empêche g4 : le cavalier f5 est le gardien du pion d4, il faut le fixer. Le roi reste au centre un peu plus longtemps, mais la case g4 est désormais interdite aux Blancs."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "f6",
+    "pourquoi": "Veut ouvrir la colonne f, mais après exf6 gxf6 Nxf6+ le pion d'avant-poste e5 est échangé contre un cavalier qui prend avec échec et détruit la structure noire. Le roi non roqué est à nu."
+   },
+   {
+    "san": "h6",
+    "pourquoi": "Donne une case de repli au cavalier, mais g4 chasse quand même le cavalier en h4, puis Nxh4 : le gardien de d4 disparaît et les Noirs perdent le pion d4 ou pire. h5 était la bonne idée, pas h6."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -70
+ },
+ {
+  "coups": "e4 e6 d4 d5 Nd2 c5 exd5 exd5 Ngf3 Nf6 Bb5+ Bd7 Bxd7+ Nbxd7 O-O Be7 dxc5 Nxc5 Nb3 Nce4 Be3 O-O c3 Qc7 Bd4 Rfe8",
+  "nom": "Variante Tarrasch, ligne 3...c5 4.exd5 exd5",
+  "sens": "amène la tour sur la seule colonne ouverte pour soutenir le cavalier e4 avant que les Blancs ne l'attaquent avec Te1 ; elle prépare aussi d'éventuels échanges sur la colonne e, où les Noirs veulent être les premiers.",
+  "plan": [
+   {
+    "san": "Re1",
+    "pourquoi": "Occupe la colonne e en face de la tour noire et met un attaquant de plus sur le cavalier e4. Les Blancs peuvent ensuite jouer Dc2 ou Dd3 pour le presser encore ; les Noirs devront tôt ou tard reculer ou échanger ce cavalier, et le pion d5 restera isolé."
+   },
+   {
+    "san": "Qd3",
+    "pourquoi": "Attaque le cavalier e4 et le pion d5 en même temps : si le cavalier bouge, d5 est pris. La dame regarde aussi l'aile roi. Attention toutefois, les Noirs peuvent répondre Cc5 avec gain de temps sur la dame, d'où l'idée de ne pas se précipiter."
+   },
+   {
+    "san": "g3",
+    "pourquoi": "Enlève la case h2 et f4 aux pièces noires : la dame c7 ne vise plus h2 et aucun cavalier ne vient se poser en f4. Coup tranquille qui prépare Te1 et Dd3 sans laisser de tactique sur le roi blanc."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 6
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Bd7 Be2 Nge7 O-O Nf5 dxc5 Bxc5 b4 Bb6 Bd3 O-O Re1 a6 a4 Rc8 Nbd2 Nce7 Bb2 Ng6 g3",
+  "nom": "Défense française, variante d'avance (ligne 5...Fd7 6.Fe2 Cge7)",
+  "sens": "retire aux cavaliers noirs les cases h4 et f4 pour qu'ils ne harcèlent ni le cavalier f3 ni le roi, tout en gardant le cavalier f3 au service du pion e5 ; le prix à payer, ce sont des cases blanches affaiblies autour du roi (f3, h3) et le fou b2 qui reste enfermé derrière c3.",
+  "plan": [
+   {
+    "san": "Nh6",
+    "pourquoi": "Le cavalier f5 n'a plus d'avenir : il recule vers h6 pour sauter en g4, la case que g3 ne couvre plus. De g4, il attaque e5 et f2 et prépare f6 pour ouvrir la colonne f. Les Blancs doivent surveiller h3 : chasser le cavalier avec h3 aérerait encore leur roi."
+   },
+   {
+    "san": "f6",
+    "pourquoi": "L'attaque classique de la chaîne : on frappe la tête e5. Si exf6, la dame reprend et la colonne f s'ouvre sur f2 avec le fou b6 déjà pointé dessus. Sinon, les Noirs gardent le choix de prendre en e5 au bon moment. À noter : le pion e6 devient un peu plus faible, et la case e5 pourrait servir aux pièces blanches si l'on échange mal."
+   },
+   {
+    "san": "Qe7",
+    "pourquoi": "Coup calme : la dame sort, protège la deuxième rangée et appuie f6 pour plus tard. Elle laisse d8 à la tour, ce qui prépare Tfd8 et la pression sur le pion d (après ...d4 un jour). Les Blancs gagnent en revanche le temps de jouer Cb3 ou De2 sans être inquiétés."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -51
+ },
+ {
+  "coups": "e4 e6 d4 d5 exd5 exd5 Nf3 Bd6 c4 Nf6 c5 Be7 Bd3 O-O O-O b6 Be3 bxc5 dxc5 Ng4 Bf4 Bxc5 Bxh7+ Kxh7 Qc2+ Kg8 Qxc5",
+  "sens": "Reprend le fou pour rétablir le matériel. La dame se place au centre, d'où elle vise à la fois le pion d5 et le pion c7, et elle écarte la menace du fou sur f2.",
+  "menace": "Fxc7 : le fou attaque la dame et gagne le pion c7 ; la dame menace aussi Dxd5.",
+  "plan": [
+   {
+    "san": "Na6",
+    "pourquoi": "Développe le cavalier en attaquant la dame blanche. Il couvre c7 et prépare ...Cb4 ou ...Cxc5. La dame doit bouger et les Noirs gagnent un temps pour sortir leurs pièces. C'est le seul coup qui garde l'équilibre."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Bb7",
+    "pourquoi": "Coup naturel, mais il oublie c7. Après Dxc7 Dxc7 Fxc7, les dames sont échangées et les Blancs ont pris un pion sans rien donner. La position noire devient inférieure."
+   },
+   {
+    "san": "Nf6",
+    "pourquoi": "Rentre le cavalier mais laisse c7 sans défense. Fxc7 attaque la dame et gagne le pion ; après ...Dd7 Fg3, les Blancs ont un pion de plus et les meilleures pièces."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -10
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 Nf3 cxd4 Nxd4 Nc6 Nxc6 bxc6 Bd3 Qc7 Qe2 f5 c3 c5 O-O Ne7 Be3 Ng6 Nd2 Be7 f4 a5 b3 O-O h3 Bb7",
+  "sens": "termine le développement en plaçant le fou sur la grande diagonale, derrière les pions d5 et c5. Il vise b3 et, après un futur ...c4, la case a6 pour attaquer le fou d3. Il prépare aussi ...Tb8 pour peser sur la colonne b.",
+  "plan": [
+   {
+    "san": "Rac1",
+    "pourquoi": "met la tour en face du pion c5 et protège c3 à l'avance. Si les Noirs jouent ...c4, le fou d3 peut reculer en c2 sans que la colonne c s'ouvre à leur profit. La dame reste libre en e2 pour aller en f2 ou h5. Les Noirs continueront par ...Tb8 ou ...Ch4, mais la position blanche tient bien."
+   },
+   {
+    "san": "Kh2",
+    "pourquoi": "sort le roi de la diagonale g1-a7 et de la colonne g, où le cavalier noir pourrait venir en h4. Le roi en h2 garde g3 et h3, ce qui enlève tout mordant à ...Ch4. Les Blancs pourront ensuite jouer g4 pour ouvrir le roque noir."
+   },
+   {
+    "san": "Nf3",
+    "pourquoi": "ramène le cavalier au centre : il contrôle d4, e5 et surtout h4, la case où le cavalier noir voudrait venir. Il libère d2 pour la dame ou la tour. En échange, le pion e5 n'a plus le soutien du cavalier en d2, mais f4 le défend déjà."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "h4",
+    "pourquoi": "semble chasser le cavalier g6, mais le pion est tout simplement en prise : ...Cxh4. Après Cf3 Cxf3, les Noirs ont gagné un pion et abîmé le roque blanc pour rien. Ne poussez jamais un pion devant votre roi sans vérifier qu'il est défendu."
+   },
+   {
+    "san": "Rab1",
+    "pourquoi": "veut contrer la pression noire sur la colonne b, mais la tour y est passive : le pion b3 est déjà solide. Pendant ce temps ...Ch4 s'installe près du roi blanc et oblige Tf2, puis les Noirs jouent ...Rh8 et préparent ...g5. Les Blancs ont perdu un temps précieux."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -9
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 Be2 Nh6 Bxh6 gxh6 Qd2 Bg7 Na3 O-O O-O f6 exf6 Rxf6 Nc2 Bd7 b4 cxd4 cxd4 a6 a4",
+  "sens": "Prépare a5 pour chasser la dame de b6 et gagner de l'espace à l'aile dame. Si la dame recule, la pression sur d4 et b4 baisse. Le pion a4 soutient aussi la poussée b5, qui chasserait le cavalier c6.",
+  "menace": "a5 puis b5 : la dame doit partir, puis le cavalier c6 est chassé et les pions blancs envahissent l'aile dame.",
+  "plan": [
+   {
+    "san": "Be8",
+    "pourquoi": "Le fou quitte d7 pour aller en g6 ou h5, où il devient actif. Il libère aussi la case d7 pour la dame si elle doit reculer. Les Noirs gardent le fou g7 et la tour f6 contre d4."
+   },
+   {
+    "san": "Rff8",
+    "pourquoi": "La tour revient en f8 pour doubler avec l'autre tour sur la colonne f. Les Noirs visent f2 et acceptent de céder un peu d'espace à l'aile dame, en comptant sur le centre et la colonne f."
+   },
+   {
+    "san": "Qc7",
+    "pourquoi": "La dame recule d'avance avant d'être chassée par a5. Elle garde un œil sur c4 et h2 et reste en contact avec le cavalier c6. Les Blancs gagnent du temps mais la position noire reste solide."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Ne7",
+    "pourquoi": "Le cavalier quitte c6 et ne surveille plus e5 ni a5. Les Blancs jouent Ne5 : le fou d7 doit reculer en e8, puis a5 chasse la dame et les Blancs dominent tout l'aile dame avec un cavalier superbe en e5."
+   },
+   {
+    "san": "Rd8",
+    "pourquoi": "La tour a8 quitte la colonne a et le pion a6 n'est plus défendu. Les Blancs jouent b5 : si axb5, alors a5 chasse la dame et le pion a devient très dangereux. Les Noirs perdent du temps et du terrain."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -46
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 Nh6 Bd3 cxd4 O-O Bd7 b4 Nf5 Re1 a6 c4 dxc4 Bxc4 Rc8 Bd3 Be7 Nbd2 Qd8 Ne4 O-O",
+  "nom": "Défense française, variante d'avance, système 6.a3 Ch6 (ligne avec 9.b4 Cf5)",
+  "sens": "Met le roi à l'abri sur l'aile roi avant d'ouvrir le jeu. Le pion d4 de plus reste protégé par le cavalier f5, et les Noirs préparent Fb5 ou Cd6 pour échanger les pièces blanches actives.",
+  "plan": [
+   {
+    "san": "Bf4",
+    "pourquoi": "Développe le fou en soutenant le pion e5, la pièce clé qui coince les Noirs. Le fou vise aussi d6 : si un cavalier noir y vient, il sera échangé. Les Blancs relient leurs tours et gardent de l'espace en échange du pion."
+   },
+   {
+    "san": "Bb1",
+    "pourquoi": "Recule le fou pour placer la dame en d3 derrière lui : la batterie dame-fou vise h7 et le cavalier f5. Les Noirs devront jouer g6 ou h6, ce qui affaiblit leur roi."
+   },
+   {
+    "san": "Qe2",
+    "pourquoi": "Développe la dame en protégeant e5 et en libérant la case d1 pour une tour. Elle laisse d4 aux Noirs pour l'instant, mais prépare Tad1 pour attaquer ce pion avec plus de pièces."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Bg5",
+    "pourquoi": "Semble actif, mais après f6 le fou est attaqué et le pion e5 craque : exf6 Fxf6 (ou gxf6) ouvre le centre pour les Noirs, qui ont déjà un pion de plus. Les Blancs perdent leur avantage d'espace."
+   },
+   {
+    "san": "Bd2",
+    "pourquoi": "Le fou est passif en d2 et gêne la dame. Après Ch4, les Blancs doivent le rejouer en f4 ; le cavalier revient en g6 et attaque e5. Deux coups de fou pour rien : les Noirs gagnent du temps."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 63
+ },
+ {
+  "coups": "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 Bxe7 Qxe7 f4 O-O Nf3 c5 Qd2 Nc6 dxc5 Nxc5 Qe3 a6 Rd1 Nd7 Bd3 f6 Ne2 fxe5 fxe5",
+  "sens": "reprend avec le pion f pour garder un pion ferme en e5 : il bloque le centre noir, tient la case d4 pour le cavalier et laisse la colonne f disputée. Le roi blanc est encore au centre et veut roquer au coup suivant.",
+  "plan": [
+   {
+    "san": "Qc5",
+    "pourquoi": "propose l'échange des dames. Si les Blancs échangent, le cavalier d7 reprend en c5 et attaque le fou d3 ; le pion e5 devient une faiblesse à cibler. Si les Blancs refusent, la dame noire reste active sur la diagonale a7-g1 face à un roi encore non roqué."
+   },
+   {
+    "san": "Nc5",
+    "pourquoi": "attaque le fou d3 et occupe une belle case centrale. Le cavalier prépare aussi ...Bd7 puis ...Rae8 ou ...Nxd3 pour affaiblir la case e5. Les Blancs devront perdre un temps pour sauver le fou."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Rxf3",
+    "pourquoi": "sacrifie la tour contre le cavalier pour gagner e5 : après Qxf3 Nxe5 Qh3, les Noirs n'ont qu'un pion et un cavalier pour la tour, et la dame blanche vise déjà h7 et e6. Mauvaise affaire."
+   },
+   {
+    "san": "Nb4",
+    "pourquoi": "semble attaquer le fou d3, mais après O-O Nxd3 cxd3 les Blancs ont roqué, gardé un centre solide et ouvert la colonne c pour leurs tours. Les Noirs ont échangé leur bon cavalier pour rien."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -1
+ },
+ {
+  "coups": "e4 e6 d4 d5 Nd2 c5 exd5 exd5 Ngf3 Nf6 Bb5+ Bd7 Bxd7+ Nbxd7 O-O Be7 dxc5 Nxc5 Nb3 Nce4 Be3 O-O c3 Qc7 Bd4 Rfe8 Re1",
+  "nom": "Défense française, variante Tarrasch, 3...c5 4.exd5 exd5",
+  "sens": "Occupe la colonne e en face de la tour noire et ajoute un attaquant sur le cavalier e4 ; prépare Dc2 ou Dd3 pour le chasser, en comptant sur la faiblesse durable du pion isolé d5.",
+  "plan": [
+   {
+    "san": "h6",
+    "pourquoi": "Donne une case de fuite au roi en h7 et empêche tout Cg5 ou Fg5 gênant. Coup d'attente utile : le cavalier e4 est bien défendu par d5 et le cavalier f6, les Noirs n'ont pas besoin de se presser. Ils laissent les Blancs montrer leur plan."
+   },
+   {
+    "san": "Qc6",
+    "pourquoi": "Sort la dame de la colonne c et la place derrière le pion d5 et le cavalier e4 : elle les soutient tous les deux. Elle regarde aussi vers g2 avec le cavalier e4. Si les Blancs jouent Dc2, la dame noire ne sera plus en face."
+   },
+   {
+    "san": "Rad8",
+    "pourquoi": "Amène la dernière pièce dans le jeu et défend le pion d5 une fois de plus. Les Noirs sont prêts à répondre calmement à Dc2 ou Dd3 par ...Fd6 ou ...Cg5, sans jamais être obligés de reculer le cavalier."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -5
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Bd7 Be2 Nge7 O-O Nf5 dxc5 Bxc5 b4 Bb6 Bd3 O-O Re1 a6 a4 Rc8 Nbd2 Nce7 Bb2 Ng6 g3 Nh6",
+  "sens": "quitte la case f5 devenue inutile pour viser g4, que g3 ne couvre plus : de là le cavalier attaquerait e5 et f2, et f6 suivrait pour ouvrir la colonne f contre le roi blanc.",
+  "menace": "Cg4, qui attaque e5 et f2 en même temps ; après f6 la colonne f s'ouvre et le roi blanc, affaibli par g3, sent le courant d'air.",
+  "plan": [
+   {
+    "san": "c4",
+    "pourquoi": "Ouvre le centre pendant que le cavalier noir se promène : après dxc4 Cxc4 les Blancs attaquent le fou b6, libèrent la grande diagonale du fou b2 vers e5 et donnent de l'air à leurs pièces. Le cavalier h6 n'a plus le temps d'aller en g4 tranquillement."
+   },
+   {
+    "san": "Qb3",
+    "pourquoi": "Sort la dame en visant d5 et b6 : elle appuie la poussée c4 et empêche le fou noir de rester confortablement sur la diagonale a7-g1 qui pointe sur f2. Elle laisse les Noirs continuer avec Cg4, mais f2 sera plus facile à défendre."
+   },
+   {
+    "san": "Re2",
+    "pourquoi": "Défend f2 à l'avance et prépare Df1 ou Dg1 pour couvrir le roi. Coup plus passif : il laisse les Noirs jouer Cg4 et f6 sans gêne, mais la position tient."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "h3",
+    "pourquoi": "Le réflexe « j'empêche Cg4 » crée un nouveau trou : après f6 ! les Noirs ouvrent la colonne f, et si Fxg6 hxg6, le roi blanc est entouré de pions avancés sur g3 et h3, cibles idéales pour les pièces noires."
+   },
+   {
+    "san": "Nb3",
+    "pourquoi": "Le cavalier croit aller chercher le fou, mais après Cg4 Cxc5 Txc5 les Noirs ont récupéré la pièce, dominent la colonne c et menacent toujours e5 et f2 : les Blancs ont perdu deux temps pour rien."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 50
+ },
+ {
+  "coups": "e4 e6 d4 d5 exd5 exd5 Nf3 Bd6 c4 Nf6 c5 Be7 Bd3 O-O O-O b6 Be3 bxc5 dxc5 Ng4 Bf4 Bxc5 Bxh7+ Kxh7 Qc2+ Kg8 Qxc5 Na6",
+  "sens": "sort le cavalier en attaquant la dame blanche : elle doit partir et les Noirs gagnent un temps. Le cavalier couvre aussi le pion c7 que le fou f4 visait, et il vise b4 pour venir embêter la dame et le roi.",
+  "menace": "...Cxc5 : le cavalier prend la dame si elle ne bouge pas.",
+  "plan": [
+   {
+    "san": "Qc2",
+    "pourquoi": "Met la dame à l'abri sur une case active : elle regarde h7 avec la colonne c et garde un oeil sur le roi noir affaibli. Attention à ...Cb4 qui la chasse encore : on ira alors en b3 ou d1."
+   },
+   {
+    "san": "Qc6",
+    "pourquoi": "Garde la dame active : elle attaque le cavalier a6 et la tour a8 en même temps. Les Noirs doivent répondre avec ...Fb7 ou ...Tb8, ce qui les oblige à défendre au lieu d'attaquer."
+   },
+   {
+    "san": "Qc3",
+    "pourquoi": "Recule en couvrant la grande diagonale et la case b4 : ...Cb4 n'embête plus la dame. Les Blancs gardent leur pion de plus et vont développer Cbd2 et Tfe1."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Bxc7",
+    "pourquoi": "Le pion c7 n'est plus en prise : le cavalier a6 le défend. Après ...Cxc7, les Blancs ont perdu un fou pour un pion et la dame est toujours attaquée."
+   },
+   {
+    "san": "Bg5",
+    "pourquoi": "Attaquer la dame noire ne sert à rien : les Noirs répondent ...Cxc5 et prennent la dame blanche. Quand la dame est attaquée, on la sauve d'abord."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 18
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 Be2 Nh6 Bxh6 gxh6 Qd2 Bg7 Na3 O-O O-O f6 exf6 Rxf6 Nc2 Bd7 b4 cxd4 cxd4 a6 a4 Be8",
+  "nom": "Variante d'avance, 6.Fe2 Ch6 7.Fxh6",
+  "sens": "Le fou noir va chercher une diagonale active (g6 ou h5) et libère d7 pour la dame si elle doit reculer devant b4-b5.",
+  "plan": [
+   {
+    "san": "h3",
+    "pourquoi": "Enlève la case g4 au fou noir et prépare un abri pour le roi. Le fou noir qui arrive en h5 ne trouve plus rien à clouer. Les Blancs gagnent du temps avant de pousser b5. Attention : h3 ne doit pas donner au fou noir la cible h3 après ...Fg6-e4."
+   },
+   {
+    "san": "b5",
+    "pourquoi": "Chasse le cavalier c6 qui pressait d4 et ouvre la colonne b pour les tours. Après ...axb5 axb5 Ce7, le pion d4 respire et les tours blanches prennent la colonne a. Les Noirs gardent en échange la case c4 et un peu d'air sur l'aile dame."
+   },
+   {
+    "san": "Bd3",
+    "pourquoi": "Pose le fou sur la diagonale b1-h7 vers le roi noir affaibli (pions h6 doublés). Il laisse e2 libre à une tour et prépare éventuellement Dd2-e3 ou Ce5. Les Noirs peuvent répondre ...Fg6 pour échanger ce fou dangereux."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 45
+ },
+ {
+  "coups": "e4 e6 d4 d5 Nd2 c5 exd5 exd5 Ngf3 Nf6 Bb5+ Bd7 Bxd7+ Nbxd7 O-O Be7 dxc5 Nxc5 Nb3 Nce4 Be3 O-O c3 Qc7 Bd4 Rfe8 Re1 h6",
+  "nom": "Défense française, variante Tarrasch, ligne 3...c5 4.exd5 exd5 avec 6.Fb5+",
+  "sens": "Offre une case de fuite au roi en h7 et retire la case g5 aux pièces blanches : ni Cg5 ni Fg5 ne viendront gêner. C'est un coup d'attente : les Noirs n'ont rien à craindre pour l'instant et laissent les Blancs dévoiler leur plan.",
+  "plan": [
+   {
+    "san": "Qc2",
+    "pourquoi": "Attaque le cavalier e4 une deuxième fois et relie les tours. Le cavalier étant défendu par d5 et f6, rien ne tombe, mais les Noirs doivent surveiller la diagonale b1-h7 et la case c7."
+   },
+   {
+    "san": "Nbd2",
+    "pourquoi": "Ramène le cavalier b3 vers e4 pour contester l'avant-poste noir. Après un échange en e4, le pion d5 isolé devient une cible durable pour les Blancs."
+   },
+   {
+    "san": "g3",
+    "pourquoi": "Prépare Cd2 sans craindre Dc7xh2 : la diagonale b8-h2 est bouchée et le roi gagne la case g2. Coup calme qui laisse les Noirs sans cible."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 11
+ },
+ {
+  "coups": "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 Bxe7 Qxe7 f4 O-O Nf3 c5 Qd2 Nc6 dxc5 Nxc5 Qe3 a6 Rd1 Nd7 Bd3 f6 Ne2 fxe5 fxe5 Qc5",
+  "nom": "Variante classique, système Alekhine-Chatard refusé (ligne avec 7.f4 et 9.Dd2)",
+  "sens": "propose l'échange des dames pour simplifier et attaquer e5 : après Dxc5 Cxc5, le cavalier chasse le fou d3 et le pion e5, privé du soutien de f4, devient une cible. Si les Blancs refusent, la dame reste clouée sur la diagonale a7-g1 face au roi encore au centre.",
+  "menace": "Dxe3+ suivi de Cdxe5 : l'échange des dames avec gain du pion e5, car après le roi en e3 le cavalier prend e5 avec échec.",
+  "plan": [
+   {
+    "san": "Qg5",
+    "pourquoi": "refuse l'échange et sort la dame de la diagonale a7-g1. Elle attaque e6 et g7 et prépare le roque. Les Noirs répondront probablement Df2+ ou Dxc2 : il faut vérifier les échecs avant de laisser la dame partir."
+   },
+   {
+    "san": "Ned4",
+    "pourquoi": "bloque la diagonale avec un cavalier bien centralisé : la dame noire ne menace plus rien en e3. Le cavalier protège aussi f3 et c2. Les Blancs pourront roquer tranquillement ensuite, mais ils laissent les Noirs prendre en d4 pour ouvrir la colonne c."
+   },
+   {
+    "san": "Qxc5",
+    "pourquoi": "accepte l'échange : après Cxc5, le fou d3 doit bouger, par exemple en b1 ou e2, et e5 restera à défendre. Position tenable mais passive : à ne jouer que si vous préférez simplifier plutôt qu'attaquer."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Qf2",
+    "pourquoi": "semble garder la dame tout en restant sur la diagonale, mais les Noirs forcent l'échange en f2 : Dxf2+ Rxf2 Cdxe5. Le roi se retrouve en f2 sans roque et le pion e5 est perdu."
+   },
+   {
+    "san": "Nfd4",
+    "pourquoi": "centralise le mauvais cavalier : f3 cesse de protéger e5. Les Noirs jouent Cdxe5 et gagnent le pion ; après Tf1 Fd7 les Noirs ont un pion de plus et la meilleure position."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 15
+ },
+ {
+  "coups": "e4 e6 d4 d5 exd5 exd5 Nf3 Bd6 c4 Nf6 c5 Be7 Bd3 O-O O-O b6 Be3 bxc5 dxc5 Ng4 Bf4 Bxc5 Bxh7+ Kxh7 Qc2+ Kg8 Qxc5 Na6 Qc2",
+  "sens": "Recule la dame sur une case active : elle double l'attaque sur c7 avec le fou f4 et surveille la diagonale vers h7, près du roi noir privé de son pion h.",
+  "menace": "Bxc7 ou Qxc7 : le pion c7 est attaqué deux fois et n'est défendu qu'une fois.",
+  "plan": [
+   {
+    "san": "Nf6",
+    "pourquoi": "Ramène le cavalier en défense : il couvre h7 et bloque la diagonale de la dame vers le roi. Il libère aussi g4 et prépare ...Bf5 ou ...Re8. Le pion c7 reste faible, mais le roi est d'abord mis en sécurité."
+   },
+   {
+    "san": "c5",
+    "pourquoi": "Sauve le pion attaqué en avançant et prend de l'espace au centre. Les pions c5 et d5 soutiennent une future poussée ...d4. En échange, la case d5 n'est plus protégée par un pion voisin."
+   },
+   {
+    "san": "Nb4",
+    "pourquoi": "Chasse la dame une fois de plus et gagne du temps : elle doit aller en b3 ou d1. Le cavalier d'a6, mal placé au bord, rejoint le jeu et vise d3 et c2. Attention ensuite à a3 qui le repousse."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Nh6",
+    "pourquoi": "Les Blancs jouent Bxh6 gxh6 et le roi noir se retrouve sans pions g et h devant lui. Avec Nc3 puis les tours sur la colonne e, l'attaque blanche devient très dangereuse."
+   },
+   {
+    "san": "Be6",
+    "pourquoi": "Le fou bouche la colonne e et ne gêne personne. Les Blancs répondent a3 puis b4 : le cavalier a6 est repoussé au bord et les Noirs manquent de bonnes cases pour leurs pièces."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -16
+ },
+ {
+  "coups": "e4 e6 d4 d5 Nd2 c5 exd5 exd5 Ngf3 Nf6 Bb5+ Bd7 Bxd7+ Nbxd7 O-O Be7 dxc5 Nxc5 Nb3 Nce4 Be3 O-O c3 Qc7 Bd4 Rfe8 Re1 h6 Qc2",
+  "nom": "Défense française, variante Tarrasch, ligne 3...c5 avec pion isolé d5",
+  "sens": "double l'attaque sur le cavalier e4 avec la dame, relie les tours et vise la diagonale b1-h7 vers le roi noir. Le cavalier tient grâce à d5 et f6, mais la dame blanche regarde aussi c7, en face de la dame noire.",
+  "plan": [
+   {
+    "san": "b5",
+    "pourquoi": "gagne de l'espace à l'aile dame et prépare b4 pour chasser le pion c3, qui soutient le fou d4. Le cavalier e4 reste solidement défendu par d5 et f6. Le pion b5 peut devenir une cible pour a4, il faudra le surveiller."
+   },
+   {
+    "san": "Bf8",
+    "pourquoi": "recule le fou pour qu'il protège le roi et libère la case e7. La tour e8 et le cavalier e4 tiennent la colonne e. Coup prudent qui attend de voir le plan des Blancs."
+   },
+   {
+    "san": "a5",
+    "pourquoi": "menace a4 pour déloger le cavalier b3, le défenseur du fou d4. Si le cavalier part, le fou d4 devient attaquable par Cd7 ou Fc5. Laisse aux Blancs la case b5, mais ils n'ont plus de fou blanc pour en profiter."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -4
+ },
+ {
+  "coups": "e4 e6 d4 d5 exd5 exd5 Nf3 Bd6 c4 Nf6 c5 Be7 Bd3 O-O O-O b6 Be3 bxc5 dxc5 Ng4 Bf4 Bxc5 Bxh7+ Kxh7 Qc2+ Kg8 Qxc5 Na6 Qc2 Nf6",
+  "nom": "Variante d'échange de la Défense française (ligne 4.Cf3 Fd6 5.c4)",
+  "sens": "Ramène le cavalier devant le roi : il bouche la diagonale b1-h7 de la dame, garde h7 et laisse la case g4 au fou de c8. Il prépare aussi ...Cb4 pour harceler la dame et ...Te8 pour prendre la colonne ouverte.",
+  "menace": "...Cb4 attaque la dame c2 et gagne un temps ; ensuite le cavalier vise d3 ou a2.",
+  "plan": [
+   {
+    "san": "a3",
+    "pourquoi": "Retire la case b4 au cavalier a6 : la dame reste tranquille sur c2 et le cavalier noir n'a plus de bonne case. Ensuite les Blancs développent Cbd2 et Tfe1 sans être gênés. Cela coûte un temps, mais les Noirs n'ont rien de concret à y opposer."
+   },
+   {
+    "san": "Bg5",
+    "pourquoi": "Cloue le cavalier f6 sur la dame d8 et prépare Cc3 puis Tfe1 avec pression sur d5. Si les Noirs jouent ...Cb4, la dame recule en d2 ou e2 sans dommage. Les Blancs laissent ...h6 qui chasse le fou mais affaiblit encore le roi."
+   },
+   {
+    "san": "Nbd2",
+    "pourquoi": "Développe le dernier cavalier en couvrant b1 et e4 : après ...Cb4 la dame peut aller en b1 ou b3 et le cavalier noir sera chassé par a3. Vise aussi Cb3 puis Cd4 pour s'installer au centre. Les Noirs auront le temps de jouer ...Te8 et ...Fg4."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 19
+ },
+ {
+  "coups": "e4 e6 d4 d5 Nd2 c5 exd5 exd5 Ngf3 Nf6 Bb5+ Bd7 Bxd7+ Nbxd7 O-O Be7 dxc5 Nxc5 Nb3 Nce4 Be3 O-O c3 Qc7 Bd4 Rfe8 Re1 h6 Qc2 b5",
+  "nom": "Défense française, variante Tarrasch, ligne 3...c5 4.exd5 exd5 (pion isolé d5)",
+  "sens": "Gagne de l'espace à l'aile dame et prépare b4 pour attaquer le pion c3, qui soutient le fou d4. Si c3 cède, le fou d4 perd son appui et la case d4 devient fragile. Le cavalier e4 reste solidement défendu par d5 et f6.",
+  "menace": "b4, qui attaque le pion c3 et déstabilise le fou d4",
+  "plan": [
+   {
+    "san": "a3",
+    "pourquoi": "Empêche tout simplement b4 : le pion a3 reprendrait et c3 resterait en place. Le fou d4 garde son appui. Les Noirs devront chercher un autre plan, par exemple a5-a4 pour chasser le cavalier b3, ce qui prend du temps."
+   },
+   {
+    "san": "Qd3",
+    "pourquoi": "La dame regarde le pion b5, qui n'est plus défendu que par rien si a6 n'est pas joué, et appuie le fou d4. Elle quitte aussi la colonne c, où une tour noire pourrait venir la gêner après l'ouverture de la colonne. Les Noirs peuvent répondre a6 ou Nd6 pour défendre b5."
+   },
+   {
+    "san": "Nbd2",
+    "pourquoi": "Attaque le cavalier e4, la pièce la plus active des Noirs, et prépare son échange. Après Nxd2 Qxd2, le pion isolé d5 est moins bien protégé et la case d4 reste aux Blancs. Les Noirs doivent décider : échanger ou reculer en d6."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 4
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Nge7",
+  "nom": "Française, variante d'avance, 5...Cge7",
+  "sens": "amène le cavalier roi vers f5 pour attaquer d4 une quatrième fois, sans gêner le fou f8 ni le pion f7 ; prépare aussi ...Cf5 suivi de ...Db6 contre d4 et b2.",
+  "menace": "...Cf5 : quatre pièces attaquent d4 (c5, Cc6, Cf5, puis Db6), les Blancs doivent défendre à temps ou perdre le pion.",
+  "plan": [
+   {
+    "san": "Na3",
+    "pourquoi": "le cavalier dame sort sans boucher la case c3 déjà occupée ; il vise c2 pour défendre d4 une fois de plus, et dxc5 devient possible sans perdre le pion. Après ...cxd4 cxd4, il peut aussi aller en b5."
+   },
+   {
+    "san": "Bd3",
+    "pourquoi": "développe le fou sur la diagonale b1-h7 et prépare le roque. Surtout, le fou regarde f5 : si le cavalier y vient, Fxf5 l'échange aussitôt, et le quatrième attaquant disparaît. Laisse ...cxd4 cxd4 Cb4 qui chasse le fou : il faut l'accepter."
+   },
+   {
+    "san": "h4",
+    "pourquoi": "gagne de l'espace à l'aile roi et menace g4 pour chasser le cavalier dès qu'il arrive en f5. Le roi blanc restera au centre un peu plus longtemps, mais le pion e5 protège bien ce centre."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Bg5",
+    "pourquoi": "le fou sort pour clouer e7, mais ...h6 l'attaque et il doit rentrer en c1 : deux coups perdus. Pendant ce temps le cavalier arrive en f5 et d4 est attaqué quatre fois. Le pion d4 a besoin de défenseurs, pas d'une pièce qui l'abandonne (c1 ne défend plus rien)."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 29
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Nge7 Na3",
+  "nom": "Variante d'avance, 5...Cge7 6.Ca3",
+  "sens": "développe le cavalier dame sans gêner le pion c3 : il va en c2 pour défendre d4 une fois de plus, ce qui rend dxc5 jouable sans perdre de pion. Après ...cxd4 cxd4, il peut aussi sauter en b5 vers d6.",
+  "menace": "dxc5 en gagnant du temps sur la case c5, puis Cc2 ou Cb5 pour tenir d4 et viser d6.",
+  "plan": [
+   {
+    "san": "cxd4",
+    "pourquoi": "échange tout de suite en c5 pour que les Blancs ne puissent plus jouer dxc5. Après cxd4, le pion d4 reste une cible : ...Cf5 et ...Db6 vont l'attaquer. Le cavalier a3 peut venir en b5, il faut alors surveiller la case d6."
+   },
+   {
+    "san": "Nf5",
+    "pourquoi": "attaque d4 une troisième fois. Les Blancs doivent défendre avec Cc2 ou Fe3 : le cavalier en f5 est très actif, mais ils peuvent le chasser par g4, ce qui affaiblit leur roque."
+   },
+   {
+    "san": "Bd7",
+    "pourquoi": "coup de développement tranquille : le fou sort, la dame peut aller en b6 et la tour en c8. On garde la tension sur d4 et on ne se presse pas."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "c4",
+    "pourquoi": "ferme le centre et laisse d4 tranquille : la pression noire disparaît. Les Blancs jouent b3 pour casser la chaîne, puis Cc2 et ils ont un bon jeu sur les cases noires sans souci."
+   },
+   {
+    "san": "Qd7",
+    "pourquoi": "la dame bloque le fou c8 et ne fait rien contre d4. Les Blancs développent par Fd3 et Cc2, et les Noirs ont perdu un temps précieux dans une position où tout se joue sur d4."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -30
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Nge7 Na3 cxd4",
+  "nom": "Française d'avance, variante 6.Ca3",
+  "sens": "prend en d4 avant que les Blancs ne puissent jouer dxc5 : le pion c3 doit reprendre, et le pion d4 devient une cible pour ...Cf5 et ...Db6.",
+  "menace": "...dxc3 : si les Blancs ne reprennent pas, le pion c3 saute et le centre blanc s'écroule (après bxc3, ...Cg6 vient attaquer e5).",
+  "plan": [
+   {
+    "san": "cxd4",
+    "pourquoi": "reprend tout de suite et garde la chaîne de pions d4-e5. Le pion d4 sera défendu par la dame et le cavalier f3. Les Noirs jouent ...Cf5 et ...Db6 pour le presser, les Blancs répondent Cc2 : c'est exactement pour cela que le cavalier est allé en a3."
+   },
+   {
+    "san": "Nb5",
+    "pourquoi": "ignore la menace sur c3 et vise la case d6 : Cd6+ gênerait beaucoup le roi noir. Après ...dxc3 bxc3, les Blancs ont un pion faible mais le cavalier actif en b5 compense. Plus risqué pour un débutant que cxd4."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Nxd4",
+    "pourquoi": "reprend avec la mauvaise pièce : ...Cxe5 gagne le pion central e5 tout simplement, car d4 ne tient plus la chaîne. Les Blancs ont déjà perdu un pion et leur centre."
+   },
+   {
+    "san": "Bd2",
+    "pourquoi": "développe sans défendre c3 : ...dxc3 Fxc3 et le centre blanc a disparu, puis ...Cg6 attaque e5. Toujours reprendre en d4 avant de développer."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 42
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Nge7 Na3 cxd4 cxd4",
+  "nom": "Variante d'Avance, système Ca3 (ligne 6.a3... 6.Ca3)",
+  "sens": "reprend le pion pour garder la chaîne d4-e5 intacte : le centre blanc tient et le cavalier a3 est prêt à venir en c2 pour soutenir d4.",
+  "plan": [
+   {
+    "san": "Nf5",
+    "pourquoi": "Le cavalier attaque d4 une deuxième fois, après Cc6. Il libère aussi la case e7 pour le fou. Les Blancs doivent déjà penser à Cc2 ou Fe3 : la pression commence."
+   },
+   {
+    "san": "Qb6",
+    "pourquoi": "La dame vise d4 et le pion b2 en même temps. Avec Cc6 et bientôt Cf5, trois pièces regardent d4 : les Blancs sont forcés de jouer Cc2. Attention : la dame sortie tôt peut être chassée par Fe3 et Tb1."
+   },
+   {
+    "san": "Bd7",
+    "pourquoi": "Coup calme et utile : le fou se développe, prépare ...Tc8 sur la colonne ouverte et garde l'option ...Fb5 pour échanger le bon fou blanc. Il laisse aux Blancs le temps de jouer Fd3, mais sans leur donner de cible."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -40
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Nge7 Na3 cxd4 cxd4 Nf5",
+  "nom": "Défense française, variante d'avance, 6.Ca3",
+  "sens": "le cavalier attaque d4 une deuxième fois, après Cc6, et libère la case e7 pour le fou. Les Blancs doivent déjà penser à Cc2 ou Fe3 : la pression commence.",
+  "menace": "Cfxd4 puis Cxd4 : gagner le pion d4, qui n'est défendu que par le cavalier f3 et la dame.",
+  "plan": [
+   {
+    "san": "Nc2",
+    "pourquoi": "Le cavalier revient de a3 pour défendre d4 une deuxième fois. Il couvre aussi la case b4, ce qui empêche l'échec gênant Fb4+. Les Blancs peuvent ensuite jouer Fd3, 0-0 et Fe3 tranquillement. Seul bon coup ici : tout le reste laisse d4 en l'air."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Bd3",
+    "pourquoi": "Développe le fou, mais d4 n'est défendu que par Cf3 et la dame. Après Cfxd4 Cxd4 Cxd4, les Noirs ont gagné un pion net et le centre blanc s'écroule."
+   },
+   {
+    "san": "Bf4",
+    "pourquoi": "Le fou sort, mais il oublie l'échec Fb4+. Les Blancs doivent reculer avec Fd2, perdant un temps, puis Db6 attaque b2 et d4 en même temps : les Noirs prennent l'initiative."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 41
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Nge7 Na3 cxd4 cxd4 Nf5 Nc2",
+  "nom": "Variante d'avance, système avec Ca3-c2",
+  "sens": "ramène le cavalier au centre du jeu : il défend d4 une seconde fois (avec la dame) et garde la case b4, donc plus d'échec Fb4+. Les Blancs veulent maintenant finir leur développement sans souci : Fd3, 0-0, puis Fe3 ou Fe2.",
+  "plan": [
+   {
+    "san": "Nb4",
+    "pourquoi": "attaque le cavalier c2 tout en visant a2 et d3. Si Cxb4 Fxb4+, les Noirs gagnent un temps et le fou arrive en b4 avec échec. Les Blancs doivent réagir tout de suite (a3 ou Fd2 par exemple)."
+   },
+   {
+    "san": "Qb6",
+    "pourquoi": "ajoute une troisième pièce sur d4 (avec le cavalier c6 et le cavalier f5) et vise aussi b2. Les Blancs doivent choisir entre défendre d4 avec Fe3 et accepter l'échange en d4 : c'est le plan classique de la Française d'avance."
+   },
+   {
+    "san": "Be7",
+    "pourquoi": "coup simple : prépare le petit roque et garde l'option du cavalier en f5 pour harceler d4. Les Noirs ne forcent rien, ils développent d'abord, puis joueront f6 pour attaquer e5."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -43
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Nge7 Na3 cxd4 cxd4 Nf5 Nc2 Nb4",
+  "nom": "Défense française, variation d'avance, ligne Nge7 avec 6.Na3",
+  "sens": "Attaque le cavalier c2, qui protège d4 et e3, et vise aussi a2 et la case d3. Si les Blancs échangent en b4, le fou reprend avec échec et les Noirs gagnent un temps de développement. Le cavalier b4 n'est pas protégé, mais il gêne les Blancs : il faut traiter la question maintenant.",
+  "menace": "...Nxc2+ (ou ...Nxa2) : échanger le cavalier c2 qui tient d4, puis augmenter la pression sur d4 avec ...Qb6 et ...Bb4+.",
+  "plan": [
+   {
+    "san": "Ne3",
+    "pourquoi": "Le cavalier fuit c2 en attaquant le cavalier f5, l'une des pièces qui pressent d4. Si ...Nxe3 Bxe3, le fou se développe gratuitement et d4 reste solide. Le cavalier b4 reste en l'air : ...Nd3+ ne mène à rien après Bxd3, et a2 n'est pas vraiment en danger car ...Nxa2 laisserait le cavalier piégé après Ra1... ou simplement b3."
+   },
+   {
+    "san": "Be2",
+    "pourquoi": "Développe et prépare le roque sans paniquer. Si ...Nxc2+ Qxc2, la dame est bien placée sur la colonne c et rien n'est perdu ; d4 reste défendu par la dame et le cavalier f3. Le roi ira bientôt en g1 à l'abri."
+   },
+   {
+    "san": "Nxb4",
+    "pourquoi": "Échange simple : après ...Bxb4+ Bd2, le fou noir est obligé de choisir : s'échanger en d2 (et les Blancs développent avec tempo) ou reculer. Les Noirs gagnent un temps mais les Blancs ont supprimé le cavalier gênant et gardent leur centre e5/d4."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 50
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Nge7 Na3 cxd4 cxd4 Nf5 Nc2 Nb4 Ne3",
+  "nom": "Défense française, variante d'avance (ligne 5...Cge7 6.Ca3)",
+  "sens": "retire le cavalier de c2, où il bloquait tout, et attaque le cavalier f5 qui presse d4 ; si les Noirs échangent, le fou c1 se développe sur e3 gratuitement et le pion d4 reste bien protégé.",
+  "menace": "Cxf5 pour supprimer une des pièces qui attaquent d4 et affaiblir la structure noire après ...exf5.",
+  "plan": [
+   {
+    "san": "Qc7",
+    "pourquoi": "La dame attaque le pion e5 et renforce la pression sur la colonne c. Elle laisse les Blancs prendre en f5 : après Cxf5 exf5, les Noirs ouvrent la colonne e pour leur tour et gardent un jeu solide."
+   },
+   {
+    "san": "Be7",
+    "pourquoi": "Développe le fou et prépare le petit roque. Les Noirs ne se pressent pas : le cavalier f5 peut toujours reculer ou échanger en e3, et le roi sera bientôt en sécurité."
+   },
+   {
+    "san": "Nxe3",
+    "pourquoi": "Élimine le cavalier gênant avant qu'il ne prenne en f5. Cela donne aux Blancs le fou en e3 pour rien, mais simplifie la position et garde le cavalier b4 actif pour aller en c6 ou d3 plus tard."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -38
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Nge7 Na3 cxd4 cxd4 Nf5 Nc2 Nb4 Ne3 Qc7",
+  "sens": "appuie le cavalier b4 et vise le pion e5. Surtout, elle prépare le saut en c2 : si le cavalier e3 disparaît ou bouge, ...Cc2+ fourchette le roi et la tour a1.",
+  "menace": "...Cxe3 puis ...Cc2+ : le cavalier prend en e3, et quelle que soit la reprise, ...Cc2+ gagne la tour a1.",
+  "plan": [
+   {
+    "san": "Rb1",
+    "pourquoi": "Sort la tour de la fourchette : ...Cc2+ ne gagne plus rien. Ensuite les Blancs prendront en f5 et roqueront tranquillement. Les Noirs gardent une position solide, mais sans la combinaison."
+   },
+   {
+    "san": "Bb5+",
+    "pourquoi": "Donne échec pour gagner du temps : après ...Fd7 Fxd7+ Dxd7, le fou noir est échangé et les Blancs peuvent prendre en f5 puis roquer. Le roi blanc se met à l'abri avant que ...Cc2+ ne devienne gênant."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Nxf5",
+    "pourquoi": "Exactement ce que les Noirs attendaient. Après ...Cc2+ le roi doit bouger (Re2), puis ...exf5 reprend le cavalier : la tour a1 est perdue, les Noirs ont gagné une tour pour un cavalier."
+   },
+   {
+    "san": "Be2",
+    "pourquoi": "Développe mais ignore la menace. ...Cxe3 force Fxe3, puis ...Cc2+ fourchette roi et tour : les Blancs perdent la tour a1."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 47
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Nge7 Na3 cxd4 cxd4 Nf5 Nc2 Nb4 Ne3 Qc7 Rb1",
+  "sens": "Met la tour à l'abri de la fourchette : le cavalier b4 ne peut plus sauter en c2 pour gagner l'échange. Les Blancs veulent ensuite prendre en f5 et roquer.",
+  "menace": "Nxf5 suivi de Bd3 et O-O, avec une position tranquille et un pion e5 solide.",
+  "plan": [
+   {
+    "san": "Nxe3",
+    "pourquoi": "Échange le cavalier f5 avant qu'il soit pris. Après Bxe3, les Noirs gardent leur bon cavalier b4 et évitent que les Blancs choisissent le moment de l'échange. Ensuite Bd7 et Rc8 sur la colonne ouverte."
+   },
+   {
+    "san": "Bd7",
+    "pourquoi": "Développe le fou en préparant le grand roque ou Rc8. Le cavalier f5 reste en prise, mais après Nxf5 exf5 les Noirs ont une structure saine et un fou actif."
+   },
+   {
+    "san": "Be7",
+    "pourquoi": "Développe simplement et prépare le petit roque. Les Noirs acceptent Nxf5 exf5, qui ouvre la colonne e pour leur tour."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Qe7",
+    "pourquoi": "La dame recule sur une case passive et abandonne la colonne c. Après a3, le cavalier b4 doit rentrer en c6, puis b4 gagne de l'espace : les Blancs ont tout le temps de prendre en f5 et de roquer, et les Noirs n'ont plus de contre-jeu."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -47
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Nge7 Na3 cxd4 cxd4 Nf5 Nc2 Nb4 Ne3 Qc7 Rb1 Nxe3",
+  "sens": "échange le cavalier f5 contre celui d'e3 avant que les Blancs ne le prennent, tout en gardant le bon cavalier b4 qui vise c2 et d3 ; les Noirs décident eux-mêmes du moment de l'échange et préparent Fd7 puis Tc8 sur la colonne c ouverte.",
+  "menace": "le cavalier e3 doit être repris tout de suite ; s'il reste, il prend en d1 ou en f1. Après la reprise par le fou, Cc2+ fourche le roi e1 et le fou e3 et force le roi à bouger.",
+  "plan": [
+   {
+    "san": "fxe3",
+    "pourquoi": "reprend avec le pion et pas avec le fou : le fou c1 reste chez lui, donc Cc2+ ne fourche plus rien et le roi peut aller en f2 tranquillement. Le pion e3 soutient d4, et la colonne f s'ouvre pour la tour après le petit roque. Les Blancs acceptent des pions doublés en échange d'un centre solide et de l'initiative à l'aile roi."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Bxe3",
+    "pourquoi": "la reprise naturelle, mais elle met le fou sur la case que le cavalier b4 vise : Cc2+ fourche le roi et le fou. Dd2 ne marche pas (Cxe3), donc le roi doit aller en e2 et reste au centre, sans roque possible. Ensuite Fd7 et Tc8 et les Noirs dominent la colonne c."
+   },
+   {
+    "san": "Bb5+",
+    "pourquoi": "échec « gratuit » qui ne gagne rien : Fd7 bloque, puis Fxd7+ Dxd7 échange le seul fou blanc développé, et le cavalier e3 est toujours là. Les Blancs ont perdu un temps et ont toujours le problème de c2 à régler."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 59
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Nge7 Na3 cxd4 cxd4 Nf5 Nc2 Nb4 Ne3 Qc7 Rb1 Nxe3 fxe3",
+  "nom": "Défense française, variante d'avance (ligne 5...Cge7 6.Ca3)",
+  "sens": "les Noirs ont le trait après l'échange en e3 : le cavalier b4 est seul en avant-poste et les Blancs menacent de le chasser par a3, puis de lancer Fd3 et le roque pour attaquer à l'aile roi",
+  "plan": [
+   {
+    "san": "Qc2",
+    "pourquoi": "la dame attaque la tour b1 et propose l'échange des dames : après Dxc2 Cxc2+ le cavalier reprend avec échec, les dames disparaissent et l'attaque blanche à l'aile roi perd son moteur ; les Blancs n'ont pas le temps de jouer a3"
+   },
+   {
+    "san": "f6",
+    "pourquoi": "frappe la pointe e5 tout de suite : si exf6 gxf6 les Noirs obtiennent un gros centre e6-d5 et la colonne g ; sinon le pion e5 reste sous pression ; cela ouvre un peu le roi noir, il faudra roquer vite"
+   },
+   {
+    "san": "Bd7",
+    "pourquoi": "développe simplement et prépare le grand roque ou Tc8 ; le fou soutient le cavalier via b5 ; concède aux Blancs le temps de jouer a3 et Fd3, mais la position noire reste solide"
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Qb6",
+    "pourquoi": "la dame vise b2 et d4, mais a3 chasse le cavalier en c6 et Fd3 se développe avec tempo : la dame sur b6 n'attaque plus rien de concret et les Blancs roquent, puis poussent à l'aile roi avec un coup d'avance"
+   },
+   {
+    "san": "Qd8",
+    "pourquoi": "reculer la dame ne répond à rien : les Blancs jouent a3, le cavalier rentre en c6, puis Fd3 et petit roque ; les Noirs ont perdu deux temps et la pression sur la colonne f tombe sur f7 sans contre-jeu"
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -31
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Nge7 Na3 cxd4 cxd4 Nf5 Nc2 Nb4 Ne3 Qc7 Rb1 Nxe3 fxe3 Qc2",
+  "sens": "Attaque la tour b1 et force l'échange des dames : si Dxc2 Cxc2+, le cavalier reprend avec échec, les dames disparaissent et l'attaque blanche sur l'aile roi n'a plus de moteur. Les Blancs ne peuvent plus chasser le cavalier par a3.",
+  "menace": "Dxb1 : la dame prend la tour b1 et gagne une pièce entière.",
+  "plan": [
+   {
+    "san": "Qxc2",
+    "pourquoi": "Le seul coup vraiment propre : la tour b1 est attaquée, on échange plutôt que de la perdre. Après Cxc2+ Rd2 Cb4 (ou Cxe3), la position est à peu près égale, les Noirs ont un pion de plus mais les Blancs ont le centre et un roi actif pour la finale."
+   },
+   {
+    "san": "Bb5+",
+    "pourquoi": "Un échec intermédiaire : il sort le fou avec gain de temps avant de reprendre en c2. Après Fd7 Fxd7+ Rxd7 Dxc2 Cxc2+ Rd2, les Blancs ont réglé le problème du fou f1 et le roi noir est déjà sorti. Mais attention : il faut absolument reprendre la dame ensuite."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "a3",
+    "pourquoi": "C'est le coup que le commentaire annonçait comme impossible : on chasse le cavalier b4, mais on oublie que la tour est attaquée. Dxb1 gagne la tour. Les Blancs sont perdus."
+   },
+   {
+    "san": "Bd2",
+    "pourquoi": "Développer le fou paraît naturel, mais Cd3+ est un échec en fourchette : le roi est forcé de jouer, puis Fxd3 Dxd3 et les Noirs gardent une dame très active en d3 et un pion de plus. Il fallait d'abord prendre en c2."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 39
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Nge7 Na3 cxd4 cxd4 Nf5 Nc2 Nb4 Ne3 Qc7 Rb1 Nxe3 fxe3 Qc2 Qxc2",
+  "nom": "Variante d'avance, système Ca3 (sous-variante 5...Cge7)",
+  "sens": "accepte l'échange des dames : la tour b1 était attaquée et la dame noire s'était infiltrée en c2, prendre est le seul moyen de ne rien perdre tout en soulageant la pression sur le roi blanc",
+  "plan": [
+   {
+    "san": "Nxc2+",
+    "pourquoi": "Le seul coup : il faut reprendre la dame, sinon les Noirs sont une dame en moins. Le cavalier donne échec en passant, ce qui force le roi blanc à bouger (Rd2) et à perdre son droit de roquer. Ensuite le cavalier recule en b4 ou prend en e3, et les Noirs gardent un pion de plus. Les Blancs ont en échange un fort centre et un roi déjà actif pour la finale : la partie est à peu près équilibrée."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Bd7",
+    "pourquoi": "Développer est un bon réflexe, mais ici c'est oublier que la dame noire a disparu en c2 : sans reprendre, les Noirs jouent avec une dame en moins. Après Db3 le cavalier b4 recule et les Blancs finissent leur développement avec un avantage matériel décisif."
+   },
+   {
+    "san": "Nc6",
+    "pourquoi": "Même oubli : le cavalier se met à l'abri, mais la dame n'est pas reprise. Les Blancs jouent Fb5, clouent le cavalier, puis consolident. Un cavalier contre une dame, la partie est perdue."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -44
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Nge7 Na3 cxd4 cxd4 Nf5 Nc2 Nb4 Ne3 Qc7 Rb1 Nxe3 fxe3 Qc2 Qxc2 Nxc2+",
+  "sens": "Reprend la dame avec échec : la fourchette du cavalier force le roi blanc à bouger et lui fait perdre le roque. Le cavalier attaque en plus les pions d4 et e3, mais il est loin de chez lui en c2, sur une case où il peut être chassé.",
+  "menace": "Cxd4 ou Cxe3 avec gain d'un pion si les Blancs ne protègent pas ou n'attaquent pas le cavalier.",
+  "plan": [
+   {
+    "san": "Kd2",
+    "pourquoi": "Sort de l'échec en attaquant le cavalier. Les prises Cxe3 ou Cxd4 ne marchent pas (Rxe3 ou exd4), donc le cavalier doit rentrer en b4. Le roi est déjà au centre pour la finale et les Blancs vont jouer Fb5+ et Fd2 pour développer vite."
+   },
+   {
+    "san": "Kf2",
+    "pourquoi": "Sort de l'échec vers l'aile roi : le roi se met à l'abri et libère la tour h1. Le cavalier noir reste mal placé en c2 ; après Cb4, Fb5+ puis a3 le repousse encore. Les pions d4 et e3 sont tenus par le roi et le pion e3."
+   },
+   {
+    "san": "Ke2",
+    "pourquoi": "Sort de l'échec en gardant d4 et e3 protégés. Le roi est un peu plus exposé qu'en f2 (le cavalier noir peut revenir en b4 avec gain de temps), mais il reste proche du centre pour la finale."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 49
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Nge7 Na3 cxd4 cxd4 Nf5 Nc2 Nb4 Ne3 Qc7 Rb1 Nxe3 fxe3 Qc2 Qxc2 Nxc2+ Kd2",
+  "sens": "Le roi quitte l'échec en se rapprochant du cavalier noir : il le touche sur c2, et ce cavalier n'a presque plus de case sûre. Le roi blanc reste au centre, ce qui est bon maintenant que les dames ont disparu.",
+  "menace": "Rxc2 : le roi prend le cavalier gratuitement s'il reste sur c2.",
+  "plan": [
+   {
+    "san": "Nb4",
+    "pourquoi": "La seule case sûre. Le cavalier recule d'où il vient, hors de portée du roi. Il surveille d3 et c2, et les Noirs pourront ensuite jouer Fd7 et Tc8 pour prendre la colonne c. Les Blancs ont un peu d'avance de développement avec Fb5+ et Fd2, mais les Noirs sont solides."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Nxd4",
+    "pourquoi": "Le pion d4 semble gratuit, mais exd4 reprend : le cavalier est perdu pour un seul pion. Après Fb4+ les Blancs jouent simplement Rd1 et gardent la pièce de plus."
+   },
+   {
+    "san": "Nxe3",
+    "pourquoi": "Même idée, même punition : Rxe3 prend le cavalier. Un cavalier contre un pion, la partie est pratiquement perdue."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -39
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Nge7 Na3 cxd4 cxd4 Nf5 Nc2 Nb4 Ne3 Qc7 Rb1 Nxe3 fxe3 Qc2 Qxc2 Nxc2+ Kd2 Nb4",
+  "sens": "Met le cavalier à l'abri du roi blanc. De b4, il surveille d3 et c2 et garde la colonne c ouverte pour la tour noire, qui viendra en c8 après Fd7.",
+  "menace": "Cxa2 : le cavalier gagne le pion a2, car il n'est défendu que par la tour b1, qui doit aussi garder b2.",
+  "plan": [
+   {
+    "san": "a3",
+    "pourquoi": "Chasse le cavalier : il doit partir en c6 ou a6, et le pion a2 n'est plus en prise. Les Blancs gardent b2 sous la garde de la tour. Ensuite Fb5+ ou Fd3 et Fd2 pour développer, puis Tc1 pour disputer la colonne c. Le dernier mot : après a3, b4 ne sert plus de case au cavalier noir."
+   },
+   {
+    "san": "Bb5+",
+    "pourquoi": "Donne un échec qui oblige les Noirs à jouer Fd7. Après Fxd7+ Rxd7, le roi noir est au centre et les Blancs ont échangé leur fou passif. Mais le pion a2 reste en prise : il faudra encore jouer a3 ou Ta1."
+   },
+   {
+    "san": "Ra1",
+    "pourquoi": "Défend a2 sans bouger les pions. Simple et solide, mais la tour revient sur sa case de départ : le développement blanc ne progresse pas, et les Noirs ont le temps pour Fd7 et Tc8."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Kd1",
+    "pourquoi": "Le roi oublie que a2 pend. Après Cxa2, le cavalier a gagné un pion et le roi, en d1, gêne ses propres pièces. Même problème après Re2, Re1, Ce1 ou Cg5 : chaque coup qui ne protège pas a2 perd un pion sans compensation."
+   },
+   {
+    "san": "b3",
+    "pourquoi": "Veut protéger a2 et donner la case b2 au fou, mais Cxa2 prend quand même : le pion a2 n'est plus défendu par la tour. Ensuite Fb4+ gêne le roi blanc, resté au centre et sans roque possible."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 29
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Nge7 Na3 cxd4 cxd4 Nf5 Nc2 Nb4 Ne3 Qc7 Rb1 Nxe3 fxe3 Qc2 Qxc2 Nxc2+ Kd2 Nb4 a3",
+  "sens": "Attaque le cavalier b4 avec le pion a : il doit bouger tout de suite, sinon axb4 le gagne. Le pion a2 n'est plus en prise et le cavalier perd sa case d'appui b4. Les Blancs veulent ensuite Fb5+ ou Fd3, Fd2 et Tc1 pour prendre la colonne c.",
+  "menace": "axb4 gagne le cavalier : après ...Fxb4+ les Blancs jouent simplement Rd1 et restent avec une pièce de plus.",
+  "plan": [
+   {
+    "san": "Na2",
+    "pourquoi": "Le cavalier se sauve en a2 et y attaque le pion b2 ... non, il regarde c1 et c3 : il gêne la tour b1 et le fou f1 ne peut pas le chasser. Il reste actif sur l'aile dame. Les Blancs devront perdre du temps avec Rc2 ou Fd2 pour l'en déloger."
+   },
+   {
+    "san": "Nc6",
+    "pourquoi": "Le cavalier revient au centre : il pèse sur d4 et e5 et prépare ...Fe7, ...0-0 et ...f6 pour ouvrir le jeu. Position solide : les Noirs ont le pion e3 doublé et faible des Blancs comme cible à long terme."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Bd7",
+    "pourquoi": "Oublie que le cavalier est attaqué. Après axb4 Fxb4+ Rd1, les Noirs ont donné un cavalier pour un pion : l'échec ne rapporte rien, le roi blanc est tranquille en d1."
+   },
+   {
+    "san": "a5",
+    "pourquoi": "Tente de soutenir le cavalier, mais b4 est attaqué par le pion a3 et ...a5 ne défend rien : axb4 Fxb4+ Rd1 et les Noirs ont perdu une pièce contre un pion."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -15
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Nge7 Na3 cxd4 cxd4 Nf5 Nc2 Nb4 Ne3 Qc7 Rb1 Nxe3 fxe3 Qc2 Qxc2 Nxc2+ Kd2 Nb4 a3 Na2",
+  "sens": "Le cavalier fuit la case b4 attaquée par le pion a3 et se cale en a2, d'où il surveille c1 et c3. Mais il n'a plus aucune case de fuite sûre : c1 est couverte par le roi d2, c3 par le pion b2. Il mise sur le fait que les Blancs ne pourront le prendre qu'en lâchant des pions.",
+  "menace": "...Fxa3 : le fou prend le pion a3 avec échec, puis le cavalier ressort par b4 ou c3.",
+  "plan": [
+   {
+    "san": "Ra1",
+    "pourquoi": "La tour attaque directement le cavalier bloqué en a2. Les Noirs n'ont pas de bonne retraite : ils devront donner le cavalier contre un ou deux pions (...Fxa3 Txa2 Fxb2). Les Blancs gardent une pièce contre des pions, l'évaluation reste équilibrée mais c'est le plan le plus simple."
+   },
+   {
+    "san": "Ne1",
+    "pourquoi": "Le cavalier f3 recule vers d3 pour ôter au fou noir la case b4 et sécuriser la zone du roi. Il laisse le cavalier a2 en place : il ne gêne pas vraiment et ne peut pas s'échapper."
+   },
+   {
+    "san": "Bd3",
+    "pourquoi": "Développe le fou en regardant l'aile roi et prépare Tc1 ou Ta1. Les Blancs finissent leur développement avant de s'occuper du cavalier coincé."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 21
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Nge7 Na3 cxd4 cxd4 Nf5 Nc2 Nb4 Ne3 Qc7 Rb1 Nxe3 fxe3 Qc2 Qxc2 Nxc2+ Kd2 Nb4 a3 Na2 Ra1",
+  "sens": "ramène la tour sur la colonne a pour attaquer le cavalier noir coincé en a2 : toutes ses cases de fuite sont contrôlées, il faut le sauver tout de suite.",
+  "menace": "Txa2 : gagner le cavalier bloqué en a2 pour rien.",
+  "plan": [
+   {
+    "san": "Nxc1",
+    "pourquoi": "le cavalier n'a aucune case de retraite, alors il se vend au prix fort : il capture le fou c1. Après Txc1 ou Rxc1, les Noirs ont donné un cavalier contre un fou, le matériel est égal. Ensuite, on développe tranquillement (...Fd7, ...Fe7, ...Rd7) dans une finale équilibrée."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Nb4",
+    "pourquoi": "la seule case qui semble libre est en fait prise : axb4 gagne le cavalier. Reprendre par ...Fxb4+ ne rend rien, le roi va en d1 et les Blancs ont une pièce de plus."
+   },
+   {
+    "san": "Bxa3",
+    "pourquoi": "idée naturelle : rendre le fou pour deux pions. Mais après bxa3 Cxc1 Txc1, les Noirs ont perdu deux pièces contre une seule et un pion : les Blancs restent avec un cavalier de plus."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -16
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Nge7 Na3 cxd4 cxd4 Nf5 Nc2 Nb4 Ne3 Qc7 Rb1 Nxe3 fxe3 Qc2 Qxc2 Nxc2+ Kd2 Nb4 a3 Na2 Ra1 Nxc1",
+  "sens": "vend le cavalier piégé au prix fort : il prend le fou c1 et menace maintenant de sauter en b3 avec échec, en fourchette sur le roi d2 et la tour a1.",
+  "menace": "...Cb3+ : échec au roi et attaque de la tour a1, les Noirs gagneraient la tour.",
+  "plan": [
+   {
+    "san": "Rxc1",
+    "pourquoi": "Reprend le cavalier tout de suite et supprime la menace de fourchette. La tour arrive sur la colonne c ouverte, face au roi noir. Le matériel est égal et les Blancs sont un peu mieux développés."
+   },
+   {
+    "san": "Kxc1",
+    "pourquoi": "Reprend aussi le cavalier, mais avec le roi. C'est correct, simplement moins actif : le roi s'écarte du centre et la tour a1 reste passive un moment. Il faudra ensuite la sortir par c1 ou b1."
+   },
+   {
+    "san": "Bb5+",
+    "pourquoi": "Donne un échec intermédiaire avant de reprendre. Après ...Fd7 Fxd7+ Rxd7, les Blancs prennent le cavalier en c1 sans danger. Cela échange les fous mais ne rapporte rien de plus : plus simple de reprendre directement."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Bd3",
+    "pourquoi": "Développe le fou en oubliant la menace. ...Cb3+ fourche le roi et la tour a1 : le roi doit bouger et le cavalier mange la tour. Les Noirs ont alors une tour de plus."
+   },
+   {
+    "san": "Rb1",
+    "pourquoi": "Sauve la tour du mauvais côté. ...Cb3+ Rc3 Ca5 : le cavalier s'échappe et garde le fou capturé. Les Noirs ont une pièce de plus."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 40
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 c4",
+  "nom": "Variante d'avance, 6...c4",
+  "sens": "Ferme le centre : le pion d4 ne peut plus être échangé et le pion b2 devient une cible pour la dame b6. Les Noirs annoncent un jeu lent à l'aile dame avec ...Na5, ...Bd7 et ...Bb5 pour changer le mauvais fou de cases blanches.",
+  "menace": "Pas de menace immédiate. À suivre : ...Na5 puis ...Bd7-b5 pour échanger le fou e2, et plus tard ...Qa6 ou ...b5-b4 pour attaquer la chaîne c3-d4.",
+  "plan": [
+   {
+    "san": "Be2",
+    "pourquoi": "Développe le fou et prépare le roque. Le roi blanc sera à l'abri avant d'agir ; après ...Na5, les Blancs pourront répondre Nbd2 et ne craignent pas ...Bb5 : échanger ce fou leur coûte peu puisque le centre est fermé."
+   },
+   {
+    "san": "Nbd2",
+    "pourquoi": "Sort le cavalier et vise la case c4 isolée : via b1 c'est impossible, mais d2-f1-e3 ou d2-e4 l'amènent au centre. Il garde aussi b3, où les Blancs voudront jouer b3 plus tard pour ouvrir l'aile dame à leur avantage."
+   },
+   {
+    "san": "g3",
+    "pourquoi": "Prépare Bh3 : avec le centre fermé, le fou vaut mieux sur la grande diagonale h3-c8 qu'enfermé sur e2. Les Blancs visent ensuite Nbd2, 0-0 et le coup de levier b3. Cela laisse aux Noirs le temps de jouer ...Na5 et ...Bd7 comme prévu."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "b3",
+    "pourquoi": "Trop tôt : après ...cxb3 le pion a3 devient faible et ...Na5 tombe sur la case b3 (puis c4). Le pion b2 avancé n'est plus défendu par la dame, et la pression noire sur c3-d4 augmente au lieu de baisser."
+   },
+   {
+    "san": "Nh4",
+    "pourquoi": "Le cavalier quitte le centre pour aller sur un bord où il ne fait rien ; ...Bd7 puis ...g5 le chasse et gagne du temps. Les Blancs perdent le défenseur naturel de d4 et retardent le roque."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 31
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 c4 Be2",
+  "nom": "Défense française, variante d'avance, 6...c4",
+  "sens": "Développe le fou et dégage f1 pour roquer au plus vite. Il laisse b2 protégé par la dame, et le pion c4 noir a fermé la diagonale : le fou ne gêne personne en e2, il attend simplement que le roi soit en sécurité avant que les Blancs attaquent à l'aile roi.",
+  "plan": [
+   {
+    "san": "Na5",
+    "pourquoi": "Le cavalier vise b3 : avec le pion c4 en appui, une pièce en b3 serait une épine permanente dans le camp blanc. Il libère aussi la case c6 pour le fou (...Bd7-c6 ou ...Bb5). Les Blancs répondent en général Nbd2 pour contrôler b3."
+   },
+   {
+    "san": "Bd7",
+    "pourquoi": "Sort le fou de c8, le pire fou des Noirs, et prépare ...Bb5 pour l'échanger contre le fou e2. Après l'échange, le fou blanc n'ira plus sur h5 ni g4, et le roi noir respirera mieux."
+   },
+   {
+    "san": "f6",
+    "pourquoi": "Attaque tout de suite la chaîne de pions en e5. Si exf6 Nxf6, les Noirs reprennent la case e5 et ouvrent la colonne f. Attention : cela affaiblit e6 et la diagonale a2-g8, il faut donc être prêt à défendre."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "g6",
+    "pourquoi": "Paraît solide pour mettre le fou en g7, mais le fou n'aura rien à faire : la diagonale est bouchée par d4 et e5. Pire, les Blancs jouent Nbd2 puis h4-h5 et attaquent les pions g6-h7 devenus des cibles. Les Noirs perdent du temps et le droit de roquer tranquillement."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -31
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 c4 Be2 Na5",
+  "nom": "Défense française, variante d'avance, 6.a3 c4 7.Fe2 Ca5",
+  "sens": "Le cavalier marche vers b3 : soutenu par le pion c4, il s'y installerait pour de bon et gênerait toute la dame-side blanche. Il libère aussi c6 pour le fou (...Fd7-c6 ou ...Fb5).",
+  "menace": "...Cb3 : le cavalier attaque la tour a1 et le fou c1 ; après Ta2 il reste planté en b3, intouchable, et bloque le développement blanc.",
+  "plan": [
+   {
+    "san": "Nbd2",
+    "pourquoi": "Couvre la case b3 : si ...Cb3, les Blancs échangent (Cxb3 cxb3) et le pion b3 isolé devient une cible, pas une épine. Le cavalier d2 reste souple et peut aller en f1-g3 plus tard. Les Noirs continueront par ...Fd7 et ...Ce7."
+   },
+   {
+    "san": "O-O",
+    "pourquoi": "Met le roi à l'abri avant tout. Si ...Cb3, la tour va en a2 puis les Blancs jouent Cbd2 et chassent ou échangent le cavalier. Le roque laisse aux Noirs le temps de jouer ...Fd7 et ...Ch6-f5 contre d4."
+   },
+   {
+    "san": "a4",
+    "pourquoi": "Prépare Fa3 : le fou sort par a3 au lieu d'être enterré derrière le pion b2, et échangera le futur fou e7 des Noirs. Le pion a4 coûte un temps, mais la case b4 est maintenant surveillée."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "h3",
+    "pourquoi": "Un coup d'attente qui ignore la menace. Après ...Cb3 Ta2 Fd7, le cavalier noir reste à vie en b3 : la tour a1 est muette, le fou c1 ne sort plus, et les Noirs roquent long en toute sérénité."
+   },
+   {
+    "san": "Qc2",
+    "pourquoi": "La dame veut couvrir b3, mais ...Cb3 vient quand même : la tour doit aller en a2, la dame bloque son propre fou c1 et les Noirs enchaînent ...Fd7 et ...Fb5. Les Blancs ont perdu tout développement de l'aile dame."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 39
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 c4 Be2 Na5 Nbd2",
+  "nom": "Défense française, variante d'avance (ligne 6.a3 c4 7.Fe2 Ca5)",
+  "sens": "Protège la case b3 avec le cavalier pour que le saut ...Cb3 ne gêne plus : après l'échange, le pion noir arrivé en b3 serait isolé et attaquable. Le cavalier garde aussi la route f1-g3 vers le roque noir.",
+  "plan": [
+   {
+    "san": "Bd7",
+    "pourquoi": "Développe le fou et libère la case c8 pour la tour. Il prépare ...Cb3 ou ...Fb5 pour échanger le mauvais fou. Les Blancs roquent tranquillement : la position reste fermée et solide pour les Noirs."
+   },
+   {
+    "san": "Ne7",
+    "pourquoi": "Sort le cavalier sans bloquer le fou f8. Il vise f5 pour presser d4, ou c6 pour revenir soutenir le pion. Il laisse aux Blancs le temps de roquer, mais le centre fermé ne presse pas."
+   },
+   {
+    "san": "h6",
+    "pourquoi": "Petit coup utile : empêche Cg5 et donne la case h7 au roi. Il prépare ...g5 plus tard pour attaquer l'aile roi sans roquer. Les Blancs gagnent un temps de développement, mais rien de concret."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Kd8",
+    "pourquoi": "Déplacer le roi au centre sans raison abandonne le roque et coince la tour h8. Après Dc2 et Tb1, les Blancs préparent b3 pour ouvrir l'aile dame exactement là où se trouve le roi noir."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -40
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 c4 Be2 Na5 Nbd2 Bd7",
+  "nom": "Défense française, variante d'avance, ligne 6.a3 c4",
+  "sens": "Développe le fou-dame et vide la case c8 pour une tour. Il prépare ...Cb3 (échange du cavalier contre celui de d2) ou ...Fb5 pour échanger le mauvais fou de cases blanches contre celui de e2.",
+  "menace": "...Cb3 : le cavalier s'installe sur une case forte, protégé par le pion c4, et force l'échange en Cxb3 cxb3, ce qui donne aux Noirs un pion avancé qui gêne la dame et la tour blanches.",
+  "plan": [
+   {
+    "san": "Rb1",
+    "pourquoi": "Retire la tour de la diagonale a1 et prépare b3 (ou b4) pour chasser le cavalier de a5 et contester le pion c4. Le roi n'a pas encore roqué, mais la position est fermée et les Noirs n'ont pas d'attaque immédiate."
+   },
+   {
+    "san": "O-O",
+    "pourquoi": "Met le roi à l'abri avant d'ouvrir le centre. Après ...Cb3 Cxb3 cxb3, les Blancs regagneront le pion b3 par Dxb3 ou Txb3 sans danger. Plan simple et sûr."
+   },
+   {
+    "san": "h4",
+    "pourquoi": "Gagne de l'espace à l'aile roi, là où les Blancs sont les plus forts grâce au pion e5. Il prépare h5 et Cg5 contre le roi noir, qui n'a pas encore roqué."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Kf1",
+    "pourquoi": "Le roi bouge sans raison et perd le droit de roquer. Après ...f6, les Noirs attaquent e5 ; le roi en f1 bloque la tour h1 et gêne tout le jeu blanc."
+   },
+   {
+    "san": "Bf1",
+    "pourquoi": "Le fou revient à sa case de départ et défait le développement. Les Noirs roquent long et jouent ...Rb8, puis ...Cb3 : les Blancs perdent du temps et la tour h1 reste enfermée."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 37
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 c4 Be2 Na5 Nbd2 Bd7 Rb1",
+  "nom": "Variante d'avance, système 5...Db6 6.a3 c4",
+  "sens": "Quitte la grande diagonale a1-h8 pour ne plus être attaquée par un éventuel fou en g7, et surtout prépare b3 (ou b4) : la tour soutiendra le pion b pour chasser le cavalier a5 et attaquer le pion c4, l'avant-poste noir qui bloque l'aile dame.",
+  "plan": [
+   {
+    "san": "Ne7",
+    "pourquoi": "Développe le dernier cavalier vers f5, d'où il attaquera le pion d4, point faible de la chaîne blanche. Il libère aussi la case g8 pour le roi et garde la case c6 disponible pour reculer le cavalier a5 si b4 arrive."
+   },
+   {
+    "san": "Nb3",
+    "pourquoi": "Devance le coup b3 des Blancs : le cavalier saute en b3, soutenu par le pion c4, et harcèle la tour b1 et le cavalier d2. Les Blancs doivent l'échanger ou le chasser, ce qui leur fait perdre du temps avant leur plan à l'aile dame."
+   },
+   {
+    "san": "O-O-O",
+    "pourquoi": "Met le roi à l'abri derrière la chaîne de pions et relie la tour à la lutte sur l'aile dame. En échange, si les Blancs ouvrent les lignes avec b3 et b4, le roi noir sera plus exposé qu'après un petit roque."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -37
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 c4 Be2 Na5 Nbd2 Bd7 Rb1 Ne7",
+  "nom": "Variante d'avance, système 6.a3 c4",
+  "sens": "Amène le dernier cavalier vers f5 pour peser sur d4, le maillon faible de la chaîne blanche. Il ouvre la case g8 au roi et garde c6 libre pour replier le cavalier a5 si b4 arrive.",
+  "menace": "Pas de menace immédiate. L'idée suivante est Cf5 pour attaquer d4 une troisième fois (avec Db6 et Fd7 en appui).",
+  "plan": [
+   {
+    "san": "h4",
+    "pourquoi": "Prépare h5 pour chasser le cavalier dès qu'il arrive en f5. Le pion h gagne aussi de l'espace à l'aile roi, là où les Blancs veulent jouer. Le roi blanc restera au centre ou ira en f1 : c'est normal ici, le centre est fermé."
+   },
+   {
+    "san": "g3",
+    "pourquoi": "Contrôle f4 et h4, et prépare h4 ou Fh3 pour gêner le cavalier f5. Laisse les Noirs libres de jouer Cf5 tout de suite, mais d4 est bien protégé par le fou et le cavalier."
+   },
+   {
+    "san": "O-O",
+    "pourquoi": "Met le roi à l'abri simplement, bon choix pour un débutant. Les Blancs joueront ensuite Te1, Cf1 et g3 pour renforcer d4 et préparer l'aile roi. Attention : après Cf5, il faudra défendre d4 avec calme."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Bf1",
+    "pourquoi": "Reculer le fou en f1 perd un temps pour rien : il n'a aucune case utile de ce côté et bloque le roque. Les Noirs roquent long et jouent f6 pour attaquer la chaîne e5, alors que les Blancs n'ont rien développé."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 40
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 c4 Be2 Na5 Nbd2 Bd7 Rb1 Ne7 h4",
+  "nom": "Variante d'avance, système 6.a3 c4",
+  "sens": "Gagne de l'espace à l'aile roi et prépare h5 : si le cavalier noir vient en f5, le pion h le chassera aussitôt. Les Blancs annoncent qu'ils vont jouer de ce côté, le roi restant au centre puisque celui-ci est fermé.",
+  "plan": [
+   {
+    "san": "O-O-O",
+    "pourquoi": "Met le roi à l'abri côté dame, loin de l'aile roi où les Blancs avancent leurs pions. Relie les tours et laisse la tour h8 libre pour soutenir ...h6 ou ...f6 plus tard. Les Blancs n'ont pas de pion prêt à attaquer ce roi : la case b4 est contrôlée et le centre est bloqué."
+   },
+   {
+    "san": "h6",
+    "pourquoi": "Prend la case g5 avant que le pion h5 et un cavalier ne s'y installent. Prépare aussi ...g5 pour casser la chaîne de pions blancs à l'aile roi. Donne aux Blancs le temps de jouer h5 et de fixer la structure."
+   },
+   {
+    "san": "Nf5",
+    "pourquoi": "Développe le cavalier sur sa meilleure case, où il attaque d4 et regarde h4. Mais le pion h5 va le chasser tout de suite : il faut avoir une case de repli (e7 ou h6) et accepter que les Blancs gagnent un temps."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -37
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 c4 Be2 Na5 Nbd2 Bd7 Rb1 Ne7 h4 O-O-O",
+  "nom": "Défense française, variante d'avance, système ...Db6 ...c4 ...Ca5",
+  "sens": "Met le roi à l'abri côté dame, loin de l'aile roi où les Blancs avancent le pion h. Relie les tours et laisse la tour h8 libre pour soutenir ...h6 ou ...f6 plus tard. Les Blancs n'ont pas de pion prêt à attaquer ce roi : la case b4 est contrôlée et le centre est bloqué.",
+  "plan": [
+   {
+    "san": "h5",
+    "pourquoi": "Continue la poussée du pion h : il gagne de l'espace et empêche ...g6 et ...Cg6 confortables. Prépare h6 pour affaiblir les cases noires devant le roi adverse si les Noirs ne réagissent pas. Laisse aux Noirs le temps de jouer ...f6 pour casser le centre."
+   },
+   {
+    "san": "Nf1",
+    "pourquoi": "Le cavalier d2 n'a pas d'avenir : il va sur g3 ou e3 pour viser f5 et soutenir l'aile roi. Libère aussi la case d2 pour le fou. Les Noirs peuvent répondre ...f6 pour attaquer e5."
+   },
+   {
+    "san": "Qc2",
+    "pourquoi": "Sort la dame de la colonne d, protège b2 et surveille la case b3 où le cavalier noir veut sauter. Prépare Cf1 et un roque court tranquille. Les Noirs continuent leur jeu à l'aile dame avec ...Cb3 ou ...f6."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 40
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 c4 Be2 Na5 Nbd2 Bd7 Rb1 Ne7 h4 O-O-O h5",
+  "nom": "Française, variante d'avance, ligne 5...Db6 6.a3 c4 (plan de Fe2-Tb1 et poussée h4-h5)",
+  "sens": "Poursuit la poussée du pion h pour prendre de l'espace à l'aile roi : ôte aux Noirs les coups confortables ...g6 et ...Cg6, et prépare h6 pour affaiblir les cases noires devant le roi adverse.",
+  "menace": "h6 suivi de hxg7 ou d'une pression durable sur g7 : si les Noirs ne réagissent pas, les cases noires de leur aile roi s'affaiblissent.",
+  "plan": [
+   {
+    "san": "f6",
+    "pourquoi": "Casse le centre blanc sur e5 avant que les Blancs ne consolident. Après exf6 gxf6, les Noirs obtiennent une colonne g et un centre mobile (e5). Laisse aux Blancs quelques cases affaiblies (e6, g6), mais l'activité compense largement."
+   },
+   {
+    "san": "Kb8",
+    "pourquoi": "Coup d'attente utile : le roi quitte la diagonale a4-e8 et la colonne c, avant d'ouvrir le centre par ...f6. Laisse aux Blancs le temps de jouer h6, mais celle-ci n'est pas dangereuse si le roi est à l'abri."
+   },
+   {
+    "san": "h6",
+    "pourquoi": "Bloque simplement le pion h et ferme l'aile roi : les Blancs ne peuvent plus jouer h6 eux-mêmes. Prépare ...f6 en toute tranquillité. Laisse aux Blancs la case g6, mais ils n'ont rien pour l'exploiter."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "g6",
+    "pourquoi": "Semble naturel pour contrôler f5 et h5, mais 12.h6 cloue le pion g7... pardon, laisse le pion h6 enfoncé dans la position noire : la case f6 et le pion g7 deviennent des faiblesses permanentes et le cavalier e7 doit reculer en g8."
+   },
+   {
+    "san": "Bb5",
+    "pourquoi": "Le fou cherche à échanger le mauvais fou, mais 12.a4 le repousse aussitôt en e8 : les Noirs ont perdu deux temps et les Blancs gagnent de l'espace à l'aile dame avec Dc2 et b3."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -34
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 c4 Be2 Na5 Nbd2 Bd7 Rb1 Ne7 h4 O-O-O h5 f6",
+  "sens": "Attaque la pointe de la chaîne blanche sur e5 pour ouvrir le jeu avant que les Blancs ne terminent leur développement. Si les Blancs prennent sur f6, les Noirs reprennent du pion g et obtiennent la colonne g contre le roi blanc encore au centre, plus la poussée ...e5 plus tard. Les Noirs acceptent des cases faibles sur e6 et g6 en échange de cette activité.",
+  "menace": "...fxe5 suivi de ...Nf5 : la colonne f s'ouvre contre f2 et le cavalier vient taper d4 et h4.",
+  "plan": [
+   {
+    "san": "Nf1",
+    "pourquoi": "Libère la case d2 et le fou c1, et le cavalier vise e3 ou g3 pour contrôler f5 : la case préférée du cavalier noir. C'est le coup de plan : on reroute une pièce passive plutôt que de réagir coup par coup. Les Noirs peuvent prendre sur e5 tout de suite, mais après dxe5 le centre blanc tient."
+   },
+   {
+    "san": "O-O",
+    "pourquoi": "Met simplement le roi à l'abri et connecte les tours. Le roi va côté roi malgré la colonne g qui peut s'ouvrir : les Noirs ont peu de pièces pour y attaquer vite, et le pion h5 gêne déjà leur jeu."
+   },
+   {
+    "san": "Qc2",
+    "pourquoi": "Couvre b3 (contre ...Nb3) et surveille f5 et g6. La dame se place aussi sur la diagonale vers h7 pour la suite. Laisse aux Noirs le temps de jouer ...fxe5, mais le centre reste solide."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "b3",
+    "pourquoi": "Tentation naturelle de briser le pion c4, mais après ...cxb3 Nxb3 Ba4 le cavalier b3 est cloué sur la tour b1 et attaqué par la dame b6 : les Blancs perdent du matériel ou leur structure dame."
+   },
+   {
+    "san": "Rh4",
+    "pourquoi": "Semble défendre h5 et activer la tour, mais ...Nf5 la chasse avec gain de temps : la tour revient en h3 et les Noirs ont gagné un coup de développement gratuit tout en pressant d4."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 32
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 c4 Be2 Na5 Nbd2 Bd7 Rb1 Ne7 h4 O-O-O h5 f6 Nf1",
+  "nom": "Variante d'avance, système 5...Db6 avec 6.a3 c4",
+  "sens": "Reroute un cavalier passif vers e3 ou g3 pour tenir f5 et libère d2 ainsi que le fou c1, au lieu de réagir coup par coup à la pression sur e5.",
+  "plan": [
+   {
+    "san": "Kb8",
+    "pourquoi": "Met le roi à l'abri des coups sur la colonne c et de la diagonale c1-h6. Les Noirs n'ont rien de pressé : avant de prendre sur e5, on sécurise le roi, car après fxe5 dxe5 le centre blanc tient encore."
+   },
+   {
+    "san": "Rg8",
+    "pourquoi": "Prépare g5 : les Noirs veulent ouvrir l'aile roi où les Blancs ont avancé h4-h5. La tour appuie la poussée et se tient prête si la colonne g s'ouvre."
+   },
+   {
+    "san": "Nf5",
+    "pourquoi": "Occupe tout de suite la case que Cf1 veut contrôler et attaque d4. Si les Blancs chassent par g4, le cavalier revient en e7 et le roi blanc s'est un peu plus exposé."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -29
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 c4 Be2 Na5 Nbd2 Bd7 Rb1 Ne7 h4 O-O-O h5 f6 Nf1 Kb8",
+  "nom": "Variante d'avance, système avec Db6 et c4",
+  "sens": "Quitte la case c8, où il gênait ses propres pièces et pouvait être visé par un fou arrivant sur la diagonale c1-h6. Caché derrière les pions a7 et b7, le roi laisse la colonne d aux tours et prépare tranquillement fxe5.",
+  "plan": [
+   {
+    "san": "Bf4",
+    "pourquoi": "Développe enfin le fou de cases noires sur une case active : il soutient e5, le point clé de toute la structure blanche, et laisse la case e3 libre pour le cavalier f1. Si les Noirs prennent fxe5, le fou se retrouve bien placé et le centre blanc tient."
+   },
+   {
+    "san": "Qc2",
+    "pourquoi": "Sort la dame de la colonne d (où la tour d8 la regarde) et surveille le pion c4 ainsi que la case e4. La dame aide aussi à préparer b3 pour ouvrir le jeu à l'aile dame, là où se cache le roi noir."
+   },
+   {
+    "san": "Be3",
+    "pourquoi": "Développe le fou en s'opposant à la dame b6 : la grande diagonale a7-g1 est fermée. Le fou protège d4 et laisse les Noirs décider s'ils échangent sur e5. Moins actif que Bf4, mais très solide."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "h6",
+    "pourquoi": "Pousse un pion déjà avancé sans rien derrière : après Fe8, le pion h6 ne menace plus rien et devient une faiblesse. Pendant ce temps les Noirs jouent fxe5 et ouvrent le jeu alors que les Blancs n'ont pas fini leur développement. Avancer un pion n'est pas développer une pièce."
+   },
+   {
+    "san": "Ng3",
+    "pourquoi": "Le cavalier n'a rien à faire sur g3 : il ne regarde pas le centre et bloque la colonne g. Après Cc6 puis Ra8, les Noirs renforcent la pression sur d4 et e5, et le cavalier doit revenir en arrière. Mieux vaut d'abord Ff4 pour libérer e3 et y placer le cavalier."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 24
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 c4 Be2 Na5 Nbd2 Bd7 Rb1 Ne7 h4 O-O-O h5 f6 Nf1 Kb8 Bf4",
+  "nom": "Variante d'avance, système Wade (…Fd7, Db6) avec grand roque",
+  "sens": "Développe enfin le fou de cases noires sur une case active : il soutient e5, le pion clé de tout le centre blanc, et libère e3 pour le cavalier f1. Le roi noir en b8 est désormais sur la diagonale du fou : toute ouverture de la colonne f ou de la diagonale b8-h2 devient dangereuse pour les Noirs.",
+  "menace": "exf6 suivi de Fxb8 ou de Cg5/Ce5 : si le centre s'ouvre, le fou f4 vise le roi en b8 et le pion e5 devient un avant-poste pour les cavaliers blancs.",
+  "plan": [
+   {
+    "san": "Ka8",
+    "pourquoi": "Le roi quitte la diagonale du fou f4 avant que le centre ne s'ouvre. En a8 il n'est plus en prise indirecte et ne gêne plus la tour d8. Les Noirs gardent une position un peu passive, mais solide : ils attendent Ce3 pour reprendre ensuite sur e5 au bon moment."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "fxe5",
+    "pourquoi": "Ouvre tout de suite ce que le fou f4 attendait. Après Cxe5 le cavalier arrive en f7 avec gain de temps, attaque la tour h8 et le roi en b8 reste sur la diagonale du fou. Les Noirs perdent du matériel."
+   },
+   {
+    "san": "Qc7",
+    "pourquoi": "La dame se place en face du fou f4 sur la même diagonale que le roi. Après Dc1 puis Cg5, les Blancs ouvrent la position et gagnent du temps sur la dame et le roi : les Noirs perdent un pion net."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -34
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 c4 Be2 Na5 Nbd2 Bd7 Rb1 Ne7 h4 O-O-O h5 f6 Nf1 Kb8 Bf4 Ka8",
+  "nom": "Défense française, variante d'avance (avec 6.a3 c4 et roque long)",
+  "sens": "Met le roi à l'abri dans le coin : il quitte la diagonale h2-b8 du fou f4 et libère la case b8, pour que la tour d8 et le cavalier puissent bouger sans découvrir une pièce en prise.",
+  "plan": [
+   {
+    "san": "Ne3",
+    "pourquoi": "Le cavalier f1 vise la case c4 et surtout g4 et f5 : il attaque le pion c4 avancé, et après ...fxe5 il pourra reprendre ou sauter en f5 face au roi noir. C'est le coup le plus actif : il laisse les Noirs décider s'ils ouvrent le centre tout de suite."
+   },
+   {
+    "san": "Qc2",
+    "pourquoi": "La dame quitte la colonne d, sort de la ligne du fou d7 et regarde h7 et f5. Elle soutient Ce3 puis Cf5 et laisse la case d1 à une tour. Les Blancs ne se pressent pas : leur avantage d'espace reste."
+   },
+   {
+    "san": "Bg3",
+    "pourquoi": "Le fou se range à l'avance : après ...fxe5 dxe5 il reste protégé et garde e5 et la diagonale vers b8. Coup prudent, qui évite tout coup de tour en d8 ou f8 attaquant une pièce mal placée, mais ne crée rien de neuf."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Ng3",
+    "pourquoi": "Le cavalier bloque le pion g et se place face au fou f8 : après ...Cc6 et ...Fe7 les Noirs menacent ...g5 ou ...Fxh4 et le cavalier doit rebouger. Il n'attaque rien ; mieux vaut Ce3, qui vise c4 et f5."
+   },
+   {
+    "san": "g4",
+    "pourquoi": "Pousser encore à l'aile roi affaiblit f4 et h4 : après ...Cc6 et ...Dc7 les Noirs prennent en e5 et le fou f4 est attaqué sans soutien, car g3 n'est plus disponible. Le centre s'ouvre alors que le roi blanc n'a pas roqué."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 42
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 c4 Be2 Na5 Nbd2 Bd7 Rb1 Ne7 h4 O-O-O h5 f6 Nf1 Kb8 Bf4 Ka8 Ne3",
+  "nom": "Défense française, variante d'avance (ligne du Cavalier f1-e3 contre le roque long)",
+  "sens": "sort le cavalier de la première rangée vers le centre : il attaque le pion c4, surveille g4 et f5, et attend que les Noirs décident s'ils prennent en e5.",
+  "menace": "Cg4, pour attaquer le pion f6 une deuxième fois ; et si les Noirs jouent ...fxe5, le cavalier saute en f5 ou reprend en e5 face au roi.",
+  "plan": [
+   {
+    "san": "a6",
+    "pourquoi": "Enlève la case b5 aux pièces blanches et prépare ...b5 pour consolider le pion c4. Le cavalier a5 est ainsi tranquille, et les Noirs gardent le choix de prendre en e5 au bon moment."
+   },
+   {
+    "san": "Nb3",
+    "pourquoi": "Le cavalier a5 s'installe sur une case que les Blancs ne peuvent pas chasser (le pion a3 ne contrôle pas b3). Il attaque d4 une deuxième fois avec la dame, bloque la tour b1 et gêne tout le camp blanc. Attention : il laisse c4 défendu par le seul pion d5, mais Cxc4 dxc4 perd une pièce pour les Blancs."
+   },
+   {
+    "san": "Nec6",
+    "pourquoi": "Le cavalier e7 revient au centre : il attaque d4 et e5, et libère la case e7 pour le fou f8. C'est plus lent que a6, mais cela prépare ...fxe5 avec toutes les pièces prêtes à reprendre."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Bb5",
+    "pourquoi": "Le fou veut échanger le fou e2, mais les Blancs jouent simplement Rf1 et le fou doit rentrer par ...Fe8. Deux coups perdus, et le roi blanc a gagné un demi-roque gratuit avec Rg1."
+   },
+   {
+    "san": "Rg8",
+    "pourquoi": "Préparer ...g5 est tentant, mais après Cg4 le pion f6 est attaqué deux fois et les Noirs doivent jouer ...f5. Le centre se referme, la tour g8 ne sert plus à rien et le cavalier revient en e3 content : les Noirs ont perdu le droit de prendre en e5."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -32
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 c4 Be2 Na5 Nbd2 Bd7 Rb1 Ne7 h4 O-O-O h5 f6 Nf1 Kb8 Bf4 Ka8 Ne3 a6",
+  "nom": "Défense française, variante d'avance (ligne avec 5...Db6 6.a3 c4)",
+  "sens": "retire la case b5 aux pièces blanches et prépare ...b5 pour soutenir le pion c4 : le cavalier a5 ne craint plus b4, et les Noirs gardent en réserve la prise ...fxe5 au bon moment.",
+  "plan": [
+   {
+    "san": "Qc2",
+    "pourquoi": "Sort la dame vers l'aile roi en gardant un œil sur e4 et c4. Elle vise h7 par h5-h6 et libère d1 pour une tour. Les Blancs laissent les Noirs jouer ...b5, mais ils sont prêts à répondre à ...fxe5 par dxe5 en gardant le fou f4 bien placé."
+   },
+   {
+    "san": "Kf1",
+    "pourquoi": "Met le roi à l'abri sans roquer : la colonne h est ouverte aux tours blanches après h5-h6. Le roi relie le jeu, et la tour h1 pourra monter en h3 ou h4. Coup lent mais sûr : rien ne pend chez les Blancs."
+   },
+   {
+    "san": "g3",
+    "pourquoi": "Solidifie le fou f4 et prépare Fg2 ou Rg2. Le fou f4 reste ainsi protégé si les Noirs jouent ...Cf5 ou ...g5. Laisse les Noirs continuer ...b5, mais les Blancs ont le temps."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Bg3",
+    "pourquoi": "Recule sans raison et offre ...Cf5 : après Cxf5 exf5 le centre noir s'ouvre, le fou g3 bute sur ses propres pions et les Noirs prennent l'initiative avec ...fxe5 et la colonne e."
+   },
+   {
+    "san": "Nf1",
+    "pourquoi": "Annule le coup précédent : le cavalier retourne d'où il vient. Les Noirs jouent ...Cc6, puis ...Tc8, et prennent le temps de mettre toutes leurs pièces en place contre e5 pendant que les Blancs tournent en rond."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 41
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 c4 Be2 Na5 Nbd2 Bd7 Rb1 Ne7 h4 O-O-O h5 f6 Nf1 Kb8 Bf4 Ka8 Ne3 a6 Qc2",
+  "nom": "Défense française, variante d'avance (ligne avec 5...Db6 6.a3 c4)",
+  "sens": "Place la dame sur la diagonale b1-h7 : elle surveille e4 et c4, prépare h5-h6 contre g7 et h7, et libère d1 pour une tour. Les Blancs acceptent ...b5, car ils comptent répondre à ...fxe5 par dxe5 avec le fou f4 bien posté.",
+  "menace": "Pas de menace immédiate ; les Blancs préparent h5-h6 pour fissurer le roque noir côté g7-h7, et Ng4 ou Ng5 vers e6 après ...fxe5.",
+  "plan": [
+   {
+    "san": "Nec6",
+    "pourquoi": "Ramène le cavalier vers le centre : il appuie d4 et e5, et prépare ...fxe5 pour ouvrir la colonne f. Il bloque aussi la case c6 contre un futur Cg5-e6. Les Blancs peuvent jouer Cg4 ou Rf1, mais les Noirs restent solides."
+   },
+   {
+    "san": "Nb3",
+    "pourquoi": "Enfonce le cavalier dans le camp blanc : il échange le cavalier passif a5 contre le fou f4 par ...Cxd2 ou menace ...Ca1 plus tard. Les Blancs doivent surveiller d2 et c1 avant de lancer l'attaque sur l'aile roi."
+   },
+   {
+    "san": "Be8",
+    "pourquoi": "Recule le fou pour le rediriger vers f7 ou g6 : il défendra h7 et e6 après ...fxe5. Il laisse la case d7 au cavalier et garde la colonne d prête pour la tour. Les Blancs gagnent un tempo pour Rf1 ou h6, mais sans cible concrète."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Nc8",
+    "pourquoi": "Retire un défenseur de g6 et de f5 : après h6 g5 Fg3, le pion h7 reste faible et le cavalier c8 ne protège plus rien. Les Noirs perdent du temps et l'aile roi se fissure."
+   },
+   {
+    "san": "Qc7",
+    "pourquoi": "Retire la dame de b6 où elle gênait b2 et a3 : après Rf1 Cb3 Te1, le cavalier a5 n'a plus de soutien et la pression sur d4 disparaît. Les Blancs consolident sans souci."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -33
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 c4 Be2 Na5 Nbd2 Bd7 Rb1 Ne7 h4 O-O-O h5 f6 Nf1 Kb8 Bf4 Ka8 Ne3 a6 Qc2 Nec6",
+  "nom": "Variante d'avance, système 6.a3 c4 avec roque long",
+  "sens": "Ramène le cavalier au centre : il renforce la pression sur d4 et e5, et soutient la poussée ...fxe5 pour ouvrir la colonne f. Il libère aussi la case e7 pour le fou.",
+  "menace": "...fxe5 suivi de ...Cxe5 ou ...Fxe5 : les Noirs gagnent le pion e5 ou ouvrent la colonne f.",
+  "plan": [
+   {
+    "san": "Rh3",
+    "pourquoi": "Active la tour par la troisième rangée : elle pourra aller en g3 ou f3 et viser le roi noir après ...fxe5. Le pion h5 sert de point d'appui. Les Noirs peuvent prendre en e5 mais la tour arrive vite en attaque."
+   },
+   {
+    "san": "Ng4",
+    "pourquoi": "Le cavalier attaque f6 et peut aller en h6 ou en e3 selon la réponse. Il force les Noirs à décider pour le pion f6 avant d'ouvrir le jeu. Attention : il laisse d4 un peu moins défendu."
+   },
+   {
+    "san": "Kf1",
+    "pourquoi": "Met le roi à l'abri à la main, car le roque n'est plus possible après h4-h5. Connecte aussi les tours pour combattre sur l'aile dame. Coup calme : les Noirs gardent une position solide."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "exf6",
+    "pourquoi": "Rend aux Noirs ce qu'ils voulaient : après ...gxf6 le centre noir se dégage, e5 devient une case pour les pièces noires et la colonne g s'ouvre pour la tour. Les Blancs perdent tout leur avantage d'espace."
+   },
+   {
+    "san": "O-O",
+    "pourquoi": "Roquer du côté où le pion h a déjà avancé affaiblit le roi : après ...Fe8 et ...fxe5 la colonne f s'ouvre juste devant lui. Le roi blanc devient une cible au lieu d'être à l'abri."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 37
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 Bd7",
+  "nom": "Variante d'avance, 6.a3 Fd7",
+  "sens": "sort le fou de c8, le plus mal placé des Noirs, pour l'amener en b5 et l'échanger contre le fou blanc des cases blanches ; libère aussi la case c8 pour une tour.",
+  "plan": [
+   {
+    "san": "b4",
+    "pourquoi": "c'est l'idée de 6.a3 : le pion chasse le pion c5 et gagne de l'espace à l'aile dame. Après ...cxd4 cxd4 le centre blanc d4-e5 tient solidement. Attention, b4 laisse la case c4 un peu faible et il faudra surveiller ...a5."
+   },
+   {
+    "san": "Bd3",
+    "pourquoi": "développe le fou vers le roi noir (il vise h7) et prépare le petit roque. Si les Noirs jouent ...Fb5 pour échanger, le fou blanc s'écarte sans drame. Il faut juste ne pas oublier que d4 est attaqué deux fois : surveiller ...cxd4."
+   },
+   {
+    "san": "Be2",
+    "pourquoi": "coup plus modeste : le fou protège f3 et laisse d3 libre pour la dame. Prépare le roque sans affaiblir d4. Les Noirs auront le temps de jouer ...Tc8 ou ...Ch6-f5 contre d4."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "c4",
+    "pourquoi": "le pion c3 est le gardien de d4. S'il bouge, ...Cxd4 Cxd4 cxd4 et le centre blanc s'effondre : les Noirs gagnent un pion et une case d4 superbe pour leurs pièces."
+   },
+   {
+    "san": "Nbd2",
+    "pourquoi": "le cavalier bouche la dame qui protégeait d4. Les Noirs répondent ...cxd4 cxd4 Cxd4 et gagnent un pion net, car Cxd4 est impossible : d4 n'est plus assez défendu."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 38
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 Bd7 b4",
+  "nom": "Variante d'avance, système 6.a3 (gambit Wade/Milner-Barry inversé non applicable : simple poussée b4)",
+  "sens": "chasse le pion c5 pour soulager la pression sur d4 et gagner de l'espace à l'aile dame ; le pion b4 attaque c5 tout de suite.",
+  "menace": "bxc5 : prendre le pion c5 en attaquant la dame b6, qui doit perdre un temps.",
+  "plan": [
+   {
+    "san": "cxd4",
+    "pourquoi": "Échange avant que b4 ne prenne en c5. Après cxd4 le pion d4 reste une cible : les Noirs continuent par ...Tc8, ...Cge7-f5 et pressent d4. Ils laissent aux Blancs un centre solide d4-e5 et de l'espace à l'aile dame, mais la case c4 et le pion b4 sont des points à viser (...a5)."
+   },
+   {
+    "san": "c4",
+    "pourquoi": "Ferme l'aile dame en gardant le pion. Le pion c4 bloque la poussée blanche, fixe la chaîne c3-d4 et gagne la case c4 pour un cavalier plus tard (...Ca5-c4 ou ...Cb8-a6... non, plutôt ...a5 pour ouvrir la colonne a). Inconvénient : d4 n'est plus attaqué, les Blancs jouent tranquillement Fe2, 0-0 et poussent au roi."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "cxb4",
+    "pourquoi": "Semble gagner un pion, mais après axb4 les Blancs ont un pion de plus au centre (c3 et d4 tiennent), la colonne a ouverte pour leur tour et la dame b6 est face au pion b4 qui peut avancer en b5 et chasser le cavalier c6. Les Noirs n'ont plus de pression sur d4."
+   },
+   {
+    "san": "f6",
+    "pourquoi": "Attaque e5 au mauvais moment : dxc5 prend le pion avec attaque sur la dame, puis Ff4 défend e5. Les Noirs ont affaibli e6 et la diagonale du roi, perdu le pion c5 et ouvert le jeu alors qu'ils sont en retard de développement."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -40
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 Bd7 b4 cxd4",
+  "nom": "Variante d'avance, système Wade (6.a3 Fd7 7.b4)",
+  "sens": "Échange en d4 avant que b4 ne gagne de l'espace en poussant b4-b5 ou en prenant c5. Le pion d4 devient le point faible que les Noirs vont attaquer avec ...Tc8, ...Cge7-f5 et la dame en b6.",
+  "menace": "...dxc3 : prendre le pion c3, puis après Cxc3 le pion d4 n'est plus soutenu et la dame en b6 vise b4.",
+  "plan": [
+   {
+    "san": "cxd4",
+    "pourquoi": "Reprend tout de suite pour garder la chaîne d4-e5 intacte. Le pion c3 disparaît, donc la case c3 est libre pour le cavalier b1, qui pourra soutenir le centre. Les Noirs suivront par ...Cge7-f5 et ...Tc8 contre d4 : il faudra le défendre avec Fb2 et Cbd2-b3."
+   },
+   {
+    "san": "Bb2",
+    "pourquoi": "Défend d4 d'avance avec le fou, sans toucher au pion c3. Si les Noirs prennent ...dxc3, le fou reprend en c3 et surveille toute la grande diagonale. Les Blancs gardent l'espace à l'aile dame, mais concèdent un peu de temps : les Noirs jouent ...Cge7 tranquillement."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "b5",
+    "pourquoi": "Chasse le cavalier, mais en c6 il allait en a5 de toute façon : après ...Ca5 Cxd4 Fc5 la dame et le fou tombent tous deux sur d4 et sur f2. Le pion d4 est perdu et b5 est devenu une faiblesse, pas une force."
+   },
+   {
+    "san": "Bd3",
+    "pourquoi": "Développe le fou sur sa belle diagonale, mais oublie le centre : ...dxc3 Cxc3 Cxe5 ! Le pion d4 a disparu, donc e5 n'est plus protégé et les Noirs gagnent un pion net."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 40
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 Bd7 b4 cxd4 cxd4",
+  "nom": "Défense française, variante d'avance (ligne 6.a3 Fd7 7.b4)",
+  "sens": "Reprend tout de suite avec le pion pour garder la chaîne d4-e5 intacte. La case c3 se libère pour le cavalier b1, qui pourra soutenir le centre. En échange, le pion d4 n'est plus protégé par un pion : il devient la cible des Noirs.",
+  "plan": [
+   {
+    "san": "Nge7",
+    "pourquoi": "Développe le cavalier roi en visant f5, d'où il attaquera d4 une deuxième fois. Il garde aussi la case e7 libre pour revenir si besoin. Les Blancs devront déjà prévoir Fb2 ou Fe3 pour tenir d4."
+   },
+   {
+    "san": "Rc8",
+    "pourquoi": "Met la tour sur la colonne c, ouverte depuis l'échange. Elle regarde c3 et empêche le cavalier blanc de s'y installer tranquillement : Cc3 serait cloué sur rien, mais Tc8 prépare ...Cxd4 suivi de ...Txc3 dans certaines lignes."
+   },
+   {
+    "san": "Nh6",
+    "pourquoi": "Autre route pour le cavalier : h6 puis f5, sans boucher la diagonale du fou d7. Attention : les Blancs peuvent jouer Fxh6 et doubler les pions g, mais la pression sur d4 compense."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "f6",
+    "pourquoi": "Attaque e5 trop tôt. Après Fd3 fxe5 dxe5, le pion blanc e5 reste solide, la diagonale b1-h7 s'ouvre sur le roi noir et la case e6 devient faible. On a perdu le temps de ...Cge7-f5 pour rien."
+   },
+   {
+    "san": "Qd8",
+    "pourquoi": "Recule la dame alors qu'elle fait un vrai travail sur b6 : elle presse d4 et b4. Après Fd3 et le roque blanc, les Blancs ont développé sans gêne et le pion d4 n'est plus attaqué. Un coup qui annule la logique de ...Db6."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -44
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 Bd7 b4 cxd4 cxd4 Nge7",
+  "nom": "Variante d'avance, système a3-b4 (variante Milner-Barry inversée / ligne 6.a3)",
+  "sens": "Développe le cavalier roi vers f5, d'où il attaquera le pion d4 une deuxième fois ; il laisse aussi e7 libre pour un repli et garde la diagonale du fou f8 ouverte.",
+  "menace": "...Cf5 suivi de ...Cfxd4 ou ...Ccxd4 : le pion d4 serait attaqué trois fois (dame b6, cavalier c6, cavalier f5) et défendu seulement par le cavalier f3 et la dame.",
+  "plan": [
+   {
+    "san": "Nc3",
+    "pourquoi": "Développe une pièce et prépare Ca4 : le cavalier chasse la dame b6 de sa belle case et gagne du temps. Il laisse d4 provisoirement défendu par dame et cavalier f3 ; après ...Cf5, les Blancs répondent Ca4 ou Fb2 selon le cas. Les Noirs ont moins de pression que prévu, et le plan b4-b5 reste dans l'air."
+   },
+   {
+    "san": "Be3",
+    "pourquoi": "Défend directement d4 avec une troisième pièce, donc ...Cf5 ne gagne plus rien. Le fou peut être échangé après ...Cf5xe3, ce qui ouvre la colonne f pour la tour après fxe3 : un pion doublé mais un centre solide."
+   },
+   {
+    "san": "Bb2",
+    "pourquoi": "Défend d4 sans s'exposer à ...Cf5xe3 : le fou reste bien caché sur la grande diagonale. Il garde la structure intacte et libère la case c1 ; en revanche il bloque la case b2 pour la dame et laisse ...Cf5 puis ...h5 ou ...Fe7 aux Noirs."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Qd2",
+    "pourquoi": "La dame se place devant le fou c1 et l'empêche de sortir en e3. Après ...Cf5, d4 reste faible et les Blancs sont obligés de jouer Fb2 de toute façon : un temps perdu, et la dame gêne ses propres pièces."
+   },
+   {
+    "san": "Bg5",
+    "pourquoi": "Le fou sort mais ne défend pas d4. Après ...Cf5 les Blancs doivent revenir avec Fe3, puis ...f6 attaque e5 : deux temps perdus et le centre blanc commence à craquer."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 62
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 Bd7 b4 cxd4 cxd4 Nge7 Nc3",
+  "nom": "Variante d'avance, système Cc6/Db6 avec a3-b4",
+  "sens": "développe le cavalier dame et prépare Ca4 : le cavalier chasse la dame b6 de sa case active et gagne du temps. d4 reste tenu par la dame et le cavalier f3, et la poussée b4-b5 contre le cavalier c6 reste dans l'air.",
+  "menace": "Ca4, qui attaque la dame b6 et la force à reculer avec gain de temps ; ensuite b4-b5 chasse le cavalier c6 et Cc5 s'installe.",
+  "plan": [
+   {
+    "san": "Nf5",
+    "pourquoi": "Le cavalier attaque d4 une troisième fois (avec la dame et le cavalier c6). Les Blancs doivent réagir tout de suite : Ca4 pour chasser la dame, ou Fb2 pour défendre le pion. Les Noirs gardent la pression sur le centre blanc."
+   },
+   {
+    "san": "a6",
+    "pourquoi": "Empêche b4-b5 : le cavalier c6 garde sa case et continue d'appuyer sur d4. Prépare aussi ...Tc8 et ...Ca7-b5 plus tard. Les Blancs ont le temps de jouer Ca4 et Fd3, mais la position noire reste solide."
+   },
+   {
+    "san": "h6",
+    "pourquoi": "Enlève la case g5 au fou et au cavalier blancs, et prépare ...g5 pour attaquer e5 par l'aile. Coup d'attente utile, mais il ne gêne pas Ca4 : la dame devra reculer."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Rc8",
+    "pourquoi": "La tour vient sur la colonne c, mais trop tôt : après Ca4 la dame b6 doit reculer en d8, puis Fd3. Les Noirs ont perdu deux temps et la tour c8 ne fait rien de concret. Il faut d'abord jouer ...Cf5 ou ...a6."
+   },
+   {
+    "san": "g6",
+    "pourquoi": "Affaiblit les cases noires : les Blancs répondent Fg5 qui cloue le cavalier e7 et gêne le roque. Après ...Fg7 Ca4 la dame recule encore et les Noirs restent mal coordonnés."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -55
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 Bd7 b4 cxd4 cxd4 Nge7 Nc3 Nf5",
+  "nom": "Variante d'avance, système Wade (…Fd7) avec 7.b4",
+  "sens": "ajoute une troisième attaque sur d4 : avec la dame b6 et le cavalier c6, le pion central est visé trois fois alors qu'il n'est défendu que deux fois (dame d1 et cavalier f3).",
+  "menace": "…Cfxd4 : le cavalier prend d4, le cavalier f3 reprend, la dame reprend et les Noirs gagnent un pion central.",
+  "plan": [
+   {
+    "san": "Na4",
+    "pourquoi": "Chasse la dame b6 avec gain de temps : elle doit quitter la diagonale et d4 n'est plus attaqué que deux fois. Le cavalier a4 vise aussi c5 pour y revenir ou soutenir b5. Il laisse aux Noirs le choix de la case de repli (Dc7, Da6, Dd8) mais le centre blanc tient."
+   },
+   {
+    "san": "Ne2",
+    "pourquoi": "Rajoute un défenseur à d4 : le pion est maintenant protégé trois fois. Le cavalier e2 peut aller en f4 ou g3 pour chasser le cavalier f5. Ce coup est plus passif : il bloque le fou f1 et ralentit le roque, les Noirs gardent une pression confortable."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Bb2",
+    "pourquoi": "Semble défendre d4 une troisième fois, mais le compte ne tient pas : après …Cfxd4 Cxd4 Dxd4 les Noirs ont pris deux pièces mineures et un pion pour une pièce, le fou b2 est cloué par la dame d4 sur la tour a1 et ne peut pas reprendre. Un pion de perdu et une position inconfortable."
+   },
+   {
+    "san": "Be3",
+    "pourquoi": "Défend d4 mais offre un échange : …Cxe3 fxe3 abîme la structure blanche, puis …Cxb4 ! exploite le pion a3 cloué par la menace …Dxe3 : les Noirs gagnent un pion net et le roi blanc reste exposé."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 50
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 Bd7 b4 cxd4 cxd4 Nge7 Nc3 Nf5 Na4",
+  "nom": "Française d'avance, variante 6.a3 avec 7.b4 (ligne Cge7–Cf5)",
+  "sens": "attaque la dame b6 pour la chasser de la diagonale a7-g1 : d4 ne sera plus attaqué que deux fois (Cc6 et Cf5) et le pion central tient. Le cavalier regarde aussi c5 pour y sauter plus tard et b6 si la dame s'y attarde.",
+  "menace": "prendre la dame par Cxb6, ou Cc5 pour gagner de l'espace sur l'aile dame",
+  "plan": [
+   {
+    "san": "Qc7",
+    "pourquoi": "la dame recule en restant active : elle surveille c-colonne et le pion e5, et prépare Fe7, O-O puis Tc8. Elle laisse aux Blancs Fb2 ou Fd3 pour chasser le Cf5, mais le jeu reste solide."
+   },
+   {
+    "san": "Qd8",
+    "pourquoi": "repli modeste qui dégage la dame de toute attaque (Cc5 ne la touche plus). Les Noirs jouent ensuite Fe7 et O-O sans souci ; le petit prix est un tempo de moins pour la pression sur d4."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Nfxd4",
+    "pourquoi": "prend un pion mais oublie la dame en prise : 11.Cxb6 répond à la capture, et après 11...Cxf3+ 12.Dxf3 les Noirs ont perdu la dame pour un cavalier et un pion."
+   },
+   {
+    "san": "Bxb4+",
+    "pourquoi": "le sacrifice ressemble à un coup tactique, mais 11.axb4 Dxb4+ 12.Fd2 laisse la dame chassée et les Noirs avec deux pions pour une pièce : le centre blanc est intact et les Noirs sont perdants."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -54
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 Bd7 b4 cxd4 cxd4 Nge7 Nc3 Nf5 Na4 Qc7",
+  "nom": "Défense française, variante d'avance (ligne 5...Db6 6.a3 avec 10.Ca4)",
+  "sens": "retire la dame de la case b6 attaquée par le cavalier a4, tout en restant active : elle vise le pion e5 sur la diagonale c7-e5 et s'installe sur la colonne c pour y amener une tour. Elle prépare Fe7 et le petit roque.",
+  "menace": "Cfxd4 : le pion d4 n'est protégé que par le cavalier f3, alors qu'il est attaqué par le Cc6 et le Cf5. Après 11...Cfxd4 12.Cxd4 Cxd4, les Noirs gagnent un pion et la dame c7 met e5 en danger.",
+  "plan": [
+   {
+    "san": "Bb2",
+    "pourquoi": "défend d4 une deuxième fois avec le fou, ce qui annule la menace sur le pion. Le fou est à l'abri sur b2 et soutient toute la chaîne de pions blancs. Il laisse aux Noirs le temps de jouer Fe7 et O-O, mais la position blanche reste saine avec un espace supplémentaire au centre."
+   }
+  ],
+  "erreurs": [
+   {
+    "san": "Bd3",
+    "pourquoi": "développe le fou en attaquant le Cf5, mais oublie le pion d4. Après 11...Cxd4 12.Cxd4 Dxe5+, les Noirs gagnent deux pions : d4 d'abord, puis e5 avec échec. Le fou d3 n'a servi à rien."
+   },
+   {
+    "san": "Be3",
+    "pourquoi": "défend d4 mais place le fou en prise du Cf5 et le rend passif. Après 11...Ca5 12.Ff4 Cc4, le cavalier noir s'installe sur la case forte c4, d'où rien ne le chasse, et bloque toute l'aile dame blanche. Fb2 défendait d4 sans ce défaut."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": 54
+ },
+ {
+  "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 a3 Bd7 b4 cxd4 cxd4 Nge7 Nc3 Nf5 Na4 Qc7 Bb2",
+  "nom": "Défense française, variante d'avance, 5...Db6 6.a3",
+  "sens": "défend d4 une deuxième fois avec le fou, ce qui annule la menace sur le pion ; le fou est à l'abri sur b2 et soutient la chaîne de pions, mais il laisse le cavalier a4 un peu seul sur le bord",
+  "menace": "Ca4-c5 : le cavalier sauterait sur une case forte, chasserait le fou d7 et viserait b7 et e6",
+  "plan": [
+   {
+    "san": "b5",
+    "pourquoi": "chasse le cavalier a4 avec gain de temps : il doit reculer sur c5 où il sera échangé, ou sur c3. Le pion b5 lui enlève la case c5 pour longtemps et prend de l'espace à l'aile dame. Les Noirs gardent la tension sur d4 et pourront suivre par a5 ou Fe7 et O-O."
+   }
+  ],
+  "auteur": "brouillon IA (Fable), vérifié au moteur, à relire",
+  "date": "2026-10-17",
+  "evalBest": -57
  }
 ];
 export function positionsDuLivre(Chess) {
