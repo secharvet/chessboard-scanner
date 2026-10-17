@@ -241,7 +241,12 @@ function renderColonne(suf, e, last, principale) {
   const err = e?.erreurs ?? []; $('ouvErreurs' + suf).hidden = !err.length; const le = $('ouvListeErreurs' + suf); le.innerHTML = '';
   for (const x of err) le.append(carte(x, 'à éviter', true));
   const sch = e?.schema && (e.schema.blancs || e.schema.noirs) ? e.schema : null; $('ouvSchema' + suf).hidden = !sch;
-  if (sch) $('ouvSchemaCorps' + suf).innerHTML = `<div class="ouv__schema"><div><b>Les Blancs</b>${esc(sch.blancs ?? '')}${sch.coupsBlancs ? `<br><small>${fr(esc(sch.coupsBlancs))}</small>` : ''}</div><div><b>Les Noirs</b>${esc(sch.noirs ?? '')}${sch.coupsNoirs ? `<br><small>${fr(esc(sch.coupsNoirs))}</small>` : ''}</div></div>`;
+  // Deux formats cohabitent : texte simple (éditeur, extensions) ou listes (premier noyau) : phrases en tableau,
+  // coups en tableau d'objets { san, pourquoi }. On normalise avant d'afficher.
+  const phrases = (x) => (Array.isArray(x) ? x.filter(Boolean).map(String).join(' ; ') : (x ?? ''));
+  const coupsTxt = (x) => { if (!x) return ''; if (typeof x === 'string') return fr(esc(x)); if (!Array.isArray(x)) return ''; return x.map((o) => (typeof o === 'string' ? fr(esc(o)) : `<b>${fr(esc(o.san ?? ''))}</b>${o.pourquoi ? ' — ' + esc(o.pourquoi) : ''}`)).join(' · '); };
+  if (sch) { const cb = coupsTxt(sch.coupsBlancs), cn = coupsTxt(sch.coupsNoirs);
+    $('ouvSchemaCorps' + suf).innerHTML = `<div class="ouv__schema"><div><b>Les Blancs</b>${esc(phrases(sch.blancs))}${cb ? `<br><small>${cb}</small>` : ''}</div><div><b>Les Noirs</b>${esc(phrases(sch.noirs))}${cn ? `<br><small>${cn}</small>` : ''}</div></div>`; }
   const sig = $('ouvSignature' + suf); if (sig) sig.innerHTML = e ? (signature(e) + (e.auteur?.ia ? ' Chaque enseignant peut signer sa version.' : '')) : '';
 }
 function avant() { const h = game.history(); const c = new Chess(); for (const s of h.slice(0, -1)) c.move(s); return c; }
