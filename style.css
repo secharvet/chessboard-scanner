@@ -3,17 +3,17 @@
    et l'identité visuelle (chantier à venir) se règleront ici, en un endroit. */
 :root {
   color-scheme: dark;
-  --bg: #0b0f17;            /* fond de page */
-  --bg-2: #0d1118;          /* bandeaux (barre du haut, barres fixes) */
-  --surface: #12161f;       /* cartes et panneaux */
-  --surface-2: #1a2130;     /* champs et éléments interactifs */
+  --bg: #0e1117;            /* fond de page */
+  --bg-2: #141b26;          /* bandeaux (barre du haut, barres fixes) */
+  --surface: #171f2b;       /* cartes et panneaux */
+  --surface-2: #212b3a;     /* champs et éléments interactifs */
   --veil: rgba(255, 255, 255, 0.03);   /* panneau très léger posé sur le fond */
   --veil-2: rgba(255, 255, 255, 0.06); /* bouton discret, survol */
   --border: rgba(255, 255, 255, 0.1);
   --text: rgba(255, 255, 255, 0.92);
   --muted: rgba(255, 255, 255, 0.62);
-  --accent: #7c5cff;        /* violet : action principale, élément courant */
-  --accent-rgb: 124, 92, 255;
+  --accent: #5a79ff;        /* bleu ardoise : action principale, élément courant */
+  --accent-rgb: 90, 121, 255;
   --accent2: #3ee6b5;       /* turquoise : liens, coup principal, succès */
   --accent2-rgb: 62, 230, 181;
   --ok: var(--accent2);
