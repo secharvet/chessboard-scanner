@@ -16,6 +16,32 @@ const TYPES = { principal: 'principal', variante: 'variante', faute: 'faute', po
 const ROLES_EDITEURS = ['enseignant', 'validateur', 'admin'];
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
+// --- pur:début (fonctions sans DOM, testées hors navigateur)
+/** Nouvel ordre des identifiants quand on dépose `id` juste avant `avantId` (null : à la fin). */
+export function ordreApresDepose(ids, id, avantId) {
+  if (!ids.includes(id)) return ids.slice();
+  const reste = ids.filter((x) => x !== id);
+  if (avantId == null || avantId === id) { reste.push(id); return reste; }
+  const i = reste.indexOf(avantId); if (i < 0) { reste.push(id); return reste; }
+  reste.splice(i, 0, id); return reste;
+}
+/** Déplace `id` d'un cran vers le haut (delta -1) ou le bas (+1) ; sans effet aux bords. */
+export function ordreDecale(ids, id, delta) {
+  const i = ids.indexOf(id); const j = i + delta; if (i < 0 || j < 0 || j >= ids.length) return ids.slice();
+  const out = ids.slice(); [out[i], out[j]] = [out[j], out[i]]; return out;
+}
+/** Champs qui diffèrent entre deux contenus : { nom, sens, menace, blancs, noirs, coups: { move_id: bool } }. */
+export function differences(a, b) {
+  const t = (v) => String(v ?? '').trim();
+  const sans = (c) => JSON.stringify(c?.sequence?.pas?.map((p) => p.san) ?? []);
+  const ca = new Map((a?.coups ?? []).map((c) => [Number(c.move_id), c])); const cb = new Map((b?.coups ?? []).map((c) => [Number(c.move_id), c]));
+  const coups = {};
+  for (const id of new Set([...ca.keys(), ...cb.keys()])) { const x = ca.get(id), y = cb.get(id); coups[id] = t(x?.pourquoi) !== t(y?.pourquoi) || sans(x) !== sans(y); }
+  return { nom: t(a?.nom) !== t(b?.nom), sens: t(a?.sens) !== t(b?.sens), menace: t(a?.menace) !== t(b?.menace),
+    blancs: t(a?.schema?.blancs) !== t(b?.schema?.blancs), noirs: t(a?.schema?.noirs) !== t(b?.schema?.noirs), coups };
+}
+// --- pur:fin
+
 // ------------------------------------------------------------------ état
 const params = new URLSearchParams(location.search);
 const etat = {
@@ -246,6 +272,7 @@ function rendreEnTete() {
 function rendreChamps() {
   $('fNom').value = etat.content.nom; $('fSens').value = etat.content.sens; $('fMenace').value = etat.content.menace; $('fVideo').value = etat.videoUrl;
   $('fBlancs').value = etat.content.schema.blancs; $('fNoirs').value = etat.content.schema.noirs;
+  compterSens(); titreOnglet();
 }
 function lier(id, setter) { $(id).addEventListener('input', (e) => { setter(e.target.value); marquerModifie(); if (id === 'fNom') $('ediNom').textContent = etat.content.nom || LIVRES[etat.livre]; }); }
 lier('fNom', (v) => { etat.content.nom = v; }); lier('fSens', (v) => { etat.content.sens = v; }); lier('fMenace', (v) => { etat.content.menace = v; }); lier('fVideo', (v) => { etat.videoUrl = v; });
@@ -254,6 +281,7 @@ lier('fBlancs', (v) => { etat.content.schema.blancs = v; }); lier('fNoirs', (v) 
 function rendreCoups() {
   const liste = $('fCoups'); const fautes = $('fFautes'); liste.innerHTML = ''; fautes.innerHTML = '';
   for (const m of etat.arbre) (m.kind === 'faute' ? fautes : liste).append(carteCoup(m));
+  for (const el of [liste, fautes]) activerDepose(el);
   if (!etat.arbre.length) liste.innerHTML = '<div class="hors">Aucun coup proposé ici : joue un coup sur l\'échiquier pour l\'ajouter à l\'arbre.</div>';
   $('fFautesBloc').hidden = !etat.arbre.some((m) => m.kind === 'faute');
 }
@@ -263,9 +291,11 @@ function carteCoup(m) {
   const nPas = e.sequence?.pas?.length ?? 0; const nAnn = e.annotations.length + (e.sequence?.pas ?? []).reduce((s, p) => s + (p.annotations?.length ?? 0), 0);
   d.innerHTML = `<div class="ccoup__san">${esc(fr(m.san))}</div>
     <div class="ccoup__why"><textarea placeholder="Pourquoi ce coup : ce qu'il fait, ce qu'il prépare, ce qu'il laisse à l'adversaire.">${esc(e.pourquoi)}</textarea></div>
-    <div class="ccoup__type"><select>${Object.entries(TYPES).map(([k, v]) => `<option value="${k}" ${k === m.kind ? 'selected' : ''} ${k === 'principal' && !estValidateur() && m.kind !== 'principal' ? 'disabled' : ''}>${v}</option>`).join('')}</select></div>
+    <div class="ccoup__type"><select>${Object.entries(TYPES).map(([k, v]) => `<option value="${k}" ${k === m.kind ? 'selected' : ''} ${(k === 'principal' && !estValidateur() && m.kind !== 'principal') || (k === 'porte' && m.kind !== 'porte') ? 'disabled' : ''}>${v}</option>`).join('')}</select></div>
     <div class="ccoup__pied"><span>${nAnn} annotation${nAnn > 1 ? 's' : ''}</span>
       <button type="button" class="btn" data-demo>${nPas ? `Modifier la suite (${nPas} pas)` : 'Enregistrer une suite'}</button>
+      ${m.kind !== 'porte' ? '<button type="button" class="btn ccoup__jouer" data-jouer title="Aller à la position après ce coup">jouer ce coup ▸</button>' : ''}
+      ${peutEditer() ? '<span class="ccoup__ordre"><button type="button" class="btn" data-ordre="-1" title="Monter">▲</button><button type="button" class="btn" data-ordre="1" title="Descendre">▼</button></span>' : ''}
       ${e.sequence?.eval != null ? `<span class="${Math.abs(e.sequence.eval) >= 30 ? 'ok' : 'ko'}">éval. ${(e.sequence.eval / 100).toFixed(1).replace('.', ',')}</span>` : ''}
       ${e.sequence?.origine ? `<span>${esc(e.sequence.origine)}</span>` : ''}
       ${m.to_position ? '<span>→ position écrite</span>' : '<span>→ pas encore de suite dans le livre</span>'}</div>`;
@@ -273,19 +303,73 @@ function carteCoup(m) {
   d.querySelector('textarea').addEventListener('input', (ev) => { const x = entreeCoup(m.id); if (x) { x.pourquoi = ev.target.value; marquerModifie(); } });
   d.querySelector('textarea').addEventListener('focus', () => { if (!(etat.cible.type === 'coup' && etat.cible.move_id === m.id)) { etat.cible = { type: 'coup', move_id: m.id }; rendre(); document.querySelectorAll('.ccoup').forEach((c) => c.classList.remove('ccoup--cible')); d.classList.add('ccoup--cible'); } });
   d.querySelector('select').addEventListener('change', async (ev) => {
-    const kind = ev.target.value;
-    try { await api('POST', `/api/positions/${etat.position.id}/coups`, { san: m.san, kind }); m.kind = kind; rendre(); rendreCoups(); }
-    catch (err) { ev.target.value = m.kind; bandeau(err.status === 403 ? 'Changer le coup principal demande le rôle validateur.' : `Type non modifié : ${err.message}`, true); }
+    const kind = ev.target.value; const ancien = m.kind;
+    try {
+      await api('POST', `/api/positions/${etat.position.id}/coups`, { san: m.san, kind });
+      // l'API rétrograde l'ancien principal en variante : on relit l'arbre pour le refléter fidèlement
+      if (kind === 'principal' || ancien === 'principal') { await chargerPosition(); }
+      else { m.kind = kind; rendre(); rendreCoups(); }
+    } catch (err) { ev.target.value = ancien; bandeau(err.status === 403 ? (err.message || 'Changer le coup principal demande le rôle validateur.') : `Type non modifié : ${esc(err.message)}`, true); }
   });
   d.querySelector('[data-demo]').addEventListener('click', () => demarrerDemo(m.id));
+  d.querySelector('[data-jouer]')?.addEventListener('click', () => jouerSan(m.san));
+  d.querySelectorAll('[data-ordre]').forEach((b) => b.addEventListener('click', () => reordonner(ordreDecale(idsDuGroupe(m), m.id, Number(b.dataset.ordre)), m.kind === 'faute')));
+  // glisser-déposer
+  if (peutEditer()) {
+    d.draggable = true; d.dataset.moveId = String(m.id);
+    d.addEventListener('dragstart', (ev) => { if (ev.target.closest('textarea, select, button')) { ev.preventDefault(); return; } ev.dataTransfer.setData('text/plain', String(m.id)); ev.dataTransfer.effectAllowed = 'move'; d.classList.add('ccoup--glisse'); });
+    d.addEventListener('dragend', () => { d.classList.remove('ccoup--glisse'); document.querySelectorAll('.ccoup--survol').forEach((c) => c.classList.remove('ccoup--survol')); });
+  }
   return d;
 }
 
+/** Identifiants du groupe (coups proposés ou fautes) auquel appartient le coup, dans l'ordre affiché. */
+function idsDuGroupe(m) { const faute = m.kind === 'faute'; return etat.arbre.filter((x) => (x.kind === 'faute') === faute).map((x) => x.id); }
+
+/** Zone de dépose : une liste (#fCoups ou #fFautes) accepte les cartes de son propre groupe. */
+function activerDepose(liste) {
+  if (!peutEditer() || liste.dataset.depose) return; liste.dataset.depose = '1';
+  liste.addEventListener('dragover', (ev) => {
+    const carte = ev.target.closest('.ccoup'); if (!carte || !carte.dataset.moveId) return; ev.preventDefault(); ev.dataTransfer.dropEffect = 'move';
+    document.querySelectorAll('.ccoup--survol').forEach((c) => c.classList.remove('ccoup--survol')); carte.classList.add('ccoup--survol');
+  });
+  liste.addEventListener('drop', (ev) => {
+    ev.preventDefault(); const id = Number(ev.dataTransfer.getData('text/plain')); const cible = ev.target.closest('.ccoup'); if (!id || !cible) return;
+    const m = coupArbre(id); const c = coupArbre(Number(cible.dataset.moveId)); if (!m || !c || (m.kind === 'faute') !== (c.kind === 'faute')) return;
+    const ids = idsDuGroupe(m); const rect = cible.getBoundingClientRect(); const apres = ev.clientY > rect.top + rect.height / 2;
+    const suivant = apres ? ids[ids.indexOf(c.id) + 1] ?? null : c.id;
+    reordonner(ordreApresDepose(ids, id, suivant), m.kind === 'faute');
+  });
+}
+
+/** Applique un nouvel ordre à un groupe : enregistre côté serveur (PATCH …/coups/ordre), puis re-rend dans l'ordre renvoyé. */
+async function reordonner(ids, fautes) {
+  const actuel = etat.arbre.filter((x) => (x.kind === 'faute') === fautes).map((x) => x.id);
+  if (JSON.stringify(ids) === JSON.stringify(actuel)) return;
+  const appliquer = (ordres) => { // ordres : Map id → ord
+    for (const m of etat.arbre) if (ordres.has(m.id)) m.ord = ordres.get(m.id);
+    etat.arbre.sort((a, b) => a.ord - b.ord); synchroniserCoups(); rendreCoups();
+  };
+  try {
+    const j = await api('PATCH', `/api/positions/${etat.position.id}/coups/ordre`, { ids });
+    appliquer(new Map((j.coups ?? []).map((c) => [Number(c.id), c.ord])));
+  } catch (e) {
+    // ordre tenu localement pour la session ; on prévient que le serveur ne l'a pas gardé
+    appliquer(new Map(ids.map((id, i) => [id, i])));
+    bandeau(e.status === 403 ? 'Réordonner demande le rôle enseignant.' : `Ordre non enregistré sur le serveur (${esc(e.message)}) : il sera perdu au rechargement.`, true);
+  }
+}
+
 // ------------------------------------------------------------------ brouillon, publication, vérification
+const TITRE_ONGLET = document.title;
+function titreOnglet() { document.title = (etat.dirty ? '• ' : '') + TITRE_ONGLET; }
 function marquerModifie() {
   if (!peutEditer()) return;
-  etat.dirty = true; rendreSauvegarde(); clearTimeout(etat.autosave); etat.autosave = setTimeout(() => enregistrer(true), 30000);
+  etat.dirty = true; rendreSauvegarde(); titreOnglet(); clearTimeout(etat.autosave); etat.autosave = setTimeout(() => enregistrer(true), 30000);
 }
+function compterSens() { const n = $('fSens').value.length; const el = $('fSensCompte'); if (!el) return; el.textContent = `${n} caractère${n > 1 ? 's' : ''}${n > 400 ? ' — long pour un débutant, 400 au plus conseillés' : ''}`; el.classList.toggle('ko', n > 400); }
+$('fSens').addEventListener('input', compterSens);
+document.addEventListener('keydown', (e) => { if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 's') { e.preventDefault(); enregistrer(); } });
 function rendreSauvegarde(msg = null) {
   const el = $('ediSauvegarde');
   if (msg) { el.innerHTML = msg; return; }
@@ -299,7 +383,7 @@ async function enregistrer(auto = false) {
   clearTimeout(etat.autosave);
   try {
     const j = await api('PUT', `/api/positions/${etat.position.id}/explication`, { content: etat.content, video_url: etat.videoUrl || null });
-    etat.explication = j.explication; etat.dirty = false; etat.lastSaved = new Date(); rendreSauvegarde(); rendreEnTete(); return true;
+    etat.explication = j.explication; etat.dirty = false; etat.lastSaved = new Date(); titreOnglet(); rendreSauvegarde(); rendreEnTete(); return true;
   } catch (e) { rendreSauvegarde(`<span class="ko">${auto ? 'Enregistrement automatique impossible' : 'Enregistrement impossible'} : ${esc(e.message)}</span>`); return false; }
 }
 async function publier() {
@@ -438,19 +522,50 @@ async function ouvrirTiroir(titre) {
   const versions = j.versions ?? []; const remarques = j.remarques ?? [];
   if (titre === 'Historique') {
     corps.innerHTML = versions.length ? '' : '<p class="hors">Aucune version pour cette position.</p>';
+    if (versions.length > 1) corps.insertAdjacentHTML('beforeend', '<p class="hors cmp__aide">Coche deux versions pour les comparer côte à côte.</p>');
+    const cochees = new Set();
     for (const v of versions) {
-      const mienne = v.author?.id === etat.moi?.id; const d = document.createElement('div'); d.className = 'version' + (v.status === 'publie' ? ' version--publie' : '');
-      d.innerHTML = `<div><b>${esc(v.author?.display_name ?? '?')}</b> · v${v.version} · ${esc(v.status)}<small>${new Date(v.published_at ?? v.created_at).toLocaleString('fr-FR')}</small></div>
+      const mienne = v.author?.id === etat.moi?.id; const visible = v.status === 'publie' || mienne;
+      const d = document.createElement('div'); d.className = 'version' + (v.status === 'publie' ? ' version--publie' : '');
+      d.innerHTML = `<div>${visible && versions.length > 1 ? `<label class="cmp__case"><input type="checkbox" data-cmp="${v.id}" title="comparer"> </label>` : ''}<b>${esc(v.author?.display_name ?? '?')}</b> · v${v.version} · ${esc(v.status)}<small>${new Date(v.published_at ?? v.created_at).toLocaleString('fr-FR')}</small></div>
         <div>${peutEditer() && !(mienne && v.id === etat.explication?.id) ? `<button type="button" class="btn" data-reprendre="${v.id}">${mienne ? 'Restaurer' : 'Reprendre'}</button>` : ''}</div>`;
       d.querySelector('[data-reprendre]')?.addEventListener('click', async (ev) => { try { await api('POST', `/api/explications/${ev.target.dataset.reprendre}/reprendre`); etat.dirty = false; fermerTiroir(); await chargerPosition(); rendreSauvegarde('Version copiée dans ton brouillon.'); } catch (e) { ev.target.textContent = `Échec : ${e.message}`; } });
+      d.querySelector('[data-cmp]')?.addEventListener('change', (ev) => {
+        const id = Number(ev.target.dataset.cmp);
+        if (ev.target.checked) { if (cochees.size >= 2) { ev.target.checked = false; return; } cochees.add(id); } else cochees.delete(id);
+        rendreComparaison([...cochees], versions);
+      });
       corps.append(d);
     }
+    corps.insertAdjacentHTML('beforeend', '<div id="ediComparaison" class="cmp" hidden></div>');
   } else {
     const autres = versions.filter((v) => v.status === 'publie' && v.author?.id !== etat.moi?.id);
     corps.innerHTML = (remarques.length ? remarques.map((r) => `<div class="remarque"><b>${esc(r.author?.display_name ?? '?')}</b> <small>sur la version ${esc(String(versions.find((v) => v.id === r.explanation_id)?.author?.display_name ?? r.explanation_id))} · ${new Date(r.created_at).toLocaleString('fr-FR')}</small><br>${esc(r.texte)}</div>`).join('') : '<p class="hors">Aucune remarque ici.</p>')
       + (peutEditer() && autres.length ? `<p style="margin-top:12px"><b>Écrire une remarque</b> sur la version de <select id="remSur">${autres.map((v) => `<option value="${v.id}">${esc(v.author?.display_name ?? '?')} (v${v.version})</option>`).join('')}</select></p><textarea id="remTexte" rows="3" placeholder="« D'accord, mais j'ajouterais… »"></textarea><p><button type="button" class="btn btn--primary" id="remEnvoyer">Envoyer</button></p>` : '');
     corps.querySelector('#remEnvoyer')?.addEventListener('click', async () => { const t = corps.querySelector('#remTexte').value.trim(); if (!t) return; try { await api('POST', `/api/explications/${corps.querySelector('#remSur').value}/remarques`, { texte: t }); ouvrirTiroir('Remarques'); } catch (e) { corps.querySelector('#remEnvoyer').textContent = `Échec : ${e.message}`; } });
   }
+}
+/** Deux versions cochées : on lit leur contenu et on les met côte à côte, champs différents surlignés (classe diff). */
+async function rendreComparaison(ids, versions) {
+  const box = $('ediComparaison'); if (!box) return;
+  if (ids.length < 2) { box.hidden = true; box.innerHTML = ''; return; }
+  box.hidden = false; box.textContent = 'Chargement des deux versions…';
+  let a, b;
+  try { [a, b] = await Promise.all(ids.map((id) => api('GET', `/api/explications/${id}/contenu`).then((j) => j.explication))); }
+  catch (e) { box.innerHTML = `<span class="ko">Comparaison impossible : ${esc(e.message)}</span>`; return; }
+  const diff = differences(a.content, b.content);
+  const entete = (x) => { const v = versions.find((y) => y.id === x.id); return `<b>${esc(v?.author?.display_name ?? '?')}</b> · v${x.version} · ${esc(x.status)}`; };
+  const ligne = (titre, cle, va, vb) => `<div class="cmp__titre">${titre}</div><div class="cmp__cell ${diff[cle] ? 'diff' : ''}">${esc(va || '—')}</div><div class="cmp__cell ${diff[cle] ? 'diff' : ''}">${esc(vb || '—')}</div>`;
+  const ca = new Map((a.content?.coups ?? []).map((c) => [Number(c.move_id), c])); const cb = new Map((b.content?.coups ?? []).map((c) => [Number(c.move_id), c]));
+  const pas = (c) => (c?.sequence?.pas?.length ? ` <small>(suite : ${c.sequence.pas.map((p) => fr(p.san)).join(' ')})</small>` : '');
+  let html = `<div class="cmp__grille"><div></div><div class="cmp__cell cmp__entete">${entete(a)}</div><div class="cmp__cell cmp__entete">${entete(b)}</div>`
+    + ligne('Nom', 'nom', a.content?.nom, b.content?.nom) + ligne('Sens', 'sens', a.content?.sens, b.content?.sens) + ligne('Menace', 'menace', a.content?.menace, b.content?.menace);
+  for (const id of Object.keys(diff.coups).map(Number)) {
+    const m = coupArbre(id); const x = ca.get(id), y = cb.get(id);
+    html += `<div class="cmp__titre">${m ? esc(fr(m.san)) : 'coup ' + id}</div><div class="cmp__cell ${diff.coups[id] ? 'diff' : ''}">${esc(x?.pourquoi || '—')}${pas(x)}</div><div class="cmp__cell ${diff.coups[id] ? 'diff' : ''}">${esc(y?.pourquoi || '—')}${pas(y)}</div>`;
+  }
+  html += ligne('Blancs', 'blancs', a.content?.schema?.blancs, b.content?.schema?.blancs) + ligne('Noirs', 'noirs', a.content?.schema?.noirs, b.content?.schema?.noirs) + '</div>';
+  box.innerHTML = html;
 }
 function fermerTiroir() { $('ediTiroir').hidden = true; }
 $('btnHistorique').addEventListener('click', () => ouvrirTiroir('Historique'));

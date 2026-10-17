@@ -97,3 +97,24 @@
 }
 /* L'attribut hidden doit gagner sur display:flex (sinon le voile du dialogue reste au-dessus de la page et avale les clics). */
 .edi__dialogue[hidden], [hidden] { display: none !important; }
+
+/* glisser-déposer des cartes et boutons d'ordre */
+.ccoup[draggable="true"] { cursor: grab; }
+.ccoup--glisse { opacity: 0.45; }
+.ccoup--survol { outline: 2px dashed var(--accent); outline-offset: 2px; }
+.ccoup__ordre { margin-left: auto; display: inline-flex; gap: 2px; }
+.ccoup__ordre .btn, .ccoup__jouer { padding: 1px 6px; font-size: 0.72rem; line-height: 1.4; }
+.ccoup__jouer { color: var(--accent2); }
+/* compteur de caractères */
+.edi__compte { color: var(--muted); font-size: 0.72rem; margin-top: 2px; }
+.edi__compte.ko { color: #ffb86b; }
+/* comparaison de deux versions (tiroir historique) */
+.cmp { margin-top: 12px; }
+.cmp__aide { margin: 0 0 8px; }
+.cmp__case { margin-right: 4px; }
+.cmp__grille { display: grid; grid-template-columns: 5.5em 1fr 1fr; gap: 4px; font-size: 0.85rem; }
+.cmp__titre { color: var(--muted); font-size: 0.75rem; padding-top: 6px; }
+.cmp__cell { padding: 6px 8px; border: 1px solid var(--border); border-radius: 6px; background: rgba(255,255,255,0.02); white-space: pre-wrap; word-break: break-word; }
+.cmp__entete { background: transparent; border-color: transparent; padding-bottom: 0; }
+.cmp__cell.diff { border-color: rgba(255,184,107,0.7); background: rgba(255,184,107,0.1); }
+@media (max-width: 520px) { .cmp__grille { grid-template-columns: 1fr; } .cmp__titre { padding-top: 10px; } }
