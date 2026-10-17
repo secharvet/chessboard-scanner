@@ -15,3 +15,5 @@
 .adm th, .adm td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--border); }
 .adm th { color: var(--muted); font-weight: 600; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; }
 .adm__lien { font-family: var(--mono); font-size: 0.8rem; word-break: break-all; background: rgba(255,255,255,0.05); padding: 8px; border-radius: 6px; }
+.cpt__attente { background: rgba(62,230,181,0.08); border: 1px solid rgba(62,230,181,0.4); border-radius: 8px; padding: 12px; margin-top: 14px; line-height: 1.5; }
+.cpt__attente .btn { display: inline-block; margin-top: 8px; text-decoration: none; }
