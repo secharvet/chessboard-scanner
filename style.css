@@ -1031,3 +1031,6 @@ code {
     cursor: pointer;
   }
 }
+
+/* L'attribut hidden gagne toujours, même sur un élément en display:flex/grid (sinon deux formulaires s'affichent). */
+[hidden] { display: none !important; }
