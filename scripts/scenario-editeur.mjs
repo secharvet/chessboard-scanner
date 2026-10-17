@@ -24,7 +24,10 @@ if (telephone) {
 // 1. écrire le sens et un pourquoi
 await page.fill('#fSens', `Texte d'essai : ${marque}.`);
 const cartes = page.locator('#fCoups textarea, #fFautes textarea'); const nCartes = await cartes.count(); console.log('cartes (coups + fautes) :', await page.locator('#fCoups .ccoup').count(), '+', await page.locator('#fFautes .ccoup').count()); if (nCartes) await cartes.first().fill(`Pourquoi d'essai (${marque}).`);
-// 2. surligner une case : bouton de mode contenant « Surligner », puis clic sur la case d4 (data-square)
+// 2. surligner une case : d'abord « Effacer » (les clics sur une case déjà surlignée font tourner la couleur
+// jusqu'au retrait ; le brouillon garde les annotations d'une passe à l'autre, on repart donc de zéro),
+// puis mode « Surligner » et clic sur la case d4 (data-square)
+await page.click('#ediEffacer').catch(() => erreurs.push('bouton Effacer introuvable'));
 const btnSurligner = page.locator('#ediModes button', { hasText: /surligner/i }); if (await btnSurligner.count()) { await btnSurligner.first().click(); await page.locator('[data-square="d4"]').first().click(); } else erreurs.push('bouton Surligner introuvable');
 // 3. enregistrer
 await page.click('#btnEnregistrer'); await page.waitForTimeout(1500);
