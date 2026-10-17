@@ -13,20 +13,20 @@
       <main class="cpt">
         <section class="cpt__carte" id="carte">
           <h1 id="titre">Connexion</h1>
+          <p class="cpt__erreur" id="erreur" role="alert" aria-live="assertive" hidden></p>
           <p class="cpt__sous" id="sous">Réservé aux comptes créés par invitation. Les apprenants n'ont pas besoin de compte pour lire.</p>
-          <form id="fConnexion" autocomplete="on">
+          <form id="fConnexion" method="post" action="#" autocomplete="on">
             <label>Courriel <input type="email" name="email" required autocomplete="username" /></label>
             <label>Mot de passe <input type="password" name="mot_de_passe" required autocomplete="current-password" /></label>
             <button class="btn btn--primary" type="submit">Se connecter</button>
           </form>
-          <form id="fInvitation" hidden>
+          <form id="fInvitation" method="post" action="#" hidden>
             <p class="cpt__info">Invitation pour <b id="invEmail"></b> avec le rôle <b id="invRole"></b>.</p>
             <label>Nom affiché <input type="text" name="display_name" required maxlength="60" placeholder="ex. Marc Q., club de Sceaux" /></label>
             <label>Mot de passe (10 caractères au moins) <input type="password" name="mot_de_passe" required minlength="10" autocomplete="new-password" /></label>
             <label class="cpt__case" id="licenceBloc"><input type="checkbox" name="licence" /> <span>Je publie mes textes sous licence <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr" target="_blank" rel="noopener">CC BY-SA 4.0</a> (attribution, partage dans les mêmes conditions). Je reste l'auteur de ce que j'écris.</span></label>
             <button class="btn btn--primary" type="submit">Créer mon compte</button>
           </form>
-          <p class="cpt__erreur" id="erreur" hidden></p>
           <p class="cpt__pied"><a href="./ouverture.html">← Retour à l'assistant d'ouverture</a></p>
         </section>
       </main>
