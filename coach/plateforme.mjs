@@ -89,7 +89,7 @@ async function reponsePosition(p, u) {
   const { rows: expl } = await pool.query(`select e.id, e.author_id, u.display_name, e.status, e.version, e.content, e.video_url, e.published_at, e.created_at, e.based_on_id
     from explanations e join users u on u.id = e.author_id where e.position_id = $1 and ${filtre} order by e.status = 'publie' desc, e.created_at desc`, params);
   const { rows: ref } = await pool.query('select author_id from reference where opening_id = $1 and (position_id = $2 or position_id is null) order by position_id nulls last limit 1', [p.opening_id, p.id]);
-  return { ok: true, position: { id: p.id, livre: p.opening_id, coups: p.coups, fen: rejouer(p.coups).fen(), ply: p.ply },
+  return { ok: true, position: { id: p.id, livre: p.opening_id, coups: p.coups, fen: rejouer(p.coups).fen(), ply: p.ply, eco: p.eco ?? null, nom_eco: p.nom_eco ?? null },
     coups: coups.map((m) => ({ id: m.id, san: m.san, kind: m.kind, ord: m.ord, to_position: !!m.to_position_id, porte_opening_id: m.porte_opening_id })),
     explications: expl.map((e) => ({ id: e.id, author: { id: e.author_id, display_name: e.display_name }, status: e.status, version: e.version, content: e.content, video_url: e.video_url, published_at: e.published_at, created_at: e.created_at, based_on_id: e.based_on_id })),
     reference_author_id: ref[0]?.author_id ?? null, utilisateur: u ? { id: u.id, role: u.role } : null };

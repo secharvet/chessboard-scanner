@@ -9,7 +9,7 @@ const { rows: livres } = await pool.query('select * from openings order by ordre
 for (const L of livres) {
   const { rows: ref } = await pool.query('select author_id from reference where opening_id = $1 and position_id is null', [L.id]);
   const auteur = ref[0]?.author_id ?? '00000000-0000-0000-0000-000000000001';
-  const { rows } = await pool.query(`select p.coups, p.id,
+  const { rows } = await pool.query(`select p.coups, p.id, p.eco, p.nom_eco,
       (select json_agg(json_build_object('id', m.id, 'san', m.san, 'kind', m.kind, 'ord', m.ord, 'porte', m.porte_opening_id) order by m.ord, m.id) from moves m where m.position_id = p.id) as coups_arbre,
       (select e.content from explanations e where e.position_id = p.id and e.status = 'publie' and e.author_id = $2 limit 1) as texte,
       (select u.display_name from explanations e join users u on u.id = e.author_id where e.position_id = p.id and e.status = 'publie' and e.author_id = $2 limit 1) as auteur
@@ -23,7 +23,7 @@ for (const L of livres) {
       if (m.porte) item.porte = m.porte;
       if (m.kind === 'faute') erreurs.push(item); else plan.push(item);
     }
-    LIVRE.push({ coups: r.coups, nom: t.nom ?? undefined, sens: t.sens ?? '', menace: t.menace ?? undefined, plan, erreurs: erreurs.length ? erreurs : undefined, schema: t.schema ?? undefined, auteur: r.auteur ?? undefined });
+    LIVRE.push({ coups: r.coups, nom: t.nom ?? undefined, eco: r.eco ?? undefined, nom_eco: r.nom_eco ?? undefined, sens: t.sens ?? '', menace: t.menace ?? undefined, plan, erreurs: erreurs.length ? erreurs : undefined, schema: t.schema ?? undefined, auteur: r.auteur ?? undefined });
   }
   const src = `// Exporté de la base par scripts/db/exporter-livres.mjs le ${new Date().toISOString().slice(0, 10)} : ${LIVRE.length} positions, auteur de référence. Ne pas éditer à la main.
 export const OUVERTURE = ${JSON.stringify(L.nom)};
