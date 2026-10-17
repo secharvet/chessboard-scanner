@@ -105,6 +105,47 @@ export function renderPlayBoard(container, state) {
   body.appendChild(wrap);
   frame.appendChild(body);
   container.appendChild(frame);
+
+  animerDernierCoup(container, grid, last, state.fen);
+  container.dataset.fenPrecedente = state.fen;
+}
+
+/* Glissement de la pièce qui vient de bouger (17 oct. 2026) : accélération puis amorti, 220 ms.
+   On n'anime que si, par rapport au rendu précédent de ce même échiquier, la pièce était bien sur la case
+   de départ et pas encore sur la case d'arrivée (donc pas sur un simple rafraîchissement, ni sur un « Retour »).
+   Au roque, la tour suit le roi. Respecte « réduire les animations » du système. */
+const DUREE_GLISSEMENT_MS = 220;
+const COURBE_GLISSEMENT = 'cubic-bezier(0.4, 0, 0.2, 1)';
+function piecesParCase(fen) {
+  const s = fenToSquares(fen); const m = {};
+  for (let i = 0; i < 64; i++) m[squareAtIndex(i, 'white')] = s[i] || null;
+  return m;
+}
+function glisser(grid, from, to) {
+  const dest = grid.querySelector(`[data-square="${to}"] .fen-board__piece`);
+  const dep = grid.querySelector(`[data-square="${from}"]`);
+  const arr = grid.querySelector(`[data-square="${to}"]`);
+  if (!dest || !dep || !arr || typeof dest.animate !== 'function') return;
+  const a = dep.getBoundingClientRect(), b = arr.getBoundingClientRect();
+  const dx = a.left - b.left, dy = a.top - b.top;
+  if (!dx && !dy) return;
+  dest.style.zIndex = '5';
+  const anim = dest.animate([{ transform: `translate(${dx}px, ${dy}px)` }, { transform: 'translate(0, 0)' }], { duration: DUREE_GLISSEMENT_MS, easing: COURBE_GLISSEMENT, fill: 'none' });
+  anim.finished?.then(() => { dest.style.zIndex = ''; }).catch(() => {});
+}
+function animerDernierCoup(container, grid, last, fen) {
+  if (!last?.from || !last?.to) return;
+  const fenPrec = container.dataset.fenPrecedente; if (!fenPrec || fenPrec === fen) return;
+  if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return;
+  const avant = piecesParCase(fenPrec), apres = piecesParCase(fen);
+  const piece = apres[last.to]; if (!piece) return;
+  if (avant[last.from] !== piece || avant[last.to] === piece) return; // pas un coup joué vers l'avant
+  glisser(grid, last.from, last.to);
+  // roque : le roi a sauté deux colonnes, la tour l'accompagne
+  if (piece.toLowerCase() === 'k' && Math.abs(last.from.charCodeAt(0) - last.to.charCodeAt(0)) === 2) {
+    const rang = last.to[1]; const petit = last.to[0] === 'g';
+    glisser(grid, (petit ? 'h' : 'a') + rang, (petit ? 'f' : 'd') + rang);
+  }
 }
 
 /**
