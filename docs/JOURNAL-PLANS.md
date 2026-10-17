@@ -1395,3 +1395,16 @@ l'index (échiquiers gris) ; punitions : fins de partie gérées. Restent 222 va
 viennoise, Sicilienne, Française) sont marquées `porte` dans le livre et ne sont plus prolongées ; les 206 brouillons qui en
 dépendaient sont retirés (gardés dans l'historique Git pour amorcer ces livres). Italienne finale : **179 positions**, 10e coup
 partout, 269 punitions. Deux livres en ligne : Française 390, Italienne 179.
+
+## 17 octobre 2026, nuit (2 h – 6 h, carte blanche) : la plateforme enseignants prend corps
+
+Décisions de l'auteur consignées dans la spec (§7) : comparaison de deux professeurs, ajout libre de coups (principal validé),
+publication libre, brouillons IA visibles, CC BY-SA 4.0, champ vidéo ; connexion par courriel + mot de passe sur invitation.
+Fait dans la nuit : migrations 0002/0003 (arbre, explications versionnées, sessions, invitations, rôle validateur), import des
+deux livres (571 positions, 2 144 coups, 569 explications IA), comptes (scrypt natif, cookies HttpOnly), API complète
+(coach/plateforme.mjs), pages connexion/administration, panneau latéral sensible au rôle, nginx : /api/ proxifié et
+auth_request sur editeur.html/admin.html, éditeur d'explications (agent : modes, démonstrations, aperçu, historique,
+remarques), vérifications dans Chromium (5 pages sans erreur, scénario enseignant complet), export base → livres statiques.
+Régression trouvée et corrigée : le conteneur API Alpine n'avait pas Stockfish depuis le 9 octobre (le juge tuait le serveur) →
+image Debian + binaire de l'hôte monté + sonde de santé avec redémarrage, et le moteur ne fait plus tomber le processus.
+Piège noté : `sed -i` sur un fichier monté seul dans un conteneur (nginx.conf) casse le montage.

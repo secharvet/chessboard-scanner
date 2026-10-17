@@ -95,3 +95,5 @@
   .edi__modes, .edi__form, .edi__demo, .edi__cible { display: none !important; }
   .edi__droite { display: none; }
 }
+/* L'attribut hidden doit gagner sur display:flex (sinon le voile du dialogue reste au-dessus de la page et avale les clics). */
+.edi__dialogue[hidden], [hidden] { display: none !important; }
