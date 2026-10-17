@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="fr" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Paramètres — Échecs</title>
+    <link rel="stylesheet" href="./vendor-web/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./site-nav.css" />
+    <style>
+      .par { max-width: 760px; }
+      .par__champ { padding: 18px 0; border-bottom: 1px solid var(--border); }
+      .par__champ:last-child { border-bottom: 0; }
+      .par__ti { font-weight: 700; }
+      .par__de { color: var(--muted); font-size: 0.85rem; margin: 2px 0 10px; }
+      .seg { display: inline-flex; background: var(--surface-2); border: 1px solid var(--border); border-radius: 10px; padding: 3px; gap: 3px; }
+      .seg button { border: 0; background: none; color: var(--muted); font: inherit; font-weight: 700; font-size: 0.85rem; padding: 7px 15px; border-radius: 7px; cursor: pointer; }
+      .seg button[aria-pressed="true"] { background: var(--surface); color: var(--text); box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
+    </style>
+  </head>
+  <body>
+    <div class="app">
+      <main class="par container px-3 py-4 py-md-5">
+        <h1 class="h3 mb-1">Paramètres</h1>
+        <p class="text-body-secondary mb-4">Réglages de l'affichage. Votre choix est mémorisé sur cet appareil.</p>
+
+        <div class="card">
+          <div class="card-body">
+            <div class="par__champ">
+              <div class="par__ti">Disposition du menu</div>
+              <div class="par__de">Barre latérale à gauche, ou barre horizontale en haut de page.</div>
+              <div class="seg" role="group" aria-label="Disposition du menu">
+                <button type="button" data-shell-opt="side">Barre latérale</button>
+                <button type="button" data-shell-opt="top">Barre en haut</button>
+              </div>
+            </div>
+
+            <div class="par__champ">
+              <div class="par__ti">Thème</div>
+              <div class="par__de">Clair, sombre, ou suivre le réglage de votre appareil.</div>
+              <div class="seg" role="group" aria-label="Thème">
+                <button type="button" data-theme-opt="light">Clair</button>
+                <button type="button" data-theme-opt="dark">Sombre</button>
+                <button type="button" data-theme-opt="system">Système</button>
+              </div>
+              <p class="text-body-secondary small mt-2 mb-0" id="themeNote"></p>
+            </div>
+
+            <div class="par__champ" id="compteChamp" hidden>
+              <div class="par__ti">Mon compte</div>
+              <div class="par__de" id="compteInfo">—</div>
+              <button type="button" class="btn" id="btnDeco">Se déconnecter</button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script type="module" src="./site-nav.js"></script>
+    <script type="module">
+      const root = document.documentElement;
+
+      // Disposition du menu (barre latérale / barre en haut)
+      function shellCourant() { try { const v = localStorage.getItem('site-shell'); if (v === 'top' || v === 'side') return v; } catch (e) {} return 'side'; }
+      function appliquerShell(s) {
+        try { localStorage.setItem('site-shell', s); } catch (e) {}
+        document.body.dataset.shell = s;
+        document.querySelectorAll('[data-shell-opt]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.shellOpt === s)));
+      }
+      appliquerShell(shellCourant());
+      document.querySelectorAll('[data-shell-opt]').forEach((b) => b.addEventListener('click', () => appliquerShell(b.dataset.shellOpt)));
+
+      // Thème (le thème clair arrive ; pour l'instant un seul thème sombre soigné)
+      function themeCourant() { try { const v = localStorage.getItem('theme'); if (v) return v; } catch (e) {} return 'system'; }
+      function appliquerTheme(t) {
+        try { localStorage.setItem('theme', t); } catch (e) {}
+        if (t === 'system') root.removeAttribute('data-theme'); else root.setAttribute('data-theme', t);
+        document.querySelectorAll('[data-theme-opt]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.themeOpt === t)));
+      }
+      appliquerTheme(themeCourant());
+      document.querySelectorAll('[data-theme-opt]').forEach((b) => b.addEventListener('click', () => appliquerTheme(b.dataset.themeOpt)));
+      document.getElementById('themeNote').textContent = 'Le thème clair est en cours de finition ; pour l’instant le site reste en thème sombre.';
+
+      // Compte
+      fetch('/api/auth/moi', { credentials: 'same-origin' }).then((r) => (r.ok ? r.json() : null)).then((j) => {
+        if (!j?.utilisateur) return;
+        const u = j.utilisateur;
+        document.getElementById('compteChamp').hidden = false;
+        document.getElementById('compteInfo').textContent = `${u.display_name} — ${u.role}${u.club ? ' · ' + u.club : ''}`;
+      }).catch(() => {});
+      document.getElementById('btnDeco').addEventListener('click', async () => {
+        try { await fetch('/api/auth/deconnexion', { method: 'POST', credentials: 'same-origin' }); } catch (e) {}
+        location.href = './accueil.html';
+      });
+    </script>
+  </body>
+</html>

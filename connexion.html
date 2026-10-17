@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./site-nav.css" />
     <link rel="stylesheet" href="./compte.css" />
+    <style>
+      .pw-wrap { position: relative; }
+      .pw-wrap .form-control { padding-right: 42px; }
+      .pw-eye { position: absolute; right: 4px; top: 50%; transform: translateY(-50%); width: 32px; height: 32px; border: 0; background: none; color: var(--muted); border-radius: 7px; cursor: pointer; display: grid; place-items: center; font-size: 15px; }
+      .pw-eye:hover { background: var(--veil-2); color: var(--text); }
+    </style>
   </head>
   <body>
     <div class="app">
@@ -46,5 +52,30 @@
     </div>
     <script type="module" src="./site-nav.js"></script>
     <script type="module" src="./compte.js"></script>
+    <script type="module">
+      /* Bouton œil afficher/masquer sur chaque champ mot de passe. */
+      function ajouterOeil(inp) {
+        if (inp.dataset.oeil) return;
+        inp.dataset.oeil = '1';
+        const wrap = document.createElement('div');
+        wrap.className = 'pw-wrap';
+        inp.parentNode.insertBefore(wrap, inp);
+        wrap.appendChild(inp);
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'pw-eye';
+        b.setAttribute('aria-label', 'Afficher le mot de passe');
+        b.setAttribute('aria-pressed', 'false');
+        b.textContent = '\u{1F441}';
+        b.addEventListener('click', () => {
+          const reveal = inp.type === 'password';
+          inp.type = reveal ? 'text' : 'password';
+          b.setAttribute('aria-pressed', String(reveal));
+          b.setAttribute('aria-label', reveal ? 'Masquer le mot de passe' : 'Afficher le mot de passe');
+        });
+        wrap.appendChild(b);
+      }
+      document.querySelectorAll('input[type="password"]').forEach(ajouterOeil);
+    </script>
   </body>
 </html>
