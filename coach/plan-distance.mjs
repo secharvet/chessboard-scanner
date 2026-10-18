@@ -52,7 +52,8 @@ function couts(piece, at) {
   const prev = new Map();
   const file = [[piece.square, 0]];
   // Un pion à moi ne « s'écarte » que s'il peut avancer ou prendre ; sinon il bloque comme une pièce adverse
-  // (le pion b7 derrière sa propre dame b6 ne libère pas la diagonale c8-a6).
+  // (le pion b7 derrière sa propre dame b6 ne libère pas la diagonale c8-a6). Choix conservateur : bloqué par
+  // une pièce adverse c'est un vrai mur, bloqué par ma propre pièce mobile ce serait en théorie une cascade +2.
   const mur = (p) => {
     if (!p || p.color !== piece.color || p.type !== 'p') return p && p.color !== piece.color;
     const dr = p.color === 'w' ? 1 : -1;
