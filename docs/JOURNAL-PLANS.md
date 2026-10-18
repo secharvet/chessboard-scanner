@@ -1493,26 +1493,31 @@ ne « s'écarte » que s'il peut bouger : le Fc8 de la Française d'avance passa
 bloqué par sa propre dame b6, et le plan « échanger le mauvais fou » n'avait **aucun coup progressant** ; corrigé (le pion
 immobile bloque comme une pièce adverse), …Fd7 et …Ca5 progressent, distance 4.
 
-**Ce que le tableau montre (33 plans, 10 positions, `reports/plans/filtre.md`).** La mécanique fait ce qu'on voulait : sur la
-Carlsbad, a3 et **Tab1** sont progressants pour b4-b5 à 0,06–0,13 du meilleur coup, et b4 immédiat progresse aussi mais à
-−0,93 (« progressant mais ça coûte ») ; e3-e4 coûte −3,15 (le Fg5 tombe après les échanges en e4), ce que la distance ne voit
+**Ce que le tableau montre (35 plans, 10 positions, `reports/plans/filtre.md`, passe finale en déterministe).** La mécanique
+fait ce qu'on voulait : sur la Carlsbad, **Tab1** et a3 sont progressants pour b4-b5 à 0,23–0,29 du meilleur coup (h3), et b4
+immédiat progresse aussi mais à −1,05 (« progressant mais ça coûte ») ; e3-e4 coûte −3,62 (le Fg5 tombe après les échanges en e4), ce que la distance ne voit
 pas et ne doit pas voir. Sur la Mar del Plata, b4 et Cd3 sortent tous deux comme coups préparatoires de c5 (ils comblent le
-déficit), à 0,02 du meilleur. Sur l'Espagnole, **Ff4 sert à la fois e4-e5 (il défend e5) et l'échange des fous** — la composition
-que l'Expert annonçait —, et f4 immédiat est bien « progressant mais cher » (−0,74, …Fd6 cloue). Le piège Cbd2 est classé
+déficit), à 0,06–0,07 du meilleur. Sur l'Espagnole, **Ff4 sert à la fois e4-e5 (il défend e5) et l'échange des fous** — la composition
+que l'Expert annonçait —, et f4 immédiat est bien « progressant mais cher » (−0,63, …Fd6 cloue). Le piège Cbd2 est classé
 progressant à −0,60 : la mécanique ne le cache pas. Un angle mort assumé : Tc1 dans la Mar del Plata prépare la colonne que
 c5 ouvrira (second ordre), invisible à la distance de rupture ; un plan `colonne c` listé à côté l'aurait attrapé en
 « sert un autre plan ».
 
-**La distribution des écarts est continue, sans creux** (4 / 7 / 7 / 4 / 4 par tranche de 0,10-0,25-0,50-1,00-∞, et 7 cas où
+**La distribution des écarts est continue, sans creux** (8 / 7 / 6 / 5 / 4 par tranche de 0,10-0,25-0,50-1,00-∞, et 5 cas où
 le meilleur coup progresse). Mais lue avec la colonne « sert un autre plan », elle se décompose : dix écarts positifs sont des
-coups qui servent un autre plan listé (ni forcés ni inutiles) ; les autres petits écarts (0,09 à 0,48) sont des **atomes
-d'intendance jamais listés comme plans** — h3 (restriction, quatre fois), le roque (trois), cxd4 (échange, trois), Fd3
-(développement) ; et tous les grands écarts (> 0,6) sont des poussées prématurées, le coup progressant lui-même mauvais
-(e4, d5, Ce5, Fe3, Ce4), pas une alternative forcée. **Aucun cas « forcé » dans le panel** : dix positions calmes, aucune
+coups qui servent un autre plan listé (ni forcés ni inutiles) ; parmi les autres petits écarts (0,09 à 0,48), deux coups
+récurrents étaient en fait **des plans absents de la liste** — cxd4 (avance, noirs) ouvre la colonne c, Fd3 (Tarrasch ouvert)
+est le transfert Fb5→d3 vers h7 — relevé par l'Expert et ajoutés au panel ; principe : un meilleur coup non progressant
+récurrent sans étiquette est d'abord un plan manquant, ensuite seulement de l'intendance. L'intendance vraie se réduit à h3
+(quatre fois) et au roque (trois) ; décision de l'Expert pour la recherche : roque neutre par règle, h3 compté et absorbé par
+k ≈ 2 — « le moteur préfère l'intendance pendant deux coups » est précisément le signal « jamais urgent ici ». Et tous les
+grands écarts (> 0,6) ont le même sens : **le meilleur coup progressant du plan est lui-même mauvais ici** — plan prématuré ou
+réfuté dans cette position —, qu'il soit une poussée (e4, d5) ou un coup de pièce (Cbd2, Ce4, Fe3, Ce5) ; jamais une
+alternative forcée. **Aucun cas « forcé » dans le panel** : dix positions calmes, aucune
 menace sur l'échiquier, la clause « parade » n'a rien eu à trancher. Le scalaire x ne se calibre donc pas ici ; il faut un
-second panel avec une menace pendante. Autre constat : deux passes à prof. 18 et 3 fils donnent des notes à ±0,10 et des
-ordres qui tournent près de zéro (meilleur coup Tc1 puis a4 sur la Mar del Plata) — la suite se fera en
-`COACH_DETERMINISTIC=1` ou à prof. ≥ 22.
+second panel avec une menace pendante. Autre constat : d'une passe à l'autre (3 fils, puis déterministe à un fil) les notes bougent
+de ±0,10 et le meilleur coup tourne quand la tête est plate (Tc1, a4, g4 sur la Mar del Plata, tous à 0,06 près) — la passe
+finale est en `COACH_DETERMINISTIC=1`, et la suite ira à prof. ≥ 22 pour les arbitrages serrés.
 
 **Suite, si go** : un panel avec menaces pour calibrer x ; le test de stabilité 18/24 et deux moteurs ; puis la recherche en
 faisceau avec le compteur (coup forcé neutre, coupure après k coups ni progressants ni forcés) et les quatre sorties : c'est

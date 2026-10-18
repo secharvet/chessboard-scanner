@@ -44,11 +44,12 @@ export const POSITIONS = [
     ] },
   // ── Française (schémas du livre coach/openings/francaise.mjs) ──
   { id: 'fr-avance-noirs', nom: 'Française d\'avance après 6.Fe2, Noirs', coups: 'e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 Be2',
-    attendu: 'livre : le cavalier roi vers f5 contre d4 ; échanger le mauvais fou par …Fd7-b5 ; …f6 quand d4 tient',
+    attendu: 'livre : le cavalier roi vers f5 contre d4 ; échanger le mauvais fou par …Fd7-b5 ; …f6 quand d4 tient ; la colonne c (…cxd4 l\'ouvre, puis …Tc8) — ajoutée après la première passe, où cxd4 ressortait sans étiquette',
     plans: [
       { famille: 'transfert', de: 'g8', vers: 'f5' },
       { famille: 'echange', mienne: 'c8', cible: 'e2' },
       { famille: 'rupture', pion: 'f', cible: 'f6' },
+      { famille: 'colonne', colonne: 'c' },
     ] },
   { id: 'fr-avance-blancs', nom: 'Française d\'avance après 5…Db6, Blancs', coups: 'e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6',
     attendu: 'a3 puis b4, le levier sur c5 ; Fe2 (Fd3, le gambit Milner-Barry, fait débat : écarté) ; Fe3 pour d4. PIÈGE voulu : Cb1-d2-b3 — 6.Cbd2 vaut −0,53 contre +0,32 (…cxd4 ! coupe la défense Dd1-d4), le tableau doit le classer progressant mais cher',
@@ -71,6 +72,7 @@ export const POSITIONS = [
       { famille: 'transfert', de: 'b3', vers: 'd4' },
       { famille: 'echange', mienne: 'c1', cible: 'e7' },
       { famille: 'echange', mienne: 'b5', cible: 'c6' },
+      { famille: 'transfert', de: 'b5', vers: 'd3' },
     ] },
   { id: 'fr-echange', nom: 'Française d\'échange symétrique après 6…O-O, Blancs', coups: 'e4 e6 d4 d5 exd5 exd5 Nf3 Bd6 Bd3 Nf6 O-O O-O',
     attendu: 'livre : casser la symétrie par c4 ; les tours sur la colonne e ; Fg5 cloue',
