@@ -110,7 +110,7 @@ async function faisceau(pos, fen, side, plan, autres, libre) {
     const reps = await reponsesOuvertes(apres.fen());
     if (!reps.length) {
       const etat = { fen: apres.fen(), plan: planApres, autres: autresApres, compteur, ply: e.ply + 1, cp: cand.cp, d: d1, jumelles: e.jumelles, ligne: [...e.ligne, { san: cand.m.san, classe, sert, cout, rep: null, cp: cand.cp, d: d1 }] };
-      if (d1 === 0) { etat.tempo = e.ply + 1; realises.push(etat); } else coupes.push({ ...etat, raison: 'partie finie' });
+      if (d1 === 0) { etat.tempo = e.ply + 1; etat.realise = true; suivants.push(etat); } else coupes.push({ ...etat, raison: 'partie finie' });
       return;
     }
     const split = reps.length > 1 ? ++splits : null;
@@ -121,7 +121,7 @@ async function faisceau(pos, fen, side, plan, autres, libre) {
       const etat = { fen: j.fen, plan: realise ? verrouiller(planSuite, j.fen, side) : planSuite, autres: autresApres.map((a) => suivre(a, j.m)), compteur, ply: e.ply + 2, cp: -rep.cp, d: dSuite,
         jumelles: split ? [...e.jumelles, { id: split, cote: ri }] : e.jumelles,
         ligne: [...e.ligne, { san: cand.m.san, classe, sert, cout, rep: j.m.san, repAlt: ri > 0, cp: -rep.cp, d: dSuite }] };
-      if (realise) { etat.tempo = !tenure && d1 === 0 ? e.ply + 1 : e.ply + 2; realises.push(etat); continue; }
+      if (realise) { etat.tempo = !tenure && d1 === 0 ? e.ply + 1 : e.ply + 2; etat.realise = true; suivants.push(etat); continue; } // soumis au même tri de largeur que les branches vivantes
       if (!estLevier(j.fen, side, planSuite)) { coupes.push({ ...etat, raison: 'cible disparue' }); continue; }
       suivants.push(etat);
     }
@@ -133,12 +133,12 @@ async function faisceau(pos, fen, side, plan, autres, libre) {
       if (!cands.length) { coupes.push({ ...e, raison: 'partie finie' }); continue; }
       const c = new Chess(e.fen);
       const situationForcee = c.inCheck() || cands[0].m.captured || enPrise(e.fen, side) || (cands[1] && cands[0].cp - cands[1].cp > FORCE) || cands.length === 1;
-      let admis = 0, progressantsRefuses = 0;
+      let admis = 0, progressantsRefuses = 0, coutRefuseMin = Infinity;
       for (const cand of cands) {
         const apres = new Chess(e.fen); apres.move(cand.m.san);
         const progressant = distance(apres.fen(), side, suivre(e.plan, cand.m)).d < e.d;
         let classe, compteur = e.compteur;
-        if (progressant) { if (cands[0].cp - cand.cp > CONCESSION) { progressantsRefuses++; continue; } classe = 'progressant'; compteur = 0; }
+        if (progressant) { if (cands[0].cp - cand.cp > CONCESSION) { progressantsRefuses++; coutRefuseMin = Math.min(coutRefuseMin, cands[0].cp - cand.cp); continue; } classe = 'progressant'; compteur = 0; }
         else if (situationForcee && cand === cands[0]) classe = 'forcé';
         else if (estRoque(cand.m)) classe = 'roque';
         else if (situationForcee) continue;
@@ -158,13 +158,17 @@ async function faisceau(pos, fen, side, plan, autres, libre) {
       }
       const cout = dernier ? tousCoups[0].cp - dernier.cp : null;
       if (dernier && cout <= CONCESSION) { await etendre(e, dernier, 'dernière chance', 0, tousCoups[0].cp, suivants); continue; }
-      coupes.push({ ...e, raison: dernier || progressantsRefuses ? 'concession' : 'compteur', cout: cout ?? (progressantsRefuses ? CONCESSION : null) });
+      const coutReel = [cout, Number.isFinite(coutRefuseMin) ? coutRefuseMin : null].filter((x) => x != null);
+      coupes.push({ ...e, raison: dernier || progressantsRefuses ? 'concession' : 'compteur', cout: coutReel.length ? Math.min(...coutReel) : null });
     }
     const vues = new Set();
-    etats = suivants.sort((a, b) => b.cp - a.cp).filter((x) => !vues.has(x.fen) && vues.add(x.fen)).slice(0, LARGEUR);
+    const gardes = suivants.sort((a, b) => b.cp - a.cp).filter((x) => !vues.has(x.fen) && vues.add(x.fen)).slice(0, LARGEUR);
+    for (const x of gardes) if (x.realise) realises.push(x);
+    etats = gardes.filter((x) => !x.realise);
   }
   const vivants = etats;
-  const prixDe = (x) => (libre.evals[Math.min(x.ply, libre.evals.length - 1)] ?? 0) - x.cp;
+  const borne = (c) => Math.max(-1000, Math.min(1000, c)); // les scores de mat ne font pas des prix en milliers
+  const prixDe = (x) => borne(libre.evals[Math.min(x.ply, libre.evals.length - 1)] ?? 0) - borne(x.cp);
   let phrase, retenu = null, prix = null, tempo = null, merci = false;
   if (realises.length) {
     retenu = realises.reduce((a, b) => (prixDe(b) < prixDe(a) || (prixDe(b) === prixDe(a) && b.tempo < a.tempo) ? b : a));
@@ -225,7 +229,7 @@ mkdirSync(dirname(OUT), { recursive: true });
 const FUSION = opt('--fusion', null);
 if (FUSION) {
   const { readdirSync, readFileSync } = await import('node:fs');
-  const resultats = readdirSync(FUSION).filter((f) => /^faisceau-.*\.json$/.test(f)).flatMap((f) => JSON.parse(readFileSync(`${FUSION}/${f}`, 'utf8')));
+  const resultats = readdirSync(FUSION).filter((f) => /^faisceau-.*\.json$/.test(f)).flatMap((f) => { try { return JSON.parse(readFileSync(`${FUSION}/${f}`, 'utf8')); } catch (e) { console.error(`JSON illisible, ignoré : ${f} (${e.message})`); return []; } });
   writeFileSync(OUT, rendre(resultats, POSITIONS)); writeFileSync(OUT.replace(/\.md$/, '.json'), JSON.stringify(resultats, null, 1));
   console.error(`fusion : ${resultats.length} plans → ${OUT}`); process.exit(0);
 }

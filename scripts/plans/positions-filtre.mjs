@@ -5,6 +5,9 @@
  * littérature donne pour « le » plan de la position (hypothèse désignée avant la passe du faisceau, soumise à l'Expert).
  */
 
+import { Chess } from 'chess.js';
+import { libelle } from '../../coach/plan-distance.mjs';
+
 export const POSITIONS = [
   { id: 'carlsbad', canoniques: [0], nom: 'Carlsbad (Gambit dame refusé, échange), Blancs', coups: 'd4 d5 c4 e6 Nc3 Nf6 cxd5 exd5 Bg5 c6 e3 Be7 Bd3 Nbd7 Qc2 O-O Nf3 Re8 O-O Nf8',
     attendu: 'attaque de minorité b4-b5 ; l\'alternative e3-e4 est connue ; Ce5 prépare l\'attaque à l\'aile roi',
@@ -83,3 +86,11 @@ export const POSITIONS = [
       { famille: 'transfert', de: 'c1', vers: 'g5' },
     ] },
 ];
+
+// Garde pour tous les consommateurs (filtre, faisceau, accords) : deux plans de même libellé dans une position écraseraient
+// leurs lignes dans toutes les clés de rapprochement.
+for (const p of POSITIONS) {
+  const c = new Chess(); if (p.fen) c.load(p.fen); else for (const s of p.coups.split(/\s+/)) c.move(s);
+  const libs = p.plans.map((pl) => libelle(pl, c.fen()));
+  if (new Set(libs).size !== libs.length) throw new Error(`${p.id} : deux plans ont le même libellé (${libs.join(', ')})`);
+}
