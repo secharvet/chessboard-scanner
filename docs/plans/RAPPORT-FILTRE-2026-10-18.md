@@ -98,7 +98,7 @@ est une instance des familles ci-dessus. Relecture de l'Expert : plans écartés
 | carlsbad | Gambit dame refusé, échange, après 10…Cf8 | B | b→b5, e→e4, Cf3→e5 | — |
 | iqp-panov | Caro-Kann Panov, pion isolé d4, après 12…Fb7 | B | d→d5, Cf3→e5, Dd1→d3 | — |
 | herisson | Anglaise, hérisson, après 15.Tac1 | N | …b5, …d5, colonne c | …Cc5 : « thématique mais conditionnel, dépend du dispositif blanc » |
-| kid-mar-del-plata | Est-indienne, après 12…g5 | B | c→c5, Ce1→d3, colonne c, Cc3→b5 | b4 : « coup préparatoire de c5, pas un plan » ; a4-a5 : « a5 n'attaque aucun pion, c'est de la restriction » |
+| kid-mar-del-plata | Est-indienne, après 12…g5 | B | c→c5, Ce1→d3, colonne c, Cc3→b5 | b4 : « coup préparatoire de c5, pas un plan » (relecture relayée par l'auteur) ; a4-a5 : a5 n'attaque aucun pion — sorti par la règle `estLevier`, endossée par l'Expert (« c'est de la restriction, …b6 ») |
 | espagnole-echange | Espagnole d'échange sans dames, après 10…Fe6 | B | poussée f4 ET e5, e→e5, Cb1→d5, Fc1×Ff8 | — (Fc1×Ff8 ajouté sur son chiffrage : « le meilleur coup est Ff4, l'échange débloque la rupture ») |
 | fr-avance-noirs | Française d'avance, après 6.Fe2 | N | Cg8→f5, Fc8×Fe2, f→f6, colonne c | — (colonne c ajoutée après la première passe, § 4.2) |
 | fr-avance-blancs | Française d'avance, après 5…Db6 | B | b→b4, Ff1→e2, Fc1→e3, Cb1→b3 (**piège voulu**) | Fd3 : « gambit Milner-Barry, fait débat » ; b5 : « pas canonique dans cette structure » |
@@ -107,7 +107,8 @@ est une instance des familles ci-dessus. Relecture de l'Expert : plans écartés
 | fr-echange | Française d'échange, après 6…O-O | B | c→c4, colonne e, Fc1→g5 | — |
 
 Les FEN et les coups sont dans le tableau ; les deux FEN contestées (Espagnole, Tarrasch ouvert) ont été rejouées et
-confirmées par l'Expert.
+confirmées par l'Expert. Deux voix ont relu : la session Expert échecs par le canal direct, et une relecture relayée par
+l'auteur dans le chat ; quand elles ont divergé (…Cc5 au hérisson), la seconde a tranché le retrait, la première l'a confirmé.
 
 ## 4. Résultats
 
@@ -211,6 +212,39 @@ plan va bien, le moteur a juste un autre coup utile » — et pour un apprenant,
 
 **Cible disparue (1)** : b4 après Fe2 cxd4 cxd4 : plus de pion c5 à attaquer, la rupture n'a plus d'objet. Sortie propre.
 
+### 4.5 Relecture de l'Expert après le rapport : six retours, et le bilan relu sans relancer le moteur
+
+L'Expert a lu le rapport et le tableau du test en entier. Ses six retours, du plus important au moindre, avec ce que
+chacun change :
+
+1. **La prophylaxie adverse (nature 2) est une information, pas un défaut** : « Fd3 …h6 puis Fg5 hxg5 » dit que Fg5 se
+   joue *avant* …h6 — le plan est **périssable**, la fenêtre se ferme. Sortie proposée : quand Δ même pas < −plancher parce
+   que la réponse adverse attaque ou contrôle la case du pas (lisible sur la carte d'attaques avant/après), non pas
+   « M nuit » mais « le plan n'attend pas ». À terme, un drapeau *urgent* sur « c'est le plan ». *Demande du code.*
+2. **Trancher le statut sur le meilleur pas** (nature 4), garder Δ même pas comme colonne « le chemin a changé » : le test
+   mesure la vie du *plan*. *Relu ci-dessous sans relancer.*
+3. **L'échange est réalisé quand les deux pièces suivies disparaissent l'une contre l'autre** (prise directe ou reprise,
+   quel que soit l'initiateur) ; cible disparue autrement = plan sans objet. Couvre Txe7 et le cas symétrique. *Code.*
+4. **Viabilité : 0,3**, le seuil déjà en vigueur pour les livres — « préparatoire » = Δ > plancher *et* retard après ≤ 0,3 ;
+   sinon « moins mauvais mais toujours pas réalisable ». Un seul vocabulaire de seuils dans le projet. *Relu ci-dessous.*
+5. **Deux réponses adverses** (MultiPV 2, garder le pire Δ) pour tout verdict à moins de deux planchers du bord : un
+   préparatoire doit l'être contre toute bonne défense. Point calme par `threats.mjs`, borné à 2-3 résolutions. *Code et moteur.*
+6. **Attribution** (§ 3) : les exclusions b4 et a4-a5 de la Mar del Plata sortent de la relecture relayée et de la règle
+   `estLevier`, endossées par l'Expert, qui ne les avait pas formulées. *Corrigé dans le tableau du § 3.*
+
+**Bilan relu selon les points 2 et 4, à partir des mêmes mesures** (statut sur le meilleur pas, plancher 15 cp,
+viabilité 30 cp) : **4 préparatoires, 2 « moins mauvais mais pas réalisable », 18 préférences, 10 nuit au plan, 1 cible
+disparue.** Ce que la relecture change, et ce qu'elle révèle :
+- Deux « nuit » passent en préférence (colonne c de l'avance noirs par …Fd7, …e5 du Tarrasch fermé par …Cg4) : le plan
+  vit par un autre pas, M ne lui a pas nui.
+- **Le cas d'école est rétrogradé** : Dd3 → Ce5 (Panov) a Δ +1,29 mais un retard après de 0,84, donc « moins mauvais mais
+  toujours pas réalisable » au seuil de 0,3 ; de même Dd3 → d5 (0,31, à un centipion du seuil). Lecture honnête : *une*
+  préparation ne suffit pas, Ce5 demande Dd3 *et* autre chose (Tad1, Fb3…), et le test à deux demi-coups ne mesure qu'un
+  pas de préparation. C'est précisément ce que la recherche en faisceau mesurerait, et ce que ce test ne peut pas faire.
+- …d5 au hérisson passe « préparatoire » par le meilleur pas (…Dc5 à 0,09) alors que d5 lui-même reste à 2,78 : ici
+  les points 2 et 4 se contredisent — le meilleur pas est viable, le pas de la racine ne l'est pas. Les deux colonnes
+  restent nécessaires, et le vocabulaire des sorties devra distinguer « le plan vit » de « ce pas-là se joue ».
+
 ## 5. Ce qui est démontré, ce qui ne l'est pas, les limites
 
 **Démontré sur dix positions.**
@@ -248,7 +282,7 @@ plan va bien, le moteur a juste un autre coup utile » — et pour un apprenant,
 
 | étape | ce qu'elle tranche | coût |
 |---|---|---|
-| Point calme par menaces + prise par la pièce suivie + viabilité exigée | les natures 2 à 4 du « nuit au plan » ; un test à deux demi-coups propre | une demi-journée de code, 30 min de moteur |
+| Test à deux demi-coups propre : point calme par menaces (borné), échange réalisé l'une contre l'autre, statut sur le meilleur pas + viabilité 0,3, « le plan n'attend pas », deux réponses adverses pour les verdicts serrés | les natures 2 à 4 du « nuit au plan » ; les six retours de l'Expert (§ 4.5) | une demi-journée de code, une heure de moteur |
 | Panel avec menaces (fautes vérifiées des livres, offre de l'Expert) | la clause « forcé » et x, qui n'ont rien eu à trancher ici | 10 positions, une heure de moteur |
 | Stabilité 18/24 et deux moteurs, déterministe | le plancher « nettement » ; si les ordres tournent, tout le reste est du bruit | une nuit |
 | Recherche en faisceau (compteur : forcé et roque neutres, k ≈ 2 ; quatre sorties) | le prix et le tempo d'un plan sur quinze coups — la question d'origine | plusieurs jours de code, une nuit par panel ; Deneb utile |
