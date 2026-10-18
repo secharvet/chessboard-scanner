@@ -6,7 +6,9 @@
  *
  *   rupture   { pion: 'b', cible: 'b5' }    poussées restantes, chacune pesée par son déficit de soutien (attaquants
  *                                           adverses − mes défenseurs, le pion avançant transparent : la tour derrière
- *                                           lui le soutient par rayon X, une pièce adverse derrière l'attaque de même)
+ *                                           lui le soutient par rayon X, une pièce adverse derrière l'attaque de même) ;
+ *                                           une rupture vise un pion adverse (`estLevier`)
+ *   poussee   { pion: 'f', cible: 'f4' }    même arithmétique sans cible : la poussée de soutien ou d'espace (f4 avant e5)
  *   transfert { de: 'f3', vers: 'e5' }      plus court chemin de la pièce ; une pièce à moi sur le chemin coûte un coup de plus
  *   echange   { mienne: 'c8', cible: 'e2' } chemin jusqu'à une case d'où ma pièce attaque la cible, plus la prise
  *   colonne   { colonne: 'c' }              mes pions sur la colonne (un coup chacun), plus le chemin de ma tour la plus proche
@@ -130,7 +132,7 @@ export function distance(fen, side, plan) {
   const at = map.at;
   const mienne = (s) => { const p = at[s]; return p && p.color === side ? p : null; };
 
-  if (plan.famille === 'rupture') {
+  if (plan.famille === 'rupture' || plan.famille === 'poussee') {
     const dir = side === 'w' ? 1 : -1;
     const f = fileOf(plan.cible), rc = rankOf(plan.cible);
     if (map.pieces.some((p) => p.type === 'p' && p.color === side && p.fileIdx === f && p.rank === rc)) return { d: 0, detail: `pion en ${plan.cible}`, etapes: [] };
@@ -175,7 +177,7 @@ export function distance(fen, side, plan) {
     if (c == null) return { d: Infinity, detail: `${plan.vers} hors de portée` };
     const ch = chemin(prev, plan.vers);
     const ecartes = ch.slice(1).filter((s) => at[s]).map((s) => `${LETTRE[at[s].type] || 'pion'}${s}`);
-    return { d: c, detail: `${LETTRE[p.type]}${ch.join('-')}`, etapes: [`${ch.length - 1} coup${ch.length > 2 ? 's' : ''} de ${LETTRE[p.type] || 'pion'} (${ch.join('-')})`, ...(ecartes.length ? [`${ecartes.length} à écarter (${ecartes.join(', ')})`] : [])] };
+    return { d: c, detail: `${LETTRE[p.type]}${ch.join('-')}`, etapes: [`${ch.length - 1} coup${ch.length > 2 ? 's' : ''} de ${LETTRE[p.type] || 'pion'} (${ch.join('-')})`, ...(ecartes.length ? [`${ecartes.length} écart${ecartes.length > 1 ? 's' : ''} (${ecartes.join(', ')})`] : [])] };
   }
 
   if (plan.famille === 'echange') {
@@ -193,8 +195,9 @@ export function distance(fen, side, plan) {
     if (best === Infinity) return { d: Infinity, detail: `aucune case d'où attaquer ${plan.cible}` };
     const ch = chemin(prev, via);
     const ecartes = ch.slice(1).filter((s) => at[s]).map((s) => `${LETTRE[at[s].type] || 'pion'}${s}`);
+    const n = ch.length - 1;
     return { d: best + 1, detail: best === 0 ? `${LETTRE[p.type]}${p.square} attaque déjà ${plan.cible}` : `${LETTRE[p.type]}${ch.join('-')} puis ×${plan.cible}`,
-      etapes: [...(best ? [`${best} coup${best > 1 ? 's' : ''} jusqu'à ${via} (${ch.join('-')})`] : []), ...(ecartes.length ? [`${ecartes.length} à écarter (${ecartes.join(', ')})`] : []), `la prise ×${plan.cible}`] };
+      etapes: [...(n ? [`${n} coup${n > 1 ? 's' : ''} jusqu'à ${via} (${ch.join('-')})`] : []), ...(ecartes.length ? [`${ecartes.length} écart${ecartes.length > 1 ? 's' : ''} (${ecartes.join(', ')})`] : []), `la prise ×${plan.cible}`] };
   }
 
   if (plan.famille === 'colonne') {
@@ -210,10 +213,21 @@ export function distance(fen, side, plan) {
     }
     if (best === Infinity) return { d: Infinity, detail: `aucune tour ne peut rejoindre la colonne ${plan.colonne}` };
     const ecartes = ch.slice(1).filter((s) => at[s]).map((s) => `${LETTRE[at[s].type] || 'pion'}${s}`);
-    const etapes = [...(best ? [`${best} coup${best > 1 ? 's' : ''} de tour (T${ch.join('-')})`] : [`T${quelle.square} déjà sur la colonne`]), ...(ecartes.length ? [`${ecartes.length} à écarter (${ecartes.join(', ')})`] : []), ...pions.map((p) => `pion ${p.square} à retirer`)];
+    const n = ch.length - 1;
+    const etapes = [...(n ? [`${n} coup${n > 1 ? 's' : ''} de tour (T${ch.join('-')})`] : [`T${quelle.square} déjà sur la colonne`]), ...(ecartes.length ? [`${ecartes.length} écart${ecartes.length > 1 ? 's' : ''} (${ecartes.join(', ')})`] : []), ...pions.map((p) => `pion ${p.square} à retirer`)];
     return { d: best + pions.length, detail: `T${ch.join('-')}${pions.length ? ` ; pion(s) ${pions.map((p) => p.square).join(', ')} à retirer` : ''}`, etapes };
   }
   throw new Error(`famille inconnue : ${plan.famille}`);
+}
+
+/** Une rupture doit viser un pion : depuis la case cible, le pion attaquera un pion adverse (sinon c'est de l'espace ou
+ *  de la restriction, pas une rupture). À vérifier à la racine seulement : le pion visé peut disparaître en route. */
+export function estLevier(fen, side, plan) {
+  if (plan.famille === 'et') return plan.plans.every((p) => estLevier(fen, side, p));
+  if (plan.famille !== 'rupture') return true;
+  const at = buildAttackMap(fen).at;
+  const dr = side === 'w' ? 1 : -1, f = fileOf(plan.cible), r = rankOf(plan.cible);
+  return [-1, 1].some((df) => inBoard(f + df, r + dr) && at[sq(f + df, r + dr)]?.type === 'p' && at[sq(f + df, r + dr)].color !== side);
 }
 
 /** Le même plan après un coup (de l'un ou l'autre camp) : les pièces suivies changent de case avec le coup —
@@ -240,6 +254,7 @@ export function libelle(plan, fen) {
   const L = (s) => `${LETTRE[at[s]?.type ?? ''] ?? ''}${s}`;
   if (plan.famille === 'et') return plan.plans.map((p) => libelle(p, fen)).join(' ET ');
   if (plan.famille === 'rupture') return `rupture ${plan.pion}→${plan.cible}`;
+  if (plan.famille === 'poussee') return `poussée ${plan.pion}→${plan.cible}`;
   if (plan.famille === 'transfert') return `transfert ${L(plan.de)}→${plan.vers}`;
   if (plan.famille === 'echange') return `échange ${L(plan.mienne)}×${L(plan.cible)}`;
   if (plan.famille === 'colonne') return `colonne ${plan.colonne}`;

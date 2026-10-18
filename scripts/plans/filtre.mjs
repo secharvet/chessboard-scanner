@@ -11,7 +11,7 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 import { dirname } from 'node:path';
 import { Chess } from 'chess.js';
 import { UciEngine } from '../../coach/uci-engine.mjs';
-import { distance, suivre, libelle } from '../../coach/plan-distance.mjs';
+import { distance, suivre, libelle, estLevier } from '../../coach/plan-distance.mjs';
 import { enToFr } from '../../coach/notation.mjs';
 import { POSITIONS } from './positions-filtre.mjs';
 
@@ -37,6 +37,7 @@ for (const pos of POSITIONS) {
   const c = new Chess();
   if (pos.fen) c.load(pos.fen); else for (const san of pos.coups.split(/\s+/)) c.move(san);
   const fen = c.fen(); const side = c.turn();
+  for (const plan of pos.plans) if (!estLevier(fen, side, plan)) throw new Error(`${pos.id} : ${libelle(plan, fen)} n'est pas une rupture (aucun pion adverse attaqué depuis la cible)`);
   const legaux = c.moves({ verbose: true });
   console.error(`${pos.id} : ${legaux.length} coups légaux, profondeur ${DEPTH}…`);
   const t0 = Date.now();

@@ -1522,3 +1522,15 @@ finale est en `COACH_DETERMINISTIC=1`, et la suite ira à prof. ≥ 22 pour les 
 **Suite, si go** : un panel avec menaces pour calibrer x ; le test de stabilité 18/24 et deux moteurs ; puis la recherche en
 faisceau avec le compteur (coup forcé neutre, coupure après k coups ni progressants ni forcés) et les quatre sorties : c'est
 le plan / viable mais ça coûte / pas réalisable sans concession / jamais urgent ici.
+
+**18 octobre, suite (go de l'auteur sur le test à deux demi-coups).** Trois accrocs du tableau corrigés sur relecture de
+l'Expert : une rupture doit viser un pion (`estLevier`, vérifié à la racine ; famille `poussee` pour f3-f4 avant e5 ; a4-a5
+retiré de la Mar del Plata, remplacé par `colonne c` qui attrape Tc1), étiquettes « n coup(s) + m écart(s) », déficit sans
+discernement laissé tel quel (réglé par construction dans le faisceau). Test à deux demi-coups (`scripts/plans/preparatoire.mjs`,
+déterministe, prof. 18, plancher provisoire 15 cp) : **5 préparatoires, 17 préférences, 12 « nuit au plan », 1 cible
+disparue**. Dd3 avant Ce5 (Panov) : retard 2,13 → 0,84 ; le roque avant …Ce4 (Tarrasch fermée) : 0,77 → 0,00, mesuré au
+point calme. Première passe apprise : deux demi-coups ne sont pas un point calme (la réponse adverse créait des menaces
+imputées à M) → prolongation quand le meilleur coup est une prise ou une parade d'échec, Δ sur le même pas et sur le
+meilleur pas, « cible disparue » pour une rupture sans pion visé. Le « nuit au plan » reste hétérogène (rétrogradation
+réelle, prophylaxie adverse, parade non détectée, changement d'identité du pas). **Rapport complet, argumenté, avec les
+limites : `docs/plans/RAPPORT-FILTRE-2026-10-18.md`.**

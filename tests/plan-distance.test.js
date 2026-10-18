@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { Chess } from 'chess.js';
-import { distance, suivre, verrouiller } from '../coach/plan-distance.mjs';
+import { distance, suivre, verrouiller, estLevier } from '../coach/plan-distance.mjs';
 
 const apres = (coups) => { const c = new Chess(); for (const s of coups.split(/\s+/)) c.move(s); return c; };
 const CARLSBAD = 'd4 d5 c4 e6 Nc3 Nf6 cxd5 exd5 Bg5 c6 e3 Be7 Bd3 Nbd7 Qc2 O-O Nf3 Re8 O-O Nf8';
@@ -59,7 +59,7 @@ test('échange : chemin jusqu\'à une case d\'où ma pièce attaque la cible, pl
 test('et : la distance d\'une conjonction est la somme, et chaque étape est décomposée', () => {
   // Espagnole d'échange sans dames : f4 puis e5 ; f4 (1) + e5 (1 + déficit 1 : f6 attaque, rien ne défend) = 3
   const c = apres('e4 e5 Nf3 Nc6 Bb5 a6 Bxc6 dxc6 O-O f6 d4 exd4 Nxd4 c5 Nb3 Qxd1 Rxd1 Bg4 f3 Be6');
-  const plan = { famille: 'et', plans: [{ famille: 'rupture', pion: 'f', cible: 'f4' }, { famille: 'rupture', pion: 'e', cible: 'e5' }] };
+  const plan = { famille: 'et', plans: [{ famille: 'poussee', pion: 'f', cible: 'f4' }, { famille: 'rupture', pion: 'e', cible: 'e5' }] };
   const r = distance(c.fen(), 'w', plan);
   assert.equal(r.d, 3);
   assert.equal(r.etapes.length, 2);
@@ -85,4 +85,10 @@ test('colonne : mes pions sur la colonne plus le chemin de la tour la plus proch
   assert.equal(distance(c.fen(), 'w', { famille: 'colonne', colonne: 'c' }).d, 4);
   // tour déjà sur la colonne, sans pion : réalisé
   assert.equal(distance('4k3/8/8/8/8/8/8/2R1K3 w - - 0 1', 'w', { famille: 'colonne', colonne: 'c' }).d, 0);
+});
+
+test('rupture : une rupture vise un pion adverse, sinon ce n\'est pas une rupture', () => {
+  const c = apres('d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 e5 O-O Nc6 d5 Ne7 Ne1 Nd7 Be3 f5 f3 f4 Bf2 g5');
+  assert.equal(estLevier(c.fen(), 'w', { famille: 'rupture', pion: 'c', cible: 'c5' }), true);
+  assert.equal(estLevier(c.fen(), 'w', { famille: 'rupture', pion: 'a', cible: 'a5' }), false);
 });
