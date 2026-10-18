@@ -419,3 +419,34 @@ Après correction des scripts (un fil, `COACH_DETERMINISTIC=1` respecté ; véri
    écarts n'ont pas de signe.
 6. Le déterminisme entre machines n'a pas été mesuré proprement (Orion a tourné à 3 fils) ; à refaire à un fil quand
    l'auteur le permettra, résultat attendu : identique.
+
+## 9. Lecture de la nuit (relecture relayée par l'auteur) — ce qu'elle a tranché de plus que prévu
+
+**Le plan est un objet plus stable que le coup.** Entre les deux moteurs, à profondeur égale et un fil, le *meilleur coup
+de la position* change dans 15 cas sur 35 (et 11 sur 35 par le seul bruit des fils) ; le *meilleur coup progressant* du
+plan change dans 2 cas sur 35 ; la *distance* ne bouge jamais, 35 sur 35, sur tous les axes. Deux réseaux qui ne sont pas
+d'accord sur ce qu'il faut jouer sont d'accord sur ce qui fait avancer b4-b5. La grammaire est ce qui ne tremble pas quand
+le moteur tremble — c'est l'argument des briques, mesuré.
+
+**Les sauts du test ne sont pas tous du bruit.** Les réponses qui font basculer un statut sont de deux natures, et la
+carte d'attaques les sépare mécaniquement : *Ff4 …Fa6* (le fou prend a6-f1, Dd3 pend la dame), *O-O Fg5* (le cavalier f6
+est cloué, …Ce4 n'existe plus), *Fd3 …h6* (Fg5 devient une gaffe) — la réponse **attaque ou contrôle la case du pas**, et le
+−8 dit « ce plan n'attend pas, la prochaine réponse le ferme » ; à l'inverse *…Cde2 / …De2* au hérisson ou *…g6 / …a5* à la
+Carlsbad sont des réponses équivalentes sur une tête plate — là, c'est de la variance. Cahier des charges de l'étape 2,
+dans cet ordre : (1) classer la réponse adverse par la carte d'attaques de la case du pas, avant/après ; (2) deux réponses,
+le pire Δ comme garde-fou ; si la réponse qui donne le pire touche la case du pas, verdict **« ferme la fenêtre »** (plan
+périssable, la sortie la plus utile du coach), sinon variance. Le minimum sur les réponses donne l'urgence, l'identité de la
+réponse donne l'explication.
+
+**Ce que le plancher implique.** À 25 cp de plancher et 50 de bande, sur un panel calme où presque tout le signal est à
+moins de 0,5 du meilleur coup, un test à un pas travaille à deux fois le bruit au mieux et dira souvent « limite ». Ce n'est
+pas un défaut du test, c'est la limite de toute mesure à un pas — et le plus solide argument pour le faisceau : sur quinze
+coups, le prix d'un plan s'accumule linéairement, le bruit comme une racine carrée ; un plan qui coûte 0,1 par coup pendant
+dix coups vaut 1,0 en bout de ligne, quatre planchers, là où aucun de ses pas ne sortait de la bande grise.
+
+**Second moteur, vocabulaire.** Entre 0,3 et 1,0 d'écart entre réseaux sur une même ligne, l'accord des deux est la
+condition d'un verdict (un tiers des petits écarts sans signe, c'est le chiffre qui la justifie). Au-delà d'un pion, ce n'est
+pas du bruit à absorber : c'est un désaccord tactique, à trancher une fois à profondeur 30, et le coach peut le dire tel
+quel — « contesté entre moteurs » est une phrase qui a un sens pour un élève.
+
+**Règle écrite en tête du dépôt** : un fil pour mesurer, les fils pour jouer (CLAUDE.md).
