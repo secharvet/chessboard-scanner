@@ -228,9 +228,27 @@ passe à 18 seule** — c'est exactement pour cela que la clause avait été éc
 
 Reproductible : l'outil de l'Expert, profondeur 30, un fil ; fichier de tests sur sa branche.
 
+## 8 bis. La question de l'auteur : le catalogue et la bascule de structure (19 octobre, 0 h 30)
+
+« Si l'adversaire transforme la structure en cours de ligne — on préparait une Carlsbad, dix coups plus tard c'est un pion
+isolé —, la mesure dit-elle "plan échoué" ? » Vérifié contre le code : **à moitié.** Ce qui existe : si le pion visé par un
+levier disparaît, le plan sort « sans objet » (b4 après cxd4 cxd4) ; chaque coup de la ligne porte le plan frère qu'il
+sert, on voit donc le moteur glisser d'un plan à l'autre. Ce qui n'existe pas : **la liste des plans est figée à la racine**
+(trois ou quatre par position, choisis à la main) ; le détecteur de structures (`positional/structures.js`, l'étage 1
+d'octobre) **n'est pas branché sur le faisceau** ; et le plan de l'adversaire n'est pas nommé — la famille « restriction »,
+l'opposé de notre distance, n'est pas écrite.
+
+Il faudrait donc, avant toute épreuve du jeu sur une partie entière (qui traverse deux ou trois structures) : (1) relire la
+structure le long de la ligne ; (2) une règle de bascule — quand la structure change, le prix mesuré jusque-là est le prix du
+plan *jusqu'à la transformation*, le faisceau se divise (continuer l'ancien plan / adopter le plan canonique de la nouvelle
+structure) et le coach compare les deux prix (« ici il fallait renoncer à b5 et passer au blocus ») ; (3) nommer la
+transformation comme le plan adverse (« les Noirs ont transformé la structure par …c5, l'attaque de minorité est morte à ce
+coup-là »). Sur quinze coups depuis des positions choisies pour leur stabilité, on pouvait s'en passer ; **sur une partie,
+non.** C'est la condition d'existence de la prochaine étape, posée par l'auteur.
+
 ## 9. La suite, selon le verdict
 
-- **Le critère passe (§ 8).** La suite prévue est l'épreuve du jeu — le faisceau étendu à la partie entière (le coach choisit, le moteur exécute
+- **Le critère passe (§ 8).** Avant toute suite, **trois** retouches : le prix au point calme, l'horizon à vingt coups pour les plans de structure, et le **détecteur de bascule de structure** (§ 8 bis). Puis la suite prévue, l'épreuve du jeu — le faisceau étendu à la partie entière (le coach choisit, le moteur exécute
   sous contrainte, le moteur libre en face ; coût par partie de suivre la théorie), puis Maia (le même coach guidant un
   Maia-1500 contre lui-même). Avant d'en écrire une ligne : les sorties parlent exactement le vocabulaire stabilisé le 18
   octobre, plus prix et tempo.
