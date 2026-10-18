@@ -28,13 +28,14 @@ const IN = opt('--in', 'reports/plans/filtre.json');
 const DEPTH = Number(opt('--depth', 18));
 const PLANCHER = Number(opt('--plancher', 15));
 const OUT = opt('--out', 'reports/plans/preparatoire.md');
+const SEUL = opt('--seulement', null);
 
 const cp = (s) => (s.type === 'mate' ? (s.value > 0 ? 10000 - s.value : -10000 - s.value) : s.value);
 const fmt = (c) => (c / 100).toFixed(2).replace('.', ',').replace(/^(-?)/, (m) => (m === '-' ? '−' : '+'));
 const fr = enToFr;
 const uciOf = (m) => m.from + m.to + (m.promotion ?? '');
 
-const entrees = JSON.parse(readFileSync(IN, 'utf8'));
+const entrees = JSON.parse(readFileSync(IN, 'utf8')).filter((e) => !SEUL || e.position === SEUL);
 const engine = new UciEngine({ threads: 2, hashMb: 256 });
 const cache = new Map(); // `${pos}|${M}` -> mesure au point calme
 
