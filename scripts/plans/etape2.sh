@@ -13,6 +13,6 @@ export STOCKFISH_PATH=$MOTEUR COACH_DETERMINISTIC=1
 echo "$(date -u +%FT%TZ) début : $MOTEUR, profondeur $PROF, $PAR processus → $OUT"
 printf '%s\n' $IDS | xargs -P "$PAR" -I{} sh -c "nice -n 19 node scripts/plans/preparatoire.mjs --depth $PROF --in $JSON --seulement {} --out $OUT/preparatoire-{}.md > $OUT/preparatoire-{}.log 2>&1" || true
 node -e "const fs=require('fs');const a=[];for(const f of fs.readdirSync('$OUT').filter((x)=>/^preparatoire-.*\.json$/.test(x)))a.push(...JSON.parse(fs.readFileSync('$OUT/'+f,'utf8')));fs.writeFileSync('$OUT/preparatoire.json',JSON.stringify(a,null,1));console.log(a.length+' lignes')"
-ECHECS=$(grep -l -E "Error|TypeError|délai dépassé" "$OUT"/*.log 2>/dev/null | wc -l)
+ECHECS=$({ grep -l -E "Error|TypeError|délai dépassé" "$OUT"/*.log 2>/dev/null || true; } | wc -l)
 [ "$ECHECS" -gt 0 ] && grep -l -E "Error|TypeError|délai dépassé" "$OUT"/*.log | sed "s/^/ÉCHEC : /"
 echo "$(date -u +%FT%TZ) TERMINÉ $OUT ($ECHECS échec(s))" | tee "$OUT/TERMINE"
