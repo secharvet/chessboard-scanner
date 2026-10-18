@@ -1,24 +1,30 @@
 /**
- * Test à deux demi-coups (proposé par l'Expert échecs, 18 octobre 2026) : un coup non progressant M est-il PRÉPARATOIRE
- * pour le plan P, ou une simple PRÉFÉRENCE du moteur ? Après M et la meilleure réponse adverse, on mesure à nouveau le
- * retard du meilleur pas de P sur le meilleur coup de la position : s'il a nettement baissé, M préparait P (Dd3 avant Ce5,
- * Tae1 avant e4) ; s'il est inchangé, le moteur avait juste un autre coup utile (h3) ; s'il a monté, M nuit au plan.
- * Une parade à une menace passe le même test. Le « nettement » est un plancher de bruit, provisoire ici (--plancher),
- * à remplacer par la variance 18/24 du test de stabilité.
- * Deux précautions apprises à la première passe : (1) la mesure se fait à un POINT CALME — si après M et la réponse le
- * meilleur coup est une prise ou une parade d'échec (reprise, pièce attaquée), on joue ce coup et la meilleure réponse
- * avant de mesurer, sinon le test accuse M de ce que la réponse adverse a créé ; (2) Δ est donné sur le MÊME pas du plan
- * (celui de la racine) et sur le meilleur pas, car quand le meilleur pas change d'identité, Δ mesure autre chose.
+ * Test à deux demi-coups, version 2 (cahier des charges du 18 octobre 2026, rapport § 6 et § 9).
  *
- * Entrée : le JSON du tableau du filtre (un M par plan : son meilleur coup non progressant).
- *   node scripts/plans/preparatoire.mjs [--in reports/plans/filtre.json] [--depth 18] [--plancher 15] [--out reports/plans/preparatoire.md]
+ * Pour chaque plan P, M est son meilleur coup non progressant à la racine (lu dans le JSON du tableau). On joue M puis les
+ * DEUX meilleures réponses adverses ; après chacune, on prolonge jusqu'à un point calme (prise, échec, ou coup forcé : le
+ * meilleur bat le second de plus d'un pion), puis on mesure à nouveau le retard du pas de P sur le meilleur coup.
+ * Deux axes, un drapeau, une troisième information :
+ *   axe 1, l'effet de M sur P (Δ sur le meilleur pas, pire des deux réponses) : prépare / neutre / nuit / ferme la fenêtre
+ *          — « ferme la fenêtre » quand la réponse qui donne le pire Δ ATTAQUE OU CONTRÔLE la case du pas (carte d'attaques
+ *          avant/après la réponse, ou le pas devenu illégal) : le plan est périssable ; sinon c'est de la variance ;
+ *   axe 2, l'état de P après M et la pire réponse : mûr (la réalisation est viable, retard ≤ 30) / en préparation (un pas
+ *          viable existe) / injouable / bloqué / sans objet ;
+ *   « limite » quand |Δ| est entre le plancher (25 cp) et la bande (50) ;
+ *   « sert un plan frère » : les autres plans listés que M fait progresser.
+ * Les fils du moteur viennent de COACH_DETERMINISTIC (un fil pour mesurer). Les sorties A et B de deux moteurs se
+ * confrontent avec accord-moteurs.mjs.
+ *
+ *   node scripts/plans/preparatoire.mjs [--in reports/plans/filtre.json] [--depth 18] [--plancher 25] [--bande 50] [--viable 30]
+ *        [--reponses 2] [--seulement id] [--out reports/plans/preparatoire.md]
  */
 
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { dirname } from 'node:path';
 import { Chess } from 'chess.js';
 import { UciEngine } from '../../coach/uci-engine.mjs';
-import { distance, suivre, estLevier } from '../../coach/plan-distance.mjs';
+import { distance, suivre, estLevier, libelle } from '../../coach/plan-distance.mjs';
+import { buildAttackMap, other } from '../../positional/attack-map.js';
 import { enToFr } from '../../coach/notation.mjs';
 import { POSITIONS } from './positions-filtre.mjs';
 
@@ -26,46 +32,65 @@ const args = process.argv.slice(2);
 const opt = (k, d) => (args.includes(k) ? args[args.indexOf(k) + 1] : d);
 const IN = opt('--in', 'reports/plans/filtre.json');
 const DEPTH = Number(opt('--depth', 18));
-const PLANCHER = Number(opt('--plancher', 15));
+const PLANCHER = Number(opt('--plancher', 25));
+const BANDE = Number(opt('--bande', 50));
+const VIABLE = Number(opt('--viable', 30));
+const REPONSES = Number(opt('--reponses', 2));
+const FORCE = 100; // un coup « forcé » bat le second de plus d'un pion : on le joue avant de mesurer
 const OUT = opt('--out', 'reports/plans/preparatoire.md');
 const SEUL = opt('--seulement', null);
 
 const cp = (s) => (s.type === 'mate' ? (s.value > 0 ? 10000 - s.value : -10000 - s.value) : s.value);
-const fmt = (c) => (c / 100).toFixed(2).replace('.', ',').replace(/^(-?)/, (m) => (m === '-' ? '−' : '+'));
+const fmt = (c) => (c == null ? '—' : (c / 100).toFixed(2).replace('.', ',').replace(/^(-?)/, (m) => (m === '-' ? '−' : '+')));
 const fr = enToFr;
 const uciOf = (m) => m.from + m.to + (m.promotion ?? '');
+const jouer = (fen, uci) => { const c = new Chess(fen); const m = c.move({ from: uci.slice(0, 2), to: uci.slice(2, 4), promotion: uci[4] }); return { m, fen: c.fen() }; };
 
 const entrees = JSON.parse(readFileSync(IN, 'utf8')).filter((e) => !SEUL || e.position === SEUL);
 const engine = new UciEngine({ threads: process.env.COACH_DETERMINISTIC === '1' ? 1 : 2, hashMb: 256 });
-const cache = new Map(); // `${pos}|${M}` -> mesure au point calme
+const cacheNoter = new Map(), cacheRep = new Map();
 
-/** Tous les coups légaux notés (point de vue du camp au trait), et le meilleur. */
+/** Tous les coups légaux notés (point de vue du camp au trait), triés. */
 async function noter(fen) {
+  if (cacheNoter.has(fen)) return cacheNoter.get(fen);
   const c = new Chess(fen); const coups = c.moves({ verbose: true });
+  if (!coups.length) { const r = { fen, coups: [], best: null }; cacheNoter.set(fen, r); return r; }
   const lignes = await engine.analyze(fen, { depth: DEPTH, multipv: coups.length, timeoutMs: 20 * 60_000 });
   const notes = new Map(); for (const l of lignes) notes.set(l.pv[0], cp(l.score));
   const liste = coups.map((m) => ({ m, cp: notes.get(uciOf(m)) })).filter((x) => x.cp != null).sort((a, b) => b.cp - a.cp);
-  return { fen, coups: liste, best: liste[0] };
+  const r = { fen, coups: liste, best: liste[0] ?? null }; cacheNoter.set(fen, r); return r;
 }
-
-/** M, la meilleure réponse, puis (si le meilleur coup est une prise ou une parade d'échec) ce coup et la réponse : point calme. */
-async function pointCalme(pos, fen, M) {
-  const key = `${pos.id}|${M}`;
-  if (cache.has(key)) return cache.get(key);
-  const c = new Chess(fen); const joues = [c.move(M)];
-  const repondre = async () => {
-    const [rep] = await engine.analyze(c.fen(), { depth: DEPTH, multipv: 1, timeoutMs: 10 * 60_000 });
-    if (!rep) return false;
-    const u = rep.pv[0]; joues.push(c.move({ from: u.slice(0, 2), to: u.slice(2, 4), promotion: u[4] })); return true;
-  };
-  if (!(await repondre())) { cache.set(key, null); return null; }
-  let mesure = await noter(c.fen()); let prolonge = [];
-  if (mesure.best && (mesure.best.m.captured || c.inCheck())) {
-    joues.push(c.move(mesure.best.m.san)); prolonge.push(mesure.best.m.san);
-    if (await repondre()) { prolonge.push(joues[joues.length - 1].san); mesure = await noter(c.fen()); }
+/** Les n meilleures réponses (UCI) dans une position. */
+async function reponses(fen, n) {
+  const k = `${fen}|${n}`; if (cacheRep.has(k)) return cacheRep.get(k);
+  const l = await engine.analyze(fen, { depth: DEPTH, multipv: n, timeoutMs: 10 * 60_000 });
+  const r = l.map((x) => x.pv[0]); cacheRep.set(k, r); return r;
+}
+/** Depuis une position à mon trait : prolonger tant que le meilleur coup est une prise, une parade d'échec ou un coup forcé (2 fois au plus). */
+async function pointCalme(fen) {
+  const joues = [];
+  for (let i = 0; i < 2; i++) {
+    const mes = await noter(fen);
+    if (!mes.best) return { fen, mesure: mes, joues };
+    const c = new Chess(fen);
+    const force = mes.coups[1] && mes.best.cp - mes.coups[1].cp > FORCE;
+    if (!(mes.best.m.captured || c.inCheck() || force)) return { fen, mesure: mes, joues };
+    const a = jouer(fen, uciOf(mes.best.m)); joues.push(a.m);
+    const [rep] = await reponses(a.fen, 1); if (!rep) return { fen: a.fen, mesure: await noter(a.fen), joues };
+    const b = jouer(a.fen, rep); joues.push(b.m); fen = b.fen;
   }
-  const r = { joues, prolonge, mesure };
-  cache.set(key, r); return r;
+  return { fen, mesure: await noter(fen), joues };
+}
+/** La réponse adverse touche-t-elle la case du pas ? (plus d'attaquants adverses dessus, pièce de la réponse qui la vise, ou pas devenu illégal) */
+function toucheCase(fenAvant, fenApres, mRep, pas, side) {
+  if (!pas) return { touche: false, raison: '' };
+  const to = pas.to, opp = other(side);
+  const avant = buildAttackMap(fenAvant).attackersOf(to, opp), apres = buildAttackMap(fenApres).attackersOf(to, opp);
+  const vise = apres.some((p) => p.square === mRep.to);
+  const legal = new Chess(fenApres).moves({ verbose: true }).some((m) => m.from === pas.from && m.to === pas.to);
+  if (!legal) return { touche: true, raison: `${fr(pas.san)} n'est plus légal après ${fr(mRep.san)}` };
+  if (vise || apres.length > avant.length) return { touche: true, raison: `${fr(mRep.san)} vise ${to} (${avant.length} → ${apres.length} attaquant${apres.length > 1 ? 's' : ''})` };
+  return { touche: false, raison: '' };
 }
 
 const lignes = [];
@@ -74,42 +99,53 @@ for (const e of entrees) {
   const c = new Chess(); if (pos.fen) c.load(pos.fen); else for (const san of pos.coups.split(/\s+/)) c.move(san);
   const fen = c.fen(), side = c.turn();
   const M = e.nonProgressants[0], bp = e.progressants[0];
-  if (!M || !bp) { lignes.push({ pos: pos.id, plan: e.libelle, M: M?.san, statut: 'sans objet', note: !M ? 'aucun coup non progressant' : 'aucun coup progressant à la racine' }); continue; }
-  const best0 = Math.max(M.cp, bp.cp); const retardAvant = best0 - bp.cp;
+  const base = { pos: pos.id, plan: e.libelle, M: M?.san, sert: M?.sert ?? [] };
+  if (!M || !bp) { lignes.push({ ...base, axe1: 'sans objet', etat: 'sans objet', note: !M ? 'aucun coup non progressant' : 'aucun coup progressant à la racine' }); continue; }
+  const best0 = Math.max(M.cp, bp.cp), retardAvant = best0 - bp.cp;
+  const pasRacine = c.moves({ verbose: true }).find((m) => m.san === bp.san);
   console.error(`${pos.id} / ${e.libelle} : ${fr(M.san)} …`);
-  const q = await pointCalme(pos, fen, M.san);
-  if (!q) { lignes.push({ pos: pos.id, plan: e.libelle, M: M.san, statut: 'sans objet', note: 'pas de réponse adverse (partie finie)' }); continue; }
-  const suite = q.joues.map((m) => fr(m.san)).join(' ');
-  let planQ = e.plan; for (const m of q.joues) planQ = suivre(planQ, m);
-  const fenQ = q.mesure.fen;
-  if (!estLevier(fenQ, side, planQ)) { lignes.push({ pos: pos.id, plan: e.libelle, M: M.san, suite, prolonge: q.prolonge, retardAvant, statut: 'cible disparue', note: `après ${suite} la rupture n'a plus de pion à attaquer` }); continue; }
-  const d0Q = distance(fenQ, side, planQ);
-  const bestQ = q.mesure.best.cp;
-  const prog = q.mesure.coups.filter((x) => { const a = new Chess(fenQ); a.move(x.m.san); return distance(a.fen(), side, suivre(planQ, x.m)).d < d0Q.d; });
-  if (d0Q.d === 0) { lignes.push({ pos: pos.id, plan: e.libelle, M: M.san, suite, prolonge: q.prolonge, retardAvant, statut: 'réalisé', note: `le plan est réalisé après ${suite}` }); continue; }
-  if (!prog.length) { lignes.push({ pos: pos.id, plan: e.libelle, M: M.san, suite, prolonge: q.prolonge, retardAvant, statut: d0Q.d === Infinity ? 'bloqué' : 'sans pas', note: `après ${suite} : ${d0Q.detail}` }); continue; }
-  const retardApres = bestQ - prog[0].cp;
-  const memePas = prog.find((x) => x.m.san === bp.san);
-  const retardMeme = memePas ? bestQ - memePas.cp : null;
-  const delta = retardAvant - retardApres;
-  const deltaMeme = retardMeme == null ? null : retardAvant - retardMeme;
-  const ref = deltaMeme ?? delta;
-  const statut = ref > PLANCHER ? 'préparatoire' : ref < -PLANCHER ? 'nuit au plan' : 'préférence';
-  lignes.push({ pos: pos.id, plan: e.libelle, M: M.san, suite, prolonge: q.prolonge, pasAvant: bp.san, retardAvant, pasApres: prog[0].m.san, retardApres, delta, retardMeme, deltaMeme, statut });
+  const mM = jouer(fen, uciOf(c.moves({ verbose: true }).find((m) => m.san === M.san)));
+  const reps = await reponses(mM.fen, REPONSES);
+  if (!reps.length) { lignes.push({ ...base, axe1: 'sans objet', etat: 'sans objet', note: 'pas de réponse adverse (partie finie)' }); continue; }
+  const essais = [];
+  for (const u of reps) {
+    const r = jouer(mM.fen, u);
+    const tc = toucheCase(mM.fen, r.fen, r.m, pasRacine, side);
+    const q = await pointCalme(r.fen);
+    let planQ = suivre(suivre(e.plan, mM.m), r.m); for (const m of q.joues) planQ = suivre(planQ, m);
+    const suite = [mM.m, r.m, ...q.joues].map((m) => fr(m.san)).join(' ');
+    const essai = { reponse: r.m.san, suite, touche: tc.touche, raison: tc.raison, prolonge: q.joues.length > 0 };
+    if (!q.mesure.best) { essais.push({ ...essai, etat: 'sans objet', delta: null, deltaMeme: null }); continue; }
+    if (!estLevier(q.fen, side, planQ)) { essais.push({ ...essai, etat: 'sans objet', note: 'plus de pion à attaquer', delta: null, deltaMeme: null }); continue; }
+    const d0Q = distance(q.fen, side, planQ);
+    const bestQ = q.mesure.best.cp;
+    const prog = q.mesure.coups.map((x) => { const a = new Chess(q.fen); a.move(x.m.san); return { ...x, d1: distance(a.fen(), side, suivre(planQ, x.m)).d }; }).filter((x) => x.d1 < d0Q.d);
+    const meme = prog.find((x) => x.m.san === bp.san);
+    const retardMeilleur = prog.length ? bestQ - prog[0].cp : null, retardMeme = meme ? bestQ - meme.cp : null;
+    const etat = d0Q.d === 0 ? 'mûr (réalisé)' : d0Q.d === Infinity ? 'bloqué' : prog.some((x) => x.d1 === 0 && bestQ - x.cp <= VIABLE) ? 'mûr' : prog.some((x) => bestQ - x.cp <= VIABLE) ? 'en préparation' : 'injouable';
+    essais.push({ ...essai, etat, pasApres: prog[0]?.m.san ?? null, retardMeilleur, retardMeme, delta: retardMeilleur == null ? null : retardAvant - retardMeilleur, deltaMeme: retardMeme == null ? null : retardAvant - retardMeme });
+  }
+  const mesurables = essais.filter((x) => x.delta != null);
+  if (!mesurables.length) { lignes.push({ ...base, axe1: 'sans objet', etat: essais[0].etat, note: essais[0].note ?? 'aucun pas après les réponses', essais, retardAvant, pasAvant: bp.san }); continue; }
+  const pire = mesurables.reduce((a, b) => (b.delta < a.delta ? b : a));
+  const dw = pire.delta;
+  const axe1 = dw > PLANCHER ? 'prépare' : dw < -PLANCHER ? (pire.touche ? 'ferme la fenêtre' : 'nuit') : 'neutre';
+  const limite = Math.abs(dw) > PLANCHER && Math.abs(dw) <= BANDE;
+  lignes.push({ ...base, pasAvant: bp.san, retardAvant, essais, pire: pire.reponse, delta: dw, deltaMeme: pire.deltaMeme, axe1, limite, etat: pire.etat, touche: pire.touche, raison: pire.raison });
 }
 engine.stop();
 
-const md = [`# Test à deux demi-coups — préparatoire ou préférence ? (prof. ${DEPTH}, plancher ${PLANCHER} cp) — ${new Date().toISOString().slice(0, 10)}`, '',
-  'Pour chaque plan, M est son meilleur coup non progressant à la racine. On joue M, la meilleure réponse adverse — et, si le meilleur coup est alors une prise ou une parade d\'échec, ce coup et la réponse (point calme, colonne « suite ») — puis on mesure à nouveau le retard du pas du plan sur le meilleur coup de la position. Δ = retard avant − retard après, sur le MÊME pas qu\'à la racine (le statut en découle) et sur le meilleur pas : Δ > plancher, M préparait le plan ; |Δ| ≤ plancher, préférence du moteur ; Δ < −plancher, M nuit au plan.', '',
-  '| Δ même pas | Δ meilleur pas | statut | position | plan | M | suite | pas de la racine (retard avant → après) | meilleur pas après (retard) |', '|---|---|---|---|---|---|---|---|---|'];
-const tri = [...lignes].sort((a, b) => ((b.deltaMeme ?? b.delta) ?? -1e9) - ((a.deltaMeme ?? a.delta) ?? -1e9));
-for (const l of tri) {
-  if (l.delta == null) { md.push(`| — | — | ${l.statut} | ${l.pos} | ${l.plan} | ${l.M ? fr(l.M) : '—'} | ${l.suite ?? '—'} | ${l.note} | |`); continue; }
-  const calme = l.prolonge?.length ? ' *(point calme)*' : '';
-  md.push(`| ${l.deltaMeme == null ? '— (pas disparu)' : fmt(l.deltaMeme)} | ${fmt(l.delta)} | **${l.statut}** | ${l.pos} | ${l.plan} | ${fr(l.M)} | ${l.suite}${calme} | ${fr(l.pasAvant)} (${fmt(l.retardAvant)} → ${l.retardMeme == null ? 'n/a' : fmt(l.retardMeme)}) | ${fr(l.pasApres)} (${fmt(l.retardApres)}) |`);
+const md = [`# Test à deux demi-coups v2 — ${new Date().toISOString().slice(0, 10)} — prof. ${DEPTH}, plancher ${PLANCHER}, bande ${BANDE}, viable ${VIABLE}, ${REPONSES} réponses`, '',
+  'Axe 1 = effet de M sur le plan (Δ du retard du meilleur pas, pire des réponses) ; « ferme la fenêtre » = la pire réponse attaque ou contrôle la case du pas (plan périssable). Axe 2 = état du plan après M et la pire réponse. « limite » = |Δ| entre plancher et bande. « sert » = plans frères que M fait progresser.', '',
+  '| position | plan | M | sert | axe 1 | limite | axe 2 | pire réponse (suite) | Δ meilleur pas | Δ même pas | pourquoi |', '|---|---|---|---|---|---|---|---|---|---|---|'];
+const ordre = { 'ferme la fenêtre': 0, prépare: 1, nuit: 2, neutre: 3, 'sans objet': 4 };
+for (const l of [...lignes].sort((a, b) => (ordre[a.axe1] ?? 9) - (ordre[b.axe1] ?? 9))) {
+  const pireE = l.essais?.find((x) => x.reponse === l.pire);
+  md.push(`| ${l.pos} | ${l.plan} | ${l.M ? fr(l.M) : '—'} | ${l.sert?.length ? l.sert.join(', ') : '—'} | **${l.axe1}** | ${l.limite ? 'limite' : ''} | ${l.etat ?? '—'} | ${pireE ? `${fr(pireE.reponse)} (${pireE.suite}${pireE.prolonge ? ', point calme' : ''})` : (l.note ?? '—')} | ${fmt(l.delta)} | ${fmt(l.deltaMeme)} | ${l.raison ?? ''} |`);
 }
-const n = (s) => lignes.filter((l) => l.statut === s).length;
-md.push('', `Bilan : ${n('préparatoire')} préparatoire(s), ${n('préférence')} préférence(s), ${n('nuit au plan')} qui nuisent au plan, ${n('cible disparue')} cible(s) disparue(s), ${lignes.length - n('préparatoire') - n('préférence') - n('nuit au plan') - n('cible disparue')} sans objet / réalisé / bloqué ; ${lignes.filter((l) => l.prolonge?.length).length} mesure(s) prolongée(s) jusqu'au point calme.`, '');
+const n = (k, v) => lignes.filter((l) => l[k] === v).length;
+md.push('', `Bilan axe 1 : ${n('axe1', 'prépare')} prépare, ${n('axe1', 'neutre')} neutre, ${n('axe1', 'nuit')} nuit, ${n('axe1', 'ferme la fenêtre')} ferme la fenêtre, ${n('axe1', 'sans objet')} sans objet ; ${lignes.filter((l) => l.limite).length} limite(s).`,
+  `Bilan axe 2 : ${['mûr', 'mûr (réalisé)', 'en préparation', 'injouable', 'bloqué', 'sans objet'].map((v) => `${n('etat', v)} ${v}`).join(', ')}.`, '');
 mkdirSync(dirname(OUT), { recursive: true });
 writeFileSync(OUT, md.join('\n') + '\n');
 writeFileSync(OUT.replace(/\.md$/, '.json'), JSON.stringify(lignes, null, 1));
