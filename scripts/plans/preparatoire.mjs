@@ -25,6 +25,7 @@ import { Chess } from 'chess.js';
 import { UciEngine } from '../../coach/uci-engine.mjs';
 import { distance, suivre, estLevier, libelle } from '../../coach/plan-distance.mjs';
 import { buildAttackMap, other } from '../../positional/attack-map.js';
+import { enPrise } from '../../coach/en-prise.mjs';
 import { enToFr } from '../../coach/notation.mjs';
 import { POSITIONS } from './positions-filtre.mjs';
 
@@ -65,25 +66,6 @@ async function reponses(fen, n) {
   const k = `${fen}|${n}`; if (cacheRep.has(k)) return cacheRep.get(k);
   const l = await engine.analyze(fen, { depth: DEPTH, multipv: n, timeoutMs: 10 * 60_000 });
   const r = l.map((x) => x.pv?.[0]).filter(Boolean); cacheRep.set(k, r); return r;
-}
-const VAL = { p: 1, n: 3, b: 3, r: 5, q: 9, k: 100 };
-/** Mini-échange sur une case (valeurs croissantes, rayons X et clouages ignorés) : gain de l'adversaire s'il ouvre les prises. */
-function gainEchange(map, sq, side) {
-  const p = map.at[sq]; if (!p) return 0;
-  const opp = other(side);
-  const att = map.attackersOf(sq, opp).sort((a, b) => VAL[a.type] - VAL[b.type]);
-  const def = map.attackersOf(sq, side).sort((a, b) => VAL[a.type] - VAL[b.type]);
-  const prises = []; let valeur = VAL[p.type], i = 0, j = 0, tourOpp = true;
-  for (;;) { const arr = tourOpp ? att : def, k = tourOpp ? i : j; if (k >= arr.length) break; prises.push(valeur); valeur = VAL[arr[k].type]; if (tourOpp) i++; else j++; tourOpp = !tourOpp; }
-  if (!prises.length) return 0;
-  let g = prises[prises.length - 1];
-  for (let k = prises.length - 2; k >= 0; k--) g = prises[k] - Math.max(0, g);
-  return g;
-}
-/** Une pièce à moi (ni pion ni roi) est en prise si l'adversaire gagne du matériel en ouvrant les prises dessus. */
-function enPrise(fen, side) {
-  const map = buildAttackMap(fen);
-  return map.pieces.some((p) => p.color === side && p.type !== 'p' && p.type !== 'k' && gainEchange(map, p.square, side) > 0);
 }
 /** La position est-elle calme pour le camp au trait ? (pas d'échec, pas de pièce en prise, meilleur coup ni prise ni forcé) */
 function calme(fen, mes) {
