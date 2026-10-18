@@ -1,6 +1,8 @@
 # L'épreuve du jeu — protocole (une page, écrite avant le code)
 
-19 octobre 2026. Go de l'auteur. Ordre arrêté : ce protocole, relu reposé → le code → les parties → le rapport. Suite du
+19 octobre 2026. Go de l'auteur. Ordre arrêté : ce protocole, relu reposé → le code → les parties → le rapport.
+Amendé le même jour sur relecture de l'Expert (enchaînement après réalisation, lot du coût / lot de la couverture, « hors
+de prix » opérationnel, dix départs d'ouverture, N effectif, barème, nulles par répétition, garde-fou de l'exécutant). Suite du
 rapport du faisceau (`RAPPORT-FAISCEAU-2026-10-18.md`, § 9).
 
 ## 1. La question
@@ -13,26 +15,51 @@ L'épreuve du jeu est la version statistique de la question du faisceau.
 ## 2. Les trois joueurs
 
 - **Le coach** : à chaque coup, il choisit le plan — le **plan canonique de la structure courante** pour son camp (table
-  `coach/plans-structures.mjs`, première instance ; la seconde si la première est « sans objet » ou « hors de prix ») ;
-  quand la structure **bascule**, il change de plan au coup suivant (règle de bascule du faisceau) ; quand aucune
-  structure n'est reconnue, il garde le dernier plan tant qu'il est jouable, sinon il laisse jouer librement et le note.
+  `coach/plans-structures.mjs`, première instance ; la seconde si la première est **sans objet ou bloquée** — jugé par la
+  distance, statiquement). Quand la structure **bascule**, il change de plan au coup suivant (règle de bascule du
+  faisceau). Quand un plan est **réalisé** (distance 0, verrouillé), il **enchaîne** : l'instance suivante de la même
+  structure, puis le plan de service (la colonne que le plan a ouverte), noté « enchaînement » — le coach ne se tait pas
+  après son premier succès. Quand l'exécutant n'a trouvé **aucun progressant admissible pendant k + 1 = 3 coups**, le plan
+  est tenu pour « hors de prix » en jeu et le coach passe à l'instance suivante (c'est le compteur du faisceau, lu comme
+  observation). Quand aucune structure n'est reconnue, il garde le dernier plan tant qu'il est **jouable** (distance finie,
+  cible existante), sinon il laisse jouer librement et le note : un coup libre coûte zéro par construction, il ne mesure rien.
 - **L'exécutant** : Stockfish 19, profondeur 18, un fil, **contraint** par le plan du coach exactement comme dans le
   faisceau — parmi ses quatre meilleurs coups, il joue le meilleur *progressant* ; sinon un *forcé* ou le *roque* ; sinon,
   à compteur plein (k = 2), la *dernière chance* (le meilleur progressant hors MultiPV s'il coûte ≤ 1,0) ; sinon le meilleur
-  coup libre, noté « intendance ». Il ne choisit jamais un plan ; il paie celui du coach.
+  coup libre, noté « intendance ». Il ne choisit jamais un plan ; il paie celui du coach. **À savoir en lisant les coûts** :
+  la concession à 1,0 est son seul garde-fou tactique — c'est voulu, c'est le prix qu'on mesure —, donc le coach peut lui
+  imposer jusqu'à un pion de retard à *chaque* coup, et c'est le coût final qui jugera si la théorie en abuse.
 - **L'adversaire** : Stockfish 19 libre, même profondeur, même fil.
 
 ## 3. Le dispositif
 
-- **Départs** : les dix positions du panel (les deux camps : le coach joue une fois les Blancs, une fois les Noirs — vingt
-  départs), plus, en second lot, dix positions d'ouverture des trois livres (Française, Italienne, Espagnole) au 8e coup.
+- **Lot 1 — le coût** : les dix positions du panel, les deux camps (le coach joue une fois les Blancs, une fois les Noirs) :
+  vingt départs à structures connues. **C'est sur ce lot que le critère se lit.**
+- **Lot 2 — la couverture** : dix positions d'ouverture au 8e coup, dans les livres, lignes calmes, choisies par l'Expert
+  pour étager la reconnaissance de structure — Française d'avance (1.e4 e6 2.d4 d5 3.e5 c5 4.c3 Cc6 5.Cf3 Fd7 6.Fe2 Cge7
+  7.O-O cxd4 8.cxd4 Cf5 : CHAINE_E5 dès le départ), Steinitz (3.Cc3 Cf6 4.e5 Cfd7 5.f4 c5 6.Cf3 Cc6 7.Fe3 a6 8.Dd2 b5),
+  Winawer (3.Cc3 Fb4 4.e5 c5 5.a3 Fxc3+ 6.bxc3 Ce7 7.Cf3 Fd7 8.Fd3), Tarrasch ouvert (3.Cd2 c5 4.exd5 exd5 5.Cgf3 Cc6 6.Fb5
+  Fd6 7.dxc5 Fxc5 8.O-O Cge7 : PDI noir), échange (3.exd5 exd5 4.Cf3 Fd6 5.Fd3 Cf6 6.O-O O-O 7.Fg5 Fg4 8.Cbd2 Cbd7) ;
+  Italienne pianissimo (4.c3 Cf6 5.d3 d6 6.O-O O-O 7.Te1 a6 8.Fb3 Fa7) et Italienne du centre (4.c3 Cf6 5.d4 exd4 6.cxd4
+  Fb4+ 7.Fd2 Fxd2+ 8.Cbxd2 d5 9.exd5 Cxd5 : la ligne du livre accouche d'un PDI blanc — le meilleur test de bascule depuis
+  l'ouverture) ; Espagnole fermée (jusqu'à 8.c3 O-O), berlinoise (3…Cf6 4.O-O Cxe4 5.d4 Cd6 6.Fxc6 dxc6 7.dxe5 Cf5 8.Dxd8+
+  Rxd8 : finale sans dames, majorité) et Steinitz différée (4.Fa4 d6 5.c3 Fd7 6.d4 Cf6 7.O-O Fe7 8.Te1). Ce lot ne mesure
+  pas un coût : il mesure **au bout de combien de coups une partie de livre entre dans une structure de la table, et
+  combien de coups se jouent sous plan** — la carte des trous de la table. Pour chaque partie des deux lots, la **part de
+  coups sous plan** est publiée : elle conditionne la lecture du coût.
 - **Population** : pour chaque départ, **dix parties** : l'adversaire tire sa réponse parmi ses deux meilleures quand elles
-  sont ex æquo (≤ 25 cp), au hasard d'une graine fixée par partie (reproductible) ; sinon il joue la meilleure. Vingt
-  départs × dix parties = **deux cents parties contraintes**.
-- **Témoin** : les mêmes deux cents parties, mêmes graines, **sans coach** (Stockfish libre des deux côtés) — c'est la
-  référence, comme le faisceau libre l'était pour le prix.
-- **Fin de partie** : mat, nulle, ou le **40e coup** (80 demi-coups) ; alors l'évaluation finale à profondeur 18 (bornée à
-  ± 10) tient lieu de résultat.
+  sont ex æquo (≤ 25 cp), au hasard d'une graine fixée par partie (reproductible) ; sinon il joue la meilleure. **Jamais de
+  tirage côté coach** : on mesure la théorie exécutée au mieux, la variance vient de l'adversaire. Les parties **distinctes**
+  sont comptées (empreinte de la suite de coups) et le **N effectif** par départ publié ; si N < 5, la fenêtre d'ex æquo
+  est élargie à 40 cp **côté adversaire seulement**. Vingt départs × dix parties = deux cents parties contraintes au lot 1,
+  autant au lot 2.
+- **Témoin** : les mêmes départs, mêmes graines, **sans coach** (Stockfish libre des deux côtés) — c'est la référence,
+  comme le faisceau libre l'était pour le prix. L'appariement par graine est approximatif (les ex æquo ne tombent pas aux
+  mêmes coups dans les deux parties) : c'est un bruit que la médiane absorbe, et le coût est aussi donné contre la
+  **moyenne des témoins du même départ**.
+- **Fin de partie** : mat, nulle, ou le **40e coup** (80 demi-coups). Barème : mat ± 10 (la borne), nulle 0, sinon
+  l'évaluation finale à profondeur 18 bornée à ± 10. Les **nulles par répétition des parties contraintes sont comptées à
+  part** : un exécutant à compteur plein qui tricote est un plan qui tourne en rond — un signal de théorie, pas du bruit.
 - **Mesure par partie** : le **coût** = éval finale (vue du coach) de la partie témoin − éval finale de la partie contrainte,
   même départ, même graine ; le **journal** : par coup du coach, le plan suivi, la classe du coup (P/F/R/I/D), la structure,
   les bascules, les plans « sans objet » et les coups libres.
@@ -48,8 +75,9 @@ L'épreuve du jeu est la version statistique de la question du faisceau.
 
 ## 5. Le critère d'arrêt (écrit avant la première partie)
 
-> **La théorie du coach passe l'épreuve si le coût médian par partie est ≤ 0,25 (le plancher) et le coût moyen ≤ 0,50, avec
-> les deux moteurs, sur les deux cents parties.** Entre 0,50 et 1,00 de moyenne : « viable mais ça coûte » — le rapport
+> **La théorie du coach passe l'épreuve si, sur le lot 1 (les deux cents parties du panel), le coût médian par partie est
+> ≤ 0,25 (le plancher) et le coût moyen ≤ 0,50, avec les deux moteurs.** Le lot 2 ne compte pas dans le critère (ses coups
+> libres dilueraient la moyenne vers zéro) : il rend la couverture. Entre 0,50 et 1,00 de moyenne : « viable mais ça coûte » — le rapport
 > dit où (par structure, par plan), et l'épreuve Maia n'a pas lieu avant correction. Au-delà de 1,00 : la théorie est fausse
 > quelque part ; le journal dit où, au coup près, et on ferme.
 
