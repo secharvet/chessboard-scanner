@@ -1546,3 +1546,10 @@ règle : PID dans un fichier, jamais de kill par grep.
 **18 octobre, 19 h : passe 3 rentrée d'Orion** (rapatriée par le tunnel, sa session n'ayant ni enchaîné ni prévenu ; passe 1
 relancée sur Orion directement par ssh). Axe profondeur SF 17.1 : 30/30 statuts stables à réponse identique sauf 2 ; axe moteur
 à 24 : 90e centile 36 cp, 6 statuts changent à réponse identique. Annexes G-J. Déterminisme VPS/Orion en attente.
+**18 octobre, 18 h 30 : la nuit refaite en vrai déterministe.** Bug trouvé par la vérification VPS/Orion : `filtre.mjs` et
+`preparatoire.mjs` fixaient les fils du moteur en dur (3 et 2) et écrasaient `COACH_DETERMINISTIC` — aucune passe n'était
+déterministe, et à un fil le tableau est même plus rapide (180 s contre 355 s par position à 24, trois processus sur quatre
+cœurs). Corrigé (0 différence entre deux passes fraîches), trois passes refaites (SF 19 p18, SF 19 p24, SF 17.1 p18).
+Chiffres propres (§ 8 du rapport, annexes K-P) : bruit des fils seul 5/17/49 cp ; profondeur 8/25/46, Spearman 0,95, test 3/24
+changés à réponse identique contre 9/12 à réponse changée ; moteur 7/26/363, 11 signes d'écart sur 35 changés, Spearman 0,85.
+**Plancher 25 cp.** Leçons : un fil pour mesurer, toujours ; vérifier la reproductibilité AVANT d'annoncer « déterministe ».

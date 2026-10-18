@@ -387,3 +387,35 @@ ont tenu. C'est le cahier des charges de l'étape 2 du § 6.
   têtes sont plates dans ce panel calme ; le meilleur coup *progressant*, lui, ne change presque jamais (1 à 2/35).
 Déterminisme entre machines (même binaire SF 19, un fil, VPS contre Orion) : en cours, résultat attendu identique au
 centipion ; consigné dès réception.
+
+## 8. Chiffres définitifs, déterministe contre déterministe (18 octobre, 18 h 30)
+
+Après correction des scripts (un fil, `COACH_DETERMINISTIC=1` respecté ; vérifié : deux passes fraîches identiques,
+0 différence sur 24 coups), trois passes refaites sur le VPS, trois processus à un fil : SF 19 à 18 (la référence), SF 19 à
+24, SF 17.1 à 18. Les mêmes coups M pour le test dans les trois (ceux du tableau du § 4). Annexes K à P. Les chiffres du
+§ 7 restent comme témoins de ce que mesurent des passes à plusieurs fils ; ceux-ci les remplacent.
+
+| axe | notes : médiane / 90e / max (cp) | meilleur coup changé | signe de l'écart changé | Spearman des écarts | test : statuts changés à réponse identique | … à réponse changée |
+|---|---|---|---|---|---|---|
+| **bruit des fils** seul (3 fils → 1 fil, SF 19, p18) | 5 / 17 / 49 | 11/35 | 6/35 | 0,96 | — | — |
+| bruit des fils seul (p24) | 6 / 13 / 49 | 11/35 | 4/35 | 0,93 | — | — |
+| **profondeur** 18 → 24, SF 19 | 8 / **25** / 46 | 8/35 | 6/35 | **0,95** | **3/24** | **9/12** |
+| **moteur** SF 19 → SF 17.1, p18 | 7 / 26 / **363** | 15/35 | **11/35** | **0,85** | 3/25 | 6/11 |
+
+**Ce que les chiffres propres disent.**
+1. **Plancher : 25 cp** (90e centile de l'axe profondeur, net du bruit des fils), et non 15 ni 20. Les verdicts à moins de
+   50 cp du bord sont « limite ».
+2. **Le bruit des fils est du même ordre que l'effet de la profondeur** (17 contre 25 au 90e centile) : toute comparaison
+   faite à plusieurs fils mesure d'abord les fils. Règle : un fil, toujours, pour mesurer ; les fils servent à jouer.
+3. **La mécanique ne bouge pas** : distances 35/35, meilleur coup progressant 32-33/35, ordre des écarts 0,95 en
+   profondeur. Le classement des plans tient.
+4. **Le test à deux demi-coups** : à réponse adverse identique, 3 statuts sur 24 changent avec la profondeur (ce sont de
+   vrais déplacements d'évaluation autour du plancher) ; quand la réponse change, 9 sur 12. La réponse unique reste la
+   première cause de basculement ; la seconde est le plancher trop bas. Cahier des charges inchangé : deux réponses (pire
+   Δ), point calme par menaces, plancher 25, et l'accord des deux moteurs.
+5. **Le second moteur est l'axe le plus dur** : même médiane, mais une queue lourde (363 cp : un désaccord tactique franc),
+   11 signes d'écart sur 35 changent, Spearman 0,85. Deux réseaux ne classent pas les plans de la même façon dans un plan
+   sur trois quand l'écart est petit. La règle des deux moteurs n'est pas une précaution : sans elle, un tiers des petits
+   écarts n'ont pas de signe.
+6. Le déterminisme entre machines n'a pas été mesuré proprement (Orion a tourné à 3 fils) ; à refaire à un fil quand
+   l'auteur le permettra, résultat attendu : identique.
