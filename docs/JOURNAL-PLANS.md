@@ -1553,3 +1553,10 @@ cœurs). Corrigé (0 différence entre deux passes fraîches), trois passes refa
 Chiffres propres (§ 8 du rapport, annexes K-P) : bruit des fils seul 5/17/49 cp ; profondeur 8/25/46, Spearman 0,95, test 3/24
 changés à réponse identique contre 9/12 à réponse changée ; moteur 7/26/363, 11 signes d'écart sur 35 changés, Spearman 0,85.
 **Plancher 25 cp.** Leçons : un fil pour mesurer, toujours ; vérifier la reproductibilité AVANT d'annoncer « déterministe ».
+**18 octobre, 19 h : retour de l'Expert sur la nuit.** Son outil d'arbitrage tournait lui aussi à 4 fils (corrigé, un fil par
+défaut, son commit fbf0a1a). Deux arbitrages limites des livres revalidés à un fil prof. 24 : cxd4 (Wade, 6.Fe2) écart 0,16
+(0,25 à 4 fils) — retrait conforté ; 2…Cf6 (est-indienne 2.d3) écart 0,39 (0,49), punition e5 ! confirmée — la faute tient
+au-dessus de 0,3 mais la marge est passée de 0,19 à 0,09, le bruit mesuré en grandeur nature. Plancher 25 cp endossé.
+Méthode retenue : bande grise large au tri ([0,05 ; 0,55] à prof. 18), retest systématique à un fil prof. 24 dedans ; et la
+règle des deux moteurs pour tout verdict à petit écart, dans le faisceau comme dans le coach. Option laissée à l'auteur :
+estampiller 2…Cf6 « limite » en base (l'Expert la garderait telle quelle, pédagogiquement : e5 ! gagne de l'espace avec tempo).
