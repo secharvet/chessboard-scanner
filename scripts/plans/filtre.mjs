@@ -26,7 +26,7 @@ const fmt = (c) => (c >= 9000 ? '#' : c <= -9000 ? '-#' : (c / 100).toFixed(2).r
 const fr = (san) => enToFr(san);
 const dd = (d) => (d === Infinity ? '∞' : String(d));
 
-const engine = new UciEngine({ threads: 3, hashMb: 256 });
+const engine = new UciEngine({ threads: process.env.COACH_DETERMINISTIC === '1' ? 1 : 3, hashMb: 256 });
 const md = [`# Filtre de compatibilité à la profondeur ${DEPTH} — ${new Date().toISOString().slice(0, 10)}`, '',
   'Pour chaque plan : distance à la racine (0 = réalisé, ∞ = bloqué), coups progressants (la distance baisse après mon coup, l\'adversaire immobile) avec la note du moteur et le retard sur le meilleur coup, puis le meilleur coup non progressant et l\'écart par lequel il bat le meilleur progressant (positif = le moteur préfère ne pas progresser : c\'est là que « forcé » se décide). Notes du point de vue du camp au trait.', ''];
 const ecarts = [];

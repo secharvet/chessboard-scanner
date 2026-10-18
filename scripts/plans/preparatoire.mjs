@@ -36,7 +36,7 @@ const fr = enToFr;
 const uciOf = (m) => m.from + m.to + (m.promotion ?? '');
 
 const entrees = JSON.parse(readFileSync(IN, 'utf8')).filter((e) => !SEUL || e.position === SEUL);
-const engine = new UciEngine({ threads: 2, hashMb: 256 });
+const engine = new UciEngine({ threads: process.env.COACH_DETERMINISTIC === '1' ? 1 : 2, hashMb: 256 });
 const cache = new Map(); // `${pos}|${M}` -> mesure au point calme
 
 /** Tous les coups légaux notés (point de vue du camp au trait), et le meilleur. */
