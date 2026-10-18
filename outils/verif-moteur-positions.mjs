@@ -11,6 +11,10 @@ import { Chess } from '../vendor/chess.js';
 
 const SF = process.env.STOCKFISH_PATH || '/usr/local/bin/stockfish';
 const DEPTH = Number(process.env.PROFONDEUR || 20);
+// Un fil par défaut : à 3-4 fils les notes bougent de 5/17/49 cp (méd./90e/max) et le meilleur
+// coup change 11 fois sur 35 (nuit de stabilité du 18 octobre 2026) — les verdicts limites
+// n'ont de sens qu'en déterministe. FILS=4 pour une passe exploratoire rapide, jamais pour trancher.
+const FILS = Number(process.env.FILS || 1);
 
 const chemin = process.argv[2];
 if (!chemin) { console.error('Usage : node outils/verif-moteur-positions.mjs <tests.mjs>'); process.exit(2); }
@@ -33,7 +37,7 @@ class Engine {
     this.p = spawn(SF);
     this.buf = '';
     this.p.stdout.on('data', d => { this.buf += d; this.onData && this.onData(); });
-    this.p.stdin.write('uci\nsetoption name Threads value 4\nsetoption name Hash value 256\n');
+    this.p.stdin.write(`uci\nsetoption name Threads value ${FILS}\nsetoption name Hash value 256\n`);
   }
   send(s) { this.p.stdin.write(s + '\n'); }
   wait(regex) {
