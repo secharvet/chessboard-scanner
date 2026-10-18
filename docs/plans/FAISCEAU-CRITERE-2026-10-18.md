@@ -42,19 +42,26 @@ Pour chaque (P, Π) :
 
 ## 3. Le panel et les plans canoniques
 
-Les dix positions du filtre (`scripts/plans/positions-filtre.mjs`), 35 plans. Le critère ne porte que sur les **plans longs**
-(distance ≥ 2 à la racine, ou conjonction). Les plans **canoniques** (ceux que la littérature donne pour « le » plan de la
-position) sont désignés explicitement dans le fichier des positions (`canoniques`), position par position, et soumis à
-l'Expert avant la passe. Depuis le 18 octobre, **le panel canonique est une hypothèse, pas une vérité terrain** (…Cc5 au
-hérisson, § 11).
+Les dix positions du filtre (`scripts/plans/positions-filtre.mjs`), 35 plans, **tous chiffrés** par le faisceau (courts et
+longs : le prix d'un plan court est aussi une information). Les plans **canoniques** — ceux que la littérature donne pour
+« le » plan de la position, un ou deux par position — sont désignés explicitement dans le fichier (`canoniques`, par index)
+**avant la passe** et soumis à l'Expert. Une position dont tous les plans seraient canoniques ne peut rien départager : elle
+sort du critère. Depuis le 18 octobre, **le panel canonique est une hypothèse, pas une vérité terrain** (…Cc5 au hérisson,
+§ 11) : un désaccord du faisceau avec le livre n'est pas un échec s'il est confirmé à profondeur 30.
+
+Piège évité à l'écriture : avec « plans longs = distance ≥ 2 », cinq positions n'ont qu'un plan long — un critère « le moins
+cher des plans longs est canonique » y serait vrai par construction. Le critère porte donc sur **tous les plans de la
+position** ; les plans longs font l'objet d'un décompte séparé (combien sont réalisés dans l'horizon, à quel prix), parce
+que c'est là que le test à deux demi-coups échouait.
 
 ## 4. Le critère d'arrêt
 
-Sur les dix positions, plans longs seulement, à profondeur 18, un fil, SF 19 :
+Sur les positions éligibles (au moins un plan non canonique), profondeur 18, un fil, SF 19 :
 
-> **Le faisceau réussit si, dans au moins 7 positions sur 10, le plan le moins cher parmi les plans longs est un plan
-> canonique, avec un prix qui sort de la bande grise (écart au second > 25 cp) — OU, quand il contredit le livre, si la
-> profondeur 30 (Expert, un fil) lui donne raison.**
+> **Le faisceau réussit si, dans au moins 70 % des positions éligibles, le plan le moins cher de la position (prix, puis
+> tempo) est un plan canonique, avec un écart au second supérieur au plancher (25 cp) — OU, quand il contredit le livre, si
+> la profondeur 30 (Expert, un fil) lui donne raison. Et si, parmi les plans longs, au moins la moitié sont réalisés dans
+> l'horizon avec un prix fini.**
 
 Si oui : on passe à l'épreuve du jeu (le faisceau étendu à la partie entière, puis Maia). Si non : **on écrit pourquoi et on
 ferme**, dans un rapport aussi détaillé que celui du filtre. Dans les deux cas le rapport paraît.
