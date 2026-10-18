@@ -155,6 +155,37 @@ cas sur deux — c'est l'axe « moteur » de la nuit de stabilité, amplifié pa
 5. **La passe témoin a eu une utilité** : sans elle, le biais « tardif bat précoce » ne se serait pas vu, et les trois
    « contradictions » de la première lecture auraient été arbitrées à profondeur 30 pour rien.
 
+## 6 bis. Ce que le critère mesure vraiment (relecture relayée par l'auteur, 18 octobre, 23 h 30)
+
+Les quatre contradictions ne sont pas de même nature. L'avance côté blanc (b4 +0,30 contre Fe3 0 après dxc5) est à cinq
+centipions du plancher, dans la bande grise par construction — et c'est le même enseignement que Cb3 : Fe3 valait −1,22 à
+la racine et zéro après dxc5, **le faisceau apprend le bon moment du même coup**. L'Espagnole est un contesté entre moteurs.
+Les deux qui comptent, communes aux deux moteurs, disent la même chose : **le plan canonique est le plan de la structure,
+le plan gratuit est le plan de la position, et l'écart entre les deux est du tempo.** Dans la Carlsbad, Ce5 au 6e à zéro et
+b5 au 15e à 0,46, c'est ce que les maîtres jouent — Ce5 et f4 d'abord, ou Tab1-b4 d'abord, les deux sont dans les livres.
+Dans le Tarrasch fermé, …e5 gratuit au 3e après O-O Fg5, et la colonne c à 0,84 au bout d'une ligne tactique où la réserve
+du Dev chef s'applique entièrement (le prix est pris au 22e demi-coup au milieu de …Fxh2+ et …Dxd5, pas à un point calme).
+
+Conséquence à écrire quel que soit le verdict : **le critère mesure autant la désignation des canoniques que l'instrument.**
+« Le plan de la structure » et « le plan à jouer maintenant » ne sont pas la même chose ; le livre parle du premier, le
+faisceau mesure le second, et le critère les confond. La règle interdit de retoucher le panel après la passe, et elle a
+raison : Ce5 n'est pas requalifié en canonique pour passer. Le critère s'applique tel qu'il est écrit, et deux des quatre
+échecs sont consignés comme des cas où le faisceau a dit quelque chose de plus fin que la question posée. Le tempo n'était
+pas dans le critère, et c'est lui qui porte la leçon : « le plan de cette structure est b5, le plan de ce coup est Ce5, et
+b5 revient quinze demi-coups plus tard pour un demi-pion » — aucun livre ne dit ça position par position, et c'est une
+phrase de professeur.
+
+La limite dure est l'accord des moteurs : un cas sur deux sur quinze coups, et la divergence des réseaux se compose avec
+l'horizon. Pour le professeur machine : un prix ne s'annonce qu'à deux voix, et la moitié des plans d'une position calme
+n'auront pas de prix annonçable. C'est un argument de plus pour **l'épreuve du jeu** plutôt que pour le verdict par
+position : sur une population de parties les désaccords entre réseaux se moyennent, sur une position ils tranchent ; le
+critère de ce soir est une mesure ponctuelle, et les mesures ponctuelles de ce panel sont au bord du bruit depuis le matin.
+
+Deux choses à faire **avant toute épreuve du jeu, et pas pour rejouer le critère, qui est gelé** : le prix pris à un point
+calme après la réalisation (même logique qu'au test à deux demi-coups — le Tarrasch montre que l'instantané au tempo peut
+mentir) ; et l'horizon à vingt coups pour les plans de structure (b5 au 27e, e5 au 25e chez SF 17.1 : quinze est à la
+lisière).
+
 ## 7. Limites, honnêtement
 
 - L'instantané du prix est pris au tempo, pas à un point calme (Dev chef) : la colonne c du Tarrasch fermé en est le cas.
@@ -177,4 +208,7 @@ atteindre 7.*
   octobre, plus prix et tempo.
 - **Si le critère échoue** : ce rapport dit pourquoi — le prix d'un plan sur quinze coups existe et se lit, mais il ne
   départage pas des plans à moins de 0,3 l'un de l'autre dans des positions calmes, et deux moteurs n'y donnent pas le même
-  chiffre un cas sur deux. On ferme, en gardant l'instrument et le vocabulaire.
+  chiffre un cas sur deux ; et le critère a mesuré la désignation des canoniques autant que l'instrument (§ 6 bis). On
+  ferme, en gardant l'instrument et le vocabulaire — et l'auteur relit ce rapport **à froid, dans quelques jours**, pour
+  décider si l'épreuve du jeu mérite un go à part. Ce n'est pas le soir même qu'on tranche cela ; c'est le cahier des
+  charges qui le dit.
