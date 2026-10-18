@@ -531,3 +531,38 @@ complète sur le pas forcé ; verdict sur la pire des deux meilleures réponses)
   « sans débat ». Il reste conditionnel comme plan ; l'ironie méritait d'être notée.
 - Pour la prochaine révision du test : bande « limite » sur l'axe 2 aussi (1,0 ± 0,25, retest à prof. 24), et les Δ par
   réponse affichés pour toute ligne contestée.
+
+## 11. Lecture de clôture (relecture relayée par l'auteur, 18 octobre, 21 h 30)
+
+**Ce que l'étape 2 produit, et qui n'existait pas ce matin** : une phrase de coach à la fois mécanique et utile —
+« **Fg5 se joue avant …h6, après c'est fermé** ». Elle sort des deux moteurs à l'identique, sur deux positions différentes,
+avec sa raison lisible dans la carte d'attaques (0 → 1 attaquant sur g5), et aucune règle d'échecs n'a été écrite pour
+l'obtenir. Premier énoncé falsifiable du projet, tombé juste.
+
+**Une sortie de plus, que le cas Carlsbad impose : « à la merci de la réponse ».** Quatre pions et demi d'écart entre
+deux réponses strictement égales à la racine (…a6 et …Fe6) : le sort du plan e4 ne dépend pas du plan mais d'un intermezzo
+à dix-sept demi-coups que seul le calcul voit. Le verdict honnête n'est ni « nuit » ni « prépare ». Règle : quand les deux
+meilleures réponses donnent des Δ de signe opposé au-delà du plancher, le plan est **instable par nature** — sortie
+distincte de « contesté entre moteurs » (désaccord entre juges) : ici c'est un désaccord entre défenses, et pour un élève
+la leçon est plus importante : ce plan-là ne se décide pas à la racine.
+
+**« Fenêtre suspendue ».** « Ferme la fenêtre » réservé au pion est juste. Mais O-O Fg5 contre …Ce4 (−7,52, « nuit, hors
+de prix ») est un **clouage** : …Ce4 n'existe plus tant que le clouage tient, et il tient jusqu'à …Fe7 ou …h6 — ni fermé,
+ni seulement plus cher : *suspendu*, réversible au prix d'un tempo. C'est le constat différé sur `threats.mjs`, à mettre
+**avant les autres** : le clouage est la prophylaxie par pièce la plus fréquente, et « fenêtre suspendue » vaut « fenêtre
+fermée » comme phrase de coach.
+
+**Le hérisson n'est pas une anecdote.** …Cc5, écarté du panel « sans débat » parce que conditionnel, est le meilleur coup à
+profondeur 30 : la première fois que la mesure contredit le livre — exactement ce qu'on attendait d'elle à midi, un
+professeur de plus qui peut dire aux autres qu'ils se trompent. Conséquence : **le panel canonique est une hypothèse, pas
+une vérité terrain**, et les désaccords entre la grammaire et le livre sont les positions à montrer à Marc en premier.
+
+**La suite, dans l'ordre, et pas plus.** Ne plus polir le test à deux demi-coups : 60 % de lignes annonçables sur un panel
+calme est son plafond par construction (§ 9), et les 8 désaccords restants sont des désaccords de réseau sur des lignes
+identiques que personne ne tranchera à un pas. Deux retouches seulement : le clouage dans `threats.mjs` (change le
+vocabulaire) et la bande « limite » sur l'axe 2 (cosmétique) — après quoi **l'instrument est fini**. Puis les deux étapes
+qui mesurent autre chose : le **panel avec menaces** (la clause « forcé » n'a toujours rien eu à trancher ; une heure de
+moteur), puis le **faisceau**, seul endroit où les plans longs sortent du bruit. Exigence posée avant d'en écrire une
+ligne : **ses sorties sont exactement le vocabulaire stabilisé aujourd'hui** — les deux axes, fenêtre fermée ou suspendue,
+plan frère, contesté entre moteurs, à la merci de la réponse — avec le prix et le tempo en plus. Ce vocabulaire est devenu,
+sans qu'on l'ait cherché, la grammaire des phrases du coach ; c'était la question du matin.
