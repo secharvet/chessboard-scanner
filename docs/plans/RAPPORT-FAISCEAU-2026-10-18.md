@@ -6,11 +6,10 @@ avant le code (`FAISCEAU-CRITERE-2026-10-18.md`). Pièces : annexes X (passe SF 
 moteurs), ZZ (passe à référence gloutonne, gardée comme témoin du biais) ; code `scripts/plans/faisceau.mjs`,
 `faisceau.sh`, `accord-faisceau.mjs`, `coach/en-prise.mjs` ; journal `docs/JOURNAL-PLANS.md`.
 
-> **État au moment de l'écriture (18 octobre, 23 h) : le verdict du critère n'est pas rendu.** Le décompte à profondeur 18
-> donne 6 positions sur 10 avec chacun des deux moteurs, sous la barre des 70 % ; la clause prévue avant la passe — une
-> contradiction du livre confirmée à profondeur 30 vaut réussite — est en cours d'arbitrage par l'Expert sur les quatre
-> contradictions de SF 19. Une seule confirmée fait 7 sur 10. Le § 8 sera complété par ses chiffres ; rien d'autre ne
-> bougera.
+> **Verdict (18 octobre, 23 h 55) : le critère passe — 9 positions sur 10 par la clause de profondeur 30 (6 à 18 +
+> 3 contradictions confirmées), plans longs canoniques 8 sur 10 — avec trois drapeaux (une limite, une « à la merci de la
+> réponse », un échec de mesure du prix). § 8. La suite (l'épreuve du jeu) reste soumise à un go à part, après relecture
+> à froid, et aux deux retouches du § 6 bis.**
 
 ## 0. Résumé
 
@@ -196,13 +195,40 @@ lisière).
 
 ## 8. Le verdict du critère
 
-*À compléter par les arbitrages à profondeur 30 de l'Expert sur les quatre contradictions de SF 19 (Carlsbad, Espagnole,
-avance blancs, Tarrasch fermée). Décompte au 18 octobre, 23 h : 6 réussies sur 10 ; une contradiction confirmée suffit à
-atteindre 7.*
+**Les arbitrages à profondeur 30** (Expert échecs, SF 19, un fil ; prix à 30 = éval de la racine − éval de la fin de la
+ligne contrainte, point de vue du camp qui plane ; les huit lignes rejouées et légales avant mesure ; racines à 30 :
+Carlsbad +0,40, Espagnole +0,17, avance +0,28, Tarrasch fermée −0,38 vue noire) :
+
+| position | canonique : fin, prix à 30 | rival : fin, prix à 30 | écart | verdict |
+|---|---|---|---|---|
+| Carlsbad | b4-b5 : +0,39, **+0,01** (l'attaque de minorité est gratuite à 30 ; le +0,46 de la passe 18 s'évapore) | Ce5 : +0,69, −0,29 | 0,30 | **confirmée, limite** (cinq centipions au-dessus de la barre) |
+| Espagnole d'échange | e4-e5 : −0,03, +0,20 (jouable, sous le plancher) | Cd5 : +0,56 (Ce2 ! garde les pièces), −0,39 | 0,59 | **confirmée, nette** |
+| Avance, Blancs | b4 : +0,38, −0,10 (b4 est gratuit ; le +0,30 de la passe 18 était la bande grise) | Fe3 : +0,90, −0,62 — mais ce +0,90 vient de la réponse …Cxe5 de la passe 18, que la 30 juge douteuse (le pion e5 est empoisonné) | 0,52 | **confirmée, à la merci de la réponse** |
+| Tarrasch fermée | colonne c : +0,11 vue noire (les Noirs sont mieux au bout de la ligne tactique), **−0,49** | …e5 : −0,24, −0,14 | le canonique est moins cher de 0,35 | **infirmée, et renversée** : la « contradiction » de la passe 18 était un artefact de l'instantané pris en pleine ligne tactique — 0,84 annoncé contre −0,49 réel, **1,3 pion d'erreur de snapshot** (la réserve du Dev chef, chiffrée) |
+
+**Décompte, clause appliquée telle qu'écrite** : 6 réussies à profondeur 18 + 3 contradictions confirmées à 30 = **9
+positions sur 10** ; plans longs canoniques réalisés à prix ≤ 1,0 : 8 sur 10. **Le critère passe**, au-dessus des 70 %,
+avec trois drapeaux honnêtes :
+- *Carlsbad* : limite, à cinq centipions de la barre, et la dérive d'évaluation entre deux tempos différents ne menace que
+  cette position ;
+- *Avance, Blancs* : la confirmation tient à une réponse que la profondeur 30 juge douteuse — « à la merci de la réponse » ;
+- *Tarrasch fermée* : reste en échec, mais **échec de la mesure du prix** (instantané tactique), pas du plan ni du livre ;
+  le correctif est connu (prix au point calme) et il est la première des deux retouches d'avant l'épreuve du jeu (§ 6 bis).
+
+**Ce que le verdict dit, et ce qu'il ne dit pas.** Il dit que sur ce panel, en profondeur, la mesure ne contredit pas la
+théorie — et que quand elle la contredit, c'est pour la préciser : Ce5 *et* b4-b5 sont des plans de la Carlsbad (les deux
+sont dans les livres, la désignation « b4-b5 seul » était trop étroite) ; dans l'Espagnole sans dames avec …c4 joué,
+l'installation Cd5 vaut mieux que la poussée immédiate, e5 restant correct ; dans l'avance, b4 est gratuit et la mesure a
+trouvé encore mieux. Trois « cas Marc » : des positions où la grammaire a quelque chose à dire au livre, à montrer en
+premier. Il ne dit pas que le prix à profondeur 18 est fiable à mieux que la bande grise (§ 6 bis, § 7) : deux des quatre
+arbitrages ont déplacé le prix de plus d'un demi-pion, et un l'a renversé. **Le critère passe sur la clause, pas sur la
+passe à 18 seule** — c'est exactement pour cela que la clause avait été écrite.
+
+Reproductible : l'outil de l'Expert, profondeur 30, un fil ; fichier de tests sur sa branche.
 
 ## 9. La suite, selon le verdict
 
-- **Si le critère passe** : l'épreuve du jeu — le faisceau étendu à la partie entière (le coach choisit, le moteur exécute
+- **Le critère passe (§ 8).** La suite prévue est l'épreuve du jeu — le faisceau étendu à la partie entière (le coach choisit, le moteur exécute
   sous contrainte, le moteur libre en face ; coût par partie de suivre la théorie), puis Maia (le même coach guidant un
   Maia-1500 contre lui-même). Avant d'en écrire une ligne : les sorties parlent exactement le vocabulaire stabilisé le 18
   octobre, plus prix et tempo.
