@@ -25,8 +25,19 @@ et en comparant à la ligne libre.
 - L'adversaire joue **librement** : son meilleur coup (profondeur 18), et sa seconde réponse quand elle est ex æquo.
 - **Largeur 4** : à chaque coup complet, on garde les quatre branches les mieux évaluées (point de vue de notre camp).
 - **Horizon : 15 coups** (30 demi-coups) depuis la racine.
-- **Ligne libre** : le moteur joue les deux camps depuis P, même profondeur, 30 demi-coups ; son évaluation au demi-coup n
-  est la référence du prix.
+- **Référence du prix : le faisceau libre** (amendement de l'Expert, relecture d'avant-passe) — mêmes candidats, même
+  largeur, mêmes réponses ouvertes, sans plan ni compteur, un par position, partagé par tous ses plans ; la meilleure
+  branche libre au demi-coup n est la référence. Pourquoi pas la ligne gloutonne (le moteur joue les deux camps) : le
+  faisceau garde à chaque coup les quatre branches les mieux évaluées pour nous, il optimise sous contrainte, et son
+  optimisme **croît avec le tempo** ; comparé à un seul chemin glouton, un plan réalisé au coup 15 paraissait moins cher
+  qu'un plan réalisé au coup 1 (les trois « contradictions du livre » de la passe SF 17.1 avaient toutes ce motif). La
+  référence doit subir la même pression de sélection. Un prix négatif se lit « gratuit », jamais « gain ».
+- **Tenure** : un transfert, un échange ou une colonne n'est réalisé que si la distance reste à 0 **après** la réponse
+  adverse (la pièce tient) ; une rupture ou une poussée est réalisée en poussant.
+- **Plans frères suivis** le long de la ligne comme le plan principal (sinon « sert » ment en profondeur).
+- **« À la merci de la réponse »** : seulement entre branches **jumelles** — mêmes coups à nous jusqu'à une réponse ex
+  æquo, puis prix des deux sous-arbres de signes opposés au-delà du plancher.
+- **Limite** aussi quand la dernière chance est refusée à moins du plancher de la borne (1,0 ± 0,25).
 
 ## 2. Les sorties — exactement le vocabulaire stabilisé le 18 octobre (§ 11), plus le prix et le tempo
 
