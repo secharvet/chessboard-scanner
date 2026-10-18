@@ -271,3 +271,45 @@ Techniquement prêt dans une semaine de soirées ; méthodologiquement, le jour 
   ferme, en gardant l'instrument et le vocabulaire — et l'auteur relit ce rapport **à froid, dans quelques jours**, pour
   décider si l'épreuve du jeu mérite un go à part. Ce n'est pas le soir même qu'on tranche cela ; c'est le cahier des
   charges qui le dit.
+
+## 10. L'effet des retouches (passe de contrôle, 19 octobre, 0 h 40 ; annexes AA, AB, AC)
+
+Même panel, mêmes réglages, un fil, Orion (26 + 27 min, 0 échec), avec les trois retouches : prix pris à un point calme
+après la réalisation (prix brut gardé), horizon vingt pour rupture / poussée / conjonction, bascule de structure détectée et
+nommée. **Ce n'est pas un nouveau verdict — le critère est gelé sur la passe du § 5 et les arbitrages du § 8** ; c'est la
+mesure de ce que les retouches changent, pour la lecture à froid.
+
+| | SF 19 retouché | SF 17.1 retouché | (rappel § 5 : SF 19 / SF 17.1) |
+|---|---|---|---|
+| c'est le plan / viable / en cours / sans concession / jamais urgent | 14 / 15 / 2 / 2 / 2 | 13 / 14 / 2 / 4 / 2 | 18 / 14 / 3 / 0 / 0 · 18 / 14 / 0 / 1 / 2 |
+| positions où le canonique n'est pas battu de plus de 25 cp (décompte à 18, à titre indicatif) | **7 / 10** | **7 / 10** | 6 / 10 · 6 / 10 |
+| lignes où le prix au point calme diffère du prix brut de plus de 25 cp | 8 / 35 | 3 / 35 | — |
+| lignes sans point calme après prolongation | 3 | 1 | — |
+| bascules de structure détectées le long de la ligne retenue | 13 / 35 | 13 / 35 | — |
+| accord des deux moteurs (annoncé / désaccord / contesté) | 18 / 14 / 3 | | 18 / 14 / 3 |
+
+**Ce que le point calme a changé.** Le cas qui motivait la retouche est réparé chez SF 19 : la colonne c du Tarrasch fermé,
+« +0,84 au 22e en pleine tactique » (§ 8 : −0,49 réel à 30), sort maintenant **« c'est le plan », −0,04 au 18e** — le point
+calme a fait au 18e ce que la profondeur 30 avait fait. Chez SF 17.1 elle reste chère (+1,82 au 28e) : désaccord de réseau,
+pas de mesure. Huit lignes sur 35 bougent de plus de 25 cp chez SF 19 — l'instantané au tempo n'était pas un détail.
+
+**Ce que l'horizon vingt a changé.** Il n'a pas sauvé l'attaque de minorité : chez SF 19 elle reste « en cours » à vingt
+coups (bascule au 26e demi-coup, la structure se dissout par fxe5), chez SF 17.1 elle se réalise au 23e à +1,51. Lecture :
+dans *cette* Carlsbad, b4-b5 n'est pas le plan du moment, et quinze coups de plus ne le rendent pas gratuit — la profondeur
+30 (§ 8) disait +0,01 pour une réalisation au 15e ; les deux mesures ne se contredisent pas, elles mesurent des lignes
+différentes. L'Espagnole bascule dans l'autre sens chez SF 19 : e4-e5 passe de « viable +1,31 au 25e » à « pas réalisable
+sans concession ». Les plans de structure à long tempo restent **la zone la moins stable de l'instrument** — c'est là que
+l'épreuve du jeu, statistique, remplacera le verdict par position.
+
+**Ce que la bascule montre.** Treize lignes sur 35 traversent une transformation de structure avant la réalisation, nommée
+avec le coup qui la cause : dans l'avance française, **cxd4 dissout la chaîne** au 4e demi-coup (CHAINE_E5 → rien) ; dans le
+Tarrasch fermé, **dxe5 donne aux Noirs un pion isolé** (→ PDI noir) ; au hérisson, cxb5 fait passer du Maroczy au petit
+centre sicilien. La **division** « continuer / adopter le plan canonique de la nouvelle structure » (table de l'Expert,
+`coach/plans-structures.mjs`) est codée et vérifiée à profondeur réduite, mais **n'a pas tourné dans cette passe** (Orion
+avait tiré le dépôt avant ce commit) : elle attend le protocole, comme l'ordre du § 9 le prévoit.
+
+**Décompte indicatif.** À profondeur 18, les retouches font passer le décompte brut de 6 à **7 sur 10 avec chaque
+moteur**, mais pas sur les mêmes positions : la Française d'échange devient la contradiction commune (c4 +0,36 / +0,29
+contre Fg5 ou la colonne e — celle que l'Expert annonçait dès la désignation) ; le Tarrasch fermé est réparé chez SF 19 ; la
+Carlsbad et l'Espagnole changent de visage. Rien de cela ne modifie le verdict du § 8 ; tout cela confirme sa lecture : la
+mesure est fine là où le tempo est court, instable là où il est long, et l'accord des moteurs reste la limite dure.

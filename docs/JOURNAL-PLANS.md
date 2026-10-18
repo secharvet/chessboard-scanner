@@ -1606,3 +1606,9 @@ INFIRMÉE et renversée (colonne c −0,49 réel contre +0,84 annoncé : 1,3 pio
 à 18 seule. Épreuve du jeu : go à part, à froid, après prix au point calme et horizon 20.
 **19 octobre, 0 h 20 : identité VPS / Orion sur le faisceau** — même passe SF 19, 35/35 plans identiques (phrase, prix, tempo,
 ligne). Journée close : filtre, nuit de stabilité, test à deux demi-coups v2, faisceau, deux rapports, 30 annexes.
+**19 octobre, 0 h 40 : passe de contrôle avec les trois retouches (Orion, deux moteurs, 0 échec), § 10 du rapport.** Point calme :
+le Tarrasch fermé passe de +0,84 à −0,04 chez SF 19 (ce que la prof. 30 avait trouvé) ; 8/35 prix bougent de plus de 25 cp.
+Horizon 20 : l'attaque de minorité reste « en cours » chez SF 19, +1,51 au 23e chez SF 17.1. Bascules nommées sur 13/35 lignes
+(cxd4 dissout la chaîne, dxe5 donne un PDI noir, cxb5 Maroczy → petit centre). Décompte indicatif 7/10 avec chaque moteur
+(critère gelé, verdict inchangé). Division « continuer / adopter » codée (table de l'Expert, `coach/plans-structures.mjs`), pas
+encore passée. Ordre arrêté : lecture à froid → protocole → bascule → parties.
