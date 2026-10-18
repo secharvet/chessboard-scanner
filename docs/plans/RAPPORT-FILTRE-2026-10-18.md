@@ -245,6 +245,21 @@ disparue.** Ce que la relecture change, et ce qu'elle révèle :
   les points 2 et 4 se contredisent — le meilleur pas est viable, le pas de la racine ne l'est pas. Les deux colonnes
   restent nécessaires, et le vocabulaire des sorties devra distinguer « le plan vit » de « ce pas-là se joue ».
 
+**Le vocabulaire qui règle les deux cas (réponse de l'Expert) : deux axes que le mot « préparatoire » confondait.**
+- *Axe 1, l'effet du coup M sur le plan* (Δ sur le meilleur pas) : **prépare / neutre / nuit / ferme la fenêtre**. Une
+  propriété du coup.
+- *Axe 2, l'état du plan après M et la réponse* : **mûr** (la réalisation elle-même est viable, retard ≤ 0,3) /
+  **en préparation** (un pas viable existe, pas la réalisation) / **injouable** (aucun pas viable) / **sans objet** /
+  **bloqué**. Une propriété du plan.
+
+Relus ainsi : « Dd3 *prépare* Ce5 (Δ +1,29) ; le plan est *en préparation*, pas mûr (0,84) — une préparation ne suffit
+pas. » C'est la vérité d'échecs : le Ce5 du pion isolé demande Dd3 *plus* une tour en e1 ou d1 ; la théorie dit la même
+chose que la mesure, et savoir si deux ou trois préparations cumulées suffisent est la question du faisceau. Le cas
+d'école n'est pas rétrogradé, il est raconté plus honnêtement. Et « …Tab8 est *neutre* pour …d5 ; le plan est *en
+préparation* (…Dc5 viable à 0,09) ; sa réalisation reste *injouable* (2,78). » Pour les valeurs à un centipion du seuil
+(Dd3 → d5, 0,31) : une **bande grise de ± plancher autour de 0,3**, verdict « limite », à retester à profondeur 24 — la
+pratique déjà en vigueur pour les fautes des livres ; le jour de la variance 18/24, la bande héritera du bon chiffre.
+
 ## 5. Ce qui est démontré, ce qui ne l'est pas, les limites
 
 **Démontré sur dix positions.**
