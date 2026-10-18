@@ -1581,3 +1581,9 @@ profondeur 30 sur les 2 contestés, panel à menaces, faisceau.
 (Δ −1,74 sur …a6 ; mais +2,65 sur …Fe6, réponse ex æquo — la règle « pire des deux » validée brutalement, et un verdict
 contesté doit donner les Δ par réponse) ; …d5 hérisson après Tab8 : prépare, limite (+0,38 sur h3, +2,20 sur Te1), d5 reste
 hors de prix (3,81). Anecdote : …Cc5, écarté du panel, est le meilleur coup du hérisson à prof. 30. Complément au § 10.
+**18 octobre, 21 h 30 : lecture de clôture (§ 11 du rapport).** Première phrase de coach falsifiable et juste : « Fg5 se joue
+avant …h6, après c'est fermé ». Vocabulaire des sorties stabilisé : deux axes, fenêtre fermée (pion) / **suspendue** (clouage,
+threats.mjs en premier), plan frère, contesté entre moteurs, **à la merci de la réponse** (Δ de signes opposés sur les deux
+meilleures réponses — Carlsbad e4 : −1,74 / +2,65). Le panel canonique est une hypothèse : les désaccords grammaire / livre
+(…Cc5 au hérisson) sont à montrer à Marc en premier. Ordre de la suite : clouage + bande axe 2, puis panel à menaces, puis
+faisceau dont les sorties sont ce vocabulaire plus prix et tempo. Le test à deux demi-coups n'est plus à polir.
