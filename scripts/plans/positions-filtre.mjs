@@ -13,7 +13,7 @@ export const POSITIONS = [
       { famille: 'rupture', pion: 'e', cible: 'e4' },
       { famille: 'transfert', de: 'f3', vers: 'e5' },
     ] },
-  { id: 'iqp-panov', canoniques: [0, 1, 2], nom: 'Pion isolé (Caro-Kann Panov), Blancs', coups: 'e4 c6 d4 d5 exd5 cxd5 c4 Nf6 Nc3 e6 Nf3 Be7 cxd5 Nxd5 Bd3 Nc6 O-O O-O Re1 Nf6 a3 b6 Bc2 Bb7',
+  { id: 'iqp-panov', canoniques: [2], nom: 'Pion isolé (Caro-Kann Panov), Blancs', coups: 'e4 c6 d4 d5 exd5 cxd5 c4 Nf6 Nc3 e6 Nf3 Be7 cxd5 Nxd5 Bd3 Nc6 O-O O-O Re1 Nf6 a3 b6 Bc2 Bb7',
     attendu: 'les trois plans du pion isolé : la poussée d4-d5, le cavalier en e5, la batterie Fc2-Dd3',
     plans: [
       { famille: 'rupture', pion: 'd', cible: 'd5' },
@@ -75,7 +75,7 @@ export const POSITIONS = [
       { famille: 'echange', mienne: 'b5', cible: 'c6' },
       { famille: 'transfert', de: 'b5', vers: 'd3' },
     ] },
-  { id: 'fr-echange', canoniques: [0, 1, 2], nom: 'Française d\'échange symétrique après 6…O-O, Blancs', coups: 'e4 e6 d4 d5 exd5 exd5 Nf3 Bd6 Bd3 Nf6 O-O O-O',
+  { id: 'fr-echange', canoniques: [0], nom: 'Française d\'échange symétrique après 6…O-O, Blancs', coups: 'e4 e6 d4 d5 exd5 exd5 Nf3 Bd6 Bd3 Nf6 O-O O-O',
     attendu: 'livre : casser la symétrie par c4 ; les tours sur la colonne e ; Fg5 cloue',
     plans: [
       { famille: 'rupture', pion: 'c', cible: 'c4' },

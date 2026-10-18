@@ -13,7 +13,16 @@ et en comparant à la ligne libre.
   progressant hors MultiPV (règle de la nuit : le moteur facture, la distance ne choisit pas).
 - Le **compteur** : un coup non progressant ni forcé ni roque compte 1 ; progressant remet à zéro ; forcé et roque sont
   neutres. Une branche dont le compteur dépasse **k = 2** est coupée (« le moteur préfère autre chose depuis trois coups »).
-- L'adversaire joue **librement** : son meilleur coup (profondeur 18). Option « pire des deux » pour les arbitrages.
+- **La branche de la dernière chance** (amendement de l'Expert) : quand une branche va être coupée — compteur plein ou
+  aucun progressant admissible dans le MultiPV —, on note UNE fois tous les coups légaux et on prend le meilleur coup
+  progressant hors MultiPV : s'il coûte ≤ 1,0 par rapport au meilleur coup, on le joue dans cette branche (c'est le prix du
+  plan, le moteur a facturé) ; au-delà, la branche est coupée « sans concession » **avec le chiffre**. Un pas à 0,35 du
+  meilleur, 6e du MultiPV, reçoit ainsi son prix au lieu d'un « jamais urgent » muet ; et « pas réalisable sans
+  concession » devient calculable.
+- **Réponses ex æquo** : quand les deux meilleures réponses adverses sont à moins du plancher l'une de l'autre, les deux
+  branches sont ouvertes ; si leurs prix finaux diffèrent de signe au-delà du plancher, le plan est **à la merci de la
+  réponse** (c'est le symptôme du cas Carlsbad …a6 / …Fe6).
+- L'adversaire joue **librement** : son meilleur coup (profondeur 18), et sa seconde réponse quand elle est ex æquo.
 - **Largeur 4** : à chaque coup complet, on garde les quatre branches les mieux évaluées (point de vue de notre camp).
 - **Horizon : 15 coups** (30 demi-coups) depuis la racine.
 - **Ligne libre** : le moteur joue les deux camps depuis P, même profondeur, 30 demi-coups ; son évaluation au demi-coup n
@@ -54,20 +63,25 @@ cher des plans longs est canonique » y serait vrai par construction. Le critèr
 position** ; les plans longs font l'objet d'un décompte séparé (combien sont réalisés dans l'horizon, à quel prix), parce
 que c'est là que le test à deux demi-coups échouait.
 
-## 4. Le critère d'arrêt
+## 4. Le critère d'arrêt (amendé par l'Expert le 18 octobre, 23 h, avant la passe)
 
-Sur les positions éligibles (au moins un plan non canonique), profondeur 18, un fil, SF 19 :
+Sur les positions éligibles (au moins un plan non canonique — dix sur dix après désignation), profondeur 18, un fil, SF 19 :
 
-> **Le faisceau réussit si, dans au moins 70 % des positions éligibles, le plan le moins cher de la position (prix, puis
-> tempo) est un plan canonique, avec un écart au second supérieur au plancher (25 cp) — OU, quand il contredit le livre, si
-> la profondeur 30 (Expert, un fil) lui donne raison. Et si, parmi les plans longs, au moins la moitié sont réalisés dans
-> l'horizon avec un prix fini.**
+> **Le faisceau réussit si, dans au moins 70 % des positions éligibles, aucun plan NON canonique ne bat le meilleur plan
+> canonique de plus du plancher (25 cp) — l'égalité dans le plancher est une réussite — OU, quand un plan non canonique
+> l'emporte, si la profondeur 30 (Expert, un fil) lui donne raison. Et si, parmi les plans longs CANONIQUES, au moins la
+> moitié sont réalisés dans l'horizon avec un prix ≤ 1,0.**
+
+Pourquoi cette forme : « le moins cher est canonique avec un écart au second > 25 » échouait par construction quand les
+deux moins chers sont canoniques (Espagnole : la conjonction et e5 à zéro l'une de l'autre) et exigeait que la mesure
+sépare ce que les échecs ne séparent pas (hérisson …b5 / …d5). Le critère teste « la mesure ne contredit pas la
+théorie », pas « la mesure tranche partout ». Et qu'un plan non canonique hors de prix ne se réalise pas (e4 Carlsbad, …d5
+hérisson) est une réussite de la mesure : il ne compte pas au dénominateur des plans longs.
 
 Si oui : on passe à l'épreuve du jeu (le faisceau étendu à la partie entière, puis Maia). Si non : **on écrit pourquoi et on
 ferme**, dans un rapport aussi détaillé que celui du filtre. Dans les deux cas le rapport paraît.
 
-Plafond : **deux semaines de soirées**. Les pièces existent (distance, wrapper UCI, classement des coups, deux moteurs,
-protocole à un fil, point calme) ; ce qui manque est la boucle, les branches, le compteur, les sorties.
+Plafond : **deux semaines de soirées**.
 
 ## 5. Ce qui est interdit
 
