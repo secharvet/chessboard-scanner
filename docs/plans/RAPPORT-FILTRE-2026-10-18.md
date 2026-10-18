@@ -261,6 +261,28 @@ préparation* (…Dc5 viable à 0,09) ; sa réalisation reste *injouable* (2,78)
 (Dd3 → d5, 0,31) : une **bande grise de ± plancher autour de 0,3**, verdict « limite », à retester à profondeur 24 — la
 pratique déjà en vigueur pour les fautes des livres ; le jour de la variance 18/24, la bande héritera du bon chiffre.
 
+### 4.6 Troisième relecture (relayée par l'auteur) : trois points qui réordonnent la suite
+
+1. **La stabilité d'abord, aucun code avant.** Un verdict qui change de signe avec le nombre de fils n'est pas un verdict,
+   et le plancher de 15 cp est à la limite du bruit mesuré : h3 → Ce5 (+0,28), g4 → Cb5 (+0,14), …Tab8 → …b5 (+0,03) sont
+   peut-être du signal, peut-être pas, et ce tableau ne permet pas de le savoir. Précision pour la nuit elle-même : il y a
+   **deux instabilités de nature différente**. L'une est continue — ±0,10 sur les notes entre passes — et c'est elle que la
+   variance 18/24 et entre moteurs chiffrera (le plancher). L'autre est **discrète** : le basculement de Cbd2 (+0,71 →
+   −0,14) vient d'un changement de *réponse adverse* (…c4 puis …a5, à égalité à profondeur 18), un saut de ligne entière que
+   la variance ne décrit pas. La nuit doit donc produire deux chiffres : la variance des notes, et la fréquence à laquelle
+   le meilleur coup, la meilleure réponse et l'ordre des écarts **changent d'identité** entre 18 et 24 et entre moteurs. Elle
+   ne demande aucun code (`--depth 24` sur les deux scripts, `STOCKFISH_PATH=/usr/games/stockfish` pour le second moteur) ;
+   une heure pour le tableau, cinq à six pour le test, un fil.
+2. **Le roque n'est pas neutre.** Les données le disent : O-O prépare …Ce4 (+0,77 au point calme) et nuit à …e5 sur le
+   même pas — le roque est un coup de plan comme un autre, et c'est une des lignes les plus intéressantes du test. « Roque
+   neutre par règle » ne vaut que comme raccourci du compteur du faisceau, où rejouer le test à chaque nœud coûterait trop ;
+   **il ne remonte jamais dans la narration** : le coach dit ce que la mesure a dit, jamais ce que le raccourci a supposé.
+3. **Deux préférences, deux leçons.** Dix-sept préférences sur trente-cinq, la sortie dominante du futur coach — mais la
+   colonne « sert » y distingue « le moteur préfère un coup d'intendance » (h3) de « le moteur préfère un **plan frère** »
+   (Ff4 qui sert e5 et l'échange, cxd4 qui ouvre la colonne c). La seconde est précisément la comparaison de plans voulue au
+   départ, celle qui transforme une préférence en choix. « Sert un plan frère » est la troisième information, à côté des
+   deux axes du § 4.5.
+
 ## 5. Ce qui est démontré, ce qui ne l'est pas, les limites
 
 **Démontré sur dix positions.**
@@ -298,9 +320,9 @@ pratique déjà en vigueur pour les fautes des livres ; le jour de la variance 1
 
 | étape | ce qu'elle tranche | coût |
 |---|---|---|
-| Test à deux demi-coups propre : point calme par menaces (borné), échange réalisé l'une contre l'autre, statut sur le meilleur pas + viabilité 0,3, « le plan n'attend pas », deux réponses adverses pour les verdicts serrés | les natures 2 à 4 du « nuit au plan » ; les six retours de l'Expert (§ 4.5) | une demi-journée de code, une heure de moteur |
-| Panel avec menaces (fautes vérifiées des livres, offre de l'Expert) | la clause « forcé » et x, qui n'ont rien eu à trancher ici | 10 positions, une heure de moteur |
-| Stabilité 18/24 et deux moteurs, déterministe | le plancher « nettement » ; si les ordres tournent, tout le reste est du bruit | une nuit |
-| Recherche en faisceau (compteur : forcé et roque neutres, k ≈ 2 ; quatre sorties) | le prix et le tempo d'un plan sur quinze coups — la question d'origine | plusieurs jours de code, une nuit par panel ; Deneb utile |
+| **1. Stabilité 18/24 et deux moteurs, déterministe — aucun code avant** | le plancher « nettement » (variance des notes) et la part des verdicts qui changent d'identité (meilleur coup, meilleure réponse, ordre des écarts) ; tout ce qui suit est paramétré par ces deux chiffres | une nuit de moteur, zéro code |
+| 2. Test à deux demi-coups propre : point calme par menaces (borné), échange réalisé l'une contre l'autre, statut sur le meilleur pas + viabilité 0,3 avec bande grise, « le plan n'attend pas », deux réponses adverses pour les verdicts serrés, « sert un plan frère » en sortie | les natures 2 à 4 du « nuit au plan » ; les retours des deux relectures (§ 4.5, § 4.6) | une demi-journée de code, une heure de moteur |
+| 3. Panel avec menaces (fautes vérifiées des livres, offre de l'Expert) | la clause « forcé », qui n'a rien eu à trancher ici | 10 positions, une heure de moteur |
+| 4. Recherche en faisceau (compteur : forcé et roque neutres *comme raccourci seulement*, k ≈ 2 ; les deux axes et le plan frère en sorties) | le prix et le tempo d'un plan sur quinze coups — la question d'origine | plusieurs jours de code, une nuit par panel ; Deneb utile |
 
 Rien de cette suite ne démarre sans le go de l'auteur.
