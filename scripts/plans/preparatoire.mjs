@@ -66,7 +66,18 @@ async function reponses(fen, n) {
   const l = await engine.analyze(fen, { depth: DEPTH, multipv: n, timeoutMs: 10 * 60_000 });
   const r = l.map((x) => x.pv[0]); cacheRep.set(k, r); return r;
 }
-/** Depuis une position à mon trait : prolonger tant que le meilleur coup est une prise, une parade d'échec ou un coup forcé (2 fois au plus). */
+const VAL = { p: 1, n: 3, b: 3, r: 5, q: 9, k: 100 };
+/** Une pièce à moi (pas un pion) est-elle en prise : attaquée par moins cher qu'elle, ou plus attaquée que défendue ? */
+function enPrise(fen, side) {
+  const map = buildAttackMap(fen), opp = other(side);
+  return map.pieces.some((p) => {
+    if (p.color !== side || p.type === 'p' || p.type === 'k') return false;
+    const att = map.attackersOf(p.square, opp); if (!att.length) return false;
+    return Math.min(...att.map((a) => VAL[a.type])) < VAL[p.type] || att.length > map.attackersOf(p.square, side).length;
+  });
+}
+/** Depuis une position à mon trait : prolonger tant qu'il y a une menace à parer — prise à jouer, échec, pièce en prise,
+ *  ou coup forcé (le meilleur bat le second de plus d'un pion) — deux fois au plus. Le point calme par menaces du § 6. */
 async function pointCalme(fen) {
   const joues = [];
   for (let i = 0; i < 2; i++) {
@@ -74,7 +85,7 @@ async function pointCalme(fen) {
     if (!mes.best) return { fen, mesure: mes, joues };
     const c = new Chess(fen);
     const force = mes.coups[1] && mes.best.cp - mes.coups[1].cp > FORCE;
-    if (!(mes.best.m.captured || c.inCheck() || force)) return { fen, mesure: mes, joues };
+    if (!(mes.best.m.captured || c.inCheck() || force || enPrise(fen, c.turn()))) return { fen, mesure: mes, joues };
     const a = jouer(fen, uciOf(mes.best.m)); joues.push(a.m);
     const [rep] = await reponses(a.fen, 1); if (!rep) return { fen: a.fen, mesure: await noter(a.fen), joues };
     const b = jouer(a.fen, rep); joues.push(b.m); fen = b.fen;
@@ -85,6 +96,11 @@ async function pointCalme(fen) {
 function toucheCase(fenAvant, fenApres, mRep, pas, side) {
   if (!pas) return { touche: false, raison: '' };
   const to = pas.to, opp = other(side);
+  // Si M lui-même a rendu le pas injouable (il a déplacé la pièce du pas ou occupé sa case), ce n'est pas la réponse qui ferme.
+  // Avant la réponse c'est l'adversaire qui a le trait : on lui rend le nôtre pour tester le pas (position pseudo-légale).
+  const aNous = (f) => { const p = f.split(' '); p[1] = side; p[3] = '-'; return p.join(' '); };
+  let legalAvant = true; try { legalAvant = new Chess(aNous(fenAvant)).moves({ verbose: true }).some((m) => m.from === pas.from && m.to === pas.to); } catch { legalAvant = true; }
+  if (!legalAvant) return { touche: false, raison: `${fr(pas.san)} déjà déplacé par M` };
   const avant = buildAttackMap(fenAvant).attackersOf(to, opp), apres = buildAttackMap(fenApres).attackersOf(to, opp);
   const vise = apres.some((p) => p.square === mRep.to);
   const legal = new Chess(fenApres).moves({ verbose: true }).some((m) => m.from === pas.from && m.to === pas.to);
@@ -105,12 +121,14 @@ for (const e of entrees) {
   const pasRacine = c.moves({ verbose: true }).find((m) => m.san === bp.san);
   console.error(`${pos.id} / ${e.libelle} : ${fr(M.san)} …`);
   const mM = jouer(fen, uciOf(c.moves({ verbose: true }).find((m) => m.san === M.san)));
+  // Le pas suit sa pièce : si M a joué la pièce du pas (Fe3 avant Ff4, Fd3 avant Fxc6), le pas part de la nouvelle case.
+  const pasSuivi = pasRacine && pasRacine.from === mM.m.from ? { ...pasRacine, from: mM.m.to } : pasRacine;
   const reps = await reponses(mM.fen, REPONSES);
   if (!reps.length) { lignes.push({ ...base, axe1: 'sans objet', etat: 'sans objet', note: 'pas de réponse adverse (partie finie)' }); continue; }
   const essais = [];
   for (const u of reps) {
     const r = jouer(mM.fen, u);
-    const tc = toucheCase(mM.fen, r.fen, r.m, pasRacine, side);
+    const tc = toucheCase(mM.fen, r.fen, r.m, pasSuivi, side);
     const q = await pointCalme(r.fen);
     let planQ = suivre(suivre(e.plan, mM.m), r.m); for (const m of q.joues) planQ = suivre(planQ, m);
     const suite = [mM.m, r.m, ...q.joues].map((m) => fr(m.san)).join(' ');
