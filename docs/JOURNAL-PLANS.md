@@ -1604,3 +1604,5 @@ INFIRMÉE et renversée (colonne c −0,49 réel contre +0,84 annoncé : 1,3 pio
 9/10, le critère passe**, plans longs 8/10, trois drapeaux. Lecture : la mesure ne contredit pas la théorie, elle la précise
 (trois cas Marc) ; le prix à 18 n'est pas fiable au-delà de la bande grise ; le critère passe sur la clause, pas sur la passe
 à 18 seule. Épreuve du jeu : go à part, à froid, après prix au point calme et horizon 20.
+**19 octobre, 0 h 20 : identité VPS / Orion sur le faisceau** — même passe SF 19, 35/35 plans identiques (phrase, prix, tempo,
+ligne). Journée close : filtre, nuit de stabilité, test à deux demi-coups v2, faisceau, deux rapports, 30 annexes.

@@ -114,6 +114,8 @@ calme** — sur une position où prix et phrase ne concordent que grâce à un d
 | critère : positions réussies (sur 10 éligibles) | **6** | **6** |
 | contradictions du livre (> 25 cp) | Carlsbad, Espagnole, avance blancs, Tarrasch fermée | Carlsbad, hérisson, Tarrasch fermée, échange |
 
+**Identité entre machines** : la même passe SF 19 a tourné sur le VPS (trois processus, 1 h 30) et sur Orion (dix processus, 29 min), même binaire, un fil : **35 plans sur 35 identiques** — phrase, prix, tempo, ligne retenue. Le faisceau est déterministe de bout en bout.
+
 **Accord des deux moteurs** (annexe Z) : 18 plans sur 35 annoncés avec la même phrase et moins d'un pion d'écart, 14
 désaccords, 3 contestés (e4-e5 de l'Espagnole : +1,31 au 25e contre +0,10 au 3e ; …b5 du hérisson : −0,17 contre +1,08 ;
 …Ce4 du Tarrasch fermé : en cours +3,28 contre +1,13). Sur quinze coups, deux réseaux ne donnent pas le même prix dans un
