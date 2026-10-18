@@ -89,7 +89,15 @@ L'épreuve du jeu est la version statistique de la question du faisceau.
 > dit où (par structure, par plan), et l'épreuve Maia n'a pas lieu avant correction. Au-delà de 1,00 : la théorie est fausse
 > quelque part ; le journal dit où, au coup près, et on ferme.
 
-Pas de coût négatif annoncé comme gain : un coût ≤ 0 se lit « la théorie est ce que le moteur voulait ».
+Le coût cumulé est **une borne supérieure du vrai coût, assumée** : chaque retard est le désaccord de la profondeur 18 au
+moment du coup, et la profondeur 18 ne crédite jamais la récupération au-delà de son horizon — le « cher au premier coup,
+gratuit sur quinze » (Cb3 après dxc5) est re-facturé par construction. Acceptable pour un critère de *passage* : si la
+théorie passe ainsi, elle est vraiment bon marché. **Voie de recours**, comme pour le faisceau : un échec à la marge
+s'arbitre à profondeur 30 sur les coups incriminés, que le journal donne au coup près. Et parce qu'un quart de pion
+*cumulé sur vingt à quarante coups* est une exigence plus stricte qu'un quart de pion final (la borne a changé de nature
+en gardant son chiffre — gel honnête, il durcit), le rapport publie **à côté du cumul le nombre de coups sous plan et le
+retard par coup sous plan** : si l'épreuve échoue à la marge, ces colonnes diront si c'est la théorie ou la borne. Un coût
+cumulé n'est jamais négatif ; zéro se lit « la théorie est ce que le moteur voulait ».
 
 ## 5 bis. Définitions opérationnelles (pour que le code se relise ligne à ligne — relecture du Dev chef)
 
@@ -113,8 +121,10 @@ Pas de coût négatif annoncé comme gain : un coût ≤ 0 se lit « la théorie
    vérifiées avant la passe ; cache de notation par processus, clé = position (les dix parties d'un départ partagent
    leur préfixe).
 8. **Fin de partie** : `isGameOver` de chess.js (mat, pat, répétition, cinquante coups, matériel) ou le 80e demi-coup ;
-   l'éval finale est prise du point de vue du coach. **Dernière chance** à l'échelle d'une partie : la notation de tous
-   les coups légaux se fait à profondeur 14 (plafond de coût), le coup retenu est ensuite joué et noté à 18 comme les autres.
+   l'éval finale est prise du point de vue du coach. **Retard d'un coup** : il sort de la **même notation MultiPV 4 à
+   profondeur 18 qui a servi au choix** (meilleur − joué), jamais d'une re-notation. **Dernière chance** : la notation de
+   tous les coups légaux qui la *décide* se fait à profondeur 14 (plafond de coût) ; son retard, lui, est mesuré à 18
+   comme les autres — meilleur de la MultiPV 4 moins la valeur du coup joué, lue dans la réponse adverse à 18.
 9. **Code** : la logique d'un coup contraint (classer les quatre candidats, choisir, dernière chance) est **extraite du
    faisceau dans un module partagé** (`coach/coup-contraint.mjs`), testée, appelée par le faisceau *et* par le pilote de
    partie — pas de copie, sinon les deux divergent. Lanceur sur la matrice départs × graines, à partir de `faisceau.sh`.
