@@ -1587,3 +1587,13 @@ threats.mjs en premier), plan frère, contesté entre moteurs, **à la merci de 
 meilleures réponses — Carlsbad e4 : −1,74 / +2,65). Le panel canonique est une hypothèse : les désaccords grammaire / livre
 (…Cc5 au hérisson) sont à montrer à Marc en premier. Ordre de la suite : clouage + bande axe 2, puis panel à menaces, puis
 faisceau dont les sorties sont ce vocabulaire plus prix et tempo. Le test à deux demi-coups n'est plus à polir.
+**18 octobre, 21 h – 23 h : le faisceau (go de l'auteur, « lance tout, n'oublie pas ton rapport détaillé »).** Cahier des
+charges et critère écrits avant le code (`FAISCEAU-CRITERE-2026-10-18.md`), canoniques désignés et validés par l'Expert (Panov →
+Dd3 seul, échange → c4 seul), code `scripts/plans/faisceau.mjs` (+ `faisceau.sh`, `accord-faisceau.mjs`, `coach/en-prise.mjs`).
+Passe témoin SF 17.1 à référence gloutonne : 6/10 et des prix négatifs → relectures Expert (biais de sélection croissant avec
+le tempo, tenure, plans frères suivis, jumelles, « le faisceau apprend le bon moment du même plan ») et Dev chef (réalisations
+non bornées par la largeur, coût réel des concessions, mats bornés, garde d'unicité remontée) ; référence remplacée par un
+**faisceau libre** de même largeur. Passes définitives (Orion, 29 min chacune, 0 échec) : **critère 6/10 avec chaque moteur**,
+plans longs canoniques ≤ 1,0 : 8/10 (SF 19), 5/10 (SF 17.1) ; accord des moteurs 18/35 ; deux contradictions communes
+(Carlsbad b4-b5 0,46-1,62 contre Ce5 0 ; Tarrasch fermée colonne c 0,84-1,92 contre …e5 0). Clause prof. 30 en cours chez
+l'Expert sur les quatre contradictions de SF 19. Rapport : `RAPPORT-FAISCEAU-2026-10-18.md` (§ 8 à compléter), annexes X-ZZ.
