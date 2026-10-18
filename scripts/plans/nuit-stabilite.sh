@@ -20,6 +20,6 @@ printf '%s\n' $IDS | xargs -P "$PAR" -I{} sh -c "nice -n 19 node scripts/plans/f
 echo "$(date -u +%FT%TZ) tableau fini"
 printf '%s\n' $IDS | xargs -P "$PAR" -I{} sh -c "nice -n 19 node scripts/plans/preparatoire.mjs --depth $PROF --in $JSON --seulement {} --out $OUT/preparatoire-{}.md > $OUT/preparatoire-{}.log 2>&1" || true
 echo "$(date -u +%FT%TZ) test fini"
-ECHECS=$(grep -l -E "Error|TypeError|délai dépassé" "$OUT"/*.log 2>/dev/null | wc -l)
+ECHECS=$({ grep -l -E "Error|TypeError|délai dépassé" "$OUT"/*.log 2>/dev/null || true; } | wc -l)
 [ "$ECHECS" -gt 0 ] && grep -l -E "Error|TypeError|délai dépassé" "$OUT"/*.log | sed "s/^/ÉCHEC : /"
 echo "TERMINÉ $OUT ($ECHECS échec(s))" | tee "$OUT/TERMINE"
