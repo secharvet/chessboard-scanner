@@ -24,13 +24,15 @@ import { Chess } from 'chess.js';
 import { UciEngine } from '../../coach/uci-engine.mjs';
 import { distance, suivre, verrouiller, estLevier, libelle } from '../../coach/plan-distance.mjs';
 import { enPrise } from '../../coach/en-prise.mjs';
+import { buildStructureFacts } from '../../positional/structures.js';
 import { enToFr } from '../../coach/notation.mjs';
 import { POSITIONS } from './positions-filtre.mjs';
 
 const args = process.argv.slice(2);
 const opt = (k, d) => (args.includes(k) ? args[args.indexOf(k) + 1] : d);
 const DEPTH = Number(opt('--depth', 18)), CANDIDATS = Number(opt('--candidats', 4)), LARGEUR = Number(opt('--largeur', 4));
-const HORIZON = Number(opt('--horizon', 15)), K = Number(opt('--k', 2)), PLANCHER = Number(opt('--plancher', 25)), BANDE = 2 * PLANCHER;
+const HORIZON = Number(opt('--horizon', 15)), HORIZON_STRUCTURE = Number(opt('--horizon-structure', 20)), K = Number(opt('--k', 2)), PLANCHER = Number(opt('--plancher', 25)), BANDE = 2 * PLANCHER;
+const HMAX = Math.max(HORIZON, HORIZON_STRUCTURE);
 const CONCESSION = 100, FORCE = 100;
 const SEUL = opt('--seulement', null);
 const OUT = opt('--out', 'reports/plans/faisceau/faisceau.md');
@@ -64,6 +66,29 @@ async function ligneLibre(fen, side, plies) {
   return { evals, sans };
 }
 const estRoque = (m) => m.piece === 'k' && Math.abs(m.from.charCodeAt(0) - m.to.charCodeAt(0)) === 2;
+/** Signature de structure d'une position (noms des structures reconnues, par camp), pour détecter une bascule le long de la ligne. */
+const structure = (fen) => buildStructureFacts(fen).filter((f) => f.id === 'STRUCTURE').map((f) => `${f.params.name}:${f.params.color}`).sort().join(' ') || '—';
+/** La position (à mon trait) est-elle calme ? Sinon on la prolonge avant de prendre le prix (mêmes règles que le test à deux demi-coups). */
+function calme(fen, cands, side) {
+  const c = new Chess(fen);
+  if (!cands.length) return true;
+  const force = !cands[1] || cands[0].cp - cands[1].cp > FORCE;
+  return !(c.inCheck() || cands[0].m.captured || force || enPrise(fen, side));
+}
+/** Prolonge une position réalisée jusqu'à un point calme : mon meilleur coup + la meilleure réponse, l'échec toujours, le reste deux fois au plus. */
+async function pointCalme(fen, ply, side) {
+  const joues = []; let budget = 2;
+  for (let i = 0; i < 6; i++) {
+    const cands = await noter(fen, 2);
+    if (!cands.length) return { fen, ply, cp: null, joues, calme: false };
+    if (calme(fen, cands, side)) return { fen, ply, cp: cands[0].cp, joues, calme: true };
+    if (!new Chess(fen).inCheck()) { if (!budget) return { fen, ply, cp: cands[0].cp, joues, calme: false }; budget--; }
+    const a = jouer(fen, cands[0].uci); joues.push(a.m);
+    const [rep] = await noter(a.fen, 1); if (!rep) { return { fen: a.fen, ply: ply + 1, cp: cands[0].cp, joues, calme: true }; }
+    const b = jouer(a.fen, rep.uci); joues.push(b.m); fen = b.fen; ply += 2;
+  }
+  const cands = await noter(fen, 1); return { fen, ply, cp: cands[0]?.cp ?? null, joues, calme: false };
+}
 /** Réponses adverses ouvertes depuis une position à leur trait : la meilleure, et la seconde si elle est ex æquo. */
 async function reponsesOuvertes(fen) { const reps = await noter(fen, 2); return reps.length > 1 && Math.abs(reps[0].cp - reps[1].cp) <= PLANCHER ? reps : reps.slice(0, 1); }
 
@@ -72,7 +97,7 @@ async function reponsesOuvertes(fen) { const reps = await noter(fen, 2); return 
 async function faisceauLibre(fen, side, libreGlouton) {
   const evals = [...libreGlouton.evals]; // repli : la ligne gloutonne, quand le faisceau libre n'a plus d'état à ce demi-coup
   let etats = [{ fen, ply: 0, cp: libreGlouton.evals[0] }];
-  for (let coup = 0; coup < HORIZON && etats.length; coup++) {
+  for (let coup = 0; coup < HMAX && etats.length; coup++) {
     const suivants = [];
     for (const e of etats) {
       const cands = await noter(e.fen, CANDIDATS);
@@ -95,7 +120,10 @@ async function faisceauLibre(fen, side, libreGlouton) {
 async function faisceau(pos, fen, side, plan, autres, libre) {
   const d0 = distance(fen, side, plan).d;
   const tenure = !['rupture', 'poussee'].includes(plan.famille); // un transfert ou un échange doit TENIR après la réponse ; une poussée est réalisée en poussant
-  let etats = [{ fen, plan, autres: autres.map((a) => a.plan), compteur: 0, ligne: [], ply: 0, cp: libre.evals[0], d: d0, jumelles: [] }];
+  const horizon = ['rupture', 'poussee', 'et'].includes(plan.famille) ? HORIZON_STRUCTURE : HORIZON; // les plans de structure prennent plus de coups
+  const structRacine = structure(fen);
+  const borneCp = (c) => Math.max(-1000, Math.min(1000, c));
+  let etats = [{ fen, plan, autres: autres.map((a) => a.plan), compteur: 0, ligne: [], ply: 0, cp: libre.evals[0], d: d0, jumelles: [], bascule: null }];
   let splits = 0;
   const realises = [], coupes = [];
   /** Joue `cand` depuis l'état e, puis la ou les réponses adverses (la seconde si elle est ex æquo) ; range les états. */
@@ -118,7 +146,9 @@ async function faisceau(pos, fen, side, plan, autres, libre) {
       const j = jouer(apres.fen(), rep.uci);
       const planSuite = suivre(planApres, j.m), dSuite = distance(j.fen, side, planSuite).d;
       const realise = tenure ? dSuite === 0 : (d1 === 0 || dSuite === 0);
-      const etat = { fen: j.fen, plan: realise ? verrouiller(planSuite, j.fen, side) : planSuite, autres: autresApres.map((a) => suivre(a, j.m)), compteur, ply: e.ply + 2, cp: -rep.cp, d: dSuite,
+      const sig = structure(j.fen);
+      const bascule = e.bascule ?? (sig !== structRacine ? { ply: e.ply + 2, avant: structRacine, apres: sig, par: structure(apres.fen()) !== structRacine ? cand.m.san : j.m.san, parAdversaire: structure(apres.fen()) === structRacine, prixAvant: borneCp(libre.evals[Math.min(e.ply + 2, libre.evals.length - 1)] ?? 0) - borneCp(-rep.cp) } : null);
+      const etat = { fen: j.fen, plan: realise ? verrouiller(planSuite, j.fen, side) : planSuite, autres: autresApres.map((a) => suivre(a, j.m)), compteur, ply: e.ply + 2, cp: -rep.cp, d: dSuite, bascule,
         jumelles: split ? [...e.jumelles, { id: split, cote: ri }] : e.jumelles,
         ligne: [...e.ligne, { san: cand.m.san, classe, sert, cout, rep: j.m.san, repAlt: ri > 0, cp: -rep.cp, d: dSuite }] };
       if (realise) { etat.tempo = !tenure && d1 === 0 ? e.ply + 1 : e.ply + 2; etat.realise = true; suivants.push(etat); continue; } // soumis au même tri de largeur que les branches vivantes
@@ -126,7 +156,7 @@ async function faisceau(pos, fen, side, plan, autres, libre) {
       suivants.push(etat);
     }
   }
-  for (let coup = 0; coup < HORIZON && etats.length; coup++) {
+  for (let coup = 0; coup < horizon && etats.length; coup++) {
     const suivants = [];
     for (const e of etats) {
       const cands = await noter(e.fen, CANDIDATS);
@@ -167,8 +197,16 @@ async function faisceau(pos, fen, side, plan, autres, libre) {
     etats = gardes.filter((x) => !x.realise);
   }
   const vivants = etats;
-  const borne = (c) => Math.max(-1000, Math.min(1000, c)); // les scores de mat ne font pas des prix en milliers
-  const prixDe = (x) => borne(libre.evals[Math.min(x.ply, libre.evals.length - 1)] ?? 0) - borne(x.cp);
+  const borne = borneCp; // les scores de mat ne font pas des prix en milliers
+  const prixBrut = (x) => borne(libre.evals[Math.min(x.ply, libre.evals.length - 1)] ?? 0) - borne(x.cp);
+  // Le prix d'une réalisation se prend à un POINT CALME après elle (le Tarrasch fermé : 0,84 annoncé au 22e en pleine
+  // tactique, −0,49 réel) ; le prix brut au tempo est gardé pour information.
+  for (const x of realises) {
+    const q = await pointCalme(x.fen, x.ply, side);
+    x.calme = q.calme; x.plyCalme = q.ply; x.cpCalme = q.cp ?? x.cp; x.prolonge = q.joues.map((m) => m.san);
+    x.prixCalme = borne(libre.evals[Math.min(q.ply, libre.evals.length - 1)] ?? 0) - borne(x.cpCalme);
+  }
+  const prixDe = (x) => (x.prixCalme ?? prixBrut(x));
   let phrase, retenu = null, prix = null, tempo = null, merci = false;
   if (realises.length) {
     retenu = realises.reduce((a, b) => (prixDe(b) < prixDe(a) || (prixDe(b) === prixDe(a) && b.tempo < a.tempo) ? b : a));
@@ -190,21 +228,21 @@ async function faisceau(pos, fen, side, plan, autres, libre) {
     retenu = coupes.reduce((a, b) => (b.ply > a.ply ? b : a), coupes[0] ?? null);
   }
   const concessionMin = coupes.filter((x) => x.raison === 'concession' && x.cout != null).reduce((m, x) => Math.min(m, x.cout), Infinity);
-  const limite = (prix != null && prix > PLANCHER && prix <= BANDE) || (tempo != null && tempo >= 2 * HORIZON - 2)
+  const limite = (prix != null && prix > PLANCHER && prix <= BANDE) || (tempo != null && tempo >= 2 * horizon - 2)
     || (tempo == null && Number.isFinite(concessionMin) && Math.abs(concessionMin - CONCESSION) <= PLANCHER); // dernière chance refusée à un cheveu de la borne
-  return { libelle: libelle(plan, fen), d0, phrase, prix, tempo, limite, merci, concessionMin: Number.isFinite(concessionMin) ? concessionMin : null, ligne: retenu?.ligne ?? [], realises: realises.length, vivants: vivants.length,
+  return { libelle: libelle(plan, fen), d0, phrase, prix, prixBrut: retenu && retenu.tempo != null ? prixBrut(retenu) : null, calme: retenu?.calme ?? null, prolonge: retenu?.prolonge ?? [], bascule: retenu?.bascule ?? null, horizon, tempo, limite, merci, concessionMin: Number.isFinite(concessionMin) ? concessionMin : null, ligne: retenu?.ligne ?? [], realises: realises.length, vivants: vivants.length,
     coupes: { concession: coupes.filter((x) => x.raison === 'concession').length, compteur: coupes.filter((x) => x.raison === 'compteur').length, autres: coupes.filter((x) => !['concession', 'compteur'].includes(x.raison)).length } };
 }
 
 function rendre(resultats, positions) {
-  const md = [`# Faisceau — ${new Date().toISOString().slice(0, 10)} — prof. ${DEPTH}, ${CANDIDATS} candidats, largeur ${LARGEUR}, horizon ${HORIZON} coups, k = ${K}, plancher ${PLANCHER}`, '',
+  const md = [`# Faisceau — ${new Date().toISOString().slice(0, 10)} — prof. ${DEPTH}, ${CANDIDATS} candidats, largeur ${LARGEUR}, horizon ${HORIZON} coups (${HORIZON_STRUCTURE} pour les plans de structure), k = ${K}, plancher ${PLANCHER}, prix au point calme`, '',
     'Prix = éval du FAISCEAU LIBRE (même largeur, mêmes candidats, sans plan) − éval de la ligne contrainte au même demi-coup (positif = suivre le plan coûte ; négatif = gratuit, pas un gain). Tempo = demi-coup de la réalisation. Ligne : nos coups avec leur classe (P progressant, F forcé, R roque, I intendance, D dernière chance : meilleur progressant hors MultiPV, joué parce qu\'il coûte ≤ 1 pion) et le plan frère servi entre crochets ; la réponse adverse suit (′ = seconde réponse, ouverte parce qu\'ex æquo).', ''];
   for (const pos of positions) {
     const rs = resultats.filter((r) => r.position === pos.id); if (!rs.length) continue;
-    md.push(`## ${pos.nom}`, '', `Ligne gloutonne (affichage) : ${rs[0].libreSans.map((s) => fr(s)).join(' ')} …`, '', '| plan | canon. | long | phrase | prix | tempo | limite | branches (réalisées · vivantes · coupées concession / compteur / autres) | ligne retenue | s |', '|---|---|---|---|---|---|---|---|---|---|');
+    md.push(`## ${pos.nom}`, '', `Ligne gloutonne (affichage) : ${rs[0].libreSans.map((s) => fr(s)).join(' ')} …`, '', '| plan | canon. | long | phrase | prix (point calme · brut) | tempo | limite | bascule de structure | branches (réalisées · vivantes · coupées concession / compteur / autres) | ligne retenue | s |', '|---|---|---|---|---|---|---|---|---|---|---|');
     for (const r of [...rs].sort((a, b) => (a.tempo == null) - (b.tempo == null) || (a.prix ?? 1e9) - (b.prix ?? 1e9))) {
       const ligne = r.ligne.map((x) => `${fr(x.san)}<sub>${{ progressant: 'P', forcé: 'F', roque: 'R', intendance: 'I', 'dernière chance': 'D' }[x.classe]}${x.sert?.length ? `[${x.sert.join(',')}]` : ''}</sub>${x.rep ? ' ' + fr(x.rep) + (x.repAlt ? '′' : '') : ''}`).join(' ');
-      md.push(`| ${r.libelle} | ${r.canonique ? '●' : ''} | ${r.long ? 'long' : ''} | **${r.phrase}**${r.merci ? ' · à la merci de la réponse' : ''}${r.concessionMin != null && r.tempo == null ? ` (concession ${fmt(r.concessionMin)})` : ''} | ${fmt(r.prix)} | ${r.tempo ?? '∞'} | ${r.limite ? 'limite' : ''} | ${r.realises} · ${r.vivants} · ${r.coupes.concession} / ${r.coupes.compteur} / ${r.coupes.autres} | ${ligne} | ${r.secondes} |`);
+      md.push(`| ${r.libelle} | ${r.canonique ? '●' : ''} | ${r.long ? 'long' : ''} | **${r.phrase}**${r.merci ? ' · à la merci de la réponse' : ''}${r.concessionMin != null && r.tempo == null ? ` (concession ${fmt(r.concessionMin)})` : ''} | ${fmt(r.prix)}${r.prixBrut != null && r.prixBrut !== r.prix ? ` · brut ${fmt(r.prixBrut)}` : ''}${r.calme === false ? ' · pas de point calme' : ''}${r.prolonge?.length ? `<br><small>calme après ${r.prolonge.map((x) => fr(x)).join(' ')}</small>` : ''} | ${r.tempo ?? '∞'} | ${r.limite ? 'limite' : ''} | ${r.bascule ? `${r.bascule.ply} : ${r.bascule.avant} → ${r.bascule.apres} par ${r.bascule.parAdversaire ? 'l\'adversaire ' : ''}${fr(r.bascule.par)}, prix jusque-là ${fmt(r.bascule.prixAvant)}` : ''} | ${r.realises} · ${r.vivants} · ${r.coupes.concession} / ${r.coupes.compteur} / ${r.coupes.autres} | ${ligne} | ${r.secondes} |`);
     }
     md.push('');
   }
@@ -240,7 +278,7 @@ for (const pos of POSITIONS) {
   const c = new Chess(); if (pos.fen) c.load(pos.fen); else for (const san of pos.coups.split(/\s+/)) c.move(san);
   const fen = c.fen(), side = c.turn();
   console.error(`${pos.id} : ligne libre et faisceau libre…`);
-  const glouton = await ligneLibre(fen, side, 2 * HORIZON);
+  const glouton = await ligneLibre(fen, side, 2 * HMAX);
   const libre = { ...(await faisceauLibre(fen, side, glouton)), sans: glouton.sans };
   const tous = pos.plans.map((p, i) => ({ plan: p, libelle: libelle(p, fen), canonique: (pos.canoniques ?? []).includes(i) }));
   for (const [i, t] of tous.entries()) {
