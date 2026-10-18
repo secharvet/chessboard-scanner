@@ -329,6 +329,16 @@ Rien de cette suite ne démarre sans le go de l'auteur.
 
 ## 7. La nuit de stabilité (18 octobre, soir) — résultats
 
+> **Erratum (18 octobre, 21 h 30).** Les passes ci-dessous, et celles du § 4, ont été annoncées « déterministes, un fil » :
+> c'était faux. `filtre.mjs` et `preparatoire.mjs` fixaient le nombre de fils du moteur en dur (3 et 2), ce qui écrasait le
+> réglage `COACH_DETERMINISTIC=1` du lanceur. Découvert par la vérification de déterminisme VPS / Orion (même binaire, même
+> profondeur : notes différentes, médiane 4 cp, max 39, 13 statuts du test sur 35 changés), confirmé par deux passes
+> fraîches identiques sur le VPS (18 coups sur 21 différents à 3 fils ; **0 sur 24 à un fil** après correction). Les
+> chiffres de variance ci-dessous incluent donc le bruit des fils (~4 cp de médiane, 14 au 90e centile) ; les conclusions
+> qualitatives (la réponse adverse comme source des basculements, l'écart entre réseaux) tiennent, les chiffres sont
+> refaits en vrai déterministe au § 8. Sur Orion, 10 processus à 3 fils ont tourné au lieu de 10 à un fil : la règle des 12
+> processus a été respectée à la lettre, pas en charge réelle.
+
 Go de l'auteur sur l'étape 1 du § 6, sans code de test : les deux scripts relancés tels quels, un fil, déterministe, une
 position par processus (`scripts/plans/nuit-stabilite.sh`), et un comparateur (`scripts/plans/comparer-stabilite.mjs`).
 Trois passes sur le VPS : SF 19 à profondeur 24 (tableau 26 min, test 34 min), SF 17.1 (paquet Ubuntu) à 18, puis SF 17.1
