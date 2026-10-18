@@ -1569,3 +1569,11 @@ moteurs » au-delà d'un pion, à trancher à prof. 30 une fois. Règle « un fi
 **18 octobre, 19 h : Orion à un fil (go de l'auteur « lance tout »).** Déterminisme VPS/Orion : **identique au centipion**
 (0/0/0, Spearman 1,00, annexe Q). Moteur à 24 : 9/24/380, 4 statuts changés à réponse identique sur 24, 9/12 à réponse
 changée ; profondeur SF 17.1 : 5/14/37, 1/31 et 4/5. Lignes ajoutées au § 8, annexes R-T.
+**18 octobre, 20 h : étape 2 livrée (go « lance tout »).** Test à deux demi-coups v2 (deux réponses, point calme par menaces,
+« ferme la fenêtre » par la carte d'attaques, deux axes, plancher 25, accord des moteurs), **relu par l'Expert (sémantique) et
+le Dev chef (mécanique) avant la passe définitive** — 4 + 9 correctifs appliqués (mini-échange, pion contre pièce, point calme
+strict, vocabulaire mûr / en préparation / se paie / hors de prix ; tour au roque dans `suivre`, unicité des libellés, lanceurs
+résilients…). Résultats (§ 10, annexes U-W) : 21/35 lignes annoncées par les deux moteurs, 8 désaccords (petits écarts), 2
+contestés (e4 Carlsbad, …d5 hérisson) ; **2 fenêtres qui se ferment, identiques sur les deux moteurs (…h6 contre Fg5)** ; Dd3
+prépare Ce5 et d5 ; le roque prépare …e5 ; 0 ligne mesurée en pleine tactique. Suite possible : threats.mjs (clouage relatif),
+profondeur 30 sur les 2 contestés, panel à menaces, faisceau.
