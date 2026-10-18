@@ -1534,3 +1534,12 @@ imputées à M) → prolongation quand le meilleur coup est une prise ou une par
 meilleur pas, « cible disparue » pour une rupture sans pion visé. Le « nuit au plan » reste hétérogène (rétrogradation
 réelle, prophylaxie adverse, parade non détectée, changement d'identité du pas). **Rapport complet, argumenté, avec les
 limites : `docs/plans/RAPPORT-FILTRE-2026-10-18.md`.**
+**18 octobre, soir : nuit de stabilité (go de l'auteur, aucun code de test).** VPS : SF 19 p24 (tableau 26 min, test 34 min),
+SF 17.1 p18, SF 17.1 p24 en file ; Orion : SF 17.1 p24 puis SF 19 p24 (déterminisme entre machines), binaires copiés du VPS
+pour aligner les versions (le paquet d'Orion était un SF 16). Résultats (§ 7 du rapport, annexes C-F) : variance des notes
+18/24 médiane 6 cp, 90e centile 19 → **plancher 20 cp** ; distances et pas progressants stables ; Spearman 0,95 sur les
+écarts ; **le test à deux demi-coups ne tient que si la réponse adverse est la même** (22/22 statuts stables à suite
+identique, 9/14 changent quand la réponse change) ; entre moteurs, 7 statuts changent à suite identique (écarts de 0,3-1,0
+entre réseaux). Cahier des charges de l'étape suivante : deux réponses adverses (pire Δ), point calme par menaces, accord des
+deux moteurs. Incident de pilotage : un `kill` par motif a tué le shell de la chaîne (la passe 2 remise en file à la main) —
+règle : PID dans un fichier, jamais de kill par grep.
