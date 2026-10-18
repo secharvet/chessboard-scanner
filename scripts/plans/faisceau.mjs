@@ -25,6 +25,7 @@ import { UciEngine } from '../../coach/uci-engine.mjs';
 import { distance, suivre, verrouiller, estLevier, libelle } from '../../coach/plan-distance.mjs';
 import { enPrise } from '../../coach/en-prise.mjs';
 import { buildStructureFacts } from '../../positional/structures.js';
+import { instancier } from '../../coach/plans-structures.mjs';
 import { enToFr } from '../../coach/notation.mjs';
 import { POSITIONS } from './positions-filtre.mjs';
 
@@ -67,7 +68,8 @@ async function ligneLibre(fen, side, plies) {
 }
 const estRoque = (m) => m.piece === 'k' && Math.abs(m.from.charCodeAt(0) - m.to.charCodeAt(0)) === 2;
 /** Signature de structure d'une position (noms des structures reconnues, par camp), pour détecter une bascule le long de la ligne. */
-const structure = (fen) => buildStructureFacts(fen).filter((f) => f.id === 'STRUCTURE').map((f) => `${f.params.name}:${f.params.color}`).sort().join(' ') || '—';
+const structuresDe = (fen) => buildStructureFacts(fen).filter((f) => f.id === 'STRUCTURE').map((f) => ({ name: f.params.name, color: f.params.color }));
+const structure = (fen) => structuresDe(fen).map((x) => `${x.name}:${x.color}`).sort().join(' ') || '—';
 /** La position (à mon trait) est-elle calme ? Sinon on la prolonge avant de prendre le prix (mêmes règles que le test à deux demi-coups). */
 function calme(fen, cands, side) {
   const c = new Chess(fen);
@@ -117,13 +119,14 @@ async function faisceauLibre(fen, side, libreGlouton) {
   return { evals };
 }
 
-async function faisceau(pos, fen, side, plan, autres, libre) {
+async function faisceau(pos, fen, side, plan, autres, libre, opts = {}) {
+  const ply0 = opts.ply0 ?? 0, sousFaisceau = Boolean(opts.sousFaisceau);
   const d0 = distance(fen, side, plan).d;
   const tenure = !['rupture', 'poussee'].includes(plan.famille); // un transfert ou un échange doit TENIR après la réponse ; une poussée est réalisée en poussant
-  const horizon = ['rupture', 'poussee', 'et'].includes(plan.famille) ? HORIZON_STRUCTURE : HORIZON; // les plans de structure prennent plus de coups
+  const horizon = opts.horizon ?? (['rupture', 'poussee', 'et'].includes(plan.famille) ? HORIZON_STRUCTURE : HORIZON); // les plans de structure prennent plus de coups
   const structRacine = structure(fen);
   const borneCp = (c) => Math.max(-1000, Math.min(1000, c));
-  let etats = [{ fen, plan, autres: autres.map((a) => a.plan), compteur: 0, ligne: [], ply: 0, cp: libre.evals[0], d: d0, jumelles: [], bascule: null }];
+  let etats = [{ fen, plan, autres: autres.map((a) => a.plan), compteur: 0, ligne: [], ply: ply0, cp: libre.evals[Math.min(ply0, libre.evals.length - 1)], d: d0, jumelles: [], bascule: null }];
   let splits = 0;
   const realises = [], coupes = [];
   /** Joue `cand` depuis l'état e, puis la ou les réponses adverses (la seconde si elle est ex æquo) ; range les états. */
@@ -147,7 +150,7 @@ async function faisceau(pos, fen, side, plan, autres, libre) {
       const planSuite = suivre(planApres, j.m), dSuite = distance(j.fen, side, planSuite).d;
       const realise = tenure ? dSuite === 0 : (d1 === 0 || dSuite === 0);
       const sig = structure(j.fen);
-      const bascule = e.bascule ?? (sig !== structRacine ? { ply: e.ply + 2, avant: structRacine, apres: sig, par: structure(apres.fen()) !== structRacine ? cand.m.san : j.m.san, parAdversaire: structure(apres.fen()) === structRacine, prixAvant: borneCp(libre.evals[Math.min(e.ply + 2, libre.evals.length - 1)] ?? 0) - borneCp(-rep.cp) } : null);
+      const bascule = e.bascule ?? (sig !== structRacine ? { ply: e.ply + 2, fen: j.fen, avant: structRacine, apres: sig, nouvelles: structuresDe(j.fen).filter((x) => !structRacine.includes(`${x.name}:${x.color}`)), par: structure(apres.fen()) !== structRacine ? cand.m.san : j.m.san, parAdversaire: structure(apres.fen()) === structRacine, prixAvant: borneCp(libre.evals[Math.min(e.ply + 2, libre.evals.length - 1)] ?? 0) - borneCp(-rep.cp) } : null);
       const etat = { fen: j.fen, plan: realise ? verrouiller(planSuite, j.fen, side) : planSuite, autres: autresApres.map((a) => suivre(a, j.m)), compteur, ply: e.ply + 2, cp: -rep.cp, d: dSuite, bascule,
         jumelles: split ? [...e.jumelles, { id: split, cote: ri }] : e.jumelles,
         ligne: [...e.ligne, { san: cand.m.san, classe, sert, cout, rep: j.m.san, repAlt: ri > 0, cp: -rep.cp, d: dSuite }] };
@@ -227,10 +230,23 @@ async function faisceau(pos, fen, side, plan, autres, libre) {
     phrase = n('concession') >= n('compteur') && n('concession') > 0 ? 'pas réalisable sans concession' : n('compteur') > 0 ? 'jamais urgent ici' : 'sans objet';
     retenu = coupes.reduce((a, b) => (b.ply > a.ply ? b : a), coupes[0] ?? null);
   }
+  // Division à la bascule : la ligne retenue a continué l'ancien plan (son prix est « continuer ») ; un sous-faisceau repart
+  // de la position de bascule avec les plans canoniques de la nouvelle structure pour notre camp (table de l'Expert).
+  let division = [];
+  if (!sousFaisceau && retenu?.bascule?.nouvelles?.length) {
+    const b = retenu.bascule, restant = horizon - Math.floor((b.ply - ply0) / 2);
+    for (const st of b.nouvelles) {
+      for (const inst of instancier(b.fen, side, st.name, st.color).slice(0, 2)) {
+        if (restant <= 0) { division.push({ structure: st.name, libelle: libelle(inst.plan, b.fen), pourquoi: inst.pourquoi, phrase: 'horizon épuisé' }); continue; }
+        const r = await faisceau(pos, b.fen, side, inst.plan, [], libre, { ply0: b.ply, horizon: restant, sousFaisceau: true });
+        division.push({ structure: st.name, libelle: r.libelle, pourquoi: inst.pourquoi, phrase: r.phrase, prix: r.prix, tempo: r.tempo });
+      }
+    }
+  }
   const concessionMin = coupes.filter((x) => x.raison === 'concession' && x.cout != null).reduce((m, x) => Math.min(m, x.cout), Infinity);
   const limite = (prix != null && prix > PLANCHER && prix <= BANDE) || (tempo != null && tempo >= 2 * horizon - 2)
     || (tempo == null && Number.isFinite(concessionMin) && Math.abs(concessionMin - CONCESSION) <= PLANCHER); // dernière chance refusée à un cheveu de la borne
-  return { libelle: libelle(plan, fen), d0, phrase, prix, prixBrut: retenu && retenu.tempo != null ? prixBrut(retenu) : null, calme: retenu?.calme ?? null, prolonge: retenu?.prolonge ?? [], bascule: retenu?.bascule ?? null, horizon, tempo, limite, merci, concessionMin: Number.isFinite(concessionMin) ? concessionMin : null, ligne: retenu?.ligne ?? [], realises: realises.length, vivants: vivants.length,
+  return { libelle: libelle(plan, fen), d0, phrase, prix, prixBrut: retenu && retenu.tempo != null ? prixBrut(retenu) : null, calme: retenu?.calme ?? null, prolonge: retenu?.prolonge ?? [], bascule: retenu?.bascule ? { ...retenu.bascule, fen: undefined } : null, division, horizon, tempo, limite, merci, concessionMin: Number.isFinite(concessionMin) ? concessionMin : null, ligne: retenu?.ligne ?? [], realises: realises.length, vivants: vivants.length,
     coupes: { concession: coupes.filter((x) => x.raison === 'concession').length, compteur: coupes.filter((x) => x.raison === 'compteur').length, autres: coupes.filter((x) => !['concession', 'compteur'].includes(x.raison)).length } };
 }
 
@@ -242,7 +258,7 @@ function rendre(resultats, positions) {
     md.push(`## ${pos.nom}`, '', `Ligne gloutonne (affichage) : ${rs[0].libreSans.map((s) => fr(s)).join(' ')} …`, '', '| plan | canon. | long | phrase | prix (point calme · brut) | tempo | limite | bascule de structure | branches (réalisées · vivantes · coupées concession / compteur / autres) | ligne retenue | s |', '|---|---|---|---|---|---|---|---|---|---|---|');
     for (const r of [...rs].sort((a, b) => (a.tempo == null) - (b.tempo == null) || (a.prix ?? 1e9) - (b.prix ?? 1e9))) {
       const ligne = r.ligne.map((x) => `${fr(x.san)}<sub>${{ progressant: 'P', forcé: 'F', roque: 'R', intendance: 'I', 'dernière chance': 'D' }[x.classe]}${x.sert?.length ? `[${x.sert.join(',')}]` : ''}</sub>${x.rep ? ' ' + fr(x.rep) + (x.repAlt ? '′' : '') : ''}`).join(' ');
-      md.push(`| ${r.libelle} | ${r.canonique ? '●' : ''} | ${r.long ? 'long' : ''} | **${r.phrase}**${r.merci ? ' · à la merci de la réponse' : ''}${r.concessionMin != null && r.tempo == null ? ` (concession ${fmt(r.concessionMin)})` : ''} | ${fmt(r.prix)}${r.prixBrut != null && r.prixBrut !== r.prix ? ` · brut ${fmt(r.prixBrut)}` : ''}${r.calme === false ? ' · pas de point calme' : ''}${r.prolonge?.length ? `<br><small>calme après ${r.prolonge.map((x) => fr(x)).join(' ')}</small>` : ''} | ${r.tempo ?? '∞'} | ${r.limite ? 'limite' : ''} | ${r.bascule ? `${r.bascule.ply} : ${r.bascule.avant} → ${r.bascule.apres} par ${r.bascule.parAdversaire ? 'l\'adversaire ' : ''}${fr(r.bascule.par)}, prix jusque-là ${fmt(r.bascule.prixAvant)}` : ''} | ${r.realises} · ${r.vivants} · ${r.coupes.concession} / ${r.coupes.compteur} / ${r.coupes.autres} | ${ligne} | ${r.secondes} |`);
+      md.push(`| ${r.libelle} | ${r.canonique ? '●' : ''} | ${r.long ? 'long' : ''} | **${r.phrase}**${r.merci ? ' · à la merci de la réponse' : ''}${r.concessionMin != null && r.tempo == null ? ` (concession ${fmt(r.concessionMin)})` : ''} | ${fmt(r.prix)}${r.prixBrut != null && r.prixBrut !== r.prix ? ` · brut ${fmt(r.prixBrut)}` : ''}${r.calme === false ? ' · pas de point calme' : ''}${r.prolonge?.length ? `<br><small>calme après ${r.prolonge.map((x) => fr(x)).join(' ')}</small>` : ''} | ${r.tempo ?? '∞'} | ${r.limite ? 'limite' : ''} | ${r.bascule ? `${r.bascule.ply} : ${r.bascule.avant} → ${r.bascule.apres} par ${r.bascule.parAdversaire ? 'l\'adversaire ' : ''}${fr(r.bascule.par)}, prix jusque-là ${fmt(r.bascule.prixAvant)}${r.division?.length ? `<br><small>continuer : ${r.phrase} ${fmt(r.prix)} · ${r.division.map((d) => `adopter ${d.libelle} (${d.structure}) : ${d.phrase}${d.prix != null ? ' ' + fmt(d.prix) : ''}${d.tempo != null ? ', tempo ' + d.tempo : ''}`).join(' · ')}</small>` : ''}` : ''} | ${r.realises} · ${r.vivants} · ${r.coupes.concession} / ${r.coupes.compteur} / ${r.coupes.autres} | ${ligne} | ${r.secondes} |`);
     }
     md.push('');
   }
