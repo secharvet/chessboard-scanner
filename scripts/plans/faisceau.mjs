@@ -69,6 +69,30 @@ async function faisceau(pos, fen, side, plan, autres, libre) {
   const d0 = distance(fen, side, plan).d;
   let etats = [{ fen, plan, compteur: 0, ligne: [], ply: 0, cp: libre.evals[0], d: d0 }];
   const realises = [], coupes = [];
+  /** Joue `cand` depuis l'état e, puis la ou les réponses adverses (la seconde si elle est ex æquo) ; range les états. */
+  async function etendre(e, cand, classe, compteur, meilleurCp, suivants) {
+    const apres = new Chess(e.fen); apres.move(cand.m.san);
+    const planApres = suivre(e.plan, cand.m);
+    const d1 = distance(apres.fen(), side, planApres).d;
+    const sert = autres.filter((a) => distance(apres.fen(), side, suivre(a.plan, cand.m)).d < distance(e.fen, side, a.plan).d).map((a) => a.libelle.replace(/^\S+ /, ''));
+    const cout = meilleurCp - cand.cp;
+    const reps = await noter(apres.fen(), 2);
+    const ouvertes = reps.length > 1 && Math.abs(reps[0].cp - reps[1].cp) <= PLANCHER ? reps : reps.slice(0, 1);
+    if (!reps.length) {
+      const etat = { fen: apres.fen(), plan: planApres, compteur, ply: e.ply + 1, cp: cand.cp, d: d1, ligne: [...e.ligne, { san: cand.m.san, classe, sert, cout, rep: null, cp: cand.cp, d: d1 }] };
+      if (d1 === 0) { etat.tempo = e.ply + 1; realises.push(etat); } else coupes.push({ ...etat, raison: 'partie finie' });
+      return;
+    }
+    for (const [ri, rep] of ouvertes.entries()) {
+      const j = jouer(apres.fen(), rep.uci);
+      const planSuite = suivre(planApres, j.m), dSuite = distance(j.fen, side, planSuite).d;
+      const etat = { fen: j.fen, plan: dSuite === 0 ? verrouiller(planSuite, j.fen, side) : planSuite, compteur, ply: e.ply + 2, cp: -rep.cp, d: dSuite, alt: e.alt || ri > 0,
+        ligne: [...e.ligne, { san: cand.m.san, classe, sert, cout, rep: j.m.san, repAlt: ri > 0, cp: -rep.cp, d: dSuite }] };
+      if (d1 === 0 || dSuite === 0) { etat.tempo = d1 === 0 ? e.ply + 1 : e.ply + 2; realises.push(etat); continue; }
+      if (!estLevier(j.fen, side, planSuite)) { coupes.push({ ...etat, raison: 'cible disparue' }); continue; }
+      suivants.push(etat);
+    }
+  }
   for (let coup = 0; coup < HORIZON && etats.length; coup++) {
     const suivants = [];
     for (const e of etats) {
@@ -76,47 +100,44 @@ async function faisceau(pos, fen, side, plan, autres, libre) {
       if (!cands.length) { coupes.push({ ...e, raison: 'partie finie' }); continue; }
       const c = new Chess(e.fen);
       const situationForcee = c.inCheck() || cands[0].m.captured || enPrise(e.fen, side) || (cands[1] && cands[0].cp - cands[1].cp > FORCE) || cands.length === 1;
-      let progressantsRefuses = 0, admis = 0;
+      let admis = 0, progressantsRefuses = 0;
       for (const cand of cands) {
         const apres = new Chess(e.fen); apres.move(cand.m.san);
-        const planApres = suivre(e.plan, cand.m);
-        const d1 = distance(apres.fen(), side, planApres).d;
-        const progressant = d1 < e.d;
+        const progressant = distance(apres.fen(), side, suivre(e.plan, cand.m)).d < e.d;
         let classe, compteur = e.compteur;
-        if (progressant) {
-          if (cands[0].cp - cand.cp > CONCESSION) { progressantsRefuses++; continue; }
-          classe = 'progressant'; compteur = 0;
-        } else if (situationForcee && cand === cands[0]) classe = 'forcé';
+        if (progressant) { if (cands[0].cp - cand.cp > CONCESSION) { progressantsRefuses++; continue; } classe = 'progressant'; compteur = 0; }
+        else if (situationForcee && cand === cands[0]) classe = 'forcé';
         else if (estRoque(cand.m)) classe = 'roque';
-        else if (situationForcee) continue; // en situation forcée, seuls le meilleur coup et les progressants sont admis
+        else if (situationForcee) continue;
         else { classe = 'intendance'; compteur++; if (compteur > K) continue; }
-        if (!progressant && cands[0].cp - cand.cp > CONCESSION) continue; // un coup qui perd un pion sans servir le plan n'est pas une branche
+        if (!progressant && cands[0].cp - cand.cp > CONCESSION) continue;
         admis++;
-        const sert = autres.filter((a) => distance(apres.fen(), side, suivre(a.plan, cand.m)).d < distance(e.fen, side, a.plan).d).map((a) => a.libelle.replace(/^\S+ /, ''));
-        // réponse adverse libre
-        const [rep] = await noter(apres.fen(), 1);
-        let fenSuite = apres.fen(), planSuite = planApres, cpSuite = cand.cp, ply = e.ply + 1, repSan = null;
-        if (rep) { const j = jouer(apres.fen(), rep.uci); fenSuite = j.fen; planSuite = suivre(planApres, j.m); cpSuite = -rep.cp; ply = e.ply + 2; repSan = j.m.san; }
-        const dSuite = distance(fenSuite, side, planSuite).d;
-        const etat = { fen: fenSuite, plan: dSuite === 0 ? verrouiller(planSuite, fenSuite, side) : planSuite, compteur, ply, cp: cpSuite, d: dSuite, ligne: [...e.ligne, { san: cand.m.san, classe, sert, rep: repSan, cp: cpSuite, d: dSuite }] };
-        if (d1 === 0 || dSuite === 0) { etat.tempo = d1 === 0 ? e.ply + 1 : ply; realises.push(etat); continue; }
-        if (!rep) { coupes.push({ ...etat, raison: 'partie finie' }); continue; }
-        if (!estLevier(fenSuite, side, planSuite)) { coupes.push({ ...etat, raison: 'cible disparue' }); continue; }
-        suivants.push(etat);
+        await etendre(e, cand, classe, compteur, cands[0].cp, suivants);
       }
-      if (!admis) coupes.push({ ...e, raison: progressantsRefuses ? 'concession' : 'compteur' });
+      if (admis) continue;
+      // La branche de la dernière chance : le meilleur coup progressant HORS MultiPV, noté une fois, joué s'il coûte ≤ 1 pion.
+      const tousCoups = await noter(e.fen, c.moves().length);
+      let dernier = null;
+      for (const cand of tousCoups) {
+        if (cands.some((x) => x.uci === cand.uci)) continue;
+        const apres = new Chess(e.fen); apres.move(cand.m.san);
+        if (distance(apres.fen(), side, suivre(e.plan, cand.m)).d < e.d) { dernier = cand; break; }
+      }
+      const cout = dernier ? tousCoups[0].cp - dernier.cp : null;
+      if (dernier && cout <= CONCESSION) { await etendre(e, dernier, 'dernière chance', 0, tousCoups[0].cp, suivants); continue; }
+      coupes.push({ ...e, raison: dernier || progressantsRefuses ? 'concession' : 'compteur', cout: cout ?? (progressantsRefuses ? CONCESSION : null) });
     }
-    // largeur : les L meilleures branches, une par position
     const vues = new Set();
-    etats = suivants.sort((a, b) => b.cp - a.cp).filter((s) => !vues.has(s.fen) && vues.add(s.fen)).slice(0, LARGEUR);
+    etats = suivants.sort((a, b) => b.cp - a.cp).filter((x) => !vues.has(x.fen) && vues.add(x.fen)).slice(0, LARGEUR);
   }
   const vivants = etats;
-  const prixDe = (s) => (libre.evals[Math.min(s.ply, libre.evals.length - 1)] ?? 0) - s.cp;
-  let phrase, retenu = null, prix = null, tempo = null;
+  const prixDe = (x) => (libre.evals[Math.min(x.ply, libre.evals.length - 1)] ?? 0) - x.cp;
+  let phrase, retenu = null, prix = null, tempo = null, merci = false;
   if (realises.length) {
     retenu = realises.reduce((a, b) => (prixDe(b) < prixDe(a) || (prixDe(b) === prixDe(a) && b.tempo < a.tempo) ? b : a));
     prix = prixDe(retenu); tempo = retenu.tempo;
     phrase = prix <= PLANCHER ? "c'est le plan" : 'viable mais ça coûte';
+    const px = realises.map(prixDe); merci = Math.max(...px) > PLANCHER && Math.min(...px) < -PLANCHER;
   } else if (vivants.length) {
     retenu = vivants[0]; prix = prixDe(retenu); phrase = "en cours à l'horizon";
   } else {
@@ -124,34 +145,38 @@ async function faisceau(pos, fen, side, plan, autres, libre) {
     phrase = n('concession') >= n('compteur') && n('concession') > 0 ? 'pas réalisable sans concession' : n('compteur') > 0 ? 'jamais urgent ici' : 'sans objet';
     retenu = coupes.reduce((a, b) => (b.ply > a.ply ? b : a), coupes[0] ?? null);
   }
+  const concessionMin = coupes.filter((x) => x.raison === 'concession' && x.cout != null).reduce((m, x) => Math.min(m, x.cout), Infinity);
   const limite = (prix != null && prix > PLANCHER && prix <= BANDE) || (tempo != null && tempo >= 2 * HORIZON - 2);
-  return { libelle: libelle(plan, fen), d0, phrase, prix, tempo, limite, ligne: retenu?.ligne ?? [], realises: realises.length, vivants: vivants.length, coupes: { concession: coupes.filter((x) => x.raison === 'concession').length, compteur: coupes.filter((x) => x.raison === 'compteur').length, autres: coupes.filter((x) => !['concession', 'compteur'].includes(x.raison)).length } };
+  return { libelle: libelle(plan, fen), d0, phrase, prix, tempo, limite, merci, concessionMin: Number.isFinite(concessionMin) ? concessionMin : null, ligne: retenu?.ligne ?? [], realises: realises.length, vivants: vivants.length,
+    coupes: { concession: coupes.filter((x) => x.raison === 'concession').length, compteur: coupes.filter((x) => x.raison === 'compteur').length, autres: coupes.filter((x) => !['concession', 'compteur'].includes(x.raison)).length } };
 }
 
 function rendre(resultats, positions) {
   const md = [`# Faisceau — ${new Date().toISOString().slice(0, 10)} — prof. ${DEPTH}, ${CANDIDATS} candidats, largeur ${LARGEUR}, horizon ${HORIZON} coups, k = ${K}, plancher ${PLANCHER}`, '',
-    'Prix = éval de la ligne libre − éval de la ligne contrainte au même demi-coup (positif = suivre le plan coûte). Tempo = demi-coup de la réalisation. Ligne : nos coups avec leur classe (P progressant, F forcé, R roque, I intendance) et le plan frère servi entre crochets ; la réponse adverse suit.', ''];
+    'Prix = éval de la ligne libre − éval de la ligne contrainte au même demi-coup (positif = suivre le plan coûte). Tempo = demi-coup de la réalisation. Ligne : nos coups avec leur classe (P progressant, F forcé, R roque, I intendance, D dernière chance : meilleur progressant hors MultiPV, joué parce qu\'il coûte ≤ 1 pion) et le plan frère servi entre crochets ; la réponse adverse suit (′ = seconde réponse, ouverte parce qu\'ex æquo).', ''];
   for (const pos of positions) {
     const rs = resultats.filter((r) => r.position === pos.id); if (!rs.length) continue;
     md.push(`## ${pos.nom}`, '', `Ligne libre : ${rs[0].libreSans.map((s) => fr(s)).join(' ')} …`, '', '| plan | canon. | long | phrase | prix | tempo | limite | branches (réalisées · vivantes · coupées concession / compteur / autres) | ligne retenue | s |', '|---|---|---|---|---|---|---|---|---|---|');
     for (const r of [...rs].sort((a, b) => (a.tempo == null) - (b.tempo == null) || (a.prix ?? 1e9) - (b.prix ?? 1e9))) {
-      const ligne = r.ligne.map((x) => `${fr(x.san)}<sub>${{ progressant: 'P', forcé: 'F', roque: 'R', intendance: 'I' }[x.classe]}${x.sert?.length ? `[${x.sert.join(',')}]` : ''}</sub>${x.rep ? ' ' + fr(x.rep) : ''}`).join(' ');
-      md.push(`| ${r.libelle} | ${r.canonique ? '●' : ''} | ${r.long ? 'long' : ''} | **${r.phrase}** | ${fmt(r.prix)} | ${r.tempo ?? '∞'} | ${r.limite ? 'limite' : ''} | ${r.realises} · ${r.vivants} · ${r.coupes.concession} / ${r.coupes.compteur} / ${r.coupes.autres} | ${ligne} | ${r.secondes} |`);
+      const ligne = r.ligne.map((x) => `${fr(x.san)}<sub>${{ progressant: 'P', forcé: 'F', roque: 'R', intendance: 'I', 'dernière chance': 'D' }[x.classe]}${x.sert?.length ? `[${x.sert.join(',')}]` : ''}</sub>${x.rep ? ' ' + fr(x.rep) + (x.repAlt ? '′' : '') : ''}`).join(' ');
+      md.push(`| ${r.libelle} | ${r.canonique ? '●' : ''} | ${r.long ? 'long' : ''} | **${r.phrase}**${r.merci ? ' · à la merci de la réponse' : ''}${r.concessionMin != null && r.tempo == null ? ` (concession ${fmt(r.concessionMin)})` : ''} | ${fmt(r.prix)} | ${r.tempo ?? '∞'} | ${r.limite ? 'limite' : ''} | ${r.realises} · ${r.vivants} · ${r.coupes.concession} / ${r.coupes.compteur} / ${r.coupes.autres} | ${ligne} | ${r.secondes} |`);
     }
     md.push('');
   }
-  // Critère : classement sur les plans RÉALISÉS (un plan en cours à l'horizon n'a qu'un prix d'étape, il ne gagne pas par défaut)
+  // Critère (amendé) : aucun plan NON canonique réalisé ne bat le meilleur canonique réalisé de plus du plancher ;
+  // les plans longs comptés à part, canoniques seulement, « prix fini » = ≤ 1,0.
   const elig = positions.filter((p) => resultats.some((r) => r.position === p.id) && p.plans.some((_, i) => !(p.canoniques ?? []).includes(i)));
   let ok = 0; const detail = [];
   for (const p of elig) {
-    const rs = resultats.filter((r) => r.position === p.id && r.tempo != null && r.prix != null).sort((a, b) => a.prix - b.prix || a.tempo - b.tempo);
-    if (!rs.length) { detail.push(`- ${p.id} : aucun plan réalisé dans l'horizon`); continue; }
-    const [a, b] = rs; const ecart = b ? b.prix - a.prix : Infinity;
-    const reussi = a.canonique && ecart > PLANCHER; if (reussi) ok++;
-    detail.push(`- ${p.id} : le moins cher des réalisés est **${a.libelle}** (${fmt(a.prix)}, tempo ${a.tempo}${a.canonique ? ', canonique' : ', NON canonique'}), écart au second ${fmt(ecart)} → ${reussi ? 'réussi' : a.canonique ? 'canonique mais dans la bande' : 'contredit le livre (à trancher à prof. 30)'}`);
+    const rs = resultats.filter((r) => r.position === p.id && r.tempo != null && r.prix != null);
+    const can = rs.filter((r) => r.canonique).sort((a, b) => a.prix - b.prix)[0], non = rs.filter((r) => !r.canonique).sort((a, b) => a.prix - b.prix)[0];
+    if (!can) { detail.push(`- ${p.id} : **aucun plan canonique réalisé** dans l'horizon${non ? ` (le moins cher réalisé : ${non.libelle}, ${fmt(non.prix)})` : ''} → échec`); continue; }
+    const marge = non ? can.prix - non.prix : -Infinity; // > plancher : un non canonique bat le canonique de plus de 25
+    const reussi = marge <= PLANCHER; if (reussi) ok++;
+    detail.push(`- ${p.id} : meilleur canonique **${can.libelle}** (${fmt(can.prix)}, tempo ${can.tempo})${non ? ` ; meilleur non canonique ${non.libelle} (${fmt(non.prix)}, tempo ${non.tempo})` : ' ; aucun non canonique réalisé'} → ${reussi ? 'réussi' : `**contredit le livre de ${fmt(marge)}** (à trancher à prof. 30)`}`);
   }
-  const longs = resultats.filter((r) => r.long), longsRealises = longs.filter((r) => r.tempo != null && r.prix != null);
-  md.push('## Critère', '', `Positions éligibles : ${elig.length} ; réussies : **${ok}** (${elig.length ? Math.round((100 * ok) / elig.length) : 0} %). Plans longs : ${longs.length}, réalisés dans l'horizon à prix fini : **${longsRealises.length}** (${longs.length ? Math.round((100 * longsRealises.length) / longs.length) : 0} %).`, '', ...detail, '');
+  const longs = resultats.filter((r) => r.long && r.canonique), longsRealises = longs.filter((r) => r.tempo != null && r.prix != null && r.prix <= 100);
+  md.push('## Critère', '', `Positions éligibles : ${elig.length} ; réussies : **${ok}** (${elig.length ? Math.round((100 * ok) / elig.length) : 0} %). Plans longs canoniques : ${longs.length}, réalisés dans l'horizon à prix ≤ 1,0 : **${longsRealises.length}** (${longs.length ? Math.round((100 * longsRealises.length) / longs.length) : 0} %).`, '', ...detail, '');
   return md.join('\n') + '\n';
 }
 
