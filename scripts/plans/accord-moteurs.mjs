@@ -19,7 +19,9 @@ const rows = [];
 for (const key of [...a.keys()].filter((x) => b.has(x))) {
   const x = a.get(key), y = b.get(key);
   let verdict;
-  if (x.delta != null && y.delta != null && Math.abs(x.delta - y.delta) > CONTESTE) verdict = 'contesté entre moteurs';
+  // Contesté = les deux moteurs ne donnent pas le même effet ET divergent de plus d'un pion sur la même ligne (désaccord
+  // tactique à trancher une fois à prof. 30). Même effet avec des grandeurs différentes : annoncé.
+  if (x.axe1 !== y.axe1 && x.delta != null && y.delta != null && Math.abs(x.delta - y.delta) > CONTESTE) verdict = 'contesté entre moteurs';
   else if (x.axe1 === y.axe1 && x.etat === y.etat) verdict = `annoncé : ${x.axe1} · ${x.etat}`;
   else if (x.axe1 === y.axe1) verdict = `annoncé (axe 1 seul) : ${x.axe1}`;
   else verdict = 'désaccord';
