@@ -29,6 +29,11 @@ bash scripts/collect-pgn.sh   # populate data/pgn/ + catalog.json (required befo
 make build-web
 ```
 
+**Mesurer au moteur** : toute mesure (stabilité, seuils, comparaison de passes, arbitrage d'une faute) se fait à **un fil**
+(`COACH_DETERMINISTIC=1`, et aucun `threads:` en dur dans les scripts) après avoir vérifié que deux passes fraîches donnent
+0 différence. Le bruit des fils est du même ordre que l'effet de la profondeur (18 oct. 2026 : 17 contre 25 cp au 90e
+centile) : à plusieurs fils, on mesure d'abord les fils. Les fils servent à jouer, pas à mesurer.
+
 **Runtime**: The app requires the Podman container for Stockfish WASM and PGN serving. `scripts/serve-dev.sh` is a fallback (Python HTTP server, no Stockfish).
 
 **Dev container**: `compose.dev.yaml` mounts the whole repo on the nginx web root (read-only), so any edit is live on F5 — no rebuild, no restart. Vendor files live in the image under `/opt/vendor` (served at `/vendor/`). `docker/web/nginx.conf` blocks dotfiles (`.env`), server code (`coach/`), `node_modules/`, `.md/.mjs/.json` etc. — keep that list up to date when adding server-side files. New root-level browser modules still need adding to the `COPY` list in `docker/web/Dockerfile` for the prod image.

@@ -1560,3 +1560,9 @@ au-dessus de 0,3 mais la marge est passée de 0,19 à 0,09, le bruit mesuré en 
 Méthode retenue : bande grise large au tri ([0,05 ; 0,55] à prof. 18), retest systématique à un fil prof. 24 dedans ; et la
 règle des deux moteurs pour tout verdict à petit écart, dans le faisceau comme dans le coach. Option laissée à l'auteur :
 estampiller 2…Cf6 « limite » en base (l'Expert la garderait telle quelle, pédagogiquement : e5 ! gagne de l'espace avec tempo).
+**18 octobre, 20 h : lecture de la nuit (relecture relayée par l'auteur), § 9 du rapport.** Le résultat du jour : *le plan est
+plus stable que le coup* — meilleur coup changé 15/35 entre moteurs (11/35 par les seuls fils), meilleur coup progressant 2/35,
+distance 35/35 partout. Les sauts du test se classent par la carte d'attaques de la case du pas (réponse qui la touche = « ferme
+la fenêtre », plan périssable ; sinon variance) — mis en tête du cahier des charges de l'étape 2. Le plancher à 25 implique
+qu'un test à un pas dira souvent « limite » : argument pour le faisceau (prix linéaire, bruit en racine). « Contesté entre
+moteurs » au-delà d'un pion, à trancher à prof. 30 une fois. Règle « un fil pour mesurer » écrite dans CLAUDE.md.
