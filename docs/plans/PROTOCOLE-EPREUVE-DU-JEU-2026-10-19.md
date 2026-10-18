@@ -26,7 +26,11 @@ L'épreuve du jeu est la version statistique de la question du faisceau.
 - **le coach-prix** : à chaque adoption, il fait tourner le faisceau sur les deux ou trois instances de la structure courante
   (horizon dix coups, largeur deux, pour tenir le coût) et suit la moins chère — c'est le professeur machine qu'on prétend
   construire. Si le coût de calcul l'impose, le coach-prix tourne sur le lot 1 à un seul camp (cent parties).
-La **différence de coût entre les deux bras** est la seule mesure qui réponde à « est-ce que ça sert d'aller plus loin ».
+La **différence de coût entre les deux bras** est la seule mesure qui réponde à « est-ce que ça sert d'aller plus loin » —
+lue **en agrégat** (médiane sur les départs), jamais partie à partie : les deux bras divergent dès la première adoption et
+le tirage adverse fait le reste, même non-appariement que le témoin. Et le choix du coach-prix respecte la bande grise :
+**deux instances à moins de 25 cp l'une de l'autre, il suit la première de la table** — l'ordre du livre départage les ex
+æquo, sinon le bras « prix » ferait du bruit de sélection sur les cas plats, et sa valeur ajoutée avec.
 
 Les joueurs d'une partie :
 
