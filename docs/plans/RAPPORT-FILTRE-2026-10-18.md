@@ -365,3 +365,15 @@ celle du moteur entre coups équivalents, et c'est une sortie (« plusieurs coup
 (3) Le test à deux demi-coups doit être réécrit avant d'être lu : deux réponses adverses (pire Δ), point calme par menaces,
 accord des deux moteurs. Sans ces trois conditions, 9 à 10 verdicts sur 35 sont du bruit ; avec la seule première, 22 sur 22
 ont tenu. C'est le cahier des charges de l'étape 2 du § 6.
+
+**Complément (passe 3, SF 17.1 à 24, calculée sur Orion ; annexes G à J).** Les deux axes se croisent et confirment :
+- *Profondeur, pour le second moteur (SF 17.1, 18 → 24)* : variance des notes médiane 5, 90e centile 16, max 47 — le plancher
+  de 20 cp tient pour les deux moteurs. Test : **30 lignes à réponse identique, 2 statuts changent ; 6 lignes à réponse
+  changée, 2 changent.** Même diagnostic que pour SF 19 : à réponse constante le test tient.
+- *Moteur, à profondeur 24 (SF 19 → SF 17.1)* : variance médiane 9, 90e centile **36**, max 365 ; 11 statuts sur 35
+  changent, dont **6 à réponse identique** — l'écart entre réseaux (0,3 à 1,0 sur une même ligne) reste la plus grosse source
+  de désaccord, et elle ne se réduit pas avec la profondeur. Ordre des écarts : Spearman 0,93.
+- *Le meilleur coup de la position* change beaucoup entre moteurs (22/35) et entre profondeurs pour SF 17.1 (23/35) : les
+  têtes sont plates dans ce panel calme ; le meilleur coup *progressant*, lui, ne change presque jamais (1 à 2/35).
+Déterminisme entre machines (même binaire SF 19, un fil, VPS contre Orion) : en cours, résultat attendu identique au
+centipion ; consigné dès réception.
