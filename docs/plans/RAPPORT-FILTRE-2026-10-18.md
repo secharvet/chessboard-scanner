@@ -456,3 +456,60 @@ pas du bruit à absorber : c'est un désaccord tactique, à trancher une fois à
 quel — « contesté entre moteurs » est une phrase qui a un sens pour un élève.
 
 **Règle écrite en tête du dépôt** : un fil pour mesurer, les fils pour jouer (CLAUDE.md).
+
+## 10. L'étape 2 : le test à deux demi-coups réécrit, relu, mesuré (18 octobre, 20 h)
+
+**Ce qui a été fait.** Go de l'auteur (« lance tout »). `scripts/plans/preparatoire.mjs` réécrit selon le cahier des charges
+des § 6 et § 9 : deux réponses adverses et le pire Δ ; point calme (prise, échec, pièce en prise, coup forcé) ; la pire
+réponse classée par la carte d'attaques de la case du pas ; deux axes ; plancher 25, bande 50, viabilité 0,3 ; « sert un
+plan frère » ; accord des deux moteurs (`accord-moteurs.mjs`) ; lanceur `etape2.sh` (une position par processus, un fil).
+Puis, à la demande de l'auteur, **relecture du code par deux pairs avant la passe définitive** : l'Expert échecs
+(sémantique) et le Dev chef (mécanique).
+
+**Ce que les relectures ont corrigé** (toutes appliquées, commits `51a3d41` → `87e83d8`).
+- *Expert* : pièce en prise par **mini-échange** sur la case (valeurs croissantes) au lieu du surnombre brut ; « ferme la
+  fenêtre » réservé au **pion** adverse qui prend le contrôle de la case du pas (irréversible) ou au pas devenu illégal —
+  une pièce qui vient viser n'est que « plus cher » ; « déplacé par M » distingué de « bloqué par M » ; point calme strict
+  (l'échec se prolonge toujours ; si la ligne reste tactique après la borne : « pas de point calme », **sans Δ**) ; axe 2 :
+  **mûr / en préparation / se paie (0,3–1,0) / hors de prix (> 1,0) / bloqué / sans objet** — « injouable » surclamait.
+- *Dev chef* (21 constats, 9 corrigés) : `suivre` ignorait **la tour au roque** (un plan « tour vers d8 » réalisé par O-O-O
+  sortait bloqué ; test ajouté) ; deux plans de même libellé dans une position **s'écrasaient en silence** dans toutes les
+  comparaisons (garde ajoutée) ; une position en échec **avortait toute la nuit** sans TERMINÉ (les lanceurs continuent et
+  comptent les échecs) ; coup unique = forcé ; « même pas » rapproché par cases et non par SAN ; gardes et messages. Il a
+  aussi confirmé ce qui tenait : perspective des notes cohérente de bout en bout, caches sûrs, troncature à 5 sans effet.
+- *Trouvés par les passes elles-mêmes* : le pas ne suivait pas sa pièce quand M la déplaçait ; la légalité du pas était
+  testée avec le trait à l'adversaire ; `grep` sans résultat tuait le lanceur sous `pipefail`.
+
+**Résultats (profondeur 18, un fil, mêmes coups M que le § 4 ; annexes U, V, W).**
+
+| | SF 19 | SF 17.1 |
+|---|---|---|
+| axe 1 : prépare / neutre / nuit / **ferme la fenêtre** | 3 / 18 / 12 / **2** | 6 / 16 / 11 / **2** |
+| « limite » (25 < Δ ≤ 50) | 7 | 6 |
+| axe 2 : mûr / en préparation / se paie / hors de prix | 7 / 9 / 10 / 9 | 7 / 10 / 7 / 11 |
+| lignes prolongées jusqu'au point calme · mesurées en pleine tactique | 12 · 0 | — · 0 |
+| Δ même pas renseigné | 32/35 | — |
+
+**Accord des deux moteurs : 21 lignes sur 35 annoncées sur les deux axes, 4 sur l'axe 1 seul, 8 désaccords, 2 contestés.**
+Les annoncées : 7 « neutre · en préparation », 5 « nuit · hors de prix », 4 « neutre · mûr », 2 « neutre · se paie »,
+**2 « ferme la fenêtre · hors de prix »**, 1 « nuit · se paie ». Les 8 désaccords sont tous des Δ entre −0,7 et +0,6, à
+cheval sur le plancher — le tiers de petits écarts sans signe annoncé par la nuit. Les 2 contestés (effets opposés et plus
+d'un pion) : e3-e4 à la Carlsbad après h3 (nuit −0,54 contre prépare +1,24) et …d5 au hérisson après …Tab8 (−1,25 contre
++0,98) — à trancher une fois à profondeur 30, et le coach peut dire « contesté entre moteurs ».
+
+**Les lignes qui comptent.**
+- **Les deux fenêtres qui se ferment** sont les mêmes sur les deux moteurs : Fd3 puis **…h6** contre Fg5×e7 (Tarrasch
+  ouvert), Te1 puis **…h6** contre Fg5 (Française d'échange) — « le pion h6 contrôle g5 (0 → 1 attaquant) ». C'est la
+  sortie la plus utile du coach, et elle est mécanique.
+- **Dd3 prépare Ce5** sur les deux moteurs (Δ +1,29 / +1,10) ; l'état après diffère d'un dixième autour de la borne de
+  1,0 (« se paie » 0,84 contre « hors de prix » 1,10) — annoncé sur l'axe 1 seul. Dd3 prépare aussi d5 (+0,47 / +0,62).
+- **Le roque prépare …e5** (Tarrasch fermée, +0,36 sur les deux) — mesuré, pas décrété ; la réponse Ff4 qui vient viser
+  e5 est une pièce : « plus cher, pas fermé ».
+- **Les 22 « injouables » d'hier soir** sont devenus 10 « se paie » + 9 « hors de prix » (SF 19) : le plan n'est pas mort,
+  il n'est pas gratuit — la vérité des positions calmes.
+
+**Ce que l'étape 2 tranche.** Le test réécrit est **stable à réponse constante et lisible** : zéro ligne mesurée en pleine
+tactique, 60 % des lignes annonçables par les deux moteurs, les fenêtres qui se ferment identifiées sans règle d'échecs
+codée. Ce qu'il ne fait pas, et ne fera pas : départager les plans d'un panel calme à moins de 0,5 du meilleur coup —
+8 désaccords sur 35 sont là, et c'est l'argument du faisceau (§ 9). Reste à brancher `threats.mjs` pour le clouage relatif
+et le défenseur cloué (constats de l'Expert, différés), et à retester les 2 contestés à profondeur 30.
