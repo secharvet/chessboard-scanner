@@ -145,9 +145,16 @@ qui dit *où* un plan cher s'est payé. Un prix ≤ 0 se lit « le plan est ce q
    profondeur 18 qui a servi au choix** (meilleur − joué), jamais d'une re-notation. **Dernière chance** : la notation de
    tous les coups légaux qui la *décide* se fait à profondeur 14 (plafond de coût) ; son retard, lui, est mesuré à 18
    comme les autres — meilleur de la MultiPV 4 moins la valeur du coup joué, lue dans la réponse adverse à 18.
-9. **Code** : la logique d'un coup contraint (classer les quatre candidats, choisir, dernière chance) est **extraite du
-   faisceau dans un module partagé** (`coach/coup-contraint.mjs`), testée, appelée par le faisceau *et* par le pilote de
-   partie — pas de copie, sinon les deux divergent. Lanceur sur la matrice départs × graines, à partir de `faisceau.sh`.
+9. **Le faisceau libre de référence d'un segment** : **largeur 4, quatre candidats, réponses ouvertes** — les réglages du
+   faisceau du 18 octobre, à l'identique ; son horizon est **la longueur du segment**, connue à l'abandon : il est calculé *a
+   posteriori*, depuis la position d'adoption jusqu'au demi-coup de l'abandon, puis prolongé au même point calme que la
+   ligne jouée. Le bras coach-prix, lui, choisit avec un faisceau plus court (horizon 10, largeur 2) : c'est un choix, pas
+   une mesure.
+10. **Code** : une seule implémentation pour trois usages. Sont **extraits du faisceau dans un module partagé** et consommés
+   par le faisceau, par le pilote de partie et par le bras coach-prix : la logique d'un coup contraint (classer les quatre
+   candidats, choisir, dernière chance — `coach/coup-contraint.mjs`), **le faisceau libre et le prix d'un segment** (avec le
+   bornage ± 10, le point calme, la pression symétrique). Pas de copie, sinon les versions divergent. Lanceur sur la matrice
+   départs × graines, à partir de `faisceau.sh`.
 
 ## 6. Ce qui est interdit, ce qui est différé
 
