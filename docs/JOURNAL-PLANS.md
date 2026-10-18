@@ -1543,3 +1543,6 @@ identique, 9/14 changent quand la réponse change) ; entre moteurs, 7 statuts ch
 entre réseaux). Cahier des charges de l'étape suivante : deux réponses adverses (pire Δ), point calme par menaces, accord des
 deux moteurs. Incident de pilotage : un `kill` par motif a tué le shell de la chaîne (la passe 2 remise en file à la main) —
 règle : PID dans un fichier, jamais de kill par grep.
+**18 octobre, 19 h : passe 3 rentrée d'Orion** (rapatriée par le tunnel, sa session n'ayant ni enchaîné ni prévenu ; passe 1
+relancée sur Orion directement par ssh). Axe profondeur SF 17.1 : 30/30 statuts stables à réponse identique sauf 2 ; axe moteur
+à 24 : 90e centile 36 cp, 6 statuts changent à réponse identique. Annexes G-J. Déterminisme VPS/Orion en attente.
