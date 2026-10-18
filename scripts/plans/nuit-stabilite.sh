@@ -16,8 +16,10 @@ mkdir -p "$OUT"
 IDS=$(node -e "import('./scripts/plans/positions-filtre.mjs').then((m) => console.log(m.POSITIONS.map((p) => p.id).join(' ')))")
 export STOCKFISH_PATH=$MOTEUR COACH_DETERMINISTIC=1
 echo "$(date -u +%FT%TZ) début : $MOTEUR, profondeur $PROF, $PAR processus → $OUT"
-printf '%s\n' $IDS | xargs -P "$PAR" -I{} sh -c "nice -n 19 node scripts/plans/filtre.mjs --depth $PROF --seulement {} --out $OUT/filtre-{}.md > $OUT/filtre-{}.log 2>&1"
+printf '%s\n' $IDS | xargs -P "$PAR" -I{} sh -c "nice -n 19 node scripts/plans/filtre.mjs --depth $PROF --seulement {} --out $OUT/filtre-{}.md > $OUT/filtre-{}.log 2>&1" || true
 echo "$(date -u +%FT%TZ) tableau fini"
-printf '%s\n' $IDS | xargs -P "$PAR" -I{} sh -c "nice -n 19 node scripts/plans/preparatoire.mjs --depth $PROF --in $JSON --seulement {} --out $OUT/preparatoire-{}.md > $OUT/preparatoire-{}.log 2>&1"
+printf '%s\n' $IDS | xargs -P "$PAR" -I{} sh -c "nice -n 19 node scripts/plans/preparatoire.mjs --depth $PROF --in $JSON --seulement {} --out $OUT/preparatoire-{}.md > $OUT/preparatoire-{}.log 2>&1" || true
 echo "$(date -u +%FT%TZ) test fini"
-echo "TERMINÉ $OUT" | tee "$OUT/TERMINE"
+ECHECS=$(grep -l -E "Error|TypeError|délai dépassé" "$OUT"/*.log 2>/dev/null | wc -l)
+[ "$ECHECS" -gt 0 ] && grep -l -E "Error|TypeError|délai dépassé" "$OUT"/*.log | sed "s/^/ÉCHEC : /"
+echo "TERMINÉ $OUT ($ECHECS échec(s))" | tee "$OUT/TERMINE"

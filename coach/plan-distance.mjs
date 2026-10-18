@@ -234,12 +234,20 @@ export function estLevier(fen, side, plan) {
  *  la cible d'un échange est une pièce, pas une case : si le Fe2 va en d3, « échanger le mauvais fou » survit. */
 export function suivre(plan, move) {
   if (plan.famille === 'et') return { ...plan, plans: plan.plans.map((p) => suivre(p, move)) };
-  if (plan.famille === 'transfert' && move.from === plan.de) return { ...plan, de: move.to };
-  if (plan.famille === 'echange') {
-    if (move.from === plan.mienne) return { ...plan, mienne: move.to };
-    if (move.from === plan.cible) return { ...plan, cible: move.to };
+  // Au roque, la tour bouge aussi : on suit les deux déplacements.
+  const pas = [[move.from, move.to]];
+  if (move.piece === 'k' && Math.abs(fileOf(move.to) - fileOf(move.from)) === 2) {
+    const r = move.from[1]; pas.push(move.to[0] === 'g' ? [`h${r}`, `f${r}`] : [`a${r}`, `d${r}`]);
   }
-  return plan;
+  let out = plan;
+  for (const [de, vers] of pas) {
+    if (out.famille === 'transfert' && de === out.de) out = { ...out, de: vers };
+    if (out.famille === 'echange') {
+      if (de === out.mienne) out = { ...out, mienne: vers };
+      else if (de === out.cible) out = { ...out, cible: vers };
+    }
+  }
+  return out;
 }
 
 /** Verrou de réalisation : un plan arrivé à 0 reste à 0 (le pion de levier qui prend ensuite ne le rend pas indéfini). */

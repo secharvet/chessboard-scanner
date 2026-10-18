@@ -38,6 +38,7 @@ for (const pos of POSITIONS) {
   if (pos.fen) c.load(pos.fen); else for (const san of pos.coups.split(/\s+/)) c.move(san);
   const fen = c.fen(); const side = c.turn();
   for (const plan of pos.plans) if (!estLevier(fen, side, plan)) throw new Error(`${pos.id} : ${libelle(plan, fen)} n'est pas une rupture (aucun pion adverse attaqué depuis la cible)`);
+  const libs = pos.plans.map((p) => libelle(p, fen)); if (new Set(libs).size !== libs.length) throw new Error(`${pos.id} : deux plans ont le même libellé (${libs.join(', ')}) — les clés de rapprochement les écraseraient`);
   const legaux = c.moves({ verbose: true });
   console.error(`${pos.id} : ${legaux.length} coups légaux, profondeur ${DEPTH}…`);
   const t0 = Date.now();

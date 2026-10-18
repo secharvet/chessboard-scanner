@@ -92,3 +92,11 @@ test('rupture : une rupture vise un pion adverse, sinon ce n\'est pas une ruptur
   assert.equal(estLevier(c.fen(), 'w', { famille: 'rupture', pion: 'c', cible: 'c5' }), true);
   assert.equal(estLevier(c.fen(), 'w', { famille: 'rupture', pion: 'a', cible: 'a5' }), false);
 });
+
+test('suivre : au roque, la tour suivie bouge aussi', () => {
+  const ooo = { from: 'e8', to: 'c8', piece: 'k', san: 'O-O-O' };
+  assert.deepEqual(suivre({ famille: 'transfert', de: 'a8', vers: 'd8' }, ooo), { famille: 'transfert', de: 'd8', vers: 'd8' });
+  assert.deepEqual(suivre({ famille: 'echange', mienne: 'c1', cible: 'h8' }, { from: 'e8', to: 'g8', piece: 'k', san: 'O-O' }), { famille: 'echange', mienne: 'c1', cible: 'f8' });
+  // un coup de roi ordinaire ne déplace pas la tour
+  assert.deepEqual(suivre({ famille: 'transfert', de: 'h1', vers: 'f1' }, { from: 'e1', to: 'e2', piece: 'k', san: 'Ke2' }), { famille: 'transfert', de: 'h1', vers: 'f1' });
+});

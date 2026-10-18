@@ -11,7 +11,8 @@ import { enToFr } from '../../coach/notation.mjs';
 
 const args = process.argv.slice(2);
 const opt = (k, d) => (args.includes(k) ? args[args.indexOf(k) + 1] : d);
-const A = opt('--a', 'reports/plans/filtre.json'), B = opt('--b', null), PLANCHER = Number(opt('--plancher', 15));
+const A = opt('--a', 'reports/plans/filtre.json'), B = opt('--b', null), PLANCHER = Number(opt('--plancher', 25));
+if (!B) { console.error('usage : --a <json> --b <json ou dossier> [--test <json A> <json ou dossier B>]'); process.exit(2); }
 const OUT = opt('--out', `${statSync(B).isDirectory() ? B : 'reports/plans/stabilite'}/comparaison.md`);
 const charger = (p) => (statSync(p).isDirectory() ? readdirSync(p).filter((f) => /^filtre-.*\.json$/.test(f)).flatMap((f) => JSON.parse(readFileSync(join(p, f), 'utf8'))) : JSON.parse(readFileSync(p, 'utf8')));
 const fr = enToFr, fmt = (c) => (c / 100).toFixed(2).replace('.', ',').replace(/^(-?)/, (m) => (m === '-' ? '−' : '+'));

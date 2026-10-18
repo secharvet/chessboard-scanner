@@ -9,7 +9,7 @@
  *          — « ferme la fenêtre » quand la réponse qui donne le pire Δ ATTAQUE OU CONTRÔLE la case du pas (carte d'attaques
  *          avant/après la réponse, ou le pas devenu illégal) : le plan est périssable ; sinon c'est de la variance ;
  *   axe 2, l'état de P après M et la pire réponse : mûr (la réalisation est viable, retard ≤ 30) / en préparation (un pas
- *          viable existe) / injouable / bloqué / sans objet ;
+ *          viable existe) / se paie (meilleur pas entre 0,3 et 1,0) / hors de prix (> 1,0) / bloqué / sans objet ;
  *   « limite » quand |Δ| est entre le plancher (25 cp) et la bande (50) ;
  *   « sert un plan frère » : les autres plans listés que M fait progresser.
  * Les fils du moteur viennent de COACH_DETERMINISTIC (un fil pour mesurer). Les sorties A et B de deux moteurs se
@@ -64,49 +64,68 @@ async function noter(fen) {
 async function reponses(fen, n) {
   const k = `${fen}|${n}`; if (cacheRep.has(k)) return cacheRep.get(k);
   const l = await engine.analyze(fen, { depth: DEPTH, multipv: n, timeoutMs: 10 * 60_000 });
-  const r = l.map((x) => x.pv[0]); cacheRep.set(k, r); return r;
+  const r = l.map((x) => x.pv?.[0]).filter(Boolean); cacheRep.set(k, r); return r;
 }
 const VAL = { p: 1, n: 3, b: 3, r: 5, q: 9, k: 100 };
-/** Une pièce à moi (pas un pion) est-elle en prise : attaquée par moins cher qu'elle, ou plus attaquée que défendue ? */
-function enPrise(fen, side) {
-  const map = buildAttackMap(fen), opp = other(side);
-  return map.pieces.some((p) => {
-    if (p.color !== side || p.type === 'p' || p.type === 'k') return false;
-    const att = map.attackersOf(p.square, opp); if (!att.length) return false;
-    return Math.min(...att.map((a) => VAL[a.type])) < VAL[p.type] || att.length > map.attackersOf(p.square, side).length;
-  });
+/** Mini-échange sur une case (valeurs croissantes, rayons X et clouages ignorés) : gain de l'adversaire s'il ouvre les prises. */
+function gainEchange(map, sq, side) {
+  const p = map.at[sq]; if (!p) return 0;
+  const opp = other(side);
+  const att = map.attackersOf(sq, opp).sort((a, b) => VAL[a.type] - VAL[b.type]);
+  const def = map.attackersOf(sq, side).sort((a, b) => VAL[a.type] - VAL[b.type]);
+  const prises = []; let valeur = VAL[p.type], i = 0, j = 0, tourOpp = true;
+  for (;;) { const arr = tourOpp ? att : def, k = tourOpp ? i : j; if (k >= arr.length) break; prises.push(valeur); valeur = VAL[arr[k].type]; if (tourOpp) i++; else j++; tourOpp = !tourOpp; }
+  if (!prises.length) return 0;
+  let g = prises[prises.length - 1];
+  for (let k = prises.length - 2; k >= 0; k--) g = prises[k] - Math.max(0, g);
+  return g;
 }
-/** Depuis une position à mon trait : prolonger tant qu'il y a une menace à parer — prise à jouer, échec, pièce en prise,
- *  ou coup forcé (le meilleur bat le second de plus d'un pion) — deux fois au plus. Le point calme par menaces du § 6. */
+/** Une pièce à moi (ni pion ni roi) est en prise si l'adversaire gagne du matériel en ouvrant les prises dessus. */
+function enPrise(fen, side) {
+  const map = buildAttackMap(fen);
+  return map.pieces.some((p) => p.color === side && p.type !== 'p' && p.type !== 'k' && gainEchange(map, p.square, side) > 0);
+}
+/** La position est-elle calme pour le camp au trait ? (pas d'échec, pas de pièce en prise, meilleur coup ni prise ni forcé) */
+function calme(fen, mes) {
+  const c = new Chess(fen);
+  if (c.inCheck() || !mes.best) return !mes.best;
+  const force = !mes.coups[1] || mes.best.cp - mes.coups[1].cp > FORCE; // un seul coup légal est forcé par définition
+  return !(mes.best.m.captured || force || enPrise(fen, c.turn()));
+}
+/** Depuis une position à mon trait : prolonger tant que la position n'est pas calme — l'échec se prolonge toujours (parade
+ *  forcée), le reste deux fois au plus (chaque prolongation = mon meilleur coup + sa meilleure réponse). Si la position
+ *  n'est toujours pas calme à la fin, on le dit (calme: false) plutôt que de mesurer en pleine tactique. */
 async function pointCalme(fen) {
-  const joues = [];
-  for (let i = 0; i < 2; i++) {
+  const joues = []; let budget = 2;
+  for (let i = 0; i < 6; i++) {
     const mes = await noter(fen);
-    if (!mes.best) return { fen, mesure: mes, joues };
-    const c = new Chess(fen);
-    const force = mes.coups[1] && mes.best.cp - mes.coups[1].cp > FORCE;
-    if (!(mes.best.m.captured || c.inCheck() || force || enPrise(fen, c.turn()))) return { fen, mesure: mes, joues };
+    if (!mes.best) return { fen, mesure: mes, joues, calme: false };
+    if (calme(fen, mes)) return { fen, mesure: mes, joues, calme: true };
+    const echec = new Chess(fen).inCheck();
+    if (!echec) { if (!budget) return { fen, mesure: mes, joues, calme: false }; budget--; }
     const a = jouer(fen, uciOf(mes.best.m)); joues.push(a.m);
-    const [rep] = await reponses(a.fen, 1); if (!rep) return { fen: a.fen, mesure: await noter(a.fen), joues };
+    const [rep] = await reponses(a.fen, 1); if (!rep) { const m2 = await noter(a.fen); return { fen: a.fen, mesure: m2, joues, calme: calme(a.fen, m2) }; }
     const b = jouer(a.fen, rep); joues.push(b.m); fen = b.fen;
   }
-  return { fen, mesure: await noter(fen), joues };
+  const mes = await noter(fen); return { fen, mesure: mes, joues, calme: false };
 }
-/** La réponse adverse touche-t-elle la case du pas ? (plus d'attaquants adverses dessus, pièce de la réponse qui la vise, ou pas devenu illégal) */
-function toucheCase(fenAvant, fenApres, mRep, pas, side) {
-  if (!pas) return { touche: false, raison: '' };
+/** La réponse adverse ferme-t-elle la fenêtre du pas ? Un PION adverse qui prend le contrôle de la case du pas est
+ *  irréversible (…h6 contre Fg5) : fenêtre fermée ; une PIÈCE qui vient la viser se chasse ou s'échange : le pas devient
+ *  seulement plus cher (« nuit »). Pas devenu illégal après la réponse : fermé aussi. Si M lui-même a déplacé la pièce du
+ *  pas ou occupé sa case, ce n'est pas la réponse qui ferme. */
+function toucheCase(fenAvant, fenApres, mRep, pas, mM, side) {
+  if (!pas) return { ferme: false, pièce: false, raison: '' };
   const to = pas.to, opp = other(side);
-  // Si M lui-même a rendu le pas injouable (il a déplacé la pièce du pas ou occupé sa case), ce n'est pas la réponse qui ferme.
-  // Avant la réponse c'est l'adversaire qui a le trait : on lui rend le nôtre pour tester le pas (position pseudo-légale).
   const aNous = (f) => { const p = f.split(' '); p[1] = side; p[3] = '-'; return p.join(' '); };
   let legalAvant = true; try { legalAvant = new Chess(aNous(fenAvant)).moves({ verbose: true }).some((m) => m.from === pas.from && m.to === pas.to); } catch { legalAvant = true; }
-  if (!legalAvant) return { touche: false, raison: `${fr(pas.san)} déjà déplacé par M` };
+  if (!legalAvant) return { ferme: false, pièce: false, raison: mM.to === to ? `${fr(pas.san)} bloqué par M` : `${fr(pas.san)} déplacé par M` };
   const avant = buildAttackMap(fenAvant).attackersOf(to, opp), apres = buildAttackMap(fenApres).attackersOf(to, opp);
-  const vise = apres.some((p) => p.square === mRep.to);
   const legal = new Chess(fenApres).moves({ verbose: true }).some((m) => m.from === pas.from && m.to === pas.to);
-  if (!legal) return { touche: true, raison: `${fr(pas.san)} n'est plus légal après ${fr(mRep.san)}` };
-  if (vise || apres.length > avant.length) return { touche: true, raison: `${fr(mRep.san)} vise ${to} (${avant.length} → ${apres.length} attaquant${apres.length > 1 ? 's' : ''})` };
-  return { touche: false, raison: '' };
+  if (!legal) return { ferme: true, pièce: false, raison: `${fr(pas.san)} n'est plus légal après ${fr(mRep.san)}` };
+  const vise = apres.some((p) => p.square === mRep.to) || apres.length > avant.length;
+  if (!vise) return { ferme: false, pièce: false, raison: '' };
+  if (mRep.piece === 'p') return { ferme: true, pièce: false, raison: `le pion ${fr(mRep.san)} contrôle ${to} (${avant.length} → ${apres.length} attaquant${apres.length > 1 ? 's' : ''})` };
+  return { ferme: false, pièce: true, raison: `${fr(mRep.san)} vise ${to} : plus cher, pas fermé` };
 }
 
 const lignes = [];
@@ -128,28 +147,30 @@ for (const e of entrees) {
   const essais = [];
   for (const u of reps) {
     const r = jouer(mM.fen, u);
-    const tc = toucheCase(mM.fen, r.fen, r.m, pasSuivi, side);
+    const tc = toucheCase(mM.fen, r.fen, r.m, pasSuivi, mM.m, side);
     const q = await pointCalme(r.fen);
     let planQ = suivre(suivre(e.plan, mM.m), r.m); for (const m of q.joues) planQ = suivre(planQ, m);
     const suite = [mM.m, r.m, ...q.joues].map((m) => fr(m.san)).join(' ');
-    const essai = { reponse: r.m.san, suite, touche: tc.touche, raison: tc.raison, prolonge: q.joues.length > 0 };
+    const essai = { reponse: r.m.san, suite, touche: tc.ferme, piece: tc.pièce, raison: tc.raison, prolonge: q.joues.length > 0 };
     if (!q.mesure.best) { essais.push({ ...essai, etat: 'sans objet', delta: null, deltaMeme: null }); continue; }
+    if (!q.calme) { essais.push({ ...essai, etat: 'pas de point calme', note: 'ligne tactique, pas de Δ', delta: null, deltaMeme: null }); continue; }
     if (!estLevier(q.fen, side, planQ)) { essais.push({ ...essai, etat: 'sans objet', note: 'plus de pion à attaquer', delta: null, deltaMeme: null }); continue; }
     const d0Q = distance(q.fen, side, planQ);
     const bestQ = q.mesure.best.cp;
     const prog = q.mesure.coups.map((x) => { const a = new Chess(q.fen); a.move(x.m.san); return { ...x, d1: distance(a.fen(), side, suivre(planQ, x.m)).d }; }).filter((x) => x.d1 < d0Q.d);
-    const meme = prog.find((x) => x.m.san === bp.san);
+    const meme = prog.find((x) => pasSuivi ? x.m.from === pasSuivi.from && x.m.to === pasSuivi.to : x.m.san === bp.san); // par cases : le SAN peut devenir ambigu
     const retardMeilleur = prog.length ? bestQ - prog[0].cp : null, retardMeme = meme ? bestQ - meme.cp : null;
-    const etat = d0Q.d === 0 ? 'mûr (réalisé)' : d0Q.d === Infinity ? 'bloqué' : prog.some((x) => x.d1 === 0 && bestQ - x.cp <= VIABLE) ? 'mûr' : prog.some((x) => bestQ - x.cp <= VIABLE) ? 'en préparation' : 'injouable';
+    const meilleurRetard = prog.length ? bestQ - prog[0].cp : Infinity;
+    const etat = d0Q.d === 0 ? 'mûr (réalisé)' : d0Q.d === Infinity ? 'bloqué' : prog.some((x) => x.d1 === 0 && bestQ - x.cp <= VIABLE) ? 'mûr' : meilleurRetard <= VIABLE ? 'en préparation' : meilleurRetard <= 100 ? 'se paie' : 'hors de prix';
     essais.push({ ...essai, etat, pasApres: prog[0]?.m.san ?? null, retardMeilleur, retardMeme, delta: retardMeilleur == null ? null : retardAvant - retardMeilleur, deltaMeme: retardMeme == null ? null : retardAvant - retardMeme });
   }
   const mesurables = essais.filter((x) => x.delta != null);
-  if (!mesurables.length) { lignes.push({ ...base, axe1: 'sans objet', etat: essais[0].etat, note: essais[0].note ?? 'aucun pas après les réponses', essais, retardAvant, pasAvant: bp.san }); continue; }
+  if (!mesurables.length) { lignes.push({ ...base, axe1: 'sans objet', etat: essais[0].etat, note: essais.map((x) => `${fr(x.reponse)} : ${x.note ?? x.etat}`).join(' ; '), essais, retardAvant, pasAvant: bp.san }); continue; }
   const pire = mesurables.reduce((a, b) => (b.delta < a.delta ? b : a));
   const dw = pire.delta;
   const axe1 = dw > PLANCHER ? 'prépare' : dw < -PLANCHER ? (pire.touche ? 'ferme la fenêtre' : 'nuit') : 'neutre';
   const limite = Math.abs(dw) > PLANCHER && Math.abs(dw) <= BANDE;
-  lignes.push({ ...base, pasAvant: bp.san, retardAvant, essais, pire: pire.reponse, delta: dw, deltaMeme: pire.deltaMeme, axe1, limite, etat: pire.etat, touche: pire.touche, raison: pire.raison });
+  lignes.push({ ...base, pasAvant: bp.san, retardAvant, essais, pire: pire.reponse, delta: dw, deltaMeme: pire.deltaMeme, axe1, limite, etat: pire.etat, touche: pire.touche, raison: axe1 === 'ferme la fenêtre' || pire.piece ? pire.raison : '' });
 }
 engine.stop();
 
@@ -163,7 +184,7 @@ for (const l of [...lignes].sort((a, b) => (ordre[a.axe1] ?? 9) - (ordre[b.axe1]
 }
 const n = (k, v) => lignes.filter((l) => l[k] === v).length;
 md.push('', `Bilan axe 1 : ${n('axe1', 'prépare')} prépare, ${n('axe1', 'neutre')} neutre, ${n('axe1', 'nuit')} nuit, ${n('axe1', 'ferme la fenêtre')} ferme la fenêtre, ${n('axe1', 'sans objet')} sans objet ; ${lignes.filter((l) => l.limite).length} limite(s).`,
-  `Bilan axe 2 : ${['mûr', 'mûr (réalisé)', 'en préparation', 'injouable', 'bloqué', 'sans objet'].map((v) => `${n('etat', v)} ${v}`).join(', ')}.`, '');
+  `Bilan axe 2 : ${['mûr', 'mûr (réalisé)', 'en préparation', 'se paie', 'hors de prix', 'bloqué', 'pas de point calme', 'sans objet'].map((v) => `${n('etat', v)} ${v}`).join(', ')}.`, '');
 mkdirSync(dirname(OUT), { recursive: true });
 writeFileSync(OUT, md.join('\n') + '\n');
 writeFileSync(OUT.replace(/\.md$/, '.json'), JSON.stringify(lignes, null, 1));
