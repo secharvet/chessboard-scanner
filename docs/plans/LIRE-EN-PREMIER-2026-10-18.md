@@ -1,12 +1,14 @@
 # À lire en premier — la journée du 18 octobre, en une page et sans jargon
 
-Écrit pour l'auteur, pas pour les agents. Les deux rapports (`RAPPORT-FILTRE-2026-10-18.md`, `RAPPORT-FAISCEAU-2026-10-18.md`)
+Écrit pour l'auteur, pas pour les agents. **Lexique des noms** : *l'Expert* = la session « expert échecs » de l'équipe
+(relit la sémantique, arbitre au moteur) ; *le Dev chef* = la session qui relit la mécanique du code ; *le Grand Expert (GE)*
+= le relecteur extérieur (un modèle de langage qui ne voit pas l'échiquier, consulté par l'auteur) ; *le pilote* = moi. Les deux rapports (`RAPPORT-FILTRE-2026-10-18.md`, `RAPPORT-FAISCEAU-2026-10-18.md`)
 contiennent les preuves ; cette page dit ce qu'on a fait, ce qu'on a trouvé, et ce qui reste.
 
 ## La question du matin
 
 Le coach IA avait été fermé le 8 octobre parce qu'il ne savait pas choisir un plan : il récitait des généralités. L'idée
-reprise ce matin, discutée avec le GM : **ne plus demander au logiciel de choisir le plan, mais de lui donner un prix.** On
+reprise ce matin, discutée avec le Grand Expert (GE) : **ne plus demander au logiciel de choisir le plan, mais de lui donner un prix.** On
 prend une position et un plan connu (par exemple « l'attaque de minorité » dans la structure Carlsbad), on force Stockfish
 à suivre ce plan pendant quinze coups — à chaque coup il n'a le droit de jouer que ce qui fait avancer le plan ou le
 prépare —, l'adversaire joue librement, et à la fin on compare avec ce que Stockfish aurait fait tout seul. Zéro : le plan
