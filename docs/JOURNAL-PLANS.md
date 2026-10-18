@@ -1577,3 +1577,7 @@ résilients…). Résultats (§ 10, annexes U-W) : 21/35 lignes annoncées par l
 contestés (e4 Carlsbad, …d5 hérisson) ; **2 fenêtres qui se ferment, identiques sur les deux moteurs (…h6 contre Fg5)** ; Dd3
 prépare Ce5 et d5 ; le roque prépare …e5 ; 0 ligne mesurée en pleine tactique. Suite possible : threats.mjs (clouage relatif),
 profondeur 30 sur les 2 contestés, panel à menaces, faisceau.
+**18 octobre, 21 h : les deux contestés tranchés à prof. 30 par l'Expert (SF 19, un fil).** e4 Carlsbad après h3 : nuit
+(Δ −1,74 sur …a6 ; mais +2,65 sur …Fe6, réponse ex æquo — la règle « pire des deux » validée brutalement, et un verdict
+contesté doit donner les Δ par réponse) ; …d5 hérisson après Tab8 : prépare, limite (+0,38 sur h3, +2,20 sur Te1), d5 reste
+hors de prix (3,81). Anecdote : …Cc5, écarté du panel, est le meilleur coup du hérisson à prof. 30. Complément au § 10.

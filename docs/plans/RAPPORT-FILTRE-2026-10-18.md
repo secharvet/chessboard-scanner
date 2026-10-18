@@ -513,3 +513,21 @@ tactique, 60 % des lignes annonçables par les deux moteurs, les fenêtres qui s
 codée. Ce qu'il ne fait pas, et ne fera pas : départager les plans d'un panel calme à moins de 0,5 du meilleur coup —
 8 désaccords sur 35 sont là, et c'est l'argument du faisceau (§ 9). Reste à brancher `threats.mjs` pour le clouage relatif
 et le défenseur cloué (constats de l'Expert, différés), et à retester les 2 contestés à profondeur 30.
+
+**Complément : les deux contestés tranchés à profondeur 30 (Expert échecs, SF 19, un fil, retard du pas par recherche
+complète sur le pas forcé ; verdict sur la pire des deux meilleures réponses).**
+- *Carlsbad, e3-e4 après 11.h3* : **nuit, Δ −1,74** — SF 19 avait le bon signe. Racine : h3 +0,40, e4 −3,28, retard
+  3,68. Après h3 …a6 (meilleure réponse) : e4 −4,96 (dxe4 Fxf6 **exf3 !**, l'intermezzo prend le cavalier), retard 5,42,
+  Δ −1,74. Mais après h3 **…Fe6** (réponse ex æquo) : e4 −0,74, retard 1,03, **Δ +2,65**. Quatre pions et demi d'écart
+  entre deux réponses strictement égales : le « prépare +1,24 » de SF 17.1 n'était pas du bruit de note, c'était l'autre
+  réponse. Validation la plus brutale de la règle « pire des deux » — et une règle de forme : **un verdict contesté donne
+  toujours les Δ par réponse**, jamais un seul chiffre.
+- *Hérisson, …d6-d5 après 15…Tab8* : **prépare, limite, Δ +0,38** — SF 17.1 avait le bon signe. Racine : retard de …d5
+  4,19. Après Tab8 Te1 : 1,99 (Δ +2,20) ; après Tab8 h3 (pire) : 3,81 (Δ +0,38, dans la bande ]25 ; 50]). Réserves : tête
+  des réponses blanches plate (Te1, h3, De2, Tf1 en 0,11), et la réponse de la passe 18 (De2) n'est plus dans les deux
+  premières à 30. L'axe 2 ne change pas d'avis : d5 reste **hors de prix** (3,81). Phrase : « Tab8 rapproche …d5, qui reste
+  hors de prix » — le plan vit par sa préparation, pas par sa poussée, comme la vitrine Dd3.
+- Anecdote : à la racine du hérisson à profondeur 30, le meilleur coup est **…Cc5** (−0,13) — le coup écarté des plans
+  « sans débat ». Il reste conditionnel comme plan ; l'ironie méritait d'être notée.
+- Pour la prochaine révision du test : bande « limite » sur l'axe 2 aussi (1,0 ± 0,25, retest à prof. 24), et les Δ par
+  réponse affichés pour toute ligne contestée.
