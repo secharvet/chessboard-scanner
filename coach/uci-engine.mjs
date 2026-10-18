@@ -83,7 +83,7 @@ export class UciEngine {
 
   /**
    * @param {string} fen
-   * @param {{ depth?: number, multipv?: number }} [opts]
+   * @param {{ depth?: number, multipv?: number, timeoutMs?: number }} [opts]
    * @returns {Promise<EngineLine[]>}
    */
   analyze(fen, opts = {}) {
@@ -106,7 +106,7 @@ export class UciEngine {
           if (parsed) lines.set(parsed.multipv, parsed);
         }
         return l.startsWith('bestmove');
-      });
+      }, opts.timeoutMs);
       return [...lines.values()].sort((a, b) => a.multipv - b.multipv);
     };
     const p = this.queue.then(run, run);
