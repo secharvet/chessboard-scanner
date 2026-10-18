@@ -1597,3 +1597,10 @@ non bornées par la largeur, coût réel des concessions, mats bornés, garde d'
 plans longs canoniques ≤ 1,0 : 8/10 (SF 19), 5/10 (SF 17.1) ; accord des moteurs 18/35 ; deux contradictions communes
 (Carlsbad b4-b5 0,46-1,62 contre Ce5 0 ; Tarrasch fermée colonne c 0,84-1,92 contre …e5 0). Clause prof. 30 en cours chez
 l'Expert sur les quatre contradictions de SF 19. Rapport : `RAPPORT-FAISCEAU-2026-10-18.md` (§ 8 à compléter), annexes X-ZZ.
+**18 octobre, 23 h 55 : verdict du faisceau.** Arbitrages à prof. 30 (Expert, SF 19, un fil, prix = racine − fin de ligne) :
+Carlsbad confirmée-limite (b5 gratuit à 30, Ce5 encore moins cher de 0,30 : les deux sont des plans) ; Espagnole confirmée nette
+(Cd5 bat e5 de 0,59) ; avance blancs confirmée mais « à la merci de la réponse » (…Cxe5 douteux à 30) ; Tarrasch fermée
+INFIRMÉE et renversée (colonne c −0,49 réel contre +0,84 annoncé : 1,3 pion d'erreur de snapshot tactique). **Clause appliquée :
+9/10, le critère passe**, plans longs 8/10, trois drapeaux. Lecture : la mesure ne contredit pas la théorie, elle la précise
+(trois cas Marc) ; le prix à 18 n'est pas fiable au-delà de la bande grise ; le critère passe sur la clause, pas sur la passe
+à 18 seule. Épreuve du jeu : go à part, à froid, après prix au point calme et horizon 20.
