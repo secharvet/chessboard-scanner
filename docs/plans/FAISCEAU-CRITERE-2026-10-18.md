@@ -38,6 +38,11 @@ et en comparant à la ligne libre.
 - **« À la merci de la réponse »** : seulement entre branches **jumelles** — mêmes coups à nous jusqu'à une réponse ex
   æquo, puis prix des deux sous-arbres de signes opposés au-delà du plancher.
 - **Limite** aussi quand la dernière chance est refusée à moins du plancher de la borne (1,0 ± 0,25).
+- Précisions de la relecture mécanique (Dev chef) : les réalisations passent par le même tri de largeur que les branches
+  vivantes (sinon un plan réalisé de plusieurs façons gagnait par le seul nombre de ses branches) ; les prix sont bornés à
+  ± 10 pions (scores de mat) ; un coup non progressant qui vaut plus d'un pion de moins que le meilleur n'est pas une branche
+  (assumé : perdre un pion sans servir le plan n'est pas de l'intendance) ; à égalité entre coupes « concession » et
+  « compteur », la concession l'emporte dans la phrase.
 
 ## 2. Les sorties — exactement le vocabulaire stabilisé le 18 octobre (§ 11), plus le prix et le tempo
 
