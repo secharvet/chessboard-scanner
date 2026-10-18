@@ -1461,3 +1461,59 @@ Cfd7 déjà joués ; le Tarrasch fermé promettait « Cf4 vise e6 et d5 après �
 la vraie manœuvre Ff4 puis Cxf4 ; la Classique 3…Cf6 n'avait aucune liste (ajoutée, 10 + 10). Mises à jour directement dans les
 explications IA en base (13/13), sauvegarde des versions précédentes conservée ; doublon de clés coupsBlancs/coupsNoirs nettoyé
 dans le noyau source. Leçon de méthode : un schéma de milieu de jeu doit être écrit position par position, jamais hérité du tronc.
+
+## 18 octobre 2026, nuit : réouverture bornée — le filtre de compatibilité des plans, à la profondeur 1
+
+**Contexte.** Discussion à trois (l'auteur, la session Expert échecs, le pilote) sur la clôture du coach : le diagnostic retenu
+est que l'étage 2 (formuler le plan) demandait au LLM de la pondération en contexte, ce qu'il ne sait pas faire, alors que les
+étages 1 (percevoir) et 3 (traduire un plan en coups vérifiés) marchaient. La proposition de l'Expert — imposer le plan au
+moteur et le chiffrer (son **prix** : évaluation finale contre la ligne libre ; son **tempo** : le coup où l'atome se réalise)
+plutôt que lire le plan dans les coups du moteur — n'a jamais été essayée : `counterfactuals.mjs` perturbait des positions,
+pas des lignes. Hypothèse testée : « ce qui manquait n'était pas de l'intelligence mais un arbitre ». **Go de l'auteur sur le
+premier livrable seul** : le filtre de compatibilité (quel coup est un pas vers le plan), sur dix positions, à la profondeur 1,
+sans recherche ni prix, dans un tableau qu'un œil humain juge.
+
+**Construit.** `coach/plan-distance.mjs` : une fonction de potentiel par famille de plan, en nombre de mes coups, 0 = réalisé,
+∞ = bloqué par l'adversaire — `rupture` (poussées restantes, chacune pesée par son déficit de soutien, le pion avançant
+transparent : la tour derrière lui le soutient par rayon X), `transfert` (plus court chemin, une pièce à moi sur le chemin
+coûte un coup de plus ; la sécurité de l'arrivée n'entre pas, c'est le moteur qui la facture), `echange` (chemin jusqu'au
+contact, plus la prise ; la cible est une pièce suivie, pas une case), `colonne` (mes pions à retirer plus le chemin de la
+tour), et le combinateur `et` (somme ; la batterie, « f4 puis e5 »). Progrès = la distance baisse après mon coup, l'adversaire
+immobile. `scripts/plans/filtre.mjs` : tous les coups légaux notés (MultiPV = nombre de coups, prof. 18, ~20 s par position),
+coups progressants avec leur retard sur le meilleur, meilleur coup non progressant et l'écart, et pour celui-ci « sert-il un
+autre plan listé ? » (suggestion de l'Expert) ; distribution des écarts en fin de tableau. `scripts/plans/positions-filtre.mjs` :
+cinq canoniques (Carlsbad, pion isolé Panov, hérisson, Mar del Plata, Espagnole d'échange sans dames) et cinq schémas de la
+Française, panel relu par l'Expert (…Cc5 retiré du hérisson ; b4 retiré des plans de la Mar del Plata car c'est un coup
+préparatoire de c5 ; Fd3 écarté, gambit Milner-Barry ; c4 écarté du Tarrasch ouvert ; Cb1-d2-b3 gardé **exprès comme piège**,
+6.Cbd2 vaut −0,53 au moteur). Tests : `tests/plan-distance.test.js` (6).
+
+**Deux trous dans la distance, trouvés avant et par le tableau.** (1) Le rayon X : sans pion transparent, Tb1 n'était jamais
+un progrès de b4-b5 — relevé par l'Expert sur la définition, corrigé avant la première passe. (2) Un pion à moi sur le chemin
+ne « s'écarte » que s'il peut bouger : le Fc8 de la Française d'avance passait par une route fantôme c8-a6 derrière le pion b7
+bloqué par sa propre dame b6, et le plan « échanger le mauvais fou » n'avait **aucun coup progressant** ; corrigé (le pion
+immobile bloque comme une pièce adverse), …Fd7 et …Ca5 progressent, distance 4.
+
+**Ce que le tableau montre (33 plans, 10 positions, `reports/plans/filtre.md`).** La mécanique fait ce qu'on voulait : sur la
+Carlsbad, a3 et **Tab1** sont progressants pour b4-b5 à 0,06–0,13 du meilleur coup, et b4 immédiat progresse aussi mais à
+−0,93 (« progressant mais ça coûte ») ; e3-e4 coûte −3,15 (le Fg5 tombe après les échanges en e4), ce que la distance ne voit
+pas et ne doit pas voir. Sur la Mar del Plata, b4 et Cd3 sortent tous deux comme coups préparatoires de c5 (ils comblent le
+déficit), à 0,02 du meilleur. Sur l'Espagnole, **Ff4 sert à la fois e4-e5 (il défend e5) et l'échange des fous** — la composition
+que l'Expert annonçait —, et f4 immédiat est bien « progressant mais cher » (−0,74, …Fd6 cloue). Le piège Cbd2 est classé
+progressant à −0,60 : la mécanique ne le cache pas. Un angle mort assumé : Tc1 dans la Mar del Plata prépare la colonne que
+c5 ouvrira (second ordre), invisible à la distance de rupture ; un plan `colonne c` listé à côté l'aurait attrapé en
+« sert un autre plan ».
+
+**La distribution des écarts est continue, sans creux** (4 / 7 / 7 / 4 / 4 par tranche de 0,10-0,25-0,50-1,00-∞, et 7 cas où
+le meilleur coup progresse). Mais lue avec la colonne « sert un autre plan », elle se décompose : dix écarts positifs sont des
+coups qui servent un autre plan listé (ni forcés ni inutiles) ; les autres petits écarts (0,09 à 0,48) sont des **atomes
+d'intendance jamais listés comme plans** — h3 (restriction, quatre fois), le roque (trois), cxd4 (échange, trois), Fd3
+(développement) ; et tous les grands écarts (> 0,6) sont des poussées prématurées, le coup progressant lui-même mauvais
+(e4, d5, Ce5, Fe3, Ce4), pas une alternative forcée. **Aucun cas « forcé » dans le panel** : dix positions calmes, aucune
+menace sur l'échiquier, la clause « parade » n'a rien eu à trancher. Le scalaire x ne se calibre donc pas ici ; il faut un
+second panel avec une menace pendante. Autre constat : deux passes à prof. 18 et 3 fils donnent des notes à ±0,10 et des
+ordres qui tournent près de zéro (meilleur coup Tc1 puis a4 sur la Mar del Plata) — la suite se fera en
+`COACH_DETERMINISTIC=1` ou à prof. ≥ 22.
+
+**Suite, si go** : un panel avec menaces pour calibrer x ; le test de stabilité 18/24 et deux moteurs ; puis la recherche en
+faisceau avec le compteur (coup forcé neutre, coupure après k coups ni progressants ni forcés) et les quatre sorties : c'est
+le plan / viable mais ça coûte / pas réalisable sans concession / jamais urgent ici.
