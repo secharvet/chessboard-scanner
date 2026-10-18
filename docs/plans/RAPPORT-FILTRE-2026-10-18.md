@@ -1,7 +1,8 @@
 # Le filtre de compatibilité des plans et le test à deux demi-coups
 
-Rapport du 18 octobre 2026 — pilote, avec la relecture de la session Expert échecs. Pièces : `reports/plans/filtre.md`
-(tableau du filtre, 35 plans), `reports/plans/preparatoire.md` (test à deux demi-coups, 35 lignes), `coach/plan-distance.mjs`
+Rapport du 18 octobre 2026 — pilote, avec la relecture de la session Expert échecs. Pièces : `ANNEXE-A-filtre-2026-10-18.md`
+(tableau du filtre, 35 plans), `ANNEXE-B-preparatoire-2026-10-18.md` (test à deux demi-coups, 35 lignes) — copies figées de
+`reports/plans/{filtre,preparatoire}.md` —, `coach/plan-distance.mjs`
 (définitions), `scripts/plans/{positions-filtre,filtre,preparatoire}.mjs`, `tests/plan-distance.test.js` (7 tests),
 `docs/JOURNAL-PLANS.md` (entrée du 18 octobre).
 
