@@ -1566,3 +1566,6 @@ distance 35/35 partout. Les sauts du test se classent par la carte d'attaques de
 la fenêtre », plan périssable ; sinon variance) — mis en tête du cahier des charges de l'étape 2. Le plancher à 25 implique
 qu'un test à un pas dira souvent « limite » : argument pour le faisceau (prix linéaire, bruit en racine). « Contesté entre
 moteurs » au-delà d'un pion, à trancher à prof. 30 une fois. Règle « un fil pour mesurer » écrite dans CLAUDE.md.
+**18 octobre, 19 h : Orion à un fil (go de l'auteur « lance tout »).** Déterminisme VPS/Orion : **identique au centipion**
+(0/0/0, Spearman 1,00, annexe Q). Moteur à 24 : 9/24/380, 4 statuts changés à réponse identique sur 24, 9/12 à réponse
+changée ; profondeur SF 17.1 : 5/14/37, 1/31 et 4/5. Lignes ajoutées au § 8, annexes R-T.

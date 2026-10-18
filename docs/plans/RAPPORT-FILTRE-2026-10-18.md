@@ -401,6 +401,9 @@ Après correction des scripts (un fil, `COACH_DETERMINISTIC=1` respecté ; véri
 | bruit des fils seul (p24) | 6 / 13 / 49 | 11/35 | 4/35 | 0,93 | — | — |
 | **profondeur** 18 → 24, SF 19 | 8 / **25** / 46 | 8/35 | 6/35 | **0,95** | **3/24** | **9/12** |
 | **moteur** SF 19 → SF 17.1, p18 | 7 / 26 / **363** | 15/35 | **11/35** | **0,85** | 3/25 | 6/11 |
+| moteur SF 19 → SF 17.1, p24 (Orion) | 9 / 24 / 380 | 10/35 | 2/35 | 0,94 | 4/24 | 9/12 |
+| profondeur 18 → 24, SF 17.1 (Orion) | 5 / 14 / 37 | 14/35 | 5/35 | 0,94 | 1/31 | 4/5 |
+| **déterminisme** VPS → Orion (SF 19, p24, un fil) | **0 / 0 / 0** | **0/35** | **0/35** | **1,00** | **0/35** | — |
 
 **Ce que les chiffres propres disent.**
 1. **Plancher : 25 cp** (90e centile de l'axe profondeur, net du bruit des fils), et non 15 ni 20. Les verdicts à moins de
@@ -417,8 +420,11 @@ Après correction des scripts (un fil, `COACH_DETERMINISTIC=1` respecté ; véri
    11 signes d'écart sur 35 changent, Spearman 0,85. Deux réseaux ne classent pas les plans de la même façon dans un plan
    sur trois quand l'écart est petit. La règle des deux moteurs n'est pas une précaution : sans elle, un tiers des petits
    écarts n'ont pas de signe.
-6. Le déterminisme entre machines n'a pas été mesuré proprement (Orion a tourné à 3 fils) ; à refaire à un fil quand
-   l'auteur le permettra, résultat attendu : identique.
+6. **Déterminisme entre machines : établi.** Même binaire, un fil, VPS contre Orion (i5-14400F) : 0 différence au centipion
+   sur 230 coups et 35 plans, 0 statut du test changé, Spearman 1,00 (annexe Q). Tout ce qui bougeait entre passes avant la
+   correction était les fils. Les passes 24 du second moteur et l'axe profondeur de SF 17.1 (Orion, annexes R-T) confirment
+   le tableau : à réponse identique le test tient (1/31 et 4/24), à réponse changée il bascule (4/5 et 9/12) ; entre réseaux,
+   la queue reste lourde (380 cp) à profondeur 24 comme à 18.
 
 ## 9. Lecture de la nuit (relecture relayée par l'auteur) — ce qu'elle a tranché de plus que prévu
 
