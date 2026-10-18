@@ -326,3 +326,42 @@ pratique déjà en vigueur pour les fautes des livres ; le jour de la variance 1
 | 4. Recherche en faisceau (compteur : forcé et roque neutres *comme raccourci seulement*, k ≈ 2 ; les deux axes et le plan frère en sorties) | le prix et le tempo d'un plan sur quinze coups — la question d'origine | plusieurs jours de code, une nuit par panel ; Deneb utile |
 
 Rien de cette suite ne démarre sans le go de l'auteur.
+
+## 7. La nuit de stabilité (18 octobre, soir) — résultats
+
+Go de l'auteur sur l'étape 1 du § 6, sans code de test : les deux scripts relancés tels quels, un fil, déterministe, une
+position par processus (`scripts/plans/nuit-stabilite.sh`), et un comparateur (`scripts/plans/comparer-stabilite.mjs`).
+Trois passes sur le VPS : SF 19 à profondeur 24 (tableau 26 min, test 34 min), SF 17.1 (paquet Ubuntu) à 18, puis SF 17.1
+à 24 ; Orion (le poste de l'auteur) a reçu SF 17.1 à 24 et la reproduction de SF 19 à 24 pour vérifier le déterminisme
+entre machines. Pièces : annexes C à F. Référence : les passes du § 4 (SF 19, profondeur 18).
+
+**Axe profondeur (SF 19, 18 → 24 ; annexes C et D).**
+- *Variance des notes* sur les 230 mêmes coups : médiane **6 cp**, 75e centile 12, 90e centile **19**, max 44. Le plancher
+  de 15 cp pris au jugé est sous le 90e centile : **le plancher mesuré est ~20 cp.**
+- *Mécanique* : distances identiques 35/35 (géométrie pure) ; meilleur coup progressant identique 34/35.
+- *Le moteur hésite où il hésite* : le meilleur coup de la position change dans 3 positions sur 10 (hérisson Tab8 → Tac8,
+  Mar del Plata g4 → a4, Française d'échange Fg5 → h3), toutes des têtes plates à 0,05 près ; 6 écarts sur 35 changent de
+  signe au plancher ; mais **l'ordre des écarts tient (Spearman 0,95)**.
+- *Le test à deux demi-coups n'est pas stable tel qu'écrit, et la cause est isolée* : sur les **22 lignes où la réponse
+  adverse est la même** aux deux profondeurs, **aucun statut ne change** ; sur les **14 lignes où la réponse change**
+  (…g6 → …a5, …Tc8 → …Fa6, …Cde2 → …De2, …a5 → …c4, Ff4 → Fg5), **9 statuts changent** et les Δ sautent de plusieurs pions
+  (Ff4 …Fa6 puis Dd3 : 0,00 → −8,60 ; …Ce4 après O-O Fg5 au lieu de O-O Ff4 : +0,77 → −7,60). Le bruit n'est pas dans les
+  notes, il est dans **l'identité de la réponse adverse**. Mesurer sur les deux meilleures réponses et garder le pire Δ
+  (point 5 de l'Expert) n'est pas une amélioration : c'est la condition d'existence du test. Les sauts à −8 sont des pièces
+  qui pendent après la réponse : le point calme par menaces reste nécessaire.
+
+**Axe moteur (profondeur 18, SF 19 → SF 17.1 ; annexes E et F).**
+- *Variance des notes* : médiane 6, 75e centile 12, **90e centile 25, max 368** (un désaccord tactique isolé). Un second
+  moteur, c'est un second réseau d'évaluation : la queue est plus lourde qu'entre deux profondeurs du même moteur.
+- *Test* : 10 statuts sur 35 changent, et cette fois **7 avec la même suite jouée** — les deux moteurs évaluent la même
+  ligne à 0,3-1,0 près (e4 Carlsbad après h3 g6 : −0,19 → +0,79 ; les trois plans de la Mar del Plata après g4 h5 : −0,3 à
+  −0,6). La frontière préférence / nuit au plan à ±20 cp est franchie par le seul changement de réseau. Conséquence : un
+  statut n'est annonçable que s'il tient sur les deux moteurs (la « règle des deux moteurs » déjà en vigueur pour les plans
+  vérifiés du coach) ; ici, 25 lignes sur 35.
+
+**Ce que la nuit tranche.** (1) Plancher : 20 cp pour un moteur, et les verdicts à moins de 40 cp du bord sont « limite ».
+(2) Le tableau du filtre est stable là où il compte (ordre des écarts, pas progressants, distances) ; son instabilité est
+celle du moteur entre coups équivalents, et c'est une sortie (« plusieurs coups utiles, aucun plan urgent »), pas un défaut.
+(3) Le test à deux demi-coups doit être réécrit avant d'être lu : deux réponses adverses (pire Δ), point calme par menaces,
+accord des deux moteurs. Sans ces trois conditions, 9 à 10 verdicts sur 35 sont du bruit ; avec la seule première, 22 sur 22
+ont tenu. C'est le cahier des charges de l'étape 2 du § 6.
