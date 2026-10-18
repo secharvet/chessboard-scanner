@@ -246,7 +246,20 @@ transformation comme le plan adverse (« les Noirs ont transformé la structure 
 coup-là »). Sur quinze coups depuis des positions choisies pour leur stabilité, on pouvait s'en passer ; **sur une partie,
 non.** C'est la condition d'existence de la prochaine étape, posée par l'auteur.
 
-## 9. La suite, selon le verdict
+## 9. La suite — l'ordre arrêté par l'auteur (19 octobre, 2 h)
+
+1. **Le verdict** (§ 8) — rendu.
+2. **La lecture à froid** du rapport par l'auteur, dans quelques jours.
+3. Si c'est oui : **le protocole de l'épreuve du jeu sur une page**, écrit puis relu reposé — c'est lui qui ouvre l'épreuve,
+   pas le code.
+4. **Le détecteur de bascule** — codé dans la nuit (détection, coup qui transforme, prix jusqu'à la bascule, division
+   « continuer / adopter » avec la table structure → plans canoniques de l'Expert, `coach/plans-structures.mjs`) ; il
+   attend le protocole pour servir.
+5. **Les parties.**
+
+Techniquement prêt dans une semaine de soirées ; méthodologiquement, le jour où le protocole est écrit et lu reposé.
+
+## 9 bis. La suite, selon le verdict (écrit avant l'ordre ci-dessus)
 
 - **Le critère passe (§ 8).** Avant toute suite, **trois** retouches : le prix au point calme, l'horizon à vingt coups pour les plans de structure, et le **détecteur de bascule de structure** (§ 8 bis). Puis la suite prévue, l'épreuve du jeu — le faisceau étendu à la partie entière (le coach choisit, le moteur exécute
   sous contrainte, le moteur libre en face ; coût par partie de suivre la théorie), puis Maia (le même coach guidant un
