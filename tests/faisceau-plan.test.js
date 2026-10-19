@@ -21,6 +21,7 @@ test('(c) coupe à concession cumulée : réglage hors par défaut ; une branche
   const libre = { evals: Array(40).fill(100), glouton: Array(40).fill(100), sans: [] };
   const sans = await faisceauPlan(n, P, c.fen(), 'w', plan, [], libre, { horizon: 1 });
   assert.equal(sans.coupes.cumul, 0); assert.ok(sans.vivants >= 1);
+  assert.deepEqual(sans.largeurs, [sans.vivants + sans.realises]); // la largeur effective compte ce que le tri a gardé, réalisées comprises
   const avec = await faisceauPlan(n, { ...P, concessionCumulee: 50 }, c.fen(), 'w', plan, [], libre, { horizon: 1 });
   assert.ok(avec.coupes.cumul >= 2, `coupes cumul : ${avec.coupes.cumul}`); // a3 et Tab1, chacune après ses réponses
   assert.ok(avec.coupesListe.every((x) => x.raison !== 'concession cumulée' || x.cout > 50), JSON.stringify(avec.coupesListe));

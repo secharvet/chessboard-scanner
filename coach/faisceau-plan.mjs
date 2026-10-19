@@ -30,7 +30,7 @@ export async function faisceauPlan(noteur, P, fen, side, plan, autres, libre, op
   const structRacine = structure(fen);
   let etats = [{ fen, plan, autres: autres.map((a) => a.plan), compteur: 0, ligne: [], ply: ply0, cp: refLibre(ply0), d: d0, jumelles: [], bascule: null, cumul: 0 }];
   let splits = 0;
-  const realises = [], coupes = [], largeurs = []; // largeurs[coup] = branches vivantes gardées après le tri (la largeur EFFECTIVE du faisceau contraint, GE 19 oct.)
+  const realises = [], coupes = [], largeurs = []; // largeurs[coup] = branches gardées après le tri (la largeur EFFECTIVE du faisceau contraint, GE 19 oct.)
   /** Joue `cand` depuis l'état e, puis la ou les réponses adverses (la seconde si elle est ex æquo) ; range les états. */
   async function etendre(e, cand, classe, compteur, meilleurCp, suivants) {
     const apres = new Chess(e.fen); apres.move(cand.m.san);
@@ -80,7 +80,7 @@ export async function faisceauPlan(noteur, P, fen, side, plan, autres, libre, op
     const gardes = suivants.sort((a, b) => b.cp - a.cp).filter((x) => !vues.has(x.fen) && vues.add(x.fen)).slice(0, LARGEUR);
     for (const x of gardes) if (x.realise) realises.push(x);
     etats = gardes.filter((x) => !x.realise);
-    largeurs.push(etats.length);
+    largeurs.push(gardes.length); // réalisées comprises : ce que le tri a gardé, pas ce qui reste à chercher
   }
   const vivants = etats;
   const borne = borneCp; // les scores de mat ne font pas des prix en milliers
