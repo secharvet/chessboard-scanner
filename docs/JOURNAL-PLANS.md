@@ -1744,3 +1744,12 @@ Espagnole : marche du roi Rg1→e3 (Rf2 −0,08 à prof. 24, meilleur coup Ff4 +
 transfert accepte le roi (Rg1-f2-e3, 2 coups). Mises en garde : instruments du critère, pas des plans à enseigner ; ordre des
 événements visible pour le GE (inéligibilité constatée → repoussoirs proposés → sondés → inscription). Attend le go de
 Sébastien ; ensuite Espagnole et hérisson à rejouer sous les six tirages (20 passes, ~1 h Orion). Réponse au GE § 6.
+**19 octobre, 18 h (Paris) : décision du GE — le critère ne passe pas, la piste est fermée, on écrit pourquoi.** Désignations
+v2 inscrites (branche `division`, `positions-filtre.mjs`, pièces antérieures dans chaque attendu, v1 conservée) : colonne c
+au hérisson, Cd5 et Fc1×Ff8 à l'Espagnole, Fg5 à l'échange française. Recompte sans rejouer (`taux-de-passage.mjs
+--positions`, le drapeau ne sert qu'au compte) : **3/6** (6, 8, 6, 7, 7, 5 sur huit éligibles), Espagnole et hérisson
+inéligibles ; v1 : 2/6. **Repoussoirs refusés** (choisir après coup ce qu'on met en face du livre = retailler le panel ; un
+test à repoussoirs préenregistrés serait un nouveau critère sur un nouveau panel). Rapport du faisceau § 11 : « 2/6 à la
+règle écrite, 3/6 au canon corrigé, pas de verdict ; l'ordre des plans est robuste, le prix l'est à un demi-pion, la phrase
+ne l'est pas » ; page « à lire en premier » alignée. Retouches de l'instrument = condition pour rendre une phrase, pas avant
+la décision de Sébastien ; le lot 1 finit sans être lu ; l'épreuve du jeu attend un go à part, à froid.

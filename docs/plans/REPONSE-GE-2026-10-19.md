@@ -247,6 +247,27 @@ Engagé :
    lot de perturbation (profondeur 17 à 19, ordre des ex æquo côté exécutant), pour que l'agrégat échantillonne vraiment la
    variabilité. À spécifier avec le GE avant de lancer.
 
+## 7. Décision du GE (18 h) et ce qui est fait
+
+Appliqué tel quel, en trois lignes.
+
+1. **Désignations v2, pièces antérieures, recompte, pas de repoussoirs.** Inscrites sur la branche `division`
+   (`scripts/plans/positions-filtre.mjs`, la v1 conservée à côté, les pièces dans chaque attendu) : colonne c au canon du
+   hérisson, Cb1→d5 et Fc1×Ff8 à l'Espagnole, Fc1→g5 à l'échange française. Le drapeau canonique ne sert qu'au compte,
+   jamais à la mesure : le recompte se fait sur les six tirages existants sans un coup de moteur
+   (`taux-de-passage.mjs --positions`). Résultat : **3 tirages sur 6** (6, 8, 6, 7, 7, 5 réussies sur huit positions
+   éligibles) ; l'Espagnole et le hérisson deviennent inéligibles et le restent ; le canon v1 redonne 2/6. Les repoussoirs
+   du § 6 (marche du roi, cavalier en e5) ne sont pas inscrits : choisir après coup, résultats connus, ce qu'on met en face
+   du livre, c'est retailler le panel ; un test à repoussoirs préenregistrés serait un nouveau critère, écrit avant une
+   nouvelle passe, sur un nouveau panel. L'Expert en est informé.
+2. **Le rapport conclut.** `RAPPORT-FAISCEAU-2026-10-18.md` § 11 : « 2 sur 6 à la règle écrite, 3 sur 6 au canon corrigé,
+   pas de verdict ; l'ordre des plans est robuste, le prix l'est à un demi-pion, la phrase ne l'est pas » — avec le pourquoi
+   (un instrument de résolution un demi-pion sommé de trancher à un quart de pion, sur un canon faux sur trois positions) et
+   ce qui a tenu (le classement). La page « à lire en premier » porte ce résultat-là. Le neuf sur dix est retiré.
+3. **Rien d'autre ne bouge.** Les retouches de l'instrument (médiane des réalisations, marge, coupe à marge, coup refusé)
+   sont la condition pour qu'il rende un jour une phrase ; elles attendent la décision de Sébastien. Le lot 1 finit sa
+   course sans être lu ; l'épreuve du jeu n'est plus la suite automatique du critère et attend un go à part, à froid.
+
 ## Tableau — les 35 plans, hier (hash gardé) et aujourd'hui (table vide)
 
 Phrase en gras = changée. Largeur eff. = médiane · minimum jusqu'à la réalisation comprise, recalculée à 16 h depuis les JSON
