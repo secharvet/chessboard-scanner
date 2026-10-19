@@ -157,13 +157,34 @@ Engagé :
 1. **Aujourd'hui** : la page « à lire en premier » dit désormais « neuf sur dix sur un tirage de l'instrument ; robustesse
    non mesurée ; dix-sept phrases sur trente-cinq sensibles ; le taux de passage sera mesuré ». La lecture à froid portera
    sur ce chiffre-là.
-2. **Cette nuit, sur Orion** : le critère sous six tirages — profondeur 17, 18, 19 × table vidée / gardée — sur les dix
-   positions, même code, un fil (les deux tirages à profondeur 18 sont les passes v5 qui ferment la réserve du Dev chef ;
-   les quatre autres suivent automatiquement). Publié : la matrice positions × tirages, les positions réussies par
-   tirage, le **taux de passage** (tirages à ≥ 7 positions réussies sur 10), et par plan le nombre de phrases distinctes
-   et l'étendue des prix (`scripts/plans/taux-de-passage.mjs`). L'ordre des ex æquo comme septième perturbation demande
-   une option dans le code : après le lot. La clause « prof. 30 » ne se rejoue pas par tirage ; le taux publié est celui
-   du compte automatique, la clause sera appliquée à part sur les positions qui restent contestées dans tous les tirages.
+2. **Fait (16 h Paris, Orion, deux heures de calcul)** : le critère sous six tirages — profondeur 17, 18, 19 × table vidée /
+   gardée — sur les dix positions, même code, un fil. Matrice complète, phrases et prix des 35 plans par tirage :
+   `TAUX-DE-PASSAGE-2026-10-19.md` à côté de cette note. **Taux de passage : 2 tirages sur 6** à sept positions réussies
+   (6, 8, 5, 6, 7, 5). Par ta règle, **ce n'est pas un verdict** : le neuf sur dix d'hier ne tient pas, le critère
+   automatique passe une fois sur trois.
+
+   | | |
+   |---|---|
+   | positions réussies dans les six tirages | 3 (Tarrasch ouvert, Panov, KID) |
+   | réussies dans 4 ou 5 | 2 (avance française blancs 4/6, noirs 5/6) |
+   | réussies dans 2 ou 3 | 4 (Carlsbad 3, Tarrasch fermé 3, échange 2, hérisson 2) |
+   | réussie dans aucun | 1 (Espagnole d'échange) |
+   | plans à phrase stable sur les six tirages | 8 / 35 ; deux phrases : 15 ; trois : 9 ; quatre : 3 |
+   | plan le moins cher stable (6/6 ou 5/6) | 7 positions sur 10 (hérisson et Panov 6/6 ; Carlsbad, avance blancs, échange, KID 5/6 ; avance noirs 4/6) |
+   | une profondeur de plus ou de moins, table vide | 11 à 16 phrases changent, écart de prix médian 0,14 à 0,19 |
+   | table gardée contre vidée, même profondeur | 16 à 19 phrases changent, écart médian 0,19 à 0,33 |
+
+   Ce que ces chiffres disent, à contester. **La phrase est le produit le plus fragile** : un pli de profondeur en change un
+   tiers, la table la moitié. **Le classement des plans est plus solide que la phrase** : le plan le moins cher est le même
+   dans au moins cinq tirages sur six pour sept positions sur dix. **Le critère vit dans le bruit** : les échecs se jouent à
+   +0,28 … +0,65 contre un plancher de 0,25, et une position bascule d'un côté ou de l'autre selon le tirage. La position
+   qui échoue six fois, l'Espagnole d'échange, échoue de façon stable : la rupture e5 du livre coûte de +0,87 à +4,66 (ou
+   n'est pas réalisable) dans les six tirages, et le plan le moins cher est Cb1→d5 ou Fc1×Ff8 — c'est l'arbitrage de
+   l'Expert d'hier à profondeur 30 (Cd5 vaut mieux qu'e5), confirmé par la nuit, pas une victime du bruit. Le hérisson
+   (colonne c la moins chère 6/6, les deux plans du livre de +0,30 à +1,36) est à relire pareil ; l'échange française
+   (Fc1→g5 5/6 contre c4 de +0,20 à +0,89) aussi. Les deux limites annoncées tiennent : l'ordre des ex æquo attend une
+   option dans le code (après le lot), et la clause « prof. 30 » n'est pas rejouée — le taux publié est le compte
+   automatique.
 3. **Après le lot 1, sur l'instrument** : prix d'un plan = médiane des branches réalisées (plus le maximum) ; phrase avec sa
    marge, « c'est le plan » à plus de 0,25 du seuil ; coupes à marge (garder les branches à moins d'une marge de la
    quatrième, pas exactement quatre) ; coup refusé imprimé à côté de la concession.
