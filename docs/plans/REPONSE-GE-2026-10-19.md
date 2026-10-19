@@ -190,6 +190,31 @@ Engagé :
    (Fc1→g5 5/6 contre c4 de +0,20 à +0,89) aussi. Les deux limites annoncées tiennent : l'ordre des ex æquo attend une
    option dans le code (après le lot), et la clause « prof. 30 » n'est pas rejouée — le taux publié est le compte
    automatique.
+
+   **Lecture de l'Expert (17 h, `LECTURE-TAUX-DE-PASSAGE-2026-10-19.md` à côté de cette note).** Les trois échecs répétés
+   sont le même défaut, et il est à nous : la désignation du plan du livre est trop étroite, et chaque correction a ses
+   pièces antérieures à la matrice. Espagnole : la désignation retenait la destination (f4 + e5) sans la route (Fxf8 puis
+   Cd5) ; l'attendu du panel l'écrivait avant la mesure. Hérisson : sonde neuve à prof. 30, …Tac8 est le meilleur coup du
+   moteur (−0,10), b5 immédiat −2,70, d5 immédiat −3,98 ; le livre dit lui-même « préparées longtemps, …Tc8 est le
+   préparatif classique », et le faisceau le voit (b5 à +0,03 … +0,30 quand il prépare, +1,23 … +1,36 quand il force) ;
+   la colonne c manquait au canon, c'était sa veille du premier jour. Échange française : Fg5 est le meilleur coup à prof.
+   30 (+0,12), c4 immédiat −0,13, concession 0,25 ; le livre joue Fg5 lui-même au 7e coup ; c4 est le seul plan qui crée
+   le déséquilibre, son prix est un droit d'entrée, pas une réfutation. Lecture d'ensemble : l'ordre des plans est plus
+   stable que les prix ; le bruit vit dans la réalisation des plans longs (les huit plans à phrase stable sont tous courts),
+   parce qu'un plan se paie à sa réalisation et que son prix dépend du chemin, que la profondeur et la table font bifurquer.
+
+   **Ce que ça ferait au critère, calculé sans rien changer** (le canon des positions n'est pas touché : ouvrir une
+   désignation est une décision de Sébastien, et elle doit se présenter au GE avec ses pièces antérieures, jamais comme un
+   canon retaillé pour faire passer le critère). Si l'Espagnole admet Fc1×Ff8 et Cb1→d5, le hérisson la colonne c, l'échange
+   Fc1→g5 : l'échange française réussit 6/6 ; l'Espagnole et le hérisson ne « passent » pas, ils deviennent **inéligibles**
+   — tous leurs plans sont alors du livre et le critère n'a plus rien à contraster. Compte : 6, 8, 6, 7, 7, 5 réussies sur
+   huit positions éligibles, soit **3 tirages sur 6** à la règle écrite (sept positions en absolu) ; lire sept sur dix comme
+   « sept dixièmes des éligibles » serait un second changement de règle, à ne pas faire en silence. L'attente de l'Expert
+   (« passent presque partout ») ne se réalise donc pas par le critère tel qu'il est écrit : le critère mesure un contraste
+   livre contre hors-livre, et une position dont tous les plans plausibles sont au livre ne le mesure pas. Le résidu après
+   ouverture est bien celui qu'il nomme : Tarrasch fermé (3/6, le plan le moins cher change selon le tirage) et les cases
+   « aucun canonique » (le plan du livre non réalisé à l'horizon : Carlsbad 2 tirages, avance blancs 1, Tarrasch fermé 1),
+   c'est-à-dire la réalisation des plans longs — un autre chantier.
 3. **Après le lot 1, sur l'instrument** : prix d'un plan = médiane des branches réalisées (plus le maximum) ; phrase avec sa
    marge, « c'est le plan » à plus de 0,25 du seuil ; coupes à marge (garder les branches à moins d'une marge de la
    quatrième, pas exactement quatre) ; coup refusé imprimé à côté de la concession.
