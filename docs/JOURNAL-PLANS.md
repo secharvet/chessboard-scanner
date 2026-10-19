@@ -1758,3 +1758,8 @@ processus) à 16 parties-dossiers sur 60 après six heures, fin estimée le 20 v
 relecture (coût médian et moyen par partie et par bras, différence prix − livre, part des coups sous plan, bascules, nulles
 par répétition, demi-coups « sans plan, table épuisée », Σ retards contre prix ligne). Ensuite, dans l'ordre : le même lot
 au second moteur (le critère exige les deux), puis le lot de perturbation de l'épreuve, spécifié avec le GE avant de lancer.
+**19 octobre, 19 h (Paris) : lot 1 au second moteur lancé sur Orion.** SF 17.1 (`~/bin/stockfish-17.1`), même code que le lot
+1 du VPS (seule différence du dépôt d'Orion : le lanceur d'équipe, hors mesure), un fil, table vidée, six processus ; précédé
+du contrôle « deux parties fraîches identiques » avec SF 17.1 (le script s'arrête si elles diffèrent). Sorties
+`reports/plans/epreuve/bin-stockfish-17.1-p18/` sur Orion, journal `~/lot1-sf171.log`. Spécification du lot de perturbation
+de l'épreuve écrite (relecture § 11), à soumettre au GE avant tout tirage.
