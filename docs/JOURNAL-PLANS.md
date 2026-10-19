@@ -1701,3 +1701,12 @@ de ligne. Reproductible n'est pas robuste ; marge au seuil proposée au GE pour 
 `division` (8af9520 : branches gardées réalisées comprises, lecture jusqu'à la réalisation, zéros finals exclus), fusion
 après le lot 1 (le bras prix charge le module). Seconde passe fraîche à table vide lancée sur Orion (3 positions) pour la
 preuve « deux passes, zéro différence » dans le nouveau mode.
+**19 octobre, 15 h 30 (Paris) : réponse du GE — « le verdict d'hier est un tirage ».** Dix-sept phrases sur trente-cinq
+sous une perturbation de dix centièmes : le plancher des sorties du faisceau (processus de sélection discret) n'a jamais été
+mesuré, la nuit de stabilité n'a porté que sur le filtre et le test à deux demi-coups. Le compte automatique du critère passe
+de 6/10 (passe d'hier) à 5/10 (passe d'aujourd'hui). Fait : page « à lire en premier » rectifiée (neuf sur dix sur un
+tirage, robustesse non mesurée, taux de passage à venir) ; `scripts/plans/taux-de-passage.mjs` (division) ; **nuit de
+perturbations en file sur Orion** après les passes v5 : prof. 17 et 19 × table vidée / gardée (les deux tirages à 18 sont
+les v5), 40 passes, six en parallèle, dossiers `nuit-p{17,19}-{vide,garde}`, marque TERMINE dans `nuit-p17-garde/`.
+Engagé pour après le lot 1 : prix = médiane des branches réalisées, phrase avec marge, coupes à marge, coup refusé imprimé ;
+lot de perturbation de l'épreuve (prof. 17–19, ordre des ex æquo côté exécutant) à spécifier avec le GE. Réponse au GE § 6.
