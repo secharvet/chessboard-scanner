@@ -133,10 +133,11 @@ export async function faisceauPlan(noteur, P, fen, side, plan, autres, libre, op
   }
   // (a) Les coupes, les plus avancées d'abord (au plus huit) : où et pourquoi chaque branche s'est arrêtée.
   const coupesListe = [...coupes].sort((a, b) => b.ply - a.ply).slice(0, 8).map((x) => ({ ply: x.ply, raison: x.raison, cout: x.cout ?? null, cp: x.cp, ligne: x.ligne.map((l) => l.san + (l.rep ? ' ' + l.rep + (l.repAlt ? '′' : '') : '')).join(' ') }));
-  const concessionMin = coupes.filter((x) => ['concession', 'concession cumulée'].includes(x.raison) && x.cout != null).reduce((m, x) => Math.min(m, x.cout), Infinity);
+  const concessionMin = coupes.filter((x) => x.raison === 'concession' && x.cout != null).reduce((m, x) => Math.min(m, x.cout), Infinity); // le coût d'un refus à UN coup
+  const cumulMin = coupes.filter((x) => x.raison === 'concession cumulée').reduce((m, x) => Math.min(m, x.cout), Infinity); // le cumul d'une branche coupée (autre grandeur, à part)
   const limite = (prix != null && prix > PLANCHER && prix <= BANDE) || (tempo != null && tempo >= 2 * horizon - 2)
     || (tempo == null && Number.isFinite(concessionMin) && Math.abs(concessionMin - P.concession) <= PLANCHER); // dernière chance refusée à un cheveu de la borne
-  return { libelle: libelle(plan, fen), d0, phrase, prix, prixBrut: retenu && retenu.tempo != null ? prixBrut(retenu) : null, calme: retenu?.calme ?? null, prolonge: retenu?.prolonge ?? [], bascule: retenu?.bascule ? { ...retenu.bascule, fen: undefined } : null, division, continuer, horizon, tempo, limite, merci, concessionMin: Number.isFinite(concessionMin) ? concessionMin : null, ligne: retenu?.ligne ?? [], realises: realises.length, vivants: vivants.length,
+  return { libelle: libelle(plan, fen), d0, phrase, prix, prixBrut: retenu && retenu.tempo != null ? prixBrut(retenu) : null, calme: retenu?.calme ?? null, prolonge: retenu?.prolonge ?? [], bascule: retenu?.bascule ? { ...retenu.bascule, fen: undefined } : null, division, continuer, horizon, tempo, limite, merci, concessionMin: Number.isFinite(concessionMin) ? concessionMin : null, cumulMin: Number.isFinite(cumulMin) ? cumulMin : null, ligne: retenu?.ligne ?? [], realises: realises.length, vivants: vivants.length,
     coupes: { concession: coupes.filter((x) => x.raison === 'concession').length, compteur: coupes.filter((x) => x.raison === 'compteur').length, cumul: coupes.filter((x) => x.raison === 'concession cumulée').length, autres: coupes.filter((x) => !['concession', 'compteur', 'concession cumulée'].includes(x.raison)).length }, coupesListe };
 }
 
