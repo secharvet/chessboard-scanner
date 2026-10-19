@@ -1729,3 +1729,12 @@ d'échange 0/6 — de façon stable, e5 du livre coûte de +0,87 à +4,66 dans l
 tient. Phrases stables sur les six tirages : 8 plans sur 35. Le plan le moins cher est le même dans ≥ 5 tirages sur 6 pour
 6 positions sur 10 (recompté par le Dev chef, « 7 » était un miscompte) : le classement est plus solide que la phrase. Un pli de profondeur change 11 à 16 phrases (écart de
 prix médian 0,14–0,19) ; la table 16 à 19 (0,19–0,33). Page « à lire en premier » et réponse au GE § 6 mises à jour.
+**19 octobre, 17 h (Paris) : lecture de l'Expert sur la matrice — les trois échecs répétés sont une désignation trop
+étroite**, pièces antérieures à l'appui (`docs/plans/LECTURE-TAUX-DE-PASSAGE-2026-10-19.md`) : Espagnole = destination sans
+la route (Fxf8 puis Cd5) ; hérisson = …Tac8 meilleur coup à prof. 30 (b5 immédiat −2,70, d5 −3,98), la colonne c manquait au
+canon ; échange française = Fg5 meilleur coup (+0,12), c4 immédiat −0,13, droit d'entrée, pas réfutation. Contrefactuel
+calculé sans toucher au canon (décision de Sébastien, à présenter au GE avec les pièces) : l'échange passe 6/6, mais
+l'Espagnole et le hérisson deviennent **inéligibles** (plus de plan hors livre à contraster) ; compte 6, 8, 6, 7, 7, 5 sur
+huit éligibles → **3/6** à la règle écrite. Le critère mesure un contraste livre / hors-livre ; ouvrir le canon ne le fait pas
+passer, il retire la position du compte. Résidu : Tarrasch fermé et les cases « aucun canonique » (réalisation des plans
+longs). Réponse au GE § 6 complétée.
