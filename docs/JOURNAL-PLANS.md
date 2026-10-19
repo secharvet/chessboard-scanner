@@ -1612,3 +1612,56 @@ Horizon 20 : l'attaque de minorité reste « en cours » chez SF 19, +1,51 au 23
 (cxd4 dissout la chaîne, dxe5 donne un PDI noir, cxb5 Maroczy → petit centre). Décompte indicatif 7/10 avec chaque moteur
 (critère gelé, verdict inchangé). Division « continuer / adopter » codée (table de l'Expert, `coach/plans-structures.mjs`), pas
 encore passée. Ordre arrêté : lecture à froid → protocole → bascule → parties.
+**19 octobre, 2 h (Paris) : passe de contrôle Orion v3 (division, SF 19, prof. 18, un fil) — 9/10, `iqp-panov` en délai dépassé
+(un `go depth 18` > 10 min, Orion à charge 16 : symptôme de surcharge, à refaire sur le VPS).** Lecture de la division sur les
+12 bascules, 4 avec structure nommée : **continuer bat adopter dans les trois cas comparables** — Carlsbad e4 (…dxe4 donne un
+PDI blanc) : continuer 0,35 (t9) contre adopter d5 1,51 (t27) ; Tarrasch fermé (…dxe5 donne un PDI noir) : colonne c −0,04
+contre Dd6 0,65 ; hérisson …b5 (cxb5 → petit centre) : 0,30 contre colonne c 0,78. Les autres bascules sont des dissolutions
+(CHAINE_E5 → rien par cxd4, exf5) sans plan à adopter. Drapeau : « Dc2→d3 en cours 4,73 » (Carlsbad, sous-faisceau PDI), un
+prix de branche vivante à 4 pions, à vérifier à la main avant d'en tirer quoi que ce soit. Passe rangée dans
+`reports/plans/faisceau/orion-sf19-p18-v3/`, elle sert de référence au centième pour les refontes du module partagé.
+**Module partagé de l'épreuve du jeu (protocole § 5 bis, 10)** : `coach/coup-contraint.mjs` (noteur à cache par
+(position, n, profondeur), `classerCandidats`, `derniereChance`, `choisirCoup` selon le § 2 — meilleur progressant d'abord,
+puis forcé / roque, puis dernière chance à compteur plein, sinon intendance ; deux compteurs, `horsDePrix` à k + 1 —,
+`pointCalme`, `reponsesOuvertes`, `faisceauLibre`, `prixDeSegment`, `structureCourante`) et `coach/faisceau-plan.mjs` (le
+cœur du faisceau, importable sans lancer de moteur). `scripts/plans/faisceau.mjs` ne garde que la ligne de commande et le
+rendu ; `scripts/plans/comparer-passes.mjs` compare deux passes au centième. Tests `tests/coup-contraint.test.js` (7).
+Pilote écrit, pas encore joué : `scripts/plans/partie.mjs` (deux bras + témoin, graines mulberry32 côté adversaire, journal,
+prix par segment), `scripts/plans/departs.mjs` (lot 1 = panel, lot 2 = les dix lignes de livre du § 3, légalité vérifiée au
+chargement), lanceur `scripts/plans/epreuve.sh`. Avant la première partie : identité au centième des refontes (en cours),
+deux parties fraîches identiques, relecture Expert (sémantique) et Dev chef (mécanique).
+**19 octobre, 4 h 30 (Paris) : retour du GE sur la note de relecture** — forcé avant progressant dans `choisirCoup`
+(appliqué, test), plafond tactique à trois coups forcés consécutifs (segment non tarifé à cet endroit, appliqué), 80 demi-coups
+depuis le départ et la règle des 25 cp du coach-prix confirmés ; pour le faisceau, **différé** : référence de la division depuis
+la position de bascule (pas la racine) et coupe des branches « en cours » à concession cumulée > 1,0 — à faire avant toute
+lecture écrite de la division. Exigence de forme : identité 10/10 (iqp-panov à rejouer, ancien code contre nouveau).
+**19 octobre, 5 h (Paris) : relecture de l'Expert rendue** — compteurs, plan de service (cible, −1, +1 ; semi-ouverte admise),
+80 demi-coups depuis le départ, dix lignes du lot 2, témoin sur la même MultiPV 4 : validés. Drapeau 4,73 élucidé pour
+l'essentiel : à la bascule (…dxe4) le fou blanc est encore sur d3 et le pion e4 couvre la case — l'instance Dc2→d3 naît avec
+cascade +1 et une arrivée empoisonnée, la branche s'effondre réellement sous contrainte, et la référence prise à la racine
+aggrave la lecture. Correctifs demandés pour la division, acceptés et différés après le lancement des premières parties :
+(a) stocker la ligne retenue et les raisons de coupe de chaque sous-faisceau, (b) référence = faisceau libre depuis la position
+de bascule pour continuer et adopter, (c) re-passe de cette division. **Désaccord Expert / GE sur l'ordre forcé / progressant**
+(GE : forcé d'abord ; Expert : progressant d'abord, la concession garde) — soumis à l'auteur, le code est dans l'ordre du GE.
+**19 octobre, 5 h 30 (Paris) : Dev chef rendu, Expert rallié au GE** — appliqué : forcé avant progressant + classe
+forcé-progressant, un seul compteur, purge du lanceur, épisode de structure, précédence bascule > réalisation. **M1 (Dev chef)** :
+le prix par segment compare une enveloppe (max de 4 branches) à une ligne unique → biais vers le haut ; `prixDeSegment` rend
+`prix` (enveloppe) et `prixLigne` (ligne gloutonne), le pilote publie les deux coûts ; le critère reste à trancher par le GE.
+`iqp-panov` relancé sur Orion avec l'ancien code (référence 10/10). Tests 8/8, suite 310/310.
+**19 octobre, 6 h (Paris) : M1 — l'Expert tranche pour la ligne gloutonne** (symétrie de F1 : une ligne contre une ligne), le
+Dev chef aussi si l'inflation approche le plancher ; GE consulté. Orion recalcule `iqp-panov` à l'ancien code ; fr-echange rendu
+sur le VPS au code refondu.
+**19 octobre, 6 h 30 (Paris) : le GE tranche, le pilote est spécifié** — M1 : la ligne gloutonne est le prix, l'enveloppe
+publiée à côté, segments « gratuits » vérifiés à 0 ; séquence forcée qui tue le plan : tarifée après, au point calme suivant,
+« payé en tactique » ; coach-prix : optimisme du choix à écrire dans le rapport. Tout est codé dans `partie.mjs`
+(`prix`/`prixEnveloppe`, `gratuit`, `etiquette`), `pointCalme` prend un budget. Reste : identité 10/10, deux parties fraîches,
+puis les parties (file de nuit en cours sur le VPS).
+**19 octobre, 8 h (Paris) : les preuves sont rendues** — identité du faisceau refondu contre Orion (ancien code, 10 positions) :
+contrôle 1 **9/9**, contrôle 2 **9/9** (iqp-panov au nouveau code : délai dépassé à trois processus, recalculé seul) ; deux
+parties fraîches **identiques hors secondes** ; la vérification M1 passe (le segment gratuit lit 0). Le biais d'enveloppe mesuré
+sans jouer (`biais-enveloppe.mjs`, lot 1, horizon 12) : il **croît avec la longueur du segment** (≈ 0,04 pion par demi-coup,
+1,82 médian au 12e coup à largeur 4) et **n'est pas nul à largeur 1** (seconde réponse adverse admise, choix sur l'évaluation à
+deux demi-coups) — la gloutonne est bien la seule référence juste d'une ligne jouée. Note § 8. Orion éteint (dépôt GE différé).
+**19 octobre, 9 h (Paris) : identité 12/12** — iqp-panov au code refondu identique à Orion au centième (délai du `Noteur` porté à
+30 min : la MultiPV « tous les coups légaux » à profondeur 18 dépasse 10 min sur le VPS). Les quatre positions de contrôle
+(hérisson, Carlsbad, fr-echange, iqp-panov) sont identiques ancien code / nouveau code. Lancement des premières parties.

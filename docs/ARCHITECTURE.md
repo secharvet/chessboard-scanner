@@ -241,6 +241,9 @@ Enseignements : **sans ancrage, un modèle plus fort ne sert à rien** ; avec an
 | `coach/threats.mjs` · `forcing.mjs` · `prep-threats.mjs` · `maneuvers.mjs` · `motifs.mjs` | calcul « de joueur de club » |
 | `coach/memory.mjs` · `review.mjs` · `diagnose.mjs` | mémoire d'expérience, analyse d'après-partie, diagnostic |
 | `coach/notation.mjs` | notation anglaise ↔ française |
+| `coach/plan-distance.mjs` · `plans-structures.mjs` · `en-prise.mjs` | grammaire des plans (distance par famille, suivi, verrou), table structure → plans canoniques, pièce en prise (mini-SEE) — `docs/plans/` |
+| `coach/coup-contraint.mjs` | le coup contraint, partagé par le faisceau, le pilote de partie et le bras coach-prix : noteur à cache, classement des candidats (progressant / forcé / roque / intendance), dernière chance, point calme, faisceau libre, prix de segment, structure courante |
+| `scripts/plans/faisceau.mjs` · `faisceau.sh` · `comparer-passes.mjs` | le faisceau (prix d'un plan sous contrainte), lanceur une position par processus, comparaison de deux passes au centième |
 | `positional/` | moteur de règles (partagé navigateur et serveur) |
 | `scripts/coach-eval.mjs` | banc d'essai du coach (naïf ou ancré, `--judge`) |
 | `scripts/llm-plays.mjs` | le joueur LLM contre Stockfish bridé |
