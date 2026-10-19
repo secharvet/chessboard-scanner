@@ -215,6 +215,31 @@ Engagé :
    ouverture est bien celui qu'il nomme : Tarrasch fermé (3/6, le plan le moins cher change selon le tirage) et les cases
    « aucun canonique » (le plan du livre non réalisé à l'horizon : Carlsbad 2 tirages, avance blancs 1, Tarrasch fermé 1),
    c'est-à-dire la réalisation des plans longs — un autre chantier.
+
+   **Dossier pour la décision de Sébastien (17 h 30) : des repoussoirs hors livre, sondés avant inscription.** Pour que
+   l'Espagnole et le hérisson restent dans le compte après ouverture de leur désignation, il leur faut dans la liste un
+   plan plausible que le livre ne nomme pas — un plan qu'un joueur de club tente spontanément, jouable sans être un
+   épouvantail, et pas meilleur que le canon. L'Expert en a sondé (SF 19 sur Orion, un fil, table vide, prof. 24, premier
+   coup du plan seulement ; le faisceau tarifera le plan entier) ; addendum § 5 de son livrable.
+
+   | position | repoussoir proposé | premier coup à prof. 24 | lecture |
+   |---|---|---|---|
+   | Espagnole (meilleur coup Ff4 +0,02) | **transfert Rg1→e3, la marche du roi** | Rf2 −0,08 (concession 0,10) | le réflexe de club en finale sans dames, que le livre ne nomme pas ; pédagogiquement riche |
+   | Espagnole, repli | transfert Fc1→e3 | +0,01, ex æquo | l'hypothèse nulle « du développement quelconque » ; option poussée a2→a4 (−0,06) |
+   | Espagnole, rejeté | colonne d | Td2 −1,11 (…Fd6 !) | Td1 est déjà sur la colonne (pas de contraste) et le doublement naïf est un épouvantail |
+   | Hérisson (meilleur coup …Tac8 −0,16) | **transfert Cd7→e5, le cavalier au poste de rêve** | −0,17, ex æquo du meilleur coup | exactement ce qu'un joueur de club tente ; s'il bat la colonne c quelque part, le critère échoue honnêtement |
+   | Hérisson, second | poussée h7→h5 | −0,28 (concession 0,12) | le geste d'aile paresseux |
+
+   Vérifié dans le code (lecture seule, worktree `division`) : la famille transfert accepte le roi, la distance donne
+   Rg1-f2-e3 en deux coups ; les quatre autres repoussoirs sont à un coup. Réserve : la distance d'un transfert ne vérifie
+   pas que les cases du chemin sont hors d'attaque (pour le roi, c'est la légalité des coups du moteur et la tenue après
+   réponse qui le feront). Deux mises en garde de l'Expert, à joindre : ces ajouts sont des instruments du critère (des
+   contrastes), pas des plans à enseigner — ils n'entrent ni dans les livres ni dans la table des structures ; et l'ordre
+   des événements doit rester visible pour le GE : inéligibilité constatée, puis repoussoirs proposés, sondés avant
+   inscription. Rien n'est inscrit : l'ouverture des trois désignations et le choix des repoussoirs attendent le go de
+   Sébastien ; ensuite, la matrice se recompte sur les six tirages existants pour l'échange française (Fg5 au canon ne
+   change pas les passes), mais l'Espagnole et le hérisson doivent être **rejoués** sous les six tirages avec leur nouvelle
+   liste (un plan de plus change le faisceau), soit vingt passes, une heure sur Orion.
 3. **Après le lot 1, sur l'instrument** : prix d'un plan = médiane des branches réalisées (plus le maximum) ; phrase avec sa
    marge, « c'est le plan » à plus de 0,25 du seuil ; coupes à marge (garder les branches à moins d'une marge de la
    quatrième, pas exactement quatre) ; coup refusé imprimé à côté de la concession.
