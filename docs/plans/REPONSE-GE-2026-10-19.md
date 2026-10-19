@@ -20,6 +20,11 @@ nombre ne dit rien de l'étroitesse ; un 0 final est l'extinction, pas une large
 | plans à largeur médiane < 4 | 4 (transferts réalisés en 2 à 6 demi-coups : deux candidats admis dès la racine) |
 | plans à minimum 1 | 5 (un seul coup admissible à la racine : les trois plans noirs de l'avance française, Fc1×Ce7, d5 de la Panov) |
 
+*Relecture du Dev chef (15 h) : ces chiffres sont lus dans les sorties v4, qui comptent les branches **non réalisées** à
+chaque coup (le coup de réalisation est exclu du décompte) ; le rendu corrigé comptera les branches gardées, réalisées
+comprises. Les deux colonnes seront recalculées d'une seule source après la re-passe au code corrigé, en cours sur Orion ;
+l'ordre de grandeur ne bougera pas, les « — » et quelques minimums si.*
+
 Verdict sur ta hypothèse : **le faisceau contraint a la largeur du libre dans 86 % des coups.** L'étroitesse est concentrée à la
 racine (un seul coup admissible) et dans les transferts courts. L'écart de largeur n'explique donc qu'une petite part du
 biais d'enveloppe ; la part principale est celle mesurée hier à largeur égale (le libre prend le meilleur après réponse
@@ -37,7 +42,8 @@ Colonne « prix ligne » = ligne gloutonne − ligne retenue, au même point cal
 L'écart « enveloppe − ligne » n'est que le biais du **côté libre** (faisceau libre − gloutonne au point calme) : le côté
 contraint est la même ligne dans les deux colonnes. Et cette ligne retenue est elle-même **choisie** : la meilleure après
 réponse parmi 4 branches × réponses ouvertes. L'échelle ligne compare donc un côté choisi à 4 et un côté gloutonne à 1 :
-elle **favorise le plan** autant que l'enveloppe le pénalise. Ni l'une ni l'autre n'est l'échelle des parties ; seule
+elle **favorise le plan**, comme l'enveloppe le pénalise (deux mécanismes différents, de sens opposés ; leur égalité n'est
+pas démontrée). Ni l'une ni l'autre n'est l'échelle des parties ; seule
 l'épreuve du jeu (une ligne contre une ligne, le coach-prix contre le coach-livre) l'est. Les deux colonnes sont publiées,
 le coach ne parlera qu'une langue : celle de l'épreuve, quand elle aura parlé.
 
@@ -80,12 +86,21 @@ Découvert à midi (note § 10) : à un fil, Stockfish est déterministe **à hi
 cinq autres recherches bouge de 2 à 12 cp et change l'ordre des candidats. Décision prise : table vidée avant chaque
 recherche en mode mesure (surcoût 3 %). Le lot 1 et la re-passe des dix positions ont été relancés ainsi à 11 h.
 
-J'avais écrit que les prix d'hier « bougeraient de quelques centièmes ». C'est faux. À code strictement identique (prouvé
-12/12 au centième ce matin, hash gardé), le passage à la table vide **change la phrase de 17 plans sur 35** et déplace des
-prix de près de deux pions (Carlsbad b5 : « en cours » −1,66 → « c'est le plan » +0,22 ; Panov d5 : +0,94 → « en cours »
-+6,55). Le mécanisme : quelques centièmes déplacent un candidat du 2e au 4e rang, le faisceau garde d'autres branches, ouvre
-d'autres réponses, et vingt demi-coups plus loin la ligne retenue n'est plus la même. Quatre bascules sont des franchissements
-de seuil à moins de 0,40 (b4, Dd1→d3, Fc1×Ff8, la colonne c du KID) ; les treize autres sont des lignes différentes.
+J'avais écrit que les prix d'hier « bougeraient de quelques centièmes ». C'est faux. Entre la passe d'hier et celle
+d'aujourd'hui, **la phrase de 17 plans sur 35 change** et des prix bougent de près de deux pions (Carlsbad b5 : « en cours »
+−1,66 → « c'est le plan » +0,22 ; Panov d5 : +0,94 → « en cours » +6,55). Le mécanisme : quelques centièmes déplacent un
+candidat du 2e au 4e rang, le faisceau garde d'autres branches, ouvre d'autres réponses, et vingt demi-coups plus loin la
+ligne retenue n'est plus la même. Quatre bascules sont des franchissements de seuil à moins de 0,40 (b4, Dd1→d3, Fc1×Ff8,
+la colonne c du KID) ; les treize autres sont des lignes différentes.
+
+*Réserve du Dev chef (15 h), à fermer avant de conclure* : la passe d'hier vient de l'ancien code, celle d'aujourd'hui du
+module refondu ; le contrôle 12/12 du matin ne prouve l'identité des deux codes que sur quatre positions sur dix (hérisson,
+Carlsbad, fr-echange, Panov), et c'est sur les six autres que tombent treize des dix-sept bascules ; hérisson et fr-echange,
+sous contrôle, n'en ont aucune. Les changements du refactor sont des non-opérations pour le faisceau par lecture du code,
+mais c'est un argument, pas une mesure. **Mesure en cours sur Orion** : les dix positions au code d'aujourd'hui avec le hash
+gardé (une seule variable bascule : la table), comparées au centième à la passe à table vide. Le compte des bascules
+« dues au hash seul » sera celui-là ; les chiffres ci-dessus en sont la borne haute. La Panov est à lire à part : son
+chiffre d'hier vient d'un recalcul séparé.
 
 Ce que j'en tire, à contester :
 
