@@ -1665,3 +1665,15 @@ deux demi-coups) — la gloutonne est bien la seule référence juste d'une lign
 **19 octobre, 9 h (Paris) : identité 12/12** — iqp-panov au code refondu identique à Orion au centième (délai du `Noteur` porté à
 30 min : la MultiPV « tous les coups légaux » à profondeur 18 dépasse 10 min sur le VPS). Les quatre positions de contrôle
 (hérisson, Carlsbad, fr-echange, iqp-panov) sont identiques ancien code / nouveau code. Lancement des premières parties.
+**19 octobre, 10 h 45 (Paris) : verdict du GE, le lot 1 repart** — (1) le biais d'enveloppe est une découverte : l'annulation de
+F1 au faisceau suppose des largeurs effectives égales des deux côtés, or le faisceau contraint garde souvent moins de quatre
+branches ; à vérifier sans jouer (largeur effective par coup, désormais dans les sorties) et, si elle est bien inférieure à
+quatre, publier le **prix sur l'échelle ligne** (ligne retenue contre gloutonne) à côté des prix d'hier, pour que le coach ne
+parle qu'une langue ; le verdict d'hier reste gelé. (2) La partie fraîche montre déjà l'écart entre les bras (le livre sait quel
+plan, pas quand : b5 au 3e coup avec 0,40 de retard) et la bascule a travaillé sur pièce (…c5, PDI adverse, blocus Cf3→d4 à
++0,60). (3) **Défaut** : la triple répétition n'était pas vue (position reconstruite depuis la FEN, sans historique) — la
+partie fraîche tricote Rg3/Tc5 du 36e coup au 80e demi-coup. Corrigé (compteur de positions, « nulle (répétition) » comptée à
+part), vérifié hors moteur sur la partie fraîche (coupée au 71e demi-coup). Lot 1 arrêté (8 processus, 3 h 20 perdues) et
+**relancé à 10 h 40** avec la correction. Colonnes à garder : part des coups sous plan, Σ retards (contrôle gratuit du prix
+ligne si la coïncidence +1,10 / +1,22 tient). Branche `division` fusionnée (a)(b)(c) + largeur effective + prix ligne ;
+re-passe des dix positions sur Orion, sans coupe (prix d'hier + nouvelles colonnes) et avec coupe (autopsie de la division).
