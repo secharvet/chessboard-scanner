@@ -96,6 +96,15 @@ Mise en garde d'ordre : ces ajouts sont des instruments du critère (des contras
 ne doivent PAS entrer dans les livres ni dans la table des structures. Et l'ordre des événements doit rester visible
 pour le GE : inéligibilité constatée d'abord, repoussoirs proposés ensuite, sondés avant d'être inscrits.
 
+**Post-scriptum (18 h, décision du GE relayée par Sébastien).** Les trois corrections de désignation sont retenues
+(canon v2, pièces versées aux `attendus`, v1 conservée). Les repoussoirs du § 5 sont **refusés** — non pour les sondes,
+mais parce que choisir après coup, résultats connus, ce qu'on met en face du livre pour que le test continue d'exister,
+c'est retailler le panel ; un test de contraste à repoussoirs préenregistrés serait un nouveau critère, écrit avant une
+nouvelle passe, sur un nouveau panel. Le GE a raison, et c'est ma propre mise en garde sur l'ordre des événements,
+poussée à sa conséquence : la rendre visible ne suffisait pas, elle disqualifiait la rustine. Recompte sans rejouer :
+3/6 au canon v2, 2/6 au v1 — pas de verdict, la piste « critère par position » est fermée. Le § 5 reste ici comme
+archive de la sonde, pas comme proposition vivante.
+
 ## Ce qui reste
 
 Décision d'ouvrir ou non les désignations : Sébastien. Recomptage avec précisions : le script du dev-lead. Tarrasch
