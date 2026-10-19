@@ -45,13 +45,15 @@ matériel. Et on note le coup où le plan se réalise.
   dix-sept changent de phrase quand on change seulement l'état de la table du moteur, et le compte automatique passe de six
   à cinq positions sur dix. Le faisceau est reproductible (deux passes fraîches identiques au centième), il n'est pas
   encore prouvé robuste. **Le taux de passage a été mesuré (19 octobre, 16 h)** : dix positions sous six tirages (profondeur
-  17, 18, 19, table vidée ou gardée), deux heures sur Orion. **Le critère passe dans deux tirages sur six** (6, 8, 5, 6, 7,
-  5 positions réussies sur dix). Ce n'est pas un verdict. Ce qui tient : trois positions réussissent dans les six tirages,
-  le plan le moins cher est le même dans au moins cinq tirages sur six pour six positions sur dix, et la position qui
-  échoue six fois (l'Espagnole sans dames) échoue pour la raison que l'Expert avait donnée hier : le plan du livre y est
-  plus cher que l'autre dans tous les tirages où il est tarifé, et n'est pas réalisable dans le dernier. Ce qui ne tient pas : la phrase d'un plan (« c'est le plan », « viable mais
-  ça coûte ») change dans un tiers des cas pour un pli de profondeur, dans la moitié pour l'état de la table. C'est ce
-  chiffre-là, deux sur six, que la lecture à froid doit regarder, pas le neuf sur dix.
+  17, 18, 19, table vidée ou gardée), deux heures sur Orion. **Le critère passe dans deux tirages sur six à la règle écrite,
+  trois sur six au canon corrigé. Ce n'est pas un verdict, et la piste est fermée** (décision du GE, 18 h). Le canon était
+  faux sur trois positions — le hérisson sans …Tc8, l'Espagnole avec la destination sans la route, l'échange française sans
+  Fg5 — avec des pièces antérieures à la mesure ; il est corrigé, et le corriger ne fait pas passer le critère, ce qui prouve
+  que la correction n'est pas une rustine. Ce qui a tenu dans la secousse : **l'instrument sait ordonner** — le plan le
+  moins cher est le même dans au moins cinq tirages sur six pour six positions sur dix — **il chiffre à un demi-pion près,
+  et sa phrase (« c'est le plan », « ça coûte ») ne tient pas** : elle change une fois sur trois pour un pli de profondeur,
+  une fois sur deux pour l'état de la table. Le plan est plus stable que le coup, l'ordre plus stable que le prix, le prix
+  plus stable que la phrase. On ne lui demandera plus de trancher par position.
 - La vraie leçon : **le livre parle du plan de la structure, le faisceau mesure le plan de la position**, et l'écart entre les
   deux, c'est le moment — « le plan de cette structure est b4-b5, le plan de ce coup est Ce5, et b4-b5 revient quinze
   demi-coups plus tard pour un demi-pion ». Aucun livre ne dit ça position par position.
