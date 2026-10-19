@@ -241,3 +241,37 @@ centième tenaient parce que la suite d'appels était la même. Surcoût du vida
 17 s). Décision : en mode mesure, `ucinewgame` avant chaque recherche ; une valeur ne dépend plus que de la position et de la
 profondeur. Conséquences : lot 1 et re-passe Orion relancés ; les prix d'hier bougeront de quelques centièmes, la re-passe
 sans coupe est la nouvelle référence ; le plancher de 25 cp n'avait pas à absorber ce bruit-là, il reste.
+
+## 11. Le lot de perturbation de l'épreuve — proposition à soumettre au GE (19 octobre, 19 h, après le « go pour le jeu »)
+
+Ce que le taux de passage a fait au faisceau, il faut le faire à l'épreuve : **donner un intervalle à l'agrégat** (coût
+médian et moyen par bras, différence coach-prix − coach-livre) avant de le lire comme un verdict. Rien ci-dessous n'est
+lancé avant l'accord du GE ; le lot 1 reste la référence déterministe.
+
+**Référence.** Lot 1 : vingt départs × trois bras × dix graines, profondeur 18, un fil, table vidée, code gelé (`4e84a5f`),
+aux deux moteurs (SF 19 sur le VPS, SF 17.1 sur Orion, lancé le 19 à 19 h au même code).
+
+**Quatre tirages proposés**, même code, même panel, un seul moteur (SF 19 — l'écart entre moteurs est déjà une perturbation,
+mesurée par la référence elle-même) :
+
+| tirage | ce qui bouge | code à écrire | coût estimé (Orion, six processus) |
+|---|---|---|---|
+| T1 | graines 11 à 20 : un autre tirage des réponses adverses ex æquo | aucun (`--numeros`) | une nuit |
+| T2 | profondeur 17, pour l'exécutant, l'adversaire et la mesure (ligne gloutonne et faisceau libre à la même profondeur que la ligne jouée) | aucun (`--depth`) | une nuit |
+| T3 | profondeur 19, idem | aucun | une nuit et demie |
+| T4 | ordre des ex æquo **côté exécutant** : parmi les candidats admissibles à ≤ 25 cp du meilleur, le dernier au lieu du premier | une option dans `coach/coup-contraint.mjs`, sur `division`, relue par le Dev chef, fusionnée après la fin du lot 1 | une nuit |
+
+Ordre : T1, T2, T3 d'abord (aucun code), T4 en dernier. Entre la référence et les quatre tirages, **le code ne change pas**
+(la règle « service après abandon » du § 9 attend la fin du lot de perturbation, pas seulement la fin du lot 1), et rien ne
+se lit avant que les cinq soient là.
+
+**Chiffres publiés par tirage**, les mêmes qu'au dépouillement du lot 1 (§ 9) : coût médian et moyen par bras, différence
+prix − livre (médiane et moyenne), part des coups sous plan, nulles par répétition, demi-coups « sans plan, table épuisée »,
+segments gratuits lisant 0.
+
+**Règle de lecture, à fixer avec le GE avant le premier tirage** (proposition) : le verdict du critère d'arrêt (§ 5 du
+protocole : médian ≤ 0,25 et moyen ≤ 0,50) **tient s'il est le même dans au moins quatre tirages sur cinq** (référence +
+quatre), et la différence prix − livre **garde son signe dans les cinq** ; sinon « pas de verdict », et le rapport publie
+l'intervalle (le plus bas et le plus haut des cinq) à la place d'un chiffre. Trois sur cinq ne serait pas un verdict.
+
+**Ce qu'on n'y met pas** : la table gardée (la méthode de mesure est fixée, § 10), un autre panel, un autre plancher.
