@@ -192,8 +192,8 @@ Tout à un fil (`COACH_DETERMINISTIC=1`), SF 19, profondeur 18, sur le VPS, troi
    | 2 | 0,45 | 1,07 | 1,20 |
    | 4 | 0,69 | 1,53 | 1,82 |
 
-   Deux lectures. **Le biais croît avec la profondeur du segment** (≈ 0,04 pion par demi-coup, à largeur 4 : 0,20 au 2e coup,
-   0,71 au 6e, 1,82 au 12e) — il n'est pas une constante qu'on retrancherait. **Il n'est pas nul à largeur 1** : même à un
+   Deux lectures. **Le biais croît avec la profondeur du segment** (≈ 0,04 pion par demi-coup à largeur 1, ≈ 0,08 à largeur 4 :
+   0,20 au 2e coup, 0,71 au 6e, 1,82 au 12e) — il n'est pas une constante qu'on retrancherait. **Il n'est pas nul à largeur 1** : même à un
    état, le faisceau libre retient la meilleure *position après la réponse* parmi (quatre coups × réponses ouvertes), donc
    il s'accorde la seconde réponse adverse quand elle est dans les 25 cp, et choisit sur une évaluation prise deux demi-coups
    plus loin ; à chaque coup il « gagne » un peu, et ces petits gains s'accumulent. La gloutonne joue le coup du moteur des
