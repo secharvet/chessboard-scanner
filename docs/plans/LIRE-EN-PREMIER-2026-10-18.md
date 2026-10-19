@@ -46,7 +46,8 @@ matériel. Et on note le coup où le plan se réalise.
   à cinq positions sur dix. Le faisceau est reproductible (deux passes fraîches identiques au centième), il n'est pas
   encore prouvé robuste. **Le taux de passage a été mesuré (19 octobre, 16 h)** : dix positions sous six tirages (profondeur
   17, 18, 19, table vidée ou gardée), deux heures sur Orion. **Le critère passe dans deux tirages sur six à la règle écrite,
-  trois sur six au canon corrigé. Ce n'est pas un verdict, et la piste est fermée** (décision du GE, 18 h). Le canon était
+  trois sur six au canon corrigé** (où la barre est plus haute : sept des huit positions restantes). **Ce n'est pas un
+  verdict, et la piste est fermée** (décision du GE, 18 h). Le canon était
   faux sur trois positions — le hérisson sans …Tc8, l'Espagnole avec la destination sans la route, l'échange française sans
   Fg5 — avec des pièces antérieures à la mesure ; il est corrigé, et le corriger ne fait pas passer le critère, ce qui prouve
   que la correction n'est pas une rustine. Ce qui a tenu dans la secousse : **l'instrument sait ordonner** — le plan le

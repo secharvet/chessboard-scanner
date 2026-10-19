@@ -319,7 +319,10 @@ mesure est fine là où le tempo est court, instable là où il est long, et l'a
 **Le chiffre.** Le critère a été rejoué sous six tirages de l'instrument (profondeur 17, 18, 19 × table du moteur vidée ou
 gardée ; même code, un fil, dix positions). Il passe dans **2 tirages sur 6** à la règle écrite (6, 8, 5, 6, 7, 5 positions
 réussies sur dix), et dans **3 sur 6** au canon corrigé (désignations v2 : 6, 8, 6, 7, 7, 5 sur huit positions éligibles).
-Par la règle posée avant la mesure (plus de sept tirages sur dix pour qu'un verdict tienne), **ce n'est pas un verdict.** Le
+Au canon corrigé, la barre est plus haute, non plus basse : sept positions sur les huit restantes (87 %) contre sept sur dix
+(70 %) ; les deux taux ne se comparent donc pas à barre égale, et le gain de v2 vient surtout de ce que les deux positions
+qui échouaient le plus sortent du dénominateur (Dev chef, 18 h 30). Par la règle posée avant la mesure (plus de sept
+tirages sur dix pour qu'un verdict tienne), **ce n'est pas un verdict.** Le
 « neuf sur dix » du § 8 était un tirage, plutôt chanceux ; il est retiré. Matrice complète : `TAUX-DE-PASSAGE-2026-10-19.md`.
 
 **Pourquoi, sans humiliation.** Le critère demandait à un instrument dont la résolution est d'un demi-pion de rendre des

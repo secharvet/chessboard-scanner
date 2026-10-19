@@ -1753,3 +1753,8 @@ test à repoussoirs préenregistrés serait un nouveau critère sur un nouveau p
 règle écrite, 3/6 au canon corrigé, pas de verdict ; l'ordre des plans est robuste, le prix l'est à un demi-pion, la phrase
 ne l'est pas » ; page « à lire en premier » alignée. Retouches de l'instrument = condition pour rendre une phrase, pas avant
 la décision de Sébastien ; le lot 1 finit sans être lu ; l'épreuve du jeu attend un go à part, à froid.
+**19 octobre, 18 h 45 (Paris) : « go pour le jeu » (Sébastien).** L'épreuve du jeu a son go à part. Lot 1 (SF 19, VPS, trois
+processus) à 16 parties-dossiers sur 60 après six heures, fin estimée le 20 vers 5 h ; il sera dépouillé selon § 9 de la
+relecture (coût médian et moyen par partie et par bras, différence prix − livre, part des coups sous plan, bascules, nulles
+par répétition, demi-coups « sans plan, table épuisée », Σ retards contre prix ligne). Ensuite, dans l'ordre : le même lot
+au second moteur (le critère exige les deux), puis le lot de perturbation de l'épreuve, spécifié avec le GE avant de lancer.
