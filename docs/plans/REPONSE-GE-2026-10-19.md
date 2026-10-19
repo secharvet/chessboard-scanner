@@ -98,13 +98,19 @@ la colonne c du KID) ; les treize autres sont des lignes différentes.
 module refondu ; le refactor était une non-opération par lecture du code, pas par mesure. Mesure faite sur Orion : les dix
 positions au code d'aujourd'hui, hash gardé contre table vide — une seule variable bascule.
 
-| | phrases changées | lignes retenues changées | écart de prix médian (max), plans tarifés des deux côtés |
-|---|---|---|---|
-| **table seule** (code d'aujourd'hui, hash gardé → table vide) | **16 / 35**, sur huit positions | 30 / 35 | 0,33 (5,61), n = 29 |
-| **code seul** (hier v3 → aujourd'hui hash gardé) | **1 / 35** (Panov Dd1→d3, +0,26 → +0,12 : la correction du point calme, connue) | 2 / 35 | 0,00 (0,14), n = 31 |
+| | phrases changées | lignes retenues changées | prix | ligne libre changée |
+|---|---|---|---|---|
+| **table seule** (code d'aujourd'hui, hash gardé → table vide) | **16 / 35**, sur huit positions | 33 / 35 en ligne pleine (dont 3 où nos coups tiennent et seule la réponse adverse bouge) | écart médian 0,33, max 5,61, sur 29 plans tarifés des deux côtés | 10 / 10 positions |
+| **code et l'historique qu'il induit** (hier v3 → aujourd'hui hash gardé) | **1 / 35** (Panov Dd1→d3, +0,26 → +0,12 : la correction du point calme, connue) | 2 / 35 | 28 / 35 plans au même prix ; les 7 qui bougent le font de 5 à 14 cp, sous le plancher 25 | 0 / 10 |
 
 Les dix-sept bascules d'hier se décomposent donc en **seize dues à la table et une due au code** ; la borne haute était la
-valeur. Critère automatique : 6/10 à hash gardé, hier comme aujourd'hui au code corrigé, 5/10 à table vide.
+valeur. Deux précisions du Dev chef (16 h 30). La seconde ligne n'isole pas le code pur : à hash gardé, le code refondu
+change aussi l'ordre et le nombre des recherches contraintes, donc la table conservée ; l'isolement propre (ancien code à
+table vide) est impossible, v3 étant antérieur au vidage, et « 1 phrase » est un majorant de l'effet du code, pas une
+mesure. Et l'artefact touche la référence autant que la contrainte : la ligne libre elle-même est re-routée par la table
+(10/10) alors que le code ne la touche pas (0/10) ; séparer la part du libre et la part du contraint dans l'écart de prix
+demanderait une passe instrumentée et ne changerait pas la conclusion (33 cp médians nets > plancher 25 : on vide).
+Critère automatique : 6/10 à hash gardé, hier comme aujourd'hui au code corrigé, 5/10 à table vide.
 
 Ce que j'en tire, à contester :
 
