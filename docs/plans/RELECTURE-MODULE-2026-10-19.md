@@ -228,3 +228,16 @@ Prochaine étape : lot 1, SF 19, trois processus (`scripts/plans/epreuve.sh /usr
    la mesure rejetée devient un contrôle gratuit de la mesure retenue.
 5. **Part des coups sous plan** : la colonne la plus importante du rapport, souvent sous la moitié (la table n'a rien à dire
    en finale).
+
+## 10. La table de hachage comptait (19 octobre, midi) — méthode de mesure changée
+
+Stockfish à un fil est déterministe **à historique égal** : la table de hachage garde le travail des recherches précédentes
+et la suivante s'en sert. Même position Carlsbad, prof. 18, un fil : moteur frais h3 +0,44 · a3 +0,34 · Tab1 +0,29 · Ce5
++0,28 ; après cinq autres recherches h3 +0,42 · Tab1 +0,30 · Ce5 +0,24 · a3 +0,22 (a3 de 2e à 4e) ; après vidage, les valeurs
+du moteur frais exactement. Trouvé parce que deux parties fraîches identiques entre elles (Orion, coupées au 71e par la
+répétition) donnaient d'autres prix que la même partie poussée au 80e (VPS), à coups et candidats identiques : les prix se
+calculent après la partie, sur une table au contenu différent (jusqu'à 21 cp sur un prix d'enveloppe). Nos identités au
+centième tenaient parce que la suite d'appels était la même. Surcoût du vidage : 3 % (douze positions voisines, 16 contre
+17 s). Décision : en mode mesure, `ucinewgame` avant chaque recherche ; une valeur ne dépend plus que de la position et de la
+profondeur. Conséquences : lot 1 et re-passe Orion relancés ; les prix d'hier bougeront de quelques centièmes, la re-passe
+sans coupe est la nouvelle référence ; le plancher de 25 cp n'avait pas à absorber ce bruit-là, il reste.
