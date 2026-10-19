@@ -1710,3 +1710,14 @@ perturbations en file sur Orion** après les passes v5 : prof. 17 et 19 × table
 les v5), 40 passes, six en parallèle, dossiers `nuit-p{17,19}-{vide,garde}`, marque TERMINE dans `nuit-p17-garde/`.
 Engagé pour après le lot 1 : prix = médiane des branches réalisées, phrase avec marge, coupes à marge, coup refusé imprimé ;
 lot de perturbation de l'épreuve (prof. 17–19, ordre des ex æquo côté exécutant) à spécifier avec le GE. Réponse au GE § 6.
+**19 octobre, 16 h (Paris) : réserve du Dev chef fermée, la table de hachage explique seize des dix-sept bascules.** Passes
+v5 sur Orion (code corrigé `division` 8af9520 + f8a3e1c, dix positions, un fil, prof. 18) : à table vide, identique au
+centième à la passe v4 sur 35/35 plans (les deux correctifs sont des non-opérations sur les prix ; reproductibilité à
+table vide établie sur les dix positions). À hash gardé contre table vide, code identique : **16 phrases sur 35** changent
+(huit positions), 30 lignes retenues sur 35, écart de prix médian 0,33 (max 5,61). Code seul (v3 d'hier contre v5 hash
+gardé) : 1 phrase sur 35 (Panov Dd1→d3, correction du point calme), écart médian 0,00 (max 0,14). Largeurs effectives
+recalculées d'une seule source (JSON v5 table vide, réalisée comprise) : médiane 4, **8 %** des coups sous 4 (et non 14 %),
+aucun plan à médiane < 4, cinq plans à minimum 1 (racine de l'avance française noire, un coup isolé dans Fc1×Ce7 et d5
+Panov). Critère automatique : 6/10 à hash gardé (hier et aujourd'hui), 5/10 à table vide. Nuit de perturbations lancée
+à 13 h 57 sur Orion (prof. 17 et 19 × vide/gardé, six moteurs) ; taux de passage au matin. Réponse au GE § 1, § 4, § 5 et
+tableau mis à jour.
