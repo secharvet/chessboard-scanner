@@ -1677,3 +1677,14 @@ part), vérifié hors moteur sur la partie fraîche (coupée au 71e demi-coup). 
 **relancé à 10 h 40** avec la correction. Colonnes à garder : part des coups sous plan, Σ retards (contrôle gratuit du prix
 ligne si la coïncidence +1,10 / +1,22 tient). Branche `division` fusionnée (a)(b)(c) + largeur effective + prix ligne ;
 re-passe des dix positions sur Orion, sans coupe (prix d'hier + nouvelles colonnes) et avec coupe (autopsie de la division).
+**19 octobre, 12 h 15 (Paris) : la table de hachage comptait — vidée avant chaque recherche en mode mesure.** Deux parties
+fraîches identiques sur Orion avec le compteur de positions (coupées au 71e, « nulle (répétition) », identité hors secondes
+tenue), mais leurs prix diffèrent de la partie du VPS poussée au 80e (b5 +0,51 contre +0,53, Cf3→d4 +0,69 contre +0,60,
+enveloppe jusqu'à 21 cp d'écart) à coups et candidats strictement identiques : les prix se calculent après la partie, sur une
+table de hachage qui n'a plus le même contenu. Expérience sur Orion (SF 19, un fil, prof. 18) : la même position notée après
+cinq autres recherches change de 2 à 12 cp par coup et d'ordre des candidats (a3 de 2e à 4e) ; table vidée, les valeurs du
+moteur frais reviennent exactement ; surcoût 3 %. **Stockfish à un fil est déterministe à historique égal** — nos identités
+au centième tenaient parce que la suite d'appels était la même. Décision (Sébastien, sur recommandation) : en
+`COACH_DETERMINISTIC=1`, `ucinewgame` avant chaque recherche (`uci-engine.mjs`), la valeur d'une position ne dépend plus que
+d'elle et de la profondeur. Lot 1 et re-passe Orion arrêtés et relancés avec cette méthode ; les prix d'hier (référence
+`orion-sf19-p18-v3`) bougeront de quelques centièmes : la re-passe sans coupe devient la nouvelle référence.
