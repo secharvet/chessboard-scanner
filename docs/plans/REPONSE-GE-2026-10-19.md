@@ -56,8 +56,18 @@ Même position que la partie fraîche (Carlsbad après 10…Cf8, Blancs), plan e
   vers h7), *viable mais ça coûte* +0,54, tempo 24.
 - Lecture : le livre dit « e4 » et il a raison sur le plan, pas sur le moment (0,65 à la poussée) ; dès que la structure a
   basculé, le plan propre à la PDI (d5) est gratuit. C'est l'écart entre les bras que la partie fraîche montrait, retrouvé
-  sans jouer et chiffré. Relecture échecs de l'Expert en cours (les deux coupes « concession » à +8 après une seconde réponse
-  adverse ouverte : une tactique offerte que le plan ne prend pas — coupée, pas tarifée).
+  sans jouer et chiffré.
+- **Relecture de l'Expert sur l'échiquier** (treize sondes SF 19 sur Orion, table vide, prof. 18 ; livrable
+  `autopsie-carlsbad-e4.md` à côté de cette note) : la division est juste. e4 concède 0,19 à prof. 18 au nœud de la poussée
+  (0,65 est le chiffre prudent de la dernière chance à prof. 14, même décision) ; à la bascule Fxe4 est le meilleur coup ;
+  dans la PDI, d5 forcé +0,23 contre meilleur +0,20. Le +0,54 du transfert Dc2→d3 est la vraie histoire : Cf4 couvre d3, la
+  batterie doit faire le détour Dc1–e3 ; la mesure inverse l'ordre canonique de la table (batterie avant d5) pour une raison
+  de position — cas d'école, pas une correction de table. Les deux coupes « concession » à +8,40 / +7,98 ne sont **pas** une
+  tactique laissée par l'adversaire (je l'avais écrit à tort) : c'est le propre coup du plan, Dd3??, qui donne la dame
+  (Cxd3) ; coupé, pas tarifé, rien ne fuit dans les prix. Les deux coupes du faisceau principal (6,09 et 1,75) sont de même
+  nature (e4?? avec le fou g5 en prise ; e4 prématuré). Recommandation d'affichage pour après le lot : imprimer le coup
+  refusé à côté de la concession (« concession 8,40 (Dd3??) »), pour que le lecteur lise « le plan ne peut plus avancer qu'en
+  donnant la dame ».
 
 La coupe à concession cumulée 1,0 (variante `coupe/`) ne change **aucun prix** des 33 plans réalisés ou hors de prix ; elle
 remplace deux « en cours à l'horizon » absurdes (Fc1→e3 à +4,34, d5 de la Panov à +6,55 : des branches vivantes très
