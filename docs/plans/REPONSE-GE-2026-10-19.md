@@ -75,6 +75,12 @@ Même position que la partie fraîche (Carlsbad après 10…Cf8, Blancs), plan e
   nature (e4?? avec le fou g5 en prise ; e4 prématuré). Recommandation d'affichage pour après le lot : imprimer le coup
   refusé à côté de la concession (« concession 8,40 (Dd3??) »), pour que le lecteur lise « le plan ne peut plus avancer qu'en
   donnant la dame ».
+- **Relecture du Dev chef côté mécanique** (17 h, lecture seule) : l'autopsie est cohérente avec les correctifs relus hier —
+  le −4,3 → +0,54 est la référence prise depuis la bascule (correctif b), les concessions 8,40 / 7,98 / 6,09 / 1,75 sont
+  bien exclues du minimum des prix (séparation coupes/suivants, rien ne fuit), et `coupe/` ≡ `sans-coupe/` sur la Carlsbad
+  (prix, coupes, division identiques sur les trois plans : la coupe cumulée n'économise que du calcul ici). L'écart prof. 14 /
+  prof. 18 des concessions est bénin (même signe, même décision). La recommandation d'affichage est endossée, à faire après
+  le lot. Drapeau clos des deux côtés ; le 6 / 6 / 5 du critère est recompté à l'identique.
 
 La coupe à concession cumulée 1,0 (variante `coupe/`) ne change **aucun prix** des 33 plans réalisés ou hors de prix ; elle
 remplace deux « en cours à l'horizon » absurdes (Fc1→e3 à +4,34, d5 de la Panov à +6,55 : des branches vivantes très
