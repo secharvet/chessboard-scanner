@@ -170,16 +170,21 @@ Engagé :
    | réussies dans 2 ou 3 | 4 (Carlsbad 3, Tarrasch fermé 3, échange 2, hérisson 2) |
    | réussie dans aucun | 1 (Espagnole d'échange) |
    | plans à phrase stable sur les six tirages | 8 / 35 ; deux phrases : 15 ; trois : 9 ; quatre : 3 |
-   | plan le moins cher stable (6/6 ou 5/6) | 7 positions sur 10 (hérisson et Panov 6/6 ; Carlsbad, avance blancs, échange, KID 5/6 ; avance noirs 4/6) |
+   | plan le moins cher stable (6/6 ou 5/6) | 6 positions sur 10 (hérisson et Panov 6/6 ; Carlsbad, avance blancs, échange, KID 5/6 ; avance noirs et Tarrasch ouvert 4/6 ; Espagnole et Tarrasch fermé 3/6) |
    | une profondeur de plus ou de moins, table vide | 11 à 16 phrases changent, écart de prix médian 0,14 à 0,19 |
    | table gardée contre vidée, même profondeur | 16 à 19 phrases changent, écart médian 0,19 à 0,33 |
 
+   Conventions, verrouillées avec le Dev chef (17 h) : « plan le moins cher » = prix minimal parmi les plans tarifés et
+   réalisés (prix et tempo non nuls), par libellé ; médiane interpolée sur nombre pair (p18 → p19 vide : 0,14 interpolé,
+   0,13 en médiane basse) ; le premier chiffre de ce tableau était « 7 », c'était un miscompte, recompté à 6.
+
    Ce que ces chiffres disent, à contester. **La phrase est le produit le plus fragile** : un pli de profondeur en change un
    tiers, la table la moitié. **Le classement des plans est plus solide que la phrase** : le plan le moins cher est le même
-   dans au moins cinq tirages sur six pour sept positions sur dix. **Le critère vit dans le bruit** : les échecs se jouent à
-   +0,28 … +0,65 contre un plancher de 0,25, et une position bascule d'un côté ou de l'autre selon le tirage. La position
-   qui échoue six fois, l'Espagnole d'échange, échoue de façon stable : la rupture e5 du livre coûte de +0,87 à +4,66 (ou
-   n'est pas réalisable) dans les six tirages, et le plan le moins cher est Cb1→d5 ou Fc1×Ff8 — c'est l'arbitrage de
+   dans au moins cinq tirages sur six pour six positions sur dix, contre huit plans sur 35 à phrase stable. **Le critère vit
+   dans le bruit** : les échecs se jouent à +0,28 … +0,65 contre un plancher de 0,25, et une position bascule d'un côté ou
+   de l'autre selon le tirage. La position qui échoue six fois, l'Espagnole d'échange, échoue de façon stable : la rupture
+   e5 du livre coûte de +0,87 à +4,66 dans les cinq tirages où elle est tarifée, et n'est pas réalisable dans le sixième ;
+   le plan le moins cher est Cb1→d5 ou Fc1×Ff8 — c'est l'arbitrage de
    l'Expert d'hier à profondeur 30 (Cd5 vaut mieux qu'e5), confirmé par la nuit, pas une victime du bruit. Le hérisson
    (colonne c la moins chère 6/6, les deux plans du livre de +0,30 à +1,36) est à relire pareil ; l'échange française
    (Fc1→g5 5/6 contre c4 de +0,20 à +0,89) aussi. Les deux limites annoncées tiennent : l'ordre des ex æquo attend une
