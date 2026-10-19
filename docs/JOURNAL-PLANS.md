@@ -1738,3 +1738,9 @@ l'Espagnole et le hérisson deviennent **inéligibles** (plus de plan hors livre
 huit éligibles → **3/6** à la règle écrite. Le critère mesure un contraste livre / hors-livre ; ouvrir le canon ne le fait pas
 passer, il retire la position du compte. Résidu : Tarrasch fermé et les cases « aucun canonique » (réalisation des plans
 longs). Réponse au GE § 6 complétée.
+**19 octobre, 17 h 30 (Paris) : repoussoirs hors livre sondés par l'Expert, dossier de décision monté, rien d'inscrit.**
+Espagnole : marche du roi Rg1→e3 (Rf2 −0,08 à prof. 24, meilleur coup Ff4 +0,02), repli Fc1→e3 (+0,01), colonne d rejetée
+(Td2 −1,11, épouvantail). Hérisson : Cd7→e5 (−0,17, ex æquo de …Tac8 −0,16), second h7→h5 (−0,28). Code vérifié : le
+transfert accepte le roi (Rg1-f2-e3, 2 coups). Mises en garde : instruments du critère, pas des plans à enseigner ; ordre des
+événements visible pour le GE (inéligibilité constatée → repoussoirs proposés → sondés → inscription). Attend le go de
+Sébastien ; ensuite Espagnole et hérisson à rejouer sous les six tirages (20 passes, ~1 h Orion). Réponse au GE § 6.

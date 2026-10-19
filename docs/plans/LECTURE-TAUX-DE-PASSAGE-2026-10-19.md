@@ -67,6 +67,35 @@ reste avec sa vraie étiquette, « viable mais ça coûte un peu ».
    l'instabilité résiduelle se concentre sur le Tarrasch fermé et les cases « aucun canonique » (réalisation des
    longs), qui sont un autre problème que les désignations.
 
+## 5. Addendum (même jour) — repoussoirs hors livre pour les positions devenues inéligibles
+
+Le recomptage du pilote (sans toucher au canon, décision de Sébastien) montre un effet que je n'avais pas anticipé et
+que je reconnais : préciser une désignation ne fait pas passer la position, **elle la retire du compte** — une fois
+tous les plans bon marché au canon, le critère n'a plus de contraste. Pour que l'Espagnole et le hérisson restent
+éligibles, il leur faut un plan hors livre plausible — un repoussoir honnête qu'un joueur de club tenterait. Candidats
+sondés (SF 19 sur Orion, un fil, table vide, prof. 24, premier coup du plan — le faisceau tarifera le plan entier) :
+
+**Espagnole d'échange (Blancs)** — meilleur coup Ff4 +0,02 :
+- **transfert Rg1→e3 (la marche du roi)** : Rf2 vaut −0,08 (0,10 de concession). C'est LE réflexe de club en finale
+  sans dames (« le roi au centre ») et le livre ne le nomme pas ; honnête, jouable, et pédagogiquement riche (le bon
+  instinct, la question est le moment). À condition que la famille transfert accepte le roi ; sinon :
+- **transfert Fc1→e3** : +0,01, ex æquo du meilleur — le « bon développement générique », l'hypothèse nulle idéale
+  (le critère teste alors : les plans du livre ne sont pas battus par du développement quelconque).
+- **poussée a2→a4** en option : −0,06, fixer a6, plausible.
+- **REJETÉ : colonne d** (mon premier réflexe) : Td1 est déjà sur la colonne (plan quasi réalisé d'office, sans
+  contraste) et le doublement naïf Td2 vaut **−1,11** (…Fd6 !) — un épouvantail, pas un repoussoir.
+
+**Hérisson (Noirs)** — meilleur coup …Tac8 −0,16 :
+- **transfert Cd7→e5 (le cavalier au poste de rêve)** : −0,17, **ex æquo du meilleur coup**. Exactement ce qu'un
+  joueur de club joue « parce qu'un cavalier en e5 c'est beau ». Repoussoir exigeant : s'il fait jeu égal avec la
+  colonne c dans un tirage, la clause d'égalité (≤ 25 cp = réussite) couvre ; s'il la bat franchement quelque part,
+  le critère échoue honnêtement — c'est son travail.
+- **poussée h7→h5** en second : −0,28 (0,12 de concession), le geste d'aile paresseux, jouable sans être bon marché.
+
+Mise en garde d'ordre : ces ajouts sont des instruments du critère (des contrastes), pas des plans à enseigner — ils
+ne doivent PAS entrer dans les livres ni dans la table des structures. Et l'ordre des événements doit rester visible
+pour le GE : inéligibilité constatée d'abord, repoussoirs proposés ensuite, sondés avant d'être inscrits.
+
 ## Ce qui reste
 
 Décision d'ouvrir ou non les désignations : Sébastien. Recomptage avec précisions : le script du dev-lead. Tarrasch
