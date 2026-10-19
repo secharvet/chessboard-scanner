@@ -30,7 +30,7 @@ export async function faisceauPlan(noteur, P, fen, side, plan, autres, libre, op
   const structRacine = structure(fen);
   let etats = [{ fen, plan, autres: autres.map((a) => a.plan), compteur: 0, ligne: [], ply: ply0, cp: refLibre(ply0), d: d0, jumelles: [], bascule: null, cumul: 0 }];
   let splits = 0;
-  const realises = [], coupes = [];
+  const realises = [], coupes = [], largeurs = []; // largeurs[coup] = branches vivantes gardées après le tri (la largeur EFFECTIVE du faisceau contraint, GE 19 oct.)
   /** Joue `cand` depuis l'état e, puis la ou les réponses adverses (la seconde si elle est ex æquo) ; range les états. */
   async function etendre(e, cand, classe, compteur, meilleurCp, suivants) {
     const apres = new Chess(e.fen); apres.move(cand.m.san);
@@ -80,6 +80,7 @@ export async function faisceauPlan(noteur, P, fen, side, plan, autres, libre, op
     const gardes = suivants.sort((a, b) => b.cp - a.cp).filter((x) => !vues.has(x.fen) && vues.add(x.fen)).slice(0, LARGEUR);
     for (const x of gardes) if (x.realise) realises.push(x);
     etats = gardes.filter((x) => !x.realise);
+    largeurs.push(etats.length);
   }
   const vivants = etats;
   const borne = borneCp; // les scores de mat ne font pas des prix en milliers
@@ -90,6 +91,8 @@ export async function faisceauPlan(noteur, P, fen, side, plan, autres, libre, op
     const q = await pointCalme(noteur, x.fen, x.ply, side, P);
     x.calme = q.calme; x.plyCalme = q.ply; x.cpCalme = q.cp ?? x.cp; x.prolonge = q.joues.map((m) => m.san);
     x.prixCalme = borne(refLibre(q.ply)) - borne(x.cpCalme);
+    // L'échelle ligne (GE, 19 oct.) : la ligne retenue contre la ligne GLOUTONNE (largeur 1 des deux côtés), la langue des parties.
+    const gl = libre.glouton; x.prixLigne = gl ? borne(gl[Math.max(0, Math.min(q.ply - plyLibre, gl.length - 1))] ?? 0) - borne(x.cpCalme) : null;
   }
   const prixDe = (x) => (x.prixCalme ?? prixBrut(x));
   let phrase, retenu = null, prix = null, tempo = null, merci = false;
@@ -137,7 +140,7 @@ export async function faisceauPlan(noteur, P, fen, side, plan, autres, libre, op
   const cumulMin = coupes.filter((x) => x.raison === 'concession cumulée').reduce((m, x) => Math.min(m, x.cout), Infinity); // le cumul d'une branche coupée (autre grandeur, à part)
   const limite = (prix != null && prix > PLANCHER && prix <= BANDE) || (tempo != null && tempo >= 2 * horizon - 2)
     || (tempo == null && Number.isFinite(concessionMin) && Math.abs(concessionMin - P.concession) <= PLANCHER); // dernière chance refusée à un cheveu de la borne
-  return { libelle: libelle(plan, fen), d0, phrase, prix, prixBrut: retenu && retenu.tempo != null ? prixBrut(retenu) : null, calme: retenu?.calme ?? null, prolonge: retenu?.prolonge ?? [], bascule: retenu?.bascule ? { ...retenu.bascule, fen: undefined } : null, division, continuer, horizon, tempo, limite, merci, concessionMin: Number.isFinite(concessionMin) ? concessionMin : null, cumulMin: Number.isFinite(cumulMin) ? cumulMin : null, ligne: retenu?.ligne ?? [], realises: realises.length, vivants: vivants.length,
+  return { libelle: libelle(plan, fen), d0, phrase, prix, prixBrut: retenu && retenu.tempo != null ? prixBrut(retenu) : null, calme: retenu?.calme ?? null, prolonge: retenu?.prolonge ?? [], bascule: retenu?.bascule ? { ...retenu.bascule, fen: undefined } : null, division, continuer, horizon, prixLigne: retenu?.prixLigne ?? null, largeurs, tempo, limite, merci, concessionMin: Number.isFinite(concessionMin) ? concessionMin : null, cumulMin: Number.isFinite(cumulMin) ? cumulMin : null, ligne: retenu?.ligne ?? [], realises: realises.length, vivants: vivants.length,
     coupes: { concession: coupes.filter((x) => x.raison === 'concession').length, compteur: coupes.filter((x) => x.raison === 'compteur').length, cumul: coupes.filter((x) => x.raison === 'concession cumulée').length, autres: coupes.filter((x) => !['concession', 'compteur', 'concession cumulée'].includes(x.raison)).length }, coupesListe };
 }
 
