@@ -1688,3 +1688,16 @@ au centième tenaient parce que la suite d'appels était la même. Décision (S�
 `COACH_DETERMINISTIC=1`, `ucinewgame` avant chaque recherche (`uci-engine.mjs`), la valeur d'une position ne dépend plus que
 d'elle et de la profondeur. Lot 1 et re-passe Orion arrêtés et relancés avec cette méthode ; les prix d'hier (référence
 `orion-sf19-p18-v3`) bougeront de quelques centièmes : la re-passe sans coupe devient la nouvelle référence.
+**19 octobre, 14 h 30 (Paris) : re-passe Orion à table vide, réponse au GE rédigée** (`docs/plans/REPONSE-GE-2026-10-19.md`).
+Largeur effective du faisceau contraint, comptée jusqu'à la réalisation de la ligne retenue : médiane 4, 14 % des coups
+sous 4 (concentrés à la racine et dans les transferts courts) — l'écart de largeur n'explique qu'une petite part du biais
+d'enveloppe. Échelle ligne publiée (23 plans gratuits sur 30 contre 8 à l'enveloppe, écart médian 0,49 = biais du côté
+libre seul) avec sa limite : la ligne retenue est choisie à 4 contre une gloutonne à 1, l'échelle ligne favorise le plan
+autant que l'enveloppe le pénalise ; seule l'épreuve (1 contre 1) tranche. Division Carlsbad e4 depuis la bascule :
+continuer −0,03 (racine +0,68 : le prix est dans la poussée), adopter d5 +0,11 « c'est le plan ». **Correction de ce que
+j'écrivais à midi** : la table vide ne bouge pas les prix « de quelques centièmes », elle change la phrase de 17 plans sur
+35 et des prix de près de deux pions, à code identique (12/12 prouvé le matin) : le faisceau amplifie 10 cp en un changement
+de ligne. Reproductible n'est pas robuste ; marge au seuil proposée au GE pour après le lot. Rendu des largeurs corrigé sur
+`division` (8af9520 : branches gardées réalisées comprises, lecture jusqu'à la réalisation, zéros finals exclus), fusion
+après le lot 1 (le bras prix charge le module). Seconde passe fraîche à table vide lancée sur Orion (3 positions) pour la
+preuve « deux passes, zéro différence » dans le nouveau mode.
