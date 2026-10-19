@@ -160,8 +160,12 @@ async function partie(numero) {
   }
   async function coupLibre() { const cands = await noteur.noter(fen, P.candidats); if (!cands.length) return false; const j = jouer(fen, cands[0].uci); sans.push(j.m.san); fen = j.fen; ply++; return true; }
 
-  let fini = false;
+  // Répétition (GE, 19 oct.) : la position est reconstruite depuis la FEN à chaque coup, sans historique — la triple répétition
+  // se compte ici (position + trait + roques + en passant), comme chess.js le ferait avec l'historique.
+  let fini = false, repetition = false; const vus = new Map();
   while (ply < PLIES) {
+    const cle = fen.split(' ').slice(0, 4).join(' '); vus.set(cle, (vus.get(cle) ?? 0) + 1);
+    if (vus.get(cle) >= 3) { fini = true; repetition = true; break; }
     const c = new Chess(fen); if (c.isGameOver()) { fini = true; break; }
     const ok = c.turn() === side ? (BRAS === 'temoin' ? await coupLibre() : await coupDuCoach()) : await coupAdverse();
     if (!ok) { fini = true; break; }
@@ -170,7 +174,8 @@ async function partie(numero) {
   const c = new Chess(fen);
   let resultat;
   if (c.isCheckmate()) resultat = { type: 'mat', eval: c.turn() === side ? -1000 : 1000 };
-  else if (c.isDraw()) resultat = { type: c.isThreefoldRepetition() ? 'nulle (répétition)' : 'nulle', eval: 0 };
+  else if (repetition) resultat = { type: 'nulle (répétition)', eval: 0 };
+  else if (c.isDraw()) resultat = { type: 'nulle', eval: 0 };
   else { const [best] = await noteur.noter(fen, c.turn() === side ? P.candidats : 2); resultat = { type: ply >= PLIES ? `${PLIES}e demi-coup` : 'fin', eval: best ? borneCp(c.turn() === side ? best.cp : -best.cp) : 0 }; }
   // Le dernier segment se ferme à la fin ; si c'est à l'adversaire de jouer, sa meilleure réponse ferme le segment (hors partie).
   let fermeture = null;
@@ -206,7 +211,7 @@ function rendre(parties) {
   for (const p of parties) md.push(`| ${p.numero} | ${p.graine} | ${p.plies} | ${p.resultat.type} | ${fmt(p.resultat.eval)} | ${fmt(p.cout)} · ${fmt(p.coutEnveloppe)} | ${fmt(p.retards)} | ${p.coupsSousPlan}/${p.coupsCoach} | ${p.segments.map((s) => `${s.plan} · ${s.origine} · ${s.raison} · ${fmt(s.prix)} · ${fmt(s.prixEnveloppe)}${s.etiquette ? ` · ${s.etiquette}` : ''}`).join('<br>') || '—'} | ${p.secondes} |`);
   const distinctes = new Set(parties.map((p) => p.empreinte)).size;
   const segs = parties.flatMap((p) => p.segments), gratuits = segs.filter((s) => s.gratuit && s.prix != null), ecarts = segs.filter((s) => s.prix != null && s.prixEnveloppe != null).map((s) => s.prixEnveloppe - s.prix).sort((a, b) => a - b);
-  md.push('', `Parties distinctes : ${distinctes}/${parties.length} (N effectif). Tirages adverses : ${parties.reduce((a, p) => a + p.tirages.length, 0)}.`,
+  md.push('', `Parties distinctes : ${distinctes}/${parties.length} (N effectif). Tirages adverses : ${parties.reduce((a, p) => a + p.tirages.length, 0)}. Nulles par répétition : ${parties.filter((p) => p.resultat.type === 'nulle (répétition)').length} (comptées à part, § 3 ; un exécutant qui tricote à compteur plein est un signal de théorie).`,
     `Vérification M1 : ${gratuits.length} segment(s) gratuit(s) (le coach a joué le coup du moteur à chaque coup, sans tirage) — ${gratuits.filter((s) => s.prix !== 0).length} ne lisent pas 0${gratuits.filter((s) => s.prix !== 0).length ? ` (${gratuits.filter((s) => s.prix !== 0).map((s) => fmt(s.prix)).join(', ')})` : ''}. Biais d'enveloppe (enveloppe − ligne) : médiane ${fmt(ecarts[Math.floor(ecarts.length / 2)] ?? null)} sur ${ecarts.length} segment(s).`, '');
   for (const p of parties) {
     md.push(`## Partie ${p.numero}`, '', `Coups : ${p.sans.map((s, i) => (i % 2 === 0 ? `${Math.floor(i / 2) + 1}.` : '') + fr(s)).join(' ')}`, '', '| ply | coup | classe | retard | plan | structure | événements | candidats |', '|---|---|---|---|---|---|---|---|');
