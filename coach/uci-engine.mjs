@@ -34,7 +34,8 @@ export class UciEngine {
     /** Nom annoncé par le moteur (« Stockfish 19 »), connu après start(). */
     this.name = null;
     // COACH_DETERMINISTIC=1 (banc) : un seul fil, sinon Stockfish ne redonne pas deux fois la même recherche.
-    this.threads = opts.threads ?? (process.env.COACH_DETERMINISTIC === '1' ? 1 : 2);
+    this.deterministe = process.env.COACH_DETERMINISTIC === '1';
+    this.threads = opts.threads ?? (this.deterministe ? 1 : 2);
     this.hashMb = opts.hashMb ?? 128;
     /** @type {import('node:child_process').ChildProcess | null} */
     this.proc = null;
@@ -97,6 +98,10 @@ export class UciEngine {
         await this.#waitFor('isready', (l) => l === 'readyok');
         this.multipv = multipv;
       }
+      // Mode de mesure (COACH_DETERMINISTIC=1) : table de hachage vidée AVANT CHAQUE recherche, pour que la valeur d'une
+      // position ne dépende que d'elle et de la profondeur, pas de ce qui a été cherché avant (19 oct. : jusqu'à 12 cp et
+      // l'ordre des candidats changés par l'historique ; surcoût mesuré 3 %). Le coach en service garde la table.
+      if (this.deterministe) await this.#waitFor('ucinewgame\nisready', (l) => l === 'readyok');
 
       /** @type {Map<number, EngineLine>} */
       const lines = new Map();
