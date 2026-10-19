@@ -257,9 +257,15 @@ mesurée par la référence elle-même) :
 | tirage | ce qui bouge | code à écrire | coût estimé (Orion, six processus) |
 |---|---|---|---|
 | T1 | graines 11 à 20 : un autre tirage des réponses adverses ex æquo | aucun (`--numeros`) | une nuit |
-| T2 | profondeur 17, pour l'exécutant, l'adversaire et la mesure (ligne gloutonne et faisceau libre à la même profondeur que la ligne jouée) | aucun (`--depth`) | une nuit |
+| T2 | profondeur 17 pour le choix des coups de l'exécutant, pour l'adversaire et pour toute la mesure (gloutonne, faisceau libre, point calme et leur dernière chance) ; la dernière chance de l'exécutant reste à 14 dans les cinq passes comme dans la référence — politique gelée du pilote, pas une variable du lot | aucun (`--depth` pilote déjà tout, vérifié par le Dev chef) | une nuit |
 | T3 | profondeur 19, idem | aucun | une nuit et demie |
 | T4 | ordre des ex æquo **côté exécutant** : parmi les candidats admissibles à ≤ 25 cp du meilleur, le dernier au lieu du premier | une option dans `coach/coup-contraint.mjs`, sur `division`, relue par le Dev chef, fusionnée après la fin du lot 1 | une nuit |
+
+Cadrage, à lire tel quel : T2 et T3 perturbent **la ligne jouée et la profondeur de mesure ensemble** — à 17, l'exécutant et
+l'adversaire peuvent choisir d'autres coups, et le prix est mesuré à 17. Le couplage est voulu : le prix est une différence
+de deux évaluations (faisceau libre − ligne contrainte), lisible comme un coût seulement si les deux côtés sont le même
+instrument ; jouer à 17 et mesurer à 18 mêlerait au coût du plan un écart 18 − 17 qui ne s'annule pas, et un vrai déploiement
+à 17 aurait les deux. T2 n'isole donc pas la sensibilité à la seule profondeur de mesure, et ne le prétend pas.
 
 Ordre : T1, T2, T3 d'abord (aucun code), T4 en dernier. Entre la référence et les quatre tirages, **le code ne change pas**
 (la règle « service après abandon » du § 9 attend la fin du lot de perturbation, pas seulement la fin du lot 1), et rien ne
