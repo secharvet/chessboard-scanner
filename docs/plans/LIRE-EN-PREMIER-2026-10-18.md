@@ -44,9 +44,14 @@ matériel. Et on note le coup où le plan se réalise.
   robustesse du faisceau à une perturbation de dix centièmes de pion n'a pas encore été mesurée ; sur trente-cinq plans,
   dix-sept changent de phrase quand on change seulement l'état de la table du moteur, et le compte automatique passe de six
   à cinq positions sur dix. Le faisceau est reproductible (deux passes fraîches identiques au centième), il n'est pas
-  encore prouvé robuste. **Le taux de passage sera mesuré** : dix positions sous six tirages (profondeur 17, 18, 19, table
-  vidée ou gardée), une nuit sur Orion ; le verdict aura alors un intervalle. C'est ce chiffre-là que la lecture à froid
-  doit regarder, pas le neuf sur dix.
+  encore prouvé robuste. **Le taux de passage a été mesuré (19 octobre, 16 h)** : dix positions sous six tirages (profondeur
+  17, 18, 19, table vidée ou gardée), deux heures sur Orion. **Le critère passe dans deux tirages sur six** (6, 8, 5, 6, 7,
+  5 positions réussies sur dix). Ce n'est pas un verdict. Ce qui tient : trois positions réussissent dans les six tirages,
+  le plan le moins cher est le même dans au moins cinq tirages sur six pour sept positions sur dix, et la position qui
+  échoue six fois (l'Espagnole sans dames) échoue pour la raison que l'Expert avait donnée hier : le plan du livre y est
+  plus cher que l'autre, dans tous les tirages. Ce qui ne tient pas : la phrase d'un plan (« c'est le plan », « viable mais
+  ça coûte ») change dans un tiers des cas pour un pli de profondeur, dans la moitié pour l'état de la table. C'est ce
+  chiffre-là, deux sur six, que la lecture à froid doit regarder, pas le neuf sur dix.
 - La vraie leçon : **le livre parle du plan de la structure, le faisceau mesure le plan de la position**, et l'écart entre les
   deux, c'est le moment — « le plan de cette structure est b4-b5, le plan de ce coup est Ce5, et b4-b5 revient quinze
   demi-coups plus tard pour un demi-pion ». Aucun livre ne dit ça position par position.

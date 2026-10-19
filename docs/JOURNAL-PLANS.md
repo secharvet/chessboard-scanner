@@ -1721,3 +1721,11 @@ aucun plan à médiane < 4, cinq plans à minimum 1 (racine de l'avance françai
 Panov). Critère automatique : 6/10 à hash gardé (hier et aujourd'hui), 5/10 à table vide. Nuit de perturbations lancée
 à 13 h 57 sur Orion (prof. 17 et 19 × vide/gardé, six moteurs) ; taux de passage au matin. Réponse au GE § 1, § 4, § 5 et
 tableau mis à jour.
+**19 octobre, 16 h 30 (Paris) : taux de passage mesuré — 2 tirages sur 6, ce n'est pas un verdict.** Les quarante passes
+de la « nuit » (prof. 17 et 19 × table vidée / gardée) ont tenu en deux heures sur Orion ; avec les deux passes v5 à prof. 18,
+six tirages au même code, un fil. Critère automatique : 6, 8, 5, 6, 7, 5 positions réussies → **2/6 tirages à ≥ 7**
+(`docs/plans/TAUX-DE-PASSAGE-2026-10-19.md`). Trois positions réussissent 6/6 (Tarrasch ouvert, Panov, KID), l'Espagnole
+d'échange 0/6 — de façon stable, e5 du livre coûte de +0,87 à +4,66 dans les six tirages, l'arbitrage prof. 30 de l'Expert
+tient. Phrases stables sur les six tirages : 8 plans sur 35. Le plan le moins cher est le même dans ≥ 5 tirages sur 6 pour
+7 positions sur 10 : le classement est plus solide que la phrase. Un pli de profondeur change 11 à 16 phrases (écart de
+prix médian 0,14–0,19) ; la table 16 à 19 (0,19–0,33). Page « à lire en premier » et réponse au GE § 6 mises à jour.
