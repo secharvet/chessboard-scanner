@@ -118,7 +118,9 @@ Ce que j'en tire, à contester :
 
 - Triple répétition : corrigée avant le lot 1 (compteur de positions, « nulle (répétition) » comptée à part), vérifiée sur la
   partie fraîche (coupée au 71e demi-coup) et sur deux parties fraîches Orion identiques hors secondes.
-- Deux passes fraîches à table vide sur Orion (Carlsbad, avance française blancs, Panov) : *en cours, résultat ajouté ici*.
+- **Deux passes fraîches à table vide sur Orion (Carlsbad, avance française blancs, Panov) : identiques au centième, 10 plans
+  sur 10** (phrase, prix, prix brut, tempo, ligne retenue, bascule, division ; sorties JSON identiques hors durées). La
+  nouvelle méthode est reproductible ; la passe sur les dix positions au code corrigé (§ 1 et § 4) complètera la preuve.
 - Lot 1 (SF 19, trois processus) : relancé à 11 h Paris avec la table vide ; fin estimée demain midi. Dépouillement selon
   § 9 de la note de relecture : écart agrégé coach-prix − coach-livre, N effectif par départ, M1 à 0, nulles par répétition,
   demi-coups « sans plan, table épuisée », Σ retards contre prix ligne, part des coups sous plan.
