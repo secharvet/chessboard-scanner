@@ -125,6 +125,33 @@ Ce que j'en tire, à contester :
   § 9 de la note de relecture : écart agrégé coach-prix − coach-livre, N effectif par départ, M1 à 0, nulles par répétition,
   demi-coups « sans plan, table épuisée », Σ retards contre prix ligne, part des coups sous plan.
 
+## 6. Réponse du GE (15 h) et ce qui est engagé
+
+Le GE a raison, et je l'écris sans l'adoucir : **le verdict d'hier est un tirage.** Le plancher de 25 mesuré avant-hier
+portait sur les évaluations ; le faisceau est un processus de sélection discret (quatre branches, seuil d'ex æquo, seuil
+de concession) et le plancher de *ses* sorties n'a jamais été mesuré — la marche sautée, la même erreur que les fils. Le
+compte automatique du critère passe d'ailleurs de 6 positions sur 10 (passe d'hier) à 5 sur 10 (passe d'aujourd'hui). On
+ne sait pas si le critère a passé.
+
+Engagé :
+
+1. **Aujourd'hui** : la page « à lire en premier » dit désormais « neuf sur dix sur un tirage de l'instrument ; robustesse
+   non mesurée ; dix-sept phrases sur trente-cinq sensibles ; le taux de passage sera mesuré ». La lecture à froid portera
+   sur ce chiffre-là.
+2. **Cette nuit, sur Orion** : le critère sous six tirages — profondeur 17, 18, 19 × table vidée / gardée — sur les dix
+   positions, même code, un fil (les deux tirages à profondeur 18 sont les passes v5 qui ferment la réserve du Dev chef ;
+   les quatre autres suivent automatiquement). Publié : la matrice positions × tirages, les positions réussies par
+   tirage, le **taux de passage** (tirages à ≥ 7 positions réussies sur 10), et par plan le nombre de phrases distinctes
+   et l'étendue des prix (`scripts/plans/taux-de-passage.mjs`). L'ordre des ex æquo comme septième perturbation demande
+   une option dans le code : après le lot. La clause « prof. 30 » ne se rejoue pas par tirage ; le taux publié est celui
+   du compte automatique, la clause sera appliquée à part sur les positions qui restent contestées dans tous les tirages.
+3. **Après le lot 1, sur l'instrument** : prix d'un plan = médiane des branches réalisées (plus le maximum) ; phrase avec sa
+   marge, « c'est le plan » à plus de 0,25 du seuil ; coupes à marge (garder les branches à moins d'une marge de la
+   quatrième, pas exactement quatre) ; coup refusé imprimé à côté de la concession.
+4. **Après le lot 1, sur l'épreuve** : le lot 1 est la référence déterministe, il ne conclut rien seul ; il lui faut son
+   lot de perturbation (profondeur 17 à 19, ordre des ex æquo côté exécutant), pour que l'agrégat échantillonne vraiment la
+   variabilité. À spécifier avec le GE avant de lancer.
+
 ## Tableau — les 35 plans, hier (hash gardé) et aujourd'hui (table vide)
 
 Phrase en gras = changée. Largeur eff. = médiane · minimum jusqu'à la réalisation. « avec coupe » = idem sauf mention ; le
