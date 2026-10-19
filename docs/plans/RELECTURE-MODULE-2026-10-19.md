@@ -208,3 +208,23 @@ Tout à un fil (`COACH_DETERMINISTIC=1`), SF 19, profondeur 18, sur le VPS, troi
    le coach-livre.
 
 Prochaine étape : lot 1, SF 19, trois processus (`scripts/plans/epreuve.sh /usr/local/bin/stockfish 3 1`), puis SF 17.1.
+
+## 9. Règles différées (à appliquer entre les lots, pas pendant) et chiffres à publier au dépouillement
+
+1. **Plan de service après « hors de prix »** (Expert, 19 octobre, 11 h 30). Aujourd'hui le plan de service n'est offert qu'après
+   une réalisation ; après un abandon « hors de prix », le coach passe à l'instance suivante et, la table épuisée, se tait.
+   L'Expert ne voit pas de justification échiquéenne à cette asymétrie : un joueur de club qui renonce à un plan trop cher
+   améliore sa position (tour sur colonne ouverte, ce que le plan de service encode) ; après un abandon on a plus besoin
+   d'un plan, pas moins. Règle retenue : oui, offrir le plan de service après « hors de prix » quand la table est épuisée,
+   **(1) pas pendant le lot qui tourne** (les six cents parties doivent rester comparables), **(2) étiqueté « service après
+   abandon »** à part dans le journal et les prix (adopté dans une position probablement moins bonne : ne pas le fondre avec
+   le service après réalisation), **(3) même crible d'admissibilité** (sans objet / bloqué) — dans une position morte le
+   coach doit pouvoir se taire.
+2. **Chiffre gratuit, dès ce lot, sans toucher au pilote** : le nombre de demi-coups « sans plan, table épuisée » par partie
+   (coups « libre » sans plan alors qu'une structure est reconnue) — la mesure directe de la profondeur de couverture de la
+   table, lue dans le journal au dépouillement ; dira ce que la règle 1 rapporterait avant de la coder.
+3. **Nulles par répétition** côté contraint, par départ (constat 6 du protocole : un plan qui tourne en rond est un signal).
+4. **Σ retards contre prix ligne** (GE) : si la coïncidence de la partie fraîche (+1,10 / +1,22) tient sur deux cents parties,
+   la mesure rejetée devient un contrôle gratuit de la mesure retenue.
+5. **Part des coups sous plan** : la colonne la plus importante du rapport, souvent sous la moitié (la table n'a rien à dire
+   en finale).
