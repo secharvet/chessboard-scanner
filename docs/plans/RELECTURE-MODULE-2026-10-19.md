@@ -163,3 +163,48 @@ que le GE confirme.
    exécution (pare d'abord) : réel, acceptable pour une première passe, **à écrire dans le rapport** ; si le coach-prix bat le
    coach-livre, vérifier que ce n'est pas cet optimisme qui le fait choisir. Drapeau 4,73 : élucidation du bon genre.
 4. Ordre : identité au centième dix sur dix, deux parties fraîches identiques, puis les parties.
+
+## 8. Les preuves (19 octobre, matin) — le pilote peut jouer
+
+Tout à un fil (`COACH_DETERMINISTIC=1`), SF 19, profondeur 18, sur le VPS, trois processus en parallèle au plus.
+
+1. **Identité du faisceau refondu** (`scripts/plans/comparer-passes.mjs`, au centième : phrase, prix, prix brut, tempo,
+   limite, merci, ligne, bascule, longueur de division, ligne libre). Référence : Orion, ancien code (`bc733d1`), dix positions
+   (`orion-sf19-p18-v3`, iqp-panov recalculé seul cette nuit). Contrôle 1 (hérisson, Carlsbad, fr-echange, code refondu) :
+   **9/9 plans identiques**. Contrôle 2 (mêmes positions, après le compteur unique, l'ordre forcé → progressant et
+   `nMoi`/`nAdv`) : **9/9 identiques**. iqp-panov au code refondu : délai Stockfish dépassé dans la file de nuit, puis
+   seul — un seul appel (tous les coups légaux notés à profondeur 18, pour la dernière chance) dépasse 10 minutes à un fil sur le
+   cœur Haswell du VPS, là où Orion passait ; délai du `Noteur` porté à 30 minutes (sans effet sur les valeurs), recalculé :
+   **identique, 12/12 plans sur les quatre positions** (hérisson, Carlsbad, fr-echange, iqp-panov ; iqp-panov : Dd3 0,26 t2,
+   Ce5 0,35 t4, d5 0,94 t5, au centième). Le faisceau n'a donc pas bougé d'un centième à travers l'extraction du
+   module, du cœur `faisceau-plan.mjs`, et des retouches demandées par les trois relecteurs.
+2. **Deux parties fraîches identiques** (Carlsbad, Blancs, bras livre, graine n° 1, 80 demi-coups, lancées en même temps dans
+   deux dossiers) : les deux `parties.json` sont **égaux hors `secondes`**. Le pilote est déterministe à un fil.
+3. **Vérification M1 du GE** sur cette partie : 1 segment gratuit (colonne c, service, bascule : le coach a joué le coup du moteur
+   à chaque coup, aucun tirage adverse) — **il lit 0** sur la gloutonne (et +0,22 sur l'enveloppe). Coût de la partie :
+   +1,22 (gloutonne) contre +3,27 (enveloppe) ; biais d'enveloppe médian +0,41 sur cinq segments.
+4. **Le biais d'enveloppe mesuré sans jouer** (`scripts/plans/biais-enveloppe.mjs`, lot 1, horizon 12 coups, largeurs 1/2/4,
+   `reports/plans/epreuve/biais-enveloppe.md`) : g[ply] = enveloppe − gloutonne, aux demi-coups à mon trait :
+
+   | largeur | médiane | 90e centile | g médian au 12e coup (ply 24) |
+   |---|---|---|---|
+   | 1 | 0,41 | 0,86 | 0,98 |
+   | 2 | 0,45 | 1,07 | 1,20 |
+   | 4 | 0,69 | 1,53 | 1,82 |
+
+   Deux lectures. **Le biais croît avec la profondeur du segment** (≈ 0,04 pion par demi-coup, à largeur 4 : 0,20 au 2e coup,
+   0,71 au 6e, 1,82 au 12e) — il n'est pas une constante qu'on retrancherait. **Il n'est pas nul à largeur 1** : même à un
+   état, le faisceau libre retient la meilleure *position après la réponse* parmi (quatre coups × réponses ouvertes), donc
+   il s'accorde la seconde réponse adverse quand elle est dans les 25 cp, et choisit sur une évaluation prise deux demi-coups
+   plus loin ; à chaque coup il « gagne » un peu, et ces petits gains s'accumulent. La gloutonne joue le coup du moteur des
+   deux côtés : c'est bien la seule référence à égalité de pression de sélection avec une ligne jouée (le GE, l'Expert et le
+   Dev chef avaient raison, et de loin : comparer à l'enveloppe aurait chargé un segment de douze coups d'un pion et demi).
+   Pour le faisceau lui-même rien ne change : ses deux côtés sont des enveloppes de même largeur, le biais s'y annule (F1).
+   **En toutes lettres (Expert)** : les prix du faisceau (enveloppe contre enveloppe) et les prix des parties (ligne contre
+   ligne) sont deux échelles distinctes, **non comparables terme à terme** ; quand les deux seront publiés côte à côte, le
+   rapport le dira.
+5. Le désaccord choix/exécution du coach-prix (il choisit son instance avec le faisceau, qui explore sans parer d'abord, et
+   l'exécute avec `choisirCoup`, qui pare d'abord) est écrit dans ce rapport, comme demandé ; à surveiller si le coach-prix bat
+   le coach-livre.
+
+Prochaine étape : lot 1, SF 19, trois processus (`scripts/plans/epreuve.sh /usr/local/bin/stockfish 3 1`), puis SF 17.1.

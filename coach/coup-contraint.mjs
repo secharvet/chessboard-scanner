@@ -35,7 +35,8 @@ export class Noteur {
     const k = `${fen}|${n}|${depth}`; if (this.cache.has(k)) return this.cache.get(k);
     const c = new Chess(fen); if (c.isGameOver()) { this.cache.set(k, []); return []; }
     this.appels++;
-    const lignes = await this.engine.analyze(fen, { depth, multipv: n, timeoutMs: 10 * 60_000 });
+    // 30 min : une MultiPV « tous les coups légaux » (dernière chance, ~40 lignes) à profondeur 18 dépasse 10 min à un fil sur le VPS (iqp-panov, 19 oct.).
+    const lignes = await this.engine.analyze(fen, { depth, multipv: n, timeoutMs: 30 * 60_000 });
     const out = lignes.filter((l) => l.pv?.[0]).map((l) => ({ uci: l.pv[0], m: new Chess(fen).move({ from: l.pv[0].slice(0, 2), to: l.pv[0].slice(2, 4), promotion: l.pv[0][4] }), cp: cpDe(l.score) })).sort((a, b) => b.cp - a.cp);
     this.cache.set(k, out); return out;
   }

@@ -1656,3 +1656,12 @@ publiée à côté, segments « gratuits » vérifiés à 0 ; séquence forcée 
 « payé en tactique » ; coach-prix : optimisme du choix à écrire dans le rapport. Tout est codé dans `partie.mjs`
 (`prix`/`prixEnveloppe`, `gratuit`, `etiquette`), `pointCalme` prend un budget. Reste : identité 10/10, deux parties fraîches,
 puis les parties (file de nuit en cours sur le VPS).
+**19 octobre, 8 h (Paris) : les preuves sont rendues** — identité du faisceau refondu contre Orion (ancien code, 10 positions) :
+contrôle 1 **9/9**, contrôle 2 **9/9** (iqp-panov au nouveau code : délai dépassé à trois processus, recalculé seul) ; deux
+parties fraîches **identiques hors secondes** ; la vérification M1 passe (le segment gratuit lit 0). Le biais d'enveloppe mesuré
+sans jouer (`biais-enveloppe.mjs`, lot 1, horizon 12) : il **croît avec la longueur du segment** (≈ 0,04 pion par demi-coup,
+1,82 médian au 12e coup à largeur 4) et **n'est pas nul à largeur 1** (seconde réponse adverse admise, choix sur l'évaluation à
+deux demi-coups) — la gloutonne est bien la seule référence juste d'une ligne jouée. Note § 8. Orion éteint (dépôt GE différé).
+**19 octobre, 9 h (Paris) : identité 12/12** — iqp-panov au code refondu identique à Orion au centième (délai du `Noteur` porté à
+30 min : la MultiPV « tous les coups légaux » à profondeur 18 dépasse 10 min sur le VPS). Les quatre positions de contrôle
+(hérisson, Carlsbad, fr-echange, iqp-panov) sont identiques ancien code / nouveau code. Lancement des premières parties.
