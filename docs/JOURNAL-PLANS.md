@@ -1727,5 +1727,5 @@ six tirages au même code, un fil. Critère automatique : 6, 8, 5, 6, 7, 5 posit
 (`docs/plans/TAUX-DE-PASSAGE-2026-10-19.md`). Trois positions réussissent 6/6 (Tarrasch ouvert, Panov, KID), l'Espagnole
 d'échange 0/6 — de façon stable, e5 du livre coûte de +0,87 à +4,66 dans les six tirages, l'arbitrage prof. 30 de l'Expert
 tient. Phrases stables sur les six tirages : 8 plans sur 35. Le plan le moins cher est le même dans ≥ 5 tirages sur 6 pour
-7 positions sur 10 : le classement est plus solide que la phrase. Un pli de profondeur change 11 à 16 phrases (écart de
+6 positions sur 10 (recompté par le Dev chef, « 7 » était un miscompte) : le classement est plus solide que la phrase. Un pli de profondeur change 11 à 16 phrases (écart de
 prix médian 0,14–0,19) ; la table 16 à 19 (0,19–0,33). Page « à lire en premier » et réponse au GE § 6 mises à jour.
