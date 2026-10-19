@@ -14,19 +14,20 @@ nombre ne dit rien de l'étroitesse ; un 0 final est l'extinction, pas une large
 | | |
 |---|---|
 | plans mesurés | 35 (dix positions) |
-| coups mesurés avant réalisation | 187 |
+| coups mesurés jusqu'à la réalisation (comprise) | 215 |
 | largeur médiane | 4 |
-| coups à largeur < 4 | 27 (14 %) — 1 : 8 coups, 2 : 10, 3 : 9 |
-| plans à largeur médiane < 4 | 4 (transferts réalisés en 2 à 6 demi-coups : deux candidats admis dès la racine) |
-| plans à minimum 1 | 5 (un seul coup admissible à la racine : les trois plans noirs de l'avance française, Fc1×Ce7, d5 de la Panov) |
+| coups à largeur < 4 | 17 (8 %) — 1 : 8 coups, 2 : 6, 3 : 3 |
+| plans à largeur médiane < 4 | 0 |
+| plans à minimum < 4 | 10 sur 35 ; à minimum 1 : 5 (un seul coup admissible à la racine : les trois plans noirs de l'avance française ; un coup étroit en cours de ligne : Fc1×Ce7 du Tarrasch ouvert, d5 de la Panov) |
 
-*Relecture du Dev chef (15 h) : ces chiffres sont lus dans les sorties v4, qui comptent les branches **non réalisées** à
-chaque coup (le coup de réalisation est exclu du décompte) ; le rendu corrigé comptera les branches gardées, réalisées
-comprises. Les deux colonnes seront recalculées d'une seule source après la re-passe au code corrigé, en cours sur Orion ;
-l'ordre de grandeur ne bougera pas, les « — » et quelques minimums si.*
+*Chiffres recalculés à 16 h d'une seule source, les JSON de la passe v5 à table vide au code corrigé (branches gardées,
+réalisée comprise, lues jusqu'au coup de réalisation) : la réserve du Dev chef de 15 h est fermée. Les chiffres provisoires
+(27 coups étroits, 14 %, quatre plans à médiane < 4) venaient du décompte sans la branche réalisée et surestimaient
+l'étroitesse ; la colonne du tableau en bas vient de la même source.*
 
-Verdict sur ta hypothèse : **le faisceau contraint a la largeur du libre dans 86 % des coups.** L'étroitesse est concentrée à la
-racine (un seul coup admissible) et dans les transferts courts. L'écart de largeur n'explique donc qu'une petite part du
+Verdict sur ta hypothèse : **le faisceau contraint a la largeur du libre dans 92 % des coups.** L'étroitesse est concentrée à la
+racine (un seul coup admissible, les trois plans noirs de l'avance française) et sur quelques coups isolés en cours de
+ligne. L'écart de largeur n'explique donc qu'une petite part du
 biais d'enveloppe ; la part principale est celle mesurée hier à largeur égale (le libre prend le meilleur après réponse
 parmi 4 × réponses ouvertes, la gloutonne ne choisit pas).
 
@@ -93,14 +94,17 @@ candidat du 2e au 4e rang, le faisceau garde d'autres branches, ouvre d'autres r
 ligne retenue n'est plus la même. Quatre bascules sont des franchissements de seuil à moins de 0,40 (b4, Dd1→d3, Fc1×Ff8,
 la colonne c du KID) ; les treize autres sont des lignes différentes.
 
-*Réserve du Dev chef (15 h), à fermer avant de conclure* : la passe d'hier vient de l'ancien code, celle d'aujourd'hui du
-module refondu ; le contrôle 12/12 du matin ne prouve l'identité des deux codes que sur quatre positions sur dix (hérisson,
-Carlsbad, fr-echange, Panov), et c'est sur les six autres que tombent treize des dix-sept bascules ; hérisson et fr-echange,
-sous contrôle, n'en ont aucune. Les changements du refactor sont des non-opérations pour le faisceau par lecture du code,
-mais c'est un argument, pas une mesure. **Mesure en cours sur Orion** : les dix positions au code d'aujourd'hui avec le hash
-gardé (une seule variable bascule : la table), comparées au centième à la passe à table vide. Le compte des bascules
-« dues au hash seul » sera celui-là ; les chiffres ci-dessus en sont la borne haute. La Panov est à lire à part : son
-chiffre d'hier vient d'un recalcul séparé.
+*Réserve du Dev chef (15 h), fermée à 16 h par la mesure.* La passe d'hier venait de l'ancien code, celle d'aujourd'hui du
+module refondu ; le refactor était une non-opération par lecture du code, pas par mesure. Mesure faite sur Orion : les dix
+positions au code d'aujourd'hui, hash gardé contre table vide — une seule variable bascule.
+
+| | phrases changées | lignes retenues changées | écart de prix médian (max), plans tarifés des deux côtés |
+|---|---|---|---|
+| **table seule** (code d'aujourd'hui, hash gardé → table vide) | **16 / 35**, sur huit positions | 30 / 35 | 0,33 (5,61), n = 29 |
+| **code seul** (hier v3 → aujourd'hui hash gardé) | **1 / 35** (Panov Dd1→d3, +0,26 → +0,12 : la correction du point calme, connue) | 2 / 35 | 0,00 (0,14), n = 31 |
+
+Les dix-sept bascules d'hier se décomposent donc en **seize dues à la table et une due au code** ; la borne haute était la
+valeur. Critère automatique : 6/10 à hash gardé, hier comme aujourd'hui au code corrigé, 5/10 à table vide.
 
 Ce que j'en tire, à contester :
 
@@ -120,7 +124,10 @@ Ce que j'en tire, à contester :
   partie fraîche (coupée au 71e demi-coup) et sur deux parties fraîches Orion identiques hors secondes.
 - **Deux passes fraîches à table vide sur Orion (Carlsbad, avance française blancs, Panov) : identiques au centième, 10 plans
   sur 10** (phrase, prix, prix brut, tempo, ligne retenue, bascule, division ; sorties JSON identiques hors durées). La
-  nouvelle méthode est reproductible ; la passe sur les dix positions au code corrigé (§ 1 et § 4) complètera la preuve.
+  nouvelle méthode est reproductible.
+- **Passe v5 à table vide sur les dix positions, code corrigé (largeurs 8af9520, option hash gardé f8a3e1c) : identique au
+  centième à la passe v4 sur 35 plans sur 35** (phrase, prix, prix brut, tempo, ligne, bascule, division). Les deux
+  correctifs sont des non-opérations sur les prix, et la reproductibilité à table vide est établie sur les dix positions.
 - Lot 1 (SF 19, trois processus) : relancé à 11 h Paris avec la table vide ; fin estimée demain midi. Dépouillement selon
   § 9 de la note de relecture : écart agrégé coach-prix − coach-livre, N effectif par départ, M1 à 0, nulles par répétition,
   demi-coups « sans plan, table épuisée », Σ retards contre prix ligne, part des coups sous plan.
@@ -154,8 +161,11 @@ Engagé :
 
 ## Tableau — les 35 plans, hier (hash gardé) et aujourd'hui (table vide)
 
-Phrase en gras = changée. Largeur eff. = médiane · minimum jusqu'à la réalisation. « avec coupe » = idem sauf mention ; le
-nombre entre parenthèses est le nombre de branches coupées pour concession cumulée > 1,0.
+Phrase en gras = changée. Largeur eff. = médiane · minimum jusqu'à la réalisation comprise, recalculée à 16 h depuis les JSON
+v5 table vide (une seule source, § 1). « avec coupe » = idem sauf mention ; le nombre entre parenthèses est le nombre de
+branches coupées pour concession cumulée > 1,0. La colonne « aujourd'hui » (v4) est identique au centième à la passe v5
+table vide ; la colonne « hier » (v3) coïncide avec la passe v5 à hash gardé sur 34 phrases sur 35 (Panov Dd1→d3 y devient
+« c'est le plan +0,12 »).
 
 | position | plan | hier (v3, hash gardé) | aujourd'hui (v4, table vide) | prix ligne | largeur eff. | tempo | avec coupe 1,0 |
 |---|---|---|---|---|---|---|---|
@@ -164,10 +174,10 @@ nombre entre parenthèses est le nombre de branches coupées pour concession cum
 | carlsbad | transfert Cf3→e5 | c'est le plan +0,19 | c'est le plan +0,11 | +0,05 | 4 · 4 | 4 | idem (0) |
 | espagnole-echange | poussée f→f4 ET rupture e→e5 | jamais urgent ici — | **pas réalisable sans concession —** | — | 4 · 2 | ∞ | idem (0) |
 | espagnole-echange | rupture e→e5 | pas réalisable sans concession — | **viable mais ça coûte +0,87** | +0,24 | 4 · 4 | 19 | idem (0) |
-| espagnole-echange | transfert Cb1→d5 | c'est le plan −0,12 | c'est le plan −0,07 | −0,70 | 4 · 3 | 20 | idem (0) |
-| espagnole-echange | échange Fc1×Ff8 | viable mais ça coûte +0,28 | **c'est le plan −0,10** | −0,69 | 4 · 3 | 14 | idem (0) |
+| espagnole-echange | transfert Cb1→d5 | c'est le plan −0,12 | c'est le plan −0,07 | −0,70 | 4 · 4 | 20 | idem (0) |
+| espagnole-echange | échange Fc1×Ff8 | viable mais ça coûte +0,28 | **c'est le plan −0,10** | −0,69 | 4 · 4 | 14 | idem (0) |
 | fr-avance-blancs | rupture b→b4 | viable mais ça coûte +0,30 | **c'est le plan +0,23** | −0,10 | 4 · 4 | 3 | idem (4) |
-| fr-avance-blancs | transfert Ff1→e2 | c'est le plan +0,23 | c'est le plan −0,12 | −0,45 | 2 · 2 | 6 | idem (0) |
+| fr-avance-blancs | transfert Ff1→e2 | c'est le plan +0,23 | c'est le plan −0,12 | −0,45 | 4 · 4 | 6 | idem (0) |
 | fr-avance-blancs | transfert Fc1→e3 | viable mais ça coûte +0,62 | **en cours à l'horizon +4,34** | — | 4 · 2 | ∞ | pas réalisable sans concession — (8) |
 | fr-avance-blancs | transfert Cb1→b3 | pas réalisable sans concession — | **c'est le plan +0,07** | −0,70 | 4 · 4 | 10 | idem (35) |
 | fr-avance-noirs | transfert Cg8→f5 | viable mais ça coûte +0,52 | **c'est le plan −0,06** | −0,53 | 4 · 4 | 6 | idem (0) |
@@ -176,23 +186,23 @@ nombre entre parenthèses est le nombre de branches coupées pour concession cum
 | fr-avance-noirs | colonne c | viable mais ça coûte +0,44 | viable mais ça coûte +0,39 | −0,18 | 4 · 1 | 8 | idem (0) |
 | fr-echange | rupture c→c4 | viable mais ça coûte +0,36 | viable mais ça coûte +0,89 | −0,06 | 4 · 4 | 9 | idem (0) |
 | fr-echange | colonne e | c'est le plan +0,14 | c'est le plan +0,01 | −0,22 | 4 · 4 | 6 | idem (0) |
-| fr-echange | transfert Fc1→g5 | c'est le plan +0,08 | c'est le plan +0,06 | +0,01 | — | 2 | idem (0) |
+| fr-echange | transfert Fc1→g5 | c'est le plan +0,08 | c'est le plan +0,06 | +0,01 | 4 · 4 | 2 | idem (0) |
 | fr-tarrasch-ferme | colonne c | c'est le plan −0,04 | c'est le plan +0,08 | −0,58 | 4 · 4 | 14 | idem (0) |
 | fr-tarrasch-ferme | transfert Cf6→e4 | viable mais ça coûte +0,53 | **c'est le plan −0,03** | −0,19 | 4 · 4 | 6 | idem (0) |
-| fr-tarrasch-ferme | rupture e→e5 | viable mais ça coûte +0,37 | **c'est le plan −0,55** | −1,34 | 4 · 3 | 23 | idem (5) |
+| fr-tarrasch-ferme | rupture e→e5 | viable mais ça coûte +0,37 | **c'est le plan −0,55** | −1,34 | 4 · 4 | 23 | idem (5) |
 | fr-tarrasch-ouvert | transfert Cb3→d4 | c'est le plan +0,12 | c'est le plan −0,03 | −0,12 | 4 · 4 | 6 | idem (0) |
 | fr-tarrasch-ouvert | échange Fc1×Ce7 | en cours à l'horizon +2,20 | **pas réalisable sans concession —** | — | 4 · 1 | ∞ | idem (6) |
 | fr-tarrasch-ouvert | échange Fb5×Cc6 | jamais urgent ici — | **c'est le plan +0,04** | −0,05 | 4 · 4 | 6 | idem (0) |
-| fr-tarrasch-ouvert | transfert Fb5→d3 | c'est le plan +0,05 | c'est le plan +0,06 | −0,03 | 3,5 · 3 | 6 | idem (0) |
+| fr-tarrasch-ouvert | transfert Fb5→d3 | c'est le plan +0,05 | c'est le plan +0,06 | −0,03 | 4 · 4 | 6 | idem (0) |
 | herisson | rupture b→b5 | viable mais ça coûte +0,30 | viable mais ça coûte +1,23 | −0,32 | 4 · 3 | 19 | idem (16) |
-| herisson | rupture d→d5 | viable mais ça coûte +0,73 | viable mais ça coûte +0,53 | +0,12 | 4 · 4 | 5 | idem (0) |
+| herisson | rupture d→d5 | viable mais ça coûte +0,73 | viable mais ça coûte +0,53 | +0,12 | 4 · 3 | 5 | idem (0) |
 | herisson | colonne c | c'est le plan +0,02 | c'est le plan +0,03 | −0,17 | 4 · 4 | 6 | idem (0) |
 | iqp-panov | rupture d→d5 | viable mais ça coûte +0,94 | **en cours à l'horizon +6,55** | — | 4 · 1 | ∞ | pas réalisable sans concession — (13) |
 | iqp-panov | transfert Cf3→e5 | viable mais ça coûte +0,35 | viable mais ça coûte +1,09 | +1,09 | 4 · 4 | 12 | idem (18) |
-| iqp-panov | transfert Dd1→d3 | viable mais ça coûte +0,26 | **c'est le plan −0,06** | −0,15 | — | 2 | idem (0) |
+| iqp-panov | transfert Dd1→d3 | viable mais ça coûte +0,26 | **c'est le plan −0,06** | −0,15 | 4 · 4 | 2 | idem (0) |
 | kid-mar-del-plata | rupture c→c5 | c'est le plan −0,29 | c'est le plan +0,06 | −0,33 | 4 · 4 | 3 | idem (3) |
 | kid-mar-del-plata | transfert Ce1→d3 | viable mais ça coûte +0,62 | viable mais ça coûte +0,33 | −0,31 | 4 · 4 | 6 | idem (0) |
 | kid-mar-del-plata | colonne c | c'est le plan −0,07 | **viable mais ça coûte +0,32** | −0,42 | 4 · 4 | 12 | idem (0) |
 | kid-mar-del-plata | transfert Cc3→b5 | c'est le plan −0,04 | **viable mais ça coûte +0,75** | −0,04 | 4 · 4 | 6 | idem (0) |
 
-« — » en largeur : plan réalisé au premier coup (un seul coup mesuré, celui de la réalisation).
+Un plan réalisé au premier coup a une largeur sur un seul coup, celui de la réalisation (Fc1→g5 de l'échange, Dd1→d3 de la Panov).
