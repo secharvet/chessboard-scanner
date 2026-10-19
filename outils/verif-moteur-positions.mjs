@@ -47,6 +47,13 @@ class Engine {
     });
   }
   async analyse(fen, multipv = 4) {
+    // Table de hachage vidée avant chaque recherche : conservée, elle fait bouger une évaluation
+    // de 2 à 12 cp selon l'historique des recherches et peut réordonner les candidats (constat du
+    // 19 octobre 2026) — une mesure ne doit dépendre que de la position et de la profondeur.
+    this.buf = '';
+    this.send('ucinewgame');
+    this.send('isready');
+    await this.wait(/readyok/);
     this.buf = '';
     this.send(`setoption name MultiPV value ${multipv}`);
     this.send(`position fen ${fen}`);
