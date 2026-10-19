@@ -51,7 +51,7 @@ const P = { ...DEFAUTS, depth: DEPTH, depthDerniereChance: Math.min(14, DEPTH) }
 /** L'adversaire : réponses ex æquo ≤ 25 cp (40 si élargi). */
 const PA = { ...DEFAUTS, plancher: ELARGI ? 40 : DEFAUTS.plancher };
 /** La mesure : le faisceau libre du 18 octobre (largeur 4, quatre candidats), dernière chance à la profondeur de jeu comme dans le faisceau. */
-const PR = { ...REGLAGES_FAISCEAU, depth: DEPTH, depthDerniereChance: DEPTH };
+const PR = { ...REGLAGES_FAISCEAU, depth: DEPTH, depthDerniereChance: DEPTH, nMoi: DEFAUTS.candidats, nAdv: 2 }; // la gloutonne et le point calme jouent la politique de la partie (Dev chef) : « gratuit » ⇒ identique
 /** Le choix du coach-prix : un faisceau court (horizon 10, largeur 2) — un choix, pas une mesure. */
 const PC = { ...REGLAGES_FAISCEAU, depth: DEPTH, depthDerniereChance: DEPTH, horizon: 10, horizonStructure: 10, largeur: 2 };
 

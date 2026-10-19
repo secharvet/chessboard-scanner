@@ -31,7 +31,7 @@ for (const d of DEPARTS.filter((x) => x.lot === LOT)) {
   const fen = fenDepart(d), side = new Chess(fen).turn();
   for (const L of LARGEURS) {
     const t0 = Date.now();
-    const libre = await faisceauLibre(noteur, fen, side, HORIZON, { ...REGLAGES_FAISCEAU, depth: DEPTH, largeur: L });
+    const libre = await faisceauLibre(noteur, fen, side, HORIZON, { ...REGLAGES_FAISCEAU, depth: DEPTH, largeur: L, nMoi: REGLAGES_FAISCEAU.candidats, nAdv: 2 }); // gloutonne à la politique de la partie
     const g = libre.evals.map((e, ply) => (ply < libre.glouton.length ? e - libre.glouton[ply] : null)).filter((x) => x != null);
     lignes.push({ depart: d.id, camp: side, largeur: L, g, secondes: Math.round((Date.now() - t0) / 1000) });
     console.error(`${d.id} L${L} : médiane ${fmt(quantile(g, 0.5))} p90 ${fmt(quantile(g, 0.9))} max ${fmt(Math.max(...g))} (${Math.round((Date.now() - t0) / 1000)} s)`);

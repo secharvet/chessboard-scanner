@@ -143,15 +143,15 @@ export const horsDePrix = (etat, p = DEFAUTS) => (etat.compteur ?? 0) >= p.k + 1
 export async function pointCalme(noteur, fen, ply, side, p = DEFAUTS) {
   const joues = []; let budget = p.budgetCalme ?? 2; // prolongations hors échec ; élargi pour un segment « payé en tactique »
   for (let i = 0; i < 2 * budget + 2; i++) {
-    const cands = await noteur.noter(fen, 2);
+    const cands = await noteur.noter(fen, Math.max(2, p.nMoi ?? 2));
     if (!cands.length) return { fen, ply, cp: null, joues, calme: false };
     if (calme(fen, cands, side, p)) return { fen, ply, cp: cands[0].cp, joues, calme: true };
     if (!new Chess(fen).inCheck()) { if (!budget) return { fen, ply, cp: cands[0].cp, joues, calme: false }; budget--; }
     const a = jouer(fen, cands[0].uci); joues.push(a.m);
-    const [rep] = await noteur.noter(a.fen, 1); if (!rep) return { fen: a.fen, ply: ply + 1, cp: cands[0].cp, joues, calme: true };
+    const [rep] = await noteur.noter(a.fen, p.nAdv ?? 1); if (!rep) return { fen: a.fen, ply: ply + 1, cp: cands[0].cp, joues, calme: true };
     const b = jouer(a.fen, rep.uci); joues.push(b.m); fen = b.fen; ply += 2;
   }
-  const cands = await noteur.noter(fen, 1); return { fen, ply, cp: cands[0]?.cp ?? null, joues, calme: false };
+  const cands = await noteur.noter(fen, Math.max(2, p.nMoi ?? 2)); return { fen, ply, cp: cands[0]?.cp ?? null, joues, calme: false };
 }
 
 /** La meilleure réponse adverse, et la seconde si elle est ex æquo (≤ plancher). */
@@ -160,11 +160,12 @@ export async function reponsesOuvertes(noteur, fen, p = DEFAUTS) {
   return reps.length > 1 && Math.abs(reps[0].cp - reps[1].cp) <= p.plancher ? reps : reps.slice(0, 1);
 }
 
-/** La ligne gloutonne (le moteur joue les deux camps) : evals[ply] du point de vue de `side`, sans[] les coups. Affichage et repli. */
-export async function ligneLibre(noteur, fen, side, plies) {
+/** La ligne gloutonne (le moteur joue les deux camps, à la politique `p.nMoi` / `p.nAdv`, 1/1 par défaut) : evals[ply] du point de vue de `side`, sans[] les coups. Référence d'un segment de partie, affichage et repli du faisceau. */
+export async function ligneLibre(noteur, fen, side, plies, p = DEFAUTS) {
   const evals = [], sans = []; let f = fen;
+  const nMoi = p.nMoi ?? 1, nAdv = p.nAdv ?? 1; // la MÊME politique que la partie (coach : MultiPV 4, adversaire : 2) — le meilleur coup peut dépendre de n
   for (let i = 0; i <= plies; i++) {
-    const [best] = await noteur.noter(f, 1);
+    const [best] = await noteur.noter(f, new Chess(f).turn() === side ? nMoi : nAdv);
     if (!best) { evals.push(evals[evals.length - 1] ?? 0); break; }
     evals.push(new Chess(f).turn() === side ? best.cp : -best.cp);
     if (i === plies) break;
@@ -179,7 +180,7 @@ export async function ligneLibre(noteur, fen, side, plies) {
  * ouvertes que la ligne contrainte : c'est ce qui rend le prix symétrique.
  */
 export async function faisceauLibre(noteur, fen, side, horizon, p = DEFAUTS) {
-  const glouton = await ligneLibre(noteur, fen, side, 2 * horizon);
+  const glouton = await ligneLibre(noteur, fen, side, 2 * horizon, p);
   const evals = [...glouton.evals];
   let etats = [{ fen, ply: 0, cp: glouton.evals[0] }];
   for (let coup = 0; coup < horizon && etats.length; coup++) {
@@ -217,7 +218,7 @@ export async function prixDeSegment(noteur, seg, side, p = DEFAUTS) {
   const libre = await faisceauLibre(noteur, seg.fenAdoption, side, horizon, p);
   const ref = (ply) => borneCp(libre.evals[Math.min(ply, libre.evals.length - 1)] ?? 0);
   const refLigne = (ply) => borneCp(libre.glouton[Math.min(ply, libre.glouton.length - 1)] ?? 0);
-  const [bestAbandon] = await noteur.noter(seg.fenAbandon, 1);
+  const [bestAbandon] = await noteur.noter(seg.fenAbandon, Math.max(2, p.nMoi ?? 2));
   const cpBrut = bestAbandon ? bestAbandon.cp : 0, cpCalme = borneCp(q.cp ?? cpBrut);
   return { prix: ref(q.ply) - cpCalme, prixLigne: refLigne(q.ply) - cpCalme, prixBrut: ref(seg.plies) - borneCp(cpBrut), calme: q.calme, prolonge: q.joues.map((m) => m.san), plyCalme: q.ply };
 }
