@@ -1763,3 +1763,24 @@ au second moteur (le critère exige les deux), puis le lot de perturbation de l'
 du contrôle « deux parties fraîches identiques » avec SF 17.1 (le script s'arrête si elles diffèrent). Sorties
 `reports/plans/epreuve/bin-stockfish-17.1-p18/` sur Orion, journal `~/lot1-sf171.log`. Spécification du lot de perturbation
 de l'épreuve écrite (relecture § 11), à soumettre au GE avant tout tirage.
+**19 octobre, 19 h 50 (Paris) : Deneb doit s'éteindre — lot SF 17.1 arrêté proprement et mis en file sur le VPS.** Sur Orion,
+19 dossiers sur 60 finis (contrôle de déterminisme SF 17.1 réussi : deux parties fraîches identiques hors secondes),
+rapatriés dans `reports/plans/epreuve/bin-stockfish-17.1-p18/` ; six dossiers entamés jetés, à rejouer. Le binaire SF 17.1 de
+Deneb est copié sur le VPS (`~/bin/stockfish-17.1`, il démarre sur Haswell). File `reprise-sf171.sh` : attend la marque de fin
+du lot SF 19, rejoue la partie fraîche de Deneb sur le VPS et exige l'identité hors secondes (sinon rien n'est lancé), puis
+joue les 41 dossiers manquants à trois processus dans le même dossier. Journal `reports/plans/epreuve/reprise-sf171.log`.
+Coût : la fin des deux moteurs passe de 4 h à la soirée du 20 (≈ 14 h de VPS après le lot SF 19). Aperçu provisoire du
+critère sur 7 départs-camps SF 19 (70 parties par bras) : livre médian +0,09 moyen +0,22, prix +0,09 / +0,19, part des
+coups sous plan 23 %, prix = livre dans 61 parties sur 70 — à ne pas lire comme un verdict.
+**20 octobre, 3 h (Paris) : lot 1 SF 19 terminé** — 60 dossiers, 600 parties, zéro échec, seize heures à trois processus
+(`reports/plans/epreuve/bin-stockfish-p18/`). La file SF 17.1 a pris le relais à 2 h 59 (contrôle d'identité VPS / Deneb,
+puis 41 dossiers). Dépouillement aux deux moteurs à sa fin.
+**20 octobre, 17 h 30 (Paris) : épreuve du jeu, lot 1 aux deux moteurs — le critère passe.** SF 17.1 fini à 17 h 13 (60
+dossiers, zéro erreur). Dépouillement (`scripts/plans/depouillement-epreuve.mjs`, lecture seule) : coach-prix médiane / moyenne
++0,10 / +0,28 (SF 19) et +0,10 / +0,27 (SF 17.1), coach-livre +0,09 / +0,26 et +0,14 / +0,26, barre 0,25 / 0,50 — **passe
+aux deux moteurs**. Parties sans aucun plan (37 et 38 sur 200) hors calcul, comptées à part. Prix = livre dans 129 / 163 et
+151 / 162 parties : valeur ajoutée du choix au prix nulle. Queue : 5–7 % de parties perdues sous coach contre 1 % au témoin,
+concentrées sur fr-avance-noirs et iqp-panov côté Noirs, aux deux moteurs. Partie par partie, les moteurs ne s'accordent
+pas (écart médian 0,55, même signe 46 %) ; sur le lot, moyennes égales au centième. Σ retards ≠ prix ligne (écart médian
++0,20 / +0,24) : pas de contrôle gratuit. Rapport `docs/plans/RAPPORT-EPREUVE-DU-JEU-2026-10-20.md`, page
+`LIRE-EN-PREMIER-2026-10-20.md`. Pas de robustesse avant le lot de perturbation (accord du GE attendu).
