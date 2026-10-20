@@ -1784,3 +1784,9 @@ concentrées sur fr-avance-noirs et iqp-panov côté Noirs, aux deux moteurs. Pa
 pas (écart médian 0,55, même signe 46 %) ; sur le lot, moyennes égales au centième. Σ retards ≠ prix ligne (écart médian
 +0,20 / +0,24) : pas de contrôle gratuit. Rapport `docs/plans/RAPPORT-EPREUVE-DU-JEU-2026-10-20.md`, page
 `LIRE-EN-PREMIER-2026-10-20.md`. Pas de robustesse avant le lot de perturbation (accord du GE attendu).
+**20 octobre, 20 h (Paris) : lecture des seize parties perdues (Expert) et réponse du GE.** Zéro faute du livre, treize parties
+où le coach s'accroche, trois tirages perdants (`docs/plans/LECTURE-EPREUVE-2026-10-20.md`). Racine unique : personne ne
+tient l'addition des retards d'un plan. Règle proposée et approuvée par le GE : cumul des retards d'un segment > 1,0 pion =
+hors de prix en jeu ; dernière chance re-mesurée à prof. 18. GE : la valeur du prix n'a pas été testée (exécutant commun) ;
+lot 1 bis avec garde-fou, critère réécrit avant avec borne de queue (≤ 3 perdues sur 100), publier l'échange queue /
+couverture ; remède de fond = nommer le plan adverse. Rapport § 9. En attente du go de Sébastien.
