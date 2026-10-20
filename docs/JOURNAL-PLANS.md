@@ -1790,3 +1790,9 @@ tient l'addition des retards d'un plan. Règle proposée et approuvée par le GE
 hors de prix en jeu ; dernière chance re-mesurée à prof. 18. GE : la valeur du prix n'a pas été testée (exécutant commun) ;
 lot 1 bis avec garde-fou, critère réécrit avant avec borne de queue (≤ 3 perdues sur 100), publier l'échange queue /
 couverture ; remède de fond = nommer le plan adverse. Rapport § 9. En attente du go de Sébastien.
+**20 octobre, 21 h (Paris) : cahier des charges du lot 1 bis écrit (go de Sébastien, papier seulement).** Trois règles :
+cumul des retards d'un segment > 1,00 = hors de prix ; dernière chance relue à prof. 18 avant d'être jouée ; « attente
+utile » (proposition de Sébastien, formalisée par le GE : le premier candidat du moteur qui sert un plan du catalogue et coûte
+≤ 0,25, neutre pour le compteur, freiné par le cumul). Bras A (garde-fou) et B (garde-fou + coup utile), livre et prix, témoin
+repris. Critère réécrit avec borne de queue ≤ 3 perdues sur 100. `docs/plans/CAHIER-LOT-1-BIS-2026-10-20.md`, à relire par
+le GE, l'Expert et le Dev chef avant tout code.
