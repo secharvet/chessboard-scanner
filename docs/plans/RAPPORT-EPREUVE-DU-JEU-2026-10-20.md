@@ -119,3 +119,36 @@ quart de pion dans cette structure ».
    coach s'accroche-t-il ?
 2. Le lot de perturbation, après accord du GE sur la spécification.
 3. Puis seulement : retouches de l'instrument, service après abandon, épreuve Maia.
+
+## 9. Lecture de l'Expert et réponse du GE (20 octobre, soir)
+
+**Lecture coup par coup des seize parties perdues** (fr-avance-noirs et iqp-panov, coach Noirs, deux moteurs ;
+`LECTURE-EPREUVE-2026-10-20.md`, deux vérifications à profondeur 30) : **le livre n'a tort dans aucune ; le coach s'accroche
+dans treize ; trois tirages étaient perdants de toute façon** (témoin aussi perdu, ou plans gratuits). Trois mécanismes, une
+racine — **le coach paie un plan en plusieurs fois et personne ne tient l'addition** :
+1. Française (SF 19) : la rupture …f6 reste adoptée des dizaines de demi-coups alors que son coup cote −7 ; elle fournit des
+   « progressants » qui sont les vraies fautes (Fe7 puis O-O dans la colonne g ouverte, −1,86 contre Tg8 −0,11 à prof. 30).
+   Quand …f6 est joué au bon moment, il coûte +0,04.
+2. Panov : la dernière chance force Cd5 à contretemps (retard 54 à 112) alors que le Cf6 défend le roi contre Dd3 + h4 + Fh6
+   (Cg4 −0,86 contre Cd5 −1,61 à prof. 30) ; puis la colonne d tire tout vers la mauvaise aile. Au bon moment (SF 19 n° 9),
+   Cd5 est gratuit.
+3. Dernières chances jouées au-dessus de leur borne (109, 112, 129 à prof. 18) parce que la décision était prise à prof. 14.
+   Le pilote en relève une quatrième dans les extraits (110, colonne f, SF 17.1 n° 6).
+
+**Règle proposée (Expert), approuvée par le GE** : *le cumul est un garde-fou en jeu comme au faisceau* — un segment de plan
+porte la somme des retards payés sous lui ; au-delà de 1,0 pion, hors de prix en jeu, on enchaîne. Corollaire : la dernière
+chance est re-mesurée à prof. 18 avant d'être jouée, coupée au-dessus de la borne.
+
+**Ce que le GE ajoute** :
+- La question « le prix ajoute-t-il quelque chose au livre ? » **n'a pas reçu de réponse négative ; elle n'a pas été posée
+  proprement** : les deux bras partagent le même exécutant, et c'est l'exécutant qui perd les parties. Elle se posera au lot
+  suivant, avec le garde-fou.
+- Le garde-fou fera baisser la queue **et** la part des coups sous plan : le publier comme un échange (coût par coup sous plan
+  contre couverture), pas seulement comme une médiane qui baisse.
+- C'est un changement de protocole : **lot 1 bis**, mêmes graines, critère réécrit avant, avec cette fois **une borne sur la
+  queue : au plus trois parties perdues sur cent sous coach** ; puis la secousse (lot de perturbation) par-dessus.
+- Le remède de fond à la Panov n'est pas le cumul (pansement honnête) mais **nommer le plan adverse** : le coach retire le
+  défenseur du roi parce qu'aucune de ses familles ne décrit l'attaque d'en face — la « restriction », au programme.
+
+En une phrase : **le livre a raison partout, le coach perd parce qu'il ne sait pas s'arrêter, et savoir s'arrêter est une
+règle qu'on peut écrire.** Rien ne démarre sans le go de Sébastien.
