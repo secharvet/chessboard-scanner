@@ -148,3 +148,32 @@ Les quatre points sont sains ; aucun appel moteur de plus (la dernière chance r
    chances au-dessus de la borne (109, 110, 112, 129), un abandon au compteur et une bascule — pas un tirage au hasard.
 4. **Reprise du témoin par moteur** : une partie fraîche identique contre le témoin du lot 1 à SF 19, une autre à SF 17.1.
 Le Dev chef relira le code sur `division` avant toute fusion, en particulier la source unique.
+
+## 11. Réponse du GE (20 octobre, soir) — décisions
+
+1. **Cumul lu avant le coup : approuvé** (« un garde-fou qui constate après coup est un commentateur »). **Ajout** : un refus
+   par l'addition n'est pas un abandon automatique, c'est **une vérification** — le faisceau court depuis la position (une
+   minute de moteur, cas rares) distingue le sacrifice en cours de route du plan qui ne reviendra pas. *Proposition du
+   pilote, à relire par l'Expert et le Dev chef* : au refus, faisceau du plan courant depuis la position (mêmes réglages que
+   la mesure des segments) ; si son prix est ≤ 0,25 (le plancher), le pas refusé est joué et le cumul repart de ce prix ;
+   sinon, abandon « hors de prix (cumul) ». Le rapport publie le nombre de vérifications et leur issue.
+2. **Attente utile sans plan : oui**, aux deux conditions déjà écrites — elle sert au moins une instance du catalogue **non
+   abandonnée** dans la position (sinon c'est du jeu libre, compté à part), et chaque coup est sous le plancher (≤ 0,25) ;
+   le plafond d'un pion par partie par-dessus.
+3. **Patience de six : oui, comme paramètre.** Elle ne compte que les coups qui ne servent **pas du tout** le plan (a4 avant
+   b5, le soutien d'une case font baisser la distance : ce sont des progressants, ils remettent à zéro). Le lot publie **la
+   distribution des abandons par patience**, pour régler la valeur après, pas avant. **Reprise automatique** : dès qu'un pas
+   admissible sous le plancher réapparaît, le plan abandonné « en attente » revient.
+4. **Taille du lot** : la queue décide, et voir une baisse de sept à trois pour cent demande deux cents parties par bras.
+   Complet à SF 19 (la question prix contre livre reste ouverte) ; économe à SF 17.1, bras livre seulement (confirmer
+   l'agrégat et la queue). Lot de perturbation à part. *Lecture exacte à confirmer par Sébastien* (voir ci-dessous).
+5. **Critère écrit avant**, avec la queue (≤ 3 perdues sur 100) à côté de la médiane et de la moyenne, et **la couverture
+   publiée en première ligne** du rapport.
+6. **Remarque du GE — le regroupement** : l'atome existe (« une pièce ramenée près du roi quand deux pièces adverses ou plus
+   rôdent ») ; lui donner une distance permettrait au coup utile de voir l'attaque arriver — premier pas, à portée, vers le
+   plan adverse. Hors de ce lot sauf décision de Sébastien (il change ce que « sert » compte, donc la comparaison A / B).
+
+**Taille, deux lectures possibles de « six cents parties »** (200 parties par bras et par moteur) :
+- (i) SF 19 : B-livre + B-prix (400) ; SF 17.1 : B-livre (200) = **600**, mais sans bras A, on ne sépare plus le garde-fou
+  du coup utile ;
+- (ii) SF 19 : A-livre, A-prix, B-livre, B-prix (800) ; SF 17.1 : A-livre + B-livre (400) = 1 200.
