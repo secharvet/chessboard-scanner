@@ -86,8 +86,10 @@ async function partie(numero) {
     if (REGLES) {
       seg.cumul = coach.cumul;
       if (/^hors de prix/.test(raison)) coach.impayables.add(coach.cle);
-      // Un plan abandonné en attente n'a pas démérité : il dort avec son état, et revient dès qu'un pas gratuit réapparaît (§ 11.3).
-      if (raison === 'en attente') coach.dormants.push({ inst: { ...coach.inst, plan: coach.plan }, cle: coach.cle, etat: { compteur: 0, cumul: coach.cumul, attente: coach.attente, sauvetages: coach.sauvetages, cumulDeborde: false } });
+      // Un plan abandonné en attente n'a pas démérité : il dort et revient dès qu'un pas gratuit réapparaît (§ 11.3). Il garde la
+      // mémoire de ce qu'il a coûté (cumul, sauvetages) ; sa patience repart de zéro, puisqu'il revient parce qu'un pas est là
+      // (Dev chef : garder l'attente pleine ferait osciller reprise / abandon sans jamais jouer le pas).
+      if (raison === 'en attente') coach.dormants.push({ inst: { ...coach.inst, plan: coach.plan }, cle: coach.cle, etat: { compteur: 0, cumul: coach.cumul, attente: 0, sauvetages: coach.sauvetages, cumulDeborde: false } });
     }
     coach.dernier = { plan: coach.plan, raison }; seg = null; coach.plan = null; coach.compteur = 0; coach.realise = false; coach.forces = 0;
     Object.assign(coach, etatNeuf()); coach.cle = null; coach.inst = null;
@@ -179,6 +181,7 @@ async function partie(numero) {
       if (REGLES) {
         coach.cumul = r.cumul; coach.attente = r.attente;
         if (r.sauvetage) { coach.sauvetages++; evts.push(`sauvetage ${fr(r.sauvetage.san)} (addition ${fmt(r.sauvetage.cumul)}, faisceau ${fmt(r.sauvetage.prixVerifie)})`); }
+        // Le pas refusé laisse jouer le repli de ce coup-ci ; l'abandon et l'enchaînement viennent au coup suivant (cahier § 2.2).
         if (r.refus) { coach.cumulDeborde = true; evts.push(`refus ${fr(r.refus.san)} (addition ${fmt(r.refus.cumul)}${r.refus.prixVerifie !== undefined ? `, faisceau ${fmt(r.refus.prixVerifie)}` : ''})`); }
         if (r.dcRefusee) evts.push(`dernière chance refusée (relecture ${DEPTH}) ${fr(r.dcRefusee.san)} ${fmt(r.dcRefusee.retard)}`);
       }
