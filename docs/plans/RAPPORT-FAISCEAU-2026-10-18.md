@@ -313,3 +313,42 @@ moteur**, mais pas sur les mêmes positions : la Française d'échange devient l
 contre Fg5 ou la colonne e — celle que l'Expert annonçait dès la désignation) ; le Tarrasch fermé est réparé chez SF 19 ; la
 Carlsbad et l'Espagnole changent de visage. Rien de cela ne modifie le verdict du § 8 ; tout cela confirme sa lecture : la
 mesure est fine là où le tempo est court, instable là où il est long, et l'accord des moteurs reste la limite dure.
+
+## 11. Conclusion — le critère ne passe pas de façon robuste, et pourquoi (19 octobre, 18 h, décision du GE relayée par l'auteur)
+
+**Le chiffre.** Le critère a été rejoué sous six tirages de l'instrument (profondeur 17, 18, 19 × table du moteur vidée ou
+gardée ; même code, un fil, dix positions). Il passe dans **2 tirages sur 6** à la règle écrite (6, 8, 5, 6, 7, 5 positions
+réussies sur dix), et dans **3 sur 6** au canon corrigé (désignations v2 : 6, 8, 6, 7, 7, 5 sur huit positions éligibles).
+Au canon corrigé, la barre est plus haute, non plus basse : sept positions sur les huit restantes (87 %) contre sept sur dix
+(70 %) ; les deux taux ne se comparent donc pas à barre égale, et le gain de v2 vient surtout de ce que les deux positions
+qui échouaient le plus sortent du dénominateur (Dev chef, 18 h 30). Par la règle posée avant la mesure (plus de sept
+tirages sur dix pour qu'un verdict tienne), **ce n'est pas un verdict.** Le
+« neuf sur dix » du § 8 était un tirage, plutôt chanceux ; il est retiré. Matrice complète : `TAUX-DE-PASSAGE-2026-10-19.md`.
+
+**Pourquoi, sans humiliation.** Le critère demandait à un instrument dont la résolution est d'un demi-pion de rendre des
+verdicts à un quart de pion, position par position ; et il lui demandait de juger un canon qui était faux sur trois
+positions. Le canon d'abord : l'Expert a montré, avec des pièces antérieures à la matrice et des sondes à profondeur 30, que
+le plan du hérisson n'est pas « …b5 » sans …Tc8 au canon (…Tac8 est le meilleur coup, b5 immédiat perd 2,70), que
+l'Espagnole donnait la destination (f4 puis e5) sans la route (Fxf8 puis Cd5), et que dans l'échange française Fg5 est à la
+fois le meilleur coup du moteur et le coup du livre. Ces trois désignations sont corrigées (canon v2) ; corriger ne fait pas
+passer le critère — les positions corrigées n'ont plus de plan hors livre à contraster et sortent du compte — ce qui est la
+preuve que la correction n'est pas un tripatouillage. Les repoussoirs hors livre proposés ensuite pour les garder dans le
+compte (marche du roi, cavalier en e5), sondés proprement, sont **refusés** : choisir après coup, résultats connus, ce qu'on
+met en face du livre, c'est retailler le panel pour que le critère ait quelque chose à dire. Un test de contraste à
+repoussoirs préenregistrés serait un nouveau critère, écrit avant une nouvelle passe, sur un nouveau panel.
+
+**Ce qui a tenu dans la secousse, et que ce rapport doit dire.** L'instrument sait ordonner, il sait mal chiffrer, et il ne
+sait pas trancher par position. Le plan le moins cher d'une position est le même dans au moins cinq tirages sur six pour six
+positions sur dix (le hérisson et la Panov dans les six) ; quand le faisceau dit « ici Cd5 vaut mieux qu'e5 », il le dit
+partout. Le prix bouge d'un demi-pion d'un tirage à l'autre (écart médian 0,14 à 0,19 pour un pli de profondeur, 0,19 à
+0,33 pour l'état de la table). La phrase (« c'est le plan » / « viable mais ça coûte ») change une fois sur trois pour un pli
+de profondeur, une fois sur deux pour la table ; huit plans sur 35 la gardent dans les six tirages, tous courts. **Le plan
+est plus stable que le coup, l'ordre plus stable que le prix, le prix plus stable que la phrase.** Le bruit vit dans la
+réalisation des plans longs : un plan se paie à sa réalisation, et son prix dépend du chemin, que la profondeur et la table
+font bifurquer.
+
+**Ce qui suit.** Cette piste — un critère par position sur un panel de dix — est fermée. Les retouches de l'instrument
+prévues après le lot (prix par la médiane des branches réalisées, phrase avec sa marge, coupes à marge, coup refusé imprimé)
+sont désormais la condition pour qu'il rende un jour une phrase ; elles ne se font pas avant la décision de l'auteur.
+L'épreuve du jeu n'est plus la suite automatique du critère : le lot 1 finit sa course sans être lu, et sa lecture attend
+une décision à froid, dans quelques jours — un coach qui classe bien et chiffre mal vaut-il les mois qui viennent.

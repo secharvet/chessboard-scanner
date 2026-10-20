@@ -228,3 +228,56 @@ Prochaine étape : lot 1, SF 19, trois processus (`scripts/plans/epreuve.sh /usr
    la mesure rejetée devient un contrôle gratuit de la mesure retenue.
 5. **Part des coups sous plan** : la colonne la plus importante du rapport, souvent sous la moitié (la table n'a rien à dire
    en finale).
+
+## 10. La table de hachage comptait (19 octobre, midi) — méthode de mesure changée
+
+Stockfish à un fil est déterministe **à historique égal** : la table de hachage garde le travail des recherches précédentes
+et la suivante s'en sert. Même position Carlsbad, prof. 18, un fil : moteur frais h3 +0,44 · a3 +0,34 · Tab1 +0,29 · Ce5
++0,28 ; après cinq autres recherches h3 +0,42 · Tab1 +0,30 · Ce5 +0,24 · a3 +0,22 (a3 de 2e à 4e) ; après vidage, les valeurs
+du moteur frais exactement. Trouvé parce que deux parties fraîches identiques entre elles (Orion, coupées au 71e par la
+répétition) donnaient d'autres prix que la même partie poussée au 80e (VPS), à coups et candidats identiques : les prix se
+calculent après la partie, sur une table au contenu différent (jusqu'à 21 cp sur un prix d'enveloppe). Nos identités au
+centième tenaient parce que la suite d'appels était la même. Surcoût du vidage : 3 % (douze positions voisines, 16 contre
+17 s). Décision : en mode mesure, `ucinewgame` avant chaque recherche ; une valeur ne dépend plus que de la position et de la
+profondeur. Conséquences : lot 1 et re-passe Orion relancés ; les prix d'hier bougeront de quelques centièmes, la re-passe
+sans coupe est la nouvelle référence ; le plancher de 25 cp n'avait pas à absorber ce bruit-là, il reste.
+
+## 11. Le lot de perturbation de l'épreuve — proposition à soumettre au GE (19 octobre, 19 h, après le « go pour le jeu »)
+
+Ce que le taux de passage a fait au faisceau, il faut le faire à l'épreuve : **donner un intervalle à l'agrégat** (coût
+médian et moyen par bras, différence coach-prix − coach-livre) avant de le lire comme un verdict. Rien ci-dessous n'est
+lancé avant l'accord du GE ; le lot 1 reste la référence déterministe.
+
+**Référence.** Lot 1 : vingt départs × trois bras × dix graines, profondeur 18, un fil, table vidée, code gelé (`4e84a5f`),
+aux deux moteurs (SF 19 sur le VPS, SF 17.1 sur Orion, lancé le 19 à 19 h au même code).
+
+**Quatre tirages proposés**, même code, même panel, un seul moteur (SF 19 — l'écart entre moteurs est déjà une perturbation,
+mesurée par la référence elle-même) :
+
+| tirage | ce qui bouge | code à écrire | coût estimé (Orion, six processus) |
+|---|---|---|---|
+| T1 | graines 11 à 20 : un autre tirage des réponses adverses ex æquo | aucun (`--numeros`) | une nuit |
+| T2 | profondeur 17 pour le choix des coups de l'exécutant, pour l'adversaire et pour toute la mesure (gloutonne, faisceau libre, point calme et leur dernière chance) ; la dernière chance de l'exécutant reste à 14 dans les cinq passes comme dans la référence — politique gelée du pilote, pas une variable du lot | aucun (`--depth` pilote déjà tout, vérifié par le Dev chef) | une nuit |
+| T3 | profondeur 19, idem | aucun | une nuit et demie |
+| T4 | ordre des ex æquo **côté exécutant** : parmi les candidats admissibles à ≤ 25 cp du meilleur, le dernier au lieu du premier | une option dans `coach/coup-contraint.mjs`, sur `division`, relue par le Dev chef, fusionnée après la fin du lot 1 | une nuit |
+
+Cadrage, à lire tel quel : T2 et T3 perturbent **la ligne jouée et la profondeur de mesure ensemble** — à 17, l'exécutant et
+l'adversaire peuvent choisir d'autres coups, et le prix est mesuré à 17. Le couplage est voulu : le prix est une différence
+de deux évaluations (faisceau libre − ligne contrainte), lisible comme un coût seulement si les deux côtés sont le même
+instrument ; jouer à 17 et mesurer à 18 mêlerait au coût du plan un écart 18 − 17 qui ne s'annule pas, et un vrai déploiement
+à 17 aurait les deux. T2 n'isole donc pas la sensibilité à la seule profondeur de mesure, et ne le prétend pas.
+
+Ordre : T1, T2, T3 d'abord (aucun code), T4 en dernier. Entre la référence et les quatre tirages, **le code ne change pas**
+(la règle « service après abandon » du § 9 attend la fin du lot de perturbation, pas seulement la fin du lot 1), et rien ne
+se lit avant que les cinq soient là.
+
+**Chiffres publiés par tirage**, les mêmes qu'au dépouillement du lot 1 (§ 9) : coût médian et moyen par bras, différence
+prix − livre (médiane et moyenne), part des coups sous plan, nulles par répétition, demi-coups « sans plan, table épuisée »,
+segments gratuits lisant 0.
+
+**Règle de lecture, à fixer avec le GE avant le premier tirage** (proposition) : le verdict du critère d'arrêt (§ 5 du
+protocole : médian ≤ 0,25 et moyen ≤ 0,50) **tient s'il est le même dans au moins quatre tirages sur cinq** (référence +
+quatre), et la différence prix − livre **garde son signe dans les cinq** ; sinon « pas de verdict », et le rapport publie
+l'intervalle (le plus bas et le plus haut des cinq) à la place d'un chiffre. Trois sur cinq ne serait pas un verdict.
+
+**Ce qu'on n'y met pas** : la table gardée (la méthode de mesure est fixée, § 10), un autre panel, un autre plancher.

@@ -1677,3 +1677,122 @@ part), vérifié hors moteur sur la partie fraîche (coupée au 71e demi-coup). 
 **relancé à 10 h 40** avec la correction. Colonnes à garder : part des coups sous plan, Σ retards (contrôle gratuit du prix
 ligne si la coïncidence +1,10 / +1,22 tient). Branche `division` fusionnée (a)(b)(c) + largeur effective + prix ligne ;
 re-passe des dix positions sur Orion, sans coupe (prix d'hier + nouvelles colonnes) et avec coupe (autopsie de la division).
+**19 octobre, 12 h 15 (Paris) : la table de hachage comptait — vidée avant chaque recherche en mode mesure.** Deux parties
+fraîches identiques sur Orion avec le compteur de positions (coupées au 71e, « nulle (répétition) », identité hors secondes
+tenue), mais leurs prix diffèrent de la partie du VPS poussée au 80e (b5 +0,51 contre +0,53, Cf3→d4 +0,69 contre +0,60,
+enveloppe jusqu'à 21 cp d'écart) à coups et candidats strictement identiques : les prix se calculent après la partie, sur une
+table de hachage qui n'a plus le même contenu. Expérience sur Orion (SF 19, un fil, prof. 18) : la même position notée après
+cinq autres recherches change de 2 à 12 cp par coup et d'ordre des candidats (a3 de 2e à 4e) ; table vidée, les valeurs du
+moteur frais reviennent exactement ; surcoût 3 %. **Stockfish à un fil est déterministe à historique égal** — nos identités
+au centième tenaient parce que la suite d'appels était la même. Décision (Sébastien, sur recommandation) : en
+`COACH_DETERMINISTIC=1`, `ucinewgame` avant chaque recherche (`uci-engine.mjs`), la valeur d'une position ne dépend plus que
+d'elle et de la profondeur. Lot 1 et re-passe Orion arrêtés et relancés avec cette méthode ; les prix d'hier (référence
+`orion-sf19-p18-v3`) bougeront de quelques centièmes : la re-passe sans coupe devient la nouvelle référence.
+**19 octobre, 14 h 30 (Paris) : re-passe Orion à table vide, réponse au GE rédigée** (`docs/plans/REPONSE-GE-2026-10-19.md`).
+Largeur effective du faisceau contraint, comptée jusqu'à la réalisation de la ligne retenue : médiane 4, 14 % des coups
+sous 4 (concentrés à la racine et dans les transferts courts) — l'écart de largeur n'explique qu'une petite part du biais
+d'enveloppe. Échelle ligne publiée (23 plans gratuits sur 30 contre 8 à l'enveloppe, écart médian 0,49 = biais du côté
+libre seul) avec sa limite : la ligne retenue est choisie à 4 contre une gloutonne à 1, l'échelle ligne favorise le plan
+autant que l'enveloppe le pénalise ; seule l'épreuve (1 contre 1) tranche. Division Carlsbad e4 depuis la bascule :
+continuer −0,03 (racine +0,68 : le prix est dans la poussée), adopter d5 +0,11 « c'est le plan ». **Correction de ce que
+j'écrivais à midi** : la table vide ne bouge pas les prix « de quelques centièmes », elle change la phrase de 17 plans sur
+35 et des prix de près de deux pions, à code identique (12/12 prouvé le matin) : le faisceau amplifie 10 cp en un changement
+de ligne. Reproductible n'est pas robuste ; marge au seuil proposée au GE pour après le lot. Rendu des largeurs corrigé sur
+`division` (8af9520 : branches gardées réalisées comprises, lecture jusqu'à la réalisation, zéros finals exclus), fusion
+après le lot 1 (le bras prix charge le module). Seconde passe fraîche à table vide lancée sur Orion (3 positions) pour la
+preuve « deux passes, zéro différence » dans le nouveau mode.
+**19 octobre, 15 h 30 (Paris) : réponse du GE — « le verdict d'hier est un tirage ».** Dix-sept phrases sur trente-cinq
+sous une perturbation de dix centièmes : le plancher des sorties du faisceau (processus de sélection discret) n'a jamais été
+mesuré, la nuit de stabilité n'a porté que sur le filtre et le test à deux demi-coups. Le compte automatique du critère passe
+de 6/10 (passe d'hier) à 5/10 (passe d'aujourd'hui). Fait : page « à lire en premier » rectifiée (neuf sur dix sur un
+tirage, robustesse non mesurée, taux de passage à venir) ; `scripts/plans/taux-de-passage.mjs` (division) ; **nuit de
+perturbations en file sur Orion** après les passes v5 : prof. 17 et 19 × table vidée / gardée (les deux tirages à 18 sont
+les v5), 40 passes, six en parallèle, dossiers `nuit-p{17,19}-{vide,garde}`, marque TERMINE dans `nuit-p17-garde/`.
+Engagé pour après le lot 1 : prix = médiane des branches réalisées, phrase avec marge, coupes à marge, coup refusé imprimé ;
+lot de perturbation de l'épreuve (prof. 17–19, ordre des ex æquo côté exécutant) à spécifier avec le GE. Réponse au GE § 6.
+**19 octobre, 16 h (Paris) : réserve du Dev chef fermée, la table de hachage explique seize des dix-sept bascules.** Passes
+v5 sur Orion (code corrigé `division` 8af9520 + f8a3e1c, dix positions, un fil, prof. 18) : à table vide, identique au
+centième à la passe v4 sur 35/35 plans (les deux correctifs sont des non-opérations sur les prix ; reproductibilité à
+table vide établie sur les dix positions). À hash gardé contre table vide, code identique : **16 phrases sur 35** changent
+(huit positions), 30 lignes retenues sur 35, écart de prix médian 0,33 (max 5,61). Code seul (v3 d'hier contre v5 hash
+gardé) : 1 phrase sur 35 (Panov Dd1→d3, correction du point calme), écart médian 0,00 (max 0,14). Largeurs effectives
+recalculées d'une seule source (JSON v5 table vide, réalisée comprise) : médiane 4, **8 %** des coups sous 4 (et non 14 %),
+aucun plan à médiane < 4, cinq plans à minimum 1 (racine de l'avance française noire, un coup isolé dans Fc1×Ce7 et d5
+Panov). Critère automatique : 6/10 à hash gardé (hier et aujourd'hui), 5/10 à table vide. Nuit de perturbations lancée
+à 13 h 57 sur Orion (prof. 17 et 19 × vide/gardé, six moteurs) ; taux de passage au matin. Réponse au GE § 1, § 4, § 5 et
+tableau mis à jour.
+**19 octobre, 16 h 30 (Paris) : taux de passage mesuré — 2 tirages sur 6, ce n'est pas un verdict.** Les quarante passes
+de la « nuit » (prof. 17 et 19 × table vidée / gardée) ont tenu en deux heures sur Orion ; avec les deux passes v5 à prof. 18,
+six tirages au même code, un fil. Critère automatique : 6, 8, 5, 6, 7, 5 positions réussies → **2/6 tirages à ≥ 7**
+(`docs/plans/TAUX-DE-PASSAGE-2026-10-19.md`). Trois positions réussissent 6/6 (Tarrasch ouvert, Panov, KID), l'Espagnole
+d'échange 0/6 — de façon stable, e5 du livre coûte de +0,87 à +4,66 dans les six tirages, l'arbitrage prof. 30 de l'Expert
+tient. Phrases stables sur les six tirages : 8 plans sur 35. Le plan le moins cher est le même dans ≥ 5 tirages sur 6 pour
+6 positions sur 10 (recompté par le Dev chef, « 7 » était un miscompte) : le classement est plus solide que la phrase. Un pli de profondeur change 11 à 16 phrases (écart de
+prix médian 0,14–0,19) ; la table 16 à 19 (0,19–0,33). Page « à lire en premier » et réponse au GE § 6 mises à jour.
+**19 octobre, 17 h (Paris) : lecture de l'Expert sur la matrice — les trois échecs répétés sont une désignation trop
+étroite**, pièces antérieures à l'appui (`docs/plans/LECTURE-TAUX-DE-PASSAGE-2026-10-19.md`) : Espagnole = destination sans
+la route (Fxf8 puis Cd5) ; hérisson = …Tac8 meilleur coup à prof. 30 (b5 immédiat −2,70, d5 −3,98), la colonne c manquait au
+canon ; échange française = Fg5 meilleur coup (+0,12), c4 immédiat −0,13, droit d'entrée, pas réfutation. Contrefactuel
+calculé sans toucher au canon (décision de Sébastien, à présenter au GE avec les pièces) : l'échange passe 6/6, mais
+l'Espagnole et le hérisson deviennent **inéligibles** (plus de plan hors livre à contraster) ; compte 6, 8, 6, 7, 7, 5 sur
+huit éligibles → **3/6** à la règle écrite. Le critère mesure un contraste livre / hors-livre ; ouvrir le canon ne le fait pas
+passer, il retire la position du compte. Résidu : Tarrasch fermé et les cases « aucun canonique » (réalisation des plans
+longs). Réponse au GE § 6 complétée.
+**19 octobre, 17 h 30 (Paris) : repoussoirs hors livre sondés par l'Expert, dossier de décision monté, rien d'inscrit.**
+Espagnole : marche du roi Rg1→e3 (Rf2 −0,08 à prof. 24, meilleur coup Ff4 +0,02), repli Fc1→e3 (+0,01), colonne d rejetée
+(Td2 −1,11, épouvantail). Hérisson : Cd7→e5 (−0,17, ex æquo de …Tac8 −0,16), second h7→h5 (−0,28). Code vérifié : le
+transfert accepte le roi (Rg1-f2-e3, 2 coups). Mises en garde : instruments du critère, pas des plans à enseigner ; ordre des
+événements visible pour le GE (inéligibilité constatée → repoussoirs proposés → sondés → inscription). Attend le go de
+Sébastien ; ensuite Espagnole et hérisson à rejouer sous les six tirages (20 passes, ~1 h Orion). Réponse au GE § 6.
+**19 octobre, 18 h (Paris) : décision du GE — le critère ne passe pas, la piste est fermée, on écrit pourquoi.** Désignations
+v2 inscrites (branche `division`, `positions-filtre.mjs`, pièces antérieures dans chaque attendu, v1 conservée) : colonne c
+au hérisson, Cd5 et Fc1×Ff8 à l'Espagnole, Fg5 à l'échange française. Recompte sans rejouer (`taux-de-passage.mjs
+--positions`, le drapeau ne sert qu'au compte) : **3/6** (6, 8, 6, 7, 7, 5 sur huit éligibles), Espagnole et hérisson
+inéligibles ; v1 : 2/6. **Repoussoirs refusés** (choisir après coup ce qu'on met en face du livre = retailler le panel ; un
+test à repoussoirs préenregistrés serait un nouveau critère sur un nouveau panel). Rapport du faisceau § 11 : « 2/6 à la
+règle écrite, 3/6 au canon corrigé, pas de verdict ; l'ordre des plans est robuste, le prix l'est à un demi-pion, la phrase
+ne l'est pas » ; page « à lire en premier » alignée. Retouches de l'instrument = condition pour rendre une phrase, pas avant
+la décision de Sébastien ; le lot 1 finit sans être lu ; l'épreuve du jeu attend un go à part, à froid.
+**19 octobre, 18 h 45 (Paris) : « go pour le jeu » (Sébastien).** L'épreuve du jeu a son go à part. Lot 1 (SF 19, VPS, trois
+processus) à 16 parties-dossiers sur 60 après six heures, fin estimée le 20 vers 5 h ; il sera dépouillé selon § 9 de la
+relecture (coût médian et moyen par partie et par bras, différence prix − livre, part des coups sous plan, bascules, nulles
+par répétition, demi-coups « sans plan, table épuisée », Σ retards contre prix ligne). Ensuite, dans l'ordre : le même lot
+au second moteur (le critère exige les deux), puis le lot de perturbation de l'épreuve, spécifié avec le GE avant de lancer.
+**19 octobre, 19 h (Paris) : lot 1 au second moteur lancé sur Orion.** SF 17.1 (`~/bin/stockfish-17.1`), même code que le lot
+1 du VPS (seule différence du dépôt d'Orion : le lanceur d'équipe, hors mesure), un fil, table vidée, six processus ; précédé
+du contrôle « deux parties fraîches identiques » avec SF 17.1 (le script s'arrête si elles diffèrent). Sorties
+`reports/plans/epreuve/bin-stockfish-17.1-p18/` sur Orion, journal `~/lot1-sf171.log`. Spécification du lot de perturbation
+de l'épreuve écrite (relecture § 11), à soumettre au GE avant tout tirage.
+**19 octobre, 19 h 50 (Paris) : Deneb doit s'éteindre — lot SF 17.1 arrêté proprement et mis en file sur le VPS.** Sur Orion,
+19 dossiers sur 60 finis (contrôle de déterminisme SF 17.1 réussi : deux parties fraîches identiques hors secondes),
+rapatriés dans `reports/plans/epreuve/bin-stockfish-17.1-p18/` ; six dossiers entamés jetés, à rejouer. Le binaire SF 17.1 de
+Deneb est copié sur le VPS (`~/bin/stockfish-17.1`, il démarre sur Haswell). File `reprise-sf171.sh` : attend la marque de fin
+du lot SF 19, rejoue la partie fraîche de Deneb sur le VPS et exige l'identité hors secondes (sinon rien n'est lancé), puis
+joue les 41 dossiers manquants à trois processus dans le même dossier. Journal `reports/plans/epreuve/reprise-sf171.log`.
+Coût : la fin des deux moteurs passe de 4 h à la soirée du 20 (≈ 14 h de VPS après le lot SF 19). Aperçu provisoire du
+critère sur 7 départs-camps SF 19 (70 parties par bras) : livre médian +0,09 moyen +0,22, prix +0,09 / +0,19, part des
+coups sous plan 23 %, prix = livre dans 61 parties sur 70 — à ne pas lire comme un verdict.
+**20 octobre, 3 h (Paris) : lot 1 SF 19 terminé** — 60 dossiers, 600 parties, zéro échec, seize heures à trois processus
+(`reports/plans/epreuve/bin-stockfish-p18/`). La file SF 17.1 a pris le relais à 2 h 59 (contrôle d'identité VPS / Deneb,
+puis 41 dossiers). Dépouillement aux deux moteurs à sa fin.
+**20 octobre, 17 h 30 (Paris) : épreuve du jeu, lot 1 aux deux moteurs — le critère passe.** SF 17.1 fini à 17 h 13 (60
+dossiers, zéro erreur). Dépouillement (`scripts/plans/depouillement-epreuve.mjs`, lecture seule) : coach-prix médiane / moyenne
++0,10 / +0,28 (SF 19) et +0,10 / +0,27 (SF 17.1), coach-livre +0,09 / +0,26 et +0,14 / +0,26, barre 0,25 / 0,50 — **passe
+aux deux moteurs**. Parties sans aucun plan (37 et 38 sur 200) hors calcul, comptées à part. Prix = livre dans 129 / 163 et
+151 / 162 parties : valeur ajoutée du choix au prix nulle. Queue : 5–7 % de parties perdues sous coach contre 1 % au témoin,
+concentrées sur fr-avance-noirs et iqp-panov côté Noirs, aux deux moteurs. Partie par partie, les moteurs ne s'accordent
+pas (écart médian 0,55, même signe 46 %) ; sur le lot, moyennes égales au centième. Σ retards ≠ prix ligne (écart médian
++0,20 / +0,24) : pas de contrôle gratuit. Rapport `docs/plans/RAPPORT-EPREUVE-DU-JEU-2026-10-20.md`, page
+`LIRE-EN-PREMIER-2026-10-20.md`. Pas de robustesse avant le lot de perturbation (accord du GE attendu).
+**20 octobre, 20 h (Paris) : lecture des seize parties perdues (Expert) et réponse du GE.** Zéro faute du livre, treize parties
+où le coach s'accroche, trois tirages perdants (`docs/plans/LECTURE-EPREUVE-2026-10-20.md`). Racine unique : personne ne
+tient l'addition des retards d'un plan. Règle proposée et approuvée par le GE : cumul des retards d'un segment > 1,0 pion =
+hors de prix en jeu ; dernière chance re-mesurée à prof. 18. GE : la valeur du prix n'a pas été testée (exécutant commun) ;
+lot 1 bis avec garde-fou, critère réécrit avant avec borne de queue (≤ 3 perdues sur 100), publier l'échange queue /
+couverture ; remède de fond = nommer le plan adverse. Rapport § 9. En attente du go de Sébastien.
+**20 octobre, 21 h (Paris) : cahier des charges du lot 1 bis écrit (go de Sébastien, papier seulement).** Trois règles :
+cumul des retards d'un segment > 1,00 = hors de prix ; dernière chance relue à prof. 18 avant d'être jouée ; « attente
+utile » (proposition de Sébastien, formalisée par le GE : le premier candidat du moteur qui sert un plan du catalogue et coûte
+≤ 0,25, neutre pour le compteur, freiné par le cumul). Bras A (garde-fou) et B (garde-fou + coup utile), livre et prix, témoin
+repris. Critère réécrit avec borne de queue ≤ 3 perdues sur 100. `docs/plans/CAHIER-LOT-1-BIS-2026-10-20.md`, à relire par
+le GE, l'Expert et le Dev chef avant tout code.

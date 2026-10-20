@@ -39,8 +39,22 @@ matériel. Et on note le coup où le plan se réalise.
   désignation du livre** (dans la Carlsbad, Ce5 et b4-b5 sont *tous deux* des plans ; dans l'Espagnole sans dames, installer un
   cavalier en d5 vaut mieux que pousser e5 tout de suite ; dans l'avance, b4 est gratuit mais Fe3 après dxc5 l'est aussi),
   et **une fois la mesure s'était trompée** (un prix pris au milieu d'une ligne tactique, 1,3 pion d'erreur — correctif connu).
-- Par la règle écrite d'avance, **le critère passe : neuf sur dix**. Mais il passe grâce à la clause de profondeur 30, pas
-  grâce à la passe seule, et le rapport le dit.
+- Par la règle écrite d'avance, **le critère passe : neuf sur dix — sur un tirage de l'instrument.** Il passe grâce à la
+  clause de profondeur 30, pas grâce à la passe seule, et le rapport le dit. **Rectificatif du 19 octobre (après-midi)** : la
+  robustesse du faisceau à une perturbation de dix centièmes de pion n'a pas encore été mesurée ; sur trente-cinq plans,
+  dix-sept changent de phrase quand on change seulement l'état de la table du moteur, et le compte automatique passe de six
+  à cinq positions sur dix. Le faisceau est reproductible (deux passes fraîches identiques au centième), il n'est pas
+  encore prouvé robuste. **Le taux de passage a été mesuré (19 octobre, 16 h)** : dix positions sous six tirages (profondeur
+  17, 18, 19, table vidée ou gardée), deux heures sur Orion. **Le critère passe dans deux tirages sur six à la règle écrite,
+  trois sur six au canon corrigé** (où la barre est plus haute : sept des huit positions restantes). **Ce n'est pas un
+  verdict, et la piste est fermée** (décision du GE, 18 h). Le canon était
+  faux sur trois positions — le hérisson sans …Tc8, l'Espagnole avec la destination sans la route, l'échange française sans
+  Fg5 — avec des pièces antérieures à la mesure ; il est corrigé, et le corriger ne fait pas passer le critère, ce qui prouve
+  que la correction n'est pas une rustine. Ce qui a tenu dans la secousse : **l'instrument sait ordonner** — le plan le
+  moins cher est le même dans au moins cinq tirages sur six pour six positions sur dix — **il chiffre à un demi-pion près,
+  et sa phrase (« c'est le plan », « ça coûte ») ne tient pas** : elle change une fois sur trois pour un pli de profondeur,
+  une fois sur deux pour l'état de la table. Le plan est plus stable que le coup, l'ordre plus stable que le prix, le prix
+  plus stable que la phrase. On ne lui demandera plus de trancher par position.
 - La vraie leçon : **le livre parle du plan de la structure, le faisceau mesure le plan de la position**, et l'écart entre les
   deux, c'est le moment — « le plan de cette structure est b4-b5, le plan de ce coup est Ce5, et b4-b5 revient quinze
   demi-coups plus tard pour un demi-pion ». Aucun livre ne dit ça position par position.
