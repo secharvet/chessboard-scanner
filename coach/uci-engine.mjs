@@ -35,6 +35,9 @@ export class UciEngine {
     this.name = null;
     // COACH_DETERMINISTIC=1 (banc) : un seul fil, sinon Stockfish ne redonne pas deux fois la même recherche.
     this.deterministe = process.env.COACH_DETERMINISTIC === '1';
+    // COACH_HASH_GARDE=1 (contrôle) : un fil mais table GARDÉE entre les recherches — l'ancienne mesure, pour isoler l'effet
+    // de l'historique à code identique. Jamais pour une mesure publiée.
+    this.hashGarde = process.env.COACH_HASH_GARDE === '1';
     this.threads = opts.threads ?? (this.deterministe ? 1 : 2);
     this.hashMb = opts.hashMb ?? 128;
     /** @type {import('node:child_process').ChildProcess | null} */
@@ -101,7 +104,7 @@ export class UciEngine {
       // Mode de mesure (COACH_DETERMINISTIC=1) : table de hachage vidée AVANT CHAQUE recherche, pour que la valeur d'une
       // position ne dépende que d'elle et de la profondeur, pas de ce qui a été cherché avant (19 oct. : jusqu'à 12 cp et
       // l'ordre des candidats changés par l'historique ; surcoût mesuré 3 %). Le coach en service garde la table.
-      if (this.deterministe) await this.#waitFor('ucinewgame\nisready', (l) => l === 'readyok');
+      if (this.deterministe && !this.hashGarde) await this.#waitFor('ucinewgame\nisready', (l) => l === 'readyok');
 
       /** @type {Map<number, EngineLine>} */
       const lines = new Map();

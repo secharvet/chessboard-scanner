@@ -23,8 +23,8 @@ export const POSITIONS = [
       { famille: 'transfert', de: 'f3', vers: 'e5' },
       { famille: 'transfert', de: 'd1', vers: 'd3' },
     ] },
-  { id: 'herisson', canoniques: [0, 1], nom: 'Hérisson (Anglaise), Noirs', coups: 'c4 c5 Nf3 Nf6 Nc3 e6 g3 b6 Bg2 Bb7 O-O Be7 d4 cxd4 Qxd4 d6 Rd1 a6 b3 Nbd7 e4 Qc7 Bb2 O-O Qe3 Rfe8 Nd4 Bf8 Rac1',
-    attendu: 'les deux ruptures …b5 et …d5, préparées longtemps ; …Tc8 est le préparatif classique',
+  { id: 'herisson', canoniques: [0, 1, 2], canoniquesV1: [0, 1], nom: 'Hérisson (Anglaise), Noirs', coups: 'c4 c5 Nf3 Nf6 Nc3 e6 g3 b6 Bg2 Bb7 O-O Be7 d4 cxd4 Qxd4 d6 Rd1 a6 b3 Nbd7 e4 Qc7 Bb2 O-O Qe3 Rfe8 Nd4 Bf8 Rac1',
+    attendu: 'les deux ruptures …b5 et …d5, préparées longtemps ; …Tc8 est le préparatif classique. Désignation v2 (19 oct., GE) : la colonne c entre au canon — pièce antérieure : cet attendu même ; sonde Expert prof. 30 : …Tac8 meilleur coup (−0,10), b5 immédiat −2,70, d5 immédiat −3,98',
     plans: [
       { famille: 'rupture', pion: 'b', cible: 'b5' },
       { famille: 'rupture', pion: 'd', cible: 'd5' },
@@ -38,8 +38,8 @@ export const POSITIONS = [
       { famille: 'colonne', colonne: 'c' },
       { famille: 'transfert', de: 'c3', vers: 'b5' },
     ] },
-  { id: 'espagnole-echange', canoniques: [0, 1], nom: 'Espagnole d\'échange sans dames, Blancs', coups: 'e4 e5 Nf3 Nc6 Bb5 a6 Bxc6 dxc6 O-O f6 d4 exd4 Nxd4 c5 Nb3 Qxd1 Rxd1 Bg4 f3 Be6',
-    attendu: 'faire valoir la majorité à l\'aile roi : f4 puis e5 (une conjonction) ; e5 seul doit montrer f4 comme coup préparatoire ; le cavalier vers d5 via c3. Expert (prof. 20) : f4 immédiat vaut −0,65 (…Fd6 ! cloue le pion) et le meilleur coup est Ff4 — l\'échange des fous de cases noires débloque la rupture : f4 doit sortir « progressant mais cher »',
+  { id: 'espagnole-echange', canoniques: [0, 1, 2, 3], canoniquesV1: [0, 1], nom: 'Espagnole d\'échange sans dames, Blancs', coups: 'e4 e5 Nf3 Nc6 Bb5 a6 Bxc6 dxc6 O-O f6 d4 exd4 Nxd4 c5 Nb3 Qxd1 Rxd1 Bg4 f3 Be6',
+    attendu: 'faire valoir la majorité à l\'aile roi : f4 puis e5 (une conjonction) ; e5 seul doit montrer f4 comme coup préparatoire ; le cavalier vers d5 via c3. Expert (prof. 20) : f4 immédiat vaut −0,65 (…Fd6 ! cloue le pion) et le meilleur coup est Ff4 — l\'échange des fous de cases noires débloque la rupture : f4 doit sortir « progressant mais cher ». Désignation v2 (19 oct., GE) : la route entre au canon avec la destination — Cd5 (« le cavalier vers d5 via c3 », ci-dessus) et l\'échange des fous de cases noires (Ff4, « débloque la rupture », ci-dessus) ; pièces antérieures : cet attendu même, l\'arbitrage Expert prof. 30 du 18 oct. (Cd5 vaut mieux qu\'e5)',
     plans: [
       { famille: 'et', plans: [{ famille: 'poussee', pion: 'f', cible: 'f4' }, { famille: 'rupture', pion: 'e', cible: 'e5' }] },
       { famille: 'rupture', pion: 'e', cible: 'e5' },
@@ -78,8 +78,8 @@ export const POSITIONS = [
       { famille: 'echange', mienne: 'b5', cible: 'c6' },
       { famille: 'transfert', de: 'b5', vers: 'd3' },
     ] },
-  { id: 'fr-echange', canoniques: [0], nom: 'Française d\'échange symétrique après 6…O-O, Blancs', coups: 'e4 e6 d4 d5 exd5 exd5 Nf3 Bd6 Bd3 Nf6 O-O O-O',
-    attendu: 'livre : casser la symétrie par c4 ; les tours sur la colonne e ; Fg5 cloue',
+  { id: 'fr-echange', canoniques: [0, 2], canoniquesV1: [0], nom: 'Française d\'échange symétrique après 6…O-O, Blancs', coups: 'e4 e6 d4 d5 exd5 exd5 Nf3 Bd6 Bd3 Nf6 O-O O-O',
+    attendu: 'livre : casser la symétrie par c4 ; les tours sur la colonne e ; Fg5 cloue. Désignation v2 (19 oct., GE) : Fg5 entre au canon — pièces antérieures : le livre le joue lui-même au 7e coup, cet attendu (« Fg5 cloue »), l\'Expert l\'annonçait dès la désignation comme cas-test ; sonde prof. 30 : Fg5 meilleur coup (+0,12), c4 immédiat −0,13 (droit d\'entrée, pas réfutation)',
     plans: [
       { famille: 'rupture', pion: 'c', cible: 'c4' },
       { famille: 'colonne', colonne: 'e' },
