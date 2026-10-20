@@ -21,10 +21,15 @@ utile dit quoi faire pendant qu'on attend.**
 1. Chaque segment de plan (livre, enchaînement, service) porte **la somme des retards** des coups du coach joués sous lui,
    **sauf les coups « forcé »** (une parade est neutre pour le plan, GE 19 oct.). Le retard est celui qui est déjà publié :
    meilleur coup de la MultiPV à la profondeur de jeu − valeur du coup joué.
-2. Quand cette somme **dépasse 1,00 pion** (100 cp, la borne `concession` déjà en vigueur coup par coup), le plan est **hors
+2. **Le cumul se lit avant le coup** (Expert) : un pas du plan qui porterait la somme au-dessus de 1,00 pion est **refusé
+   comme un pas trop cher**, et le coup se joue comme si le plan n'avait pas de pas admissible (roque, attente utile,
+   intendance, libre). Lu après coup, le cumul laisserait passer le paiement fautif : française SF 19 n° 3, Fe7 27 + O-O 85 =
+   112, O-O était déjà joué ; lu avant, O-O est refusé et le libre joue Tg8 (−0,11 contre −1,86 à prof. 30). Panov : Cd5 54 +
+   Dc7 69 = 123, refusé au deuxième paiement au lieu de payer jusqu'au ply 33.
+3. Quand la somme **atteint ou dépasse 1,00 pion** (100 cp, la borne `concession` déjà en vigueur coup par coup), le plan est **hors
    de prix en jeu** : abandon, raison « hors de prix (cumul) », publiée à part de « hors de prix (compteur) » ; on enchaîne
    sur l'instance suivante, comme aujourd'hui.
-3. Le cumul est un **déclencheur d'abandon, pas un prix** : le prix publié du segment reste celui du faisceau libre au point
+4. Le cumul est un **déclencheur d'abandon, pas un prix** : le prix publié du segment reste celui du faisceau libre au point
    calme (« un plan se paie à sa réalisation »). Le rapport publie les deux côte à côte (Expert : la somme des retards dit la
    part propre du plan, le prix contient la boule de neige d'après-faute).
 
@@ -40,7 +45,8 @@ progressant trop cher) et le coup est joué en « libre », compteur + 1. Cas du
 branche « intendance »), on regarde les candidats de la MultiPV (quatre, profondeur de jeu) qui ne sont pas des pas du plan.
 Un candidat **sert** un plan du catalogue si, après lui, la distance de ce plan baisse — la même mesure que la colonne
 « sert » du faisceau (`faisceau-plan.mjs`), portée dans l'exécutant. Plans comptés : les autres instances de la structure
-reconnue (le catalogue de la position, plan courant exclu).
+reconnue (le catalogue de la position, plan courant exclu), **sauf celles déjà abandonnées « hors de prix » dans la partie**
+(Expert : servir un plan qu'on vient de déclarer impayable n'est pas utile).
 
 1. **Le moteur choisit, pas la règle** : on joue **le premier candidat, dans l'ordre du moteur, qui sert au moins un plan et
    coûte au plus 0,25 pion** (le plancher : un coup utile est gratuit dans le bruit, sinon il redevient un paiement). À
@@ -51,7 +57,10 @@ reconnue (le catalogue de la position, plan courant exclu).
    ce qui a perdu les seize parties ; les deux règles ne se jouent pas l'une sans l'autre.
 3. **Borne d'attente** : au-delà de **six coups consécutifs du coach sans progressant** (attentes utiles comprises), le plan
    est abandonné « en attente » — un plan qui n'avance pas en six coups n'est plus le plan de la position, même gratuit.
-   *(Valeur à trancher par le GE : six est une proposition.)*
+   *(Valeur à trancher par le GE : six est une proposition ; l'Expert l'endosse, le double du « trois sans progressant »
+   actuel parce que l'attente est devenue gratuite.)* Un plan abandonné « en attente » **n'a pas démérité : il reste
+   ré-adoptable** plus tard, contrairement à « hors de prix » (sinon, dans les structures à préparation longue comme le
+   hérisson, la borne jetterait définitivement le bon plan alors qu'il fallait jouer d'abord l'instance mûre).
 4. Phrase du coach (publiée dans le journal, pas encore dans l'interface) : « le plan [X] attend ; en attendant, [coup] sert
    [plans servis] ».
 5. **Ce que le coup utile ne couvre pas dans ce lot** : le regroupement près du roi (`atoms.mjs`) n'a pas de distance, donc
@@ -63,6 +72,10 @@ plan courant** : la règle 3 telle qu'écrite ne les touche pas. Les couvrir veu
 plan » (le coup sert un plan du catalogue sans qu'aucun soit adopté) — c'est presque la règle différée « service après
 abandon » (relecture § 9.1). Proposition : **oui, dans le bras B, étiqueté « attente utile sans plan »**, publié à part, même
 borne de coût, sans compteur (il n'y a pas de plan à abandonner). Sinon la couverture ne bougera presque pas.
+L'Expert l'endosse (c'est son « service après abandon » en plus prudent : pas d'adoption, étiqueté, publié à part) **avec sa
+propre addition** : sans plan pas de segment, donc pas de cumul, et vingt-six coups à 0,25 pourraient payer en silence ce que
+la règle 1 interdit. **La somme des retards « attente utile sans plan » d'une partie est plafonnée à 1,00 pion ; au-delà,
+retour au libre pur.** Personne ne paie sans addition.
 
 ## 5. Les bras
 
