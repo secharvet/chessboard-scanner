@@ -188,3 +188,15 @@ déclenche, et l'effondrement de la colonne d est à quatre-six demi-coups. Troi
 2. référence = **faisceau libre depuis la même position**, mêmes réglages ;
 3. **un seul sauvetage par segment** : si l'addition déborde à nouveau après un sauvetage, abandon sans deuxième
    vérification (« un plan qui redemande sans cesse la caisse est mort »).
+
+## 13. Relecture du Dev chef sur la vérification et la reprise (§ 11)
+
+1. **Faisceau court dans l'exécutant** : sûr, avec le même Noteur (cache par position et profondeur, table vidée avant
+   chaque recherche, appels séquentiels) ; interdit table gardée ou à plusieurs fils, comme partout.
+2. **Une vérification par segment** (concorde avec l'Expert, § 12.3) : au deuxième refus par le cumul dans un même segment,
+   abandon direct.
+3. **Reprise d'un plan « en attente »** : une seule classification par coup, deux usages — les compteurs du plan actif et le
+   balayage des plans dormants. Le balayage ne coûte aucun appel moteur (distance sur les quatre candidats déjà notés) ; si
+   une vérification de prix est exigée, une seule fois, au moment de la reprise. **À la reprise, le plan garde son cumul et
+   sa borne** (pas de remise à zéro : pas d'oscillation abandon → reprise → abandon). Plusieurs dormants jouables au même
+   coup : **le premier dans l'ordre du catalogue**.
