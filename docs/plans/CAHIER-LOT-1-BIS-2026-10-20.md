@@ -134,3 +134,17 @@ après), les instances « hors de prix » exclues du « sert », le plan abandon
 1,00 pion par partie pour l'attente utile sans plan. Réserve endossée telle quelle : le coup utile ne voit ni Tg8 (c'est un
 refus de progressant, donc la règle 1) ni la défense du roi de la Panov (aucun plan du catalogue ne la mesure : le plan
 adverse, autre chantier). Pour la Panov, c'est le cumul lu avant qui borne les dégâts.
+
+## 10. Relecture du Dev chef (20 octobre, soir) — conditions de mise en œuvre
+
+Les quatre points sont sains ; aucun appel moteur de plus (la dernière chance relue utilise le retard à 18 déjà calculé ;
+« sert » n'est que de la distance sur les quatre candidats déjà notés). Conditions retenues pour le code :
+1. **Une seule source de vérité** : compteur, cumul et borne d'attente se mettent à jour en un seul endroit, à partir de la
+   classe du coup. Le cumul (somme des retards hors « forcé », jamais remise à zéro) est orthogonal au compteur ; la borne
+   d'attente suit le compteur **sauf** sur l'attente utile — divergence écrite explicitement, pas trois `if` dispersés.
+2. La dernière chance est refusée sur son **retard à 18**, pas sur son coût à 14 ; raison publiée à part : « dernière chance
+   refusée (relecture 18) ».
+3. **Non-régression ciblée** : les parties rejouées options coupées couvrent les branches touchées — les quatre dernières
+   chances au-dessus de la borne (109, 110, 112, 129), un abandon au compteur et une bascule — pas un tirage au hasard.
+4. **Reprise du témoin par moteur** : une partie fraîche identique contre le témoin du lot 1 à SF 19, une autre à SF 17.1.
+Le Dev chef relira le code sur `division` avant toute fusion, en particulier la source unique.
