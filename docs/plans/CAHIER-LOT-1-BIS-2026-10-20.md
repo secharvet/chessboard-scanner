@@ -113,3 +113,11 @@ un exécutant sain.
 3. **Non-régression** : options coupées, quelques parties du lot 1 rejouées doivent être identiques hors secondes.
 4. Déterminisme : deux parties fraîches identiques par bras nouveau, à chaque moteur.
 5. Puis le go de Sébastien pour jouer. Ensuite seulement : le lot de perturbation, sur le bras retenu.
+
+## 9. Relecture de l'Expert (20 octobre, soir) — intégrée ci-dessus
+
+Le sens tient. Quatre corrections, toutes reprises : le cumul lu **avant** le coup (le trou du premier jet : il constatait
+après), les instances « hors de prix » exclues du « sert », le plan abandonné « en attente » ré-adoptable, et un plafond de
+1,00 pion par partie pour l'attente utile sans plan. Réserve endossée telle quelle : le coup utile ne voit ni Tg8 (c'est un
+refus de progressant, donc la règle 1) ni la défense du roi de la Panov (aucun plan du catalogue ne la mesure : le plan
+adverse, autre chantier). Pour la Panov, c'est le cumul lu avant qui borne les dégâts.
