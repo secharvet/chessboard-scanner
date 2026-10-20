@@ -177,3 +177,14 @@ Le Dev chef relira le code sur `division` avant toute fusion, en particulier la 
 - (i) SF 19 : B-livre + B-prix (400) ; SF 17.1 : B-livre (200) = **600**, mais sans bras A, on ne sépare plus le garde-fou
   du coup utile ;
 - (ii) SF 19 : A-livre, A-prix, B-livre, B-prix (800) ; SF 17.1 : A-livre + B-livre (400) = 1 200.
+
+## 12. Relecture de l'Expert sur la vérification au faisceau (§ 11.1)
+
+Sur pièces du journal, la vérification n'aurait **sauvé à tort aucune** des fautes vues : O-O (française n° 3/8) est refusé
+à 27 + 85 = 112 et le faisceau ne peut pas dire gratuit (référence libre −0,11 par Tg8, glissade 17.Cf6+ à quatre
+demi-coups) ; Cd5 (Panov) ne déclenche pas la vérification (54 seul, sous la borne), c'est Dc7 (54 + 69 = 123) qui la
+déclenche, et l'effondrement de la colonne d est à quatre-six demi-coups. Trois conditions retenues :
+1. horizon de la vérification **au moins 8 à 10 demi-coups** (l'attaque doit atterrir dedans) ;
+2. référence = **faisceau libre depuis la même position**, mêmes réglages ;
+3. **un seul sauvetage par segment** : si l'addition déborde à nouveau après un sauvetage, abandon sans deuxième
+   vérification (« un plan qui redemande sans cesse la caisse est mort »).
