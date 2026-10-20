@@ -112,33 +112,95 @@ export async function derniereChance(noteur, fen, side, plan, cands, p = DEFAUTS
  * @returns {Promise<{ m, uci, classe, compteur, retard, cout, progressant, cands, concession? }>}
  */
 export async function choisirCoup(noteur, fen, side, plan, etat = {}, p = DEFAUTS) {
-  const compteur = etat.compteur ?? 0;
+  const compteur = etat.compteur ?? 0, R = p.regles ?? null;
   const cands = await noteur.noter(fen, p.candidats);
   if (!cands.length) return null;
   const { admis, forcee, coutRefuseMin } = classerCandidats(fen, side, plan, cands, compteur, p);
-  const sortie = (a, classe, cpt, extra = {}) => ({ m: a.m, uci: a.uci, classe, compteur: cpt, retard: cands[0].cp - a.cp, cout: cands[0].cp - a.cp, progressant: ['progressant', 'forcé-progressant', 'dernière chance'].includes(classe), cands, ...extra });
+  // Règle 1 (cahier du lot 1 bis, § 2) : l'addition se lit AVANT le coup — un coup qui la porterait au-delà de la borne est refusé.
+  const deborde = (retard) => R?.cumul != null && (etat.cumul ?? 0) + Math.max(0, retard) > R.cumul;
+  let refus = null;
+  const fin = (r) => (refus ? { ...r, refus } : r);
+  const sortie = (a, classe, extra = {}) => { const retard = cands[0].cp - a.cp; return fin({ m: a.m, uci: a.uci, classe, ...avancer(etat, classe, retard), retard, cout: retard, progressant: ['progressant', 'forcé-progressant', 'dernière chance'].includes(classe), cands, ...extra }); };
   // Le forcé AVANT le progressant (GE, 19 oct.) : une parade est neutre pour le plan, qui reprend au coup suivant ; sinon un
   // pas à 0,9 passerait devant une pièce en prise et le prix contiendrait de la tactique.
-  if (forcee) { const a0 = admis.find((a) => a.cand === cands[0]); return a0?.progressant ? sortie(cands[0], 'forcé-progressant', 0) : sortie(cands[0], 'forcé', compteur); }
+  if (forcee) { const a0 = admis.find((a) => a.cand === cands[0]); return a0?.progressant ? sortie(cands[0], 'forcé-progressant') : sortie(cands[0], 'forcé'); }
   const prog = admis.find((a) => a.progressant); // admis est dans l'ordre du moteur : le premier progressant est le meilleur
-  if (prog) return sortie(prog.cand, 'progressant', 0);
+  if (prog && !deborde(prog.cout)) return sortie(prog.cand, 'progressant');
+  if (prog) {
+    // Refus par l'addition : une vérification au faisceau court, une seule par segment (cahier § 11.1, § 12.3, § 13.2) —
+    // gratuit (≤ plancher), c'est un sacrifice en cours de route : le pas est joué et l'addition repart du prix vérifié.
+    refus = { san: prog.cand.m.san, cumul: (etat.cumul ?? 0) + prog.cout };
+    if (R.verifier && p.verifier && !etat.sauvetages) {
+      const prix = await p.verifier(fen, plan); refus.prixVerifie = prix;
+      if (prix != null && prix <= p.plancher) { const v = refus; refus = null; return { ...sortie(prog.cand, 'progressant'), cumul: Math.max(0, prix), sauvetage: v }; }
+    }
+  }
   const roque = admis.find((a) => a.classe === 'roque');
-  if (roque) return sortie(roque.cand, 'roque', compteur);
+  if (roque && !deborde(roque.cout)) return sortie(roque.cand, 'roque');
+  // Règle 3 (§ 4) : l'attente utile — le premier candidat, dans l'ordre du moteur, qui n'est pas un pas du plan, coûte au plus
+  // le plancher et sert au moins un plan du catalogue (p.sert : distance seulement, aucun appel moteur).
+  if (R?.utile != null && p.sert) {
+    const d0 = distance(fen, side, plan).d;
+    for (const c of cands) {
+      const cout = cands[0].cp - c.cp; if (cout > R.utile || deborde(cout)) continue;
+      const apres = new Chess(fen); apres.move(c.m.san);
+      if (distance(apres.fen(), side, suivre(plan, c.m)).d < d0) continue; // un pas du plan (refusé plus haut) n'est pas une attente
+      const sert = p.sert(fen, c.m); if (sert.length) return sortie(c, 'attente utile', { sert });
+    }
+  }
   let concession = Number.isFinite(coutRefuseMin) ? coutRefuseMin : null;
   if (compteur >= p.k) {
     const dc = await derniereChance(noteur, fen, side, plan, cands, p);
     if (dc?.admis) {
       const apres = jouer(fen, dc.cand.uci); const [rep] = await noteur.noter(apres.fen, 1);
       const valeur = rep ? -rep.cp : dc.cand.cp; // à la profondeur de jeu, comme les autres
-      return { m: dc.cand.m, uci: dc.cand.uci, classe: 'dernière chance', compteur: 0, retard: cands[0].cp - valeur, cout: dc.cout, progressant: true, cands };
+      const retard = cands[0].cp - valeur;
+      // Règle 2 (§ 3, § 10.2) : la dernière chance est jugée sur son retard à la profondeur de jeu, pas sur son coût à 14.
+      if (R?.relireDC && retard > p.concession) return sortie(cands[0], 'libre', { concession, dcRefusee: { san: dc.cand.m.san, retard } });
+      if (deborde(retard)) { refus = { san: dc.cand.m.san, cumul: (etat.cumul ?? 0) + retard, derniereChance: true }; return sortie(cands[0], 'libre', { concession }); }
+      return fin({ m: dc.cand.m, uci: dc.cand.uci, classe: 'dernière chance', ...avancer(etat, 'dernière chance', retard), retard, cout: dc.cout, progressant: true, cands });
     }
     if (dc) concession = concession == null ? dc.cout : Math.min(concession, dc.cout);
-    return sortie(cands[0], 'libre', compteur + 1, { concession });
+    return sortie(cands[0], 'libre', { concession });
   }
-  return sortie(cands[0], 'intendance', compteur + 1, { concession });
+  return sortie(cands[0], 'intendance', { concession });
 }
 /** Le plan est-il hors de prix en jeu ? (k + 1 coups consécutifs sans progressant admissible) */
 export const horsDePrix = (etat, p = DEFAUTS) => (etat.compteur ?? 0) >= p.k + 1;
+
+/**
+ * Lot 1 bis (docs/plans/CAHIER-LOT-1-BIS-2026-10-20.md) : les règles, coupées par défaut (comportement du lot 1).
+ * A = le garde-fou (cumul lu avant le coup, vérification au faisceau, dernière chance relue) ; B = A + l'attente utile.
+ */
+export const REGLES_1BIS = Object.freeze({
+  A: Object.freeze({ cumul: 100, verifier: true, relireDC: true }),
+  B: Object.freeze({ cumul: 100, verifier: true, relireDC: true, utile: 25, patience: 6, sansPlan: true, plafondSansPlan: 100 }),
+});
+
+/**
+ * La source unique (Dev chef, cahier § 10.1) : compteur, attente et cumul suivent de la classe du coup et de son retard.
+ * Un pas (progressant, forcé-progressant, dernière chance) remet compteur et attente à zéro ; forcé et roque les traversent ;
+ * le reste les incrémente — SEULE divergence : l'attente utile est neutre pour le compteur mais compte pour la patience.
+ * Le cumul additionne les retards de tous les coups sauf les forcés (une parade est neutre), et n'est jamais remis à zéro.
+ */
+export function avancer(etat, classe, retard) {
+  const compteur = etat.compteur ?? 0, attente = etat.attente ?? 0, cumul = etat.cumul ?? 0;
+  const pas = ['progressant', 'forcé-progressant', 'dernière chance'].includes(classe), neutre = ['forcé', 'roque'].includes(classe);
+  return {
+    compteur: pas ? 0 : neutre || classe === 'attente utile' ? compteur : compteur + 1,
+    attente: pas ? 0 : neutre ? attente : attente + 1,
+    cumul: classe === 'forcé' ? cumul : cumul + Math.max(0, retard),
+  };
+}
+
+/** Pourquoi le plan s'arrête-t-il avant le coup (null : il continue) ? Sans règles, le seul « hors de prix » du lot 1. */
+export function raisonAbandon(etat, p = DEFAUTS) {
+  const R = p.regles;
+  if (horsDePrix(etat, p)) return R ? 'hors de prix (compteur)' : 'hors de prix';
+  if (R && etat.cumulDeborde) return 'hors de prix (cumul)';
+  if (R?.patience != null && (etat.attente ?? 0) >= R.patience) return 'en attente';
+  return null;
+}
 
 /** Prolonge une position (à mon trait) jusqu'à un point calme : mon meilleur coup + la meilleure réponse ; l'échec toujours, le reste `p.budgetCalme` (2) fois au plus. */
 export async function pointCalme(noteur, fen, ply, side, p = DEFAUTS) {

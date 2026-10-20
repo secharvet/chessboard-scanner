@@ -3,7 +3,7 @@
  * Le pilote de partie — l'épreuve du jeu (docs/plans/PROTOCOLE-EPREUVE-DU-JEU-2026-10-19.md).
  *
  *   node scripts/plans/partie.mjs --depart <id> --camp w|b --bras livre|prix|temoin [--parties 10] [--numeros 1,3]
- *                                 [--depth 18] [--plies 80] [--elargi] [--out reports/plans/epreuve/<dossier>]
+ *                                 [--depth 18] [--plies 80] [--elargi] [--regles A|B] [--out reports/plans/epreuve/<dossier>]
  *
  * Un processus = un départ × un camp × un bras × ses parties (le cache de notation partage les préfixes). Un fil
  * (COACH_DETERMINISTIC=1), STOCKFISH_PATH pour le binaire.
@@ -21,13 +21,17 @@
  * Mesure (§ 3) : le prix de chaque segment (adoption → abandon) contre le faisceau libre lancé depuis la position
  * d'adoption, écart au point calme (coach/coup-contraint.mjs → prixDeSegment, réglages du faisceau du 18 octobre) ;
  * coût de la partie = somme des prix. Journal : la somme des retards coup par coup (secondaire), la classe de chaque coup.
+ *
+ * Lot 1 bis (--regles, docs/plans/CAHIER-LOT-1-BIS-2026-10-20.md ; sans l'option, le lot 1 à l'identique) : A = le garde-fou
+ * (cumul lu avant le coup avec une vérification au faisceau par segment, dernière chance relue à la profondeur de jeu) ;
+ * B = A + l'attente utile (sous plan, et sans plan quand la table est épuisée), la patience et la reprise des plans en attente.
  */
 import { writeFileSync, mkdirSync } from 'node:fs';
 import { Chess } from 'chess.js';
 import { UciEngine } from '../../coach/uci-engine.mjs';
 import { distance, suivre, verrouiller, libelle } from '../../coach/plan-distance.mjs';
 import { instancier } from '../../coach/plans-structures.mjs';
-import { Noteur, DEFAUTS, choisirCoup, horsDePrix, reponsesOuvertes, prixDeSegment, structureCourante, jouable, jouer, borneCp, faisceauLibre } from '../../coach/coup-contraint.mjs';
+import { Noteur, DEFAUTS, REGLES_1BIS, choisirCoup, raisonAbandon, reponsesOuvertes, prixDeSegment, structureCourante, jouable, jouer, borneCp, faisceauLibre } from '../../coach/coup-contraint.mjs';
 import { faisceauPlan, REGLAGES_FAISCEAU } from '../../coach/faisceau-plan.mjs';
 import { enToFr } from '../../coach/notation.mjs';
 import { trouverDepart, fenDepart } from './departs.mjs';
@@ -40,6 +44,8 @@ const BRAS = opt('--bras', 'livre'); if (!['livre', 'prix', 'temoin'].includes(B
 const DEPTH = Number(opt('--depth', 18)), PLIES = Number(opt('--plies', 80)), PARTIES = Number(opt('--parties', 10));
 const NUMEROS = opt('--numeros', null)?.split(',').map(Number) ?? Array.from({ length: PARTIES }, (_, i) => i + 1);
 const ELARGI = args.includes('--elargi'); // fenêtre d'ex æquo adverse à 40 cp (N effectif < 5)
+const NOM_REGLES = opt('--regles', null); if (NOM_REGLES && !REGLES_1BIS[NOM_REGLES]) { console.error('--regles A|B'); process.exit(2); }
+const REGLES = NOM_REGLES ? REGLES_1BIS[NOM_REGLES] : null;
 const OUT = opt('--out', `reports/plans/epreuve/partie-${DEP.id}-${CAMP}-${BRAS}`);
 const fmt = (c) => (c == null || !Number.isFinite(c) ? '—' : (c / 100).toFixed(2).replace('.', ',').replace(/^(-?)/, (m) => (m === '-' ? '−' : '+')));
 const fr = enToFr;
@@ -47,7 +53,7 @@ const fr = enToFr;
 const engine = new UciEngine({ threads: process.env.COACH_DETERMINISTIC === '1' ? 1 : 2, hashMb: 256 });
 const noteur = new Noteur(engine, { depth: DEPTH });
 /** L'exécutant : MultiPV 4 à la profondeur de jeu, dernière chance décidée à 14 (§ 5 bis, 8). */
-const P = { ...DEFAUTS, depth: DEPTH, depthDerniereChance: Math.min(14, DEPTH) };
+const P = { ...DEFAUTS, depth: DEPTH, depthDerniereChance: Math.min(14, DEPTH), regles: REGLES };
 /** L'adversaire : réponses ex æquo ≤ 25 cp (40 si élargi). */
 const PA = { ...DEFAUTS, plancher: ELARGI ? 40 : DEFAUTS.plancher };
 /** La mesure : le faisceau libre du 18 octobre (largeur 4, quatre candidats), dernière chance à la profondeur de jeu comme dans le faisceau. */
@@ -67,17 +73,28 @@ async function partie(numero) {
   const side = CAMP, adv = side === 'w' ? 'b' : 'w';
   let fen = fenDepart(DEP), ply = 0;
   const sans = [], journal = [], segments = [], tirages = [];
-  const coach = { plan: null, structure: null, nomStructure: null, utilises: new Set(), compteur: 0, realise: false, dApresMoi: null, dernier: null, dissoute: false };
+  const coach = { plan: null, structure: null, nomStructure: null, utilises: new Set(), compteur: 0, realise: false, dApresMoi: null, dernier: null, dissoute: false,
+    cle: null, inst: null, cumul: 0, attente: 0, sauvetages: 0, cumulDeborde: false, impayables: new Set(), dormants: [], sansPlanCumul: 0 };
+  /** L'état propre au segment (lot 1 bis) : remis à zéro à l'adoption, sauf pour un plan en attente qui revient (Dev chef, § 13.3). */
+  const etatNeuf = () => ({ cumul: 0, attente: 0, sauvetages: 0, cumulDeborde: false });
   let seg = null;
   const fermer = (raison) => {
     if (!seg) return;
     seg.plyAbandon = ply; seg.fenAbandon = fen; seg.raison = raison; seg.plies = ply - seg.plyAdoption;
     if ((coach.forces ?? 0) >= FORCES_MAX) seg.abandonTactique = true; // abandonné en pleine séquence forcée : pas de prix ici
     segments.push(seg);
+    if (REGLES) {
+      seg.cumul = coach.cumul;
+      if (/^hors de prix/.test(raison)) coach.impayables.add(coach.cle);
+      // Un plan abandonné en attente n'a pas démérité : il dort avec son état, et revient dès qu'un pas gratuit réapparaît (§ 11.3).
+      if (raison === 'en attente') coach.dormants.push({ inst: { ...coach.inst, plan: coach.plan }, cle: coach.cle, etat: { compteur: 0, cumul: coach.cumul, attente: coach.attente, sauvetages: coach.sauvetages, cumulDeborde: false } });
+    }
     coach.dernier = { plan: coach.plan, raison }; seg = null; coach.plan = null; coach.compteur = 0; coach.realise = false; coach.forces = 0;
+    Object.assign(coach, etatNeuf()); coach.cle = null; coach.inst = null;
   };
-  const adopter = (inst, origine, choix = null) => {
+  const adopter = (inst, origine, choix = null, etat = null) => {
     coach.plan = inst.plan; coach.compteur = 0; coach.realise = false; coach.utilises.add(cleInstance(inst));
+    coach.cle = cleInstance(inst); coach.inst = inst; Object.assign(coach, etat ?? etatNeuf());
     seg = { plan: libelle(inst.plan, fen), pourquoi: inst.pourquoi ?? null, structure: coach.nomStructure, origine, choix, plyAdoption: ply, fenAdoption: fen, coups: 0, retards: 0, classes: {} };
   };
   /** Le plan de service après une réalisation : la colonne que la rupture a ouverte — cible, cible−1, cible+1, sans pion à moi, distance finie (la plus proche de la cible d'abord). */
@@ -108,6 +125,32 @@ async function partie(numero) {
     return { inst: best.inst, choix: notes.map((n) => ({ libelle: n.libelle, phrase: n.phrase, prix: n.prix, tempo: n.tempo, retenu: n === best })) };
   };
 
+  /** Les plans du catalogue qu'un coup sert (distance qui baisse) : instances de la structure courante, plan courant et plans hors de prix exclus. */
+  const servis = (sc) => (fenAvant, m) => {
+    const apres = new Chess(fenAvant); apres.move(m.san); const out = [];
+    for (const i of instancier(fenAvant, side, sc.name, sc.color)) {
+      const k = cleInstance(i); if (k === coach.cle || coach.impayables.has(k) || !jouable(fenAvant, side, i.plan)) continue;
+      if (distance(apres.fen(), side, suivre(i.plan, m)).d < distance(fenAvant, side, i.plan).d) out.push(libelle(i.plan, fenAvant));
+    }
+    return out;
+  };
+  /** La vérification au refus du cumul (§ 11.1, § 12) : faisceau court du plan contre le faisceau libre depuis la même position. */
+  const verifier = async (fenV, plan) => { const libre = await faisceauLibre(noteur, fenV, side, PC.horizon, PC); return (await faisceauPlan(noteur, PC, fenV, side, plan, [], libre, { sousFaisceau: true })).prix; };
+  /** Un plan en attente revient-il ? Le premier dans l'ordre du catalogue qui a un pas gratuit (≤ plancher) parmi les candidats déjà notés. */
+  const reprendre = async (sc) => {
+    if (!REGLES?.patience || !coach.dormants.length) return null;
+    const ordre = instancier(fen, side, sc.name, sc.color).map(cleInstance);
+    const dormants = [...coach.dormants].sort((a, b) => (ordre.indexOf(a.cle) + 1 || 1e9) - (ordre.indexOf(b.cle) + 1 || 1e9));
+    const cands = await noteur.noter(fen, P.candidats); if (!cands.length) return null;
+    for (const d of dormants) {
+      if (!jouable(fen, side, d.inst.plan)) continue;
+      const d0 = distance(fen, side, d.inst.plan).d;
+      const pas = cands.find((c) => { const a = new Chess(fen); a.move(c.m.san); return cands[0].cp - c.cp <= P.plancher && (d.etat.cumul + cands[0].cp - c.cp) <= REGLES.cumul && distance(a.fen(), side, suivre(d.inst.plan, c.m)).d < d0; });
+      if (pas) { coach.dormants = coach.dormants.filter((x) => x !== d); return d; }
+    }
+    return null;
+  };
+
   async function coupDuCoach() {
     const evts = [];
     const sc = structureCourante(fen, side), sig = sc ? `${sc.name}:${sc.color}:${sc.role}` : null;
@@ -118,12 +161,13 @@ async function partie(numero) {
     if (!sc) coach.dissoute = Boolean(coach.structure);
     if (sc && sig !== coach.structure) {
       if (coach.plan) { fermer('bascule'); evts.push(`bascule → ${sc.name} (${sc.role})`); } else if (coach.structure) evts.push(`structure → ${sc.name} (${sc.role})`); else evts.push(`structure ${sc.name} (${sc.role})`);
-      coach.structure = sig; coach.nomStructure = sc.name; coach.utilises = new Set(); coach.dissoute = false;
-    } else if (sc && coach.dissoute) { coach.utilises = new Set(); coach.dissoute = false; evts.push(`structure ${sc.name} de retour`); }
+      coach.structure = sig; coach.nomStructure = sc.name; coach.utilises = new Set(); coach.dissoute = false; coach.dormants = []; coach.impayables = new Set();
+    } else if (sc && coach.dissoute) { coach.utilises = new Set(); coach.dissoute = false; coach.dormants = []; coach.impayables = new Set(); evts.push(`structure ${sc.name} de retour`); }
     let enchaine = false;
     if (coach.plan && coach.realise) { fermer('réalisé'); evts.push('réalisé'); enchaine = true; }
     else if (coach.plan && !jouable(fen, side, coach.plan)) { fermer('sans objet'); evts.push('sans objet'); }
-    else if (coach.plan && horsDePrix(coach, P)) { fermer('hors de prix'); evts.push('hors de prix'); }
+    else if (coach.plan && raisonAbandon(coach, P)) { const raison = raisonAbandon(coach, P); fermer(raison); evts.push(raison); }
+    if (!coach.plan && sc && REGLES) { const d = await reprendre(sc); if (d) { adopter(d.inst, 'reprise', null, d.etat); evts.push(`reprise ${seg.plan}`); } }
     if (!coach.plan && sc) {
       const cands = instancier(fen, side, sc.name, sc.color).filter((i) => !coach.utilises.has(cleInstance(i)) && jouable(fen, side, i.plan));
       if (cands.length) { const ch = await choisirInstance(cands); adopter(ch.inst, enchaine ? 'enchaînement' : BRAS, ch.choix); evts.push(`adoption ${seg.plan}`); }
@@ -131,15 +175,33 @@ async function partie(numero) {
     } else if (!coach.plan && enchaine) { const s = planDeService(); if (s) { adopter(s, 'service'); evts.push(`adoption ${seg.plan}`); } }
     let r;
     if (coach.plan) {
-      r = await choisirCoup(noteur, fen, side, coach.plan, coach, P); if (!r) return false; coach.compteur = r.compteur;
+      r = await choisirCoup(noteur, fen, side, coach.plan, coach, REGLES && sc ? { ...P, sert: servis(sc), verifier } : REGLES ? { ...P, verifier } : P); if (!r) return false; coach.compteur = r.compteur;
+      if (REGLES) {
+        coach.cumul = r.cumul; coach.attente = r.attente;
+        if (r.sauvetage) { coach.sauvetages++; evts.push(`sauvetage ${fr(r.sauvetage.san)} (addition ${fmt(r.sauvetage.cumul)}, faisceau ${fmt(r.sauvetage.prixVerifie)})`); }
+        if (r.refus) { coach.cumulDeborde = true; evts.push(`refus ${fr(r.refus.san)} (addition ${fmt(r.refus.cumul)}${r.refus.prixVerifie !== undefined ? `, faisceau ${fmt(r.refus.prixVerifie)}` : ''})`); }
+        if (r.dcRefusee) evts.push(`dernière chance refusée (relecture ${DEPTH}) ${fr(r.dcRefusee.san)} ${fmt(r.dcRefusee.retard)}`);
+      }
       // Plafond tactique (GE, 19 oct.) : trois coups forcés d'affilée (six demi-coups) marquent le segment « tactique » ; un abandon
       // à cet endroit n'est pas tarifé là (la logique du point calme appliquée au compteur).
       coach.forces = r.classe === 'forcé' ? (coach.forces ?? 0) + 1 : 0;
       if (coach.forces >= FORCES_MAX) { seg.tactique = true; evts.push('tactique'); }
     }
-    else { const cands = await noteur.noter(fen, P.candidats); if (!cands.length) return false; r = { m: cands[0].m, uci: cands[0].uci, classe: 'libre', retard: 0, cands }; }
+    else {
+      const cands = await noteur.noter(fen, P.candidats); if (!cands.length) return false; r = { m: cands[0].m, uci: cands[0].uci, classe: 'libre', retard: 0, cands };
+      // L'attente utile sans plan (§ 4, § 11.2) : table épuisée, structure reconnue — même définition, sans compteur, plafonnée par partie.
+      if (REGLES?.sansPlan && sc) {
+        const sert = servis(sc);
+        for (const c of cands) {
+          const cout = cands[0].cp - c.cp; if (cout > REGLES.utile || coach.sansPlanCumul + Math.max(0, cout) > REGLES.plafondSansPlan) continue;
+          const s = sert(fen, c.m); if (s.length) { r = { m: c.m, uci: c.uci, classe: 'attente utile sans plan', retard: cout, sert: s, cands }; coach.sansPlanCumul += Math.max(0, cout); break; }
+        }
+      }
+    }
     const entree = { ply, san: r.m.san, classe: r.classe, retard: r.retard, plan: seg?.plan ?? null, structure: coach.nomStructure, evts, cands: r.cands.map((x) => `${x.m.san} ${fmt(x.cp)}`).join(' · ') };
     if (r.concession != null) entree.concession = r.concession;
+    if (r.sert) entree.sert = r.sert;
+    if (REGLES && coach.plan) { entree.cumul = coach.cumul; entree.attente = coach.attente; }
     journal.push(entree);
     if (seg) { seg.coups++; seg.retards += r.retard; seg.classes[r.classe] = (seg.classes[r.classe] ?? 0) + 1; }
     const j = jouer(fen, r.uci); sans.push(j.m.san); fen = j.fen; ply++;
@@ -200,7 +262,7 @@ async function partie(numero) {
   const coupsCoach = journal.length, coupsSousPlan = journal.filter((e) => e.plan).length;
   const cout = segments.some((s) => s.prix != null) ? segments.reduce((a, s) => a + (s.prix ?? 0), 0) : null;
   const coutEnveloppe = cout == null ? null : segments.reduce((a, s) => a + (s.prixEnveloppe ?? 0), 0);
-  return { depart: DEP.id, lot: DEP.lot, camp: side, bras: BRAS, numero, graine, elargi: ELARGI, sans, empreinte: fnv(sans.join(' ')), plies: sans.length, resultat, fermeture,
+  return { depart: DEP.id, lot: DEP.lot, camp: side, bras: BRAS, ...(REGLES ? { regles: NOM_REGLES, sansPlanCumul: coach.sansPlanCumul } : {}), numero, graine, elargi: ELARGI, sans, empreinte: fnv(sans.join(' ')), plies: sans.length, resultat, fermeture,
     cout, coutEnveloppe, retards: segments.reduce((a, s) => a + s.retards, 0), coupsCoach, coupsSousPlan, partSousPlan: coupsCoach ? coupsSousPlan / coupsCoach : null,
     segments: segments.map((s) => ({ ...s, fenAdoption: undefined, fenAbandon: undefined, fens: { adoption: s.fenAdoption, abandon: s.fenAbandon } })), tirages, journal, appels: noteur.appels, secondes: Math.round((Date.now() - t0) / 1000) };
 }
