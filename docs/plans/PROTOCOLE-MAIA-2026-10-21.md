@@ -1,7 +1,7 @@
-# Épreuve Maia — protocole (projet, 21 octobre 2026)
+# Épreuve Maia — protocole (21 octobre 2026)
 
-Statut : **projet, à relire par l'Expert, le Dev chef et le GE (via Sébastien). Rien ne s'installe ni ne joue avant la
-page relue et le go de Sébastien sur la version relue.** Ouvert par le go de Sébastien du 21 octobre, sur la proposition du
+Statut : **relu par l'Expert, le Dev chef et le GE (21 oct.) ; rien ne s'installe ni ne joue avant le go de Sébastien
+sur cette version.** Ouvert par le go de Sébastien du 21 octobre, sur la proposition du
 GE (`RAPPORT-LOT-1-BIS-2026-10-21.md` § 7).
 
 ## 1. La question
@@ -95,11 +95,19 @@ relue, le compteur : code du lot 1 bis, règles A. Le bras prix n'est pas joué 
 Effectifs : **250 parties par couleur et par bras guidé** (10 départs × 25 graines), soit 500 par bras guidé ; L-L : 250
 par couleur aussi (pour que la référence ait la même précision). Total : **1 500 parties**.
 
-**Critère** (G-A, puis G-AU séparément) :
+**Critère** (G-A, puis G-AU séparément ; forme fixée par le GE le 21 oct.) :
 
-1. **Score de l'élève guidé ≥ 55 % sur l'ensemble**, et dans **chaque couleur au moins 5 points au-dessus de L-L** pour
-   la même couleur et les mêmes départs.
-2. **Les défaites sur un coup de plan** ne sont pas plus fréquentes chez l'élève guidé que chez le libre (définitions
+0. **Lecture conditionnée par la couverture.** Le critère ne se lit que si le guidage a été **matériel** : médiane d'au
+   moins **3 coups de plan ayant changé le choix par partie** (§ 6, point 3). En dessous, aucune conclusion sur la théorie,
+   mais une conclusion sur l'enseignement : « la théorie n'est pas exécutable par un 1500 sans enseignement », avec la
+   liste des plans abandonnés faute de coup probable (§ 4.2). (Pour un 1500, Tb1 ou a3 avant b5 sont souvent sous 5 % :
+   la couverture sous plan, ≈ 20 % chez Stockfish, peut s'effondrer ici.)
+1. **Barre dure, une seule : score de l'élève guidé ≥ 55 % sur l'ensemble** (500 parties, intervalle ± 4,4). C'est la
+   même phrase que « 5 points au-dessus de L-L », L-L cumulé valant 50 % par construction.
+2. **Par couleur, cohérence seulement** (250 parties, l'écart de deux scores a un intervalle d'environ ± 6 points) :
+   l'élève guidé n'est, dans aucune couleur, sous L-L de la même couleur au-delà de l'intervalle. Le coach doit aider en
+   tout et ne nuire nulle part.
+3. **Les défaites sur un coup de plan** ne sont pas plus fréquentes chez l'élève guidé que chez le libre (définitions
    de l'Expert) :
    - *point de non-retour* : le coup après lequel l'évaluation (Stockfish après coup) passe sous −2,00 et n'y remonte
      plus jusqu'à la fin ; une faute que l'adversaire ne punit pas n'en est pas un ;
@@ -109,8 +117,12 @@ par couleur aussi (pour que la référence ait la même précision). Total : **1
      filtrer ; « moment de plan » = coup où il aurait eu un plan actif ;
    - on compare des **taux** : défaites dont le point de non-retour tombe sur un coup de plan (guidé) ou un moment de
      plan (libre), pour cent coups de ce type.
-3. **En dessous de 52 %**, on écrit : la théorie du livre ne rend pas un 1500 meilleur.
-4. Entre 52 et 55 % : on publie le chiffre avec son intervalle (± 4,4 points à 500 parties), sans conclure.
+4. **Couverture matérielle et score < 52 %** : on écrit « la théorie du livre ne rend pas un 1500 meilleur ».
+5. Entre 52 et 55 % : on publie le chiffre avec son intervalle, sans conclure.
+
+**Première page du rapport** : la masse de probabilité gardée par la restriction aux coups probables (elle vaut pour les
+deux élèves, la comparaison est juste, mais elle fait un Maia un peu plus sage que le vrai : on doit savoir de quel 1500
+on parle), puis la couverture du point 0, puis le score.
 
 **Leçon du lot 1 bis** : chaque chiffre est publié avec son intervalle à 95 %.
 
@@ -150,9 +162,10 @@ que Maia aurait joué (le coût du plan pour l'élève).
    coup libre. L'exécutant du lot 1 bis n'est pas touché. Le refus d'un coup de plan isolé > 1 pion est refait **contre
    le coup naturel**. Libellés d'abandon propres dès le départ (cumul testé avant le compteur, ou les deux raisons).
 6. **Coût** : garde-fou ≈ 2 recherches Stockfish par coup sous plan (≈ 16 par partie) ; le gros du coût est la
-   **notation après coup** (point de non-retour, § 6.2 : chaque position notée, ≈ 60 000 recherches ou plus pour 1 500
+   **notation après coup** (point de non-retour, § 6, point 3 : chaque position notée, ≈ 60 000 recherches ou plus pour 1 500
    parties). **Un pilote chronométré d'abord** (un bras, un départ, une couleur) pour projeter le temps avant d'engager le
-   lot ; le plafond de deux soirées reste le gouverneur.
+   lot ; le plafond de deux soirées reste le gouverneur. Si ça déborde (GE) : le point de non-retour n'est noté que sur les parties
+   perdues, les seules où il existe.
 7. **Cache de notation** partagé : sûr seulement à table vidée, un fil, appels séquentiels — même preuve que le lot 1 bis.
 8. Note du lot 1 bis : `raisonAbandon` (compteur testé avant le cumul) **n'est pas modifié** — résultats clos, coups
    identiques ; la distinction cumul / compteur se fait au dépouillement (champs `refus`, `cumulDeborde`).
@@ -173,11 +186,14 @@ seulement si elle réduit les perdues sans dégrader le coût.
 
 Tranchés par l'Expert (21 oct., intégrés dans le corps) : garde-fou option 1, coup naturel, max(0, retard) (§ 4.3) ;
 5 % et 5 coups (§ 4.1) ; aucun coup probable = contre le plan (§ 4.2) ; adjudication +6,00 / 10 demi-coups, +3,00 à 200
-(§ 5) ; point de non-retour, coup de plan qui change le choix, coach fantôme (§ 6.2) ; contrôle de vraisemblance tiré par
+(§ 5) ; point de non-retour, coup de plan qui change le choix, coach fantôme (§ 6, point 3) ; contrôle de vraisemblance tiré par
 graine, critère 16/20 écrit avant (§ 7.3).
 
 Tranchés par le Dev chef (21 oct., § 7 bis) : processeur partout, tirage indexé par la position, nouveau joueur,
 pilote chronométré d'abord. L'adjudication du § 5 (version Expert) est déjà mécanique, sans « partie clairement jouée ».
 
-Reste, pour le GE, le critère par couleur
-« ≥ 5 points au-dessus de L-L » à la place de « 55 % dans chaque couleur » (§ 3 et § 6.1).
+Tranché par le GE (21 oct., § 6) : barre unique ≥ 55 % sur l'ensemble, cohérence par couleur, lecture conditionnée
+par la couverture (≥ 3 coups de plan ayant changé le choix par partie, en médiane), masse gardée en première page, repli
+du point de non-retour sur les parties perdues si le coût déborde ; § 9 (regroupement) approuvé tel quel.
+
+**Statut : relu par l'Expert, le Dev chef et le GE. En attente du go de Sébastien sur cette version.**
