@@ -131,6 +131,32 @@ que Maia aurait joué (le coût du plan pour l'élève).
    positions sur 20. L'Expert note en plus, pour chaque position, si le coup de plan du livre figure parmi les coups
    probables (premier aperçu de « plan sans coup probable »).
 
+## 7 bis. Mécanique (relecture du Dev chef, 21 oct.)
+
+1. **Maia sur processeur partout** (VPS et Orion), backend mathématique épinglé (eigen ou blas, un fil), avec la version
+   de lc0 et la somme de contrôle des poids. Aléa de lc0 coupé : température 0 côté lc0, pas de bruit, un fil, un nœud.
+   La carte graphique n'est pas utilisée : l'inférence n'y est pas identique bit à bit, une probabilité près du seuil de
+   5 % pourrait basculer, et elle n'économise rien (le coût est dans Stockfish).
+2. **Identité processeur VPS / Orion** des politiques vérifiée sur les 20 positions du § 7.3 avant de partager un lot.
+   Lecture de la politique (`go nodes 1` + `--verbose-move-stats`) testée sur deux positions dès l'installation.
+3. **Tirage indexé par la position** : graine = hash(FEN) ⊕ graine de partie, pas un flux qui avance coup après coup.
+   Positions identiques → tirages identiques : l'adversaire libre de G-A tire exactement comme en L-L tant que les
+   positions coïncident (appariement maximal, survit aux transpositions).
+4. **Ensemble probable déterministe** : à égalité de probabilité, départage par l'ordre UCI (seuil 5 % et « au plus 5 »).
+5. **Un nouveau joueur, pas une branche de `choisirCoup`** : `choisirCoupMaia` (sélection parmi les coups probables,
+   arbitrage Stockfish contre le coup naturel) réutilise les helpers purs (`distance`, `suivre`, `estLevier`, `avancer`,
+   `raisonAbandon`, `deborde`) et le `Noteur` comme arbitre seulement ; `partie-maia.mjs` réutilise l'engin catalogue /
+   structure / adoption / enchaînement / bascule de `partie.mjs`, et remplace le coup du coach, le coup adverse et le
+   coup libre. L'exécutant du lot 1 bis n'est pas touché. Le refus d'un coup de plan isolé > 1 pion est refait **contre
+   le coup naturel**. Libellés d'abandon propres dès le départ (cumul testé avant le compteur, ou les deux raisons).
+6. **Coût** : garde-fou ≈ 2 recherches Stockfish par coup sous plan (≈ 16 par partie) ; le gros du coût est la
+   **notation après coup** (point de non-retour, § 6.2 : chaque position notée, ≈ 60 000 recherches ou plus pour 1 500
+   parties). **Un pilote chronométré d'abord** (un bras, un départ, une couleur) pour projeter le temps avant d'engager le
+   lot ; le plafond de deux soirées reste le gouverneur.
+7. **Cache de notation** partagé : sûr seulement à table vidée, un fil, appels séquentiels — même preuve que le lot 1 bis.
+8. Note du lot 1 bis : `raisonAbandon` (compteur testé avant le cumul) **n'est pas modifié** — résultats clos, coups
+   identiques ; la distinction cumul / compteur se fait au dépouillement (champs `refus`, `cumulDeborde`).
+
 ## 8. Coût
 
 Maia à 1 nœud : quelques millisecondes par coup. Le coût vient de Stockfish (garde-fou si option 1, adjudication, notation
@@ -150,5 +176,8 @@ Tranchés par l'Expert (21 oct., intégrés dans le corps) : garde-fou option 1,
 (§ 5) ; point de non-retour, coup de plan qui change le choix, coach fantôme (§ 6.2) ; contrôle de vraisemblance tiré par
 graine, critère 16/20 écrit avant (§ 7.3).
 
-Restent : la mécanique (Dev chef : lc0, déterminisme, coût, branchement) ; et pour le GE, le critère par couleur
+Tranchés par le Dev chef (21 oct., § 7 bis) : processeur partout, tirage indexé par la position, nouveau joueur,
+pilote chronométré d'abord. L'adjudication du § 5 (version Expert) est déjà mécanique, sans « partie clairement jouée ».
+
+Reste, pour le GE, le critère par couleur
 « ≥ 5 points au-dessus de L-L » à la place de « 55 % dans chaque couleur » (§ 3 et § 6.1).
