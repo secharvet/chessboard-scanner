@@ -17,6 +17,7 @@
  * Un fil pour mesurer : le moteur est créé par l'appelant avec COACH_DETERMINISTIC=1.
  */
 import { Chess } from 'chess.js';
+import { vetoDefense } from './zone-roi.mjs';
 import { distance, suivre, estLevier } from './plan-distance.mjs';
 import { enPrise } from './en-prise.mjs';
 import { buildStructureFacts } from '../positional/structures.js';
@@ -66,12 +67,15 @@ export function situationForcee(fen, cands, side, p = DEFAUTS) {
 export function classerCandidats(fen, side, plan, cands, compteur, p = DEFAUTS) {
   const d0 = distance(fen, side, plan).d;
   const forcee = cands.length ? situationForcee(fen, cands, side, p) : false;
-  const admis = []; let progressantsRefuses = 0, coutRefuseMin = Infinity;
+  const admis = [], vetos = []; let progressantsRefuses = 0, coutRefuseMin = Infinity;
   for (const cand of cands) {
     const apres = new Chess(fen); apres.move(cand.m.san);
     const progressant = distance(apres.fen(), side, suivre(plan, cand.m)).d < d0;
     const cout = cands[0].cp - cand.cp;
     let classe, cpt = compteur;
+    // Le veto de défense (docs/plans/REGROUPEMENT-2026-10-21.md) : un pas VOULU qui dégarnit le roi sous attaque n'est pas une
+    // branche ; jamais en situation forcée (une parade ou une reprise ne se vetoe pas). Il n'est pas compté comme refusé.
+    if (progressant && p.regles?.veto && !forcee) { const v = vetoDefense(fen, side, cand.m.san); if (v) { vetos.push({ san: cand.m.san, ...v }); continue; } }
     if (progressant) { if (cout > p.concession) { progressantsRefuses++; coutRefuseMin = Math.min(coutRefuseMin, cout); continue; } classe = 'progressant'; cpt = 0; }
     else if (forcee && cand === cands[0]) classe = 'forcé';
     else if (estRoque(cand.m)) classe = 'roque';
@@ -80,7 +84,7 @@ export function classerCandidats(fen, side, plan, cands, compteur, p = DEFAUTS) 
     if (!progressant && cout > p.concession) continue;
     admis.push({ cand, classe, compteur: cpt, progressant, cout });
   }
-  return { admis, progressantsRefuses, coutRefuseMin, forcee, d0 };
+  return { admis, progressantsRefuses, coutRefuseMin, forcee, d0, vetos };
 }
 
 /**
@@ -115,7 +119,7 @@ export async function choisirCoup(noteur, fen, side, plan, etat = {}, p = DEFAUT
   const compteur = etat.compteur ?? 0, R = p.regles ?? null;
   const cands = await noteur.noter(fen, p.candidats);
   if (!cands.length) return null;
-  const { admis, forcee, coutRefuseMin } = classerCandidats(fen, side, plan, cands, compteur, p);
+  const { admis, forcee, coutRefuseMin, vetos } = classerCandidats(fen, side, plan, cands, compteur, p);
   // Règle 1 (cahier du lot 1 bis, § 2) : l'addition se lit AVANT le coup — un coup qui la porterait au-delà de la borne est refusé.
   const deborde = (retard) => R?.cumul != null && (etat.cumul ?? 0) + Math.max(0, retard) > R.cumul;
   let refus = null;
@@ -149,8 +153,11 @@ export async function choisirCoup(noteur, fen, side, plan, etat = {}, p = DEFAUT
     }
   }
   let concession = Number.isFinite(coutRefuseMin) ? coutRefuseMin : null;
+  // Fenêtre suspendue : un pas a été vetoé et aucun autre n'est admis — le coup du moteur, neutre pour le plan, qui attend.
+  if (vetos.length && !prog) return sortie(cands[0], 'suspendu', { concession, veto: vetos[0] });
   if (compteur >= p.k) {
     const dc = await derniereChance(noteur, fen, side, plan, cands, p);
+    if (dc?.admis && R?.veto) { const v = vetoDefense(fen, side, dc.cand.m.san); if (v) return sortie(cands[0], 'suspendu', { concession, veto: { san: dc.cand.m.san, derniereChance: true, ...v } }); }
     if (dc?.admis) {
       const apres = jouer(fen, dc.cand.uci); const [rep] = await noteur.noter(apres.fen, 1);
       const valeur = rep ? -rep.cp : dc.cand.cp; // à la profondeur de jeu, comme les autres
@@ -174,6 +181,7 @@ export const horsDePrix = (etat, p = DEFAUTS) => (etat.compteur ?? 0) >= p.k + 1
  */
 export const REGLES_1BIS = Object.freeze({
   A: Object.freeze({ cumul: 100, verifier: true, relireDC: true }),
+  AV: Object.freeze({ cumul: 100, verifier: true, relireDC: true, veto: true }), // A + le veto de défense (REGROUPEMENT, 21 oct.)
   B: Object.freeze({ cumul: 100, verifier: true, relireDC: true, utile: 25, patience: 6, sansPlan: true, plafondSansPlan: 100 }),
 });
 
@@ -185,11 +193,11 @@ export const REGLES_1BIS = Object.freeze({
  */
 export function avancer(etat, classe, retard) {
   const compteur = etat.compteur ?? 0, attente = etat.attente ?? 0, cumul = etat.cumul ?? 0;
-  const pas = ['progressant', 'forcé-progressant', 'dernière chance'].includes(classe), neutre = ['forcé', 'roque'].includes(classe);
+  const pas = ['progressant', 'forcé-progressant', 'dernière chance'].includes(classe), neutre = ['forcé', 'roque', 'suspendu'].includes(classe);
   return {
     compteur: pas ? 0 : neutre || classe === 'attente utile' ? compteur : compteur + 1,
     attente: pas ? 0 : neutre ? attente : attente + 1,
-    cumul: classe === 'forcé' ? cumul : cumul + Math.max(0, retard),
+    cumul: classe === 'forcé' || classe === 'suspendu' ? cumul : cumul + Math.max(0, retard),
   };
 }
 

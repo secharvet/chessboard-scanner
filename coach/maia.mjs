@@ -71,7 +71,8 @@ export class Maia {
 
   #attendre(cmd, fini, delaiMs = 30000) {
     return new Promise((resolve, reject) => {
-      const t = setTimeout(() => { this.onLine = null; reject(new Error(`maia : délai dépassé (${cmd})`)); }, delaiMs);
+      // Un délai = lc0 mort : fatal (le flux n'est pas purgé, la partie est à jeter ; Dev chef).
+      const t = setTimeout(() => { this.onLine = null; this.proc?.kill(); this.proc = null; reject(new Error(`maia : délai dépassé (${cmd}), fatal`)); }, delaiMs);
       this.onLine = (l) => { if (fini(l)) { clearTimeout(t); this.onLine = null; resolve(); } };
       this.#envoyer(cmd);
     });

@@ -45,7 +45,9 @@ export function progresse(fen, side, plan, m) {
  * @param etat       { compteur, cumul, sansPas, sansPlanCumul }
  * @param p          { regles, graine, sert?(fen, m) → libellés }
  * @returns {Promise<{ uci, m, p, classe, retard, change, naturel, ...avancer, sansPas, refus?, sert? }>}
- *   change : le filtre du plan a changé le choix (les coups admis sont strictement moins nombreux que les probables)
+ *   change : le coup guidé diffère de ce que CET élève aurait tiré à cette graine (Dev chef : une seule définition)
+ * Le retard est mesuré contre le coup modal de Maia (argmax), pas contre le tirage : intrinsèque à la position, biais
+ * conservateur assumé (le garde-fou se déclenche un peu plus tôt).
  */
 export async function choisirCoupMaia(noteur, fen, side, plan, probables, etat, p) {
   const R = p.regles, naturel = probables[0];
@@ -68,7 +70,7 @@ export async function choisirCoupMaia(noteur, fen, side, plan, probables, etat, 
       // Trop cher seul (> 1 pion : pas une branche, comme au lot 1) ou trop cher pour l'addition (refus : le plan s'arrête au coup suivant).
       if (retard > R.concession) continue;
       if (deborde(retard)) { refus ??= { uci: c.uci, retard, cumul: (etat.cumul ?? 0) + Math.max(0, retard) }; continue; }
-      return { ...sortie(c, 'progressant', retard, refus ? { refus } : {}), sansPas: 0, change: pas.length < probables.length };
+      return { ...sortie(c, 'progressant', retard, refus ? { refus } : {}), sansPas: 0, change: c.uci !== libre.uci };
     }
   }
   const roque = probables.find((c) => estRoque(coupDe(fen, c.uci)));
