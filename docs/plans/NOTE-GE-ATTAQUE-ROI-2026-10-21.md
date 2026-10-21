@@ -53,8 +53,9 @@ observateur (sans jouer) sur les 1 200 parties du lot 1 bis.
   « dame » en observateur sur ces 50 parties neuves.
 - Même s'il passe, **ne pas le généraliser** aux autres départs sur ces preuves, et **ne pas le verser** dans le coach qui
   guidera Maia sans une mesure sur parties neuves.
-- État : le veto est codé derrière une option (`--regles AV`), le coach sans l'option est contrôlé identique au lot 1 bis
-  (contrôle en cours) ; rien n'est joué.
+- État : le veto est codé derrière une option (`--regles AV`). Contrôle fait : sans l'option, cinq parties des lots 1 et
+  1 bis rejouées identiques ; avec l'option, sur la seule Panov n° 1 (SF 19), le veto interdit la dernière chance Cd5
+  (défenses du roi 5 → 3) et la partie finit à +0,01 au lieu de −9,98. Une partie, une anecdote : rien d'autre n'est joué.
 
 ## 6. Questions
 
