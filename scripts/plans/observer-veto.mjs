@@ -6,7 +6,7 @@ import { Chess } from 'chess.js';
 import { attaqueRoi, vetoDefense } from '../../coach/zone-roi.mjs';
 import { trouverDepart, fenDepart } from './departs.mjs';
 const BASE = process.env.LOT ?? '/home/ubuntu/chess-dev/reports/plans/epreuve-1bis';
-const PAS = new Set(['progressant', 'forcé-progressant', 'dernière chance']);
+const PAS = new Set(['progressant', 'dernière chance']); // une parade ou une reprise ne se vetoe jamais (Expert, GE : le forcé d'abord)
 const t = {}; const parDep = {};
 for (const mot of fs.readdirSync(BASE).filter((d) => d.startsWith('bin-'))) for (const d of fs.readdirSync(`${BASE}/${mot}`)) {
   for (const g of JSON.parse(fs.readFileSync(`${BASE}/${mot}/${d}/parties.json`))) {
