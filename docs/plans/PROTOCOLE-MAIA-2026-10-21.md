@@ -37,7 +37,9 @@ référence L-L (§ 6).
 
 lc0 avec les poids Maia-1500, **1 nœud** (la politique seule, comme Maia est prévu pour jouer). On lit la probabilité de
 chaque coup. **Coups probables** = les coups de probabilité ≥ 5 %, au plus 5 coups (à fixer à la relecture ; on publiera
-la couverture : part de la masse de probabilité gardée).
+la couverture : part de la masse de probabilité gardée). Seuil validé par l'Expert : à 5 %, un coup est un vrai coup de
+1500 (un sur vingt le joue). À publier aussi : **la part des coups de plan joués dont la probabilité était < 10 %** — le
+coup que le 1500 trouvait rarement seul, la valeur ajoutée du coach en un chiffre.
 
 ### 4.2 Le choix du coup
 
@@ -46,9 +48,12 @@ la couverture : part de la masse de probabilité gardée).
 - **Coach avec plan** : on garde parmi les coups probables ceux qui **servent le plan** (pas de plan, roque, coup forcé,
   comme dans `choisirCoup`) ; s'il en reste, tirage parmi eux, au prorata de leur probabilité ; s'il n'en reste aucun,
   l'élève joue son coup (tirage normal) — **jamais un coup que Maia ne jouerait pas** (le plan doit être exécutable par
-  l'élève, GE).
+  l'élève, GE) — et ce coup compte **contre le plan** (compteur + 1 ; forcé et roque restent neutres), comme au lot 1 :
+  un plan que l'élève ne peut jamais jouer n'est pas son plan (Expert). La raison « **abandon faute de coup probable** »
+  est publiée à part : c'est la liste des plans du livre qu'il faut **enseigner**, parce qu'un 1500 ne trouve pas le coup.
 - **Attente utile (G-AU seulement)** : sans pas de plan disponible, le premier coup probable (dans l'ordre de Maia) qui
-  sert une instance du catalogue.
+  sert une instance du catalogue, avec sa borne (≤ 0,25 mesuré contre le coup naturel) et son plafond d'addition :
+  personne ne paie sans addition, élève compris (Expert).
 
 ### 4.3 Le garde-fou à l'échelle de l'élève — **point à trancher**
 
@@ -63,6 +68,13 @@ coups.
 - **Option 2** : la tête de valeur de Maia note. Aucun moteur dans la boucle, mais une valeur de 1500 est grossière et
   sa fiabilité pour un seuil de 1,0 pion n'a jamais été mesurée.
 
+**Expert : option 1, sans hésitation.** Chaque faute de plan des seize parties perdues était punie 4 à 6 demi-coups plus
+tard ; une valeur à 1 nœud, intuition statique sans recherche, ne voit précisément pas ce qui a perdu ces parties.
+Précisions : (a) la référence est **le coup le plus probable de Maia, « le coup naturel »** (deux recherches ; l'espérance
+en coûterait cinq pour peu de gain) ; (b) le retard peut être **négatif** (le coup de plan évite la gaffe naturelle) : le
+cumul compte **max(0, retard)**, sans crédit, sinon l'addition fuit ; mais les retards négatifs sont **publiés** — « le
+plan a évité une faute », le cœur de la question.
+
 ### 4.4 Ce qui ne change pas
 
 Le catalogue, les livres, la reconnaissance de structure, l'adoption, l'enchaînement, la bascule, la dernière chance
@@ -70,11 +82,13 @@ relue, le compteur : code du lot 1 bis, règles A. Le bras prix n'est pas joué 
 
 ## 5. La partie
 
-- Départ du lot 1, puis Maia contre Maia jusqu'à la fin : mat, pat, répétition, 50 coups, ou **200 demi-coups**.
-- À 200 demi-coups, ou si la partie est clairement jouée, **adjudication** par Stockfish (prof. 18, un fil) : ≥ +3,00
-  pour un camp pendant 6 demi-coups consécutifs → gain ; sinon nulle à 200. Une partie de 1500 n'est « gagnée » au
-  score que si elle est gagnée sur l'échiquier ou adjugée : seuil à relire par l'Expert.
-- **Score** : 1, ½, 0.
+- Départ du lot 1, puis Maia contre Maia jusqu'à la fin : mat, pat, répétition, 50 coups, ou **200 demi-coups**. La
+  conversion fait partie de ce qu'on mesure (un 1500 laisse filer une pièce d'avance assez souvent) : on laisse jouer.
+- **Arrêt anticipé** seulement sur un mat vu par Stockfish ou au-delà de **+6,00 pendant 10 demi-coups** (prof. 18, un
+  fil) → gain. **À 200 demi-coups** : ≥ +3,00 → gain, sinon nulle (Expert).
+- **Score** : 1, ½, 0. À publier : la part des parties adjugées et le score recalculé sans elles ; les **nulles
+  d'impuissance** (répétition ou 50 coups avec ≥ +3,00 au tableau), par bras — une politique à 1 nœud peut tourner en
+  rond dans une position gagnée.
 
 ## 6. Mesure et critère (écrits avant la première partie)
 
@@ -85,10 +99,16 @@ par couleur aussi (pour que la référence ait la même précision). Total : **1
 
 1. **Score de l'élève guidé ≥ 55 % sur l'ensemble**, et dans **chaque couleur au moins 5 points au-dessus de L-L** pour
    la même couleur et les mêmes départs.
-2. **Les parties perdues sur un coup de plan** ne dépassent pas, chez l'élève guidé, les parties perdues sur un coup
-   comparable chez l'élève libre. *Perdue sur un coup de plan* : partie perdue dont la plus grosse chute d'évaluation
-   (Stockfish après coup, ≥ 2,00) a lieu sur un coup choisi sous plan ; pour le libre, le même compte sur les coups
-   joués aux mêmes moments de la partie.
+2. **Les défaites sur un coup de plan** ne sont pas plus fréquentes chez l'élève guidé que chez le libre (définitions
+   de l'Expert) :
+   - *point de non-retour* : le coup après lequel l'évaluation (Stockfish après coup) passe sous −2,00 et n'y remonte
+     plus jusqu'à la fin ; une faute que l'adversaire ne punit pas n'en est pas un ;
+   - *coup de plan* (guidé) : un coup où le filtre a **changé** le choix (les coups qui servent sont strictement moins
+     nombreux que les coups probables) ; si Maia l'aurait tiré de toute façon, le plan n'y est pour rien ;
+   - *moment de plan* (libre) : un **coach fantôme** fait tourner reconnaissance et adoption sur les parties libres sans
+     filtrer ; « moment de plan » = coup où il aurait eu un plan actif ;
+   - on compare des **taux** : défaites dont le point de non-retour tombe sur un coup de plan (guidé) ou un moment de
+     plan (libre), pour cent coups de ce type.
 3. **En dessous de 52 %**, on écrit : la théorie du livre ne rend pas un 1500 meilleur.
 4. Entre 52 et 55 % : on publie le chiffre avec son intervalle (± 4,4 points à 500 parties), sans conclure.
 
@@ -105,8 +125,11 @@ que Maia aurait joué (le coût du plan pour l'élève).
 2. **Déterminisme**, même discipline qu'avec Stockfish : un fil, 1 nœud, table vidée ; **deux parties fraîches
    identiques** par bras ; identité VPS / Orion ; et si Orion joue sur carte graphique, identité processeur / carte
    graphique des politiques (au dernier chiffre près, ou on joue sur processeur).
-3. **Contrôle de vraisemblance** : sur 20 positions des départs, les coups probables de Maia relus par l'Expert
-   (« un 1500 joue-t-il ça ? »).
+3. **Contrôle de vraisemblance** (rien de choisi après coup) : 20 positions **tirées par graine** dans les départs et
+   dans des parties L-L, entre les demi-coups 10 et 40, calmes et tactiques. Critère écrit avant la lecture : « l'ensemble
+   des coups probables contient le coup naturel du 1500 et aucun coup qu'aucun 1500 ne jouerait », sur au moins 16
+   positions sur 20. L'Expert note en plus, pour chaque position, si le coup de plan du livre figure parmi les coups
+   probables (premier aperçu de « plan sans coup probable »).
 
 ## 8. Coût
 
@@ -122,8 +145,10 @@ seulement si elle réduit les perdues sans dégrader le coût.
 
 ## 10. Points à trancher à la relecture
 
-1. Garde-fou : option 1 (Stockfish note) ou option 2 (valeur de Maia) — § 4.3.
-2. Coups probables : seuil 5 % et au plus 5 coups ? — § 4.1.
-3. Adjudication : +3,00 pendant 6 demi-coups, nulle à 200 ? — § 5.
-4. Définition de « perdue sur un coup de plan » et de son pendant chez le libre — § 6.2.
-5. Critère par couleur : « ≥ 5 points au-dessus de L-L » à la place de « 55 % dans chaque couleur » — § 3 et § 6.1.
+Tranchés par l'Expert (21 oct., intégrés dans le corps) : garde-fou option 1, coup naturel, max(0, retard) (§ 4.3) ;
+5 % et 5 coups (§ 4.1) ; aucun coup probable = contre le plan (§ 4.2) ; adjudication +6,00 / 10 demi-coups, +3,00 à 200
+(§ 5) ; point de non-retour, coup de plan qui change le choix, coach fantôme (§ 6.2) ; contrôle de vraisemblance tiré par
+graine, critère 16/20 écrit avant (§ 7.3).
+
+Restent : la mécanique (Dev chef : lc0, déterminisme, coût, branchement) ; et pour le GE, le critère par couleur
+« ≥ 5 points au-dessus de L-L » à la place de « 55 % dans chaque couleur » (§ 3 et § 6.1).
