@@ -1796,3 +1796,9 @@ utile » (proposition de Sébastien, formalisée par le GE : le premier candidat
 ≤ 0,25, neutre pour le compteur, freiné par le cumul). Bras A (garde-fou) et B (garde-fou + coup utile), livre et prix, témoin
 repris. Critère réécrit avec borne de queue ≤ 3 perdues sur 100. `docs/plans/CAHIER-LOT-1-BIS-2026-10-20.md`, à relire par
 le GE, l'Expert et le Dev chef avant tout code.
+
+**21 octobre, 9 h 45 (Paris) : lot 1 bis terminé, 1 200 parties, 0 échec** (VPS SF 19 livre A ; Orion le reste,
+identité VPS / Orion contrôlée avant). Apparié au lot 1 : coût moyen des plans −40 % aux deux moteurs, couverture et temps
+sous plan inchangés, perdues SF 19 10-12 → 7-8 sur 200, SF 17.1 13 → 4-5. Critère : passe à SF 17.1, **pas à SF 19
+(queue 3,5-4,0 sur 100, dont 4 Panov Noirs)**. Prix = livre ; règles B (attente utile, patience, reprise) n'ajoutent rien,
+patience et reprise jamais déclenchées. Rapport : `docs/plans/RAPPORT-LOT-1-BIS-2026-10-21.md`, questions au GE § 6.
