@@ -124,3 +124,30 @@ Stockfish et diluent l'effet (dans les deux sens).
    « plan adverse » avant de conclure ?
 3. **Règles B** : retirer attente utile, patience et reprise, ou tester une patience plus courte (3-4) ?
 4. **Bras prix** : le garder comme contrôle, ou le retirer pour la suite ?
+
+## 7. Réponse du GE (21 octobre 2026)
+
+1. **Tranche sous plan** : en complément. Pour le **coût**, c'est la mesure honnête de ce que coûtent les plans ; à
+   publier à côté. Pour la **queue**, non : une partie perdue au 60e demi-coup à cause d'un roi dégarni au 20e est une
+   perte du plan. Utile en revanche : l'**attribution**, éval. au dernier plan fermé + horizon calme contre éval. finale,
+   partie par partie (perte acquise sous plan, ou venue du jeu libre). Explication seulement ; le critère reste sur la
+   partie entière.
+2. **Queue et Panov** : ni hors Panov (retailler le panel après coup), ni attendre le remède (ne jamais conclure). Le
+   résultat s'écrit tel quel : **ne passe pas à SF 19 (7 sur 200), passe à SF 17.1 (4 à 5)**, et l'écart entre 3,5 et 3
+   est dans ce que 200 parties distinguent (intervalle ≈ 1,5 à 7 %). Plus fort qu'une barre : la queue n'est pas
+   diffuse, c'est un départ, avec une cause nommée (l'attaque de roi que le coach ne voit pas) et un remède identifié
+   (une distance pour l'atome regroupement). La Panov devient le cas-test du prochain lot, seule, 50 parties. Leçon : une
+   barre de queue à 3 % ne se décide qu'avec plus de parties ; l'écrire désormais avec son intervalle.
+3. **Règles B** : retirées des lots de coût, pour une raison structurelle, pas un échec : contre un exécutant parfait,
+   l'attente utile ne peut pas gagner (sans plan, le coup libre est déjà le meilleur coup du moteur ; un coup admis à
+   25 cp près fait aussi bien ou un peu moins bien — les 60 parties changées dans les deux sens sont ce bruit). Sa valeur
+   est pédagogique et ne se mesure que face à un élève qui ne joue pas le coup du moteur : l'épreuve Maia. Code gardé
+   derrière le drapeau ; pas de patience plus courte (rien à attraper).
+4. **Bras prix** : retiré des lots ; réponse donnée deux fois, avec et sans garde-fou : entre instances d'une même table,
+   le prix ne bat pas le livre en partie. En réserve pour le jour où la table contiendra des instances de nature
+   différente (défense, restriction, regroupement). Le prix devient un outil de relecture des livres, pas de jeu.
+
+Synthèse du GE : un coach de sortie d'ouverture qui suit le livre, sait s'arrêter, coûte un sixième de pion par partie et
+perd 3 à 4 fois sur 100 au lieu d'une, presque toujours au même endroit, pour une raison connue. La question qui reste
+est celle du mot « professeur » : ce coach rend-il un joueur de 1500 meilleur ? C'est l'épreuve Maia, ouverte par le go de
+Sébastien le 21 octobre — d'abord une page de protocole relue, pas de code.
