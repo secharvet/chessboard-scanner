@@ -22,3 +22,12 @@ test('veto : Cd5 sous attaque arrivée retire deux défenses du bouclier ; pas d
 test('suspendu : neutre pour le compteur, la patience et l\'addition', () => {
   assert.deepEqual(avancer({ compteur: 1, attente: 2, cumul: 40 }, 'suspendu', 30), { compteur: 1, attente: 2, cumul: 40 });
 });
+
+test('pression graduée (GE) : poids classiques sur la zone de neuf cases, pions de la zone en défense', async () => {
+  const { pressionRoi, allumePression } = await import('../coach/zone-roi.mjs');
+  // Panov, la faute : Dd3 (4) + Fh6 (1) contre Dd8 (4), Tf8 (2), Cf6 (1), Fe7 (1) et f7 g7 h7 (3)
+  const fen = 'r2q1rk1/pb2bppp/1pn1pn1B/8/3P4/P1NQ1N2/1PB2PPP/R3R1K1 b - - 0 14';
+  const p = pressionRoi(fen, 'b');
+  assert.equal(p.P, 5); assert.equal(p.D, 11); assert.equal(p.S, -6);
+  assert.equal(allumePression(fen, 'b', 'Nd5', -20), null); // S < 4 : jamais, quelle que soit la tendance
+});

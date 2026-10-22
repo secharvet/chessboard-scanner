@@ -46,3 +46,33 @@ export function vetoDefense(fen, side, san) {
 /** L'attaque est-elle retombée (le veto se lève) ? Le prédicat ne tient plus (moins de deux attaquants, ou aucun au contact). */
 export const retombee = (fen, side) => { const a = attaqueRoi(fen, side); return !a?.arrivee; };
 
+
+/**
+ * Le candidat 2, « pression graduée » (GE, 22 oct. ; docs/plans/SEUILS-ATTAQUE-ROI-2026-10-21.md § 2, recopiée telle
+ * quelle) : même zone que l'Expert ; P = poids des pièces adverses (ni roi ni pion) qui attaquent la zone, D = poids de mes
+ * pièces (ni roi ni pion) qui en défendent une case + 1 par pion à moi dans la zone ; S = P − D. Poids classiques, non réglés.
+ * `zone` imposée : D après un coup se compte sur la zone d'avant (le roi qui bouge laisse juger la zone qu'il quitte).
+ */
+export const POIDS_PRESSION = Object.freeze({ n: 1, b: 1, r: 2, q: 4 });
+export function zoneRoi(fen, side) {
+  const roi = buildAttackMap(fen).pieces.find((p) => p.type === 'k' && p.color === side); if (!roi) return null;
+  const sens = side === 'w' ? 1 : -1, zone = [];
+  for (let df = -1; df <= 1; df++) for (let k = 0; k <= 2; k++) { const f = roi.fileIdx + df, r = roi.rank + sens * k; if (f >= 0 && f < 8 && r >= 1 && r <= 8) zone.push(sq(f, r)); }
+  return zone;
+}
+export function pressionRoi(fen, side, zone = zoneRoi(fen, side)) {
+  if (!zone) return null;
+  const A = buildAttackMap(fen), adv = other(side);
+  const somme = (couleur) => A.pieces.filter((p) => p.color === couleur && POIDS_PRESSION[p.type] && A.attacks.get(p).some((s) => zone.includes(s)))
+    .reduce((n, p) => n + POIDS_PRESSION[p.type], 0);
+  const P = somme(adv), D = somme(side) + A.pieces.filter((p) => p.color === side && p.type === 'p' && zone.includes(p.square)).length;
+  return { P, D, S: P - D, zone };
+}
+/** Le candidat 2 s'allume-t-il sur le pas `san` ? sAvant4 = S du même camp quatre demi-coups plus tôt. */
+export function allumePression(fen, side, san, sAvant4) {
+  const a = pressionRoi(fen, side); if (!a || sAvant4 == null) return null;
+  const tendance = a.S - sAvant4; if (a.S < 4 || tendance < 2) return null;
+  const c = new Chess(fen); c.move(san);
+  const apres = pressionRoi(c.fen(), side, a.zone);
+  return apres.D <= a.D - 1 ? { S: a.S, tendance, D: a.D, Dapres: apres.D } : null;
+}
