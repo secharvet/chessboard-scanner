@@ -3,12 +3,16 @@
  * L'épreuve Maia (docs/plans/PROTOCOLE-MAIA-2026-10-21.md) : Maia-1500 contre Maia-1500 depuis les départs du lot 1.
  *
  *   node scripts/plans/partie-maia.mjs --depart <id> --bras GA|GAU|LL [--camp w|b] [--parties 25] [--numeros 1,3]
- *                                      [--depth 18] [--plies 200] [--out reports/plans/maia/<dossier>]
+ *                                      [--depth 18] [--plies 200] [--adjuge serie|mat] [--out reports/plans/maia/<dossier>]
  *
  * Bras (§ 3) : GA = l'élève du camp --camp guidé par le coach-livre, règles A ; GAU = GA + attente utile ; LL = Maia libre des
  * deux côtés, avec un COACH FANTÔME de chaque côté (reconnaissance et adoption sans filtrer, § 6 point 3) — une partie LL sert
  * de référence aux deux couleurs. Mêmes graines par (départ, n°) dans tous les bras ; le tirage est indexé par la position
  * (§ 7 bis.3) : tant que les positions coïncident, les coups coïncident.
+ *
+ * GS (second pilote, GE 22 oct.) = GA où le coach peut aussi souffler un pas du plan que Maia n'envisage pas, sous le seul
+ * garde-fou du retard. --adjuge mat (second pilote) : on n'arrête que sur un mat vu, sinon on joue jusqu'au 200e demi-coup.
+ * Journal : à chaque coup sous plan (guide ou fantôme), tous les pas légaux du plan avec leur probabilité chez Maia (pasLegaux).
  *
  * Stockfish ne joue jamais : il arbitre le garde-fou (coach/coup-maia.mjs), note chaque position (point de non-retour, § 6)
  * et adjuge (§ 5 : mat vu ou ≥ +6,00 pendant 10 demi-coups ; à 200 demi-coups, ≥ +3,00 = gain, sinon nulle).
@@ -28,13 +32,14 @@ import { trouverDepart, fenDepart } from './departs.mjs';
 const args = process.argv.slice(2);
 const opt = (k, d) => (args.includes(k) ? args[args.indexOf(k) + 1] : d);
 const DEP = trouverDepart(opt('--depart', '')); if (!DEP) { console.error('--depart <id> inconnu'); process.exit(2); }
-const BRAS = opt('--bras', 'GA'); if (!['GA', 'GAU', 'LL'].includes(BRAS)) { console.error('--bras GA|GAU|LL'); process.exit(2); }
+const BRAS = opt('--bras', 'GA'); if (!['GA', 'GAU', 'GS', 'LL'].includes(BRAS)) { console.error('--bras GA|GAU|GS|LL'); process.exit(2); }
 const CAMP = BRAS === 'LL' ? null : opt('--camp', 'w'); if (CAMP && !['w', 'b'].includes(CAMP)) { console.error('--camp w|b'); process.exit(2); }
 const DEPTH = Number(opt('--depth', 18)), PLIES = Number(opt('--plies', 200)), PARTIES = Number(opt('--parties', 25));
 const NUMEROS = opt('--numeros', null)?.split(',').map(Number) ?? Array.from({ length: PARTIES }, (_, i) => i + 1);
 const OUT = opt('--out', `reports/plans/maia/partie-${DEP.id}-${BRAS}${CAMP ? `-${CAMP}` : ''}`);
 const R = BRAS === 'GAU' ? REGLES_MAIA.AU : REGLES_MAIA.A;
-const ARRET = { cp: 600, plies: 10 }, FIN = { cp: 300 }; // § 5 (Expert)
+const ADJUGE = opt('--adjuge', 'serie'); if (!['serie', 'mat'].includes(ADJUGE)) { console.error('--adjuge serie|mat'); process.exit(2); }
+const ARRET = { cp: 600, plies: ADJUGE === 'mat' ? Infinity : 10 }, FIN = { cp: 300 }; // § 5 (Expert) ; mat seul (GE, 22 oct.)
 
 const engine = new UciEngine({ threads: process.env.COACH_DETERMINISTIC === '1' ? 1 : 2, hashMb: 256 });
 const noteur = new Noteur(engine, { depth: DEPTH });
@@ -135,11 +140,14 @@ async function partie(numero) {
     let choix;
     if (suivi) {
       const { evts, sc } = co.avant(fen, ply); entree.evts = evts;
+      // La mesure directe de « un 1500 trouve-t-il le coup du plan » : tous les pas légaux, avec la probabilité de Maia.
+      if (co.plan) entree.pasLegaux = pol.filter((c) => progresse(fen, tour, co.plan, new Chess(fen).move({ from: c.uci.slice(0, 2), to: c.uci.slice(2, 4), promotion: c.uci[4] })))
+        .map((c) => ({ san: new Chess(fen).move({ from: c.uci.slice(0, 2), to: c.uci.slice(2, 4), promotion: c.uci[4] }).san, p: Math.round(1e4 * c.p) / 1e4 }));
       if (co.plan && co.guide) {
-        const r = await choisirCoupMaia(noteur, fen, tour, co.plan, coups, co, { regles: R, graine, sert: R.utile != null && sc ? co.servis(sc) : null });
+        const r = await choisirCoupMaia(noteur, fen, tour, co.plan, coups, co, { regles: R, graine, sert: R.utile != null && sc ? co.servis(sc) : null, ...(BRAS === 'GS' ? { souffle: pol } : {}) });
         Object.assign(co, { compteur: r.compteur, cumul: r.cumul, sansPas: r.sansPas });
         if (r.refus) { co.cumulDeborde = true; evts.push(`refus ${r.refus.uci} (addition ${r.refus.cumul})`); }
-        choix = { uci: r.uci, p: r.p }; Object.assign(entree, { classe: r.classe, retard: r.retard, change: r.change, naturel: r.naturel, ...(r.sert ? { sert: r.sert } : {}) });
+        choix = { uci: r.uci, p: r.p }; Object.assign(entree, { classe: r.classe, retard: r.retard, change: r.change, naturel: r.naturel, ...(r.sert ? { sert: r.sert } : {}), ...(r.souffle ? { souffle: true } : {}) });
         co.seg.coups++; co.seg.retards += Math.max(0, r.retard); if (r.retard < 0) co.seg.retardsNegatifs++; if (r.change) co.seg.changes++; co.seg.classes[r.classe] = (co.seg.classes[r.classe] ?? 0) + 1;
       } else if (co.plan) {
         // Le fantôme : l'élève joue son coup ; le coach compte comme il compterait (pas → 0, sinon + 1), sans rien filtrer.
@@ -179,7 +187,7 @@ async function partie(numero) {
   for (const c of actifs) if (coachs[c].seg) coachs[c].fermer('fin', ply, jeu.fen());
   const score = (camp) => (resultat.gagnant == null ? 0.5 : resultat.gagnant === camp ? 1 : 0);
   return { depart: DEP.id, bras: BRAS, camp: CAMP, numero, graine, sans: journal.map((e) => e.san), empreinte: fnv(journal.map((e) => e.san).join(' ')), plies: ply,
-    resultat, scoreBlancs: score('w'), ...(CAMP ? { scoreEleve: score(CAMP) } : {}), masseMoyenne: nMasse ? masseTotale / nMasse : null,
+    adjuge: ADJUGE, resultat, scoreBlancs: score('w'), ...(CAMP ? { scoreEleve: score(CAMP) } : {}), masseMoyenne: nMasse ? masseTotale / nMasse : null,
     segments: Object.fromEntries(actifs.map((c) => [c, coachs[c].segments.map((s) => ({ ...s, fenAdoption: undefined, fenAbandon: undefined, fens: { adoption: s.fenAdoption, abandon: s.fenAbandon } }))])),
     journal, appels: noteur.appels - appels0, secondes: Math.round((Date.now() - t0) / 1000), maia: { lc0: MAIA.empreinteLc0, poids: MAIA.empreintePoids } };
 }

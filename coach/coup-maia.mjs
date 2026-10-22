@@ -43,7 +43,10 @@ export function progresse(fen, side, plan, m) {
 /**
  * @param probables  [{ uci, p }] les coups probables de Maia (≥ 5 %, au plus 5), dans l'ordre de la politique
  * @param etat       { compteur, cumul, sansPas, sansPlanCumul }
- * @param p          { regles, graine, sert?(fen, m) → libellés }
+ * @param p          { regles, graine, sert?(fen, m) → libellés, souffle?: politique entière [{ uci, p }] }
+ *   souffle (bras GS, GE 22 oct.) : après les pas parmi les coups probables, le coach peut souffler un pas que Maia
+ *   n'envisage pas (hors des cinq, ou sous 5 %), par probabilité décroissante, sous le seul garde-fou du retard contre le
+ *   coup naturel ; le coup soufflé garde la probabilité que Maia lui donnait (publiée).
  * @returns {Promise<{ uci, m, p, classe, retard, change, naturel, ...avancer, sansPas, refus?, sert? }>}
  *   change : le coup guidé diffère de ce que CET élève aurait tiré à cette graine (Dev chef : une seule définition)
  * Le retard est mesuré contre le coup modal de Maia (argmax), pas contre le tirage : intrinsèque à la position, biais
@@ -62,15 +65,17 @@ export async function choisirCoupMaia(noteur, fen, side, plan, probables, etat, 
   const retardDe = async (c) => { if (c.uci === naturel.uci) return 0; vNaturel ??= await valeurCoup(noteur, fen, naturel.uci); return vNaturel - await valeurCoup(noteur, fen, c.uci); };
   const deborde = (retard) => (etat.cumul ?? 0) + Math.max(0, retard) > R.cumul;
   const pas = probables.filter((c) => progresse(fen, side, plan, coupDe(fen, c.uci)));
+  const dans = new Set(probables.map((c) => c.uci));
+  const souffles = p.souffle ? p.souffle.filter((c) => !dans.has(c.uci) && progresse(fen, side, plan, coupDe(fen, c.uci))) : [];
   let refus = null;
-  if (pas.length) {
-    const premier = tirer(pas, fen, p.graine);
-    for (const c of [premier, ...pas.filter((x) => x !== premier)]) {
+  if (pas.length || souffles.length) {
+    const premier = pas.length ? tirer(pas, fen, p.graine) : null;
+    for (const c of [...(premier ? [premier, ...pas.filter((x) => x !== premier)] : []), ...souffles]) {
       const retard = await retardDe(c);
       // Trop cher seul (> 1 pion : pas une branche, comme au lot 1) ou trop cher pour l'addition (refus : le plan s'arrête au coup suivant).
       if (retard > R.concession) continue;
       if (deborde(retard)) { refus ??= { uci: c.uci, retard, cumul: (etat.cumul ?? 0) + Math.max(0, retard) }; continue; }
-      return { ...sortie(c, 'progressant', retard, refus ? { refus } : {}), sansPas: 0, change: c.uci !== libre.uci };
+      return { ...sortie(c, 'progressant', retard, { ...(refus ? { refus } : {}), ...(dans.has(c.uci) ? {} : { souffle: true }) }), sansPas: 0, change: c.uci !== libre.uci };
     }
   }
   const roque = probables.find((c) => estRoque(coupDe(fen, c.uci)));
