@@ -16,9 +16,26 @@ première partie ; il n'est plus modifié une fois le lot lancé (toute correcti
 1. **Veto de l'Expert, condition dame.** Le veto de `coach/zone-roi.mjs` (attaque arrivée, encore arrivée après le coup,
    défenses du bouclier en baisse ; jamais sur un coup forcé), **plus** : la dame adverse est parmi les attaquants de la
    zone. Écrite le 21 oct. avant toute mesure (REGROUPEMENT § 6.4) ; aucune partie de ce lot ne l'a vue.
-2. **Pression graduée, avec sa tendance** (proposition du GE). *Définition à recevoir du GE avant le lancement ; sans elle,
-   ce candidat ne tourne pas et le lot se joue pour le seul candidat 1.* Elle sera recopiée ici, telle quelle, avant la
-   première partie.
+2. **Pression graduée, avec sa tendance** (GE, 22 oct., recopiée telle quelle avant la première partie) :
+
+   > Zone du roi : la même que celle de l'Expert, trois colonnes autour du roi, sa rangée et les deux rangées devant lui,
+   > neuf cases, pour que les deux candidats soient comparables. Pression P : somme, sur les pièces adverses hors roi et
+   > pions qui attaquent au moins une case de la zone, d'un poids par pièce, cavalier 1, fou 1, tour 2, dame 4. Défense D :
+   > la même somme pour mes pièces qui défendent au moins une case de la zone, plus 1 par pion à moi dans la zone. Danger
+   > S = P − D, calculé à chaque demi-coup sur la carte d'attaques existante. Tendance : S maintenant moins S quatre
+   > demi-coups plus tôt. Le candidat s'allume sur un pas de plan M, progressant ou dernière chance, jamais une parade ni
+   > une reprise, quand les trois conditions tiennent à la fois : S ≥ 4 avant le coup, ce qui vaut une dame ou
+   > l'équivalent ; tendance ≥ +2 ; et M fait baisser D d'au moins 1, il retire un défenseur ou déplace un pion du
+   > bouclier. Pas d'exception pour l'interposition : un coup qui bouche une diagonale fait monter D et baisser P, il ne
+   > s'allume pas par construction. Les poids sont ceux des évaluations classiques, pas réglés sur nos parties, et c'est
+   > voulu : si ce candidat est un épouvantail à ces poids-là, il échoue, et on ne le retouche pas. Seuils et suite tels
+   > qu'écrits au § 3 et § 4.
+
+   Lectures mécaniques (Pilote, écrites avant la première partie, soumises au Dev chef) : « mes pièces » de D = hors roi et
+   pions, mêmes poids, les pions comptés à part (1 par pion dans la zone) ; D après M se compte sur la zone d'avant le coup
+   (si le roi bouge, on juge la zone qu'il quitte, comme le candidat 1) ; S est celui du camp du coach, à chaque
+   demi-coup des deux camps ; « quatre demi-coups plus tôt » remonte dans les coups du départ si la partie a moins de
+   quatre demi-coups (la position de départ a son historique).
 
 **Allumé** (par partie) : au moins un pas de plan joué par le coach (progressant ou dernière chance, jamais une parade ou
 une reprise) que le candidat aurait arrêté. **Perdue** : évaluation finale < −2 pour le camp du coach (comme au lot 1 bis).
