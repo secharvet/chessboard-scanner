@@ -1,7 +1,8 @@
 # Le joueur « humain » : l'arbre de décision — proposition
 
-25 octobre 2026. Synthèse de la thèse du pilote (`ARBRE-DECISION-THESE-2026-10-25.md`) et de l'antithèse de l'Expert
-(`livrables/antithese-arbre-decision.md`, bf4ed68). Itération 2 sur 3. Rien n'est codé ; proposition pour Sébastien.
+25 octobre 2026. Version finale (itération 3 sur 3) : thèse du pilote (`ARBRE-DECISION-THESE-2026-10-25.md`),
+antithèse de l'Expert (`livrables/antithese-arbre-decision.md`, bf4ed68), avis du GE transmis par Sébastien, réponses de
+l'Expert. Rien n'est codé ; proposition pour Sébastien.
 
 ## L'idée en trois lignes
 
@@ -42,6 +43,12 @@ enseigne les deux fautes de club : le coup désespéré et le coup intermédiair
 
 **3. Rien de forcé : quel est mon plan ?**
 
+À **chaque** nœud de cette étape, la question d'abord : **« Que veut-il faire ? »** On passe l'étape 3 pour lui (ses
+trois regards, ses cibles chez moi, le plan du catalogue pour sa structure). Son meilleur coup « s'il jouait deux fois »
+sert de confirmation : s'il est un pas de ce plan, on le nomme (« Il veut jouer …c5 pour attaquer d4 ») ; sinon c'est de
+la tactique (étape 1) ou il n'y a rien à nommer, et on ne dit rien. Le coup de **prophylaxie** est celui qui allonge le
+chemin de son plan, ou qui lui enlève sa cible.
+
 *3a — Où en est la partie ?*
 - Ouverture : développer la pièce qui ne l'est pas, roquer, le centre. Le livre tant qu'on y est. Les règles (« ne pas
   rejouer une pièce », « pas la dame trop tôt ») **départagent, mais n'éliminent jamais** un coup (sinon on écarte une
@@ -60,16 +67,46 @@ enseigne les deux fautes de club : le coup désespéré et le coup intermédiair
 Le score du calcul reste caché, en garde-fou : s'il contredit ce bilan d'un pion ou plus, le coach ne dit pas « je suis
 mieux ».
 
-*3c — Donc quelle conduite ?*
+*3c — Contre quoi je joue ? (la cible, Nimzowitsch avant Silman)*
+Un plan se joue contre quelque chose. Les cibles qu'un entraîneur nomme, avec le critère qui se compte et la manière :
+
+| Cible chez lui | On la reconnaît à | On joue contre en |
+|---|---|---|
+| Pion isolé | aucun pion à lui sur les colonnes voisines | bloquer la case devant (un cavalier de préférence), l'attaquer de face avec une tour, échanger les pièces |
+| Pion arriéré | ses voisins plus avancés, la case devant tenue par un de mes pions, colonne semi-ouverte pour moi | **fixer** (tenir ou occuper la case devant), puis doubler les tours |
+| Pions doublés ou pendants | deux pions sur une colonne ; c et d sans voisins | attaquer de face pour les forcer à avancer, puis bloquer |
+| Case faible | sa 3ᵉ à 5ᵉ rangée, qu'aucun de ses pions ne peut plus couvrir | y installer un cavalier, échanger son fou de cette couleur |
+| Roi au centre | pas roqué après le coup 10, ou roque impossible | ouvrir le centre par un levier, une tour sur la colonne du roi, l'empêcher de roquer |
+| Dernière rangée | aucune case de fuite, un seul défenseur | doubler sur la rangée, dévier le défenseur |
+| Pièce enfermée | au plus 2 cases sûres | lui prendre ses cases, l'attaquer, ne jamais l'échanger |
+| Mauvais fou | ses pions centraux fixés sur la couleur du fou | ne pas l'échanger, échanger ses bonnes pièces, jouer sur l'autre couleur |
+
+Quatre verbes : **attaquer** (plus d'attaquants que de défenseurs), **fixer**, **échanger le défenseur**, **bloquer**.
+On choisit la cible où l'écart entre mes attaquants possibles et ses défenseurs est le plus grand. En finale, principe
+des deux faiblesses : une seule cible ne suffit pas, on en crée une deuxième sur l'autre aile.
+
+*3d — Est-ce que j'attaque son roi ? (une décision, pas seulement une défense)*
+Zone de son roi : les cases autour, plus la rangée devant. **A** = mes pièces (ni pions ni roi) qui attaquent la zone ou
+peuvent l'attaquer en un coup ; **D** = ses pièces qui la défendent.
+- **J'attaque si** : A − D ≥ 2, ma dame est sur l'échiquier, **et** au moins une ligne ouverte vers son roi (colonne sans
+  pion à moi, diagonale ouverte) **ou** un pion de roque avancé ou manquant (…h6, …g6 sont des crochets pour un levier).
+- **Je n'attaque pas si** (une seule suffit) : mon roi n'est pas à l'abri (pas roqué, ou le même compte chez moi donne
+  ≥ 2 pour lui) ; le centre n'est pas fermé et il peut y jouer (« une attaque sur l'aile se combat au centre ») ; je suis
+  en retard de développement.
+- **Comment** : amener une pièce de plus, ou échanger son défenseur (le cavalier f6, le fou du roque) ; roques opposés →
+  lancer les pions vers son roi ; rois du même côté → attaquer avec les pièces, pas avec les pions de mon roque. Le
+  sacrifice ne vient que du calcul (étape 2), jamais de la règle.
+
+*3e — Donc quelle conduite ?*
 
 | Situation | Conduite | Coups produits |
 |---|---|---|
 | Mieux en matériel | Simplifier | Échanger les pièces (pas les pions), consolider. |
 | Moins bien en matériel | Compliquer | Garder les pièces, chercher la menace, éviter les échanges. |
-| Mieux en **dynamique** (développement, son roi au centre) : ça se périme | Agir maintenant | Ouvrir le jeu, mon roi à l'abri d'abord, amener une pièce de plus. |
-| Mieux en **statique** (structure, case forte, son mauvais fou) : ça ne se périme pas | Jouer lentement | Améliorer, fixer la faiblesse, empêcher son contre-jeu. |
+| Mieux en **dynamique** (développement, son roi au centre) : ça se périme | Agir maintenant | Ouvrir le jeu, mon roi à l'abri d'abord, amener une pièce de plus ; si 3d dit oui, l'attaque du roi. |
+| Mieux en **statique** (structure, case forte, son mauvais fou) : ça ne se périme pas | Jouer lentement | Jouer contre la cible (3c), fixer la faiblesse, empêcher son contre-jeu. |
 | Moins bien en position | Défendre sans concéder, chercher le contre-jeu | Consolider le point faible, échanger la pièce qui attaque. |
-| Égal | Améliorer | **Ma pire pièce** (au plus 2 cases utiles, fou gêné par ses pions fixés, mineure encore chez elle après le coup 10) vers une meilleure case ; **prophylaxie** : « que veut-il faire ? », l'en empêcher ; un levier de pion ; l'échange de ma mauvaise pièce contre sa bonne. |
+| Égal | Améliorer | Jouer contre sa pire faiblesse (3c) s'il en a une ; sinon **ma pire pièce** (au plus 2 cases utiles, fou gêné par ses pions fixés, mineure encore chez elle après le coup 10) vers une meilleure case ; la **prophylaxie** (voir le haut de l'étape 3) ; un levier de pion ; l'échange de ma mauvaise pièce contre sa bonne. |
 | Perdu de toute façon | Poser le plus de problèmes | Pas la parade qui perd lentement : le coup qui lui demande le plus de précision. |
 
 **4. Comparer** (Kotov). Trois à cinq coups au plus, chacun avec sa raison. Pour chacun : sa meilleure réponse (ses
@@ -88,18 +125,31 @@ conditionnel : « J'ai pensé à Cc3. Mais il répondait …Fb4, et je perdais l
 - **Le compte sur une case** (prises et reprises) se trompe dès qu'un défenseur est cloué ou surchargé. Il sert à
   *produire* le coup et à *dire* la phrase ; c'est le calcul court qui *décide*. S'ils ne sont pas d'accord, le coach ne
   dit pas « je compte ».
-- **La profondeur.** Un 1500 calcule 4 demi-coups dans le calme, jusqu'à 8 dans le forcé. Deux choix pour Sébastien :
-  - **A** : le calcul lui-même borné à 4 / 8 demi-coups — fidèle à l'humain, mais plus faible (environ 1200-1400) ;
-  - **B** : le calcul actuel, mais **seulement sur les coups produits par l'arbre**, et la phrase limitée à 4 (ou 8)
-    demi-coups — l'humain est dans le choix des candidats et dans la phrase, pas dans la force du calcul.
-  Le pilote et l'Expert recommandent **B**.
+- **La profondeur : choix B** (GE, Expert, pilote). Le calcul actuel, mais **seulement sur les coups produits par
+  l'arbre** ; la phrase limitée à 4 demi-coups dans le calme, 8 dans le forcé (ce qu'un 1500 calcule vraiment). L'humain
+  est dans le choix des coups et dans ce qu'on en dit, pas dans la faiblesse du calcul : « un coach qui calcule mal exprès
+  n'enseigne rien ».
 
 ## Ce que ça change par rapport au coach actuel
 
 Aujourd'hui : le coach calcule **tous** les coups, choisit le meilleur score, puis cherche des mots. Demain : il ne
 calcule que les 3 à 5 coups que l'arbre a produits, chacun avec sa raison **avant** le calcul. Le calcul départage, il ne
-choisit plus. Un coup que l'arbre n'a pas produit mais que le calcul trouve bien meilleur (un pion ou plus) est joué et
-journalisé comme un **trou de l'arbre** : c'est l'arbre qu'on corrige, pas le coup.
+choisit plus. Un coup que l'arbre n'a pas produit mais que le calcul complet trouve meilleur d'au moins un pion
+(affichage) que tous les candidats est joué et journalisé comme un **trou de l'arbre** : c'est l'arbre qu'on corrige,
+pas le coup.
+
+## Le premier chiffre publié : le taux de trous, par étape
+
+C'est la mesure exacte de « simpliste » (GE) : **moins de 5 %, l'arbre suffit pour le niveau visé ; 20 %, il est trop
+pauvre.** Les seuils valent pour le total et pour chaque étape. Le coup du trou repasse après coup dans les mêmes
+questions, dans l'ordre de l'arbre, et tombe dans une de trois classes :
+1. **Coup coupé** : une question le reconnaît, mais ne l'avait pas produit (plafond de 3, seuil, ordre) → un réglage.
+2. **Coup pas reconnu avant** : la même question le voit après coup, pas avant (une menace qui n'apparaît qu'à 3
+   demi-coups) → un défaut de la question.
+3. **Sans nom** : aucune question ne le reconnaît → une **branche manquante**. C'est le chiffre qui compte.
+
+Deux tableaux : (i) par étape où l'arbre se trouvait (celle qui a produit le coup joué) : trous / coups ; (ii) par classe
+et par étape à laquelle le trou appartient. Pas d'attribution « au nœud le plus proche » : elle cacherait la cause.
 
 La barre ne bouge pas : au moins 50 % contre Maia-1500, moins de 5 % de bévues. On accepte de perdre du niveau, pas la
 tactique de base (étapes 1 et 2).
