@@ -17,6 +17,9 @@ Volume=/home/ubuntu/bin/maia:/home/ubuntu/bin/maia:ro
 WorkingDir=/app
 Exec=node --watch coach/server.mjs
 EnvironmentFile=/home/ubuntu/chessboard-scanner/db/.env.db
+# Les moteurs vus par les parties en direct lancées depuis l'API (coach/joueur-arene.mjs)
+Environment=MAIA_DIR=/home/ubuntu/bin/maia
+Environment=STOCKFISH_PATH=/usr/local/bin/stockfish
 PublishPort=8000:8000
 # Santé : si /health ne répond plus (par exemple node --watch arrêté sur une erreur), Podman redémarre le conteneur
 HealthCmd=node /app/scripts/sante-api.mjs
