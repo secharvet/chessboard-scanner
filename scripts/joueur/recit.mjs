@@ -36,6 +36,10 @@ L.push(`**Sortes de phrases** (${coach.length} coups du coach) : ` + Object.entr
 const pref = sous['amelioration/prefere'] ?? 0;
 L.push(`Détail : ` + Object.entries(sous).sort((a, b) => b[1] - a[1]).map(([k, v]) => `${k} ${v}`).join(', ') + `. Part des « je suis mieux sans raison unique à nommer » : ${pref} sur ${coach.length} (${Math.round(100 * pref / coach.length)} %).`);
 L.push(`Alertes de parole (menace non parée sous une phrase de plan ou d'amélioration) : ${coach.filter((c) => c.alerte).length}.`);
+const nPlan = coach.filter((c) => c.sorte === 'plan').length;
+L.push('');
+L.push(nPlan ? `**Plans** : ${nPlan} coup(s) expliqué(s) par un plan de la grammaire.` : '**Plans : aucun.** Aucun coup de cette partie n\'est expliqué par un plan : le coach n\'adopte un plan que lorsqu\'il reconnaît une structure de pions de sa grammaire (pion isolé, Carlsbad, chaîne française, hérisson, Maróczy…), et cette partie n\'en a traversé aucune. Il n\'a donc parlé qu\'en calcul, défense, amélioration et livre.');
+L.push(`**Budget de recherche** : ${p.coach.budget.toLocaleString('fr-FR')} positions pour la recherche principale de chaque coup ; la re-recherche des meilleurs candidats (pour un score exact) et la recherche de la menace adverse s'y ajoutent, d'où des totaux par coup au-dessus du budget.`);
 L.push('');
 L.push('---');
 L.push('');
