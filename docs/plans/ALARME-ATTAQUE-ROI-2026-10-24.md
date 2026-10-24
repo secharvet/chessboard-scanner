@@ -91,3 +91,30 @@ tout versement, AA sur le panel entier (20 départs-camps, 10 graines neuves) po
 2. La valeur du pas hors MultiPV profonde, lue par la réponse adverse à 24 : même patron que la dernière chance relue, ça
    te va ?
 3. Le cache du Noteur est indexé par profondeur : aucune collision entre la note à 18 et celle à 24 ?
+
+## 8. Résultat (24 oct., Orion, un fil, `COACH_DETERMINISTIC=1`)
+
+**Panov, coach Noirs, AA contre A, mêmes graines.** Le lot a été arrêté sur décision de Sébastien au bout d'1 h 15 (trop
+long). **37 paires sur les 50 prévues** : ce sont les premières de chaque tranche de 10 (5 processus, 7, 9, 7, 6 et 8
+finies), arrêtées par le temps, pas choisies ; le léger penchant éventuel joue entre tranches, pas entre parties.
+Perdues : 11 en A, 6 en AA (6 en AV). **5 sauvées (n° 1, 2, 16, 31, 43), 0 nouvelle défaite** ; 6 perdues dans les deux
+bras (n° 7, 17, 19, 21, 23, 45) ; 29 parties identiques. AA ≈ AV. Ces chiffres valent sur 37 paires, pas sur 50 : pour
+les 50, finir les 13 restantes, mêmes graines. Zone grise non comptable sur ce lot (journaux de la Panov non gardés).
+
+**Panel lot 1 (20 départs-camps × graines 21-25), 100 AA contre 100 A, appariées par graine.** Taille réduite à la demande
+de Sébastien (10 graines prévues) ; les 35 AA du lot arrêté sur les graines 21-25 sont repris, 65 neuves.
+
+- Perdues : 5 en A, 5 en AA, **les mêmes** (fr-avance-noirs-b-24 et 25, herisson-b-24, iqp-panov-b-21 et 23).
+  0 sauvée, 0 nouvelle défaite.
+- **99 parties identiques, une partie allégée** : iqp-panov-b-23, perdue dans les deux bras, −10 → −5,37, coût 280 → 85.
+  Médiane appariée du coût : 0 (moyenne −1,95 cp, entièrement due à cette partie : ne pas la citer seule).
+- L'alarme a sonné **2 fois en 100 parties** : Df4+ (fr-avance-noirs-b-23), retard 0 → gardé, sans effet ; Cd5 en dernière
+  chance (iqp-panov-b-23), retard 65 cp à prof. 24 → suspendu. C'est la valeur relue par l'Expert sur la Panov n° 1
+  (Cg4 −0,92, Cd5 −1,57).
+- Zone grise (25-75 cp) : 1 décision sur 2 (le Cd5 ci-dessus).
+- Aucune nouvelle défaite AA où l'alarme a agi : rien à envoyer à l'Expert.
+
+**Lecture (Expert).** Hors de la Panov, l'alarme est **inoffensive**, ce qui ne prouve pas qu'elle y soit utile : 2 alarmes
+en 100 parties ne permettent rien de plus. C'est un outil étroit, efficace contre l'attaque sur le roi face au pion isolé
+(Dd3 + h4 + Fh6 contre le Cf6 qui s'en va), muet ailleurs ; aucune prétention générale sur la sécurité du roi. Les 5
+défaites communes ne relèvent pas de l'alarme (lecture possible sur demande de Sébastien).

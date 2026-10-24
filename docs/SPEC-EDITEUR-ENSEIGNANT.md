@@ -162,6 +162,7 @@ fichiers ; à terme elle lit l'API.
 |---|---|---|
 | `POST /api/auth/connexion`, `/deconnexion`, `GET /api/auth/moi` | session | tous |
 | `GET /api/livres` | les livres, leur signature, leurs auteurs publiés | tous |
+| `GET /api/livres/:id/arbre` | l'arbre entier du livre (positions et coups typés, sans les textes), pour l'éventail de l'assistant | tous |
 | `GET /api/positions?livre=&coups=` | la position, l'arbre sortant, les explications publiées (par auteur) ou la mienne en brouillon | tous (brouillons : l'auteur) |
 | `POST /api/positions/:id/coups` | proposer un coup à l'arbre | enseignant |
 | `PUT /api/explications/:position/moi` | enregistrer mon brouillon (crée une version) | enseignant |

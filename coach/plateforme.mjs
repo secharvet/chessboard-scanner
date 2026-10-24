@@ -207,6 +207,14 @@ export async function routerPlateforme({ req, res, url, readJson, send, engine, 
       from openings o order by o.ordre`);
     send(res, 200, { ok: true, livres: rows.map((r) => ({ ...r, positions: Number(r.positions), auteurs: r.auteurs ?? [] })) }); return true;
   }
+  mm = path.match(/^\/api\/livres\/([\w-]+)\/arbre$/);
+  if (mm && m === 'GET') { // l'arbre entier d'un livre, pour l'éventail : positions et coups typés, sans les textes
+    const { rows } = await pool.query(`select p.coups, p.nom_eco as nom,
+      coalesce((select json_agg(json_build_object('san', x.san, 'kind', x.kind, 'porte', x.porte_opening_id) order by x.ord, x.id) from moves x where x.position_id = p.id), '[]') as suites
+      from positions p where p.opening_id = $1 order by p.ply, p.id`, [mm[1]]);
+    if (!rows.length) return refuser(404, 'livre inconnu');
+    send(res, 200, { ok: true, positions: rows.map((r) => ({ coups: r.coups, nom: r.nom, suites: r.suites, portes: r.suites.filter((s) => s.porte) })) }); return true;
+  }
   if (path === '/api/positions' && m === 'GET') {
     const livre = url.searchParams.get('livre'); const coups = (url.searchParams.get('coups') ?? '').trim();
     if (!livre) return refuser(400, 'paramètre livre requis');

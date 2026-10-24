@@ -10,6 +10,7 @@ import { getEngineMove } from './stockfish-client.js';
 import { LIVRES } from './livres/index.js';
 import { dessinerAnnotations, COULEUR_PAR_TYPE } from './fleches.js';
 import { jouerSonCoup } from './sons.js';
+import { creerEventail } from './eventail.js';
 
 const $ = (id) => document.getElementById(id);
 const FR = { K: 'R', Q: 'D', R: 'T', B: 'F', N: 'C' };
@@ -212,7 +213,25 @@ async function render(lastMove = null) {
   if (racine) { if (!e || !e.plan.length) e = { ...RACINE, ...(e ? { id: e.id, livre: e.livre } : {}) }; }
   entreeCourante = e;
   entree2 = prof2Id && e?.api ? await entreePour(game, prof2Id, { bascule: false }) : null; if (mon !== rendu) return;
-  dessiner(); renderPanneau();
+  dessiner(); renderPanneau(); majEventail();
+}
+
+// ---------------------------------------------------------------- Éventail : l'arbre du livre courant, qui suit l'échiquier
+const eventail = $('ouvEventail') ? creerEventail($('ouvEventail'), { surClic: (coups) => { recit = null; game = new Chess(); for (const s of coups) game.move(s); render(); } }) : null;
+const arbres = new Map(); let evtLivre = null;
+$('ouvEventailBloc')?.addEventListener('toggle', (ev) => { if (ev.target.open) eventail?.redessiner(); });
+async function arbreDuLivre(id) {
+  if (arbres.has(id)) return arbres.get(id);
+  if (apiDispo) {
+    try { const r = await api(`/api/livres/${encodeURIComponent(id)}/arbre`); if (r.status === 200 && r.json.ok) { arbres.set(id, r.json.positions); return r.json.positions; } } catch { /* repli statique */ }
+  }
+  // repli : le fichier statique du livre (pas mis en cache, l'API sera réessayée au prochain changement de livre)
+  return (BOOKS[id]?.LIVRE ?? []).map((e) => ({ coups: e.coups, nom: e.nom ?? null, suites: (e.plan ?? []).map((p, i) => ({ san: p.san, kind: p.porte ? 'porte' : (i === 0 ? 'principal' : 'variante') })) }));
+}
+async function majEventail() {
+  if (!eventail) return; const id = courant;
+  if (evtLivre !== id) { const liste = await arbreDuLivre(id); if (id !== courant) return; eventail.charger(liste); evtLivre = id; }
+  eventail.suivre(game.history());
 }
 function dernier() { const h = game.history({ verbose: true }); const m = h.at(-1); return m ? { from: m.from, to: m.to } : null; }
 
