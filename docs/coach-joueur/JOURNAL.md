@@ -53,4 +53,5 @@ Heures de Paris. Une entrée par étape franchie ; les chiffres sont ceux des fi
   zéro sur le commit figé 4d5e252** à 21 h 26 Paris, fin estimée ~0 h 45. Le code du coach ne bouge plus pendant la série.
 - **À faire après la série (parole seulement, aucun coup ne change)** : la menace retenue doit être, parmi les candidats
   exacts du coup nul, celui dont la ligne gagne le plus de matériel compté (ou mate), pas le meilleur coup adverse à ses yeux
-  (cas 16.Fb5+ : …Ce7 −5,87 retenu, …Txg2+ −6,04 ignoré alors qu'il gagne g2 avec échec).
+  (cas 16.Fb5+ : …Ce7 −5,87 retenu, …Txg2+ −6,04 ignoré alors qu'il gagne g2 avec échec) ; borne de l'Expert : ce candidat doit
+  rester à moins de 80 cp du meilleur coup adverse, sinon c'est une prise qu'il ne jouerait pas.
