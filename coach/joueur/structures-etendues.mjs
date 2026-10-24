@@ -119,7 +119,7 @@ export function instancierEtendu(fen, side, tok) {
         pousse({ famille: 'colonne', colonne: P.colonne ?? 'e' }, 'une tour en face du roi qui n\'a pas roqué : il ne pourra plus roquer, ni rester');
         if (P.levier) pousse({ famille: 'rupture', pion: P.levier, cible: caseRel(P.levier, 5, owner) }, 'ouvrir le centre pendant que son roi y est encore ; seulement après le roque');
       } else {
-        const k = L.roi[side]; if (k) pousse({ famille: 'transfert', de: k, vers: caseRel('g', 1, side) }, 'mettre le roi à l\'abri d\'abord : tant qu\'il est au centre, chaque colonne qui s\'ouvre est pour l\'adversaire');
+        pousse({ famille: 'roquer' }, 'mettre le roi à l\'abri d\'abord : tant qu\'il est au centre, chaque colonne qui s\'ouvre est pour l\'adversaire');
       }
       break;
     }
@@ -162,6 +162,27 @@ export function instancierEtendu(fen, side, tok) {
     default: break;
   }
   return out;
+}
+
+/**
+ * La distance d'un plan, familles de plan-distance.mjs plus « roquer » (Expert) : tant que le droit de roquer existe,
+ * distance = 1 + le nombre de mes pièces entre le roi et la tour (sortir le fou ou le cavalier la fait baisser, Rf8 non) ;
+ * le roque la met à 0 ; le droit perdu, c'est le roque artificiel : la distance par les cases jusqu'à g1 / g8.
+ */
+export function distanceEtendue(fen, side, plan) {
+  if (plan.famille !== 'roquer') return distance(fen, side, plan);
+  const L = lire(fen), k = L.roi[side];
+  if (!k) return { d: Infinity, detail: 'plus de roi' };
+  const r = side === 'w' ? '1' : '8';
+  if ((k === `g${r}` || k === `c${r}`) && !(side === 'w' ? /[KQ]/ : /[kq]/).test(L.roques)) return { d: 0, detail: 'roqué', etapes: [] };
+  const droitRoi = (side === 'w' ? /K/ : /k/).test(L.roques), droitDame = (side === 'w' ? /Q/ : /q/).test(L.roques);
+  if (droitRoi || droitDame) {
+    const entre = (cases) => cases.filter((s) => L.c.get(s)).length;
+    const dRoi = droitRoi ? 1 + entre([`f${r}`, `g${r}`]) : Infinity, dDame = droitDame ? 1 + entre([`b${r}`, `c${r}`, `d${r}`]) : Infinity;
+    const d = Math.min(dRoi, dDame);
+    return { d, detail: d === 1 ? 'le roque est possible' : `${d - 1} pièce(s) entre le roi et la tour`, etapes: [] };
+  }
+  return distance(fen, side, { famille: 'transfert', de: k, vers: `g${r}` }); // roque artificiel
 }
 
 export const NOUVELLES_STRUCTURES = new Set(['PION_PASSE', 'ROI_AU_CENTRE', 'MAJORITE', 'UNE_COLONNE_OUVERTE', 'FINALE', 'RUBINSTEIN', 'CENTRE_OUVERT']);

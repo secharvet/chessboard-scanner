@@ -66,7 +66,12 @@ for (const c of p.coups) {
   if (c.plan) pq.push(`plan : ${c.plan.nom}${c.plan.distanceApres != null ? `, distance ${c.plan.distanceAvant} → ${c.plan.distanceApres}` : ''}, cumul ${c.plan.cumul ?? 0}${c.plan.abandon ? `, abandon (${c.plan.abandon})` : ''}`);
   if (c.motif) pq.push(`motif : ${c.motif}`);
   pq.push(`recherche : profondeur ${c.profondeur}, ${c.noeuds.toLocaleString('fr-FR')} positions, ${c.ms} ms ; score ${c.score} (avant : ${c.evalAvant})`);
-  if (c.examen) pq.push(`examinateur : ${c.examen.verdict}${c.examen.perte != null ? ` (${c.examen.perte > 0 ? '−' : '+'}${Math.abs(c.examen.perte)} centièmes)` : ''}, phase ${c.examen.phase}`);
+  if (c.examen) {
+    const ex = c.examen, m = ex.mat;
+    const matTxt = (n) => (n == null ? null : n > 0 ? `mat en ${n}` : `maté en ${-n}`);
+    const detail = m && (m.avant != null || m.apres != null) ? ` (${matTxt(m.avant) ?? `${ex.avant} centièmes`} → ${matTxt(m.apres) ?? `${ex.apres} centièmes`})` : ex.perte != null ? ` (${ex.perte > 0 ? '−' : '+'}${Math.abs(ex.perte)} centièmes)` : '';
+    pq.push(`examinateur : ${ex.verdict}${detail}, phase ${ex.phase}`);
+  }
   if (c.alerte) pq.push(`ALERTE : ${c.alerte}`);
   for (const x of pq) L.push(`  - ${x}`);
   L.push('');

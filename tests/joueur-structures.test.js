@@ -1,7 +1,7 @@
 // La grammaire enrichie du coach joueur : les sept structures de l'Expert (25 octobre 2026) et leurs plans.
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { structuresEtendues, instancierEtendu } from '../coach/joueur/structures-etendues.mjs';
+import { structuresEtendues, instancierEtendu, distanceEtendue } from '../coach/joueur/structures-etendues.mjs';
 
 const noms = (fen) => structuresEtendues(fen).map((s) => `${s.name}:${s.color}`).sort();
 
@@ -18,7 +18,11 @@ test('structures étendues : pion passé, finale, roi au centre, colonne ouverte
   const rac = structuresEtendues('r1bqk2r/pp3ppp/2n2n2/2bp4/8/2N2N2/PPP1BPPP/R1BQ1RK1 w kq - 0 10');
   assert.ok(rac.some((s) => s.name === 'ROI_AU_CENTRE' && s.color === 'w' && s.params.colonne === 'e'));
   const pr = instancierEtendu('r1bqk2r/pp3ppp/2n2n2/2bp4/8/2N2N2/PPP1BPPP/R1BQ1RK1 w kq - 0 10', 'b', rac.find((s) => s.name === 'ROI_AU_CENTRE'));
-  assert.deepEqual(pr.map((p) => p.plan), [{ famille: 'transfert', de: 'e8', vers: 'g8' }], 'pour les Noirs : roquer');
+  assert.deepEqual(pr.map((p) => p.plan), [{ famille: 'roquer' }], 'pour les Noirs : roquer');
+  // la distance du plan « roquer » : droit présent, 1 + pièces entre le roi et la tour ; roqué = 0
+  assert.equal(distanceEtendue('r1bqk2r/pp3ppp/2n2n2/2bp4/8/2N2N2/PPP1BPPP/R1BQ1RK1 w kq - 0 10', 'b', { famille: 'roquer' }).d, 1, 'les Noirs peuvent roquer tout de suite');
+  assert.equal(distanceEtendue('r1bqkbnr/pp3ppp/2n5/2pp4/8/2N2N2/PPP1BPPP/R1BQ1RK1 w kq - 0 10', 'b', { famille: 'roquer' }).d, 3, 'fou f8 et cavalier g8 encore à la maison');
+  assert.equal(distanceEtendue('r1bq1rk1/pp3ppp/2n2n2/2bp4/8/2N2N2/PPP1BPPP/R1BQ1RK1 w - - 0 10', 'b', { famille: 'roquer' }).d, 0, 'roqué');
   // même position, roi blanc PAS roqué : pas de ROI_AU_CENTRE
   assert.ok(!structuresEtendues('r1bqk2r/pp3ppp/2n2n2/2bp4/8/2N2N2/PPP1BPPP/R1BQK2R w KQkq - 0 10').some((s) => s.name === 'ROI_AU_CENTRE'));
   // centre ouvert : aucun pion d ni e

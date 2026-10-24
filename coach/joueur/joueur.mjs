@@ -18,8 +18,9 @@ import { formuler, materielEnMots, maPiece, saPiece, GABARITS } from './parole.m
 import { toFrenchSan } from '../notation.mjs';
 import { lineMotifs } from '../motifs.mjs';
 import { instancier } from '../plans-structures.mjs';
-import { structuresEtendues, instancierEtendu, NOUVELLES_STRUCTURES } from './structures-etendues.mjs';
-import { distance, estLevier, suivre, libelle } from '../plan-distance.mjs';
+import { structuresEtendues, instancierEtendu, distanceEtendue, NOUVELLES_STRUCTURES } from './structures-etendues.mjs';
+import { estLevier, suivre, libelle } from '../plan-distance.mjs';
+const distance = distanceEtendue; // les familles de plan-distance.mjs, plus « roquer » (grammaire enrichie)
 import { LIVRE as LIVRE_FR } from '../../livres/francaise.js';
 import { LIVRE as LIVRE_IT } from '../../livres/italienne.js';
 import { LIVRE as LIVRE_ES } from '../../livres/espagnole.js';
