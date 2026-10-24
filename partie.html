@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="fr" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Coach joueur — la partie</title>
+    <link rel="stylesheet" href="./vendor-web/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./site-nav.css" />
+    <link rel="stylesheet" href="./partie.css" />
+  </head>
+  <body>
+    <div class="app jpt">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand__title">Coach joueur</div>
+          <div class="brand__subtitle">une partie entière, jouée et expliquée par le coach</div>
+        </div>
+        <div class="topbar__pickers">
+          <div class="topbar__picker">
+            <label class="topbar__picker-label" for="jptSelect">Partie</label>
+            <select id="jptSelect" class="form-select form-select-sm"><option value="">…</option></select>
+          </div>
+        </div>
+      </header>
+
+      <div class="jpt__erreur" id="jptErreur" hidden></div>
+
+      <main class="jpt__layout">
+        <section class="jpt__gauche">
+          <div class="jpt__meta" id="jptMeta" aria-live="polite"></div>
+          <div class="jpt__board-wrap"><div id="jptBoard" class="board"></div></div>
+          <div class="jpt__controles" role="group" aria-label="Navigation des coups">
+            <button type="button" class="btn btn-sm btn-outline-light" id="jptDebut" aria-label="Début">⏮</button>
+            <button type="button" class="btn btn-sm btn-outline-light" id="jptPrec" aria-label="Coup précédent">◀</button>
+            <span class="jpt__compteur" id="jptCompteur">0 / 0</span>
+            <button type="button" class="btn btn-sm btn-outline-light" id="jptSuiv" aria-label="Coup suivant">▶</button>
+            <button type="button" class="btn btn-sm btn-outline-light" id="jptFin" aria-label="Fin">⏭</button>
+          </div>
+          <ol class="jpt__coups" id="jptCoups" aria-label="Liste des coups"></ol>
+        </section>
+
+        <section class="jpt__droite">
+          <div class="jpt__phrase-carte" id="jptPhraseCarte" aria-live="polite">
+            <div class="jpt__phrase-tete">
+              <span class="jpt__pastille" id="jptPastille" hidden></span>
+              <span class="jpt__coup-nom" id="jptCoupNom"></span>
+            </div>
+            <p class="jpt__phrase" id="jptPhrase">Choisissez un coup pour lire son explication.</p>
+            <button type="button" class="btn btn-sm btn-outline-info" id="jptPourquoi" hidden aria-expanded="false">Pourquoi ?</button>
+            <div class="jpt__trace" id="jptTrace" hidden></div>
+          </div>
+
+          <div class="jpt__examen-bloc">
+            <button type="button" class="btn btn-sm btn-outline-secondary" id="jptExamenToggle" aria-expanded="false">Afficher l'examen</button>
+            <div class="jpt__examen" id="jptExamen" hidden></div>
+          </div>
+
+          <div class="jpt__lecture-bloc">
+            <button type="button" class="btn btn-sm btn-warning" id="jptLectureStart">Mode lecture — 20 coups au hasard</button>
+            <div class="jpt__lecture" id="jptLecture" hidden></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="./partie.js"></script>
+    <script type="module" src="./site-nav.js"></script>
+  </body>
+</html>
