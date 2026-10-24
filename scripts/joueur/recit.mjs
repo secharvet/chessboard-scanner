@@ -21,7 +21,8 @@ const ex = p.examen;
 const L = [];
 L.push(`# Partie du coach joueur : ${p.id}`);
 L.push('');
-L.push(`**Le coach a les ${camp}** contre ${p.adversaire.nom} (graine ${p.adversaire.graine}${p.adversaire.tirage ? `, ${p.adversaire.tirage}` : ''}). ` +
+const detailAdv = [p.adversaire.graine != null ? `graine ${p.adversaire.graine}` : '', p.adversaire.tirage ?? '', p.adversaire.profondeur ? `profondeur ${p.adversaire.profondeur}` : '', p.adversaire.bride === false ? 'pleine force' : p.adversaire.elo ? `bridé à ${p.adversaire.elo} Elo` : ''].filter(Boolean).join(', ');
+L.push(`**Le coach a les ${camp}** contre ${p.adversaire.nom}${detailAdv ? ` (${detailAdv})` : ''}. ` +
   `Budget de recherche ${p.coach.budget.toLocaleString('fr-FR')} positions par coup, un fil, code \`${p.coach.code}\`. ` +
   `**Résultat : ${p.resultat}** (${p.raison}, ${p.plies} demi-coups).`);
 L.push('');
