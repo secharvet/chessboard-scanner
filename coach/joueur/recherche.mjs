@@ -192,6 +192,12 @@ export class Recherche {
     return { coup: m.coup, score: m.score, pv: m.pv, profondeur, noeuds: this.noeuds, candidats };
   }
 
+  /** L'évaluation « posée » de la racine : la quiescence résout les prises en suspens. C'est le point de comparaison E0 de la parole. */
+  evaluationPosee(ech) {
+    this.noeuds = 0; this.arret = false; this.profondeurEnCours = 1; this.budget = 50000;
+    return this.#quiescence(ech, -INFINI, INFINI, 0);
+  }
+
   /** Score exact d'un coup donné à une profondeur donnée (fenêtre ouverte) : { score, pv }. Pour le coup du livre. */
   noterCoup(ech, coup, { prof = 4, budget = this.budget } = {}) {
     this.budget = budget; this.noeuds = 0; this.arret = false; this.profondeurEnCours = 1;

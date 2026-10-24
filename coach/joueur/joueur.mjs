@@ -80,7 +80,9 @@ export class Joueur {
     const ligneFr = (pv, depuis = fenAvant) => { const c = new Chess(depuis), out = []; for (const u of pv) { try { out.push(toFrenchSan(c.move({ from: u.slice(0, 2), to: u.slice(2, 4), promotion: u[4] }).san)); } catch { break; } } return { sans: out, fenBout: c.fen() }; };
 
     // --- l'évaluation avant, la recherche ---
-    const E0 = enCentipions(evaluer(ech));
+    // E0 : l'évaluation avant le coup, posée par la quiescence (les prises en suspens résolues), sinon un pion en l'air
+    // ferait dire « je gagne » à une simple reprise et « très mauvaise » à une position normale.
+    const E0 = enCentipions(this.recherche.evaluationPosee(ech)), E0statique = enCentipions(evaluer(ech));
     const res = this.recherche.chercher(ech, { budget: this.budget });
     if (!res.coup) throw new Error('aucun coup légal');
     const cands = res.candidats.map((c) => ({ ...c, uci: uciDe(c.coup), cp: enCentipions(c.score), pvUci: c.pv.map(uciDe) }));
@@ -172,8 +174,12 @@ export class Joueur {
           const pvUci = mn.pv.map(uciDe); const ech2 = new Echiquier(fenAvant); ech2.jouerNul();
           const lm = ligneFr(pvUci, ech2.fen());
           const bilan = bilanMateriel(fenAvant, lm.fenBout, camp);
-          const paree = (c) => c.cp >= E0 - valeur / 2;
-          menace = { ligne: lm.sans, gain: valeur, perte: materielEnMots(Object.fromEntries(Object.entries(bilan).map(([k, v]) => [k, -v]))) ?? 'du terrain', pareeApresM: paree(M), pareeApresR: R ? paree(R) : true };
+          const perte = materielEnMots(Object.fromEntries(Object.entries(bilan).map(([k, v]) => [k, -v])));
+          // Une menace, c'est du matériel qu'il gagnerait (Expert) ; sans matériel compté, il faut un gain net (deux fois la borne).
+          if (perte || valeur >= 2 * BORNES.menace) {
+            const paree = (c) => c.cp >= E0 - valeur / 2;
+            menace = { ligne: lm.sans, gain: valeur, perte: perte ?? 'du terrain', pareeApresM: paree(M), pareeApresR: R ? paree(R) : true };
+          }
         }
       }
     }
@@ -191,7 +197,8 @@ export class Joueur {
       termes.push(this.#terme(nom, d1, d2, apres.agg.get(nom), avant.agg.get(nom), camp, pieceM, caseM, mM.m, apresM.fen()));
     }
     // Les termes qui s'améliorent pour nous d'abord (ils font la phrase), les coûts ensuite (ils restent dans la trace).
-    termes.sort((a, b) => (b.d1 > 0) - (a.d1 > 0) || b.poids - a.poids);
+    const rang = (t) => (t.nom === 'placement' ? t.poids / 2 : t.poids); // le placement est le terme le plus vague : il passe après les autres
+    termes.sort((a, b) => (b.d1 > 0) - (a.d1 > 0) || rang(b) - rang(a));
     const termesCites = termes.slice(0, 3);
 
     // --- la sorte, par priorité : livre, calcul, défense, plan, amélioration ---
@@ -201,24 +208,44 @@ export class Joueur {
     const bilanR = R ? bilanMateriel(fenAvant, ligneR.fenBout, camp) : null;
     const perteR = bilanR ? materielEnMots(Object.fromEntries(Object.entries(bilanR).map(([k, v]) => [k, -v]))) : null;
     let sorte, sousSorte = null, motif = null;
-    const roiTerme = termesCites.find((t) => t.nom === 'danger du roi' || t.nom === 'abri du roi');
-    const sauvetage = termesCites.find((t) => (t.nom === 'pièce en l\'air' || t.nom === 'attaquée par un pion sûr' || t.nom === 'menace par une mineure' || t.nom === 'menace par une tour') && t.chezMoi && t.d1 > 0);
+    const enTete = (t) => { if (t) termesCites.unshift(...termesCites.splice(termesCites.indexOf(t), 1)); };
+    const roiTerme = termesCites.find((t) => (t.nom === 'danger du roi' || t.nom === 'abri du roi') && t.d1 > 0 && t.cle !== null);
+    const sauvetage = termesCites.find((t) => t.cle === 'piece_en_prise' && t.d1 > 0);
+    const attaque = termesCites.find((t) => (t.cle === 'attaque_par_pion' || t.cle === 'menace_piece') && t.d1 > 0);
+    const prise = !!mM.m.captured, echecDonne = /\+$/.test(mM.brut), enEchec = ech.enEchec();
+    const dernierAdverse = historique.length ? historique[historique.length - 1] : null;
+    const dernierPrenait = dernierAdverse ? (() => { const c = new Chess(depart); for (const u of historique.slice(0, -1)) c.move({ from: u.slice(0, 2), to: u.slice(2, 4), promotion: u[4] }); return !!c.move({ from: dernierAdverse.slice(0, 2), to: dernierAdverse.slice(2, 4), promotion: dernierAdverse[4] }).captured; })() : false;
+    const reprise = prise && dernierPrenait && dernierAdverse.slice(2, 4) === caseM;
+    const bilanTotal = Object.entries(bilanM).reduce((s, [t, n]) => s + VAL[t.toLowerCase()] * n, 0);
+    const matSubi = M.score <= -(MAT - 200);
     if (livre && !livre.refus) { sorte = 'livre'; sousSorte = 'coup'; }
     else if (estMat) { sorte = 'calcul'; sousSorte = 'mat'; }
-    else if (M.cp - E0 >= BORNES.gain && gainM) { sorte = 'calcul'; sousSorte = 'gain'; }
-    else if (R && Math.abs(M.cp - E0) < BORNES.gain && R.cp <= E0 - BORNES.gain) { sorte = 'calcul'; sousSorte = 'seul_coup'; }
-    else if (M.cp <= E0 - BORNES.gain && perteM) { sorte = 'calcul'; sousSorte = 'moindre_mal'; }
+    else if (matSubi) { sorte = 'calcul'; sousSorte = 'mat_subi'; }
+    // Le gain se lit contre l'échiquier tel qu'il est (E0 statique) : un pion pris et gardé au bout de la ligne est un gain,
+    // même si la quiescence l'avait déjà « vu ». Les effondrements (seul coup, moindre mal) se lisent contre E0 posée.
+    else if (reprise && bilanTotal >= 0 && M.cp - E0statique >= BORNES.gain) { sorte = 'calcul'; sousSorte = 'reprise'; }
+    else if (M.cp - E0statique >= BORNES.gain && gainM) { sorte = 'calcul'; sousSorte = 'gain'; }
+    // Seul coup : M tient (à 80 près de E0) et R s'effondre (80 sous M). Moindre mal / perdu : tout baisse de 80 ET la position
+    // est vraiment mauvaise (sous −100) : une baisse depuis une évaluation posée trop optimiste n'est pas une catastrophe.
+    else if (R && M.cp >= E0 - BORNES.gain && M.cp - R.cp >= BORNES.gain) { sorte = 'calcul'; sousSorte = 'seul_coup'; }
+    else if (M.cp <= E0 - BORNES.gain && M.cp <= -100 && (!R || R.cp <= E0 - BORNES.gain)) { sorte = 'calcul'; sousSorte = perteM ? 'moindre_mal' : 'perdu'; }
+    else if (enEchec) { sorte = 'defense'; sousSorte = 'echec_pare'; }
     else if (menace && !menace.pareeApresR && menace.pareeApresM) { sorte = 'defense'; sousSorte = 'parer'; }
-    else if (sauvetage) { sorte = 'defense'; sousSorte = 'piece_en_prise'; termesCites.unshift(...termesCites.splice(termesCites.indexOf(sauvetage), 1)); }
-    else if (roiTerme && roiTerme.chezMoi && roiTerme.d1 > 0 && (!R || M.cp - R.cp >= BORNES.seValent)) { sorte = 'defense'; sousSorte = roiTerme.nom === 'abri du roi' ? 'roi_abri' : roiTerme.cle; termesCites.unshift(...termesCites.splice(termesCites.indexOf(roiTerme), 1)); }
+    else if (sauvetage) { sorte = 'defense'; sousSorte = 'piece_en_prise'; enTete(sauvetage); }
+    else if (roiTerme && (!R || M.cp - R.cp >= BORNES.seValent)) { sorte = 'defense'; sousSorte = roiTerme.cle; enTete(roiTerme); }
     else if (livre?.refus) { sorte = 'livre'; sousSorte = 'refus'; }
     else if (this.plan && M.planTerme > 0 && M.dApres < M.d0 && (!R || R.planTerme < M.planTerme || R.cp <= M.cp)) { sorte = 'plan'; sousSorte = M.dApres === 0 ? 'dernier_pas' : 'pas'; }
     else {
-      const finale = termesCites.find((t) => t.d1 > 0 && (t.cle.startsWith('mat_') || t.cle.startsWith('carre') || t.cle === 'nulle_materiel'));
+      const finale = termesCites.find((t) => t.d1 > 0 && t.cle && (t.cle.startsWith('mat_') || t.cle.startsWith('carre') || t.cle === 'nulle_materiel'));
       // amélioration : le premier terme qui s'améliore pour nous ET qui a une phrase d'amélioration (les termes de défense n'en ont pas)
-      const amel = termesCites.find((t) => t.d1 > 0 && (GABARITS.amelioration[t.cle] || GABARITS.finale[t.cle]));
-      if (finale) { sorte = 'finale'; sousSorte = finale.cle; termesCites.unshift(...termesCites.splice(termesCites.indexOf(finale), 1)); }
-      else if (amel) { sorte = 'amelioration'; sousSorte = amel.cle; termesCites.unshift(...termesCites.splice(termesCites.indexOf(amel), 1)); }
+      const amel = termesCites.find((t) => t.d1 > 0 && t.cle && (GABARITS.amelioration[t.cle] || GABARITS.finale[t.cle]));
+      if (finale) { sorte = 'finale'; sousSorte = finale.cle; enTete(finale); }
+      else if (prise && bilanTotal === 0) { sorte = 'amelioration'; sousSorte = 'echange'; }
+      else if (attaque) { sorte = 'amelioration'; sousSorte = attaque.cle; enTete(attaque); }
+      else if (amel) { sorte = 'amelioration'; sousSorte = amel.cle; enTete(amel); }
+      else if (echecDonne) { sorte = 'amelioration'; sousSorte = 'echec_donne'; }
+      else if (prise || mM.m.piece === 'p') { sorte = 'amelioration'; sousSorte = 'placement'; } // une prise ou un pas de pion n'est jamais « un coup d'attente »
+      else if (R && M.total - R.total >= BORNES.seValent) { sorte = 'amelioration'; sousSorte = 'prefere'; } // M bat R nettement, sans terme simple : on le dit tel quel
       else { sorte = 'amelioration'; sousSorte = 'coup_d_attente'; termesCites.length = 0; }
     }
     if (sorte === 'calcul') { // un motif nommé dans les 4 premiers demi-coups de notre ligne ; « gain : prend… » redit la phrase, on l'écarte
@@ -236,12 +263,12 @@ export class Joueur {
 
     const rec = {
       ply, camp, san: mM.san, uci: M.uci, fenAvant, coach: true, sorte, sousSorte,
-      score: M.cp, evalAvant: E0, total: M.total,
+      score: M.cp, evalAvant: E0, evalStatique: E0statique, total: M.total,
       battu: R ? { san: sanFr(R.uci).san, score: R.cp, ecart: Math.abs(ecart), seValent: Math.abs(ecart) < BORNES.seValent, planTerme: R.planTerme ?? 0 } : null,
       ligne: ligneM.sans, ligneBattu: ligneR.sans,
       termes: termesCites.map((t) => ({ nom: t.nom, cle: t.cle, apres: t.d1, bout: t.d2, quoi: t.quoi, donnees: t.donnees, poids: t.poids })),
       menace, motif, plan: planInfo, livre: livre ? { ...livre, fin: false } : (finDuLivre ? { fin: true } : null),
-      gain: gainM, perteM, perteR, pieceM, caseM,
+      gain: gainM, perteM, perteR, pieceM, caseM, saPiece: mM.m.captured ? saPiece(LETTRE[mM.m.captured]) : null, caseCible: caseM,
       candidats: exacts.slice(0, 4).map((c) => ({ san: sanFr(c.uci).san, score: c.cp, planTerme: c.planTerme ?? 0, total: c.total })),
       profondeur: res.profondeur, noeuds: res.noeuds, ms: Date.now() - t0,
     };
@@ -266,22 +293,27 @@ export class Joueur {
     for (const [quoi, cp] of ap) {
       const cleAvant = quoi === `${nomPiece} ${caseM}` ? `${nomPiece} ${coupM.from}` : quoi;
       const delta = cp - (av.get(cleAvant) ?? 0);
-      if (!meilleure || delta > meilleure.delta) meilleure = { quoi, delta };
+      if (delta > 0 && (!meilleure || delta > meilleure.delta)) meilleure = { quoi, delta };
     }
+    const L2 = { pion: 'P', cavalier: 'N', fou: 'B', tour: 'R', dame: 'Q', roi: 'K' };
     const [pieceNom, caseNom] = (meilleure?.quoi ?? `${nomPiece} ${caseM}`).split(' ');
-    const lettre = { pion: 'P', cavalier: 'N', fou: 'B', tour: 'R', dame: 'Q', roi: 'K' }[pieceNom] ?? pieceM;
+    const lettre = L2[pieceNom] ?? pieceM;
     const donnees = { ma_piece: maPiece(lettre), case: caseNom ?? caseM, colonne: (caseNom ?? caseM)[0] };
+    // Les termes de menace sont crédités à l'attaquant et nomment la pièce attaquée : « siennes » = nos pièces menacées.
+    const menacesSurMoi = (e) => siennes(e), menacesSurLui = (e) => miennes(e);
+    const sauvee = menacesSurMoi(avantEntree).find((x) => !menacesSurMoi(apresEntree).some((y) => y.quoi === x.quoi));
+    const nouvelleCible = menacesSurLui(apresEntree).find((x) => !menacesSurLui(avantEntree).some((y) => y.quoi === x.quoi));
     let cle = null;
     const tour7 = coupM.piece === 'r' && ((camp === 'w' && caseM[1] === '7') || (camp === 'b' && caseM[1] === '2'));
     switch (nom) {
-      case 'placement': cle = roque ? 'developpement_roque' : tour7 ? 'septieme' : 'placement'; break;
-      case 'mobilité': cle = roque ? 'developpement_roque' : 'mobilite'; break;
+      case 'placement': cle = roque ? 'developpement_roque' : tour7 ? 'septieme' : meilleure ? 'placement' : null; break;
+      case 'mobilité': cle = roque ? 'developpement_roque' : meilleure && pieceNom !== 'pion' ? 'mobilite' : null; break;
       case 'avant-poste': cle = 'avant_poste'; break;
       case 'tour sur colonne ouverte': cle = 'colonne_ouverte'; break;
       case 'tour enfermée': cle = roque ? 'developpement_roque' : 'mobilite'; break;
       case 'tour sur colonne semi-ouverte': { cle = 'colonne_semi_ouverte'; const c = new Chess(fenApres); const col = caseM[0]; const pion = [...'12345678'].map((r) => col + r).find((s) => { const p = c.get(s); return p && p.type === 'p' && p.color !== camp; }); donnees.case_cible = pion ?? ''; break; }
-      case 'paire de fous': cle = 'paire_de_fous'; break;
-      case 'fou gêné par ses pions': cle = 'mauvais_fou'; break;
+      case 'paire de fous': cle = d1 > 0 && coupM.captured === 'b' ? 'paire_de_fous' : null; break;
+      case 'fou gêné par ses pions': cle = coupM.piece === 'b' && coupM.captured ? 'mauvais_fou' : null; break;
       case 'grande diagonale': cle = 'grande_diagonale'; break;
       case 'pion isolé': cle = d1 > 0 && siennes(apresEntree).length > siennes(avantEntree).length ? 'pion_isole_chez_lui' : 'pion_isole_chez_moi'; donnees.case_cible = siennes(apresEntree).at(-1)?.quoi?.split(' ').pop() ?? ''; break;
       case 'pion doublé': cle = siennes(apresEntree).length > siennes(avantEntree).length ? 'pion_double_chez_lui' : 'pion_double_chez_moi'; donnees.colonne = (siennes(apresEntree).at(-1)?.quoi?.split(' ').pop() ?? caseM)[0]; break;
@@ -292,13 +324,36 @@ export class Joueur {
       case 'développement': cle = coupM.flags?.includes('k') || coupM.flags?.includes('q') ? 'developpement_roque' : 'developpement_mineure'; break;
       case 'dame sortie tôt': cle = 'developpement_dame_tot'; break;
       case 'roque manqué': cle = 'developpement_roque'; break;
-      case 'attaquée par un pion sûr': { cle = 'attaque_par_pion'; const e = siennes(apresEntree)[0] ?? miennes(apresEntree)[0]; donnees.sa_piece = saPiece(LETTRE[{ pion: 'p', cavalier: 'n', fou: 'b', tour: 'r', dame: 'q' }[e?.quoi?.split(' ')[0]] ?? 'n']); break; }
+      case 'attaquée par un pion sûr': case 'pièce en l\'air': case 'menace par une mineure': case 'menace par une tour': case 'menace par le roi': {
+        if (d1 > 0 && sauvee) { // une de nos pièces n'est plus menacée : on la nomme, avec la case où elle était
+          const [pn, cs] = sauvee.quoi.split(' '); cle = 'piece_en_prise'; donnees.ma_piece = maPiece(L2[pn] ?? pieceM); donnees.case = pn === nomPiece && cs === caseM ? coupM.from : cs;
+        } else if (d1 > 0 && nouvelleCible) { // nous menaçons une pièce de plus
+          const [pn, cs] = nouvelleCible.quoi.split(' '); donnees.sa_piece = saPiece(L2[pn] ?? 'N'); donnees.case_cible = cs;
+          cle = nom === 'attaquée par un pion sûr' && coupM.piece === 'p' ? 'attaque_par_pion' : 'menace_piece';
+        } else cle = null;
+        break;
+      }
       case 'échanger quand on mène': cle = 'echanges_quand_on_mene'; break;
-      case 'mat forcé : roi au bord, le nôtre s\'approche': cle = coupM.piece === 'k' ? 'mat_roi_approche' : 'mat_roi_au_bord'; break;
-      case 'abri du roi': cle = 'roi_abri'; break;
-      case 'danger du roi': { const e = (chezMoi ? miennes(apresEntree) : siennes(apresEntree))[0]; cle = coupM.piece === 'k' || !e ? 'roi_abri' : (surCaseM || miennes(apresEntree).length ? 'roi_defenseur' : 'roi_attaquant'); donnees.sa_piece = saPiece(pieceM); break; }
-      case 'pièce en l\'air': case 'menace par une mineure': case 'menace par une tour': case 'menace par le roi': cle = 'piece_en_prise'; donnees.case = coupM.from; break;
-      default: cle = 'placement';
+      case 'mat forcé : roi au bord, le nôtre s\'approche': { // « sans lui, {ma_piece} ne peut pas mater seule » : la pièce lourde, pas le roi
+        cle = coupM.piece === 'k' ? 'mat_roi_approche' : 'mat_roi_au_bord';
+        const pieces = fenApres.split(' ')[0]; donnees.ma_piece = maPiece((camp === 'w' ? /Q/ : /q/).test(pieces) ? 'Q' : 'R'); break;
+      }
+      case 'abri du roi': { // sans pions à nous, il n'y a pas d'abri à garder
+        const mesPions = (fenApres.split(' ')[0].match(camp === 'w' ? /P/g : /p/g) ?? []).length;
+        cle = d1 > 0 && mesPions && (coupM.piece === 'p' || coupM.piece === 'k' || roque) ? 'roi_abri' : null; break;
+      }
+      case 'danger du roi': {
+        const luiSeul = !(fenApres.split(' ')[0].match(camp === 'w' ? /[pnbrq]/g : /[PNBRQ]/g) ?? []).length; // roi adverse seul : pas de « danger », c'est le mat forcé qui parle
+        if (d1 <= 0 || luiSeul) { cle = null; break; }
+        const roiCase = (() => { const c = new Chess(fenApres); for (const r of '12345678') for (const f of 'abcdefgh') { const p = c.get(f + r); if (p && p.type === 'k' && p.color === camp) return f + r; } return null; })();
+        const pres = roiCase && Math.max(Math.abs(caseM.charCodeAt(0) - roiCase.charCodeAt(0)), Math.abs(+caseM[1] - +roiCase[1])) <= 2;
+        if (coupM.captured) { cle = 'roi_attaquant'; donnees.sa_piece = saPiece(LETTRE[coupM.captured]); }
+        else if (coupM.piece === 'k' || roque || (coupM.piece === 'p' && pres)) cle = 'roi_abri';
+        else if (pres) { cle = 'roi_defenseur'; donnees.ma_piece = maPiece(pieceM); donnees.case = caseM; }
+        else cle = null;
+        break;
+      }
+      default: cle = null;
     }
     return { nom, cle, d1, d2, poids, chezMoi, quoi: surCaseM?.quoi ?? miennes(apresEntree)[0]?.quoi ?? '', donnees };
   }

@@ -55,7 +55,7 @@ export function formuler(r) {
     gain: r.gain ?? '', perte_M: r.perteM ?? 'du matériel', perte_R: r.perteR ?? 'du terrain', perte_menace: r.menace?.perte ?? 'du matériel',
     ecart_mots: r.battu ? ecartEnMots(r.battu.ecart) ?? '' : '',
     plan: r.plan?.nom ?? '', distance_apres: r.plan?.distanceApres ?? '', raison: r.livre?.raison ?? '', objet_disparu: r.plan?.objetDisparu ?? '',
-    ma_piece: maPiece(r.pieceM), case: r.caseM, schema: r.schema ?? '',
+    ma_piece: maPiece(r.pieceM), case: r.caseM, schema: r.schema ?? '', sa_piece: r.saPiece ?? 'sa pièce', case_cible: r.caseCible ?? r.caseM,
   };
   const parties = [];
   let alerte = null;
@@ -64,16 +64,17 @@ export function formuler(r) {
   // 1. La phrase de la sorte
   const t = r.termes?.[0] ?? null; // le terme le plus lourd, déjà muni de sa clé de gabarit et de ses données
   const dt = (x) => ({ ...d, ...(x?.donnees ?? {}) });
+  const gab = (sorte, cle) => G[sorte]?.[cle] ?? G.pilote?.[cle] ?? null; // les gabarits du pilote complètent ceux de l'Expert
   switch (r.sorte) {
     case 'livre': parties.push(remplir(texte(r.sousSorte === 'refus' ? G.livre.refus : G.livre.coup), d)); break;
     case 'calcul': {
-      const g = G.calcul[r.sousSorte] ?? G.calcul.gain; parties.push(remplir(texte(g), d));
-      if (r.motif) { const m = r.motif[0].toUpperCase() + r.motif.slice(1); parties.push(m.endsWith('.') ? m : `${m}.`); }
+      const g = gab('calcul', r.sousSorte) ?? G.calcul.gain; parties.push(remplir(texte(g), dt(t)));
+      if (r.motif && r.sousSorte !== 'mat' && !/mat/i.test(r.motif)) { const m = r.motif[0].toUpperCase() + r.motif.slice(1); parties.push(m.endsWith('.') ? m : `${m}.`); }
       break;
     }
     case 'defense': {
-      const g = G.defense[r.sousSorte] ?? G.defense.parer; parties.push(remplir(texte(g), dt(t)));
-      if (r.sousSorte !== 'parer' && r.menace && !r.menace.pareeApresM) parties.push(remplir(texte(G.defense.sinon), d));
+      const g = gab('defense', r.sousSorte) ?? G.defense.parer; parties.push(remplir(texte(g), dt(t)));
+      if (r.sousSorte !== 'parer' && r.sousSorte !== 'echec_pare' && r.menace && !r.menace.pareeApresM) parties.push(remplir(texte(G.defense.sinon), d));
       break;
     }
     case 'plan': {
@@ -83,11 +84,14 @@ export function formuler(r) {
       break;
     }
     case 'finale': parties.push(remplir(G.finale[r.sousSorte] ?? '', dt(t))); break;
-    default: { // amélioration : la phrase du terme le plus lourd, ou le coup d'attente
-      if (!t || t.poids < 10) parties.push(remplir(texte(G.amelioration.coup_d_attente), d));
+    default: { // amélioration : la phrase de la sous-sorte (un gabarit du pilote), sinon celle du terme le plus lourd, sinon le coup d'attente
+      const gp = G.pilote?.[r.sousSorte];
+      const tSorte = r.termes?.find((x) => x.cle === r.sousSorte) ?? null; // le terme qui a donné la sous-sorte, s'il existe
+      if (gp) parties.push(remplir(texte(gp), dt(t)));
+      else if (r.sousSorte === 'coup_d_attente' || !r.sousSorte) parties.push(remplir(texte(G.amelioration.coup_d_attente), d));
       else {
-        const g = G.amelioration[t.cle] ?? G.finale[t.cle];
-        parties.push(g ? remplir(texte(g), dt(t)) : remplir(texte(G.amelioration.placement), d));
+        const g = G.amelioration[r.sousSorte] ?? G.finale[r.sousSorte] ?? G.amelioration.placement;
+        parties.push(remplir(texte(g), dt(tSorte)));
       }
     }
   }
