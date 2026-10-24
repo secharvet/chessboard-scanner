@@ -3,7 +3,7 @@
  * L'arène du coach joueur (docs/coach-joueur/CHANTIERS-2026-10-24.md, page 3, « qui fait quoi »).
  *
  *   node scripts/joueur/partie.mjs --adversaire maia|sf1500 --camp w|b --graine N [--budget 400000]
- *                                  [--joueur coach/joueur/joueur-factice.mjs] [--sortie parties/] [--depart <fen>]
+ *                                  [--joueur coach/joueur/joueur.mjs (défaut) | coach/joueur/joueur-factice.mjs] [--sortie parties/] [--depart <fen>]
  *
  * Le COACH (classe `Joueur`, `choisir(fen, contexte)`) joue TOUS ses coups ; l'arène ne lui donne jamais un moteur ni une
  * évaluation (principe 2 du GE : Stockfish est examinateur après coup, jamais proposant). L'adversaire est Maia-1500
@@ -187,7 +187,9 @@ async function main() {
   const BUDGET = Number(opt('--budget', 400000));
   const SORTIE = opt('--sortie', 'parties');
   const DEP = opt('--depart', DEPART);
-  const MODULE = opt('--joueur', '../../coach/joueur/joueur-factice.mjs');
+  // Par défaut le VRAI coach : le factice ne sert qu'aux tests et se demande explicitement (une partie « factice » contre
+  // Stockfish a été prise pour une vraie le 24 octobre ; plus jamais).
+  const MODULE = opt('--joueur', '../../coach/joueur/joueur.mjs');
 
   const { Joueur } = await import(MODULE.startsWith('.') || MODULE.startsWith('/') ? MODULE : `../../${MODULE}`);
   const coach = new Joueur({ camp: CAMP, budget: BUDGET, graine: GRAINE });
