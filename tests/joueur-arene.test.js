@@ -88,6 +88,18 @@ test('arène : maia tire ses 8 premiers coups, puis joue son coup préféré', a
   assert.equal(tirages, 8);
 });
 
+test('arène : adversaire sf = Stockfish à pleine force (un fil, aucune bride, prof. 12) et joue le coup du moteur', async () => {
+  let opts = null;
+  class FauxMoteur { constructor(o) { opts = o; } async analyze() { return [{ pv: ['g1f3'] }]; } stop() {} }
+  const adv = await construireAdversaire('sf', { EngineClass: { UciEngine: FauxMoteur } });
+  assert.equal(adv.nom, 'sf');
+  assert.equal(adv.meta.bride, false);
+  assert.equal(adv.meta.profondeur, 12);
+  assert.equal(opts.threads, 1); // un fil
+  assert.equal(opts.options, undefined); // aucune option de bride (ni LimitStrength ni Elo)
+  assert.equal(await adv.jouer('rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1'), 'g1f3');
+});
+
 test('arène : le PGN porte les phrases du coach en commentaires', async () => {
   const camp = 'w';
   const coach = new JoueurFactice({ camp, graine: 2 });
