@@ -6,7 +6,7 @@ import {
   candidats, selectionner, piecesEnPrise,
 } from '../coach/joueur/arbre.mjs';
 import { Echiquier, uci as uciDe } from '../coach/joueur/echiquier.mjs';
-import { Recherche } from '../coach/joueur/recherche.mjs';
+import { Recherche, MAT } from '../coach/joueur/recherche.mjs';
 
 const DEPART = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
 const coups = (cs) => cs.map((c) => c.coup);
@@ -43,6 +43,15 @@ test('1c pièce en prise : produit la sauvegarde de la plus grosse, rien si tout
   assert.ok(coups(cs).includes('d4d7') || coups(cs).includes('d4e4'));
   assert.ok(cs.some((c) => /à l'abri|défends|prends/.test(c.raison)));
   assert.deepEqual(pieceEnPrise({ fen: DEPART, camp: 'w' }), []); // rien en prise au départ
+});
+
+test('1c pièce en prise : la pièce attaquée peut s\'échanger en prenant (bilan à l\'équilibre)', () => {
+  // fou b5 attaqué par Cd4 ; Fxc6 est un échange (repris par …bxc6/…Cxc6) qui règle l'attaque.
+  const fen = '2kr3r/ppp2ppp/2n5/1B6/3nP3/5N2/PPP2PPP/R1BK3R w - - 0 1';
+  const cs = pieceEnPrise({ fen, camp: 'w' });
+  const ech = cs.find((c) => c.coup === 'b5c6');
+  assert.ok(ech && /échange contre son cavalier/.test(ech.raison));
+  assert.ok(cs.some((c) => c.coup === 'f3d4' && /prends son cavalier qui attaquait/.test(c.raison))); // prendre l'attaquant
 });
 
 test('1d dernière rangée : produit l\'aération/la couverture sous la menace du couloir, rien sinon', () => {
@@ -110,6 +119,16 @@ test('2d pièce non défendue : produit la double attaque, rien au départ', () 
   assert.deepEqual(pieceNonDefendue({ fen: DEPART, camp: 'w' }), []);
 });
 
+test('2d : une pièce DÉFENDUE attaquée par plus petit n\'est jamais dite « non défendue »', () => {
+  // c3 attaque le Cd4, défendu par le Cc6 : « avec mon pion », pas « non défendue ».
+  const fen = '2kr3r/ppp2ppp/2n5/1B6/3nP3/5N2/PPP2PPP/R1BK3R w - - 0 1';
+  const cs = pieceNonDefendue({ fen, camp: 'w' });
+  const c3 = cs.find((c) => c.coup === 'c2c3');
+  assert.ok(c3 && /avec mon pion/.test(c3.raison) && !/non défendue/.test(c3.raison));
+  // aucune raison ne dit « non défendue » d'une pièce en réalité défendue (Cd4 et Td8 le sont ici)
+  for (const c of cs) if (/non défendue/.test(c.raison)) assert.fail(`« non défendue » faux : ${c.coup} ${c.raison}`);
+});
+
 test('2e tactique nommée : produit un clouage créé en un coup, rien au départ', () => {
   // Ta1-e1 cloue le cavalier e5 sur le roi e8.
   const fen = '4k3/8/8/4n3/8/8/8/R5K1 w - - 0 1';
@@ -154,6 +173,14 @@ test('racineLimitee : la recherche ne compare que les coups donnés, et chacun a
   assert.equal(r.candidats.length, 2); // seulement les deux candidats à la racine
   assert.ok(r.candidats.every((c) => c.exact)); // tous exacts (fenêtre ouverte)
   assert.equal(uciDe(r.coup), 'd1d5'); // le meilleur des deux est Dxd5 (il gagne une pièce)
+});
+
+test('menace : la recherche courte voit le mat du couloir donné par une PRISE (…Txd1#)', () => {
+  // le trou de classe « pas reconnu avant » qu'on veut éliminer : s'il joue, …Txd1 est mat (roi g1, pions f2 g2 h2).
+  const ech = new Echiquier('3r2k1/5ppp/8/8/8/8/5PPP/3R2K1 w - - 0 1');
+  const mn = new Recherche({ budget: 60000 }).menace(ech, { budget: 60000, profondeurMax: 4 });
+  assert.ok(mn && mn.score >= MAT - 200, 'la menace doit être un mat'); // c'est ce qui allumera la sonde de 1b dans le joueur
+  assert.equal(uciDe(mn.pv[0]), 'd8d1');
 });
 
 test('racineLimitee absente : la recherche garde tous les coups de la racine', () => {

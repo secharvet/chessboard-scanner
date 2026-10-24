@@ -52,25 +52,31 @@ export function menaceMat({ fen, sonde }) {
   return out;
 }
 
-/** 1c — Une de mes pièces est-elle en prise (la plus grosse d'abord) ? La sauver : fuir, prendre l'attaquant, défendre, s'interposer. */
+/** 1c — Une de mes pièces est-elle en prise (la plus grosse d'abord) ? La sauver : fuir, prendre l'attaquant, l'échanger, défendre, s'interposer. */
 export function pieceEnPrise({ fen, camp }) {
   const enPrise = piecesEnPrise(fen, camp);
   if (!enPrise.length) return [];
   const cible = enPrise[0]; // la plus grosse ; les suivantes seront reprises au coup d'après si besoin
   const attaquants = buildAttackMap(fen).attackersOf(cible.square, other(camp)).map((p) => p.square);
-  const out = [];
+  const nom = maPiece(cible.type), out = [];
   for (const m of coupsLegaux(fen)) {
-    const u = uciDe(m), fenApres = apres(fen, m);
-    const map2 = buildAttackMap(fenApres);
-    // où est ma pièce après le coup ? (si c'est elle qui a bougé, sur sa case d'arrivée ; sinon sur sa case)
-    const caseFinale = m.from === cible.square ? m.to : cible.square;
-    const encore = map2.at[caseFinale];
-    const sauve = !encore || encore.color !== camp ? (m.from === cible.square) : gainEchange(map2, caseFinale, camp) <= 0;
-    if (!sauve) continue;
-    let raison;
-    if (attaquants.includes(m.to)) raison = `je prends ${saPiece(new Chess(fen).get(m.to)?.type ?? 'n')} qui attaquait ${maPiece(cible.type)}`;
-    else if (m.from === cible.square) raison = `je mets ${maPiece(cible.type)} à l'abri en ${m.to}`;
-    else raison = `je défends ${maPiece(cible.type)} en ${cible.square}`;
+    const u = uciDe(m), map2 = buildAttackMap(apres(fen, m));
+    let raison = null;
+    if (m.from === cible.square) {
+      // la pièce elle-même bouge : fuir, prendre l'attaquant, ou s'échanger (prendre une pièce, même reprise, si le bilan tient)
+      const encore = map2.at[m.to];
+      const perte = encore && encore.color === camp ? gainEchange(map2, m.to, camp) : VAL[cible.type];
+      const gagne = m.captured ? VAL[m.captured] : 0;
+      if (gagne - perte < 0) continue; // fuite vers une case en prise, ou échange perdant
+      if (attaquants.includes(m.to)) raison = `je prends ${saPiece(m.captured)} qui attaquait ${nom}`;
+      else if (m.captured) raison = `${nom} est attaqué : je l'échange contre ${saPiece(m.captured)}`;
+      else raison = `je mets ${nom} à l'abri en ${m.to}`;
+    } else {
+      // une autre pièce joue : prendre l'attaquant, s'interposer, ou ajouter un défenseur
+      const encore = map2.at[cible.square];
+      if (!encore || encore.color !== camp || gainEchange(map2, cible.square, camp) > 0) continue; // toujours en prise → pas une parade
+      raison = attaquants.includes(m.to) ? `je prends ${saPiece(m.captured)} qui attaquait ${nom}` : `je défends ${nom} en ${cible.square}`;
+    }
     out.push({ coup: u, raison, noeud: '1c' });
   }
   return out;
@@ -182,24 +188,35 @@ export function intermede({ fen, camp, dernier }) {
   return out;
 }
 
-/** 2d — A-t-il des pièces non défendues ? Puis-je en attaquer deux à la fois (double attaque), ou une qu'il ne peut pas sauver ? */
+/**
+ * 2d — A-t-il des pièces non défendues ? Puis-je en attaquer deux à la fois (double attaque), ou une qu'il ne peut pas
+ * sauver ? Deux cas distincts : pièce NON DÉFENDUE (attaque simple), et pièce DÉFENDUE mais attaquée par PLUS PETIT
+ * (menace réelle, car l'attaquant vaut moins). On ne dit jamais « non défendue » d'une pièce défendue (le vérificateur le contrôle).
+ */
 export function pieceNonDefendue({ fen, camp }) {
   const out = [];
   for (const m of coupsLegaux(fen)) {
-    const fenApres = apres(fen, m), map2 = buildAttackMap(fenApres);
-    // la pièce qui vient de bouger attaque-t-elle des pièces adverses « gagnables » (non défendues, ou plus grosses qu'elle) ?
+    const map2 = buildAttackMap(apres(fen, m));
     const moi = map2.at[m.to]; if (!moi) continue;
+    if (gainEchange(map2, m.to, camp) > 0) continue; // mon coup ne doit pas se pendre lui-même
     const vise = (map2.attacks.get(moi) ?? []).map((s) => map2.at[s]).filter((q) => q && q.color === other(camp) && q.type !== 'k');
-    const gagnables = vise.filter((q) => VAL[q.type] > VAL[moi.type] || !map2.isDefended(q.square, other(camp), moi));
-    // mon coup ne doit pas se pendre lui-même
-    const sage = gainEchange(map2, m.to, camp) <= 0;
-    if (!sage) continue;
+    const gagnables = [];
+    for (const q of vise) {
+      const defendu = map2.isDefended(q.square, other(camp), moi);
+      if (!defendu && VAL[q.type] >= 3) gagnables.push({ q, kind: 'libre' });            // pièce non défendue qui vaut la peine
+      else if (defendu && VAL[moi.type] < VAL[q.type]) gagnables.push({ q, kind: 'petit' }); // défendue, mais attaquée par plus petit
+    }
+    if (!gagnables.length) continue;
+    gagnables.sort((a, b) => VAL[b.q.type] - VAL[a.q.type]);
     if (gagnables.length >= 2) {
-      const [a, b] = gagnables.sort((x, y) => VAL[y.type] - VAL[x.type]);
-      out.push({ coup: uciDe(m), raison: `double attaque sur ${saPiece(a.type)} en ${a.square} et ${saPiece(b.type)} en ${b.square}`, noeud: '2d' });
-    } else if (gagnables.length === 1 && VAL[gagnables[0].type] >= 3) {
-      const a = gagnables[0];
-      out.push({ coup: uciDe(m), raison: `j'attaque ${saPiece(a.type)} en ${a.square}, non défendue`, noeud: '2d' });
+      const [a, b] = gagnables;
+      out.push({ coup: uciDe(m), raison: `double attaque sur ${saPiece(a.q.type)} en ${a.q.square} et ${saPiece(b.q.type)} en ${b.q.square}`, noeud: '2d' });
+    } else {
+      const { q, kind } = gagnables[0];
+      const raison = kind === 'libre'
+        ? `j'attaque ${saPiece(q.type)} en ${q.square}, non défendue`
+        : `j'attaque ${saPiece(q.type)} en ${q.square} avec ${maPiece(moi.type)}`;
+      out.push({ coup: uciDe(m), raison, noeud: '2d' });
     }
   }
   return out;
