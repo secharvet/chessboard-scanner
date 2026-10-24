@@ -76,3 +76,12 @@ export function allumePression(fen, side, san, sAvant4) {
   const apres = pressionRoi(c.fen(), side, a.zone);
   return apres.D <= a.D - 1 ? { S: a.S, tendance, D: a.D, Dapres: apres.D } : null;
 }
+
+/**
+ * L'alarme d'attaque de roi (candidat 1, passé le 22 oct. : RESULTAT-ATTAQUE-ROI-2026-10-22.md) : le veto de l'Expert dont
+ * la dame adverse est parmi les attaquants. Elle ne retire rien : elle déclenche une vérification au moteur (coup-contraint).
+ */
+export function alarmeDame(fen, side, san) {
+  const v = vetoDefense(fen, side, san);
+  return v && v.attaquants.some((a) => a.startsWith('Q')) ? v : null;
+}

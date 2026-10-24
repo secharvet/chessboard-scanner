@@ -17,7 +17,7 @@
  * Un fil pour mesurer : le moteur est créé par l'appelant avec COACH_DETERMINISTIC=1.
  */
 import { Chess } from 'chess.js';
-import { vetoDefense } from './zone-roi.mjs';
+import { vetoDefense, alarmeDame } from './zone-roi.mjs';
 import { distance, suivre, estLevier } from './plan-distance.mjs';
 import { enPrise } from './en-prise.mjs';
 import { buildStructureFacts } from '../positional/structures.js';
@@ -128,8 +128,17 @@ export async function choisirCoup(noteur, fen, side, plan, etat = {}, p = DEFAUT
   // Le forcé AVANT le progressant (GE, 19 oct.) : une parade est neutre pour le plan, qui reprend au coup suivant ; sinon un
   // pas à 0,9 passerait devant une pièce en prise et le prix contiendrait de la tactique.
   if (forcee) { const a0 = admis.find((a) => a.cand === cands[0]); return a0?.progressant ? sortie(cands[0], 'forcé-progressant') : sortie(cands[0], 'forcé'); }
-  const prog = admis.find((a) => a.progressant); // admis est dans l'ordre du moteur : le premier progressant est le meilleur
-  if (prog && !deborde(prog.cout)) return sortie(prog.cand, 'progressant');
+  // L'alarme (règles AA) : un pas sous alarme n'est joué que si la vérification au moteur le garde ; sinon on passe au
+  // progressant suivant, et s'il n'y en a plus, la fenêtre est suspendue comme sous le veto. Jamais en situation forcée.
+  const alarmes = [];
+  let prog = null;
+  for (const a of admis.filter((x) => x.progressant)) { // dans l'ordre du moteur : le premier progressant gardé est le meilleur
+    const al = R?.alarme ? alarmeDame(fen, side, a.cand.m.san) : null;
+    if (al) { const v = await verifierAlarme(noteur, fen, a.cand.uci, R.alarme); alarmes.push({ san: a.cand.m.san, ...al, verification: v }); if (!v.admis) continue; }
+    prog = a; break;
+  }
+  const alarme = alarmes.length ? { alarme: alarmes.at(-1) } : {};
+  if (prog && !deborde(prog.cout)) return sortie(prog.cand, 'progressant', alarme);
   if (prog) {
     // Refus par l'addition : une vérification au faisceau court, une seule par segment (cahier § 11.1, § 12.3, § 13.2) —
     // gratuit (≤ plancher), c'est un sacrifice en cours de route : le pas est joué et l'addition repart du prix vérifié.
@@ -155,9 +164,14 @@ export async function choisirCoup(noteur, fen, side, plan, etat = {}, p = DEFAUT
   let concession = Number.isFinite(coutRefuseMin) ? coutRefuseMin : null;
   // Fenêtre suspendue : un pas a été vetoé et aucun autre n'est admis — le coup du moteur, neutre pour le plan, qui attend.
   if (vetos.length && !prog) return sortie(cands[0], 'suspendu', { concession, veto: vetos[0] });
+  if (alarmes.length && !prog) return sortie(cands[0], 'suspendu', { concession, ...alarme });
   if (compteur >= p.k) {
     const dc = await derniereChance(noteur, fen, side, plan, cands, p);
     if (dc?.admis && R?.veto) { const v = vetoDefense(fen, side, dc.cand.m.san); if (v) return sortie(cands[0], 'suspendu', { concession, veto: { san: dc.cand.m.san, derniereChance: true, ...v } }); }
+    if (dc?.admis && R?.alarme) {
+      const al = alarmeDame(fen, side, dc.cand.m.san);
+      if (al) { const v = await verifierAlarme(noteur, fen, dc.cand.uci, R.alarme); if (!v.admis) return sortie(cands[0], 'suspendu', { concession, alarme: { san: dc.cand.m.san, derniereChance: true, ...al, verification: v } }); }
+    }
     if (dc?.admis) {
       const apres = jouer(fen, dc.cand.uci); const [rep] = await noteur.noter(apres.fen, 1);
       const valeur = rep ? -rep.cp : dc.cand.cp; // à la profondeur de jeu, comme les autres
@@ -172,6 +186,20 @@ export async function choisirCoup(noteur, fen, side, plan, etat = {}, p = DEFAUT
   }
   return sortie(cands[0], 'intendance', { concession });
 }
+/**
+ * La vérification de l'alarme (règles AA) : le pas M est-il encore à moins de `borne` du meilleur coup, vu à `depth` (plus
+ * profond que le jeu) ? Valeur de M lue dans la MultiPV profonde s'il y est, sinon par la meilleure réponse adverse à la
+ * même profondeur. @returns {{ retard, depth, borne, admis }}
+ */
+export async function verifierAlarme(noteur, fen, uci, A) {
+  const notes = await noteur.noter(fen, DEFAUTS.candidats, A.depth);
+  if (!notes.length) return { retard: 0, depth: A.depth, borne: A.borne, admis: true };
+  let valeur = notes.find((n) => n.uci === uci)?.cp;
+  if (valeur == null) { const apres = jouer(fen, uci); const [rep] = await noteur.noter(apres.fen, 1, A.depth); valeur = rep ? -rep.cp : notes[0].cp; }
+  const retard = notes[0].cp - valeur;
+  return { retard, depth: A.depth, borne: A.borne, admis: retard <= A.borne };
+}
+
 /** Le plan est-il hors de prix en jeu ? (k + 1 coups consécutifs sans progressant admissible) */
 export const horsDePrix = (etat, p = DEFAUTS) => (etat.compteur ?? 0) >= p.k + 1;
 
@@ -182,6 +210,9 @@ export const horsDePrix = (etat, p = DEFAUTS) => (etat.compteur ?? 0) >= p.k + 1
 export const REGLES_1BIS = Object.freeze({
   A: Object.freeze({ cumul: 100, verifier: true, relireDC: true }),
   AV: Object.freeze({ cumul: 100, verifier: true, relireDC: true, veto: true }), // A + le veto de défense (REGROUPEMENT, 21 oct.)
+  // A + l'alarme d'attaque de roi (veto à condition dame, déclencheur et non interdit) : le pas sous alarme est revu à
+  // profondeur 24 et gardé s'il reste à un demi-pion du meilleur (borne du GE, 22 oct.). ALARME-ATTAQUE-ROI-2026-10-24.md.
+  AA: Object.freeze({ cumul: 100, verifier: true, relireDC: true, alarme: Object.freeze({ depth: 24, borne: 50 }) }),
   B: Object.freeze({ cumul: 100, verifier: true, relireDC: true, utile: 25, patience: 6, sansPlan: true, plafondSansPlan: 100 }),
 });
 

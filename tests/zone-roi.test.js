@@ -31,3 +31,17 @@ test('pression graduée (GE) : poids classiques sur la zone de neuf cases, pions
   assert.equal(p.P, 5); assert.equal(p.D, 11); assert.equal(p.S, -6);
   assert.equal(allumePression(fen, 'b', 'Nd5', -20), null); // S < 4 : jamais, quelle que soit la tendance
 });
+
+test('alarme (AA) : condition dame, et la vérification garde un pas à un demi-pion du meilleur, pas au-delà', async () => {
+  const { alarmeDame } = await import('../coach/zone-roi.mjs');
+  const { verifierAlarme } = await import('../coach/coup-contraint.mjs');
+  const { Chess } = await import('chess.js');
+  // Panov, la faute : Cd5 sous Fh6 + Dd3 — la dame est parmi les attaquants, l'alarme sonne
+  const fen = 'r2q1rk1/pb2bppp/1pn1pn1B/8/3P4/P1NQ1N2/1PB2PPP/R3R1K1 b - - 0 14';
+  assert.ok(alarmeDame(fen, 'b', 'Nd5'));
+  const coup = (uci) => new Chess(fen).move({ from: uci.slice(0, 2), to: uci.slice(2, 4) });
+  const faux = (notes) => ({ noter: async () => notes.map(([uci, cp]) => ({ uci, cp, m: coup(uci) })) });
+  const A = { depth: 24, borne: 50 };
+  assert.equal((await verifierAlarme(faux([['f6g4', -86], ['f6d5', -120]]), fen, 'f6d5', A)).admis, true);   // 34 cp : gardé
+  assert.equal((await verifierAlarme(faux([['f6g4', -86], ['f6d5', -200]]), fen, 'f6d5', A)).admis, false);  // 114 cp : suspendu
+});

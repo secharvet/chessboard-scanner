@@ -44,7 +44,7 @@ const BRAS = opt('--bras', 'livre'); if (!['livre', 'prix', 'temoin'].includes(B
 const DEPTH = Number(opt('--depth', 18)), PLIES = Number(opt('--plies', 80)), PARTIES = Number(opt('--parties', 10));
 const NUMEROS = opt('--numeros', null)?.split(',').map(Number) ?? Array.from({ length: PARTIES }, (_, i) => i + 1);
 const ELARGI = args.includes('--elargi'); // fenêtre d'ex æquo adverse à 40 cp (N effectif < 5)
-const NOM_REGLES = opt('--regles', null); if (NOM_REGLES && !REGLES_1BIS[NOM_REGLES]) { console.error('--regles A|B|AV'); process.exit(2); }
+const NOM_REGLES = opt('--regles', null); if (NOM_REGLES && !REGLES_1BIS[NOM_REGLES]) { console.error('--regles A|B|AV|AA'); process.exit(2); }
 const REGLES = NOM_REGLES ? REGLES_1BIS[NOM_REGLES] : null;
 const OUT = opt('--out', `reports/plans/epreuve/partie-${DEP.id}-${CAMP}-${BRAS}`);
 const fmt = (c) => (c == null || !Number.isFinite(c) ? '—' : (c / 100).toFixed(2).replace('.', ',').replace(/^(-?)/, (m) => (m === '-' ? '−' : '+')));
@@ -183,6 +183,7 @@ async function partie(numero) {
         if (r.sauvetage) { coach.sauvetages++; evts.push(`sauvetage ${fr(r.sauvetage.san)} (addition ${fmt(r.sauvetage.cumul)}, faisceau ${fmt(r.sauvetage.prixVerifie)})`); }
         // Le pas refusé laisse jouer le repli de ce coup-ci ; l'abandon et l'enchaînement viennent au coup suivant (cahier § 2.2).
         if (r.refus) { coach.cumulDeborde = true; evts.push(`refus ${fr(r.refus.san)} (addition ${fmt(r.refus.cumul)}${r.refus.prixVerifie !== undefined ? `, faisceau ${fmt(r.refus.prixVerifie)}` : ''})`); }
+        if (r.alarme) { const v = r.alarme.verification; evts.push(`alarme ${fr(r.alarme.san)}${r.alarme.derniereChance ? ' (dernière chance)' : ''} : retard ${v.retard} à prof. ${v.depth} → ${v.admis ? 'gardé' : 'suspendu'}`); }
         if (r.veto) evts.push(`veto ${fr(r.veto.san)}${r.veto.derniereChance ? ' (dernière chance)' : ''} (défenses du roi ${r.veto.avant} → ${r.veto.apres})`);
         if (r.dcRefusee) evts.push(`dernière chance refusée (relecture ${DEPTH}) ${fr(r.dcRefusee.san)} ${fmt(r.dcRefusee.retard)}`);
       }
