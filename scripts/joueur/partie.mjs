@@ -40,7 +40,7 @@ function normaliserUci(uci, chess) {
  * ligne). Le `coach` expose `choisir(fen, contexte)` ; l'`adversaire` expose `jouer(fen) → uci` et `meta`.
  * @returns l'enregistrement de partie du contrat (page 3).
  */
-export async function jouerPartie({ coach, adversaire, camp, id = 'sans-id', fenDepart = DEPART, budget = 400000, code = 'factice', maxPlies = 400 }) {
+export async function jouerPartie({ coach, adversaire, camp, id = 'sans-id', fenDepart = DEPART, budget = 400000, code = 'factice', maxPlies = 400, onCoup = null }) {
   const ech = new Echiquier(fenDepart);
   const chess = new Chess(fenDepart); // miroir de notation ; jamais la source de la légalité
   const coups = [];
@@ -77,6 +77,7 @@ export async function jouerPartie({ coach, adversaire, camp, id = 'sans-id', fen
       coups.push({ ply: ply + 1, camp: trait, san: toFrenchSan(cm.san), uci, fenAvant: fen, coach: false });
       historique.push(uci);
     }
+    if (onCoup) await onCoup(coups[coups.length - 1]); // flux en direct : un coup émis dès qu'il est joué
     ply++;
     fin = ech.fin();
   }
@@ -101,7 +102,7 @@ export async function jouerPartie({ coach, adversaire, camp, id = 'sans-id', fen
  * Construit l'adversaire. Classes injectables (`MaiaClass`, `EngineClass`) pour les tests hors ligne : en mode `maia`,
  * `EngineClass` n'est JAMAIS appelée (aucun moteur Stockfish lancé) ; en mode `sf1500`, `MaiaClass` ne l'est pas.
  */
-export async function construireAdversaire(type, { graine = 1, depth = 12, MaiaClass, EngineClass, maiaOpts = {}, engineOpts = {} } = {}) {
+export async function construireAdversaire(type, { graine = 1, depth = 12, elo = 1500, MaiaClass, EngineClass, maiaOpts = {}, engineOpts = {} } = {}) {
   if (type === 'maia') {
     const mod = MaiaClass ?? (await import('../../coach/maia.mjs')); // injectable pour les tests hors ligne
     const maia = new mod.Maia(maiaOpts);
@@ -121,11 +122,11 @@ export async function construireAdversaire(type, { graine = 1, depth = 12, MaiaC
   }
   if (type === 'sf1500') {
     const mod = EngineClass ?? (await import('../../coach/uci-engine.mjs'));
-    const engine = new mod.UciEngine({ ...engineOpts, options: { UCI_LimitStrength: true, UCI_Elo: 1500 } });
+    const engine = new mod.UciEngine({ ...engineOpts, options: { UCI_LimitStrength: true, UCI_Elo: elo } });
     void graine;
     return {
-      nom: 'sf1500',
-      meta: { nom: 'stockfish-1500', elo: 1500, profondeur: depth },
+      nom: `sf${elo}`,
+      meta: { nom: `stockfish-${elo}`, elo, profondeur: depth },
       async jouer(fen) {
         const [ligne] = await engine.analyze(fen, { depth, multipv: 1 });
         if (!ligne?.pv?.[0]) throw new Error(`l'adversaire bridé n'a rendu aucun coup (${fen})`);
@@ -195,6 +196,9 @@ export function majIndex(dossier, entree) {
 
 /* ------------------------------------------------------------------ CLI ------------------------------------------------------------------ */
 
+/** Identifiant horodaté pour une partie à la demande : <date>T<hhmmss>-<adversaire>-<camp> (aucune collision). */
+export const horodate = (nomAdversaire, camp, d = new Date()) => `${d.toISOString().slice(0, 19).replace(/[-:]/g, '').replace('T', 'T')}-${nomAdversaire}-${camp}`;
+
 async function main() {
   const args = process.argv.slice(2);
   const opt = (k, d) => (args.includes(k) ? args[args.indexOf(k) + 1] : d);
@@ -202,8 +206,11 @@ async function main() {
   const CAMP = opt('--camp', 'w'); if (!['w', 'b'].includes(CAMP)) { console.error('--camp w|b'); process.exit(2); }
   const GRAINE = Number(opt('--graine', 1));
   const BUDGET = Number(opt('--budget', 400000));
+  const DEPTH = Number(opt('--depth', 12));
+  const ELO = Number(opt('--elo', 1500));
   const SORTIE = opt('--sortie', 'parties');
   const DEP = opt('--depart', DEPART);
+  const FLUX = args.includes('--flux'); // une ligne JSON par coup sur stdout, puis l'examen, puis la fin
   // Par défaut le VRAI coach : le factice ne sert qu'aux tests et se demande explicitement (une partie « factice » contre
   // Stockfish a été prise pour une vraie le 24 octobre ; plus jamais).
   const MODULE = opt('--joueur', '../../coach/joueur/joueur.mjs');
@@ -213,19 +220,37 @@ async function main() {
   // Le code qui a produit la partie : --code s'il est donné (la série fige sa version), sinon le commit courant (git).
   let code = opt('--code', null);
   if (!code) { try { code = execSync('git rev-parse --short HEAD', { encoding: 'utf8' }).trim(); } catch { code = coach.code ?? 'inconnu'; } }
-  const adversaire = await construireAdversaire(TYPE, { graine: GRAINE });
+  const adversaire = await construireAdversaire(TYPE, { graine: GRAINE, depth: DEPTH, elo: ELO });
 
   const date = new Date().toISOString().slice(0, 10);
-  const id = `${date}-${TYPE}-${CAMP}-${String(GRAINE).padStart(2, '0')}`;
+  const id = opt('--id', null) ?? (FLUX ? horodate(adversaire.meta.nom, CAMP) : `${date}-${TYPE}-${CAMP}-${String(GRAINE).padStart(2, '0')}`);
+  // En flux, stdout ne porte QUE des lignes JSON d'événement (le relais SSE les lit) ; tout le reste va sur stderr.
+  const emet = FLUX ? (o) => process.stdout.write(`${JSON.stringify(o)}\n`) : null;
 
-  console.error(`arène : ${id} — coach ${CAMP} contre ${TYPE} (graine ${GRAINE}, budget ${BUDGET})…`);
-  const partie = await jouerPartie({ coach, adversaire, camp: CAMP, id, fenDepart: DEP, budget: BUDGET, code });
+  console.error(`arène : ${id} — coach ${CAMP} contre ${adversaire.meta.nom} (budget ${BUDGET})…`);
+  if (FLUX) emet({ ev: 'debut', id, adversaire: adversaire.meta, camp: CAMP, budget: BUDGET, depart: DEP, code });
+  const partie = await jouerPartie({ coach, adversaire, camp: CAMP, id, fenDepart: DEP, budget: BUDGET, code, onCoup: FLUX ? (c) => emet({ ev: 'coup', coup: c }) : null });
   await adversaire.stop?.();
+
+  // L'examen, dans le même processus (indispensable en flux : le serveur n'en lance pas d'autre).
+  if (FLUX) {
+    try {
+      process.env.COACH_DETERMINISTIC = '1';
+      const { UciEngine } = await import('../../coach/uci-engine.mjs');
+      const { examiner } = await import('./examiner.mjs');
+      const moteur = new UciEngine({ path: process.env.STOCKFISH_PATH ?? '/usr/local/bin/stockfish', threads: 1 });
+      await moteur.start();
+      await examiner(moteur, partie);
+      moteur.stop();
+      emet({ ev: 'examen', examen: partie.examen });
+    } catch (e) { emet({ ev: 'examen', examen: null, erreur: String(e?.message ?? e) }); }
+  }
 
   mkdirSync(SORTIE, { recursive: true });
   writeFileSync(`${SORTIE}/${id}.json`, JSON.stringify(partie, null, 1));
   writeFileSync(`${SORTIE}/${id}.pgn`, pgn(partie));
-  majIndex(SORTIE, { id, adversaire: TYPE, camp: CAMP, graine: GRAINE, resultat: partie.resultat, raison: partie.raison, plies: partie.plies, date });
+  majIndex(SORTIE, { id, adversaire: adversaire.meta.nom, camp: CAMP, resultat: partie.resultat, raison: partie.raison, plies: partie.plies, date });
+  if (FLUX) emet({ ev: 'fin', id, resultat: partie.resultat, raison: partie.raison, plies: partie.plies });
   console.error(`  ${partie.plies} demi-coups, ${partie.resultat} (${partie.raison}) — écrit ${SORTIE}/${id}.{json,pgn}`);
 }
 
