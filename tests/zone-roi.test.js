@@ -49,4 +49,5 @@ test('alarme (AA) : condition dame, et la vérification garde un pas à un demi-
   const repli = { noter: async (f, n, d) => { appels.push(d); return f === fen ? [{ uci: 'f6g4', cp: -86, m: coup('f6g4') }] : [{ uci: 'h6g7', cp: 300, m: null }]; } };
   const v = await verifierAlarme(repli, fen, 'f6d5', A);
   assert.equal(v.retard, 214); assert.equal(v.admis, false); assert.deepEqual(appels, [24, 24]);
+  assert.equal(v.meilleur.uci, 'f6g4'); // le coup à jouer si la fenêtre est suspendue : le meilleur à 24
 });

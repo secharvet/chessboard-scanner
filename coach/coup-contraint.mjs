@@ -131,6 +131,9 @@ export async function choisirCoup(noteur, fen, side, plan, etat = {}, p = DEFAUT
   // L'alarme (règles AA) : un pas sous alarme n'est joué que si la vérification au moteur le garde ; sinon on passe au
   // progressant suivant, et s'il n'y en a plus, la fenêtre est suspendue comme sous le veto. Jamais en situation forcée.
   const alarmes = [];
+  // Le coup joué quand l'alarme suspend : le meilleur à 24 ; son retard (journal seulement, « suspendu » est neutre) est lu
+  // à la profondeur de jeu s'il est dans la MultiPV à 18, sinon sur sa note à 24.
+  const meilleurA24 = (v) => (v.meilleur ? cands.find((c) => c.uci === v.meilleur.uci) ?? v.meilleur : cands[0]);
   let prog = null;
   for (const a of admis.filter((x) => x.progressant)) { // dans l'ordre du moteur : le premier progressant gardé est le meilleur
     const al = R?.alarme ? alarmeDame(fen, side, a.cand.m.san) : null;
@@ -165,13 +168,13 @@ export async function choisirCoup(noteur, fen, side, plan, etat = {}, p = DEFAUT
   let concession = Number.isFinite(coutRefuseMin) ? coutRefuseMin : null;
   // Fenêtre suspendue : un pas a été vetoé et aucun autre n'est admis — le coup du moteur, neutre pour le plan, qui attend.
   if (vetos.length && !prog) return sortie(cands[0], 'suspendu', { concession, veto: vetos[0] });
-  if (alarmes.length && !prog) return sortie(cands[0], 'suspendu', { concession, ...alarme });
+  if (alarmes.length && !prog) return sortie(meilleurA24(alarmes[0].verification), 'suspendu', { concession, ...alarme });
   if (compteur >= p.k) {
     const dc = await derniereChance(noteur, fen, side, plan, cands, p);
     if (dc?.admis && R?.veto) { const v = vetoDefense(fen, side, dc.cand.m.san); if (v) return sortie(cands[0], 'suspendu', { concession, veto: { san: dc.cand.m.san, derniereChance: true, ...v } }); }
     if (dc?.admis && R?.alarme) {
       const al = alarmeDame(fen, side, dc.cand.m.san);
-      if (al) { const v = await verifierAlarme(noteur, fen, dc.cand.uci, R.alarme); if (!v.admis) return sortie(cands[0], 'suspendu', { concession, alarme: { san: dc.cand.m.san, derniereChance: true, ...al, verification: v } }); }
+      if (al) { const v = await verifierAlarme(noteur, fen, dc.cand.uci, R.alarme); if (!v.admis) return sortie(meilleurA24(v), 'suspendu', { concession, alarme: { san: dc.cand.m.san, derniereChance: true, ...al, verification: v } }); }
     }
     if (dc?.admis) {
       const apres = jouer(fen, dc.cand.uci); const [rep] = await noteur.noter(apres.fen, 1);
@@ -190,15 +193,16 @@ export async function choisirCoup(noteur, fen, side, plan, etat = {}, p = DEFAUT
 /**
  * La vérification de l'alarme (règles AA) : le pas M est-il encore à moins de `borne` du meilleur coup, vu à `depth` (plus
  * profond que le jeu) ? Valeur de M lue dans la MultiPV profonde s'il y est, sinon par la meilleure réponse adverse à la
- * même profondeur. @returns {{ retard, depth, borne, admis }}
+ * même profondeur. `meilleur` = le meilleur coup à cette profondeur : c'est lui qu'on joue si la fenêtre est suspendue
+ * (Expert, 24 oct. : on ne vérifie pas à 24 pour jouer un coup choisi à 18). @returns {{ retard, depth, borne, admis, meilleur }}
  */
 export async function verifierAlarme(noteur, fen, uci, A) {
   const notes = await noteur.noter(fen, DEFAUTS.candidats, A.depth);
-  if (!notes.length) return { retard: 0, depth: A.depth, borne: A.borne, admis: true };
+  if (!notes.length) return { retard: 0, depth: A.depth, borne: A.borne, admis: true, meilleur: null };
   let valeur = notes.find((n) => n.uci === uci)?.cp;
   if (valeur == null) { const apres = jouer(fen, uci); const [rep] = await noteur.noter(apres.fen, 1, A.depth); valeur = rep ? -rep.cp : notes[0].cp; }
   const retard = notes[0].cp - valeur;
-  return { retard, depth: A.depth, borne: A.borne, admis: retard <= A.borne };
+  return { retard, depth: A.depth, borne: A.borne, admis: retard <= A.borne, meilleur: notes[0] };
 }
 
 /** Le plan est-il hors de prix en jeu ? (k + 1 coups consécutifs sans progressant admissible) */
