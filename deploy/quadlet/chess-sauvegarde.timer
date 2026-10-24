@@ -1,0 +1,9 @@
+[Unit]
+Description=Sauvegarde quotidienne de la base échecs (4 h 30, heure du serveur)
+
+[Timer]
+OnCalendar=*-*-* 04:30:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target

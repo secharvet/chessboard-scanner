@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 500" width="940" height="500" role="img" aria-label="Le modèle"><defs><marker id="ar" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#6b6457"/></marker></defs><rect width="100%" height="100%" fill="#faf8f2"/><text x="470" y="30" text-anchor="middle" font-family="Georgia, serif" font-size="18" font-weight="600" fill="#1f1d18">L’encodeur d’arbres : entrées, architecture, sorties</text>
+<rect x="30" y="70" width="28" height="28" rx="4" fill="#ffffff" stroke="#1f1d18"/>
+<rect x="64" y="70" width="28" height="28" rx="4" fill="#333028" stroke="#1f1d18"/>
+<rect x="98" y="70" width="28" height="28" rx="4" fill="#ffffff" stroke="#1f1d18"/>
+<rect x="132" y="70" width="28" height="28" rx="4" fill="#333028" stroke="#1f1d18"/>
+<rect x="166" y="70" width="28" height="28" rx="4" fill="#ffffff" stroke="#1f1d18"/>
+<rect x="200" y="70" width="28" height="28" rx="4" fill="#333028" stroke="#1f1d18"/>
+<rect x="234" y="70" width="28" height="28" rx="4" fill="#ffffff" stroke="#1f1d18"/>
+<rect x="268" y="70" width="28" height="28" rx="4" fill="#333028" stroke="#1f1d18"/>
+<rect x="302" y="70" width="28" height="28" rx="4" fill="#ffffff" stroke="#1f1d18"/>
+<rect x="336" y="70" width="28" height="28" rx="4" fill="#333028" stroke="#1f1d18"/>
+<rect x="370" y="70" width="28" height="28" rx="4" fill="#ffffff" stroke="#1f1d18"/>
+<rect x="404" y="70" width="28" height="28" rx="4" fill="#333028" stroke="#1f1d18"/>
+<rect x="438" y="70" width="28" height="28" rx="4" fill="#ffffff" stroke="#1f1d18"/>
+<rect x="472" y="70" width="28" height="28" rx="4" fill="#333028" stroke="#1f1d18"/>
+<rect x="506" y="70" width="28" height="28" rx="4" fill="#ffffff" stroke="#1f1d18"/>
+<rect x="540" y="70" width="28" height="28" rx="4" fill="#333028" stroke="#1f1d18"/>
+<text x="302" y="118" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="400" fill="#6b6457">16 nœuds, chacun = jusqu’à 40 traits (identifiants dans un vocabulaire de 367)</text>
+<line x1="302" y1="126" x2="302" y2="150" stroke="#6b6457" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="60" y="150" width="490" height="56" rx="10" fill="#e3eef7" stroke="#c9c2b2" stroke-width="1.5"/>
+<text x="305.0" y="174" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="600" fill="#1f1d18">Somme des plongements de traits (EmbeddingBag, 128) + position dans la fenêtre</text>
+<line x1="302" y1="206" x2="302" y2="230" stroke="#6b6457" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="60" y="230" width="490" height="70" rx="10" fill="#e3eef7" stroke="#c9c2b2" stroke-width="1.5"/>
+<text x="305.0" y="254" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="600" fill="#1f1d18">Transformeur encodeur : 4 couches, 4 têtes, pré-normalisation</text>
+<text x="305.0" y="276" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6b6457">un jeton [CLS] en tête résume la fenêtre</text>
+<line x1="302" y1="300" x2="302" y2="324" stroke="#6b6457" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="200" y="324" width="210" height="50" rx="10" fill="#efe9da" stroke="#c9c2b2" stroke-width="1.5"/>
+<text x="305.0" y="348" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="600" fill="#1f1d18">h : vecteur de 128 nombres</text>
+<line x1="260" y1="374" x2="170" y2="410" stroke="#6b6457" stroke-width="2" marker-end="url(#ar)"/>
+<line x1="350" y1="374" x2="440" y2="410" stroke="#6b6457" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="40" y="410" width="260" height="76" rx="10" fill="#e6f1e8" stroke="#c9c2b2" stroke-width="1.5"/>
+<text x="170.0" y="434" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="600" fill="#1f1d18">Tête « avenir »</text>
+<text x="170.0" y="456" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6b6457">139 sorties sigmoïdes : probabilité</text>
+<text x="170.0" y="473" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6b6457">de chaque fait dans les 10 demi-coups suivants</text>
+<rect x="310" y="410" width="260" height="76" rx="10" fill="#f6e5e5" stroke="#c9c2b2" stroke-width="1.5"/>
+<text x="440.0" y="434" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="600" fill="#1f1d18">Projection contrastive</text>
+<text x="440.0" y="456" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6b6457">128 nombres normalisés :</text>
+<text x="440.0" y="473" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6b6457">pour rapprocher les fenêtres voisines</text>
+<rect x="620" y="70" width="290" height="120" rx="10" fill="#fff" stroke="#6b4f1d" stroke-width="1.5"/>
+<text x="765.0" y="94" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="600" fill="#1f1d18">Témoin « coups seuls »</text>
+<text x="765.0" y="116" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6b6457">même modèle, mêmes données,</text>
+<text x="765.0" y="133" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6b6457">entrées réduites à camp, pièce,</text>
+<text x="765.0" y="150" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6b6457">prise, échec, zone d’arrivée</text>
+<text x="765.0" y="167" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6b6457">→ mesure ce que les grains apportent</text>
+<rect x="620" y="220" width="290" height="140" rx="10" fill="#fff" stroke="#c9c2b2" stroke-width="1.5"/>
+<text x="765.0" y="244" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="600" fill="#1f1d18">Ordres de grandeur</text>
+<text x="765.0" y="266" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6b6457">2 M de fenêtres (88 000 parties)</text>
+<text x="765.0" y="283" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6b6457">≈ 1,2 M de paramètres</text>
+<text x="765.0" y="300" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6b6457">4 époques, lots de 512</text>
+<text x="765.0" y="317" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6b6457">quelques minutes par époque (RTX 5070 Ti)</text>
+<text x="765.0" y="334" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6b6457">10 % des parties gardées pour la validation</text>
+<rect x="620" y="390" width="290" height="96" rx="10" fill="#fff" stroke="#c9c2b2" stroke-width="1.5"/>
+<text x="765.0" y="414" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="600" fill="#1f1d18">Ce qu’on garde</text>
+<text x="765.0" y="436" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6b6457">les poids du modèle (.pt)</text>
+<text x="765.0" y="453" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6b6457">le vecteur h de chaque fenêtre (.emb.npy)</text>
+<text x="765.0" y="470" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6b6457">le rapport : perte, AUC, contre la constante</text></svg>

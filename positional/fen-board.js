@@ -74,6 +74,20 @@ export function isSquareAttackedByPawn(sq, pawns, attackerColor) {
   return false;
 }
 
+/**
+ * Un pion de `color` pourra-t-il un jour attaquer `sq` en avançant ?
+ * (pion sur une colonne adjacente, encore derrière la case).
+ * @param {{ fileIdx: number, rank: number }} sq @param {PawnSquare[]} pawns @param {Color} color
+ */
+export function canPawnsEverAttack(sq, pawns, color) {
+  return pawns.some(
+    (p) =>
+      p.color === color &&
+      Math.abs(p.fileIdx - sq.fileIdx) === 1 &&
+      (color === 'w' ? p.rank < sq.rank : p.rank > sq.rank),
+  );
+}
+
 /** @param {PawnSquare} pawn */
 export function frontSquare(pawn) {
   const dr = pawn.color === 'w' ? 1 : -1;

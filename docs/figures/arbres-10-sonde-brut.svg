@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 330" font-family="Georgia, serif" font-size="13">
+  <rect width="760" height="330" fill="#fbf8f1"/>
+  <text x="20" y="28" font-size="16" fill="#2b2620">Sonde d'avenir : la même question posée à six lecteurs (AUC moyenne, 137 faits, parties jamais vues)</text>
+  <text x="20" y="46" font-size="11" fill="#6b6257">Lots Lichess 2021-02, 942 657 fenêtres, 46 719 parties. Sonde à une couche cachée de 256, sauf mention.</text>
+  <g font-size="12" fill="#2b2620">
+    <!-- axe -->
+    <line x1="300" y1="70" x2="300" y2="290" stroke="#b9b1a4"/>
+    <g stroke="#e4ddd0" stroke-dasharray="3 3">
+      <line x1="400" y1="70" x2="400" y2="290"/><line x1="500" y1="70" x2="500" y2="290"/><line x1="600" y1="70" x2="600" y2="290"/><line x1="700" y1="70" x2="700" y2="290"/>
+    </g>
+    <g font-size="10" fill="#6b6257" text-anchor="middle"><text x="300" y="304">0,50</text><text x="400" y="304">0,60</text><text x="500" y="304">0,70</text><text x="600" y="304">0,80</text><text x="700" y="304">0,90</text></g>
+    <!-- barres : x = 300 + (auc-0.5)*1000 -->
+    <text x="290" y="92" text-anchor="end">vecteurs au hasard (témoin)</text><rect x="300" y="80" width="0" height="18" fill="#c9c1b4"/><text x="306" y="93" font-size="11">0,50</text>
+    <text x="290" y="122" text-anchor="end">coups seuls, modèle à grains témoin*</text><rect x="300" y="110" width="191" height="18" fill="#c9c1b4"/><text x="497" y="123" font-size="11">0,69</text>
+    <text x="290" y="152" text-anchor="end">échiquier brut, sonde linéaire</text><rect x="300" y="140" width="207" height="18" fill="#8fb3c9"/><text x="513" y="153" font-size="11">0,71</text>
+    <text x="290" y="182" text-anchor="end">échiquier brut (étage 1, auto-supervisé)</text><rect x="300" y="170" width="224" height="18" fill="#3f7ca0"/><text x="530" y="183" font-size="11">0,72</text>
+    <text x="290" y="212" text-anchor="end">modèle à grains, bout en bout (passe 3)*</text><rect x="300" y="200" width="231" height="18" fill="#c08a4a"/><text x="537" y="213" font-size="11">0,73</text>
+    <text x="290" y="242" text-anchor="end">sac de grains de la fenêtre (étiquettes, sans modèle)</text><rect x="300" y="230" width="244" height="18" fill="#d9a86a"/><text x="550" y="243" font-size="11">0,74</text>
+    <text x="290" y="272" text-anchor="end">échiquier brut + sac de grains</text><rect x="300" y="260" width="261" height="18" fill="#5a8f5a"/><text x="567" y="273" font-size="11">0,76</text>
+  </g>
+  <text x="20" y="322" font-size="10" fill="#6b6257">* mesurés en passe 3 sur un autre tirage de parties (même vocabulaire d'avenir), donnés pour l'échelle. Le brut n'a jamais vu un seul fait d'avenir à l'entraînement.</text>
+</svg>

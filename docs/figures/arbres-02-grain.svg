@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 350" width="940" height="350" role="img" aria-label="Anatomie d’un grain"><defs><marker id="ar" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#6b6457"/></marker></defs><rect width="100%" height="100%" fill="#faf8f2"/><text x="470" y="34" text-anchor="middle" font-family="Georgia, serif" font-size="18" font-weight="600" fill="#1f1d18">Un grain = un demi-coup, décrit par ce que le code voit</text>
+<rect x="20" y="60" width="210" height="110" rx="10" fill="#efe9da" stroke="#c9c2b2" stroke-width="1.5"/>
+<text x="125.0" y="84" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="600" fill="#1f1d18">Identité</text>
+<text x="125.0" y="106" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6b6457">camp · pièce · prise · échec · roque</text>
+<rect x="250" y="60" width="210" height="110" rx="10" fill="#e3eef7" stroke="#c9c2b2" stroke-width="1.5"/>
+<text x="355.0" y="84" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="600" fill="#1f1d18">Zone d’arrivée</text>
+<text x="355.0" y="106" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6b6457">relative aux rois : côté de son roi,</text>
+<text x="355.0" y="123" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6b6457">centre, côté de mon roi × mon camp / son camp</text>
+<rect x="480" y="60" width="210" height="110" rx="10" fill="#e3eef7" stroke="#c9c2b2" stroke-width="1.5"/>
+<text x="585.0" y="84" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="600" fill="#1f1d18">Cibles</text>
+<text x="585.0" y="106" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6b6457">roi · pièce · pion faible ·</text>
+<text x="585.0" y="123" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6b6457">colonne ouverte · centre</text>
+<rect x="710" y="60" width="210" height="110" rx="10" fill="#e6f1e8" stroke="#c9c2b2" stroke-width="1.5"/>
+<text x="815.0" y="84" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="600" fill="#1f1d18">Effets immédiats</text>
+<text x="815.0" y="106" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6b6457">menace · pression · soutien</text>
+<rect x="20" y="190" width="210" height="110" rx="10" fill="#e6f1e8" stroke="#c9c2b2" stroke-width="1.5"/>
+<text x="125.0" y="214" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="600" fill="#1f1d18">Atomes de structure</text>
+<text x="125.0" y="236" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6b6457">levier · manœuvre · échange · roque ·</text>
+<text x="125.0" y="253" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6b6457">espace · fermeture · restriction · 7e</text>
+<rect x="250" y="190" width="210" height="110" rx="10" fill="#f6e5e5" stroke="#c9c2b2" stroke-width="1.5"/>
+<text x="355.0" y="214" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="600" fill="#1f1d18">Faits apparus / disparus</text>
+<text x="355.0" y="236" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6b6457">clouage, fourchette, pion isolé, colonne</text>
+<text x="355.0" y="253" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6b6457">ouverte, avant-poste, bouclier abîmé…</text>
+<rect x="480" y="190" width="210" height="110" rx="10" fill="#f6e5e5" stroke="#c9c2b2" stroke-width="1.5"/>
+<text x="585.0" y="214" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="600" fill="#1f1d18">Contrôle des cases</text>
+<text x="585.0" y="236" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6b6457">six zones relatives, variation</text>
+<text x="585.0" y="253" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6b6457">pression sur la zone du roi adverse</text>
+<rect x="710" y="190" width="210" height="110" rx="10" fill="#efe9da" stroke="#c9c2b2" stroke-width="1.5"/>
+<text x="815.0" y="214" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="600" fill="#1f1d18">Plans détectés</text>
+<text x="815.0" y="236" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6b6457">30 concepts (tour sur colonne,</text>
+<text x="815.0" y="253" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6b6457">blocage, rupture, affaiblir…)</text>
+<text x="470" y="330" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="400" fill="#6b6457">Exemple : 13…Fxc3+  →  camp lui · fou · prise cavalier · échec · zone 3 (son camp, côté de mon roi) · vise roi · atome échange · plan affaiblir · apparaît ROI_AU_CENTRE (moi), DOUBLON (moi) · disparaît CLOUAGE</text></svg>

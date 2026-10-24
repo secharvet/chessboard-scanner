@@ -1,0 +1,3 @@
+# Réseau privé entre les conteneurs de la plateforme (chess-db, chess-api, et plus tard chess-web).
+# Génère le réseau Podman "systemd-chess" ; les conteneurs s'y résolvent par leur ContainerName (DNS interne).
+[Network]

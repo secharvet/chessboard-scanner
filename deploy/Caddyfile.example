@@ -1,0 +1,12 @@
+# Caddy : HTTPS automatique (Let's Encrypt) devant le site (nginx dans Podman, port 6400).
+# Prérequis : un nom de domaine qui pointe vers l'adresse publique du serveur, ports 80 et 443 ouverts.
+#   sudo apt install caddy && sudo cp deploy/Caddyfile.example /etc/caddy/Caddyfile  (remplacer le domaine)
+#   sudo systemctl reload caddy
+
+echecs.example.com {
+	encode zstd gzip
+	reverse_proxy 127.0.0.1:6400 {
+		# nginx transmet X-Real-IP au serveur du coach (limite de requêtes par visiteur)
+		header_up X-Real-IP {remote_host}
+	}
+}

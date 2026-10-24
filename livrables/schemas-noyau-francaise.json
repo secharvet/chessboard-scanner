@@ -1,0 +1,564 @@
+[
+  {
+    "nom": "Française, 3.Cc3",
+    "sens": "défend e4 en développant ; c3 n'est plus disponible pour soutenir d4, et …Fb4 peut clouer le cavalier",
+    "coups": "e4 e6 d4 d5 Nc3",
+    "schema": {
+      "noirs": [
+        "…Cf6 ou …Fb4 contre e4, puis …c5 contre d4 : toujours la base de la chaîne",
+        "échanger le fou f8 s'il est passif, et jouer …Cc6, …Db6, …a6 et …b5 à l'aile dame"
+      ],
+      "blancs": [
+        "garder le centre : e5 ou Fg5 selon la réponse, puis f4 et Cf3 pour tenir e5",
+        "développer vite, roquer (souvent long), et attaquer à l'aile roi"
+      ],
+      "coupsNoirs": [
+        { "san": "Nf6", "pourquoi": "attaque e4" },
+        { "san": "Be7", "pourquoi": "répond au clouage Fg5 et prépare le roque" },
+        { "san": "Nfd7", "pourquoi": "la case qui soutient …c5" },
+        { "san": "c5", "pourquoi": "attaque la base d4" },
+        { "san": "Nc6", "pourquoi": "deuxième attaquant de d4" },
+        { "san": "Qb6", "pourquoi": "troisième attaquant de d4" },
+        { "san": "a6", "pourquoi": "prépare …b5 et empêche Cb5" },
+        { "san": "b5", "pourquoi": "espace à l'aile dame" },
+        { "san": "cxd4", "pourquoi": "ouvre la colonne c" },
+        { "san": "f6", "pourquoi": "casse e5" },
+        { "san": "O-O", "pourquoi": "roi à l'abri" },
+        { "san": "Bb4", "pourquoi": "cloue le cavalier c3" },
+        { "san": "Bxc3+", "pourquoi": "double les pions blancs" },
+        { "san": "Ne7", "pourquoi": "développe en couvrant g7" },
+        { "san": "Qc7", "pourquoi": "vise e5 — et le pion c3 quand la Winawer a doublé les pions" },
+        { "san": "Qa5", "pourquoi": "dans la Winawer : vise les pions c3 et a3" }
+      ],
+      "coupsBlancs": [
+        { "san": "Bg5", "pourquoi": "cloue le cavalier f6" },
+        { "san": "e5", "pourquoi": "chasse le cavalier et fixe le centre" },
+        { "san": "f4", "pourquoi": "soutient e5 par un pion" },
+        { "san": "Nf3", "pourquoi": "développe et tient d4" },
+        { "san": "Be3", "pourquoi": "tient d4" },
+        { "san": "Qd2", "pourquoi": "prépare le roque long" },
+        { "san": "O-O-O", "pourquoi": "roque long : l'attaque à l'aile roi peut commencer" },
+        { "san": "Bd3", "pourquoi": "vers h7" },
+        { "san": "Nce2", "pourquoi": "tient d4 et libère c3 pour le pion" },
+        { "san": "g4", "pourquoi": "lance l'assaut de pions" },
+        { "san": "dxc5", "pourquoi": "prend quand …c5 n'est plus soutenu" },
+        { "san": "Bxe7", "pourquoi": "échange le fou avant qu'il ne soit mal placé" },
+        { "san": "Nb5", "pourquoi": "vise d6 et c7" }
+      ]
+    },
+    "position_id": 9
+  },
+  {
+    "nom": "Française, variante Tarrasch",
+    "sens": "défend e4 en évitant le clouage …Fb4 ; c3 reste disponible pour soutenir d4 ; le cavalier gêne un peu le fou c1",
+    "coups": "e4 e6 d4 d5 Nd2",
+    "schema": {
+      "noirs": [
+        "système fermé : …c5, …Cc6, …Db6 contre d4, et le levier …f6 contre e5",
+        "système ouvert : pièces actives autour du pion isolé, …Fd6, …O-O, …Te8, et éviter les échanges"
+      ],
+      "blancs": [
+        "système fermé : e5, f4 et Cdf3 pour tenir e5, puis l'attaque à l'aile roi avec Fd3 et parfois g4",
+        "système ouvert : jouer contre le pion isolé d5 : le bloquer en d4, l'attaquer par les tours"
+      ],
+      "coupsNoirs": [
+        { "san": "Nf6", "pourquoi": "force e5" },
+        { "san": "Nfd7", "pourquoi": "la case qui soutient …c5 et …f6" },
+        { "san": "c5", "pourquoi": "attaque la base d4" },
+        { "san": "Nc6", "pourquoi": "deuxième attaquant de d4" },
+        { "san": "Qb6", "pourquoi": "troisième attaquant de d4" },
+        { "san": "cxd4", "pourquoi": "ouvre la colonne c et prépare …f6" },
+        { "san": "f6", "pourquoi": "casse e5, ouvre la colonne f" },
+        { "san": "Bd6", "pourquoi": "le fou actif vers h2" },
+        { "san": "O-O", "pourquoi": "roi à l'abri" },
+        { "san": "Nxf6", "pourquoi": "reprend en centralisant" },
+        { "san": "Qc7", "pourquoi": "derrière c5, vise e5" },
+        { "san": "Bd7", "pourquoi": "sort le mauvais fou" },
+        { "san": "a5", "pourquoi": "fixe l'aile dame" }
+      ],
+      "coupsBlancs": [
+        { "san": "e5", "pourquoi": "gagne l'espace et chasse le cavalier" },
+        { "san": "Bd3", "pourquoi": "vers h7 et prépare c3, Ce2" },
+        { "san": "c3", "pourquoi": "soutient d4" },
+        { "san": "Ne2", "pourquoi": "tient d4 et laisse f3 au cavalier d2" },
+        { "san": "Ngf3", "pourquoi": "développe et tient d4" },
+        { "san": "Nf3", "pourquoi": "tient e5 ou d4" },
+        { "san": "O-O", "pourquoi": "roi à l'abri" },
+        { "san": "f4", "pourquoi": "soutient e5 par un pion" },
+        { "san": "Nf4", "pourquoi": "le cavalier e2 saute vers e6 et d5 après …f6 exf6 — seulement quand d4 est tenu sans lui (sinon …Cxd4 !)" },
+        { "san": "Qe2", "pourquoi": "prépare le roque et tient e5" },
+        { "san": "dxc5", "pourquoi": "prend quand …c5 n'est plus soutenu" },
+        { "san": "exf6", "pourquoi": "ouvre la colonne e sur e6 affaibli" },
+        { "san": "Re1", "pourquoi": "la tour sur la colonne e" }
+      ]
+    },
+    "position_id": 8
+  },
+  {
+    "nom": "Française, variante d'avance",
+    "sens": "fixe le centre : la chaîne d4-e5 donne l'espace et vise l'aile roi ; le cavalier g8 n'a plus f6 ; mais la base d4 devient la cible",
+    "coups": "e4 e6 d4 d5 e5",
+    "schema": {
+      "noirs": [
+        "accumuler sur d4 : …c5, …Cc6, …Db6, parfois …Cge7-f5 ou …Ch6-f5",
+        "quand d4 tient, préparer …f6 pour casser la tête de la chaîne et libérer les pièces",
+        "sortir le mauvais fou c8 : par …Fd7-b5 pour l'échanger, ou par …b6 et …Fa6"
+      ],
+      "blancs": [
+        "tenir d4 avec c3 et Cf3, puis Fe2 ou Fd3 et le roque",
+        "une fois d4 tenu, attaquer à l'aile roi : Fd3 vers h7, Dg4 contre g7, et le levier f4-f5 contre e6",
+        "empêcher …f6 ou le punir en reprenant exf6 quand e6 devient faible"
+      ],
+      "coupsNoirs": [
+        { "san": "c5", "pourquoi": "attaque la base de la chaîne, d4" },
+        { "san": "Nc6", "pourquoi": "deuxième attaquant de d4" },
+        { "san": "Qb6", "pourquoi": "troisième attaquant de d4, et pression sur b2" },
+        { "san": "Bd7", "pourquoi": "prépare …Fb5 pour échanger le mauvais fou" },
+        { "san": "Nge7", "pourquoi": "le cavalier roi va en f5 contre d4" },
+        { "san": "Nf5", "pourquoi": "quatrième attaquant de d4" },
+        { "san": "Nh6", "pourquoi": "vers f5 contre d4" },
+        { "san": "cxd4", "pourquoi": "ouvre la colonne c au bon moment" },
+        { "san": "f6", "pourquoi": "casse la tête de la chaîne, e5, pour libérer les pièces" },
+        { "san": "Bb5", "pourquoi": "échange le mauvais fou" },
+        { "san": "Rc8", "pourquoi": "la tour sur la colonne c, qui s'ouvrira" },
+        { "san": "a5", "pourquoi": "fixe b4 ou prépare …Fa6" },
+        { "san": "b6", "pourquoi": "prépare …Fa6 pour sortir le mauvais fou" },
+        { "san": "Be7", "pourquoi": "développe et prépare le roque" },
+        { "san": "O-O", "pourquoi": "roi à l'abri" },
+        { "san": "Qc7", "pourquoi": "la dame derrière c5, et pression sur e5" }
+      ],
+      "coupsBlancs": [
+        { "san": "c3", "pourquoi": "soutient la base d4 avec un pion" },
+        { "san": "Nf3", "pourquoi": "deuxième défenseur de d4, en développant" },
+        { "san": "Be2", "pourquoi": "développe le fou et prépare le roque" },
+        { "san": "Bd3", "pourquoi": "développe le fou vers h7 : la cible de l'attaque à venir" },
+        { "san": "O-O", "pourquoi": "met le roi à l'abri avant d'attaquer" },
+        { "san": "a3", "pourquoi": "prépare b4 : espace à l'aile dame, et interdit …Fb4" },
+        { "san": "b4", "pourquoi": "gagne de l'espace à l'aile dame et prépare b5 contre le cavalier c6" },
+        { "san": "Nbd2", "pourquoi": "le second cavalier en route vers b3, le poste d'où il tiendra d4" },
+        { "san": "Re1", "pourquoi": "la tour derrière e5, prête pour l'ouverture de la colonne" },
+        { "san": "h4", "pourquoi": "lance l'aile roi : h5 chassera un cavalier de g6 ou f5" },
+        { "san": "Qg4", "pourquoi": "attaque g7 : c'est l'idée reine de l'avance quand le fou f8 n'est plus là" },
+        { "san": "f4", "pourquoi": "soutient e5 et prépare f5 contre e6" },
+        { "san": "Be3", "pourquoi": "défend d4 par le fou quand la dame doit partir" },
+        { "san": "dxc5", "pourquoi": "prend quand …Fxc5 ne gagne plus de temps" },
+        { "san": "Nb3", "pourquoi": "le cavalier tient d4 depuis b3 et libère le fou c1" },
+        { "san": "exf6", "pourquoi": "punit …f6 au bon moment : ouvre sur e6 affaibli" }
+      ]
+    },
+    "position_id": 6
+  },
+  {
+    "nom": "Française, variante d'échange",
+    "sens": "échange au centre : plus de tension, position symétrique ; les Blancs renoncent à l'avantage d'espace pour la sécurité",
+    "coups": "e4 e6 d4 d5 exd5",
+    "schema": {
+      "noirs": [
+        "même développement : …Fd6, …Cf6, …O-O, …Fg4 ; à la symétrie, le camp qui a le trait de plus pousse un peu",
+        "pour jouer la gagne, casser soi-même la symétrie : …c6 puis …Dc7, le clouage …Fg4, et parfois le roque opposé"
+      ],
+      "blancs": [
+        "développer vite et chercher le levier c4 pour casser la symétrie (variante Monte-Carlo)",
+        "placer le fou en d3 et les tours sur la colonne e"
+      ],
+      "coupsNoirs": [
+        { "san": "Nf6", "pourquoi": "développe" },
+        { "san": "Bd6", "pourquoi": "le fou sur sa meilleure diagonale" },
+        { "san": "O-O", "pourquoi": "roi à l'abri" },
+        { "san": "Bg4", "pourquoi": "cloue le cavalier f3" },
+        { "san": "Nc6", "pourquoi": "développe et vise d4" },
+        { "san": "Re8", "pourquoi": "la tour sur la colonne ouverte" },
+        { "san": "c6", "pourquoi": "tient d5" },
+        { "san": "Nbd7", "pourquoi": "développe" },
+        { "san": "Qc7", "pourquoi": "vise h2 avec le fou d6" }
+      ],
+      "coupsBlancs": [
+        { "san": "Nf3", "pourquoi": "développe" },
+        { "san": "Bd3", "pourquoi": "le fou sur sa meilleure diagonale" },
+        { "san": "O-O", "pourquoi": "roi à l'abri" },
+        { "san": "c4", "pourquoi": "casse la symétrie" },
+        { "san": "Nc3", "pourquoi": "développe et vise d5" },
+        { "san": "Re1", "pourquoi": "la tour sur la colonne ouverte" },
+        { "san": "Bg5", "pourquoi": "cloue le cavalier f6" },
+        { "san": "Qc2", "pourquoi": "prépare le roque long ou vise h7" },
+        { "san": "c3", "pourquoi": "solide : tient d4" },
+        { "san": "Nbd2", "pourquoi": "développe vers f1-g3" }
+      ]
+    },
+    "position_id": 7
+  },
+  {
+    "nom": "Française classique",
+    "sens": "deuxième attaque sur e4 : les Blancs doivent décider",
+    "coups": "e4 e6 d4 d5 Nc3 Nf6",
+    "schema": {
+      "noirs": [
+        "…c5 contre d4, …Cc6, …Db6 ; le cavalier f6 recule en d7 si e5 arrive",
+        "…f6 pour casser e5 une fois le roi à l'abri"
+      ],
+      "blancs": [
+        "tenir le centre : e5 (puis f4, Cf3, Fe3) ou Fg5 (puis e5 et Fxe7)",
+        "attaque à l'aile roi quand le centre est fixé : Fd3, Dd2, O-O-O, g4"
+      ],
+      "coupsNoirs": [
+        { "san": "Be7", "pourquoi": "répond au clouage Fg5 et prépare le roque" },
+        { "san": "Nfd7", "pourquoi": "la case de repli qui soutient …c5 et …f6" },
+        { "san": "c5", "pourquoi": "attaque la base d4" },
+        { "san": "Nc6", "pourquoi": "deuxième attaquant de d4" },
+        { "san": "Qb6", "pourquoi": "troisième attaquant de d4" },
+        { "san": "cxd4", "pourquoi": "ouvre la colonne c" },
+        { "san": "a6", "pourquoi": "prépare …b5 et ôte b5 aux pièces blanches" },
+        { "san": "b5", "pourquoi": "espace à l'aile dame" },
+        { "san": "f6", "pourquoi": "casse e5 quand le roi est à l'abri" },
+        { "san": "O-O", "pourquoi": "roi à l'abri" }
+      ],
+      "coupsBlancs": [
+        { "san": "Bg5", "pourquoi": "cloue le cavalier f6 : e4 est défendu indirectement" },
+        { "san": "e5", "pourquoi": "chasse le cavalier et fixe le centre" },
+        { "san": "f4", "pourquoi": "soutient e5 par un pion" },
+        { "san": "Nf3", "pourquoi": "développe et tient d4" },
+        { "san": "Be3", "pourquoi": "tient d4" },
+        { "san": "Qd2", "pourquoi": "prépare le roque long" },
+        { "san": "O-O-O", "pourquoi": "roque long : l'attaque à l'aile roi peut commencer" },
+        { "san": "Bd3", "pourquoi": "vers h7" },
+        { "san": "Bxe7", "pourquoi": "échange le fou avant qu'il ne soit enfermé" },
+        { "san": "dxc5", "pourquoi": "prend quand …c5 n'est plus soutenu" }
+      ]
+    },
+    "position_id": 17
+  },
+  {
+    "nom": "Française, défense Rubinstein",
+    "sens": "échange au centre tout de suite : les Noirs renoncent à la tension contre un développement facile ; en échange les Blancs ont plus d'espace",
+    "coups": "e4 e6 d4 d5 Nc3 dxe4",
+    "schema": {
+      "noirs": [
+        "…Cd7 puis …Cgf6 pour échanger le cavalier central sans abîmer les pions",
+        "…c5 au bon moment pour libérer la position, puis …b6 et …Fb7",
+        "rester solide : pas de pion faible, échanger les pièces si l'espace manque"
+      ],
+      "blancs": [
+        "garder l'espace : Cf3, Fd3, De2, O-O ou O-O-O, c3 pour tenir d4",
+        "empêcher …c5 d'égaliser : répondre dxc5 ou garder le centre selon le moment",
+        "le cavalier e4 s'échange en f6 quand cela déforme les pions noirs, sinon il reste central"
+      ],
+      "coupsNoirs": [
+        { "san": "Nd7", "pourquoi": "prépare …Cgf6" },
+        { "san": "Ngf6", "pourquoi": "échange le cavalier central" },
+        { "san": "Nxf6", "pourquoi": "reprend sans abîmer les pions" },
+        { "san": "c5", "pourquoi": "libère la position" },
+        { "san": "b6", "pourquoi": "prépare …Fb7" },
+        { "san": "Bb7", "pourquoi": "le fou sur la grande diagonale" },
+        { "san": "Be7", "pourquoi": "développe" },
+        { "san": "O-O", "pourquoi": "roi à l'abri" },
+        { "san": "Qc7", "pourquoi": "la dame active" },
+        { "san": "Bd6", "pourquoi": "le fou actif" },
+        { "san": "Nf6", "pourquoi": "attaque le cavalier central" },
+        { "san": "Bd7", "pourquoi": "variante Fort Knox : vers c6" }
+      ],
+      "coupsBlancs": [
+        { "san": "Nf3", "pourquoi": "développe" },
+        { "san": "Bd3", "pourquoi": "vers h7" },
+        { "san": "Qe2", "pourquoi": "prépare le roque et tient e4" },
+        { "san": "O-O", "pourquoi": "roi à l'abri" },
+        { "san": "O-O-O", "pourquoi": "roque long, attaque à l'aile roi" },
+        { "san": "c3", "pourquoi": "tient d4" },
+        { "san": "Nxf6+", "pourquoi": "échange quand cela déforme les pions" },
+        { "san": "Bg5", "pourquoi": "cloue le cavalier f6" },
+        { "san": "Re1", "pourquoi": "la tour sur la colonne e" },
+        { "san": "Ne5", "pourquoi": "le cavalier central" },
+        { "san": "c4", "pourquoi": "espace au centre" },
+        { "san": "dxc5", "pourquoi": "prend quand …Fxc5 ne gagne pas de temps" }
+      ]
+    },
+    "position_id": 19
+  },
+  {
+    "nom": "Française, défense Rubinstein (par 3.Cd2)",
+    "sens": "échange au centre : même structure que la Rubinstein classique",
+    "coups": "e4 e6 d4 d5 Nd2 dxe4",
+    "schema": {
+      "noirs": [
+        "…Cd7 puis …Cgf6 pour échanger le cavalier central sans abîmer les pions",
+        "…c5 au bon moment, puis …b6 et …Fb7"
+      ],
+      "blancs": [
+        "garder l'espace : Cgf3, Fd3, De2, O-O, c3 pour tenir d4",
+        "le cavalier e4 s'échange en f6 quand cela déforme les pions noirs"
+      ],
+      "coupsNoirs": [
+        { "san": "Nd7", "pourquoi": "prépare …Cgf6" },
+        { "san": "Ngf6", "pourquoi": "échange le cavalier central" },
+        { "san": "Nxf6", "pourquoi": "reprend sans abîmer les pions" },
+        { "san": "c5", "pourquoi": "libère la position" },
+        { "san": "b6", "pourquoi": "prépare …Fb7" },
+        { "san": "Bb7", "pourquoi": "le fou sur la grande diagonale" },
+        { "san": "Be7", "pourquoi": "développe" },
+        { "san": "O-O", "pourquoi": "roi à l'abri" },
+        { "san": "Qc7", "pourquoi": "la dame active" },
+        { "san": "Bd6", "pourquoi": "le fou actif" },
+        { "san": "Nf6", "pourquoi": "attaque le cavalier central" },
+        { "san": "Bd7", "pourquoi": "variante Fort Knox : vers c6" }
+      ],
+      "coupsBlancs": [
+        { "san": "Nf3", "pourquoi": "développe" },
+        { "san": "Bd3", "pourquoi": "vers h7" },
+        { "san": "Qe2", "pourquoi": "prépare le roque et tient e4" },
+        { "san": "O-O", "pourquoi": "roi à l'abri" },
+        { "san": "c3", "pourquoi": "tient d4" },
+        { "san": "Nxf6+", "pourquoi": "échange quand cela déforme les pions" },
+        { "san": "Bg5", "pourquoi": "cloue le cavalier f6" },
+        { "san": "Re1", "pourquoi": "la tour sur la colonne e" },
+        { "san": "Ne5", "pourquoi": "le cavalier central" },
+        { "san": "c4", "pourquoi": "espace au centre" },
+        { "san": "dxc5", "pourquoi": "prend quand …Fxc5 ne gagne pas de temps" }
+      ]
+    },
+    "position_id": 20
+  },
+  {
+    "nom": null,
+    "sens": "accepte le pion isolé d5 contre l'activité et le fou c8 libre",
+    "coups": "e4 e6 d4 d5 Nd2 c5 exd5 exd5",
+    "schema": {
+      "noirs": [
+        "pièces actives : …Cf6, …Fd6, …O-O, …Te8 ; éviter les échanges ; chercher …d4 au bon moment pour libérer les pièces"
+      ],
+      "blancs": [
+        "bloquer d5 : un cavalier en d4 ou d4 tenu, puis attaquer le pion isolé avec les tours sur la colonne d",
+        "échanger les pièces : l'isolé est plus faible en finale"
+      ],
+      "coupsNoirs": [
+        { "san": "Nc6", "pourquoi": "développe et tient d4 à distance" },
+        { "san": "Nge7", "pourquoi": "le coup du système : évite Te1+ et le clouage, et le cavalier vise f5 ou g6" },
+        { "san": "Nf6", "pourquoi": "développe" },
+        { "san": "Bd6", "pourquoi": "le fou actif" },
+        { "san": "O-O", "pourquoi": "roi à l'abri" },
+        { "san": "Re8", "pourquoi": "la tour sur la colonne e" },
+        { "san": "c4", "pourquoi": "évite l'isolé en fermant, mais abandonne la pression sur d4 : à ne jouer qu'avec un vrai plan à l'aile dame" },
+        { "san": "Bg4", "pourquoi": "cloue le cavalier f3" },
+        { "san": "a6", "pourquoi": "empêche Fb5" },
+        { "san": "Qe7", "pourquoi": "la dame sur la colonne e" }
+      ],
+      "coupsBlancs": [
+        { "san": "Ngf3", "pourquoi": "développe et prépare Fb5+ puis le blocus de d5" },
+        { "san": "Bb5+", "pourquoi": "échec qui gêne le développement noir" },
+        { "san": "O-O", "pourquoi": "roi à l'abri" },
+        { "san": "Nb3", "pourquoi": "vers d4, le blocus du pion isolé" },
+        { "san": "dxc5", "pourquoi": "isole encore le pion d5 et attaque" },
+        { "san": "Be3", "pourquoi": "tient d4 et vise c5" },
+        { "san": "Re1", "pourquoi": "la tour sur la colonne e" },
+        { "san": "Nbd4", "pourquoi": "le blocus de l'isolé" },
+        { "san": "c3", "pourquoi": "solide : tient d4" }
+      ]
+    },
+    "position_id": 43
+  },
+  {
+    "nom": null,
+    "sens": "soutient e5 par un pion : la chaîne d4-e5 est doublement tenue",
+    "coups": "e4 e6 d4 d5 Nc3 Nf6 e5 Nfd7 f4",
+    "schema": {
+      "noirs": [
+        "…c5, …Cc6, …Db6 contre d4 ; …a6 et …b5 à l'aile dame",
+        "…f6 pour casser e5 quand tout est prêt"
+      ],
+      "blancs": [
+        "Cf3, Fe3, Dd2 : tenir d4 ; puis O-O-O ou Fd3 et l'attaque à l'aile roi avec g4 ou f5",
+        "sur …cxd4 Cxd4 et un cavalier central"
+      ],
+      "coupsNoirs": [
+        { "san": "c5", "pourquoi": "attaque la base d4" },
+        { "san": "Nc6", "pourquoi": "deuxième attaquant de d4" },
+        { "san": "Qb6", "pourquoi": "troisième attaquant de d4 — gare à Ca4 !" },
+        { "san": "cxd4", "pourquoi": "ouvre la colonne c" },
+        { "san": "Be7", "pourquoi": "développe et prépare le roque" },
+        { "san": "O-O", "pourquoi": "roi à l'abri avant d'ouvrir le centre" },
+        { "san": "a6", "pourquoi": "prépare …b5 et ôte b5 aux pièces blanches" },
+        { "san": "b5", "pourquoi": "espace à l'aile dame" },
+        { "san": "f6", "pourquoi": "casse e5 quand tout est prêt" },
+        { "san": "Rc8", "pourquoi": "la tour sur la colonne c, qui s'ouvrira" }
+      ],
+      "coupsBlancs": [
+        { "san": "Nf3", "pourquoi": "développe et tient d4" },
+        { "san": "Be3", "pourquoi": "tient d4" },
+        { "san": "Qd2", "pourquoi": "relie les pièces et prépare le roque long" },
+        { "san": "O-O-O", "pourquoi": "roque long : l'assaut g4 peut commencer" },
+        { "san": "Bd3", "pourquoi": "vers h7, quand on choisit le petit roque" },
+        { "san": "Nce2", "pourquoi": "tient d4 et libère c3 pour le pion" },
+        { "san": "Nxd4", "pourquoi": "sur …cxd4 : le cavalier reprend et trône au centre" },
+        { "san": "Na4", "pourquoi": "la pointe contre …Db6 : chasse la dame et vise c5 — sur …Da5+, c3 puis b4 !" },
+        { "san": "dxc5", "pourquoi": "prend quand …c5 n'est plus soutenu" },
+        { "san": "g4", "pourquoi": "lance l'assaut de pions" },
+        { "san": "f5", "pourquoi": "le levier contre e6" }
+      ]
+    },
+    "position_id": 72
+  },
+  {
+    "nom": "Avance, ligne principale",
+    "sens": "troisième attaquant de d4 ; attaque b2 : le fou c1 est cloué à la défense du pion",
+    "coups": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6",
+    "schema": {
+      "noirs": [
+        "accumuler sur d4 jusqu'à ce qu'il tombe ou que les Blancs se figent pour le défendre",
+        "échanger le mauvais fou : …Fd7-b5",
+        "casser e5 par …f6 quand le roi est à l'abri"
+      ],
+      "blancs": [
+        "garder d4 : Fe3 ou la dame, et répondre à …cxd4 par cxd4",
+        "roquer, puis l'attaque à l'aile roi : Fd3, Dg4 contre g7 si le fou f8 est parti, f4-f5 contre e6",
+        "sur l'aile dame : a3 et b4 pour gagner de l'espace et chasser le cavalier c6 par b5"
+      ],
+      "coupsNoirs": [
+        { "san": "Bd7", "pourquoi": "prépare …Fb5 pour échanger le mauvais fou" },
+        { "san": "Nge7", "pourquoi": "le cavalier roi va en f5 contre d4" },
+        { "san": "Nf5", "pourquoi": "quatrième attaquant de d4" },
+        { "san": "Nh6", "pourquoi": "vers f5 contre d4" },
+        { "san": "cxd4", "pourquoi": "ouvre la colonne c au bon moment" },
+        { "san": "f6", "pourquoi": "casse la tête de la chaîne, e5, pour libérer les pièces" },
+        { "san": "Bb5", "pourquoi": "échange le mauvais fou" },
+        { "san": "Rc8", "pourquoi": "la tour sur la colonne c, qui s'ouvrira" },
+        { "san": "a5", "pourquoi": "fixe b4 ou prépare …Fa6" },
+        { "san": "b6", "pourquoi": "prépare …Fa6 pour sortir le mauvais fou" },
+        { "san": "Be7", "pourquoi": "développe et prépare le roque" },
+        { "san": "O-O", "pourquoi": "roi à l'abri" },
+        { "san": "Qc7", "pourquoi": "la dame derrière c5, et pression sur e5" }
+      ],
+      "coupsBlancs": [
+        { "san": "Be2", "pourquoi": "développe le fou et prépare le roque" },
+        { "san": "Bd3", "pourquoi": "développe le fou vers h7 : la cible de l'attaque à venir" },
+        { "san": "O-O", "pourquoi": "met le roi à l'abri avant d'attaquer" },
+        { "san": "a3", "pourquoi": "prépare b4 : espace à l'aile dame, et interdit …Fb4" },
+        { "san": "b4", "pourquoi": "gagne de l'espace à l'aile dame et prépare b5 contre le cavalier c6" },
+        { "san": "Nbd2", "pourquoi": "le second cavalier en route vers b3, le poste d'où il tiendra d4" },
+        { "san": "Re1", "pourquoi": "la tour derrière e5, prête pour l'ouverture de la colonne" },
+        { "san": "h4", "pourquoi": "lance l'aile roi : h5 chassera un cavalier de g6 ou f5" },
+        { "san": "Qg4", "pourquoi": "attaque g7 : c'est l'idée reine de l'avance quand le fou f8 n'est plus là" },
+        { "san": "f4", "pourquoi": "soutient e5 et prépare f5 contre e6" },
+        { "san": "Be3", "pourquoi": "défend d4 par le fou quand la dame doit partir" },
+        { "san": "dxc5", "pourquoi": "prend quand …Fxc5 ne gagne plus de temps" },
+        { "san": "Nb3", "pourquoi": "le cavalier tient d4 depuis b3 et libère le fou c1" }
+      ]
+    },
+    "position_id": 97
+  },
+  {
+    "nom": "Winawer, ligne principale",
+    "sens": "reprend du pion : pions doublés c2-c3, mais paire de fous et centre solide",
+    "coups": "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Bxc3+ bxc3",
+    "schema": {
+      "noirs": [
+        "…Db6 ou …Da5 contre les pions c3 et a3 ; …Cc6, …Fd7-a4 pour fixer c2",
+        "garder le roi au centre ou roquer long si Dg4 attaque"
+      ],
+      "blancs": [
+        "Dg4 contre g7 : si les Noirs roquent court, l'attaque est forte ; sinon jouer a4, Fa3 et le fou sur la grande diagonale",
+        "Cf3, Fd3 et h4-h5 à l'aile roi"
+      ],
+      "coupsNoirs": [
+        { "san": "Ne7", "pourquoi": "développe en couvrant g7" },
+        { "san": "Qc7", "pourquoi": "vise c3 et e5" },
+        { "san": "Qa5", "pourquoi": "vise c3 et a3" },
+        { "san": "Nbc6", "pourquoi": "deuxième attaquant de d4" },
+        { "san": "Bd7", "pourquoi": "prépare …Fa4 contre c2" },
+        { "san": "Ba4", "pourquoi": "fixe c2" },
+        { "san": "cxd4", "pourquoi": "ouvre la colonne c" },
+        { "san": "c4", "pourquoi": "ferme et fixe les pions blancs" },
+        { "san": "O-O-O", "pourquoi": "roi à l'aile dame si Dg4 attaque" },
+        { "san": "f6", "pourquoi": "casse e5" },
+        { "san": "Nf5", "pourquoi": "contre d4" }
+      ],
+      "coupsBlancs": [
+        { "san": "Qg4", "pourquoi": "attaque g7" },
+        { "san": "Nf3", "pourquoi": "développe" },
+        { "san": "Bd3", "pourquoi": "vers h7" },
+        { "san": "a4", "pourquoi": "prépare Fa3 et interdit …Fd7-a4" },
+        { "san": "Ba3", "pourquoi": "le fou sur a3-f8" },
+        { "san": "h4", "pourquoi": "lance l'aile roi" },
+        { "san": "O-O", "pourquoi": "roi à l'abri" },
+        { "san": "Qd2", "pourquoi": "tient c3 et prépare le roque long" },
+        { "san": "dxc5", "pourquoi": "prend quand les Noirs ne reprennent pas facilement : souvent lié à Fa3 sur la diagonale rouverte" },
+        { "san": "Be2", "pourquoi": "développe simplement" }
+      ]
+    },
+    "position_id": 126
+  },
+  {
+    "nom": null,
+    "sens": "reprend de la dame : les Noirs ont échangé leur fou passif, et …c5 arrive",
+    "coups": "e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 Bxe7 Qxe7",
+    "schema": {
+      "noirs": [
+        "…c5, …Cc6, …a6 et …b5 : jouer à l'aile dame et sur d4",
+        "…f6 au bon moment pour casser e5"
+      ],
+      "blancs": [
+        "f4, Cf3, Dd2, O-O-O : tenir e5 et attaquer à l'aile roi avec g4-g5 ou f5",
+        "répondre à …c5 par dxc5 ou Cb5 selon les cas"
+      ],
+      "coupsNoirs": [
+        { "san": "c5", "pourquoi": "attaque la base d4" },
+        { "san": "Nc6", "pourquoi": "deuxième attaquant de d4" },
+        { "san": "cxd4", "pourquoi": "ouvre la colonne c" },
+        { "san": "a6", "pourquoi": "prépare …b5 et interdit Cb5 — le saut vers d6 est la menace typique ici" },
+        { "san": "b5", "pourquoi": "espace à l'aile dame" },
+        { "san": "O-O", "pourquoi": "roi à l'abri" },
+        { "san": "f6", "pourquoi": "casse e5 au bon moment" },
+        { "san": "Nb6", "pourquoi": "le cavalier d7 libère d7 pour l'autre et lorgne c4" }
+      ],
+      "coupsBlancs": [
+        { "san": "f4", "pourquoi": "soutient e5 : la chaîne tiendra" },
+        { "san": "Nf3", "pourquoi": "développe et tient d4" },
+        { "san": "Qd2", "pourquoi": "relie les pièces et prépare le roque long" },
+        { "san": "O-O-O", "pourquoi": "roque long : l'attaque à l'aile roi peut commencer" },
+        { "san": "Bd3", "pourquoi": "vers h7" },
+        { "san": "Nb5", "pourquoi": "le trou d6 : sans les fous de cases noires, le cavalier y sera roi — c'est pour ça que les Noirs jouent …a6" },
+        { "san": "dxc5", "pourquoi": "prend : sans son fou roi, les Noirs peinent à récupérer le pion proprement" },
+        { "san": "g4", "pourquoi": "lance l'assaut de pions" },
+        { "san": "f5", "pourquoi": "le levier contre e6" },
+        { "san": "h4", "pourquoi": "lance l'aile roi" }
+      ]
+    },
+    "position_id": 151
+  },
+  {
+    "nom": null,
+    "sens": "tient d4 par le cavalier et garde f3 pour l'autre cavalier, qui tiendra e5",
+    "coups": "e4 e6 d4 d5 Nd2 Nf6 e5 Nfd7 Bd3 c5 c3 Nc6 Ne2",
+    "schema": {
+      "noirs": [
+        "…cxd4 cxd4 f6 : casser la chaîne, ouvrir la colonne f et libérer les pièces",
+        "après exf6 Cxf6 : jouer actif, …Fd6, …O-O, …Dc7, mais soigner e6"
+      ],
+      "blancs": [
+        "Cf3, O-O, et tenir d4 et e5 avec les pièces",
+        "quand …f6 vient : exf6 et jouer contre e6 affaibli, avec Ff4 contre le fou d6 puis le cavalier en f4",
+        "le levier f4-f5 si les Noirs tardent"
+      ],
+      "coupsNoirs": [
+        { "san": "Qb6", "pourquoi": "troisième attaquant de d4" },
+        { "san": "cxd4", "pourquoi": "ouvre la colonne c et prépare …f6" },
+        { "san": "f6", "pourquoi": "casse e5, ouvre la colonne f" },
+        { "san": "Nxf6", "pourquoi": "reprend en centralisant" },
+        { "san": "Bd6", "pourquoi": "le fou actif vers h2" },
+        { "san": "O-O", "pourquoi": "roi à l'abri" },
+        { "san": "Qc7", "pourquoi": "derrière c5, vise e5" },
+        { "san": "Bd7", "pourquoi": "sort le mauvais fou" },
+        { "san": "a5", "pourquoi": "fixe l'aile dame" }
+      ],
+      "coupsBlancs": [
+        { "san": "Nf3", "pourquoi": "le cavalier d2 prend f3 et tient e5" },
+        { "san": "O-O", "pourquoi": "roi à l'abri" },
+        { "san": "cxd4", "pourquoi": "reprend du pion : la base de la chaîne reste un pion" },
+        { "san": "exf6", "pourquoi": "ouvre la colonne e sur e6 affaibli" },
+        { "san": "Bf4", "pourquoi": "propose l'échange du fou d6, la pièce active des Noirs — et après …Fxf4 Cxf4, le cavalier hérite de la belle case" },
+        { "san": "Nf4", "pourquoi": "le saut vers e6 et d5 — seulement quand d4 ne dépend plus de lui : sinon …Cxd4 !" },
+        { "san": "f4", "pourquoi": "soutient e5 par un pion" },
+        { "san": "dxc5", "pourquoi": "prend quand …c5 n'est plus soutenu" },
+        { "san": "Re1", "pourquoi": "la tour sur la colonne e" }
+      ]
+    },
+    "position_id": 176
+  }
+]

@@ -1,0 +1,113 @@
+{
+  "_version": "1 — Expert échecs, 24 octobre 2026. Règles de remplissage : livrables/gabarits-parole.md",
+
+  "mots": {
+    "ma_piece": { "P": "mon pion", "N": "mon cavalier", "B": "mon fou", "R": "ma tour", "Q": "ma dame", "K": "mon roi" },
+    "sa_piece": { "P": "son pion", "N": "son cavalier", "B": "son fou", "R": "sa tour", "Q": "sa dame", "K": "son roi" },
+    "gain": {
+      "1": "un pion", "2": "deux pions", "3": "trois pions",
+      "qualite": "la qualité (une tour contre un cavalier ou un fou)",
+      "piece": "une pièce", "tour": "une tour", "dame": "la dame"
+    },
+    "ecart_mots": {
+      "10-30": "un peu moins bon",
+      "30-80": "nettement moins bon",
+      "80-200": "beaucoup moins bon",
+      "200+": "perdant"
+    },
+    "motif": {
+      "fork": "fourchette", "pin": "clouage", "deflection": "déviation", "overload": "surcharge",
+      "zwischenzug": "coup intermédiaire", "lastDefender": "défenseur unique", "matePattern": "schéma de mat"
+    }
+  },
+
+  "comparaison": {
+    "battu": { "quand": "écart M–R ≥ 10 cp", "texte": "{R} était {ecart_mots}." },
+    "se_valent": { "quand": "écart M–R < 10 cp", "texte": "{M} et {R} se valent ; j'ai pris {M}." },
+    "battu_plan": { "quand": "sorte plan, terme plan de R ≤ 0", "texte": "{R} ne fait pas avancer ce plan." }
+  },
+
+  "menace_vue": {
+    "paree": { "quand": "menace vue, parée après M (revérifiée) ET aussi après R ; si R la laisse, la sorte est défense, pas cette parenthèse", "texte": "(Je vois {menace} ; après {M}, ce n'est plus possible.)" },
+    "non_paree": { "quand": "menace vue, NON parée après M", "texte": "(Je vois {menace}, et je ne peux pas tout empêcher.)", "alerte": "si la sorte est plan ou amélioration : phrase suspecte, à signaler au journal" }
+  },
+
+  "calcul": {
+    "gain": { "quand": "noteM − E0 ≥ 80 cp et le matériel monte au bout de ligneM", "texte": "Je joue {M} : après {ligneM}, je gagne {gain}." },
+    "mat": { "quand": "noteM = mat", "texte": "Je joue {M} : après {ligneM}, c'est mat." },
+    "seul_coup": { "quand": "|noteM − E0| < 80 cp et noteR ≤ E0 − 80 cp", "texte": "Seul bon coup : {M}. Sur {R}, il y avait {ligneR}, et je perdais {perte_R}." },
+    "moindre_mal": { "quand": "noteM ≤ E0 − 80 cp (je perds de toute façon)", "texte": "Je ne peux pas tout garder. Avec {M}, je perds {perte_M} ; les autres coups coûtaient plus." },
+    "motifs": {
+      "fork": "C'est une fourchette : {ma_piece} attaque à la fois {cible1} et {cible2}.",
+      "pin": "C'est un clouage : {sa_piece} ne peut pas bouger, sinon {cible} tombe.",
+      "deflection": "C'est une déviation : je détourne {sa_piece} de la défense de {case}.",
+      "overload": "C'est une surcharge : {sa_piece} doit garder à la fois {cible1} et {cible2} : impossible de tout faire.",
+      "zwischenzug": "Avant de reprendre, j'intercale {coup} : il oblige à répondre tout de suite.",
+      "lastDefender": "{sa_piece} est le seul défenseur de {cible} : je l'élimine, et {cible} tombe.",
+      "matePattern": "Schéma de mat : {schema}."
+    }
+  },
+
+  "defense": {
+    "parer": { "quand": "R laisse la menace, M la pare (revérifiée)", "texte": "Je dois parer : il menaçait {menace}, et je perdais {perte_menace}. {M} l'empêche." },
+    "piece_en_prise": { "quand": "terme menaces : ma pièce en l'air ou attaquée par un pion avant M, plus après", "texte": "Je sauve {ma_piece}, en prise en {case}." },
+    "roi_abri": { "quand": "terme sécurité du roi, sous-terme abri", "texte": "Mon roi d'abord : {M} garde intacts les pions devant mon roi." },
+    "roi_defenseur": { "quand": "terme danger du roi, la pièce citée est à moi", "texte": "Mon roi d'abord : {ma_piece} vient le défendre depuis {case}." },
+    "roi_attaquant": { "quand": "terme danger du roi, la pièce citée est à lui", "texte": "Mon roi d'abord : {sa_piece} ne vise plus mon roi." },
+    "sinon": { "quand": "toujours ajouté à une défense de roi si une menace est vue", "texte": "Sans ça : {menace}." }
+  },
+
+  "plan": {
+    "pas": { "quand": "le terme plan sépare M de R, rien de tactique entre eux", "texte": "Plan : {plan}. {M} en est un pas ; il en reste {distance_apres}." },
+    "dernier_pas": { "quand": "distance après M = 0", "texte": "Plan : {plan}. Avec {M}, c'est fait." },
+    "adoption": { "quand": "plan adopté à ce coup", "texte": "Je prends un plan : {plan}." },
+    "abandon_cher": { "quand": "cumul > 100 cp", "texte": "J'abandonne le plan {plan} : il me coûte trop cher, plus d'un pion en tout." },
+    "abandon_sans_objet": { "quand": "pièce ou cible du plan disparue", "texte": "Le plan {plan} n'a plus d'objet : {objet_disparu} n'est plus là." }
+  },
+
+  "livre": {
+    "coup": { "quand": "coup du livre joué", "texte": "Coup du livre : {raison}." },
+    "refus": { "quand": "le coup du livre L perd > 50 cp à mes yeux", "texte": "Le livre dit {L}, mais je vois {ligneL} : je joue {M}." },
+    "fin": { "quand": "premier coup hors du livre", "texte": "Fin du livre : à partir d'ici, je joue avec mes propres idées." }
+  },
+
+  "amelioration": {
+    "placement": "Rien de forcé. {ma_piece} va en {case}, une meilleure case.",
+    "mobilite": "Rien de forcé. En {case}, {ma_piece} a plus de cases.",
+    "avant_poste": "Rien de forcé. {ma_piece} s'installe en {case} : aucun pion adverse ne peut plus l'en chasser.",
+    "colonne_ouverte": "Rien de forcé. {ma_piece} prend la colonne {colonne}, ouverte : aucun pion ne la bloque.",
+    "colonne_semi_ouverte": "Rien de forcé. {ma_piece} se place sur la colonne {colonne} : elle appuie sur le pion adverse {case_cible}.",
+    "septieme": "Rien de forcé. {ma_piece} arrive sur la septième rangée, où elle attaque les pions restés à leur place.",
+    "paire_de_fous": "Je garde mes deux fous : ensemble, ils valent un peu plus qu'un fou et un cavalier.",
+    "mauvais_fou": "Je me débarrasse de mon mauvais fou : il était gêné par mes propres pions, placés sur sa couleur.",
+    "grande_diagonale": "Rien de forcé. {ma_piece} prend la grande diagonale, qui traverse tout l'échiquier.",
+    "pion_isole_chez_lui": "Son pion {case_cible} devient isolé : aucun pion voisin ne peut plus le défendre.",
+    "pion_isole_chez_moi": "J'évite d'avoir un pion isolé : un pion sans voisin doit être défendu par mes pièces.",
+    "pion_double_chez_lui": "Ses pions de la colonne {colonne} sont doublés : l'un devant l'autre, ils se gênent.",
+    "pion_double_chez_moi": "J'évite de doubler mes pions : l'un devant l'autre, ils se gênent.",
+    "pion_arriere_chez_lui": "Son pion {case_cible} reste en arrière : il ne peut plus avancer sans être pris, et aucun pion ne le défend.",
+    "pion_arriere_chez_moi": "Je n'ai plus de pion resté en arrière : il était une cible.",
+    "pions_lies": "Mon pion {case} garde un pion voisin : il n'est pas isolé.",
+    "pion_passe_pousse": "Mon pion {case} est passé : aucun pion adverse ne peut l'arrêter. Je le pousse.",
+    "pion_passe_bloque": "Je bloque son pion passé : {ma_piece} se met juste devant, en {case}.",
+    "espace": "Rien de forcé. Je gagne de la place : mes pions contrôlent des cases dans son camp.",
+    "developpement_mineure": "Je sors {ma_piece} : en ouverture, chaque pièce doit entrer en jeu.",
+    "developpement_roque": "Je roque : mon roi est à l'abri, et ma tour entre en jeu.",
+    "developpement_dame_tot": "Je garde ma dame à la maison pour l'instant : sortie si tôt, elle devient une cible pour les pièces adverses (principe d'ouverture).",
+    "attaque_par_pion": "J'attaque {sa_piece} avec un pion : {sa_piece} doit partir.",
+    "echanges_quand_on_mene": "J'ai plus de matériel, donc j'échange : moins il reste de pièces, plus mon avance compte.",
+    "coup_d_attente": { "quand": "aucun terme cité ne dépasse 10 cp", "texte": "Rien de mieux qu'un coup d'attente : {M} ne change rien et ne gâte rien." }
+  },
+
+  "finale": {
+    "mat_roi_au_bord": "Je pousse son roi vers le bord : c'est là seulement qu'on peut le mater.",
+    "mat_roi_approche": "Mon roi s'approche : sans lui, {ma_piece} ne peut pas mater seule.",
+    "carre_gagne": "Son roi n'est pas dans le carré de mon pion {case} : il ne peut plus le rattraper.",
+    "carre_defense": "Mon roi entre dans le carré de son pion {case} : je le rattrape à temps.",
+    "cases_critiques_gagne": "Mon roi arrive en {case}, une case critique de mon pion : la promotion ne peut plus être empêchée.",
+    "cases_critiques_defense": "Je garde son roi loin des cases critiques de son pion : il ne peut pas forcer la promotion.",
+    "nulle_materiel": "Il ne reste pas assez de matériel pour mater : c'est nul.",
+    "fous_opposes_eviter": "J'évite les fous de couleurs opposées : avec eux, même un pion de plus ne gagne presque jamais.",
+    "fous_opposes_chercher": "Je cherche les fous de couleurs opposées : avec eux, même avec un pion de moins, c'est très souvent nul."
+  }
+}

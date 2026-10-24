@@ -1,0 +1,2 @@
+# Données persistantes de Postgres (survit à la suppression/recréation du conteneur).
+[Volume]
