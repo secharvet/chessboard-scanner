@@ -5,10 +5,13 @@
 #     observateur (scripts/plans/observer-attaque.mjs), rien n'est interdit pendant le jeu.
 #   scripts/plans/epreuve-attaque.sh panov [parallélisme=3]
 #     Panov coach Noirs (REGROUPEMENT § 5) : A n° 11-50 (n° 1-10 existent au lot 1 bis) et AV (A + veto) n° 1-50.
+#   scripts/plans/epreuve-attaque.sh alarme [parallélisme=15]   (ALARME-ATTAQUE-ROI-2026-10-24.md § 7)
+#     AA (A + l'alarme) sur la Panov coach Noirs n° 1-50 (les 50 en A existent), et le panel entier sur graines neuves
+#     21-30, AA et A (20 départs-camps × 2 × 10 = 400 parties), appariés par graine.
 # Moteur : S19 dans l'environnement, sinon /usr/local/bin/stockfish. Reprenable : un processus dont le parties.json existe
 # est sauté ; rien n'est purgé. Sortie : reports/plans/epreuve-attaque/<lot>/…, marque TERMINE.
 set -euo pipefail
-LOT=${1:?observation ou panov}; PAR=${2:-}
+LOT=${1:?observation, panov ou alarme}; PAR=${2:-}
 S19=${S19:-/usr/local/bin/stockfish}; [ -x "$S19" ] || { echo "moteur introuvable : $S19" >&2; exit 1; }
 seq_virg() { seq -s, "$1" "$2"; }
 case $LOT in
@@ -18,6 +21,10 @@ case $LOT in
   panov) PAR=${PAR:-3}
     TACHES=$(for i in 1 2 3 4; do echo "A iqp-panov b $(seq_virg $((i * 10 + 1)) $((i * 10 + 10))) A-$((i * 10 + 1))"; done
              for i in 0 1 2 3 4; do echo "AV iqp-panov b $(seq_virg $((i * 10 + 1)) $((i * 10 + 10))) AV-$((i * 10 + 1))"; done);;
+  alarme) PAR=${PAR:-15}
+    IDS=$(node -e "import('./scripts/plans/departs.mjs').then((m) => console.log(m.DEPARTS.filter((d) => d.lot === 1).map((d) => d.id).join(' ')))")
+    TACHES=$(for i in 0 1 2 3 4; do echo "AA iqp-panov b $(seq_virg $((i * 10 + 1)) $((i * 10 + 10))) panov-AA-$((i * 10 + 1))"; done
+             for r in AA A; do for id in $IDS; do for camp in w b; do echo "$r $id $camp $(seq_virg 21 30) panel-$id-$camp-$r"; done; done; done);;
   *) echo "lot inconnu : $LOT" >&2; exit 1;;
 esac
 BASE=reports/plans/epreuve-attaque/$LOT/bin-stockfish-p18; mkdir -p "$BASE"; rm -f "$BASE/../TERMINE"
