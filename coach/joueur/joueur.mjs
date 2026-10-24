@@ -75,7 +75,8 @@ export class Joueur {
     const ech = new Echiquier(depart), chess = new Chess(depart);
     for (const u of historique) { const m = ech.coupDepuisUci(u); if (!m || !ech.jouer(m)) throw new Error(`historique : coup illégal ${u}`); chess.move({ from: u.slice(0, 2), to: u.slice(2, 4), promotion: u[4] }); }
     if (!historique.length && depart !== fen) { ech.chargerFen(fen); chess.load(fen); }
-    const fenAvant = chess.fen(), camp = chess.turn(), ply = (contexte.ply ?? historique.length) + 1;
+    // Le demi-coup se lit sur l'échiquier (1 = premier coup des Blancs), quel que soit le comptage de l'appelant.
+    const fenAvant = chess.fen(), camp = chess.turn(), ply = chess.moveNumber() * 2 - (camp === 'w' ? 1 : 0);
     const sanFr = (uciCoup, depuis = fenAvant) => { const c = new Chess(depuis); const m = c.move({ from: uciCoup.slice(0, 2), to: uciCoup.slice(2, 4), promotion: uciCoup[4] }); return { san: toFrenchSan(m.san), brut: m.san, m }; };
     const ligneFr = (pv, depuis = fenAvant) => { const c = new Chess(depuis), out = []; for (const u of pv) { try { out.push(toFrenchSan(c.move({ from: u.slice(0, 2), to: u.slice(2, 4), promotion: u[4] }).san)); } catch { break; } } return { sans: out, fenBout: c.fen() }; };
 
@@ -175,8 +176,8 @@ export class Joueur {
           const lm = ligneFr(pvUci, ech2.fen());
           const bilan = bilanMateriel(fenAvant, lm.fenBout, camp);
           const perte = materielEnMots(Object.fromEntries(Object.entries(bilan).map(([k, v]) => [k, -v])));
-          // Une menace, c'est du matériel qu'il gagnerait (Expert) ; sans matériel compté, il faut un gain net (deux fois la borne).
-          if (perte || valeur >= 2 * BORNES.menace) {
+          // Une menace, c'est du matériel qu'il gagnerait (Expert), ou un mat : une ligne « positionnelle » à faible profondeur n'en est pas une.
+          if (perte || mn.score >= MAT - 200) {
             const paree = (c) => c.cp >= E0 - valeur / 2;
             menace = { ligne: lm.sans, gain: valeur, perte: perte ?? 'du terrain', pareeApresM: paree(M), pareeApresR: R ? paree(R) : true };
           }
@@ -245,6 +246,7 @@ export class Joueur {
       else if (amel) { sorte = 'amelioration'; sousSorte = amel.cle; enTete(amel); }
       else if (echecDonne) { sorte = 'amelioration'; sousSorte = 'echec_donne'; }
       else if (prise || mM.m.piece === 'p') { sorte = 'amelioration'; sousSorte = 'placement'; } // une prise ou un pas de pion n'est jamais « un coup d'attente »
+      else if (menace && !menace.pareeApresM) { sorte = 'amelioration'; sousSorte = 'contraint'; } // rien ne pare la menace : on ne dit pas « coup d'attente »
       else if (R && M.total - R.total >= BORNES.seValent) { sorte = 'amelioration'; sousSorte = 'prefere'; } // M bat R nettement, sans terme simple : on le dit tel quel
       else { sorte = 'amelioration'; sousSorte = 'coup_d_attente'; termesCites.length = 0; }
     }

@@ -107,6 +107,7 @@
     "echec_donne": { "quand": "le coup donne échec sans gain", "texte": "Je donne échec avec {ma_piece} : il doit répondre tout de suite." },
     "menace_piece": { "quand": "le coup attaque une pièce adverse (autrement qu'avec un pion)", "texte": "J'attaque {sa_piece} en {case_cible} : il doit s'en occuper." },
     "quitte_prise": { "quand": "la pièce jouée était attaquée", "texte": "Je mets {ma_piece} à l'abri : elle était attaquée en {case}." },
+    "contraint": { "quand": "une menace vue n'est parée par aucun coup, et aucun terme ne ressort", "texte": "Je joue {M} : aucun coup n'empêche {menace}, et celui-ci me laisse le mieux placé." },
     "prefere": { "quand": "aucun terme ne ressort, mais M bat R d'au moins 10 cp : ce n'est pas un coup d'attente", "texte": "Je joue {M} : au bout de {ligneM}, je suis mieux qu'avec les autres coups, sans qu'une seule raison le résume." },
     "mat_subi": { "quand": "toutes les lignes mènent au mat contre moi", "texte": "Je suis mat dans quelques coups quoi que je fasse : {M} retarde l'échéance." },
     "perdu": { "quand": "noteM très en dessous, sans matériel compté", "texte": "Ma position est très mauvaise. {M} est ce que je trouve de moins pire." }
