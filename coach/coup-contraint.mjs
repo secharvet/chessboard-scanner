@@ -137,7 +137,8 @@ export async function choisirCoup(noteur, fen, side, plan, etat = {}, p = DEFAUT
     if (al) { const v = await verifierAlarme(noteur, fen, a.cand.uci, R.alarme); alarmes.push({ san: a.cand.m.san, ...al, verification: v }); if (!v.admis) continue; }
     prog = a; break;
   }
-  const alarme = alarmes.length ? { alarme: alarmes.at(-1) } : {};
+  // Toutes les alarmes du coup (Dev chef) : la dernière n'est pas forcément le coup joué (un pas suspendu, puis un autre gardé).
+  const alarme = alarmes.length ? { alarme: alarmes.at(-1), alarmes } : {};
   if (prog && !deborde(prog.cout)) return sortie(prog.cand, 'progressant', alarme);
   if (prog) {
     // Refus par l'addition : une vérification au faisceau court, une seule par segment (cahier § 11.1, § 12.3, § 13.2) —

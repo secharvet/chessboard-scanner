@@ -44,4 +44,9 @@ test('alarme (AA) : condition dame, et la vérification garde un pas à un demi-
   const A = { depth: 24, borne: 50 };
   assert.equal((await verifierAlarme(faux([['f6g4', -86], ['f6d5', -120]]), fen, 'f6d5', A)).admis, true);   // 34 cp : gardé
   assert.equal((await verifierAlarme(faux([['f6g4', -86], ['f6d5', -200]]), fen, 'f6d5', A)).admis, false);  // 114 cp : suspendu
+  // Le pas hors de la MultiPV profonde : sa valeur est lue par la meilleure réponse adverse, à la même profondeur.
+  const appels = [];
+  const repli = { noter: async (f, n, d) => { appels.push(d); return f === fen ? [{ uci: 'f6g4', cp: -86, m: coup('f6g4') }] : [{ uci: 'h6g7', cp: 300, m: null }]; } };
+  const v = await verifierAlarme(repli, fen, 'f6d5', A);
+  assert.equal(v.retard, 214); assert.equal(v.admis, false); assert.deepEqual(appels, [24, 24]);
 });
