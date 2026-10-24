@@ -126,7 +126,7 @@ export class Joueur {
       const saStructure = structures.some((s) => `${s.name}:${s.color}` === planCourant.structure);
       if (dHist.d === 0) { planRec = { abandon: null, realise: true }; this.plan = null; }
       else if (!Number.isFinite(dHist.d)) { planRec = { abandon: 'sans_objet', ancien: planCourant.nom, objetDisparu: this.#raisonEnClair(dHist.detail) }; this.plan = null; } // la raison se lit dans le détail de la distance (Expert)
-      else if (!saStructure) { planRec = { abandon: 'sans_objet', ancien: planCourant.nom, objetDisparu: 'la structure' }; this.plan = null; }
+      else if (!saStructure) { planRec = { abandon: 'sans_objet', ancien: planCourant.nom, objetDisparu: 'la structure n\'est plus là' }; this.plan = null; }
       else if (planCourant.cumul > BORNES.plan.abandon) { planRec = { abandon: 'cher', ancien: planCourant.nom }; this.plan = null; }
       if (planRec?.abandon) { this.dernierPlanNom = planCourant.nom; planRec.ancienTechnique = planCourant.nom; planRec.ancienClub = this.#libelleClub(planCourant.plan, camp, fenAvant); planRec.ancien = planRec.ancienClub; }
     }
@@ -153,7 +153,9 @@ export class Joueur {
       if (propositions.length) {
         propositions.sort((a, b) => a.cout - b.cout);
         const p = propositions[0];
-        this.plan = { plan: p.plan, pourquoi: p.pourquoi, nom: libelle(p.plan, fenAvant), structure: p.structure, cumul: 0, adopteAuPly: ply };
+        // la pièce d'un transfert est mémorisée à l'adoption : si elle disparaît, le libellé ne dira pas « mon pion » pour la case qu'elle occupait
+        const avecPiece = (q) => (q.famille === 'transfert' ? { ...q, pieceType: chess.get(q.de)?.type ?? null } : q.famille === 'et' ? { ...q, plans: q.plans.map(avecPiece) } : q);
+        this.plan = { plan: avecPiece(p.plan), pourquoi: p.pourquoi, nom: libelle(p.plan, fenAvant), structure: p.structure, cumul: 0, adopteAuPly: ply };
         adopteMaintenant = true;
         // si c'est le même plan qui revient au même coup (la structure a clignoté), on ne dit ni abandon ni adoption
         if (planRec?.abandon && planRec.ancienTechnique === this.plan.nom) { planRec = null; adopteMaintenant = false; this.plan.cumul = planCourant?.cumul ?? 0; }
@@ -412,7 +414,7 @@ export class Joueur {
     switch (plan.famille) {
       case 'poussee': return `pousser le pion ${plan.pion} en ${plan.cible}`;
       case 'rupture': return `la poussée ${pts}${plan.cible}`;
-      case 'transfert': { const p = new Chess(fen).get(plan.de); return `amener ${this.#piece(p?.type ?? 'p', 'ma')} en ${plan.vers}`; }
+      case 'transfert': { const t = plan.pieceType ?? new Chess(fen).get(plan.de)?.type ?? 'p'; return `amener ${this.#piece(t, 'ma')} en ${plan.vers}`; }
       case 'colonne': return `une tour sur la colonne ${plan.colonne}`;
       case 'roquer': return 'roquer';
       case 'echange': { const p = new Chess(fen).get(plan.mienne), q = new Chess(fen).get(plan.cible); return `échanger ${this.#piece(p?.type ?? 'p', 'ma')} contre ${this.#piece(q?.type ?? 'p', 'sa')}`; }

@@ -110,7 +110,7 @@ export function formuler(r) {
   else if (r.plan?.adopte) parties.unshift(remplir(texte(G.plan.adoption), d) + (r.plan.pourquoi ? ` (${r.plan.pourquoi}.)` : ''));
   // Abandon d'un plan annoncé à ce coup
   if (r.plan?.abandon === 'cher') parties.unshift(remplir(texte(G.plan.abandon_cher), { plan: r.plan.ancien ?? r.plan.nom }));
-  if (r.plan?.abandon === 'sans_objet') parties.unshift(remplir(texte(G.plan.abandon_sans_objet), { plan: r.plan.ancien ?? r.plan.nom, objet_disparu: r.plan.objetDisparu ?? 'la cible' }));
+  if (r.plan?.abandon === 'sans_objet') parties.unshift(remplir(texte(G.plan.abandon_sans_objet), { plan: r.plan.ancien ?? r.plan.nom, objet_disparu: r.plan.objetDisparu ?? 'la cible n\'est plus là' }));
 
   // 2. La menace vue (sauf si la défense la nomme déjà ; jamais en finale de pions, déjà filtrée en amont)
   // jamais sous une phrase de défense (elle nomme déjà ce qu'elle pare), ni sur un coup qui mate, ni sous « contraint » (Expert)

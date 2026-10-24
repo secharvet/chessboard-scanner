@@ -62,7 +62,7 @@
     "dernier_pas": { "quand": "distance après M = 0", "texte": "Plan : {plan}. Avec {M}, c'est fait." },
     "adoption": { "quand": "plan adopté à ce coup", "texte": "Je prends un plan : {plan}." },
     "abandon_cher": { "quand": "cumul > 100 cp", "texte": "J'abandonne le plan {plan} : il me coûte trop cher, plus d'un pion en tout." },
-    "abandon_sans_objet": { "quand": "pièce ou cible du plan disparue", "texte": "Le plan {plan} n'a plus d'objet : {objet_disparu} n'est plus là." }
+    "abandon_sans_objet": { "quand": "pièce ou cible du plan disparue ; {objet_disparu} est une proposition complète lue dans le détail de la distance (« sa dame bloque d4 », « la structure n'est plus là »)", "texte": "Le plan {plan} n'a plus d'objet : {objet_disparu}." }
   },
 
   "livre": {
