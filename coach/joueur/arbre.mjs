@@ -14,6 +14,17 @@
 import { Chess } from 'chess.js';
 import { buildAttackMap, other, sq as caseNom } from '../../positional/attack-map.js';
 import { gainEchange } from '../en-prise.mjs';
+import { DEPART } from './echiquier.mjs';
+import { structuresEtendues, instancierEtendu, distanceEtendue, NOUVELLES_STRUCTURES } from './structures-etendues.mjs';
+import { instancier } from '../plans-structures.mjs';
+import { estLevier, suivre, libelle } from '../plan-distance.mjs';
+import { LIVRE as LIVRE_FR } from '../../livres/francaise.js';
+import { LIVRE as LIVRE_IT } from '../../livres/italienne.js';
+import { LIVRE as LIVRE_ES } from '../../livres/espagnole.js';
+
+const distance = distanceEtendue;
+const LIVRES = new Map();
+for (const L of [LIVRE_FR, LIVRE_IT, LIVRE_ES]) for (const e of L) if (!LIVRES.has(e.coups)) LIVRES.set(e.coups, e);
 
 const VAL = { p: 1, n: 3, b: 3, r: 5, q: 9, k: 0 };
 const NOM = { p: 'pion', n: 'cavalier', b: 'fou', r: 'tour', q: 'dame', k: 'roi' };
@@ -237,6 +248,7 @@ export function tactiqueNommee({ fen, camp }) {
       if (vu.length < 2) continue;
       const [av, arr] = vu;
       if (av.color !== other(camp) || arr.color !== other(camp)) continue;
+      if (av.type === 'p') continue; // clouer ou enfiler un PION n'est pas une tactique nommée exploitable
       const u = uciDe(m); if (vus.has(u)) continue;
       // clouage : la pièce devant (av) vaut MOINS que celle derrière (arr) — la bouger coûterait la pièce de derrière.
       // enfilade : la pièce devant vaut PLUS — elle doit s'écarter et découvre celle de derrière. Un pion derrière ne compte pas.
@@ -252,18 +264,88 @@ export function etape2(ctx) {
   return [...monMat(ctx), ...priseGagnante(ctx), ...intermede(ctx), ...pieceNonDefendue(ctx), ...tactiqueNommee(ctx)];
 }
 
+/* ====================================================================== étape 3 (réduite pour le temps 1) ====================================================================== */
+/* Pas encore les cibles (3c) ni l'attaque du roi (3d) : c'est le taux de trous qui dira s'il les faut. Quatre sources :
+   le livre tant qu'on y est, ma pire pièce, la prophylaxie (par menace() au coup nul), les plans du catalogue existants. */
+
+/** 3 livre — le coup du répertoire tant qu'on y est, avec le « sens » écrit au livre pour raison. */
+export function livre({ fen, depart = DEPART, historique = [] }) {
+  const chess = new Chess(depart);
+  for (const u of historique) { try { chess.move({ from: u.slice(0, 2), to: u.slice(2, 4), promotion: u[4] }); } catch { return []; } }
+  const cle = chess.history().join(' ');
+  let entree = LIVRES.get(cle);
+  if (!entree && cle === '' && chess.fen() === DEPART && LIVRES.has('e4')) entree = { plan: [{ san: 'e4', pourquoi: LIVRES.get('e4').sens ?? 'le début de mon répertoire' }] };
+  if (!entree?.plan?.length) return [];
+  const L = entree.plan[0];
+  const legal = chess.moves({ verbose: true }).find((m) => m.san === L.san);
+  return legal ? [{ coup: uciDe(legal), raison: L.pourquoi ?? 'le livre', noeud: '3L' }] : [];
+}
+
+/** 3 pire pièce — ma pièce la moins active (≤ 2 cases utiles), ou une mineure encore chez elle après le coup 10, vers une meilleure case. */
+export function pirePiece({ fen, camp }) {
+  const map = buildAttackMap(fen);
+  const miennes = map.pieces.filter((p) => p.color === camp && p.type !== 'p' && p.type !== 'k');
+  if (!miennes.length) return [];
+  const coup = Number(fen.split(' ')[5] ?? 1), rangHome = camp === 'w' ? 1 : 8;
+  let cible = null;
+  const mineuresChezElles = miennes.filter((p) => (p.type === 'n' || p.type === 'b') && p.rank === rangHome);
+  if (coup >= 10 && mineuresChezElles.length) cible = mineuresChezElles.sort((a, b) => map.mobility(a) - map.mobility(b))[0];
+  else { const parMob = miennes.map((p) => ({ p, m: map.mobility(p) })).sort((a, b) => a.m - b.m); if (parMob[0]?.m <= 2) cible = parMob[0].p; }
+  if (!cible) return [];
+  const mobAvant = map.mobility(cible), chezElle = cible.rank === rangHome, out = [];
+  for (const m of coupsLegaux(fen)) {
+    if (m.from !== cible.square) continue;
+    const map2 = buildAttackMap(apres(fen, m)), bougee = map2.at[m.to];
+    if (!bougee || gainEchange(map2, m.to, camp) > 0) continue; // ne pas jeter la pièce en l'améliorant
+    if (map2.mobility(bougee) > mobAvant || (chezElle && m.to[1] !== String(rangHome))) out.push({ coup: uciDe(m), raison: `ma pire pièce est ${maPiece(cible.type)} en ${cible.square} : je l'active en ${m.to}`, noeud: '3P' });
+  }
+  return out;
+}
+
+/** 3 prophylaxie — son meilleur coup au coup nul quand ce n'est pas une menace de matériel : le coup qui le gêne (sonde). */
+export function prophylaxie({ fen, sonde }) {
+  const pr = sonde?.prophylaxie;
+  if (!pr || typeof pr.paree !== 'function') return [];
+  const out = [];
+  for (const m of coupsLegaux(fen)) { const u = uciDe(m); if (pr.paree(u)) out.push({ coup: u, raison: pr.idee ? `je l'empêche de ${pr.idee}` : 'prophylaxie : je gêne son idée', noeud: '3Y' }); }
+  return out;
+}
+
+/** 3 plans du catalogue — pour chaque structure reconnue, le coup qui avance le plus un plan existant (levier, distance finie). */
+export function plansCatalogue({ fen, camp }) {
+  const structures = structuresEtendues(fen);
+  if (!structures.length) return [];
+  const legaux = coupsLegaux(fen), out = [], vus = new Set();
+  for (const s of structures) {
+    const insts = NOUVELLES_STRUCTURES.has(s.name) ? instancierEtendu(fen, camp, s) : instancier(fen, camp, s.name, s.color);
+    for (const inst of insts) {
+      if (!estLevier(fen, camp, inst.plan)) continue;
+      const d0 = distance(fen, camp, inst.plan).d;
+      if (!(d0 > 0) || !Number.isFinite(d0)) continue;
+      let meilleur = null;
+      for (const m of legaux) { let dA; try { dA = distance(apres(fen, m), camp, suivre(inst.plan, m)).d; } catch { continue; } if (dA < d0 && (!meilleur || dA < meilleur.dA)) meilleur = { m, dA }; }
+      if (meilleur) { const u = uciDe(meilleur.m); if (!vus.has(u)) { vus.add(u); out.push({ coup: u, raison: `j'avance mon plan : ${libelle(inst.plan, fen)}`, noeud: '3C' }); } }
+    }
+  }
+  return out;
+}
+
+export function etape3(ctx) {
+  return [...livre(ctx), ...pirePiece(ctx), ...prophylaxie(ctx), ...plansCatalogue(ctx)];
+}
+
 /* ====================================================================== assemblage ====================================================================== */
 
 /** L'ORDRE de l'arbre : un coup produit par plusieurs nœuds garde le nœud le plus HAUT (sa raison), toutes raisons retenues. */
-export const ORDRE = ['1a', '1b', '1c', '1d', '1e', '1f', '2a', '2b', '2c', '2d', '2e'];
+export const ORDRE = ['1a', '1b', '1c', '1d', '1e', '1f', '2a', '2b', '2c', '2d', '2e', '3L', '3P', '3Y', '3C'];
 
 /**
- * Produit les candidats du radar (étapes 1 et 2) pour une position, dédoublonnés par coup (nœud le plus haut gardé),
- * chaque candidat portant toutes ses raisons et le nœud retenu. L'étape 3 (réduite) s'ajoutera après la mi-chemin.
+ * Produit les candidats de l'arbre (étapes 1, 2, 3 réduite) pour une position, dédoublonnés par coup (nœud le plus haut
+ * gardé), chaque candidat portant toutes ses raisons et le nœud retenu.
  * @returns {{ coup, noeud, raison, raisons: {noeud, raison}[] }[]}
  */
 export function candidats(ctx) {
-  const bruts = [...etape1(ctx), ...etape2(ctx)];
+  const bruts = [...etape1(ctx), ...etape2(ctx), ...etape3(ctx)];
   const parCoup = new Map();
   for (const c of bruts) {
     const e = parCoup.get(c.coup) ?? { coup: c.coup, raisons: [] };

@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {
   echec, menaceMat, pieceEnPrise, derniereRangee, clouage, deuxCoups,
   monMat, priseGagnante, intermede, pieceNonDefendue, tactiqueNommee,
+  livre, pirePiece, prophylaxie, plansCatalogue,
   candidats, selectionner, piecesEnPrise,
 } from '../coach/joueur/arbre.mjs';
 import { Echiquier, uci as uciDe } from '../coach/joueur/echiquier.mjs';
@@ -135,6 +136,42 @@ test('2e tactique nommée : produit un clouage créé en un coup, rien au dépar
   const cs = tactiqueNommee({ fen, camp: 'w' });
   assert.ok(cs.some((c) => c.coup === 'a1e1' && c.noeud === '2e' && /cloue/.test(c.raison)));
   assert.deepEqual(tactiqueNommee({ fen: DEPART, camp: 'w' }), []);
+});
+
+/* ---- étape 3 (réduite) ---- */
+
+test('3 livre : produit le coup du répertoire avec son sens, rien hors livre', () => {
+  const cs = livre({ fen: DEPART, depart: DEPART, historique: [] });
+  assert.equal(cs.length, 1);
+  assert.equal(cs[0].coup, 'e2e4');
+  assert.equal(cs[0].noeud, '3L');
+  assert.ok(cs[0].raison.length > 0);
+  // une suite hors répertoire ne produit rien
+  assert.deepEqual(livre({ fen: 'rnbqkbnr/1ppppppp/p7/8/8/P7/1PPPPPPP/RNBQKBNR w KQkq - 0 2', depart: DEPART, historique: ['a2a3', 'a7a6'] }), []);
+});
+
+test('3 pire pièce : active une mineure encore chez elle au coup 10, rien au départ', () => {
+  const fen = 'r2qkb1r/pp2pppp/2np1n2/2p5/4P3/2NP1N2/PPP2PPP/R1BQKB1R w KQkq - 0 10'; // Ff1 pas développé
+  const cs = pirePiece({ fen, camp: 'w' });
+  assert.ok(cs.length > 0 && cs.every((c) => c.noeud === '3P' && c.coup.startsWith('f1')));
+  assert.ok(cs.some((c) => /pire pièce/.test(c.raison)));
+  assert.deepEqual(pirePiece({ fen: DEPART, camp: 'w' }), []); // rien à activer au premier coup (les pièces sont bloquées, pas « mauvaises »)
+});
+
+test('3 prophylaxie : produit les coups qui gênent son idée (sonde), rien sans sonde', () => {
+  const sonde = { prophylaxie: { paree: (u) => u === 'a2a3', idee: 'jouer …b4' } };
+  const cs = prophylaxie({ fen: DEPART, camp: 'w', sonde });
+  assert.deepEqual(cs.map((c) => c.coup), ['a2a3']);
+  assert.ok(/empêche de jouer …b4/.test(cs[0].raison) && cs[0].noeud === '3Y');
+  assert.deepEqual(prophylaxie({ fen: DEPART, camp: 'w' }), []);
+});
+
+test('3 plans du catalogue : ne jette pas, et toute sortie est un pas de plan nommé', () => {
+  for (const fen of [DEPART, 'r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/2N2N2/PPPP1PPP/R1BQK2R w KQkq - 6 5', 'rnbq1rk1/ppp1ppbp/3p1np1/8/2PPP3/2N2N2/PP3PPP/R1BQKB1R w KQ - 0 6']) {
+    const cs = plansCatalogue({ fen, camp: fen.split(' ')[1] });
+    assert.ok(Array.isArray(cs));
+    for (const c of cs) assert.ok(c.noeud === '3C' && /^j'avance mon plan/.test(c.raison));
+  }
 });
 
 /* ---- assemblage + sélection ---- */
