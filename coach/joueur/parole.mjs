@@ -88,8 +88,9 @@ export function formuler(r) {
       if (r.sousSorte !== 'parer' && r.sousSorte !== 'echec_pare' && r.menace && !r.menace.pareeApresM) parties.push(remplir(texte(G.defense.sinon), d));
       break;
     }
-    case 'plan': {
-      parties.push(remplir(texte(r.plan?.distanceApres === 0 ? G.plan.dernier_pas : G.plan.pas), d));
+    case 'plan': { // le pas dit ce qu'il change quand la trace le sait (Expert)
+      const g = r.plan?.distanceApres === 0 ? G.plan.dernier_pas : r.plan?.ceQuiChange ? G.pilote.pas_detail : G.plan.pas;
+      parties.push(remplir(texte(g), { ...d, ce_qui_change: r.plan?.ceQuiChange ?? '' }));
       break;
     }
     case 'finale': parties.push(remplir(G.finale[r.sousSorte] ?? '', dt(t))); break;
@@ -105,7 +106,8 @@ export function formuler(r) {
     }
   }
   // Un plan adopté à ce coup s'annonce, quelle que soit la sorte de la phrase (un fait, pas un ornement)
-  if (r.plan?.adopte) parties.unshift(remplir(texte(G.plan.adoption), d) + (r.plan.pourquoi ? ` (${r.plan.pourquoi}.)` : ''));
+  if (r.plan?.retour) parties.unshift(remplir(texte(G.pilote.retour), d));
+  else if (r.plan?.adopte) parties.unshift(remplir(texte(G.plan.adoption), d) + (r.plan.pourquoi ? ` (${r.plan.pourquoi}.)` : ''));
   // Abandon d'un plan annoncé à ce coup
   if (r.plan?.abandon === 'cher') parties.unshift(remplir(texte(G.plan.abandon_cher), { plan: r.plan.ancien ?? r.plan.nom }));
   if (r.plan?.abandon === 'sans_objet') parties.unshift(remplir(texte(G.plan.abandon_sans_objet), { plan: r.plan.ancien ?? r.plan.nom, objet_disparu: r.plan.objetDisparu ?? 'la cible' }));
