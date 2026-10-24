@@ -131,9 +131,15 @@ export async function choisirCoup(noteur, fen, side, plan, etat = {}, p = DEFAUT
   // L'alarme (règles AA) : un pas sous alarme n'est joué que si la vérification au moteur le garde ; sinon on passe au
   // progressant suivant, et s'il n'y en a plus, la fenêtre est suspendue comme sous le veto. Jamais en situation forcée.
   const alarmes = [];
-  // Le coup joué quand l'alarme suspend : le meilleur à 24 ; son retard (journal seulement, « suspendu » est neutre) est lu
-  // à la profondeur de jeu s'il est dans la MultiPV à 18, sinon sur sa note à 24.
-  const meilleurA24 = (v) => (v.meilleur ? cands.find((c) => c.uci === v.meilleur.uci) ?? v.meilleur : cands[0]);
+  // Le coup joué quand l'alarme suspend : le meilleur à 24 ; son retard (journal seulement, « suspendu » est neutre) se lit
+  // à la profondeur de jeu, comme dans l'autre bras (Expert) : dans la MultiPV à 18, sinon par la meilleure réponse adverse
+  // à 18, le patron de la dernière chance relue.
+  const meilleurA24 = async (v) => {
+    if (!v.meilleur) return cands[0];
+    const c = cands.find((x) => x.uci === v.meilleur.uci); if (c) return c;
+    const [rep] = await noteur.noter(jouer(fen, v.meilleur.uci).fen, 1);
+    return { ...v.meilleur, cp: rep ? -rep.cp : v.meilleur.cp, hors18: true };
+  };
   let prog = null;
   for (const a of admis.filter((x) => x.progressant)) { // dans l'ordre du moteur : le premier progressant gardé est le meilleur
     const al = R?.alarme ? alarmeDame(fen, side, a.cand.m.san) : null;
@@ -168,13 +174,13 @@ export async function choisirCoup(noteur, fen, side, plan, etat = {}, p = DEFAUT
   let concession = Number.isFinite(coutRefuseMin) ? coutRefuseMin : null;
   // Fenêtre suspendue : un pas a été vetoé et aucun autre n'est admis — le coup du moteur, neutre pour le plan, qui attend.
   if (vetos.length && !prog) return sortie(cands[0], 'suspendu', { concession, veto: vetos[0] });
-  if (alarmes.length && !prog) return sortie(meilleurA24(alarmes[0].verification), 'suspendu', { concession, ...alarme });
+  if (alarmes.length && !prog) { const j = await meilleurA24(alarmes[0].verification); return sortie(j, 'suspendu', { concession, ...alarme, ...(j.hors18 ? { hors18: true } : {}) }); }
   if (compteur >= p.k) {
     const dc = await derniereChance(noteur, fen, side, plan, cands, p);
     if (dc?.admis && R?.veto) { const v = vetoDefense(fen, side, dc.cand.m.san); if (v) return sortie(cands[0], 'suspendu', { concession, veto: { san: dc.cand.m.san, derniereChance: true, ...v } }); }
     if (dc?.admis && R?.alarme) {
       const al = alarmeDame(fen, side, dc.cand.m.san);
-      if (al) { const v = await verifierAlarme(noteur, fen, dc.cand.uci, R.alarme); if (!v.admis) return sortie(meilleurA24(v), 'suspendu', { concession, alarme: { san: dc.cand.m.san, derniereChance: true, ...al, verification: v } }); }
+      if (al) { const v = await verifierAlarme(noteur, fen, dc.cand.uci, R.alarme); if (!v.admis) { const j = await meilleurA24(v); return sortie(j, 'suspendu', { concession, alarme: { san: dc.cand.m.san, derniereChance: true, ...al, verification: v }, ...(j.hors18 ? { hors18: true } : {}) }); } }
     }
     if (dc?.admis) {
       const apres = jouer(fen, dc.cand.uci); const [rep] = await noteur.noter(apres.fen, 1);

@@ -184,6 +184,7 @@ async function partie(numero) {
         // Le pas refusé laisse jouer le repli de ce coup-ci ; l'abandon et l'enchaînement viennent au coup suivant (cahier § 2.2).
         if (r.refus) { coach.cumulDeborde = true; evts.push(`refus ${fr(r.refus.san)} (addition ${fmt(r.refus.cumul)}${r.refus.prixVerifie !== undefined ? `, faisceau ${fmt(r.refus.prixVerifie)}` : ''})`); }
         for (const al of r.alarmes ?? (r.alarme ? [r.alarme] : [])) { const v = al.verification; evts.push(`alarme ${fr(al.san)}${al.derniereChance ? ' (dernière chance)' : ''} : retard ${v.retard} à prof. ${v.depth} → ${v.admis ? 'gardé' : 'suspendu'}`); }
+        if (r.hors18) evts.push('coup de la fenêtre suspendue hors de la MultiPV de jeu (retard relu à la profondeur de jeu)');
         if (r.veto) evts.push(`veto ${fr(r.veto.san)}${r.veto.derniereChance ? ' (dernière chance)' : ''} (défenses du roi ${r.veto.avant} → ${r.veto.apres})`);
         if (r.dcRefusee) evts.push(`dernière chance refusée (relecture ${DEPTH}) ${fr(r.dcRefusee.san)} ${fmt(r.dcRefusee.retard)}`);
       }
