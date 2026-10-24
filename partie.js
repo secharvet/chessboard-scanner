@@ -6,6 +6,7 @@
  */
 import { Chess } from '/vendor/chess.js';
 import { renderFenBoard } from './board-view.js';
+import { recitTexte, pourquoiHumain } from './recit.js';
 
 const $ = (id) => document.getElementById(id);
 const SORTES = {
@@ -70,16 +71,10 @@ function rendrePhrase() {
   rendreExamen(c);
 }
 
+/** Le « pourquoi » déplié : le même texte que le récit (ce qu'il a calculé, ce qu'il a aussi regardé…), sans la trace de la recherche. */
 function traceHtml(c) {
-  const li = [];
-  if (c.ligne?.length) li.push(`<li><b>Ligne calculée :</b> ${c.ligne.join(' ')}</li>`);
-  if (c.battu) li.push(`<li><b>Coup battu :</b> ${c.battu.san} ${c.battu.seValent ? '— se valent' : `(${(c.battu.ecart / 100).toFixed(2).replace('.', ',')} de moins)`}</li>`);
-  if (c.termes?.length) li.push(`<li><b>Ce qui a compté :</b> ${c.termes.map((t) => `${t.nom} (après ${t.apres}, au bout ${t.bout})`).join(' · ')}</li>`);
-  if (c.menace) li.push(`<li><b>Menace vue :</b> ${(c.menace.ligne ?? []).join(' ')}${c.menace.pareeApres ? ' — parée après le coup' : ''}</li>`);
-  if (c.motif) li.push(`<li><b>Motif :</b> ${c.motif}</li>`);
-  if (c.plan) li.push(`<li><b>Plan :</b> ${c.plan.nom} (distance ${c.plan.distance}, cumul ${c.plan.cumul})</li>`);
-  if (c.profondeur != null) li.push(`<li><b>Recherche :</b> profondeur ${c.profondeur}, ${c.noeuds ?? 0} positions${c.ms != null ? `, ${c.ms} ms` : ''}</li>`);
-  return `<ul class="jpt__trace-liste">${li.join('')}</ul>`;
+  const li = pourquoiHumain({ ...c, examen: null }).map((x) => `<li>${x.charAt(0).toUpperCase()}${x.slice(1)}</li>`);
+  return `<ul class="jpt__trace-liste">${li.join('') || '<li>Rien de plus à dire sur ce coup.</li>'}</ul>`;
 }
 
 function rendreExamen(c) {
@@ -187,6 +182,15 @@ function copierLecture() {
   });
 }
 
+/** Copie le récit ; si le presse-papiers est refusé, le texte reste sélectionné (Ctrl+C suffit). */
+function copierRecit(ta, bouton) {
+  const ok = () => { bouton.textContent = 'Copié ✓'; setTimeout(() => { bouton.textContent = 'Copier le récit'; }, 2000); };
+  (navigator.clipboard?.writeText(ta.value) ?? Promise.reject()).then(ok).catch(() => {
+    ta.focus(); ta.select();
+    try { if (document.execCommand('copy')) ok(); else bouton.textContent = 'Sélectionné : Ctrl+C'; } catch { bouton.textContent = 'Sélectionné : Ctrl+C'; }
+  });
+}
+
 /* ------------------------------------------------------------------ chargement ------------------------------------------------------------------ */
 
 async function chargerListe(selId) {
@@ -203,6 +207,7 @@ async function chargerPartie(id) {
   const p = await (await fetch(`./parties/${id}.json`)).json();
   etat.partie = p; etat.fens = construireFens(p); etat.cur = p.coups.length; etat.orientation = p.coach.camp === 'b' ? 'black' : 'white';
   rendreMeta(); rendreListe(); rendreBoard(); rendrePhrase();
+  $('jptRecit').value = recitTexte(p);
 }
 
 async function init() {
@@ -225,6 +230,7 @@ async function init() {
     rendreExamen(etat.cur > 0 ? etat.partie.coups[etat.cur - 1] : null);
   });
   $('jptLectureStart').addEventListener('click', demarrerLecture);
+  $('jptRecitCopie').addEventListener('click', () => copierRecit($('jptRecit'), $('jptRecitCopie')));
   $('jptSelect').addEventListener('change', (ev) => { if (ev.target.value) { const u = new URL(location); u.searchParams.set('partie', ev.target.value); history.replaceState(null, '', u); chargerPartie(ev.target.value).catch(() => erreur('Partie illisible.')); } });
 }
 

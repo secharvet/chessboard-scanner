@@ -55,3 +55,13 @@ Heures de Paris. Une entrée par étape franchie ; les chiffres sont ceux des fi
   exacts du coup nul, celui dont la ligne gagne le plus de matériel compté (ou mate), pas le meilleur coup adverse à ses yeux
   (cas 16.Fb5+ : …Ce7 −5,87 retenu, …Txg2+ −6,04 ignoré alors qu'il gagne g2 avec échec) ; borne de l'Expert : ce candidat doit
   rester à moins de 80 cp du meilleur coup adverse, sinon c'est une prise qu'il ne jouerait pas.
+- **Série arrêtée à 26 parties sur ordre de Sébastien** (« lancées sans me demander ») : 26/26 Blancs, 605 coups, 22 bévues (3,6 %),
+  dont 15 dans l'ouverture (5,5 % des coups d'ouverture) contre 2,3 % au milieu et 1,4 % en finale ; 100 % de phrases ; archivée
+  `parties-serie-4d5e252-26/`, hors critère. Règle : plus de lot sans accord explicite sur la taille.
+- **Page « Coach joue » (jouer.html) en ligne** (décision de Sébastien : calcul 100 % serveur, une partie à la fois, les visiteurs
+  assistent ; lancement réservé aux comptes enseignant / admin). Arène `--flux`, orchestrateur `coach/joueur-arene.mjs`, routes
+  `/api/joueur/en-cours`, `/api/joueur/en-cours/flux` (SSE, nginx sans tampon), `POST /api/joueur/parties` ; conteneur chess-api
+  passé à node:22-trixie-slim (lc0 exige glibc 2.38) avec Maia monté. Premier essai réel depuis le site : 1-0 en 61 demi-coups,
+  budget 200 000 (démo), 4 bévues sur 31.
+- Questions de Sébastien notées : « 400 000 positions, c'est du Stockfish-like » → proposition B, la recherche par candidats
+  (3 à 5 coups nommés par étage), à mesurer sur les mêmes parties ; en attente de son mot.

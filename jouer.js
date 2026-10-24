@@ -5,6 +5,7 @@
  */
 import { Chess } from '/vendor/chess.js';
 import { renderFenBoard } from './board-view.js';
+import { recitTexte, pourquoiHumain } from './recit.js';
 
 const $ = (id) => document.getElementById(id);
 const SORTES = { plan: { l: 'plan', c: '#4e9a06' }, amelioration: { l: 'amélioration', c: '#3465a4' }, defense: { l: 'défense', c: '#c17d11' }, calcul: { l: 'calcul', c: '#a40000' }, livre: { l: 'livre', c: '#5c3566' } };
@@ -12,15 +13,16 @@ const VERDICTS = { ok: 'rien à signaler', faute: 'faute', bevue: 'bévue', excl
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); // phrases/traces échappées (défense)
 const DEPART = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
 
-const vue = { chess: null, orientation: 'white', vus: new Set(), id: null, camp: 'w', fini: false };
+const vue = { chess: null, orientation: 'white', vus: new Set(), id: null, camp: 'w', fini: false, coups: [], debut: null, fin: null };
 let source = null, sondage = null;
 
 function erreur(msg) { const e = $('jouErreur'); e.textContent = msg; e.hidden = false; }
 
 function reset(depart, camp) {
-  vue.chess = new Chess(depart || DEPART); vue.orientation = camp === 'b' ? 'black' : 'white'; vue.vus = new Set(); vue.camp = camp; vue.fini = false;
+  vue.chess = new Chess(depart || DEPART); vue.orientation = camp === 'b' ? 'black' : 'white'; vue.vus = new Set(); vue.camp = camp; vue.fini = false; vue.coups = []; vue.fin = null;
   $('jouCoups').innerHTML = ''; $('jouFin').hidden = true; $('jouTrace').hidden = true; $('jouPourquoi').hidden = true;
   $('jouPastille').hidden = true; $('jouCoupNom').textContent = ''; $('jouPhrase').textContent = 'La partie commence…';
+  $('jouDerniers').hidden = true; $('jouReponse').hidden = true; $('jouRecit').value = '';
   renderBoard();
 }
 
@@ -32,16 +34,31 @@ function evalTexte(v) {
   return `${v > 0 ? '+' : v < 0 ? '−' : ''}${(Math.abs(v) / 100).toFixed(2).replace('.', ',')}`;
 }
 
+/** Le « pourquoi » déplié : le même texte que le récit, sans la trace de la recherche (profondeur, positions, score). */
 function traceHtml(c) {
-  const li = [];
-  if (c.ligne?.length) li.push(`<li><b>Ligne calculée :</b> ${esc(c.ligne.join(' '))}</li>`);
-  if (c.battu) li.push(`<li><b>Coup battu :</b> ${esc(c.battu.san)} ${c.battu.seValent ? '— se valent' : `(${(c.battu.ecart / 100).toFixed(2).replace('.', ',')} de moins)`}</li>`);
-  if (c.termes?.length) li.push(`<li><b>Ce qui a compté :</b> ${esc(c.termes.map((t) => `${t.nom} (après ${t.apres}, au bout ${t.bout})`).join(' · '))}</li>`);
-  if (c.menace) li.push(`<li><b>Menace vue :</b> ${esc((c.menace.ligne ?? []).join(' '))}${c.menace.pareeApres ? ' — parée après le coup' : ''}</li>`);
-  if (c.motif) li.push(`<li><b>Motif :</b> ${esc(c.motif)}</li>`);
-  if (c.plan) li.push(`<li><b>Plan :</b> ${esc(c.plan.nom)} (distance ${c.plan.distance}, cumul ${c.plan.cumul})</li>`);
-  if (c.profondeur != null) li.push(`<li><b>Recherche :</b> profondeur ${c.profondeur}, ${c.noeuds ?? 0} positions${c.ms != null ? `, ${c.ms} ms` : ''}</li>`);
-  return `<ul class="jpt__trace-liste">${li.join('')}</ul>`;
+  const li = pourquoiHumain({ ...c, examen: null }).map((x) => `<li>${esc(x.charAt(0).toUpperCase() + x.slice(1))}</li>`);
+  return `<ul class="jpt__trace-liste">${li.join('') || '<li>Rien de plus à dire sur ce coup.</li>'}</ul>`;
+}
+
+const nomCoup = (c) => `${Math.floor((c.ply - 1) / 2) + 1}${c.camp === 'w' ? '.' : '…'} ${c.san}`;
+
+/**
+ * Montre une paire de demi-coups : le coup du coach (sa phrase) et la réponse de l'adversaire qui le suit. Cliquer un coup
+ * de l'adversaire montre donc le coup du coach qui le précède, avec cette réponse : on ne voit jamais un coup seul.
+ */
+function montrer(c) {
+  const k = vue.coups.indexOf(c);
+  let coach = c.coach ? c : null, rep = c.coach ? null : c;
+  if (!c.coach) for (let i = k - 1; i >= 0; i--) if (vue.coups[i].coach) { coach = vue.coups[i]; break; }
+  if (c.coach && k >= 0 && vue.coups[k + 1] && !vue.coups[k + 1].coach) rep = vue.coups[k + 1];
+  const adv = vue.debut?.adversaire?.nom ?? 'l\'adversaire';
+  const d = $('jouDerniers');
+  d.hidden = false;
+  d.innerHTML = `Derniers coups : ${coach ? `<b>${esc(nomCoup(coach))}</b> (coach)` : ''}${coach && rep ? ' · ' : ''}${rep ? `<b>${esc(nomCoup(rep))}</b> (${esc(adv)})` : ''}`;
+  if (coach) montrerPhrase(coach); else montrerPhrase(c);
+  const r = $('jouReponse');
+  r.hidden = !(coach && rep);
+  if (coach && rep) r.textContent = `Réponse de ${adv} : ${nomCoup(rep)}.`;
 }
 
 function montrerPhrase(c) {
@@ -66,9 +83,31 @@ function ajouterCoup(c) {
   const num = c.camp === 'w' ? `${Math.floor(c.ply / 2) + 1}.` : '';
   li.innerHTML = `<span class="jpt__coup-num">${num}</span> <span class="jpt__coup-san">${esc(c.san)}</span>` +
     (c.coach && c.sorte ? `<span class="jpt__coup-pastille" style="background:${(SORTES[c.sorte] ?? {}).c ?? '#555'}"></span>` : '');
-  li.onclick = () => montrerPhrase(c);
+  li.onclick = () => montrer(c);
   $('jouCoups').appendChild(li);
-  montrerPhrase(c);
+  vue.coups.push(c);
+  montrer(c);
+  majRecit();
+}
+
+/** Le récit complet, tenu à jour coup par coup (la position de lecture dans l'encart est gardée). */
+function majRecit(partie) {
+  const ta = $('jouRecit'), haut = ta.scrollTop;
+  const d = vue.debut ?? {};
+  const p = partie ?? { id: vue.id, coach: { camp: vue.camp, budget: d.budget, code: d.code }, adversaire: d.adversaire, depart: d.depart, coups: vue.coups,
+    resultat: vue.fin?.resultat, raison: vue.fin?.raison, plies: vue.fin?.plies, examen: vue._examen };
+  ta.value = recitTexte(p);
+  ta.scrollTop = haut;
+}
+
+/** Copie le récit ; si le presse-papiers est refusé, le texte reste sélectionné (Ctrl+C suffit). */
+function copierRecit() {
+  const ta = $('jouRecit'), bouton = $('jouRecitCopie');
+  const ok = () => { bouton.textContent = 'Copié ✓'; setTimeout(() => { bouton.textContent = 'Copier le récit'; }, 2000); };
+  (navigator.clipboard?.writeText(ta.value) ?? Promise.reject()).then(ok).catch(() => {
+    ta.focus(); ta.select();
+    try { if (document.execCommand('copy')) ok(); else bouton.textContent = 'Sélectionné : Ctrl+C'; } catch { bouton.textContent = 'Sélectionné : Ctrl+C'; }
+  });
 }
 
 function montrerFin(o, examen) {
@@ -81,10 +120,14 @@ function montrerFin(o, examen) {
 
 function traiter(o) {
   if (o.ev === 'vide') { montrerAucune(); return; }
-  if (o.ev === 'debut') { $('jouMeta').textContent = `Partie en cours : le coach ${o.camp === 'b' ? 'Noirs' : 'Blancs'} contre ${o.adversaire?.nom ?? '?'}`; vue.id = o.id; reset(o.depart, o.camp); $('jouListeBloc').hidden = true; }
+  if (o.ev === 'debut') { vue.debut = o; $('jouMeta').textContent = `Partie en cours : le coach ${o.camp === 'b' ? 'Noirs' : 'Blancs'} contre ${o.adversaire?.nom ?? '?'}`; vue.id = o.id; reset(o.depart, o.camp); $('jouListeBloc').hidden = true; }
   else if (o.ev === 'coup') ajouterCoup(o.coup);
   else if (o.ev === 'examen') vue._examen = o.examen;
-  else if (o.ev === 'fin') { vue.id = o.id ?? vue.id; montrerFin(o, vue._examen); fermerFlux(); sonder(); }
+  else if (o.ev === 'fin') {
+    vue.id = o.id ?? vue.id; vue.fin = o; montrerFin(o, vue._examen); fermerFlux(); sonder(); majRecit();
+    // Le fichier de la partie porte l'examen coup par coup : le récit final le reprend.
+    if (vue.id) fetch(`./parties/${encodeURIComponent(vue.id)}.json`).then((r) => (r.ok ? r.json() : null)).then((p) => { if (p) majRecit(p); }).catch(() => {});
+  }
 }
 
 function ouvrirFlux() {
@@ -140,6 +183,7 @@ async function initLancement() {
 }
 
 async function init() {
+  $('jouRecitCopie').onclick = copierRecit;
   await initLancement();
   // État initial : s'il y a (ou vient d'y avoir) une partie, on ouvre le flux (rattrapage inclus) ; sinon « aucune » + liste.
   try {
