@@ -247,7 +247,7 @@ export class Joueur {
     else if (matSubi) { sorte = 'calcul'; sousSorte = 'mat_subi'; }
     // Reprise : dite comme telle (rétablie ou non). Gain : du matériel en plus par rapport à la ligne de quiescence de E0, et M
     // ne descend pas sous E0. Les effondrements (seul coup, moindre mal) se lisent contre E0 posée.
-    else if (reprise && bilanTotal >= 0 && M.cp - E0statique >= BORNES.gain) { sorte = 'calcul'; sousSorte = retabli ? 'reprise' : 'reprise_partielle'; }
+    else if (reprise && bilanTotal >= 0) { sorte = 'calcul'; sousSorte = retabli ? 'reprise' : 'reprise_partielle'; } // une reprise est une reprise, quel que soit le score
     else if (gainM && M.cp >= E0 - 20) { sorte = 'calcul'; sousSorte = 'gain'; }
     // Seul coup : M tient (à 80 près de E0) et R s'effondre (80 sous M). Moindre mal / perdu : tout baisse de 80 ET la position
     // est vraiment mauvaise (sous −100) : une baisse depuis une évaluation posée trop optimiste n'est pas une catastrophe.

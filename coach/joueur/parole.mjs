@@ -35,6 +35,8 @@ export function materielEnMots(bilan) {
   if (total <= 0) return null;
   const gagne = { P: Math.max(0, bilan.P ?? 0), M: Math.max(0, bilan.N ?? 0) + Math.max(0, bilan.B ?? 0), R: Math.max(0, bilan.R ?? 0), Q: Math.max(0, bilan.Q ?? 0) };
   const perdu = { P: Math.max(0, -(bilan.P ?? 0)), M: Math.max(0, -(bilan.N ?? 0)) + Math.max(0, -(bilan.B ?? 0)), R: Math.max(0, -(bilan.R ?? 0)), Q: Math.max(0, -(bilan.Q ?? 0)) };
+  // un cavalier contre un fou, c'est un échange de pièces : on l'efface du bilan avant de nommer (« la qualité », pas « une tour et une pièce contre deux pièces »)
+  const paires = Math.min(gagne.M, perdu.M); gagne.M -= paires; perdu.M -= paires;
   // la qualité : une tour contre une pièce mineure (et rien d'autre d'échangé entre elles)
   if (gagne.R === 1 && perdu.M === 1 && !gagne.Q && !perdu.Q && !perdu.R && !gagne.M) {
     const reste = gagne.P - perdu.P;
