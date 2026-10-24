@@ -1,0 +1,262 @@
+{
+ "graine": 20261025,
+ "source": "parties-serie-4d5e252-26",
+ "parties": 26,
+ "urne": 555,
+ "strates": {
+  "calcul": {
+   "tires": 5,
+   "sur": 225
+  },
+  "défense": {
+   "tires": 5,
+   "sur": 72
+  },
+  "calme": {
+   "tires": 10,
+   "sur": 258
+  }
+ },
+ "coups": [
+  {
+   "partie": "2026-10-24-maia-w-04",
+   "code": "4d5e252",
+   "ply": 33,
+   "camp": "w",
+   "san": "c3",
+   "uci": "c2c3",
+   "fenAvant": "1r1q1rk1/1bp2pp1/ppnp1b1p/5Q2/2B2B2/5N2/PPP2PPP/R4RK1 w - - 3 17",
+   "phrase": "Je sauve mon pion, en prise en b2. c3 et Tab1 se valent ; j'ai pris c3.",
+   "sorte": "defense",
+   "strate": "défense"
+  },
+  {
+   "partie": "2026-10-24-maia-w-23",
+   "code": "4d5e252",
+   "ply": 13,
+   "camp": "w",
+   "san": "e5",
+   "uci": "e4e5",
+   "fenAvant": "rnbqk2r/pp3pp1/2p1pn1p/3p4/1b1PP3/2NB4/PPP1NPPP/R1BQ1RK1 w kq - 0 7",
+   "phrase": "J'attaque son cavalier avec un pion : son cavalier doit partir. Je gagne de la place : mes pions contrôlent des cases dans son camp. a3 était nettement moins bon.",
+   "sorte": "amelioration",
+   "strate": "calme"
+  },
+  {
+   "partie": "2026-10-24-maia-w-14",
+   "code": "4d5e252",
+   "ply": 15,
+   "camp": "w",
+   "san": "Ce5",
+   "uci": "f3e5",
+   "fenAvant": "rnbqk1nr/p4ppp/4p3/1p1p4/1b1P4/2NB1N2/PPP2PPP/R1BQ1RK1 w kq - 0 8",
+   "phrase": "Je joue Ce5 : au bout de 8.Ce5 Ce7 9.Dg4 Fxc3 10.bxc3, je suis mieux qu'avec Cxb5, sans raison unique à nommer.",
+   "sorte": "amelioration",
+   "strate": "calme"
+  },
+  {
+   "partie": "2026-10-24-maia-w-20",
+   "code": "4d5e252",
+   "ply": 21,
+   "camp": "w",
+   "san": "Fxh5+",
+   "uci": "e2h5",
+   "fenAvant": "r1bqk2r/pp4p1/n2bpp2/3pN2p/3P1B2/8/PPP1BPPP/R2Q1RK1 w kq - 0 11",
+   "phrase": "Je joue Fxh5+ : après 11.Fxh5+ Re7 12.Cf7 Fxf4 13.Cxd8 Txd8, je gagne la dame et un pion contre deux pièces. Fourchette sur la dame noire en d8 et la tour noire en h8. (Je vois 11…fxe5 12.Fxh5+ Rd7 13.dxe5 g5 14.exd6 gxf4 ; après Fxh5+, ce n'est plus possible.) Fb5+ était un peu moins bon.",
+   "sorte": "calcul",
+   "strate": "calcul"
+  },
+  {
+   "partie": "2026-10-24-maia-w-17",
+   "code": "4d5e252",
+   "ply": 19,
+   "camp": "w",
+   "san": "O-O-O",
+   "uci": "e1c1",
+   "fenAvant": "r2qkr2/pppbbpQp/2n1pp2/8/3PN3/2P5/PP3PPP/R3KBNR w KQq - 4 10",
+   "phrase": "Je roque : mon roi est à l'abri, et ma tour entre en jeu. O-O-O et Cf3 se valent ; j'ai pris O-O-O.",
+   "sorte": "amelioration",
+   "strate": "calme"
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "code": "4d5e252",
+   "ply": 67,
+   "camp": "w",
+   "san": "Ta2",
+   "uci": "c2a2",
+   "fenAvant": "3R4/5pk1/p3pp1p/p7/5P2/1r4P1/2R2K1P/8 w - - 0 34",
+   "phrase": "J'attaque son pion en a5 : il doit s'en occuper. Td4 était nettement moins bon.",
+   "sorte": "amelioration",
+   "strate": "calme"
+  },
+  {
+   "partie": "2026-10-24-maia-w-23",
+   "code": "4d5e252",
+   "ply": 15,
+   "camp": "w",
+   "san": "Cf4",
+   "uci": "e2f4",
+   "fenAvant": "rnbqk2r/pp1n1pp1/2p1p2p/3pP3/1b1P4/2NB4/PPP1NPPP/R1BQ1RK1 w kq - 1 8",
+   "phrase": "Rien de forcé. En d1, ma dame a plus de cases. Mon cavalier va en f4, une meilleure case. a3 était un peu moins bon.",
+   "sorte": "amelioration",
+   "strate": "calme"
+  },
+  {
+   "partie": "2026-10-24-maia-w-25",
+   "code": "4d5e252",
+   "ply": 9,
+   "camp": "w",
+   "san": "Cxd4",
+   "uci": "f3d4",
+   "fenAvant": "r1bqkbnr/ppp2ppp/3p4/4p3/2BnP3/5N2/PPP2PPP/RNBQK2R w KQkq - 0 5",
+   "phrase": "Je reprends : Cxd4, le matériel est rétabli. Fg5 était beaucoup moins bon.",
+   "sorte": "calcul",
+   "strate": "calcul"
+  },
+  {
+   "partie": "2026-10-24-maia-w-20",
+   "code": "4d5e252",
+   "ply": 33,
+   "camp": "w",
+   "san": "Dxd5",
+   "uci": "f3d5",
+   "fenAvant": "r6r/pp1bkBp1/n3pp2/3p2b1/3P4/5Q2/PPP2PPP/R3R1K1 w - - 6 17",
+   "phrase": "Plan : pousser le pion c en c5. Dxd5 en est un pas : un défenseur de plus pour c4. Il en reste 2. (Je vois 17…Rxf7 18.Te5 Fd2 19.Te2 ; après Dxd5, ce n'est plus possible.) Fg6 ne fait pas avancer ce plan.",
+   "sorte": "plan",
+   "strate": "calme"
+  },
+  {
+   "partie": "2026-10-24-maia-w-02",
+   "code": "4d5e252",
+   "ply": 23,
+   "camp": "w",
+   "san": "Cxd4",
+   "uci": "e2d4",
+   "fenAvant": "r3k2r/pp2b1pp/2nqpn2/1B1p4/3p4/8/PPP1NPPP/R1BQR1K1 w kq - 2 12",
+   "phrase": "Je joue Cxd4 : après 12.Cxd4 Ce4 13.f3 e5 14.fxe4 exd4, je gagne un pion. Ff4 était nettement moins bon.",
+   "sorte": "calcul",
+   "strate": "calcul"
+  },
+  {
+   "partie": "2026-10-24-maia-w-20",
+   "code": "4d5e252",
+   "ply": 61,
+   "camp": "w",
+   "san": "Dxd4",
+   "uci": "b6d4",
+   "fenAvant": "8/8/PQ4p1/5pk1/3b4/8/5PPP/R5K1 w - - 0 31",
+   "phrase": "Le plan pousser le pion d en d8 n'a plus d'objet : le pion n'est plus là n'est plus là. Je reprends sa dame : Dxd4. (Je vois 31…Fxb6 32.a7 Fxa7 33.Txa7 ; après Dxd4, ce n'est plus possible.) Dd8+ était beaucoup moins bon.",
+   "sorte": "calcul",
+   "strate": "calcul"
+  },
+  {
+   "partie": "2026-10-24-maia-w-22",
+   "code": "4d5e252",
+   "ply": 11,
+   "camp": "w",
+   "san": "Cc3",
+   "uci": "b1c3",
+   "fenAvant": "r1bqk2r/p1ppppbp/1pn3pn/8/2BPP3/5N2/PPP2PPP/RNBQ1RK1 w kq - 6 6",
+   "phrase": "Je sors mon cavalier : en ouverture, chaque pièce doit entrer en jeu. Cc3 et Fg5 se valent ; j'ai pris Cc3.",
+   "sorte": "amelioration",
+   "strate": "calme"
+  },
+  {
+   "partie": "2026-10-24-maia-w-22",
+   "code": "4d5e252",
+   "ply": 37,
+   "camp": "w",
+   "san": "Ce5",
+   "uci": "g4e5",
+   "fenAvant": "r2q1r2/pb4kp/1p2p1p1/5p2/1PpP2N1/2N4P/P1P2PP1/R2Q1RK1 w - - 0 19",
+   "phrase": "Le plan amener mon pion en e5 n'a plus d'objet : la pièce qui devait le mener n'est plus là n'est plus là. Je prends un plan : amener mon cavalier en e5. (l'avant-poste que d4 garantit, d'où le cavalier gêne tout le jeu adverse.) Je sauve mon cavalier, en prise en g4. Ce3 était nettement moins bon.",
+   "sorte": "defense",
+   "strate": "défense"
+  },
+  {
+   "partie": "2026-10-24-maia-w-16",
+   "code": "4d5e252",
+   "ply": 27,
+   "camp": "w",
+   "san": "exd6",
+   "uci": "e5d6",
+   "fenAvant": "r1b1r1k1/1pp1qp1p/4p1pB/3pP1N1/pnBP2Q1/8/PPP2PPP/1K1R3R w - d6 0 14",
+   "phrase": "Je sauve mon fou, en prise en c4. Fb5 était beaucoup moins bon.",
+   "sorte": "defense",
+   "strate": "défense"
+  },
+  {
+   "partie": "2026-10-24-maia-w-22",
+   "code": "4d5e252",
+   "ply": 5,
+   "camp": "w",
+   "san": "Cf3",
+   "uci": "g1f3",
+   "fenAvant": "rnbqkbnr/p1pppp1p/1p4p1/8/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 0 3",
+   "phrase": "Rien de forcé. Mon cavalier va en f3, une meilleure case. Cf3 et Cc3 se valent ; j'ai pris Cf3.",
+   "sorte": "amelioration",
+   "strate": "calme"
+  },
+  {
+   "partie": "2026-10-24-maia-w-21",
+   "code": "4d5e252",
+   "ply": 19,
+   "camp": "w",
+   "san": "Dd5",
+   "uci": "a5d5",
+   "fenAvant": "r1bq1knr/ppp4p/2np2p1/Q7/2BPP3/2P5/PP3PPP/RNB1K2R w KQ - 1 10",
+   "phrase": "Je sauve ma dame, en prise en a5. Db5 était nettement moins bon.",
+   "sorte": "defense",
+   "strate": "défense"
+  },
+  {
+   "partie": "2026-10-24-maia-w-01",
+   "code": "4d5e252",
+   "ply": 35,
+   "camp": "w",
+   "san": "Tae1+",
+   "uci": "a1e1",
+   "fenAvant": "r2qk1r1/pp1b1p1p/5p1B/1B1Q4/3p4/2P5/PP3PPP/R4RK1 w q - 0 18",
+   "phrase": "Je joue Tae1+ : après 18.Tae1+ De7 19.Dxd7#, c'est mat.",
+   "sorte": "calcul",
+   "strate": "calcul"
+  },
+  {
+   "partie": "2026-10-24-maia-w-24",
+   "code": "4d5e252",
+   "ply": 31,
+   "camp": "w",
+   "san": "axb4",
+   "uci": "a3b4",
+   "fenAvant": "rq3k1b/2pbp2p/2np1pp1/p7/1p1PP3/PBN1B3/1PP1QPPP/R4RK1 w - - 0 16",
+   "phrase": "Je dois parer : il menaçait 16…bxc3 17.Dc4 e6 18.Dxc3, et je perdais une pièce contre un pion. axb4 l'empêche. Dc4 était nettement moins bon.",
+   "sorte": "defense",
+   "strate": "défense"
+  },
+  {
+   "partie": "2026-10-24-maia-w-04",
+   "code": "4d5e252",
+   "ply": 19,
+   "camp": "w",
+   "san": "De2",
+   "uci": "d1e2",
+   "fenAvant": "r2qkb1r/pbp2pp1/1pnppn1p/1N6/2BP1B2/5N2/PPP2PPP/R2Q1RK1 w kq - 0 10",
+   "phrase": "Je joue De2 : au bout de 10.De2 a6 11.d5 Cxd5 12.Fxd5 axb5 13.Dxb5, je suis mieux qu'avec Dd3, sans raison unique à nommer.",
+   "sorte": "amelioration",
+   "strate": "calme"
+  },
+  {
+   "partie": "2026-10-24-maia-w-20",
+   "code": "4d5e252",
+   "ply": 19,
+   "camp": "w",
+   "san": "Ff4",
+   "uci": "c1f4",
+   "fenAvant": "r1bqk2r/pp3pp1/n2bp3/3pN2p/3P4/8/PPP1BPPP/R1BQ1RK1 w kq - 2 10",
+   "phrase": "Je sors mon fou : en ouverture, chaque pièce doit entrer en jeu. Te1 était nettement moins bon.",
+   "sorte": "amelioration",
+   "strate": "calme"
+  }
+ ]
+}
