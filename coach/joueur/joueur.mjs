@@ -84,7 +84,7 @@ export class Joueur {
     // E0 : l'évaluation avant le coup, posée par la quiescence (les prises en suspens résolues), sinon un pion en l'air
     // ferait dire « je gagne » à une simple reprise et « très mauvaise » à une position normale.
     const posee = this.recherche.evaluationPosee(ech);
-    const E0 = enCentipions(posee.score), E0statique = enCentipions(evaluer(ech));
+    let E0 = enCentipions(posee.score); const E0statique = enCentipions(evaluer(ech));
     const ligneQ = ligneFr(posee.pv.map(uciDe)); // la ligne des prises résolues : la référence du matériel pour le gain (Expert)
     const res = this.recherche.chercher(ech, { budget: this.budget });
     if (!res.coup) throw new Error('aucun coup légal');
@@ -113,7 +113,8 @@ export class Joueur {
 
     // --- le plan : structure, adoption, terme ---
     const exacts = cands.filter((c) => c.exact);
-    const structures = buildStructureFacts(fenAvant).filter((t) => (t.kind ?? t.type) === 'STRUCTURE').map((t) => t.params ?? t);
+    // les jetons de positional/ : { id: 'STRUCTURE', kind: 'fact', params: { name, color } }
+    const structures = buildStructureFacts(fenAvant).filter((t) => t.id === 'STRUCTURE' && t.params?.name).map((t) => t.params);
     const structureNom = structures.map((s) => `${s.name}:${s.color}`).sort().join('|');
     let planRec = null;
     const planCourant = this.plan;
@@ -181,7 +182,7 @@ export class Joueur {
           // Une menace, c'est du matériel qu'il gagnerait (Expert), ou un mat : une ligne « positionnelle » à faible profondeur n'en est pas une.
           if (perte || mn.score >= MAT - 200) {
             const paree = (c) => c.cp >= E0 - valeur / 2;
-            menace = { ligne: lm.sans, gain: valeur, perte: perte ?? 'du terrain', pareeApresM: paree(M), pareeApresR: R ? paree(R) : true };
+            menace = { ligne: lm.sans, gain: valeur, perte: mn.score >= MAT - 200 ? 'la partie (mat)' : perte ?? 'du terrain', mat: mn.score >= MAT - 200, pareeApresM: paree(M), pareeApresR: R ? paree(R) : true };
           }
         }
       }
@@ -200,17 +201,24 @@ export class Joueur {
       termes.push(this.#terme(nom, d1, d2, apres.agg.get(nom), avant.agg.get(nom), camp, pieceM, caseM, mM.m, apresM.fen()));
     }
     // Les termes qui s'améliorent pour nous d'abord (ils font la phrase), les coûts ensuite (ils restent dans la trace).
-    const rang = (t) => (t.nom === 'placement' ? t.poids / 2 : t.poids); // le placement est le terme le plus vague : il passe après les autres
+    // le placement est le terme le plus vague : il passe après les autres ; la première sortie d'une mineure, c'est du développement avant tout
+    const sortieMineure = (mM.m.piece === 'n' || mM.m.piece === 'b') && mM.m.from[1] === (camp === 'w' ? '1' : '8');
+    const rang = (t) => (t.nom === 'placement' ? t.poids / 2 : t.nom === 'développement' && sortieMineure ? t.poids * 3 : t.poids);
     termes.sort((a, b) => (b.d1 > 0) - (a.d1 > 0) || rang(b) - rang(a));
     const termesCites = termes.slice(0, 3);
 
     // --- la sorte, par priorité : livre, calcul, défense, plan, amélioration ---
     const estMat = M.score >= MAT - 200;
-    // Gain = matériel compté au bout de la ligne de M MOINS celui au bout de la ligne de quiescence de E0 (même référence que
-    // E0, Expert) : reprendre ailleurs que sur la case de la prise n'est pas un gain. La perte, elle, se lit contre l'échiquier.
-    const bilanM = bilanMateriel(fenAvant, ligneM.fenBout, camp), bilanQ = bilanMateriel(fenAvant, ligneQ.fenBout, camp);
-    const bilanGain = Object.fromEntries(Object.keys(bilanM).map((k) => [k, bilanM[k] - bilanQ[k]]));
-    const gainM = materielEnMots(bilanGain);
+    // Référence du gain (Expert, traque du 25 octobre) : le matériel SUR L'ÉCHIQUIER ; exception : si le dernier coup adverse
+    // était une prise et que mon coup précédent n'en était pas une, la référence est le matériel d'avant sa prise (sinon la
+    // reprise se lit « je gagne une pièce »). Le gain se nomme par sa composition, jamais par une somme.
+    const dernierAdverse0 = historique.length ? historique[historique.length - 1] : null;
+    const rejouer = (n) => { const c = new Chess(depart); let dernier = null; for (const u of historique.slice(0, n)) dernier = c.move({ from: u.slice(0, 2), to: u.slice(2, 4), promotion: u[4] }); return { fen: c.fen(), dernier }; };
+    const saPrise = dernierAdverse0 ? !!rejouer(historique.length).dernier?.captured : false;
+    const maPrisePrecedente = historique.length >= 2 ? !!rejouer(historique.length - 1).dernier?.captured : false;
+    const fenRef = saPrise && !maPrisePrecedente ? rejouer(historique.length - 1).fen : fenAvant;
+    const bilanM = bilanMateriel(fenRef, ligneM.fenBout, camp);
+    const gainM = materielEnMots(bilanM);
     const perteM = materielEnMots(Object.fromEntries(Object.entries(bilanM).map(([k, v]) => [k, -v])));
     const bilanR = R ? bilanMateriel(fenAvant, ligneR.fenBout, camp) : null;
     const perteR = bilanR ? materielEnMots(Object.fromEntries(Object.entries(bilanR).map(([k, v]) => [k, -v]))) : null;
@@ -225,6 +233,10 @@ export class Joueur {
     const reprise = prise && dernierPrenait && dernierAdverse.slice(2, 4) === caseM;
     const bilanTotal = Object.entries(bilanM).reduce((s, [t, n]) => s + VAL[t.toLowerCase()] * n, 0);
     const matSubi = M.score <= -(MAT - 200);
+    // Règle 3 (Expert) : si le meilleur score tombe de plus de 80 sous E0 sans perte comptée, E0 était une aberration de la
+    // quiescence : on prend E0 = score de M. Et pas de « coup d'attente » si la ligne contient une prise par la pièce jouée.
+    if (M.cp <= E0 - BORNES.gain && bilanTotal >= 0 && !matSubi) E0 = M.cp;
+    const priseParPieceJouee = (() => { const c = new Chess(fenAvant); let sq = null; for (let i = 0; i < M.pvUci.length; i++) { const u = M.pvUci[i]; let mv; try { mv = c.move({ from: u.slice(0, 2), to: u.slice(2, 4), promotion: u[4] }); } catch { break; } if (i === 0) { sq = mv.to; continue; } if (mv.color === camp && mv.from === sq) { if (mv.captured) return true; sq = mv.to; } } return false; })();
     // « le matériel est rétabli » seulement si, au bout de la ligne, il égale celui d'avant SA prise (Expert)
     const fenAvantSaPrise = dernierAdverse ? (() => { const c = new Chess(depart); for (const u of historique.slice(0, -1)) c.move({ from: u.slice(0, 2), to: u.slice(2, 4), promotion: u[4] }); return c.fen(); })() : null;
     const retabli = reprise && fenAvantSaPrise && Object.entries(bilanMateriel(fenAvantSaPrise, ligneM.fenBout, camp)).every(([, n]) => n === 0);
@@ -235,8 +247,8 @@ export class Joueur {
     else if (matSubi) { sorte = 'calcul'; sousSorte = 'mat_subi'; }
     // Reprise : dite comme telle (rétablie ou non). Gain : du matériel en plus par rapport à la ligne de quiescence de E0, et M
     // ne descend pas sous E0. Les effondrements (seul coup, moindre mal) se lisent contre E0 posée.
-    else if (reprise && bilanTotal >= 0 && M.cp - E0statique >= BORNES.gain) { sorte = 'calcul'; sousSorte = retabli ? 'reprise' : 'reprise_partielle'; }
-    else if (gainM && M.cp >= E0 - 20) { sorte = 'calcul'; sousSorte = 'gain'; }
+    else if (reprise && bilanTotal >= 0) { sorte = 'calcul'; sousSorte = retabli ? 'reprise' : 'reprise_partielle'; } // une reprise est une reprise, quel que soit le score
+    else if (gainM) { sorte = 'calcul'; sousSorte = 'gain'; } // le gain se lit au matériel compté, et avant « seul coup » (Expert) ; le score n'a pas voix au chapitre
     // Seul coup : M tient (à 80 près de E0) et R s'effondre (80 sous M). Moindre mal / perdu : tout baisse de 80 ET la position
     // est vraiment mauvaise (sous −100) : une baisse depuis une évaluation posée trop optimiste n'est pas une catastrophe.
     else if (R && M.cp >= E0 - BORNES.gain && M.cp - R.cp >= BORNES.gain) { sorte = 'calcul'; sousSorte = 'seul_coup'; }
@@ -252,21 +264,23 @@ export class Joueur {
       // amélioration : le premier terme qui s'améliore pour nous ET qui a une phrase d'amélioration (les termes de défense n'en ont pas)
       const amel = termesCites.find((t) => t.d1 > 0 && t.cle && (GABARITS.amelioration[t.cle] || GABARITS.finale[t.cle]));
       if (finale) { sorte = 'finale'; sousSorte = finale.cle; enTete(finale); }
-      else if (prise && bilanTotal === 0) { // un échange : si « échanger quand on mène » est actif, c'est lui qui parle (Expert)
+      else if (prise) { // une prise n'est jamais une « amélioration » : échange (si « échanger quand on mène » est actif, c'est lui qui parle), ou prise rendue
         const mene = termesCites.find((t) => t.cle === 'echanges_quand_on_mene' && t.d1 > 0);
-        sorte = 'amelioration'; sousSorte = mene ? 'echanges_quand_on_mene' : 'echange'; enTete(mene);
+        sorte = 'amelioration'; sousSorte = bilanTotal === 0 ? (mene ? 'echanges_quand_on_mene' : 'echange') : 'prise_rendue'; enTete(mene);
       }
       else if (attaque && menaceNotre()) { sorte = 'amelioration'; sousSorte = attaque.cle; enTete(attaque); } // « il doit s'en occuper » seulement si c'est une vraie menace (matériel compté)
       else if (amel) { sorte = 'amelioration'; sousSorte = amel.cle; enTete(amel); }
       else if (echecDonne) { sorte = 'amelioration'; sousSorte = 'echec_donne'; }
       else if (prise || mM.m.piece === 'p') { sorte = 'amelioration'; sousSorte = 'placement'; } // une prise ou un pas de pion n'est jamais « un coup d'attente »
       else if (menace && !menace.pareeApresM) { sorte = 'amelioration'; sousSorte = 'contraint'; } // rien ne pare la menace : on ne dit pas « coup d'attente »
-      else if (R && M.total - R.total >= BORNES.seValent) { sorte = 'amelioration'; sousSorte = 'prefere'; } // M bat R nettement, sans terme simple : on le dit tel quel
+      else if ((R && M.total - R.total >= BORNES.seValent) || priseParPieceJouee) { sorte = 'amelioration'; sousSorte = 'prefere'; } // M bat R nettement, ou sa ligne contient une prise par la pièce jouée : jamais « un coup d'attente »
       else { sorte = 'amelioration'; sousSorte = 'coup_d_attente'; termesCites.length = 0; }
     }
     if (sorte === 'calcul') { // un motif nommé dans les 4 premiers demi-coups de notre ligne ; « gain : prend… » redit la phrase, on l'écarte
       const ms = lineMotifs(fenAvant, M.pvUci, 2);
-      for (const x of ms) { if (x.ply > 3) break; const m = (x.motifs ?? []).find((s) => !/^gain\b/i.test(s)); if (m) { motif = m; break; } }
+      // seuls les motifs nommés comptent (fourchette, clouage, enfilade, découverte, déviation, surcharge, intermède, promotion, mat) ; « gain », « échange », « perte » redisent la phrase
+      const nomme = /fourchette|clou|enfilade|découvert|double|déviation|dévi|surcharge|interm|défenseur|promotion|\bmat\b|sacrifice/i;
+      for (const x of ms) { if (x.ply > 3) break; const m = (x.motifs ?? []).find((s) => nomme.test(s) && !/^(gain|échange|perte)\b/i.test(s)); if (m) { motif = m; break; } }
     }
 
     // --- le plan : cumul des coûts propres, état rendu ---

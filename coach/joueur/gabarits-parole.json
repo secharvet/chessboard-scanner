@@ -105,6 +105,7 @@
     "reprise": { "quand": "le coup reprend la pièce qui vient de prendre, sur la même case, ET le matériel au bout de la ligne égale celui d'avant sa prise", "texte": "Je reprends : {M}, le matériel est rétabli." },
     "reprise_partielle": { "quand": "le coup reprend sur la même case, mais le matériel n'est pas rétabli", "texte": "Je reprends {sa_piece} : {M}." },
     "echange": { "quand": "prise dont la ligne ne rend de matériel à personne ; si « échanger quand on mène » est actif, sa phrase prend la place", "texte": "J'échange {ma_piece} contre {sa_piece} : après {ligneM}, personne n'a gagné de matériel." },
+    "prise_rendue": { "quand": "prise dont la ligne rend plus de matériel qu'elle n'en prend ; les autres coups étaient pires", "texte": "Je prends {sa_piece} : au bout de {ligneM}, je rends {perte_M}, mais les autres coups coûtaient davantage." },
     "echec_pare": { "quand": "le coach est en échec avant le coup", "texte": "Je suis en échec : {M} le pare." },
     "echec_seul": { "quand": "en échec, un seul coup légal", "texte": "Je suis en échec : {M} est le seul coup." },
     "echec_donne": { "quand": "le coup donne échec sans gain", "texte": "Je donne échec avec {ma_piece} : il doit répondre tout de suite." },

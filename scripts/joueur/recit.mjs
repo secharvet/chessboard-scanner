@@ -21,10 +21,16 @@ const ex = p.examen;
 const L = [];
 L.push(`# Partie du coach joueur : ${p.id}`);
 L.push('');
-L.push(`**Le coach a les ${camp}** contre ${p.adversaire.nom} (graine ${p.adversaire.graine}${p.adversaire.tirage ? `, ${p.adversaire.tirage}` : ''}). ` +
+const detailAdv = [p.adversaire.graine != null ? `graine ${p.adversaire.graine}` : '', p.adversaire.tirage ?? '', p.adversaire.profondeur ? `profondeur ${p.adversaire.profondeur}` : '', p.adversaire.bride === false ? 'pleine force' : p.adversaire.elo ? `bridé à ${p.adversaire.elo} Elo` : ''].filter(Boolean).join(', ');
+L.push(`**Le coach a les ${camp}** contre ${p.adversaire.nom}${detailAdv ? ` (${detailAdv})` : ''}. ` +
   `Budget de recherche ${p.coach.budget.toLocaleString('fr-FR')} positions par coup, un fil, code \`${p.coach.code}\`. ` +
   `**Résultat : ${p.resultat}** (${p.raison}, ${p.plies} demi-coups).`);
 L.push('');
+const DEPART_STANDARD = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
+if (p.depart && p.depart !== DEPART_STANDARD) {
+  L.push(`**Démonstration depuis une position du panel, hors critère.** La partie ne commence pas au premier coup mais à la position \`${p.depart}\` : elle sert à montrer le coach quand il reconnaît une structure et adopte un plan, elle ne compte pour aucune des cinq conditions.`);
+  L.push('');
+}
 L.push('Tous les coups du coach sont les siens : aucun moteur n\'est consulté pendant la partie. Stockfish n\'intervient qu\'après, comme examinateur.');
 L.push('');
 if (ex) {
@@ -36,6 +42,10 @@ L.push(`**Sortes de phrases** (${coach.length} coups du coach) : ` + Object.entr
 const pref = sous['amelioration/prefere'] ?? 0;
 L.push(`Détail : ` + Object.entries(sous).sort((a, b) => b[1] - a[1]).map(([k, v]) => `${k} ${v}`).join(', ') + `. Part des « je suis mieux sans raison unique à nommer » : ${pref} sur ${coach.length} (${Math.round(100 * pref / coach.length)} %).`);
 L.push(`Alertes de parole (menace non parée sous une phrase de plan ou d'amélioration) : ${coach.filter((c) => c.alerte).length}.`);
+const nPlan = coach.filter((c) => c.sorte === 'plan').length;
+L.push('');
+L.push(nPlan ? `**Plans** : ${nPlan} coup(s) expliqué(s) par un plan de la grammaire.` : '**Plans : aucun.** Aucun coup de cette partie n\'est expliqué par un plan : le coach n\'adopte un plan que lorsqu\'il reconnaît une structure de pions de sa grammaire (pion isolé, Carlsbad, chaîne française, hérisson, Maróczy…), et cette partie n\'en a traversé aucune. Il n\'a donc parlé qu\'en calcul, défense, amélioration et livre.');
+L.push(`**Budget de recherche** : ${p.coach.budget.toLocaleString('fr-FR')} positions pour la recherche principale de chaque coup ; la re-recherche des meilleurs candidats (pour un score exact) et la recherche de la menace adverse s'y ajoutent, d'où des totaux par coup au-dessus du budget.`);
 L.push('');
 L.push('---');
 L.push('');

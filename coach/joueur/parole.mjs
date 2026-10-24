@@ -26,18 +26,28 @@ export function ligneTexte(sans, ply) {
 export const ecartEnMots = (ecart) => (ecart < 10 ? null : ecart < 30 ? G.mots.ecart_mots['10-30'] : ecart < 80 ? G.mots.ecart_mots['30-80'] : ecart < 200 ? G.mots.ecart_mots['80-200'] : G.mots.ecart_mots['200+']);
 
 /** Le matériel gagné (ou perdu) au bout d'une ligne, en mots, depuis le bilan par type : { P, N, B, R, Q } (positif = gagné). */
+/** Le matériel en mots, par sa COMPOSITION (Expert, traque du 25 octobre) : « une pièce contre un pion », « la qualité »,
+ *  « deux pièces contre une tour »… jamais une somme en nombre de pions. Rend null si le bilan n'est pas un gain net. */
 export function materielEnMots(bilan) {
   if (!bilan) return null;
   const v = { P: 1, N: 3, B: 3, R: 5, Q: 9 };
   const total = Object.entries(bilan).reduce((s, [t, n]) => s + v[t] * n, 0);
   if (total <= 0) return null;
-  if (bilan.Q > 0 && total >= 8) return G.mots.gain.dame;
-  if (bilan.R > 0 && (bilan.N < 0 || bilan.B < 0) && total === 2) return G.mots.gain.qualite;
-  if (total >= 5 && bilan.R > 0) return total >= 6 ? `${G.mots.gain.tour} et un pion` : G.mots.gain.tour;
-  if (total >= 3 && (bilan.N > 0 || bilan.B > 0)) return total >= 4 ? `${G.mots.gain.piece} et un pion` : G.mots.gain.piece;
-  if (total >= 3) return G.mots.gain['3'];
-  return G.mots.gain[String(total)] ?? `${total} pions`;
+  const gagne = { P: Math.max(0, bilan.P ?? 0), M: Math.max(0, bilan.N ?? 0) + Math.max(0, bilan.B ?? 0), R: Math.max(0, bilan.R ?? 0), Q: Math.max(0, bilan.Q ?? 0) };
+  const perdu = { P: Math.max(0, -(bilan.P ?? 0)), M: Math.max(0, -(bilan.N ?? 0)) + Math.max(0, -(bilan.B ?? 0)), R: Math.max(0, -(bilan.R ?? 0)), Q: Math.max(0, -(bilan.Q ?? 0)) };
+  // un cavalier contre un fou, c'est un échange de pièces : on l'efface du bilan avant de nommer (« la qualité », pas « une tour et une pièce contre deux pièces »)
+  const paires = Math.min(gagne.M, perdu.M); gagne.M -= paires; perdu.M -= paires;
+  // la qualité : une tour contre une pièce mineure (et rien d'autre d'échangé entre elles)
+  if (gagne.R === 1 && perdu.M === 1 && !gagne.Q && !perdu.Q && !perdu.R && !gagne.M) {
+    const reste = gagne.P - perdu.P;
+    return G.mots.gain.qualite + (reste > 0 ? ` et ${nombre(reste, 'pion')}` : reste < 0 ? ` contre ${nombre(-reste, 'pion')}` : '');
+  }
+  const liste = (c) => [c.Q ? (c.Q === 1 ? 'la dame' : `${c.Q} dames`) : '', c.R ? nombre(c.R, 'tour') : '', c.M ? nombre(c.M, 'pièce') : '', c.P ? nombre(c.P, 'pion') : ''].filter(Boolean);
+  const g = liste(gagne), p = liste(perdu);
+  if (!g.length) return null;
+  return g.join(' et ') + (p.length ? ` contre ${p.join(' et ')}` : '');
 }
+const nombre = (n, mot) => (n === 1 ? `${mot === 'pièce' ? 'une' : 'un'} ${mot}`.replace('un pièce', 'une pièce').replace('un tour', 'une tour') : `${['', '', 'deux', 'trois', 'quatre', 'cinq', 'six', 'sept', 'huit'][n] ?? n} ${mot}s`);
 
 const maPiece = (p) => G.mots.ma_piece[p] ?? 'ma pièce';
 const saPiece = (p) => G.mots.sa_piece[p] ?? 'sa pièce';
@@ -78,16 +88,14 @@ export function formuler(r) {
       break;
     }
     case 'plan': {
-      if (r.plan?.adopte) parties.push(remplir(texte(G.plan.adoption), d));
       parties.push(remplir(texte(r.plan?.distanceApres === 0 ? G.plan.dernier_pas : G.plan.pas), d));
-      if (r.plan?.pourquoi && r.plan.adopte) parties.push(`(${r.plan.pourquoi}.)`);
       break;
     }
     case 'finale': parties.push(remplir(G.finale[r.sousSorte] ?? '', dt(t))); break;
     default: { // amélioration : la phrase de la sous-sorte (un gabarit du pilote), sinon celle du terme le plus lourd, sinon le coup d'attente
       const gp = G.pilote?.[r.sousSorte];
       const tSorte = r.termes?.find((x) => x.cle === r.sousSorte) ?? null; // le terme qui a donné la sous-sorte, s'il existe
-      if (gp) parties.push(remplir(texte(gp), dt(t)));
+      if (gp) parties.push(remplir(texte(gp), dt(tSorte))); // les données du coup (pièce jouée, pièce prise), pas celles d'un terme cité
       else if (r.sousSorte === 'coup_d_attente' || !r.sousSorte) parties.push(remplir(texte(G.amelioration.coup_d_attente), d));
       else {
         const g = G.amelioration[r.sousSorte] ?? G.finale[r.sousSorte] ?? G.amelioration.placement;
@@ -95,6 +103,8 @@ export function formuler(r) {
       }
     }
   }
+  // Un plan adopté à ce coup s'annonce, quelle que soit la sorte de la phrase (un fait, pas un ornement)
+  if (r.plan?.adopte) parties.unshift(remplir(texte(G.plan.adoption), d) + (r.plan.pourquoi ? ` (${r.plan.pourquoi}.)` : ''));
   // Abandon d'un plan annoncé à ce coup
   if (r.plan?.abandon === 'cher') parties.unshift(remplir(texte(G.plan.abandon_cher), { plan: r.plan.ancien ?? r.plan.nom }));
   if (r.plan?.abandon === 'sans_objet') parties.unshift(remplir(texte(G.plan.abandon_sans_objet), { plan: r.plan.ancien ?? r.plan.nom, objet_disparu: r.plan.objetDisparu ?? 'la cible' }));
@@ -107,7 +117,8 @@ export function formuler(r) {
   }
 
   // 3. La menace vue (sauf si la défense la nomme déjà ; jamais en finale de pions, déjà filtrée en amont)
-  if (r.menace && !(r.sorte === 'defense' && r.sousSorte === 'parer') && r.sousSorte !== 'mat') {
+  // jamais sous une phrase de défense (elle nomme déjà ce qu'elle pare), ni sur un coup qui mate, ni sous « contraint » (Expert)
+  if (r.menace && r.sorte !== 'defense' && r.sousSorte !== 'mat' && r.sousSorte !== 'contraint') {
     if (r.menace.pareeApresM && r.menace.pareeApresR) parties.push(remplir(texte(G.menace_vue.paree), d));
     else if (!r.menace.pareeApresM) {
       parties.push(remplir(texte(G.menace_vue.non_paree), d));

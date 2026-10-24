@@ -1544,7 +1544,7 @@ export const LIVRE = [
   "plan": [
    {
     "san": "Nxf6+",
-    "pourquoi": "échange : …Dxf6 sort la dame tôt (Cf3 la chassera), …gxf6 double les pions mais ouvre la colonne g"
+    "pourquoi": "échange : …Dxf6 sort la dame tôt (Cf3 puis Fg5 la chassera, d’où …h6), …gxf6 double les pions mais ouvre la colonne g"
    },
    {
     "san": "Bd3",

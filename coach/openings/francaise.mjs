@@ -314,7 +314,7 @@ export const LIVRE = [
       { san: 'Bd3', pourquoi: 'garde le cavalier un coup de plus ; si …Cxe4 Fxe4 le fou est central' },
     ] },
   { coups: 'e4 e6 d4 d5 Nc3 dxe4 Nxe4 Nf6', sens: 'attaque le cavalier central tout de suite',
-    plan: [{ san: 'Nxf6+', pourquoi: 'échange : …Dxf6 sort la dame tôt (Cf3 la chassera), …gxf6 double les pions mais ouvre la colonne g' }, { san: 'Bd3', pourquoi: 'garde la tension et développe vers h7' }],
+    plan: [{ san: 'Nxf6+', pourquoi: 'échange : …Dxf6 sort la dame tôt (Cf3 puis Fg5 la chassera, d’où …h6), …gxf6 double les pions mais ouvre la colonne g' }, { san: 'Bd3', pourquoi: 'garde la tension et développe vers h7' }],
     erreurs: [{ san: 'Nc3', pourquoi: 'recule sans raison : le cavalier perd deux temps et les Noirs égalisent avec …c5 ou …Fd6' }] },
   { coups: 'e4 e6 d4 d5 Nc3 dxe4 Nxe4 Nf6 Nxf6+', sens: 'échange le cavalier avant d\'être chassé ; la reprise décide de la structure noire',
     plan: [

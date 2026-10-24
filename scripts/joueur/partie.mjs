@@ -2,13 +2,14 @@
 /**
  * L'arène du coach joueur (docs/coach-joueur/CHANTIERS-2026-10-24.md, page 3, « qui fait quoi »).
  *
- *   node scripts/joueur/partie.mjs --adversaire maia|sf1500 --camp w|b --graine N [--budget 400000]
+ *   node scripts/joueur/partie.mjs --adversaire maia|sf1500|sf --camp w|b --graine N [--budget 400000]
  *                                  [--joueur coach/joueur/joueur.mjs (défaut) | coach/joueur/joueur-factice.mjs] [--sortie parties/] [--depart <fen>]
  *
  * Le COACH (classe `Joueur`, `choisir(fen, contexte)`) joue TOUS ses coups ; l'arène ne lui donne jamais un moteur ni une
  * évaluation (principe 2 du GE : Stockfish est examinateur après coup, jamais proposant). L'adversaire est Maia-1500
  * (politique à 1 nœud ; il tire dans sa politique avec la graine pendant ses 8 premiers coups, puis joue son coup préféré)
- * ou Stockfish bridé (UCI_LimitStrength + UCI_Elo 1500). En mode maia, aucun moteur Stockfish n'est lancé.
+ * ou Stockfish bridé (`sf1500` : UCI_LimitStrength + UCI_Elo 1500), ou Stockfish 19 à pleine force (`sf` : prof. 12, un fil).
+ * En mode maia, aucun moteur Stockfish n'est lancé.
  *
  * L'échiquier qui fait foi (règles, fin de partie) est `coach/joueur/echiquier.mjs` (perft) ; chess.js sert seulement à la
  * notation SAN des coups adverses et au PGN. On écrit `parties/<id>.json` au contrat, un `.pgn` à côté (phrases en
@@ -133,7 +134,23 @@ export async function construireAdversaire(type, { graine = 1, depth = 12, MaiaC
       async stop() { engine.stop?.(); },
     };
   }
-  throw new Error(`adversaire inconnu : ${type} (maia|sf1500)`);
+  if (type === 'sf') {
+    // Stockfish 19 à PLEINE force (Sébastien veut voir le coach se faire ramasser) : un fil, aucune option de bride, profondeur fixe 12.
+    const mod = EngineClass ?? (await import('../../coach/uci-engine.mjs'));
+    const engine = new mod.UciEngine({ ...engineOpts, threads: 1 });
+    void graine;
+    return {
+      nom: 'sf',
+      meta: { nom: 'stockfish-19', profondeur: depth, bride: false },
+      async jouer(fen) {
+        const [ligne] = await engine.analyze(fen, { depth, multipv: 1 });
+        if (!ligne?.pv?.[0]) throw new Error(`l'adversaire Stockfish n'a rendu aucun coup (${fen})`);
+        return ligne.pv[0];
+      },
+      async stop() { engine.stop?.(); },
+    };
+  }
+  throw new Error(`adversaire inconnu : ${type} (maia|sf1500|sf)`);
 }
 
 /* ------------------------------------------------------------------ PGN ------------------------------------------------------------------ */
@@ -181,7 +198,7 @@ export function majIndex(dossier, entree) {
 async function main() {
   const args = process.argv.slice(2);
   const opt = (k, d) => (args.includes(k) ? args[args.indexOf(k) + 1] : d);
-  const TYPE = opt('--adversaire', 'maia'); if (!['maia', 'sf1500'].includes(TYPE)) { console.error('--adversaire maia|sf1500'); process.exit(2); }
+  const TYPE = opt('--adversaire', 'maia'); if (!['maia', 'sf1500', 'sf'].includes(TYPE)) { console.error('--adversaire maia|sf1500|sf'); process.exit(2); }
   const CAMP = opt('--camp', 'w'); if (!['w', 'b'].includes(CAMP)) { console.error('--camp w|b'); process.exit(2); }
   const GRAINE = Number(opt('--graine', 1));
   const BUDGET = Number(opt('--budget', 400000));
