@@ -1,0 +1,258 @@
+/**
+ * Le joueur « humain » : l'ARBRE devant la recherche (docs/coach-joueur/ARBRE-DECISION-2026-10-25.md et
+ * CHANTIER-ARBRE-2026-10-25.md), TEMPS 1.
+ *
+ * Même contrat que `coach/joueur/joueur.mjs` (`async choisir(fen, contexte)`), mais le coup se choisit autrement :
+ *   1-3. l'arbre (coach/joueur/arbre.mjs) PRODUIT des candidats {coup, raison, noeud} — jamais de score ;
+ *   4.   la recherche actuelle, RESTREINTE à la racine aux candidats (en dessous, tous les coups), leur donne un score
+ *        exact et une ligne ; on élague un candidat dont la ligne coûte du matériel (avec sa ligne = la réfutation) ;
+ *        on garde le meilleur bilan net après sa meilleure réponse ; à égalité (< 10) la raison la plus haute dans l'arbre ;
+ *   5.   contrôle : sur la position après le coup, on repose la question « que menace-t-il ? » — une menace nouvelle de
+ *        matériel (≥ 80) ou un mat que la ligne n'avait pas vus écartent le coup au profit du suivant ;
+ *   6.   on dit : la question du nœud qui a produit le coup, et, si le meilleur écarté vaut 80 ou plus et que sa
+ *        réfutation se lit, « j'ai pensé à X, mais … ; avec M, rien de tel ».
+ *
+ * Le TROU de l'arbre (la recherche complète, tous les coups, tourne en plus pour le mesurer) est une OPTION
+ * (`trou: true`), car elle double le temps par coup ; par défaut elle est éteinte.
+ *
+ * Aucune évaluation extérieure n'entre : la sonde (menace, parade par test, mon mat, prophylaxie) est calculée ici, avec
+ * la propre recherche du coach (réutilisant Recherche.menace, coup nul, budget 60 000).
+ */
+import { Chess } from 'chess.js';
+import { Echiquier, DEPART, uci as uciDe } from './echiquier.mjs';
+import { evaluer, enCentipions } from './evaluation.mjs';
+import { Recherche, MAT } from './recherche.mjs';
+import { materielEnMots, ligneTexte } from './parole.mjs';
+import { toFrenchSan } from '../notation.mjs';
+import { candidats as candidatsArbre, selectionner, ORDRE } from './arbre.mjs';
+
+const VAL = { p: 1, n: 3, b: 3, r: 5, q: 9, k: 0 };
+const LETTRE = { p: 'P', n: 'N', b: 'B', r: 'R', q: 'Q' };
+export const BORNES = Object.freeze({ seValent: 10, menace: 80, trou: 100, ecarteDit: 80 });
+
+/** Le nom de la question d'un nœud, pour la pastille et la phrase (« le mot du nœud »). */
+export const MOT_NOEUD = {
+  '1a': 'je suis en échec', '1b': 'il menace mat', '1c': 'une pièce en prise', '1d': 'la dernière rangée',
+  '1e': 'une pièce clouée', '1f': 's\'il jouait deux fois', '2a': 'un mat', '2b': 'une prise qui gagne',
+  '2c': 'un coup intermédiaire', '2d': 'une double attaque', '2e': 'une tactique', '3L': 'le livre',
+  '3P': 'ma pire pièce', '3Y': 'la prophylaxie', '3C': 'mon plan',
+};
+
+/* Gabarits de l'étape 6 À RELIRE avec l'Expert avant d'entrer dans gabarits-parole.json (règle de parole : jamais
+   « score », « ligne », « candidat », « réfutation », « note » ; le coup écarté au conditionnel). */
+const PAROLE = {
+  ecarte: 'J\'ai pensé à {R}. Mais {ligneR}, et je perdais {perteR}. Avec {M}, rien de tel.',
+  ecarteMat: 'J\'ai pensé à {R}. Mais {ligneR}, et c\'était perdu. Avec {M}, rien de tel.',
+  seValent: '{M} ou {R} : les deux se valent.',
+  trou: 'Mon calcul trouve mieux que mes idées : je joue {M}.',
+};
+
+const fenApresUci = (fen, pvUci) => { const c = new Chess(fen); for (const u of pvUci) { try { c.move({ from: u.slice(0, 2), to: u.slice(2, 4), promotion: u[4] }); } catch { break; } } return c.fen(); };
+const ligneFr = (fen, pvUci) => { const c = new Chess(fen), sans = []; for (const u of pvUci) { try { sans.push(toFrenchSan(c.move({ from: u.slice(0, 2), to: u.slice(2, 4), promotion: u[4] }).san)); } catch { break; } } return { sans, fenBout: c.fen() }; };
+
+/** Bilan matériel par type entre deux FEN, du point de vue de `camp` (positif = gagné). */
+function bilanParType(fenA, fenB, camp) {
+  const compte = (fen) => { const c = { P: 0, N: 0, B: 0, R: 0, Q: 0 }; for (const ch of fen.split(' ')[0]) { const l = ch.toLowerCase(); if (!VAL[l] || l === 'k') continue; const mien = (ch === ch.toUpperCase()) === (camp === 'w'); c[LETTRE[l]] += mien ? 1 : -1; } return c; };
+  const a = compte(fenA), b = compte(fenB), out = {};
+  for (const k of Object.keys(a)) out[k] = b[k] - a[k];
+  return out;
+}
+const sommeMat = (bilan) => Object.entries(bilan).reduce((s, [t, n]) => s + VAL[t.toLowerCase()] * n, 0);
+const estForcee = (fen, pvUci) => { const c = new Chess(fen); for (const u of pvUci) { let m; try { m = c.move({ from: u.slice(0, 2), to: u.slice(2, 4), promotion: u[4] }); } catch { return false; } if (!m.captured && !c.inCheck()) return false; } return true; };
+
+export class Joueur {
+  /** @param {{ camp?: string, budget?: number, code?: string, trou?: boolean }} opts */
+  constructor(opts = {}) {
+    this.budget = opts.budget ?? 400000;
+    this.code = opts.code ?? null;
+    this.trou = opts.trou ?? (process.env.COACH_TROU === '1'); // mesure du trou : option (double le temps par coup)
+    this.recherche = new Recherche({ budget: this.budget });
+  }
+
+  async choisir(fen, contexte = {}) {
+    const t0 = Date.now();
+    const depart = contexte.depart ?? fen, historique = contexte.historique ?? [];
+    const ech = new Echiquier(depart), chess = new Chess(depart);
+    for (const u of historique) { const m = ech.coupDepuisUci(u); if (!m || !ech.jouer(m)) throw new Error(`historique : coup illégal ${u}`); chess.move({ from: u.slice(0, 2), to: u.slice(2, 4), promotion: u[4] }); }
+    if (!historique.length && depart !== fen) { ech.chargerFen(fen); chess.load(fen); }
+    const fenAvant = chess.fen(), camp = chess.turn(), ply = chess.moveNumber() * 2 - (camp === 'w' ? 1 : 0);
+    const E0 = enCentipions(this.recherche.evaluationPosee(ech).score);
+
+    // --- la sonde (ce que les générateurs qui regardent plus loin qu'un coup réclament) ---
+    const sonde = this.#sonde(ech, fenAvant, camp, E0);
+
+    // --- l'arbre produit, la sélection donne les candidats à comparer (radar hors plafond, reste ≤ 3) ---
+    const tous = candidatsArbre({ fen: fenAvant, camp, depart, historique, sonde });
+    let retenus = selectionner(tous), arbreVide = false;
+    if (!retenus.length) { // aucune question n'a produit : repli sur la recherche complète — c'est un trou « sans nom » par définition
+      arbreVide = true;
+      const plein = this.recherche.chercher(ech, { budget: this.budget });
+      retenus = [{ coup: uciDe(plein.coup), noeud: null, raison: 'aucune de mes idées ne s\'applique', raisons: [] }];
+    }
+
+    // --- étape 4 : la recherche restreinte aux candidats ---
+    const permis = retenus.map((c) => ({ c, m: ech.coupDepuisUci(c.coup) })).filter((x) => x.m != null);
+    const res = this.recherche.chercher(ech, { budget: this.budget, racineLimitee: permis.map((x) => x.m) });
+    const parUci = new Map(res.candidats.map((cd) => [uciDe(cd.coup), cd]));
+    const evalues = permis.map(({ c }) => {
+      const cd = parUci.get(c.coup);
+      const cp = cd ? enCentipions(cd.score) : -100000;
+      const pvUci = cd ? cd.pv.map(uciDe) : [c.coup];
+      const { sans, fenBout } = ligneFr(fenAvant, pvUci);
+      const bilan = bilanParType(fenAvant, fenBout, camp);
+      return { ...c, cp, mat: cd ? cd.score >= MAT - 200 : false, matSubi: cd ? cd.score <= -(MAT - 200) : false, pvUci, ligne: sans, bilanMat: sommeMat(bilan), perte: materielEnMots(Object.fromEntries(Object.entries(bilan).map(([k, v]) => [k, -v]))) };
+    });
+
+    // élagage : un candidat dont la ligne coûte du matériel compté (et ne mate pas) est écarté, AVEC sa ligne (la réfutation
+    // qu'on dira). Les survivants ne perdent rien ; les élagués portent une perte (c'est ce qu'on nomme au conditionnel).
+    const survivants = evalues.filter((c) => c.mat || c.bilanMat >= 0);
+    const elagues = evalues.filter((c) => !(c.mat || c.bilanMat >= 0) && c.perte);
+    const vivants = survivants.length ? survivants : evalues; // s'ils perdent tous du matériel (position perdue), on compare quand même
+    // meilleur bilan net après sa meilleure réponse ; à égalité (< 10) la raison la plus haute dans l'arbre
+    const mieux = (a, b) => (b.cp - a.cp) || (ORDRE.indexOf(a.noeud) - ORDRE.indexOf(b.noeud));
+    const ordre = [...vivants].sort(mieux);
+
+    // --- étape 5 : contrôle (le premier candidat, dans l'ordre, qui passe le contrôle) ---
+    let M = null, alerte = null;
+    for (const cand of ordre) { if (this.#controle(fenAvant, cand, camp)) { M = cand; break; } }
+    if (!M) { M = ordre[0]; alerte = 'aucun candidat ne passe le contrôle : le coup joué laisse une menace non vue'; }
+
+    // --- le trou (option) : la recherche complète tourne en plus ; si elle bat tous les candidats d'au moins 100, on la joue ---
+    let trou = null;
+    if (this.trou) {
+      const plein = this.recherche.chercher(ech, { budget: this.budget });
+      const cpPlein = enCentipions(plein.score), uciPlein = uciDe(plein.coup);
+      const meilleurCand = Math.max(...evalues.map((c) => c.cp));
+      if (cpPlein - meilleurCand >= BORNES.trou && !evalues.some((c) => c.coup === uciPlein)) {
+        trou = this.#classerTrou(uciPlein, tous, fenAvant, camp, sonde);
+        const { sans } = ligneFr(fenAvant, plein.pv.map(uciDe));
+        M = { coup: uciPlein, noeud: null, raison: 'mon calcul trouve mieux que mes idées', raisons: [], cp: cpPlein, pvUci: plein.pv.map(uciDe), ligne: sans, trou: true };
+      }
+    }
+    // un arbre vide est un trou « sans nom » par définition (aucune question n'a su quoi proposer) : on le note toujours
+    if (arbreVide && !trou) trou = { san: sanDe(fenAvant, M.coup), classe: 'sans nom', noeud: null };
+
+    // --- pour la phrase : le survivant le plus proche (« les deux se valent ») et le meilleur élagué (« j'ai pensé à … mais ») ---
+    const survivantSuivant = ordre.find((c) => c.coup !== M.coup) ?? null;
+    const elagueBest = [...elagues].sort((a, b) => b.cp - a.cp)[0] ?? null;
+
+    // --- étape 6 : la parole ---
+    const { phrase, ecarte, alerte: alerteP } = this.#dire(M, survivantSuivant, elagueBest, ply, fenAvant);
+    if (alerteP && !alerte) alerte = alerteP;
+
+    const san = sanDe(fenAvant, M.coup);
+    const rec = {
+      ply, camp, san, uci: M.coup, fenAvant, coach: true,
+      noeud: M.noeud, sorte: M.noeud ?? 'trou', raison: M.raison,
+      score: M.cp, evalAvant: E0, ligne: M.ligne, profondeur: res.profondeur, noeuds: res.noeuds,
+      candidats: evalues.map((c) => ({ san: sanDe(fenAvant, c.coup), coup: c.coup, noeud: c.noeud, raison: c.raison, score: c.cp, ligne: c.ligne })),
+      choisi: M.coup, ecarte, trou,
+      phrase, ms: Date.now() - t0,
+    };
+    if (alerte) rec.alerte = alerte;
+    return rec;
+  }
+
+  /** La sonde : menace adverse (coup nul), parade par test, mon mat (courte recherche), prophylaxie. Réutilise Recherche.menace. */
+  #sonde(ech, fenAvant, camp, E0) {
+    const mn = this.recherche.menace(ech, { budget: Math.trunc(this.budget / 6), profondeurMax: 4 });
+    let menace = null, paree = null, prophylaxie = null; // paree au PREMIER niveau de la sonde (contrat des générateurs 1b/1f)
+    if (mn) {
+      const pvUci = mn.pv.map(uciDe), estMat = mn.score >= MAT - 200;
+      const ech2 = new Echiquier(fenAvant); ech2.jouerNul();
+      const fenBout = fenApresUci(ech2.fen(), pvUci);
+      const bilan = bilanParType(fenAvant, fenBout, camp);
+      const perte = materielEnMots(Object.fromEntries(Object.entries(bilan).map(([k, v]) => [k, -v])));
+      const gainMat = -sommeMat(bilan); // ce qu'il gagne en matériel
+      if (estMat || gainMat > 0) { menace = { mat: estMat, perte: estMat ? 'la partie (mat)' : perte ?? 'du matériel', pvUci }; paree = this.#pareeFab(fenAvant, pvUci, estMat, camp); }
+      else if (enCentipions(mn.score) + E0 >= 50) { // menace positionnelle : prophylaxie (lui enlever son idée = la rendre illégale après mon coup)
+        const idee = ligneFr(ech2.fen(), [pvUci[0]]).sans[0];
+        prophylaxie = { idee: idee || null, paree: this.#prophPareeFab(fenAvant, pvUci[0]) };
+      }
+    }
+    const probe = this.recherche.chercher(ech, { budget: Math.min(this.budget, 120000), profondeurMax: 6 });
+    const monMat = probe.coup && probe.score >= MAT - 200 ? { coup: uciDe(probe.coup) } : null;
+    return { menace, paree, prophylaxie, monMat };
+  }
+
+  /** Parade par test (1b, 1f) : après mon coup, sa ligne menaçante ne gagne-t-elle plus (ni ne mate) ? */
+  #pareeFab(fenAvant, menacePvUci, estMat, camp) {
+    return (uci) => {
+      const e2 = new Echiquier(fenAvant); const m = e2.coupDepuisUci(uci); if (!m || !e2.jouer(m)) return false;
+      const t = e2.coupDepuisUci(menacePvUci[0]); if (!t) return true; // son coup menaçant n'existe plus
+      const n = this.recherche.noterCoup(e2, t, { prof: 3, budget: Math.trunc(this.budget / 10) });
+      if (n.score >= MAT - 200) return false; // il mate encore
+      if (estMat) return true; // ce n'était un mat que par cette ligne, qui ne mate plus
+      const e3 = new Echiquier(fenAvant); e3.jouer(e3.coupDepuisUci(uci));
+      const fenBout = fenApresUci(e3.fen(), n.pv.map(uciDe));
+      return sommeMat(bilanParType(e3.fen(), fenBout, camp)) >= 0; // il ne gagne plus de matériel
+    };
+  }
+
+  /** Prophylaxie (3Y) : mon coup rend-il son idée (un coup positionnel) illégale pour lui ? (lui enlever sa cible). */
+  #prophPareeFab(fenAvant, ideeUci) {
+    return (uci) => {
+      const e2 = new Echiquier(fenAvant); const m = e2.coupDepuisUci(uci); if (!m || !e2.jouer(m)) return false;
+      if (uci === ideeUci) return false; // je ne compte pas comme prophylaxie le fait de jouer sa case moi-même via son propre coup
+      return e2.coupDepuisUci(ideeUci) == null; // son idée n'est plus jouable
+    };
+  }
+
+  /**
+   * Contrôle (étape 5) : sur la position après le coup, « que menace-t-il ? ». Si sa meilleure réponse gagne du matériel
+   * (≥ 80) ou mate ET que la ligne calculée du candidat ne l'avait PAS prévue (son 2e demi-coup ≠ cette réponse), le coup
+   * laisse une menace non vue → il ne passe pas. Si la réponse était prévue, le score du candidat en tient déjà compte.
+   */
+  #controle(fenAvant, cand, camp) {
+    if (cand.mat) return true; // un mat forcé ne se contrôle pas
+    const e = new Echiquier(fenAvant); const m = e.coupDepuisUci(cand.coup); if (!m || !e.jouer(m)) return false;
+    const mn = this.recherche.menace(e, { budget: Math.trunc(this.budget / 8), profondeurMax: 4 });
+    if (!mn) return true;
+    const fenBout = fenApresUci(e.fen(), mn.pv.map(uciDe));
+    const grave = mn.score >= MAT - 200 || -sommeMat(bilanParType(e.fen(), fenBout, camp)) * 100 >= BORNES.menace;
+    if (!grave) return true;
+    const prevue = cand.pvUci[1] != null && uciDe(mn.pv[0]) === cand.pvUci[1]; // sa meilleure réponse était-elle le 2e demi-coup de la ligne du candidat ?
+    return prevue;
+  }
+
+  /**
+   * Dire (étape 6) : la question du nœud qui a produit le coup ; puis, si un coup qui perdait du matériel était à 80 ou
+   * plus (le meilleur élagué, sa réfutation se lit) « j'ai pensé à X, mais … » au conditionnel ; sinon, si un autre coup
+   * se valait (< 10), « X ou Y : les deux se valent ». Rend aussi l'« écarté » du fichier de partie (le coup verbalisé).
+   */
+  #dire(M, survivantSuivant, elagueBest, ply, fenAvant) {
+    if (M.trou) return { phrase: remplir(PAROLE.trou, { M: sanDe(fenAvant, M.coup) }), ecarte: null, alerte: null };
+    const sanM = sanDe(fenAvant, M.coup);
+    const parties = [cap(M.raison || MOT_NOEUD[M.noeud] || 'je joue ce coup') + '.'];
+    let ecarte = null;
+    if (elagueBest && M.cp - elagueBest.cp >= BORNES.ecarteDit) { // un coup tentant qui perdait : on le dit au conditionnel
+      const sanR = sanDe(fenAvant, elagueBest.coup);
+      const g = elagueBest.matSubi ? PAROLE.ecarteMat : PAROLE.ecarte;
+      const ligneR = ligneTexte(coupe(elagueBest.ligne, fenAvant, elagueBest.pvUci), ply);
+      parties.push(remplir(g, { R: sanR, M: sanM, ligneR, perteR: elagueBest.perte ?? 'du matériel' }));
+      ecarte = { san: sanR, coup: elagueBest.coup, raison: elagueBest.raison, ligne: elagueBest.ligne, perte: elagueBest.perte ?? 'la partie' };
+    } else if (survivantSuivant && Math.abs(M.cp - survivantSuivant.cp) < BORNES.seValent) {
+      parties.push(remplir(PAROLE.seValent, { M: sanM, R: sanDe(fenAvant, survivantSuivant.coup) }));
+    }
+    return { phrase: parties.join(' ').replace(/\s+/g, ' ').trim(), ecarte, alerte: null };
+  }
+
+  /** Classe le trou : coupé (l'arbre l'a produit mais la sélection l'a écarté), pas reconnu avant (son point apparaît un coup plus loin), sans nom (aucune question). */
+  #classerTrou(uci, tous, fenAvant, camp, sonde) {
+    const produit = tous.find((c) => c.coup === uci);
+    if (produit) return { san: sanDe(fenAvant, uci), classe: 'coupé', noeud: produit.noeud };
+    // pas reconnu avant : après le coup, est-ce que je menace quelque chose qu'une question nommerait (gain matériel / mat) ?
+    const e = new Echiquier(fenAvant); const m = e.coupDepuisUci(uci); if (m) e.jouer(m);
+    const mn = m ? this.recherche.menace(e, { budget: Math.trunc(this.budget / 8), profondeurMax: 4 }) : null; // ce que JE menacerai s'il passe (coup nul après le mien)
+    if (mn && (mn.score >= MAT - 200 || -sommeMat(bilanParType(e.fen(), fenApresUci(e.fen(), mn.pv.map(uciDe)), camp)) > 0)) return { san: sanDe(fenAvant, uci), classe: 'pas reconnu avant', noeud: null };
+    return { san: sanDe(fenAvant, uci), classe: 'sans nom', noeud: null };
+  }
+}
+
+const cap = (s) => (s ? s[0].toUpperCase() + s.slice(1) : s);
+const remplir = (g, d) => g.replace(/\{(\w+)\}/g, (_, k) => (d[k] ?? `{${k}}`));
+const sanDe = (fen, uci) => { try { return toFrenchSan(new Chess(fen).move({ from: uci.slice(0, 2), to: uci.slice(2, 4), promotion: uci[4] }).san); } catch { return uci; } };
+/** Coupe la ligne à 4 demi-coups dans le calme, 8 dans le forcé (ce qu'un 1500 calcule vraiment). */
+function coupe(sans, fenAvant, pvUci) { const n = estForcee(fenAvant, pvUci) ? 8 : 4; return sans.slice(0, n); }
+
+export { Joueur as JoueurArbre };

@@ -272,6 +272,8 @@ export function etape2(ctx) {
 export function livre({ fen, depart = DEPART, historique = [] }) {
   const chess = new Chess(depart);
   for (const u of historique) { try { chess.move({ from: u.slice(0, 2), to: u.slice(2, 4), promotion: u[4] }); } catch { return []; } }
+  // le livre ne vaut que si l'historique rejoué TOMBE sur la position courante (sinon on n'est pas dans la ligne du répertoire)
+  if (chess.fen().split(' ').slice(0, 4).join(' ') !== fen.split(' ').slice(0, 4).join(' ')) return [];
   const cle = chess.history().join(' ');
   let entree = LIVRES.get(cle);
   if (!entree && cle === '' && chess.fen() === DEPART && LIVRES.has('e4')) entree = { plan: [{ san: 'e4', pourquoi: LIVRES.get('e4').sens ?? 'le début de mon répertoire' }] };
