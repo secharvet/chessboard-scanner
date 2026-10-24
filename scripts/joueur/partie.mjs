@@ -18,6 +18,7 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { execSync } from 'node:child_process';
 import { performance } from 'node:perf_hooks';
 import { Chess } from 'chess.js';
+import { toFrenchSan } from '../../coach/notation.mjs';
 import { Echiquier, DEPART } from '../../coach/joueur/echiquier.mjs';
 
 /** Les deux premiers champs d'une FEN (placement + trait) : ce qui doit coïncider entre l'échiquier et chess.js (l'en passant et les compteurs divergent légitimement). */
@@ -71,7 +72,8 @@ export async function jouerPartie({ coach, adversaire, camp, id = 'sans-id', fen
     } else {
       const cm = appliquer(await adversaire.jouer(fen));
       const uci = cm.from + cm.to + (cm.promotion ?? ''); // UCI standard, reconstruit depuis le coup appliqué (roque normalisé)
-      coups.push({ ply: ply + 1, camp: trait, san: cm.san, uci, fenAvant: fen, coach: false });
+      // SAN de l'adversaire en français comme celui du coach (toFrenchSan n'est PAS idempotent — ne l'appliquer qu'au SAN anglais de chess.js).
+      coups.push({ ply: ply + 1, camp: trait, san: toFrenchSan(cm.san), uci, fenAvant: fen, coach: false });
       historique.push(uci);
     }
     ply++;

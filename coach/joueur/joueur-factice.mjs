@@ -11,6 +11,7 @@
  */
 import { Chess } from 'chess.js';
 import { createHash } from 'node:crypto';
+import { toFrenchSan } from '../notation.mjs';
 
 /** Tirage reproductible indexé par la position (comme `coach/maia.mjs`) : hash(fen|graine) → [0,1[. */
 function alea(fen, graine) {
@@ -41,20 +42,22 @@ export class Joueur {
     const battu = coups.find((m) => m !== choisi) ?? null;
     const uciDe = (m) => m.from + m.to + (m.promotion ?? '');
     const sorte = ['plan', 'amelioration', 'defense', 'calcul', 'livre'][Math.floor(alea(fen, this.graine + 1) * 5)];
+    // SAN en français comme le vrai Joueur (chess.js rend l'anglais ; toFrenchSan ne s'applique qu'à de l'anglais).
+    const sanChoisi = toFrenchSan(choisi.san), sanBattu = battu ? toFrenchSan(battu.san) : null;
     return {
       ply: contexte.ply ?? jeu.moveNumber() * 2 - (jeu.turn() === 'w' ? 1 : 0),
       camp: jeu.turn(),
-      san: choisi.san,
+      san: sanChoisi,
       uci: uciDe(choisi),
       fenAvant: fen,
       coach: true,
       sorte,
-      phrase: `(factice) je joue ${choisi.san}${battu ? `, de préférence à ${battu.san}` : ''} — rien de vérifié ici.`,
+      phrase: `(factice) je joue ${sanChoisi}${sanBattu ? `, de préférence à ${sanBattu}` : ''} — rien de vérifié ici.`,
       score: 0,
       evalAvant: 0,
-      battu: battu ? { san: battu.san, score: 0, ecart: 0, seValent: true } : null,
-      ligne: [choisi.san],
-      ligneBattu: battu ? [battu.san] : [],
+      battu: battu ? { san: sanBattu, score: 0, ecart: 0, seValent: true } : null,
+      ligne: [sanChoisi],
+      ligneBattu: sanBattu ? [sanBattu] : [],
       termes: [{ nom: 'bidon', apres: 0, bout: 0 }],
       menace: null,
       motif: null,
