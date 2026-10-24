@@ -40,15 +40,15 @@ Reconnaissance : un pion à moi sans aucun pion adverse devant lui, ni sur sa co
 
 ## 2. ROI_AU_CENTRE (owner : le camp qui attaque ; opponent : le camp dont le roi est au centre)
 Reconnaissance : roi adverse sur les colonnes c à f, à sa 1re ou 2e rangée. Dames sur l'échiquier. Coup 8 passé.
-Colonne d ou e sans pion adverse. **Et mon roi roqué.**
+Colonne d ou e sans pion **à moi** (semi-ouverte de mon côté : c'est elle qui mène au roi), ou un levier d/e disponible. **Et mon roi roqué.** (Correction du 25 oct. : j'avais écrit « sans pion adverse », ce qui envoyait la tour derrière son propre pion, cf. b-02 17…Db6.)
 Au moteur, sur w-01 après 8…c5 (prof. 18) : la rupture d5 vaut −1,19, contre +1,24 pour O-O. Ouvrir le centre avant
 d'avoir mis son propre roi à l'abri est une faute. La condition « mon roi roqué » n'est donc pas une préférence, elle
 est nécessaire.
 
 | camp | instance | pourquoi |
 |---|---|---|
-| owner | colonne { e } (sinon { d }) | Une tour en face du roi qui n'a pas roqué : il ne pourra plus roquer, ni rester |
-| owner | rupture { d, d5 } (ou { e, e5 }, le levier disponible) | Ouvrir le centre pendant que son roi y est encore. Seulement après le roque (voir ci-dessus) |
+| owner | colonne { e } (sinon { d }), celle sans pion à moi | Une tour sur la colonne qui mène à son roi resté au centre : il ne pourra plus y rester tranquille |
+| owner | rupture { d, d5 } (ou { e, e5 }, le levier disponible) | Ouvrir le centre pendant que son roi y est encore |
 | opponent | transfert { R, g8 } (roquer) | Mettre le roi à l'abri d'abord : tant qu'il est au centre, chaque colonne qui s'ouvre est pour l'adversaire |
 
 Note : le roque doit compter pour **un** coup dans la distance du transfert du roi. À vérifier dans `plan-distance.mjs`.
