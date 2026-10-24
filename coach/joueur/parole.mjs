@@ -45,7 +45,8 @@ export function materielEnMots(bilan) {
   const liste = (c) => [c.Q ? (c.Q === 1 ? 'la dame' : `${c.Q} dames`) : '', c.R ? nombre(c.R, 'tour') : '', c.M ? nombre(c.M, 'pièce') : '', c.P ? nombre(c.P, 'pion') : ''].filter(Boolean);
   const g = liste(gagne), p = liste(perdu);
   if (!g.length) return null;
-  return g.join(' et ') + (p.length ? ` contre ${p.join(' et ')}` : '');
+  const virgules = (l) => (l.length <= 1 ? l.join('') : `${l.slice(0, -1).join(', ')} et ${l.at(-1)}`); // « une tour, une pièce et un pion »
+  return virgules(g) + (p.length ? ` contre ${virgules(p)}` : '');
 }
 const nombre = (n, mot) => (n === 1 ? `${mot === 'pièce' ? 'une' : 'un'} ${mot}`.replace('un pièce', 'une pièce').replace('un tour', 'une tour') : `${['', '', 'deux', 'trois', 'quatre', 'cinq', 'six', 'sept', 'huit'][n] ?? n} ${mot}s`);
 
@@ -109,14 +110,7 @@ export function formuler(r) {
   if (r.plan?.abandon === 'cher') parties.unshift(remplir(texte(G.plan.abandon_cher), { plan: r.plan.ancien ?? r.plan.nom }));
   if (r.plan?.abandon === 'sans_objet') parties.unshift(remplir(texte(G.plan.abandon_sans_objet), { plan: r.plan.ancien ?? r.plan.nom, objet_disparu: r.plan.objetDisparu ?? 'la cible' }));
 
-  // 2. La comparaison avec R (rien pour « seul coup », « moindre mal » et le mat, qui en parlent déjà, ni pour le livre, qui n'est pas choisi par comparaison)
-  if (R && !['seul_coup', 'moindre_mal', 'mat', 'refus', 'coup'].includes(r.sousSorte)) {
-    if (r.battu.seValent) parties.push(remplir(texte(G.comparaison.se_valent), d));
-    else if (r.sorte === 'plan' && r.battu.planTerme <= 0) parties.push(remplir(texte(G.comparaison.battu_plan), d));
-    else if (d.ecart_mots) parties.push(remplir(texte(G.comparaison.battu), d));
-  }
-
-  // 3. La menace vue (sauf si la défense la nomme déjà ; jamais en finale de pions, déjà filtrée en amont)
+  // 2. La menace vue (sauf si la défense la nomme déjà ; jamais en finale de pions, déjà filtrée en amont)
   // jamais sous une phrase de défense (elle nomme déjà ce qu'elle pare), ni sur un coup qui mate, ni sous « contraint » (Expert)
   if (r.menace && r.sorte !== 'defense' && r.sousSorte !== 'mat' && r.sousSorte !== 'contraint') {
     if (r.menace.pareeApresM && r.menace.pareeApresR) parties.push(remplir(texte(G.menace_vue.paree), d));
@@ -131,6 +125,13 @@ export function formuler(r) {
     const t2 = r.termes[1];
     if (t2.poids >= 10) { const g = G.amelioration[t2.cle] ?? G.finale[t2.cle]; if (g && t2.cle !== t?.cle) parties.push(remplir(texte(g), dt(t2)).replace(/^Rien de forcé\. /, '')); }
   }
+  // 4. La comparaison avec R, EN DERNIER (Expert) ; rien pour « seul coup », « moindre mal », le mat, le livre, ni « préféré » (qui la contient)
+  if (R && !['seul_coup', 'moindre_mal', 'mat', 'mat_subi', 'refus', 'coup', 'prefere', 'contraint', 'promotion'].includes(r.sousSorte)) {
+    if (r.battu.seValent) parties.push(remplir(texte(G.comparaison.se_valent), d));
+    else if (r.sorte === 'plan' && r.battu.planTerme <= 0) parties.push(remplir(texte(G.comparaison.battu_plan), d));
+    else if (d.ecart_mots) parties.push(remplir(texte(G.comparaison.battu), d));
+  }
+
   // Majuscule en tête de phrase pour un possessif venu d'un gabarit (« mon fou » après un point) ; jamais sur un coup.
   const phrase = parties.join(' ').replace(/\s+/g, ' ').trim().replace(/(^|[.!?] |\( )(mon|ma|son|sa|mes|ses) /g, (_, a, b) => `${a}${b[0].toUpperCase()}${b.slice(1)} `);
   return { phrase, alerte };
