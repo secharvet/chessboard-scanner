@@ -27,7 +27,7 @@ export function engineLegal(fen) {
  */
 
 export class UciEngine {
-  /** @param {{ path?: string, threads?: number, hashMb?: number }} [opts] */
+  /** @param {{ path?: string, threads?: number, hashMb?: number, options?: Record<string, string|number|boolean> }} [opts] */
   constructor(opts = {}) {
     // Le binaire officiel (/usr/local/bin, compilé BMI2/AVX2) est 1,8 fois plus rapide que le paquet Ubuntu (SSE2).
     this.path = opts.path ?? process.env.STOCKFISH_PATH ?? ['/usr/local/bin/stockfish', '/usr/games/stockfish'].find(existsSync) ?? 'stockfish';
@@ -40,6 +40,9 @@ export class UciEngine {
     this.hashGarde = process.env.COACH_HASH_GARDE === '1';
     this.threads = opts.threads ?? (this.deterministe ? 1 : 2);
     this.hashMb = opts.hashMb ?? 128;
+    // Options UCI supplémentaires, envoyées au démarrage après Threads/Hash (ex. UCI_LimitStrength / UCI_Elo pour l'arène
+    // du coach joueur). Additif : rien n'est envoyé quand `options` n'est pas fourni — le pipeline de mesure est intact.
+    this.options = opts.options ?? null;
     /** @type {import('node:child_process').ChildProcess | null} */
     this.proc = null;
     /** @type {((line: string) => void) | null} */
@@ -57,6 +60,7 @@ export class UciEngine {
     await this.#waitFor('uci', (l) => { if (l.startsWith('id name ')) this.name = l.slice(8); return l === 'uciok'; });
     this.#send(`setoption name Threads value ${this.threads}`);
     this.#send(`setoption name Hash value ${this.hashMb}`);
+    if (this.options) for (const [k, v] of Object.entries(this.options)) this.#send(`setoption name ${k} value ${v === true ? 'true' : v === false ? 'false' : v}`);
     // « ucinewgame » une seule fois : la table de hachage est conservée entre les analyses, si bien que les
     // analyses suivantes d'une même fiche (menace, préparations, prolongements) réutilisent le travail de la
     // première au lieu de repartir de zéro. La table est indexée par position : aucun risque de mélange.
