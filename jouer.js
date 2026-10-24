@@ -124,7 +124,7 @@ function traiter(o) {
   else if (o.ev === 'coup') ajouterCoup(o.coup);
   else if (o.ev === 'examen') vue._examen = o.examen;
   else if (o.ev === 'fin') {
-    vue.id = o.id ?? vue.id; vue.fin = o; montrerFin(o, vue._examen); fermerFlux(); sonder(); majRecit();
+    vue.id = o.id ?? vue.id; vue.fin = o; $('jouMeta').textContent = $('jouMeta').textContent.replace('Partie en cours', 'Partie finie'); montrerFin(o, vue._examen); fermerFlux(); sonder(); majRecit();
     // Le fichier de la partie porte l'examen coup par coup : le récit final le reprend.
     if (vue.id) fetch(`./parties/${encodeURIComponent(vue.id)}.json`).then((r) => (r.ok ? r.json() : null)).then((p) => { if (p) majRecit(p); }).catch(() => {});
   }
