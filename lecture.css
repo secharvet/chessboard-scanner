@@ -1,0 +1,7 @@
+/* Lecture humaine des explications (lecture.html) : sur la base des styles du lecteur (partie.css). */
+.lec__consigne { max-width: 70ch; margin: 0 0 14px; line-height: 1.5; opacity: 0.9; }
+.lec__q { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 12px; }
+.lec__q span { min-width: 16rem; }
+.lec__remarque { margin-top: 12px; }
+.lec__nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.lec__fin { display: flex; flex-direction: column; gap: 10px; max-width: 900px; }

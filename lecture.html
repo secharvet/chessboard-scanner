@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fr" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lecture des explications</title>
+    <link rel="stylesheet" href="./vendor-web/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./site-nav.css" />
+    <link rel="stylesheet" href="./partie.css" />
+    <link rel="stylesheet" href="./lecture.css" />
+  </head>
+  <body>
+    <div class="app jpt">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand__title">Lecture des explications</div>
+          <div class="brand__subtitle">20 coups du coach tirés au sort — vrai ou faux, utile ou creux, compris ou non</div>
+        </div>
+      </header>
+
+      <div class="jpt__erreur" id="lecErreur" hidden></div>
+
+      <p class="lec__consigne" id="lecConsigne">
+        Pour chaque coup : la position <b>avant</b> le coup, la flèche verte montre le coup joué par le coach, et sa phrase.
+        Trois questions. <b>Vrai</b> : ce que dit la phrase est juste sur l'échiquier. <b>Utile</b> : un joueur de club apprend
+        quelque chose en la lisant. <b>Compris</b> : un joueur d'environ 1500 Elo la comprend sans aide. Une remarque libre si vous voulez. Les réponses restent dans ce navigateur jusqu'à la fin ;
+        à la fin, « Copier le résultat » et collez-le dans un mail ou au pilote.
+      </p>
+
+      <main class="jpt__layout" id="lecZone" hidden>
+        <section class="jpt__gauche">
+          <div class="jpt__meta" id="lecMeta"></div>
+          <div class="jpt__board-wrap"><div id="lecBoard" class="board"></div></div>
+        </section>
+        <section class="jpt__droite">
+          <div class="jpt__phrase-carte">
+            <div class="jpt__phrase-tete"><span class="jpt__coup-nom" id="lecCoup"></span></div>
+            <p class="jpt__phrase" id="lecPhrase"></p>
+          </div>
+          <div class="lec__q">
+            <span>La phrase est-elle vraie ?</span>
+            <button type="button" class="btn btn-sm btn-outline-success" data-q="vrai" data-v="1">vrai</button>
+            <button type="button" class="btn btn-sm btn-outline-danger" data-q="vrai" data-v="0">faux</button>
+          </div>
+          <div class="lec__q">
+            <span>Est-elle utile à un joueur de club ?</span>
+            <button type="button" class="btn btn-sm btn-outline-success" data-q="utile" data-v="1">utile</button>
+            <button type="button" class="btn btn-sm btn-outline-danger" data-q="utile" data-v="0">creux</button>
+          </div>
+          <div class="lec__q">
+            <span>Un joueur de 1500 la comprend-il ?</span>
+            <button type="button" class="btn btn-sm btn-outline-success" data-q="comprend" data-v="1">oui</button>
+            <button type="button" class="btn btn-sm btn-outline-danger" data-q="comprend" data-v="0">non</button>
+          </div>
+          <textarea class="form-control lec__remarque" id="lecRemarque" rows="3" placeholder="Remarque (facultatif)"></textarea>
+          <div class="lec__nav">
+            <button type="button" class="btn btn-sm btn-outline-light" id="lecPrec">◀ Précédent</button>
+            <button type="button" class="btn btn-sm btn-primary" id="lecSuiv" disabled>Coup suivant ▶</button>
+          </div>
+        </section>
+      </main>
+
+      <section class="lec__fin" id="lecFin" hidden>
+        <p id="lecBilan"></p>
+        <div class="lec__nav">
+          <button type="button" class="btn btn-sm btn-warning" id="lecCopie">Copier le résultat</button>
+          <button type="button" class="btn btn-sm btn-outline-light" id="lecRevoir">Revoir les coups</button>
+        </div>
+        <textarea class="jpt__recit form-control" id="lecTexte" readonly rows="14" aria-label="Résultat de la lecture"></textarea>
+      </section>
+    </div>
+
+    <script type="module" src="./lecture.js"></script>
+    <script type="module" src="./site-nav.js"></script>
+  </body>
+</html>
