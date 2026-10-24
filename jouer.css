@@ -33,3 +33,8 @@
   .jou__lancement { margin: 0 12px 10px; }
   .jou__lancement-champs select { min-width: 120px; }
 }
+
+/* Les deux derniers demi-coups (le coup du coach et la réponse), pour ne pas voir que le dernier. */
+.jou__derniers { margin-bottom: 8px; font-size: 0.95rem; opacity: 0.9; }
+.jou__derniers b { font-weight: 600; }
+.jou__reponse { margin: 10px 0 0; padding-top: 8px; border-top: 1px solid rgba(255, 255, 255, 0.12); font-size: 0.92rem; opacity: 0.85; }

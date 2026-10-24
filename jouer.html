@@ -58,6 +58,7 @@
         </section>
 
         <section class="jpt__droite">
+          <div class="jou__derniers" id="jouDerniers" aria-live="polite" hidden></div>
           <div class="jpt__phrase-carte" id="jouPhraseCarte" aria-live="polite">
             <div class="jpt__phrase-tete">
               <span class="jpt__pastille" id="jouPastille" hidden></span>
@@ -66,6 +67,7 @@
             <p class="jpt__phrase" id="jouPhrase">En attente d'une partie.</p>
             <button type="button" class="btn btn-sm btn-outline-info" id="jouPourquoi" hidden aria-expanded="false">Pourquoi ?</button>
             <div class="jpt__trace" id="jouTrace" hidden></div>
+            <p class="jou__reponse" id="jouReponse" hidden></p>
           </div>
           <div class="jou__fin" id="jouFin" hidden></div>
           <div class="jou__liste-bloc" id="jouListeBloc" hidden>
@@ -74,6 +76,14 @@
           </div>
         </section>
       </main>
+
+      <section class="jpt__recit-bloc">
+        <div class="jpt__recit-tete">
+          <span class="jpt__recit-titre">Récit complet de la partie</span>
+          <button type="button" class="btn btn-sm btn-outline-light" id="jouRecitCopie">Copier le récit</button>
+        </div>
+        <textarea class="jpt__recit form-control" id="jouRecit" readonly rows="18" aria-label="Récit complet de la partie"></textarea>
+      </section>
     </div>
 
     <script type="module" src="./jouer.js"></script>

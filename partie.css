@@ -114,3 +114,9 @@
   .jpt__board-wrap { max-width: 100%; }
   .jpt__coups { max-height: 160px; }
 }
+
+/* Le récit complet (partie.html, jouer.html) : un encart de texte à faire défiler et à copier tel quel. */
+.jpt__recit-bloc { margin-top: 18px; display: flex; flex-direction: column; gap: 8px; }
+.jpt__recit-tete { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; }
+.jpt__recit-titre { font-weight: 600; }
+.jpt__recit { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.85rem; line-height: 1.5; white-space: pre-wrap; resize: vertical; min-height: 220px; }
