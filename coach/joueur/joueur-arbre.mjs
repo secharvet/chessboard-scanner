@@ -125,12 +125,13 @@ export class Joueur {
       const meilleurCand = Math.max(...evalues.map((c) => c.cp));
       if (cpPlein - meilleurCand >= BORNES.trou && !evalues.some((c) => c.coup === uciPlein)) {
         trou = this.#classerTrou(uciPlein, tous, fenAvant, camp, sonde);
+        trou.etapeArbre = M.noeud; // l'étape où l'arbre se trouvait (le coup qu'il aurait joué) — pour le tableau de la mesure
         const { sans } = ligneFr(fenAvant, plein.pv.map(uciDe));
         M = { coup: uciPlein, noeud: null, raison: 'mon calcul trouve mieux que mes idées', raisons: [], cp: cpPlein, pvUci: plein.pv.map(uciDe), ligne: sans, trou: true };
       }
     }
     // un arbre vide est un trou « sans nom » par définition (aucune question n'a su quoi proposer) : on le note toujours
-    if (arbreVide && !trou) trou = { san: sanDe(fenAvant, M.coup), classe: 'sans nom', noeud: null };
+    if (arbreVide && !trou) trou = { san: sanDe(fenAvant, M.coup), classe: 'sans nom', noeud: null, etapeArbre: null };
 
     // --- pour la phrase : le survivant le plus proche (« les deux se valent ») et le meilleur élagué (« j'ai pensé à … mais ») ---
     const survivantSuivant = ordre.find((c) => c.coup !== M.coup) ?? null;
@@ -230,7 +231,7 @@ export class Joueur {
       const g = elagueBest.matSubi ? PAROLE.ecarteMat : PAROLE.ecarte;
       const ligneR = ligneTexte(coupe(elagueBest.ligne, fenAvant, elagueBest.pvUci), ply);
       parties.push(remplir(g, { R: sanR, M: sanM, ligneR, perteR: elagueBest.perte ?? 'du matériel' }));
-      ecarte = { san: sanR, coup: elagueBest.coup, raison: elagueBest.raison, ligne: elagueBest.ligne, perte: elagueBest.perte ?? 'la partie' };
+      ecarte = { san: sanR, coup: elagueBest.coup, raison: elagueBest.raison, ligne: elagueBest.ligne, pvUci: elagueBest.pvUci, perte: elagueBest.perte ?? 'la partie', mat: !!elagueBest.matSubi };
     } else if (survivantSuivant && Math.abs(M.cp - survivantSuivant.cp) < BORNES.seValent) {
       parties.push(remplir(PAROLE.seValent, { M: sanM, R: sanDe(fenAvant, survivantSuivant.coup) }));
     }

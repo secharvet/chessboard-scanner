@@ -231,8 +231,9 @@ async function main() {
   // Stockfish a été prise pour une vraie le 24 octobre ; plus jamais).
   const MODULE = opt('--joueur', '../../coach/joueur/joueur.mjs');
 
+  const TROU = args.includes('--trou'); // mesure du trou (joueur-arbre) : la recherche complète tourne en plus (double le temps/coup)
   const { Joueur } = await import(MODULE.startsWith('.') || MODULE.startsWith('/') ? MODULE : `../../${MODULE}`);
-  const coach = new Joueur({ camp: CAMP, budget: BUDGET, graine: GRAINE });
+  const coach = new Joueur({ camp: CAMP, budget: BUDGET, graine: GRAINE, trou: TROU });
   // Le code qui a produit la partie : --code (la série fige sa version) > git rev-parse (dev) > lecture de .git (conteneur,
   // sans binaire git) > COACH_CODE (repli manuel) > coach.code > « inconnu ».
   let code = opt('--code', null);
