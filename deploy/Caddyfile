@@ -1,12 +1,29 @@
+{
+	# HTTP/3 désactivé : Firefox restait bloqué derrière l'authentification en h3 (17 octobre 2026) ; HTTP/1.1 et HTTP/2 suffisent.
+	servers {
+		protocols h1 h2
+	}
+}
+
 # Coach d'échecs — HTTPS automatique (Let's Encrypt) devant le site (nginx dans Podman, port 6400).
 # Domaine provisoire sslip.io ; remplacer par le vrai domaine le moment venu.
-162-19-25-49.sslip.io {
-	encode zstd gzip
+162-19-25-49.sslip.io, guru-chess.duckdns.org {
 	# Accès réservé : un seul compte (mot de passe haché en bcrypt, jamais en clair).
 	basicauth {
-		Orion <HACHAGE — caddy hash-password --plaintext …>
+		Orion $2a$14$nCtkqNOh59sPIsCmaX5Ngu.WKNHwGQ9sBzzqrioqO.9QaZ6iz/aze
 	}
-	reverse_proxy 127.0.0.1:6400 {
-		header_up X-Real-IP {remote_host}
+	# La partie en direct (flux SSE) : ni compression ni tampon, sinon le navigateur ne reçoit rien avant la fin (26 octobre 2026).
+	@flux path /api/joueur/en-cours/flux
+	handle @flux {
+		reverse_proxy 127.0.0.1:6400 {
+			header_up X-Real-IP {remote_host}
+			flush_interval -1
+		}
+	}
+	handle {
+		encode zstd gzip
+		reverse_proxy 127.0.0.1:6400 {
+			header_up X-Real-IP {remote_host}
+		}
 	}
 }
