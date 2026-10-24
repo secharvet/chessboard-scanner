@@ -1,0 +1,7 @@
+[Unit]
+Description=Sauvegarde de la base de la plateforme échecs (pg_dump) et export des livres
+After=chess-db.service
+
+[Service]
+Type=oneshot
+ExecStart=/home/ubuntu/chessboard-scanner/scripts/db/sauvegarder.sh

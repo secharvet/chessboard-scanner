@@ -16,7 +16,7 @@ COPY index.html play.html style.css play.css \
 # JS — modules racine
 COPY app.js board-view.js board-drawables.js comment-drawables.js pgn-graph.js \
   play.js play-board.js square-control.js stockfish-client.js eval-fr.js \
-  mentor-client.js mentor-markdown.js mentor-ui.js \
+  mentor-client.js mentor-markdown.js mentor-ui.js board-links.js \
   /usr/share/nginx/html/
 
 # JS — répertoires entiers (tout sous-fichier inclus)
@@ -26,11 +26,13 @@ COPY positional /usr/share/nginx/html/positional/
 COPY assets /usr/share/nginx/html/assets/
 
 # Vendor (chess.js + stockfish WASM) depuis l'étape npm
+# Hors de la racine web : le mode dev monte les sources sur /usr/share/nginx/html
+# sans masquer le vendor (servi via « location /vendor/ » dans nginx.conf).
 COPY --from=vendor /build/node_modules/chess.js/dist/esm/chess.js \
-  /usr/share/nginx/html/vendor/chess.js
+  /opt/vendor/chess.js
 # Supprime la référence au source map absent (évite un warning console)
-RUN sed -i '$d' /usr/share/nginx/html/vendor/chess.js
+RUN sed -i '$d' /opt/vendor/chess.js
 COPY --from=vendor /build/node_modules/stockfish/src/stockfish-nnue-16-single.js \
-  /usr/share/nginx/html/vendor/stockfish/stockfish-nnue-16-single.js
+  /opt/vendor/stockfish/stockfish-nnue-16-single.js
 COPY --from=vendor /build/node_modules/stockfish/src/stockfish-nnue-16-single.wasm \
-  /usr/share/nginx/html/vendor/stockfish/stockfish-nnue-16-single.wasm
+  /opt/vendor/stockfish/stockfish-nnue-16-single.wasm

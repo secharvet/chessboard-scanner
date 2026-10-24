@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" font-family="Helvetica, Arial, sans-serif" font-size="14">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect width="960" height="520" fill="#ffffff"/>
+  <text x="480" y="32" text-anchor="middle" font-size="20" font-weight="bold" fill="#0f172a">Architecture du système</text>
+
+  <!-- Navigateur -->
+  <rect x="30" y="70" width="210" height="170" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="135" y="95" text-anchor="middle" font-weight="bold" fill="#1e3a8a">Navigateur</text>
+  <text x="135" y="120" text-anchor="middle" fill="#1e293b">index.html — lecteur PGN</text>
+  <text x="135" y="140" text-anchor="middle" fill="#1e293b">play.html — jouer</text>
+  <text x="135" y="165" text-anchor="middle" fill="#475569" font-size="12">Stockfish WASM (jeu)</text>
+  <text x="135" y="183" text-anchor="middle" fill="#475569" font-size="12">positional/ (panneau d'analyse)</text>
+  <text x="135" y="201" text-anchor="middle" fill="#475569" font-size="12">mentor-ui.js (panneau coach)</text>
+  <text x="135" y="225" text-anchor="middle" fill="#15803d" font-size="12">« ✓ sources vérifiées »</text>
+
+  <!-- nginx -->
+  <rect x="290" y="95" width="170" height="120" rx="10" fill="#f8fafc" stroke="#64748b" stroke-width="1.5"/>
+  <text x="375" y="120" text-anchor="middle" font-weight="bold" fill="#0f172a">nginx (Podman)</text>
+  <text x="375" y="145" text-anchor="middle" fill="#1e293b" font-size="12">fichiers statiques</text>
+  <text x="375" y="163" text-anchor="middle" fill="#1e293b" font-size="12">/vendor → /opt/vendor</text>
+  <text x="375" y="181" text-anchor="middle" fill="#1e293b" font-size="12">/api/chess/mentor/ → :8000</text>
+  <text x="375" y="199" text-anchor="middle" fill="#b91c1c" font-size="12">bloque .env, coach/, …</text>
+
+  <!-- Serveur coach -->
+  <rect x="510" y="70" width="420" height="250" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="720" y="95" text-anchor="middle" font-weight="bold" fill="#14532d">Serveur coach (Node, port 8000) — coach/</text>
+  <rect x="530" y="110" width="185" height="90" rx="8" fill="#ffffff" stroke="#16a34a"/>
+  <text x="622" y="132" text-anchor="middle" font-weight="bold" fill="#14532d">Contexte</text>
+  <text x="622" y="152" text-anchor="middle" font-size="12" fill="#1e293b">context.mjs : lignes, faits</text>
+  <text x="622" y="169" text-anchor="middle" font-size="12" fill="#1e293b">datés, motifs, menaces,</text>
+  <text x="622" y="186" text-anchor="middle" font-size="12" fill="#1e293b">préparations, manœuvres</text>
+  <rect x="730" y="110" width="185" height="90" rx="8" fill="#ffffff" stroke="#16a34a"/>
+  <text x="822" y="132" text-anchor="middle" font-weight="bold" fill="#14532d">Rédaction + contrôle</text>
+  <text x="822" y="152" text-anchor="middle" font-size="12" fill="#1e293b">prompt.mjs, llm.mjs</text>
+  <text x="822" y="169" text-anchor="middle" font-size="12" fill="#1e293b">verify.mjs (citations)</text>
+  <text x="822" y="186" text-anchor="middle" font-size="12" fill="#1e293b">guard.mjs (coups)</text>
+  <line x1="715" y1="155" x2="728" y2="155" stroke="#475569" stroke-width="1.5" marker-end="url(#a)"/>
+  <rect x="530" y="215" width="385" height="90" rx="8" fill="#ffffff" stroke="#16a34a"/>
+  <text x="722" y="237" text-anchor="middle" font-weight="bold" fill="#14532d">Outils de perception (code)</text>
+  <text x="722" y="257" text-anchor="middle" font-size="12" fill="#1e293b">threats.mjs · forcing.mjs · prep-threats.mjs · maneuvers.mjs</text>
+  <text x="722" y="274" text-anchor="middle" font-size="12" fill="#1e293b">motifs.mjs · engine-eval.mjs · memory.mjs · review.mjs</text>
+  <text x="722" y="291" text-anchor="middle" font-size="12" fill="#1e293b">+ moteur de règles positional/ (partagé avec le navigateur)</text>
+
+  <!-- Dépendances -->
+  <rect x="510" y="380" width="170" height="100" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5"/>
+  <text x="595" y="405" text-anchor="middle" font-weight="bold" fill="#7c2d12">Stockfish 17.1</text>
+  <text x="595" y="428" text-anchor="middle" font-size="12" fill="#1e293b">natif (UCI)</text>
+  <text x="595" y="446" text-anchor="middle" font-size="12" fill="#1e293b">uci-engine.mjs</text>
+  <text x="595" y="464" text-anchor="middle" font-size="12" fill="#1e293b">calcule et note</text>
+
+  <rect x="710" y="380" width="220" height="100" rx="10" fill="#faf5ff" stroke="#9333ea" stroke-width="1.5"/>
+  <text x="820" y="405" text-anchor="middle" font-weight="bold" fill="#581c87">LLM (rédige, décide)</text>
+  <text x="820" y="428" text-anchor="middle" font-size="12" fill="#1e293b">DeepSeek flash / v4-pro</text>
+  <text x="820" y="446" text-anchor="middle" font-size="12" fill="#1e293b">Groq gpt-oss · claude-cli</text>
+  <text x="820" y="464" text-anchor="middle" font-size="12" fill="#1e293b">réglages dans .env</text>
+
+  <rect x="290" y="380" width="170" height="100" rx="10" fill="#f8fafc" stroke="#64748b" stroke-width="1.5"/>
+  <text x="375" y="405" text-anchor="middle" font-weight="bold" fill="#0f172a">memory/</text>
+  <text x="375" y="428" text-anchor="middle" font-size="12" fill="#1e293b">lessons.json</text>
+  <text x="375" y="446" text-anchor="middle" font-size="12" fill="#1e293b">carnet de leçons</text>
+  <text x="375" y="464" text-anchor="middle" font-size="12" fill="#1e293b">(joueur LLM)</text>
+
+  <!-- Flèches -->
+  <line x1="240" y1="155" x2="288" y2="155" stroke="#475569" stroke-width="1.5" marker-end="url(#a)"/>
+  <line x1="460" y1="155" x2="508" y2="155" stroke="#475569" stroke-width="1.5" marker-end="url(#a)"/>
+  <line x1="595" y1="320" x2="595" y2="378" stroke="#475569" stroke-width="1.5" marker-end="url(#a)" marker-start="url(#a)"/>
+  <line x1="820" y1="320" x2="820" y2="378" stroke="#475569" stroke-width="1.5" marker-end="url(#a)" marker-start="url(#a)"/>
+  <line x1="508" y1="300" x2="462" y2="400" stroke="#475569" stroke-width="1.5" marker-end="url(#a)" marker-start="url(#a)"/>
+  <text x="30" y="505" font-size="12" fill="#475569">Le LLM ne voit jamais l'échiquier : il ne reçoit que du texte calculé (faits, lignes, menaces), numéroté et vérifiable.</text>
+</svg>

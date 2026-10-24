@@ -1,0 +1,191 @@
+/**
+ * Serveur du coach (remplace llm-factory) — écoute sur :8000, derrière le proxy nginx.
+ *
+ *   POST /api/chess/mentor/groq   { fen, side, moves, question } → { ok, advice, ... }
+ *   GET  /health
+ */
+
+import { appendFile, mkdir } from 'node:fs/promises';
+import { createServer } from 'node:http';
+import { askCoach } from './coach.mjs';
+import { judgeMove } from './move-judge.mjs';
+import { lireLaPartie, texteLecture } from './lecteur.mjs';
+import { pool } from './db.mjs';
+import { routerPlateforme } from './plateforme.mjs';
+import { expliquerLecture } from './intention-lecture.mjs';
+import { toFrenchSan } from './notation.mjs';
+const texteIntention = (lecture, payload) => {
+  if (!lecture || lecture.tropTot) return '';
+  const toi = payload.side === 'black' ? 'b' : 'w'; const x = expliquerLecture(lecture.fen, lecture, toi);
+  const parts = [];
+  if (lecture.suite?.length) {
+    // numérotation à partir du trait courant
+    const ply0 = lecture.fen.split(' ')[1] === 'w' ? 0 : 1; const num = Number(lecture.fen.split(' ')[5] || 1);
+    const txt = lecture.suite.map((san, i) => { const k = ply0 + i; const n = num + Math.floor(k / 2); const fr = toFrenchSan(san); return k % 2 === 0 ? `${n}.${fr}` : (i === 0 ? `${n}...${fr}` : fr); }).join(' ');
+    parts.push(`Suite probable d'après des parties semblables : ${txt}.`);
+  }
+  if (x.texte) parts.push(x.texte); else if (!parts.length) parts.push(texteLecture(lecture));
+  return parts.join(' ');
+};
+import { loadEnv } from './env.mjs';
+import { llmConfig } from './llm.mjs';
+import { UciEngine } from './uci-engine.mjs';
+
+loadEnv();
+const PORT = Number(process.env.COACH_PORT || 8000);
+const HOST = process.env.COACH_HOST || '0.0.0.0';
+// Journal des consultations (une ligne JSON par réponse) : réponse affichée ET réponse d'origine du LLM
+// (en mode anglais, avant traduction), pour relire plus tard d'où vient une erreur. Pas d'IP ici.
+const ANSWER_LOG = process.env.COACH_ANSWER_LOG || 'logs/coach-answers.jsonl';
+async function logAnswer(payload, result) {
+  const entry = {
+    at: new Date().toISOString(), lang: process.env.COACH_LANG || 'fr', answer: process.env.COACH_ANSWER || null,
+    model: `${cfg.provider}/${cfg.model}`, fen: payload.fen, side: payload.side, moves: payload.moves ?? [], question: payload.question,
+    advice: result.advice, adviceWorking: result.adviceWorking ?? null, adviceCited: result.adviceCited ?? null,
+    problems: result.problems, revised: result.revised, timings: result.timings,
+  };
+  try {
+    await mkdir(ANSWER_LOG.replace(/\/[^/]*$/, ''), { recursive: true });
+    await appendFile(ANSWER_LOG, `${JSON.stringify(entry)}\n`);
+  } catch (e) {
+    console.error('[coach] journal impossible', e.message);
+  }
+}
+const cfg = llmConfig();
+const engine = new UciEngine();
+
+// Protection d'un service public : requêtes par visiteur et analyses simultanées limitées.
+const RATE_MAX = Number(process.env.COACH_RATE_MAX || 12); // requêtes par fenêtre et par visiteur
+const RATE_WINDOW_MS = Number(process.env.COACH_RATE_WINDOW_S || 600) * 1000;
+const MAX_CONCURRENT = Number(process.env.COACH_MAX_CONCURRENT || 2);
+/** @type {Map<string, number[]>} */
+const hits = new Map();
+let running = 0;
+
+/** Adresse du visiteur : en-tête X-Real-IP posé par nginx, sinon l'adresse de la connexion. */
+function clientIp(req) {
+  return String(req.headers['x-real-ip'] || req.socket.remoteAddress || '?');
+}
+
+function rateLimited(ip) {
+  const now = Date.now();
+  const list = (hits.get(ip) ?? []).filter((t) => now - t < RATE_WINDOW_MS);
+  if (list.length >= RATE_MAX) {
+    hits.set(ip, list);
+    return true;
+  }
+  list.push(now);
+  hits.set(ip, list);
+  return false;
+}
+
+/** @param {import('node:http').ServerResponse} res @param {number} status @param {unknown} body */
+function send(res, status, body) {
+  res.writeHead(status, {
+    'Content-Type': 'application/json; charset=utf-8',
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Headers': 'Content-Type',
+  });
+  res.end(JSON.stringify(body));
+}
+
+/** @param {import('node:http').IncomingMessage} req */
+async function readJson(req) {
+  let body = '';
+  for await (const chunk of req) {
+    body += chunk;
+    if (body.length > 100_000) throw new Error('Requête trop volumineuse');
+  }
+  return JSON.parse(body || '{}');
+}
+
+const server = createServer(async (req, res) => {
+  const url = new URL(req.url ?? '/', 'http://x');
+  if (req.method === 'OPTIONS') return send(res, 204, {});
+  if (req.method === 'GET' && url.pathname === '/health') {
+    return send(res, 200, { ok: true, provider: cfg.provider, model: cfg.model });
+  }
+  if (req.method === 'GET' && url.pathname === '/db-health') {
+    try {
+      const { rows } = await pool.query('select version(), (select count(*) from users) as users');
+      return send(res, 200, { ok: true, postgres: rows[0].version, users: Number(rows[0].users) });
+    } catch (e) {
+      return send(res, 500, { ok: false, error: String(e?.message ?? e) });
+    }
+  }
+  // Plateforme d'apprentissage : comptes, livres, positions, explications (coach/plateforme.mjs)
+  if (url.pathname.startsWith('/api/') && !url.pathname.startsWith('/api/chess/mentor/')) {
+    try { if (await routerPlateforme({ req, res, url, readJson, send, engine, ip: clientIp(req) })) return; }
+    catch (e) { console.error('[plateforme] erreur', e); return send(res, 500, { ok: false, error: String(e?.message ?? e) }); }
+    return send(res, 404, { ok: false, error: 'Not found' });
+  }
+  if (req.method !== 'POST' || !url.pathname.startsWith('/api/chess/mentor/')) {
+    return send(res, 404, { ok: false, error: 'Not found' });
+  }
+
+  const ip = clientIp(req);
+  if (rateLimited(ip)) {
+    return send(res, 429, { ok: false, error: `Trop de questions : ${RATE_MAX} par ${Math.round(RATE_WINDOW_MS / 60000)} minutes. Réessaie un peu plus tard.` });
+  }
+  if (running >= MAX_CONCURRENT) {
+    return send(res, 503, { ok: false, error: 'Le coach est très sollicité, réessaie dans quelques secondes.' });
+  }
+
+  let payload;
+  try {
+    payload = await readJson(req);
+  } catch (e) {
+    return send(res, 400, { ok: false, error: String(e?.message ?? e) });
+  }
+  if (typeof payload.fen !== 'string' || payload.fen.split(' ').length < 4) {
+    return send(res, 400, { ok: false, error: 'FEN manquante ou invalide' });
+  }
+
+  running++;
+  // Jugement du coup joué (mode joueur) : { fen (avant le coup), move } → { text, category, loss, best… }.
+  if (url.pathname === '/api/chess/mentor/judge') {
+    try {
+      const t0 = Date.now();
+      const verdict = await judgeMove({ fen: payload.fen, move: String(payload.move ?? ''), engine });
+      console.log(`[coach] ${ip} jugement ${verdict.move} → ${verdict.category} (${verdict.loss}) ${Date.now() - t0} ms`);
+      try {
+        await appendFile(ANSWER_LOG, `${JSON.stringify({ at: new Date().toISOString(), kind: 'judge', fen: payload.fen, moveIn: payload.move, ...verdict })}\n`);
+      } catch { /* journal facultatif */ }
+      return send(res, 200, { ok: true, ...verdict });
+    } catch (e) {
+      return send(res, 400, { ok: false, error: String(e?.message ?? e) });
+    } finally {
+      running--;
+    }
+  }
+  // Lecture seule (étage 1 + sonde des maîtres) : { moves } → ce que le modèle voit dans les 40 derniers demi-coups.
+  if (url.pathname === '/api/chess/mentor/lecture') {
+    try {
+      const lecture = await lireLaPartie(payload.moves ?? []);
+      return send(res, 200, { ok: true, lecture, lectureTexte: texteIntention(lecture, payload) });
+    } catch (e) {
+      return send(res, 400, { ok: false, error: String(e?.message ?? e) });
+    } finally {
+      running--;
+    }
+  }
+  try {
+    const [result, lecture] = await Promise.all([askCoach({ ...payload, engine, cfg }), lireLaPartie(payload.moves ?? []).catch(() => null)]);
+    if (lecture && !lecture.tropTot) console.log(`[coach] lecture : ${texteIntention(lecture, payload)}`);
+    console.log(
+      `[coach] ${ip} via ${req.socket.remoteAddress} — ${cfg.provider}/${cfg.model} contexte ${result.timings.context} ms, LLM ${result.timings.llm} ms` +
+      (result.ungrounded.length ? `, coups hors contexte : ${result.ungrounded.join(' ')}` : ''),
+    );
+    await logAnswer(payload, result);
+    return send(res, 200, { ok: true, ...result, lecture, lectureTexte: texteIntention(lecture, payload) });
+  } catch (e) {
+    console.error('[coach] erreur', e);
+    return send(res, 502, { ok: false, error: String(e?.message ?? e) });
+  } finally {
+    running--;
+  }
+});
+
+server.listen(PORT, HOST, () => {
+  console.log(`[coach] http://${HOST}:${PORT} — ${cfg.provider} / ${cfg.model}`);
+});

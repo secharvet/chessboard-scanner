@@ -1,0 +1,102 @@
+/* Assistant d'ouverture (maquette, 8 octobre 2026) : échiquier compact à gauche, récit à droite. */
+.ouv__layout { --plateau: clamp(320px, calc((100vh - 310px) / 2), 560px); display: grid; grid-template-columns: var(--plateau) minmax(0, 1fr); gap: 24px; padding: 12px 16px; align-items: start; }
+.ouv__gauche { position: sticky; top: 10px; align-self: start; display: flex; flex-direction: column; gap: 6px; }
+.ouv__board-wrap { width: var(--plateau); aspect-ratio: 1; }
+.ouv__board-wrap .board { width: 100%; height: 100%; }
+.ouv__ligne { margin-top: 6px; font-family: var(--mono); font-size: 0.82rem; line-height: 1.6; color: var(--muted); min-height: 1.6em; max-height: 3.2em; overflow-y: auto; }
+.ouv__ligne .mv { cursor: pointer; padding: 1px 4px; border-radius: 4px; }
+.ouv__ligne .mv:hover { background: rgba(255,255,255,0.08); color: var(--text); }
+.ouv__ligne .mv--cur { color: var(--text); background: rgba(124,92,255,0.25); }
+.ouv__boutons { display: flex; gap: 6px; margin-top: 6px; flex-wrap: wrap; }
+.ouv__boutons .btn { padding: 5px 10px; font-size: 0.85rem; }
+.btn { background: rgba(255,255,255,0.06); border: 1px solid var(--border); color: var(--text); border-radius: 8px; padding: 7px 12px; cursor: pointer; font: inherit; }
+.btn:hover { background: rgba(255,255,255,0.12); }
+.btn--primary { background: var(--accent); border-color: transparent; }
+.btn--primary:hover { filter: brightness(1.1); }
+.ouv__aide { color: var(--muted); font-size: 0.78rem; margin: 4px 0 6px; }
+.ouv__droite { background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 20px; min-width: 0; }
+.ouv__titre { font-size: 1.25rem; font-weight: 600; margin-bottom: 6px; display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+.ouv__etat { font-size: 0.8rem; color: var(--muted); font-weight: normal; }
+.ouv__maquette { font-size: 0.7rem; color: var(--accent2); border: 1px solid var(--accent2); border-radius: 999px; padding: 1px 8px; vertical-align: middle; margin-left: 6px; }
+.ouv__recit { line-height: 1.55; font-size: 1.02rem; margin: 10px 0 18px; }
+.ouv__recit p { margin: 0 0 8px; }
+.ouv__recit .qui { color: var(--accent2); font-weight: 600; }
+.ouv__recit .menace { color: #ffb86b; }
+.ouv__recit .hors { color: var(--muted); font-style: italic; }
+.ouv__bloc { margin-top: 14px; }
+.ouv__bloc h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin: 0 0 8px; font-weight: 600; }
+.ouv__liste { display: flex; flex-direction: column; gap: 6px; }
+.coup { display: grid; grid-template-columns: 5.5em 1fr; gap: 10px; align-items: start; padding: 8px 10px; border-radius: 8px; border: 1px solid var(--border); background: rgba(255,255,255,0.02); cursor: pointer; }
+.coup:hover { background: rgba(124,92,255,0.12); border-color: rgba(124,92,255,0.5); }
+.coup__san { font-family: var(--mono); font-weight: 700; font-size: 1rem; }
+.coup__san small { display: block; font-weight: normal; color: var(--muted); font-size: 0.72rem; }
+.coup__why { color: var(--text); line-height: 1.45; font-size: 0.95rem; }
+.coup--principal .coup__san { color: var(--accent2); }
+.coup--erreur { border-color: rgba(255,120,120,0.35); }
+.coup--erreur:hover { background: rgba(255,120,120,0.1); border-color: rgba(255,120,120,0.7); }
+.coup--erreur .coup__san { color: #ff8a8a; }
+.ouv__schema { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; font-size: 0.93rem; line-height: 1.45; }
+.ouv__schema div { background: rgba(255,255,255,0.03); border-radius: 8px; padding: 10px; }
+.ouv__schema b { display: block; margin-bottom: 4px; color: var(--muted); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; }
+.ouv__signature { margin-top: 20px; padding-top: 12px; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.82rem; line-height: 1.45; }
+.ouv__apercu { position: absolute; left: 12px; top: 12px; background: rgba(0,0,0,0.6); color: #fff; font-size: 0.8rem; padding: 3px 8px; border-radius: 6px; pointer-events: none; }
+.ouv__board-wrap { position: relative; }
+
+.coup__pun { color: var(--muted); font-family: var(--mono); font-size: 0.8rem; }
+.ouv__recit .faute { color: #ff8a8a; }
+.ouv__recit .pas { padding-left: 10px; border-left: 2px solid rgba(255,255,255,0.12); }
+.ouv__recit .bilan { background: rgba(255,138,138,0.08); border: 1px solid rgba(255,138,138,0.3); border-radius: 8px; padding: 8px 10px; }
+
+/* Téléphone : échiquier collé en haut, texte défilant dessous, boutons petits fixés en bas, rien d'autre. */
+@media (max-width: 800px) {
+  .ouv .topbar, .ouv__aide { display: none; }
+  .ouv { padding: 0 !important; margin: 0; }
+  .ouv__layout { display: flex; flex-direction: column; gap: 0; padding: 0; height: calc(100dvh - 42px); height: calc(100vh - 42px); }
+  .ouv__gauche { flex: 0 0 auto; display: flex; flex-direction: column; }
+  .ouv__board-wrap { max-width: 100vw; width: 100vw; min-width: 0; }
+  .ouv__ligne { margin: 4px 10px 0; font-size: 0.78rem; line-height: 1.5; min-height: 0; max-height: 2.6em; overflow-y: auto; }
+  .ouv__droite { flex: 1 1 auto; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; border-radius: 0; border-left: 0; border-right: 0; padding: 10px 12px 64px; }
+  .ouv__titre { font-size: 1.05rem; }
+  .ouv__recit { font-size: 0.95rem; margin: 6px 0 12px; }
+  .coup { grid-template-columns: 4.5em 1fr; padding: 6px 8px; gap: 8px; }
+  .coup__why { font-size: 0.88rem; }
+  .ouv__schema { grid-template-columns: 1fr; }
+  .ouv__signature { font-size: 0.75rem; }
+  .ouv__boutons { position: fixed; left: 0; right: 0; bottom: 0; margin: 0; padding: 6px 8px calc(6px + env(safe-area-inset-bottom, 0px)); background: rgba(11, 15, 23, 0.92); backdrop-filter: blur(6px); border-top: 1px solid var(--border); justify-content: space-between; flex-wrap: nowrap; z-index: 20; }
+  .ouv__boutons .btn { padding: 5px 9px; font-size: 0.8rem; flex: 1 1 0; }
+}
+
+/* Échiquier d'entraînement (PC) */
+.ouv__entrainement { background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: var(--radius); padding: 8px 0 0; min-width: 0; margin-top: 4px; }
+.ouv__entrainement .ent__tete, .ouv__entrainement .ent__panneau { padding: 0 10px; }
+.ent__tete { display: flex; flex-direction: column; gap: 4px; margin-bottom: 6px; }
+.ouv__aide { display: none; }
+.ent__titre { font-weight: 600; font-size: 0.9rem; display: flex; gap: 8px; align-items: baseline; }
+.ent__options { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; font-size: 0.78rem; color: var(--muted); }
+.ent__options .btn { padding: 3px 8px; font-size: 0.78rem; }
+.ent__options select { margin-left: 4px; }
+.ent__corps { display: flex; flex-direction: column; gap: 8px; }
+.ent__board-wrap { width: 100%; aspect-ratio: 1; position: relative; }
+.ent__board-wrap .board { width: 100%; height: 100%; }
+.ent__panneau { font-size: 0.85rem; line-height: 1.4; max-height: 120px; overflow-y: auto; padding-bottom: 8px; }
+.ent__panneau p { margin: 0 0 8px; }
+.ent__panneau .ok { color: var(--accent2); } .ent__panneau .ko { color: #ffb86b; }
+.ent__ligne { font-family: var(--mono); font-size: 0.72rem; color: var(--muted); margin-top: 4px; }
+@media (max-width: 800px) { .ouv__entrainement { display: none; } .ouv__gauche { position: static; } }
+@media (max-width: 1100px) and (min-width: 801px) { .ouv__layout { grid-template-columns: 1fr; } .ouv__gauche { position: static; } }
+.ouv__recit .bascule { color: var(--accent2); font-weight: 600; }
+
+/* Lecture depuis l'API : professeurs, comparaison, annotations (17 octobre 2026) */
+.ouv__horsligne { margin: 8px 16px 0; padding: 6px 10px; border-radius: 8px; font-size: 0.82rem; color: #ffb86b; background: rgba(255,184,107,0.08); border: 1px solid rgba(255,184,107,0.35); }
+.ouv__editer { font-size: 0.8rem; padding: 4px 10px; margin-left: auto; font-weight: normal; text-decoration: none; }
+.ouv__titre { align-items: center; }
+.ouv__colonnes { display: block; }
+.ouv__colonnes--deux { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+.ouv__col--deux { border-left: 1px solid var(--border); padding-left: 22px; }
+.ouv__colTitre { font-weight: 600; color: var(--accent2); margin: 0 0 6px; font-size: 0.95rem; }
+.ouv__recit .repli { color: var(--muted); font-size: 0.9rem; font-style: italic; background: rgba(255,255,255,0.04); border-radius: 6px; padding: 6px 8px; }
+.ouv__video { color: var(--accent2); }
+.ouv__signature b { color: var(--text); font-weight: 600; }
+@media (max-width: 1100px) { .ouv__colonnes--deux { grid-template-columns: 1fr; } .ouv__col--deux { border-left: 0; padding-left: 0; border-top: 1px solid var(--border); padding-top: 14px; } }
+@media (max-width: 800px) { .ouv__col--deux { display: none; } .ouv__horsligne { margin: 6px 10px 0; } .ouv__editer { display: none; } }
+.ouv__recit .camp { color: var(--muted); font-size: 0.85em; }

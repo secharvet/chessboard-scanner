@@ -1,0 +1,216 @@
+#!/usr/bin/env python3
+"""Le lecteur (8 octobre 2026) : modèle brut à l'échelle + sonde des thèmes des maîtres + arbres nommés, sur une partie.
+
+  entraîner la sonde (une fois) :
+    python3 scripts/arbres/lecteur.py entrainer --emb data/brut-x/annotes --themes data/reference/annotes/themes-fable.jsonl --out data/brut-x/lecteur-sonde.pt
+  lire une partie :
+    python3 scripts/arbres/lecteur.py lire partie.bin --model data/brut-x/model.pt --sonde data/brut-x/lecteur-sonde.pt \
+        --arbres data/brut-x/arbres --noms data/brut-x/noms.json [--from 40] [--json sortie.json]
+Pour chaque demi-coup à partir du 40e : thèmes probables (probabilité calibrée sur les parties annotées, rapport à la fréquence
+de base), les trois arbres les plus proches avec leur nom, et les faits d'avenir les plus probables si --avenir (non fourni ici).
+Tout est local : pas d'appel à un LLM.
+"""
+import argparse, json, sys, os
+import numpy as np, torch, torch.nn.functional as F
+sys.path.insert(0, os.path.dirname(__file__))
+THEMES = ['attaque_roi', 'defense_roi', 'colonne_ouverte', 'structure_pions', 'case_faible_avant_poste', 'echange_pieces', 'developpement', 'centre_espace', 'levier_rupture', 'prophylaxie', 'manoeuvre', 'initiative_pression', 'tactique', 'finale', 'materiel', 'blocus', 'aile_dame']
+LIBELLE = {'attaque_roi': 'attaque du roi', 'defense_roi': 'défense du roi', 'colonne_ouverte': 'colonne ouverte', 'structure_pions': 'structure de pions', 'case_faible_avant_poste': 'case faible / avant-poste', 'echange_pieces': 'échange de pièces', 'developpement': 'développement', 'centre_espace': 'centre et espace', 'levier_rupture': 'levier / rupture', 'prophylaxie': 'prophylaxie', 'manoeuvre': 'manœuvre', 'initiative_pression': 'initiative / pression', 'tactique': 'tactique', 'finale': 'finale', 'materiel': 'matériel', 'blocus': 'blocus', 'aile_dame': 'aile dame'}
+REC = 72
+
+def entrainer(a):
+    labels = {}
+    for l in open(a.themes):
+        j = json.loads(l); th = [t for t in j['themes'] if t in THEMES]
+        if th: labels[(j['id'], j['ply'] + 1)] = th
+    meta = [tuple(json.loads(l)[:2]) for l in open(a.emb + '.meta.jsonl')]; E = np.load(a.emb + '.emb.npy')
+    keys = [(i, k) for i, k in enumerate(meta) if k in labels]
+    X = np.stack([E[i] for i, _ in keys]).astype(np.float32); Y = np.array([[1 if t in labels[k] else 0 for t in THEMES] for _, k in keys], dtype=np.float32)
+    mu = X.mean(0); sd = X.std(0) + 1e-6; Xn = torch.from_numpy((X - mu) / sd); Yt = torch.from_numpy(Y)
+    torch.manual_seed(0); net = torch.nn.Sequential(torch.nn.Linear(X.shape[1], a.hidden), torch.nn.GELU(), torch.nn.Dropout(0.3), torch.nn.Linear(a.hidden, len(THEMES)))
+    opt = torch.optim.AdamW(net.parameters(), lr=1e-3, weight_decay=1e-2)
+    for ep in range(a.epochs):
+        perm = torch.randperm(len(Xn))
+        for s in range(0, len(perm), 256):
+            b = perm[s:s + 256]; loss = F.binary_cross_entropy_with_logits(net(Xn[b]), Yt[b]); opt.zero_grad(); loss.backward(); opt.step()
+    net.eval()
+    torch.save({'state': net.state_dict(), 'mu': mu, 'sd': sd, 'hidden': a.hidden, 'base': Y.mean(0), 'n': len(keys)}, a.out)
+    print(f'sonde entraînée sur {len(keys)} coups commentés → {a.out}', file=sys.stderr)
+
+class Lecteur:
+    """Modèle + sonde + arbres chargés une fois ; lecture d'une partie (rangées de 72 octets)."""
+    def __init__(self, model, sonde, arbres, noms=''):
+        from importlib import import_module
+        tb = import_module('train-brut'); self.Brut, self.Plies = tb.Brut, tb.Plies
+        ck = torch.load(model, map_location='cpu'); self.W = ck['W']
+        self.model = self.Brut(self.W, ck['dim'], ck['layers'], ck.get('heads', 4)); self.model.load_state_dict(ck['state'], strict=False); self.model.eval()
+        sk = torch.load(sonde, map_location='cpu', weights_only=False); self.mu, self.sd, self.base = sk['mu'], sk['sd'], sk['base']
+        self.net = torch.nn.Sequential(torch.nn.Linear(ck['dim'], sk['hidden']), torch.nn.GELU(), torch.nn.Dropout(0.3), torch.nn.Linear(sk['hidden'], len(THEMES))); self.net.load_state_dict(sk['state']); self.net.eval()
+        self.cent = None
+        if arbres and (os.path.exists(arbres + '.centres2.npy') or os.path.exists(arbres + '.centres.npy')):
+            cent = np.load(arbres + '.centres2.npy') if os.path.exists(arbres + '.centres2.npy') else np.load(arbres + '.centres.npy')
+            if cent.shape[1] == ck['dim']: self.cent = cent / (np.linalg.norm(cent, axis=1, keepdims=True) + 1e-9)
+        groupes = json.load(open(arbres + '.inventaire.json'))['groupes'] if arbres and os.path.exists(arbres + '.inventaire.json') else []
+        self.inv = {g['groupe']: g for g in groupes}; self.noms = {}
+        if noms:
+            nn_ = json.load(open(noms)); items = nn_ if isinstance(nn_, list) else list(nn_.values())
+            for i, x in enumerate(items):
+                g = int(x['groupe']) if 'groupe' in x else (groupes[i]['groupe'] if i < len(groupes) else None)
+                if g is not None: self.noms[g] = x
+    def lire_fin(self, raw, end):
+        """Lecture de la fenêtre qui se termine au demi-coup `end` (1-based) de la partie `raw` [n, 72]."""
+        P = self.Plies([('p', raw)])
+        with torch.no_grad():
+            x, _, _, _ = P.batch(np.array([0]), np.array([end]), self.W, 0)
+            h, _, _, _, hz = self.model(torch.from_numpy(x)); h = h[0].numpy(); hz = torch.sigmoid(hz[0]).numpy()
+            z = (h - self.mu) / self.sd; p = torch.sigmoid(self.net(torch.from_numpy(z).float()[None]))[0].numpy()
+        # tête « horizon » : cases d'arrivée des 30 prochains demi-coups, pour « moi » (le camp qui vient de jouer) et « lui »,
+        # dans le repère orienté (moi en bas) ; on remet dans le repère réel si « moi » est noir.
+        me_black = (end - 1) % 2 == 1
+        def cases(v):
+            idx = np.argsort(-v)[:10]; out = []
+            for i in idx:
+                sq = int(i); r, f = divmod(sq, 8)
+                if me_black: r = 7 - r
+                out.append({'case': 'abcdefgh'[f] + str(r + 1), 'p': float(v[i])})
+            return out
+        # hz[:64] : cases d'arrivée du camp AU TRAIT (le premier demi-coup à venir), hz[64:128] : celles du camp qui vient de jouer
+        attendu = {('w' if me_black else 'b'): cases(hz[:64]), ('b' if me_black else 'w'): cases(hz[64:128])}
+        # cases de DÉPART attendues (quelles pièces vont bouger), même convention
+        depart = {('w' if me_black else 'b'): cases(hz[128:192]), ('b' if me_black else 'w'): cases(hz[192:256])}
+        lift = p / (self.base + 1e-6); order = np.argsort(-p)
+        themes = [{'theme': THEMES[j], 'libelle': LIBELLE[THEMES[j]], 'p': float(p[j]), 'x': float(lift[j])} for j in order[:5]]
+        arbres = []
+        if self.cent is not None:
+          v = h / (np.linalg.norm(h) + 1e-9); sims = self.cent @ v; top = np.argsort(-sims)[:3]
+          arbres = [{'groupe': int(c), 'sim': float(sims[c]), 'nom': self.noms.get(int(c), {}).get('nom', ''), 'sens': self.noms.get(int(c), {}).get('sens', ''), 'phase': self.noms.get(int(c), {}).get('phase', ''), 'confiance': self.noms.get(int(c), {}).get('confiance', ''), 'parties': self.inv.get(int(c), {}).get('parties', 0)} for c in top]
+        return {'demi_coup': int(end), 'camp': 'w' if (end - 1) % 2 == 0 else 'b', 'themes': themes, 'arbres': arbres, 'attendu': attendu, 'depart': depart}
+
+# ---- échiquier en Python (python-chess), même format que scripts/plateaux.mjs : 72 octets par demi-coup
+def rangee(board, move):
+    """Rangée de 72 octets APRÈS le coup `move` joué sur `board` (board est déjà dans la position d'après)."""
+    import chess
+    b = np.zeros(REC, dtype=np.uint8)
+    for sq, pc in board.piece_map().items(): b[sq] = pc.piece_type + (0 if pc.color == chess.WHITE else 6)
+    b[64] = 0 if board.turn == chess.WHITE else 1
+    b[65] = (1 if board.has_kingside_castling_rights(chess.WHITE) else 0) | (2 if board.has_queenside_castling_rights(chess.WHITE) else 0) | (4 if board.has_kingside_castling_rights(chess.BLACK) else 0) | (8 if board.has_queenside_castling_rights(chess.BLACK) else 0)
+    b[66] = move.from_square; b[67] = move.to_square
+    return b
+def plateaux_depuis(moves_san=None, moves_uci=None):
+    import chess
+    board = chess.Board(); rows = []
+    for m in (moves_san or moves_uci or []):
+        mv = board.parse_san(m) if moves_san else chess.Move.from_uci(m)
+        cap = board.piece_at(mv.to_square); is_cap = cap is not None or board.is_en_passant(mv)
+        board.push(mv); r = rangee(board, mv); r[68] = (cap.piece_type if cap else (1 if is_cap else 0)); r[69] = 2 if board.is_checkmate() else (1 if board.is_check() else 0); rows.append(r)
+    return np.stack(rows) if rows else np.zeros((0, REC), dtype=np.uint8), board
+
+def coup_probable(L, raw, board, k=3):
+    """Coups légaux les plus probables pour le camp au trait, d'après les têtes « prochain coup » du modèle (sans calcul)."""
+    import chess
+    n = len(raw); W = L.W
+    if n < W: return []
+    P = L.Plies([('p', raw)])
+    with torch.no_grad():
+        x, _, _, _ = P.batch(np.array([0]), np.array([n]), W, 0)
+        _, lf, lt, _, _ = L.model(torch.from_numpy(x)); pf = torch.softmax(lf[0], 0).numpy(); pt = torch.softmax(lt[0], 0).numpy()
+    me_black = (n - 1) % 2 == 1  # le camp qui vient de jouer ; le repère est retourné si c'est les Noirs
+    def ori(sq): return sq if not me_black else (7 - sq // 8) * 8 + sq % 8
+    cands = []
+    for mv in board.legal_moves:
+        sc = float(pf[ori(mv.from_square)] * pt[ori(mv.to_square)]); cands.append((sc, mv))
+    cands.sort(key=lambda t: -t[0]); tot = sum(c for c, _ in cands) or 1.0
+    return [{'uci': mv.uci(), 'san': board.san(mv), 'p': sc / tot} for sc, mv in cands[:k]]
+
+def suite_probable(L, L2, raw, board, n_plies=8):
+    """Déroule la suite la plus probable (gourmand), en s'arrêtant sur mat/nulle. Retourne la liste SAN."""
+    raw = raw.copy(); out = []
+    for _ in range(n_plies):
+        M = L if len(raw) >= L.W else L2
+        if M is None or len(raw) < M.W: break
+        c = coup_probable(M, raw, board, 1)
+        if not c: break
+        import chess
+        mv = chess.Move.from_uci(c[0]['uci']); san = board.san(mv); cap = board.piece_at(mv.to_square); is_cap = cap is not None or board.is_en_passant(mv)
+        board.push(mv); r = rangee(board, mv); r[68] = (cap.piece_type if cap else (1 if is_cap else 0)); r[69] = 2 if board.is_checkmate() else (1 if board.is_check() else 0)
+        raw = np.concatenate([raw, r[None]]); out.append(san)
+        if board.is_game_over(): break
+    return out
+
+def serveur(a):
+    import base64
+    from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+    L = Lecteur(a.model, a.sonde, a.arbres, a.noms); W = L.W
+    L2 = Lecteur(a.model2, a.sonde2, a.arbres2, a.noms2) if a.model2 else None  # relais à fenêtre courte
+    Wmin = L2.W if L2 else W
+    class H(BaseHTTPRequestHandler):
+        def log_message(self, *x): pass
+        def _send(self, code, obj):
+            b = json.dumps(obj, ensure_ascii=False).encode(); self.send_response(code); self.send_header('Content-Type', 'application/json; charset=utf-8'); self.send_header('Content-Length', str(len(b))); self.end_headers(); self.wfile.write(b)
+        def do_GET(self):
+            if self.path == '/health': return self._send(200, {'ok': True, 'fenetre': W, 'fenetre_min': Wmin, 'themes': THEMES, 'arbres': 0 if L.cent is None else len(L.cent)})
+            self._send(404, {'ok': False})
+        def do_POST(self):
+            try:
+                n = int(self.headers.get('Content-Length', 0)); body = json.loads(self.rfile.read(n) or b'{}')
+                raw = np.frombuffer(base64.b64decode(body['plateaux']), dtype=np.uint8).reshape(-1, REC)
+                if len(raw) < Wmin: return self._send(200, {'ok': True, 'trop_tot': True, 'demi_coups': int(len(raw)), 'fenetre': Wmin})
+                ends = body.get('fins') or [len(raw)]
+                def lire(e):
+                    e = int(e); M = L if e >= W else L2
+                    r = M.lire_fin(raw, e); r['fenetre'] = M.W; return r
+                out = {'ok': True, 'lectures': [lire(e) for e in ends if Wmin <= int(e) <= len(raw)]}
+                if body.get('fen'):
+                    import chess
+                    board = chess.Board(body['fen']); M = L if len(raw) >= W else L2
+                    out['coups'] = coup_probable(M, raw, board, 3)
+                    out['suite'] = suite_probable(L, L2, raw, board.copy(), int(body.get('suite', 8)))
+                return self._send(200, out)
+            except Exception as e:
+                return self._send(400, {'ok': False, 'error': str(e)})
+    print(f'lecteur prêt sur 127.0.0.1:{a.port} (fenêtre {W}, relais {Wmin}, {0 if L.cent is None else len(L.cent)} arbres)', file=sys.stderr, flush=True)
+    ThreadingHTTPServer(('127.0.0.1', a.port), H).serve_forever()
+
+def lire(a):
+    from importlib import import_module
+    tb = import_module('train-brut'); Brut, Plies = tb.Brut, tb.Plies
+    ck = torch.load(a.model, map_location='cpu'); W = ck['W']
+    model = Brut(W, ck['dim'], ck['layers'], ck.get('heads', 4)); model.load_state_dict(ck['state'], strict=False); model.eval()
+    raw = np.fromfile(a.partie, dtype=np.uint8).reshape(-1, REC); n = len(raw)
+    san = json.load(open(a.partie + '.san.json')) if os.path.exists(a.partie + '.san.json') else [str(i + 1) for i in range(n)]
+    P = Plies([('p', raw)])
+    sk = torch.load(a.sonde, map_location='cpu', weights_only=False)
+    net = torch.nn.Sequential(torch.nn.Linear(ck['dim'], sk['hidden']), torch.nn.GELU(), torch.nn.Dropout(0.3), torch.nn.Linear(sk['hidden'], len(THEMES))); net.load_state_dict(sk['state']); net.eval()
+    base = sk['base']
+    cent = np.load(a.arbres + '.centres2.npy') if os.path.exists(a.arbres + '.centres2.npy') else np.load(a.arbres + '.centres.npy'); cent = cent / (np.linalg.norm(cent, axis=1, keepdims=True) + 1e-9)
+    groupes = json.load(open(a.arbres + '.inventaire.json'))['groupes'] if os.path.exists(a.arbres + '.inventaire.json') else []
+    inv = {g['groupe']: g for g in groupes}; noms = {}
+    if a.noms:
+        nn_ = json.load(open(a.noms)); items = nn_ if isinstance(nn_, list) else list(nn_.values())
+        for i, x in enumerate(items):  # les noms suivent l'ordre de l'inventaire (nommer.mjs), sauf si le groupe est indiqué
+            g = int(x['groupe']) if 'groupe' in x else (groupes[i]['groupe'] if i < len(groupes) else None)
+            if g is not None: noms[g] = x
+    out = []
+    ends = list(range(max(W, a.start), n + 1))
+    with torch.no_grad():
+        for end in ends:
+            x, _, _, _ = P.batch(np.array([0]), np.array([end]), W, 0)
+            h, _, _, _, _ = model(torch.from_numpy(x)); h = h[0]
+            z = (h.numpy() - sk['mu']) / sk['sd']; p = torch.sigmoid(net(torch.from_numpy(z).float()[None]))[0].numpy()
+            lift = p / (base + 1e-6)
+            order = np.argsort(-p); themes = [(THEMES[j], float(p[j]), float(lift[j])) for j in order[:4]]
+            v = h.numpy() / (np.linalg.norm(h.numpy()) + 1e-9); sims = cent @ v; top = np.argsort(-sims)[:3]
+            arbres = [(int(c), float(sims[c]), noms.get(int(c), {}).get('nom', ''), noms.get(int(c), {}).get('phase', ''), inv.get(int(c), {}).get('parties', 0)) for c in top]
+            me = 'Blancs' if (end - 1) % 2 == 0 else 'Noirs'
+            out.append({'demi_coup': end, 'coup': san[end - 1] if end - 1 < len(san) else '', 'camp': me, 'themes': themes, 'arbres': arbres})
+    for r in out:
+        th = ', '.join(f"{LIBELLE[t]} {p:.0%} (×{l:.1f})" for t, p, l in r['themes'] if l >= a.lift or p >= 0.5)
+        ar = ' | '.join(f"{nm or 'arbre ' + str(c)} ({s:.2f})" for c, s, nm, ph, np_ in r['arbres'][:2])
+        print(f"{(r['demi_coup'] + 1) // 2}{'.' if r['camp'] == 'Blancs' else '...'} {r['coup']:7s} {th}   ⟶ {ar}")
+    if a.json: json.dump(out, open(a.json, 'w'), ensure_ascii=False, indent=1)
+
+if __name__ == '__main__':
+    ap = argparse.ArgumentParser(); sub = ap.add_subparsers(dest='cmd', required=True)
+    e = sub.add_parser('entrainer'); e.add_argument('--emb', required=True); e.add_argument('--themes', required=True); e.add_argument('--out', required=True); e.add_argument('--hidden', type=int, default=128); e.add_argument('--epochs', type=int, default=40)
+    sv = sub.add_parser('serveur'); sv.add_argument('--model', required=True); sv.add_argument('--sonde', required=True); sv.add_argument('--arbres', required=True); sv.add_argument('--noms', default=''); sv.add_argument('--port', type=int, default=8002); sv.add_argument('--model2', default=''); sv.add_argument('--sonde2', default=''); sv.add_argument('--arbres2', default=''); sv.add_argument('--noms2', default='')
+    l = sub.add_parser('lire'); l.add_argument('partie'); l.add_argument('--model', required=True); l.add_argument('--sonde', required=True); l.add_argument('--arbres', required=True); l.add_argument('--noms', default=''); l.add_argument('--start', type=int, default=40); l.add_argument('--lift', type=float, default=1.3); l.add_argument('--json', default='')
+    a = ap.parse_args(); {'entrainer': entrainer, 'lire': lire, 'serveur': serveur}[a.cmd](a)

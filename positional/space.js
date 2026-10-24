@@ -2,7 +2,7 @@
  * Module 5 — Espace (pions avancés, cases faibles).
  */
 
-import { parseFenPawns, parseFenPieces, isSquareAttackedByPawn, pawnsOfColor } from './fen-board.js';
+import { parseFenPawns, canPawnsEverAttack, pawnsOfColor } from './fen-board.js';
 import { token } from './tokens.js';
 
 /**
@@ -11,7 +11,6 @@ import { token } from './tokens.js';
  */
 export function buildSpaceFacts(fen) {
   const { pawns } = parseFenPawns(fen);
-  const { pieces } = parseFenPieces(fen);
   /** @type {import('./tokens.js').PositionalToken[]} */
   const out = [];
 
@@ -22,22 +21,23 @@ export function buildSpaceFacts(fen) {
   if (wAdvanced > bAdvanced) out.push(token('AVANTAGE_ESPACE', { color: 'w' }));
   else if (bAdvanced > wAdvanced) out.push(token('AVANTAGE_ESPACE', { color: 'b' }));
 
-  // CASE_FAIBLE : case en territoire ami (1-4 blancs, 5-8 noirs),
-  // inattaquable par tout pion allié, attaquable par un pion adverse
+  // CASE_FAIBLE (« trou ») : case du camp (rangées 3-4 blancs, 5-6 noirs) qu'aucun pion
+  // ami ne pourra plus jamais contrôler, parce qu'un pion voisin l'a déjà dépassée.
   for (const color of /** @type {const} */ (['w', 'b'])) {
     const allies = pawnsOfColor(pawns, color);
-    const enemies = pawnsOfColor(pawns, color === 'w' ? 'b' : 'w');
-    const ranks = color === 'w' ? [1, 2, 3, 4] : [5, 6, 7, 8];
-    const files = 'abcdefgh';
+    const ranks = color === 'w' ? [3, 4] : [5, 6];
 
-    for (const fileChar of files) {
+    for (let fileIdx = 0; fileIdx < 8; fileIdx++) {
       for (const rank of ranks) {
-        const fileIdx = files.indexOf(fileChar);
         const sq = { fileIdx, rank };
-        const attackedByAlly = isSquareAttackedByPawn(sq, allies, color);
-        const attackedByEnemy = isSquareAttackedByPawn(sq, enemies, color === 'w' ? 'b' : 'w');
-        if (!attackedByAlly && attackedByEnemy) {
-          out.push(token('CASE_FAIBLE', { square: `${fileChar}${rank}`, color }));
+        if (canPawnsEverAttack(sq, allies, color)) continue;
+        const neighbourPassed = allies.some(
+          (p) =>
+            Math.abs(p.fileIdx - fileIdx) === 1 &&
+            (color === 'w' ? p.rank >= rank : p.rank <= rank),
+        );
+        if (neighbourPassed) {
+          out.push(token('CASE_FAIBLE', { square: `${'abcdefgh'[fileIdx]}${rank}`, color }));
         }
       }
     }

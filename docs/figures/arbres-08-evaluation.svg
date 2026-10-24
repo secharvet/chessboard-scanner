@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 320" width="940" height="320" role="img" aria-label="Évaluation"><defs><marker id="ar" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#6b6457"/></marker></defs><rect width="100%" height="100%" fill="#faf8f2"/><text x="470" y="30" text-anchor="middle" font-family="Georgia, serif" font-size="18" font-weight="600" fill="#1f1d18">Comment on saura si l’abstraction marche : trois mesures, un témoin</text>
+<rect x="30" y="70" width="280" height="180" rx="10" fill="#e6f1e8" stroke="#c9c2b2" stroke-width="1.5"/>
+<text x="170.0" y="94" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="600" fill="#1f1d18">1. Prédire l’avenir</text>
+<text x="170.0" y="116" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6b6457">perte et AUC sur 10 % de parties</text>
+<text x="170.0" y="133" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6b6457">jamais vues, contre deux repères :</text>
+<text x="170.0" y="150" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6b6457">la constante (fréquences) et le</text>
+<text x="170.0" y="167" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6b6457">témoin « coups seuls »</text>
+<rect x="330" y="70" width="280" height="180" rx="10" fill="#e3eef7" stroke="#c9c2b2" stroke-width="1.5"/>
+<text x="470.0" y="94" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="600" fill="#1f1d18">2. Parties annotées</text>
+<text x="470.0" y="116" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6b6457">Chernev, études commentées, récits :</text>
+<text x="470.0" y="133" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6b6457">quand le maître écrit « attaque à</text>
+<text x="470.0" y="150" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6b6457">l’aile roi », ses voisines dans l’espace</text>
+<text x="470.0" y="167" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6b6457">portent-elles le même commentaire ?</text>
+<rect x="630" y="70" width="280" height="180" rx="10" fill="#f6e5e5" stroke="#c9c2b2" stroke-width="1.5"/>
+<text x="770.0" y="94" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="600" fill="#1f1d18">3. Lecture à l’aveugle</text>
+<text x="770.0" y="116" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6b6457">les 50 premiers arbres, nommés par</text>
+<text x="770.0" y="133" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6b6457">le LLM sous contrôle des comptes,</text>
+<text x="770.0" y="150" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6b6457">relus par l’auteur : lesquels sont</text>
+<text x="770.0" y="167" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6b6457">des stratégies reconnaissables ?</text>
+<text x="470" y="290" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="400" fill="#1f1d18">Si les grains ne battent pas le témoin « coups seuls », l’idée est fausse et on le saura sur des nombres, pas sur une impression.</text></svg>

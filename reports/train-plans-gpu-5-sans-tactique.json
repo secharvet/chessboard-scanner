@@ -1,0 +1,177 @@
+{
+  "tour_colonne": {
+    "n": 459826,
+    "positifs": {
+      "train": 54907,
+      "val": 6675,
+      "test": 6954
+    },
+    "logreg": {
+      "auc": 0.861,
+      "ap": 0.4583
+    },
+    "arbres": {
+      "auc": 0.8786,
+      "ap": 0.5139
+    },
+    "cnn": {
+      "auc": 0.8883,
+      "ap": 0.5493
+    },
+    "cnn+f": {
+      "auc": 0.8955,
+      "ap": 0.5716
+    },
+    "verdict": "réseau ne bat pas les arbres"
+  },
+  "rupture": {
+    "n": 554807,
+    "positifs": {
+      "train": 36129,
+      "val": 4497,
+      "test": 4416
+    },
+    "logreg": {
+      "auc": 0.7396,
+      "ap": 0.1943
+    },
+    "arbres": {
+      "auc": 0.7542,
+      "ap": 0.2086
+    },
+    "cnn": {
+      "auc": 0.784,
+      "ap": 0.2588
+    },
+    "cnn+f": {
+      "auc": 0.7827,
+      "ap": 0.2576
+    },
+    "verdict": "réseau > arbres (+0,02 ou plus)"
+  },
+  "affaiblir": {
+    "n": 477393,
+    "positifs": {
+      "train": 50866,
+      "val": 6256,
+      "test": 6262
+    },
+    "logreg": {
+      "auc": 0.6767,
+      "ap": 0.2479
+    },
+    "arbres": {
+      "auc": 0.6928,
+      "ap": 0.2696
+    },
+    "cnn": {
+      "auc": 0.6988,
+      "ap": 0.2808
+    },
+    "cnn+f": {
+      "auc": 0.7089,
+      "ap": 0.296
+    },
+    "verdict": "réseau ne bat pas les arbres"
+  },
+  "blocage": {
+    "n": 604016,
+    "positifs": {
+      "train": 7497,
+      "val": 899,
+      "test": 906
+    },
+    "logreg": {
+      "auc": 0.7658,
+      "ap": 0.0537
+    },
+    "arbres": {
+      "auc": 0.7778,
+      "ap": 0.0636
+    },
+    "cnn": {
+      "auc": 0.739,
+      "ap": 0.0449
+    },
+    "cnn+f": {
+      "auc": 0.7847,
+      "ap": 0.0707
+    },
+    "verdict": "réseau ne bat pas les arbres"
+  },
+  "cavalier_avant_poste": {
+    "n": 608016,
+    "positifs": {
+      "train": 7140,
+      "val": 884,
+      "test": 944
+    },
+    "logreg": {
+      "auc": 0.7944,
+      "ap": 0.0665
+    },
+    "arbres": {
+      "auc": 0.8043,
+      "ap": 0.0753
+    },
+    "cnn": {
+      "auc": 0.7925,
+      "ap": 0.0649
+    },
+    "cnn+f": {
+      "auc": 0.8229,
+      "ap": 0.0821
+    },
+    "verdict": "réseau ne bat pas les arbres"
+  },
+  "dominer": {
+    "n": 614518,
+    "positifs": {
+      "train": 2313,
+      "val": 323,
+      "test": 311
+    },
+    "logreg": {
+      "auc": 0.8105,
+      "ap": 0.0278
+    },
+    "arbres": {
+      "auc": 0.8201,
+      "ap": 0.0336
+    },
+    "cnn": {
+      "auc": 0.8116,
+      "ap": 0.0251
+    },
+    "cnn+f": {
+      "auc": 0.83,
+      "ap": 0.0301
+    },
+    "verdict": "réseau ne bat pas les arbres"
+  },
+  "baionnette": {
+    "n": 629141,
+    "positifs": {
+      "train": 999,
+      "val": 125,
+      "test": 125
+    },
+    "logreg": {
+      "auc": 0.9176,
+      "ap": 0.0166
+    },
+    "arbres": {
+      "auc": 0.9258,
+      "ap": 0.0311
+    },
+    "cnn": {
+      "auc": 0.9803,
+      "ap": 0.1476
+    },
+    "cnn+f": {
+      "auc": 0.981,
+      "ap": 0.1227
+    },
+    "verdict": "réseau > arbres (+0,02 ou plus)"
+  }
+}

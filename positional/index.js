@@ -7,6 +7,10 @@ import { buildMaterialFacts } from './material.js';
 import { buildDevelopmentFacts } from './development.js';
 import { buildSpaceFacts } from './space.js';
 import { buildTacticalFacts } from './piece-attacks.js';
+import { buildPhaseFacts, detectPhase } from './phase.js';
+import { buildStructureFacts } from './structures.js';
+import { buildImbalanceFacts } from './imbalances.js';
+import { buildAvailabilityFacts } from './disponibilites.js';
 
 export {
   buildPawnStructureFacts,
@@ -18,6 +22,11 @@ export {
   buildDevelopmentFacts,
   buildSpaceFacts,
   buildTacticalFacts,
+  buildPhaseFacts,
+  detectPhase,
+  buildStructureFacts,
+  buildImbalanceFacts,
+  buildAvailabilityFacts,
 };
 export { parseFenPawns } from './fen-board.js';
 export { findToken, sortTokens, token, tokenKey } from './tokens.js';
@@ -29,6 +38,7 @@ export { findToken, sortTokens, token, tokenKey } from './tokens.js';
  */
 export function buildAllFacts(fen) {
   return [
+    ...buildPhaseFacts(fen),
     ...buildPawnStructureFacts(fen),
     ...buildOpenFilesFacts(fen),
     ...buildOutpostFacts(fen),
@@ -38,5 +48,8 @@ export function buildAllFacts(fen) {
     ...buildDevelopmentFacts(fen),
     ...buildSpaceFacts(fen),
     ...buildTacticalFacts(fen),
+    ...buildStructureFacts(fen),
+    ...buildImbalanceFacts(fen),
+    ...buildAvailabilityFacts(fen),
   ];
 }

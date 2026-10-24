@@ -26,7 +26,7 @@ compose() {
 }
 
 # Image une fois (vendor chess.js + stockfish) — pas à chaque session
-if ! podman image exists chess_web 2>/dev/null && ! podman image exists localhost/chess_web 2>/dev/null; then
+if ! podman image exists localhost/chessboard-scanner_web 2>/dev/null; then
   echo "→ Première fois : build image web (vendor)…"
   compose -f compose.yaml build web
 fi

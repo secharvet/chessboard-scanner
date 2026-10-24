@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Échecs — plateforme d'apprentissage</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./site-nav.css" />
+    <style>
+      .acc { max-width: 900px; margin: 0 auto; padding: 32px 16px 48px; }
+      .acc h1 { font-size: 1.8rem; margin: 0 0 6px; }
+      .acc .sous { color: var(--muted); font-size: 1.02rem; max-width: 60ch; line-height: 1.5; }
+      .acc__grille { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-top: 24px; }
+      .acc__carte { display: block; background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 18px; color: var(--text); text-decoration: none; }
+      .acc__carte:hover { background: rgba(124,92,255,0.12); border-color: rgba(124,92,255,0.5); }
+      .acc__carte b { display: block; font-size: 1.05rem; margin-bottom: 4px; }
+      .acc__carte span { color: var(--muted); font-size: 0.9rem; line-height: 1.4; }
+      .acc__pied { color: var(--muted); font-size: 0.85rem; margin-top: 28px; line-height: 1.5; max-width: 70ch; }
+      .acc__etat { margin-top: 18px; font-size: 0.9rem; color: var(--muted); }
+    </style>
+  </head>
+  <body>
+    <div class="app">
+      <main class="acc">
+        <h1>Apprendre les ouvertures, expliquées coup par coup</h1>
+        <p class="sous">Un site ouvert pour les clubs : les ouvertures racontées coup par coup, les fautes typiques jouées et punies sous tes yeux, un échiquier pour t'entraîner, et des professeurs qui signent leurs explications.</p>
+        <div class="acc__grille">
+          <a class="acc__carte" href="./ouverture.html"><b>Assistant d'ouverture</b><span>Française et Italienne : chaque coup expliqué, les fautes punies, l'entraînement contre Stockfish qui suit le livre.</span></a>
+          <a class="acc__carte" href="./play.html"><b>Jouer contre Stockfish</b><span>Une partie à ton niveau, avec le jugement de chaque coup.</span></a>
+          <a class="acc__carte" href="./index.html"><b>Lecteur d'ouvertures</b><span>Des parties en PGN et l'arbre de leurs coups.</span></a>
+          <a class="acc__carte" href="./connexion.html"><b>Espace enseignants</b><span>Sur invitation : écrire ou corriger les explications d'une ouverture, les signer, les publier.</span></a>
+        </div>
+        <p class="acc__etat" id="etat"></p>
+        <p class="acc__pied">Les textes publiés sont sous licence <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr" target="_blank" rel="noopener">CC BY-SA 4.0</a>. Les textes signés « IA (brouillon) » ont été rédigés par une IA et vérifiés au moteur ; ils attendent la relecture d'un enseignant. Projet sans but lucratif, par passion.</p>
+      </main>
+    </div>
+    <script type="module" src="./site-nav.js"></script>
+    <script type="module">
+      fetch('/api/livres').then((r) => r.json()).then((j) => { if (!j.ok) return; const n = j.livres.reduce((s, l) => s + l.positions, 0); const auteurs = new Set(j.livres.flatMap((l) => l.auteurs.map((a) => a.display_name))); document.getElementById('etat').textContent = `${j.livres.length} ouvertures, ${n} positions expliquées, ${auteurs.size} auteur${auteurs.size > 1 ? 's' : ''}.`; }).catch(() => {});
+    </script>
+  </body>
+</html>

@@ -13,6 +13,7 @@ import { buildAllFacts } from './positional/index.js';
 import { interpretFacts } from './positional/interpreter.js';
 import { parseFenPieces } from './positional/fen-board.js';
 import { bindMentorPanel } from './mentor-ui.js';
+import { judgePlayedMove } from './mentor-client.js';
 
 const $board = document.getElementById('playBoard');
 const $status = document.getElementById('playStatus');
@@ -171,11 +172,19 @@ function isPlayerTurn() {
 }
 
 function snapshot() {
-  return { fen: game.fen(), lastMove: lastMove ? { ...lastMove } : null };
+  // On garde la liste complète des coups : game.load(fen) effacerait l'historique, et le coach (lecteur) a besoin
+  // de toute la partie depuis le début pour lire la séquence.
+  return { fen: game.fen(), moves: game.history(), lastMove: lastMove ? { ...lastMove } : null };
 }
 
 function loadSnapshot(snap) {
-  game.load(snap.fen);
+  if (Array.isArray(snap.moves)) {
+    const g = new Chess();
+    try { for (const m of snap.moves) g.move(m); } catch { g.load(snap.fen); }
+    if (g.fen() === snap.fen) game = g; else game.load(snap.fen);
+  } else {
+    game.load(snap.fen);
+  }
   lastMove = snap.lastMove;
 }
 
@@ -268,8 +277,17 @@ function refreshBoard() {
 }
 
 function applyMove(from, to, promotion) {
+  const fenBefore = game.fen();
+  const mover = game.turn();
   const m = game.move({ from, to, promotion: promotion || undefined });
   if (!m) return false;
+  // Mode joueur : le coup du joueur est jugé (pendant que le moteur répond), affiché en tête du conseil suivant.
+  if (mover === playerColor && $mentorAuto?.checked) {
+    mentorPanel?.newTurn();
+    void judgePlayedMove({ fen: fenBefore, move: `${from}${to}${m.promotion ?? ''}` }).then((v) => {
+      if (v?.text && game.history().length >= 1) mentorPanel?.setVerdict(v.text);
+    });
+  }
   lastMove = { from, to };
   selected = null;
   targets = [];
@@ -392,6 +410,8 @@ async function engineReply() {
   const hadPlayerMove = playerMovedThisCycle;
   const gen = ++engineGeneration;
   const fenBefore = game.fen();
+  // Le joueur vient de jouer : un conseil encore en cours porterait sur l'ancienne position.
+  mentorPanel?.cancel();
   thinking = true;
   $engine.textContent = 'Stockfish réfléchit…';
   lastFenAnalyzed = fenBefore;
@@ -436,8 +456,27 @@ async function engineReply() {
       if (hadPlayerMove) {
         playerMovedThisCycle = false;
       }
+      // Conseil automatique : à chaque fois que c'est au joueur de jouer (sans LLM, le coach se consulte à volonté).
+      autoAdvice();
     }
   }
+}
+
+// ── Conseil du coach à chaque coup ──
+const $mentorAuto = document.getElementById('mentorAuto');
+try {
+  const saved = localStorage.getItem('mentorAuto');
+  if ($mentorAuto && saved != null) $mentorAuto.checked = saved === '1';
+} catch { /* stockage indisponible : on garde la case telle quelle */ }
+$mentorAuto?.addEventListener('change', () => {
+  try { localStorage.setItem('mentorAuto', $mentorAuto.checked ? '1' : '0'); } catch { /* idem */ }
+  if ($mentorAuto.checked) autoAdvice();
+});
+
+function autoAdvice() {
+  if (!$mentorAuto?.checked || !mentorPanel) return;
+  if (!isPlayerTurn() || game.isGameOver() || thinking) return;
+  void mentorPanel.ask();
 }
 
 function undoMove() {
@@ -635,7 +674,9 @@ async function init() {
       isPlayerTurn() && !game.isGameOver() && !thinking && !mentorPanel?.isBusy(),
     defaultQuestion: defaultMentorQuestion,
     idleMessage:
-      'Pose une question ou clique « Demander au coach » à ton tour de jeu.',
+      'Le coach te conseille à chaque coup (décoche « Conseil à chaque coup » pour ne l\'appeler qu\'à la demande).',
+    board: () => document.getElementById('playBoard'),
+    getOrientation: () => orientation,
   });
 
   $promoModal?.addEventListener('click', (e) => {
@@ -669,6 +710,7 @@ async function init() {
   mentorPanel.updateButton();
 
   if (!isPlayerTurn()) void engineReply();
+  else autoAdvice();
 }
 
 init().catch((e) => showError(e?.message ?? String(e)));

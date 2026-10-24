@@ -1,5 +1,5 @@
 /**
- * Client HTTP llm-factory — POST /api/chess/mentor/groq
+ * Client HTTP du serveur coach — POST /api/chess/mentor/groq (chemin conservé pour compatibilité)
  */
 
 const GROQ_TIMEOUT_MS = 120_000;
@@ -22,7 +22,7 @@ export function getMentorApiBase() {
  *   question?: string,
  *   signal?: AbortSignal,
  * }} payload
- * @returns {Promise<string>}
+ * @returns {Promise<{ advice: string, problems: string[], revised: boolean }>}
  */
 export async function askGroqMentor(payload) {
   const base = getMentorApiBase();
@@ -60,7 +60,14 @@ export async function askGroqMentor(payload) {
     if (advice == null || String(advice).trim() === '') {
       throw new Error('Réponse vide du serveur (groq).');
     }
-    return advice;
+    return {
+      lecture: data.lecture ?? null,
+      lectureTexte: data.lectureTexte ?? '',
+      advice, problems: data.problems ?? [], revised: Boolean(data.revised),
+      // Idée sans le coup et indices par paliers (fiche du code) ; absents avec l'ancien coach à LLM.
+      idea: typeof data.idea === 'string' && data.idea.trim() ? data.idea : null,
+      hints: Array.isArray(data.hints) ? data.hints : [],
+    };
   } catch (e) {
     if (e?.name === 'AbortError') {
       throw new Error(
@@ -84,5 +91,25 @@ export async function checkMentorHealth() {
     return res.ok;
   } catch {
     return false;
+  }
+}
+
+/**
+ * Jugement du coup joué : fen AVANT le coup, coup en UCI (e2e4). Renvoie { text, category, loss, best } ou null.
+ * @param {{ fen: string, move: string, signal?: AbortSignal }} payload
+ */
+export async function judgePlayedMove(payload) {
+  const base = getMentorApiBase();
+  try {
+    const res = await fetch(`${base}/api/chess/mentor/judge`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ fen: payload.fen, move: payload.move }),
+      signal: payload.signal,
+    });
+    const data = await res.json().catch(() => ({}));
+    return res.ok && data.ok ? data : null;
+  } catch {
+    return null;
   }
 }

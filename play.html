@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Jouer — Stockfish</title>
+    <title>Jouer contre Stockfish</title>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./site-nav.css" />
     <link rel="stylesheet" href="./play.css" />
   </head>
   <body>
@@ -112,7 +113,7 @@
                 aria-controls="mentorCardBody"
               >
                 <span class="card__title">Coach</span>
-                <span class="card__hint" id="mentorStatus">Groq · GPT-OSS 120B</span>
+                <span class="card__hint" id="mentorStatus">Coach ancré (Stockfish + règles)</span>
               </button>
             </div>
             <div id="mentorCardBody" class="card__collapse-body">
@@ -127,6 +128,10 @@
                 <button type="button" id="btnAskMentor" class="btn btn--primary btn--coach">
                   Demander au coach
                 </button>
+                <label class="mentor-form__auto" for="mentorAuto">
+                  <input type="checkbox" id="mentorAuto" checked />
+                  Conseil à chaque coup
+                </label>
               </div>
               <div
                 id="mentorPanel-groq"
@@ -264,5 +269,6 @@
     </div>
 
     <script type="module" src="./play.js"></script>
+    <script type="module" src="./site-nav.js"></script>
   </body>
 </html>
