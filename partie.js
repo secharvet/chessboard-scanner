@@ -88,8 +88,13 @@ function rendreExamen(c) {
   if (!montre || !c?.coach || !c.examen) { bloc.hidden = true; return; }
   const e = c.examen;
   bloc.hidden = false;
+  // Quand un mat est en jeu (e.mat), on affiche « mat en N → mat en M » (distance au mat), jamais une perte en centièmes.
+  const face = (n, enc) => (n == null ? evalTexte(enc) : `mat en ${Math.abs(n)}${n < 0 ? ' (contre le coach)' : ''}`);
+  const detail = e.mat
+    ? `${face(e.mat.avant, e.avant)} → ${face(e.mat.apres, e.apres)}`
+    : `avant ${evalTexte(e.avant)} → après ${evalTexte(e.apres)} (${e.perte > 0 ? '−' : '+'}${(Math.abs(e.perte) / 100).toFixed(2).replace('.', ',')})`;
   bloc.innerHTML = `<span class="jpt__verdict jpt__verdict--${e.verdict}">${VERDICTS[e.verdict] ?? e.verdict}</span>` +
-    `<span class="jpt__examen-detail">avant ${evalTexte(e.avant)} → après ${evalTexte(e.apres)} (${e.perte > 0 ? '−' : '+'}${(Math.abs(e.perte) / 100).toFixed(2).replace('.', ',')}) · ${e.phase}${e.raison ? ` · ${e.raison}` : ''}</span>`;
+    `<span class="jpt__examen-detail">${detail} · ${e.phase}${e.raison ? ` · ${e.raison}` : ''}</span>`;
 }
 
 function rendreListe() {

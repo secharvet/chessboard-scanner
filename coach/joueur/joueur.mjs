@@ -11,15 +11,16 @@
  * elle est revérifiée après le coup joué et après le coup battu.
  */
 import { Chess } from 'chess.js';
-import { Echiquier, DEPART, uci as uciDe } from './echiquier.mjs';
+import { Echiquier, DEPART, uci as uciDe, BLANC, NOIR, PION, ROI, type as typePiece, couleur as couleurPiece, horsJeu, nomCase } from './echiquier.mjs';
 import { evaluer, evaluerDetail, enCentipions, valeurTerme } from './evaluation.mjs';
 import { Recherche, MAT } from './recherche.mjs';
 import { formuler, materielEnMots, maPiece, saPiece, GABARITS } from './parole.mjs';
 import { toFrenchSan } from '../notation.mjs';
 import { lineMotifs } from '../motifs.mjs';
-import { buildStructureFacts } from '../../positional/structures.js';
 import { instancier } from '../plans-structures.mjs';
-import { distance, estLevier, suivre, libelle } from '../plan-distance.mjs';
+import { structuresEtendues, instancierEtendu, distanceEtendue, NOUVELLES_STRUCTURES } from './structures-etendues.mjs';
+import { estLevier, suivre, libelle } from '../plan-distance.mjs';
+const distance = distanceEtendue; // les familles de plan-distance.mjs, plus « roquer » (grammaire enrichie)
 import { LIVRE as LIVRE_FR } from '../../livres/francaise.js';
 import { LIVRE as LIVRE_IT } from '../../livres/italienne.js';
 import { LIVRE as LIVRE_ES } from '../../livres/espagnole.js';
@@ -113,16 +114,19 @@ export class Joueur {
 
     // --- le plan : structure, adoption, terme ---
     const exacts = cands.filter((c) => c.exact);
-    // les jetons de positional/ : { id: 'STRUCTURE', kind: 'fact', params: { name, color } }
-    const structures = buildStructureFacts(fenAvant).filter((t) => t.id === 'STRUCTURE' && t.params?.name).map((t) => t.params);
+    // les sept structures de positional/ et les sept de la grammaire enrichie (Expert, 25 octobre) : { name, color, params }
+    const structures = structuresEtendues(fenAvant);
     const structureNom = structures.map((s) => `${s.name}:${s.color}`).sort().join('|');
     let planRec = null;
     const planCourant = this.plan;
     if (planCourant) {
       // le plan suit les pièces depuis son adoption : on le remet à jour sur les coups joués depuis
       const dHist = distance(fenAvant, camp, planCourant.plan);
+      // le plan tient tant que SA structure (celle qui l'a produit) est encore là : une autre structure qui apparaît ne le chasse pas
+      const saStructure = structures.some((s) => `${s.name}:${s.color}` === planCourant.structure);
       if (dHist.d === 0) { planRec = { abandon: null, realise: true }; this.plan = null; }
-      else if (planCourant.structure !== structureNom && structureNom) { planRec = { abandon: 'sans_objet', ancien: planCourant.nom, objetDisparu: 'la structure' }; this.plan = null; }
+      else if (!Number.isFinite(dHist.d)) { planRec = { abandon: 'sans_objet', ancien: planCourant.nom, objetDisparu: 'la cible' }; this.plan = null; }
+      else if (!saStructure) { planRec = { abandon: 'sans_objet', ancien: planCourant.nom, objetDisparu: 'la structure' }; this.plan = null; }
       else if (planCourant.cumul > BORNES.plan.abandon) { planRec = { abandon: 'cher', ancien: planCourant.nom }; this.plan = null; }
     }
     const planTerme = (plan, cand) => { // (distance à la racine − distance au bout de la ligne) × 10, plafonné à ± 30
@@ -137,19 +141,21 @@ export class Joueur {
     let adopteMaintenant = false;
     if (!this.plan && structures.length) {
       const propositions = [];
-      for (const s of structures) for (const inst of instancier(fenAvant, camp, s.name, s.color)) {
+      for (const s of structures) for (const inst of (NOUVELLES_STRUCTURES.has(s.name) ? instancierEtendu(fenAvant, camp, s) : instancier(fenAvant, camp, s.name, s.color))) {
         if (!estLevier(fenAvant, camp, inst.plan)) continue;
         const d0 = distance(fenAvant, camp, inst.plan).d;
         if (!(d0 > 0) || !Number.isFinite(d0)) continue;
         let meilleurPas = null;
         for (const cand of exacts) { const pt = planTerme(inst.plan, cand); if (pt.dApres < d0) { const cout = cands[0].cp - cand.cp; if (!meilleurPas || cout < meilleurPas.cout) meilleurPas = { cand, cout }; } }
-        if (meilleurPas && meilleurPas.cout <= BORNES.plan.adoption) propositions.push({ ...inst, d0, cout: meilleurPas.cout, structure: structureNom });
+        if (meilleurPas && meilleurPas.cout <= BORNES.plan.adoption) propositions.push({ ...inst, d0, cout: meilleurPas.cout, structure: `${s.name}:${s.color}` });
       }
       if (propositions.length) {
         propositions.sort((a, b) => a.cout - b.cout);
         const p = propositions[0];
-        this.plan = { plan: p.plan, pourquoi: p.pourquoi, nom: libelle(p.plan, fenAvant), structure: structureNom, cumul: 0, adopteAuPly: ply };
+        this.plan = { plan: p.plan, pourquoi: p.pourquoi, nom: libelle(p.plan, fenAvant), structure: p.structure, cumul: 0, adopteAuPly: ply };
         adopteMaintenant = true;
+        // si c'est le même plan qui revient au même coup (la structure a clignoté), on ne dit ni abandon ni adoption
+        if (planRec?.abandon && planRec.ancien === this.plan.nom) { planRec = null; adopteMaintenant = false; this.plan.cumul = planCourant?.cumul ?? 0; }
       }
     }
     for (const c of exacts) { c.planTerme = 0; c.total = c.cp; }
@@ -181,7 +187,18 @@ export class Joueur {
           const perte = materielEnMots(Object.fromEntries(Object.entries(bilan).map(([k, v]) => [k, -v])));
           // Une menace, c'est du matériel qu'il gagnerait (Expert), ou un mat : une ligne « positionnelle » à faible profondeur n'en est pas une.
           if (perte || mn.score >= MAT - 200) {
-            const paree = (c) => c.cp >= E0 - valeur / 2;
+            // Parée ? On REJOUE le coup menaçant après le coup candidat et on compte le matériel au bout de la courte ligne
+            // qui suit : s'il ne gagne plus de matériel (ni ne mate), la menace est parée (Expert : la note seule se trompait).
+            const paree = (c) => {
+              const e2 = new Echiquier(fenAvant); e2.jouer(e2.coupDepuisUci(c.uci));
+              const t = e2.coupDepuisUci(pvUci[0]); if (!t) return true; // le coup menaçant n'existe plus
+              const n = this.recherche.noterCoup(e2, t, { prof: 3, budget: Math.trunc(this.budget / 10) });
+              if (n.score >= MAT - 200) return false; // il mate toujours
+              const e3 = new Echiquier(fenAvant); e3.jouer(e3.coupDepuisUci(c.uci));
+              const lm2 = ligneFr(n.pv.map(uciDe), e3.fen());
+              const b = bilanMateriel(e3.fen(), lm2.fenBout, camp);
+              return Object.entries(b).reduce((s, [k, v]) => s + VAL[k.toLowerCase()] * v, 0) >= 0;
+            };
             menace = { ligne: lm.sans, gain: valeur, perte: mn.score >= MAT - 200 ? 'la partie (mat)' : perte ?? 'du terrain', mat: mn.score >= MAT - 200, pareeApresM: paree(M), pareeApresR: R ? paree(R) : true };
           }
         }
@@ -222,7 +239,7 @@ export class Joueur {
     const perteM = materielEnMots(Object.fromEntries(Object.entries(bilanM).map(([k, v]) => [k, -v])));
     const bilanR = R ? bilanMateriel(fenAvant, ligneR.fenBout, camp) : null;
     const perteR = bilanR ? materielEnMots(Object.fromEntries(Object.entries(bilanR).map(([k, v]) => [k, -v]))) : null;
-    let sorte, sousSorte = null, motif = null;
+    let sorte, sousSorte = null, motif = null, attaqueDonnees = null;
     const enTete = (t) => { if (t) termesCites.unshift(...termesCites.splice(termesCites.indexOf(t), 1)); };
     const roiTerme = termesCites.find((t) => (t.nom === 'danger du roi' || t.nom === 'abri du roi') && t.d1 > 0 && t.cle !== null);
     const sauvetage = termesCites.find((t) => t.cle === 'piece_en_prise' && t.d1 > 0);
@@ -233,6 +250,22 @@ export class Joueur {
     const reprise = prise && dernierPrenait && dernierAdverse.slice(2, 4) === caseM;
     const bilanTotal = Object.entries(bilanM).reduce((s, [t, n]) => s + VAL[t.toLowerCase()] * n, 0);
     const matSubi = M.score <= -(MAT - 200);
+    const promotionM = !!M.uci[4];
+    // Cause B (Expert) : un coup qui crée une attaque sur une pièce adverse, ou sur un pion adverse non défendu, n'est jamais
+    // un coup d'attente ni une simple amélioration : « J'attaque {sa_piece} en {case} : il doit s'en occuper. »
+    const nouvellesAttaques = (() => {
+      const moi = camp === 'w' ? BLANC : NOIR, lui = moi ^ NOIR, echApres = new Echiquier(apresM.fen()), out = [];
+      for (let sq = 0; sq < 128; sq++) {
+        if (horsJeu(sq)) { sq += 7; continue; }
+        const p = echApres.cases[sq]; if (!p || couleurPiece(p) !== lui || typePiece(p) === ROI) continue;
+        if (!echApres.attaquee(sq, moi)) continue;
+        if (ech.cases[sq] === p && ech.attaquee(sq, moi)) continue; // déjà attaquée avant le coup
+        if (typePiece(p) === PION && echApres.attaquee(sq, lui)) continue; // un pion défendu n'a rien à craindre d'un pion attaqué
+        out.push({ type: typePiece(p), sq: nomCase(sq) });
+      }
+      out.sort((a, b) => b.type - a.type); // la plus grosse pièce d'abord
+      return out;
+    })();
     // Règle 3 (Expert) : si le meilleur score tombe de plus de 80 sous E0 sans perte comptée, E0 était une aberration de la
     // quiescence : on prend E0 = score de M. Et pas de « coup d'attente » si la ligne contient une prise par la pièce jouée.
     if (M.cp <= E0 - BORNES.gain && bilanTotal >= 0 && !matSubi) E0 = M.cp;
@@ -248,10 +281,11 @@ export class Joueur {
     // Reprise : dite comme telle (rétablie ou non). Gain : du matériel en plus par rapport à la ligne de quiescence de E0, et M
     // ne descend pas sous E0. Les effondrements (seul coup, moindre mal) se lisent contre E0 posée.
     else if (reprise && bilanTotal >= 0) { sorte = 'calcul'; sousSorte = retabli ? 'reprise' : 'reprise_partielle'; } // une reprise est une reprise, quel que soit le score
-    else if (gainM) { sorte = 'calcul'; sousSorte = 'gain'; } // le gain se lit au matériel compté, et avant « seul coup » (Expert) ; le score n'a pas voix au chapitre
-    // Seul coup : M tient (à 80 près de E0) et R s'effondre (80 sous M). Moindre mal / perdu : tout baisse de 80 ET la position
-    // est vraiment mauvaise (sous −100) : une baisse depuis une évaluation posée trop optimiste n'est pas une catastrophe.
-    else if (R && M.cp >= E0 - BORNES.gain && M.cp - R.cp >= BORNES.gain) { sorte = 'calcul'; sousSorte = 'seul_coup'; }
+    else if (promotionM) { sorte = 'calcul'; sousSorte = 'promotion'; }
+    // Gain (Expert, cause E) : matériel compté ET note de M au moins 80 au-dessus de l'évaluation STATIQUE (sinon « 1…d5 gagne un pion » sur une ligne supposée).
+    else if (gainM && M.cp - E0statique >= BORNES.gain) { sorte = 'calcul'; sousSorte = 'gain'; }
+    // Seul coup (cause F) : la condition écrite, note de R ≤ E0 − 80 et M qui tient ; et jamais quand R reste gagnant.
+    else if (R && M.cp >= E0 - BORNES.gain && R.cp <= E0 - BORNES.gain && (perteR || R.cp < 0)) { sorte = 'calcul'; sousSorte = 'seul_coup'; }
     else if (M.cp <= E0 - BORNES.gain && M.cp <= -100 && (!R || R.cp <= E0 - BORNES.gain)) { sorte = 'calcul'; sousSorte = perteM ? 'moindre_mal' : 'perdu'; }
     else if (enEchec) { sorte = 'defense'; sousSorte = cands.length === 1 ? 'echec_seul' : 'echec_pare'; }
     else if (menace && !menace.pareeApresR && menace.pareeApresM) { sorte = 'defense'; sousSorte = 'parer'; }
@@ -268,12 +302,18 @@ export class Joueur {
         const mene = termesCites.find((t) => t.cle === 'echanges_quand_on_mene' && t.d1 > 0);
         sorte = 'amelioration'; sousSorte = bilanTotal === 0 ? (mene ? 'echanges_quand_on_mene' : 'echange') : 'prise_rendue'; enTete(mene);
       }
-      else if (attaque && menaceNotre()) { sorte = 'amelioration'; sousSorte = attaque.cle; enTete(attaque); } // « il doit s'en occuper » seulement si c'est une vraie menace (matériel compté)
+      else if (nouvellesAttaques.length) { // cause B : le coup attaque une pièce (ou un pion non défendu)
+        const a = nouvellesAttaques[0];
+        sorte = 'amelioration'; sousSorte = mM.m.piece === 'p' ? 'attaque_par_pion' : 'menace_piece';
+        attaqueDonnees = { sa_piece: saPiece(['', 'P', 'N', 'B', 'R', 'Q', 'K'][a.type]), case_cible: a.sq, case: a.sq };
+      }
       else if (amel) { sorte = 'amelioration'; sousSorte = amel.cle; enTete(amel); }
+      else if (sortieMineure && !prise) { sorte = 'amelioration'; sousSorte = 'developpement_mineure'; } // la première sortie d'une mineure, c'est du développement
       else if (echecDonne) { sorte = 'amelioration'; sousSorte = 'echec_donne'; }
-      else if (prise || mM.m.piece === 'p') { sorte = 'amelioration'; sousSorte = 'placement'; } // une prise ou un pas de pion n'est jamais « un coup d'attente »
+      else if (mM.m.piece === 'p') { sorte = 'amelioration'; sousSorte = 'placement'; } // un pas de pion n'est jamais « un coup d'attente »
       else if (menace && !menace.pareeApresM) { sorte = 'amelioration'; sousSorte = 'contraint'; } // rien ne pare la menace : on ne dit pas « coup d'attente »
-      else if ((R && M.total - R.total >= BORNES.seValent) || priseParPieceJouee) { sorte = 'amelioration'; sousSorte = 'prefere'; } // M bat R nettement, ou sa ligne contient une prise par la pièce jouée : jamais « un coup d'attente »
+      else if (R && M.total - R.total >= BORNES.seValent) { sorte = 'amelioration'; sousSorte = 'prefere'; } // M bat R nettement, sans terme simple : on le dit tel quel (« prefere » exige 10)
+      else if (priseParPieceJouee) { sorte = 'amelioration'; sousSorte = 'placement'; } // sa ligne contient une prise par la pièce jouée : pas « un coup d'attente », mais pas « mieux que R » non plus
       else { sorte = 'amelioration'; sousSorte = 'coup_d_attente'; termesCites.length = 0; }
     }
     if (sorte === 'calcul') { // un motif nommé dans les 4 premiers demi-coups de notre ligne ; « gain : prend… » redit la phrase, on l'écarte
@@ -281,6 +321,14 @@ export class Joueur {
       // seuls les motifs nommés comptent (fourchette, clouage, enfilade, découverte, déviation, surcharge, intermède, promotion, mat) ; « gain », « échange », « perte » redisent la phrase
       const nomme = /fourchette|clou|enfilade|découvert|double|déviation|dévi|surcharge|interm|défenseur|promotion|\bmat\b|sacrifice/i;
       for (const x of ms) { if (x.ply > 3) break; const m = (x.motifs ?? []).find((s) => nomme.test(s) && !/^(gain|échange|perte)\b/i.test(s)); if (m) { motif = m; break; } }
+      // Cause D (Expert) : « échec à la découverte » seulement si la pièce jouée ne donne pas elle-même l'échec (sans elle, le roi
+      // adverse reste attaqué). Un échec direct nommé « découverte » est faux : on retire le motif.
+      if (motif && /découvert/i.test(motif) && echecDonne) {
+        const e2 = new Echiquier(apresM.fen()); const moi = camp === 'w' ? BLANC : NOIR; const roiLui = e2.rois[(moi ^ NOIR) >> 3];
+        const idx = [...'abcdefgh'].indexOf(caseM[0]) + (Number(caseM[1]) - 1) * 16;
+        const piece = e2.cases[idx]; e2.cases[idx] = 0; const encore = e2.attaquee(roiLui, moi); e2.cases[idx] = piece;
+        if (!encore) motif = null;
+      }
     }
 
     // --- le plan : cumul des coûts propres, état rendu ---
@@ -298,7 +346,8 @@ export class Joueur {
       ligne: ligneM.sans, ligneBattu: ligneR.sans,
       termes: termesCites.map((t) => ({ nom: t.nom, cle: t.cle, apres: t.d1, bout: t.d2, quoi: t.quoi, donnees: t.donnees, poids: t.poids })),
       menace, motif, plan: planInfo, livre: livre ? { ...livre, fin: false } : (finDuLivre ? { fin: true } : null),
-      gain: gainM, perteM, perteR, pieceM, caseM, saPiece: mM.m.captured ? saPiece(LETTRE[mM.m.captured]) : null, caseCible: caseM,
+      gain: gainM, perteM, perteR, pieceM, caseM,
+      saPiece: attaqueDonnees?.sa_piece ?? (mM.m.captured ? saPiece(LETTRE[mM.m.captured]) : null), caseCible: attaqueDonnees?.case_cible ?? caseM,
       candidats: exacts.slice(0, 4).map((c) => ({ san: sanFr(c.uci).san, score: c.cp, planTerme: c.planTerme ?? 0, total: c.total })),
       profondeur: res.profondeur, noeuds: res.noeuds, ms: Date.now() - t0,
     };
@@ -316,19 +365,29 @@ export class Joueur {
     const roque = coupM.flags?.includes('k') || coupM.flags?.includes('q');
     // La pièce dont le terme a le plus bougé (la pièce jouée est lue de sa case de départ à sa case d'arrivée) : c'est elle
     // que la phrase nomme, pas forcément la pièce jouée (une tour découverte par un roi qui s'écarte, par exemple).
-    const parQuoi = (e) => new Map((e?.entrees ?? []).filter((x) => x.camp === camp).map((x) => [x.quoi, x.cp]));
-    const av = parQuoi(avantEntree), ap = parQuoi(apresEntree);
+    const parQuoi = (e, mien) => new Map((e?.entrees ?? []).filter((x) => (x.camp === camp) === mien).map((x) => [x.quoi, x.cp]));
+    const av = parQuoi(avantEntree, true), ap = parQuoi(apresEntree, true), avLui = parQuoi(avantEntree, false), apLui = parQuoi(apresEntree, false);
     const nomPiece = { p: 'pion', n: 'cavalier', b: 'fou', r: 'tour', q: 'dame', k: 'roi' }[coupM.piece];
-    let meilleure = null;
+    // Règle (Expert, seconde traque) : la phrase nomme la pièce de l'entrée du terme qui a VRAIMENT changé avec le coup : la
+    // pièce jouée si sa propre entrée s'améliore, sinon l'entrée (à nous en mieux, ou à lui en pire) qui a le plus bougé ;
+    // et si aucune entrée ne bouge d'au moins 10, le terme n'est pas cité (un pion c4 n'explique pas …h6).
+    let meilleure = null, jouee = null;
     for (const [quoi, cp] of ap) {
       const cleAvant = quoi === `${nomPiece} ${caseM}` ? `${nomPiece} ${coupM.from}` : quoi;
       const delta = cp - (av.get(cleAvant) ?? 0);
-      if (delta > 0 && (!meilleure || delta > meilleure.delta)) meilleure = { quoi, delta };
+      if (quoi === `${nomPiece} ${caseM}`) jouee = { quoi, delta, mien: true };
+      if (delta > 0 && (!meilleure || delta > meilleure.delta)) meilleure = { quoi, delta, mien: true };
     }
+    for (const [quoi, cp] of new Set([...apLui.keys(), ...avLui.keys()])) { // ses entrées : en pire pour lui = en mieux pour nous
+      const delta = (avLui.get(quoi) ?? 0) - (apLui.get(quoi) ?? 0);
+      if (delta > 0 && (!meilleure || delta > meilleure.delta)) meilleure = { quoi, delta, mien: false };
+    }
+    const choisie = jouee && jouee.delta >= 5 ? jouee : meilleure;
+    const significatif = !!choisie && choisie.delta >= BORNES.termeCite;
     const L2 = { pion: 'P', cavalier: 'N', fou: 'B', tour: 'R', dame: 'Q', roi: 'K' };
-    const [pieceNom, caseNom] = (meilleure?.quoi ?? `${nomPiece} ${caseM}`).split(' ');
+    const [pieceNom, caseNom] = (choisie?.quoi ?? `${nomPiece} ${caseM}`).split(' ');
     const lettre = L2[pieceNom] ?? pieceM;
-    const donnees = { ma_piece: maPiece(lettre), case: caseNom ?? caseM, colonne: (caseNom ?? caseM)[0] };
+    const donnees = { ma_piece: maPiece(lettre), sa_piece: saPiece(lettre), case: caseNom ?? caseM, colonne: (caseNom ?? caseM)[0], cases: [...ap.keys()].map((q) => q.split(' ')[1]).join(', ') };
     // Les termes de menace sont crédités à l'attaquant et nomment la pièce attaquée : « siennes » = nos pièces menacées.
     const menacesSurMoi = (e) => siennes(e), menacesSurLui = (e) => miennes(e);
     const sauvee = menacesSurMoi(avantEntree).find((x) => !menacesSurMoi(apresEntree).some((y) => y.quoi === x.quoi));
@@ -336,8 +395,9 @@ export class Joueur {
     let cle = null;
     const tour7 = coupM.piece === 'r' && ((camp === 'w' && caseM[1] === '7') || (camp === 'b' && caseM[1] === '2'));
     switch (nom) {
-      case 'placement': cle = roque ? 'developpement_roque' : tour7 ? 'septieme' : meilleure ? 'placement' : null; break;
-      case 'mobilité': cle = roque ? 'developpement_roque' : meilleure && pieceNom !== 'pion' ? 'mobilite' : null; break;
+      // si l'entrée qui change est une pièce À LUI (elle perd des cases, de l'activité), c'est le gabarit à lui qui parle (Expert)
+      case 'placement': cle = roque ? 'developpement_roque' : tour7 ? 'septieme' : !choisie ? null : choisie.mien ? 'placement' : 'placement_lui'; break;
+      case 'mobilité': cle = roque ? 'developpement_roque' : !choisie || pieceNom === 'pion' ? null : choisie.mien ? 'mobilite' : 'mobilite_lui'; break;
       case 'avant-poste': cle = 'avant_poste'; break;
       case 'tour sur colonne ouverte': cle = 'colonne_ouverte'; break;
       case 'tour enfermée': cle = roque ? 'developpement_roque' : 'mobilite'; break;
@@ -385,6 +445,9 @@ export class Joueur {
       }
       default: cle = null;
     }
-    return { nom, cle, d1, d2, poids, chezMoi, quoi: surCaseM?.quoi ?? miennes(apresEntree)[0]?.quoi ?? '', donnees };
+    // un terme par pièce dont aucune entrée ne bouge d'au moins 10 avec le coup n'est pas cité (Expert, cause C)
+    const PAR_PIECE = new Set(['placement', 'mobilité', 'pion lié', 'pion isolé', 'pion doublé', 'pion arriéré', 'pion passé', 'avant-poste', 'mineure derrière un pion', 'tour sur colonne ouverte', 'tour sur colonne semi-ouverte', 'tour enfermée', 'fou gêné par ses pions', 'grande diagonale']);
+    if (!significatif && PAR_PIECE.has(nom)) cle = null;
+    return { nom, cle, d1, d2, poids, chezMoi, quoi: choisie?.quoi ?? surCaseM?.quoi ?? miennes(apresEntree)[0]?.quoi ?? '', donnees };
   }
 }

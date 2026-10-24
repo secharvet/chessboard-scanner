@@ -30,3 +30,19 @@ Heures de Paris. Une entrée par étape franchie ; les chiffres sont ceux des fi
 - Rejouer la V0 sur le coach corrigé (Dev chef), examen, lecture des alertes.
 - Traque de l'Expert sur cette partie (phrases infidèles).
 - Fusion joueur-dev → dev-lead, Dockerfile (partie.html / .css / .js), déploiement (coach-grounded), `parties/` servi.
+
+## 25 octobre 2026, soir
+- V0 en ligne (coach-grounded a8def8e puis 7c1825c) : `partie.html?partie=2026-10-24-maia-w-01` et `…-b-02`. Le conteneur
+  web a dû être redémarré (nginx.conf remplacé par git, l'ancien inode restait monté).
+- Première traque de l'Expert (w-01) : 20 fidèles sur 25, cinq infidèles toutes sur le compte du matériel → trois règles
+  de parole (référence du gain = l'échiquier avec l'exception de la reprise ; matériel nommé par sa composition ; E0 = score
+  de M quand la quiescence aberre). Seconde traque (w-01 + b-02) : 72 fidèles sur 86 (84 %), six causes (pièce nommée,
+  coup qui attaque, terme sans rapport, motif, gain fictif, « seul coup ») → toutes corrigées, mêmes coups.
+- Contre Stockfish bridé 1500 : 0-1 (2 bévues / 50). Contre Stockfish 19 pleine force (profondeur 12) : 0-1 (4 bévues / 72).
+- Les structures n'étaient pas lues (jeton `id: 'STRUCTURE'`, `params`) : corrigé ; démonstration Carlsbad contre Stockfish
+  1500 : « Je prends un plan : rupture b→b5 », trois phrases de plan ; partie perdue. Étiquetée hors critère.
+- Sébastien : « enrichir le répertoire plutôt que contraindre le joueur ». Expert : grammaire enrichie, sept structures
+  (pion passé, roi au centre, majorité, une colonne ouverte, finale, Rubinstein, centre ouvert) avec règles de reconnaissance
+  et plans canoniques ; branchée dans `coach/joueur/structures-etendues.mjs` (70c1c63). Le livre (5.Cxf6+) corrigé dans la base.
+- Restent : la série de 100 parties contre Maia-1500 (Dev chef, script de série), la lecture humaine des 20 coups (mode
+  « lecture » de la page), le rapport final au GE.

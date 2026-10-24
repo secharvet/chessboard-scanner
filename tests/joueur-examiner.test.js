@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { Chess } from 'chess.js';
-import { juger, phaseDe, cpPourCoach, MATE_BASE } from '../scripts/joueur/examiner.mjs';
+import { juger, phaseDe, cpPourCoach, perteEtMat, MATE_BASE } from '../scripts/joueur/examiner.mjs';
 
 test('examinateur : score moteur → point de vue du coach', () => {
   assert.equal(cpPourCoach({ type: 'cp', value: 30 }, 1), 30);
@@ -35,6 +35,21 @@ test('examinateur : une partie gagnée jetée n\'est pas un gâchis mais une bé
   // mat perdu mais encore gagnant franchement : gâchis (les deux au-delà de 500, même camp)
   assert.equal(juger(MATE_BASE - 3, 700, 30).verdict, 'exclu');
   assert.equal(juger(MATE_BASE - 3, 700, 30).raison, 'gâchis de conversion');
+});
+
+test('examinateur : perte — mat en jeu → distance au mat, jamais un centième aberrant', () => {
+  // Les deux en centièmes : perte en centièmes, pas de mat.
+  assert.deepEqual(perteEtMat(20, -40), { perte: 60, mat: null });
+  // Mat conservé (le coach mate en 3 puis en 5) : perte null, distances au mat.
+  assert.deepEqual(perteEtMat(MATE_BASE - 3, MATE_BASE - 5), { perte: null, mat: { avant: 3, apres: 5 } });
+  // Le cas du bug : mat (en 3) → score de pion (+150). Avant : perte = 99997 − 150 = 99847 (aberrant). Maintenant : null.
+  const r = perteEtMat(MATE_BASE - 3, 150);
+  assert.equal(r.perte, null);
+  assert.deepEqual(r.mat, { avant: 3, apres: null });
+  // Le coach se fait mater (en 2 puis en 6) : distances négatives.
+  assert.deepEqual(perteEtMat(-(MATE_BASE - 2), -(MATE_BASE - 6)), { perte: null, mat: { avant: -2, apres: -6 } });
+  // Aucun perte n'est un grand nombre de centièmes quand un mat est en jeu.
+  for (const [a, b] of [[MATE_BASE - 3, 150], [150, MATE_BASE - 4], [MATE_BASE - 3, MATE_BASE - 5]]) assert.equal(perteEtMat(a, b).perte, null);
 });
 
 test('examinateur : phase par le matériel', () => {
