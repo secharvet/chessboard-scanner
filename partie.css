@@ -1,0 +1,116 @@
+/* Le lecteur du coach joueur (partie.html / partie.js). Même esprit que les autres pages : sombre, Bootstrap, site-nav. */
+
+.jpt__erreur {
+  margin: 0 16px 8px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: rgba(164, 0, 0, 0.18);
+  border: 1px solid rgba(164, 0, 0, 0.5);
+  color: var(--bs-body-color, #eee);
+}
+
+.jpt__layout {
+  display: grid;
+  grid-template-columns: minmax(320px, 1fr) minmax(280px, 420px);
+  gap: 20px;
+  padding: 0 16px 32px;
+  align-items: start;
+}
+
+.jpt__gauche { min-width: 0; }
+.jpt__droite { min-width: 0; display: flex; flex-direction: column; gap: 16px; }
+
+.jpt__meta {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+.jpt__meta-examen { color: #ffd37a; }
+
+.jpt__board-wrap { max-width: 560px; margin: 0 auto; }
+
+.jpt__controles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 12px 0;
+}
+.jpt__compteur { min-width: 64px; text-align: center; font-variant-numeric: tabular-nums; opacity: 0.85; }
+
+.jpt__coups {
+  list-style: none;
+  margin: 0;
+  padding: 8px;
+  max-height: 260px;
+  overflow-y: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 6px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+}
+.jpt__coup {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.jpt__coup:hover { background: rgba(255, 255, 255, 0.08); }
+.jpt__coup--coach { font-weight: 600; }
+.jpt__coup--adv { opacity: 0.7; }
+.jpt__coup--courant { background: rgba(52, 101, 164, 0.4); outline: 1px solid rgba(120, 170, 255, 0.6); }
+.jpt__coup-num { opacity: 0.55; }
+.jpt__coup-pastille { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+
+.jpt__phrase-carte {
+  padding: 14px 16px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+.jpt__phrase-carte--sans { border-color: rgba(164, 0, 0, 0.6); }
+.jpt__phrase-tete { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.jpt__pastille {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: lowercase;
+}
+.jpt__coup-nom { font-weight: 700; font-variant-numeric: tabular-nums; }
+.jpt__phrase { margin: 0 0 10px; line-height: 1.55; }
+
+.jpt__trace { margin-top: 10px; }
+.jpt__trace-liste { margin: 0; padding-left: 18px; font-size: 0.88rem; line-height: 1.6; }
+.jpt__trace-liste b { font-weight: 600; opacity: 0.9; }
+
+.jpt__examen { margin-top: 10px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 0.88rem; }
+.jpt__verdict { padding: 2px 10px; border-radius: 6px; font-weight: 600; }
+.jpt__verdict--ok { background: rgba(78, 154, 6, 0.3); }
+.jpt__verdict--faute { background: rgba(193, 125, 17, 0.35); }
+.jpt__verdict--bevue { background: rgba(164, 0, 0, 0.4); }
+.jpt__verdict--exclu { background: rgba(120, 120, 120, 0.3); }
+.jpt__examen-detail { opacity: 0.85; font-variant-numeric: tabular-nums; }
+
+.jpt__lecture { margin-top: 12px; padding: 12px; border-radius: 8px; background: rgba(255, 211, 122, 0.08); border: 1px solid rgba(255, 211, 122, 0.3); }
+.jpt__lecture-tete { font-size: 0.82rem; opacity: 0.8; margin-bottom: 6px; }
+.jpt__lecture-phrase { font-style: italic; margin: 0 0 12px; line-height: 1.5; }
+.jpt__lecture-q { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.jpt__lecture-q span { flex: 1 1 180px; }
+.jpt__lecture-q .active { box-shadow: 0 0 0 2px currentColor inset; }
+.jpt__lecture-fin p { line-height: 1.55; }
+
+/* Téléphone : une colonne, l'échiquier en premier, pas de débordement horizontal. */
+@media (max-width: 800px) {
+  .jpt__layout { grid-template-columns: 1fr; gap: 14px; padding: 0 12px 24px; }
+  .jpt__board-wrap { max-width: 100%; }
+  .jpt__coups { max-height: 160px; }
+}
