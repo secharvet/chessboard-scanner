@@ -56,8 +56,9 @@ export function structuresEtendues(fen) {
     // 2. ROI_AU_CENTRE : son roi sur c-f à sa 1re ou 2e rangée, dames présentes, coup 8 passé, colonne d ou e sans pion à lui, ET mon roi roqué.
     const kLui = L.roi[eux];
     if (kLui && 'cdef'.includes(kLui[0]) && rel(kLui, eux) <= 2 && L.pieces[color].some((p) => p.type === 'q') && L.coup > 8 && roiRoque(L, color)) {
-      const sansPionLui = (f) => !ses.some((p) => p.file === f);
-      if (sansPionLui('e') || sansPionLui('d')) out.push({ name: 'ROI_AU_CENTRE', color, params: { colonne: sansPionLui('e') ? 'e' : 'd', levier: mes.some((p) => p.file === 'd') ? 'd' : mes.some((p) => p.file === 'e') ? 'e' : null } });
+      // la colonne qui mène à son roi : celle (e, sinon d) sans pion À MOI (Expert, correction du 26 octobre)
+      const sansPionMoi = (f) => !mes.some((p) => p.file === f);
+      if (sansPionMoi('e') || sansPionMoi('d')) out.push({ name: 'ROI_AU_CENTRE', color, params: { colonne: sansPionMoi('e') ? 'e' : 'd', levier: mes.some((p) => p.file === 'd') ? 'd' : mes.some((p) => p.file === 'e') ? 'e' : null } });
     }
     // 3. MAJORITE : plus de pions sur une aile et pas plus sur l'autre, après le coup 12.
     if (L.coup > 12) {
@@ -116,8 +117,8 @@ export function instancierEtendu(fen, side, tok) {
     }
     case 'ROI_AU_CENTRE': {
       if (role === 'owner') {
-        pousse({ famille: 'colonne', colonne: P.colonne ?? 'e' }, 'une tour en face du roi qui n\'a pas roqué : il ne pourra plus roquer, ni rester');
-        if (P.levier) pousse({ famille: 'rupture', pion: P.levier, cible: caseRel(P.levier, 5, owner) }, 'ouvrir le centre pendant que son roi y est encore ; seulement après le roque');
+        pousse({ famille: 'colonne', colonne: P.colonne ?? 'e' }, 'une tour sur la colonne qui mène à son roi resté au centre');
+        if (P.levier) pousse({ famille: 'rupture', pion: P.levier, cible: caseRel(P.levier, 5, owner) }, 'ouvrir le centre pendant que son roi y est encore');
       } else {
         pousse({ famille: 'roquer' }, 'mettre le roi à l\'abri d\'abord : tant qu\'il est au centre, chaque colonne qui s\'ouvre est pour l\'adversaire');
       }

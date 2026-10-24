@@ -125,18 +125,19 @@ export class Joueur {
       // le plan tient tant que SA structure (celle qui l'a produit) est encore là : une autre structure qui apparaît ne le chasse pas
       const saStructure = structures.some((s) => `${s.name}:${s.color}` === planCourant.structure);
       if (dHist.d === 0) { planRec = { abandon: null, realise: true }; this.plan = null; }
-      else if (!Number.isFinite(dHist.d)) { planRec = { abandon: 'sans_objet', ancien: planCourant.nom, objetDisparu: 'la cible' }; this.plan = null; }
-      else if (!saStructure) { planRec = { abandon: 'sans_objet', ancien: planCourant.nom, objetDisparu: 'la structure' }; this.plan = null; }
+      else if (!Number.isFinite(dHist.d)) { planRec = { abandon: 'sans_objet', ancien: planCourant.nom, objetDisparu: this.#raisonEnClair(dHist.detail) }; this.plan = null; } // la raison se lit dans le détail de la distance (Expert)
+      else if (!saStructure) { planRec = { abandon: 'sans_objet', ancien: planCourant.nom, objetDisparu: 'la structure n\'est plus là' }; this.plan = null; }
       else if (planCourant.cumul > BORNES.plan.abandon) { planRec = { abandon: 'cher', ancien: planCourant.nom }; this.plan = null; }
+      if (planRec?.abandon) { this.dernierPlanNom = planCourant.nom; planRec.ancienTechnique = planCourant.nom; planRec.ancienClub = this.#libelleClub(planCourant.plan, camp, fenAvant); planRec.ancien = planRec.ancienClub; }
     }
     const planTerme = (plan, cand) => { // (distance à la racine − distance au bout de la ligne) × 10, plafonné à ± 30
-      const d0 = distance(fenAvant, camp, plan).d;
+      const r0 = distance(fenAvant, camp, plan), d0 = r0.d;
       const c = new Chess(fenAvant); let p = plan;
       for (const u of cand.pvUci) { let m; try { m = c.move({ from: u.slice(0, 2), to: u.slice(2, 4), promotion: u[4] }); } catch { break; } p = suivre(p, m); }
       const dBout = distance(c.fen(), camp, p).d;
       const c1 = new Chess(fenAvant), m1 = c1.move({ from: cand.uci.slice(0, 2), to: cand.uci.slice(2, 4), promotion: cand.uci[4] });
-      const dApres = distance(c1.fen(), camp, suivre(plan, m1)).d;
-      return { terme: Math.max(-BORNES.plan.plafond, Math.min(BORNES.plan.plafond, (d0 - dBout) * BORNES.plan.parPas)), d0, dApres, dBout };
+      const r1 = distance(c1.fen(), camp, suivre(plan, m1)), dApres = r1.d;
+      return { terme: Math.max(-BORNES.plan.plafond, Math.min(BORNES.plan.plafond, (d0 - dBout) * BORNES.plan.parPas)), d0, dApres, dBout, etapesAvant: r0.etapes ?? [], etapesApres: r1.etapes ?? [] };
     };
     let adopteMaintenant = false;
     if (!this.plan && structures.length) {
@@ -152,16 +153,18 @@ export class Joueur {
       if (propositions.length) {
         propositions.sort((a, b) => a.cout - b.cout);
         const p = propositions[0];
-        this.plan = { plan: p.plan, pourquoi: p.pourquoi, nom: libelle(p.plan, fenAvant), structure: p.structure, cumul: 0, adopteAuPly: ply };
+        // la pièce d'un transfert est mémorisée à l'adoption : si elle disparaît, le libellé ne dira pas « mon pion » pour la case qu'elle occupait
+        const avecPiece = (q) => (q.famille === 'transfert' ? { ...q, pieceType: chess.get(q.de)?.type ?? null } : q.famille === 'et' ? { ...q, plans: q.plans.map(avecPiece) } : q);
+        this.plan = { plan: avecPiece(p.plan), pourquoi: p.pourquoi, nom: libelle(p.plan, fenAvant), structure: p.structure, cumul: 0, adopteAuPly: ply };
         adopteMaintenant = true;
         // si c'est le même plan qui revient au même coup (la structure a clignoté), on ne dit ni abandon ni adoption
-        if (planRec?.abandon && planRec.ancien === this.plan.nom) { planRec = null; adopteMaintenant = false; this.plan.cumul = planCourant?.cumul ?? 0; }
+        if (planRec?.abandon && planRec.ancienTechnique === this.plan.nom) { planRec = null; adopteMaintenant = false; this.plan.cumul = planCourant?.cumul ?? 0; }
       }
     }
     for (const c of exacts) { c.planTerme = 0; c.total = c.cp; }
     let planInfo = null;
     if (this.plan) {
-      for (const c of exacts) { const pt = planTerme(this.plan.plan, c); c.planTerme = pt.terme; c.total = c.cp + pt.terme; c.dApres = pt.dApres; c.d0 = pt.d0; }
+      for (const c of exacts) { const pt = planTerme(this.plan.plan, c); c.planTerme = pt.terme; c.total = c.cp + pt.terme; c.dApres = pt.dApres; c.d0 = pt.d0; c.etapesAvant = pt.etapesAvant; c.etapesApres = pt.etapesApres; }
     }
 
     // --- le choix : M, et R le meilleur autre coup exact ---
@@ -266,6 +269,22 @@ export class Joueur {
       out.sort((a, b) => b.type - a.type); // la plus grosse pièce d'abord
       return out;
     })();
+    // « J'empêche son roi de roquer » (Expert, ROI_AU_CENTRE) : avant le coup il pouvait roquer, après non, et son droit est intact.
+    const empecheRoque = (() => {
+      try {
+        const lui = camp === 'w' ? 'b' : 'w';
+        const fenLui = fenAvant.replace(/ (w|b) /, ` ${lui} `).replace(/ \w\d /, ' - ');
+        const avantRoques = new Chess(fenLui).moves().filter((s) => s.startsWith('O-O'));
+        if (!avantRoques.length) return null;
+        const apresRoques = apresM.moves().filter((s) => s.startsWith('O-O'));
+        const droits = apresM.fen().split(' ')[2];
+        if (apresRoques.length || !(lui === 'w' ? /[KQ]/ : /[kq]/).test(droits)) return null;
+        const r = lui === 'w' ? '1' : '8', moi = camp === 'w' ? BLANC : NOIR, e2 = new Echiquier(apresM.fen());
+        const cases = avantRoques.some((s) => s === 'O-O') ? [`f${r}`, `g${r}`] : [`d${r}`, `c${r}`];
+        const idx = (s) => [...'abcdefgh'].indexOf(s[0]) + (Number(s[1]) - 1) * 16;
+        return cases.find((s) => e2.attaquee(idx(s), moi)) ?? cases[0];
+      } catch { return null; }
+    })();
     // Règle 3 (Expert) : si le meilleur score tombe de plus de 80 sous E0 sans perte comptée, E0 était une aberration de la
     // quiescence : on prend E0 = score de M. Et pas de « coup d'attente » si la ligne contient une prise par la pièce jouée.
     if (M.cp <= E0 - BORNES.gain && bilanTotal >= 0 && !matSubi) E0 = M.cp;
@@ -298,18 +317,19 @@ export class Joueur {
       // amélioration : le premier terme qui s'améliore pour nous ET qui a une phrase d'amélioration (les termes de défense n'en ont pas)
       const amel = termesCites.find((t) => t.d1 > 0 && t.cle && (GABARITS.amelioration[t.cle] || GABARITS.finale[t.cle]));
       if (finale) { sorte = 'finale'; sousSorte = finale.cle; enTete(finale); }
-      else if (prise) { // une prise n'est jamais une « amélioration » : échange (si « échanger quand on mène » est actif, c'est lui qui parle), ou prise rendue
+      else if (prise) { // une prise n'est jamais une « amélioration » : échange (ou « échanger quand on mène »), prise gardée mais compensée, ou prise rendue
         const mene = termesCites.find((t) => t.cle === 'echanges_quand_on_mene' && t.d1 > 0);
-        sorte = 'amelioration'; sousSorte = bilanTotal === 0 ? (mene ? 'echanges_quand_on_mene' : 'echange') : 'prise_rendue'; enTete(mene);
+        sorte = 'amelioration'; sousSorte = bilanTotal === 0 ? (mene ? 'echanges_quand_on_mene' : 'echange') : bilanTotal > 0 ? 'prise_compensee' : 'prise_rendue'; enTete(mene);
       }
-      else if (nouvellesAttaques.length) { // cause B : le coup attaque une pièce (ou un pion non défendu)
+      else if (echecDonne) { sorte = 'amelioration'; sousSorte = 'echec_donne'; } // un échec n'est jamais « rien de forcé » (Expert)
+      else if (empecheRoque) { sorte = 'amelioration'; sousSorte = 'empeche_roque'; attaqueDonnees = { case_cible: empecheRoque }; }
+      else if (nouvellesAttaques.length) { // le coup attaque une pièce : « j'attaque » seulement si c'est une menace réelle (matériel compté, l'adversaire passant) ; sinon il la conteste
         const a = nouvellesAttaques[0];
-        sorte = 'amelioration'; sousSorte = mM.m.piece === 'p' ? 'attaque_par_pion' : 'menace_piece';
+        sorte = 'amelioration'; sousSorte = menaceNotre() ? (mM.m.piece === 'p' ? 'attaque_par_pion' : 'menace_piece') : 'contester';
         attaqueDonnees = { sa_piece: saPiece(['', 'P', 'N', 'B', 'R', 'Q', 'K'][a.type]), case_cible: a.sq, case: a.sq };
       }
       else if (amel) { sorte = 'amelioration'; sousSorte = amel.cle; enTete(amel); }
       else if (sortieMineure && !prise) { sorte = 'amelioration'; sousSorte = 'developpement_mineure'; } // la première sortie d'une mineure, c'est du développement
-      else if (echecDonne) { sorte = 'amelioration'; sousSorte = 'echec_donne'; }
       else if (mM.m.piece === 'p') { sorte = 'amelioration'; sousSorte = 'placement'; } // un pas de pion n'est jamais « un coup d'attente »
       else if (menace && !menace.pareeApresM) { sorte = 'amelioration'; sousSorte = 'contraint'; } // rien ne pare la menace : on ne dit pas « coup d'attente »
       else if (R && M.total - R.total >= BORNES.seValent) { sorte = 'amelioration'; sousSorte = 'prefere'; } // M bat R nettement, sans terme simple : on le dit tel quel (« prefere » exige 10)
@@ -321,6 +341,13 @@ export class Joueur {
       // seuls les motifs nommés comptent (fourchette, clouage, enfilade, découverte, déviation, surcharge, intermède, promotion, mat) ; « gain », « échange », « perte » redisent la phrase
       const nomme = /fourchette|clou|enfilade|découvert|double|déviation|dévi|surcharge|interm|défenseur|promotion|\bmat\b|sacrifice/i;
       for (const x of ms) { if (x.ply > 3) break; const m = (x.motifs ?? []).find((s) => nomme.test(s) && !/^(gain|échange|perte)\b/i.test(s)); if (m) { motif = m; break; } }
+      // « sacrifice » seulement si le matériel rendu n'est pas repris dans les deux demi-coups qui suivent (Expert) ; et le genre : « de la tour », « de la dame »
+      if (motif && /sacrifice/i.test(motif)) {
+        const c3 = new Chess(fenAvant); for (const u of M.pvUci.slice(0, 3)) { try { c3.move({ from: u.slice(0, 2), to: u.slice(2, 4), promotion: u[4] }); } catch { break; } }
+        const b3 = Object.entries(bilanMateriel(fenAvant, c3.fen(), camp)).reduce((s, [t, n]) => s + VAL[t.toLowerCase()] * n, 0);
+        if (b3 >= 0) motif = null;
+      }
+      if (motif) motif = motif.replace(/\bdu tour\b/g, 'de la tour').replace(/\bdu dame\b/g, 'de la dame');
       // Cause D (Expert) : « échec à la découverte » seulement si la pièce jouée ne donne pas elle-même l'échec (sans elle, le roi
       // adverse reste attaqué). Un échec direct nommé « découverte » est faux : on retire le motif.
       if (motif && /découvert/i.test(motif) && echecDonne) {
@@ -335,9 +362,15 @@ export class Joueur {
     if (this.plan) {
       const pas = M.dApres < M.d0;
       if (pas) this.plan.cumul += Math.max(0, exacts[0].cp - M.cp);
-      planInfo = { nom: this.plan.nom, pourquoi: this.plan.pourquoi, distanceAvant: M.d0, distanceApres: M.dApres, cumul: this.plan.cumul, adopte: adopteMaintenant, ...(planRec ?? {}) };
-      if (M.dApres === 0) this.plan = null;
-    } else if (planRec) planInfo = { nom: planRec.ancien ?? '', ...planRec };
+      // l'adoption s'annonce au premier coup hors livre (sur un coup du livre, la phrase du livre d'abord) ; « je reviens à » si c'est le dernier plan quitté
+      const annonce = adopteMaintenant || !!this.plan.annonceDue;
+      const adopteDit = annonce && sorte !== 'livre';
+      this.plan.annonceDue = annonce && !adopteDit;
+      const retour = adopteDit && this.dernierPlanNom === this.plan.nom;
+      planInfo = { nom: this.#libelleClub(this.plan.plan, camp, fenAvant), nomTechnique: this.plan.nom, pourquoi: this.plan.pourquoi, distanceAvant: M.d0, distanceApres: M.dApres, cumul: this.plan.cumul,
+        adopte: adopteDit && !retour, retour, ceQuiChange: pas ? this.#ceQuiChange(M.etapesAvant, M.etapesApres) : null, ...(planRec ?? {}) };
+      if (M.dApres === 0) { this.dernierPlanNom = this.plan.nom; this.plan = null; }
+    } else if (planRec) planInfo = { nom: planRec.ancienClub ?? planRec.ancien ?? '', ...planRec };
 
     const rec = {
       ply, camp, san: mM.san, uci: M.uci, fenAvant, coach: true, sorte, sousSorte,
@@ -354,6 +387,56 @@ export class Joueur {
     const { phrase, alerte } = formuler(rec);
     rec.phrase = phrase; if (alerte) rec.alerte = alerte;
     return rec;
+  }
+
+  /** « sa dame », « ma tour » : la pièce en français avec son possessif (le genre règle le possessif). */
+  #piece(lettre, poss) {
+    const n = { C: 'cavalier', F: 'fou', T: 'tour', D: 'dame', R: 'roi', pion: 'pion', n: 'cavalier', b: 'fou', r: 'tour', q: 'dame', k: 'roi', p: 'pion' }[lettre] ?? 'pièce';
+    const fem = n === 'tour' || n === 'dame' || n === 'pièce';
+    return `${poss === 'sa' ? (fem ? 'sa' : 'son') : (fem ? 'ma' : 'mon')} ${n}`;
+  }
+
+  /** La raison d'un plan sans objet, lue dans le détail de la distance (Expert) : « d4 occupée par Dd4 » → « sa dame bloque d4 ». */
+  #raisonEnClair(detail) {
+    if (!detail) return 'la cible n\'est plus là';
+    let m;
+    if ((m = detail.match(/^(\w\d) occupée par ([CFTDR]|pion)(\w\d)/))) return `${this.#piece(m[2], 'sa')} bloque ${m[1]}`;
+    if ((m = detail.match(/^bloqué par ([CFTDR]|pion)(\w\d)/))) return `${this.#piece(m[1], 'sa')} en ${m[2]} bloque la voie`;
+    if (/plus de pièce à moi|plus de tour|plus de roi/.test(detail)) return 'la pièce qui devait le mener n\'est plus là';
+    if (/aucun pion/.test(detail)) return 'le pion n\'est plus là';
+    if (/hors de portée|aucune case/.test(detail)) return 'la case n\'est plus atteignable';
+    return 'la cible n\'est plus là';
+  }
+
+  /** Le libellé d'un plan en français de club (Expert) : « pousser le pion c en c4 », « la poussée …d4 », « une tour sur la colonne d ». */
+  #libelleClub(plan, camp, fen) {
+    const pts = camp === 'b' ? '…' : '';
+    switch (plan.famille) {
+      case 'poussee': return `pousser le pion ${plan.pion} en ${plan.cible}`;
+      case 'rupture': return `la poussée ${pts}${plan.cible}`;
+      case 'transfert': { const t = plan.pieceType ?? new Chess(fen).get(plan.de)?.type ?? 'p'; return `amener ${this.#piece(t, 'ma')} en ${plan.vers}`; }
+      case 'colonne': return `une tour sur la colonne ${plan.colonne}`;
+      case 'roquer': return 'roquer';
+      case 'echange': { const p = new Chess(fen).get(plan.mienne), q = new Chess(fen).get(plan.cible); return `échanger ${this.#piece(p?.type ?? 'p', 'ma')} contre ${this.#piece(q?.type ?? 'p', 'sa')}`; }
+      case 'et': return plan.plans.map((p) => this.#libelleClub(p, camp, fen)).join(' et ');
+      default: return libelle(plan, fen);
+    }
+  }
+
+  /** Ce que le pas change, tiré des étapes de la distance avant et après le coup (Expert) ; null si on ne sait pas le dire. */
+  #ceQuiChange(avant, apres) {
+    const disparue = (avant ?? []).find((e) => !(apres ?? []).includes(e));
+    if (!disparue) return null;
+    let m;
+    if ((m = disparue.match(/^(\w\d) : poussée 1 \+ déficit/))) return `un défenseur de plus pour ${m[1]}`;
+    if ((m = disparue.match(/^(\w\d) : poussée/))) return `le pion est sur le chemin de ${m[1]}`;
+    if ((m = disparue.match(/^(\d+) coups? de ([CFTDR]|pion) \(([^)]*)\)/))) return `${this.#piece(m[2], 'ma')} se rapproche de ${m[3].split('-').pop()}`;
+    if ((m = disparue.match(/^(\d+) coups? de tour \(T([^)]*)\)/))) return `ma tour se rapproche de la colonne`;
+    if (/pion \w\d à retirer/.test(disparue)) return 'la voie est libre pour la tour';
+    if (/écart/.test(disparue)) return 'une pièce qui gênait s\'est écartée';
+    if (/^la prise/.test(disparue)) return 'la prise est faite';
+    if (/pièce\(s\) entre le roi et la tour|roque est possible/.test(disparue)) return 'une pièce de moins entre le roi et la tour';
+    return null;
   }
 
   /** Un terme cité : sa clé de gabarit, ses données de remplissage et son poids. d1 : juste après M ; d2 : au bout. */
