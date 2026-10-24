@@ -69,6 +69,10 @@ Sous les règles AA (`coach/coup-contraint.mjs`, `choisirCoup`) :
   identique (1717198971) et identique à l'essai d'avant : à 24 aussi, le meilleur coup est Ff8. Le changement agira dans
   les parties où les deux profondeurs ne choisissent pas le même coup (Panov n° 1 : Ff8 n'est pas dans la MultiPV à 24).
 
+- **`a6e0e61`** (Expert) : le retard du coup de la fenêtre suspendue se lit à la profondeur de jeu (18) dans les deux bras ;
+  hors de la MultiPV de jeu, par la meilleure réponse adverse à 18 (patron de la dernière chance), et le cas est compté au
+  journal. Journal seulement : « suspendu » est neutre, les coups joués ne changent pas.
+
 ## 7. La mesure à part (proposée, rien n'est lancé)
 
 Publié en plus, écrit avant (Expert, ni règle ni seuil) : le nombre d'alarmes tranchées dans la **zone grise de 25 à
