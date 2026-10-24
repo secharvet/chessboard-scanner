@@ -87,7 +87,7 @@
     "pion_double_chez_moi": "J'évite de doubler mes pions : l'un devant l'autre, ils se gênent.",
     "pion_arriere_chez_lui": "Son pion {case_cible} reste en arrière : il ne peut plus avancer sans être pris, et aucun pion ne le défend.",
     "pion_arriere_chez_moi": "Je n'ai plus de pion resté en arrière : il était une cible.",
-    "pions_lies": "Mes pions se tiennent : chacun est défendu par un pion voisin.",
+    "pions_lies": "Mes pions {cases} restent groupés : aucun n'est isolé.",
     "pion_passe_pousse": "Mon pion {case} est passé : aucun pion adverse ne peut l'arrêter. Je le pousse.",
     "pion_passe_bloque": "Je bloque son pion passé : {ma_piece} se met juste devant, en {case}.",
     "espace": "Rien de forcé. Je gagne de la place : mes pions contrôlent des cases dans son camp.",
