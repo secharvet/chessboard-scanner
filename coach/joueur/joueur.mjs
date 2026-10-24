@@ -17,8 +17,8 @@ import { Recherche, MAT } from './recherche.mjs';
 import { formuler, materielEnMots, maPiece, saPiece, GABARITS } from './parole.mjs';
 import { toFrenchSan } from '../notation.mjs';
 import { lineMotifs } from '../motifs.mjs';
-import { buildStructureFacts } from '../../positional/structures.js';
 import { instancier } from '../plans-structures.mjs';
+import { structuresEtendues, instancierEtendu, NOUVELLES_STRUCTURES } from './structures-etendues.mjs';
 import { distance, estLevier, suivre, libelle } from '../plan-distance.mjs';
 import { LIVRE as LIVRE_FR } from '../../livres/francaise.js';
 import { LIVRE as LIVRE_IT } from '../../livres/italienne.js';
@@ -113,8 +113,8 @@ export class Joueur {
 
     // --- le plan : structure, adoption, terme ---
     const exacts = cands.filter((c) => c.exact);
-    // les jetons de positional/ : { id: 'STRUCTURE', kind: 'fact', params: { name, color } }
-    const structures = buildStructureFacts(fenAvant).filter((t) => t.id === 'STRUCTURE' && t.params?.name).map((t) => t.params);
+    // les sept structures de positional/ et les sept de la grammaire enrichie (Expert, 25 octobre) : { name, color, params }
+    const structures = structuresEtendues(fenAvant);
     const structureNom = structures.map((s) => `${s.name}:${s.color}`).sort().join('|');
     let planRec = null;
     const planCourant = this.plan;
@@ -137,7 +137,7 @@ export class Joueur {
     let adopteMaintenant = false;
     if (!this.plan && structures.length) {
       const propositions = [];
-      for (const s of structures) for (const inst of instancier(fenAvant, camp, s.name, s.color)) {
+      for (const s of structures) for (const inst of (NOUVELLES_STRUCTURES.has(s.name) ? instancierEtendu(fenAvant, camp, s) : instancier(fenAvant, camp, s.name, s.color))) {
         if (!estLevier(fenAvant, camp, inst.plan)) continue;
         const d0 = distance(fenAvant, camp, inst.plan).d;
         if (!(d0 > 0) || !Number.isFinite(d0)) continue;
