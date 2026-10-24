@@ -122,8 +122,11 @@ export class Joueur {
     if (planCourant) {
       // le plan suit les pièces depuis son adoption : on le remet à jour sur les coups joués depuis
       const dHist = distance(fenAvant, camp, planCourant.plan);
+      // le plan tient tant que SA structure (celle qui l'a produit) est encore là : une autre structure qui apparaît ne le chasse pas
+      const saStructure = structures.some((s) => `${s.name}:${s.color}` === planCourant.structure);
       if (dHist.d === 0) { planRec = { abandon: null, realise: true }; this.plan = null; }
-      else if (planCourant.structure !== structureNom && structureNom) { planRec = { abandon: 'sans_objet', ancien: planCourant.nom, objetDisparu: 'la structure' }; this.plan = null; }
+      else if (!Number.isFinite(dHist.d)) { planRec = { abandon: 'sans_objet', ancien: planCourant.nom, objetDisparu: 'la cible' }; this.plan = null; }
+      else if (!saStructure) { planRec = { abandon: 'sans_objet', ancien: planCourant.nom, objetDisparu: 'la structure' }; this.plan = null; }
       else if (planCourant.cumul > BORNES.plan.abandon) { planRec = { abandon: 'cher', ancien: planCourant.nom }; this.plan = null; }
     }
     const planTerme = (plan, cand) => { // (distance à la racine − distance au bout de la ligne) × 10, plafonné à ± 30
@@ -144,13 +147,15 @@ export class Joueur {
         if (!(d0 > 0) || !Number.isFinite(d0)) continue;
         let meilleurPas = null;
         for (const cand of exacts) { const pt = planTerme(inst.plan, cand); if (pt.dApres < d0) { const cout = cands[0].cp - cand.cp; if (!meilleurPas || cout < meilleurPas.cout) meilleurPas = { cand, cout }; } }
-        if (meilleurPas && meilleurPas.cout <= BORNES.plan.adoption) propositions.push({ ...inst, d0, cout: meilleurPas.cout, structure: structureNom });
+        if (meilleurPas && meilleurPas.cout <= BORNES.plan.adoption) propositions.push({ ...inst, d0, cout: meilleurPas.cout, structure: `${s.name}:${s.color}` });
       }
       if (propositions.length) {
         propositions.sort((a, b) => a.cout - b.cout);
         const p = propositions[0];
-        this.plan = { plan: p.plan, pourquoi: p.pourquoi, nom: libelle(p.plan, fenAvant), structure: structureNom, cumul: 0, adopteAuPly: ply };
+        this.plan = { plan: p.plan, pourquoi: p.pourquoi, nom: libelle(p.plan, fenAvant), structure: p.structure, cumul: 0, adopteAuPly: ply };
         adopteMaintenant = true;
+        // si c'est le même plan qui revient au même coup (la structure a clignoté), on ne dit ni abandon ni adoption
+        if (planRec?.abandon && planRec.ancien === this.plan.nom) { planRec = null; adopteMaintenant = false; this.plan.cumul = planCourant?.cumul ?? 0; }
       }
     }
     for (const c of exacts) { c.planTerme = 0; c.total = c.cp; }
