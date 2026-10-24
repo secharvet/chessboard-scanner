@@ -46,3 +46,11 @@ Heures de Paris. Une entrée par étape franchie ; les chiffres sont ceux des fi
   et plans canoniques ; branchée dans `coach/joueur/structures-etendues.mjs` (70c1c63). Le livre (5.Cxf6+) corrigé dans la base.
 - Restent : la série de 100 parties contre Maia-1500 (Dev chef, script de série), la lecture humaine des 20 coups (mode
   « lecture » de la page), le rapport final au GE.
+
+## 26 octobre 2026, nuit
+- Troisième relecture de l'Expert (récits 7e2a0fc) : 40 fidèles sur 48 ; sa règle ROI_AU_CENTRE était fausse (colonne sans pion
+  adverse → colonne sans pion À MOI). Série de 100 arrêtée après 4 parties (archivées hors critère), corrigée, **relancée de
+  zéro sur le commit figé 4d5e252** à 21 h 26 Paris, fin estimée ~0 h 45. Le code du coach ne bouge plus pendant la série.
+- **À faire après la série (parole seulement, aucun coup ne change)** : la menace retenue doit être, parmi les candidats
+  exacts du coup nul, celui dont la ligne gagne le plus de matériel compté (ou mate), pas le meilleur coup adverse à ses yeux
+  (cas 16.Fb5+ : …Ce7 −5,87 retenu, …Txg2+ −6,04 ignoré alors qu'il gagne g2 avec échec).
