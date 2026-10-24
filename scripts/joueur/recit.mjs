@@ -25,6 +25,11 @@ L.push(`**Le coach a les ${camp}** contre ${p.adversaire.nom} (graine ${p.advers
   `Budget de recherche ${p.coach.budget.toLocaleString('fr-FR')} positions par coup, un fil, code \`${p.coach.code}\`. ` +
   `**Résultat : ${p.resultat}** (${p.raison}, ${p.plies} demi-coups).`);
 L.push('');
+const DEPART_STANDARD = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
+if (p.depart && p.depart !== DEPART_STANDARD) {
+  L.push(`**Démonstration depuis une position du panel, hors critère.** La partie ne commence pas au premier coup mais à la position \`${p.depart}\` : elle sert à montrer le coach quand il reconnaît une structure et adopte un plan, elle ne compte pour aucune des cinq conditions.`);
+  L.push('');
+}
 L.push('Tous les coups du coach sont les siens : aucun moteur n\'est consulté pendant la partie. Stockfish n\'intervient qu\'après, comme examinateur.');
 L.push('');
 if (ex) {
