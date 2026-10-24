@@ -33,6 +33,20 @@ export function cpPourCoach(score, pov) {
 
 const estMat = (v) => Math.abs(v) >= MATE_BASE - 1000;
 const signe = (v) => (v > 0 ? 1 : v < 0 ? -1 : 0);
+const matN = (v) => MATE_BASE - Math.abs(v); // demi-coups jusqu'au mat, pour un score de mat encodé
+
+/**
+ * La perte d'un coup. Aucun côté n'est un mat → centièmes (avant − après). Un mat en jeu → la perte en centièmes n'a pas
+ * de sens (± (100000 − N) n'est pas un score de pion : mélangée à un centième elle donnait des « +98493 ») : `perte` vaut
+ * null et `mat` porte la distance au mat de chaque côté — + N = le coach mate en N, − N = le coach est maté en N, null = ce
+ * côté est un score de pion — pour afficher « mat en N → mat en M » ; le verdict (page 3) classe comme avant.
+ */
+export function perteEtMat(avant, apres) {
+  const a = estMat(avant), b = estMat(apres);
+  if (!a && !b) return { perte: avant - apres, mat: null };
+  const dist = (v, e) => (e ? signe(v) * matN(v) : null);
+  return { perte: null, mat: { avant: dist(avant, a), apres: dist(apres, b) } };
+}
 
 /**
  * Le verdict d'un coup du coach à partir des évaluations (point de vue du coach, centipions) avant et après, et du nombre
@@ -90,7 +104,8 @@ export async function examiner(engine, partie, depth = 18) {
     const apres = await evaluer(engine, apres2.fen(), camp, depth);
     const { verdict, raison } = juger(avant, apres, legal);
     const phase = phaseDe(chessAvant);
-    coup.examen = { avant, apres, perte: avant - apres, verdict, raison, phase };
+    const { perte, mat } = perteEtMat(avant, apres);
+    coup.examen = { avant, apres, perte, mat, verdict, raison, phase };
     const ph = phases[phase]; ph.coups++;
     if (verdict === 'bevue') { bevues++; ph.bevues++; }
     else if (verdict === 'faute') { fautes++; ph.fautes++; }
@@ -101,7 +116,7 @@ export async function examiner(engine, partie, depth = 18) {
     bevues, fautes, exclus, gachis,
     tauxBevues: nCoach ? bevues / nCoach : null,
     parPhase: phases,
-    note: 'scores en centièmes de pion, du point de vue du coach ; mat encodé ± (100000 − N)',
+    note: 'scores en centièmes de pion, du point de vue du coach ; mat encodé ± (100000 − N) ; quand un mat est en jeu, perte = null et mat = { avant, apres } en demi-coups (+ le coach mate, − il est maté, null = score de pion)',
   };
   return partie;
 }
