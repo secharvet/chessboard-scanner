@@ -74,6 +74,8 @@
   "amelioration": {
     "placement": "Rien de forcé. {ma_piece} va en {case}, une meilleure case.",
     "mobilite": "Rien de forcé. En {case}, {ma_piece} a plus de cases.",
+    "mobilite_lui": "Rien de forcé. {sa_piece} en {case} a moins de cases.",
+    "placement_lui": "Rien de forcé. {sa_piece} en {case} perd de son activité.",
     "avant_poste": "Rien de forcé. {ma_piece} s'installe en {case} : aucun pion adverse ne peut plus l'en chasser.",
     "colonne_ouverte": "Rien de forcé. {ma_piece} prend la colonne {colonne}, ouverte : aucun pion ne la bloque.",
     "colonne_semi_ouverte": "Rien de forcé. {ma_piece} se place sur la colonne {colonne} : elle appuie sur le pion adverse {case_cible}.",

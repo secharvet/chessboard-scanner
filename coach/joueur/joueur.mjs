@@ -389,8 +389,9 @@ export class Joueur {
     let cle = null;
     const tour7 = coupM.piece === 'r' && ((camp === 'w' && caseM[1] === '7') || (camp === 'b' && caseM[1] === '2'));
     switch (nom) {
-      case 'placement': cle = roque ? 'developpement_roque' : tour7 ? 'septieme' : meilleure ? 'placement' : null; break;
-      case 'mobilité': cle = roque ? 'developpement_roque' : meilleure && pieceNom !== 'pion' ? 'mobilite' : null; break;
+      // si l'entrée qui change est une pièce À LUI (elle perd des cases, de l'activité), c'est le gabarit à lui qui parle (Expert)
+      case 'placement': cle = roque ? 'developpement_roque' : tour7 ? 'septieme' : !choisie ? null : choisie.mien ? 'placement' : 'placement_lui'; break;
+      case 'mobilité': cle = roque ? 'developpement_roque' : !choisie || pieceNom === 'pion' ? null : choisie.mien ? 'mobilite' : 'mobilite_lui'; break;
       case 'avant-poste': cle = 'avant_poste'; break;
       case 'tour sur colonne ouverte': cle = 'colonne_ouverte'; break;
       case 'tour enfermée': cle = roque ? 'developpement_roque' : 'mobilite'; break;
