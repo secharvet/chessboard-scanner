@@ -79,3 +79,14 @@ variés. Sinon l'intervalle de ±10 points est faux.
 6. **« Battu »** : si R est à moins de 10 cp de M, dire « M et R se valent, j'ai pris M », pas « M bat R ». Même chose
    pour l'amélioration : ne nommer une destination (« vers e4 ») que si elle est dans la ligne, et dire « le cavalier a
    plus de cases », pas « mobilité +3 ».
+
+## Tour 3 (confirmation de la synthèse du pilote)
+Synthèse confirmée, avec deux amendements :
+1. **L'unité.** Dans SF 11, un pion vaut 128 en milieu de jeu et 213 en finale, en unités internes. Toutes nos bornes
+   (10, 30, 50, 100 cp, et ±5) s'expriment en centièmes de pion à l'affichage : interne × 100 / 213, comme la sortie UCI de
+   SF 11. Il faut l'écrire, sinon le plafond de 30 vaut 0,14 pion en unités internes.
+2. **La variété contre Maia.** Tirer dans sa politique seulement pendant les 8 premiers coups de Maia, puis jouer son coup
+   préféré. Si on tire tout au long, Maia joue plus faible que 1500 (son niveau se mesure sur le coup préféré), et le seuil
+   de 50 % devient trop facile.
+Note sur (a) : la forme SF 11 contient déjà le « −100 si notre cavalier défend à côté du roi ». C'est exactement le Cf6 de
+la Panov. Aucun terme spécial n'est nécessaire, d'accord.
