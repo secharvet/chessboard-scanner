@@ -3,9 +3,11 @@
  * versionnées par auteur, remarques, vérification au moteur. Contrat : docs/SPEC-EDITEUR-ENSEIGNANT.md § 5.
  * Toutes les règles d'accès sont ici (côté serveur) ; les pages ne font que les refléter.
  */
+import { readFileSync } from 'node:fs';
 import { Chess } from 'chess.js';
 import { pool } from './db.mjs';
 import * as auth from './auth.mjs';
+import * as arene from './joueur-arene.mjs';
 
 const cle = (c) => c.fen().split(' ').slice(0, 4).join(' ');
 const CASE = /^[a-h][1-8]$/; const COULEURS = new Set(['vert', 'bleu', 'rouge', 'orange']);
@@ -335,6 +337,20 @@ export async function routerPlateforme({ req, res, url, readJson, send, engine, 
       if (mv?.kind === 'principal' && (!t || ecart > 0.4)) avert.push(`${mv.san} est le coup principal, mais le moteur ${t ? `le met à ${ecart.toFixed(2)} pion du meilleur` : 'ne le met pas dans ses huit premiers'}`);
       return { move_id: x.move_id, san: mv?.san, rang: t?.rang ?? null, ecart }; });
     send(res, 200, { ok: true, avertissements: avert, coups: detail, meilleur: top[0]?.san ?? null }); return true;
+  }
+  // ---- faire jouer le coach (coach/joueur-arene.mjs) : lancement réservé (enseignant), spectacle public
+  if (path === '/api/joueur/en-cours' && m === 'GET') { send(res, 200, { ok: true, ...arene.etat() }); return true; }
+  if (path === '/api/joueur/en-cours/flux' && m === 'GET') { arene.brancher(res); return true; } // SSE : res reste ouvert, le serveur ne le ferme pas
+  if (path === '/api/joueur/parties' && m === 'GET') {
+    let parties = []; try { parties = JSON.parse(readFileSync(new URL('../parties/index.json', import.meta.url), 'utf8')); } catch { /* pas encore de parties */ }
+    send(res, 200, { ok: true, parties }); return true;
+  }
+  if (path === '/api/joueur/parties' && m === 'POST') {
+    if (!exiger('enseignant')) return true; // même garde que l'éditeur
+    const b = await readJson(req);
+    try { const c = arene.lancer({ adversaire: b.adversaire, elo: b.elo, camp: b.camp, budget: b.budget }); send(res, 200, { ok: true, ...c }); }
+    catch (e) { if (e.occupe) return refuser(409, 'une partie est déjà en cours, réessaie quand elle est finie'); return refuser(400, e.message); }
+    return true;
   }
   return false;
 }

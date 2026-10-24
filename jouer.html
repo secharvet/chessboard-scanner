@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="fr" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Faire jouer le coach</title>
+    <link rel="stylesheet" href="./vendor-web/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./site-nav.css" />
+    <link rel="stylesheet" href="./partie.css" />
+    <link rel="stylesheet" href="./jouer.css" />
+  </head>
+  <body>
+    <div class="app jpt">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand__title">Faire jouer le coach</div>
+          <div class="brand__subtitle">le coach joue une partie en direct — on assiste</div>
+        </div>
+      </header>
+
+      <div class="jpt__erreur" id="jouErreur" hidden></div>
+
+      <!-- Panneau de lancement : visible seulement pour enseignant / admin -->
+      <section class="jou__lancement" id="jouLancement" hidden>
+        <div class="jou__lancement-titre">Lancer une partie</div>
+        <div class="jou__lancement-champs">
+          <label>Adversaire
+            <select id="jouAdversaire" class="form-select form-select-sm">
+              <option value="maia">Maia-1500 (humain simulé)</option>
+              <option value="bride">Stockfish bridé</option>
+              <option value="pleine">Stockfish pleine force (prof. 10)</option>
+            </select>
+          </label>
+          <label id="jouEloChamp" hidden>Niveau
+            <select id="jouElo" class="form-select form-select-sm">
+              <option value="1200">1200</option>
+              <option value="1500" selected>1500</option>
+              <option value="1800">1800</option>
+              <option value="2000">2000</option>
+            </select>
+          </label>
+          <label>Le coach joue
+            <select id="jouCamp" class="form-select form-select-sm">
+              <option value="w">les Blancs</option>
+              <option value="b">les Noirs</option>
+            </select>
+          </label>
+          <button type="button" class="btn btn-sm btn-warning" id="jouJouer">Jouer</button>
+        </div>
+      </section>
+
+      <main class="jpt__layout">
+        <section class="jpt__gauche">
+          <div class="jpt__meta" id="jouMeta" aria-live="polite">Chargement…</div>
+          <div class="jpt__board-wrap"><div id="jouBoard" class="board"></div></div>
+          <ol class="jpt__coups" id="jouCoups" aria-label="Coups joués"></ol>
+        </section>
+
+        <section class="jpt__droite">
+          <div class="jpt__phrase-carte" id="jouPhraseCarte" aria-live="polite">
+            <div class="jpt__phrase-tete">
+              <span class="jpt__pastille" id="jouPastille" hidden></span>
+              <span class="jpt__coup-nom" id="jouCoupNom"></span>
+            </div>
+            <p class="jpt__phrase" id="jouPhrase">En attente d'une partie.</p>
+            <button type="button" class="btn btn-sm btn-outline-info" id="jouPourquoi" hidden aria-expanded="false">Pourquoi ?</button>
+            <div class="jpt__trace" id="jouTrace" hidden></div>
+          </div>
+          <div class="jou__fin" id="jouFin" hidden></div>
+          <div class="jou__liste-bloc" id="jouListeBloc" hidden>
+            <div class="jou__liste-titre">Parties déjà jouées</div>
+            <ul class="jou__liste" id="jouListe"></ul>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="./jouer.js"></script>
+    <script type="module" src="./site-nav.js"></script>
+  </body>
+</html>

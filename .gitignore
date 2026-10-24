@@ -5,6 +5,8 @@ test-results/
 .env
 reports/
 parties/
+parties-serie/
+parties-serie-*/
 # Carnet de leçons du joueur LLM (propre à chaque machine)
 memory/
 logs/
