@@ -323,7 +323,7 @@ export function evaluer(ech, detail = null) {
   if (!npm[faible] && !npcs[faible][PION] && npm[fort] >= VALEUR_MG[TOUR]) {
     const rk = ech.rois[fort], rl = ech.rois[faible];
     const bord = Math.max(Math.abs(2 * colonne(rl) - 7), Math.abs(2 * rangee(rl) - 7)); // 1 au centre … 7 au bord
-    const v = 40 * bord + 16 * (14 - distRoi(rk, rl));
+    const v = 60 * bord + 40 * (14 - distRoi(rk, rl)); // maison : ~28 cp par rang vers le bord, ~19 cp par pas de notre roi
     noter(fort, 'mat forcé : roi au bord, le nôtre s\'approche', 0, v, ROI, rl);
   }
 

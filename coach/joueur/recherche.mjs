@@ -58,6 +58,7 @@ export class Recherche {
 
   // ---- quiescence ----
   #quiescence(ech, alpha, beta, ply) {
+    this.pvLen[ply] = 0; // la ligne principale continue dans la quiescence : les prises qui suivent font partie de la preuve
     this.noeuds++;
     if (this.noeuds > this.budget && this.profondeurEnCours > 1) this.arret = true;
     const statique = evaluer(ech);
@@ -74,7 +75,14 @@ export class Recherche {
       const v = -this.#quiescence(ech, -beta, -alpha, ply + 1);
       ech.reprendre();
       if (this.arret) return meilleur;
-      if (v > meilleur) { meilleur = v; if (v > alpha) { alpha = v; if (v >= beta) return v; } }
+      if (v > meilleur) {
+        meilleur = v;
+        if (v > alpha) {
+          alpha = v;
+          this.pv[ply][0] = m; for (let j = 0; j < this.pvLen[ply + 1]; j++) this.pv[ply][j + 1] = this.pv[ply + 1][j]; this.pvLen[ply] = this.pvLen[ply + 1] + 1;
+          if (v >= beta) return v;
+        }
+      }
     }
     return meilleur;
   }
@@ -144,15 +152,18 @@ export class Recherche {
       if (prof > 1 && this.noeuds > budget / 2) break; // une itération coûte deux à trois fois la précédente : on ne la commence que si elle a une chance de finir
       this.profondeurEnCours = prof; this.budget = budget;
       const essai = candidats.map((c) => ({ ...c, score: -INFINI, exact: false }));
+      const nOuverts = Math.min(this.candidatsExacts, essai.length);
       let alpha = -INFINI, fini = true;
       for (let k = 0; k < essai.length; k++) {
         const cand = essai[k];
+        // Les meilleurs de l'itération précédente sont cherchés à fenêtre ouverte : leur score est exact d'emblée.
+        const ouvert = k < nOuverts;
         ech.jouer(cand.coup);
-        let v = -this.#alphabeta(ech, prof - 1, -INFINI, -alpha, 1);
+        let v = -this.#alphabeta(ech, prof - 1, -INFINI, ouvert ? INFINI : -alpha, 1);
         const pv = [cand.coup, ...Array.from(this.pv[1].subarray(0, this.pvLen[1]))];
         ech.reprendre();
         if (this.arret) { fini = false; break; }
-        cand.score = v; cand.pv = pv; cand.exact = v > alpha || k === 0;
+        cand.score = v; cand.pv = pv; cand.exact = ouvert || v > alpha;
         if (v > alpha) alpha = v;
       }
       if (!fini) break;
@@ -160,7 +171,7 @@ export class Recherche {
       // Scores exacts pour les meilleurs candidats (fenêtre ouverte), pour la comparaison M / R de la parole. Une borne
       // supérieure est optimiste et remonte dans le tri : on recommence jusqu'à ce que les premiers soient tous exacts.
       const nExacts = Math.min(this.candidatsExacts, essai.length);
-      this.budget = Math.trunc(budget * 1.5); // la re-recherche a droit à une demi-rallonge : un R exact vaut ce prix
+      this.budget = budget * 2; // la re-recherche a droit à une rallonge : un R exact vaut ce prix
       for (let tours = 0; tours < 3 * nExacts && !this.arret; tours++) {
         const k = essai.findIndex((cand, i) => i < nExacts && !cand.exact);
         if (k < 0) break;
@@ -179,6 +190,16 @@ export class Recherche {
     }
     const m = candidats[0];
     return { coup: m.coup, score: m.score, pv: m.pv, profondeur, noeuds: this.noeuds, candidats };
+  }
+
+  /** Score exact d'un coup donné à une profondeur donnée (fenêtre ouverte) : { score, pv }. Pour le coup du livre. */
+  noterCoup(ech, coup, { prof = 4, budget = this.budget } = {}) {
+    this.budget = budget; this.noeuds = 0; this.arret = false; this.profondeurEnCours = 1;
+    ech.jouer(coup);
+    const v = -this.#alphabeta(ech, Math.max(0, prof - 1), -INFINI, INFINI, 1);
+    const pv = [coup, ...Array.from(this.pv[1].subarray(0, this.pvLen[1]))];
+    ech.reprendre();
+    return { score: v, pv, noeuds: this.noeuds };
   }
 
   /**
