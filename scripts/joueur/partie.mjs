@@ -3,7 +3,7 @@
  * L'arène du coach joueur (docs/coach-joueur/CHANTIERS-2026-10-24.md, page 3, « qui fait quoi »).
  *
  *   node scripts/joueur/partie.mjs --adversaire maia|sf1500|sf --camp w|b --graine N [--budget 400000]
- *                                  [--joueur coach/joueur/joueur.mjs (défaut) | coach/joueur/joueur-factice.mjs] [--sortie parties/] [--depart <fen>]
+ *                                  [--joueur coach/joueur/joueur.mjs (défaut) | coach/joueur/joueur-factice.mjs] [--sortie parties/] [--depart <fen>] [--code <sha>]
  *
  * Le COACH (classe `Joueur`, `choisir(fen, contexte)`) joue TOUS ses coups ; l'arène ne lui donne jamais un moteur ni une
  * évaluation (principe 2 du GE : Stockfish est examinateur après coup, jamais proposant). L'adversaire est Maia-1500
@@ -210,8 +210,9 @@ async function main() {
 
   const { Joueur } = await import(MODULE.startsWith('.') || MODULE.startsWith('/') ? MODULE : `../../${MODULE}`);
   const coach = new Joueur({ camp: CAMP, budget: BUDGET, graine: GRAINE });
-  // Le code qui a produit la partie : le commit courant (git), pour retrouver la version exacte de l'évaluation et de la recherche.
-  let code; try { code = execSync('git rev-parse --short HEAD', { encoding: 'utf8' }).trim(); } catch { code = coach.code ?? 'inconnu'; }
+  // Le code qui a produit la partie : --code s'il est donné (la série fige sa version), sinon le commit courant (git).
+  let code = opt('--code', null);
+  if (!code) { try { code = execSync('git rev-parse --short HEAD', { encoding: 'utf8' }).trim(); } catch { code = coach.code ?? 'inconnu'; } }
   const adversaire = await construireAdversaire(TYPE, { graine: GRAINE });
 
   const date = new Date().toISOString().slice(0, 10);
