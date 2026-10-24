@@ -102,3 +102,26 @@
 @media (max-width: 1100px) { .ouv__colonnes--deux { grid-template-columns: 1fr; } .ouv__col--deux { border-left: 0; padding-left: 0; border-top: 1px solid var(--border); padding-top: 14px; } }
 @media (max-width: 800px) { .ouv__col--deux { display: none; } .ouv__horsligne { margin: 6px 10px 0; } .ouv__editer { display: none; } }
 .ouv__recit .camp { color: var(--muted); font-size: 0.85em; }
+
+/* Éventail du livre (eventail.js, 24 octobre 2026) : l'arbre en anneaux, le chemin joué allumé. */
+.ouv__eventail summary { cursor: pointer; list-style: none; }
+.ouv__eventail summary::-webkit-details-marker { display: none; }
+.ouv__eventail summary h3 { display: inline; }
+.ouv__eventail summary h3::after { content: " ▾"; }
+.ouv__eventail:not([open]) summary h3::after { content: " ▸"; }
+.evt { max-width: 380px; margin: 4px auto 0; }
+.evt__scene { width: 100%; display: block; touch-action: manipulation; }
+.evt__scene text { pointer-events: none; fill: #fff; font-weight: 600; paint-order: stroke; stroke: rgba(0,0,0,.45); stroke-width: 2px; }
+.evt__sect { stroke: var(--bg); stroke-width: 1; cursor: pointer; transition: opacity .15s; }
+.evt__sect.evt--loin { filter: saturate(.35) brightness(.78); }
+.evt__sect.evt--chemin { stroke: var(--text); stroke-width: 3; }
+.evt__sect.evt--ici { stroke: #ffb000; stroke-width: 7; }
+.evt__sect.evt--survol { filter: brightness(1.12); }
+.evt__rond { fill: var(--veil-2, #1d2340); stroke: rgba(255,255,255,.2); cursor: pointer; }
+.evt__centre text { font-weight: 500; stroke: none; fill: var(--text); }
+.evt__barre { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 4px; }
+.evt__barre .btn { padding: 3px 9px; font-size: 0.78rem; }
+.evt__info { color: var(--muted); font-size: 0.8rem; flex: 1; min-width: 0; }
+.evt--hors .evt__info { color: var(--warn); }
+/* Téléphone : le panneau sous l'échiquier fait une centaine de pixels, l'éventail n'y tient pas (à reprendre à part). */
+@media (max-width: 800px) { .ouv__eventail { display: none; } }
