@@ -86,9 +86,7 @@ export function formuler(r) {
       break;
     }
     case 'plan': {
-      if (r.plan?.adopte) parties.push(remplir(texte(G.plan.adoption), d));
       parties.push(remplir(texte(r.plan?.distanceApres === 0 ? G.plan.dernier_pas : G.plan.pas), d));
-      if (r.plan?.pourquoi && r.plan.adopte) parties.push(`(${r.plan.pourquoi}.)`);
       break;
     }
     case 'finale': parties.push(remplir(G.finale[r.sousSorte] ?? '', dt(t))); break;
@@ -103,6 +101,8 @@ export function formuler(r) {
       }
     }
   }
+  // Un plan adopté à ce coup s'annonce, quelle que soit la sorte de la phrase (un fait, pas un ornement)
+  if (r.plan?.adopte) parties.unshift(remplir(texte(G.plan.adoption), d) + (r.plan.pourquoi ? ` (${r.plan.pourquoi}.)` : ''));
   // Abandon d'un plan annoncé à ce coup
   if (r.plan?.abandon === 'cher') parties.unshift(remplir(texte(G.plan.abandon_cher), { plan: r.plan.ancien ?? r.plan.nom }));
   if (r.plan?.abandon === 'sans_objet') parties.unshift(remplir(texte(G.plan.abandon_sans_objet), { plan: r.plan.ancien ?? r.plan.nom, objet_disparu: r.plan.objetDisparu ?? 'la cible' }));

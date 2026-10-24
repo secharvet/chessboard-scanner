@@ -113,7 +113,8 @@ export class Joueur {
 
     // --- le plan : structure, adoption, terme ---
     const exacts = cands.filter((c) => c.exact);
-    const structures = buildStructureFacts(fenAvant).filter((t) => (t.kind ?? t.type) === 'STRUCTURE').map((t) => t.params ?? t);
+    // les jetons de positional/ : { id: 'STRUCTURE', kind: 'fact', params: { name, color } }
+    const structures = buildStructureFacts(fenAvant).filter((t) => t.id === 'STRUCTURE' && t.params?.name).map((t) => t.params);
     const structureNom = structures.map((s) => `${s.name}:${s.color}`).sort().join('|');
     let planRec = null;
     const planCourant = this.plan;
