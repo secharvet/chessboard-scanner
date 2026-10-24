@@ -8,6 +8,7 @@ const ENTREES = [
   { id: 'index', href: './index.html', titre: 'Lecteur d\'ouvertures', court: 'Lecteur', sous: 'parties PGN, arbre des coups' },
   { id: 'play', href: './play.html', titre: 'Jouer contre Stockfish', court: 'Jouer', sous: 'avec le jugement des coups' },
   { id: 'ouverture', href: './ouverture.html', titre: 'Assistant d\'ouverture', court: 'Ouverture', sous: 'Française, Italienne, Espagnole, coup par coup' },
+  { id: 'jouer', href: './jouer.html', titre: 'Faire jouer le coach', court: 'Coach joue', sous: 'le coach joue une partie en direct' },
   { id: 'editeur', href: './editeur.html', titre: 'Éditeur', court: 'Éditer', sous: 'pour les enseignants', roles: ['enseignant', 'validateur', 'admin'] },
   { id: 'guide', href: './guide-enseignant.html', titre: 'Guide de l\'enseignant', court: 'Guide', sous: 'écrire, montrer, publier', roles: ['enseignant', 'validateur', 'admin'] },
   { id: 'admin', href: './admin.html', titre: 'Administration', court: 'Admin', sous: 'comptes, sécurité', roles: ['validateur', 'admin'] },
