@@ -148,8 +148,9 @@ export function instancierEtendu(fen, side, tok) {
         pousse(plusProche(fen, side, 'n', caseRel('e', 5, owner), L), 'l\'avant-poste que d4 garantit, d\'où le cavalier gêne tout le jeu adverse');
         pousse({ famille: 'poussee', pion: 'c', cible: caseRel('c', 4, owner) }, 'de l\'espace à l\'aile dame, et la case d5 enlevée aux pièces adverses');
       } else {
-        pousse({ famille: 'rupture', pion: 'c', cible: caseRel('c', 5, side) }, 'la libération : attaquer d4');
-        pousse({ famille: 'rupture', pion: 'e', cible: caseRel('e', 5, side) }, 'l\'autre libération ; elle demande une préparation');
+        // …c5 et …e5 de la table (écrite côté propriétaire Blancs) : la 4e rangée RELATIVE de l'adversaire
+        pousse({ famille: 'rupture', pion: 'c', cible: caseRel('c', 4, side) }, 'la libération : attaquer d4');
+        pousse({ famille: 'rupture', pion: 'e', cible: caseRel('e', 4, side) }, 'l\'autre libération ; elle demande une préparation');
       }
       break;
     }
