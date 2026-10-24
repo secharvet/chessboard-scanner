@@ -58,4 +58,6 @@ test('joueur : un coup légal, une phrase, le contrat ; le livre à la racine ; 
   const m = await new Joueur({ budget: 30000 }).choisir('r2qkb1r/pp2nppp/3p4/2pNN1B1/2BnP3/3P4/PPP2PPP/R2bK2R w KQkq - 1 1', { camp: 'w', ply: 20 });
   assert.equal(m.san, 'Cf6+'); assert.equal(m.sousSorte, 'mat'); assert.match(m.phrase, /c'est mat/);
   assert.ok(m.phrase.length > 0 && !/\{\w+\}/.test(m.phrase), 'aucun trou de gabarit dans la phrase');
+  // le demi-coup se lit sur l'échiquier, pas dans le contexte : coup 1 des Blancs quel que soit `ply`
+  assert.equal(m.ply, 1); assert.match(m.phrase, /après 1\.Cf6\+ gxf6 2\.Fxf7#/);
 });
