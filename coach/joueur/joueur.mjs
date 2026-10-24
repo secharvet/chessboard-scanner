@@ -83,7 +83,9 @@ export class Joueur {
     // --- l'évaluation avant, la recherche ---
     // E0 : l'évaluation avant le coup, posée par la quiescence (les prises en suspens résolues), sinon un pion en l'air
     // ferait dire « je gagne » à une simple reprise et « très mauvaise » à une position normale.
-    const E0 = enCentipions(this.recherche.evaluationPosee(ech)), E0statique = enCentipions(evaluer(ech));
+    const posee = this.recherche.evaluationPosee(ech);
+    const E0 = enCentipions(posee.score), E0statique = enCentipions(evaluer(ech));
+    const ligneQ = ligneFr(posee.pv.map(uciDe)); // la ligne des prises résolues : la référence du matériel pour le gain (Expert)
     const res = this.recherche.chercher(ech, { budget: this.budget });
     if (!res.coup) throw new Error('aucun coup légal');
     const cands = res.candidats.map((c) => ({ ...c, uci: uciDe(c.coup), cp: enCentipions(c.score), pvUci: c.pv.map(uciDe) }));
@@ -204,7 +206,11 @@ export class Joueur {
 
     // --- la sorte, par priorité : livre, calcul, défense, plan, amélioration ---
     const estMat = M.score >= MAT - 200;
-    const bilanM = bilanMateriel(fenAvant, ligneM.fenBout, camp), gainM = materielEnMots(bilanM);
+    // Gain = matériel compté au bout de la ligne de M MOINS celui au bout de la ligne de quiescence de E0 (même référence que
+    // E0, Expert) : reprendre ailleurs que sur la case de la prise n'est pas un gain. La perte, elle, se lit contre l'échiquier.
+    const bilanM = bilanMateriel(fenAvant, ligneM.fenBout, camp), bilanQ = bilanMateriel(fenAvant, ligneQ.fenBout, camp);
+    const bilanGain = Object.fromEntries(Object.keys(bilanM).map((k) => [k, bilanM[k] - bilanQ[k]]));
+    const gainM = materielEnMots(bilanGain);
     const perteM = materielEnMots(Object.fromEntries(Object.entries(bilanM).map(([k, v]) => [k, -v])));
     const bilanR = R ? bilanMateriel(fenAvant, ligneR.fenBout, camp) : null;
     const perteR = bilanR ? materielEnMots(Object.fromEntries(Object.entries(bilanR).map(([k, v]) => [k, -v]))) : null;
@@ -219,18 +225,23 @@ export class Joueur {
     const reprise = prise && dernierPrenait && dernierAdverse.slice(2, 4) === caseM;
     const bilanTotal = Object.entries(bilanM).reduce((s, [t, n]) => s + VAL[t.toLowerCase()] * n, 0);
     const matSubi = M.score <= -(MAT - 200);
+    // « le matériel est rétabli » seulement si, au bout de la ligne, il égale celui d'avant SA prise (Expert)
+    const fenAvantSaPrise = dernierAdverse ? (() => { const c = new Chess(depart); for (const u of historique.slice(0, -1)) c.move({ from: u.slice(0, 2), to: u.slice(2, 4), promotion: u[4] }); return c.fen(); })() : null;
+    const retabli = reprise && fenAvantSaPrise && Object.entries(bilanMateriel(fenAvantSaPrise, ligneM.fenBout, camp)).every(([, n]) => n === 0);
+    // Notre menace après M (l'adversaire passe, que gagne-t-on ?) : ne sert qu'à valider « j'attaque sa pièce ».
+    const menaceNotre = () => { const e2 = new Echiquier(apresM.fen()); const mn = this.recherche.menace(e2, { budget: Math.trunc(this.budget / 8), profondeurMax: 4 }); if (!mn) return false; const e3 = new Echiquier(apresM.fen()); e3.jouerNul(); const lm = ligneFr(mn.pv.map(uciDe), e3.fen()); const b = bilanMateriel(apresM.fen(), lm.fenBout, camp); return Object.entries(b).reduce((s, [t, n]) => s + VAL[t.toLowerCase()] * n, 0) > 0; };
     if (livre && !livre.refus) { sorte = 'livre'; sousSorte = 'coup'; }
     else if (estMat) { sorte = 'calcul'; sousSorte = 'mat'; }
     else if (matSubi) { sorte = 'calcul'; sousSorte = 'mat_subi'; }
-    // Le gain se lit contre l'échiquier tel qu'il est (E0 statique) : un pion pris et gardé au bout de la ligne est un gain,
-    // même si la quiescence l'avait déjà « vu ». Les effondrements (seul coup, moindre mal) se lisent contre E0 posée.
-    else if (reprise && bilanTotal >= 0 && M.cp - E0statique >= BORNES.gain) { sorte = 'calcul'; sousSorte = 'reprise'; }
-    else if (M.cp - E0statique >= BORNES.gain && gainM) { sorte = 'calcul'; sousSorte = 'gain'; }
+    // Reprise : dite comme telle (rétablie ou non). Gain : du matériel en plus par rapport à la ligne de quiescence de E0, et M
+    // ne descend pas sous E0. Les effondrements (seul coup, moindre mal) se lisent contre E0 posée.
+    else if (reprise && bilanTotal >= 0 && M.cp - E0statique >= BORNES.gain) { sorte = 'calcul'; sousSorte = retabli ? 'reprise' : 'reprise_partielle'; }
+    else if (gainM && M.cp >= E0 - 20) { sorte = 'calcul'; sousSorte = 'gain'; }
     // Seul coup : M tient (à 80 près de E0) et R s'effondre (80 sous M). Moindre mal / perdu : tout baisse de 80 ET la position
     // est vraiment mauvaise (sous −100) : une baisse depuis une évaluation posée trop optimiste n'est pas une catastrophe.
     else if (R && M.cp >= E0 - BORNES.gain && M.cp - R.cp >= BORNES.gain) { sorte = 'calcul'; sousSorte = 'seul_coup'; }
     else if (M.cp <= E0 - BORNES.gain && M.cp <= -100 && (!R || R.cp <= E0 - BORNES.gain)) { sorte = 'calcul'; sousSorte = perteM ? 'moindre_mal' : 'perdu'; }
-    else if (enEchec) { sorte = 'defense'; sousSorte = 'echec_pare'; }
+    else if (enEchec) { sorte = 'defense'; sousSorte = cands.length === 1 ? 'echec_seul' : 'echec_pare'; }
     else if (menace && !menace.pareeApresR && menace.pareeApresM) { sorte = 'defense'; sousSorte = 'parer'; }
     else if (sauvetage) { sorte = 'defense'; sousSorte = 'piece_en_prise'; enTete(sauvetage); }
     else if (roiTerme && (!R || M.cp - R.cp >= BORNES.seValent)) { sorte = 'defense'; sousSorte = roiTerme.cle; enTete(roiTerme); }
@@ -241,8 +252,11 @@ export class Joueur {
       // amélioration : le premier terme qui s'améliore pour nous ET qui a une phrase d'amélioration (les termes de défense n'en ont pas)
       const amel = termesCites.find((t) => t.d1 > 0 && t.cle && (GABARITS.amelioration[t.cle] || GABARITS.finale[t.cle]));
       if (finale) { sorte = 'finale'; sousSorte = finale.cle; enTete(finale); }
-      else if (prise && bilanTotal === 0) { sorte = 'amelioration'; sousSorte = 'echange'; }
-      else if (attaque) { sorte = 'amelioration'; sousSorte = attaque.cle; enTete(attaque); }
+      else if (prise && bilanTotal === 0) { // un échange : si « échanger quand on mène » est actif, c'est lui qui parle (Expert)
+        const mene = termesCites.find((t) => t.cle === 'echanges_quand_on_mene' && t.d1 > 0);
+        sorte = 'amelioration'; sousSorte = mene ? 'echanges_quand_on_mene' : 'echange'; enTete(mene);
+      }
+      else if (attaque && menaceNotre()) { sorte = 'amelioration'; sousSorte = attaque.cle; enTete(attaque); } // « il doit s'en occuper » seulement si c'est une vraie menace (matériel compté)
       else if (amel) { sorte = 'amelioration'; sousSorte = amel.cle; enTete(amel); }
       else if (echecDonne) { sorte = 'amelioration'; sousSorte = 'echec_donne'; }
       else if (prise || mM.m.piece === 'p') { sorte = 'amelioration'; sousSorte = 'placement'; } // une prise ou un pas de pion n'est jamais « un coup d'attente »
