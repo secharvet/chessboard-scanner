@@ -1,8 +1,10 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
+import { mkdtempSync, mkdirSync, writeFileSync, rmSync } from 'node:fs';
+import { tmpdir } from 'node:os';
 import { Chess } from 'chess.js';
 import { Joueur as JoueurFactice } from '../coach/joueur/joueur-factice.mjs';
-import { jouerPartie, construireAdversaire, pgn } from '../scripts/joueur/partie.mjs';
+import { jouerPartie, construireAdversaire, pgn, shaDepot } from '../scripts/joueur/partie.mjs';
 
 /** Un adversaire bouchon, hors ligne : il joue son premier coup légal (chess.js), sans moteur. */
 const adversaireBouchon = () => ({
@@ -98,6 +100,28 @@ test('arène : adversaire sf = Stockfish à pleine force (un fil, aucune bride, 
   assert.equal(opts.threads, 1); // un fil
   assert.equal(opts.options, undefined); // aucune option de bride (ni LimitStrength ni Elo)
   assert.equal(await adv.jouer('rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1'), 'g1f3');
+});
+
+test('arène : shaDepot lit .git (conteneur sans binaire git) — ref lâche, HEAD détaché, packed-refs, absent', () => {
+  const base = mkdtempSync(`${tmpdir()}/sha-`);
+  try {
+    // 1) ref lâche : HEAD → refs/heads/dev-lead → sha
+    const r1 = `${base}/lache`; mkdirSync(`${r1}/.git/refs/heads`, { recursive: true });
+    writeFileSync(`${r1}/.git/HEAD`, 'ref: refs/heads/dev-lead\n');
+    writeFileSync(`${r1}/.git/refs/heads/dev-lead`, 'abcdef1234567890abcdef1234567890abcdef12\n');
+    assert.equal(shaDepot(r1), 'abcdef1');
+    // 2) HEAD détaché : le sha directement
+    const r2 = `${base}/detache`; mkdirSync(`${r2}/.git`, { recursive: true });
+    writeFileSync(`${r2}/.git/HEAD`, 'deadbeef1234567890deadbeef1234567890dead\n');
+    assert.equal(shaDepot(r2), 'deadbee');
+    // 3) ref empaquetée : HEAD → main, pas de fichier lâche, packed-refs
+    const r3 = `${base}/packed`; mkdirSync(`${r3}/.git`, { recursive: true });
+    writeFileSync(`${r3}/.git/HEAD`, 'ref: refs/heads/main\n');
+    writeFileSync(`${r3}/.git/packed-refs`, '# pack-refs with: peeled fully-peeled sorted\n0123456789abcdef0123456789abcdef01234567 refs/heads/main\n');
+    assert.equal(shaDepot(r3), '0123456');
+    // 4) pas de dépôt → null
+    assert.equal(shaDepot(`${base}/rien`), null);
+  } finally { rmSync(base, { recursive: true, force: true }); }
 });
 
 test('arène : le PGN porte les phrases du coach en commentaires', async () => {

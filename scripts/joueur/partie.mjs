@@ -18,6 +18,7 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { execSync } from 'node:child_process';
 import { performance } from 'node:perf_hooks';
+import { fileURLToPath } from 'node:url';
 import { Chess } from 'chess.js';
 import { toFrenchSan } from '../../coach/notation.mjs';
 import { Echiquier, DEPART } from '../../coach/joueur/echiquier.mjs';
@@ -199,6 +200,21 @@ export function majIndex(dossier, entree) {
 /** Identifiant horodaté pour une partie à la demande : <date>T<hhmmss>-<adversaire>-<camp> (aucune collision). */
 export const horodate = (nomAdversaire, camp, d = new Date()) => `${d.toISOString().slice(0, 19).replace(/[-:]/g, '').replace('T', 'T')}-${nomAdversaire}-${camp}`;
 
+/**
+ * Le sha court du dépôt en LISANT `.git` (pour le conteneur, où le binaire git n'est pas disponible) : `.git/HEAD`, puis la
+ * ref désignée (fichier de ref ou `packed-refs`), ou le sha direct si HEAD est détaché. @returns 7 caractères, ou null.
+ */
+export function shaDepot(racine) {
+  try {
+    const head = readFileSync(`${racine}/.git/HEAD`, 'utf8').trim();
+    if (!head.startsWith('ref:')) return head.slice(0, 7); // HEAD détaché : le sha directement
+    const ref = head.slice(4).trim(); // refs/heads/<branche>
+    try { return readFileSync(`${racine}/.git/${ref}`, 'utf8').trim().slice(0, 7); } catch { /* ref empaquetée */ }
+    const ligne = readFileSync(`${racine}/.git/packed-refs`, 'utf8').split('\n').find((l) => l.endsWith(` ${ref}`));
+    return ligne ? ligne.slice(0, 7) : null;
+  } catch { return null; }
+}
+
 async function main() {
   const args = process.argv.slice(2);
   const opt = (k, d) => (args.includes(k) ? args[args.indexOf(k) + 1] : d);
@@ -217,9 +233,12 @@ async function main() {
 
   const { Joueur } = await import(MODULE.startsWith('.') || MODULE.startsWith('/') ? MODULE : `../../${MODULE}`);
   const coach = new Joueur({ camp: CAMP, budget: BUDGET, graine: GRAINE });
-  // Le code qui a produit la partie : --code s'il est donné (la série fige sa version), sinon le commit courant (git).
+  // Le code qui a produit la partie : --code (la série fige sa version) > git rev-parse (dev) > lecture de .git (conteneur,
+  // sans binaire git) > COACH_CODE (repli manuel) > coach.code > « inconnu ».
   let code = opt('--code', null);
-  if (!code) { try { code = execSync('git rev-parse --short HEAD', { encoding: 'utf8' }).trim(); } catch { code = coach.code ?? 'inconnu'; } }
+  if (!code) { try { code = execSync('git rev-parse --short HEAD', { encoding: 'utf8' }).trim(); } catch { /* pas de binaire git */ } }
+  if (!code) code = shaDepot(fileURLToPath(new URL('../../', import.meta.url)));
+  if (!code) code = process.env.COACH_CODE ?? coach.code ?? 'inconnu';
   const adversaire = await construireAdversaire(TYPE, { graine: GRAINE, depth: DEPTH, elo: ELO });
 
   const date = new Date().toISOString().slice(0, 10);
