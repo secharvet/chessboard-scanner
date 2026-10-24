@@ -1,0 +1,35 @@
+/* « Faire jouer le coach » (jouer.html / jouer.js). Réutilise les classes .jpt__ de partie.css ; ajoute le panneau de lancement. */
+
+.jou__lancement {
+  margin: 0 16px 12px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: rgba(255, 211, 122, 0.08);
+  border: 1px solid rgba(255, 211, 122, 0.3);
+}
+.jou__lancement-titre { font-weight: 600; margin-bottom: 8px; }
+.jou__lancement-champs { display: flex; flex-wrap: wrap; gap: 12px; align-items: end; }
+.jou__lancement-champs label { display: flex; flex-direction: column; gap: 3px; font-size: 0.85rem; opacity: 0.9; }
+.jou__lancement-champs select { min-width: 150px; }
+
+.jou__fin {
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: rgba(78, 154, 6, 0.14);
+  border: 1px solid rgba(78, 154, 6, 0.4);
+  line-height: 1.55;
+}
+.jou__fin a { font-weight: 600; }
+
+.jou__liste-bloc { margin-top: 14px; }
+.jou__liste-titre { font-weight: 600; margin-bottom: 6px; }
+.jou__liste { list-style: none; margin: 0; padding: 0; max-height: 280px; overflow-y: auto; }
+.jou__liste li { padding: 4px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
+.jou__liste a { text-decoration: none; }
+.jou__liste .jou__liste-detail { opacity: 0.7; font-size: 0.85rem; }
+
+@media (max-width: 800px) {
+  .jou__lancement { margin: 0 12px 10px; }
+  .jou__lancement-champs select { min-width: 120px; }
+}

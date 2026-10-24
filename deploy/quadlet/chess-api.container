@@ -6,15 +6,20 @@ After=chess-db.service
 Requires=chess-db.service
 
 [Container]
-Image=docker.io/library/node:22-bookworm-slim
+Image=docker.io/library/node:22-trixie-slim
 ContainerName=chess-api
 Network=chess.network
 Volume=/home/ubuntu/chessboard-scanner:/app:Z
-# Stockfish de l'hôte (binaire glibc, d'où l'image Debian et non Alpine) : le coach et la vérification des fautes en ont besoin
+# Stockfish de l'hôte (binaire glibc ; lc0 de Maia exige glibc 2.38, d'où Debian 13 « trixie ») : le coach et la vérification des fautes en ont besoin
 Volume=/usr/local/bin/stockfish:/usr/local/bin/stockfish:ro
+# Maia-1500 (lc0 + poids) de l'hôte : la page « Faire jouer le coach » lance des parties contre Maia depuis l'API
+Volume=/home/ubuntu/bin/maia:/home/ubuntu/bin/maia:ro
 WorkingDir=/app
 Exec=node --watch coach/server.mjs
 EnvironmentFile=/home/ubuntu/chessboard-scanner/db/.env.db
+# Les moteurs vus par les parties en direct lancées depuis l'API (coach/joueur-arene.mjs)
+Environment=MAIA_DIR=/home/ubuntu/bin/maia
+Environment=STOCKFISH_PATH=/usr/local/bin/stockfish
 PublishPort=8000:8000
 # Santé : si /health ne répond plus (par exemple node --watch arrêté sur une erreur), Podman redémarre le conteneur
 HealthCmd=node /app/scripts/sante-api.mjs

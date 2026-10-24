@@ -10,13 +10,13 @@ FROM docker.io/library/nginx:alpine
 COPY docker/web/nginx.conf /etc/nginx/conf.d/default.conf
 
 # HTML / CSS
-COPY index.html play.html style.css play.css partie.html partie.css \
+COPY index.html play.html style.css play.css partie.html partie.css jouer.html jouer.css \
   /usr/share/nginx/html/
 
 # JS — modules racine
 COPY app.js board-view.js board-drawables.js comment-drawables.js pgn-graph.js \
   play.js play-board.js square-control.js stockfish-client.js eval-fr.js \
-  mentor-client.js mentor-markdown.js mentor-ui.js board-links.js partie.js \
+  mentor-client.js mentor-markdown.js mentor-ui.js board-links.js partie.js jouer.js \
   /usr/share/nginx/html/
 
 # JS — répertoires entiers (tout sous-fichier inclus)
