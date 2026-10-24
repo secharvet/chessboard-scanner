@@ -107,7 +107,7 @@ export function formuler(r) {
   }
 
   // 3. La menace vue (sauf si la défense la nomme déjà ; jamais en finale de pions, déjà filtrée en amont)
-  if (r.menace && !(r.sorte === 'defense' && r.sousSorte === 'parer') && r.sousSorte !== 'mat') {
+  if (r.menace && !(r.sorte === 'defense' && r.sousSorte === 'parer') && r.sousSorte !== 'mat' && r.sousSorte !== 'contraint') {
     if (r.menace.pareeApresM && r.menace.pareeApresR) parties.push(remplir(texte(G.menace_vue.paree), d));
     else if (!r.menace.pareeApresM) {
       parties.push(remplir(texte(G.menace_vue.non_paree), d));
