@@ -1,0 +1,1119 @@
+{
+ "lot": 27,
+ "coups": 605,
+ "trous": 83,
+ "taux": 13.71900826446281,
+ "budget": 400000,
+ "parEtape": {
+  "1": {
+   "coups": 241,
+   "trous": 33
+  },
+  "2": {
+   "coups": 187,
+   "trous": 20
+  },
+  "3": {
+   "coups": 174,
+   "trous": 27
+  },
+  "—": {
+   "coups": 3,
+   "trous": 3
+  }
+ },
+ "parClasse": {
+  "coupé": {
+   "1": 29,
+   "2": 14,
+   "3": 11
+  },
+  "sans nom": {
+   "—": 20
+  },
+  "pas reconnu avant": {
+   "—": 9
+  }
+ },
+ "details": [
+  {
+   "partie": "2026-10-24-maia-w-01",
+   "ply": 13,
+   "fen": "r1bqkb1r/ppp2p1p/2n1pp2/8/3P4/5N2/PPP2PPP/R1BQKB1R w KQkq - 2 7",
+   "joue": "Fd3",
+   "arbre": "d5",
+   "trou": {
+    "san": "Fd3",
+    "classe": "coupé",
+    "noeud": "1f",
+    "etapeArbre": "1e"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-01",
+   "ply": 29,
+   "fen": "r2qk1r1/pp1b1p1p/5p1B/1Qbnp3/3N4/2P5/PP2BPPP/R4RK1 w q - 2 15",
+   "joue": "Dxc5",
+   "arbre": "Dxb7",
+   "trou": {
+    "san": "Dxc5",
+    "classe": "coupé",
+    "noeud": "1c",
+    "etapeArbre": "1c"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-01",
+   "ply": 31,
+   "fen": "r2qk1r1/pp3p1p/5p1B/2Qnp3/3N4/2P4b/PP2BPPP/R4RK1 w q - 1 16",
+   "joue": "Fb5+",
+   "arbre": "Cb5",
+   "trou": {
+    "san": "Fb5+",
+    "classe": "coupé",
+    "noeud": "2b",
+    "etapeArbre": "1d"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-02",
+   "ply": 51,
+   "fen": "5rk1/6pp/p2q4/2p1b3/3p2Q1/2P1B1P1/PP3P1P/3RR1K1 w - - 0 26",
+   "joue": "cxd4",
+   "arbre": "Dxd4",
+   "trou": {
+    "san": "cxd4",
+    "classe": "coupé",
+    "noeud": "1c",
+    "etapeArbre": "2d"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-02",
+   "ply": 53,
+   "fen": "5rk1/6pp/p2q4/4b3/3p2Q1/4B1P1/PP3P1P/3RR1K1 w - - 0 27",
+   "joue": "Fxd4",
+   "arbre": "Dxd4",
+   "trou": {
+    "san": "Fxd4",
+    "classe": "coupé",
+    "noeud": "1c",
+    "etapeArbre": "1f"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-03",
+   "ply": 17,
+   "fen": "r1bq1rk1/pppp1ppp/1b3n2/n2P4/2B1P3/5N2/PP3PPP/RNBQ1RK1 w - - 1 9",
+   "joue": "Fd3",
+   "arbre": "Fb5",
+   "trou": {
+    "san": "Fd3",
+    "classe": "coupé",
+    "noeud": "1c",
+    "etapeArbre": "1c"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-03",
+   "ply": 19,
+   "fen": "r1bq1rk1/ppp2ppp/1b1p1n2/n2P4/4P3/3B1N2/PP3PPP/RNBQ1RK1 w - - 0 10",
+   "joue": "b4",
+   "arbre": "Rh1",
+   "trou": {
+    "san": "b4",
+    "classe": "coupé",
+    "noeud": "2d",
+    "etapeArbre": "3D"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-03",
+   "ply": 31,
+   "fen": "r2q1rk1/pRp2ppp/1b1p1n2/3P4/4P3/3B1N2/P4PPP/2BQ1RK1 w - - 1 16",
+   "joue": "Dc2",
+   "arbre": "Txb6",
+   "trou": {
+    "san": "Dc2",
+    "classe": "coupé",
+    "noeud": "1f",
+    "etapeArbre": "1e"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-03",
+   "ply": 53,
+   "fen": "8/2p1kppp/1pB5/3Pp3/4P3/7P/P1Q2PP1/6K1 w - - 0 27",
+   "joue": "Fb5",
+   "arbre": "Fb5",
+   "trou": {
+    "san": "Fb5",
+    "classe": "sans nom",
+    "noeud": null,
+    "etapeArbre": null
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-04",
+   "ply": 29,
+   "fen": "r2q1rk1/1bp1bpp1/ppnp3p/3n4/2B2B2/3Q1N2/PPP2PPP/R4RK1 w - - 0 15",
+   "joue": "Dxd5",
+   "arbre": "Fxd5",
+   "trou": {
+    "san": "Dxd5",
+    "classe": "coupé",
+    "noeud": "1c",
+    "etapeArbre": "1c"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-05",
+   "ply": 23,
+   "fen": "r1b1r1k1/1pN2ppp/p1P2n2/2b5/3R1B2/8/PPP2PPP/2K2BNR w - - 1 12",
+   "joue": "Td1",
+   "arbre": "Td3",
+   "trou": {
+    "san": "Td1",
+    "classe": "coupé",
+    "noeud": "1c",
+    "etapeArbre": "1c"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-05",
+   "ply": 25,
+   "fen": "r1b1r1k1/1pN2ppp/p1P2n2/8/5B2/8/PPP2bPP/2KR1BNR w - - 0 13",
+   "joue": "Cxe8",
+   "arbre": "cxb7",
+   "trou": {
+    "san": "Cxe8",
+    "classe": "coupé",
+    "noeud": "2b",
+    "etapeArbre": "2b"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-05",
+   "ply": 27,
+   "fen": "r1b1n1k1/1p3ppp/p1P5/8/5B2/8/PPP2bPP/2KR1BNR w - - 0 14",
+   "joue": "Td8",
+   "arbre": "c7",
+   "trou": {
+    "san": "Td8",
+    "classe": "coupé",
+    "noeud": "1f",
+    "etapeArbre": "1c"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-06",
+   "ply": 17,
+   "fen": "r1bnkb1r/pp1pqppn/3pp2p/4P3/8/2N2N2/PPP1BPPP/R1BQK2R w KQkq - 0 9",
+   "joue": "Cb5",
+   "arbre": "exd6",
+   "trou": {
+    "san": "Cb5",
+    "classe": "pas reconnu avant",
+    "noeud": null,
+    "etapeArbre": "2b"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-07",
+   "ply": 13,
+   "fen": "r1b1kbQ1/pppp1p1p/5qp1/8/1n2P3/5N2/PPP2PPP/RNB1KB1R w KQq - 1 7",
+   "joue": "Fh6",
+   "arbre": "Cd4",
+   "trou": {
+    "san": "Fh6",
+    "classe": "pas reconnu avant",
+    "noeud": null,
+    "etapeArbre": "2d"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-08",
+   "ply": 31,
+   "fen": "r1q2r1k/2p1R1pp/p2p4/3p4/8/8/PPP2PPP/R1BQ2K1 w - - 0 16",
+   "joue": "Dd4",
+   "arbre": "Dxd5",
+   "trou": {
+    "san": "Dd4",
+    "classe": "pas reconnu avant",
+    "noeud": null,
+    "etapeArbre": "2b"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-08",
+   "ply": 47,
+   "fen": "2q3rk/4R1pp/p7/2r5/4Q3/1P6/2P2PPP/R1B3K1 w - - 1 24",
+   "joue": "Fh6",
+   "arbre": "Te8",
+   "trou": {
+    "san": "Fh6",
+    "classe": "sans nom",
+    "noeud": null,
+    "etapeArbre": "3P"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-08",
+   "ply": 49,
+   "fen": "2q3rk/4R1pp/p6B/8/4Q3/1P6/2r2PPP/R5K1 w - - 0 25",
+   "joue": "Fxg7+",
+   "arbre": "Txg7",
+   "trou": {
+    "san": "Fxg7+",
+    "classe": "sans nom",
+    "noeud": null,
+    "etapeArbre": "1d"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 9,
+   "fen": "rnbqkb1r/pp3ppp/3ppn2/2p5/2BPP3/5N2/PPP2PPP/RNBQK2R w KQkq - 2 5",
+   "joue": "O-O",
+   "arbre": "Fd5",
+   "trou": {
+    "san": "O-O",
+    "classe": "coupé",
+    "noeud": "3D",
+    "etapeArbre": "1f"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 23,
+   "fen": "r1b2rk1/pp2bppp/2n1p3/1Bp1n3/4N3/5N2/PPP2PPP/R1BR2K1 w - - 0 12",
+   "joue": "Cxe5",
+   "arbre": "Fd2",
+   "trou": {
+    "san": "Cxe5",
+    "classe": "coupé",
+    "noeud": "3Y",
+    "etapeArbre": "3D"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 33,
+   "fen": "1rb2rk1/p4ppp/1pBRp1n1/2p5/4N3/8/PPP2PPP/R5K1 w - - 2 17",
+   "joue": "Te1",
+   "arbre": "Cxc5",
+   "trou": {
+    "san": "Te1",
+    "classe": "sans nom",
+    "noeud": null,
+    "etapeArbre": "3C"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 35,
+   "fen": "1r3rk1/pb3ppp/1pBRp1n1/2p5/4N3/8/PPP2PPP/4R1K1 w - - 4 18",
+   "joue": "Fxb7",
+   "arbre": "Cxc5",
+   "trou": {
+    "san": "Fxb7",
+    "classe": "sans nom",
+    "noeud": null,
+    "etapeArbre": "3C"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 37,
+   "fen": "5rk1/pr3ppp/1p1Rp1n1/2p5/4N3/8/PPP2PPP/4R1K1 w - - 0 19",
+   "joue": "Ted1",
+   "arbre": "Cxc5",
+   "trou": {
+    "san": "Ted1",
+    "classe": "sans nom",
+    "noeud": null,
+    "etapeArbre": "3C"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 47,
+   "fen": "5rk1/p4pp1/2R1p1np/prp5/4N3/1P6/2P2PPP/3R2K1 w - - 2 24",
+   "joue": "Tc7",
+   "arbre": "Txc5",
+   "trou": {
+    "san": "Tc7",
+    "classe": "sans nom",
+    "noeud": null,
+    "etapeArbre": "2d"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 49,
+   "fen": "5rk1/2R2pp1/p3p1np/prp5/4N3/1P6/2P2PPP/3R2K1 w - - 0 25",
+   "joue": "Cxc5",
+   "arbre": "Txc5",
+   "trou": {
+    "san": "Cxc5",
+    "classe": "coupé",
+    "noeud": "2b",
+    "etapeArbre": "2d"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 53,
+   "fen": "3r2k1/2RN1pp1/pr2p1np/p7/8/1P6/2P2PPP/3R2K1 w - - 3 27",
+   "joue": "Cf6+",
+   "arbre": "f3",
+   "trou": {
+    "san": "Cf6+",
+    "classe": "coupé",
+    "noeud": "2b",
+    "etapeArbre": "1d"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 65,
+   "fen": "3R4/2R2pk1/pr2pp1p/p7/5P2/1P4P1/2n2K1P/8 w - - 0 33",
+   "joue": "Txc2",
+   "arbre": "Td3",
+   "trou": {
+    "san": "Txc2",
+    "classe": "coupé",
+    "noeud": "1f",
+    "etapeArbre": "1c"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 67,
+   "fen": "3R4/5pk1/p3pp1p/p7/5P2/1r4P1/2R2K1P/8 w - - 0 34",
+   "joue": "Ta2",
+   "arbre": "Tg8+",
+   "trou": {
+    "san": "Ta2",
+    "classe": "sans nom",
+    "noeud": null,
+    "etapeArbre": "3Y"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 69,
+   "fen": "3R4/5pk1/p3pp1p/pr6/5P2/6P1/R4K1P/8 w - - 2 35",
+   "joue": "Td6",
+   "arbre": "Td6",
+   "trou": {
+    "san": "Td6",
+    "classe": "sans nom",
+    "noeud": null,
+    "etapeArbre": null
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 81,
+   "fen": "8/5p2/R4p1p/4pk2/5P2/5KP1/7P/8 w - - 4 41",
+   "joue": "g4+",
+   "arbre": "Txf6+",
+   "trou": {
+    "san": "g4+",
+    "classe": "coupé",
+    "noeud": "3Y",
+    "etapeArbre": "3Y"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 83,
+   "fen": "8/5p2/R4pkp/4p3/5PP1/5K2/7P/8 w - - 1 42",
+   "joue": "fxe5",
+   "arbre": "Re4",
+   "trou": {
+    "san": "fxe5",
+    "classe": "coupé",
+    "noeud": "3Y",
+    "etapeArbre": "3Y"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-10",
+   "ply": 15,
+   "fen": "rn1qk2r/pbp1bppp/1p1pp3/4P3/3P2n1/2NB1N2/PPP2PPP/R1BQ1RK1 w kq - 1 8",
+   "joue": "h3",
+   "arbre": "Fe4",
+   "trou": {
+    "san": "h3",
+    "classe": "coupé",
+    "noeud": "2d",
+    "etapeArbre": "2d"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-10",
+   "ply": 17,
+   "fen": "rn1qk2r/p1p1bppp/1p1pp3/4P3/3P2n1/2NB1b1P/PPP2PP1/R1BQ1RK1 w kq - 0 9",
+   "joue": "Dxf3",
+   "arbre": "Ce2",
+   "trou": {
+    "san": "Dxf3",
+    "classe": "coupé",
+    "noeud": "1c",
+    "etapeArbre": "1c"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-10",
+   "ply": 21,
+   "fen": "Qn1q1rk1/p1p1bppp/1p1pp2n/4P3/3P4/2NB3P/PPP2PP1/R1B2RK1 w - - 1 11",
+   "joue": "Fxh6",
+   "arbre": "Fxh7+",
+   "trou": {
+    "san": "Fxh6",
+    "classe": "sans nom",
+    "noeud": null,
+    "etapeArbre": "3Y"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-10",
+   "ply": 23,
+   "fen": "Qn1q1rk1/p1p1bp1p/1p1pp2p/4P3/3P4/2NB3P/PPP2PP1/R4RK1 w - - 0 12",
+   "joue": "De4",
+   "arbre": "Fxh7+",
+   "trou": {
+    "san": "De4",
+    "classe": "pas reconnu avant",
+    "noeud": null,
+    "etapeArbre": "2b"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-11",
+   "ply": 47,
+   "fen": "5r2/p5kp/1p1pP1p1/2nPnp2/8/1P5P/P1P2PP1/3R1RK1 w - - 1 24",
+   "joue": "f4",
+   "arbre": "e7",
+   "trou": {
+    "san": "f4",
+    "classe": "coupé",
+    "noeud": "2d",
+    "etapeArbre": "3P"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-11",
+   "ply": 55,
+   "fen": "8/p2rP1kp/1p1P2p1/4pp2/4n3/1P5P/P1P3P1/3R1RK1 w - - 1 28",
+   "joue": "e8=D",
+   "arbre": "e8=C+",
+   "trou": {
+    "san": "e8=D",
+    "classe": "coupé",
+    "noeud": "1f",
+    "etapeArbre": "1f"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-12",
+   "ply": 9,
+   "fen": "rn1qkbnr/1bpp1ppp/pp2p3/8/3PP3/2N2N2/PPP2PPP/R1BQKB1R w KQkq - 0 5",
+   "joue": "Fd3",
+   "arbre": "Fg5",
+   "trou": {
+    "san": "Fd3",
+    "classe": "coupé",
+    "noeud": "3D",
+    "etapeArbre": "3D"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-12",
+   "ply": 25,
+   "fen": "r3kbnr/1bp2pp1/1pnpp2p/1p6/3QPNN1/8/PPP2PPP/R1B2RK1 w kq - 1 13",
+   "joue": "Dc3",
+   "arbre": "De3",
+   "trou": {
+    "san": "Dd3",
+    "classe": "coupé",
+    "noeud": "1c",
+    "etapeArbre": "1c"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-12",
+   "ply": 37,
+   "fen": "r3kb1r/2p1np2/bpnp4/3p2pp/1p2P3/1Q2N3/PPP2PPP/R1BR2K1 w kq - 0 19",
+   "joue": "Cxd5",
+   "arbre": "exd5",
+   "trou": {
+    "san": "Cxd5",
+    "classe": "coupé",
+    "noeud": "1c",
+    "etapeArbre": "1c"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-12",
+   "ply": 51,
+   "fen": "2kr2r1/2p1nQ2/1p1p4/7p/4b3/R7/1PP2PPP/3R2K1 w - - 0 26",
+   "joue": "De6+",
+   "arbre": "Dc4",
+   "trou": {
+    "san": "De6+",
+    "classe": "coupé",
+    "noeud": "1f",
+    "etapeArbre": "1d"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-13",
+   "ply": 7,
+   "fen": "rnb1kbnr/pp2pppp/1qpp4/8/3PP3/2N5/PPP2PPP/R1BQKBNR w KQkq - 0 4",
+   "joue": "Cf3",
+   "arbre": "Ca4",
+   "trou": {
+    "san": "Cf3",
+    "classe": "coupé",
+    "noeud": "3D",
+    "etapeArbre": "3D"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-13",
+   "ply": 9,
+   "fen": "rnb1kbnr/pp2ppp1/1qpp3p/8/3PP3/2N2N2/PPP2PPP/R1BQKB1R w KQkq - 0 5",
+   "joue": "Fc4",
+   "arbre": "Ca4",
+   "trou": {
+    "san": "Fc4",
+    "classe": "coupé",
+    "noeud": "3D",
+    "etapeArbre": "3D"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-13",
+   "ply": 11,
+   "fen": "rnb1kbnr/pp3pp1/1qpp3p/4p3/2BPP3/2N2N2/PPP2PPP/R1BQK2R w KQkq e6 0 6",
+   "joue": "dxe5",
+   "arbre": "Fxf7+",
+   "trou": {
+    "san": "dxe5",
+    "classe": "coupé",
+    "noeud": "2b",
+    "etapeArbre": "3D"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-13",
+   "ply": 13,
+   "fen": "rnb1kbnr/pp3pp1/1qp4p/4p3/2B1P3/2N2N2/PPP2PPP/R1BQK2R w KQkq - 0 7",
+   "joue": "Cxe5",
+   "arbre": "Dd8+",
+   "trou": {
+    "san": "Cxe5",
+    "classe": "coupé",
+    "noeud": "2b",
+    "etapeArbre": "3D"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-13",
+   "ply": 19,
+   "fen": "rnb1k1n1/pp3Npr/1qp4p/8/2B1P3/2N5/PPP2bPP/R1BQ1K1R w q - 2 10",
+   "joue": "Cd6+",
+   "arbre": "Dd8+",
+   "trou": {
+    "san": "Cd6+",
+    "classe": "coupé",
+    "noeud": "2b",
+    "etapeArbre": "2d"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-13",
+   "ply": 21,
+   "fen": "rnbk2n1/pp4pr/1qpN3p/8/2B1P3/2N5/PPP2bPP/R1BQ1K1R w - - 4 11",
+   "joue": "Fxg8",
+   "arbre": "Cxc8+",
+   "trou": {
+    "san": "Fxg8",
+    "classe": "coupé",
+    "noeud": "2b",
+    "etapeArbre": "2b"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-13",
+   "ply": 23,
+   "fen": "rnbk2Br/pp4p1/1qpN3p/8/4P3/2N5/PPP2bPP/R1BQ1K1R w - - 1 12",
+   "joue": "Cf7+",
+   "arbre": "Ff7",
+   "trou": {
+    "san": "Cf7+",
+    "classe": "coupé",
+    "noeud": "1f",
+    "etapeArbre": "1f"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-13",
+   "ply": 25,
+   "fen": "rnb3Br/pp2kNp1/1qp4p/8/4P3/2N5/PPP2bPP/R1BQ1K1R w - - 3 13",
+   "joue": "Dd6+",
+   "arbre": "Cxh8",
+   "trou": {
+    "san": "Dd6+",
+    "classe": "coupé",
+    "noeud": "1f",
+    "etapeArbre": "1c"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-14",
+   "ply": 11,
+   "fen": "rnbqkbnr/p4ppp/2p1p3/1p1p4/3PP3/2NB1N2/PPP2PPP/R1BQK2R w KQkq b6 0 6",
+   "joue": "O-O",
+   "arbre": "Fg5",
+   "trou": {
+    "san": "O-O",
+    "classe": "coupé",
+    "noeud": "3D",
+    "etapeArbre": "2d"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-14",
+   "ply": 15,
+   "fen": "rnbqk1nr/p4ppp/4p3/1p1p4/1b1P4/2NB1N2/PPP2PPP/R1BQ1RK1 w kq - 0 8",
+   "joue": "Ce5",
+   "arbre": "Cxb5",
+   "trou": {
+    "san": "Ce5",
+    "classe": "sans nom",
+    "noeud": null,
+    "etapeArbre": "2d"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-16",
+   "ply": 11,
+   "fen": "rnbq1rk1/ppppbppp/4p3/3nP3/3P2Q1/2N5/PPP2PPP/R1B1KBNR w KQ - 3 6",
+   "joue": "Fh6",
+   "arbre": "Fg5",
+   "trou": {
+    "san": "Fh6",
+    "classe": "pas reconnu avant",
+    "noeud": null,
+    "etapeArbre": "3D"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-16",
+   "ply": 25,
+   "fen": "r1b1r1k1/1pppqp1p/4p1pB/4P1N1/pn1P2Q1/8/PPP2PPP/1K1R1B1R w - - 0 13",
+   "joue": "Fc4",
+   "arbre": "Fg7",
+   "trou": {
+    "san": "Fc4",
+    "classe": "coupé",
+    "noeud": "1f",
+    "etapeArbre": "1f"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-16",
+   "ply": 31,
+   "fen": "r1b1r1k1/1p2qp1p/2npp1pB/6N1/p1BP2Q1/P7/1PP2PPP/1K1R3R w - - 1 16",
+   "joue": "Df4",
+   "arbre": "d5",
+   "trou": {
+    "san": "Df4",
+    "classe": "sans nom",
+    "noeud": null,
+    "etapeArbre": "2e"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-16",
+   "ply": 39,
+   "fen": "r1b1r1k1/1p2q2p/5ppB/3pn1N1/p2Q4/P2B4/1PP2PPP/1K1R3R w - - 0 20",
+   "joue": "Dxd5+",
+   "arbre": "Ch3",
+   "trou": {
+    "san": "Dxd5+",
+    "classe": "coupé",
+    "noeud": "1f",
+    "etapeArbre": "2d"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-16",
+   "ply": 45,
+   "fen": "1r2r1k1/1Q5p/4qppB/4n3/p7/P2B4/1PP2PPP/1K1R3R w - - 1 23",
+   "joue": "Dg7#",
+   "arbre": "Dc7",
+   "trou": {
+    "san": "Dg7#",
+    "classe": "coupé",
+    "noeud": "1c",
+    "etapeArbre": "1c"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-17",
+   "ply": 23,
+   "fen": "r2qkr2/pppb1pQp/2n1p3/2b2p2/3P4/2P5/PP3PPP/2KR1BNR w q - 0 12",
+   "joue": "dxc5",
+   "arbre": "Dxf7+",
+   "trou": {
+    "san": "dxc5",
+    "classe": "coupé",
+    "noeud": "2b",
+    "etapeArbre": "3D"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-17",
+   "ply": 39,
+   "fen": "2kr4/pppbq2p/4rp2/nPP1Np2/5P2/2P1Q3/P5PP/2KR1B1R w - - 0 20",
+   "joue": "c6",
+   "arbre": "Cxd7",
+   "trou": {
+    "san": "c6",
+    "classe": "sans nom",
+    "noeud": null,
+    "etapeArbre": "1e"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-18",
+   "ply": 15,
+   "fen": "rn1qk2r/pbpp1ppp/1p2pn2/8/1b1P1B2/2NB1N2/PPP2PPP/R2Q1RK1 w kq - 4 8",
+   "joue": "Cb5",
+   "arbre": "a3",
+   "trou": {
+    "san": "Cb5",
+    "classe": "sans nom",
+    "noeud": null,
+    "etapeArbre": "2e"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-18",
+   "ply": 17,
+   "fen": "rn1qk2r/pbpp1ppp/1p1bpn2/1N6/3P1B2/3B1N2/PPP2PPP/R2Q1RK1 w kq - 6 9",
+   "joue": "Fxd6",
+   "arbre": "Cxd6+",
+   "trou": {
+    "san": "Fxd6",
+    "classe": "coupé",
+    "noeud": "1c",
+    "etapeArbre": "1c"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-18",
+   "ply": 21,
+   "fen": "rn1q3r/pb1pkppp/1p1Npn2/8/3P4/3B1N2/PPP2PPP/R2Q1RK1 w - - 1 11",
+   "joue": "Ce5",
+   "arbre": "Cxb7",
+   "trou": {
+    "san": "Ce5",
+    "classe": "coupé",
+    "noeud": "1f",
+    "etapeArbre": "1c"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-18",
+   "ply": 47,
+   "fen": "1r1r2k1/p2pQ2p/1p2p1p1/6P1/3Pb3/8/PP3P1P/R3R1K1 w - - 0 24",
+   "joue": "Txe4",
+   "arbre": "Dxd8+",
+   "trou": {
+    "san": "Txe4",
+    "classe": "coupé",
+    "noeud": "1f",
+    "etapeArbre": "1f"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-18",
+   "ply": 57,
+   "fen": "4r1k1/Q6p/4p1p1/6P1/3PR3/8/Pr3P1P/R5K1 w - - 0 29",
+   "joue": "Th4",
+   "arbre": "Dd7",
+   "trou": {
+    "san": "Th4",
+    "classe": "pas reconnu avant",
+    "noeud": null,
+    "etapeArbre": "2d"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-19",
+   "ply": 23,
+   "fen": "r2qk2r/1bpnnpb1/pp1pp2p/6p1/3PP3/P1N1BN2/1PPQBPPP/R4RK1 w kq - 0 12",
+   "joue": "d5",
+   "arbre": "d5",
+   "trou": {
+    "san": "d5",
+    "classe": "sans nom",
+    "noeud": null,
+    "etapeArbre": null
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-19",
+   "ply": 57,
+   "fen": "1k2r1r1/2pn4/Qp1p3p/3q3N/1P1B2p1/P7/2P2PPP/3R1RK1 w - - 0 29",
+   "joue": "Fxb6",
+   "arbre": "Cf6",
+   "trou": {
+    "san": "Fxb6",
+    "classe": "pas reconnu avant",
+    "noeud": null,
+    "etapeArbre": "2d"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-20",
+   "ply": 9,
+   "fen": "r1bqkbnr/pp1p1pp1/n1p1p3/7p/3PP3/2N2N2/PPP2PPP/R1BQKB1R w KQkq - 2 5",
+   "joue": "Fe2",
+   "arbre": "Fg5",
+   "trou": {
+    "san": "Fe2",
+    "classe": "coupé",
+    "noeud": "3D",
+    "etapeArbre": "3D"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-20",
+   "ply": 35,
+   "fen": "r6r/pp1b1kp1/n3pp2/3Q2b1/3P4/8/PPP2PPP/R3R1K1 w - - 0 18",
+   "joue": "Dxd7+",
+   "arbre": "Dxb7",
+   "trou": {
+    "san": "Dxd7+",
+    "classe": "coupé",
+    "noeud": "1c",
+    "etapeArbre": "1c"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-20",
+   "ply": 37,
+   "fen": "r6r/pp1Q2p1/n3ppk1/6b1/3P4/8/PPP2PPP/R3R1K1 w - - 1 19",
+   "joue": "Dxb7",
+   "arbre": "Dxg7+",
+   "trou": {
+    "san": "Dxb7",
+    "classe": "coupé",
+    "noeud": "2b",
+    "etapeArbre": "3C"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-20",
+   "ply": 55,
+   "fen": "8/6p1/1Q3bk1/5p2/3P4/8/P4PPP/R5K1 w - - 2 28",
+   "joue": "a4",
+   "arbre": "Dc6",
+   "trou": {
+    "san": "a4",
+    "classe": "sans nom",
+    "noeud": null,
+    "etapeArbre": "2e"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-21",
+   "ply": 19,
+   "fen": "r1bq1knr/ppp4p/2np2p1/Q7/2BPP3/2P5/PP3PPP/RNB1K2R w KQ - 1 10",
+   "joue": "Dd5",
+   "arbre": "Db5",
+   "trou": {
+    "san": "Dd5",
+    "classe": "coupé",
+    "noeud": "1c",
+    "etapeArbre": "1c"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-22",
+   "ply": 11,
+   "fen": "r1bqk2r/p1ppppbp/1pn3pn/8/2BPP3/5N2/PPP2PPP/RNBQ1RK1 w kq - 6 6",
+   "joue": "Cc3",
+   "arbre": "d5",
+   "trou": {
+    "san": "Cc3",
+    "classe": "coupé",
+    "noeud": "3D",
+    "etapeArbre": "3D"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-22",
+   "ply": 53,
+   "fen": "5rk1/pb5p/1p3Qp1/3r1pP1/1Pp5/8/P1P2PP1/R4RK1 w - - 2 27",
+   "joue": "De6+",
+   "arbre": "De7",
+   "trou": {
+    "san": "De6+",
+    "classe": "coupé",
+    "noeud": "1c",
+    "etapeArbre": "1c"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-23",
+   "ply": 19,
+   "fen": "rnbq1rk1/pp1n1pp1/2p1p2p/3pP3/3P1N2/2PB4/P1P2PPP/R1BQ1RK1 w - - 1 10",
+   "joue": "Ch5",
+   "arbre": "Fa3",
+   "trou": {
+    "san": "Ch5",
+    "classe": "sans nom",
+    "noeud": null,
+    "etapeArbre": "3D"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-23",
+   "ply": 29,
+   "fen": "rnbq2k1/pp1n2p1/2p1p2p/3pp2N/3P4/B1P2Q2/P1P2PPP/R4RK1 w - - 2 15",
+   "joue": "Dg4",
+   "arbre": "Df8+",
+   "trou": {
+    "san": "Dg4",
+    "classe": "pas reconnu avant",
+    "noeud": null,
+    "etapeArbre": "3Y"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-24",
+   "ply": 15,
+   "fen": "r2qk1nr/1ppbp1bp/p1np1pp1/6N1/2BPP3/2N1B3/PPP2PPP/R2QK2R w KQkq - 0 8",
+   "joue": "Cf7",
+   "arbre": "Ce6",
+   "trou": {
+    "san": "Cf7",
+    "classe": "coupé",
+    "noeud": "1c",
+    "etapeArbre": "1c"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-24",
+   "ply": 23,
+   "fen": "rq3k1b/1ppbp2p/p2p1pp1/3B4/1n1PP3/2N1B3/PPP2PPP/R2QK2R w KQ - 3 12",
+   "joue": "Fb3",
+   "arbre": "a3",
+   "trou": {
+    "san": "Fb3",
+    "classe": "sans nom",
+    "noeud": null,
+    "etapeArbre": "3D"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-24",
+   "ply": 29,
+   "fen": "rq3k1b/2pbp2p/2np1pp1/pp6/3PP3/PBN1B3/1PP2PPP/R2Q1RK1 w - b6 0 15",
+   "joue": "De2",
+   "arbre": "d5",
+   "trou": {
+    "san": "De2",
+    "classe": "sans nom",
+    "noeud": null,
+    "etapeArbre": "3P"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-24",
+   "ply": 35,
+   "fen": "q4k1b/2pbp2p/2np1pp1/8/1p1PP3/1BN1B3/1PP1QPPP/5RK1 w - - 0 18",
+   "joue": "Dc4",
+   "arbre": "Ca4",
+   "trou": {
+    "san": "Dc4",
+    "classe": "pas reconnu avant",
+    "noeud": null,
+    "etapeArbre": "1c"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-26",
+   "ply": 11,
+   "fen": "r1bqkb1r/ppp1nppp/3p1n2/3Pp3/2B1P3/5N2/PPP2PPP/RNBQK2R w KQkq - 3 6",
+   "joue": "Cc3",
+   "arbre": "Fd3",
+   "trou": {
+    "san": "Cc3",
+    "classe": "coupé",
+    "noeud": "1c",
+    "etapeArbre": "1c"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-26",
+   "ply": 13,
+   "fen": "r2qkb1r/pppbnppp/3p1n2/3Pp3/2B1P3/2N2N2/PPP2PPP/R1BQK2R w KQkq - 5 7",
+   "joue": "O-O",
+   "arbre": "Fb5",
+   "trou": {
+    "san": "O-O",
+    "classe": "coupé",
+    "noeud": "3D",
+    "etapeArbre": "3D"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-26",
+   "ply": 37,
+   "fen": "2r2rk1/5pp1/p2p3p/1p1Pp1b1/4Pn2/2N2N2/PPP2PPP/R4RK1 w - b6 0 19",
+   "joue": "g3",
+   "arbre": "Ca4",
+   "trou": {
+    "san": "g3",
+    "classe": "coupé",
+    "noeud": "1f",
+    "etapeArbre": "1f"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-26",
+   "ply": 63,
+   "fen": "8/6pk/p2PR3/6p1/Np2p3/6PK/PP1r3P/8 w - - 1 32",
+   "joue": "Cc5",
+   "arbre": "Txe4",
+   "trou": {
+    "san": "Cc5",
+    "classe": "sans nom",
+    "noeud": null,
+    "etapeArbre": "2b"
+   }
+  },
+  {
+   "partie": "2026-10-24-maia-w-26",
+   "ply": 65,
+   "fen": "8/6pk/p2PR3/2N3p1/1p2p3/6PK/Pr5P/8 w - - 0 33",
+   "joue": "Cxe4",
+   "arbre": "a4",
+   "trou": {
+    "san": "Cxe4",
+    "classe": "coupé",
+    "noeud": "2b",
+    "etapeArbre": "3C"
+   }
+  }
+ ]
+}
