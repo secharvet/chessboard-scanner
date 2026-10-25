@@ -426,27 +426,32 @@ export function candidats(ctx) {
  * radar n'est pas recompté. (Contrat, étape 4.)
  */
 export function selectionner(cands, plafond = 3) {
-  let radar = cands.filter((c) => c.noeud[0] === '1');
+  const radarBrut = cands.filter((c) => c.noeud[0] === '1');
+  let radar = radarBrut;
   // Le radar reste hors plafond, mais 1c et 1f (pièce en prise, « s'il jouait deux fois ») produisent toutes les parades :
-  // si le radar dépasse 6, on ne garde pour 1c/1f que la PREMIÈRE parade de chaque famille (prendre, fuir, défendre,
-  // s'interposer, contre-attaquer). Ce n'est pas un choix par score, c'est un ordre de famille.
+  // si le radar dépasse 6, on ne garde pour 1c/1f que DEUX parades de chaque famille (prendre, fuir, défendre,
+  // s'interposer, contre-attaquer), dans l'ordre de l'arbre. Pas de coupe en dessous de sept. Ce n'est pas un choix par
+  // score, c'est un ordre de famille (la mesure du 25 oct. a montré qu'une seule parade par famille coupait le bon coup).
   if (radar.length > 6) {
-    const vus = new Set();
+    const compte = new Map();
     radar = radar.filter((c) => {
       if ((c.noeud !== '1c' && c.noeud !== '1f') || !c.famille) return true;
-      const cle = `${c.noeud}:${c.famille}`; if (vus.has(cle)) return false; vus.add(cle); return true;
+      const cle = `${c.noeud}:${c.famille}`, n = compte.get(cle) ?? 0;
+      if (n >= 2) return false; compte.set(cle, n + 1); return true;
     });
   }
   const dejaRadar = new Set(radar.map((c) => c.coup));
   const reste = cands.filter((c) => c.noeud[0] !== '1' && !dejaRadar.has(c.coup));
+  // Quand l'étape 1 n'a rien produit (pas de radar), on compare un candidat de plus des étapes 2-3 : plafond 4.
+  const plaf = radarBrut.length === 0 ? Math.max(plafond, 4) : plafond;
   const parFamille = new Map();
   for (const c of reste) { const f = parFamille.get(c.noeud) ?? []; f.push(c); parFamille.set(c.noeud, f); }
   const familles = [...parFamille.keys()].sort((a, b) => ORDRE.indexOf(a) - ORDRE.indexOf(b));
   const choisis = [];
   // un tour par famille d'abord (le premier de chacune), puis on complète famille par famille, jusqu'au plafond
-  for (let tour = 0; choisis.length < plafond; tour++) {
+  for (let tour = 0; choisis.length < plaf; tour++) {
     let ajoute = false;
-    for (const f of familles) { const liste = parFamille.get(f); if (liste[tour] && choisis.length < plafond) { choisis.push(liste[tour]); ajoute = true; } }
+    for (const f of familles) { const liste = parFamille.get(f); if (liste[tour] && choisis.length < plaf) { choisis.push(liste[tour]); ajoute = true; } }
     if (!ajoute) break;
   }
   return [...radar, ...choisis];

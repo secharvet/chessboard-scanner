@@ -208,7 +208,7 @@ test('candidats : dédoublonne par coup, garde le nœud le plus haut de l\'arbre
   assert.ok(d1d5 && d1d5.noeud === '2b');
 });
 
-test('selectionner : radar hors plafond MAIS 1c/1f collapsés par famille au-delà de 6 (une parade par famille)', () => {
+test('selectionner : radar hors plafond MAIS 1c/1f collapsés par famille au-delà de 6 (DEUX parades par famille)', () => {
   const radar = [
     { coup: 'a', noeud: '1c', famille: 'prendre', raisons: [] }, { coup: 'b', noeud: '1c', famille: 'fuir', raisons: [] }, { coup: 'c', noeud: '1c', famille: 'fuir', raisons: [] },
     { coup: 'd', noeud: '1f', famille: 'fuir', raisons: [] }, { coup: 'e', noeud: '1f', famille: 'fuir', raisons: [] }, { coup: 'f', noeud: '1f', famille: 'defendre', raisons: [] },
@@ -216,8 +216,8 @@ test('selectionner : radar hors plafond MAIS 1c/1f collapsés par famille au-del
     { coup: 'j', noeud: '1f', famille: 'defendre', raisons: [] }, { coup: 'k', noeud: '1f', famille: 'fuir', raisons: [] },
   ]; // 11 parades
   const sel = selectionner(radar, 3).filter((c) => c.noeud[0] === '1');
-  // 1c : prendre + fuir (2) ; 1f : fuir + defendre + prendre + contre (4) → 6
-  assert.deepEqual(sel.map((c) => c.coup), ['a', 'b', 'd', 'f', 'g', 'h']);
+  // DEUX par famille : 1c prendre(a) + fuir(b,c) = a,b,c ; 1f fuir(d,e) + defendre(f,j) + prendre(g) + contre(h) ; i,k coupés (3e fuir)
+  assert.deepEqual(sel.map((c) => c.coup), ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'j']);
 });
 
 test('selectionner : radar ≤ 6 reste intact (pas de collapse)', () => {
@@ -237,6 +237,39 @@ test('selectionner : radar hors plafond, le reste limité à 3 (une famille d\'a
   const reste = sel.filter((c) => c.noeud[0] !== '1');
   assert.equal(reste.length, 3); // plafonné à 3
   assert.deepEqual(reste.map((c) => c.coup), ['c', 'e', 'g']); // une famille d'abord : 2b, 2d, 2e
+});
+
+test('selectionner : étape 1 vide → plafond 4 pour les étapes 2-3 (un candidat de plus)', () => {
+  const faux = [
+    { coup: 'c', noeud: '2b', raison: '', raisons: [] }, { coup: 'd', noeud: '2d', raison: '', raisons: [] },
+    { coup: 'e', noeud: '3D', raison: '', raisons: [] }, { coup: 'f', noeud: '3P', raison: '', raisons: [] },
+    { coup: 'g', noeud: '3Y', raison: '', raisons: [] },
+  ]; // aucun radar (noeud '1x')
+  assert.equal(selectionner(faux, 3).length, 4); // radar vide → plafond relevé à 4
+  const faux2 = [{ coup: 'r', noeud: '1c', famille: 'fuir', raisons: [] }, ...faux]; // radar présent
+  assert.equal(selectionner(faux2, 3).filter((c) => c.noeud[0] !== '1').length, 3); // radar présent → plafond reste 3
+});
+
+/* ---- le plafond : les coups « coupés » du bilan 4d5e252 reviennent dans les candidats (mesure du 25 oct.) ---- */
+// Chaque position vient de bilan-trous-4d5e252.json (classe « coupé ») ; le coup que la recherche complète préférait et que
+// la sélection écartait doit maintenant être produit ET retenu. Pur (sans sonde) : seul le correctif de sélection joue.
+const retenu = (fen, uci) => selectionner(candidats({ fen, camp: fen.split(' ')[1] })).some((c) => c.coup === uci);
+
+test('plafond 1c : deux parades par famille — Dxc5 (w-01 c.15) revient dans les candidats', () => {
+  // radar > 6 ; Dxc5 était la 2e parade « prendre » de 1c, coupée quand on n'en gardait qu'une.
+  assert.ok(retenu('r2qk1r1/pp1b1p1p/5p1B/1Qbnp3/3N4/2P5/PP2BPPP/R4RK1 w q - 2 15', 'b5c5'));
+});
+
+test('plafond 2b : étape 1 vide, plafond 4 — dxe5 (w-13 c.6) revient dans les candidats', () => {
+  assert.ok(retenu('rnb1kbnr/pp3pp1/1qpp3p/4p3/2BPP3/2N2N2/PPP2PPP/R1BQK2R w KQkq e6 0 6', 'd4e5'));
+});
+
+test('plafond 2d : étape 1 vide, plafond 4 — f4 (w-11 c.24) revient dans les candidats', () => {
+  assert.ok(retenu('5r2/p5kp/1p1pP1p1/2nPnp2/8/1P5P/P1P2PP1/3R1RK1 w - - 1 24', 'f2f4'));
+});
+
+test('plafond 3D : étape 1 vide, plafond 4 — Cc3 (w-22 c.6) revient dans les candidats', () => {
+  assert.ok(retenu('r1bqk2r/p1ppppbp/1pn3pn/8/2BPP3/5N2/PPP2PPP/RNBQ1RK1 w kq - 6 6', 'b1c3'));
 });
 
 /* ---- la recherche restreinte à la racine aux candidats (étape 4) ---- */

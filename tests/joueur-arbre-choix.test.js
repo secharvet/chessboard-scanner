@@ -48,8 +48,9 @@ test('le coup écarté est un coup qui PERDAIT, dit au conditionnel avec sa lign
 });
 
 test('le gain est NOMMÉ (jamais « du matériel ») et le gain manqué se dit « il sauvait sa pièce »', async () => {
-  // Dxd5 gagne une pièce ; Db3 attaque d5 mais ne la gagne pas → gain manqué.
-  const r = await neuf().choisir('4k3/8/8/3n4/8/8/8/3QK3 w - - 0 1', { camp: 'w' });
+  // Txd4 gagne la pièce ; Rd2 (ou une attaque de la tour) ne fait que l'attaquer → le cavalier fuit → gain manqué.
+  // (Position choisie sans échec gagnant : contre une dame, un échec reprend aussi la pièce, les deux se valent alors.)
+  const r = await neuf().choisir('4k3/8/8/8/3n4/8/8/3RK3 w - - 0 1', { camp: 'w' });
   assert.ok(/je gagne une pièce/.test(r.phrase) && !/du matériel/.test(r.phrase));
   assert.ok(/il sauvait son cavalier/.test(r.phrase));
   assert.ok(r.ecarte && r.ecarte.manque === 'son cavalier'); // écarté = gain manqué, pas une perte
@@ -75,6 +76,17 @@ test('le trou n\'est pas faussement signalé quand la recherche complète est d\
   const r = await neuf({ trou: true }).choisir('4k3/8/8/3n4/8/8/8/3QK3 w - - 0 1', { camp: 'w' });
   assert.equal(r.uci, 'd1d5');
   assert.equal(r.trou, null); // la recherche complète joue le même coup : pas de trou
+});
+
+test('plafond 1f : deux parades par famille — De6+ (w-12 c.26, bilan 4d5e252) revient dans les candidats', async () => {
+  // radar > 6 ; De6+ était une parade de 1f « s'il jouait deux fois », coupée quand on n'en gardait qu'une par famille.
+  const r = await neuf({ budget: 120000 }).choisir('2kr2r1/2p1nQ2/1p1p4/7p/4b3/R7/1PP2PPP/3R2K1 w - - 0 26', { camp: 'w' });
+  assert.ok(r.candidats.some((c) => c.coup === 'f7e6'));
+});
+
+test('plafond 3Y : étape 1 vide, plafond 4 — g4+ (w-09 c.41, bilan 4d5e252) revient dans les candidats', async () => {
+  const r = await neuf({ budget: 120000 }).choisir('8/5p2/R4p1p/4pk2/5P2/5KP1/7P/8 w - - 4 41', { camp: 'w' });
+  assert.ok(r.candidats.some((c) => c.coup === 'g3g4'));
 });
 
 test('le record porte tout ce que le fichier de partie attend : candidats, choisi, phrase, nœud', async () => {
