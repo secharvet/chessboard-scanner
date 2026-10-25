@@ -15,7 +15,8 @@ const TYPES = { html: 'text/html', js: 'text/javascript', mjs: 'text/javascript'
 const sse = (res, o) => res.write(`data: ${JSON.stringify(o)}\n\n`);
 
 const DEPART = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
-const coupCoach = { ply: 1, camp: 'w', san: 'e4', uci: 'e2e4', coach: true, sorte: 'livre', phrase: 'Coup du livre : j\'occupe le centre.', battu: { san: 'd4', ecart: 5, seValent: true }, ligne: ['e4', 'e5'], termes: [{ nom: 'centre', apres: 20, bout: 18 }], plan: null, motif: null, menace: null, profondeur: 6, noeuds: 200000, ms: 3000 };
+// Coup du coach de la forme « arbre » (joueur-arbre) : nœud, candidats comparés, coup écarté dit au conditionnel.
+const coupCoach = { ply: 1, camp: 'w', san: 'e4', uci: 'e2e4', coach: true, noeud: '3L', sorte: '3L', raison: 'occupe le centre et ouvre la diagonale du fou roi', phrase: 'Occupe le centre et ouvre la diagonale du fou roi. J\'ai pensé à Cc3. Mais il répondait 1.Cc3 Fb4, et je perdais un pion. Avec e4, rien de tel.', ligne: ['e4', 'e5'], candidats: [{ san: 'e4', coup: 'e2e4', noeud: '3L', raison: 'occupe le centre et ouvre la diagonale du fou roi', score: 56, ligne: ['e4', 'e5'] }, { san: 'Cf3', coup: 'g1f3', noeud: '3C', raison: 'je développe en attaquant', score: 40, ligne: ['Cf3'] }], choisi: 'e2e4', ecarte: { san: 'Cc3', coup: 'b1c3', raison: 'je développe', ligne: ['Cc3', 'Fb4'], pvUci: ['b1c3', 'f8b4'], perte: 'un pion', mat: false }, trou: null, profondeur: 6, noeuds: 120000, ms: 3000 };
 const coupAdv = { ply: 2, camp: 'b', san: 'e5', uci: 'e7e5', coach: false };
 
 const serveur = createServer(async (req, res) => {
@@ -23,6 +24,8 @@ const serveur = createServer(async (req, res) => {
   if (chemin === '/api/auth/moi') { res.writeHead(200, { 'content-type': 'application/json' }); res.end(JSON.stringify({ ok: true, utilisateur: { id: 1, role: 'enseignant', display_name: 'Prof' } })); return; }
   if (chemin === '/api/joueur/en-cours') { res.writeHead(200, { 'content-type': 'application/json' }); res.end(JSON.stringify({ ok: true, enCours: true, id: '20261024T120000-maia-1500-w', adversaire: { nom: 'maia-1500' }, camp: 'w', coups: [] })); return; }
   if (chemin === '/api/joueur/parties') { res.writeHead(200, { 'content-type': 'application/json' }); res.end(JSON.stringify({ ok: true, parties: [{ id: '20261024T110000-maia-1500-b', resultat: '0-1', raison: 'mat' }] })); return; }
+  // à la fin, la page recharge le fichier de partie écrit (pour le récit complet avec l'examen) : on le sert comme le conteneur.
+  if (chemin === '/parties/20261024T120000-maia-1500-w.json') { res.writeHead(200, { 'content-type': 'application/json' }); res.end(JSON.stringify({ id: '20261024T120000-maia-1500-w', coach: { camp: 'w', budget: 200000, code: 'test' }, adversaire: { nom: 'maia-1500' }, depart: DEPART, coups: [coupCoach, coupAdv], resultat: '1-0', raison: 'mat', plies: 2, examen: { coups: 1, bevues: 0, fautes: 0, exclus: 0, profondeur: 18 } })); return; }
   if (chemin === '/api/joueur/en-cours/flux') {
     res.writeHead(200, { 'content-type': 'text/event-stream; charset=utf-8', 'cache-control': 'no-cache', connection: 'keep-alive' });
     sse(res, { ev: 'debut', id: '20261024T120000-maia-1500-w', adversaire: { nom: 'maia-1500' }, camp: 'w', depart: DEPART });
@@ -50,11 +53,13 @@ async function verifier(largeur) {
   page.on('pageerror', (e) => erreurs.push(`pageerror : ${e.message}`));
   page.on('console', (m) => { if (m.type() === 'error') erreurs.push(`console : ${m.text().slice(0, 160)}`); });
   page.on('requestfailed', (r) => { const u = r.url(); if (!/favicon/.test(u)) erreurs.push(`requête échouée : ${u.replace(base, '')}`); });
+  page.on('response', (r) => { if (r.status() >= 400 && !/favicon/.test(r.url())) erreurs.push(`ressource ${r.status()} : ${r.url().replace(base, '')}`); });
 
   await page.goto(`${base}/jouer.html`, { waitUntil: 'networkidle', timeout: 30000 });
   await page.waitForTimeout(1200); // laisse le scénario SSE se dérouler jusqu'à « fin »
 
-  for (const sel of ['.site-nav', '#jouLancement', '#jouBoard .fen-board', '#jouCoups .jpt__coup--coach', '#jouFin']) if ((await page.locator(sel).count()) === 0) erreurs.push(`attendu absent : ${sel}`);
+  for (const sel of ['.site-nav', '#jouLancement', '#jouJoueur', '#jouBoard .fen-board', '#jouCoups .jpt__coup--coach', '#jouFin']) if ((await page.locator(sel).count()) === 0) erreurs.push(`attendu absent : ${sel}`);
+  if ((await page.locator('#jouJoueur option[value="arbre"]').count()) === 0) erreurs.push('choix « joueur : arbre » absent');
   if (await page.locator('#jouLancement').isHidden()) erreurs.push('panneau de lancement caché (enseignant attendu)');
   // Le panneau suit le DERNIER coup (adversaire en fin de scénario) ; on clique le coup du coach pour revoir sa phrase.
   await page.locator('#jouCoups .jpt__coup--coach').first().click().catch(() => {});

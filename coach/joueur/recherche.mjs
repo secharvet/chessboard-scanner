@@ -139,13 +139,21 @@ export class Recherche {
   /**
    * Choisit un coup. Rend { coup, score, pv: [coups], profondeur, noeuds, candidats: [{ coup, score, pv, exact }] }
    * (scores internes du point de vue du trait ; les `candidatsExacts` meilleurs ont un score exact).
+   *
+   * `racineLimitee` (tableau de coups entiers) restreint la racine À CES COUPS (étape 4 de l'arbre : on ne compare que les
+   * candidats produits ; en dessous de la racine, tous les coups) ; tous les coups limités reçoivent alors un score exact.
+   * `candidatsExacts` (option d'appel) force le nombre de scores exacts pour cet appel.
    */
-  chercher(ech, { budget = this.budget, profondeurMax = MAX_PLY - 2 } = {}) {
+  chercher(ech, { budget = this.budget, profondeurMax = MAX_PLY - 2, racineLimitee = null, candidatsExacts = null } = {}) {
     this.budget = budget; this.noeuds = 0; this.arret = false;
     this.viderTable(); // même position, même coup, quel que soit le chemin : rien ne survit d'un coup à l'autre
     for (const kl of this.killers) { kl[0] = 0; kl[1] = 0; }
-    const racine = ech.coups();
+    let racine = ech.coups();
+    if (racineLimitee) { const permis = new Set(racineLimitee); racine = racine.filter((m) => permis.has(m)); }
     if (!racine.length) return { coup: 0, score: ech.enEchec() ? -MAT : 0, pv: [], profondeur: 0, noeuds: 0, candidats: [] };
+    // Combien de candidats gardent un score exact (fenêtre ouverte) : la demande d'appel, sinon la racine entière si elle est
+    // déjà restreinte (on veut comparer tous les candidats), sinon le réglage d'instance.
+    const nExactsVoulu = candidatsExacts ?? (racineLimitee ? racine.length : this.candidatsExacts);
     let candidats = racine.map((m) => ({ coup: m, score: -INFINI, pv: [m], exact: false }));
     let profondeur = 0;
     for (let prof = 1; prof <= profondeurMax; prof++) {

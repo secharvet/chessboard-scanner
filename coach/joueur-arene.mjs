@@ -35,6 +35,9 @@ export function lancer(params, { spawnFn = spawn, cwd = RACINE, graine } = {}) {
   const budget = Math.min(Math.max(Number(params.budget) || 200000, 1000), 400000); // défaut 200000 (démo ~3 s/coup), plafond 400000
   const g = graine ?? ((Math.random() * 1e9) >>> 0);
   const args = ['scripts/joueur/partie.mjs', '--flux', '--camp', camp, '--budget', String(budget), '--graine', String(g), '--sortie', 'parties', ...argsAdversaire(params)];
+  // le joueur « arbre » (joueur-arbre.mjs) au lieu du coach par défaut, et la mesure du trou en direct, sur demande du lancement
+  if (params.joueur === 'arbre') args.push('--joueur', 'coach/joueur/joueur-arbre.mjs');
+  if (params.trou) args.push('--trou');
   const enfant = spawnFn('node', args, { cwd });
   courante = { id: null, meta: null, camp, debut: Date.now(), lignes: [], coups: [], examen: null, spectateurs: new Set(), fini: false, resultat: null, enfant };
   const rl = createInterface({ input: enfant.stdout });

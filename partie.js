@@ -6,16 +6,9 @@
  */
 import { Chess } from '/vendor/chess.js';
 import { renderFenBoard } from './board-view.js';
-import { recitTexte, pourquoiHumain } from './recit.js';
+import { recitTexte, pourquoiHumain, pastilleDe } from './recit.js';
 
 const $ = (id) => document.getElementById(id);
-const SORTES = {
-  plan: { libelle: 'plan', couleur: '#4e9a06' },
-  amelioration: { libelle: 'amélioration', couleur: '#3465a4' },
-  defense: { libelle: 'défense', couleur: '#c17d11' },
-  calcul: { libelle: 'calcul', couleur: '#a40000' },
-  livre: { libelle: 'livre', couleur: '#5c3566' },
-};
 const VERDICTS = { ok: 'rien à signaler', faute: 'faute', bevue: 'bévue', exclu: 'hors compte' };
 
 /** Un score interne → texte lisible (mat encodé ± (100000 − N)). */
@@ -44,7 +37,12 @@ function construireFens(partie) {
 }
 
 function rendreBoard() {
-  renderFenBoard($('jptBoard'), etat.fens[etat.cur], { orientation: etat.orientation });
+  // flèches : le coup joué (vert) et, s'il en a dit un, le coup écarté (jaune — « l'autre couleur »)
+  const c = etat.cur > 0 ? etat.partie.coups[etat.cur - 1] : null;
+  const arrows = [];
+  if (c?.uci) arrows.push({ color: 'G', from: c.uci.slice(0, 2), to: c.uci.slice(2, 4) });
+  if (c?.coach && c.ecarte?.coup) arrows.push({ color: 'Y', from: c.ecarte.coup.slice(0, 2), to: c.ecarte.coup.slice(2, 4) });
+  renderFenBoard($('jptBoard'), etat.fens[etat.cur], { orientation: etat.orientation, drawables: { arrows } });
   $('jptCompteur').textContent = `${etat.cur} / ${etat.partie.coups.length}`;
   for (const li of $('jptCoups').children) li.classList.toggle('jpt__coup--courant', Number(li.dataset.i) === etat.cur);
 }
@@ -58,7 +56,7 @@ function rendrePhrase() {
   if (!c) { pastille.hidden = true; nom.textContent = ''; phrase.textContent = 'Choisissez un coup pour lire son explication.'; pourquoi.hidden = true; $('jptExamen').hidden = true; return; }
   nom.textContent = `${Math.floor((c.ply - 1) / 2) + 1}${c.camp === 'w' ? '.' : '…'} ${c.san}`;
   if (c.coach) {
-    const s = SORTES[c.sorte] ?? { libelle: c.sorte, couleur: '#555' };
+    const s = pastilleDe(c);
     pastille.hidden = false; pastille.textContent = s.libelle; pastille.style.backgroundColor = s.couleur;
     phrase.textContent = c.phrase ?? '(pas de phrase — échec compté)';
     carte.classList.toggle('jpt__phrase-carte--sans', !c.phrase);
@@ -99,8 +97,9 @@ function rendreListe() {
     li.className = `jpt__coup ${c.coach ? 'jpt__coup--coach' : 'jpt__coup--adv'}`;
     li.dataset.i = String(k + 1);
     const num = c.camp === 'w' ? `${Math.floor(c.ply / 2) + 1}.` : '';
+    const s = c.coach ? pastilleDe(c) : null;
     li.innerHTML = `<span class="jpt__coup-num">${num}</span> <span class="jpt__coup-san">${c.san}</span>` +
-      (c.coach && c.sorte ? `<span class="jpt__coup-pastille" style="background:${(SORTES[c.sorte] ?? {}).couleur ?? '#555'}" title="${(SORTES[c.sorte] ?? {}).libelle ?? c.sorte}"></span>` : '');
+      (s ? `<span class="jpt__coup-pastille" style="background:${s.couleur}" title="${s.libelle}"></span>` : '');
     li.addEventListener('click', () => { etat.cur = k + 1; rendreBoard(); rendrePhrase(); });
     ol.appendChild(li);
   });
