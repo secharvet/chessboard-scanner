@@ -73,3 +73,30 @@ que cela touche jamais au niveau.
    de « j'étais obligé » ?).
 
 Rien n'est basculé ni déployé sans le go de Sébastien.
+
+## Synthèse après l'Expert (11 h 45) : la ligne du coup a le dernier mot sur le nom
+
+Antithèse de l'Expert, texte seul, retenue en entier. « Ce mode est honnête si la ligne du coup a le dernier mot sur le
+nom. Si le nom a le dernier mot, il mentira exactement là où l'ancien coach mentait. » Règles de la phrase, dans l'ordre :
+
+1. **Position qui s'effondre.** Si la ligne du coup choisi perd du matériel compté, ou si sa note chute de 100 ou plus
+   depuis mon coup précédent : « Je perds {perte} quoi que je fasse : {M} est ce qui en perd le moins. » Aucun nom de plan
+   dans une position perdue (défaut n° 5 du débrief, que ce mode reproduirait sinon).
+2. **Seul coup.** Si le **deuxième meilleur coup du calcul complet** (pas seulement le deuxième candidat de l'arbre) perd
+   d'au moins 100 ou se fait mater : « {M} : sinon {ce que le deuxième perdait}. » On dit ce que les autres perdaient.
+3. **Raison tactique.** Si la ligne principale de M est forçante (prises, échecs) ou change le matériel compté : la raison
+   est la ligne — « je prépare Cxc7 avec échec », « je gagne un pion » — même si le coup a l'air calme et même si rien
+   n'est forcé (Cb5 de w-18 : la vérité est Cxc7+, pas « je développe »).
+4. **Le nom de la question**, sinon. La plus haute dans l'arbre, à une condition : **vérifiée** sur le coup, pas seulement
+   reconnue. 1c « ma pièce en prise » ne vaut que si la ligne du coup nul gagnait vraiment la pièce ; une pièce attaquée
+   mais défendue n'est pas en prise (l'erreur « attaque / contester » déjà payée), et c'est alors la question suivante qui
+   est la vraie raison. Une seconde raison en incise, une seule, seulement si elle est d'une autre nature : « Je sors le
+   cavalier, et au passage je pare sa menace sur e4. » Jamais trois.
+5. **Sans nom** : « Mon calcul préfère ce coup ; je ne sais pas le nommer. »
+
+Le roque nommé « je mets mon roi à l'abri » quand le calcul voulait la tour sur la colonne ouverte : pas faux, creux,
+accepté.
+
+Ce que ça demande au Dev chef en plus de `nommer()` : les règles 1 à 3 lisent la ligne principale et la note du calcul
+complet (déjà disponibles dans le résultat de la recherche) ; la règle 4 demande à chaque question un **vérificateur**
+(« ce que je mesure change-t-il avec ce coup ? »), 1c en premier ; le harnais rejoue la ligne citée comme aujourd'hui.
