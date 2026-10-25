@@ -58,7 +58,8 @@ async function verifier(largeur) {
   await page.goto(`${base}/jouer.html`, { waitUntil: 'networkidle', timeout: 30000 });
   await page.waitForTimeout(1200); // laisse le scénario SSE se dérouler jusqu'à « fin »
 
-  for (const sel of ['.site-nav', '#jouLancement', '#jouBoard .fen-board', '#jouCoups .jpt__coup--coach', '#jouFin']) if ((await page.locator(sel).count()) === 0) erreurs.push(`attendu absent : ${sel}`);
+  for (const sel of ['.site-nav', '#jouLancement', '#jouJoueur', '#jouBoard .fen-board', '#jouCoups .jpt__coup--coach', '#jouFin']) if ((await page.locator(sel).count()) === 0) erreurs.push(`attendu absent : ${sel}`);
+  if ((await page.locator('#jouJoueur option[value="arbre"]').count()) === 0) erreurs.push('choix « joueur : arbre » absent');
   if (await page.locator('#jouLancement').isHidden()) erreurs.push('panneau de lancement caché (enseignant attendu)');
   // Le panneau suit le DERNIER coup (adversaire en fin de scénario) ; on clique le coup du coach pour revoir sa phrase.
   await page.locator('#jouCoups .jpt__coup--coach').first().click().catch(() => {});

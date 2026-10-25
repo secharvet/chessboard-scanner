@@ -348,7 +348,9 @@ export async function routerPlateforme({ req, res, url, readJson, send, engine, 
   if (path === '/api/joueur/parties' && m === 'POST') {
     if (!exiger('enseignant')) return true; // même garde que l'éditeur
     const b = await readJson(req);
-    try { const c = arene.lancer({ adversaire: b.adversaire, elo: b.elo, camp: b.camp, budget: b.budget }); send(res, 200, { ok: true, ...c }); }
+    // le joueur « arbre » (sinon le coach actuel) ; pour l'arbre, le trou est activé par défaut (on le voit en direct)
+    const arbre = b.joueur === 'arbre';
+    try { const c = arene.lancer({ adversaire: b.adversaire, elo: b.elo, camp: b.camp, budget: b.budget, joueur: arbre ? 'arbre' : undefined, trou: arbre ? (b.trou !== false) : !!b.trou }); send(res, 200, { ok: true, ...c }); }
     catch (e) { if (e.occupe) return refuser(409, 'une partie est déjà en cours, réessaie quand elle est finie'); return refuser(400, e.message); }
     return true;
   }

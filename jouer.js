@@ -177,7 +177,9 @@ async function initLancement() {
   $('jouAdversaire').onchange = () => { $('jouEloChamp').hidden = $('jouAdversaire').value !== 'bride'; };
   $('jouJouer').onclick = async () => {
     $('jouJouer').disabled = true; $('jouErreur').hidden = true;
-    const corps = { adversaire: $('jouAdversaire').value, elo: Number($('jouElo').value), camp: $('jouCamp').value };
+    const joueur = $('jouJoueur')?.value ?? 'actuel';
+    // le joueur « arbre » devant la recherche, avec le trou activé pour qu'on le voie en direct
+    const corps = { adversaire: $('jouAdversaire').value, elo: Number($('jouElo').value), camp: $('jouCamp').value, joueur, trou: joueur === 'arbre' };
     try {
       const r = await fetch('/api/joueur/parties', { method: 'POST', headers: { 'Content-Type': 'application/json' }, credentials: 'same-origin', body: JSON.stringify(corps) });
       const j = await r.json();

@@ -20,6 +20,17 @@ test('arène serveur : choix d\'adversaire → options', () => {
   assert.throws(() => argsAdversaire({ adversaire: 'x' }));
 });
 
+test('arène serveur : le joueur « arbre » et le trou passent en arguments à l\'enfant, sinon non', () => {
+  _reinit();
+  let a = null; lancer({ adversaire: 'maia', camp: 'w', joueur: 'arbre', trou: true }, { spawnFn: (_c, args) => { a = args; return faireEnfant(); }, graine: 1 });
+  assert.equal(a[a.indexOf('--joueur') + 1], 'coach/joueur/joueur-arbre.mjs');
+  assert.ok(a.includes('--trou'));
+  _reinit();
+  let b = null; lancer({ adversaire: 'maia', camp: 'w' }, { spawnFn: (_c, args) => { b = args; return faireEnfant(); }, graine: 1 });
+  assert.ok(!b.includes('--joueur') && !b.includes('--trou')); // le coach actuel par défaut
+  _reinit();
+});
+
 test('arène serveur : lancer, les coups s\'accumulent, occupé si déjà en cours', async () => {
   _reinit();
   const enfant = faireEnfant();
