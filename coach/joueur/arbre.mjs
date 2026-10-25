@@ -332,14 +332,38 @@ export function plansCatalogue({ fen, camp }) {
   return out;
 }
 
+/**
+ * 3 développement (doctrine 3a) — en ouverture : sortir une mineure encore chez elle (case sûre, vers le centre), roquer
+ * (mettre le roi à l'abri), prendre le centre avec un pion d ou e sur sa 4e. Les règles d'ouverture (ne pas rejouer une
+ * pièce, pas la dame trop tôt) DÉPARTAGENT au calcul, elles n'éliminent jamais : le générateur ne fait que produire —
+ * d'ailleurs « sortir une mineure chez elle » est un premier développement (pas un re-coup) et ne sort pas la dame.
+ */
+export function developpement({ fen, camp }) {
+  const map = buildAttackMap(fen);
+  const rangHome = camp === 'w' ? 1 : 8, rang4 = camp === 'w' ? 4 : 5;
+  const coup = Number(fen.split(' ')[5] ?? 1);
+  const mineuresHome = map.pieces.filter((p) => p.color === camp && (p.type === 'n' || p.type === 'b') && p.rank === rangHome);
+  const out = [], vus = new Set();
+  const ajoute = (u, raison) => { if (!vus.has(u)) { vus.add(u); out.push({ coup: u, raison, noeud: '3D' }); } };
+  const sur = (m) => gainEchange(buildAttackMap(apres(fen, m)), m.to, camp) <= 0; // la pièce n'est pas en prise après le coup
+  for (const m of coupsLegaux(fen)) {
+    const u = uciDe(m);
+    if (m.flags.includes('k') || m.flags.includes('q')) { ajoute(u, 'je mets mon roi à l\'abri'); continue; } // roquer : toujours produit quand c'est légal
+    if (coup > 20) continue; // le reste du développement n'a de sens qu'en ouverture
+    if ((m.piece === 'n' || m.piece === 'b') && m.from[1] === String(rangHome) && mineuresHome.length && sur(m)) { ajoute(u, `je sors ${maPiece(m.piece)}`); continue; }
+    if (coup <= 12 && m.piece === 'p' && (m.from[0] === 'd' || m.from[0] === 'e') && m.to[1] === String(rang4) && sur(m)) ajoute(u, 'je prends le centre');
+  }
+  return out;
+}
+
 export function etape3(ctx) {
-  return [...livre(ctx), ...pirePiece(ctx), ...prophylaxie(ctx), ...plansCatalogue(ctx)];
+  return [...livre(ctx), ...developpement(ctx), ...plansCatalogue(ctx), ...pirePiece(ctx), ...prophylaxie(ctx)];
 }
 
 /* ====================================================================== assemblage ====================================================================== */
 
 /** L'ORDRE de l'arbre : un coup produit par plusieurs nœuds garde le nœud le plus HAUT (sa raison), toutes raisons retenues. */
-export const ORDRE = ['1a', '1b', '1c', '1d', '1e', '1f', '2a', '2b', '2c', '2d', '2e', '3L', '3P', '3Y', '3C'];
+export const ORDRE = ['1a', '1b', '1c', '1d', '1e', '1f', '2a', '2b', '2c', '2d', '2e', '3L', '3D', '3C', '3P', '3Y'];
 
 /**
  * Produit les candidats de l'arbre (étapes 1, 2, 3 réduite) pour une position, dédoublonnés par coup (nœud le plus haut

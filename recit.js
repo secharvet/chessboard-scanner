@@ -17,9 +17,9 @@ const PASTILLE_SORTE = { plan: { libelle: 'plan', couleur: '#4e9a06' }, ameliora
 export const MOT_NOEUD = {
   '1a': 'je suis en échec', '1b': 'il menace mat', '1c': 'ma pièce en prise', '1d': 'mat du couloir', '1e': 'je suis cloué', '1f': 'il me menace',
   '2a': 'je mate', '2b': 'je gagne', '2c': 'avant de reprendre', '2d': 'double attaque', '2e': 'tactique',
-  '3L': 'théorie', '3P': 'ma pire pièce', '3Y': 'je l\'empêche', '3C': 'mon plan',
+  '3L': 'théorie', '3D': 'je développe', '3P': 'ma pire pièce', '3Y': 'je l\'empêche', '3C': 'mon plan',
 };
-const COUL_NOEUD = { 1: '#c17d11', 2: '#a40000', '3L': '#5c3566', '3P': '#4e9a06', '3Y': '#3465a4', '3C': '#4e9a06' };
+const COUL_NOEUD = { 1: '#c17d11', 2: '#a40000', '3L': '#5c3566', '3D': '#4e9a06', '3P': '#4e9a06', '3Y': '#3465a4', '3C': '#4e9a06' };
 /** Le type de pièce (minuscule) sur une case d'une FEN, ou null. */
 function pieceDe(fen, sq) {
   if (!fen || !sq) return null;

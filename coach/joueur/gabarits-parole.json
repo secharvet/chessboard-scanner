@@ -134,5 +134,15 @@
     "nulle_materiel": "Il ne reste pas assez de matériel pour mater : c'est nul.",
     "fous_opposes_eviter": "J'évite les fous de couleurs opposées : avec eux, même un pion de plus ne gagne presque jamais.",
     "fous_opposes_chercher": "Je cherche les fous de couleurs opposées : avec eux, même avec un pion de moins, c'est très souvent nul."
+  },
+  "arbre": {
+    "_note": "Étape 6 de l'arbre de décision (joueur-arbre.mjs) : la question du nœud, puis au conditionnel le coup écarté. Gain et perte nommés par composition. Jamais « score », « ligne », « candidat », « réfutation », « note ».",
+    "ecarte_perte": "J'ai pensé à {R}. Mais il répondait {ligneR}, et je perdais {perteR}. {fin}",
+    "ecarte_mat": "J'ai pensé à {R}. Mais il répondait {ligneR}, et il me matait. {fin}",
+    "ecarte_manque": "J'ai pensé à {R}. Mais avec {R}, il sauvait {sauve}.",
+    "se_valent": "{M} ou {R} : les deux se valent. J'ai pris {M} parce que {raison}.",
+    "trou": "Mon calcul trouve mieux que mes idées : je joue {M}.{gain}",
+    "fin_rien_de_tel": "Avec {M}, rien de tel.",
+    "fin_evite": "{M} évite ça."
   }
 }

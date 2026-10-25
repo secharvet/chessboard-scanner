@@ -22,7 +22,7 @@ import { Chess } from 'chess.js';
 import { Echiquier, DEPART, uci as uciDe } from './echiquier.mjs';
 import { evaluer, enCentipions } from './evaluation.mjs';
 import { Recherche, MAT } from './recherche.mjs';
-import { materielEnMots, ligneTexte } from './parole.mjs';
+import { materielEnMots, ligneTexte, GABARITS } from './parole.mjs';
 import { toFrenchSan } from '../notation.mjs';
 import { candidats as candidatsArbre, selectionner, ORDRE, saPiece } from './arbre.mjs';
 
@@ -35,20 +35,13 @@ export const MOT_NOEUD = {
   '1a': 'je suis en échec', '1b': 'il menace mat', '1c': 'une pièce en prise', '1d': 'la dernière rangée',
   '1e': 'une pièce clouée', '1f': 's\'il jouait deux fois', '2a': 'un mat', '2b': 'une prise qui gagne',
   '2c': 'un coup intermédiaire', '2d': 'une double attaque', '2e': 'une tactique', '3L': 'le livre',
-  '3P': 'ma pire pièce', '3Y': 'la prophylaxie', '3C': 'mon plan',
+  '3D': 'je développe', '3P': 'ma pire pièce', '3Y': 'la prophylaxie', '3C': 'mon plan',
 };
 
-/* Gabarits de l'étape 6, corrigés par l'Expert (le gain et la perte NOMMÉS par composition, la même référence pour les
-   deux ; le coup écarté au conditionnel ; jamais « score », « ligne », « candidat », « réfutation », « note »). */
-const PAROLE = {
-  ecartePerte: 'J\'ai pensé à {R}. Mais il répondait {ligneR}, et je perdais {perteR}. {fin}', // fin = « Avec M, rien de tel. » ou « M évite ça. »
-  ecarteMat: 'J\'ai pensé à {R}. Mais il répondait {ligneR}, et il me matait. {fin}',
-  ecarteManque: 'J\'ai pensé à {R}. Mais avec {R}, il sauvait {sauve}.', // M gagnait une pièce que R laisse filer
-  seValent: '{M} ou {R} : les deux se valent. J\'ai pris {M} parce que {raison}.',
-  trou: 'Mon calcul trouve mieux que mes idées : je joue {M}.{gain}',
-  finRienDeTel: 'Avec {M}, rien de tel.',
-  finEvite: '{M} évite ça.',
-};
+/* Gabarits de l'étape 6, dans gabarits-parole.json section « arbre » (relus par l'Expert) : le gain et la perte NOMMÉS par
+   composition, la même référence pour les deux ; le coup écarté au conditionnel ; jamais « score », « ligne », « candidat ». */
+const A = GABARITS.arbre;
+const PAROLE = { ecartePerte: A.ecarte_perte, ecarteMat: A.ecarte_mat, ecarteManque: A.ecarte_manque, seValent: A.se_valent, trou: A.trou, finRienDeTel: A.fin_rien_de_tel, finEvite: A.fin_evite };
 
 const fenApresUci = (fen, pvUci) => { const c = new Chess(fen); for (const u of pvUci) { try { c.move({ from: u.slice(0, 2), to: u.slice(2, 4), promotion: u[4] }); } catch { break; } } return c.fen(); };
 const ligneFr = (fen, pvUci) => { const c = new Chess(fen), sans = []; for (const u of pvUci) { try { sans.push(toFrenchSan(c.move({ from: u.slice(0, 2), to: u.slice(2, 4), promotion: u[4] }).san)); } catch { break; } } return { sans, fenBout: c.fen() }; };

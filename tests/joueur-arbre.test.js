@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {
   echec, menaceMat, pieceEnPrise, derniereRangee, clouage, deuxCoups,
   monMat, priseGagnante, intermede, pieceNonDefendue, tactiqueNommee,
-  livre, pirePiece, prophylaxie, plansCatalogue,
+  livre, developpement, pirePiece, prophylaxie, plansCatalogue,
   candidats, selectionner, piecesEnPrise,
 } from '../coach/joueur/arbre.mjs';
 import { Echiquier, uci as uciDe } from '../coach/joueur/echiquier.mjs';
@@ -156,6 +156,20 @@ test('3 pire pièce : active une mineure encore chez elle au coup 10, rien au d�
   assert.ok(cs.length > 0 && cs.every((c) => c.noeud === '3P' && c.coup.startsWith('f1')));
   assert.ok(cs.some((c) => /pire pièce/.test(c.raison)));
   assert.deepEqual(pirePiece({ fen: DEPART, camp: 'w' }), []); // rien à activer au premier coup (les pièces sont bloquées, pas « mauvaises »)
+});
+
+test('3 développement : en ouverture sort une mineure et prend le centre ; roque quand c\'est possible ; rien en milieu de jeu tout développé', () => {
+  // après 1.e4 e5 2.Cf3 : cavalier et fou à sortir, d2-d4 disponible.
+  const ouv = 'rnbqkb1r/pppp1ppp/5n2/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3';
+  const cs = developpement({ fen: ouv, camp: 'w' });
+  assert.ok(cs.length > 0 && cs.every((c) => c.noeud === '3D'));
+  assert.ok(cs.some((c) => c.coup === 'b1c3' && /je sors mon cavalier/.test(c.raison)));
+  assert.ok(cs.some((c) => c.coup === 'd2d4' && /centre/.test(c.raison)));
+  // Giuoco : O-O possible → « je mets mon roi à l'abri »
+  const roque = developpement({ fen: 'r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/2N2N2/PPPP1PPP/R1BQK2R w KQkq - 6 5', camp: 'w' });
+  assert.ok(roque.some((c) => c.coup === 'e1g1' && /abri/.test(c.raison)));
+  // milieu de jeu : tout développé, roqué, coup 25 → rien
+  assert.deepEqual(developpement({ fen: 'r4rk1/pp2bppp/2n1pn2/3p4/3P4/2NBPN2/PP3PPP/R4RK1 w - - 0 25', camp: 'w' }), []);
 });
 
 test('3 prophylaxie : produit les coups qui gênent son idée (sonde), rien sans sonde', () => {
