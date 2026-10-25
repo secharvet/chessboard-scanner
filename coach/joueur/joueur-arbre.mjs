@@ -33,7 +33,7 @@ export const BORNES = Object.freeze({ seValent: 10, menace: 80, trou: 100, ecart
 /** Le nom de la question d'un nœud, pour la pastille et la phrase (« le mot du nœud »). */
 export const MOT_NOEUD = {
   '1a': 'je suis en échec', '1b': 'il menace mat', '1c': 'une pièce en prise', '1d': 'la dernière rangée',
-  '1e': 'une pièce clouée', '1f': 's\'il jouait deux fois', '2a': 'un mat', '2b': 'une prise qui gagne',
+  '1e': 'une pièce clouée', '1f': 'il me menace', '2a': 'un mat', '2b': 'une prise qui gagne',
   '2c': 'un coup intermédiaire', '2d': 'une double attaque', '2e': 'une tactique', '3L': 'le livre',
   '3D': 'je développe', '3P': 'ma pire pièce', '3Y': 'la prophylaxie', '3C': 'mon plan',
 };
@@ -207,7 +207,8 @@ export class Joueur {
       const bilan = bilanParType(fenAvant, fenBout, camp);
       const perte = materielEnMots(Object.fromEntries(Object.entries(bilan).map(([k, v]) => [k, -v])));
       const gainMat = -sommeMat(bilan); // ce qu'il gagne en matériel
-      if (estMat || gainMat > 0) { menace = { mat: estMat, perte: estMat ? 'la partie (mat)' : perte ?? 'du matériel', pvUci }; paree = this.#pareeFab(fenAvant, pvUci, estMat, camp); }
+      const ligneMenace = ligneFr(ech2.fen(), pvUci).sans.slice(0, 4).join(' puis '); // sa ligne menaçante, ≤ 4 demi-coups, pour « il menace … »
+      if (estMat || gainMat > 0) { menace = { mat: estMat, perte: estMat ? 'la partie (mat)' : perte ?? 'du matériel', ligne: ligneMenace, pvUci }; paree = this.#pareeFab(fenAvant, pvUci, estMat, camp); }
       else if (enCentipions(mn.score) + E0 >= 50) { // menace positionnelle : prophylaxie (lui enlever son idée = la rendre illégale après mon coup)
         const idee = ligneFr(ech2.fen(), [pvUci[0]]).sans[0];
         prophylaxie = { idee: idee || null, paree: this.#prophPareeFab(fenAvant, pvUci[0]) };
@@ -220,7 +221,7 @@ export class Joueur {
   }
 
   /**
-   * « Et si je jouais deux fois ? » (2f) : pour chacun de mes coups M, je joue M, l'adversaire passe (coup nul), et ma
+   * « Que menacé-je ? » (2f) : pour chacun de mes coups M, je joue M, l'adversaire passe (coup nul), et ma
    * recherche courte dit ce que je gagne alors — c'est `menace()` retourné vers mon camp. On garde les coups qui créent
    * une menace de mat, une fourchette / un échec qui gagne, ou un gain de pièce (≥ 2), le plus fort d'abord, trois au plus.
    * Le candidat est M (le premier coup de ma ligne) ; la phrase donne la ligne « s'il ne fait rien ».
