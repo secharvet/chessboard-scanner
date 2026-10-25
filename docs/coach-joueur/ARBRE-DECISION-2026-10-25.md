@@ -24,7 +24,7 @@ matériel (1-3-3-5-9). Où sont les deux rois.
 | 1c | Une de mes pièces est-elle en prise (non défendue, ou attaquée par moins gros), la plus grosse d'abord ? | La sauver : fuir, défendre, s'interposer, ou contre-attaquer plus gros. |
 | 1d | Ma dernière rangée est-elle faible (mat du couloir) ? | Un trou d'aération, ou une pièce qui couvre. |
 | 1e | Une pièce à moi est-elle clouée, ou alignée avec mon roi ou ma dame ? | La déclouer, rompre l'alignement. |
-| 1f | S'il jouait deux fois de suite, que gagnerait-il ? (fourchette, promotion, attaque de mat…) | La parade = tout coup après lequel sa suite ne gagne plus (c'est un test, pas un modèle). |
+| 1f | Que menace-t-il ? (si je ne fais rien, que gagne-t-il ?) (fourchette, promotion, attaque de mat…) | La parade = tout coup après lequel sa suite ne gagne plus (c'est un test, pas un modèle). |
 
 **2. Regarder ensuite ce que je peux forcer** (mes échecs, prises, menaces).
 
@@ -44,7 +44,7 @@ enseigne les deux fautes de club : le coup désespéré et le coup intermédiair
 **3. Rien de forcé : quel est mon plan ?**
 
 À **chaque** nœud de cette étape, la question d'abord : **« Que veut-il faire ? »** On passe l'étape 3 pour lui (ses
-trois regards, ses cibles chez moi, le plan du catalogue pour sa structure). Son meilleur coup « s'il jouait deux fois »
+trois regards, ses cibles chez moi, le plan du catalogue pour sa structure). Son meilleur coup « si je ne fais rien »
 sert de confirmation : s'il est un pas de ce plan, on le nomme (« Il veut jouer …c5 pour attaquer d4 ») ; sinon c'est de
 la tactique (étape 1) ou il n'y a rien à nommer, et on ne dit rien. Le coup de **prophylaxie** est celui qui allonge le
 chemin de son plan, ou qui lui enlève sa cible.

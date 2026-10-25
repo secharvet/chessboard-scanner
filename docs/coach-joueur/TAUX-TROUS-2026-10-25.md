@@ -62,7 +62,7 @@ attaque du roi, trois regards, conduite, « que veut-il faire ? ») les couvrent
 | **Attaque du roi (3d)** — le compte A − D autour de son roi, ma dame, une ligne ouverte ou un pion de roque avancé ; **le sacrifice doit être proposé comme candidat**, sinon le calcul ne le voit jamais | 4 | w-16 c. 16 Df4 (Df6 puis Dg7 mat avec Fh6 : à trois coups, `menace()` ne le voit pas, le compte oui), w-23 c. 10 Ch5 (le crochet h6 de la Française : Ch5, Fxh6, Dg4), w-17 c. 20 c6 (le levier contre son roi en c8), w-08 c. 25 Fxg7+ (combinaison ; **pas** un mat en deux : après Fxg7+ Txg7 Dh7+, Rxh7 est légal — vérifié) |
 | **Technique du camp largement gagnant (3a finale / 3e)** — pousser le pion passé, le soutenir, un coup d'attente qui ne gâche rien | 4 | w-20 c. 28 a4, w-26 c. 32 Cc5 (soutient d6), w-03 c. 27 Fb5 (dame + fou contre rien : aucune question ne produit), w-09 c. 35 Td6 |
 | **L'échange : le faire ou le refuser (3b, « quelle pièce échanger »)** — garder mes bonnes pièces, casser son roque, ouvrir une case | 3 | w-24 c. 12 Fb3 (le fou recule devant Cxd5 : garder la paire, couvrir c2), w-09 c. 18 Fxb7 (ouvre b7 et d7), w-10 c. 11 Fxh6 (casse son roque : le compte dit « égal », la raison est la structure du roi) |
-| **« Et si je jouais deux fois ? »** — le coup qui prépare une menace à un coup (fourchette, échec gagnant) ; 1f tourné vers moi, `menace()` existe déjà | 2 | w-18 c. 8 Cb5 (menace Cxc7+, vérifié), w-08 c. 24 Fh6 (sur g7, avec Te7 et De4) |
+| **« Que menacé-je ? »** — le coup qui prépare une menace à un coup (fourchette, échec gagnant) ; 1f tourné vers moi, `menace()` existe déjà | 2 | w-18 c. 8 Cb5 (menace Cxc7+, vérifié), w-08 c. 24 Fh6 (sur g7, avec Te7 et De4) |
 | **Améliorer une pièce vers une case forte (3P étendu)** — pas seulement « ma pire pièce » : la dame qui quitte la première rangée, le cavalier qui gagne l'avant-poste ; `maneuvers.mjs` fait déjà les itinéraires | 2 | w-14 c. 8 Ce5, w-24 c. 15 De2 |
 | **La conduite (3e, « avantage dynamique : agir »)** — mieux développé, j'ouvre | 1 | w-19 c. 12 d5 |
 
@@ -70,7 +70,7 @@ Les **3 coups sans aucun candidat** (étape « — ») sont dans « technique »
 l'arbre propose **toujours** au moins un coup d'amélioration ou d'attente (la demande de Sébastien : « soit on enrichit
 l'arbre, soit on joue des coups neutres, des coups d'attente »).
 
-Corrections de l'Expert retenues telles quelles : Df4, Ch5, c6 et Fxg7+ sont de l'attaque du roi et non « deux fois »
+Corrections de l'Expert retenues telles quelles : Df4, Ch5, c6 et Fxg7+ sont de l'attaque du roi et non « que menacé-je ? »
 (la menace est à trois coups, ou c'est une combinaison) ; Fb3, Fxb7, Fxh6 sont des échanges (faits ou refusés), la famille
 « prise non validée » disparaît ; d5 est la conduite ; Td6 n'est compté qu'une fois ; **le « mat en deux avec sacrifice »
 était une erreur du pilote**, il n'y a pas de faute de 2a à corriger.
@@ -83,7 +83,7 @@ Corrections de l'Expert retenues telles quelles : Df4, Ch5, c6 et Fxg7+ sont de 
 3. **« Toujours un coup d'amélioration »** tout de suite : presque gratuit, bouche les 3 vides.
 4. **L'attaque du roi (3d)** : 4 trous, demandée par le GE, et sans elle le coach reste « un défenseur qui améliore ».
    Le sacrifice sur le roi doit être proposé comme candidat.
-5. Puis **les cibles** (5), **l'échange** (3), **« deux fois »** (2), **la technique** (4), **la conduite** (1).
+5. Puis **les cibles** (5), **l'échange** (3), **« que menacé-je ? »** (2), **la technique** (4), **la conduite** (1).
 6. Après chaque branche, le taux recalculé sur les mêmes 605 positions.
 
 Ce qui ne bouge pas : l'arbre produit, le calcul départage ; une branche = une question = une fonction qui rend
@@ -112,8 +112,8 @@ Trois branches, dans cet ordre, même méthode qu'au temps 1 : une question = un
 jamais de score ; tests hors ligne sur une position où elle produit et une où elle ne produit pas ; la mesure sur les 605
 positions relancée par le pilote après le lot, pas par le Dev chef.
 
-**A. « Et si je jouais deux fois ? » (nœud 2f, étape 2, après 2e).** Le `menace()` qui sert à 1f, mais pour mon camp :
-on fait jouer un coup nul à l'adversaire après mon coup (je joue deux fois de suite) et on regarde ce que ma recherche
+**A. « Que menacé-je ? » (nœud 2f, étape 2, après 2e).** Le `menace()` qui sert à 1f, mais pour mon camp :
+on imagine que l'adversaire ne répond pas à mon coup (si lui ne fait rien) et on regarde ce que ma recherche
 courte gagne. Trois sortes de gain nommées, chacune sa pastille : **je menace mat**
 (sa ligne finit mat : les 7 « pas reconnu avant », Cb5 → Cc7 mat, Dd4 → Dxg7 mat, De4 → Dxh7 mat, Fh6 → Dxf8 mat, Th4,
 Fxb6 → Da7+ puis Dxc7 mat, Dg4), **je menace une fourchette / un échec qui gagne** (Cb5 de w-18 : Cxc7+), **je menace

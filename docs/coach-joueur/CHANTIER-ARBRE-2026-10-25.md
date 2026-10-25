@@ -23,7 +23,7 @@ et comment on le mesure**. Il ne part qu'avec le go de Sébastien.
 1a échec → coups légaux ; 1b mat menacé en 1 ou 2 (recherche de mat courte pour lui) ; 1c pièce en prise, la plus grosse
 d'abord (attaquée et non défendue, ou attaquée par moins gros) → fuir, défendre, s'interposer, contre-attaquer plus gros ;
 1d dernière rangée (pas de case de fuite, un seul défenseur) → trou d'aération, pièce qui couvre ; 1e pièce clouée ou
-alignée avec mon roi ou ma dame → déclouer, rompre ; 1f « s'il jouait deux fois » (le coup nul existant, `menace()`) → la
+alignée avec mon roi ou ma dame → déclouer, rompre ; 1f « que menace-t-il ? » (le coup nul existant, `menace()`) → la
 parade par **test** : tout coup légal après lequel sa ligne ne gagne plus (on rejoue sa ligne après chaque coup légal, on
 compte ; c'est ce qui trouve 16.Fb5+ contre …Txg2+).
 
