@@ -46,10 +46,11 @@ async function main() {
 
   for (const chemin of fichiers) {
     let partie; try { partie = JSON.parse(readFileSync(chemin, 'utf8')); } catch { console.error(`illisible : ${chemin}`); continue; }
+    if (!Array.isArray(partie.coups)) { process.stderr.write(`· ${chemin.split('/').pop()} ignoré (pas une partie)\n`); continue; } // bilan.json, index.json…
     const camp = partie.coach?.camp ?? 'w', depart = partie.depart;
     const coach = new JoueurArbre({ camp, budget, trou: true });
     const historique = [];
-    for (const c of partie.coups ?? []) {
+    for (const c of partie.coups) {
       if (c.coach) {
         const r = await coach.choisir(c.fenAvant, { camp, depart, historique: [...historique] });
         coups++;
@@ -68,9 +69,11 @@ async function main() {
       historique.push(c.uci);
     }
     process.stderr.write(`· ${chemin.split('/').pop()} fait (${coups} coups, ${trous} trous)\n`);
+    if (sortie) writeFileSync(sortie, JSON.stringify(bilanDe(), null, 1)); // écrit après chaque partie : un plantage ne perd rien
   }
 
-  const bilan = { lot: fichiers.length, coups, trous, taux: coups ? 100 * trous / coups : 0, budget, parEtape, parClasse, details };
+  function bilanDe() { return { lot: fichiers.length, coups, trous, taux: coups ? 100 * trous / coups : 0, budget, parEtape, parClasse, details }; }
+  const bilan = bilanDe();
   console.log(`\n=== TAUX DE TROUS — ${coups} coups du coach, ${trous} trous (${PCT(trous, coups)}) ===\n`);
   console.log('(i) par étape où l\'arbre se trouvait :');
   for (const et of ['1', '2', '3', '—']) if (parEtape[et]) console.log(`    étape ${et} : ${parEtape[et].trous} trous / ${parEtape[et].coups} coups (${PCT(parEtape[et].trous, parEtape[et].coups)})`);
