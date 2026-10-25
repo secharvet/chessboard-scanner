@@ -85,6 +85,26 @@ export class Joueur {
     this.recherche = new Recherche({ budget: this.budget });
   }
 
+  /**
+   * NOMMER un coup déjà choisi (par le calcul complet, ou joué dans une partie) : quelle question de l'arbre le produit ?
+   * Rend les candidats de l'arbre pour la position et, pour le coup donné, le nœud le plus haut qui le reconnaît (ou
+   * null : « sans nom »). Aucune recherche complète ; seulement la sonde des questions. Sert à la mesure « calcul puis
+   * nommage » (Sébastien, 25 oct.) : le gros calcul choisit, l'arbre explique.
+   * @param {string} fen @param {{ depart?: string, historique?: string[] }} contexte @param {string} uci le coup à nommer
+   */
+  nommer(fen, contexte = {}, uci) {
+    const depart = contexte.depart ?? fen, historique = contexte.historique ?? [];
+    const ech = new Echiquier(depart), chess = new Chess(depart);
+    for (const u of historique) { const m = ech.coupDepuisUci(u); if (!m || !ech.jouer(m)) throw new Error(`historique : coup illégal ${u}`); chess.move({ from: u.slice(0, 2), to: u.slice(2, 4), promotion: u[4] }); }
+    if (!historique.length && depart !== fen) { ech.chargerFen(fen); chess.load(fen); }
+    const fenAvant = chess.fen(), camp = chess.turn();
+    const E0 = enCentipions(this.recherche.evaluationPosee(ech).score);
+    const sonde = this.#sonde(ech, fenAvant, camp, E0);
+    const tous = candidatsArbre({ fen: fenAvant, camp, depart, historique, sonde });
+    const c = tous.find((x) => x.coup === uci) ?? null;
+    return { candidats: tous, noeud: c?.noeud ?? null, raison: c?.raison ?? null, raisons: c?.raisons ?? [], sonde: { menace: !!sonde.menace, monMat: !!sonde.monMat } };
+  }
+
   async choisir(fen, contexte = {}) {
     const t0 = Date.now();
     const depart = contexte.depart ?? fen, historique = contexte.historique ?? [];
