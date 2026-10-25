@@ -242,8 +242,10 @@ export class Joueur {
   #dire(M, survivantSuivant, elagueBest, ply, fenAvant, camp) {
     const sanM = sanDe(fenAvant, M.coup);
     if (M.trou) return { phrase: remplir(PAROLE.trou, { M: sanM, gain: M.gain ? ` Je gagne ${M.gain}.` : '' }).replace(/\s+/g, ' ').trim(), ecarte: null, alerte: null };
-    // (défaut 1) le gain de M nommé par composition : « je gagne un fou », jamais « du matériel »
-    const mainRaison = (M.gain && /gagne du matériel/.test(M.raison || '')) ? M.raison.replace('du matériel', M.gain) : (M.raison || MOT_NOEUD[M.noeud] || 'je joue ce coup');
+    // (défaut 1) le gain de M nommé par composition : « je gagne une pièce » ; si la ligne ne garde pas de gain net (bilan
+    // nul au bout, par ex. une compensation adverse), on retire la vantardise « et je gagne du matériel » au lieu de la laisser.
+    let mainRaison = M.raison || MOT_NOEUD[M.noeud] || 'je joue ce coup';
+    if (/gagne du matériel/.test(mainRaison)) mainRaison = M.gain ? mainRaison.replace('du matériel', M.gain) : mainRaison.replace(/ et je gagne du matériel/, '');
     const gainDit = !!M.gain && /gagne/.test(mainRaison); // la première phrase a déjà dit le gain de M → on omet « rien de tel »
     const fin = gainDit ? remplir(PAROLE.finEvite, { M: sanM }) : remplir(PAROLE.finRienDeTel, { M: sanM });
     const parties = [cap(mainRaison) + '.'];
