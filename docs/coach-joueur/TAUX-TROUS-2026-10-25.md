@@ -51,32 +51,40 @@ générateur doit proposer ce que le reconnaisseur accepte), sans doctrine nouve
 
 ## Lecture des 20 « sans nom » : les branches qui manquent
 
-Chaque position a été regardée. Elles tombent dans six familles ; la liste de Sébastien (renforcement, défense, préparation
-d'un plan, case de fuite, coup d'attente) et celle du temps 2 (cibles, attaque du roi, trois regards, conduite, « que
-veut-il faire ? ») les couvrent toutes.
+Chaque position a été regardée (thèse du pilote), puis relue par l'Expert sans moteur (antithèse, 25 oct. 5 h 50) ; le
+tableau ci-dessous est la synthèse. Les familles sont toutes dans l'arbre validé (`ARBRE-DECISION-2026-10-25.md`) : la liste
+de Sébastien (renforcement, défense, préparation d'un plan, case de fuite, coup d'attente) et celle du temps 2 (cibles,
+attaque du roi, trois regards, conduite, « que veut-il faire ? ») les couvrent toutes.
 
-| famille | trous | exemples (partie, coup) |
+| famille (nœud de l'arbre) | trous | les coups (partie, coup) |
 |---|---|---|
-| **« Et si je jouais deux fois ? »** — le coup qui prépare une menace (fourchette, échec gagnant, mat) au coup suivant ; c'est 1f tourné vers moi, avec `menace()` qui existe déjà | 5 | w-18 c. 8 Cb5 (menace Cxc7+), w-16 c. 16 Df4, w-08 c. 24 Fh6 (sur g7, avec Te7 et De4), w-17 c. 20 c6 (ouvre sur son roi), w-23 c. 10 Ch5 |
-| **Cibles** — un pion ou une pièce faible qu'une tour peut attaquer : septième rangée, colonne ouverte, pion isolé | 5 | w-09 c. 24 Tc7 (a7), w-09 c. 34 Ta2 (a5), w-09 c. 35 Td6 (a6, e6), w-09 c. 19 Ted1 (doubler), w-09 c. 17 Te1 (la tour qui n'a pas joué) |
-| **Améliorer une pièce vers une case forte** — pas seulement « ma pire pièce » : la dame qui quitte la première rangée, le cavalier qui gagne l'avant-poste, le fou qui recule pour éviter l'échange ; `maneuvers.mjs` fait déjà les itinéraires | 4 | w-14 c. 8 Ce5, w-24 c. 15 De2, w-24 c. 12 Fb3 (le fou attaqué par un cavalier recule : 1c ne le produit pas car la valeur est égale), w-19 c. 12 d5 (gagner de l'espace quand je suis mieux développé) |
-| **Je suis largement gagnant : la technique** — pousser le pion passé, le soutenir, un coup d'attente qui ne gâche rien | 4 | w-20 c. 28 a4, w-26 c. 32 Cc5 (soutient d6), w-03 c. 27 Fb5 (dame + fou contre rien : aucune question ne produit rien), w-09 c. 35 Td6 |
-| **Une prise que le compte ne valide pas** — le compte dit « défendu », le calcul dit « ça gagne » ; ou l'échange qui profite | 2 | w-10 c. 11 Fxh6, w-09 c. 18 Fxb7 |
-| **Mat en deux avec sacrifice** — 2a ne l'a pas vu : Fxg7+ Txg7 Dh7 mat. Une faute de la recherche de mat courte, pas une branche | 1 | w-08 c. 25 Fxg7+ |
+| **Cibles (3c)** — un pion ou une pièce faible qu'une tour peut attaquer : septième rangée, colonne à doubler, la tour qui n'a pas joué | 5 | w-09 c. 24 Tc7 (a7), w-09 c. 34 Ta2 (a5), w-09 c. 19 Ted1 (doubler), w-09 c. 17 Te1, w-09 c. 35 Td6 (a6, e6) |
+| **Attaque du roi (3d)** — le compte A − D autour de son roi, ma dame, une ligne ouverte ou un pion de roque avancé ; **le sacrifice doit être proposé comme candidat**, sinon le calcul ne le voit jamais | 4 | w-16 c. 16 Df4 (Df6 puis Dg7 mat avec Fh6 : à trois coups, `menace()` ne le voit pas, le compte oui), w-23 c. 10 Ch5 (le crochet h6 de la Française : Ch5, Fxh6, Dg4), w-17 c. 20 c6 (le levier contre son roi en c8), w-08 c. 25 Fxg7+ (combinaison ; **pas** un mat en deux : après Fxg7+ Txg7 Dh7+, Rxh7 est légal — vérifié) |
+| **Technique du camp largement gagnant (3a finale / 3e)** — pousser le pion passé, le soutenir, un coup d'attente qui ne gâche rien | 4 | w-20 c. 28 a4, w-26 c. 32 Cc5 (soutient d6), w-03 c. 27 Fb5 (dame + fou contre rien : aucune question ne produit), w-09 c. 35 Td6 |
+| **L'échange : le faire ou le refuser (3b, « quelle pièce échanger »)** — garder mes bonnes pièces, casser son roque, ouvrir une case | 3 | w-24 c. 12 Fb3 (le fou recule devant Cxd5 : garder la paire, couvrir c2), w-09 c. 18 Fxb7 (ouvre b7 et d7), w-10 c. 11 Fxh6 (casse son roque : le compte dit « égal », la raison est la structure du roi) |
+| **« Et si je jouais deux fois ? »** — le coup qui prépare une menace à un coup (fourchette, échec gagnant) ; 1f tourné vers moi, `menace()` existe déjà | 2 | w-18 c. 8 Cb5 (menace Cxc7+, vérifié), w-08 c. 24 Fh6 (sur g7, avec Te7 et De4) |
+| **Améliorer une pièce vers une case forte (3P étendu)** — pas seulement « ma pire pièce » : la dame qui quitte la première rangée, le cavalier qui gagne l'avant-poste ; `maneuvers.mjs` fait déjà les itinéraires | 2 | w-14 c. 8 Ce5, w-24 c. 15 De2 |
+| **La conduite (3e, « avantage dynamique : agir »)** — mieux développé, j'ouvre | 1 | w-19 c. 12 d5 |
 
-Les **3 coups sans aucun candidat** (étape « — ») sont dans les deux familles « technique » et « améliorer » : la
-règle à ajouter est que l'arbre propose **toujours** au moins un coup d'amélioration ou d'attente (la demande de Sébastien :
-« soit on enrichit l'arbre, soit on joue des coups neutres, des coups d'attente »).
+Les **3 coups sans aucun candidat** (étape « — ») sont dans « technique » et « conduite » : la règle à ajouter est que
+l'arbre propose **toujours** au moins un coup d'amélioration ou d'attente (la demande de Sébastien : « soit on enrichit
+l'arbre, soit on joue des coups neutres, des coups d'attente »).
+
+Corrections de l'Expert retenues telles quelles : Df4, Ch5, c6 et Fxg7+ sont de l'attaque du roi et non « deux fois »
+(la menace est à trois coups, ou c'est une combinaison) ; Fb3, Fxb7, Fxh6 sont des échanges (faits ou refusés), la famille
+« prise non validée » disparaît ; d5 est la conduite ; Td6 n'est compté qu'une fois ; **le « mat en deux avec sacrifice »
+était une erreur du pilote**, il n'y a pas de faute de 2a à corriger.
 
 ## Ce que je propose, dans l'ordre
 
 1. **Le plafond** (54 trous, 8,9 %) : deux parades par famille au-delà de six, plafond 4 quand l'étape 1 est vide.
-   Remesure sur les 605 positions (80 min, un fil).
-2. **Les 9 « pas reconnu avant »** et le mat en deux avec sacrifice : corrections dans les questions existantes.
-3. **Deux branches nouvelles** d'abord, celles qui bouchent le plus : « et si je jouais deux fois ? » (5) et les cibles (5) ;
-   puis « améliorer une pièce » étendu à la dame et aux tours, avec « toujours un coup d'amélioration » (4 + les 3 vides) ;
-   puis la technique du camp gagnant (4).
-4. Après chaque branche, le taux recalculé sur les mêmes 605 positions.
+   Remesure sur les 605 positions (80 min, un fil) **avant tout le reste** : sinon les autres chiffres sont faux.
+2. **Les 9 « pas reconnu avant »** : corrections dans les questions existantes, sans doctrine nouvelle.
+3. **« Toujours un coup d'amélioration »** tout de suite : presque gratuit, bouche les 3 vides.
+4. **L'attaque du roi (3d)** : 4 trous, demandée par le GE, et sans elle le coach reste « un défenseur qui améliore ».
+   Le sacrifice sur le roi doit être proposé comme candidat.
+5. Puis **les cibles** (5), **l'échange** (3), **« deux fois »** (2), **la technique** (4), **la conduite** (1).
+6. Après chaque branche, le taux recalculé sur les mêmes 605 positions.
 
 Ce qui ne bouge pas : l'arbre produit, le calcul départage ; une branche = une question = une fonction qui rend
 `{coup, raison, noeud}` ; tests hors ligne sur une position où elle produit et une où elle ne produit pas.
