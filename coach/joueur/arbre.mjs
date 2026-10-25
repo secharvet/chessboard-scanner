@@ -565,10 +565,17 @@ function ouvreUnePiece(fen, m, camp) {
   for (const p of m0.pieces) { if (p.color !== camp || (p.type !== 'n' && p.type !== 'b') || p.rank !== rangHome) continue; const p1 = m1.at[p.square]; if (p1 && p1.color === camp && p1.type === p.type && m1.mobility(p1) > m0.mobility(p)) return true; }
   return false;
 }
-/** c) le pion chasse une pièce : il attaque une pièce adverse (hors pion/roi) qu'aucun de mes pions n'attaquait. */
-function chasseUnePiece(fen, m, camp) {
+/** c) le pion chasse OU empêche une pièce : il attaque une pièce adverse (hors pion/roi) posée là, OU il garde une case
+ *  d'intrusion de MON camp où une mineure adverse POURRAIT venir (…Fg4, …Bb4) — qu'aucun de mes pions ne gardait déjà. */
+function chasseOuEmpeche(fen, m, camp) {
   const tf = m.to.charCodeAt(0) - 97, tr = Number(m.to[1]), adv = other(camp), m0 = buildAttackMap(fen), m1 = buildAttackMap(apres(fen, m));
-  for (const s of attaquesPion(tf, tr, camp)) { const q = m1.at[s]; if (q && q.color === adv && q.type !== 'p' && q.type !== 'k') { if (!m0.pieces.some((x) => x.color === camp && x.type === 'p' && attaquesPion(x.fileIdx, x.rank, camp).includes(s))) return true; } }
+  const maMoitie = camp === 'w' ? (r) => r <= 5 : (r) => r >= 4; // une intrusion dans mon camp (jusqu'à la 5e rangée)
+  for (const s of attaquesPion(tf, tr, camp)) {
+    if (m0.pieces.some((x) => x.color === camp && x.type === 'p' && attaquesPion(x.fileIdx, x.rank, camp).includes(s))) continue; // déjà gardée
+    const q = m1.at[s];
+    if (q && q.color === adv && q.type !== 'p' && q.type !== 'k') return true; // chasser : une pièce adverse est dessus
+    if (!q && maMoitie(Number(s[1])) && m0.attackersOf(s, adv).some((p) => p.type === 'b' || p.type === 'n')) return true; // empêcher : une mineure adverse pourrait y venir
+  }
   return false;
 }
 /** d) espace ou levier : un contact de pions nouveau, ou plus de cases contrôlées dans son camp. */
@@ -585,23 +592,26 @@ function abriDuRoi(fen, m, camp) {
   const fuites = (mp) => { const r = mp.pieces.find((p) => p.type === 'k' && p.color === camp); let n = 0; for (let df = -1; df <= 1; df++) for (let dr = -1; dr <= 1; dr++) { if (!df && !dr) continue; const f = r.fileIdx + df, rk = r.rank + dr; if (f < 0 || f > 7 || rk < 1 || rk > 8) continue; const s = caseNom(f, rk); if (mp.at[s] && mp.at[s].color === camp) continue; if (mp.attackersOf(s, other(camp)).length) continue; n++; } return n; };
   return fuites(m1) > fuites(m0);
 }
-// A. Le coup de pion d'ouverture (3p) : cinq raisons, de la plus haute à la plus basse, chacune vérifiable.
+// A. Le coup de pion (3p) : cinq raisons, de la plus haute à la plus basse, chacune vérifiable. `milieu` = la raison vaut
+// aussi en milieu de partie (chasser/empêcher et espace/levier continuent ; le centre, l'ouverture et l'abri sont d'ouverture).
 const RAISONS_PION = [
   { cle: 'centre', raison: 'je prends le centre', verifie: (fen, m, camp) => forceCentre(apres(fen, m), camp) > forceCentre(fen, camp) },
   { cle: 'ouvrir', raison: 'j\'ouvre une pièce', verifie: ouvreUnePiece },
-  { cle: 'chasser', raison: 'je chasse sa pièce', verifie: chasseUnePiece },
-  { cle: 'espace', raison: 'je gagne de l\'espace', verifie: espaceOuLevier },
+  { cle: 'chasser', raison: 'je chasse ou j\'empêche sa pièce', verifie: chasseOuEmpeche, milieu: true },
+  { cle: 'espace', raison: 'je gagne de l\'espace', verifie: espaceOuLevier, milieu: true },
   { cle: 'abri', raison: 'j\'abrite mon roi', verifie: abriDuRoi },
 ];
 
-/** A — « coup de pion d'ouverture » (3p) : un coup de pion nommé par la plus haute des cinq raisons qui se vérifie ; aucune → sans nom. */
+/** A — « coup de pion » (3p) : un coup de pion nommé par la plus haute des cinq raisons qui se vérifie ; aucune → sans nom.
+ *  Centre / ouvrir / abri : ouverture seulement ; chasser-empêcher et espace-levier continuent en milieu de partie (correction du lot 2). */
 export function coupDePionOuverture({ fen, camp }) {
-  if (Number(fen.split(' ')[5] ?? 1) > 20) return []; // le coup de pion « d'ouverture » : l'ouverture (la raison d) continue en milieu, mais ce nœud cible l'ouverture
-  const out = [];
+  const coup = Number(fen.split(' ')[5] ?? 1), out = [];
   for (const m of coupsLegaux(fen)) {
-    if (m.piece !== 'p') continue;
-    const map2 = buildAttackMap(apres(fen, m)); if (gainEchange(map2, m.to, camp) > 0) continue; // ne pas jeter le pion
-    for (const R of RAISONS_PION) { if (R.verifie(fen, m, camp)) { out.push({ coup: uciDe(m), raison: R.raison, noeud: '3p', famille: R.cle }); break; } }
+    if (m.piece !== 'p' || m.captured) continue; // une POUSSÉE de pion (les prises de pion = la tension, 3t) ; pas de filtre « en prise » (on nomme un levier/gambit déjà joué)
+    for (const R of RAISONS_PION) {
+      if (!R.milieu && coup > 15) continue; // le centre, l'ouverture, l'abri : d'ouverture
+      if (R.verifie(fen, m, camp)) { out.push({ coup: uciDe(m), raison: R.raison, noeud: '3p', famille: R.cle }); break; }
+    }
   }
   return out;
 }
@@ -655,12 +665,104 @@ export function surprotection({ fen, camp }) {
   return out;
 }
 
+/* ---- lot 2 : tension (3t), cibles pour les tours (3u), pièce vers une meilleure case (3m), le roi (3k), l'échange (3e) ---- */
+
+/** B3 — la tension : une PRISE de pion par un pion résout une tension (le contact disparaît, une colonne/case s'ouvre). */
+function resoutTension(fen, m) {
+  return m.piece === 'p' && m.captured === 'p'; // un pion prend un pion : la paire en contact disparaît, ma colonne de départ s'ouvre
+}
+
+/** C — cibles pour les tours (3u) : la tour va sur une colonne ouverte/semi-ouverte, double, atteint la 7e, ou vise un pion faible. Rend la raison ou null. */
+function cibleTour(fen, m, camp) {
+  if (m.piece !== 'r') return null;
+  const adv = other(camp), m1 = buildAttackMap(apres(fen, m)), tf = m.to.charCodeAt(0) - 97, tr = Number(m.to[1]);
+  if (tr === (camp === 'w' ? 7 : 2)) return 'ma tour sur la septième'; // la 7e (sa 2e)
+  const colonne = (col, coul) => m1.pieces.some((p) => p.type === 'p' && p.color === coul && p.fileIdx === col);
+  const mienP = colonne(tf, camp), sienP = colonne(tf, adv);
+  if (!mienP) {
+    const bougee = m1.at[m.to], double = m1.pieces.some((p) => p.color === camp && (p.type === 'r' || p.type === 'q') && p.fileIdx === tf && p.square !== m.to);
+    if (!sienP) return double ? 'je double sur la colonne ouverte' : 'ma tour sur la colonne ouverte';
+    if (double || sienP) return 'ma tour sur la colonne semi-ouverte'; // pas de mon pion sur la colonne : semi-ouverte pour moi
+  }
+  const bougee = m1.at[m.to]; // la tour vise-t-elle un pion adverse non défendu par un pion ?
+  for (const s of (m1.attacks.get(bougee) ?? [])) { const q = m1.at[s]; if (q && q.color === adv && q.type === 'p' && !m1.pieces.some((p) => p.type === 'p' && p.color === adv && attaquesPion(p.fileIdx, p.rank, adv).includes(s))) return `ma tour vise son pion en ${s}`; }
+  return null;
+}
+
+/** (5) 3m — dame, fou ou cavalier vers une MEILLEURE case : la mobilité de la pièce augmente nettement (ou elle gagne un avant-poste), sans se jeter. */
+function versMieux(fen, m, camp) {
+  if (m.piece !== 'q' && m.piece !== 'b' && m.piece !== 'n') return false;
+  const m0 = buildAttackMap(fen), m1 = buildAttackMap(apres(fen, m));
+  const avant = m0.at[m.from], apresP = m1.at[m.to];
+  if (!avant || !apresP || gainEchange(m1, m.to, camp) > 0) return false; // ne pas se jeter
+  if (m1.mobility(apresP) - m0.mobility(avant) >= 2) return true; // nettement plus active
+  // avant-poste pour un cavalier/fou : case défendue par un de mes pions et inattaquable par un pion adverse
+  if ((m.piece === 'n' || m.piece === 'b')
+    && m1.pieces.some((p) => p.type === 'p' && p.color === camp && attaquesPion(p.fileIdx, p.rank, camp).includes(m.to))
+    && !m1.pieces.some((p) => p.type === 'p' && p.color === other(camp) && attaquesPion(p.fileIdx, p.rank, other(camp)).includes(m.to))) return true;
+  return false;
+}
+
+/** B4 — le roi (3k) : case de fuite/sortie (milieu) ou roi actif (finale : il se rapproche du pion le plus proche, ou gagne des cases). Rend la raison ou null. */
+function roiFuiteActif(fen, m, camp) {
+  if (m.piece !== 'k' || m.captured) return null;
+  const m0 = buildAttackMap(fen), m1 = buildAttackMap(apres(fen, m));
+  const lourdes = m0.pieces.filter((p) => p.type === 'q' || p.type === 'r').length;
+  const fuites = (mp) => { const r = mp.pieces.find((p) => p.type === 'k' && p.color === camp); let n = 0; for (let df = -1; df <= 1; df++) for (let dr = -1; dr <= 1; dr++) { if (!df && !dr) continue; const f = r.fileIdx + df, rk = r.rank + dr; if (f < 0 || f > 7 || rk < 1 || rk > 8) continue; const s = caseNom(f, rk); if (mp.at[s] && mp.at[s].color === camp) continue; if (mp.attackersOf(s, other(camp)).length) continue; n++; } return n; };
+  if (lourdes <= 3) { // finale : roi actif
+    const roi0 = m0.pieces.find((p) => p.type === 'k' && p.color === camp), roi1 = m1.pieces.find((p) => p.type === 'k' && p.color === camp);
+    const dist = (r, mp) => { let d = 99; for (const p of mp.pieces) if (p.type === 'p') d = Math.min(d, Math.max(Math.abs(p.fileIdx - r.fileIdx), Math.abs(p.rank - r.rank))); return d; };
+    if (dist(roi1, m1) < dist(roi0, m0)) return 'mon roi se rapproche des pions'; // se rapproche d'un pion (le sien ou le mien)
+    if (m1.mobility(roi1) > m0.mobility(roi0)) return 'mon roi s\'active';
+    return null;
+  }
+  return fuites(m1) > fuites(m0) ? 'je donne une case de fuite à mon roi' : null; // milieu : luft / sortie du clou
+}
+
+/** C — l'échange de pièces (3e) : une prise d'une PIÈCE (ni pion ni roi) à l'équilibre matériel (ce n'est pas un gain = pas 2b). */
+function estEchange(fen, m, camp) {
+  if (!m.captured || m.captured === 'p' || m.piece === 'p') return false; // une pièce prend une pièce
+  const m1 = buildAttackMap(apres(fen, m));
+  return gainEchange(m1, m.to, camp) <= 0 && VAL[m.captured] <= VAL[m.piece] + 1; // pas un gain net, échange à peu près égal
+}
+
+export function cibleTours({ fen, camp }) {
+  const out = [];
+  for (const m of coupsLegaux(fen)) { const r = cibleTour(fen, m, camp); if (r) out.push({ coup: uciDe(m), raison: r, noeud: '3u', famille: 'tour' }); }
+  return out;
+}
+export function tension({ fen, camp }) {
+  const out = [];
+  for (const m of coupsLegaux(fen)) if (resoutTension(fen, m)) out.push({ coup: uciDe(m), raison: `je résous la tension en ${m.to}`, noeud: '3t', famille: 'resout' });
+  return out;
+}
+export function pieceVersMieux({ fen, camp }) {
+  const out = [];
+  for (const m of coupsLegaux(fen)) if (versMieux(fen, m, camp)) out.push({ coup: uciDe(m), raison: `j'active ${maPiece(m.piece)} en ${m.to}`, noeud: '3m', famille: 'active' });
+  return out;
+}
+export function roiBranche({ fen, camp }) {
+  const out = [];
+  for (const m of coupsLegaux(fen)) { const r = roiFuiteActif(fen, m, camp); if (r) out.push({ coup: uciDe(m), raison: r, noeud: '3k', famille: 'roi' }); }
+  return out;
+}
+export function echange({ fen, camp }) {
+  const out = [];
+  for (const m of coupsLegaux(fen)) if (estEchange(fen, m, camp)) out.push({ coup: uciDe(m), raison: `j'échange en ${m.to}`, noeud: '3e', famille: 'echange' });
+  return out;
+}
+
 /** Le vérificateur d'un nœud « fermer l'arbre » (repose la question du nœud sur l'échiquier). Pour le champ `verifie` du nommage. */
 export function verifieBranche(noeud, famille, fen, uci, camp) {
   const m = coupsLegaux(fen).find((x) => uciDe(x) === uci); if (!m) return false;
-  if (noeud === '3p') { const R = RAISONS_PION.find((r) => r.cle === famille); return R ? !!R.verifie(fen, m, camp) : false; }
+  if (noeud === '3p') { const R = RAISONS_PION.find((r) => r.cle === famille); return R && (R.milieu || Number(fen.split(' ')[5] ?? 1) <= 15) ? !!R.verifie(fen, m, camp) : false; }
   if (noeud === '3r') return m.piece !== 'p' && m.piece !== 'k' && !m.captured && caseUtileApres(fen, m, camp);
   if (noeud === '3s') return !m.captured && pointSurprotege(fen, m, camp) !== null;
+  if (noeud === '3t') return resoutTension(fen, m);
+  if (noeud === '3u') return cibleTour(fen, m, camp) !== null;
+  if (noeud === '3m') return versMieux(fen, m, camp);
+  if (noeud === '3k') return roiFuiteActif(fen, m, camp) !== null;
+  if (noeud === '3e') return estEchange(fen, m, camp);
   return true;
 }
 
@@ -674,13 +776,14 @@ export function etape3(ctx) {
  * TABLE § 6 : « le joueur du site reste tel quel »). D'où un lot à part, ajouté par `candidatsEtAllumes({ fermeture: true })`.
  */
 export function fermeture(ctx) {
-  return [...coupDePionOuverture(ctx), ...pieceQuiCede(ctx), ...surprotection(ctx)];
+  return [...coupDePionOuverture(ctx), ...pieceQuiCede(ctx), ...surprotection(ctx),
+    ...tension(ctx), ...cibleTours(ctx), ...pieceVersMieux(ctx), ...roiBranche(ctx), ...echange(ctx)];
 }
 
 /* ====================================================================== assemblage ====================================================================== */
 
 /** L'ORDRE de l'arbre : un coup produit par plusieurs nœuds garde le nœud le plus HAUT (sa raison), toutes raisons retenues. */
-export const ORDRE = ['1a', '1b', '1c', '1d', '1e', '1f', '2a', '2b', '2c', '2d', '2e', '2f', '3L', '3D', '3C', '3d', '3P', '3Y', '3p', '3r', '3s', '3A'];
+export const ORDRE = ['1a', '1b', '1c', '1d', '1e', '1f', '2a', '2b', '2c', '2d', '2e', '2f', '3L', '3D', '3C', '3d', '3u', '3t', '3e', '3P', '3m', '3Y', '3k', '3p', '3r', '3s', '3A'];
 
 /**
  * Produit les candidats de l'arbre (étapes 1, 2, 3 réduite) ET la table « quand allumé » (chaque nœud → les coups qu'il

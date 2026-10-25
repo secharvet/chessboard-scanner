@@ -39,6 +39,7 @@ export const MOT_NOEUD = {
   '2c': 'un coup intermédiaire', '2d': 'une double attaque', '2e': 'une tactique', '3L': 'le livre',
   '3D': 'je développe', '3P': 'ma pire pièce', '3Y': 'la prophylaxie', '3C': 'mon plan',
   '3p': 'un coup de pion', '3r': 'je cède une case utile', '3s': 'je surprotège',
+  '3t': 'la tension', '3u': 'cibles pour mes tours', '3m': 'j\'active une pièce', '3k': 'mon roi', '3e': 'un échange',
 };
 
 /* Gabarits de l'étape 6, dans gabarits-parole.json section « arbre » (relus par l'Expert) : le gain et la perte NOMMÉS par

@@ -18,9 +18,10 @@ export const MOT_NOEUD = {
   '1a': 'je suis en échec', '1b': 'il menace mat', '1c': 'ma pièce en prise', '1d': 'mat du couloir', '1e': 'je suis cloué', '1f': 'il me menace',
   '2a': 'je mate', '2b': 'je gagne', '2c': 'avant de reprendre', '2d': 'double attaque', '2e': 'tactique', '2f': 'je menace',
   '3L': 'théorie', '3D': 'je développe', '3P': 'ma pire pièce', '3Y': 'je l\'empêche', '3C': 'mon plan',
-  '3d': 'j\'attaque son roi', '3p': 'coup de pion', '3r': 'je cède une case', '3s': 'je surprotège', '3A': 'j\'améliore',
+  '3d': 'j\'attaque son roi', '3p': 'coup de pion', '3r': 'je cède une case', '3s': 'je surprotège',
+  '3t': 'la tension', '3u': 'cible de tour', '3m': 'j\'active', '3k': 'mon roi', '3e': 'j\'échange', '3A': 'j\'améliore',
 };
-const COUL_NOEUD = { 1: '#c17d11', 2: '#a40000', '3L': '#5c3566', '3D': '#4e9a06', '3P': '#4e9a06', '3Y': '#3465a4', '3C': '#4e9a06', '3d': '#a40000', '3p': '#4e9a06', '3r': '#3465a4', '3s': '#3465a4', '3A': '#3465a4' };
+const COUL_NOEUD = { 1: '#c17d11', 2: '#a40000', '3L': '#5c3566', '3D': '#4e9a06', '3P': '#4e9a06', '3Y': '#3465a4', '3C': '#4e9a06', '3d': '#a40000', '3p': '#4e9a06', '3r': '#3465a4', '3s': '#3465a4', '3t': '#4e9a06', '3u': '#4e9a06', '3m': '#4e9a06', '3k': '#c17d11', '3e': '#4e9a06', '3A': '#3465a4' };
 /** Le type de pièce (minuscule) sur une case d'une FEN, ou null. */
 function pieceDe(fen, sq) {
   if (!fen || !sq) return null;
@@ -50,6 +51,11 @@ export function pastilleDe(c) {
   else if (n === '3A') libelle = /pion passé/.test(c.raison || '') ? 'mon pion passé' : /j'attends/.test(c.raison || '') ? 'j\'attends' : (m = (c.raison || '').match(/j'améliore (ma|mon) (\w+)/)) ? `j'améliore ${m[1]} ${m[2]}` : 'j\'améliore';
   else if (n === '3p') libelle = c.raison || 'coup de pion'; // la raison dit déjà la plus haute des cinq (centre, ouvre, chasse, espace, abri)
   else if (n === '3s' && (m = (c.raison || '').match(/surprotège (\w\d)/))) libelle = `je surprotège ${m[1]}`;
+  else if (n === '3u') libelle = c.raison || 'cible de tour'; // colonne ouverte/semi, septième, pion visé
+  else if (n === '3t') libelle = 'je résous la tension';
+  else if (n === '3m' && (m = (c.raison || '').match(/j'active (ma|mon) (\w+)/))) libelle = `j'active ${m[1]} ${m[2]}`;
+  else if (n === '3k') libelle = c.raison || 'mon roi';
+  else if (n === '3e') libelle = 'j\'échange';
   return { libelle, couleur };
 }
 
