@@ -300,12 +300,17 @@ export class Joueur {
   #mesMenaces(fenAvant, camp, { budget = Math.min(Math.trunc(this.budget / 12), 40000), menacantsSeuls = false } = {}) {
     const out = [];
     const map0 = menacantsSeuls ? buildAttackMap(fenAvant) : null;
-    for (const mv of new Chess(fenAvant).moves({ verbose: true })) {
-      if (menacantsSeuls && !this.#estMenacant(fenAvant, mv, camp, map0)) continue; // ne sonder que les coups qui PEUVENT menacer
+    const profMax = menacantsSeuls ? 3 : 4; // rapide : profondeur 3 pour tenir les ~2 000 positions (la recherche finit son palier)
+    let aSonder = new Chess(fenAvant).moves({ verbose: true });
+    if (menacantsSeuls) { // ne sonder que les coups qui PEUVENT menacer, et au plus les 10 plus prometteurs (directive : 5 à 10)
+      aSonder = aSonder.map((mv) => ({ mv, prio: this.#estMenacant(fenAvant, mv, camp, map0) })).filter((x) => x.prio > 0)
+        .sort((a, b) => b.prio - a.prio).slice(0, 10).map((x) => x.mv);
+    }
+    for (const mv of aSonder) {
       const uciM = mv.from + mv.to + (mv.promotion ?? '');
       const fenM = fenApresUci(fenAvant, [uciM]);
       const echM = new Echiquier(fenM);
-      const mn = this.recherche.menace(echM, { budget, profondeurMax: 4 }); // mon meilleur coup s'il passe
+      const mn = this.recherche.menace(echM, { budget, profondeurMax: profMax }); // mon meilleur coup s'il passe
       if (!mn) continue;
       const estMat = mn.score >= MAT - 200;
       const echN = new Echiquier(fenM); echN.jouerNul(); const fenMN = echN.fen(); // à moi de jouer (il a passé)
@@ -330,31 +335,35 @@ export class Joueur {
   }
 
   /**
-   * Un coup PEUT-il être une VRAIE menace (filtre bon marché du mode rapide, aucune recherche complète) ? « Attaqué de
-   * plus » au sens large laisserait passer la moitié des coups du milieu de jeu (presque tout coup ajoute un attaquant sur
-   * une pièce adverse) ; on exige donc une menace RÉELLE, comme la sonde qui suit (gain au coup nul ou mat) :
+   * Un coup PEUT-il être une VRAIE menace, et avec quelle PRIORITÉ (0 = non menaçant) ? Filtre bon marché du mode rapide,
+   * aucune recherche complète. « Attaqué de plus » au sens large laisserait passer la moitié des coups du milieu de jeu ;
+   * on exige une menace RÉELLE, comme la sonde qui suit (gain au coup nul ou mat), et on classe par promesse pour ne
+   * sonder que les plus prometteurs :
    *  - prise ou échec (toujours à vérifier) ;
    *  - après le coup, une pièce adverse devient GAGNABLE (mini-échange favorable) et ne l'était pas avant — un gain créé ;
-   *  - après le coup, s'il passe (coup nul), j'ai un mat en 1 par un échec — une menace de mat (Te1 → Cd6#, Fc2 → Dh7#…).
-   * Reste bon marché (statique + un mat en 1 par les échecs) ; la sonde de 2 000 confirme ensuite la menace réelle.
+   *  - après le coup, s'il passe (coup nul), j'ai un mat en 1 par un échec — une menace de mat (Te1 → Cd6#, Fc2 → Dh7#…),
+   *    priorité maximale (une menace de mat prime sur un gain) pour ne jamais être écartée par le plafond de sondes.
+   * Le mat en 1 par les échecs est bon marché (mes seuls échecs testés) ; la sonde de 2 000 confirme la menace réelle.
    */
   #estMenacant(fenAvant, mv, camp, map0 = buildAttackMap(fenAvant)) {
-    if (mv.captured) return true;
     const uciM = mv.from + mv.to + (mv.promotion ?? '');
     const fenM = fenApresUci(fenAvant, [uciM]);
-    if (new Chess(fenM).inCheck()) return true; // échec
+    let prio = 0;
+    if (mv.captured) prio = Math.max(prio, 2 + VAL[mv.captured]); // prise : la valeur prise
+    if (new Chess(fenM).inCheck()) prio = Math.max(prio, 5); // échec
     const map1 = buildAttackMap(fenM);
-    // (a) une pièce adverse qui devient gagnable (mini-échange) et ne l'était pas avant mon coup : un gain créé. gainEchange
-    //     prend le PROPRIÉTAIRE de la pièce (ici l'adverse) et rend ce que SON adversaire — moi — gagne en ouvrant les prises.
+    // un gain CRÉÉ : une pièce adverse devient gagnable (mini-échange) et ne l'était pas avant. gainEchange prend le
+    // PROPRIÉTAIRE de la pièce (l'adverse) et rend ce que moi je gagne en ouvrant les prises.
     for (const p of map1.pieces) {
       if (p.color !== other(camp) || p.type === 'k') continue;
       const avant = map0.at[p.square] && map0.at[p.square].color === p.color ? gainEchange(map0, p.square, p.color) : 0;
-      if (gainEchange(map1, p.square, p.color) > 0 && avant <= 0) return true;
+      const ap = gainEchange(map1, p.square, p.color);
+      if (ap > 0 && avant <= 0) prio = Math.max(prio, 3 + ap);
     }
-    // (b) menace de mat : s'il passe (coup nul), ai-je un mat en 1 par un échec ?
+    // menace de mat : s'il passe (coup nul), ai-je un mat en 1 par un échec ? Priorité maximale.
     const fenNul = fenM.replace(/ (w|b) /, ` ${camp} `);
-    try { if (this.#matParEchecs(fenNul, 1)) return true; } catch { /* position inhabituelle après le retournement du trait : on laisse */ }
-    return false;
+    try { if (this.#matParEchecs(fenNul, 1)) prio = Math.max(prio, 20); } catch { /* position inhabituelle après le retournement du trait : on laisse */ }
+    return prio;
   }
 
   /** Parade par test (1b, 1f) : après mon coup, sa ligne menaçante ne gagne-t-elle plus (ni ne mate) ? */
