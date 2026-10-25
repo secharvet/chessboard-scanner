@@ -36,6 +36,7 @@ function pieceDe(fen, sq) {
 export function pastilleDe(c) {
   if (!estArbre(c)) return PASTILLE_SORTE[c.sorte] ?? { libelle: c.sorte, couleur: '#555' };
   if (c.trou || c.noeud == null) return { libelle: 'calcul', couleur: '#555' };
+  if (c.reprise) return { libelle: 'je reprends', couleur: '#a40000' }; // une reprise, quel que soit le nœud qui l'a produite
   const n = c.noeud, couleur = COUL_NOEUD[n] ?? COUL_NOEUD[n[0]] ?? '#555';
   let libelle = MOT_NOEUD[n] ?? n, m;
   if (n === '2b' && c.gain) libelle = `je gagne ${c.gain}`; // le gain nommé

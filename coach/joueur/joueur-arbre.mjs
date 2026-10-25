@@ -155,14 +155,18 @@ export class Joueur {
     const survivantSuivant = ordre.find((c) => c.coup !== M.coup) ?? null;
     const elagueBest = [...elagues].sort((a, b) => b.cp - a.cp)[0] ?? null;
 
+    // reprise : le coup choisi prend la pièce qui vient de prendre (même case) — son matériel se compte contre la position
+    // d'AVANT sa prise, donc ce n'est pas un gain. On le dit « je reprends en … ».
+    const reprise = this.#reprise(depart, historique, fenAvant, M.coup);
+
     // --- étape 6 : la parole ---
-    const { phrase, ecarte, alerte: alerteP } = this.#dire(M, survivantSuivant, elagueBest, ply, fenAvant, camp);
+    const { phrase, ecarte, alerte: alerteP } = this.#dire(M, survivantSuivant, elagueBest, ply, fenAvant, camp, reprise);
     if (alerteP && !alerte) alerte = alerteP;
 
     const san = sanDe(fenAvant, M.coup);
     const rec = {
       ply, camp, san, uci: M.coup, fenAvant, coach: true,
-      noeud: M.noeud, sorte: M.noeud ?? 'trou', raison: M.raison, gain: M.gain ?? null,
+      noeud: M.noeud, sorte: M.noeud ?? 'trou', raison: M.raison, gain: reprise ? null : (M.gain ?? null), reprise: !!reprise,
       score: M.cp, evalAvant: E0, ligne: M.ligne, profondeur: res.profondeur, noeuds: res.noeuds,
       candidats: evalues.map((c) => ({ san: sanDe(fenAvant, c.coup), coup: c.coup, noeud: c.noeud, raison: c.raison, score: c.cp, ligne: c.ligne })),
       choisi: M.coup, ecarte, trou,
@@ -239,14 +243,31 @@ export class Joueur {
    * plus (le meilleur élagué, sa réfutation se lit) « j'ai pensé à X, mais … » au conditionnel ; sinon, si un autre coup
    * se valait (< 10), « X ou Y : les deux se valent ». Rend aussi l'« écarté » du fichier de partie (le coup verbalisé).
    */
-  #dire(M, survivantSuivant, elagueBest, ply, fenAvant, camp) {
+  /** Le coup `uci` reprend-il la pièce qui vient de prendre (même case) ? Rend { case } ou null. */
+  #reprise(depart, historique, fenAvant, uci) {
+    if (!historique.length) return null;
+    const dernier = historique[historique.length - 1];
+    const avant = new Chess(depart);
+    try { for (const u of historique.slice(0, -1)) avant.move({ from: u.slice(0, 2), to: u.slice(2, 4), promotion: u[4] }); } catch { return null; }
+    let mvDer; try { mvDer = avant.move({ from: dernier.slice(0, 2), to: dernier.slice(2, 4), promotion: dernier[4] }); } catch { return null; }
+    if (!mvDer?.captured || uci.slice(2, 4) !== dernier.slice(2, 4)) return null; // il n'a pas pris, ou je ne reprends pas sur sa case
+    let mvM; try { mvM = new Chess(fenAvant).move({ from: uci.slice(0, 2), to: uci.slice(2, 4), promotion: uci[4] }); } catch { return null; }
+    return mvM?.captured ? { case: dernier.slice(2, 4) } : null;
+  }
+
+  #dire(M, survivantSuivant, elagueBest, ply, fenAvant, camp, reprise) {
     const sanM = sanDe(fenAvant, M.coup);
     if (M.trou) return { phrase: remplir(PAROLE.trou, { M: sanM, gain: M.gain ? ` Je gagne ${M.gain}.` : '' }).replace(/\s+/g, ' ').trim(), ecarte: null, alerte: null };
-    // (défaut 1) le gain de M nommé par composition : « je gagne une pièce » ; si la ligne ne garde pas de gain net (bilan
-    // nul au bout, par ex. une compensation adverse), on retire la vantardise « et je gagne du matériel » au lieu de la laisser.
-    let mainRaison = M.raison || MOT_NOEUD[M.noeud] || 'je joue ce coup';
-    if (/gagne du matériel/.test(mainRaison)) mainRaison = M.gain ? mainRaison.replace('du matériel', M.gain) : mainRaison.replace(/ et je gagne du matériel/, '');
-    const gainDit = !!M.gain && /gagne/.test(mainRaison); // la première phrase a déjà dit le gain de M → on omet « rien de tel »
+    // reprise : le matériel se compte contre la position d'avant sa prise → ce n'est pas un gain, on dit « je reprends ».
+    let mainRaison, gainDit = false;
+    if (reprise) mainRaison = `je reprends en ${reprise.case}`;
+    else {
+      // (défaut 1) le gain de M nommé par composition : « je gagne une pièce » ; si la ligne ne garde pas de gain net, on
+      // retire la vantardise « et je gagne du matériel » au lieu de la laisser.
+      mainRaison = M.raison || MOT_NOEUD[M.noeud] || 'je joue ce coup';
+      if (/gagne du matériel/.test(mainRaison)) mainRaison = M.gain ? mainRaison.replace('du matériel', M.gain) : mainRaison.replace(/ et je gagne du matériel/, '');
+      gainDit = !!M.gain && /gagne/.test(mainRaison); // la première phrase a déjà dit le gain de M → on omet « rien de tel »
+    }
     const fin = gainDit ? remplir(PAROLE.finEvite, { M: sanM }) : remplir(PAROLE.finRienDeTel, { M: sanM });
     const parties = [cap(mainRaison) + '.'];
     let ecarte = null;
