@@ -55,6 +55,16 @@ test('le gain est NOMMÉ (jamais « du matériel ») et le gain manqué se dit �
   assert.ok(r.ecarte && r.ecarte.manque === 'son cavalier'); // écarté = gain manqué, pas une perte
 });
 
+test('reprise : reprendre la pièce qui vient de prendre se dit « je reprends », jamais « je gagne »', async () => {
+  // 1.e4 d5 2.Cc3 dxe4 ; 3.Cxe4 est une reprise (même case que sa prise), pas un gain.
+  const S = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
+  const r = await neuf({ budget: 100000 }).choisir('rnbqkbnr/ppp1pppp/8/8/4p3/2N5/PPPP1PPP/R1BQKBNR w KQkq - 0 3', { camp: 'w', depart: S, historique: ['e2e4', 'd7d5', 'b1c3', 'd5e4'] });
+  assert.equal(r.uci, 'c3e4');
+  assert.equal(r.reprise, true);
+  assert.equal(r.gain, null);
+  assert.ok(/reprends en e4/.test(r.phrase) && !/je gagne/.test(r.phrase));
+});
+
 test('réfutation lisible : la perte vient de la réponse adverse (vrai) vs d\'un coup à moi non forcé (faux)', () => {
   const fen = 'r3k3/8/8/8/8/8/8/R3K3 w - - 0 1';
   assert.equal(refutationLisible(fen, ['e1e2', 'a8a1'], 'w'), true); // Rxa1 punit tout de suite

@@ -102,6 +102,14 @@ test('2b prise gagnante : produit la prise qui gagne (la plus grosse d\'abord), 
   assert.deepEqual(priseGagnante({ fen: DEPART, camp: 'w' }), []); // aucune prise au départ
 });
 
+test('2b échec qui gagne : un échec à la découverte qui gagne la tour est produit (pas seulement les prises)', () => {
+  // 31.Ce5+ : le cavalier quitte f7, la Tc7 fait échec à la découverte, et le cavalier attaque la Td3 → je gagne la tour.
+  const fen = '8/p1R2Nkp/1p1P1pp1/8/8/P2r4/1P4PP/5RK1 w - - 0 1';
+  const cs = priseGagnante({ fen, camp: 'w' });
+  const c = cs.find((x) => x.coup === 'f7e5');
+  assert.ok(c && c.noeud === '2b' && /découverte.*tour/.test(c.raison));
+});
+
 test('2c coup intermédiaire : produit un échec/une prise avant de reprendre, rien hors reprise', () => {
   // le fou f1 peut donner Fb5+ avant de reprendre le pion e5 avec le cavalier f3.
   const fen = '4k3/8/8/4p3/8/5N2/8/4KB2 w - - 0 1';
@@ -198,6 +206,23 @@ test('candidats : dédoublonne par coup, garde le nœud le plus haut de l\'arbre
   // un coup produit par 2b et 2d garde 2b (plus haut) mais conserve ses deux raisons
   const d1d5 = cs.find((c) => c.coup === 'd1d5');
   assert.ok(d1d5 && d1d5.noeud === '2b');
+});
+
+test('selectionner : radar hors plafond MAIS 1c/1f collapsés par famille au-delà de 6 (une parade par famille)', () => {
+  const radar = [
+    { coup: 'a', noeud: '1c', famille: 'prendre', raisons: [] }, { coup: 'b', noeud: '1c', famille: 'fuir', raisons: [] }, { coup: 'c', noeud: '1c', famille: 'fuir', raisons: [] },
+    { coup: 'd', noeud: '1f', famille: 'fuir', raisons: [] }, { coup: 'e', noeud: '1f', famille: 'fuir', raisons: [] }, { coup: 'f', noeud: '1f', famille: 'defendre', raisons: [] },
+    { coup: 'g', noeud: '1f', famille: 'prendre', raisons: [] }, { coup: 'h', noeud: '1f', famille: 'contre', raisons: [] }, { coup: 'i', noeud: '1f', famille: 'fuir', raisons: [] },
+    { coup: 'j', noeud: '1f', famille: 'defendre', raisons: [] }, { coup: 'k', noeud: '1f', famille: 'fuir', raisons: [] },
+  ]; // 11 parades
+  const sel = selectionner(radar, 3).filter((c) => c.noeud[0] === '1');
+  // 1c : prendre + fuir (2) ; 1f : fuir + defendre + prendre + contre (4) → 6
+  assert.deepEqual(sel.map((c) => c.coup), ['a', 'b', 'd', 'f', 'g', 'h']);
+});
+
+test('selectionner : radar ≤ 6 reste intact (pas de collapse)', () => {
+  const radar = [{ coup: 'a', noeud: '1c', famille: 'fuir', raisons: [] }, { coup: 'b', noeud: '1c', famille: 'fuir', raisons: [] }];
+  assert.deepEqual(selectionner(radar, 3).map((c) => c.coup), ['a', 'b']); // 2 ≤ 6 → gardés tels quels
 });
 
 test('selectionner : radar hors plafond, le reste limité à 3 (une famille d\'abord)', () => {

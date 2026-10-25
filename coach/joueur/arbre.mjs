@@ -72,23 +72,24 @@ export function pieceEnPrise({ fen, camp }) {
   const nom = maPiece(cible.type), out = [];
   for (const m of coupsLegaux(fen)) {
     const u = uciDe(m), map2 = buildAttackMap(apres(fen, m));
-    let raison = null;
+    let raison = null, famille = null;
     if (m.from === cible.square) {
       // la pièce elle-même bouge : fuir, prendre l'attaquant, ou s'échanger (prendre une pièce, même reprise, si le bilan tient)
       const encore = map2.at[m.to];
       const perte = encore && encore.color === camp ? gainEchange(map2, m.to, camp) : VAL[cible.type];
       const gagne = m.captured ? VAL[m.captured] : 0;
       if (gagne - perte < 0) continue; // fuite vers une case en prise, ou échange perdant
-      if (attaquants.includes(m.to)) raison = `je prends ${saPiece(m.captured)} qui attaquait ${nom}`;
-      else if (m.captured) raison = `${nom} est attaqué : je l'échange contre ${saPiece(m.captured)}`;
-      else raison = `je mets ${nom} à l'abri en ${m.to}`;
+      if (attaquants.includes(m.to)) { raison = `je prends ${saPiece(m.captured)} qui attaquait ${nom}`; famille = 'prendre'; }
+      else if (m.captured) { raison = `${nom} est attaqué : je l'échange contre ${saPiece(m.captured)}`; famille = 'echange'; }
+      else { raison = `je mets ${nom} à l'abri en ${m.to}`; famille = 'fuir'; }
     } else {
       // une autre pièce joue : prendre l'attaquant, s'interposer, ou ajouter un défenseur
       const encore = map2.at[cible.square];
       if (!encore || encore.color !== camp || gainEchange(map2, cible.square, camp) > 0) continue; // toujours en prise → pas une parade
-      raison = attaquants.includes(m.to) ? `je prends ${saPiece(m.captured)} qui attaquait ${nom}` : `je défends ${nom} en ${cible.square}`;
+      if (attaquants.includes(m.to)) { raison = `je prends ${saPiece(m.captured)} qui attaquait ${nom}`; famille = 'prendre'; }
+      else { raison = `je défends ${nom} en ${cible.square}`; famille = 'defendre'; }
     }
-    out.push({ coup: u, raison, noeud: '1c' });
+    out.push({ coup: u, raison, noeud: '1c', famille });
   }
   return out;
 }
@@ -152,11 +153,16 @@ export function clouage({ fen, camp }) {
 }
 
 /** 1f — S'il jouait deux fois de suite, que gagnerait-il ? La parade = tout coup après lequel sa suite ne gagne plus (test). */
-export function deuxCoups({ fen, sonde }) {
+export function deuxCoups({ fen, camp, sonde }) {
   if (!sonde?.menace || sonde.menace.mat || typeof sonde.paree !== 'function') return []; // le mat, c'est 1b
   const perte = sonde.menace.perte ?? 'du matériel';
-  const out = [];
-  for (const m of coupsLegaux(fen)) { const u = uciDe(m); if (sonde.paree(u)) out.push({ coup: u, raison: `s'il jouait deux fois il gagnerait ${perte} : je pare`, noeud: '1f' }); }
+  const map = buildAttackMap(fen), out = [];
+  for (const m of coupsLegaux(fen)) {
+    const u = uciDe(m); if (!sonde.paree(u)) continue;
+    // famille de la parade (pour l'ordre du radar, pas un score) : prendre, fuir (le roi ou une pièce attaquée s'écarte), contre (échec), défendre
+    const famille = m.captured ? 'prendre' : m.piece === 'k' ? 'fuir' : new Chess(apres(fen, m)).inCheck() ? 'contre' : map.attackersOf(m.from, other(camp)).length ? 'fuir' : 'defendre';
+    out.push({ coup: u, raison: `s'il jouait deux fois il gagnerait ${perte} : je pare`, noeud: '1f', famille });
+  }
   return out;
 }
 
@@ -172,15 +178,42 @@ export function monMat({ sonde }) {
   return [{ coup: sonde.monMat.coup, raison: 'j\'ai un mat', noeud: '2a' }];
 }
 
-/** 2b — Une prise (ou un échec) qui gagne du matériel, le plus gros d'abord (compte sur la case). */
+/** Le meilleur matériel que je gagne en UNE prise depuis `fen` (SEE sur chaque case), 0 si rien. Mon trait supposé. */
+function meilleurGainImmediat(fen, camp) {
+  const map = buildAttackMap(fen); let best = 0;
+  for (const m of coupsLegaux(fen)) { if (!m.captured) continue; const g = gainEchange(map, m.to, other(camp)); if (g > best) best = g; }
+  return best;
+}
+
+/**
+ * 2b — Une prise OU un échec qui gagne du matériel, le plus gros d'abord. Les prises : compte sur la case (SEE). Les
+ * échecs qui gagnent (fourchette par échec, échec à la découverte, roi attiré) : on garde l'échec après lequel, quelle
+ * que soit sa réponse légale, je gagne du matériel compté au coup suivant.
+ */
 export function priseGagnante({ fen, camp }) {
-  const map = buildAttackMap(fen), out = [];
+  const map = buildAttackMap(fen), out = [], vus = new Set();
+  // (a) les prises qui gagnent (SEE sur la case)
   for (const m of coupsLegaux(fen)) {
     if (!m.captured) continue;
-    const g = gainEchange(map, m.to, other(camp)); // gain pour moi si j'ouvre les prises sur sa pièce en m.to
-    if (g > 0) out.push({ coup: uciDe(m), raison: `je prends ${saPiece(m.captured)} en ${m.to} et je gagne du matériel`, noeud: '2b', _poids: VAL[m.captured] });
+    if (gainEchange(map, m.to, other(camp)) > 0) { const u = uciDe(m); vus.add(u); out.push({ coup: u, raison: `je prends ${saPiece(m.captured)} en ${m.to} et je gagne du matériel`, noeud: '2b', _poids: VAL[m.captured] }); }
   }
-  return out.sort((a, b) => b._poids - a._poids).map(({ _poids, ...c }) => c); // la plus grosse prise d'abord
+  // (b) les échecs qui gagnent : je gagne du matériel quelle que soit sa réponse
+  for (const m of coupsLegaux(fen)) {
+    const u = uciDe(m); if (vus.has(u)) continue;
+    const fenApres = apres(fen, m), apresCh = new Chess(fenApres);
+    if (!apresCh.inCheck()) continue; // pas un échec
+    const reponses = apresCh.moves({ verbose: true });
+    if (!reponses.length) continue; // mat : c'est 2a
+    if (!reponses.every((rep) => { const c = new Chess(fenApres); c.move({ from: rep.from, to: rep.to, promotion: rep.promotion }); return meilleurGainImmediat(c.fen(), camp) > 0; })) continue;
+    // nommer : le motif et la pièce gagnée
+    const map2 = buildAttackMap(fenApres), moi = map2.at[m.to];
+    const donneEchec = moi && (map2.attacks.get(moi) ?? []).some((s) => map2.at[s]?.type === 'k' && map2.at[s]?.color === other(camp));
+    const cible = moi ? (map2.attacks.get(moi) ?? []).map((s) => map2.at[s]).filter((q) => q && q.color === other(camp) && q.type !== 'k').sort((a, b) => VAL[b.type] - VAL[a.type])[0] : null;
+    const raison = !donneEchec ? `échec à la découverte : je gagne ${cible ? saPiece(cible.type) : 'du matériel'}`
+      : cible ? `fourchette : son roi et ${saPiece(cible.type)}` : 'échec qui gagne du matériel';
+    out.push({ coup: u, raison, noeud: '2b', _poids: cible ? VAL[cible.type] : 2 });
+  }
+  return out.sort((a, b) => b._poids - a._poids).map(({ _poids, ...c }) => c); // le plus gros gain d'abord
 }
 
 /** 2c — Avant de reprendre : ai-je mieux qu'une reprise (un coup intermédiaire) ? */
@@ -375,13 +408,13 @@ export function candidats(ctx) {
   const parCoup = new Map();
   for (const c of bruts) {
     const e = parCoup.get(c.coup) ?? { coup: c.coup, raisons: [] };
-    e.raisons.push({ noeud: c.noeud, raison: c.raison });
+    e.raisons.push({ noeud: c.noeud, raison: c.raison, famille: c.famille });
     parCoup.set(c.coup, e);
   }
   const out = [];
   for (const e of parCoup.values()) {
     e.raisons.sort((a, b) => ORDRE.indexOf(a.noeud) - ORDRE.indexOf(b.noeud));
-    out.push({ coup: e.coup, noeud: e.raisons[0].noeud, raison: e.raisons[0].raison, raisons: e.raisons });
+    out.push({ coup: e.coup, noeud: e.raisons[0].noeud, raison: e.raisons[0].raison, famille: e.raisons[0].famille, raisons: e.raisons });
   }
   // dans l'ordre de l'arbre (le radar d'abord), pour la lisibilité du radar
   return out.sort((a, b) => ORDRE.indexOf(a.noeud) - ORDRE.indexOf(b.noeud));
@@ -393,7 +426,17 @@ export function candidats(ctx) {
  * radar n'est pas recompté. (Contrat, étape 4.)
  */
 export function selectionner(cands, plafond = 3) {
-  const radar = cands.filter((c) => c.noeud[0] === '1');
+  let radar = cands.filter((c) => c.noeud[0] === '1');
+  // Le radar reste hors plafond, mais 1c et 1f (pièce en prise, « s'il jouait deux fois ») produisent toutes les parades :
+  // si le radar dépasse 6, on ne garde pour 1c/1f que la PREMIÈRE parade de chaque famille (prendre, fuir, défendre,
+  // s'interposer, contre-attaquer). Ce n'est pas un choix par score, c'est un ordre de famille.
+  if (radar.length > 6) {
+    const vus = new Set();
+    radar = radar.filter((c) => {
+      if ((c.noeud !== '1c' && c.noeud !== '1f') || !c.famille) return true;
+      const cle = `${c.noeud}:${c.famille}`; if (vus.has(cle)) return false; vus.add(cle); return true;
+    });
+  }
   const dejaRadar = new Set(radar.map((c) => c.coup));
   const reste = cands.filter((c) => c.noeud[0] !== '1' && !dejaRadar.has(c.coup));
   const parFamille = new Map();
