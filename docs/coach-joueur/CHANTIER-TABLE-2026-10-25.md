@@ -179,12 +179,45 @@ pas après le premier regard sur les données.
 |---|---|---|---|
 | 1 | nommage rapide (2f, 2a, 1f bornés), vérificateur 1c, mesure d'accord sur mille coups | Dev chef ; pilote pour la mesure | temps par coup, % d'accord, désaccords par nœud |
 | 1 | extraction Lichess : filtres, tirage des positions, découpage par joueur, format par ligne | pilote | le lot « v0 » (10 000 positions × 6 tranches) et le lot complet, comptés |
-| 2 | table v0 (6 h), lecture, puis table à cent mille (2 jours VPS) | pilote ; Expert sur les sans nom et les désaccords | la page de résultats, trois chiffres en tête |
+| 2 | **échantillon d'abord** : 100 par tranche (6 min), lecture ; puis 500 (5 min en rapide), lecture ; puis 5 000 ; la table à cent mille seulement si chaque palier a montré quelque chose | pilote ; Expert sur les sans nom et les désaccords | la page de résultats, trois chiffres en tête |
 | 2 | relecture par le GE | Sébastien | go ou arrêt pour le chantier 2 |
 
 Rien ne démarre avant le go de Sébastien sur cette page ; chaque lancement de calcul long est annoncé avec sa durée et son
 heure de fin. Le site n'est pas touché par ce chantier (le joueur du site reste tel quel ; « calcul puis nommage » n'est
 plus la direction).
+
+## 6 bis. Échantillon pilote, 25 oct. 13 h 48 → 13 h 54 : 100 positions par tranche, nommage lent à petit budget
+
+Six processus, 3,6 s par position, 600 positions (`reports/table-pilote/`). Intervalle de confiance d'environ ± 10
+points sur chaque part : **on ne conclut rien, on regarde la forme.** Règle désormais écrite dans le calendrier :
+échantillon d'abord, paliers ×5, chaque palier justifié par le précédent ([[echantillon-d-abord]]).
+
+| | 1000 | 1200 | 1400 | 1600 | 1800 | 2000 |
+|---|---|---|---|---|---|---|
+| sans nom (part des coups) | 21 % | 9 % | 25 % | 20 % | 27 % | 15 % |
+| 1c pièce en prise : quand allumé | 61 | 57 | 62 | 68 | 75 | 62 |
+| 1c : part des positions où allumé | 41 | 49 | 37 | 37 | 24 | 29 |
+| 1f que menace-t-il ? : quand allumé | 27 | 18 | 27 | 33 | 31 | 20 |
+| 3D développement : quand allumé | 19 | 25 | 20 | 36 | 32 | 42 |
+| 2f que menacé-je ? : allumé / nomme | 85 / 0 | 82 / 4 | 80 / 1 | 81 / 3 | 80 / 2 | 82 / 3 |
+
+Ce que la forme dit déjà :
+- **Les humains jouent un coup sur cinq que l'arbre ne nomme pas** (contre un sur onze pour notre coach). Les 100 sans
+  nom se répartissent ainsi : 37 coups de pion en ouverture, 27 coups de pièce en milieu, 16 coups de pièce en ouverture,
+  13 coups de pion en milieu, 18 en finale. **Le premier manque est le coup de pion d'ouverture** (…e6, …c6, c4, e5,
+  …h6) : le livre ne s'allume que dans 2 % des positions (les humains en sortent vite) et « je développe » ne couvre pas
+  les pions. C'est le principe « coups de pion en ouverture » de BP-Chess. Avant de grossir l'échantillon, cette branche
+  (et « j'améliore » toujours allumée) doit exister, sinon la table mesure un trou connu.
+- **Le piège 2f est réel** : allumé dans 80 % des positions (menace au sens large), il ne nomme que 0 à 4 %. Sans la
+  menace réelle (gain compté), ce nœud ne dit rien. Le nommage rapide du Dev chef la fixe.
+- **Le garde-fou « allumé » est utile** : 1c est allumé dans 41 à 49 % des positions à 1000-1399, 24 à 29 % à 1800-2199 —
+  les faibles laissent plus de pièces en prise. La part « quand allumé » de 1c (61 → 75 → 62) et celle de 3D (19 → 42)
+  ont l'air de monter : à revoir à 500 par tranche.
+- Les phases : ouverture 45 %, milieu 40 %, finale 14 % des positions tirées ; la finale est courte dans ces parties.
+
+**Prochain palier**, seulement après le nommage rapide (fin prévue 19 h 15) et la branche « coup de pion d'ouverture » :
+100 par tranche en rapide contre ces 600 (l'accord), puis **500 par tranche** (3 000 positions, 5 minutes en rapide).
+Pas de table à dix mille avant d'avoir vu les 500.
 
 ## 7. Deux points à trancher par Sébastien
 
