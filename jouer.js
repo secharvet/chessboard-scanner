@@ -5,10 +5,9 @@
  */
 import { Chess } from '/vendor/chess.js';
 import { renderFenBoard } from './board-view.js';
-import { recitTexte, pourquoiHumain } from './recit.js';
+import { recitTexte, pourquoiHumain, pastilleDe } from './recit.js';
 
 const $ = (id) => document.getElementById(id);
-const SORTES = { plan: { l: 'plan', c: '#4e9a06' }, amelioration: { l: 'amélioration', c: '#3465a4' }, defense: { l: 'défense', c: '#c17d11' }, calcul: { l: 'calcul', c: '#a40000' }, livre: { l: 'livre', c: '#5c3566' } };
 const VERDICTS = { ok: 'rien à signaler', faute: 'faute', bevue: 'bévue', exclu: 'hors compte' };
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); // phrases/traces échappées (défense)
 const DEPART = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
@@ -26,7 +25,13 @@ function reset(depart, camp) {
   renderBoard();
 }
 
-function renderBoard() { renderFenBoard($('jouBoard'), vue.chess.fen(), { orientation: vue.orientation }); }
+function renderBoard(c) {
+  // le dernier coup joué (vert) et, si le coach en a dit un, le coup écarté (jaune — « l'autre couleur »)
+  const arrows = [];
+  if (c?.uci) arrows.push({ color: 'G', from: c.uci.slice(0, 2), to: c.uci.slice(2, 4) });
+  if (c?.coach && c.ecarte?.coup) arrows.push({ color: 'Y', from: c.ecarte.coup.slice(0, 2), to: c.ecarte.coup.slice(2, 4) });
+  renderFenBoard($('jouBoard'), vue.chess.fen(), { orientation: vue.orientation, drawables: { arrows } });
+}
 
 function evalTexte(v) {
   if (v == null) return '—';
@@ -66,8 +71,8 @@ function montrerPhrase(c) {
   nom.textContent = `${Math.floor((c.ply - 1) / 2) + 1}${c.camp === 'w' ? '.' : '…'} ${c.san}`;
   trace.hidden = true; pourquoi.setAttribute('aria-expanded', 'false');
   if (c.coach) {
-    const s = SORTES[c.sorte] ?? { l: c.sorte, c: '#555' };
-    pastille.hidden = false; pastille.textContent = s.l; pastille.style.backgroundColor = s.c;
+    const s = pastilleDe(c);
+    pastille.hidden = false; pastille.textContent = s.libelle; pastille.style.backgroundColor = s.couleur;
     phrase.textContent = c.phrase ?? '(pas de phrase)';
     pourquoi.hidden = false; trace.innerHTML = traceHtml(c);
     pourquoi.onclick = () => { trace.hidden = !trace.hidden; pourquoi.setAttribute('aria-expanded', String(!trace.hidden)); };
@@ -77,12 +82,13 @@ function montrerPhrase(c) {
 function ajouterCoup(c) {
   if (vue.vus.has(c.ply)) return; vue.vus.add(c.ply); // dédoublonnage (le rattrapage peut rejouer des coups déjà vus)
   vue.chess.move({ from: c.uci.slice(0, 2), to: c.uci.slice(2, 4), promotion: c.uci[4] || undefined });
-  renderBoard();
+  renderBoard(c);
   const li = document.createElement('li');
   li.className = `jpt__coup ${c.coach ? 'jpt__coup--coach' : 'jpt__coup--adv'}`;
   const num = c.camp === 'w' ? `${Math.floor(c.ply / 2) + 1}.` : '';
+  const s = c.coach ? pastilleDe(c) : null;
   li.innerHTML = `<span class="jpt__coup-num">${num}</span> <span class="jpt__coup-san">${esc(c.san)}</span>` +
-    (c.coach && c.sorte ? `<span class="jpt__coup-pastille" style="background:${(SORTES[c.sorte] ?? {}).c ?? '#555'}"></span>` : '');
+    (s ? `<span class="jpt__coup-pastille" style="background:${s.couleur}" title="${esc(s.libelle)}"></span>` : '');
   li.onclick = () => montrer(c);
   $('jouCoups').appendChild(li);
   vue.coups.push(c);
