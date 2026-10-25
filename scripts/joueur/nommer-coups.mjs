@@ -7,7 +7,8 @@
  * Publie : la part des coups nommés, par nœud ; la part des coups sans nom, par phase (ouverture / milieu / finale) ;
  * et une ligne par coup sans nom (partie, coup, position) pour savoir quelle question manque.
  *
- *   node scripts/joueur/nommer-coups.mjs <dossier|fichiers.json> [--sortie bilan.json] [--part i/n]
+ *   node scripts/joueur/nommer-coups.mjs <dossier|fichiers.json> [--rapide] [--sortie bilan.json] [--part i/n]
+ *   (--rapide : nommage rapide, sonde bornée, < 1 s/coup ; sans l'option, le nommage lent — comparer les deux donne l'accord)
  *   (--part 2/4 : ne traite que les fichiers de rang 2 sur 4, pour paralléliser par processus — chaque processus reste à un fil)
  */
 import { readFileSync, readdirSync, writeFileSync, statSync } from 'node:fs';
@@ -40,6 +41,7 @@ async function main() {
   const args = process.argv.slice(2);
   if (!args.length) { console.error('usage : node scripts/joueur/nommer-coups.mjs <dossier|fichiers.json> [--sortie bilan.json] [--part i/n]'); process.exit(2); }
   const budget = Number(process.env.COACH_BUDGET ?? 120000);
+  const rapide = args.includes('--rapide'); // nommage rapide (sonde bornée, < 1 s/coup) ; sans l'option, le nommage lent d'aujourd'hui
   const sortie = args.includes('--sortie') ? args[args.indexOf('--sortie') + 1] : null;
   let fichiers = fichiersDe(args);
   if (args.includes('--part')) { const [i, n] = args[args.indexOf('--part') + 1].split('/').map(Number); fichiers = fichiers.filter((_, k) => k % n === i - 1); }
@@ -54,7 +56,7 @@ async function main() {
     const historique = [];
     for (const c of partie.coups) {
       if (c.coach) {
-        const r = coach.nommer(c.fenAvant, { depart, historique: [...historique] }, c.uci);
+        const r = coach.nommer(c.fenAvant, { depart, historique: [...historique] }, c.uci, { rapide });
         coups++;
         const ph = phaseDe(c.fenAvant);
         parPhase[ph] = parPhase[ph] ?? { coups: 0, sansNom: 0 }; parPhase[ph].coups++;

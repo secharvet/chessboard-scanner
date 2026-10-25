@@ -544,26 +544,36 @@ export function etape3(ctx) {
 export const ORDRE = ['1a', '1b', '1c', '1d', '1e', '1f', '2a', '2b', '2c', '2d', '2e', '2f', '3L', '3D', '3C', '3d', '3P', '3Y', '3A'];
 
 /**
- * Produit les candidats de l'arbre (étapes 1, 2, 3 réduite) pour une position, dédoublonnés par coup (nœud le plus haut
- * gardé), chaque candidat portant toutes ses raisons et le nœud retenu.
- * @returns {{ coup, noeud, raison, raisons: {noeud, raison}[] }[]}
+ * Produit les candidats de l'arbre (étapes 1, 2, 3 réduite) ET la table « quand allumé » (chaque nœud → les coups qu'il
+ * a proposés), en ne lançant les générateurs qu'UNE fois. Les candidats sont dédoublonnés par coup (nœud le plus haut
+ * gardé), chacun portant toutes ses raisons et le nœud retenu ; `allumes` garde la production BRUTE, avant dédoublonnage
+ * (ce qu'attend la mesure de la table : « quand ce nœud était allumé, que proposait-il ? »).
+ * @returns {{ liste: {coup, noeud, raison, raisons: {noeud, raison}[]}[], allumes: Record<string, string[]> }}
  */
-export function candidats(ctx) {
+export function candidatsEtAllumes(ctx) {
   let bruts = [...etape1(ctx), ...etape2(ctx), ...etape3(ctx)];
   if (!bruts.length) bruts = amelioration(ctx); // 3A en dernier recours : aucune autre question n'a produit → « toujours un coup d'amélioration » (l'arbre n'est jamais vide)
+  const allumes = {};
+  for (const c of bruts) { const l = (allumes[c.noeud] ??= []); if (!l.includes(c.coup)) l.push(c.coup); }
   const parCoup = new Map();
   for (const c of bruts) {
     const e = parCoup.get(c.coup) ?? { coup: c.coup, raisons: [] };
     e.raisons.push({ noeud: c.noeud, raison: c.raison, famille: c.famille });
     parCoup.set(c.coup, e);
   }
-  const out = [];
+  const liste = [];
   for (const e of parCoup.values()) {
     e.raisons.sort((a, b) => ORDRE.indexOf(a.noeud) - ORDRE.indexOf(b.noeud));
-    out.push({ coup: e.coup, noeud: e.raisons[0].noeud, raison: e.raisons[0].raison, famille: e.raisons[0].famille, raisons: e.raisons });
+    liste.push({ coup: e.coup, noeud: e.raisons[0].noeud, raison: e.raisons[0].raison, famille: e.raisons[0].famille, raisons: e.raisons });
   }
   // dans l'ordre de l'arbre (le radar d'abord), pour la lisibilité du radar
-  return out.sort((a, b) => ORDRE.indexOf(a.noeud) - ORDRE.indexOf(b.noeud));
+  liste.sort((a, b) => ORDRE.indexOf(a.noeud) - ORDRE.indexOf(b.noeud));
+  return { liste, allumes };
+}
+
+/** Les candidats seuls (dédoublonnés), pour `choisir()`. Voir `candidatsEtAllumes` pour la table « quand allumé ». */
+export function candidats(ctx) {
+  return candidatsEtAllumes(ctx).liste;
 }
 
 /**
