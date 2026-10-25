@@ -219,6 +219,47 @@ Ce que la forme dit déjà :
 100 par tranche en rapide contre ces 600 (l'accord), puis **500 par tranche** (3 000 positions, 5 minutes en rapide).
 Pas de table à dix mille avant d'avoir vu les 500.
 
+## 6 ter. Palier 5 000 par tranche (Orion, 25 oct. 14 h 34 → 14 h 50) : trois tranches, l'arbre fermé (lot 2)
+
+Lichess septembre 2025, 5 000 positions par tranche (1 250 parties, 4 positions par partie), nommage rapide, arbre à
+`cb7039b`. Intervalle de confiance à 95 % : ± 0,5 point sur une part de 3 %, ± 1,4 sur une part de 30 %, ± 2 à 3 points
+sur les parts « quand allumé » des nœuds moyens. Données `reports/table-5000/` (VPS et Orion `/mnt/toto`).
+
+| | 1200-1399 | 2000-2199 | 2200-2399 |
+|---|---|---|---|
+| sans nom (bruts) | 3,3 % | 4,0 % | 3,5 % |
+| sans nom par phase (ouv. / mil. / fin.) | 1,7 / 4,3 / 6,8 | 1,9 / 5,4 / 7,6 | 1,9 / 4,5 / 6,6 |
+| **2b prise qui gagne** : brut (quand allumé) | **9,1 (33,2)** | 6,2 (27,9) | 6,5 (27,9) |
+| **3D développement** : brut (quand allumé) | 18,9 **(28,7)** | 20,9 (34,2) | 21,1 (34,9) |
+| **3p pion d'ouverture** : brut | 9,0 | 11,2 | 11,9 |
+| 1b il menace mat : quand allumé | 67 | 90 | 87 |
+| 1c pièce en prise : brut (quand allumé) | 14,1 (42,7) | 13,4 (46,6) | 12,6 (43,0) |
+| 1f que menace-t-il ? : brut (quand allumé) | 12,6 (39,4) | 11,6 (40,6) | 12,1 (42,5) |
+| 2d double attaque : brut | 5,6 | 5,7 | 5,4 |
+| 3Y prophylaxie : brut (quand allumé) | 0,8 (3,3) | 0,5 (2,2) | 0,5 (2,3) |
+| 3u tours · 3m pièce · 3t tension · 3r | 1,6 · 2,8 · 1,1 · 1,5 | 1,7 · 2,8 · 1,7 · 2,0 | 2,0 · 3,3 · 1,4 · 2,1 |
+| allumé : 1c · 2b · 3D (part des positions) | 33 · 27,5 · 66 | 28,7 · 22 · 61 | 29,4 · 23 · 61 |
+| même nœud qu'au coup précédent (suites) | 11,7 % | 12,2 % | 11,8 % |
+
+**Lecture honnête.** À 5 000 positions, **les trois tranches se ressemblent beaucoup**. Ce qui bouge au-delà de
+l'intervalle : la **prise qui gagne** (le 1200 prend plus : 9,1 contre 6,2 %, et 33 contre 28 % quand c'est possible —
+« la prise réflexe » de l'Expert), le **développement quand il est possible** (29 → 34 → 35 %) et le **pion d'ouverture**
+(9 → 11 → 12 %). Le reste est plat : pièce en prise, que menace-t-il ?, double attaque, prophylaxie (qui baisse même,
+3,3 → 2,2, à l'inverse de l'attente), les sans nom, les suites. Les positions elles-mêmes changent peu entre tranches
+(1c allumé 33 contre 29 %). Les écarts sont de l'ordre de 2 à 5 points : la taille que les sondes de concepts dans Maia
+laissaient attendre, et pas plus.
+
+**Ce que ça veut dire pour le critère** (trois nœuds monotones sur les six tranches, au-delà de l'intervalle) : avec
+trois tranches seulement, on ne peut ni le valider ni l'infirmer. Les quatre tranches manquantes (1000, 1400, 1600,
+1800) sont en cours d'extraction sur Orion depuis 14 h 53 (même mois, même méthode, réseau seulement), puis 5 000
+positions chacune (15 minutes). **Pas de palier 100 000 tant que la table à six tranches n'a pas parlé** : s'il n'y a
+que deux ou trois nœuds qui bougent de quelques points, 100 000 positions ne feront que resserrer les intervalles autour
+de la même réponse, et la directive dit alors : on l'écrit, on s'arrête.
+
+**Ce que la table ne voit pas, rappel de l'Expert** : *lequel* des coups du nœud (le 2000 développe vers la bonne case),
+et les suites entre coups. Si la table à six tranches reste plate, c'est là qu'est la différence de niveau, et c'est une
+autre mesure (le coup choisi dans le nœud, contre Maia-3), pas une table de plus.
+
 ## 7. Deux points à trancher par Sébastien
 
 1. **La période des parties** : janvier 2016 (déjà en local, suffisant pour cent mille par tranche) ou un mois récent à
