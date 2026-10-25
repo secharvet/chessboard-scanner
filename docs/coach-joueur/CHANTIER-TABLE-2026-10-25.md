@@ -260,6 +260,45 @@ de la même réponse, et la directive dit alors : on l'écrit, on s'arrête.
 et les suites entre coups. Si la table à six tranches reste plate, c'est là qu'est la différence de niveau, et c'est une
 autre mesure (le coup choisi dans le nœud, contre Maia-3), pas une table de plus.
 
+## 6 quater. La table à sept tranches, 5 000 positions chacune (Orion, 25 oct., 15 h 30)
+
+Les quatre tranches manquantes extraites du même mois (30 000 parties chacune) et nommées sur Orion en 15 minutes ;
+35 000 positions en tout, arbre à `cb7039b`. **Réserve** : le recomptage indépendant conteste 21 % des noms de 3D
+(poussées centrales) et 14,5 % de 2b ; leurs pentes sont à relire après le lot 3. 1b, 3p, 3r, 3t sont propres (< 1 %
+contestés ou non recomptables).
+
+| | 1000 | 1200 | 1400 | 1600 | 1800 | 2000 | 2200 |
+|---|---|---|---|---|---|---|---|
+| sans nom | 3,5 | 3,3 | 3,3 | 3,5 | 3,8 | 4,0 | 3,5 |
+| **1b il menace mat** : paré quand allumé | **62** | 67 | 74 | 78 | 84 | 90 | **87** |
+| **3D développement** : joué quand possible | **26** | 29 | 28 | 31 | 33 | 34 | **35** |
+| **2b prise qui gagne** : jouée quand possible | **32** | 33 | 32 | 30 | 33 | 28 | **28** |
+| **3p pion d'ouverture** : part brute | **8,2** | 9,0 | 9,9 | 10,4 | 10,1 | 11,2 | **11,9** |
+| 1f que menace-t-il ? : paré quand allumé | 38 | 39 | 40 | 43 | 40 | 41 | 43 |
+| 1c pièce en prise : sauvée quand allumé | 43 | 43 | 44 | 42 | 45 | 47 | 43 |
+| 3Y prophylaxie : quand allumé | 3,7 | 3,3 | 3,1 | 3,0 | 2,7 | 2,2 | 2,3 |
+| 1c allumé (part des positions) | 35 | 33 | 32 | 30 | 29 | 29 | 29 |
+| 1a en échec (part brute) | 7,0 | 6,3 | 5,2 | 5,6 | 5,4 | 4,3 | 4,3 |
+
+**Le critère, lu avec un test de tendance** (la monotonie stricte sur sept points est brouillée par le bruit de ± 1 point
+entre tranches voisines ; on ajuste une pente par tranche de 200 points, pondérée, et on la rapporte à son écart-type :
+|z| ≥ 3 = tendance nette, au-delà de l'intervalle). Sur la part **quand allumé**, six nœuds ont une tendance nette :
+- **1b il menace mat : + 4,7 points par tranche (z 5,3)** — le 1000 pare le mat en un 62 % du temps, le 2000 90 % ;
+- **3D développement : + 1,5 (z 9,8)** ; **3p pion d'ouverture : + 0,6 (z 6,5)** ; 3C plan : + 0,3 (z 3,7) ; 3r recul
+  utile : + 0,2 (z 3,9) ;
+- **2b prise qui gagne : − 0,8 (z − 3,2)** — la « prise réflexe » des faibles, comme l'Expert l'avait écrit.
+Et sur la part brute : 1a (− 0,4, z − 6,9) et 1c (− 0,3, z − 3,7) **baissent** — ce sont les positions qui changent (les
+forts sont moins souvent en échec, laissent moins de pièces en prise), pas le choix ; 3Y baisse légèrement (z − 3,1) à
+l'inverse de l'attente ; 1f monte un peu (+ 0,6, z 2,6, sous le seuil). Les sans nom sont plats (z 1,4).
+
+**Verdict provisoire** : le critère écrit d'avance (au moins trois nœuds) est **atteint** — six nœuds, dont trois propres
+(1b, 3p, 3r) et trois à confirmer après le lot 3 (3D, 2b, 3C). Les paris de l'Expert : 1b oui (le plus net), 1f faible,
+3Y non (le nœud s'allume mal : 22 % des positions, nomme 3 %). Les écarts sont de la taille attendue : 1 à 5 points par
+tranche, 10 à 30 points entre 1000 et 2200 sur les nœuds qui bougent. **La suite** : (1) lot 3 (noms contestés), (2) la
+même table à 5 000 refaite (15 minutes sur Orion) ; si les six tendances tiennent, (3) le palier 100 000 sur les tranches
+2000, 2200 et une basse, pour l'étape 2 de la directive — le modèle. La lecture de l'Expert reste vraie : la table dit
+*quelle question*, pas *quel coup dans la question* ; c'est l'étape 2.
+
 ## 7. Deux points à trancher par Sébastien
 
 1. **La période des parties** : janvier 2016 (déjà en local, suffisant pour cent mille par tranche) ou un mois récent à
