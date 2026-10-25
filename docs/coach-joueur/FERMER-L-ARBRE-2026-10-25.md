@@ -55,6 +55,29 @@ dernier recours, avec une raison vérifiable, jamais allumée en permanence.
 **Ce qu'on ne fait pas** : le sacrifice positionnel (hors de portée d'un arbre, seul le calcul le trouve) ; la manœuvre
 longue, le levier d'aile, le transfert vers l'aile du roi, la simplification : déjà couverts par 3P, d), 3d et 3c.
 
+## Le second étage : le recomptage indépendant (25 oct., 15 h 30)
+
+`scripts/joueur/recompter-noms.mjs` : pour chaque coup nommé, l'affirmation du nœud est revérifiée par un code écrit à
+part (chess.js seul, définitions explicites, rien de `arbre.mjs`). Sur **15 500 positions humaines** (1200, 2000, 2200) :
+14 943 nommées, 9 980 recomptables, **1 371 contestées = 13,7 %** ; un tiers des noms (menaces, mats, motifs, plans) ne
+se recompte pas statiquement et le sera par Stockfish à faible profondeur.
+
+| nœud | nommés | contestés | lecture |
+|---|---|---|---|
+| 3m pièce vers une meilleure case | 459 | **77 %** | la définition du lot 2 nomme beaucoup trop (Qb3 au coup 5) : à resserrer |
+| 3u cibles pour les tours | 275 | **36 %** | septième rangée à prendre par camp ; « pion non défendu » nomme des tours en l'air |
+| 3D développement | 3 163 | **21 %** | des poussées centrales d4, d5 nommées « je développe » : depuis le lot 1 c'est 3p-centre ; 3D = pièces et roque |
+| 2b prise qui gagne | 1 021 | 14,5 % | comptes différents sur les prises égales : à arbitrer sur six positions |
+| 3k le roi | 64 | 14 % | à relire |
+| 1c pièce en prise | 2 069 | 4,8 % | sous le seuil ; quelques coups qui ne touchent pas la pièce (O-O, g3) |
+| 3p pion · 3r · 3t · 1a | 1 657 · 288 · 217 · 767 | < 1 % | d'accord |
+
+**Conséquence** : le seuil d'honnêteté (< 5 % de noms faux) **n'est pas atteint** pour 3m, 3u, 3D, 2b. C'est le second
+étage qui fait son travail, comme l'Expert l'avait prévu (« une branche allumée en permanence fait monter les mensonges
+au plafond »). Lot 3 chez le Dev chef : réconcilier nœud par nœud, en resserrant la définition du nœud, jamais le
+recomptage (sauf erreur démontrée du recomptage). La table à 5 000 est à relire après : les parts de 3D, 3m, 3u
+baisseront, les sans nom remonteront un peu. **Pas de palier 100 000 avant.**
+
 ## Mesure 2 (25 oct., 14 h 33) : lot 2 fusionné (dev-lead cb7039b), 500 autres positions neuves de 2000-2199
 
 Lot 2 (Dev chef, 427 tests) : 3p corrigé (« chasser ou empêcher » accepte la pièce qui pourrait venir ; levier et espace
