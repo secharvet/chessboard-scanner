@@ -13,16 +13,38 @@ const VERDICTS = { ok: 'rien à signaler', faute: 'faute', bevue: 'bévue', excl
 /** Un coup du coach est-il de la forme « arbre » (joueur-arbre) plutôt que « sorte » (joueur.mjs) ? */
 export const estArbre = (c) => Array.isArray(c?.candidats);
 const PASTILLE_SORTE = { plan: { libelle: 'plan', couleur: '#4e9a06' }, amelioration: { libelle: 'amélioration', couleur: '#3465a4' }, defense: { libelle: 'défense', couleur: '#c17d11' }, calcul: { libelle: 'calcul', couleur: '#a40000' }, livre: { libelle: 'livre', couleur: '#5c3566' }, finale: { libelle: 'finale', couleur: '#4e9a06' } };
-/** Le « mot du nœud » et sa couleur, par nœud de l'arbre (le radar en orange, le forcé en rouge, le plan en vert/bleu/violet). */
-export const NOEUDS = {
-  '1a': { libelle: 'échec', couleur: '#c17d11' }, '1b': { libelle: 'mat menacé', couleur: '#c17d11' }, '1c': { libelle: 'pièce en prise', couleur: '#c17d11' }, '1d': { libelle: 'dernière rangée', couleur: '#c17d11' }, '1e': { libelle: 'clouage', couleur: '#c17d11' }, '1f': { libelle: 'sa menace', couleur: '#c17d11' },
-  '2a': { libelle: 'mat', couleur: '#a40000' }, '2b': { libelle: 'prise qui gagne', couleur: '#a40000' }, '2c': { libelle: 'intermédiaire', couleur: '#a40000' }, '2d': { libelle: 'double attaque', couleur: '#a40000' }, '2e': { libelle: 'tactique', couleur: '#a40000' },
-  '3L': { libelle: 'livre', couleur: '#5c3566' }, '3P': { libelle: 'ma pire pièce', couleur: '#4e9a06' }, '3Y': { libelle: 'prophylaxie', couleur: '#3465a4' }, '3C': { libelle: 'mon plan', couleur: '#4e9a06' },
+/** Le « mot du nœud » (relecture Expert : étape 1 par « il » ou « ma », étape 2 par « je ») ; la couleur par étape. */
+export const MOT_NOEUD = {
+  '1a': 'je suis en échec', '1b': 'il menace mat', '1c': 'ma pièce en prise', '1d': 'mat du couloir', '1e': 'je suis cloué', '1f': 'il me menace',
+  '2a': 'je mate', '2b': 'je gagne', '2c': 'avant de reprendre', '2d': 'double attaque', '2e': 'tactique',
+  '3L': 'théorie', '3P': 'ma pire pièce', '3Y': 'je l\'empêche', '3C': 'mon plan',
 };
-/** La pastille (libellé + couleur) d'un coup du coach, qu'il soit de la forme « arbre » (nœud) ou « sorte ». */
+const COUL_NOEUD = { 1: '#c17d11', 2: '#a40000', '3L': '#5c3566', '3P': '#4e9a06', '3Y': '#3465a4', '3C': '#4e9a06' };
+/** Le type de pièce (minuscule) sur une case d'une FEN, ou null. */
+function pieceDe(fen, sq) {
+  if (!fen || !sq) return null;
+  const rows = fen.split(' ')[0].split('/'), file = 'abcdefgh'.indexOf(sq[0]), rank = Number(sq[1]);
+  if (file < 0 || !rank || !rows[8 - rank]) return null;
+  let f = 0;
+  for (const ch of rows[8 - rank]) { if (ch >= '1' && ch <= '8') { f += +ch; continue; } if (f === file) return ch.toLowerCase(); f++; }
+  return null;
+}
+/**
+ * La pastille (libellé + couleur) d'un coup du coach, forme « arbre » (nœud, affiné par coup : le gain nommé, la pièce
+ * menacée, « fourchette » pour un cavalier ou un pion, le nom du motif, le nom du plan) ou forme « sorte ».
+ */
 export function pastilleDe(c) {
-  if (estArbre(c)) return (c.trou || c.noeud == null) ? { libelle: 'calcul', couleur: '#555' } : (NOEUDS[c.noeud] ?? { libelle: c.noeud, couleur: '#555' });
-  return PASTILLE_SORTE[c.sorte] ?? { libelle: c.sorte, couleur: '#555' };
+  if (!estArbre(c)) return PASTILLE_SORTE[c.sorte] ?? { libelle: c.sorte, couleur: '#555' };
+  if (c.trou || c.noeud == null) return { libelle: 'calcul', couleur: '#555' };
+  const n = c.noeud, couleur = COUL_NOEUD[n] ?? COUL_NOEUD[n[0]] ?? '#555';
+  let libelle = MOT_NOEUD[n] ?? n, m;
+  if (n === '2b' && c.gain) libelle = `je gagne ${c.gain}`; // le gain nommé
+  else if (n === '2d') { const p = pieceDe(c.fenAvant, c.uci?.slice(0, 2)); libelle = (p === 'n' || p === 'p') ? 'fourchette' : 'double attaque'; }
+  else if (n === '2e') libelle = /enfilade/.test(c.raison || '') ? 'enfilade' : /cloue/.test(c.raison || '') ? 'je cloue' : 'tactique';
+  else if (n === '3C' && (m = (c.raison || '').match(/plan\s*:\s*(.+)$/))) libelle = `mon plan : ${m[1]}`;
+  else if (n === '1c' && (m = (c.raison || '').match(/m[ao]n? (tour|dame|fou|cavalier|pion|roi)/))) libelle = `${m[0]} en prise`;
+  else if (n === '1f' && (m = (c.raison || '').match(/gagnerait (.+?)\s*:/))) libelle = `il menace ${m[1].trim()}`;
+  return { libelle, couleur };
 }
 
 const num = (c) => { const n = Math.ceil(c.ply / 2); return c.ply % 2 ? `${n}.` : `${n}…`; };
@@ -97,7 +119,10 @@ function examenTxt(ex) {
 function pourquoiArbreHumain(c) {
   const pq = [];
   if (c.ligne?.length > 1) pq.push(`ce que j'ai calculé : ${ligne(c.ligne, c.ply)}`);
-  if (c.ecarte) pq.push(`j'ai pensé à ${c.ecarte.san} : ${ligne(c.ecarte.ligne, c.ply)}, et je perdais ${c.ecarte.perte}`);
+  if (c.ecarte) {
+    if (c.ecarte.manque) pq.push(`j'ai pensé à ${c.ecarte.san} : il sauvait ${c.ecarte.manque}`);
+    else pq.push(`j'ai pensé à ${c.ecarte.san} : ${ligne(c.ecarte.ligne, c.ply)}, et je ${c.ecarte.mat ? 'me faisais mater' : 'perdais ' + c.ecarte.perte}`);
+  }
   const autres = (c.candidats ?? []).filter((x) => x.coup !== c.choisi && x.raison).slice(0, 3);
   if (autres.length) pq.push('j\'ai aussi pesé : ' + autres.map((x) => `${x.san} (${x.raison})`).join(' ; '));
   if (c.trou) pq.push('mon calcul trouvait mieux que mes idées sur ce coup');

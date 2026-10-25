@@ -39,6 +39,8 @@ export function verifierPhrases(partie) {
     const avant = materiel(coup.fenAvant, camp);
     const bout = rejouer(coup.fenAvant, e.pvUci);
     const delta = materiel(bout.fen, camp) - avant; // ce que le coach GAGNE dans la ligne de l'écarté (négatif = il perd)
+    // Gain manqué (« il sauvait sa pièce ») : l'écarté ne doit PAS perdre de matériel (sinon la phrase devrait dire la perte).
+    if (e.manque) { if (delta < 0) alertes.push(`${repere} : la phrase dit « il sauvait ${e.manque} » mais la ligne du coup écarté perd du matériel (Δ ${delta})`); continue; }
     const annonceMat = !!e.mat || /\bmat\b|perdu/i.test(e.perte ?? '') || /\bmat\b|c'était perdu/i.test(coup.phrase ?? '');
     if (annonceMat) {
       if (!bout.mat && delta >= 0) alertes.push(`${repere} : la phrase annonce « c'était perdu / mat » mais la ligne ne le montre pas (Δmatériel ${delta}, mat ${bout.mat})`);

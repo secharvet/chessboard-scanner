@@ -24,7 +24,7 @@ import { evaluer, enCentipions } from './evaluation.mjs';
 import { Recherche, MAT } from './recherche.mjs';
 import { materielEnMots, ligneTexte } from './parole.mjs';
 import { toFrenchSan } from '../notation.mjs';
-import { candidats as candidatsArbre, selectionner, ORDRE } from './arbre.mjs';
+import { candidats as candidatsArbre, selectionner, ORDRE, saPiece } from './arbre.mjs';
 
 const VAL = { p: 1, n: 3, b: 3, r: 5, q: 9, k: 0 };
 const LETTRE = { p: 'P', n: 'N', b: 'B', r: 'R', q: 'Q' };
@@ -38,13 +38,16 @@ export const MOT_NOEUD = {
   '3P': 'ma pire pièce', '3Y': 'la prophylaxie', '3C': 'mon plan',
 };
 
-/* Gabarits de l'étape 6 À RELIRE avec l'Expert avant d'entrer dans gabarits-parole.json (règle de parole : jamais
-   « score », « ligne », « candidat », « réfutation », « note » ; le coup écarté au conditionnel). */
+/* Gabarits de l'étape 6, corrigés par l'Expert (le gain et la perte NOMMÉS par composition, la même référence pour les
+   deux ; le coup écarté au conditionnel ; jamais « score », « ligne », « candidat », « réfutation », « note »). */
 const PAROLE = {
-  ecarte: 'J\'ai pensé à {R}. Mais {ligneR}, et je perdais {perteR}. Avec {M}, rien de tel.',
-  ecarteMat: 'J\'ai pensé à {R}. Mais {ligneR}, et c\'était perdu. Avec {M}, rien de tel.',
-  seValent: '{M} ou {R} : les deux se valent.',
-  trou: 'Mon calcul trouve mieux que mes idées : je joue {M}.',
+  ecartePerte: 'J\'ai pensé à {R}. Mais il répondait {ligneR}, et je perdais {perteR}. {fin}', // fin = « Avec M, rien de tel. » ou « M évite ça. »
+  ecarteMat: 'J\'ai pensé à {R}. Mais il répondait {ligneR}, et il me matait. {fin}',
+  ecarteManque: 'J\'ai pensé à {R}. Mais avec {R}, il sauvait {sauve}.', // M gagnait une pièce que R laisse filer
+  seValent: '{M} ou {R} : les deux se valent. J\'ai pris {M} parce que {raison}.',
+  trou: 'Mon calcul trouve mieux que mes idées : je joue {M}.{gain}',
+  finRienDeTel: 'Avec {M}, rien de tel.',
+  finEvite: '{M} évite ça.',
 };
 
 const fenApresUci = (fen, pvUci) => { const c = new Chess(fen); for (const u of pvUci) { try { c.move({ from: u.slice(0, 2), to: u.slice(2, 4), promotion: u[4] }); } catch { break; } } return c.fen(); };
@@ -59,6 +62,26 @@ function bilanParType(fenA, fenB, camp) {
 }
 const sommeMat = (bilan) => Object.entries(bilan).reduce((s, [t, n]) => s + VAL[t.toLowerCase()] * n, 0);
 const estForcee = (fen, pvUci) => { const c = new Chess(fen); for (const u of pvUci) { let m; try { m = c.move({ from: u.slice(0, 2), to: u.slice(2, 4), promotion: u[4] }); } catch { return false; } if (!m.captured && !c.inCheck()) return false; } return true; };
+/** Matériel net (en pions) du point de vue de `camp` dans une FEN. */
+const materielNet = (fen, camp) => { let s = 0; for (const ch of fen.split(' ')[0]) { const l = ch.toLowerCase(); if (!VAL[l]) continue; s += (ch === ch.toUpperCase() ? 'w' : 'b') === camp ? VAL[l] : -VAL[l]; } return s; };
+
+/**
+ * La réfutation d'un coup écarté est-elle LISIBLE (demande de l'Expert) ? Oui si, dans sa ligne, la perte de matériel est
+ * décidée par la réponse de l'adversaire et par mes reprises/coups forcés — jamais par un coup à MOI non forcé (sinon « je
+ * perdais X » accuse un coup que je n'aurais pas joué). On saute le coup écarté lui-même (il est donné) ; mes coups d'après
+ * la réponse adverse doivent être forcés (un seul coup légal, ou une reprise) tant que la perte n'est pas encore actée.
+ */
+export function refutationLisible(fenAvant, pvUci, camp) {
+  const base = materielNet(fenAvant, camp), c = new Chess(fenAvant);
+  for (let i = 0; i < (pvUci?.length ?? 0); i++) {
+    if (c.turn() === camp && i >= 2) {
+      const reprise = pvUci[i - 1] && pvUci[i - 1].slice(2, 4) === pvUci[i].slice(2, 4);
+      if (c.moves().length > 1 && !reprise && materielNet(c.fen(), camp) >= base) return false; // mon coup libre, perte pas encore actée
+    }
+    try { c.move({ from: pvUci[i].slice(0, 2), to: pvUci[i].slice(2, 4), promotion: pvUci[i][4] }); } catch { break; }
+  }
+  return materielNet(c.fen(), camp) < base; // la perte est bien au bout de la ligne
+}
 
 export class Joueur {
   /** @param {{ camp?: string, budget?: number, code?: string, trou?: boolean }} opts */
@@ -100,7 +123,9 @@ export class Joueur {
       const pvUci = cd ? cd.pv.map(uciDe) : [c.coup];
       const { sans, fenBout } = ligneFr(fenAvant, pvUci);
       const bilan = bilanParType(fenAvant, fenBout, camp);
-      return { ...c, cp, mat: cd ? cd.score >= MAT - 200 : false, matSubi: cd ? cd.score <= -(MAT - 200) : false, pvUci, ligne: sans, bilanMat: sommeMat(bilan), perte: materielEnMots(Object.fromEntries(Object.entries(bilan).map(([k, v]) => [k, -v]))) };
+      let captured = null; try { captured = new Chess(fenAvant).move({ from: c.coup.slice(0, 2), to: c.coup.slice(2, 4), promotion: c.coup[4] })?.captured ?? null; } catch { /* coup illégal : ignoré */ }
+      // gain et perte NOMMÉS par composition, contre la même référence (l'échiquier) : l'un des deux au plus est non nul
+      return { ...c, cp, mat: cd ? cd.score >= MAT - 200 : false, matSubi: cd ? cd.score <= -(MAT - 200) : false, pvUci, ligne: sans, bilanMat: sommeMat(bilan), captured, gain: materielEnMots(bilan), perte: materielEnMots(Object.fromEntries(Object.entries(bilan).map(([k, v]) => [k, -v]))) };
     });
 
     // élagage : un candidat dont la ligne coûte du matériel compté (et ne mate pas) est écarté, AVEC sa ligne (la réfutation
@@ -138,13 +163,13 @@ export class Joueur {
     const elagueBest = [...elagues].sort((a, b) => b.cp - a.cp)[0] ?? null;
 
     // --- étape 6 : la parole ---
-    const { phrase, ecarte, alerte: alerteP } = this.#dire(M, survivantSuivant, elagueBest, ply, fenAvant);
+    const { phrase, ecarte, alerte: alerteP } = this.#dire(M, survivantSuivant, elagueBest, ply, fenAvant, camp);
     if (alerteP && !alerte) alerte = alerteP;
 
     const san = sanDe(fenAvant, M.coup);
     const rec = {
       ply, camp, san, uci: M.coup, fenAvant, coach: true,
-      noeud: M.noeud, sorte: M.noeud ?? 'trou', raison: M.raison,
+      noeud: M.noeud, sorte: M.noeud ?? 'trou', raison: M.raison, gain: M.gain ?? null,
       score: M.cp, evalAvant: E0, ligne: M.ligne, profondeur: res.profondeur, noeuds: res.noeuds,
       candidats: evalues.map((c) => ({ san: sanDe(fenAvant, c.coup), coup: c.coup, noeud: c.noeud, raison: c.raison, score: c.cp, ligne: c.ligne })),
       choisi: M.coup, ecarte, trou,
@@ -221,19 +246,31 @@ export class Joueur {
    * plus (le meilleur élagué, sa réfutation se lit) « j'ai pensé à X, mais … » au conditionnel ; sinon, si un autre coup
    * se valait (< 10), « X ou Y : les deux se valent ». Rend aussi l'« écarté » du fichier de partie (le coup verbalisé).
    */
-  #dire(M, survivantSuivant, elagueBest, ply, fenAvant) {
-    if (M.trou) return { phrase: remplir(PAROLE.trou, { M: sanDe(fenAvant, M.coup) }), ecarte: null, alerte: null };
+  #dire(M, survivantSuivant, elagueBest, ply, fenAvant, camp) {
     const sanM = sanDe(fenAvant, M.coup);
-    const parties = [cap(M.raison || MOT_NOEUD[M.noeud] || 'je joue ce coup') + '.'];
+    if (M.trou) return { phrase: remplir(PAROLE.trou, { M: sanM, gain: M.gain ? ` Je gagne ${M.gain}.` : '' }).replace(/\s+/g, ' ').trim(), ecarte: null, alerte: null };
+    // (défaut 1) le gain de M nommé par composition : « je gagne un fou », jamais « du matériel »
+    const mainRaison = (M.gain && /gagne du matériel/.test(M.raison || '')) ? M.raison.replace('du matériel', M.gain) : (M.raison || MOT_NOEUD[M.noeud] || 'je joue ce coup');
+    const gainDit = !!M.gain && /gagne/.test(mainRaison); // la première phrase a déjà dit le gain de M → on omet « rien de tel »
+    const fin = gainDit ? remplir(PAROLE.finEvite, { M: sanM }) : remplir(PAROLE.finRienDeTel, { M: sanM });
+    const parties = [cap(mainRaison) + '.'];
     let ecarte = null;
-    if (elagueBest && M.cp - elagueBest.cp >= BORNES.ecarteDit) { // un coup tentant qui perdait : on le dit au conditionnel
+    // (a) un coup tentant qui PERDAIT, et dont la réfutation se lit (perte forcée, pas un coup à moi non forcé — défaut 3)
+    if (elagueBest && M.cp - elagueBest.cp >= BORNES.ecarteDit && refutationLisible(fenAvant, elagueBest.pvUci, camp)) {
       const sanR = sanDe(fenAvant, elagueBest.coup);
-      const g = elagueBest.matSubi ? PAROLE.ecarteMat : PAROLE.ecarte;
       const ligneR = ligneTexte(coupe(elagueBest.ligne, fenAvant, elagueBest.pvUci), ply);
-      parties.push(remplir(g, { R: sanR, M: sanM, ligneR, perteR: elagueBest.perte ?? 'du matériel' }));
+      parties.push(remplir(elagueBest.matSubi ? PAROLE.ecarteMat : PAROLE.ecartePerte, { R: sanR, ligneR, perteR: elagueBest.perte ?? 'du matériel', fin }));
       ecarte = { san: sanR, coup: elagueBest.coup, raison: elagueBest.raison, ligne: elagueBest.ligne, pvUci: elagueBest.pvUci, perte: elagueBest.perte ?? 'la partie', mat: !!elagueBest.matSubi };
-    } else if (survivantSuivant && Math.abs(M.cp - survivantSuivant.cp) < BORNES.seValent) {
-      parties.push(remplir(PAROLE.seValent, { M: sanM, R: sanDe(fenAvant, survivantSuivant.coup) }));
+    }
+    // (b) GAIN MANQUÉ (défaut 2) : M gagne une pièce (par une prise), le meilleur autre coup ne la gagne pas → « il sauvait sa pièce »
+    else if (M.captured && M.gain && survivantSuivant && M.cp - survivantSuivant.cp >= BORNES.ecarteDit && !survivantSuivant.gain) {
+      const sanR = sanDe(fenAvant, survivantSuivant.coup);
+      parties.push(remplir(PAROLE.ecarteManque, { R: sanR, sauve: saPiece(M.captured) }));
+      ecarte = { san: sanR, coup: survivantSuivant.coup, raison: survivantSuivant.raison, ligne: survivantSuivant.ligne, pvUci: survivantSuivant.pvUci, manque: saPiece(M.captured) };
+    }
+    // deux coups qui se valent (< 10) : on dit la raison du nœud
+    else if (survivantSuivant && Math.abs(M.cp - survivantSuivant.cp) < BORNES.seValent) {
+      parties.push(remplir(PAROLE.seValent, { M: sanM, R: sanDe(fenAvant, survivantSuivant.coup), raison: M.raison || MOT_NOEUD[M.noeud] || 'c\'est le plus naturel' }));
     }
     return { phrase: parties.join(' ').replace(/\s+/g, ' ').trim(), ecarte, alerte: null };
   }

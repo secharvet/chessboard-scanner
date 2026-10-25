@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { JoueurArbre } from '../coach/joueur/joueur-arbre.mjs';
+import { JoueurArbre, refutationLisible } from '../coach/joueur/joueur-arbre.mjs';
 
 const neuf = (opts = {}) => new JoueurArbre({ camp: 'w', budget: 120000, ...opts });
 
@@ -45,6 +45,20 @@ test('le coup écarté est un coup qui PERDAIT, dit au conditionnel avec sa lign
   assert.ok(/tour/.test(r.ecarte.perte), 'la perte nommée est une tour');
   assert.ok(/J'ai pensé à/.test(r.phrase) && /rien de tel/.test(r.phrase));
   assert.ok(Array.isArray(r.ecarte.ligne) && r.ecarte.ligne.length > 0); // la réfutation porte sa ligne
+});
+
+test('le gain est NOMMÉ (jamais « du matériel ») et le gain manqué se dit « il sauvait sa pièce »', async () => {
+  // Dxd5 gagne une pièce ; Db3 attaque d5 mais ne la gagne pas → gain manqué.
+  const r = await neuf().choisir('4k3/8/8/3n4/8/8/8/3QK3 w - - 0 1', { camp: 'w' });
+  assert.ok(/je gagne une pièce/.test(r.phrase) && !/du matériel/.test(r.phrase));
+  assert.ok(/il sauvait son cavalier/.test(r.phrase));
+  assert.ok(r.ecarte && r.ecarte.manque === 'son cavalier'); // écarté = gain manqué, pas une perte
+});
+
+test('réfutation lisible : la perte vient de la réponse adverse (vrai) vs d\'un coup à moi non forcé (faux)', () => {
+  const fen = 'r3k3/8/8/8/8/8/8/R3K3 w - - 0 1';
+  assert.equal(refutationLisible(fen, ['e1e2', 'a8a1'], 'w'), true); // Rxa1 punit tout de suite
+  assert.equal(refutationLisible(fen, ['e1e2', 'e8e7', 'e2d3', 'a8a1'], 'w'), false); // la perte dépend de mon Rd3 non forcé
 });
 
 test('le trou n\'est pas faussement signalé quand la recherche complète est d\'accord avec l\'arbre', async () => {
