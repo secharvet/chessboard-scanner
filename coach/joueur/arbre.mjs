@@ -7,7 +7,7 @@
  * (compte sur une case, matériel) servent à produire le coup et à le dire, jamais à décider — c'est l'étape 4 (la
  * recherche restreinte aux candidats) qui départage (règle 1 du contrat).
  *
- * Les questions qui regardent plus loin qu'un coup (1b « menace-t-il mat », 1f « s'il jouait deux fois », 2a « ai-je un
+ * Les questions qui regardent plus loin qu'un coup (1b « menace-t-il mat », 1f « que menace-t-il », 2a « ai-je un
  * mat ») ne refont pas de recherche ici : elles reçoivent une `sonde` déjà calculée par le joueur (réutilisant
  * `Recherche.menace`, coup nul, budget 60 000, précision du pilote), ce qui les laisse testables hors ligne.
  */
@@ -152,16 +152,16 @@ export function clouage({ fen, camp }) {
   return out;
 }
 
-/** 1f — S'il jouait deux fois de suite, que gagnerait-il ? La parade = tout coup après lequel sa suite ne gagne plus (test). */
+/** 1f — Que menace-t-il ? (sa menace s'il avait le trait) La parade = tout coup après lequel sa suite ne gagne plus (test). */
 export function deuxCoups({ fen, camp, sonde }) {
   if (!sonde?.menace || sonde.menace.mat || typeof sonde.paree !== 'function') return []; // le mat, c'est 1b
-  const perte = sonde.menace.perte ?? 'du matériel';
+  const ligne = sonde.menace.ligne || sonde.menace.perte || 'du matériel';
   const map = buildAttackMap(fen), out = [];
   for (const m of coupsLegaux(fen)) {
     const u = uciDe(m); if (!sonde.paree(u)) continue;
     // famille de la parade (pour l'ordre du radar, pas un score) : prendre, fuir (le roi ou une pièce attaquée s'écarte), contre (échec), défendre
     const famille = m.captured ? 'prendre' : m.piece === 'k' ? 'fuir' : new Chess(apres(fen, m)).inCheck() ? 'contre' : map.attackersOf(m.from, other(camp)).length ? 'fuir' : 'defendre';
-    out.push({ coup: u, raison: `s'il jouait deux fois il gagnerait ${perte} : je pare`, noeud: '1f', famille });
+    out.push({ coup: u, raison: `il menace ${ligne} : je pare`, noeud: '1f', famille });
   }
   return out;
 }
@@ -294,7 +294,7 @@ export function tactiqueNommee({ fen, camp }) {
 }
 
 /**
- * 2f — Et si je jouais deux fois de suite ? Le coup qui crée une menace que l'adversaire doit parer : je menace mat, je
+ * 2f — Que menacé-je ? Le coup qui crée une menace que l'adversaire doit parer : je menace mat, je
  * menace une fourchette / un échec qui gagne, ou je menace une de ses pièces. C'est `menace()` retourné vers MON camp (je
  * joue, il passe, je gagne) — la sonde le calcule dans le joueur (comme 1f). Le candidat est le PREMIER coup de ma ligne.
  */
@@ -574,7 +574,7 @@ export function candidats(ctx) {
 export function selectionner(cands, plafond = 3) {
   const radarBrut = cands.filter((c) => c.noeud[0] === '1');
   let radar = radarBrut;
-  // Le radar reste hors plafond, mais 1c et 1f (pièce en prise, « s'il jouait deux fois ») produisent toutes les parades :
+  // Le radar reste hors plafond, mais 1c et 1f (pièce en prise, « que menace-t-il ») produisent toutes les parades :
   // si le radar dépasse 6, on ne garde pour 1c/1f que DEUX parades de chaque famille (prendre, fuir, défendre,
   // s'interposer, contre-attaquer), dans l'ordre de l'arbre. Pas de coupe en dessous de sept. Ce n'est pas un choix par
   // score, c'est un ordre de famille (la mesure du 25 oct. a montré qu'une seule parade par famille coupait le bon coup).

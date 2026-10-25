@@ -301,7 +301,7 @@ test('racineLimitee absente : la recherche garde tous les coups de la racine', (
 
 /* ====================================================================== temps 2, premier lot (A/B/C) ====================================================================== */
 
-/* ---- 2f « et si je jouais deux fois » : le générateur rend la sonde du joueur (mesMenaces) en candidats ---- */
+/* ---- 2f « que menacé-je » : le générateur rend la sonde du joueur (mesMenaces) en candidats ---- */
 test('2f (générateur) : rend {coup, raison, noeud: 2f} depuis la sonde ; rien sans sonde', () => {
   assert.deepEqual(deuxCoupsMoi({}), []);
   assert.deepEqual(deuxCoupsMoi({ sonde: { mesMenaces: [] } }), []);

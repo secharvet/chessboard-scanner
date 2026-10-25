@@ -45,7 +45,7 @@ export function pastilleDe(c) {
   else if (n === '2e') libelle = /enfilade/.test(c.raison || '') ? 'enfilade' : /cloue/.test(c.raison || '') ? 'je cloue' : 'tactique';
   else if (n === '3C' && (m = (c.raison || '').match(/plan\s*:\s*(.+)$/))) libelle = `mon plan : ${m[1]}`;
   else if (n === '1c' && (m = (c.raison || '').match(/m[ao]n? (tour|dame|fou|cavalier|pion|roi)/))) libelle = `${m[0]} en prise`;
-  else if (n === '1f' && (m = (c.raison || '').match(/gagnerait (.+?)\s*:/))) libelle = `il menace ${m[1].trim()}`;
+  else if (n === '1f' && (m = (c.raison || '').match(/^il menace (.+?)\s*:/))) libelle = `il menace ${m[1].split(' puis ')[0].trim()}`;
   else if (n === '2f' && (m = (c.raison || '').match(/je menace (.+?)(?: :|$)/))) libelle = `je menace ${m[1].trim()}`;
   else if (n === '3A') libelle = /pion passé/.test(c.raison || '') ? 'mon pion passé' : /j'attends/.test(c.raison || '') ? 'j\'attends' : (m = (c.raison || '').match(/j'améliore (ma|mon) (\w+)/)) ? `j'améliore ${m[1]} ${m[2]}` : 'j\'améliore';
   return { libelle, couleur };

@@ -29,12 +29,13 @@ test('RÈGLE 1 — aucun coup ne se joue sans comparaison : le choix est toujour
   }
 });
 
-test('parade par test (type 16.Fb5+) : la menace « s\'il jouait deux fois » est parée par un coup trouvé par test', async () => {
+test('1f « que menace-t-il » : la menace (type 16.Fb5+) est parée par un coup trouvé par test', async () => {
   // Noir menace ...Cc2+ puis ...Cxa1 (fourchette qui gagne la tour) ; le coach pare (1f).
   const r = await neuf().choisir('4k3/8/8/8/3n4/8/8/R3K3 w - - 0 1', { camp: 'w' });
   assert.equal(r.noeud, '1f');
-  assert.ok(/pare|deux fois/.test(r.phrase));
-  assert.ok(r.candidats.every((c) => c.noeud === '1f')); // toutes les parades viennent du même nœud
+  assert.ok(/menace/.test(r.phrase) && /pare/.test(r.phrase));
+  assert.ok(!/deux fois/.test(r.phrase)); // plus jamais « deux fois » (demande de Sébastien)
+  assert.ok(r.candidats.filter((c) => c.noeud[0] === '1').every((c) => c.noeud === '1f')); // toutes les parades du radar viennent du même nœud
 });
 
 test('le coup écarté est un coup qui PERDAIT, dit au conditionnel avec sa ligne et sa perte', async () => {
@@ -79,7 +80,7 @@ test('le trou n\'est pas faussement signalé quand la recherche complète est d\
 });
 
 test('plafond 1f : deux parades par famille — De6+ (w-12 c.26, bilan 4d5e252) revient dans les candidats', async () => {
-  // radar > 6 ; De6+ était une parade de 1f « s'il jouait deux fois », coupée quand on n'en gardait qu'une par famille.
+  // radar > 6 ; De6+ était une parade de 1f « que menace-t-il », coupée quand on n'en gardait qu'une par famille.
   const r = await neuf({ budget: 120000 }).choisir('2kr2r1/2p1nQ2/1p1p4/7p/4b3/R7/1PP2PPP/3R2K1 w - - 0 26', { camp: 'w' });
   assert.ok(r.candidats.some((c) => c.coup === 'f7e6'));
 });
@@ -90,11 +91,26 @@ test('plafond 3Y : étape 1 vide, plafond 4 — la prophylaxie passe dans les ca
   assert.ok(r.candidats.some((c) => c.noeud === '3Y'));
 });
 
-test('2f « et si je jouais deux fois » : une menace de mat est produite (Cb5 → Cc7 mat, w-06, bilan 4d5e252)', async () => {
+test('2f « que menacé-je » : une menace de mat est produite (Cb5 → Cc7 mat, w-06, bilan 4d5e252)', async () => {
   const r = await neuf({ budget: 120000 }).choisir('r1bnkb1r/pp1pqppn/3pp2p/4P3/8/2N2N2/PPP1BPPP/R1BQK2R w KQkq - 0 9', { camp: 'w' });
   const c = r.candidats.find((x) => x.coup === 'c3b5');
   assert.ok(c && c.noeud === '2f', 'Cb5 est un candidat du nœud 2f');
   assert.ok(/je menace mat/.test(c.raison), 'la raison dit « je menace mat »');
+  assert.ok(!/deux fois/.test(c.raison));
+});
+
+test('parole : aucune phrase produite ne contient « deux fois » (demande de Sébastien)', async () => {
+  const positions = [
+    '4k3/8/8/8/3n4/8/8/R3K3 w - - 0 1',                                         // 1f (il menace)
+    'r1bnkb1r/pp1pqppn/3pp2p/4P3/8/2N2N2/PPP1BPPP/R1BQK2R w KQkq - 0 9',        // 2f (je menace mat)
+    'r1q2r1k/2p1R1pp/p2p4/3p4/8/8/PPP2PPP/R1BQ2K1 w - - 0 16',                  // 2f (je menace mat)
+    '1k2r1r1/2pn4/Qp1p3p/3q3N/1P1B2p1/P7/2P2PPP/3R1RK1 w - - 0 29',            // 2f (mat + menace sa dame)
+  ];
+  for (const fen of positions) {
+    const r = await neuf({ budget: 120000 }).choisir(fen, { camp: 'w' });
+    assert.ok(!/deux fois/i.test(r.phrase), `« deux fois » dans : ${r.phrase}`);
+    for (const c of r.candidats) assert.ok(!/deux fois/i.test(c.raison || ''), `« deux fois » dans une raison : ${c.raison}`);
+  }
 });
 
 test('2f : rien n\'est menacé en position calme → aucun candidat 2f', async () => {
