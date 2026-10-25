@@ -24,7 +24,7 @@ import { evaluer, enCentipions } from './evaluation.mjs';
 import { Recherche, MAT } from './recherche.mjs';
 import { materielEnMots, ligneTexte, GABARITS } from './parole.mjs';
 import { toFrenchSan } from '../notation.mjs';
-import { candidats as candidatsArbre, candidatsEtAllumes, selectionner, ORDRE, saPiece, piecesEnPrise } from './arbre.mjs';
+import { candidats as candidatsArbre, candidatsEtAllumes, selectionner, ORDRE, saPiece, piecesEnPrise, verifieBranche } from './arbre.mjs';
 import { buildAttackMap, other, sq as caseNom } from '../../positional/attack-map.js';
 import { gainEchange } from '../en-prise.mjs';
 
@@ -38,6 +38,7 @@ export const MOT_NOEUD = {
   '1e': 'une pièce clouée', '1f': 'il me menace', '2a': 'un mat', '2b': 'une prise qui gagne',
   '2c': 'un coup intermédiaire', '2d': 'une double attaque', '2e': 'une tactique', '3L': 'le livre',
   '3D': 'je développe', '3P': 'ma pire pièce', '3Y': 'la prophylaxie', '3C': 'mon plan',
+  '3p': 'un coup de pion', '3r': 'je cède une case utile', '3s': 'je surprotège',
 };
 
 /* Gabarits de l'étape 6, dans gabarits-parole.json section « arbre » (relus par l'Expert) : le gain et la perte NOMMÉS par
@@ -110,10 +111,10 @@ export class Joueur {
     const fenAvant = chess.fen(), camp = chess.turn();
     const E0 = enCentipions(this.recherche.evaluationPosee(ech).score);
     const sonde = this.#sonde(ech, fenAvant, camp, E0, { rapide: !!opts.rapide });
-    const { liste: tous, allumes } = candidatsEtAllumes({ fen: fenAvant, camp, depart, historique, sonde });
+    const { liste: tous, allumes } = candidatsEtAllumes({ fen: fenAvant, camp, depart, historique, sonde }, { fermeture: true });
     const c = tous.find((x) => x.coup === uci) ?? null;
     // vérification par nœud reconnaissant ; le nœud qui nomme = le plus haut VÉRIFIÉ (les raisons sont déjà triées par l'arbre)
-    if (c) for (const r of c.raisons) r.verifie = this.#verifie(r.noeud, sonde);
+    if (c) for (const r of c.raisons) r.verifie = this.#verifie(r, c.coup, fenAvant, camp, sonde);
     const nommant = c ? c.raisons.find((r) => r.verifie !== false) ?? null : null;
     return {
       candidats: tous, allumes,
@@ -123,14 +124,19 @@ export class Joueur {
   }
 
   /**
-   * Drapeau « vérifié » d'un nœud qui reconnaît le coup. 1c : la pièce était-elle VRAIMENT en prise, c.-à-d. la ligne du
-   * coup nul (`sonde.menace`) gagne-t-elle vraiment du matériel (≥ une pièce / l'échange, ou mat) ? Une pièce attaquée
-   * mais défendue — ou dont l'attaquant est cloué — ne donne pas de menace réelle au coup nul : non vérifié. Les autres
-   * nœuds ne mesurent rien de ce genre → vérifiés d'office (seul 1c est vérifié pour l'instant, point de l'Expert).
+   * Drapeau « vérifié » d'un nœud qui reconnaît le coup (règle de l'Expert : pas de vérification, pas de nom). La raison
+   * affichée doit se contrôler sur l'échiquier :
+   *  - 1c : la pièce était-elle VRAIMENT en prise, c.-à-d. la ligne du coup nul (`sonde.menace`) gagne-t-elle vraiment du
+   *    matériel (≥ une pièce / l'échange, ou mat) ? Une pièce attaquée mais défendue — ou dont l'attaquant est cloué — ne
+   *    donne pas de menace réelle : non vérifié.
+   *  - 3p / 3r / 3s (« fermer l'arbre ») : on repose la question du nœud sur l'échiquier (centre, ouverture, chasse,
+   *    espace, abri ; case cédée utilisable ; point surprotégé) via `verifieBranche`.
+   *  - les autres nœuds affirment une chose vraie par construction (en échec, une prise, un mat) → vérifiés d'office.
    */
-  #verifie(noeud, sonde) {
-    if (noeud !== '1c') return true;
-    return !!sonde.menace && (sonde.menace.mat || (sonde.menace.gainMat ?? 0) >= 2);
+  #verifie(r, uci, fenAvant, camp, sonde) {
+    if (r.noeud === '1c') return !!sonde.menace && (sonde.menace.mat || (sonde.menace.gainMat ?? 0) >= 2);
+    if (r.noeud === '3p' || r.noeud === '3r' || r.noeud === '3s') return verifieBranche(r.noeud, r.famille, fenAvant, uci, camp);
+    return true;
   }
 
   async choisir(fen, contexte = {}) {
