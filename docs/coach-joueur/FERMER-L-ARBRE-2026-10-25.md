@@ -8,10 +8,13 @@ s'arrête à des seuils écrits d'avance. Thèse du pilote, antithèse de l'Expe
 ## Les deux seuils, dans cet ordre
 
 1. **L'honnêteté d'abord** : parmi les coups nommés, **moins de 5 % de noms faux** (la raison affichée ne se vérifie pas
-   sur l'échiquier), lus par l'Expert sur 50 coups par tranche. C'est le danger réel : une branche « j'améliore » allumée
-   en permanence ferait tomber les sans nom à zéro et monter les mensonges au plafond. Un sans nom est honnête, un faux
-   nom ne l'est pas. Chaque nœud doit donc **vérifier** quelque chose qui change avec le coup (règle de l'Expert, déjà
-   appliquée à 1c).
+   sur l'échiquier). **Mesuré par le code, pas par une lecture** (Sébastien, 25 oct. : pas de LLM dans la boucle de
+   vérification, trop coûteux et trop peu fiable ; c'est aussi l'interdit de la directive). Chaque nœud porte un
+   **vérificateur** qui contrôle sur l'échiquier ce qu'il affirme ; un nœud qui ne vérifie pas ne nomme pas ; et le
+   harnais recompte après coup, indépendamment du générateur, ce que la phrase affirme (la pièce était en prise, le pion
+   est au centre, la case est libérée), comme il le fait déjà pour les menaces non parées. Le danger reste le même : une
+   branche « j'améliore » allumée en permanence ferait tomber les sans nom à zéro et monter les mensonges au plafond. Un
+   sans nom est honnête, un faux nom ne l'est pas.
 2. **La couverture ensuite** : **moins de 10 % de sans nom qui ne sont pas des bévues**, à 2000 et plus, par phase ;
    5 % quand les branches ci-dessous seront là ; sans doute jamais en finale, où la théorie est faite de coups précis.
    Un sans nom chez un 2100 n'est pas un échec de l'arbre : c'est sa liste de lecture.
@@ -52,12 +55,13 @@ dernier recours, avec une raison vérifiable, jamais allumée en permanence.
 **Ce qu'on ne fait pas** : le sacrifice positionnel (hors de portée d'un arbre, seul le calcul le trouve) ; la manœuvre
 longue, le levier d'aile, le transfert vers l'aile du roi, la simplification : déjà couverts par 3P, d), 3d et 3c.
 
-## La boucle
+## La boucle : deux tours au plus (Sébastien : « c'est un peu long »)
 
-1. Nommage rapide livré (Dev chef, en cours) ; accord rapide / lent sur les 600 positions de l'échantillon.
-2. Branches A puis B puis C, chacune avec ses tests hors ligne (produit / ne produit pas / se vérifie / ne se vérifie
-   pas).
-3. 500 positions **neuves** de 2000-2199 (quelques minutes) : la table, la liste des sans nom, 50 coups nommés lus par
-   l'Expert (noms faux).
-4. Si les deux seuils ne sont pas atteints : la branche suivante, et retour en 3 sur 500 positions neuves.
-5. Quand ils le sont : les 100 000 positions par tranche sur Orion (environ 5 h pour trois tranches, 12 processus).
+1. **Premier lot** (Dev chef, d'une traite) : le nommage rapide, la branche A (pions d'ouverture), les deux premières de B
+   (la pièce qui cède une case, la surprotection), chacune avec son vérificateur et ses tests hors ligne (produit / ne
+   produit pas / le vérificateur refuse). Accord rapide / lent mesuré sur les 600 positions de l'échantillon.
+2. **Une mesure** : 500 positions **neuves** de 2000-2199 (quelques minutes). Trois chiffres : noms faux (harnais),
+   sans nom hors bévues, temps par coup.
+3. Sous les seuils : les 100 000 positions par tranche sur Orion (environ 5 h pour trois tranches, 12 processus).
+   Sinon : **second lot** (le reste de B, puis C), une seconde mesure, et on lance quel que soit le résultat, en
+   publiant les sans nom comme liste de lecture.
