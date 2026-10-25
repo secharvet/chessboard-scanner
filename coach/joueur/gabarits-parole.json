@@ -140,7 +140,7 @@
     "ecarte_perte": "J'ai pensé à {R}. Mais il répondait {ligneR}, et je perdais {perteR}. {fin}",
     "ecarte_mat": "J'ai pensé à {R}. Mais il répondait {ligneR}, et il me matait. {fin}",
     "ecarte_manque": "J'ai pensé à {R}. Mais avec {R}, il sauvait {sauve}.",
-    "se_valent": "{M} ou {R} : les deux se valent. J'ai pris {M} : {raison}.",
+    "se_valent": "{M} ou {R} : les deux se valent. J'ai pris {M}{suite}.",
     "trou": "Mon calcul trouve mieux que mes idées : je joue {M}.{gain}",
     "fin_rien_de_tel": "Avec {M}, rien de tel.",
     "fin_evite": "{M} évite ça."
