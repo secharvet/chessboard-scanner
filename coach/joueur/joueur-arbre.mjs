@@ -265,7 +265,9 @@ export class Joueur {
     }
     // deux coups qui se valent (< 10) : on dit la raison du nœud
     else if (survivantSuivant && Math.abs(M.cp - survivantSuivant.cp) < BORNES.seValent) {
-      parties.push(remplir(PAROLE.seValent, { M: sanM, R: sanDe(fenAvant, survivantSuivant.coup), raison: M.raison || MOT_NOEUD[M.noeud] || 'c\'est le plus naturel' }));
+      const brute = (M.raison || MOT_NOEUD[M.noeud] || 'c\'est le plus naturel').replace(/\.\s*$/, ''); // pas de point final doublé
+      const raison = brute.charAt(0).toLowerCase() + brute.slice(1); // la raison en minuscule après « : »
+      parties.push(remplir(PAROLE.seValent, { M: sanM, R: sanDe(fenAvant, survivantSuivant.coup), raison }));
     }
     return { phrase: parties.join(' ').replace(/\s+/g, ' ').trim(), ecarte, alerte: null };
   }
