@@ -16,10 +16,11 @@ const PASTILLE_SORTE = { plan: { libelle: 'plan', couleur: '#4e9a06' }, ameliora
 /** Le « mot du nœud » (relecture Expert : étape 1 par « il » ou « ma », étape 2 par « je ») ; la couleur par étape. */
 export const MOT_NOEUD = {
   '1a': 'je suis en échec', '1b': 'il menace mat', '1c': 'ma pièce en prise', '1d': 'mat du couloir', '1e': 'je suis cloué', '1f': 'il me menace',
-  '2a': 'je mate', '2b': 'je gagne', '2c': 'avant de reprendre', '2d': 'double attaque', '2e': 'tactique',
+  '2a': 'je mate', '2b': 'je gagne', '2c': 'avant de reprendre', '2d': 'double attaque', '2e': 'tactique', '2f': 'je menace',
   '3L': 'théorie', '3D': 'je développe', '3P': 'ma pire pièce', '3Y': 'je l\'empêche', '3C': 'mon plan',
+  '3d': 'j\'attaque son roi', '3A': 'j\'améliore',
 };
-const COUL_NOEUD = { 1: '#c17d11', 2: '#a40000', '3L': '#5c3566', '3D': '#4e9a06', '3P': '#4e9a06', '3Y': '#3465a4', '3C': '#4e9a06' };
+const COUL_NOEUD = { 1: '#c17d11', 2: '#a40000', '3L': '#5c3566', '3D': '#4e9a06', '3P': '#4e9a06', '3Y': '#3465a4', '3C': '#4e9a06', '3d': '#a40000', '3A': '#3465a4' };
 /** Le type de pièce (minuscule) sur une case d'une FEN, ou null. */
 function pieceDe(fen, sq) {
   if (!fen || !sq) return null;
@@ -45,6 +46,8 @@ export function pastilleDe(c) {
   else if (n === '3C' && (m = (c.raison || '').match(/plan\s*:\s*(.+)$/))) libelle = `mon plan : ${m[1]}`;
   else if (n === '1c' && (m = (c.raison || '').match(/m[ao]n? (tour|dame|fou|cavalier|pion|roi)/))) libelle = `${m[0]} en prise`;
   else if (n === '1f' && (m = (c.raison || '').match(/gagnerait (.+?)\s*:/))) libelle = `il menace ${m[1].trim()}`;
+  else if (n === '2f' && (m = (c.raison || '').match(/je menace (.+?)(?: :|$)/))) libelle = `je menace ${m[1].trim()}`;
+  else if (n === '3A') libelle = /pion passé/.test(c.raison || '') ? 'mon pion passé' : /j'attends/.test(c.raison || '') ? 'j\'attends' : (m = (c.raison || '').match(/j'améliore (ma|mon) (\w+)/)) ? `j'améliore ${m[1]} ${m[2]}` : 'j\'améliore';
   return { libelle, couleur };
 }
 

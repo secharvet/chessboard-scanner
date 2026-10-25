@@ -2,9 +2,9 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
   echec, menaceMat, pieceEnPrise, derniereRangee, clouage, deuxCoups,
-  monMat, priseGagnante, intermede, pieceNonDefendue, tactiqueNommee,
-  livre, developpement, pirePiece, prophylaxie, plansCatalogue,
-  candidats, selectionner, piecesEnPrise,
+  monMat, priseGagnante, intermede, pieceNonDefendue, tactiqueNommee, deuxCoupsMoi,
+  livre, developpement, pirePiece, prophylaxie, plansCatalogue, attaqueDuRoi, amelioration,
+  candidats, selectionner, piecesEnPrise, ORDRE,
 } from '../coach/joueur/arbre.mjs';
 import { Echiquier, uci as uciDe } from '../coach/joueur/echiquier.mjs';
 import { Recherche, MAT } from '../coach/joueur/recherche.mjs';
@@ -297,4 +297,48 @@ test('racineLimitee absente : la recherche garde tous les coups de la racine', (
   const rech = new Recherche({ budget: 40000 });
   const r = rech.chercher(ech, { budget: 40000 });
   assert.equal(r.candidats.length, 20); // les 20 coups du départ
+});
+
+/* ====================================================================== temps 2, premier lot (A/B/C) ====================================================================== */
+
+/* ---- 2f « et si je jouais deux fois » : le générateur rend la sonde du joueur (mesMenaces) en candidats ---- */
+test('2f (générateur) : rend {coup, raison, noeud: 2f} depuis la sonde ; rien sans sonde', () => {
+  assert.deepEqual(deuxCoupsMoi({}), []);
+  assert.deepEqual(deuxCoupsMoi({ sonde: { mesMenaces: [] } }), []);
+  const mm = [{ coup: 'c3b5', raison: 'je menace mat : s\'il ne fait rien, Cb5 puis Cc7#' }];
+  assert.deepEqual(deuxCoupsMoi({ sonde: { mesMenaces: mm } }), [{ coup: 'c3b5', raison: mm[0].raison, noeud: '2f' }]);
+});
+
+/* ---- 3d attaque du roi (positions du brief, bilan 4d5e252) ---- */
+test('3d : produit la pièce qui entre, le levier et le sacrifice dans la zone du roi', () => {
+  const coups = (fen) => attaqueDuRoi({ fen, camp: fen.split(' ')[1] }).map((c) => c.coup);
+  assert.ok(coups('r1b1r1k1/1p2qp1p/2npp1pB/6N1/p1BP2Q1/P7/1PP2PPP/1K1R3R w - - 1 16').includes('g4f4')); // w-16 Df4 : la pièce entre
+  assert.ok(coups('rnbq1rk1/pp1n1pp1/2p1p2p/3pP3/3P1N2/2PB4/P1P2PPP/R1BQ1RK1 w - - 1 10').includes('f4h5')); // w-23 Ch5 : entre (sacrifice d'installation)
+  assert.ok(coups('2kr4/pppbq2p/4rp2/nPP1Np2/5P2/2P1Q3/P5PP/2KR1B1R w - - 0 20').includes('c5c6')); // w-17 c6 : le levier
+  assert.ok(coups('2q3rk/4R1pp/p6B/8/4Q3/1P6/2r2PPP/R5K1 w - - 0 25').includes('h6g7')); // w-08 Fxg7+ : le sacrifice proposé
+});
+
+test('3d : ne produit pas quand mon roi n\'est pas à l\'abri, ni dans une position calme sans accès', () => {
+  assert.equal(attaqueDuRoi({ fen: 'r1bqk2r/pppp1ppp/2n2n2/2b1p2Q/2B1P3/8/PPPP1PPP/RNB1K1NR w KQkq - 0 1', camp: 'w' }).length, 0); // mon roi encore en e1
+  assert.equal(attaqueDuRoi({ fen: 'r2q1rk1/ppp2ppp/2np1n2/2b1p3/2B1P3/2NP1N2/PPP2PPP/R2Q1RK1 w - - 0 1', camp: 'w' }).length, 0); // ni ligne ni crochet
+});
+
+/* ---- 3A toujours un coup d'amélioration : produit toujours au moins un coup ---- */
+test('3A : produit toujours au moins un coup (les positions « vides » du bilan 4d5e252)', () => {
+  for (const fen of [
+    '8/2p1kppp/1pB5/3Pp3/4P3/7P/P1Q2PP1/6K1 w - - 0 27',       // w-03 c.27
+    '3R4/5pk1/p3pp1p/pr6/5P2/6P1/R4K1P/8 w - - 2 35',          // w-09 c.35
+    'r2qk2r/1bpnnpb1/pp1pp2p/6p1/3PP3/P1N1BN2/1PPQBPPP/R4RK1 w kq - 0 12', // w-19 c.12
+    'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1', // le départ (jamais vide)
+  ]) {
+    const out = amelioration({ fen, camp: fen.split(' ')[1] });
+    assert.ok(out.length >= 1, `3A doit produire au moins un coup (${fen})`);
+    assert.ok(out.every((c) => c.noeud === '3A'));
+  }
+});
+
+test('2f/3d/3A sont dans l\'ORDRE de l\'arbre, aux bonnes places', () => {
+  assert.ok(ORDRE.indexOf('2f') > ORDRE.indexOf('2e') && ORDRE.indexOf('2f') < ORDRE.indexOf('3L')); // 2f après 2e, dans l'étape 2
+  assert.ok(ORDRE.indexOf('3d') < ORDRE.indexOf('3P')); // 3d avant 3P
+  assert.equal(ORDRE[ORDRE.length - 1], '3A'); // 3A en dernier (fin d'étape 3)
 });

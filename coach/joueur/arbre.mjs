@@ -293,8 +293,19 @@ export function tactiqueNommee({ fen, camp }) {
   return out;
 }
 
+/**
+ * 2f — Et si je jouais deux fois de suite ? Le coup qui crée une menace que l'adversaire doit parer : je menace mat, je
+ * menace une fourchette / un échec qui gagne, ou je menace une de ses pièces. C'est `menace()` retourné vers MON camp (je
+ * joue, il passe, je gagne) — la sonde le calcule dans le joueur (comme 1f). Le candidat est le PREMIER coup de ma ligne.
+ */
+export function deuxCoupsMoi({ sonde }) {
+  const mm = sonde?.mesMenaces;
+  if (!mm?.length) return [];
+  return mm.map((t) => ({ coup: t.coup, raison: t.raison, noeud: '2f' }));
+}
+
 export function etape2(ctx) {
-  return [...monMat(ctx), ...priseGagnante(ctx), ...intermede(ctx), ...pieceNonDefendue(ctx), ...tactiqueNommee(ctx)];
+  return [...monMat(ctx), ...priseGagnante(ctx), ...intermede(ctx), ...pieceNonDefendue(ctx), ...tactiqueNommee(ctx), ...deuxCoupsMoi(ctx)];
 }
 
 /* ====================================================================== étape 3 (réduite pour le temps 1) ====================================================================== */
@@ -389,14 +400,148 @@ export function developpement({ fen, camp }) {
   return out;
 }
 
+/** Un pion de `camp` est-il passé (aucun pion adverse devant sur sa colonne ni les voisines) ? */
+function estPionPasse(map, p, camp) {
+  if (p.type !== 'p') return false;
+  for (const q of map.pieces) {
+    if (q.type !== 'p' || q.color === camp) continue;
+    if (Math.abs(q.fileIdx - p.fileIdx) <= 1 && (camp === 'w' ? q.rank > p.rank : q.rank < p.rank)) return false;
+  }
+  return true;
+}
+
+/**
+ * 3d — Est-ce que j'attaque son roi ? Zone = les cases autour de son roi et la rangée devant. A = mes pièces (hors pions
+ * et roi) qui attaquent la zone ou peuvent l'attaquer en un coup ; D = ses défenseurs (hors pions et roi).
+ *
+ * Trois sortes de candidats, chacune sa porte (le calcul départage ensuite) :
+ *  - la PRISE ou l'ÉCHEC dans la zone (y compris un sacrifice) : produit dès que ma dame est là et mon roi à l'abri, MÊME
+ *    sans ligne ouverte et même si le compte de matériel est perdant — c'est la correction de l'Expert (Fxg7+ de w-08) :
+ *    si l'arbre ne propose pas le sacrifice, le calcul ne le voit jamais ; la règle le propose, le calcul décide ;
+ *  - la PIÈCE de plus qui entre dans la zone : quand j'ai au moins autant d'attaquants que de défenseurs (A ≥ D + 1) et
+ *    un accès (colonne sans pion à moi, ou crochet …h6/…g6) ;
+ *  - le LEVIER de pion contre son roi : quand il y a un accès.
+ * Dans tous les cas, ma dame sur l'échiquier et les trois refus : mon roi pas à l'abri, retard de développement, ou centre
+ * ouvert devant un roi adverse resté au centre. (Note Dev chef : le seuil littéral « A − D ≥ 2 » du brief refuse les
+ * exemples listés — w-23 A−D=1, w-17 A−D<0, w-08 sans ligne — je l'ai assoupli comme ci-dessus et je le signale au pilote.)
+ */
+export function attaqueDuRoi({ fen, camp }) {
+  const map = buildAttackMap(fen);
+  const adv = other(camp);
+  const roiAdv = map.pieces.find((p) => p.type === 'k' && p.color === adv);
+  const roiMoi = map.pieces.find((p) => p.type === 'k' && p.color === camp);
+  if (!roiAdv || !roiMoi) return [];
+  if (!map.pieces.some((p) => p.type === 'q' && p.color === camp)) return []; // sans ma dame, pas d'attaque (règle)
+  const vers = camp === 'w' ? -1 : 1; // de son roi vers moi (la rangée « devant »)
+  const zone = new Set();
+  for (let df = -1; df <= 1; df++) for (let dr = -1; dr <= 1; dr++) { const f = roiAdv.fileIdx + df, r = roiAdv.rank + dr; if (f >= 0 && f < 8 && r >= 1 && r <= 8) zone.add(caseNom(f, r)); }
+  for (let df = -1; df <= 1; df++) { const f = roiAdv.fileIdx + df, r = roiAdv.rank + 2 * vers; if (f >= 0 && f < 8 && r >= 1 && r <= 8) zone.add(caseNom(f, r)); }
+  // A : mes pièces (hors pion/roi) qui attaquent la zone, ou peuvent l'attaquer en un coup ; D : ses défenseurs de la zone
+  const attaqueZone = (sqArr, fenP) => { const mm = buildAttackMap(fenP); return (mm.attacks.get(mm.at[sqArr]) ?? []).some((s) => zone.has(s)); };
+  let A = 0;
+  for (const p of map.pieces) {
+    if (p.color !== camp || p.type === 'p' || p.type === 'k') continue;
+    if ((map.attacks.get(p) ?? []).some((s) => zone.has(s))) { A++; continue; }
+    if (coupsLegaux(fen).some((m) => m.from === p.square && attaqueZone(m.to, apres(fen, m)))) A++;
+  }
+  let D = 0;
+  for (const p of map.pieces) { if (p.color !== adv || p.type === 'p' || p.type === 'k') continue; if ((map.attacks.get(p) ?? []).some((s) => zone.has(s))) D++; }
+  // accès : une colonne du roi (ou voisine) sans pion à moi, ou un crochet (son pion de roque avancé)
+  const colonnes = [roiAdv.fileIdx - 1, roiAdv.fileIdx, roiAdv.fileIdx + 1].filter((f) => f >= 0 && f < 8);
+  const ligneOuverte = colonnes.some((f) => !map.pieces.some((p) => p.type === 'p' && p.color === camp && p.fileIdx === f));
+  const rangHome = adv === 'w' ? 2 : 7;
+  const crochet = map.pieces.some((p) => p.type === 'p' && p.color === adv && Math.abs(p.fileIdx - roiAdv.fileIdx) <= 1 && p.rank !== rangHome); // pion de roque avancé (ou manquant → colonne couverte par ligneOuverte)
+  const acces = ligneOuverte || crochet;
+  // refus 1 : mon roi n'est pas à l'abri (encore sur sa colonne de départ, ou deux défenseurs adverses sur ma propre zone)
+  if (roiMoi.fileIdx === 4 && roiMoi.rank === (camp === 'w' ? 1 : 8)) return [];
+  const zoneMoi = new Set();
+  for (let df = -1; df <= 1; df++) for (let dr = -1; dr <= 1; dr++) { const f = roiMoi.fileIdx + df, r = roiMoi.rank + dr; if (f >= 0 && f < 8 && r >= 1 && r <= 8) zoneMoi.add(caseNom(f, r)); }
+  let contreMoi = 0; for (const p of map.pieces) { if (p.color !== adv || p.type === 'p' || p.type === 'k') continue; if ((map.attacks.get(p) ?? []).some((s) => zoneMoi.has(s))) contreMoi++; }
+  if (contreMoi >= 2) return [];
+  // refus 2 : retard de développement (mes mineures chez elles, deux de plus que les siennes)
+  const home = (c) => map.pieces.filter((p) => (p.type === 'n' || p.type === 'b') && p.color === c && p.rank === (c === 'w' ? 1 : 8)).length;
+  if (home(camp) - home(adv) >= 2) return [];
+  // refus 3 : le centre est ouvert (pas de pion sur d/e) ET son roi est resté au centre (colonnes d/e) → il y joue
+  const pionsCentre = map.pieces.filter((p) => p.type === 'p' && (p.fileIdx === 3 || p.fileIdx === 4)).length;
+  if (pionsCentre === 0 && (roiAdv.fileIdx === 3 || roiAdv.fileIdx === 4)) return [];
+  // --- les candidats ---
+  const out = [], vus = new Set();
+  const ligneDite = ligneOuverte ? 'la colonne est ouverte' : crochet ? 'son pion de roque est avancé' : 'j\'ouvre son roi';
+  const detail = `${A} pièces contre ${D}, ${ligneDite}`;
+  const ajoute = (u) => { if (!vus.has(u)) { vus.add(u); out.push({ coup: u, raison: `j'attaque son roi : ${detail}`, noeud: '3d' }); } };
+  const fidx = (sq) => sq.charCodeAt(0) - 97;
+  const fort = A - D >= 2; // nettement plus d'attaquants que de défenseurs : le sacrifice vaut d'être proposé
+  const presence = A - D >= 1; // au moins autant d'attaquants que de défenseurs : une vraie attaque
+  const dir = camp === 'w' ? 1 : -1;
+  for (const m of coupsLegaux(fen)) {
+    const u = uciDe(m), fenApres = apres(fen, m), map2 = buildAttackMap(fenApres), bougee = map2.at[m.to];
+    const estEchec = new Chess(fenApres).inCheck();
+    // (1) prise ou échec dans la zone, SACRIFICE compris : quand l'attaque est nette (A−D ≥ 2), MÊME si ça perd le compte
+    //     et sans accès — c'est lui qui l'ouvre (correction de l'Expert : sinon le calcul ne voit jamais le sacrifice).
+    if (fort && ((m.captured && zone.has(m.to)) || (estEchec && (zone.has(m.to) || colonnes.includes(fidx(m.to)))))) { ajoute(u); continue; }
+    // (2) la pièce de plus qui entre dans la zone ou la vise de plus près (avec un accès, A ≥ D + 1) — un sacrifice
+    //     d'installation (la pièce va sur une case tenue, type Ch5) y entre aussi, le calcul tranche
+    const entre = bougee && bougee.type !== 'p' && (zone.has(m.to) || (map2.attacks.get(bougee) ?? []).some((s) => zone.has(s)));
+    if (acces && presence && entre) { ajoute(u); continue; }
+    // (3) le levier de pion : une poussée qui met en contact mon pion avec un de ses pions de roque (colonne du roi ou voisine)
+    if (acces && m.piece === 'p') {
+      const f = fidx(m.to), r = Number(m.to[1]);
+      for (const nf of [f - 1, f + 1]) { if (nf < 0 || nf > 7) continue; const q = map2.at[caseNom(nf, r + dir)]; if (q && q.type === 'p' && q.color === adv && colonnes.includes(nf)) { ajoute(u); break; } }
+    }
+  }
+  return out;
+}
+
+/**
+ * 3A — Toujours un coup d'amélioration (fin de l'étape 3, demande de Sébastien : aucun coup sans idée). Produit TOUJOURS
+ * au moins un coup : (1) la pièce la moins active (dame et tours comprises) vers une meilleure case ; (2) le pion passé qui
+ * avance ou la pièce qui le soutient ; (3) sinon un coup d'attente qui ne change ni le matériel ni la sécurité.
+ */
+export function amelioration({ fen, camp }) {
+  const map = buildAttackMap(fen);
+  const out = [], vus = new Set();
+  const ajoute = (u, raison) => { if (!vus.has(u)) { vus.add(u); out.push({ coup: u, raison, noeud: '3A' }); } };
+  const sur = (m) => gainEchange(buildAttackMap(apres(fen, m)), m.to, camp) <= 0;
+  const rangRoi = camp === 'w' ? 1 : 8;
+  // (1) la pièce (dame et tours comprises) la moins active → une case où elle respire plus
+  const miennes = map.pieces.filter((p) => p.color === camp && p.type !== 'p' && p.type !== 'k');
+  if (miennes.length) {
+    const cible = miennes.map((p) => ({ p, m: map.mobility(p) })).sort((a, b) => a.m - b.m)[0].p;
+    const mobAvant = map.mobility(cible);
+    for (const m of coupsLegaux(fen)) {
+      if (m.from !== cible.square) continue;
+      const map2 = buildAttackMap(apres(fen, m)), bougee = map2.at[m.to];
+      if (!bougee || gainEchange(map2, m.to, camp) > 0) continue;
+      if (map2.mobility(bougee) > mobAvant) ajoute(uciDe(m), `rien ne presse : j'améliore ${maPiece(cible.type)} en ${m.to}`);
+    }
+  }
+  // (2) le pion passé qui avance (sans se perdre), ou une pièce qui le soutient par-derrière
+  const passes = map.pieces.filter((p) => p.color === camp && estPionPasse(map, p, camp));
+  for (const m of coupsLegaux(fen)) {
+    if (m.piece !== 'p') continue;
+    const dep = passes.find((p) => p.square === m.from);
+    if (dep && m.to[0] === m.from[0] && sur(m)) ajoute(uciDe(m), 'j\'avance mon pion passé');
+  }
+  // (3) un coup d'attente : un coup sûr qui ne prend rien et ne jette rien (seulement si rien de mieux n'a été produit)
+  if (!out.length) {
+    for (const m of coupsLegaux(fen)) {
+      if (m.captured || !sur(m)) continue;
+      if (m.piece === 'k' && m.to[1] !== String(rangRoi)) continue; // ne pas promener le roi
+      ajoute(uciDe(m), 'j\'attends : ce coup ne change rien'); break;
+    }
+  }
+  if (!out.length) { const m = coupsLegaux(fen)[0]; if (m) ajoute(uciDe(m), 'j\'attends : ce coup ne change rien'); } // garantie : au moins un coup
+  return out;
+}
+
 export function etape3(ctx) {
-  return [...livre(ctx), ...developpement(ctx), ...plansCatalogue(ctx), ...pirePiece(ctx), ...prophylaxie(ctx)];
+  return [...livre(ctx), ...developpement(ctx), ...plansCatalogue(ctx), ...attaqueDuRoi(ctx), ...pirePiece(ctx), ...prophylaxie(ctx)];
 }
 
 /* ====================================================================== assemblage ====================================================================== */
 
 /** L'ORDRE de l'arbre : un coup produit par plusieurs nœuds garde le nœud le plus HAUT (sa raison), toutes raisons retenues. */
-export const ORDRE = ['1a', '1b', '1c', '1d', '1e', '1f', '2a', '2b', '2c', '2d', '2e', '3L', '3D', '3C', '3P', '3Y'];
+export const ORDRE = ['1a', '1b', '1c', '1d', '1e', '1f', '2a', '2b', '2c', '2d', '2e', '2f', '3L', '3D', '3C', '3d', '3P', '3Y', '3A'];
 
 /**
  * Produit les candidats de l'arbre (étapes 1, 2, 3 réduite) pour une position, dédoublonnés par coup (nœud le plus haut
@@ -404,7 +549,8 @@ export const ORDRE = ['1a', '1b', '1c', '1d', '1e', '1f', '2a', '2b', '2c', '2d'
  * @returns {{ coup, noeud, raison, raisons: {noeud, raison}[] }[]}
  */
 export function candidats(ctx) {
-  const bruts = [...etape1(ctx), ...etape2(ctx), ...etape3(ctx)];
+  let bruts = [...etape1(ctx), ...etape2(ctx), ...etape3(ctx)];
+  if (!bruts.length) bruts = amelioration(ctx); // 3A en dernier recours : aucune autre question n'a produit → « toujours un coup d'amélioration » (l'arbre n'est jamais vide)
   const parCoup = new Map();
   for (const c of bruts) {
     const e = parCoup.get(c.coup) ?? { coup: c.coup, raisons: [] };

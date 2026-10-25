@@ -195,7 +195,45 @@ export class Joueur {
     }
     const probe = this.recherche.chercher(ech, { budget: Math.min(this.budget, 120000), profondeurMax: 6 });
     const monMat = probe.coup && probe.score >= MAT - 200 ? { coup: uciDe(probe.coup) } : null;
-    return { menace, paree, prophylaxie, monMat };
+    const mesMenaces = this.#mesMenaces(fenAvant, camp);
+    return { menace, paree, prophylaxie, monMat, mesMenaces };
+  }
+
+  /**
+   * « Et si je jouais deux fois ? » (2f) : pour chacun de mes coups M, je joue M, l'adversaire passe (coup nul), et ma
+   * recherche courte dit ce que je gagne alors — c'est `menace()` retourné vers mon camp. On garde les coups qui créent
+   * une menace de mat, une fourchette / un échec qui gagne, ou un gain de pièce (≥ 2), le plus fort d'abord, trois au plus.
+   * Le candidat est M (le premier coup de ma ligne) ; la phrase donne la ligne « s'il ne fait rien ».
+   */
+  #mesMenaces(fenAvant, camp) {
+    const budget = Math.min(Math.trunc(this.budget / 12), 40000);
+    const out = [];
+    for (const mv of new Chess(fenAvant).moves({ verbose: true })) {
+      const uciM = mv.from + mv.to + (mv.promotion ?? '');
+      const fenM = fenApresUci(fenAvant, [uciM]);
+      const echM = new Echiquier(fenM);
+      const mn = this.recherche.menace(echM, { budget, profondeurMax: 4 }); // mon meilleur coup s'il passe
+      if (!mn) continue;
+      const estMat = mn.score >= MAT - 200;
+      const echN = new Echiquier(fenM); echN.jouerNul(); const fenMN = echN.fen(); // à moi de jouer (il a passé)
+      const pvUci = mn.pv.map(uciDe);
+      const fenBout = fenApresUci(fenMN, pvUci);
+      const gainMat = sommeMat(bilanParType(fenAvant, fenBout, camp)); // le gain net de tout mon plan de deux coups
+      if (!estMat && gainMat < 2) continue; // en position calme, rien n'est menacé : on ne produit pas
+      const sanM = ligneFr(fenAvant, [uciM]).sans[0];
+      const { sans: sansSuite } = ligneFr(fenMN, pvUci);
+      const ligneTxt = [sanM, ...sansSuite].slice(0, 4).join(' puis ');
+      let quoi;
+      if (estMat) quoi = 'mat';
+      else {
+        let m2cap = null; try { m2cap = new Chess(fenMN).move({ from: pvUci[0].slice(0, 2), to: pvUci[0].slice(2, 4), promotion: pvUci[0][4] })?.captured ?? null; } catch { /* ignore */ }
+        const m2echec = (() => { try { const c = new Chess(fenMN); c.move({ from: pvUci[0].slice(0, 2), to: pvUci[0].slice(2, 4), promotion: pvUci[0][4] }); return c.inCheck(); } catch { return false; } })();
+        quoi = m2echec && m2cap ? 'une fourchette' : m2cap ? saPiece(m2cap) : 'du matériel';
+      }
+      out.push({ coup: uciM, raison: `je menace ${quoi} : s'il ne fait rien, ${ligneTxt}`, _mat: estMat, _gain: gainMat });
+    }
+    out.sort((a, b) => (b._mat - a._mat) || (b._gain - a._gain));
+    return out.slice(0, 3).map(({ _mat, _gain, ...t }) => t);
   }
 
   /** Parade par test (1b, 1f) : après mon coup, sa ligne menaçante ne gagne-t-elle plus (ni ne mate) ? */

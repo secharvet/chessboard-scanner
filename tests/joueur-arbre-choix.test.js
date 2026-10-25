@@ -84,9 +84,22 @@ test('plafond 1f : deux parades par famille — De6+ (w-12 c.26, bilan 4d5e252) 
   assert.ok(r.candidats.some((c) => c.coup === 'f7e6'));
 });
 
-test('plafond 3Y : étape 1 vide, plafond 4 — g4+ (w-09 c.41, bilan 4d5e252) revient dans les candidats', async () => {
+test('plafond 3Y : étape 1 vide, plafond 4 — la prophylaxie passe dans les candidats (w-09 c.41, bilan 4d5e252)', async () => {
+  // (le coup précis « coupé » peut maintenant être supplanté par un candidat 2f ; on vérifie que le nœud 3Y passe le plafond)
   const r = await neuf({ budget: 120000 }).choisir('8/5p2/R4p1p/4pk2/5P2/5KP1/7P/8 w - - 4 41', { camp: 'w' });
-  assert.ok(r.candidats.some((c) => c.coup === 'g3g4'));
+  assert.ok(r.candidats.some((c) => c.noeud === '3Y'));
+});
+
+test('2f « et si je jouais deux fois » : une menace de mat est produite (Cb5 → Cc7 mat, w-06, bilan 4d5e252)', async () => {
+  const r = await neuf({ budget: 120000 }).choisir('r1bnkb1r/pp1pqppn/3pp2p/4P3/8/2N2N2/PPP1BPPP/R1BQK2R w KQkq - 0 9', { camp: 'w' });
+  const c = r.candidats.find((x) => x.coup === 'c3b5');
+  assert.ok(c && c.noeud === '2f', 'Cb5 est un candidat du nœud 2f');
+  assert.ok(/je menace mat/.test(c.raison), 'la raison dit « je menace mat »');
+});
+
+test('2f : rien n\'est menacé en position calme → aucun candidat 2f', async () => {
+  const r = await neuf({ budget: 120000 }).choisir('rnbqkbnr/pp2pppp/8/2pp4/3P1P2/8/PPP1P1PP/RNBQKBNR w KQkq - 0 3', { camp: 'w' });
+  assert.ok(!r.candidats.some((c) => c.noeud === '2f'));
 });
 
 test('le record porte tout ce que le fichier de partie attend : candidats, choisi, phrase, nœud', async () => {
