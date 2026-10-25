@@ -24,7 +24,9 @@ import { evaluer, enCentipions } from './evaluation.mjs';
 import { Recherche, MAT } from './recherche.mjs';
 import { materielEnMots, ligneTexte, GABARITS } from './parole.mjs';
 import { toFrenchSan } from '../notation.mjs';
-import { candidats as candidatsArbre, selectionner, ORDRE, saPiece } from './arbre.mjs';
+import { candidats as candidatsArbre, candidatsEtAllumes, selectionner, ORDRE, saPiece, piecesEnPrise, verifieBranche } from './arbre.mjs';
+import { buildAttackMap, other, sq as caseNom } from '../../positional/attack-map.js';
+import { gainEchange } from '../en-prise.mjs';
 
 const VAL = { p: 1, n: 3, b: 3, r: 5, q: 9, k: 0 };
 const LETTRE = { p: 'P', n: 'N', b: 'B', r: 'R', q: 'Q' };
@@ -36,6 +38,7 @@ export const MOT_NOEUD = {
   '1e': 'une pièce clouée', '1f': 'il me menace', '2a': 'un mat', '2b': 'une prise qui gagne',
   '2c': 'un coup intermédiaire', '2d': 'une double attaque', '2e': 'une tactique', '3L': 'le livre',
   '3D': 'je développe', '3P': 'ma pire pièce', '3Y': 'la prophylaxie', '3C': 'mon plan',
+  '3p': 'un coup de pion', '3r': 'je cède une case utile', '3s': 'je surprotège',
 };
 
 /* Gabarits de l'étape 6, dans gabarits-parole.json section « arbre » (relus par l'Expert) : le gain et la perte NOMMÉS par
@@ -90,19 +93,50 @@ export class Joueur {
    * Rend les candidats de l'arbre pour la position et, pour le coup donné, le nœud le plus haut qui le reconnaît (ou
    * null : « sans nom »). Aucune recherche complète ; seulement la sonde des questions. Sert à la mesure « calcul puis
    * nommage » (Sébastien, 25 oct.) : le gros calcul choisit, l'arbre explique.
+   * Deux modes (option `{ rapide }`) : LENT (par défaut, aujourd'hui) ou RAPIDE (sonde bornée, cible < 1 s/coup, pour
+   * nommer un lot humain). Les deux restent appelables ; le pilote mesure leur accord. Le mode ne change RIEN à `choisir()`.
+   *
+   * VÉRIFICATION (demande de l'Expert) : chaque nœud qui reconnaît le coup porte `verifie: true/false`. 1c (« pièce en
+   * prise ») n'est vérifié que si la ligne du coup nul gagne VRAIMENT du matériel (une pièce attaquée mais défendue n'est
+   * pas en prise). Le nœud QUI NOMME est le plus haut VÉRIFIÉ ; si tous ses nœuds reconnaissants sont non vérifiés, le
+   * coup est « sans nom ». La table « quand allumé » (`allumes`) donne, par nœud, tous les coups qu'il a proposés.
    * @param {string} fen @param {{ depart?: string, historique?: string[] }} contexte @param {string} uci le coup à nommer
+   * @param {{ rapide?: boolean }} opts
    */
-  nommer(fen, contexte = {}, uci) {
+  nommer(fen, contexte = {}, uci, opts = {}) {
     const depart = contexte.depart ?? fen, historique = contexte.historique ?? [];
     const ech = new Echiquier(depart), chess = new Chess(depart);
     for (const u of historique) { const m = ech.coupDepuisUci(u); if (!m || !ech.jouer(m)) throw new Error(`historique : coup illégal ${u}`); chess.move({ from: u.slice(0, 2), to: u.slice(2, 4), promotion: u[4] }); }
     if (!historique.length && depart !== fen) { ech.chargerFen(fen); chess.load(fen); }
     const fenAvant = chess.fen(), camp = chess.turn();
     const E0 = enCentipions(this.recherche.evaluationPosee(ech).score);
-    const sonde = this.#sonde(ech, fenAvant, camp, E0);
-    const tous = candidatsArbre({ fen: fenAvant, camp, depart, historique, sonde });
+    const sonde = this.#sonde(ech, fenAvant, camp, E0, { rapide: !!opts.rapide });
+    const { liste: tous, allumes } = candidatsEtAllumes({ fen: fenAvant, camp, depart, historique, sonde }, { fermeture: true });
     const c = tous.find((x) => x.coup === uci) ?? null;
-    return { candidats: tous, noeud: c?.noeud ?? null, raison: c?.raison ?? null, raisons: c?.raisons ?? [], sonde: { menace: !!sonde.menace, monMat: !!sonde.monMat } };
+    // vérification par nœud reconnaissant ; le nœud qui nomme = le plus haut VÉRIFIÉ (les raisons sont déjà triées par l'arbre)
+    if (c) for (const r of c.raisons) r.verifie = this.#verifie(r, c.coup, fenAvant, camp, sonde);
+    const nommant = c ? c.raisons.find((r) => r.verifie !== false) ?? null : null;
+    return {
+      candidats: tous, allumes,
+      noeud: nommant?.noeud ?? null, raison: nommant?.raison ?? null, raisons: c?.raisons ?? [],
+      sonde: { menace: !!sonde.menace, monMat: !!sonde.monMat }, rapide: !!opts.rapide,
+    };
+  }
+
+  /**
+   * Drapeau « vérifié » d'un nœud qui reconnaît le coup (règle de l'Expert : pas de vérification, pas de nom). La raison
+   * affichée doit se contrôler sur l'échiquier :
+   *  - 1c : la pièce était-elle VRAIMENT en prise, c.-à-d. la ligne du coup nul (`sonde.menace`) gagne-t-elle vraiment du
+   *    matériel (≥ une pièce / l'échange, ou mat) ? Une pièce attaquée mais défendue — ou dont l'attaquant est cloué — ne
+   *    donne pas de menace réelle : non vérifié.
+   *  - 3p / 3r / 3s (« fermer l'arbre ») : on repose la question du nœud sur l'échiquier (centre, ouverture, chasse,
+   *    espace, abri ; case cédée utilisable ; point surprotégé) via `verifieBranche`.
+   *  - les autres nœuds affirment une chose vraie par construction (en échec, une prise, un mat) → vérifiés d'office.
+   */
+  #verifie(r, uci, fenAvant, camp, sonde) {
+    if (r.noeud === '1c') return !!sonde.menace && (sonde.menace.mat || (sonde.menace.gainMat ?? 0) >= 2);
+    if (r.noeud === '3p' || r.noeud === '3r' || r.noeud === '3s') return verifieBranche(r.noeud, r.famille, fenAvant, uci, camp);
+    return true;
   }
 
   async choisir(fen, contexte = {}) {
@@ -196,9 +230,18 @@ export class Joueur {
     return rec;
   }
 
-  /** La sonde : menace adverse (coup nul), parade par test, mon mat (courte recherche), prophylaxie. Réutilise Recherche.menace. */
-  #sonde(ech, fenAvant, camp, E0) {
-    const mn = this.recherche.menace(ech, { budget: Math.trunc(this.budget / 6), profondeurMax: 4 });
+  /**
+   * La sonde : menace adverse (coup nul), parade par test, mon mat (courte recherche), prophylaxie, « que menacé-je ? ».
+   * Réutilise Recherche.menace. Deux modes :
+   *  - LENT (par défaut, comme `choisir()`) : menace à budget/6, mon mat par recherche profondeur 6, 2f sur TOUS mes coups.
+   *  - RAPIDE (`{ rapide: true }`, pour nommer un lot humain en < 1 s/coup) : 1f borné à 15 000 ; 2a (mon mat) cherché par
+   *    les ÉCHECS seulement, profondeur 3 ; 2f ne sonde que les coups MENAÇANTS (prise, échec, ou coup qui attaque de plus
+   *    une pièce adverse / la zone de son roi), à 2 000 chacun. La menace retenue reste RÉELLE (gain au coup nul ou mat).
+   */
+  #sonde(ech, fenAvant, camp, E0, { rapide = false } = {}) {
+    const budMenace = rapide ? 15000 : Math.trunc(this.budget / 6);
+    const budParee = rapide ? 2000 : Math.trunc(this.budget / 10);
+    const mn = this.recherche.menace(ech, { budget: budMenace, profondeurMax: 4 });
     let menace = null, paree = null, prophylaxie = null; // paree au PREMIER niveau de la sonde (contrat des générateurs 1b/1f)
     if (mn) {
       const pvUci = mn.pv.map(uciDe), estMat = mn.score >= MAT - 200;
@@ -208,16 +251,50 @@ export class Joueur {
       const perte = materielEnMots(Object.fromEntries(Object.entries(bilan).map(([k, v]) => [k, -v])));
       const gainMat = -sommeMat(bilan); // ce qu'il gagne en matériel
       const ligneMenace = ligneFr(ech2.fen(), pvUci).sans.slice(0, 4).join(' puis '); // sa ligne menaçante, ≤ 4 demi-coups, pour « il menace … »
-      if (estMat || gainMat > 0) { menace = { mat: estMat, perte: estMat ? 'la partie (mat)' : perte ?? 'du matériel', ligne: ligneMenace, pvUci }; paree = this.#pareeFab(fenAvant, pvUci, estMat, camp); }
+      if (estMat || gainMat > 0) { menace = { mat: estMat, perte: estMat ? 'la partie (mat)' : perte ?? 'du matériel', ligne: ligneMenace, pvUci, gainMat }; paree = this.#pareeFab(fenAvant, pvUci, estMat, camp, budParee); }
       else if (enCentipions(mn.score) + E0 >= 50) { // menace positionnelle : prophylaxie (lui enlever son idée = la rendre illégale après mon coup)
         const idee = ligneFr(ech2.fen(), [pvUci[0]]).sans[0];
         prophylaxie = { idee: idee || null, paree: this.#prophPareeFab(fenAvant, pvUci[0]) };
       }
     }
-    const probe = this.recherche.chercher(ech, { budget: Math.min(this.budget, 120000), profondeurMax: 6 });
-    const monMat = probe.coup && probe.score >= MAT - 200 ? { coup: uciDe(probe.coup) } : null;
-    const mesMenaces = this.#mesMenaces(fenAvant, camp);
+    let monMat;
+    if (rapide) monMat = this.#matParEchecs(fenAvant, 3);
+    else { const probe = this.recherche.chercher(ech, { budget: Math.min(this.budget, 120000), profondeurMax: 6 }); monMat = probe.coup && probe.score >= MAT - 200 ? { coup: uciDe(probe.coup) } : null; }
+    const mesMenaces = this.#mesMenaces(fenAvant, camp, rapide ? { budget: 2000, menacantsSeuls: true } : {});
     return { menace, paree, prophylaxie, monMat, mesMenaces };
+  }
+
+  /**
+   * 2a rapide — « ai-je un mat ? » par les ÉCHECS seulement, profondeur `profMax` (nombre de mes coups). Chacun de mes
+   * coups est un échec ; l'adversaire a toutes ses réponses ; je mate si, après un échec, soit c'est mat, soit toutes ses
+   * réponses mènent encore à un mat forcé par échecs. Quelques milliers de positions au plus (plafond de sûreté). Rend
+   * `{ coup }` (le premier coup d'un mat forcé) ou null. Approxime la recherche profonde : les mats « tranquilles » (un
+   * coup non-échec dans la séquence) lui échappent — c'est un désaccord assumé, publié avec la mesure.
+   */
+  #matParEchecs(fenAvant, profMax = 3) {
+    const chess = new Chess(fenAvant); // un seul échiquier, coup/reprise (pas de re-lecture de FEN par nœud)
+    let noeuds = 0; const PLAFOND = 8000;
+    const rec = (prof) => {
+      for (const m of chess.moves({ verbose: true })) {
+        if (++noeuds > PLAFOND) return null;
+        chess.move(m);
+        let trouve = null;
+        if (chess.inCheck()) {
+          if (chess.isCheckmate()) trouve = m;
+          else if (prof > 1) {
+            const reps = chess.moves({ verbose: true });
+            let toutes = reps.length > 0;
+            for (const r of reps) { chess.move(r); const sub = rec(prof - 1); chess.undo(); if (!sub) { toutes = false; break; } }
+            if (toutes) trouve = m;
+          }
+        }
+        chess.undo();
+        if (trouve) return trouve;
+      }
+      return null;
+    };
+    const m = rec(profMax);
+    return m ? { coup: m.from + m.to + (m.promotion ?? '') } : null;
   }
 
   /**
@@ -226,14 +303,20 @@ export class Joueur {
    * une menace de mat, une fourchette / un échec qui gagne, ou un gain de pièce (≥ 2), le plus fort d'abord, trois au plus.
    * Le candidat est M (le premier coup de ma ligne) ; la phrase donne la ligne « s'il ne fait rien ».
    */
-  #mesMenaces(fenAvant, camp) {
-    const budget = Math.min(Math.trunc(this.budget / 12), 40000);
+  #mesMenaces(fenAvant, camp, { budget = Math.min(Math.trunc(this.budget / 12), 40000), menacantsSeuls = false } = {}) {
     const out = [];
-    for (const mv of new Chess(fenAvant).moves({ verbose: true })) {
+    const map0 = menacantsSeuls ? buildAttackMap(fenAvant) : null;
+    const profMax = menacantsSeuls ? 3 : 4; // rapide : profondeur 3 pour tenir les ~2 000 positions (la recherche finit son palier)
+    let aSonder = new Chess(fenAvant).moves({ verbose: true });
+    if (menacantsSeuls) { // ne sonder que les coups qui PEUVENT menacer, et au plus les 10 plus prometteurs (directive : 5 à 10)
+      aSonder = aSonder.map((mv) => ({ mv, prio: this.#estMenacant(fenAvant, mv, camp, map0) })).filter((x) => x.prio > 0)
+        .sort((a, b) => b.prio - a.prio).slice(0, 10).map((x) => x.mv);
+    }
+    for (const mv of aSonder) {
       const uciM = mv.from + mv.to + (mv.promotion ?? '');
       const fenM = fenApresUci(fenAvant, [uciM]);
       const echM = new Echiquier(fenM);
-      const mn = this.recherche.menace(echM, { budget, profondeurMax: 4 }); // mon meilleur coup s'il passe
+      const mn = this.recherche.menace(echM, { budget, profondeurMax: profMax }); // mon meilleur coup s'il passe
       if (!mn) continue;
       const estMat = mn.score >= MAT - 200;
       const echN = new Echiquier(fenM); echN.jouerNul(); const fenMN = echN.fen(); // à moi de jouer (il a passé)
@@ -257,12 +340,44 @@ export class Joueur {
     return out.slice(0, 3).map(({ _mat, _gain, ...t }) => t);
   }
 
+  /**
+   * Un coup PEUT-il être une VRAIE menace, et avec quelle PRIORITÉ (0 = non menaçant) ? Filtre bon marché du mode rapide,
+   * aucune recherche complète. « Attaqué de plus » au sens large laisserait passer la moitié des coups du milieu de jeu ;
+   * on exige une menace RÉELLE, comme la sonde qui suit (gain au coup nul ou mat), et on classe par promesse pour ne
+   * sonder que les plus prometteurs :
+   *  - prise ou échec (toujours à vérifier) ;
+   *  - après le coup, une pièce adverse devient GAGNABLE (mini-échange favorable) et ne l'était pas avant — un gain créé ;
+   *  - après le coup, s'il passe (coup nul), j'ai un mat en 1 par un échec — une menace de mat (Te1 → Cd6#, Fc2 → Dh7#…),
+   *    priorité maximale (une menace de mat prime sur un gain) pour ne jamais être écartée par le plafond de sondes.
+   * Le mat en 1 par les échecs est bon marché (mes seuls échecs testés) ; la sonde de 2 000 confirme la menace réelle.
+   */
+  #estMenacant(fenAvant, mv, camp, map0 = buildAttackMap(fenAvant)) {
+    const uciM = mv.from + mv.to + (mv.promotion ?? '');
+    const fenM = fenApresUci(fenAvant, [uciM]);
+    let prio = 0;
+    if (mv.captured) prio = Math.max(prio, 2 + VAL[mv.captured]); // prise : la valeur prise
+    if (new Chess(fenM).inCheck()) prio = Math.max(prio, 5); // échec
+    const map1 = buildAttackMap(fenM);
+    // un gain CRÉÉ : une pièce adverse devient gagnable (mini-échange) et ne l'était pas avant. gainEchange prend le
+    // PROPRIÉTAIRE de la pièce (l'adverse) et rend ce que moi je gagne en ouvrant les prises.
+    for (const p of map1.pieces) {
+      if (p.color !== other(camp) || p.type === 'k') continue;
+      const avant = map0.at[p.square] && map0.at[p.square].color === p.color ? gainEchange(map0, p.square, p.color) : 0;
+      const ap = gainEchange(map1, p.square, p.color);
+      if (ap > 0 && avant <= 0) prio = Math.max(prio, 3 + ap);
+    }
+    // menace de mat : s'il passe (coup nul), ai-je un mat en 1 par un échec ? Priorité maximale.
+    const fenNul = fenM.replace(/ (w|b) /, ` ${camp} `);
+    try { if (this.#matParEchecs(fenNul, 1)) prio = Math.max(prio, 20); } catch { /* position inhabituelle après le retournement du trait : on laisse */ }
+    return prio;
+  }
+
   /** Parade par test (1b, 1f) : après mon coup, sa ligne menaçante ne gagne-t-elle plus (ni ne mate) ? */
-  #pareeFab(fenAvant, menacePvUci, estMat, camp) {
+  #pareeFab(fenAvant, menacePvUci, estMat, camp, budget = Math.trunc(this.budget / 10)) {
     return (uci) => {
       const e2 = new Echiquier(fenAvant); const m = e2.coupDepuisUci(uci); if (!m || !e2.jouer(m)) return false;
       const t = e2.coupDepuisUci(menacePvUci[0]); if (!t) return true; // son coup menaçant n'existe plus
-      const n = this.recherche.noterCoup(e2, t, { prof: 3, budget: Math.trunc(this.budget / 10) });
+      const n = this.recherche.noterCoup(e2, t, { prof: 3, budget });
       if (n.score >= MAT - 200) return false; // il mate encore
       if (estMat) return true; // ce n'était un mat que par cette ligne, qui ne mate plus
       const e3 = new Echiquier(fenAvant); e3.jouer(e3.coupDepuisUci(uci));

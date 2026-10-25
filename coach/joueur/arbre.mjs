@@ -534,36 +534,186 @@ export function amelioration({ fen, camp }) {
   return out;
 }
 
+/* ============================================ « fermer l'arbre » (FERMER-L-ARBRE-2026-10-25.md) ============================================
+   Trois branches calmes de plus, TOUTES vérifiables sur l'échiquier (règle de l'Expert : une raison qu'on ne peut pas
+   vérifier mécaniquement ne se construit pas). Chaque générateur n'émet un coup QUE si sa raison se vérifie ; le nommage
+   (joueur-arbre) repose le vérificateur (champ `verifie`) et le harnais du pilote recompte, indépendamment, après coup. */
+
+/** Les deux cases qu'un pion de `camp` attaque depuis (fileIdx, rank). */
+function attaquesPion(fileIdx, rank, camp) {
+  const dr = camp === 'w' ? 1 : -1, out = [];
+  for (const df of [-1, 1]) { const f = fileIdx + df, r = rank + dr; if (f >= 0 && f < 8 && r >= 1 && r <= 8) out.push(caseNom(f, r)); }
+  return out;
+}
+const CENTRE = new Set(['d4', 'e4', 'd5', 'e5']);
+
+/** Force au centre : occupation d'une case centrale (×2) + soutien d'une case centrale par un pion. */
+function forceCentre(fen, camp) {
+  const map = buildAttackMap(fen); let occ = 0, sup = 0;
+  for (const p of map.pieces) { if (p.color !== camp || p.type !== 'p') continue; if (CENTRE.has(p.square)) occ++; if (attaquesPion(p.fileIdx, p.rank, camp).some((s) => CENTRE.has(s))) sup++; }
+  return occ * 2 + sup;
+}
+/** Espace : cases de la moitié adverse contrôlées par mes pions. */
+function espacePions(fen, camp) {
+  const map = buildAttackMap(fen), chez = camp === 'w' ? (r) => r >= 5 : (r) => r <= 4, vus = new Set();
+  for (const p of map.pieces) { if (p.color !== camp || p.type !== 'p') continue; for (const s of attaquesPion(p.fileIdx, p.rank, camp)) if (chez(Number(s[1]))) vus.add(s); }
+  return vus.size;
+}
+/** b) le pion ouvre une pièce : une de mes mineures encore chez elle gagne de la mobilité. */
+function ouvreUnePiece(fen, m, camp) {
+  const rangHome = camp === 'w' ? 1 : 8, m0 = buildAttackMap(fen), m1 = buildAttackMap(apres(fen, m));
+  for (const p of m0.pieces) { if (p.color !== camp || (p.type !== 'n' && p.type !== 'b') || p.rank !== rangHome) continue; const p1 = m1.at[p.square]; if (p1 && p1.color === camp && p1.type === p.type && m1.mobility(p1) > m0.mobility(p)) return true; }
+  return false;
+}
+/** c) le pion chasse une pièce : il attaque une pièce adverse (hors pion/roi) qu'aucun de mes pions n'attaquait. */
+function chasseUnePiece(fen, m, camp) {
+  const tf = m.to.charCodeAt(0) - 97, tr = Number(m.to[1]), adv = other(camp), m0 = buildAttackMap(fen), m1 = buildAttackMap(apres(fen, m));
+  for (const s of attaquesPion(tf, tr, camp)) { const q = m1.at[s]; if (q && q.color === adv && q.type !== 'p' && q.type !== 'k') { if (!m0.pieces.some((x) => x.color === camp && x.type === 'p' && attaquesPion(x.fileIdx, x.rank, camp).includes(s))) return true; } }
+  return false;
+}
+/** d) espace ou levier : un contact de pions nouveau, ou plus de cases contrôlées dans son camp. */
+function espaceOuLevier(fen, m, camp) {
+  const tf = m.to.charCodeAt(0) - 97, tr = Number(m.to[1]), adv = other(camp), m1 = buildAttackMap(apres(fen, m));
+  for (const s of [...attaquesPion(tf, tr, camp), ...attaquesPion(tf, tr, adv)]) { const q = m1.at[s]; if (q && q.color === adv && q.type === 'p') return true; }
+  return espacePions(apres(fen, m), camp) > espacePions(fen, camp);
+}
+/** e) l'abri du roi : le pion bouge devant mon roi et lui ouvre une case de fuite (luft). */
+function abriDuRoi(fen, m, camp) {
+  const m0 = buildAttackMap(fen), m1 = buildAttackMap(apres(fen, m));
+  const roi = m0.pieces.find((p) => p.type === 'k' && p.color === camp); if (!roi) return false;
+  if (Math.abs((m.to.charCodeAt(0) - 97) - roi.fileIdx) > 1) return false;
+  const fuites = (mp) => { const r = mp.pieces.find((p) => p.type === 'k' && p.color === camp); let n = 0; for (let df = -1; df <= 1; df++) for (let dr = -1; dr <= 1; dr++) { if (!df && !dr) continue; const f = r.fileIdx + df, rk = r.rank + dr; if (f < 0 || f > 7 || rk < 1 || rk > 8) continue; const s = caseNom(f, rk); if (mp.at[s] && mp.at[s].color === camp) continue; if (mp.attackersOf(s, other(camp)).length) continue; n++; } return n; };
+  return fuites(m1) > fuites(m0);
+}
+// A. Le coup de pion d'ouverture (3p) : cinq raisons, de la plus haute à la plus basse, chacune vérifiable.
+const RAISONS_PION = [
+  { cle: 'centre', raison: 'je prends le centre', verifie: (fen, m, camp) => forceCentre(apres(fen, m), camp) > forceCentre(fen, camp) },
+  { cle: 'ouvrir', raison: 'j\'ouvre une pièce', verifie: ouvreUnePiece },
+  { cle: 'chasser', raison: 'je chasse sa pièce', verifie: chasseUnePiece },
+  { cle: 'espace', raison: 'je gagne de l\'espace', verifie: espaceOuLevier },
+  { cle: 'abri', raison: 'j\'abrite mon roi', verifie: abriDuRoi },
+];
+
+/** A — « coup de pion d'ouverture » (3p) : un coup de pion nommé par la plus haute des cinq raisons qui se vérifie ; aucune → sans nom. */
+export function coupDePionOuverture({ fen, camp }) {
+  if (Number(fen.split(' ')[5] ?? 1) > 20) return []; // le coup de pion « d'ouverture » : l'ouverture (la raison d) continue en milieu, mais ce nœud cible l'ouverture
+  const out = [];
+  for (const m of coupsLegaux(fen)) {
+    if (m.piece !== 'p') continue;
+    const map2 = buildAttackMap(apres(fen, m)); if (gainEchange(map2, m.to, camp) > 0) continue; // ne pas jeter le pion
+    for (const R of RAISONS_PION) { if (R.verifie(fen, m, camp)) { out.push({ coup: uciDe(m), raison: R.raison, noeud: '3p', famille: R.cle }); break; } }
+  }
+  return out;
+}
+
+/** B1 — la case `from` cédée devient-elle utilisable (une autre pièce peut y venir, ou un pion peut y avancer) ? */
+function caseUtileApres(fen, m, camp) {
+  const from = m.from, m1 = buildAttackMap(apres(fen, m));
+  if (m1.at[from]) return false; // la case n'est pas libre
+  if (m1.attackersOf(from, camp).some((p) => p.square !== m.to && p.type !== 'p' && p.type !== 'k')) return true; // une autre pièce (pas le roi) peut s'y rendre
+  const f = from.charCodeAt(0) - 97, r = Number(from[1]), back = caseNom(f, r - (camp === 'w' ? 1 : -1)); // un pion juste derrière peut y avancer
+  const pb = back && m1.at[back];
+  return !!(pb && pb.color === camp && pb.type === 'p');
+}
+
+/** B1 — « la pièce qui cède une case » (3r) : une pièce (mineure/lourde) se retire et libère une case utile ; distinct de 3P
+ *  (elle ne va PAS vers une meilleure case, sa mobilité ne monte pas — c'est un recul utile). */
+export function pieceQuiCede({ fen, camp }) {
+  const m0 = buildAttackMap(fen), out = [];
+  for (const m of coupsLegaux(fen)) {
+    if (m.piece === 'p' || m.piece === 'k' || m.captured) continue;
+    const piece0 = m0.at[m.from], map2 = buildAttackMap(apres(fen, m)), bougee = map2.at[m.to];
+    if (!piece0 || !bougee || gainEchange(map2, m.to, camp) > 0) continue; // ne pas se jeter en se retirant
+    if (map2.mobility(bougee) > m0.mobility(piece0)) continue; // va vers MIEUX → c'est 3P, pas « céder »
+    if (caseUtileApres(fen, m, camp)) out.push({ coup: uciDe(m), raison: `je libère ${m.from} (recul utile)`, noeud: '3r', famille: 'cede' });
+  }
+  return out;
+}
+
+/** B2 — surprotège-t-on un PION fort (central ou avancé) : un défenseur de plus, sans menace présente ? Rend la case ou null.
+ *  (Nimzowitsch : on surprotège un point fort ; on reste aux pions pour ne pas s'allumer sur chaque coup qui frôle une mineure.) */
+function pointSurprotege(fen, m, camp, m0 = buildAttackMap(fen), m1 = buildAttackMap(apres(fen, m))) {
+  for (const p of m0.pieces) {
+    if (p.color !== camp || p.type !== 'p') continue; // un pion fort, pas une pièce
+    const sq = p.square; if (sq === m.from) continue;
+    if (!CENTRE.has(sq) && !(camp === 'w' ? p.rank >= 5 : p.rank <= 4)) continue; // central, ou avancé dans le camp adverse
+    const d0 = m0.attackersOf(sq, camp).length, d1 = m1.attackersOf(sq, camp).length;
+    if (d1 > d0 && m0.attackersOf(sq, other(camp)).length === 0) return sq;
+  }
+  return null;
+}
+
+/** B2 — « la surprotection » (3s) : un coup calme qui ajoute un défenseur à un point à moi (de n à n + 1), sans menace présente. */
+export function surprotection({ fen, camp }) {
+  const m0 = buildAttackMap(fen), out = [];
+  for (const m of coupsLegaux(fen)) {
+    if (m.captured) continue; // un coup calme (pas une prise)
+    const map2 = buildAttackMap(apres(fen, m)); if (gainEchange(map2, m.to, camp) > 0) continue; // ne pas se jeter
+    const pt = pointSurprotege(fen, m, camp, m0, map2);
+    if (pt) out.push({ coup: uciDe(m), raison: `je surprotège ${pt}`, noeud: '3s', famille: 'surprotection' });
+  }
+  return out;
+}
+
+/** Le vérificateur d'un nœud « fermer l'arbre » (repose la question du nœud sur l'échiquier). Pour le champ `verifie` du nommage. */
+export function verifieBranche(noeud, famille, fen, uci, camp) {
+  const m = coupsLegaux(fen).find((x) => uciDe(x) === uci); if (!m) return false;
+  if (noeud === '3p') { const R = RAISONS_PION.find((r) => r.cle === famille); return R ? !!R.verifie(fen, m, camp) : false; }
+  if (noeud === '3r') return m.piece !== 'p' && m.piece !== 'k' && !m.captured && caseUtileApres(fen, m, camp);
+  if (noeud === '3s') return !m.captured && pointSurprotege(fen, m, camp) !== null;
+  return true;
+}
+
 export function etape3(ctx) {
   return [...livre(ctx), ...developpement(ctx), ...plansCatalogue(ctx), ...attaqueDuRoi(ctx), ...pirePiece(ctx), ...prophylaxie(ctx)];
+}
+
+/**
+ * Les branches de « fermer l'arbre » (3p, 3r, 3s) : NAMING SEULEMENT. Elles enrichissent le NOMMAGE (la table des coups
+ * humains) sans toucher le joueur du site — `choisir()` garde exactement son jeu de candidats et son plafond (CHANTIER-
+ * TABLE § 6 : « le joueur du site reste tel quel »). D'où un lot à part, ajouté par `candidatsEtAllumes({ fermeture: true })`.
+ */
+export function fermeture(ctx) {
+  return [...coupDePionOuverture(ctx), ...pieceQuiCede(ctx), ...surprotection(ctx)];
 }
 
 /* ====================================================================== assemblage ====================================================================== */
 
 /** L'ORDRE de l'arbre : un coup produit par plusieurs nœuds garde le nœud le plus HAUT (sa raison), toutes raisons retenues. */
-export const ORDRE = ['1a', '1b', '1c', '1d', '1e', '1f', '2a', '2b', '2c', '2d', '2e', '2f', '3L', '3D', '3C', '3d', '3P', '3Y', '3A'];
+export const ORDRE = ['1a', '1b', '1c', '1d', '1e', '1f', '2a', '2b', '2c', '2d', '2e', '2f', '3L', '3D', '3C', '3d', '3P', '3Y', '3p', '3r', '3s', '3A'];
 
 /**
- * Produit les candidats de l'arbre (étapes 1, 2, 3 réduite) pour une position, dédoublonnés par coup (nœud le plus haut
- * gardé), chaque candidat portant toutes ses raisons et le nœud retenu.
- * @returns {{ coup, noeud, raison, raisons: {noeud, raison}[] }[]}
+ * Produit les candidats de l'arbre (étapes 1, 2, 3 réduite) ET la table « quand allumé » (chaque nœud → les coups qu'il
+ * a proposés), en ne lançant les générateurs qu'UNE fois. Les candidats sont dédoublonnés par coup (nœud le plus haut
+ * gardé), chacun portant toutes ses raisons et le nœud retenu ; `allumes` garde la production BRUTE, avant dédoublonnage
+ * (ce qu'attend la mesure de la table : « quand ce nœud était allumé, que proposait-il ? »).
+ * @returns {{ liste: {coup, noeud, raison, raisons: {noeud, raison}[]}[], allumes: Record<string, string[]> }}
  */
-export function candidats(ctx) {
+export function candidatsEtAllumes(ctx, { fermeture: avecFermeture = false } = {}) {
   let bruts = [...etape1(ctx), ...etape2(ctx), ...etape3(ctx)];
+  if (avecFermeture) bruts = [...bruts, ...fermeture(ctx)]; // les branches « fermer l'arbre » : au nommage seulement, pas au choix
   if (!bruts.length) bruts = amelioration(ctx); // 3A en dernier recours : aucune autre question n'a produit → « toujours un coup d'amélioration » (l'arbre n'est jamais vide)
+  const allumes = {};
+  for (const c of bruts) { const l = (allumes[c.noeud] ??= []); if (!l.includes(c.coup)) l.push(c.coup); }
   const parCoup = new Map();
   for (const c of bruts) {
     const e = parCoup.get(c.coup) ?? { coup: c.coup, raisons: [] };
     e.raisons.push({ noeud: c.noeud, raison: c.raison, famille: c.famille });
     parCoup.set(c.coup, e);
   }
-  const out = [];
+  const liste = [];
   for (const e of parCoup.values()) {
     e.raisons.sort((a, b) => ORDRE.indexOf(a.noeud) - ORDRE.indexOf(b.noeud));
-    out.push({ coup: e.coup, noeud: e.raisons[0].noeud, raison: e.raisons[0].raison, famille: e.raisons[0].famille, raisons: e.raisons });
+    liste.push({ coup: e.coup, noeud: e.raisons[0].noeud, raison: e.raisons[0].raison, famille: e.raisons[0].famille, raisons: e.raisons });
   }
   // dans l'ordre de l'arbre (le radar d'abord), pour la lisibilité du radar
-  return out.sort((a, b) => ORDRE.indexOf(a.noeud) - ORDRE.indexOf(b.noeud));
+  liste.sort((a, b) => ORDRE.indexOf(a.noeud) - ORDRE.indexOf(b.noeud));
+  return { liste, allumes };
+}
+
+/** Les candidats seuls (dédoublonnés), pour `choisir()`. Voir `candidatsEtAllumes` pour la table « quand allumé ». */
+export function candidats(ctx) {
+  return candidatsEtAllumes(ctx).liste;
 }
 
 /**
