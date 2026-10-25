@@ -18,12 +18,45 @@ la seconde qui compte pour le critère :
 - **part quand allumé** : coups nommés par ce nœud / positions où ce nœud proposait quelque chose. C'est elle qui dit le
   comportement : « quand il pouvait sauver sa pièce, l'a-t-il fait ? ».
 
-**Hypothèses écrites avant de regarder** (à confirmer ou infirmer, et l'Expert en ajoutera) : la part « quand allumé »
-de 1c (sauver la pièce en prise) et de 1f (parer sa menace) **monte** avec le niveau ; celle de 2b (prise qui gagne)
-monte aussi (les prises gagnantes ratées sont le lot des faibles) ; 3Y (prophylaxie) et 2f (créer une menace) montent ;
-2d (double attaque) monte ; la part des coups **sans nom** baisse avec le niveau (le fort joue des coups que l'arbre
-nomme, le faible joue des coups sans raison) — ou l'inverse, si les forts jouent des coups calmes que l'arbre ne sait pas
-encore nommer : c'est justement ce qu'on veut savoir.
+**Hypothèses écrites avant de regarder les chiffres** (thèse du pilote corrigée par l'Expert le 25 oct. à 15 h ; aucun
+chiffre vu). Part « quand allumé », de 1100 à 2100 :
+
+| nœud | attendu | pourquoi |
+|---|---|---|
+| 1a en échec | plat, ~100 % | forcé ; **hors critère** |
+| 1b il menace mat | **monte fort** | le 1100 se fait mater en un (berger, couloir, h7) |
+| 1c pièce en prise | monte jusqu'à 1500, puis plateau | en haut on laisse une pièce en prise exprès (contre-attaque, coup intermédiaire) ; ne compter que si le coup nul la gagne vraiment |
+| 1d dernière rangée | monte un peu | h3 au bon moment c'est 1700+, mais le 1100 joue h3 au hasard |
+| 1e clouage | monte un peu | le faible ignore le clouage jusqu'à ce qu'il coûte |
+| 1f que menace-t-il ? | **monte fort et régulièrement** | premier marqueur de niveau ; les sondes de Maia disent la même chose pour les menaces |
+| 2a je mate | monte puis sature | mat en 1 vu par tous dès 1300 ; mat en 2 et 3, c'est là que ça monte |
+| 2b prise qui gagne | plat ou en cloche | le 1100 prend tout (prise réflexe) ; le 2100 refuse parfois une prise qui coûte en position ; **pas pour le critère** |
+| 2c avant de reprendre | monte nettement, mais rare | le coup intermédiaire, signature de force ; intervalle large |
+| 2d double attaque · 2e motif | montent | |
+| 2f que menacé-je ? | **piège** : monte un peu avec une menace réelle (gain compté au coup nul), **descend** avec une menace au sens large | le faible fait des menaces creuses à chaque coup (Dh5 sur f7) ; le résultat dira surtout comment la menace est définie |
+| 3L théorie | monte, mais c'est la mémoire | par phase ; **hors critère** |
+| 3D développement | monte dans l'ouverture, plat ensuite | le 1100 pousse des pions et sort la dame |
+| 3C plan | monte, peu | catalogue mince ; le faible joue des coups « de plan » par hasard |
+| 3d attaque du roi | **non monotone** (cloche) | le faible attaque trop tôt sans roi à l'abri ; avec la règle stricte, monterait |
+| 3P pire pièce | **monte** | le regroupement (Cd2-f1-g3) est le geste du joueur formé |
+| 3Y prophylaxie | **monte, le plus fort écart** | ce qui sépare un 1900 d'un 1300 ; mais le nœud s'allume rarement si la reconnaissance de son plan est pauvre |
+| 3A amélioration | plat ou descend | le reste ; les coups calmes du fort vont dans 3P et 3Y |
+| sans nom | **en U** | descend de 1100 à 1500 (moins de coups sans raison), remonte de 1700 à 2100 (coups calmes que l'arbre ne sait pas nommer) |
+
+**Les trois paris de l'Expert pour le critère : 1f, 3Y, 1b** (2c si la prophylaxie s'allume trop peu). Le pilote
+ajoute 3P. **Les pièges** : 2f et 1c en haut de tableau — chez le 1100 il y a des pièces en l'air partout à menacer, chez
+le 2100 presque jamais ; « allumé » n'a pas le même sens dans les deux tranches, et la part « quand allumé » ne corrige
+pas ça. D'où deux garde-fous dans la table : la **part des positions où le nœud est allumé**, par tranche (si elle
+change du simple au triple, la comparaison est à prendre avec des pincettes), et pour 2f la menace comptée **réelle**
+(gain au coup nul), pas la menace au sens large.
+
+**Deux sorties de plus, demandées par l'Expert.** (a) Les sans nom séparés en deux : ceux qui perdent au moins 100
+(une bévue, l'examinateur le dit) et ceux qui ne perdent rien (l'arbre manque une branche) ; les deux courbes iront en
+sens inverse. L'examinateur ne passe que sur les sans nom (9 % des positions, profondeur réduite). (b) Ce que la table
+ne voit pas : les **suites**. Un 1900 joue le même plan trois coups de suite, la prophylaxie un coup *avant* que 1f
+s'allume ; un 1300 joue des coups sans lien. Mesure bon marché : la part des coups dont le nœud est **le même qu'au coup
+précédent**, par tranche. Et ce que la table ne verra jamais : *lequel* des coups du nœud (le cavalier vers la bonne
+case, la bonne parade plutôt que la pire) ; c'est l'étape 2.
 
 ## 1 bis. Ce qui existe, lu avant d'écrire (sources du GE, vérifiées le 25 oct.)
 
