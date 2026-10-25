@@ -24,10 +24,12 @@ const SORTIE = opt('--sortie', 'data/humains');
 const PAR_PARTIE = Number(opt('--par-partie', 8));
 const GRAINE = String(opt('--graine', '20261025'));
 const PART_TEST = 0.2;
-if (!fichiers.length) { console.error('usage : node scripts/joueur/extraire-humains.mjs <fichier.pgn> [--sortie dossier] [--par-partie 8] [--graine n]'); process.exit(2); }
+const MAX_PARTIES = Number(opt('--max-parties', 0)); // par tranche et par lot (apprentissage) : on s'arrête quand toutes les tranches demandées y sont
+const TRANCHES = (opt('--tranches', '1000,1200,1400,1600,1800,2000,2200')).split(',').map(Number);
+if (!fichiers.length) { console.error('usage : node scripts/joueur/extraire-humains.mjs <fichier.pgn | -> [--sortie dossier] [--par-partie 8] [--graine n] [--tranches 1200,2000,2200] [--max-parties 30000]'); process.exit(2); }
 
-const TRANCHES = [1000, 1200, 1400, 1600, 1800, 2000];
-const tranche = (elo) => (elo >= 1000 && elo < 2200 ? 1000 + 200 * Math.floor((elo - 1000) / 200) : null);
+const tranche = (elo) => { if (elo < 1000 || elo >= 2400) return null; const t = 1000 + 200 * Math.floor((elo - 1000) / 200); return TRANCHES.includes(t) ? t : null; };
+const complet = () => MAX_PARTIES > 0 && TRANCHES.every((t) => (compte.parLot[`apprentissage-${t}`]?.parties ?? 0) >= MAX_PARTIES);
 const h32 = (s) => parseInt(createHash('sha1').update(GRAINE + '|' + s).digest('hex').slice(0, 8), 16);
 const estTest = (joueur) => (h32('joueur:' + joueur) % 1000) < PART_TEST * 1000;
 function alea(graine) { let a = graine >>> 0; return () => { a |= 0; a = (a + 0x6D2B79F5) | 0; let t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
@@ -68,6 +70,7 @@ function traiter(entetes, texte) {
   const tW = estTest(entetes.White ?? ''), tB = estTest(entetes.Black ?? '');
   if (tW !== tB) { compte.ecartees.mixte++; return; }
   const lot = tW ? 'test' : 'apprentissage';
+  if (MAX_PARTIES > 0 && (compte.parLot[`${lot}-${tw}`]?.parties ?? 0) >= (lot === 'test' ? Math.ceil(MAX_PARTIES / 4) : MAX_PARTIES)) { compte.ecartees.plafond = (compte.ecartees.plafond ?? 0) + 1; return; }
   const sans = sansDe(texte);
   if (sans.length < 16) { compte.ecartees.courte++; return; }
   const id = (entetes.Site ?? '').split('/').pop() || `${compte.lues}`;
@@ -102,16 +105,18 @@ function traiter(entetes, texte) {
 async function main() {
   mkdirSync(SORTIE, { recursive: true });
   const t0 = Date.now();
-  for (const f of fichiers) {
+  boucle: for (const f of fichiers) {
     let entetes = {}, texte = '', dansTexte = false;
-    for await (const line of createInterface({ input: createReadStream(f), crlfDelay: Infinity })) {
+    const entree = f === '-' ? process.stdin : createReadStream(f); // « - » : l'entrée standard (zstdcat … | node …)
+    const rl = createInterface({ input: entree, crlfDelay: Infinity });
+    for await (const line of rl) {
       if (line.startsWith('[')) {
-        if (dansTexte) { traiter(entetes, texte); entetes = {}; texte = ''; dansTexte = false; }
+        if (dansTexte) { traiter(entetes, texte); entetes = {}; texte = ''; dansTexte = false; if (complet()) { rl.close(); entree.destroy?.(); break boucle; } }
         const m = /^\[(\w+)\s+"(.*)"\]$/.exec(line); if (m) entetes[m[1]] = m[2];
       } else if (line.trim()) { texte += ' ' + line; dansTexte = true; }
       if (compte.lues % 20000 === 0 && compte.lues && line.startsWith('[Event')) process.stderr.write(`· ${compte.lues} parties lues, ${compte.gardees} gardées, ${Math.round((Date.now() - t0) / 1000)} s\n`);
     }
-    if (dansTexte) traiter(entetes, texte);
+    if (dansTexte && !complet()) traiter(entetes, texte);
   }
   for (const [cle, liste] of Object.entries(lignes)) {
     liste.sort((a, b) => a.ordre - b.ordre);
