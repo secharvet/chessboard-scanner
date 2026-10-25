@@ -22,7 +22,7 @@ const ETAPE = (noeud) => (noeud == null ? '—' : noeud[0]); // '1' | '2' | '3' 
 const PCT = (n, d) => (d ? (100 * n / d).toFixed(1) + ' %' : '—');
 
 function fichiersDe(args) {
-  const chemins = args.filter((a) => !a.startsWith('--'));
+  const chemins = args.filter((a, i) => !a.startsWith('--') && args[i - 1] !== '--sortie'); // la valeur de --sortie n'est pas un lot
   const out = [];
   for (const c of chemins) {
     const st = statSync(c);
