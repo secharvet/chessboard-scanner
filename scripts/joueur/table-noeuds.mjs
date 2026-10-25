@@ -51,7 +51,8 @@ for (const f of fichiers) {
     ph.positions++; if (!r.noeud) ph.sansNom++;
     if (precedent && precedent.partie === p.partie && precedent.camp === p.camp) { ph.suites++; if (precedent.noeud && precedent.noeud === r.noeud) ph.memeNoeud++; }
     precedent = { partie: p.partie, camp: p.camp, noeud: r.noeud };
-    lignes.push({ ...p, noeud: r.noeud, reconnait, allumes });
+    const nommant = (r.raisons ?? []).find((x) => x.noeud === r.noeud);
+    lignes.push({ ...p, noeud: r.noeud, raison: r.raison ?? nommant?.raison ?? null, famille: nommant?.famille ?? null, reconnait, allumes });
     if (positions % 50 === 0) process.stderr.write(`· ${positions} positions, ${Math.round((Date.now() - t0) / 1000)} s (${((Date.now() - t0) / 1000 / positions).toFixed(2)} s/position)\n`);
   }
 }
