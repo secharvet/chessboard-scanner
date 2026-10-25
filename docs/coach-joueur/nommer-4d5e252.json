@@ -1,0 +1,6416 @@
+{
+ "coups": 605,
+ "nommes": 552,
+ "parNoeud": {
+  "3L": 43,
+  "1c": 143,
+  "2b": 66,
+  "3D": 88,
+  "1f": 50,
+  "1d": 6,
+  "2a": 36,
+  "2f": 27,
+  "2d": 40,
+  "1b": 5,
+  "1a": 10,
+  "3Y": 2,
+  "1e": 7,
+  "3d": 13,
+  "2e": 5,
+  "3C": 11
+ },
+ "parPhase": {
+  "ouverture": {
+   "coups": 255,
+   "sansNom": 18
+  },
+  "milieu": {
+   "coups": 240,
+   "sansNom": 19
+  },
+  "finale": {
+   "coups": 110,
+   "sansNom": 16
+  }
+ },
+ "sansNom": [
+  {
+   "partie": "2026-10-24-maia-w-01",
+   "ply": 15,
+   "fen": "r1bqkb1r/ppp2p1p/4pp2/8/1n1P4/3B1N2/PPP2PPP/R1BQK2R w KQkq - 4 8",
+   "san": "Fe2",
+   "sorte": "amelioration",
+   "phase": "ouverture",
+   "candidats": "2d 2d 3D 3D 3D 3D 3C 3C 3Y"
+  },
+  {
+   "partie": "2026-10-24-maia-w-01",
+   "ply": 25,
+   "fen": "r1bqk1r1/pp3p1p/4pp1B/2bn4/3N4/2P5/PP2BPPP/R2Q1RK1 w q - 3 13",
+   "san": "Dd3",
+   "sorte": "plan",
+   "phase": "milieu",
+   "candidats": "1d 1d 1d 1d 1d 1d 1d 1d 1d 1d 1d 1d 1e 2d 2d 2d 2f 2f 2f 3C 3Y 3Y 3Y"
+  },
+  {
+   "partie": "2026-10-24-maia-w-05",
+   "ply": 15,
+   "fen": "rnbqr1k1/ppp1bppp/5n2/3P4/3Q1B2/2N5/PPP2PPP/2KR1BNR w - - 5 8",
+   "san": "Cb5",
+   "sorte": "amelioration",
+   "phase": "ouverture",
+   "candidats": "1e 1e 1e 1e 1e 1e 1e 1e 1e 1e 1e 1e 1e 2d 2e 2f 3D 3D 3D 3D 3D 3D"
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 19,
+   "fen": "rnb2rk1/pp1nbppp/4p3/2p1P3/2B5/2N2N2/PPP2PPP/R1BR2K1 w - - 3 10",
+   "san": "Ce4",
+   "sorte": "amelioration",
+   "phase": "ouverture",
+   "candidats": "2d 2f 2f 3D 3D 3D"
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 21,
+   "fen": "r1b2rk1/pp1nbppp/2n1p3/2p1P3/2B1N3/5N2/PPP2PPP/R1BR2K1 w - - 5 11",
+   "san": "Fb5",
+   "sorte": "amelioration",
+   "phase": "milieu",
+   "candidats": "1c 1c 1c 1f 1f 2f 2f 2f 3D 3D"
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 33,
+   "fen": "1rb2rk1/p4ppp/1pBRp1n1/2p5/4N3/8/PPP2PPP/R5K1 w - - 2 17",
+   "san": "Te1",
+   "sorte": "amelioration",
+   "phase": "milieu",
+   "candidats": "3C 3C 3Y"
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 37,
+   "fen": "5rk1/pr3ppp/1p1Rp1n1/2p5/4N3/8/PPP2PPP/4R1K1 w - - 0 19",
+   "san": "Ted1",
+   "sorte": "amelioration",
+   "phase": "finale",
+   "candidats": "2f 2f 2f 3Y"
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 39,
+   "fen": "5rk1/pr3pp1/1p1Rp1np/2p5/4N3/8/PPP2PPP/3R2K1 w - - 0 20",
+   "san": "a4",
+   "sorte": "amelioration",
+   "phase": "finale",
+   "candidats": "2d 2e 2f 2f"
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 41,
+   "fen": "5rk1/pr3pp1/1p1Rp2p/2p1n3/P3N3/8/1PP2PPP/3R2K1 w - - 1 21",
+   "san": "b3",
+   "sorte": "amelioration",
+   "phase": "finale",
+   "candidats": "2d 2e 2f 2f 2f"
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 43,
+   "fen": "5rk1/pr3pp1/1p1Rp1np/2p5/P3N3/1P6/2P2PPP/3R2K1 w - - 1 22",
+   "san": "a5",
+   "sorte": "amelioration",
+   "phase": "finale",
+   "candidats": "2d 2e 2f 2f"
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 45,
+   "fen": "5rk1/pr3pp1/3Rp1np/p1p5/4N3/1P6/2P2PPP/3R2K1 w - - 0 23",
+   "san": "Tc6",
+   "sorte": "amelioration",
+   "phase": "finale",
+   "candidats": "2b 2d 2e 2f 3Y 3Y"
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 47,
+   "fen": "5rk1/p4pp1/2R1p1np/prp5/4N3/1P6/2P2PPP/3R2K1 w - - 2 24",
+   "san": "Tc7",
+   "sorte": "amelioration",
+   "phase": "finale",
+   "candidats": "2b 2b 2d 2d 2d 2f 3C 3Y"
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 57,
+   "fen": "3R4/2R2pk1/pr2ppnp/p7/8/1P6/2P2PPP/6K1 w - - 1 29",
+   "san": "g3",
+   "sorte": "amelioration",
+   "phase": "finale",
+   "candidats": "2f 2f 2f 3C 3Y 3Y"
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 67,
+   "fen": "3R4/5pk1/p3pp1p/p7/5P2/1r4P1/2R2K1P/8 w - - 0 34",
+   "san": "Ta2",
+   "sorte": "amelioration",
+   "phase": "finale",
+   "candidats": "2f 2f 2f 3Y"
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 69,
+   "fen": "3R4/5pk1/p3pp1p/pr6/5P2/6P1/R4K1P/8 w - - 2 35",
+   "san": "Td6",
+   "sorte": "amelioration",
+   "phase": "finale",
+   "candidats": "3A 3A 3A 3A 3A"
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 79,
+   "fen": "8/5p2/4kp1p/R3p3/5P2/5KP1/7P/8 w - - 2 40",
+   "san": "Ta6+",
+   "sorte": "calcul",
+   "phase": "finale",
+   "candidats": "2d"
+  },
+  {
+   "partie": "2026-10-24-maia-w-02",
+   "ply": 5,
+   "fen": "rnbqkbnr/ppp2ppp/4p3/3p4/4P3/2N5/PPPP1PPP/R1BQKBNR w KQkq - 0 3",
+   "san": "exd5",
+   "sorte": "amelioration",
+   "phase": "ouverture",
+   "candidats": "3D 3D 3D 3D 3D 3D 3D"
+  },
+  {
+   "partie": "2026-10-24-maia-w-02",
+   "ply": 19,
+   "fen": "r3kb1r/pp4pp/2nqpn2/1Bpp4/8/2N5/PPPP1PPP/R1BQR1K1 w kq - 6 10",
+   "san": "d4",
+   "sorte": "amelioration",
+   "phase": "ouverture",
+   "candidats": "2e 2f 2f 2f 3Y 3Y 3Y"
+  },
+  {
+   "partie": "2026-10-24-maia-w-02",
+   "ply": 29,
+   "fen": "r4rk1/pp2b1pp/2nq1n2/1B1p2N1/8/8/PPP2PPP/R1BQR1K1 w - - 3 15",
+   "san": "De2",
+   "sorte": "plan",
+   "phase": "milieu",
+   "candidats": "1d 1d 1d 1d 1d 1d 1d 1d 2d 2d 2e 2f 2f 2f 3D 3D 3C 3Y 3Y"
+  },
+  {
+   "partie": "2026-10-24-maia-w-10",
+   "ply": 21,
+   "fen": "Qn1q1rk1/p1p1bppp/1p1pp2n/4P3/3P4/2NB3P/PPP2PP1/R1B2RK1 w - - 1 11",
+   "san": "Fxh6",
+   "sorte": "defense",
+   "phase": "milieu",
+   "candidats": "2b 2b 2f 2f 2f 3D 3D 3D"
+  },
+  {
+   "partie": "2026-10-24-maia-w-18",
+   "ply": 31,
+   "fen": "r2r4/pb1p1kpp/1pn1pn2/8/3P4/2PB4/PP3PPP/R2QR1K1 w - - 1 16",
+   "san": "g4",
+   "sorte": "amelioration",
+   "phase": "milieu",
+   "candidats": "2e 2f 2f 3C 3P"
+  },
+  {
+   "partie": "2026-10-24-maia-w-18",
+   "ply": 41,
+   "fen": "1r1r4/p2pnk1p/1p2p1p1/3b2P1/3PB3/8/PP3P1P/R2QR1K1 w - - 0 21",
+   "san": "Df3+",
+   "sorte": "defense",
+   "phase": "milieu",
+   "candidats": "2f 3C"
+  },
+  {
+   "partie": "2026-10-24-maia-w-22",
+   "ply": 15,
+   "fen": "r2q1rk1/pbppppbp/1pn3pn/6B1/2BPP3/2N2N2/PPP2PPP/R2Q1RK1 w - - 10 8",
+   "san": "h3",
+   "sorte": "amelioration",
+   "phase": "ouverture",
+   "candidats": "2d 2f 2f 2f 3P 3Y"
+  },
+  {
+   "partie": "2026-10-24-maia-w-22",
+   "ply": 27,
+   "fen": "r2q1rk1/pb1p3p/1pp1pppb/8/1PBPP3/2N2N1P/P1P2PP1/R2Q1RK1 w - - 0 14",
+   "san": "Ch2",
+   "sorte": "amelioration",
+   "phase": "milieu",
+   "candidats": "2f 2f 2f 3d 3d 3d 3d 3d 3d 3P"
+  },
+  {
+   "partie": "2026-10-24-maia-w-26",
+   "ply": 19,
+   "fen": "r3kb1r/pppb1pp1/3p1qnp/3Pp3/2B1P3/2N2N2/PPP2PPP/R2Q1RK1 w kq - 0 10",
+   "san": "Cd2",
+   "sorte": "amelioration",
+   "phase": "ouverture",
+   "candidats": "2e 2f 3C 3C 3P 3Y"
+  },
+  {
+   "partie": "2026-10-24-maia-w-26",
+   "ply": 31,
+   "fen": "2r2rk1/1p2bpp1/p2p1q1p/3Pp3/4Pn2/2N5/PPPN1PPP/R2Q1RK1 w - - 2 16",
+   "san": "Dg4",
+   "sorte": "amelioration",
+   "phase": "milieu",
+   "candidats": "2d 2e 3C 3C 3P"
+  },
+  {
+   "partie": "2026-10-24-maia-w-26",
+   "ply": 63,
+   "fen": "8/6pk/p2PR3/6p1/Np2p3/6PK/PP1r3P/8 w - - 1 32",
+   "san": "Cc5",
+   "sorte": "calcul",
+   "phase": "finale",
+   "candidats": "2b 3C 3C 3C 3C"
+  },
+  {
+   "partie": "2026-10-24-maia-w-03",
+   "ply": 31,
+   "fen": "r2q1rk1/pRp2ppp/1b1p1n2/3P4/4P3/3B1N2/P4PPP/2BQ1RK1 w - - 1 16",
+   "san": "Dc2",
+   "sorte": "amelioration",
+   "phase": "milieu",
+   "candidats": "1e 1e 2d 2e 2f 3D 3D 3D 3D 3D 3C"
+  },
+  {
+   "partie": "2026-10-24-maia-w-03",
+   "ply": 41,
+   "fen": "r2q2k1/pRp1rppp/1b6/1B1Pp3/4P3/B6P/P1Q2PP1/5RK1 w - - 4 21",
+   "san": "Fc6",
+   "sorte": "amelioration",
+   "phase": "milieu",
+   "candidats": "1e 1e 1e 2b 2d 2d 2f 2f"
+  },
+  {
+   "partie": "2026-10-24-maia-w-03",
+   "ply": 49,
+   "fen": "5k2/p1p2ppp/1bB5/3Pp3/4P3/7P/P1Q2PP1/5RK1 w - - 0 25",
+   "san": "Tb1",
+   "sorte": "amelioration",
+   "phase": "finale",
+   "candidats": "1e 1e 2f 2f 2f 3d 3d 3d 3d 3d"
+  },
+  {
+   "partie": "2026-10-24-maia-w-11",
+   "ply": 17,
+   "fen": "rnbq1rk1/p1p1pnbp/1p1p1pp1/8/2BPP3/2N1B3/PPP1NPPP/R2Q1RK1 w - - 2 9",
+   "san": "Cf4",
+   "sorte": "amelioration",
+   "phase": "ouverture",
+   "candidats": "2d 2e 3d 3Y 3Y"
+  },
+  {
+   "partie": "2026-10-24-maia-w-11",
+   "ply": 43,
+   "fen": "1n3r2/p5kp/1p1pP1p1/3Pnp2/8/1P6/P1P2PPP/R4RK1 w - - 1 22",
+   "san": "Tad1",
+   "sorte": "amelioration",
+   "phase": "finale",
+   "candidats": "2d 2d 2f"
+  },
+  {
+   "partie": "2026-10-24-maia-w-11",
+   "ply": 51,
+   "fen": "5r2/p5kp/1p2P1p1/3Ppp2/4n3/1P5P/P1P3P1/3R1RK1 w - - 0 26",
+   "san": "d6",
+   "sorte": "amelioration",
+   "phase": "finale",
+   "candidats": "2d 2f"
+  },
+  {
+   "partie": "2026-10-24-maia-w-19",
+   "ply": 15,
+   "fen": "r1bqk2r/pppnnpb1/3pp1pp/8/3PP3/2NBBN2/PPP2PPP/R2Q1RK1 w kq - 2 8",
+   "san": "Dd2",
+   "sorte": "amelioration",
+   "phase": "ouverture",
+   "candidats": "2e 3d 3d 3P"
+  },
+  {
+   "partie": "2026-10-24-maia-w-19",
+   "ply": 19,
+   "fen": "r2qk2r/pbpnnpb1/1p1pp1pp/1B6/3PP3/2N1BN2/PPPQ1PPP/R4RK1 w kq - 2 10",
+   "san": "a3",
+   "sorte": "amelioration",
+   "phase": "ouverture",
+   "candidats": "2e 2f 2f 2f 3d 3d 3Y 3Y 3Y"
+  },
+  {
+   "partie": "2026-10-24-maia-w-19",
+   "ply": 29,
+   "fen": "r3k2r/1bpnq1b1/pp1pp1np/6p1/3NP3/P1N1B3/1PPQBPPP/R4RK1 w kq - 2 15",
+   "san": "Fg4",
+   "sorte": "amelioration",
+   "phase": "milieu",
+   "candidats": "2d 2f 2f 2f 3C 3C 3C 3C"
+  },
+  {
+   "partie": "2026-10-24-maia-w-19",
+   "ply": 33,
+   "fen": "2kr3r/1bpnq1b1/pp1pB2p/4n1p1/3NP3/P1N1B3/1PPQ1PPP/R4RK1 w - - 1 17",
+   "san": "De2",
+   "sorte": "amelioration",
+   "phase": "milieu",
+   "candidats": "1d 1d 1d 1d 1d 1d 1d 1d 1d 1d 1d 1d 1d 1d 1d 1d 1d 2d 2d 2e 2e 2f 2f"
+  },
+  {
+   "partie": "2026-10-24-maia-w-19",
+   "ply": 37,
+   "fen": "1k1rq2r/1bpn2b1/pp1pB2p/3Nn1p1/3NP3/P3B3/1PP1QPPP/R4RK1 w - - 5 19",
+   "san": "Ff5",
+   "sorte": "amelioration",
+   "phase": "milieu",
+   "candidats": "1d 1d 1d 1d 1d 1d 1d 1d 1d 1d 1d 1d 1d 1d 1d 1d 2d 2f 2f 2f 3Y"
+  },
+  {
+   "partie": "2026-10-24-maia-w-23",
+   "ply": 15,
+   "fen": "rnbqk2r/pp1n1pp1/2p1p2p/3pP3/1b1P4/2NB4/PPP1NPPP/R1BQ1RK1 w kq - 1 8",
+   "san": "Cf4",
+   "sorte": "amelioration",
+   "phase": "ouverture",
+   "candidats": "2d 2f 2f 3D 3D 3D 3C"
+  },
+  {
+   "partie": "2026-10-24-maia-w-04",
+   "ply": 15,
+   "fen": "r2qkb1r/pbppppp1/1pn2n1p/8/3P1B2/2NB1N2/PPP2PPP/R2Q1RK1 w kq - 2 8",
+   "san": "Fc4",
+   "sorte": "amelioration",
+   "phase": "ouverture",
+   "candidats": "2d 2f 2f 2f 3P"
+  },
+  {
+   "partie": "2026-10-24-maia-w-04",
+   "ply": 17,
+   "fen": "r2qkb1r/pbpp1pp1/1pn1pn1p/8/2BP1B2/2N2N2/PPP2PPP/R2Q1RK1 w kq - 0 9",
+   "san": "Cb5",
+   "sorte": "amelioration",
+   "phase": "ouverture",
+   "candidats": "2d 2f 2f 2f 3C"
+  },
+  {
+   "partie": "2026-10-24-maia-w-04",
+   "ply": 19,
+   "fen": "r2qkb1r/pbp2pp1/1pnppn1p/1N6/2BP1B2/5N2/PPP2PPP/R2Q1RK1 w kq - 0 10",
+   "san": "De2",
+   "sorte": "amelioration",
+   "phase": "ouverture",
+   "candidats": "2d 2f 2f 3C 3Y 3Y 3Y"
+  },
+  {
+   "partie": "2026-10-24-maia-w-08",
+   "ply": 15,
+   "fen": "rnbq1rk1/1pp1bppp/p2p1n2/8/2BNP3/2N5/PPP2PPP/R1BQ1RK1 w - - 0 8",
+   "san": "Cd5",
+   "sorte": "amelioration",
+   "phase": "ouverture",
+   "candidats": "1d 1d 1d 1d 1d 1d 1d 1d 1d 2f 2f 2f 3D 3D 3D 3D 3Y"
+  },
+  {
+   "partie": "2026-10-24-maia-w-08",
+   "ply": 35,
+   "fen": "1rq3rk/2p1R1pp/p2p4/3Q4/8/8/PPP2PPP/R1B3K1 w - - 1 18",
+   "san": "b3",
+   "sorte": "amelioration",
+   "phase": "milieu",
+   "candidats": "2f 2f 2f 3D 3D 3D 3D 3C"
+  },
+  {
+   "partie": "2026-10-24-maia-w-12",
+   "ply": 13,
+   "fen": "rn2kbnr/1bpp1pp1/pp2pq1p/8/3PP3/2NB1N2/PPP2PPP/R1BQ1RK1 w kq - 2 7",
+   "san": "Ce2",
+   "sorte": "amelioration",
+   "phase": "ouverture",
+   "candidats": "2d 2f 2f 3D 3D 3d"
+  },
+  {
+   "partie": "2026-10-24-maia-w-12",
+   "ply": 17,
+   "fen": "rn2kbnr/1bpp1pp1/pp2pq1p/8/3PPN2/3B1N2/PPP2PPP/R1BQ1RK1 w kq - 6 9",
+   "san": "Ce5",
+   "sorte": "amelioration",
+   "phase": "ouverture",
+   "candidats": "2d 2d 2f 3D 3D 3d"
+  },
+  {
+   "partie": "2026-10-24-maia-w-12",
+   "ply": 43,
+   "fen": "2kr2r1/2p1bp2/bpnp4/3N3p/1p2P3/1Q6/PPP2PPP/R2R2K1 w - - 0 22",
+   "san": "a3",
+   "sorte": "amelioration",
+   "phase": "milieu",
+   "candidats": "1d 1d 1d 1d 1d 1d 1d 1d 1d 1d 1d 1d 1e 2b 2b 2b 2b 2b 2d 2f 2f 3C"
+  },
+  {
+   "partie": "2026-10-24-maia-w-16",
+   "ply": 9,
+   "fen": "rnbqk2r/ppppbppp/4p3/3nP3/3P4/2N5/PPP2PPP/R1BQKBNR w KQkq - 1 5",
+   "san": "Dg4",
+   "sorte": "calcul",
+   "phase": "ouverture",
+   "candidats": "2f 3D 3D 3D 3D 3D 3D 3D 3D 3D"
+  },
+  {
+   "partie": "2026-10-24-maia-w-16",
+   "ply": 37,
+   "fen": "r1b1r1k1/1p2qp1p/6pB/3pn1N1/p4Q2/P2B4/1PP2PPP/1K1R3R w - - 0 19",
+   "san": "Dd4",
+   "sorte": "amelioration",
+   "phase": "milieu",
+   "candidats": "2d 2e 2e 2e 2f 2f 2f 3C 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d 3d"
+  },
+  {
+   "partie": "2026-10-24-maia-w-20",
+   "ply": 53,
+   "fen": "8/Q5p1/6k1/5pb1/3P4/8/P4PPP/R5K1 w - - 0 27",
+   "san": "Db6+",
+   "sorte": "plan",
+   "phase": "finale",
+   "candidats": "2f 2f 3C 3C 3C 3d"
+  },
+  {
+   "partie": "2026-10-24-maia-w-20",
+   "ply": 55,
+   "fen": "8/6p1/1Q3bk1/5p2/3P4/8/P4PPP/R5K1 w - - 2 28",
+   "san": "a4",
+   "sorte": "amelioration",
+   "phase": "finale",
+   "candidats": "2e 2e 2e 2e 2f 3C 3C 3d"
+  },
+  {
+   "partie": "2026-10-24-maia-w-24",
+   "ply": 23,
+   "fen": "rq3k1b/1ppbp2p/p2p1pp1/3B4/1n1PP3/2N1B3/PPP2PPP/R2QK2R w KQ - 3 12",
+   "san": "Fb3",
+   "sorte": "amelioration",
+   "phase": "milieu",
+   "candidats": "2d 2f 2f 2f 3D 3Y"
+  },
+  {
+   "partie": "2026-10-24-maia-w-24",
+   "ply": 29,
+   "fen": "rq3k1b/2pbp2p/2np1pp1/pp6/3PP3/PBN1B3/1PP2PPP/R2Q1RK1 w - b6 0 15",
+   "san": "De2",
+   "sorte": "amelioration",
+   "phase": "milieu",
+   "candidats": "2d 2e 2f 2f 3d 3P"
+  }
+ ],
+ "details": [
+  {
+   "partie": "2026-10-24-maia-w-01",
+   "ply": 1,
+   "san": "e4",
+   "noeud": "3L",
+   "raison": "occupe le centre et ouvre la diagonale du fou roi et la dame",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-01",
+   "ply": 3,
+   "san": "d4",
+   "noeud": "3L",
+   "raison": "prend tout le centre avant que …d5 ne le conteste",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-01",
+   "ply": 5,
+   "san": "Cc3",
+   "noeud": "1c",
+   "raison": "je défends mon pion en e4",
+   "autres": [
+    "3L",
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-01",
+   "ply": 7,
+   "san": "Cxe4",
+   "noeud": "2b",
+   "raison": "je prends son pion en e4 et je gagne du matériel",
+   "autres": [
+    "3L"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-01",
+   "ply": 9,
+   "san": "Cxf6+",
+   "noeud": "1c",
+   "raison": "je prends son cavalier qui attaquait mon cavalier",
+   "autres": [
+    "1f",
+    "3L"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-01",
+   "ply": 11,
+   "san": "Cf3",
+   "noeud": "3D",
+   "raison": "je sors mon cavalier",
+   "autres": [
+    "3C"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-01",
+   "ply": 13,
+   "san": "Fd3",
+   "noeud": "3D",
+   "raison": "je sors mon fou",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-01",
+   "ply": 15,
+   "san": "Fe2",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-01",
+   "ply": 17,
+   "san": "O-O",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait un pion : je pare",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-01",
+   "ply": 19,
+   "san": "Cxd4",
+   "noeud": "2b",
+   "raison": "je prends son pion en d4 et je gagne du matériel",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-01",
+   "ply": 21,
+   "san": "c3",
+   "noeud": "1c",
+   "raison": "je défends mon cavalier en d4",
+   "autres": [
+    "1f",
+    "2d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-01",
+   "ply": 23,
+   "san": "Fh6",
+   "noeud": "3D",
+   "raison": "je sors mon fou",
+   "autres": [
+    "3P"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-01",
+   "ply": 25,
+   "san": "Dd3",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-01",
+   "ply": 27,
+   "san": "Db5+",
+   "noeud": "2b",
+   "raison": "fourchette : son roi et son fou",
+   "autres": [
+    "2d",
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-01",
+   "ply": 29,
+   "san": "Dxc5",
+   "noeud": "1c",
+   "raison": "ma dame est attaqué : je l'échange contre son fou",
+   "autres": [
+    "1f",
+    "2b",
+    "2d",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-01",
+   "ply": 31,
+   "san": "Fb5+",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait une pièce : je pare",
+   "autres": [
+    "2b"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-01",
+   "ply": 33,
+   "san": "Dxd5",
+   "noeud": "2b",
+   "raison": "je prends son cavalier en d5 et je gagne du matériel",
+   "autres": [
+    "2e"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-01",
+   "ply": 35,
+   "san": "Tae1+",
+   "noeud": "1d",
+   "raison": "ma dernière rangée est fragile : je la couvre",
+   "autres": [
+    "2a",
+    "2b",
+    "3C",
+    "3d",
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-01",
+   "ply": 37,
+   "san": "Dxd7#",
+   "noeud": "2a",
+   "raison": "j'ai un mat",
+   "autres": [
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-05",
+   "ply": 1,
+   "san": "e4",
+   "noeud": "3L",
+   "raison": "occupe le centre et ouvre la diagonale du fou roi et la dame",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-05",
+   "ply": 3,
+   "san": "Cc3",
+   "noeud": "1c",
+   "raison": "je défends mon pion en e4",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-05",
+   "ply": 5,
+   "san": "exd5",
+   "noeud": "2b",
+   "raison": "je prends son pion en d5 et je gagne du matériel",
+   "autres": [
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-05",
+   "ply": 7,
+   "san": "d4",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait un pion : je pare",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-05",
+   "ply": 9,
+   "san": "Dxd4",
+   "noeud": "1c",
+   "raison": "je prends son pion qui attaquait mon cavalier",
+   "autres": [
+    "1f",
+    "2b"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-05",
+   "ply": 11,
+   "san": "Ff4",
+   "noeud": "3D",
+   "raison": "je sors mon fou",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-05",
+   "ply": 13,
+   "san": "O-O-O",
+   "noeud": "3D",
+   "raison": "je mets mon roi à l'abri",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-05",
+   "ply": 15,
+   "san": "Cb5",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-05",
+   "ply": 17,
+   "san": "Cxc7",
+   "noeud": "1c",
+   "raison": "mon cavalier est attaqué : je l'échange contre son pion",
+   "autres": [
+    "1f",
+    "2b",
+    "2d",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-05",
+   "ply": 19,
+   "san": "dxc6",
+   "noeud": "1c",
+   "raison": "je prends son cavalier qui attaquait ma dame",
+   "autres": [
+    "1e",
+    "1f",
+    "2b",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-05",
+   "ply": 21,
+   "san": "Txd4",
+   "noeud": "1c",
+   "raison": "je prends sa dame qui attaquait mon fou",
+   "autres": [
+    "1f",
+    "2b",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-05",
+   "ply": 23,
+   "san": "Td1",
+   "noeud": "1c",
+   "raison": "je mets ma tour à l'abri en d1",
+   "autres": [
+    "1f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-05",
+   "ply": 25,
+   "san": "Cxe8",
+   "noeud": "2b",
+   "raison": "je prends sa tour en e8 et je gagne du matériel",
+   "autres": [
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-05",
+   "ply": 27,
+   "san": "Td8",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait un pion : je pare",
+   "autres": [
+    "2d",
+    "2e",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-05",
+   "ply": 29,
+   "san": "Fd6+",
+   "noeud": "2a",
+   "raison": "j'ai un mat",
+   "autres": [
+    "2b"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-05",
+   "ply": 31,
+   "san": "Txe8#",
+   "noeud": "2a",
+   "raison": "j'ai un mat",
+   "autres": [
+    "2b",
+    "2e",
+    "3C"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 1,
+   "san": "e4",
+   "noeud": "3L",
+   "raison": "occupe le centre et ouvre la diagonale du fou roi et la dame",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 3,
+   "san": "d4",
+   "noeud": "3L",
+   "raison": "prend tout le centre avant que …d5 ne le conteste",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 5,
+   "san": "Cf3",
+   "noeud": "3D",
+   "raison": "je sors mon cavalier",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 7,
+   "san": "Fc4",
+   "noeud": "3D",
+   "raison": "je sors mon fou",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 9,
+   "san": "O-O",
+   "noeud": "3D",
+   "raison": "je mets mon roi à l'abri",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 11,
+   "san": "e5",
+   "noeud": "1c",
+   "raison": "je mets mon pion à l'abri en e5",
+   "autres": [
+    "1f",
+    "2d",
+    "2f",
+    "3d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 13,
+   "san": "dxe5",
+   "noeud": "1c",
+   "raison": "je prends son pion qui attaquait mon pion",
+   "autres": [
+    "1e",
+    "1f",
+    "2b",
+    "2d",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 15,
+   "san": "Txd1",
+   "noeud": "1c",
+   "raison": "je prends sa dame qui attaquait mon fou",
+   "autres": [
+    "1d",
+    "1e",
+    "2b",
+    "2f",
+    "3C",
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 17,
+   "san": "Cc3",
+   "noeud": "3D",
+   "raison": "je sors mon cavalier",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 19,
+   "san": "Ce4",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 21,
+   "san": "Fb5",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 23,
+   "san": "Cxe5",
+   "noeud": "2f",
+   "raison": "je menace son cavalier : s'il ne fait rien, Cxe5 puis Cxc6 puis bxc6 puis Fxc6",
+   "autres": [
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 25,
+   "san": "Ff4",
+   "noeud": "2d",
+   "raison": "j'attaque son cavalier en e5, non défendue",
+   "autres": [
+    "2f",
+    "3D",
+    "3P"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 27,
+   "san": "Fd6",
+   "noeud": "1c",
+   "raison": "je mets mon fou à l'abri en d6",
+   "autres": [
+    "1f",
+    "2e"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 29,
+   "san": "Txd6",
+   "noeud": "2b",
+   "raison": "je prends son fou en d6 et je gagne du matériel",
+   "autres": [
+    "2f",
+    "3C",
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 31,
+   "san": "Fc6",
+   "noeud": "2d",
+   "raison": "j'attaque sa tour en a8, non défendue",
+   "autres": [
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 33,
+   "san": "Te1",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 35,
+   "san": "Fxb7",
+   "noeud": "2f",
+   "raison": "je menace du matériel : s'il ne fait rien, Fxb7 puis Fa6 puis Tfd8 puis Fb5",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 37,
+   "san": "Ted1",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 39,
+   "san": "a4",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 41,
+   "san": "b3",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 43,
+   "san": "a5",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 45,
+   "san": "Tc6",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 47,
+   "san": "Tc7",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 49,
+   "san": "Cxc5",
+   "noeud": "2b",
+   "raison": "je prends son pion en c5 et je gagne du matériel",
+   "autres": [
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 51,
+   "san": "Cd7",
+   "noeud": "2d",
+   "raison": "double attaque sur sa tour en b6 et sa tour en f8",
+   "autres": [
+    "3C"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 53,
+   "san": "Cf6+",
+   "noeud": "2b",
+   "raison": "échec qui gagne du matériel",
+   "autres": [
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 55,
+   "san": "Txd8+",
+   "noeud": "1b",
+   "raison": "il menace mat : j'enlève le mat",
+   "autres": [
+    "1c",
+    "2b"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 57,
+   "san": "g3",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 59,
+   "san": "f4",
+   "noeud": "2d",
+   "raison": "j'attaque son cavalier en e5 avec mon pion",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 61,
+   "san": "Rg2",
+   "noeud": "1a",
+   "raison": "je suis en échec : je dois parer",
+   "autres": [
+    "2d",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 63,
+   "san": "Rf2",
+   "noeud": "1a",
+   "raison": "je suis en échec : je dois parer",
+   "autres": [
+    "2d",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 65,
+   "san": "Txc2",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait un pion : je pare",
+   "autres": [
+    "2b"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 67,
+   "san": "Ta2",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 69,
+   "san": "Td6",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 71,
+   "san": "Txa6",
+   "noeud": "2b",
+   "raison": "je prends son pion en a6 et je gagne du matériel",
+   "autres": [
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 73,
+   "san": "T6xa5",
+   "noeud": "2b",
+   "raison": "je prends son pion en a5 et je gagne du matériel",
+   "autres": [
+    "2d",
+    "2e",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 75,
+   "san": "Txa5+",
+   "noeud": "1c",
+   "raison": "je prends sa tour qui attaquait ma tour",
+   "autres": [
+    "1f",
+    "2b"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 77,
+   "san": "Rf3",
+   "noeud": "1c",
+   "raison": "je défends mon pion en f4",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 79,
+   "san": "Ta6+",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 81,
+   "san": "g4+",
+   "noeud": "3Y",
+   "raison": "je l'empêche de exf4",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 83,
+   "san": "fxe5",
+   "noeud": "2f",
+   "raison": "je menace une fourchette : s'il ne fait rien, fxe5 puis Txf6+ puis Rg7 puis Re4",
+   "autres": [
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 85,
+   "san": "Txf6",
+   "noeud": "1c",
+   "raison": "je prends son pion qui attaquait mon pion",
+   "autres": [
+    "1f",
+    "2b",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 87,
+   "san": "gxh5",
+   "noeud": "1c",
+   "raison": "je prends son pion qui attaquait mon pion",
+   "autres": [
+    "1f",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 89,
+   "san": "Rf4",
+   "noeud": "2a",
+   "raison": "j'ai un mat",
+   "autres": [
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-09",
+   "ply": 91,
+   "san": "Th6#",
+   "noeud": "2a",
+   "raison": "j'ai un mat",
+   "autres": [
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-13",
+   "ply": 1,
+   "san": "e4",
+   "noeud": "3L",
+   "raison": "occupe le centre et ouvre la diagonale du fou roi et la dame",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-13",
+   "ply": 3,
+   "san": "d4",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait un pion : je pare",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-13",
+   "ply": 5,
+   "san": "Cc3",
+   "noeud": "3D",
+   "raison": "je sors mon cavalier",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-13",
+   "ply": 7,
+   "san": "Cf3",
+   "noeud": "3D",
+   "raison": "je sors mon cavalier",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-13",
+   "ply": 9,
+   "san": "Fc4",
+   "noeud": "3D",
+   "raison": "je sors mon fou",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-13",
+   "ply": 11,
+   "san": "dxe5",
+   "noeud": "2b",
+   "raison": "je prends son pion en e5 et je gagne du matériel",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-13",
+   "ply": 13,
+   "san": "Cxe5",
+   "noeud": "2b",
+   "raison": "je prends son pion en e5 et je gagne du matériel",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-13",
+   "ply": 15,
+   "san": "Cxf7",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait un pion : je pare",
+   "autres": [
+    "2b",
+    "2d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-13",
+   "ply": 17,
+   "san": "Rf1",
+   "noeud": "1a",
+   "raison": "je suis en échec : je dois parer",
+   "autres": [
+    "2d",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-13",
+   "ply": 19,
+   "san": "Cd6+",
+   "noeud": "2b",
+   "raison": "fourchette : son roi et son fou",
+   "autres": [
+    "2d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-13",
+   "ply": 21,
+   "san": "Fxg8",
+   "noeud": "2b",
+   "raison": "je prends son cavalier en g8 et je gagne du matériel",
+   "autres": [
+    "2d",
+    "3C"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-13",
+   "ply": 23,
+   "san": "Cf7+",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait une pièce : je pare",
+   "autres": [
+    "2b",
+    "2d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-13",
+   "ply": 25,
+   "san": "Dd6+",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait une pièce : je pare",
+   "autres": [
+    "2b"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-13",
+   "ply": 27,
+   "san": "Cxh8",
+   "noeud": "1c",
+   "raison": "je prends sa tour qui attaquait mon fou",
+   "autres": [
+    "1f",
+    "2b",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-13",
+   "ply": 29,
+   "san": "De6+",
+   "noeud": "2a",
+   "raison": "j'ai un mat",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-13",
+   "ply": 31,
+   "san": "Cf7+",
+   "noeud": "2a",
+   "raison": "j'ai un mat",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-13",
+   "ply": 33,
+   "san": "Dd6#",
+   "noeud": "2a",
+   "raison": "j'ai un mat",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-17",
+   "ply": 1,
+   "san": "e4",
+   "noeud": "3L",
+   "raison": "occupe le centre et ouvre la diagonale du fou roi et la dame",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-17",
+   "ply": 3,
+   "san": "d4",
+   "noeud": "3L",
+   "raison": "prend tout le centre avant que …d5 ne le conteste",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-17",
+   "ply": 5,
+   "san": "Cc3",
+   "noeud": "1c",
+   "raison": "je défends mon pion en e4",
+   "autres": [
+    "3L",
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-17",
+   "ply": 7,
+   "san": "Cxe4",
+   "noeud": "2b",
+   "raison": "je prends son pion en e4 et je gagne du matériel",
+   "autres": [
+    "3L"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-17",
+   "ply": 9,
+   "san": "c3",
+   "noeud": "1c",
+   "raison": "je défends mon pion en d4",
+   "autres": [
+    "1f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-17",
+   "ply": 11,
+   "san": "Fg5",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait une pièce : je pare",
+   "autres": [
+    "2e",
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-17",
+   "ply": 13,
+   "san": "Fxf6",
+   "noeud": "1c",
+   "raison": "je prends son cavalier qui attaquait mon cavalier",
+   "autres": [
+    "1f",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-17",
+   "ply": 15,
+   "san": "Dg4",
+   "noeud": "1e",
+   "raison": "je romps l'alignement de ma dame",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-17",
+   "ply": 17,
+   "san": "Dg7",
+   "noeud": "2d",
+   "raison": "j'attaque sa tour en h8, non défendue",
+   "autres": [
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-17",
+   "ply": 19,
+   "san": "O-O-O",
+   "noeud": "3D",
+   "raison": "je mets mon roi à l'abri",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-17",
+   "ply": 21,
+   "san": "Cc5",
+   "noeud": "1c",
+   "raison": "je mets mon cavalier à l'abri en c5",
+   "autres": [
+    "1f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-17",
+   "ply": 23,
+   "san": "dxc5",
+   "noeud": "2b",
+   "raison": "je prends son fou en c5 et je gagne du matériel",
+   "autres": [
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-17",
+   "ply": 25,
+   "san": "b4",
+   "noeud": "1c",
+   "raison": "je défends mon pion en c5",
+   "autres": [
+    "1f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-17",
+   "ply": 27,
+   "san": "Cf3",
+   "noeud": "3D",
+   "raison": "je sors mon cavalier",
+   "autres": [
+    "3C",
+    "3P"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-17",
+   "ply": 29,
+   "san": "Dh6",
+   "noeud": "1c",
+   "raison": "je mets ma dame à l'abri en h6",
+   "autres": [
+    "1f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-17",
+   "ply": 31,
+   "san": "De3",
+   "noeud": "1c",
+   "raison": "je mets ma dame à l'abri en e3",
+   "autres": [
+    "1f",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-17",
+   "ply": 33,
+   "san": "b5",
+   "noeud": "2d",
+   "raison": "j'attaque son cavalier en c6 avec mon pion",
+   "autres": [
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-17",
+   "ply": 35,
+   "san": "Cxe5",
+   "noeud": "2b",
+   "raison": "je prends son pion en e5 et je gagne du matériel",
+   "autres": [
+    "2d",
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-17",
+   "ply": 37,
+   "san": "f4",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait une pièce et un pion : je pare",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-17",
+   "ply": 39,
+   "san": "c6",
+   "noeud": "3d",
+   "raison": "j'attaque son roi : 3 pièces contre 5, la colonne est ouverte",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-17",
+   "ply": 41,
+   "san": "Dxa7",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait un pion : je pare",
+   "autres": [
+    "2b",
+    "2d",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-17",
+   "ply": 43,
+   "san": "Rb1",
+   "noeud": "1a",
+   "raison": "je suis en échec : je dois parer",
+   "autres": [
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-17",
+   "ply": 45,
+   "san": "Da8#",
+   "noeud": "2a",
+   "raison": "j'ai un mat",
+   "autres": [
+    "2e"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-21",
+   "ply": 1,
+   "san": "e4",
+   "noeud": "3L",
+   "raison": "occupe le centre et ouvre la diagonale du fou roi et la dame",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-21",
+   "ply": 3,
+   "san": "Cf3",
+   "noeud": "3L",
+   "raison": "attaque e5 en développant : le coup le plus naturel du jeu",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-21",
+   "ply": 5,
+   "san": "Cxe5",
+   "noeud": "2b",
+   "raison": "je prends son pion en e5 et je gagne du matériel",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-21",
+   "ply": 7,
+   "san": "Cxf7",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait une pièce : je pare",
+   "autres": [
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-21",
+   "ply": 9,
+   "san": "Fc4+",
+   "noeud": "2e",
+   "raison": "je cloue son roi en f7 sur son cavalier",
+   "autres": [
+    "3D",
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-21",
+   "ply": 11,
+   "san": "d4",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait la qualité (une tour contre un cavalier ou un fou) : je pare",
+   "autres": [
+    "2d",
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-21",
+   "ply": 13,
+   "san": "c3",
+   "noeud": "1a",
+   "raison": "je suis en échec : je dois parer",
+   "autres": [
+    "2d",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-21",
+   "ply": 15,
+   "san": "Dh5",
+   "noeud": "2d",
+   "raison": "j'attaque son fou en a5, non défendue",
+   "autres": [
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-21",
+   "ply": 17,
+   "san": "Dxa5",
+   "noeud": "1c",
+   "raison": "ma dame est attaqué : je l'échange contre son fou",
+   "autres": [
+    "1e",
+    "1f",
+    "2b"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-21",
+   "ply": 19,
+   "san": "Dd5",
+   "noeud": "1c",
+   "raison": "je mets ma dame à l'abri en d5",
+   "autres": [
+    "1f",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-21",
+   "ply": 21,
+   "san": "Df7#",
+   "noeud": "1c",
+   "raison": "je mets ma dame à l'abri en f7",
+   "autres": [
+    "1f",
+    "2a"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-25",
+   "ply": 1,
+   "san": "e4",
+   "noeud": "3L",
+   "raison": "occupe le centre et ouvre la diagonale du fou roi et la dame",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-25",
+   "ply": 3,
+   "san": "Cf3",
+   "noeud": "3L",
+   "raison": "attaque e5 en développant : le coup le plus naturel du jeu",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-25",
+   "ply": 5,
+   "san": "Fc4",
+   "noeud": "3L",
+   "raison": "l'Italienne : le fou vise f7, la case la plus faible du camp noir (défendue par le seul roi)",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-25",
+   "ply": 7,
+   "san": "d4",
+   "noeud": "3D",
+   "raison": "je prends le centre",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-25",
+   "ply": 9,
+   "san": "Cxd4",
+   "noeud": "2b",
+   "raison": "je prends son cavalier en d4 et je gagne du matériel",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-25",
+   "ply": 11,
+   "san": "Cb3",
+   "noeud": "1c",
+   "raison": "je mets mon cavalier à l'abri en b3",
+   "autres": [
+    "1f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-25",
+   "ply": 13,
+   "san": "Dd5",
+   "noeud": "2d",
+   "raison": "j'attaque son cavalier en e4, non défendue",
+   "autres": [
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-25",
+   "ply": 15,
+   "san": "Dxf7#",
+   "noeud": "1c",
+   "raison": "ma dame est attaqué : je l'échange contre son pion",
+   "autres": [
+    "1f",
+    "2a"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-02",
+   "ply": 1,
+   "san": "e4",
+   "noeud": "3L",
+   "raison": "occupe le centre et ouvre la diagonale du fou roi et la dame",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-02",
+   "ply": 3,
+   "san": "Cc3",
+   "noeud": "1c",
+   "raison": "je défends mon pion en e4",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-02",
+   "ply": 5,
+   "san": "exd5",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-02",
+   "ply": 7,
+   "san": "Cf3",
+   "noeud": "3D",
+   "raison": "je sors mon cavalier",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-02",
+   "ply": 9,
+   "san": "Cd4",
+   "noeud": "2f",
+   "raison": "je menace son fou : s'il ne fait rien, Cd4 puis Cxe6 puis De7 puis Fb5+",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-02",
+   "ply": 11,
+   "san": "Cxe6",
+   "noeud": "1c",
+   "raison": "mon cavalier est attaqué : je l'échange contre son fou",
+   "autres": [
+    "1f",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-02",
+   "ply": 13,
+   "san": "Fb5+",
+   "noeud": "3D",
+   "raison": "je sors mon fou",
+   "autres": [
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-02",
+   "ply": 15,
+   "san": "O-O",
+   "noeud": "3D",
+   "raison": "je mets mon roi à l'abri",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-02",
+   "ply": 17,
+   "san": "Te1",
+   "noeud": "3C",
+   "raison": "j'avance mon plan : colonne e",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-02",
+   "ply": 19,
+   "san": "d4",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-02",
+   "ply": 21,
+   "san": "Ce2",
+   "noeud": "1c",
+   "raison": "je mets mon cavalier à l'abri en e2",
+   "autres": [
+    "1f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-02",
+   "ply": 23,
+   "san": "Cxd4",
+   "noeud": "2b",
+   "raison": "je prends son pion en d4 et je gagne du matériel",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-02",
+   "ply": 25,
+   "san": "Cxe6",
+   "noeud": "2b",
+   "raison": "je prends son pion en e6 et je gagne du matériel",
+   "autres": [
+    "2d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-02",
+   "ply": 27,
+   "san": "Cg5",
+   "noeud": "2d",
+   "raison": "j'attaque sa tour en f7 avec mon cavalier",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-02",
+   "ply": 29,
+   "san": "De2",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-02",
+   "ply": 31,
+   "san": "Ce6",
+   "noeud": "2d",
+   "raison": "j'attaque sa tour en f8 avec mon cavalier",
+   "autres": [
+    "3C"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-02",
+   "ply": 33,
+   "san": "Cxf8",
+   "noeud": "1c",
+   "raison": "mon cavalier est attaqué : je l'échange contre sa tour",
+   "autres": [
+    "2b",
+    "2f",
+    "3C"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-02",
+   "ply": 35,
+   "san": "Fe3",
+   "noeud": "1c",
+   "raison": "je défends mon pion en f2",
+   "autres": [
+    "1f",
+    "3D",
+    "3P"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-02",
+   "ply": 37,
+   "san": "Fxc6",
+   "noeud": "1c",
+   "raison": "mon fou est attaqué : je l'échange contre son cavalier",
+   "autres": [
+    "1f",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-02",
+   "ply": 39,
+   "san": "Dg4",
+   "noeud": "3C",
+   "raison": "j'avance mon plan : poussée f→f5",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-02",
+   "ply": 41,
+   "san": "Da4",
+   "noeud": "1c",
+   "raison": "je mets ma dame à l'abri en a4",
+   "autres": [
+    "1f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-02",
+   "ply": 43,
+   "san": "Dxg4",
+   "noeud": "1c",
+   "raison": "je prends son cavalier qui attaquait mon pion",
+   "autres": [
+    "1f",
+    "2b"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-02",
+   "ply": 45,
+   "san": "c3",
+   "noeud": "1c",
+   "raison": "je défends mon pion en b2",
+   "autres": [
+    "1f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-02",
+   "ply": 47,
+   "san": "g3",
+   "noeud": "1d",
+   "raison": "ma dernière rangée est fragile : je m'aère",
+   "autres": [
+    "1f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-02",
+   "ply": 49,
+   "san": "Tad1",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait un pion : je pare",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-02",
+   "ply": 51,
+   "san": "cxd4",
+   "noeud": "1c",
+   "raison": "je prends son pion qui attaquait mon fou",
+   "autres": [
+    "2b",
+    "2d",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-02",
+   "ply": 53,
+   "san": "Fxd4",
+   "noeud": "1c",
+   "raison": "je prends son pion qui attaquait mon fou",
+   "autres": [
+    "2b",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-02",
+   "ply": 55,
+   "san": "Txd4",
+   "noeud": "1c",
+   "raison": "je prends son fou qui attaquait mon pion",
+   "autres": [
+    "1e",
+    "1f",
+    "2b",
+    "2d",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-02",
+   "ply": 57,
+   "san": "Tf4",
+   "noeud": "1b",
+   "raison": "il menace mat : j'enlève le mat",
+   "autres": [
+    "2d",
+    "2e",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-02",
+   "ply": 59,
+   "san": "De6+",
+   "noeud": "1c",
+   "raison": "je défends mon pion en a2",
+   "autres": [
+    "1f",
+    "2a",
+    "2b"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-02",
+   "ply": 61,
+   "san": "Txf8#",
+   "noeud": "2a",
+   "raison": "j'ai un mat",
+   "autres": [
+    "2b",
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-06",
+   "ply": 1,
+   "san": "e4",
+   "noeud": "3L",
+   "raison": "occupe le centre et ouvre la diagonale du fou roi et la dame",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-06",
+   "ply": 3,
+   "san": "d4",
+   "noeud": "3L",
+   "raison": "prend tout le centre avant que …d5 ne le conteste",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-06",
+   "ply": 5,
+   "san": "Cc3",
+   "noeud": "3D",
+   "raison": "je sors mon cavalier",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-06",
+   "ply": 7,
+   "san": "Cf3",
+   "noeud": "3D",
+   "raison": "je sors mon cavalier",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-06",
+   "ply": 9,
+   "san": "Fe2",
+   "noeud": "3D",
+   "raison": "je sors mon fou",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-06",
+   "ply": 11,
+   "san": "e5",
+   "noeud": "2d",
+   "raison": "j'attaque son cavalier en f6 avec mon pion",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-06",
+   "ply": 13,
+   "san": "d5",
+   "noeud": "2d",
+   "raison": "j'attaque son cavalier en c6 avec mon pion",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-06",
+   "ply": 15,
+   "san": "d6",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait un pion : je pare",
+   "autres": [
+    "2d",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-06",
+   "ply": 17,
+   "san": "Cb5",
+   "noeud": "2f",
+   "raison": "je menace mat : s'il ne fait rien, Cb5 puis Cc7#",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-06",
+   "ply": 19,
+   "san": "Cc7#",
+   "noeud": "2a",
+   "raison": "j'ai un mat",
+   "autres": [
+    "2d",
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-10",
+   "ply": 1,
+   "san": "e4",
+   "noeud": "3L",
+   "raison": "occupe le centre et ouvre la diagonale du fou roi et la dame",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-10",
+   "ply": 3,
+   "san": "d4",
+   "noeud": "3L",
+   "raison": "prend tout le centre avant que …d5 ne le conteste",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-10",
+   "ply": 5,
+   "san": "Cc3",
+   "noeud": "3D",
+   "raison": "je sors mon cavalier",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-10",
+   "ply": 7,
+   "san": "Cf3",
+   "noeud": "3D",
+   "raison": "je sors mon cavalier",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-10",
+   "ply": 9,
+   "san": "Fd3",
+   "noeud": "3D",
+   "raison": "je sors mon fou",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-10",
+   "ply": 11,
+   "san": "O-O",
+   "noeud": "3D",
+   "raison": "je mets mon roi à l'abri",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-10",
+   "ply": 13,
+   "san": "e5",
+   "noeud": "2d",
+   "raison": "j'attaque son cavalier en f6 avec mon pion",
+   "autres": [
+    "2f",
+    "3d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-10",
+   "ply": 15,
+   "san": "h3",
+   "noeud": "2d",
+   "raison": "j'attaque son cavalier en g4, non défendue",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-10",
+   "ply": 17,
+   "san": "Dxf3",
+   "noeud": "1c",
+   "raison": "je prends son fou qui attaquait ma dame",
+   "autres": [
+    "1f",
+    "2b",
+    "2d",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-10",
+   "ply": 19,
+   "san": "Dxa8",
+   "noeud": "2b",
+   "raison": "je prends sa tour en a8 et je gagne du matériel",
+   "autres": [
+    "2e"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-10",
+   "ply": 21,
+   "san": "Fxh6",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-10",
+   "ply": 23,
+   "san": "De4",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait un pion : je pare",
+   "autres": [
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-10",
+   "ply": 25,
+   "san": "exf6",
+   "noeud": "1c",
+   "raison": "je défends ma dame en e4",
+   "autres": [
+    "1f",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-10",
+   "ply": 27,
+   "san": "Dxh7#",
+   "noeud": "2a",
+   "raison": "j'ai un mat",
+   "autres": [
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-14",
+   "ply": 1,
+   "san": "e4",
+   "noeud": "3L",
+   "raison": "occupe le centre et ouvre la diagonale du fou roi et la dame",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-14",
+   "ply": 3,
+   "san": "d4",
+   "noeud": "3L",
+   "raison": "prend tout le centre avant que …d5 ne le conteste",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-14",
+   "ply": 5,
+   "san": "Cf3",
+   "noeud": "3D",
+   "raison": "je sors mon cavalier",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-14",
+   "ply": 7,
+   "san": "Fd3",
+   "noeud": "3D",
+   "raison": "je sors mon fou",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-14",
+   "ply": 9,
+   "san": "Cc3",
+   "noeud": "3D",
+   "raison": "je sors mon cavalier",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-14",
+   "ply": 11,
+   "san": "O-O",
+   "noeud": "3D",
+   "raison": "je mets mon roi à l'abri",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-14",
+   "ply": 13,
+   "san": "exd5",
+   "noeud": "3d",
+   "raison": "j'attaque son roi : 3 pièces contre 5, son pion de roque est avancé",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-14",
+   "ply": 15,
+   "san": "Ce5",
+   "noeud": "3d",
+   "raison": "j'attaque son roi : 6 pièces contre 5, la colonne est ouverte",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-14",
+   "ply": 17,
+   "san": "Dh5",
+   "noeud": "2f",
+   "raison": "je menace mat : s'il ne fait rien, Dh5 puis Dxf7#",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-14",
+   "ply": 19,
+   "san": "Dxh7#",
+   "noeud": "2a",
+   "raison": "j'ai un mat",
+   "autres": [
+    "2b",
+    "3d",
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-18",
+   "ply": 1,
+   "san": "e4",
+   "noeud": "3L",
+   "raison": "occupe le centre et ouvre la diagonale du fou roi et la dame",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-18",
+   "ply": 3,
+   "san": "d4",
+   "noeud": "3D",
+   "raison": "je prends le centre",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-18",
+   "ply": 5,
+   "san": "Cf3",
+   "noeud": "3D",
+   "raison": "je sors mon cavalier",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-18",
+   "ply": 7,
+   "san": "Cc3",
+   "noeud": "2d",
+   "raison": "j'attaque son fou en e4, non défendue",
+   "autres": [
+    "2f",
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-18",
+   "ply": 9,
+   "san": "Fd3",
+   "noeud": "3D",
+   "raison": "je sors mon fou",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-18",
+   "ply": 11,
+   "san": "O-O",
+   "noeud": "3D",
+   "raison": "je mets mon roi à l'abri",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-18",
+   "ply": 13,
+   "san": "Ff4",
+   "noeud": "3D",
+   "raison": "je sors mon fou",
+   "autres": [
+    "3d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-18",
+   "ply": 15,
+   "san": "Cb5",
+   "noeud": "2f",
+   "raison": "je menace une fourchette : s'il ne fait rien, Cb5 puis Cxc7+ puis Rf8 puis Cxa8",
+   "autres": [
+    "3d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-18",
+   "ply": 17,
+   "san": "Fxd6",
+   "noeud": "1c",
+   "raison": "je prends son fou qui attaquait mon fou",
+   "autres": [
+    "1f",
+    "2b",
+    "2f",
+    "3d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-18",
+   "ply": 19,
+   "san": "Cxd6+",
+   "noeud": "2b",
+   "raison": "je prends son pion en d6 et je gagne du matériel",
+   "autres": [
+    "2d",
+    "3d",
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-18",
+   "ply": 21,
+   "san": "Ce5",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait une pièce : je pare",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-18",
+   "ply": 23,
+   "san": "Cxf7+",
+   "noeud": "2b",
+   "raison": "je prends son pion en f7 et je gagne du matériel",
+   "autres": [
+    "2d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-18",
+   "ply": 25,
+   "san": "Cxd8",
+   "noeud": "1c",
+   "raison": "mon cavalier est attaqué : je l'échange contre sa dame",
+   "autres": [
+    "1f",
+    "2b",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-18",
+   "ply": 27,
+   "san": "Te1",
+   "noeud": "3C",
+   "raison": "j'avance mon plan : colonne e",
+   "autres": [
+    "3P"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-18",
+   "ply": 29,
+   "san": "c3",
+   "noeud": "1c",
+   "raison": "je défends mon pion en d4",
+   "autres": [
+    "1f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-18",
+   "ply": 31,
+   "san": "g4",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-18",
+   "ply": 33,
+   "san": "g5",
+   "noeud": "2d",
+   "raison": "j'attaque son cavalier en f6 avec mon pion",
+   "autres": [
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-18",
+   "ply": 35,
+   "san": "Fe4",
+   "noeud": "2f",
+   "raison": "je menace du matériel : s'il ne fait rien, Fe4 puis c4 puis Rg8 puis cxd5",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-18",
+   "ply": 37,
+   "san": "c4",
+   "noeud": "2d",
+   "raison": "j'attaque son cavalier en d5 avec mon pion",
+   "autres": [
+    "3C"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-18",
+   "ply": 39,
+   "san": "cxd5",
+   "noeud": "2b",
+   "raison": "je prends son cavalier en d5 et je gagne du matériel",
+   "autres": [
+    "2f",
+    "3d",
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-18",
+   "ply": 41,
+   "san": "Df3+",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-18",
+   "ply": 43,
+   "san": "Df6+",
+   "noeud": "1e",
+   "raison": "je romps l'alignement de ma dame",
+   "autres": [
+    "2b",
+    "2d",
+    "2e",
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-18",
+   "ply": 45,
+   "san": "Dxe7",
+   "noeud": "2b",
+   "raison": "je prends son cavalier en e7 et je gagne du matériel",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-18",
+   "ply": 47,
+   "san": "Txe4",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait un pion : je pare",
+   "autres": [
+    "2b"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-18",
+   "ply": 49,
+   "san": "Dxd7",
+   "noeud": "1c",
+   "raison": "ma dame est attaqué : je l'échange contre son pion",
+   "autres": [
+    "1f",
+    "2b",
+    "3d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-18",
+   "ply": 51,
+   "san": "Dxa7",
+   "noeud": "1c",
+   "raison": "ma dame est attaqué : je l'échange contre son pion",
+   "autres": [
+    "1f",
+    "2b",
+    "3d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-18",
+   "ply": 53,
+   "san": "Dxb6",
+   "noeud": "1c",
+   "raison": "ma dame est attaqué : je l'échange contre son pion",
+   "autres": [
+    "1f",
+    "2b"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-18",
+   "ply": 55,
+   "san": "Da7",
+   "noeud": "1c",
+   "raison": "je mets ma dame à l'abri en a7",
+   "autres": [
+    "1f",
+    "3d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-18",
+   "ply": 57,
+   "san": "Th4",
+   "noeud": "2f",
+   "raison": "je menace mat : s'il ne fait rien, Th4 puis Dxh7+ puis Rf8 puis Tf4#",
+   "autres": [
+    "3d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-18",
+   "ply": 59,
+   "san": "Dxh7#",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait un pion : je pare",
+   "autres": [
+    "2a",
+    "2b"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-22",
+   "ply": 1,
+   "san": "e4",
+   "noeud": "3L",
+   "raison": "occupe le centre et ouvre la diagonale du fou roi et la dame",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-22",
+   "ply": 3,
+   "san": "d4",
+   "noeud": "3D",
+   "raison": "je prends le centre",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-22",
+   "ply": 5,
+   "san": "Cf3",
+   "noeud": "3D",
+   "raison": "je sors mon cavalier",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-22",
+   "ply": 7,
+   "san": "Fc4",
+   "noeud": "3D",
+   "raison": "je sors mon fou",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-22",
+   "ply": 9,
+   "san": "O-O",
+   "noeud": "3D",
+   "raison": "je mets mon roi à l'abri",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-22",
+   "ply": 11,
+   "san": "Cc3",
+   "noeud": "3D",
+   "raison": "je sors mon cavalier",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-22",
+   "ply": 13,
+   "san": "Fg5",
+   "noeud": "3D",
+   "raison": "je sors mon fou",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-22",
+   "ply": 15,
+   "san": "h3",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-22",
+   "ply": 17,
+   "san": "Fb5",
+   "noeud": "1c",
+   "raison": "je mets mon fou à l'abri en b5",
+   "autres": [
+    "1f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-22",
+   "ply": 19,
+   "san": "Fd3",
+   "noeud": "1c",
+   "raison": "je mets mon fou à l'abri en d3",
+   "autres": [
+    "1f",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-22",
+   "ply": 21,
+   "san": "Fxh6",
+   "noeud": "1c",
+   "raison": "mon fou est attaqué : je l'échange contre son cavalier",
+   "autres": [
+    "1f",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-22",
+   "ply": 23,
+   "san": "b4",
+   "noeud": "2d",
+   "raison": "j'attaque son cavalier en a5 avec mon pion",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-22",
+   "ply": 25,
+   "san": "Fxc4+",
+   "noeud": "2b",
+   "raison": "je prends son cavalier en c4 et je gagne du matériel",
+   "autres": [
+    "3d",
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-22",
+   "ply": 27,
+   "san": "Ch2",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-22",
+   "ply": 29,
+   "san": "exd5",
+   "noeud": "1c",
+   "raison": "je prends son pion qui attaquait mon fou",
+   "autres": [
+    "1f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-22",
+   "ply": 31,
+   "san": "Cg4",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait une pièce : je pare",
+   "autres": [
+    "2d",
+    "3d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-22",
+   "ply": 33,
+   "san": "Cxh6+",
+   "noeud": "2b",
+   "raison": "je prends son fou en h6 et je gagne du matériel",
+   "autres": [
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-22",
+   "ply": 35,
+   "san": "Cg4",
+   "noeud": "1c",
+   "raison": "je mets mon cavalier à l'abri en g4",
+   "autres": [
+    "1f",
+    "3d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-22",
+   "ply": 37,
+   "san": "Ce5",
+   "noeud": "1c",
+   "raison": "je mets mon cavalier à l'abri en e5",
+   "autres": [
+    "1f",
+    "3C",
+    "3d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-22",
+   "ply": 39,
+   "san": "d5",
+   "noeud": "1b",
+   "raison": "il menace mat : j'enlève le mat",
+   "autres": [
+    "1c",
+    "3C"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-22",
+   "ply": 41,
+   "san": "Cd7",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait une pièce contre un pion : je pare",
+   "autres": [
+    "2d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-22",
+   "ply": 43,
+   "san": "Dxd4+",
+   "noeud": "1b",
+   "raison": "il menace mat : j'enlève le mat",
+   "autres": [
+    "1c",
+    "2b"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-22",
+   "ply": 45,
+   "san": "Cd5",
+   "noeud": "1b",
+   "raison": "il menace mat : j'enlève le mat",
+   "autres": [
+    "1c"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-22",
+   "ply": 47,
+   "san": "h4",
+   "noeud": "2d",
+   "raison": "j'attaque sa dame en g5, non défendue",
+   "autres": [
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-22",
+   "ply": 49,
+   "san": "hxg5",
+   "noeud": "1e",
+   "raison": "mon pion est clouée sur mon roi : je prends le cloueur",
+   "autres": [
+    "2b",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-22",
+   "ply": 51,
+   "san": "Df6",
+   "noeud": "1c",
+   "raison": "je mets ma dame à l'abri en f6",
+   "autres": [
+    "1f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-22",
+   "ply": 53,
+   "san": "De6+",
+   "noeud": "1c",
+   "raison": "je mets ma dame à l'abri en e6",
+   "autres": [
+    "1f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-22",
+   "ply": 55,
+   "san": "De7",
+   "noeud": "2d",
+   "raison": "double attaque sur sa tour en f8 et son fou en b7",
+   "autres": [
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-22",
+   "ply": 57,
+   "san": "Tfd1",
+   "noeud": "2f",
+   "raison": "je menace du matériel : s'il ne fait rien, Tfd1 puis Td7 puis Tf7 puis De5+",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-22",
+   "ply": 59,
+   "san": "Txd1",
+   "noeud": "1a",
+   "raison": "je suis en échec : je dois parer",
+   "autres": [
+    "1c",
+    "2a",
+    "2b",
+    "2f",
+    "3C"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-22",
+   "ply": 61,
+   "san": "Td7",
+   "noeud": "2a",
+   "raison": "j'ai un mat",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-22",
+   "ply": 63,
+   "san": "Dg7#",
+   "noeud": "2a",
+   "raison": "j'ai un mat",
+   "autres": [
+    "3d",
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-26",
+   "ply": 1,
+   "san": "e4",
+   "noeud": "3L",
+   "raison": "occupe le centre et ouvre la diagonale du fou roi et la dame",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-26",
+   "ply": 3,
+   "san": "Cf3",
+   "noeud": "3L",
+   "raison": "attaque e5 en développant : le coup le plus naturel du jeu",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-26",
+   "ply": 5,
+   "san": "d4",
+   "noeud": "3D",
+   "raison": "je prends le centre",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-26",
+   "ply": 7,
+   "san": "d5",
+   "noeud": "2d",
+   "raison": "j'attaque son cavalier en c6 avec mon pion",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-26",
+   "ply": 9,
+   "san": "Fc4",
+   "noeud": "3D",
+   "raison": "je sors mon fou",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-26",
+   "ply": 11,
+   "san": "Cc3",
+   "noeud": "1c",
+   "raison": "je défends mon pion en e4",
+   "autres": [
+    "1f",
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-26",
+   "ply": 13,
+   "san": "O-O",
+   "noeud": "3D",
+   "raison": "je mets mon roi à l'abri",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-26",
+   "ply": 15,
+   "san": "Fg5",
+   "noeud": "2e",
+   "raison": "je cloue son cavalier en f6 sur sa dame",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-26",
+   "ply": 17,
+   "san": "Fxf6",
+   "noeud": "1c",
+   "raison": "mon fou est attaqué : je l'échange contre son cavalier",
+   "autres": [
+    "1f",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-26",
+   "ply": 19,
+   "san": "Cd2",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-26",
+   "ply": 21,
+   "san": "Fb5",
+   "noeud": "2e",
+   "raison": "je cloue son fou en d7 sur son roi",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-26",
+   "ply": 23,
+   "san": "Cxb5",
+   "noeud": "1c",
+   "raison": "je prends son fou qui attaquait ma tour",
+   "autres": [
+    "1f",
+    "2b",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-26",
+   "ply": 25,
+   "san": "Cxc7",
+   "noeud": "2b",
+   "raison": "je prends son pion en c7 et je gagne du matériel",
+   "autres": [
+    "2d",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-26",
+   "ply": 27,
+   "san": "Cb5",
+   "noeud": "1c",
+   "raison": "je mets mon cavalier à l'abri en b5",
+   "autres": [
+    "1f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-26",
+   "ply": 29,
+   "san": "Cc3",
+   "noeud": "1c",
+   "raison": "je mets mon cavalier à l'abri en c3",
+   "autres": [
+    "1f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-26",
+   "ply": 31,
+   "san": "Dg4",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-26",
+   "ply": 33,
+   "san": "Dxg5",
+   "noeud": "1c",
+   "raison": "je prends sa dame qui attaquait ma dame",
+   "autres": [
+    "1f",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-26",
+   "ply": 35,
+   "san": "Cf3",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait deux pièces contre une tour : je pare",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-26",
+   "ply": 37,
+   "san": "g3",
+   "noeud": "2d",
+   "raison": "j'attaque son cavalier en f4 avec mon pion",
+   "autres": [
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-26",
+   "ply": 39,
+   "san": "Rg2",
+   "noeud": "1a",
+   "raison": "je suis en échec : je dois parer",
+   "autres": [
+    "2d",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-26",
+   "ply": 41,
+   "san": "Ca4",
+   "noeud": "1c",
+   "raison": "je mets mon cavalier à l'abri en a4",
+   "autres": [
+    "1f",
+    "2f",
+    "3C"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-26",
+   "ply": 43,
+   "san": "Rxh3",
+   "noeud": "1e",
+   "raison": "je sors mon roi du clou",
+   "autres": [
+    "2b"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-26",
+   "ply": 45,
+   "san": "Cxg5",
+   "noeud": "1c",
+   "raison": "je défends mon pion en e4",
+   "autres": [
+    "1f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-26",
+   "ply": 47,
+   "san": "Tac1",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait un pion : je pare",
+   "autres": [
+    "2d",
+    "2f",
+    "3C"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-26",
+   "ply": 49,
+   "san": "exf5",
+   "noeud": "1c",
+   "raison": "je prends son pion qui attaquait mon pion",
+   "autres": [
+    "1f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-26",
+   "ply": 51,
+   "san": "Tc8+",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait un pion : je pare",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-26",
+   "ply": 53,
+   "san": "Tc6",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait un pion : je pare",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-26",
+   "ply": 55,
+   "san": "Txf2",
+   "noeud": "1c",
+   "raison": "je prends sa tour qui attaquait ma tour",
+   "autres": [
+    "1f",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-26",
+   "ply": 57,
+   "san": "Txd6",
+   "noeud": "2b",
+   "raison": "je prends son pion en d6 et je gagne du matériel",
+   "autres": [
+    "2f",
+    "3C"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-26",
+   "ply": 59,
+   "san": "Te6",
+   "noeud": "3C",
+   "raison": "j'avance mon plan : poussée d→d8",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-26",
+   "ply": 61,
+   "san": "d6",
+   "noeud": "3C",
+   "raison": "j'avance mon plan : poussée d→d8",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-26",
+   "ply": 63,
+   "san": "Cc5",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-26",
+   "ply": 65,
+   "san": "Cxe4",
+   "noeud": "2b",
+   "raison": "je prends son pion en e4 et je gagne du matériel",
+   "autres": [
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-26",
+   "ply": 67,
+   "san": "Cxg5+",
+   "noeud": "2a",
+   "raison": "j'ai un mat",
+   "autres": [
+    "2b"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-26",
+   "ply": 69,
+   "san": "Te8#",
+   "noeud": "2a",
+   "raison": "j'ai un mat",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-03",
+   "ply": 1,
+   "san": "e4",
+   "noeud": "3L",
+   "raison": "occupe le centre et ouvre la diagonale du fou roi et la dame",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-03",
+   "ply": 3,
+   "san": "Cf3",
+   "noeud": "3L",
+   "raison": "attaque e5 en développant : le coup le plus naturel du jeu",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-03",
+   "ply": 5,
+   "san": "Fc4",
+   "noeud": "3L",
+   "raison": "l'Italienne : le fou vise f7, la case la plus faible du camp noir (défendue par le seul roi)",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-03",
+   "ply": 7,
+   "san": "c3",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait un pion : je pare",
+   "autres": [
+    "3L"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-03",
+   "ply": 9,
+   "san": "d4",
+   "noeud": "2d",
+   "raison": "j'attaque son fou en c5, non défendue",
+   "autres": [
+    "2f",
+    "3L",
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-03",
+   "ply": 11,
+   "san": "O-O",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait un pion : je pare",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-03",
+   "ply": 13,
+   "san": "cxd4",
+   "noeud": "2b",
+   "raison": "je prends son pion en d4 et je gagne du matériel",
+   "autres": [
+    "2d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-03",
+   "ply": 15,
+   "san": "d5",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait un pion : je pare",
+   "autres": [
+    "2d",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-03",
+   "ply": 17,
+   "san": "Fd3",
+   "noeud": "1c",
+   "raison": "je mets mon fou à l'abri en d3",
+   "autres": [
+    "1f",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-03",
+   "ply": 19,
+   "san": "b4",
+   "noeud": "2d",
+   "raison": "j'attaque son cavalier en a5 avec mon pion",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-03",
+   "ply": 21,
+   "san": "Cbd2",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait la qualité (une tour contre un cavalier ou un fou) : je pare",
+   "autres": [
+    "3D",
+    "3P"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-03",
+   "ply": 23,
+   "san": "Tb1",
+   "noeud": "1c",
+   "raison": "je mets ma tour à l'abri en b1",
+   "autres": [
+    "1f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-03",
+   "ply": 25,
+   "san": "Cxf3",
+   "noeud": "1c",
+   "raison": "je prends son fou qui attaquait ma dame",
+   "autres": [
+    "1f",
+    "2b",
+    "2d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-03",
+   "ply": 27,
+   "san": "bxa5",
+   "noeud": "2b",
+   "raison": "je prends son cavalier en a5 et je gagne du matériel",
+   "autres": [
+    "2f",
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-03",
+   "ply": 29,
+   "san": "Txb7",
+   "noeud": "2b",
+   "raison": "je prends son pion en b7 et je gagne du matériel",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-03",
+   "ply": 31,
+   "san": "Dc2",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-03",
+   "ply": 33,
+   "san": "h3",
+   "noeud": "2d",
+   "raison": "j'attaque son cavalier en g4, non défendue",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-03",
+   "ply": 35,
+   "san": "Cxe5",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait la qualité (une tour contre un cavalier ou un fou) : je pare",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-03",
+   "ply": 37,
+   "san": "Fa3",
+   "noeud": "2d",
+   "raison": "j'attaque sa tour en f8 avec mon fou",
+   "autres": [
+    "3D",
+    "3P"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-03",
+   "ply": 39,
+   "san": "Fb5",
+   "noeud": "2d",
+   "raison": "j'attaque sa tour en e8 avec mon fou",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-03",
+   "ply": 41,
+   "san": "Fc6",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-03",
+   "ply": 43,
+   "san": "Fxe7",
+   "noeud": "2b",
+   "raison": "je prends sa tour en e7 et je gagne du matériel",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-03",
+   "ply": 45,
+   "san": "Txb8+",
+   "noeud": "2b",
+   "raison": "je prends sa tour en b8 et je gagne du matériel",
+   "autres": [
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-03",
+   "ply": 47,
+   "san": "Txf8+",
+   "noeud": "1c",
+   "raison": "je prends sa dame qui attaquait ma tour",
+   "autres": [
+    "1f",
+    "2b",
+    "3d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-03",
+   "ply": 49,
+   "san": "Tb1",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-03",
+   "ply": 51,
+   "san": "Txb6",
+   "noeud": "1e",
+   "raison": "mon pion est clouée sur mon roi : je prends le cloueur",
+   "autres": [
+    "1f",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-03",
+   "ply": 53,
+   "san": "Fb5",
+   "noeud": "3d",
+   "raison": "j'attaque son roi : 2 pièces contre 0, son pion de roque est avancé",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-03",
+   "ply": 55,
+   "san": "Dc6+",
+   "noeud": "2a",
+   "raison": "j'ai un mat",
+   "autres": [
+    "2b",
+    "3d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-03",
+   "ply": 57,
+   "san": "Dd7+",
+   "noeud": "2a",
+   "raison": "j'ai un mat",
+   "autres": [
+    "2b",
+    "3d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-03",
+   "ply": 59,
+   "san": "Df5+",
+   "noeud": "2a",
+   "raison": "j'ai un mat",
+   "autres": [
+    "2b",
+    "3d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-03",
+   "ply": 61,
+   "san": "Dxe5+",
+   "noeud": "2a",
+   "raison": "j'ai un mat",
+   "autres": [
+    "2b",
+    "3d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-03",
+   "ply": 63,
+   "san": "De8#",
+   "noeud": "2a",
+   "raison": "j'ai un mat",
+   "autres": [
+    "3d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-07",
+   "ply": 1,
+   "san": "e4",
+   "noeud": "3L",
+   "raison": "occupe le centre et ouvre la diagonale du fou roi et la dame",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-07",
+   "ply": 3,
+   "san": "Cf3",
+   "noeud": "3L",
+   "raison": "attaque e5 en développant : le coup le plus naturel du jeu",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-07",
+   "ply": 5,
+   "san": "d4",
+   "noeud": "3D",
+   "raison": "je prends le centre",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-07",
+   "ply": 7,
+   "san": "Dxd4",
+   "noeud": "2b",
+   "raison": "je prends son pion en d4 et je gagne du matériel",
+   "autres": [
+    "2d",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-07",
+   "ply": 9,
+   "san": "Dxh8",
+   "noeud": "1c",
+   "raison": "ma dame est attaqué : je l'échange contre sa tour",
+   "autres": [
+    "1f",
+    "2b",
+    "2d",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-07",
+   "ply": 11,
+   "san": "Dxg8",
+   "noeud": "1c",
+   "raison": "ma dame est attaqué : je l'échange contre son cavalier",
+   "autres": [
+    "1f",
+    "2b",
+    "2e"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-07",
+   "ply": 13,
+   "san": "Fh6",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait une tour et un pion : je pare",
+   "autres": [
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-07",
+   "ply": 15,
+   "san": "Rd2",
+   "noeud": "1a",
+   "raison": "je suis en échec : je dois parer",
+   "autres": [
+    "2d",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-07",
+   "ply": 17,
+   "san": "Dxf8#",
+   "noeud": "1c",
+   "raison": "je prends son fou qui attaquait mon fou",
+   "autres": [
+    "1f",
+    "2a",
+    "2b",
+    "2e"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-11",
+   "ply": 1,
+   "san": "e4",
+   "noeud": "3L",
+   "raison": "occupe le centre et ouvre la diagonale du fou roi et la dame",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-11",
+   "ply": 3,
+   "san": "d4",
+   "noeud": "3D",
+   "raison": "je prends le centre",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-11",
+   "ply": 5,
+   "san": "Cc3",
+   "noeud": "3D",
+   "raison": "je sors mon cavalier",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-11",
+   "ply": 7,
+   "san": "Fg5",
+   "noeud": "3D",
+   "raison": "je sors mon fou",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-11",
+   "ply": 9,
+   "san": "Fe3",
+   "noeud": "1c",
+   "raison": "je mets mon fou à l'abri en e3",
+   "autres": [
+    "1f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-11",
+   "ply": 11,
+   "san": "Fc4",
+   "noeud": "3D",
+   "raison": "je sors mon fou",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-11",
+   "ply": 13,
+   "san": "Cge2",
+   "noeud": "3D",
+   "raison": "je sors mon cavalier",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-11",
+   "ply": 15,
+   "san": "O-O",
+   "noeud": "3D",
+   "raison": "je mets mon roi à l'abri",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-11",
+   "ply": 17,
+   "san": "Cf4",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-11",
+   "ply": 19,
+   "san": "Ce6",
+   "noeud": "1c",
+   "raison": "je mets mon cavalier à l'abri en e6",
+   "autres": [
+    "1f",
+    "2d",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-11",
+   "ply": 21,
+   "san": "Fxe6",
+   "noeud": "1c",
+   "raison": "je prends son fou qui attaquait mon fou",
+   "autres": [
+    "1f",
+    "2b",
+    "2e",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-11",
+   "ply": 23,
+   "san": "Cd5",
+   "noeud": "2d",
+   "raison": "j'attaque sa dame en e7, non défendue",
+   "autres": [
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-11",
+   "ply": 25,
+   "san": "Cxc7",
+   "noeud": "2b",
+   "raison": "je prends son pion en c7 et je gagne du matériel",
+   "autres": [
+    "2d",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-11",
+   "ply": 27,
+   "san": "Cxa8",
+   "noeud": "1c",
+   "raison": "mon cavalier est attaqué : je l'échange contre sa tour",
+   "autres": [
+    "1f",
+    "2b",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-11",
+   "ply": 29,
+   "san": "dxe5",
+   "noeud": "3d",
+   "raison": "j'attaque son roi : 2 pièces contre 4, son pion de roque est avancé",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-11",
+   "ply": 31,
+   "san": "e6",
+   "noeud": "1c",
+   "raison": "je mets mon pion à l'abri en e6",
+   "autres": [
+    "1f",
+    "2d",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-11",
+   "ply": 33,
+   "san": "Dd5",
+   "noeud": "1c",
+   "raison": "je défends mon pion en e4",
+   "autres": [
+    "1f",
+    "2d",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-11",
+   "ply": 35,
+   "san": "exd5",
+   "noeud": "1c",
+   "raison": "je prends sa dame qui attaquait mon pion",
+   "autres": [
+    "1f",
+    "2b",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-11",
+   "ply": 37,
+   "san": "Fd4",
+   "noeud": "1c",
+   "raison": "je défends mon pion en b2",
+   "autres": [
+    "1f",
+    "3C"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-11",
+   "ply": 39,
+   "san": "Fxg7",
+   "noeud": "1c",
+   "raison": "je prends son fou qui attaquait mon fou",
+   "autres": [
+    "1f",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-11",
+   "ply": 41,
+   "san": "b3",
+   "noeud": "1c",
+   "raison": "je mets mon pion à l'abri en b3",
+   "autres": [
+    "1f",
+    "2d",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-11",
+   "ply": 43,
+   "san": "Tad1",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-11",
+   "ply": 45,
+   "san": "h3",
+   "noeud": "2f",
+   "raison": "je menace du matériel : s'il ne fait rien, h3 puis f4 puis Cf7 puis exf7",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-11",
+   "ply": 47,
+   "san": "f4",
+   "noeud": "2d",
+   "raison": "j'attaque son cavalier en e5 avec mon pion",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-11",
+   "ply": 49,
+   "san": "fxe5",
+   "noeud": "2b",
+   "raison": "je prends son cavalier en e5 et je gagne du matériel",
+   "autres": [
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-11",
+   "ply": 51,
+   "san": "d6",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-11",
+   "ply": 53,
+   "san": "e7",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait un pion : je pare",
+   "autres": [
+    "2d",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-11",
+   "ply": 55,
+   "san": "e8=D",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait un pion : je pare",
+   "autres": [
+    "2d",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-11",
+   "ply": 57,
+   "san": "Txd6",
+   "noeud": "2f",
+   "raison": "je menace du matériel : s'il ne fait rien, Txd6 puis De7+ puis Rh6 puis Dh4+",
+   "autres": [
+    "3C",
+    "3d",
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-11",
+   "ply": 59,
+   "san": "Dxe5+",
+   "noeud": "1c",
+   "raison": "ma dame est attaqué : je l'échange contre son pion",
+   "autres": [
+    "1f",
+    "2b",
+    "2d",
+    "3C",
+    "3d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-11",
+   "ply": 61,
+   "san": "Df4+",
+   "noeud": "2b",
+   "raison": "fourchette : son roi et son cavalier",
+   "autres": [
+    "2d",
+    "3d",
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-11",
+   "ply": 63,
+   "san": "Dxd6",
+   "noeud": "2b",
+   "raison": "je prends son cavalier en d6 et je gagne du matériel",
+   "autres": [
+    "2f",
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-11",
+   "ply": 65,
+   "san": "Txf5",
+   "noeud": "2a",
+   "raison": "j'ai un mat",
+   "autres": [
+    "3d",
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-11",
+   "ply": 67,
+   "san": "Df8#",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait une tour contre un pion : je pare",
+   "autres": [
+    "2a",
+    "3d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-15",
+   "ply": 1,
+   "san": "e4",
+   "noeud": "3L",
+   "raison": "occupe le centre et ouvre la diagonale du fou roi et la dame",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-15",
+   "ply": 3,
+   "san": "Cc3",
+   "noeud": "1c",
+   "raison": "je défends mon pion en e4",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-15",
+   "ply": 5,
+   "san": "Cxe4",
+   "noeud": "2b",
+   "raison": "je prends son pion en e4 et je gagne du matériel",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-15",
+   "ply": 7,
+   "san": "Cf3",
+   "noeud": "3D",
+   "raison": "je sors mon cavalier",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-15",
+   "ply": 9,
+   "san": "Fd3",
+   "noeud": "3D",
+   "raison": "je sors mon fou",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-15",
+   "ply": 11,
+   "san": "O-O",
+   "noeud": "3D",
+   "raison": "je mets mon roi à l'abri",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-15",
+   "ply": 13,
+   "san": "Te1",
+   "noeud": "2f",
+   "raison": "je menace mat : s'il ne fait rien, Te1 puis Cd6#",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-15",
+   "ply": 15,
+   "san": "Cd6#",
+   "noeud": "2a",
+   "raison": "j'ai un mat",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-19",
+   "ply": 1,
+   "san": "e4",
+   "noeud": "3L",
+   "raison": "occupe le centre et ouvre la diagonale du fou roi et la dame",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-19",
+   "ply": 3,
+   "san": "d4",
+   "noeud": "3D",
+   "raison": "je prends le centre",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-19",
+   "ply": 5,
+   "san": "Cf3",
+   "noeud": "3D",
+   "raison": "je sors mon cavalier",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-19",
+   "ply": 7,
+   "san": "Fd3",
+   "noeud": "3D",
+   "raison": "je sors mon fou",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-19",
+   "ply": 9,
+   "san": "O-O",
+   "noeud": "3D",
+   "raison": "je mets mon roi à l'abri",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-19",
+   "ply": 11,
+   "san": "Cc3",
+   "noeud": "3D",
+   "raison": "je sors mon cavalier",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-19",
+   "ply": 13,
+   "san": "Fe3",
+   "noeud": "3D",
+   "raison": "je sors mon fou",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-19",
+   "ply": 15,
+   "san": "Dd2",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-19",
+   "ply": 17,
+   "san": "Fb5",
+   "noeud": "2e",
+   "raison": "je cloue son cavalier en d7 sur son roi",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-19",
+   "ply": 19,
+   "san": "a3",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-19",
+   "ply": 21,
+   "san": "Fe2",
+   "noeud": "1c",
+   "raison": "je mets mon fou à l'abri en e2",
+   "autres": [
+    "1f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-19",
+   "ply": 23,
+   "san": "d5",
+   "noeud": "3d",
+   "raison": "j'attaque son roi : 4 pièces contre 5, son pion de roque est avancé",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-19",
+   "ply": 25,
+   "san": "dxe6",
+   "noeud": "2f",
+   "raison": "je menace une fourchette : s'il ne fait rien, dxe6 puis exd7+ puis Dxd7 puis Fd4",
+   "autres": [
+    "3d",
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-19",
+   "ply": 27,
+   "san": "Cd4",
+   "noeud": "3C",
+   "raison": "j'avance mon plan : poussée f→f5",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-19",
+   "ply": 29,
+   "san": "Fg4",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-19",
+   "ply": 31,
+   "san": "Fxe6",
+   "noeud": "1c",
+   "raison": "mon fou est attaqué : je l'échange contre son pion",
+   "autres": [
+    "1f",
+    "2b"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-19",
+   "ply": 33,
+   "san": "De2",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-19",
+   "ply": 35,
+   "san": "Cd5",
+   "noeud": "2d",
+   "raison": "j'attaque sa dame en e7, non défendue",
+   "autres": [
+    "2f",
+    "3C"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-19",
+   "ply": 37,
+   "san": "Ff5",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-19",
+   "ply": 39,
+   "san": "b4",
+   "noeud": "2d",
+   "raison": "j'attaque son cavalier en c5 avec mon pion",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-19",
+   "ply": 41,
+   "san": "Ce6",
+   "noeud": "2d",
+   "raison": "double attaque sur sa tour en d8 et son fou en g7",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-19",
+   "ply": 43,
+   "san": "Cxg7",
+   "noeud": "2b",
+   "raison": "je prends son fou en g7 et je gagne du matériel",
+   "autres": [
+    "2d",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-19",
+   "ply": 45,
+   "san": "Fxd7",
+   "noeud": "2f",
+   "raison": "je menace sa tour : s'il ne fait rien, Fxd7 puis Fxc8 puis Fxc8",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-19",
+   "ply": 47,
+   "san": "Fd4",
+   "noeud": "1c",
+   "raison": "je défends mon cavalier en g7",
+   "autres": [
+    "1f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-19",
+   "ply": 49,
+   "san": "Ch5",
+   "noeud": "1c",
+   "raison": "je mets mon cavalier à l'abri en h5",
+   "autres": [
+    "1f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-19",
+   "ply": 51,
+   "san": "exd5",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait la qualité (une tour contre un cavalier ou un fou) : je pare",
+   "autres": [
+    "2b"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-19",
+   "ply": 53,
+   "san": "Tad1",
+   "noeud": "1c",
+   "raison": "je défends mon fou en d4",
+   "autres": [
+    "1d",
+    "1f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-19",
+   "ply": 55,
+   "san": "Dxa6",
+   "noeud": "1c",
+   "raison": "ma dame est attaqué : je l'échange contre son pion",
+   "autres": [
+    "1f",
+    "2b"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-19",
+   "ply": 57,
+   "san": "Fxb6",
+   "noeud": "2f",
+   "raison": "je menace mat : s'il ne fait rien, Fxb6 puis Da7+ puis Rc8 puis Dxc7#",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-19",
+   "ply": 59,
+   "san": "Da7+",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait une pièce : je pare",
+   "autres": [
+    "2a",
+    "2b"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-19",
+   "ply": 61,
+   "san": "Dxc7#",
+   "noeud": "1c",
+   "raison": "je prends son pion qui attaquait mon fou",
+   "autres": [
+    "1f",
+    "2a",
+    "2b",
+    "3d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-23",
+   "ply": 1,
+   "san": "e4",
+   "noeud": "3L",
+   "raison": "occupe le centre et ouvre la diagonale du fou roi et la dame",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-23",
+   "ply": 3,
+   "san": "d4",
+   "noeud": "3L",
+   "raison": "prend tout le centre avant que …d5 ne le conteste",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-23",
+   "ply": 5,
+   "san": "Cc3",
+   "noeud": "3D",
+   "raison": "je sors mon cavalier",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-23",
+   "ply": 7,
+   "san": "Fd3",
+   "noeud": "3D",
+   "raison": "je sors mon fou",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-23",
+   "ply": 9,
+   "san": "Ce2",
+   "noeud": "3D",
+   "raison": "je sors mon cavalier",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-23",
+   "ply": 11,
+   "san": "O-O",
+   "noeud": "1e",
+   "raison": "je sors mon roi du clou",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-23",
+   "ply": 13,
+   "san": "e5",
+   "noeud": "2d",
+   "raison": "j'attaque son cavalier en f6 avec mon pion",
+   "autres": [
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-23",
+   "ply": 15,
+   "san": "Cf4",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-23",
+   "ply": 17,
+   "san": "bxc3",
+   "noeud": "1c",
+   "raison": "je prends son fou qui attaquait mon pion",
+   "autres": [
+    "1f",
+    "2b"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-23",
+   "ply": 19,
+   "san": "Ch5",
+   "noeud": "3d",
+   "raison": "j'attaque son roi : 4 pièces contre 3, son pion de roque est avancé",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-23",
+   "ply": 21,
+   "san": "Fa3",
+   "noeud": "2d",
+   "raison": "j'attaque sa tour en f8 avec mon fou",
+   "autres": [
+    "3D",
+    "3d",
+    "3P"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-23",
+   "ply": 23,
+   "san": "Fg6",
+   "noeud": "2d",
+   "raison": "j'attaque sa tour en f7 avec mon fou",
+   "autres": [
+    "3d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-23",
+   "ply": 25,
+   "san": "Fxf7+",
+   "noeud": "2b",
+   "raison": "je prends sa tour en f7 et je gagne du matériel",
+   "autres": [
+    "3d",
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-23",
+   "ply": 27,
+   "san": "Df3+",
+   "noeud": "3d",
+   "raison": "j'attaque son roi : 4 pièces contre 2, la colonne est ouverte",
+   "autres": [
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-23",
+   "ply": 29,
+   "san": "Dg4",
+   "noeud": "2f",
+   "raison": "je menace mat : s'il ne fait rien, Dg4 puis Dxg7#",
+   "autres": [
+    "3d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-23",
+   "ply": 31,
+   "san": "Dxg7#",
+   "noeud": "1c",
+   "raison": "ma dame est attaqué : je l'échange contre son pion",
+   "autres": [
+    "1f",
+    "2a",
+    "2b",
+    "3d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-04",
+   "ply": 1,
+   "san": "e4",
+   "noeud": "3L",
+   "raison": "occupe le centre et ouvre la diagonale du fou roi et la dame",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-04",
+   "ply": 3,
+   "san": "d4",
+   "noeud": "3D",
+   "raison": "je prends le centre",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-04",
+   "ply": 5,
+   "san": "Cf3",
+   "noeud": "3D",
+   "raison": "je sors mon cavalier",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-04",
+   "ply": 7,
+   "san": "Cc3",
+   "noeud": "2d",
+   "raison": "j'attaque son fou en e4, non défendue",
+   "autres": [
+    "2f",
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-04",
+   "ply": 9,
+   "san": "Fd3",
+   "noeud": "3D",
+   "raison": "je sors mon fou",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-04",
+   "ply": 11,
+   "san": "O-O",
+   "noeud": "3D",
+   "raison": "je mets mon roi à l'abri",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-04",
+   "ply": 13,
+   "san": "Ff4",
+   "noeud": "3D",
+   "raison": "je sors mon fou",
+   "autres": [
+    "3d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-04",
+   "ply": 15,
+   "san": "Fc4",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-04",
+   "ply": 17,
+   "san": "Cb5",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-04",
+   "ply": 19,
+   "san": "De2",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-04",
+   "ply": 21,
+   "san": "Cc3",
+   "noeud": "1c",
+   "raison": "je mets mon cavalier à l'abri en c3",
+   "autres": [
+    "1f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-04",
+   "ply": 23,
+   "san": "d5",
+   "noeud": "2d",
+   "raison": "j'attaque son cavalier en c6 avec mon pion",
+   "autres": [
+    "2f",
+    "3C",
+    "3d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-04",
+   "ply": 25,
+   "san": "Cxd5",
+   "noeud": "1c",
+   "raison": "je prends son pion qui attaquait mon fou",
+   "autres": [
+    "1f",
+    "2b"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-04",
+   "ply": 27,
+   "san": "Dd3",
+   "noeud": "3d",
+   "raison": "j'attaque son roi : 5 pièces contre 4, son pion de roque est avancé",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-04",
+   "ply": 29,
+   "san": "Dxd5",
+   "noeud": "1c",
+   "raison": "je prends son cavalier qui attaquait mon fou",
+   "autres": [
+    "1f",
+    "2b"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-04",
+   "ply": 31,
+   "san": "Df5",
+   "noeud": "3d",
+   "raison": "j'attaque son roi : 4 pièces contre 3, son pion de roque est avancé",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-04",
+   "ply": 33,
+   "san": "c3",
+   "noeud": "1c",
+   "raison": "je défends mon pion en b2",
+   "autres": [
+    "1f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-04",
+   "ply": 35,
+   "san": "Dg4",
+   "noeud": "1c",
+   "raison": "je mets ma dame à l'abri en g4",
+   "autres": [
+    "1f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-04",
+   "ply": 37,
+   "san": "Dxg6",
+   "noeud": "3Y",
+   "raison": "je l'empêche de Cxf4",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-04",
+   "ply": 39,
+   "san": "Df5",
+   "noeud": "1c",
+   "raison": "je mets ma dame à l'abri en f5",
+   "autres": [
+    "1f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-04",
+   "ply": 41,
+   "san": "Tfe1",
+   "noeud": "1d",
+   "raison": "ma dernière rangée est fragile : je la couvre",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-04",
+   "ply": 43,
+   "san": "Dd3",
+   "noeud": "1c",
+   "raison": "je mets ma dame à l'abri en d3",
+   "autres": [
+    "1f",
+    "3d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-04",
+   "ply": 45,
+   "san": "Fb3",
+   "noeud": "1c",
+   "raison": "je mets mon fou à l'abri en b3",
+   "autres": [
+    "1f",
+    "3d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-04",
+   "ply": 47,
+   "san": "Fc2",
+   "noeud": "2f",
+   "raison": "je menace mat : s'il ne fait rien, Fc2 puis Dh7#",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-04",
+   "ply": 49,
+   "san": "Fxh6",
+   "noeud": "2b",
+   "raison": "je prends son pion en h6 et je gagne du matériel",
+   "autres": [
+    "2d",
+    "2f",
+    "3d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-04",
+   "ply": 51,
+   "san": "Fb3",
+   "noeud": "3d",
+   "raison": "j'attaque son roi : 4 pièces contre 3, son pion de roque est avancé",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-04",
+   "ply": 53,
+   "san": "Txe1",
+   "noeud": "1a",
+   "raison": "je suis en échec : je dois parer",
+   "autres": [
+    "1c",
+    "1d",
+    "2b",
+    "2f",
+    "3C"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-04",
+   "ply": 55,
+   "san": "Dxg6+",
+   "noeud": "2a",
+   "raison": "j'ai un mat",
+   "autres": [
+    "2b",
+    "3d",
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-04",
+   "ply": 57,
+   "san": "Dxf6+",
+   "noeud": "1c",
+   "raison": "ma dame est attaqué : je l'échange contre son fou",
+   "autres": [
+    "1f",
+    "2a",
+    "2b"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-04",
+   "ply": 59,
+   "san": "Dg7#",
+   "noeud": "2a",
+   "raison": "j'ai un mat",
+   "autres": [
+    "3d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-08",
+   "ply": 1,
+   "san": "e4",
+   "noeud": "3L",
+   "raison": "occupe le centre et ouvre la diagonale du fou roi et la dame",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-08",
+   "ply": 3,
+   "san": "Cf3",
+   "noeud": "3L",
+   "raison": "attaque e5 en développant : le coup le plus naturel du jeu",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-08",
+   "ply": 5,
+   "san": "d4",
+   "noeud": "3D",
+   "raison": "je prends le centre",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-08",
+   "ply": 7,
+   "san": "Cxd4",
+   "noeud": "2b",
+   "raison": "je prends son pion en d4 et je gagne du matériel",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-08",
+   "ply": 9,
+   "san": "Cc3",
+   "noeud": "3D",
+   "raison": "je sors mon cavalier",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-08",
+   "ply": 11,
+   "san": "Fc4",
+   "noeud": "3D",
+   "raison": "je sors mon fou",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-08",
+   "ply": 13,
+   "san": "O-O",
+   "noeud": "3D",
+   "raison": "je mets mon roi à l'abri",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-08",
+   "ply": 15,
+   "san": "Cd5",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-08",
+   "ply": 17,
+   "san": "Te1",
+   "noeud": "1d",
+   "raison": "ma dernière rangée est fragile : je la couvre",
+   "autres": [
+    "2d",
+    "3C"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-08",
+   "ply": 19,
+   "san": "Cxe7+",
+   "noeud": "2b",
+   "raison": "je prends son fou en e7 et je gagne du matériel",
+   "autres": [
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-08",
+   "ply": 21,
+   "san": "Cxc8",
+   "noeud": "3C",
+   "raison": "j'avance mon plan : transfert Te1→e7",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-08",
+   "ply": 23,
+   "san": "Te7",
+   "noeud": "3C",
+   "raison": "j'avance mon plan : transfert Te1→e7",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-08",
+   "ply": 25,
+   "san": "Cxc6",
+   "noeud": "1c",
+   "raison": "je prends son cavalier qui attaquait ma tour",
+   "autres": [
+    "1f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-08",
+   "ply": 27,
+   "san": "Fxf7",
+   "noeud": "2b",
+   "raison": "je prends son pion en f7 et je gagne du matériel",
+   "autres": [
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-08",
+   "ply": 29,
+   "san": "Fxd5",
+   "noeud": "1c",
+   "raison": "je prends son cavalier qui attaquait ma tour",
+   "autres": [
+    "1f",
+    "2b"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-08",
+   "ply": 31,
+   "san": "Dd4",
+   "noeud": "2f",
+   "raison": "je menace mat : s'il ne fait rien, Dd4 puis Dxg7#",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-08",
+   "ply": 33,
+   "san": "Dxd5",
+   "noeud": "2b",
+   "raison": "je prends son pion en d5 et je gagne du matériel",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-08",
+   "ply": 35,
+   "san": "b3",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-08",
+   "ply": 37,
+   "san": "De4",
+   "noeud": "1c",
+   "raison": "je mets ma dame à l'abri en e4",
+   "autres": [
+    "1f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-08",
+   "ply": 39,
+   "san": "Dd4",
+   "noeud": "1c",
+   "raison": "je mets ma dame à l'abri en d4",
+   "autres": [
+    "1f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-08",
+   "ply": 41,
+   "san": "Dxd5",
+   "noeud": "1c",
+   "raison": "ma dame est attaqué : je l'échange contre son pion",
+   "autres": [
+    "1f",
+    "2b"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-08",
+   "ply": 43,
+   "san": "De4",
+   "noeud": "1c",
+   "raison": "je mets ma dame à l'abri en e4",
+   "autres": [
+    "1f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-08",
+   "ply": 45,
+   "san": "axb3",
+   "noeud": "1c",
+   "raison": "je prends son pion qui attaquait mon pion",
+   "autres": [
+    "1f",
+    "2b"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-08",
+   "ply": 47,
+   "san": "Fh6",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait un pion : je pare",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-08",
+   "ply": 49,
+   "san": "Fxg7+",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait une pièce contre un pion : je pare",
+   "autres": [
+    "3d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-08",
+   "ply": 51,
+   "san": "Te8+",
+   "noeud": "2b",
+   "raison": "fourchette : son roi et sa dame",
+   "autres": [
+    "2d",
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-08",
+   "ply": 53,
+   "san": "Dxe8+",
+   "noeud": "1c",
+   "raison": "je prends sa dame qui attaquait ma dame",
+   "autres": [
+    "1f",
+    "2b"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-08",
+   "ply": 55,
+   "san": "De5+",
+   "noeud": "1c",
+   "raison": "je mets ma dame à l'abri en e5",
+   "autres": [
+    "1f",
+    "2b"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-08",
+   "ply": 57,
+   "san": "g3",
+   "noeud": "1d",
+   "raison": "ma dernière rangée est fragile : je m'aère",
+   "autres": [
+    "1e"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-08",
+   "ply": 59,
+   "san": "Txa6",
+   "noeud": "2b",
+   "raison": "je prends son pion en a6 et je gagne du matériel",
+   "autres": [
+    "2f",
+    "3d",
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-08",
+   "ply": 61,
+   "san": "Rg2",
+   "noeud": "1a",
+   "raison": "je suis en échec : je dois parer",
+   "autres": [
+    "1e",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-08",
+   "ply": 63,
+   "san": "Df5+",
+   "noeud": "2b",
+   "raison": "échec qui gagne du matériel",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-08",
+   "ply": 65,
+   "san": "Txh6+",
+   "noeud": "2a",
+   "raison": "j'ai un mat",
+   "autres": [
+    "2b"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-08",
+   "ply": 67,
+   "san": "De6+",
+   "noeud": "2a",
+   "raison": "j'ai un mat",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-08",
+   "ply": 69,
+   "san": "Tf6+",
+   "noeud": "2a",
+   "raison": "j'ai un mat",
+   "autres": [
+    "2b"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-08",
+   "ply": 71,
+   "san": "Dxf7#",
+   "noeud": "2a",
+   "raison": "j'ai un mat",
+   "autres": [
+    "2b",
+    "3d",
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-12",
+   "ply": 1,
+   "san": "e4",
+   "noeud": "3L",
+   "raison": "occupe le centre et ouvre la diagonale du fou roi et la dame",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-12",
+   "ply": 3,
+   "san": "d4",
+   "noeud": "3L",
+   "raison": "prend tout le centre avant que …d5 ne le conteste",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-12",
+   "ply": 5,
+   "san": "Cc3",
+   "noeud": "3D",
+   "raison": "je sors mon cavalier",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-12",
+   "ply": 7,
+   "san": "Cf3",
+   "noeud": "3D",
+   "raison": "je sors mon cavalier",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-12",
+   "ply": 9,
+   "san": "Fd3",
+   "noeud": "3D",
+   "raison": "je sors mon fou",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-12",
+   "ply": 11,
+   "san": "O-O",
+   "noeud": "3D",
+   "raison": "je mets mon roi à l'abri",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-12",
+   "ply": 13,
+   "san": "Ce2",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-12",
+   "ply": 15,
+   "san": "Cf4",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait un pion : je pare",
+   "autres": [
+    "2d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-12",
+   "ply": 17,
+   "san": "Ce5",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-12",
+   "ply": 19,
+   "san": "Cg4",
+   "noeud": "1c",
+   "raison": "je mets mon cavalier à l'abri en g4",
+   "autres": [
+    "1f",
+    "2d",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-12",
+   "ply": 21,
+   "san": "Fb5+",
+   "noeud": "1e",
+   "raison": "je décloue mon fou",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-12",
+   "ply": 23,
+   "san": "Dxd4",
+   "noeud": "1c",
+   "raison": "je prends sa dame qui attaquait mon pion",
+   "autres": [
+    "1e",
+    "1f",
+    "2b"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-12",
+   "ply": 25,
+   "san": "Dc3",
+   "noeud": "1c",
+   "raison": "je mets ma dame à l'abri en c3",
+   "autres": [
+    "1f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-12",
+   "ply": 27,
+   "san": "Dc4",
+   "noeud": "1c",
+   "raison": "je mets ma dame à l'abri en c4",
+   "autres": [
+    "1f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-12",
+   "ply": 29,
+   "san": "Td1",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait la qualité (une tour contre un cavalier ou un fou) : je pare",
+   "autres": [
+    "3C"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-12",
+   "ply": 31,
+   "san": "Db3",
+   "noeud": "1c",
+   "raison": "je mets ma dame à l'abri en b3",
+   "autres": [
+    "1f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-12",
+   "ply": 33,
+   "san": "Ce3",
+   "noeud": "1c",
+   "raison": "je mets mon cavalier à l'abri en e3",
+   "autres": [
+    "1f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-12",
+   "ply": 35,
+   "san": "Cfd5",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait une pièce : je pare",
+   "autres": [
+    "2f",
+    "3C"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-12",
+   "ply": 37,
+   "san": "Cxd5",
+   "noeud": "1c",
+   "raison": "je prends son pion qui attaquait mon pion",
+   "autres": [
+    "1f",
+    "2b",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-12",
+   "ply": 39,
+   "san": "Fxg5",
+   "noeud": "2b",
+   "raison": "je prends son pion en g5 et je gagne du matériel",
+   "autres": [
+    "2e",
+    "3D",
+    "3P"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-12",
+   "ply": 41,
+   "san": "Fxe7",
+   "noeud": "1c",
+   "raison": "mon fou est attaqué : je l'échange contre son cavalier",
+   "autres": [
+    "1f",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-12",
+   "ply": 43,
+   "san": "a3",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-12",
+   "ply": 45,
+   "san": "Txa3",
+   "noeud": "2b",
+   "raison": "je prends son pion en a3 et je gagne du matériel",
+   "autres": [
+    "2d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-12",
+   "ply": 47,
+   "san": "Cxe7+",
+   "noeud": "2b",
+   "raison": "fourchette : son roi et sa tour",
+   "autres": [
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-12",
+   "ply": 49,
+   "san": "Dxf7",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait un pion : je pare",
+   "autres": [
+    "2b",
+    "2d",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-12",
+   "ply": 51,
+   "san": "De6+",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait un pion : je pare",
+   "autres": [
+    "2b",
+    "2d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-12",
+   "ply": 53,
+   "san": "Dxe4+",
+   "noeud": "1c",
+   "raison": "je prends son fou qui attaquait mon pion",
+   "autres": [
+    "1f",
+    "2b",
+    "2d",
+    "3C"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-12",
+   "ply": 55,
+   "san": "Dd5",
+   "noeud": "2e",
+   "raison": "je cloue son cavalier en c6 sur son roi",
+   "autres": [
+    "3d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-12",
+   "ply": 57,
+   "san": "Tc3",
+   "noeud": "2f",
+   "raison": "je menace mat : s'il ne fait rien, Tc3 puis Dxc6+ puis Ra7 puis Ta1+",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-12",
+   "ply": 59,
+   "san": "Dxc6+",
+   "noeud": "2a",
+   "raison": "j'ai un mat",
+   "autres": [
+    "2b",
+    "3d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-12",
+   "ply": 61,
+   "san": "Dxc7#",
+   "noeud": "2a",
+   "raison": "j'ai un mat",
+   "autres": [
+    "3d",
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-16",
+   "ply": 1,
+   "san": "e4",
+   "noeud": "3L",
+   "raison": "occupe le centre et ouvre la diagonale du fou roi et la dame",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-16",
+   "ply": 3,
+   "san": "d4",
+   "noeud": "3L",
+   "raison": "prend tout le centre avant que …d5 ne le conteste",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-16",
+   "ply": 5,
+   "san": "Cc3",
+   "noeud": "3D",
+   "raison": "je sors mon cavalier",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-16",
+   "ply": 7,
+   "san": "e5",
+   "noeud": "2d",
+   "raison": "j'attaque son cavalier en f6 avec mon pion",
+   "autres": [
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-16",
+   "ply": 9,
+   "san": "Dg4",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-16",
+   "ply": 11,
+   "san": "Fh6",
+   "noeud": "2f",
+   "raison": "je menace mat : s'il ne fait rien, Fh6 puis Dxg7#",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-16",
+   "ply": 13,
+   "san": "Cxd5",
+   "noeud": "2f",
+   "raison": "je menace sa tour : s'il ne fait rien, Cxd5 puis Fxf8 puis exd5 puis Fh6",
+   "autres": [
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-16",
+   "ply": 15,
+   "san": "Cxe7+",
+   "noeud": "1c",
+   "raison": "mon cavalier est attaqué : je l'échange contre son fou",
+   "autres": [
+    "1f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-16",
+   "ply": 17,
+   "san": "O-O-O",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait deux pions : je pare",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-16",
+   "ply": 19,
+   "san": "Cf3",
+   "noeud": "3D",
+   "raison": "je sors mon cavalier",
+   "autres": [
+    "3P"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-16",
+   "ply": 21,
+   "san": "Rb1",
+   "noeud": "1c",
+   "raison": "je défends mon pion en a2",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-16",
+   "ply": 23,
+   "san": "Cg5",
+   "noeud": "3d",
+   "raison": "j'attaque son roi : 4 pièces contre 2, son pion de roque est avancé",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-16",
+   "ply": 25,
+   "san": "Fc4",
+   "noeud": "3D",
+   "raison": "je sors mon fou",
+   "autres": [
+    "3P"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-16",
+   "ply": 27,
+   "san": "exd6",
+   "noeud": "1c",
+   "raison": "je défends mon fou en c4",
+   "autres": [
+    "1f",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-16",
+   "ply": 29,
+   "san": "a3",
+   "noeud": "1d",
+   "raison": "ma dernière rangée est fragile : je m'aère",
+   "autres": [
+    "2d",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-16",
+   "ply": 31,
+   "san": "Df4",
+   "noeud": "3d",
+   "raison": "j'attaque son roi : 4 pièces contre 2, son pion de roque est avancé",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-16",
+   "ply": 33,
+   "san": "Fd3",
+   "noeud": "1c",
+   "raison": "je mets mon fou à l'abri en d3",
+   "autres": [
+    "1f",
+    "3d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-16",
+   "ply": 35,
+   "san": "dxe5",
+   "noeud": "1c",
+   "raison": "je prends son pion qui attaquait ma dame",
+   "autres": [
+    "1f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-16",
+   "ply": 37,
+   "san": "Dd4",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-16",
+   "ply": 39,
+   "san": "Dxd5+",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait une pièce contre un pion : je pare",
+   "autres": [
+    "2b",
+    "3d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-16",
+   "ply": 41,
+   "san": "Cxe6",
+   "noeud": "1c",
+   "raison": "je prends son fou qui attaquait ma dame",
+   "autres": [
+    "1f",
+    "2b",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-16",
+   "ply": 43,
+   "san": "Dxb7",
+   "noeud": "1c",
+   "raison": "ma dame est attaqué : je l'échange contre son pion",
+   "autres": [
+    "1f",
+    "2b",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-16",
+   "ply": 45,
+   "san": "Dg7#",
+   "noeud": "1c",
+   "raison": "je mets ma dame à l'abri en g7",
+   "autres": [
+    "1f",
+    "2a"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-20",
+   "ply": 1,
+   "san": "e4",
+   "noeud": "3L",
+   "raison": "occupe le centre et ouvre la diagonale du fou roi et la dame",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-20",
+   "ply": 3,
+   "san": "d4",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait un pion : je pare",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-20",
+   "ply": 5,
+   "san": "Cc3",
+   "noeud": "3D",
+   "raison": "je sors mon cavalier",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-20",
+   "ply": 7,
+   "san": "Cf3",
+   "noeud": "3D",
+   "raison": "je sors mon cavalier",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-20",
+   "ply": 9,
+   "san": "Fe2",
+   "noeud": "3D",
+   "raison": "je sors mon fou",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-20",
+   "ply": 11,
+   "san": "O-O",
+   "noeud": "3D",
+   "raison": "je mets mon roi à l'abri",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-20",
+   "ply": 13,
+   "san": "exd5",
+   "noeud": "1c",
+   "raison": "je prends son pion qui attaquait mon pion",
+   "autres": [
+    "1f",
+    "2f",
+    "3d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-20",
+   "ply": 15,
+   "san": "Cxd5",
+   "noeud": "2f",
+   "raison": "je menace du matériel : s'il ne fait rien, Cxd5 puis Cc3 puis Fe7 puis Ce5",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-20",
+   "ply": 17,
+   "san": "Ce5",
+   "noeud": "2f",
+   "raison": "je menace du matériel : s'il ne fait rien, Ce5 puis Fb5+ puis Fd7 puis Fxd7+",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-20",
+   "ply": 19,
+   "san": "Ff4",
+   "noeud": "3D",
+   "raison": "je sors mon fou",
+   "autres": [
+    "3P"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-20",
+   "ply": 21,
+   "san": "Fxh5+",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait une pièce contre deux pions : je pare",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-20",
+   "ply": 23,
+   "san": "Cf7",
+   "noeud": "1c",
+   "raison": "je mets mon cavalier à l'abri en f7",
+   "autres": [
+    "2d",
+    "2f",
+    "3d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-20",
+   "ply": 25,
+   "san": "Cxd8",
+   "noeud": "2b",
+   "raison": "je prends sa dame en d8 et je gagne du matériel",
+   "autres": [
+    "2f",
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-20",
+   "ply": 27,
+   "san": "Te1",
+   "noeud": "3C",
+   "raison": "j'avance mon plan : colonne e",
+   "autres": [
+    "3P"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-20",
+   "ply": 29,
+   "san": "Df3",
+   "noeud": "2d",
+   "raison": "j'attaque son fou en f4, non défendue",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-20",
+   "ply": 31,
+   "san": "Ff7",
+   "noeud": "2f",
+   "raison": "je menace son pion : s'il ne fait rien, Ff7 puis Fxe6 puis Cc7 puis Fxd5",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-20",
+   "ply": 33,
+   "san": "Dxd5",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait une pièce : je pare",
+   "autres": [
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-20",
+   "ply": 35,
+   "san": "Dxd7+",
+   "noeud": "1c",
+   "raison": "ma dame est attaqué : je l'échange contre son fou",
+   "autres": [
+    "1f",
+    "2b"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-20",
+   "ply": 37,
+   "san": "Dxb7",
+   "noeud": "2b",
+   "raison": "je prends son pion en b7 et je gagne du matériel",
+   "autres": [
+    "2d",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-20",
+   "ply": 39,
+   "san": "Dxa6",
+   "noeud": "1c",
+   "raison": "ma dame est attaqué : je l'échange contre son cavalier",
+   "autres": [
+    "1f",
+    "2b",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-20",
+   "ply": 41,
+   "san": "Txe6",
+   "noeud": "2b",
+   "raison": "je prends son pion en e6 et je gagne du matériel",
+   "autres": [
+    "3d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-20",
+   "ply": 43,
+   "san": "Dd3+",
+   "noeud": "2b",
+   "raison": "fourchette : son roi et sa tour",
+   "autres": [
+    "2d",
+    "3C",
+    "3d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-20",
+   "ply": 45,
+   "san": "Dxc2",
+   "noeud": "2b",
+   "raison": "je prends sa tour en c2 et je gagne du matériel",
+   "autres": [
+    "3d",
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-20",
+   "ply": 47,
+   "san": "De4+",
+   "noeud": "2b",
+   "raison": "fourchette : son roi et sa tour",
+   "autres": [
+    "2d",
+    "3d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-20",
+   "ply": 49,
+   "san": "Dxa8",
+   "noeud": "2b",
+   "raison": "je prends sa tour en a8 et je gagne du matériel",
+   "autres": [
+    "3Y"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-20",
+   "ply": 51,
+   "san": "Dxa7",
+   "noeud": "2b",
+   "raison": "je prends son pion en a7 et je gagne du matériel",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-20",
+   "ply": 53,
+   "san": "Db6+",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-20",
+   "ply": 55,
+   "san": "a4",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-20",
+   "ply": 57,
+   "san": "a5",
+   "noeud": "3C",
+   "raison": "j'avance mon plan : poussée a→a8",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-20",
+   "ply": 59,
+   "san": "a6",
+   "noeud": "3C",
+   "raison": "j'avance mon plan : poussée a→a8",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-20",
+   "ply": 61,
+   "san": "Dxd4",
+   "noeud": "1c",
+   "raison": "je prends son fou qui attaquait ma dame",
+   "autres": [
+    "1e",
+    "1f",
+    "2b",
+    "2f",
+    "3d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-20",
+   "ply": 63,
+   "san": "Ta5+",
+   "noeud": "2a",
+   "raison": "j'ai un mat",
+   "autres": [
+    "3C",
+    "3d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-20",
+   "ply": 65,
+   "san": "h3+",
+   "noeud": "2a",
+   "raison": "j'ai un mat",
+   "autres": [
+    "2b",
+    "3d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-20",
+   "ply": 67,
+   "san": "Dxf4#",
+   "noeud": "2a",
+   "raison": "j'ai un mat",
+   "autres": [
+    "2b",
+    "3d"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-24",
+   "ply": 1,
+   "san": "e4",
+   "noeud": "3L",
+   "raison": "occupe le centre et ouvre la diagonale du fou roi et la dame",
+   "autres": [
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-24",
+   "ply": 3,
+   "san": "d4",
+   "noeud": "3D",
+   "raison": "je prends le centre",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-24",
+   "ply": 5,
+   "san": "Cc3",
+   "noeud": "3D",
+   "raison": "je sors mon cavalier",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-24",
+   "ply": 7,
+   "san": "Cf3",
+   "noeud": "1c",
+   "raison": "je défends mon pion en d4",
+   "autres": [
+    "1f",
+    "3D"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-24",
+   "ply": 9,
+   "san": "Fe3",
+   "noeud": "3D",
+   "raison": "je sors mon fou",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-24",
+   "ply": 11,
+   "san": "Fc4",
+   "noeud": "3D",
+   "raison": "je sors mon fou",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-24",
+   "ply": 13,
+   "san": "Cg5",
+   "noeud": "2f",
+   "raison": "je menace son pion : s'il ne fait rien, Cg5 puis Cxf7 puis Dc8 puis Cxh8",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-24",
+   "ply": 15,
+   "san": "Cf7",
+   "noeud": "1c",
+   "raison": "je mets mon cavalier à l'abri en f7",
+   "autres": [
+    "1f",
+    "2d",
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-24",
+   "ply": 17,
+   "san": "Cxh8",
+   "noeud": "2b",
+   "raison": "je prends sa tour en h8 et je gagne du matériel",
+   "autres": [
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-24",
+   "ply": 19,
+   "san": "Fxg8",
+   "noeud": "2b",
+   "raison": "je prends son cavalier en g8 et je gagne du matériel",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-24",
+   "ply": 21,
+   "san": "Fd5",
+   "noeud": "1c",
+   "raison": "je mets mon fou à l'abri en d5",
+   "autres": [
+    "1f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-24",
+   "ply": 23,
+   "san": "Fb3",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-24",
+   "ply": 25,
+   "san": "a3",
+   "noeud": "2d",
+   "raison": "j'attaque son cavalier en b4 avec mon pion",
+   "autres": [
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-24",
+   "ply": 27,
+   "san": "O-O",
+   "noeud": "3D",
+   "raison": "je mets mon roi à l'abri",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-24",
+   "ply": 29,
+   "san": "De2",
+   "noeud": null,
+   "raison": null,
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-24",
+   "ply": 31,
+   "san": "axb4",
+   "noeud": "1c",
+   "raison": "je prends son pion qui attaquait mon cavalier",
+   "autres": [
+    "1f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-24",
+   "ply": 33,
+   "san": "Txa8",
+   "noeud": "1f",
+   "raison": "s'il jouait deux fois il gagnerait une pièce contre un pion : je pare",
+   "autres": [
+    "2f"
+   ]
+  },
+  {
+   "partie": "2026-10-24-maia-w-24",
+   "ply": 35,
+   "san": "Dc4",
+   "noeud": "2f",
+   "raison": "je menace mat : s'il ne fait rien, Dc4 puis Df7#",
+   "autres": []
+  },
+  {
+   "partie": "2026-10-24-maia-w-24",
+   "ply": 37,
+   "san": "Df7#",
+   "noeud": "2a",
+   "raison": "j'ai un mat",
+   "autres": [
+    "3Y"
+   ]
+  }
+ ]
+}
