@@ -40,11 +40,12 @@ for (const f of fichiers) {
     let r;
     try { r = coach.nommer(p.fen, {}, p.uci, RAPIDE ? { rapide: true } : undefined); } catch (e) { process.stderr.write(`erreur ${p.partie} ply ${p.ply} : ${e.message}\n`); continue; }
     positions++;
-    const allumes = {};
-    for (const c of r.candidats) for (const rs of (c.raisons ?? [{ noeud: c.noeud }])) (allumes[rs.noeud] = allumes[rs.noeud] ?? []).push(c.coup);
+    let allumes = r.allumes;
+    if (!allumes) { allumes = {}; for (const c of r.candidats) for (const rs of (c.raisons ?? [{ noeud: c.noeud }])) (allumes[rs.noeud] = allumes[rs.noeud] ?? []).push(c.coup); }
     for (const n of Object.keys(allumes)) st(n).allume++;
     const reconnait = (r.raisons ?? []).map((x) => x.noeud);
     for (const n of new Set(reconnait)) st(n).reconnait++;
+    for (const x of (r.raisons ?? [])) if (x.verifie === false) st(x.noeud).refuse = (st(x.noeud).refuse ?? 0) + 1; // le vérificateur a refusé ce nom
     if (r.noeud) st(r.noeud).nomme++;
     const ph = (stats.phases[p.phase] = stats.phases[p.phase] ?? { positions: 0, sansNom: 0, memeNoeud: 0, suites: 0 });
     ph.positions++; if (!r.noeud) ph.sansNom++;
@@ -57,9 +58,11 @@ for (const f of fichiers) {
 
 const nommes = Object.values(stats.parNoeud).reduce((a, s) => a + s.nomme, 0);
 console.log(`\n=== TABLE — ${fichiers.map((f) => f.split('/').pop()).join(', ')} : ${positions} positions, ${nommes} nommées (${PCT(nommes, positions).trim()}), ${positions - nommes} sans nom (${PCT(positions - nommes, positions).trim()}) — ${((Date.now() - t0) / 1000 / Math.max(1, positions)).toFixed(2)} s/position, budget ${budget}${RAPIDE ? ', rapide' : ''} ===\n`);
-console.log('| nœud | allumé (part des positions) | nomme : part brute | nomme : quand allumé |');
-console.log('|---|---|---|---|');
-for (const n of ORDRE) { const s = stats.parNoeud[n]; if (!s) continue; console.log(`| ${n} | ${s.allume} (${PCT(s.allume, positions).trim()}) | ${s.nomme} (${PCT(s.nomme, positions).trim()}) | ${PCT(s.nomme, s.allume).trim()} |`); }
+console.log('| nœud | allumé (part des positions) | nomme : part brute | nomme : quand allumé | reconnu mais refusé par le vérificateur |');
+console.log('|---|---|---|---|---|');
+for (const n of [...ORDRE, ...Object.keys(stats.parNoeud).filter((k) => !ORDRE.includes(k))]) { const s = stats.parNoeud[n]; if (!s) continue; console.log(`| ${n} | ${s.allume} (${PCT(s.allume, positions).trim()}) | ${s.nomme} (${PCT(s.nomme, positions).trim()}) | ${PCT(s.nomme, s.allume).trim()} | ${s.refuse ?? 0} |`); }
+const refuses = Object.values(stats.parNoeud).reduce((a, s) => a + (s.refuse ?? 0), 0);
+console.log(`\nnoms refusés par le vérificateur : ${refuses} (sur ${nommes + refuses} reconnaissances candidates au nom)`);
 console.log('\npar phase :');
 for (const [ph, v] of Object.entries(stats.phases)) console.log(`    ${ph} : ${v.positions} positions, sans nom ${PCT(v.sansNom, v.positions).trim()}, même nœud qu'au coup précédent ${v.suites ? PCT(v.memeNoeud, v.suites).trim() : '—'} (${v.suites} suites)`);
 if (SORTIE) { writeFileSync(SORTIE, lignes.map((l) => JSON.stringify(l)).join('\n') + '\n'); console.log(`\nlignes écrites : ${SORTIE}`); }

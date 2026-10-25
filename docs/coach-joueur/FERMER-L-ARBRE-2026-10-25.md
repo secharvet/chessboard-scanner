@@ -55,6 +55,28 @@ dernier recours, avec une raison vérifiable, jamais allumée en permanence.
 **Ce qu'on ne fait pas** : le sacrifice positionnel (hors de portée d'un arbre, seul le calcul le trouve) ; la manœuvre
 longue, le levier d'aile, le transfert vers l'aile du roi, la simplification : déjà couverts par 3P, d), 3d et 3c.
 
+## Mesure 1 (25 oct., 15 h 06) : lot 1 fusionné (dev-lead 5064de9), 500 positions neuves de 2000-2199
+
+Lichess septembre 2025, mode rapide, quatre processus à un fil, 2 minutes. Trois chiffres :
+- **temps par coup** : 0,9 à 1,0 s mur sur la machine partagée ; 61 600 positions calculées par coup en moyenne sur la
+  série (p90 99 100), la cible « moins de 100 000 » est tenue ;
+- **noms refusés par le vérificateur** : 37 sur 480 reconnaissances (7,7 %) : ce sont des noms faux évités ; le
+  recomptage indépendant du harnais reste à construire, le vérificateur est pour l'instant le seul étage ;
+- **sans nom** : 57 sur 500 (11,4 %), dont 7 bévues (SF19 prof. 12, un fil) → **50 sans nom hors bévues = 10,0 %**,
+  sur le seuil, pas dessous. Par phase : ouverture 7,8 %, milieu 14,4 %, finale 16,9 %.
+
+Qui nomme, à 2000-2199 (part brute) : 3D développement 21,2 % · 1f que menace-t-il ? 11,8 % · 1c pièce en prise 10,6 %
+· 3p pion d'ouverture 8,8 % · 2b prise qui gagne 6,4 % · 2d double attaque 5,6 % · 1a 4,8 % · 3r pièce qui cède une case
+3,6 % · 2f 2,6 % · 2e 2,4 % · 1e, 3C 2,2 % · 3L 2,0 % · le reste sous 1,5 % ; 3s surprotection ne nomme rien (allumée
+27 %). Quand allumé : 1f 48 %, 1c 42 %, 3D 35 %, 2b 34 % ; 2f allumée dans 75 % des positions et nomme 3,5 % : la
+définition de « allumé » pour 2f reste au sens large, à resserrer.
+
+Les 50 sans nom hors bévues disent le lot 2 : tours vers une colonne (10), échanges de pions et tension (9), coups de
+pion que 3p n'a pas vérifiés (13 : h3 avant que …Fg4 soit possible, a3, a6, c5, f4, b5…), le roi (3), la dame vers une
+meilleure case (5), fou et cavalier vers une case forte (8). Accord rapide / lent sur les 600 positions d'hier : 86,7 %
+même nœud ; les désaccords viennent surtout du vérificateur 1c (43 « attaquée mais défendue » renommées), voulu ; hors
+1c, l'approximation change le nœud dans environ 3 % des cas.
+
 ## La boucle : deux tours au plus (Sébastien : « c'est un peu long »)
 
 1. **Premier lot** (Dev chef, d'une traite) : le nommage rapide, la branche A (pions d'ouverture), les deux premières de B
