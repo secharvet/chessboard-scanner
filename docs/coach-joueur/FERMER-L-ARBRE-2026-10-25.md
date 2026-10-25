@@ -55,7 +55,33 @@ dernier recours, avec une raison vérifiable, jamais allumée en permanence.
 **Ce qu'on ne fait pas** : le sacrifice positionnel (hors de portée d'un arbre, seul le calcul le trouve) ; la manœuvre
 longue, le levier d'aile, le transfert vers l'aile du roi, la simplification : déjà couverts par 3P, d), 3d et 3c.
 
-## Mesure 1 (25 oct., 15 h 06) : lot 1 fusionné (dev-lead 5064de9), 500 positions neuves de 2000-2199
+## Mesure 2 (25 oct., 14 h 33) : lot 2 fusionné (dev-lead cb7039b), 500 autres positions neuves de 2000-2199
+
+Lot 2 (Dev chef, 427 tests) : 3p corrigé (« chasser ou empêcher » accepte la pièce qui pourrait venir ; levier et espace
+valent aussi en milieu ; les gambits joués sont nommés), 3t tension (une prise de pion par un pion la résout), 3u cibles
+pour les tours (colonne ouverte, semi-ouverte, doublement, septième, pion non défendu par un pion), 3m pièce vers une
+meilleure case (dame, fou, cavalier : mobilité nettement accrue ou avant-poste), 3k le roi (case de fuite, roi actif en
+finale), 3e l'échange de pièces à l'équilibre. Non construits, faute de vérification mécanique propre : « garder la
+tension » (aucun coup unique ne la porte), « lui enlever sa case » (déjà 3p et 3m), « préparer un levier » (différé).
+
+| | mesure 1 (lot 1) | mesure 2 (lot 2) | seuil |
+|---|---|---|---|
+| sans nom | 57 / 500 (11,4 %) | 16 / 500 (3,2 %) | |
+| dont bévues (SF19 prof. 12) | 7 | 4 | |
+| **sans nom hors bévues** | **10,0 %** | **2,4 %** | < 10 % |
+| noms refusés par le vérificateur | 37 / 480 | 45 / 529 (8,5 %) | mécanique |
+| positions calculées par coup | 61 600 | inchangé (branches statiques) | < 100 000 |
+| sans nom par phase | 7,8 / 14,4 / 16,9 % | 1,9 / 4,3 / 5,0 % | |
+
+Qui nomme en plus, à 2000-2199 : 3p pion 10,0 % · 3m pièce vers une meilleure case 3,2 % · 3u tours 1,8 % · 3r 1,4 % ·
+3t tension 1,2 % · 3k roi 0,8 %. Les 12 sans nom hors bévues restants : Rc1, Re1 ×2, Rd1, Re3 (tours au bord des critères),
+Ne2, Ne4, Bb4, Bxf3, Kb8, Kh1, Qd1. **Seuil de couverture atteint** ; réserve : le recomptage indépendant des noms par le
+harnais (second étage de l'honnêteté) reste à construire, il tournera sur les sorties de la table sans la bloquer.
+
+Palier suivant lancé à 14 h 34 sur Orion : 5 000 positions par tranche (1200-1399, 2000-2199, 2200-2399), 12 processus
+à un fil en priorité minimale, sorties sur `/mnt/toto`. Puis, si la forme tient, 100 000 par tranche.
+
+## Mesure 1 (25 oct., 14 h 06) : lot 1 fusionné (dev-lead 5064de9), 500 positions neuves de 2000-2199
 
 Lichess septembre 2025, mode rapide, quatre processus à un fil, 2 minutes. Trois chiffres :
 - **temps par coup** : 0,9 à 1,0 s mur sur la machine partagée ; 61 600 positions calculées par coup en moyenne sur la
